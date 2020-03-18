@@ -15037,7 +15037,7 @@
 			</ReplaceBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_STEEL_MILL</Type>
+			<Type>BUILDING_SMELTER_STEEL</Type>
 			<ObsoleteTech>TECH_LIQUID_METALS</ObsoleteTech>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -25844,7 +25844,7 @@
 			<Type>BUILDING_EIFFEL_TOWER</Type>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_STEEL_MILL</BuildingType>
+					<BuildingType>BUILDING_SMELTER_STEEL</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>

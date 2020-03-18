@@ -36942,13 +36942,8 @@ Current techs which are not in this file:-
 			<Type>TECH_DUMMY</Type>
 			<Description>TXT_KEY_TECH_DUMMY</Description>
 			<Civilopedia>TXT_KEY_TECH_DUMMY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_DUMMY_STRATEGY</Strategy>
-			<iCost>-1</iCost>
 			<Era>C2C_ERA_PREHISTORIC</Era>
 			<bDisable>1</bDisable>
-			<Quote>TXT_KEY_TECH_DUMMY_QUOTE</Quote>
-			<Sound>AS2D_TECH_GENERIC</Sound>
-			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 		</TechInfo>
 	</TechInfos>

@@ -663,8 +663,8 @@ Valid NPC players for spawns:
 			</FeatureTerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
-			<Type>SPAWN_BUFFALO_NATIVE</Type>
-			<UnitType>UNIT_BUFFALO</UnitType>
+			<Type>SPAWN_BUFFALO_CAPE_1</Type>
+			<UnitType>UNIT_BUFFALO_CAPE</UnitType>
 			<PlayerType>44</PlayerType>
 			<iTurns>30</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -679,8 +679,8 @@ Valid NPC players for spawns:
 			</BonusTypes>
 		</SpawnInfo>
 		<SpawnInfo>
-			<Type>SPAWN_BUFFALO_NATIVE2</Type>
-			<UnitType>UNIT_BUFFALO</UnitType>
+			<Type>SPAWN_BUFFALO_CAPE_2</Type>
+			<UnitType>UNIT_BUFFALO_CAPE</UnitType>
 			<PlayerType>44</PlayerType>
 			<iTurns>60</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
@@ -2681,17 +2681,45 @@ Valid NPC players for spawns:
 			</FeatureTypes>
 		</SpawnInfo>
 		<SpawnInfo>
-			<Type>SPAWN_CAIMAN_NATIVE</Type>
-			<UnitType>UNIT_CAIMAN</UnitType>
-			<PlayerType>42</PlayerType>
-			<iTurns>240</iTurns>
+			<Type>SPAWN_CAIMAN_BLACK_1</Type>
+			<UnitType>UNIT_CAIMAN_BLACK</UnitType>
+			<PlayerType>47</PlayerType>
+			<iTurns>400</iTurns>
 			<iMaxLocalDensity>14</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bFreshWaterOnly>1</bFreshWaterOnly>
-			<bLatitudeAbs>0</bLatitudeAbs>
-			<iMinLatitude>-25</iMinLatitude>
-			<iMaxLatitude>10</iMaxLatitude>
+			<iMaxLatitude>25</iMaxLatitude>
+			<iMaxLongitude>-60</iMaxLongitude>
+			<TerrainTypes>
+				<TerrainType>TERRAIN_MUDDY</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
+				<TerrainType>TERRAIN_LUSH</TerrainType>
+			</TerrainTypes>
+		</SpawnInfo>
+		<SpawnInfo>
+			<Type>SPAWN_CAIMAN_BLACK_2</Type>
+			<UnitType>UNIT_CAIMAN_BLACK</UnitType>
+			<PlayerType>47</PlayerType>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>14</iMaxLocalDensity>
+			<iStartDate>-200000</iStartDate>
+			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
+			<iMaxLatitude>25</iMaxLatitude>
+			<iMaxLongitude>-60</iMaxLongitude>
+			<TerrainTypes>
+				<TerrainType>TERRAIN_MARSH</TerrainType>
+			</TerrainTypes>
+		</SpawnInfo>
+		<SpawnInfo>
+			<Type>SPAWN_CAIMAN_BLACK_3</Type>
+			<UnitType>UNIT_CAIMAN_BLACK</UnitType>
+			<PlayerType>47</PlayerType>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>14</iMaxLocalDensity>
+			<iStartDate>-200000</iStartDate>
+			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
+			<iMaxLatitude>25</iMaxLatitude>
 			<iMaxLongitude>-60</iMaxLongitude>
 			<FeatureTypes>
 				<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
@@ -5041,7 +5069,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		</SpawnInfo>
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_STONE_AGE_AXEMAN</Type>
-			<UnitType>UNIT_STONE_AGE_AXEMAN</UnitType>
+			<UnitType>UNIT_STONE_AXEMAN</UnitType>
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>450</iGlobalTurns>
@@ -5376,7 +5404,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 		</SpawnInfo>
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_STONE_AGE_SPEARMAN</Type>
-			<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+			<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>

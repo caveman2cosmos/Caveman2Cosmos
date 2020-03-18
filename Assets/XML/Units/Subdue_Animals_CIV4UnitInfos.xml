@@ -1691,7 +1691,7 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_BUFFALO</Description>
-			<Civilopedia>TXT_KEY_UNIT_BUFFALO_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_UNIT_BUFFALO_CAPE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_SUBDUED_ANIMAL_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_SUBDUED_BUFFALO_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -1723,7 +1723,7 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_BUFFALO</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_BUFFALO_CAPE</EarlyArtDefineTag>
 				</UnitMeshGroup>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
@@ -1791,7 +1791,7 @@
 			<Domain>DOMAIN_LAND</Domain>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_CAIMAN</Description>
-			<Civilopedia>TXT_KEY_UNIT_CAIMAN_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_UNIT_CAIMAN_BLACK_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<Help>TXT_KEY_UNIT_SUBDUED_CAIMAN_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
@@ -1823,7 +1823,7 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_CAIMAN</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_CAIMAN_BLACK</EarlyArtDefineTag>
 				</UnitMeshGroup>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
@@ -4351,8 +4351,6 @@
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_DOGS</BuildingType>
-				<BuildingType>BUILDING_WOLF_CAGE</BuildingType>
-				<BuildingType>BUILDING_WOLF_MYTH</BuildingType>
 				<BuildingType>BUILDING_FENNECFOX_MYTH</BuildingType>
 				<BuildingType>BUILDING_FENNECFOX_STORY</BuildingType>
 				<BuildingType>BUILDING_FENNECFOX_STORIES</BuildingType>
@@ -13604,6 +13602,7 @@
 			<Description>TXT_KEY_UNIT_SUBDUED_JUNGLE_TARANTULA</Description>
 			<Civilopedia>TXT_KEY_UNIT_TARANTULA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_SUBDUED_ANIMAL_STRATEGY</Strategy>
+			<Help>TXT_KEY_UNIT_SUBDUED_TARANTULA_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -13664,6 +13663,7 @@
 			<Description>TXT_KEY_UNIT_SUBDUED_DESERT_TARANTULA</Description>
 			<Civilopedia>TXT_KEY_UNIT_TARANTULA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_SUBDUED_ANIMAL_STRATEGY</Strategy>
+			<Help>TXT_KEY_UNIT_SUBDUED_TARANTULA_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>

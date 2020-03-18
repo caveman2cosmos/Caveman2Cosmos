@@ -19,11 +19,12 @@
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
+			<iAdvancedStartCost>5</iAdvancedStartCost>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<bFreshWaterMakesValid>1</bFreshWaterMakesValid>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<iUpgradeTime>5</iUpgradeTime>
-			<iPillageGold>7</iPillageGold>
+			<iPillageGold>5</iPillageGold>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
@@ -154,23 +155,35 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_SAVANNA</FeatureType>
+					<FeatureType>FEATURE_JUNGLE</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
 					<FeatureType>FEATURE_MANGROVE</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
-				<FeatureMakesValid>
-					<FeatureType>FEATURE_JUNGLE</FeatureType>
-					<bMakesValid>1</bMakesValid>
-				</FeatureMakesValid>
 			</FeatureMakesValids>
 			<BonusTypeStructs>
+				<BonusTypeStruct>
+					<BonusType>BONUS_RESIN</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<iDiscoverRand>10000</iDiscoverRand>
+					<YieldChanges>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>1</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_MUSHROOMS</BonusType>
+					<iDiscoverRand>10000</iDiscoverRand>
+				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_PRIME_TIMBER</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
+					<iDiscoverRand>10000</iDiscoverRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>1</iYieldChange>
@@ -209,15 +222,11 @@
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
-					<FeatureType>FEATURE_SAVANNA</FeatureType>
+					<FeatureType>FEATURE_JUNGLE</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
 					<FeatureType>FEATURE_MANGROVE</FeatureType>
-					<bMakesValid>1</bMakesValid>
-				</FeatureMakesValid>
-				<FeatureMakesValid>
-					<FeatureType>FEATURE_JUNGLE</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 			</FeatureMakesValids>
@@ -375,9 +384,9 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_HUNTING_CAMP</ArtDefineTag>
 			<PrereqTech>TECH_SCAVENGING</PrereqTech>
 			<bActsAsCity>0</bActsAsCity>
-			<iAdvancedStartCost>24</iAdvancedStartCost>
-			<iUpgradeTime>10</iUpgradeTime>
-			<iPillageGold>7</iPillageGold>
+			<iAdvancedStartCost>12</iAdvancedStartCost>
+			<iUpgradeTime>5</iUpgradeTime>
+			<iPillageGold>3</iPillageGold>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
 					<BonusType>BONUS_BISON</BonusType>
@@ -559,7 +568,7 @@
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
 			<iUpgradeTime>10</iUpgradeTime>
-			<iPillageGold>10</iPillageGold>
+			<iPillageGold>8</iPillageGold>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
 					<BonusType>BONUS_COW</BonusType>
@@ -1012,11 +1021,6 @@
 			<Description>TXT_KEY_IMPROVEMENT_WHALING_SHIPS</Description>
 			<Civilopedia>TXT_KEY_WHALING_BOATS_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WHALING_BOATS</ArtDefineTag>
-			<YieldChanges>
-				<iYieldChange>0</iYieldChange>
-				<iYieldChange>0</iYieldChange>
-				<iYieldChange>2</iYieldChange>
-			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_COMMERCIAL_WHALING</PrereqTech>
 			<bWater>1</bWater>
@@ -1031,7 +1035,7 @@
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>2</iYieldChange>
-						<iYieldChange>2</iYieldChange>
+						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
@@ -1812,10 +1816,6 @@
 				</FeatureMakesValid>
 				<FeatureMakesValid>
 					<FeatureType>FEATURE_BAMBOO</FeatureType>
-					<bMakesValid>1</bMakesValid>
-				</FeatureMakesValid>
-				<FeatureMakesValid>
-					<FeatureType>FEATURE_SAVANNA</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
 				<FeatureMakesValid>
@@ -6111,7 +6111,7 @@
 				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<bGraphicalOnly>1</bGraphicalOnly>
-		</ImprovementInfo>		
+		</ImprovementInfo>
 		<!-- Plant Savanna -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_PLANT_SAVANNA</Type>
@@ -6154,10 +6154,10 @@
 		</ImprovementInfo>
 		<!-- Plant Bamboo -->
 		<ImprovementInfo>
-			<Type>IMPROVEMENT_PLANT_BAMBOO_GROVE</Type>
-			<Description>TXT_KEY_BUILD_PLANT_BAMBOO_GROVE</Description>
+			<Type>IMPROVEMENT_PLANT_BAMBOO</Type>
+			<Description>TXT_KEY_BUILD_PLANT_BAMBOO</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_BAMBOO_GROVE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_PLANT_BAMBOO</ArtDefineTag>
 			<bActsAsCity>0</bActsAsCity>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<TerrainMakesValids>
@@ -6431,7 +6431,7 @@
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<iUpgradeTime>5</iUpgradeTime>
-			<iPillageGold>7</iPillageGold>
+			<iPillageGold>6</iPillageGold>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
 					<BonusType>BONUS_APPLE</BonusType>
@@ -10541,7 +10541,6 @@
 			<bUseLSystem>1</bUseLSystem>
 			<iAdvancedStartCost>10</iAdvancedStartCost>
 			<iUpgradeTime>5</iUpgradeTime>
-			<iAirBombDefense>5</iAirBombDefense>
 			<iDefenseModifier>10</iDefenseModifier>
 			<bOutsideBorders>1</bOutsideBorders>
 			<TerrainMakesValids>
@@ -10615,7 +10614,6 @@
 				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<ImprovementUpgrade>IMPROVEMENT_WOODEN_PALISADE</ImprovementUpgrade>
-			<iSeeFrom>1</iSeeFrom>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 		</ImprovementInfo>
@@ -10629,7 +10627,7 @@
 			<bUseLSystem>1</bUseLSystem>
 			<iAdvancedStartCost>10</iAdvancedStartCost>
 			<iUpgradeTime>10</iUpgradeTime>
-			<iAirBombDefense>10</iAirBombDefense>
+			<iAirBombDefense>5</iAirBombDefense>
 			<iDefenseModifier>15</iDefenseModifier>
 			<bOutsideBorders>1</bOutsideBorders>
 			<TerrainMakesValids>
@@ -10704,7 +10702,6 @@
 			</TerrainMakesValids>
 			<ImprovementUpgrade>IMPROVEMENT_FORT</ImprovementUpgrade>
 			<iCulture>5</iCulture>
-			<iSeeFrom>1</iSeeFrom>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 		</ImprovementInfo>
@@ -10728,7 +10725,6 @@
 				</FeatureMakesValid>
 			</FeatureMakesValids>
 			<ImprovementUpgrade>IMPROVEMENT_FORTIFIED_CAVE_WITH_CACHE</ImprovementUpgrade>
-			<iSeeFrom>1</iSeeFrom>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 		</ImprovementInfo>
@@ -10754,7 +10750,6 @@
 			<ImprovementUpgrade>IMPROVEMENT_FORT</ImprovementUpgrade>
 			<iCulture>1</iCulture>
 			<iCultureRange>1</iCultureRange>
-			<iSeeFrom>1</iSeeFrom>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 		</ImprovementInfo>
@@ -10845,8 +10840,7 @@
 			<ImprovementUpgrade>IMPROVEMENT_COMMAND_BUNKER</ImprovementUpgrade>
 			<iCulture>10</iCulture>
 			<iCultureRange>1</iCultureRange>
-			<iVisibilityChange>2</iVisibilityChange>
-			<iSeeFrom>1</iSeeFrom>
+			<iVisibilityChange>1</iVisibilityChange>
 			<iUnique>2</iUnique>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
@@ -10940,7 +10934,7 @@
 			<ImprovementUpgrade>IMPROVEMENT_COMMAND_CENTER</ImprovementUpgrade>
 			<iCulture>10</iCulture>
 			<iCultureRange>1</iCultureRange>
-			<iVisibilityChange>2</iVisibilityChange>
+			<iVisibilityChange>1</iVisibilityChange>
 			<iSeeFrom>1</iSeeFrom>
 			<iUnique>2</iUnique>
 			<bBombardable>1</bBombardable>
@@ -11046,13 +11040,13 @@
 			<Description>TXT_KEY_IMPROVEMENT_WOODEN_WATCHTOWER</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_OBSERVATION_POST_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WOODEN_WATCHTOWER</ArtDefineTag>
-			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_CARPENTRY</PrereqTech>
+			<bActsAsCity>0</bActsAsCity>
 			<bUseLSystem>1</bUseLSystem>
 			<iAdvancedStartCost>10</iAdvancedStartCost>
 			<iUpgradeTime>5</iUpgradeTime>
-			<iAirBombDefense>1</iAirBombDefense>
-			<iDefenseModifier>1</iDefenseModifier>
+			<iAirBombDefense>2</iAirBombDefense>
+			<iDefenseModifier>5</iDefenseModifier>
 			<bOutsideBorders>1</bOutsideBorders>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
@@ -11124,12 +11118,9 @@
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<!--
-ImprovementUpgrade>IMPROVEMENT_STONE_WATCHTOWER</ImprovementUpgrade
-			-->
+			<ImprovementUpgrade>IMPROVEMENT_STONE_WATCHTOWER</ImprovementUpgrade>
 			<iCulture>1</iCulture>
-			<iVisibilityChange>2</iVisibilityChange>
-			<iSeeFrom>1</iSeeFrom>
+			<iVisibilityChange>1</iVisibilityChange>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
 		</ImprovementInfo>
@@ -11143,8 +11134,8 @@ ImprovementUpgrade>IMPROVEMENT_STONE_WATCHTOWER</ImprovementUpgrade
 			<bUseLSystem>1</bUseLSystem>
 			<iAdvancedStartCost>40</iAdvancedStartCost>
 			<iUpgradeTime>10</iUpgradeTime>
-			<iAirBombDefense>10</iAirBombDefense>
-			<iDefenseModifier>5</iDefenseModifier>
+			<iAirBombDefense>5</iAirBombDefense>
+			<iDefenseModifier>10</iDefenseModifier>
 			<bOutsideBorders>1</bOutsideBorders>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
@@ -11218,7 +11209,7 @@ ImprovementUpgrade>IMPROVEMENT_STONE_WATCHTOWER</ImprovementUpgrade
 			</TerrainMakesValids>
 			<ImprovementUpgrade>IMPROVEMENT_STEEL_WATCHTOWER</ImprovementUpgrade>
 			<iCulture>1</iCulture>
-			<iVisibilityChange>4</iVisibilityChange>
+			<iVisibilityChange>2</iVisibilityChange>
 			<iSeeFrom>1</iSeeFrom>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
@@ -11233,8 +11224,8 @@ ImprovementUpgrade>IMPROVEMENT_STONE_WATCHTOWER</ImprovementUpgrade
 			<bUseLSystem>1</bUseLSystem>
 			<iAdvancedStartCost>400</iAdvancedStartCost>
 			<iUpgradeTime>15</iUpgradeTime>
-			<iAirBombDefense>20</iAirBombDefense>
-			<iDefenseModifier>10</iDefenseModifier>
+			<iAirBombDefense>15</iAirBombDefense>
+			<iDefenseModifier>15</iDefenseModifier>
 			<bOutsideBorders>1</bOutsideBorders>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
@@ -11308,8 +11299,8 @@ ImprovementUpgrade>IMPROVEMENT_STONE_WATCHTOWER</ImprovementUpgrade
 			</TerrainMakesValids>
 			<ImprovementUpgrade>IMPROVEMENT_RADAR_TOWER</ImprovementUpgrade>
 			<iCulture>10</iCulture>
-			<iVisibilityChange>8</iVisibilityChange>
-			<iSeeFrom>1</iSeeFrom>
+			<iVisibilityChange>3</iVisibilityChange>
+			<iSeeFrom>2</iSeeFrom>
 			<iUnique>2</iUnique>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
@@ -11397,12 +11388,10 @@ ImprovementUpgrade>IMPROVEMENT_STONE_WATCHTOWER</ImprovementUpgrade
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
-			<!--
-ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
-			-->
+			<ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade>
 			<iCulture>10</iCulture>
-			<iVisibilityChange>8</iVisibilityChange>
-			<iSeeFrom>1</iSeeFrom>
+			<iVisibilityChange>4</iVisibilityChange>
+			<iSeeFrom>3</iSeeFrom>
 			<iUnique>2</iUnique>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
@@ -11430,8 +11419,8 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<iCulture>10</iCulture>
-			<iVisibilityChange>8</iVisibilityChange>
-			<iSeeFrom>1</iSeeFrom>
+			<iVisibilityChange>5</iVisibilityChange>
+			<iSeeFrom>4</iSeeFrom>
 			<iUnique>2</iUnique>
 			<bBombardable>1</bBombardable>
 			<bUpgradeRequiresFortify>1</bUpgradeRequiresFortify>
@@ -11913,7 +11902,7 @@ ImprovementUpgrade>IMPROVEMENT_LISTENING_NODE</ImprovementUpgrade
 			<ImprovementUpgrade>IMPROVEMENT_SHAFT_MINE</ImprovementUpgrade>
 			<TechYieldChanges>
 				<TechYieldChange>
-					<PrereqTech>TECH_COAL_MINING</PrereqTech>
+					<PrereqTech>TECH_GEOLOGY</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
 						<iYield>1</iYield>

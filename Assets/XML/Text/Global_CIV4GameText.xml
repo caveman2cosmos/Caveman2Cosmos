@@ -18838,12 +18838,12 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UPGRADED_BY_STEEL_MILL</Tag>
-		<English>[NEWLINE][ICON_BULLET]Upgraded by [LINK=BUILDING_STEEL_MILL]Steel Mill[\LINK]</English>
-		<French>[NEWLINE][ICON_BULLET]Amélioré en [LINK=BUILDING_STEEL_MILL]Aciérie[\LINK]</French>
-		<German>[NEWLINE][ICON_BULLET]Modernisiert durch [LINK=BUILDING_STEEL_MILL]Stahlmühle[\LINK]</German>
-		<Italian>[NEWLINE][ICON_BULLET]Sostituita da [LINK=BUILDING_STEEL_MILL]Acciaieria[\LINK]</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Reemplazado por [LINK=BUILDING_STEEL_MILL]Acería[\LINK]</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Zastąpione przez [LINK=BUILDING_STEEL_MILL]Stalownia[\LINK]</Polish>
+		<English>[NEWLINE][ICON_BULLET]Upgraded by [LINK=BUILDING_SMELTER_STEEL]Steel Mill[\LINK]</English>
+		<French>[NEWLINE][ICON_BULLET]Amélioré en [LINK=BUILDING_SMELTER_STEEL]Aciérie[\LINK]</French>
+		<German>[NEWLINE][ICON_BULLET]Modernisiert durch [LINK=BUILDING_SMELTER_STEEL]Stahlmühle[\LINK]</German>
+		<Italian>[NEWLINE][ICON_BULLET]Sostituita da [LINK=BUILDING_SMELTER_STEEL]Acciaieria[\LINK]</Italian>
+		<Spanish>[NEWLINE][ICON_BULLET]Reemplazado por [LINK=BUILDING_SMELTER_STEEL]Acería[\LINK]</Spanish>
+		<Polish>[NEWLINE][ICON_BULLET]Zastąpione przez [LINK=BUILDING_SMELTER_STEEL]Stalownia[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UPGRADE_ANYWHERE_TEXT</Tag>

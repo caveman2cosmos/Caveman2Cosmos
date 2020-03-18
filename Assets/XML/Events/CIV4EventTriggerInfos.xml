@@ -3054,7 +3054,7 @@
 			<bProbabilityUnitMultiply>1</bProbabilityUnitMultiply>
 			<UnitsRequired>
 				<UnitType>UNIT_AXEMAN</UnitType>
-				<UnitType>UNIT_STONE_AGE_AXEMAN</UnitType>
+				<UnitType>UNIT_STONE_AXEMAN</UnitType>
 				<UnitType>UNIT_OBSIDIAN_AXEMAN</UnitType>
 				<UnitType>UNIT_HEAVY_AXEMAN</UnitType>
 			</UnitsRequired>
@@ -4968,7 +4968,7 @@
 				<UnitType>UNIT_BATTLECRUISER</UnitType>
 				<UnitType>UNIT_STEAM_DESTROYER</UnitType>
 				<UnitType>UNIT_CRUISER</UnitType>
-				<UnitType>UNIT_AEGIS</UnitType>
+				<UnitType>UNIT_AEGIS_CRUISER</UnitType>
 				<UnitType>UNIT_NUCLEAR_SUBMARINE</UnitType>
 				<UnitType>UNIT_NUCLEAR_CARRIER</UnitType>
 				<UnitType>UNIT_FF_DESTROYER_I</UnitType>
@@ -9440,7 +9440,7 @@
 				<UnitType>UNIT_BATTLECRUISER</UnitType>
 				<UnitType>UNIT_STEAM_DESTROYER</UnitType>
 				<UnitType>UNIT_CRUISER</UnitType>
-				<UnitType>UNIT_AEGIS</UnitType>
+				<UnitType>UNIT_AEGIS_CRUISER</UnitType>
 				<UnitType>UNIT_NUCLEAR_CARRIER</UnitType>
 				<UnitType>UNIT_FF_DESTROYER_I</UnitType>
 				<UnitType>UNIT_FUSION_CRUISER</UnitType>

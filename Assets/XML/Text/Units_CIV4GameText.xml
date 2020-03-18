@@ -29,6 +29,10 @@
 	</TEXT>
 -->
 	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_HURRY_PRODUCTION</Tag>
+		<English>Hurry Production (with overflow)</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_HURRY_PRODUCTION_CARAVAN</Tag>
 		<English>Hurry Production (with overflow)</English>
 		<French>Accélérer la Production (avec gaspillage)</French>
@@ -43,12 +47,12 @@
 		<Polish>Obecna produkcja w mieście została przyspieszona przez jednostk.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_HURRY_PRODUCTION</Tag>
-		<English>Hurry Production (with overflow)</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_HURRY_PRODUCTION_MESSAGE</Tag>
 		<English>Current city production has been hurried</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SPECIALUNIT_UNITED_NATIONS</Tag>
+		<English>United Nations unit</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_007</Tag>
@@ -296,7 +300,7 @@
 		<Polish>Wojownik Adze to jednostka specjalizująca się w zasadzkach.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_AEGIS</Tag>
+		<Tag>TXT_KEY_UNIT_AEGIS_CRUISER</Tag>
 		<English>Aegis Cruiser</English>
 		<French>Croiseur Aegis</French>
 		<German>
@@ -317,7 +321,7 @@
 		<Polish>Krążownik Aegis</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_AEGIS_PEDIA</Tag>
+		<Tag>TXT_KEY_UNIT_AEGIS_CRUISER_PEDIA</Tag>
 		<English>The term "Aegis cruiser" loosely describes a cruiser carrying an Aegis anti-missile system created by the United States in the late twentieth century. The US Navy had long been developing an anti-missile vessel, and the sinking of the British destroyer HMS 'Sheffield' by a single French Exocet missile during the Falklands War only increased their efforts. [PARAGRAPH:1]Aegis cruisers are typically armed with anti-missile missiles, as well as two enormous "Vulcan" gatling guns, "last ditch" weapons designed to destroy close-in missiles that evaded the cruiser's defensive missiles. The ships are also equipped with anti-aircraft weaponry and some anti-submarine defenses, as well. In addition, the cruisers often carry offensive missiles which can be deployed against naval or land-based targets. Aegis cruisers are most usually deployed as escort vessels, protecting the highly vulnerable carrier groups from missile and air assault.</English>
 		<French>Le terme de "Croiseur Aegis" désigne un croiseur armé du système anti-missiles Aegis, conçu par les Etats-Unis à la fin du vingtième siècle. La marine américaine a toujours cherché à doter sa flotte de vaisseaux anti-missiles. Le torpillage du destroyer britannique HMS Sheffield par un simple missile Exocet français lors de la guerre des Malouines les incita à redoubler d'efforts. [PARAGRAPH:1]Les croiseurs Aegis sont généralement dotés de missiles anti-missiles ainsi que de deux énormes canons "Vulcain", censés pouvoir détruire les missiles qui auraient échappé à la surveillance des radars. Ces vaisseaux sont également équipés de tout un arsenal anti-aérien et anti-sous-marins. En outre, les croiseurs sont souvent pourvus de missiles d'attaque qui peuvent être déployés contre des cibles navales ou terrestres. Les croiseurs Aegis sont le plus souvent utilisés pour servir d'escorte aux transporteurs.</French>
 		<German>Als "Aegis-Kreuzer" bezeichnet man einen Ende des 20. Jahrhunderts in den Vereinigten Staaten eingesetzten Kreuzer, der mit einem Aegis-Kampfsystem ausgestattet ist. Die U.S. Navy hatte bereits lange an der Entwicklung eines Schiffes mit Warn- und Feuerleitsystem gearbeitet, als diese Bemühungen nach der Versenkung des britischen Zerstörers HMS 'Sheffield' während des Falklandkrieges durch eine einzige französische Exocet-Rakete noch stärker vorangetrieben wurden. [PARAGRAPH:1]Aegis-Kreuzer sind normalerweise mit Abfangraketen sowie zwei riesigen "Vulcan"-Gatlingkanonen ausgestattet - also Waffen, die als allerletztes Mittel eingesetzt werden, um anfliegende Raketen zu zerstören, die zuvor den Abwehrraketen des Kreuzers ausweichen konnten. Darüber hinaus sind die Schiffe mit Flugabwehrwaffen sowie einigen U-Boot-Abwehrwaffen und häufig auch mit Angriffsraketen ausgerüstet, die sowohl gegen land- als auch seegestützte Ziele eingesetzt werden können. Aegis-Kreuzer dienen in aller Regel als Begleitschiffe für äußerst angreifbare Flugzeugträgerflotten, die vor Raketen- und Luftbombardierungen geschützt werden müssen.</German>
@@ -326,7 +330,7 @@
 		<Polish>Termin "Krążownik Aegis" odnosi się do krążownika wyposażonego w system atypociskowy o nazwie Aegis. Pierwszy taki okręt został skonstruowany przez Stany Zjednoczone u schyłku XX wieku.[PARAGRAPH:1]Krążowniki Aegis oprócz rakiet są zwykle wyposażone także w działa obrotowe typu Vulcan i inne bronie zaprojektowane w celu obrony przed pociskami, którym uda się jakoś ominąć systemy antyrakietowe. Pozostałym wyposażeniem są armatki przeciwlotnicze i uzbrojenie przeciw łodziom podwodnym. Mogą one także transportować i wystrzeliwać pociski dalekiego zasięgu przeciwko celom morskim lub lądowym.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_AEGIS_STRATEGY</Tag>
+		<Tag>TXT_KEY_UNIT_AEGIS_CRUISER_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Aegis Cruisers[COLOR_REVERT] carry up to 2 [COLOR_UNIT_TEXT]Missiles[COLOR_REVERT]. They have a 50% chance to intercept [COLOR_UNIT_TEXT]Aircraft[COLOR_REVERT], and they can [COLOR_HIGHLIGHT_TEXT]Bombard[COLOR_HIGHLIGHT_TEXT]cities (-10%/Turn).</English>
 		<French>Le [COLOR_UNIT_TEXT]Croiseur Aegiss[COLOR_REVERT] peut transporter 2 [COLOR_UNIT_TEXT]Missiles[COLOR_REVERT]. Ils ont 50% de chances d'intercepter les [COLOR_UNIT_TEXT]Aéronefs[COLOR_REVERT], et peut [COLOR_HIGHLIGHT_TEXT]Bombarder[COLOR_HIGHLIGHT_TEXT]les villes (-10%/Tour).</French>
 		<Spanish>Los [COLOR_UNIT_TEXT]Cruceros AEGIS[COLOR_REVERT] pueden llevar hasta 2 [COLOR_UNIT_TEXT]Misiles[COLOR_REVERT]. Tienen una probabilidad del 50% de interceptar [COLOR_UNIT_TEXT]aeronaves[COLOR_REVERT], y son capaces de [COLOR_HIGHLIGHT_TEXT]bombardear[COLOR_HIGHLIGHT_TEXT] ciudades (-10%/turno).</Spanish>
@@ -558,7 +562,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AIRSETTLER_HELP</Tag>
 		<English>[ICON_BULLET]+4 population to the city founded.</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]+4 population à la ville fondée.</French>
+		<French>[ICON_BULLET]+4 population à la ville fondée.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AIRSHIP</Tag>
@@ -840,7 +844,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AMBULANCE_STRATEGY</Tag>
-		<English>Ambulances are used to heal units. Graphics by 	Aungi and Nuvoloblu.</English>
+		<English>Ambulances are used to heal units. Graphics by Aungi and Nuvoloblu.</English>
 		<French>Les Ambulances sont utilisés pour soigner les unités. Graphiques: Aungi et Nuvoloblu.</French>
 	</TEXT>
 	<TEXT>
@@ -1627,6 +1631,10 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Wielki Artysta</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_ARTIST_STRATEGY</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_ARWA_AL_SULAYHI</Tag>
 		<English>Arwa al Sulayhi</English>
 	</TEXT>
@@ -1817,9 +1825,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_ASSAULT_SHIP_PEDIA</Tag>
 		<English>The Assault Ship is the quickest and most powerful pirate ship in the game. These ships are small, fast, agile and offensive warships, which can reach speeds of 25-50 knots. The fast attack boats were used in almost all theaters of war, the Baltic Seas, the Mediterranean or the Black Sea, but their main operational area was the British Channel where they attacked coastal shipping, especially during the night. Their operational record was quite successful, the german S-boats sunk over 40 warships (including 12 destroyers) and far over 100 merchants, while damaging 14 other warships (including 2 cruisers) and 15 merchants. It's high speed capability makes the Assault Ship the choice unit to conduct maritime raids against merchant ships.</English>
 		<French>Le Navire d'Assaut est le bateau pirate le plus rapide et le plus puissant du jeu. Ces navires sont de petits navires de guerre rapides, agiles et offensifs, qui peuvent atteindre des vitesses de 25 à 50 nœuds. Les bateaux d'attaque rapide ont été utilisés sur presque tous les théâtres de guerre, la mer Baltique, la Méditerranée ou la mer Noire, mais leur principale zone opérationnelle était la Manche britannique où ils ont attaqué la navigation côtière, surtout pendant la nuit. Leur record opérationnel a été assez réussi, les S-boats allemands ont coulé plus de 40 navires de guerre (dont 12 destroyers) et bien plus de 100 marchands, tout en endommageant 14 autres navires de guerre (dont 2 croiseurs) et 15 marchands. Sa capacité à grande vitesse fait du navire d'assaut l'unité de choix pour mener des raids maritimes contre les navires marchands.</French>
-		<German>The Assault Ship is the quickest and most powerful pirate ship in the game. These ships are small, fast, agile and offensive warships, which can reach speeds of 25-50 knots. The fast attack boats were used in almost all theaters of war, the Baltic Seas, the Mediterranean or the Black Sea, but their main operational area was the British Channel where they attacked coastal shipping, especially during the night. Their operational record was quite successful, the german S-boats sunk over 40 warships (including 12 destroyers) and far over 100 merchants, while damaging 14 other warships (including 2 cruisers) and 15 merchants. It's high speed capability makes the Assault Ship the choice unit to conduct maritime raids against merchant ships.</German>
-		<Italian>The Assault Ship is the quickest and most powerful pirate ship in the game. These ships are small, fast, agile and offensive warships, which can reach speeds of 25-50 knots. The fast attack boats were used in almost all theaters of war, the Baltic Seas, the Mediterranean or the Black Sea, but their main operational area was the British Channel where they attacked coastal shipping, especially during the night. Their operational record was quite successful, the german S-boats sunk over 40 warships (including 12 destroyers) and far over 100 merchants, while damaging 14 other warships (including 2 cruisers) and 15 merchants. It's high speed capability makes the Assault Ship the choice unit to conduct maritime raids against merchant ships.</Italian>
-		<Spanish>The Assault Ship is the quickest and most powerful pirate ship in the game. These ships are small, fast, agile and offensive warships, which can reach speeds of 25-50 knots. The fast attack boats were used in almost all theaters of war, the Baltic Seas, the Mediterranean or the Black Sea, but their main operational area was the British Channel where they attacked coastal shipping, especially during the night. Their operational record was quite successful, the german S-boats sunk over 40 warships (including 12 destroyers) and far over 100 merchants, while damaging 14 other warships (including 2 cruisers) and 15 merchants. It's high speed capability makes the Assault Ship the choice unit to conduct maritime raids against merchant ships.</Spanish>
 		<Polish>Piractwo istniało od początków komunikacji morskiej. W starożytności z piractwem walczyli m.in. tacy wodzowie jak Pompejusz, Juliusz Cezar i Oktawian August. Obecnie za najbardziej niebezpieczne rejony pod względem zagrożenia piractwem uchodzą: Karaiby, Zatoka Adeńska, Cieśnina Malakka. Piraci rekrutują się głównie z byłych rybaków. Podstawowym środkiem transportu pozostają szybkie łodzie motorowe, zaopatrzone nierzadko w urządzenia typu GPS. W skład ich grupy wchodzi najczęściej "statek-matka" (udający statek rybacki), który służy do uzupełniania paliwa.</Polish>
 	</TEXT>
 	<TEXT>
@@ -4503,7 +4508,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CARRIER_OPS_HELP</Tag>
 		<English>[ICON_BULLET]Can Perform Carrier Operations</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Peut réaliser du transport de troupes</French>
+		<French>[ICON_BULLET]Peut réaliser du transport de troupes</French>
 		<Polish>[ICON_BULLET]Może wykonywać misje Lotniskowców</Polish>
 	</TEXT>
 	<TEXT>
@@ -5132,24 +5137,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Straż Miejska jest idealną jednostką do obrony miast. Nie może atakować, ale znakomicie nadaje się do obrony.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CLASSIC_WORKBOAT</Tag>
-		<English>Workboat (Ancient)</English>
-		<French>Bateau-atelier (Classique)</French>
-		<Italian>Chiatta (Classica)</Italian>
-		<Spanish>
-			<Text>Barco faenero clásico</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Łódka (Antyk)</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_CLASSIC_WORKBOAT_STRATEGY</Tag>
-		<English>Classic [COLOR_UNIT_TEXT]Workboat[COLOR_REVERT] unit with slightly better work rate and movement. Unarmed vessels that can create fishing boats, whaling boats, and (in late game) oil rigs. [COLOR_UNIT_TEXT]Work Boats[COLOR_REVERT] cannot enter Ocean spaces. </English>
-		<French>Les [COLOR_UNIT_TEXT]Bateaux-atelier[COLOR_REVERT] classique, avec une vitesse de travail et des mouvements légèrement meilleurs. Navires non armés qui peuvent créer des bateaux de pêche, des baleiniers et (en fin de partie) des plates-formes pétrolières. Les [COLOR_UNIT_TEXT]Bateaux-atelier [COLOR_REVERT] ne peuvent pas entrer dans les cases d'océan. </French>
-		<Polish>Kliper Handlowy</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_CLASS_PRODUCTION_FAST_MOD</Tag>
 		<English>%[SPACE]Faster Training of[SPACE]</English>
 		<French>%[SPACE]Accélère l'entraînement de[SPACE]</French>
@@ -5403,7 +5390,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COLONIST_HELP</Tag>
 		<English>[ICON_BULLET]+1 population to the city founded.</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]+1 population à la ville fondée.</French>
+		<French>[ICON_BULLET]+1 population à la ville fondée.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COLONIST_STRATEGY</Tag>
@@ -6408,7 +6395,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>The Second Australian Imperial Force (2nd AIF) was the name given to the volunteer personnel of the Australian Army in World War II. Under the Defence Act (1903), neither the part-time Militia nor full-time the Permanent Military Force (PMF) could serve outside Australia or its territories unless they volunteered to do so. The Second AIF fought against Nazi Germany, Fascist Italy, Vichy France and the Japanese Empire.</English>
 		<French>Le Second Australian Imperial Force (2nd AIF) était le nom donné au personnel volontaire de l'armée australienne pendant la Seconde Guerre mondiale. En vertu de la Loi sur la défense (1903), ni la Milice à temps partiel ni la Force militaire permanente (PMF) à plein temps ne pouvaient servir en dehors de l'Australie ou de ses territoires à moins qu'elles ne se portent volontaires pour le faire. Le Second AIF s'est battu contre l'Allemagne nazie, l'Italie fasciste, la France de Vichy et l'Empire japonais.</French>
 		<Italian>Seconda forza imperiale australiana (The Second Australian Imperial Force, 2nd AIF) era il nome dato ai volontari dell'esercito australiano nella II guerra mondiale. Secondo il Defence Act (1903), nè la milizia ausiliaria nè l'esercito permanente (PMF) potevano combattere al di fuori dell'Australia e dei suoi territori, a meno che non fossero volontari. La seconda AIF combattè contro la Germania nazista, l'Italia fascista, la Francia di Vichy e l'impero giapponese.</Italian>
-		<Polish>	The Second Australian Imperial Force (2nd AIF) was the name given to the volunteer personnel of the Australian Army in World War II. Under the Defence Act (1903), neither the part-time Militia nor full-time the Permanent Military Force (PMF) could serve outside Australia or its territories unless they volunteered to do so. The Second AIF fought against Nazi Germany, Fascist Italy, Vichy France and the Japanese Empire.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DIGGER_STRATEGY</Tag>
@@ -8286,17 +8272,26 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FANATIC_HELP</Tag>
-		<English>[ICON_BULLET]Requires a state religion. +2 XP from every non-state religion in the city. Purges non-state religions when capturing a city (but no holy cities)</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Requiert une religion d'Etat. Requiert une religion d'Etat. +2 XP pour chaque autre religion dans la ville. Purge les religions non étatiques lors de la capture d'une ville (mais pas les villes saintes)</French>
+		<English>[ICON_BULLET]Requires a state religion
+[ICON_BULLET]+2 XP from every non-state religion in the city
+[ICON_BULLET]Purges non-state religions when capturing a city (but no holy cities)</English>
+
+		<French>[ICON_BULLET]Requiert une religion d'Etat
+[ICON_BULLET]+2 XP pour chaque autre religion dans la ville.
+[ICON_BULLET]Purge les religions non étatiques lors de la capture d'une ville (mais pas les villes saintes)</French>
+
 		<German>[ICON_BULLET]Benötigt eine Staatsreligion
 [ICON_BULLET]+2 XP von jeder Nicht-Staatsreligion in der Staat
 [ICON_BULLET]Vernichtet alle Nicht-Staatsreligionen wenn er eine Stadt einnimmt (aber keine heiligen Städte)</German>
+
 		<Italian>[ICON_BULLET]Richiede una religione di stato
 [ICON_BULLET]+2 XP da ogni religion non di stato in una città
 [ICON_BULLET]Purga le religioni non di stato quando cattura una città (ma non nelle Città Sante)</Italian>
+
 		<Polish>[ICON_BULLET]Wymaga religii państwowej
 [ICON_BULLET]+2 XP za każdą religię nie-państwową w mieście
 [ICON_BULLET]Usuwa nie-państwową religię kiedy miasto zostaje podbite (oprócz Świetych Miast)</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FANATIC_PEDIA</Tag>
@@ -11856,9 +11851,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_HOSPITAL_SHIP_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Hospital Ship[COLOR_REVERT] is medical navy unit which heal every unit in the same tile.</English>
 		<French>Le [COLOR_UNIT_TEXT]Navire Hôpital[COLOR_REVERT] est une unité médicale navale qui soigne et répare toutes les unités sur la même case.</French>
-		<German>Hospital Ships are used to heal units. Graphics by Aungi and Nsftpoeopas.</German>
-		<Italian>Hospital Ships are used to heal units. Graphics by Aungi and Nsftpoeopas.</Italian>
-		<Spanish>Hospital Ships are used to heal units. Graphics by Aungi and Nsftpoeopas.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HOVERCRAFT</Tag>
@@ -12493,17 +12485,24 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INQUISITOR_HELP</Tag>
-		<English>[ICON_BULLET]Requires active State Religion, Intolerant civic must be active</English>
+		<English>[ICON_BULLET]Requires active State Religion
+[ICON_BULLET]Intolerant civic must be active</English>
+
 		<French>[ICON_BULLET]Requiert une Religion d'Etat
 [ICON_BULLET]La doctrine 'Intolérance' doit être active</French>
+
 		<German>[ICON_BULLET]Benötigt eine aktive Staatsreligion
 [ICON_BULLET]Die Gesellschaftsform "Intolerant" muss aktiv sein</German>
+
 		<Italian>[ICON_BULLET]Richiede una Religione di stato
 [ICON_BULLET]La forma di governo Intollerante dev'essere attiva</Italian>
+
 		<Spanish>[ICON_BULLET]Requiere una religión oficial
 [ICON_BULLET]Requiere el principio Intolerancia activo</Spanish>
+
 		<Polish>[ICON_BULLET]Wymaga aktywnej Religii Narodowej
 [ICON_BULLET]Doktryna nietolerancja musi być aktywna</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INTERCEPT_AIRCRAFT_SPY</Tag>
@@ -14576,6 +14575,14 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>[COLOR_UNIT_TEXT]Lars Porsena[COLOR_REVERT] est une unité héroïque.</French>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_LAWYER_REMOVE_CORPORATIONS_HELP</Tag>
+		<English>[COLOR_HIGHLIGHT_TEXT]Litigate[COLOR_REVERT][NEWLINE]Take legal action and drive all corporations from the city.</English>
+		<French>[COLOR_HIGHLIGHT_TEXT]mettre en litige[COLOR_REVERT][NEWLINE]Prendre des mesures juridiques et conduire toutes les entreprises de la ville au procès.</French>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]Denuncia[COLOR_REVERT][NEWLINE]Prendi azioni legali e rimuovi tutte le corporazioni dalla città.</Italian>
+		<Spanish>[ICON_BULLET]Puede tomar acciones legales</Spanish>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Zaskarż[COLOR_REVERT][NEWLINE]Legalnym sposobem wypędź wszystkie korporacje ze swojego miasta.</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_LA_PLATA_MOSQUETERO</Tag>
 		<English>La Plata Mosquetero</English>
 		<French>Mousquetaire de La Plata</French>
@@ -16472,6 +16479,10 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>[COLOR_WARNING_TEXT]Misje Handlowe wymagają Otwartych Granic[COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_MERCHANT_STRATEGY</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_MERLIN</Tag>
 		<English>Merlin</English>
 		<Italian>Merlino</Italian>
@@ -16536,24 +16547,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Le Héros national Danois est [COLOR_UNIT_TEXT]Michiel de Ruyter[COLOR_REVERT], disponible à la Renaissance. Il commence avec un [COLOR_HIGHLIGHT_TEXT]Marchand[COLOR_REVERT] dans sa suite. Il peut être construit lorsque [COLOR_TECH_TEXT]Education[COLOR_REVERT] et [COLOR_TECH_TEXT]Science militaire[COLOR_REVERT] sont recherchés.</French>
 		<Spanish>El héroe nacional holandés es [COLOR_UNIT_TEXT]Michiel de Ruyter[COLOR_REVERT], disponible a partir del Renacimiento. Comienza con el ascenso [COLOR_HIGHLIGHT_TEXT]Mercader[COLOR_REVERT] en su séquito. Puede ser entrenado una vez investigadas la [COLOR_TECH_TEXT]Educación[COLOR_REVERT] y la [COLOR_TECH_TEXT]Belicología[COLOR_REVERT].</Spanish>
 		<Polish>Bohater Narodowy Holendrów to [COLOR_UNIT_TEXT]Michiel de Ruyter[COLOR_REVERT]. Rozpoczyna w towarzystwie [COLOR_HIGHLIGHT_TEXT]Handlarza[COLOR_REVERT]. Może zostać wyszkolony wraz z odkryciem [COLOR_TECH_TEXT]Edukacji[COLOR_REVERT] i [COLOR_TECH_TEXT]Nauk Wojskowych[COLOR_REVERT].</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_MIDDLE_WORKBOAT</Tag>
-		<English>Workboat (Middle Ages)</English>
-		<French>Bateau-atelier (Moyen-Age)</French>
-		<Italian>Chiatta (Medioevo)</Italian>
-		<Spanish>
-			<Text>Barco faenero medieval</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Łódka (Średniowiecze)</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_MIDDLE_WORKBOAT_STRATEGY</Tag>
-		<English>Medieval [COLOR_UNIT_TEXT]Workboat[COLOR_REVERT] unit with moderate work rate and movement. Unarmed vessels that can create fishing boats, whaling boats, and (in late game) oil rigs. [COLOR_UNIT_TEXT]Work Boats[COLOR_REVERT] cannot enter Ocean spaces. </English>
-		<French>[COLOR_UNIT_TEXT]Bateau-Atelier médiéval[COLOR_REVERT], avec un rythme de travail et un mouvement modérés. Navires non armés qui peuvent créer des bateaux de pêche, des baleiniers et (en fin de partie) des plates-formes pétrolières. Les [COLOR_UNIT_TEXT]Bateaux-ateliers[COLOR_REVERT] ne peuvent pas entrer dans les espaces océaniques.</French>
-		<Polish>Myśliwiec MiG-29</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MIDEWIWIN</Tag>
@@ -17088,24 +17081,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Współczesny Spadochroniarz</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_MODERN_WORKBOAT</Tag>
-		<English>Modern Workboat</English>
-		<French>Bateau-Atelier (Moderne)</French>
-		<German>Modernes Arbeitsboot</German>
-		<Italian>Chiatta moderna</Italian>
-		<Spanish>
-			<Text>Barco de trabajo moderno</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Współczesny Kuter</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_MODERN_WORKBOAT_STRATEGY</Tag>
-		<English>Modern Workboat unit with above average work rate and movement. Unarmed vessels that can create fishing boats, whaling boats, and (in late game) oil rigs. This[COLOR_UNIT_TEXT]Work Boat[COLOR_REVERT] can enter Ocean spaces. </English>
-		<French>Bateau-Atelier (Moderne). C'est une unité avec un taux de travail et un déplacement supérieurs à la moyenne. Ce sont des navires non armés qui peuvent créer des bateaux de pêche, des baleiniers et (en fin de partie) des plates-formes pétrolières. Ce [COLOR_UNIT_TEXT] bateau ouvrier[COLOR_REVERT] peut pénétrer dans les espaces océaniques. </French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_MODIFIER_PROPERTY_MANIP</Tag>
 		<English>[ICON_BULLET]From %s1_MOD:</English>
 		<French>[ICON_BULLET]De %s1_MOD:</French>
@@ -17199,22 +17174,30 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MONK_HELP</Tag>
-		<English>[ICON_BULLET]Requires a state religion, +2 XP from every building of the state religion, +4 XP from shrine of the state religion, +4 XP if player is full member of the Apostolic Palace. If defends successfully in a city, spreads the state religion if not present</English>
+		<English>[ICON_BULLET]Requires a state religion
+[ICON_BULLET]+2 XP from every building of the state religion
+[ICON_BULLET]+4 XP from shrine of the state religion
+[ICON_BULLET]+4 XP if player is full member of the Apostolic Palace
+[ICON_BULLET]If defends successfully in a city, spreads the state religion if not present</English>
+
 		<French>[ICON_BULLET]Requiert une religion d'Etat
 [ICON_BULLET]+2 EXP pour chaque bâtiment religieux
 [ICON_BULLET]+4 EXP pour chaque sanctuaire religieux
 [ICON_BULLET]+4 EXP si le joueur membre du Palais Apostolique
 [ICON_BULLET]Lors de la défense d'une ville, propage automatiquement sa religion</French>
+
 		<German>[ICON_BULLET]Benötigt eine Staatsreligion
 [ICON_BULLET]+2 XP von jedem Gebäude der Staatsreligion
 [ICON_BULLET]+4 XP vom Schrein der Staatsreligion
 [ICON_BULLET]+4 XP falls der Spieler Vollmitglied des Apostolischen Palastes ist
 [ICON_BULLET]Falls er in einer Stadt erfolgreich verteidigt, wird die Staatsreligion verbreitet, falls diese nicht bereits anwesend ist</German>
+
 		<Italian>[ICON_BULLET]Richiede una Religione di stato
 [ICON_BULLET]+2 XP da ogni edificio della religione di stato
 [ICON_BULLET]+4 XP dal santuario della religione di stato
 [ICON_BULLET]+4 XP se il giocatore è un membro del Palazzo Apostolico
 [ICON_BULLET]Se si difende con successo in una città, diffonde automaticamente la religione in quella città se non è presente</Italian>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MONK_PEDIA</Tag>
@@ -17810,6 +17793,15 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>texte ici</French>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_NARBONA</Tag>
+		<English>Narbona</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_NARBONA_PEDIA</Tag>
+		<English>[H1]Narbona[\H1][NEWLINE][BOLD]Navajo Chieftan[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.1766 - August 31, 1849 AD[NEWLINE] [PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]Narbona was one of the wealthiest Navajo of his time due to the amount of sheep and horses his outfit, or extended family group, owned. He was not a "chief" of all of the Navajo, the independent minded Navajo having no central authority, but he was very influential due to his status in the tribe, gained from both his wealth, high personal reputation and age at the time he negotiated with the Americans.[PARAGRAPH:1]Narbona had become one of the most prominent leaders in the aftermath of the massacre of 24 Navajo leaders in March 1822 at Jemez Pueblo who had been travelling under flag of truce to a peace conference with the new Mexican government. In February 1829 he lead the Navajo in battle against a Mexican expedition into the Chuska Mountains led by Captain Blas de Hinojos and defeated it utterly. The site of the battle, Copper Pass (Beesh Lichii'I Bigiizh), is now known as Narbona Pass.[PARAGRAPH:1]In 1849, Narbona had ridden with several hundred of his warriors to meet with a delegation led by Col. John M. Washington to discuss terms for peace between the Navajo and the "New Men", Americans who had driven the Mexicans from what is now the Southwestern United States. The US party was composed of both US Regulars and local New Mexican auxiliaries.[PARAGRAPH:1]After several misunderstandings, translators managed to work out an acceptable list of terms for peace between the two parties. As the peace council broke up, Sadoval, a young Navajo warrior of some distinction, began riding his horse to and fro, exhorting the 200-300 Navajo warriors in attendance to break the new treaty immediately, starting with the massacre of Col. Washington's command. At this point, a New Mexican officer claimed that he noticed a horse that belonged to him being ridden by one of the Navajo warriors. Navajos were great raiders of livestock, so it is entirely possible that this horse did indeed belong to the Americans. Washington, put in the position of backing one of his troopers, demanded that the horse be immediately turned over. The Navajo refused, and the horse and its rider departed.[PARAGRAPH:1]Washington commanded his troops to unlimber their cannon and prepare to fire if the Navajo refused to return the, now absent, property the Americans were claiming was stolen. The Navajo again denied his request, and the cannon as well as some rifles were fired.[PARAGRAPH:1]Narbona was mortally wounded in the fusillade. As a final indignity, according to eyewitnesses, he was also scalped by one of the New Mexico militiamen. He was buried by his sons in the traditional Navajo fashion, bound in a "death knotted" blanket and cast into a crevice. Two of his finest horses were slaughtered to ensure he would not walk to the afterlife.[PARAGRAPH:1]</English>
+		<Polish>Narbona - wódz indian Navajo z przełomu XVIII i XIX wieku.</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_NARBONA_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Narbona[COLOR_REVERT] is a "Hero".</English>
 		<French>texte ici</French>
@@ -18088,7 +18080,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Pisteur Néanderthal</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_NEANDERTHAL_TRAINEDDOG</Tag>
+		<Tag>TXT_KEY_UNIT_NEANDERTHAL_TRAINED_DOG</Tag>
 		<English>Neanderthal Trained Dog</English>
 		<French>Chien dressé de Néanderthal</French>
 	</TEXT>
@@ -18152,8 +18144,8 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Lancier de Néanderthal</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_NEANDERTHAL_WORK_BOAT</Tag>
-		<English>Neanderthal Work Boat</English>
+		<Tag>TXT_KEY_UNIT_NEANDERTHAL_WORKBOAT</Tag>
+		<English>Neanderthal Workboat</English>
 		<French>Bateau-atelier de Néanderthal</French>
 	</TEXT>
 	<TEXT>
@@ -19161,9 +19153,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_P51_MUSTANG_PEDIA</Tag>
 		<English>The North American Aviation P-51 Mustang was an American long-range single-seat World War II fighter aircraft. The Mustang aircraft was economical to produce, was very fast, well-made, and highly durable. Designed and built in just 117 days, the Mustang first flew in Royal Air Force (RAF) service as a fighter-bomber and reconnaissance aircraft before conversion to a bomber escort, employed in raids over Germany, helping ensure Allied air superiority from early 1944. The P-51 was in service with Allied air forces in Europe and also saw limited service against the Japanese in the Pacific War. The Mustang began the Korean War as the United Nations' main fighter, but was relegated to a ground attack role when superseded by jet fighters early in the conflict.</English>
 		<French>Le North American Aviation P-51 Mustang était un chasseur américain monoplace à longue portée de la Seconde Guerre mondiale. L'avion Le Mustang était économique à produire, très rapide, bien fait et très durable. Conçue et construite en seulement 117 jours, la Mustang a d'abord volé en service de la Royal Air Force (RAF) en tant que chasseur-bombardier et avion de reconnaissance avant d'être convertie en escorte de bombardiers, utilisée lors de raids au-dessus de l'Allemagne, contribuant à assurer la supériorité aérienne alliée à partir du début de 1944. Le P-51 était en service avec les forces aériennes alliées en Europe et a également vu un service limité contre les Japonais dans la guerre du Pacifique. Le Mustang a commencé la guerre de Corée en tant que combattant principal des Nations Unies, mais a été relégué à un rôle d'attaque au sol lorsqu'il a été remplacé par des chasseurs à réaction au début du conflit.</French>
-		<German>The North American Aviation P-51 Mustang was an American long-range single-seat World War II fighter aircraft. The Mustang aircraft was economical to produce, was very fast, well-made, and highly durable. Designed and built in just 117 days, the Mustang first flew in Royal Air Force (RAF) service as a fighter-bomber and reconnaissance aircraft before conversion to a bomber escort, employed in raids over Germany, helping ensure Allied air superiority from early 1944. The P-51 was in service with Allied air forces in Europe and also saw limited service against the Japanese in the Pacific War. The Mustang began the Korean War as the United Nations' main fighter, but was relegated to a ground attack role when superseded by jet fighters early in the conflict.</German>
-		<Italian>The North American Aviation P-51 Mustang was an American long-range single-seat World War II fighter aircraft. The Mustang aircraft was economical to produce, was very fast, well-made, and highly durable. Designed and built in just 117 days, the Mustang first flew in Royal Air Force (RAF) service as a fighter-bomber and reconnaissance aircraft before conversion to a bomber escort, employed in raids over Germany, helping ensure Allied air superiority from early 1944. The P-51 was in service with Allied air forces in Europe and also saw limited service against the Japanese in the Pacific War. The Mustang began the Korean War as the United Nations' main fighter, but was relegated to a ground attack role when superseded by jet fighters early in the conflict.</Italian>
-		<Spanish>The North American Aviation P-51 Mustang was an American long-range single-seat World War II fighter aircraft. The Mustang aircraft was economical to produce, was very fast, well-made, and highly durable. Designed and built in just 117 days, the Mustang first flew in Royal Air Force (RAF) service as a fighter-bomber and reconnaissance aircraft before conversion to a bomber escort, employed in raids over Germany, helping ensure Allied air superiority from early 1944. The P-51 was in service with Allied air forces in Europe and also saw limited service against the Japanese in the Pacific War. The Mustang began the Korean War as the United Nations' main fighter, but was relegated to a ground attack role when superseded by jet fighters early in the conflict.</Spanish>
 		<Polish>Samolot myśliwski, myśliwiec - samolot bojowy przeznaczony przede wszystkim do zwalczania innych statków powietrznych i uzyskania przewagi powietrznej, jak i obrony własnych samolotów o innym przeznaczeniu, czym różni się od bombowców, służących do atakowania celów naziemnych, głównie przy użyciu bomb. Myśliwce z założenia są względnie małe, przeważnie jednomiejscowe, a przy tym silnie uzbrojone, szybkie i bardzo zwrotne.</Polish>
 	</TEXT>
 	<TEXT>
@@ -19941,7 +19930,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PIONEER_HELP</Tag>
 		<English>[ICON_BULLET]+2 population to the city founded.</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]+2 population à la ville fondée.</French>
+		<French>[ICON_BULLET]+2 population à la ville fondée.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PIONEER_STRATEGY</Tag>
@@ -19951,8 +19940,12 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PIRATE_HELP</Tag>
-		<English>[ICON_BULLET]Can Capture Merchant Ships. Can Loot Gold From Merchant Ships</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Peut capturer des navires marchands. Peut piller de l'or sur des navires marchands</French>
+		<English>[ICON_BULLET]Can Capture Merchant Ships
+[ICON_BULLET]Can Loot Gold From Merchant Ships</English>
+
+		<French>[ICON_BULLET]Peut capturer des navires marchands
+[ICON_BULLET]Peut piller de l'or sur des navires marchands</French>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PIYE</Tag>
@@ -20695,6 +20688,10 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Wielki Prorok</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_PROPHET_STRATEGY</Tag>
+		<English>TBD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PUBLIC_FORCES</Tag>
@@ -24026,7 +24023,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPARTACUS_HELP</Tag>
 		<English>[ICON_BULLET]Spartacus Recruit Gladiator (25% Chance) after Combat Victory</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Spartacus recrute des Gladiaturs (25% des Chances) après une victoire</French>
+		<French>[ICON_BULLET]Spartacus recrute des Gladiaturs (25% des Chances) après une victoire</French>
 		<Italian>[ICON_BULLET]Spartaco[COLOR_REVERT] recluta gladiatori (25% Chance) dopo ogni vittoria in combattimento</Italian>
 		<Spanish>[ICON_BULLET]Recluta Gladiadores después de una victoria (probabilidad del 25%)</Spanish>
 		<Polish>[ICON_BULLET]Spartakus[COLOR_REVERT] werbuje Gladiatora (25% szans) po zwycięstwie w walce.</Polish>
@@ -24364,6 +24361,10 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>[ICON_BULLET]Pęd: Walczy do śmierci</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_STATESMAN_STRATEGY</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_STEALTH_ARMOR</Tag>
 		<English>Stealth Armor</English>
 		<French>Char Furtif</French>
@@ -24440,6 +24441,10 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_STEALTH_FIGHTER_PEDIA</Tag>
 		<English>The F-117 Nighthawk is a stealth ground attack aircraft formerly operated by the United States Air Force. The F-117A's first flight was in 1981, and it achieved Initial Operational Capability status in October 1983. The F-117A came out of secrecy and was revealed to the world in November 1988. The F-117A is equipped with sophisticated navigation and attack systems integrated into a digital avionics suite. It carries no radar, which lowers emissions and cross-section. It navigates primarily by GPS and high-accuracy inertial navigation. Missions are coordinated by an automated planning system that can automatically perform all aspects of a strike mission, including weapons release. Targets are acquired by a thermal imaging infrared system, slaved to a laser that finds the range and designates targets for laser-guided bombs.</English>
 		<Polish>F-117 Nighthawk amerykański odrzutowy samolot bombowy wykonany w technologii stealth, produkowany przez firmę Lockheed. Służył w United States Air Force od 1983 do 2008. Pomimo oznaczenia "F", stosowanego w lotnictwie USA do klasyfikacji myśliwców, F-117 był taktycznym bombowcem, przeznaczonym do wykonywania precyzyjnych ataków na cele naziemne.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_STEALTH_FIGHTER_STRATEGY</Tag>
+		<English>TBD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STEALTH_GUNSHIP</Tag>
@@ -24626,9 +24631,10 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Brygada Stonewall to konfederacka odmiana strzelców. Posiada wysokie morale i wyszkolenie.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_STONE_AGE_AXEMAN</Tag>
+		<Tag>TXT_KEY_UNIT_STONE_AXEMAN</Tag>
 		<English>Stone Axeman</English>
 		<French>Guerrier avec hache de pierre</French>
+		<German>Steinaxtkämpfer</German>
 		<Italian>Guerriero con ascia in pietra</Italian>
 		<Spanish>
 			<Text>Guerrero con hacha de piedra</Text>
@@ -24638,36 +24644,14 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Kamienny Topornik</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_STONE_AGE_AXEMAN_PEDIA</Tag>
+		<Tag>TXT_KEY_UNIT_STONE_AXEMAN_PEDIA</Tag>
 		<English>Initially axes were probably not hafted. The first true hafted axes are known from the Mesolithic period (ca. 6000 BC). Axes made from ground stone are known since the Neolithic. Few wooden hafts have been found from this period, but it seems that the axe was normally hafted by wedging. Birch-tar and raw-hide lashings were used to fix the blade. Sometimes a short section of deer antler (an "antler sleeve") was used, which prevented the splitting of the haft and softened the impact on the stone blade itself, helping absorb the impact of each axe blow and lessening the chances of breaking the handle. The antler was hollowed out at one end to create a socket for the axehead. The antler sheath was then either perforated and a handle inserted into it or set in a hole made in the handle instead.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_STONE_AGE_AXEMAN_STRATEGY</Tag>
+		<Tag>TXT_KEY_UNIT_STONE_AXEMAN_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Stone Axeman[COLOR_REVERT] is excellent against melee units.</English>
 		<French>Le [COLOR_UNIT_TEXT]Guerrier avec hache de pierre[COLOR_REVERT] est excellent contre les unités de mêlée.</French>
 		<Spanish>El [COLOR_UNIT_TEXT]Guerrero con hacha de piedra[COLOR_REVERT] es excelente frente a unidades cuerpo a cuerpo.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_STONE_AGE_SPEARMAN</Tag>
-		<English>Stone Spearman</English>
-		<French>Guerrier avec lance en pierre</French>
-		<Italian>Guerriero con lancia in pietra</Italian>
-		<Spanish>
-			<Text>Guerrero con lanza de piedra</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Kamienny Włócznik</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_STONE_AGE_SPEARMAN_PEDIA</Tag>
-		<English>Archeological evidence documents that wooden spears were used for hunting at least 400,000 years ago. However, wood does not preserve well. Craig Stanford, a primatologist and professor of anthropology at the University of Southern California, has suggested that the discovery of spear use by chimpanzees probably means that early humans used wooden spears as well, perhaps five million years ago.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_STONE_AGE_SPEARMAN_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Stone Spearman[COLOR_REVERT] is great against animals.</English>
-		<French>[COLOR_UNIT_TEXT]Guerrier avec lance en pierre[COLOR_REVERT] est efficace contre les animaux.</French>
-		<Spanish>El [COLOR_UNIT_TEXT]Guerrero con lanza de piedra[COLOR_REVERT] es excelente frente a animales.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STONE_MACEMAN</Tag>
@@ -24695,6 +24679,29 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Italian>Il guerriero con mazza in pietra è un'unità da combattimento ravvicinato; ottiene bonus contro le unità da combattimento ravvicinato e attaccando le città.</Italian>
 		<Spanish>El Guerrero con maza de piedra es una unidad de combate cuerpo a cuerpo. Al igual que el grupo de los luchadores con maza, obtiene bonificaciones contra otras unidades de combate cuerpo a cuerpo, así como al asaltar ciudades.</Spanish>
 		<Polish>Kamienny Pałkarz to pierwsza uniwersalna jednostka piechoty wyposażona w broń obuchową.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_STONE_SPEARMAN</Tag>
+		<English>Stone Spearman</English>
+		<French>Guerrier avec lance en pierre</French>
+		<German>Steinspeerkämpfer</German>
+		<Italian>Guerriero con lancia in pietra</Italian>
+		<Spanish>
+			<Text>Guerrero con lanza de piedra</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Kamienny Włócznik</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_STONE_SPEARMAN_PEDIA</Tag>
+		<English>Archeological evidence documents that wooden spears were used for hunting at least 400,000 years ago. However, wood does not preserve well. Craig Stanford, a primatologist and professor of anthropology at the University of Southern California, has suggested that the discovery of spear use by chimpanzees probably means that early humans used wooden spears as well, perhaps five million years ago.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_STONE_SPEARMAN_STRATEGY</Tag>
+		<English>[COLOR_UNIT_TEXT]Stone Spearman[COLOR_REVERT] is great against animals.</English>
+		<French>[COLOR_UNIT_TEXT]Guerrier avec lance en pierre[COLOR_REVERT] est efficace contre les animaux.</French>
+		<Spanish>El [COLOR_UNIT_TEXT]Guerrero con lanza de piedra[COLOR_REVERT] es excelente frente a animales.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_STONE_THROWER</Tag>
@@ -24773,12 +24780,18 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_AFRICANGREY_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - African Grey Parrot, Myths of Sky and Birds, Bird Cage and Enclosure, Feather Worker and Parrots</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Perroquets gris d'Afrique, Mythes du ciel et des Oiseaux, Cage et Enclos d'oiseaux, Atelier des plumes et Perroquets</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT] Mit, Opowieść i Historie - Papuga Żako
-[ICON_BULLET]Mity Nieba i Ptaków
-[ICON_BULLET]Klatkę dla ptaków
-[ICON_BULLET]Warsztat Piórarza i Papugi</Polish>
+		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
+[SPACE][SPACE] * Myth, Story and Stories - African Grey Parrot
+[SPACE][SPACE] * Myths of Sky and Birds, Bird Cage and Enclosure
+[SPACE][SPACE] * Feather Worker and Parrots</English>
+
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Perroquets gris d'Afrique, Mythes du ciel et des Oiseaux, Cage et Enclos d'oiseaux, Atelier des plumes et Perroquets</French>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
+[SPACE][SPACE] * Mit, Opowieść i Historie - Papuga Żako
+[SPACE][SPACE] * Mity Nieba i Ptaków
+[SPACE][SPACE] * Klatkę dla ptaków
+[SPACE][SPACE] * Warsztat Piórarza i Papugi</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_AFRICAN_PENGUIN</Tag>
@@ -24788,11 +24801,17 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_AFRICAN_PENGUIN_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - African Penguin, Myths of Sea, Flightless Birds and Birds, Bird Cage and Enclosure</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythe, Histoires des pingouins d'Afrique, Mythes de la Mer, cage à oiseaux et enclos</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT] Mit, Opowieść i Historie - Pingwin Przylądkowy
-[ICON_BULLET]Mity Morza, Nielotnych Ptaków i Ptaków
-[ICON_BULLET]Klatkę dla ptaków</Polish>
+		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
+[SPACE][SPACE] * Myth, Story and Stories - African Penguin
+[SPACE][SPACE] * Myths of Sea, Flightless Birds and Birds
+[SPACE][SPACE] * Bird Cage and Enclosure</English>
+
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythe, Histoires des pingouins d'Afrique, Mythes de la Mer, cage à oiseaux et enclos</French>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
+[SPACE][SPACE] * Mit, Opowieść i Historie - Pingwin Przylądkowy
+[SPACE][SPACE] * Mity Morza, Nielotnych Ptaków i Ptaków
+[SPACE][SPACE] * Klatkę dla ptaków</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ASIANBEAR</Tag>
@@ -24807,11 +24826,16 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ASIANBEAR_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Moon Bear, Myth - Bears, Bear Cage and Enclosure</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours Lune, Mythe des Ours, Cages et Enclos à Ours</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT] Mit, Opowieść i Historie - Niedźwiedź Himalajski
-[ICON_BULLET]Mity - Niedźwiedzie
-[ICON_BULLET]Klatkę z niedźwiedziem</Polish>
+		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
+[SPACE][SPACE] * Myth, Story and Stories - Moon Bear
+[SPACE][SPACE] * Myth - Bears, Bear Cage and Enclosure</English>
+
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours Lune, Mythe des Ours, Cages et Enclos à Ours</French>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
+[SPACE][SPACE] * Mit, Opowieść i Historie - Niedźwiedź Himalajski
+[SPACE][SPACE] * Mity - Niedźwiedzie
+[SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BARNOWL</Tag>
@@ -24825,12 +24849,18 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BARNOWL_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Barn Owl, Myths of Sky, Owls and Birds, Bird Cage and Enclosure, Feather Worker</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Chouettes effraies, Mythes du ciel, des Chouettes, des oiseaux, Cage et Enclos d'oiseaux, Atelier des plumes</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT] Mit, Opowieść i Historie - Płomykówka Zwyczajna
-[ICON_BULLET]Mity Nieba, Sów i Ptaków
-[ICON_BULLET]Klatkę dla ptaków
-[ICON_BULLET]Warsztat Piórarza</Polish>
+		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
+[SPACE][SPACE] * Myth, Story and Stories - Barn Owl
+[SPACE][SPACE] * Myths of Sky, Owls and Birds
+[SPACE][SPACE] * Bird Cage, Enclosure and Feather Worker</English>
+
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Chouettes effraies, Mythes du ciel, des Chouettes, des oiseaux, Cage et Enclos d'oiseaux, Atelier des plumes</French>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
+[SPACE][SPACE] * Mit, Opowieść i Historie - Płomykówka Zwyczajna
+[SPACE][SPACE] * Mity Nieba, Sów i Ptaków
+[SPACE][SPACE] * Klatkę dla ptaków
+[SPACE][SPACE] * Warsztat Piórarza</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BARREDOWL</Tag>
@@ -24844,11 +24874,16 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BARREDOWL_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Barred Owl, Birds and Owls, Myth of Sky; Bird Cage and Enclosure, Feather Worker</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Chouettes rayées, Oiseaux et Mythes du Ciel; Cage et Enclos d'oiseaux, Atelier des plumes</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT] Mit, Opowieść i Historie - Puszczyk, Ptaków i Sów
-[ICON_BULLET]Mity Nieba, Klatkę dla ptaków
-[ICON_BULLET]Warsztat Piórarza</Polish>
+		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
+[SPACE][SPACE] * Myth, Story and Stories - Barred Owl, Birds and Owls
+[SPACE][SPACE] * Myth of Sky; Bird Cage and Enclosure, Feather Worker</English>
+
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Chouettes rayées, Oiseaux et Mythes du Ciel; Cage et Enclos d'oiseaux, Atelier des plumes</French>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]
+[SPACE][SPACE] * Mit, Opowieść i Historie - Puszczyk, Ptaków i Sów
+[SPACE][SPACE] * Mity Nieba, Klatkę dla ptaków
+[SPACE][SPACE] * Warsztat Piórarza</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BLACKBEAR</Tag>
@@ -24863,11 +24898,16 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BLACKBEAR_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Black Bear, Myth- Bears, Bear Cage and Enclosure</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours noirs, Mythes des Ours, Cages et Enclos des Ours</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT] Mit, Opowieść i Historie - Baribal
-[ICON_BULLET]Mity - Niedźwiedzie
-[ICON_BULLET]Klatkę z niedźwiedziem</Polish>
+		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
+[SPACE][SPACE] * Myth, Story and Stories - Black Bear
+[SPACE][SPACE] * Myth - Bears, Bear Cage and Enclosure</English>
+
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours noirs, Mythes des Ours, Cages et Enclos des Ours</French>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]
+[SPACE][SPACE] * Mit, Opowieść i Historie - Baribal
+[SPACE][SPACE] * Mity - Niedźwiedzie
+[SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BOOBY</Tag>
@@ -24877,12 +24917,17 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BOOBY_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Blue-footed Booby and Sea Bird, Myths of Sky and Birds, Bird Cage and Enclosure, Feather Worker</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Fous à pieds bleus et des oiseaux marins, Mythes du ciel et des Oiseaux, Cage et Enclos d'oiseaux, Atelier des plumes</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT] Mit, Opowieść i Historie - Głuptak Niebieskonogi i Ptaków Morskich
-[ICON_BULLET]Mity Nieba i Ptaków
-[ICON_BULLET]Klatkę dla ptaków
-[ICON_BULLET]Warsztat Piórarza</Polish>
+		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
+[SPACE][SPACE] * Myth, Story and Stories - Blue-footed Booby and Sea Bird
+[SPACE][SPACE] * Myths of Sky and Birds, Bird Cage and Enclosure, Feather Worker</English>
+
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Fous à pieds bleus et des oiseaux marins, Mythes du ciel et des Oiseaux, Cage et Enclos d'oiseaux, Atelier des plumes</French>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
+[SPACE][SPACE] * Mit, Opowieść i Historie - Głuptak Niebieskonogi i Ptaków Morskich
+[SPACE][SPACE] * Mity Nieba i Ptaków
+[SPACE][SPACE] * Klatkę dla ptaków
+[SPACE][SPACE] * Warsztat Piórarza</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BROWN_BEAR</Tag>
@@ -24897,12 +24942,17 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BROWN_BEAR_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Brown Bear, Myth- Bears, Bear Cage and Enclosure</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours bruns, Mythes des Ours, Cages et Enclos pour Ours</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT] Mit, Opowieść i Historie - Niedźwiedź Brunatny
-[ICON_BULLET]Mity - Niedźwiedzie
-[ICON_BULLET]Klatkę dla ptaków
-[ICON_BULLET]Warsztat Piórarza i Papugi</Polish>
+		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
+[SPACE][SPACE] * Myth, Story and Stories - Brown Bear
+[SPACE][SPACE] * Myth - Bears, Bear Cage and Enclosure</English>
+
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours bruns, Mythes des Ours, Cages et Enclos pour Ours</French>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
+[SPACE][SPACE] * Mit, Opowieść i Historie - Niedźwiedź Brunatny
+[SPACE][SPACE] * Mity - Niedźwiedzie
+[SPACE][SPACE] * Klatkę dla ptaków
+[SPACE][SPACE] * Warsztat Piórarza i Papugi</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CAVE_BEAR</Tag>
@@ -24917,24 +24967,37 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CAVE_BEAR_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Cave Bear and Bear, Master Hunter, Bear Cage and Enclosure</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire [COLOR_REVERT] Mythes, Histoire(s)des Ours des cavernes et autres ours, Maitre Chasseur, Cages et Enclos pour Ours</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT] Mit, Opowieść i Historie - Niedźwiedź Jaskiniowy i Niedźwiedź
-[ICON_BULLET]Mistrz Łowiectwa
-[ICON_BULLET]Klatkę z niedźwiedziem</Polish>
+		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
+[SPACE][SPACE] * Myth, Story and Stories - Cave Bear and Bear
+[SPACE][SPACE] * Master Hunter, Bear Cage and Enclosure</English>
+
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire [COLOR_REVERT] Mythes, Histoire(s)des Ours des cavernes et autres ours, Maitre Chasseur, Cages et Enclos pour Ours</French>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
+[SPACE][SPACE] * Mit, Opowieść i Historie - Niedźwiedź Jaskiniowy i Niedźwiedź
+[SPACE][SPACE] * Mistrz Łowiectwa
+[SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_EMU_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Emu, Myths of Sky, Flightless Birds and Birds
-[ICON_BULLET]Bird Cage and Enclosure
-[ICON_BULLET]Ratite Flock and Feather Worker</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) des Emeus, Mythes du Sky, des Oiseaux
-[ICON_BULLET]Cage et Enclos d'oiseaux
-[ICON_BULLET]Troupeaux d'Autruches et Atelier des plumes</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT] Mit, Opowieść i Historie - Emu
-[ICON_BULLET]Mity Nieba, Nielotnych Ptaków i Ptaków
-[ICON_BULLET]Klatkę dla ptaków
-[ICON_BULLET]Stado Strusi i Warsztat Piórarza</Polish>
+		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
+[SPACE][SPACE] * Myth, Story and Stories - Emu
+[SPACE][SPACE] * Myths of Sky, Flightless Birds and Birds
+[SPACE][SPACE] * Bird Cage and Enclosure
+[SPACE][SPACE] * Ratite Flock and Feather Worker</English>
+
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT]:
+[SPACE][SPACE] * Mythes, Histoire(s) des Emeus
+[SPACE][SPACE] * Mythes du Sky, des Oiseaux
+[SPACE][SPACE] * Cage et Enclos d'oiseaux
+[SPACE][SPACE] * Troupeaux d'Autruches et Atelier des plumes</French>
+
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:'
+[SPACE][SPACE] * Mit, Opowieść i Historie - Emu
+[SPACE][SPACE] * Mity Nieba, Nielotnych Ptaków i Ptaków
+[SPACE][SPACE] * Klatkę dla ptaków
+[SPACE][SPACE] * Stado Strusi i Warsztat Piórarza</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GALAPAGOS_PENGUIN</Tag>
@@ -24944,11 +25007,17 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GALAPAGOS_PENGUIN_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Galapagos Penguin, Myths of Sea, Flightless Birds and Birds, Bird Cage and Enclosure</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Pingouins des Galapagos, Mythes de la Mer, des Oiseaux, Cage et Enclos d'oiseaux</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT] Mit, Opowieść i Historie - Pingwin Równikowy
-[ICON_BULLET]Mity Morza, Nielotnych Ptaków i Ptaków
-[ICON_BULLET]Klatkę dla ptaków</Polish>
+		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
+[SPACE][SPACE] * Myth, Story and Stories - Galapagos Penguin
+[SPACE][SPACE] * Myths of Sea, Flightless Birds and Birds
+[SPACE][SPACE] * Bird Cage and Enclosure</English>
+
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Pingouins des Galapagos, Mythes de la Mer, des Oiseaux, Cage et Enclos d'oiseaux</French>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
+[SPACE][SPACE] * Mit, Opowieść i Historie - Pingwin Równikowy
+[SPACE][SPACE] * Mity Morza, Nielotnych Ptaków i Ptaków
+[SPACE][SPACE] * Klatkę dla ptaków</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GRIZZLY</Tag>
@@ -24963,20 +25032,32 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GRIZZLY_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Grizzly Bear, Myth- Bears, Bear Cage and Enclosure</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Grizzlys, Mythe de l'Ours, Cages et Enclos pour Ours</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT] Mit, Opowieść i Historie - Grizzly
-[ICON_BULLET]Mity - Niedźwiedzie
-[ICON_BULLET]Klatkę z niedźwiedziem</Polish>
+		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
+[SPACE][SPACE] * Myth, Story and Stories - Grizzly Bear
+[SPACE][SPACE] * Myth- Bears, Bear Cage and Enclosure</English>
+
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Grizzlys, Mythe de l'Ours, Cages et Enclos pour Ours</French>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
+[SPACE][SPACE] * Mit, Opowieść i Historie - Grizzly
+[SPACE][SPACE] * Mity - Niedźwiedzie
+[SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_HAAST_EAGLE_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Haast's Eagle, Raptors and Birds, Myths of Sky, Phoenix and Paleolithic Bird, Bird Cage, Enclosure, Master Hunter, Hawking Hut and Feather Worker</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Aigles de Haast, Rapaces et Oiseaux, Mythe du Ciel, du Phénix et de L'oiseau Paléolithique, Cages et Enclos à Oiseaux, Maître Chasseur, Hutte du Fauconnier et Atelier des plumes</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT] Mit, Opowieść i Historie - Orła Haasta, Raptors i Ptaków
-[ICON_BULLET]Mity Nieba, Phoenix i Paleolithic Bird
-[ICON_BULLET]Klatkę dla ptaków
-[ICON_BULLET]Mistrz Łowiectwa, Chatę Jastrzębia i Warsztat Piórarza</Polish>
+		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
+[SPACE][SPACE] * Myth, Story and Stories - Haast's Eagle, Raptors and Birds
+[SPACE][SPACE] * Myths of Sky, Phoenix and Paleolithic Bird
+[SPACE][SPACE] * Bird Cage, Enclosure, Master Hunter
+[SPACE][SPACE] * Hawking Hut and Feather Worker</English>
+
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Aigles de Haast, Rapaces et Oiseaux, Mythe du Ciel, du Phénix et de L'oiseau Paléolithique, Cages et Enclos à Oiseaux, Maître Chasseur, Hutte du Fauconnier et Atelier des plumes</French>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
+[SPACE][SPACE] * Mit, Opowieść i Historie - Orła Haasta, Raptors i Ptaków
+[SPACE][SPACE] * Mity Nieba, Phoenix i Paleolithic Bird
+[SPACE][SPACE] * Klatkę dla ptaków
+[SPACE][SPACE] * Mistrz Łowiectwa, Chatę Jastrzębia i Warsztat Piórarza</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_HARPYEAGLE</Tag>
@@ -24990,30 +25071,50 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_HARPYEAGLE_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Harpy Eagle, Myths of Sky and Birds, Bird Cage and Enclosure, Feather Worker and Parrots</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Harpies féroces, Mythes du ciel et des Oiseaux, Cage et Enclos d'oiseaux, Atelier des plumes et Perroquets</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT] Mit, Opowieść i Historie - Harpia Wielka
-[ICON_BULLET]Mity Nieba i Ptaków
-[ICON_BULLET]Klatkę dla ptaków
-[ICON_BULLET]Warsztat Piórarza i Papugi</Polish>
+		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
+[SPACE][SPACE] * Myth, Story and Stories - Harpy Eagle
+[SPACE][SPACE] * Myths of Sky and Birds
+[SPACE][SPACE] * Bird Cage and Enclosure
+[SPACE][SPACE] * Feather Worker and Parrots</English>
+
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Harpies féroces, Mythes du ciel et des Oiseaux, Cage et Enclos d'oiseaux, Atelier des plumes et Perroquets</French>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
+[SPACE][SPACE] * Mit, Opowieść i Historie - Harpia Wielka
+[SPACE][SPACE] * Mity Nieba i Ptaków
+[SPACE][SPACE] * Klatkę dla ptaków
+[SPACE][SPACE] * Warsztat Piórarza i Papugi</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_HAWK_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Hawk, Raptors and Birds, Myths of Sky, Falcon Hut, Falconer, Bird Cage, Enclosure, Feather Worker</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Faucons, Rapaces et Oiseaux, Mythe du Ciel, Fauconnier, Cages pour Oiseaux, Atelier des plumes</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT] Mit, Opowieść i Historie - Jastrzębia, Ptaków Drapieżnych i Ptaków
-[ICON_BULLET]Mity Nieba, Chatka Sokołów i Sokolnika
-[ICON_BULLET]Klatkę dla ptaków
-[ICON_BULLET]Warsztat Piórarza</Polish>
+		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
+[SPACE][SPACE] * Myth, Story and Stories - Hawk, Raptors and Birds
+[SPACE][SPACE] * Myths of Sky, Falcon Hut, Falconer
+[SPACE][SPACE] * Bird Cage, Enclosure, Feather Worker</English>
+
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Faucons, Rapaces et Oiseaux, Mythe du Ciel, Fauconnier, Cages pour Oiseaux, Atelier des plumes</French>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
+[SPACE][SPACE] * Mit, Opowieść i Historie - Jastrzębia, Ptaków Drapieżnych i Ptaków
+[SPACE][SPACE] * Mity Nieba, Chatka Sokołów i Sokolnika
+[SPACE][SPACE] * Klatkę dla ptaków
+[SPACE][SPACE] * Warsztat Piórarza</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_OSTRICH_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Ostrich, Myths of Sky, Flightless Birds and Birds, Bird Cage, Enclosure, Ratite Flock and Feather Worker</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Autruches, Mythe du Ciel, des Oiseaux, Cages pour Oiseaux, Troupeau d'autruches et Atelier des plumes</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT] Mit, Opowieść i Historie - Strusia
-[ICON_BULLET]Mity Nieba, Nielotnych Ptaków i Ptaków
-[ICON_BULLET]Klatkę dla ptaków
-[ICON_BULLET]Stado Strusi i Warsztat Piórarza</Polish>
+		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
+[SPACE][SPACE] * Myth, Story and Stories - Ostrich
+[SPACE][SPACE] * Myths of Sky, Flightless Birds and Birds
+[SPACE][SPACE] * Bird Cage and Enclosure
+[SPACE][SPACE] * Ratite Flock and Feather Worker</English>
+
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Autruches, Mythe du Ciel, des Oiseaux, Cages pour Oiseaux, Troupeau d'autruches et Atelier des plumes</French>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
+[SPACE][SPACE] * Mit, Opowieść i Historie - Strusia
+[SPACE][SPACE] * Mity Nieba, Nielotnych Ptaków i Ptaków
+[SPACE][SPACE] * Klatkę dla ptaków
+[SPACE][SPACE] * Stado Strusi i Warsztat Piórarza</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PANDA_BEAR</Tag>
@@ -25028,11 +25129,16 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PANDA_BEAR_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Panda Bear, Myth- Bears, Bear Cage and Enclosure</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours Panda, Mythe de l'Ours, Cages et Enclos pour Ours</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT] Mit, Opowieść i Historie - Panda
-[ICON_BULLET]Mity - Niedźwiedzie
-[ICON_BULLET]Klatkę z niedźwiedziem</Polish>
+		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
+[SPACE][SPACE] * Myth, Story and Stories - Panda Bear
+[SPACE][SPACE] * Myth- Bears, Bear Cage and Enclosure</English>
+
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours Panda, Mythe de l'Ours, Cages et Enclos pour Ours</French>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
+[SPACE][SPACE] * Mit, Opowieść i Historie - Panda
+[SPACE][SPACE] * Mity - Niedźwiedzie
+[SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PARROT</Tag>
@@ -25042,12 +25148,19 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PARROT_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Parrot, Myths of Sky and Birds, Bird Cage, Enclosure, Feather Worker and Parrots</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Perroquets, Mythes du ciel et des Oiseaux, Cages pour Oiseaux, Atelier des plumes et Perroquets</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT] Mit, Opowieść i Historie - Papuga
-[ICON_BULLET]Mity Nieba i Ptaków
-[ICON_BULLET]Klatkę dla ptaków
-[ICON_BULLET]Warsztat Piórarza i Papugi</Polish>
+		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
+[SPACE][SPACE] * Myth, Story and Stories - Parrot
+[SPACE][SPACE] * Myths of Sky and Birds
+[SPACE][SPACE] * Bird Cage and Enclosure
+[SPACE][SPACE] * Feather Worker and Parrots</English>
+
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Perroquets, Mythes du ciel et des Oiseaux, Cages pour Oiseaux, Atelier des plumes et Perroquets</French>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
+[SPACE][SPACE] * Mit, Opowieść i Historie - Papuga
+[SPACE][SPACE] * Mity Nieba i Ptaków
+[SPACE][SPACE] * Klatkę dla ptaków
+[SPACE][SPACE] * Warsztat Piórarza i Papugi</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_POLARBEAR</Tag>
@@ -25062,11 +25175,16 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_POLAR_BEAR_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Polar Bear, Myth- Bears, Bear Cage and Enclosure</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours Polaire, Mythe de l'Ours, Cages et Enclos pour Ours</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT] Mit, Opowieść i Historie - Niedźwiedź Polarny
-[ICON_BULLET]Mity - Niedźwiedzie
-[ICON_BULLET]Klatkę z niedźwiedziem</Polish>
+		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
+[SPACE][SPACE] * Myth, Story and Stories - Polar Bear
+[SPACE][SPACE] * Myth- Bears, Bear Cage and Enclosure</English>
+
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours Polaire, Mythe de l'Ours, Cages et Enclos pour Ours</French>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
+[SPACE][SPACE] * Mit, Opowieść i Historie - Niedźwiedź Polarny
+[SPACE][SPACE] * Mity - Niedźwiedzie
+[SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_RAVEN</Tag>
@@ -25076,12 +25194,18 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_RAVEN_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Raven, Myths of Sky, Scavengers and Birds, Bird Cage and Enclosure, Feather Worker</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Corbeaux, Mythe du Ciel, Charognards et Oiseaux, Cage et Enclos d'oiseaux, Atelier des plumes</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT] Mit, Opowieść i Historie - Wrona
-[ICON_BULLET]Mity Nieba, Padlinożerców i Ptaków
-[ICON_BULLET]Klatkę dla ptaków
-[ICON_BULLET]Warsztat Piórarza</Polish>
+		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
+[SPACE][SPACE] * Myth, Story and Stories - Raven
+[SPACE][SPACE] * Myths of Sky, Scavengers and Birds
+[SPACE][SPACE] * Bird Cage and Enclosure, Feather Worker</English>
+
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Corbeaux, Mythe du Ciel, Charognards et Oiseaux, Cage et Enclos d'oiseaux, Atelier des plumes</French>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
+[SPACE][SPACE] * Mit, Opowieść i Historie - Wrona
+[SPACE][SPACE] * Mity Nieba, Padlinożerców i Ptaków
+[SPACE][SPACE] * Klatkę dla ptaków
+[SPACE][SPACE] * Warsztat Piórarza</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_RAZORBILL</Tag>
@@ -25091,12 +25215,18 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_RAZORBILL_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Razorbill, Myths of Sky, Sea, Sea Birds and Birds, Bird Cage and Enclosure, Feather Worker</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Pingouins torda, Mythe du Ciel, Mer Oiseaux marins et Oiseaux, Cage et Enclos d'oiseaux, Atelier des plumes</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT] Mit, Opowieść i Historie - Alka
-[ICON_BULLET]Mity Nieba, Morza, Morskich Ptaków i Ptaków
-[ICON_BULLET]Klatkę dla ptaków
-[ICON_BULLET]Warsztat Piórarza</Polish>
+		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
+[SPACE][SPACE] * Myth, Story and Stories - Razorbill
+[SPACE][SPACE] * Myths of Sky, Sea, Sea Birds and Birds
+[SPACE][SPACE] * Bird Cage and Enclosure, Feather Worker</English>
+
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Pingouins torda, Mythe du Ciel, Mer Oiseaux marins et Oiseaux, Cage et Enclos d'oiseaux, Atelier des plumes</French>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
+[SPACE][SPACE] * Mit, Opowieść i Historie - Alka
+[SPACE][SPACE] * Mity Nieba, Morza, Morskich Ptaków i Ptaków
+[SPACE][SPACE] * Klatkę dla ptaków
+[SPACE][SPACE] * Warsztat Piórarza</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_REDPANDA</Tag>
@@ -25111,20 +25241,32 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_REDPANDA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Red Panda, Myth- Bears, Bear Cage and Enclosure</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Pandsa roux, Mythe de l'Ours, Cages et Enclos pour Ours</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT] Mit, Opowieść i Historie - Panda Czerwona
-[ICON_BULLET]Mity - Niedźwiedzie
-[ICON_BULLET]Klatkę z niedźwiedziem</Polish>
+		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
+[SPACE][SPACE] * Myth, Story and Stories - Red Panda
+[SPACE][SPACE] * Myth- Bears, Bear Cage and Enclosure</English>
+
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Pandsa roux, Mythe de l'Ours, Cages et Enclos pour Ours</French>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
+[SPACE][SPACE] * Mit, Opowieść i Historie - Panda Czerwona
+[SPACE][SPACE] * Mity - Niedźwiedzie
+[SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_RHEA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Rhea, Myths of Sky, Flightless Birds and Birds, Bird Cage and Enclosure, Ratite Flock and Feather Worker</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Nandou, Mythe du Ciel, des Oiseaux, Cage et Enclos d'oiseaux, Troupeau d'autruches et Atelier des plumes</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT] Mit, Opowieść i Historie - Nandu
-[ICON_BULLET]Mity Nieba, Nielotnych Ptaków i Ptaków
-[ICON_BULLET]Klatkę dla ptaków
-[ICON_BULLET]Stado Strusi i Warsztat Piórarza</Polish>
+		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
+[SPACE][SPACE] * Myth, Story and Stories - Rhea
+[SPACE][SPACE] * Myths of Sky, Flightless Birds and Birds
+[SPACE][SPACE] * Bird Cage and Enclosure
+[SPACE][SPACE] * Ratite Flock and Feather Worker</English>
+
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Nandou, Mythe du Ciel, des Oiseaux, Cage et Enclos d'oiseaux, Troupeau d'autruches et Atelier des plumes</French>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
+[SPACE][SPACE] * Mit, Opowieść i Historie - Nandu
+[SPACE][SPACE] * Mity Nieba, Nielotnych Ptaków i Ptaków
+[SPACE][SPACE] * Klatkę dla ptaków
+[SPACE][SPACE] * Stado Strusi i Warsztat Piórarza</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SEAEAGLE</Tag>
@@ -25134,12 +25276,18 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SEAEAGLE_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Steller's Sea Eagle, Raptors and Birds, Myths of Sky and Pheonix, Falcon Hut and Falconer, Bird Cage and Enclosure, Feather Worker</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Pigargues empereurs, Rapaces et Oiseaux, Mythe du Ciel et Phénix, Hutte du Fauconnier, Cage et Enclos d'oiseaux, Atelier des plumes</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT] Mit, Opowieść i Historie - Bielik Olbrzymi, Ptaków Drapieżnych i Ptaków
-[ICON_BULLET]Mity Nieba i Feniksa, Chatka Sokołów i Sokolnika
-[ICON_BULLET]Klatkę dla ptaków
-[ICON_BULLET]Warsztat Piórarza</Polish>
+		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
+[SPACE][SPACE] * Myth, Story and Stories - Steller's Sea Eagle, Raptors and Birds
+[SPACE][SPACE] * Myths of Sky and Pheonix, Falcon Hut and Falconer
+[SPACE][SPACE] * Bird Cage, Enclosure and Feather Worker</English>
+
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Pigargues empereurs, Rapaces et Oiseaux, Mythe du Ciel et Phénix, Hutte du Fauconnier, Cage et Enclos d'oiseaux, Atelier des plumes</French>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
+[SPACE][SPACE] * Mit, Opowieść i Historie - Bielik Olbrzymi, Ptaków Drapieżnych i Ptaków
+[SPACE][SPACE] * Mity Nieba i Feniksa, Chatka Sokołów i Sokolnika
+[SPACE][SPACE] * Klatkę dla ptaków
+[SPACE][SPACE] * Warsztat Piórarza</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SECRETARYBIRD</Tag>
@@ -25149,12 +25297,18 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SECRETARYBIRD_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Secretary Bird, Myths of Sky and Birds, Bird Cage and Enclosure, Feather Worker</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Messagers sagittaires, Mythes du ciel et des Oiseaux, Cage et Enclos d'oiseaux, Atelier des plumes</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT] Mit, Opowieść i Historie - Sekretarz
-[ICON_BULLET]Mity Nieba i Ptaków
-[ICON_BULLET]Klatkę dla ptaków
-[ICON_BULLET]Warsztat Piórarza</Polish>
+		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
+[SPACE][SPACE] * Myth, Story and Stories - Secretary Bird
+[SPACE][SPACE] * Myths of Sky and Birds
+[SPACE][SPACE] * Bird Cage and Enclosure, Feather Worker</English>
+
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Messagers sagittaires, Mythes du ciel et des Oiseaux, Cage et Enclos d'oiseaux, Atelier des plumes</French>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
+[SPACE][SPACE] * Mit, Opowieść i Historie - Sekretarz
+[SPACE][SPACE] * Mity Nieba i Ptaków
+[SPACE][SPACE] * Klatkę dla ptaków
+[SPACE][SPACE] * Warsztat Piórarza</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SLOTHBEAR</Tag>
@@ -25169,11 +25323,16 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SLOTHBEAR_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Sloth Bear, Myth- Bears, Bear Cage and Enclosure</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours lippu, Mythe de l'Ours, Cages et Enclos pour Ours</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT] Mit, Opowieść i Historie - Wargacz
-[ICON_BULLET]Mity - Niedźwiedzie
-[ICON_BULLET]Klatkę z niedźwiedziem</Polish>
+		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
+[SPACE][SPACE] * Myth, Story and Stories - Sloth Bear
+[SPACE][SPACE] * Myth- Bears, Bear Cage and Enclosure</English>
+
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours lippu, Mythe de l'Ours, Cages et Enclos pour Ours</French>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
+[SPACE][SPACE] * Mit, Opowieść i Historie - Wargacz
+[SPACE][SPACE] * Mity - Niedźwiedzie
+[SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SPECTACLEDBEAR</Tag>
@@ -25188,11 +25347,16 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SPECTACLED_BEAR_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Spectacled Bear, Myth- Bears, Bear Cage and Enclosure</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours à lunettes, Mythe de l'Ours, Cages et Enclos pour Ours</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT] Mit, Opowieść i Historie - Niedźwiedź Andyjski
-[ICON_BULLET]Mity - Niedźwiedzie
-[ICON_BULLET]Klatkę z niedźwiedziem</Polish>
+		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
+[SPACE][SPACE] * Myth, Story and Stories - Spectacled Bear
+[SPACE][SPACE] * Myth- Bears, Bear Cage and Enclosure</English>
+
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours à lunettes, Mythe de l'Ours, Cages et Enclos pour Ours</French>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
+[SPACE][SPACE] * Mit, Opowieść i Historie - Niedźwiedź Andyjski
+[SPACE][SPACE] * Mity - Niedźwiedzie
+[SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SUNBEAR</Tag>
@@ -25207,11 +25371,16 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SUN_BEAR_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories - Sun Bear, Myth- Bears, Bear Cage and Enclosure</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours malais, Mythe de l'Ours, Cages et Enclos pour Ours</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT] Mit, Opowieść i Historie - Niedźwiedź Malajski
-[ICON_BULLET]Mity - Niedźwiedzie
-[ICON_BULLET]Klatkę z niedźwiedziem</Polish>
+		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
+[SPACE][SPACE] * Myth, Story and Stories - Sun Bear
+[SPACE][SPACE] * Myth- Bears, Bear Cage and Enclosure</English>
+
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours malais, Mythe de l'Ours, Cages et Enclos pour Ours</French>
+		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
+[SPACE][SPACE] * Mit, Opowieść i Historie - Niedźwiedź Malajski
+[SPACE][SPACE] * Mity - Niedźwiedzie
+[SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBMARINE</Tag>
@@ -27793,6 +27962,10 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Vietcong to wietnamska odmiana karabinu maszynowego przystosowana do walki w dżungli.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_VIKING_BESERKER_PEDIA</Tag>
+		<English>Berserks (or berserkers) were Viking warriors who worked themselves up into terribles rage before going into battle. The word berserker comes from the Norse words "bjorn" (meaning bear) or "bare" (meaning naked) and "serkr" (meaning shirt); a berserk was either someone who went into battle wearing the "shirt" of a bear (i.e. someone who was bear-like in rage and strength) or someone who went into battle naked. Berserks thought that by wearing the fur of a bear they would be possessed by the spirit of the animal and possibly even shift into its form. Berserks were also known to have sworn allegiance to the Norse sky god Odin, and they believed that he would protect them and give them superhuman strength. The Vikings also believed that if death came while fighting as a berserk, the deceased would travel straight to the warrior paradise of Valhalla. [PARAGRAPH:2]No one is exactly sure how berserks induced the crazed state of violence described by contemporaries. Some theories speculate that the wild behavior was prompted by the taking of various hallucinogenic drugs, or was caused by mild epilepsy, or even a genetic disorder that caused overly large skull growth. Perhaps the most likely explanation is that before going into battle the berserks simply worked themselves into frenzies by painting their faces, howling like animals, beating helmets and drums - and drinking large quantities of alcohol. [PARAGRAPH:2]All stories about berserks agree that they fought with crazed strength and were immune to pain until battle was ended. Berserks were often portrayed as villains, slaying anything that moved - including their own family members. In battle even the Berserks' allies usually chose to keep them at arm's length and were never comfortable in their presence. Scandinavian kings refused to employ them as bodyguards for fear that they would forget who to protect in the fighting. [PARAGRAPH:2]In 1015, Berserks were outlawed in Norway, and Grágás, the medieval Icelandic law code, sentenced berserk warriors to exile. After the widespread adoption of Christianity across Scandinavia, in 1100 AD the organization of berserk warbands disappeared. [PARAGRAPH</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_VIRACOCHA</Tag>
 		<English>Viracocha</English>
 		<Polish>Wirakocza</Polish>
@@ -28809,7 +28982,65 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Kuter</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_WORKBOAT_ANCIENT_STRATEGY</Tag>
+		<Tag>TXT_KEY_UNIT_WORKBOAT_CLASSIC</Tag>
+		<English>Workboat (Ancient)</English>
+		<French>Bateau-atelier (Classique)</French>
+		<Italian>Chiatta (Classica)</Italian>
+		<Spanish>
+			<Text>Barco faenero clásico</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Łódka (Antyk)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WORKBOAT_CLASSIC_STRATEGY</Tag>
+		<English>Classic [COLOR_UNIT_TEXT]Workboat[COLOR_REVERT] unit with slightly better work rate and movement. Unarmed vessels that can create fishing boats, whaling boats, and (in late game) oil rigs. [COLOR_UNIT_TEXT]Work Boats[COLOR_REVERT] cannot enter Ocean spaces. </English>
+		<French>Les [COLOR_UNIT_TEXT]Bateaux-atelier[COLOR_REVERT] classique, avec une vitesse de travail et des mouvements légèrement meilleurs. Navires non armés qui peuvent créer des bateaux de pêche, des baleiniers et (en fin de partie) des plates-formes pétrolières. Les [COLOR_UNIT_TEXT]Bateaux-atelier [COLOR_REVERT] ne peuvent pas entrer dans les cases d'océan. </French>
+		<Polish>Kliper Handlowy</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WORKBOAT_MIDDLE</Tag>
+		<English>Workboat (Middle Ages)</English>
+		<French>Bateau-atelier (Moyen-Age)</French>
+		<Italian>Chiatta (Medioevo)</Italian>
+		<Spanish>
+			<Text>Barco faenero medieval</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Łódka (Średniowiecze)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WORKBOAT_MIDDLE_STRATEGY</Tag>
+		<English>Medieval [COLOR_UNIT_TEXT]Workboat[COLOR_REVERT] unit with moderate work rate and movement. Unarmed vessels that can create fishing boats, whaling boats, and (in late game) oil rigs. [COLOR_UNIT_TEXT]Work Boats[COLOR_REVERT] cannot enter Ocean spaces. </English>
+		<French>[COLOR_UNIT_TEXT]Bateau-Atelier médiéval[COLOR_REVERT], avec un rythme de travail et un mouvement modérés. Navires non armés qui peuvent créer des bateaux de pêche, des baleiniers et (en fin de partie) des plates-formes pétrolières. Les [COLOR_UNIT_TEXT]Bateaux-ateliers[COLOR_REVERT] ne peuvent pas entrer dans les espaces océaniques.</French>
+		<Polish>Myśliwiec MiG-29</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WORKBOAT_MODERN</Tag>
+		<English>Modern Workboat</English>
+		<French>Bateau-Atelier (Moderne)</French>
+		<German>Modernes Arbeitsboot</German>
+		<Italian>Chiatta moderna</Italian>
+		<Spanish>
+			<Text>Barco de trabajo moderno</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+		<Polish>Współczesny Kuter</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WORKBOAT_MODERN_STRATEGY</Tag>
+		<English>Modern Workboat unit with above average work rate and movement. Unarmed vessels that can create fishing boats, whaling boats, and (in late game) oil rigs. This[COLOR_UNIT_TEXT]Work Boat[COLOR_REVERT] can enter Ocean spaces. </English>
+		<French>Bateau-Atelier (Moderne). C'est une unité avec un taux de travail et un déplacement supérieurs à la moyenne. Ce sont des navires non armés qui peuvent créer des bateaux de pêche, des baleiniers et (en fin de partie) des plates-formes pétrolières. Ce [COLOR_UNIT_TEXT] bateau ouvrier[COLOR_REVERT] peut pénétrer dans les espaces océaniques. </French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WORKBOAT_PEDIA</Tag>
+		<English>Sea Worker</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WORKBOAT_STRATEGY</Tag>
 		<English>Earliest [COLOR_UNIT_TEXT]Workboat[COLOR_REVERT] unit with slowest work rate. Unarmed vessels that can create fishing boats, whaling boats, and (in late game) oil rigs. [COLOR_UNIT_TEXT]Work Boats[COLOR_REVERT] cannot enter Ocean spaces. </English>
 		<French>Unité la plus ancienne de [COLOR_UNIT_TEXT]bateaux-ateliers[COLOR_REVERT], avec un rythme de travail le plus lent. Ce sont des bateaux non armés, qui peuvent installer des bateaux de pêche, des baleiniers et (en fin de partie) des plates-formes pétrolières. Les [COLOR_UNIT_TEXT]bateaux-ateliers[COLOR_REVERT] ne peuvent pas entrer dans les cases d'océan.</French>
 	</TEXT>
@@ -29422,54 +29653,5 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_ZOROASTRIAN_MISSIONARY_STRATEGY</Tag>
 		<English>Magi is a term, used since at least the 6th century BCE, to denote followers of Zoroastrianism or Zoroaster. The earliest known usage of the word Magi is in the trilingual inscription written by Darius the Great, known as the Behistun Inscription. Old Persian texts, pre-dating the Hellenistic period, refer to a Magus as a Zurvanic, and presumably Zoroastrian, priest.</English>
 		<French>Le Mage est un terme utilisé depuis au moins le 6e siècle avant notre ère pour désigner les adeptes du zoroastrisme ou de Zoroastre. Le premier usage connu du mot Mage est dans l'inscription trilingue écrite par Darius le Grand, connue sous le nom de Behistun Inscription. Les vieux textes persans, antérieurs à la période hellénistique, se réfèrent à un mage comme un prêtre zurvanique et vraisemblablement zoroastrien.</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_VIKING_BESERKER_PEDIA</Tag>
-		<English>Berserks (or berserkers) were Viking warriors who worked themselves up into terribles rage before going into battle. The word berserker comes from the Norse words "bjorn" (meaning bear) or "bare" (meaning naked) and "serkr" (meaning shirt); a berserk was either someone who went into battle wearing the "shirt" of a bear (i.e. someone who was bear-like in rage and strength) or someone who went into battle naked. Berserks thought that by wearing the fur of a bear they would be possessed by the spirit of the animal and possibly even shift into its form. Berserks were also known to have sworn allegiance to the Norse sky god Odin, and they believed that he would protect them and give them superhuman strength. The Vikings also believed that if death came while fighting as a berserk, the deceased would travel straight to the warrior paradise of Valhalla. [PARAGRAPH:2]No one is exactly sure how berserks induced the crazed state of violence described by contemporaries. Some theories speculate that the wild behavior was prompted by the taking of various hallucinogenic drugs, or was caused by mild epilepsy, or even a genetic disorder that caused overly large skull growth. Perhaps the most likely explanation is that before going into battle the berserks simply worked themselves into frenzies by painting their faces, howling like animals, beating helmets and drums - and drinking large quantities of alcohol. [PARAGRAPH:2]All stories about berserks agree that they fought with crazed strength and were immune to pain until battle was ended. Berserks were often portrayed as villains, slaying anything that moved - including their own family members. In battle even the Berserks' allies usually chose to keep them at arm's length and were never comfortable in their presence. Scandinavian kings refused to employ them as bodyguards for fear that they would forget who to protect in the fighting. [PARAGRAPH:2]In 1015, Berserks were outlawed in Norway, and Gr&#225;g&#225;s, the medieval Icelandic law code, sentenced berserk warriors to exile. After the widespread adoption of Christianity across Scandinavia, in 1100 AD the organization of berserk warbands disappeared. [PARAGRAPH</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_NARBONA</Tag>
-		<English>Narbona</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_NARBONA_PEDIA</Tag>
-		<English>[H1]Narbona[\H1][NEWLINE][BOLD]Navajo Chieftan[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.1766 - August 31, 1849 AD[NEWLINE] [PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]Narbona was one of the wealthiest Navajo of his time due to the amount of sheep and horses his outfit, or extended family group, owned. He was not a "chief" of all of the Navajo, the independent minded Navajo having no central authority, but he was very influential due to his status in the tribe, gained from both his wealth, high personal reputation and age at the time he negotiated with the Americans.[PARAGRAPH:1]Narbona had become one of the most prominent leaders in the aftermath of the massacre of 24 Navajo leaders in March 1822 at Jemez Pueblo who had been travelling under flag of truce to a peace conference with the new Mexican government. In February 1829 he lead the Navajo in battle against a Mexican expedition into the Chuska Mountains led by Captain Blas de Hinojos and defeated it utterly. The site of the battle, Copper Pass (Beesh Lichii'I Bigiizh), is now known as Narbona Pass.[PARAGRAPH:1]In 1849, Narbona had ridden with several hundred of his warriors to meet with a delegation led by Col. John M. Washington to discuss terms for peace between the Navajo and the "New Men", Americans who had driven the Mexicans from what is now the Southwestern United States. The US party was composed of both US Regulars and local New Mexican auxiliaries.[PARAGRAPH:1]After several misunderstandings, translators managed to work out an acceptable list of terms for peace between the two parties. As the peace council broke up, Sadoval, a young Navajo warrior of some distinction, began riding his horse to and fro, exhorting the 200-300 Navajo warriors in attendance to break the new treaty immediately, starting with the massacre of Col. Washington's command. At this point, a New Mexican officer claimed that he noticed a horse that belonged to him being ridden by one of the Navajo warriors. Navajos were great raiders of livestock, so it is entirely possible that this horse did indeed belong to the Americans. Washington, put in the position of backing one of his troopers, demanded that the horse be immediately turned over. The Navajo refused, and the horse and its rider departed.[PARAGRAPH:1]Washington commanded his troops to unlimber their cannon and prepare to fire if the Navajo refused to return the, now absent, property the Americans were claiming was stolen. The Navajo again denied his request, and the cannon as well as some rifles were fired.[PARAGRAPH:1]Narbona was mortally wounded in the fusillade. As a final indignity, according to eyewitnesses, he was also scalped by one of the New Mexico militiamen. He was buried by his sons in the traditional Navajo fashion, bound in a "death knotted" blanket and cast into a crevice. Two of his finest horses were slaughtered to ensure he would not walk to the afterlife.[PARAGRAPH:1]</English>
-		<Polish>Narbona - wódz indian Navajo z przełomu XVIII i XIX wieku.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_LAWYER_REMOVE_CORPORATIONS_HELP</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Litigate[COLOR_REVERT][NEWLINE]Take legal action and drive all corporations from the city.</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]mettre en litige[COLOR_REVERT][NEWLINE]Prendre des mesures juridiques et conduire toutes les entreprises de la ville au procès.</French>
-		<Italian>[COLOR_HIGHLIGHT_TEXT]Denuncia[COLOR_REVERT][NEWLINE]Prendi azioni legali e rimuovi tutte le corporazioni dalla città.</Italian>
-		<Spanish>[ICON_BULLET]Puede tomar acciones legales</Spanish>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Zaskarż[COLOR_REVERT][NEWLINE]Legalnym sposobem wypędź wszystkie korporacje ze swojego miasta.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_SPECIALUNIT_UNITED_NATIONS</Tag>
-		<English>United Nations unit</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_ARTIST_STRATEGY</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_MERCHANT_STRATEGY</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_PROPHET_STRATEGY</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_STATESMAN_STRATEGY</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_STEALTH_FIGHTER_STRATEGY</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_WORKBOAT_PEDIA</Tag>
-		<English>Sea Worker</English>
 	</TEXT>
 </Civ4GameText>

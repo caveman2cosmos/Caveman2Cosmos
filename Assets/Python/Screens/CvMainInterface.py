@@ -5358,7 +5358,6 @@ class CvMainInterface:
 					self.updateTooltip(screen, CyGameTextMgr().getHappinessHelp())
 
 				elif TYPE == "ProdYield":
-					print "WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW"
 					self.updateTooltip(screen, CyGameTextMgr().getProductionHelpCity(self.InCity.CyCity))
 
 			elif NAME == "GreatPersonBar":

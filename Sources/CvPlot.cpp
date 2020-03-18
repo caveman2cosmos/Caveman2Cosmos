@@ -2189,30 +2189,24 @@ CvPlot* CvPlot::getNearestLandPlot() const
 
 int CvPlot::seeFromLevel(TeamTypes eTeam) const
 {
-	int iLevel;
-
 	FAssertMsg(getTerrainType() != NO_TERRAIN, "TerrainType is not assigned a valid value");
 
-	iLevel = GC.getTerrainInfo(getTerrainType()).getSeeFromLevel();
+	int iLevel = GC.getTerrainInfo(getTerrainType()).getSeeFromLevel();
 
-	// Super Forts begin *vision*
 	if (getImprovementType() != NO_IMPROVEMENT)
 	{
 		iLevel += GC.getImprovementInfo(getImprovementType()).getSeeFrom();
 	}
-	// Super Forts end
 
 	if (isPeak2(true))
 	{
 		iLevel += GC.getPEAK_SEE_FROM_CHANGE();
 	}
-
-	if (isHills())
+	else if (isHills())
 	{
 		iLevel += GC.getHILLS_SEE_FROM_CHANGE();
 	}
-
-	if (isWater())
+	else if (isWater())
 	{
 		iLevel += GC.getSEAWATER_SEE_FROM_CHANGE();
 
@@ -2221,18 +2215,15 @@ int CvPlot::seeFromLevel(TeamTypes eTeam) const
 			iLevel++;
 		}
 	}
-
 	return iLevel;
 }
 
 
 int CvPlot::seeThroughLevel() const
 {
-	int iLevel;
-
 	FAssertMsg(getTerrainType() != NO_TERRAIN, "TerrainType is not assigned a valid value");
 
-	iLevel = GC.getTerrainInfo(getTerrainType()).getSeeThroughLevel();
+	int iLevel = GC.getTerrainInfo(getTerrainType()).getSeeThroughLevel();
 
 	if (getFeatureType() != NO_FEATURE)
 	{
@@ -2243,17 +2234,14 @@ int CvPlot::seeThroughLevel() const
 	{
 		iLevel += GC.getPEAK_SEE_THROUGH_CHANGE();
 	}
-
-	if (isHills())
+	else if (isHills())
 	{
 		iLevel += GC.getHILLS_SEE_THROUGH_CHANGE();
 	}
-
-	if (isWater())
+	else if (isWater())
 	{
 		iLevel += GC.getSEAWATER_SEE_FROM_CHANGE();
 	}
-
 	return iLevel;
 }
 

@@ -7922,14 +7922,6 @@ En temps de guerre, certaines organisations de la garde côtière peuvent avoir 
 		<Polish>Ta technologia nie może zostać odkryta. Jest używana do spejalnych promocji prznawanych przez cuda lub wydarzenia w grze.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TECH_DUMMY_STRATEGY</Tag>
-		<English>Container of unresearchable stuff.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_DUMMY_QUOTE</Tag>
-		<English>Nothing to see here, move along</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_TECH_DYSTOPIA_PATHOGENS</Tag>
 		<English>Dystopia Pathogens</English>
 		<French>Pathogènes dystopiques</French>
