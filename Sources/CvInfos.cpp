@@ -1435,7 +1435,7 @@ CvTechInfo::CvTechInfo() :
 m_iAdvisorType(NO_ADVISOR),
 m_iAIWeight(0),
 m_iAITradeModifier(0),
-m_iResearchCost(0),
+m_iResearchCost(-1),
 m_iAdvancedStartCost(100),
 m_iAdvancedStartCostIncrease(0),
 m_iEra(NO_ERA),
@@ -1776,9 +1776,6 @@ bool CvTechInfo::isRiverTrade() const
 	return m_bRiverTrade;
 }
 
-/************************************************************************************************/
-/* DCM									 04/19/09								Johny Smith  */
-/************************************************************************************************/
 bool CvTechInfo::getDCMAirBombTech1() const
 {
 	return m_bDCMAirBombTech1;
@@ -1788,9 +1785,7 @@ bool CvTechInfo::getDCMAirBombTech2() const
 {
 	return m_bDCMAirBombTech2;
 }
-/************************************************************************************************/
-/* DCM									 END												  */
-/************************************************************************************************/
+
 std::wstring CvTechInfo::getQuote()	const
 {
 	CvWString text = gDLL->getText(m_szQuoteKey);
