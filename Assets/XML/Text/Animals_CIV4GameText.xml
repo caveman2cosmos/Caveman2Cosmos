@@ -4005,7 +4005,7 @@ There are 5 types of Reef Sharks:
 [SPACE][SPACE] * Myth, Story and Stories -  Armadillo
 [SPACE][SPACE] * Myths of Earth and Worker Totem</English>
 
-		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires des tatous[NEWLINE][ICON_BULLET]Mythe de la Terre[NEWLINE][ICON_BULLET]Totem du travail</French>
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) des tatous[NEWLINE][ICON_BULLET]Mythe de la Terre[NEWLINE][ICON_BULLET]Totem du travail</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BABIRUSA</Tag>
@@ -4044,7 +4044,7 @@ There are 5 types of Reef Sharks:
 [SPACE][SPACE] * Unicorn Myth &#38; Master Hunter
 [SPACE][SPACE] * Exotic Herbavours Cage</English>
 
-		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] Mythe, une ou des Histoires du Rhinocéros noir [NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Rhinocéros noir [NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Nosorożce</Polish>
 	</TEXT>
 	<TEXT>
@@ -4097,7 +4097,7 @@ There are 5 types of Reef Sharks:
 [SPACE][SPACE] * Myth, Story &#38; Stories - Cuscus
 [SPACE][SPACE] * Marsupial Myth &#38; Enclosure</English>
 
-		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires des couscous[NEWLINE][ICON_BULLET]Mythe - Marsupiaux[NEWLINE][ICON_BULLET]Cage et Enclos à Marsupiaux</French>
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) des couscous[NEWLINE][ICON_BULLET]Mythe - Marsupiaux[NEWLINE][ICON_BULLET]Cage et Enclos à Marsupiaux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DARTFROG</Tag>
@@ -4119,7 +4119,7 @@ There are 5 types of Reef Sharks:
 [SPACE][SPACE] * Myth, Story and Stories - Dart Frog
 [SPACE][SPACE] * Amphibian Myth, Pond &#38; Enclosure</English>
 
-		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] Mythe, une ou plusieurs Histoires des Grenouilles venimeuses[NEWLINE][ICON_BULLET]Mythe - Amphibiens[NEWLINE][ICON_BULLET]Mare à amphibiens et enclos</French>
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) des Grenouilles venimeuses[NEWLINE][ICON_BULLET]Mythe - Amphibiens[NEWLINE][ICON_BULLET]Mare à amphibiens et enclos</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DESERT_TARANTULA</Tag>
@@ -4171,7 +4171,7 @@ There are 5 types of Reef Sharks:
 [SPACE][SPACE] * Exotic Herbavour Cage &#38; Enclosure
 [SPACE][SPACE] * Master Hunter &#38; Rhino Camp</English>
 
-		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] Mythe, une ou des Histoires du Rhinocéros indien [NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Rhinocéros indien [NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Nosorożce</Polish>
 	</TEXT>
 	<TEXT>
@@ -4301,7 +4301,7 @@ There are 5 types of Reef Sharks:
 [SPACE][SPACE] * Exotic Herbavour Cage &#38; Enclosure
 [SPACE][SPACE] * Rhino camp &#38; master Hunter</English>
 
-		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] Mythe, une ou des Histoires du Rhinocéros indien [NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Rhinocéros indien [NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Nosorożce</Polish>
 	</TEXT>
 	<TEXT>
@@ -4323,7 +4323,7 @@ There are 5 types of Reef Sharks:
 [SPACE][SPACE] * Exotic Herbavour Cage and Enclosure
 [SPACE][SPACE] * Rhino camp and master Hunter</English>
 
-		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] Mythe, une ou des Histoires du Rhinocéros de Java[NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Rhinocéros de Java[NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Nosorożce</Polish>
 	</TEXT>
 	<TEXT>
@@ -4420,7 +4420,7 @@ There are 5 types of Reef Sharks:
 [SPACE][SPACE] * Myth - Marsupial
 [SPACE][SPACE] * Marsupial Cage and Enclosure</English>
 
-		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires des numbats[NEWLINE][ICON_BULLET]Mythe - Marsupiaux[NEWLINE][ICON_BULLET]Cage et Enclos à Marsupiaux</French>
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) des numbats[NEWLINE][ICON_BULLET]Mythe - Marsupiaux[NEWLINE][ICON_BULLET]Cage et Enclos à Marsupiaux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_OPOSSUM</Tag>
@@ -4434,7 +4434,7 @@ There are 5 types of Reef Sharks:
 [SPACE][SPACE] * Myth - Marsupial
 [SPACE][SPACE] * Marsupial Cage and Enclosure</English>
 
-		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires des opossums[NEWLINE][ICON_BULLET]Mythe - Marsupiaux[NEWLINE][ICON_BULLET]Cage et Enclos à Marsupiaux</French>
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) des opossums[NEWLINE][ICON_BULLET]Mythe - Marsupiaux[NEWLINE][ICON_BULLET]Cage et Enclos à Marsupiaux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PIGEON_HELP</Tag>
@@ -4470,7 +4470,7 @@ There are 5 types of Reef Sharks:
 [SPACE][SPACE] * Myth, Story and Stories - Possum
 [SPACE][SPACE] * Marsupial Myth and Enclosure</English>
 
-		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires des Phalangers communs[NEWLINE][ICON_BULLET]Mythe - Marsupiaux[NEWLINE][ICON_BULLET]Cage et Enclos à Marsupiaux</French>
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) des Phalangers communs[NEWLINE][ICON_BULLET]Mythe - Marsupiaux[NEWLINE][ICON_BULLET]Cage et Enclos à Marsupiaux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PYGMYHIPPO</Tag>
@@ -4483,7 +4483,7 @@ There are 5 types of Reef Sharks:
 [SPACE][SPACE] * Myth, Story and Stories - Pygmy Hippopotamus
 [SPACE][SPACE] * Exotic Herbavour Cage and Enclosure</English>
 
-		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires des Hippopotames nains[NEWLINE][ICON_BULLET]Cage et Enclos pour herbivores exotiques</French>
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) des Hippopotames nains[NEWLINE][ICON_BULLET]Cage et Enclos pour herbivores exotiques</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_REDFOX_HELP</Tag>
@@ -4629,7 +4629,7 @@ There are 5 types of Reef Sharks:
 [SPACE][SPACE] * Exotic Herbavour Cage and Enclosure
 [SPACE][SPACE] * Rhino camp and master Hunter</English>
 
-		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] Mythe, une ou des Histoires du Rhinocéros blanc[NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Rhinocéros blanc[NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Nosorożce</Polish>
 	</TEXT>
 	<TEXT>
@@ -4644,7 +4644,7 @@ There are 5 types of Reef Sharks:
 [SPACE][SPACE] * Myths of Earth
 [SPACE][SPACE] * Marsupial Myth and Enclosure</English>
 
-		<French>[COLOR_HIGHLIGHT_TEXT]Construit[COLOR_REVERT] un Mythe, une ou des Histoires des Wombats[NEWLINE][ICON_BULLET]Mythe - Marsupiaux[NEWLINE][ICON_BULLET]Cage et Enclos à Marsupiaux</French>
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s)  des Wombats[NEWLINE][ICON_BULLET]Mythe - Marsupiaux[NEWLINE][ICON_BULLET]Cage et Enclos à Marsupiaux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ZEBRA</Tag>
