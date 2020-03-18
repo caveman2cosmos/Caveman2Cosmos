@@ -5299,7 +5299,7 @@ Base XP gained when defending
 				<UnitType>UNIT_TRACKER</UnitType>
 				<UnitType>UNIT_NEANDERTHAL_CHASER</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_TRAILS</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_TRACKING</ForceObsoleteTech>
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
 			</SupersedingUnits>
@@ -5387,12 +5387,12 @@ Base XP gained when defending
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_TRAILS</PrereqTech>
+			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<UnitUpgrades>
 				<UnitType>UNIT_HUNTER</UnitType>
 				<UnitType>UNIT_NEANDERTHAL_TRACKER</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_TRACKING</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_HUNTING</ForceObsoleteTech>
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
 			</SupersedingUnits>
@@ -5480,7 +5480,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<PrereqTech>TECH_TRACKING</PrereqTech>
+			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<iCost>63</iCost>
 			<iMoves>2</iMoves>
 			<UnitUpgrades>
@@ -58761,7 +58761,7 @@ Base XP gained when defending
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_HUNTER</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_TRACKING</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_HUNTING</ForceObsoleteTech>
 			<iCost>77</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>4</iCombat>
@@ -65924,7 +65924,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bNoBadGoodies>1</bNoBadGoodies>
-			<PrereqTech>TECH_TRAILS</PrereqTech>
+			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<UnitUpgrades>
 				<UnitType>UNIT_MASTER_HUNTER</UnitType>
 			</UnitUpgrades>
@@ -65966,7 +65966,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-			<ForceObsoleteTech>TECH_TRACKING</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_HUNTING</ForceObsoleteTech>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MASTER_HUNTER</Type>
@@ -66019,7 +66019,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_TRACKING</PrereqTech>
+			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<iCost>-1</iCost>
 			<iMoves>3</iMoves>
 			<UnitUpgrades>
