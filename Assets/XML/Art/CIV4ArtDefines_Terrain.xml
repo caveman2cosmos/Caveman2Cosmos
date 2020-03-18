@@ -175,7 +175,7 @@
 			<TextureBlend15>15,0 16,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
 		<TerrainArtInfo>
-			<Type>ART_DEF_TERRAIN_GRASS</Type>
+			<Type>ART_DEF_TERRAIN_GRASSLAND</Type>
 			<Path>Art/Terrain/Textures/GrassBlend.dds</Path>
 			<Grid>Art/Terrain/Textures/GrassGrids.dds</Grid>
 			<Detail>Art/Terrain/Textures/GrassDetail.dds</Detail>
@@ -319,7 +319,7 @@
 			<TextureBlend15>15,0 16,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
 		<TerrainArtInfo>
-			<Type>ART_DEF_TERRAIN_ROCKY_ARID</Type>
+			<Type>ART_DEF_TERRAIN_BADLAND</Type>
 			<Path>Art/Terrain/Textures/Land/RockyBlend.dds</Path>
 			<Grid>Art/Terrain/Textures/Land/RockyGrid.dds</Grid>
 			<Detail>Art/Terrain/Textures/Land/RockyAridDetail.dds</Detail>
@@ -343,7 +343,7 @@
 			<TextureBlend15>15,0 16,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
 		<TerrainArtInfo>
-			<Type>ART_DEF_TERRAIN_ROCKY_COLD</Type>
+			<Type>ART_DEF_TERRAIN_JAGGED</Type>
 			<Path>Art/Terrain/Textures/Land/RockyBlend.dds</Path>
 			<Grid>Art/Terrain/Textures/Land/RockyGrid.dds</Grid>
 			<Detail>Art/Terrain/Textures/Land/RockyColdDetail.dds</Detail>
@@ -895,7 +895,7 @@
 			<TextureBlend15>15,0 16,0</TextureBlend15>
 		</TerrainArtInfo>
 		<TerrainArtInfo>
-			<Type>ART_DEF_TERRAIN_SLIMY_COAST</Type>
+			<Type>ART_DEF_TERRAIN_INFECTED_WATER</Type>
 			<Path>Art/Terrain/Textures/CoastBlend.dds</Path>
 			<Grid>Art/Terrain/Textures/CoastGrids.dds</Grid>
 			<Detail>Art/Terrain/Textures/slimycoastdetail.dds</Detail>
@@ -919,7 +919,7 @@
 			<TextureBlend15>29,0</TextureBlend15>
 		</TerrainArtInfo>
 		<TerrainArtInfo>
-			<Type>ART_DEF_TERRAIN_SLIMY_OCEAN</Type>
+			<Type>ART_DEF_TERRAIN_PLAGUED_WATER</Type>
 			<Path>Art/Terrain/Textures/CoastBlend.dds</Path>
 			<Grid>Art/Terrain/Textures/CoastGrids.dds</Grid>
 			<Detail>Art/Terrain/Textures/slimycoastdetail.dds</Detail>
@@ -930,30 +930,6 @@
 			<TextureBlend02>1,270 5,0   9,270  13,0   17,270 21,0   26,0</TextureBlend02>
 			<TextureBlend04>1,0   5,90  9,0    13,90  17,0   21,90  26,90</TextureBlend04>
 			<TextureBlend08>1,90  5,180 9,90   13,180 17,90  21,180 26,180</TextureBlend08>
-			<TextureBlend03>3,0   7,180 11,0   15,180 19,0   23,180 27,0   31,180</TextureBlend03>
-			<TextureBlend06>3,90  7,270 11,90  15,270 19,90  23,270 27,90  31,270</TextureBlend06>
-			<TextureBlend12>3,180 7,0   11,180 15,0   19,180 23,0   27,180 31,0</TextureBlend12>
-			<TextureBlend09>3,270 7,90  11,270 15,90  19,270 23,90  27,270 31,90</TextureBlend09>
-			<TextureBlend07>4,0   8,270 12,0   16,270 20,0   24,270 28,0   32,270</TextureBlend07>
-			<TextureBlend14>4,90  8,0   12,90  16,0   20,90  24,0   28,90  32,0</TextureBlend14>
-			<TextureBlend13>4,180 8,90  12,180 16,90  20,180 24,90  28,180 32,90</TextureBlend13>
-			<TextureBlend11>4,270 8,180 12,270 16,180 20,270 24,180 28,270 32,180</TextureBlend11>
-			<TextureBlend10>2,0   6,270  10,0   14,270  18,0   22,270  26,0</TextureBlend10>
-			<TextureBlend05>2,90  6,0   10,90  14,0   18,90  22,0   26,90</TextureBlend05>
-			<TextureBlend15>29,0</TextureBlend15>
-		</TerrainArtInfo>
-		<TerrainArtInfo>
-			<Type>ART_DEF_TERRAIN_FF_SPACE</Type>
-			<Path>Art/Terrain/Textures/FinalFrontier_SPACEGRID.dds</Path>
-			<Grid>Art/Terrain/Textures/FinalFrontier_SPACEGRID_GRIDS.dds</Grid>
-			<Detail>Art/Terrain/Textures/Water/GreyDetail.dds</Detail>
-			<Button>,Art/Interface/Buttons/Units/Transport.dds,Art/Interface/Buttons/FinalFrontier2_Atlas.dds,1,4</Button>
-			<LayerOrder>0</LayerOrder>
-			<AlphaShader>1</AlphaShader>
-			<TextureBlend01>1,180 5,270 9,180  13,270 17,180 21,270</TextureBlend01>
-			<TextureBlend02>1,270 5,0   9,270  13,0   17,270 21,0</TextureBlend02>
-			<TextureBlend04>1,0   5,90  9,0    13,90  17,0   21,90</TextureBlend04>
-			<TextureBlend08>1,90  5,180 9,90   13,180 17,90  21,180</TextureBlend08>
 			<TextureBlend03>3,0   7,180 11,0   15,180 19,0   23,180 27,0   31,180</TextureBlend03>
 			<TextureBlend06>3,90  7,270 11,90  15,270 19,90  23,270 27,90  31,270</TextureBlend06>
 			<TextureBlend12>3,180 7,0   11,180 15,0   19,180 23,0   27,180 31,0</TextureBlend12>
@@ -1015,7 +991,7 @@
 			<TextureBlend15>15,0 16,0 17,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
 		<TerrainArtInfo>
-			<Type>ART_DEF_TERRAIN_LUNAR_BASALT</Type>
+			<Type>ART_DEF_TERRAIN_LUNAR_DOME</Type>
 			<Path>Art/Terrain/Textures/GrassBlend.dds</Path>
 			<Grid>Art/Terrain/Textures/GrassGrids.dds</Grid>
 			<Detail>Art/Terrain/Textures/Lunar/LunarBasaltDetail.dds</Detail>
@@ -1039,7 +1015,7 @@
 			<TextureBlend15>15,0 16,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
 		<TerrainArtInfo>
-			<Type>ART_DEF_TERRAIN_LUNAR_PLAINS</Type>
+			<Type>ART_DEF_TERRAIN_LUNAR_MARE</Type>
 			<Path>Art/Terrain/Textures/LunarMariaBlend.dds</Path>
 			<Grid>Art/Terrain/Textures/LunarMariaGrids.dds</Grid>
 			<Detail>Art/Terrain/Textures/LunarMariaDETAIL.dds</Detail>
@@ -1063,7 +1039,7 @@
 			<TextureBlend15>15,0 16,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
 		<TerrainArtInfo>
-			<Type>ART_DEF_TERRAIN_LUNAR_ROCKY</Type>
+			<Type>ART_DEF_TERRAIN_LUNAR_HIGHLAND</Type>
 			<Path>Art/Terrain/Textures/Land/RockyBlend.dds</Path>
 			<Grid>Art/Terrain/Textures/Land/RockyGrid.dds</Grid>
 			<Detail>Art/Terrain/Textures/LunarHighlandsDetail.dds</Detail>
@@ -1087,7 +1063,7 @@
 			<TextureBlend15>15,0 16,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
 		<TerrainArtInfo>
-			<Type>ART_DEF_TERRAIN_LUNAR_BARREN</Type>
+			<Type>ART_DEF_TERRAIN_LUNAR_REGOLITH</Type>
 			<Path>Art/Terrain/Textures/LunarRegolithBlend.dds</Path>
 			<Grid>Art/Terrain/Textures/LunarRegolithGrids.dds</Grid>
 			<Detail>Art/Terrain/Textures/LunarRegolithDetail.dds</Detail>
@@ -1111,7 +1087,7 @@
 			<TextureBlend15>15,0 16,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
 		<TerrainArtInfo>
-			<Type>ART_DEF_TERRAIN_LUNAR_DESERT</Type>
+			<Type>ART_DEF_TERRAIN_LUNAR_RILLE</Type>
 			<Path>Art/Terrain/Textures/IceBlend.dds</Path>
 			<Grid>Art/Terrain/Textures/IceGrids.dds</Grid>
 			<Detail>Art/Terrain/Textures/IceDetail.dds</Detail>
@@ -1133,30 +1109,6 @@
 			<TextureBlend10>7,0</TextureBlend10>
 			<TextureBlend05>13,0</TextureBlend05>
 			<TextureBlend15>15,0 16,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
-		</TerrainArtInfo>
-		<TerrainArtInfo>
-			<Type>ART_DEF_TERRAIN_LUNAR_DUNES</Type>
-			<Path>Art/Terrain/Textures/LunarRidgesBLEND.dds</Path>
-			<Grid>Art/Terrain/Textures/LunarRidgesGrids.dds</Grid>
-			<Detail>Art/Terrain/Textures/LunarRidgesDetail.dds</Detail>
-			<Button>Art/Interface/Buttons/WorldBuilder/LunarRidges.dds</Button>
-			<LayerOrder>50</LayerOrder>
-			<AlphaShader>0</AlphaShader>
-			<TextureBlend01>1,180 5,270 9,180  13,270 17,180 21,270 26,270</TextureBlend01>
-			<TextureBlend02>1,270 5,0   9,270  13,0   17,270 21,0   26,0</TextureBlend02>
-			<TextureBlend04>1,0   5,90  9,0    13,90  17,0   21,90  26,90</TextureBlend04>
-			<TextureBlend08>1,90  5,180 9,90   13,180 17,90  21,180 26,180</TextureBlend08>
-			<TextureBlend03>3,0   7,180 11,0   15,180 19,0   23,180 27,0   31,180</TextureBlend03>
-			<TextureBlend06>3,90  7,270 11,90  15,270 19,90  23,270 27,90  31,270</TextureBlend06>
-			<TextureBlend12>3,180 7,0   11,180 15,0   19,180 23,0   27,180 31,0</TextureBlend12>
-			<TextureBlend09>3,270 7,90  11,270 15,90  19,270 23,90  27,270 31,90</TextureBlend09>
-			<TextureBlend07>4,0   8,270 12,0   16,270 20,0   24,270 28,0   32,270</TextureBlend07>
-			<TextureBlend14>4,90  8,0   12,90  16,0   20,90  24,0   28,90  32,0</TextureBlend14>
-			<TextureBlend13>4,180 8,90  12,180 16,90  20,180 24,90  28,180 32,90</TextureBlend13>
-			<TextureBlend11>4,270 8,180 12,270 16,180 20,270 24,180 28,270 32,180</TextureBlend11>
-			<TextureBlend10>2,0   6,270  10,0   14,270  18,0   22,270</TextureBlend10>
-			<TextureBlend05>2,90  6,0   10,90  14,0   18,90  22,0</TextureBlend05>
-			<TextureBlend15>29,0</TextureBlend15>
 		</TerrainArtInfo>
 		<TerrainArtInfo>
 			<Type>ART_DEF_TERRAIN_MARTIAN_BARREN</Type>

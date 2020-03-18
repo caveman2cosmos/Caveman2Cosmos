@@ -568,14 +568,11 @@ def WorldBuilderHandleCityEditCorporationCB( argsList ):
 def WorldBuilderHandleCorporationCommandsCB( argsList ):
 	worldBuilderScreen.handleCorporationCommandsCB(argsList)
 
-def WorldBuilderHandleCityEditBuildingClassCB( argsList ):
-	worldBuilderScreen.handleCityEditBuildingClassCB(argsList)
+def WorldBuilderHandleCityEditBuildingCB(argsList):
+	worldBuilderScreen.handleCityEditBuildingCB(argsList)
 
 def WorldBuilderHandleCityEditModiferCB( argsList ):
 	worldBuilderScreen.handleCityEditModiferCB(argsList)
-
-def WorldBuilderHandleCityEditModifyBuildingClassCB( argsList ):
-	worldBuilderScreen.handleCityEditModifyBuildingClassCB(argsList)
 
 def WorldBuilderHandleCityEditChooseProductionCB( argsList ):
 	worldBuilderScreen.handleCityEditChooseProductionCB(argsList)
@@ -1211,27 +1208,6 @@ def featAccomplishedOnFocusCallback(argsList):
 	CyInterface().playGeneralSound("AS2D_FEAT_ACCOMPLISHED")
 	if iData1 >= FeatTypes.FEAT_UNITCOMBAT_ARCHER and iData1 <= FeatTypes.FEAT_FOOD_CONNECTED:
 		CyInterface().lookAtCityOffset(iData2)
-
-#Ronnar: EventTriggerMenu START
-def selectOneEvent(argsList):
-	iButtonId	= argsList[0]
-	iData1		= argsList[1]
-
-	eventTriggerName = None
-	eventTriggerNumber = -1
-
-	if iButtonId < CyGlobalContext().getNumEventTriggerInfos():
-		eventTriggerName = CyGlobalContext().getEventTriggerInfo(iButtonId).getType()
-		eventTriggerNumber = iButtonId
-	if eventTriggerName == None:
-		return
-	if eventTriggerNumber == -1:
-		return
-	message = 'Event: %s[%d]' % (eventTriggerName, eventTriggerNumber)
-	CyInterface().addImmediateMessage(message, "")
-
-	pPlayer = CyGlobalContext().getPlayer(iData1)
-	pPlayer.trigger(eventTriggerNumber)
 
 ####################
 # Handle Input Map #

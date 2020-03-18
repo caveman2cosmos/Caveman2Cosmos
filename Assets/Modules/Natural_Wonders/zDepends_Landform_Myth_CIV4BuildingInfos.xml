@@ -103,7 +103,7 @@
 			</PrereqOrFeature>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_LAVA_ROCK_QUARRY</Type>
+			<Type>BUILDING_GATHERER_LAVA_ROCK</Type>
 			<PrereqOrFeature>
 			   <PrereqFeature>
 					<FeatureType>FEATURE_PLATY_FUJI</FeatureType>
@@ -112,7 +112,7 @@
 			</PrereqOrFeature>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_LAVA_ROCK_QUARRY</Type>
+			<Type>BUILDING_GATHERER_LAVA_ROCK</Type>
 			<PrereqOrFeature>
 			   <PrereqFeature>
 					<FeatureType>FEATURE_PLATY_SOPKA</FeatureType>
@@ -121,7 +121,7 @@
 			</PrereqOrFeature>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_LAVA_ROCK_QUARRY</Type>
+			<Type>BUILDING_GATHERER_LAVA_ROCK</Type>
 			<PrereqOrFeature>
 			   <PrereqFeature>
 					<FeatureType>FEATURE_PLATY_KRAKATOA</FeatureType>
@@ -130,7 +130,7 @@
 			</PrereqOrFeature>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_LAVA_ROCK_QUARRY</Type>
+			<Type>BUILDING_GATHERER_LAVA_ROCK</Type>
 			<PrereqOrFeature>
 			  <PrereqFeature>
 					<FeatureType>FEATURE_PLATY_KILIMANJARO</FeatureType>
@@ -182,11 +182,11 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_GREAT_BARRIER_WITH_BEACON</FeatureType>
+					<FeatureType>FEATURE_GREAT_BARRIER_REEF_BEACON</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_GREAT_BARRIER_WITH_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -199,11 +199,11 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_GREAT_BARRIER_WITH_BEACON</FeatureType>
+					<FeatureType>FEATURE_GREAT_BARRIER_REEF_BEACON</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_GREAT_BARRIER_WITH_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
             </PrereqOrFeature>
@@ -216,11 +216,11 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_GREAT_BARRIER_WITH_BEACON</FeatureType>
+					<FeatureType>FEATURE_GREAT_BARRIER_REEF_BEACON</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_GREAT_BARRIER_WITH_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
             </PrereqOrFeature>

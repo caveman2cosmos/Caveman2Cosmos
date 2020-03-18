@@ -8,8 +8,9 @@
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CYBERPUNK_EMBASSY</BuildingClass>
 			<Type>BUILDING_CYBERPUNK_EMBASSY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CYBERPUNK_EMBASSY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CYBERPUNK_EMBASSY_PEDIA</Civilopedia>
@@ -34,7 +35,6 @@
 			</CommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DREAM_SIMULATION_CENTER</BuildingClass>
 			<Type>BUILDING_DREAM_SIMULATION_CENTER</Type>
 			<Description>TXT_KEY_BUILDING_DREAM_SIMULATION_CENTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DREAM_SIMULATION_CENTER_PEDIA</Civilopedia>
@@ -77,7 +77,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DREAM_ARTIST</BuildingClass>
 			<Type>BUILDING_DREAM_ARTIST</Type>
 			<Description>TXT_KEY_BUILDING_DREAM_ARTIST</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DREAM_ARTIST_PEDIA</Civilopedia>
@@ -106,17 +105,13 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DREAM_SIMULATION_CENTER</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_DREAM_SIMULATION_CENTER</BuildingType>
+			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>6</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CYBER_INSECT_LAB</BuildingClass>
 			<Type>BUILDING_CYBER_INSECT_LAB</Type>
 			<Description>TXT_KEY_BUILDING_CYBER_INSECT_LAB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CYBER_INSECT_LAB_PEDIA</Civilopedia>
@@ -145,7 +140,7 @@
 			</SpecialistCounts>
 			<TechCommerceChanges>
 				<TechCommerceChange>
-					<PrereqTech>TECH_FLASHMEMORY</PrereqTech>
+					<PrereqTech>TECH_FLASH_MEMORY</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>2</iCommerce>
@@ -163,7 +158,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_HUMAN_MACHINE_INTERFACE</PrereqTech>
+					<PrereqTech>TECH_BRAIN_MACHINE_INTERFACE</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>2</iCommerce>
@@ -172,7 +167,7 @@
 					</TechCommerce>
 				</TechCommerceChange>
 				<TechCommerceChange>
-					<PrereqTech>TECH_NANOGENERATOR</PrereqTech>
+					<PrereqTech>TECH_NANOGENERATORS</PrereqTech>
 					<TechCommerce>
 						<iCommerce>0</iCommerce>
 						<iCommerce>2</iCommerce>
@@ -181,17 +176,13 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_BIOLOGY_LAB</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_BIOLOGY_LAB</BuildingType>
+			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>6</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_INSECT_MANIPULATION_LAB</BuildingClass>
 			<Type>BUILDING_INSECT_MANIPULATION_LAB</Type>
 			<Description>TXT_KEY_BUILDING_INSECT_MANIPULATION_LAB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INSECT_MANIPULATION_LAB_PEDIA</Civilopedia>
@@ -222,17 +213,16 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CYBER_INSECT_LAB</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_CYBER_INSECT_LAB</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>6</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DREAM_PROPAGANDA</BuildingClass>
 			<Type>BUILDING_DREAM_PROPAGANDA</Type>
 			<Description>TXT_KEY_BUILDING_DREAM_PROPAGANDA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DREAM_PROPAGANDA_PEDIA</Civilopedia>
@@ -258,12 +248,9 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceModifiers>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_DREAM_SIMULATION_CENTER</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_DREAM_SIMULATION_CENTER</BuildingType>
+			</PrereqInCityBuildings>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PropertyManipulators>

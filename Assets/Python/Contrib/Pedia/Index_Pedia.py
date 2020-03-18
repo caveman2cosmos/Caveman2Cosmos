@@ -39,8 +39,8 @@ class Index:
 		screen = self.main.screen()
 		xRes = self.xRes
 		szFontEdge, szFont = self.aFontList
-		iFontTitle = FontTypes.TITLE_FONT
-		iWidGeneral	= WidgetTypes.WIDGET_GENERAL
+		eFontTitle = FontTypes.TITLE_FONT
+		eWidGen	= WidgetTypes.WIDGET_GENERAL
 		if not self.nIndexLists: # Initialize Index
 			iWidJuToTech		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_TECH
 			iWidJuToUnit		= WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT
@@ -95,12 +95,7 @@ class Index:
 			self.aListLength = len(aList)
 
 			# Draw Index
-			iWidDescription	= WidgetTypes.WIDGET_PEDIA_DESCRIPTION
-			iPanelBlue50	= PanelStyles.PANEL_STYLE_BLUE50
-			iTableStd 		= TableStyles.TABLE_STYLE_STANDARD
-			iTableEmpty		= TableStyles.TABLE_STYLE_EMPTY
-			iPedConcept		= CivilopediaPageTypes.CIVILOPEDIA_PAGE_CONCEPT
-			iPedConcNew		= CivilopediaPageTypes.CIVILOPEDIA_PAGE_CONCEPT_NEW
+			eTableStd = TableStyles.TABLE_STYLE_STANDARD
 
 			Y_INDEX = self.Y_INDEX
 			W_INDEX = self.W_INDEX
@@ -109,7 +104,7 @@ class Index:
 			LIST = []
 			for i in range(nLists):
 				LIST.append("Index" + str(i))
-				screen.addListBoxGFC(LIST[i], "", W_INDEX * i, Y_INDEX, W_INDEX, H_INDEX, iTableStd)
+				screen.addListBoxGFC(LIST[i], "", W_INDEX * i, Y_INDEX, W_INDEX, H_INDEX, eTableStd)
 
 			H_LETTER = self.H_LETTER
 			screen.addPanel("IndexLetters", "", "", False, False, 4, self.Y_LETTER, xRes - 4, H_LETTER, PanelStyles.PANEL_STYLE_EMPTY)
@@ -145,13 +140,13 @@ class Index:
 							iX = 4 + iTemp
 					szLetter = str(szName[:1])
 					szHeader = szFont + "<color=245,245,0,255>" + "-----  " + szLetter + "  -----"
-					do(LIST[iList], szHeader, iWidGeneral, 0, 0, 1<<2)
+					do(LIST[iList], szHeader, eWidGen, 0, 0, 1<<2)
 					# create letter button
 					if szLetter == " ":
 						szA = "&#95"
 					else:
 						szA = szLetter
-					screen.setTextAt("Letter|" + szLetter, "IndexLetters", szFontEdge + szA, 1<<2, iX, 4, 0, iFontTitle, iWidGeneral, iList, i + iLetter)
+					screen.setTextAt("Letter|" + szLetter, "IndexLetters", szFontEdge + szA, 1<<2, iX, 4, 0, eFontTitle, eWidGen, iList, i + iLetter)
 					iLetter += 1
 					iX += dX
 				do(LIST[iList], BUTTON, WIDGET, iType - iOffset, 0, 1<<0)
@@ -162,5 +157,5 @@ class Index:
 				screen.enableSelect(LIST[i], False)
 			self.nIndexLists = [nLists, nRowList]
 		szText = szFontEdge + "Index - " + str(self.aListLength) + " entries"
-		screen.setText(self.main.getNextWidgetName(), "", szText, 1<<2, xRes / 2, 0, 0, iFontTitle, iWidGeneral, 0, 0)
+		screen.setText(self.main.getNextWidgetName(), "", szText, 1<<2, xRes / 2, 0, 0, eFontTitle, eWidGen, 0, 0)
 		return self.nIndexLists

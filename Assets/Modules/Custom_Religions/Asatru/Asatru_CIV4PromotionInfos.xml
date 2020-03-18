@@ -8,7 +8,7 @@
 	<PromotionInfos>
 		<PromotionInfo>
 			<Type>PROMOTION_MJOLNIR</Type>
-			<Description>Mojlnir</Description>
+			<Description>TXT_KEY_PROMOTION_MJOLNIR</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<LayerAnimationPath>NONE</LayerAnimationPath>
 			<PromotionPrereq>NONE</PromotionPrereq>

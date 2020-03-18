@@ -181,10 +181,8 @@
               <pElem>include</pElem>
             </incDir>
             <preprocessorList>
-              <Elem>C2C_BUILD</Elem>
               <Elem>FASSERT_ENABLE</Elem>
               <Elem>LOG_AI</Elem>
-              <Elem>MULTI_FEATURE_MOD</Elem>
               <Elem>QC_MASTERY_VICTORY</Elem>
               <Elem>WIN32</Elem>
               <Elem>WINDOWS</Elem>
@@ -194,7 +192,6 @@
               <Elem>_MOD_GOVWORKERS</Elem>
               <Elem>_MOD_GWARM</Elem>
               <Elem>_MOD_SENTRY</Elem>
-              <Elem>_MOD_SHAM_SPOILER</Elem>
               <Elem>_USRDLL</Elem>
             </preprocessorList>
           </ccTool>
@@ -509,10 +506,8 @@
               <pElem>include</pElem>
             </incDir>
             <preprocessorList>
-              <Elem>C2C_BUILD</Elem>
               <Elem>FINAL_RELEASE</Elem>
               <Elem>LOG_AI</Elem>
-              <Elem>MULTI_FEATURE_MOD</Elem>
               <Elem>NDEBUG</Elem>
               <Elem>QC_MASTERY_VICTORY</Elem>
               <Elem>WIN32</Elem>
@@ -522,7 +517,6 @@
               <Elem>_MOD_GOVWORKERS</Elem>
               <Elem>_MOD_GWARM</Elem>
               <Elem>_MOD_SENTRY</Elem>
-              <Elem>_MOD_SHAM_SPOILER</Elem>
               <Elem>_USRDLL</Elem>
             </preprocessorList>
           </ccTool>
@@ -837,11 +831,9 @@
               <pElem>include</pElem>
             </incDir>
             <preprocessorList>
-              <Elem>C2C_BUILD</Elem>
               <Elem>FASSERT_ENABLE</Elem>
               <Elem>FINAL_RELEASE</Elem>
               <Elem>LOG_AI</Elem>
-              <Elem>MULTI_FEATURE_MOD</Elem>
               <Elem>NDEBUG</Elem>
               <Elem>QC_MASTERY_VICTORY</Elem>
               <Elem>WIN32</Elem>
@@ -851,7 +843,6 @@
               <Elem>_MOD_GOVWORKERS</Elem>
               <Elem>_MOD_GWARM</Elem>
               <Elem>_MOD_SENTRY</Elem>
-              <Elem>_MOD_SHAM_SPOILER</Elem>
               <Elem>_USRDLL</Elem>
             </preprocessorList>
           </ccTool>
@@ -1166,11 +1157,9 @@
               <pElem>include</pElem>
             </incDir>
             <preprocessorList>
-              <Elem>C2C_BUILD</Elem>
               <Elem>FINAL_RELEASE</Elem>
               <Elem>FP_PROFILE_ENABLE</Elem>
               <Elem>LOG_AI</Elem>
-              <Elem>MULTI_FEATURE_MOD</Elem>
               <Elem>NDEBUG</Elem>
               <Elem>QC_MASTERY_VICTORY</Elem>
               <Elem>USE_INTERNAL_PROFILER</Elem>
@@ -1181,7 +1170,6 @@
               <Elem>_MOD_GOVWORKERS</Elem>
               <Elem>_MOD_GWARM</Elem>
               <Elem>_MOD_SENTRY</Elem>
-              <Elem>_MOD_SHAM_SPOILER</Elem>
               <Elem>_USRDLL</Elem>
             </preprocessorList>
           </ccTool>

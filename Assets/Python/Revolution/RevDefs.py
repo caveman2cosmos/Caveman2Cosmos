@@ -7,17 +7,14 @@ from CvPythonExtensions import *
 # If your mod changes some of these XML variables, you'll need to find an appropriate replacement
 
 # Civs
-sXMLMinor = 'CIVILIZATION_MINOR'
 sXMLBarbarian = 'CIVILIZATION_BARBARIAN'
 
 # Units
-sXMLWarrior = 'UNITCLASS_CLUBMAN'
-sXMLWorker = 'UNITCLASS_WORKER'
 sXMLGeneral = 'UNIT_GREAT_GENERAL'
 
 # Buildings
 # Used by Rev when rebels capture a tiny city first
-sXMLPalace = "BUILDINGCLASS_PALACE"
+sXMLPalace = "BUILDING_PALACE"
 
 # Techs
 # Used by Rev, weight of nationality effects increases after discovery

@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by EXTREME (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- Assets\Modules\NotSoGood\AnimalPlacing\AnimalPlacing_CIV4UnitInfos.xml -->
-<!-- Unit Infos -->
 <Civ4UnitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_GREAT_FARMER</Class>
 			<Type>UNIT_GREAT_FARMER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bUnlimitedException>1</bUnlimitedException>
 			<Combat>UNITCOMBAT_PRODIGY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WORKER</SubCombatType>
@@ -46,7 +42,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_BONUS_ELEPHANT</BuildType>
+					<BuildType>BUILD_BONUS_ELEPHANTS</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -66,7 +62,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_BONUS_FUR</BuildType>
+					<BuildType>BUILD_BONUS_BEAVERS</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -94,7 +90,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_BONUS_SEA_LIONS</BuildType>
+					<BuildType>BUILD_BONUS_SEA_LION_AND_SEAL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -106,7 +102,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_BONUS_GUINEA_PIG</BuildType>
+					<BuildType>BUILD_BONUS_GUINEA_PIGS</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -134,15 +130,15 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_BONUS_GUAVA</BuildType>
+					<BuildType>BUILD_BONUS_GUAVAS</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_BONUS_MELON</BuildType>
+					<BuildType>BUILD_BONUS_MELONS</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_BONUS_POTATO</BuildType>
+					<BuildType>BUILD_BONUS_POTATOES</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -186,7 +182,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_BONUS_LEMON</BuildType>
+					<BuildType>BUILD_BONUS_LEMONS</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -206,7 +202,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_BONUS_WINE</BuildType>
+					<BuildType>BUILD_BONUS_GRAPES</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -222,11 +218,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_BONUS_TIMBER</BuildType>
+					<BuildType>BUILD_BONUS_PRIME_TIMBER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_BONUS_CANNABIS</BuildType>
+					<BuildType>BUILD_BONUS_HEMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>

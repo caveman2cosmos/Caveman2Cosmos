@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_APOCALYPSE_URBAN_CROSSBOWMAN</Tag>
@@ -23,50 +23,6 @@
 		<Italian>Il balestriere urbano è un'unità post-apocalisse. Non dovrebbe essere costruito, a meno che tu non sia stato bombardato con l'atomica e non possa costruire nient'altro.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_MACHETE_WARRIOR</Tag>
-		<English>Machete Warrior</English>
-		<French>
-			<Text>Combattant avec Machette</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>Guerriero con machete</Italian>
-		<Polish>Wojownik z maczetą</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_MACHETE_WARRIOR_PEDIA</Tag>
-		<English>Post-Apocalypse unit</English>
-		<Italian>Unità post-apocalisse</Italian>
-		<Polish>Jednostka post-apo</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_MACHETE_WARRIOR_STRATEGY</Tag>
-		<English>The Machete Warrior is an alt-timeline Post-Apocalypse Unit. It should not be build unless you have been nuked and you can build nothing else.</English>
-		<Italian>Il guerriero con machete è un'unità post-apocalisse. Non dovrebbe essere costruito, a meno che tu non sia stato bombardato con l'atomica e non possa costruire nient'altro.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_WRENCH_WARRIOR</Tag>
-		<English>Wrench Warrior</English>
-		<French>
-			<Text>Combattant avec Clé à Molette</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>Guerriero con chiave inglese</Italian>
-		<Polish>Wojownik z kluczem fr.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_WRENCH_WARRIOR_PEDIA</Tag>
-		<English>Post-Apocalypse unit</English>
-		<Italian>Unità post-apocalisse</Italian>
-		<Polish>Jednostka post-apo</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_WRENCH_WARRIOR_STRATEGY</Tag>
-		<English>The Wrench Warrior is an alt-timeline Post-Apocalypse Unit. It should not be build unless you have been nuked and you can build nothing else.</English>
-		<Italian>Il guerriero con chiave inglese è un'unità post-apocalisse. Non dovrebbe essere costruito, a meno che tu non sia stato bombardato con l'atomica e non possa costruire nient'altro.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_CROWBAR_GUARD</Tag>
 		<English>Crowbar Guard</English>
 		<French>
@@ -76,12 +32,6 @@
 		</French>
 		<Italian>Guardia con piede di porco</Italian>
 		<Polish>Strażnik z łomem</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_CROWBAR_GUARD_PEDIA</Tag>
-		<English>Post-Apocalypse unit</English>
-		<Italian>Unità post-apocalisse</Italian>
-		<Polish>Jednostka post-apo</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CROWBAR_GUARD_STRATEGY</Tag>
@@ -100,15 +50,25 @@
 		<Polish>Wojownik z siekierą</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_HATCHET_MAN_PEDIA</Tag>
-		<English>Post-Apocalypse unit</English>
-		<Italian>Unità post-apocalisse</Italian>
-		<Polish>Jednostka post-apo</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_HATCHET_MAN_STRATEGY</Tag>
 		<English>The Hatchet Warrior is an alt-timeline Post-Apocalypse Unit. It should not be build unless you have been nuked and you can build nothing else.</English>
 		<Italian>Il guerriero con accetta è un'unità post-apocalisse. Non dovrebbe essere costruito, a meno che tu non sia stato bombardato con l'atomica e non possa costruire nient'altro.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MACHETE_WARRIOR</Tag>
+		<English>Machete Warrior</English>
+		<French>
+			<Text>Combattant avec Machette</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>Guerriero con machete</Italian>
+		<Polish>Wojownik z maczetą</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MACHETE_WARRIOR_STRATEGY</Tag>
+		<English>The Machete Warrior is an alt-timeline Post-Apocalypse Unit. It should not be build unless you have been nuked and you can build nothing else.</English>
+		<Italian>Il guerriero con machete è un'unità post-apocalisse. Non dovrebbe essere costruito, a meno che tu non sia stato bombardato con l'atomica e non possa costruire nient'altro.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_POST_APOCALYPTIC_GRENADIER</Tag>
@@ -117,13 +77,23 @@
 		<Polish>Miotacz Koktaili Mołotowa</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_POST_APOCALYPTIC_GRENADIER_PEDIA</Tag>
-		<English>Post-Apocalypse unit</English>
-		<Italian>Unità post-apocalisse</Italian>
-		<Polish>Jednostka post-apo</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_POST_APOCALYPTIC_GRENADIER_STRATEGY</Tag>
 		<English>The Molotov Cocktail Thrower can easily take the wreckage of buildings and cities from enemy forces by burning them out. Be careful though with the flammables, you only have so many resources.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WRENCH_WARRIOR</Tag>
+		<English>Wrench Warrior</English>
+		<French>
+			<Text>Combattant avec Clé à Molette</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>Guerriero con chiave inglese</Italian>
+		<Polish>Wojownik z kluczem fr.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WRENCH_WARRIOR_STRATEGY</Tag>
+		<English>The Wrench Warrior is an alt-timeline Post-Apocalypse Unit. It should not be build unless you have been nuked and you can build nothing else.</English>
+		<Italian>Il guerriero con chiave inglese è un'unità post-apocalisse. Non dovrebbe essere costruito, a meno che tu non sia stato bombardato con l'atomica e non possa costruire nient'altro.</Italian>
 	</TEXT>
 </Civ4GameText>

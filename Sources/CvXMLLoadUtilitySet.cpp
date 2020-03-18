@@ -394,9 +394,9 @@ bool CvXMLLoadUtility::SetPostGlobalsGlobalDefines()
 		idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("GLOBAL_WARMING_TERRAIN", idx);
 
-		SetGlobalDefine("CAPITAL_BUILDINGCLASS", szVal);
+		SetGlobalDefine("CAPITAL_BUILDING", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("CAPITAL_BUILDINGCLASS", idx);
+		GC.getDefinesVarSystem()->SetValue("CAPITAL_BUILDING", idx);
 
 		SetGlobalDefine("DEFAULT_SPECIALIST", szVal);
 		idx = GetInfoClass(szVal);
@@ -454,45 +454,37 @@ bool CvXMLLoadUtility::SetPostGlobalsGlobalDefines()
 		idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("BARBARIAN_LEADER", idx);
 
-		SetGlobalDefine("AGGRESSIVE_ANIMAL_CIVILIZATION", szVal);
+		SetGlobalDefine("NEANDERTHAL_CIVILIZATION", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("AGGRESSIVE_ANIMAL_CIVILIZATION", idx);
+		GC.getDefinesVarSystem()->SetValue("NEANDERTHAL_CIVILIZATION", idx);
 
-		SetGlobalDefine("AGGRESSIVE_ANIMAL_LEADER", szVal);
+		SetGlobalDefine("NEANDERTHAL_LEADER", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("AGGRESSIVE_ANIMAL_LEADER", idx);
+		GC.getDefinesVarSystem()->SetValue("NEANDERTHAL_LEADER", idx);
 
-		SetGlobalDefine("PASSIVE_ANIMAL_CIVILIZATION", szVal);
+		SetGlobalDefine("BEAST_CIVILIZATION", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("PASSIVE_ANIMAL_CIVILIZATION", idx);
+		GC.getDefinesVarSystem()->SetValue("BEAST_CIVILIZATION", idx);
 
-		SetGlobalDefine("PASSIVE_ANIMAL_LEADER", szVal);
+		SetGlobalDefine("PREDATOR_CIVILIZATION", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("PASSIVE_ANIMAL_LEADER", idx);
+		GC.getDefinesVarSystem()->SetValue("PREDATOR_CIVILIZATION", idx);
 
-		SetGlobalDefine("NPC1_CIVILIZATION", szVal);
+		SetGlobalDefine("PREY_CIVILIZATION", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC1_CIVILIZATION", idx);
+		GC.getDefinesVarSystem()->SetValue("PREY_CIVILIZATION", idx);
 
-		SetGlobalDefine("NPC1_LEADER", szVal);
+		SetGlobalDefine("ANIMAL_LEADER", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC1_LEADER", idx);
+		GC.getDefinesVarSystem()->SetValue("ANIMAL_LEADER", idx);
 
-		SetGlobalDefine("NPC2_CIVILIZATION", szVal);
+		SetGlobalDefine("INSECT_CIVILIZATION", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC2_CIVILIZATION", idx);
+		GC.getDefinesVarSystem()->SetValue("INSECT_CIVILIZATION", idx);
 
-		SetGlobalDefine("NPC2_LEADER", szVal);
+		SetGlobalDefine("INSECT_LEADER", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC2_LEADER", idx);
-
-		SetGlobalDefine("NPC3_CIVILIZATION", szVal);
-		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC3_CIVILIZATION", idx);
-
-		SetGlobalDefine("NPC3_LEADER", szVal);
-		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC3_LEADER", idx);
+		GC.getDefinesVarSystem()->SetValue("INSECT_LEADER", idx);
 
 		SetGlobalDefine("NPC4_CIVILIZATION", szVal);
 		idx = GetInfoClass(szVal);
@@ -502,47 +494,42 @@ bool CvXMLLoadUtility::SetPostGlobalsGlobalDefines()
 		idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("NPC4_LEADER", idx);
 
-		SetGlobalDefine("NPC5_CIVILIZATION", szVal);
+		SetGlobalDefine("NPC3_CIVILIZATION", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC5_CIVILIZATION", idx);
+		GC.getDefinesVarSystem()->SetValue("NPC3_CIVILIZATION", idx);
 
-		SetGlobalDefine("NPC5_LEADER", szVal);
+		SetGlobalDefine("NPC3_LEADER", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC5_LEADER", idx);
+		GC.getDefinesVarSystem()->SetValue("NPC3_LEADER", idx);
 
-		SetGlobalDefine("NPC6_CIVILIZATION", szVal);
+		SetGlobalDefine("NPC2_CIVILIZATION", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC6_CIVILIZATION", idx);
+		GC.getDefinesVarSystem()->SetValue("NPC2_CIVILIZATION", idx);
 
-		SetGlobalDefine("NPC6_LEADER", szVal);
+		SetGlobalDefine("NPC2_LEADER", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC6_LEADER", idx);
+		GC.getDefinesVarSystem()->SetValue("NPC2_LEADER", idx);
 
-		SetGlobalDefine("NPC7_CIVILIZATION", szVal);
+		SetGlobalDefine("NPC1_CIVILIZATION", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC7_CIVILIZATION", idx);
+		GC.getDefinesVarSystem()->SetValue("NPC1_CIVILIZATION", idx);
 
-		SetGlobalDefine("NPC7_LEADER", szVal);
+		SetGlobalDefine("NPC1_LEADER", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC7_LEADER", idx);
+		GC.getDefinesVarSystem()->SetValue("NPC1_LEADER", idx);
 
-		SetGlobalDefine("NPC8_CIVILIZATION", szVal);
+		SetGlobalDefine("NPC0_CIVILIZATION", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC8_CIVILIZATION", idx);
+		GC.getDefinesVarSystem()->SetValue("NPC0_CIVILIZATION", idx);
 
-		SetGlobalDefine("NPC8_LEADER", szVal);
+		SetGlobalDefine("NPC0_LEADER", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC8_LEADER", idx);
-/************************************************************************************************/
-/* Afforess	                  Start		 07/12/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+		GC.getDefinesVarSystem()->SetValue("NPC0_LEADER", idx);
+
+
 		gDLL->ChangeINIKeyValue("CONFIG", "HideMinSpecWarning ", "1");
 		gDLL->ChangeINIKeyValue("GAME", "ModularLoading  ", "0");
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 		return true;
 	}
 
@@ -939,15 +926,9 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	OutputDebugString("Maps loaded\n");
 
 	LoadGlobalClassInfo(GC.getGameSpeedInfos(), "CIV4GameSpeedInfo", "GameInfo", L"/Civ4GameSpeedInfo/GameSpeedInfos/GameSpeedInfo", false, GC.getGameSpeedInfoReplacements());
-/************************************************************************************************/
-/* REVDCM                                 02/16/10                                phungus420    */
-/*                                                                                              */
-/* CanTrain                                                                                     */
-/************************************************************************************************/
+
 	LoadGlobalClassInfo(GC.getGameOptionInfos(), "CIV4GameOptionInfos", "GameInfo", L"/Civ4GameOptionInfos/GameOptionInfos/GameOptionInfo", false);
-/************************************************************************************************/
-/* REVDCM                                  END                                                  */
-/************************************************************************************************/
+
 	LoadGlobalClassInfo(GC.getColorInfos(), "CIV4ColorVals", "Interface", L"/Civ4ColorVals/ColorVals/ColorVal", false);
 	LoadGlobalClassInfo(GC.getTurnTimerInfos(), "CIV4TurnTimerInfo", "GameInfo", L"/Civ4TurnTimerInfo/TurnTimerInfos/TurnTimerInfo", false);
 	LoadGlobalClassInfo(GC.getWorldInfos(), "CIV4WorldInfo", "GameInfo", L"/Civ4WorldInfo/WorldInfos/WorldInfo", false, GC.getWorldInfoReplacements());
@@ -973,7 +954,6 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	LoadGlobalClassInfo(GC.getEffectInfos(), "CIV4EffectInfos", "Misc", L"/Civ4EffectInfos/EffectInfos/EffectInfo", false);
 	LoadGlobalClassInfo(GC.getEntityEventInfos(), "CIV4EntityEventInfos", "Units", L"/Civ4EntityEventInfos/EntityEventInfos/EntityEventInfo", false);
 	LoadGlobalClassInfo(GC.getPropertyInfos(), "CIV4PropertyInfos", "GameInfo", L"/Civ4PropertyInfos/PropertyInfos/PropertyInfo", false);
-	LoadGlobalClassInfo(GC.getUnitClassInfos(), "CIV4UnitClassInfos", "Units", L"/Civ4UnitClassInfos/UnitClassInfos/UnitClassInfo", false, GC.getUnitClassInfoReplacements());
 	LoadGlobalClassInfo(GC.getSpecialistInfos(), "CIV4SpecialistInfos", "GameInfo", L"/Civ4SpecialistInfos/SpecialistInfos/SpecialistInfo", false, GC.getSpecialistInfoReplacements());
 	LoadGlobalClassInfo(GC.getVoteSourceInfos(), "CIV4VoteSourceInfos", "GameInfo", L"/Civ4VoteSourceInfos/VoteSourceInfos/VoteSourceInfo", false);
 	LoadGlobalClassInfo(GC.getTechInfos(), "CIV4TechInfos", "Technologies", L"/Civ4TechInfos/TechInfos/TechInfo", true, GC.getTechInfoReplacements());
@@ -990,8 +970,6 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	LoadGlobalClassInfo(GC.getBonusInfos(), "CIV4BonusInfos", "Terrain", L"/Civ4BonusInfos/BonusInfos/BonusInfo", false, GC.getBonusInfoReplacements());
 	LoadGlobalClassInfo(GC.getSpecialUnitInfos(), "CIV4SpecialUnitInfos", "Units", L"/Civ4SpecialUnitInfos/SpecialUnitInfos/SpecialUnitInfo", false);
 	shouldHaveType = true;
-	LoadGlobalClassInfo(GC.getGoodyInfos(), "CIV4GoodyInfo", "GameInfo", L"/Civ4GoodyInfo/GoodyInfos/GoodyInfo", false);
-	LoadGlobalClassInfo(GC.getHandicapInfos(), "CIV4HandicapInfo", "GameInfo", L"/Civ4HandicapInfo/HandicapInfos/HandicapInfo", false, GC.getHandicapInfoReplacements());
 	LoadGlobalClassInfo(GC.getRouteInfos(), "CIV4RouteInfos", "Misc", L"/Civ4RouteInfos/RouteInfos/RouteInfo", false, GC.getRouteInfoReplacements());
 	shouldHaveType = false;
 	LoadGlobalClassInfo(GC.getImprovementInfos(), "CIV4ImprovementInfos", "Terrain", L"/Civ4ImprovementInfos/ImprovementInfos/ImprovementInfo", true, GC.getImprovementInfoReplacements());
@@ -1000,8 +978,6 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	LoadGlobalClassInfo(GC.getPromotionLineInfos(), "CIV4PromotionLineInfos", "Units", L"/Civ4PromotionLineInfos/PromotionLineInfos/PromotionLineInfo", false);
 	//TB Promotion Line Mod begin
 	LoadGlobalClassInfo(GC.getPromotionInfos(), "CIV4PromotionInfos", "Units", L"/Civ4PromotionInfos/PromotionInfos/PromotionInfo", true, GC.getPromotionInfoReplacements());
-	LoadGlobalClassInfo(GC.getTraitInfos(), "CIV4TraitInfos", "Civilizations", L"/Civ4TraitInfos/TraitInfos/TraitInfo", true, GC.getTraitInfoReplacements());
-	LoadGlobalClassInfo(GC.getBuildingClassInfos(), "CIV4BuildingClassInfos", "Buildings", L"/Civ4BuildingClassInfos/BuildingClassInfos/BuildingClassInfo", false, GC.getBuildingClassInfoReplacements());
 	LoadGlobalClassInfo(GC.getHurryInfos(), "CIV4HurryInfo", "GameInfo", L"/Civ4HurryInfo/HurryInfos/HurryInfo", false);
 	LoadGlobalClassInfo(GC.getCorporationInfos(), "CIV4CorporationInfo", "GameInfo", L"/Civ4CorporationInfo/CorporationInfos/CorporationInfo", false, GC.getCorporationInfoReplacements());
 	// TGA indexation - important must do before anything else
@@ -1013,17 +989,24 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	}
 
 	LoadGlobalClassInfo(GC.getSpecialBuildingInfos(), "CIV4SpecialBuildingInfos", "Buildings", L"/Civ4SpecialBuildingInfos/SpecialBuildingInfos/SpecialBuildingInfo", false, GC.getSpecialBuildingInfoReplacements());
-	LoadGlobalClassInfo(GC.getBuildingInfos(), "CIV4BuildingInfos", "Buildings", L"/Civ4BuildingInfos/BuildingInfos/BuildingInfo", false, GC.getBuildingInfoReplacements());
-	for (int i=0; i < GC.getNumBuildingClassInfos(); ++i)
-	{
-		GC.getBuildingClassInfo((BuildingClassTypes)i).readPass3();
-		GC.getBuildingClassInfoReplacements()->readPass3();
-	}
+	LoadGlobalClassInfo(GC.getBuildingInfos(), "CIV4BuildingInfos", "Buildings", L"/Civ4BuildingInfos/BuildingInfos/BuildingInfo", true, GC.getBuildingInfoReplacements());
 	LoadGlobalClassInfo(GC.getCivicInfos(), "CIV4CivicInfos", "GameInfo", L"/Civ4CivicInfos/CivicInfos/CivicInfo", false, GC.getCivicInfoReplacements());
 	for (int i=0; i < GC.getNumVoteSourceInfos(); ++i)
 	{
 		GC.getVoteSourceInfo((VoteSourceTypes)i).readPass3();
 	}
+	LoadGlobalClassInfo(GC.getPlayerColorInfos(), "CIV4PlayerColorInfos", "Interface", L"/Civ4PlayerColorInfos/PlayerColorInfos/PlayerColorInfo", false);
+	LoadGlobalClassInfo(GC.getBuildInfos(), "CIV4BuildInfos", "Units", L"/Civ4BuildInfos/BuildInfos/BuildInfo", false, GC.getBuildInfoReplacements());
+
+	LoadGlobalClassInfo(GC.getOutcomeInfos(), "CIV4OutcomeInfos", "GameInfo", L"/Civ4OutcomeInfos/OutcomeInfos/OutcomeInfo", true);
+
+	//	AlbertS2: Register mission types
+	GC.registerMissions();
+	LoadGlobalClassInfo(GC.getMissionInfos(), "CIV4MissionInfos", "Units", L"/Civ4MissionInfos/MissionInfos/MissionInfo", false);
+	LoadGlobalClassInfo(GC.getUnitInfos(), "CIV4UnitInfos", "Units", L"/Civ4UnitInfos/UnitInfos/UnitInfo", true, GC.getUnitInfoReplacements());
+
+	LoadGlobalClassInfo(GC.getTraitInfos(), "CIV4TraitInfos", "Civilizations", L"/Civ4TraitInfos/TraitInfos/TraitInfo", true, GC.getTraitInfoReplacements());
+
 	LoadGlobalClassInfo(GC.getLeaderHeadInfos(), "CIV4LeaderHeadInfos", "Civilizations", L"/Civ4LeaderHeadInfos/LeaderHeadInfos/LeaderHeadInfo", false, GC.getLeaderHeadInfoReplacements());
 /************************************************************************************************/
 /* SORT_ALPHABET                           11/17/07                                MRGENIE      */
@@ -1040,42 +1023,12 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 /************************************************************************************************/
 /* SORT_ALPHABET                           END                                                  */
 /************************************************************************************************/
-	LoadGlobalClassInfo(GC.getPlayerColorInfos(), "CIV4PlayerColorInfos", "Interface", L"/Civ4PlayerColorInfos/PlayerColorInfos/PlayerColorInfo", false);
-	LoadGlobalClassInfo(GC.getBuildInfos(), "CIV4BuildInfos", "Units", L"/Civ4BuildInfos/BuildInfos/BuildInfo", false, GC.getBuildInfoReplacements());
-
-	LoadGlobalClassInfo(GC.getOutcomeInfos(), "CIV4OutcomeInfos", "GameInfo", L"/Civ4OutcomeInfos/OutcomeInfos/OutcomeInfo", true);
-
-	//	AlbertS2: Register mission types
-	GC.registerMissions();
-	LoadGlobalClassInfo(GC.getMissionInfos(), "CIV4MissionInfos", "Units", L"/Civ4MissionInfos/MissionInfos/MissionInfo", false);
-	LoadGlobalClassInfo(GC.getUnitInfos(), "CIV4UnitInfos", "Units", L"/Civ4UnitInfos/UnitInfos/UnitInfo", false, GC.getUnitInfoReplacements());
-
-	for (int i=0; i < GC.getNumUnitClassInfos(); ++i)
-	{
-		GC.getUnitClassInfo((UnitClassTypes)i).readPass3();
-		GC.getUnitClassInfoReplacements()->readPass3();
-	}
 
 	LoadGlobalClassInfo(GC.getUnitArtStyleTypeInfos(), "CIV4UnitArtStyleTypeInfos", "Civilizations", L"/Civ4UnitArtStyleTypeInfos/UnitArtStyleTypeInfos/UnitArtStyleTypeInfo", false);
 	LoadGlobalClassInfo(GC.getCivilizationInfos(), "CIV4CivilizationInfos", "Civilizations", L"/Civ4CivilizationInfos/CivilizationInfos/CivilizationInfo", true, GC.getCivilizationInfoReplacements());
-	
-/************************************************************************************************/
-/* Afforess	                  Start		 07/30/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	LoadGlobalClassInfo(GC.getProjectInfos(), "CIV4ProjectInfo", "GameInfo", L"/Civ4ProjectInfo/ProjectInfos/ProjectInfo", false, GC.getProjectInfoReplacements());
-/************************************************************************************************/
-/*                                         END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 07/07/09                                                        */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/************************************************************************************************/
-/* JOOYO_ADDON                          END                                                     */
-/************************************************************************************************/
+
 /************************************************************************************************/
 /* SORT_ALPHABET                           11/17/07                                MRGENIE      */
 /*                                                                                              */
@@ -1098,13 +1051,14 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	LoadGlobalClassInfo(GC.getWorldPickerInfos(), "CIV4WorldPickerInfos", "Interface", L"/Civ4WorldPickerInfos/WorldPickerInfos/WorldPickerInfo", false);
 	LoadGlobalClassInfo(GC.getSpaceShipInfos(), "CIV4SpaceShipInfos", "Interface", L"/Civ4SpaceShipInfos/SpaceShipInfos/SpaceShipInfo", false);
 
+	shouldHaveType = true;
+	LoadGlobalClassInfo(GC.getGoodyInfos(), "CIV4GoodyInfo", "GameInfo", L"/Civ4GoodyInfo/GoodyInfos/GoodyInfo", false);
+	LoadGlobalClassInfo(GC.getHandicapInfos(), "CIV4HandicapInfo", "GameInfo", L"/Civ4HandicapInfo/HandicapInfos/HandicapInfo", false, GC.getHandicapInfoReplacements());
+	shouldHaveType = false;
+
 	LoadGlobalClassInfo(GC.getMPOptionInfos(), "CIV4MPOptionInfos", "GameInfo", L"/Civ4MPOptionInfos/MPOptionInfos/MPOptionInfo", false);
 	LoadGlobalClassInfo(GC.getForceControlInfos(), "CIV4ForceControlInfos", "GameInfo", L"/Civ4ForceControlInfos/ForceControlInfos/ForceControlInfo", false);
-/************************************************************************************************/
-/* Afforess                                03/18/10                                             */
-/*                            ReadPass3                                                         */
-/*                                                                                              */
-/************************************************************************************************/
+
 	LoadGlobalClassInfo(GC.getEventInfos(), "CIV4EventInfos", "Events", L"/Civ4EventInfos/EventInfos/EventInfo", false, GC.getEventInfoReplacements());
 	LoadGlobalClassInfo(GC.getEventTriggerInfos(), "CIV4EventTriggerInfos", "Events", L"/Civ4EventTriggerInfos/EventTriggerInfos/EventTriggerInfo", false, GC.getEventTriggerInfoReplacements());
 	OutputDebugString("Base load complete\n");
@@ -1118,6 +1072,7 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 		GC.getBuildingInfo((BuildingTypes)i).readPass3();
 		GC.getBuildingInfoReplacements()->readPass3();
 	}
+
 	for (int i=0; i < GC.getNumCivicInfos(); ++i)
 	{
 		GC.getCivicInfo((CivicTypes)i).readPass3();
@@ -1128,6 +1083,12 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	{
 		GC.getCorporationInfo((CorporationTypes)i).readPass3();
 		GC.getCorporationInfoReplacements()->readPass3();
+	}
+
+	for (int i=0; i < GC.getNumReligionInfos(); ++i)
+	{
+		GC.getReligionInfo((ReligionTypes)i).readPass3();
+		GC.getReligionInfoReplacements()->readPass3();
 	}
 
 	for (int i=0; i < GC.getNumEventInfos(); ++i)
@@ -1153,16 +1114,13 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 		GC.getUnitInfo((UnitTypes)i).readPass3();
 		GC.getUnitInfoReplacements()->readPass3();
 	}
-	
-	for (int i=0; i < GC.getNumTraitInfos(); ++i)
+
+	for (int i=0; i < GC.getNumSpecialistInfos(); ++i)
 	{
-		GC.getTraitInfo((TraitTypes)i).readPass3();
-		GC.getTraitInfoReplacements()->readPass3();
+		GC.getSpecialistInfo((SpecialistTypes)i).readPass3();
+		GC.getSpecialistInfoReplacements()->readPass3();
 	}
 	OutputDebugString("Pass3 processing complete\n");
-/************************************************************************************************/
-/* Afforess                                END                                                  */
-/************************************************************************************************/
 
 	// add types to global var system
 	for (int i = 0; i < GC.getNumCursorInfos(); ++i)
@@ -1429,12 +1387,6 @@ void CvXMLLoadUtility::SetGlobalActionInfo()
 	{
 		char	szMessage[1024];
 		sprintf( szMessage, "GC.getNumPromotionInfos() is not greater than zero in CvXMLLoadUtility::SetGlobalActionInfo \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
-		gDLL->MessageBox(szMessage, "XML Error");
-	}
-	if(!(GC.getNumUnitClassInfos() > 0) )
-	{
-		char	szMessage[1024];
-		sprintf( szMessage, "GC.getNumUnitClassInfos() is not greater than zero in CvXMLLoadUtility::SetGlobalActionInfo \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
 		gDLL->MessageBox(szMessage, "XML Error");
 	}
 	if(!(GC.getNumSpecialistInfos() > 0) )

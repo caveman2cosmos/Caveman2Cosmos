@@ -512,7 +512,7 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_BIOGAS</Type>
+			<Type>ART_DEF_FEATURE_INFECTIOUS_SMOG</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
@@ -533,7 +533,7 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_PLAGUEGAS</Type>
+			<Type>ART_DEF_FEATURE_PLAGUED_SMOG</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
@@ -596,7 +596,7 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_CORAL</Type>
+			<Type>ART_DEF_FEATURE_CORAL_REEF</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
@@ -615,28 +615,7 @@
 				<bGenerateRotations>0</bGenerateRotations>
 				<VarietyButton>Art/Interface/Buttons/terrainfeatures/coral.dds</VarietyButton>
 			</FeatureVariety>
-		</FeatureArtInfo>
-		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_FOSSIL</Type>
-			<bAnimated>0</bAnimated>
-			<bRiverArt>0</bRiverArt>
-			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
-			<LightType>LIGHT_TYPE_SUN</LightType>
-			<fScale>0.5</fScale>
-			<fInterfaceScale>0.5</fInterfaceScale>
-			<Button>Art/Interface/Buttons/TerrainFeatures/Bones.dds</Button>
-			<FeatureVariety>
-				<FeatureArtPieces>
-					<FeatureArtPiece>
-						<ModelFile>Art/Terrain/Features/Bones/animal_skeleton.nif</ModelFile>
-						<Connections/>
-					</FeatureArtPiece>
-				</FeatureArtPieces>
-				<FeatureDummyNodes/>
-				<bGenerateRotations>0</bGenerateRotations>
-				<VarietyButton>Art/Interface/Buttons/TerrainFeatures/Bones.dds</VarietyButton>
-			</FeatureVariety>
-		</FeatureArtInfo>
+		</FeatureArtInfo>		
 		<FeatureArtInfo>
 			<Type>ART_DEF_FEATURE_CRATER</Type>
 			<bAnimated>0</bAnimated>
@@ -659,7 +638,7 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_TARPIT</Type>
+			<Type>ART_DEF_FEATURE_TAR_PIT</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
@@ -1233,7 +1212,7 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_SWORD_GRASS</Type>
+			<Type>ART_DEF_FEATURE_VERY_TALL_GRASS</Type>
 			<bAnimated>0</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
@@ -1254,7 +1233,7 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_KAKTUS</Type>
+			<Type>ART_DEF_FEATURE_CACTUS</Type>
 			<bAnimated>0</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
@@ -1297,7 +1276,7 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_VOLCANO</Type>
+			<Type>ART_DEF_FEATURE_VOLCANO_ACTIVE</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
@@ -1318,7 +1297,7 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_VOLCANO2</Type>
+			<Type>ART_DEF_FEATURE_VOLCANO_DORMANT</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
@@ -1339,7 +1318,7 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_CAVE</Type>
+			<Type>ART_DEF_FEATURE_CAVES</Type>
 			<bAnimated>0</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
@@ -1360,7 +1339,7 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_SEAGRASS</Type>
+			<Type>ART_DEF_FEATURE_SEA_GRASS</Type>
 			<bAnimated>0</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
@@ -1423,7 +1402,7 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_FOREST_NEW</Type>
+			<Type>ART_DEF_FEATURE_FOREST_YOUNG</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
@@ -1521,7 +1500,7 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_FOREST_OLD</Type>
+			<Type>ART_DEF_FEATURE_FOREST_ANCIENT</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_TREES</TileArtType>
@@ -1598,7 +1577,7 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_LUNAR_CRATER1</Type>
+			<Type>ART_DEF_FEATURE_CRATER_MEDIUM</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
@@ -1619,7 +1598,7 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_LUNAR_CRATER2</Type>
+			<Type>ART_DEF_FEATURE_CRATER_LARGE</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
@@ -1640,7 +1619,7 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_LUNAR_CRATER3</Type>
+			<Type>ART_DEF_FEATURE_CRATER_SMALL</Type>
 			<bAnimated>1</bAnimated>
 			<bRiverArt>0</bRiverArt>
 			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>

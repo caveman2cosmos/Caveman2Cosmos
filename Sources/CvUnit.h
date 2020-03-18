@@ -173,8 +173,8 @@ struct CombatDetails					// Exposed to Python
 	int iCityAttackModifier;
 	int iDomainDefenseModifier;
 	int iCityBarbarianDefenseModifier;
-	int iClassDefenseModifier;
-	int iClassAttackModifier;
+	int iDefenseModifier;
+	int iAttackModifier;
 	int iCombatModifierT;
 	int iCombatModifierA;
 	int iDomainModifierA;
@@ -504,7 +504,7 @@ public:
 
 	void doTurn();
 
-	void updateCombat(bool bQuick = false, CvUnit* pSelectedDefender = NULL, bool bSamePlot = false, bool bArrest = false, bool bStealth = false, bool bNoCache = false);
+	void updateCombat(bool bQuick = false, CvUnit* pSelectedDefender = NULL, bool bSamePlot = false, bool bStealth = false, bool bNoCache = false);
 	void updateAirCombat(bool bQuick = false);
 	void updateAirStrike(CvPlot* pPlot, bool bQuick, bool bFinish);
 
@@ -833,7 +833,7 @@ public:
 	int getStackExperienceToGive(int iNumUnits) const;
 
 	int upgradePrice(UnitTypes eUnit) const; // Exposed to Python
-	bool upgradeAvailable(UnitTypes eFromUnit, UnitClassTypes eToUnitClass) const; // Exposed to Python
+	bool upgradeAvailable(UnitTypes eFromUnit, UnitTypes eToUnit) const; // Exposed to Python
 	bool canUpgrade(UnitTypes eUnit, bool bTestVisible = false) const; // Exposed to Python
 	bool isReadyForUpgrade() const;
 	bool hasUpgrade(bool bSearch = false) const; // Exposed to Python
@@ -846,7 +846,7 @@ public:
 	CivilizationTypes getCivilizationType() const; // Exposed to Python
 	const wchar* getVisualCivAdjective(TeamTypes eForTeam) const;
 	SpecialUnitTypes getSpecialUnitType() const; // Exposed to Python								
-	UnitTypes getCaptureUnitType(CivilizationTypes eCivilization) const; // Exposed to Python
+	UnitTypes getCaptureUnitType() const; // Exposed to Python
 	UnitCombatTypes getUnitCombatType() const; // Exposed to Python
 	DllExport DomainTypes getDomainType() const; // Exposed to Python
 	InvisibleTypes getInvisibleType() const; // Exposed to Python
@@ -1093,8 +1093,8 @@ public:
 	int terrainDefenseModifier(TerrainTypes eTerrain) const; // Exposed to Python
 	int featureAttackModifier(FeatureTypes eFeature) const; // Exposed to Python
 	int featureDefenseModifier(FeatureTypes eFeature) const; // Exposed to Python
-	int unitClassAttackModifier(UnitClassTypes eUnitClass) const; // Exposed to Python
-	int unitClassDefenseModifier(UnitClassTypes eUnitClass) const; // Exposed to Python
+	int unitAttackModifier(UnitTypes eUnit) const; // Exposed to Python
+	int unitDefenseModifier(UnitTypes eUnit) const; // Exposed to Python
 	int unitCombatModifier(UnitCombatTypes eUnitCombat) const; // Exposed to Python
 	int domainModifier(DomainTypes eDomain) const;
 
@@ -1623,7 +1623,6 @@ public:
 
 	DllExport const UnitTypes getUnitType() const; // Exposed to Python
 	CvUnitInfo &getUnitInfo() const;
-	UnitClassTypes getUnitClassType() const; // Exposed to Python
 
 	DllExport const UnitTypes getLeaderUnitType() const;
 	void setLeaderUnitType(UnitTypes leaderUnitType);
@@ -1804,15 +1803,6 @@ public:
 	bool isRbombardable(int iMinStack);
 	int getRbombardSeigeCount(CvPlot* pPlot);
 	// RevolutionDCM - end
-// Dale - ARB: Archer Bombard START
-	bool canArcherBombard() const;
-	// fromPlot - units own plot() isn't valid in some cases (when its out of viewport or using dummy entities)
-	bool canArcherBombardAt(const CvPlot* fromPlot, int iX, int iY) const;
-	bool archerBombard(int iX, int iY, bool supportAttack = false);
-// Dale - ARB: Archer Bombard END
-// Dale - SA: Stack Attack START
-//	void updateStackCombat(bool bQuick = false);
-// Dale - SA: Stack Attack END
 // Dale - SA: Opp Fire START
 	void doOpportunityFire();
 // Dale - SA: Opp Fire END
@@ -2266,22 +2256,17 @@ protected:
 	bool canAdvance(const CvPlot* pPlot, int iThreshold) const;
 	void collateralCombat(const CvPlot* pPlot, CvUnit* pSkipUnit = NULL);
 	void rBombardCombat(const CvPlot* pPlot, CvUnit* pFirstUnit = NULL);
-	void flankingStrikeCombat(const CvPlot* pPlot, int iAttackerStrength, int iAttackerFirepower, int iDefenderOdds, int iDefenderDamage, CvUnit* pSkipUnit = NULL);
+	void flankingStrikeCombat(const CvPlot* pPlot, int iAttackerStrength, int iAttackerFirepower, int iDefenderOdds, int iDefenderDamage, CvUnit* pSkipUnit = NULL, bool bSamePlot = false);
 
 	bool interceptTest(const CvPlot* pPlot);
 	CvUnit* airStrikeTarget(const CvPlot* pPlot) const;
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-	// Dale - SA: Stack Attack START
+
+	// Dale - SA: Stack Attack
 public:
 	bool canAirStrike(const CvPlot* pPlot) const;
 	bool airStrike(CvPlot* pPlot);
 protected:
-	// Dale - SA: Stack Attack END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
+	// ! Dale
 
 	int planBattle( CvBattleDefinition & kBattleDefinition ) const;
 	int computeUnitsToDie( const CvBattleDefinition & kDefinition, bool bRanged, BattleUnitTypes iUnit ) const;
@@ -2289,29 +2274,21 @@ protected:
 	void increaseBattleRounds( CvBattleDefinition & battleDefinition ) const;
 	int computeWaveSize( bool bRangedRound, int iAttackerMax, int iDefenderMax ) const;
 
-	void getDefenderCombatValues(CvUnit& kDefender, const CvPlot* pPlot, int iOurStrength, int iOurFirepower, int& iTheirOdds, int& iTheirStrength, int& iOurDamage, int& iTheirDamage, CombatDetails* pTheirDetails = NULL, CvUnit* pDefender = NULL) const;
+	void getDefenderCombatValues(CvUnit& kDefender, const CvPlot* pPlot, int iOurStrength, int iOurFirepower,
+		int& iTheirOdds, int& iTheirStrength, int& iOurDamage, int& iTheirDamage,
+		CombatDetails* pTheirDetails = NULL, CvUnit* pDefender = NULL, bool bSamePlot = false) const;
 
 	bool isCombatVisible(const CvUnit* pDefender) const;
 	void resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition& kBattle, bool bSamePlot = false);
 	void resolveAirCombat(CvUnit* pInterceptor, CvPlot* pPlot, CvAirMissionDefinition& kBattle);
 	void checkRemoveSelectionAfterAttack();
 
-/************************************************************************************************/
-/* INFLUENCE_DRIVEN_WAR                   04/16/09                                johnysmith    */
-/*                                                                                              */
-/* Original Author Moctezuma              Start                                                 */
-/************************************************************************************************/
-
 	// ------ BEGIN InfluenceDrivenWar -------------------------------
 	float doVictoryInfluence(CvUnit* pLoserUnit, bool bAttacking, bool bWithdrawal);
 	void influencePlots(CvPlot* pCentralPlot, PlayerTypes eTargetPlayer, float fLocationMultiplier);
 	float doPillageInfluence();
 	// ------ END InfluenceDrivenWar ---------------------------------
-/************************************************************************************************/
-/* INFLUENCE_DRIVEN_WAR                   04/16/09                                johnysmith    */
-/*                                                                                              */
-/* Original Author Moctezuma              End                                                   */
-/************************************************************************************************/
+
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
 /*                                                                                              */
@@ -3091,7 +3068,7 @@ public:
 	bool isWantedbyPlayer(PlayerTypes ePlayer) const;
 	bool isWanted() const;
 
-	void attackSamePlotSpecifiedUnit(CvUnit* pSelectedDefender, bool bArrest = false);
+	void attackSamePlotSpecifiedUnit(CvUnit* pSelectedDefender);
 	bool canArrest() const;
 	void doArrest();
 
@@ -3306,6 +3283,7 @@ public:
 	struct fn {
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isDead);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, hasCargo);
+		DECLARE_MAP_FUNCTOR(CvUnit, bool, isCargo);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isFull);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, canMove);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, canMoveAllTerrain);
@@ -3322,16 +3300,23 @@ public:
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, IsSelected);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isCommander);
 		DECLARE_MAP_FUNCTOR(CvUnit, bool, isGoldenAge);
+
+		DECLARE_MAP_FUNCTOR_1(CvUnit, bool, meetsUnitSelectionCriteria, const CvUnitSelectionCriteria*);
+		DECLARE_MAP_FUNCTOR_1(CvUnit, bool, canPillage, const CvPlot*);
 		DECLARE_MAP_FUNCTOR_1(CvUnit, bool, hasAfflictionLine, PromotionLineTypes);
 
 		DECLARE_MAP_FUNCTOR_1(CvUnit, int, upgradePrice, UnitTypes);
 		DECLARE_MAP_FUNCTOR_2(CvUnit, bool, canUpgrade, UnitTypes, bool);
 
+		DECLARE_MAP_FUNCTOR(CvUnit, int, visibilityRange);
+		DECLARE_MAP_FUNCTOR(CvUnit, int, collateralDamage);
+		DECLARE_MAP_FUNCTOR(CvUnit, int, getBombardRate);
 		DECLARE_MAP_FUNCTOR(CvUnit, int, getDamage);
 		DECLARE_MAP_FUNCTOR(CvUnit, int, getID);
 		DECLARE_MAP_FUNCTOR(CvUnit, TeamTypes, getTeam);
 		DECLARE_MAP_FUNCTOR(CvUnit, UnitTypes, getUnitType);
 		DECLARE_MAP_FUNCTOR(CvUnit, UnitCombatTypes, getUnitCombatType);
+		DECLARE_MAP_FUNCTOR(CvUnit, UnitAITypes, AI_getUnitAIType);
 
 		DECLARE_MAP_FUNCTOR(CvUnit, int, getArea);
 		DECLARE_MAP_FUNCTOR(CvUnit, const CvArea*, area);
@@ -3341,10 +3326,14 @@ public:
 		DECLARE_MAP_FUNCTOR(CvUnit, ImprovementTypes, getBuildTypeImprovement);
 		DECLARE_MAP_FUNCTOR(CvUnit, int, getCargo);
 		DECLARE_MAP_FUNCTOR(CvUnit, int, SMgetCargo);
+		DECLARE_MAP_FUNCTOR(CvUnit, int, SMCargoVolume);
 
 		DECLARE_MAP_FUNCTOR_1(CvUnit, int, worsenedProbabilitytoAfflict, PromotionLineTypes);
 		DECLARE_MAP_FUNCTOR_1(CvUnit, int, aidTotal, PropertyTypes);
 
+		DECLARE_MAP_FUNCTOR_2(CvUnit, bool, isInvisible, TeamTypes, bool);
+
+		DECLARE_MAP_FUNCTOR_3(CvUnit, bool, canBombardAtRanged, const CvPlot*, int, int);
 		DECLARE_MAP_FUNCTOR_3(CvUnit, int, getTriggerValue, EventTriggerTypes /*eTrigger*/, const CvPlot* /*pPlot*/, bool /*bCheckPlot*/);
 
 	};

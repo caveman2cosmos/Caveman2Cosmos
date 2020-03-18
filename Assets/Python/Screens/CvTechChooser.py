@@ -723,11 +723,9 @@ class CvTechChooser:
 			techBenefits.append([])
 			info = GC.getTechInfo(iTech)
 			if info.getGridX() > 0:
-				iType = info.getFirstFreeUnitClass()
+				iType = info.getFirstFreeUnit()
 				if iType > -1:
-					iType = GC.getUnitClassInfo(iType).getDefaultUnitIndex()
-					if iType > -1:
-						techBenefits[iTech].append(["FreeUnit", iType])
+					techBenefits[iTech].append(["FreeUnit", iType])
 				if info.getTradeRoutes():
 					techBenefits[iTech].append(["TradeRoute", -1])
 				if info.getHealth():

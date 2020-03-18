@@ -95,10 +95,8 @@ class CvTurnTimerInfo;
 class CvProcessInfo;
 class CvVoteInfo;
 class CvProjectInfo;
-class CvBuildingClassInfo;
 class CvBuildingInfo;
 class CvSpecialBuildingInfo;
-class CvUnitClassInfo;
 class CvActionInfo;
 class CvMissionInfo;
 class CvControlInfo;
@@ -222,7 +220,7 @@ public:
 	std::vector<CvMapSwitchInfo*>& getMapSwitchInfos();
 	CvMapInfo& getMapInfo(const MapTypes eMap) const;
 	CvMapSwitchInfo& getMapSwitchInfo(const MapSwitchTypes eMapSwitch) const;
-	
+
 	void switchMap(MapTypes eMap);
 	CvMap& getMapByIndex(MapTypes eIndex);
 	void updateMaps();
@@ -568,29 +566,26 @@ public:
 	std::vector<CvOutcomeInfo*>& getOutcomeInfos();
 	CvOutcomeInfo& getOutcomeInfo(OutcomeTypes eOutcomeNum) const;
 
-/************************************************************************************************/
-/*Afforess                                     12/21/09                                         */
-/************************************************************************************************/
 	int getPEAK_EXTRA_DEFENSE() const;
 	int getPEAK_EXTRA_MOVEMENT() const;
-	
+
 	int iStuckUnitID;
 	int iStuckUnitCount;
 
 	bool isLoadedPlayerOptions() const;
 	void setLoadedPlayerOptions(bool bNewVal);
-	
+
 	bool isXMLLogging() const;
 	void setXMLLogging(bool bNewVal);
 
 	void updateReplacements();
-	
+
 	int getSCORE_FREE_PERCENT() const;
 	int getSCORE_POPULATION_FACTOR() const;
 	int getSCORE_LAND_FACTOR() const;
 	int getSCORE_TECH_FACTOR() const;
 	int getSCORE_WONDER_FACTOR() const;
-	
+
 	int getUSE_CAN_CREATE_PROJECT_CALLBACK() const;
 	int getUSE_CANNOT_CREATE_PROJECT_CALLBACK() const;
 	int getUSE_CAN_DO_MELTDOWN_CALLBACK() const;
@@ -606,7 +601,6 @@ public:
 	int getUSE_CAN_DO_GOLD_CALLBACK() const;
 	int getUSE_CAN_DO_RESEARCH_CALLBACK() const;
 	int getUSE_UPGRADE_UNIT_PRICE_CALLBACK() const;
-	int getUSE_IS_VICTORY_CALLBACK() const;
 	int getUSE_AI_UPDATE_UNIT_CALLBACK() const;
 	int getUSE_AI_CHOOSE_PRODUCTION_CALLBACK() const;
 	int getUSE_EXTRA_PLAYER_COSTS_CALLBACK() const;
@@ -633,9 +627,6 @@ public:
 	float getSAD_FACTOR_2() const;
 	float getSAD_FACTOR_3() const;
 	float getSAD_FACTOR_4() const;
-/************************************************************************************************/
-/* Afforess                                END                                                  */
-/************************************************************************************************/
 
 	int getNumCityTabInfos() const;
 	std::vector<CvInfoBase*>& getCityTabInfos();
@@ -788,11 +779,6 @@ public:
 	CvProjectInfo& getProjectInfo(ProjectTypes e) const;
 	CvInfoReplacements<CvProjectInfo>* getProjectInfoReplacements();
 
-	int getNumBuildingClassInfos() const;
-	std::vector<CvBuildingClassInfo*>& getBuildingClassInfos();
-	CvBuildingClassInfo& getBuildingClassInfo(BuildingClassTypes eBuildingClassNum) const;
-	CvInfoReplacements<CvBuildingClassInfo>* getBuildingClassInfoReplacements();
-
 	int getNumBuildingInfos() const;
 	std::vector<CvBuildingInfo*>& getBuildingInfos();
 	CvBuildingInfo& getBuildingInfo(BuildingTypes eBuildingNum) const;
@@ -802,13 +788,6 @@ public:
 	std::vector<CvSpecialBuildingInfo*>& getSpecialBuildingInfos();
 	CvSpecialBuildingInfo& getSpecialBuildingInfo(SpecialBuildingTypes eSpecialBuildingNum) const;
 	CvInfoReplacements<CvSpecialBuildingInfo>* getSpecialBuildingInfoReplacements();
-
-	int getNumUnitClassInfos() const;
-	std::vector<CvUnitClassInfo*>& getUnitClassInfos();
-	CvUnitClassInfo& getUnitClassInfo(UnitClassTypes eUnitClassNum);
-	const CvUnitClassInfo& getUnitClassInfo(UnitClassTypes eUnitClassNum) const;
-
-	CvInfoReplacements<CvUnitClassInfo>* getUnitClassInfoReplacements();
 
 	int getNumActionInfos() const;
 	std::vector<CvActionInfo*>& getActionInfos();
@@ -1019,10 +998,8 @@ public:
 	int getDCM_RB_CITY_INACCURACY() const;
 	int getDCM_RB_CITYBOMBARD_CHANCE() const;
 	bool isDCM_ATTACK_SUPPORT() const;
-	bool isDCM_STACK_ATTACK() const;
 	bool isDCM_OPP_FIRE() const;
 	bool isDCM_ACTIVE_DEFENSE() const;
-	bool isDCM_ARCHER_BOMBARD() const;
 	bool isDCM_FIGHTER_ENGAGE() const;
 
 	bool isDYNAMIC_CIV_NAMES() const;
@@ -1175,26 +1152,26 @@ public:
 	int getMAX_TEAMS() const;
 	int getBARBARIAN_PLAYER() const;
 	int getBARBARIAN_TEAM() const;
-	int getAGGRESSIVE_ANIMAL_PLAYER() const;
-	int getAGGRESSIVE_ANIMAL_TEAM() const;
-	int getPASSIVE_ANIMAL_PLAYER() const;
-	int getPASSIVE_ANIMAL_TEAM() const;
-	int getNPC1_PLAYER() const;
-	int getNPC1_TEAM() const;
-	int getNPC2_PLAYER() const;
-	int getNPC2_TEAM() const;
-	int getNPC3_PLAYER() const;
-	int getNPC3_TEAM() const;
+	int getNEANDERTHAL_PLAYER() const;
+	int getNEANDERTHAL_TEAM() const;
+	int getBEAST_PLAYER() const;
+	int getBEAST_TEAM() const;
+	int getPREDATOR_PLAYER() const;
+	int getPREDATOR_TEAM() const;
+	int getPREY_PLAYER() const;
+	int getPREY_TEAM() const;
+	int getINSECT_PLAYER() const;
+	int getINSECT_TEAM() const;
 	int getNPC4_PLAYER() const;
 	int getNPC4_TEAM() const;
-	int getNPC5_PLAYER() const;
-	int getNPC5_TEAM() const;
-	int getNPC6_PLAYER() const;
-	int getNPC6_TEAM() const;
-	int getNPC7_PLAYER() const;
-	int getNPC7_TEAM() const;
-	int getNPC8_PLAYER() const;
-	int getNPC8_TEAM() const;
+	int getNPC3_PLAYER() const;
+	int getNPC3_TEAM() const;
+	int getNPC2_PLAYER() const;
+	int getNPC2_TEAM() const;
+	int getNPC1_PLAYER() const;
+	int getNPC1_TEAM() const;
+	int getNPC0_PLAYER() const;
+	int getNPC0_TEAM() const;
 	int getINVALID_PLOT_COORD() const;
 	int getNUM_CITY_PLOTS() const;
 	int getCITY_HOME_PLOT() const;
@@ -1513,14 +1490,10 @@ protected:
 	std::vector<CvVoteInfo*> m_paVoteInfo;
 	std::vector<CvProjectInfo*> m_paProjectInfo;
 	CvInfoReplacements<CvProjectInfo> m_ProjectInfoReplacements;
-	std::vector<CvBuildingClassInfo*> m_paBuildingClassInfo;
-	CvInfoReplacements<CvBuildingClassInfo> m_BuildingClassInfoReplacements;
 	std::vector<CvBuildingInfo*> m_paBuildingInfo;
 	CvInfoReplacements<CvBuildingInfo> m_BuildingInfoReplacements;
 	std::vector<CvSpecialBuildingInfo*> m_paSpecialBuildingInfo;
 	CvInfoReplacements<CvSpecialBuildingInfo> m_SpecialBuildingInfoReplacements;
-	std::vector<CvUnitClassInfo*> m_paUnitClassInfo;
-	CvInfoReplacements<CvUnitClassInfo> m_UnitClassInfoReplacements;
 	std::vector<CvUnitInfo*> m_paUnitInfo;
 	CvInfoReplacements<CvUnitInfo> m_UnitInfoReplacements;
 	std::vector<CvSpawnInfo*> m_paSpawnInfo;
@@ -1681,10 +1654,8 @@ protected:
 	int m_iDCM_RB_CITY_INACCURACY;
 	int m_iDCM_RB_CITYBOMBARD_CHANCE;
 	bool m_bDCM_ATTACK_SUPPORT;
-	bool m_bDCM_STACK_ATTACK;
 	bool m_bDCM_OPP_FIRE;
 	bool m_bDCM_ACTIVE_DEFENSE;
-	bool m_bDCM_ARCHER_BOMBARD;
 	bool m_bDCM_FIGHTER_ENGAGE;
 
 	bool m_bDYNAMIC_CIV_NAMES;
@@ -1725,11 +1696,6 @@ protected:
 	int m_iMAX_HIT_POINTS;
 	int m_iPATH_DAMAGE_WEIGHT;
 	int m_iHILLS_EXTRA_DEFENSE;
-/************************************************************************************************/
-/* Afforess	                		 12/21/09                                                   */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	int m_iPEAK_EXTRA_DEFENSE;
 	int m_iPEAK_EXTRA_MOVEMENT;
 	bool m_bXMLLogging;
@@ -1756,7 +1722,6 @@ protected:
 	int m_iUSE_CAN_DO_GOLD_CALLBACK;
 	int m_iUSE_CAN_DO_RESEARCH_CALLBACK;
 	int m_iUSE_UPGRADE_UNIT_PRICE_CALLBACK;
-	int m_iUSE_IS_VICTORY_CALLBACK;
 	int m_iUSE_AI_UPDATE_UNIT_CALLBACK;
 	int m_iUSE_AI_CHOOSE_PRODUCTION_CALLBACK;
 	int m_iUSE_EXTRA_PLAYER_COSTS_CALLBACK;
@@ -1764,9 +1729,7 @@ protected:
 	int m_iUSE_AI_BESTTECH_CALLBACK;
 	int m_iUSE_CAN_DO_COMBAT_CALLBACK;
 	int m_iUSE_AI_CAN_DO_WARPLANS_CALLBACK;
-/************************************************************************************************/
-/* Afforess	Mountains End       END        		                                             */
-/************************************************************************************************/
+
 	int m_iRIVER_ATTACK_MODIFIER;
 	int m_iAMPHIB_ATTACK_MODIFIER;
 	int m_iHILLS_EXTRA_MOVEMENT;
@@ -3241,6 +3204,7 @@ public:
 		PROXY_TRACK("getMAX_TEAMS");
 		return gGlobals->getMAX_TEAMS();
 	}
+
 	int getBARBARIAN_PLAYER()
 	{
 		PROXY_TRACK("getBARBARIAN_PLAYER");
@@ -3251,56 +3215,62 @@ public:
 		PROXY_TRACK("getBARBARIAN_TEAM");
 		return gGlobals->getBARBARIAN_TEAM();
 	}
-	int getAGGRESSIVE_ANIMAL_PLAYER()
+
+	int getNEANDERTHAL_PLAYER()
 	{
-		PROXY_TRACK("getAGGRESSIVE_ANIMAL_PLAYER");
-		return gGlobals->getAGGRESSIVE_ANIMAL_PLAYER();
+		PROXY_TRACK("getNEANDERTHAL_PLAYER");
+		return gGlobals->getNEANDERTHAL_PLAYER();
 	}
-	int getAGGRESSIVE_ANIMAL_TEAM()
+	int getNEANDERTHAL_TEAM()
 	{
-		PROXY_TRACK("getAGGRESSIVE_ANIMAL_TEAM");
-		return gGlobals->getAGGRESSIVE_ANIMAL_TEAM();
+		PROXY_TRACK("getNEANDERTHAL_TEAM");
+		return gGlobals->getNEANDERTHAL_TEAM();
 	}
-	int getPASSIVE_ANIMAL_PLAYER()
+
+	int getBEAST_PLAYER()
 	{
-		PROXY_TRACK("getPASSIVE_ANIMAL_PLAYER");
-		return gGlobals->getPASSIVE_ANIMAL_PLAYER();
+		PROXY_TRACK("getBEAST_PLAYER");
+		return gGlobals->getBEAST_PLAYER();
 	}
-	int getPASSIVE_ANIMAL_TEAM()
+	int getBEAST_TEAM()
 	{
-		PROXY_TRACK("getPASSIVE_ANIMAL_TEAM");
-		return gGlobals->getPASSIVE_ANIMAL_TEAM();
+		PROXY_TRACK("getBEAST_TEAM");
+		return gGlobals->getBEAST_TEAM();
 	}
-	int getNPC1_PLAYER()
+
+	int getPREDATOR_PLAYER()
 	{
-		PROXY_TRACK("getNPC1_PLAYER");
-		return gGlobals->getNPC1_PLAYER();
+		PROXY_TRACK("getPREDATOR_PLAYER");
+		return gGlobals->getPREDATOR_PLAYER();
 	}
-	int getNPC1_TEAM()
+	int getPREDATOR_TEAM()
 	{
-		PROXY_TRACK("getNPC1_TEAM");
-		return gGlobals->getNPC1_TEAM();
+		PROXY_TRACK("getPREDATOR_TEAM");
+		return gGlobals->getPREDATOR_TEAM();
 	}
-	int getNPC2_PLAYER()
+
+	int getPREY_PLAYER()
 	{
-		PROXY_TRACK("getNPC2_PLAYER");
-		return gGlobals->getNPC2_PLAYER();
+		PROXY_TRACK("getPREY_PLAYER");
+		return gGlobals->getPREY_PLAYER();
 	}
-	int getNPC2_TEAM()
+	int getPREY_TEAM()
 	{
-		PROXY_TRACK("getNPC2_TEAM");
-		return gGlobals->getNPC2_TEAM();
+		PROXY_TRACK("getPREY_TEAM");
+		return gGlobals->getPREY_TEAM();
 	}
-	int getNPC3_PLAYER()
+
+	int getINSECT_PLAYER()
 	{
-		PROXY_TRACK("getNPC3_PLAYER");
-		return gGlobals->getNPC3_PLAYER();
+		PROXY_TRACK("getINSECT_PLAYER");
+		return gGlobals->getINSECT_PLAYER();
 	}
-	int getNPC3_TEAM()
+	int getINSECT_TEAM()
 	{
-		PROXY_TRACK("getNPC3_TEAM");
-		return gGlobals->getNPC3_TEAM();
+		PROXY_TRACK("getINSECT_TEAM");
+		return gGlobals->getINSECT_TEAM();
 	}
+
 	int getNPC4_PLAYER()
 	{
 		PROXY_TRACK("getNPC4_PLAYER");
@@ -3311,46 +3281,51 @@ public:
 		PROXY_TRACK("getNPC4_TEAM");
 		return gGlobals->getNPC4_TEAM();
 	}
-	int getNPC5_PLAYER()
+
+	int getNPC3_PLAYER()
 	{
-		PROXY_TRACK("getNPC5_PLAYER");
-		return gGlobals->getNPC5_PLAYER();
+		PROXY_TRACK("getNPC3_PLAYER");
+		return gGlobals->getNPC3_PLAYER();
 	}
-	int getNPC5_TEAM()
+	int getNPC3_TEAM()
 	{
-		PROXY_TRACK("getNPC5_TEAM");
-		return gGlobals->getNPC5_TEAM();
+		PROXY_TRACK("getNPC3_TEAM");
+		return gGlobals->getNPC3_TEAM();
 	}
-	int getNPC6_PLAYER()
+
+	int getNPC2_PLAYER()
 	{
-		PROXY_TRACK("getNPC6_PLAYER");
-		return gGlobals->getNPC6_PLAYER();
+		PROXY_TRACK("getNPC2_PLAYER");
+		return gGlobals->getNPC2_PLAYER();
 	}
-	int getNPC6_TEAM()
+	int getNPC2_TEAM()
 	{
-		PROXY_TRACK("getNPC6_TEAM");
-		return gGlobals->getNPC6_TEAM();
+		PROXY_TRACK("getNPC2_TEAM");
+		return gGlobals->getNPC2_TEAM();
 	}
-	int getNPC7_PLAYER()
+
+	int getNPC1_PLAYER()
 	{
-		PROXY_TRACK("getNPC7_PLAYER");
-		return gGlobals->getNPC7_PLAYER();
+		PROXY_TRACK("getNPC1_PLAYER");
+		return gGlobals->getNPC1_PLAYER();
 	}
-	int getNPC7_TEAM()
+	int getNPC1_TEAM()
 	{
-		PROXY_TRACK("getNPC7_TEAM");
-		return gGlobals->getNPC7_TEAM();
+		PROXY_TRACK("getNPC1_TEAM");
+		return gGlobals->getNPC1_TEAM();
 	}
-	int getNPC8_PLAYER()
+
+	int getNPC0_PLAYER()
 	{
-		PROXY_TRACK("getNPC8_PLAYER");
-		return gGlobals->getNPC8_PLAYER();
+		PROXY_TRACK("getNPC0_PLAYER");
+		return gGlobals->getNPC0_PLAYER();
 	}
-	int getNPC8_TEAM()
+	int getNPC0_TEAM()
 	{
-		PROXY_TRACK("getNPC8_TEAM");
-		return gGlobals->getNPC8_TEAM();
+		PROXY_TRACK("getNPC0_TEAM");
+		return gGlobals->getNPC0_TEAM();
 	}
+
 	int getINVALID_PLOT_COORD()
 	{
 		PROXY_TRACK("getINVALID_PLOT_COORD");

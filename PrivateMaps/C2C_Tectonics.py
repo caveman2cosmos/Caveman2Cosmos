@@ -1174,14 +1174,14 @@ class ClimateGenerator:
 		self.terrains[self.Ice] = gc.getInfoTypeForString("TERRAIN_ICE")
 		self.terrains[self.Tundra] = gc.getInfoTypeForString("TERRAIN_TAIGA")
 		self.terrains[self.Permafrost] = gc.getInfoTypeForString("TERRAIN_TUNDRA")
-		self.terrains[self.Grass] = gc.getInfoTypeForString("TERRAIN_GRASS")
+		self.terrains[self.Grass] = gc.getInfoTypeForString("TERRAIN_GRASSLAND")
 		self.terrains[self.Lush] = gc.getInfoTypeForString("TERRAIN_LUSH")
 		self.terrains[self.Muddy] = gc.getInfoTypeForString("TERRAIN_MUDDY")
 		self.terrains[self.Marsh] = gc.getInfoTypeForString("TERRAIN_MARSH")
 
 #		if (self.climate == 3):                        # No ice
 #			self.terrainIce = gc.getInfoTypeForString("TERRAIN_TAIGA")
-#			self.terrainTundra = gc.getInfoTypeForString("TERRAIN_GRASS")
+#			self.terrainTundra = gc.getInfoTypeForString("TERRAIN_GRASSLAND")
 		self.terrain = [0] * (self.mapWidth*self.mapHeight)
 		self.moisture = [0] * (self.mapWidth*self.mapHeight)
 		self.dice = gc.getGame().getMapRand()

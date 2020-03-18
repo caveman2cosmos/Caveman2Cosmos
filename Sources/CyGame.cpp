@@ -848,24 +848,19 @@ int CyGame::getUnitCreatedCount(int /*UnitTypes*/ eIndex)
 	return m_pGame ? m_pGame->getUnitCreatedCount((UnitTypes)eIndex) : -1;
 }
 
-int CyGame::getUnitClassCreatedCount(int /*UnitClassTypes*/ eIndex)
+bool CyGame::isUnitMaxedOut(int /*UnitTypes*/ eIndex, int iExtra)
 {
-	return m_pGame ? m_pGame->getUnitClassCreatedCount((UnitClassTypes)eIndex) : -1;
+	return m_pGame ? m_pGame->isUnitMaxedOut((UnitTypes)eIndex, iExtra) : -1;
 }
 
-bool CyGame::isUnitClassMaxedOut(int /*UnitClassTypes*/ eIndex, int iExtra)
+int CyGame::getBuildingCreatedCount(int /*BuildingTypes*/ eIndex) const
 {
-	return m_pGame ? m_pGame->isUnitClassMaxedOut((UnitClassTypes)eIndex, iExtra) : -1;
+	return m_pGame ? m_pGame->getBuildingCreatedCount((BuildingTypes)eIndex) : -1;
 }
 
-int CyGame::getBuildingClassCreatedCount(int /*BuildingClassTypes*/ eIndex) 
+bool CyGame::isBuildingMaxedOut(int /*BuildingTypes*/ eIndex, int iExtra)
 {
-	return m_pGame ? m_pGame->getBuildingClassCreatedCount((BuildingClassTypes) eIndex) : -1;
-}
-
-bool CyGame::isBuildingClassMaxedOut(int /*BuildingClassTypes*/ eIndex, int iExtra)
-{
-	return m_pGame ? m_pGame->isBuildingClassMaxedOut((BuildingClassTypes)eIndex, iExtra) : false;
+	return m_pGame ? m_pGame->isBuildingMaxedOut((BuildingTypes)eIndex, iExtra) : false;
 }
 
 int CyGame::getProjectCreatedCount(int /*ProjectTypes*/ eIndex) 

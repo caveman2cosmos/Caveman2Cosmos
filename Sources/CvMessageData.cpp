@@ -2064,7 +2064,7 @@ void CvNetChooseArrestUnit::Execute()
 			CvUnit* pArrestingUnit = GET_PLAYER(m_ePlayer).getUnit(GET_PLAYER(m_ePlayer).getArrestingUnit());
 			CvUnit* pArrestedUnit = GET_PLAYER(m_ePlayerT).getUnit(GET_PLAYER(m_ePlayerT).getArrestedUnit());
 
-			pArrestingUnit->attackSamePlotSpecifiedUnit(pArrestedUnit, true);
+			pArrestingUnit->attackSamePlotSpecifiedUnit(pArrestedUnit);
 
 			GET_PLAYER(m_ePlayer).setArrestingUnit(FFreeList::INVALID_INDEX);
 			GET_PLAYER(m_ePlayerT).setArrestedUnit(FFreeList::INVALID_INDEX);

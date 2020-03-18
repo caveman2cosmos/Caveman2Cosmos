@@ -4091,7 +4091,7 @@ class BonusPlacer:
 			return False
 		bonusInfo = gc.getBonusInfo(eBonus)
 		if plot.isPeak():
-			if not gc.getGame().isOption(GameOptionTypes.GAMEOPTION_MOUNTAINS) or not bonusInfo.isPeaks():
+			if not bonusInfo.isPeaks():
 				return False
 		else:
 			#Here is the change from canHaveBonus. Forest does not block bonus
@@ -5370,11 +5370,11 @@ def generateTerrainTypes():
 		terrainDesert = gc.getInfoTypeForString("TERRAIN_DESERT")
 		terrainScrub = gc.getInfoTypeForString("TERRAIN_SCRUB")
 		terrainRocky = gc.getInfoTypeForString("TERRAIN_ROCKY")
-		terrainRockyArid = gc.getInfoTypeForString("TERRAIN_ROCKY_ARID")
-		terrainRockyCold = gc.getInfoTypeForString("TERRAIN_ROCKY_COLD")
+		terrainRockyArid = gc.getInfoTypeForString("TERRAIN_BADLAND")
+		terrainRockyCold = gc.getInfoTypeForString("TERRAIN_JAGGED")
 		terrainBarren = gc.getInfoTypeForString("TERRAIN_BARREN")
 		terrainPlains = gc.getInfoTypeForString("TERRAIN_PLAINS")
-		terrainGrass = gc.getInfoTypeForString("TERRAIN_GRASS")
+		terrainGrass = gc.getInfoTypeForString("TERRAIN_GRASSLAND")
 		terrainLush = gc.getInfoTypeForString("TERRAIN_LUSH")
 		terrainMuddy = gc.getInfoTypeForString("TERRAIN_MUDDY")
 		terrainMarsh = gc.getInfoTypeForString("TERRAIN_MARSH")
@@ -5851,7 +5851,7 @@ def addFeatures():
 		featureReef = gc.getInfoTypeForString("FEATURE_REEF")
 		featureKelp = gc.getInfoTypeForString("FEATURE_KELP")
 		featureBog = gc.getInfoTypeForString("FEATURE_PEAT_BOG")
-		featureSwordGrass = gc.getInfoTypeForString("FEATURE_SWORD_GRASS")
+		featureSwordGrass = gc.getInfoTypeForString("FEATURE_VERY_TALL_GRASS")
 		featureSwamp = gc.getInfoTypeForString("FEATURE_SWAMP")
 		## C2C end ##
 		FORESTLEAFY = 0
