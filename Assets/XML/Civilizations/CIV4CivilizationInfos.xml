@@ -4414,7 +4414,7 @@
 					<bFreeTech>1</bFreeTech>
 				</FreeTech>
 				<FreeTech>
-					<TechType>TECH_TOOL_MAKING</TechType>
+					<TechType>TECH_LANGUAGE</TechType>
 					<bFreeTech>1</bFreeTech>
 				</FreeTech>
 			</FreeTechs>
