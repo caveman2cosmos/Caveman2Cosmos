@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <!--
 <PlayerType> tag is now necessary to activate a spawn
 Valid NPC players for spawns:
@@ -1349,8 +1349,8 @@ Valid NPC players for spawns:
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
-			<Type>SPAWN_GALAPOGOS_TORTOISE_NATIVE</Type>
-			<UnitType>UNIT_GALAPOGOS_TORTOISE</UnitType>
+			<Type>SPAWN_GALAPAGOS_TORTOISE_NATIVE</Type>
+			<UnitType>UNIT_GALAPAGOS_TORTOISE</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>350</iTurns>

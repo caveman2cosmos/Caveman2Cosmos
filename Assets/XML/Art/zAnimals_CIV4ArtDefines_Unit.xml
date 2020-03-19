@@ -73,7 +73,6 @@
 			<SelectionSound>AS3D_UN_SPY_SURR_VOX</SelectionSound>
 			<ActionSound>AS3D_UN_SPY_SURR_VOX</ActionSound>
 		</UnitArtInfo>
-
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_AARDVARK</Type>
 			<Button>Art/Interface/Buttons/Units/Aardvark.dds</Button>

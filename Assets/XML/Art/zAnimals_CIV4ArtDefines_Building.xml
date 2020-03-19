@@ -6289,7 +6289,7 @@
 			<!-- Art/Interface/Buttons/Buildings/stories_Wildebeest.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GALAPOGOS_TORTOISE_MYTH</Type>
+			<Type>ART_DEF_BUILDING_GALAPAGOS_TORTOISE_MYTH</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -6300,7 +6300,7 @@
 			<!-- Art/Interface/Buttons/Buildings/myth_Galapagos_Tortoise.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GALAPOGOS_TORTOISE_STORY</Type>
+			<Type>ART_DEF_BUILDING_GALAPAGOS_TORTOISE_STORY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -6311,7 +6311,7 @@
 			<!-- Art/Interface/Buttons/Buildings/story_Galapagos_Tortoise.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GALAPOGOS_TORTOISE_STORIES</Type>
+			<Type>ART_DEF_BUILDING_GALAPAGOS_TORTOISE_STORIES</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>

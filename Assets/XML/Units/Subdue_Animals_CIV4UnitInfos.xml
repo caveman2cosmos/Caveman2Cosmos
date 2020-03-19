@@ -4550,8 +4550,8 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Type>UNIT_SUBDUED_GALAPOGOS_TORTOISE</Type>
-			<Capture>UNIT_SUBDUED_GALAPOGOS_TORTOISE</Capture>
+			<Type>UNIT_SUBDUED_GALAPAGOS_TORTOISE</Type>
+			<Capture>UNIT_SUBDUED_GALAPAGOS_TORTOISE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ANIMAL_REPTILE</SubCombatType>
@@ -4567,10 +4567,10 @@
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_SUBDUED_GALAPOGOS_TORTOISE</Description>
-			<Civilopedia>TXT_KEY_UNIT_GALAPOGOS_TORTOISE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_UNIT_SUBDUED_GALAPAGOS_TORTOISE</Description>
+			<Civilopedia>TXT_KEY_UNIT_GALAPAGOS_TORTOISE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_SUBDUED_ANIMAL_STRATEGY</Strategy>
-			<Help>TXT_KEY_UNIT_SUBDUED_GALAPOGOS_TORTOISE_HELP</Help>
+			<Help>TXT_KEY_UNIT_SUBDUED_GALAPAGOS_TORTOISE_HELP</Help>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<Buildings>
@@ -4582,9 +4582,9 @@
 				<BuildingType>BUILDING_TORTOISE_SHELL_WORKER</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
-				<BuildingType>BUILDING_GALAPOGOS_TORTOISE_MYTH</BuildingType>
-				<BuildingType>BUILDING_GALAPOGOS_TORTOISE_STORY</BuildingType>
-				<BuildingType>BUILDING_GALAPOGOS_TORTOISE_STORIES</BuildingType>
+				<BuildingType>BUILDING_GALAPAGOS_TORTOISE_MYTH</BuildingType>
+				<BuildingType>BUILDING_GALAPAGOS_TORTOISE_STORY</BuildingType>
+				<BuildingType>BUILDING_GALAPAGOS_TORTOISE_STORIES</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
