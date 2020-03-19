@@ -18322,7 +18322,7 @@
 			<PrereqTech>TECH_SCULPTURE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GREAT_PYRAMID</BuildingType>
-				<BuildingType>BUILDING_SPHINX</BuildingType>
+				<BuildingType>BUILDING_GREAT_SPHINX</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
@@ -20139,7 +20139,7 @@
 					<iProductionModifier>-50</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_STEEL_MILL</BuildingType>
+					<BuildingType>BUILDING_SMELTER_STEEL</BuildingType>
 					<iProductionModifier>-50</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>

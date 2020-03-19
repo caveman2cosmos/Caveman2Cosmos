@@ -11366,7 +11366,7 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_STEEL_MILL</BuildingType>
+					<BuildingType>BUILDING_SMELTER_STEEL</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
@@ -12807,17 +12807,17 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- The Sphinx -->
-			<Type>BUILDING_SPHINX</Type>
+			<Type>BUILDING_GREAT_SPHINX</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SPHINX</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SPHINX_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SPHINX_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_GREAT_SPHINX</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GREAT_SPHINX_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GREAT_SPHINX_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_VALLEY_KINGS_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SPHINX</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GREAT_SPHINX</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SPHINX</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_PYRAMID</ConstructSound>
 			<fVisibilityPriority>100</fVisibilityPriority>
@@ -12969,7 +12969,7 @@
 			<bWater>1</bWater>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_STEEL_MILL</BuildingType>
+					<BuildingType>BUILDING_SMELTER_STEEL</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>

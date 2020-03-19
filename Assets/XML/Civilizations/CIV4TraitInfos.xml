@@ -1673,15 +1673,15 @@
 					<iUnitProductionModifier>25</iUnitProductionModifier>
 				</UnitProductionModifierType>
 				<UnitProductionModifierType>
-					<UnitType>UNIT_CLASSIC_WORKBOAT</UnitType>
+					<UnitType>UNIT_WORKBOAT_CLASSIC</UnitType>
 					<iUnitProductionModifier>25</iUnitProductionModifier>
 				</UnitProductionModifierType>
 				<UnitProductionModifierType>
-					<UnitType>UNIT_MIDDLE_WORKBOAT</UnitType>
+					<UnitType>UNIT_WORKBOAT_MIDDLE</UnitType>
 					<iUnitProductionModifier>25</iUnitProductionModifier>
 				</UnitProductionModifierType>
 				<UnitProductionModifierType>
-					<UnitType>UNIT_MODERN_WORKBOAT</UnitType>
+					<UnitType>UNIT_WORKBOAT_MODERN</UnitType>
 					<iUnitProductionModifier>25</iUnitProductionModifier>
 				</UnitProductionModifierType>
 			</UnitProductionModifierTypes>
@@ -5099,15 +5099,15 @@
 					<iUnitProductionModifier>25</iUnitProductionModifier>
 				</UnitProductionModifierType>
 				<UnitProductionModifierType>
-					<UnitType>UNIT_CLASSIC_WORKBOAT</UnitType>
+					<UnitType>UNIT_WORKBOAT_CLASSIC</UnitType>
 					<iUnitProductionModifier>25</iUnitProductionModifier>
 				</UnitProductionModifierType>
 				<UnitProductionModifierType>
-					<UnitType>UNIT_MIDDLE_WORKBOAT</UnitType>
+					<UnitType>UNIT_WORKBOAT_MIDDLE</UnitType>
 					<iUnitProductionModifier>25</iUnitProductionModifier>
 				</UnitProductionModifierType>
 				<UnitProductionModifierType>
-					<UnitType>UNIT_MODERN_WORKBOAT</UnitType>
+					<UnitType>UNIT_WORKBOAT_MODERN</UnitType>
 					<iUnitProductionModifier>25</iUnitProductionModifier>
 				</UnitProductionModifierType>
 			</UnitProductionModifierTypes>

@@ -274,7 +274,7 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_BUFFALO</Type>
+			<Type>ART_DEF_UNIT_BUFFALO_CAPE</Type>
 			<Button>Art/Interface/Buttons/Units/Buffalo.dds</Button>
 			<fScale>25.0</fScale>
 			<fInterfaceScale>1</fInterfaceScale>
@@ -2296,7 +2296,7 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_CAIMAN</Type>
+			<Type>ART_DEF_UNIT_CAIMAN_BLACK</Type>
 			<Button>Art/Interface/Buttons/Units/Caiman.dds</Button>
 			<fScale>9.0</fScale>
 			<fInterfaceScale>1</fInterfaceScale>

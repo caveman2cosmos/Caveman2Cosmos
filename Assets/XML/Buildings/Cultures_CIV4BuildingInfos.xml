@@ -3580,7 +3580,7 @@
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_SPHINX</BuildingType>
+					<BuildingType>BUILDING_GREAT_SPHINX</BuildingType>
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>

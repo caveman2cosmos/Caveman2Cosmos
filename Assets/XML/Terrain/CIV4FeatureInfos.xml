@@ -138,7 +138,7 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iHealthPercent>-20</iHealthPercent>
 			<iDefense>50</iDefense>
-			<iGrowth>20</iGrowth>
+			<iGrowth>10</iGrowth>
 			<iWarmingDefense>3</iWarmingDefense>
 			<iPopDestroys>3</iPopDestroys>
 			<TerrainBooleans>
@@ -234,7 +234,7 @@
 			<EffectType>EFFECT_BIRDSCATTER</EffectType>
 			<iEffectProbability>15</iEffectProbability>
 			<iAdvancedStartRemoveCost>40</iAdvancedStartRemoveCost>
-			<iCultureDistance>1</iCultureDistance>
+			<iCultureDistance>2</iCultureDistance>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -273,7 +273,6 @@
 			<bNoAdjacent>1</bNoAdjacent>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bAddsFreshWater>1</bAddsFreshWater>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
 			<bIgnoreTerrainCulture>1</bIgnoreTerrainCulture>
 			<TerrainBooleans>
 				<TerrainBoolean>
@@ -522,18 +521,6 @@
 					<TerrainType>TERRAIN_MUDDY</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_MARSH</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_SCRUB</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
 			</TerrainBooleans>
 			<FootstepSounds>
 				<FootstepSound>
@@ -658,18 +645,6 @@
 					<TerrainType>TERRAIN_MUDDY</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_MARSH</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_SCRUB</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
 			</TerrainBooleans>
 			<FootstepSounds>
 				<FootstepSound>
@@ -763,6 +738,7 @@
 			<ArtDefineTag>ART_DEF_FEATURE_FOREST_BURNT</ArtDefineTag>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
+			<iAppearance>100</iAppearance>
 			<iDefense>15</iDefense>
 			<iPopDestroys>3</iPopDestroys>
 			<TerrainBooleans>
@@ -784,18 +760,6 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_MUDDY</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_MARSH</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_SCRUB</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -884,7 +848,7 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iHealthPercent>50</iHealthPercent>
 			<iDefense>50</iDefense>
-			<iAppearance>400</iAppearance>
+			<iAppearance>300</iAppearance>
 			<iPopDestroys>3</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
@@ -905,18 +869,6 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_MUDDY</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_MARSH</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_SCRUB</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -985,6 +937,7 @@
 			<WorldSoundscapeAudioScript>ASSS_OASIS_SELECT_AMB</WorldSoundscapeAudioScript>
 			<EffectType>EFFECT_BIRDSCATTER</EffectType>
 			<iEffectProbability>15</iEffectProbability>
+			<iCultureDistance>2</iCultureDistance>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1018,7 +971,7 @@
 			<iWarmingDefense>3</iWarmingDefense>
 			<iPopDestroys>6</iPopDestroys>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
-			<!-- <bNoCity>1</bNoCity> Why not?  Quite a few RW cities are founded on swampland.-->
+			<bAddsFreshWater>1</bAddsFreshWater>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_MARSH</TerrainType>
@@ -1107,7 +1060,7 @@
 					<FootstepAudioScript/>
 				</FootstepSound>
 			</FootstepSounds>
-			<iCultureDistance>1</iCultureDistance>
+			<iCultureDistance>2</iCultureDistance>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1138,55 +1091,7 @@
 			<iPopDestroys>-1</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_PLAINS</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_DESERT</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_TAIGA</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_ICE</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_COAST</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_OCEAN</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_MARSH</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_PEAK</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_HILL</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUSH</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_MUDDY</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_TUNDRA</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -1194,19 +1099,19 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY</TerrainType>
+					<TerrainType>TERRAIN_COAST</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_BADLAND</TerrainType>
+					<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_JAGGED</TerrainType>
+					<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_SCRUB</TerrainType>
+					<TerrainType>TERRAIN_DESERT</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -1214,7 +1119,67 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_ICE</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LUSH</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_MARSH</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_MUDDY</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_PERMAFROST</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_PLAINS</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_ROCKY</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
 					<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_SCRUB</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_TAIGA</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_TUNDRA</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -1398,55 +1363,7 @@
 			<iPopDestroys>-1</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_PLAINS</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_DESERT</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_TAIGA</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_ICE</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_COAST</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_OCEAN</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_MARSH</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_PEAK</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_HILL</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUSH</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_MUDDY</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_TUNDRA</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -1454,19 +1371,19 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_ROCKY</TerrainType>
+					<TerrainType>TERRAIN_COAST</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_BADLAND</TerrainType>
+					<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_JAGGED</TerrainType>
+					<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_SCRUB</TerrainType>
+					<TerrainType>TERRAIN_DESERT</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -1474,7 +1391,67 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_ICE</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LUSH</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_MARSH</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_MUDDY</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_PERMAFROST</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_PLAINS</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_ROCKY</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
 					<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_SCRUB</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_TAIGA</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_TUNDRA</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
@@ -1564,7 +1541,7 @@
 			<iDefense>50</iDefense>
 			<iAppearance>500</iAppearance>
 			<iGrowth>20</iGrowth>
-			<iPopDestroys>12</iPopDestroys>
+			<iPopDestroys>5</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
@@ -1654,6 +1631,7 @@
 				</FootstepSound>
 			</FootstepSounds>
 			<WorldSoundscapeAudioScript>ASSS_OASIS_SELECT_AMB</WorldSoundscapeAudioScript>
+			<iCultureDistance>1</iCultureDistance>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1676,7 +1654,7 @@
 				<iYieldChange>-1</iYieldChange>
 			</YieldChanges>
 			<iAppearance>800</iAppearance>
-			<iGrowth>20</iGrowth>
+			<iGrowth>10</iGrowth>
 			<iPopDestroys>10</iPopDestroys>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<TerrainBooleans>
@@ -1791,8 +1769,8 @@
 			<iHealthPercent>25</iHealthPercent>
 			<iDefense>10</iDefense>
 			<iAppearance>1000</iAppearance>
-			<iGrowth>20</iGrowth>
-			<iPopDestroys>12</iPopDestroys>
+			<iGrowth>15</iGrowth>
+			<iPopDestroys>8</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
@@ -1974,6 +1952,7 @@
 				</FootstepSound>
 			</FootstepSounds>
 			<WorldSoundscapeAudioScript>ASSS_OASIS_SELECT_AMB</WorldSoundscapeAudioScript>
+			<iCultureDistance>2</iCultureDistance>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2002,7 +1981,6 @@
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<iSeeThrough>1</iSeeThrough>
 			<iHealthPercent>10</iHealthPercent>
 			<iDefense>15</iDefense>
 			<iAppearance>500</iAppearance>
@@ -2216,6 +2194,7 @@
 				</FootstepSound>
 			</FootstepSounds>
 			<WorldSoundscapeAudioScript>ASSS_OASIS_SELECT_AMB</WorldSoundscapeAudioScript>
+			<iCultureDistance>1</iCultureDistance>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -2340,9 +2319,9 @@
 			<Civilopedia>TXT_KEY_FEATURE_CRATER_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_FEATURE_CRATER</ArtDefineTag>
 			<iMovement>1</iMovement>
-			<iDefense>25</iDefense>
+			<iDefense>-15</iDefense>
 			<iAppearance>60</iAppearance>
-			<iPopDestroys>100</iPopDestroys>
+			<iPopDestroys>20</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_BARREN</TerrainType>
@@ -2350,10 +2329,6 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_DUNES</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -2366,10 +2341,6 @@
 				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_LUSH</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_MARSH</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 				<TerrainBoolean>
@@ -2493,7 +2464,6 @@
 			<iWarmingDefense>1</iWarmingDefense>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<iPopDestroys>-1</iPopDestroys>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_MARSH</TerrainType>
@@ -2642,7 +2612,6 @@
 			<iDefense>15</iDefense>
 			<iAppearance>50</iAppearance>
 			<iPopDestroys>4</iPopDestroys>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ICE</TerrainType>
@@ -2739,7 +2708,6 @@
 			<iDefense>15</iDefense>
 			<iAppearance>50</iAppearance>
 			<iPopDestroys>4</iPopDestroys>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ICE</TerrainType>
@@ -2836,8 +2804,7 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>15</iDefense>
 			<iAppearance>50</iAppearance>
-			<iPopDestroys>3</iPopDestroys>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
+			<iPopDestroys>4</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ICE</TerrainType>
@@ -2935,7 +2902,6 @@
 			<iDefense>15</iDefense>
 			<iAppearance>50</iAppearance>
 			<iPopDestroys>4</iPopDestroys>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ICE</TerrainType>
@@ -3032,8 +2998,7 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>15</iDefense>
 			<iAppearance>50</iAppearance>
-			<iPopDestroys>5</iPopDestroys>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
+			<iPopDestroys>4</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ICE</TerrainType>
@@ -3130,8 +3095,7 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>15</iDefense>
 			<iAppearance>50</iAppearance>
-			<iPopDestroys>6</iPopDestroys>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
+			<iPopDestroys>4</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ICE</TerrainType>
@@ -3229,7 +3193,6 @@
 			<iDefense>15</iDefense>
 			<iAppearance>50</iAppearance>
 			<iPopDestroys>4</iPopDestroys>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ROCKY</TerrainType>
@@ -3314,7 +3277,6 @@
 			<iDefense>15</iDefense>
 			<iAppearance>50</iAppearance>
 			<iPopDestroys>4</iPopDestroys>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ROCKY</TerrainType>
@@ -3399,8 +3361,7 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>15</iDefense>
 			<iAppearance>50</iAppearance>
-			<iPopDestroys>3</iPopDestroys>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
+			<iPopDestroys>4</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ROCKY</TerrainType>
@@ -3486,7 +3447,6 @@
 			<iDefense>15</iDefense>
 			<iAppearance>50</iAppearance>
 			<iPopDestroys>4</iPopDestroys>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ROCKY</TerrainType>
@@ -3571,8 +3531,7 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>15</iDefense>
 			<iAppearance>50</iAppearance>
-			<iPopDestroys>5</iPopDestroys>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
+			<iPopDestroys>4</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ROCKY</TerrainType>
@@ -3657,8 +3616,7 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>15</iDefense>
 			<iAppearance>50</iAppearance>
-			<iPopDestroys>6</iPopDestroys>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
+			<iPopDestroys>4</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_ROCKY</TerrainType>
@@ -3744,7 +3702,6 @@
 			<iDefense>15</iDefense>
 			<iAppearance>50</iAppearance>
 			<iPopDestroys>4</iPopDestroys>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
@@ -3837,7 +3794,6 @@
 			<iDefense>15</iDefense>
 			<iAppearance>50</iAppearance>
 			<iPopDestroys>4</iPopDestroys>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
@@ -3930,8 +3886,7 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>15</iDefense>
 			<iAppearance>50</iAppearance>
-			<iPopDestroys>2</iPopDestroys>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
+			<iPopDestroys>4</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
@@ -4024,8 +3979,7 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>15</iDefense>
 			<iAppearance>50</iAppearance>
-			<iPopDestroys>3</iPopDestroys>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
+			<iPopDestroys>4</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
@@ -4118,8 +4072,7 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>15</iDefense>
 			<iAppearance>50</iAppearance>
-			<iPopDestroys>5</iPopDestroys>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
+			<iPopDestroys>4</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
@@ -4212,8 +4165,7 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>15</iDefense>
 			<iAppearance>50</iAppearance>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
-			<iPopDestroys>6</iPopDestroys>
+			<iPopDestroys>4</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_DESERT</TerrainType>
@@ -4456,6 +4408,7 @@
 			<iWarmingDefense>3</iWarmingDefense>
 			<iPopDestroys>6</iPopDestroys>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
+			<bAddsFreshWater>1</bAddsFreshWater>
 			<!-- GWMod new XML field M.A. -->
 			<bNoCity>1</bNoCity>
 			<TerrainBooleans>
@@ -5534,9 +5487,8 @@
 			</YieldChanges>
 			<iMovement>2</iMovement>
 			<iSeeThrough>1</iSeeThrough>
-			<iDisappearance>20000</iDisappearance> <!-- 10000-80000 means that there's a 100% chance for the feature to disappear every turn on Normal-Eternity GS.-->
+			<iDisappearance>16000</iDisappearance> <!-- 10000-80000 means that there's a 100% chance for the feature to disappear every turn on Normal-Eternity GS.-->
 			<iTurnDamage>50</iTurnDamage>
-			<iPopDestroys>-1</iPopDestroys>
 			<bNoCity>1</bNoCity>
 			<bNoImprovement>1</bNoImprovement>
 			<TerrainBooleans>
@@ -5835,7 +5787,6 @@
 			<bNoAdjacent>1</bNoAdjacent>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bAddsFreshWater>1</bAddsFreshWater>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
 			<bNukeImmune>1</bNukeImmune>
 			<TerrainBooleans>
 				<TerrainBoolean>
@@ -6234,10 +6185,9 @@
 			<iSeeThrough>1</iSeeThrough>
 			<iDefense>25</iDefense>
 			<iAppearance>300</iAppearance>
-			<iPopDestroys>25</iPopDestroys>
+			<iPopDestroys>30</iPopDestroys>
 			<bNoAdjacent>1</bNoAdjacent>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
 			<bNoImprovement>1</bNoImprovement>
 			<TerrainBooleans>
 				<TerrainBoolean>
@@ -6341,12 +6291,11 @@
 			<ArtDefineTag>ART_DEF_FEATURE_CRATER_LARGE</ArtDefineTag>
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
-			<iPopDestroys>50</iPopDestroys>
+			<iPopDestroys>40</iPopDestroys>
 			<iDefense>50</iDefense>
 			<iAppearance>250</iAppearance>
 			<bNoAdjacent>1</bNoAdjacent>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
 			<bNoImprovement>1</bNoImprovement>
 			<TerrainBooleans>
 				<TerrainBoolean>
@@ -6451,10 +6400,9 @@
 			<iMovement>1</iMovement>
 			<iSeeThrough>1</iSeeThrough>
 			<iAppearance>250</iAppearance>
-			<iPopDestroys>100</iPopDestroys>
+			<iPopDestroys>20</iPopDestroys>
 			<bNoAdjacent>1</bNoAdjacent>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
-			<!-- <bNoCity>1</bNoCity> Why not?-->
 			<bNoImprovement>1</bNoImprovement>
 			<TerrainBooleans>
 				<TerrainBoolean>

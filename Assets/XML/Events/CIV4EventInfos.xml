@@ -6271,7 +6271,7 @@
 					<Promotion>PROMOTION_INTERCEPTION1</Promotion>
 				</PromoteUnit>
 				<PromoteUnit>
-					<UnitType>UNIT_AEGIS</UnitType>
+					<UnitType>UNIT_AEGIS_CRUISER</UnitType>
 					<Promotion>PROMOTION_INTERCEPTION1</Promotion>
 				</PromoteUnit>
 				<PromoteUnit>

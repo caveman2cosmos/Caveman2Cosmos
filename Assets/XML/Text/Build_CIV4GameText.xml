@@ -708,9 +708,9 @@
 		<French>Construire une [LINK=IMPROVEMENT_PLANTATION]Plantation[\LINK]</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_PLANT_BAMBOO_GROVE</Tag>
-		<English>[LINK=IMPROVEMENT_PLANT_BAMBOO_GROVE]Plant Bamboo Grove[\LINK]</English>
-		<French>[LINK=IMPROVEMENT_PLANT_BAMBOO_GROVE]Planter une Bambouseraie[\LINK]</French>
+		<Tag>TXT_KEY_BUILD_PLANT_BAMBOO</Tag>
+		<English>[LINK=IMPROVEMENT_PLANT_BAMBOO]Plant Bamboo[\LINK]</English>
+		<French>[LINK=IMPROVEMENT_PLANT_BAMBOO]Planter une Bambouseraie[\LINK]</French>
 		<Italian>Crea un bosco di bambù</Italian>
 		<Spanish>Plantar un Bosque de bambú</Spanish>
 		<Polish>Zbuduj Gaj Bambusowy</Polish>

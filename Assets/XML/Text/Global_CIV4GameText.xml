@@ -7964,7 +7964,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_IMP_DESTROYED</Tag>
 		<English>A %s1_ImpName has been destroyed by a marauding %s3_civ_adjective %s2_UnitName!</English>
-		<French>Destruction [NUM1:d'un:d'une:des:des] %s1_ImpName - %s2_UnitName (%s3_civ_adjective)!</French>
+		<French>[COLOR_RED]Destruction [NUM1:d'un:d'une:des:des] [COLOR_REVERT][COLOR_YIELD_FOOD]%s1_ImpName[COLOR_REVERT][COLOR_RED] par [NUM2:un:une:des:des] %s2_UnitName (%s3_civ_adjective) ![COLOR_REVERT]</French>
 		<German>%s1_ImpName zerstört durch %[s3_civ_adjective][NUM2:en:e:es:e:e:e] %s2:4_UnitName!</German>
 		<Italian>[NUM1:Un:Una] %s1_ImpName è [NUM1:stato sabotato:stata sabotata] - %s2_UnitName (%s3_civ_adjective)!</Italian>
 		<Spanish>[NUM1:Un:Una:Unos:Unas] %s1_ImpName [NUM1:ha sido destruido:ha sido destruida:han sido destruidos:han sido destruidas] por [NUM2:un:una:unos:unas] %s2_UnitName (de los %s3:3_civ_adjective).</Spanish>
@@ -8787,7 +8787,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_STEALTH_DEFENSE_OWNER</Tag>
 		<English>Your sneaky %s1_UnitName has ambushed a foolish %s2_PlyrName %s3_UnitName!</English>
-		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_UnitName, dissimulé[NUM1:,:e,:s,:es,], [NUM1:a:a:ont:ont] tendu une embuscade à [NUM3:un:une:des:des] %s3_UnitName (%s2_PlyrName) !</French>
+		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_UnitName, dissimulé[NUM1:,:e,:s,:es,] [NUM1:a:a:ont:ont] tendu une embuscade à [NUM3:un:une:des:des] %s3_UnitName (%s2_PlyrName) !</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_STEALTH_LIE_IN_WAIT</Tag>
@@ -9296,7 +9296,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_YOU_IMP_WAS_DESTROYED_HIDDEN</Tag>
 		<English>A %s1_ImpName has been destroyed by a %s2_UnitName!</English>
-		<French>Destruction de 1 %s1_ImpName - %s2_UnitName!</French>
+		<French>Destruction [NUM1:d'un:d'une:des:des] %s1_ImpName par [NUM2:un:une:des:des] %s2_UnitName!</French>
 		<German>Eine Modernisierung %s1_ImpName wurde zerstört - %s2_UnitName!</German>
 		<Italian>[NUM1:Un:Una] %s1_ImpName è [NUM1:stato distrutto:stata distrutta] - %s2_UnitName!</Italian>
 		<Spanish>[NUM1:Un:Una:Unos:Unas] %s1_ImpName [NUM1:ha sido destruido:ha sido destruida:han sido destruidos:han sido destruidas] - %s2_UnitName.</Spanish>
@@ -11289,7 +11289,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_TEMP_POPULATION_BOOST</Tag>
 		<English>Joins the city, adding %D1 Population</English>
-		<French>Rejoint la ville, ajoutant %D1 Population</French>
+		<French>L'unité rejoint la ville, ajoutant %D1 Population</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_TO</Tag>
@@ -12300,7 +12300,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_PROCESS_CULTURE</Tag>
 		<English>Culture</English>
 		<French>
-			<Text>Culture</Text>
+			<Text>Culture (Normale)</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -12324,7 +12324,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_IDLE</Tag>
 		<English>Idle</English>
-		<French>Oisif</French>
+		<French>Oisif - Pas de production</French>
 		<German>Untätig</German>
 		<Italian>Ozioso</Italian>
 		<Spanish>Parada</Spanish>
@@ -12341,7 +12341,11 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_LESSER_CULTURE</Tag>
 		<English>Lesser Culture</English>
-		<French>Faible Culture</French>
+		<French>
+			<Text>Culture (faible)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>
 			<Text>Kultur (gering):Kultur (gering):Kultur (gering):Kultur (gering)</Text>
 			<Gender>Female</Gender>
@@ -12354,7 +12358,11 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_LESSER_RESEARCH</Tag>
 		<English>Lesser Research</English>
-		<French>Faible Recherche</French>
+		<French>
+			<Text>Recherche (faible)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>
 			<Text>Forschung (gering):Forschung (gering):Forschung (gering):Forschung (gering)</Text>
 			<Gender>Female</Gender>
@@ -12367,7 +12375,11 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_LESSER_WEALTH</Tag>
 		<English>Lesser Wealth</English>
-		<French>Faible Richesse</French>
+		<French>
+			<Text>Richesse (faible)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>
 			<Text>Reichtum (gering):Reichtums (gering):Reichtum (gering):Reichtum (gering)</Text>
 			<Gender>Male</Gender>
@@ -12380,7 +12392,11 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_MEAGER_CULTURE</Tag>
 		<English>Meager Culture</English>
-		<French>Maigre Culture</French>
+		<French>
+			<Text>Culture (insignifiante)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>
 			<Text>Kultur (spärlich):Kultur (spärlich):Kultur (spärlich):Kultur (spärlich)</Text>
 			<Gender>Female</Gender>
@@ -12393,7 +12409,11 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_MEAGER_RESEARCH</Tag>
 		<English>Meager Research</English>
-		<French>Maigre Recherche</French>
+		<French>
+			<Text>Recherche (insignifiante)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>
 			<Text>Forschung (spärlich):Forschung (spärlich):Forschung (spärlich):Forschung (spärlich)</Text>
 			<Gender>Female</Gender>
@@ -12406,7 +12426,11 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_MEAGER_WEALTH</Tag>
 		<English>Meager Wealth</English>
-		<French>Maigre Richesse</French>
+		<French>
+			<Text>Richesse (insignifiante)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 		<German>
 			<Text>Reichtum (spärlich):Reichtums (spärlich):Reichtum (spärlich):Reichtum (spärlich)</Text>
 			<Gender>Male</Gender>
@@ -12420,7 +12444,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_PROCESS_RESEARCH</Tag>
 		<English>Research</English>
 		<French>
-			<Text>Recherche</Text>
+			<Text>Recherche (normale)</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -12445,7 +12469,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_PROCESS_SPY</Tag>
 		<English>Espionage</English>
 		<French>
-			<Text>Espionnage</Text>
+			<Text>Espionnage (normal)</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -12469,18 +12493,26 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_SPY_LESSER</Tag>
 		<English>Lesser Espionage</English>
-		<French>Très faible Espionnage</French>
+		<French>
+			<Text>Espionnage (faible)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_SPY_MEAGER</Tag>
 		<English>Meager Espionage</English>
-		<French>Maigre Espionnage</French>
+		<French>
+			<Text>Espionnage (insignifiant)</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROCESS_WEALTH</Tag>
 		<English>Wealth</English>
 		<French>
-			<Text>Richesse</Text>
+			<Text>Richesse (normale)</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
@@ -18806,12 +18838,12 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UPGRADED_BY_STEEL_MILL</Tag>
-		<English>[NEWLINE][ICON_BULLET]Upgraded by [LINK=BUILDING_STEEL_MILL]Steel Mill[\LINK]</English>
-		<French>[NEWLINE][ICON_BULLET]Amélioré en [LINK=BUILDING_STEEL_MILL]Aciérie[\LINK]</French>
-		<German>[NEWLINE][ICON_BULLET]Modernisiert durch [LINK=BUILDING_STEEL_MILL]Stahlmühle[\LINK]</German>
-		<Italian>[NEWLINE][ICON_BULLET]Sostituita da [LINK=BUILDING_STEEL_MILL]Acciaieria[\LINK]</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Reemplazado por [LINK=BUILDING_STEEL_MILL]Acería[\LINK]</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Zastąpione przez [LINK=BUILDING_STEEL_MILL]Stalownia[\LINK]</Polish>
+		<English>[NEWLINE][ICON_BULLET]Upgraded by [LINK=BUILDING_SMELTER_STEEL]Steel Mill[\LINK]</English>
+		<French>[NEWLINE][ICON_BULLET]Amélioré en [LINK=BUILDING_SMELTER_STEEL]Aciérie[\LINK]</French>
+		<German>[NEWLINE][ICON_BULLET]Modernisiert durch [LINK=BUILDING_SMELTER_STEEL]Stahlmühle[\LINK]</German>
+		<Italian>[NEWLINE][ICON_BULLET]Sostituita da [LINK=BUILDING_SMELTER_STEEL]Acciaieria[\LINK]</Italian>
+		<Spanish>[NEWLINE][ICON_BULLET]Reemplazado por [LINK=BUILDING_SMELTER_STEEL]Acería[\LINK]</Spanish>
+		<Polish>[NEWLINE][ICON_BULLET]Zastąpione przez [LINK=BUILDING_SMELTER_STEEL]Stalownia[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UPGRADE_ANYWHERE_TEXT</Tag>

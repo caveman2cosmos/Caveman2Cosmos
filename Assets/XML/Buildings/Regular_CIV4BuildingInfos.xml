@@ -38722,11 +38722,11 @@
 			<!-- Unit effects -->
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
-					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+					<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 					<iProductionModifier>10</iProductionModifier>
 				</UnitProductionModifier>
 				<UnitProductionModifier>
-					<UnitType>UNIT_STONE_AGE_AXEMAN</UnitType>
+					<UnitType>UNIT_STONE_AXEMAN</UnitType>
 					<iProductionModifier>10</iProductionModifier>
 				</UnitProductionModifier>
 				<UnitProductionModifier>
@@ -91083,10 +91083,10 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Smelter (Steel) -->
-			<Type>BUILDING_STEEL_MILL</Type>
-			<Description>TXT_KEY_BUILDING_STEEL_MILL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_STEEL_MILL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_STEEL_MILL_STRATEGY</Strategy>
+			<Type>BUILDING_SMELTER_STEEL</Type>
+			<Description>TXT_KEY_BUILDING_SMELTER_STEEL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SMELTER_STEEL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_SMELTER_STEEL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SMELTER_STEEL</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_IRONWORKS</ConstructSound>
@@ -95910,7 +95910,7 @@
 			<Type>BUILDING_TERMITE_MOUND</Type>
 			<Description>TXT_KEY_BUILDING_TERMITE_MOUND</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERMITE_MOUND_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TERMITE_MOUND</Strategy>
+			<Strategy>TXT_KEY_BUILDING_TERMITE_MOUND_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TERMITE_MOUND</ArtDefineTag>
 			<!-- Prerequisites -->

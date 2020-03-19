@@ -348,77 +348,59 @@ CvPlayer::~CvPlayer()
 
 void CvPlayer::init(PlayerTypes eID)
 {
-	int iI, iJ;
-
 	//--------------------------------
 	// Init saved data
 	reset(eID);
-
 	//--------------------------------
 	// Init containers
 	m_plotGroups.init();
-
 	m_cities.init();
-
 	m_units.init();
-
 	m_selectionGroups.init();
-
 	m_eventsTriggered.init();
-
 	//--------------------------------
 	// Init non-saved data
 	setupGraphical();
-
 	//--------------------------------
 	// Init other game data
 	FAssert(getTeam() != NO_TEAM);
 	GET_TEAM(getTeam()).changeNumMembers(1);
 
-	if ((GC.getInitCore().getSlotStatus(getID()) == SS_TAKEN) || (GC.getInitCore().getSlotStatus(getID()) == SS_COMPUTER))
+	if (GC.getInitCore().getSlotStatus(getID()) == SS_TAKEN || GC.getInitCore().getSlotStatus(getID()) == SS_COMPUTER)
 	{
 		setAlive(true);
 
-		if (GC.getGame().isOption(GAMEOPTION_RANDOM_PERSONALITIES))
+		if (GC.getGame().isOption(GAMEOPTION_RANDOM_PERSONALITIES) && !isNPC() && !isMinorCiv())
 		{
-			if (!isNPC() && !isMinorCiv())
+			LeaderHeadTypes eBestPersonality = NO_LEADER;
+			int iBestValue = 0;
+
+			for (int iI = 0; iI < GC.getNumLeaderHeadInfos(); iI++)
 			{
-				int iBestValue = 0;
-				int iValue;
-				LeaderHeadTypes eBestPersonality = NO_LEADER;
-
-				for (iI = 0; iI < GC.getNumLeaderHeadInfos(); iI++)
+				if (!GC.getLeaderHeadInfo((LeaderHeadTypes)iI).isNPC())
 				{
-					if (iI != GC.getDefineINT("BARBARIAN_LEADER")) // XXX minor civ???
+					int iValue = (1 + GC.getGame().getSorenRandNum(10000, "Choosing Personality"));
+
+					for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
 					{
-						iValue = (1 + GC.getGame().getSorenRandNum(10000, "Choosing Personality"));
-
-						for (iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
+						if (GET_PLAYER((PlayerTypes)iJ).isAlive()
+						&& GET_PLAYER((PlayerTypes)iJ).getPersonalityType() == (LeaderHeadTypes) iI)
 						{
-							if (GET_PLAYER((PlayerTypes)iJ).isAlive())
-							{
-								if (GET_PLAYER((PlayerTypes)iJ).getPersonalityType() == ((LeaderHeadTypes)iI))
-								{
-									iValue /= 2;
-								}
-							}
-						}
-
-						if (iValue > iBestValue)
-						{
-							iBestValue = iValue;
-							eBestPersonality = ((LeaderHeadTypes)iI);
+							iValue /= 2;
 						}
 					}
-				}
-
-				if (eBestPersonality != NO_LEADER)
-				{
-					setPersonalityType(eBestPersonality);
+					if (iValue > iBestValue)
+					{
+						iBestValue = iValue;
+						eBestPersonality = ((LeaderHeadTypes)iI);
+					}
 				}
 			}
+			if (eBestPersonality != NO_LEADER)
+			{
+				setPersonalityType(eBestPersonality);
+			}
 		}
-
 		changeBaseFreeUnits(GC.getDefineINT("INITIAL_BASE_FREE_UNITS"));
 		changeBaseFreeMilitaryUnits(GC.getDefineINT("INITIAL_BASE_FREE_MILITARY_UNITS"));
 		changeFreeUnitsPopulationPercent(GC.getDefineINT("INITIAL_FREE_UNITS_POPULATION_PERCENT"));
@@ -428,18 +410,17 @@ void CvPlayer::init(PlayerTypes eID)
 		changeStateReligionHappiness(GC.getDefineINT("INITIAL_STATE_RELIGION_HAPPINESS"));
 		changeNonStateReligionHappiness(GC.getDefineINT("INITIAL_NON_STATE_RELIGION_HAPPINESS"));
 
-		for (iI = 0; iI < NUM_YIELD_TYPES; iI++)
+		for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 		{
-			changeTradeYieldModifier(((YieldTypes)iI), GC.getYieldInfo((YieldTypes)iI).getTradeModifier());
+			changeTradeYieldModifier((YieldTypes)iI, GC.getYieldInfo((YieldTypes)iI).getTradeModifier());
 		}
-
-		for (iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
+		for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 		{
-			setCommercePercent(((CommerceTypes)iI), GC.getCommerceInfo((CommerceTypes)iI).getInitialPercent());
+			setCommercePercent((CommerceTypes) iI, GC.getCommerceInfo((CommerceTypes)iI).getInitialPercent());
 		}
 
 		FAssertMsg((GC.getNumTraitInfos() > 0), "GC.getNumTraitInfos() is less than or equal to zero but is expected to be larger than zero in CvPlayer::init");
-		for (iI = 0; iI < GC.getNumTraitInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
 		{
 			if (GC.getLeaderHeadInfo(getLeaderType()).hasTrait((TraitTypes)iI) && GC.getTraitInfo((TraitTypes)iI).isValidTrait(true))
 			{
@@ -447,11 +428,10 @@ void CvPlayer::init(PlayerTypes eID)
 				processTrait((TraitTypes)iI, 1);
 			}
 		}
-
 		updateMaxAnarchyTurns();
 		updateMinAnarchyTurns();
 
-		for (iI = 0; iI < NUM_YIELD_TYPES; iI++)
+		for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 		{
 			updateExtraYieldThreshold((YieldTypes)iI);
 			updateLessYieldThreshold((YieldTypes)iI);
@@ -460,22 +440,22 @@ void CvPlayer::init(PlayerTypes eID)
 
 		// Toffer: Someone should look into if it's possible to not set any civics at all for NPC teams.
 		// I imagine there's a lot of code that doesn't expect NO_CIVIC to be the set civic though.
-		for (iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
 		{
 			setCivics(((CivicOptionTypes)iI), ((CivicTypes)(GC.getCivilizationInfo(getCivilizationType()).getCivilizationInitialCivics(iI))));
 		}
 
-		for (iI = 0; iI < GC.getNumEventInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumEventInfos(); iI++)
 		{
 			resetEventOccured((EventTypes)iI, false);
 		}
 
-		for (iI = 0; iI < GC.getNumEventTriggerInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumEventTriggerInfos(); iI++)
 		{
 			resetTriggerFired((EventTriggerTypes)iI);
 		}
 
-		for (iI = 0; iI < GC.getNumUnitInfos(); ++iI)
+		for (int iI = 0; iI < GC.getNumUnitInfos(); ++iI)
 		{
 			if (GC.getUnitInfo((UnitTypes)iI).isFound())
 			{
@@ -488,32 +468,17 @@ void CvPlayer::init(PlayerTypes eID)
 	{
 		setLeaderHeadLevel(0);
 	}
-
-	// RevolutionDCM start - new diplomacy option
 	setDoNotBotherStatus(NO_PLAYER);
-
 	AI_init();
-
 	m_contractBroker.init(eID);
-
 	m_UnitList.init();
 }
 
-/************************************************************************************************/
-/* REVOLUTION_MOD                         01/04/08                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 //
 // Copy of CvPlayer::init but with modifications for use in the middle of a game
 //
 void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 {
-	LeaderHeadTypes eBestPersonality;
-	int iValue;
-	int iBestValue;
-	int iI, iJ;
-
 	//--------------------------------
 	// Init saved data
 	reset(eID);
@@ -542,76 +507,64 @@ void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 
 	// Some effects on team necessary if this is the only member of the team
 	int iOtherTeamMembers = 0;
-	for (iI = 0; iI < MAX_PC_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
-		if( iI != getID() )
+		if (iI != getID() && GET_PLAYER((PlayerTypes)iI).getTeam() == getTeam())
 		{
-			if( GET_PLAYER((PlayerTypes)iI).getTeam() == getTeam() )
-			{
-				iOtherTeamMembers++;
-			}
+			iOtherTeamMembers++;
 		}
 	}
 
 	bool bTeamInit = false;
-	if( (iOtherTeamMembers == 0) || GET_TEAM(getTeam()).getNumMembers() == 0 )
+	if (iOtherTeamMembers == 0 || GET_TEAM(getTeam()).getNumMembers() == 0)
 	{
 		bTeamInit = true;
 		GET_TEAM(getTeam()).init(getTeam());
 		GET_TEAM(getTeam()).resetPlotAndCityData();
 	}
 
-	if( bTeamInit || (GET_TEAM(getTeam()).getNumMembers() == iOtherTeamMembers) )
+	if (bTeamInit || GET_TEAM(getTeam()).getNumMembers() == iOtherTeamMembers)
 	{
 		GET_TEAM(getTeam()).changeNumMembers(1);
 	}
 
 	if ((GC.getInitCore().getSlotStatus(getID()) == SS_TAKEN) || (GC.getInitCore().getSlotStatus(getID()) == SS_COMPUTER))
 	{
-		if( bSetAlive )
+		if (bSetAlive)
 		{
 			setAlive(true);
 		}
-
-		if (GC.getGame().isOption(GAMEOPTION_RANDOM_PERSONALITIES))
+		if (GC.getGame().isOption(GAMEOPTION_RANDOM_PERSONALITIES) && !isNPC() && !isMinorCiv())
 		{
-			if (!isNPC() && !isMinorCiv())
+			LeaderHeadTypes eBestPersonality = NO_LEADER;
+			int iBestValue = 0;
+
+			for (int iI = 0; iI < GC.getNumLeaderHeadInfos(); iI++)
 			{
-				iBestValue = 0;
-				eBestPersonality = NO_LEADER;
-
-				for (iI = 0; iI < GC.getNumLeaderHeadInfos(); iI++)
+				if (!GC.getLeaderHeadInfo((LeaderHeadTypes)iI).isNPC())
 				{
-					if (iI != GC.getDefineINT("BARBARIAN_LEADER")) // XXX minor civ???
+					int iValue = (1 + GC.getGame().getSorenRandNum(10000, "Choosing Personality"));
+
+					for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
 					{
-						iValue = (1 + GC.getGame().getSorenRandNum(10000, "Choosing Personality"));
-
-						for (iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
+						if (GET_PLAYER((PlayerTypes)iJ).isAlive()
+						&& GET_PLAYER((PlayerTypes)iJ).getPersonalityType() == (LeaderHeadTypes) iI)
 						{
-							if (GET_PLAYER((PlayerTypes)iJ).isAlive())
-							{
-								if (GET_PLAYER((PlayerTypes)iJ).getPersonalityType() == ((LeaderHeadTypes)iI))
-								{
-									iValue /= 2;
-								}
-							}
-						}
-
-						if (iValue > iBestValue)
-						{
-							iBestValue = iValue;
-							eBestPersonality = ((LeaderHeadTypes)iI);
+							iValue /= 2;
 						}
 					}
-				}
-
-				if (eBestPersonality != NO_LEADER)
-				{
-					setPersonalityType(eBestPersonality);
+					if (iValue > iBestValue)
+					{
+						iBestValue = iValue;
+						eBestPersonality = ((LeaderHeadTypes)iI);
+					}
 				}
 			}
+			if (eBestPersonality != NO_LEADER)
+			{
+				setPersonalityType(eBestPersonality);
+			}
 		}
-
 		changeBaseFreeUnits(GC.getDefineINT("INITIAL_BASE_FREE_UNITS"));
 		changeBaseFreeMilitaryUnits(GC.getDefineINT("INITIAL_BASE_FREE_MILITARY_UNITS"));
 		changeFreeUnitsPopulationPercent(GC.getDefineINT("INITIAL_FREE_UNITS_POPULATION_PERCENT"));
@@ -621,18 +574,17 @@ void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 		changeStateReligionHappiness(GC.getDefineINT("INITIAL_STATE_RELIGION_HAPPINESS"));
 		changeNonStateReligionHappiness(GC.getDefineINT("INITIAL_NON_STATE_RELIGION_HAPPINESS"));
 
-		for (iI = 0; iI < NUM_YIELD_TYPES; iI++)
+		for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 		{
 			changeTradeYieldModifier(((YieldTypes)iI), GC.getYieldInfo((YieldTypes)iI).getTradeModifier());
 		}
-
-		for (iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
+		for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 		{
 			setCommercePercent(((CommerceTypes)iI), GC.getCommerceInfo((CommerceTypes)iI).getInitialPercent());
 		}
 
 		FAssertMsg((GC.getNumTraitInfos() > 0), "GC.getNumTraitInfos() is less than or equal to zero but is expected to be larger than zero in CvPlayer::init");
-		for (iI = 0; iI < GC.getNumTraitInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumTraitInfos(); iI++)
 		{
 			if (GC.getLeaderHeadInfo(getLeaderType()).hasTrait((TraitTypes)iI) && GC.getTraitInfo((TraitTypes)iI).isValidTrait(true))
 			{
@@ -641,60 +593,52 @@ void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 			}
 		}
 
-		if (!isNPC())
+		if (!isNPC() && canLeaderPromote())
 		{
-			if (canLeaderPromote())
+			do
 			{
-				do
-				{
-					doPromoteLeader();
-				}
-				while (canLeaderPromote());
+				doPromoteLeader();
 			}
+			while (canLeaderPromote());
 		}
-
 		updateMaxAnarchyTurns();
 		updateMinAnarchyTurns();
 
-		for (iI = 0; iI < NUM_YIELD_TYPES; iI++)
+		for (int iI = 0; iI < NUM_YIELD_TYPES; iI++)
 		{
 			updateExtraYieldThreshold((YieldTypes)iI);
 			updateLessYieldThreshold((YieldTypes)iI);
 		}
 
-		for (iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumCivicOptionInfos(); iI++)
 		{
 			setCivics(((CivicOptionTypes)iI), ((CivicTypes)(GC.getCivilizationInfo(getCivilizationType()).getCivilizationInitialCivics(iI))));
 		}
 
 		// Reset all triggers at first, set those whose events have fired in next block
-		for (iI = 0; iI < GC.getNumEventTriggerInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumEventTriggerInfos(); iI++)
 		{
 			resetTriggerFired((EventTriggerTypes)iI);
 		}
 
-		for (iI = 0; iI < GC.getNumEventInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumEventInfos(); iI++)
 		{
-/* original bts code
-			resetEventOccured((EventTypes)iI, false);
-*/
 			// Has global trigger fired already?
-
 			const EventTriggeredData* pEvent = NULL;
-			for (iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
+			for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
 			{
-				if( iJ != getID() )
+				if (iJ != getID())
 				{
 					pEvent = GET_PLAYER((PlayerTypes)iJ).getEventOccured((EventTypes)iI, true);
-					if ( pEvent != NULL && pEvent->m_eTrigger > NO_EVENTTRIGGER)
+					if (pEvent != NULL && pEvent->m_eTrigger > NO_EVENTTRIGGER)
 					{
 						CvEventTriggerInfo& kTrigger = GC.getEventTriggerInfo(pEvent->m_eTrigger);
-						if( kTrigger.isGlobal() )
+						if (kTrigger.isGlobal())
 						{
 							setTriggerFired( *pEvent, false, false );
 							break;
 						}
-						else if( kTrigger.isTeam() && GET_PLAYER((PlayerTypes)iJ).getTeam() == getTeam() )
+						else if (kTrigger.isTeam() && GET_PLAYER((PlayerTypes)iJ).getTeam() == getTeam())
 						{
 							setTriggerFired( *pEvent, false, false );
 							break;
@@ -706,7 +650,7 @@ void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 			resetEventOccured((EventTypes)iI, false);
 		}
 
-		for (iI = 0; iI < GC.getNumUnitInfos(); ++iI)
+		for (int iI = 0; iI < GC.getNumUnitInfos(); ++iI)
 		{
 			if (GC.getUnitInfo((UnitTypes)iI).isFound())
 			{
@@ -714,22 +658,9 @@ void CvPlayer::initInGame(PlayerTypes eID, bool bSetAlive)
 			}
 		}
 	}
-
 	resetPlotAndCityData();
-
-/************************************************************************************************/
-/* REVOLUTIONDCM_MOD                         02/04/08                            Glider1        */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	// RevolutionDCM start - new diplomacy option
 	setDoNotBotherStatus(NO_PLAYER);
-	// RevolutionDCM end
-/************************************************************************************************/
-/* REVOLUTIONDCM_MOD                         END                                 Glider1        */
-/************************************************************************************************/
 	m_UnitList.init();
-
 	AI_init();
 }
 
@@ -757,9 +688,6 @@ void CvPlayer::resetPlotAndCityData( )
 		}
 	}
 }
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
 
 void CvPlayer::uninit()
@@ -1747,27 +1675,22 @@ void CvPlayer::logMsg(char* format, ... )
 //
 // for changing the personality of the player
 //
-void CvPlayer::changePersonalityType( )
+void CvPlayer::changePersonalityType()
 {
-	LeaderHeadTypes eBestPersonality;
-	int iValue;
-	int iBestValue;
-	int iI, iJ;
-
 	if (GC.getGame().isOption(GAMEOPTION_RANDOM_PERSONALITIES))
 	{
 		if (!isNPC())
 		{
-			iBestValue = 0;
-			eBestPersonality = NO_LEADER;
+			LeaderHeadTypes eBestPersonality = NO_LEADER;
+			int iBestValue = 0;
 
-			for (iI = 0; iI < GC.getNumLeaderHeadInfos(); iI++)
+			for (int iI = 0; iI < GC.getNumLeaderHeadInfos(); iI++)
 			{
-				if (iI != GC.getDefineINT("BARBARIAN_LEADER")) // XXX minor civ???
+				if (!GC.getLeaderHeadInfo((LeaderHeadTypes)iI).isNPC())
 				{
-					iValue = (1 + GC.getGame().getSorenRandNum(10000, "Choosing Personality"));
+					int iValue = 1 + GC.getGame().getSorenRandNum(10000, "Choosing Personality");
 
-					for (iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
+					for (int iJ = 0; iJ < MAX_PC_PLAYERS; iJ++)
 					{
 						if (GET_PLAYER((PlayerTypes)iJ).isAlive())
 						{
@@ -1777,7 +1700,6 @@ void CvPlayer::changePersonalityType( )
 							}
 						}
 					}
-
 					if (iValue > iBestValue)
 					{
 						iBestValue = iValue;
@@ -1785,7 +1707,6 @@ void CvPlayer::changePersonalityType( )
 					}
 				}
 			}
-
 			if (eBestPersonality != NO_LEADER)
 			{
 				setPersonalityType(eBestPersonality);
@@ -1794,7 +1715,7 @@ void CvPlayer::changePersonalityType( )
 	}
 	else
 	{
-		setPersonalityType( getLeaderType() );
+		setPersonalityType(getLeaderType());
 	}
 }
 
@@ -1836,7 +1757,7 @@ void CvPlayer::resetCivTypeEffects( )
 //
 // for switching the leaderhead of this player
 //
-void CvPlayer::changeLeader( LeaderHeadTypes eNewLeader )
+void CvPlayer::changeLeader(LeaderHeadTypes eNewLeader)
 {
 	if (getLeaderType() == eNewLeader) return;
 
@@ -1859,19 +1780,16 @@ void CvPlayer::changeLeader( LeaderHeadTypes eNewLeader )
 		}
 	}
 
-	if (!isNPC())
+	if (!isNPC() && canLeaderPromote())
 	{
-		if (canLeaderPromote())
+		do
 		{
-			do
-			{
-				doPromoteLeader();
-			}
-			while (canLeaderPromote());
+			doPromoteLeader();
 		}
+		while (canLeaderPromote());
 	}
 
-	if( isAlive() || isEverAlive() )
+	if (isAlive() || isEverAlive())
 	{
 		gDLL->getInterfaceIFace()->setDirty(HighlightPlot_DIRTY_BIT, true);
 		gDLL->getInterfaceIFace()->setDirty(CityInfo_DIRTY_BIT, true);
@@ -1882,7 +1800,6 @@ void CvPlayer::changeLeader( LeaderHeadTypes eNewLeader )
 		gDLL->getInterfaceIFace()->setDirty(Score_DIRTY_BIT, true);
 		gDLL->getInterfaceIFace()->setDirty(Foreign_Screen_DIRTY_BIT, true);
 	}
-
 	AI_init();
 }
 
@@ -27276,25 +27193,6 @@ bool CvPlayer::splitEmpire(int iAreaId)
 			}
 		}
 		GC.getGame().addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getID(), szMessage, -1, -1, (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
-
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      12/30/08                                jdog5000      */
-/*                                                                                              */
-/* Bugfix                                                                                       */
-/************************************************************************************************/
-/*
-		// remove leftover culture from old recycled player
-		for (int iPlot = 0; iPlot < GC.getMap().numPlots(); ++iPlot)
-		{
-			CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlot);
-
-			pLoopPlot->setCulture(eNewPlayer, 0, false, false);
-		}
-*/
-		// Clearing plot culture along with many other bits of data now handled by CvGame::addPlayer
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
 		GC.getGame().addPlayer(eNewPlayer, eBestLeader, eBestCiv);
 		GET_PLAYER(eNewPlayer).setParent(getID());
