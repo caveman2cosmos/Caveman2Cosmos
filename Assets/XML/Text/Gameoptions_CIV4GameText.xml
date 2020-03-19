@@ -1175,7 +1175,7 @@ Only affects SmartMap if terrain options is:
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_REVOLUTION_HELP</Tag>
 		<English>Enables the Revolution mod component: New rebel civs will attempt to breakaway from an empire if their needs are not being met. WARNING: This option makes AI less challenging. Revolution mod hasn't been properly maintained and updated in C2C.</English>
-		<French>Active le composant de mod de révolution: Des rebelles peuvent tenter de se révolter et devenir indépendants d'un empire si leurs besoins ne sont pas satisfaits. AVERTISSEMENT: cette option rend l'IA moins difficile. Le mod Revolution n'a pas été correctement entretenu et mis à jour dans C2C.</French>
+		<French>Active le composant de mod de révolution : Des rebelles peuvent tenter de se révolter et devenir indépendants d'un empire si leurs besoins ne sont pas satisfaits. AVERTISSEMENT : cette option rend l'IA moins difficile. Le mod Revolution n'a pas été correctement entretenu et mis à jour dans C2C.</French>
 		<German>Deaktiviert die Revolution-Mod: Es wird keine Rebellionen und Abspaltungsbestrebungen geben, wenn die Bedürfnisse der Bevölkerung nicht beachtet werden.</German>
 		<Italian>Disabilita il MOD "Revolution": nuove civiltà ribelli no possono tentare la secessione da un impero se i loro bisogni non vengono soddisfatti.</Italian>
 		<Spanish>Se desactiva el componente Revolution: no habrá civilizaciones rebeldes que intenten independizarse de un imperio si sus necesidades no son satisfechas.</Spanish>

@@ -69419,7 +69419,7 @@
 				<BuildingType>BUILDING_CHILDCAREHUT</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
+			<ObsoleteTech>TECH_IRON_WORKING</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>25</iCost>
 			<!-- Main effects -->
@@ -91801,6 +91801,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TOOL_MAKING</PrereqTech>
+			<ObsoleteTech>TECH_IRON_WORKING</ObsoleteTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GATHERER_ROCK</BuildingType>
 			</PrereqInCityBuildings>
@@ -91905,13 +91906,6 @@
 						<iCommerce>-1</iCommerce>
 					</TechCommerce>
 				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_IRON_WORKING</PrereqTech>
-					<TechCommerce>
-						<iCommerce>-1</iCommerce>
-						<iCommerce>-1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
 			</TechCommerceChanges>
 			<TechYieldChanges>
 				<TechYieldChange>
@@ -91965,13 +91959,6 @@
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_LEAD_WORKING</PrereqTech>
-					<TechYield>
-						<iYield>0</iYield>
-						<iYield>-1</iYield>
-					</TechYield>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>

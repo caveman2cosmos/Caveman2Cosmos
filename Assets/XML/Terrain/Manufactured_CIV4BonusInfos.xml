@@ -2405,6 +2405,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_STONE_TOOLS</ArtDefineTag>
 			<TechReveal>TECH_TOOL_MAKING</TechReveal>
 			<TechCityTrade>TECH_TOOL_MAKING</TechCityTrade>
+			<TechObsolete>TECH_IRON_WORKING</TechObsolete>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Straw -->

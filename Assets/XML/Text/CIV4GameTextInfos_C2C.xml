@@ -356,7 +356,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_TECH_YIELD</Tag>
 		<English>%s1: %D2%F3 (with [LINK=%s4_BonusType]%s5_Bonus[\LINK])</English>
-		<French>%s1: %D2%F3 (avec [LINK=%s4_BonusType]%s5_Bonus[\LINK])</French>
+		<French>%s1 : %D2%F3 (avec [LINK=%s4_BonusType]%s5_Bonus[\LINK])</French>
 		<German>%s1: %D2%F3 (mit [LINK=%s4_BonusType]%s5_Bonus[\LINK])</German>
 		<Italian>%s1: %D2%F3 (con [LINK=%s4_BonusType]%s5_Bonus[\LINK])</Italian>
 		<Spanish>%s1: %D2 %F3 (con [LINK=%s4_BonusType]%s5_Bonus[\LINK])</Spanish>
