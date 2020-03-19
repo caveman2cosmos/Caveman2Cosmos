@@ -40,11 +40,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_BUILD_DOMESTICATED_HERD</Tag>
 		<English>Settle domesticated animal as resource on the map</English>
+		<French>Installer l'animal domestique comme ressource sur la carte</French>
 		<Polish>Osadź udomowione zwierzę na mapie jako surowiec.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_BUILD_DOMESTICATED_HERD_HELP</Tag>
 		<English>The domesticated subdued animal may become a resourse. With the right technology it may become a pasture as well.</English>
+		<French>L'animal dompté domestiqué peut devenir une ressource. Avec la bonne technologie, cela peut aussi devenir un pâturage.</French>
 		<Polish>Udomowione zwierzęta mogą zostać osadzone na mapie jako surowce. Z odpowiednią technologią mogą zostać w tym miejscu stworzone pastwiska.</Polish>
 	</TEXT>
 	<TEXT>
@@ -162,21 +164,25 @@
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_BUILD_DOMESTICATED_HERD</Tag>
 		<English>Attempt to convert the subdued animal into a herd resource.</English>
+		<French>Essayez de convertir l'animal apprivoisé en ressource de troupeau.</French>
 		<Polish>Spróbuj zmienić oswojone zwierzę w stado (surowiec na mapie).</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_BUILD_DOMESTICATED_HERD_MESSAGE</Tag>
 		<English>A herd now roams this plot.</English>
+		<French>Un troupeau parcourt maintenant cette parcelle.</French>
 		<Polish>Od tego momentu stada zwierząt przemierzają ten teren.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_BUILD_DOMESTICATED_PASTURE</Tag>
 		<English>Attempt to settle the domesticated subdued animal into a herd resource and build a pasture.</English>
+		<French>Tenter d'installer l'animal apprivoisé et domestiqué dans une ressource de troupeau et de construire un pâturage.</French>
 		<Polish>Spróbuj zmienić oswojone zwierzę w stado (surowiec na mapie) i zbuduj pastwisko.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_BUILD_DOMESTICATED_PASTURE_MESSAGE</Tag>
 		<English>Domesticated animals are now bred on this plot.</English>
+		<French>Les animaux domestiques sont maintenant élevés sur cette case.</French>
 		<Polish>Od tego momentu stada zwierząt zasiedlają ten teren.</Polish>
 	</TEXT>
 	<TEXT>

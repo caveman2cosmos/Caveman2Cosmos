@@ -7179,6 +7179,7 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_ROMSETTINGS__MULTIPLERELIGIONSPREAD_HOVER</Tag>
 		<English>Allows religions to spread naturally, even when cities already have one religion in them.</English>
+		<French>Permet aux religions de se propager naturellement, même lorsque les villes ont déjà une religion.</French>
 		<German>Dadurch verbreiten sich Religionen natürlich weiter, selbst wenn in Städten schon eine andere Religion vorherrscht.</German>
 		<Italian>Permette alle religioni di diffondersi naturalmente, anche se nelle città è già presente una religione.</Italian>
 		<Spanish>Permite que las religiones se expandan de forma natural, aunque en las ciudades ya haya alguna otra religión.</Spanish>

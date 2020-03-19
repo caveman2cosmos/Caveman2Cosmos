@@ -110,7 +110,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SLAVE_COMPOUND_HELP</Tag>
 		<English>[ICON_BULLET]The different Slave Compounds provide access to specialized settled slaves.</English>
-		<French>Les différents Camps d'esclaves procurent l'accès à des esclaves spécialistes dans les villes.</French>
+		<French>[ICON_BULLET]Les différents Camps d'esclaves procurent l'accès à des esclaves spécialistes dans les villes.</French>
 		<Italian>Le diverse baracche degli schiavi forniscono l'accesso a diversi schiavi specializzati.</Italian>
 		<Polish>Różne rodzaje Baraków Niewolników dostarczają róznych korzyści.</Polish>
 	</TEXT>
@@ -175,7 +175,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SLAVE_MARKET_HELP</Tag>
 		<English>[ICON_BULLET]Slave Market increases the outcomes from using Captives as Slaves eg increases amount of gold you get from selling a captive into slavery.</English>
-		<French>Le marché d'esclaves augmente les bénéfices de l'utilisation de prisonnier en tant qu'esclaves, ainsi que l'or que vous pouvez obtenir de la vente d'esclaves.</French>
+		<French>[ICON_BULLET]Le marché d'esclaves augmente les bénéfices de l'utilisation de prisonnier en tant qu'esclaves, ainsi que l'or que vous pouvez obtenir de la vente d'esclaves.</French>
 		<Italian>Il mercato degli schiavi migliora i risultati della vendita di prigionieri come schiavi, incrementando la quantità di oro generata da ogni vendita.</Italian>
 		<Polish>Targ Niewolników zwiększa wpływy z używania jeńców jako niewolników.</Polish>
 	</TEXT>
@@ -197,7 +197,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WV_SLAVERY_HELP</Tag>
 		<English>[ICON_BULLET]Allows you to sell captives into slavery.</English>
-		<French>vous permet de vendre les prisionniers en tant qu'esclaves.</French>
+		<French>[ICON_BULLET]vous permet de vendre les prisionniers en tant qu'esclaves.</French>
 		<Italian>Ti permette di vendere come schiavi i tuoi prigionieri.</Italian>
 		<Polish>Pozwala na sprzedaż jeńców w niewolę.</Polish>
 	</TEXT>
@@ -280,10 +280,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_JOIN_CITY_AS_SLAVE_SANITATION</Tag>
 		<English>Join city as a sanitation slave.</English>
+		<French>Rejoindre la ville en tant que nettoyeur.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_JOIN_CITY_AS_SLAVE_CRIME_PREVENTION</Tag>
 		<English>Join city as a crime prevention slave.</English>
+		<French>Rejoindre la ville en tant que force de l'ordre.</French>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_REMOVE_WV_SLAVERY</Tag>
@@ -456,10 +459,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_JOIN_AS_SLAVE_SANITATION</Tag>
 		<English>Set city slave to clean cities.</English>
+		<French>Placer un esclave pour nettoyer les villes.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_JOIN_AS_SLAVE_SANITATION_MESSAGE</Tag>
 		<English>Your captive has become a Slave Specialist (Sanitation).</English>
+		<French>Votre prisonnier est devenu un esclave chargé du nettoyage.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_REMOVE_WV_SLAVERY</Tag>
