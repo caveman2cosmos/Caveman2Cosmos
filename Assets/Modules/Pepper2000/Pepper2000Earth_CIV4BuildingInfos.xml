@@ -25813,6 +25813,12 @@
 			<Bonus>BONUS_HUMAN_MOD_METAPHYSICAL</Bonus>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<iGlobalPopulationChange>-30</iGlobalPopulationChange>
+			<VictoryThresholds>
+				<VictoryThreshold>
+					<VictoryType>VICTORY_SCIENTIFIC</VictoryType>
+					<iThreshold>1</iThreshold>
+				</VictoryThreshold>
+			</VictoryThresholds>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MONOLITH</Type>

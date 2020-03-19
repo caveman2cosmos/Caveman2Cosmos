@@ -3468,12 +3468,6 @@ bool CvXMLLoadUtility::SetAndLoadVar(int** ppiVar, int iDefault)
 //------------------------------------------------------------------------------------------------------
 void CvXMLLoadUtility::SetVariableListTagPair(int **ppiList, const wchar_t* szRootTagName, int iInfoBaseLength, int iDefaultListVal)
 {
-	int i;
-	int iIndexVal;
-	int iNumChildren;
-	TCHAR szTextVal[256];
-	int* piList;
-
 	if (0 > iInfoBaseLength)
 	{
 		char	szMessage[1024];
@@ -3482,48 +3476,43 @@ void CvXMLLoadUtility::SetVariableListTagPair(int **ppiList, const wchar_t* szRo
 		xercesc::XMLString::release(&tmp);
 		gDLL->MessageBox(szMessage, "XML Error");
 	}
-
 	if (TryMoveToXmlFirstChild(szRootTagName))
 	{
-			iNumChildren = GetXmlChildrenNumber();
-			if (0 < iNumChildren)
+		int iNumChildren = GetXmlChildrenNumber();
+		if (0 < iNumChildren)
+		{
+			InitList(ppiList, iInfoBaseLength, iDefaultListVal);
+			if (iNumChildren > iInfoBaseLength)
 			{
-				InitList(ppiList, iInfoBaseLength, iDefaultListVal);
-				piList = *ppiList;
-				if(!(iNumChildren <= iInfoBaseLength))
-				{
-					char	szMessage[1024];
-					char* tmp = xercesc::XMLString::transcode(szRootTagName);
-					sprintf( szMessage, "There are more siblings than memory allocated for them in CvXMLLoadUtility::SetVariableListTagPair (tag: %s)\n Current XML file is: %s", tmp, GC.getCurrentXMLFile().GetCString());
-					xercesc::XMLString::release(&tmp);
-					gDLL->MessageBox(szMessage, "XML Error");
-				}
-				if (TryMoveToXmlFirstChild())
-				{
-					for (i=0;i<iNumChildren;i++)
-					{
-						if (GetChildXmlVal(szTextVal))
-						{
-							iIndexVal = GetInfoClass(szTextVal);
-
-							if (iIndexVal != -1)
-							{
-								GetNextXmlVal(&piList[iIndexVal]);
-							}
-
-							MoveToXmlParent();
-						}
-
-						if (!TryMoveToXmlNextSibling())
-						{
-							break;
-						}
-					}
-
-					MoveToXmlParent();
-				}
+				char szMessage[1024];
+				char* tmp = xercesc::XMLString::transcode(szRootTagName);
+				sprintf( szMessage, "There are more siblings than memory allocated for them in CvXMLLoadUtility::SetVariableListTagPair (tag: %s)\n Current XML file is: %s", tmp, GC.getCurrentXMLFile().GetCString());
+				xercesc::XMLString::release(&tmp);
+				gDLL->MessageBox(szMessage, "XML Error");
 			}
-
+			if (TryMoveToXmlFirstChild())
+			{
+				int* piList = *ppiList;
+				TCHAR szTextVal[256];
+				for (int i = 0; i < iNumChildren; i++)
+				{
+					if (GetChildXmlVal(szTextVal))
+					{
+						int iIndexVal = GetInfoClass(szTextVal);
+						if (iIndexVal != -1)
+						{
+							GetNextXmlVal(&piList[iIndexVal]);
+						}
+						MoveToXmlParent();
+					}
+					if (!TryMoveToXmlNextSibling())
+					{
+						break;
+					}
+				}
+				MoveToXmlParent();
+			}
+		}
 		MoveToXmlParent();
 	}
 }
