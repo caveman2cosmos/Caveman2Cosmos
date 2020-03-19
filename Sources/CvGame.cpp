@@ -82,17 +82,9 @@ CvGame::~CvGame()
 	SAFE_DELETE_ARRAY(m_aiRankTeam);
 	SAFE_DELETE_ARRAY(m_aiTeamRank);
 	SAFE_DELETE_ARRAY(m_aiTeamScore);
-/************************************************************************************************/
-/* Afforess	                  Start		 05/19/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	SAFE_DELETE_ARRAY(m_abPreviousRequest);
 	SAFE_DELETE_ARRAY(m_aiModderGameOption);
 	SAFE_DELETE_ARRAY(m_aiFlexibleDifficultyTimer);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 }
 
 void CvGame::init(HandicapTypes eHandicap)
@@ -769,11 +761,6 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 	m_iInitLand = 0;
 	m_iInitTech = 0;
 	m_iInitWonders = 0;
-/************************************************************************************************/
-/* Afforess                                     12/7/09                                         */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	m_iCurrentVoteID = 0;
 	m_iWaterAnimalSpawnChance = 0;
 	m_iXResolution = 1024;
@@ -797,9 +784,6 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 	  starshipLaunched[loopI] = false;
 	  diplomaticVictoryAchieved[loopI] = false;
 	}
-/************************************************************************************************/
-/* Afforess	                         END                                                        */
-/************************************************************************************************/
 
 	m_uiInitialTime = 0;
 
@@ -828,16 +812,9 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 		m_aiRankPlayer[iI] = 0;
 		m_aiPlayerRank[iI] = 0;
 		m_aiPlayerScore[iI] = 0;
-/************************************************************************************************/
-/* REVOLUTION_MOD                                                                lemmy101       */
-/*                                                                               jdog5000       */
-/*                                                                                              */
-/************************************************************************************************/
+
 		m_iAIAutoPlay[iI] = 0;
 		m_iForcedAIAutoPlay[iI] = 0;
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
 	}
 
 	for (iI = 0; iI < MAX_TEAMS; iI++)
@@ -846,11 +823,7 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 		m_aiTeamRank[iI] = 0;
 		m_aiTeamScore[iI] = 0;
 	}
-/************************************************************************************************/
-/* Afforess	                  Start		 06/07/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	for (iI = 0; iI < NUM_MODDERGAMEOPTION_TYPES; iI++)
 	{
 		m_aiModderGameOption[iI] = 0;
@@ -860,9 +833,7 @@ void CvGame::reset(HandicapTypes eHandicap, bool bConstructorCall)
 		m_abPreviousRequest[iI] = false;
 		m_aiFlexibleDifficultyTimer[iI] = 0;
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 	if (!bConstructorCall)
 	{
 		FAssertMsg(m_paiImprovementCount==NULL, "about to leak memory, CvGame::m_paiImprovementCount");
@@ -5884,12 +5855,8 @@ void CvGame::makeReligionFounded(ReligionTypes eIndex, PlayerTypes ePlayer)
 		m_paiReligionGameTurnFounded[eIndex] = getGameTurn();
 
 		CvEventReporter::getInstance().religionFounded(eIndex, ePlayer);
-/************************************************************************************************/
-/* Afforess                                     12/7/09                                         */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-		// Sanguo Mod Performance start, added by poyuzhe 07.26.09
+
+		// Sanguo Mod Performance, added by poyuzhe 07.26.09
 		for (int iI = 0; iI < GC.getMAX_PLAYERS(); iI++)
 		{
 			if (GET_PLAYER((PlayerTypes)iI).isAlive() && GET_PLAYER((PlayerTypes)iI).getStateReligion() == eIndex)
@@ -5898,10 +5865,6 @@ void CvGame::makeReligionFounded(ReligionTypes eIndex, PlayerTypes ePlayer)
 				GET_PLAYER((PlayerTypes)iI).AI_invalidateAttitudeCache(ePlayer);
 			}
 		}
-		// Sanguo Mod Performance, end
-/************************************************************************************************/
-/* Afforess	                         END                                                        */
-/************************************************************************************************/
 	}
 }
 
@@ -6306,11 +6269,8 @@ void CvGame::setHeadquarters(CorporationTypes eIndex, CvCity* pNewValue, bool bA
 
 		CvCity* pHeadquarters = getHeadquarters(eIndex);
 
-/************************************************************************************************/
-/* Afforess	                  Start		 06/17/10                                               */
-/*                                                                                              */
-/* Set and Replace Corporation HQ's                                                             */
-/************************************************************************************************/
+// Afforess 06/17/10
+		// Set and Replace Corporation HQ's
 		if (pOldValue != NULL)
 		{
 			for (int i = 0; i < GC.getNumBuildingInfos(); i++)
@@ -6333,9 +6293,7 @@ void CvGame::setHeadquarters(CorporationTypes eIndex, CvCity* pNewValue, bool bA
 				}
 			}
 		}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+// ! Afforess
 
 		if (NULL != pHeadquarters)
 		{
@@ -6684,11 +6642,6 @@ void CvGame::doTurn()
 			}
 		}
 	}
-/************************************************************************************************/
-/* Afforess	                  Start		 01/12/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	doIncreasingDifficulty();
 	doFlexibleDifficulty();
 	doFinalFive();
@@ -6698,9 +6651,6 @@ void CvGame::doTurn()
 		setPreviousRequest((PlayerTypes)iI, false);
 	}
 	doFoundCorporations();
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	testVictory();
 
@@ -9378,16 +9328,8 @@ void CvGame::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper,"CvGame",&m_iInitLand);
 	WRAPPER_READ(wrapper,"CvGame",&m_iInitTech);
 	WRAPPER_READ(wrapper,"CvGame",&m_iInitWonders);
-	// < M.A.D. Nukes Start >
 	WRAPPER_READ(wrapper,"CvGame",&m_iLastNukeStrikeX);
 	WRAPPER_READ(wrapper,"CvGame",&m_iLastNukeStrikeY);
-	// < M.A.D. Nukes End   >
-
-/************************************************************************************************/
-/* Afforess                                     12/7/09                                         */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	WRAPPER_READ(wrapper,"CvGame",&m_iCurrentVoteID);
 	WRAPPER_READ(wrapper,"CvGame",&m_iWaterAnimalSpawnChance);
 	WRAPPER_READ(wrapper,"CvGame",&m_iCutLosersCounter);
@@ -9404,9 +9346,7 @@ void CvGame::read(FDataStreamBase* pStream)
 	calculateRiverBuildings();
 	calculateCoastalBuildings();
 	calculateNumWonders();
-/************************************************************************************************/
-/* Afforess	                         END                                                        */
-/************************************************************************************************/
+
 	// m_uiInitialTime not saved
 
 	WRAPPER_READ(wrapper,"CvGame",&m_bScoreDirty);
@@ -11277,11 +11217,6 @@ bool CvGame::foundBarbarianCity()
 }
 
 
-/************************************************************************************************/
-/* RevolutionDCM	                  Start		 05/31/10                        Afforess       */
-/*                                                                                              */
-/* Battle Effects                                                                               */
-/************************************************************************************************/
 void CvGame::drawBattleEffects()
 {
 	if (GC.isDCM_BATTLE_EFFECTS())
@@ -11297,72 +11232,6 @@ void CvGame::drawBattleEffects()
 		}
 	}
 }
-/************************************************************************************************/
-/* RevolutionDCM	             Battle Effects END                                             */
-/************************************************************************************************/
-
-// BUG - MapFinder - start
-//#include "ximage.h"
-
-// from HOF Mod - Dianthus
-bool CvGame::takeJPEGScreenShot(std::string fileName) const
-{
-//RevolutionDCM - start BULL link problems
-	//HWND hwnd = GetDesktopWindow();
-	//RECT r;
-	//GetWindowRect(hwnd,&r);
-
-	//int xScreen,yScreen;	//check if the window is out of the screen or maximixed <Qiang>
-	//int xshift = 0, yshift = 0;
-	//xScreen = GetSystemMetrics(SM_CXSCREEN);
-	//yScreen = GetSystemMetrics(SM_CYSCREEN);
-	//if(r.right > xScreen)
-	//		r.right = xScreen;
-	//if(r.bottom > yScreen)
-	//		r.bottom = yScreen;
-	//if(r.left < 0){
-	//		xshift = -r.left;
-	//		r.left = 0;
-	//}
-	//if(r.top < 0){
-	//		yshift = -r.top;
-	//		r.top = 0;
-	//}
-
-	//int w=r.right-r.left;
-	//int h=r.bottom-r.top;
-	//if(w <= 0 || h <= 0) return false;
-
-	//// bring the window at the top most level
-	//// TODO ::SetWindowPos(hwnd,HWND_TOPMOST,0,0,0,0,SWP_NOMOVE|SWP_NOSIZE);
-
-	//// prepare the DCs
-	//HDC dstDC = ::GetDC(NULL);
-	//HDC srcDC = ::GetWindowDC(hwnd); //full window (::GetDC(hwnd); = clientarea)
-	//HDC memDC = ::CreateCompatibleDC(dstDC);
-
-	//// copy the screen to the bitmap
-	//HBITMAP bm =::CreateCompatibleBitmap(dstDC, w, h);
-	//HBITMAP oldbm = (HBITMAP)::SelectObject(memDC,bm);
-	//::BitBlt(memDC, 0, 0, w, h, srcDC, xshift, yshift, SRCCOPY);
-
-	//// restore the position
-	//// TODO ::SetWindowPos(hwnd,HWND_NOTOPMOST,0,0,0,0,SWP_NOMOVE|SWP_NOSIZE);
-	//// TODO ::SetWindowPos(m_hWnd,HWND_TOP,0,0,0,0,SWP_NOMOVE|SWP_NOSIZE);
-
-	//CxImage image;
-	//image.CreateFromHBITMAP(bm);
-	//bool result = image.Save((const TCHAR*)fileName.c_str(),CXIMAGE_FORMAT_JPG);
-
-	//// free objects
-	//DeleteObject(SelectObject(memDC,oldbm));
-	//DeleteObject(memDC);
-
-	//return result;
-	return false;
-//RevolutionDCM - end BULL link problems
-}
-// BUG - MapFinder - end
 
 int CvGame::getWaterAnimalSpawnChance() const
 {
