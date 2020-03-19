@@ -628,7 +628,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_MORE_RESOURCES_HELP</Tag>
-		<English>Maps that use default resource spawn settings will spawn more resources</English>
+		<English>Maps that use default resource spawn settings will spawn more resources
+
+Has no effect on these mapscripts:
+[SPACE][SPACE] * PerfectWorld, PerfectMongoose and World
+
+Only affects SmartMap when "Bonus Placement = Standard"</English>
+
 		<French>Une carte avec les paramètres par défaut comprendra des ressources supplémentaires</French>
 		<German>Auf Karten mit Standardeinstellungen für Ressourcen werden mehr Ressourcen verteilt.</German>
 		<Polish>Mapy używające standardowych ustawień wygenerują więcej zasobów.</Polish>
@@ -642,7 +648,14 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_MORE_RIVERS_HELP</Tag>
-		<English>Maps that use default river settings will spawn more rivers</English>
+		<English>Maps that use default river settings will spawn more rivers.
+
+Has no effect on these mapscripts:
+[SPACE][SPACE] * PerfectWorld, PerfectMongoose and World
+
+Only affects SmartMap if terrain options is:
+[SPACE][SPACE] * Standard, Great Plains or Oasis</English>
+
 		<French>Une carte avec les paramètres par défaut, fera apparaître des fleuves et rivières supplémentaires</French>
 		<German>Auf Karten mit Standardeinstellungen für Flüsse werden mehr Flüsse verteilt.</German>
 		<Polish>Mapy używające standardowych ustawień wygenerują więcej rzek.</Polish>
@@ -1148,7 +1161,7 @@
 		<French>Les Bâtiments religieux d'une religion qui n'est pas la Religion d'Etat sont inactifs par défaut. Mais cet effet peut être annulé par des décisions stratégiques. ATTENTION: Option en Beta Test et nécessitant un développement futur.</French>
 		<German>Bei Staatsreligionen werden die Gebäude anderer Religionen standardmäßig deaktiviert, aber dieser Effekt kann durch strategische Entscheidungen umgangen werden. ACHTUNG! Diese Option befindet sich in der Betaphase.</German>
 		<Italian>Gli edifici religiosi delle religioni non di stato diventano inattivi, ma questo effetto può essere evitato per mezzo di decisioni strategiche. ATTENZIONE: quest'opzione è attualmente in fase di Beta.</Italian>
-		<Polish>Budynki Religijne religii nienarodowej są w większości wyłączone, ale skutków tego można uniknąć poprzez strategiczne decyzje. [COLOR_WARNING_TEXT]Opcja w fazie Beta.[COLOR_REVERT]</Polish>
+		<Polish>Budynki Religijne religii nienarodowej są w większości wyłączone, ale skutków tego można uniknąć poprzez strategiczne decyzje. Opcja w fazie Beta.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_REVOLUTION</Tag>
