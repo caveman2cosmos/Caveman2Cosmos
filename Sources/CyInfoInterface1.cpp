@@ -711,6 +711,7 @@ void CyInfoPythonInterface1()
 		.def("getMaxPlayerInstances", &CvBuildingInfo::getMaxPlayerInstances, "int ()")
 		.def("getExtraPlayerInstances", &CvBuildingInfo::getExtraPlayerInstances, "bool ()")
 		.def("isNoLimit", &CvBuildingInfo::isNoLimit, "bool ()")
+		.def("getVictoryThreshold", &CvBuildingInfo::getVictoryThreshold, "int (int i)")
 
 		.def("getVictoryPrereq", &CvBuildingInfo::getVictoryPrereq, "int ()")
 		.def("getFreeStartEra", &CvBuildingInfo::getFreeStartEra, "int ()")
