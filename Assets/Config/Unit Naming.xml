@@ -697,7 +697,7 @@
 			<option id="Combat_CULTURE_VIETNAMESE" key="CombatCULTURE_VIETNAMESE" type="string" default="DEFAULT"/>
 			<option id="Combat_CULTURE_VIKING" key="CombatCULTURE_VIKING" type="string" default="DEFAULT"/>
 			<option id="Combat_CULTURE_WELSH" key="CombatCULTURE_WELSH" type="string" default="DEFAULT"/>
-			<option id="Combat_CULTURE_XIONGU" key="CombatCULTURE_XIONGU" type="string" default="DEFAULT"/>
+			<option id="Combat_CULTURE_XIONGNU" key="CombatCULTURE_XIONGNU" type="string" default="DEFAULT"/>
 			<option id="Combat_CULTURE_YAMATO" key="CombatCULTURE_YAMATO" type="string" default="DEFAULT"/>
 			<option id="Combat_CULTURE_ZAPOTEC" key="CombatCULTURE_ZAPOTEC" type="string" default="DEFAULT"/>
 			<option id="Combat_CULTURE_ZULU" key="CombatCULTURE_ZULU" type="string" default="DEFAULT"/>

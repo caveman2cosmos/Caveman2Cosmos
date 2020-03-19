@@ -1,9 +1,4 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- -->
-	<!-- Building art path information -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Schema\Caveman2Cosmos.xsd">
 	<BuildingArtInfos>
 		<BuildingArtInfo>
@@ -25,9 +20,7 @@
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/gator.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_gator.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_gator.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GATOR_ASIAN_STORY</Type>
@@ -38,9 +31,7 @@ Button>Art/Interface/Buttons/Buildings/myth_gator.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/gator.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_gator.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_gator.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GATOR_ASIAN_STORIES</Type>
@@ -51,9 +42,7 @@ Button>Art/Interface/Buttons/Buildings/story_gator.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/gator.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_gator.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_gator.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CROCODILE_MYTH</Type>
@@ -74,9 +63,7 @@ Button>Art/Interface/Buttons/Buildings/stories_gator.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Crocodile.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Crocodile.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Crocodile.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CROCODILE_STORIES</Type>
@@ -87,9 +74,7 @@ Button>Art/Interface/Buttons/Buildings/story_Crocodile.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Crocodile.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Crocodile.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Crocodile.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GATOR_MYTH</Type>
@@ -100,9 +85,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Crocodile.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/gator.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_gator.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_gator.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GATOR_STORY</Type>
@@ -113,9 +96,7 @@ Button>Art/Interface/Buttons/Buildings/myth_gator.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/gator.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_gator.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_gator.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GATOR_STORIES</Type>
@@ -126,9 +107,7 @@ Button>Art/Interface/Buttons/Buildings/story_gator.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/gator.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_gator.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_gator.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GHARIAL_MYTH</Type>
@@ -139,9 +118,7 @@ Button>Art/Interface/Buttons/Buildings/stories_gator.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/GHARIAL.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_GHARIAL.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_GHARIAL.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GHARIAL_STORY</Type>
@@ -152,9 +129,7 @@ Button>Art/Interface/Buttons/Buildings/myth_GHARIAL.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/GHARIAL.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_GHARIAL.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_GHARIAL.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GHARIAL_STORIES</Type>
@@ -165,9 +140,7 @@ Button>Art/Interface/Buttons/Buildings/story_GHARIAL.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/GHARIAL.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_GHARIAL.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_GHARIAL.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_NILECROC_MYTH</Type>
@@ -178,9 +151,7 @@ Button>Art/Interface/Buttons/Buildings/stories_GHARIAL.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/NileCroc.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_NileCroc.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_NileCroc.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_NILECROC_STORY</Type>
@@ -191,9 +162,7 @@ Button>Art/Interface/Buttons/Buildings/myth_NileCroc.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/NileCroc.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_NileCroc.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_NileCroc.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_NILECROC_STORIES</Type>
@@ -204,9 +173,7 @@ Button>Art/Interface/Buttons/Buildings/story_NileCroc.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/NileCroc.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_NileCroc.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_NileCroc.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_RIVER_CROC_MYTH</Type>
@@ -227,9 +194,7 @@ Button>Art/Interface/Buttons/Buildings/stories_NileCroc.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/crocodile.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_crocodile.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_crocodile.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_RIVER_CROC_STORIES</Type>
@@ -240,9 +205,7 @@ Button>Art/Interface/Buttons/Buildings/story_crocodile.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/crocodile.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_crocodile.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_crocodile.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SALTWATER_CROC_MYTH</Type>
@@ -263,9 +226,7 @@ Button>Art/Interface/Buttons/Buildings/stories_crocodile.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/crocodile.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_crocodile.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_crocodile.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SALTWATER_CROC_STORIES</Type>
@@ -276,9 +237,7 @@ Button>Art/Interface/Buttons/Buildings/story_crocodile.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/crocodile.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_crocodile.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_crocodile.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CAIMAN_MYTH</Type>
@@ -289,9 +248,7 @@ Button>Art/Interface/Buttons/Buildings/stories_crocodile.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Caiman.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_Caiman.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Caiman.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CAIMAN_STORY</Type>
@@ -302,9 +259,7 @@ Button>Art/Interface/Buttons/Buildings/myth_Caiman.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Caiman.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Caiman.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Caiman.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CAIMAN_STORIES</Type>
@@ -315,9 +270,7 @@ Button>Art/Interface/Buttons/Buildings/story_Caiman.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Caiman.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Caiman.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Caiman.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BEAR_MYTH</Type>
@@ -358,9 +311,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Caiman.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Asianbear.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_asianbear.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_asianbear.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ASIANBEAR_STORY</Type>
@@ -391,9 +342,7 @@ Button>Art/Interface/Buttons/Buildings/story_asianbear.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Bear.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_BrownBear.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_BrownBear.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BROWN_BEAR_STORY</Type>
@@ -424,9 +373,7 @@ Button>Art/Interface/Buttons/Buildings/myth_BrownBear.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Blackbear.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_blackBear.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_blackBear.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BLACK_BEAR_STORY</Type>
@@ -457,9 +404,7 @@ Button>Art/Interface/Buttons/Buildings/myth_blackBear.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Grizzly.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_grizzly.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_grizzly.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GRIZZLY_STORY</Type>
@@ -560,9 +505,7 @@ Button>Art/Interface/Buttons/Buildings/myth_grizzly.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Redpanda.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_redpanda.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_redpanda.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_REDPANDA_STORIES</Type>
@@ -583,9 +526,7 @@ Button>Art/Interface/Buttons/Buildings/myth_redpanda.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Slothbear.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_slothbear.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_slothbear.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SLOTH_BEAR_STORY</Type>
@@ -596,9 +537,7 @@ Button>Art/Interface/Buttons/Buildings/myth_slothbear.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Slothbear.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_slothbear.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_slothbear.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SLOTH_BEAR_STORIES</Type>
@@ -609,9 +548,7 @@ Button>Art/Interface/Buttons/Buildings/story_slothbear.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Slothbear.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_slothbear.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_slothbear.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SPECTACLED_BEAR_MYTH</Type>
@@ -622,9 +559,7 @@ Button>Art/Interface/Buttons/Buildings/stories_slothbear.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Spectacledbear.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_spectacledbear.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_spectacledbear.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SPECTACLED_BEAR_STORY</Type>
@@ -665,9 +600,7 @@ Button>Art/Interface/Buttons/Buildings/myth_spectacledbear.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Sunbear.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_sunbear.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_sunbear.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SUN_BEAR_STORIES</Type>
@@ -718,9 +651,7 @@ Button>Art/Interface/Buttons/Buildings/myth_sunbear.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/CaveBear.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/remains_cavebear.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/remains_cavebear.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_TARANTULA_MYTH</Type>
@@ -731,9 +662,7 @@ Button>Art/Interface/Buttons/Buildings/remains_cavebear.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Tarantula.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_Tarantula.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Tarantula.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_TARANTULA_STORY</Type>
@@ -744,9 +673,7 @@ Button>Art/Interface/Buttons/Buildings/myth_Tarantula.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Tarantula.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Tarantula.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Tarantula.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_TARANTULA_STORIES</Type>
@@ -757,9 +684,7 @@ Button>Art/Interface/Buttons/Buildings/story_Tarantula.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Tarantula.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Tarantula.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Tarantula.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_DART_FROG_MYTH</Type>
@@ -770,9 +695,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Tarantula.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/DartFrog.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_DartFrog.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_DartFrog.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_DART_FROG_STORY</Type>
@@ -813,9 +736,7 @@ Button>Art/Interface/Buttons/Buildings/myth_DartFrog.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Arcticfox2.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Arcticfox2.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Arcticfox2.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ARCTICFOX_STORIES</Type>
@@ -826,9 +747,7 @@ Button>Art/Interface/Buttons/Buildings/story_Arcticfox2.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Arcticfox2.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Arcticfox2.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Arcticfox2.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GREY_WOLF_MYTH</Type>
@@ -849,9 +768,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Arcticfox2.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Wolf.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Wolf.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Wolf.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GREY_WOLF_STORIES</Type>
@@ -862,9 +779,7 @@ Button>Art/Interface/Buttons/Buildings/story_Wolf.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Wolf.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Wolf.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Wolf.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PALEOLITHIC_DOG_MYTH</Type>
@@ -925,9 +840,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Wolf.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Redfox.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Redfox.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Redfox.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_REDFOX_STORIES</Type>
@@ -938,9 +851,7 @@ Button>Art/Interface/Buttons/Buildings/story_Redfox.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Redfox.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Redfox.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Redfox.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_DHOLE_MYTH</Type>
@@ -951,9 +862,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Redfox.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Dhole.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_Dhole.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Dhole.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_DHOLE_STORY</Type>
@@ -964,9 +873,7 @@ Button>Art/Interface/Buttons/Buildings/myth_Dhole.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Dhole.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Dhole.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Dhole.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_DHOLE_STORIES</Type>
@@ -977,9 +884,7 @@ Button>Art/Interface/Buttons/Buildings/story_Dhole.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Dhole.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Dhole.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Dhole.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_DINGO_MYTH</Type>
@@ -990,9 +895,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Dhole.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Dingo.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_Dingo.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Dingo.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_DINGO_STORY</Type>
@@ -1003,9 +906,7 @@ Button>Art/Interface/Buttons/Buildings/myth_Dingo.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Dingo.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Dingo.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Dingo.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_DINGO_STORIES</Type>
@@ -1016,9 +917,7 @@ Button>Art/Interface/Buttons/Buildings/story_Dingo.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Dingo.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Dingo.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Dingo.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_EWOLF_MYTH</Type>
@@ -1039,9 +938,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Dingo.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/ewolf.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_ewolf.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_ewolf.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_EWOLF_STORIES</Type>
@@ -1052,9 +949,7 @@ Button>Art/Interface/Buttons/Buildings/story_ewolf.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/ewolf.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_ewolf.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_ewolf.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_FENNECFOX_MYTH</Type>
@@ -1065,9 +960,7 @@ Button>Art/Interface/Buttons/Buildings/stories_ewolf.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Fennecfox.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_Fennecfox.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Fennecfox.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_FENNECFOX_STORY</Type>
@@ -1078,9 +971,7 @@ Button>Art/Interface/Buttons/Buildings/myth_Fennecfox.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Fennecfox.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Fennecfox.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Fennecfox.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_FENNECFOX_STORIES</Type>
@@ -1091,9 +982,7 @@ Button>Art/Interface/Buttons/Buildings/story_Fennecfox.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Fennecfox.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Fennecfox.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Fennecfox.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MANEDWOLF_MYTH</Type>
@@ -1104,9 +993,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Fennecfox.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Manedwolf.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_Manedwolf.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Manedwolf.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MANEDWOLF_STORY</Type>
@@ -1117,9 +1004,7 @@ Button>Art/Interface/Buttons/Buildings/myth_Manedwolf.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Manedwolf.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Manedwolf.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Manedwolf.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MANEDWOLF_STORIES</Type>
@@ -1130,9 +1015,7 @@ Button>Art/Interface/Buttons/Buildings/story_Manedwolf.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Manedwolf.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Manedwolf.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Manedwolf.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_THYLACINE_MYTH</Type>
@@ -1153,9 +1036,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Manedwolf.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/thylacine.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_thylacine.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_thylacine.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_THYLACINE_STORIES</Type>
@@ -1166,9 +1047,7 @@ Button>Art/Interface/Buttons/Buildings/story_thylacine.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/thylacine.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_thylacine.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_thylacine.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GIRAFFE_MYTH</Type>
@@ -1209,9 +1088,7 @@ Button>Art/Interface/Buttons/Buildings/stories_thylacine.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Platypus.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/totem_Monotremes.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/totem_Monotremes.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MONOTREMES_STORY</Type>
@@ -1222,9 +1099,7 @@ Button>Art/Interface/Buttons/Buildings/totem_Monotremes.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Platypus.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Monotremes.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Monotremes.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MONOTREMES_STORIES</Type>
@@ -1235,9 +1110,7 @@ Button>Art/Interface/Buttons/Buildings/story_Monotremes.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Platypus.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Monotremes.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Monotremes.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PLATYPUS_MYTH</Type>
@@ -1248,9 +1121,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Monotremes.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Platypus.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_Platypus.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Platypus.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PLATYPUS_STORY</Type>
@@ -1261,9 +1132,7 @@ Button>Art/Interface/Buttons/Buildings/myth_Platypus.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Platypus.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Platypus.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Platypus.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PLATYPUS_STORIES</Type>
@@ -1274,9 +1143,7 @@ Button>Art/Interface/Buttons/Buildings/story_Platypus.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Platypus.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Platypus.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Platypus.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ELASMOTHERIUM_MYTH</Type>
@@ -1287,9 +1154,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Platypus.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Elasmotherium.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_Elasmotherium.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Elasmotherium.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ELASMOTHERIUM_STORY</Type>
@@ -1300,9 +1165,7 @@ Button>Art/Interface/Buttons/Buildings/myth_Elasmotherium.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Elasmotherium.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Elasmotherium.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Elasmotherium.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ELASMOTHERIUM_STORIES</Type>
@@ -1313,9 +1176,7 @@ Button>Art/Interface/Buttons/Buildings/story_Elasmotherium.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Elasmotherium.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Elasmotherium.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Elasmotherium.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ELASMOTHERIUM_REMAINS</Type>
@@ -1326,9 +1187,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Elasmotherium.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Elasmotherium.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/remains_Elasmotherium.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/remains_Elasmotherium.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_RHINO_TAXONOMY_MYTH</Type>
@@ -1349,9 +1208,7 @@ Button>Art/Interface/Buttons/Buildings/remains_Elasmotherium.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/button_rhino.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_Blackrhino.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Blackrhino.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BLACK_RHINO_STORY</Type>
@@ -1362,9 +1219,7 @@ Button>Art/Interface/Buttons/Buildings/myth_Blackrhino.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/button_rhino.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Blackrhino.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Blackrhino.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BLACK_RHINO_STORIES</Type>
@@ -1375,9 +1230,7 @@ Button>Art/Interface/Buttons/Buildings/story_Blackrhino.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/button_rhino.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Blackrhino.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Blackrhino.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_INDIAN_RHINO_MYTH</Type>
@@ -1388,9 +1241,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Blackrhino.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Indianrhino.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_Indianrhino.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Indianrhino.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_INDIAN_RHINO_STORY</Type>
@@ -1401,9 +1252,7 @@ Button>Art/Interface/Buttons/Buildings/myth_Indianrhino.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Indianrhino.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Indianrhino.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Indianrhino.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_INDIAN_RHINO_STORIES</Type>
@@ -1414,9 +1263,7 @@ Button>Art/Interface/Buttons/Buildings/story_Indianrhino.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Indianrhino.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Indianrhino.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Indianrhino.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_JAVA_RHINO_MYTH</Type>
@@ -1427,9 +1274,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Indianrhino.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/javarhino.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_javarhino.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_javarhino.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_JAVA_RHINO_STORY</Type>
@@ -1440,9 +1285,7 @@ Button>Art/Interface/Buttons/Buildings/myth_javarhino.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/javarhino.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_javarhino.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_javarhino.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_JAVA_RHINO_STORIES</Type>
@@ -1453,9 +1296,7 @@ Button>Art/Interface/Buttons/Buildings/story_javarhino.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/javarhino.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_javarhino.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_javarhino.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_WHITE_RHINO_MYTH</Type>
@@ -1466,9 +1307,7 @@ Button>Art/Interface/Buttons/Buildings/stories_javarhino.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Whiterhino.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_Whiterhino.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Whiterhino.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_WHITE_RHINO_STORY</Type>
@@ -1479,9 +1318,7 @@ Button>Art/Interface/Buttons/Buildings/myth_Whiterhino.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Whiterhino.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Whiterhino.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Whiterhino.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_WHITE_RHINO_STORIES</Type>
@@ -1492,9 +1329,7 @@ Button>Art/Interface/Buttons/Buildings/story_Whiterhino.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Whiterhino.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Whiterhino.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Whiterhino.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_TAPIR_MYTH</Type>
@@ -1655,9 +1490,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Whiterhino.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/elephant.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_asianelephant.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_asianelephant.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ASIANELEPHANT_STORY</Type>
@@ -1668,9 +1501,7 @@ Button>Art/Interface/Buttons/Buildings/myth_asianelephant.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/elephant.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_asianelephant.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_asianelephant.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ASIANELEPHANT_STORIES</Type>
@@ -1681,9 +1512,7 @@ Button>Art/Interface/Buttons/Buildings/story_asianelephant.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/elephant.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_asianelephant.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_asianelephant.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_AFRICANELEPHANT_MYTH</Type>
@@ -1694,9 +1523,7 @@ Button>Art/Interface/Buttons/Buildings/stories_asianelephant.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Africanelephant.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_Africanelephant.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Africanelephant.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_AFRICANELEPHANT_STORY</Type>
@@ -1707,9 +1534,7 @@ Button>Art/Interface/Buttons/Buildings/myth_Africanelephant.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Africanelephant.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Africanelephant.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Africanelephant.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_AFRICANELEPHANT_STORIES</Type>
@@ -1720,9 +1545,7 @@ Button>Art/Interface/Buttons/Buildings/story_Africanelephant.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Africanelephant.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Africanelephant.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Africanelephant.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_AFRICANGREY_MYTH</Type>
@@ -1733,9 +1556,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Africanelephant.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/africangrey.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_africangrey.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_africangrey.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_AFRICANGREY_STORY</Type>
@@ -1746,9 +1567,7 @@ Button>Art/Interface/Buttons/Buildings/myth_africangrey.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/africangrey.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_africangrey.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_africangrey.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_AFRICANGREY_STORIES</Type>
@@ -1759,9 +1578,7 @@ Button>Art/Interface/Buttons/Buildings/story_africangrey.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/africangrey.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_africangrey.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_africangrey.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ARMADILLO_MYTH</Type>
@@ -1772,9 +1589,7 @@ Button>Art/Interface/Buttons/Buildings/stories_africangrey.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Armadillo.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_Armadillo.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Armadillo.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ARMADILLO_STORY</Type>
@@ -1785,9 +1600,7 @@ Button>Art/Interface/Buttons/Buildings/myth_Armadillo.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Armadillo.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Armadillo.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Armadillo.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ARMADILLO_STORIES</Type>
@@ -1798,9 +1611,7 @@ Button>Art/Interface/Buttons/Buildings/story_Armadillo.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Armadillo.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Armadillo.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Armadillo.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BABIRUSA_MYTH</Type>
@@ -1811,9 +1622,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Armadillo.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Babirusa.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_Babirusa.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Babirusa.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BABIRUSA_STORY</Type>
@@ -1824,9 +1633,7 @@ Button>Art/Interface/Buttons/Buildings/myth_Babirusa.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Babirusa.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Babirusa.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Babirusa.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BABIRUSA_STORIES</Type>
@@ -1837,9 +1644,7 @@ Button>Art/Interface/Buttons/Buildings/story_Babirusa.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Babirusa.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Babirusa.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Babirusa.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CUSCUS_MYTH</Type>
@@ -1850,9 +1655,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Babirusa.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Cuscus.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_Cuscus.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Cuscus.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CUSCUS_STORY</Type>
@@ -1863,9 +1666,7 @@ Button>Art/Interface/Buttons/Buildings/myth_Cuscus.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Cuscus.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Cuscus.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Cuscus.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CUSCUS_STORIES</Type>
@@ -1876,9 +1677,7 @@ Button>Art/Interface/Buttons/Buildings/story_Cuscus.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Cuscus.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Cuscus.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Cuscus.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GLYPTO_MYTH</Type>
@@ -1889,9 +1688,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Cuscus.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Glypto.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_glypto.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_glypto.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GLYPTO_STORY</Type>
@@ -1902,9 +1699,7 @@ Button>Art/Interface/Buttons/Buildings/myth_glypto.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Glypto.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_glypto.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_glypto.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GLYPTO_STORIES</Type>
@@ -1915,9 +1710,7 @@ Button>Art/Interface/Buttons/Buildings/story_glypto.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Glypto.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_glypto.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_glypto.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PALEOLITHIC_GROUNDSLOTH_MYTH</Type>
@@ -1958,9 +1751,7 @@ Button>Art/Interface/Buttons/Buildings/stories_glypto.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Groundsloth.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Groundsloth.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Groundsloth.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_LIZARD_MYTH</Type>
@@ -1971,9 +1762,7 @@ Button>Art/Interface/Buttons/Buildings/story_Groundsloth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Lizard.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_Lizard.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Lizard.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_LIZARD_STORY</Type>
@@ -1984,9 +1773,7 @@ Button>Art/Interface/Buttons/Buildings/myth_Lizard.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Lizard.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Lizard.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Lizard.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_LIZARD_STORIES</Type>
@@ -1997,9 +1784,7 @@ Button>Art/Interface/Buttons/Buildings/story_Lizard.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Lizard.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Lizard.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Lizard.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_NUMBAT_MYTH</Type>
@@ -2010,9 +1795,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Lizard.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Numbat.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_Numbat.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Numbat.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_NUMBAT_STORY</Type>
@@ -2023,9 +1806,7 @@ Button>Art/Interface/Buttons/Buildings/myth_Numbat.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Numbat.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Numbat.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Numbat.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_NUMBAT_STORIES</Type>
@@ -2036,9 +1817,7 @@ Button>Art/Interface/Buttons/Buildings/story_Numbat.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Numbat.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Numbat.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Numbat.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_OPOSSUM_MYTH</Type>
@@ -2049,9 +1828,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Numbat.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Opossum.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_Opossum.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Opossum.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_OPOSSUM_STORY</Type>
@@ -2062,9 +1839,7 @@ Button>Art/Interface/Buttons/Buildings/myth_Opossum.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Opossum.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Opossum.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Opossum.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_OPOSSUM_STORIES</Type>
@@ -2075,9 +1850,7 @@ Button>Art/Interface/Buttons/Buildings/story_Opossum.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Opossum.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Opossum.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Opossum.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PARROT_MYTH</Type>
@@ -2088,9 +1861,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Opossum.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Parrot.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_Parrot.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Parrot.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PARROT_STORY</Type>
@@ -2101,9 +1872,7 @@ Button>Art/Interface/Buttons/Buildings/myth_Parrot.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Parrot.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Parrot.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Parrot.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PARROT_STORIES</Type>
@@ -2114,9 +1883,7 @@ Button>Art/Interface/Buttons/Buildings/story_Parrot.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Parrot.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Parrot.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Parrot.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_POSSUM_MYTH</Type>
@@ -2127,9 +1894,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Parrot.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Possum.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_Possum.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Possum.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_POSSUM_STORY</Type>
@@ -2140,9 +1905,7 @@ Button>Art/Interface/Buttons/Buildings/myth_Possum.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Possum.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Possum.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Possum.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_POSSUM_STORIES</Type>
@@ -2153,9 +1916,7 @@ Button>Art/Interface/Buttons/Buildings/story_Possum.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Possum.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Possum.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Possum.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PYGMYHIPPO_MYTH</Type>
@@ -2196,9 +1957,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Possum.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Raven.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_Raven.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Raven.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_RAVEN_STORY</Type>
@@ -2209,9 +1968,7 @@ Button>Art/Interface/Buttons/Buildings/myth_Raven.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Raven.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Raven.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Raven.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_RAVEN_STORIES</Type>
@@ -2222,9 +1979,7 @@ Button>Art/Interface/Buttons/Buildings/story_Raven.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Raven.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Raven.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Raven.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SECRETARYBIRD_MYTH</Type>
@@ -2235,9 +1990,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Raven.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Secretarybird.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_Secretarybird.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Secretarybird.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SECRETARYBIRD_STORY</Type>
@@ -2248,9 +2001,7 @@ Button>Art/Interface/Buttons/Buildings/myth_Secretarybird.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Secretarybird.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Secretarybird.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Secretarybird.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SECRETARYBIRD_STORIES</Type>
@@ -2261,9 +2012,7 @@ Button>Art/Interface/Buttons/Buildings/story_Secretarybird.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Secretarybird.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Secretarybird.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Secretarybird.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_TREESLOTH_MYTH</Type>
@@ -2274,9 +2023,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Secretarybird.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Treesloth.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_Treesloth.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Treesloth.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_TREESLOTH_STORY</Type>
@@ -2287,9 +2034,7 @@ Button>Art/Interface/Buttons/Buildings/myth_Treesloth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Treesloth.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Treesloth.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Treesloth.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_TREESLOTH_STORIES</Type>
@@ -2300,9 +2045,7 @@ Button>Art/Interface/Buttons/Buildings/story_Treesloth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Treesloth.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Treesloth.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Treesloth.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_WOMBAT_MYTH</Type>
@@ -2313,9 +2056,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Treesloth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Wombat.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_Wombat.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Wombat.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_WOMBAT_STORY</Type>
@@ -2326,9 +2067,7 @@ Button>Art/Interface/Buttons/Buildings/myth_Wombat.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Wombat.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Wombat.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Wombat.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_WOMBAT_STORIES</Type>
@@ -2339,9 +2078,7 @@ Button>Art/Interface/Buttons/Buildings/story_Wombat.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Wombat.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Wombat.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Wombat.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BIRD_MYTH</Type>
@@ -2352,9 +2089,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Wombat.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/buildings/totem_cassowary.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_totem_cassowary.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_totem_cassowary.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BIRD_STORY</Type>
@@ -2365,9 +2100,7 @@ Button>Art/Interface/Buttons/Buildings/myth_totem_cassowary.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/buildings/totem_cassowary.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_totem_cassowary.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_totem_cassowary.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BIRD_STORIES</Type>
@@ -2378,9 +2111,7 @@ Button>Art/Interface/Buttons/Buildings/story_totem_cassowary.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/buildings/totem_cassowary.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_totem_cassowary.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_totem_cassowary.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_OWL_MYTH</Type>
@@ -2391,9 +2122,7 @@ Button>Art/Interface/Buttons/Buildings/stories_totem_cassowary.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/buildings/totem_cassowary.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_totem_cassowary.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_totem_cassowary.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_OWL_STORY</Type>
@@ -2404,9 +2133,7 @@ Button>Art/Interface/Buttons/Buildings/myth_totem_cassowary.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/buildings/totem_cassowary.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_totem_cassowary.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_totem_cassowary.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_OWL_STORIES</Type>
@@ -2417,9 +2144,7 @@ Button>Art/Interface/Buttons/Buildings/story_totem_cassowary.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/buildings/totem_cassowary.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_totem_cassowary.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_totem_cassowary.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_FLIGHTLESS_BIRD_MYTH</Type>
@@ -2430,9 +2155,7 @@ Button>Art/Interface/Buttons/Buildings/stories_totem_cassowary.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/buildings/totem_cassowary.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_totem_cassowary.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_totem_cassowary.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_FLIGHTLESS_BIRD_STORY</Type>
@@ -2463,9 +2186,7 @@ Button>Art/Interface/Buttons/Buildings/myth_totem_cassowary.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/buildings/totem_cassowary.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_totem_cassowary.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_totem_cassowary.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SEA_BIRD_STORY</Type>
@@ -2496,9 +2217,7 @@ Button>Art/Interface/Buttons/Buildings/myth_totem_cassowary.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>art/Craft/Art/bugcatcher.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/totem_Bug.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/totem_Bug.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BUG_STORY</Type>
@@ -2509,9 +2228,7 @@ Button>Art/Interface/Buttons/Buildings/totem_Bug.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>art/Craft/Art/bugcatcher.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Bug.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Bug.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BUG_STORIES</Type>
@@ -2522,9 +2239,7 @@ Button>Art/Interface/Buttons/Buildings/story_Bug.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>art/Craft/Art/bugcatcher.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Bug.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Bug.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_LOCAL_FISH_MYTH</Type>
@@ -2535,9 +2250,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Bug.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/buildings/totem_fish.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_totem_fish.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_totem_fish.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_FISH_MYTH</Type>
@@ -2548,9 +2261,7 @@ Button>Art/Interface/Buttons/Buildings/myth_totem_fish.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/buildings/totem_fish.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_totem_fish.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_totem_fish.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_FISH_STORY</Type>
@@ -2561,9 +2272,7 @@ Button>Art/Interface/Buttons/Buildings/myth_totem_fish.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/buildings/totem_fish.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_totem_fish.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_totem_fish.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_FISH_STORIES</Type>
@@ -2574,9 +2283,7 @@ Button>Art/Interface/Buttons/Buildings/story_totem_fish.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/buildings/totem_fish.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_totem_fish.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_totem_fish.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_REPTILE_MYTH</Type>
@@ -2587,9 +2294,7 @@ Button>Art/Interface/Buttons/Buildings/stories_totem_fish.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/buildings/totem_komododragon.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_totem_komododragon.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_totem_komododragon.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_REPTILE_STORY</Type>
@@ -2600,9 +2305,7 @@ Button>Art/Interface/Buttons/Buildings/myth_totem_komododragon.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/buildings/totem_komododragon.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_totem_komododragon.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_totem_komododragon.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_REPTILE_STORIES</Type>
@@ -2613,9 +2316,7 @@ Button>Art/Interface/Buttons/Buildings/story_totem_komododragon.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/buildings/totem_komododragon.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_totem_komododragon.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_totem_komododragon.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_RODENT_MYTH</Type>
@@ -2626,9 +2327,7 @@ Button>Art/Interface/Buttons/Buildings/stories_totem_komododragon.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/buildings/totem_chipmonk.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_totem_chipmonk.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_totem_chipmonk.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_RODENT_STORY</Type>
@@ -2639,9 +2338,7 @@ Button>Art/Interface/Buttons/Buildings/myth_totem_chipmonk.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/buildings/totem_chipmonk.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_totem_chipmonk.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_totem_chipmonk.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_RODENT_STORIES</Type>
@@ -2652,9 +2349,7 @@ Button>Art/Interface/Buttons/Buildings/story_totem_chipmonk.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/buildings/totem_chipmonk.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_totem_chipmonk.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_totem_chipmonk.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_WOLF_MYTH</Type>
@@ -2675,9 +2370,7 @@ Button>Art/Interface/Buttons/Buildings/stories_totem_chipmonk.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Wolf.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Wolf.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Wolf.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_WOLF_STORIES</Type>
@@ -2688,9 +2381,7 @@ Button>Art/Interface/Buttons/Buildings/story_Wolf.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Wolf.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Wolf.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Wolf.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BOOBY_MYTH</Type>
@@ -2701,9 +2392,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Wolf.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/booby.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_booby.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_booby.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BOOBY_STORY</Type>
@@ -2714,9 +2403,7 @@ Button>Art/Interface/Buttons/Buildings/myth_booby.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/booby.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_booby.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_booby.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BOOBY_STORIES</Type>
@@ -2727,9 +2414,7 @@ Button>Art/Interface/Buttons/Buildings/story_booby.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/booby.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_booby.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_booby.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BARREDOWL_MYTH</Type>
@@ -2740,9 +2425,7 @@ Button>Art/Interface/Buttons/Buildings/stories_booby.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Barredowl.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_Barredowl.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Barredowl.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BARREDOWL_STORY</Type>
@@ -2753,9 +2436,7 @@ Button>Art/Interface/Buttons/Buildings/myth_Barredowl.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Barredowl.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Barredowl.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Barredowl.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BARREDOWL_STORIES</Type>
@@ -2766,9 +2447,7 @@ Button>Art/Interface/Buttons/Buildings/story_Barredowl.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Barredowl.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Barredowl.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Barredowl.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_RAPTOR_MYTH</Type>
@@ -2809,9 +2488,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Barredowl.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Africanpenguin.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_Africanpenguin.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Africanpenguin.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_AFRICAN_PENGUIN_STORY</Type>
@@ -2822,9 +2499,7 @@ Button>Art/Interface/Buttons/Buildings/myth_Africanpenguin.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Africanpenguin.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Africanpenguin.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Africanpenguin.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_AFRICAN_PENGUIN_STORIES</Type>
@@ -2835,9 +2510,7 @@ Button>Art/Interface/Buttons/Buildings/story_Africanpenguin.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Africanpenguin.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Africanpenguin.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Africanpenguin.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BARNOWL_MYTH</Type>
@@ -2848,9 +2521,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Africanpenguin.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Barnowl.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_Barnowl.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Barnowl.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BARNOWL_STORY</Type>
@@ -2861,9 +2532,7 @@ Button>Art/Interface/Buttons/Buildings/myth_Barnowl.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Barnowl.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Barnowl.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Barnowl.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BARNOWL_STORIES</Type>
@@ -2874,9 +2543,7 @@ Button>Art/Interface/Buttons/Buildings/story_Barnowl.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Barnowl.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Barnowl.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Barnowl.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CASSOWARY_MYTH</Type>
@@ -2887,9 +2554,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Barnowl.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Cassowary.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_Cassowary.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Cassowary.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CASSOWARY_STORY</Type>
@@ -2900,9 +2565,7 @@ Button>Art/Interface/Buttons/Buildings/myth_Cassowary.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Cassowary.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Cassowary.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Cassowary.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CASSOWARY_STORIES</Type>
@@ -2913,9 +2576,7 @@ Button>Art/Interface/Buttons/Buildings/story_Cassowary.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Cassowary.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Cassowary.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Cassowary.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_EAGLE_MYTH</Type>
@@ -2936,9 +2597,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Cassowary.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/totem_eagle.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_totem_eagle.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_totem_eagle.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_EAGLE_STORIES</Type>
@@ -2949,9 +2608,7 @@ Button>Art/Interface/Buttons/Buildings/story_totem_eagle.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/totem_eagle.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_totem_eagle.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_totem_eagle.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_EMU_MYTH</Type>
@@ -2962,9 +2619,7 @@ Button>Art/Interface/Buttons/Buildings/stories_totem_eagle.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Emu.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_Emu.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Emu.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_EMU_STORY</Type>
@@ -2975,9 +2630,7 @@ Button>Art/Interface/Buttons/Buildings/myth_Emu.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Emu.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Emu.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Emu.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_EMU_STORIES</Type>
@@ -2988,9 +2641,7 @@ Button>Art/Interface/Buttons/Buildings/story_Emu.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Emu.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Emu.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Emu.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GALAPAGOS_PENGUIN_MYTH</Type>
@@ -3001,9 +2652,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Emu.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Galapagospenguin.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_Galapagospenguin.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Galapagospenguin.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GALAPAGOS_PENGUIN_STORY</Type>
@@ -3014,9 +2663,7 @@ Button>Art/Interface/Buttons/Buildings/myth_Galapagospenguin.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Galapagospenguin.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Galapagospenguin.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Galapagospenguin.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GALAPAGOS_PENGUIN_STORIES</Type>
@@ -3027,9 +2674,7 @@ Button>Art/Interface/Buttons/Buildings/story_Galapagospenguin.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Galapagospenguin.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Galapagospenguin.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Galapagospenguin.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_HAAST_EAGLE_MYTH</Type>
@@ -3040,9 +2685,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Galapagospenguin.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Haastseagle.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_Haastseagle.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Haastseagle.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_HAAST_EAGLE_STORY</Type>
@@ -3053,9 +2696,7 @@ Button>Art/Interface/Buttons/Buildings/myth_Haastseagle.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Haastseagle.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Haastseagle.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Haastseagle.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_HAAST_EAGLE_STORIES</Type>
@@ -3066,9 +2707,7 @@ Button>Art/Interface/Buttons/Buildings/story_Haastseagle.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Haastseagle.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Haastseagle.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Haastseagle.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_HAAST_EAGLE_REMAINS</Type>
@@ -3089,9 +2728,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Haastseagle.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/harpyeagle.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_harpyeagle.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_harpyeagle.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_HARPYEAGLE_STORY</Type>
@@ -3102,9 +2739,7 @@ Button>Art/Interface/Buttons/Buildings/myth_harpyeagle.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/harpyeagle.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_harpyeagle.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_harpyeagle.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_HARPYEAGLE_STORIES</Type>
@@ -3115,9 +2750,7 @@ Button>Art/Interface/Buttons/Buildings/story_harpyeagle.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/harpyeagle.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_harpyeagle.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_harpyeagle.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_HAWK_MYTH</Type>
@@ -3138,9 +2771,7 @@ Button>Art/Interface/Buttons/Buildings/stories_harpyeagle.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/totem_eagle.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_totem_eagle.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_totem_eagle.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_HAWK_STORIES</Type>
@@ -3151,9 +2782,7 @@ Button>Art/Interface/Buttons/Buildings/story_totem_eagle.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/totem_eagle.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_totem_eagle.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_totem_eagle.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MACAW_MYTH</Type>
@@ -3164,9 +2793,7 @@ Button>Art/Interface/Buttons/Buildings/stories_totem_eagle.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Macaw.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_Macaw.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Macaw.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MACAW_STORY</Type>
@@ -3177,9 +2804,7 @@ Button>Art/Interface/Buttons/Buildings/myth_Macaw.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Macaw.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Macaw.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Macaw.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MACAW_STORIES</Type>
@@ -3190,9 +2815,7 @@ Button>Art/Interface/Buttons/Buildings/story_Macaw.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Macaw.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Macaw.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Macaw.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MOA_MYTH</Type>
@@ -3203,9 +2826,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Macaw.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Moa.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_Moa.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Moa.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MOA_STORY</Type>
@@ -3216,9 +2837,7 @@ Button>Art/Interface/Buttons/Buildings/myth_Moa.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Moa.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Moa.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Moa.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MOA_STORIES</Type>
@@ -3229,9 +2848,7 @@ Button>Art/Interface/Buttons/Buildings/story_Moa.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Moa.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Moa.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Moa.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MOA_REMAINS</Type>
@@ -3252,9 +2869,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Moa.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Ostrich.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_Ostrich.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Ostrich.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_OSTRICH_STORY</Type>
@@ -3265,9 +2880,7 @@ Button>Art/Interface/Buttons/Buildings/myth_Ostrich.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Ostrich.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Ostrich.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Ostrich.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_OSTRICH_STORIES</Type>
@@ -3278,9 +2891,7 @@ Button>Art/Interface/Buttons/Buildings/story_Ostrich.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Ostrich.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Ostrich.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Ostrich.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_RAZORBILL_MYTH</Type>
@@ -3291,9 +2902,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Ostrich.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Razorbill.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_Razorbill.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Razorbill.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_RAZORBILL_STORY</Type>
@@ -3304,9 +2913,7 @@ Button>Art/Interface/Buttons/Buildings/myth_Razorbill.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Razorbill.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Razorbill.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Razorbill.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_RAZORBILL_STORIES</Type>
@@ -3317,9 +2924,7 @@ Button>Art/Interface/Buttons/Buildings/story_Razorbill.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Razorbill.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Razorbill.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Razorbill.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_RHEA_MYTH</Type>
@@ -3330,9 +2935,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Razorbill.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Rhea.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_Rhea.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Rhea.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_RHEA_STORY</Type>
@@ -3343,9 +2946,7 @@ Button>Art/Interface/Buttons/Buildings/myth_Rhea.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Rhea.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Rhea.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Rhea.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_RHEA_STORIES</Type>
@@ -3356,9 +2957,7 @@ Button>Art/Interface/Buttons/Buildings/story_Rhea.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Rhea.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Rhea.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Rhea.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SEAEAGLE_MYTH</Type>
@@ -3369,9 +2968,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Rhea.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/totem_eagle.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_seaeagle.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_seaeagle.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SEAEAGLE_STORY</Type>
@@ -3382,9 +2979,7 @@ Button>Art/Interface/Buttons/Buildings/myth_seaeagle.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/seaeagle.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_seaeagle.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_seaeagle.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SEAEAGLE_STORIES</Type>
@@ -3395,9 +2990,7 @@ Button>Art/Interface/Buttons/Buildings/story_seaeagle.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/seaeagle.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_seaeagle.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_seaeagle.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_HIPPOPOTAMUS_MYTH</Type>
@@ -3418,9 +3011,7 @@ Button>Art/Interface/Buttons/Buildings/stories_seaeagle.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/hippo.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_hippo.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_hippo.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_HIPPOPOTAMUS_STORIES</Type>
@@ -3431,9 +3022,7 @@ Button>Art/Interface/Buttons/Buildings/story_hippo.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/hippo.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_hippo.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_hippo.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_HIPPOS_MYTH</Type>
@@ -3454,9 +3043,7 @@ Button>Art/Interface/Buttons/Buildings/stories_hippo.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/hippo.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_hippo.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_hippo.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_HIPPOS_STORIES</Type>
@@ -3467,9 +3054,7 @@ Button>Art/Interface/Buttons/Buildings/story_hippo.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/hippo.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_hippo.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_hippo.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_AARDVARK_MYTH</Type>
@@ -3480,9 +3065,7 @@ Button>Art/Interface/Buttons/Buildings/stories_hippo.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Aardvark.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_Aardvark.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Aardvark.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_AARDVARK_STORY</Type>
@@ -3493,9 +3076,7 @@ Button>Art/Interface/Buttons/Buildings/myth_Aardvark.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Aardvark.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_Aardvark.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_Aardvark.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_AARDVARK_STORIES</Type>
@@ -3506,9 +3087,7 @@ Button>Art/Interface/Buttons/Buildings/story_Aardvark.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Aardvark.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_Aardvark.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Aardvark.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SABRETOOTH_MYTH</Type>
@@ -3519,9 +3098,7 @@ Button>Art/Interface/Buttons/Buildings/stories_Aardvark.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/SabretoothB.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/myth_sabretooth.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/myth_sabretooth.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SABRETOOTH_STORY</Type>
@@ -3532,9 +3109,7 @@ Button>Art/Interface/Buttons/Buildings/myth_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/SabretoothB.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/story_sabretooth.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/story_sabretooth.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SABRETOOTH_STORIES</Type>
@@ -3545,9 +3120,7 @@ Button>Art/Interface/Buttons/Buildings/story_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/SabretoothB.dds</Button>
-			<!--
-Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
-			-->
+			<!-- Art/Interface/Buttons/Buildings/stories_sabretooth.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_COD_MYTH</Type>
@@ -3558,7 +3131,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/COD.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_COD.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_COD.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_COD_STORY</Type>
@@ -3569,7 +3142,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/COD.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_COD.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_COD.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_COD_STORIES</Type>
@@ -3580,7 +3153,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/COD.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_COD.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_COD.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CRAB_STORY</Type>
@@ -3591,7 +3164,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/TalesOf_Crab.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_#l_animal#.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_#l_animal#.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CRAB_STORIES</Type>
@@ -3602,7 +3175,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/TalesOf_Crab.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_#l_animal#.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_#l_animal#.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_RAY_EAGLE_MYTH</Type>
@@ -3613,7 +3186,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/RAY.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_RAY_EAGLE.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_RAY_EAGLE.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_RAY_EAGLE_STORY</Type>
@@ -3624,7 +3197,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/RAY.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_RAY_EAGLE.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_RAY_EAGLE.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_RAY_EAGLE_STORIES</Type>
@@ -3635,7 +3208,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/RAY.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_RAY_EAGLE.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_RAY_EAGLE.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MACKEREL_MYTH</Type>
@@ -3646,7 +3219,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/MACKEREL.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_MACKEREL.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_MACKEREL.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MACKEREL_STORY</Type>
@@ -3657,7 +3230,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/MACKEREL.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_MACKEREL.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_MACKEREL.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MACKEREL_STORIES</Type>
@@ -3668,7 +3241,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/MACKEREL.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_MACKEREL.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_MACKEREL.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_RAY_MANTA_MYTH</Type>
@@ -3679,7 +3252,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Manta_Ray.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_RAY_MANTA.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_RAY_MANTA.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_RAY_MANTA_STORY</Type>
@@ -3690,7 +3263,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Manta_Ray.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_RAY_MANTA.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_RAY_MANTA.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_RAY_MANTA_STORIES</Type>
@@ -3701,7 +3274,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Manta_Ray.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_RAY_MANTA.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_RAY_MANTA.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MARLIN_MYTH</Type>
@@ -3712,7 +3285,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/MARLIN.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_MARLIN.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_MARLIN.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MARLIN_STORY</Type>
@@ -3723,7 +3296,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/MARLIN.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_MARLIN.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_MARLIN.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MARLIN_STORIES</Type>
@@ -3734,7 +3307,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/MARLIN.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_MARLIN.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_MARLIN.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_RAYS_STORY</Type>
@@ -3765,7 +3338,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/totem_fish.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_TUNA.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_TUNA.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_TUNA_STORIES</Type>
@@ -3776,7 +3349,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/totem_fish.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_TUNA.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_TUNA.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CAVE_LION_MYTH</Type>
@@ -4140,332 +3713,332 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_HUMPBACK_MYTH</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/totem_whale.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_HUMPBACK_STORY</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Humpback_whale.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_HUMPBACK_STORIES</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Humpback_whale.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_WOLVERINE_MYTH</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Wolverine.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_WOLVERINE_STORY</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Wolverine.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_WOLVERINE_STORIES</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Wolverine.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_VULTURE_MYTH</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Vulture.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_VULTURE_STORY</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Vulture.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_VULTURE_STORIES</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Vulture.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_TURKEY_MYTH</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Turkey.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_TURKEY_STORY</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Turkey.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_TURKEY_STORIES</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Turkey.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SNOW_LEOPARD_MYTH</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Units/SnowLeopard.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SNOW_LEOPARD_STORY</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Units/SnowLeopard.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SNOW_LEOPARD_STORIES</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Units/SnowLeopard.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SAIGA_MYTH</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Saiga.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SAIGA_STORY</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Saiga.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SAIGA_STORIES</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Saiga.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MUSKOX_MYTH</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Muskox.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MUSKOX_STORY</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Muskox.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MUSKOX_STORIES</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Muskox.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_RACCOON_MYTH</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Raccoon.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_RACCOON_STORY</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Raccoon.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_RACCOON_STORIES</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Raccoon.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_DUCK_MYTH</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Duck.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_DUCK_STORY</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Duck.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_DUCK_STORIES</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Duck.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PHEASANT_MYTH</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Pheasant.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PHEASANT_STORY</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Pheasant.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PHEASANT_STORIES</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Pheasant.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_HORNED_OWL_MYTH</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Hornedowl.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_HORNED_OWL_STORY</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Hornedowl.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_HORNED_OWL_STORIES</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Hornedowl.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
@@ -4477,7 +4050,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Penguin_b.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Penguin_b.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Penguin_b.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_EMPEROR_PENGUIN_STORY</Type>
@@ -4488,7 +4061,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Penguin_b.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Penguin_b.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Penguin_b.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_EMPEROR_PENGUIN_STORIES</Type>
@@ -4499,7 +4072,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Penguin_b.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Penguin_b.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Penguin_b.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ROCKHOPPER_PENGUIN_MYTH</Type>
@@ -4510,7 +4083,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Rockhopper.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Rockhopper.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Rockhopper.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ROCKHOPPER_PENGUIN_STORY</Type>
@@ -4521,7 +4094,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Rockhopper.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Rockhopper.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Rockhopper.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ROCKHOPPER_PENGUIN_STORIES</Type>
@@ -4532,7 +4105,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Rockhopper.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Rockhopper.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Rockhopper.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SEALION_MYTH</Type>
@@ -4543,7 +4116,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/sealion.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_sealion.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_sealion.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SEALION_STORY</Type>
@@ -4554,7 +4127,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/sealion.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_sealion.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_sealion.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SEALION_STORIES</Type>
@@ -4565,16 +4138,16 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/sealion.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_sealion.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_sealion.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_WALRUS_MYTH</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/totem_walrus.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
@@ -4586,7 +4159,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/walrus.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_walrus.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_walrus.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_WALRUS_STORIES</Type>
@@ -4597,7 +4170,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/walrus.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_walrus.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_walrus.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GREATWHITE_SHARK_MYTH</Type>
@@ -4608,7 +4181,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Greatwhite.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Greatwhite.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Greatwhite.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GREATWHITE_SHARK_STORY</Type>
@@ -4619,7 +4192,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Greatwhite.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Greatwhite.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Greatwhite.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GREATWHITE_SHARK_STORIES</Type>
@@ -4630,7 +4203,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Greatwhite.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Greatwhite.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Greatwhite.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_HAMMERHEAD_SHARK_MYTH</Type>
@@ -4641,7 +4214,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Hammerhead.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Hammerhead.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Hammerhead.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_HAMMERHEAD_SHARK_STORY</Type>
@@ -4652,7 +4225,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Hammerhead.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Hammerhead.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Hammerhead.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_HAMMERHEAD_SHARK_STORIES</Type>
@@ -4663,7 +4236,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Hammerhead.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Hammerhead.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Hammerhead.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_REEF_SHARK_MYTH</Type>
@@ -4674,7 +4247,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Shark.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Shark.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Shark.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_REEF_SHARK_STORY</Type>
@@ -4685,7 +4258,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Shark.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Shark.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Shark.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_REEF_SHARK_STORIES</Type>
@@ -4696,7 +4269,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Shark.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Shark.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Shark.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SHARK_STORY</Type>
@@ -4727,7 +4300,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Whaleshark.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Whaleshark.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Whaleshark.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_WHALESHARK_STORY</Type>
@@ -4738,7 +4311,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Whaleshark.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Whaleshark.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Whaleshark.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_WHALESHARK_STORIES</Type>
@@ -4749,7 +4322,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Whaleshark.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Whaleshark.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Whaleshark.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MINKIE_WHALE_MYTH</Type>
@@ -4760,7 +4333,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Whale.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Minkie.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Minkie.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MINKIE_WHALE_STORY</Type>
@@ -4771,7 +4344,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Whale.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Minkie.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Minkie.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MINKIE_WHALE_STORIES</Type>
@@ -4782,7 +4355,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Whale.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Minkie.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Minkie.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SEA_OTTER_MYTH</Type>
@@ -4793,7 +4366,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Seaotter.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_SEA_OTTER.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_SEA_OTTER.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SEA_OTTER_STORY</Type>
@@ -4804,7 +4377,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Seaotter.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_SEA_OTTER.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_SEA_OTTER.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SEA_OTTER_STORIES</Type>
@@ -4815,7 +4388,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Seaotter.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_SEA_OTTER.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_SEA_OTTER.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_LOON_MYTH</Type>
@@ -4916,7 +4489,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Eagle.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Eagle.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Eagle.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_EAGLE_BALD_STORY</Type>
@@ -4927,7 +4500,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Eagle.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Eagle.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Eagle.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_EAGLE_BALD_STORIES</Type>
@@ -4938,7 +4511,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Eagle.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Eagle.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Eagle.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CAPUCHIN_MYTH</Type>
@@ -4949,7 +4522,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Capuchin.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Capuchin.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Capuchin.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CAPUCHIN_STORY</Type>
@@ -4960,7 +4533,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Capuchin.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Capuchin.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Capuchin.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CAPUCHIN_STORIES</Type>
@@ -4971,7 +4544,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Capuchin.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Capuchin.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Capuchin.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CAPYBARA_MYTH</Type>
@@ -4982,7 +4555,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Capybara.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Capybara.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Capybara.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CAPYBARA_STORY</Type>
@@ -4993,7 +4566,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Capybara.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Capybara.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Capybara.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CAPYBARA_STORIES</Type>
@@ -5004,7 +4577,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Capybara.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Capybara.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Capybara.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CHEETAH_MYTH</Type>
@@ -5015,7 +4588,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Cheetah.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Cheetah.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Cheetah.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CHEETAH_STORY</Type>
@@ -5026,7 +4599,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Cheetah.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Cheetah.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Cheetah.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CHEETAH_STORIES</Type>
@@ -5037,7 +4610,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Cheetah.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Cheetah.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Cheetah.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CHIMPANZEE_MYTH</Type>
@@ -5048,7 +4621,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Chimp.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Chimpanzee.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Chimpanzee.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CHIMPANZEE_STORY</Type>
@@ -5059,7 +4632,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Chimp.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Chimpanzee.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Chimpanzee.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CHIMPANZEE_STORIES</Type>
@@ -5070,7 +4643,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Chimp.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Chimpanzee.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Chimpanzee.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_DESERT_TORTOISE_MYTH</Type>
@@ -5081,7 +4654,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Tortoise.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Tortoise.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Tortoise.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_DESERT_TORTOISE_STORY</Type>
@@ -5092,7 +4665,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Tortoise.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Tortoise.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Tortoise.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_DESERT_TORTOISE_STORIES</Type>
@@ -5103,7 +4676,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Tortoise.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Tortoise.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Tortoise.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PENGUIN_MYTH</Type>
@@ -5114,7 +4687,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Penguin_b.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Penguin_b.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Penguin_b.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PENGUIN_STORY</Type>
@@ -5125,7 +4698,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Penguin_b.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Penguin_b.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Penguin_b.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PENGUIN_STORIES</Type>
@@ -5136,7 +4709,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Penguin_b.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Penguin_b.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Penguin_b.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ZEBRA_MYTH</Type>
@@ -5147,7 +4720,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Zebra.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Zebra.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Zebra.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ZEBRA_STORY</Type>
@@ -5158,7 +4731,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Zebra.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Zebra.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Zebra.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ZEBRA_STORIES</Type>
@@ -5169,16 +4742,16 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Zebra.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Zebra.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Zebra.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PALEOLITHIC_MAMMOTH_MYTH</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/PaleolithicMammothMyth.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
@@ -5203,12 +4776,12 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PALEOLITHIC_MAMMOTH_REMAINS</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/herd_mammoth.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
@@ -5220,7 +4793,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Anteater.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Anteater.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Anteater.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ANTEATER_STORY</Type>
@@ -5231,7 +4804,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Anteater.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Anteater.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Anteater.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ANTEATER_STORIES</Type>
@@ -5242,7 +4815,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Anteater.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Anteater.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Anteater.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BADGER_MYTH</Type>
@@ -5253,7 +4826,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Badger.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Badger.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Badger.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BADGER_STORY</Type>
@@ -5264,7 +4837,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Badger.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Badger.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Badger.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BADGER_STORIES</Type>
@@ -5275,7 +4848,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Badger.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Badger.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Badger.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BALLPYTHON_MYTH</Type>
@@ -5286,7 +4859,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Ballpython.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Ballpython.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Ballpython.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BALLPYTHON_STORY</Type>
@@ -5297,7 +4870,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Ballpython.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Ballpython.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Ballpython.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BALLPYTHON_STORIES</Type>
@@ -5308,7 +4881,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Ballpython.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Ballpython.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Ballpython.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BARBARYAPE_MYTH</Type>
@@ -5319,7 +4892,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Barbaryape.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Barbaryape.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Barbaryape.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BARBARYAPE_STORY</Type>
@@ -5330,7 +4903,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Barbaryape.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Barbaryape.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Barbaryape.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BARBARYAPE_STORIES</Type>
@@ -5341,7 +4914,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Barbaryape.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Barbaryape.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Barbaryape.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BEAVER_MYTH</Type>
@@ -5352,7 +4925,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Beaver.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Beaver.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Beaver.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BEAVER_STORY</Type>
@@ -5363,7 +4936,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Beaver.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Beaver.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Beaver.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BEAVER_STORIES</Type>
@@ -5374,7 +4947,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Beaver.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Beaver.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Beaver.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BENGALTIGER_MYTH</Type>
@@ -5385,7 +4958,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/BengalTiger.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_BengalTiger.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_BengalTiger.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BENGALTIGER_STORY</Type>
@@ -5396,7 +4969,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/BengalTiger.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_BengalTiger.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_BengalTiger.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BENGALTIGER_STORIES</Type>
@@ -5407,7 +4980,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/BengalTiger.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_BengalTiger.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_BengalTiger.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BISON_MYTH</Type>
@@ -5418,7 +4991,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/button_bison.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_bison.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_bison.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BISON_STORY</Type>
@@ -5429,7 +5002,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/button_bison.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_bison.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_bison.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BISON_STORIES</Type>
@@ -5440,7 +5013,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/button_bison.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_bison.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_bison.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BOAR_STORY</Type>
@@ -5451,7 +5024,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/button_boar.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_boar.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_boar.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BOAR_STORIES</Type>
@@ -5462,7 +5035,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/button_boar.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_boar.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_boar.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BONGO_MYTH</Type>
@@ -5473,7 +5046,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Bongo.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Bongo.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Bongo.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BONGO_STORY</Type>
@@ -5484,7 +5057,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Bongo.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Bongo.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Bongo.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BONGO_STORIES</Type>
@@ -5495,7 +5068,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Bongo.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Bongo.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Bongo.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CROW_MYTH</Type>
@@ -5506,7 +5079,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Crow.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Crow.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Crow.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CROW_STORY</Type>
@@ -5517,7 +5090,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Crow.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Crow.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Crow.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CROW_STORIES</Type>
@@ -5528,7 +5101,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Crow.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Crow.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Crow.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GAZELLE_MYTH</Type>
@@ -5539,7 +5112,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Gazelle.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Gazelle.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Gazelle.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GAZELLE_STORY</Type>
@@ -5550,7 +5123,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Gazelle.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Gazelle.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Gazelle.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GAZELLE_STORIES</Type>
@@ -5561,7 +5134,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Gazelle.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Gazelle.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Gazelle.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GELADA_MYTH</Type>
@@ -5572,7 +5145,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Gelada.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Gelada.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Gelada.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GELADA_STORY</Type>
@@ -5583,7 +5156,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Gelada.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Gelada.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Gelada.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GELADA_STORIES</Type>
@@ -5594,7 +5167,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Gelada.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Gelada.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Gelada.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GEMSBOK_MYTH</Type>
@@ -5605,7 +5178,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Gemsbok.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Gemsbok.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Gemsbok.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GEMSBOK_STORY</Type>
@@ -5616,7 +5189,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Gemsbok.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Gemsbok.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Gemsbok.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GEMSBOK_STORIES</Type>
@@ -5627,7 +5200,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Gemsbok.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Gemsbok.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Gemsbok.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GERENUK_MYTH</Type>
@@ -5638,7 +5211,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Gerenuk.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Gerenuk.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Gerenuk.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GERENUK_STORY</Type>
@@ -5649,7 +5222,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Gerenuk.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Gerenuk.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Gerenuk.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GERENUK_STORIES</Type>
@@ -5660,7 +5233,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Gerenuk.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Gerenuk.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Gerenuk.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GORILLA_MYTH</Type>
@@ -5671,7 +5244,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Gorilla.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Gorilla.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Gorilla.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GORILLA_STORY</Type>
@@ -5682,7 +5255,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Gorilla.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Gorilla.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Gorilla.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GORILLA_STORIES</Type>
@@ -5693,7 +5266,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Gorilla.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Gorilla.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Gorilla.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_KANGAROO_GREY_MYTH</Type>
@@ -5704,7 +5277,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/kangaroo_grey.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_kangaroo_grey.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_kangaroo_grey.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_KANGAROO_GREY_STORY</Type>
@@ -5715,7 +5288,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/kangaroo_grey.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_kangaroo_grey.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_kangaroo_grey.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_KANGAROO_GREY_STORIES</Type>
@@ -5726,7 +5299,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/kangaroo_grey.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_kangaroo_grey.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_kangaroo_grey.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GULL_MYTH</Type>
@@ -5737,7 +5310,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Gull.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Gull.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Gull.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GULL_STORY</Type>
@@ -5748,7 +5321,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Gull.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Gull.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Gull.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GULL_STORIES</Type>
@@ -5759,7 +5332,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Gull.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Gull.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Gull.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_HYENA_MYTH</Type>
@@ -5770,7 +5343,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Hyena.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Hyena.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Hyena.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_HYENA_STORY</Type>
@@ -5781,7 +5354,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Hyena.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Hyena.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Hyena.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_HYENA_STORIES</Type>
@@ -5792,7 +5365,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Hyena.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Hyena.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Hyena.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_IMPALA_MYTH</Type>
@@ -5803,7 +5376,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Impala.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Impala.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Impala.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_IMPALA_STORY</Type>
@@ -5814,7 +5387,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Impala.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Impala.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Impala.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_IMPALA_STORIES</Type>
@@ -5825,7 +5398,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Impala.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Impala.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Impala.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_JAGUAR_MYTH</Type>
@@ -5836,7 +5409,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Jaguar.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Jaguar.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Jaguar.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_JAGUAR_STORY</Type>
@@ -5847,7 +5420,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Jaguar.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Jaguar.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Jaguar.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_JAGUAR_STORIES</Type>
@@ -5858,7 +5431,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Jaguar.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Jaguar.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Jaguar.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_KOALA_MYTH</Type>
@@ -5869,7 +5442,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Koala.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Koala.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Koala.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_KOALA_STORY</Type>
@@ -5880,7 +5453,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Koala.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Koala.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Koala.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_KOALA_STORIES</Type>
@@ -5891,7 +5464,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Koala.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Koala.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Koala.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_KOOKABURRA_MYTH</Type>
@@ -5902,7 +5475,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Kookaburra.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Kookaburra.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Kookaburra.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_KOOKABURRA_STORY</Type>
@@ -5913,7 +5486,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Kookaburra.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Kookaburra.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Kookaburra.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_KOOKABURRA_STORIES</Type>
@@ -5924,7 +5497,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Kookaburra.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Kookaburra.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Kookaburra.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_LION_MYTH</Type>
@@ -5935,7 +5508,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Lion.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Lion.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Lion.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_LION_STORY</Type>
@@ -5946,7 +5519,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Lion.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Lion.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Lion.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_LION_STORIES</Type>
@@ -5957,7 +5530,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Lion.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Lion.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Lion.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_IGUANA_MYTH</Type>
@@ -5978,7 +5551,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/IGUANA.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_IGUANA.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_IGUANA.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_IGUANA_STORIES</Type>
@@ -5989,7 +5562,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/IGUANA.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_IGUANA.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_IGUANA.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_KOMODO_DRAGON_MYTH</Type>
@@ -6010,7 +5583,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/komodo.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_komodo.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_komodo.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_KOMODO_DRAGON_STORIES</Type>
@@ -6021,7 +5594,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/komodo.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_komodo.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_komodo.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_NILE_MONITOR_MYTH</Type>
@@ -6042,7 +5615,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/monitor.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_monitor.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_monitor.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_NILE_MONITOR_STORIES</Type>
@@ -6053,7 +5626,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/monitor.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_monitor.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_monitor.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_LLAMA_STORY</Type>
@@ -6064,7 +5637,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Guanaco.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Llama.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Llama.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_LLAMA_STORIES</Type>
@@ -6075,7 +5648,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Guanaco.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Llama.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Llama.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_NEW_W_MONKEY_MYTH</Type>
@@ -6086,7 +5659,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Capuchin.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Capuchin.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Capuchin.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_NEW_W_MONKEY_STORY</Type>
@@ -6097,7 +5670,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Capuchin.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Capuchin.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Capuchin.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_NEW_W_MONKEY_STORIES</Type>
@@ -6108,7 +5681,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Capuchin.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Capuchin.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Capuchin.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_OLD_W_MONKEY_MYTH</Type>
@@ -6119,7 +5692,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Mandrill.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Mandrill.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Mandrill.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_OLD_W_MONKEY_STORY</Type>
@@ -6130,7 +5703,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Mandrill.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Mandrill.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Mandrill.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_OLD_W_MONKEY_STORIES</Type>
@@ -6141,7 +5714,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Mandrill.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Mandrill.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Mandrill.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MANDRILL_MYTH</Type>
@@ -6152,7 +5725,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Mandrill.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Mandrill.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Mandrill.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MANDRILL_STORY</Type>
@@ -6163,7 +5736,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Mandrill.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Mandrill.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Mandrill.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MANDRILL_STORIES</Type>
@@ -6174,7 +5747,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Mandrill.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Mandrill.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Mandrill.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_OKAPI_MYTH</Type>
@@ -6185,7 +5758,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Okapi.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Okapi.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Okapi.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_OKAPI_STORY</Type>
@@ -6196,7 +5769,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Okapi.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Okapi.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Okapi.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_OKAPI_STORIES</Type>
@@ -6207,7 +5780,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Okapi.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Okapi.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Okapi.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ORANGUTAN_MYTH</Type>
@@ -6218,7 +5791,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/button_orangutan.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Orangutan.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Orangutan.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ORANGUTAN_STORY</Type>
@@ -6229,7 +5802,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/button_orangutan.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Orangutan.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Orangutan.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_ORANGUTAN_STORIES</Type>
@@ -6240,7 +5813,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/button_orangutan.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Orangutan.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Orangutan.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_OXPECKER_MYTH</Type>
@@ -6251,7 +5824,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Oxpecker.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Oxpecker.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Oxpecker.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_OXPECKER_STORY</Type>
@@ -6262,7 +5835,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Oxpecker.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Oxpecker.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Oxpecker.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_OXPECKER_STORIES</Type>
@@ -6273,7 +5846,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Oxpecker.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Oxpecker.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Oxpecker.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PEACOCK_MYTH</Type>
@@ -6284,7 +5857,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Peacock.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Peacock.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Peacock.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PEACOCK_STORY</Type>
@@ -6295,7 +5868,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Peacock.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Peacock.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Peacock.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PEACOCK_STORIES</Type>
@@ -6306,7 +5879,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Peacock.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Peacock.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Peacock.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PROCOPTODON_MYTH</Type>
@@ -6317,7 +5890,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Procoptodon.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Procoptodon.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Procoptodon.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PROCOPTODON_STORY</Type>
@@ -6328,7 +5901,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Procoptodon.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Procoptodon.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Procoptodon.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PROCOPTODON_STORIES</Type>
@@ -6339,7 +5912,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Procoptodon.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Procoptodon.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Procoptodon.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PROCOPTODON_REMAINS</Type>
@@ -6350,7 +5923,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Procoptodon.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/Remains_Procoptodon.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/Remains_Procoptodon.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_QUOLL_MYTH</Type>
@@ -6361,7 +5934,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Quoll.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Quoll.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Quoll.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_QUOLL_STORY</Type>
@@ -6372,7 +5945,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Quoll.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Quoll.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Quoll.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_QUOLL_STORIES</Type>
@@ -6383,7 +5956,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Quoll.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Quoll.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Quoll.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_RATEL_MYTH</Type>
@@ -6394,7 +5967,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Ratel.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Ratel.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Ratel.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_RATEL_STORY</Type>
@@ -6405,7 +5978,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Ratel.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Ratel.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Ratel.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_RATEL_STORIES</Type>
@@ -6416,7 +5989,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Ratel.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Ratel.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Ratel.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_KANGAROO_RED_MYTH</Type>
@@ -6427,7 +6000,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/kangaroo.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_kangaroo.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_kangaroo.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_KANGAROO_RED_STORY</Type>
@@ -6438,7 +6011,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/kangaroo.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_kangaroo.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_kangaroo.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_KANGAROO_RED_STORIES</Type>
@@ -6449,7 +6022,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/kangaroo.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_kangaroo.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_kangaroo.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_COBRA_MYTH</Type>
@@ -6460,7 +6033,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Cobra.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Cobra.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Cobra.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_COBRA_STORY</Type>
@@ -6471,7 +6044,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Cobra.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Cobra.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Cobra.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_COBRA_STORIES</Type>
@@ -6482,7 +6055,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Cobra.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Cobra.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Cobra.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PUFFADDER_MYTH</Type>
@@ -6493,7 +6066,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/puffadder.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_puffadder.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_puffadder.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PUFFADDER_STORY</Type>
@@ -6504,7 +6077,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/puffadder.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_puffadder.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_puffadder.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PUFFADDER_STORIES</Type>
@@ -6515,7 +6088,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/puffadder.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_puffadder.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_puffadder.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SNAKES_MYTH</Type>
@@ -6526,7 +6099,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/totem_snake.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Snakes.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Snakes.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SNAKES_STORY</Type>
@@ -6537,7 +6110,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/totem_snake.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Snakes.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Snakes.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SNAKES_STORIES</Type>
@@ -6548,7 +6121,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/totem_snake.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Snakes.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Snakes.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_WARTHOG_MYTH</Type>
@@ -6559,7 +6132,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/warthog.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_warthog.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_warthog.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_WARTHOG_STORY</Type>
@@ -6570,7 +6143,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/warthog.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_warthog.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_warthog.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_WARTHOG_STORIES</Type>
@@ -6581,7 +6154,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/warthog.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_warthog.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_warthog.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_VIPER_MYTH</Type>
@@ -6592,7 +6165,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Viper.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Viper.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Viper.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_VIPER_STORY</Type>
@@ -6603,7 +6176,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Viper.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Viper.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Viper.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_VIPER_STORIES</Type>
@@ -6614,7 +6187,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Viper.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Viper.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Viper.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_WALLAROO_MYTH</Type>
@@ -6625,7 +6198,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Wallaroo.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Wallaroo.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Wallaroo.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_WALLAROO_STORY</Type>
@@ -6636,7 +6209,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Wallaroo.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Wallaroo.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Wallaroo.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_WALLAROO_STORIES</Type>
@@ -6647,7 +6220,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Wallaroo.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Wallaroo.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Wallaroo.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BUFFALO_MYTH</Type>
@@ -6658,7 +6231,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Buffalo.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Buffalo.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Buffalo.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BUFFALO_STORY</Type>
@@ -6669,7 +6242,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Buffalo.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Buffalo.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Buffalo.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BUFFALO_STORIES</Type>
@@ -6680,7 +6253,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Buffalo.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Buffalo.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Buffalo.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_WILDEBEEST_MYTH</Type>
@@ -6691,7 +6264,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Wildebeest.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Wildebeest.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Wildebeest.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_WILDEBEEST_STORY</Type>
@@ -6702,7 +6275,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Wildebeest.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Wildebeest.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Wildebeest.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_WILDEBEEST_STORIES</Type>
@@ -6713,7 +6286,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Wildebeest.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Wildebeest.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Wildebeest.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GALAPOGOS_TORTOISE_MYTH</Type>
@@ -6724,7 +6297,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Galapagos_Tortoise.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/myth_Galapagos_Tortoise.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/myth_Galapagos_Tortoise.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GALAPOGOS_TORTOISE_STORY</Type>
@@ -6735,7 +6308,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Galapagos_Tortoise.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/story_Galapagos_Tortoise.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/story_Galapagos_Tortoise.dds -->
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_GALAPOGOS_TORTOISE_STORIES</Type>
@@ -6746,7 +6319,7 @@ Button>Art/Interface/Buttons/Buildings/stories_sabretooth.dds</Button
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Units/Galapagos_Tortoise.dds</Button>
-			<!--Button>Art/Interface/Buttons/Buildings/stories_Galapagos_Tortoise.dds</Button-->
+			<!-- Art/Interface/Buttons/Buildings/stories_Galapagos_Tortoise.dds -->
 		</BuildingArtInfo>
 	</BuildingArtInfos>
 </Civ4ArtDefines>

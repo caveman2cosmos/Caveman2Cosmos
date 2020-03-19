@@ -17809,7 +17809,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_MING_VASE_WORKSHOP</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MING_VASE_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_MING_VASE_WORKSHOP_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MING_VASE_WORKSHOP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MING_VASE_WORKSHOP</ArtDefineTag>
@@ -17866,18 +17866,18 @@
 			<iConquestProb>75</iConquestProb>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Terra Sigilliata Workshop -->
-			<Type>BUILDING_TERRA_SIGILLIATA_WORKSHOP</Type>
+			<!-- Terra Sigillata Workshop -->
+			<Type>BUILDING_TERRA_SIGILLATA_WORKSHOP</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_TERRA_SIGILLIATA_WORKSHOP</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TERRA_SIGILLIATA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TERRA_SIGILLIATA_WORKSHOP_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_TERRA_SIGILLATA_WORKSHOP</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TERRA_SIGILLATA_WORKSHOP_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_TERRA_SIGILLATA_WORKSHOP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TERRA_SIGILLIATA_WORKSHOP</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_TERRA_SIGILLIATA_WORKSHOP</MovieDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_TERRA_SIGILLATA_WORKSHOP</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_TERRA_SIGILLATA_WORKSHOP</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_GLASSMITH</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -17896,7 +17896,7 @@
 			</PrereqInCityBuildings>
 			<iCost>1296</iCost>
 			<!-- Main effects -->
-			<FreeBonus>BONUS_TERRA_SIGILLIATA</FreeBonus>
+			<FreeBonus>BONUS_TERRA_SIGILLATA</FreeBonus>
 			<iNumFreeBonuses>6</iNumFreeBonuses>
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
@@ -17937,7 +17937,7 @@
 			<Type>BUILDING_MURANO_GLASSMAKERS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_MURANO_GLASSMAKERS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CRYSTAL_GLASSWARE_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_CRYSTAL_GLASSWARE_WORKSHOP_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MURANO_GLASSMAKERS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MURANO_GLASSMAKERS</ArtDefineTag>

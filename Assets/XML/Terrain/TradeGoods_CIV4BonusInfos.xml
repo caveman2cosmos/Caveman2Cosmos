@@ -307,13 +307,13 @@
 			<iHappiness>1</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-		<!-- Terra Sigilliata -->
+		<!-- Terra Sigillata -->
 		<BonusInfo>
-			<Type>BONUS_TERRA_SIGILLIATA</Type>
-			<Description>TXT_KEY_BONUS_TERRA_SIGILLIATA</Description>
-			<Civilopedia>TXT_KEY_BONUS_TERRA_SIGILLIATA_PEDIA</Civilopedia>
+			<Type>BONUS_TERRA_SIGILLATA</Type>
+			<Description>TXT_KEY_BONUS_TERRA_SIGILLATA</Description>
+			<Civilopedia>TXT_KEY_BONUS_TERRA_SIGILLATA_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_TERRA_SIGILLIATA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_TERRA_SIGILLATA</ArtDefineTag>
 			<TechReveal>TECH_IRON_WORKING</TechReveal>
 			<TechCityTrade>TECH_IRON_WORKING</TechCityTrade>
 			<iHappiness>1</iHappiness>

@@ -14881,8 +14881,8 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LIGHT_HOPLITE_STRATEGY</Tag>
-		<English>The [COLOR_UNIT_TEXT]Light Hoplite[COLOR_REVERT] is a Philistines unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Hoplite Léger[COLOR_REVERT] est une unité Philistines unique.</French>
+		<English>The [COLOR_UNIT_TEXT]Light Hoplite[COLOR_REVERT] is a Philistine unique unit.</English>
+		<French>Le [COLOR_UNIT_TEXT]Hoplite Léger[COLOR_REVERT] est une unité Philistine unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LIGHT_SWORDSMAN</Tag>
@@ -17470,8 +17470,8 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MUJAHIDEEN_STRATEGY</Tag>
-		<English>The [COLOR_UNIT_TEXT]Mujahideen[COLOR_REVERT] is a Afghanistan unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Mujahideen[COLOR_REVERT] est une unité Afghanistan unique.</French>
+		<English>The [COLOR_UNIT_TEXT]Mujahideen[COLOR_REVERT] is a Afghan unique unit.</English>
+		<French>Le [COLOR_UNIT_TEXT]Mujahideen[COLOR_REVERT] est une unité Afghan unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MUNGO_MAN</Tag>

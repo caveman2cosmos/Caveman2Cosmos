@@ -1,10 +1,4 @@
-<?xml version="1.0"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Dean Ray Johnson (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- ReModified by StrategyOnly -->
-<!-- -->
-<!-- 3D Audio Scripts -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Script3DSounds xmlns="x-schema:AudioScriptSchema.xml">
 	<Script3DSound>
 		<ScriptID>AS3D_ERROR</ScriptID>

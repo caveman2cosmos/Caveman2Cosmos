@@ -4367,6 +4367,11 @@ There are 5 types of Reef Sharks:
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Tapira</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_SUBDUED_MAMMOTH_HELP</Tag>
+		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Mammoth Herd; Elephant Myth; Mammoth Myth, Story, Story and Remains; Master Hunter, Carnival and Exotic Herbivore Cage</English>
+		<Italian>[COLOR_HIGHLIGHT_TEXT]Costruisci[COLOR_REVERT] Recinto-Mammut, Mito dell'elefante, Mito del mammut paleolitico, Mastro cacciatore, Carnevale, Gabbia-Erbivori esotici</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MANEDWOLF</Tag>
 		<English>Subdued Maned Wolf</English>
 		<French>Loup à crinière (App.)</French>

@@ -20755,14 +20755,14 @@
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY</OutcomeType>
 							<iChance>80</iChance>
 							<Commerces>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>
-							    <Adapt>
-							      <ID>ADAPT_DEFAULT</ID>
-							      <Constant>6</Constant>
-							    </Adapt>
-							  </iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>6</Constant>
+									</Adapt>
+								</iCommerce>
 							</Commerces>
 							<iReduceAnarchyLength>4</iReduceAnarchyLength>
 							<bKill>1</bKill>
@@ -20771,14 +20771,14 @@
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY_EXALTED</OutcomeType>
 							<iChance>20</iChance>
 							<Commerces>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>
-							    <Adapt>
-							      <ID>ADAPT_DEFAULT</ID>
-							      <Constant>12</Constant>
-							    </Adapt>
-							  </iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>12</Constant>
+									</Adapt>
+								</iCommerce>
 							</Commerces>
 							<PromotionType>PROMOTION_EXPERIENCED_ARTIST</PromotionType>
 							<iReduceAnarchyLength>5</iReduceAnarchyLength>
@@ -22511,7 +22511,7 @@
 					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
-				<Build>				
+				<Build>
 					<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -26514,14 +26514,14 @@
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY</OutcomeType>
 							<iChance>80</iChance>
 							<Commerces>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>
-							    <Adapt>
-							      <ID>ADAPT_DEFAULT</ID>
-							      <Constant>5</Constant>
-							    </Adapt>
-							  </iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>5</Constant>
+									</Adapt>
+								</iCommerce>
 							</Commerces>
 							<iReduceAnarchyLength>3</iReduceAnarchyLength>
 							<bKill>1</bKill>
@@ -26530,14 +26530,14 @@
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY_EXALTED</OutcomeType>
 							<iChance>20</iChance>
 							<Commerces>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>
-							    <Adapt>
-							      <ID>ADAPT_DEFAULT</ID>
-							      <Constant>10</Constant>
-							    </Adapt>
-							  </iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>10</Constant>
+									</Adapt>
+								</iCommerce>
 							</Commerces>
 							<PromotionType>PROMOTION_EXPERIENCED_ARTIST</PromotionType>
 							<iReduceAnarchyLength>4</iReduceAnarchyLength>
@@ -29324,7 +29324,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
-			<BonusType>BONUS_PHILISTINES</BonusType>
+			<BonusType>BONUS_PHILISTINE</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_COPPER_WARES</BonusType>
 				<BonusType>BONUS_BRONZE_WARES</BonusType>
@@ -29947,14 +29947,14 @@
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY</OutcomeType>
 							<iChance>80</iChance>
 							<Commerces>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>
-							    <Adapt>
-							      <ID>ADAPT_DEFAULT</ID>
-							      <Constant>6</Constant>
-							    </Adapt>
-							  </iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>6</Constant>
+									</Adapt>
+								</iCommerce>
 							</Commerces>
 							<iReduceAnarchyLength>4</iReduceAnarchyLength>
 							<bKill>1</bKill>
@@ -29963,14 +29963,14 @@
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY_EXALTED</OutcomeType>
 							<iChance>20</iChance>
 							<Commerces>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>
-							    <Adapt>
-							      <ID>ADAPT_DEFAULT</ID>
-							      <Constant>12</Constant>
-							    </Adapt>
-							  </iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+									<ID>ADAPT_DEFAULT</ID>
+									<Constant>12</Constant>
+									</Adapt>
+								</iCommerce>
 							</Commerces>
 							<PromotionType>PROMOTION_EXPERIENCED_ARTIST</PromotionType>
 							<iReduceAnarchyLength>5</iReduceAnarchyLength>
@@ -31438,14 +31438,14 @@
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY</OutcomeType>
 							<iChance>80</iChance>
 							<Commerces>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>
-							    <Adapt>
-							      <ID>ADAPT_DEFAULT</ID>
-							      <Constant>5</Constant>
-							    </Adapt>
-							  </iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+									<ID>ADAPT_DEFAULT</ID>
+									<Constant>5</Constant>
+									</Adapt>
+								</iCommerce>
 							</Commerces>
 							<iReduceAnarchyLength>3</iReduceAnarchyLength>
 							<bKill>1</bKill>
@@ -31454,14 +31454,14 @@
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY_EXALTED</OutcomeType>
 							<iChance>20</iChance>
 							<Commerces>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>
-							    <Adapt>
-							      <ID>ADAPT_DEFAULT</ID>
-							      <Constant>10</Constant>
-							    </Adapt>
-							  </iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+									<ID>ADAPT_DEFAULT</ID>
+									<Constant>10</Constant>
+									</Adapt>
+								</iCommerce>
 							</Commerces>
 							<PromotionType>PROMOTION_EXPERIENCED_ARTIST</PromotionType>
 							<iReduceAnarchyLength>4</iReduceAnarchyLength>
@@ -32532,14 +32532,14 @@
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY</OutcomeType>
 							<iChance>80</iChance>
 							<Commerces>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>
-							    <Adapt>
-							      <ID>ADAPT_DEFAULT</ID>
-							      <Constant>6</Constant>
-							    </Adapt>
-							  </iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+									<ID>ADAPT_DEFAULT</ID>
+									<Constant>6</Constant>
+									</Adapt>
+								</iCommerce>
 							</Commerces>
 							<iReduceAnarchyLength>4</iReduceAnarchyLength>
 							<bKill>1</bKill>
@@ -32548,14 +32548,14 @@
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY_EXALTED</OutcomeType>
 							<iChance>20</iChance>
 							<Commerces>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>
-							    <Adapt>
-							      <ID>ADAPT_DEFAULT</ID>
-							      <Constant>12</Constant>
-							    </Adapt>
-							  </iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+									<ID>ADAPT_DEFAULT</ID>
+									<Constant>12</Constant>
+									</Adapt>
+								</iCommerce>
 							</Commerces>
 							<PromotionType>PROMOTION_EXPERIENCED_ARTIST</PromotionType>
 							<iReduceAnarchyLength>5</iReduceAnarchyLength>
@@ -34143,14 +34143,14 @@
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY</OutcomeType>
 							<iChance>80</iChance>
 							<Commerces>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>
-							    <Adapt>
-							      <ID>ADAPT_DEFAULT</ID>
-							      <Constant>6</Constant>
-							    </Adapt>
-							  </iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>6</Constant>
+									</Adapt>
+								</iCommerce>
 							</Commerces>
 							<iReduceAnarchyLength>4</iReduceAnarchyLength>
 							<bKill>1</bKill>
@@ -34159,14 +34159,14 @@
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY_EXALTED</OutcomeType>
 							<iChance>20</iChance>
 							<Commerces>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>
-							    <Adapt>
-							      <ID>ADAPT_DEFAULT</ID>
-							      <Constant>12</Constant>
-							    </Adapt>
-							  </iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>12</Constant>
+									</Adapt>
+								</iCommerce>
 							</Commerces>
 							<PromotionType>PROMOTION_EXPERIENCED_ARTIST</PromotionType>
 							<iReduceAnarchyLength>5</iReduceAnarchyLength>
@@ -40490,7 +40490,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_XIONGU</BonusType>
+			<BonusType>BONUS_XIONGNU</BonusType>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -41308,14 +41308,14 @@
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY</OutcomeType>
 							<iChance>80</iChance>
 							<Commerces>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>
-							    <Adapt>
-							      <ID>ADAPT_DEFAULT</ID>
-							      <Constant>5</Constant>
-							    </Adapt>
-							  </iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>5</Constant>
+									</Adapt>
+								</iCommerce>
 							</Commerces>
 							<iReduceAnarchyLength>3</iReduceAnarchyLength>
 							<bKill>1</bKill>
@@ -41324,14 +41324,14 @@
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY_EXALTED</OutcomeType>
 							<iChance>20</iChance>
 							<Commerces>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>
-							    <Adapt>
-							      <ID>ADAPT_DEFAULT</ID>
-							      <Constant>10</Constant>
-							    </Adapt>
-							  </iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>10</Constant>
+									</Adapt>
+								</iCommerce>
 							</Commerces>
 							<PromotionType>PROMOTION_EXPERIENCED_ARTIST</PromotionType>
 							<iReduceAnarchyLength>4</iReduceAnarchyLength>
@@ -48123,14 +48123,14 @@
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY</OutcomeType>
 							<iChance>80</iChance>
 							<Commerces>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>
-							    <Adapt>
-							      <ID>ADAPT_DEFAULT</ID>
-							      <Constant>6</Constant>
-							    </Adapt>
-							  </iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>6</Constant>
+									</Adapt>
+								</iCommerce>
 							</Commerces>
 							<iReduceAnarchyLength>4</iReduceAnarchyLength>
 							<bKill>1</bKill>
@@ -48139,14 +48139,14 @@
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY_EXALTED</OutcomeType>
 							<iChance>20</iChance>
 							<Commerces>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>
-							    <Adapt>
-							      <ID>ADAPT_DEFAULT</ID>
-							      <Constant>12</Constant>
-							    </Adapt>
-							  </iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>12</Constant>
+									</Adapt>
+								</iCommerce>
 							</Commerces>
 							<PromotionType>PROMOTION_EXPERIENCED_ARTIST</PromotionType>
 							<iReduceAnarchyLength>5</iReduceAnarchyLength>
@@ -48187,7 +48187,7 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
-                    <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
@@ -50311,14 +50311,14 @@
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY</OutcomeType>
 							<iChance>80</iChance>
 							<Commerces>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>
-							    <Adapt>
-							      <ID>ADAPT_DEFAULT</ID>
-							      <Constant>5</Constant>
-							    </Adapt>
-							  </iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>5</Constant>
+									</Adapt>
+								</iCommerce>
 							</Commerces>
 							<iReduceAnarchyLength>3</iReduceAnarchyLength>
 							<bKill>1</bKill>
@@ -50327,14 +50327,14 @@
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY_EXALTED</OutcomeType>
 							<iChance>20</iChance>
 							<Commerces>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>
-							    <Adapt>
-							      <ID>ADAPT_DEFAULT</ID>
-							      <Constant>10</Constant>
-							    </Adapt>
-							  </iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>10</Constant>
+									</Adapt>
+								</iCommerce>
 							</Commerces>
 							<PromotionType>PROMOTION_EXPERIENCED_ARTIST</PromotionType>
 							<iReduceAnarchyLength>4</iReduceAnarchyLength>
@@ -52543,6 +52543,6 @@
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-		</UnitInfo>		
+		</UnitInfo>
 	</UnitInfos>
 </Civ4UnitInfos>

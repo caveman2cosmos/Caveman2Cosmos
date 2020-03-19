@@ -28362,7 +28362,7 @@
 				<BuildingType>BUILDING_SAFETY_ACHIEVEMENT</BuildingType>
 			</Buildings>
 			<PrereqTech>TECH_CALENDAR</PrereqTech>
-			<BonusType>BONUS_PHILISTINES</BonusType>
+			<BonusType>BONUS_PHILISTINE</BonusType>
 			<iCost>950</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>11</iCombat>
@@ -37658,7 +37658,7 @@
 				</GreatPeople>
 			</GreatPeoples>
 			<PrereqTech>TECH_HERALDRY</PrereqTech>
-			<BonusType>BONUS_XIONGU</BonusType>
+			<BonusType>BONUS_XIONGNU</BonusType>
 			<iCost>1300</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>16</iCombat>

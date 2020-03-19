@@ -1,9 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http:/www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Unit art path information -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Schema\Caveman2Cosmos.xsd">
 	<UnitArtInfos>
 		<UnitArtInfo>
@@ -222,7 +217,7 @@
 			<fInterfaceScale>0.9</fInterfaceScale>
 			<NIF>Art/Units/Animals/Bison/Bison.nif</NIF>
 			<KFM>Art/Units/Animals/Bison/Bison.kfm</KFM>
-			<SHADERNIF></SHADERNIF>
+			<SHADERNIF/>
 			<ShadowDef>
 				<ShadowNIF>Art/Units/01_UnitShadows/PantherShadow.nif</ShadowNIF>
 				<ShadowAttachNode>Spine</ShadowAttachNode>
@@ -3023,8 +3018,8 @@
 			<bActAsRanged>0</bActAsRanged>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 			<AudioRunSounds>
-				<AudioRunTypeLoop />
-				<AudioRunTypeEnd />
+				<AudioRunTypeLoop/>
+				<AudioRunTypeEnd/>
 			</AudioRunSounds>
 			<SelectionSound>AS3D_UN_HORSE</SelectionSound>
 			<ActionSound>AS3D_UN_HORSE</ActionSound>

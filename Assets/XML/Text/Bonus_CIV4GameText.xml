@@ -1702,6 +1702,12 @@
 		<Polish>Chorwacka</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_CRYSTAL_GLASSWARE</Tag>
+		<English>Crystal Glassware</English>
+		<French>Verrerie en cristal</French>
+		<Italian>Oggetti in cristallo</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_CUBAN</Tag>
 		<English>Cuban</English>
 		<French>Cubain</French>
@@ -2176,6 +2182,12 @@
 		<Italian>[SPACE](%s2_player esporta %d1_num_bonus)[SPACE]</Italian>
 		<Spanish>[SPACE](%s2_player está exportando %d1_num_bonus)[SPACE]</Spanish>
 		<Polish>[SPACE](%s2_player eksportuje %d1_num_bonus)[SPACE]</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_FAKE_GEMS</Tag>
+		<English>Fake Gems</English>
+		<French>Fausses Gemmes</French>
+		<Italian>Gemme finte</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_FATIMID</Tag>
@@ -2998,6 +3010,12 @@
 		<Italian>Una pelle trattata è una pelle di animale trattata per uso umano. Sebbene di solito provengano da grandi animali come mucche o bufali, può anche riferirsi a pelli di animali più piccoli, come capre, pecore, cervi, maiali, pesci, alligatori, serpenti, ecc. Tutti questi tipi di pelle sono usati per produrre scarpe, vestiti, borse, cinture e altri accessori, ma anche per tappezzerie e decorazioni d'interni o di automobili, finimenti per cavalli e imbracature. Talvolta, alcune pelli possono provenire da animali cacciati e lavorate a livello domestico o artigianale, ma la maggior parte della produzione di pelletteria è ora industrializzata e su larga scala.</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_HIERACOSPHINX</Tag>
+		<English>Hieracosphinx</English>
+		<French>Hiéracosphinx</French>
+		<Italian>Ieracosfinge</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_HIMYARITE</Tag>
 		<English>Himyarite</English>
 		<Italian>Himyarita</Italian>
@@ -3710,6 +3728,12 @@
 		<Italian>L'avorio è un materiale duro e bianco proveniente dalle zanne e dai denti degli animali, tradizionalmente elefanti, anche se il commercio di denti e zanne di altri animali è ben consolidato e diffuso; pertanto, "avorio" può essere correttamente utilizzato per descrivere eventuali denti o zanne di mammiferi di interesse commerciale che sono abbastanza grandi da poter essere scolpiti o lavorati. L'avorio è stato apprezzato fin dall'antichità nell'arte e per la realizzazione di una gamma di sculture in avorio, come denti finti, tasti di pianoforte, ventole, pedine del domino e tubi articolati. A partire dalla fine del XX secolo, il commercio nazionale e internazionale di avorio di specie minacciate è stato dichiarato illegale.</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_JACKALOPE</Tag>
+		<English>Jackalope</English>
+		<French>Jackalope</French>
+		<Italian>Jackalope</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_JADE</Tag>
 		<English>Jade</English>
 		<French>Jade</French>
@@ -4033,7 +4057,6 @@
 		<Tag>TXT_KEY_BONUS_LEAD_ORE_PEDIA</Tag>
 		<English>Lead, symbol Pb (Latin plumbum, a lead weight), dense, bluish-grey metallic element that was one of the first known metals. The atomic number of lead is 82; the element is in group 14 (or IVa) of the periodic table. Lead is used in enormous quantities in storage batteries and in sheathing electric cables. Large quantities are used in industry for lining pipes, tanks, and X-ray apparatus. Because of its high density and nuclear properties, lead is used extensively as protective shielding for radioactive material. Among numerous alloys containing a high percentage of lead are solder, type metal, and various bearing metals. A considerable amount of lead is consumed in the form of its compounds, particularly in paints and pigments. Lead has been used by humans for at least 7000 years, because it is widespread, easy to extract and easy to work with. It is highly malleable and ductile as well as easy to melt. In the early bronze age lead was used with antimony and arsenic. Lead was mentioned in the Book of Exodus. Alchemists thought that lead was the oldest metal and associated it with the planet Saturn. Lead pipes that bear the insignia of Roman emperors are still in service and many Roman "pigs" (ingots) of lead figure in Derbyshire lead mining history and in the history of the industry in other English centres. Lead's symbol Pb is an abbreviation of its Latin name plumbum. The English word "plumbing" also derives from this Latin root. However, it is also toxic, and lead poisoning was recognized even by the ancients. Similarly, in the Twentieth Century, the use of lead in paint pigments was ended because of the danger of lead poisoning, especially to children. By the mid-1980s, a significant shift in lead end-use patterns had taken place. Much of this shift was a result of the U.S. lead consumers' compliance with environmental regulations that significantly reduced or eliminated the use of lead in nonbattery products, including gasoline, paints, solders, and water systems. Recently, lead use is being further curtailed by the RoHS directive.</English>
 		<French>Plomb, Pb de symbole (plumbum latin, un poids de plomb), l'élément métallique dense et gris-bleuâtre qui était l'un des premiers métaux connus. Le nombre atomique de plomb est 82 ; l'élément est dans le groupe 14 (ou IVa) de la table périodique. Le plomb est employé en énorme quantité dans des batteries de stockage et en engainant les câbles électriques. De grandes quantités sont employées dans l'industrie pour des pipes de doublure, des réservoirs, et l'appareillage de rayon X. En raison de ses propriétés à haute densité et nucléaires, le plomb est employé intensivement comme l'armature protectrice pour le matériel radioactif. Parmi de nombreux alliages contenant un pourcentage élevé de plomb soyez soudure, type métal, et divers métaux de roulement. Une quantité considérable de plomb est consommée sous forme de ses composés, en particulier en peintures et colorants. Le plomb a été employé par des humains pendant au moins 7000 années, parce qu'il est répandu, facile d'extraire et facile à travailler avec. Il est fortement malléable et malléable comme facile à fondre. Dans l'âge en bronze jeune le plomb a été employé avec de l'antimoine et l'arsenic. Le plomb a été mentionné dans le livre de l'exode. Les alchimistes ont pensé que menez était le métal le plus ancien et associé lui à la planète Saturne. Menez les pipes qui soutiennent les insignes des empereurs romains sont toujours en service et beaucoup de "porcs" romains (des lingots) de chiffre de plomb en plomb de Derbyshire extrayant l'histoire et dans l'histoire de l'industrie à d'autres centres anglais. Le Pb du symbole du plomb est une abréviation de son plumbum nommé latin. Le mot anglais "tuyauterie" dérive également de cette racine latine. Cependant, il est également toxique, et l'empoisonnement de plomb a été identifié même par les ancients. De même, au vingtième siècle, l'utilisation du plomb en colorants de peinture a été finie en raison du danger du plomb empoisonnant, particulièrement aux enfants. Par le milieu des années 80, une variation significative dans l'usage final de plomb a modelé avait eu lieu. Beaucoup de ce décalage était un résultat de la conformité des consommateurs de plomb des ETATS-UNIS aux règlements environnementaux qui ont réduit ou ont éliminé de manière significative l'utilisation du plomb dans des produits de nonbattery, y compris l'essence, des peintures, des soudures, et des systèmes de l'eau. Récemment, l'utilisation de plomb est encore raccourcie par la directive de RoHS.</French>
-		<Italian>Cavo, Pb di simbolo (latino plumbum, un'unità di peso), elemento metallico denso e grigio bluastro che era uno dei primi metalli conosciuti. Il numero atomico del piombo è 82; l'elemento è nel gruppo 14 (o IVa) della tavola periodica. Il piombo è usato in quantità enorme in pile di accumulo e nell'inguainamento dei cavi elettrici. Le grandi quantità sono usate nell'industria per i tubi del rivestimento, i carri armati e le apparecchiature a raggi X. A causa delle relative proprietà ad alta densità e nucleari, il piombo è usato estesamente come protezione protettiva per materiale radioattivo. Fra le leghe numerose che contengono un'alta percentuale di piombo sia saldatura, lega per caratteri e vari metalli del cuscinetto. Una quantità considerevole di cavo è consumata sotto forma d'i relativi residui, specialmente in vernici e pigmenti. Il cavo è stato usato dagli esseri umani per almeno 7000 anni, perché è diffuso, facile da estrarre e facile funzionare con. È altamente malleabile e duttile come pure facile fondersi. Nell'età bronze giovane il cavo è stato usato con antimonio ed arsenico. Il cavo è stato accennato nel libro del exodus. Gli alchimisti hanno ritenuto che conduca fosse il più vecchio metallo ed associato esso con il pianeta Saturno. Conduca i tubi che sopportano i insignia degli imperatori romani sono ancora in servizio e molti "maiali" romani (lingotti) della figura del cavo in cavo del Derbyshire che estrae la storia e nella storia dell'industria in altri centri inglesi. Il Pb di simbolo del cavo è un'abbreviazione del relativo plumbum nome latino. La parola inglese "impianto idraulico" inoltre deriva da questa radice latina. Tuttavia, è inoltre tossica e l'avvelenamento da piombo era riconosciuto anche dagli antichi. Similmente, nel ventesimo secolo, l'uso di cavo in pigmenti della vernice è stato concluso a causa del pericolo di cavo che avvelena, particolarmente ai bambini. Entro i mid-1980s, una variazione significativa nell'uso finale del cavo ha modellato aveva avvenuto. Molto di questo spostamento era un risultato della conformità degli STATI UNITI dei consumatori del cavo alle regolazioni ambientali che significativamente hanno ridotto o eliminato l'uso di cavo nei prodotti di nonbattery, compreso benzina, in vernici, in saldature e nei sistemi dell'acqua. Recentemente, l'uso del cavo più ulteriormente sta accorciando dall'indirizzamento di RoHS.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LEAD_WARES</Tag>
@@ -4693,6 +4716,12 @@
 		<Tag>TXT_KEY_BONUS_MING</Tag>
 		<English>Ming</English>
 		<Italian>Ming</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_MING_VASE</Tag>
+		<English>Ming Vase</English>
+		<French>Vase Ming</French>
+		<Italian>Vaso Ming</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MINOAN</Tag>
@@ -5452,6 +5481,12 @@
 		<Italian>La torba è un accumulo di vegetazione parzialmente decomposta o di materia organica. La torba si forma in zone umide, dove inondazioni o acqua stagnante ostruiscono il flusso di ossigeno dall'atmosfera, rallentando il tasso di decomposizione. Una torbiera è il dissipatore di carbonio più efficiente del pianeta, perché le piante catturano l'anidride carbonica rilasciata naturalmente, mantenendo un equilibrio. Nel tempo, la formazione della torba è spesso il primo passo nella formazione geologica di combustibili fossili come il carbone, in particolare quello di bassa qualità come la lignite. La torba viene usata come importante fonte di combustibile in alcune parti del mondo.</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_PEGASUS</Tag>
+		<English>Pegasus</English>
+		<French>Pégase</French>
+		<Italian>Pegaso</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_PELTS</Tag>
 		<English>Pelts</English>
 		<French>Peaux</French>
@@ -5596,7 +5631,7 @@
 		<Polish>Lek - każda substancja, niezależnie od pochodzenia (naturalnego lub syntetycznego), nadająca się do bezpośredniego wprowadzania do organizmu w odpowiedniej postaci farmaceutycznej w celu osiągnięcia pożądanego efektu terapeutycznego, lub w celu zapobiegania chorobie, często podawana w ściśle określonej dawce. Lekiem jest substancja modyfikująca procesy fizjologiczne w taki sposób, że hamuje przyczyny lub objawy choroby, lub zapobiega jej rozwojowi. Określenie lek stosuje się też w stosunku do substancji stosowanych w celach diagnostycznych (np. metoklopramid w diagnostyce hiperprolaktynemii) oraz środków modyfikujących nie zmienione chorobowo funkcje organizmu (np. środki antykoncepcyjne).</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_PHILISTINES</Tag>
+		<Tag>TXT_KEY_BONUS_PHILISTINE</Tag>
 		<English>Philistines</English>
 		<Italian>Filisteo</Italian>
 	</TEXT>
@@ -5606,6 +5641,12 @@
 		<French>Phoenicien</French>
 		<Italian>Fenicio</Italian>
 		<Polish>Fenicka</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_PHOENIX</Tag>
+		<English>Phoenix</English>
+		<French>Phénix</French>
+		<Italian>Fenice</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PHONOGRAPHS</Tag>
@@ -5978,6 +6019,17 @@
 		<Italian>Qiang</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_QILIN</Tag>
+		<English>Qilin</English>
+		<French>Qilin</French>
+		<Italian>Qilin</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_QILIN_PEDIA</Tag>
+		<English>A qilin is a mythical chimerical creature known in Chinese and other East Asian cultures, said to appear with the imminent arrival or passing of a sage or illustrious ruler. Qilin generally have Chinese dragon-like features, most notably their heads, eyes with thick eyelashes, manes that always flow upward and beards. The body is fully or partially scaled and often shaped like an ox, deer, or horse. They are always shown with cloven hooves. Qilin are thought to be a symbol of luck, good omens, protection, prosperity, success, and longevity by the Chinese; they are also a symbol of fertility, and often depicted in decorations as bringing a baby to a family.</English>
+		<Italian>Un qilin è una creatura mitica chimerica, nota nelle culture cinese e dell'Asia orientale, che si dice appaia all'arrivo o al passaggio imminente di un sovrano saggio o illustre. Generalmente, i lineamenti di un qilin sono simili a quelli di un dragone cinese, in particolare la testa, gli occhi con ciglia folte, le criniere che scorrono sempre verso l'alto e la barba. Il corpo è completamente o parzialmente coperto da scaglie, spesso a forma di bue, cervo o cavallo, e hanno sempre gli zoccoli. Si pensa che un qilin sia un simbolo di fortuna, buoni auspici, protezione, prosperità, successo e longevità da parte dei cinesi; sono anche un simbolo di fertilità e spesso raffigurati nelle decorazioni mentre portano un bimbo a una famiglia.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_QIN</Tag>
 		<English>Qin</English>
 		<Italian>Qin</Italian>
@@ -6029,6 +6081,12 @@
 		<Italian>Querandi</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_QUETZALCOATL</Tag>
+		<English>Quetzalcoatl</English>
+		<French>Quetzalcoatl</French>
+		<Italian>Quetzalcoatl</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_QULLA</Tag>
 		<English>Qulla</English>
 		<Italian>Qulla</Italian>
@@ -6056,6 +6114,12 @@
 		<Tag>TXT_KEY_BONUS_RADIOS_PEDIA</Tag>
 		<English>A radio receiver, also known as radio, is an electronic device that receives radio waves and converts the information carried by them to a usable form. It is used with an antenna, that intercepts radio electromagnetic waves and converts them in such a way to allow the receiver to extract the desired information. The receiver uses electronic filters to separate the desired radio frequency signal from all the other signals picked up by the antenna, an electronic amplifier to increase the power of the signal for further processing, and finally recovers the desired information through demodulation. The most familiar type of radio receiver for most people is a broadcast radio receiver, which reproduces sound transmitted by radio broadcasting stations; however radio receivers are very widely used in televisions, cell phones, wireless modems and other components of communications, remote control, and wireless networking systems.</English>
 		<Italian>Un ricevitore radio, noto anche come radio, è un dispositivo elettronico che riceve le onde radio e converte le informazioni trasportate da loro in una forma utilizzabile. Viene utilizzato con un'antenna, che intercetta le onde radio elettromagnetiche e le converte in modo che il ricevitore possa estrarre le informazioni desiderate. Il ricevitore utilizza filtri elettronici per separare il segnale di radiofrequenza desiderato da tutti gli altri segnali raccolti dall'antenna, un amplificatore elettronico per aumentare la potenza del segnale per un'ulteriore elaborazione e infine recuperare le informazioni desiderate attraverso la demodulazione. Il tipo più familiare di ricevitore radio per la maggior parte delle persone è un ricevitore radio che riproduce il suono trasmesso dalle stazioni radio; tuttavia i radioricevitori sono ampiamente utilizzati in televisori, telefoni cellulari, modem wireless e altri componenti di sistemi di comunicazione, controllo remoto e rete wireless.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_RAINBOW_SERPENT</Tag>
+		<English>Rainbow Serpent</English>
+		<French>Serpent Arc-en-ciel</French>
+		<Italian>Serpente arcobaleno</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RAPA_NUI</Tag>
@@ -7266,6 +7330,12 @@
 		<Italian>La terracotta è una ceramica a base di argilla dal corpo poroso. La terracotta infornata non è a tenuta stagna, ma la brunitura superficiale del corpo prima della cottura può ridurne la porosità e uno strato di smalto può renderlo a tenuta stagna. È adatta per trasportare acqua in pressione sottoterra, per i vasi da giardino o per le decorazione di ambienti e per i contenitori di olio, le lampade a olio o i forni. La maggior parte degli altri usi, come stoviglie, tubazioni sanitarie o decorazione di edifici in ambienti freddi, richiede che la terracotta venga prima smaltata.</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_TERRA_SIGILLATA</Tag>
+		<English>Terra Sigillata</English>
+		<French>Céramique sigillée</French>
+		<Italian>Ceramica sigillata</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_TESSERACT</Tag>
 		<English>Tesseract</English>
 		<French>Tesseracte</French>
@@ -7868,6 +7938,17 @@
 		<Polish>Akratopega - woda podziemna, której mineralizacja wynosi 500-1000 mg/dm, a temperatura nie przekracza 20 C. W klasyfikacji wód ze względu na zawartość związków mineralnych znajduje się pomiędzy wodą słodką a mineralną. Produkowana jest w kilku rodzajach: silnie gazowana, gazowana, niegazowana, lekko gazowana oraz jako musująca Perlage.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_WATERPROOF_CEMENT</Tag>
+		<English>Waterproof Cement</English>
+		<French>Ciment imperméable</French>
+		<Italian>Cemento impermeabile</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_WATERPROOF_CEMENT_PEDIA</Tag>
+		<English>Waterproof cement is a composite material composed of fine and coarse aggregate bonded together with a fluid cement ("cement paste") that hardens over time, with the addition of crystalline admixtures during batching to lower permeability. The reaction takes place when exposed to water and un-hydrated cement particles to form insoluble needle-shaped crystals, which fill capillary pores and micro-cracks. The mixture can expect to self-seal as constant exposure to water will continuously initiate crystallization to ensure permanent waterproof protection.</English>
+		<Italian>Il cemento impermeabile è un materiale composito fatto da aggregato fine e grossolano unito con un cemento fluido ("pasta di cemento") che si indurisce nel tempo, con l'aggiunta di additivi cristallini durante il dosaggio per ridurre la permeabilità. La reazione ha luogo quando acqua e particelle di cemento non idratate entrano in contatto, formando cristalli insolubili a forma di ago, che riempiono i pori e le micro-crepe. La mistura di fatto si autosigilla, poiché l'esposizione costante all'acqua avvia continuamente la cristallizzazione per garantire una protezione impermeabile permanente.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_WAX</Tag>
 		<English>Wax</English>
 		<French>Cire</French>
@@ -8011,7 +8092,7 @@
 		<Italian>Xianbei</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_XIONGU</Tag>
+		<Tag>TXT_KEY_BONUS_XIONGNU</Tag>
 		<English>Xiongnu</English>
 		<Italian>Xiongnu</Italian>
 	</TEXT>

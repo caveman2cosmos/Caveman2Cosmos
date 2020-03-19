@@ -1,12 +1,4 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by Soren Johnson (Firaxis Games) -->
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-<!-- edited with UEStudio '05 Development Environment Version 05.004b+4 (http://www.ultraedit.com) by Robert Thomas (Consultant) -->
-<!-- Sid Meier's Civilization 4: Beyond the Sword -->
-<!-- Copyright Firaxis Games 2006 -->
-<!-- ReModified by StrategyOnly -->
-<!-- -->
-<!-- Event Trigger Infos -->
 <Civ4EventTriggerInfos xmlns="x-schema:../Schema/C2C_CIV4EventSchema.xml">
 	<EventTriggerInfos>
 		<EventTriggerInfo>
@@ -10297,33 +10289,33 @@
 			<bShowPlot>0</bShowPlot>
 			<EventArt>Art/Event_Images/musicofgods.dds</EventArt>
 	</EventTriggerInfo>
-        <EventTriggerInfo>
-           <Type>EVENTTRIGGER_VOLCANO_ERUPTION_EXTINCT</Type>
-           <TriggerTexts>
-               <TriggerText>
-                   <Text>TXT_KEY_EVENT_TRIGGER_VOLCANO_EXTINCT</Text>
-               </TriggerText>
-           </TriggerTexts>
-           <iPercentGamesActive>100</iPercentGamesActive>
-           <iWeight>20</iWeight>
-           <iMaxOurLandmass>-1</iMaxOurLandmass>
-           <iNumPlotsRequired>1</iNumPlotsRequired>
-           <TerrainsRequired>
-               <TerrainType>TERRAIN_ROCKY</TerrainType>
-               <TerrainType>TERRAIN_BADLAND</TerrainType>
-               <TerrainType>TERRAIN_JAGGED</TerrainType>
-           </TerrainsRequired>
-           <BonusesRequired>
-               <BonusType>BONUS_OBSIDIAN</BonusType>
-               <BonusType>BONUS_SULPHUR</BonusType>
-           </BonusesRequired>
-           <Events>
-               <Event>EVENT_VOLCANO_ERUPTION_1</Event>
-           </Events>
-           <bRecurring>1</bRecurring>
-           <PythonCanDo>canDoNewVolcano</PythonCanDo>
-           <PythonCallback>doVolcanoNewEruption</PythonCallback>
-       </EventTriggerInfo>
+	<EventTriggerInfo>
+		<Type>EVENTTRIGGER_VOLCANO_ERUPTION_EXTINCT</Type>
+		<TriggerTexts>
+			<TriggerText>
+				<Text>TXT_KEY_EVENT_TRIGGER_VOLCANO_EXTINCT</Text>
+			</TriggerText>
+		</TriggerTexts>
+		<iPercentGamesActive>100</iPercentGamesActive>
+		<iWeight>20</iWeight>
+		<iMaxOurLandmass>-1</iMaxOurLandmass>
+		<iNumPlotsRequired>1</iNumPlotsRequired>
+		<TerrainsRequired>
+			<TerrainType>TERRAIN_ROCKY</TerrainType>
+			<TerrainType>TERRAIN_BADLAND</TerrainType>
+			<TerrainType>TERRAIN_JAGGED</TerrainType>
+		</TerrainsRequired>
+		<BonusesRequired>
+			<BonusType>BONUS_OBSIDIAN</BonusType>
+			<BonusType>BONUS_SULPHUR</BonusType>
+		</BonusesRequired>
+		<Events>
+			<Event>EVENT_VOLCANO_ERUPTION_1</Event>
+		</Events>
+		<bRecurring>1</bRecurring>
+		<PythonCanDo>canDoNewVolcano</PythonCanDo>
+		<PythonCallback>doVolcanoNewEruption</PythonCallback>
+	</EventTriggerInfo>
 	<EventTriggerInfo>
 			<Type>EVENTTRIGGER_VOLCANO_ERUPTION_NEW</Type>
 			<TriggerTexts>

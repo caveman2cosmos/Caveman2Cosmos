@@ -5665,7 +5665,7 @@
 			<Type>EVENT_HARDY_CROPS_1</Type>
 			<Description>TXT_KEY_EVENT_HARDY_CROPS_1</Description>
 			<PlotExtraYields>
-	            		<PlotExtraYield>
+				<PlotExtraYield>
 					 <YieldType>YIELD_FOOD</YieldType>
 					 <iExtraYield>2</iExtraYield>
 				</PlotExtraYield>
