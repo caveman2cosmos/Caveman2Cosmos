@@ -27567,7 +27567,6 @@
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/totem_sky.dds</Button>
 		</BuildingArtInfo>
-
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_STONE_MYTH</Type>
 			<LSystem/>
@@ -27588,7 +27587,6 @@
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/totem_stone.dds</Button>
 		</BuildingArtInfo>
-
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BUFFALO_HERD</Type>
 			<LSystem/>
@@ -28449,7 +28447,7 @@
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/ForeignPolicyWonder.dds</Button>
 		</BuildingArtInfo>
- <BuildingArtInfo>
+		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_DEPARTMENT_FOREIGN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>

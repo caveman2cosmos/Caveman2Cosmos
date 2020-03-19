@@ -1,7 +1,6 @@
-<?xml version="1.0"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4BuildingInfos xmlns="x-schema:../Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
-		<!-- Active Culture -->
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_ACTIVE_AFRICAN</Type>
 			<Description>TXT_KEY_BUILDING_CULTURE_ACTIVE_AFRICAN</Description>
@@ -7050,7 +7049,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-		</BuildingInfo>		
+		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Ottoman) -->
 			<Type>BUILDING_OTTOMAN_EMBASSY</Type>
@@ -7104,7 +7103,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-		</BuildingInfo>		
+		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Pakistani) -->
 			<Type>BUILDING_PAKISTANI_EMBASSY</Type>

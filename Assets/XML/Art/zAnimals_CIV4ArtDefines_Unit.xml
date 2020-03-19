@@ -149,7 +149,7 @@
 		</UnitArtInfo>
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_BEAR</Type>
-        		<Button>Art/Interface/Buttons/Units/Bear.dds</Button>
+			<Button>Art/Interface/Buttons/Units/Bear.dds</Button>
 			<fScale>0.6</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Units/Bear/Bear.nif</NIF>

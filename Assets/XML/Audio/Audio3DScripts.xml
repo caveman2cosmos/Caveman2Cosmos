@@ -23896,7 +23896,7 @@
 		<fMaxWetLevel>0.5</fMaxWetLevel>
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script3DSound>
-     <Script3DSound>
+	<Script3DSound>
 		<ScriptID>AS3D_UN_ELEPHANT</ScriptID>
 		<SoundID>SND_ELEPHANT</SoundID>
 		<SoundType>GAME_SFX</SoundType>
@@ -23925,7 +23925,7 @@
 		<fMaxWetLevel>0.5</fMaxWetLevel>
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script3DSound>
-    <Script3DSound>
+	<Script3DSound>
 		<ScriptID>AS3D_UN_GORILLA</ScriptID>
 		<SoundID>SND_GORILLA</SoundID>
 		<SoundType>GAME_SFX</SoundType>
@@ -23954,7 +23954,7 @@
 		<fMaxWetLevel>0.5</fMaxWetLevel>
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script3DSound>
-    <Script3DSound>
+	<Script3DSound>
 		<ScriptID>AS3D_UN_HAWK</ScriptID>
 		<SoundID>SND_HAWK</SoundID>
 		<SoundType>GAME_SFX</SoundType>
@@ -24418,7 +24418,7 @@
 		<fMaxWetLevel>0.5</fMaxWetLevel>
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script3DSound>
-        <Script3DSound>
+	<Script3DSound>
 		<ScriptID>AS3D_UN_SPIDER</ScriptID>
 		<SoundID>SND_SPIDER</SoundID>
 		<SoundType>GAME_SFX</SoundType>
@@ -24447,7 +24447,7 @@
 		<fMaxWetLevel>0.5</fMaxWetLevel>
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script3DSound>
-        <Script3DSound>
+	<Script3DSound>
 		<ScriptID>AS3D_UN_SPIDERSILK</ScriptID>
 		<SoundID>SND_SPIDERSILK</SoundID>
 		<SoundType>GAME_SFX</SoundType>

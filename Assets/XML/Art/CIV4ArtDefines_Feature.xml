@@ -610,7 +610,7 @@
 				<bGenerateRotations>0</bGenerateRotations>
 				<VarietyButton>Art/Interface/Buttons/terrainfeatures/coral.dds</VarietyButton>
 			</FeatureVariety>
-		</FeatureArtInfo>		
+		</FeatureArtInfo>
 		<FeatureArtInfo>
 			<Type>ART_DEF_FEATURE_CRATER</Type>
 			<bAnimated>0</bAnimated>

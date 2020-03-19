@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
-<!--
-	Unit Naming
-	by Ruff_Hi
-
-	Copyright (c) 2008 The BUG Mod.
--->
 <mod id="UnitNaming" name="Unit Naming" author="Ruff_Hi" version="1.0" date="09/02/2007" url="http://forums.civfanatics.com/showthread.php?t=241801">
-
 	<options id="UnitNaming" file="Unit Naming.ini">
 		<section id="UnitName">
 			<option id="Enabled" key="Enabled" type="boolean" default="True"/>
 			<option id="UseAdvanced" key="UseAdvanced" type="boolean" default="False" get="isAdvanced" set="setAdvanced"/>
 			<option id="Default" key="Default" type="string" default="^ut^ ^cnt[n][u]^ (^ct^)"/>
-
 			<option id="Combat_None" key="CombatNone" type="string" default="DEFAULT"/>
 			<option id="Combat_AIR" key="CombatAIR" type="string" default="DEFAULT"/>
 			<option id="Combat_ARCHER" key="CombatARCHER" type="string" default="DEFAULT"/>
@@ -885,17 +877,14 @@
 			<option id="Combat_SPACE_WORKER" key="CombatSPACE_WORKER" type="string" default="DEFAULT"/>
 			<option id="Combat_RECKLESS_ANIMALS" key="CombatRECKLESS_ANIMALS" type="string" default="DEFAULT"/>
 			<option id="Combat_COSTLESS" key="CombatCOSTLESS" type="string" default="DEFAULT"/>
-
 			<accessor get="getByCombatType" set="setByCombatType" args="combatType" id="Combat_%s"/>
 		</section>
 	</options>
-
 	<options id="AdvUnitNaming" file="Adv Unit Naming.ini">
 		<section id="UnitName">
 			<option id="ByEraAndType" key="%s_%s" args="era, type" type="string" default="DEFAULT"/>
 		</section>
 	</options>
-
 	<events module="UnitNameEventManager">
 		<!--arg type="key" value="Alt Ctrl N"/-->
 	</events>

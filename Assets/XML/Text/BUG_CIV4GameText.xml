@@ -6231,7 +6231,6 @@
 		<English>Plot distance between capitals that qualifies another civ as a local neighbour to the emerging civ.
 The other civ must have a city on the same landmass as the emerging civ for it to be considered a neighbour.
 Civs emerging from barbarians adapt to their local neighbours in many different ways, e.g. tech level.
-
 A low value will make each such civ generation more generic.
 A high value can impact performance slightly, especially on large maps.
 The value set here is the value used for a 'Duel' world size.
@@ -24121,90 +24120,53 @@ The value is multiplied by 15 on a 'Gigantic' world sized map.</English>
 	<TEXT>
 		<Tag>TXT_KEY_BUG_OPT_UNITNAMING__DEFAULT_HOVER</Tag>
 		<English>Enter the user defined naming convention (see help file for further information). Names can
-
 be built from plain text and format codes that appear between matching carets (^).[NEWLINE][ICON_BULLET]e.g.
-
 "^cv^ ^ut^ from ^ct^" --&gt; "American Archer from Boston"[NEWLINE][BOLD]General Codes[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]civ4[COLOR_REVERT]
-
 - Use built-in Civ4 names[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]rd[COLOR_REVERT] - Random name[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]rc[COLOR_REVERT]
-
 - Random civ-related name[NEWLINE][BOLD]Unit Info Codes[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ct[COLOR_REVERT]
-
 - City where unit was built (e.g. Boston)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cv[COLOR_REVERT]
-
 - Civilization that built the unit in adjective form (e.g. American)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ut[COLOR_REVERT]
-
 - Unit type (e.g. Archer)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cb[COLOR_REVERT] - Combat type
 (e.g.
 Melee)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]dm[COLOR_REVERT] - Domain type (e.g. Water)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ld[COLOR_REVERT]
-
 - Leader that built the unit (e.g. Roosevelt)[NEWLINE][BOLD]Counting Codes[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cnt[f][COLOR_REVERT]
-
 - Count across all units[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntu[f][COLOR_REVERT] - Count per
-
 unit type[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntct[f][COLOR_REVERT] - Count per city[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntuct[f][COLOR_REVERT]
-
 - Count per unit/city combination[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntc[f][COLOR_REVERT] -
-
 Count per combat type[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntd[f][COLOR_REVERT] - Count per domain[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]tt1[f][x:y][COLOR_REVERT]
-
 - Count up to a number chosen between x and y[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]tt1[f][x][COLOR_REVERT]
-
 - Count from x, incrementing each time tt1 code is reset[NEWLINE][NEWLINE]* f in [f] is one of s, A,
-
 a, p, g, n, o, r (see help file)</English>
 		<French>Entrez la convention des noms (voir le fichier d'aide pour plus d'information).[NEWLINE]Les
-
 noms sont construits avec du texte et des codets de format entre carets (^).[NEWLINE][ICON_BULLET]p.ex.
-
 "^ut^ ^cv^ de ^ct^" --&gt; "Archer Américain de Boston"[NEWLINE][BOLD]Codes Généraux[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]civ4[COLOR_REVERT]
-
 - Utilise les noms inclus dans Civ4[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]rd[COLOR_REVERT] - Nom
-
 aléatoire[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]rc[COLOR_REVERT] - Nom aléatoire spécifique à votre
-
 civilisation[NEWLINE][BOLD]Codes d'Information[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ct[COLOR_REVERT]
-
 - Ville ou l'unité a étée construite (p.ex. Boston)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cv[COLOR_REVERT]
-
 - Civilisation de l'unité (p.ex. Américain)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ut[COLOR_REVERT]
-
 - Type d'Unité (p.ex. Archer)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cb[COLOR_REVERT] - Type de
 Combat
 (p.ex. Melee)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]dm[COLOR_REVERT] - Type de Domaine (p.ex.
 Eau)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ld[COLOR_REVERT]
 - Dirigeant qui a construit l'unité
 (p.ex. Roosevelt)[NEWLINE][BOLD]Codes Numériques[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cnt[f][COLOR_REVERT]
-
 - Compte toutes les unités[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntu[f][COLOR_REVERT] - Compte
-
 toutes les unités d'un même type[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntct[f][COLOR_REVERT] -
-
 Compte les unités par ville[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntuct[f][COLOR_REVERT] - Compte
-
 par combination d'unité/ville[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntc[f][COLOR_REVERT] - Compte
-
 par type de combat[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntd[f][COLOR_REVERT] - Compte par domaine[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]tt1[f][x:y][COLOR_REVERT]
-
 - Compte entre x et y[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]tt1[f][x][COLOR_REVERT] - Compte à
 partir
 de x[NEWLINE][NEWLINE]* f dans [f] est égal à s, A, a, p, g, n, o ou r (voir fichier d'aide)</French>
 		<German>Eingabe der benutzerdefinierten Benennungsregel (siehe Hilfe-Datei für weitere Information).
-
 Die Benennung kann aus Klartext und Formatierungscodes zwischen zwei Zirkumflexen (^) bestehen:[NEWLINE][ICON_BULLET]z.B.
-
 "^cv^ ^ut^ aus ^ct^" --&gt; "Amerikanischer Bogenschütze aus Boston"[NEWLINE][BOLD]Allgemeine Codes[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]civ4[COLOR_REVERT]
-
 - Standard Civ4-Namen verwenden[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]rd[COLOR_REVERT] - Zufälliger
-
 Name[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]rc[COLOR_REVERT] - Zufälliger zivilisationsbezogener
-
 Name[NEWLINE][BOLD]Codes für Einheiteninfos[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ct[COLOR_REVERT]
-
 - Name der Stadt, die eine Einheit aufgestellt hat (z.B. Boston)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cv[COLOR_REVERT]
-
 - Adjektiv der Zivilisation, die eine Einheit aufgestellt hat (z.B. amerikanisch)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ut[COLOR_REVERT]
-
 - Einheitentyp (z.B. Bogenschütze)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cb[COLOR_REVERT] -
 Einheitenklasse
 (z.B. Nahkampf)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]dm[COLOR_REVERT] - Einsatzgebiet
@@ -24212,64 +24174,40 @@ einer Einheit
 (z.B. Wasser)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ld[COLOR_REVERT] - Name des Oberhaupts,
 das
 eine Einheit aufgestellt hat (z.B. Roosevelt)[NEWLINE][BOLD]Nummerierungscodes[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cnt[f][COLOR_REVERT]
-
 - Nummerierung über alle Einheiten[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntu[f][COLOR_REVERT]
-
 - Nummerierung über alle Einheiten gleichen Typs[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntct[f][COLOR_REVERT]
-
 - Nummerierung pro Stadt[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntuct[f][COLOR_REVERT] - Nummerierung
-
 pro Einheitentyp/Stadt in Kombination[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntc[f][COLOR_REVERT]
-
 - Nummerierung pro Einheitenklasse[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntd[f][COLOR_REVERT]
 -
 Nummerierung pro Einsatzgebiet einer Einheit[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]tt1[f][x:y][COLOR_REVERT]
-
 - Nummerierung mit einer festgelegten Zahl zwischen x und y[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]tt2[f][x][COLOR_REVERT]
-
 - Nummerierung beginnt mit x und wächst jedes Mal an, wenn der Code tt auf 1 zurückgesetzt
 wird[NEWLINE][NEWLINE]*
 f in [f] kann auch s, A, a, p, g, n, o, r sein (siehe Hilfe-Datei)</German>
 		<Italian>Inserisci la tua convenzione di denominazione personalizzata[NEWLINE][BOLD]Codici generici[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]civ4[COLOR_REVERT]
-
 - usa i nomi standard di Civ4:BtS;[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]rd[COLOR_REVERT] - nome
-
 casuale[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]rc[COLOR_REVERT] - nome casuale relativo alla Civiltà[NEWLINE][BOLD]Codici
-
 informativi[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ct[COLOR_REVERT] - Città dove l'Unità
-
 è stata costruita (ad es. Boston)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cv[COLOR_REVERT] -
 aggettivo
 della Civiltà che ha costruito l'Unità (ad es. Americano)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ut[COLOR_REVERT]
-
 - tipo di Unità (ad es. Arciere)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cb[COLOR_REVERT] - tipologia
-
 di combattimento dell'Unità (ad es. A distanza)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]dm[COLOR_REVERT]
-
 - dominio dell'Unità (ad esempio Acqua)[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]ld[COLOR_REVERT]
-
 - leader che ha costruito l'Unità (ad esempio Roosevelt)[NEWLINE][BOLD]Codici di conteggio[\BOLD][NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cnt[f][COLOR_REVERT]
-
 - conta su tutte le Unità[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntu[f][COLOR_REVERT] - conta
 su
 tutte le Unità dello stesso tipo[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntct[f][COLOR_REVERT]
 -
 conta su tutte le Unità prodotte nella stessa Città[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntuct[f][COLOR_REVERT]
-
 - conta su tutte le Unità dello stesso tipo e prodotte nella stessa Città[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntc[f][COLOR_REVERT]
-
 - conta su tutte le Unità della stessa tipologia di combattimento[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]cntd[f][COLOR_REVERT]
-
 - conta su tutte le Unità dello stesso dominio [NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]tt1[f][x:y][COLOR_REVERT]
-
 - conta fino ad un numero casuale scelto fra x ed y[NEWLINE][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]tt1[f][x][COLOR_REVERT]
-
 - conta a partire da x, incrementandosi di 1 ogni volta che il codice tt1 viene resettato[NEWLINE][NEWLINE]*
-
 f in [f] è uno fra s (assente), A (lettera maiuscola), a (lettera minuscola), p (lettera fonetica),
-
 g (lettera greca), n (numero cardinale), o (numero ordinale), r (numero romano).[NEWLINE]Vedi il file
-
 di aiuto per maggiori dettagli.</Italian>
 		<Spanish>Introduce la nomenclatura que desees para nombrar a las unidades por defecto (véase el fichero
 de ayuda para más información). Los nombres se pueden construir a partir de texto plano y códigos de
