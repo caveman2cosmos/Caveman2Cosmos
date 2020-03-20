@@ -19,6 +19,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CAODAI_CATHEDRAL</ArtDefineTag>
 			<ReligionType>RELIGION_CAO_DAI</ReligionType>
 			<PrereqReligion>RELIGION_CAO_DAI</PrereqReligion>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>280</iCost>
 			<iConquestProb>0</iConquestProb>
@@ -81,6 +84,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CAODAI_MONASTERY</ArtDefineTag>
 			<ReligionType>RELIGION_CAO_DAI</ReligionType>
 			<PrereqReligion>RELIGION_CAO_DAI</PrereqReligion>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>216</iCost>
 			<iConquestProb>0</iConquestProb>
@@ -127,6 +133,9 @@
 			<HolyCity>RELIGION_CAO_DAI</HolyCity>
 			<ReligionType>RELIGION_CAO_DAI</ReligionType>
 			<GlobalReligionCommerce>RELIGION_CAO_DAI</GlobalReligionCommerce>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
@@ -167,6 +176,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CAODAI_TEMPLE</ArtDefineTag>
 			<ReligionType>RELIGION_CAO_DAI</ReligionType>
 			<PrereqReligion>RELIGION_CAO_DAI</PrereqReligion>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
 			<iConquestProb>0</iConquestProb>

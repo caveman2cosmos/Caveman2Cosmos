@@ -8,6 +8,9 @@
 			<Strategy>TXT_KEY_BUILDING_DUCK_FLOCKS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FLOCKS_OF_DUCK</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<iCost>-1</iCost>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
@@ -59,6 +62,9 @@
 			<Strategy>TXT_KEY_BUILDING_PEACOCK_FLOCKS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FLOCKS_OF_PEACOCK</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<iCost>-1</iCost>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
@@ -110,6 +116,9 @@
 			<Strategy>TXT_KEY_BUILDING_TURKEY_FLOCKS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FLOCKS_OF_TURKEY</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<iCost>-1</iCost>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>

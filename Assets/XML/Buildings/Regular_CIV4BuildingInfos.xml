@@ -106410,6 +106410,9 @@
 			<Strategy>TXT_KEY_BUILDING_NEGOTIATOR_HUT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NEGOTIATOR_HUT</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_NEGOTIATION</PrereqTech>
 			<iCost>146</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -106449,6 +106452,9 @@
 			<Strategy>TXT_KEY_BUILDING_AMBASSADOR_HOUSE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AMBASSADOR_HOUSE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_DIPLOMACY</PrereqTech>
 			<iCost>234</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -106501,6 +106507,9 @@
 			<Strategy>TXT_KEY_BUILDING_EMPORIUM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_EMPORIUM</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_DIPLOMACY</PrereqTech>
 			<iCost>234</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -106529,6 +106538,9 @@
 			<Strategy>TXT_KEY_BUILDING_LUXURY_FURNITURE_WORKSHOP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LUXURY_FURNITURE_WORKSHOP</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_FURNITURE_MAKING</PrereqTech>
 			<iCost>176</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -106613,6 +106625,9 @@
 			<Strategy>TXT_KEY_BUILDING_LYCEUM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LYCEUM</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
 			<iCost>252</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -106682,6 +106697,9 @@
 			<Strategy>TXT_KEY_BUILDING_ORGAN_HALL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ORGAN_HALL</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_ACOUSTICS</PrereqTech>
 			<iCost>380</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -106714,6 +106732,9 @@
 			<Strategy>TXT_KEY_BUILDING_TELESCREEN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TELESCREEN</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_MASS_SURVEILLANCE</PrereqTech>
 			<iCost>3385</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -107268,6 +107289,9 @@
 			<ConstructSound>AS2D_BUILD_GLASSMITH</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_ORNAMENTATION</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Bonus>BONUS_SAND</Bonus>

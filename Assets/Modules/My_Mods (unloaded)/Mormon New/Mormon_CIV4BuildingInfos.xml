@@ -13,7 +13,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MORMON_CATHEDRAL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MORMON_CATHEDRAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MORMON_CATHEDRAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MORMON_CATHEDRAL</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
 			<ReligionType>RELIGION_MORMON</ReligionType>
 			<PrereqReligion>RELIGION_MORMON</PrereqReligion>
 			<Bonus>BONUS_BOOKS</Bonus>
@@ -215,7 +215,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MORMON_MONASTERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MORMON_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MORMON_MONASTERY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MORMON_MONASTERY</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
 			<ReligionType>RELIGION_MORMON</ReligionType>
 			<StateReligion>RELIGION_MORMON</StateReligion>
 			<PrereqReligion>RELIGION_MORMON</PrereqReligion>
@@ -297,7 +297,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MORMON_SHRINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MORMON_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MORMON_SHRINE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MORMON_SHRINE</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
 			<HolyCity>RELIGION_MORMON</HolyCity>
 			<ReligionType>RELIGION_MORMON</ReligionType>
 			<GlobalReligionCommerce>RELIGION_MORMON</GlobalReligionCommerce>
@@ -366,7 +366,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MORMON_TEMPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MORMON_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MORMON_TEMPLE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MORMON_TEMPLE</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
 			<ReligionType>RELIGION_MORMON</ReligionType>
 			<PrereqReligion>RELIGION_MORMON</PrereqReligion>
 			<Bonus>BONUS_BOOKS</Bonus>
@@ -592,7 +592,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_SQUARE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TEMPLE_SQUARE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TEMPLE_SQUARE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_TEMPLE_SQUARE</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
 			<ReligionType>RELIGION_MORMON</ReligionType>
 			<PrereqReligion>RELIGION_MORMON</PrereqReligion>
 			<!-- PrereqTech>TECH_MORMON</PrereqTech -->
@@ -877,7 +877,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MISSIONARY_TRAINING_CENTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MISSIONARY_TRAINING_CENTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MISSIONARY_TRAINING_CENTER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MISSIONARY_TRAINING_CENTER</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
 			<ReligionType>RELIGION_MORMON</ReligionType>
 			<PrereqReligion>RELIGION_MORMON</PrereqReligion>
 			<ObsoleteTech>TECH_AUGMENTED_REALITY</ObsoleteTech>
@@ -970,7 +970,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_BISHOPS_STOREHOUSE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BISHOPS_STOREHOUSE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BISHOPS_STOREHOUSE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_BISHOPS_STOREHOUSE</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
 			<ReligionType>RELIGION_MORMON</ReligionType>
 			<PrereqReligion>RELIGION_MORMON</PrereqReligion>
 			<ObsoleteTech>TECH_ECOLOGICAL_ENGINEERING</ObsoleteTech>
@@ -1078,7 +1078,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_WELFARE_SQUARE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_WELFARE_SQUARE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_WELFARE_SQUARE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_WELFARE_SQUARE</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
 			<ReligionType>RELIGION_MORMON</ReligionType>
 			<PrereqReligion>RELIGION_MORMON</PrereqReligion>
 			<ObsoleteTech>TECH_ECOLOGICAL_ENGINEERING</ObsoleteTech>
@@ -1156,7 +1156,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MORMON_SEMINARY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MORMON_SEMINARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MORMON_SEMINARY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MORMON_SEMINARY</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
 			<ReligionType>RELIGION_MORMON</ReligionType>
 			<PrereqReligion>RELIGION_MORMON</PrereqReligion>
 			<ObsoleteTech>TECH_AUGMENTED_REALITY</ObsoleteTech>
