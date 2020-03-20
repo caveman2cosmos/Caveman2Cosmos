@@ -5628,6 +5628,9 @@
 			<!-- Noblegarden -->
 			<Type>BUILDING_NOBLEGARDEN</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NOBLEGARDEN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NOBLEGARDEN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NOBLEGARDEN_STRATEGY</Strategy>
@@ -8161,6 +8164,9 @@
 			<!-- Garden City -->
 			<Type>BUILDING_GARDEN_CITY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_GARDEN_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GARDEN_CITY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GARDEN_CITY_STRATEGY</Strategy>

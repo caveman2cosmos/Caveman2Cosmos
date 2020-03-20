@@ -13,7 +13,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_SIKH_CATHEDRAL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SIKH_CATHEDRAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SIKH_CATHEDRAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_SIKH_CATHEDRAL</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
 			<ReligionType>RELIGION_SIKHISM</ReligionType>
 			<PrereqReligion>RELIGION_SIKHISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
@@ -103,7 +103,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_SIKH_TEMPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SIKH_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SIKH_TEMPLE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_SIKH_TEMPLE</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
 			<ReligionType>RELIGION_SIKHISM</ReligionType>
 			<PrereqReligion>RELIGION_SIKHISM</PrereqReligion>
 			<Bonus>BONUS_BRICKS</Bonus>
@@ -177,7 +177,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_SIKH_SHRINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SIKH_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SIKH_SHRINE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_SIKH_SHRINE</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
 			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_SIKH</MovieDefineTag>
 			<HolyCity>RELIGION_SIKHISM</HolyCity>
 			<ReligionType>RELIGION_SIKHISM</ReligionType>

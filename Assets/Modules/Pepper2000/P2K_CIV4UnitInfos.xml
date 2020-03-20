@@ -6,145 +6,6 @@
 <!-- Unit Infos -->
 <Civ4UnitInfos xmlns="x-schema:../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
-		<!-- Map Category fix -->
- <!--	   <UnitInfo>
-			<Type>UNIT_TAMED_PANTHER</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_TAMED_LION</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_TAMED_CAMEL</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_TAMED_LLAMA</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_TAMED_DONKEY</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_TAMED_HORSE</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_TAMED_BISON</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_TAMED_BUFFALO</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_TAMED_CATTLE</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_TAMED_MUSKOX</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_TAMED_AARDVARK</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_TAMED_BOAR</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_TAMED_MAMMOTH</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_ORGANIC_INFANTRY</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_TAMED_DONKEY_PAIR</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_TAMED_HORSE_PAIR</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_TAMED_WOLF_PAIR</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_HASHISHIN</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_SHAOLINMK</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_GREAT_FARMER</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_TAMED_LIZARD</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_TAMED_SNAKE</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_ALBANIAN_JANISSARY</Type>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-		</UnitInfo>-->
 		<UnitInfo>
 			<Type>UNIT_CONSTRUCTION_SHIP</Type>
 			<Capture>UNIT_GATHERER</Capture>
@@ -1658,6 +1519,23 @@
 			<Type>UNIT_HYPER_BATTLECRUISER</Type>
 			<Combat>UNITCOMBAT_WORMHOLE_SPACESHIP</Combat>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_TITANIC</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_INTERSTELLAR</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_UNIVERSAL</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_DISTANT</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_HYPERSPACE</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_ATTACK_CITY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_HYPER_BATTLECRUISER</Description>
 			<Civilopedia>TXT_KEY_UNIT_HYPER_BATTLECRUISER_PEDIA</Civilopedia>
@@ -4149,6 +4027,23 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_MECHANICAL</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_MARTIAN</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_VENUSIAN</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_SOLAR_SYSTEM</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_JOVIAN</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_TITANIC</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_INTERSTELLAR</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_UNIVERSAL</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_DISTANT</MapCategoryType>
+				<MapCategoryType>MAPCATEGORY_HYPERSPACE</MapCategoryType>
+			</MapCategoryTypes>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>

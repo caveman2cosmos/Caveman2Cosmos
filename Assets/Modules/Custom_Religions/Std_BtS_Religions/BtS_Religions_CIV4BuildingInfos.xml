@@ -14,7 +14,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_CAVES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CAVES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CAVES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CAVES</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
 			<MovieDefineTag>ART_DEF_MOVIE_CAVES</MovieDefineTag>
 			<ReligionType>RELIGION_BUDDHISM</ReligionType>
 			<StateReligion>RELIGION_BUDDHISM</StateReligion>
@@ -92,7 +92,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_NARA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NARA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NARA</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_NARA</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
 			<MovieDefineTag>ART_DEF_MOVIE_NARA</MovieDefineTag>
 			<ReligionType>RELIGION_BUDDHISM</ReligionType>
 			<StateReligion>RELIGION_BUDDHISM</StateReligion>
@@ -162,7 +162,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_SAN_MARCOS_CATHEDRAL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SAN_MARCOS_CATHEDRAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MARCOS_CATHEDRAL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MARCOS_CATHEDRAL</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
 			<MovieDefineTag>ART_DEF_MOVIE_SAN_MARCOS_CATHEDRAL</MovieDefineTag>
 			<ReligionType>RELIGION_CHRISTIANITY</ReligionType>
 			<StateReligion>RELIGION_CHRISTIANITY</StateReligion>
@@ -256,7 +256,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_VATICAN_LIBRARY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_VATICAN_LIBRARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VATICAN_LIBRARY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_VATICAN_LIBRARY</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
 			<MovieDefineTag>ART_DEF_MOVIE_VATICAN_LIBRARY</MovieDefineTag>
 			<ReligionType>RELIGION_CHRISTIANITY</ReligionType>
 			<StateReligion>RELIGION_CHRISTIANITY</StateReligion>
@@ -337,7 +337,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_CONFUCIAN_SCHOOL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CONFUCIAN_SCHOOL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CONFUCIO</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_CONFUCIO</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
 			<MovieDefineTag>ART_DEF_MOVIE_CONFUCIO</MovieDefineTag>
 			<ReligionType>RELIGION_CONFUCIANISM</ReligionType>
 			<StateReligion>RELIGION_CONFUCIANISM</StateReligion>
@@ -436,7 +436,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_SOLOMON_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SOLOMON_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SOLOMON</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_SOLOMON</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
 			<MovieDefineTag>ART_DEF_MOVIE_SOLOMON</MovieDefineTag>
 			<ReligionType>RELIGION_JUDAISM</ReligionType>
 			<StateReligion>RELIGION_JUDAISM</StateReligion>
@@ -515,7 +515,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_AKSHARDHAM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_AKSHARDHAM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_AKSHARDHAM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_AKSHARDHAM</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
 			<MovieDefineTag>ART_DEF_MOVIE_AKSHARDHAM</MovieDefineTag>
 			<ReligionType>RELIGION_HINDUISM</ReligionType>
 			<StateReligion>RELIGION_HINDUISM</StateReligion>
@@ -598,7 +598,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_MEENAKSHI_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MEENAKSHI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MEENAKSHI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_MEENAKSHI</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
 			<MovieDefineTag>ART_DEF_MOVIE_MEENAKSHI</MovieDefineTag>
 			<ReligionType>RELIGION_HINDUISM</ReligionType>
 			<StateReligion>RELIGION_HINDUISM</StateReligion>
@@ -687,7 +687,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_BLUE_MOSQUE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BLUE_MOSQUE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ESTAMBUL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_ESTAMBUL</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
 			<MovieDefineTag>ART_DEF_MOVIE_ESTAMBUL</MovieDefineTag>
 			<ReligionType>RELIGION_ISLAM</ReligionType>
 			<StateReligion>RELIGION_ISLAM</StateReligion>
@@ -761,7 +761,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_DESERT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DESERT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DESERT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_DESERT</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
 			<MovieDefineTag>ART_DEF_MOVIE_DESERT</MovieDefineTag>
 			<ReligionType>RELIGION_ISLAM</ReligionType>
 			<StateReligion>RELIGION_ISLAM</StateReligion>
@@ -842,7 +842,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_SULTAN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SULTAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SULTAN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_SULTAN</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
 			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_KHARJITE</MovieDefineTag>
 			<ReligionType>RELIGION_ISLAM</ReligionType>
 			<StateReligion>RELIGION_ISLAM</StateReligion>
@@ -920,7 +920,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_QUANZHEN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_QUANZHEN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_QUANZHEN</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_QUANZHEN</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
 			<MovieDefineTag>ART_DEF_MOVIE_QUANZHEN</MovieDefineTag>
 			<ReligionType>RELIGION_TAOISM</ReligionType>
 			<StateReligion>RELIGION_TAOISM</StateReligion>
@@ -1014,7 +1014,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_WUDANG_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_WUDANG_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_WUDANG</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_WUDANG</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
 			<MovieDefineTag>ART_DEF_MOVIE_WUDANG</MovieDefineTag>
 			<ReligionType>RELIGION_TAOISM</ReligionType>
 			<StateReligion>RELIGION_TAOISM</StateReligion>

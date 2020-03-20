@@ -45,11 +45,9 @@ protected:
 public:
 
 	DllExport void setInitialItems();
-// BUG - MapFinder - start
+
 	bool canRegenerateMap() const; // Exposed to Python
 	DllExport void regenerateMap(); // Exposed to Python
-	bool takeJPEGScreenShot(std::string fileName) const; // Exposed to Python
-// BUG - MapFinder - end
 
 	DllExport void initDiplomacy();
 	void initFreeState();
