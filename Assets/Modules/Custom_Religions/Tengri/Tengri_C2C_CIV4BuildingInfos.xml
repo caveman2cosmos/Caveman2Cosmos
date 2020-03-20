@@ -12,7 +12,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_TENGRII_HORSE_BREEDER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TENGRII_HORSE_BREEDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TENGRII_HORSE_BREEDER</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_TENGRII_HORSE_BREEDER</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_TENGRIISM</ReligionType>
 			<StateReligion>RELIGION_TENGRIISM</StateReligion>
 			<PrereqReligion>RELIGION_TENGRIISM</PrereqReligion>

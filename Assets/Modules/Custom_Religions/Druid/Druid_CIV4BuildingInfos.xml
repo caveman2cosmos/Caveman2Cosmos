@@ -13,7 +13,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_CATHEDRAL2_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_CATHEDRAL2_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_CATHEDRAL2</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_CATHEDRAL2</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<bStateReligion>1</bStateReligion>
@@ -118,7 +121,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_CATHEDRAL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_CATHEDRAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_CATHEDRAL</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_CATHEDRAL</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<bStateReligion>1</bStateReligion>
@@ -180,7 +186,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<!--ObsoleteTech>TECH_MODERN_PHYSICS</ObsoleteTech-->
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
@@ -234,7 +243,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_WHEAT</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_WHEAT</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
@@ -266,7 +278,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_BARLEY</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_BARLEY</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
@@ -298,7 +313,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_CORN</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_CORN</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
@@ -330,7 +348,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_RICE</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_RICE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
@@ -362,7 +383,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_POTATO</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_POTATO</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
@@ -394,7 +418,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_SHRINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_SHRINE</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_SHRINE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_DRUID</MovieDefineTag>
 			<HolyCity>RELIGION_DRUIDIC_TRADITIONS</HolyCity>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
@@ -446,7 +473,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<iCost>68</iCost>
@@ -495,7 +525,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_WHEAT</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_WHEAT</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>18</iCost>
@@ -530,7 +563,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_BARLEY</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_BARLEY</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>18</iCost>
@@ -565,7 +601,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_CORN</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_CORN</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>18</iCost>
@@ -600,7 +639,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_RICE</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_RICE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>18</iCost>
@@ -635,7 +677,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_POTATO</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_POTATO</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>18</iCost>
@@ -670,7 +715,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_ALMOND</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_ALMOND</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
@@ -700,7 +748,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_ALMOND</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_ALMOND</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>18</iCost>
@@ -733,7 +784,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_APPLE</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_APPLE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
@@ -763,7 +817,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_APPLE</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_APPLE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>18</iCost>
@@ -796,7 +853,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_BANANA</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_BANANA</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
@@ -826,7 +886,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_BANANA</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_BANANA</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>18</iCost>
@@ -859,7 +922,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_COCONUT</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_COCONUT</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
@@ -889,7 +955,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_COCONUT</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_COCONUT</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>18</iCost>
@@ -922,7 +991,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_DATES</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_DATES</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
@@ -952,7 +1024,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_DATES</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_DATES</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>18</iCost>
@@ -985,7 +1060,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_FIG</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_FIG</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
@@ -1015,7 +1093,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_FIG</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_FIG</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>18</iCost>
@@ -1048,7 +1129,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_GRAPES</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_GRAPES</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
@@ -1078,7 +1162,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_GRAPES</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_GRAPES</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>18</iCost>
@@ -1111,7 +1198,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_GUAVA</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_GUAVA</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
@@ -1141,7 +1231,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_GUAVA</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_GUAVA</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>18</iCost>
@@ -1174,7 +1267,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_LEMON</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_LEMON</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
@@ -1204,7 +1300,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_LEMON</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_LEMON</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>18</iCost>
@@ -1237,7 +1336,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_MANGO</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_MANGO</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
@@ -1267,7 +1369,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_MANGO</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_MANGO</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>18</iCost>
@@ -1300,7 +1405,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_MELON</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_MELON</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
@@ -1330,7 +1438,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_MELON</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_MELON</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>18</iCost>
@@ -1363,7 +1474,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_MUSHROOMS</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_MUSHROOMS</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
@@ -1393,7 +1507,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_MUSHROOMS</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_MUSHROOMS</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>18</iCost>
@@ -1426,7 +1543,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_OLIVES</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_OLIVES</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
@@ -1456,7 +1576,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_OLIVES</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_OLIVES</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>18</iCost>
@@ -1489,7 +1612,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_PAPAYA</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_PAPAYA</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
@@ -1519,7 +1645,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_PAPAYA</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_PAPAYA</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>18</iCost>
@@ -1552,7 +1681,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_PISTACHIO</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_PISTACHIO</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
@@ -1582,7 +1714,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_PISTACHIO</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_PISTACHIO</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>18</iCost>
@@ -1615,7 +1750,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_POMEGRANATE</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_POMEGRANATE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
@@ -1645,7 +1783,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_POMEGRANATE</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_POMEGRANATE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>18</iCost>
@@ -1678,7 +1819,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_PRICKLY_PEAR</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_PRICKLY_PEAR</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
@@ -1708,7 +1852,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_PRICKLY_PEAR</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_PRICKLY_PEAR</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>18</iCost>
@@ -1741,7 +1888,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_PUMPKIN</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_PUMPKIN</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
@@ -1771,7 +1921,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_PUMPKIN</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_PUMPKIN</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>18</iCost>
@@ -1804,7 +1957,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_SQUASH</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_SQUASH</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
@@ -1834,7 +1990,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_SQUASH</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_SQUASH</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>18</iCost>
@@ -1867,7 +2026,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_MONASTERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_KAVA</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_MONASTERY_KAVA</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_DRUIDIC_TRADITIONS</ReligionType>
 			<StateReligion>RELIGION_DRUIDIC_TRADITIONS</StateReligion>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
@@ -1897,7 +2059,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_DRUID_TEMPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DRUID_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_KAVA</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_DRUID_TEMPLE_KAVA</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_DRUIDIC_TRADITIONS</PrereqReligion>
 			<!--ObsoleteTech>TECH_PHYSICS</ObsoleteTech-->
 			<iCost>18</iCost>

@@ -13,7 +13,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_HELLSMOUTH_SANCTUARY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HELLSMOUTH_SANCTUARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_HELLSMOUTH</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_HELLSMOUTH</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<MovieDefineTag>ART_DEF_MOVIE_HELLSMOUTH</MovieDefineTag>
 			<ReligionType>RELIGION_VOODOO</ReligionType>
 			<StateReligion>RELIGION_VOODOO</StateReligion>
@@ -71,7 +74,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_VOODOO_CATHEDRAL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_VOODOO_CATHEDRAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VOODOO_CATHEDRAL</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_VOODOO_CATHEDRAL</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_VOODOO</ReligionType>
 			<PrereqReligion>RELIGION_VOODOO</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
@@ -152,7 +158,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_VOODOO_MONASTERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_VOODOO_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VOODOO_MONASTERY</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_VOODOO_MONASTERY</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_VOODOO</ReligionType>
 			<PrereqReligion>RELIGION_VOODOO</PrereqReligion>
 			<PrereqBonuses>
@@ -206,7 +215,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_VOODOO_SHRINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CONFUCIAN_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VOODOO_SHRINE</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_VOODOO_SHRINE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_VOODOO</MovieDefineTag>
 			<HolyCity>RELIGION_VOODOO</HolyCity>
 			<ReligionType>RELIGION_VOODOO</ReligionType>
@@ -255,7 +267,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_VOODOO_TEMPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_VOODOO_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VOODOO_TEMPLE</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_VOODOO_TEMPLE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_VOODOO</ReligionType>
 			<PrereqReligion>RELIGION_VOODOO</PrereqReligion>
 			<PrereqBonuses>

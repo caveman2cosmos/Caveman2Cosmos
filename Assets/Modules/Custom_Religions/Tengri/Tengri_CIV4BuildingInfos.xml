@@ -13,7 +13,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_EJE_SONG_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_EJE_SONG_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_EJE_SONG</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_EJE_SONG</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_TENGRIISM</ReligionType>
 			<PrereqReligion>RELIGION_TENGRIISM</PrereqReligion>
 			<FreePromotion>PROMOTION_WIND_HORSE</FreePromotion>
@@ -72,7 +75,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_SHAMANS_YURTA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SHAMANS_YURTA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SHAMANS_YURTA</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_SHAMANS_YURTA</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_TENGRIISM</ReligionType>
 			<PrereqReligion>RELIGION_TENGRIISM</PrereqReligion>
 			<Bonus>BONUS_LEATHER</Bonus>
@@ -127,7 +133,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_KING_GESAR_SONG_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_KING_GESAR_SONG_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_KING_GESAR_SONG</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_KING_GESAR_SONG</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_TENGRIISM</ReligionType>
 			<StateReligion>RELIGION_TENGRIISM</StateReligion>
 			<PrereqReligion>RELIGION_TENGRIISM</PrereqReligion>
@@ -178,7 +187,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_TENGRI_SHRINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TENGRI_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TENGRI_SHRINE</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_TENGRI_SHRINE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<MovieDefineTag>ART_DEF_MOVIE_TENGRI_SHRINE</MovieDefineTag>
 			<HolyCity>RELIGION_TENGRIISM</HolyCity>
 			<ReligionType>RELIGION_TENGRIISM</ReligionType>
@@ -221,7 +233,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_TENGRI_SONG_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TENGRI_SONG_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TENGRI_SONG</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_TENGRI_SONG</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_TENGRIISM</ReligionType>
 			<StateReligion>RELIGION_TENGRIISM</StateReligion>
 			<PrereqReligion>RELIGION_TENGRIISM</PrereqReligion>
