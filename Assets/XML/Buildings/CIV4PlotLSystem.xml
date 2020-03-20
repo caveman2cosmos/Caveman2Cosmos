@@ -1,56 +1,40 @@
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- ReModified by StrategyOnly -->
-<!-- -->
-<!-- Plot L System -->
-<!-- -->
 <!-- When debugging LSystems, refer to Civ4/Logs/LSystem.log for help -->
-<!-- Attribute Overview
-
-     On specific art:	ONE artref is picked as long as it satisfies all the subconstraints below
-        Bonus
-        Improvement
-        Scalars:
-			bApplyRotation	- if set, the art will be rotated according to its cumulative rotation when placed
-			bZMode_Ground	- if set, the builder will try to force the art to not z-write nor z-test
-			bIsPartOfImprovement, bIsPartOfBonus - when provided once during a plot build on any placed artref, this will
-			                                       prevent the LSystem from falling back to a fixed placement alg
-
-	On nodes:
-		RegionTest			- if value is 1, then the node will be tested against cut regions when expanded
-							- if the value is 0 then this won't happen
-							- if value is 0NW then the node won't be region tested or water tested
-							- if the value is 1NW then the node will be region tested but won't be water tested
-
-     On productions:
-        Bonus			- can be multiple, if any met constraint met, then the production is expandable
-        Improvement		- as with bonus
-		Scalars:
-			bGoalOnly:1	- if true, then the production can only be expanded if we're in GOAL seek mode
-						- note, this does not prevent child nodes from being visited by DFS or BFS
-			bExtraGoalOnly:1	- same behavior as bGoalOnly, but when placing nodes defined by szExtra attributes on a goal artref
-
-		-->
+<!-- Attribute Overview -->
+<!-- On specific art: ONE artref is picked as long as it satisfies all the subconstraints below: 
+		* Bonus
+		* Improvement
+		* Scalars:
+					bApplyRotation	- if set, the art will be rotated according to its cumulative rotation when placed
+					bZMode_Ground	- if set, the builder will try to force the art to not z-write nor z-test
+					bIsPartOfImprovement, bIsPartOfBonus -	when provided once during a plot build on any placed artref,
+															this will prevent the LSystem from falling back to a fixed placement alg
+	 On nodes:
+		* RegionTest - if value is 1, then the node will be tested against cut regions when expanded
+					 - if value is 0, then this won't happen
+					 - if value is 0NW, then the node won't be region tested or water tested
+					 - if value is 1NW, then the node will be region tested but won't be water tested
+	 On productions:
+		* Bonus - can be multiple, if any met constraint met, then production is expandable
+		* Improvement - as with bonus
+		* Scalars:
+					bGoalOnly:1	-	if true, then the production can only be expanded if we're in GOAL seek mode
+									(NOTE: this does not prevent child nodes from being visited by DFS or BFS)
+					bExtraGoalOnly:1 - same behavior as bGoalOnly, but when placing nodes defined by szExtra attributes on a goal artref
+-->
 <LSystemInfos xmlns="x-schema:CIV4LSystemSchema.xml">
-	<!-- ******************************************************************************************** -->
-	<!-- Modders: this might help you understand what is going on ... -->
-	<!-- ******************************************************************************************** -->
+	<!-- Modders: this might help you understand what is going on -->
 	<Attribute Class="Scalar">bEnableLogging:0</Attribute>
 	<!-- Plots and Cities output a log of LSystem actions to LSystem.log if 1 -->
-	<!-- ******************************************************************************************** -->
 	<!-- Breakpoint and system-wide attributes : Debug builds only -->
-	<!-- ******************************************************************************************** -->
 	<Attribute Class="Scalar">szProductionBreakpoint:</Attribute>
 	<!-- when a production of this name is expanded, break -->
 	<Attribute Class="Scalar">szNodeBreakpoint:</Attribute>
-	<!-- when a node of this name is instantiated, break   -->
+	<!-- when a node of this name is instantiated, break -->
 	<LNode Name="Node_6x6">
 		<Width>6</Width>
 		<Height>6</Height>
 	</LNode>
-	<!-- ******************************************************************************************** -->
-	<!-- GLeaf 2x1                                               May collide with roads,rivers,cities -->
-	<!-- ******************************************************************************************** -->
+	<!-- GLeaf 2x1 - may collide with roads, rivers, cities -->
 	<LNode Name="GLeaf_2x1">
 		<Width>2</Width>
 		<Height>1</Height>
@@ -108,9 +92,7 @@
 			<Scale>0.5</Scale>
 		</ArtRef>
 	</LNode>
-	<!-- ******************************************************************************************** -->
-	<!-- GLeaf 2x2                                               May collide with roads,rivers,cities -->
-	<!-- ******************************************************************************************** -->
+	<!-- GLeaf 2x2 - may collide with roads, rivers, cities -->
 	<LNode Name="GLeaf_2x2">
 		<Width>2</Width>
 		<Height>2</Height>
