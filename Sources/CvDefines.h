@@ -213,6 +213,6 @@
 /************************************************************************************************/
 
 // AlbertS2: Save file format version, can be use to make a new dll incompatible with older saves
-#define SAVE_FORMAT_VERSION	(2)
+#define SAVE_FORMAT_VERSION	(3)
 
 #endif	// CVDEFINES_H
