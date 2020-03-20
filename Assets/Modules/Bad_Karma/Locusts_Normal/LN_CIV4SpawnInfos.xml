@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Sid Meier's Civilization 4 -->
-<!-- -->
-<!-- Spawn Infos -->
+<!--
+<PlayerType> tag is now necessary to activate a spawn
+Valid NPC players for spawns:
+	40 = BARBARIAN_PLAYER
+	41 = NEANDERTHAL_PLAYER
+	42 = BEAST_PLAYER
+	43 = PREDATOR_PLAYER
+	44 = PREY_PLAYER
+	45 = INSECT_PLAYER
+	46 = NPC4_PLAYER
+	47 = NPC3_PLAYER
+	48 = NPC2_PLAYER
+	49 = NPC1_PLAYER
+	50 = NPC0_PLAYER
+
+ <iMaxLocalDensity> Range: 1-49
+	Based on an area of 49 plots, 3 plots out in all directions.
+	Plots that is not of the same area as the spawn plot is not counted.
+	iAreaPlots (1-49) / iMaxLocalDensity (1-49) = Max units inside the Area. (Min. 1)
+	Set it to 1 for a max. limit of 49 units inside the area.
+	Set it to 49 for a max. limit of 1 unit inside the area.
+-->
 <Civ4SpawnInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<SpawnInfos>
 		<SpawnInfo>
@@ -43,7 +62,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_LOCUST_LARGE_NATIVE</Type>
 			<UnitType>UNIT_LOCUST_LARGE_SWARM</UnitType>
-			<PlayerType>40</PlayerType>
+			<PlayerType>45</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>800</iTurns>
 			<iMaxLocalDensity>49</iMaxLocalDensity>
@@ -61,7 +80,7 @@
 		<SpawnInfo>
 			<Type>SPAWN_LOCUST_HUGE_NATIVE</Type>
 			<UnitType>UNIT_LOCUST_HUGE_SWARM</UnitType>
-			<PlayerType>40</PlayerType>
+			<PlayerType>45</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>1200</iTurns>
 			<iMaxLocalDensity>49</iMaxLocalDensity>

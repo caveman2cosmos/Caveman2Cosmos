@@ -18,7 +18,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_AUYANTEPUI_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_AUYANTEPUI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_AUYANTEPUI</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_AUYANTEPUI</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -109,7 +112,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_GREAT_BARRIER_REEF_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_GREAT_BARRIER_REEF_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_GREAT_BARRIER_REEF</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_GREAT_BARRIER_REEF</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -214,7 +220,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_MT_SINAI_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_MT_SINAI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_MT_SINAI</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_MT_SINAI</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -282,7 +291,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_MT_EVEREST_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_MT_EVEREST_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_MT_EVEREST</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_MT_EVEREST</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -378,7 +390,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_MT_FUJI_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_MT_FUJI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_MT_FUJI</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_MT_FUJI</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -452,7 +467,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_BAIKAL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_BAIKAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_BAIKAL</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_BAIKAL</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -533,7 +551,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_BARRINGER_CRATER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_BARRINGER_CRATER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_BARRINGER_CRATER</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_BARRINGER_CRATER</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -592,7 +613,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_BASALT_ORGAN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_BASALT_ORGAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_BASALT_ORGAN</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_BASALT_ORGAN</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -655,7 +679,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_DEVILS_TABLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_DEVILS_TABLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_DEVILS_TABLE</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_DEVILS_TABLE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -710,7 +737,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_SOPKA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_SOPKA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_SOPKA</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_SOPKA</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -774,7 +804,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_KRAKATOA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_KRAKATOA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_KRAKATOA</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_KRAKATOA</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -848,7 +881,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_NGORONGORO_CRATER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_NGORONGORO_CRATER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_NGORONGORO_CRATER</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_NGORONGORO_CRATER</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -936,7 +972,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_NUKUORO_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_NUKUORO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_NUKUORO</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_NUKUORO</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -996,7 +1035,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_PAMUKKALE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_PAMUKKALE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_PAMUKKALE</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_PAMUKKALE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -1068,7 +1110,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_PRAVCICKA_BRANA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_PRAVCICKA_BRANA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_PRAVCICKA_BRANA</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_PRAVCICKA_BRANA</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -1138,7 +1183,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_SHARK_BAY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_SHARK_BAY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_SHARK_BAY</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_SHARK_BAY</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -1230,7 +1278,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_SUGARLOAF_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_SUGARLOAF_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_SUGARLOAF</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_SUGARLOAF</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -1275,7 +1326,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_ULURU_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_ULURU_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_ULURU</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_ULURU</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -1350,7 +1404,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_VICTORIA_FALLS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_VICTORIA_FALLS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_VICTORIA_FALLS</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_VICTORIA_FALLS</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -1437,7 +1494,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_KILIMANJARO_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_KILIMANJARO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_KILIMANJARO</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_KILIMANJARO</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -1510,7 +1570,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_DEAD_SEA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_DEAD_SEA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_DEAD_SEA</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_DEAD_SEA</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -1601,7 +1664,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_LANDFORM_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_OASIS_MYTH</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_OASIS_MYTH</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<iCost>10</iCost>
 			<iAsset>2</iAsset>
 			<CommerceChanges>
@@ -1667,7 +1733,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_LANDFORM_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FALL_MYTH</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_FALL_MYTH</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<iCost>10</iCost>
 			<iAsset>2</iAsset>
 			<CommerceChanges>
@@ -1747,7 +1816,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_LANDFORM_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_OUTCROP_MYTH</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_OUTCROP_MYTH</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<iCost>10</iCost>
 			<iAsset>2</iAsset>
 			<CommerceChanges>
@@ -1895,7 +1967,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_LANDFORM_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VOLCANO_MYTH</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_VOLCANO_MYTH</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<iCost>10</iCost>
 			<iAsset>2</iAsset>
 			<CommerceChanges>
@@ -1975,7 +2050,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_LANDFORM_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CORAL_MYTH</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_CORAL_MYTH</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<iCost>10</iCost>
 			<iAsset>2</iAsset>
 			<CommerceChanges>
@@ -2063,7 +2141,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_LANDFORM_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_REEF_MYTH</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_REEF_MYTH</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<iCost>10</iCost>
 			<iAsset>2</iAsset>
 			<CommerceChanges>

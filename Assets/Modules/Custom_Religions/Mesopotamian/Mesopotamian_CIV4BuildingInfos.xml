@@ -13,7 +13,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_AN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_AN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_AN</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_AN</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<PrereqTech>TECH_PRIESTHOOD</PrereqTech>
@@ -78,7 +81,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_ENKI_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ENKI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ENKI</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_ENKI</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 			<StateReligion>RELIGION_MESOPOTAMISM</StateReligion>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
@@ -157,7 +163,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_ENLIL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ENLIL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ENLIL</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_ENLIL</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 			<StateReligion>RELIGION_MESOPOTAMISM</StateReligion>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
@@ -229,7 +238,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_INANNA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_INANNA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_INANNA</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_INANNA</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 			<StateReligion>RELIGION_MESOPOTAMISM</StateReligion>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
@@ -294,7 +306,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_KI_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_KI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_KI</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_KI</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 			<StateReligion>RELIGION_MESOPOTAMISM</StateReligion>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
@@ -359,7 +374,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_KI_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_KI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_KI_WHEAT</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_KI_WHEAT</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
@@ -396,7 +414,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_KI_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_KI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_KI_CORN</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_KI_CORN</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
@@ -433,7 +454,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_KI_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_KI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_KI_RICE</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_KI_RICE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
@@ -470,7 +494,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_KI_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_KI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_KI_POTATO</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_KI_POTATO</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
@@ -506,7 +533,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_TMESO_SHRINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MESO_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BABEL</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_BABEL</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<MovieDefineTag>ART_DEF_MOVIE_BABEL</MovieDefineTag>
 			<HolyCity>RELIGION_MESOPOTAMISM</HolyCity>
 			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>

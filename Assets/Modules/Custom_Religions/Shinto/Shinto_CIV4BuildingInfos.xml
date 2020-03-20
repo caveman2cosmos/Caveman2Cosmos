@@ -13,7 +13,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_SHINTO_TEMPLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SHINTO_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SHINTO_TEMPLE</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_SHINTO_TEMPLE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_SHINTO</ReligionType>
 			<PrereqReligion>RELIGION_SHINTO</PrereqReligion>
 			<PrereqBonuses>
@@ -72,7 +75,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_SHINTO_MONASTERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SHINTO_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SHINTO_MONASTERY</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_SHINTO_MONASTERY</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_SHINTO</ReligionType>
 			<PrereqReligion>RELIGION_SHINTO</PrereqReligion>
 			<Bonus>BONUS_PRIME_TIMBER</Bonus>
@@ -131,7 +137,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_SHINTO_CATHEDRAL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SHINTO_CATHEDRAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SHINTO_CATHEDRAL</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_SHINTO_CATHEDRAL</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_SHINTO</ReligionType>
 			<PrereqReligion>RELIGION_SHINTO</PrereqReligion>
 			<FreePromotion>PROMOTION_BUSHIDO</FreePromotion>
@@ -215,7 +224,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_SHINTO_SHRINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SHINTO_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SHINTO_SHRINE</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_SHINTO_SHRINE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_SHINTO</MovieDefineTag>
 			<HolyCity>RELIGION_SHINTO</HolyCity>
 			<ReligionType>RELIGION_SHINTO</ReligionType>
@@ -263,7 +275,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_MATSUMOTO_CASTLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MATSUMOTO_CASTLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MATSUMOTO_CASTLE</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_MATSUMOTO_CASTLE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<MovieDefineTag>ART_DEF_MOVIE_MATSUMOTO_CASTLE</MovieDefineTag>
 			<ReligionType>RELIGION_SHINTO</ReligionType>
 			<StateReligion>RELIGION_SHINTO</StateReligion>
@@ -322,7 +337,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_ITSUKUSHIMA_SHRINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ITSUKUSHIMA_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ITSUKUSHIMA_SHRINE</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_ITSUKUSHIMA_SHRINE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<MovieDefineTag>ART_DEF_MOVIE_ITSUKUSHIMA_SHRINE</MovieDefineTag>
 			<ReligionType>RELIGION_SHINTO</ReligionType>
 			<StateReligion>RELIGION_SHINTO</StateReligion>

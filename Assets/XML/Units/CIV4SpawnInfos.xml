@@ -1890,7 +1890,7 @@ Valid NPC players for spawns:
 		<SpawnInfo>
 			<Type>SPAWN_LOCUST_LARGE_NATIVE</Type>
 			<UnitType>UNIT_LOCUST_LARGE_SWARM</UnitType>
-			<PlayerType>40</PlayerType>
+			<PlayerType>45</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>800</iTurns>
 			<iMaxLocalDensity>49</iMaxLocalDensity>
@@ -1908,7 +1908,7 @@ Valid NPC players for spawns:
 		<SpawnInfo>
 			<Type>SPAWN_LOCUST_HUGE_NATIVE</Type>
 			<UnitType>UNIT_LOCUST_HUGE_SWARM</UnitType>
-			<PlayerType>40</PlayerType>
+			<PlayerType>45</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>1200</iTurns>
 			<iMaxLocalDensity>49</iMaxLocalDensity>

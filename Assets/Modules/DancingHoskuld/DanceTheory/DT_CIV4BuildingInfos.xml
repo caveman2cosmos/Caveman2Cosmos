@@ -9,7 +9,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_BIRD_DANCE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DANCE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BIRD_DANCE</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_BIRD_DANCE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<iCost>-1</iCost>
 			<iAsset>1</iAsset>
 			<iPower>1</iPower>
@@ -64,7 +67,10 @@
 			<Civilopedia>TXT_KEY_BUILDING_FOX_DANCE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DANCE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FOX_DANCE</ArtDefineTag>			<MapCategoryTypes>				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>			</MapCategoryTypes>
+			<ArtDefineTag>ART_DEF_BUILDING_FOX_DANCE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<iCost>-1</iCost>
 			<iAsset>1</iAsset>
 			<iPower>1</iPower>
