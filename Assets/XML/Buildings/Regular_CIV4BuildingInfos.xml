@@ -8548,7 +8548,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Bark Gatherer -->
-			<Type>BUILDING_BARK_GATHERER</Type>
+			<Type>BUILDING_GATHERER_BARK</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -8558,7 +8558,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_GATHERER_BARK_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GATHERER_BARK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BARK_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_BARK</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -13127,7 +13127,7 @@
 			<PrereqTech>TECH_HEAT_TREATMENT</PrereqTech>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_FIREPIT</BuildingType>
+					<BuildingType>BUILDING_FIRE_PIT</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
@@ -19534,7 +19534,7 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_FIREPIT</BuildingType>
+					<BuildingType>BUILDING_FIRE_PIT</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
@@ -37745,12 +37745,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Fire Pit -->
-			<Type>BUILDING_FIREPIT</Type>
+			<Type>BUILDING_FIRE_PIT</Type>
 			<Description>TXT_KEY_BUILDING_FIRE_PIT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FIRE_PIT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_FIRE_PIT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FIREPIT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_FIRE_PIT</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_TOTEM</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -81041,9 +81041,9 @@
 		<BuildingInfo>
 			<!-- Revivalist Church -->
 			<Type>BUILDING_REVIVALIST_CHURCH</Type>
-			<Description>TXT_KEY_BUILDING_REVIVALIST_CHURCH2</Description>
-			<Civilopedia>TXT_KEY_BUILDING_REVIVALIST_CHURCH2_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_REVIVALIST_CHURCH2_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_REVIVALIST_CHURCH</Description>
+			<Civilopedia>TXT_KEY_BUILDING_REVIVALIST_CHURCH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_REVIVALIST_CHURCH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_REVIVALIST_CHURCH</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -88173,7 +88173,7 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_FIREPIT</BuildingType>
+					<BuildingType>BUILDING_FIRE_PIT</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>

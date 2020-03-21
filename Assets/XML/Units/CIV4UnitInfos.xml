@@ -16,9 +16,6 @@ Base XP gained when defending
 			<Civilopedia>TXT_KEY_UNIT_BAND_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_BAND_STRATEGY</Strategy>
 			<Domain>DOMAIN_LAND</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_GALACTIC</MapCategoryType>
-			</MapCategoryTypes>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -65934,19 +65931,19 @@ iTradeMultiplier>3</iTradeMultiplier>
 			<iCost>-1</iCost>
 			<iMoves>3</iMoves>
 			<iCombat>4</iCombat>
-			<iXPValueAttack>8</iXPValueAttack>
-			<iXPValueDefense>4</iXPValueDefense>
+			<iXPValueAttack>1</iXPValueAttack>
+			<iXPValueDefense>2</iXPValueDefense>
 			<iCityAttack>-75</iCityAttack>
 			<iPursuit>30</iPursuit>
 			<iAnimalCombat>200</iAnimalCombat>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
+			<iAsset>2</iAsset>
+			<iPower>2</iPower>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -66029,19 +66026,19 @@ iTradeMultiplier>3</iTradeMultiplier>
 				<UnitType>UNIT_MASTER_RANGER</UnitType>
 			</UnitUpgrades>
 			<iCombat>5</iCombat>
-			<iXPValueAttack>8</iXPValueAttack>
-			<iXPValueDefense>4</iXPValueDefense>
+			<iXPValueAttack>1</iXPValueAttack>
+			<iXPValueDefense>2</iXPValueDefense>
 			<iCityAttack>-75</iCityAttack>
 			<iPursuit>40</iPursuit>
 			<iAnimalCombat>200</iAnimalCombat>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
+			<iAsset>3</iAsset>
+			<iPower>5</iPower>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -66131,19 +66128,19 @@ iTradeMultiplier>3</iTradeMultiplier>
 			<iCost>-1</iCost>
 			<iMoves>3</iMoves>
 			<iCombat>6</iCombat>
-			<iXPValueAttack>8</iXPValueAttack>
-			<iXPValueDefense>4</iXPValueDefense>
+			<iXPValueAttack>1</iXPValueAttack>
+			<iXPValueDefense>2</iXPValueDefense>
 			<iPursuit>60</iPursuit>
 			<iCityAttack>-75</iCityAttack>
 			<iAnimalCombat>325</iAnimalCombat>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
+			<iAsset>4</iAsset>
+			<iPower>8</iPower>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -66236,19 +66233,19 @@ iTradeMultiplier>3</iTradeMultiplier>
 			<iCost>-1</iCost>
 			<iMoves>3</iMoves>
 			<iCombat>8</iCombat>
-			<iXPValueAttack>8</iXPValueAttack>
-			<iXPValueDefense>4</iXPValueDefense>
+			<iXPValueAttack>1</iXPValueAttack>
+			<iXPValueDefense>2</iXPValueDefense>
 			<iPursuit>80</iPursuit>
 			<iCityAttack>-75</iCityAttack>
 			<iAnimalCombat>325</iAnimalCombat>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
+			<iAsset>6</iAsset>
+			<iPower>11</iPower>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -66345,19 +66342,19 @@ iTradeMultiplier>3</iTradeMultiplier>
 			<iCost>-1</iCost>
 			<iMoves>3</iMoves>
 			<iCombat>11</iCombat>
-			<iXPValueAttack>8</iXPValueAttack>
-			<iXPValueDefense>4</iXPValueDefense>
+			<iXPValueAttack>1</iXPValueAttack>
+			<iXPValueDefense>2</iXPValueDefense>
 			<iPursuit>60</iPursuit>
 			<iCityAttack>-75</iCityAttack>
 			<iAnimalCombat>325</iAnimalCombat>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
+			<iAsset>8</iAsset>
+			<iPower>16</iPower>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -66450,19 +66447,19 @@ iTradeMultiplier>3</iTradeMultiplier>
 			<iCost>-1</iCost>
 			<iMoves>4</iMoves>
 			<iCombat>16</iCombat>
-			<iXPValueAttack>8</iXPValueAttack>
-			<iXPValueDefense>4</iXPValueDefense>
+			<iXPValueAttack>1</iXPValueAttack>
+			<iXPValueDefense>2</iXPValueDefense>
 			<iPursuit>40</iPursuit>
 			<iCityAttack>-75</iCityAttack>
 			<iAnimalCombat>325</iAnimalCombat>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
+			<iAsset>10</iAsset>
+			<iPower>24</iPower>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -67127,7 +67124,6 @@ iTradeMultiplier>3</iTradeMultiplier>
 						<Outcome>
 							<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY</OutcomeType>
 							<iChance>100</iChance>
-							<PythonCallback/>
 							<PlotCondition>
 								<Is>TAG_OWNED</Is>
 							</PlotCondition>
@@ -67144,13 +67140,11 @@ iTradeMultiplier>3</iTradeMultiplier>
 										<Constant>2</Constant>
 									</Adapt>
 								</iYield>
-								<iYield>0</iYield>
 							</Yields>
 						</Outcome>
 						<Outcome>
 							<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY_BEST</OutcomeType>
 							<iChance>100</iChance>
-							<PythonCallback/>
 							<PlotCondition>
 								<Is>TAG_OWNED</Is>
 							</PlotCondition>
@@ -67167,7 +67161,6 @@ iTradeMultiplier>3</iTradeMultiplier>
 										<Constant>4</Constant>
 									</Adapt>
 								</iYield>
-								<iYield>0</iYield>
 							</Yields>
 						</Outcome>
 					</ActionOutcomes>
@@ -67755,7 +67748,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_PRODUCTION</BuildingType>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_COMMERCE</BuildingType>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_SANITATION</BuildingType>
-				<BuildingType>BUILDING_SLAVE_COMPOUND_CRIME_PREVENTION</BuildingType>	
+				<BuildingType>BUILDING_SLAVE_COMPOUND_CRIME_PREVENTION</BuildingType>
 				<BuildingType>BUILDING_WV_CANNIBALISM</BuildingType>
 				<BuildingType>BUILDING_WV_HUMAN_SACRIFICE</BuildingType>
 			</Buildings>

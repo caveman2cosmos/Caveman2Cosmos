@@ -653,7 +653,7 @@
 			<bGoldenAge>1</bGoldenAge>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_FIREPIT</BuildingType>
+					<BuildingType>BUILDING_FIRE_PIT</BuildingType>
 					<iProductionModifier>100</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
