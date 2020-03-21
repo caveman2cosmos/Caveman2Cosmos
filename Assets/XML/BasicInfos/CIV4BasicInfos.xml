@@ -3,6 +3,41 @@
 <Civ4BasicInfos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Schema\Caveman2Cosmos.xsd">
 	<ConceptInfos>
 		<ConceptInfo>
+			<Type>CONCEPT_AIR_COMBAT</Type>
+			<Description>TXT_KEY_CONCEPT_AIR_COMBAT</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_AIR_COMBAT_PEDIA_SR</Civilopedia>
+		</ConceptInfo>
+		<ConceptInfo>
+			<Type>CONCEPT_AIR_PROMOTIONS</Type>
+			<Description>TXT_KEY_CONCEPT_AIR_PROMOTIONS</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_AIR_PROMOTIONS_PEDIA</Civilopedia>
+		</ConceptInfo>
+		<ConceptInfo>
+			<Type>CONCEPT_AIR_UNITS</Type>
+			<Description>TXT_KEY_CONCEPT_AIR_UNITS</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_AIR_UNITS_PEDIA</Civilopedia>
+		</ConceptInfo>
+		<ConceptInfo>
+			<Type>CONCEPT_ANIMALS</Type>
+			<Description>TXT_KEY_CONCEPT_ANIMALS</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_ANIMALS_PEDIA</Civilopedia>
+		</ConceptInfo>
+		<ConceptInfo>
+			<Type>CONCEPT_APOSTOLIC_PALACE</Type>
+			<Description>TXT_KEY_CONCEPT_APOSTOLIC_PALACE</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_APOSTOLIC_PALACE_PEDIA</Civilopedia>
+		</ConceptInfo>
+		<ConceptInfo>
+			<Type>CONCEPT_BARBARIANS</Type>
+			<Description>TXT_KEY_CONCEPT_BARBARIANS</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_BARBARIANS_PEDIA</Civilopedia>
+		</ConceptInfo>
+		<ConceptInfo>
+			<Type>CONCEPT_BORDERS</Type>
+			<Description>TXT_KEY_CONCEPT_BORDERS</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_BORDERS_PEDIA</Civilopedia>
+		</ConceptInfo>
+		<ConceptInfo>
 			<Type>CONCEPT_BTS_BUILDINGS</Type>
 			<Description>TXT_KEY_BTS_BUILDINGS</Description>
 			<Civilopedia>TXT_KEY_BTS_BUILDINGS_PEDIA</Civilopedia>
@@ -41,41 +76,6 @@
 			<Type>CONCEPT_BTS_WONDERS</Type>
 			<Description>TXT_KEY_BTS_WONDERS</Description>
 			<Civilopedia>TXT_KEY_BTS_WONDERS_PEDIA</Civilopedia>
-		</ConceptInfo>
-		<ConceptInfo>
-			<Type>CONCEPT_AIR_COMBAT</Type>
-			<Description>TXT_KEY_CONCEPT_AIR_COMBAT</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_AIR_COMBAT_PEDIA_SR</Civilopedia>
-		</ConceptInfo>
-		<ConceptInfo>
-			<Type>CONCEPT_AIR_PROMOTIONS</Type>
-			<Description>TXT_KEY_CONCEPT_AIR_PROMOTIONS</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_AIR_PROMOTIONS_PEDIA</Civilopedia>
-		</ConceptInfo>
-		<ConceptInfo>
-			<Type>CONCEPT_AIR_UNITS</Type>
-			<Description>TXT_KEY_CONCEPT_AIR_UNITS</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_AIR_UNITS_PEDIA</Civilopedia>
-		</ConceptInfo>
-		<ConceptInfo>
-			<Type>CONCEPT_ANIMALS</Type>
-			<Description>TXT_KEY_CONCEPT_ANIMALS</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_ANIMALS_PEDIA</Civilopedia>
-		</ConceptInfo>
-		<ConceptInfo>
-			<Type>CONCEPT_APOSTOLIC_PALACE</Type>
-			<Description>TXT_KEY_CONCEPT_APOSTOLIC_PALACE</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_APOSTOLIC_PALACE_PEDIA</Civilopedia>
-		</ConceptInfo>
-		<ConceptInfo>
-			<Type>CONCEPT_BARBARIANS</Type>
-			<Description>TXT_KEY_CONCEPT_BARBARIANS</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_BARBARIANS_PEDIA</Civilopedia>
-		</ConceptInfo>
-		<ConceptInfo>
-			<Type>CONCEPT_BORDERS</Type>
-			<Description>TXT_KEY_CONCEPT_BORDERS</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_BORDERS_PEDIA</Civilopedia>
 		</ConceptInfo>
 		<ConceptInfo>
 			<Type>CONCEPT_BUILDINGS</Type>

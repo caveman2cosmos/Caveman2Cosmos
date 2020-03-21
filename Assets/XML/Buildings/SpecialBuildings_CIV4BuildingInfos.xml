@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4BuildingInfos xmlns="x-schema:../Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
@@ -27,7 +27,7 @@
 			<GlobalYieldModifiers>
 				<iYield>4</iYield>
 			</GlobalYieldModifiers>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<iGlobalHappiness>1</iGlobalHappiness>
 			<!-- Special properties -->
 			<bNukeImmune>1</bNukeImmune>
@@ -232,7 +232,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<iGlobalHealth>1</iGlobalHealth>
 			<!-- Misc. Effects -->
 			<FreeBuilding>BUILDING_ENVIRONMENTAL_ACHIEVEMENT_EFFECT</FreeBuilding>
@@ -301,7 +301,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<iGlobalHealth>2</iGlobalHealth>
 			<!-- Misc. Effects -->
 			<FreeBuilding>BUILDING_MEDICAL_ACHIEVEMENT_EFFECT</FreeBuilding>
@@ -436,7 +436,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
 			</GlobalCommerceModifiers>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<iGlobalHealth>1</iGlobalHealth>
 			<!-- Special properties -->
 			<bNukeImmune>1</bNukeImmune>
@@ -2612,7 +2612,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_INDUSTRIAL_LIFESTYLE</PrereqTech>
@@ -2673,7 +2673,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ATOMIC_LIFESTYLE</PrereqTech>
@@ -2731,7 +2731,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
@@ -2792,7 +2792,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NANOTECH_LIFESTYLE</PrereqTech>
@@ -2850,7 +2850,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRANSHUMAN_LIFESTYLE</PrereqTech>
@@ -2911,7 +2911,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GALACTIC_LIFESTYLE</PrereqTech>
@@ -2969,7 +2969,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COSMIC_LIFESTYLE</PrereqTech>
@@ -3030,7 +3030,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRANSCENDENT_LIFESTYLE</PrereqTech>
@@ -3087,7 +3087,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<!-- Construction cost -->
@@ -3144,7 +3144,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
@@ -3205,7 +3205,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CLASSICAL_LIFESTYLE</PrereqTech>
@@ -3263,7 +3263,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MEDIEVAL_LIFESTYLE</PrereqTech>
@@ -3324,7 +3324,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
@@ -3382,7 +3382,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_INDUSTRIAL_LIFESTYLE</PrereqTech>
@@ -3443,7 +3443,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ATOMIC_LIFESTYLE</PrereqTech>
@@ -3501,7 +3501,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
@@ -3562,7 +3562,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NANOTECH_LIFESTYLE</PrereqTech>
@@ -3620,7 +3620,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRANSHUMAN_LIFESTYLE</PrereqTech>
@@ -3681,7 +3681,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GALACTIC_LIFESTYLE</PrereqTech>
@@ -3739,7 +3739,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COSMIC_LIFESTYLE</PrereqTech>
@@ -3800,7 +3800,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRANSCENDENT_LIFESTYLE</PrereqTech>
@@ -5271,7 +5271,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_ANIMALABUSE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
@@ -5309,7 +5309,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_ARMEDCOMMUNITIES</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
@@ -5406,7 +5406,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_ASIMOV</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PERSONAL_ROBOTS</PrereqTech>
@@ -5443,7 +5443,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_BANKROBBERY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BANKING</PrereqTech>
@@ -5484,7 +5484,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_BLACKMARKETS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRADE</PrereqTech>
@@ -5538,7 +5538,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_BLACKMAIL</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CURRENCY</PrereqTech>
@@ -5579,7 +5579,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_BRIBERY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
@@ -5626,7 +5626,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_BURGLARY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MASONRY</PrereqTech>
@@ -5770,7 +5770,7 @@
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
 			<!-- Obsolescence -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
@@ -5818,7 +5818,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_CARTHEIFT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
@@ -5861,7 +5861,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_CHILDLABOR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LABOR_UNIONS</PrereqTech>
@@ -5904,7 +5904,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_CORRUPTION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
@@ -5954,7 +5954,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_COUNTERFEITING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_BANKING</PrereqTech>
@@ -5990,7 +5990,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_CYBERBULLYING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ONLINE_COMMUNITY</PrereqTech>
@@ -6015,7 +6015,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_CYBERWARFARE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CYBERWARFARE</PrereqTech>
@@ -6056,7 +6056,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_DOMESTICVIOLENCE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_WOMENS_SUFFRAGE</PrereqTech>
@@ -6089,7 +6089,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_DRUGCARTELS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POLITICAL_PHILOSOPHY</PrereqTech>
@@ -6110,7 +6110,7 @@
 					<iExperience>5</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<iGlobalHappiness>-1</iGlobalHappiness>
 			<!-- Special properties -->
 			<bNukeImmune>1</bNukeImmune>
@@ -6142,7 +6142,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_DRUGS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POLITICAL_PHILOSOPHY</PrereqTech>
@@ -6190,7 +6190,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_DRUNKDRIVING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
@@ -6224,7 +6224,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_ELDERABUSE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MODERN_HEALTH_CARE</PrereqTech>
@@ -6258,7 +6258,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_EMBEZZLEMENT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_USURY</PrereqTech>
@@ -6294,7 +6294,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_TOXICDUMPING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
@@ -6344,7 +6344,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_EXTORTION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_USURY</PrereqTech>
@@ -6385,7 +6385,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_FALSEACCUSATIONS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ORATORY</PrereqTech>
@@ -6417,7 +6417,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_FIGHTING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CONDUCT</PrereqTech>
@@ -6457,7 +6457,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_FORGERY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_WRITING</PrereqTech>
@@ -6490,7 +6490,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_GANGWARFARE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_URBAN_CULTURE</PrereqTech>
@@ -6541,7 +6541,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_GANGS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LABOR_UNIONS</PrereqTech>
@@ -6591,7 +6591,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_GENEFORGERY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GENETICS</PrereqTech>
@@ -6626,7 +6626,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_GRAFFITI</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
@@ -6679,7 +6679,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_GUNRAMPAGE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SEMI_AUTOMATIC_WEAPONS</PrereqTech>
@@ -6722,7 +6722,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_HACKING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PERSONAL_COMPUTERS</PrereqTech>
@@ -6760,7 +6760,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_HATECRIME</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MINORITY_RIGHTS</PrereqTech>
@@ -6805,7 +6805,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_HUMANTRAFFICKING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_EMANCIPATION</PrereqTech>
@@ -6857,7 +6857,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_IDENTITYTHEFT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PERSONAL_COMPUTERS</PrereqTech>
@@ -6895,7 +6895,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_BRAINWASHING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MIND_UPLOADING</PrereqTech>
@@ -6922,7 +6922,7 @@
 					<iExperience>1</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<iGlobalHappiness>-1</iGlobalHappiness>
 			<!-- Defense effects -->
 			<iEspionageDefense>-200</iEspionageDefense>
@@ -6950,7 +6950,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_ILLEGALIMMIGRATION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ALPHABET</PrereqTech>
@@ -7009,7 +7009,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_INSIDERTRADING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_STOCK_BROKERING</PrereqTech>
@@ -7050,7 +7050,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_INSUBORDINATION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
@@ -7078,7 +7078,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_INSURANCEFRAUD</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SOCIAL_CONTRACT</PrereqTech>
@@ -7114,7 +7114,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_INTERNETFRAUD</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FIBER_OPTICS</PrereqTech>
@@ -7150,7 +7150,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_KIDNAPPING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
@@ -7190,7 +7190,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_LITERING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MODERN_SANITATION</PrereqTech>
@@ -7231,7 +7231,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_LOOTING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
@@ -7290,7 +7290,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_LYING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_DECEPTION</PrereqTech>
@@ -7322,7 +7322,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_MALWARE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CLOUD_COMPUTING</PrereqTech>
@@ -7362,7 +7362,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_MEDICALFRAUD</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MODERN_HEALTH_CARE</PrereqTech>
@@ -7409,7 +7409,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_MILITARYDESERTION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MILITARY_TRAINING</PrereqTech>
@@ -7451,7 +7451,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_MONEYLAUNDERING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CORPORATION</PrereqTech>
@@ -7489,7 +7489,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_MUGGING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CONDUCT</PrereqTech>
@@ -7535,7 +7535,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_MURDER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Construction cost -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iCost>-1</iCost>
@@ -7578,7 +7578,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_EPIRACY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FIBER_OPTICS</PrereqTech>
@@ -7617,7 +7617,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_ORGANTRADE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MODERN_HEALTH_CARE</PrereqTech>
@@ -7658,7 +7658,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_MOB</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_AUTOMATIC_WEAPONS</PrereqTech>
@@ -7713,7 +7713,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_PICKPOCKET</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CURRENCY</PrereqTech>
@@ -7805,7 +7805,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_JAILBREAK</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CONSTITUTION</PrereqTech>
@@ -7870,7 +7870,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_PUBLICINTOXICATION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_FUNDAMENTALISM</PrereqTech>
@@ -7908,7 +7908,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_RACKETEERTING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LABOR_UNIONS</PrereqTech>
@@ -7955,7 +7955,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_RAPE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Construction cost -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iCost>-1</iCost>
@@ -7999,7 +7999,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_RIOTING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_JURISPRUDENCE</PrereqTech>
@@ -8052,7 +8052,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_SCHOOLSHOOTING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_URBAN_CULTURE</PrereqTech>
@@ -8087,7 +8087,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_SECTARIANVIOLENCE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PROPAGANDA</PrereqTech>
@@ -8108,7 +8108,7 @@
 					<iExperience>1</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<iGlobalHappiness>-1</iGlobalHappiness>
 			<!-- Special properties -->
 			<bNukeImmune>1</bNukeImmune>
@@ -8140,7 +8140,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_SEXUALHARASSMENT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_WOMENS_SUFFRAGE</PrereqTech>
@@ -8171,7 +8171,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_SHOPLIFTING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRADE</PrereqTech>
@@ -8291,7 +8291,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_SOLICITING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRADE</PrereqTech>
@@ -8316,7 +8316,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_SPORTSRIOTS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MODERN_SPORTS</PrereqTech>
@@ -8353,7 +8353,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_TAXEVASION</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_USURY</PrereqTech>
@@ -8383,7 +8383,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_TIMELINETAMPERING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TIME_TRAVEL</PrereqTech>
@@ -8397,7 +8397,7 @@
 				<iCommerce>-50</iCommerce>
 				<iCommerce>-50</iCommerce>
 			</CommerceModifiers>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<iGlobalHappiness>-1</iGlobalHappiness>
 			<iInsidiousness>100</iInsidiousness>
 			<UnitCombatFreeExperiences>
@@ -8432,7 +8432,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_TRESSPASSING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SURVEYING</PrereqTech>
@@ -8464,7 +8464,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_TRUANCY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COMPULSORY_EDUCATION</PrereqTech>
@@ -8498,7 +8498,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_UNLICENSEDCLONING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MAINSTREAM_CLONING</PrereqTech>
@@ -8532,7 +8532,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_VIGILANTISM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
@@ -8589,7 +8589,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_WEAPONSTRAFFICKING</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_AUTOMATIC_WEAPONS</PrereqTech>
@@ -8639,7 +8639,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CRIME_WELFAREFRAUD</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LABOR_UNIONS</PrereqTech>
@@ -8752,7 +8752,7 @@
 			<ObsoleteTech>TECH_CODE_OF_LAWS</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<TechHappinessTypes>
 				<TechHappinessType>
 					<TechType>TECH_SACRIFICE_CULT</TechType>
@@ -9095,7 +9095,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_ANTHRAX</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
@@ -9137,7 +9137,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_BIRDFLU</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
@@ -9179,7 +9179,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_PLAGUE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
@@ -9220,7 +9220,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_CHOLERA</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
@@ -9236,7 +9236,7 @@
 				<iYield>-6</iYield>
 				<iYield>-4</iYield>
 			</YieldModifiers>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<TechHealthChanges>
 				<TechHealthChange>
 					<PrereqTech>TECH_SANITATION</PrereqTech>
@@ -9268,7 +9268,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_COMMONCOLD</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<!-- Obsolescence -->
@@ -9298,7 +9298,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_DIPHTHERIA</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRADE</PrereqTech>
@@ -9314,7 +9314,7 @@
 				<iYield>-6</iYield>
 				<iYield>-3</iYield>
 			</YieldModifiers>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<TechHealthChanges>
 				<TechHealthChange>
 					<PrereqTech>TECH_SANITATION</PrereqTech>
@@ -9347,7 +9347,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_DYSENTERY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
@@ -9363,7 +9363,7 @@
 				<iYield>-4</iYield>
 				<iYield>-1</iYield>
 			</YieldModifiers>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<TechHealthChanges>
 				<TechHealthChange>
 					<PrereqTech>TECH_SANITATION</PrereqTech>
@@ -9396,7 +9396,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_HIV</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POLYTHEISM</PrereqTech>
@@ -9434,7 +9434,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_LEPROSY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
@@ -9472,7 +9472,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_MALARIA</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRIBALISM</PrereqTech>
@@ -9513,7 +9513,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_MEASLES</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
@@ -9551,7 +9551,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_SCARLETFEAVER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRIBALISM</PrereqTech>
@@ -9589,7 +9589,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_SCURVY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NATUROPATHY</PrereqTech>
@@ -9605,7 +9605,7 @@
 				<iYield>-2</iYield>
 				<iYield>0</iYield>
 			</YieldModifiers>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<BonusHealthChanges>
 				<BonusHealthChange>
 					<BonusType>BONUS_LEMONS</BonusType>
@@ -9627,7 +9627,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_SMALLPOX</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
@@ -9665,7 +9665,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_SWINEFLU</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
@@ -9705,7 +9705,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_TYPHOIDFEAVER</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
@@ -9721,7 +9721,7 @@
 				<iYield>-7</iYield>
 				<iYield>-6</iYield>
 			</YieldModifiers>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<TechHealthChanges>
 				<TechHealthChange>
 					<PrereqTech>TECH_SANITATION</PrereqTech>
@@ -9883,7 +9883,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EFFECT_NATIONAL_ACADEMY_DATABASE</ArtDefineTag>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CLOUD_COMPUTING</PrereqTech>
@@ -10442,7 +10442,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_MEDICAL_DATABASE_GOOD</ArtDefineTag>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_KNOWLEDGE_MANAGEMENT</PrereqTech>
@@ -10644,7 +10644,7 @@
 			</YieldChanges>
 			<!-- Misc. Effects -->
 			<bPower>1</bPower>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<!-- Special properties -->
 			<bNukeImmune>1</bNukeImmune>
 		</BuildingInfo>
@@ -10674,7 +10674,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<iGlobalHealth>2</iGlobalHealth>
 			<!-- Great People effects -->
 			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
@@ -14168,7 +14168,7 @@
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
 			<FreeBuilding>BUILDING_EMISSION_ACT_EFFECT</FreeBuilding>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<iGlobalHealth>2</iGlobalHealth>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -14224,7 +14224,7 @@
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
 			<FreeBuilding>BUILDING_CARPOOL_EFFECT</FreeBuilding>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<iGlobalHealth>1</iGlobalHealth>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -14278,7 +14278,7 @@
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
 			<FreeBuilding>BUILDING_CLEANAIR_ACT_EFFECT</FreeBuilding>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<iGlobalHealth>2</iGlobalHealth>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -14333,7 +14333,7 @@
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
 			<FreeBuilding>BUILDING_CLEANWATER_ACT_EFFECT</FreeBuilding>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<iGlobalHealth>2</iGlobalHealth>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -14390,7 +14390,7 @@
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
 			<FreeBuilding>BUILDING_SHUTTLE_SERVICE_EFFECT</FreeBuilding>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<iGlobalHealth>1</iGlobalHealth>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
@@ -14467,7 +14467,7 @@
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<iGlobalHealth>1</iGlobalHealth>
 			<!-- Special properties -->
 			<iAsset>10</iAsset>
@@ -14613,7 +14613,7 @@
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<iGlobalHealth>1</iGlobalHealth>
 			<!-- Special properties -->
 			<iAsset>10</iAsset>
@@ -14698,7 +14698,7 @@
 				<iCommerce>-5</iCommerce>
 			</CommerceChanges>
 			<FreeBuilding>BUILDING_TIRE_RECYCLE_EFFECT</FreeBuilding>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<iGlobalHealth>1</iGlobalHealth>
 			<!-- Special properties -->
 			<bNukeImmune>1</bNukeImmune>
@@ -15069,8 +15069,8 @@
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
 			<iPrereqPopulation>14</iPrereqPopulation>
 			<PrereqVicinityBonuses>
-               <VicinityBonus>BONUS_GRAINS</VicinityBonus>
-               <VicinityBonus>BONUS_VEGETABLES</VicinityBonus>
+				<VicinityBonus>BONUS_GRAINS</VicinityBonus>
+				<VicinityBonus>BONUS_VEGETABLES</VicinityBonus>
 			</PrereqVicinityBonuses>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
@@ -15629,7 +15629,7 @@
 				<iYield>-10</iYield>
 				<iYield>-30</iYield>
 			</YieldChanges>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<iGlobalHealth>-2</iGlobalHealth>
 			<!-- Special Yield and Commerce modifiers -->
 			<SeaPlotYieldChanges>
@@ -15676,7 +15676,7 @@
 				<iYield>-5</iYield>
 				<iYield>-10</iYield>
 			</YieldChanges>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<iGlobalHealth>-1</iGlobalHealth>
 			<!-- Special properties -->
 			<bNukeImmune>1</bNukeImmune>
@@ -15803,7 +15803,7 @@
 				<iYield>-10</iYield>
 				<iYield>-30</iYield>
 			</YieldChanges>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<iGlobalHealth>-1</iGlobalHealth>
 			<!-- Special properties -->
 			<bNukeImmune>1</bNukeImmune>
@@ -15840,7 +15840,7 @@
 				<iYield>-10</iYield>
 				<iYield>-20</iYield>
 			</YieldChanges>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<iGlobalHealth>-1</iGlobalHealth>
 			<!-- Special properties -->
 			<bNukeImmune>1</bNukeImmune>
@@ -16512,7 +16512,7 @@
 				<iYield>-10</iYield>
 				<iYield>-10</iYield>
 			</YieldChanges>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<iGlobalHealth>-1</iGlobalHealth>
 			<!-- Special Yield and Commerce modifiers -->
 			<SeaPlotYieldChanges>
@@ -16559,7 +16559,7 @@
 				<iYield>-10</iYield>
 				<iYield>-10</iYield>
 			</YieldChanges>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<iGlobalHealth>-1</iGlobalHealth>
 			<!-- Special Yield and Commerce modifiers -->
 			<SeaPlotYieldChanges>
@@ -17011,7 +17011,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
@@ -17062,7 +17062,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CLASSICAL_LIFESTYLE</PrereqTech>
@@ -17113,7 +17113,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MEDIEVAL_LIFESTYLE</PrereqTech>
@@ -17164,7 +17164,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
@@ -17215,7 +17215,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_INDUSTRIAL_LIFESTYLE</PrereqTech>
@@ -17266,7 +17266,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ATOMIC_LIFESTYLE</PrereqTech>
@@ -17317,7 +17317,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
@@ -17368,7 +17368,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NANOTECH_LIFESTYLE</PrereqTech>
@@ -17419,7 +17419,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TRANSHUMAN_LIFESTYLE</PrereqTech>
@@ -17470,7 +17470,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <MapCategoryTypes>
+			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_GALACTIC_LIFESTYLE</PrereqTech>
@@ -17551,7 +17551,7 @@
 				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_ZOROASTRIANISM</ReligionType>
@@ -17616,7 +17616,7 @@
 				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_NAGHUALISM</ReligionType>
@@ -17688,7 +17688,7 @@
 				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_CHRISTIANITY</ReligionType>
@@ -17754,7 +17754,7 @@
 				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_TAOISM</ReligionType>
@@ -17824,7 +17824,7 @@
 				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_KEMETISM</ReligionType>
@@ -17890,7 +17890,7 @@
 				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_HINDUISM</ReligionType>
@@ -17956,7 +17956,7 @@
 				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_CONFUCIANISM</ReligionType>
@@ -18024,7 +18024,7 @@
 				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_BUDDHISM</ReligionType>
@@ -18090,7 +18090,7 @@
 				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_ISLAM</ReligionType>
@@ -18193,7 +18193,7 @@
 				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_HELLENISM</ReligionType>
@@ -18253,7 +18253,7 @@
 			<CommerceModifiers>
 				<iCommerce>7</iCommerce>
 			</CommerceModifiers>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<!-- Special Yield and Commerce modifiers -->
 			<ObsoleteSafeCommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -18270,7 +18270,7 @@
 				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_JUDAISM</ReligionType>
@@ -18624,7 +18624,7 @@
 			</CommerceChanges>
 			<PropertySpawnUnit>UNIT_MOBSTER_CAR</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<BonusHealthChanges>
 				<BonusHealthChange>
 					<BonusType>BONUS_TOBACCO</BonusType>
@@ -18763,7 +18763,7 @@
 			<!-- <PrereqTech>TECH_ANIMATION</PrereqTech> -->
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<iHappinessPercentPerPopulation>10</iHappinessPercentPerPopulation>
 			<!-- Special properties -->
 			<bNukeImmune>1</bNukeImmune>
@@ -19191,7 +19191,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TRADITION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Tradition - Asthetic Appreciation  -->
+			<!-- Tradition - Asthetic Appreciation -->
 			<Type>BUILDING_TRADITION_ASTHETIC_APPRECIATION</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -19259,7 +19259,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TRADITION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Tradition - Work Ethic  -->
+			<!-- Tradition - Work Ethic -->
 			<Type>BUILDING_TRADITION_WORK_ETHIC</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -19850,14 +19850,14 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_ALUMINUM_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_BAUXITE_ORE</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_BAUXITE_ORE</RawVicinityBonus>
 			<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iCost>-1</iCost>
 			<!-- Other -->
-            <bAutoBuild>1</bAutoBuild>
+			<bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AUTOBUILD_COPPER_NEAR</Type>
@@ -19868,14 +19868,14 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_COPPER_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_COPPER_ORE</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_COPPER_ORE</RawVicinityBonus>
 			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iCost>-1</iCost>
 			<!-- Other -->
-            <bAutoBuild>1</bAutoBuild>
+			<bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AUTOBUILD_GOLD_NEAR</Type>
@@ -19886,14 +19886,14 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_GOLD_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_GOLD_ORE</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_GOLD_ORE</RawVicinityBonus>
 			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iCost>-1</iCost>
 			<!-- Other -->
-            <bAutoBuild>1</bAutoBuild>
+			<bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AUTOBUILD_IRON_NEAR</Type>
@@ -19904,14 +19904,14 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_IRON_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_IRON_ORE</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_IRON_ORE</RawVicinityBonus>
 			<PrereqTech>TECH_MINING</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iCost>-1</iCost>
 			<!-- Other -->
-            <bAutoBuild>1</bAutoBuild>
+			<bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AUTOBUILD_LEAD_NEAR</Type>
@@ -19922,14 +19922,14 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_LEAD_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_LEAD_ORE</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_LEAD_ORE</RawVicinityBonus>
 			<PrereqTech>TECH_MINING</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iCost>-1</iCost>
 			<!-- Other -->
-            <bAutoBuild>1</bAutoBuild>
+			<bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AUTOBUILD_PLATINUM_NEAR</Type>
@@ -19940,14 +19940,14 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_PLATINUM_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_PLATINUM_ORE</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_PLATINUM_ORE</RawVicinityBonus>
 			<PrereqTech>TECH_METAL_CASTING</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iCost>-1</iCost>
 			<!-- Other -->
-            <bAutoBuild>1</bAutoBuild>
+			<bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AUTOBUILD_SILVER_NEAR</Type>
@@ -19958,14 +19958,14 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_SILVER_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_SILVER_ORE</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_SILVER_ORE</RawVicinityBonus>
 			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iCost>-1</iCost>
 			<!-- Other -->
-            <bAutoBuild>1</bAutoBuild>
+			<bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AUTOBUILD_TIN_NEAR</Type>
@@ -19976,14 +19976,14 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_TIN_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_TIN_ORE</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_TIN_ORE</RawVicinityBonus>
 			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iCost>-1</iCost>
 			<!-- Other -->
-            <bAutoBuild>1</bAutoBuild>
+			<bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AUTOBUILD_TITANIUM_NEAR</Type>
@@ -19994,7 +19994,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_TITANIUM_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_TITANIUM_ORE</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_TITANIUM_ORE</RawVicinityBonus>
 			<PrereqTech>TECH_ADVANCED_METALLURGY</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -20012,7 +20012,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_CAMEL_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_CAMEL</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_CAMEL</RawVicinityBonus>
 			<PrereqTech>TECH_SCAVENGING</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -20037,7 +20037,7 @@
 			</MapCategoryTypes>
 			<iCost>-1</iCost>
 			<!-- Other -->
-            <bAutoBuild>1</bAutoBuild>
+			<bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AUTOBUILD_HORSE_NEAR</Type>
@@ -20048,14 +20048,14 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_HORSE_NEAR</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-            <RawVicinityBonus>BONUS_HORSE</RawVicinityBonus>
+			<RawVicinityBonus>BONUS_HORSE</RawVicinityBonus>
 			<PrereqTech>TECH_SCAVENGING</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<iCost>-1</iCost>
 			<!-- Other -->
-            <bAutoBuild>1</bAutoBuild>
+			<bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WV_SLAVERY</Type>
