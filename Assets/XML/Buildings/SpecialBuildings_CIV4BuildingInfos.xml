@@ -5755,7 +5755,7 @@
 					<iAmountPerTurn>-1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-		</BuildingInfo>		
+		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Crime (Car Bombing) -->
 			<Type>BUILDING_CRIME_CARBOMBING</Type>
@@ -20815,5 +20815,5 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
-	</BuildingInfos>	
+	</BuildingInfos>
 </Civ4BuildingInfos>
