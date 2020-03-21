@@ -78,7 +78,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</FeatureInfo>
-	       <FeatureInfo>
+		<FeatureInfo>
 			<Type>FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE</Type>
 			<Description>TXT_KEY_FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE</Description>
 			<Civilopedia>TXT_KEY_FEATURE_GREAT_BARRIER_PEDIA</Civilopedia>
