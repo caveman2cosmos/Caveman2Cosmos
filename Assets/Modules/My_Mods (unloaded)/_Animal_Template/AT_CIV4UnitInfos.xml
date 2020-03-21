@@ -56,6 +56,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_ANIMAL</DefaultUnitAI>
 			<iAnimalIgnoresBorders>3</iAnimalIgnoresBorders>
 			<bOnlyDefensive>1</bOnlyDefensive>
@@ -135,6 +138,9 @@
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SUBDUED_CROW</Description>
 			<Civilopedia>TXT_KEY_UNIT_CROW_PEDIA</Civilopedia>

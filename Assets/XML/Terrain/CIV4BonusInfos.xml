@@ -5673,7 +5673,6 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
-			<iPlacementOrder>1</iPlacementOrder>
 			<iConstAppearance>400</iConstAppearance>
 			<iMinAreaSize>4</iMinAreaSize>
 			<Rands>
@@ -6811,7 +6810,6 @@
 				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>10</iAITradeModifier>
-			<iPlacementOrder>1</iPlacementOrder>
 			<iConstAppearance>400</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<Rands>
@@ -8578,7 +8576,6 @@
 				<iYieldChange>2</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<iPlacementOrder>1</iPlacementOrder>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iConstAppearance>300</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
@@ -9247,7 +9244,6 @@
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<iPlacementOrder>1</iPlacementOrder>
 			<iAITradeModifier>30</iAITradeModifier>
 			<iConstAppearance>200</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
@@ -10128,7 +10124,7 @@
 			<TechReveal>TECH_MASONRY</TechReveal>
 			<TechCityTrade>TECH_MASONRY</TechCityTrade>
 			<YieldChanges>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
@@ -10355,7 +10351,7 @@
 			<TechReveal>TECH_SOFT_HAMMER_PERCUSSION</TechReveal>
 			<TechCityTrade>TECH_SALT_PROCESSING</TechCityTrade>
 			<YieldChanges>
-				<iYieldChange>1</iYieldChange>
+				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
@@ -11904,7 +11900,6 @@
 				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
 			<iAITradeModifier>20</iAITradeModifier>
-			<iPlacementOrder>1</iPlacementOrder>
 			<iConstAppearance>400</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<Rands>

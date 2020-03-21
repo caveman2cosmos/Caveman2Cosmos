@@ -1584,11 +1584,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_AXEMAN</UnitType>
+					<UnitType>UNIT_STONE_AXEMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_ASIAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_ASIAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_ASIAN</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_ASIAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_ASIAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_ASIAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -1600,11 +1600,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+					<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_ASIAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_ASIAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_ASIAN</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_ASIAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_ASIAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_ASIAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -2715,11 +2715,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+					<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EUROPEAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EUROPEAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EUROPEAN</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EUROPEAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EUROPEAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EUROPEAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -3994,11 +3994,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_AXEMAN</UnitType>
+					<UnitType>UNIT_STONE_AXEMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_GERMAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_GERMAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_GERMAN</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_GERMAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_GERMAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_GERMAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -4010,11 +4010,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+					<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EUROPEAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EUROPEAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EUROPEAN</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EUROPEAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EUROPEAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EUROPEAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -5041,11 +5041,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+					<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EUROPEAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EUROPEAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EUROPEAN</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EUROPEAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EUROPEAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EUROPEAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -5901,11 +5901,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+					<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EUROPEAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EUROPEAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EUROPEAN</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EUROPEAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EUROPEAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EUROPEAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -7198,11 +7198,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_AXEMAN</UnitType>
+					<UnitType>UNIT_STONE_AXEMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_GREEK</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_GREEK</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_GREEK</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_GREEK</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_GREEK</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_GREEK</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -7214,11 +7214,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+					<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_GREEK</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_GREEK</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_GREEK</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_GREEK</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_GREEK</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_GREEK</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -9012,11 +9012,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_AXEMAN</UnitType>
+					<UnitType>UNIT_STONE_AXEMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_MEAST</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_MEAST</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_MEAST</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_MEAST</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_MEAST</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_MEAST</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -9028,11 +9028,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+					<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -11046,11 +11046,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_AXEMAN</UnitType>
+					<UnitType>UNIT_STONE_AXEMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_SOUTH_AMERICA</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_SOUTH_AMERICA</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_SOUTH_AMERICA</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_SOUTH_AMERICA</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_SOUTH_AMERICA</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_SOUTH_AMERICA</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -11062,11 +11062,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+					<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_SOUTH_AMERICA</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_SOUTH_AMERICA</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_SOUTH_AMERICA</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_SOUTH_AMERICA</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_SOUTH_AMERICA</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_SOUTH_AMERICA</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -12928,11 +12928,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_AXEMAN</UnitType>
+					<UnitType>UNIT_STONE_AXEMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_NATIVE_AMERICAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_NATIVE_AMERICAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_NATIVE_AMERICAN</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_NATIVE_AMERICAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_NATIVE_AMERICAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_NATIVE_AMERICAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -12944,11 +12944,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+					<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_NATIVE_AMERICAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_NATIVE_AMERICAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_NATIVE_AMERICAN</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_NATIVE_AMERICAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_NATIVE_AMERICAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_NATIVE_AMERICAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -14828,11 +14828,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_AXEMAN</UnitType>
+					<UnitType>UNIT_STONE_AXEMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_SOUTH_AMERICA</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_SOUTH_AMERICA</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_SOUTH_AMERICA</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_SOUTH_AMERICA</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_SOUTH_AMERICA</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_SOUTH_AMERICA</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -14844,11 +14844,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+					<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_SOUTH_AMERICA</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_SOUTH_AMERICA</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_SOUTH_AMERICA</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_SOUTH_AMERICA</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_SOUTH_AMERICA</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_SOUTH_AMERICA</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -16830,11 +16830,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_AXEMAN</UnitType>
+					<UnitType>UNIT_STONE_AXEMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_AFRICAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_AFRICAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_AFRICAN</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_AFRICAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_AFRICAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_AFRICAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -16846,11 +16846,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+					<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_AFRICAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_AFRICAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_AFRICAN</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_AFRICAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_AFRICAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_AFRICAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -18129,11 +18129,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+					<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EUROPEAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EUROPEAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EUROPEAN</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EUROPEAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EUROPEAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EUROPEAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -19479,11 +19479,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_AXEMAN</UnitType>
+					<UnitType>UNIT_STONE_AXEMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_GREEK</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_GREEK</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_GREEK</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_GREEK</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_GREEK</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_GREEK</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -19495,11 +19495,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+					<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_GREEK</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_GREEK</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_GREEK</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_GREEK</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_GREEK</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_GREEK</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -20542,11 +20542,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+					<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EUROPEAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EUROPEAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EUROPEAN</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EUROPEAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EUROPEAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EUROPEAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -22169,11 +22169,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_AXEMAN</UnitType>
+					<UnitType>UNIT_STONE_AXEMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_INDIA</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_INDIA</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_INDIA</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_INDIA</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_INDIA</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_INDIA</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -22185,11 +22185,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+					<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -23332,11 +23332,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+					<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EUROPEAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EUROPEAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EUROPEAN</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EUROPEAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EUROPEAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EUROPEAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -25031,11 +25031,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_AXEMAN</UnitType>
+					<UnitType>UNIT_STONE_AXEMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_EGYPTIAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_EGYPTIAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_EGYPTIAN</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_EGYPTIAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_EGYPTIAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_EGYPTIAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -25047,11 +25047,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+					<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EGYPTIAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EGYPTIAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EGYPTIAN</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EGYPTIAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EGYPTIAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EGYPTIAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -26322,11 +26322,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+					<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EUROPEAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EUROPEAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EUROPEAN</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EUROPEAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EUROPEAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EUROPEAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -27935,11 +27935,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_AXEMAN</UnitType>
+					<UnitType>UNIT_STONE_AXEMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_NATIVE_AMERICAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_NATIVE_AMERICAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_NATIVE_AMERICAN</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_NATIVE_AMERICAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_NATIVE_AMERICAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_NATIVE_AMERICAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -27951,11 +27951,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+					<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_NATIVE_AMERICAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_NATIVE_AMERICAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_NATIVE_AMERICAN</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_NATIVE_AMERICAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_NATIVE_AMERICAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_NATIVE_AMERICAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -29791,11 +29791,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_AXEMAN</UnitType>
+					<UnitType>UNIT_STONE_AXEMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_BABYLON</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_BABYLON</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_BABYLON</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_BABYLON</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_BABYLON</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_BABYLON</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -29807,11 +29807,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+					<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_BABYLON</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_BABYLON</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_BABYLON</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_BABYLON</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_BABYLON</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_BABYLON</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -31756,11 +31756,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_AXEMAN</UnitType>
+					<UnitType>UNIT_STONE_AXEMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_MONGOL</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_MONGOL</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_MONGOL</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_MONGOL</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_MONGOL</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_MONGOL</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -31772,11 +31772,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+					<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_MONGOL</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_MONGOL</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_MONGOL</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_MONGOL</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_MONGOL</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_MONGOL</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -33372,11 +33372,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_AXEMAN</UnitType>
+					<UnitType>UNIT_STONE_AXEMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_ROME</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_ROME</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_ROME</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_ROME</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_ROME</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_ROME</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -33388,11 +33388,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+					<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_ROME</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_ROME</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_ROME</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_ROME</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_ROME</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_ROME</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -34491,11 +34491,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+					<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EUROPEAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EUROPEAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EUROPEAN</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EUROPEAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EUROPEAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EUROPEAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -36110,11 +36110,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_AXEMAN</UnitType>
+					<UnitType>UNIT_STONE_AXEMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_MEAST</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_MEAST</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_MEAST</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_MEAST</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_MEAST</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_MEAST</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -36126,11 +36126,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+					<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -37385,11 +37385,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+					<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EUROPEAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EUROPEAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EUROPEAN</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EUROPEAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EUROPEAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EUROPEAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -39371,11 +39371,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_AXEMAN</UnitType>
+					<UnitType>UNIT_STONE_AXEMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_ASIAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_ASIAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_ASIAN</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_ASIAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_ASIAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_ASIAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -39387,11 +39387,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+					<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_ASIAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_ASIAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_ASIAN</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_ASIAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_ASIAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_ASIAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -41469,11 +41469,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_AXEMAN</UnitType>
+					<UnitType>UNIT_STONE_AXEMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_ASIAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_ASIAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_ASIAN</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_ASIAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_ASIAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_ASIAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -41485,11 +41485,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+					<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_ASIAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_ASIAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_ASIAN</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_ASIAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_ASIAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_ASIAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -43567,11 +43567,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_AXEMAN</UnitType>
+					<UnitType>UNIT_STONE_AXEMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_KOREA</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_KOREA</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_KOREA</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_KOREA</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_KOREA</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_KOREA</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -43583,11 +43583,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+					<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_ASIAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_ASIAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_ASIAN</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_ASIAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_ASIAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_ASIAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -45593,11 +45593,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_AXEMAN</UnitType>
+					<UnitType>UNIT_STONE_AXEMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_AFRICAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_AFRICAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_AFRICAN</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_AFRICAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_AFRICAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_AFRICAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -45609,11 +45609,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+					<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_AFRICAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_AFRICAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_AFRICAN</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_AFRICAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_AFRICAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_AFRICAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -47715,11 +47715,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_AXEMAN</UnitType>
+					<UnitType>UNIT_STONE_AXEMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_AFRICAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_AFRICAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_AFRICAN</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_AFRICAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_AFRICAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_AFRICAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -47731,11 +47731,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+					<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_AFRICAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_AFRICAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_AFRICAN</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_AFRICAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_AFRICAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_AFRICAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -49709,11 +49709,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_AXEMAN</UnitType>
+					<UnitType>UNIT_STONE_AXEMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_MEAST</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_MEAST</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_MEAST</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_MEAST</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_MEAST</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_MEAST</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -49725,11 +49725,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+					<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -51761,11 +51761,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_AXEMAN</UnitType>
+					<UnitType>UNIT_STONE_AXEMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_POLYNESIA</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_POLYNESIA</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_POLYNESIA</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_POLYNESIA</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_POLYNESIA</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_POLYNESIA</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -51777,11 +51777,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+					<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_POLYNESIA</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_POLYNESIA</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_POLYNESIA</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_POLYNESIA</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_POLYNESIA</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_POLYNESIA</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -53234,11 +53234,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+					<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EUROPEAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EUROPEAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EUROPEAN</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EUROPEAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EUROPEAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EUROPEAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -54385,11 +54385,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+					<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EUROPEAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EUROPEAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EUROPEAN</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EUROPEAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EUROPEAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_EUROPEAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -55859,11 +55859,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_AXEMAN</UnitType>
+					<UnitType>UNIT_STONE_AXEMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_GERMAN</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_GERMAN</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN_GERMAN</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_GERMAN</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_GERMAN</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN_GERMAN</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
@@ -55875,11 +55875,11 @@
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>
-					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+					<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 					<UnitMeshGroup>
-						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_VIKING</EarlyArtDefineTag>
-						<LateArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_VIKING</LateArtDefineTag>
-						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN_VIKING</MiddleArtDefineTag>
+						<EarlyArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_VIKING</EarlyArtDefineTag>
+						<LateArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_VIKING</LateArtDefineTag>
+						<MiddleArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN_VIKING</MiddleArtDefineTag>
 					</UnitMeshGroup>
 				</StyleUnit>
 				<StyleUnit>

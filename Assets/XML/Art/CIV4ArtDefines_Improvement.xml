@@ -559,7 +559,7 @@
 			<Button>Art/Interface/Buttons/builds/Tower.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_PLANT_BAMBOO_GROVE</Type>
+			<Type>ART_DEF_IMPROVEMENT_PLANT_BAMBOO</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>

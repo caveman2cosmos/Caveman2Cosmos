@@ -20,9 +20,9 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
-				<City>Washington D.C.</City>
+				<City>TXT_KEY_CITY_NAME_WASHINGTON_DC</City>
 				<City>TXT_KEY_CITY_NAME_MINNEAPOLIS</City>
-				<City>St. Paul</City>
+				<City>TXT_KEY_CITY_NAME_ST_PAUL</City>
 				<City>TXT_KEY_CITY_NAME_NEW_YORK</City>
 				<City>TXT_KEY_CITY_NAME_BOSTON</City>
 				<City>TXT_KEY_CITY_NAME_PHILADELPHIA</City>
@@ -377,15 +377,15 @@
 				<City>TXT_KEY_CITY_NAME_ITZAPALAPA</City>
 				<City>TXT_KEY_CITY_NAME_AYOTZINCO</City>
 				<City>TXT_KEY_CITY_NAME_IZTAPAM</City>
-				<City>Teplacingo</City>
-				<City>Jolapan</City>
-				<City>Huitzuco</City>
-				<City>Zinacatepec</City>
-				<City>Juxtlahuaca</City>
-				<City>Cochoapa</City>
-				<City>Texmulacan</City>
-				<City>Xitla</City>
-				<City>Taxco</City>
+				<City>TXT_KEY_CITY_NAME_TEPLACINGO</City>
+				<City>TXT_KEY_CITY_NAME_JOLAPAN</City>
+				<City>TXT_KEY_CITY_NAME_HUITZUCO</City>
+				<City>TXT_KEY_CITY_NAME_ZINACATEPEC</City>
+				<City>TXT_KEY_CITY_NAME_JUXTLAHUACA</City>
+				<City>TXT_KEY_CITY_NAME_COCHOAPA</City>
+				<City>TXT_KEY_CITY_NAME_TEXMULACAN</City>
+				<City>TXT_KEY_CITY_NAME_XITLA</City>
+				<City>TXT_KEY_CITY_NAME_TAXCO</City>
 			</Cities>
 			<FreeBuildings>
 				<FreeBuilding>
@@ -894,7 +894,7 @@
 				<City>TXT_KEY_CITY_NAME_NANTONG</City>
 				<City>TXT_KEY_CITY_NAME_WEIFANG</City>
 				<City>TXT_KEY_CITY_NAME_XIKANG</City>
-				<City>Paikang</City>
+				<City>TXT_KEY_CITY_NAME_PAIKANG</City>
 			</Cities>
 			<FreeBuildings>
 				<FreeBuilding>
@@ -1204,13 +1204,13 @@
 				<City>TXT_KEY_CITY_NAME_SABEA</City>
 				<City>TXT_KEY_CITY_NAME_HAWILA_ASSARAW</City>
 				<City>TXT_KEY_CITY_NAME_WEQRO</City>
-				<City>Bahir Dar</City>
-				<City>Dejen</City>
-				<City>Fiche</City>
-				<City>Debre Birhan</City>
-				<City>Holeta</City>
-				<City>Bishoftu</City>
-				<City>Finote Selam</City>
+				<City>TXT_KEY_CITY_NAME_BAHIR_DAR</City>
+				<City>TXT_KEY_CITY_NAME_DEJEN</City>
+				<City>TXT_KEY_CITY_NAME_FICHE</City>
+				<City>TXT_KEY_CITY_NAME_DEBRE_BIRHAN</City>
+				<City>TXT_KEY_CITY_NAME_HOLETA</City>
+				<City>TXT_KEY_CITY_NAME_BISHOFTU</City>
+				<City>TXT_KEY_CITY_NAME_FINOTE_SELAM</City>
 			</Cities>
 			<FreeBuildings>
 				<FreeBuilding>
@@ -1310,11 +1310,11 @@
 				<City>TXT_KEY_CITY_NAME_BOURGES</City>
 				<City>TXT_KEY_CITY_NAME_CALAIS</City>
 				<City>TXT_KEY_CITY_NAME_BAVAY</City>
-				<City>Creteil</City>
-				<City>Versailles</City>
-				<City>Argenteuil</City>
-				<City>Saint Denis</City>
-				<City>Meaux</City>
+				<City>TXT_KEY_CITY_NAME_CRETEIL</City>
+				<City>TXT_KEY_CITY_NAME_VERSAILLES</City>
+				<City>TXT_KEY_CITY_NAME_ARGENTEUIL</City>
+				<City>TXT_KEY_CITY_NAME_SAINT_DENIS</City>
+				<City>TXT_KEY_CITY_NAME_MEAUX</City>
 			</Cities>
 			<FreeBuildings>
 				<FreeBuilding>
@@ -1594,85 +1594,85 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
-				<City>Hattusas</City>
-				<City>Kanesh</City>
-				<City>Carchemish</City>
-				<City>Akuwa</City>
-				<City>Kummanni</City>
-				<City>Tuwana</City>
-				<City>Arpad</City>
-				<City>Hubishna</City>
-				<City>Tarsa</City>
-				<City>Adana</City>
-				<City>Malatya</City>
-				<City>Truwa</City>
-				<City>Ahhiyawa</City>
-				<City>Ivriz</City>
-				<City>Harran</City>
-				<City>Emar</City>
-				<City>Lystra</City>
-				<City>Tyana</City>
-				<City>Marassantiya</City>
-				<City>Etlik</City>
-				<City>Tabigga</City>
-				<City>Nenassa</City>
-				<City>Pteira</City>
-				<City>Ullama</City>
-				<City>Gaziura</City>
-				<City>Samuha</City>
-				<City>Kussara</City>
-				<City>Purruskhanda</City>
-				<City>Alalah</City>
-				<City>Hakpis</City>
-				<City>Hanhana</City>
-				<City>Hattena</City>
-				<City>Nerik</City>
-				<City>Alashiya</City>
-				<City>Zalpa</City>
-				<City>Kizzuwadna</City>
-				<City>Isuwa</City>
-				<City>Azzihayasa</City>
-				<City>Gasga</City>
-				<City>Kassiya</City>
-				<City>Pala Tummana</City>
-				<City>Arawanna</City>
-				<City>Masa</City>
-				<City>Karkisa</City>
-				<City>Lukka</City>
-				<City>Seha</City>
-				<City>Arzawa</City>
-				<City>Hapalla</City>
-				<City>Mira</City>
-				<City>Pitassa</City>
-				<City>Mursilasa</City>
-				<City>Muwatallaya</City>
-				<City>Tudhaliyawa</City>
-				<City>Aleppo</City>
-				<City>Anguwa</City>
-				<City>Acem</City>
-				<City>Masat</City>
-				<City>Gavur</City>
-				<City>Horoz</City>
-				<City>Konya</City>
-				<City>Karaoglan</City>
-				<City>Hacilar</City>
-				<City>Suberde</City>
-				<City>Mersin</City>
-				<City>Arslantepe</City>
-				<City>Norshuntepe</City>
-				<City>Tepecik</City>
-				<City>Ashikli Huyuk</City>
-				<City>Acigol</City>
-				<City>Chiftlik</City>
-				<City>Cafer Huyuk</City>
-				<City>Gritille</City>
-				<City>Chayonu</City>
-				<City>Wilusa</City>
-				<City>Boghazkoy</City>
-				<City>Kultepe</City>
-				<City>Marqasi</City>
-				<City>Til Barsip</City>
-				<City>Sam'al</City>
+				<City>TXT_KEY_CITY_NAME_HATTUSAS</City>
+				<City>TXT_KEY_CITY_NAME_KANESH</City>
+				<City>TXT_KEY_CITY_NAME_CARCHEMISH</City>
+				<City>TXT_KEY_CITY_NAME_AKUWA</City>
+				<City>TXT_KEY_CITY_NAME_KUMMANNI</City>
+				<City>TXT_KEY_CITY_NAME_TUWANA</City>
+				<City>TXT_KEY_CITY_NAME_ARPAD</City>
+				<City>TXT_KEY_CITY_NAME_HUBISHNA</City>
+				<City>TXT_KEY_CITY_NAME_TARSA</City>
+				<City>TXT_KEY_CITY_NAME_ADANA</City>
+				<City>TXT_KEY_CITY_NAME_MALATYA</City>
+				<City>TXT_KEY_CITY_NAME_TRUWA</City>
+				<City>TXT_KEY_CITY_NAME_AHHIYAWA</City>
+				<City>TXT_KEY_CITY_NAME_IVRIZ</City>
+				<City>TXT_KEY_CITY_NAME_HARRAN</City>
+				<City>TXT_KEY_CITY_NAME_EMAR</City>
+				<City>TXT_KEY_CITY_NAME_LYSTRA</City>
+				<City>TXT_KEY_CITY_NAME_TYANA</City>
+				<City>TXT_KEY_CITY_NAME_MARASSANTIYA</City>
+				<City>TXT_KEY_CITY_NAME_ETLIK</City>
+				<City>TXT_KEY_CITY_NAME_TABIGGA</City>
+				<City>TXT_KEY_CITY_NAME_NENASSA</City>
+				<City>TXT_KEY_CITY_NAME_PTEIRA</City>
+				<City>TXT_KEY_CITY_NAME_ULLAMA</City>
+				<City>TXT_KEY_CITY_NAME_GAZIURA</City>
+				<City>TXT_KEY_CITY_NAME_SAMUHA</City>
+				<City>TXT_KEY_CITY_NAME_KUSSARA</City>
+				<City>TXT_KEY_CITY_NAME_PURRUSKHANDA</City>
+				<City>TXT_KEY_CITY_NAME_ALALAH</City>
+				<City>TXT_KEY_CITY_NAME_HAKPIS</City>
+				<City>TXT_KEY_CITY_NAME_HANHANA</City>
+				<City>TXT_KEY_CITY_NAME_HATTENA</City>
+				<City>TXT_KEY_CITY_NAME_NERIK</City>
+				<City>TXT_KEY_CITY_NAME_ALASHIYA</City>
+				<City>TXT_KEY_CITY_NAME_ZALPA</City>
+				<City>TXT_KEY_CITY_NAME_KIZZUWADNA</City>
+				<City>TXT_KEY_CITY_NAME_ISUWA</City>
+				<City>TXT_KEY_CITY_NAME_AZZIHAYASA</City>
+				<City>TXT_KEY_CITY_NAME_GASGA</City>
+				<City>TXT_KEY_CITY_NAME_KASSIYA</City>
+				<City>TXT_KEY_CITY_NAME_PALA_TUMMANA</City>
+				<City>TXT_KEY_CITY_NAME_ARAWANNA</City>
+				<City>TXT_KEY_CITY_NAME_MASA</City>
+				<City>TXT_KEY_CITY_NAME_KARKISA</City>
+				<City>TXT_KEY_CITY_NAME_LUKKA</City>
+				<City>TXT_KEY_CITY_NAME_SEHA</City>
+				<City>TXT_KEY_CITY_NAME_ARZAWA</City>
+				<City>TXT_KEY_CITY_NAME_HAPALLA</City>
+				<City>TXT_KEY_CITY_NAME_MIRA</City>
+				<City>TXT_KEY_CITY_NAME_PITASSA</City>
+				<City>TXT_KEY_CITY_NAME_MURSILASA</City>
+				<City>TXT_KEY_CITY_NAME_MUWATALLAYA</City>
+				<City>TXT_KEY_CITY_NAME_TUDHALIYAWA</City>
+				<City>TXT_KEY_CITY_NAME_ALEPPO</City>
+				<City>TXT_KEY_CITY_NAME_ANGUWA</City>
+				<City>TXT_KEY_CITY_NAME_ACEM</City>
+				<City>TXT_KEY_CITY_NAME_MASAT</City>
+				<City>TXT_KEY_CITY_NAME_GAVUR</City>
+				<City>TXT_KEY_CITY_NAME_HOROZ</City>
+				<City>TXT_KEY_CITY_NAME_KONYA</City>
+				<City>TXT_KEY_CITY_NAME_KARAOGLAN</City>
+				<City>TXT_KEY_CITY_NAME_HACILAR</City>
+				<City>TXT_KEY_CITY_NAME_SUBERDE</City>
+				<City>TXT_KEY_CITY_NAME_MERSIN</City>
+				<City>TXT_KEY_CITY_NAME_ARSLANTEPE</City>
+				<City>TXT_KEY_CITY_NAME_NORSHUNTEPE</City>
+				<City>TXT_KEY_CITY_NAME_TEPECIK</City>
+				<City>TXT_KEY_CITY_NAME_ASHIKLI_HUYUK</City>
+				<City>TXT_KEY_CITY_NAME_ACIGOL</City>
+				<City>TXT_KEY_CITY_NAME_CHIFTLIK</City>
+				<City>TXT_KEY_CITY_NAME_CAFER_HUYUK</City>
+				<City>TXT_KEY_CITY_NAME_GRITILLE</City>
+				<City>TXT_KEY_CITY_NAME_CHAYONU</City>
+				<City>TXT_KEY_CITY_NAME_WILUSA</City>
+				<City>TXT_KEY_CITY_NAME_BOGHAZKOY</City>
+				<City>TXT_KEY_CITY_NAME_KULTEPE</City>
+				<City>TXT_KEY_CITY_NAME_MARQASI</City>
+				<City>TXT_KEY_CITY_NAME_TIL_BARSIP</City>
+				<City>TXT_KEY_CITY_NAME_SAMAL</City>
 			</Cities>
 			<FreeBuildings>
 				<FreeBuilding>
@@ -1746,7 +1746,7 @@
 				<City>TXT_KEY_CITY_NAME_ZURICH</City>
 				<City>TXT_KEY_CITY_NAME_SALZBURG</City>
 				<City>TXT_KEY_CITY_NAME_INNSBRUCK</City>
-				<City>Trent</City>
+				<City>TXT_KEY_CITY_NAME_TRENT</City>
 				<City>TXT_KEY_CITY_NAME_GENOA</City>
 				<City>TXT_KEY_CITY_NAME_LUCCA</City>
 				<City>TXT_KEY_CITY_NAME_SIENNA</City>
@@ -2108,19 +2108,19 @@
 				<City>TXT_KEY_CITY_NAME_KAMAKURA</City>
 				<City>TXT_KEY_CITY_NAME_KOCHISHI</City>
 				<City>TXT_KEY_CITY_NAME_NAHA</City>
-				<City>Mito</City>
-				<City>Togane</City>
-				<City>Sakura</City>
-				<City>Otsuki</City>
-				<City>Nirasaki</City>
-				<City>Komagane</City>
-				<City>Toki</City>
-				<City>Ono</City>
-				<City>Suzama</City>
-				<City>Narita</City>
+				<City>TXT_KEY_CITY_NAME_MITO</City>
+				<City>TXT_KEY_CITY_NAME_TOGANE</City>
+				<City>TXT_KEY_CITY_NAME_SAKURA</City>
+				<City>TXT_KEY_CITY_NAME_OTSUKI</City>
+				<City>TXT_KEY_CITY_NAME_NIRASAKI</City>
+				<City>TXT_KEY_CITY_NAME_KOMAGANE</City>
+				<City>TXT_KEY_CITY_NAME_TOKI</City>
+				<City>TXT_KEY_CITY_NAME_ONO</City>
+				<City>TXT_KEY_CITY_NAME_SUZAMA</City>
+				<City>TXT_KEY_CITY_NAME_NARITA</City>
 				<City>TXT_KEY_CITY_NAME_OMI</City>
-				<City>Kōzuke</City>
-				<City>Echigo</City>
+				<City>TXT_KEY_CITY_NAME_KōZUKE</City>
+				<City>TXT_KEY_CITY_NAME_ECHIGO</City>
 				<City>TXT_KEY_CITY_NAME_SUO</City>
 			</Cities>
 			<FreeBuildings>
@@ -2214,10 +2214,10 @@
 				<City>TXT_KEY_CITY_NAME_SAMBHUPURA</City>
 				<City>TXT_KEY_CITY_NAME_LOVEK</City>
 				<City>TXT_KEY_CITY_NAME_UDONG</City>
-				<City>Krong Kracheh</City>
-				<City>Snuol</City>
-				<City>Khum Sare</City>
-				<City>Kaoh Nheaek</City>
+				<City>TXT_KEY_CITY_NAME_KRONG_KRACHEH</City>
+				<City>TXT_KEY_CITY_NAME_SNUOL</City>
+				<City>TXT_KEY_CITY_NAME_KHUM_SARE</City>
+				<City>TXT_KEY_CITY_NAME_KAOH_NHEAEK</City>
 			</Cities>
 			<FreeBuildings>
 				<FreeBuilding>
@@ -2298,21 +2298,21 @@
 				<City>TXT_KEY_CITY_NAME_NAMWON</City>
 				<City>TXT_KEY_CITY_NAME_KUMGANG</City>
 				<City>TXT_KEY_CITY_NAME_UIJEONGBU</City>
-				<City>Chorwon</City>
-				<City>Pyoksang</City>
-				<City>Sangsong</City>
-				<City>Doinghae</City>
-				<City>Bonghwa</City>
-				<City>Andong</City>
-				<City>Geoje</City>
-				<City>Onjing</City>
-				<City>Naju</City>
-				<City>Mokpo</City>
-				<City>Geochang</City>
-				<City>Buyeo</City>
-				<City>Danyang</City>
-				<City>Ulijin</City>
-				<City>Sacheon</City>
+				<City>TXT_KEY_CITY_NAME_CHORWON</City>
+				<City>TXT_KEY_CITY_NAME_PYOKSANG</City>
+				<City>TXT_KEY_CITY_NAME_SANGSONG</City>
+				<City>TXT_KEY_CITY_NAME_DOINGHAE</City>
+				<City>TXT_KEY_CITY_NAME_BONGHWA</City>
+				<City>TXT_KEY_CITY_NAME_ANDONG</City>
+				<City>TXT_KEY_CITY_NAME_GEOJE</City>
+				<City>TXT_KEY_CITY_NAME_ONJING</City>
+				<City>TXT_KEY_CITY_NAME_NAJU</City>
+				<City>TXT_KEY_CITY_NAME_MOKPO</City>
+				<City>TXT_KEY_CITY_NAME_GEOCHANG</City>
+				<City>TXT_KEY_CITY_NAME_BUYEO</City>
+				<City>TXT_KEY_CITY_NAME_DANYANG</City>
+				<City>TXT_KEY_CITY_NAME_ULIJIN</City>
+				<City>TXT_KEY_CITY_NAME_SACHEON</City>
 			</Cities>
 			<FreeBuildings>
 				<FreeBuilding>
@@ -2508,7 +2508,7 @@
 				<City>TXT_KEY_CITY_NAME_NOJ_PETEN</City>
 				<City>TXT_KEY_CITY_NAME_QUMARKAJ</City>
 				<City>TXT_KEY_CITY_NAME_MANI</City>
-				<City>Belise</City>
+				<City>TXT_KEY_CITY_NAME_BELISE</City>
 			</Cities>
 			<FreeBuildings>
 				<FreeBuilding>
@@ -2592,21 +2592,21 @@
 				<City>TXT_KEY_CITY_NAME_CHOIR</City>
 				<City>TXT_KEY_CITY_NAME_ULAANGOM</City>
 				<City>TXT_KEY_CITY_NAME_ULIASTAY</City>
-				<City>Lun</City>
-				<City>Bayan</City>
-				<City>Zavkhan</City>
-				<City>Batshireet</City>
+				<City>TXT_KEY_CITY_NAME_LUN</City>
+				<City>TXT_KEY_CITY_NAME_BAYAN</City>
+				<City>TXT_KEY_CITY_NAME_ZAVKHAN</City>
+				<City>TXT_KEY_CITY_NAME_BATSHIREET</City>
 				<City>TXT_KEY_CITY_NAME_KHOVSGOL</City>
-				<City>Dashinchilen</City>
-				<City>Tsaidam</City>
-				<City>Jargalant</City>
-				<City>Bulgin Denj</City>
-				<City>Khorgo</City>
-				<City>Noot Nuur</City>
-				<City>Tosotsengel</City>
-				<City>Ider</City>
-				<City>Uliastai</City>
-				<City>Khadat</City>
+				<City>TXT_KEY_CITY_NAME_DASHINCHILEN</City>
+				<City>TXT_KEY_CITY_NAME_TSAIDAM</City>
+				<City>TXT_KEY_CITY_NAME_JARGALANT</City>
+				<City>TXT_KEY_CITY_NAME_BULGIN_DENJ</City>
+				<City>TXT_KEY_CITY_NAME_KHORGO</City>
+				<City>TXT_KEY_CITY_NAME_NOOT_NUUR</City>
+				<City>TXT_KEY_CITY_NAME_TOSOTSENGEL</City>
+				<City>TXT_KEY_CITY_NAME_IDER</City>
+				<City>TXT_KEY_CITY_NAME_ULIASTAI</City>
+				<City>TXT_KEY_CITY_NAME_KHADAT</City>
 				<City>TXT_KEY_CITY_NAME_BAYANHONGOR</City>
 				<City>TXT_KEY_CITY_NAME_ALTAI</City>
 			</Cities>
@@ -2917,14 +2917,14 @@
 				<City>TXT_KEY_CITY_NAME_BITLIS</City>
 				<City>TXT_KEY_CITY_NAME_RAMADI</City>
 				<City>TXT_KEY_CITY_NAME_GANGRA</City>
-				<City>Kirikkale</City>
-				<City>Sorgun</City>
-				<City>Amasya</City>
-				<City>Mecitozu</City>
-				<City>Corum</City>
-				<City>Duragan</City>
-				<City>Eleskirt</City>
-				<City>Ahlat</City>
+				<City>TXT_KEY_CITY_NAME_KIRIKKALE</City>
+				<City>TXT_KEY_CITY_NAME_SORGUN</City>
+				<City>TXT_KEY_CITY_NAME_AMASYA</City>
+				<City>TXT_KEY_CITY_NAME_MECITOZU</City>
+				<City>TXT_KEY_CITY_NAME_CORUM</City>
+				<City>TXT_KEY_CITY_NAME_DURAGAN</City>
+				<City>TXT_KEY_CITY_NAME_ELESKIRT</City>
+				<City>TXT_KEY_CITY_NAME_AHLAT</City>
 			</Cities>
 			<FreeBuildings>
 				<FreeBuilding>
@@ -3195,28 +3195,28 @@
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
 				<City>TXT_KEY_CITY_NAME_ROME</City><!-- 800-700 -->
-				<City>Ostia</City><!-- 700-600 -->
-				<City>Signia</City><!-- 535-509 -->
-				<City>Circeii</City><!-- 535-509 -->
-				<City>Velitrae</City><!-- 494 BC -->
-				<City>Antium</City><!-- 468 BC -->
-				<City>Sutrium</City><!-- 383 BC -->
-				<City>Setia</City><!-- 382 BC -->
-				<City>Cumae</City><!-- 338 BC -->
-				<City>Neapolis</City><!-- 327 BC -->
+				<City>TXT_KEY_CITY_NAME_OSTIA</City><!-- 700-600 -->
+				<City>TXT_KEY_CITY_NAME_SIGNIA</City><!-- 535-509 -->
+				<City>TXT_KEY_CITY_NAME_CIRCEII</City><!-- 535-509 -->
+				<City>TXT_KEY_CITY_NAME_VELITRAE</City><!-- 494 BC -->
+				<City>TXT_KEY_CITY_NAME_ANTIUM</City><!-- 468 BC -->
+				<City>TXT_KEY_CITY_NAME_SUTRIUM</City><!-- 383 BC -->
+				<City>TXT_KEY_CITY_NAME_SETIA</City><!-- 382 BC -->
+				<City>TXT_KEY_CITY_NAME_CUMAE</City><!-- 338 BC -->
+				<City>TXT_KEY_CITY_NAME_NEAPOLIS</City><!-- 327 BC -->
 				<City>TXT_KEY_CITY_NAME_SUESSA</City><!-- 313 BC -->
 				<City>TXT_KEY_CITY_NAME_FREGELLAE</City><!-- 313 BC -->
-				<City>Arretium</City><!-- 311 BC -->
-				<City>Arpinum</City><!-- 305 BC -->
+				<City>TXT_KEY_CITY_NAME_ARRETIUM</City><!-- 311 BC -->
+				<City>TXT_KEY_CITY_NAME_ARPINUM</City><!-- 305 BC -->
 				<City>TXT_KEY_CITY_NAME_ALBAFUCENS</City><!-- 304 BC -->
 				<City>TXT_KEY_CITY_NAME_SORA</City><!-- 303 BC -->
 				<City>TXT_KEY_CITY_NAME_SENA_GALLICA</City><!-- 284 BC -->
-				<City>Tarentum</City><!-- 272 BC -->
-				<City>Barium</City><!-- 300-201 -->
-				<City>Ariminum</City><!-- 268 BC -->
-				<City>Castrum Novum</City><!-- 264 BC -->
-				<City>Brundisium</City><!-- 267-245 -->
-				<City>Mediolanum</City><!-- 222 BC -->
+				<City>TXT_KEY_CITY_NAME_TARENTUM</City><!-- 272 BC -->
+				<City>TXT_KEY_CITY_NAME_BARIUM</City><!-- 300-201 -->
+				<City>TXT_KEY_CITY_NAME_ARIMINUM</City><!-- 268 BC -->
+				<City>TXT_KEY_CITY_NAME_CASTRUM_NOVUM</City><!-- 264 BC -->
+				<City>TXT_KEY_CITY_NAME_BRUNDISIUM</City><!-- 267-245 -->
+				<City>TXT_KEY_CITY_NAME_MEDIOLANUM</City><!-- 222 BC -->
 				<City>TXT_KEY_CITY_NAME_PLACENTIA</City><!-- 218 BC -->
 				<City>TXT_KEY_CITY_NAME_TARRACO</City>
 				<City>TXT_KEY_CITY_NAME_PADUA</City><!-- 200 BC -->
@@ -3226,33 +3226,33 @@
 				<City>TXT_KEY_CITY_NAME_RAVENNA</City><!-- 89 BC -->
 				<City>TXT_KEY_CITY_NAME_PISA</City><!-- 89 BC -->
 				<City>TXT_KEY_CITY_NAME_NAISSUS</City><!-- 75-73 -->
-				<City>Diospolis</City><!-- 71 BC -->
-				<City>Tyrus</City><!-- 64 BC -->
+				<City>TXT_KEY_CITY_NAME_DIOSPOLIS</City><!-- 71 BC -->
+				<City>TXT_KEY_CITY_NAME_TYRUS</City><!-- 64 BC -->
 				<City>TXT_KEY_CITY_NAME_DAMASCUS</City><!-- 64 BC -->
-				<City>Satricum</City>
-				<City>Ardea</City>
+				<City>TXT_KEY_CITY_NAME_SATRICUM</City>
+				<City>TXT_KEY_CITY_NAME_ARDEA</City>
 				<City>TXT_KEY_CITY_NAME_TRENTO</City><!-- 49 BC -->
 				<City>TXT_KEY_CITY_NAME_VERONA</City><!-- 49 BC -->
 				<City>TXT_KEY_CITY_NAME_HIPPO_REGIUS</City><!-- 46 BC -->
-				<City>Lugdunum</City><!-- 43 BC -->
-				<City>Corfinium</City>
+				<City>TXT_KEY_CITY_NAME_LUGDUNUM</City><!-- 43 BC -->
+				<City>TXT_KEY_CITY_NAME_CORFINIUM</City>
 				<City>TXT_KEY_CITY_NAME_ULPA_SERDICA</City><!-- 29 BC -->
 				<City>TXT_KEY_CITY_NAME_ACTIA_NICOPOLIS</City><!-- 28 BC -->
 				<City>TXT_KEY_CITY_NAME_SEBASTEA</City><!-- 63-7 -->
-				<City>Caesaraugusta</City><!-- 25-11 -->
+				<City>TXT_KEY_CITY_NAME_CAESARAUGUSTA</City><!-- 25-11 -->
 				<City>TXT_KEY_CITY_NAME_TREVERI</City><!-- 16 BC -->
 				<City>TXT_KEY_CITY_NAME_CAESAREA</City><!-- 20-10 -->
-				<City>Sirmium</City><!-- 14 BC -->
-				<City>Civitas Vangionum</City> <!-- ca. 0 -->
+				<City>TXT_KEY_CITY_NAME_SIRMIUM</City><!-- 14 BC -->
+				<City>TXT_KEY_CITY_NAME_CIVITAS_VANGIONUM</City> <!-- ca. 0 -->
 				<City>TXT_KEY_CITY_NAME_PALMYRA</City><!-- 14 -->
-				<City>Londinium</City><!-- 43 -->
+				<City>TXT_KEY_CITY_NAME_LONDINIUM</City><!-- 43 -->
 				<City>TXT_KEY_CITY_NAME_FLAVIA</City><!-- 46 -->
 				<City>TXT_KEY_CITY_NAME_TEURNIA</City><!-- 50 -->
-				<City>Viroconium</City><!-- 55 -->
-				<City>Clusium</City>
-				<City>Eburacum</City><!-- 71 -->
+				<City>TXT_KEY_CITY_NAME_VIROCONIUM</City><!-- 55 -->
+				<City>TXT_KEY_CITY_NAME_CLUSIUM</City>
+				<City>TXT_KEY_CITY_NAME_EBURACUM</City><!-- 71 -->
 				<City>TXT_KEY_CITY_NAME_THEVESTE</City><!-- 75 -->
-				<City>Lauriacum</City><!-- 200 -->
+				<City>TXT_KEY_CITY_NAME_LAURIACUM</City><!-- 200 -->
 				<City>TXT_KEY_CITY_NAME_HISPALIS</City>
 				<City>TXT_KEY_CITY_NAME_SATICULA</City>
 				<City>TXT_KEY_CITY_NAME_ADRIA</City>
@@ -3350,13 +3350,13 @@
 				<City>TXT_KEY_CITY_NAME_NIZHNIYNOVGOROD</City>
 				<City>TXT_KEY_CITY_NAME_SUZDAL</City>
 				<City>TXT_KEY_CITY_NAME_MAGNITOGORSK</City>
-				<City>Kuratovo</City>
-				<City>Ukhta</City>
-				<City>Kirov</City>
-				<City>Stalingrad</City>
-				<City>Rybinsk</City>
-				<City>Petrozavodsk</City>
-				<City>Kaliningrad</City>
+				<City>TXT_KEY_CITY_NAME_KURATOVO</City>
+				<City>TXT_KEY_CITY_NAME_UKHTA</City>
+				<City>TXT_KEY_CITY_NAME_KIROV</City>
+				<City>TXT_KEY_CITY_NAME_STALINGRAD</City>
+				<City>TXT_KEY_CITY_NAME_RYBINSK</City>
+				<City>TXT_KEY_CITY_NAME_PETROZAVODSK</City>
+				<City>TXT_KEY_CITY_NAME_KALININGRAD</City>
 			</Cities>
 			<FreeBuildings>
 				<FreeBuilding>
@@ -3560,10 +3560,10 @@
 				<City>TXT_KEY_CITY_NAME_IBIZA</City>
 				<City>TXT_KEY_CITY_NAME_LAS_PALMAS</City>
 				<City>TXT_KEY_CITY_NAME_TENERIFE</City>
-				<City>Cuenca</City>
-				<City>Tomelloso</City>
-				<City>Puertollano</City>
-				<City>Oliva</City>
+				<City>TXT_KEY_CITY_NAME_CUENCA</City>
+				<City>TXT_KEY_CITY_NAME_TOMELLOSO</City>
+				<City>TXT_KEY_CITY_NAME_PUERTOLLANO</City>
+				<City>TXT_KEY_CITY_NAME_OLIVA</City>
 			</Cities>
 			<FreeBuildings>
 				<FreeBuilding>
@@ -3656,12 +3656,12 @@
 				<City>TXT_KEY_CITY_NAME_GUDUA</City>
 				<City>TXT_KEY_CITY_NAME_GANZIR</City>
 				<City>TXT_KEY_CITY_NAME_IRKALLA</City>
-				<City>Tabannusi</City>
-				<City>Nahu</City>
-				<City>Tiddu</City>
-				<City>Niksum</City>
-				<City>Erumma</City>
-				<City>Parasu</City>
+				<City>TXT_KEY_CITY_NAME_TABANNUSI</City>
+				<City>TXT_KEY_CITY_NAME_NAHU</City>
+				<City>TXT_KEY_CITY_NAME_TIDDU</City>
+				<City>TXT_KEY_CITY_NAME_NIKSUM</City>
+				<City>TXT_KEY_CITY_NAME_ERUMMA</City>
+				<City>TXT_KEY_CITY_NAME_PARASU</City>
 			</Cities>
 			<FreeBuildings>
 				<FreeBuilding>
@@ -3914,51 +3914,51 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
-				<City>Canberra</City>
-				<City>Sydney</City>
-				<City>Melbourne</City>
-				<City>Brisbane</City>
-				<City>Adelaide</City>
-				<City>Perth</City>
-				<City>Hobart</City>
-				<City>Darwin</City>
-				<City>Newcastle</City>
-				<City>Wollongong</City>
-				<City>Wagga Wagga</City>
-				<City>Port Macquarie</City>
-				<City>Albury</City>
-				<City>Broken Hill</City>
-				<City>Penrith</City>
-				<City>Katoomba</City>
-				<City>Gold Coast</City>
-				<City>Surfer's Paradise</City>
-				<City>Noosa</City>
-				<City>Coolangatta</City>
-				<City>Townsville</City>
-				<City>Cairns</City>
-				<City>Bundaberg</City>
-				<City>Sunshine Coast</City>
-				<City>Alice Springs</City>
-				<City>Broome</City>
-				<City>Boma</City>
-				<City>Derby</City>
-				<City>Kalgoorlie</City>
-				<City>Cooktown</City>
-				<City>Georgetown</City>
-				<City>Rockhampton</City>
-				<City>Port Hedland</City>
-				<City>Cloncurry</City>
-				<City>Gladstone</City>
-				<City>Hall's Creek</City>
-				<City>Tennant Creek</City>
-				<City>Lincoln</City>
-				<City>Hughenden</City>
-				<City>Mackay</City>
-				<City>Southern Cross</City>
-				<City>Kojonup</City>
-				<City>Bridgetown</City>
-				<City>Collie</City>
-				<City>Northam</City>
+				<City>TXT_KEY_CITY_NAME_CANBERRA</City>
+				<City>TXT_KEY_CITY_NAME_SYDNEY</City>
+				<City>TXT_KEY_CITY_NAME_MELBOURNE</City>
+				<City>TXT_KEY_CITY_NAME_BRISBANE</City>
+				<City>TXT_KEY_CITY_NAME_ADELAIDE</City>
+				<City>TXT_KEY_CITY_NAME_PERTH</City>
+				<City>TXT_KEY_CITY_NAME_HOBART</City>
+				<City>TXT_KEY_CITY_NAME_DARWIN</City>
+				<City>TXT_KEY_CITY_NAME_NEWCASTLE</City>
+				<City>TXT_KEY_CITY_NAME_WOLLONGONG</City>
+				<City>TXT_KEY_CITY_NAME_WAGGA_WAGGA</City>
+				<City>TXT_KEY_CITY_NAME_PORT_MACQUARIE</City>
+				<City>TXT_KEY_CITY_NAME_ALBURY</City>
+				<City>TXT_KEY_CITY_NAME_BROKEN_HILL</City>
+				<City>TXT_KEY_CITY_NAME_PENRITH</City>
+				<City>TXT_KEY_CITY_NAME_KATOOMBA</City>
+				<City>TXT_KEY_CITY_NAME_GOLD_COAST</City>
+				<City>TXT_KEY_CITY_NAME_SURFERS_PARADISE</City>
+				<City>TXT_KEY_CITY_NAME_NOOSA</City>
+				<City>TXT_KEY_CITY_NAME_COOLANGATTA</City>
+				<City>TXT_KEY_CITY_NAME_TOWNSVILLE</City>
+				<City>TXT_KEY_CITY_NAME_CAIRNS</City>
+				<City>TXT_KEY_CITY_NAME_BUNDABERG</City>
+				<City>TXT_KEY_CITY_NAME_SUNSHINE_COAST</City>
+				<City>TXT_KEY_CITY_NAME_ALICE_SPRINGS</City>
+				<City>TXT_KEY_CITY_NAME_BROOME</City>
+				<City>TXT_KEY_CITY_NAME_BOMA</City>
+				<City>TXT_KEY_CITY_NAME_DERBY</City>
+				<City>TXT_KEY_CITY_NAME_KALGOORLIE</City>
+				<City>TXT_KEY_CITY_NAME_COOKTOWN</City>
+				<City>TXT_KEY_CITY_NAME_GEORGETOWN</City>
+				<City>TXT_KEY_CITY_NAME_ROCKHAMPTON</City>
+				<City>TXT_KEY_CITY_NAME_PORT_HEDLAND</City>
+				<City>TXT_KEY_CITY_NAME_CLONCURRY</City>
+				<City>TXT_KEY_CITY_NAME_GLADSTONE</City>
+				<City>TXT_KEY_CITY_NAME_HALLS_CREEK</City>
+				<City>TXT_KEY_CITY_NAME_TENNANT_CREEK</City>
+				<City>TXT_KEY_CITY_NAME_LINCOLN</City>
+				<City>TXT_KEY_CITY_NAME_HUGHENDEN</City>
+				<City>TXT_KEY_CITY_NAME_MACKAY</City>
+				<City>TXT_KEY_CITY_NAME_SOUTHERN_CROSS</City>
+				<City>TXT_KEY_CITY_NAME_KOJONUP</City>
+				<City>TXT_KEY_CITY_NAME_BRIDGETOWN</City>
+				<City>TXT_KEY_CITY_NAME_COLLIE</City>
+				<City>TXT_KEY_CITY_NAME_NORTHAM</City>
 			</Cities>
 			<FreeBuildings>
 				<FreeBuilding>
@@ -4014,51 +4014,51 @@
 			<bPlayable>1</bPlayable>
 			<bAIPlayable>1</bAIPlayable>
 			<Cities>
-				<City>Copenhagen</City>
+				<City>TXT_KEY_CITY_NAME_COPENHAGEN</City>
 				<City>TXT_KEY_CITY_NAME_ROSKILDE</City>
 				<City>TXT_KEY_CITY_NAME_AARHUS</City>
 				<City>TXT_KEY_CITY_NAME_RIBE</City>
 				<City>TXT_KEY_CITY_NAME_ODENSE</City>
-				<City>Aalborg</City>
-				<City>Kolding</City>
+				<City>TXT_KEY_CITY_NAME_AALBORG</City>
+				<City>TXT_KEY_CITY_NAME_KOLDING</City>
 				<City>TXT_KEY_CITY_NAME_HEDEBY</City>
 				<City>TXT_KEY_CITY_NAME_JELLING</City>
-				<City>Helsingoer</City>
-				<City>Esbjerg</City>
-				<City>Randers</City>
-				<City>Horsens</City>
-				<City>Vejle</City>
-				<City>Herning</City>
-				<City>Naestved</City>
- 				<City>Silkeborg</City>
-				<City>Fredericia</City>
-				<City>Viborg</City>
-				<City>Holstebro</City>
-				<City>Slagelse</City>
-				<City>Haderslev</City>
-				<City>Skanderborg</City>
-				<City>Frederikshavn</City>
-				<City>Grindsted</City>
-				<City>Varde</City>
-				<City>Aabenraa</City>
-				<City>Toender</City>
-				<City>Graasten</City>
-				<City>Thisted</City>
-				<City>Middelfart</City>
-				<City>Roenne</City>
-				<City>Christiansfeld</City>
-				<City>Nyborg</City>
-				<City>Fano</City>
-				<City>Jerup</City>
-				<City>Borkop</City>
-				<City>Ikast</City>
-				<City>Kibaek</City>
-				<City>Vemb</City>
-				<City>Aars</City>
-				<City>Nykobing</City>
-				<City>Hurup Thy</City>
-				<City>Storvorde</City>
-				<City>Nibe</City>
+				<City>TXT_KEY_CITY_NAME_HELSINGOER</City>
+				<City>TXT_KEY_CITY_NAME_ESBJERG</City>
+				<City>TXT_KEY_CITY_NAME_RANDERS</City>
+				<City>TXT_KEY_CITY_NAME_HORSENS</City>
+				<City>TXT_KEY_CITY_NAME_VEJLE</City>
+				<City>TXT_KEY_CITY_NAME_HERNING</City>
+				<City>TXT_KEY_CITY_NAME_NAESTVED</City>
+ 				<City>TXT_KEY_CITY_NAME_SILKEBORG</City>
+				<City>TXT_KEY_CITY_NAME_FREDERICIA</City>
+				<City>TXT_KEY_CITY_NAME_VIBORG</City>
+				<City>TXT_KEY_CITY_NAME_HOLSTEBRO</City>
+				<City>TXT_KEY_CITY_NAME_SLAGELSE</City>
+				<City>TXT_KEY_CITY_NAME_HADERSLEV</City>
+				<City>TXT_KEY_CITY_NAME_SKANDERBORG</City>
+				<City>TXT_KEY_CITY_NAME_FREDERIKSHAVN</City>
+				<City>TXT_KEY_CITY_NAME_GRINDSTED</City>
+				<City>TXT_KEY_CITY_NAME_VARDE</City>
+				<City>TXT_KEY_CITY_NAME_AABENRAA</City>
+				<City>TXT_KEY_CITY_NAME_TOENDER</City>
+				<City>TXT_KEY_CITY_NAME_GRAASTEN</City>
+				<City>TXT_KEY_CITY_NAME_THISTED</City>
+				<City>TXT_KEY_CITY_NAME_MIDDELFART</City>
+				<City>TXT_KEY_CITY_NAME_ROENNE</City>
+				<City>TXT_KEY_CITY_NAME_CHRISTIANSFELD</City>
+				<City>TXT_KEY_CITY_NAME_NYBORG</City>
+				<City>TXT_KEY_CITY_NAME_FANO</City>
+				<City>TXT_KEY_CITY_NAME_JERUP</City>
+				<City>TXT_KEY_CITY_NAME_BORKOP</City>
+				<City>TXT_KEY_CITY_NAME_IKAST</City>
+				<City>TXT_KEY_CITY_NAME_KIBAEK</City>
+				<City>TXT_KEY_CITY_NAME_VEMB</City>
+				<City>TXT_KEY_CITY_NAME_AARS</City>
+				<City>TXT_KEY_CITY_NAME_NYKOBING</City>
+				<City>TXT_KEY_CITY_NAME_HURUP_THY</City>
+				<City>TXT_KEY_CITY_NAME_STORVORDE</City>
+				<City>TXT_KEY_CITY_NAME_NIBE</City>
 			</Cities>
 			<FreeBuildings>
 				<FreeBuilding>
@@ -4340,51 +4340,51 @@
 			<ArtStyleType>ARTSTYLE_EUROPE</ArtStyleType>
 			<UnitArtStyleType>UNIT_ARTSTYLE_VIKING</UnitArtStyleType>
 			<Cities>
-				<City>Atapuerca</City>
-				<City>Nerja</City>
-				<City>Banolas</City>
-				<City>Carihuela</City>
-				<City>Casares</City>
-				<City>Chatelperron</City>
-				<City>Sidron</City>
-				<City>Zafarraya</City>
-				<City>Arbreda</City>
-				<City>Lezetxiki</City>
-				<City>Hortus</City>
-				<City>Chaise</City>
-				<City>Moustier</City>
-				<City>Moula</City>
-				<City>Circeo</City>
-				<City>Guattari</City>
-				<City>Tabun</City>
-				<City>Engis</City>
-				<City>Naulette</City>
-				<City>Scladina</City>
-				<City>Kulna</City>
-				<City>Sipka</City>
-				<City>Krapina</City>
-				<City>Rork</City>
-				<City>Nug</City>
-				<City>Lik</City>
-				<City>Arg</City>
-				<City>Mug</City>
-				<City>Rog</City>
-				<City>Kro</City>
-				<City>Goz</City>
-				<City>Nga</City>
-				<City>Ehh</City>
-				<City>Mang</City>
-				<City>Nus</City>
-				<City>Dod</City>
-				<City>Olg</City>
-				<City>Nuk</City>
-				<City>Wra</City>
-				<City>Opo</City>
-				<City>Jard</City>
-				<City>Tar</City>
-				<City>Lka</City>
-				<City>Ord</City>
-				<City>Zga</City>
+				<City>TXT_KEY_CITY_NAME_ATAPUERCA</City>
+				<City>TXT_KEY_CITY_NAME_NERJA</City>
+				<City>TXT_KEY_CITY_NAME_BANOLAS</City>
+				<City>TXT_KEY_CITY_NAME_CARIHUELA</City>
+				<City>TXT_KEY_CITY_NAME_CASARES</City>
+				<City>TXT_KEY_CITY_NAME_CHATELPERRON</City>
+				<City>TXT_KEY_CITY_NAME_SIDRON</City>
+				<City>TXT_KEY_CITY_NAME_ZAFARRAYA</City>
+				<City>TXT_KEY_CITY_NAME_ARBREDA</City>
+				<City>TXT_KEY_CITY_NAME_LEZETXIKI</City>
+				<City>TXT_KEY_CITY_NAME_HORTUS</City>
+				<City>TXT_KEY_CITY_NAME_CHAISE</City>
+				<City>TXT_KEY_CITY_NAME_MOUSTIER</City>
+				<City>TXT_KEY_CITY_NAME_MOULA</City>
+				<City>TXT_KEY_CITY_NAME_CIRCEO</City>
+				<City>TXT_KEY_CITY_NAME_GUATTARI</City>
+				<City>TXT_KEY_CITY_NAME_TABUN</City>
+				<City>TXT_KEY_CITY_NAME_ENGIS</City>
+				<City>TXT_KEY_CITY_NAME_NAULETTE</City>
+				<City>TXT_KEY_CITY_NAME_SCLADINA</City>
+				<City>TXT_KEY_CITY_NAME_KULNA</City>
+				<City>TXT_KEY_CITY_NAME_SIPKA</City>
+				<City>TXT_KEY_CITY_NAME_KRAPINA</City>
+				<City>TXT_KEY_CITY_NAME_RORK</City>
+				<City>TXT_KEY_CITY_NAME_NUG</City>
+				<City>TXT_KEY_CITY_NAME_LIK</City>
+				<City>TXT_KEY_CITY_NAME_ARG</City>
+				<City>TXT_KEY_CITY_NAME_MUG</City>
+				<City>TXT_KEY_CITY_NAME_ROG</City>
+				<City>TXT_KEY_CITY_NAME_KRO</City>
+				<City>TXT_KEY_CITY_NAME_GOZ</City>
+				<City>TXT_KEY_CITY_NAME_NGA</City>
+				<City>TXT_KEY_CITY_NAME_EHH</City>
+				<City>TXT_KEY_CITY_NAME_MANG</City>
+				<City>TXT_KEY_CITY_NAME_NUS</City>
+				<City>TXT_KEY_CITY_NAME_DOD</City>
+				<City>TXT_KEY_CITY_NAME_OLG</City>
+				<City>TXT_KEY_CITY_NAME_NUK</City>
+				<City>TXT_KEY_CITY_NAME_WRA</City>
+				<City>TXT_KEY_CITY_NAME_OPO</City>
+				<City>TXT_KEY_CITY_NAME_JARD</City>
+				<City>TXT_KEY_CITY_NAME_TAR</City>
+				<City>TXT_KEY_CITY_NAME_LKA</City>
+				<City>TXT_KEY_CITY_NAME_ORD</City>
+				<City>TXT_KEY_CITY_NAME_ZGA</City>
 			</Cities>
 			<FreeBuildings>
 				<FreeBuilding>
@@ -4414,7 +4414,7 @@
 					<bFreeTech>1</bFreeTech>
 				</FreeTech>
 				<FreeTech>
-					<TechType>TECH_TOOL_MAKING</TechType>
+					<TechType>TECH_LANGUAGE</TechType>
 					<bFreeTech>1</bFreeTech>
 				</FreeTech>
 			</FreeTechs>

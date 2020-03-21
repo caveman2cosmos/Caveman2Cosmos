@@ -105,11 +105,6 @@
 		<French>coalition de </French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GROUPTITLE_COFFLE</Tag>
-		<English>Coffle of </English>
-		<French>colonne de </French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_COLLECTION</Tag>
 		<English>Collection of </English>
 		<French>collection de </French>
@@ -203,11 +198,6 @@
 		<Tag>TXT_KEY_GROUPTITLE_FLIGHT</Tag>
 		<English>Flight of </English>
 		<French>vol de </French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GROUPTITLE_FLOAT</Tag>
-		<English>Float of </English>
-		<French>flotte de </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_FLOCK</Tag>
@@ -374,14 +364,9 @@
 		<French>petit comité de </French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GROUPTITLE_NEST</Tag>
-		<English>Nest of </English>
-		<French>nid de </French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_OBSTINANCY</Tag>
 		<English>Obstinancy of </English>
-		<French>obstinance de </French>
+		<French>(obstiné) </French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_PACK</Tag>

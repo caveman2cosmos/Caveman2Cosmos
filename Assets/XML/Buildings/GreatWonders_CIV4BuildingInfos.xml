@@ -801,6 +801,12 @@
 			<iGlobalPopulationChange>-30</iGlobalPopulationChange>
 			<!-- Unique effects -->
 			<VictoryPrereq>VICTORY_SCIENTIFIC</VictoryPrereq>
+			<VictoryThresholds>
+				<VictoryThreshold>
+					<VictoryType>VICTORY_SCIENTIFIC</VictoryType>
+					<iThreshold>1</iThreshold>
+				</VictoryThreshold>
+			</VictoryThresholds>
 			<bGoldenAge>1</bGoldenAge>
 			<!-- Misc -->
 			<iAsset>100</iAsset>
@@ -2356,12 +2362,12 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_BYZANTINE_HIPPODROME</BuildingType>
+					<BuildingType>BUILDING_HIPPODROME</BuildingType>
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_BYZANTINE_HIPPODROME</BuildingType>
+				<BuildingType>BUILDING_HIPPODROME</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_TOURNAMENTS</ObsoleteTech>
@@ -8310,7 +8316,7 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_GOLD_WARES</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_TERRACOTTA_WARES</Bonus>
+				<Bonus>BONUS_TERRACOTTA</Bonus>
 			</PrereqBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MANOR</BuildingType>
@@ -9343,7 +9349,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_RED_AND_BLACK_WARE</FreeBonus>
+			<FreeBonus>BONUS_RED_AND_BLACK_CERAMICS</FreeBonus>
 			<iNumFreeBonuses>6</iNumFreeBonuses>
 			<!-- Specialist effects -->
 			<SpecialistCounts>
@@ -10568,7 +10574,7 @@
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Global -->
-			<FreeBuilding>BUILDING_OBELISK</FreeBuilding>
+			<FreeBuilding>BUILDING_MONUMENT</FreeBuilding>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<Flavors>
@@ -11360,7 +11366,7 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_STEEL_MILL</BuildingType>
+					<BuildingType>BUILDING_SMELTER_STEEL</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
@@ -12578,17 +12584,17 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- The Pyramids -->
-			<Type>BUILDING_PYRAMID</Type>
+			<Type>BUILDING_GREAT_PYRAMID</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_PYRAMID</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PYRAMID_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_PYRAMID_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_GREAT_PYRAMID</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GREAT_PYRAMID_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GREAT_PYRAMID_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_VALLEY_KINGS_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PYRAMID</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GREAT_PYRAMID</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_PYRAMIDS</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_PYRAMID</ConstructSound>
 			<fVisibilityPriority>100</fVisibilityPriority>
@@ -12801,17 +12807,17 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- The Sphinx -->
-			<Type>BUILDING_SPHINX</Type>
+			<Type>BUILDING_GREAT_SPHINX</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_SPHINX</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SPHINX_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SPHINX_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_GREAT_SPHINX</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GREAT_SPHINX_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GREAT_SPHINX_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_VALLEY_KINGS_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SPHINX</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GREAT_SPHINX</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_SPHINX</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_PYRAMID</ConstructSound>
 			<fVisibilityPriority>100</fVisibilityPriority>
@@ -12963,7 +12969,7 @@
 			<bWater>1</bWater>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_STEEL_MILL</BuildingType>
+					<BuildingType>BUILDING_SMELTER_STEEL</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
@@ -15635,13 +15641,13 @@
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_ARTIST_GUILD</BuildingType>
+					<BuildingType>BUILDING_ARTIST_COLONY</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
-				<BuildingType>BUILDING_ARTIST_GUILD</BuildingType>
+				<BuildingType>BUILDING_ARTIST_COLONY</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>1700</iCost>
@@ -15756,13 +15762,13 @@
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_ARTIST_GUILD</BuildingType>
+					<BuildingType>BUILDING_ARTIST_COLONY</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
-				<BuildingType>BUILDING_ARTIST_GUILD</BuildingType>
+				<BuildingType>BUILDING_ARTIST_COLONY</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>1700</iCost>
@@ -15877,13 +15883,13 @@
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_ARTIST_GUILD</BuildingType>
+					<BuildingType>BUILDING_ARTIST_COLONY</BuildingType>
 					<iNumBuildingNeeded>4</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
-				<BuildingType>BUILDING_ARTIST_GUILD</BuildingType>
+				<BuildingType>BUILDING_ARTIST_COLONY</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Cost -->
 			<iCost>1700</iCost>
@@ -18212,7 +18218,6 @@
 			<Description>TXT_KEY_BUILDING_EMPIRE_STATE_BUILDING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EMPIRE_STATE_BUILDING_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_EMPIRE_STATE_BUILDING_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_EMPIRE_STATE_BUILDING_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_EMPIRE_STATE_BUILDING</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_EMPIRE_STATE_BUILDING</MovieDefineTag>
@@ -20639,7 +20644,7 @@
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_NHL</BuildingType>
+				<BuildingType>BUILDING_NATIONAL_SPORTS_LEAGUE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>

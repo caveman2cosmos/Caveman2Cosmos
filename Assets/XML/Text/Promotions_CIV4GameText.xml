@@ -444,7 +444,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_LIE_IN_WAIT_HELP</Tag>
-		<English>Each round spent building up Lie in Wait, the unit gains +5% [COLOR_HIGHLIGHT_TEXT]Stealth Combat Modifier[COLOR_REVERT] up to a maximum bonus of +25%, AND +1 [COLOR_HIGHLIGHT_TEXT]Stealth Strikes[COLOR_REVERT] on the first and fifth rounds of building up up to a maximum of +2, provided each promotion level is qualified for by the unit.  Unit also gains Stealth Defense and will thus surprise defend against enemy units attempting to move into the tile.  Once the unit has revealed itself, it stays revealed and is no longer engaging in stealth combat thereafter for the remainder of the round.</English>
+		<English>Each round spent building up Lie in Wait, the unit gains +5% [COLOR_HIGHLIGHT_TEXT]Stealth Combat Modifier[COLOR_REVERT] up to a maximum bonus of +25%, AND +1 [COLOR_HIGHLIGHT_TEXT]Stealth Strikes[COLOR_REVERT] on the first and fifth rounds of building up up to a maximum of +2, provided each promotion level is qualified for by the unit. Unit also gains Stealth Defense and will thus surprise defend against enemy units attempting to move into the tile. Once the unit has revealed itself, it stays revealed and is no longer engaging in stealth combat thereafter for the remainder of the round.</English>
 		<French>Chaque tour dépensé pour en se retrancher en Intrigue, l'unité gagne + 5% [COLOR_HIGHLIGHT_TEXT] Modificateur de combat furtif [COLOR_REVERT] jusqu'à un bonus maximum de + 25%, ET +1 [COLOR_HIGHLIGHT_TEXT] Frappes furtives [COLOR_REVERT] les premier et cinquième tours de construction jusqu'à un maximum de +2, à condition que chaque niveau de promotion soit qualifié par l'unité. L'unité gagne également la défense furtive et surprendra ainsi la défense contre les unités ennemies qui tentent de se déplacer dans la tuile. Une fois que l'unité s'est révélée, elle reste révélée et n'entreprend plus de combat furtif par la suite pour le reste du round.</French>
 		<German>Durch Training in Auflauern erhöht sich jede Runde der [COLOR_HIGHLIGHT_TEXT]Tarnmodifikator[COLOR_REVERT] der Einheit um 5% (maximal 25%). Außerdem erhält sie einen zusätzlichen Tarnangriff in der ersten und fünften Runde und kann sich außerdem gegen Tarnangriffe verteidigen. Wenn die Einheit sich gezeigt hat, bleibt sie sichtbar und hat für den Rest der Runde keine Tarnvorteile mehr.</German>
 	</TEXT>
@@ -466,7 +466,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_OBSERVATION_HELP</Tag>
-		<English>On the first rounds spent building up Observation, the unit gains 1 intensity of [COLOR_HIGHLIGHT_TEXT]Camouflage Visibility[COLOR_REVERT].  On the third and fifth rounds, the unit gains 1 additional [COLOR_HIGHLIGHT_TEXT]Camouflage Visibility Range[COLOR_REVERT], provided each promotion level is qualified for by the unit.</English>
+		<English>On the first rounds spent building up Observation, the unit gains 1 intensity of [COLOR_HIGHLIGHT_TEXT]Camouflage Visibility[COLOR_REVERT]. On the third and fifth rounds, the unit gains 1 additional [COLOR_HIGHLIGHT_TEXT]Camouflage Visibility Range[COLOR_REVERT], provided each promotion level is qualified for by the unit.</English>
 		<French>Lors du premier Round de développement de la spécialisation Observation, l'unité gagne 1 en intensité de [COLOR_HIGHLIGHT_TEXT]Détection du Camouflage[COLOR_REVERT]. Pour le troisième et le cinquième Round, elle gagne 1 en [COLOR_HIGHLIGHT_TEXT]Portée de détection ud Camouflage[COLOR_REVERT], et ce reçu pour chaque niveau de promotion obtenu par l'unité.</French>
 	</TEXT>
 	<TEXT>
@@ -883,7 +883,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_EQUIPMENT_MELEE_WEAPONS</Tag>
-		<English>Melee  Promotion Line</English>
+		<English>Melee Promotion Line</English>
 		<French>Armes de Corps Corps</French>
 		<German>Melee Weapons Promotion Line</German>
 		<Italian>Armi da corpo a corpo</Italian>
@@ -2580,8 +2580,8 @@
 		</Spanish>
 		<Polish>Desant</Polish>
 	</TEXT>
-  <TEXT>
-  	<Tag>TXT_KEY_PROMOTION_ANIMAL_HUNTER</Tag>
+ <TEXT>
+ 	<Tag>TXT_KEY_PROMOTION_ANIMAL_HUNTER</Tag>
 		<English>Animal Hunter</English>
 		<French>Chasseur d'Animaux</French>
 		<German>Animal Jaeger</German>
@@ -2639,7 +2639,7 @@
 		<Tag>TXT_KEY_PROMOTION_ANTITANK_DEFENSE2</Tag>
 		<English>Antitank Defense II</English>
 		<French>Défense Anti-char II</French>
-		<German>Panzerverteidigung  II</German>
+		<German>Panzerverteidigung II</German>
 		<Italian>Difesa anticarro II</Italian>
 		<Spanish>Defensa antitanque II</Spanish>
 		<Polish>Obrona Przeciwczołgowa II</Polish>
@@ -2648,7 +2648,7 @@
 		<Tag>TXT_KEY_PROMOTION_ANTITANK_DEFENSE3</Tag>
 		<English>Antitank Defense III</English>
 		<French>Défense Anti-char III</French>
-		<German>Panzerverteidigung  III</German>
+		<German>Panzerverteidigung III</German>
 		<Italian>Difesa anticarro III</Italian>
 		<Spanish>Defensa antitanque III</Spanish>
 		<Polish>Obrona Przeciwczołgowa III</Polish>
@@ -4050,7 +4050,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BOUNTY_HUNTER_HELP</Tag>
-		<English>Makes the unit capable of transporting captives.  In general this is beneficial to transport them quickly, hidden, or navally.  Warning: Only one type of Special Unit Category can be loaded on any given unit and this promotion will replace other types of Special Units that can be loaded onto this unit as a result.  In otherwords, it will dedicate this unit to ONLY being able to carry captives.  Will also give some added carry space for this purpose.  This is not to be envisioned in the same way that you might envision carrying units on a ship normally... it's instead a matter of being a 'chain gang' leader and commander.  Also be warned that loaded captives will reduce the combat, withdrawal and pursuit effectiveness of the units transporting them.  Each adds an increasing penalty so the more loaded, the more burdened and penalized the transporting unit becomes.  This is because captives will generally attempt to free themselves during conflict which distracts their captors.</English>
+		<English>Makes the unit capable of transporting captives. In general this is beneficial to transport them quickly, hidden, or navally. Warning: Only one type of Special Unit Category can be loaded on any given unit and this promotion will replace other types of Special Units that can be loaded onto this unit as a result. In otherwords, it will dedicate this unit to ONLY being able to carry captives. Will also give some added carry space for this purpose. This is not to be envisioned in the same way that you might envision carrying units on a ship normally... it's instead a matter of being a 'chain gang' leader and commander. Also be warned that loaded captives will reduce the combat, withdrawal and pursuit effectiveness of the units transporting them. Each adds an increasing penalty so the more loaded, the more burdened and penalized the transporting unit becomes. This is because captives will generally attempt to free themselves during conflict which distracts their captors.</English>
 		<French>Permet à cette unité de transporter des prisonniers. En général, il est intéressant de pouvoir les transporter rapidement, caché. Attention: un seul type d'unité spéciale peut être chargé, et la promotion remplacera la possibilité de transporter d'autres unités spéciales. En d'autres mot, cette unité ne pourra transporter que des prisonniers, et bénéficiera d'une capacité de soute légèrement plus grande. L'unité qui transporte les prisonniers perd automatiquement en puissance au combat, et probabilité de fuite ou retraite, avec cumul de malus en fonction du nombre d'unités transportées.</French>
 	</TEXT>
 	<TEXT>
@@ -10072,7 +10072,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HN_CAPTIVE_HELP</Tag>
-		<English>Automatically assigned to captives and workers when Hidden Nationality units capture them.  Will automatically be removed as soon as the unit moves into your own territory.</English>
+		<English>Automatically assigned to captives and workers when Hidden Nationality units capture them. Will automatically be removed as soon as the unit moves into your own territory.</English>
 		<French>Assigné automatiquement aux prisonniers et ouvriers lorsque des unités avec nationalité cachée les capture. sera supprimé automatiquement dès que l'unité entrera dans son territoire.</French>
 	</TEXT>
 	<TEXT>
@@ -10087,7 +10087,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HN_WAR_PRIZE_HELP</Tag>
-		<English>Automatically assigned to units that can be converted to military use for your nation when captured by a unit with Hidden Nationality.  Can be very valuable to have these units that maintain Hidden Nationality themselves, however, the promotion will vanish if you ever move a unit with this promotion into your own territory.</English>
+		<English>Automatically assigned to units that can be converted to military use for your nation when captured by a unit with Hidden Nationality. Can be very valuable to have these units that maintain Hidden Nationality themselves, however, the promotion will vanish if you ever move a unit with this promotion into your own territory.</English>
 		<French>Assigné automatiquement aux unités qui peuvent être converties en unités militaire, lorsque capturées par une unité avec la nationalité cachée. Cela peut être très intéressant pour ces unités de garder elles-mêmes la nationalité cachée. Par contre, la promotion sera supprimée automatiquement dès que l'unité entrera dans son territoire.</French>
 	</TEXT>
 	<TEXT>
@@ -15088,9 +15088,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RETINUE_APPRENTICE_HELP</Tag>
-		<English>[ICON_BULLET]30% survival chance upon losing a battle.  [ICON_BULLET]Plunders 4% of Enemy [ICON_ESPIONAGE] Reserves on Combat Victory.</English>
-		<French>[ICON_BULLET]30% probabilité de survie après la défaite.  [ICON_BULLET]Pille 4% des points d'[ICON_ESPIONAGE] en cas de Victoire.</French>
-		<Italian>[ICON_BULLET]30% di chance di sopravvivenza quando perde una battaglia.  [ICON_BULLET]Saccheggia 4% delle riserve nemiche di [ICON_ESPIONAGE] dalle vittorie in combattimento.</Italian>
+		<English>[ICON_BULLET]30% survival chance upon losing a battle. [ICON_BULLET]Plunders 4% of Enemy [ICON_ESPIONAGE] Reserves on Combat Victory.</English>
+		<French>[ICON_BULLET]30% probabilité de survie après la défaite. [ICON_BULLET]Pille 4% des points d'[ICON_ESPIONAGE] en cas de Victoire.</French>
+		<Italian>[ICON_BULLET]30% di chance di sopravvivenza quando perde una battaglia. [ICON_BULLET]Saccheggia 4% delle riserve nemiche di [ICON_ESPIONAGE] dalle vittorie in combattimento.</Italian>
 		<Spanish>[ICON_BULLET]Probabilidad del 30% de sobrevivir tras una derrota[ICON_BULLET]Saquea un 4% de las reservas de [ICON_ESPIONAGE] enemigas en caso de victoria</Spanish>
 		<Polish>[ICON_BULLET]30% na przetrwanie przegranej bitwy. [ICON_BULLET]Po zwycięstwie grabi 4% wrogich zapasów [ICON_ESPIONAGE]</Polish>
 	</TEXT>
@@ -19762,5 +19762,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ZEN</Tag>
 		<English>Zen</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_IVORY_WEAPONS</Tag>
+		<English>Ivory Weapons</English>
+		<French>Armes d'Ivoire</French>
 	</TEXT>
 </Civ4GameText>

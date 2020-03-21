@@ -1,201 +1,104 @@
 <html>
-
-<head>
-<meta http-equiv="Content-Language" content="en-us">
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-<title>New Page 1</title>
-</head>
-
-<body>
-
-<table border="0" width="955" height="1333">
-	<tr>
-		<td height="65" width="945" colspan="2" bgcolor="#800000">
-		<p align="center"><font size="6" face="Arial Black" color="#FFFFFF">XML 
-		Tags</font></td>
-	</tr>
-	<tr>
-		<td height="116" width="939" colspan="2"><font face="Tahoma">All changes 
-		marked in Assets\XML\GameInfo\CIV4CivicInfos.xml and 
-		CIV4GameInfoSchema.xml with:<br>
-		<i>Revolution Mod Start<br>
-		Revolution Mod End</i><br>
-		Many thanks to DPII for setting up the format. To customize the effects 
-		for this mod, you only need to edit CivicInfos and change the ~17 
-		settings for each civic. The defaults don't appear to be working, so you 
-		have to specify the values (mostly 0) for all fields for each civic.</font></td>
-	</tr>
-	<tr>
-		<td height="39" width="939" colspan="2" bgcolor="#336699">
-		<blockquote>
-			<blockquote>
-				<blockquote>
-					<blockquote>
-						<blockquote>
-							<p align="center"><b>
-							<font face="Tahoma" color="#FFFFFF">Per turn 
-							Revolution index effects</font></b></p>
-						</blockquote>
-					</blockquote>
-				</blockquote>
-			</blockquote>
-		</blockquote>
-		</td>
-	</tr>
-	<tr>
-		<td height="24" width="117"><font color="#000080" face="Tahoma"><b>
-		RevIdxLocal</b></font></td>
-		<td height="24" width="822"><font face="Tahoma">Integer, defaults to 0, 
-		affects each city's local rev index. Negative values decrease 
-		rebelliousness by that much per turn.  Positive numbers double if there's a much better 
-		LaborFreedom or DemocracyLevel civic the civ can do of same civic option 
-		type (ie the effect of Slavery doubles if Emancipation is available).</font></td>
-	</tr>
-	<tr>
-		<td height="23" width="117"><font color="#000080" face="Tahoma"><b>
-		RevIdxNational</b></font></td>
-		<td height="23" width="822"><font face="Tahoma">Integer, defaults to 0, 
-		affects national rev index. Same as above.</font></td>
-	</tr>
-	<tr>
-		<td height="62" width="117"><font face="Tahoma"><b>
-		<font color="#000080">RevIdxHolyCityGood</font></b></font></td>
-		<td height="62" width="822"><font face="Tahoma">Integer, defaults to 0, 
-		subtracted from rev index in each city with state religion when you own state 
-		religion holy city.</font></td>
-	</tr>
-	<tr>
-		<td height="45" width="117"><font color="#000080" face="Tahoma"><b>
-		RevIdxHolyCityBad</b></font></td>
-		<td height="45" width="822"><font face="Tahoma">Integer, defaults to 0, 
-		added to each city with state rel when heathens own state religion holy 
-		city. Sum of this for civs civics must be &gt; 0 to produce a request for 
-		Crusade.</font></td>
-	</tr>
-	<tr>
-		<td height="33" width="939" colspan="2" align="center" bgcolor="#336699">
-		<b><font face="Tahoma" color="#FFFFFF">One-time revolution index effects</font></b></td>
-	</tr>
-	<tr>
-		<td height="34" width="117"><font face="Tahoma"><b>
-		<font color="#000080">RevIdxSwitchTo</font></b></font></td>
-		<td height="34" width="822">
-		<p align="left"><font face="Tahoma">Integer, defaults to 0, when 
-		switching civics, (newCivic - oldCivic) is added as a one-time 
-		penalty/bonus.&nbsp; Revolution index modifiers (effect = (1+mod)*base)</font></td>
-	</tr>
-	<tr>
-		<td height="50" width="117"><font face="Tahoma"><b>
-		<font color="#000080">RevIdxNationalityMod</font></b></font></td>
-		<td height="50" width="822"><font face="Tahoma">&nbsp;Float, defaults to 
-		0.0. Civ gets sum of effect for all civics.&nbsp; Affects non-state 
-		nationals in cities, so a city with significant foreign culture will have (1.0 + these modifiers) multiply their
-		normal nationality penalty.</font></td>
-	</tr>
-	<tr>
-		<td height="19" width="117"><font face="Tahoma"><b>
-		<font color="#000080">RevIdxBadReligionMod</font></b></font></td>
-		<td height="19" width="822"><font face="Tahoma">Float, defaults to 0.0. 
-		Civ gets sum of effect for all civics.&nbsp; Affects cities with 
-		different religion from state religion, multiplies non-state religion
-		effects as (1.0 + these modifiers).</font></td>
-	</tr>
-	<tr>
-		<td height="32" width="117"><font face="Tahoma"><b>
-		<font color="#000080">RevIdxGoodReligionMod</font></b></font></td>
-		<td height="32" width="822"><font face="Tahoma">Float, defaults to 0.0. 
-		Civ gets sum of effect for all civics.&nbsp; Increases benefit of state religion in city
-		by multiplying benefit by (1.0 + these modifiers)</font></td>
-	</tr>
-	<tr>
-		<td height="53" width="117"><font face="Tahoma"><b>
-		<font color="#000080">RevIdxDistanceMod</font></b></font></td>
-		<td height="53" width="822"><font face="Tahoma">Float, defaults to 0.0. 
-		Sum again.&nbsp; Based on distance from capital, multiplies normal effect as (1.0 + these modifiers).
-		  One use is to make large empires easier to hold for democratic civics.</font></td>
-	</tr>
-	<tr>
-		<td height="101" width="117">&nbsp;</td>
-		<td height="101" width="822"><font face="Tahoma">Revolution violence 
-		modifiers (violent threshold = (1+mod)*base):</font></td>
-	</tr>
-	<tr>
-		<td height="35" width="117"><font face="Tahoma" color="#000080"><b>
-		RevViolentMod </b></font></td>
-		<td height="35" width="822"><font face="Tahoma">Float, defaults to 0.0. 
-		Set to negative for more likely violence, positive for less. Civ gets sum of 
-		effect for all civics.</font></td>
-	</tr>
-	<tr>
-		<td height="87" width="939" colspan="2" bgcolor="#800000">
-		<font face="Tahoma" color="#FFFFFF">Settings determine which civics 
-		rebels will ask for, special requirements for certain types of requests 
-		specified. Generally, rebels ask for highest level possible for civ, and 
-		except where noted will only ask for something with level &gt; 0. Theses 
-		are intended to apply one level to one civic option type (ie government). Will function 
-		if applied to two, but you will only see request for changes inside 
-		option type. </font></td>
-	</tr>
-	<tr>
-		<td height="21" width="939" colspan="2" bgcolor="#336699">
-		<p align="center"><b><font face="Tahoma" color="#FFFFFF">Levels (default 
-		to 0)</font></b></td>
-	</tr>
-	<tr>
-		<td height="51" width="117"><font face="Tahoma"><b>
-		<font color="#000080">iRevReligiousFreedom</font></b></font></td>
-		<td height="51" width="822"><font face="Tahoma">Int, (religious civics) 
-		negative bad, positive means more free. Rebelious cities will ask fro a switch from (Theocracy) &lt; -5 to 
-		anything better. Switch to Freedom of Religion (&gt; 5) from anything 
-		negative.</font></td>
-	</tr>
-	<tr>
-		<td height="44" width="117"><font color="#000080" face="Tahoma"><b>
-		iRevLaborFreedom</b></font></td>
-		<td height="44" width="822"><font face="Tahoma">Int, (labor civics) 
-		negative for slavery, positive for freedom. Switch from Slavery &lt; -5 to 
-		anything &gt; +2 higher. Switch from anything &lt; 0 to Emancipation &gt; 5.</font></td>
-	</tr>
-	<tr>
-		<td height="41" width="117"><font color="#000080" face="Tahoma"><b>
-		iRevEnvironmentalProtection</b></font></td>
-		<td height="41" width="822"><font face="Tahoma">Int, positive means 
-		better for environment. Slightly different than other examples: will ask for switch to a new civic if 
-		difference is &gt; +2.</font></td>
-	</tr>
-	<tr>
-		<td height="76" width="117"><font color="#000080" face="Tahoma"><b>
-		iRevDemocracyLevel</b></font></td>
-		<td height="76" width="822"><font face="Tahoma">Int, (gov't civics) 
-		positive for more democratic, use negative for oppressive. Switch from anything &lt; 
-		0 to anything &gt; 0. Special handling for Universal Suffrage type freedom at &gt; 9.</font></td>
-	</tr>
-	<tr>
-		<td height="28" width="939" colspan="2" bgcolor="#336699">
-		<p align="center"><b><font face="Tahoma" color="#FFFFFF">Booleans 
-		(default to false)</font></b></td>
-	</tr>
-	<tr>
-		<td height="46" width="117"><font color="#000080" face="Tahoma"><b>
-		bIsCommunism</b></font></td>
-		<td height="46" width="822"><font face="Tahoma">Bool, set to true to specify that this is a communist 
-		civic to enable special request type.</font></td>
-	</tr>
-	<tr>
-		<td height="24" width="117"><font color="#000080" face="Tahoma"><b>
-		bIsFreeSpeech</b></font></td>
-		<td height="24" width="822"><font face="Tahoma">Bool, specify that this civic is equivalent to free speech 
-		equivalent.</font></td>
-	</tr>
-	<tr>
-		<td height="29" width="117"><font color="#000080" face="Tahoma"><b>
-		bCanDoElection</b></font></td>
-		<td height="29" width="822"><font face="Tahoma">Bool, does this civic 
-		allow elections? If any of civilization's current civics have this true, 
-		then rebelious cities may call for elections instead of straight leader changes.</font></td>
-	</tr>
-</table>
-
-</body>
-
+	<head>
+		<meta http-equiv="Content-Language" content="en-us">
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+		<title>New Page 1</title>
+	</head>
+	<body>
+		<table border="0" width="955" height="1333">
+			<tr>
+				<td height="65" width="945" colspan="2" bgcolor="#800000"><p align="center"><font size="6" face="Arial Black" color="#FFFFFF">XML Tags</font></p></td>
+			</tr>
+			<tr>
+				<td height="116" width="939" colspan="2"><font face="Tahoma">All changes marked in Assets\XML\GameInfo\CIV4CivicInfos.xml and CIV4GameInfoSchema.xml with:<br/><i>Revolution Mod Start<br/>Revolution Mod End</i><br/>Many thanks to DPII for setting up the format. To customize the effects for this mod, you only need to edit CivicInfos and change the ~17 settings for each civic. The defaults don't appear to be working, so you have to specify the values (mostly 0) for all fields for each civic.</font></td>
+			</tr>
+			<tr>
+				<td height="39" width="939" colspan="2" align="center" bgcolor="#336699"><font face="Tahoma" color="#FFFFFF"><b>Per turn Revolution index effects</b></font></td>
+			</tr>
+			<tr>
+				<td height="24" width="117"><font color="#000080" face="Tahoma"><b>RevIdxLocal</b></font></td>
+				<td height="24" width="822"><font face="Tahoma">Integer, defaults to 0, affects each city's local rev index. Negative values decrease rebelliousness by that much per turn. Positive numbers double if there's a much better LaborFreedom or DemocracyLevel civic the civ can do of same civic option type (ie the effect of Slavery doubles if Emancipation is available).</font></td>
+			</tr>
+			<tr>
+				<td height="23" width="117"><font color="#000080" face="Tahoma"><b>RevIdxNational</b></font></td>
+				<td height="23" width="822"><font face="Tahoma">Integer, defaults to 0, affects national rev index. Same as above.</font></td>
+			</tr>
+			<tr>
+				<td height="62" width="117"><font color="#000080" face="Tahoma"><b>RevIdxHolyCityGood</b></font></td>
+				<td height="62" width="822"><font face="Tahoma">Integer, defaults to 0, subtracted from rev index in each city with state religion when you own state religion holy city.</font></td>
+			</tr>
+			<tr>
+				<td height="45" width="117"><font color="#000080" face="Tahoma"><b>RevIdxHolyCityBad</b></font></td>
+				<td height="45" width="822"><font face="Tahoma">Integer, defaults to 0, added to each city with state rel when heathens own state religion holy city. Sum of this for civs civics must be &gt; 0 to produce a request for Crusade.</font></td>
+			</tr>
+			<tr>
+				<td height="39" width="939" colspan="2" align="center" bgcolor="#336699"><font face="Tahoma" color="#FFFFFF"><b>One-time revolution index effects</b></font></td>
+			</tr>
+			<tr>
+				<td height="34" width="117"><font color="#000080" face="Tahoma"><b>RevIdxSwitchTo</b></font></td>
+				<td height="34" width="822"><p align="left"><font face="Tahoma">Integer, defaults to 0, when switching civics, (newCivic - oldCivic) is added as a one-time penalty/bonus. Revolution index modifiers (effect = (1+mod)*base).</font></td>
+			</tr>
+			<tr>
+				<td height="50" width="117"><font color="#000080" face="Tahoma"><b>RevIdxNationalityMod</b></font></td>
+				<td height="50" width="822"><font face="Tahoma">Float, defaults to 0.0. Civ gets sum of effect for all civics. Affects non-state nationals in cities, so a city with significant foreign culture will have (1.0 + these modifiers) multiply their normal nationality penalty.</font></td>
+			</tr>
+			<tr>
+				<td height="19" width="117"><font color="#000080" face="Tahoma"><b>RevIdxBadReligionMod</b></font></td>
+				<td height="19" width="822"><font face="Tahoma">Float, defaults to 0.0. Civ gets sum of effect for all civics. Affects cities with different religion from state religion, multiplies non-state religion effects as (1.0 + these modifiers).</font></td>
+			</tr>
+			<tr>
+				<td height="32" width="117"><font color="#000080" face="Tahoma"><b>RevIdxGoodReligionMod</b></font></td>
+				<td height="32" width="822"><font face="Tahoma">Float, defaults to 0.0. Civ gets sum of effect for all civics. Increases benefit of state religion in city by multiplying benefit by (1.0 + these modifiers).</font></td>
+			</tr>
+			<tr>
+				<td height="53" width="117"><font color="#000080" face="Tahoma"><b>RevIdxDistanceMod</b></font></td>
+				<td height="53" width="822"><font face="Tahoma">Float, defaults to 0.0. Sum again. Based on distance from capital, multiplies normal effect as (1.0 + these modifiers). One use is to make large empires easier to hold for democratic civics.</font></td>
+			</tr>
+			<tr>
+				<td height="51" width="117">&nbsp;</td>
+				<td height="51" width="822"><font face="Tahoma">Revolution violence modifiers (violent threshold = (1+mod)*base):</font></td>
+			</tr>
+			<tr>
+				<td height="35" width="117"><font color="#000080" face="Tahoma"><b>RevViolentMod</b></font></td>
+				<td height="35" width="822"><font face="Tahoma">Float, defaults to 0.0. Set to negative for more likely violence, positive for less. Civ gets sum of effect for all civics.</font></td>
+			</tr>
+			<tr>
+				<td height="87" width="939" colspan="2" bgcolor="#800000"><font face="Tahoma" color="#FFFFFF">Settings determine which civics rebels will ask for, special requirements for certain types of requests specified. Generally, rebels ask for highest level possible for civ, and except where noted will only ask for something with level &gt; 0. Theses are intended to apply one level to one civic option type (i.e. government). Will function if applied to two, but you will only see request for changes inside option type.</font></td>
+			</tr>
+			<tr>
+				<td height="39" width="939" colspan="2" align="center" bgcolor="#336699"><font face="Tahoma" color="#FFFFFF"><b>Levels (default to 0)</b></font></td>
+			</tr>
+			<tr>
+				<td height="51" width="117"><font color="#000080" face="Tahoma"><b>iRevReligiousFreedom</b></font></td>
+				<td height="51" width="822"><font face="Tahoma">Int, (religious civics) negative bad, positive means more free. Rebelious cities will ask fro a switch from (Theocracy) &lt; -5 to anything better. Switch to Freedom of Religion (&gt; 5) from anything negative.</font></td>
+			</tr>
+			<tr>
+				<td height="44" width="117"><font color="#000080" face="Tahoma"><b>iRevLaborFreedom</b></font></td>
+				<td height="44" width="822"><font face="Tahoma">Int, (labor civics) negative for slavery, positive for freedom. Switch from Slavery &lt; -5 to anything &gt; +2 higher. Switch from anything &lt; 0 to Emancipation &gt; 5.</font></td>
+			</tr>
+			<tr>
+				<td height="41" width="117"><font color="#000080" face="Tahoma"><b>iRevEnvironmentalProtection</b></font></td>
+				<td height="41" width="822"><font face="Tahoma">Int, positive means better for environment. Slightly different than other examples: will ask for switch to a new civic if difference is &gt; +2.</font></td>
+			</tr>
+			<tr>
+				<td height="76" width="117"><font color="#000080" face="Tahoma"><b>iRevDemocracyLevel</b></font></td>
+				<td height="76" width="822"><font face="Tahoma">Int, (gov't civics) positive for more democratic, use negative for oppressive. Switch from anything &lt; 0 to anything &gt; 0. Special handling for Universal Suffrage type freedom at &gt; 9.</font></td>
+			</tr>
+			<tr>
+				<td height="39" width="939" colspan="2" align="center" bgcolor="#336699"><font face="Tahoma" color="#FFFFFF"><b>Booleans (default to false)</b></font></td>
+			</tr>
+			<tr>
+				<td height="46" width="117"><font color="#000080" face="Tahoma"><b>bIsCommunism</b></font></td>
+				<td height="46" width="822"><font face="Tahoma">Bool, set to true to specify that this is a communist civic to enable special request type.</font></td>
+			</tr>
+			<tr>
+				<td height="24" width="117"><font color="#000080" face="Tahoma"><b>bIsFreeSpeech</b></font></td>
+				<td height="24" width="822"><font face="Tahoma">Bool, specify that this civic is equivalent to free speech.</font></td>
+			</tr>
+			<tr>
+				<td height="29" width="117"><font color="#000080" face="Tahoma"><b>bCanDoElection</b></font></td>
+				<td height="29" width="822"><font face="Tahoma">Bool, does this civic allow elections? If any of civilization's current civics have this true, then rebelious cities may call for elections instead of straight leader changes.</font></td>
+			</tr>
+		</table>
+	</body>
 </html>

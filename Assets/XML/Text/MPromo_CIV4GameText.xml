@@ -90,4 +90,16 @@
 		<English>Caravan Movement (Sea) Promotion Line</English>
 		<French>Spécialisation Dépl. de caravane (Mer)</French>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONLINE_AFFLICTION_DISEASE_COMMON_COLD</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONLINE_EQUIPMENT_EARLY_MELEE_ARMOR</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTIONLINE_EQUIPMENT_EARLY_RANGED_ARMOR</Tag>
+		<English>TBD</English>
+	</TEXT>
 </Civ4GameText>

@@ -103,7 +103,7 @@
 			</PrereqOrFeature>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_LAVA_ROCK_QUARRY</Type>
+			<Type>BUILDING_GATHERER_LAVA_ROCK</Type>
 			<PrereqOrFeature>
 			   <PrereqFeature>
 					<FeatureType>FEATURE_PLATY_FUJI</FeatureType>
@@ -112,7 +112,7 @@
 			</PrereqOrFeature>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_LAVA_ROCK_QUARRY</Type>
+			<Type>BUILDING_GATHERER_LAVA_ROCK</Type>
 			<PrereqOrFeature>
 			   <PrereqFeature>
 					<FeatureType>FEATURE_PLATY_SOPKA</FeatureType>
@@ -121,7 +121,7 @@
 			</PrereqOrFeature>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_LAVA_ROCK_QUARRY</Type>
+			<Type>BUILDING_GATHERER_LAVA_ROCK</Type>
 			<PrereqOrFeature>
 			   <PrereqFeature>
 					<FeatureType>FEATURE_PLATY_KRAKATOA</FeatureType>
@@ -130,7 +130,7 @@
 			</PrereqOrFeature>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_LAVA_ROCK_QUARRY</Type>
+			<Type>BUILDING_GATHERER_LAVA_ROCK</Type>
 			<PrereqOrFeature>
 			  <PrereqFeature>
 					<FeatureType>FEATURE_PLATY_KILIMANJARO</FeatureType>

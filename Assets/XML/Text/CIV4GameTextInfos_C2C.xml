@@ -41,14 +41,6 @@
 		<Spanish>[ICON_BULLET][NUM1:Un:Una:Unos:Unas] [COLOR_BUILDING_TEXT][LINK=%s1_NameType]%s2:1_Name[\LINK][COLOR_REVERT] gratis en todas las ciudades.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FREE_PROMOTION</Tag>
-		<English>[ICON_BULLET]Free [COLOR_HIGHLIGHT_TEXT][LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT] Promotion for Units Built in this City</English>
-		<French>[ICON_BULLET]Promotion gratuite [COLOR_HIGHLIGHT_TEXT]([LINK=%s1_NameType]%s2_Name[\LINK])[COLOR_REVERT] pour les unités construites dans cette ville</French>
-		<German>[ICON_BULLET]Freie Beförderung zu [COLOR_HIGHLIGHT_TEXT][LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT] für die in dieser Stadt errichteten Einheiten</German>
-		<Italian>[ICON_BULLET]Promozione [COLOR_HIGHLIGHT_TEXT][LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT] gratuita per le unità costruite in questa città.</Italian>
-		<Spanish>[ICON_BULLET]Da gratis el ascenso de [COLOR_HIGHLIGHT_TEXT][LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT] a las unidades construidas en esta ciudad</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FREE_SPECIALIST</Tag>
 		<English>[ICON_BULLET]%D1_Change Free [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT]</English>
 		<French>[ICON_BULLET]%D1_Change Donne un [COLOR_HIGHLIGHT_TEXT][LINK=%s2_SpclstType]%s3_SpclstName[\LINK][COLOR_REVERT] gratuit</French>
@@ -186,11 +178,6 @@
 		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs arquebusiers pour partager vos aventures!</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GOODY_ASSAULT_MECH</Tag>
-		<English>[SPACE]You've found an abandoned Mech left behind by an intrepid, and probably now dead, private explorer!</English>
-		<French>[SPACE]Vous avez trouvé un Mech abandonnés laissés par un explorateur intrépide privé, et probablement mort aujourd'hui!</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GOODY_AXEMAN</Tag>
 		<English>[SPACE]The tribe has agreed to send one of its axemen along with you!</English>
 		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs guerriers avec hache pour partager vos aventures!</French>
@@ -315,12 +302,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PLACED_BONUS</Tag>
-		<English>The fruits of the land are revealed!  You have successfully placed or discovered a new source of %s1_BonusName.</English>
+		<English>The fruits of the land are revealed! You have successfully placed or discovered a new source of %s1_BonusName.</English>
 		<French>Les fruits de la terre se dévoilent! Vous avez réussi à placer ou à découvrir une nouvelle source de [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT].</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PLACED_BONUS_FAIL</Tag>
-		<English>The land refuses to give up its secrets!  You have failed to place or discover a resource.</English>
+		<English>The land refuses to give up its secrets! You have failed to place or discover a resource.</English>
 		<French>La terre refuse de livrer ses secrets! Vous n'avez pas réussi à placer ou à découvrir une ressource.</French>
 	</TEXT>
 	<TEXT>
@@ -369,7 +356,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_TECH_YIELD</Tag>
 		<English>%s1: %D2%F3 (with [LINK=%s4_BonusType]%s5_Bonus[\LINK])</English>
-		<French>%s1:  %D2%F3 (avec [LINK=%s4_BonusType]%s5_Bonus[\LINK])</French>
+		<French>%s1 : %D2%F3 (avec [LINK=%s4_BonusType]%s5_Bonus[\LINK])</French>
 		<German>%s1: %D2%F3 (mit [LINK=%s4_BonusType]%s5_Bonus[\LINK])</German>
 		<Italian>%s1: %D2%F3 (con [LINK=%s4_BonusType]%s5_Bonus[\LINK])</Italian>
 		<Spanish>%s1: %D2 %F3 (con [LINK=%s4_BonusType]%s5_Bonus[\LINK])</Spanish>
@@ -540,32 +527,6 @@
 		<Spanish>[ICON_BULLET]%D1_Change%% a la probabilidad de retirarse</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_REPLACED_BY_BUILDING</Tag>
-		<English>Replaced by [LINK=%s1_default_buildingType]%s2_default_building[\LINK]</English>
-		<French>Remplacé par [LINK=%s1_default_buildingType]%s2_default_building[\LINK]</French>
-		<German>ersetzt durch [LINK=%s1_default_buildingType]%s2_default_building[\LINK]</German>
-		<Italian>Sostituita dall'edificià [LINK=%s1_default_buildingType]%s2_default_building[\LINK]</Italian>
-		<Spanish>Sustituido por [LINK=%s1_default_buildingType]%s2_default_building[\LINK]</Spanish>
-		<Polish>Zastąpione przez: [LINK=%s1_default_buildingType]%s2_default_building[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REPLACED_BY_UNIT</Tag>
-		<English>Replaced by [LINK=%s1_default_unitType]%s2_default_unit[\LINK]</English>
-		<French>Remplacé par [LINK=%s1_default_unitType]%s2_default_unit[\LINK]</French>
-		<German>ersetzt durch [LINK=%s1_default_unitType]%s2_default_unit[\LINK]</German>
-		<Spanish>Sustituida por [LINK=%s1_default_unitType]%s2_default_unit[\LINK]</Spanish>
-		<Italian>Sostituita dall'unità [LINK=%s1_default_unitType]%s2_default_unit[\LINK]</Italian>
-		<Polish>Zastąpione przez [LINK=%s1_default_unitType]%s2_default_unit[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REPLACES_UNIT</Tag>
-		<English>Replaces [LINK=%s1_default_unitType]%s2_default_unit[\LINK]</English>
-		<French>Remplace : [LINK=%s1_default_unitType]%s2_default_unit[\LINK]</French>
-		<German>Ersetzt [LINK=%s1_default_unitType]%s2_default_unit[\LINK]</German>
-		<Italian>Sostituisce l'unità [LINK=%s1_default_unitType]%s2_default_unit[\LINK]</Italian>
-		<Spanish>Reemplaza a la unidad de [LINK=%s1_default_unitType]%s2_default_unit[\LINK]</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_REQUIRES_PREREQUISITE_RELIGION</Tag>
 		<English>[ICON_BULLET]This building requires %F1_RelIcon in the city.</English>
 		<French>[ICON_BULLET]Ce Bâtiment requiert %F1_RelIcon dans la Ville.</French>
@@ -630,22 +591,6 @@
 		<German>Wird zur Religion [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT] konvertieren.</German>
 		<Italian>Si convertirà alla religione [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT].</Italian>
 		<Spanish>Se convertirá al [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT].</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIQUE_BUILDING</Tag>
-		<English>Unique Building for [LINK=%s1_civType]%s2_civDesc[\LINK]</English>
-		<French>Bâtiment unique pour [LINK=%s1_civType]%s2_civDesc[\LINK]</French>
-		<German>Einzigartiges Gebäude für: [LINK=%s1_civType]%s2_civDesc[\LINK]</German>
-		<Italian>Edificio unico [LINK=%s1_civType]%s2_civDesc[\LINK]</Italian>
-		<Spanish>Edificio exclusivo del [LINK=%s1_civType]%s2_civDesc[\LINK]</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIQUE_UNIT</Tag>
-		<English>Unique Unit for [LINK=%s1_civType]%s2_civ[\LINK]</English>
-		<French>Unité unique pour : [LINK=%s1_civType]%s2_civ[\LINK]</French>
-		<German>Spezialeinheit der Zivilisation [LINK=%s1_civType]%s2_civ[\LINK]</German>
-		<Italian>Unità unica per la civiltà [LINK=%s1_civType]%s2_civ[\LINK]</Italian>
-		<Spanish>Unidad exclusiva de [LINK=%s1_civType]%s2_civ[\LINK]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ATTACK_MOD_VS_CLASS</Tag>

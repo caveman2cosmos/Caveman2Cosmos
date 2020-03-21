@@ -273,4 +273,40 @@
 		<Tag>TXT_KEY_UNIT_NUCLEAR_NAVAL_MINE_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Nuclear Naval Mine[COLOR_REVERT] is invisible to all units and has a hidden nationality.  The nuclear naval mine can set off a nuclear explosion that is triggered by the owner. The detonation will destroy every ship on the plot.  Once armed, the nuclear naval mine cannot be disarmed, unless it is disbanded or removed by a Mine Sweeper. </English>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DETONATE_NUCLEAR_MINE</Tag>
+		<English>Detonate Nuclear mine</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DETONATE_LAND_MINE</Tag>
+		<English>Detonate Land Mine</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DETONATE_LAND_MINE_MESSAGE</Tag>
+		<English>Detonated Land Mine</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_DETONATE_SEA_MINE</Tag>
+		<English>Detonate Sea Mine</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_DETONATE_SEA_MINE_MESSAGE</Tag>
+		<English>Sea mine was detonated</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_SWEEP_FOR_LAND_MINE_MESSAGE</Tag>
+		<English>Sweeping land mines</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_SWEEP_FOR_SEA_MINE_MESSAGE</Tag>
+		<English>Sweeping sea mines</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SWEEP_FOR_LAND_MINE</Tag>
+		<English>Sweep land mines</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_SWEEP_FOR_SEA_MINE</Tag>
+		<English>Sweep sea mines</English>
+	</TEXT>
 </Civ4GameText>
