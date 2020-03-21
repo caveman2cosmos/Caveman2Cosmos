@@ -24,8 +24,7 @@ class BugSystemOptionsTab(BugOptionsTab.BugOptionsTab):
 		left, right = self.addTwoColumnLayout(screen, column, "Bottom", False)
 		screen.setLayoutFlag(right, "LAYOUT_RIGHT")
 		screen.setLayoutFlag(right, "LAYOUT_SIZE_HPREFERREDEXPANDING")
-		import SystemPaths as SP
-		self.addLabel(screen, left, "Version", "%s %s" % (SP.modName, GC.getGame().getC2CVersion()))
+		self.addLabel(screen, left, "Version", "Caveman2Cosmos " + GC.getGame().getC2CVersion())
 
 		screen.attachHSeparator(column, column + "Sep2")
 		self.addLabel(screen, column, "Debug_Logging", "Debugging Output:")

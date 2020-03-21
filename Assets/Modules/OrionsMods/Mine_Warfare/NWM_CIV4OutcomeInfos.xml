@@ -54,7 +54,6 @@
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
 		</OutcomeInfo>
-
 <!-- Other unit outcomes -->
 		<OutcomeInfo>
 			<Type>OUTCOME_DETONATE_LAND_MINE</Type>

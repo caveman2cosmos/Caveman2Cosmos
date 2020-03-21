@@ -108,7 +108,7 @@ void CyPlayerPythonInterface2(python::class_<CyPlayer>& x)
 		.def("getBonusCommerceModifier", &CyPlayer::getBonusCommerceModifier, "int (int i, int j)")
 		.def("isShowLandmarks", &CyPlayer::isShowLandmarks, "bool ()")
 		.def("setShowLandmarks", &CyPlayer::setShowLandmarks, "void (bool bNewVal)")
-		.def("getBuildingClassCountWithUpgrades", &CyPlayer::getBuildingClassCountWithUpgrades, "int (int iBuilding)")
+		.def("getBuildingCountWithUpgrades", &CyPlayer::getBuildingCountWithUpgrades, "int (int iBuilding)")
 		.def("setColor", &CyPlayer::setColor, "void (int iColor)")
 		.def("setHandicap", &CyPlayer::setHandicap, "void (int iNewVal)")
 		.def("isModderOption", &CyPlayer::isModderOption, "bool ()")
@@ -118,7 +118,7 @@ void CyPlayerPythonInterface2(python::class_<CyPlayer>& x)
 		.def("isAutomatedCanBuild", &CyPlayer::isAutomatedCanBuild, "bool ()")
 		.def("setAutomatedCanBuild", &CyPlayer::setAutomatedCanBuild, "void ()")
 		.def("setTeam", &CyPlayer::setTeam, "void ()")
-		.def("getBestUnitType", &CyPlayer::getBestUnitType, "void ()")
+		.def("getBestUnitType", &CyPlayer::getBestUnitType, "int (int /*UnitAITypes*/ eUnitAI)")
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/

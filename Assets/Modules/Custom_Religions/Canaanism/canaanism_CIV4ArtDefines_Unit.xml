@@ -24,7 +24,6 @@
 			<fBattleDistance>0.35</fBattleDistance>
 			<fRangedDeathTime>0.31</fRangedDeathTime>
 			<bActAsRanged>0</bActAsRanged>
-			<TrainSound>AS2D_BUILD_LEVANT</TrainSound>
 			<AudioRunSounds>
 				<AudioRunTypeLoop />
 				<AudioRunTypeEnd />

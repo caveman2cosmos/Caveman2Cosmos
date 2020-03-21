@@ -49,7 +49,7 @@ v. 0.60
 - TileBuilder code improved, to avoid continent jams.
 - Generation bug fixed. Hopefully, it will no longer stops at start (!).
 - Random (Standard:Rare/Common) flood option fixed.
-- New option: Map size. It is now possible to specify custom map size, up to 256×160. Because of this change, following options are modified:
+- New option: Map size. It is now possible to specify custom map size. Because of this change, following options are modified:
 - Continent separation options expanded up to 10 tiles.
 - Distance from poles no longer depends on continent separation, and is always constant (3).
 - From now on, area for continent separation is excluded from ocean area when calculating ocean percentage. It means that selecting higher continent separation now will produce less land. This helps against continent jams.
@@ -172,25 +172,14 @@ selection_defaults = [
 selection_names_and_values = [
 					[ #Map size override:
 					["No override (use selected map size)",[0,0],False], #0,0 == bypass
-					["40 x 24",[40,24],False],
-					["48 x 28",[48,28],False],
-					["52 x 32",[52,32],False],
-					["64 x 40",[64,40],False],
-					["84 x 52",[84,52],False],
-					["96 x 60",[96,60],False],
-					["108 x 68",[108,68],False],
-					["128 x 80",[128,80],False],
-					["140 x 88",[140,88],False],
-					["152 x 96",[152,96],False],
-					["160 x 100",[160,100],False],
-					["172 x 108",[172,108],False],
-					["180 x 112",[180,112],False],
-					["192 x 120",[192,120],False],
-					["200 x 120",[200,120],False],
-					["208 x 132",[208,132],False],
-					["220 x 136",[220,136],False],
-					["240 x 152",[240,152],False],
-					["256 x 160",[256,160],False],
+					["48 x 32",[48,32],False],
+					["72 x 48",[72,48],False],
+					["84 x 56",[84,56],False],
+					["96 x 64",[96,64],False],
+					["108 x 72",[108,72],False],
+					["120 x 80",[120,80],False],
+					["132 x 88",[132,88],False],
+					["144 x 96",[144,96],False],
 					],
 					[ #Continents:
 					["First Time (FT) Random","random",False],
@@ -1841,7 +1830,7 @@ def generatePlotTypes():
 	maxLandTiles = iW * (iH - poleSeparation * 2) * ((100 - oceanPercentage) / 100.0)
 	print "default max tiles:",maxLandTiles
 	if continentCount > 0 and maxLandTiles >=0:
-		newMaxLandTiles = ((( sqrt(maxLandTiles / float(continentCount))) - continentSeparation * 0.9)**2) * continentCount
+		newMaxLandTiles = ((( math.sqrt(maxLandTiles / float(continentCount))) - continentSeparation * 0.9)**2) * continentCount
 		if newMaxLandTiles > continentCount * 2:
 			maxLandTiles = newMaxLandTiles
 	maxLandTiles = int(maxLandTiles * 0.95)
@@ -2687,7 +2676,7 @@ def addFeatures():
 
 	terrainDesert = cgc.getInfoTypeForString("TERRAIN_DESERT")
 	terrainPlains = cgc.getInfoTypeForString("TERRAIN_PLAINS")
-	terrainGrass = cgc.getInfoTypeForString("TERRAIN_GRASS")
+	terrainGrass = cgc.getInfoTypeForString("TERRAIN_GRASSLAND")
 	terrainTundra = cgc.getInfoTypeForString("TERRAIN_TAIGA")
 	terrainSnow = cgc.getInfoTypeForString("TERRAIN_ICE")
 # Rise of Mankind 2.82 start
@@ -3609,7 +3598,7 @@ def normalizeAddExtras():
 	else:
 		cgc = CyGlobalContext()
 
-		terrainGrass = cgc.getInfoTypeForString("TERRAIN_GRASS")
+		terrainGrass = cgc.getInfoTypeForString("TERRAIN_GRASSLAND")
 		terrainPlains = cgc.getInfoTypeForString("TERRAIN_PLAINS")
 		terrainDesert = cgc.getInfoTypeForString("TERRAIN_DESERT")
 		terrainTundra = cgc.getInfoTypeForString("TERRAIN_TAIGA")
@@ -3666,7 +3655,7 @@ def normalizeAddExtras():
 		usedTiles = bArray()
 		usedCoastTiles = bArray()
 
-		for pIndex in range(cgc.getMAX_CIV_PLAYERS()):
+		for pIndex in range(cgc.getMAX_PC_PLAYERS()):
 			player = cgc.getPlayer(pIndex)
 			if player.isAlive():
 				plot = player.getStartingPlot()
@@ -3733,10 +3722,6 @@ def enumeratePlaceableBonusTypes():
 		if bonusInfo.getTilesPer() > 0 or bonusInfo.getPercentPerPlayer() > 0:
 			arr[i] = [i, bonusInfo]
 	return arr
-
-def startHumansOnSameTile():
-	"Returns true if all human units should	start on the same tile"
-	return False
 
 #----------------------------------------------
 """Helpers"""

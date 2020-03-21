@@ -1,25 +1,18 @@
 <?xml version="1.0"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- ReModified by StrategyOnly -->
-<!-- -->
-<!-- EraInfo - This structure describes the name and soundtracks for each era. -->
-<!-- -->
-<!-- MODDERS: Removing ERA's can cause problems if you are not careful. If you must remove them, you need to do the following: -->
-<!-- 1. Clean up the references to the ERA's in CIV4BuildingInfos -->
-<!-- 2. Clean up the references to the ERA's in CIV4TechInfos -->
-<!-- 3. Clean up the references to the ERA's in CIV4LeaderHeadInfos -->
-<!-- 4. Clean up the references to the ERA's in CIV4CityLSystem -->
-<!-- 5. Clean up the references to the ERA's in CIV4PlotLSystem -->
-<!-- Good luck! -->
+<!--
+MODDERS: Removing ERA's can cause problems if you are not careful. If you must remove them, you need to do the following:
+	1. Clean up the references to the ERA's in CIV4BuildingInfos
+	2. Clean up the references to the ERA's in CIV4TechInfos
+	3. Clean up the references to the ERA's in CIV4LeaderHeadInfos
+	4. Clean up the references to the ERA's in CIV4CityLSystem
+	5. Clean up the references to the ERA's in CIV4PlotLSystem
+Good luck! -->
 <Civ4EraInfos xmlns="x-schema:../Schema/C2C_CIV4GameInfoSchema.xml">
 	<EraInfos>
-<!-- Prehistoric -->
 		<EraInfo>
-			<Type>ERA_ANCIENT</Type>
-			<Description>TXT_KEY_ERA_ANCIENT</Description>
-			<Strategy>TXT_KEY_ERA_ANCIENT_STRATEGY</Strategy>
+			<Type>C2C_ERA_PREHISTORIC</Type>
+			<Description>TXT_KEY_ERA_PREHISTORIC</Description>
+			<Strategy>TXT_KEY_ERA_PREHISTORIC_STRATEGY</Strategy>
 			<iAdvancedStartPoints>500</iAdvancedStartPoints>
 			<iStartingUnitMultiplier>1</iStartingUnitMultiplier>
 			<iStartingExploreUnits>1</iStartingExploreUnits>
@@ -67,11 +60,10 @@
 			<AudioUnitDefeatScript>AS2D_LOSS_EARLY</AudioUnitDefeatScript>
 			<Button>Art/Interface/mainscreen/Era/Prehistoric.dds</Button>
 		</EraInfo>
-<!-- Ancient -->
 		<EraInfo>
-			<Type>ERA_SEDENTARY</Type>
-			<Description>TXT_KEY_ERA_SEDENTARY</Description>
-			<Strategy>TXT_KEY_ERA_SEDENTARY_STRATEGY</Strategy>
+			<Type>C2C_ERA_ANCIENT</Type>
+			<Description>TXT_KEY_ERA_ANCIENT</Description>
+			<Strategy>TXT_KEY_ERA_ANCIENT_STRATEGY</Strategy>
 			<iAdvancedStartPoints>1000</iAdvancedStartPoints>
 			<iStartingUnitMultiplier>1</iStartingUnitMultiplier>
 			<iStartingExploreUnits>1</iStartingExploreUnits>
@@ -135,9 +127,8 @@
 			<AudioUnitDefeatScript>AS2D_LOSS_EARLY</AudioUnitDefeatScript>
 			<Button>Art/Interface/mainscreen/Era/Ancient.dds</Button>
 		</EraInfo>
-<!-- Classical -->
 		<EraInfo>
-			<Type>ERA_CLASSICAL</Type>
+			<Type>C2C_ERA_CLASSICAL</Type>
 			<Description>TXT_KEY_ERA_CLASSICAL</Description>
 			<Strategy>TXT_KEY_ERA_CLASSICAL_STRATEGY</Strategy>
 			<iAdvancedStartPoints>2000</iAdvancedStartPoints>
@@ -146,7 +137,7 @@
 			<iStartingWorkerUnits>1</iStartingWorkerUnits>
 			<iStartingExploreUnits>1</iStartingExploreUnits>
 			<iStartingGold>100</iStartingGold>
-			<iStartPercent>20</iStartPercent>
+			<iStartPercent>19</iStartPercent>
 			<iGrowthPercent>130</iGrowthPercent>
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
@@ -196,9 +187,8 @@
 			<AudioUnitDefeatScript>AS2D_LOSS_EARLY</AudioUnitDefeatScript>
 			<Button>Art/Interface/mainscreen/Era/Classical.dds</Button>
 		</EraInfo>
-<!-- Medieval -->
 		<EraInfo>
-			<Type>ERA_MEDIEVAL</Type>
+			<Type>C2C_ERA_MEDIEVAL</Type>
 			<Description>TXT_KEY_ERA_MEDIEVAL</Description>
 			<Strategy>TXT_KEY_ERA_MEDIEVAL_STRATEGY</Strategy>
 			<iAdvancedStartPoints>4000</iAdvancedStartPoints>
@@ -207,7 +197,7 @@
 			<iStartingWorkerUnits>1</iStartingWorkerUnits>
 			<iStartingExploreUnits>1</iStartingExploreUnits>
 			<iStartingGold>1000</iStartingGold>
-			<iStartPercent>30</iStartPercent>
+			<iStartPercent>25</iStartPercent>
 			<iGrowthPercent>120</iGrowthPercent>
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
@@ -273,9 +263,8 @@
 			<AudioUnitDefeatScript>AS2D_LOSS_MIDDLE</AudioUnitDefeatScript>
 			<Button>Art/Interface/mainscreen/Era/Medieval.dds</Button>
 		</EraInfo>
-<!-- Renaissance -->
 		<EraInfo>
-			<Type>ERA_RENAISSANCE</Type>
+			<Type>C2C_ERA_RENAISSANCE</Type>
 			<Description>TXT_KEY_ERA_RENAISSANCE</Description>
 			<Strategy>TXT_KEY_ERA_RENAISSANCE_STRATEGY</Strategy>
 			<iAdvancedStartPoints>8000</iAdvancedStartPoints>
@@ -285,7 +274,7 @@
 			<iStartingExploreUnits>1</iStartingExploreUnits>
 			<iStartingGold>4000</iStartingGold>
 			<iFreePopulation>1</iFreePopulation>
-			<iStartPercent>40</iStartPercent>
+			<iStartPercent>31</iStartPercent>
 			<iGrowthPercent>110</iGrowthPercent>
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
@@ -337,9 +326,8 @@
 			<AudioUnitDefeatScript>AS2D_LOSS_MIDDLE</AudioUnitDefeatScript>
 			<Button>Art/Interface/mainscreen/Era/Renaissance.dds</Button>
 		</EraInfo>
-<!-- Industrial -->
 		<EraInfo>
-			<Type>ERA_INDUSTRIAL</Type>
+			<Type>C2C_ERA_INDUSTRIAL</Type>
 			<Description>TXT_KEY_ERA_INDUSTRIAL</Description>
 			<Strategy>TXT_KEY_ERA_INDUSTRIAL_STRATEGY</Strategy>
 			<iAdvancedStartPoints>16000</iAdvancedStartPoints>
@@ -349,7 +337,7 @@
 			<iStartingExploreUnits>2</iStartingExploreUnits>
 			<iStartingGold>10000</iStartingGold>
 			<iFreePopulation>2</iFreePopulation>
-			<iStartPercent>50</iStartPercent>
+			<iStartPercent>37</iStartPercent>
 			<iGrowthPercent>100</iGrowthPercent>
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
@@ -399,11 +387,10 @@
 			<AudioUnitDefeatScript>AS2D_LOSS_MIDDLE</AudioUnitDefeatScript>
 			<Button>Art/Interface/mainscreen/Era/Industrial.dds</Button>
 		</EraInfo>
-<!-- Atomic (replacing the old Modern) -->
 		<EraInfo>
-			<Type>ERA_MODERN</Type>
-			<Description>TXT_KEY_ERA_MODERN</Description>
-			<Strategy>TXT_KEY_ERA_MODERN_STRATEGY</Strategy>
+			<Type>C2C_ERA_ATOMIC</Type>
+			<Description>TXT_KEY_ERA_ATOMIC</Description>
+			<Strategy>TXT_KEY_ERA_ATOMIC_STRATEGY</Strategy>
 			<iAdvancedStartPoints>32000</iAdvancedStartPoints>
 			<iStartingUnitMultiplier>3</iStartingUnitMultiplier>
 			<iStartingDefenseUnits>3</iStartingDefenseUnits>
@@ -411,7 +398,7 @@
 			<iStartingExploreUnits>2</iStartingExploreUnits>
 			<iStartingGold>20000</iStartingGold>
 			<iFreePopulation>2</iFreePopulation>
-			<iStartPercent>60</iStartPercent>
+			<iStartPercent>44</iStartPercent>
 			<iGrowthPercent>100</iGrowthPercent>
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
@@ -459,9 +446,8 @@
 			<AudioUnitDefeatScript>AS2D_LOSS_LATE</AudioUnitDefeatScript>
 			<Button>Art/Interface/mainscreen/Era/Atomic.dds</Button>
 		</EraInfo>
-<!-- Information -->
 		<EraInfo>
-			<Type>ERA_INFORMATION</Type>
+			<Type>C2C_ERA_INFORMATION</Type>
 			<Description>TXT_KEY_ERA_INFORMATION</Description>
 			<Strategy>TXT_KEY_ERA_INFORMATION_STRATEGY</Strategy>
 			<iAdvancedStartPoints>64000</iAdvancedStartPoints>
@@ -471,7 +457,7 @@
 			<iStartingExploreUnits>2</iStartingExploreUnits>
 			<iStartingGold>30000</iStartingGold>
 			<iFreePopulation>3</iFreePopulation>
-			<iStartPercent>70</iStartPercent>
+			<iStartPercent>55</iStartPercent>
 			<iGrowthPercent>100</iGrowthPercent>
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
@@ -519,9 +505,8 @@
 			<AudioUnitDefeatScript>AS2D_LOSS_LATE</AudioUnitDefeatScript>
 			<Button>Art/Interface/mainscreen/Era/Information.dds</Button>
 		</EraInfo>
-<!-- Nanotech -->
         <EraInfo>
-			<Type>ERA_NANOTECH</Type>
+			<Type>C2C_ERA_NANOTECH</Type>
 			<Description>TXT_KEY_ERA_NANOTECH</Description>
 			<Strategy>TXT_KEY_ERA_NANOTECH_STRATEGY</Strategy>
 			<iAdvancedStartPoints>128000</iAdvancedStartPoints>
@@ -531,7 +516,7 @@
 			<iStartingExploreUnits>2</iStartingExploreUnits>
 			<iStartingGold>40000</iStartingGold>
 			<iFreePopulation>3</iFreePopulation>
-			<iStartPercent>80</iStartPercent>
+			<iStartPercent>63</iStartPercent>
 			<iGrowthPercent>100</iGrowthPercent>
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
@@ -572,9 +557,8 @@
 			<AudioUnitDefeatScript>AS2D_LOSS_LATE</AudioUnitDefeatScript>
 			<Button>Art/Interface/mainscreen/Era/Nanotech.dds</Button>
 		</EraInfo>
-<!-- Transhuman -->
 		<EraInfo>
-			<Type>ERA_TRANSHUMAN</Type>
+			<Type>C2C_ERA_TRANSHUMAN</Type>
 			<Description>TXT_KEY_ERA_TRANSHUMAN</Description>
 			<Strategy>TXT_KEY_ERA_TRANSHUMAN_STRATEGY</Strategy>
 			<iAdvancedStartPoints>256000</iAdvancedStartPoints>
@@ -584,7 +568,7 @@
 			<iStartingExploreUnits>2</iStartingExploreUnits>
 			<iStartingGold>50000</iStartingGold>
 			<iFreePopulation>4</iFreePopulation>
-			<iStartPercent>85</iStartPercent>
+			<iStartPercent>73</iStartPercent>
 			<iGrowthPercent>100</iGrowthPercent>
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
@@ -625,9 +609,8 @@
 			<AudioUnitDefeatScript>AS2D_LOSS_LATE</AudioUnitDefeatScript>
 			<Button>Art/Interface/mainscreen/Era/Transhuman.dds</Button>
 		</EraInfo>
-<!-- Galactic -->
 		<EraInfo>
-			<Type>ERA_GALACTIC</Type>
+			<Type>C2C_ERA_GALACTIC</Type>
 			<Description>TXT_KEY_ERA_GALACTIC</Description>
 			<Strategy>TXT_KEY_ERA_GALACTIC_STRATEGY</Strategy>
 			<iAdvancedStartPoints>512000</iAdvancedStartPoints>
@@ -637,7 +620,7 @@
 			<iStartingExploreUnits>2</iStartingExploreUnits>
 			<iStartingGold>60000</iStartingGold>
 			<iFreePopulation>4</iFreePopulation>
-			<iStartPercent>90</iStartPercent>
+			<iStartPercent>82</iStartPercent>
 			<iGrowthPercent>100</iGrowthPercent>
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
@@ -674,9 +657,8 @@
 			<AudioUnitDefeatScript>AS2D_LOSS_LATE</AudioUnitDefeatScript>
 			<Button>Art/Interface/mainscreen/Era/Galactic.dds</Button>
 		</EraInfo>
-<!-- Cosmic -->
 		<EraInfo>
-			<Type>ERA_COSMIC</Type>
+			<Type>C2C_ERA_COSMIC</Type>
 			<Description>TXT_KEY_ERA_COSMIC</Description>
 			<Strategy>TXT_KEY_ERA_COSMIC_STRATEGY</Strategy>
 			<iAdvancedStartPoints>1024000</iAdvancedStartPoints>
@@ -686,7 +668,7 @@
 			<iStartingExploreUnits>2</iStartingExploreUnits>
 			<iStartingGold>80000</iStartingGold>
 			<iFreePopulation>5</iFreePopulation>
-			<iStartPercent>95</iStartPercent>
+			<iStartPercent>89</iStartPercent>
 			<iGrowthPercent>100</iGrowthPercent>
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
@@ -724,9 +706,8 @@
 			<AudioUnitDefeatScript>AS2D_LOSS_LATE</AudioUnitDefeatScript>
 			<Button>Art/Interface/mainscreen/Era/Cosmic.dds</Button>
 		</EraInfo>
-<!-- Transcendent -->
 		<EraInfo>
-			<Type>ERA_TRANSCENDENT</Type>
+			<Type>C2C_ERA_TRANSCENDENT</Type>
 			<Description>TXT_KEY_ERA_TRANSCENDENT</Description>
 			<Strategy>TXT_KEY_ERA_TRANSCENDENT_STRATEGY</Strategy>
 			<iAdvancedStartPoints>2048000</iAdvancedStartPoints>
@@ -736,7 +717,7 @@
 			<iStartingExploreUnits>2</iStartingExploreUnits>
 			<iStartingGold>100000</iStartingGold>
 			<iFreePopulation>5</iFreePopulation>
-			<iStartPercent>99</iStartPercent>
+			<iStartPercent>94</iStartPercent>
 			<iGrowthPercent>100</iGrowthPercent>
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
@@ -774,9 +755,8 @@
 			<AudioUnitDefeatScript>AS2D_LOSS_LATE</AudioUnitDefeatScript>
 			<Button>Art/Interface/mainscreen/Era/Transcendent.dds</Button>
 		</EraInfo>
-<!-- Future -->
 		<EraInfo>
-			<Type>ERA_FUTURE</Type>
+			<Type>C2C_ERA_FUTURE</Type>
 			<Description>TXT_KEY_ERA_FUTURE</Description>
 			<Strategy>TXT_KEY_ERA_FUTURE_STRATEGY</Strategy>
 			<iAdvancedStartPoints>4096000</iAdvancedStartPoints>

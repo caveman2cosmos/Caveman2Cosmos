@@ -881,18 +881,6 @@
 			<Button>art/Buttons/Missions/RangedAttack1Button.dds</Button>
 		</MissionInfo>
 		<MissionInfo>
-			<Type>MISSION_ABOMBARD</Type>
-			<Description>TXT_KEY_MISSION_ABOMBARD</Description>
-			<Help>TXT_KEY_MISSION_ABOMBARD_HELP</Help>
-			<Waypoint>NONE</Waypoint>
-			<EntityEventType>ENTITY_EVENT_BOMBARD</EntityEventType>
-			<iTime>10</iTime>
-			<bTarget>0</bTarget>
-			<bBuild>0</bBuild>
-			<bSound>1</bSound>
-			<Button>Art/Interface/Buttons/Actions/Barrage.dds</Button>
-		</MissionInfo>
-		<MissionInfo>
 			<Type>MISSION_FENGAGE</Type>
 			<Description>TXT_KEY_MISSION_FENGAGE</Description>
 			<Help>TXT_KEY_MISSION_FENGAGE_HELP</Help>
@@ -1394,8 +1382,6 @@
 			<bVisible>1</bVisible>
 			<Button>Art/Interface/Buttons/Units/sparth/Immigrant.dds</Button>
 		</MissionInfo>
-
-
 		<MissionInfo>
 			<Type>MISSION_CAPTIVE_UPGRADE_TO_STONE_THROWER</Type>
 			<Description>TXT_KEY_MISSION_CAPTIVE_UPGRADE_TO_STONE_THROWER</Description>
@@ -1466,7 +1452,6 @@
 			<bVisible>1</bVisible>
 			<Button>Art/Interface/Buttons/Units/button_neanderthal.dds</Button>
 		</MissionInfo>
-
 		<MissionInfo>
 			<Type>MISSION_SELL_CAPTIVE</Type>
 			<Description>TXT_KEY_MISSION_SELL_CAPTIVE</Description>

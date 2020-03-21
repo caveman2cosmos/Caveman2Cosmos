@@ -11,11 +11,10 @@
 #ifndef CV_GAME_OBJECT_H
 #define CV_GAME_OBJECT_H
 
-#include <boost/function.hpp>
 #include "CvProperties.h"
 #include "CvPropertyManipulators.h"
 #include "BoolExpr.h"
-#include "CyArgsList.h"
+#include "CvPython.h"
 
 class CvGameObjectGame;
 class CvGameObjectTeam;
@@ -37,18 +36,19 @@ public:
 	virtual GameObjectTypes getGameObjectType() const = 0;
 	virtual CvProperties* getProperties() const = 0;
 	virtual const CvProperties* getPropertiesConst() const = 0;
-	virtual void foreach(GameObjectTypes eType, boost::function<void (CvGameObject*)> func) = 0;
-	virtual void foreachOn(GameObjectTypes eType, boost::function<void (CvGameObject*)> func);
-	virtual void foreachNear(GameObjectTypes eType, boost::function<void (CvGameObject*)> func, int iDistance);
-	virtual void foreachRelated(GameObjectTypes eType, RelationTypes eRelation, boost::function<void (CvGameObject*)> func, int iData = 0);
-	virtual void foreachRelatedCond(GameObjectTypes eType, RelationTypes eRelation, boost::function<void (CvGameObject*)> func, BoolExpr* pExpr = NULL, int iData = 0);
+	virtual void foreach(GameObjectTypes eType, bst::function<void (CvGameObject*)> func) = 0;
+	virtual void foreachOn(GameObjectTypes eType, bst::function<void (CvGameObject*)> func);
+	virtual void foreachNear(GameObjectTypes eType, bst::function<void (CvGameObject*)> func, int iDistance);
+	virtual void foreachRelated(GameObjectTypes eType, RelationTypes eRelation, bst::function<void (CvGameObject*)> func, int iData = 0);
+	virtual void foreachRelatedCond(GameObjectTypes eType, RelationTypes eRelation, bst::function<void (CvGameObject*)> func, BoolExpr* pExpr = NULL, int iData = 0);
 	virtual void enumerate(std::vector<CvGameObject*>& kEnum, GameObjectTypes eType);
 	virtual void enumerateOn(std::vector<CvGameObject*>& kEnum, GameObjectTypes eType);
 	virtual void enumerateNear(std::vector<CvGameObject*>& kEnum, GameObjectTypes eType, int iDistance);
 	virtual void enumerateRelated(std::vector<CvGameObject*>& kEnum, GameObjectTypes eType, RelationTypes eRelation, int iData = 0);
 	virtual void enumerateRelatedCond(std::vector<CvGameObject*>& kEnum, GameObjectTypes eType, RelationTypes eRelation, BoolExpr* pExpr = NULL, int iData = 0);
 
-	virtual void foreachManipulator(boost::function<void (CvGameObject*, CvPropertyManipulators*)> func) = 0;
+	typedef bst::function<void (CvPropertyManipulators*)> ManipCallbackFn;
+	virtual void foreachManipulator(ManipCallbackFn func) const = 0;
 
 	virtual void eventPropertyChanged(PropertyTypes eProperty, int iNewValue);
 
@@ -60,11 +60,36 @@ public:
 	virtual CvGameObjectPlot* getPlot() = 0;
 	virtual CvGameObjectTeam* getTeam() = 0;
 
-	virtual void* addPythonArgument(CyArgsList* argsList) = 0;
-	virtual void disposePythonArgument(void* pArgument) = 0;
+	virtual void* createPythonWrapper(PyObject*& pyObj) = 0;
+	virtual void disposePythonWrapper(void* pArgument) = 0;
 
 	virtual int adaptValueToGame(int iID, int iValue) const;
 };
+
+// Python wrapper specialization
+namespace Cy
+{
+	template <>
+	struct PyWrap<CvGameObject*> : PyWrapBase
+	{
+		typedef CvGameObject* value_type;
+
+		PyWrap(const value_type& obj) : obj(obj)
+		{
+			wrapper = obj->createPythonWrapper(pyobj);
+		}
+
+		virtual ~PyWrap()
+		{
+			obj->disposePythonWrapper(wrapper);
+		}
+
+		void* wrapper;
+		value_type obj;
+	};
+}
+
+DECLARE_PY_WRAPPED(CvGameObject*);
 
 class CvGameObjectGame : public CvGameObject
 {
@@ -73,9 +98,10 @@ public:
 	virtual GameObjectTypes getGameObjectType() const;
 	virtual CvProperties* getProperties() const;
 	virtual const CvProperties* getPropertiesConst() const;
-	virtual void foreach(GameObjectTypes eType, boost::function<void (CvGameObject*)> func);
+	virtual void foreach(GameObjectTypes eType, bst::function<void (CvGameObject*)> func);
 
-	virtual void foreachManipulator(boost::function<void (CvGameObject*, CvPropertyManipulators*)> func);
+	// No specific manipulators apply to game, only global ones
+	virtual void foreachManipulator(ManipCallbackFn func) const {}
 
 	virtual int getAttribute(AttributeTypes eAttribute) const;
 	virtual bool hasGOM(GOMTypes eType, int iID);
@@ -84,8 +110,8 @@ public:
 	virtual CvGameObjectPlot* getPlot();
 	virtual CvGameObjectTeam* getTeam();
 
-	virtual void* addPythonArgument(CyArgsList* argsList);
-	virtual void disposePythonArgument(void* pArgument);
+	virtual void* createPythonWrapper(PyObject*& pyObj);
+	virtual void disposePythonWrapper(void* pArgument);
 };
 
 class CvGameObjectTeam : public CvGameObject
@@ -95,9 +121,10 @@ public:
 	virtual GameObjectTypes getGameObjectType() const;
 	virtual CvProperties* getProperties() const;
 	virtual const CvProperties* getPropertiesConst() const;
-	virtual void foreach(GameObjectTypes eType, boost::function<void (CvGameObject*)> func);
+	virtual void foreach(GameObjectTypes eType, bst::function<void (CvGameObject*)> func);
 
-	virtual void foreachManipulator(boost::function<void (CvGameObject*, CvPropertyManipulators*)> func);
+	// No specific manipulators apply to teams, only global ones
+	virtual void foreachManipulator(ManipCallbackFn func) const {}
 
 	virtual bool hasGOM(GOMTypes eType, int iID);
 	
@@ -105,8 +132,8 @@ public:
 	virtual CvGameObjectPlot* getPlot();
 	virtual CvGameObjectTeam* getTeam();
 
-	virtual void* addPythonArgument(CyArgsList* argsList);
-	virtual void disposePythonArgument(void* pArgument);
+	virtual void* createPythonWrapper(PyObject*& pyObj);
+	virtual void disposePythonWrapper(void* pArgument);
 
 protected:
 	CvTeam* m_pTeam;
@@ -119,9 +146,9 @@ public:
 	virtual GameObjectTypes getGameObjectType() const;
 	virtual CvProperties* getProperties() const;
 	virtual const CvProperties* getPropertiesConst() const;
-	virtual void foreach(GameObjectTypes eType, boost::function<void (CvGameObject*)> func);
+	virtual void foreach(GameObjectTypes eType, bst::function<void (CvGameObject*)> func);
 
-	virtual void foreachManipulator(boost::function<void (CvGameObject*, CvPropertyManipulators*)> func);
+	virtual void foreachManipulator(ManipCallbackFn func) const;
 
 	virtual bool hasGOM(GOMTypes eType, int iID);
 	virtual bool isTag(TagTypes eTag) const;
@@ -130,8 +157,8 @@ public:
 	virtual CvGameObjectPlot* getPlot();
 	virtual CvGameObjectTeam* getTeam();
 
-	virtual void* addPythonArgument(CyArgsList* argsList);
-	virtual void disposePythonArgument(void* pArgument);
+	virtual void* createPythonWrapper(PyObject*& pyObj);
+	virtual void disposePythonWrapper(void* pArgument);
 
 	virtual int adaptValueToGame(int iID, int iValue) const;
 
@@ -146,10 +173,10 @@ public:
 	virtual GameObjectTypes getGameObjectType() const;
 	virtual CvProperties* getProperties() const;
 	virtual const CvProperties* getPropertiesConst() const;
-	virtual void foreach(GameObjectTypes eType, boost::function<void (CvGameObject*)> func);
-	virtual void foreachRelated(GameObjectTypes eType, RelationTypes eRelation, boost::function<void (CvGameObject*)> func, int iData = 0);
+	virtual void foreach(GameObjectTypes eType, bst::function<void (CvGameObject*)> func);
+	virtual void foreachRelated(GameObjectTypes eType, RelationTypes eRelation, bst::function<void (CvGameObject*)> func, int iData = 0);
 
-	virtual void foreachManipulator(boost::function<void (CvGameObject*, CvPropertyManipulators*)> func);
+	virtual void foreachManipulator(ManipCallbackFn func) const;
 
 	virtual void eventPropertyChanged(PropertyTypes eProperty, int iNewValue);
 
@@ -161,8 +188,8 @@ public:
 	virtual CvGameObjectPlot* getPlot();
 	virtual CvGameObjectTeam* getTeam();
 
-	virtual void* addPythonArgument(CyArgsList* argsList);
-	virtual void disposePythonArgument(void* pArgument);
+	virtual void* createPythonWrapper(PyObject*& pyObj);
+	virtual void disposePythonWrapper(void* pArgument);
 
 	virtual int adaptValueToGame(int iID, int iValue) const;
 
@@ -177,9 +204,9 @@ public:
 	virtual GameObjectTypes getGameObjectType() const;
 	virtual CvProperties* getProperties() const;
 	virtual const CvProperties* getPropertiesConst() const;
-	virtual void foreach(GameObjectTypes eType, boost::function<void (CvGameObject*)> func);
+	virtual void foreach(GameObjectTypes eType, bst::function<void (CvGameObject*)> func);
 
-	virtual void foreachManipulator(boost::function<void (CvGameObject*, CvPropertyManipulators*)> func);
+	virtual void foreachManipulator(ManipCallbackFn func) const;
 
 	virtual void eventPropertyChanged(PropertyTypes eProperty, int iNewValue);
 
@@ -190,8 +217,8 @@ public:
 	virtual CvGameObjectPlot* getPlot();
 	virtual CvGameObjectTeam* getTeam();
 
-	virtual void* addPythonArgument(CyArgsList* argsList);
-	virtual void disposePythonArgument(void* pArgument);
+	virtual void* createPythonWrapper(PyObject*& pyObj);
+	virtual void disposePythonWrapper(void* pArgument);
 
 	virtual int adaptValueToGame(int iID, int iValue) const;
 
@@ -206,12 +233,12 @@ public:
 	virtual GameObjectTypes getGameObjectType() const;
 	virtual CvProperties* getProperties() const;
 	virtual const CvProperties* getPropertiesConst() const;
-	virtual void foreach(GameObjectTypes eType, boost::function<void (CvGameObject*)> func);
-	virtual void foreachOn(GameObjectTypes eType, boost::function<void (CvGameObject*)> func);
-	virtual void foreachNear(GameObjectTypes eType, boost::function<void (CvGameObject*)> func, int iDistance);
-	virtual void foreachRelated(GameObjectTypes eType, RelationTypes eRelation, boost::function<void (CvGameObject*)> func, int iData = 0);
+	virtual void foreach(GameObjectTypes eType, bst::function<void (CvGameObject*)> func);
+	virtual void foreachOn(GameObjectTypes eType, bst::function<void (CvGameObject*)> func);
+	virtual void foreachNear(GameObjectTypes eType, bst::function<void (CvGameObject*)> func, int iDistance);
+	virtual void foreachRelated(GameObjectTypes eType, RelationTypes eRelation, bst::function<void (CvGameObject*)> func, int iData = 0);
 
-	virtual void foreachManipulator(boost::function<void (CvGameObject*, CvPropertyManipulators*)> func);
+	virtual void foreachManipulator(ManipCallbackFn func) const;
 
 	virtual bool isTag(TagTypes eTag) const;
 	virtual bool hasGOM(GOMTypes eType, int iID);
@@ -220,8 +247,8 @@ public:
 	virtual CvGameObjectPlot* getPlot();
 	virtual CvGameObjectTeam* getTeam();
 
-	virtual void* addPythonArgument(CyArgsList* argsList);
-	virtual void disposePythonArgument(void* pArgument);
+	virtual void* createPythonWrapper(PyObject*& pyObj);
+	virtual void disposePythonWrapper(void* pArgument);
 
 protected:
 	CvPlot* m_pPlot;

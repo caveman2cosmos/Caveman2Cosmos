@@ -7,7 +7,6 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
-#include <boost/bind.hpp>
 
 CvOutcomeMission::CvOutcomeMission() :
 m_eMission(NO_MISSION),
@@ -64,7 +63,7 @@ void callSetPayer(CvGameObject* pObject, CvGameObject** ppPayer)
 
 bool CvOutcomeMission::isPossible(CvUnit* pUnit, bool bTestVisible)
 {
-	CvPlayer* pOwner = &GET_PLAYER(pUnit->getOwnerINLINE());
+	CvPlayer* pOwner = &GET_PLAYER(pUnit->getOwner());
 
 	//if (!bTestVisible)
 	//{
@@ -101,7 +100,7 @@ bool CvOutcomeMission::isPossible(CvUnit* pUnit, bool bTestVisible)
 			}
 			else
 			{
-				pUnit->getGameObject()->foreach(m_ePayerType, boost::bind(callSetPayer, _1, &pPayer));
+				pUnit->getGameObject()->foreach(m_ePayerType, bst::bind(callSetPayer, _1, &pPayer));
 			}
 
 			if (!pPayer)
@@ -131,7 +130,7 @@ void CvOutcomeMission::buildDisplayString(CvWStringBuffer &szBuffer, CvUnit *pUn
 	if (m_iCost)
 	{
 		if (m_iCost->evaluate(pUnit->getGameObject())!=0)
-		{	/*GC.getGameINLINE().getGameObject()->adaptValueToGame(m_iID, m_pExpr->evaluate(GC.getGameINLINE().getGameObject())*/
+		{	/*GC.getGame().getGameObject()->adaptValueToGame(m_iID, m_pExpr->evaluate(GC.getGame().getGameObject())*/
 			CvWString szTempBuffer;
 
 			szBuffer.append(NEWLINE);
@@ -171,7 +170,7 @@ void CvOutcomeMission::buildDisplayString(CvWStringBuffer &szBuffer, CvUnit *pUn
 
 void CvOutcomeMission::execute(CvUnit* pUnit)
 {
-	CvPlayer* pOwner = &GET_PLAYER(pUnit->getOwnerINLINE());
+	CvPlayer* pOwner = &GET_PLAYER(pUnit->getOwner());
 	if (m_iCost)
 	{
 		pOwner->changeGold(-(m_iCost->evaluate(pUnit->getGameObject())));
@@ -188,7 +187,7 @@ void CvOutcomeMission::execute(CvUnit* pUnit)
 		}
 		else
 		{
-			pUnit->getGameObject()->foreach(m_ePayerType, boost::bind(callSetPayer, _1, &pPayer));
+			pUnit->getGameObject()->foreach(m_ePayerType, bst::bind(callSetPayer, _1, &pPayer));
 		}
 
 		if (pPayer)

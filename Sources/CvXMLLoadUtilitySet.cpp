@@ -288,35 +288,6 @@ bool CvXMLLoadUtility::SetGlobalDefines()
 					OutputDebugString("Setting Global Defines: End");
 					return false;
 				}
-
-	#ifdef GRANULAR_CALLBACK_CONTROL
-				//	KOSHLING - granular control over Python callbacks - so far implements
-				//		CanTrain
-				//		CannotTrain
-				//		CanBuild
-				const char* entityList;
-				//	CanTrain
-				if ( GC.getDefinesVarSystem()->GetValue("USE_CAN_TRAIN_CALLBACK_GRANULAR", entityList) )
-				{
-					cvInternalGlobals::getInstance().m_pythonCallbackController.RegisterUnitCallback(CALLBACK_TYPE_CAN_TRAIN, entityList);
-
-					GC.getDefinesVarSystem()->RemValue("USE_CAN_TRAIN_CALLBACK_GRANULAR");
-				}
-				//	CannotTrain
-				if ( GC.getDefinesVarSystem()->GetValue("USE_CANNOT_TRAIN_CALLBACK_GRANULAR", entityList) )
-				{
-					cvInternalGlobals::getInstance().m_pythonCallbackController.RegisterUnitCallback(CALLBACK_TYPE_CANNOT_TRAIN, entityList);
-
-					GC.getDefinesVarSystem()->RemValue("USE_CANNOT_TRAIN_CALLBACK_GRANULAR");
-				}
-				//	CanBuild
-				if ( GC.getDefinesVarSystem()->GetValue("USE_CAN_BUILD_CALLBACK_GRANULAR", entityList) )
-				{
-					cvInternalGlobals::getInstance().m_pythonCallbackController.RegisterBuildCallback(CALLBACK_TYPE_CAN_BUILD, entityList);
-
-					GC.getDefinesVarSystem()->RemValue("USE_CAN_BUILD_CALLBACK_GRANULAR");
-				}
-	#endif
 			}
 			aszFiles.clear();
 			aszModularFiles.clear();
@@ -324,7 +295,6 @@ bool CvXMLLoadUtility::SetGlobalDefines()
 	/************************************************************************************************/
 	/* MODULAR_LOADING_CONTROL                 END                                                  */
 	/************************************************************************************************/
-
 
 		gDLL->destroyCache(cache);
 	}
@@ -424,9 +394,9 @@ bool CvXMLLoadUtility::SetPostGlobalsGlobalDefines()
 		idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("GLOBAL_WARMING_TERRAIN", idx);
 
-		SetGlobalDefine("CAPITAL_BUILDINGCLASS", szVal);
+		SetGlobalDefine("CAPITAL_BUILDING", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("CAPITAL_BUILDINGCLASS", idx);
+		GC.getDefinesVarSystem()->SetValue("CAPITAL_BUILDING", idx);
 
 		SetGlobalDefine("DEFAULT_SPECIALIST", szVal);
 		idx = GetInfoClass(szVal);
@@ -484,45 +454,37 @@ bool CvXMLLoadUtility::SetPostGlobalsGlobalDefines()
 		idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("BARBARIAN_LEADER", idx);
 
-		SetGlobalDefine("AGGRESSIVE_ANIMAL_CIVILIZATION", szVal);
+		SetGlobalDefine("NEANDERTHAL_CIVILIZATION", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("AGGRESSIVE_ANIMAL_CIVILIZATION", idx);
+		GC.getDefinesVarSystem()->SetValue("NEANDERTHAL_CIVILIZATION", idx);
 
-		SetGlobalDefine("AGGRESSIVE_ANIMAL_LEADER", szVal);
+		SetGlobalDefine("NEANDERTHAL_LEADER", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("AGGRESSIVE_ANIMAL_LEADER", idx);
+		GC.getDefinesVarSystem()->SetValue("NEANDERTHAL_LEADER", idx);
 
-		SetGlobalDefine("PASSIVE_ANIMAL_CIVILIZATION", szVal);
+		SetGlobalDefine("BEAST_CIVILIZATION", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("PASSIVE_ANIMAL_CIVILIZATION", idx);
+		GC.getDefinesVarSystem()->SetValue("BEAST_CIVILIZATION", idx);
 
-		SetGlobalDefine("PASSIVE_ANIMAL_LEADER", szVal);
+		SetGlobalDefine("PREDATOR_CIVILIZATION", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("PASSIVE_ANIMAL_LEADER", idx);
+		GC.getDefinesVarSystem()->SetValue("PREDATOR_CIVILIZATION", idx);
 
-		SetGlobalDefine("NPC1_CIVILIZATION", szVal);
+		SetGlobalDefine("PREY_CIVILIZATION", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC1_CIVILIZATION", idx);
+		GC.getDefinesVarSystem()->SetValue("PREY_CIVILIZATION", idx);
 
-		SetGlobalDefine("NPC1_LEADER", szVal);
+		SetGlobalDefine("ANIMAL_LEADER", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC1_LEADER", idx);
+		GC.getDefinesVarSystem()->SetValue("ANIMAL_LEADER", idx);
 
-		SetGlobalDefine("NPC2_CIVILIZATION", szVal);
+		SetGlobalDefine("INSECT_CIVILIZATION", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC2_CIVILIZATION", idx);
+		GC.getDefinesVarSystem()->SetValue("INSECT_CIVILIZATION", idx);
 
-		SetGlobalDefine("NPC2_LEADER", szVal);
+		SetGlobalDefine("INSECT_LEADER", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC2_LEADER", idx);
-
-		SetGlobalDefine("NPC3_CIVILIZATION", szVal);
-		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC3_CIVILIZATION", idx);
-
-		SetGlobalDefine("NPC3_LEADER", szVal);
-		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC3_LEADER", idx);
+		GC.getDefinesVarSystem()->SetValue("INSECT_LEADER", idx);
 
 		SetGlobalDefine("NPC4_CIVILIZATION", szVal);
 		idx = GetInfoClass(szVal);
@@ -532,47 +494,42 @@ bool CvXMLLoadUtility::SetPostGlobalsGlobalDefines()
 		idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("NPC4_LEADER", idx);
 
-		SetGlobalDefine("NPC5_CIVILIZATION", szVal);
+		SetGlobalDefine("NPC3_CIVILIZATION", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC5_CIVILIZATION", idx);
+		GC.getDefinesVarSystem()->SetValue("NPC3_CIVILIZATION", idx);
 
-		SetGlobalDefine("NPC5_LEADER", szVal);
+		SetGlobalDefine("NPC3_LEADER", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC5_LEADER", idx);
+		GC.getDefinesVarSystem()->SetValue("NPC3_LEADER", idx);
 
-		SetGlobalDefine("NPC6_CIVILIZATION", szVal);
+		SetGlobalDefine("NPC2_CIVILIZATION", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC6_CIVILIZATION", idx);
+		GC.getDefinesVarSystem()->SetValue("NPC2_CIVILIZATION", idx);
 
-		SetGlobalDefine("NPC6_LEADER", szVal);
+		SetGlobalDefine("NPC2_LEADER", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC6_LEADER", idx);
+		GC.getDefinesVarSystem()->SetValue("NPC2_LEADER", idx);
 
-		SetGlobalDefine("NPC7_CIVILIZATION", szVal);
+		SetGlobalDefine("NPC1_CIVILIZATION", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC7_CIVILIZATION", idx);
+		GC.getDefinesVarSystem()->SetValue("NPC1_CIVILIZATION", idx);
 
-		SetGlobalDefine("NPC7_LEADER", szVal);
+		SetGlobalDefine("NPC1_LEADER", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC7_LEADER", idx);
+		GC.getDefinesVarSystem()->SetValue("NPC1_LEADER", idx);
 
-		SetGlobalDefine("NPC8_CIVILIZATION", szVal);
+		SetGlobalDefine("NPC0_CIVILIZATION", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC8_CIVILIZATION", idx);
+		GC.getDefinesVarSystem()->SetValue("NPC0_CIVILIZATION", idx);
 
-		SetGlobalDefine("NPC8_LEADER", szVal);
+		SetGlobalDefine("NPC0_LEADER", szVal);
 		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("NPC8_LEADER", idx);
-/************************************************************************************************/
-/* Afforess	                  Start		 07/12/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	gDLL->ChangeINIKeyValue("CONFIG", "HideMinSpecWarning ", "1");
-	gDLL->ChangeINIKeyValue("GAME", "ModularLoading  ", "0");
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+		GC.getDefinesVarSystem()->SetValue("NPC0_LEADER", idx);
+
+
+		gDLL->ChangeINIKeyValue("CONFIG", "HideMinSpecWarning ", "1");
+		gDLL->ChangeINIKeyValue("GAME", "ModularLoading  ", "0");
+
 		return true;
 	}
 
@@ -761,8 +718,6 @@ bool CvXMLLoadUtility::SetGlobalArtDefines()
 //------------------------------------------------------------------------------------------------------
 bool CvXMLLoadUtility::LoadGlobalText()
 {
-	bool bLoaded = false;
-
 	OutputDebugString("Begin load global text\n");
 
 	// set language tag
@@ -823,8 +778,6 @@ bool CvXMLLoadUtility::LoadGlobalText()
 	CvGameText::setLanguage(szLanguage);
 	logMsg("\nXML language set to %s\n", szLanguage.c_str());
 
-	if (!bLoaded)
-	{
 /************************************************************************************************/
 /* XML_CHECK_DOUBLE_TYPE                   03/14/08                                MRGENIE      */
 /*                                                                                              */
@@ -837,18 +790,18 @@ bool CvXMLLoadUtility::LoadGlobalText()
 /* XML_CHECK_DOUBLE_TYPE                   END                                                  */
 /************************************************************************************************/
 
-		if (!CreateFXml())
-		{
-			return false;
-		}
+	if (!CreateFXml())
+	{
+		return false;
+	}
 
-		//
-		// load all files in the xml text directory
-		//
-		std::vector<CvString> aszFiles;
-		std::vector<CvString> aszModfiles;
+	//
+	// load all files in the xml text directory
+	//
+	std::vector<CvString> aszFiles;
+	std::vector<CvString> aszModfiles;
 
-		gDLL->enumerateFiles(aszFiles, "xml\\text\\*.xml");
+	gDLL->enumerateFiles(aszFiles, "xml\\text\\*.xml");
 
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 05/23/08                                MRGENIE      */
@@ -856,42 +809,36 @@ bool CvXMLLoadUtility::LoadGlobalText()
 /*                                                                                              */
 /************************************************************************************************/
 /* original firaxis
-		if (gDLL->isModularXMLLoading())
-		{
-			gDLL->enumerateFiles(aszModfiles, L"modules\\*_CIV4GameText.xml");
-			aszFiles.insert(aszFiles.end(), aszModfiles.begin(), aszModfiles.end());
-		}
-*/
-		gDLL->enumerateFiles(aszModfiles, "modules\\*_CIV4GameText*.xml");
+	if (gDLL->isModularXMLLoading())
+	{
+		gDLL->enumerateFiles(aszModfiles, L"modules\\*_CIV4GameText.xml");
 		aszFiles.insert(aszFiles.end(), aszModfiles.begin(), aszModfiles.end());
+	}
+*/
+	gDLL->enumerateFiles(aszModfiles, "modules\\*_CIV4GameText*.xml");
+	aszFiles.insert(aszFiles.end(), aszModfiles.begin(), aszModfiles.end());
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 END                                                  */
 /************************************************************************************************/
-		std::vector<CvGameText> texts;
+	std::vector<CvGameText> texts;
 
-		for(std::vector<CvString>::iterator it = aszFiles.begin(); it != aszFiles.end(); ++it)
-		{
-			bLoaded = LoadCivXml(NULL, *it); // Load the XML
-			if (!bLoaded)
-			{
-				char	szMessage[1024];
-				sprintf( szMessage, "LoadXML call failed for %s. \n Current XML file is: %s", (*it).c_str(), GC.getCurrentXMLFile().GetCString());
-				gDLL->MessageBox(szMessage, "XML Load Error");
-			}
-			if (bLoaded)
-			{
-				// if the xml is successfully validated
-				SetGameText(L"/Civ4GameText", L"/Civ4GameText/TEXT", texts);
-			}
-		}
-
-		DestroyFXml();
-
-	}	// didn't read from cache
-	else
+	for(std::vector<CvString>::iterator it = aszFiles.begin(); it != aszFiles.end(); ++it)
 	{
-		logMsg("Read GlobalText from cache");
+		bool bLoaded = LoadCivXml(NULL, *it); // Load the XML
+		if (!bLoaded)
+		{
+			char	szMessage[1024];
+			sprintf( szMessage, "LoadXML call failed for %s. \n Current XML file is: %s", (*it).c_str(), GC.getCurrentXMLFile().GetCString());
+			gDLL->MessageBox(szMessage, "XML Load Error");
+		}
+		if (bLoaded)
+		{
+			// if the xml is successfully validated
+			SetGameText(L"/Civ4GameText", L"/Civ4GameText/TEXT", texts);
+		}
 	}
+
+	DestroyFXml();
 
 	OutputDebugString("End load global text\n");
 
@@ -909,12 +856,6 @@ bool CvXMLLoadUtility::LoadBasicInfos()
 
 	LoadGlobalClassInfo(GC.getConceptInfos(), "CIV4BasicInfos", "BasicInfos", L"/Civ4BasicInfos/ConceptInfos/ConceptInfo", false);
 	LoadGlobalClassInfo(GC.getNewConceptInfos(), "CIV4NewConceptInfos", "BasicInfos", L"/Civ4NewConceptInfos/NewConceptInfos/NewConceptInfo", false);
-	// Dale - DCM: Pedia Concepts START
-	LoadGlobalClassInfo(GC.getDCMConceptInfos(), "CIV4DCMConceptInfos", "BasicInfos", L"/Civ4DCMConceptInfos/DCMConceptInfos/DCMConceptInfo", false);
-	// Dale - DCM: Pedia Concepts END
-	// Afforess - A New Dawn Concepts
-	LoadGlobalClassInfo(GC.getANDConceptInfos(), "CIV4ANDConceptInfos", "BasicInfos", L"/Civ4ANDConceptInfos/ANDConceptInfos/ANDConceptInfo", false);
-	// Afforess
 	LoadGlobalClassInfo(GC.getCityTabInfos(), "CIV4CityTabInfos", "BasicInfos", L"/Civ4CityTabInfos/CityTabInfos/CityTabInfo", false);
 	LoadGlobalClassInfo(GC.getCalendarInfos(), "CIV4CalendarInfos", "BasicInfos", L"/Civ4CalendarInfos/CalendarInfos/CalendarInfo", false);
 	LoadGlobalClassInfo(GC.getSeasonInfos(), "CIV4SeasonInfos", "BasicInfos", L"/Civ4SeasonInfos/SeasonInfos/SeasonInfo", false);
@@ -985,15 +926,9 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	OutputDebugString("Maps loaded\n");
 
 	LoadGlobalClassInfo(GC.getGameSpeedInfos(), "CIV4GameSpeedInfo", "GameInfo", L"/Civ4GameSpeedInfo/GameSpeedInfos/GameSpeedInfo", false, GC.getGameSpeedInfoReplacements());
-/************************************************************************************************/
-/* REVDCM                                 02/16/10                                phungus420    */
-/*                                                                                              */
-/* CanTrain                                                                                     */
-/************************************************************************************************/
+
 	LoadGlobalClassInfo(GC.getGameOptionInfos(), "CIV4GameOptionInfos", "GameInfo", L"/Civ4GameOptionInfos/GameOptionInfos/GameOptionInfo", false);
-/************************************************************************************************/
-/* REVDCM                                  END                                                  */
-/************************************************************************************************/
+
 	LoadGlobalClassInfo(GC.getColorInfos(), "CIV4ColorVals", "Interface", L"/Civ4ColorVals/ColorVals/ColorVal", false);
 	LoadGlobalClassInfo(GC.getTurnTimerInfos(), "CIV4TurnTimerInfo", "GameInfo", L"/Civ4TurnTimerInfo/TurnTimerInfos/TurnTimerInfo", false);
 	LoadGlobalClassInfo(GC.getWorldInfos(), "CIV4WorldInfo", "GameInfo", L"/Civ4WorldInfo/WorldInfos/WorldInfo", false, GC.getWorldInfoReplacements());
@@ -1019,7 +954,6 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	LoadGlobalClassInfo(GC.getEffectInfos(), "CIV4EffectInfos", "Misc", L"/Civ4EffectInfos/EffectInfos/EffectInfo", false);
 	LoadGlobalClassInfo(GC.getEntityEventInfos(), "CIV4EntityEventInfos", "Units", L"/Civ4EntityEventInfos/EntityEventInfos/EntityEventInfo", false);
 	LoadGlobalClassInfo(GC.getPropertyInfos(), "CIV4PropertyInfos", "GameInfo", L"/Civ4PropertyInfos/PropertyInfos/PropertyInfo", false);
-	LoadGlobalClassInfo(GC.getUnitClassInfos(), "CIV4UnitClassInfos", "Units", L"/Civ4UnitClassInfos/UnitClassInfos/UnitClassInfo", false, GC.getUnitClassInfoReplacements());
 	LoadGlobalClassInfo(GC.getSpecialistInfos(), "CIV4SpecialistInfos", "GameInfo", L"/Civ4SpecialistInfos/SpecialistInfos/SpecialistInfo", false, GC.getSpecialistInfoReplacements());
 	LoadGlobalClassInfo(GC.getVoteSourceInfos(), "CIV4VoteSourceInfos", "GameInfo", L"/Civ4VoteSourceInfos/VoteSourceInfos/VoteSourceInfo", false);
 	LoadGlobalClassInfo(GC.getTechInfos(), "CIV4TechInfos", "Technologies", L"/Civ4TechInfos/TechInfos/TechInfo", true, GC.getTechInfoReplacements());
@@ -1036,8 +970,6 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	LoadGlobalClassInfo(GC.getBonusInfos(), "CIV4BonusInfos", "Terrain", L"/Civ4BonusInfos/BonusInfos/BonusInfo", false, GC.getBonusInfoReplacements());
 	LoadGlobalClassInfo(GC.getSpecialUnitInfos(), "CIV4SpecialUnitInfos", "Units", L"/Civ4SpecialUnitInfos/SpecialUnitInfos/SpecialUnitInfo", false);
 	shouldHaveType = true;
-	LoadGlobalClassInfo(GC.getGoodyInfos(), "CIV4GoodyInfo", "GameInfo", L"/Civ4GoodyInfo/GoodyInfos/GoodyInfo", false);
-	LoadGlobalClassInfo(GC.getHandicapInfos(), "CIV4HandicapInfo", "GameInfo", L"/Civ4HandicapInfo/HandicapInfos/HandicapInfo", false, GC.getHandicapInfoReplacements());
 	LoadGlobalClassInfo(GC.getRouteInfos(), "CIV4RouteInfos", "Misc", L"/Civ4RouteInfos/RouteInfos/RouteInfo", false, GC.getRouteInfoReplacements());
 	shouldHaveType = false;
 	LoadGlobalClassInfo(GC.getImprovementInfos(), "CIV4ImprovementInfos", "Terrain", L"/Civ4ImprovementInfos/ImprovementInfos/ImprovementInfo", true, GC.getImprovementInfoReplacements());
@@ -1046,8 +978,6 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	LoadGlobalClassInfo(GC.getPromotionLineInfos(), "CIV4PromotionLineInfos", "Units", L"/Civ4PromotionLineInfos/PromotionLineInfos/PromotionLineInfo", false);
 	//TB Promotion Line Mod begin
 	LoadGlobalClassInfo(GC.getPromotionInfos(), "CIV4PromotionInfos", "Units", L"/Civ4PromotionInfos/PromotionInfos/PromotionInfo", true, GC.getPromotionInfoReplacements());
-	LoadGlobalClassInfo(GC.getTraitInfos(), "CIV4TraitInfos", "Civilizations", L"/Civ4TraitInfos/TraitInfos/TraitInfo", true, GC.getTraitInfoReplacements());
-	LoadGlobalClassInfo(GC.getBuildingClassInfos(), "CIV4BuildingClassInfos", "Buildings", L"/Civ4BuildingClassInfos/BuildingClassInfos/BuildingClassInfo", false, GC.getBuildingClassInfoReplacements());
 	LoadGlobalClassInfo(GC.getHurryInfos(), "CIV4HurryInfo", "GameInfo", L"/Civ4HurryInfo/HurryInfos/HurryInfo", false);
 	LoadGlobalClassInfo(GC.getCorporationInfos(), "CIV4CorporationInfo", "GameInfo", L"/Civ4CorporationInfo/CorporationInfos/CorporationInfo", false, GC.getCorporationInfoReplacements());
 	// TGA indexation - important must do before anything else
@@ -1059,17 +989,24 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	}
 
 	LoadGlobalClassInfo(GC.getSpecialBuildingInfos(), "CIV4SpecialBuildingInfos", "Buildings", L"/Civ4SpecialBuildingInfos/SpecialBuildingInfos/SpecialBuildingInfo", false, GC.getSpecialBuildingInfoReplacements());
-	LoadGlobalClassInfo(GC.getBuildingInfos(), "CIV4BuildingInfos", "Buildings", L"/Civ4BuildingInfos/BuildingInfos/BuildingInfo", false, GC.getBuildingInfoReplacements());
-	for (int i=0; i < GC.getNumBuildingClassInfos(); ++i)
-	{
-		GC.getBuildingClassInfo((BuildingClassTypes)i).readPass3();
-		GC.getBuildingClassInfoReplacements()->readPass3();
-	}
+	LoadGlobalClassInfo(GC.getBuildingInfos(), "CIV4BuildingInfos", "Buildings", L"/Civ4BuildingInfos/BuildingInfos/BuildingInfo", true, GC.getBuildingInfoReplacements());
 	LoadGlobalClassInfo(GC.getCivicInfos(), "CIV4CivicInfos", "GameInfo", L"/Civ4CivicInfos/CivicInfos/CivicInfo", false, GC.getCivicInfoReplacements());
 	for (int i=0; i < GC.getNumVoteSourceInfos(); ++i)
 	{
 		GC.getVoteSourceInfo((VoteSourceTypes)i).readPass3();
 	}
+	LoadGlobalClassInfo(GC.getPlayerColorInfos(), "CIV4PlayerColorInfos", "Interface", L"/Civ4PlayerColorInfos/PlayerColorInfos/PlayerColorInfo", false);
+	LoadGlobalClassInfo(GC.getBuildInfos(), "CIV4BuildInfos", "Units", L"/Civ4BuildInfos/BuildInfos/BuildInfo", false, GC.getBuildInfoReplacements());
+
+	LoadGlobalClassInfo(GC.getOutcomeInfos(), "CIV4OutcomeInfos", "GameInfo", L"/Civ4OutcomeInfos/OutcomeInfos/OutcomeInfo", true);
+
+	//	AlbertS2: Register mission types
+	GC.registerMissions();
+	LoadGlobalClassInfo(GC.getMissionInfos(), "CIV4MissionInfos", "Units", L"/Civ4MissionInfos/MissionInfos/MissionInfo", false);
+	LoadGlobalClassInfo(GC.getUnitInfos(), "CIV4UnitInfos", "Units", L"/Civ4UnitInfos/UnitInfos/UnitInfo", true, GC.getUnitInfoReplacements());
+
+	LoadGlobalClassInfo(GC.getTraitInfos(), "CIV4TraitInfos", "Civilizations", L"/Civ4TraitInfos/TraitInfos/TraitInfo", true, GC.getTraitInfoReplacements());
+
 	LoadGlobalClassInfo(GC.getLeaderHeadInfos(), "CIV4LeaderHeadInfos", "Civilizations", L"/Civ4LeaderHeadInfos/LeaderHeadInfos/LeaderHeadInfo", false, GC.getLeaderHeadInfoReplacements());
 /************************************************************************************************/
 /* SORT_ALPHABET                           11/17/07                                MRGENIE      */
@@ -1086,42 +1023,12 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 /************************************************************************************************/
 /* SORT_ALPHABET                           END                                                  */
 /************************************************************************************************/
-	LoadGlobalClassInfo(GC.getPlayerColorInfos(), "CIV4PlayerColorInfos", "Interface", L"/Civ4PlayerColorInfos/PlayerColorInfos/PlayerColorInfo", false);
-	LoadGlobalClassInfo(GC.getBuildInfos(), "CIV4BuildInfos", "Units", L"/Civ4BuildInfos/BuildInfos/BuildInfo", false, GC.getBuildInfoReplacements());
-
-	LoadGlobalClassInfo(GC.getOutcomeInfos(), "CIV4OutcomeInfos", "GameInfo", L"/Civ4OutcomeInfos/OutcomeInfos/OutcomeInfo", true);
-
-	//	AlbertS2: Register mission types
-	GC.registerMissions();
-	LoadGlobalClassInfo(GC.getMissionInfos(), "CIV4MissionInfos", "Units", L"/Civ4MissionInfos/MissionInfos/MissionInfo", false);
-	LoadGlobalClassInfo(GC.getUnitInfos(), "CIV4UnitInfos", "Units", L"/Civ4UnitInfos/UnitInfos/UnitInfo", false, GC.getUnitInfoReplacements());
-
-	for (int i=0; i < GC.getNumUnitClassInfos(); ++i)
-	{
-		GC.getUnitClassInfo((UnitClassTypes)i).readPass3();
-		GC.getUnitClassInfoReplacements()->readPass3();
-	}
 
 	LoadGlobalClassInfo(GC.getUnitArtStyleTypeInfos(), "CIV4UnitArtStyleTypeInfos", "Civilizations", L"/Civ4UnitArtStyleTypeInfos/UnitArtStyleTypeInfos/UnitArtStyleTypeInfo", false);
 	LoadGlobalClassInfo(GC.getCivilizationInfos(), "CIV4CivilizationInfos", "Civilizations", L"/Civ4CivilizationInfos/CivilizationInfos/CivilizationInfo", true, GC.getCivilizationInfoReplacements());
-	
-/************************************************************************************************/
-/* Afforess	                  Start		 07/30/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	LoadGlobalClassInfo(GC.getProjectInfos(), "CIV4ProjectInfo", "GameInfo", L"/Civ4ProjectInfo/ProjectInfos/ProjectInfo", false, GC.getProjectInfoReplacements());
-/************************************************************************************************/
-/*                                         END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 07/07/09                                                        */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/************************************************************************************************/
-/* JOOYO_ADDON                          END                                                     */
-/************************************************************************************************/
+
 /************************************************************************************************/
 /* SORT_ALPHABET                           11/17/07                                MRGENIE      */
 /*                                                                                              */
@@ -1144,13 +1051,14 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	LoadGlobalClassInfo(GC.getWorldPickerInfos(), "CIV4WorldPickerInfos", "Interface", L"/Civ4WorldPickerInfos/WorldPickerInfos/WorldPickerInfo", false);
 	LoadGlobalClassInfo(GC.getSpaceShipInfos(), "CIV4SpaceShipInfos", "Interface", L"/Civ4SpaceShipInfos/SpaceShipInfos/SpaceShipInfo", false);
 
+	shouldHaveType = true;
+	LoadGlobalClassInfo(GC.getGoodyInfos(), "CIV4GoodyInfo", "GameInfo", L"/Civ4GoodyInfo/GoodyInfos/GoodyInfo", false);
+	LoadGlobalClassInfo(GC.getHandicapInfos(), "CIV4HandicapInfo", "GameInfo", L"/Civ4HandicapInfo/HandicapInfos/HandicapInfo", false, GC.getHandicapInfoReplacements());
+	shouldHaveType = false;
+
 	LoadGlobalClassInfo(GC.getMPOptionInfos(), "CIV4MPOptionInfos", "GameInfo", L"/Civ4MPOptionInfos/MPOptionInfos/MPOptionInfo", false);
 	LoadGlobalClassInfo(GC.getForceControlInfos(), "CIV4ForceControlInfos", "GameInfo", L"/Civ4ForceControlInfos/ForceControlInfos/ForceControlInfo", false);
-/************************************************************************************************/
-/* Afforess                                03/18/10                                             */
-/*                            ReadPass3                                                         */
-/*                                                                                              */
-/************************************************************************************************/
+
 	LoadGlobalClassInfo(GC.getEventInfos(), "CIV4EventInfos", "Events", L"/Civ4EventInfos/EventInfos/EventInfo", false, GC.getEventInfoReplacements());
 	LoadGlobalClassInfo(GC.getEventTriggerInfos(), "CIV4EventTriggerInfos", "Events", L"/Civ4EventTriggerInfos/EventTriggerInfos/EventTriggerInfo", false, GC.getEventTriggerInfoReplacements());
 	OutputDebugString("Base load complete\n");
@@ -1164,6 +1072,7 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 		GC.getBuildingInfo((BuildingTypes)i).readPass3();
 		GC.getBuildingInfoReplacements()->readPass3();
 	}
+
 	for (int i=0; i < GC.getNumCivicInfos(); ++i)
 	{
 		GC.getCivicInfo((CivicTypes)i).readPass3();
@@ -1174,6 +1083,12 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 	{
 		GC.getCorporationInfo((CorporationTypes)i).readPass3();
 		GC.getCorporationInfoReplacements()->readPass3();
+	}
+
+	for (int i=0; i < GC.getNumReligionInfos(); ++i)
+	{
+		GC.getReligionInfo((ReligionTypes)i).readPass3();
+		GC.getReligionInfoReplacements()->readPass3();
 	}
 
 	for (int i=0; i < GC.getNumEventInfos(); ++i)
@@ -1199,16 +1114,13 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 		GC.getUnitInfo((UnitTypes)i).readPass3();
 		GC.getUnitInfoReplacements()->readPass3();
 	}
-	
-	for (int i=0; i < GC.getNumTraitInfos(); ++i)
+
+	for (int i=0; i < GC.getNumSpecialistInfos(); ++i)
 	{
-		GC.getTraitInfo((TraitTypes)i).readPass3();
-		GC.getTraitInfoReplacements()->readPass3();
+		GC.getSpecialistInfo((SpecialistTypes)i).readPass3();
+		GC.getSpecialistInfoReplacements()->readPass3();
 	}
 	OutputDebugString("Pass3 processing complete\n");
-/************************************************************************************************/
-/* Afforess                                END                                                  */
-/************************************************************************************************/
 
 	// add types to global var system
 	for (int i = 0; i < GC.getNumCursorInfos(); ++i)
@@ -1261,9 +1173,9 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 
 	// Add TGA space fillers
 	CvReligionInfo* pReligionBogus = new CvReligionInfo();
-	aReligionInfos.insert(aReligionInfos.end(), TGA_RELIGIONS - aReligionInfos.size(), pReligionBogus);
+	aReligionInfos.insert(aReligionInfos.end(), GC.getTGA_RELIGIONS() - aReligionInfos.size(), pReligionBogus);
 	CvCorporationInfo* pCorporationBogus = new CvCorporationInfo();
-	aCorporationInfos.insert(aCorporationInfos.end(), TGA_CORPORATIONS - aCorporationInfos.size(), pCorporationBogus);
+	aCorporationInfos.insert(aCorporationInfos.end(), GC.getTGA_CORPORATIONS() - aCorporationInfos.size(), pCorporationBogus);
 
 	OutputDebugString("Load globals complete\n");
 	UpdateProgressCB("GlobalOther");
@@ -1475,12 +1387,6 @@ void CvXMLLoadUtility::SetGlobalActionInfo()
 	{
 		char	szMessage[1024];
 		sprintf( szMessage, "GC.getNumPromotionInfos() is not greater than zero in CvXMLLoadUtility::SetGlobalActionInfo \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
-		gDLL->MessageBox(szMessage, "XML Error");
-	}
-	if(!(GC.getNumUnitClassInfos() > 0) )
-	{
-		char	szMessage[1024];
-		sprintf( szMessage, "GC.getNumUnitClassInfos() is not greater than zero in CvXMLLoadUtility::SetGlobalActionInfo \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
 		gDLL->MessageBox(szMessage, "XML Error");
 	}
 	if(!(GC.getNumSpecialistInfos() > 0) )
@@ -1888,6 +1794,7 @@ void CvXMLLoadUtility::SetGlobalClassInfo(std::vector<T*>& aInfos, const wchar_t
 	xercesc::XMLString::release(&tmp);
 	PROFILE(szLog);
 	logMsg(szLog);
+
 	// if we successfully locate the tag name in the xml file
 	if (TryMoveToXmlFirstMatchingElement(szTagName))
 	{
@@ -1910,82 +1817,105 @@ void CvXMLLoadUtility::SetGlobalClassInfo(std::vector<T*>& aInfos, const wchar_t
 				}
 			}
 			if (!bHasType)
-			{	// (1) Let's deal with type-ignorant classes first, they are easier
-				T* pClassInfo = new T();
-				if (!pClassInfo->read(this))
-					SAFE_DELETE(pClassInfo)
-				else
-					aInfos.push_back(pClassInfo);
+			{
+				// (1) Let's deal with type-ignorant classes first, they are easier
+				std::auto_ptr<T> pClassInfo(new T());
+				if (pClassInfo->read(this))
+				{
+					aInfos.push_back(pClassInfo.release());
+				}
 			}
 			else
-			{	// (2) Check dependencies. If not satisfied, skip altogether
+			{
+				// (2) Check dependencies. If not satisfied, skip altogether
 				if (!CheckDependency())
 					continue;
+
 				// (3) Read off if a modder wants his work to completely replace the core definition
 				bool bForceOverwrite = false;
 				GetOptionalChildXmlValByName(&bForceOverwrite, L"bForceOverwrite");
+
 				// (4) Read off the Replacement condition
 				uint uiReplacementID = 0;
-				BoolExpr* pReplacementCondition = NULL;
-				if (GetOptionalChildXmlValByName(szTypeReplace, L"ReplacementID") && szTypeReplace.size()) {
+				std::auto_ptr<BoolExpr> pReplacementCondition;
+				if (GetOptionalChildXmlValByName(szTypeReplace, L"ReplacementID") && szTypeReplace.size())
+				{
 					uiReplacementID = CvInfoReplacements<T>::getReplacementIDForString(szTypeReplace);
-					if (TryMoveToXmlFirstChild(L"ReplacementCondition")) {
+					if (TryMoveToXmlFirstChild(L"ReplacementCondition")) 
+					{
 						// Replacement condition must be defined by the base object that
 						// names the particular Replacement ID; otherwise it won't work!
-						if (TryMoveToXmlFirstChild()) {
-							pReplacementCondition = BoolExpr::read(this);
+						if (TryMoveToXmlFirstChild())
+						{
+							pReplacementCondition.reset(BoolExpr::read(this));
 							MoveToXmlParent();
 						}
 						MoveToXmlParent();
 					}
 				}
+
 				// (5) Now we can parse the object
-				T* pClassInfo = new T();
-				if (!pClassInfo->read(this))
-					SAFE_DELETE(pClassInfo)
-				else
-				{	// See if the type name is associated with any loaded object
+				std::auto_ptr<T> pClassInfo(new T());
+				if (pClassInfo->read(this))
+				{
+					// See if the type name is associated with any loaded object
 					if (GC.getInfoTypeForString(szTypeName, true) == -1)
-					{	// (5-1) Does not exist
+					{
+						// (5-1) Does not exist
 						uint uiAppendPosition = aInfos.size();
 						if (szTypeReplace.empty())
-							aInfos.push_back(pClassInfo);
-						else if (pReplacementCondition)	// has szTypeReplace
-						{	// AIAndy: If the class is a replacement, add it to the replacements
+						{
+							aInfos.push_back(pClassInfo.release());
+						}
+						else if (pReplacementCondition.get())	// has szTypeReplace
+						{	
+							// AIAndy: If the class is a replacement, add it to the replacements
 							// but also add a dummy to the normal array to reserve an ID
 							aInfos.push_back(new T());
-							pReplacements->addReplacement(uiAppendPosition, uiReplacementID, pReplacementCondition, pClassInfo);
+							pReplacements->addReplacement(uiAppendPosition, uiReplacementID, pReplacementCondition.release(), pClassInfo.release());
 						}
 						else
-							FAssertMsg(pReplacementCondition != NULL, CvString::format("No replacement condition for this Replacement ID %s.\r\n\tMake sure it's defined for the first replacement object in the load order.", szTypeReplace.c_str()));
+						{
+							FAssertMsg(pReplacementCondition.get(), CvString::format("No replacement condition for this Replacement ID %s.\r\n\tMake sure it's defined for the first replacement object in the load order.", szTypeReplace.c_str()));
+						}
 						GC.setInfoTypeFromString(szTypeName, uiAppendPosition);
 					}
 					else
-					{	// (5-2) Found at uiExistPosition
+					{
+						// (5-2) Found at uiExistPosition
 						uint uiExistPosition = GC.getInfoTypeForString(szTypeName);
+						FAssertMsg(uiExistPosition != -1, "Couldn't find info type");
 						if (szTypeReplace.empty())
 						{
-							if (!bForceOverwrite)	pClassInfo->copyNonDefaults(aInfos[uiExistPosition], this);
+							if (!bForceOverwrite)
+							{
+								pClassInfo->copyNonDefaults(aInfos[uiExistPosition], this);
+							}
 							SAFE_DELETE(aInfos[uiExistPosition])
-							aInfos[uiExistPosition] = pClassInfo;
+							aInfos[uiExistPosition] = pClassInfo.release();
 						}
 						else
 						{
 							CvInfoReplacement<T>* pExisting = pReplacements->getReplacement(uiExistPosition, uiReplacementID);
-							if (pExisting) {
-								SAFE_DELETE(pReplacementCondition)
+							if (pExisting) 
+							{
 								pClassInfo->copyNonDefaults(pExisting->getInfo(), this);
-								pExisting->setInfo(pClassInfo);
+								pExisting->setInfo(pClassInfo.release());
 							}
-							else if (pReplacementCondition)
-								pReplacements->addReplacement(uiExistPosition, uiReplacementID, pReplacementCondition, pClassInfo);
+							else if (pReplacementCondition.get())
+							{
+								pReplacements->addReplacement(uiExistPosition, uiReplacementID, pReplacementCondition.release(), pClassInfo.release());
+							}
 							else
-								FAssertMsg(pReplacementCondition != NULL, CvString::format("No replacement condition for this Replacement ID %s.\r\n\tMake sure it's defined for the first replacement object in the load order.", szTypeReplace.c_str()));
+							{
+								FAssertMsg(pReplacementCondition.get(), CvString::format("No replacement condition for this Replacement ID %s.\r\n\tMake sure it's defined for the first replacement object in the load order.", szTypeReplace.c_str()));
+							}
 						}
 					}
 				}
 			}
 		} while (TryMoveToXmlNextSibling());
+
 //				T* pClassInfo = new T();
 //
 //				FAssert(NULL != pClassInfo);
@@ -2429,31 +2359,33 @@ void CvXMLLoadUtility::SetGlobalClassInfoTwoPassReplacement(std::vector<T*>& aIn
 			GetOptionalChildXmlValByName(&bForceOverwrite, L"bForceOverwrite");
 			// (4) Read off the Replacement condition
 			uint uiReplacementID = 0;
-			BoolExpr* pReplacementCondition = NULL;
+			bst::shared_ptr<BoolExpr> pReplacementCondition;
 			if (GetOptionalChildXmlValByName(szTypeReplace, L"ReplacementID") && szTypeReplace.size()) {
 				uiReplacementID = CvInfoReplacements<T>::getReplacementIDForString(szTypeReplace);
 				if (TryMoveToXmlFirstChild(L"ReplacementCondition")) {
 					if (TryMoveToXmlFirstChild()) {
-						pReplacementCondition = BoolExpr::read(this);
+						pReplacementCondition.reset(BoolExpr::read(this));
 						MoveToXmlParent();
 					}
 					MoveToXmlParent();
 				}
 			}
-			T* pClassInfo = new T();
-			if (pClassInfo->readPass2(this))
+			T pClassInfo;
+			if (pClassInfo.readPass2(this))
 			{
 				uint uiExistPosition = GC.getInfoTypeForString(szTypeName);
+				FAssertMsg(uiExistPosition != -1, "Couldn't find info type");
 				if (szTypeReplace.empty())
-					aInfos[uiExistPosition]->copyNonDefaultsReadPass2(pClassInfo, this, bForceOverwrite);
+				{
+					aInfos[uiExistPosition]->copyNonDefaultsReadPass2(&pClassInfo, this, bForceOverwrite);
+				}
 				else
 				{
 					CvInfoReplacement<T>* pExisting = pReplacements->getReplacement(uiExistPosition, uiReplacementID);
 					FAssertMsg(pExisting != NULL, CvString::format("Must have an existing replacement object of ID %s on the list!", szTypeReplace.c_str()))
-					pExisting->getInfo()->copyNonDefaultsReadPass2(pClassInfo, this, bForceOverwrite);
+					pExisting->getInfo()->copyNonDefaultsReadPass2(&pClassInfo, this, bForceOverwrite);
 				}
 			}
-			SAFE_DELETE(pClassInfo)
 		} while (TryMoveToXmlNextSibling());
 //			T* pClassInfo = new T();
 //
@@ -4303,12 +4235,6 @@ DllExport bool CvXMLLoadUtility::LoadPlayerOptions()
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	// Python Modular Loading
-	if (!CreateFXml())
-		return false;
-	LoadPythonModulesInfo(GC.getPythonModulesInfos(), "CIV4PythonModulesInfos", L"/Civ4PythonModulesInfos/PythonModulesInfos/PythonModulesInfo", false);
-	DestroyFXml();
-
 	// MLF loading
 	if (!gDLL->isModularXMLLoading())
 	{
@@ -4344,53 +4270,11 @@ DllExport bool CvXMLLoadUtility::LoadGraphicOptions()
 	return true;
 }
 
-
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 10/24/07                            MRGENIE          */
 /*                                                                                              */
 /* Initialize the list of Module Directories to be loaded                                       */
 /************************************************************************************************/
-// Python Modular Loading
-template <class T>
-void CvXMLLoadUtility::LoadPythonModulesInfo(std::vector<T*>& aInfos, const char* szFileRoot, const wchar_t* szXmlPath, bool bTwoPass)
-{
-	bool bLoaded = false;
-	GC.addToInfosVectors(&aInfos);
-
-//	XML_CHECK_DOUBLE_TYPE						10/10/07							MRGENIE
-#ifdef _DEBUG
-	logXmlCheckDoubleTypes("Entering: %s\n", szFileRoot);
-#endif
-//	XML_CHECK_DOUBLE_TYPE						END   
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING                 03/28/08                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	GC.setModDir("NONE");
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING                 END                                                  */
-/************************************************************************************************/
-	
-	std::vector<CvString> aszFiles;
-	gDLL->enumerateFiles(aszFiles, CvString::format("Python Config\\*_%s.xml", szFileRoot));  // search for the modular files
-
-	for (std::vector<CvString>::iterator it = aszFiles.begin(); it != aszFiles.end(); ++it)
-	{
-		bLoaded = LoadCivXml(NULL, *it);
-
-		if (!bLoaded)
-		{
-			char szMessage[1024];
-			sprintf(szMessage, "LoadXML call failed for %s.", (*it).GetCString());
-			gDLL->MessageBox(szMessage, "XML Load Error");
-		}
-		else
-		{
-			SetGlobalClassInfo(aInfos, szXmlPath, bTwoPass);
-		}
-	}
-}
 // Main control of the MLF feature
 void CvXMLLoadUtility::ModularLoadingControlXML()
 {
@@ -4398,7 +4282,6 @@ void CvXMLLoadUtility::ModularLoadingControlXML()
 	pSetMod->setModLoadControlDirArray(LoadModLoadControlInfo(GC.getModLoadControlInfos(), "CIV4ModularLoadingControls", L"Type"));
 	SAFE_DELETE(pSetMod);
 }
-
 
 // In the next 2 methods we load the MLF classes
 template <class T>
@@ -4539,7 +4422,7 @@ bool CvXMLLoadUtility::SetModLoadControlInfo(std::vector<T*>& aInfos, const wcha
 	std::string szCandidateConfig;
 
 	if ( TryMoveToXmlFirstMatchingElement(L"/Civ4ModularLoadControls/ConfigurationInfos/ConfigurationInfo"))
-	{		
+	{
 		// loop through each tag
 		do
 		{
@@ -4547,19 +4430,12 @@ bool CvXMLLoadUtility::SetModLoadControlInfo(std::vector<T*>& aInfos, const wcha
 			GetChildXmlValByName(szCandidateConfig, szTagName);
 			if (szCandidateConfig == szConfigString)
 			{
-				T* pClassInfo = new T;
-
-				FAssert(NULL != pClassInfo);
-				if (NULL == pClassInfo)
-				{
-					break;
-				}
+				std::auto_ptr<T> pClassInfo(new T);
 
 				bool bSuccess = pClassInfo->read(this, szDirDepth, iDirDepth);
-				FAssert(bSuccess);
 				if (!bSuccess)
 				{
-					delete pClassInfo;
+					FErrorMsg(CvString::format("Couldn't read %s dir %s", szConfigString.c_str(), szDirDepth.c_str()));
 					break;
 				}
 
@@ -4569,21 +4445,23 @@ bool CvXMLLoadUtility::SetModLoadControlInfo(std::vector<T*>& aInfos, const wcha
 					iIndex = GC.getInfoTypeForString(pClassInfo->getType(), true);
 					if ( iIndex != -1 )
 					{
-						logMLF("This type \"%s\" is double", pClassInfo->getType());
+						logMLF("Type \"%s\" is specified more than once", pClassInfo->getType());
 						//Catch dupes here, we don't want the overwrite or copy method for the MLF
-						CvString szFAssertMsg = CvString::format("The <type>%s</type> of the \"MLF_CIV4ModularLoadingControls.xml\" in directory: \"%s\" is already in use, please use an alternative <type> -name",pClassInfo->getType(), szDirDepth.c_str());
-						FAssertMsg(iIndex == -1, szFAssertMsg);
+						FErrorMsg(CvString::format("The <type>%s</type> of the \"MLF_CIV4ModularLoadingControls.xml\" in directory: \"%s\" is already in use, please use an alternative <type> -name", pClassInfo->getType(), szDirDepth.c_str()));
+
 						return false;
 					}
-				}
+					else
+					{
+						GC.setInfoTypeFromString(pClassInfo->getType(), (int)aInfos.size());	// add type to global info type hash map
 
-				aInfos.push_back(pClassInfo);
-				if (NULL != pClassInfo->getType())
-				{
-					GC.setInfoTypeFromString(pClassInfo->getType(), (int)aInfos.size() - 1);	// add type to global info type hash map
-					return true;
-				}				
-			}				
+						aInfos.push_back(pClassInfo.release());
+
+						return true;
+					}
+				}
+				aInfos.push_back(pClassInfo.release());
+			}
 		} while (TryMoveToXmlNextSibling());
 	}
 	return false;
@@ -4682,16 +4560,16 @@ bool CvXMLLoadUtility::doResetInfoClasses()
 //------------------------------------------------------------------------------------------------------
 void CvXMLLoadUtility::SetStringWithChildList(int* iNumEntries, std::vector<CvString>* aszXMLLoad)
 {
-    std::vector<CvString> paszXMLLoad;
+	std::vector<CvString> paszXMLLoad;
 	CvString szTextVal;
 
-    int iNumSibs = GetXmlChildrenNumber();
-    if (0 < iNumSibs)
-    {
-        if (GetChildXmlVal(szTextVal))
-        {
-            for (int iI = 0; iI < iNumSibs; iI++)
-            {
+	int iNumSibs = GetXmlChildrenNumber();
+	if (0 < iNumSibs)
+	{
+		if (GetChildXmlVal(szTextVal))
+		{
+			for (int iI = 0; iI < iNumSibs; iI++)
+			{
 				bool bLoad = true;
 				int iSize = paszXMLLoad.size();
 				for (int iJ = 0; iJ < iSize; ++iJ)
@@ -4703,18 +4581,18 @@ void CvXMLLoadUtility::SetStringWithChildList(int* iNumEntries, std::vector<CvSt
 				}
 				if (bLoad)
 				{
-	                paszXMLLoad.push_back(szTextVal);
+					paszXMLLoad.push_back(szTextVal);
 				}
-                if (!GetNextXmlVal(szTextVal))
-                {
-                    break;
-                }
-            }
+				if (!GetNextXmlVal(szTextVal))
+				{
+					break;
+				}
+			}
 
-            MoveToXmlParent();
-        }
-    }
-    MoveToXmlParent();
+			MoveToXmlParent();
+		}
+	}
+	MoveToXmlParent();
 
 	*iNumEntries = paszXMLLoad.size();
 	*aszXMLLoad = paszXMLLoad;
@@ -4733,14 +4611,14 @@ void CvXMLLoadUtility::SetIntWithChildList(int* iNumEntries, int** piXMLLoad)
 	CvString szTextVal;
 	std::vector<int> szTemp;
 
-    int iNumSibs = GetXmlChildrenNumber();
-    if (iNumSibs > 0)
-    {
-        if (GetChildXmlVal(szTextVal))
-        {
-            for (int iI = 0; iI < iNumSibs; iI++)
-            {
-                int iNew = GetInfoClass(szTextVal);
+	int iNumSibs = GetXmlChildrenNumber();
+	if (iNumSibs > 0)
+	{
+		if (GetChildXmlVal(szTextVal))
+		{
+			for (int iI = 0; iI < iNumSibs; iI++)
+			{
+				int iNew = GetInfoClass(szTextVal);
 				if(iNew == -1)
 				{
 					char szMessage[1024];
@@ -4763,15 +4641,15 @@ void CvXMLLoadUtility::SetIntWithChildList(int* iNumEntries, int** piXMLLoad)
 						szTemp.push_back(iNew);
 					}
 				}
-                if (!GetNextXmlVal(szTextVal))
-                {
-                    break;
-                }
-            }
+				if (!GetNextXmlVal(szTextVal))
+				{
+					break;
+				}
+			}
 
-            MoveToXmlParent();
-        }
-    }
+			MoveToXmlParent();
+		}
+	}
 	MoveToXmlParent();
 
 	int iSize = szTemp.size();
@@ -4795,42 +4673,42 @@ void CvXMLLoadUtility::SetIntWithChildList(int* iNumEntries, int** piXMLLoad)
 //------------------------------------------------------------------------------------------------------
 void CvXMLLoadUtility::SetBoolFromChildList(int iNumEntries, bool** pbXMLLoad)
 {
-    bool* ppbXMLLoad = NULL;
+	bool* ppbXMLLoad = NULL;
 	ppbXMLLoad = *pbXMLLoad;
 	CvString szTextVal;
 
-    int iNumSibs = GetXmlChildrenNumber();
-    if (iNumEntries < iNumSibs)
+	int iNumSibs = GetXmlChildrenNumber();
+	if (iNumEntries < iNumSibs)
 	{
 		char	szMessage[1024];
-        sprintf(szMessage, "Too many Children values \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
-        gDLL->MessageBox(szMessage, "XML Error");
+		sprintf(szMessage, "Too many Children values \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
+		gDLL->MessageBox(szMessage, "XML Error");
 	}
-    if (iNumSibs > 0)
-    {
+	if (iNumSibs > 0)
+	{
 		if (GetChildXmlVal(szTextVal))
-        {
-            for (int iI = 0; iI < iNumSibs; iI++)
-            {
-                int eLoad = GetInfoClass(szTextVal);
+		{
+			for (int iI = 0; iI < iNumSibs; iI++)
+			{
+				int eLoad = GetInfoClass(szTextVal);
 				if(eLoad == -1)
 				{
 					char szMessage[1024];
 					sprintf(szMessage, "Index is -1 inside function \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
 					gDLL->MessageBox(szMessage, "XML Error");
 				}
-                ppbXMLLoad[eLoad] = true;
-                if (!GetNextXmlVal(szTextVal))
-                {
-                    break;
-                }
-            }
+				ppbXMLLoad[eLoad] = true;
+				if (!GetNextXmlVal(szTextVal))
+				{
+					break;
+				}
+			}
 
-            MoveToXmlParent();
-        }
-    }
+			MoveToXmlParent();
+		}
+	}
 
-    MoveToXmlParent();
+	MoveToXmlParent();
 }
 /*************************************************************************************************/
 /**	New Tag Defs							END													**/
@@ -4840,7 +4718,7 @@ void CvXMLLoadUtility::RemoveTGAFiller()
 {
 	std::vector<CvReligionInfo*>& aInfos1 = GC.getReligionInfos();
 	std::vector<CvCorporationInfo*>& aInfos2 = GC.getCorporationInfos();
-	if (aInfos1.size() && aInfos1.size() == TGA_RELIGIONS)
+	if (aInfos1.size() && aInfos1.size() == GC.getTGA_RELIGIONS())
 	{
 		std::sort(aInfos1.begin(), aInfos1.end(), cmpReligionTGA);
 		if (aInfos1.front()->getTGAIndex() == -1)
@@ -4851,7 +4729,7 @@ void CvXMLLoadUtility::RemoveTGAFiller()
 			aInfos1.erase(aInfos1.begin(), it);
 		}
 	}
-	if (aInfos2.size() && aInfos2.size() == TGA_CORPORATIONS)
+	if (aInfos2.size() && aInfos2.size() == GC.getTGA_CORPORATIONS())
 	{
 		std::sort(aInfos2.begin(), aInfos2.end(), cmpCorporationTGA);
 		if (aInfos2.front()->getTGAIndex() == -1)

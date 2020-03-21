@@ -106,17 +106,6 @@ void CyGlobalContextPythonInterface4(python::class_<CyGlobalContext>& x)
 
 		.def("getNumMainMenus", &CyGlobalContext::getNumMainMenus, "int () - Returns number")
 		.def("getMainMenus", &CyGlobalContext::getMainMenus, python::return_value_policy<python::reference_existing_object>(), "MainMenus () - Returns info object")
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 02/19/08                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-// Python Modular Loading
-		.def("getNumPythonModulesInfos", &CyGlobalContext::getNumPythonModulesInfos, "int () - Returns number")
-		.def("getPythonModulesInfo", &CyGlobalContext::getPythonModulesInfo, python::return_value_policy<python::reference_existing_object>(), "getPythonModulesInfo () - Returns info object")
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
 
 		.def("getNumVoteSourceInfos", &CyGlobalContext::getNumVoteSourceInfos, "int ()")
 		.def("getVoteSourceInfo", &CyGlobalContext::getVoteSourceInfo, python::return_value_policy<python::reference_existing_object>(), "Returns info object")
@@ -185,8 +174,5 @@ void CyGlobalContextPythonInterface4(python::class_<CyGlobalContext>& x)
 
 		.def("getNumPropertyInfos", &CyGlobalContext::getNumPropertyInfos, "int () - Returns number of PropertyInfos")
 		.def("getPropertyInfo", &CyGlobalContext::getPropertyInfo, python::return_value_policy<python::reference_existing_object>(), "PropertyInfo (int)")
-
-		.def("getCursorPos", &CyGlobalContext::getCursorPos, "POINT getCursorPos() - Returns window relative mouse position")
-		.def("screenToClient", &CyGlobalContext::screenToClient, "POINT screenToClient(POINT) - Convert point from screen relative to window relative")
-		;
+	;
 }

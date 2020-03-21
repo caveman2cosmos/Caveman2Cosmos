@@ -44,6 +44,7 @@ include "C2CTheme_SplitPanel.thm";
 include "C2CTheme_ScrollPanel.thm";
 include "C2CTheme_Tab.thm";
 include "C2CTheme_Table.thm";
+include "C2CTheme_TechTree.thm";
 include "C2CTheme_ToolTip.thm";
 include "C2CTheme_Tree.thm";
 include "C2CTheme_Window.thm";

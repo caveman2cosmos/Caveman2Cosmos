@@ -44,7 +44,6 @@
 	<events module="CvEnhancedTechConquestEventManager"/>
 	<!-- Rise of Mankind end -->
 	<init module="GPUtil"/>
-	<init module="ReligionUtil"/>
 	<init module="TradeUtil"/>
 	<init module="TraitUtil"/>
 	<gameutils module="WidgetUtil" handler="getWidgetHelp"/>
@@ -108,8 +107,8 @@
 	<load mod="CaptureSlaves"/>
 	<load mod="MasterModList"/>
 	<load mod="Partisan"/>
-	<load mod="Heroes"/>
 	<load mod="InitMilitaryPromos"/>
 	<load mod="NaturalWonders"/>
 	<load mod="GreatPersonBornDisplay"/>
+	<events module="WoodlandCycle"/>
 </bug>

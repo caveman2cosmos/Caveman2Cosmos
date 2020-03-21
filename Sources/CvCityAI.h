@@ -122,8 +122,8 @@ public:
 /* 	City Defenders												END 			*/
 /********************************************************************************/
 
-	BuildingTypes AI_bestBuilding(int iFocusFlags = 0, int iMaxTurns = MAX_INT, bool bAsync = false, AdvisorTypes eIgnoreAdvisor = NO_ADVISOR, bool bMaximizeFlaggedValue = false);
 	BuildingTypes AI_bestBuildingThreshold(int iFocusFlags = 0, int iMaxTurns = MAX_INT, int iMinThreshold = 0, bool bAsync = false, AdvisorTypes eIgnoreAdvisor = NO_ADVISOR, bool bMaximizeFlaggedValue = false, PropertyTypes eProperty = NO_PROPERTY);
+	std::vector<ScoredBuilding> AI_bestBuildingsThreshold(int iFocusFlags = 0, int iMaxTurns = MAX_INT, int iMinThreshold = 0, bool bAsync = false, AdvisorTypes eIgnoreAdvisor = NO_ADVISOR, bool bMaximizeFlaggedValue = false, PropertyTypes eProperty = NO_PROPERTY);
 
 	bool AI_scoreBuildingsFromListThreshold(std::vector<ScoredBuilding>& scoredBuildings, const std::vector<BuildingTypes>& possibles, int iFocusFlags = 0, int iMaxTurns = MAX_INT, int iMinThreshold = 0, bool bAsync = false, AdvisorTypes eIgnoreAdvisor = NO_ADVISOR, bool bMaximizeFlaggedValue = false, PropertyTypes eProperty = NO_PROPERTY);
 
@@ -159,7 +159,7 @@ public:
 /********************************************************************************/
 /* 	BETTER_BTS_AI_MOD						END								    */
 /********************************************************************************/
-	bool AI_isDanger();
+	bool AI_isDanger() const;
 	int evaluateDanger();
 
 	bool AI_isAdequateHappinessMilitary(int iExtra);
@@ -224,16 +224,16 @@ public:
 	void AI_updateBestBuild();
 
 	virtual int AI_cityValue() const;
-    
-    int AI_calculateWaterWorldPercent();
-    
-    int AI_getCityImportance(bool bEconomy, bool bMilitary);
-    
-    int AI_yieldMultiplier(YieldTypes eYield);
-    void AI_updateSpecialYieldMultiplier();
-    int AI_specialYieldMultiplier(YieldTypes eYield);
-    
-    int AI_countNumBonuses(BonusTypes eBonus, bool bIncludeOurs, bool bIncludeNeutral, int iOtherCultureThreshold, bool bLand = true, bool bWater = true);
+	
+	int AI_calculateWaterWorldPercent();
+	
+	int AI_getCityImportance(bool bEconomy, bool bMilitary);
+	
+	int AI_yieldMultiplier(YieldTypes eYield);
+	void AI_updateSpecialYieldMultiplier();
+	int AI_specialYieldMultiplier(YieldTypes eYield);
+	
+	int AI_countNumBonuses(BonusTypes eBonus, bool bIncludeOurs, bool bIncludeNeutral, int iOtherCultureThreshold, bool bLand = true, bool bWater = true);
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                      11/14/09                                jdog5000      */
 /*                                                                                              */
@@ -366,7 +366,7 @@ protected:
 /* 	City Defenders						24.07.2010				Fuyu			*/
 /********************************************************************************/
 //Fuyu bIgnoreNotUnitAIs
-	bool AI_chooseUnit(const char* reason, UnitAITypes eUnitAI = NO_UNITAI, int iOdds = -1, int iUnitStrength = -1, int iPriorityOverride = -1, CvUnitSelectionCriteria* criteria = NULL);
+	bool AI_chooseUnit(const char* reason, UnitAITypes eUnitAI /*= NO_UNITAI*/, int iOdds = -1, int iUnitStrength = -1, int iPriorityOverride = -1, CvUnitSelectionCriteria* criteria = NULL);
 	bool AI_chooseUnitImmediate(const char* reason, UnitAITypes eUnitAI, CvUnitSelectionCriteria* criteria = NULL, UnitTypes eUnitType = NO_UNIT);
 /********************************************************************************/
 /* 	City Defenders												END 			*/
@@ -402,7 +402,7 @@ protected:
 	int AI_yieldValueWithCache(short* piYields, short* piCommerceYields, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood, bool bIgnoreGrowth, bool bIgnoreStarvation, bool bWorkerOptimization, bool bSpecialist);
 #endif
 	int AI_yieldValueInternal(short* piYields, short* piCommerceYields, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood = false, bool bIgnoreGrowth = false, bool bIgnoreStarvation = false, bool bWorkerOptimization = false);
-	int AI_plotValue(CvPlot* pPlot, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood = false, bool bIgnoreGrowth = false, bool bIgnoreStarvation = false);
+	int AI_plotValue(const CvPlot* pPlot, bool bAvoidGrowth, bool bRemove, bool bIgnoreFood = false, bool bIgnoreGrowth = false, bool bIgnoreStarvation = false);
 
 	int AI_experienceWeight();
 	int AI_buildUnitProb();

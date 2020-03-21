@@ -3,10 +3,10 @@
 //
 // Author: tomw
 //---------------------------------------------------------------------------------------------------------------------
+#pragma once
 
 #ifndef	__PROFILE_H__
 #define __PROFILE_H__
-#pragma once
 
 
 #include "CvDLLEntityIFaceBase.h"

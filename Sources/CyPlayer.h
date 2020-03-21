@@ -174,9 +174,9 @@ public:
 	bool canTrain(int /*UnitTypes*/ eUnit, bool bContinue, bool bTestVisible);
 	bool canConstruct(int /*BuildingTypes*/eBuilding, bool bContinue, bool bTestVisible, bool bIgnoreCost);
 	bool canCreate(int /*ProjectTypes*/ eProject, bool bContinue, bool bTestVisible);
-	bool canMaintain(int /*ProcessTypes*/ eProcess, bool bContinue);	
-	bool isProductionMaxedUnitClass(int /*UnitClassTypes*/ eUnitClass);
-	bool isProductionMaxedBuildingClass(int /*BuildingClassTypes*/ eBuildingClass, bool bAcquireCity);
+	bool canMaintain(int /*ProcessTypes*/ eProcess, bool bContinue);
+	bool isProductionMaxedBuilding(int /*BuildingTypes*/ eBuilding, bool bAcquireCity);
+	bool isProductionMaxedUnit(int /*UnitTypes*/ eUnit);
 	bool isProductionMaxedProject(int /*ProjectTypes*/ eProject);
 	int getUnitProductionNeeded(int /*UnitTypes*/ iIndex);
 	int getBuildingProductionNeeded(int /*BuildingTypes*/ iIndex);
@@ -184,9 +184,9 @@ public:
 
 	void chooseTech(int iDiscover, std::wstring szText, bool bFront);
 
-	int getBuildingClassPrereqBuilding(int /*BuildingTypes*/ eBuilding, int /*BuildingClassTypes*/ ePrereqBuildingClass, int iExtra);
+	int getBuildingPrereqBuilding(int /*BuildingTypes*/ eBuilding, int /*BuildingTypes*/ ePrereqBuilding, int iExtra);
 
-	void removeBuildingClass(int /*BuildingClassTypes*/ eBuildingClass);
+	void removeBuilding(int /*BuildingTypes*/ eBuilding);
 	bool canBuild(CyPlot* pPlot, int /*BuildTypes*/ eBuild, bool bTestEra, bool bTestVisible);
 	int /*RouteTypes*/ getBestRoute(CyPlot* pPlot) const;
 	int getImprovementUpgradeRate(int /*ImprovementTypes*/ eImprovement) const;
@@ -265,7 +265,8 @@ public:
 	int unitsRequiredForGoldenAge();
 	int unitsGoldenAgeCapable();
 	int unitsGoldenAgeReady();
-	int greatPeopleThreshold(bool bMilitary);
+	int greatPeopleThresholdMilitary();
+	int greatPeopleThresholdNonMilitary();
 	int specialistYield(int /*SpecialistTypes*/ eSpecialist, int /*YieldTypes*/ eCommerce);
 	int specialistCommerce(int /*SpecialistTypes*/ eSpecialist, int /*CommerceTypes*/ eCommerce);
 
@@ -371,7 +372,6 @@ public:
 	bool isInquisitionConditions();
 	int getUnitUpgradePriceModifier();
 	bool canFoundReligion();
-	bool isBuildingClassRequiredToTrain(int /*BuildingClassTypes*/ iBuildingClass, int /*UnitTypes*/ iUnit);
 /************************************************************************************************/
 /* REVDCM                                  END                                                  */
 /************************************************************************************************/
@@ -461,11 +461,9 @@ public:
 	int getUnitPower();
 	int getPopScore();
 	int getLandScore();
-#if defined QC_MASTERY_VICTORY
 //Sevo Begin--VCM
 	int getSevoWondersScore(int mode);
 //Sevo End VCM
-#endif
 	int getWondersScore();
 	int getTechScore();
 	int getTotalTimePlayed();
@@ -554,15 +552,16 @@ public:
 	int getExtraBuildingHappiness(int /*BuildingTypes*/ iIndex);
 	int getExtraBuildingHealth(int /*BuildingTypes*/ iIndex);
 	int getFeatureHappiness(int /*FeatureTypes*/ iIndex);
-	int getUnitClassCount(int /*UnitClassTypes*/ eIndex);
-	bool isUnitClassMaxedOut(int /*UnitClassTypes*/ eIndex, int iExtra);
-	int getUnitClassMaking(int /*UnitClassTypes*/ eIndex);
-	int getUnitClassCountPlusMaking(int /*UnitClassTypes*/ eIndex);
 
-	int getBuildingClassCount(int /*BuildingClassTypes*/ iIndex);
-	bool isBuildingClassMaxedOut(int /*BuildingClassTypes*/ iIndex, int iExtra);
-	int getBuildingClassMaking(int /*BuildingClassTypes*/ iIndex);
-	int getBuildingClassCountPlusMaking(int /*BuildingClassTypes*/ iIndex);
+	int getUnitCount(int /*UnitTypes*/ eIndex);
+	bool isUnitMaxedOut(int /*UnitTypes*/ eIndex, int iExtra);
+	int getUnitMaking(int /*UnitTypes*/ eIndex);
+	int getUnitCountPlusMaking(int /*UnitTypes*/ eIndex);
+
+	int getBuildingCount(int /*BuildingTypes*/ iIndex);
+	bool isBuildingMaxedOut(int /*BuildingTypes*/ iIndex, int iExtra);
+	int getBuildingMaking(int /*BuildingTypes*/ iIndex);
+	int getBuildingCountPlusMaking(int /*BuildingTypes*/ iIndex);
 	int getHurryCount(int /*HurryTypes*/ eIndex);
 	bool canHurry(int /*HurryTypes*/ eIndex);
 	int getSpecialBuildingNotRequiredCount(int /*SpecialBuildingTypes*/ eIndex);
@@ -602,6 +601,7 @@ public:
 	std::wstring getCityName(int iIndex);
 	python::tuple firstCity(bool bRev);	// returns tuple of (CyCity, iterOut)
 	python::tuple nextCity(int iterIn, bool bRev);		// returns tuple of (CyCity, iterOut)
+	CyCity* nthCity(int n, bool bRev); // shortcut for firstCity + nextCity + nextCity ...
 	int getNumCities();
 	CyCity* getCity(int iID);
 	python::tuple firstUnit(bool bRev);	// returns tuple of (CyUnit, iterOut)
@@ -706,7 +706,7 @@ public:
 	
 	void setShowLandmarks(bool bNewVal);
 	bool isShowLandmarks() const;
-	int getBuildingClassCountWithUpgrades(int /*BuildingClassTypes*/ iBuilding) const;
+	int getBuildingCountWithUpgrades(int /*BuildingTypes*/ iBuilding) const;
 	void setColor(int /*PlayerColorTypes*/ iColor);
 	void setHandicap(int iNewVal);
 	

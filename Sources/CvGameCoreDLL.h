@@ -1,7 +1,7 @@
 #pragma once
 
-#ifndef CvGameCoreDLL_h
-#define CvGameCoreDLL_h
+#ifndef CvGameCoreDLL_h__
+#define CvGameCoreDLL_h__
 
 //
 // includes (pch) for gamecore dll files
@@ -13,11 +13,22 @@
 //
 #pragma warning( disable: 4530 )	// C++ exception handler used, but unwind semantics are not enabled
 
+//#ifdef __INTELLISENSE__
+//// #undef _MSC_VER
+//#define _MSC_VER 1310
+//#define BOOST_MSVC 1310
+//#define boost155_MSVC 1310
+//#define BOOST_FUNCTION_PARMS
+//#define BOOST_FUNCTION_PARM
+//#define BOOST_PP_VARIADICS 0
+//#endif
+
 #define NOMINMAX
 #define _WIN32_WINNT 0x0600
 #define WIN32_LEAN_AND_MEAN
 #include <windows.h>
 #include <MMSystem.h>
+
 //#if defined _DEBUG && !defined USE_MEMMANAGER
 //#define USE_MEMMANAGER
 //#include <crtdbg.h>
@@ -25,6 +36,10 @@
 //#if !defined USE_MEMMANAGER
 //#define USE_MEMMANAGER
 //#endif
+
+//
+// Standard headers
+//
 #include <vector>
 #include <list>
 #include <tchar.h>
@@ -33,101 +48,31 @@
 #include <map>
 #define _SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS
 #include <hash_map>
+#include <hash_set>
 #include <stdio.h>
 #include <utility>
 #include <algorithm>
 #include <set>
 #include <fstream>
 
+//
+// Google sparsehash
+//
+#include <sparsehash/sparse_hash_set>
+#include <sparsehash/sparse_hash_map>
+#include <sparsehash/dense_hash_set>
+#include <sparsehash/dense_hash_map>
+#include <sparsehash/template_util.h>
+#include <sparsehash/type_traits.h>
+
+
 #define DllExport   __declspec( dllexport ) 
 
+#include "NiPoint.h"
+
 //
-// GameBryo
+// Basic types
 //
-class NiColor
-{
-public:
-	float r, g, b;
-};
-class NiColorA 
-{
-public:
-	NiColorA(float fr, float fg, float fb, float fa) : r(fr), g(fg), b(fb), a(fa) {}
-	NiColorA() {}
-	float r, g, b, a;
-};
-class NiPoint2
-{
-public:
-	NiPoint2() {}
-	NiPoint2(float fx, float fy) : x(fx),y(fy) {}
-
-	float x, y;
-};
-class NiPoint3
-{
-public:
-	NiPoint3(): x(0.0f), y(0.0f), z(0.0f) {}
-	NiPoint3(float fx, float fy, float fz) : x(fx),y(fy),z(fz) {} 
-
-	bool operator== (const NiPoint3& pt) const
-	{	return (x == pt.x && y == pt.y && z == pt.z);	}
-
-	inline NiPoint3 operator+ (const NiPoint3& pt) const
-	{	return NiPoint3(x+pt.x,y+pt.y,z+pt.z);	}
-
-	inline NiPoint3 operator- (const NiPoint3& pt) const
-	{	return NiPoint3(x-pt.x,y-pt.y,z-pt.z);	}
-
-	inline float operator* (const NiPoint3& pt) const
-	{	return x*pt.x+y*pt.y+z*pt.z;	}
-
-	inline NiPoint3 operator* (float fScalar) const
-	{	return NiPoint3(fScalar*x,fScalar*y,fScalar*z);	}
-
-	inline NiPoint3 operator/ (float fScalar) const
-	{
-		float fInvScalar = 1.0f/fScalar;
-		return NiPoint3(fInvScalar*x,fInvScalar*y,fInvScalar*z);
-	}
-
-	inline NiPoint3 operator- () const
-	{	return NiPoint3(-x,-y,-z);	}
-
-	inline float Length() const
-	{ return sqrt(x * x + y * y + z * z); }
-
-	inline float Unitize()
-	{
-		float length = Length();
-		if(length != 0)
-		{
-			x /= length;
-			y /= length;
-			z /= length;
-		}
-		return length;
-	}
-
-//	inline NiPoint3 operator* (float fScalar, const NiPoint3& pt)
-//	{	return NiPoint3(fScalar*pt.x,fScalar*pt.y,fScalar*pt.z);	}
-	float x, y, z;
-};
-
-namespace NiAnimationKey
-{
-	enum KeyType
-	{
-		NOINTERP,
-		LINKEY,
-		BEZKEY,
-		TCBKEY,
-		EULERKEY,
-		STEPKEY,
-		NUMKEYTYPES
-	};
-};
-
 typedef unsigned char    byte;
 typedef unsigned short   word;
 typedef unsigned int     uint;
@@ -135,6 +80,9 @@ typedef unsigned long    dword;
 typedef unsigned __int64 qword;
 typedef wchar_t          wchar;
 
+//
+// Type traits
+//
 #define MAX_CHAR                            (0x7f)
 #define MIN_CHAR                            (0x80)
 #define MAX_SHORT                           (0x7fff)
@@ -152,6 +100,13 @@ typedef wchar_t          wchar;
 #define SAFE_DELETE_ARRAY(p) { if(p) { delete[] (p);   (p)=NULL; } }
 #define SAFE_RELEASE(p)      { if(p) { (p)->Release(); (p)=NULL; } }
 
+#define SAFE_DELETE_ARRAY2(p,size) \
+	if(p) { \
+		for (int i = 0; i < size; i++) \
+			SAFE_DELETE_ARRAY(p[i]); \
+		SAFE_DELETE_ARRAY(p); \
+	}
+
 #define SQR(x)      ( (x) * (x) )
 #define DEGTORAD(x) ( (float)( (x) * (M_PI / 180) ))
 #define LIMIT_RANGE(low, value, high) value = (value < low ? low : (value > high ? high : value));
@@ -164,9 +119,38 @@ __forceinline DWORD FtoDW( float f ) { return *(DWORD*)&f; }
 __forceinline float DWtoF( dword n ) { return *(float*)&n; }
 __forceinline float MaxFloat() { return DWtoF(0x7f7fffff); }
 
+// General flags that declare cache access
+struct ECacheAccess
+{
+	enum flags
+	{
+		None = 0,
+		Read = 1 << 0,
+		Write = 1 << 1,
+		ReadWrite = Read | Write
+	};
+};
+DECLARE_FLAGS(ECacheAccess::flags);
 
-#ifdef _DEBUG
-//#define	MEMORY_TRACKING
+//
+// Feature macros
+//
+// #define STRENGTH_IN_NUMBERS
+// #define GLOBAL_WARMING
+// #define THE_GREAT_WALL
+
+//
+// Cache feature macros
+//
+#define PATHFINDING_CACHE
+#define PATHFINDING_VALIDITY_CACHE
+#define DISCOVERY_TECH_CACHE
+
+//
+// Profiler
+//
+#ifdef USE_INTERNAL_PROFILER
+#define MEMTRACK
 #endif
 
 void startProfilingDLL(bool longLived);
@@ -188,60 +172,14 @@ void EnableDetailedTrace(bool enable);
 void IFPSetCount(ProfileSample* sample, int count);
 #endif
 
-#ifdef MEMORY_TRACKING
-class CMemoryTrack
-{
-#define	MAX_TRACKED_ALLOCS	1000
-	void*	m_track[MAX_TRACKED_ALLOCS];
-	char*	m_trackName[MAX_TRACKED_ALLOCS];
-	int		m_allocSeq[MAX_TRACKED_ALLOCS];
-	int		m_allocSize[MAX_TRACKED_ALLOCS];
-	int		m_highWater;
-	const char* m_name;
-	bool	m_valid;
-	int		m_seq;
-#define MAX_TRACK_DEPTH		50
-	static	CMemoryTrack*	trackStack[MAX_TRACK_DEPTH];
-	static	int m_trackStackDepth;
-
-public:
-	CMemoryTrack(const char* name, bool valid);
-
-	~CMemoryTrack();
-
-	void NoteAlloc(void* ptr, int size);
-	void NoteDeAlloc(void* ptr);
-
-	static CMemoryTrack* GetCurrent();
-};
-
-class CMemoryTrace
-{
-	SIZE_T				m_start;
-	const char*			m_name;
-
-public:
-	CMemoryTrace(const char* name);
-
-	~CMemoryTrace();
-};
-
-void DumpMemUsage(const char* fn, int line);
-
-#define DUMP_MEMORY_USAGE()	DumpMemUsage(__FUNCTION__,__LINE__);
-#define MEMORY_TRACK()	CMemoryTrack __memoryTrack(__FUNCTION__, true);
-#define MEMORY_TRACK_NAME(x)	CMemoryTrack __memoryTrack(x, true);
-#define MEMORY_TRACK_EXEMPT()	CMemoryTrack __memoryTrackExemption(NULL, false);
-#define MEMORY_TRACE_FUNCTION()	CMemoryTrace __memoryTrace(__FUNCTION__);
-#else
-#define DUMP_MEMORY_USAGE()	
 #define	MEMORY_TRACK()
 #define MEMORY_TRACK_EXEMPT()
 #define MEMORY_TRACE_FUNCTION()
 #define MEMORY_TRACK_NAME(x)
-#endif
 
+//
 // Python
+//
 #ifdef _DEBUG
   #undef _DEBUG
   #include "Python.h"
@@ -251,8 +189,55 @@ void DumpMemUsage(const char* fn, int line);
 #endif
 
 //
+// Boost
+//
+#define BOOST_155_USE_WINDOWS_H
+#define BOOST_155_ALL_NO_LIB
+#include <boost155/scoped_ptr.hpp>
+#include <boost155/scoped_array.hpp>
+#include <boost155/shared_ptr.hpp>
+#include <boost155/shared_array.hpp>
+#include <boost155/lambda/lambda.hpp>
+#include <boost155/bind.hpp>
+#include <boost155/optional.hpp>
+#include <boost155/algorithm/string.hpp>
+#include <boost155/format.hpp>
+#include <boost155/function.hpp>
+#include <boost155/array.hpp>
+#include <boost155/utility.hpp>
+#include <boost155/foreach.hpp>
+#include <boost155/functional.hpp>
+
+
+// #include <boost155/phoenix.hpp> Doesn't work, see https://github.com/boostorg/phoenix/issues/91
+
+// Ranges
+#include <boost155/range.hpp>
+#include <boost155/range/adaptor/filtered.hpp>
+#include <boost155/range/adaptor/transformed.hpp>
+#include <boost155/range/any_range.hpp>
+#include <boost155/range/algorithm.hpp>
+#include <boost155/range/algorithm_ext/push_back.hpp>
+#include <boost155/range/numeric.hpp>
+
+// Make boost foreach look nice enough to actually use
+#define foreach_ BOOST_155_FOREACH
+
+// Alias our latest boost version
+namespace bst = boost155;
+
+// Bring range adaptors into global namespace
+using namespace bst::adaptors;
+
+// Bring bind into global namespace
+using bst::bind;
+
+//
 // Boost Python
 //
+#ifndef __INTELLISENSE__
+// Disable the boost 1.32 placeholders, we won't be using them
+#define BOOST_BIND_NO_PLACEHOLDERS
 #include <boost/python/list.hpp>
 #include <boost/python/tuple.hpp>
 #include <boost/python/class.hpp>
@@ -260,11 +245,60 @@ void DumpMemUsage(const char* fn, int line);
 #include <boost/python/return_value_policy.hpp>
 #include <boost/python/object.hpp>
 #include <boost/python/def.hpp>
-
+#include <boost/python/enum.hpp>
 namespace python = boost::python;
+#endif
+
+//#include <boost155/range/adaptor/filtered.hpp>
+//#include <boost155/range/adaptor/transformed.hpp>
+
+//
+// xercesc for XML loading
+// 
+#include <xercesc/dom/DOM.hpp>
+#include <xercesc/util/XMLString.hpp>
+#include <xercesc/util/PlatformUtils.hpp>
+#include <xercesc/parsers/XercesDOMParser.hpp>
+#include <xercesc/sax/SAXException.hpp>
+#include <xercesc/sax/HandlerBase.hpp>
+#include <xercesc/sax/SAXException.hpp>
+#include <xercesc/sax/HandlerBase.hpp>
+#include <xercesc/framework/MemBufInputSource.hpp>
+#include <xercesc/framework/XMLGrammarPoolImpl.hpp>
+#include <xercesc/framework/Wrapper4InputSource.hpp>
+#include <xercesc/validators/common/Grammar.hpp>
+
+// Stupid define comes from windows and interferes with our stuff
+#undef Yield
+
+//
+// Json
+//
+#include "picojson.h"
+
+//
+// Polyfills
+//
+#include "nullptr_t.h"
+#include "EnumFlags.h"
+#include "hash.h"
+
+//
+// Our code
+//
+#include "copy_iterator.h"
+#include "index_iterator_base.h"
+#include "logging.h"
+
+#include "algorithm2.h"
+
+#include "scoring.h"
+
+#include "CvAllocator.h"
 
 #include "FAssert.h"
 #include "CheckSum.h"
+#include "Stopwatch.h"
 #include "CvGameCoreDLLDefNew.h"
 #include "FDataStreamBase.h"
 #include "FFreeListArrayBase.h"
@@ -282,7 +316,6 @@ namespace python = boost::python;
 #include "CvDLLInterfaceIFaceBase.h"
 #include "CvDLLXMLIFaceBase.h"
 
-//jason tests
 #include "CvGameCoreUtils.h"
 #include "CvXMLLoadUtility.h"
 #include "CvInitCore.h"
@@ -309,6 +342,10 @@ namespace python = boost::python;
 #include "FProfiler.h"
 #include "CvPathGenerator.h"
 #include "CvBugOptions.h"
+#include "CvPython.h"
+
+#include "SCvDebug.h"
+#include "SCvInternalGlobals.h"
 
 #include "CyGlobalContext.h"
 #include "CyArtFileMgr.h"
@@ -329,4 +366,4 @@ namespace python = boost::python;
 #define OutputDebugString(x)
 #endif //FINAL_RELEASE
 
-#endif	// CvGameCoreDLL_h
+#endif // CvGameCoreDLL_h__

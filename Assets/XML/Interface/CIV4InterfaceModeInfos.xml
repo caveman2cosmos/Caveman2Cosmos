@@ -515,29 +515,6 @@
 			<Button>art/Buttons/Missions/RangedAttack1Button.dds</Button>
 		</InterfaceModeInfo>
 		<InterfaceModeInfo>
-			<Type>INTERFACEMODE_ABOMBARD</Type>
-			<Description>TXT_KEY_CONCEPT_ABOMBARD_TEXT</Description>
-			<Help>TXT_KEY_INTERFACEMODE_ABOMBARD_HELP</Help>
-			<CursorType>CURSOR_AIRBOMB</CursorType>
-			<Mission>MISSION_ABOMBARD</Mission>
-			<HotKey>KB_B</HotKey>
-			<bAltDown>0</bAltDown>
-			<bShiftDown>0</bShiftDown>
-			<bCtrlDown>0</bCtrlDown>
-			<iHotKeyPriority>0</iHotKeyPriority>
-			<HotKeyAlt/>
-			<bAltDownAlt>0</bAltDownAlt>
-			<bShiftDownAlt>0</bShiftDownAlt>
-			<bCtrlDownAlt>0</bCtrlDownAlt>
-			<iHotKeyPriorityAlt>0</iHotKeyPriorityAlt>
-			<bVisible>1</bVisible>
-			<bGotoPlot>0</bGotoPlot>
-			<bHighlightPlot>1</bHighlightPlot>
-			<bSelectType>0</bSelectType>
-			<bSelectAll>0</bSelectAll>
-			<Button>Art/Interface/Buttons/Actions/Barrage.dds</Button>
-		</InterfaceModeInfo>
-		<InterfaceModeInfo>
 			<Type>INTERFACEMODE_FENGAGE</Type>
 			<Description>TXT_KEY_INTERFACEMODE_FENGAGE</Description>
 			<Help>TXT_KEY_INTERFACEMODE_FENGAGE_HELP</Help>

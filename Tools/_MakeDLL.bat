@@ -2,49 +2,24 @@
 
 REM Make sure the dependencies are extracted
 PUSHD "%~dp0"
+set "tools_dir=%cd%"
 call InstallDeps.bat
 POPD
 
-REM Set the environment paths so we can find nmake
-PUSHD "%~dp0..\Build\deps\Microsoft Visual C++ Toolkit 2003"
-SET PATH=%cd%\bin;%PATH%
-POPD
-
 REM Switch to the source directory
-PUSHD "%~dp0..\Sources
+PUSHD "%tools_dir%\..\Sources"
 
-set TARGET=%2
-
-if "%1"=="build" (
-    echo Building DLL in %2 configuration ...
-    nmake source_list
-    nmake fastdep
-    nmake precompile
-    ..\Build\deps\jom\jom build
-    nmake stage
-)
-if "%1"=="rebuild" (
-    echo Rebuilding DLL in %2 configuration ...
-    nmake clean
-    nmake source_list
-    nmake fastdep
-    nmake precompile
-    ..\Build\deps\jom\jom build
-    nmake stage
-)
-if "%1"=="autobuild" (
-    echo Autobuilding DLL in %2 configuration ...
-    nmake source_list
-    nmake fastdep
-    nmake precompile
-    ..\Build\deps\jom\jom build
-)
-if "%1"=="clean" (
-    echo Cleaning DLL in %2 configuration ...
-    nmake clean
+call Powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%tools_dir%\_Build.ps1" %*
+if %ERRORLEVEL% NEQ 0 (
+    goto :exit_failed
 )
 
 REM Restore original directory
 POPD
 
 echo ...Finished
+exit /B 0
+
+:exit_failed
+echo ...Failed
+exit /B 1

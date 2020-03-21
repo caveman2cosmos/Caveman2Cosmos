@@ -15,38 +15,46 @@
 
 #include "CvGameCoreDLL.h"
 
-#include <xercesc/sax/SAXException.hpp>
-#include <xercesc/sax/HandlerBase.hpp>
-#include <xercesc/framework/MemBufInputSource.hpp>
-#include <xercesc/framework/XMLGrammarPoolImpl.hpp>
-#include <xercesc/framework/Wrapper4InputSource.hpp>
-#include <xercesc/validators/common/Grammar.hpp>
-
 static const int kBufSize = 2048;
+
+void CvXMLLoadUtility::showXMLError(const char* const format, ...)
+{
+	char buf[kBufSize];
+
+	va_list args;
+	va_start(args, format);
+
+	_vsnprintf(buf, kBufSize - 1, format, args);
+
+	OutputDebugString(buf);
+	gDLL->logMsg("xml.log", buf);
+
+	gDLL->MessageBox(buf, "XML Error");
+}
 
 //
 // for logging
 //
-void CvXMLLoadUtility::logMsg(char* format, ... )
+void CvXMLLoadUtility::logMsg(char* format, ...)
 {
-//#ifdef _DEBUG
+	//#ifdef _DEBUG
 	static char buf[kBufSize];
-	_vsnprintf( buf, kBufSize-4, format, (char*)(&format+1) );
+	_vsnprintf(buf, kBufSize - 4, format, (char*)(&format + 1));
 	OutputDebugString(buf);
 	gDLL->logMsg("xml.log", buf);
-//#endif
+	//#endif
 }
 
-void CvXMLLoadUtility::logMsgW(wchar_t* format, ... )
+void CvXMLLoadUtility::logMsgW(wchar_t* format, ...)
 {
-//#ifdef _DEBUG
-		static wchar_t buf[kBufSize];
-		_vsnwprintf( buf, kBufSize-4, format, (char*)(&format+1) );
-		OutputDebugStringW(buf);
-		static char buf2[kBufSize];
-		wcstombs(buf2, buf, kBufSize-4);
-		gDLL->logMsg("xml.log", buf2);
-//#endif
+	//#ifdef _DEBUG
+	static wchar_t buf[kBufSize];
+	_vsnwprintf(buf, kBufSize - 4, format, (char*)(&format + 1));
+	OutputDebugStringW(buf);
+	static char buf2[kBufSize];
+	wcstombs(buf2, buf, kBufSize - 4);
+	gDLL->logMsg("xml.log", buf2);
+	//#endif
 }
 
 /************************************************************************************************/
@@ -55,11 +63,11 @@ void CvXMLLoadUtility::logMsgW(wchar_t* format, ... )
 /*                                                                                              */
 /************************************************************************************************/
 #ifdef _DEBUG
-void CvXMLLoadUtility::logXmlCheckDoubleTypes(char* format, ... )
+void CvXMLLoadUtility::logXmlCheckDoubleTypes(char* format, ...)
 {
 	{
 		static char buf[kBufSize];
-		_vsnprintf( buf, kBufSize-4, format, (char*)(&format+1) );
+		_vsnprintf(buf, kBufSize - 4, format, (char*)(&format + 1));
 		gDLL->logMsg("XmlCheckDoubleTypes.log", buf);
 	}
 }
@@ -73,11 +81,11 @@ void CvXMLLoadUtility::logXmlCheckDoubleTypes(char* format, ... )
 /*                                                                                              */
 /************************************************************************************************/
 #ifdef _DEBUG
-void CvXMLLoadUtility::XmlArtTagVerification(char* format, ... )
+void CvXMLLoadUtility::XmlArtTagVerification(char* format, ...)
 {
 	{
 		static char buf[kBufSize];
-		_vsnprintf( buf, kBufSize-4, format, (char*)(&format+1) );
+		_vsnprintf(buf, kBufSize - 4, format, (char*)(&format + 1));
 		gDLL->logMsg("XmlArtTagVerification.log", buf);
 	}
 }
@@ -90,12 +98,12 @@ void CvXMLLoadUtility::XmlArtTagVerification(char* format, ... )
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-void CvXMLLoadUtility::logMLF(char* format, ... )
+void CvXMLLoadUtility::logMLF(char* format, ...)
 {
 #ifdef _DEBUG
 	{
 		static char buf[kBufSize];
-		_vsnprintf( buf, kBufSize-4, format, (char*)(&format+1) );
+		_vsnprintf(buf, kBufSize - 4, format, (char*)(&format + 1));
 		gDLL->logMsg("MLF.log", buf);
 	}
 #endif
@@ -109,12 +117,12 @@ void CvXMLLoadUtility::logMLF(char* format, ... )
 /*                                                                                              */
 /************************************************************************************************/
 //
-void CvXMLLoadUtility::logXmlDependencyTypes(char* format, ... )
+void CvXMLLoadUtility::logXmlDependencyTypes(char* format, ...)
 {
 #ifdef _DEBUG	
 	{
 		static char buf[kBufSize];
-		_vsnprintf( buf, kBufSize-4, format, (char*)(&format+1) );
+		_vsnprintf(buf, kBufSize - 4, format, (char*)(&format + 1));
 		gDLL->logMsg("XmlDependencyTypes.log", buf);
 	}
 #endif
@@ -128,12 +136,12 @@ void CvXMLLoadUtility::logXmlDependencyTypes(char* format, ... )
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-void CvXMLLoadUtility::logXML(char* format, ... )
+void CvXMLLoadUtility::logXML(char* format, ...)
 {
 #ifdef _DEBUG	
 	{
 		static char buf[kBufSize];
-		_vsnprintf( buf, kBufSize-4, format, (char*)(&format+1) );
+		_vsnprintf(buf, kBufSize - 4, format, (char*)(&format + 1));
 		gDLL->logMsg("XML Loadup.log", buf);
 	}
 #endif
@@ -145,30 +153,36 @@ bool CvXMLLoadUtility::CreateFXml()
 {
 	PROFILE("CreateFXML");
 
-/*	try
-	{
-#ifdef _DEBUG
-		m_pFXml = GETXML->CreateFXml();
-#else
-		m_pFXml = GETXML->CreateFXml(m_pSchemaCache);
-#endif
-	}
-	catch(...)
-	{
-		char	szMessage[512];
-		sprintf( szMessage, "Caught unhandled exception creating XML parser object \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
-		gDLL->MessageBox( szMessage, "Loading Error" );
-		return false;
-	}*/
+	/*	try
+		{
+	#ifdef _DEBUG
+			m_pFXml = GETXML->CreateFXml();
+	#else
+			m_pFXml = GETXML->CreateFXml(m_pSchemaCache);
+	#endif
+		}
+		catch(...)
+		{
+			char	szMessage[512];
+			sprintf( szMessage, "Caught unhandled exception creating XML parser object \n Current XML file is: %s", GC.getCurrentXMLFile().GetCString());
+			gDLL->MessageBox( szMessage, "Loading Error" );
+			return false;
+		}*/
 
 	m_pParser = new xercesc::XercesDOMParser();
 	ParserErrorHandler* parserErrorHandler = new ParserErrorHandler();
 
 	m_pParser->setErrorHandler(parserErrorHandler);
 	m_pParser->setValidationScheme(xercesc::XercesDOMParser::Val_Auto);
-    m_pParser->setDoNamespaces(true);
+	m_pParser->setDoNamespaces(true);
 	m_pParser->setDoSchema(true);
-	m_pParser->setValidationConstraintFatal(false);
+	m_pParser->setValidationConstraintFatal(
+#if defined(FASSERT_ENABLE)
+		true
+#else
+		false
+#endif
+	);
 	m_pParser->setValidationSchemaFullChecking(true);
 	//std::string szDir = gDLL->getModName();
 	//std::string szPath = szDir.append("Assets\\XML\\Schema\\Caveman2Cosmos.xsd");
@@ -231,7 +245,7 @@ bool CvXMLLoadUtility::CreateFXml()
 void CvXMLLoadUtility::DestroyFXml()
 {
 	PROFILE("DestroyFXML");
-//	GETXML->DestroyFXml(m_pFXml);
+	//	GETXML->DestroyFXml(m_pFXml);
 
 	delete m_pParser;
 }
@@ -243,17 +257,19 @@ void CvXMLLoadUtility::DestroyFXml()
 //  PURPOSE :   Default constructor
 //
 //------------------------------------------------------------------------------------------------------
-CvXMLLoadUtility::CvXMLLoadUtility() :
-m_iCurProgressStep(0),
-m_pCBFxn(NULL)
-//m_pFXml(NULL)
+CvXMLLoadUtility::CvXMLLoadUtility() 
+	: m_pCurrentXmlElement(NULL)
+	, m_pParser(NULL)
+	, m_iCurProgressStep(0)
+	, m_pCBFxn(NULL)
+	//m_pFXml(NULL)
 {
 	//OutputDebugString("Initializing XML Load Utility: Start");
-	try 
+	try
 	{
 		xercesc::XMLPlatformUtils::Initialize();
 	}
-	catch (const xercesc::XMLException& toCatch) 
+	catch (const xercesc::XMLException & toCatch)
 	{
 		OutputDebugString("XMLPlatformUtils::Initialize Faild");
 		char* message = xercesc::XMLString::transcode(toCatch.getMessage());
@@ -329,12 +345,12 @@ void CvXMLLoadUtility::ResetGlobalEffectInfo()
 //				mask value
 //
 //------------------------------------------------------------------------------------------------------
-void CvXMLLoadUtility::MakeMaskFromString(unsigned int *puiMask, char* szMask)
+void CvXMLLoadUtility::MakeMaskFromString(unsigned int* puiMask, char* szMask)
 {
 	int iLen = strlen(szMask);
 
 	// loop through each character in the szMask parameter
-	for (int i=0;i<iLen;i++)
+	for (int i = 0; i < iLen; i++)
 	{
 		// if the current character in the string is a zero
 		if (szMask[i] == '0')
@@ -492,18 +508,18 @@ void CvXMLLoadUtility::MakeMaskFromString(unsigned int *puiMask, char* szMask)
 //------------------------------------------------------------------------------------------------------
 int CvXMLLoadUtility::GetInfoClass(const TCHAR* pszVal)
 {
-/************************************************************************************************/
-/* Afforess	                  Start		 03/18/10                                               */
-/*                                                                                              */
-/* Hide Assert for Deleted Objects                                                       */
-/************************************************************************************************/
-	//AIAndy: I don't think we should do a hack like that, references in the XML should always be valid
-	//if ((GC.getNumGameSpeedInfos() > 0) && (GC.getDefineINT(pszVal)))
-	//	hideAssert = true;
-	//if (pszVal == "") return -1;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* Afforess	                  Start		 03/18/10                                               */
+	/*                                                                                              */
+	/* Hide Assert for Deleted Objects                                                       */
+	/************************************************************************************************/
+		//AIAndy: I don't think we should do a hack like that, references in the XML should always be valid
+		//if ((GC.getNumGameSpeedInfos() > 0) && (GC.getDefineINT(pszVal)))
+		//	hideAssert = true;
+		//if (pszVal == "") return -1;
+	/************************************************************************************************/
+	/* Afforess	                     END                                                            */
+	/************************************************************************************************/
 
 	int idx = GC.getInfoTypeForString(pszVal, false);
 
@@ -514,10 +530,10 @@ int CvXMLLoadUtility::GetInfoClass(const TCHAR* pszVal)
 		return idx;
 	}
 
-	if (_tcscmp(pszVal,"NONE")!=0 && _tcscmp(pszVal,"")!=0)
+	if (_tcscmp(pszVal, "NONE") != 0 && _tcscmp(pszVal, "") != 0)
 	{
 		char errorMsg[1024];
-		sprintf(errorMsg, "Tag: %s in Info class was incorrect \n Current XML file is: %s", pszVal, GC.getCurrentXMLFile().GetCString());
+		sprintf(errorMsg, "Tag: %s in Info class was incorrect\n Current XML file is: %s", pszVal, GC.getCurrentXMLFile().GetCString());
 		gDLL->MessageBox(errorMsg, "XML Error");
 	}
 
@@ -546,7 +562,7 @@ bool CvXMLLoadUtility::LoadCivXml(FXml* pFXml, const TCHAR* szFilename)
 	CvString szPath = szFilename;
 	CvString fsFilename = szFilename;
 	szPath = "Assets\\" + szPath;
-	
+
 	std::string szDir = gDLL->getModName();
 	szDir.append(szPath);
 	OutputDebugString(szDir.c_str());
@@ -588,44 +604,44 @@ bool CvXMLLoadUtility::LoadCivXml(FXml* pFXml, const TCHAR* szFilename)
 	logMsg(szLog);
 	OutputDebugString(szLog);
 
-/************************************************************************************************/
-/* XML_CHECK_DOUBLE_TYPE                   10/10/07                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* XML_CHECK_DOUBLE_TYPE                   10/10/07                                MRGENIE      */
+	/*                                                                                              */
+	/*                                                                                              */
+	/************************************************************************************************/
 #ifdef _DEBUG
 	logXmlCheckDoubleTypes("Loading XML file %s\n", szPath.c_str());
 #endif
-/************************************************************************************************/
-/* XML_CHECK_DOUBLE_TYPE                   END                                                  */
-/************************************************************************************************/
+	/************************************************************************************************/
+	/* XML_CHECK_DOUBLE_TYPE                   END                                                  */
+	/************************************************************************************************/
 
 
-	try 
+	try
 	{
 		m_pParser->parse(szDir.c_str());
 		m_pCurrentXmlElement = m_pParser->getDocument()->getDocumentElement();
-    }
-	catch (const xercesc::XMLException& toCatch) 
+	}
+	catch (const xercesc::XMLException & toCatch)
 	{
-        char* message = xercesc::XMLString::transcode(toCatch.getMessage());
-		sprintf(szLog, "XML error: %s(%i) : (%s)\n", 
-			    toCatch.getSrcFile(), toCatch.getSrcLine(), message);
+		char* message = xercesc::XMLString::transcode(toCatch.getMessage());
+		sprintf(szLog, "XML error: %s(%llu) : (%s)\n",
+			toCatch.getSrcFile(), toCatch.getSrcLine(), message);
 		logMsg(szLog);
 		gDLL->MessageBox(szLog, "Error");
-        xercesc::XMLString::release(&message);
+		xercesc::XMLString::release(&message);
 		return false;
-    }
-	catch (const xercesc::DOMException& toCatch) 
+	}
+	catch (const xercesc::DOMException & toCatch)
 	{
-        char* message = xercesc::XMLString::transcode(toCatch.msg);
+		char* message = xercesc::XMLString::transcode(toCatch.msg);
 		sprintf(szLog, "XML model (DOM) error: %s : %s\n", szPath.c_str(), message);
 		logMsg(szLog);
 		gDLL->MessageBox(szLog, "Error");
-        xercesc::XMLString::release(&message);
+		xercesc::XMLString::release(&message);
 		return false;
-    }
-	catch (const xercesc::SAXParseException& toCatch)
+	}
+	catch (const xercesc::SAXParseException & toCatch)
 	{
 		char* message = xercesc::XMLString::transcode(toCatch.getMessage());
 		sprintf(szLog, "XML parsing SAX error:\n%s :\n%s at line %llu", szPath.c_str(), message, toCatch.getLineNumber());
@@ -634,22 +650,22 @@ bool CvXMLLoadUtility::LoadCivXml(FXml* pFXml, const TCHAR* szFilename)
 		xercesc::XMLString::release(&message);
 		return false;
 	}
-	catch (const xercesc::SAXException& toCatch) 
+	catch (const xercesc::SAXException & toCatch)
 	{
-        char* message = xercesc::XMLString::transcode(toCatch.getMessage());
+		char* message = xercesc::XMLString::transcode(toCatch.getMessage());
 		sprintf(szLog, "XML parsing SAX error: %s : %s\n", szPath.c_str(), message);
 		logMsg(szLog);
 		gDLL->MessageBox(szLog, "Error");
-        xercesc::XMLString::release(&message);
-        return false;
-    }
-	catch (...) 
+		xercesc::XMLString::release(&message);
+		return false;
+	}
+	catch (...)
 	{
 		sprintf(szLog, "Something happened\n");
 		logMsg(szLog);
 		gDLL->MessageBox(szLog, "Error");
-        return false;
-    }
+		return false;
+	}
 
 	logMsg("Load XML file %s SUCCEEDED\n", szPath.c_str());
 	GC.setCurrentXMLFile(szFilename);
@@ -668,7 +684,7 @@ CvWString CvXMLLoadUtility::CreateHotKeyFromDescription(const TCHAR* pszHotKey, 
 	// Delete <COLOR:140,255,40,255>Shift+Delete</COLOR>
 	CvWString szHotKey;
 
-	if (pszHotKey && strcmp(pszHotKey,"") != 0)
+	if (pszHotKey && strcmp(pszHotKey, "") != 0)
 	{
 		szHotKey += L" <color=140,255,40,255>";
 		szHotKey += L"&lt;";
@@ -710,7 +726,7 @@ bool CvXMLLoadUtility::SetStringList(CvString** ppszStringArray, int* piSize)
 		pszStringArray = *ppszStringArray;
 		if (GetChildXmlVal(pszStringArray[0]))
 		{
-			for (i=1;i<*piSize;i++)
+			for (i = 1; i < *piSize; i++)
 			{
 				if (!GetNextXmlVal(pszStringArray[i]))
 				{
@@ -746,7 +762,7 @@ CvWString CvXMLLoadUtility::CreateKeyStringFromKBCode(const TCHAR* pszHotKey)
 	};
 
 	// TODO - this should be a stl map instead of looping strcmp
-	const int iNumKeyBoardMappings=108;
+	const int iNumKeyBoardMappings = 108;
 	const CvKeyBoardMapping asCvKeyBoardMapping[iNumKeyBoardMappings] =
 	{
 		{"KB_ESCAPE", gDLL->getText("TXT_KEY_KEYBOARD_ESCAPE")},
@@ -859,7 +875,7 @@ CvWString CvXMLLoadUtility::CreateKeyStringFromKBCode(const TCHAR* pszHotKey)
 		{"KB_DELETE",gDLL->getText("TXT_KEY_KEYBOARD_DELETE_KEY")},
 	};
 
-	for (i=0;i<iNumKeyBoardMappings;i++)
+	for (i = 0; i < iNumKeyBoardMappings; i++)
 	{
 		if (strcmp(asCvKeyBoardMapping[i].szDefineString, pszHotKey) == 0)
 		{
@@ -876,9 +892,9 @@ CvWString CvXMLLoadUtility::CreateKeyStringFromKBCode(const TCHAR* pszHotKey)
 void CvXMLLoadUtility::UpdateProgressCB(const char* szMessage)
 {
 	OutputDebugString("Updating ProgressCB: Start");
-	if (m_iCurProgressStep>GetNumProgressSteps())
+	if (m_iCurProgressStep > GetNumProgressSteps())
 	{
-		m_iCurProgressStep=1;	// wrap
+		m_iCurProgressStep = 1;	// wrap
 	}
 
 	if (m_pCBFxn)
@@ -903,12 +919,12 @@ bool CvXMLLoadUtility::TryMoveToXmlFirstMatchingElement(const XMLCh* xpath)
 	char szLog[2000];
 	try
 	{
-		xercesc::DOMXPathResult *result = 
-			m_pParser->getDocument()->evaluate( xpath, 
-												m_pCurrentXmlElement, 
-												NULL, 
-												xercesc::DOMXPathResult::FIRST_ORDERED_NODE_TYPE,
-												NULL);
+		xercesc::DOMXPathResult* result =
+			m_pParser->getDocument()->evaluate(xpath,
+				m_pCurrentXmlElement,
+				NULL,
+				xercesc::DOMXPathResult::FIRST_ORDERED_NODE_TYPE,
+				NULL);
 		xercesc::DOMNode* node = result->getNodeValue();
 		if (node)
 		{
@@ -940,8 +956,8 @@ bool CvXMLLoadUtility::TryMoveToXmlFirstMatchingElement(const XMLCh* xpath)
 								m_pParser->getDocument()->getDocumentURI() );
 			char* xpathStr = xercesc::XMLString::transcode(
 								xpath);
-			sprintf(szLog, "XML model (DOM) error: %s : Expected an element at '%s', found none", 
-				    fileName, xpathStr);
+			sprintf(szLog, "XML model (DOM) error: %s : Expected an element at '%s', found none",
+					fileName, xpathStr);
 			xercesc::XMLString::release(&xpathStr);
 			xercesc::XMLString::release(&fileName);
 		}*/
@@ -949,14 +965,14 @@ bool CvXMLLoadUtility::TryMoveToXmlFirstMatchingElement(const XMLCh* xpath)
 		result->release();
 		return false;
 	}
-	catch (const xercesc::DOMXPathException& toCatch)
+	catch (const xercesc::DOMXPathException & toCatch)
 	{
 		char* fileName = xercesc::XMLString::transcode(
-							m_pParser->getDocument()->getDocumentURI() );
+			m_pParser->getDocument()->getDocumentURI());
 		char* xpathStr = xercesc::XMLString::transcode(
-							xpath);
-		sprintf(szLog, "XML path error: %s : When quering '%s' - %s", 
-			           fileName, xpathStr, toCatch.msg);
+			xpath);
+		sprintf(szLog, "XML path error: %s : When quering '%s' - %S",
+			fileName, xpathStr, toCatch.msg);
 		xercesc::XMLString::release(&xpathStr);
 		xercesc::XMLString::release(&fileName);
 		if (toCatch.code == xercesc::DOMXPathException::INVALID_EXPRESSION_ERR)
@@ -965,14 +981,14 @@ bool CvXMLLoadUtility::TryMoveToXmlFirstMatchingElement(const XMLCh* xpath)
 			return false;
 		}
 	}
-	catch (const xercesc::DOMException& toCatch)
+	catch (const xercesc::DOMException & toCatch)
 	{
 		char* fileName = xercesc::XMLString::transcode(
-							m_pParser->getDocument()->getDocumentURI() );
+			m_pParser->getDocument()->getDocumentURI());
 		char* xpathStr = xercesc::XMLString::transcode(
-							xpath);
-		sprintf(szLog, "XML model (DOM) error: %s : When quering '%s' - %s", 
-					   fileName, xpathStr, toCatch.msg);
+			xpath);
+		sprintf(szLog, "XML model (DOM) error: %s : When quering '%s' - %S",
+			fileName, xpathStr, toCatch.msg);
 		xercesc::XMLString::release(&xpathStr);
 		xercesc::XMLString::release(&fileName);
 	}

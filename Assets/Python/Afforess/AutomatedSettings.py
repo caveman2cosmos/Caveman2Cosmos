@@ -18,10 +18,10 @@ class AutomatedSettings:
 		eventManager.addEventHandler("GameStart", self.onGameStart)
 		eventManager.addEventHandler("ModNetMessage", self.onModNetMessage)
 
-	def onLoadGame(self,argsList):
+	def onLoadGame(self, argsList):
 		self.optionUpdate()
 
-	def onGameStart(self,argsList):
+	def onGameStart(self, argsList):
 		self.optionUpdate()
 
 	def optionUpdate(self):
@@ -54,7 +54,7 @@ def getCanAutoBuildEventID():
 def getCanPlayerAutoBuildEventID():
 	return CANPLAYERAUTOBUILD_EVENT_ID
 
-def changedReset (option, value):
+def changedReset(option, value):
 	resetOptions()
 	return True
 
@@ -78,6 +78,10 @@ def changedNoCapturingCities(option, value):
 def changedAllowUnitSuiciding(option, value):
 	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_AUTO_HUNT_ALLOW_UNIT_SUICIDING, value)
 	CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_AUTO_HUNT_ALLOW_UNIT_SUICIDING), int(value), 0)
+
+def changedAutoHuntReturnForUpgrades(option, value):
+	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_AUTO_HUNT_RETURN_FOR_UPGRADES, value)
+	CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_AUTO_HUNT_RETURN_FOR_UPGRADES), int(value), 0)
 
 def changedHideAutomateHunt(option, value):
 	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_HIDE_AUTO_HUNT, value)

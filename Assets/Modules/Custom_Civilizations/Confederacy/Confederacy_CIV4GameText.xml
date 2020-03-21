@@ -1,10 +1,64 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Game Text - New -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
-	<!-- LEADER INFOS -->
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_AUGUSTA</Tag>
+		<English>Augusta</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LOUISVILLE</Tag>
+		<English>Louisville</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MOBILE</Tag>
+		<English>Mobile</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MONTGOMERY</Tag>
+		<English>Montgomery</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NASHVILLE</Tag>
+		<English>Nashville</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NORFOLK</Tag>
+		<English>Norfolk</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PETERSBURG</Tag>
+		<English>Petersburg</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SHREVEPORT</Tag>
+		<English>Shreveport</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VICKSBURG</Tag>
+		<English>Vicksburg</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_AMERICAN_CONFEDERACY_ADJECTIVE</Tag>
+		<English>Confederate</English>
+		<French>Confédérés</French>
+		<Polish>Konfederacki</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_AMERICAN_CONFEDERACY_DESC</Tag>
+		<English>Confederate States of America</English>
+		<French>Etats Confédérés d'Amérique</French>
+		<Polish>Skonfederowane Stany Ameryki</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_AMERICAN_CONFEDERACY_PEDIA</Tag>
+		<English>The Confederate States were formed on February 4, 1861, by six Southern slave states (South Carolina, Mississippi, Florida, Alabama, Georgia, and Louisiana) after confirmation of the election of Abraham Lincoln as President of the United States. Jefferson Davis was selected as its first President the next day.[PARAGRAPH:2]Texas joined the Confederacy on March 2 and then replaced its governor, Sam Houston, when he refused to take an oath of allegiance to the Confederacy. These seven states seceded1 from the United States and took control of military/naval installations, ports, and custom houses within their boundaries, triggering the American Civil War.[PARAGRAPH:2]A month after the Confederacy was formed, on March 4, 1861, Abraham Lincoln was sworn in as President of the United States. In his inaugural address, he argued that the Constitution was a more perfect union than the earlier Articles of Confederation and Perpetual Union, that it was a binding contract, and called the secession "legally void". He stated he had no intent to invade southern states, but would use force to maintain possession of federal property and collection of various federal taxes, duties and imposts. His speech closed with a plea for restoration of the bonds of union.[PARAGRAPH:2]On April 12 South Carolina troops fired upon the Federal troops stationed at Fort Sumter in Charleston, South Carolina until the troops surrendered. Following the Battle of Fort Sumter, Lincoln called for all remaining states in the Union to send troops to recapture Sumter and other forts, defend the capital, and preserve the Union. Most Northerners believed that a quick victory for the Union would crush the nascent rebellion, and so Lincoln only called for volunteers for 90 days. This resulted in four more states voting to secede: Virginia, Arkansas, Tennessee, and North Carolina joined the Confederacy for a total of 11. Once Virginia seceded, the Confederate capital was moved from Montgomery, Alabama to Richmond, Virginia[PARAGRAPH:2]The government of Kentucky remained in the Union after a short-lived attempt at neutrality, but a rival faction from that state was also accepted as members of the Confederacy. A more complex situation surrounds the Missouri Secession, but in any event Missouri was also considered a member of the Confederate States. The number of Confederate states is thus sometimes considered to be 13.[PARAGRAPH:2]The five tribal governments of the Indian Territory - which became Oklahoma in 1907 - also mainly supported the Confederacy. The southern part of New Mexico Territory (including parts of the Gadsden Purchase) joined with the Confederacy as Arizona Territory. These first settlers petitioned the Confederate government for annexation of their lands, prompting an expedition in which territory south of the 34th parallel was governed by the Confederacy. Arizona troops were also officially recognized within the armies of the Confederacy.[PARAGRAPH:2]Preceding his New Mexico Campaign, General Sibley issued a proclamation to the people of New Mexico his intentions of taking possession of the territory in the name of the Confederate States. Confederate troops briefly occupied the territorial capital of Santa Fe between March 13 and April 8, 1862.[PARAGRAPH:2]Not all jurisdictions where slavery was still legal joined the Confederacy. In 1861 martial law was declared in Maryland (the state which borders the U.S. capital, Washington, D.C., on three sides) to block attempts at secession. Delaware, also a slave state, never considered secession, nor did the capital of the U.S., Washington, D.C.. In 1861, during the war, a unionist rump legislature in Wheeling, Virginia seceded from Virginia, claiming 48 counties, and joined the United States in 1863 as the state of West Virginia, with a constitution that would have gradually abolished slavery. Similar attempts to secede from the Confederacy in parts of other states (notably in eastern Tennessee) were held in check by Confederacy declarations of martial law.[PARAGRAPH:2]The surrender of the Army of Northern Virginia by General Lee at Appomattox Court House on April 9, 1865 is generally taken as the end of the Confederate States. President Davis was captured at Irwinville, Georgia on May 10 and the remaining Confederate armies surrendered by June 1865. The last Confederate flag was hauled down on CSS Shenandoah on November 6, 1865.[PARAGRAPH:2]Source: http://en.wikipedia.org/wiki/Confederate_States_of_America</English>
+		<Polish>Skonfederowane Stany Ameryki (ang. Confederate States of America, CSA) - południowe stany USA, potocznie zwane Konfederacją, próbujące dokonać secesji i biorące udział w wojnie secesyjnej. W latach 1861-1865 stworzyły one własne państwo. Zwycięstwo Abrahama Lincolna w wyborach prezydenckich, w kontekście narastającego od kilkudziesięciu lat konfliktu interesów między uprzemysłowioną Północą a rolniczym Południem USA, wywołało wzburzenie w stanach południowych, których legislatywy poczęły deklarować secesję z Unii. Pierwsza wystąpiła Karolina Południowa 20 grudnia 1860 roku, później dołączyły do niej Missisipi, Alabama, Floryda, Georgia, Luizjana, Teksas, a w trakcie trwania wojny także Wirginia, Tennessee, Arkansas i Karolina Północna. Ponadto w stanach: Missouri i Kentucky nastąpił rozłam i powstały tam zarówno rządy prounijne jak i prokonfederackie. Oficjalnie te dwa stany należały także do Konfederacji, co widać chociażby na przykładzie flagi nowo powstałego państwa, gdzie figurowało 13 gwiazdek, po jednej dla każdego stanu. Ponadto czynione były próby przyłączenia do Konfederacji innych terytoriów, np. Kalifornii. Utworzenie państwa ogłoszono 4 lutego 1861 roku. Cztery dni później uchwalona została konstytucja, w znacznej mierze wzorowana na dotychczasowej ustawie zasadniczej z 17 września 1787 roku. Wprowadzono do niej słowo niewolnicy zamiast dotychczasowego eufemizmu pozostałe osoby (other persons) przy obliczaniu podstaw reprezentacji parlamentarnej Kongresu (niewolnik liczony był za 3/5 człowieka), do zakazu stanowienia ustaw wymierzonych przeciw jednostce lub działających wstecz dodano zakaz podważania instytucji niewolnictwa (law denying or impairing the right of property in negro slaves). Kadencję prezydenta wydłużono z 4 do 6 lat, wprowadzając równocześnie jej jednorazowość. Prezydentem został gen. Jefferson Davis. Tymczasową stolicą stało się Montgomery w Alabamie, a później Richmond w Wirginii. Nowo utworzone państwo liczyło niecałe 2 mln km˛, zamieszkiwanych przez nieco ponad 9 mln ludzi, w tym ok. 4 mln czarnych niewolników i 133 tys. czarnych wyzwoleńców. Przystępując do wojny, Konfederacja liczyła na wsparcie mocarstw europejskich, szczególnie Wielkiej Brytanii i Francji. Kraje te jednakże odmówiły nawet oficjalnego uznania Skonfederowanych Stanów Ameryki; jedynym państwem świata, które to uczyniło, było księstwo Sachsen-Coburg-Gotha.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_AMERICAN_CONFEDERACY_SHORT_DESC</Tag>
+		<English>The Confederacy</English>
+		<French>La Confédération</French>
+		<Polish>Konfederacja</Polish>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_LEADER_DAVIS</Tag>
 		<English>Davis</English>
@@ -57,102 +111,5 @@
 		<Tag>TXT_KEY_LEADER_LONGSTREET_PEDIA</Tag>
 		<English>[H1]James Longstreet[\H1][NEWLINE][BOLD]General Confederate States[NEWLINE]Lived:[\BOLD] January 8, 1821 – January 2, 1904[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]He was one of the foremost Confederate generals of the American Civil War and the principal subordinate to General Robert E. Lee, who called him his "Old War Horse." He served under Lee as a corps commander for many of the famous battles fought by the Army of Northern Virginia in the Eastern Theater, but also with Gen. Braxton Bragg in the Army of Tennessee in the Western Theater. Biographer and historian Jeffry D. Wert wrote that "Longstreet... was the finest corps commander in the Army of Northern Virginia; in fact, he was arguably the best corps commander in the conflict on either side."</English>
 		<Polish>[H1]James Longstreet[\H1][NEWLINE][BOLD]Generał Skonfederowanych Stanów[NEWLINE]Żył:[\BOLD]1821 - 1904[NEWLINE][PARAGRAPH:2][BOLD]Tło:[\BOLD][PARAGRAPH:1]Po wybuchu wojny domowej opowiedział się po stronie Konfederacji. Wystąpił w czerwcu 1861 z Armii Federalnej i walczył w Armii Północnej Wirginii pod generałem Robertem Lee i Armii Tennessee pod generałem Braxtonem Braggiem. Uważany za jednego z najlepszych dowódców korpusów w czasie wojny. Jego umiejętności dowódcze przyczyniły się do zwycięstw Konfederacji w bitwach pod Bull Run, Fredericksburgiem i Chickamauga. Wiele kontrowersji wzbudzają natomiast jego działania w bitwie pod Gettysburgiem, gdzie m.in. otwarcie kwestionował decyzje taktyczne generała Lee.</Polish>
-	</TEXT>
-	<!-- CITY INFOS -->
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_RICHMOND</Tag>
-		<English>Richmond</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_CHARLESTON</Tag>
-		<English>Charleston</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_PETERSBURG</Tag>
-		<English>Petersburg</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_MONTGOMERY</Tag>
-		<English>Montgomery</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_MEMPHIS</Tag>
-		<English>Memphis</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_LOUISVILLE</Tag>
-		<English>Louisville</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_NASHVILLE</Tag>
-		<English>Nashville</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_ATLANTA</Tag>
-		<English>Atlanta</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_VICKSBURG</Tag>
-		<English>Vicksburg</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_NEW_ORLEANS</Tag>
-		<English>New Orleans</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_SAVANNAH</Tag>
-		<English>Savannah</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_COLUMBUS</Tag>
-		<English>Columbus</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_SPRINGFIELD</Tag>
-		<English>Springfield</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_MOBILE</Tag>
-		<English>Mobile</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_NORFOLK</Tag>
-		<English>Norfolk</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_ALEXANDRIA</Tag>
-		<English>Alexandria</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_SHREVEPORT</Tag>
-		<English>Shreveport</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_AUGUSTA</Tag>
-		<English>Augusta</English>
-	</TEXT>
-	<!-- OBJECT INFOS -->
-	<TEXT>
-		<Tag>TXT_KEY_CIV_AMERICAN_CONFEDERACY_DESC</Tag>
-		<English>Confederate States of America</English>
-		<French>Etats Confédérés d'Amérique</French>
-		<Polish>Skonfederowane Stany Ameryki</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_AMERICAN_CONFEDERACY_SHORT_DESC</Tag>
-		<English>The Confederacy</English>
-		<French>La Confédération</French>
-		<Polish>Konfederacja</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_AMERICAN_CONFEDERACY_PEDIA</Tag>
-		<English>The Confederate States were formed on February 4, 1861, by six Southern slave states (South Carolina, Mississippi, Florida, Alabama, Georgia, and Louisiana) after confirmation of the election of Abraham Lincoln as President of the United States. Jefferson Davis was selected as its first President the next day.[PARAGRAPH:2]Texas joined the Confederacy on March 2 and then replaced its governor, Sam Houston, when he refused to take an oath of allegiance to the Confederacy. These seven states seceded1 from the United States and took control of military/naval installations, ports, and custom houses within their boundaries, triggering the American Civil War.[PARAGRAPH:2]A month after the Confederacy was formed, on March 4, 1861, Abraham Lincoln was sworn in as President of the United States. In his inaugural address, he argued that the Constitution was a more perfect union than the earlier Articles of Confederation and Perpetual Union, that it was a binding contract, and called the secession "legally void". He stated he had no intent to invade southern states, but would use force to maintain possession of federal property and collection of various federal taxes, duties and imposts. His speech closed with a plea for restoration of the bonds of union.[PARAGRAPH:2]On April 12 South Carolina troops fired upon the Federal troops stationed at Fort Sumter in Charleston, South Carolina until the troops surrendered. Following the Battle of Fort Sumter, Lincoln called for all remaining states in the Union to send troops to recapture Sumter and other forts, defend the capital, and preserve the Union. Most Northerners believed that a quick victory for the Union would crush the nascent rebellion, and so Lincoln only called for volunteers for 90 days. This resulted in four more states voting to secede: Virginia, Arkansas, Tennessee, and North Carolina joined the Confederacy for a total of 11. Once Virginia seceded, the Confederate capital was moved from Montgomery, Alabama to Richmond, Virginia[PARAGRAPH:2]The government of Kentucky remained in the Union after a short-lived attempt at neutrality, but a rival faction from that state was also accepted as members of the Confederacy. A more complex situation surrounds the Missouri Secession, but in any event Missouri was also considered a member of the Confederate States. The number of Confederate states is thus sometimes considered to be 13.[PARAGRAPH:2]The five tribal governments of the Indian Territory - which became Oklahoma in 1907 - also mainly supported the Confederacy. The southern part of New Mexico Territory (including parts of the Gadsden Purchase) joined with the Confederacy as Arizona Territory. These first settlers petitioned the Confederate government for annexation of their lands, prompting an expedition in which territory south of the 34th parallel was governed by the Confederacy. Arizona troops were also officially recognized within the armies of the Confederacy.[PARAGRAPH:2]Preceding his New Mexico Campaign, General Sibley issued a proclamation to the people of New Mexico his intentions of taking possession of the territory in the name of the Confederate States. Confederate troops briefly occupied the territorial capital of Santa Fe between March 13 and April 8, 1862.[PARAGRAPH:2]Not all jurisdictions where slavery was still legal joined the Confederacy. In 1861 martial law was declared in Maryland (the state which borders the U.S. capital, Washington, D.C., on three sides) to block attempts at secession. Delaware, also a slave state, never considered secession, nor did the capital of the U.S., Washington, D.C.. In 1861, during the war, a unionist rump legislature in Wheeling, Virginia seceded from Virginia, claiming 48 counties, and joined the United States in 1863 as the state of West Virginia, with a constitution that would have gradually abolished slavery. Similar attempts to secede from the Confederacy in parts of other states (notably in eastern Tennessee) were held in check by Confederacy declarations of martial law.[PARAGRAPH:2]The surrender of the Army of Northern Virginia by General Lee at Appomattox Court House on April 9, 1865 is generally taken as the end of the Confederate States. President Davis was captured at Irwinville, Georgia on May 10 and the remaining Confederate armies surrendered by June 1865. The last Confederate flag was hauled down on CSS Shenandoah on November 6, 1865.[PARAGRAPH:2]Source: http://en.wikipedia.org/wiki/Confederate_States_of_America</English>
-		<Polish>Skonfederowane Stany Ameryki (ang. Confederate States of America, CSA) - południowe stany USA, potocznie zwane Konfederacją, próbujące dokonać secesji i biorące udział w wojnie secesyjnej. W latach 1861-1865 stworzyły one własne państwo. Zwycięstwo Abrahama Lincolna w wyborach prezydenckich, w kontekście narastającego od kilkudziesięciu lat konfliktu interesów między uprzemysłowioną Północą a rolniczym Południem USA, wywołało wzburzenie w stanach południowych, których legislatywy poczęły deklarować secesję z Unii. Pierwsza wystąpiła Karolina Południowa 20 grudnia 1860 roku, później dołączyły do niej Missisipi, Alabama, Floryda, Georgia, Luizjana, Teksas, a w trakcie trwania wojny także Wirginia, Tennessee, Arkansas i Karolina Północna. Ponadto w stanach: Missouri i Kentucky nastąpił rozłam i powstały tam zarówno rządy prounijne jak i prokonfederackie. Oficjalnie te dwa stany należały także do Konfederacji, co widać chociażby na przykładzie flagi nowo powstałego państwa, gdzie figurowało 13 gwiazdek, po jednej dla każdego stanu. Ponadto czynione były próby przyłączenia do Konfederacji innych terytoriów, np. Kalifornii. Utworzenie państwa ogłoszono 4 lutego 1861 roku. Cztery dni później uchwalona została konstytucja, w znacznej mierze wzorowana na dotychczasowej ustawie zasadniczej z 17 września 1787 roku. Wprowadzono do niej słowo niewolnicy zamiast dotychczasowego eufemizmu pozostałe osoby (other persons) przy obliczaniu podstaw reprezentacji parlamentarnej Kongresu (niewolnik liczony był za 3/5 człowieka), do zakazu stanowienia ustaw wymierzonych przeciw jednostce lub działających wstecz dodano zakaz podważania instytucji niewolnictwa (law denying or impairing the right of property in negro slaves). Kadencję prezydenta wydłużono z 4 do 6 lat, wprowadzając równocześnie jej jednorazowość. Prezydentem został gen. Jefferson Davis. Tymczasową stolicą stało się Montgomery w Alabamie, a później Richmond w Wirginii. Nowo utworzone państwo liczyło niecałe 2 mln km˛, zamieszkiwanych przez nieco ponad 9 mln ludzi, w tym ok. 4 mln czarnych niewolników i 133 tys. czarnych wyzwoleńców. Przystępując do wojny, Konfederacja liczyła na wsparcie mocarstw europejskich, szczególnie Wielkiej Brytanii i Francji. Kraje te jednakże odmówiły nawet oficjalnego uznania Skonfederowanych Stanów Ameryki; jedynym państwem świata, które to uczyniło, było księstwo Sachsen-Coburg-Gotha.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CIV_AMERICAN_CONFEDERACY_ADJECTIVE</Tag>
-		<English>Confederate</English>
-		<French>Confédérés</French>
-		<Polish>Konfederacki</Polish>
 	</TEXT>
 </Civ4GameText>

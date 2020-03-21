@@ -229,12 +229,10 @@ public:
 	bool isPaused();
 	int /*UnitTypes*/ getBestLandUnit();
 	int getBestLandUnitCombat();
-#if defined QC_MASTERY_VICTORY
 //Sevo Begin--VCM
 	bool getStarshipLaunched(int ID);
 	bool getDiplomaticVictoryAchieved(int ID);
 //Sevo End VCM
-#endif
 	
 	int /*TeamTypes*/ getWinner();
 	int /*VictoryTypes*/ getVictory();
@@ -255,10 +253,9 @@ public:
 	bool isMPOption(int /*MultiplayerOptionTypes*/ eIndex);
 	bool isForcedControl(int /*ForceControlTypes*/ eIndex);
 	int getUnitCreatedCount(int /*UnitTypes*/ eIndex);
-	int getUnitClassCreatedCount(int /*UnitClassTypes*/ eIndex);
-	bool isUnitClassMaxedOut(int /*UnitClassTypes*/ eIndex, int iExtra);
-	int getBuildingClassCreatedCount(int /*BuildingClassTypes*/ eIndex);
-	bool isBuildingClassMaxedOut(int /*BuildingClassTypes*/ eIndex, int iExtra);
+	int getBuildingCreatedCount(int /*BuildingTypes*/ eIndex) const;
+	bool isBuildingMaxedOut(int /*BuildingTypes*/ eIndex, int iExtra);
+	bool isUnitMaxedOut(int /*UnitTypes*/ eIndex, int iExtra);
 
 	int getProjectCreatedCount(int /*ProjectTypes*/ eIndex);
 	bool isProjectMaxedOut(int /*ProjectTypes*/ eIndex, int iExtra);
@@ -372,8 +369,6 @@ public:
 	
 	bool isCivEverActive(int /*CivilizationTypes*/ eCivilization);
 	bool isLeaderEverActive(int /*LeaderHeadTypes*/ eLeader);
-	bool isUnitEverActive(int /*UnitTypes*/ eUnit);
-	bool isBuildingEverActive(int /*BuildingTypes*/ eBuilding);
 
 	bool isEventActive(int /*EventTriggerTypes*/ eTrigger);
 	void doControl(int iControl);
@@ -396,7 +391,7 @@ public:
 /*                                                                                              */
 /************************************************************************************************/
 	int getCutLosersCounter() const;
-    int getHighToLowCounter() const;
+	int getHighToLowCounter() const;
 	bool cheatCodesEnabled();
 	void setVictoryValid(int iVictory, bool bNewVal);
 	bool isModderGameOption(int /*ModderGameOptionTypes*/ eIndex);	

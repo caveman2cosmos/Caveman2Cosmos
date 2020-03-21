@@ -8,7 +8,6 @@
 //------------------------------------------------------------------------------------------------
 
 #include "CvGameCoreDLL.h"
-#include <boost/bind.hpp>
 
 CvGameObjectGame::CvGameObjectGame()
 {
@@ -71,12 +70,12 @@ GameObjectTypes CvGameObjectPlot::getGameObjectType() const
 
 CvProperties* CvGameObjectGame::getProperties() const
 {
-	return GC.getGameINLINE().getProperties();
+	return GC.getGame().getProperties();
 }
 
 const CvProperties* CvGameObjectGame::getPropertiesConst() const
 {
-	return GC.getGameINLINE().getPropertiesConst();
+	return GC.getGame().getPropertiesConst();
 }
 
 CvProperties* CvGameObjectTeam::getProperties() const
@@ -130,12 +129,12 @@ const CvProperties* CvGameObjectPlot::getPropertiesConst() const
 }
 
 // helper function to call foreach on the object
-void callForeach(CvGameObject* pObject, GameObjectTypes eType, boost::function<void (CvGameObject*)> func)
+void callForeach(CvGameObject* pObject, GameObjectTypes eType, bst::function<void (CvGameObject*)> func)
 {
 	pObject->foreach(eType, func);
 }
 
-void CvGameObjectGame::foreach(GameObjectTypes eType, boost::function<void (CvGameObject*)> func)
+void CvGameObjectGame::foreach(GameObjectTypes eType, bst::function<void (CvGameObject*)> func)
 {
 	switch(eType)
 	{
@@ -161,17 +160,17 @@ void CvGameObjectGame::foreach(GameObjectTypes eType, boost::function<void (CvGa
 			break;
 
 		case GAMEOBJECT_CITY:
-			foreach(GAMEOBJECT_PLAYER, boost::bind(callForeach, _1, GAMEOBJECT_CITY, func));
+			foreach(GAMEOBJECT_PLAYER, bst::bind(callForeach, _1, GAMEOBJECT_CITY, func));
 			break;
 
 		case GAMEOBJECT_UNIT:
-			foreach(GAMEOBJECT_PLAYER, boost::bind(callForeach, _1, GAMEOBJECT_UNIT, func));
+			foreach(GAMEOBJECT_PLAYER, bst::bind(callForeach, _1, GAMEOBJECT_UNIT, func));
 			break;
 
 		case GAMEOBJECT_PLOT:
-			for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+			for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 			{
-				func(GC.getMapINLINE().plotByIndexINLINE(iI)->getGameObject());
+				func(GC.getMap().plotByIndex(iI)->getGameObject());
 			}
 			break;
 
@@ -181,12 +180,12 @@ void CvGameObjectGame::foreach(GameObjectTypes eType, boost::function<void (CvGa
 	}
 }
 
-void CvGameObjectTeam::foreach(GameObjectTypes eType, boost::function<void (CvGameObject*)> func)
+void CvGameObjectTeam::foreach(GameObjectTypes eType, bst::function<void (CvGameObject*)> func)
 {
 	switch(eType)
 	{
 		case GAMEOBJECT_GAME:
-			func(GC.getGameINLINE().getGameObject());
+			func(GC.getGame().getGameObject());
 			break;
 
 		case GAMEOBJECT_PLAYER:
@@ -204,17 +203,17 @@ void CvGameObjectTeam::foreach(GameObjectTypes eType, boost::function<void (CvGa
 			break;
 
 		case GAMEOBJECT_CITY:
-			foreach(GAMEOBJECT_PLAYER, boost::bind(callForeach, _1, GAMEOBJECT_CITY, func));
+			foreach(GAMEOBJECT_PLAYER, bst::bind(callForeach, _1, GAMEOBJECT_CITY, func));
 			break;
 
 		case GAMEOBJECT_UNIT:
-			foreach(GAMEOBJECT_PLAYER, boost::bind(callForeach, _1, GAMEOBJECT_UNIT, func));
+			foreach(GAMEOBJECT_PLAYER, bst::bind(callForeach, _1, GAMEOBJECT_UNIT, func));
 			break;
 
 		case GAMEOBJECT_PLOT:
-			for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+			for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 			{
-				CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
+				CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
 				if (pLoopPlot->getTeam() == m_pTeam->getID())
 				{
 					func(pLoopPlot->getGameObject());
@@ -228,13 +227,13 @@ void CvGameObjectTeam::foreach(GameObjectTypes eType, boost::function<void (CvGa
 	}
 }
 
-void CvGameObjectPlayer::foreach(GameObjectTypes eType, boost::function<void (CvGameObject*)> func)
+void CvGameObjectPlayer::foreach(GameObjectTypes eType, bst::function<void (CvGameObject*)> func)
 {
 	int iLoop;
 	switch(eType)
 	{
 		case GAMEOBJECT_GAME:
-			func(GC.getGameINLINE().getGameObject());
+			func(GC.getGame().getGameObject());
 			break;
 
 		case GAMEOBJECT_TEAM:
@@ -256,10 +255,10 @@ void CvGameObjectPlayer::foreach(GameObjectTypes eType, boost::function<void (Cv
 			break;
 
 		case GAMEOBJECT_PLOT:
-			for (int iI = 0; iI < GC.getMapINLINE().numPlotsINLINE(); iI++)
+			for (int iI = 0; iI < GC.getMap().numPlots(); iI++)
 			{
-				CvPlot* pLoopPlot = GC.getMapINLINE().plotByIndexINLINE(iI);
-				if (pLoopPlot->getOwnerINLINE() == m_pPlayer->getID())
+				CvPlot* pLoopPlot = GC.getMap().plotByIndex(iI);
+				if (pLoopPlot->getOwner() == m_pPlayer->getID())
 				{
 					func(pLoopPlot->getGameObject());
 				}
@@ -272,12 +271,12 @@ void CvGameObjectPlayer::foreach(GameObjectTypes eType, boost::function<void (Cv
 	}
 }
 
-void CvGameObjectCity::foreach(GameObjectTypes eType, boost::function<void (CvGameObject*)> func)
+void CvGameObjectCity::foreach(GameObjectTypes eType, bst::function<void (CvGameObject*)> func)
 {
 	switch(eType)
 	{
 		case GAMEOBJECT_GAME:
-			func(GC.getGameINLINE().getGameObject());
+			func(GC.getGame().getGameObject());
 			break;
 
 		case GAMEOBJECT_TEAM:
@@ -285,7 +284,7 @@ void CvGameObjectCity::foreach(GameObjectTypes eType, boost::function<void (CvGa
 			break;
 
 		case GAMEOBJECT_PLAYER:
-			func(GET_PLAYER(m_pCity->getOwnerINLINE()).getGameObject());
+			func(GET_PLAYER(m_pCity->getOwner()).getGameObject());
 			break;
 
 		case GAMEOBJECT_UNIT:
@@ -302,12 +301,12 @@ void CvGameObjectCity::foreach(GameObjectTypes eType, boost::function<void (CvGa
 	}
 }
 
-void CvGameObjectUnit::foreach(GameObjectTypes eType, boost::function<void (CvGameObject*)> func)
+void CvGameObjectUnit::foreach(GameObjectTypes eType, bst::function<void (CvGameObject*)> func)
 {
 	switch(eType)
 	{
 		case GAMEOBJECT_GAME:
-			func(GC.getGameINLINE().getGameObject());
+			func(GC.getGame().getGameObject());
 			break;
 
 		case GAMEOBJECT_TEAM:
@@ -315,7 +314,7 @@ void CvGameObjectUnit::foreach(GameObjectTypes eType, boost::function<void (CvGa
 			break;
 
 		case GAMEOBJECT_PLAYER:
-			func(GET_PLAYER(m_pUnit->getOwnerINLINE()).getGameObject());
+			func(GET_PLAYER(m_pUnit->getOwner()).getGameObject());
 			break;
 
 		case GAMEOBJECT_CITY:
@@ -332,12 +331,12 @@ void CvGameObjectUnit::foreach(GameObjectTypes eType, boost::function<void (CvGa
 	}
 }
 
-void CvGameObjectPlot::foreach(GameObjectTypes eType, boost::function<void (CvGameObject*)> func)
+void CvGameObjectPlot::foreach(GameObjectTypes eType, bst::function<void (CvGameObject*)> func)
 {
 	switch(eType)
 	{
 		case GAMEOBJECT_GAME:
-			func(GC.getGameINLINE().getGameObject());
+			func(GC.getGame().getGameObject());
 			break;
 
 		case GAMEOBJECT_TEAM:
@@ -346,8 +345,8 @@ void CvGameObjectPlot::foreach(GameObjectTypes eType, boost::function<void (CvGa
 			break;
 
 		case GAMEOBJECT_PLAYER:
-			if (m_pPlot->getOwnerINLINE() != NO_PLAYER)
-				func(GET_PLAYER(m_pPlot->getOwnerINLINE()).getGameObject());
+			if (m_pPlot->getOwner() != NO_PLAYER)
+				func(GET_PLAYER(m_pPlot->getOwner()).getGameObject());
 			break;
 
 		case GAMEOBJECT_CITY:
@@ -388,18 +387,18 @@ CvGameObjectPlayer* CvGameObjectPlayer::getOwner()
 
 CvGameObjectPlayer* CvGameObjectCity::getOwner() 
 {
-	return GET_PLAYER(m_pCity->getOwnerINLINE()).getGameObject();
+	return GET_PLAYER(m_pCity->getOwner()).getGameObject();
 }
 
 CvGameObjectPlayer* CvGameObjectUnit::getOwner() 
 {
-	return GET_PLAYER(m_pUnit->getOwnerINLINE()).getGameObject();
+	return GET_PLAYER(m_pUnit->getOwner()).getGameObject();
 }
 
 CvGameObjectPlayer* CvGameObjectPlot::getOwner() 
 {
-	if (m_pPlot->getOwnerINLINE() != NO_PLAYER)
-		return GET_PLAYER(m_pPlot->getOwnerINLINE()).getGameObject();
+	if (m_pPlot->getOwner() != NO_PLAYER)
+		return GET_PLAYER(m_pPlot->getOwner()).getGameObject();
 	return NULL;
 }
 
@@ -465,21 +464,21 @@ CvGameObjectPlot* CvGameObjectPlot::getPlot()
 	return this;
 }
 
-void CvGameObject::foreachOn(GameObjectTypes eType, boost::function<void(CvGameObject *)> func)
+void CvGameObject::foreachOn(GameObjectTypes eType, bst::function<void(CvGameObject *)> func)
 {
 	CvGameObjectPlot* pPlot = getPlot();
 	if (pPlot)
 		pPlot->foreachOn(eType, func);
 }
 
-void CvGameObject::foreachNear(GameObjectTypes eType, boost::function<void(CvGameObject *)> func, int iDistance)
+void CvGameObject::foreachNear(GameObjectTypes eType, bst::function<void(CvGameObject *)> func, int iDistance)
 {
 	CvGameObjectPlot* pPlot = getPlot();
 	if (pPlot)
 		pPlot->foreachNear(eType, func, iDistance);
 }
 
-void CvGameObject::foreachRelated(GameObjectTypes eType, RelationTypes eRelation, boost::function<void(CvGameObject *)> func, int iData)
+void CvGameObject::foreachRelated(GameObjectTypes eType, RelationTypes eRelation, bst::function<void(CvGameObject *)> func, int iData)
 {
 	switch (eRelation)
 	{
@@ -496,17 +495,17 @@ void CvGameObject::foreachRelated(GameObjectTypes eType, RelationTypes eRelation
 }
 
 // helper function to call function if expression true
-void callFuncIf(CvGameObject* pObject, BoolExpr* pExpr, boost::function<void (CvGameObject*)> func)
+void callFuncIf(CvGameObject* pObject, BoolExpr* pExpr, bst::function<void (CvGameObject*)> func)
 {
 	if (pExpr->evaluate(pObject))
 		func(pObject);
 }
 
-void CvGameObject::foreachRelatedCond(GameObjectTypes eType, RelationTypes eRelation, boost::function<void(CvGameObject *)> func, BoolExpr* pExpr, int iData)
+void CvGameObject::foreachRelatedCond(GameObjectTypes eType, RelationTypes eRelation, bst::function<void(CvGameObject *)> func, BoolExpr* pExpr, int iData)
 {
 	if (pExpr)
 	{
-		foreachRelated(eType, eRelation, boost::bind(callFuncIf, _1, pExpr, func), iData);
+		foreachRelated(eType, eRelation, bst::bind(callFuncIf, _1, pExpr, func), iData);
 	}
 	else
 	{
@@ -522,30 +521,30 @@ void addToVector(CvGameObject* pObject, std::vector<CvGameObject*> *kEnum)
 
 void CvGameObject::enumerate(std::vector<CvGameObject*> &kEnum, GameObjectTypes eType)
 {
-	foreach(eType, boost::bind(addToVector, _1, &kEnum));
+	foreach(eType, bst::bind(addToVector, _1, &kEnum));
 }
 
 void CvGameObject::enumerateOn(std::vector<CvGameObject*> &kEnum, GameObjectTypes eType)
 {
-	foreachOn(eType, boost::bind(addToVector, _1, &kEnum));
+	foreachOn(eType, bst::bind(addToVector, _1, &kEnum));
 }
 
 void CvGameObject::enumerateNear(std::vector<CvGameObject*> &kEnum, GameObjectTypes eType, int iDistance)
 {
-	foreachNear(eType, boost::bind(addToVector, _1, &kEnum), iDistance);
+	foreachNear(eType, bst::bind(addToVector, _1, &kEnum), iDistance);
 }
 
 void CvGameObject::enumerateRelated(std::vector<CvGameObject*>& kEnum, GameObjectTypes eType, RelationTypes eRelation, int iData)
 {
-	foreachRelated(eType, eRelation, boost::bind(addToVector, _1, &kEnum), iData);
+	foreachRelated(eType, eRelation, bst::bind(addToVector, _1, &kEnum), iData);
 }
 
 void CvGameObject::enumerateRelatedCond(std::vector<CvGameObject*>& kEnum, GameObjectTypes eType, RelationTypes eRelation, BoolExpr* pExpr, int iData)
 {
-	foreachRelatedCond(eType, eRelation, boost::bind(addToVector, _1, &kEnum), pExpr, iData);
+	foreachRelatedCond(eType, eRelation, bst::bind(addToVector, _1, &kEnum), pExpr, iData);
 }
 
-void CvGameObjectPlot::foreachOn(GameObjectTypes eType, boost::function<void(CvGameObject *)> func)
+void CvGameObjectPlot::foreachOn(GameObjectTypes eType, bst::function<void(CvGameObject *)> func)
 {
 	if (eType == GAMEOBJECT_PLOT)
 	{
@@ -557,29 +556,29 @@ void CvGameObjectPlot::foreachOn(GameObjectTypes eType, boost::function<void(CvG
 	}
 }
 
-void CvGameObjectPlot::foreachNear(GameObjectTypes eType, boost::function<void(CvGameObject *)> func, int iDistance)
+void CvGameObjectPlot::foreachNear(GameObjectTypes eType, bst::function<void(CvGameObject *)> func, int iDistance)
 {
-	int iPlotX = m_pPlot->getX_INLINE();
-	int iPlotY = m_pPlot->getY_INLINE();
-	
+	const int iPlotX = m_pPlot->getX();
+	const int iPlotY = m_pPlot->getY();
+
 	for (int iX=iPlotX - iDistance; iX <= iPlotX + iDistance; iX++)
 	{
 		for (int iY=iPlotY - iDistance; iY <= iPlotY + iDistance; iY++)
 		{
-			CvPlot* pPlot = GC.getMapINLINE().plotINLINE(iX, iY);
+			CvPlot* pPlot = GC.getMap().plot(iX, iY);
 			if (pPlot)
 				pPlot->getGameObject()->foreachOn(eType, func);
 		}
 	}
 }
 
-void CvGameObjectCity::foreachRelated(GameObjectTypes eType, RelationTypes eRelation, boost::function<void(CvGameObject *)> func, int iData)
+void CvGameObjectCity::foreachRelated(GameObjectTypes eType, RelationTypes eRelation, bst::function<void(CvGameObject *)> func, int iData)
 {
 	if (eRelation == RELATION_TRADE)
 	{
 		if (eType == GAMEOBJECT_CITY)
 		{
-			int iRoutes = m_pCity->getTradeRoutes();
+			const int iRoutes = m_pCity->getTradeRoutes();
 			for (int i=0; i<iRoutes; i++)
 			{
 				CvCity* pTradeCity = m_pCity->getTradeCity(i);
@@ -596,7 +595,7 @@ void CvGameObjectCity::foreachRelated(GameObjectTypes eType, RelationTypes eRela
 		{
 			for (int iI = 0; iI < m_pCity->getNumCityPlots(); iI++)
 			{
-				CvPlot* pLoopPlot = plotCity(m_pCity->getX_INLINE(), m_pCity->getY_INLINE(), iI);
+				CvPlot* pLoopPlot = plotCity(m_pCity->getX(), m_pCity->getY(), iI);
 				if (pLoopPlot)
 				{
 					if (pLoopPlot->getWorkingCity() == m_pCity)
@@ -613,7 +612,7 @@ void CvGameObjectCity::foreachRelated(GameObjectTypes eType, RelationTypes eRela
 	}
 }
 
-void CvGameObjectPlot::foreachRelated(GameObjectTypes eType, RelationTypes eRelation, boost::function<void(CvGameObject *)> func, int iData)
+void CvGameObjectPlot::foreachRelated(GameObjectTypes eType, RelationTypes eRelation, bst::function<void(CvGameObject *)> func, int iData)
 {
 	if (eRelation == RELATION_WORKING)
 	{
@@ -628,28 +627,18 @@ void CvGameObjectPlot::foreachRelated(GameObjectTypes eType, RelationTypes eRela
 	}
 }
 
-void CvGameObjectGame::foreachManipulator(boost::function<void(CvGameObject *,CvPropertyManipulators *)> func)
-{
-	// No specific manipulators apply to game, only global ones
-}
-
-void CvGameObjectTeam::foreachManipulator(boost::function<void(CvGameObject *,CvPropertyManipulators *)> func)
-{
-	// No specific manipulators apply to teams, only global ones
-}
-
-void CvGameObjectPlayer::foreachManipulator(boost::function<void(CvGameObject *,CvPropertyManipulators *)> func)
+void CvGameObjectPlayer::foreachManipulator(ManipCallbackFn func) const
 {
 	// Civics
 	for (int i=0; i<GC.getNumCivicOptionInfos(); i++)
 	{
-		func(this, GC.getCivicInfo(m_pPlayer->getCivics((CivicOptionTypes)i)).getPropertyManipulators());
+		func(GC.getCivicInfo(m_pPlayer->getCivics((CivicOptionTypes)i)).getPropertyManipulators());
 	}
 
 	// State religion
 	if (m_pPlayer->getStateReligion() != NO_RELIGION)
 	{
-		func(this, GC.getReligionInfo(m_pPlayer->getStateReligion()).getPropertyManipulators());
+		func(GC.getReligionInfo(m_pPlayer->getStateReligion()).getPropertyManipulators());
 	}
 
 	// Leader traits
@@ -659,15 +648,15 @@ void CvGameObjectPlayer::foreachManipulator(boost::function<void(CvGameObject *,
 		if (m_pPlayer->hasTrait((TraitTypes)i))
 		//TB Traits end
 		{
-			func(this, GC.getTraitInfo((TraitTypes)i).getPropertyManipulators());
+			func(GC.getTraitInfo((TraitTypes)i).getPropertyManipulators());
 		}
 	}
 
 	// Handicap
-	func(this, GC.getHandicapInfo(m_pPlayer->getHandicapType()).getPropertyManipulators());
+	func(GC.getHandicapInfo(m_pPlayer->getHandicapType()).getPropertyManipulators());
 }
 
-void CvGameObjectCity::foreachManipulator(boost::function<void(CvGameObject *,CvPropertyManipulators *)> func)
+void CvGameObjectCity::foreachManipulator(ManipCallbackFn func) const
 {
 	// Building manipulators apply to cities
 	for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
@@ -677,7 +666,7 @@ void CvGameObjectCity::foreachManipulator(boost::function<void(CvGameObject *,Cv
 			//Team Project (5)
 			if (!m_pCity->isReligiouslyDisabledBuilding((BuildingTypes)iI))
 			{
-				func(this, GC.getBuildingInfo((BuildingTypes)iI).getPropertyManipulators());
+				func(GC.getBuildingInfo((BuildingTypes)iI).getPropertyManipulators());
 			}
 		}
 	}
@@ -687,7 +676,7 @@ void CvGameObjectCity::foreachManipulator(boost::function<void(CvGameObject *,Cv
 	{
 		if (m_pCity->isHasReligion((ReligionTypes)i))
 		{
-			func(this, GC.getReligionInfo((ReligionTypes)i).getPropertyManipulators());
+			func(GC.getReligionInfo((ReligionTypes)i).getPropertyManipulators());
 		}
 	}
 
@@ -696,70 +685,63 @@ void CvGameObjectCity::foreachManipulator(boost::function<void(CvGameObject *,Cv
 	{
 		if (m_pCity->isHasCorporation((CorporationTypes)i))
 		{
-			func(this, GC.getCorporationInfo((CorporationTypes)i).getPropertyManipulators());
+			func(GC.getCorporationInfo((CorporationTypes)i).getPropertyManipulators());
 		}
 	}
 
 	// Specialists
 	for (int i=0; i< GC.getNumSpecialistInfos(); i++)
 	{
-		int iCount = m_pCity->getSpecialistCount((SpecialistTypes)i) + m_pCity->getFreeSpecialistCount((SpecialistTypes)i);
+		const int iCount = m_pCity->getSpecialistCount((SpecialistTypes)i) + m_pCity->getFreeSpecialistCount((SpecialistTypes)i);
 		for (int j=0; j<iCount; j++)
 		{
-			func(this, GC.getSpecialistInfo((SpecialistTypes)i).getPropertyManipulators());
+			func(GC.getSpecialistInfo((SpecialistTypes)i).getPropertyManipulators());
 		}
 	}
 }
 
-void CvGameObjectUnit::foreachManipulator(boost::function<void(CvGameObject *,CvPropertyManipulators *)> func)
+void CvGameObjectUnit::foreachManipulator(ManipCallbackFn func) const
 {
 	// Unit Type
-	func(this, m_pUnit->getUnitInfo().getPropertyManipulators());
+	func(m_pUnit->getUnitInfo().getPropertyManipulators());
 
 	// Promotions
 	for (int i=0; i<GC.getNumPromotionInfos(); i++)
 	{
 		if (m_pUnit->isHasPromotion((PromotionTypes)i))
 		{
-			func(this, GC.getPromotionInfo((PromotionTypes)i).getPropertyManipulators());
+			func(GC.getPromotionInfo((PromotionTypes)i).getPropertyManipulators());
 		}
 	}
 }
 
-void CvGameObjectPlot::foreachManipulator(boost::function<void(CvGameObject *,CvPropertyManipulators *)> func)
+void CvGameObjectPlot::foreachManipulator(ManipCallbackFn func) const
 {
 	// Terrain Type
-	func(this, GC.getTerrainInfo(m_pPlot->getTerrainType()).getPropertyManipulators());
+	func(GC.getTerrainInfo(m_pPlot->getTerrainType()).getPropertyManipulators());
 
 	// Feature Type
-//#ifdef MULTI_FEATURE_MOD
-//	for (int i=0; i<m_pPlot->getNumFeatures(); i++)
-//	{
-//		func(this, GC.getFeatureInfo(m_pPlot->getFeatureByIndex(i)).getPropertyManipulators());
-//	}
-//#else
 	if (m_pPlot->getFeatureType() != NO_FEATURE)
 	{
-		func(this, GC.getFeatureInfo(m_pPlot->getFeatureType()).getPropertyManipulators());
+		func(GC.getFeatureInfo(m_pPlot->getFeatureType()).getPropertyManipulators());
 	}
-//#endif
 
 	// Improvement Type
 	if (m_pPlot->getImprovementType() != NO_IMPROVEMENT)
 	{
-		func(this, GC.getImprovementInfo(m_pPlot->getImprovementType()).getPropertyManipulators());
+		func(GC.getImprovementInfo(m_pPlot->getImprovementType()).getPropertyManipulators());
 	}
 
 	// Route Type
 	if (m_pPlot->getRouteType() != NO_ROUTE)
 	{
-		func(this, GC.getRouteInfo(m_pPlot->getRouteType()).getPropertyManipulators());
+		func(GC.getRouteInfo(m_pPlot->getRouteType()).getPropertyManipulators());
 	}
 
 	// Bonus Type
 	if (m_pPlot->getBonusType() != NO_BONUS)
 	{
-		func(this, GC.getBonusInfo(m_pPlot->getBonusType()).getPropertyManipulators());
+		func(GC.getBonusInfo(m_pPlot->getBonusType()).getPropertyManipulators());
 	}
 }
 
@@ -770,8 +752,8 @@ void CvGameObject::eventPropertyChanged(PropertyTypes eProperty, int iNewValue)
 void CvGameObjectCity::eventPropertyChanged(PropertyTypes eProperty, int iNewValue)
 {
 	//CvString szBuffer;
-	CvPropertyInfo& kInfo = GC.getPropertyInfo(eProperty);
-	int iNum = kInfo.getNumPropertyBuildings();
+	const CvPropertyInfo& kInfo = GC.getPropertyInfo(eProperty);
+	const int iNum = kInfo.getNumPropertyBuildings();
 	//TB Combat Mods (disease special manifestation and removal system)
 	//PropertyTypes eDiseaseType = (PropertyTypes)GC.getInfoTypeForString("PROPERTY_DISEASE");
 
@@ -785,9 +767,9 @@ void CvGameObjectCity::eventPropertyChanged(PropertyTypes eProperty, int iNewVal
 		{
 			for (int i=0; i<iNum; i++)
 			{
-				PropertyBuilding& kBuilding = kInfo.getPropertyBuilding(i);
-				bool bHasBuilding = m_pCity->getNumRealBuilding(kBuilding.eBuilding) > 0;
-				bool bInRange = (iNewValue >= kBuilding.iMinValue) && (iNewValue <= kBuilding.iMaxValue);
+				const PropertyBuilding& kBuilding = kInfo.getPropertyBuilding(i);
+				const bool bHasBuilding = m_pCity->getNumRealBuilding(kBuilding.eBuilding) > 0;
+				const bool bInRange = (iNewValue >= kBuilding.iMinValue) && (iNewValue <= kBuilding.iMaxValue);
 				if (!bInRange)
 				{
 					if (bHasBuilding)
@@ -827,14 +809,14 @@ void CvGameObjectUnit::eventPropertyChanged(PropertyTypes eProperty, int iNewVal
 {
 	PROFILE_FUNC();
 
-	CvPropertyInfo& kInfo = GC.getPropertyInfo(eProperty);
-	int iNum = kInfo.getNumPropertyPromotions();
+	const CvPropertyInfo& kInfo = GC.getPropertyInfo(eProperty);
+	const int iNum = kInfo.getNumPropertyPromotions();
 
 	for (int i=0; i<iNum; i++)
 	{
-		PropertyPromotion& kPromotion = kInfo.getPropertyPromotion(i);
-		bool bHasPromotion = m_pUnit->isHasPromotion(kPromotion.ePromotion);
-		bool bInRange = (iNewValue >= kPromotion.iMinValue) && (iNewValue <= kPromotion.iMaxValue);
+		const PropertyPromotion& kPromotion = kInfo.getPropertyPromotion(i);
+		const bool bHasPromotion = m_pUnit->isHasPromotion(kPromotion.ePromotion);
+		const bool bInRange = (iNewValue >= kPromotion.iMinValue) && (iNewValue <= kPromotion.iMaxValue);
 		if (!bInRange)
 		{
 			if (bHasPromotion)
@@ -845,14 +827,18 @@ void CvGameObjectUnit::eventPropertyChanged(PropertyTypes eProperty, int iNewVal
 		else
 		{
 			//TB Combat Mods begin
-			bool bEquip = GC.getPromotionInfo(kPromotion.ePromotion).isEquipment();
-			bool bAfflict = GC.getPromotionInfo(kPromotion.ePromotion).isAffliction();
-			bool bPromote = false;
-			if (!bEquip && !bAfflict)
+			PromotionRequirements::flags promoFlags = PromotionRequirements::IgnoreHas;
+			if (GC.getPromotionInfo(kPromotion.ePromotion).isEquipment())
+				promoFlags |= PromotionRequirements::Equip;
+			if(GC.getPromotionInfo(kPromotion.ePromotion).isAffliction())
+				promoFlags |= PromotionRequirements::Afflict;
+
+			if (!GC.getPromotionInfo(kPromotion.ePromotion).isEquipment() &&
+				!GC.getPromotionInfo(kPromotion.ePromotion).isAffliction())
 			{
-				bPromote = true;
+				promoFlags |= PromotionRequirements::Promote;
 			}
-			if (m_pUnit->canAcquirePromotion(kPromotion.ePromotion, true, bEquip, bAfflict, bPromote))
+			if (m_pUnit->canAcquirePromotion(kPromotion.ePromotion, promoFlags))
 			//TB Combat Mods end
 			{
 				if (!bHasPromotion)
@@ -955,7 +941,7 @@ bool CvGameObjectUnit::isTag(TagTypes eTag) const
 
 bool CvGameObjectPlot::isTag(TagTypes eTag) const
 {
-	CvCity* pCity = m_pPlot->getPlotCity();
+	const CvCity* pCity = m_pPlot->getPlotCity();
 	switch (eTag)
 	{
 		case TAG_FRESH_WATER:
@@ -1034,7 +1020,7 @@ int CvGameObjectGame::getAttribute(AttributeTypes eAttribute) const
 
 		for (int iPlayer = 0; iPlayer < MAX_PLAYERS; ++iPlayer)
 		{
-			CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iPlayer);
+			const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iPlayer);
 			if (kLoopPlayer.isAlive())
 			{
 				++iCount;
@@ -1070,9 +1056,7 @@ bool CvGameObjectGame::hasGOM(GOMTypes eType, int iID)
 		case GOM_BUILDING:
 		{
 			// If there is any building of that type created, return true
-			BuildingTypes eBuilding = (BuildingTypes) iID;
-			return GC.getGameINLINE().getBuildingClassCreatedCount((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType()) > 0;
-			//break;
+			return GC.getGame().getBuildingCreatedCount((BuildingTypes)iID) > 0;
 		}
 
 		case GOM_PROMOTION:
@@ -1084,7 +1068,7 @@ bool CvGameObjectGame::hasGOM(GOMTypes eType, int iID)
 		{
 			// Defer to players, combine with OR
 			bool bHasGOM = false;
-			foreach(GAMEOBJECT_PLAYER, boost::bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
+			foreach(GAMEOBJECT_PLAYER, bst::bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
 			return bHasGOM;
 			//break;
 		}
@@ -1096,8 +1080,8 @@ bool CvGameObjectGame::hasGOM(GOMTypes eType, int iID)
 
 		case GOM_OPTION:
 		{
-			GameOptionTypes eOption = (GameOptionTypes) iID;
-			return GC.getGameINLINE().isOption(eOption);
+			const GameOptionTypes eOption = (GameOptionTypes) iID;
+			return GC.getGame().isOption(eOption);
 			//break;
 		}
 
@@ -1108,8 +1092,8 @@ bool CvGameObjectGame::hasGOM(GOMTypes eType, int iID)
 
 		case GOM_GAMESPEED:
 		{
-			GameSpeedTypes eSpeed = (GameSpeedTypes) iID;
-			return GC.getGameINLINE().getGameSpeedType() == eSpeed;
+			const GameSpeedTypes eSpeed = (GameSpeedTypes) iID;
+			return GC.getGame().getGameSpeedType() == eSpeed;
 			//break;
 		}
 
@@ -1126,16 +1110,15 @@ bool CvGameObjectGame::hasGOM(GOMTypes eType, int iID)
 		case GOM_UNITTYPE:
 		{
 			// If there is any unit of that type created, return true
-			UnitTypes eUnit = (UnitTypes) iID;
-			return GC.getGameINLINE().getUnitClassCreatedCount((UnitClassTypes)GC.getUnitInfo(eUnit).getUnitClassType()) > 0;
+			return GC.getGame().getUnitCreatedCount((UnitTypes) iID) > 0;
 			//break;
 		}
 
 		case GOM_TECH:
 		{
 			// If any team has researched that tech, return true
-			TechTypes eTech = (TechTypes) iID;
-			return GC.getGameINLINE().countKnownTechNumTeams(eTech) > 0;
+			const TechTypes eTech = (TechTypes) iID;
+			return GC.getGame().countKnownTechNumTeams(eTech) > 0;
 			//break;
 		}
 
@@ -1143,7 +1126,7 @@ bool CvGameObjectGame::hasGOM(GOMTypes eType, int iID)
 		{
 			// Defer to players, combine with OR
 			bool bHasGOM = false;
-			foreach(GAMEOBJECT_PLAYER, boost::bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
+			foreach(GAMEOBJECT_PLAYER, bst::bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
 			return bHasGOM;
 			//break;
 		}
@@ -1151,14 +1134,14 @@ bool CvGameObjectGame::hasGOM(GOMTypes eType, int iID)
 		case GOM_RELIGION:
 		{
 			// True if the religion has been founded
-			return GC.getGameINLINE().isReligionFounded((ReligionTypes) iID);
+			return GC.getGame().isReligionFounded((ReligionTypes) iID);
 			//break;
 		}
 
 		case GOM_CORPORATION:
 		{
 			// True if the corporation has been founded
-			return GC.getGameINLINE().isCorporationFounded((CorporationTypes) iID);
+			return GC.getGame().isCorporationFounded((CorporationTypes) iID);
 			//break;
 		}
 
@@ -1174,8 +1157,8 @@ bool CvGameObjectGame::hasGOM(GOMTypes eType, int iID)
 
 		case GOM_HANDICAP:
 		{
-			HandicapTypes eHandicap = (HandicapTypes) iID;
-			return GC.getGameINLINE().getHandicapType() == eHandicap;
+			const HandicapTypes eHandicap = (HandicapTypes) iID;
+			return GC.getGame().getHandicapType() == eHandicap;
 			//break;
 		}
 	}
@@ -1189,9 +1172,7 @@ bool CvGameObjectTeam::hasGOM(GOMTypes eType, int iID)
 		case GOM_BUILDING:
 		{
 			// If there is any building of that type in the team, return true
-			BuildingTypes eBuilding = (BuildingTypes) iID;
-			return m_pTeam->getBuildingClassCount((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType()) > 0;
-			//break;
+			return m_pTeam->getBuildingCount(static_cast<BuildingTypes>(iID)) > 0;
 		}
 
 		case GOM_PROMOTION:
@@ -1203,7 +1184,7 @@ bool CvGameObjectTeam::hasGOM(GOMTypes eType, int iID)
 		{
 			// Defer to players, combine with OR
 			bool bHasGOM = false;
-			foreach(GAMEOBJECT_PLAYER, boost::bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
+			foreach(GAMEOBJECT_PLAYER, bst::bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
 			return bHasGOM;
 			//break;
 		}
@@ -1215,8 +1196,8 @@ bool CvGameObjectTeam::hasGOM(GOMTypes eType, int iID)
 
 		case GOM_OPTION:
 		{
-			GameOptionTypes eOption = (GameOptionTypes) iID;
-			return GC.getGameINLINE().isOption(eOption);
+			const GameOptionTypes eOption = (GameOptionTypes) iID;
+			return GC.getGame().isOption(eOption);
 			//break;
 		}
 
@@ -1227,8 +1208,8 @@ bool CvGameObjectTeam::hasGOM(GOMTypes eType, int iID)
 
 		case GOM_GAMESPEED:
 		{
-			GameSpeedTypes eSpeed = (GameSpeedTypes) iID;
-			return GC.getGameINLINE().getGameSpeedType() == eSpeed;
+			const GameSpeedTypes eSpeed = (GameSpeedTypes) iID;
+			return GC.getGame().getGameSpeedType() == eSpeed;
 			//break;
 		}
 
@@ -1241,7 +1222,7 @@ bool CvGameObjectTeam::hasGOM(GOMTypes eType, int iID)
 		{
 			// Defer to players, combine with OR
 			bool bHasGOM = false;
-			foreach(GAMEOBJECT_PLAYER, boost::bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
+			foreach(GAMEOBJECT_PLAYER, bst::bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
 			return bHasGOM;
 			//break;
 		}
@@ -1249,15 +1230,14 @@ bool CvGameObjectTeam::hasGOM(GOMTypes eType, int iID)
 		case GOM_UNITTYPE:
 		{
 			// If there is any unit of that type in the team, return true
-			UnitTypes eUnit = (UnitTypes) iID;
-			return m_pTeam->getUnitClassCount((UnitClassTypes)GC.getUnitInfo(eUnit).getUnitClassType()) > 0;
+			return m_pTeam->getUnitCount((UnitTypes) iID) > 0;
 			//break;
 		}
 
 		case GOM_TECH:
 		{
 			// If the team has researched that tech, return true
-			TechTypes eTech = (TechTypes) iID;
+			const TechTypes eTech = (TechTypes) iID;
 			return m_pTeam->isHasTech(eTech);
 			//break;
 		}
@@ -1266,7 +1246,7 @@ bool CvGameObjectTeam::hasGOM(GOMTypes eType, int iID)
 		{
 			// Defer to players, combine with OR
 			bool bHasGOM = false;
-			foreach(GAMEOBJECT_PLAYER, boost::bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
+			foreach(GAMEOBJECT_PLAYER, bst::bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
 			return bHasGOM;
 			//break;
 		}
@@ -1275,7 +1255,7 @@ bool CvGameObjectTeam::hasGOM(GOMTypes eType, int iID)
 		{
 			// Defer to players, combine with OR
 			bool bHasGOM = false;
-			foreach(GAMEOBJECT_PLAYER, boost::bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
+			foreach(GAMEOBJECT_PLAYER, bst::bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
 			return bHasGOM;
 			//break;
 		}
@@ -1284,7 +1264,7 @@ bool CvGameObjectTeam::hasGOM(GOMTypes eType, int iID)
 		{
 			// Defer to players, combine with OR
 			bool bHasGOM = false;
-			foreach(GAMEOBJECT_PLAYER, boost::bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
+			foreach(GAMEOBJECT_PLAYER, bst::bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
 			return bHasGOM;
 			//break;
 		}
@@ -1301,7 +1281,7 @@ bool CvGameObjectTeam::hasGOM(GOMTypes eType, int iID)
 
 		case GOM_HANDICAP:
 		{
-			HandicapTypes eHandicap = (HandicapTypes) iID;
+			const HandicapTypes eHandicap = (HandicapTypes) iID;
 			return m_pTeam->getHandicapType() == eHandicap;
 			//break;
 		}
@@ -1316,9 +1296,7 @@ bool CvGameObjectPlayer::hasGOM(GOMTypes eType, int iID)
 		case GOM_BUILDING:
 		{
 			// If there is any building of that type of the player, return true
-			BuildingTypes eBuilding = (BuildingTypes) iID;
-			return m_pPlayer->getBuildingClassCount((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType()) > 0;
-			//break;
+			return m_pPlayer->getBuildingCount(static_cast<BuildingTypes>(iID)) > 0;
 		}
 
 		case GOM_PROMOTION:
@@ -1329,7 +1307,7 @@ bool CvGameObjectPlayer::hasGOM(GOMTypes eType, int iID)
 		case GOM_TRAIT:
 		{
 			// Return true if this player has the trait
-			TraitTypes eTrait = (TraitTypes) iID;
+			const TraitTypes eTrait = (TraitTypes) iID;
 			return m_pPlayer->hasTrait(eTrait);
 			//break;
 		}
@@ -1341,8 +1319,8 @@ bool CvGameObjectPlayer::hasGOM(GOMTypes eType, int iID)
 
 		case GOM_OPTION:
 		{
-			GameOptionTypes eOption = (GameOptionTypes) iID;
-			return GC.getGameINLINE().isOption(eOption);
+			const GameOptionTypes eOption = (GameOptionTypes) iID;
+			return GC.getGame().isOption(eOption);
 			//break;
 		}
 
@@ -1353,8 +1331,8 @@ bool CvGameObjectPlayer::hasGOM(GOMTypes eType, int iID)
 
 		case GOM_GAMESPEED:
 		{
-			GameSpeedTypes eSpeed = (GameSpeedTypes) iID;
-			return GC.getGameINLINE().getGameSpeedType() == eSpeed;
+			const GameSpeedTypes eSpeed = (GameSpeedTypes) iID;
+			return GC.getGame().getGameSpeedType() == eSpeed;
 			//break;
 		}
 
@@ -1366,7 +1344,7 @@ bool CvGameObjectPlayer::hasGOM(GOMTypes eType, int iID)
 		case GOM_BONUS:
 		{
 			// Use getNumAvailableBonuses which takes the bonuses in the capitals plot group, alternative would be hasBonus which loops through all cities
-			BonusTypes eBonus = (BonusTypes) iID;
+			const BonusTypes eBonus = (BonusTypes) iID;
 			return m_pPlayer->getNumAvailableBonuses(eBonus) > 0;
 			//break;
 		}
@@ -1374,15 +1352,14 @@ bool CvGameObjectPlayer::hasGOM(GOMTypes eType, int iID)
 		case GOM_UNITTYPE:
 		{
 			// If there is any unit of that type of the player, return true
-			UnitTypes eUnit = (UnitTypes) iID;
-			return m_pPlayer->getUnitClassCount((UnitClassTypes)GC.getUnitInfo(eUnit).getUnitClassType()) > 0;
+			return m_pPlayer->getUnitCount((UnitTypes) iID) > 0;
 			//break;
 		}
 
 		case GOM_TECH:
 		{
 			// If the team has researched that tech, return true
-			TechTypes eTech = (TechTypes) iID;
+			const TechTypes eTech = (TechTypes) iID;
 			return GET_TEAM(m_pPlayer->getTeam()).isHasTech(eTech);
 			//break;
 		}
@@ -1390,7 +1367,7 @@ bool CvGameObjectPlayer::hasGOM(GOMTypes eType, int iID)
 		case GOM_CIVIC:
 		{
 			// Return true if this player has the civic active
-			CivicTypes eCivic = (CivicTypes) iID;
+			const CivicTypes eCivic = (CivicTypes) iID;
 			return m_pPlayer->isCivic(eCivic);
 			//break;
 		}
@@ -1421,7 +1398,7 @@ bool CvGameObjectPlayer::hasGOM(GOMTypes eType, int iID)
 
 		case GOM_HANDICAP:
 		{
-			HandicapTypes eHandicap = (HandicapTypes) iID;
+			const HandicapTypes eHandicap = (HandicapTypes) iID;
 			return m_pPlayer->getHandicapType() == eHandicap;
 			//break;
 		}
@@ -1436,7 +1413,7 @@ bool CvGameObjectCity::hasGOM(GOMTypes eType, int iID)
 		case GOM_BUILDING:
 		{
 			// return true if the building is present and active
-			BuildingTypes eBuilding = (BuildingTypes) iID;
+			const BuildingTypes eBuilding = (BuildingTypes) iID;
 			return m_pCity->getNumActiveBuilding(eBuilding) > 0;
 			//break;
 		}
@@ -1444,7 +1421,7 @@ bool CvGameObjectCity::hasGOM(GOMTypes eType, int iID)
 		case GOM_PROMOTION:
 		{
 			// return true if that is a free promotion from the city
-			PromotionTypes ePromotion = (PromotionTypes) iID;
+			const PromotionTypes ePromotion = (PromotionTypes) iID;
 			return m_pCity->isFreePromotion(ePromotion);
 			//break;
 		}
@@ -1452,8 +1429,8 @@ bool CvGameObjectCity::hasGOM(GOMTypes eType, int iID)
 		case GOM_TRAIT:
 		{
 			// Return true if the owner has the trait
-			TraitTypes eTrait = (TraitTypes) iID;
-			return GET_PLAYER(m_pCity->getOwnerINLINE()).hasTrait(eTrait);
+			const TraitTypes eTrait = (TraitTypes) iID;
+			return GET_PLAYER(m_pCity->getOwner()).hasTrait(eTrait);
 			//break;
 		}
 
@@ -1461,15 +1438,15 @@ bool CvGameObjectCity::hasGOM(GOMTypes eType, int iID)
 		{
 			// Defer to city plots, combine with OR
 			bool bHasGOM = false;
-			foreachRelated(GAMEOBJECT_PLOT, RELATION_WORKING, boost::bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
+			foreachRelated(GAMEOBJECT_PLOT, RELATION_WORKING, bst::bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
 			return bHasGOM;
 			//break;
 		}
 
 		case GOM_OPTION:
 		{
-			GameOptionTypes eOption = (GameOptionTypes) iID;
-			return GC.getGameINLINE().isOption(eOption);
+			const GameOptionTypes eOption = (GameOptionTypes) iID;
+			return GC.getGame().isOption(eOption);
 			//break;
 		}
 
@@ -1477,15 +1454,15 @@ bool CvGameObjectCity::hasGOM(GOMTypes eType, int iID)
 		{
 			// Defer to city plots, combine with OR
 			bool bHasGOM = false;
-			foreachRelated(GAMEOBJECT_PLOT, RELATION_WORKING, boost::bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
+			foreachRelated(GAMEOBJECT_PLOT, RELATION_WORKING, bst::bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
 			return bHasGOM;
 			//break;
 		}
 
 		case GOM_GAMESPEED:
 		{
-			GameSpeedTypes eSpeed = (GameSpeedTypes) iID;
-			return GC.getGameINLINE().getGameSpeedType() == eSpeed;
+			const GameSpeedTypes eSpeed = (GameSpeedTypes) iID;
+			return GC.getGame().getGameSpeedType() == eSpeed;
 			//break;
 		}
 
@@ -1493,7 +1470,7 @@ bool CvGameObjectCity::hasGOM(GOMTypes eType, int iID)
 		{
 			// Defer to city plots, combine with OR
 			bool bHasGOM = false;
-			foreachRelated(GAMEOBJECT_PLOT, RELATION_WORKING, boost::bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
+			foreachRelated(GAMEOBJECT_PLOT, RELATION_WORKING, bst::bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
 			return bHasGOM;
 			//break;
 		}
@@ -1501,7 +1478,7 @@ bool CvGameObjectCity::hasGOM(GOMTypes eType, int iID)
 		case GOM_BONUS:
 		{
 			// Vicinity not required, only connection
-			BonusTypes eBonus = (BonusTypes) iID;
+			const BonusTypes eBonus = (BonusTypes) iID;
 			return m_pCity->hasBonus(eBonus);
 			//break;
 		}
@@ -1516,7 +1493,7 @@ bool CvGameObjectCity::hasGOM(GOMTypes eType, int iID)
 		case GOM_TECH:
 		{
 			// If the team has researched that tech, return true
-			TechTypes eTech = (TechTypes) iID;
+			const TechTypes eTech = (TechTypes) iID;
 			return GET_TEAM(m_pCity->getTeam()).isHasTech(eTech);
 			//break;
 		}
@@ -1524,8 +1501,8 @@ bool CvGameObjectCity::hasGOM(GOMTypes eType, int iID)
 		case GOM_CIVIC:
 		{
 			// Return true if the owning player has the civic active
-			CivicTypes eCivic = (CivicTypes) iID;
-			return GET_PLAYER(m_pCity->getOwnerINLINE()).isCivic(eCivic);
+			const CivicTypes eCivic = (CivicTypes) iID;
+			return GET_PLAYER(m_pCity->getOwner()).isCivic(eCivic);
 			//break;
 		}
 
@@ -1547,7 +1524,7 @@ bool CvGameObjectCity::hasGOM(GOMTypes eType, int iID)
 		{
 			// Defer to city plots, combine with OR
 			bool bHasGOM = false;
-			foreachRelated(GAMEOBJECT_PLOT, RELATION_WORKING, boost::bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
+			foreachRelated(GAMEOBJECT_PLOT, RELATION_WORKING, bst::bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
 			return bHasGOM;
 			//break;
 		}
@@ -1561,7 +1538,7 @@ bool CvGameObjectCity::hasGOM(GOMTypes eType, int iID)
 
 		case GOM_HANDICAP:
 		{
-			HandicapTypes eHandicap = (HandicapTypes) iID;
+			const HandicapTypes eHandicap = (HandicapTypes) iID;
 			return m_pCity->getHandicapType() == eHandicap;
 			//break;
 		}
@@ -1576,10 +1553,10 @@ bool CvGameObjectUnit::hasGOM(GOMTypes eType, int iID)
 		case GOM_BUILDING:
 		{
 			// return true if the building is present in the city the unit is in and active
-			BuildingTypes eBuilding = (BuildingTypes) iID;
-			CvCity* pCity = m_pUnit->plot()->getPlotCity();
+			const CvCity* pCity = m_pUnit->plot()->getPlotCity();
 			if (pCity)
 			{
+				const BuildingTypes eBuilding = (BuildingTypes) iID;
 				return pCity->getNumActiveBuilding(eBuilding) > 0;
 			}
 			else
@@ -1592,7 +1569,7 @@ bool CvGameObjectUnit::hasGOM(GOMTypes eType, int iID)
 		case GOM_PROMOTION:
 		{
 			// return true if the unit has that promotion
-			PromotionTypes ePromotion = (PromotionTypes) iID;
+			const PromotionTypes ePromotion = (PromotionTypes) iID;
 			return m_pUnit->isHasPromotion(ePromotion);
 			//break;
 		}
@@ -1600,49 +1577,45 @@ bool CvGameObjectUnit::hasGOM(GOMTypes eType, int iID)
 		case GOM_TRAIT:
 		{
 			// Return true if the owner has the trait
-			TraitTypes eTrait = (TraitTypes) iID;
-			return GET_PLAYER(m_pUnit->getOwnerINLINE()).hasTrait(eTrait);
+			const TraitTypes eTrait = (TraitTypes) iID;
+			return GET_PLAYER(m_pUnit->getOwner()).hasTrait(eTrait);
 			//break;
 		}
 
 		case GOM_FEATURE:
 		{
 			// Check plot on which the unit is
-			FeatureTypes eFeature = (FeatureTypes) iID;
-//#ifdef MULTI_FEATURE_MOD
-//			return m_pUnit->plot()->getHasFeature(eFeature);
-//#else
+			const FeatureTypes eFeature = (FeatureTypes) iID;
 			return m_pUnit->plot()->getFeatureType() == eFeature;
-//#endif
 			//break;
 		}
 
 		case GOM_OPTION:
 		{
-			GameOptionTypes eOption = (GameOptionTypes) iID;
-			return GC.getGameINLINE().isOption(eOption);
+			const GameOptionTypes eOption = (GameOptionTypes) iID;
+			return GC.getGame().isOption(eOption);
 			//break;
 		}
 
 		case GOM_TERRAIN:
 		{
 			// Check plot on which the unit is
-			TerrainTypes eTerrain = (TerrainTypes) iID;
+			const TerrainTypes eTerrain = (TerrainTypes) iID;
 			return m_pUnit->plot()->getTerrainType() == eTerrain;
 			//break;
 		}
 
 		case GOM_GAMESPEED:
 		{
-			GameSpeedTypes eSpeed = (GameSpeedTypes) iID;
-			return GC.getGameINLINE().getGameSpeedType() == eSpeed;
+			const GameSpeedTypes eSpeed = (GameSpeedTypes) iID;
+			return GC.getGame().getGameSpeedType() == eSpeed;
 			//break;
 		}
 
 		case GOM_ROUTE:
 		{
 			// Check plot on which the unit is
-			RouteTypes eRoute = (RouteTypes) iID;
+			const RouteTypes eRoute = (RouteTypes) iID;
 			return m_pUnit->plot()->getRouteType() == eRoute;
 			//break;
 		}
@@ -1650,7 +1623,7 @@ bool CvGameObjectUnit::hasGOM(GOMTypes eType, int iID)
 		case GOM_BONUS:
 		{
 			// Check plot on which the unit is
-			BonusTypes eBonus = (BonusTypes) iID;
+			const BonusTypes eBonus = (BonusTypes) iID;
 			return m_pUnit->plot()->getBonusType() == eBonus;
 			//break;
 		}
@@ -1658,7 +1631,7 @@ bool CvGameObjectUnit::hasGOM(GOMTypes eType, int iID)
 		case GOM_UNITTYPE:
 		{
 			// Check the type of the unit
-			UnitTypes eType = (UnitTypes) iID;
+			const UnitTypes eType = (UnitTypes) iID;
 			return m_pUnit->getUnitType() == eType;
 			//break;
 		}
@@ -1666,7 +1639,7 @@ bool CvGameObjectUnit::hasGOM(GOMTypes eType, int iID)
 		case GOM_TECH:
 		{
 			// If the team has researched that tech, return true
-			TechTypes eTech = (TechTypes) iID;
+			const TechTypes eTech = (TechTypes) iID;
 			return GET_TEAM(m_pUnit->getTeam()).isHasTech(eTech);
 			//break;
 		}
@@ -1674,29 +1647,29 @@ bool CvGameObjectUnit::hasGOM(GOMTypes eType, int iID)
 		case GOM_CIVIC:
 		{
 			// Return true if the owning player has the civic active
-			CivicTypes eCivic = (CivicTypes) iID;
-			return GET_PLAYER(m_pUnit->getOwnerINLINE()).isCivic(eCivic);
+			const CivicTypes eCivic = (CivicTypes) iID;
+			return GET_PLAYER(m_pUnit->getOwner()).isCivic(eCivic);
 			//break;
 		}
 
 		case GOM_RELIGION:
 		{
 			// True if the religion is state religion
-			return GET_PLAYER(m_pUnit->getOwnerINLINE()).getStateReligion() == (ReligionTypes)iID;
+			return GET_PLAYER(m_pUnit->getOwner()).getStateReligion() == (ReligionTypes)iID;
 			//break;
 		}
 
 		case GOM_CORPORATION:
 		{
 			// True if the corporation is active
-			return GET_PLAYER(m_pUnit->getOwnerINLINE()).isActiveCorporation((CorporationTypes)iID);
+			return GET_PLAYER(m_pUnit->getOwner()).isActiveCorporation((CorporationTypes)iID);
 			//break;
 		}
 
 		case GOM_IMPROVEMENT:
 		{
 			// Check plot on which the unit is
-			ImprovementTypes eImprovement = (ImprovementTypes) iID;
+			const ImprovementTypes eImprovement = (ImprovementTypes) iID;
 			return m_pUnit->plot()->getImprovementType() == eImprovement;
 			//break;
 		}
@@ -1704,14 +1677,14 @@ bool CvGameObjectUnit::hasGOM(GOMTypes eType, int iID)
 		case GOM_UNITCOMBAT:
 		{
 			// Check the combat types of the unit
-			UnitCombatTypes eType = (UnitCombatTypes) iID;
+			const UnitCombatTypes eType = (UnitCombatTypes) iID;
 			return m_pUnit->isHasUnitCombat(eType);
 			//break;
 		}
 
 		case GOM_HANDICAP:
 		{
-			HandicapTypes eHandicap = (HandicapTypes) iID;
+			const HandicapTypes eHandicap = (HandicapTypes) iID;
 			return m_pUnit->getHandicapType() == eHandicap;
 			//break;
 		}
@@ -1726,10 +1699,10 @@ bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID)
 		case GOM_BUILDING:
 		{
 			// return true if the building is present in the city on this plot and active
-			BuildingTypes eBuilding = (BuildingTypes) iID;
-			CvCity* pCity = m_pPlot->getPlotCity();
+			const CvCity* pCity = m_pPlot->getPlotCity();
 			if (pCity)
 			{
+				const BuildingTypes eBuilding = (BuildingTypes) iID;
 				return pCity->getNumActiveBuilding(eBuilding) > 0;
 			}
 			else
@@ -1743,7 +1716,7 @@ bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID)
 		{
 			// Defer to units on the plot, combine with OR
 			bool bHasGOM = false;
-			foreach(GAMEOBJECT_UNIT, boost::bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
+			foreach(GAMEOBJECT_UNIT, bst::bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
 			return bHasGOM;
 			//break;
 		}
@@ -1751,10 +1724,10 @@ bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID)
 		case GOM_TRAIT:
 		{
 			// Return true if the owner has the trait
-			TraitTypes eTrait = (TraitTypes) iID;
-			PlayerTypes ePlayer = m_pPlot->getOwnerINLINE();
+			const PlayerTypes ePlayer = m_pPlot->getOwner();
 			if (ePlayer != NO_PLAYER)
 			{
+				const TraitTypes eTrait = (TraitTypes) iID;
 				return GET_PLAYER(ePlayer).hasTrait(eTrait);
 			}
 			else
@@ -1767,41 +1740,37 @@ bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID)
 		case GOM_FEATURE:
 		{
 			// Check feature type
-			FeatureTypes eFeature = (FeatureTypes) iID;
-//#ifdef MULTI_FEATURE_MOD
-//			return m_pPlot->getHasFeature(eFeature);
-//#else
+			const FeatureTypes eFeature = (FeatureTypes) iID;
 			return m_pPlot->getFeatureType() == eFeature;
-//#endif
 			//break;
 		}
 
 		case GOM_OPTION:
 		{
-			GameOptionTypes eOption = (GameOptionTypes) iID;
-			return GC.getGameINLINE().isOption(eOption);
+			const GameOptionTypes eOption = (GameOptionTypes) iID;
+			return GC.getGame().isOption(eOption);
 			//break;
 		}
 
 		case GOM_TERRAIN:
 		{
 			// Check terrain type
-			TerrainTypes eTerrain = (TerrainTypes) iID;
+			const TerrainTypes eTerrain = (TerrainTypes) iID;
 			return m_pPlot->getTerrainType() == eTerrain;
 			//break;
 		}
 
 		case GOM_GAMESPEED:
 		{
-			GameSpeedTypes eSpeed = (GameSpeedTypes) iID;
-			return GC.getGameINLINE().getGameSpeedType() == eSpeed;
+			const GameSpeedTypes eSpeed = (GameSpeedTypes) iID;
+			return GC.getGame().getGameSpeedType() == eSpeed;
 			//break;
 		}
 
 		case GOM_ROUTE:
 		{
 			// Check route type
-			RouteTypes eRoute = (RouteTypes) iID;
+			const RouteTypes eRoute = (RouteTypes) iID;
 			return m_pPlot->getRouteType() == eRoute;
 			//break;
 		}
@@ -1809,7 +1778,7 @@ bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID)
 		case GOM_BONUS:
 		{
 			// Check bonus type
-			BonusTypes eBonus = (BonusTypes) iID;
+			const BonusTypes eBonus = (BonusTypes) iID;
 			return m_pPlot->getBonusType() == eBonus;
 			//break;
 		}
@@ -1818,7 +1787,7 @@ bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID)
 		{
 			// Defer to units on the plot, combine with OR
 			bool bHasGOM = false;
-			foreach(GAMEOBJECT_UNIT, boost::bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
+			foreach(GAMEOBJECT_UNIT, bst::bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
 			return bHasGOM;
 			//break;
 		}
@@ -1826,10 +1795,10 @@ bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID)
 		case GOM_TECH:
 		{
 			// If the team has researched that tech, return true
-			TechTypes eTech = (TechTypes) iID;
-			TeamTypes eTeam = m_pPlot->getTeam();
+			const TeamTypes eTeam = m_pPlot->getTeam();
 			if (eTeam != NO_TEAM)
 			{
+				const TechTypes eTech = (TechTypes) iID;
 				return GET_TEAM(eTeam).isHasTech(eTech);
 			}
 			else
@@ -1842,10 +1811,10 @@ bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID)
 		case GOM_CIVIC:
 		{
 			// Return true if the owning player has the civic active
-			CivicTypes eCivic = (CivicTypes) iID;
-			PlayerTypes ePlayer = m_pPlot->getOwnerINLINE();
+			const PlayerTypes ePlayer = m_pPlot->getOwner();
 			if (ePlayer != NO_PLAYER)
 			{
+				const CivicTypes eCivic = (CivicTypes) iID;
 				return GET_PLAYER(ePlayer).isCivic(eCivic);
 			}
 			else
@@ -1858,7 +1827,7 @@ bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID)
 		case GOM_RELIGION:
 		{
 			// return true if the religion is present in the city on this plot
-			CvCity* pCity = m_pPlot->getPlotCity();
+			const CvCity* pCity = m_pPlot->getPlotCity();
 			if (pCity)
 			{
 				return pCity->isHasReligion((ReligionTypes)iID);
@@ -1873,7 +1842,7 @@ bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID)
 		case GOM_CORPORATION:
 		{
 			// return true if the corporation is present in the city on this plot
-			CvCity* pCity = m_pPlot->getPlotCity();
+			const CvCity* pCity = m_pPlot->getPlotCity();
 			if (pCity)
 			{
 				return pCity->isHasCorporation((CorporationTypes)iID);
@@ -1888,7 +1857,7 @@ bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID)
 		case GOM_IMPROVEMENT:
 		{
 			// Check improvement type
-			ImprovementTypes eImprovement = (ImprovementTypes) iID;
+			const ImprovementTypes eImprovement = (ImprovementTypes) iID;
 			return m_pPlot->getImprovementType() == eImprovement;
 			//break;
 		}
@@ -1897,7 +1866,7 @@ bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID)
 		{
 			// Defer to units on the plot, combine with OR
 			bool bHasGOM = false;
-			foreach(GAMEOBJECT_UNIT, boost::bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
+			foreach(GAMEOBJECT_UNIT, bst::bind(aggregateHasGOM, _1, eType, iID, &bHasGOM));
 			return bHasGOM;
 			//break;
 		}
@@ -1905,10 +1874,10 @@ bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID)
 		case GOM_HANDICAP:
 		{
 			// Return true if the owning player has the handicap
-			HandicapTypes eHandicap = (HandicapTypes) iID;
-			PlayerTypes ePlayer = m_pPlot->getOwnerINLINE();
+			const PlayerTypes ePlayer = m_pPlot->getOwner();
 			if (ePlayer != NO_PLAYER)
 			{
+				const HandicapTypes eHandicap = (HandicapTypes) iID;
 				return GET_PLAYER(ePlayer).getHandicapType() == eHandicap;
 			}
 			else
@@ -1921,74 +1890,74 @@ bool CvGameObjectPlot::hasGOM(GOMTypes eType, int iID)
 	return false;
 }
 
-void* CvGameObjectGame::addPythonArgument(CyArgsList *argsList)
+void* CvGameObjectGame::createPythonWrapper(PyObject*& pyObj)
 {
-	CyGame* pGame = new CyGame();
-	argsList->add(gDLL->getPythonIFace()->makePythonObject(pGame));
-	return (void*)pGame;
+	CyGame* wrapper = new CyGame();
+	pyObj = gDLL->getPythonIFace()->makePythonObject(wrapper);
+	return wrapper;
 }
 
-void CvGameObjectGame::disposePythonArgument(void *pArgument)
+void CvGameObjectGame::disposePythonWrapper(void *pArgument)
 {
 	delete (CyGame*)pArgument;
 }
 
-void* CvGameObjectTeam::addPythonArgument(CyArgsList *argsList)
+void* CvGameObjectTeam::createPythonWrapper(PyObject*& pyObj)
 {
-	CyTeam* pTeam = new CyTeam(m_pTeam);
-	argsList->add(gDLL->getPythonIFace()->makePythonObject(pTeam));
-	return (void*)pTeam;
+	CyTeam* wrapper = new CyTeam(m_pTeam);
+	pyObj = gDLL->getPythonIFace()->makePythonObject(wrapper);
+	return wrapper;
 }
 
-void CvGameObjectTeam::disposePythonArgument(void *pArgument)
+void CvGameObjectTeam::disposePythonWrapper(void *pArgument)
 {
 	delete (CyTeam*)pArgument;
 }
 
-void* CvGameObjectPlayer::addPythonArgument(CyArgsList *argsList)
+void* CvGameObjectPlayer::createPythonWrapper(PyObject*& pyObj)
 {
-	CyPlayer* pPlayer = new CyPlayer(m_pPlayer);
-	argsList->add(gDLL->getPythonIFace()->makePythonObject(pPlayer));
-	return (void*)pPlayer;
+	CyPlayer* wrapper = new CyPlayer(m_pPlayer);
+	pyObj = gDLL->getPythonIFace()->makePythonObject(wrapper);
+	return wrapper;
 }
 
-void CvGameObjectPlayer::disposePythonArgument(void *pArgument)
+void CvGameObjectPlayer::disposePythonWrapper(void *pArgument)
 {
 	delete (CyPlayer*)pArgument;
 }
 
-void* CvGameObjectCity::addPythonArgument(CyArgsList *argsList)
+void* CvGameObjectCity::createPythonWrapper(PyObject*& pyObj)
 {
-	CyCity* pCity = new CyCity(m_pCity);
-	argsList->add(gDLL->getPythonIFace()->makePythonObject(pCity));
-	return (void*)pCity;
+	CyCity* wrapper = new CyCity(m_pCity);
+	pyObj = gDLL->getPythonIFace()->makePythonObject(wrapper);
+	return wrapper;
 }
 
-void CvGameObjectCity::disposePythonArgument(void *pArgument)
+void CvGameObjectCity::disposePythonWrapper(void *pArgument)
 {
 	delete (CyCity*)pArgument;
 }
 
-void* CvGameObjectUnit::addPythonArgument(CyArgsList *argsList)
+void* CvGameObjectUnit::createPythonWrapper(PyObject*& pyObj)
 {
-	CyUnit* pUnit = new CyUnit(m_pUnit);
-	argsList->add(gDLL->getPythonIFace()->makePythonObject(pUnit));
-	return (void*)pUnit;
+	CyUnit* wrapper = new CyUnit(m_pUnit);
+	pyObj = gDLL->getPythonIFace()->makePythonObject(wrapper);
+	return wrapper;
 }
 
-void CvGameObjectUnit::disposePythonArgument(void *pArgument)
+void CvGameObjectUnit::disposePythonWrapper(void *pArgument)
 {
 	delete (CyUnit*)pArgument;
 }
 
-void* CvGameObjectPlot::addPythonArgument(CyArgsList *argsList)
+void* CvGameObjectPlot::createPythonWrapper(PyObject*& pyObj)
 {
-	CyPlot* pPlot = new CyPlot(m_pPlot);
-	argsList->add(gDLL->getPythonIFace()->makePythonObject(pPlot));
-	return (void*)pPlot;
+	CyPlot* wrapper = new CyPlot(m_pPlot);
+	pyObj = gDLL->getPythonIFace()->makePythonObject(wrapper);
+	return wrapper;
 }
 
-void CvGameObjectPlot::disposePythonArgument(void *pArgument)
+void CvGameObjectPlot::disposePythonWrapper(void *pArgument)
 {
 	delete (CyPlot*)pArgument;
 }
@@ -1996,27 +1965,27 @@ void CvGameObjectPlot::disposePythonArgument(void *pArgument)
 
 int CvGameObject::adaptValueToGame(int iID, int iValue) const
 {
-	iValue = (iValue * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getPercent(iID)) / 100;
-	return (iValue * GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getPercent(iID)) / 100;
+	iValue = (iValue * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getPercent(iID)) / 100;
+	return (iValue * GC.getWorldInfo(GC.getMap().getWorldSize()).getPercent(iID)) / 100;
 }
 
 int CvGameObjectPlayer::adaptValueToGame(int iID, int iValue) const
 {
-	iValue = (iValue * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getPercent(iID)) / 100;
-	iValue = (iValue * GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getPercent(iID)) / 100;
+	iValue = (iValue * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getPercent(iID)) / 100;
+	iValue = (iValue * GC.getWorldInfo(GC.getMap().getWorldSize()).getPercent(iID)) / 100;
 	return (iValue * GC.getHandicapInfo(m_pPlayer->getHandicapType()).getPercent(iID)) / 100;
 }
 
 int CvGameObjectCity::adaptValueToGame(int iID, int iValue) const
 {
-	iValue = (iValue * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getPercent(iID)) / 100;
-	iValue = (iValue * GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getPercent(iID)) / 100;
-	return (iValue * GC.getHandicapInfo(GET_PLAYER(m_pCity->getOwnerINLINE()).getHandicapType()).getPercent(iID)) / 100;
+	iValue = (iValue * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getPercent(iID)) / 100;
+	iValue = (iValue * GC.getWorldInfo(GC.getMap().getWorldSize()).getPercent(iID)) / 100;
+	return (iValue * GC.getHandicapInfo(GET_PLAYER(m_pCity->getOwner()).getHandicapType()).getPercent(iID)) / 100;
 }
 
 int CvGameObjectUnit::adaptValueToGame(int iID, int iValue) const
 {
-	iValue = (iValue * GC.getGameSpeedInfo(GC.getGameINLINE().getGameSpeedType()).getPercent(iID)) / 100;
-	iValue = (iValue * GC.getWorldInfo(GC.getMapINLINE().getWorldSize()).getPercent(iID)) / 100;
-	return (iValue * GC.getHandicapInfo(GET_PLAYER(m_pUnit->getOwnerINLINE()).getHandicapType()).getPercent(iID)) / 100;
+	iValue = (iValue * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getPercent(iID)) / 100;
+	iValue = (iValue * GC.getWorldInfo(GC.getMap().getWorldSize()).getPercent(iID)) / 100;
+	return (iValue * GC.getHandicapInfo(GET_PLAYER(m_pUnit->getOwner()).getHandicapType()).getPercent(iID)) / 100;
 }

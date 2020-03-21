@@ -94,14 +94,8 @@ void CyGlobalContextPythonInterface1(python::class_<CyGlobalContext>& x)
 		.def("getNumTurnTimerInfos", &CyGlobalContext::getNumTurnTimerInfos, "() - Total Turn timer Infos XML\\GameInfo\\CIV4TurnTimerInfo.xml")
 		.def("getTurnTimerInfo", &CyGlobalContext::getTurnTimerInfo, python::return_value_policy<python::reference_existing_object>(), "(TurnTimer Info) - CvInfo for TurnTimerID")
 
-		.def("getNumBuildingClassInfos", &CyGlobalContext::getNumBuildingClassInfos, "() - Total Building Class Infos XML\\Buildings\\CIV4BuildingClassInfos.xml")
-		.def("getBuildingClassInfo", &CyGlobalContext::getBuildingClassInfo, python::return_value_policy<python::reference_existing_object>(), "(BuildingClassID) - CvInfo for BuildingClassID")
-
 		.def("getNumBuildingInfos", &CyGlobalContext::getNumBuildingInfos, "() - Total Building Infos XML\\Buildings\\CIV4BuildingInfos.xml")
 		.def("getBuildingInfo", &CyGlobalContext::getBuildingInfo, python::return_value_policy<python::reference_existing_object>(), "(BuildingID) - CvInfo for BuildingID")
-
-		.def("getNumUnitClassInfos", &CyGlobalContext::getNumUnitClassInfos, "() - Total Unit Class Infos XML\\Units\\CIV4UnitClassInfos.xml")
-		.def("getUnitClassInfo", &CyGlobalContext::getUnitClassInfo, python::return_value_policy<python::reference_existing_object>(), "(UnitClassID) - CvInfo for UnitClassID")
 
 		.def("getNumUnitCombatInfos", &CyGlobalContext::getNumUnitCombatInfos, "() - Total Unit Combat Infos XML\\Units\\CIV4UnitCombatInfos.xml")
 		.def("getUnitCombatInfo", &CyGlobalContext::getUnitCombatInfo, python::return_value_policy<python::reference_existing_object>(), "(UnitCombatID) - CvInfo for UnitCombatID")
@@ -131,25 +125,10 @@ void CyGlobalContextPythonInterface1(python::class_<CyGlobalContext>& x)
 		//.def("getNumTraitOptionEditsInfos", &CyGlobalContext::getNumTraitOptionEditsInfos, "() - Total Trait Option Edits Infos XML\\Traits\\CIV4TraitOptionEditsInfos.xml")
 		//.def("getTraitOptionEditsInfo", &CyGlobalContext::getTraitOptionEditsInfo, python::return_value_policy<python::reference_existing_object>(), "(TraitOptionEditsID) - CvInfo for TraitOptionEditsID")
 
-// BUG - DLL Info - start
-		.def("isBull", &CyGlobalContext::isBull, "bool () - returns true to mark presence of BULL")
-		.def("getBullApiVersion", &CyGlobalContext::getBullApiVersion, "int () - returns BULL Python API version")
-		.def("getBullName", &CyGlobalContext::pyGetBullName, "wstring () - returns display name of BULL")
-		.def("getBullVersion", &CyGlobalContext::pyGetBullVersion, "wstring () - returns display version of BULL")
-// BUG - DLL Info - end
-
 // BUG - BUG Info - start
 		.def("setIsBug", &CyGlobalContext::setIsBug, "void (bool bIsBug) - tells BULL that BUG is present and can receive queries for options")
 // BUG - BUG Info - end
 
-// BUFFY - DLL Info - start
-#ifdef _BUFFY
-		.def("isBuffy", &CyGlobalContext::isBuffy, "bool () - returns true to mark presence of BUFFY")
-		.def("getBuffyApiVersion", &CyGlobalContext::getBuffyApiVersion, "int () - returns BUFFY Python API version")
-		.def("getBuffyName", &CyGlobalContext::pyGetBuffyName, "wstring () - returns display name of BUFFY")
-		.def("getBuffyVersion", &CyGlobalContext::pyGetBuffyVersion, "wstring () - returns display version of BUFFY")
-#endif
-// BUFFY - DLL Info - end
 		.def("isXMLLogging", &CyGlobalContext::isXMLLogging, "bool ()")
 		.def("setXMLLogging", &CyGlobalContext::setXMLLogging, "bool ()")
 		.def("isShiftDown", &CyGlobalContext::isShiftDown, "bool ()")

@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- ###################################################################################### -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAMMOTH_HERD</Tag>
@@ -40,7 +39,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MAMMOTH_TRAINER_EFFECT</Tag>
-		<English>Effect - heritage - Mammoth</English>
+		<English>Effect - Heritage - Mammoths</English>
 		<French>Effet - Patrimoine (Mammouth)</French>
 		<Polish>Efekt - Dziedzictwo - Mamut</Polish>
 	</TEXT>
@@ -67,10 +66,6 @@
 		<Tag>TXT_KEY_BUILDING_MAMMOTH_TRAINER_STRATEGY</Tag>
 		<English>Build a Mammoth Trainer to increase your cities production and happiness.</English>
 		<Italian>Costruisci un allevaore di mammut per incrementare la produzione e la felicità delle tue città.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_NEANDERTHAL_MAMMOTH_RIDER</Tag>
-		<English>Neanderthal Mammoth Rider</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BALLISTA_MAMMOTH</Tag>
@@ -101,6 +96,10 @@
 		</French>
 		<Italian>Mammut con bombarda</Italian>
 		<Polish>Mamut-Bombard</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_NEANDERTHAL_MAMMOTH_RIDER</Tag>
+		<English>Neanderthal Mammoth Rider</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MAMMOTH</Tag>

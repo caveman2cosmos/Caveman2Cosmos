@@ -431,6 +431,8 @@ class DictionaryEntry
 {
 public:
 	DictionaryEntry()
+		: m_id(0)
+		, m_type(SAVE_VALUE_ANY)
 	{
 	}
 	virtual ~DictionaryEntry()
@@ -446,10 +448,18 @@ public:
 static int lastIdMatch = -1;
 
 CvTaggedSaveFormatWrapper::CvTaggedSaveFormatWrapper()
+	: m_stream(NULL)
+	, m_useTaggedFormat(false)
+	, m_writtenMappingTables(false)
+	, m_bReadNextElementHeader(false)
+	, m_delimiterIsStart(false)
+	, m_nestingDepth(0)
+	, m_iNextElementType(0)
+	, m_iNextElementNameId(0)
+	, m_streamNestingDepth(0)
+	, m_inUse(false)
 {
 	reset(false);
-
-	m_inUse = false;
 }
 
 CvTaggedSaveFormatWrapper::~CvTaggedSaveFormatWrapper()
@@ -565,34 +575,12 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 			m_stream->WriteString(info.getType());
 		}
 		break;
-	case REMAPPED_CLASS_TYPE_BUILDING_CLASSES:
-		entry.numClasses = GC.getNumBuildingClassInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
-		for(int i = 0; i < entry.numClasses; i++)
-		{
-			CvBuildingClassInfo& info = GC.getBuildingClassInfo((BuildingClassTypes)i);
-
-			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
-			m_stream->WriteString(info.getType());
-		}
-		break;
 	case REMAPPED_CLASS_TYPE_UNITS:
 		entry.numClasses = GC.getNumUnitInfos();
 		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
 		for(int i = 0; i < entry.numClasses; i++)
 		{
 			CvUnitInfo& info = GC.getUnitInfo((UnitTypes)i);
-
-			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
-			m_stream->WriteString(info.getType());
-		}
-		break;
-	case REMAPPED_CLASS_TYPE_UNIT_CLASSES:
-		entry.numClasses = GC.getNumUnitClassInfos();
-		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
-		for(int i = 0; i < entry.numClasses; i++)
-		{
-			CvUnitClassInfo& info = GC.getUnitClassInfo((UnitClassTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
 			m_stream->WriteString(info.getType());
@@ -1037,7 +1025,40 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTable(RemappedClassType classType)
 			CvCultureLevelInfo& info = GC.getCultureLevelInfo((CultureLevelTypes)i);
 
 			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
-				m_stream->WriteString(info.getType());
+			m_stream->WriteString(info.getType());
+		}
+		break;
+	case REMAPPED_CLASS_TYPE_YIELDS:
+		entry.numClasses = NUM_YIELD_TYPES;
+		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		for (int i = 0; i < entry.numClasses; i++)
+		{
+			CvYieldInfo& info = GC.getYieldInfo((YieldTypes)i);
+
+			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
+			m_stream->WriteString(info.getType());
+		}
+		break;
+	case REMAPPED_CLASS_TYPE_COMMERCES:
+		entry.numClasses = NUM_COMMERCE_TYPES;
+		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		for (int i = 0; i < entry.numClasses; i++)
+		{
+			CvCommerceInfo& info = GC.getCommerceInfo((CommerceTypes)i);
+
+			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
+			m_stream->WriteString(info.getType());
+		}
+		break;
+	case REMAPPED_CLASS_TYPE_DOMAINS:
+		entry.numClasses = NUM_DOMAIN_TYPES;
+		m_stream->Write(sizeof(class_mapping_table_entry), (byte*)&entry);
+		for (int i = 0; i < entry.numClasses; i++)
+		{
+			CvInfoBase& info = GC.getDomainInfo((DomainTypes)i);
+
+			DEBUG_TRACE3("\t%d : %s\n", i, info.getType())
+			m_stream->WriteString(info.getType());
 		}
 		break;
 	default:
@@ -1053,9 +1074,7 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTables()
 
 	//	Write out mapping tables for all mappable enum types
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_BUILDINGS);
-	WriteClassMappingTable(REMAPPED_CLASS_TYPE_BUILDING_CLASSES);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_UNITS);
-	WriteClassMappingTable(REMAPPED_CLASS_TYPE_UNIT_CLASSES);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_PROJECTS);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_BONUSES);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_SPECIALISTS);
@@ -1098,6 +1117,9 @@ CvTaggedSaveFormatWrapper::WriteClassMappingTables()
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_INVISIBLES);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_MISSIONS);
 	WriteClassMappingTable(REMAPPED_CLASS_TYPE_CULTURELEVELS);
+	WriteClassMappingTable(REMAPPED_CLASS_TYPE_YIELDS);
+	WriteClassMappingTable(REMAPPED_CLASS_TYPE_COMMERCES);
+	WriteClassMappingTable(REMAPPED_CLASS_TYPE_DOMAINS);
 }
 
 //	How many members of a given class type were present at save time?
@@ -1119,14 +1141,8 @@ CvTaggedSaveFormatWrapper::getNumClassEnumValues(RemappedClassType classType)
 		case REMAPPED_CLASS_TYPE_BUILDINGS:
 			result = GC.getNumBuildingInfos();
 			break;
-		case REMAPPED_CLASS_TYPE_BUILDING_CLASSES:
-			result = GC.getNumBuildingClassInfos();
-			break;
 		case REMAPPED_CLASS_TYPE_UNITS:
 			result = GC.getNumUnitInfos();
-			break;
-		case REMAPPED_CLASS_TYPE_UNIT_CLASSES:
-			result = GC.getNumUnitClassInfos();
 			break;
 		case REMAPPED_CLASS_TYPE_PROJECTS:
 			result = GC.getNumProjectInfos();
@@ -1237,6 +1253,15 @@ CvTaggedSaveFormatWrapper::getNumClassEnumValues(RemappedClassType classType)
 			break;
 		case REMAPPED_CLASS_TYPE_CULTURELEVELS:
 			result = GC.getNumCultureLevelInfos();
+			break;
+		case REMAPPED_CLASS_TYPE_YIELDS:
+			result = NUM_YIELD_TYPES;
+			break;
+		case REMAPPED_CLASS_TYPE_COMMERCES:
+			result = NUM_COMMERCE_TYPES;
+			break;
+		case REMAPPED_CLASS_TYPE_DOMAINS:
+			result = NUM_DOMAIN_TYPES;
 			break;
 		default:
 			FAssertMsg(false, "Unexpected RemappedClassType");
@@ -2206,7 +2231,9 @@ CvTaggedSaveFormatWrapper::getId(const char* name, int& idHint, int& idSeq, Save
 {
 	PROFILE_FUNC();
 
-	if ( name != NULL && idSeq == usageSeq )
+	FAssertMsg(name, "name cannot be null");
+
+	if ( idSeq == usageSeq )
 	{
 		FAssert((int)m_idDictionary.size() > idHint);
 
@@ -2255,11 +2282,8 @@ CvTaggedSaveFormatWrapper::getId(const char* name, int& idHint, int& idSeq, Save
 		id = itr->second.m_id;
 	}
 
-	if ( name != NULL )
-	{
-		idHint = id;
-		idSeq = usageSeq;
-	}
+	idHint = id;
+	idSeq = usageSeq;
 
 	return id;
 }
@@ -3063,7 +3087,9 @@ CvTaggedSaveFormatWrapper::ReadClassEnum(const char* name, int& idHint, int& idS
 		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_CLASS_ENUM) )
 		{
 			value_class_enum	entry;
-			m_stream->Read(sizeof(entry)-sizeof(int), (byte*)&entry.classType);
+
+			m_stream->Read(sizeof(RemappedClassType), (byte*)& entry.classType);
+			m_stream->Read(&entry.value);
 
 			if ( entry.value == -1 )
 			{
@@ -3095,8 +3121,10 @@ CvTaggedSaveFormatWrapper::ReadClassEnum(const char* name, int& idHint, int& idS
 
 		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_CLASS_ENUM) )
 		{
-			value_class_enum	entry;
-			m_stream->Read(sizeof(entry)-sizeof(int), (byte*)&entry.classType);
+			value_class_enum entry;
+
+			m_stream->Read(sizeof(RemappedClassType), (byte*)& entry.classType);
+			m_stream->Read(&entry.value);
 
 			if ( entry.value == -1 )
 			{
@@ -3133,21 +3161,23 @@ CvTaggedSaveFormatWrapper::ReadClassArray(const char* name, int& idHint, int& id
 		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_CLASS_INT_ARRAY) )
 		{
 			value_entry_class_int_array	entry;
-			m_stream->Read(VALUE_ENTRY_CLASS_INT_ARRAY_SIZE_FROM_NUM(0)-sizeof(int), (byte*)&entry.classType);
 
-			int*	arrayBuffer = new int[entry.numInts];
+			m_stream->Read(sizeof(RemappedClassType), (byte*)&entry.classType);
+			m_stream->Read(&entry.numInts);
 
-			FAssert ( classType == entry.classType );
+			bst::scoped_array<int> arrayBuffer(new int[entry.numInts]);
 
-			m_stream->Read(entry.numInts, arrayBuffer);
+			FAssert (classType == entry.classType);
+
+			m_stream->Read(entry.numInts, &arrayBuffer[0]);
 
 			std::vector<EnumInfo>& mapVector = m_enumMaps[classType];
 
-			for(int i = 0; i < entry.numInts; i++)
+			for (int i = 0; i < entry.numInts; i++)
 			{
 				EnumInfo& info = mapVector[i];
 
-				if ( info.m_id == -1 && !info.m_lookedUp )
+				if (info.m_id == -1 && !info.m_lookedUp)
 				{
 					info.m_id = GC.getInfoTypeForString(info.m_szType, true);
 
@@ -3158,7 +3188,7 @@ CvTaggedSaveFormatWrapper::ReadClassArray(const char* name, int& idHint, int& id
 					//	defaulting which is the 'risky' part - should perhaps take an extra argument to specify the
 					//	not-referenced default)
 					int currentValue = arrayBuffer[i];
-					if ( info.m_id == -1 && currentValue != 0 && currentValue != -1 && currentValue != MIN_INT )
+					if (info.m_id == -1 && currentValue != 0 && currentValue != -1 && currentValue != MIN_INT)
 					{
 						//	Instantiated object uses class no longer defined - game is not save compatible
 						HandleRecoverableIncompatibleSave(CvString::format("Current assets are missing in-use class %s - any instances will have been removed", info.m_szType.c_str()).c_str());
@@ -3167,15 +3197,13 @@ CvTaggedSaveFormatWrapper::ReadClassArray(const char* name, int& idHint, int& id
 					info.m_lookedUp = true;
 				}
 
-				if ( info.m_id != -1 )
+				if (info.m_id != -1)
 				{
-					FAssert( info.m_id < count );
+					FAssert(info.m_id < count);
 
 					values[info.m_id] = arrayBuffer[i];
 				}
 			}
-
-			SAFE_DELETE_ARRAY(arrayBuffer);
 		}
 		else if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_INT_ARRAY) )
 		{
@@ -3211,21 +3239,23 @@ CvTaggedSaveFormatWrapper::ReadClassArray(const char* name, int& idHint, int& id
 		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_CLASS_BOOL_ARRAY) )
 		{
 			value_entry_class_bool_array	entry;
-			m_stream->Read(VALUE_ENTRY_CLASS_BOOL_ARRAY_SIZE_FROM_NUM(0)-sizeof(int), (byte*)&entry.classType);
 
-			FAssert ( classType == entry.classType );
+			m_stream->Read(sizeof(RemappedClassType), (byte*)& entry.classType);
+			m_stream->Read(&entry.numBools);
 
-			bool*	arrayBuffer = new bool[entry.numBools];
+			FAssert (classType == entry.classType);
 
-			m_stream->Read(entry.numBools, arrayBuffer);
+			bst::scoped_array<bool> arrayBuffer(new bool[entry.numBools]);
+
+			m_stream->Read(entry.numBools, arrayBuffer.get());
 
 			std::vector<EnumInfo>& mapVector = m_enumMaps[classType];
 
-			for(int i = 0; i < entry.numBools; i++)
+			for (int i = 0; i < entry.numBools; i++)
 			{
 				EnumInfo& info = mapVector[i];
 
-				if ( info.m_id == -1 && !info.m_lookedUp )
+				if (info.m_id == -1 && !info.m_lookedUp)
 				{
 					info.m_id = GC.getInfoTypeForString(info.m_szType, true);
 
@@ -3235,7 +3265,7 @@ CvTaggedSaveFormatWrapper::ReadClassArray(const char* name, int& idHint, int& id
 					//	actually instantiated they will be present (but are ignorable if we are right about the 0
 					//	defaulting which is the 'risky' part - should perhaps take an extra argument to specify the
 					//	not-referenced default)
-					if ( info.m_id == -1 && arrayBuffer[i] && !allowMissing)
+					if (info.m_id == -1 && arrayBuffer[i] && !allowMissing)
 					{
 						//	Instantiated object uses class no longer defined - game is not save compatible
 						HandleIncompatibleSave(CvString::format("Save format is not compatible due to missing class %s", info.m_szType.c_str()).c_str());
@@ -3244,15 +3274,13 @@ CvTaggedSaveFormatWrapper::ReadClassArray(const char* name, int& idHint, int& id
 					info.m_lookedUp = true;
 				}
 
-				if ( info.m_id != -1 )
+				if (info.m_id != -1)
 				{
-					FAssert( info.m_id < count );
+					FAssert(info.m_id < count);
 
 					values[info.m_id] = arrayBuffer[i];
 				}
 			}
-
-			SAFE_DELETE_ARRAY(arrayBuffer);
 		}
 		else if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_BOOL_ARRAY) )
 		{
@@ -3289,13 +3317,16 @@ CvTaggedSaveFormatWrapper::ReadClassArrayOfClassEnum(const char* name, int& idHi
 		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_CLASS_BOOL_ARRAY) )
 		{
 			value_entry_class_class_array	entry;
-			m_stream->Read(VALUE_ENTRY_CLASS_CLASS_ARRAY_SIZE_FROM_NUM(0)-sizeof(int), (byte*)&entry.classType);
+
+			m_stream->Read(sizeof(RemappedClassType), (byte*)&entry.classType);
+			m_stream->Read(sizeof(RemappedClassType), (byte*)&entry.valueClassType);
+			m_stream->Read(&entry.numValues);
 
 			FAssert ( indexClassType == entry.classType && valueClassType == entry.valueClassType );
 
-			int*	arrayBuffer = new int[entry.numValues];
+			bst::scoped_array<int> arrayBuffer(new int[entry.numValues]);
 
-			m_stream->Read(entry.numValues, arrayBuffer);
+			m_stream->Read(entry.numValues, arrayBuffer.get());
 
 			std::vector<EnumInfo>& mapVector = m_enumMaps[indexClassType];
 
@@ -3318,8 +3349,6 @@ CvTaggedSaveFormatWrapper::ReadClassArrayOfClassEnum(const char* name, int& idHi
 					values[info.m_id] = getNewClassEnumValue(valueClassType, arrayBuffer[i]);
 				}
 			}
-
-			SAFE_DELETE_ARRAY(arrayBuffer);
 		}
 	}
 	else
@@ -3342,8 +3371,10 @@ CvTaggedSaveFormatWrapper::ReadClassEnumArray(const char* name, int& idHint, int
 
 		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_CLASS_ENUM_ARRAY) )
 		{
-			value_class_enum_array	entry;
-			m_stream->Read(sizeof(entry)-sizeof(int), (byte*)&entry.classType);
+			value_class_enum_array entry;
+
+			m_stream->Read(sizeof(RemappedClassType), (byte*)& entry.classType);
+			m_stream->Read(&entry.count);
 
 			if ( entry.count != count )
 			{
@@ -3385,7 +3416,9 @@ CvTaggedSaveFormatWrapper::ReadClassEnumArray(const char* name, int& idHint, int
 		if ( Expect(name, idHint, idSeq, SAVE_VALUE_TYPE_CLASS_ENUM_ARRAY) )
 		{
 			value_class_enum_array	entry;
-			m_stream->Read(sizeof(entry)-sizeof(int), (byte*)&entry.classType);
+
+			m_stream->Read(sizeof(RemappedClassType), (byte*)& entry.classType);
+			m_stream->Read(&entry.count);
 
 			if ( entry.count != count )
 			{
@@ -3740,7 +3773,9 @@ CvTaggedSaveFormatWrapper::SkipElement()
 		{
 			value_entry_class_int_array entry;
 
-			m_stream->Read(VALUE_ENTRY_CLASS_INT_ARRAY_SIZE_FROM_NUM(0) - sizeof(int), (byte*)&entry.classType);
+			m_stream->Read(sizeof(RemappedClassType), (byte*)&entry.classType);
+			m_stream->Read(&entry.numInts);
+
 			ConsumeBytes(sizeof(int)*entry.numInts);
 		}
 		break;
@@ -3748,7 +3783,9 @@ CvTaggedSaveFormatWrapper::SkipElement()
 		{
 			value_entry_class_bool_array entry;
 
-			m_stream->Read(VALUE_ENTRY_CLASS_BOOL_ARRAY_SIZE_FROM_NUM(0) - sizeof(int), (byte*)&entry.classType);
+			m_stream->Read(sizeof(RemappedClassType), (byte*)& entry.classType);
+			m_stream->Read(&entry.numBools);
+
 			ConsumeBytes(sizeof(bool)*entry.numBools);
 		}
 		break;
@@ -3756,7 +3793,9 @@ CvTaggedSaveFormatWrapper::SkipElement()
 		{
 			value_class_enum_array entry;
 
-			m_stream->Read(sizeof(value_class_enum_array) - sizeof(int), (byte*)&entry.classType);
+			m_stream->Read(sizeof(RemappedClassType), (byte*)& entry.classType);
+			m_stream->Read(&entry.count);
+
 			ConsumeBytes(sizeof(int)*entry.count);
 		}
 		break;
@@ -3826,7 +3865,8 @@ CvTaggedSaveFormatWrapper::ReadObjectDelimiter()
 
 	object_delimiter_entry_maximal entry;
 
-	m_stream->Read(sizeof(object_delimiter_entry_maximal) - sizeof(int) - sizeof(entry.name), (byte*)(&entry.bStart));
+	m_stream->Read(&entry.bStart);
+	m_stream->Read(&entry.nameLen);
 	m_stream->Read(entry.nameLen, (byte*)&entry.name);
 
 	FAssert(entry.nameLen <= 255);
@@ -3846,7 +3886,7 @@ CvTaggedSaveFormatWrapper::NormalizeName(const char* name)
 	//	Single threaded so use a static buffer to provide the canonicalized form.
 	//	Doing this to avoid construiction of CvStrings since this routine is called
 	//	millions of times per load/save
-	static char	normalizationBuffer[200];
+	static char	normalizationBuffer[1024];
 	char* result = (char*)name;
 
 	PROFILE_FUNC();
@@ -3866,9 +3906,9 @@ CvTaggedSaveFormatWrapper::NormalizeName(const char* name)
 	}
 
 	//	Strip address-of operators (e.g. - m_thingy on save should match &m_thingy on load)
-	if ( (ptr = strstr(result, "::&")) != NULL )
+	if ((ptr = strstr(result, "::&")) != NULL)
 	{
-		if ( result == name )
+		if (result == name)
 		{
 			memcpy(normalizationBuffer, name, ptr-name+2);
 			strcpy(normalizationBuffer + (ptr-name+2), ptr+3);
@@ -3877,7 +3917,7 @@ CvTaggedSaveFormatWrapper::NormalizeName(const char* name)
 		}
 		else
 		{
-			strcpy(ptr+2, ptr+3);
+			memmove(ptr + 2, ptr + 3, strlen(ptr + 3) + 1);
 		}
 	}
 	

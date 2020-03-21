@@ -68,7 +68,7 @@ class PediaPromotion:
 		# Requires & Leads To
 		PF = "ToolTip|JumpTo|"
 		szAnd	= uFont3 + "&#38"
-		szOr	= uFont2b + "OR"
+		szOr	= uFont2b + "||"
 		szBracketL = uFont4b + " {"
 		szBracketR = uFont4b + "} "
 		szLogic = ""

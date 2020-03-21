@@ -8,14 +8,14 @@
 	<PromotionInfos>
 		<PromotionInfo>
 			<Type>PROMOTION_GUARDIAN</Type>
-			<Description>Guardian spirit</Description>
+			<Description>TXT_KEY_PROMOTION_GUARDIAN</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<LayerAnimationPath>NONE</LayerAnimationPath>
 			<PromotionPrereq>NONE</PromotionPrereq>
 			<PromotionPrereqOr1>NONE</PromotionPrereqOr1>
 			<PromotionPrereqOr2>NONE</PromotionPrereqOr2>
 			<TechPrereq>NONE</TechPrereq>
-			<StateReligionPrereq>RELIGION_NGAI</StateReligionPrereq>
+			<StateReligionPrereq>RELIGION_NGAIISM</StateReligionPrereq>
 			<bLeader>0</bLeader>
 			<bBlitz>0</bBlitz>
 			<bAmphib>0</bAmphib>
@@ -95,14 +95,14 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_VENGEANCE</Type>
-			<Description>Vengeance</Description>
+			<Description>TXT_KEY_PROMOTION_VENGEANCE</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<LayerAnimationPath>NONE</LayerAnimationPath>
 			<PromotionPrereq>NONE</PromotionPrereq>
 			<PromotionPrereqOr1>NONE</PromotionPrereqOr1>
 			<PromotionPrereqOr2>NONE</PromotionPrereqOr2>
 			<TechPrereq>NONE</TechPrereq>
-			<StateReligionPrereq>RELIGION_NGAI</StateReligionPrereq>
+			<StateReligionPrereq>RELIGION_NGAIISM</StateReligionPrereq>
 			<bLeader>0</bLeader>
 			<bBlitz>0</bBlitz>
 			<bAmphib>0</bAmphib>

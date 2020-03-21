@@ -8,7 +8,7 @@
 
 CyGame::CyGame() : m_pGame(NULL)
 {
-	m_pGame = &GC.getGameINLINE();
+	m_pGame = &GC.getGame();
 }
 
 CyGame::CyGame(CvGame* pGame) : m_pGame(pGame)
@@ -61,22 +61,22 @@ bool CyGame::cyclePlotUnits(CyPlot* pPlot, bool bForward, bool bAuto, int iCount
 
 void CyGame::selectionListMove(CyPlot* pPlot, bool bAlt, bool bShift, bool bCtrl)
 {
-	GC.getGameINLINE().selectionListMove(pPlot->getPlot(), bAlt, bShift, bCtrl);
+	GC.getGame().selectionListMove(pPlot->getPlot(), bAlt, bShift, bCtrl);
 }
 
 void CyGame::selectionListGameNetMessage(int eMessage, int iData2, int iData3, int iData4, int iFlags, bool bAlt, bool bShift)
 {
-	GC.getGameINLINE().selectionListGameNetMessage(eMessage, iData2, iData3, iData4, iFlags, bAlt, bShift);
+	GC.getGame().selectionListGameNetMessage(eMessage, iData2, iData3, iData4, iFlags, bAlt, bShift);
 }
 
 void CyGame::selectedCitiesGameNetMessage(int eMessage, int iData2, int iData3, int iData4, bool bOption, bool bAlt, bool bShift, bool bCtrl)
 {
-	GC.getGameINLINE().selectedCitiesGameNetMessage(eMessage, iData2, iData3, iData4, bOption, bAlt, bShift, bCtrl);
+	GC.getGame().selectedCitiesGameNetMessage(eMessage, iData2, iData3, iData4, bOption, bAlt, bShift, bCtrl);
 }
 
 void CyGame::cityPushOrder(CyCity* pCity, OrderTypes eOrder, int iData, bool bAlt, bool bShift, bool bCtrl)
 {
-	GC.getGameINLINE().cityPushOrder(pCity->getCity(), eOrder, iData, bAlt, bShift, bCtrl);
+	GC.getGame().cityPushOrder(pCity->getCity(), eOrder, iData, bAlt, bShift, bCtrl);
 }
 
 int CyGame::getSymbolID(int iSymbol)
@@ -739,7 +739,6 @@ int CyGame::getBestLandUnitCombat()
 	return m_pGame ? m_pGame->getBestLandUnitCombat() : -1;
 }
 
-#if defined QC_MASTERY_VICTORY
 //Sevo Begin--VCM
 bool CyGame::getStarshipLaunched(int playaID)
 {
@@ -751,7 +750,6 @@ bool CyGame::getDiplomaticVictoryAchieved(int playaID)
 	return m_pGame ? m_pGame->getDiplomaticVictoryAchieved(playaID) : false;
 }
 //Sevo End VCM
-#endif
 
 int /*TeamTypes*/ CyGame::getWinner() 
 {
@@ -850,24 +848,19 @@ int CyGame::getUnitCreatedCount(int /*UnitTypes*/ eIndex)
 	return m_pGame ? m_pGame->getUnitCreatedCount((UnitTypes)eIndex) : -1;
 }
 
-int CyGame::getUnitClassCreatedCount(int /*UnitClassTypes*/ eIndex)
+bool CyGame::isUnitMaxedOut(int /*UnitTypes*/ eIndex, int iExtra)
 {
-	return m_pGame ? m_pGame->getUnitClassCreatedCount((UnitClassTypes)eIndex) : -1;
+	return m_pGame ? m_pGame->isUnitMaxedOut((UnitTypes)eIndex, iExtra) : -1;
 }
 
-bool CyGame::isUnitClassMaxedOut(int /*UnitClassTypes*/ eIndex, int iExtra)
+int CyGame::getBuildingCreatedCount(int /*BuildingTypes*/ eIndex) const
 {
-	return m_pGame ? m_pGame->isUnitClassMaxedOut((UnitClassTypes)eIndex, iExtra) : -1;
+	return m_pGame ? m_pGame->getBuildingCreatedCount((BuildingTypes)eIndex) : -1;
 }
 
-int CyGame::getBuildingClassCreatedCount(int /*BuildingClassTypes*/ eIndex) 
+bool CyGame::isBuildingMaxedOut(int /*BuildingTypes*/ eIndex, int iExtra)
 {
-	return m_pGame ? m_pGame->getBuildingClassCreatedCount((BuildingClassTypes) eIndex) : -1;
-}
-
-bool CyGame::isBuildingClassMaxedOut(int /*BuildingClassTypes*/ eIndex, int iExtra)
-{
-	return m_pGame ? m_pGame->isBuildingClassMaxedOut((BuildingClassTypes)eIndex, iExtra) : false;
+	return m_pGame ? m_pGame->isBuildingMaxedOut((BuildingTypes)eIndex, iExtra) : false;
 }
 
 int CyGame::getProjectCreatedCount(int /*ProjectTypes*/ eIndex) 
@@ -1309,16 +1302,6 @@ bool CyGame::isCivEverActive(int /*CivilizationTypes*/ eCivilization)
 bool CyGame::isLeaderEverActive(int /*LeaderHeadTypes*/ eLeader)
 {
 	return (NULL != m_pGame ? m_pGame->isLeaderEverActive((LeaderHeadTypes)eLeader) : false);
-}
-
-bool CyGame::isUnitEverActive(int /*UnitTypes*/ eUnit)
-{
-	return (NULL != m_pGame ? m_pGame->isUnitEverActive((UnitTypes)eUnit) : false);
-}
-
-bool CyGame::isBuildingEverActive(int /*BuildingTypes*/ eBuilding)
-{
-	return (NULL != m_pGame ? m_pGame->isBuildingEverActive((BuildingTypes)eBuilding) : false);
 }
 
 bool CyGame::isEventActive(int /*EventTriggerTypes*/ eTrigger)

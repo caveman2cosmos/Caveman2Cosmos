@@ -49,10 +49,6 @@
 		<iDefineIntVal>25</iDefineIntVal>
 	</Define>
 	<Define>
-		<DefineName>DCM_STACK_ATTACK</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
 		<DefineName>DCM_ATTACK_SUPPORT</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
@@ -62,10 +58,6 @@
 	</Define>
 	<Define>
 		<DefineName>DCM_ACTIVE_DEFENSE</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
-	<Define>
-		<DefineName>DCM_ARCHER_BOMBARD</DefineName>
 		<iDefineIntVal>0</iDefineIntVal>
 	</Define>
 	<Define>
@@ -536,7 +528,7 @@
 	</Define>
 	<Define>
 		<DefineName>TEMPERATE_TERRAIN</DefineName>
-		<DefineTextVal>TERRAIN_GRASS</DefineTextVal>
+		<DefineTextVal>TERRAIN_GRASSLAND</DefineTextVal>
 	</Define>
 	<Define>
 		<DefineName>DRY_TERRAIN</DefineName>

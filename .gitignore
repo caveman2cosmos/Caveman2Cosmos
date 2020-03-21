@@ -9,16 +9,22 @@
 *.pdb
 *.FPK
 
-Assets/fpklive_token.txt
-!/Tools/*.dll
+/Tools/Autocorrect/LanguageTool.zip
+/Tools/Autocorrect/LanguageTool-*
+!/Tools/**/*.dll
 XmlValidator.log
 desktop.ini
+Assets/Python/.idea/
+
+# Ignore python venv
+env/
 
 .vscode/settings.json
 
 git_installer.exe
-Tools/Setup/.wget-hsts
+Tools/Utils/.wget-hsts
 
+Assets/fpklive_token.txt
 Assets/**/*.dds
 Assets/**/*.nif
 Assets/**/*.kfm
@@ -27,6 +33,28 @@ Assets/**/*.kf
 Sources/cov-int/
 Build/
 
+Tools/Autocorrect/Autocorrect.log
+
 test-gen.bat
 
 CHANGELOG.md
+
+Autocorrect.log
+
+Tools/Autocorrect/__pycache__/
+
+Tools/python/
+
+.vscode/.ropeproject/
+
+lights-found.txt
+
+Tools/Autocorrect/google_cache.pkl
+
+Sources/C2C.args.json
+
+*.fdb
+
+Sources/profile.json
+
+*.bak

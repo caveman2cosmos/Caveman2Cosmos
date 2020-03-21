@@ -8,7 +8,6 @@
 //------------------------------------------------------------------------------------------------
 
 #include "CvGameCoreDLL.h"
-#include <boost/bind.hpp>
 
 PropertySourceContext::PropertySourceContext(CvPropertySource *pSource, CvGameObject *pObject) : m_pSource(pSource), m_pObject(pObject), m_iData1(0), m_iData2(0)
 {
@@ -247,7 +246,7 @@ void CvPropertySolver::instantiateManipulators(CvGameObject* pObject, CvProperty
 		}
 		else
 		{
-			pObject->foreachRelated(pSource->getObjectType(), eRelation, boost::bind(callInstantiateSource, _1, pSource, this), pSource->getRelationData());
+			pObject->foreachRelated(pSource->getObjectType(), eRelation, bst::bind(callInstantiateSource, _1, pSource, this), pSource->getRelationData());
 		}
 	}
 	// Interactions
@@ -261,7 +260,7 @@ void CvPropertySolver::instantiateManipulators(CvGameObject* pObject, CvProperty
 		}
 		else
 		{
-			pObject->foreachRelated(pInteraction->getObjectType(), eRelation, boost::bind(callInstantiateInteraction, _1, pInteraction, this), pInteraction->getRelationData());
+			pObject->foreachRelated(pInteraction->getObjectType(), eRelation, bst::bind(callInstantiateInteraction, _1, pInteraction, this), pInteraction->getRelationData());
 		}
 	}
 	// Propagators
@@ -275,7 +274,7 @@ void CvPropertySolver::instantiateManipulators(CvGameObject* pObject, CvProperty
 		}
 		else
 		{
-			pObject->foreachRelated(pPropagator->getObjectType(), eRelation, boost::bind(callInstantiatePropagator, _1, pPropagator, this), pPropagator->getRelationData());
+			pObject->foreachRelated(pPropagator->getObjectType(), eRelation, bst::bind(callInstantiatePropagator, _1, pPropagator, this), pPropagator->getRelationData());
 		}
 	}
 }
@@ -297,14 +296,14 @@ void callInstantiateManipulators(CvGameObject* pObject, CvPropertyManipulators* 
 void callInstantiateGlobalManipulators(CvGameObject* pObject, CvPropertySolver* pSolver)
 {
 	pSolver->instantiateGlobalManipulators(pObject);
-	pObject->foreachManipulator(boost::bind(callInstantiateManipulators, _1, _2, pSolver));
+	pObject->foreachManipulator(bst::bind(callInstantiateManipulators, pObject, _1, pSolver));
 }
 
 void CvPropertySolver::gatherActiveManipulators()
 {
 	for (int i=0; i<NUM_GAMEOBJECTS; i++)
 	{
-		GC.getGameINLINE().getGameObject()->foreach((GameObjectTypes)i, boost::bind(callInstantiateGlobalManipulators, _1, this));
+		GC.getGame().getGameObject()->foreach((GameObjectTypes)i, bst::bind(callInstantiateGlobalManipulators, _1, this));
 	}
 }
 
@@ -406,7 +405,7 @@ void CvMainPropertySolver::resetPropertyChanges()
 {
 	for (int i=0; i<NUM_GAMEOBJECTS; i++)
 	{
-		GC.getGameINLINE().getGameObject()->foreach((GameObjectTypes)i, callResetPropertyChange);
+		GC.getGame().getGameObject()->foreach((GameObjectTypes)i, callResetPropertyChange);
 	}
 }
 

@@ -1,97 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by XMLSPY 2004 Professional Ed. Release 2, Installed Multi + SMP for 3 users (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- GameText Civilopedia Techs -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
-	<!-- SHINTO -->
-	<TEXT>
-		<Tag>TXT_KEY_RELIGION_ASATRU</Tag>
-		<English>Asatru</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_RELIGION_ASATRU_ADJECTIVE</Tag>
-		<English>Asatru</English>
-		<French>
-			<Text>Asatru</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Asatru</Text>
-			<Gender>Neuter:Neuter:Neuter</Gender>
-			<Plural>0:0:0</Plural>
-		</German>
-		<Italian>
-			<Text>Asatru</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Asatru</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_RELIGION_ASATRU_PEDIA</Tag>
-		<English>Asatru is a term used to describe the religious traditions which were common amongst the Germanic tribes living in Nordic countries prior to and during the Christianization of Northern Europe. Norse paganism is therefore a subset of Germanic paganism, which was practiced in the lands inhabited by the Germanic tribes across most of Northern and Central Europe in the Viking Age. Our knowledge of Norse paganism is mostly drawn from the results of archaeological field work, etymology and early written materials.</English>
-		<Polish>Asatru - politeistyczna religia oparta na wierzeniach zawartych w mitologii nordyckiej, której świat bogów reprezentują dwie dynastie Asów i Vanów. Stanowi ona próbę odtworzenia wierzeń dominujących w Europie Północnej przed przyjęciem chrześcijaństwa. Zaliczana jest do neopogańskich ruchów religijnych.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_RELIGION_ASATRU_QUOTE</Tag>
-		<English>"No man lives till eve whom the Norns doom at dawning." - Anglo Saxon Poem (found at cauldronborn.blogspot.com.au)</English>
-		<French>"Aucun Homme de vivra tant que le cauchemar des Nornes est présent." - Poème Anglo Saxon (trouvé sur cauldronborn.blogspot.com.au)</French>
-		<Spanish>"Ningún hombre sobrevive a la condena de los nórdicos al amanecer." - Poema anglosajón (encontrado en cauldronborn.blogspot.com.au)</Spanish>
-		<Polish>"A furore Normannorum libera nos, Domine (przed gniewem Normanów ocal nas, Panie)" - Anglosaxońska modlitwa</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_RELIGION_ASATRU_STRATEGY</Tag>
-		<English>Research Asatru to found a Religion</English>
-		<French>Recherchez Asatru pour fonder une religion</French>
-		<Spanish>Investiga el Ásatrú para fundar una religión.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_ASATRU_MISSIONARY</Tag>
-		<English>Asatru Missionary</English>
-		<French>Missionnaire Asatru</French>
-		<Polish>Misjonarz Asatru</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_ASATRU_MISSIONARY_PEDIA</Tag>
-		<English>Norse religion refers to the religious traditions of the Norsemen prior to the Christianization of Scandinavia, specifically during the Viking Age. It is a folk religion, which was not necessarily formalized nor categorized as a subset of Germanic paganism until it was described by outsiders who came into contact with native practitioners. It was the northern variation of the religion practiced in the lands inhabited by the Germanic tribes across most of Northern and Central Europe prior to Roman and Holy Roman incursions. Knowledge of Norse religion is mostly drawn from the results of archaeological field work, etymology and early written materials as it was largely a product of earlier people who did not have a written history.</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_ASATRU_MISSIONARY_STRATEGY</Tag>
-		<English>Use this missionary to actively spread [COLOR_HIGHLIGHT_TEXT]Asatruism[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]).</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_LOKI</Tag>
-		<English>Loki Fist</English>
-		<French>Poing de Loki</French>
-		<Polish>Pięść Lokiego</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_ASATRU_LOKI_PEDIA</Tag>
-		<English>TXT_KEY_UNIT_VIKING_BESERKER_PEDIA</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_ASATRU_LOKI_STRATEGY</Tag>
-		<English>TXT_KEY_UNIT_VIKING_BESERKER_STRATEGY</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ASATRU_TEMPLE</Tag>
-		<English>Asatru Temple</English>
-		<French>Temple Asatru</French>
-		<Polish>Swiątynia Asatru</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ASATRU_MONASTERY</Tag>
-		<English>Asatru Monastery</English>
-		<French>Monastère Asatru</French>
-		<Polish>Klasztor Asatru</Polish>
-	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASATRU_CATHEDRAL</Tag>
 		<English>Asatru Cathedral</English>
@@ -99,27 +7,24 @@
 		<Polish>Katedra Asatru</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ASATRU_SHRINE</Tag>
-		<English>The Odin's Sanctuary</English>
-		<French>Le Sanctuaire d'Odin</French>
-		<Polish>Sanktuarium Odyna</Polish>
+		<Tag>TXT_KEY_BUILDING_ASATRU_CATHEDRAL_PEDIA</Tag>
+		<English>In Civilization IV, a cathedral is defined as an especially large and ornate religious building where the faithful worship. Only the most prosperous cities can afford to create cathedrals, as they require huge amounts of raw material and years of dedicated labor by skilled craftsmen. For example, the Notre Dame Cathedral in Paris, France, took over two centuries to complete.</English>
+		<French>Dans Civilization IV, un grand lieu de culte est défini comme un édifice religieux particulièrement grand et richement orné dans lequel les fidèles pratiquent leur religion: "cathédrales" pour les chrétiens, "mosquées" pour les musulmans et "synagogues" pour les juifs. Seules les villes les plus prospères ont les moyens de construire de tels édifices. En effet, ils nécessitent d'énormes quantités de matériaux bruts et des artisans spécialisés doivent y consacrer des années de travail. Ainsi, il a fallu plus de deux siècles pour terminer la cathédrale Notre-Dame à Paris.</French>
+		<German>In Civilization IV sind Kathedralen große und prächtige Gotteshäuser, in denen Gläubige beten. Nur die reichsten aller Städte können sich den Bau einer Kathedrale leisten, da hierfür große Mengen an Baumaterial und die jahrelange Arbeit erfahrener Handwerker erforderlich sind. Die Kathedrale von Notre Dame in Paris wurde beispielsweise erst nach 200-jähriger Bauzeit fertig gestellt.</German>
+		<Italian>In Civilization IV, viene definito cattedrale un edificio religioso particolarmente grande e sfarzoso adibito a luogo di culto per i fedeli. Solamente le città più prosperose possono permettersi l'edificazione di cattedrali poiché sono necessari un'enorme quantità di materiali e operai esperti. Per esempio, per completare la cattedrale di Notre-Dame de Paris, in Francia, ci sono voluti più di due secoli.</Italian>
+		<Spanish>En Civilization IV, una catedral se define como un edificio religioso especialmente grande y ornamentado en el que se reúnen los fieles para celebrar sus ritos. Solo las ciudades más grandes pueden permitirse el lujo de crear catedrales, puesto que requieren enormes cantidades de materias primas y años de dedicación por parte de trabajadores especializados. Por ejemplo, la catedral de Notre Dame, Francia, tardó dos siglos en completarse.</Spanish>
+		<Polish>Katedra, kościół katedralny, kościół biskupi (łac. ecclesia cathedralis, kathedra - krzesło, siedziba) - główny kościół biskupa diecezjalnego, arcybiskupa (archikatedra) lub patriarchy (kościół patriarchalny), w którym głosi on doktrynę katolicką. Termin stosuje się także do konkatedr i prokatedr. Niekiedy swobodnie jako określenie głównego kościoła miejskiego - nie zawsze jednak największy i najpiękniejszy kościół danej diecezji jest zarazem jej kościołem katedralnym, choćby w przypadku diecezji rzymskiej Bazylika św. Piotra znacznie przewyższa rozmiarami Bazylikę Laterańską. W historii sztuki i kultury utarło się, by ogólnie nazywać katedrami wielkie kościoły romańskie i gotyckie, niekoniecznie stanowiące katedry we właściwym sensie.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ASATRU_TEMPLE_PEDIA</Tag>
-		<English>In Civilization IV, a temple is defined as a building where the faithful come to worship. Christians call their temples "churches," while Muslims call theirs "mosques," and Jews call theirs, simply, "temples." Temples are far more common than cathedrals, but much less large and ornate. Even the smallest village can possess a temple.</English>
-		<French>Dans Civilization IV, un petit lieu de culte est défini comme un édifice dans lequel les fidèles viennent pratiquer leur religion: "églises" pour les chrétiens, "petites mosquées" pour les musulmans et "petites synagogues" pour les juifs. Ces petits lieux de culte sont bien plus courants que les grands lieux de culte mais sont de taille plus réduite et sont bien moins richement ornés. Même le village le plus petit peut posséder un petit lieu de culte.</French>
-		<German>In Civilization IV sind Tempel Gebäude, in denen Gläubige beten. Christen nennen ihre Tempel "Kirchen", Moslems "Moscheen". Es gibt deutlich mehr Tempel als Kathedralen. Allerdings sind sie wesentlich kleiner und schlichter. Selbst das kleinste Dorf kann einen Tempel besitzen.</German>
-		<Italian>In Civilization IV, il tempio è un edificio all'interno del quale i fedeli si recano a pregare. I Cristiani chiamano i loro templi "chiese", i Musulmani "moschee", gli Ebrei semplicemente "templi". I templi sono più comuni delle cattedrali, ma sono più piccoli e poco fastosi. Anche il villaggio più piccolo ospita un tempio.</Italian>
-		<Spanish>En Civilization IV, un templo se define como un lugar al que los fieles acuden a venerar. Los cristianos llaman a sus templos "iglesias", mientras que para los musulmanes son "mezquitas" y para los judíos, sencillamente, "templos". Son mucho más comunes que las catedrales, pero también mucho más pequeños y humildes. Hasta la más pequeña aldea puede poseer uno.</Spanish>
-		<Polish>Swiątynia - miejsce kultu religijnego. W sensie szerszym, jest to każda budowla wzniesiona w celu sprawowania w niej wszelkiego rodzaju obrzędów religijnych. W sensie węższym, świątynią może być tylko taka budowla, która spełnia przynajmniej niektóre wyższe funkcje kultowe (np. składanie ofiar), sprawowane jedynie przez kapłanów.</Polish>
+		<Tag>TXT_KEY_BUILDING_ASATRU_CATHEDRAL_STRATEGY</Tag>
+		<English>The [COLOR_BUILDING_TEXT]Asatru Cathedral[COLOR_REVERT]) greatly increases a city's cultural output. It makes a city's citizens happy (if [COLOR_HIGHLIGHT_TEXT]Shinto[COLOR_REVERT] is the state religion).</English>
+		<German>Der [COLOR_BUILDING_TEXT]Asatru Kathedrale[COLOR_REVERT]) erhöht den kulturellen Ausstoß einer Stadt deutlich. Ist [COLOR_HIGHLIGHT_TEXT]Shinto[COLOR_REVERT] in einer Stadt Staatsreligion, steigt die Zufriedenheit der Bevölkerung.</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ASATRU_TEMPLE_STRATEGY</Tag>
-		<English>[COLOR_BUILDING_TEXT]Temples[COLOR_REVERT] increase a city's happiness and culture. They are especially useful for expanding your civilization's borders during the early game.</English>
-		<French>Les [COLOR_BUILDING_TEXT]Temples[COLOR_REVERT] améliorent le bonheur et la culture des villes. Ils sont notamment utiles pour agrandir vos frontières culturelles au début du jeu.</French>
-		<German>[COLOR_BUILDING_TEXT]Tempel[COLOR_REVERT] steigern die Zufriedenheit und Kultur einer Stadt. Sie eignen sich hervorragend, um Ihre Zivilisation bereits in der Frühphase des Spiels zu vergrößern.</German>
-		<Italian>I [COLOR_BUILDING_TEXT]templi[COLOR_REVERT] aumentano la felicità e la cultura della città. Sono particolarmente indicati per espandere i confini della tua civiltà durante le fasi iniziali della partita.</Italian>
-		<Spanish>Los [COLOR_BUILDING_TEXT]Templos[COLOR_REVERT] aumentan la felicidad y cultura de la ciudad. Son especialmente útiles para expandir las fronteras de la civilización al principio de la partida.</Spanish>
+		<Tag>TXT_KEY_BUILDING_ASATRU_MONASTERY</Tag>
+		<English>Asatru Monastery</English>
+		<French>Monastère Asatru</French>
+		<Polish>Klasztor Asatru</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASATRU_MONASTERY_PEDIA</Tag>
@@ -139,18 +44,10 @@
 		<Spanish>Los [COLOR_BUILDING_TEXT]Monasterios[COLOR_REVERT] permiten crear [COLOR_UNIT_TEXT]Misioneros[COLOR_REVERT], que pueden propagar la fe por otras ciudades. También proporcionan cultura y un cierto empuje a la investigación.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ASATRU_CATHEDRAL_PEDIA</Tag>
-		<English>In Civilization IV, a cathedral is defined as an especially large and ornate religious building where the faithful worship. Only the most prosperous cities can afford to create cathedrals, as they require huge amounts of raw material and years of dedicated labor by skilled craftsmen. For example, the Notre Dame Cathedral in Paris, France, took over two centuries to complete.</English>
-		<French>Dans Civilization IV, un grand lieu de culte est défini comme un édifice religieux particulièrement grand et richement orné dans lequel les fidèles pratiquent leur religion: "cathédrales" pour les chrétiens, "mosquées" pour les musulmans et "synagogues" pour les juifs. Seules les villes les plus prospères ont les moyens de construire de tels édifices. En effet, ils nécessitent d'énormes quantités de matériaux bruts et des artisans spécialisés doivent y consacrer des années de travail. Ainsi, il a fallu plus de deux siècles pour terminer la cathédrale Notre-Dame à Paris.</French>
-		<German>In Civilization IV sind Kathedralen große und prächtige Gotteshäuser, in denen Gläubige beten. Nur die reichsten aller Städte können sich den Bau einer Kathedrale leisten, da hierfür große Mengen an Baumaterial und die jahrelange Arbeit erfahrener Handwerker erforderlich sind. Die Kathedrale von Notre Dame in Paris wurde beispielsweise erst nach 200-jähriger Bauzeit fertig gestellt.</German>
-		<Italian>In Civilization IV, viene definito cattedrale un edificio religioso particolarmente grande e sfarzoso adibito a luogo di culto per i fedeli. Solamente le città più prosperose possono permettersi l'edificazione di cattedrali poiché sono necessari un'enorme quantità di materiali e operai esperti. Per esempio, per completare la cattedrale di Notre-Dame de Paris, in Francia, ci sono voluti più di due secoli.</Italian>
-		<Spanish>En Civilization IV, una catedral se define como un edificio religioso especialmente grande y ornamentado en el que se reúnen los fieles para celebrar sus ritos. Solo las ciudades más grandes pueden permitirse el lujo de crear catedrales, puesto que requieren enormes cantidades de materias primas y años de dedicación por parte de trabajadores especializados. Por ejemplo, la catedral de Notre Dame, Francia, tardó dos siglos en completarse.</Spanish>
-		<Polish>Katedra, kościół katedralny, kościół biskupi (łac. ecclesia cathedralis, kathedra - krzesło, siedziba) - główny kościół biskupa diecezjalnego, arcybiskupa (archikatedra) lub patriarchy (kościół patriarchalny), w którym głosi on doktrynę katolicką. Termin stosuje się także do konkatedr i prokatedr. Niekiedy swobodnie jako określenie głównego kościoła miejskiego - nie zawsze jednak największy i najpiękniejszy kościół danej diecezji jest zarazem jej kościołem katedralnym, choćby w przypadku diecezji rzymskiej Bazylika św. Piotra znacznie przewyższa rozmiarami Bazylikę Laterańską. W historii sztuki i kultury utarło się, by ogólnie nazywać katedrami wielkie kościoły romańskie i gotyckie, niekoniecznie stanowiące katedry we właściwym sensie.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ASATRU_CATHEDRAL_STRATEGY</Tag>
-		<English>The [COLOR_BUILDING_TEXT]Asatru Cathedral[COLOR_REVERT]) greatly increases a city's cultural output. It makes a city's citizens happy (if [COLOR_HIGHLIGHT_TEXT]Shinto[COLOR_REVERT] is the state religion).</English>
-		<German>Der [COLOR_BUILDING_TEXT]Asatru Kathedrale[COLOR_REVERT]) erhöht den kulturellen Ausstoß einer Stadt deutlich. Ist [COLOR_HIGHLIGHT_TEXT]Shinto[COLOR_REVERT] in einer Stadt Staatsreligion, steigt die Zufriedenheit der Bevölkerung.</German>
+		<Tag>TXT_KEY_BUILDING_ASATRU_SHRINE</Tag>
+		<English>The Odin's Sanctuary</English>
+		<French>Le Sanctuaire d'Odin</French>
+		<Polish>Sanktuarium Odyna</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASATRU_SHRINE_PEDIA</Tag>
@@ -160,6 +57,29 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASATRU_SHRINE_STRATEGY</Tag>
 		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ASATRU_TEMPLE</Tag>
+		<English>Asatru Temple</English>
+		<French>Temple Asatru</French>
+		<Polish>Swiątynia Asatru</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ASATRU_TEMPLE_PEDIA</Tag>
+		<English>In Civilization IV, a temple is defined as a building where the faithful come to worship. Christians call their temples "churches," while Muslims call theirs "mosques," and Jews call theirs, simply, "temples." Temples are far more common than cathedrals, but much less large and ornate. Even the smallest village can possess a temple.</English>
+		<French>Dans Civilization IV, un petit lieu de culte est défini comme un édifice dans lequel les fidèles viennent pratiquer leur religion: "églises" pour les chrétiens, "petites mosquées" pour les musulmans et "petites synagogues" pour les juifs. Ces petits lieux de culte sont bien plus courants que les grands lieux de culte mais sont de taille plus réduite et sont bien moins richement ornés. Même le village le plus petit peut posséder un petit lieu de culte.</French>
+		<German>In Civilization IV sind Tempel Gebäude, in denen Gläubige beten. Christen nennen ihre Tempel "Kirchen", Moslems "Moscheen". Es gibt deutlich mehr Tempel als Kathedralen. Allerdings sind sie wesentlich kleiner und schlichter. Selbst das kleinste Dorf kann einen Tempel besitzen.</German>
+		<Italian>In Civilization IV, il tempio è un edificio all'interno del quale i fedeli si recano a pregare. I Cristiani chiamano i loro templi "chiese", i Musulmani "moschee", gli Ebrei semplicemente "templi". I templi sono più comuni delle cattedrali, ma sono più piccoli e poco fastosi. Anche il villaggio più piccolo ospita un tempio.</Italian>
+		<Spanish>En Civilization IV, un templo se define como un lugar al que los fieles acuden a venerar. Los cristianos llaman a sus templos "iglesias", mientras que para los musulmanes son "mezquitas" y para los judíos, sencillamente, "templos". Son mucho más comunes que las catedrales, pero también mucho más pequeños y humildes. Hasta la más pequeña aldea puede poseer uno.</Spanish>
+		<Polish>Swiątynia - miejsce kultu religijnego. W sensie szerszym, jest to każda budowla wzniesiona w celu sprawowania w niej wszelkiego rodzaju obrzędów religijnych. W sensie węższym, świątynią może być tylko taka budowla, która spełnia przynajmniej niektóre wyższe funkcje kultowe (np. składanie ofiar), sprawowane jedynie przez kapłanów.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ASATRU_TEMPLE_STRATEGY</Tag>
+		<English>[COLOR_BUILDING_TEXT]Temples[COLOR_REVERT] increase a city's happiness and culture. They are especially useful for expanding your civilization's borders during the early game.</English>
+		<French>Les [COLOR_BUILDING_TEXT]Temples[COLOR_REVERT] améliorent le bonheur et la culture des villes. Ils sont notamment utiles pour agrandir vos frontières culturelles au début du jeu.</French>
+		<German>[COLOR_BUILDING_TEXT]Tempel[COLOR_REVERT] steigern die Zufriedenheit und Kultur einer Stadt. Sie eignen sich hervorragend, um Ihre Zivilisation bereits in der Frühphase des Spiels zu vergrößern.</German>
+		<Italian>I [COLOR_BUILDING_TEXT]templi[COLOR_REVERT] aumentano la felicità e la cultura della città. Sono particolarmente indicati per espandere i confini della tua civiltà durante le fasi iniziali della partita.</Italian>
+		<Spanish>Los [COLOR_BUILDING_TEXT]Templos[COLOR_REVERT] aumentan la felicidad y cultura de la ciudad. Son especialmente útiles para expandir las fronteras de la civilización al principio de la partida.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FREYA_SANCTUARY</Tag>
@@ -238,16 +158,60 @@
 		<English>[COLOR_BUILDING_TEXT]Thor Sanctuary[COLOR_REVERT] </English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_MJOLNIR</Tag>
+		<English>Mojlnir</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_ASATRU</Tag>
+		<English>Asatru</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_ASATRU_ADJECTIVE</Tag>
+		<English>Asatru</English>
+		<French>
+			<Text>Asatru</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>
+			<Text>Asatru</Text>
+			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Plural>0:0:0</Plural>
+		</German>
+		<Italian>
+			<Text>Asatru</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Asatru</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_ASATRU_PEDIA</Tag>
+		<English>Asatru is a term used to describe the religious traditions which were common amongst the Germanic tribes living in Nordic countries prior to and during the Christianization of Northern Europe. Norse paganism is therefore a subset of Germanic paganism, which was practiced in the lands inhabited by the Germanic tribes across most of Northern and Central Europe in the Viking Age. Our knowledge of Norse paganism is mostly drawn from the results of archaeological field work, etymology and early written materials.</English>
+		<Polish>Asatru - politeistyczna religia oparta na wierzeniach zawartych w mitologii nordyckiej, której świat bogów reprezentują dwie dynastie Asów i Vanów. Stanowi ona próbę odtworzenia wierzeń dominujących w Europie Północnej przed przyjęciem chrześcijaństwa. Zaliczana jest do neopogańskich ruchów religijnych.</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TECH_ASATRU_QUOTE</Tag>
-		<English>"No man lives till eve whom the Norns doom at dawning."[NEWLINE][NEWLINE]-Anglo Saxon Poem (found at cauldronborn.blogspot.com.au)</English>
-		<French>"Aucun Homme de vivra tant que le cauchemar des Nornes est présent."[NEWLINE][NEWLINE]-Poème Anglo Saxon (trouvé sur  cauldronborn.blogspot.com.au)</French>
-		<Spanish>"Ningún hombre sobrevive a la condena de los nórdicos al amanecer."[NEWLINE][NEWLINE]-Poema anglosajón (encontrado en cauldronborn.blogspot.com.au)</Spanish>
+		<English>"No man lives till eve whom the Norns doom at dawning." - Anglo Saxon Poem (found at cauldronborn.blogspot.com.au)</English>
+		<French>"Aucun Homme de vivra tant que le cauchemar des Nornes est présent." - Poème Anglo Saxon (trouvé sur cauldronborn.blogspot.com.au)</French>
+		<Spanish>"Ningún hombre sobrevive a la condena de los nórdicos al amanecer." - Poema anglosajón (encontrado en cauldronborn.blogspot.com.au)</Spanish>
+		<Polish>"A furore Normannorum libera nos, Domine (przed gniewem Normanów ocal nas, Panie)" - Anglosaxońska modlitwa</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_ASATRU_STRATEGY</Tag>
+		<English>Research Asatru to found a Religion</English>
+		<French>Recherchez Asatru pour fonder une religion</French>
+		<Spanish>Investiga el Ásatrú para fundar una religión.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_RELIGION_ASATRU</Tag>
 		<English>Religion(Asatru)</English>
 		<French>
-			<Text>Religion(Asatru)</Text>
+			<Text>(Religion) Asatru</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -257,5 +221,33 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Religia (Asatru)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_ASATRU_LOKI_PEDIA</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_ASATRU_LOKI_STRATEGY</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_ASATRU_MISSIONARY</Tag>
+		<English>Asatru Missionary</English>
+		<French>Missionnaire Asatru</French>
+		<Polish>Misjonarz Asatru</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_ASATRU_MISSIONARY_PEDIA</Tag>
+		<English>Norse religion refers to the religious traditions of the Norsemen prior to the Christianization of Scandinavia, specifically during the Viking Age. It is a folk religion, which was not necessarily formalized nor categorized as a subset of Germanic paganism until it was described by outsiders who came into contact with native practitioners. It was the northern variation of the religion practiced in the lands inhabited by the Germanic tribes across most of Northern and Central Europe prior to Roman and Holy Roman incursions. Knowledge of Norse religion is mostly drawn from the results of archaeological field work, etymology and early written materials as it was largely a product of earlier people who did not have a written history.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_ASATRU_MISSIONARY_STRATEGY</Tag>
+		<English>Use this missionary to actively spread [COLOR_HIGHLIGHT_TEXT]Asatruism[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]).</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LOKI</Tag>
+		<English>Loki Fist</English>
+		<French>Poing de Loki</French>
+		<Polish>Pięść Lokiego</Polish>
 	</TEXT>
 </Civ4GameText>

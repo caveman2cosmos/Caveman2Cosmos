@@ -53,17 +53,17 @@ bool BuildingFilterCanBuild::isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity
 
 bool BuildingFilterIsWonder::isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
 {
-	return isLimitedWonderClass((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType());
+	return isLimitedWonder(eBuilding);
 }
 
 bool BuildingFilterIsGreatWonder::isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
 {
-	return isWorldWonderClass((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType());
+	return isWorldWonder(eBuilding);
 }
 
 bool BuildingFilterIsNationalWonder::isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
 {
-	return isNationalWonderClass((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType());
+	return isNationalWonder(eBuilding);
 }
 
 BuildingFilterIsCommerce::BuildingFilterIsCommerce(CommerceTypes eCommerce, bool bInvert) : BuildingFilterBase(bInvert)
@@ -218,12 +218,12 @@ bool BuildingFilterIsCityDefense::isFilteredBuilding(CvPlayer *pPlayer, CvCity *
 	bool bSAD = false;
 	bool bSIN = false;
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_SAD))
+	if (GC.getGame().isOption(GAMEOPTION_SAD))
 	{
 		bSAD = (GC.getBuildingInfo(eBuilding).getLocalDynamicDefense() > 0);
 	}
 
-	if (GC.getGameINLINE().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
+	if (GC.getGame().isOption(GAMEOPTION_STRENGTH_IN_NUMBERS))
 	{
 		bSIN =  ((GC.getBuildingInfo(eBuilding).getFrontSupportPercentModifier() > 0) || 
 		(GC.getBuildingInfo(eBuilding).getShortRangeSupportPercentModifier() > 0) || 
@@ -254,7 +254,7 @@ bool BuildingFilterIsCityDefense::isFilteredBuilding(CvPlayer *pPlayer, CvCity *
 bool BuildingFilterIsProperty::isFilteredBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
 {
 	CvBuildingInfo& kInfo = GC.getBuildingInfo(eBuilding);
-	if ((kInfo.getProperties()->getValueByProperty((int)m_eProperty) != 0) || (kInfo.getPropertiesAllCities()->getValueByProperty((int)m_eProperty)))
+	if ((kInfo.getProperties()->getValueByProperty(m_eProperty) != 0) || (kInfo.getPropertiesAllCities()->getValueByProperty(m_eProperty)))
 		return true;
 
 	CvPropertyManipulators* pMani = kInfo.getPropertyManipulators();

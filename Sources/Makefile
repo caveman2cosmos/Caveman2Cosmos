@@ -30,7 +30,7 @@
 # Note: $(PROGRAMFILES) converts to "C:\Program Files", "C:\Program Files (x86)" or whatever fits your system.
 # run "nmake.exe /P" in cmd.exe to see what it is on your system
 TOOLKIT=..\Build\deps\Microsoft Visual C++ Toolkit 2003
-PSDK=..\Build\deps\Microsoft Platform SDK
+PSDK=..\Build\deps\Microsoft SDKs\Windows\v6.0
 ## Uncomment to have newly compiled dlls copied to your mod's Assets directory
 YOURMOD=..
 
@@ -56,7 +56,7 @@ FD="..\Build\deps\fastdep\fastdep.exe"
 ## However you will only be able to tell a difference if you do something with asserts other than FAssert() or FAssertMsg()
 
 Debug_DEFINES=/DWIN32 /D_WINDOWS /D_USRDLL /D_DEBUG /DBUILD_TARGET=$(TARGET)
-Release_DEFINES=/DWIN32 /D_WINDOWS /D_USRDLL /DNDEBUG /DFINAL_RELEASE /DBUILD_TARGET=$(TARGET)
+Release_DEFINES=/DWIN32 /D_WINDOWS /D_USRDLL /DNDEBUG /DBUILD_TARGET=$(TARGET)
 
 #### You shouldn't need to modify anything beyond this point ####
 #################################################################
@@ -70,11 +70,18 @@ CUSTOM_LDFLAGS =
 # !ENDIF
 # !include Makefile.settings
 
-# /nologo /MD /Z7 /O2 /Oy /Oi /G7 /DWIN32 /D_WINDOWS /D_USRDLL /DCVGAMECOREDLL_EXPORTS /DNDEBUG /DFINAL_RELEASE /GR /Gy /W3 /EHsc /Gd /Gm- /Fd"TARGET_DIR_files\Profile\CvGameCoreDLL.pdb"   /Z7 /Yu"CvGameCoreDLL.h" /Fp"temp_files\Profile\CvGameCoreDLL.pch" /I"deps/Boost-1.32.0/include" /I"deps/Python24/include" /I"./include" /I"deps\Microsoft Visual C++ Toolkit 2003/include" /I"deps\Microsoft Platform SDK/Include" /I"deps\Microsoft Platform SDK/Include/mfc" /YcCvGameCoreDLL.h /Fo"temp_files\Profile\_precompile.obj" /c .\_precompile.cpp
+!IFDEF C2C_VERSION
+VERSION_DEFINE=/DC2C_VERSION="\"$(C2C_VERSION)\""
+!ELSE
+VERSION_DEFINE=
+!ENDIF
+
+# /nologo /MD /Z7 /O2 /Oy /Oi /G7 /DWIN32 /D_WINDOWS /D_USRDLL /DCVGAMECOREDLL_EXPORTS /DNDEBUG /DFINAL_RELEASE /GR /Gy /W3 /EHsc /Gd /Gm- /Fd"TARGET_DIR_files\Profile\CvGameCoreDLL.pdb"   /Z7 /Yu"CvGameCoreDLL.h" /Fp"temp_files\Profile\CvGameCoreDLL.pch" /I"deps/Boost-1.32.0/include" /I"deps/Python24/include" /I"./include" /I"deps\Microsoft Visual C++ Toolkit 2003/include" /I"deps\Microsoft SDKs\Windows\v6.0/Include" /I"deps\Microsoft SDKs\Windows\v6.0/Include/mfc" /YcCvGameCoreDLL.h /Fo"temp_files\Profile\_precompile.obj" /c .\_precompile.cpp
 PRECOMPILE_DEPENDENCIES = 
-PROJECT_CFLAGS = /arch:SSE2 /Zm200 /DXERCES_STATIC_LIBRARY /D_MOD_SENTRY /D_MOD_FRACTRADE /D_MOD_GOVWORKERS /DQC_MASTERY_VICTORY /DLOG_AI /D_MOD_GWARM /D_MOD_SHAM_SPOILER /DC2C_BUILD
+PROJECT_CFLAGS = /arch:SSE2 /Zm200 /DXERCES_STATIC_LIBRARY /D_MOD_SENTRY /D_MOD_FRACTRADE /D_MOD_GOVWORKERS /DLOG_AI $(VERSION_DEFINE)
 PROJECT_LDFLAGS = /NODEFAULTLIB:msvcprtd.lib /DEF:CvGameCoreDLL.def /PDBALTPATH:%_PDB%
 SOURCE_DIR = .
+
 
 SUBDIRPATH1 = ../
 SUBDIRPATH2 = ../
@@ -195,11 +202,15 @@ CFLAGS  = $(Release_CFLAGS)
 LDFLAGS = $(Release_LDFLAGS)
 !ENDIF
 !IF "$(TARGET)" == "FinalRelease"
-CFLAGS  = $(FinalRelease_CFLAGS)
+CFLAGS  = $(FinalRelease_CFLAGS) /DFINAL_RELEASE
 LDFLAGS = $(FinalRelease_LDFLAGS)
 !ENDIF
 !IF "$(TARGET)" == "Assert"
 CFLAGS  = $(Release_CFLAGS) /DFASSERT_ENABLE
+LDFLAGS = $(Release_LDFLAGS)
+!ENDIF
+!IF "$(TARGET)" == "Testing"
+CFLAGS  = $(Release_CFLAGS) /DFASSERT_ENABLE /DFASSERT_LOGGING
 LDFLAGS = $(Release_LDFLAGS)
 !ENDIF
 !IF "$(TARGET)" == "Profile"
@@ -208,7 +219,7 @@ LDFLAGS = $(Release_LDFLAGS)
 !ENDIF
 
 !IFNDEF CFLAGS
-!ERROR Target "$(TARGET)" not supported. Supported targets: Debug Release Assert Profile
+!ERROR Target "$(TARGET)" not supported. Supported targets: Debug Release Assert Profile Testing
 !ENDIF
 
 !IF EXIST ($(FILE_DEPENDS))
@@ -271,89 +282,89 @@ $(Target_BIN): $(OBJS) $(Target_RESOURCE)
 
 {$(SOURCE_DIR)\.}.cpp{$(TARGET_DIR)\.}.obj:
 	@ECHO.>"$*.obj.@"
-    $(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
+	$(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"
 	
 {$(SOURCE_DIR)\$(SUBDIR1)}.cpp{$(TARGET_DIR)\$(SUBDIR1)}.obj:
 	@ECHO.>"$*.obj.@"
-    $(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH1)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
+	$(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH1)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"
 
 {$(SOURCE_DIR)\$(SUBDIR2)}.cpp{$(TARGET_DIR)\$(SUBDIR2)}.obj:
 	@ECHO.>"$*.obj.@"
-    $(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH2)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
+	$(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH2)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"
 
 {$(SOURCE_DIR)\$(SUBDIR3)}.cpp{$(TARGET_DIR)\$(SUBDIR3)}.obj:
 	@ECHO.>"$*.obj.@"
-    $(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH3)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
+	$(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH3)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"
 
 {$(SOURCE_DIR)\$(SUBDIR4)}.cpp{$(TARGET_DIR)\$(SUBDIR4)}.obj:
 	@ECHO.>"$*.obj.@"
-    $(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH4)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
+	$(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH4)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"
 	
 {$(SOURCE_DIR)\$(SUBDIR5)}.cpp{$(TARGET_DIR)\$(SUBDIR5)}.obj:
 	@ECHO.>"$*.obj.@"
-    $(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH5)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
+	$(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH5)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"
 
 {$(SOURCE_DIR)\$(SUBDIR6)}.cpp{$(TARGET_DIR)\$(SUBDIR6)}.obj:
 	@ECHO.>"$*.obj.@"
-    $(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH6)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
+	$(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH6)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"
 
 {$(SOURCE_DIR)\$(SUBDIR7)}.cpp{$(TARGET_DIR)\$(SUBDIR7)}.obj:
 	@ECHO.>"$*.obj.@"
-    $(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH7)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
+	$(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH7)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"
 
 {$(SOURCE_DIR)\$(SUBDIR8)}.cpp{$(TARGET_DIR)\$(SUBDIR8)}.obj:
 	@ECHO.>"$*.obj.@"
-    $(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH8)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
+	$(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH8)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"
 	
 {$(SOURCE_DIR)\$(SUBDIR9)}.cpp{$(TARGET_DIR)\$(SUBDIR9)}.obj:
 	@ECHO.>"$*.obj.@"
-    $(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH9)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
+	$(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH9)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"
 
 {$(SOURCE_DIR)\$(SUBDIR10)}.cpp{$(TARGET_DIR)\$(SUBDIR10)}.obj:
 	@ECHO.>"$*.obj.@"
-    $(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH10)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
+	$(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH10)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"
 
 {$(SOURCE_DIR)\$(SUBDIR11)}.cpp{$(TARGET_DIR)\$(SUBDIR11)}.obj:
 	@ECHO.>"$*.obj.@"
-    $(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH11)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
+	$(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH11)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"
 
 {$(SOURCE_DIR)\$(SUBDIR12)}.cpp{$(TARGET_DIR)\$(SUBDIR12)}.obj:
 	@ECHO.>"$*.obj.@"
-    $(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH12)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
+	$(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH12)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"
 
 {$(SOURCE_DIR)\$(SUBDIR13)}.cpp{$(TARGET_DIR)\$(SUBDIR13)}.obj:
 	@ECHO.>"$*.obj.@"
-    $(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH13)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
+	$(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH13)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"
 
 {$(SOURCE_DIR)\$(SUBDIR14)}.cpp{$(TARGET_DIR)\$(SUBDIR14)}.obj:
 	@ECHO.>"$*.obj.@"
-    $(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH14)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
+	$(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH14)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"
 
 {$(SOURCE_DIR)\$(SUBDIR15)}.cpp{$(TARGET_DIR)\$(SUBDIR15)}.obj:
 	@ECHO.>"$*.obj.@"
-    $(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH15)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
+	$(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(SUBDIRPATH15)$(PRECOMPILE_CFLAGS2) $(INCS) /Fo$*.obj /c $<
 	@DEL "$*.obj.@"	
 
 $(Target_PCH) $(TARGET_DIR)\_precompile.obj: $(PRECOMPILE_DEPENDENCIES)
 	@ECHO.>"$(Target_PCH).@"
 	@ECHO.>"$(TARGET_DIR)\_precompile.obj.@"
 	@FOR %i IN ($(TARGET_DIR)\*.obj) DO @IF EXIST "%i" DEL "%i"
-    $(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(PRECOMPILE_CFLAGS2) $(INCS) /YcCvGameCoreDLL.h /Fo"$(TARGET_DIR)\_precompile.obj" /c $(SOURCE_DIR)\_precompile.cpp
+	$(CPP) /nologo $(CFLAGS) $(PRECOMPILE_CFLAGS1)$(PRECOMPILE_CFLAGS2) $(INCS) /YcCvGameCoreDLL.h /Fo"$(TARGET_DIR)\_precompile.obj" /c $(SOURCE_DIR)\_precompile.cpp
 	@DEL "$(Target_PCH).@"
 	@DEL "$(TARGET_DIR)\_precompile.obj.@"
 

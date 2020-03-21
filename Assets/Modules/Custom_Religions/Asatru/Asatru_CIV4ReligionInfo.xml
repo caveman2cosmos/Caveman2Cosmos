@@ -8,11 +8,11 @@
 	<ReligionInfos>
 		<ReligionInfo>
 			<Type>RELIGION_ASATRU</Type>
-			<Description>TXT_KEY_RELIGION_ASATRU</Description>
-			<Adjective>TXT_KEY_RELIGION_ASATRU_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_RELIGION_ASATRU_PEDIA</Civilopedia>
+			<Description>TXT_KEY_TECH_ASATRU</Description>
+			<Adjective>TXT_KEY_TECH_ASATRU_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_TECH_ASATRU_PEDIA</Civilopedia>
 			<TechPrereq>TECH_ASATRU</TechPrereq>
-			<FreeUnitClass>UNITCLASS_ASATRU_MISSIONARY</FreeUnitClass>
+			<FreeUnit>UNIT_ASATRU_MISSIONARY</FreeUnit>
 			<iFreeUnits>0</iFreeUnits>
 			<iSpreadFactor>20</iSpreadFactor>
 			<iTGAIndex>20</iTGAIndex>

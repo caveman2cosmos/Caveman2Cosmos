@@ -1,5 +1,8 @@
 #pragma once
 
+#ifndef FFreeListTrashArray_h__
+#define FFreeListTrashArray_h__
+
 #include "FDataStreamBase.h"
 #include "CvTaggedSaveFormatWrapper.h"
 #include "FFreeListArrayBase.h"
@@ -15,6 +18,40 @@
 template <class T>
 class FFreeListTrashArray
 {
+public:
+	class iterator : public bst::iterator_facade<iterator, T, bst::forward_traversal_tag>
+	{
+	public:
+		iterator() : m_array(NULL), m_idx(0), m_value(NULL){}
+		explicit iterator(const FFreeListTrashArray<T>* array)
+			: m_array(array)
+			, m_idx(0)
+			, m_value(array->beginIter(&m_idx))
+		{
+		}
+
+	private:
+		friend class bst::iterator_core_access;
+
+		void increment()
+		{
+			if (m_value != NULL)
+			{
+				m_value = m_array->nextIter(&m_idx);
+			}
+		}
+
+		bool equal(iterator const& other) const
+		{
+			return this->m_value == other.m_value;
+		}
+
+		T& dereference() const { return *m_value; }
+
+		const FFreeListTrashArray<T>* m_array;
+		int m_idx;
+		T* m_value;
+	};
 public:
 
 	FFreeListTrashArray();
@@ -37,6 +74,9 @@ public:
 
 	// iterate from the current position and return the prev item found or NULL when done
 	T* prevIter(int* pIterIdx) const;
+
+	iterator begin() const { return iterator(this); }
+	iterator end() const { return iterator(); }
 
 	// Returns the iIndex after the last iIndex in the array containing an element
 	int getIndexAfterLast() const { return m_iLastIndex + 1; }
@@ -255,6 +295,7 @@ T* FFreeListTrashArray<T>::add()
 	{
 		init();
 	}
+	FAssertMsg(m_pArray != NULL, "Array is null after initialization");
 
 	if ((m_iLastIndex == m_iNumSlots - 1) &&
 		(m_iFreeListCount == 0))
@@ -662,3 +703,5 @@ inline void WriteStreamableFFreeListTrashArray( FFreeListTrashArray< T >& flist,
 
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
+
+#endif // FFreeListTrashArray_h__

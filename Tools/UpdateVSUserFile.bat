@@ -16,6 +16,6 @@ PUSHD "%MODS_DIR%\.."
 set "BTS_DIR=%cd%"
 POPD
 
-powershell -Command "(gc '..\Sources\C2C (VS2019).vcxproj.user.template') -replace '{BTSDIR}', '%BTS_DIR%' | Out-File -encoding ASCII '..\Sources\C2C (VS2019).vcxproj.user'"
+powershell -ExecutionPolicy Bypass -File "%~dp0_UpdateVSUserFile.ps1"
 
 POPD

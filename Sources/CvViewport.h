@@ -67,8 +67,7 @@ enum ViewportGraphicalSpoofingState
 class CvViewport : public CvMapInterfaceBase
 {
 public:
-
-	CvViewport(CvMap*	map, bool bIsFullMapContext);
+	CvViewport(CvMap* map, bool bIsFullMapContext);
 	virtual ~CvViewport();
 
 	virtual CvMapInterfaceBase*	getUnderlyingMap() const { return m_pMap; }
@@ -84,18 +83,18 @@ public:
 	virtual void beforeSwitch();
 	virtual void afterSwitch();
 
-	bool	isMidSwitch() const;
+	bool isMidSwitch() const;
 
-	void	getMapOffset(int& iX, int& iY) const;
-	void	setMapOffset(int iX, int iY);
-	void	setOffsetToShow(int iX, int iY);	//	Make this the centre or near as appropiate
-	void	resizeForMap();
-	void	bringIntoView(int iX, int iY, CvUnit* pSelectionUnit = NULL, bool bLookAt = true, bool bForceCenter = false, bool bDisplayCityScreen = false, bool bSelectCity = false, bool bAddSelectedCity = false);
-	void	centerOnSelection();
-	void	panLeft();
-	void	panRight();
-	void	panUp();
-	void	panDown();
+	void getMapOffset(int& iX, int& iY) const;
+	void setMapOffset(int iX, int iY);
+	void setOffsetToShow(int iX, int iY);	//	Make this the centre or near as appropiate
+	void resizeForMap();
+	void bringIntoView(int iX, int iY, const CvUnit* pSelectionUnit = NULL, bool bLookAt = true, bool bForceCenter = false, bool bDisplayCityScreen = false, bool bSelectCity = false, bool bAddSelectedCity = false);
+	void centerOnSelection();
+	void panLeft();
+	void panRight();
+	void panUp();
+	void panDown();
 
 	inline ViewportMode getState() const { return m_mode; }
 	
@@ -114,7 +113,7 @@ public:
 	virtual void updateMinimapColor();															// Exposed to Python
 	virtual void updateSight(bool bIncrement, bool bUpdatePlotGroups = true);
 	virtual void updateIrrigated();
-	virtual  void updateCenterUnit();
+	virtual void updateCenterUnit();
 	virtual void updateWorkingCity();
 	virtual void updateMinOriginalStartDist(CvArea* pArea);										// Exposed to Python
 	virtual void updateYield();
@@ -123,13 +122,13 @@ public:
 
 	virtual CvPlot* syncRandPlot(int iFlags = 0, int iArea = -1, int iMinUnitDistance = -1, int iTimeout = 100);// Exposed to Python 
 
-	virtual CvCity* findCity(int iX, int iY, PlayerTypes eOwner = NO_PLAYER, TeamTypes eTeam = NO_TEAM, bool bSameArea = true, bool bCoastalOnly = false, TeamTypes eTeamAtWarWith = NO_TEAM, DirectionTypes eDirection = NO_DIRECTION, CvCity* pSkipCity = NULL);	// Exposed to Python
-	virtual CvSelectionGroup* findSelectionGroup(int iX, int iY, PlayerTypes eOwner = NO_PLAYER, bool bReadyToSelect = false, bool bWorkers = false);				// Exposed to Python
+	virtual CvCity* findCity(int iX, int iY, PlayerTypes eOwner = NO_PLAYER, TeamTypes eTeam = NO_TEAM, bool bSameArea = true, bool bCoastalOnly = false, TeamTypes eTeamAtWarWith = NO_TEAM, DirectionTypes eDirection = NO_DIRECTION, const CvCity* pSkipCity = NULL) const;	// Exposed to Python
+	virtual CvSelectionGroup* findSelectionGroup(int iX, int iY, PlayerTypes eOwner = NO_PLAYER, bool bReadyToSelect = false, bool bWorkers = false) const;				// Exposed to Python
 
-	virtual CvArea* findBiggestArea(bool bWater);																						// Exposed to Python
+	virtual CvArea* findBiggestArea(bool bWater) const;																						// Exposed to Python
 
-	virtual int getMapFractalFlags();																												// Exposed to Python
-	virtual bool findWater(CvPlot* pPlot, int iRange, bool bFreshWater);										// Exposed to Python
+	virtual int getMapFractalFlags() const;																												// Exposed to Python
+	virtual bool findWater(const CvPlot* pPlot, int iRange, bool bFreshWater) const;										// Exposed to Python
 
 	virtual bool isPlot(int iX, int iY) const;																		// Exposed to Python
 	virtual int numPlots() const; 																								// Exposed to Python
@@ -138,40 +137,40 @@ public:
 	virtual int plotX(int iIndex) const;																										// Exposed to Python
 	virtual int plotY(int iIndex) const;																										// Exposed to Python
 
-	virtual int pointXToPlotX(float fX);
-	virtual float plotXToPointX(int iX);
+	virtual int pointXToPlotX(float fX) const;
+	virtual float plotXToPointX(int iX) const;
 
-	virtual int pointYToPlotY(float fY);
-	virtual float plotYToPointY(int iY);
+	virtual int pointYToPlotY(float fY) const;
+	virtual float plotYToPointY(int iY) const;
 
-	virtual float getWidthCoords();
-	virtual float getHeightCoords();
+	virtual float getWidthCoords() const;
+	virtual float getHeightCoords() const;
 
-	virtual int maxPlotDistance();																								// Exposed to Python
-	virtual int maxStepDistance();																								// Exposed to Python
+	virtual int maxPlotDistance() const;																								// Exposed to Python
+	virtual int maxStepDistance() const;																								// Exposed to Python
 
 	virtual int getGridWidth() const;																		// Exposed to Python
 	virtual int getGridHeight() const;																	// Exposed to Python
-	virtual int getLandPlots();																					// Exposed to Python
+	virtual int getLandPlots() const;																					// Exposed to Python
 
-	virtual int getOwnedPlots();																				// Exposed to Python
+	virtual int getOwnedPlots() const;																				// Exposed to Python
 
-	virtual int getTopLatitude();																									// Exposed to Python
-	virtual int getBottomLatitude();																							// Exposed to Python
+	virtual int getTopLatitude() const;																									// Exposed to Python
+	virtual int getBottomLatitude() const;																							// Exposed to Python
 
 	virtual bool isWrapX() const;																							// Exposed to Python
 	virtual bool isWrapY() const;																							// Exposed to Python
 	virtual bool isWrap() const;
-	virtual WorldSizeTypes getWorldSize();															// Exposed to Python
-	virtual ClimateTypes getClimate();																	// Exposed to Python
-	virtual SeaLevelTypes getSeaLevel();																// Exposed to Python
+	virtual WorldSizeTypes getWorldSize() const;															// Exposed to Python
+	virtual ClimateTypes getClimate() const;																	// Exposed to Python
+	virtual SeaLevelTypes getSeaLevel() const;																// Exposed to Python
 
-	virtual int getNumCustomMapOptions();
-	virtual CustomMapOptionTypes getCustomMapOption(int iOption);				// Exposed to Python
+	virtual int getNumCustomMapOptions() const;
+	virtual CustomMapOptionTypes getCustomMapOption(int iOption) const;				// Exposed to Python
 
 	virtual CvPlot* plotByIndex(int iIndex) const;											// Exposed to Python
 	virtual CvPlot* plot(int iX, int iY) const;													// Exposed to Python
-	virtual CvPlot* pointToPlot(float fX, float fY);
+	virtual CvPlot* pointToPlot(float fX, float fY) const;
 	inline CvPlot* plotSorenINLINE(int iX, int iY) const
 	{
 		if ((iX == INVALID_PLOT_COORD) || (iY == INVALID_PLOT_COORD))
@@ -181,8 +180,8 @@ public:
 		return plot(iX, iY);
 	}
 
-	virtual int getNumAreas();														// Exposed to Python
-	virtual int getNumLandAreas();
+	virtual int getNumAreas() const;														// Exposed to Python
+	virtual int getNumLandAreas() const;
 
 	// Serialization:
 	virtual void read(FDataStreamBase* pStream);
@@ -199,11 +198,11 @@ public:
 
 				if ( iResult < 0 )
 				{
-					iResult += m_pMap->getGridWidthINLINE();
+					iResult += m_pMap->getGridWidth();
 				}
 				else if ( iResult >= m_iXSize )
 				{
-					iResult -= m_pMap->getGridWidthINLINE();
+					iResult -= m_pMap->getGridWidth();
 				}
 
 				FAssert(0 <= iResult);
@@ -218,7 +217,7 @@ public:
 		}
 		else if ( m_transformType == VIEWPORT_TRANSFORM_TYPE_SCALE )
 		{
-			return (iMapX * m_iXSize)/m_pMap->getGridWidthINLINE();
+			return (iMapX * m_iXSize)/m_pMap->getGridWidth();
 		}
 		else
 		{
@@ -236,11 +235,11 @@ public:
 
 				if ( iResult < 0 )
 				{
-					iResult += m_pMap->getGridHeightINLINE();
+					iResult += m_pMap->getGridHeight();
 				}
 				else if ( iResult >= m_iYSize )
 				{
-					iResult -= m_pMap->getGridHeightINLINE();
+					iResult -= m_pMap->getGridHeight();
 				}
 
 				FAssert(0 <= iResult);
@@ -255,7 +254,7 @@ public:
 		}
 		else if ( m_transformType == VIEWPORT_TRANSFORM_TYPE_SCALE )
 		{
-			return (iMapY * m_iYSize)/m_pMap->getGridHeightINLINE();
+			return (iMapY * m_iYSize)/m_pMap->getGridHeight();
 		}
 		else
 		{
@@ -277,12 +276,12 @@ public:
 			}
 			else
 			{
-				return (iViewportX + m_iXOffset + m_pMap->getGridWidthINLINE()) % m_pMap->getGridWidthINLINE();
+				return (iViewportX + m_iXOffset + m_pMap->getGridWidth()) % m_pMap->getGridWidth();
 			}
 		}
 		else if ( m_transformType == VIEWPORT_TRANSFORM_TYPE_SCALE )
 		{
-			return (iViewportX * m_pMap->getGridWidthINLINE() + m_iXSize - 1)/m_iXSize;
+			return (iViewportX * m_pMap->getGridWidth() + m_iXSize - 1)/m_iXSize;
 		}
 		else
 		{
@@ -304,12 +303,12 @@ public:
 			}
 			else
 			{
-				return (iViewportY + m_iYOffset + m_pMap->getGridHeightINLINE()) % m_pMap->getGridHeightINLINE();
+				return (iViewportY + m_iYOffset + m_pMap->getGridHeight()) % m_pMap->getGridHeight();
 			}
 		}
 		else if ( m_transformType == VIEWPORT_TRANSFORM_TYPE_SCALE )
 		{
-			return (iViewportY * m_pMap->getGridHeightINLINE() + m_iYSize - 1)/m_iYSize;
+			return (iViewportY * m_pMap->getGridHeight() + m_iYSize - 1)/m_iYSize;
 		}
 		else
 		{
@@ -322,15 +321,15 @@ public:
 		if ( m_transformType == VIEWPORT_TRANSFORM_TYPE_WINDOW )
 		{
 			//	Normalize for map wrappings
-			if ( m_pMap->isWrapXINLINE() )
+			if ( m_pMap->isWrapX() )
 			{
-				if ( m_iXOffset < 0 && iMapX >= m_pMap->getGridWidthINLINE() + m_iXOffset )
+				if ( m_iXOffset < 0 && iMapX >= m_pMap->getGridWidth() + m_iXOffset )
 				{
-					iMapX -= m_pMap->getGridWidthINLINE();
+					iMapX -= m_pMap->getGridWidth();
 				}
-				else if ( m_iXOffset > m_pMap->getGridWidthINLINE() - m_iXSize && iMapX < m_iXOffset - m_iXSize )
+				else if ( m_iXOffset > m_pMap->getGridWidth() - m_iXSize && iMapX < m_iXOffset - m_iXSize )
 				{
-					iMapX += m_pMap->getGridWidthINLINE();
+					iMapX += m_pMap->getGridWidth();
 				}
 			}
 			return (iMapX >= m_iXOffset && iMapX - m_iXOffset < m_iXSize);
@@ -351,15 +350,15 @@ public:
 		if ( m_transformType == VIEWPORT_TRANSFORM_TYPE_WINDOW )
 		{
 			//	Normalize for map wrappings
-			if ( m_pMap->isWrapYINLINE() )
+			if ( m_pMap->isWrapY() )
 			{
-				if ( m_iYOffset < 0 && iMapY >= m_pMap->getGridHeightINLINE() + m_iYOffset )
+				if ( m_iYOffset < 0 && iMapY >= m_pMap->getGridHeight() + m_iYOffset )
 				{
-					iMapY -= m_pMap->getGridHeightINLINE();
+					iMapY -= m_pMap->getGridHeight();
 				}
-				else if ( m_iYOffset > m_pMap->getGridHeightINLINE() - m_iYSize && iMapY < m_iYOffset - m_iYSize )
+				else if ( m_iYOffset > m_pMap->getGridHeight() - m_iYSize && iMapY < m_iYOffset - m_iYSize )
 				{
-					iMapY += m_pMap->getGridHeightINLINE();
+					iMapY += m_pMap->getGridHeight();
 				}
 			}
 			return (iMapY >= m_iYOffset && iMapY - m_iYOffset < m_iYSize);
@@ -383,10 +382,10 @@ public:
 		}
 		else if ( comfortBorderSize > 0 )
 		{
-			int iMinX = coordRange(iMapX - comfortBorderSize, m_pMap->getGridWidthINLINE(), m_pMap->isWrapXINLINE());
-			int iMaxX = coordRange(iMapX + comfortBorderSize, m_pMap->getGridWidthINLINE(), m_pMap->isWrapXINLINE());
-			int iMinY = coordRange(iMapY - comfortBorderSize, m_pMap->getGridHeightINLINE(), m_pMap->isWrapYINLINE());
-			int iMaxY = coordRange(iMapY + comfortBorderSize, m_pMap->getGridHeightINLINE(), m_pMap->isWrapYINLINE());
+			int iMinX = coordRange(iMapX - comfortBorderSize, m_pMap->getGridWidth(), m_pMap->isWrapX());
+			int iMaxX = coordRange(iMapX + comfortBorderSize, m_pMap->getGridWidth(), m_pMap->isWrapX());
+			int iMinY = coordRange(iMapY - comfortBorderSize, m_pMap->getGridHeight(), m_pMap->isWrapY());
+			int iMaxY = coordRange(iMapY + comfortBorderSize, m_pMap->getGridHeight(), m_pMap->isWrapY());
 
 			return isInViewportX(iMinX) && isInViewportX(iMaxX) && isInViewportY(iMinY) && isInViewportY(iMaxY);
 		}
@@ -423,17 +422,17 @@ public:
 	
 
 private:
-	CvMap*			m_pMap;
-	int				m_iXOffset;
-	int				m_iYOffset;
-	int				m_iXSize;
-	int				m_iYSize;
+	CvMap*	m_pMap;
+	int		m_iXOffset;
+	int		m_iYOffset;
+	int		m_iXSize;
+	int		m_iYSize;
 
 	ViewportMode					m_mode;
 	ViewportTransformType			m_transformType;
 	ViewportDeferredActionState		m_state;
 	IDInfo							m_preservedHeadSelectedUnitId;
-	CvPlot*							m_pLookatPlot;
+	CvPlot* m_pLookatPlot;
 	bool							m_inhibitSelection;
 	bool							m_bDisplayCityScreen;
 	bool							m_bSelectCity;

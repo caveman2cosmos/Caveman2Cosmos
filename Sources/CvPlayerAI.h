@@ -5,19 +5,19 @@
 #ifndef CIV4_PLAYER_AI_H
 #define CIV4_PLAYER_AI_H
 
-#include <boost/shared_ptr.hpp>
-
 #include "CvPlayer.h"
 #include "AI_defines.h"
 
 class CvEventTriggerInfo;
 
-typedef struct
+struct MissionTargetInfo
 {
+	MissionTargetInfo() : iCount(0), iClosest(0), iVolume(0) {}
+
 	int	iCount;		//	Num units targeting the mission target
 	int iClosest;	//	How close is the closest
 	int iVolume;    //  How much volume among the units counted
-} MissionTargetInfo;
+};
 
 //	Koshling - add caching to plot danger calculations
 #define PLOT_DANGER_CACHING
@@ -102,10 +102,10 @@ public:
 
 	void AI_doPeace();
 
-	void AI_updateFoundValues(bool bClear = false, CvArea* area = NULL) const;
+	void AI_updateFoundValues(bool bClear = false, const CvArea* area = NULL) const;
 	void AI_updateAreaTargets();
 
-	int AI_movementPriority(CvSelectionGroup* pGroup) const;
+	int AI_movementPriority(const CvSelectionGroup* pGroup) const;
 	void AI_unitUpdate();
 
 	void AI_makeAssignWorkDirty();
@@ -126,42 +126,42 @@ public:
 
 	void AI_conquerCity(CvCity* pCity);
 
-	bool AI_acceptUnit(CvUnit* pUnit) const;
+	bool AI_acceptUnit(const CvUnit* pUnit) const;
 	bool AI_captureUnit(UnitTypes eUnit, CvPlot* pPlot) const;
 
 	DomainTypes AI_unitAIDomainType(UnitAITypes eUnitAI) const;
 
 	int AI_yieldWeight(YieldTypes eYield) const;
-	int AI_commerceWeight(CommerceTypes eCommerce, CvCity* pCity = NULL) const;
+	int AI_commerceWeight(CommerceTypes eCommerce, const CvCity* pCity = NULL) const;
 
 	int AI_foundValue(int iX, int iY, int iMinRivalRange = -1, bool bStartingLoc = false) const;
 
-	bool AI_isAreaAlone(CvArea* pArea) const;
+	bool AI_isAreaAlone(const CvArea* pArea) const;
 	bool AI_isCapitalAreaAlone() const;
-	bool AI_isPrimaryArea(CvArea* pArea) const;
+	bool AI_isPrimaryArea(const CvArea* pArea) const;
 
-	int AI_militaryWeight(CvArea* pArea) const;
+	int AI_militaryWeight(const CvArea* pArea) const;
 
 	int AI_targetCityValue(CvCity* pCity, bool bRandomize, bool bIgnoreAttackers = false) const;
-	CvCity* AI_findTargetCity(CvArea* pArea) const;
+	CvCity* AI_findTargetCity(const CvArea* pArea) const;
 
-	bool AI_isCommercePlot(CvPlot* pPlot) const;
+	bool AI_isCommercePlot(const CvPlot* pPlot) const;
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                      08/20/09                                jdog5000      */
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	bool AI_getAnyPlotDanger(CvPlot* pPlot, int iRange = -1, bool bTestMoves = true) const;
-	bool AI_getVisiblePlotDanger(CvPlot* pPlot, int iRange, bool bAnimalOnly, CvSelectionGroup* group = NULL, int acceptableOdds = -1) const;
-	int AI_getPlotDanger(CvPlot* pPlot, int iRange = -1, bool bTestMoves = true) const;
+	bool AI_getAnyPlotDanger(const CvPlot* pPlot, int iRange = -1, bool bTestMoves = true) const;
+	bool AI_getVisiblePlotDanger(const CvPlot* pPlot, int iRange, bool bAnimalOnly, CvSelectionGroup* group = NULL, int acceptableOdds = -1) const;
+	int AI_getPlotDanger(const CvPlot* pPlot, int iRange = -1, bool bTestMoves = true) const;
 	//	Koshling - internal bypasses cache
-	int AI_getPlotDangerInternal(CvPlot* pPlot, int iRange, bool bTestMoves) const;
+	int AI_getPlotDangerInternal(const CvPlot* pPlot, int iRange, bool bTestMoves) const;
 	//int AI_getUnitDanger(CvUnit* pUnit, int iRange = -1, bool bTestMoves = true, bool bAnyDanger = true) const;
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
-	int AI_getWaterDanger(CvPlot* pPlot, int iRange, bool bTestMoves = true) const;
-	int AI_countNumLocalNavy(CvPlot* pPlot, int iRange) const;
+	int AI_getWaterDanger(const CvPlot* pPlot, int iRange, bool bTestMoves = true) const;
+	int AI_countNumLocalNavy(const CvPlot* pPlot, int iRange) const;
 
 	bool AI_avoidScience() const;
 	bool AI_isFinancialTrouble() const;
@@ -217,16 +217,16 @@ public:
 	int AI_getMemoryAttitude(PlayerTypes ePlayer, MemoryTypes eMemory) const;
 	int AI_getColonyAttitude(PlayerTypes ePlayer) const;
 
-    // BEGIN: Show Hidden Attitude Mod 01/22/2010
+	// BEGIN: Show Hidden Attitude Mod 01/22/2010
 	int AI_getFirstImpressionAttitude(PlayerTypes ePlayer) const;
 	int AI_getTeamSizeAttitude(PlayerTypes ePlayer) const;
 	int AI_getBetterRankDifferenceAttitude(PlayerTypes ePlayer) const;
 	int AI_getWorseRankDifferenceAttitude(PlayerTypes ePlayer) const;
 	int AI_getLowRankAttitude(PlayerTypes ePlayer) const;
 	int AI_getLostWarAttitude(PlayerTypes ePlayer) const;
-    int AI_getKnownPlayerRank(PlayerTypes ePlayer) const;
+	int AI_getKnownPlayerRank(PlayerTypes ePlayer) const;
 	int AI_getTraitAttitude(PlayerTypes ePlayer) const;
-    // END: Show Hidden Attitude Mod
+	// END: Show Hidden Attitude Mod
 
 	PlayerVoteTypes AI_diploVote(const VoteSelectionSubData& kVoteData, VoteSourceTypes eVoteSource, bool bPropose);
 
@@ -263,52 +263,52 @@ public:
 /* 	City Defenders						24.07.2010				Fuyu			*/
 /********************************************************************************/
 //Fuyu bIgnoreNotUnitAIs
-	int AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea, CvUnitSelectionCriteria* criteria = NULL) const;
+	int AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea* pArea, CvUnitSelectionCriteria* criteria = NULL) const;
 /********************************************************************************/
 /* 	City Defenders												END 			*/
 /********************************************************************************/
 	int AI_unitHealerValue(UnitTypes eUnit, UnitCombatTypes eUnitCombat = NO_UNITCOMBAT) const;
 	int AI_unitPropertyValue(UnitTypes eUnit, PropertyTypes eProperty = NO_PROPERTY) const;
 	int AI_totalUnitAIs(UnitAITypes eUnitAI) const;
-	int AI_totalAreaUnitAIs(CvArea* pArea, UnitAITypes eUnitAI) const;
-	int AI_totalWaterAreaUnitAIs(CvArea* pArea, UnitAITypes eUnitAI) const;
+	int AI_totalAreaUnitAIs(const CvArea* pArea, UnitAITypes eUnitAI) const;
+	int AI_totalWaterAreaUnitAIs(const CvArea* pArea, UnitAITypes eUnitAI) const;
 	int AI_countCargoSpace(UnitAITypes eUnitAI) const;
 
-	int AI_neededExplorers(CvArea* pArea, bool bIdeal = false) const;
-	int AI_neededHunters(CvArea* pArea, bool bIdeal = false) const;
-	int AI_neededWorkers(CvArea* pArea) const;
-	int AI_neededMissionaries(CvArea* pArea, ReligionTypes eReligion) const;
-	int AI_neededExecutives(CvArea* pArea, CorporationTypes eCorporation) const;
+	int AI_neededExplorers(const CvArea* pArea, bool bIdeal = false) const;
+	int AI_neededHunters(const CvArea* pArea, bool bIdeal = false) const;
+	int AI_neededWorkers(const CvArea* pArea) const;
+	int AI_neededMissionaries(const CvArea* pArea, ReligionTypes eReligion) const;
+	int AI_neededExecutives(const CvArea* pArea, CorporationTypes eCorporation) const;
 	
-	int AI_missionaryValue(CvArea* pArea, ReligionTypes eReligion, PlayerTypes* peBestPlayer = NULL) const;
-	int AI_executiveValue(CvArea* pArea, CorporationTypes eCorporation, PlayerTypes* peBestPlayer = NULL) const;
+	int AI_missionaryValue(const CvArea* pArea, ReligionTypes eReligion, PlayerTypes* peBestPlayer = NULL) const;
+	int AI_executiveValue(const CvArea* pArea, CorporationTypes eCorporation, PlayerTypes* peBestPlayer = NULL) const;
 	
-	int AI_corporationValue(CorporationTypes eCorporation, CvCity* pCity = NULL) const;
+	int AI_corporationValue(CorporationTypes eCorporation, const CvCity* pCity = NULL) const;
 	
-	int AI_adjacentPotentialAttackers(CvPlot* pPlot, bool bTestCanMove = false) const;
+	int AI_adjacentPotentialAttackers(const CvPlot* pPlot, bool bTestCanMove = false) const;
 	//int AI_PotentialEnemyAttackers(CvPlot* pPlot, bool bTestCanMove = false, bool bTestVisible = true) const;
 	//int AI_PotentialDefenders(CvPlot* pPlot, bool bTestVisible = true) const;
-	int AI_totalMissionAIs(MissionAITypes eMissionAI, CvSelectionGroup* pSkipSelectionGroup = NULL) const;
-	int AI_areaMissionAIs(CvArea* pArea, MissionAITypes eMissionAI, CvSelectionGroup* pSkipSelectionGroup = NULL) const;
-	int AI_plotTargetMissionAIsInternal(CvPlot* pPlot, MissionAITypes eMissionAI, int iRange = 0, int* piClosest = NULL) const;
-	int AI_plotTargetMissionAIsInternalinCargoVolume(CvPlot* pPlot, MissionAITypes eMissionAI, int iRange = 0, int* piClosest = NULL) const;
-	int AI_plotTargetMissionAIs(CvPlot* pPlot, MissionAITypes eMissionAI, CvSelectionGroup* pSkipSelectionGroup = NULL, int iRange = 0, int* piClosest = NULL) const;
-	int AI_plotTargetMissionAIsinCargoVolume(CvPlot* pPlot, MissionAITypes eMissionAI, CvSelectionGroup* pSkipSelectionGroup = NULL, int iRange = 0, int* piClosest = NULL) const;
-	void AI_noteMissionAITargetCountChange(MissionAITypes eMissionAI, CvPlot* pPlot, int iChange, CvPlot* pUnitPlot, int iVolume);
-	int AI_unitTargetMissionAIs(CvUnit* pUnit, MissionAITypes eMissionAI, CvSelectionGroup* pSkipSelectionGroup = NULL) const;
-	int AI_unitTargetMissionAIs(CvUnit* pUnit, MissionAITypes* aeMissionAI, int iMissionAICount, CvSelectionGroup* pSkipSelectionGroup = NULL) const;
-	int AI_enemyTargetMissionAIs(MissionAITypes eMissionAI, CvSelectionGroup* pSkipSelectionGroup = NULL) const;
-	int AI_enemyTargetMissionAIs(MissionAITypes* aeMissionAI, int iMissionAICount, CvSelectionGroup* pSkipSelectionGroup = NULL) const;
-	int AI_wakePlotTargetMissionAIs(CvPlot* pPlot, MissionAITypes eMissionAI, CvSelectionGroup* pSkipSelectionGroup = NULL) const;
+	int AI_totalMissionAIs(MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL) const;
+	int AI_areaMissionAIs(const CvArea* pArea, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL) const;
+	int AI_plotTargetMissionAIsInternal(const CvPlot* pPlot, MissionAITypes eMissionAI, int iRange = 0, int* piClosest = NULL) const;
+	int AI_plotTargetMissionAIsInternalinCargoVolume(const CvPlot* pPlot, MissionAITypes eMissionAI, int iRange = 0, int* piClosest = NULL) const;
+	int AI_plotTargetMissionAIs(CvPlot* pPlot, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL, int iRange = 0, int* piClosest = NULL) const;
+	int AI_plotTargetMissionAIsinCargoVolume(CvPlot* pPlot, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL, int iRange = 0, int* piClosest = NULL) const;
+	void AI_noteMissionAITargetCountChange(MissionAITypes eMissionAI, CvPlot* pPlot, int iChange, const CvPlot* pUnitPlot, int iVolume);
+	int AI_unitTargetMissionAIs(const CvUnit* pUnit, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL) const;
+	int AI_unitTargetMissionAIs(const CvUnit* pUnit, MissionAITypes* aeMissionAI, int iMissionAICount, const CvSelectionGroup* pSkipSelectionGroup = NULL) const;
+	int AI_enemyTargetMissionAIs(MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL) const;
+	int AI_enemyTargetMissionAIs(MissionAITypes* aeMissionAI, int iMissionAICount, const CvSelectionGroup* pSkipSelectionGroup = NULL) const;
+	int AI_wakePlotTargetMissionAIs(const CvPlot* pPlot, MissionAITypes eMissionAI, const CvSelectionGroup* pSkipSelectionGroup = NULL) const;
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                      10/26/09                                jdog5000      */
 /*                                                                                              */
 /* General AI                                                                                   */
 /************************************************************************************************/
-	int AI_cityTargetUnitsByPath(CvCity* pCity, CvSelectionGroup* pSkipSelectionGroup, int iMaxPathTurns) const;
-	int AI_enemyTargetMissions(TeamTypes eTargetTeam, CvSelectionGroup* pSkipSelectionGroup = NULL) const;
-	int AI_enemyTargetMissionAIs(TeamTypes eTargetTeam, MissionAITypes* aeMissionAI, int iMissionAICount, CvSelectionGroup* pSkipSelectionGroup = NULL) const;
-	int AI_unitTargetMissionAIs(CvUnit* pUnit, MissionAITypes* aeMissionAI, int iMissionAICount, CvSelectionGroup* pSkipSelectionGroup, int iMaxPathTurns, bool bCargo = false) const;
+	int AI_cityTargetUnitsByPath(const CvCity* pCity, const CvSelectionGroup* pSkipSelectionGroup, int iMaxPathTurns) const;
+	int AI_enemyTargetMissions(TeamTypes eTargetTeam, const CvSelectionGroup* pSkipSelectionGroup = NULL) const;
+	int AI_enemyTargetMissionAIs(TeamTypes eTargetTeam, MissionAITypes* aeMissionAI, int iMissionAICount, const CvSelectionGroup* pSkipSelectionGroup = NULL) const;
+	int AI_unitTargetMissionAIs(const CvUnit* pUnit, MissionAITypes* aeMissionAI, int iMissionAICount, const CvSelectionGroup* pSkipSelectionGroup, int iMaxPathTurns, bool bCargo = false) const;
 	CivicTypes AI_bestCivic(CivicOptionTypes eCivicOption, int* iBestValue) const;
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
@@ -342,7 +342,7 @@ public:
 /************************************************************************************************/
 
 	EspionageMissionTypes AI_bestPlotEspionage(CvPlot* pSpyPlot, PlayerTypes& eTargetPlayer, CvPlot*& pPlot, int& iData) const;
-	int AI_espionageVal(PlayerTypes eTargetPlayer, EspionageMissionTypes eMission, CvPlot* pPlot, int iData) const;
+	int AI_espionageVal(PlayerTypes eTargetPlayer, EspionageMissionTypes eMission, const CvPlot* pPlot, int iData) const;
 
 	int AI_getPeaceWeight() const;
 	void AI_setPeaceWeight(int iNewValue);
@@ -439,10 +439,10 @@ public:
 
 	void AI_nowHasTech(TechTypes eTech);
 	
-    int AI_countDeadlockedBonuses(CvPlot* pPlot) const;
-    
-    int AI_getOurPlotStrength(CvPlot* pPlot, int iRange, bool bDefensiveBonuses, bool bTestMoves) const;
-    int AI_getEnemyPlotStrength(CvPlot* pPlot, int iRange, bool bDefensiveBonuses, bool bTestMoves) const;
+	int AI_countDeadlockedBonuses(CvPlot* pPlot) const;
+	
+	int AI_getOurPlotStrength(const CvPlot* pPlot, int iRange, bool bDefensiveBonuses, bool bTestMoves) const;
+	int AI_getEnemyPlotStrength(const CvPlot* pPlot, int iRange, bool bDefensiveBonuses, bool bTestMoves) const;
 
 	int AI_goldToUpgradeAllUnits(int iExpThreshold = 0) const;
 
@@ -459,19 +459,19 @@ public:
 	int AI_getTotalFloatingDefenseNeeded() const;
 	
 	
-	int AI_getTotalAreaCityThreat(CvArea* pArea, int* piLargestThreat = NULL) const;
-	int AI_countNumAreaHostileUnits(CvArea* pArea, bool bPlayer, bool bTeam, bool bNeutral, bool bHostile, CvPlot* pPlot, int iMaxDistance) const;
-	int AI_getTotalFloatingDefendersNeeded(CvArea* pArea) const;
-	int AI_getTotalFloatingDefenders(CvArea* pArea) const;
+	int AI_getTotalAreaCityThreat(const CvArea* pArea, int* piLargestThreat = NULL) const;
+	int AI_countNumAreaHostileUnits(const CvArea* pArea, bool bPlayer, bool bTeam, bool bNeutral, bool bHostile, const CvPlot* pPlot, int iMaxDistance) const;
+	int AI_getTotalFloatingDefendersNeeded(const CvArea* pArea) const;
+	int AI_getTotalFloatingDefenders(const CvArea* pArea) const;
 
-	RouteTypes AI_bestAdvancedStartRoute(CvPlot* pPlot, int* piYieldValue = NULL) const;
-	UnitTypes AI_bestAdvancedStartUnitAI(CvPlot* pPlot, UnitAITypes eUnitAI) const;
+	RouteTypes AI_bestAdvancedStartRoute(const CvPlot* pPlot, int* piYieldValue = NULL) const;
+	UnitTypes AI_bestAdvancedStartUnitAI(const CvPlot* pPlot, UnitAITypes eUnitAI) const;
 	CvPlot* AI_advancedStartFindCapitalPlot() const;
 	
 	bool AI_advancedStartPlaceExploreUnits(bool bLand);
-	void AI_advancedStartRevealRadius(CvPlot* pPlot, int iRadius);
-	bool AI_advancedStartPlaceCity(CvPlot* pPlot);
-	bool AI_advancedStartDoRoute(CvPlot* pFromPlot, CvPlot* pToPlot);
+	void AI_advancedStartRevealRadius(const CvPlot* pPlot, int iRadius);
+	bool AI_advancedStartPlaceCity(const CvPlot* pPlot);
+	bool AI_advancedStartDoRoute(const CvPlot* pFromPlot, const CvPlot* pToPlot);
 	void AI_advancedStartRouteTerritory();
 	void AI_doAdvancedStart(bool bNoExit = false);
 	
@@ -479,23 +479,23 @@ public:
 	
 	void AI_recalculateFoundValues(int iX, int iY, int iInnerRadius, int iOuterRadius) const;
 	
-	int AI_bestCityValue(CvPlot* pPlot, int iFoundValue) const;
+	int AI_bestCityValue(const CvPlot* pPlot, int iFoundValue) const;
 	void AI_updateCitySites(int iMinFoundValueThreshold, int iMaxSites) const;
 	void calculateCitySites() const;
 
-	bool AI_isPlotCitySite(CvPlot* pPlot) const;
+	bool AI_isPlotCitySite(const CvPlot* pPlot) const;
 	int AI_getNumAreaCitySites(int iAreaID, int& iBestValue) const;
 	int AI_getNumAdjacentAreaCitySites(int iWaterAreaID, int iExcludeArea, int& iBestValue) const;
 	
 	int AI_getNumCitySites() const;
 	CvPlot* AI_getCitySite(int iIndex) const;
 	
-	int AI_bestAreaUnitAIValue(UnitAITypes eUnitAI, CvArea* pArea, UnitTypes* peBestUnitType = NULL, CvUnitSelectionCriteria* criteria = NULL) const;
-	int AI_bestCityUnitAIValue(UnitAITypes eUnitAI, CvCity* pCity, UnitTypes* peBestUnitType = NULL, CvUnitSelectionCriteria* criteria = NULL) const;
+	int AI_bestAreaUnitAIValue(UnitAITypes eUnitAI, const CvArea* pArea, UnitTypes* peBestUnitType = NULL, CvUnitSelectionCriteria* criteria = NULL) const;
+	int AI_bestCityUnitAIValue(UnitAITypes eUnitAI, const  CvCity* pCity, UnitTypes* peBestUnitType = NULL, CvUnitSelectionCriteria* criteria = NULL) const;
 	
 	int AI_calculateTotalBombard(DomainTypes eDomain) const;
 	
-	int AI_getUnitClassWeight(UnitClassTypes eUnitClass) const;
+	int AI_getUnitWeight(UnitTypes eUnit) const;
 	int AI_getUnitCombatWeight(UnitCombatTypes eUnitCombat) const;
 	int AI_calculateUnitAIViability(UnitAITypes eUnitAI, DomainTypes eDomain) const;
 	
@@ -506,10 +506,10 @@ public:
 
 	ReligionTypes AI_chooseReligion();
 	
-	int AI_getPlotAirbaseValue(CvPlot* pPlot) const;
-	int AI_getPlotCanalValue(CvPlot* pPlot) const;
+	int AI_getPlotAirbaseValue(const CvPlot* pPlot) const;
+	int AI_getPlotCanalValue(const CvPlot* pPlot) const;
 	// Super Forts *choke*
-	int AI_getPlotChokeValue(CvPlot* pPlot) const;
+	int AI_getPlotChokeValue(const CvPlot* pPlot) const;
 	// Super Forts end
 
 	bool AI_isPlotThreatened(CvPlot* pPlot, int iRange = -1, bool bTestMoves = true) const;
@@ -521,9 +521,9 @@ public:
 /*                                                                                              */
 /* Inquisitions                                                                                 */
 /************************************************************************************************/
-	CvCity* getInquisitionRevoltCity(CvUnit *pUnit, bool bNoUnit, int iRevIndexThreshold, int iTrendThreshold);
-	CvCity* getTeamInquisitionRevoltCity(CvUnit *pUnit, bool bNoUnit, int iRevIndexThreshold, int iTrendThreshold);
-	CvCity* getReligiousVictoryTarget(CvUnit *pUnit, bool bNoUnit);
+	CvCity* getInquisitionRevoltCity(const CvUnit *pUnit, const bool bNoUnit, int iRevIndexThreshold, const int iTrendThreshold) const;
+	CvCity* getTeamInquisitionRevoltCity(const CvUnit *pUnit, const bool bNoUnit, int iRevIndexThreshold, const int iTrendThreshold) const;
+	CvCity* getReligiousVictoryTarget(const CvUnit* pUnit, const bool bNoUnit) const;
 
 	bool isPushReligiousVictory() const;
 	void AI_setPushReligiousVictory();
@@ -544,10 +544,10 @@ public:
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-    int AI_workerTradeVal(CvUnit* pUnit) const;
-	int AI_militaryUnitTradeVal(CvUnit* pUnit) const;
+	int AI_workerTradeVal(const CvUnit* pUnit) const;
+	int AI_militaryUnitTradeVal(const CvUnit* pUnit) const;
 	int AI_corporationTradeVal(CorporationTypes eCorporation, PlayerTypes ePlayer) const;
-    int AI_pledgeVoteTradeVal(VoteTriggeredData* kData, PlayerVoteTypes ePlayerVote, PlayerTypes ePlayer) const;
+	int AI_pledgeVoteTradeVal(VoteTriggeredData* kData, PlayerVoteTypes ePlayerVote, PlayerTypes ePlayer) const;
 	int AI_secretaryGeneralTradeVal(VoteSourceTypes eVoteSource, PlayerTypes ePlayer) const;
 	
 	int AI_getEmbassyAttitude(PlayerTypes ePlayer) const;
@@ -555,7 +555,7 @@ public:
 	TeamTypes AI_bestMakePeaceTeam(PlayerTypes ePlayer);
 	TeamTypes AI_bestStopTradeTeam(PlayerTypes ePlayer);
 	int AI_militaryBonusVal(BonusTypes eBonus);
-    int AI_getCivicShareAttitude(PlayerTypes ePlayer) const;
+	int AI_getCivicShareAttitude(PlayerTypes ePlayer) const;
 	int AI_getCivicAttitudeChange(PlayerTypes ePlayer) const;
 	bool AI_avoidIncreasingTaxes() const;
 	int AI_promotionValue(PromotionTypes ePromotion, UnitTypes eUnit, const CvUnit* pUnit = NULL, UnitAITypes eUnitAI = NO_UNITAI, bool bForBuildUp = false) const;
@@ -598,8 +598,6 @@ public:
 	// for serialization
 	virtual void read(FDataStreamBase* pStream);
 	virtual void write(FDataStreamBase* pStream);
-	void read2(FDataStreamBase* pStream);
-	void write2(FDataStreamBase* pStream);
 
 	void AI_noteUnitRecalcNeeded();
 	void AI_recalculateUnitCounts();
@@ -668,7 +666,7 @@ protected:
 	int* m_aiBonusValue;
 	int* m_aiTradeBonusValue;
 	bool* m_abNonTradeBonusCalculated;
-	int* m_aiUnitClassWeights;
+	int* m_aiUnitWeights;
 	int* m_aiUnitCombatWeights;
 	
 	mutable int* m_aiCloseBordersAttitudeCache;
@@ -728,8 +726,8 @@ protected:
 /********************************************************************************/
 /* 	New Civic AI						02.08.2010				Fuyu			*/
 /********************************************************************************/
-	bool AI_isCivicCanChangeOtherValues(CivicTypes eCivicSelected, ReligionTypes eAssumedReligion = NO_RELIGION);
-	bool AI_isCivicValueRecalculationRequired(CivicTypes eCivic, CivicTypes eCivicSelected, ReligionTypes eAssumedReligion = NO_RELIGION);
+	bool AI_isCivicCanChangeOtherValues(CivicTypes eCivicSelected, ReligionTypes eAssumedReligion = NO_RELIGION) const;
+	bool AI_isCivicValueRecalculationRequired(CivicTypes eCivic, CivicTypes eCivicSelected, ReligionTypes eAssumedReligion = NO_RELIGION) const;
 /********************************************************************************/
 /* 	New Civic AI												END 			*/
 /********************************************************************************/
@@ -757,19 +755,23 @@ private:
 	static int plotDangerCacheReads;
 #endif
 
-	techPath*	findBestPath(TechTypes eTech, int& valuePerUnitCost, bool bIgnoreCost, bool bAsync, int* paiBonusClassRevealed, int* paiBonusClassUnrevealed, int* paiBonusClassHave) const;
+	techPath* findBestPath(TechTypes eTech, int& valuePerUnitCost, bool bIgnoreCost, bool bAsync, int* paiBonusClassRevealed, int* paiBonusClassUnrevealed, int* paiBonusClassHave) const;
 	int	 techPathValuePerUnitCost(techPath* path, TechTypes eTech, bool bIgnoreCost, bool bAsync, int* paiBonusClassRevealed, int* paiBonusClassUnrevealed, int* paiBonusClassHave) const;
 	TechTypes findStartTech(techPath* path) const;
 
-	mutable std::map<TechTypes,int>	m_cachedTechValues;
-	mutable std::map<BuildingTypes, int>	m_numBuildingsNeeded;
+	typedef stdext::hash_map<TechTypes, int> TechTypesValueMap;
+	mutable TechTypesValueMap m_cachedTechValues;
+	typedef stdext::hash_map<BuildingTypes, int> BuildingCountMap;
+	mutable BuildingCountMap m_numBuildingsNeeded;
 
 	int m_iCityGrowthValueBase;
 	int m_turnsSinceLastRevolution;
 	int m_iCivicSwitchMinDeltaThreshold;
 	bool bUnitRecalcNeeded;
 
-	mutable std::map<MissionAITypes,boost::shared_ptr<std::map<CvPlot*,MissionTargetInfo> > > m_missionTargetCache;
+	typedef stdext::hash_map<CvPlot*, MissionTargetInfo> PlotMissionTargetMap;
+	typedef stdext::hash_map<MissionAITypes, PlotMissionTargetMap> MissionPlotTargetMap;
+	mutable MissionPlotTargetMap m_missionTargetCache;
 };
 
 // helper for accessing static functions

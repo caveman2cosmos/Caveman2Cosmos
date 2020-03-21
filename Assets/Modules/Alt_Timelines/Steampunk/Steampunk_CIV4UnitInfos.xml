@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- ReModified by DancingHoskuld -->
-<!-- Assets\Modules\Alt_Timelines\Steampunk\Units\CloudDestroyer\CloudDestroyer_CIV4UnitInfos.xml -->
-<!-- Unit Infos -->
 <Civ4UnitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_CLOUD_DESTROYER</Class>
 			<Type>UNIT_CLOUD_DESTROYER</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_BALLOON</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -45,12 +39,9 @@
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<bMechanized>1</bMechanized>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_GUNSHIP</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_GUNSHIP</UnitType>
+			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -77,42 +68,42 @@
 			<iXPValueAttack>6</iXPValueAttack>
 			<iXPValueDefense>6</iXPValueDefense>
 			<iWithdrawalProb>25</iWithdrawalProb>
-			<UnitClassDefenseMods>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_BALLOON</UnitClassType>
-					<iUnitClassMod>100</iUnitClassMod>
-				</UnitClassDefenseMod>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_BLIMP</UnitClassType>
-					<iUnitClassMod>75</iUnitClassMod>
-				</UnitClassDefenseMod>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_BARRAGE_BALLOON</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassDefenseMod>
-				<UnitClassDefenseMod>
-					<UnitClassType>UNITCLASS_AIRSHIP</UnitClassType>
-					<iUnitClassMod>25</iUnitClassMod>
-				</UnitClassDefenseMod>
-			</UnitClassDefenseMods>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_BALLOON</UnitClassType>
-					<iUnitClassMod>100</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_BLIMP</UnitClassType>
-					<iUnitClassMod>75</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_BARRAGE_BALLOON</UnitClassType>
-					<iUnitClassMod>50</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_AIRSHIP</UnitClassType>
-					<iUnitClassMod>25</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
+			<UnitDefenseMods>
+				<UnitDefenseMod>
+					<UnitType>UNIT_BALLOON</UnitType>
+					<iModifier>100</iModifier>
+				</UnitDefenseMod>
+				<UnitDefenseMod>
+					<UnitType>UNIT_BLIMP</UnitType>
+					<iModifier>75</iModifier>
+				</UnitDefenseMod>
+				<UnitDefenseMod>
+					<UnitType>UNIT_BARRAGE_BALLOON</UnitType>
+					<iModifier>50</iModifier>
+				</UnitDefenseMod>
+				<UnitDefenseMod>
+					<UnitType>UNIT_AIRSHIP</UnitType>
+					<iModifier>25</iModifier>
+				</UnitDefenseMod>
+			</UnitDefenseMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_BALLOON</UnitType>
+					<iModifier>100</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_BLIMP</UnitType>
+					<iModifier>75</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_BARRAGE_BALLOON</UnitType>
+					<iModifier>50</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_AIRSHIP</UnitType>
+					<iModifier>25</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
 			<iBombRate>12</iBombRate>
 			<iAsset>3</iAsset>
 			<iPower>75</iPower>
@@ -136,8 +127,8 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_NAUTILUS</Class>
 			<Type>UNIT_NAUTILUS</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_SUBMARINE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_NAVAL_COMBATANT</SubCombatType>
@@ -177,45 +168,30 @@
 			<bMechanized>1</bMechanized>
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_ATTACK_SUBMARINE</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
-			<UnitClassTargets>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_FLUYT</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_GALLEON</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_TRANSPORT</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-				<UnitClassTarget>
-					<UnitClassTargetType>UNITCLASS_LANDING_SHIP</UnitClassTargetType>
-					<bUnitClassTarget>1</bUnitClassTarget>
-				</UnitClassTarget>
-			</UnitClassTargets>
+			<UnitUpgrades>
+				<UnitType>UNIT_ATTACK_SUBMARINE</UnitType>
+			</UnitUpgrades>
+			<UnitTargets>
+				<UnitType>UNIT_FLUYT</UnitType>
+				<UnitType>UNIT_GALLEON</UnitType>
+				<UnitType>UNIT_TRANSPORT</UnitType>
+				<UnitType>UNIT_LANDING_SHIP</UnitType>
+			</UnitTargets>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_FLUYT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_FLUYT</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_GALLEON</FlankingStrikeUnitClass>
+					<UnitType>UNIT_GALLEON</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TRANSPORT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TRANSPORT</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_LANDING_SHIP</FlankingStrikeUnitClass>
+					<UnitType>UNIT_LANDING_SHIP</UnitType>
 					<iFlankingStrength>50</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -241,12 +217,14 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_NEMO_ACADEMY</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_NEMO_ACADEMY</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			<BonusType>BONUS_COAL</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_IRON</BonusType>
-				<BonusType>BONUS_WARE_STEEL</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
+				<BonusType>BONUS_STEEL_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>885</iCost>
 			<iMinAreaSize>10</iMinAreaSize>
@@ -293,8 +271,8 @@
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_WAR_WHEEL</Class>
 			<Type>UNIT_WAR_WHEEL</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_RECON</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WHEELED</SubCombatType>
@@ -326,12 +304,9 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_UNMANNED_TRIKE</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_UNMANNED_TRIKE</UnitType>
+			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
@@ -342,12 +317,14 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_TR_WORKSHOP</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_TR_WORKSHOP</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			<BonusType>BONUS_COAL</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_STEEL</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_STEEL_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>555</iCost>
 			<iMoves>4</iMoves>
@@ -387,8 +364,8 @@
 			<bRBombardForceAbility>1</bRBombardForceAbility>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_STEAM_TANK</Class>
 			<Type>UNIT_STEAM_TANK</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_WHEELED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -424,16 +401,10 @@
 			<bIgnoreBuildingDefense>1</bIgnoreBuildingDefense>
 			<bMechanized>1</bMechanized>
 			<bMilitaryTrade>1</bMilitaryTrade>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_LIGHT_TANK</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_TANK</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_LIGHT_TANK</UnitType>
+				<UnitType>UNIT_TANK</UnitType>
+			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_ATTACK</UnitAIType>
@@ -448,12 +419,14 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqBuilding>BUILDING_TR_WORKSHOP</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_TR_WORKSHOP</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			<BonusType>BONUS_COAL</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_STEEL</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
+				<BonusType>BONUS_STEEL_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>
 			<iCost>720</iCost>
 			<iMoves>1</iMoves>
@@ -489,9 +462,9 @@
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_STEAMPUNK_WORKER</Class>
 			<Type>UNIT_STEAMPUNK_WORKER</Type>
-			<Capture>UNITCLASS_STEAMPUNK_WORKER</Capture>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
+			<Capture>UNIT_STEAMPUNK_WORKER</Capture>
 			<Combat>UNITCOMBAT_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_ROBOT</SubCombatType>
@@ -533,11 +506,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PAVED</BuildType>
+					<BuildType>BUILD_PAVED_ROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERN_ROAD</BuildType>
+					<BuildType>BUILD_HIGHWAY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -545,11 +518,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_RAILROAD_ELECTRIC</BuildType>
+					<BuildType>BUILD_ELECTRIC_RAILROAD</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_GRAVTUBE</BuildType>
+					<BuildType>BUILD_MAGLEV</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -573,6 +546,10 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -581,7 +558,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_GEOTHERMAL_BOREHOLE</BuildType>
+					<BuildType>BUILD_GEOTHERMAL_FACTORY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -589,11 +566,15 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_3FACTORY</BuildType>
+					<BuildType>BUILD_FACTORY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_LUMBER_JACK</BuildType>
+					<BuildType>BUILD_FACTORY_COLD_CLIMATE</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_LUMBERJACK</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -613,7 +594,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_HYDRO_PLANT</BuildType>
+					<BuildType>BUILD_HYDRO_DAM</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -637,7 +618,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_CAMP</BuildType>
+					<BuildType>BUILD_HUNTING_CAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -645,7 +626,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SAFARI</BuildType>
+					<BuildType>BUILD_WILDLIFE_SANCTUARY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -653,11 +634,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_TAR_GATHERER2</BuildType>
+					<BuildType>BUILD_TAR_GATHERER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_WELL</BuildType>
+					<BuildType>BUILD_HYDROCARBON_WELL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -669,7 +650,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MODERNWINDMILL</BuildType>
+					<BuildType>BUILD_MODERN_WINDMILL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -689,7 +670,7 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SUBURB</BuildType>
+					<BuildType>BUILD_SUBURBS</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -717,19 +698,15 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FOSSIL_DIGSITE</BuildType>
+					<BuildType>BUILD_FOSSIL_DIG_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_EXPLORETEMPLE</BuildType>
+					<BuildType>BUILD_ARCHEOLOGICAL_SITE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
 					<BuildType>BUILD_SOLAR_PANELS</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_TREE_NURSERY</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -741,11 +718,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_BUNKER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_FUTURE_BUNKER</BuildType>
+					<BuildType>BUILD_COMMAND_CENTER</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -753,11 +730,11 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_SWAMP</BuildType>
+					<BuildType>BUILD_DRAIN_SWAMP</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_REMOVE_ROCK_FORM</BuildType>
+					<BuildType>BUILD_REMOVE_ROCK_FORMATION</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -765,15 +742,15 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_MAKE_JUNGLE</BuildType>
+					<BuildType>BUILD_PLANT_JUNGLE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_FOREST</BuildType>
+					<BuildType>BUILD_YOUNG_FOREST</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
+					<BuildType>BUILD_PLANT_BAMBOO_GROVE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -824,10 +801,10 @@
 			<PrereqTech>TECH_STEAMPUNK</PrereqTech>
 			<BonusType>BONUS_STEAMPUNK</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_WARE_COPPER</BonusType>
-				<BonusType>BONUS_WARE_BRONZE</BonusType>
-				<BonusType>BONUS_WARE_IRON</BonusType>
-				<BonusType>BONUS_WARE_STEEL</BonusType>
+				<BonusType>BONUS_COPPER_WARES</BonusType>
+				<BonusType>BONUS_BRONZE_WARES</BonusType>
+				<BonusType>BONUS_IRON_WARES</BonusType>
+				<BonusType>BONUS_STEEL_WARES</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
 				<And>
@@ -837,36 +814,27 @@
 					</Has>
 				</And>
 			</TrainCondition>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_WORKER_ANDROID</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_WORKER_ANDROID</UnitType>
+			</UnitUpgrades>
 			<iCost>590</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_EXPANSIVE</ProductionTraitType>
-					<iProductionTrait>25</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iMoves>3</iMoves>
 			<iWorkRate>400</iWorkRate>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_BRONZE</BonusType>
+					<BonusType>BONUS_BRONZE_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_IRON</BonusType>
+					<BonusType>BONUS_IRON_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_STEEL</BonusType>
+					<BonusType>BONUS_STEEL_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>

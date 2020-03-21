@@ -32,8 +32,7 @@ void EventTriggeredData::read(FDataStreamBase* pStream)
 	WRAPPER_READ_OBJECT_START(wrapper);
 
 	WRAPPER_READ(wrapper, "EventTriggeredData",&m_iId);
-	WRAPPER_READ(wrapper, "EventTriggeredData",(int*)&m_eTrigger);
-	m_eTrigger = (EventTriggerTypes)wrapper.getNewClassEnumValue(REMAPPED_CLASS_TYPE_EVENT_TRIGGERS, m_eTrigger, true);
+	WRAPPER_READ_CLASS_ENUM(wrapper, "EventTriggeredData", REMAPPED_CLASS_TYPE_EVENT_TRIGGERS, (int*)&m_eTrigger);
 	WRAPPER_READ(wrapper, "EventTriggeredData",&m_iTurn);
 	WRAPPER_READ(wrapper, "EventTriggeredData",(int*)&m_ePlayer);
 	WRAPPER_READ(wrapper, "EventTriggeredData",&m_iCityId);
@@ -273,7 +272,7 @@ void BuildingYieldChange::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ_OBJECT_START(wrapper);
 
-	WRAPPER_READ_CLASS_ENUM(wrapper, "BuildingYieldChange", REMAPPED_CLASS_TYPE_BUILDING_CLASSES,(int*)&eBuildingClass);
+	WRAPPER_READ_CLASS_ENUM(wrapper, "BuildingYieldChange", REMAPPED_CLASS_TYPE_BUILDINGS,(int*)&eBuilding);
 	WRAPPER_READ(wrapper, "BuildingYieldChange",(int*)&eYield);
 	WRAPPER_READ(wrapper, "BuildingYieldChange",&iChange);
 
@@ -288,7 +287,7 @@ void BuildingYieldChange::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
 
-	WRAPPER_WRITE_CLASS_ENUM(wrapper, "BuildingYieldChange", REMAPPED_CLASS_TYPE_BUILDING_CLASSES, eBuildingClass);
+	WRAPPER_WRITE_CLASS_ENUM(wrapper, "BuildingYieldChange", REMAPPED_CLASS_TYPE_BUILDINGS, eBuilding);
 	WRAPPER_WRITE(wrapper, "BuildingYieldChange", eYield);
 	WRAPPER_WRITE(wrapper, "BuildingYieldChange", iChange);
 
@@ -303,7 +302,7 @@ void BuildingCommerceChange::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ_OBJECT_START(wrapper);
 
-	WRAPPER_READ_CLASS_ENUM(wrapper, "BuildingCommerceChange",REMAPPED_CLASS_TYPE_BUILDING_CLASSES,(int*)&eBuildingClass);
+	WRAPPER_READ_CLASS_ENUM(wrapper, "BuildingCommerceChange",REMAPPED_CLASS_TYPE_BUILDINGS,(int*)&eBuilding);
 	WRAPPER_READ(wrapper, "BuildingCommerceChange",(int*)&eCommerce);
 	WRAPPER_READ(wrapper, "BuildingCommerceChange",&iChange);
 
@@ -317,27 +316,8 @@ void PropertySpawns::read(FDataStreamBase* pStream)
 	wrapper.AttachToStream(pStream);
 
 	WRAPPER_READ_OBJECT_START(wrapper);
-
-	// @SAVEBREAK REPLACE 31/8/2018
-	// Replace this code at the next save break.
-	// Backwards compat loading of prop spawns that weren't being remapped correctly
-	WRAPPER_READ(wrapper, "PropertySpawns", (int*)&eProperty);
-	if (eProperty == -2)
-	{
-		PropertyTypes eRemappedProperty;
-		WRAPPER_READ_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_PROPERTIES, (int*)&eRemappedProperty);
-		eProperty = eRemappedProperty;
-		WRAPPER_READ_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_UNIT_CLASSES, (int*)&eUnitClass);
-	}
-	else
-	{
-		WRAPPER_READ(wrapper, "PropertySpawns", (int*)&eUnitClass);
-	}
-	// REPLACE WITH
-	// WRAPPER_READ_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_PROPERTIES, (int*)& eProperty);
-	// WRAPPER_READ_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_UNIT_CLASSES, (int*)& eUnitClass);
-	// SAVEBREAK@
-
+	WRAPPER_READ_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_PROPERTIES, (int*)& eProperty);
+	WRAPPER_READ_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_UNITS, (int*)& eUnit);
 	WRAPPER_READ_OBJECT_END(wrapper);
 }
 
@@ -348,19 +328,8 @@ void PropertySpawns::write(FDataStreamBase* pStream)
 	wrapper.AttachToStream(pStream);
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
-
-	// @SAVEBREAK REPLACE 31/8/2018
-	// Replace this code at the next save break.
-	// Backwards compat loading of prop spawns that weren't being remapped correctly
-	WRAPPER_WRITE_DECORATED(wrapper, "PropertySpawns", -2, "eProperty");
-	PropertyTypes eRemappedProperty = eProperty;
-	WRAPPER_WRITE_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_PROPERTIES, eRemappedProperty);
-	WRAPPER_WRITE_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_UNIT_CLASSES, eUnitClass);
-	// REPLACE WITH
-	// WRAPPER_WRITE_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_PROPERTIES, eRemappedProperty);
-	// WRAPPER_WRITE_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_UNIT_CLASSES, eUnitClass);
-	// SAVEBREAK@
-
+	WRAPPER_WRITE_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_PROPERTIES, eProperty);
+	WRAPPER_WRITE_CLASS_ENUM(wrapper, "PropertySpawns", REMAPPED_CLASS_TYPE_UNITS, eUnit);
 	WRAPPER_WRITE_OBJECT_END(wrapper);
 }
 
@@ -372,7 +341,7 @@ void BuildingCommerceChange::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
 
-	WRAPPER_WRITE_CLASS_ENUM(wrapper, "BuildingCommerceChange", REMAPPED_CLASS_TYPE_BUILDING_CLASSES, eBuildingClass);
+	WRAPPER_WRITE_CLASS_ENUM(wrapper, "BuildingCommerceChange", REMAPPED_CLASS_TYPE_BUILDINGS, eBuilding);
 	WRAPPER_WRITE(wrapper, "BuildingCommerceChange", eCommerce);
 	WRAPPER_WRITE(wrapper, "BuildingCommerceChange", iChange);
 
@@ -392,7 +361,7 @@ void BuildingYieldModifier::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ_OBJECT_START(wrapper);
 
-	WRAPPER_READ_CLASS_ENUM(wrapper, "BuildingYieldModifier",REMAPPED_CLASS_TYPE_BUILDING_CLASSES,(int*)&eBuildingClass);
+	WRAPPER_READ_CLASS_ENUM(wrapper, "BuildingYieldModifier",REMAPPED_CLASS_TYPE_BUILDINGS,(int*)&eBuilding);
 	WRAPPER_READ(wrapper, "BuildingYieldModifier",(int*)&eYield);
 	WRAPPER_READ(wrapper, "BuildingYieldModifier",&iChange);
 
@@ -407,7 +376,7 @@ void BuildingYieldModifier::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
 
-	WRAPPER_WRITE_CLASS_ENUM(wrapper, "BuildingYieldModifier", REMAPPED_CLASS_TYPE_BUILDING_CLASSES, eBuildingClass);
+	WRAPPER_WRITE_CLASS_ENUM(wrapper, "BuildingYieldModifier", REMAPPED_CLASS_TYPE_BUILDINGS, eBuilding);
 	WRAPPER_WRITE(wrapper, "BuildingYieldModifier", eYield);
 	WRAPPER_WRITE(wrapper, "BuildingYieldModifier", iChange);
 
@@ -422,7 +391,7 @@ void BuildingCommerceModifier::read(FDataStreamBase* pStream)
 
 	WRAPPER_READ_OBJECT_START(wrapper);
 
-	WRAPPER_READ_CLASS_ENUM(wrapper, "BuildingCommerceModifier",REMAPPED_CLASS_TYPE_BUILDING_CLASSES,(int*)&eBuildingClass);
+	WRAPPER_READ_CLASS_ENUM(wrapper, "BuildingCommerceModifier",REMAPPED_CLASS_TYPE_BUILDINGS,(int*)&eBuilding);
 	WRAPPER_READ(wrapper, "BuildingCommerceModifier",(int*)&eCommerce);
 	WRAPPER_READ(wrapper, "BuildingCommerceModifier",&iChange);
 
@@ -437,7 +406,7 @@ void BuildingCommerceModifier::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE_OBJECT_START(wrapper);
 
-	WRAPPER_WRITE_CLASS_ENUM(wrapper, "BuildingCommerceModifier", REMAPPED_CLASS_TYPE_BUILDING_CLASSES, eBuildingClass);
+	WRAPPER_WRITE_CLASS_ENUM(wrapper, "BuildingCommerceModifier", REMAPPED_CLASS_TYPE_BUILDINGS, eBuilding);
 	WRAPPER_WRITE(wrapper, "BuildingCommerceModifier", eCommerce);
 	WRAPPER_WRITE(wrapper, "BuildingCommerceModifier", iChange);
 
@@ -526,13 +495,15 @@ void CvBattleRound::setNumAlive(BattleUnitTypes unitType, int value)
 // FUNCTION:    CvMissionDefinition::CvMissionDefinition
 //! \brief      Default constructor.
 //------------------------------------------------------------------------------------------------
-CvMissionDefinition::CvMissionDefinition() :
-	m_fMissionTime(0.0f),
-	m_eMissionType(NO_MISSION),
-	m_pPlot(NULL)
+CvMissionDefinition::CvMissionDefinition(MissionTypes type /*= NO_MISSION*/, CvPlot* plot /*= NULL*/, CvUnit* attacker /*= NULL*/, CvUnit* defender /*= NULL*/, float time /*= -1.f*/)
+	: m_eMissionType(type)
+	, m_fMissionTime((type == NO_MISSION || time >= 0.f) ? time : GC.getMissionInfo(type).getTime() * gDLL->getSecsPerTurn())
+	, m_pPlot(plot)
 {
-	for(int i=0;i<BATTLE_UNIT_COUNT;i++)
-		m_aUnits[i] = NULL;
+	STATIC_ASSERT(BATTLE_UNIT_COUNT == 2, Battle_unit_code_expects_2_units__You_need_to_update_this_code);
+
+	m_aUnits[BATTLE_UNIT_ATTACKER] = attacker;
+	m_aUnits[BATTLE_UNIT_DEFENDER] = defender;
 }
 
 MissionTypes CvMissionDefinition::getMissionType() const
@@ -577,26 +548,50 @@ void CvMissionDefinition::setPlot(const CvPlot *plot)
 	m_pPlot = plot;
 }
 
+bool CvMissionDefinition::isValid() const
+{
+	// Plot needs to be visible if it is set
+	if (m_pPlot == NULL || !m_pPlot->isActiveVisible(false))
+	{
+		return false;
+	}
+	// Attacker cannot be null ever
+	if (m_aUnits[BATTLE_UNIT_ATTACKER] == NULL || m_aUnits[BATTLE_UNIT_ATTACKER]->isUsingDummyEntities() || !m_aUnits[BATTLE_UNIT_ATTACKER]->isInViewport())
+	{
+		return false;
+	}
+	// Defender can be null
+	if (m_aUnits[BATTLE_UNIT_DEFENDER] != NULL && (m_aUnits[BATTLE_UNIT_DEFENDER]->isUsingDummyEntities() || !m_aUnits[BATTLE_UNIT_DEFENDER]->isInViewport()))
+	{
+		return false;
+	}
+
+	return true;
+}
 //------------------------------------------------------------------------------------------------
 // FUNCTION:    CvBattleDefinition::CvBattleDefinition
 //! \brief      Constructor.
 //------------------------------------------------------------------------------------------------
-CvBattleDefinition::CvBattleDefinition() 
-	: CvMissionDefinition()
+CvBattleDefinition::CvBattleDefinition(CvPlot* plot, CvUnit* attacker, CvUnit* defender)
+	: CvMissionDefinition(MISSION_BEGIN_COMBAT, plot, attacker, defender, 0.f)
 	, m_bAdvanceSquare(false)
 	, m_iNumMeleeRounds(0)
 	, m_iNumRangedRounds(0)
 {
-	m_fMissionTime = 0.0f;
-	m_eMissionType = MISSION_BEGIN_COMBAT;
+	FAssertMsg(attacker != NULL, "Attacker must be valid in a Battle");
+	FAssertMsg(defender != NULL, "Defender must be valid in a Battle");
 
 	for(int i=0;i<BATTLE_UNIT_COUNT;i++)
 	{
-		m_aUnits[i] = NULL;
 		m_aFirstStrikes[i] = 0;
 		for(int j=0;j<BATTLE_TIME_COUNT;j++)
+		{
 			m_aDamage[i][j] = 0;
+		}
 	}
+
+	setDamage(BATTLE_UNIT_ATTACKER, BATTLE_TIME_BEGIN, attacker->getDamage());
+	setDamage(BATTLE_UNIT_DEFENDER, BATTLE_TIME_BEGIN, defender->getDamage());
 }
 
 //------------------------------------------------------------------------------------------------
@@ -750,11 +745,12 @@ void CvBattleDefinition::checkBattleRound(int index) const
 // FUNCTION:    CvAirMissionDefinition::CvAirMissionDefinition
 //! \brief      Constructor
 //------------------------------------------------------------------------------------------------
-CvAirMissionDefinition::CvAirMissionDefinition() :
-	CvMissionDefinition()
+CvAirMissionDefinition::CvAirMissionDefinition(MissionTypes type /*= MISSION_AIRPATROL*/, CvPlot * plot /*= NULL*/, CvUnit * attacker /*= NULL*/, CvUnit * defender /*= NULL*/, float time /*= -1.f*/) :
+	CvMissionDefinition(type, plot, attacker, defender, time)
 {
-	m_fMissionTime = 0.0f;
-	m_eMissionType = MISSION_AIRPATROL;
+
+	m_aDamage[BATTLE_UNIT_ATTACKER] = 0;
+	m_aDamage[BATTLE_UNIT_DEFENDER] = 0;
 }
 
 //------------------------------------------------------------------------------------------------
@@ -822,3 +818,4 @@ PBGameSetupData::PBGameSetupData()
 	}
 }
 
+const OrderData OrderData::InvalidOrder(NO_ORDER, -1, -1, false);

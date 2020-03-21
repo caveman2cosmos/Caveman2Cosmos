@@ -11,6 +11,7 @@ New world policy controls handling of barbcivs starting away from the original c
 
 from CvPythonExtensions import *
 import SdToolKit as SDTK
+from CvUtil import sendMessage
 
 # globals
 GC = CyGlobalContext()
@@ -51,7 +52,7 @@ class BarbarianCiv:
 		if not fMod:
 			return
 		maxCivs = self.RevOpt.getBarbCivMaxCivs()
-		if maxCivs < 1:
+		if maxCivs < 1 or maxCivs > MAX_PC_PLAYERS:
 			maxCivs = MAX_PC_PLAYERS
 		if GAME.countCivPlayersAlive() >= maxCivs: return
 
@@ -64,7 +65,7 @@ class BarbarianCiv:
 		fMod *= iNumCities ** .5
 		# Gamespeed factor
 		iFactorGS = GC.getGameSpeedInfo(GAME.getGameSpeedType()).getGrowthPercent()
-		iRange = 10*iFactorGS
+		iRange = 16*iFactorGS
 		iEra = GAME.getCurrentEra()
 
 		iPolicy = self.RevOpt.getNewWorldPolicy()
@@ -111,7 +112,6 @@ class BarbarianCiv:
 			CyCity, i = CyPlayerBarb.nextCity(i, False)
 
 		if bNoGo: return
-		del iRange, fOdds, bNoGo
 		'''
 		Create Minor Civ
 		'''
@@ -177,10 +177,9 @@ class BarbarianCiv:
 						civs = aList
 				iCivType = civs[GAME.getSorenRandNum(len(civs),'Pick civ')]
 
-		if iCivType < 0:
-			print "[WARNING] Unexpected lack of unused civ types." + POST_FIX
-			return
-		del civs, CyPlayerCulture, iCult, iCulture, iDeadCulture
+			if iCivType < 0:
+				print "[WARNING] Unexpected lack of unused civ types." + POST_FIX
+				return
 
 		# Choose a leader for the new civ
 		aList = [] # Claimed Leaders
@@ -204,7 +203,6 @@ class BarbarianCiv:
 			print "[ERROR] Unexpected lack of possible leaders." + POST_FIX
 			return
 		iLeader = leaders[GAME.getSorenRandNum(len(leaders), 'Pick leader')]
-		del leaders, bLeadAnyCiv
 
 		iX = CyCity.getX()
 		iY = CyCity.getY()
@@ -221,6 +219,7 @@ class BarbarianCiv:
 		CyPlayer.setNewPlayerAlive(True)
 
 		civName = CyPlayer.getCivilizationDescription(0)
+		print "[INFO] %s has emerged in %s" %(civName, szCityName)
 
 		# Add replay message
 		mess = TRNSLTR.getText("TXT_KEY_BARBCIV_FORM_MINOR", ()) %(civName, szCityName)
@@ -251,7 +250,7 @@ class BarbarianCiv:
 		else:
 			fNumTeams = GAME.countCivTeamsAlive() * 1.0
 			fTechFrac = self.RevOpt.getBarbTechFrac()
-
+			#print "Free Starting techs:"
 			for iTech in xrange(GC.getNumTechInfos()):
 				if CyTeam.isHasTech(iTech) or not CyPlayer.canEverResearch(iTech): continue
 
@@ -269,13 +268,9 @@ class BarbarianCiv:
 
 				if fKnownRatio >= fTechFrac:
 					CyTeam.setHasTech(iTech, True, iPlayer, False, False)
+					#print "\t " + GC.getTechInfo(iTech).getDescription()
 
 		CyTeam.setIsMinorCiv(True, False)
-		# Remove initial units
-		CyUnit, i = CyPlayer.firstUnit(False)
-		while CyUnit:
-			CyUnit.kill(False, -1)
-			CyUnit, i = CyPlayer.nextUnit(i, False)
 
 		# Units
 		iNumBarbDefenders = GC.getHandicapInfo(GAME.getHandicapType()).getBarbarianInitialDefenders()
@@ -298,16 +293,20 @@ class BarbarianCiv:
 		else:
 			if iSettler > -1:
 				CyPlayer.initUnit(iSettler, iX, iY, UnitAITypes.UNITAI_SETTLE, DirectionTypes.DIRECTION_SOUTH)
+				#print "Free settler: " + CyUnit.getName()
 			if iWorker > -1:
 				CyPlayer.initUnit(iWorker, iX, iY, UnitAITypes.UNITAI_WORKER, DirectionTypes.DIRECTION_SOUTH)
 				CyPlayer.initUnit(iWorker, iX, iY, UnitAITypes.UNITAI_WORKER, DirectionTypes.DIRECTION_SOUTH)
+				#print "Free Workers (2): " + CyUnit.getName()
 			if iExplorer > -1:
 				CyPlayer.initUnit(iExplorer, iX, iY, UnitAITypes.UNITAI_EXPLORE, DirectionTypes.DIRECTION_SOUTH)
 				CyPlayer.initUnit(iExplorer, iX, iY, UnitAITypes.UNITAI_EXPLORE, DirectionTypes.DIRECTION_SOUTH)
+				#print "Free Explorers (2): " + CyUnit.getName()
 			if iMerchant > -1:
 				iTemp = 2 + 2*(iEra + 1)
 				for i in xrange(iTemp):
 					CyPlayer.initUnit(iMerchant, iX, iY, UnitAITypes.UNITAI_MERCHANT, DirectionTypes.DIRECTION_SOUTH)
+				#print "Free Merchant (%d): %s" %(iTemp, CyUnit.getName())
 
 		aList = [iCounter, iAttack, iAttackCity, iMobile]
 		iTemp = int(iBaseOffensiveUnits*fMilitaryMod)
@@ -318,15 +317,15 @@ class BarbarianCiv:
 				while iCount < iTemp:
 					iUnit = aList[GAME.getSorenRandNum(4, 'BC give offensive')]
 					if iUnit == -1: continue
-					iUnitAI = GC.getUnitInfo(iUnit).getDefaultUnitAIType()
-					CyUnit = CyPlayer.initUnit(iUnit, iX, iY, UnitAITypes(iUnitAI), DirectionTypes.DIRECTION_SOUTH)
+					CyUnit = CyPlayer.initUnit(iUnit, iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 					CyUnit.changeExperience(iEra + GAME.getSorenRandNum(2*(iEra+1), 'Experience'), -1, False, False, False)
 					iCount += 1
+					#print "Free Combatant: " + CyUnit.getName()
 				break
 
 		szTxt = TRNSLTR.getText("TXT_KEY_BARBCIV_WORD_SPREADS", ()) + " "
 		szTxt += TRNSLTR.getText("TXT_KEY_BARBCIV_FORM_MINOR", ()) % (civName, szCityName)
-		MSG_TIME = GC.getDefineINT("EVENT_MESSAGE_TIME")
+		MSG_TIME = GC.getEVENT_MESSAGE_TIME()
 		for iPlayerX in xrange(MAX_PC_PLAYERS):
 			CyPlayerX = GC.getPlayer(iPlayerX)
 			if not CyPlayerX.isHuman(): continue
@@ -401,36 +400,37 @@ class BarbarianCiv:
 		iAttackStr = 0
 		iAttackCityStr = 0
 		iMobileVal = 0
-		for i in xrange(GC.getNumUnitClassInfos()):
+		for iUnit in xrange(GC.getNumUnitInfos()):
+			if isLimitedUnit(iUnit): continue
 
-			if GC.getUnitClassInfo(i).getMaxGlobalInstances() > 0 or GC.getUnitClassInfo(i).getMaxPlayerInstances() > 0 or GC.getUnitClassInfo(i).getMaxTeamInstances() > 0:
-				continue
-			iUnit = GC.getUnitClassInfo(i).getDefaultUnitIndex()
-			if iUnit < 0 or not CyPlayer.canTrain(iUnit, False, False): continue
 			CvUnitInfo = GC.getUnitInfo(iUnit)
-			if CvUnitInfo.getDomainType() != DomainTypes.DOMAIN_LAND: continue
+			if CvUnitInfo.getDomainType() != DomainTypes.DOMAIN_LAND or CvUnitInfo.getNumPrereqAndBuildings() > 0:
+				continue
+
+			if not CyPlayer.canTrain(iUnit, False, False): continue
 
 			iStr = CvUnitInfo.getCombat()
 			if CvUnitInfo.getUnitAIType(UnitAITypes.UNITAI_CITY_DEFENSE):
 				if iStr > iDefenderStr:
 					aList[0] = iUnit
 					iDefenderStr = iStr
-			if CvUnitInfo.getUnitAIType(UnitAITypes.UNITAI_COUNTER):
-				if iStr >= iCounterStr:
-					aList[1] = iUnit
-					iCounterStr = iStr
-			if CvUnitInfo.getUnitAIType(UnitAITypes.UNITAI_ATTACK):
-				if iStr > iAttackStr:
-					aList[2] = iUnit
-					iAttackStr = iStr
-			if CvUnitInfo.getUnitAIType(UnitAITypes.UNITAI_ATTACK_CITY):
-				if iStr > iAttackCityStr:
-					aList[3] = iUnit
-					iAttackCityStr = iStr
-			iVal = iStr * CvUnitInfo.getMoves()
-			if iVal > iMobileVal:
-				aList[4] = iUnit
-				iMobileVal = iVal
+			if not CvUnitInfo.isOnlyDefensive():
+				if CvUnitInfo.getUnitAIType(UnitAITypes.UNITAI_COUNTER):
+					if iStr >= iCounterStr:
+						aList[1] = iUnit
+						iCounterStr = iStr
+				if CvUnitInfo.getUnitAIType(UnitAITypes.UNITAI_ATTACK):
+					if iStr > iAttackStr:
+						aList[2] = iUnit
+						iAttackStr = iStr
+				if CvUnitInfo.getUnitAIType(UnitAITypes.UNITAI_ATTACK_CITY):
+					if iStr > iAttackCityStr:
+						aList[3] = iUnit
+						iAttackCityStr = iStr
+				iVal = iStr * CvUnitInfo.getMoves()
+				if iVal > iMobileVal:
+					aList[4] = iUnit
+					iMobileVal = iVal
 
 		iStd = -1
 		if -1 in aList:
@@ -459,15 +459,17 @@ class BarbarianCiv:
 			CvUnitInfo = GC.getUnitInfo(iUnit)
 			# Tech Prereq
 			iTech = CvUnitInfo.getPrereqAndTech()
-			if iTech > -1 and not CyTeam.isHasTech(iTech): continue
+			if iTech > -1 and not CyTeam.isHasTech(iTech):
+				continue
 			for i in range(self.NUM_UNIT_AND_TECH_PREREQS):
 				iTech = CvUnitInfo.getPrereqAndTechs(i)
-				if iTech > -1 and not CyTeam.isHasTech(iTech): break
+				if iTech > -1 and not CyTeam.isHasTech(iTech):
+					break
 			else:
 				aList.append(iUnit); break
 		else: aList.append(iStd)
 
-		if iStd != -1 and -1 in aList:
+		if -1 in aList:
 			for i in xrange(len(aList)):
 				if aList[i] == -1:
 					aList[i] = iStd
@@ -541,8 +543,7 @@ class BarbarianCiv:
 					if iRadius and GAME.getSorenRandNum(iRadius + 1, 'Convert Barbarian'): continue
 					iUnit = CyUnit.getUnitType()
 					CyUnit.kill(False, -1)
-					iUnitAI = GC.getUnitInfo(iUnit).getDefaultUnitAIType()
-					CyPlayer.initUnit(iUnit, X, Y, UnitAITypes(iUnitAI), DirectionTypes.NO_DIRECTION)
+					CyPlayer.initUnit(iUnit, X, Y, UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
 		# Free city defenders
 		if iDefender > -1:
 			for i in range(iDefenders):
@@ -583,136 +584,150 @@ class BarbarianCiv:
 			if not CyPlayerX.isAlive(): continue
 			iTeamX = CyPlayerX.getTeam()
 			if iTeamX != iTeam and not CyTeam.isHasMet(iTeamX): continue
-			hasMet.append([iPlayerX, CyPlayerX])
+			hasMet.append(iPlayerX)
 			if CyPlayerX.isMinorCiv():
-				iTemp += 2
-			else: odds += 10
+				iTemp += 5
+			else: odds += 50
 
 		# New world requires contact with a major civ.
 		if bNewWorld and not odds: return
 
 		odds += iTemp # Value from contact with other minor civs.
-		odds += 10*iCities + CyPlayer.getTotalPopulation() + 40*CyPlayer.countHolyCities()
+		odds += 12*iCities + CyPlayer.getTotalPopulation() + 32*CyPlayer.countHolyCities()
 		odds += CyPlayer.getNumMilitaryUnits()/(4*GC.getWorldInfo(GC.getMap().getWorldSize()).getTargetNumCities())
-		odds += 5*CyPlayer.getWondersScore() # 25 points per wonder, see getWonderScore in CvGameCoreUtils.cpp.
-		if odds < 128: return
+		odds += 4*CyPlayer.getWondersScore() # 20 points per wonder, see getWonderScore in CvGameCoreUtils.cpp.
+		if odds < 512: return
 
 		iFactorGS = GC.getGameSpeedInfo(GAME.getGameSpeedType()).getGrowthPercent()
-		if not GAME.getSorenRandNum(10*iFactorGS + odds, 'minor2major') < odds: return
+		if not GAME.getSorenRandNum(40*iFactorGS + odds, 'minor2major') < odds: return
 
-		# Turn a minor BarbCiv into a full civ, give more bonuses to launch into the world
-		civName = CyPlayer.getCivilizationShortDescription(0)
-		print "[INFO] Minor civ %s becomes a major civ.%s" %(civName, POST_FIX)
-
-		# Units
-		iDefender, iCounter, iAttack, iMobile, iAttackCity, iWorker, iSettler, iExplorer, iMerchant = self.getUnitsForPlayer(iPlayer, CyTeam)
-		iEra = CyPlayer.getCurrentEra()
-
-		# Pickup nearby barb cities
 		iX = CyCity1.getX(); iY = CyCity1.getY()
 
-		iPlayerBarb = self.BARBARIAN_PLAYER
-		iNumBarbDefenders = GC.getHandicapInfo(GAME.getHandicapType()).getBarbarianInitialDefenders()
-		fMilitaryMod = self.RevOpt.getMilitaryStrength()
+		bLowScore = False
+		if not bNewWorld:
+			iScoreSum = 0
+			iMinScore = ""
+			iPlayerX = -1
+			iCount = 0
+			while iPlayerX < MAX_PC_PLAYERS:
+				iPlayerX += 1
+				if iPlayerX == iPlayer: continue
+				CyPlayerX = GC.getPlayer(iPlayerX)
+				if not CyPlayerX.isAlive() or CyPlayerX.isMinorCiv(): continue
+				iScore = GAME.getPlayerScore(iPlayerX)
+				iScoreSum += iScore
+				if iScore < iMinScore:
+					iMinScore = iScore
+				iCount += 1
+			if iCount:
+				bLowScore = GAME.getPlayerScore(iPlayer) < (iScoreSum - iMinScore) / iCount
 
-		iMaxDistance = 8 * GC.getWorldInfo(MAP.getWorldSize()).getDefaultPlayers()
-		CyPlayerBarb = GC.getPlayer(iPlayerBarb)
-		aList = ()
-		CyCityX, i = CyPlayerBarb.firstCity(False)
-		while CyCityX:
-			CyPlotX = CyCityX.plot()
-			if CyPlotX.getArea() == iAreaID or CyPlotX.isAdjacentRevealed(iTeam):
-				x = CyCityX.getX()
-				y = CyCityX.getY()
-				iDist = plotDistance(iX, iY, x, y)
+		# Turn a minor BarbCiv into a full civ, give more bonuses to launch into the world
+		if bNewWorld or bLowScore:
 
-				if iDist <= iMaxDistance and GAME.getSorenRandNum(2, "fifty fifty"):
-					iCities += 1
-					aList += ((CyPlotX, x, y),) # No point in including the CyCityX pointer...
-			CyCityX, i = CyPlayerBarb.nextCity(i, False)
+			iDefender, iCounter, iAttack, iMobile, iAttackCity, iWorker, iSettler, iExplorer, iMerchant = self.getUnitsForPlayer(iPlayer, CyTeam)
+			iEra = CyPlayer.getCurrentEra()
+			iHighestEra = GAME.getHighestEra()
 
-		for CyPlotX, x, y in aList:
-			CyPlotX.setOwner(iPlayer) # ...because this invalidates the CyCityX pointer.
-			CyCityX = CyPlotX.getPlotCity()
-			self.setupFormerBarbCity(CyCityX, iPlayer, iDefender, int(iNumBarbDefenders*fMilitaryMod + 1))
-			CyCityX.changePopulation(1)
-			if iWorker > -1:
-				CyPlayer.initUnit(iWorker, x, y, UnitAITypes.UNITAI_WORKER, DirectionTypes.DIRECTION_SOUTH)
-			if iExplorer > -1:
-				CyPlayer.initUnit(iExplorer, x, y, UnitAITypes.UNITAI_EXPLORE, DirectionTypes.DIRECTION_SOUTH)
-			if iMerchant > -1:
-				iTemp = 2 + 2*(iEra + 1)
-				for i in xrange(iTemp):
-					CyPlayer.initUnit(iMerchant, x, y, UnitAITypes.UNITAI_MERCHANT, DirectionTypes.DIRECTION_SOUTH)
+			iPlayerBarb = self.BARBARIAN_PLAYER
+			iNumBarbDefenders = GC.getHandicapInfo(GAME.getHandicapType()).getBarbarianInitialDefenders()
+			fMilitaryMod = self.RevOpt.getMilitaryStrength()
 
-		# Bonus units in capital
-		if iWorker != -1:
-			CyPlayer.initUnit(iWorker, iX, iY, UnitAITypes.UNITAI_WORKER, DirectionTypes.DIRECTION_SOUTH)
-		i1 = iCounter
-		i2 = iMobile
-		i3 = iAttack
-		i4 = iAttackCity
-		i5 = iMerchant
-		aList = (i1, i1, i2, i3, i3, i3, i3, i4, i4, i4, i5, i5, i5)
-		amount = (bNewWorld * iEra * 2 + iEra + iNumBarbDefenders - iCities) * fMilitaryMod
-		if amount < 1:
-			amount = 1
-		iLen = len(aList); iCount = 0
-		for iUnit in aList:
-			# if the list only consist of "-1" elements then the while loop would never finish.
-			if iUnit > -1:
+			# Pickup nearby barb cities
+			iMaxDistance = (5 + 3*bNewWorld) * GC.getWorldInfo(MAP.getWorldSize()).getDefaultPlayers()
+			CyPlayerBarb = GC.getPlayer(iPlayerBarb)
+			aList = ()
+			CyCityX, i = CyPlayerBarb.firstCity(False)
+			while CyCityX:
+				CyPlotX = CyCityX.plot()
+				if CyPlotX.getArea() == iAreaID or CyPlotX.isAdjacentRevealed(iTeam):
+					x = CyCityX.getX()
+					y = CyCityX.getY()
+					iDist = plotDistance(iX, iY, x, y)
+
+					if iDist <= iMaxDistance and GAME.getSorenRandNum(2, "fifty fifty"):
+						iCities += 1
+						aList += ((CyPlotX, x, y),) # No point in including the CyCityX pointer...
+				CyCityX, i = CyPlayerBarb.nextCity(i, False)
+
+			for CyPlotX, x, y in aList:
+				CyPlotX.setOwner(iPlayer) # ...because this invalidates the CyCityX pointer.
+				CyCityX = CyPlotX.getPlotCity()
+				self.setupFormerBarbCity(CyCityX, iPlayer, iDefender, int(iNumBarbDefenders*fMilitaryMod + 1))
+				CyCityX.changePopulation(1)
+				if iWorker > -1:
+					CyPlayer.initUnit(iWorker, x, y, UnitAITypes.UNITAI_WORKER, DirectionTypes.DIRECTION_SOUTH)
+				if iExplorer > -1:
+					CyPlayer.initUnit(iExplorer, x, y, UnitAITypes.UNITAI_EXPLORE, DirectionTypes.DIRECTION_SOUTH)
+				if iMerchant > -1:
+					iTemp = 2 + 2*(iEra + 1)
+					for i in xrange(iTemp):
+						CyPlayer.initUnit(iMerchant, x, y, UnitAITypes.UNITAI_MERCHANT, DirectionTypes.DIRECTION_SOUTH)
+
+			# Bonus units in capital
+			if iWorker != -1:
+				CyPlayer.initUnit(iWorker, iX, iY, UnitAITypes.UNITAI_WORKER, DirectionTypes.DIRECTION_SOUTH)
+			i1 = iCounter
+			i2 = iMobile
+			i3 = iAttack
+			i4 = iAttackCity
+			i5 = iMerchant
+			aList = [i1, i1, i2, i3, i3, i3, i3, i4, i4, i4, i5, i5, i5]
+			iLen = len(aList); i = 0
+			while i < iLen:
+				if aList[i] < 0:
+					aList.pop(i)
+					iLen -= 1
+				else: i += 1
+
+			if iLen:
+				amount = (iEra * 2 + iEra + iNumBarbDefenders - iCities) * (bNewWorld * iHighestEra + 1) * fMilitaryMod
+				if amount < 1:
+					amount = 1
+				iCount = 0
 				while iCount < amount:
 					iUnit = aList[GAME.getSorenRandNum(iLen, 'Military')]
-					if iUnit == -1: continue
-					iUnitAI = GC.getUnitInfo(iUnit).getDefaultUnitAIType()
-					CyUnit = CyPlayer.initUnit(iUnit, iX, iY, UnitAITypes(iUnitAI), DirectionTypes.DIRECTION_SOUTH)
+					CyUnit = CyPlayer.initUnit(iUnit, iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
 					CyUnit.changeExperience(iEra + GAME.getSorenRandNum(2*(iEra+1), 'Experience'), -1, False, False, False)
 					iCount += 1
-			break
 
-		# Great persons
-		i1 = GC.getInfoTypeForString("UNIT_PROPHET")
-		i2 = GC.getInfoTypeForString("UNIT_ARTIST")
-		i3 = GC.getInfoTypeForString("UNIT_MERCHANT")
-		i4 = GC.getInfoTypeForString("UNIT_GREAT_STATESMAN")
-		i5 = GC.getInfoTypeForString("UNIT_GREAT_HUNTER")
-		iGeneral = GC.getInfoTypeForString("UNIT_GREAT_GENERAL")
-		aList = [
-			i1, i1, i2, i2, i2, i2, i3, i3, i4, i4, i5, i5, i5, i5, iGeneral, iGeneral, iGeneral,
-			GC.getInfoTypeForString("UNIT_SCIENTIST"), GC.getInfoTypeForString("UNIT_ENGINEER"),
-			GC.getInfoTypeForString("UNIT_GREAT_SPY"), GC.getInfoTypeForString("UNIT_GREAT_DOCTOR")
-		]
-		iMax = int((iEra + 2)**0.8)
-		iLen = len(aList); iCount = 0
+			# Great persons
+			i1 = GC.getInfoTypeForString("UNIT_PROPHET")
+			i2 = GC.getInfoTypeForString("UNIT_ARTIST")
+			i3 = GC.getInfoTypeForString("UNIT_MERCHANT")
+			i4 = GC.getInfoTypeForString("UNIT_GREAT_STATESMAN")
+			i5 = GC.getInfoTypeForString("UNIT_GREAT_HUNTER")
+			iGeneral = GC.getInfoTypeForString("UNIT_GREAT_GENERAL")
+			aList = [
+				i1, i1, i2, i2, i2, i2, i3, i3, i4, i4, i5, i5, i5, i5, iGeneral, iGeneral, iGeneral,
+				GC.getInfoTypeForString("UNIT_SCIENTIST"), GC.getInfoTypeForString("UNIT_GREAT_ENGINEER"),
+				GC.getInfoTypeForString("UNIT_GREAT_SPY"), GC.getInfoTypeForString("UNIT_DOCTOR")
+			]
+			iMax = int((iEra + 2)**0.8)
+			iLen = len(aList); iCount = 0
 
-		while iCount < iMax and iLen:
-			if iLen > 1:
-				iTemp = GAME.getSorenRandNum(iLen, 'Great Person')
-			else: iTemp = 0
-			iUnit = aList[iTemp]
-			del aList[iTemp]
-			iLen -= 1
-			iUnitAI = GC.getUnitInfo(iUnit).getDefaultUnitAIType()
-			CyPlayer.initUnit(iUnit, iX, iY, UnitAITypes(iUnitAI), DirectionTypes.DIRECTION_SOUTH)
-			iCount += 1
+			while iCount < iMax and iLen:
 
-		# Gold
-		CyPlayer.changeGold(2 * iFactorGS * (iEra + 1))
-		CyPlayer.changeGoldenAgeTurns(GAME.goldenAgeLength())
+				iUnit = aList.pop(GAME.getSorenRandNum(iLen, 'Great Person'))
+				iLen -= 1
+				CyPlayer.initUnit(iUnit, iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
+				iCount += 1
+
+			# Gold
+			CyPlayer.changeGold(2 * iFactorGS * (iEra + 1))
+			CyPlayer.changeGoldenAgeTurns(GAME.goldenAgeLength())
 		CyTeam.setIsMinorCiv(False, False)
 
+		civName = CyPlayer.getCivilizationShortDescription(0)
+		print "[INFO] Minor civ %s becomes a major civ.%s" %(civName, POST_FIX)
 		# Add replay message
 		szMsg = TRNSLTR.getText("TXT_KEY_BARBCIV_MINOR_SETTLE", ()) %(CyPlayer.getName(), CyPlayer.getCivilizationAdjective(1), civName)
 		iColor = GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT")
 		GAME.addReplayMessage(ReplayMessageTypes.REPLAY_MESSAGE_MAJOR_EVENT, iPlayer, szMsg, iX, iY, iColor)
 
 		# Announce the barb civ settling
-		iTemp = GC.getDefineINT("EVENT_MESSAGE_TIME")
-		eMsg = InterfaceMessageTypes.MESSAGE_TYPE_MAJOR_EVENT
-		if CyPlayer.isHuman():
-			CyInterface().addMessage(iPlayer, False, iTemp, TRNSLTR.getText("TXT_KEY_BARBCIV_FULL_CIV", ()), None, eMsg, None, iColor, -1, -1, False, False)
-
-		szTxt = TRNSLTR.getText("TXT_KEY_BARBCIV_WORD_SPREADS", ()) + " " + szMsg
-		for iPlayerX, CyPlayerX in hasMet:
-			if not CyPlayerX.isHuman(): continue
-			CyInterface().addMessage(iPlayerX, False, iTemp, szTxt, None, eMsg, None, iColor, -1, -1, False, False)
+		iPlayerAct = GC.getGame().getActivePlayer()
+		if iPlayer == iPlayerAct:
+			sendMessage(TRNSLTR.getText("TXT_KEY_BARBCIV_FULL_CIV", ()), iPlayer, eColor=iColor, eMsgType=InterfaceMessageTypes.MESSAGE_TYPE_MAJOR_EVENT, bForce=False)
+		elif iPlayerAct in hasMet:
+			sendMessage(TRNSLTR.getText("TXT_KEY_BARBCIV_WORD_SPREADS", ()) + " " + szMsg, iPlayerAct, eColor=iColor, eMsgType=InterfaceMessageTypes.MESSAGE_TYPE_MAJOR_EVENT, bForce=False)

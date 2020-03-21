@@ -1,13 +1,13 @@
 #pragma once
 
-#include "CvTaggedSaveFormatWrapper.h"
-
 // LinkedList.h
 
 // A doubly-linked list
 
 #ifndef		LINKEDLIST_H
 #define		LINKEDLIST_H
+
+#include "CvTaggedSaveFormatWrapper.h"
 
 template <class tVARTYPE> class CLinkList;
 
@@ -19,7 +19,7 @@ friend class CLinkList<tVARTYPE>;
 
 public:
 
-    CLLNode(): m_data(), m_pNext(NULL), m_pPrev(NULL){}
+	CLLNode(): m_data(), m_pNext(NULL), m_pPrev(NULL){}
 
 	explicit CLLNode(const tVARTYPE& val) : m_data(val), m_pNext(NULL), m_pPrev(NULL){}
 

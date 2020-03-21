@@ -15,13 +15,6 @@
 #ifndef XML_LOAD_UTILITY_H
 #define XML_LOAD_UTILITY_H
 
-#include <xercesc/dom/DOM.hpp>
-#include <xercesc/util/XMLString.hpp>
-#include <xercesc/util/PlatformUtils.hpp>
-#include <xercesc/parsers/XercesDOMParser.hpp>
-#include <xercesc/sax/SAXException.hpp>
-#include <xercesc/sax/HandlerBase.hpp>
-
 //#include "CvStructs.h"
 #include "CvInfos.h"
 #include "CvGlobals.h"
@@ -540,11 +533,11 @@ public:
 /**								Defines Function for Use in .cpp								**/
 /*************************************************************************************************/
 	// acquire a list of unknown length of String data from a Child setup in a String (typically for Pass 3 Use)
-    void SetStringWithChildList(int* iNumEntries, std::vector<CvString>* aszXMLLoad);
+	void SetStringWithChildList(int* iNumEntries, std::vector<CvString>* aszXMLLoad);
 	// acquire a list of unknown length of String data from a Child setup in an Array of INTs
-    void SetIntWithChildList(int* iNumEntries, int** piXMLLoad);
+	void SetIntWithChildList(int* iNumEntries, int** piXMLLoad);
 	// acquire a list of known length of String data from a Child setup true values in an Array of BOOLs
-    void SetBoolFromChildList(int iNumEntries, bool** pbXMLLoad);
+	void SetBoolFromChildList(int iNumEntries, bool** pbXMLLoad);
 /*************************************************************************************************/
 /**	New Tag Defs							END													**/
 /*************************************************************************************************/
@@ -562,20 +555,10 @@ public:
 	void InitStringList(CvString **ppszList, int iListLen, CvString szString);
 
 	void InitImprovementBonusList(CvImprovementBonusInfo** ppImprovementBonus, int iListLen);
-	// allocate and initialize the civilization's default buildings
-	void InitBuildingDefaults(int **ppiDefaults);
-	// allocate and initialize the civilization's default units
-	void InitUnitDefaults(int **ppiDefaults);
-/************************************************************************************************/
-/* Afforess	                  Start		 08/26/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	// allocate and initialize a 2 dimensional array of bool pointers
 	static void Init2DBoolList(bool*** pppbList, int iSizeX, int iSizeY);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 	// allocate and initialize a 2 dimensional array of int pointers
 	static void Init2DIntList(int*** pppiList, int iSizeX, int iSizeY);
 	// allocate and initialize a 2 dimensional array of float pointers
@@ -782,6 +765,8 @@ public:
 /************************************************************************************************/
 /* XML_MODULAR_ART_LOADING                 END                                                  */
 /************************************************************************************************/
+	static void showXMLError(const char* const format, ...);
+
 	//---------------------------------------PRIVATE MEMBER VARIABLES---------------------------------
 private:
 	xercesc::DOMElement*      m_pCurrentXmlElement;
@@ -800,10 +785,6 @@ private:
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-
-	// Python Modular Loading
-	template <class T>
-	void LoadPythonModulesInfo(std::vector<T*>& aInfos, const char* szFileRoot, const wchar_t* szXmlPath, bool bTwoPass);
 	//Main control of the MLF feature
 	void ModularLoadingControlXML();
 	// In the next 2 methods we load the MLF classes
@@ -886,6 +867,7 @@ private:
 	CvWString CreateKeyStringFromKBCode(const TCHAR* pszHotKey);
 
 	void orderHotkeyInfo(int** ppiSortedIndex, int* pHotkeyIndex, int iLength);
+
 	void logMsg(char* format, ... );
 	void logMsgW(wchar_t* format, ... );
 /************************************************************************************************/

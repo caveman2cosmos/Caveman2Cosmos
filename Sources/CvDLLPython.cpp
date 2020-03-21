@@ -1,4 +1,6 @@
 #include "CvGameCoreDLL.h"
+#include "Win32.h"
+#include "SCyDebug.h"
 
 void CyCityPythonInterface1(python::class_<CyCity>& x);
 /************************************************************************************************/
@@ -66,6 +68,8 @@ DllExport void DLLPublishToPython()
 	CyMessageControlInterface();
 	CyPropertiesPythonInterface();
 
+	SCyDebug::installInPython();
+
 	//
 	// large interfaces which can be split across files if need be
 	//
@@ -98,5 +102,7 @@ DllExport void DLLPublishToPython()
 	CyGlobalContextPythonInterface3(gc);					// publish it's methods
 	CyGlobalContextPythonInterface4(gc);					// publish it's methods 
 	
+	Win32::pythonPublish();
+
 	OutputDebugString("Publishing to Python: End");
 }

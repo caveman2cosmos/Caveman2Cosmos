@@ -40,28 +40,38 @@ FONT_CENTER_JUSTIFY=1<<2
 FONT_RIGHT_JUSTIFY=1<<1
 FONT_LEFT_JUSTIFY=1<<0
 
+# if the string is non unicode, convert it to unicode by decoding it using 8859-1, latin_1
 def convertToUnicode(s):
-	"if the string is non unicode, convert it to unicode by decoding it using 8859-1, latin_1"
-	if (isinstance(s, str)):
+	if isinstance(s, str):
 		return s.decode("latin_1")
 	return s
 
-def convertToStr(str):
-	"if the string is unicode, convert it to str by encoding it using 8859-1, latin_1"
-	if isinstance(str, unicode):
+# if the string is unicode, convert it to str by encoding it using 8859-1, latin_1
+def convertToStr(txt):
+	if isinstance(txt, unicode):
 		i = 0
-		length = len(str)
-		bEncode = False
+		length = len(txt)
 		while i < length:
-			ordinal = ord(str[i])
+			ordinal = ord(txt[i])
 			if ordinal > 255:
-				str[i] = '?'
-			elif ordinal > 127:
-				bEncode = True
+				txt[i] = '?'
 			i += 1
-		if bEncode:
-			return str.encode("latin_1")
-	return str
+		return txt.encode("latin_1")
+	return txt
+
+def remove_diacriticals(txt):
+	txt = convertToStr(txt)
+	accent = [
+		('à', 'a'), ('ä', 'a'), ('â', 'a'),
+		('é', 'e'), ('è', 'e'), ('ê', 'e'),
+		('ù', 'u'), ('û', 'u'), ('ü', 'u'),
+		('ô', 'o'), ('õ', 'o'), ('ö', 'o'),
+		('ç', 'c'), ('î', 'i'), ('ï', 'i')
+	]
+	while accent:
+		a, b = accent.pop()
+		txt = txt.replace(a, b)
+	return txt
 
 class RedirectDebug:
 	"""Send Debug Messages to Civ Engine"""
@@ -94,7 +104,7 @@ def pyPrint(stuff):
 	sys.stdout.write('PY:' + stuff + "\n")
 
 def pyAssert(cond, msg):
-	if cond == False:
+	if not cond:
 		sys.stderr.write(msg)
 	assert(cond, msg)
 
@@ -115,7 +125,7 @@ def findInfoTypeNum(infoGetter, numInfos, typeStr):
 	if typeStr == 'NONE':
 		return -1
 	idx = GC.getInfoTypeForString(typeStr)
-	pyAssert(idx != -1, "Can't find type enum for type tag %s" %(typeStr,))
+	pyAssert(idx != -1, "Can't find type enum for type tag %s" % typeStr)
 	return idx
 
 def combatDetailMessageBuilder(cdUnit, ePlayer, iChange):
@@ -203,12 +213,12 @@ def combatDetailMessageBuilder(cdUnit, ePlayer, iChange):
 		msg=TRNSLTR.getText("TXT_KEY_COMBAT_MESSAGE_CITY_BARBARIAN_DEFENSE",(cdUnit.iCityBarbarianDefenseModifier * iChange,))
 		CyIF.addCombatMessage(ePlayer,msg)
 
-	if cdUnit.iClassDefenseModifier:
-		msg=TRNSLTR.getText("TXT_KEY_COMBAT_MESSAGE_CLASS_DEFENSE",(cdUnit.iClassDefenseModifier * iChange,))
+	if cdUnit.iDefenseModifier:
+		msg=TRNSLTR.getText("TXT_KEY_COMBAT_MESSAGE_CLASS_DEFENSE",(cdUnit.iDefenseModifier * iChange,))
 		CyIF.addCombatMessage(ePlayer,msg)
 
-	if cdUnit.iClassAttackModifier:
-		msg=TRNSLTR.getText("TXT_KEY_COMBAT_MESSAGE_CLASS_ATTACK",(cdUnit.iClassAttackModifier * iChange,))
+	if cdUnit.iAttackModifier:
+		msg=TRNSLTR.getText("TXT_KEY_COMBAT_MESSAGE_CLASS_ATTACK",(cdUnit.iAttackModifier * iChange,))
 		CyIF.addCombatMessage(ePlayer,msg)
 
 	if cdUnit.iCombatModifierT:
@@ -280,6 +290,11 @@ def sendMessage(szTxt, iPlayer=None, iTime=16, szIcon=None, eColor=-1, iMapX=-1,
 		if iPlayer is None:
 			iPlayer = GC.getGame().getActivePlayer()
 		if iPlayer == -1: return
+
+		if GC.getGame().getAIAutoPlay(iPlayer):
+			szIcon = None
+			iMapX = iMapY = iTime = -1
+			bForce = bOffArrow = bOnArrow = False
 
 		CyIF.addMessage(iPlayer, bForce, iTime, SR.aFontList[5] + szTxt, szSound, eMsgType, szIcon, eColor, iMapX, iMapY, bOffArrow, bOnArrow)
 

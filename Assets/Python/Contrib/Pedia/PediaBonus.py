@@ -144,9 +144,9 @@ class PediaBonus:
 		szTxt = ""
 		if iMinLatitude or iMaxLatitude < 90:
 			if not iMinLatitude:
-				szTxt = szfont4b + "<color=200,240,120,255>Exist in latitude: 0&#176  &#187  &#177 " + str(iMaxLatitude) + "&#176"
+				szTxt = szfont4b + "<color=200,240,120,255>" + TRNSLTR.getText("TXT_KEY_PEDIA_LATITUDE", ()) + " 0&#176  &#187  &#177 " + str(iMaxLatitude) + "&#176"
 			else:
-				szTxt = szfont4b + "<color=200,240,120,255>Exist in latitude: &#177 " + str(iMinLatitude) + "&#176  &#187  &#177 " + str(iMaxLatitude) + "&#176"
+				szTxt = szfont4b + "<color=200,240,120,255>" + TRNSLTR.getText("TXT_KEY_PEDIA_LATITUDE", ()) + " &#177 " + str(iMinLatitude) + "&#176  &#187  &#177 " + str(iMaxLatitude) + "&#176"
 		szChange = ""
 		for k in range(eNumYieldTypes):
 			iYieldChange = CvTheBonusInfo.getYieldChange(k)
@@ -189,23 +189,23 @@ class PediaBonus:
 			if iRevealTech == iEnableTech and iRevealTech != -1:
 				childPanelName = aName()
 				screen.attachPanel(panelName, childPanelName, "", "", True, True, ePanelEmpty)
-				screen.attachLabel(childPanelName, "", szfont4b + "Reveal/Enable")
+				screen.attachLabel(childPanelName, "", szfont4b + TRNSLTR.getText("TXT_KEY_PEDIA_BONUS_APPEARANCE_AND_TRADE", ()))
 				screen.attachImageButton(childPanelName, "", GC.getTechInfo(iRevealTech).getButton(), enumBS, eWidJuToTech, iRevealTech, 1, False)
 			else:
 				if iRevealTech != -1:
 					childPanelName = aName()
 					screen.attachPanel(panelName, childPanelName, "", "", True, True, ePanelEmpty)
-					screen.attachLabel(childPanelName, "", szfont4b + "Reveal")
+					screen.attachLabel(childPanelName, "", szfont4b + TRNSLTR.getText("TXT_KEY_PEDIA_BONUS_APPEARANCE", ()))
 					screen.attachImageButton(childPanelName, "", GC.getTechInfo(iRevealTech).getButton(), enumBS, eWidJuToTech, iRevealTech, 1, False)
 				if iEnableTech != -1:
 					childPanelName = aName()
 					screen.attachPanel(panelName, childPanelName, "", "", True, True, ePanelEmpty)
-					screen.attachLabel(childPanelName, "", szfont4b + "Enable")
+					screen.attachLabel(childPanelName, "", szfont4b + TRNSLTR.getText("TXT_KEY_PEDIA_BONUS_TRADE", ()))
 					screen.attachImageButton(childPanelName, "", GC.getTechInfo(iEnableTech).getButton(), enumBS, eWidJuToTech, iEnableTech, 1, False)
 			if iObsoleteTech != -1:
 				childPanelName = aName()
 				screen.attachPanel(panelName, childPanelName, "", "", True, True, ePanelEmpty)
-				screen.attachLabel(childPanelName, "", szfont4b + "Obsolete")
+				screen.attachLabel(childPanelName, "", szfont4b + TRNSLTR.getText("TXT_KEY_PEDIA_BONUS_OBSOLETE", ()))
 				screen.attachImageButton(childPanelName, "", GC.getTechInfo(iObsoleteTech).getButton(), enumBS, eWidJuToTech, iObsoleteTech, 1, False)
 		# Improvement
 		aImpList = []
@@ -270,9 +270,9 @@ class PediaBonus:
 		if aNeededByBuildings or aVicinityBuildings:
 			szBuildingsEnabled = TRNSLTR.getText("TXT_KEY_PEDIA_BUILDINGS_ENABLED", ())
 			if aNeededByBuildings and not aVicinityBuildings:
-				szBuildingsEnabled += " Nationwide"
+				szBuildingsEnabled += " " + TRNSLTR.getText("TXT_KEY_PEDIA_BONUS_NATIONWIDE", ())
 			elif aVicinityBuildings and not aNeededByBuildings:
-				szBuildingsEnabled += " Locally"
+				szBuildingsEnabled += " " + TRNSLTR.getText("TXT_KEY_PEDIA_BONUS_LOCALLY", ())
 			panelName = aName()
 			screen.addPanel(panelName, szBuildingsEnabled, "", False, True, X_COL_1, Y_BOT_ROW_1, W_PEDIA_PAGE, H_BOT_ROW, ePanelBlue50)
 
@@ -283,7 +283,7 @@ class PediaBonus:
 				szBracketL = ""
 				szBracketR = ""
 				if aNeededByBuildings:
-					szBracketL = szfont3 + " &#38 " + szfont4b + "{" + szfont3 + "Locally: "
+					szBracketL = szfont3 + " &#38 " + szfont4b + "{" + szfont3 + TRNSLTR.getText("TXT_KEY_PEDIA_BONUS_LOCALLY", ()) + ": "
 					szBracketR = szfont4b + "}"
 				if szBracketL:
 					screen.attachLabel(panelName, "", szBracketL)

@@ -1,12 +1,7 @@
 #pragma once
 
-#ifndef CyUnit_h
-#define CyUnit_h
-//
-// Python wrapper class for CvUnit
-// 
-
-//#include "CvEnums.h"
+#ifndef CyUnit_h__
+#define CyUnit_h__
 
 class CyArea;
 class CyPlot;
@@ -15,6 +10,10 @@ class CvUnit;
 class CySelectionGroup;
 class CvArtInfoUnit;
 //class CyUnitEntity;
+
+//
+// Python wrapper class for CvUnit
+//
 class CyUnit
 {
 public:
@@ -48,10 +47,10 @@ public:
 
 	bool canEnterTerritory(int /*TeamTypes*/ eTeam, bool bIgnoreRightOfPassage);
 	bool canEnterArea(int /*TeamTypes*/ eTeam, CyArea* pArea, bool bIgnoreRightOfPassage);
-	int /*TeamTypes*/ getDeclareWarMove(CyPlot* pPlot);																						 
-	bool canMoveInto(CyPlot* pPlot, bool bAttack, bool bDeclareWar, bool bIgnoreLoad); 
-	bool canMoveOrAttackInto(CyPlot* pPlot, bool bDeclareWar);		 
-	bool canMoveThrough(CyPlot* pPlot);		 
+	int /*TeamTypes*/ getDeclareWarMove(CyPlot* pPlot);
+	bool canMoveInto(CyPlot* pPlot, bool bAttack, bool bDeclareWar, bool bIgnoreLoad);
+	bool canMoveOrAttackInto(CyPlot* pPlot, bool bDeclareWar);
+	bool canMoveThrough(CyPlot* pPlot);
 	bool jumpToNearestValidPlot();
 
 	bool canAutomate(AutomateTypes eAutomate);
@@ -142,7 +141,7 @@ public:
 
 	int /*TechTypes*/ getDiscoveryTech();
 	int getDiscoverResearch(int /*TechTypes*/ eTech);
-	bool canDiscover(CyPlot* pPlot);
+	bool canDiscover();
 	int getMaxHurryProduction(CyCity* pCity);
 	int getHurryProduction(CyPlot* pPlot);
 	bool canHurry(CyPlot* pPlot, bool bTestVisible);
@@ -161,18 +160,18 @@ public:
 	int canGiveExperience(CyPlot* pPlot) const;
 	bool giveExperience();
 
-	bool canPromote(int /*PromotionTypes*/ ePromotion, int iLeaderUnitId);		 
-	void promote(int /*PromotionTypes*/ ePromotion, int iLeaderUnitId);				 
+	bool canPromote(int /*PromotionTypes*/ ePromotion, int iLeaderUnitId);
+	void promote(int /*PromotionTypes*/ ePromotion, int iLeaderUnitId);
 
 	int upgradePrice(int /*UnitTypes*/ eUnit);
-	bool upgradeAvailable(int /*UnitTypes*/ eFromUnit, int /*UnitClassTypes*/ eToUnitClass, int iCount);
-	bool canUpgrade(int /*UnitTypes*/ eUnit, bool bTestVisible);			
+	bool upgradeAvailable(int /*UnitTypes*/ eFromUnit, int /*UnitTypes*/ eToUnit, int iCount);
+	bool canUpgrade(int /*UnitTypes*/ eUnit, bool bTestVisible);
 	bool hasUpgrade(bool bSearch);
 
 	int /*HandicapTypes*/ getHandicapType();
 	int /*CivilizationTypes*/ getCivilizationType();
-	int /*SpecialUnitTypes*/ getSpecialUnitType();													 
-	int /*UnitTypes*/ getCaptureUnitType(int /*CivilizationTypes*/ eCivilization);
+	int /*SpecialUnitTypes*/ getSpecialUnitType();
+	int /*UnitTypes*/ getCaptureUnitType();
 	int /*UnitCombatTypes*/ getUnitCombatType();
 	int /*DomainTypes*/ getDomainType();
 	int /*InvisibleTypes*/ getInvisibleType();
@@ -209,7 +208,7 @@ public:
 	bool isInvestigate();
 	bool isCounterSpy();
 	bool isFound();
-	
+
 	/********************************************************************************/
 	/*		REVOLUTION_MOD							1/1/08				DPII		*/
 	/*																				*/
@@ -224,7 +223,7 @@ public:
 	/********************************************************************************/
 	/*		REVOLUTION_MOD							END								*/
 	/********************************************************************************/
-	
+
 	bool isGoldenAge();
 	bool canCoexistWithEnemyUnit(int /*TeamTypes*/ eTeam);
 
@@ -247,7 +246,7 @@ public:
 	float currCombatStrFloat(CyPlot* pPlot, CyUnit* pAttacker);
 
 	bool canFight();
-	bool canAttack();																				 
+	bool canAttack();
 	bool canDefend(CyPlot* pPlot);
 	bool canSiege(int /*TeamTypes*/ eTeam);
 
@@ -259,16 +258,16 @@ public:
 	float airCurrCombatStrFloat(CyUnit* pOther);
 	int combatLimit();
 	int airCombatLimit();
-	bool canAirAttack();																				 
-	bool canAirDefend(CyPlot* pPlot);																				 
+	bool canAirAttack();
+	bool canAirDefend(CyPlot* pPlot);
 	int airCombatDamage( CyUnit* pDefender);
 	CyUnit* bestInterceptor( CyPlot* pPlot);
 
-	bool isAutomated();																		 
+	bool isAutomated();
 	bool isWaiting();
 	bool isFortifyable();
 	bool isEstablishable();
-	bool isEscapable();																		 
+	bool isEscapable();
 	int fortifyModifier();
 	//TB Combat Mods begin
 	int fortifyRepelModifier();
@@ -276,10 +275,9 @@ public:
 	int experienceNeeded();
 	int attackXPValue();
 	int defenseXPValue();
-	int maxXPValue();																				
 	int firstStrikes();
-	int chanceFirstStrikes();																 
-	int maxFirstStrikes();																		 
+	int chanceFirstStrikes();
+	int maxFirstStrikes();
 	bool isRanged();
 	bool alwaysInvisible();
 	bool immuneToFirstStrikes();
@@ -291,7 +289,7 @@ public:
 	bool ignoreTerrainCost();
 	bool isNeverInvisible();
 	bool isInvisible(int /*TeamTypes*/ eTeam, bool bDebug);
-	bool isNukeImmune();											 
+	bool isNukeImmune();
 	//RevolutionDCM Inquisitor
 	bool isInquisitor();
 	//RevolutionDCM end
@@ -349,8 +347,8 @@ public:
 	int terrainDefenseModifier(int /*TerrainTypes*/ eTerrain);
 	int featureAttackModifier(int /*FeatureTypes*/ eFeature);
 	int featureDefenseModifier(int /*FeatureTypes*/ eFeature);
-	int unitClassAttackModifier(int /*UnitClassTypes*/ eUnitClass);
-	int unitClassDefenseModifier(int /*UnitClassTypes*/ eUnitClass);
+	int unitAttackModifier(int /*UnitTypes*/ eUnit);
+	int unitDefenseModifier(int /*UnitTypes*/ eUnit);
 	int unitCombatModifier(int /*UnitCombatTypes*/ eUnitCombat);
 	int domainModifier(int /*DomainTypes*/ eDomain);
 
@@ -358,12 +356,12 @@ public:
 	int airBombBaseRate();
 	int airBombCurrRate();
 
-	int /*SpecialUnitTypes*/ specialCargo();													 
-	int /*DomainTypes*/ domainCargo();																 
+	int /*SpecialUnitTypes*/ specialCargo();
+	int /*DomainTypes*/ domainCargo();
 	int cargoSpace();
 	void changeCargoSpace(int iChange);
 	bool isFull();
-	int cargoSpaceAvailable(int /*SpecialUnitTypes*/ eSpecialCargo, int /*DomainTypes*/ eDomainCargo);	 
+	int cargoSpaceAvailable(int /*SpecialUnitTypes*/ eSpecialCargo, int /*DomainTypes*/ eDomainCargo);
 	bool hasCargo();
 	bool canCargoAllMove();
 	int getUnitAICargo(UnitAITypes eUnitAI);
@@ -385,7 +383,7 @@ public:
 	CyPlot* plot();
 	CyArea* area();
 	CyPlot* getReconPlot();
-	void setReconPlot(CyPlot* pNewValue);										 
+	void setReconPlot(CyPlot* pNewValue);
 
 	int getGameTurnCreated();
 
@@ -397,8 +395,8 @@ public:
 	void changeMoves(int iChange);
 	void finishMoves();
 	int getExperience();
-	void setExperience(int iNewValue, int iMax);	 
-	void changeExperience(int iChange, int iMax, bool bFromCombat, bool bInBorders, bool bUpdateGlobal);	 
+	void setExperience(int iNewValue, int iMax);
+	void changeExperience(int iChange, int iMax, bool bFromCombat, bool bInBorders, bool bUpdateGlobal);
 	int getLevel();
 	void setLevel(int iNewLevel);
 	void changeLevel(int iChange);
@@ -416,15 +414,15 @@ public:
 	/********************************************************************************/
 	/*		REVOLUTION_MOD							END								*/
 	/********************************************************************************/
-	int getBlitzCount();			
-	bool isBlitz();																								 
+	int getBlitzCount();
+	bool isBlitz();
 	int getAmphibCount();
-	bool isAmphib();																								 
+	bool isAmphib();
 	int getRiverCount();
-	bool isRiver();		
-	bool isEnemyRoute();							 
-	bool isAlwaysHeal();				 
-	bool isHillsDoubleMove();				 
+	bool isRiver();
+	bool isEnemyRoute();
+	bool isAlwaysHeal();
+	bool isHillsDoubleMove();
 
 	int getExtraVisibilityRange();
 	int getExtraMoves();
@@ -433,7 +431,7 @@ public:
 	int getExtraIntercept();
 	int getExtraEvasion();
 	int getExtraFirstStrikes();
-	int getExtraChanceFirstStrikes();															 
+	int getExtraChanceFirstStrikes();
 	int getExtraWithdrawal();
 	//TB Combat Mods begin
 	int getExtraPursuit();
@@ -473,7 +471,7 @@ public:
 
 	int getSameTileHeal();
 	int getAdjacentTileHeal();
-	
+
 	int getExtraCombatPercent();
 	int getExtraCityAttackPercent();
 	int getExtraCityDefensePercent();
@@ -489,7 +487,7 @@ public:
 	int getImmobileTimer() const;
 	void setImmobileTimer(int iNewValue);
 
-	bool isMadeAttack();																							 
+	bool isMadeAttack();
 	void setMadeAttack(bool bNewValue);
 	//TB Combat Mod end
 	int getRoundCount () const;
@@ -499,18 +497,17 @@ public:
 	int getDefenseCount() const;
 	void changeDefenseCount(int iChange);
 	//TB Combat Mod end
-	bool isMadeInterception();																							 
-	void setMadeInterception(bool bNewValue);															 
+	bool isMadeInterception();
+	void setMadeInterception(bool bNewValue);
 
-	bool isPromotionReady();																					 
-	void setPromotionReady(bool bNewValue);													 
+	bool isPromotionReady();
+	void setPromotionReady(bool bNewValue);
 	int getOwner();
 	int getVisualOwner();
 	int getCombatOwner(int /* TeamTypes*/ iForTeam);
 	int getTeam();
 
 	int /*UnitTypes*/ getUnitType();
-	int /*UnitClassTypes*/ getUnitClassType();
 	int /*UnitTypes*/ getLeaderUnitType();
 	void setLeaderUnitType(int /*UnitTypes*/ leaderUnitType);
 
@@ -577,8 +574,8 @@ public:
 	int commandRange() const;
 	int getExperience100();
 	float getRealExperience();
-	void setExperience100(int iNewValue, int iMax);	 
-	void changeExperience100(int iChange, int iMax, bool bFromCombat, bool bInBorders, bool bUpdateGlobal);	
+	void setExperience100(int iNewValue, int iMax);
+	void changeExperience100(int iChange, int iMax, bool bFromCombat, bool bInBorders, bool bUpdateGlobal);
 /************************************************************************************************/
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
@@ -587,4 +584,6 @@ protected:
 	CvUnit* m_pUnit;
 };
 
-#endif	// #ifndef CyUnit
+DECLARE_PY_WRAPPER(CyUnit, CvUnit*);
+
+#endif // CyUnit_h__

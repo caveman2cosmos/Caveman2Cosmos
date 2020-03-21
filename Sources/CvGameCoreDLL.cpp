@@ -1,167 +1,11 @@
 #include "CvGameCoreDLL.h"
 
-#include "CvGameCoreDLLUndefNew.h"
-
-#include <new>
-
 #include <psapi.h>
 
-#ifdef MEMORY_TRACKING
-void	ProfileTrackAlloc(void* ptr, int size);
-
-void	ProfileTrackDeAlloc(void* ptr);
-
-void DumpMemUsage(const char* fn, int line)
-{
-	PROCESS_MEMORY_COUNTERS pmc;
-
-	if ( GetProcessMemoryInfo( GetCurrentProcess(), &pmc, sizeof(pmc)) )
-	{
-		char buffer[200];
-
-		sprintf(buffer, "memory (%s,%d): %d Kbytes, peak %d\n", fn, line, (int)(pmc.WorkingSetSize/1024), (int)(pmc.PeakWorkingSetSize/1024));
-		OutputDebugString(buffer);
-	}
-}
-
-#define	PROFILE_TRACK_ALLOC(x,n)	ProfileTrackAlloc(x,n);
-#define	PROFILE_TRACK_DEALLOC(x)	ProfileTrackDeAlloc(x);
-#else
-#define	PROFILE_TRACK_ALLOC(x,n)	
-#define	PROFILE_TRACK_DEALLOC(x)	
-#endif
-
-static int allocCount = 0;
 static CRITICAL_SECTION g_cPythonSection;
 #ifdef USE_INTERNAL_PROFILER
 static CRITICAL_SECTION cSampleSection;
 #endif
-
-//
-// operator global new and delete override for gamecore DLL 
-//
-void *__cdecl operator new(size_t size)
-{
-	if (g_DLL)
-	{
-#if 0
-		char buffer[200];
-		sprintf(buffer,"Alloc %d\n", size);
-		OutputDebugString(buffer);
-#endif
-
-		void* result = NULL;
-
-		try
-		{
-			result = g_DLL->newMem(size, __FILE__, __LINE__);
-#ifdef _DEBUG
-			memset(result, 0xDA, size);
-#endif
-			PROFILE_TRACK_ALLOC(result, size);
-		}
-		catch(std::exception&)
-		{
-			OutputDebugString("Allocation failure\n");
-		}
-
-		return result;
-	}
-
-	OutputDebugString("Alloc [unsafe]");
-	::MessageBoxA(NULL,"UNsafe alloc","CvGameCore",MB_OK);
-	return malloc(size);
-}
-
-void __cdecl operator delete (void *p)
-{
-	if (g_DLL)
-	{
-		PROFILE_TRACK_DEALLOC(p);
-
-		g_DLL->delMem(p, __FILE__, __LINE__);
-
-	}
-	else
-	{
-		free(p);
-	}
-}
-
-void* operator new[](size_t size)
-{
-	if (g_DLL)
-	{
-		//OutputDebugString("Alloc [safe]");
-
-		void* result = g_DLL->newMemArray(size, __FILE__, __LINE__);
-#ifdef _DEBUG
-		memset(result, 0xDA, size);
-#endif
-		return result;
-	}
-
-	OutputDebugString("Alloc [unsafe]");
-	::MessageBoxA(NULL,"UNsafe alloc","CvGameCore",MB_OK);
-	return malloc(size);
-}
-
-void operator delete[](void* pvMem)
-{
-	if (g_DLL)
-	{
-		g_DLL->delMemArray(pvMem, __FILE__, __LINE__);
-	}
-	else
-	{
-		free(pvMem);
-	}
-}
-
-void *__cdecl operator new(size_t size, char* pcFile, int iLine)
-{
-	void* result = g_DLL->newMem(size, pcFile, iLine);
-#ifdef _DEBUG
-	memset(result, 0xDA, size);
-#endif
-	return result;
-}
-
-void *__cdecl operator new[](size_t size, char* pcFile, int iLine)
-{
-	void* result = g_DLL->newMem(size, pcFile, iLine);
-#ifdef _DEBUG
-	memset(result, 0xDA, size);
-#endif
-	return result;
-}
-
-void __cdecl operator delete(void* pvMem, char* pcFile, int iLine)
-{
-	g_DLL->delMem(pvMem, pcFile, iLine);
-}
-
-void __cdecl operator delete[](void* pvMem, char* pcFile, int iLine)
-{
-	g_DLL->delMem(pvMem, pcFile, iLine);
-}
-
-
-void* reallocMem(void* a, unsigned int uiBytes, const char* pcFile, int iLine)
-{
-	void* result;
-
-	result = g_DLL->reallocMem(a, uiBytes, pcFile, iLine);
-
-	return result;
-}
-
-unsigned int memSize(void* a)
-{
-	unsigned int result = g_DLL->memSize(a);
-
-	return result;
-}
 
 // BUG - EXE/DLL Paths - start
 HANDLE dllModule = NULL;
@@ -179,7 +23,7 @@ bool runProcess(const std::string& exe, const std::string& workingDir)
 	// HOWEVER: this DLL is loaded by LoadLibrary later in exe startup so we appear to have the required dlls already loaded at this point.
 	if (::CreateProcessA(NULL, (LPSTR)exe.c_str(), NULL, NULL, TRUE, 0, NULL, workingDir.c_str(), &startupInfo, &procInfo))
 	{
-		success = ::WaitForSingleObject(procInfo.hProcess, 600000) == WAIT_OBJECT_0;
+		success = ::WaitForSingleObject(procInfo.hProcess, 1800000) == WAIT_OBJECT_0;
 	}
 	::CloseHandle(procInfo.hProcess);
 	::CloseHandle(procInfo.hThread);
@@ -198,29 +42,13 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 	switch( ul_reason_for_call ) {
 	case DLL_PROCESS_ATTACH:
 		{
-
-// BUG - EXE/DLL Paths - start
 		dllModule = hModule;
 
-#ifdef _DEBUG
-/************************************************************************************************/
-/* Afforess	                  Start		 07/30/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-//Irritating, and meaningless.
-//	MessageBox(0, "DLL attached", "Message", 0);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-#endif
-// BUG - EXE/DLL Paths - end
-
 		// The DLL is being loaded into the virtual address space of the current process as a result of the process starting up 
-		OutputDebugString("DLL_PROCESS_ATTACH\n");
+		OutputDebugString("[C2C] DLL_PROCESS_ATTACH\n");
 
 		InitializeCriticalSection(&g_cPythonSection);
-		
+
 #ifdef USE_INTERNAL_PROFILER
 		InitializeCriticalSectionAndSpinCount(&cSampleSection,2000);
 #endif
@@ -247,32 +75,35 @@ BOOL APIENTRY DllMain(HANDLE hModule,
 				MessageBox(0, "Creation of FPK packs failed, are you sure you set up the development environment correctly?", "ERROR!", 0);
 				return FALSE;
 			}
-			if (!runProcess("cmd.exe /C \"" + git_dir + "\\Tools\\_BootDLLCheck.bat\" " + TOSTRING(BUILD_TARGET), git_dir + "\\Tools"))
+
+			// Don't attempt rebuild if debugger is connected, its annoying
+			if(!IsDebuggerPresent())
 			{
-				MessageBox(0, "DLL update failed!", "ERROR!", 0);
-				return FALSE;
+				if (!runProcess("cmd.exe /C \"" + git_dir + "\\Tools\\_BootDLLCheck.bat\" " + TOSTRING(BUILD_TARGET), git_dir + "\\Tools"))
+				{
+					MessageBox(0, "DLL update failed!", "ERROR!", 0);
+					return FALSE;
+				}
 			}
 		}
-
 		}
 		break;
 	case DLL_THREAD_ATTACH:
-		OutputDebugString(CvString::format("DLL_THREAD_ATTACH: %d\n", GetCurrentThreadId()).c_str());
+		OutputDebugString(CvString::format("[C2C] DLL_THREAD_ATTACH: %d\n", GetCurrentThreadId()).c_str());
 		break;
 	case DLL_THREAD_DETACH:
-		OutputDebugString(CvString::format("DLL_THREAD_DETACH: %d\n", GetCurrentThreadId()).c_str());
+		OutputDebugString(CvString::format("[C2C] DLL_THREAD_DETACH: %d\n", GetCurrentThreadId()).c_str());
 		break;
 	case DLL_PROCESS_DETACH:
-
 // BUG - EXE/DLL Paths - start
 		dllModule = NULL;
 // BUG - EXE/DLL Paths - end
 
-		OutputDebugString("DLL_PROCESS_DETACH\n");
+		OutputDebugString("[C2C] DLL_PROCESS_DETACH\n");
 		timeEndPeriod(1);
 		break;
 	}
-	
+
 	return TRUE;	// success
 }
 
@@ -718,257 +549,7 @@ void dumpProfileStack()
 #endif
 }
 
-#endif  // USe internal profiler
-
-void IFPLockPythonAccess()
-{
-	//EnterCriticalSection(&g_cPythonSection);
-}
-
-void IFPUnlockPythonAccess()
-{
-	//LeaveCriticalSection(&g_cPythonSection);
-}
-
-static int pythonDepth = 0;
-
-bool IFPPythonCall(const char* callerFn, const char* moduleName, const char* fxnName, void* fxnArg)
-{
-	bool result;
-	
-	PROFILE("IFPPythonCall1");
-
-#ifdef USE_INTERNAL_PROFILER
-	FAssert(bIsMainThread || iThreadSlot == -1);
-	if ( !bIsMainThread )
-	{
-		::MessageBox(NULL, "Illegal use of Python on background thread", "CvGameCoreDLL", MB_OK); 
-	}
-#endif
-	//OutputDebugString(CvString::format("Python call to %s::%s [%d]\n", moduleName, fxnName, pythonDepth++).c_str());
-
-	//EnterCriticalSection(&g_cPythonSection);
-	result = gDLL->getPythonIFace()->callFunction(moduleName, fxnName, fxnArg);
-	//LeaveCriticalSection(&g_cPythonSection);
-	
-	//OutputDebugString("...complete\n");
-	pythonDepth--;
-
-	return result;
-}
-
-bool IFPPythonCall(const char* callerFn, const char* moduleName, const char* fxnName, void* fxnArg, long* result)
-{
-	PROFILE("IFPPythonCall2");
-
-#ifdef USE_INTERNAL_PROFILER
-	FAssert(bIsMainThread || iThreadSlot == -1);
-	if ( !bIsMainThread )
-	{
-		::MessageBox(NULL, "Illegal use of Python on background thread", "CvGameCoreDLL", MB_OK); 
-	}
-#endif
-
-#ifdef FP_PROFILE_ENABLE				// Turn Profiling On or Off .. 
-#ifdef USE_INTERNAL_PROFILER
-	static	std::map<int,ProfileSample*>*	g_pythonProfiles = NULL;
-
-	if ( g_pythonProfiles == NULL )
-	{
-		g_pythonProfiles = new std::map<int,ProfileSample*>();
-	}
-
-	CvChecksum xSum;
-	const char* ptr;
-	ProfileSample* pSample;
-
-	for(ptr = moduleName; *ptr != '\0'; ptr++)
-	{
-		xSum.add((byte)*ptr);
-	}
-	for(ptr = fxnName; *ptr != '\0'; ptr++)
-	{
-		xSum.add((byte)*ptr);
-	}
-
-	std::map<int,ProfileSample*>::const_iterator itr = g_pythonProfiles->find(xSum.get());
-
-	if ( itr == g_pythonProfiles->end() )
-	{
-		char profileName[256];
-
-		sprintf(profileName, "IFPPythonCall2.%s::%s", moduleName, fxnName);
-		pSample = new ProfileSample(profileName);
-
-		g_pythonProfiles->insert(std::make_pair(xSum.get(), pSample));
-	}
-	else
-	{
-		pSample = itr->second;
-	}
-
-	CProfileScope detailedScope(pSample);		
-#endif
-#endif
-
-	//OutputDebugString(CvString::format("Python call to %s::%s [%d]\n", moduleName, fxnName, pythonDepth++).c_str());
-
-	bool bResult = gDLL->getPythonIFace()->callFunction(moduleName, fxnName, fxnArg, result);
-
-	//OutputDebugString("...complete\n");
-	pythonDepth--;
-
-	return bResult;
-}
-
-
-bool IFPPythonCall(const char* callerFn, const char* moduleName, const char* fxnName, void* fxnArg, CvString* result)
-{
-	PROFILE("IFPPythonCall3");
-
-#ifdef USE_INTERNAL_PROFILER
-	FAssert(bIsMainThread || iThreadSlot == -1);
-	if ( !bIsMainThread )
-	{
-		::MessageBox(NULL, "Illegal use of Python on background thread", "CvGameCoreDLL", MB_OK); 
-	}
-#endif
-
-	//OutputDebugString(CvString::format("Python call to %s::%s [%d]\n", moduleName, fxnName, pythonDepth++).c_str());
-
-	//EnterCriticalSection(&g_cPythonSection);
-	bool bResult = gDLL->getPythonIFace()->callFunction(moduleName, fxnName, fxnArg, result);
-	//LeaveCriticalSection(&g_cPythonSection);
-	
-	//OutputDebugString("...complete\n");
-	pythonDepth--;
-
-	return bResult;
-}
-
-
-bool IFPPythonCall(const char* callerFn, const char* moduleName, const char* fxnName, void* fxnArg, CvWString* result)
-{
-	PROFILE("IFPPythonCall4");
-
-#ifdef USE_INTERNAL_PROFILER
-	FAssert(bIsMainThread || iThreadSlot == -1);
-	if ( !bIsMainThread )
-	{
-		::MessageBox(NULL, "Illegal use of Python on background thread", "CvGameCoreDLL", MB_OK); 
-	}
-#endif
-	//OutputDebugString(CvString::format("Python call to %s::%s [%d]\n", moduleName, fxnName, pythonDepth++).c_str());
-
-	//EnterCriticalSection(&g_cPythonSection);
-	bool bResult = gDLL->getPythonIFace()->callFunction(moduleName, fxnName, fxnArg, result);
-	//LeaveCriticalSection(&g_cPythonSection);
-	
-	//OutputDebugString("...complete\n");
-	pythonDepth--;
-
-	return bResult;
-}
-
-
-bool IFPPythonCall(const char* callerFn, const char* moduleName, const char* fxnName, void* fxnArg, std::vector<byte>* pList)
-{
-	PROFILE("IFPPythonCall5");
-
-#ifdef USE_INTERNAL_PROFILER
-	FAssert(bIsMainThread || iThreadSlot == -1);
-	if ( !bIsMainThread )
-	{
-		::MessageBox(NULL, "Illegal use of Python on background thread", "CvGameCoreDLL", MB_OK); 
-	}
-#endif
-
-	//OutputDebugString(CvString::format("Python call to %s::%s [%d]\n", moduleName, fxnName, pythonDepth++).c_str());
-
-	//EnterCriticalSection(&g_cPythonSection);
-	bool result = gDLL->getPythonIFace()->callFunction(moduleName, fxnName, fxnArg, pList);
-	//LeaveCriticalSection(&g_cPythonSection);
-	
-	//OutputDebugString("...complete\n");
-	pythonDepth--;
-
-	return result;
-}
-
-
-bool IFPPythonCall(const char* callerFn, const char* moduleName, const char* fxnName, void* fxnArg, std::vector<int> *pIntList)
-{
-	PROFILE("IFPPythonCall6");
-
-#ifdef USE_INTERNAL_PROFILER
-	FAssert(bIsMainThread || iThreadSlot == -1);
-	if ( !bIsMainThread )
-	{
-		::MessageBox(NULL, "Illegal use of Python on background thread", "CvGameCoreDLL", MB_OK); 
-	}
-#endif
-
-	//OutputDebugString(CvString::format("Python call to %s::%s [%d]\n", moduleName, fxnName, pythonDepth++).c_str());
-
-	//EnterCriticalSection(&g_cPythonSection);
-	bool result = gDLL->getPythonIFace()->callFunction(moduleName, fxnName, fxnArg, pIntList);
-	//LeaveCriticalSection(&g_cPythonSection);
-
-	//OutputDebugString("...complete\n");
-	pythonDepth--;
-
-	return result;
-}
-
-
-bool IFPPythonCall(const char* callerFn, const char* moduleName, const char* fxnName, void* fxnArg, int* pIntList, int* iListSize)
-{
-	PROFILE("IFPPythonCall7");
-
-#ifdef USE_INTERNAL_PROFILER
-	FAssert(bIsMainThread || iThreadSlot == -1);
-	if ( !bIsMainThread )
-	{
-		::MessageBox(NULL, "Illegal use of Python on background thread", "CvGameCoreDLL", MB_OK); 
-	}
-#endif
-
-	//OutputDebugString(CvString::format("Python call to %s::%s [%d]\n", moduleName, fxnName, pythonDepth++).c_str());
-
-	//EnterCriticalSection(&g_cPythonSection);
-	bool result = gDLL->getPythonIFace()->callFunction(moduleName, fxnName, fxnArg, pIntList, iListSize);
-	//LeaveCriticalSection(&g_cPythonSection);
-	
-	//OutputDebugString("...complete\n");
-	pythonDepth--;
-
-	return result;
-}
-
-
-bool IFPPythonCall(const char* callerFn, const char* moduleName, const char* fxnName, void* fxnArg, std::vector<float> *pFloatList)
-{
-	PROFILE("IFPPythonCall8");
-
-#ifdef USE_INTERNAL_PROFILER
-	FAssert(bIsMainThread || iThreadSlot == -1);
-	if ( !bIsMainThread )
-	{
-		::MessageBox(NULL, "Illegal use of Python on background thread", "CvGameCoreDLL", MB_OK); 
-	}
-#endif
-
-	//OutputDebugString(CvString::format("Python call to %s::%s [%d]\n", moduleName, fxnName, pythonDepth++).c_str());
-
-	//EnterCriticalSection(&g_cPythonSection);
-	bool result = gDLL->getPythonIFace()->callFunction(moduleName, fxnName, fxnArg, pFloatList);
-	//LeaveCriticalSection(&g_cPythonSection);
-	
-	//OutputDebugString("...complete\n");
-	pythonDepth--;
-
-	return result;
-}
+#endif  // Use internal profiler
 
 //
 // enable dll profiler if necessary, clear history
@@ -1022,169 +603,3 @@ void stopProfilingDLL(bool longLived)
 	}
 #endif
 }
-
-#ifdef MEMORY_TRACKING
-CMemoryTrack*	CMemoryTrack::trackStack[MAX_TRACK_DEPTH];
-int CMemoryTrack::m_trackStackDepth = 0;
-
-CMemoryTrack::CMemoryTrack(const char* name, bool valid)
-{
-	if ( bIsMainThread )
-	{
-		m_highWater = 0;
-		m_seq = 0;
-		m_name = name;
-		m_valid = valid;
-
-		if ( m_trackStackDepth < MAX_TRACK_DEPTH )
-		{
-			trackStack[m_trackStackDepth++] = this;
-		}
-	}
-	else
-	{
-		m_valid = false;
-	}
-}
-
-CMemoryTrack::~CMemoryTrack()
-{
-	if ( bIsMainThread )
-	{
-		if ( m_valid )
-		{
-			for(int i = 0; i < m_highWater; i++)
-			{
-				if ( m_track[i] != NULL )
-				{
-					char buffer[200];
-
-					sprintf(buffer, "Apparent memory leak (size %d) detected in %s (from %s:%d)\n", m_allocSize[i], m_name, m_trackName[i], m_allocSeq[i]);
-					OutputDebugString(buffer);
-				}
-			}
-		}
-
-		if ( trackStack[m_trackStackDepth-1] == this )
-		{
-			m_trackStackDepth--;
-		}
-	}
-}
-
-void CMemoryTrack::NoteAlloc(void* ptr, int size)
-{
-	if ( m_valid )
-	{
-		for(int i = 0; i < m_highWater; i++)
-		{
-			if ( m_track[i] == NULL )
-			{
-				if ( i == m_highWater )
-				{
-					if ( m_highWater < MAX_TRACKED_ALLOCS )
-					{
-						m_highWater++;
-					}
-					else
-					{
-						m_valid = false;
-						return;
-					}
-				}
-
-				m_track[i] = ptr;
-				m_allocSeq[i] = m_seq++;
-				m_allocSize[i] = size;
-#ifdef USE_INTERNAL_PROFILER
-				m_trackName[i] = _currentSample == NULL || _currentSample->sample == NULL ? "<None>" : _currentSample->sample->Name;
-#else
-				m_trackName[i] = "";
-#endif
-			}
-		}
-	}
-}
-
-void CMemoryTrack::NoteDeAlloc(void* ptr)
-{
-	if ( m_valid )
-	{
-		for(int i = 0; i < m_highWater; i++)
-		{
-			if ( m_track[i] == ptr )
-			{
-				m_track[i] = NULL;
-				break;
-			}
-		}
-	}
-}
-
-CMemoryTrack* CMemoryTrack::GetCurrent()
-{
-	if ( 0 < m_trackStackDepth && m_trackStackDepth < MAX_TRACK_DEPTH )
-	{
-		return trackStack[m_trackStackDepth-1];
-	}
-	else
-	{
-		return NULL;
-	}
-}
-
-CMemoryTrace::CMemoryTrace(const char* name)
-{
-	PROCESS_MEMORY_COUNTERS pmc;
-
-	GetProcessMemoryInfo( GetCurrentProcess(), &pmc, sizeof(pmc));
-	m_name = name;
-	m_start = pmc.WorkingSetSize;
-}
-
-CMemoryTrace::~CMemoryTrace()
-{
-	static PROCESS_MEMORY_COUNTERS lastPmc;
-	PROCESS_MEMORY_COUNTERS pmc;
-
-	if ( bIsMainThread )
-	{
-		if ( GetProcessMemoryInfo( GetCurrentProcess(), &pmc, sizeof(pmc)) && (pmc.WorkingSetSize != m_start || lastPmc.WorkingSetSize/1024 != pmc.WorkingSetSize/1024))
-		{
-			char buffer[200];
-
-			sprintf(buffer, "function %s added %dK bytes, total now %uK\n", m_name, ((int)(pmc.WorkingSetSize - m_start))/1024, (unsigned int)pmc.WorkingSetSize/1024);
-			OutputDebugString(buffer);
-		}
-
-		memcpy(&lastPmc, &pmc, sizeof(pmc));
-	}
-}
-
-void ProfileTrackAlloc(void* ptr, int size)
-{
-	if ( bIsMainThread )
-	{
-		CMemoryTrack* current = CMemoryTrack::GetCurrent();
-
-		if ( current != NULL )
-		{
-			current->NoteAlloc(ptr, size);
-		}
-	}
-}
-
-void ProfileTrackDeAlloc(void* ptr)
-{
-	if ( bIsMainThread )
-	{
-		CMemoryTrack* current = CMemoryTrack::GetCurrent();
-
-		if ( current != NULL )
-		{
-			current->NoteDeAlloc(ptr);
-		}
-	}
-}
-
-#endif

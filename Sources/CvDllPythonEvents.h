@@ -1,5 +1,9 @@
+#pragma once
+
 #ifndef CIV4_DLL_PYTHON_EVENTS_H
 #define CIV4_DLL_PYTHON_EVENTS_H
+
+#include "CvPython.h"
 
 class CyArgsList;
 class CvSelectionGroup;
@@ -9,7 +13,7 @@ class CvDllPythonEvents
 public:
 	void reportGenericEvent(const char* szEventName, void *pyArgs);
 	bool reportKbdEvent(int evt, int key, int iCursorX, int iCursorY);
-	bool reportMouseEvent(int evt, int iCursorX, int iCursorY, bool bInterfaceConsumed=false);												
+	bool reportMouseEvent(int evt, int iCursorX, int iCursorY, bool bInterfaceConsumed=false);
 	void reportModNetMessage(int iData1, int iData2, int iData3, int iData4, int iData5);
 
 	void reportInit();
@@ -137,10 +141,6 @@ public:
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
 	void preSave();
-
-private:
-	bool preEvent();
-	bool postEvent(CyArgsList& eventData, const char* eventName);
 };
 
 #endif

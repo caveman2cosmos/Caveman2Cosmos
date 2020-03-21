@@ -122,8 +122,7 @@ class CityDemolish:
 				# Unique buildings are protected.
 				if CvBuildingInfo.isCapital() or CvBuildingInfo.getGlobalReligionCommerce() > 0:
 					continue
-				iBuildingClass = CvBuildingInfo.getBuildingClassType()
-				if isWorldWonderClass(iBuildingClass) or isTeamWonderClass(iBuildingClass):
+				if isWorldWonder(iType) or isTeamWonder(iType):
 					continue
 				iGold = int(iGold * fGoldMod)
 				aList.append((CvBuildingInfo.getDescription(), CvBuildingInfo.getButton(), iType, iGold))
@@ -233,9 +232,9 @@ class CityDemolish:
 						break
 				if bContinue: continue
 				# Building Prereq
-				iBuilding = CvUnitInfo.getPrereqBuilding()
-				if iBuilding > -1 and not CyCity.getNumBuilding(iBuilding):
-					continue
+				for i in xrange(CvTheUnitInfo.getNumPrereqAndBuildings()):
+					if not CyCity.getNumBuilding(CvTheUnitInfo.getPrereqAndBuilding(i)):
+						continue
 				# Bonus Prereq
 				iBonus = CvUnitInfo.getPrereqAndBonus()
 				if iBonus > -1 and not CyCity.getNumBonuses(iBonus):

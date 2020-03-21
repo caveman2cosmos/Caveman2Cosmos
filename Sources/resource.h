@@ -1,3 +1,8 @@
+#pragma once
+
+#ifndef resource_h__
+#define resource_h__
+
 //{{NO_DEPENDENCIES}}
 // Microsoft Visual C++ generated include file.
 // Used by CvGameCoreDLL.rc
@@ -13,3 +18,5 @@
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif
+
+#endif // resource_h__

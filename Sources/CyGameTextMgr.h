@@ -36,6 +36,7 @@ public:
 	std::wstring getPromotionHelp(int iPromotion, bool bCivilopediaText);
 	std::wstring getTraitHelp(int iTrait);
 	std::wstring getBonusHelp(int iBonus, bool bCivilopediaText);
+	std::wstring getProductionHelpCity(CyCity* pCity);
 	std::wstring getReligionHelpCity(int iReligion, CyCity* pCity, bool bCityScreen, bool bForceReligion, bool bForceState, bool bNoStateReligion);
 	std::wstring getCorporationHelpCity(int iCorporation, CyCity* pCity, bool bCityScreen, bool bForceCorporation);
 	std::wstring getImprovementHelp(int iImprovement, bool bCivilopediaText);
@@ -47,15 +48,8 @@ public:
 	std::wstring parseCorporationInfo(int /*CorporationTypes*/ iCorporationType, bool bCivilopediaText);
 	std::wstring parseCivInfos(int /*CivilizationTypes*/ iCivilization, bool bDawnOfMan);
 	std::wstring parseLeaderTraits(int /*LeaderHeadTypes*/ iLeader, int /*CivilizationTypes*/ iCivilization, bool bDawnOfMan, bool bCivilopediaText);
-/************************************************************************************************/
-/* Afforess	                  Start		 08/26/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	std::wstring parseTraits(int /*TraitTypes*/ eTrait, int /*CivilizationTypes*/ eCivilization, bool bDawnOfMan, bool bEffectsOnly);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+	std::wstring getHappinessHelp();
 	std::wstring getTradeString(TradeData* pTradeData, int iPlayer1, int iPlayer2);
 	std::wstring getSpecialistHelp(int iSpecialist, bool bCivilopediaText);
 	std::wstring buildHintsList();

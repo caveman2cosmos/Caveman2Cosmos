@@ -509,8 +509,7 @@ class CvDomesticAdvisor:
 		# add National Wonders
 		for i in xrange(GC.getNumBuildingInfos()):
 			info = GC.getBuildingInfo(i)
-			classInfo = GC.getBuildingClassInfo(info.getBuildingClassType())
-			if classInfo.getMaxGlobalInstances() == -1 and classInfo.getMaxPlayerInstances() == 1 and CyCity.getNumBuilding(i) > 0 and not info.isCapital():
+			if info.getMaxGlobalInstances() == -1 and info.getMaxPlayerInstances() == 1 and CyCity.getNumBuilding(i) > 0 and not info.isCapital():
 				# Use bullets as markers for National Wonders
 				szReturn += unichr(8854)
 
@@ -636,7 +635,7 @@ class CvDomesticAdvisor:
 				szIcon = self.yieldIcons[YieldTypes.YIELD_PRODUCTION]
 				if city.isProductionBuilding():
 					szColorKey = "WONDER"
-					pInfo = GC.getBuildingClassInfo(GC.getBuildingInfo(city.getProductionBuilding()).getBuildingClassType())
+					pInfo = GC.getBuildingInfo(city.getProductionBuilding())
 					if pInfo.getMaxGlobalInstances() != -1:
 						szIcon = unichr(8858)
 					elif pInfo.getMaxTeamInstances() != -1:
@@ -846,7 +845,7 @@ class CvDomesticAdvisor:
 
 		iGreatPersonRate = city.getGreatPeopleRate()
 		if iGreatPersonRate > 0:
-			iGPPLeft = self.CyPlayer.greatPeopleThreshold(False) - city.getGreatPeopleProgress()
+			iGPPLeft = self.CyPlayer.greatPeopleThresholdNonMilitary() - city.getGreatPeopleProgress()
 			return (iGPPLeft + iGreatPersonRate - 1) / iGreatPersonRate
 		return u"-"
 
@@ -1600,11 +1599,11 @@ class CvDomesticAdvisor:
 			if not uFont:
 				uFont = self.aFontList[6]
 			iX, iY = pyTT.makeTooltip(screen, xPos, yPos, szText, uFont, "Tooltip")
-			POINT = GC.getCursorPos()
+			POINT = Win32.getCursorPos()
 			self.iOffsetTT = [iX - POINT.x, iY - POINT.y]
 		else:
 			if xPos == yPos == -1:
-				POINT = GC.getCursorPos()
+				POINT = Win32.getCursorPos()
 				screen.moveItem("Tooltip", POINT.x + self.iOffsetTT[0], POINT.y + self.iOffsetTT[1], 0)
 			screen.moveToFront("Tooltip")
 			screen.show("Tooltip")
@@ -1616,7 +1615,7 @@ class CvDomesticAdvisor:
 	#||||||||||||||||||||||||||#
 	def update(self, fDelta):
 		if self.bLockedTT:
-			POINT = GC.getCursorPos()
+			POINT = Win32.getCursorPos()
 			iX = POINT.x + self.iOffsetTT[0]
 			iY = POINT.y + self.iOffsetTT[1]
 			if iX < 0: iX = 0

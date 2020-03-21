@@ -9,6 +9,15 @@ void CyGlobalContextPythonInterface3(python::class_<CyGlobalContext>& x)
 	OutputDebugString("Python Extension Module - CyGlobalContextPythonInterface3\n");
 
 	x
+		.def("multiMapsEnabled", &CyGlobalContext::multiMapsEnabled, "bool ()")
+		.def("getNumMapInfos", &CyGlobalContext::getNumMapInfos, "int ()")
+		.def("getMapInfo", &CyGlobalContext::getMapInfo, python::return_value_policy<python::reference_existing_object>(), "void (int)")
+		.def("switchMap", &CyGlobalContext::switchMap, "void (int)")
+		.def("getMapByIndex", &CyGlobalContext::getMapByIndex, python::return_value_policy<python::reference_existing_object>(), "CyMap (int)")
+		.def("updateMaps", &CyGlobalContext::updateMaps, "void ()")
+		.def("initializeMap", &CyGlobalContext::initializeMap, "void (int)")
+		.def("mapInitialized", &CyGlobalContext::mapInitialized, "bool (int)")
+
 		.def("getAttitudeInfo", &CyGlobalContext::getAttitudeInfo, python::return_value_policy<python::reference_existing_object>(), "AttitudeInfo (int id)")
 		.def("getMemoryInfo", &CyGlobalContext::getMemoryInfo, python::return_value_policy<python::reference_existing_object>(), "MemoryInfo (int id)")
 
@@ -27,24 +36,6 @@ void CyGlobalContextPythonInterface3(python::class_<CyGlobalContext>& x)
 		.def("getNumNewConceptInfos", &CyGlobalContext::getNumNewConceptInfos, "int () - NumNewConceptInfos")
 		.def("getNewConceptInfo", &CyGlobalContext::getNewConceptInfo, python::return_value_policy<python::reference_existing_object>(), "New Concept Info () - Returns info object")
 
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-		// Dale - DCM: Pedia Concepts START
-		.def("getNumDCMConceptInfos", &CyGlobalContext::getNumDCMConceptInfos, "int () - NumDCMConceptInfos")
-		.def("getDCMConceptInfo", &CyGlobalContext::getDCMConceptInfo, python::return_value_policy<python::reference_existing_object>(), "DCM Concept Info () - Returns info object")
-		// Dale - DCM: Pedia Concepts END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/*Afforess                                     11/13/09                                         */
-/************************************************************************************************/
-		.def("getNumANDConceptInfos", &CyGlobalContext::getNumANDConceptInfos, "int () - NumANDConceptInfos")
-		.def("getANDConceptInfo", &CyGlobalContext::getANDConceptInfo, python::return_value_policy<python::reference_existing_object>(), "AND Concept Info () - Returns info object")
-/************************************************************************************************/
-/* Afforess                                END                                                  */
-/************************************************************************************************/
 		.def("getNumCityTabInfos", &CyGlobalContext::getNumCityTabInfos, "int () - Returns NumCityTabInfos")
 		.def("getCityTabInfo", &CyGlobalContext::getCityTabInfo, python::return_value_policy<python::reference_existing_object>(), "CityTabInfo - () - Returns Info object")
 

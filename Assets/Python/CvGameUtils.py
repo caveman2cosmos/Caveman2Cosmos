@@ -11,6 +11,9 @@ G = GC.getGame()
 class CvGameUtils:
 
 	def __init__(self):
+		self.reset()
+
+	def reset(self):
 		# Cache
 		self.fScoreFreeMod = GC.getDefineINT("SCORE_FREE_PERCENT") / 100.0
 		self.SCORE_POPULATION_FACTOR = GC.getDefineINT("SCORE_POPULATION_FACTOR")
@@ -31,7 +34,7 @@ class CvGameUtils:
 		self.iHimejiCastle = GC.getInfoTypeForString("BUILDING_HIMEJI_CASTLE")
 		self.iHimejiCastleObsoleteTech = GC.getBuildingInfo(self.iHimejiCastle).getObsoleteTech()
 
-		self.iReplicators = GC.getInfoTypeForString("BONUS_PERSONAL_REPLICATORS")
+		self.iReplicators = GC.getInfoTypeForString("BONUS_REPLICATORS")
 		self.iRapidPrototyping = GC.getInfoTypeForString("TECH_RAPID_PROTOTYPING")
 
 	def isVictoryTest(self):
@@ -123,12 +126,11 @@ class CvGameUtils:
 		iX, iY, iBuild, iPlayer = argsList
 
 		aList = GC.getBuildInfo(iBuild).getType().split("_")
-
 		# Bonus placing builds
 		if aList[1] == "BONUS":
 			iBonus = GC.getInfoTypeForString("BONUS_" + aList[2])
 
-			if GC.getPlayer(iPlayer).getNumAvailableBonuses(iBonus) and GC.getMap().plot(iX, iY).canHaveBonus(iBonus, False):
+			if GC.getPlayer(iPlayer).getNumAvailableBonuses(iBonus):
 				return 1
 			return 0
 
@@ -368,10 +370,6 @@ class CvGameUtils:
 		return int(score)
 
 	def doHolyCity(self):
-		return False
-
-	def doHolyCityTech(self, argsList):
-		#eTeam, ePlayer, eTech, bFirst = argsList
 		return False
 
 	def doGold(self, argsList):

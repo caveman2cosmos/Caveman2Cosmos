@@ -27,7 +27,7 @@ GC = CyGlobalContext()
 # Map unit to font symbol
 g_gpUnitTypes = [
 	["UNIT_GREAT_HUNTER",		unichr(8483)],
-	["UNIT_ENGINEER",			unichr(8484)],
+	["UNIT_GREAT_ENGINEER",		unichr(8484)],
 	["UNIT_MERCHANT",			unichr(8500)],
 	["UNIT_SCIENTIST",			unichr(8501)],
 	["UNIT_ARTIST",				unichr(8502)],
@@ -36,7 +36,7 @@ g_gpUnitTypes = [
 	["UNIT_GREAT_ADMIRAL",		unichr(8530)],
 #	["UNIT_GREAT_AVIATOR",		unichr(8531)],
 	["UNIT_GREAT_DETECTIVE",	unichr(8532)],
-	["UNIT_GREAT_DOCTOR",		unichr(8852)],
+	["UNIT_DOCTOR",				unichr(8852)],
 	["UNIT_PROPHET",			unichr(8857)],
 	["UNIT_GREAT_STATESMAN",	unichr(8869)]
 ]
@@ -73,7 +73,7 @@ def getDisplayCity():
 def findNextCity():
 	CyCity = iTurns = 0
 	CyPlayer = GC.getActivePlayer()
-	iThreshold = CyPlayer.greatPeopleThreshold(False)
+	iThreshold = CyPlayer.greatPeopleThresholdNonMilitary()
 
 	CyCityX, i = CyPlayer.firstCity(False)
 	while CyCityX:
@@ -105,7 +105,7 @@ def findMaxCity():
 def getCityTurns(CyCity):
 	if CyCity:
 		CyPlayer = GC.getPlayer(CyCity.getOwner())
-		iThreshold = CyPlayer.greatPeopleThreshold(False)
+		iThreshold = CyPlayer.greatPeopleThresholdNonMilitary()
 		iRate = CyCity.getGreatPeopleRate()
 		if iRate > 0:
 			iProgress = CyCity.getGreatPeopleProgress()

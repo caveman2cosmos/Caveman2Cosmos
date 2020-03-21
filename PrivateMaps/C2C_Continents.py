@@ -8,20 +8,18 @@
 #
 
 from CvPythonExtensions import *
-import CvUtil
-import CvMapGeneratorUtil
 from CvMapGeneratorUtil import FractalWorld
 from CvMapGeneratorUtil import TerrainGenerator
 from CvMapGeneratorUtil import FeatureGenerator
-#from CvMapGeneratorUtil import BonusBalancer
+from CvMapGeneratorUtil import placeC2CBonuses
+from CvMapGeneratorUtil import BonusBalancer
 
-#balancer = BonusBalancer()
+balancer = BonusBalancer()
 
 def getDescription():
 	return "TXT_KEY_MAP_SCRIPT_CONTINENTS_DESCR"
-	
-def isAdvancedMap():
-	"This map should show up in simple mode"
+
+def isAdvancedMap(): 
 	return 0
 
 def getNumCustomMapOptions():
@@ -46,7 +44,7 @@ def getNumCustomMapOptionValues(argsList):
 		1:	2
 		}
 	return option_values[iOption]
-	
+
 def getCustomMapOptionDescAt(argsList):
 	[iOption, iSelection] = argsList
 	selection_names = {
@@ -62,7 +60,7 @@ def getCustomMapOptionDescAt(argsList):
 		}
 	translated_text = unicode(CyTranslator().getText(selection_names[iOption][iSelection], ()))
 	return translated_text
-	
+
 def getCustomMapOptionDefault(argsList):
 	[iOption] = argsList
 	option_defaults = {
@@ -72,23 +70,17 @@ def getCustomMapOptionDefault(argsList):
 	return option_defaults[iOption]
 
 def isRandomCustomMapOption(argsList):
-	[iOption] = argsList
-	option_random = {
-		0:	false,
-		1:  false
-		}
-	return option_random[iOption]
+	return False
 
 def getWrapX():
 	map = CyMap()
-	return (map.getCustomMapOption(0) == 1 or map.getCustomMapOption(0) == 2)
-	
+	return map.getCustomMapOption(0) == 1 or map.getCustomMapOption(0) == 2
+
 def getWrapY():
-	map = CyMap()
-	return (map.getCustomMapOption(0) == 2)
+	return CyMap().getCustomMapOption(0) == 2
 
 def normalizeAddExtras():
-	if (CyMap().getCustomMapOption(1) == 1):
+	if CyMap().getCustomMapOption(1) == 1:
 		balancer.normalizeAddExtras()
 	CyPythonMgr().allowDefaultImpl()	# do the rest of the usual normalizeStartingPlots stuff, don't overrride
 
@@ -97,10 +89,10 @@ def addBonusType(argsList):
 	gc = CyGlobalContext()
 	type_string = gc.getBonusInfo(iBonusType).getType()
 
-	if (CyMap().getCustomMapOption(1) == 1):
-		if (type_string in balancer.resourcesToBalance) or (type_string in balancer.resourcesToEliminate):
+	if CyMap().getCustomMapOption(1) == 1:
+		if type_string in balancer.resourcesToBalance + balancer.resourcesToEliminate:
 			return None # don't place any of this bonus randomly
-		
+
 	CyPythonMgr().allowDefaultImpl() # pretend we didn't implement this method, and let C handle this bonus in the default way
 
 def generatePlotTypes():
@@ -122,5 +114,4 @@ def addFeatures():
 	return 0
 
 def afterGeneration():
-	CvMapGeneratorUtil.placeC2CBonuses()
-	
+	placeC2CBonuses()

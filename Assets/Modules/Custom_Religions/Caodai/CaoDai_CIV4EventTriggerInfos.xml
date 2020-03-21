@@ -12,33 +12,32 @@
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_HYMNS_AND_SCULPTURES</Type>
 			<BuildingsRequired>
-				<BuildingClass>BUILDINGCLASS_CAODAI_CATHEDRAL</BuildingClass>
+				<Building>BUILDING_CAODAI_CATHEDRAL</Building>
 			</BuildingsRequired>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_WININGMONKS</Type>
 			<BuildingsRequired>
-				<BuildingClass>BUILDINGCLASS_CAODAI_MONASTERY</BuildingClass>
+				<Building>BUILDING_CAODAI_MONASTERY</Building>
 			</BuildingsRequired>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_HOLY_RITUAL</Type>
 			<BuildingsRequired>
-				<BuildingClass>BUILDINGCLASS_CAODAI_TEMPLE</BuildingClass>
+				<Building>BUILDING_CAODAI_TEMPLE</Building>
 			</BuildingsRequired>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_STAINED_GLASS</Type>
 			<BuildingsRequired>
-				<BuildingClass>BUILDINGCLASS_CAODAI_CATHEDRAL</BuildingClass>
+				<Building>BUILDING_CAODAI_CATHEDRAL</Building>
 			</BuildingsRequired>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_SECRET_KNOWLEDGE</Type>
 			<BuildingsRequired>
-				<BuildingClass>BUILDINGCLASS_CAODAI_MONASTERY</BuildingClass>
+				<Building>BUILDING_CAODAI_MONASTERY</Building>
 			</BuildingsRequired>
 		</EventTriggerInfo>
 	</EventTriggerInfos>
 </Civ4EventTriggerInfos>
-

@@ -235,10 +235,6 @@ def changedHideUnavailableBuilds(option, value):
 	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_HIDE_UNAVAILBLE_BUILDS, value)
 	CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_HIDE_UNAVAILBLE_BUILDS), int(value), 0)
 
-def changedHideObsoleteBuilds(option, value):
-	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_HIDE_OBSOLETE_BUILDS, value)
-	CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_HIDE_OBSOLETE_BUILDS), int(value), 0)
-
 def changedEventImages(option, value):
 	GC.getActivePlayer().setModderOption(ModderOptionTypes.MODDEROPTION_EVENT_IMAGES, value)
 	CyMessageControl().sendModNetMessage(MODDEROPTION_EVENT_ID, GC.getGame().getActivePlayer(), int(ModderOptionTypes.MODDEROPTION_EVENT_IMAGES), int(value), 0)
@@ -265,8 +261,8 @@ def changedAllowTerraforming(option, value):
 	CyMessageControl().sendModNetMessage(CANBUILD_EVENT_ID, GC.getGame().getActivePlayer(), GC.getInfoTypeForString("BUILD_TERRAFORM_TUNDRA"), not value, 0)
 
 def changedReforestation(option, value):
-	CyMessageControl().sendModNetMessage(CANBUILD_EVENT_ID, GC.getGame().getActivePlayer(), GC.getInfoTypeForString("BUILD_PLANT_FOREST"), not value, 0)
-	CyMessageControl().sendModNetMessage(CANBUILD_EVENT_ID, GC.getGame().getActivePlayer(), GC.getInfoTypeForString("BUILD_MAKE_JUNGLE"), not value, 0)
+	CyMessageControl().sendModNetMessage(CANBUILD_EVENT_ID, GC.getGame().getActivePlayer(), GC.getInfoTypeForString("BUILD_YOUNG_FOREST"), not value, 0)
+	CyMessageControl().sendModNetMessage(CANBUILD_EVENT_ID, GC.getGame().getActivePlayer(), GC.getInfoTypeForString("BUILD_PLANT_JUNGLE"), not value, 0)
 
 def changedSeaTunnels(option, value):
 	CyMessageControl().sendModNetMessage(CANBUILD_EVENT_ID, GC.getGame().getActivePlayer(), GC.getInfoTypeForString("BUILD_TUNNEL"), not value, 0)
@@ -315,7 +311,6 @@ def setXMLOptionsfromIniFile():
 	changedImprovedXP(ANewDawnOpt, ANewDawnOpt.isImprovedXP())
 	changedUseLandmarkNames(ANewDawnOpt, ANewDawnOpt.isUseLandmarkNames())
 	changedHideUnavailableBuilds(ANewDawnOpt, ANewDawnOpt.isHideUnavailableBuilds())
-	changedHideObsoleteBuilds(ANewDawnOpt, ANewDawnOpt.isHideObsoleteBuilds())
 	changedEventImages(ANewDawnOpt, ANewDawnOpt.isEventImages())
 	changedIgnoreDisabledBuildingAlerts(ANewDawnOpt, ANewDawnOpt.isIgnoreDisabledBuildingAlerts())
 	changedMultipleReligionSpread(ANewDawnOpt, ANewDawnOpt.isMultipleReligionSpread())

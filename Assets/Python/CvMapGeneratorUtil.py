@@ -1095,12 +1095,12 @@ class TerrainGenerator:
 		self.terrainPermafrost = self.gc.getInfoTypeForString("TERRAIN_PERMAFROST")
 		self.terrainTundra = self.gc.getInfoTypeForString("TERRAIN_TUNDRA")
 		self.terrainTaiga = self.gc.getInfoTypeForString("TERRAIN_TAIGA")
-		self.terrainRockyCold = self.gc.getInfoTypeForString("TERRAIN_ROCKY_COLD")
+		self.terrainRockyCold = self.gc.getInfoTypeForString("TERRAIN_JAGGED")
 		self.terrainRocky = self.gc.getInfoTypeForString("TERRAIN_ROCKY")
-		self.terrainRockyArid = self.gc.getInfoTypeForString("TERRAIN_ROCKY_ARID")
+		self.terrainRockyArid = self.gc.getInfoTypeForString("TERRAIN_BADLAND")
 		self.terrainDesert = self.gc.getInfoTypeForString("TERRAIN_DESERT")
 		self.terrainPlains = self.gc.getInfoTypeForString("TERRAIN_PLAINS")
-		self.terrainGrass = self.gc.getInfoTypeForString("TERRAIN_GRASS")
+		self.terrainGrass = self.gc.getInfoTypeForString("TERRAIN_GRASSLAND")
 		self.terrainMarsh = self.gc.getInfoTypeForString("TERRAIN_MARSH")
 		self.terrainSaltFlats = self.gc.getInfoTypeForString("TERRAIN_SALT_FLATS")
 		self.terrainDunes = self.gc.getInfoTypeForString("TERRAIN_DUNES")
@@ -1363,29 +1363,15 @@ def findStartingPlot(playerID, validFn = None):
 	while (True):
 		iBestValue = 0
 		pBestPlot = None
-
 		for iX in range(map.getGridWidth()):
 			for iY in range(map.getGridHeight()):
 				if validFn != None and not validFn(playerID, iX, iY):
 					continue
 				pLoopPlot = map.plot(iX, iY)
-
 				val = pLoopPlot.getFoundValue(playerID)
-
 				if val > iBestValue:
-
-					valid = True
-
-					for iI in range(gc.getMAX_PC_PLAYERS()):
-						if (gc.getPlayer(iI).isAlive()):
-							if (iI != playerID):
-								if gc.getPlayer(iI).startingPlotWithinRange(pLoopPlot, playerID, iRange, iPass):
-									valid = False
-									break
-
-					if valid:
-							iBestValue = val
-							pBestPlot = pLoopPlot
+					iBestValue = val
+					pBestPlot = pLoopPlot
 
 		if pBestPlot != None:
 			return map.plotNum(pBestPlot.getX(), pBestPlot.getY())
@@ -1421,7 +1407,7 @@ class BonusBalancer:
 		self.map = CyMap()
 
 		# Rise of Mankind mod start
-		self.resourcesToBalance = ('BONUS_BAUXITE', 'BONUS_COAL', 'BONUS_COPPER', 'BONUS_HORSE', 'BONUS_IRON', 'BONUS_OIL', 'BONUS_URANIUM', 'BONUS_SULPHUR', 'BONUS_RUBBER')
+		self.resourcesToBalance = ('BONUS_BAUXITE_ORE', 'BONUS_COAL', 'BONUS_COPPER_ORE', 'BONUS_HORSE', 'BONUS_IRON_ORE', 'BONUS_OIL', 'BONUS_URANIUM', 'BONUS_SULPHUR', 'BONUS_RUBBER')
 		# Rise of Mankind mod end
 
 		self.resourcesToEliminate = ('BONUS_MARBLE', )
@@ -1647,7 +1633,7 @@ def c2CMapReport(sWhen):
 	# Display actual Mod-Resources
 	# countResource.sort()
 	boni = 0
-	dontReportBonusClass = [gc.getInfoTypeForString("BONUSCLASS_CULTURE"), gc.getInfoTypeForString("BONUSCLASS_MANUFACTURED"), gc.getInfoTypeForString("BONUSCLASS_RELIGION")]
+	dontReportBonusClass = [gc.getInfoTypeForString("BONUSCLASS_CULTURE"), gc.getInfoTypeForString("BONUSCLASS_MANUFACTURED")]
 	while boni < gc.getNumBonusInfos():
 		type_string = gc.getBonusInfo(boni).getType()
 		class_int = gc.getBonusInfo(boni).getBonusClassType()
@@ -1720,7 +1706,7 @@ def placeC2CBonuses():
 	iWestRightEdge = iMapWidth/3
 	iCentralRightEdge = iMapWidth - iWestRightEdge
 
-	iSeaLion = gc.getInfoTypeForString("BONUS_SEA_LIONS")
+	iSeaLion = gc.getInfoTypeForString("BONUS_SEA_LION_AND_SEAL")
 	iWalrus = gc.getInfoTypeForString("BONUS_WALRUS")
 	iKangaroo = gc.getInfoTypeForString("BONUS_KANGAROO")
 	iLlama = gc.getInfoTypeForString("BONUS_LLAMA")
@@ -1728,8 +1714,8 @@ def placeC2CBonuses():
 	iBison = gc.getInfoTypeForString("BONUS_BISON")
 	iPoultry = gc.getInfoTypeForString("BONUS_POULTRY")
 	iRabbit = gc.getInfoTypeForString("BONUS_RABBIT")
-	iGuineaPig = gc.getInfoTypeForString("BONUS_GUINEA_PIG")
-	aNotInNewWorld =[gc.getInfoTypeForString("BONUS_HORSE"), gc.getInfoTypeForString("BONUS_DONKEY"), gc.getInfoTypeForString("BONUS_CAMEL"), gc.getInfoTypeForString("BONUS_COW"), gc.getInfoTypeForString("BONUS_ELEPHANT")]
+	iGuineaPig = gc.getInfoTypeForString("BONUS_GUINEA_PIGS")
+	aNotInNewWorld =[gc.getInfoTypeForString("BONUS_HORSE"), gc.getInfoTypeForString("BONUS_DONKEY"), gc.getInfoTypeForString("BONUS_CAMEL"), gc.getInfoTypeForString("BONUS_COW"), gc.getInfoTypeForString("BONUS_ELEPHANTS")]
 
 	terrainCoast = gc.getInfoTypeForString("TERRAIN_COAST")
 	terrainSea = gc.getInfoTypeForString("TERRAIN_SEA")
@@ -1756,7 +1742,7 @@ def placeC2CBonuses():
 	featureKelp = gc.getInfoTypeForString("FEATURE_KELP")
 	#featureIce = gc.getInfoTypeForString("FEATURE_ICE")
 	featureMangrove = gc.getInfoTypeForString("FEATURE_MANGROVE")
-	featureCactus = gc.getInfoTypeForString("FEATURE_KAKTUS")
+	featureCactus = gc.getInfoTypeForString("FEATURE_CACTUS")
 
 	improvementGoodyIsland = gc.getInfoTypeForString("IMPROVEMENT_GOODY_ISLAND")
 
@@ -1868,7 +1854,7 @@ def placeC2CBonuses():
 				iPlot.setBonusType(iKangaroo)
 				iResource = iKangaroo
 		# Elephants
-		if (iResource == gc.getInfoTypeForString("BONUS_ELEPHANT")) and ( (iNS_Hemisphere == cSOUTH and not iEW_Hemisphere == cCENTRAL) or (iNS_Hemisphere == cNORTH and not iEW_Hemisphere == cEAST)):
+		if (iResource == gc.getInfoTypeForString("BONUS_ELEPHANTS")) and ( (iNS_Hemisphere == cSOUTH and not iEW_Hemisphere == cCENTRAL) or (iNS_Hemisphere == cNORTH and not iEW_Hemisphere == cEAST)):
 			if isSeaCoastalLand(iPlot) :
 				iPlot.setBonusType(iSeaLion)
 				iResource = iSeaLion

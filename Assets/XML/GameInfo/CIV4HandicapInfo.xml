@@ -1,11 +1,8 @@
 <?xml version="1.0"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- ReModified by StrategyOnly -->
-<!-- -->
-<!-- Handicap Infos -->
-<!-- Revolution Mod only changed settings relating to creation of barbarian cities and units -->
+<!-- 
+	iBarbarianCityCreationProb:
+		Base percent chance per turn for barbarian city spawn on normal gamespeed, on eternity a value of 1 means 0.1% chance per turn.:
+ -->
 <Civ4HandicapInfo xmlns="x-schema:../Schema/C2C_CIV4GameInfoSchema.xml">
 	<HandicapInfos>
 		<HandicapInfo>
@@ -19,7 +16,6 @@
 			<iTrainPercent>40</iTrainPercent>
 			<iConstructPercent>40</iConstructPercent>
 			<iResearchPercent>40</iResearchPercent>
-			<iMaxNumCitiesMaintenance>40</iMaxNumCitiesMaintenance>
 			<iMaxColonyMaintenance>80</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>40</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>40</iNumCitiesMaintenancePercent>
@@ -62,14 +58,13 @@
 			<iTechTradeKnownModifier>-99</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
 			<iStartingLocPercent>10</iStartingLocPercent>
-			<iAnimalAttackProb>50</iAnimalAttackProb>
+			<iAnimalAttackProb>40</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>8</iFreeWinsVsBarbs>
 			<iUnownedTilesPerBarbarianUnit>60</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>180</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>60</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>42</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag --> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>40</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>1</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>4</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>1</iBarbarianDefenders>
 			<iAnimalBonus>-60</iAnimalBonus>
 			<iBarbarianBonus>-60</iBarbarianBonus>
@@ -264,20 +259,6 @@
 				<GoodyType>GOODY_PIONEER</GoodyType>
 				<GoodyType>GOODY_AIRSETTLER</GoodyType>
 			</Goodies>
-			<FreeTechs>
-				<FreeTech>
-					<TechType>TECH_NOMADIC_LIFESTYLE</TechType>
-					<bFreeTech>1</bFreeTech>
-				</FreeTech>
-				<FreeTech>
-					<TechType>TECH_GATHERING</TechType>
-					<bFreeTech>1</bFreeTech>
-				</FreeTech>
-				<FreeTech>
-					<TechType>TECH_LANGUAGE</TechType>
-					<bFreeTech>1</bFreeTech>
-				</FreeTech>
-			</FreeTechs>
 		</HandicapInfo>
 		<HandicapInfo>
 			<Type>HANDICAP_CHIEFTAIN</Type>
@@ -290,7 +271,6 @@
 			<iTrainPercent>60</iTrainPercent>
 			<iConstructPercent>60</iConstructPercent>
 			<iResearchPercent>60</iResearchPercent>
-			<iMaxNumCitiesMaintenance>60</iMaxNumCitiesMaintenance>
 			<iMaxColonyMaintenance>120</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>60</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>60</iNumCitiesMaintenancePercent>
@@ -339,14 +319,13 @@
 			<iTechTradeKnownModifier>-66</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
 			<iStartingLocPercent>20</iStartingLocPercent>
-			<iAnimalAttackProb>55</iAnimalAttackProb>
+			<iAnimalAttackProb>45</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>7</iFreeWinsVsBarbs>
 			<iUnownedTilesPerBarbarianUnit>55</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>165</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>55</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>38</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>39</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>1</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>6</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>1</iBarbarianDefenders>
 			<iAnimalBonus>-40</iAnimalBonus>
 			<iBarbarianBonus>-40</iBarbarianBonus>
@@ -574,16 +553,6 @@
 				<GoodyType>GOODY_PIONEER</GoodyType>
 				<GoodyType>GOODY_AIRSETTLER</GoodyType>
 			</Goodies>
-			<FreeTechs>
-				<FreeTech>
-					<TechType>TECH_NOMADIC_LIFESTYLE</TechType>
-					<bFreeTech>1</bFreeTech>
-				</FreeTech>
-				<FreeTech>
-					<TechType>TECH_GATHERING</TechType>
-					<bFreeTech>1</bFreeTech>
-				</FreeTech>
-			</FreeTechs>
 		</HandicapInfo>
 		<HandicapInfo>
 			<Type>HANDICAP_WARLORD</Type>
@@ -596,7 +565,6 @@
 			<iTrainPercent>80</iTrainPercent>
 			<iConstructPercent>80</iConstructPercent>
 			<iResearchPercent>80</iResearchPercent>
-			<iMaxNumCitiesMaintenance>80</iMaxNumCitiesMaintenance>
 			<iMaxColonyMaintenance>160</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>80</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>80</iNumCitiesMaintenancePercent>
@@ -639,14 +607,13 @@
 			<iTechTradeKnownModifier>-33</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
 			<iStartingLocPercent>30</iStartingLocPercent>
-			<iAnimalAttackProb>60</iAnimalAttackProb>
+			<iAnimalAttackProb>50</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>6</iFreeWinsVsBarbs>
 			<iUnownedTilesPerBarbarianUnit>50</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>150</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>50</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>34</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>38</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>2</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>8</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>2</iBarbarianDefenders>
 			<iAnimalBonus>-20</iAnimalBonus>
 			<iBarbarianBonus>-20</iBarbarianBonus>
@@ -859,12 +826,6 @@
 				<GoodyType>GOODY_PIONEER</GoodyType>
 				<GoodyType>GOODY_AIRSETTLER</GoodyType>
 			</Goodies>
-			<FreeTechs>
-				<FreeTech>
-					<TechType>TECH_NOMADIC_LIFESTYLE</TechType>
-					<bFreeTech>1</bFreeTech>
-				</FreeTech>
-			</FreeTechs>
 		</HandicapInfo>
 		<HandicapInfo>
 			<Type>HANDICAP_NOBLE</Type>
@@ -877,7 +838,6 @@
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
 			<iResearchPercent>100</iResearchPercent>
-			<iMaxNumCitiesMaintenance>100</iMaxNumCitiesMaintenance>
 			<iMaxColonyMaintenance>200</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>100</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>100</iNumCitiesMaintenancePercent>
@@ -922,14 +882,13 @@
 			</PropertyManipulators>
 			<!-- These only count for human players -->
 			<iStartingLocPercent>40</iStartingLocPercent>
-			<iAnimalAttackProb>65</iAnimalAttackProb>
+			<iAnimalAttackProb>55</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>5</iFreeWinsVsBarbs>
 			<iUnownedTilesPerBarbarianUnit>45</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>135</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>45</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>30</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>37</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>2</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>10</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>3</iBarbarianDefenders>
 			<iAIDeclareWarProb>65</iAIDeclareWarProb>
 			<iAIGrowthPercent>100</iAIGrowthPercent>
@@ -1185,7 +1144,6 @@
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
 			<iResearchPercent>100</iResearchPercent>
-			<iMaxNumCitiesMaintenance>120</iMaxNumCitiesMaintenance>
 			<iMaxColonyMaintenance>240</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>120</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>120</iNumCitiesMaintenancePercent>
@@ -1228,14 +1186,13 @@
 			<iTechTradeKnownModifier>10</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
 			<iStartingLocPercent>50</iStartingLocPercent>
-			<iAnimalAttackProb>70</iAnimalAttackProb>
+			<iAnimalAttackProb>60</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>4</iFreeWinsVsBarbs>
 			<iUnownedTilesPerBarbarianUnit>40</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>120</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>40</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>26</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>36</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>3</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>12</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>4</iBarbarianDefenders>
 			<iAIAnimalBonus>-10</iAIAnimalBonus>
 			<iAIBarbarianBonus>-10</iAIBarbarianBonus>
@@ -1482,12 +1439,6 @@
 				<GoodyType>GOODY_TECH</GoodyType>
 				<GoodyType>GOODY_TECH</GoodyType>
 			</Goodies>
-			<AIFreeTechs>
-				<FreeTech>
-					<TechType>TECH_NOMADIC_LIFESTYLE</TechType>
-					<bFreeTech>1</bFreeTech>
-				</FreeTech>
-			</AIFreeTechs>
 		</HandicapInfo>
 		<HandicapInfo>
 			<Type>HANDICAP_MONARCH</Type>
@@ -1500,7 +1451,6 @@
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
 			<iResearchPercent>100</iResearchPercent>
-			<iMaxNumCitiesMaintenance>140</iMaxNumCitiesMaintenance>
 			<iMaxColonyMaintenance>280</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>140</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>140</iNumCitiesMaintenancePercent>
@@ -1549,14 +1499,13 @@
 			<iTechTradeKnownModifier>20</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
 			<iStartingLocPercent>60</iStartingLocPercent>
-			<iAnimalAttackProb>75</iAnimalAttackProb>
+			<iAnimalAttackProb>65</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>3</iFreeWinsVsBarbs>
 			<iUnownedTilesPerBarbarianUnit>35</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>105</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>35</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>22</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>35</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>3</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>14</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>5</iBarbarianDefenders>
 			<iAIAnimalBonus>-20</iAIAnimalBonus>
 			<iAIBarbarianBonus>-20</iAIBarbarianBonus>
@@ -1819,16 +1768,6 @@
 				<GoodyType>GOODY_TECH</GoodyType>
 				<GoodyType>GOODY_TECH</GoodyType>
 			</Goodies>
-			<AIFreeTechs>
-				<FreeTech>
-					<TechType>TECH_NOMADIC_LIFESTYLE</TechType>
-					<bFreeTech>1</bFreeTech>
-				</FreeTech>
-				<FreeTech>
-					<TechType>TECH_GATHERING</TechType>
-					<bFreeTech>1</bFreeTech>
-				</FreeTech>
-			</AIFreeTechs>
 		</HandicapInfo>
 		<HandicapInfo>
 			<Type>HANDICAP_EMPEROR</Type>
@@ -1841,7 +1780,6 @@
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
 			<iResearchPercent>100</iResearchPercent>
-			<iMaxNumCitiesMaintenance>160</iMaxNumCitiesMaintenance>
 			<iMaxColonyMaintenance>320</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>160</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>160</iNumCitiesMaintenancePercent>
@@ -1884,14 +1822,13 @@
 			<iTechTradeKnownModifier>30</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
 			<iStartingLocPercent>70</iStartingLocPercent>
-			<iAnimalAttackProb>80</iAnimalAttackProb>
+			<iAnimalAttackProb>70</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>2</iFreeWinsVsBarbs>
 			<iUnownedTilesPerBarbarianUnit>30</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>90</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>30</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>18</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>34</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>4</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>16</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>6</iBarbarianDefenders>
 			<iAIAnimalBonus>-30</iAIAnimalBonus>
 			<iAIBarbarianBonus>-30</iAIBarbarianBonus>
@@ -2180,20 +2117,6 @@
 				<GoodyType>GOODY_TECH</GoodyType>
 				<GoodyType>GOODY_TECH</GoodyType>
 			</Goodies>
-			<AIFreeTechs>
-				<FreeTech>
-					<TechType>TECH_NOMADIC_LIFESTYLE</TechType>
-					<bFreeTech>1</bFreeTech>
-				</FreeTech>
-				<FreeTech>
-					<TechType>TECH_GATHERING</TechType>
-					<bFreeTech>1</bFreeTech>
-				</FreeTech>
-				<FreeTech>
-					<TechType>TECH_LANGUAGE</TechType>
-					<bFreeTech>1</bFreeTech>
-				</FreeTech>
-			</AIFreeTechs>
 		</HandicapInfo>
 		<HandicapInfo>
 			<Type>HANDICAP_IMMORTAL</Type>
@@ -2206,7 +2129,6 @@
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
 			<iResearchPercent>100</iResearchPercent>
-			<iMaxNumCitiesMaintenance>180</iMaxNumCitiesMaintenance>
 			<iMaxColonyMaintenance>360</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>180</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>180</iNumCitiesMaintenancePercent>
@@ -2255,14 +2177,13 @@
 			<iTechTradeKnownModifier>40</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
 			<iStartingLocPercent>80</iStartingLocPercent>
-			<iAnimalAttackProb>85</iAnimalAttackProb>
+			<iAnimalAttackProb>75</iAnimalAttackProb>
 			<iFreeWinsVsBarbs>1</iFreeWinsVsBarbs>
 			<iUnownedTilesPerBarbarianUnit>25</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>75</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>25</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>14</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>33</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>4</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>18</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>7</iBarbarianDefenders>
 			<iAIAnimalBonus>-40</iAIAnimalBonus>
 			<iAIBarbarianBonus>-40</iAIBarbarianBonus>
@@ -2551,24 +2472,6 @@
 				<GoodyType>GOODY_TECH</GoodyType>
 				<GoodyType>GOODY_TECH</GoodyType>
 			</Goodies>
-			<AIFreeTechs>
-				<FreeTech>
-					<TechType>TECH_NOMADIC_LIFESTYLE</TechType>
-					<bFreeTech>1</bFreeTech>
-				</FreeTech>
-				<FreeTech>
-					<TechType>TECH_GATHERING</TechType>
-					<bFreeTech>1</bFreeTech>
-				</FreeTech>
-				<FreeTech>
-					<TechType>TECH_LANGUAGE</TechType>
-					<bFreeTech>1</bFreeTech>
-				</FreeTech>
-				<FreeTech>
-					<TechType>TECH_DECEPTION</TechType>
-					<bFreeTech>1</bFreeTech>
-				</FreeTech>
-			</AIFreeTechs>
 		</HandicapInfo>
 		<HandicapInfo>
 			<Type>HANDICAP_DEITY</Type>
@@ -2579,7 +2482,6 @@
 			<iTrainPercent>100</iTrainPercent>
 			<iConstructPercent>100</iConstructPercent>
 			<iResearchPercent>100</iResearchPercent>
-			<iMaxNumCitiesMaintenance>200</iMaxNumCitiesMaintenance>
 			<iMaxColonyMaintenance>400</iMaxColonyMaintenance>
 			<iDistanceMaintenancePercent>200</iDistanceMaintenancePercent>
 			<iNumCitiesMaintenancePercent>200</iNumCitiesMaintenancePercent>
@@ -2620,20 +2522,19 @@
 			<iTechTradeKnownModifier>50</iTechTradeKnownModifier>
 			<!-- These only count for human players -->
 			<iStartingLocPercent>90</iStartingLocPercent>
-			<iAnimalAttackProb>90</iAnimalAttackProb>
+			<iAnimalAttackProb>80</iAnimalAttackProb>
 			<iUnownedTilesPerBarbarianUnit>20</iUnownedTilesPerBarbarianUnit>
 			<iUnownedWaterTilesPerBarbarianUnit>60</iUnownedWaterTilesPerBarbarianUnit>
 			<iUnownedTilesPerBarbarianCity>20</iUnownedTilesPerBarbarianCity>
-			<iBarbarianCreationTurnsElapsed>10</iBarbarianCreationTurnsElapsed> <!-- Unused in dll code, dead tag -->
 			<iBarbarianCityCreationTurnsElapsed>32</iBarbarianCityCreationTurnsElapsed>
-			<iBarbarianCityCreationProb>5</iBarbarianCityCreationProb>
+			<iBarbarianCityCreationProb>20</iBarbarianCityCreationProb>
 			<iBarbarianDefenders>8</iBarbarianDefenders>
 			<iAIAnimalBonus>-50</iAIAnimalBonus>
 			<iAIBarbarianBonus>-50</iAIBarbarianBonus>
-			<iAIStartingUnitMultiplier>1</iAIStartingUnitMultiplier>
-			<iAIStartingDefenseUnits>10</iAIStartingDefenseUnits>
-			<iAIStartingExploreUnits>3</iAIStartingExploreUnits>
-			<iAIStartingWorkerUnits>2</iAIStartingWorkerUnits>
+			<iAIStartingUnitMultiplier>2</iAIStartingUnitMultiplier>
+			<iAIStartingDefenseUnits>5</iAIStartingDefenseUnits>
+			<iAIStartingExploreUnits>2</iAIStartingExploreUnits>
+			<iAIStartingWorkerUnits>1</iAIStartingWorkerUnits>
 			<iAIDeclareWarProb>90</iAIDeclareWarProb>
 			<iAIWorkRateModifier>50</iAIWorkRateModifier>
 			<iAIGrowthPercent>50</iAIGrowthPercent>
@@ -2941,28 +2842,368 @@
 				<GoodyType>GOODY_TECH</GoodyType>
 				<GoodyType>GOODY_TECH</GoodyType>
 			</Goodies>
-			<AIFreeTechs>
-				<FreeTech>
-					<TechType>TECH_NOMADIC_LIFESTYLE</TechType>
-					<bFreeTech>1</bFreeTech>
-				</FreeTech>
-				<FreeTech>
-					<TechType>TECH_GATHERING</TechType>
-					<bFreeTech>1</bFreeTech>
-				</FreeTech>
-				<FreeTech>
-					<TechType>TECH_LANGUAGE</TechType>
-					<bFreeTech>1</bFreeTech>
-				</FreeTech>
-				<FreeTech>
-					<TechType>TECH_DECEPTION</TechType>
-					<bFreeTech>1</bFreeTech>
-				</FreeTech>
-				<FreeTech>
-					<TechType>TECH_SCAVENGING</TechType>
-					<bFreeTech>1</bFreeTech>
-				</FreeTech>
-			</AIFreeTechs>
+		</HandicapInfo>
+		<HandicapInfo>
+			<Type>HANDICAP_NIGHTMARE</Type>
+			<Description>TXT_KEY_HANDICAP_NIGHTMARE</Description>
+			<Help>TXT_KEY_HANDICAP_NIGHTMARE_HELP</Help>
+			<iAdvancedStartPointsMod>100</iAdvancedStartPointsMod>
+			<iUnitCostPercent>240</iUnitCostPercent>
+			<iTrainPercent>100</iTrainPercent>
+			<iConstructPercent>100</iConstructPercent>
+			<iResearchPercent>100</iResearchPercent>
+			<iMaxColonyMaintenance>480</iMaxColonyMaintenance>
+			<iDistanceMaintenancePercent>240</iDistanceMaintenancePercent>
+			<iNumCitiesMaintenancePercent>240</iNumCitiesMaintenancePercent>
+			<iColonyMaintenancePercent>240</iColonyMaintenancePercent>
+			<iCorporationMaintenancePercent>240</iCorporationMaintenancePercent>
+			<iCivicUpkeepPercent>240</iCivicUpkeepPercent>
+			<iInflationPercent>170</iInflationPercent>
+			<iRevolutionIndexPercent>170</iRevolutionIndexPercent>
+			<iHealthBonus>-2</iHealthBonus>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>
+						<Mult>
+							<AttributeType>ATTRIBUTE_POPULATION</AttributeType>
+							<Constant>6</Constant>
+						</Mult>
+					</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>
+						<Mult>
+							<AttributeType>ATTRIBUTE_POPULATION</AttributeType>
+							<Constant>-5</Constant>
+						</Mult>
+					</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+			<!-- AI behaviour towards the player with this difficulty -->
+			<iAttitudeChange>-4</iAttitudeChange>
+			<iNoTechTradeModifier>-70</iNoTechTradeModifier>
+			<iTechTradeKnownModifier>70</iTechTradeKnownModifier>
+			<!-- These only count for human players -->
+			<iStartingLocPercent>100</iStartingLocPercent>
+			<iAnimalAttackProb>90</iAnimalAttackProb>
+			<iUnownedTilesPerBarbarianUnit>10</iUnownedTilesPerBarbarianUnit>
+			<iUnownedWaterTilesPerBarbarianUnit>30</iUnownedWaterTilesPerBarbarianUnit>
+			<iUnownedTilesPerBarbarianCity>10</iUnownedTilesPerBarbarianCity>
+			<iBarbarianCityCreationTurnsElapsed>30</iBarbarianCityCreationTurnsElapsed>
+			<iBarbarianCityCreationProb>24</iBarbarianCityCreationProb>
+			<iBarbarianDefenders>10</iBarbarianDefenders>
+			<iAIAnimalBonus>-70</iAIAnimalBonus>
+			<iAIBarbarianBonus>-70</iAIBarbarianBonus>
+			<iAIStartingUnitMultiplier>2</iAIStartingUnitMultiplier>
+			<iAIStartingDefenseUnits>7</iAIStartingDefenseUnits>
+			<iAIStartingExploreUnits>3</iAIStartingExploreUnits>
+			<iAIStartingWorkerUnits>2</iAIStartingWorkerUnits>
+			<iAIDeclareWarProb>100</iAIDeclareWarProb>
+			<iAIWorkRateModifier>70</iAIWorkRateModifier>
+			<iAIGrowthPercent>30</iAIGrowthPercent>
+			<iAITrainPercent>30</iAITrainPercent>
+			<iAIWorldTrainPercent>30</iAIWorldTrainPercent>
+			<iAIConstructPercent>44</iAIConstructPercent>
+			<iAIWorldConstructPercent>44</iAIWorldConstructPercent>
+			<iAICreatePercent>44</iAICreatePercent>
+			<iAIWorldCreatePercent>44</iAIWorldCreatePercent>
+			<iAIResearchPercent>72</iAIResearchPercent>
+			<iAICivicUpkeepPercent>30</iAICivicUpkeepPercent>
+			<iAIUnitCostPercent>30</iAIUnitCostPercent>
+			<iAIUnitSupplyPercent>30</iAIUnitSupplyPercent>
+			<iAIUnitUpgradePercent>30</iAIUnitUpgradePercent>
+			<iAIInflationPercent>30</iAIInflationPercent>
+			<iAIWarWearinessPercent>30</iAIWarWearinessPercent>
+			<iAIPerEraModifier>-5</iAIPerEraModifier>
+			<iAIAdvancedStartPercent>240</iAIAdvancedStartPercent>
+			<Goodies>
+				<!-- Weak Barbs -->
+				<GoodyType>GOODY_BARBARIANS_WEAK</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_ANCIENT_WEAK</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_CLASSICAL_WEAK</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_MEDIEVAL_WEAK</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_RENAISSANCE_WEAK</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_INDUSTRIAL_WEAK</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_MODERN_WEAK</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_INFORMATION_WEAK</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_NANOTECH_WEAK</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_WEAK</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_ANCIENT_WEAK</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_WEAK</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_WEAK</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_WEAK</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_WEAK</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_WEAK</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_WEAK</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_WEAK</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_WEAK</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_ANCIENT_WEAK</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_CLASSICAL_WEAK</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_MEDIEVAL_WEAK</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_RENAISSANCE_WEAK</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_INDUSTRIAL_WEAK</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_MODERN_WEAK</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_INFORMATION_WEAK</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_NANOTECH_WEAK</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_WEAK</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_ANCIENT_WEAK</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_WEAK</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_WEAK</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_WEAK</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_WEAK</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_WEAK</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_WEAK</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_WEAK</GoodyType>
+				<!-- Criminals -->
+				<GoodyType>GOODY_CRIMINAL</GoodyType>
+				<GoodyType>GOODY_ANCIENT_CRIMINAL</GoodyType>
+				<GoodyType>GOODY_CLASSICAL_CRIMINAL</GoodyType>
+				<GoodyType>GOODY_MEDIEVAL_CRIMINAL</GoodyType>
+				<GoodyType>GOODY_RENAISSANCE_CRIMINAL</GoodyType>
+				<GoodyType>GOODY_INDUSTRIAL_CRIMINAL</GoodyType>
+				<GoodyType>GOODY_MODERN_CRIMINAL</GoodyType>
+				<GoodyType>GOODY_CRIMINAL</GoodyType>
+				<GoodyType>GOODY_ANCIENT_CRIMINAL</GoodyType>
+				<GoodyType>GOODY_CLASSICAL_CRIMINAL</GoodyType>
+				<GoodyType>GOODY_MEDIEVAL_CRIMINAL</GoodyType>
+				<GoodyType>GOODY_RENAISSANCE_CRIMINAL</GoodyType>
+				<GoodyType>GOODY_INDUSTRIAL_CRIMINAL</GoodyType>
+				<GoodyType>GOODY_MODERN_CRIMINAL</GoodyType>
+				<GoodyType>GOODY_CRIMINAL</GoodyType>
+				<GoodyType>GOODY_ANCIENT_CRIMINAL</GoodyType>
+				<GoodyType>GOODY_CLASSICAL_CRIMINAL</GoodyType>
+				<GoodyType>GOODY_MEDIEVAL_CRIMINAL</GoodyType>
+				<GoodyType>GOODY_RENAISSANCE_CRIMINAL</GoodyType>
+				<GoodyType>GOODY_INDUSTRIAL_CRIMINAL</GoodyType>
+				<GoodyType>GOODY_MODERN_CRIMINAL</GoodyType>
+				<GoodyType>GOODY_CRIMINAL</GoodyType>
+				<GoodyType>GOODY_ANCIENT_CRIMINAL</GoodyType>
+				<GoodyType>GOODY_CLASSICAL_CRIMINAL</GoodyType>
+				<GoodyType>GOODY_MEDIEVAL_CRIMINAL</GoodyType>
+				<GoodyType>GOODY_RENAISSANCE_CRIMINAL</GoodyType>
+				<GoodyType>GOODY_INDUSTRIAL_CRIMINAL</GoodyType>
+				<GoodyType>GOODY_MODERN_CRIMINAL</GoodyType>
+				<GoodyType>GOODY_CRIMINAL</GoodyType>
+				<GoodyType>GOODY_ANCIENT_CRIMINAL</GoodyType>
+				<GoodyType>GOODY_CLASSICAL_CRIMINAL</GoodyType>
+				<GoodyType>GOODY_MEDIEVAL_CRIMINAL</GoodyType>
+				<GoodyType>GOODY_RENAISSANCE_CRIMINAL</GoodyType>
+				<GoodyType>GOODY_INDUSTRIAL_CRIMINAL</GoodyType>
+				<GoodyType>GOODY_MODERN_CRIMINAL</GoodyType>
+				<!-- Strong Barbs -->
+				<GoodyType>GOODY_BARBARIANS_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_ANCIENT_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_CLASSICAL_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_MODERN_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_INFORMATION_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_NANOTECH_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_ANCIENT_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_ANCIENT_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_CLASSICAL_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_MODERN_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_INFORMATION_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_NANOTECH_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_ANCIENT_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_ANCIENT_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_CLASSICAL_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_MODERN_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_INFORMATION_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_NANOTECH_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_ANCIENT_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_ANCIENT_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_CLASSICAL_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_MODERN_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_INFORMATION_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_NANOTECH_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_ANCIENT_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_ANCIENT_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_CLASSICAL_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_MODERN_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_INFORMATION_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_NANOTECH_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_ANCIENT_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_ANCIENT_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_CLASSICAL_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_MODERN_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_INFORMATION_STRONG</GoodyType>
+				<GoodyType>GOODY_BARBARIANS_NANOTECH_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_ANCIENT_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_CLASSICAL_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_MEDIEVAL_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_RENAISSANCE_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_INDUSTRIAL_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_MODERN_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_INFORMATION_STRONG</GoodyType>
+				<GoodyType>GOODY_NAVAL_BARBARIANS_NANOTECH_STRONG</GoodyType>
+				<!-- Map -->
+				<GoodyType>GOODY_MAP</GoodyType>
+				<GoodyType>GOODY_MAP</GoodyType>
+				<GoodyType>GOODY_MAP</GoodyType>
+				<!-- Healing -->
+				<GoodyType>GOODY_HEALING</GoodyType>
+				<!-- Healer -->
+				<GoodyType>GOODY_WISE_WOMAN</GoodyType>
+				<GoodyType>GOODY_HEALER</GoodyType>
+				<GoodyType>GOODY_APOTHECARY</GoodyType>
+				<GoodyType>GOODY_SURGEON</GoodyType>
+				<GoodyType>GOODY_MEDIC</GoodyType>
+				<GoodyType>GOODY_AMBULANCE_II</GoodyType>
+				<GoodyType>GOODY_MEDEVAC_DROPSHIP</GoodyType>
+				<!-- Experience -->
+				<GoodyType>GOODY_EXPERIENCE</GoodyType>
+				<GoodyType>GOODY_ANCIENT_EXPERIENCE</GoodyType>
+				<GoodyType>GOODY_CLASSICAL_EXPERIENCE</GoodyType>
+				<GoodyType>GOODY_MEDIEVAL_EXPERIENCE</GoodyType>
+				<GoodyType>GOODY_RENAISSANCE_EXPERIENCE</GoodyType>
+				<GoodyType>GOODY_INDUSTRIAL_EXPERIENCE</GoodyType>
+				<GoodyType>GOODY_MODERN_EXPERIENCE</GoodyType>
+				<GoodyType>GOODY_INFORMATION_EXPERIENCE</GoodyType>
+				<GoodyType>GOODY_NANOTECH_EXPERIENCE</GoodyType>
+				<!-- Warrior -->
+				<GoodyType>GOODY_WARRIOR</GoodyType>
+				<GoodyType>GOODY_STONE_AGE_SPEARMAN</GoodyType>
+				<GoodyType>GOODY_STONE_AGE_AXEMAN</GoodyType>
+				<GoodyType>GOODY_SPEARMAN</GoodyType>
+				<GoodyType>GOODY_AXEMAN</GoodyType>
+				<GoodyType>GOODY_SWORDSMAN</GoodyType>
+				<GoodyType>GOODY_PIKEMAN</GoodyType>
+				<GoodyType>GOODY_MACEMAN</GoodyType>
+				<GoodyType>GOODY_HEAVY_SWORDSMAN</GoodyType>
+				<GoodyType>GOODY_HEAVY_PIKEMAN</GoodyType>
+				<GoodyType>GOODY_ARQUEBUSIER</GoodyType>
+				<GoodyType>GOODY_RIFLEMAN</GoodyType>
+				<GoodyType>GOODY_INFANTRY</GoodyType>
+				<GoodyType>GOODY_MODERN_INFANTRY</GoodyType>
+				<GoodyType>GOODY_TESLA_INFANTRY</GoodyType>
+				<GoodyType>GOODY_STONE_THROWER</GoodyType>
+				<GoodyType>GOODY_ARCHER</GoodyType>
+				<GoodyType>GOODY_COMPOSITE_BOWMAN</GoodyType>
+				<GoodyType>GOODY_LONGBOWMAN</GoodyType>
+				<!-- Low Gold -->
+				<GoodyType>GOODY_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_ANCIENT_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_CLASSICAL_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_MEDIEVAL_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_RENAISSANCE_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_INDUSTRIAL_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_MODERN_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_INFORMATION_LOW_GOLD</GoodyType>
+				<GoodyType>GOODY_NANOTECH_LOW_GOLD</GoodyType>
+				<!-- Low Research -->
+				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
+				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
+				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
+				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
+				<GoodyType>GOODY_LOW_RESEARCH</GoodyType>
+			</Goodies>
 		</HandicapInfo>
 	</HandicapInfos>
 </Civ4HandicapInfo>

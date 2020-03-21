@@ -31,7 +31,7 @@ def loadConfigurationData():
 	global g_iPopPercent
 
 	import SystemPaths
-	path = SystemPaths.appDir + "\Mods\Caveman2Cosmos\Caveman2Cosmos Config.ini"
+	path = SystemPaths.modDir + "\Caveman2Cosmos Config.ini"
 	import ConfigParser
 	Config = ConfigParser.ConfigParser()
 	Config.read(path)

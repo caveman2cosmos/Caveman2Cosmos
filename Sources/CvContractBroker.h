@@ -1,5 +1,8 @@
 #pragma once
 
+#ifndef CvContractBroker_h__
+#define CvContractBroker_h__
+
 #include "CvUnit.h"
 
 //	Define this to have cities advertise units needs and tender for the business of building them
@@ -9,10 +12,10 @@
 typedef enum	unitCapabilities
 {
 	NO_UNITCAPABILITIES					= 0,
-	DEFENSIVE_UNITCAPABILITIES			= 1,
-	OFFENSIVE_UNITCAPABILITIES			= 2,
-	WORKER_UNITCAPABILITIES				= 4,
-	HEALER_UNITCAPABILITIES				= 5
+	DEFENSIVE_UNITCAPABILITIES			= 1 << 0,
+	OFFENSIVE_UNITCAPABILITIES			= 1 << 1,
+	WORKER_UNITCAPABILITIES				= 1 << 2,
+	HEALER_UNITCAPABILITIES				= 1 << 3
 } unitCapabilities;
 
 
@@ -133,3 +136,5 @@ private:
 	int								m_iNextWorkRequestId;
 	PlayerTypes						m_eOwner;
 };
+
+#endif // CvContractBroker_h__

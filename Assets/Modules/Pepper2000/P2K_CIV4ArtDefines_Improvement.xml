@@ -8,7 +8,7 @@
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\Xml\Schema\Caveman2Cosmos.xsd">
 	<ImprovementArtInfos>
         <ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_SPACE_STATION1</Type>
+			<Type>ART_DEF_IMPROVEMENT_SPACE_STATION_LV1</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -17,7 +17,7 @@
 			<Button>art/interface/buttons/improvements/space_station_1.dds</Button>
 		</ImprovementArtInfo>
         <ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_SPACE_STATION2</Type>
+			<Type>ART_DEF_IMPROVEMENT_SPACE_STATION_LV2</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -26,7 +26,7 @@
 			<Button>art/interface/buttons/improvements/space_station_2.dds</Button>
 		</ImprovementArtInfo>
         <ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_SPACE_STATION3</Type>
+			<Type>ART_DEF_IMPROVEMENT_SPACE_STATION_LV3</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -116,7 +116,7 @@
 			<Button>art/interface/buttons/improvements/dyson_sphere.dds</Button>
 		</ImprovementArtInfo>
         <ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_CISLUNAR_MILITARY_BASE</Type>
+			<Type>ART_DEF_IMPROVEMENT_CISLUNAR_BASE</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>3.5</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -125,7 +125,7 @@
 			<Button>art/interface/buttons/improvements/cislunar_military_base.dds</Button>
 		</ImprovementArtInfo>
         <ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_DEEP_SPACE_MILITARY_BASE</Type>
+			<Type>ART_DEF_IMPROVEMENT_SOLAR_SYSTEM_BASE</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>3.5</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -134,7 +134,7 @@
 			<Button>art/interface/buttons/improvements/deep_space_military_base.dds</Button>
 		</ImprovementArtInfo>
         <ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_INTERSTELLAR_MILITARY_BASE</Type>
+			<Type>ART_DEF_IMPROVEMENT_INTERSTELLAR_BASE</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>3.5</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -260,7 +260,7 @@
 			<Button>art/interface/buttons/improvements/cosmic_expansion_node.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_EXPANDED_HABITAT</Type>
+			<Type>ART_DEF_IMPROVEMENT_CISLUNAR_EXPANSION_MODULE</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.25</fScale>
 			<fInterfaceScale>0.5</fInterfaceScale>
@@ -350,16 +350,16 @@
 			<Button>art/interface/buttons/improvements/spiritual_realm.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_HELIOFORM</Type>
+			<Type>ART_DEF_IMPROVEMENT_HELIOFORMED_BROWN_DWARF</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.1</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
-			<NIF>Art/Structures/Improvements/geothermal/mine_modern.nif</NIF>
+			<NIF>Art/Structures/Improvements/Core_Mine/coremine.nif</NIF>
 			<KFM>Art/Structures/Improvements/Mine/Mine_Modern.kfm</KFM>
 			<Button>art/interface/buttons/improvements/helioform.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_BUILD_ASTEROID</Type>
+			<Type>ART_DEF_IMPROVEMENT_PLACE_ASTEROID</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -368,7 +368,7 @@
 			<Button>,Art/Interface/Buttons/Units/Transport.dds,Art/Interface/Buttons/FinalFrontier2_Atlas.dds,5,4</Button>
 		</ImprovementArtInfo>
         <ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_BUILD_GALAXY</Type>
+			<Type>ART_DEF_IMPROVEMENT_PLACE_GALAXY</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -377,7 +377,7 @@
 			<Button>art/interface/buttons/worldbuilder/galaxy.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_MARS_FARM</Type>
+			<Type>ART_DEF_IMPROVEMENT_MARTIAN_FARM</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>0.15</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -404,7 +404,7 @@
 			<Button>art/interface/buttons/improvements/venus_aerial_farm.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_MARS_MINE</Type>
+			<Type>ART_DEF_IMPROVEMENT_MARTIAN_MINE</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>0.4</fInterfaceScale>
@@ -449,7 +449,7 @@
 			<Button>art/interface/buttons/improvements/true_vacuum.dds</Button>
 		</ImprovementArtInfo>
         <ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_TRADING_PLANET</Type>
+			<Type>ART_DEF_IMPROVEMENT_INTERSTELLAR_TRADING_POST</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>

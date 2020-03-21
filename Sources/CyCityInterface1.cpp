@@ -29,22 +29,13 @@ void CyCityPythonInterface1(python::class_<CyCity>& x)
 		.def("findYieldRateRank", &CyCity::findYieldRateRank, "int (int /*YieldTypes*/ eYield)")
 		.def("findCommerceRateRank", &CyCity::findCommerceRateRank, "int (int /*CommerceTypes*/ eCommerce)")
 
-/************************************************************************************************/
-/* REVDCM                                 02/16/10                                phungus420    */
-/*                                                                                              */
-/* CanTrain                                                                                     */
-/************************************************************************************************/
-		.def("isForceObsoleteUnitClassAvailable", &CyCity::isForceObsoleteUnitClassAvailable, "bool (int eUnit)")
+		.def("isSupersedingUnitAvailable", &CyCity::isSupersedingUnitAvailable, "bool (int eUnit)")
 		.def("isPlotTrainable", &CyCity::isPlotTrainable, "bool (int eUnit, bool bContinue, bool bTestVisible)")
-/************************************************************************************************/
-/* REVDCM                                  END                                                  */
-/************************************************************************************************/
 
 		.def("allUpgradesAvailable", &CyCity::allUpgradesAvailable, "int UnitTypes (int eUnit, int iUpgradeCount)")
 		.def("isWorldWondersMaxed", &CyCity::isWorldWondersMaxed, "bool ()")
 		.def("isTeamWondersMaxed", &CyCity::isTeamWondersMaxed, "bool ()")
 		.def("isNationalWondersMaxed", &CyCity::isNationalWondersMaxed, "bool ()")
-		.def("isBuildingsMaxed", &CyCity::isBuildingsMaxed, "bool ()")
 		.def("canTrain", &CyCity::canTrain, "bool (int eUnit, bool bContinue, bool bTestVisible)")
 		.def("canConstruct", &CyCity::canConstruct, "bool (int eBuilding, bool bContinue, bool bTestVisible, bool bIgnoreCost)")
 		.def("canCreate", &CyCity::canCreate, "bool (int eProject, bool bContinue, bool bTestVisible)")
@@ -380,7 +371,7 @@ void CyCityPythonInterface1(python::class_<CyCity>& x)
 		.def("isSpecialistBanned", &CyCity::isSpecialistBanned, "bool (int /*SpecialistTypes*/)")
 		.def("banSpecialist", &CyCity::banSpecialist, "banSpecialist(int /*SpecialistTypes*/)")
 		.def("removeSpecialistBan", &CyCity::removeSpecialistBan, "removeSpecialistBan(int /*SpecialistTypes*/)")
-
+		.def("isEventOccured", &CyCity::isEventOccured, "bool (int /*EventTypes*/)")
 
 		;
 }

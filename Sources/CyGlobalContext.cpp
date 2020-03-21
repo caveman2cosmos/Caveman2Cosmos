@@ -30,20 +30,25 @@ bool CyGlobalContext::isDebugBuild() const
 
 CyGame* CyGlobalContext::getCyGame() const
 {
-	static CyGame cyGame(&GC.getGameINLINE());
+	static CyGame cyGame(&GC.getGame());
 	return &cyGame;
 }
 
 
 CyMap* CyGlobalContext::getCyMap() const
 {
-	static CyMap cyMap(&GC.getMapINLINE());
+	static CyMap cyMap(&GC.getMap());
 	return &cyMap;
 }
 
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
+
+bool CyGlobalContext::multiMapsEnabled() const
+{
+	return GC.multiMapsEnabled();
+}
 
 void CyGlobalContext::switchMap(int iMap)
 {
@@ -60,16 +65,6 @@ CvMapInfo* CyGlobalContext::getMapInfo(int iMap) const
 	return &(GC.getMapInfo((MapTypes)iMap));
 }
 
-int CyGlobalContext::getNumMapSwitchInfos() const
-{
-	return GC.getNumMapSwitchInfos();
-}
-
-CvMapSwitchInfo* CyGlobalContext::getMapSwitchInfo(int iMapSwitch) const
-{
-	return &(GC.getMapSwitchInfo((MapSwitchTypes)iMapSwitch));
-}
-
 CyMap* CyGlobalContext::getMapByIndex(int iIndex)
 {
 	static CyMap cyMap;
@@ -77,9 +72,19 @@ CyMap* CyGlobalContext::getMapByIndex(int iIndex)
 	return &cyMap;
 }
 
+void CyGlobalContext::updateMaps()
+{
+	GC.updateMaps();
+}
+
 void CyGlobalContext::initializeMap(int iMap)
 {
-	return GC.initializeMap((MapTypes)iMap);
+	GC.initializeMap((MapTypes)iMap);
+}
+
+bool CyGlobalContext::mapInitialized(int iMap) const
+{
+	return GC.mapInitialized((MapTypes)iMap);
 }
 
 /*******************************/
@@ -104,16 +109,19 @@ CyPlayer* CyGlobalContext::getCyPlayer(int idx)
 		bInit=true;
 	}
 
-	FAssert(idx>=0);
-	FAssert(idx<MAX_PLAYERS);
+	if (idx >= 0 && idx < MAX_PLAYERS)
+	{
+		return &cyPlayers[idx];
+	}
 
-	return idx < MAX_PLAYERS && idx != NO_PLAYER ? &cyPlayers[idx] : NULL;
+	FErrorMsg("Player index requested isn't valid");
+	return NULL;
 }
 
 
 CyPlayer* CyGlobalContext::getCyActivePlayer()
 {
-	PlayerTypes pt = GC.getGameINLINE().getActivePlayer();
+	PlayerTypes pt = GC.getGame().getActivePlayer();
 	return pt != NO_PLAYER ? getCyPlayer(pt) : NULL;
 }
 
@@ -239,20 +247,9 @@ CvHandicapInfo* CyGlobalContext::getHandicapInfo(int i) const
 }
 
 
-CvBuildingClassInfo* CyGlobalContext::getBuildingClassInfo(int i) const
-{
-	return (i>=0 && i<GC.getNumBuildingClassInfos()) ? &GC.getBuildingClassInfo((BuildingClassTypes) i) : NULL;
-}
-
-
 CvBuildingInfo* CyGlobalContext::getBuildingInfo(int i) const
 {
 	return (i>=0 && i<GC.getNumBuildingInfos()) ? &GC.getBuildingInfo((BuildingTypes) i) : NULL;
-}
-
-CvUnitClassInfo* CyGlobalContext::getUnitClassInfo(int i) const
-{
-	return (i>=0 && i<GC.getNumUnitClassInfos()) ? &GC.getUnitClassInfo((UnitClassTypes) i) : NULL;
 }
 
 
@@ -504,19 +501,6 @@ CvMainMenuInfo* CyGlobalContext::getMainMenus(int i) const
 	return ((i >= 0 && i < GC.getNumMainMenus()) ? &GC.getMainMenus(i) : NULL);
 }
 
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 02/19/08                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-// Python Modular Loading
-CvPythonModulesInfo* CyGlobalContext::getPythonModulesInfo(int i) const
-{
-	return ((i >= 0 && i < GC.getNumPythonModulesInfos()) ? &GC.getPythonModulesInfo(i) : NULL);
-}
-/************************************************************************************************/
-/* MODULAR_LOADING_CONTROL                 END                                                  */
-/************************************************************************************************/
 
 CvVoteSourceInfo* CyGlobalContext::getVoteSourceInfo(int i) const
 {
@@ -725,28 +709,6 @@ CvTurnTimerInfo* CyGlobalContext::getTurnTimerInfo(int i) const
 {
 	return &(GC.getTurnTimerInfo((TurnTimerTypes) i));
 }
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-// Dale - DCM: Pedia Concepts START
-CvInfoBase* CyGlobalContext::getDCMConceptInfo(int i) const
-{
-	return (i>=0 && i<GC.getNumDCMConceptInfos()) ? &GC.getDCMConceptInfo((DCMConceptTypes)i) : NULL;
-}
-// Dale - DCM: Pedia Concepts END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/*Afforess                                     11/13/09                                         */
-/************************************************************************************************/
-CvInfoBase* CyGlobalContext::getANDConceptInfo(int i) const
-{
-	return (i>=0 && i<GC.getNumANDConceptInfos()) ? &GC.getANDConceptInfo((ANDConceptTypes)i) : NULL;
-}
-/************************************************************************************************/
-/* Afforess                                END                                                  */
-/************************************************************************************************/
 
 bool CyGlobalContext::isShiftDown() const {
 	return gDLL->shiftKey();
@@ -756,19 +718,4 @@ bool CyGlobalContext::isAltDown() const {
 }
 bool CyGlobalContext::isCtrlDown() const {
 	return gDLL->ctrlKey();
-}
-
-POINT CyGlobalContext::getCursorPos() const
-{
-	POINT p;
-	// Just assume these work, if they don't then we have bigger problems that mouse pos not being correct
-	::GetCursorPos(&p);
-	::ScreenToClient(::GetActiveWindow(), &p);
-	return p;
-}
-
-POINT CyGlobalContext::screenToClient(POINT screenPos) const
-{
-	::ScreenToClient(::GetActiveWindow(), &screenPos);
-	return screenPos;
 }

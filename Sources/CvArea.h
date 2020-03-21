@@ -1,11 +1,9 @@
 #pragma once
 
-// area.h
+#ifndef CvArea_h__
+#define CvArea_h__
 
-#ifndef CIV4_AREA_H
-#define CIV4_AREA_H
-
-//#include "CvStructs.h"
+#include "CvGameCoreDLL.h"
 
 class CvCity;
 class CvPlot;
@@ -98,23 +96,23 @@ public:
 	int getBestFoundValue(PlayerTypes eIndex) const;													// Exposed to Python
 	void setBestFoundValue(PlayerTypes eIndex, int iNewValue);
 
-    //DPII < Maintenance Modifiers >
-    int getMaintenanceModifier(PlayerTypes eIndex) const;
-    void changeMaintenanceModifier(PlayerTypes eIndex, int iChange);
+	//DPII < Maintenance Modifiers >
+	int getMaintenanceModifier(PlayerTypes eIndex) const;
+	void changeMaintenanceModifier(PlayerTypes eIndex, int iChange);
 
-    int getHomeAreaMaintenanceModifier(PlayerTypes eIndex) const;
-    void changeHomeAreaMaintenanceModifier(PlayerTypes eIndex, int iChange);
-    void setHomeAreaMaintenanceModifier(PlayerTypes eIndex, int iNewValue);
+	int getHomeAreaMaintenanceModifier(PlayerTypes eIndex) const;
+	void changeHomeAreaMaintenanceModifier(PlayerTypes eIndex, int iChange);
+	void setHomeAreaMaintenanceModifier(PlayerTypes eIndex, int iNewValue);
 
-    int getOtherAreaMaintenanceModifier(PlayerTypes eIndex) const;
-    void changeOtherAreaMaintenanceModifier(PlayerTypes eIndex, int iChange);
-    void setOtherAreaMaintenanceModifier(PlayerTypes eIndex, int iNewValue);
+	int getOtherAreaMaintenanceModifier(PlayerTypes eIndex) const;
+	void changeOtherAreaMaintenanceModifier(PlayerTypes eIndex, int iChange);
+	void setOtherAreaMaintenanceModifier(PlayerTypes eIndex, int iNewValue);
 
-    int getTotalAreaMaintenanceModifier(PlayerTypes ePlayer) const;
+	int getTotalAreaMaintenanceModifier(PlayerTypes ePlayer) const;
 
-    bool isHomeArea(PlayerTypes eIndex) const;
-    void setHomeArea(PlayerTypes ePlayer, CvArea* pOldHomeArea);
-    //DPII < Maintenance Modifiers >
+	bool isHomeArea(PlayerTypes eIndex) const;
+	void setHomeArea(PlayerTypes ePlayer, CvArea* pOldHomeArea);
+	//DPII < Maintenance Modifiers >
 
 	int getNumRevealedTiles(TeamTypes eIndex) const;													// Exposed to Python
 	int getNumUnrevealedTiles(TeamTypes eIndex) const;												// Exposed to Python
@@ -231,6 +229,16 @@ private:
 	int					m_iLastGameTurnRecorded;
 	TurnCombatResults	m_combatRecord[COMBAT_RECORD_LENGTH];
 
+public:
+	//
+	// Algorithm/range helpers
+	//
+	struct fn {
+		DECLARE_MAP_FUNCTOR(CvArea, bool, isWater);
+		DECLARE_MAP_FUNCTOR(CvArea, int, getNumTiles);
+		DECLARE_MAP_FUNCTOR_1(CvArea, int, getBestFoundValue, PlayerTypes);
+		DECLARE_MAP_FUNCTOR_1(CvArea, int, getCitiesPerPlayer, PlayerTypes);
+	};
 };
 
-#endif
+#endif // CvArea_h__

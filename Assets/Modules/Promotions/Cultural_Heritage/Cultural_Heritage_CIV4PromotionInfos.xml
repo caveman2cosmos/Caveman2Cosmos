@@ -56,7 +56,6 @@
 			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/Cultural_Heritage/11_Native_Highlander_I.dds,Art/Cultural_Heritage_Atlas.dds,1,1</Button>
 		</PromotionInfo>
-
 		<PromotionInfo>
 			<Type>PROMOTION_CULTURAL_HERITAGE_NATIVE_HIGHLANDER_II</Type>
 			<Description>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_NATIVE_HIGHLANDER_II_DESC</Description>
@@ -116,7 +115,6 @@
 			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/Cultural_Heritage/12_Native_Highlander_II.dds,Art/Cultural_Heritage_Atlas.dds,1,2</Button>
 		</PromotionInfo>
-
 		<PromotionInfo>
 			<Type>PROMOTION_CULTURAL_HERITAGE_NATIVE_HIGHLANDER_III</Type>
 			<Description>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_NATIVE_HIGHLANDER_III_DESC</Description>
@@ -172,7 +170,6 @@
 			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/Cultural_Heritage/13_Native_Highlander_III.dds,Art/Cultural_Heritage_Atlas.dds,1,3</Button>
 		</PromotionInfo>
-
 		<PromotionInfo>
 			<Type>PROMOTION_CULTURAL_HERITAGE_NATIVE_WOODSMAN_I</Type>
 			<Description>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_NATIVE_WOODSMAN_I_DESC</Description>
@@ -234,7 +231,6 @@
 			</UnitCombats>
 			<Button>,Art/Interface/Buttons/Promotions/Cultural_Heritage/21_Native_Woodsman_I.dds,Art/Cultural_Heritage_Atlas.dds,2,1</Button>
 		</PromotionInfo>
-
 		<PromotionInfo>
 			<Type>PROMOTION_CULTURAL_HERITAGE_NATIVE_WOODSMAN_II</Type>
 			<Description>TXT_KEY_PROMOTION_CULTURAL_HERITAGE_NATIVE_WOODSMAN_II_DESC</Description>
@@ -440,7 +436,7 @@
 					<bFeatureDoubleMove>1</bFeatureDoubleMove>
 				</FeatureDoubleMove>
 				<FeatureDoubleMove>
-					<FeatureType>FEATURE_CORAL</FeatureType>
+					<FeatureType>FEATURE_CORAL_REEF</FeatureType>
 					<bFeatureDoubleMove>1</bFeatureDoubleMove>
 				</FeatureDoubleMove>
 				<FeatureDoubleMove>
@@ -653,7 +649,7 @@
 					<iTerrainDefense>5</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>5</iTerrainDefense>
 				</TerrainDefense>
 			</TerrainDefenses>
@@ -715,7 +711,7 @@
 			<iLinePriority>2</iLinePriority>
 			<TerrainAttacks>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainAttack>15</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -729,7 +725,7 @@
 					<iTerrainDefense>10</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<iTerrainDefense>10</iTerrainDefense>
 				</TerrainDefense>
 			</TerrainDefenses>
@@ -739,7 +735,7 @@
 					<bTerrainDoubleMove>1</bTerrainDoubleMove>
 				</TerrainDoubleMove>
 				<TerrainDoubleMove>
-					<TerrainType>TERRAIN_GRASS</TerrainType>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 					<bTerrainDoubleMove>1</bTerrainDoubleMove>
 				</TerrainDoubleMove>
 			</TerrainDoubleMoves>
@@ -1286,11 +1282,11 @@
 					<iTerrainDefense>5</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<iTerrainDefense>5</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<iTerrainDefense>5</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -1364,11 +1360,11 @@
 					<iTerrainAttack>10</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<iTerrainAttack>10</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<iTerrainAttack>10</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -1390,11 +1386,11 @@
 					<iTerrainDefense>15</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<iTerrainDefense>15</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<iTerrainDefense>15</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
@@ -1416,11 +1412,11 @@
 					<bTerrainDoubleMove>1</bTerrainDoubleMove>
 				</TerrainDoubleMove>
 				<TerrainDoubleMove>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<bTerrainDoubleMove>1</bTerrainDoubleMove>
 				</TerrainDoubleMove>
 				<TerrainDoubleMove>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bTerrainDoubleMove>1</bTerrainDoubleMove>
 				</TerrainDoubleMove>
 				<TerrainDoubleMove>
@@ -1482,11 +1478,11 @@
 					<iTerrainAttack>10</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<iTerrainAttack>10</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<iTerrainAttack>10</iTerrainAttack>
 				</TerrainAttack>
 				<TerrainAttack>
@@ -1508,11 +1504,11 @@
 					<iTerrainDefense>10</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_ROCKY_ARID</TerrainType>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
 					<iTerrainDefense>10</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>
-					<TerrainType>TERRAIN_ROCKY_COLD</TerrainType>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<iTerrainDefense>10</iTerrainDefense>
 				</TerrainDefense>
 				<TerrainDefense>

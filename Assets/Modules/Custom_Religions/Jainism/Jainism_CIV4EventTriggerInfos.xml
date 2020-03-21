@@ -12,33 +12,32 @@
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_HYMNS_AND_SCULPTURES</Type>
 			<BuildingsRequired>
-				<BuildingClass>BUILDINGCLASS_JAIN_CATHEDRAL</BuildingClass>
+				<Building>BUILDING_JAIN_CATHEDRAL</Building>
 			</BuildingsRequired>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_WININGMONKS</Type>
 			<BuildingsRequired>
-				<BuildingClass>BUILDINGCLASS_JAIN_MONASTERY</BuildingClass>
+				<Building>BUILDING_JAIN_MONASTERY</Building>
 			</BuildingsRequired>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_HOLY_RITUAL</Type>
 			<BuildingsRequired>
-				<BuildingClass>BUILDINGCLASS_JAIN_TEMPLE</BuildingClass>
+				<Building>BUILDING_JAIN_TEMPLE</Building>
 			</BuildingsRequired>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_STAINED_GLASS</Type>
 			<BuildingsRequired>
-				<BuildingClass>BUILDINGCLASS_JAIN_CATHEDRAL</BuildingClass>
+				<Building>BUILDING_JAIN_CATHEDRAL</Building>
 			</BuildingsRequired>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_SECRET_KNOWLEDGE</Type>
 			<BuildingsRequired>
-				<BuildingClass>BUILDINGCLASS_JAIN_MONASTERY</BuildingClass>
+				<Building>BUILDING_JAIN_MONASTERY</Building>
 			</BuildingsRequired>
 		</EventTriggerInfo>
 	</EventTriggerInfos>
 </Civ4EventTriggerInfos>
-

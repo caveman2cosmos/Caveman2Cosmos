@@ -8,11 +8,11 @@
 	<ReligionInfos>
 		<ReligionInfo>
 			<Type>RELIGION_YORUBA</Type>
-			<Description>TXT_KEY_RELIGION_YORUBA</Description>
-			<Adjective>TXT_KEY_RELIGION_YORUBA_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_RELIGION_YORUBA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_TECH_YORUBA</Description>
+			<Adjective>TXT_KEY_TECH_YORUBA_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_TECH_YORUBA_PEDIA</Civilopedia>
 			<TechPrereq>TECH_YORUBA</TechPrereq>
-			<FreeUnitClass>UNITCLASS_YORUBA_MISSIONARY</FreeUnitClass>
+			<FreeUnit>UNIT_YORUBA_MISSIONARY</FreeUnit>
 			<iFreeUnits>1</iFreeUnits>
 			<iSpreadFactor>10</iSpreadFactor>
 			<iTGAIndex>18</iTGAIndex>

@@ -1,13 +1,7 @@
 #pragma once
 
-#ifndef CySelectionGroup_h
-#define CySelectionGroup_h
-//
-// Python wrapper class for CySelectionGroup
-//  
-//
-
-//#include "CvEnums.h"
+#ifndef CySelectionGroup_h__
+#define CySelectionGroup_h__
 
 struct MissionData;
 
@@ -15,6 +9,10 @@ class CyPlot;
 class CyArea;
 class CyUnit;
 class CvSelectionGroup;
+
+//
+// Python wrapper class for CySelectionGroup
+//
 class CySelectionGroup
 {
 public:
@@ -100,5 +98,6 @@ protected:
 	CvSelectionGroup* m_pSelectionGroup;
 };
 
-#endif	// #ifndef CySelectionGroup_h
+DECLARE_PY_WRAPPER(CySelectionGroup, CvSelectionGroup*);
 
+#endif // CySelectionGroup_h__

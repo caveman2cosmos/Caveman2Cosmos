@@ -11,21 +11,19 @@
      every city that has the religion, whether it is the state religion or not.  It also always adds
      <HolyCityCommerces> whether the religion is the state religion or not.  It hard-codes shrines
      to add 1 gold per city with religion.
-
      Nothing will break if you change any of these, or whether you use the SDK part of the mod or not,
      I just want you to understand what you are doing if you tweak these numbers.
-
      Eusebius
 -->
 <!-- Religion -->
 <Civ4ReligionInfo xmlns="x-schema:../../../XML/Schema/C2C_CIV4GameInfoSchema.xml">
 	<ReligionInfos>
 		<ReligionInfo>
-			<Type>RELIGION_CAODAI</Type>
-			<Description>TXT_KEY_RELIGION_CAODAI</Description>
-			<Civilopedia>TXT_KEY_RELIGION_CAODAI_PEDIA</Civilopedia>
-			<TechPrereq>TECH_CAODAIISM</TechPrereq>
-			<FreeUnitClass>UNITCLASS_CAODAI_MISSIONARY</FreeUnitClass>
+			<Type>RELIGION_CAO_DAI</Type>
+			<Description>TXT_KEY_TECH_CAO_DAI</Description>
+			<Civilopedia>TXT_KEY_TECH_CAO_DAI_PEDIA</Civilopedia>
+			<TechPrereq>TECH_CAO_DAI</TechPrereq>
+			<FreeUnit>UNIT_CAODAI_MISSIONARY</FreeUnit>
 			<iSpreadFactor>50</iSpreadFactor>
 			<iTGAIndex>24</iTGAIndex>
 			<GlobalReligionCommerces>

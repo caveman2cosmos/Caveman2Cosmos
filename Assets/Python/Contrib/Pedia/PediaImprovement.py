@@ -104,7 +104,7 @@ class PediaImprovement:
 		# Stats
 		szText = ""
 		if CvTheImproveInfo.isOutsideBorders():
-			szText += " Can be built outside cultural borders.\n"
+			szText += " " + TRNSLTR.getText("TXT_KEY_PEDIA_IMPROVEMENT_BUILD_OUTSIDE_BORDERS", ()) + ".\n"
 		szYieldReq = " Min. "
 		bYieldReq = False
 		szYield = ""
@@ -159,7 +159,7 @@ class PediaImprovement:
 				szText += " <color=255,0,0,255>"
 			else:
 				szText += " <color=0,230,0,255>+"
-			szText += str(iAirDefense) + "</color> Air Defense"
+			szText += str(iAirDefense) + "</color> "+ TRNSLTR.getText("TXT_KEY_PEDIA_IMPROVEMENT_AIR_DEFENSE", ())
 		if szText:
 			listBox = aName()
 			screen.addListBoxGFC(listBox, "", X_MAIN, Y_MAIN, W_STATS, H_MAIN, eTblEmpty)
@@ -180,7 +180,7 @@ class PediaImprovement:
 			Pnl = aName()
 			y = Y_MAIN + (H_MAIN - H_BOT_ROW)/2
 			screen.addPanel(Pnl, "", "", False, True, X_MAIN + W_STATS, y, W_REQUIRES, H_BOT_ROW, ePnlBlue50)
-			szText = szfont3b + "Build:"
+			szText = szfont3b + TRNSLTR.getText("TXT_KEY_PEDIA_BUILD", ())
 			screen.setLabelAt(aName(), Pnl, szText, 1<<0, 16, 2, 0, eFontTitle, eWidGen, 0, 0)
 			Pnl = aName()
 			screen.addScrollPanel(Pnl, "", X_MAIN + W_STATS - 2, y + 24, W_REQUIRES + 4, H_BOT_ROW - 50, ePnlBlue50)
@@ -254,7 +254,7 @@ class PediaImprovement:
 				aList4.append((iRoute, szYield))
 		if aList1 or aList2 or aList3 or aList4:
 			panelName = aName()
-			screen.addPanel(panelName, "Synergy:", "", False, True, X_COL_1, Y_TOP_ROW_2, W_PEDIA_PAGE, H_TOP_ROW_2, ePnlBlue50)
+			screen.addPanel(panelName, TRNSLTR.getText("TXT_KEY_PEDIA_SYNERGY", ()), "", False, True, X_COL_1, Y_TOP_ROW_2, W_PEDIA_PAGE, H_TOP_ROW_2, ePnlBlue50)
 			bAnd = False
 			if aList1:
 				bAnd = True
@@ -349,7 +349,7 @@ class PediaImprovement:
 				n += 1
 
 		if aList0 or aValidList:
-			szNot = "<font=4b>{Not"
+			szNot = "<font=4b>{!="
 			szOr = "<font=4b>||"
 			szBracketL = "<font=4b>{"
 			szBracketR = "<font=4b>}"
