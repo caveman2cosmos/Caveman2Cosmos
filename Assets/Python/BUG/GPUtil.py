@@ -27,7 +27,7 @@ GC = CyGlobalContext()
 # Map unit to font symbol
 g_gpUnitTypes = [
 	["UNIT_GREAT_HUNTER",		unichr(8483)],
-	["UNIT_ENGINEER",			unichr(8484)],
+	["UNIT_GREAT_ENGINEER",		unichr(8484)],
 	["UNIT_MERCHANT",			unichr(8500)],
 	["UNIT_SCIENTIST",			unichr(8501)],
 	["UNIT_ARTIST",				unichr(8502)],

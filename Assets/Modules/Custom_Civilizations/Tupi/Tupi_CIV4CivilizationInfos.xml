@@ -37,30 +37,30 @@
 				<City>TXT_KEY_CITY_NAME_COCAMA</City>
 				<City>TXT_KEY_CITY_NAME_NHEHGATU</City>
 				<City>TXT_KEY_CITY_NAME_POTIGUARA</City>
-				<City>Araguaia</City>
-				<City>Onca</City>
-				<City>Jenipapo</City>
-				<City>Coco</City>
-				<City>Balsas</City>
-				<City>Jenipapo</City>
-				<City>Muricizal</City>
-				<City>Taboa</City>
-				<City>Itapicuru</City>
-				<City>Urucui</City>
-				<City>Poco</City>
-				<City>Mukungo</City>
-				<City>Oiterio</City>
-				<City>Raposa</City>
-				<City>Itauireria</City>
-				<City>Juramento</City>
-				<City>Tamboril</City>
-				<City>Croata</City>
-				<City>Tocantis</City>
-				<City>Imbirucu</City>
-				<City>Macapa</City>
-				<City>Paui</City>
-				<City>Arraia</City>
-				<City>Andorinhas</City>
+				<City>TXT_KEY_CITY_NAME_ARAGUAIA</City>
+				<City>TXT_KEY_CITY_NAME_ONCA</City>
+				<City>TXT_KEY_CITY_NAME_JENIPAPO</City>
+				<City>TXT_KEY_CITY_NAME_COCO</City>
+				<City>TXT_KEY_CITY_NAME_BALSAS</City>
+				<City>TXT_KEY_CITY_NAME_JENIPAPO</City>
+				<City>TXT_KEY_CITY_NAME_MURICIZAL</City>
+				<City>TXT_KEY_CITY_NAME_TABOA</City>
+				<City>TXT_KEY_CITY_NAME_ITAPICURU</City>
+				<City>TXT_KEY_CITY_NAME_URUCUI</City>
+				<City>TXT_KEY_CITY_NAME_POCO</City>
+				<City>TXT_KEY_CITY_NAME_MUKUNGO</City>
+				<City>TXT_KEY_CITY_NAME_OITERIO</City>
+				<City>TXT_KEY_CITY_NAME_RAPOSA</City>
+				<City>TXT_KEY_CITY_NAME_ITAUIRERIA</City>
+				<City>TXT_KEY_CITY_NAME_JURAMENTO</City>
+				<City>TXT_KEY_CITY_NAME_TAMBORIL</City>
+				<City>TXT_KEY_CITY_NAME_CROATA</City>
+				<City>TXT_KEY_CITY_NAME_TOCANTIS</City>
+				<City>TXT_KEY_CITY_NAME_IMBIRUCU</City>
+				<City>TXT_KEY_CITY_NAME_MACAPA</City>
+				<City>TXT_KEY_CITY_NAME_PAUI</City>
+				<City>TXT_KEY_CITY_NAME_ARRAIA</City>
+				<City>TXT_KEY_CITY_NAME_ANDORINHAS</City>
 			</Cities>
 			<FreeBuildings>
 				<FreeBuilding>

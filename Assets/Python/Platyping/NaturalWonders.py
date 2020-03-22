@@ -182,9 +182,9 @@ class NaturalWonders:
 			if iTeamX != iTeam:
 				if bFirst and iPlayerX == iPlayerAct:
 					if CyTeam.isHasMet(iTeamX):
-						CvUtil.sendMessage(TRNSLTR.getText("TXT_MET_FIRST_WONDER",(GC.getTeam(iTeam).getName(), GC.getFeatureInfo(iFeature).getDescription())), iPlayerX, 12, bForce=False)
+						CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_MET_FIRST_WONDER",(GC.getTeam(iTeam).getName(), GC.getFeatureInfo(iFeature).getDescription())), iPlayerX, 12, bForce=False)
 					else:
-						CvUtil.sendMessage(TRNSLTR.getText("TXT_NOT_MET_FIRST_WONDER",(GC.getFeatureInfo(iFeature).getDescription(),)), iPlayerX, 12, bForce=False)
+						CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_NOT_MET_FIRST_WONDER",(GC.getFeatureInfo(iFeature).getDescription(),)), iPlayerX, 12, bForce=False)
 				continue
 			if iPlayerX == iPlayerAct:
 				popupInfo = CyPopupInfo()
@@ -197,5 +197,5 @@ class NaturalWonders:
 			if bFirst:
 				CyPlayerX.changeGold(iGold)
 				if iPlayerX == iPlayerAct:
-					CvUtil.sendMessage(TRNSLTR.getText("TXT_FIRST_FOUND_WONDER",(iGold,)), iPlayerX, 12, None, ColorTypes(44), bForce=False)
+					CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_FIRST_FOUND_WONDER",(iGold,)), iPlayerX, 12, None, ColorTypes(44), bForce=False)
 

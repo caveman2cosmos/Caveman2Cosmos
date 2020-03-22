@@ -458,7 +458,7 @@
 				<iYield>50</iYield>
 			</PowerYieldModifiers>
 			<!-- Great People effects -->
-			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
+			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<!-- Misc. Effects -->
 			<iSpaceProductionModifier>25</iSpaceProductionModifier>
@@ -536,7 +536,7 @@
 			<Type>BUILDING_CORPORATION_ADVENTURE_FRANCHISE</Type>
 			<Description>TXT_KEY_BUILDING_CORPORATION_ADVENTURE_FRANCHISE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_ADVENTURE_FRANCHISE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_ADVENTURE_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_ADVENTURE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_ADVENTURE_FRANCHISE</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_BANK</ConstructSound>
@@ -1748,7 +1748,7 @@
 				<Bonus>BONUS_BICYCLES</Bonus>
 				<Bonus>BONUS_AUTOMOBILES</Bonus>
 				<Bonus>BONUS_COMPUTERS</Bonus>
-				<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+				<Bonus>BONUS_METAMATERIALS</Bonus>
 				<Bonus>BONUS_AIRCRAFT</Bonus>
 				<Bonus>BONUS_SERVICE_BOTS</Bonus>
 				<Bonus>BONUS_UNMANNED_AIRCRAFTS</Bonus>
@@ -1895,12 +1895,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Amber Gatherer -->
-			<Type>BUILDING_AMBER_GATHERER</Type>
-			<Description>TXT_KEY_BUILDING_AMBER_GATHERER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_AMBER_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_AMBER_GATHERER_STRATEGY</Strategy>
+			<Type>BUILDING_GATHERER_AMBER</Type>
+			<Description>TXT_KEY_BUILDING_GATHERER_AMBER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_AMBER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_AMBER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_AMBER_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_AMBER</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -3513,7 +3513,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_SUPERSTRONG_ALLOY_WARES</ID>
+						<ID>BONUS_SUPERSTRONG_ALLOYS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -4137,11 +4137,11 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqBonuses>
-				<Bonus>BONUS_REFRIGERATORS</Bonus>
-				<Bonus>BONUS_MICROWAVE_OVENS</Bonus>
 				<Bonus>BONUS_BLENDER</Bonus>
-				<Bonus>BONUS_VACUUM</Bonus>
 				<Bonus>BONUS_DISHWASHERS</Bonus>
+				<Bonus>BONUS_MICROWAVE_OVENS</Bonus>
+				<Bonus>BONUS_REFRIGERATORS</Bonus>
+				<Bonus>BONUS_VACUUM_CLEANERS</Bonus>
 				<Bonus>BONUS_WASHER_DRYER</Bonus>
 			</PrereqBonuses>
 			<PrereqInCityBuildings>
@@ -4186,7 +4186,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_VACUUM</BonusType>
+					<BonusType>BONUS_VACUUM_CLEANERS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -5830,10 +5830,10 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Artist Colony -->
-			<Type>BUILDING_ARTIST_GUILD</Type>
-			<Description>TXT_KEY_BUILDING_ARTIST_GUILD</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ARTIST_GUILD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ARTIST_GUILD_STRATEGY</Strategy>
+			<Type>BUILDING_ARTIST_COLONY</Type>
+			<Description>TXT_KEY_BUILDING_ARTIST_COLONY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ARTIST_COLONY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ARTIST_COLONY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ARTIST_COLONY</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
@@ -6247,7 +6247,7 @@
 			<!-- Special Yield and Commerce modifiers -->
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_MARS_ROCKS</BonusType>
+					<BonusType>BONUS_MARTIAN_ROCKS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>0</iCommerce>
 						<iCommerce>1</iCommerce>
@@ -6532,7 +6532,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_METAMATERIAL_WARES</BonusType>
+					<BonusType>BONUS_METAMATERIALS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -8548,17 +8548,17 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Bark Gatherer -->
-			<Type>BUILDING_BARK_GATHERER</Type>
+			<Type>BUILDING_GATHERER_BARK</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_BARK_GATHERER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BARK_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BARK_GATHERER_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_GATHERER_BARK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_BARK_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_BARK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BARK_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_BARK</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -8620,12 +8620,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Wild Barley Gatherer -->
-			<Type>BUILDING_BARLEY_GATHERER</Type>
-			<Description>TXT_KEY_BUILDING_BARLEY_GATHERER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BARLEY_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BARLEY_GATHERER_STRATEGY</Strategy>
+			<Type>BUILDING_GATHERER_BARLEY</Type>
+			<Description>TXT_KEY_BUILDING_GATHERER_BARLEY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_BARLEY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_BARLEY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BARLEY_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_BARLEY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -10276,12 +10276,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Berry Gatherer -->
-			<Type>BUILDING_BERRY_BUSHES</Type>
-			<Description>TXT_KEY_BUILDING_BERRY_BUSHES</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BERRY_BUSHES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BERRY_BUSHES_STRATEGY</Strategy>
+			<Type>BUILDING_GATHERER_BERRY</Type>
+			<Description>TXT_KEY_BUILDING_GATHERER_BERRY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_BERRY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_BERRY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BERRY_BUSHES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_BERRY</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -10430,7 +10430,7 @@
 			<Type>BUILDING_CORPORATION_MCDOWELLS_RESTAURANT</Type>
 			<Description>TXT_KEY_BUILDING_CORPORATION_MCDOWELLS_RESTAURANT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MCDOWELLS_RESTAURANT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_MCDOWELLS_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_MCDOWELLS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_MCDOWELLS_RESTAURANT</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_BANK</ConstructSound>
@@ -12454,17 +12454,17 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Boneworker -->
-			<Type>BUILDING_BONEWORKERS_HUT</Type>
+			<Type>BUILDING_BONEWORKER</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_BONEWORKERS_HUT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BONEWORKERS_HUT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BONEWORKERS_HUT_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_BONEWORKER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_BONEWORKER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_BONEWORKER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BONEWORKERS_HUT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_BONEWORKER</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -12535,7 +12535,7 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_DRIFTWOOD_GATHERER</BuildingType>
+					<BuildingType>BUILDING_GATHERER_DRIFTWOOD</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
@@ -13127,7 +13127,7 @@
 			<PrereqTech>TECH_HEAT_TREATMENT</PrereqTech>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_FIREPIT</BuildingType>
+					<BuildingType>BUILDING_FIRE_PIT</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
@@ -15879,7 +15879,7 @@
 			<Type>BUILDING_CORPORATION_BULLSEYE_STORE</Type>
 			<Description>TXT_KEY_BUILDING_CORPORATION_BULLSEYE_STORE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_BULLSEYE_STORE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BULLSEYE_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_BULLSEYE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_BULLSEYE_STORE</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_BANK</ConstructSound>
@@ -16130,7 +16130,7 @@
 			<Type>BUILDING_CORPORATION_BURGERWORLD_RESTAURANT</Type>
 			<Description>TXT_KEY_BUILDING_CORPORATION_BURGERWORLD_RESTAURANT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_BURGERWORLD_RESTAURANT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BURGERWORLD_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_BURGERWORLD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_BURGERWORLD_RESTAURANT</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_BANK</ConstructSound>
@@ -18624,13 +18624,13 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Carrion -->
-			<Type>BUILDING_CARRION</Type>
-			<Description>TXT_KEY_BUILDING_CARRION</Description>
-			<Help>TXT_KEY_BUILDING_CARRION_HELP</Help>
-			<Civilopedia>TXT_KEY_BUILDING_CARRION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CARRION_STRATEGY</Strategy>
+			<Type>BUILDING_GATHERER_CARRION</Type>
+			<Description>TXT_KEY_BUILDING_GATHERER_CARRION</Description>
+			<Help>TXT_KEY_BUILDING_GATHERER_CARRION_HELP</Help>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_CARRION_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_CARRION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CARRION</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_CARRION</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -19534,7 +19534,7 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_FIREPIT</BuildingType>
+					<BuildingType>BUILDING_FIRE_PIT</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
@@ -26225,7 +26225,7 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_COPPER_WIRES</Bonus>
 				<Bonus>BONUS_MICROCHIPS</Bonus>
-				<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+				<Bonus>BONUS_METAMATERIALS</Bonus>
 				<Bonus>BONUS_COMPUTERS</Bonus>
 				<Bonus>BONUS_JEWELRY</Bonus>
 				<Bonus>BONUS_TRANSISTORS</Bonus>
@@ -26618,12 +26618,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Wild Corn Gatherer -->
-			<Type>BUILDING_CORN_GATHERER</Type>
-			<Description>TXT_KEY_BUILDING_CORN_GATHERER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CORN_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CORN_GATHERER_STRATEGY</Strategy>
+			<Type>BUILDING_GATHERER_CORN</Type>
+			<Description>TXT_KEY_BUILDING_GATHERER_CORN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_CORN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_CORN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CORN_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_CORN</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -28352,7 +28352,7 @@
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_METAMATERIAL_WARES</ID>
+						<ID>BONUS_METAMATERIALS</ID>
 					</Has>
 				</And>
 			</ConstructCondition>
@@ -28407,7 +28407,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_SUPERSTRONG_ALLOY_WARES</ID>
+						<ID>BONUS_SUPERSTRONG_ALLOYS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -29350,7 +29350,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_LIQUID_METAL_WARES</ID>
+						<ID>BONUS_LIQUID_METAL</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -31830,17 +31830,17 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Driftwood Gatherer -->
-			<Type>BUILDING_DRIFTWOOD_GATHERER</Type>
+			<Type>BUILDING_GATHERER_DRIFTWOOD</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_DRIFTWOOD_GATHERER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DRIFTWOOD_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_DRIFTWOOD_GATHERER_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_GATHERER_DRIFTWOOD</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_DRIFTWOOD_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_DRIFTWOOD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRIFTWOOD_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_DRIFTWOOD</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -32561,11 +32561,11 @@
 			<PrereqTech>TECH_NATURAL_PIGMENTS</PrereqTech>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_INDIGO_GATHERER</BuildingType>
+					<BuildingType>BUILDING_GATHERER_INDIGO</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_HENNA_GATHERER</BuildingType>
+					<BuildingType>BUILDING_GATHERER_HENNA</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
@@ -32742,12 +32742,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Earthworm Catcher -->
-			<Type>BUILDING_EARTHWORM</Type>
-			<Description>TXT_KEY_BUILDING_EARTHWORM</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EARTHWORM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_EARTHWORM_STRATEGY</Strategy>
+			<Type>BUILDING_GATHERER_EARTHWORM</Type>
+			<Description>TXT_KEY_BUILDING_GATHERER_EARTHWORM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_EARTHWORM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_EARTHWORM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_EARTHWORM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_EARTHWORM</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -32828,7 +32828,7 @@
 			<Type>BUILDING_CORPORATION_EWTRADE_STORE</Type>
 			<Description>TXT_KEY_BUILDING_CORPORATION_EWTRADE_STORE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_EWTRADE_STORE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_EWTRADE_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_EWTRADE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_EWTRADE_STORE</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_BANK</ConstructSound>
@@ -32961,7 +32961,7 @@
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iPrereqPopulation>50</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 				<BuildingType>BUILDING_ECOSCRAPER</BuildingType>
@@ -33821,10 +33821,10 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Elementary School -->
-			<Type>BUILDING_PUBLIC_SCHOOL</Type>
-			<Description>TXT_KEY_BUILDING_PUBLIC_SCHOOL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_PUBLIC_SCHOOL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_PUBLIC_SCHOOL_STRATEGY</Strategy>
+			<Type>BUILDING_ELEMENTARY_SCHOOL</Type>
+			<Description>TXT_KEY_BUILDING_ELEMENTARY_SCHOOL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ELEMENTARY_SCHOOL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ELEMENTARY_SCHOOL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ELEMENTARY_SCHOOL</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_SCHOOL</ConstructSound>
@@ -37745,12 +37745,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Fire Pit -->
-			<Type>BUILDING_FIREPIT</Type>
-			<Description>TXT_KEY_BUILDING_FIREPIT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_FIREPIT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_FIREPIT_STRATEGY</Strategy>
+			<Type>BUILDING_FIRE_PIT</Type>
+			<Description>TXT_KEY_BUILDING_FIRE_PIT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FIRE_PIT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_FIRE_PIT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FIREPIT</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_FIRE_PIT</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_TOTEM</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -37760,7 +37760,7 @@
 			<PrereqTech>TECH_CONTROLLED_FIRE</PrereqTech>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_STICK_GATHERER</BuildingType>
+					<BuildingType>BUILDING_GATHERER_STICK</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
@@ -37768,7 +37768,7 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_DRIFTWOOD_GATHERER</BuildingType>
+					<BuildingType>BUILDING_GATHERER_DRIFTWOOD</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
@@ -38722,11 +38722,11 @@
 			<!-- Unit effects -->
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
-					<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+					<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 					<iProductionModifier>10</iProductionModifier>
 				</UnitProductionModifier>
 				<UnitProductionModifier>
-					<UnitType>UNIT_STONE_AGE_AXEMAN</UnitType>
+					<UnitType>UNIT_STONE_AXEMAN</UnitType>
 					<iProductionModifier>10</iProductionModifier>
 				</UnitProductionModifier>
 				<UnitProductionModifier>
@@ -40639,7 +40639,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_SUPERSTRONG_ALLOY_WARES</ID>
+						<ID>BONUS_SUPERSTRONG_ALLOYS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -43418,7 +43418,7 @@
 			<ObsoleteTech>TECH_PERSONAL_COMPUTERS</ObsoleteTech>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
-					<BuildingType>BUILDING_PUBLIC_SCHOOL</BuildingType>
+					<BuildingType>BUILDING_ELEMENTARY_SCHOOL</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings>
@@ -43527,10 +43527,10 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Grand Estate -->
-			<Type>BUILDING_ESTATE</Type>
-			<Description>TXT_KEY_BUILDING_ESTATE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ESTATE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ESTATE_STRATEGY</Strategy>
+			<Type>BUILDING_GRAND_ESTATE</Type>
+			<Description>TXT_KEY_BUILDING_GRAND_ESTATE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GRAND_ESTATE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GRAND_ESTATE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GRAND_ESTATE</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
@@ -43578,7 +43578,7 @@
 		<BuildingInfo>
 			<!-- Grand Manor -->
 			<Type>BUILDING_MANOR</Type>
-			<Description>TXT_KEY_BUILDING_MANOR2</Description>
+			<Description>TXT_KEY_BUILDING_MANOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MANOR_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MANOR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
@@ -43825,17 +43825,17 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Grass Gatherer -->
-			<Type>BUILDING_GRASS_GATHERER</Type>
+			<Type>BUILDING_GATHERER_GRASS</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_GRASS_GATHERER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GRASS_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_GRASS_GATHERER_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_GATHERER_GRASS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_GRASS_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_GRASS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GRASS_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_GRASS</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -46145,8 +46145,8 @@
 			<Type>BUILDING_HELLENIC_MONASTERY</Type>
 			<SpecialBuildingType>SPECIALBUILDING_MONASTERY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_HELLENIC_MONASTERY</Description>
-			<Civilopedia>TXT_KEY_NEW_GREEKWAR_BUILDING_HELLENIC_MONASTERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_NEW_GREEKWAR_BUILDING_HELLENIC_MONASTERY_STRATEGY</Strategy>
+			<Civilopedia>TXT_KEY_BUILDING_HELLENIC_MONASTERY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_HELLENIC_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HELLENIC_MONASTERY</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_CHRISTIAN</ConstructSound>
@@ -46220,8 +46220,8 @@
 			<Type>BUILDING_HELLENIC_CATHEDRAL</Type>
 			<SpecialBuildingType>SPECIALBUILDING_PANTHEON</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_HELLENIC_CATHEDRAL</Description>
-			<Civilopedia>TXT_KEY_NEW_GREEKWAR_BUILDING_HELLENIC_CATHEDRAL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_NEW_GREEKWAR_BUILDING_HELLENIC_CATHEDRAL_STRATEGY</Strategy>
+			<Civilopedia>TXT_KEY_BUILDING_HELLENIC_CATHEDRAL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_HELLENIC_CATHEDRAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HELLENIC_CATHEDRAL</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_CHRISTIAN</ConstructSound>
@@ -46311,8 +46311,8 @@
 			<Type>BUILDING_HELLENIC_TEMPLE</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_HELLENIC_TEMPLE</Description>
-			<Civilopedia>TXT_KEY_NEW_GREEKWAR_BUILDING_HELLENIC_TEMPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_NEW_GREEKWAR_BUILDING_HELLENIC_TEMPLE_STRATEGY</Strategy>
+			<Civilopedia>TXT_KEY_BUILDING_HELLENIC_TEMPLE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_HELLENIC_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HELLENIC_TEMPLE</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_CHRISTIAN</ConstructSound>
@@ -46445,12 +46445,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Henna Gatherer -->
-			<Type>BUILDING_HENNA_GATHERER</Type>
-			<Description>TXT_KEY_BUILDING_HENNA_GATHERER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_HENNA_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_HENNA_GATHERER_STRATEGY</Strategy>
+			<Type>BUILDING_GATHERER_HENNA</Type>
+			<Description>TXT_KEY_BUILDING_GATHERER_HENNA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_HENNA_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_HENNA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_HENNA_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_HENNA</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -46921,7 +46921,7 @@
 			<PrereqTech>TECH_COMPULSORY_EDUCATION</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_PUBLIC_SCHOOL</BuildingType>
+				<BuildingType>BUILDING_ELEMENTARY_SCHOOL</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>870</iCost>
@@ -47678,12 +47678,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Hippodrome -->
-			<Type>BUILDING_BYZANTINE_HIPPODROME</Type>
-			<Description>TXT_KEY_BUILDING_BYZANTINE_HIPPODROME</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BYZANTINE_HIPPODROME_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BYZANTINE_HIPPODROME_STRATEGY</Strategy>
+			<Type>BUILDING_HIPPODROME</Type>
+			<Description>TXT_KEY_BUILDING_HIPPODROME</Description>
+			<Civilopedia>TXT_KEY_BUILDING_HIPPODROME_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_HIPPODROME_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BYZANTINE_HIPPODROME</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_HIPPODROME</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_COLOSSEUM</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -49565,7 +49565,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_VACUUM</BonusType>
+					<BonusType>BONUS_VACUUM_CLEANERS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -50106,12 +50106,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Indigo Gatherer -->
-			<Type>BUILDING_INDIGO_GATHERER</Type>
-			<Description>TXT_KEY_BUILDING_INDIGO_GATHERER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_INDIGO_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_INDIGO_GATHERER_STRATEGY</Strategy>
+			<Type>BUILDING_GATHERER_INDIGO</Type>
+			<Description>TXT_KEY_BUILDING_GATHERER_INDIGO</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_INDIGO_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_INDIGO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_INDIGO_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_INDIGO</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -51708,12 +51708,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Jade Gatherer -->
-			<Type>BUILDING_JADE_GATHERER</Type>
-			<Description>TXT_KEY_BUILDING_JADE_GATHERER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_JADE_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_JADE_GATHERER_STRATEGY</Strategy>
+			<Type>BUILDING_GATHERER_JADE</Type>
+			<Description>TXT_KEY_BUILDING_GATHERER_JADE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_JADE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_JADE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_JADE_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_JADE</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -52282,7 +52282,7 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_NANOTUBES</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_SUPERSTRONG_ALLOY_WARES</Bonus>
+				<Bonus>BONUS_SUPERSTRONG_ALLOYS</Bonus>
 			</PrereqBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
@@ -52305,12 +52305,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Jeweler -->
-			<Type>BUILDING_JEWELLERY</Type>
-			<Description>TXT_KEY_BUILDING_JEWELLERY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_JEWELLERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_JEWELLERY_STRATEGY</Strategy>
+			<Type>BUILDING_JEWELER</Type>
+			<Description>TXT_KEY_BUILDING_JEWELER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_JEWELER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_JEWELER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_JEWELLERY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_JEWELER</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_JEWELLERY</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -54882,17 +54882,17 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Lava Rock Gatherer -->
-			<Type>BUILDING_LAVA_ROCK_QUARRY</Type>
+			<Type>BUILDING_GATHERER_LAVA_ROCK</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_LAVA_ROCK_QUARRY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LAVA_ROCK_QUARRY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_LAVA_ROCK_QUARRY_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_GATHERER_LAVA_ROCK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_LAVA_ROCK_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_LAVA_ROCK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_LAVA_ROCK_QUARRY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_LAVA_ROCK</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -55279,7 +55279,7 @@
 			<Bonus>BONUS_BOOKS</Bonus>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_PUBLIC_SCHOOL</BuildingType>
+					<BuildingType>BUILDING_ELEMENTARY_SCHOOL</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
@@ -55643,7 +55643,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_SUPERSTRONG_ALLOY_WARES</ID>
+						<ID>BONUS_SUPERSTRONG_ALLOYS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -55881,7 +55881,7 @@
 				</PrereqTerrain>
 			</PrereqOrTerrain>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_LICHEN_GATHERER</BuildingType>
+				<BuildingType>BUILDING_GATHERER_LICHEN</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_ANCIENT_MEDICINE</ObsoleteTech>
@@ -55912,17 +55912,17 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Lichen Gatherer -->
-			<Type>BUILDING_LICHEN_GATHERER</Type>
+			<Type>BUILDING_GATHERER_LICHEN</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_LICHEN_GATHERER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LICHEN_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_LICHEN_GATHERER_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_GATHERER_LICHEN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_LICHEN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_LICHEN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_LICHEN_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_LICHEN</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -56119,7 +56119,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_METAMATERIAL_WARES</ID>
+						<ID>BONUS_METAMATERIALS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -56142,7 +56142,7 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_LIQUID_METAL_WARES</FreeBonus>
+			<FreeBonus>BONUS_LIQUID_METAL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special Yield and Commerce modifiers -->
 			<TechCommerceChanges>
@@ -57906,7 +57906,7 @@
 			<!-- Mall -->
 			<Type>BUILDING_AMERICAN_MALL</Type>
 			<Description>TXT_KEY_BUILDING_AMERICAN_MALL</Description>
-			<Civilopedia>TXT_KEY_CHANGED_BUILDING_AMERICAN_MALL_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_AMERICAN_MALL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_AMERICAN_MALL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AMERICAN_MALL</ArtDefineTag>
@@ -58078,7 +58078,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_VACUUM</BonusType>
+					<BonusType>BONUS_VACUUM_CLEANERS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -58151,7 +58151,7 @@
 			<Type>BUILDING_CORPORATION_MALLWART_STORE</Type>
 			<Description>TXT_KEY_BUILDING_CORPORATION_MALLWART_STORE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MALLWART_STORE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_MALLWART_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_MALLWART_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_MALLWART_STORE</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_BANK</ConstructSound>
@@ -60439,7 +60439,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MEGASTRONG_ALLOYS</PrereqTech>
-			<Bonus>BONUS_MEGASTRONG_ALLOY_WARES</Bonus>
+			<Bonus>BONUS_MEGASTRONG_ALLOYS</Bonus>
 			<!-- Construction cost -->
 			<iCost>12155</iCost>
 			<!-- Main effects -->
@@ -60527,7 +60527,7 @@
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iPrereqPopulation>50</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
 				<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
@@ -60569,7 +60569,7 @@
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iPrereqPopulation>50</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 				<BuildingType>BUILDING_ARTIFICAL_TREEFARM</BuildingType>
@@ -60606,7 +60606,7 @@
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iPrereqPopulation>50</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 				<BuildingType>BUILDING_ECOSCRAPER</BuildingType>
@@ -60657,7 +60657,7 @@
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iPrereqPopulation>50</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -60702,7 +60702,7 @@
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iPrereqPopulation>50</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 				<BuildingType>BUILDING_FIRE_STATION</BuildingType>
@@ -60744,7 +60744,7 @@
 			</TechTypes>
 			<iPrereqPopulation>50</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_HOLOGRAPHIC_PROJECTORS</Bonus>
 			</PrereqBonuses>
@@ -60778,7 +60778,7 @@
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iPrereqPopulation>50</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 				<BuildingType>BUILDING_HOTEL</BuildingType>
@@ -60814,7 +60814,7 @@
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iPrereqPopulation>50</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 			</PrereqInCityBuildings>
@@ -60862,7 +60862,7 @@
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iPrereqPopulation>50</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<ConstructCondition>
 				<And>
 					<Has>
@@ -60931,7 +60931,7 @@
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iPrereqPopulation>50</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
@@ -60969,7 +60969,7 @@
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iPrereqPopulation>50</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 				<BuildingType>BUILDING_CITY_PARK</BuildingType>
@@ -61018,7 +61018,7 @@
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iPrereqPopulation>50</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 			</PrereqInCityBuildings>
@@ -61077,7 +61077,7 @@
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iPrereqPopulation>50</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 				<BuildingType>BUILDING_LABORATORY</BuildingType>
@@ -61140,7 +61140,7 @@
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iPrereqPopulation>50</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 			</PrereqInCityBuildings>
@@ -61178,7 +61178,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iPrereqPopulation>50</iPrereqPopulation>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 				<BuildingType>BUILDING_SOLARVOLT_ROOF</BuildingType>
@@ -61213,7 +61213,7 @@
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iPrereqPopulation>50</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 				<BuildingType>BUILDING_AMUSEMENT_PARK</BuildingType>
@@ -61252,7 +61252,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_NANO_ARCHITECTURE</PrereqTech>
 			<iPrereqPopulation>50</iPrereqPopulation>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MEGATOWER</BuildingType>
 				<BuildingType>BUILDING_WIND_FARM</BuildingType>
@@ -61422,7 +61422,7 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_METAMATERIAL_WARES</FreeBonus>
+			<FreeBonus>BONUS_METAMATERIALS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special Yield and Commerce modifiers -->
 			<BonusCommerceModifiers>
@@ -61509,7 +61509,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_METAMATERIALS</PrereqTech>
-			<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+			<Bonus>BONUS_METAMATERIALS</Bonus>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_MEGASTRONG_ALLOYS</ObsoleteTech>
 			<ReplaceBuildings>
@@ -62251,7 +62251,7 @@
 			<Type>BUILDING_CORPORATION_MILEHIGH_FRANCHISE</Type>
 			<Description>TXT_KEY_BUILDING_CORPORATION_MILEHIGH_FRANCHISE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MILEHIGH_FRANCHISE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_MILEHIGH_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_MILEHIGH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_MILEHIGH_FRANCHISE</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_BANK</ConstructSound>
@@ -64265,7 +64265,7 @@
 			<Type>BUILDING_CORPORATION_MOBBY_STORE</Type>
 			<Description>TXT_KEY_BUILDING_CORPORATION_MOBBY_STORE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MOBBY_STORE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_MOBBY_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_MOBBY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_MOBBY_STORE</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_BANK</ConstructSound>
@@ -65125,10 +65125,10 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Monument -->
-			<Type>BUILDING_OBELISK</Type>
-			<Description>TXT_KEY_BUILDING_OBELISK</Description>
-			<Civilopedia>TXT_KEY_NEW_BUILDING_MONUMENT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_OBELISK_STRATEGY</Strategy>
+			<Type>BUILDING_MONUMENT</Type>
+			<Description>TXT_KEY_BUILDING_MONUMENT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MONUMENT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_MONUMENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MONUMENT</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_OBELISK</ConstructSound>
@@ -65149,7 +65149,7 @@
 			<ObsoleteTech>TECH_ASTRONOMY</ObsoleteTech>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
-					<BuildingType>BUILDING_EGYPTIAN_OBELISK</BuildingType>
+					<BuildingType>BUILDING_OBELISK</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 				<ReplaceBuilding>
@@ -65157,7 +65157,7 @@
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 				<ReplaceBuilding>
-					<BuildingType>BUILDING_ABYSSINIA_STELE</BuildingType>
+					<BuildingType>BUILDING_STELE</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 				<ReplaceBuilding>
@@ -66938,7 +66938,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_LIQUID_METAL_WARES</ID>
+						<ID>BONUS_LIQUID_METAL</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -68131,7 +68131,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_LIQUID_METAL_WARES</ID>
+						<ID>BONUS_LIQUID_METAL</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -68667,12 +68667,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Obelisk -->
-			<Type>BUILDING_EGYPTIAN_OBELISK</Type>
-			<Description>TXT_KEY_BUILDING_EGYPTIAN_OBELISK</Description>
-			<Civilopedia>TXT_KEY_BUILDING_EGYPTIAN_OBELISK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_EGYPTIAN_OBELISK_STRATEGY</Strategy>
+			<Type>BUILDING_OBELISK</Type>
+			<Description>TXT_KEY_BUILDING_OBELISK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_OBELISK_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_OBELISK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_EGYPTIAN_OBELISK</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_OBELISK</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_OBELISK</ConstructSound>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -69419,7 +69419,7 @@
 				<BuildingType>BUILDING_CHILDCAREHUT</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
-			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
+			<ObsoleteTech>TECH_IRON_WORKING</ObsoleteTech>
 			<!-- Construction cost -->
 			<iCost>25</iCost>
 			<!-- Main effects -->
@@ -75290,22 +75290,22 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<PrereqBonuses>
-				<Bonus>BONUS_WATER_BOTTLES</Bonus>
-				<Bonus>BONUS_SODA_POP</Bonus>
-				<Bonus>BONUS_ENERGY_DRINK</Bonus>
-				<Bonus>BONUS_POWER_TOOLS</Bonus>
 				<Bonus>BONUS_BLENDER</Bonus>
-				<Bonus>BONUS_VACUUM</Bonus>
-				<Bonus>BONUS_WASHER_DRYER</Bonus>
-				<Bonus>BONUS_SERVICE_BOTS</Bonus>
 				<Bonus>BONUS_CELLPHONES</Bonus>
-				<Bonus>BONUS_SHOES</Bonus>
-				<Bonus>BONUS_RADIOS</Bonus>
-				<Bonus>BONUS_TELEVISIONS</Bonus>
 				<Bonus>BONUS_COMPUTERS</Bonus>
+				<Bonus>BONUS_ENERGY_DRINK</Bonus>
 				<Bonus>BONUS_MICROWAVE_OVENS</Bonus>
-				<Bonus>BONUS_TYPEWRITERS</Bonus>
 				<Bonus>BONUS_PHONOGRAPHS</Bonus>
+				<Bonus>BONUS_POWER_TOOLS</Bonus>
+				<Bonus>BONUS_RADIOS</Bonus>
+				<Bonus>BONUS_SERVICE_BOTS</Bonus>
+				<Bonus>BONUS_SHOES</Bonus>
+				<Bonus>BONUS_SODA_POP</Bonus>
+				<Bonus>BONUS_TELEVISIONS</Bonus>
+				<Bonus>BONUS_TYPEWRITERS</Bonus>
+				<Bonus>BONUS_VACUUM_CLEANERS</Bonus>
+				<Bonus>BONUS_WASHER_DRYER</Bonus>
+				<Bonus>BONUS_WATER_BOTTLES</Bonus>
 			</PrereqBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_RECYCLING_CENTER</BuildingType>
@@ -76433,7 +76433,7 @@
 			<CommerceChanges>
 				<iCommerce>8</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_PORCELAIN_WARES</FreeBonus>
+			<FreeBonus>BONUS_PORCELAIN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special Yield and Commerce modifiers -->
 			<BonusCommerceModifiers>
@@ -76507,7 +76507,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_PORCELAIN_WARES</FreeBonus>
+			<FreeBonus>BONUS_PORCELAIN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special Yield and Commerce modifiers -->
 			<BonusCommerceModifiers>
@@ -77565,7 +77565,7 @@
 			<PrereqTech>TECH_COMPULSORY_EDUCATION</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_PUBLIC_SCHOOL</BuildingType>
+				<BuildingType>BUILDING_ELEMENTARY_SCHOOL</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>870</iCost>
@@ -77638,7 +77638,7 @@
 			<PrereqTech>TECH_ARTIFICIAL_PHOTOSYNTHESIS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
-			<Bonus>BONUS_SUPERSTRONG_ALLOY_WARES</Bonus>
+			<Bonus>BONUS_SUPERSTRONG_ALLOYS</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_CYBERNETIC_CHLOROPLASTS</Bonus>
 			</PrereqBonuses>
@@ -78238,7 +78238,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CONDUCT</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ROCK_GATHERER</BuildingType>
+				<BuildingType>BUILDING_GATHERER_ROCK</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_BRONZE_WORKING</ObsoleteTech>
@@ -80014,7 +80014,7 @@
 			<Type>BUILDING_CORPORATION_RED_THEATER</Type>
 			<Description>TXT_KEY_BUILDING_CORPORATION_RED_THEATER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_RED_THEATER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_RED_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_RED_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_RED_THEATER</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_BANK</ConstructSound>
@@ -80088,17 +80088,17 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Reed Gatherer -->
-			<Type>BUILDING_REED_GATHERER</Type>
+			<Type>BUILDING_GATHERER_REED</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_REED_GATHERER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_REED_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_REED_GATHERER_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_GATHERER_REED</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_REED_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_REED_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_REED_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_REED</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -81041,11 +81041,11 @@
 		<BuildingInfo>
 			<!-- Revivalist Church -->
 			<Type>BUILDING_REVIVALIST_CHURCH</Type>
-			<Description>TXT_KEY_BUILDING_REVIVALIST_CHURCH2</Description>
-			<Civilopedia>TXT_KEY_BUILDING_REVIVALIST_CHURCH2_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_REVIVALIST_CHURCH2_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_REVIVALIST_CHURCH</Description>
+			<Civilopedia>TXT_KEY_BUILDING_REVIVALIST_CHURCH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_REVIVALIST_CHURCH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_REVIVALIST_CHURCH2</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_REVIVALIST_CHURCH</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -81294,12 +81294,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Wild Rice Gatherer -->
-			<Type>BUILDING_RICE_GATHERER</Type>
-			<Description>TXT_KEY_BUILDING_RICE_GATHERER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_RICE_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_RICE_GATHERER_STRATEGY</Strategy>
+			<Type>BUILDING_GATHERER_RICE</Type>
+			<Description>TXT_KEY_BUILDING_GATHERER_RICE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_RICE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_RICE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_RICE_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_RICE</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -82164,7 +82164,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PICTOGRAPHS</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ROCK_GATHERER</BuildingType>
+				<BuildingType>BUILDING_GATHERER_ROCK</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
@@ -82243,17 +82243,17 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Rock Gatherer -->
-			<Type>BUILDING_ROCK_GATHERER</Type>
+			<Type>BUILDING_GATHERER_ROCK</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_ROCK_GATHERER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ROCK_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ROCK_GATHERER_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_GATHERER_ROCK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_ROCK_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_ROCK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ROCK_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_ROCK</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -82417,17 +82417,17 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Tuber Gatherer -->
-			<Type>BUILDING_ROOT_TUBERS</Type>
+			<Type>BUILDING_GATHERER_TUBER</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_ROOT_TUBERS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ROOT_TUBERS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ROOT_TUBERS_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_GATHERER_TUBER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_TUBER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_TUBER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ROOT_TUBERS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_TUBER</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -83287,7 +83287,7 @@
 			<Type>BUILDING_CORPORATION_SAFARI_GUIDE</Type>
 			<Description>TXT_KEY_BUILDING_CORPORATION_SAFARI_GUIDE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_SAFARI_GUIDE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_SAFARI_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_SAFARI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_SAFARI_GUIDE</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_BANK</ConstructSound>
@@ -84463,7 +84463,7 @@
 				<Bonus>BONUS_BIOFUEL</Bonus>
 			</PrereqBonuses>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_PUBLIC_SCHOOL</BuildingType>
+				<BuildingType>BUILDING_ELEMENTARY_SCHOOL</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
@@ -85614,17 +85614,17 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Seed Gatherer -->
-			<Type>BUILDING_SEED_CAMP</Type>
+			<Type>BUILDING_GATHERER_GRAIN</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_SEED_CAMP</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SEED_CAMP_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SEED_CAMP_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_GATHERER_GRAIN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_GRAIN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_GRAIN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SEED_CAMP</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_GRAIN</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_COMMUNITY_GARDEN</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
@@ -86651,11 +86651,11 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_METAMATERIAL_WARES</ID>
+						<ID>BONUS_METAMATERIALS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_LIQUID_METAL_WARES</ID>
+						<ID>BONUS_LIQUID_METAL</ID>
 					</Has>
 				</And>
 			</ConstructCondition>
@@ -88173,7 +88173,7 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_FIREPIT</BuildingType>
+					<BuildingType>BUILDING_FIRE_PIT</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
@@ -88416,12 +88416,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Snail Catcher -->
-			<Type>BUILDING_SNAIL</Type>
-			<Description>TXT_KEY_BUILDING_SNAIL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SNAIL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SNAIL_STRATEGY</Strategy>
+			<Type>BUILDING_GATHERER_SNAIL</Type>
+			<Description>TXT_KEY_BUILDING_GATHERER_SNAIL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_SNAIL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_SNAIL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SNAIL</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_SNAIL</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -90296,7 +90296,7 @@
 		<BuildingInfo>
 			<!-- Squatter Camps -->
 			<Type>BUILDING_SHANTYTOWN</Type>
-			<Description>TXT_KEY_BUILDING_SHANTYTOWN2</Description>
+			<Description>TXT_KEY_BUILDING_SHANTYTOWN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHANTYTOWN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SHANTYTOWN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -91049,7 +91049,7 @@
 				<Bonus>BONUS_REFRIGERATORS</Bonus>
 				<Bonus>BONUS_BICYCLES</Bonus>
 				<Bonus>BONUS_AUTOMOBILES</Bonus>
-				<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+				<Bonus>BONUS_METAMATERIALS</Bonus>
 			</PrereqBonuses>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_RECYCLING_CENTER</BuildingType>
@@ -91083,10 +91083,10 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Smelter (Steel) -->
-			<Type>BUILDING_STEEL_MILL</Type>
-			<Description>TXT_KEY_BUILDING_STEEL_MILL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_STEEL_MILL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_STEEL_MILL_STRATEGY</Strategy>
+			<Type>BUILDING_SMELTER_STEEL</Type>
+			<Description>TXT_KEY_BUILDING_SMELTER_STEEL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SMELTER_STEEL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_SMELTER_STEEL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SMELTER_STEEL</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_IRONWORKS</ConstructSound>
@@ -91195,12 +91195,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Stele -->
-			<Type>BUILDING_ABYSSINIA_STELE</Type>
-			<Description>TXT_KEY_BUILDING_ABYSSINIA_STELE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ABYSSINIA_STELE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_OBELISK_STRATEGY</Strategy>
+			<Type>BUILDING_STELE</Type>
+			<Description>TXT_KEY_BUILDING_STELE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_STELE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_MONUMENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ABYSSINIA_STELE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_STELE</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_OBELISK</ConstructSound>
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
@@ -91439,7 +91439,7 @@
 			</PrereqBonuses>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_STICK_GATHERER</BuildingType>
+					<BuildingType>BUILDING_GATHERER_STICK</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
@@ -91477,17 +91477,17 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Stick Gatherer -->
-			<Type>BUILDING_STICK_GATHERER</Type>
+			<Type>BUILDING_GATHERER_STICK</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_STICK_GATHERER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_STICK_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_STICK_GATHERER_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_GATHERER_STICK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_STICK_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_STICK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_STICK_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_STICK</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -91801,8 +91801,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_TOOL_MAKING</PrereqTech>
+			<ObsoleteTech>TECH_IRON_WORKING</ObsoleteTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ROCK_GATHERER</BuildingType>
+				<BuildingType>BUILDING_GATHERER_ROCK</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>20</iCost>
@@ -91905,13 +91906,6 @@
 						<iCommerce>-1</iCommerce>
 					</TechCommerce>
 				</TechCommerceChange>
-				<TechCommerceChange>
-					<PrereqTech>TECH_IRON_WORKING</PrereqTech>
-					<TechCommerce>
-						<iCommerce>-1</iCommerce>
-						<iCommerce>-1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
 			</TechCommerceChanges>
 			<TechYieldChanges>
 				<TechYieldChange>
@@ -91965,13 +91959,6 @@
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_LEAD_WORKING</PrereqTech>
-					<TechYield>
-						<iYield>0</iYield>
-						<iYield>-1</iYield>
-					</TechYield>
-				</TechYieldChange>
-				<TechYieldChange>
-					<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 					<TechYield>
 						<iYield>0</iYield>
 						<iYield>-1</iYield>
@@ -92175,17 +92162,17 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Straw Gatherer -->
-			<Type>BUILDING_STRAW_GATHERER</Type>
+			<Type>BUILDING_GATHERER_STRAW</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_STRAW_GATHERER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_STRAW_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_STRAW_GATHERER_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_GATHERER_STRAW</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_STRAW_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_STRAW_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_STRAW_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_STRAW</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -92966,7 +92953,7 @@
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_METAMATERIAL_WARES</ID>
+						<ID>BONUS_METAMATERIALS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -92993,7 +92980,7 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_SUPERSTRONG_ALLOY_WARES</FreeBonus>
+			<FreeBonus>BONUS_SUPERSTRONG_ALLOYS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special Yield and Commerce modifiers -->
 			<TechCommerceChanges>
@@ -93044,7 +93031,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SUPERSTRONG_ALLOYS</PrereqTech>
-			<Bonus>BONUS_SUPERSTRONG_ALLOY_WARES</Bonus>
+			<Bonus>BONUS_SUPERSTRONG_ALLOYS</Bonus>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -95910,7 +95897,7 @@
 			<Type>BUILDING_TERMITE_MOUND</Type>
 			<Description>TXT_KEY_BUILDING_TERMITE_MOUND</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERMITE_MOUND_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TERMITE_MOUND</Strategy>
+			<Strategy>TXT_KEY_BUILDING_TERMITE_MOUND_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TERMITE_MOUND</ArtDefineTag>
 			<!-- Prerequisites -->
@@ -96041,7 +96028,7 @@
 			<CommerceChanges>
 				<iCommerce>6</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_TERRACOTTA_WARES</FreeBonus>
+			<FreeBonus>BONUS_TERRACOTTA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -96103,7 +96090,7 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_TERRACOTTA_WARES</FreeBonus>
+			<FreeBonus>BONUS_TERRACOTTA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -97118,7 +97105,7 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_PARTS</Bonus>
 				<Bonus>BONUS_BICYCLES</Bonus>
-				<Bonus>BONUS_METAMATERIAL_WARES</Bonus>
+				<Bonus>BONUS_METAMATERIALS</Bonus>
 				<Bonus>BONUS_AIRCRAFT</Bonus>
 				<Bonus>BONUS_UNMANNED_AIRCRAFTS</Bonus>
 			</PrereqBonuses>
@@ -99423,7 +99410,7 @@
 			<Type>BUILDING_CORPORATION_ULTSOLDIER_TRAINER</Type>
 			<Description>TXT_KEY_BUILDING_CORPORATION_ULTSOLDIER_TRAINER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_ULTSOLDIER_TRAINER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_ULTSOLDIER_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_ULTSOLDIER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_ULTSOLDIER_TRAINER</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_BANK</ConstructSound>
@@ -100387,7 +100374,7 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_VACUUM</FreeBonus>
+			<FreeBonus>BONUS_VACUUM_CLEANERS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Other -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -100803,17 +100790,17 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Vine Gatherer -->
-			<Type>BUILDING_VINE_GATHERER</Type>
+			<Type>BUILDING_GATHERER_VINE</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_VINE_GATHERER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_VINE_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_VINE_GATHERER_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_GATHERER_VINE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_VINE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_VINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VINE_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_VINE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -103229,12 +103216,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Wild Wheat Gatherer -->
-			<Type>BUILDING_WHEAT_GATHERER</Type>
-			<Description>TXT_KEY_BUILDING_WHEAT_GATHERER</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WHEAT_GATHERER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_WHEAT_GATHERER_STRATEGY</Strategy>
+			<Type>BUILDING_GATHERER_WHEAT</Type>
+			<Description>TXT_KEY_BUILDING_GATHERER_WHEAT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_WHEAT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_WHEAT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_WHEAT_GATHERER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_WHEAT</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -103505,12 +103492,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Wild Mushrooms -->
-			<Type>BUILDING_WILD_MUSHROOMS</Type>
-			<Description>TXT_KEY_BUILDING_WILD_MUSHROOMS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WILD_MUSHROOMS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_WILD_MUSHROOMS_STRATEGY</Strategy>
+			<Type>BUILDING_GATHERER_MUSHROOM</Type>
+			<Description>TXT_KEY_BUILDING_GATHERER_MUSHROOM</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GATHERER_MUSHROOM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GATHERER_MUSHROOM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_WILD_MUSHROOMS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GATHERER_MUSHROOM</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -104089,7 +104076,7 @@
 			<Type>BUILDING_CORPORATION_WONKA_SHOP</Type>
 			<Description>TXT_KEY_BUILDING_CORPORATION_WONKA_SHOP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_WONKA_SHOP_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_WONKA_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_WONKA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_WONKA_SHOP</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_BANK</ConstructSound>
@@ -106423,6 +106410,9 @@
 			<Strategy>TXT_KEY_BUILDING_NEGOTIATOR_HUT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NEGOTIATOR_HUT</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_NEGOTIATION</PrereqTech>
 			<iCost>146</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -106462,6 +106452,9 @@
 			<Strategy>TXT_KEY_BUILDING_AMBASSADOR_HOUSE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AMBASSADOR_HOUSE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_DIPLOMACY</PrereqTech>
 			<iCost>234</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -106514,6 +106507,9 @@
 			<Strategy>TXT_KEY_BUILDING_EMPORIUM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_EMPORIUM</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_DIPLOMACY</PrereqTech>
 			<iCost>234</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -106542,6 +106538,9 @@
 			<Strategy>TXT_KEY_BUILDING_LUXURY_FURNITURE_WORKSHOP_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LUXURY_FURNITURE_WORKSHOP</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_FURNITURE_MAKING</PrereqTech>
 			<iCost>176</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -106626,6 +106625,9 @@
 			<Strategy>TXT_KEY_BUILDING_LYCEUM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_LYCEUM</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
 			<iCost>252</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -106695,6 +106697,9 @@
 			<Strategy>TXT_KEY_BUILDING_ORGAN_HALL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ORGAN_HALL</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_ACOUSTICS</PrereqTech>
 			<iCost>380</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -106727,6 +106732,9 @@
 			<Strategy>TXT_KEY_BUILDING_TELESCREEN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TELESCREEN</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_MASS_SURVEILLANCE</PrereqTech>
 			<iCost>3385</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -107256,7 +107264,7 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_LAVA_ROCK_QUARRY</BuildingType>
+				<BuildingType>BUILDING_GATHERER_LAVA_ROCK</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
@@ -107281,6 +107289,9 @@
 			<ConstructSound>AS2D_BUILD_GLASSMITH</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_ORNAMENTATION</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Bonus>BONUS_SAND</Bonus>
@@ -107627,7 +107638,7 @@
 			</BonusCommerceModifiers>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_PYRAMID</BuildingType>
+					<BuildingType>BUILDING_GREAT_PYRAMID</BuildingType>
 					<iProductionModifier>10</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>

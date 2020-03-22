@@ -21,7 +21,7 @@
 			</Builds>
 		</UnitInfo>
 		<UnitInfo>
-			<Type>UNIT_CLASSIC_WORKBOAT</Type>
+			<Type>UNIT_WORKBOAT_CLASSIC</Type>
 			<Builds>
 				<Build>
 					<BuildType>BUILD_BEACON_GREAT_BARRIER_REEF</BuildType>
@@ -34,7 +34,7 @@
 			</Builds>
 		</UnitInfo>
 		<UnitInfo>
-			<Type>UNIT_MIDDLE_WORKBOAT</Type>
+			<Type>UNIT_WORKBOAT_MIDDLE</Type>
 			<Builds>
 				<Build>
 					<BuildType>BUILD_BEACON_GREAT_BARRIER_REEF</BuildType>
@@ -47,7 +47,7 @@
 			</Builds>
 		</UnitInfo>
 		<UnitInfo>
-			<Type>UNIT_MODERN_WORKBOAT</Type>
+			<Type>UNIT_WORKBOAT_MODERN</Type>
 			<Builds>
 				<Build>
 					<BuildType>BUILD_BEACON_GREAT_BARRIER_REEF</BuildType>

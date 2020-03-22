@@ -248,12 +248,6 @@
 			<bWhiteFlag>0</bWhiteFlag>
 		</CivilizationArtInfo>
 		<CivilizationArtInfo>
-			<Type>ART_DEF_CIVILIZATION_ABYSSINIANS</Type>
-			<Button>Art/Interface/Buttons/Civilizations/Abyssinians.dds</Button>
-			<Path>Art/Interface/TeamColor/FlagDECAL_Abyssinians2.dds</Path>
-			<bWhiteFlag>0</bWhiteFlag>
-		</CivilizationArtInfo>
-		<CivilizationArtInfo>
 			<Type>ART_DEF_CIVILIZATION_IROQUOIS</Type>
 			<Button>Art/Interface/Buttons/Civilizations/Iroquois.dds</Button>
 			<Path>Art/Interface/TeamColor/FlagDECAL_Iroquois.dds</Path>

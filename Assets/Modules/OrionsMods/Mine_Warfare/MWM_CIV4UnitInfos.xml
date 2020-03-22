@@ -12,12 +12,15 @@
 			<Type>UNIT_NAVAL_MINE</Type>
 			<Combat>UNITCOMBAT_MINE_WARFARE</Combat>
 			<Domain>DOMAIN_SEA</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_PIRATE_SEA</DefaultUnitAI>
 			<Invisible>INVISIBLE_NAVAL_MINE</Invisible>
 			<Description>TXT_KEY_UNIT_NAVAL_MINE</Description>
 			<Civilopedia>TXT_KEY_UNIT_NAVAL_MINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_NAVAL_MINE_STRATEGY</Strategy>
-			<Help>TXT_KEY_NAVAL_MINE_HELP</Help>
+			<Help>TXT_KEY_UNIT_NAVAL_MINE_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoRevealMap >1</bNoRevealMap >
@@ -110,12 +113,15 @@
 			<Type>UNIT_NAVAL_MINE_FIELD</Type>
 			<Combat>UNITCOMBAT_MINE_WARFARE</Combat>
 			<Domain>DOMAIN_SEA</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_PIRATE_SEA</DefaultUnitAI>
 			<Invisible>INVISIBLE_NAVAL_MINE</Invisible>
 			<Description>TXT_KEY_UNIT_NAVAL_MINE_FIELD</Description>
 			<Civilopedia>TXT_KEY_UNIT_NAVAL_MINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_NAVAL_MINE_FIELD_STRATEGY</Strategy>
-			<Help>TXT_KEY_NAVAL_MINE_FIELD_HELP</Help>
+			<Help>TXT_KEY_UNIT_NAVAL_MINE_FIELD_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoRevealMap >1</bNoRevealMap >
@@ -209,6 +215,9 @@
 			<Type>UNIT_NUCLEAR_NAVAL_MINE</Type>
 			<Combat>UNITCOMBAT_MINE_WARFARE</Combat>
 			<Domain>DOMAIN_SEA</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_PIRATE_SEA</DefaultUnitAI>
 			<Invisible>INVISIBLE_NAVAL_MINE</Invisible>
 			<Description>TXT_KEY_UNIT_NUCLEAR_NAVAL_MINE</Description>
@@ -310,12 +319,15 @@
 			<Type>UNIT_NAVAL_MINE_SWEEPER</Type>
 			<Combat>UNITCOMBAT_DIESEL_SHIPS</Combat>
 			<Domain>DOMAIN_SEA</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_RESERVE_SEA</DefaultUnitAI>
 			<SeeInvisible>INVISIBLE_NAVAL_MINE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_NAVAL_MINE_SWEEPER</Description>
 			<Civilopedia>TXT_KEY_UNIT_NAVAL_MINE_SWEEPER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_NAVAL_MINE_SWEEPER_STRATEGY</Strategy>
-			<Help>TXT_KEY_MINE_SWEEPER_HELP</Help>
+			<Help>TXT_KEY_UNIT_MINE_SWEEPER_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -368,12 +380,15 @@
 			<Type>UNIT_LAND_MINE</Type>
 			<Combat>UNITCOMBAT_MINE_WARFARE</Combat>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Invisible>INVISIBLE_LAND_MINE</Invisible>
 			<Description>TXT_KEY_UNIT_LAND_MINE</Description>
 			<Civilopedia>TXT_KEY_UNIT_LAND_MINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_LAND_MINE_STRATEGY</Strategy>
-			<Help>TXT_KEY_LAND_MINE_HELP</Help>
+			<Help>TXT_KEY_UNIT_LAND_MINE_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoRevealMap >1</bNoRevealMap >
@@ -457,12 +472,15 @@
 			<Type>UNIT_LAND_MINE_FIELD</Type>
 			<Combat>UNITCOMBAT_MINE_WARFARE</Combat>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Invisible>INVISIBLE_LAND_MINE</Invisible>
 			<Description>TXT_KEY_UNIT_LAND_MINE_FIELD</Description>
 			<Civilopedia>TXT_KEY_UNIT_LAND_MINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_LAND_MINE_FIELD_STRATEGY</Strategy>
-			<Help>TXT_KEY_LAND_MINE_FIELD_HELP</Help>
+			<Help>TXT_KEY_UNIT_LAND_MINE_FIELD_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<bNoRevealMap >1</bNoRevealMap >
@@ -552,6 +570,9 @@
 			<Type>UNIT_NUCLEAR_LAND_MINE</Type>
 			<Combat>UNITCOMBAT_MINE_WARFARE</Combat>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
 			<Invisible>INVISIBLE_LAND_MINE</Invisible>
 			<Description>TXT_KEY_UNIT_NUCLEAR_LAND_MINE</Description>
@@ -647,12 +668,15 @@
 			<Type>UNIT_LAND_MINE_SWEEPER</Type>
 			<Combat>UNITCOMBAT_RECON</Combat>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_EXPLORE</DefaultUnitAI>
 			<SeeInvisible>INVISIBLE_LAND_MINE</SeeInvisible>
 			<Description>TXT_KEY_UNIT_LAND_MINE_SWEEPER</Description>
 			<Civilopedia>TXT_KEY_UNIT_LAND_MINE_SWEEPER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_LAND_MINE_SWEEPER_STRATEGY</Strategy>
-			<Help>TXT_KEY_MINE_SWEEPER_HELP</Help>
+			<Help>TXT_KEY_UNIT_MINE_SWEEPER_HELP</Help>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>

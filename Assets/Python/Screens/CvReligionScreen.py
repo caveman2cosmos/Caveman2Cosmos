@@ -6,22 +6,18 @@
 
 from CvPythonExtensions import *
 import PyHelpers
-import CvUtil
 import ScreenInput
 import CvScreenEnums
 
-# BUG - start
 import BugUtil
 import BugCore
-import PlayerUtil
-import ReligionUtil
 AdvisorOpt = BugCore.game.Advisors
-# BUG - end
 
 PyPlayer = PyHelpers.PyPlayer
 
 # globals
-gc = CyGlobalContext()
+GC = CyGlobalContext()
+GAME = GC.getGame()
 ArtFileMgr = CyArtFileMgr()
 localText = CyTranslator()
 
@@ -95,7 +91,6 @@ class CvReligionScreen:
 		self.X_CITY = 10
 		self.DY_CITY = 38
 
-# BUG - start
 		self.NUM_RELIGIONS = -1
 		self.COL_ZOOM_CITY = 0
 		self.COL_CITY_NAME = 1
@@ -104,7 +99,6 @@ class CvReligionScreen:
 		self.COL_FIRST_BUILDING = 10
 		self.COL_EFFECTS = 14
 		self.TABLE_COLUMNS = 15
-# BUG - end
 
 		self.iReligionExamined = -1
 		self.iReligionSelected = -1
@@ -118,9 +112,7 @@ class CvReligionScreen:
 			self.BUTTON_NAME		: self.ReligionScreenButton,
 			self.CONVERT_NAME		: self.ReligionConvert,
 			self.CANCEL_NAME		: self.ReligionCancel,
-			}
-
-		# BUG Constants
+		}
 		self.bBUGConstants = False
 
 	def getScreen(self):
@@ -134,16 +126,14 @@ class CvReligionScreen:
 		self.CONVERT_TEXT = u"<font=4>" + localText.getText("TXT_KEY_RELIGION_CONVERT", ()).upper() + "</font>"
 		self.CANCEL_TEXT = u"<font=4>" + localText.getText("TXT_KEY_SCREEN_CANCEL", ()).upper() + "</font>"
 
-		self.iActivePlayer = gc.getGame().getActivePlayer()
+		self.iActivePlayer = GAME.getActivePlayer()
 
-# BUG - start
 		if self.NUM_RELIGIONS == -1:
-			self.NUM_RELIGIONS = ReligionUtil.getNumReligions()
+			self.NUM_RELIGIONS = GC.getNumReligionInfos()
 			self.COL_FIRST_UNIT = self.COL_FIRST_RELIGION + self.NUM_RELIGIONS
-			self.COL_FIRST_BUILDING = self.COL_FIRST_UNIT + ReligionUtil.getNumUnitTypes()
-			self.COL_EFFECTS = self.COL_FIRST_BUILDING + ReligionUtil.getNumBuildingTypes()
+			self.COL_FIRST_BUILDING = self.COL_FIRST_UNIT
+			self.COL_EFFECTS = self.COL_FIRST_BUILDING
 			self.TABLE_COLUMNS = self.COL_EFFECTS + 1
-# BUG - end
 
 		self.bScreenUp = True
 
@@ -159,21 +149,21 @@ class CvReligionScreen:
 		screen.addDDSGFC(self.BACKGROUND_ID, ArtFileMgr.getInterfaceArtInfo("MAINMENU_SLIDESHOW_LOAD").getPath(), 0, 0, self.W_SCREEN, self.H_SCREEN, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 		screen.addPanel( "TechTopPanel", u"", u"", True, False, 0, 0, self.W_SCREEN, 55, PanelStyles.PANEL_STYLE_TOPBAR )
 		screen.addPanel( "TechBottomPanel", u"", u"", True, False, 0, 713, self.W_SCREEN, 55, PanelStyles.PANEL_STYLE_BOTTOMBAR )
-		screen.setText(self.CANCEL_NAME, "Background", self.CANCEL_TEXT, CvUtil.FONT_CENTER_JUSTIFY, self.X_CANCEL, self.Y_CANCEL, self.Z_TEXT, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 0)
+		screen.setText(self.CANCEL_NAME, "Background", self.CANCEL_TEXT, 1<<2, self.X_CANCEL, self.Y_CANCEL, self.Z_TEXT, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 0)
 
 		screen.showWindowBackground(False)
 
 		# Header...
-		screen.setLabel(self.HEADER_NAME, "Background", u"<font=4b>" + localText.getText("TXT_KEY_RELIGION_SCREEN_TITLE", ()).upper() + u"</font>", CvUtil.FONT_CENTER_JUSTIFY, self.X_SCREEN, self.Y_TITLE, self.Z_TEXT, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+		screen.setLabel(self.HEADER_NAME, "Background", u"<font=4b>" + localText.getText("TXT_KEY_RELIGION_SCREEN_TITLE", ()).upper() + u"</font>", 1<<2, self.X_SCREEN, self.Y_TITLE, self.Z_TEXT, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		# Make the scrollable areas for the city list...
 
 		if (CyGame().isDebugMode()):
 			self.szDropdownName = self.DEBUG_DROPDOWN_ID
 			screen.addDropDownBoxGFC(self.szDropdownName, 22, 12, 300, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
-			for j in range(gc.getMAX_PLAYERS()):
-				if (gc.getPlayer(j).isAlive()):
-					screen.addPullDownString(self.szDropdownName, gc.getPlayer(j).getName(), j, j, False )
+			for j in range(GC.getMAX_PLAYERS()):
+				if (GC.getPlayer(j).isAlive()):
+					screen.addPullDownString(self.szDropdownName, GC.getPlayer(j).getName(), j, j, False )
 
 		if AdvisorOpt.isReligious():
 			self.X_RELIGION_AREA = 45
@@ -182,17 +172,24 @@ class CvReligionScreen:
 			self.H_RELIGION_AREA = 175 + 75
 #			screen.addPanel(szArea, "", "", False, True, self.X_RELIGION_AREA, self.Y_RELIGION_AREA - 40, self.W_RELIGION_AREA, self.H_RELIGION_AREA + 80, PanelStyles.PANEL_STYLE_MAIN)
 			if AdvisorOpt.isShowAllReligions():
-				self.RELIGIONS = ReligionUtil.getAllReligions()
+				self.RELIGIONS = range(GC.getNumReligionInfos())
 			elif AdvisorOpt.isShowFoundedReligions():
-				self.RELIGIONS = ReligionUtil.getFoundedReligions()
+				self.RELIGIONS = []
+				for iReligion in range(GC.getNumReligionInfos()):
+					if GAME.getReligionGameTurnFounded(iReligion) >= 0:
+						self.RELIGIONS.append(iReligion)
 			else:
-				self.RELIGIONS = ReligionUtil.getPlayerReligions(gc.getPlayer(self.iActivePlayer))
+				CyPlayer = GC.getPlayer(self.iActivePlayer)
+				self.RELIGIONS = []
+				for iReligion in range(GC.getNumReligionInfos()):
+					if CyPlayer.getHasReligionCount(iReligion) > 0:
+						self.RELIGIONS.append(iReligion)
 		else:
 			self.X_RELIGION_AREA = 45
 			self.Y_RELIGION_AREA = 84
 			self.W_RELIGION_AREA = 934
 			self.H_RELIGION_AREA = 175
-			self.RELIGIONS = ReligionUtil.getAllReligions() + (ReligionUtil.getNumReligions(),)
+			self.RELIGIONS = range(GC.getNumReligionInfos())
 
 		# Make the scrollable area for the religions list...
 		screen.addPanel(self.RELIGION_PANEL_ID, "", "", False, True, self.X_RELIGION_AREA, self.Y_RELIGION_AREA, self.W_RELIGION_AREA, self.H_RELIGION_AREA+5, PanelStyles.PANEL_STYLE_MAIN)
@@ -218,25 +215,25 @@ class CvReligionScreen:
 		xLoop = self.X_RELIGION_START
 		for iRel in self.RELIGIONS:
 			szButtonName = self.getReligionButtonName(iRel)
-			if gc.getGame().getReligionGameTurnFounded(iRel) >= 0:
-				screen.addCheckBoxGFCAt(szArea, szButtonName, gc.getReligionInfo(iRel).getButton(), ArtFileMgr.getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(), self.X_SCROLLABLE_RELIGION_AREA + xLoop - 25, self.Y_SCROLLABLE_RELIGION_AREA + 5, self.BUTTON_SIZE, self.BUTTON_SIZE, WidgetTypes.WIDGET_GENERAL, -1, -1, ButtonStyles.BUTTON_STYLE_LABEL, False)
+			if GAME.getReligionGameTurnFounded(iRel) >= 0:
+				screen.addCheckBoxGFCAt(szArea, szButtonName, GC.getReligionInfo(iRel).getButton(), ArtFileMgr.getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(), self.X_SCROLLABLE_RELIGION_AREA + xLoop - 25, self.Y_SCROLLABLE_RELIGION_AREA + 5, self.BUTTON_SIZE, self.BUTTON_SIZE, WidgetTypes.WIDGET_GENERAL, -1, -1, ButtonStyles.BUTTON_STYLE_LABEL, False)
 			else:
-				screen.setImageButtonAt(szButtonName, szArea, gc.getReligionInfo(iRel).getButtonDisabled(), self.X_SCROLLABLE_RELIGION_AREA + xLoop - 25, self.Y_SCROLLABLE_RELIGION_AREA + 5, self.BUTTON_SIZE, self.BUTTON_SIZE, WidgetTypes.WIDGET_GENERAL, -1, -1)
+				screen.setImageButtonAt(szButtonName, szArea, GC.getReligionInfo(iRel).getButtonDisabled(), self.X_SCROLLABLE_RELIGION_AREA + xLoop - 25, self.Y_SCROLLABLE_RELIGION_AREA + 5, self.BUTTON_SIZE, self.BUTTON_SIZE, WidgetTypes.WIDGET_GENERAL, -1, -1)
 			szName = self.getReligionTextName(iRel)
-			szLabel = gc.getReligionInfo(iRel).getDescription()
+			szLabel = GC.getReligionInfo(iRel).getDescription()
 #			if (self.iReligionSelected == iRel):
-#				szLabel = localText.changeTextColor(szLabel, gc.getInfoTypeForString("COLOR_YELLOW"))
-			screen.setLabelAt(szName, szArea, szLabel, CvUtil.FONT_CENTER_JUSTIFY, self.X_SCROLLABLE_RELIGION_AREA + xLoop, self.Y_RELIGION_NAME, self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+#				szLabel = localText.changeTextColor(szLabel, GC.getInfoTypeForString("COLOR_YELLOW"))
+			screen.setLabelAt(szName, szArea, szLabel, 1<<2, self.X_SCROLLABLE_RELIGION_AREA + xLoop, self.Y_RELIGION_NAME, self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 			xLoop += self.DX_RELIGION
 
-		szButtonName = self.getReligionButtonName(gc.getNumReligionInfos())
+		szButtonName = self.getReligionButtonName(GC.getNumReligionInfos())
 		screen.addCheckBoxGFCAt(szArea, szButtonName, self.NO_STATE_BUTTON_ART, ArtFileMgr.getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(), self.X_SCROLLABLE_RELIGION_AREA + xLoop - 25, self.Y_SCROLLABLE_RELIGION_AREA + 5, self.BUTTON_SIZE, self.BUTTON_SIZE, WidgetTypes.WIDGET_GENERAL, -1, -1, ButtonStyles.BUTTON_STYLE_LABEL, False)
 
-		szName = self.getReligionTextName(gc.getNumReligionInfos())
+		szName = self.getReligionTextName(GC.getNumReligionInfos())
 		szLabel = localText.getText("TXT_KEY_RELIGION_SCREEN_NO_STATE", ())
-#		if (self.iReligionSelected == gc.getNumReligionInfos()):
-#			szLabel = localText.changeTextColor(szLabel, gc.getInfoTypeForString("COLOR_YELLOW"))
-		screen.setLabelAt(szName, szArea, szLabel, CvUtil.FONT_CENTER_JUSTIFY,  self.X_SCROLLABLE_RELIGION_AREA + xLoop, self.Y_RELIGION_NAME, self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+#		if (self.iReligionSelected == GC.getNumReligionInfos()):
+#			szLabel = localText.changeTextColor(szLabel, GC.getInfoTypeForString("COLOR_YELLOW"))
+		screen.setLabelAt(szName, szArea, szLabel, 1<<2,  self.X_SCROLLABLE_RELIGION_AREA + xLoop, self.Y_RELIGION_NAME, self.DZ, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 
 	def drawHelpInfo(self):
@@ -248,51 +245,51 @@ class CvReligionScreen:
 		## This attaches the text to the panel
 		## This is for every line of font
 		# Founded...
-		screen.setLabelAt("", szArea, localText.getText("TXT_KEY_RELIGION_SCREEN_DATE_FOUNDED", ()), CvUtil.FONT_LEFT_JUSTIFY, self.LEFT_EDGE_TEXT, self.Y_FOUNDED, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+		screen.setLabelAt("", szArea, localText.getText("TXT_KEY_RELIGION_SCREEN_DATE_FOUNDED", ()), 1<<0, self.LEFT_EDGE_TEXT, self.Y_FOUNDED, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		# Date Founded:
 		xLoop = self.X_RELIGION_START
 		for iRel in self.RELIGIONS:
-			if (gc.getGame().getReligionGameTurnFounded(iRel) >= 0):
-				szFounded = CyGameTextMgr().getTimeStr(gc.getGame().getReligionGameTurnFounded(iRel), False)
-				screen.setLabelAt("", szArea, szFounded, CvUtil.FONT_CENTER_JUSTIFY, xLoop, self.Y_FOUNDED, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+			if GAME.getReligionGameTurnFounded(iRel) >= 0:
+				szFounded = CyGameTextMgr().getTimeStr(GAME.getReligionGameTurnFounded(iRel), False)
+				screen.setLabelAt("", szArea, szFounded, 1<<2, xLoop, self.Y_FOUNDED, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 			xLoop += self.DX_RELIGION
 
-#		screen.setLabelAt("", szArea, "", CvUtil.FONT_CENTER_JUSTIFY, xLoop, self.Y_FOUNDED, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+#		screen.setLabelAt("", szArea, "", 1<<2, xLoop, self.Y_FOUNDED, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		# Holy City...
-		screen.setLabelAt("", szArea, localText.getText("TXT_KEY_RELIGION_SCREEN_HOLY_CITY", ()), CvUtil.FONT_LEFT_JUSTIFY, self.LEFT_EDGE_TEXT, self.Y_HOLY_CITY, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+		screen.setLabelAt("", szArea, localText.getText("TXT_KEY_RELIGION_SCREEN_HOLY_CITY", ()), 1<<0, self.LEFT_EDGE_TEXT, self.Y_HOLY_CITY, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		xLoop = self.X_RELIGION_START
 		for iRel in self.RELIGIONS:
-			if (gc.getGame().getReligionGameTurnFounded(iRel) >= 0):
-				pHolyCity = gc.getGame().getHolyCity(iRel)
+			if GAME.getReligionGameTurnFounded(iRel) >= 0:
+				pHolyCity = GAME.getHolyCity(iRel)
 				if pHolyCity.isNone():
 					szFounded = localText.getText("TXT_KEY_NONE", ())
-					screen.setLabelAt("", szArea, szFounded, CvUtil.FONT_CENTER_JUSTIFY, xLoop, self.Y_HOLY_CITY, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-				elif not pHolyCity.isRevealed(gc.getPlayer(self.iActivePlayer).getTeam(), False):
+					screen.setLabelAt("", szArea, szFounded, 1<<2, xLoop, self.Y_HOLY_CITY, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+				elif not pHolyCity.isRevealed(GC.getPlayer(self.iActivePlayer).getTeam(), False):
 					szFounded = localText.getText("TXT_KEY_UNKNOWN", ())
-					screen.setLabelAt("", szArea, szFounded, CvUtil.FONT_CENTER_JUSTIFY, xLoop, self.Y_HOLY_CITY, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+					screen.setLabelAt("", szArea, szFounded, 1<<2, xLoop, self.Y_HOLY_CITY, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 				else:
 					szFounded = pHolyCity.getName()
-					screen.setLabelAt("", szArea, u"(%s)" % gc.getPlayer(pHolyCity.getOwner()).getCivilizationAdjective(0), CvUtil.FONT_CENTER_JUSTIFY, xLoop, self.Y_HOLY_CITY+8, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-					screen.setLabelAt("", szArea, szFounded, CvUtil.FONT_CENTER_JUSTIFY, xLoop, self.Y_HOLY_CITY-8, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+					screen.setLabelAt("", szArea, u"(%s)" % GC.getPlayer(pHolyCity.getOwner()).getCivilizationAdjective(0), 1<<2, xLoop, self.Y_HOLY_CITY+8, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+					screen.setLabelAt("", szArea, szFounded, 1<<2, xLoop, self.Y_HOLY_CITY-8, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 #			else:
 #				szFounded = "-"
-#				screen.setLabelAt("", szArea, szFounded, CvUtil.FONT_CENTER_JUSTIFY, xLoop, self.Y_HOLY_CITY, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+#				screen.setLabelAt("", szArea, szFounded, 1<<2, xLoop, self.Y_HOLY_CITY, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 			xLoop += self.DX_RELIGION
 
 		# Influence...
-		screen.setLabelAt("", szArea, localText.getText("TXT_KEY_RELIGION_SCREEN_INFLUENCE", ()), CvUtil.FONT_LEFT_JUSTIFY, self.LEFT_EDGE_TEXT, self.Y_INFLUENCE, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+		screen.setLabelAt("", szArea, localText.getText("TXT_KEY_RELIGION_SCREEN_INFLUENCE", ()), 1<<0, self.LEFT_EDGE_TEXT, self.Y_INFLUENCE, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		xLoop = self.X_RELIGION_START
 		for iRel in self.RELIGIONS:
-			if (gc.getGame().getReligionGameTurnFounded(iRel) >= 0):
-				szFounded = str(gc.getGame().calculateReligionPercent(iRel)) + "%"
-				screen.setLabelAt("", szArea, szFounded, CvUtil.FONT_CENTER_JUSTIFY, xLoop, self.Y_INFLUENCE, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+			if GAME.getReligionGameTurnFounded(iRel) >= 0:
+				szFounded = str(GAME.calculateReligionPercent(iRel)) + "%"
+				screen.setLabelAt("", szArea, szFounded, 1<<2, xLoop, self.Y_INFLUENCE, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 #			else:
 #				szFounded = "-"
-#				screen.setLabelAt("", szArea, szFounded, CvUtil.FONT_CENTER_JUSTIFY, xLoop, self.Y_INFLUENCE, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+#				screen.setLabelAt("", szArea, szFounded, 1<<2, xLoop, self.Y_INFLUENCE, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 			xLoop += self.DX_RELIGION
 
 		if AdvisorOpt.isReligious():
@@ -308,7 +305,6 @@ class CvReligionScreen:
 			iMissionaries_Construct = [0] * self.NUM_RELIGIONS
 
 			for pLoopCity in cityList:
-				lHolyCity = pLoopCity.getHolyCity()
 				lReligions = pLoopCity.getReligions()
 
 				for iRel in self.RELIGIONS:
@@ -316,75 +312,54 @@ class CvReligionScreen:
 					if iRel in lReligions:
 						iCities[iRel] += 1
 
-					# count the number of temples
-					iBldg = ReligionUtil.getBuilding(iRel, ReligionUtil.BUILDING_TEMPLE)
-					if self.calculateBuilding(pLoopCity, iBldg) == self.objectHave:
-						iTemple[iRel] += 1
-
-					# count the number of monasteries
-					iBldg = ReligionUtil.getBuilding(iRel, ReligionUtil.BUILDING_MONASTERY)
-					if self.calculateBuilding(pLoopCity, iBldg) == self.objectHave:
-						iMonastery[iRel] += 1
-
-					# count the number of missionaries under construction
-					iUnit = ReligionUtil.getUnit(iRel, ReligionUtil.UNIT_MISSIONARY)
-					if pLoopCity.GetCy().getFirstUnitOrder(iUnit) != -1:
-						iMissionaries_Construct[iRel] += 1
-
-			# count the number of active missionaries
-			for iUnit in PlayerUtil.playerUnits(self.iActivePlayer):
-				for iRel in self.RELIGIONS:
-					if iUnit.getUnitType() == ReligionUtil.getUnit(iRel, ReligionUtil.UNIT_MISSIONARY):
-						iMissionaries_Active[iRel] += 1
-
 			# number of cities...
 			iY = self.Y_INFLUENCE + 20
 			sCities = "%s [%i]:" % (self.szCities, len(cityList))
-			screen.setLabelAt("", szArea, sCities, CvUtil.FONT_LEFT_JUSTIFY, self.LEFT_EDGE_TEXT, iY, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+			screen.setLabelAt("", szArea, sCities, 1<<0, self.LEFT_EDGE_TEXT, iY, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 			xLoop = self.X_RELIGION_START
 			for iRel in self.RELIGIONS:
-				if (gc.getGame().getReligionGameTurnFounded(iRel) >= 0):
+				if GAME.getReligionGameTurnFounded(iRel) >= 0:
 					szFounded = "%i" % (iCities[iRel])
-					screen.setLabelAt("", szArea, szFounded, CvUtil.FONT_CENTER_JUSTIFY, xLoop, iY, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+					screen.setLabelAt("", szArea, szFounded, 1<<2, xLoop, iY, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 				xLoop += self.DX_RELIGION
 
 			# number of temples...
 			iY = self.Y_INFLUENCE + 40
-			screen.setLabelAt("", szArea, self.szTemples, CvUtil.FONT_LEFT_JUSTIFY, self.LEFT_EDGE_TEXT, iY, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+			screen.setLabelAt("", szArea, self.szTemples, 1<<0, self.LEFT_EDGE_TEXT, iY, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 			xLoop = self.X_RELIGION_START
 			for iRel in self.RELIGIONS:
-				if (gc.getGame().getReligionGameTurnFounded(iRel) >= 0):
+				if GAME.getReligionGameTurnFounded(iRel) >= 0:
 					szFounded = "%i" % (iTemple[iRel])
-					screen.setLabelAt("", szArea, szFounded, CvUtil.FONT_CENTER_JUSTIFY, xLoop, iY, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+					screen.setLabelAt("", szArea, szFounded, 1<<2, xLoop, iY, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 				xLoop += self.DX_RELIGION
 
 			# number of monasteries...
 			iY = self.Y_INFLUENCE + 60
-			screen.setLabelAt("", szArea, self.szMonastaries, CvUtil.FONT_LEFT_JUSTIFY, self.LEFT_EDGE_TEXT, iY, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+			screen.setLabelAt("", szArea, self.szMonastaries, 1<<0, self.LEFT_EDGE_TEXT, iY, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 			xLoop = self.X_RELIGION_START
 			for iRel in self.RELIGIONS:
-				if (gc.getGame().getReligionGameTurnFounded(iRel) >= 0):
+				if GAME.getReligionGameTurnFounded(iRel) >= 0:
 					szFounded = "%i" % (iMonastery[iRel])
-					screen.setLabelAt("", szArea, szFounded, CvUtil.FONT_CENTER_JUSTIFY, xLoop, iY, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+					screen.setLabelAt("", szArea, szFounded, 1<<2, xLoop, iY, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 				xLoop += self.DX_RELIGION
 
 			# number of missionaries...
 			iY = self.Y_INFLUENCE + 80
-			screen.setLabelAt("", szArea, self.szMissionaries, CvUtil.FONT_LEFT_JUSTIFY, self.LEFT_EDGE_TEXT, iY, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+			screen.setLabelAt("", szArea, self.szMissionaries, 1<<0, self.LEFT_EDGE_TEXT, iY, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 			xLoop = self.X_RELIGION_START
 			for iRel in self.RELIGIONS:
-				if (gc.getGame().getReligionGameTurnFounded(iRel) >= 0):
+				if GAME.getReligionGameTurnFounded(iRel) >= 0:
 					szFounded = "%i [%i]" % (iMissionaries_Active[iRel], iMissionaries_Construct[iRel])
-					screen.setLabelAt("", szArea, szFounded, CvUtil.FONT_CENTER_JUSTIFY, xLoop, iY, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+					screen.setLabelAt("", szArea, szFounded, 1<<2, xLoop, iY, self.DZ, FontTypes.SMALL_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 				xLoop += self.DX_RELIGION
 
-		self.iReligionSelected = gc.getPlayer(self.iActivePlayer).getStateReligion()
+		self.iReligionSelected = GC.getPlayer(self.iActivePlayer).getStateReligion()
 		if (self.iReligionSelected == -1):
-			self.iReligionSelected = gc.getNumReligionInfos()
+			self.iReligionSelected = GC.getNumReligionInfos()
 		self.iReligionExamined = self.iReligionSelected
 		self.iReligionOriginal = self.iReligionSelected
 
@@ -397,7 +372,7 @@ class CvReligionScreen:
 		self.bBUGConstants = True
 
 		# BUG additions
-		self.hammerIcon = u"%c" %(gc.getYieldInfo(YieldTypes.YIELD_PRODUCTION).getChar())
+		self.hammerIcon = u"%c" %(GC.getYieldInfo(YieldTypes.YIELD_PRODUCTION).getChar())
 
 		# Special symbols for building, wonder and project views
 		self.objectIsPresent = "x"
@@ -406,12 +381,12 @@ class CvReligionScreen:
 		self.objectUnderConstruction = self.hammerIcon
 
 		# add the colors dependant on the statuses
-		self.objectHave = localText.changeTextColor (self.objectIsPresent, gc.getInfoTypeForString("COLOR_GREEN")) #"x"
-		self.objectNotPossible = localText.changeTextColor (self.objectIsNotPresent, gc.getInfoTypeForString("COLOR_RED")) #"-"
-		self.objectPossible = localText.changeTextColor (self.objectCanBeBuild, gc.getInfoTypeForString("COLOR_BLUE")) #"o"
-		self.objectHaveObsolete = localText.changeTextColor (self.objectIsPresent, gc.getInfoTypeForString("COLOR_WHITE")) #"x"
-		self.objectNotPossibleConcurrent = localText.changeTextColor (self.objectIsNotPresent, gc.getInfoTypeForString("COLOR_YELLOW")) #"-"
-		self.objectPossibleConcurrent = localText.changeTextColor (self.objectCanBeBuild, gc.getInfoTypeForString("COLOR_YELLOW")) #"o"
+		self.objectHave = localText.changeTextColor (self.objectIsPresent, GC.getInfoTypeForString("COLOR_GREEN")) #"x"
+		self.objectNotPossible = localText.changeTextColor (self.objectIsNotPresent, GC.getInfoTypeForString("COLOR_RED")) #"-"
+		self.objectPossible = localText.changeTextColor (self.objectCanBeBuild, GC.getInfoTypeForString("COLOR_BLUE")) #"o"
+		self.objectHaveObsolete = localText.changeTextColor (self.objectIsPresent, GC.getInfoTypeForString("COLOR_WHITE")) #"x"
+		self.objectNotPossibleConcurrent = localText.changeTextColor (self.objectIsNotPresent, GC.getInfoTypeForString("COLOR_YELLOW")) #"-"
+		self.objectPossibleConcurrent = localText.changeTextColor (self.objectCanBeBuild, GC.getInfoTypeForString("COLOR_YELLOW")) #"o"
 
 		self.szCities = localText.getText("TXT_KEY_BUG_RELIGIOUS_CITY", ())
 		self.szTemples = localText.getText("TXT_KEY_BUG_RELIGIOUS_TEMPLE", ())
@@ -422,7 +397,7 @@ class CvReligionScreen:
 		self.sCity = localText.getText("TXT_KEY_WONDER_CITY", ())
 
 		# scroll offset
-		if ReligionUtil.getNumReligions() > 7:
+		if GC.getNumReligionInfos() > 7:
 			self.H_SCROLL_OFFSET = 20
 		else:
 			self.H_SCROLL_OFFSET = 0
@@ -436,7 +411,7 @@ class CvReligionScreen:
 
 		screen = self.getScreen()
 
-		if (iReligion == gc.getNumReligionInfos()):
+		if (iReligion == GC.getNumReligionInfos()):
 			iLinkReligion = -1
 		else:
 			iLinkReligion = iReligion
@@ -457,10 +432,10 @@ class CvReligionScreen:
 			else:
 				screen.setState(self.getReligionButtonName(iRel), False)
 
-		if (self.iReligionSelected == gc.getNumReligionInfos()):
-			screen.setState(self.getReligionButtonName(gc.getNumReligionInfos()), True)
+		if (self.iReligionSelected == GC.getNumReligionInfos()):
+			screen.setState(self.getReligionButtonName(GC.getNumReligionInfos()), True)
 		else:
-			screen.setState(self.getReligionButtonName(gc.getNumReligionInfos()), False)
+			screen.setState(self.getReligionButtonName(GC.getNumReligionInfos()), False)
 
 		iPlayer = PyPlayer(self.iActivePlayer)
 		cityList = iPlayer.getCityList()
@@ -476,17 +451,9 @@ class CvReligionScreen:
 			screen.setTableColumnHeader(self.TABLE_ID, self.COL_CITY_NAME, self.sCity, 115)
 
 			for iRel in range(self.NUM_RELIGIONS):   # columns for religious icons
-				if (gc.getGame().getReligionGameTurnFounded(iRel) >= 0):
-					szReligionIcon = u"<font=2>%c</font>" %(gc.getReligionInfo(iRel).getChar())
+				if GAME.getReligionGameTurnFounded(iRel) >= 0:
+					szReligionIcon = u"<font=2>%c</font>" %(GC.getReligionInfo(iRel).getChar())
 					screen.setTableColumnHeader(self.TABLE_ID, self.COL_FIRST_RELIGION + iRel, szReligionIcon, 25)
-
-			# columns for units (missionaries)
-			for type in ReligionUtil.getUnitTypes():
-				screen.setTableColumnHeader(self.TABLE_ID, self.COL_FIRST_UNIT + type.index, u"<font=2>%s</font>" % type.icon, 30)
-
-			# columns for buildings (temples, monasteries, cathedral, shrine)
-			for type in ReligionUtil.getBuildingTypes():
-				screen.setTableColumnHeader(self.TABLE_ID, self.COL_FIRST_BUILDING + type.index, u"<font=2>%s</font>" % type.icon, 30)
 
 			# column for religious impact
 			screen.setTableColumnHeader(self.TABLE_ID, self.COL_EFFECTS, "", 400)
@@ -496,39 +463,21 @@ class CvReligionScreen:
 				pLoopCity = cityList[iCity]
 
 				screen.appendTableRow(self.TABLE_ID)
-				screen.setTableText(self.TABLE_ID, self.COL_ZOOM_CITY, iCity, "" , self.zoomArt, WidgetTypes.WIDGET_ZOOM_CITY, pLoopCity.getOwner(), pLoopCity.getID(), CvUtil.FONT_LEFT_JUSTIFY)
-				screen.setTableText(self.TABLE_ID, self.COL_CITY_NAME, iCity, pLoopCity.getName(), "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+				screen.setTableText(self.TABLE_ID, self.COL_ZOOM_CITY, iCity, "" , self.zoomArt, WidgetTypes.WIDGET_ZOOM_CITY, pLoopCity.getOwner(), pLoopCity.getID(), 1<<0)
+				screen.setTableText(self.TABLE_ID, self.COL_CITY_NAME, iCity, pLoopCity.getName(), "", WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
 
 				lHolyCity = pLoopCity.getHolyCity()
 				lReligions = pLoopCity.getReligions()
 
 				for iRel in range(self.NUM_RELIGIONS):
-					if (gc.getGame().getReligionGameTurnFounded(iRel) >= 0):
+					if GAME.getReligionGameTurnFounded(iRel) >= 0:
 						szReligionIcon = ""
 						if iRel in lHolyCity:
-							szReligionIcon = u"<font=2>%c</font>" %(gc.getReligionInfo(iRel).getHolyCityChar())
+							szReligionIcon = u"<font=2>%c</font>" %(GC.getReligionInfo(iRel).getHolyCityChar())
 						elif iRel in lReligions:
-							szReligionIcon = u"<font=2>%c</font>" %(gc.getReligionInfo(iRel).getChar())
+							szReligionIcon = u"<font=2>%c</font>" %(GC.getReligionInfo(iRel).getChar())
 
-						screen.setTableText(self.TABLE_ID, self.COL_FIRST_RELIGION + iRel, iCity, szReligionIcon, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_CENTER_JUSTIFY)
-
-				if ReligionUtil.isValid(iReligion):
-					# check for missionaries
-					for i in range(ReligionUtil.getNumUnitTypes()):
-						iUnit = ReligionUtil.getUnit(iReligion, i)
-						if pLoopCity.GetCy().getFirstUnitOrder(iUnit) != -1:
-							sUnit = self.objectUnderConstruction
-						elif pLoopCity.GetCy().canTrain(iUnit, False, False, False, False):
-							sUnit = self.objectPossible
-						else:
-							sUnit = self.objectNotPossible
-						screen.setTableText(self.TABLE_ID, self.COL_FIRST_UNIT + i, iCity, sUnit, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_CENTER_JUSTIFY)
-
-					# check for temples, cathedral, monasteries, shrine
-					for i in range(ReligionUtil.getNumBuildingTypes()):
-						iBldg = ReligionUtil.getBuilding(iReligion, i)
-						sBldg = self.calculateBuilding(pLoopCity, iBldg)
-						screen.setTableText(self.TABLE_ID, self.COL_FIRST_BUILDING + i, iCity, sBldg, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_CENTER_JUSTIFY)
+						screen.setTableText(self.TABLE_ID, self.COL_FIRST_RELIGION + iRel, iCity, szReligionIcon, "", WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<2)
 
 				if (iLinkReligion == -1):
 					bFirst = True
@@ -543,7 +492,7 @@ class CvReligionScreen:
 				else:
 					sHelp = CyGameTextMgr().getReligionHelpCity(iLinkReligion, pLoopCity.GetCy(), False, False, True, False)
 
-				screen.setTableText(self.TABLE_ID, self.COL_EFFECTS, iCity, sHelp, "", WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+				screen.setTableText(self.TABLE_ID, self.COL_EFFECTS, iCity, sHelp, "", WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
 
 # start of BUG indent of original code
 		else:
@@ -564,18 +513,18 @@ class CvReligionScreen:
 				lHolyCity = pLoopCity.getHolyCity()
 				if lHolyCity:
 					for iI in range(len(lHolyCity)):
-						szCityName += u"%c" %(gc.getReligionInfo(lHolyCity[iI]).getHolyCityChar())
+						szCityName += u"%c" %(GC.getReligionInfo(lHolyCity[iI]).getHolyCityChar())
 
 				lReligions = pLoopCity.getReligions()
 				if lReligions:
 					for iI in range(len(lReligions)):
 						if lReligions[iI] not in lHolyCity:
-							szCityName += u"%c" %(gc.getReligionInfo(lReligions[iI]).getChar())
+							szCityName += u"%c" %(GC.getReligionInfo(lReligions[iI]).getChar())
 
 				szCityName += pLoopCity.getName()[0:17] + "  "
 
 				#phungus Enlightened Start
-				if (iLinkReligion == -1) or (gc.getPlayer(self.iActivePlayer).isNonStateReligionCommerce()):
+				if (iLinkReligion == -1) or (GC.getPlayer(self.iActivePlayer).isNonStateReligionCommerce()):
 					bFirst = True
 					for iI in range(len(lReligions)):
 						if (iLinkReligion > -1):
@@ -599,26 +548,26 @@ class CvReligionScreen:
 				else:
 					szRightCities += u"<font=3>" + szCityName + u"</font>\n"
 
-			screen.addMultilineText("Child" + self.AREA1_ID, szLeftCities, self.X_CITY1_AREA+5, self.Y_CITY_AREA+5, self.W_CITY_AREA-10, self.H_CITY_AREA-10, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
-			screen.addMultilineText("Child" + self.AREA2_ID, szRightCities, self.X_CITY2_AREA+5, self.Y_CITY_AREA+5, self.W_CITY_AREA-10, self.H_CITY_AREA-10, WidgetTypes.WIDGET_GENERAL, -1, -1, CvUtil.FONT_LEFT_JUSTIFY)
+			screen.addMultilineText("Child" + self.AREA1_ID, szLeftCities, self.X_CITY1_AREA+5, self.Y_CITY_AREA+5, self.W_CITY_AREA-10, self.H_CITY_AREA-10, WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
+			screen.addMultilineText("Child" + self.AREA2_ID, szRightCities, self.X_CITY2_AREA+5, self.Y_CITY_AREA+5, self.W_CITY_AREA-10, self.H_CITY_AREA-10, WidgetTypes.WIDGET_GENERAL, -1, -1, 1<<0)
 # end of BUG indent of original code
 
 		# Convert Button....
 		iLink = 0
-		if (gc.getPlayer(self.iActivePlayer).canChangeReligion()):
+		if (GC.getPlayer(self.iActivePlayer).canChangeReligion()):
 			iLink = 1
 
 		if (not self.canConvert(iLinkReligion) or iLinkReligion == self.iReligionOriginal):
-			screen.setText(self.CONVERT_NAME, "Background", self.EXIT_TEXT, CvUtil.FONT_RIGHT_JUSTIFY, self.X_EXIT, self.Y_EXIT, self.Z_TEXT, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 0)
+			screen.setText(self.CONVERT_NAME, "Background", self.EXIT_TEXT, 1<<1, self.X_EXIT, self.Y_EXIT, self.Z_TEXT, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, 1, 0)
 			screen.hide(self.CANCEL_NAME)
 			szAnarchyTime = CyGameTextMgr().setConvertHelp(self.iActivePlayer, iLinkReligion)
 		else:
-			screen.setText(self.CONVERT_NAME, "Background", self.CONVERT_TEXT, CvUtil.FONT_RIGHT_JUSTIFY, self.X_EXIT, self.Y_EXIT, self.Z_TEXT, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CONVERT, iLinkReligion, 1)
+			screen.setText(self.CONVERT_NAME, "Background", self.CONVERT_TEXT, 1<<1, self.X_EXIT, self.Y_EXIT, self.Z_TEXT, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CONVERT, iLinkReligion, 1)
 			screen.show(self.CANCEL_NAME)
-			szAnarchyTime = localText.getText("TXT_KEY_ANARCHY_TURNS", (gc.getPlayer(self.iActivePlayer).getReligionAnarchyLength(), ))
+			szAnarchyTime = localText.getText("TXT_KEY_ANARCHY_TURNS", (GC.getPlayer(self.iActivePlayer).getReligionAnarchyLength(), ))
 
 		# Turns of Anarchy Text...
-		screen.setLabel(self.RELIGION_ANARCHY_WIDGET, "Background", u"<font=3>" + szAnarchyTime + u"</font>", CvUtil.FONT_LEFT_JUSTIFY, self.X_ANARCHY, self.Y_ANARCHY, self.Z_TEXT, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
+		screen.setLabel(self.RELIGION_ANARCHY_WIDGET, "Background", u"<font=3>" + szAnarchyTime + u"</font>", 1<<0, self.X_ANARCHY, self.Y_ANARCHY, self.Z_TEXT, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 	def getReligionButtonName(self, iReligion):
 		szName = self.BUTTON_NAME + str(iReligion)
@@ -629,13 +578,13 @@ class CvReligionScreen:
 		return szName
 
 	def canConvert(self, iReligion):
-		iCurrentReligion = gc.getPlayer(self.iActivePlayer).getStateReligion()
-		if (iReligion == gc.getNumReligionInfos()):
+		iCurrentReligion = GC.getPlayer(self.iActivePlayer).getStateReligion()
+		if (iReligion == GC.getNumReligionInfos()):
 			iConvertReligion = -1
 		else:
 			iConvertReligion = iReligion
 
-		return (iConvertReligion != iCurrentReligion and gc.getPlayer(self.iActivePlayer).canConvert(iConvertReligion))
+		return (iConvertReligion != iCurrentReligion and GC.getPlayer(self.iActivePlayer).canConvert(iConvertReligion))
 
 	# Will handle the input for this screen...
 	def handleInput (self, inputClass):
@@ -660,7 +609,7 @@ class CvReligionScreen:
 		elif (szWidgetName == self.TABLE_ID):
 			if (inputClass.getMouseX() == 0):
 				screen.hideScreen()
-				pPlayer = gc.getPlayer(inputClass.getData1())
+				pPlayer = GC.getPlayer(inputClass.getData1())
 				pCity = pPlayer.getCity(inputClass.getData2())
 #				CyCamera().JustLookAtPlot(pCity.plot())
 
@@ -682,12 +631,12 @@ class CvReligionScreen:
 	# Religion Button
 	def ReligionScreenButton( self, inputClass ):
 		if ( inputClass.getNotifyCode() == NotifyCode.NOTIFY_CLICKED ) :
-			if (inputClass.getID() == gc.getNumReligionInfos() or gc.getGame().getReligionGameTurnFounded(inputClass.getID()) >= 0) :
+			if (inputClass.getID() == GC.getNumReligionInfos() or GAME.getReligionGameTurnFounded(inputClass.getID()) >= 0) :
 				self.iReligionSelected = inputClass.getID()
 				self.iReligionExamined = self.iReligionSelected
 				self.drawCityInfo(self.iReligionSelected)
 		elif ( inputClass.getNotifyCode() == NotifyCode.NOTIFY_CURSOR_MOVE_ON ) :
-			if ( inputClass.getID() == gc.getNumReligionInfos() or gc.getGame().getReligionGameTurnFounded(inputClass.getID()) >= 0) :
+			if ( inputClass.getID() == GC.getNumReligionInfos() or GAME.getReligionGameTurnFounded(inputClass.getID()) >= 0) :
 				self.iReligionExamined = inputClass.getID()
 				self.drawCityInfo(self.iReligionExamined)
 		elif ( inputClass.getNotifyCode() == NotifyCode.NOTIFY_CURSOR_MOVE_OFF ) :
@@ -705,7 +654,7 @@ class CvReligionScreen:
 		if (inputClass.getNotifyCode() == NotifyCode.NOTIFY_CLICKED) :
 			self.iReligionSelected = self.iReligionOriginal
 			if (-1 == self.iReligionSelected):
-				self.iReligionSelected = gc.getNumReligionInfos()
+				self.iReligionSelected = GC.getNumReligionInfos()
 			self.drawCityInfo(self.iReligionSelected)
 
 	def calculateBuilding (self, city, bldg):

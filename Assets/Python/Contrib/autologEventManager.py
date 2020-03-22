@@ -335,26 +335,21 @@ class AutoLogEvent(AbstractAutoLogEvent):
 			self.checkStuff()
 			self.storeStuff()
 
-			zcurrturn = GAME.getElapsedGameTurns() + 1 + AutologOpt.get4000BCTurn()
-			zmaxturn = GAME.getMaxTurns()
-			zturn = GAME.getGameTurn() + 1
-			zyear = GAME.getTurnYear(zturn)
-			if (zyear < 0):
-				zyear = str(-zyear) + BugUtil.getPlainText("TXT_KEY_AUTOLOG_BC")
+			iMaxTurns = GAME.getMaxTurns()
+			year = GAME.getTurnYear(iGameTurn + 1)
+			if year < 0:
+				year = TRNSLTR.getText("TXT_KEY_TIME_BC", (-year,))
 			else:
-				zyear = str(zyear) + BugUtil.getPlainText("TXT_KEY_AUTOLOG_AD")
-			zCurrDateTime = time.strftime("%d-%b-%Y %H:%M:%S")
+				year = TRNSLTR.getText("TXT_KEY_TIME_AD", (year,))
 
-			if (zmaxturn == 0):
-				zsTurn = "%i" % (zcurrturn)
+			if iMaxTurns:
+				sTurn = "%i/%i" %(GAME.getElapsedGameTurns() + 1 + AutologOpt.get4000BCTurn(), iMaxTurns)
 			else:
-				zsTurn = "%i/%i" % (zcurrturn, zmaxturn)
-
-			message = TRNSLTR.getText("TXT_KEY_AUTOLOG_TURN", (zsTurn, zyear, zCurrDateTime))
+				sTurn = "%i" % GAME.getElapsedGameTurns() + 1 + AutologOpt.get4000BCTurn()
 
 			Logger.writeLog_pending_flush()
 			Logger.writeLog_pending("")
-			Logger.writeLog_pending(message, vBold=True, vUnderline=True)
+			Logger.writeLog_pending(TRNSLTR.getText("TXT_KEY_AUTOLOG_TURN", (sTurn, year, time.strftime("%d-%b-%Y %H:%M:%S"))), vBold=True, vUnderline=True)
 
 		self.bHumanPlaying = True
 		self.bHumanEndTurn = False

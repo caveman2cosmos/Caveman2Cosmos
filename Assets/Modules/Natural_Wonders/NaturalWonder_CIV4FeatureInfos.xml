@@ -6,7 +6,6 @@
 			<Description>TXT_KEY_FEATURE_AUYANTEPUI</Description>
 			<Civilopedia>TXT_KEY_FEATURE_AUYANTEPUI_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_FEATURE_AUYANTEPUI</ArtDefineTag>
-			<iSeeThrough>0</iSeeThrough>
 			<bNoCoast>1</bNoCoast>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bNoCity>1</bNoCity>
@@ -25,7 +24,6 @@
 			<Type>FEATURE_PLATY_GREAT_BARRIER</Type>
 			<Description>TXT_KEY_FEATURE_GREAT_BARRIER</Description>
 			<Civilopedia>TXT_KEY_FEATURE_GREAT_BARRIER_PEDIA</Civilopedia>
-			<!--ArtDefineTag>ART_DEF_FEATURE_GREAT_BARRIER</ArtDefineTag-->
 			<ArtDefineTag>ART_DEF_FEATURE_CORAL_REEF</ArtDefineTag>
 			<iMovement>5</iMovement>
 			<iSeeThrough>1</iSeeThrough>
@@ -54,7 +52,6 @@
 			<Type>FEATURE_GREAT_BARRIER_REEF_BEACON</Type>
 			<Description>TXT_KEY_FEATURE_GREAT_BARRIER_REEF_BEACON</Description>
 			<Civilopedia>TXT_KEY_FEATURE_GREAT_BARRIER_PEDIA</Civilopedia>
-			<!--ArtDefineTag>ART_DEF_FEATURE_GREAT_BARRIER</ArtDefineTag-->
 			<ArtDefineTag>ART_DEF_FEATURE_CORAL_REEF</ArtDefineTag>
 			<iMovement>2</iMovement>
 			<iSeeThrough>1</iSeeThrough>
@@ -403,6 +400,7 @@
 			<Description>TXT_KEY_FEATURE_NGORONGORO_CRATER</Description>
 			<Civilopedia>TXT_KEY_FEATURE_NGORONGORO_CRATER_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_FEATURE_NGORONGORO_CRATER</ArtDefineTag>
+			<bAddsFreshWater>1</bAddsFreshWater>
 			<iMovement>1</iMovement>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bNoCity>1</bNoCity>

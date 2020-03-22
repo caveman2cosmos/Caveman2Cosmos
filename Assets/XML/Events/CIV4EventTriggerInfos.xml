@@ -3054,7 +3054,7 @@
 			<bProbabilityUnitMultiply>1</bProbabilityUnitMultiply>
 			<UnitsRequired>
 				<UnitType>UNIT_AXEMAN</UnitType>
-				<UnitType>UNIT_STONE_AGE_AXEMAN</UnitType>
+				<UnitType>UNIT_STONE_AXEMAN</UnitType>
 				<UnitType>UNIT_OBSIDIAN_AXEMAN</UnitType>
 				<UnitType>UNIT_HEAVY_AXEMAN</UnitType>
 			</UnitsRequired>
@@ -4191,7 +4191,7 @@
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
 				<Building>BUILDING_FORGE</Building>
-				<Building>BUILDING_JEWELLERY</Building>
+				<Building>BUILDING_JEWELER</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<iNumBuildingsGlobal>1</iNumBuildingsGlobal>
@@ -4968,7 +4968,7 @@
 				<UnitType>UNIT_BATTLECRUISER</UnitType>
 				<UnitType>UNIT_STEAM_DESTROYER</UnitType>
 				<UnitType>UNIT_CRUISER</UnitType>
-				<UnitType>UNIT_AEGIS</UnitType>
+				<UnitType>UNIT_AEGIS_CRUISER</UnitType>
 				<UnitType>UNIT_NUCLEAR_SUBMARINE</UnitType>
 				<UnitType>UNIT_NUCLEAR_CARRIER</UnitType>
 				<UnitType>UNIT_FF_DESTROYER_I</UnitType>
@@ -8187,7 +8187,7 @@
 			<iWeight>150</iWeight>
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<BuildingsRequired>
-				<Building>BUILDING_OBELISK</Building>
+				<Building>BUILDING_MONUMENT</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<bOwnPlot>1</bOwnPlot>
@@ -9360,31 +9360,6 @@
 			</ObsoleteTechs>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
-			<Type>EVENTTRIGGER_CAKE_FLOUR</Type>
-			<WorldNewsTexts>
-				<Text>TXT_KEY_EVENTTRIGGER_CAKE_FLOUR</Text>
-			</WorldNewsTexts>
-			<TriggerTexts>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_CAKE_FLOUR</Text>
-				</TriggerText>
-			</TriggerTexts>
-			<iPercentGamesActive>0</iPercentGamesActive>
-			<iWeight>0</iWeight>
-			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
-			<BuildingsRequired>
-				<Building>BUILDING_MODERN_MILL</Building>
-			</BuildingsRequired>
-			<iNumBuildings>1</iNumBuildings>
-			<Events>
-				<Event>EVENT_CAKE_FLOUR_1</Event>
-			</Events>
-			<AndPreReqs>
-				<PrereqTech>TECH_CORPORATION</PrereqTech>
-				<PrereqTech>TECH_PRINTING_PRESS</PrereqTech>
-			</AndPreReqs>
-		</EventTriggerInfo>
-		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_SILKWORM_GOING_EXTINCT</Type>
 			<WorldNewsTexts>
 				<Text>TXT_KEY_EVENTTRIGGER_SILKWORM_GOING_EXTINCT</Text>
@@ -9440,7 +9415,7 @@
 				<UnitType>UNIT_BATTLECRUISER</UnitType>
 				<UnitType>UNIT_STEAM_DESTROYER</UnitType>
 				<UnitType>UNIT_CRUISER</UnitType>
-				<UnitType>UNIT_AEGIS</UnitType>
+				<UnitType>UNIT_AEGIS_CRUISER</UnitType>
 				<UnitType>UNIT_NUCLEAR_CARRIER</UnitType>
 				<UnitType>UNIT_FF_DESTROYER_I</UnitType>
 				<UnitType>UNIT_FUSION_CRUISER</UnitType>

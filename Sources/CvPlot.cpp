@@ -2189,30 +2189,24 @@ CvPlot* CvPlot::getNearestLandPlot() const
 
 int CvPlot::seeFromLevel(TeamTypes eTeam) const
 {
-	int iLevel;
-
 	FAssertMsg(getTerrainType() != NO_TERRAIN, "TerrainType is not assigned a valid value");
 
-	iLevel = GC.getTerrainInfo(getTerrainType()).getSeeFromLevel();
+	int iLevel = GC.getTerrainInfo(getTerrainType()).getSeeFromLevel();
 
-	// Super Forts begin *vision*
 	if (getImprovementType() != NO_IMPROVEMENT)
 	{
 		iLevel += GC.getImprovementInfo(getImprovementType()).getSeeFrom();
 	}
-	// Super Forts end
 
 	if (isPeak2(true))
 	{
 		iLevel += GC.getPEAK_SEE_FROM_CHANGE();
 	}
-
-	if (isHills())
+	else if (isHills())
 	{
 		iLevel += GC.getHILLS_SEE_FROM_CHANGE();
 	}
-
-	if (isWater())
+	else if (isWater())
 	{
 		iLevel += GC.getSEAWATER_SEE_FROM_CHANGE();
 
@@ -2221,18 +2215,15 @@ int CvPlot::seeFromLevel(TeamTypes eTeam) const
 			iLevel++;
 		}
 	}
-
 	return iLevel;
 }
 
 
 int CvPlot::seeThroughLevel() const
 {
-	int iLevel;
-
 	FAssertMsg(getTerrainType() != NO_TERRAIN, "TerrainType is not assigned a valid value");
 
-	iLevel = GC.getTerrainInfo(getTerrainType()).getSeeThroughLevel();
+	int iLevel = GC.getTerrainInfo(getTerrainType()).getSeeThroughLevel();
 
 	if (getFeatureType() != NO_FEATURE)
 	{
@@ -2243,17 +2234,14 @@ int CvPlot::seeThroughLevel() const
 	{
 		iLevel += GC.getPEAK_SEE_THROUGH_CHANGE();
 	}
-
-	if (isHills())
+	else if (isHills())
 	{
 		iLevel += GC.getHILLS_SEE_THROUGH_CHANGE();
 	}
-
-	if (isWater())
+	else if (isWater())
 	{
 		iLevel += GC.getSEAWATER_SEE_FROM_CHANGE();
 	}
-
 	return iLevel;
 }
 
@@ -4685,13 +4673,9 @@ void CvPlot::calculateChokeValue()
 
 int CvPlot::defenseModifier(TeamTypes eDefender, bool bIgnoreBuilding, bool bHelp) const
 {
-	CvCity* pCity;
-	ImprovementTypes eImprovement;
-	int iModifier = 0;
-
 	FAssertMsg(getTerrainType() != NO_TERRAIN, "TerrainType is not assigned a valid value");
 
-	iModifier += GC.getTerrainInfo(getTerrainType()).getDefenseModifier();
+	int iModifier = GC.getTerrainInfo(getTerrainType()).getDefenseModifier();
 	if (getFeatureType() != NO_FEATURE)
 	{
 		iModifier += GC.getFeatureInfo(getFeatureType()).getDefenseModifier();
@@ -4706,6 +4690,7 @@ int CvPlot::defenseModifier(TeamTypes eDefender, bool bIgnoreBuilding, bool bHel
 		iModifier += GC.getPEAK_EXTRA_DEFENSE();
 	}
 
+	ImprovementTypes eImprovement;
 	if (bHelp)
 	{
 		eImprovement = getRevealedImprovementType(GC.getGame().getActiveTeam(), false);
@@ -4715,27 +4700,22 @@ int CvPlot::defenseModifier(TeamTypes eDefender, bool bIgnoreBuilding, bool bHel
 		eImprovement = getImprovementType();
 	}
 
-	if (eImprovement != NO_IMPROVEMENT)
+	if (eImprovement != NO_IMPROVEMENT && eDefender != NO_TEAM
+	&& (getTeam() == NO_TEAM || GET_TEAM(eDefender).isFriendlyTerritory(getTeam())))
 	{
-		if (eDefender != NO_TEAM && (getTeam() == NO_TEAM || GET_TEAM(eDefender).isFriendlyTerritory(getTeam())))
-		{
-			// Super Forts begin *bombard*
-			iModifier += GC.getImprovementInfo(eImprovement).getDefenseModifier() - getDefenseDamage();
-			// iModifier += GC.getImprovementInfo(eImprovement).getDefenseModifier(); - Original code
-			// Super Forts end
-		}
+		// Super Forts begin *bombard*
+		iModifier += GC.getImprovementInfo(eImprovement).getDefenseModifier() - getDefenseDamage();
 	}
 
 	if (!bHelp)
 	{
-		pCity = getPlotCity();
+		CvCity* pCity = getPlotCity();
 
 		if (pCity != NULL)
 		{
 			iModifier += pCity->getDefenseModifier(bIgnoreBuilding);
 		}
 	}
-
 	return iModifier;
 }
 
@@ -5898,17 +5878,11 @@ void CvPlot::removeGoody()
 
 bool CvPlot::isCity(bool bCheckImprovement, TeamTypes eForTeam) const
 {
-	if (bCheckImprovement && NO_IMPROVEMENT != getImprovementType())
+	if (bCheckImprovement && NO_IMPROVEMENT != getImprovementType() && GC.getImprovementInfo(getImprovementType()).isActsAsCity()
+	&& (NO_TEAM == eForTeam || NO_TEAM == getTeam() && GC.getImprovementInfo(getImprovementType()).isOutsideBorders() || GET_TEAM(eForTeam).isFriendlyTerritory(getTeam())))
 	{
-		if (GC.getImprovementInfo(getImprovementType()).isActsAsCity())
-		{
-			if (NO_TEAM == eForTeam || (NO_TEAM == getTeam() && GC.getImprovementInfo(getImprovementType()).isOutsideBorders()) || GET_TEAM(eForTeam).isFriendlyTerritory(getTeam()))
-			{
-				return true;
-			}
-		}
+		return true;
 	}
-
 	return (getPlotCity() != NULL);
 }
 

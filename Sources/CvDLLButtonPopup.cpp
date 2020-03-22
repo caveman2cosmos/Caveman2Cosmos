@@ -2082,11 +2082,11 @@ bool CvDLLButtonPopup::launchLoadUnitPopup(CvPopup* pPopup, CvPopupInfo &info)
 			szBuffer.append(L", ");
 			if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 			{
-				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_HELP_CARGO_SPACE", pLoopUnit->SMgetCargo(), pLoopUnit->SMcargoSpace()));
+				szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_CARGO_SPACE", pLoopUnit->SMgetCargo(), pLoopUnit->SMcargoSpace()));
 			}
 			else
 			{
-				szBuffer.append(gDLL->getText("TXT_KEY_UNIT_HELP_CARGO_SPACE", pLoopUnit->getCargo(), pLoopUnit->cargoSpace()));
+				szBuffer.append(gDLL->getText("TXT_KEY_UNITHELP_CARGO_SPACE", pLoopUnit->getCargo(), pLoopUnit->cargoSpace()));
 			}
 			gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, CvWString(szBuffer.getCString()), NULL, iCount, WIDGET_GENERAL);
 			iCount++;

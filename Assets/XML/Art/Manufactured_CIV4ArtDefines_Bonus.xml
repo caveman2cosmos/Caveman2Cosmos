@@ -1339,7 +1339,7 @@
 		</BonusArtInfo>
 	<!-- Mars Rocks -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_MARS_ROCKS</Type>
+			<Type>ART_DEF_BONUS_MARTIAN_ROCKS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2308,9 +2308,9 @@
 			<Button>art/Goods/goodunmannedaircrafts.dds</Button>
 			<FontButtonIndex>200</FontButtonIndex>
 		</BonusArtInfo>
-	<!-- Vacuum -->
+	<!-- Vacuum cleaners -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_VACUUM</Type>
+			<Type>ART_DEF_BONUS_VACUUM_CLEANERS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2491,7 +2491,7 @@
 		</BonusArtInfo>
 	<!-- Liquid Metal Wares -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_LIQUID_METAL_WARES</Type>
+			<Type>ART_DEF_BONUS_LIQUID_METAL</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2501,7 +2501,7 @@
 		</BonusArtInfo>
 	<!-- Megastrong Alloy Wares -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_MEGASTRONG_ALLOY_WARES</Type>
+			<Type>ART_DEF_BONUS_MEGASTRONG_ALLOYS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2511,7 +2511,7 @@
 		</BonusArtInfo>
 	<!-- Metamaterial Wares -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_METAMATERIAL_WARES</Type>
+			<Type>ART_DEF_BONUS_METAMATERIALS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2521,7 +2521,7 @@
 		</BonusArtInfo>
 	<!-- Porcelain Wares -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_PORCELAIN_WARES</Type>
+			<Type>ART_DEF_BONUS_PORCELAIN</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2531,7 +2531,7 @@
 		</BonusArtInfo>
 	<!-- Superstrong Alloy Wares -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_SUPERSTRONG_ALLOY_WARES</Type>
+			<Type>ART_DEF_BONUS_SUPERSTRONG_ALLOYS</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -2541,7 +2541,7 @@
 		</BonusArtInfo>
 	<!-- Terracotta Wares -->
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_TERRACOTTA_WARES</Type>
+			<Type>ART_DEF_BONUS_TERRACOTTA</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
@@ -3278,7 +3278,7 @@
 			<Button>art/Interface/Buttons/Bonus/warp_drives.dds</Button>
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
-        <BonusArtInfo>
+		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_AB_MATTER</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>

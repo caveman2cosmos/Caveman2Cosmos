@@ -56,3 +56,5 @@ Sources/C2C.args.json
 *.fdb
 
 Sources/profile.json
+
+*.bak

@@ -10,7 +10,7 @@
 			<!-- Agricultural Achievement -->
 			<Type>BUILDING_AGRICULTURAL_ACHIEVEMENT</Type>
 			<Description>TXT_KEY_BUILDING_AGRICULTURAL_ACHIEVEMENT</Description>
-			<Civilopedia>TXT_KEY_ACHIEVEMENT_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_AGRICULTURAL_ACHIEVEMENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<!-- Graphical and interface -->
@@ -42,7 +42,7 @@
 			<!-- Commercial Achievement -->
 			<Type>BUILDING_COMMERCIAL_ACHIEVEMENT</Type>
 			<Description>TXT_KEY_BUILDING_COMMERCIAL_ACHIEVEMENT</Description>
-			<Civilopedia>TXT_KEY_ACHIEVEMENT_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_COMMERCIAL_ACHIEVEMENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -214,7 +214,7 @@
 			<Type>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</Type>
 			<Description>TXT_KEY_BUILDING_ENVIRONMENTAL_A</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ENVIRONMENTAL_A_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ENVIRONMENTAL_A_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_ENVIRONMENTAL_ACHIEVEMENT_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_ENVIRONMENTAL_A</ArtDefineTag>
@@ -249,7 +249,7 @@
 			<!-- Industrial Achievement -->
 			<Type>BUILDING_INDUSTRIAL_ACHIEVEMENT</Type>
 			<Description>TXT_KEY_BUILDING_INDUSTRIAL_ACHIEVEMENT</Description>
-			<Civilopedia>TXT_KEY_ACHIEVEMENT_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_INDUSTRIAL_ACHIEVEMENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -318,7 +318,7 @@
 			<!-- Military Achievement -->
 			<Type>BUILDING_MILITARY_ACHIEVEMENT</Type>
 			<Description>TXT_KEY_BUILDING_MILITARY_ACHIEVEMENT</Description>
-			<Civilopedia>TXT_KEY_ACHIEVEMENT_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MILITARY_ACHIEVEMENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<!-- Graphical and interface -->
@@ -349,7 +349,7 @@
 			<!-- Political Achievement -->
 			<Type>BUILDING_POLITICAL_ACHIEVEMENT</Type>
 			<Description>TXT_KEY_BUILDING_POLITICAL_ACHIEVEMENT</Description>
-			<Civilopedia>TXT_KEY_ACHIEVEMENT_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_POLITICAL_ACHIEVEMENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<!-- Graphical and interface -->
@@ -418,7 +418,7 @@
 			<!-- Scientific Achievement -->
 			<Type>BUILDING_SCIENTIFIC_ACHIEVEMENT</Type>
 			<Description>TXT_KEY_BUILDING_SCIENTIFIC_ACHIEVEMENT</Description>
-			<Civilopedia>TXT_KEY_ACHIEVEMENT_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SCIENTIFIC_ACHIEVEMENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<!-- Graphical and interface -->
@@ -451,7 +451,7 @@
 			<!-- Seafaring Achievement -->
 			<Type>BUILDING_SEAFARING_ACHIEVEMENT</Type>
 			<Description>TXT_KEY_BUILDING_SEAFARING_ACHIEVEMENT</Description>
-			<Civilopedia>TXT_KEY_ACHIEVEMENT_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SEAFARING_ACHIEVEMENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
@@ -927,7 +927,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
+			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<FoundsCorporation>CORPORATION_4</FoundsCorporation>
@@ -997,7 +997,7 @@
 				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
 			</CommerceChangeOriginalOwners>
 			<!-- Great People effects -->
-			<GreatPeopleUnitType>UNIT_ENGINEER</GreatPeopleUnitType>
+			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
 			<FoundsCorporation>CORPORATION_5</FoundsCorporation>
@@ -1159,7 +1159,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_ADVENTURE_HQ</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_ADVENTURE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_ADVENTURE_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_ADVENTURE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_ADVENTURE_HQ</ArtDefineTag>
@@ -1233,7 +1233,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_BULLSEYE_HQ</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_BULLSEYE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BULLSEYE_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_BULLSEYE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_BULLSEYE_HQ</ArtDefineTag>
@@ -1307,7 +1307,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_BURGERWORLD_HQ</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_BURGERWORLD_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BURGERWORLD_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_BURGERWORLD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_BURGERWORLD_HQ</ArtDefineTag>
@@ -1381,7 +1381,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH_HQ</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_EMPCLOTH_HQ_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_EMPCLOTH_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_EMPCLOTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_EMPCLOTH_HQ</ArtDefineTag>
@@ -1451,7 +1451,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_EWTRADE_HQ</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_EWTRADE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_EWTRADE_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_EWTRADE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_EWTRADE_HQ</ArtDefineTag>
@@ -1525,7 +1525,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_FASHION_HQ</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_FASHION_HQ_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_FASHION_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_FASHION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_FASHION_HQ</ArtDefineTag>
@@ -1595,7 +1595,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_MALLWART_HQ</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MALLWART_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_MALLWART_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_MALLWART_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_MALLWART_HQ</ArtDefineTag>
@@ -1669,7 +1669,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_MAPSTER_HQ</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MAPSTER_HQ_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_MAPSTER_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_MAPSTER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_MAPSTER_HQ</ArtDefineTag>
@@ -1740,7 +1740,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_MCDOWELLS_HQ</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MCDOWELLS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_MCDOWELLS_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_MCDOWELLS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_MCDOWELLS_HQ</ArtDefineTag>
@@ -1814,7 +1814,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_MILEHIGH_HQ</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MILEHIGH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_MILEHIGH_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_MILEHIGH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_MILEHIGH_HQ</ArtDefineTag>
@@ -1884,7 +1884,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_MOBBY_HQ</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MOBBY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_MOBBY_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_MOBBY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_MOBBY_HQ</ArtDefineTag>
@@ -1958,7 +1958,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_MOONBEAN_HQ</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_MOONBEAN_HQ_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_MOONBEAN_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_MOONBEAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_MOONBEAN_HQ</ArtDefineTag>
@@ -2028,7 +2028,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_RED_HQ</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_RED_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_RED_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_RED_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_RED_HQ</ArtDefineTag>
@@ -2104,7 +2104,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_SAFARI_HQ</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_SAFARI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_SAFARI_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_SAFARI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_SAFARI_HQ</ArtDefineTag>
@@ -2176,7 +2176,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_ULTSOLDIER_HQ</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_ULTSOLDIER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_ULTSOLDIER_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_ULTSOLDIER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_ULTSOLDIER_HQ</ArtDefineTag>
@@ -2249,7 +2249,7 @@
 			<SpecialBuildingType>SPECIALBUILDING_CORPORATION_HQ</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CORPORATION_WONKA_HQ</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CORPORATION_WONKA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_WONKA_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_WONKA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CORPORATION_WONKA_HQ</ArtDefineTag>
@@ -3863,6 +3863,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -3883,6 +3886,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -3903,6 +3909,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -3923,6 +3932,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -3943,6 +3955,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -3963,6 +3978,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -3983,6 +4001,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -4003,6 +4024,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -4023,6 +4047,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -4043,6 +4070,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -4063,6 +4093,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -4083,6 +4116,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -4103,6 +4139,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -4123,6 +4162,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -4144,6 +4186,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -4165,6 +4210,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -4186,6 +4234,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -4207,6 +4258,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -4228,6 +4282,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -4247,8 +4304,11 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqTech>TECH_ATOMIC_LIFESTYLE</PrereqTech>
 			<!-- Graphical and interface -->
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>			
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -4270,6 +4330,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -4291,6 +4354,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -4312,6 +4378,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -4333,6 +4402,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -4354,6 +4426,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -4375,6 +4450,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -4395,6 +4473,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
@@ -4426,6 +4507,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_CLASSICAL_LIFESTYLE</PrereqTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
@@ -4457,6 +4541,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_MEDIEVAL_LIFESTYLE</PrereqTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
@@ -4488,6 +4575,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
@@ -4520,6 +4610,9 @@
 			<!-- <ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			-->
 			<!-- Prerequisites -->
+			<!-- <MapCategoryTypes>-->
+				<!-- <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>-->
+			<!-- </MapCategoryTypes>-->
 			<!-- <PrereqTech>TECH_INDUSTRIAL_LIFESTYLE</PrereqTech>-->
 			<!-- Construction cost -->
 			<!-- <iCost>-1</iCost>-->
@@ -4552,6 +4645,9 @@
 			<!-- <ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			-->
 			<!-- Prerequisites -->
+			<!-- <MapCategoryTypes>-->
+				<!-- <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>-->
+			<!-- </MapCategoryTypes>-->
 			<!-- <PrereqTech>TECH_ATOMIC_LIFESTYLE</PrereqTech>-->
 			<!-- Construction cost -->
 			<!-- <iCost>-1</iCost>-->
@@ -4584,6 +4680,9 @@
 			<!-- <ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			-->
 			<!-- Prerequisites -->
+			<!-- <MapCategoryTypes>-->
+				<!-- <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>-->
+			<!-- </MapCategoryTypes>-->
 			<!-- <PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>-->
 			<!-- Construction cost -->
 			<!-- <iCost>-1</iCost>-->
@@ -4616,6 +4715,9 @@
 			<!-- <ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			-->
 			<!-- Prerequisites -->
+			<!-- <MapCategoryTypes>-->
+				<!-- <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>-->
+			<!-- </MapCategoryTypes>-->
 			<!-- <PrereqTech>TECH_NANOTECH_LIFESTYLE</PrereqTech>-->
 			<!-- Construction cost -->
 			<!-- <iCost>-1</iCost>-->
@@ -4648,6 +4750,9 @@
 			<!-- <ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			-->
 			<!-- Prerequisites -->
+			<!-- <MapCategoryTypes>-->
+				<!-- <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>-->
+			<!-- </MapCategoryTypes>-->
 			<!-- <PrereqTech>TECH_TRANSHUMAN_LIFESTYLE</PrereqTech>-->
 			<!-- Construction cost -->
 			<!-- <iCost>-1</iCost>-->
@@ -4680,6 +4785,9 @@
 			<!-- <ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			-->
 			<!-- Prerequisites -->
+			<!-- <MapCategoryTypes>-->
+				<!-- <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>-->
+			<!-- </MapCategoryTypes>-->
 			<!-- <PrereqTech>TECH_GALACTIC_LIFESTYLE</PrereqTech>-->
 			<!-- Construction cost -->
 			<!-- <iCost>-1</iCost>-->
@@ -4712,6 +4820,9 @@
 			<!-- <ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			-->
 			<!-- Prerequisites -->
+			<!-- <MapCategoryTypes>-->
+				<!-- <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>-->
+			<!-- </MapCategoryTypes>-->
 			<!-- <PrereqTech>TECH_COSMIC_LIFESTYLE</PrereqTech>-->
 			<!-- Construction cost -->
 			<!-- <iCost>-1</iCost>-->
@@ -4744,6 +4855,9 @@
 			<!-- <ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			-->
 			<!-- Prerequisites -->
+			<!-- <MapCategoryTypes>-->
+				<!-- <MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>-->
+			<!-- </MapCategoryTypes>-->
 			<!-- <PrereqTech>TECH_TRANSCENDENT_LIFESTYLE</PrereqTech>-->
 			<!-- Construction cost -->
 			<!-- <iCost>-1</iCost>-->
@@ -4777,6 +4891,9 @@
 			<ConstructSound>AS2D_BUILD_MUSEUM</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_BANDITRY</CivicOption>
@@ -4803,6 +4920,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CIVICBURNTRASH</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_BURN_GARBAGE</CivicOption>
@@ -4834,6 +4954,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CIVICCASTE</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -4872,7 +4995,10 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CIVICDEMOCRACY</ArtDefineTag>
 			<!-- Prerequisites -->
-			<PrereqInCityBuildings>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqInCityBuildings>			
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqAndCivics>
@@ -4910,6 +5036,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CIVICEGALITARIAN</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -4947,6 +5076,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CIVICFEUDAL</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -4983,6 +5115,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CIVICFREEMARKET</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -5021,6 +5156,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CIVICMARTIALLAW</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -5060,6 +5198,9 @@
 			<ConstructSound>AS2D_BUILD_MUSEUM</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_MERCENARIES</CivicOption>
@@ -5088,6 +5229,9 @@
 			<ConstructSound>AS2D_BUILD_MUSEUM</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqAndCivics>
 				<PrereqCivic>
 					<CivicOption>CIVIC_MILITIA</CivicOption>
@@ -5114,6 +5258,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CIVICMINDCONTROL</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -5151,6 +5298,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CIVICPOSTSCARCITY</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -5188,6 +5338,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CIVICREPUBLIC</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -8681,7 +8834,7 @@
 			<!-- Cultural Achievement -->
 			<Type>BUILDING_CULTURAL_ACHIEVEMENT</Type>
 			<Description>TXT_KEY_BUILDING_CULTURAL_ACHIEVEMENT</Description>
-			<Civilopedia>TXT_KEY_ACHIEVEMENT_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CULTURAL_ACHIEVEMENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<!-- Graphical and interface -->
@@ -8734,7 +8887,7 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_FIREPIT</BuildingType>
+					<BuildingType>BUILDING_FIRE_PIT</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
@@ -8862,7 +9015,7 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_FIREPIT</BuildingType>
+					<BuildingType>BUILDING_FIRE_PIT</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
@@ -9867,8 +10020,11 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_AESOP_CRIME</ArtDefineTag>
 			<!-- Construction cost -->
-			<iCost>-1</iCost>
+			<iCost>-1</iCost>			
 			<!-- Special properties -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<!-- Properties diffusion -->
 			<PropertyManipulators>
 				<PropertySource>
@@ -9920,6 +10076,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_ENHANCED_SPECIES</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_GENE_ENHANCEMENT</PrereqTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
@@ -10666,6 +10825,9 @@
 			<MovieDefineTag>ART_DEF_MOVIE_UNIVERSAL_HEALTH_CARE</MovieDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_LIBERALISM</PrereqTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
@@ -10735,7 +10897,7 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<!-- Defense effects -->
-			<iDefense>50</iDefense>
+			<iDefense>20</iDefense>
 			<iBombardDefense>20</iBombardDefense>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<!-- Special properties -->
@@ -10825,7 +10987,7 @@
 			</TechTypes>
 			<Bonus>BONUS_HIDE</Bonus>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_STICK_GATHERER</BuildingType>
+				<BuildingType>BUILDING_GATHERER_STICK</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
@@ -10932,6 +11094,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA4_SDLW</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -10985,6 +11150,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA4_SDMW</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -11031,6 +11199,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA4_SDHW</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_MEGASTRUCTURE_ENGINEERING</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -11942,6 +12113,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA4_MDMW</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -11987,6 +12161,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA4_MDHW</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -12033,6 +12210,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA4_HDMW</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -12147,6 +12327,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_ERA4_HDHW</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_RAPID_PROTOTYPING</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -12232,7 +12415,7 @@
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 				<ReplaceBuilding>
-					<BuildingType>BUILDING_IROQUOIS_LONGHOUSE</BuildingType>
+					<BuildingType>BUILDING_LONGHOUSE</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 				<ReplaceBuilding>
@@ -12468,7 +12651,7 @@
 		<BuildingInfo>
 			<!-- Housing (Igloos) -->
 			<Type>BUILDING_IGLOO</Type>
-			<Description>TXT_KEY_BUILDING_IGLOO2</Description>
+			<Description>TXT_KEY_BUILDING_IGLOO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_IGLOO_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_IGLOO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
@@ -12582,7 +12765,7 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_STICK_GATHERER</BuildingType>
+				<BuildingType>BUILDING_GATHERER_STICK</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
@@ -12635,13 +12818,13 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Housing (Longhouse) -->
-			<Type>BUILDING_IROQUOIS_LONGHOUSE</Type>
-			<Description>TXT_KEY_BUILDING_LONGHOUSE2</Description>
-			<Civilopedia>TXT_KEY_BUILDING_IROQUOIS_LONGHOUSE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_COURTHOUSE_STRATEGY</Strategy>
+			<Type>BUILDING_LONGHOUSE</Type>
+			<Description>TXT_KEY_BUILDING_LONGHOUSE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LONGHOUSE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_LONGHOUSE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<!-- Graphical and interface -->
-			<ArtDefineTag>ART_DEF_BUILDING_IROQUOIS_LONGHOUSE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_LONGHOUSE</ArtDefineTag>
 			<fVisibilityPriority>10000</fVisibilityPriority>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
@@ -13990,6 +14173,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_ALCOHOL_PROHIBITION</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_WOMENS_SUFFRAGE</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqOrBuildings>
@@ -14015,6 +14201,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_DRUG_PROHIBITION</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_COUNTERCULTURE</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqOrBuildings>
@@ -14040,6 +14229,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_GAMBLING_BAN</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_LEGALIZED_GAMBLING</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqOrBuildings>
@@ -14065,6 +14257,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_PROSTITUTION_BAN</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_JURISPRUDENCE</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqOrBuildings>
@@ -14131,6 +14326,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_ALCOCHOL_PROHIBITION</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_WOMENS_SUFFRAGE</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqInCityBuildings>
@@ -14161,7 +14359,7 @@
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_DMV</BuildingType>
+				<BuildingType>BUILDING_DEPARTMENT_VEHICLES</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
@@ -14187,6 +14385,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_EMISSION_ACT</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
@@ -14217,7 +14418,7 @@
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_DMV</BuildingType>
+				<BuildingType>BUILDING_DEPARTMENT_VEHICLES</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
@@ -14243,6 +14444,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_CARPOOL</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
@@ -14273,7 +14477,7 @@
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_DOE</BuildingType>
+				<BuildingType>BUILDING_DEPARTMENT_ENERGY</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Construction cost -->
@@ -14328,7 +14532,7 @@
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_WATER_DEPARTMENT</BuildingType>
+				<BuildingType>BUILDING_DEPARTMENT_WATER</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Construction cost -->
@@ -14383,7 +14587,7 @@
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_DMV</BuildingType>
+				<BuildingType>BUILDING_DEPARTMENT_VEHICLES</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Obsolescence -->
@@ -14409,6 +14613,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_SHUTTLE_SERVICE</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
@@ -14433,6 +14640,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_DRUG_PROHIBITION</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_COUNTERCULTURE</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqInCityBuildings>
@@ -14463,7 +14673,7 @@
 			<PrereqTech>TECH_CIVIL_ENGINEERING</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_NFS</BuildingType>
+				<BuildingType>BUILDING_NATIONAL_FIRE_SERVICE</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Construction cost -->
@@ -14502,6 +14712,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_GAMBLING_BAN</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_LEGALIZED_GAMBLING</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqInCityBuildings>
@@ -14578,6 +14791,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_PROSTITUTION_BAN</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_PAPACY</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqInCityBuildings>
@@ -14609,7 +14825,7 @@
 			<PrereqTech>TECH_ELECTRONICS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_NFS</BuildingType>
+				<BuildingType>BUILDING_NATIONAL_FIRE_SERVICE</BuildingType>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Construction cost -->
@@ -14648,6 +14864,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_SMOKING_PROHIBITION</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_URBAN_CULTURE</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqInCityBuildings>
@@ -14719,6 +14938,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_TIRE_RECYCLE</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_RECYCLING</PrereqTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
@@ -16598,6 +16820,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GREAT_FIREWALL_GOOD</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_CYBERWARFARE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
@@ -16670,6 +16895,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_GOOD_FEDERAL_PRISON</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_CONSTITUTION</PrereqTech>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
@@ -16700,6 +16928,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_SAFETY_NAT_LEGAL_DATABASE</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_CLOUD_COMPUTING</PrereqTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
@@ -16723,6 +16954,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_GOOD_NEIGHBORHOOD_WATCH</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
@@ -16746,6 +16980,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_SAFETY_ORBITAL_PRISON</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
@@ -16789,6 +17026,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_GOOD_POLICE_ACADEMY</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
@@ -16812,6 +17052,9 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_GOOD_YOUTH_CURFEW</ArtDefineTag>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_COMPULSORY_EDUCATION</PrereqTech>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
@@ -16831,7 +17074,7 @@
 			<Type>BUILDING_MILITARY_ACADEMY</Type>
 			<Description>TXT_KEY_BUILDING_MILITARY_ACADEMY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MILITARY_ACADEMY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_THIRD_ROUND_BUILDING_MILITARY_ACADEMY_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_MILITARY_ACADEMY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_MILITARY_ACADEMY</ArtDefineTag>
@@ -18321,8 +18564,8 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SCULPTURE</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_PYRAMID</BuildingType>
-				<BuildingType>BUILDING_SPHINX</BuildingType>
+				<BuildingType>BUILDING_GREAT_PYRAMID</BuildingType>
+				<BuildingType>BUILDING_GREAT_SPHINX</BuildingType>
 			</PrereqInCityBuildings>
 			<!-- Construction cost -->
 			<iCost>-1</iCost>
@@ -19068,12 +19311,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Department of Foreign Policy Effect -->
-			<Type>BUILDING_DEPT_FOREIGN_POLICY_EFFECT</Type>
+			<Type>BUILDING_DEPARTMENT_FOREIGN_EFFECT</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_BUILDING_DEPT_FOREIGN_POLICY_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_DEPT_FOREIGN_POLICY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_BUILDING_DEPARTMENT_FOREIGN_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_DEPARTMENT_FOREIGN_PEDIA</Civilopedia>
 			<!-- Cost -->
 			<iCost>-1</iCost>
 			<!-- Local -->
@@ -19092,7 +19335,7 @@
 			</UnitCombatFreeExperiences>
 			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
-			<ArtDefineTag>ART_DEF_BUILDING_DEPT_FOREIGN_POLICY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_DEPARTMENT_FOREIGN</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Fertility Festival Effect -->
@@ -20139,7 +20382,7 @@
 					<iProductionModifier>-50</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
-					<BuildingType>BUILDING_STEEL_MILL</BuildingType>
+					<BuildingType>BUILDING_SMELTER_STEEL</BuildingType>
 					<iProductionModifier>-50</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>

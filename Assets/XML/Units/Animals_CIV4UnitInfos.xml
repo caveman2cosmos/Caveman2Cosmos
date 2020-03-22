@@ -3048,7 +3048,7 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Type>UNIT_BUFFALO</Type>
+			<Type>UNIT_BUFFALO_CAPE</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WILD</SubCombatType>
@@ -3096,8 +3096,8 @@
 					<Title>TXT_KEY_GROUPTITLE_OBSTINANCY</Title>
 				</GroupSpawnUnitCombatType>
 			</GroupSpawnUnitCombatTypes>
-			<Description>TXT_KEY_UNIT_BUFFALO</Description>
-			<Civilopedia>TXT_KEY_UNIT_BUFFALO_PEDIA</Civilopedia>
+			<Description>TXT_KEY_UNIT_BUFFALO_CAPE</Description>
+			<Civilopedia>TXT_KEY_UNIT_BUFFALO_CAPE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -3165,7 +3165,7 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_BUFFALO</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_BUFFALO_CAPE</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
@@ -3196,7 +3196,7 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Type>UNIT_CAIMAN</Type>
+			<Type>UNIT_CAIMAN_BLACK</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WILD</SubCombatType>
@@ -3233,8 +3233,8 @@
 					<Title>TXT_KEY_GROUPTITLE_CONGREGATION</Title>
 				</GroupSpawnUnitCombatType>
 			</GroupSpawnUnitCombatTypes>
-			<Description>TXT_KEY_UNIT_CAIMAN</Description>
-			<Civilopedia>TXT_KEY_UNIT_CAIMAN_PEDIA</Civilopedia>
+			<Description>TXT_KEY_UNIT_CAIMAN_BLACK</Description>
+			<Civilopedia>TXT_KEY_UNIT_CAIMAN_BLACK_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -3311,7 +3311,7 @@
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_CAIMAN</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_CAIMAN_BLACK</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
@@ -6642,7 +6642,7 @@
 				</GroupSpawnUnitCombatType>
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_ELEPHANT_AFRICAN</Description>
-			<Civilopedia>TXT_KEY_ELEPHANT_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_UNIT_ELEPHANT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -6777,7 +6777,7 @@
 				</GroupSpawnUnitCombatType>
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_ELEPHANT_ASIAN</Description>
-			<Civilopedia>TXT_KEY_ELEPHANT_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_UNIT_ELEPHANT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -8805,7 +8805,7 @@
 				</GroupSpawnUnitCombatType>
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_GORILLA</Description>
-			<Civilopedia>TXT_KEY_GORILLA_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_UNIT_GORILLA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -11809,7 +11809,7 @@
 			</UnitAIs>
 			<bAssassin>1</bAssassin>
 			<UnitTargets>
-				<UnitType>UNIT_BUFFALO</UnitType>
+				<UnitType>UNIT_BUFFALO_CAPE</UnitType>
 				<UnitType>UNIT_WILDEBEEST</UnitType>
 				<UnitType>UNIT_ZEBRA</UnitType>
 			</UnitTargets>
@@ -19132,7 +19132,7 @@
 					<Title>TXT_KEY_GROUPTITLE_ROOKERY</Title>
 				</GroupSpawnUnitCombatType>
 			</GroupSpawnUnitCombatTypes>
-			<Description>TXT_KEY_UNIT_SEALION_LAND</Description>
+			<Description>TXT_KEY_UNIT_SEALION</Description>
 			<Civilopedia>TXT_KEY_UNIT_SEALION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
@@ -19260,7 +19260,7 @@
 					<Title>TXT_KEY_GROUPTITLE_HERD</Title>
 				</GroupSpawnUnitCombatType>
 			</GroupSpawnUnitCombatTypes>
-			<Description>TXT_KEY_UNIT_SEALION_SEA</Description>
+			<Description>TXT_KEY_UNIT_SEALION</Description>
 			<Civilopedia>TXT_KEY_UNIT_SEALION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>

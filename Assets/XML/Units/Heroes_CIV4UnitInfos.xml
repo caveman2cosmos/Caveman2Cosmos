@@ -15415,7 +15415,7 @@
 			<Type>UNIT_SPARTACUS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<UniqueNames>
-				<UniqueName>Spartacus</UniqueName>
+				<UniqueName>TXT_KEY_UNIT_SPARTACUS</UniqueName>
 			</UniqueNames>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_HERO</Combat>
@@ -16317,8 +16317,8 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
-			<Description>TXT_KEY_LEADER_NARBONA</Description>
-			<Civilopedia>TXT_KEY_LEADER_NARBONA_PEDIA</Civilopedia>
+			<Description>TXT_KEY_UNIT_NARBONA</Description>
+			<Civilopedia>TXT_KEY_UNIT_NARBONA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_NARBONA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
@@ -16553,9 +16553,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
-			<Description>TXT_KEY_LEADER_PO_NGBE</Description>
-			<Civilopedia>TXT_KEY_LEADER_PO_NGBE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_LEADER_PO_NGBE_STRATEGY</Strategy>
+			<Description>TXT_KEY_UNIT_PO_NGBE</Description>
+			<Civilopedia>TXT_KEY_UNIT_PO_NGBE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_PO_NGBE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>

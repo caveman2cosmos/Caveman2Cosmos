@@ -251,20 +251,15 @@ enum InterfaceModeTypes			// Exposed to Python
 	INTERFACEMODE_REBASE,
 	INTERFACEMODE_PYTHON_PICK_PLOT,
 	INTERFACEMODE_SAVE_PLOT_NIFS,
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
+
 	INTERFACEMODE_AIRBOMB1,
 	INTERFACEMODE_AIRBOMB2,
 	INTERFACEMODE_AIRBOMB3,
 	INTERFACEMODE_AIRBOMB4,
 	INTERFACEMODE_AIRBOMB5,
 	INTERFACEMODE_BOMBARD,
-	INTERFACEMODE_ABOMBARD,
 	INTERFACEMODE_FENGAGE,
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
+
 // BUG - Sentry Actions - start
 #ifdef _MOD_SENTRY
 	INTERFACEMODE_GO_TO_SENTRY,
@@ -273,15 +268,8 @@ enum InterfaceModeTypes			// Exposed to Python
 	// < M.A.D. Nukes Start >
 	INTERFACEMODE_PRETARGET_NUKE,
 	// < M.A.D. Nukes End   >
-/************************************************************************************************/
-/* Afforess	                  Start		 09/16/10                                               */
-/*                                                                                              */
-/* Advanced Automations                                                                         */
-/************************************************************************************************/
+
 	INTERFACEMODE_SHADOW_UNIT,
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 #ifdef _USRDLL
 	NUM_INTERFACEMODE_TYPES
@@ -852,6 +840,7 @@ enum GameOptionTypes				// Exposed to Python
 	GAMEOPTION_NO_FUTURE,
 	GAMEOPTION_COMPLETE_KILLS,
 	GAMEOPTION_NO_EVENTS,
+	GAMEOPTION_LEAD_ANY_CIV, // This must always be the eight option as the exe has hardcoded it as such.
 	GAMEOPTION_UNITED_NATIONS,
 	GAMEOPTION_ADVANCED_DIPLOMACY,
 	GAMEOPTION_ADVANCED_ECONOMY,
@@ -888,7 +877,6 @@ enum GameOptionTypes				// Exposed to Python
 	GAMEOPTION_RELIGION_DECAY,
 	GAMEOPTION_DIVINE_PROPHETS,
 	GAMEOPTION_RELIGIOUS_DISABLING,
-	GAMEOPTION_LEAD_ANY_CIV,
 	GAMEOPTION_RANDOM_PERSONALITIES,
 	GAMEOPTION_PERMANENT_ALLIANCES,
 	GAMEOPTION_START_AS_MINORS,
@@ -1761,20 +1749,14 @@ enum MissionTypes				// Exposed to Python
 	MISSION_DAMAGE,
 	MISSION_MULTI_SELECT,
 	MISSION_MULTI_DESELECT,
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
+
 	MISSION_AIRBOMB1,
 	MISSION_AIRBOMB2,
 	MISSION_AIRBOMB3,
 	MISSION_AIRBOMB4,
 	MISSION_AIRBOMB5,
 	MISSION_RBOMBARD,
-	MISSION_ABOMBARD,
 	MISSION_FENGAGE,
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
 	//TSHEEP Assassin Mission
 	//MISSION_ASSASSIN,
 	//TSHEEP End
@@ -1787,12 +1769,7 @@ enum MissionTypes				// Exposed to Python
 	MISSION_SENTRY_LAND_UNITS,
 #endif
 // BUG - Sentry Actions - end
-	
-/************************************************************************************************/
-/* Afforess                                     6/05/10                                         */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	MISSION_INQUISITION,
 	MISSION_CLAIM_TERRITORY,
 	MISSION_HURRY_FOOD,
@@ -1800,9 +1777,6 @@ enum MissionTypes				// Exposed to Python
 	MISSION_GREAT_COMMANDER,
 	MISSION_SHADOW,
 	MISSION_WAIT_FOR_TECH,
-/************************************************************************************************/
-/* Afforess	                         END                                                        */
-/************************************************************************************************/	
 
 	//ls612: City Goto in Viewports
 	MISSION_GOTO,

@@ -259,7 +259,7 @@ class CvEventManager:
 				self.mapImpType = {
 					"IMPROVEMENT_GROW_FOREST"	: GC.getInfoTypeForString('IMPROVEMENT_GROW_FOREST'),
 					"IMPROVEMENT_YOUNG_FOREST"	: GC.getInfoTypeForString('IMPROVEMENT_YOUNG_FOREST'),
-					"IMPROVEMENT_PLANT_BAMBOO_GROVE"	: GC.getInfoTypeForString('IMPROVEMENT_PLANT_BAMBOO_GROVE'),
+					"IMPROVEMENT_PLANT_BAMBOO"	: GC.getInfoTypeForString('IMPROVEMENT_PLANT_BAMBOO'),
 					"IMPROVEMENT_PLANT_SAVANNA"	: GC.getInfoTypeForString('IMPROVEMENT_PLANT_SAVANNA'),
 					"IMPROVEMENT_FARM"			: GC.getInfoTypeForString('IMPROVEMENT_FARM')
 				}
@@ -449,6 +449,10 @@ class CvEventManager:
 							import ChangePlayer
 							ChangePlayer.updateGraphics()
 							return 1
+
+						elif key == InputTypes.KB_E:
+							import EventTriggerScreen, CvScreenEnums
+							CvScreensInterface.screenMap[CvScreenEnums.EVENTTRIGGER_SCREEN] = EventTriggerScreen.EventTriggerScreen(CvScreenEnums.EVENTTRIGGER_SCREEN)
 
 			elif iModifiers == 3:
 
@@ -749,9 +753,9 @@ class CvEventManager:
 						if not GAME.getSorenRandNum(iChance, "Zizkov"):
 							GC.getMap().resetRevealedPlots(iTeamX)
 							if iPlayer == iPlayerAct:
-								CvUtil.sendMessage(TRNSLTR.getText("TXT_ZIZKOV1", (CyPlayerX.getCivilizationDescription(0),)), iPlayer)
+								CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_MSG_ZIZKOV_YOU", (CyPlayerX.getCivilizationDescription(0),)), iPlayer)
 							elif iPlayerX == iPlayerAct:
-								CvUtil.sendMessage(TRNSLTR.getText("TXT_ZIZKOV2",()), iPlayerX)
+								CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_MSG_ZIZKOV",()), iPlayerX)
 
 				elif KEY == "CYRUS_CYLINDER":
 					if not iGameTurn % (4*self.iVictoryDelayPrcntGS/100 + 1):
@@ -986,12 +990,12 @@ class CvEventManager:
 					iY = CyUnitW.getY()
 					if iPlayerW == iPlayerAct:
 						if CyUnitL.isHiddenNationality():
-							szTxt = TRNSLTR.getText("TXT_KEY_SNEAK_HIDDEN",())
+							szTxt = TRNSLTR.getText("TXT_KEY_UNKNOWN_NATION",())
 						else:
 							szTxt = CyPlayerL.getName()
 					elif iPlayerL == iPlayerAct:
 						if CyUnitW.isHiddenNationality():
-							szTxt = TRNSLTR.getText("TXT_KEY_SNEAK_HIDDEN",())
+							szTxt = TRNSLTR.getText("TXT_KEY_UNKNOWN_NATION",())
 						else:
 							szTxt = CyPlayerW.getName()
 				# Sneak promo
@@ -1005,13 +1009,13 @@ class CvEventManager:
 						# Message
 						if iPlayerW == iPlayerAct:
 							CvUtil.sendMessage(
-								TRNSLTR.getText("TXT_KEY_SNEAK_YOU", (szTxt, iStolen)), iPlayerW, 16,
+								TRNSLTR.getText("TXT_KEY_MSG_SNEAK_YOU", (szTxt, iStolen)), iPlayerW, 16,
 								'Art/Interface/Buttons/Process/spyprocessmeager.dds',
 								ColorTypes(44), iX, iY, True, True, bForce=False
 							)
 						elif iPlayerL == iPlayerAct:
 							CvUtil.sendMessage(
-								TRNSLTR.getText("TXT_KEY_SNEAK_FROM",(szTxt, iStolen)), iPlayerL, 16,
+								TRNSLTR.getText("TXT_KEY_MSG_SNEAK",(szTxt, iStolen)), iPlayerL, 16,
 								'Art/Interface/Buttons/Process/spyprocessmeager.dds',
 								ColorTypes(44), iX, iY, True, True, bForce=False
 							)
@@ -1048,13 +1052,13 @@ class CvEventManager:
 							# Message
 							if iPlayerW == iPlayerAct:
 								CvUtil.sendMessage(
-									TRNSLTR.getText("TXT_KEY_INDUSTRYESPIONAGE_YOU", (szTxt, iStolen)), iPlayerW, 16,
+									TRNSLTR.getText("TXT_KEY_MSG_INDUSTRYESPIONAGE_YOU", (szTxt, iStolen)), iPlayerW, 16,
 									'Art/Interface/Buttons/Process/processresearchmeagre.dds',
 									ColorTypes(44), iX, iY, True, True, bForce=False
 								)
 							elif iPlayerL == iPlayerAct:
 								CvUtil.sendMessage(
-									TRNSLTR.getText("TXT_KEY_INDUSTRYESPIONAGE_FROM",(szTxt, iStolen)), iPlayerL, 16,
+									TRNSLTR.getText("TXT_KEY_MSG_INDUSTRYESPIONAGE",(szTxt, iStolen)), iPlayerL, 16,
 									'Art/Interface/Buttons/Process/processresearchmeagre.dds',
 									ColorTypes(44), iX, iY, True, True, bForce=False
 								)
@@ -1220,7 +1224,7 @@ class CvEventManager:
 			CyPlot.setImprovementType(-1)
 			CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_FOREST_YOUNG'), 0)
 
-		elif iImprovement == mapImpType['IMPROVEMENT_PLANT_BAMBOO_GROVE']:
+		elif iImprovement == mapImpType['IMPROVEMENT_PLANT_BAMBOO']:
 			CyPlot = GC.getMap().plot(iX, iY)
 			CyPlot.setImprovementType(-1)
 			CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_BAMBOO'), 0)
@@ -1239,7 +1243,7 @@ class CvEventManager:
 					if iEra != -1 and iEra in self.mapMilitiaByEra and self.mapMilitiaByEra[iEra] != -1:
 						CyPlayer.initUnit(self.mapMilitiaByEra[iEra], iX, iY, UnitAITypes.UNITAI_RESERVE, DirectionTypes.NO_DIRECTION)
 						if iPlayer == GAME.getActivePlayer():
-							CvUtil.sendMessage(TRNSLTR.getText("TXT_RECRUITED",()), iPlayer, 16, 'Art/Interface/Buttons/Civics/Serfdom.dds', ColorTypes(44), iX, iY, True, True, bForce=False)
+							CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_RECRUITED",()), iPlayer, 16, 'Art/Interface/Buttons/Civics/Serfdom.dds', ColorTypes(44), iX, iY, True, True, bForce=False)
 
 
 	'''
@@ -1410,7 +1414,7 @@ class CvEventManager:
 						continue
 					# Covers whole map for others
 					GC.getMap().resetRevealedPlots(iTeamX)
-				CvUtil.sendImmediateMessage(TRNSLTR.getText("TXT_GLOBAL_JAM",()))
+				CvUtil.sendImmediateMessage(TRNSLTR.getText("TXT_KEY_GLOBAL_JAM",()))
 			elif KEY == "TSUKIJI":
 				CyTeam = GC.getTeam(CyPlayer.getTeam())
 				BOAT = GC.getInfoTypeForString("IMPROVEMENT_FISHING_BOATS")
@@ -1462,7 +1466,7 @@ class CvEventManager:
 								CyPlot.setImprovementType(BOAT)
 							if bMessage:
 								CvUtil.sendMessage(
-									TRNSLTR.getText("TXT_TSUKIJI_BONUS", (GC.getBonusInfo(BONUS).getDescription(),)),
+									TRNSLTR.getText("TXT_KEY_MSG_TSUKIJI", (GC.getBonusInfo(BONUS).getDescription(),)),
 									iPlayer, 16, GC.getBonusInfo(BONUS).getButton(), ColorTypes(11), iX, iY, True, True
 								)
 
@@ -1792,7 +1796,7 @@ class CvEventManager:
 				print "Error CvEventManager.onBuildingBuilt\n\tROUTE_PAVED_ROAD doesn't exist, aborting python effect for Appian Way"
 				return
 			if iPlayer == GAME.getActivePlayer():
-				CvUtil.sendMessage(TRNSLTR.getText("TXT_APPIAN_BUILT",()), iPlayer)
+				CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_APPIAN_BUILT",()), iPlayer)
 			MAP = GC.getMap()
 			# The appian city
 			iCityID = CyCity.getID()
@@ -1905,7 +1909,7 @@ class CvEventManager:
 			pMaxWest = pMaxEast = CyPlot
 
 			if iPlayer == GAME.getActivePlayer():
-				CvUtil.sendMessage(TRNSLTR.getText("TXT_GOLDEN_SPIKE_BUILT",()), iPlayer)
+				CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_GOLDEN_SPIKE_BUILT",()), iPlayer)
 
 			iGridWidth = MAP.getGridWidth()
 			iGridHeight = MAP.getGridHeight()
@@ -2194,7 +2198,7 @@ class CvEventManager:
 						CyUnitNew.setImmobileTimer(8)
 						# Message
 						if iPlayerL == GAME.getActivePlayer():
-							CvUtil.sendMessage(TRNSLTR.getText("TXT_GG_REVIVE", (szName,)), iPlayerL, 16, 'Art/Interface/Buttons/Great_Wonders/cyrustomb.dds', ColorTypes(11), iX, iY, True, True, bForce=False)
+							CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_GG_REVIVE", (szName,)), iPlayerL, 16, 'Art/Interface/Buttons/Great_Wonders/cyrustomb.dds', ColorTypes(11), iX, iY, True, True, bForce=False)
 
 		# Beastmaster
 		iLeaderUnit = CyUnit.getLeaderUnitType()
@@ -2441,7 +2445,7 @@ class CvEventManager:
 						iBase = CyCity.getBuildingHealthChange(NAZCA_LINES)
 						CyCity.setBuildingHealthChange(NAZCA_LINES, iBase + 2)
 					if iPlayer == GAME.getActivePlayer():
-						CvUtil.sendMessage(TRNSLTR.getText("TXT_NAZCA_LINES",()), iPlayer)
+						CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_MSG_NAZCA_LINES",()), iPlayer)
 
 
 	'''
@@ -2469,8 +2473,8 @@ class CvEventManager:
 				if CyPlayerX.isHuman():
 					strReligionName = GC.getReligionInfo(iReligion).getText()
 					popup = PyPopup.PyPopup(-1)
-					popup.setHeaderString(TRNSLTR.getText("TXT_REAL_FAVORITE_RELIGION_HEADER",()))
-					popup.setBodyString(TRNSLTR.getText("TXT_REAL_FAVORITE_RELIGION_TEXT", (strReligionName, strReligionName)))
+					popup.setHeaderString(TRNSLTR.getText("TXT_KEY_POPUP_FAVORITE_RELIGION_HEADER",()))
+					popup.setBodyString(TRNSLTR.getText("TXT_KEY_POPUP_FAVORITE_RELIGION_TEXT", (strReligionName, strReligionName)))
 					popup.launch(True, PopupStates.POPUPSTATE_IMMEDIATE)
 
 
@@ -2636,9 +2640,9 @@ class CvEventManager:
 						if CvBuildingInfo.getMaxGlobalInstances() == 1:
 
 							if bActive:
-								szTxt = TRNSLTR.getText("TXT_KEY_YOU_DESTROYED_WONDER", (0, CvBuildingInfo.getDescription()))
+								szTxt = TRNSLTR.getText("TXT_KEY_MSG_WONDER_DESTROYED_YOU", (0, CvBuildingInfo.getDescription()))
 							else:
-								szTxt = TRNSLTR.getText("TXT_KEY_DESTROYED_WONDER", (szPlayerName, CvBuildingInfo.getDescription()))
+								szTxt = TRNSLTR.getText("TXT_KEY_MSG_WONDER_DESTROYED", (szPlayerName, CvBuildingInfo.getDescription()))
 
 							CvUtil.sendMessage(szTxt, iActivePlayer, 16, artPath, eColor, iX, iY, True, True, bForce = bActive)
 		# Partisans!
@@ -2753,9 +2757,9 @@ class CvEventManager:
 							if CvBuildingInfo.getMaxGlobalInstances() == 1:
 
 								if bActive:
-									szTxt = TRNSLTR.getText("TXT_KEY_YOU_CAPTURED_WONDER", (0, CvBuildingInfo.getDescription()))
+									szTxt = TRNSLTR.getText("TXT_KEY_MSG_WONDER_CAPTURED_YOU", (0, CvBuildingInfo.getDescription()))
 								else:
-									szTxt = TRNSLTR.getText("TXT_KEY_CAPTURED_WONDER", (szPlayerName, CvBuildingInfo.getDescription()))
+									szTxt = TRNSLTR.getText("TXT_KEY_MSG_WONDER_CAPTURED", (szPlayerName, CvBuildingInfo.getDescription()))
 
 								CvUtil.sendMessage(szTxt, iActivePlayer, 16, artPath, eColor, iX, iY, True, True, bForce = bActive)
 
@@ -2803,7 +2807,7 @@ class CvEventManager:
 					CyUnit = CyPlayer.initUnit(iUnit, iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
 					CyCity.addProductionExperience(CyUnit, False)
 					if iPlayer == GAME.getActivePlayer():
-						CvUtil.sendMessage(TRNSLTR.getText("TXT_NEW_HORSE",(CyUnit.getName(),)), iPlayer, 16, CyUnit.getButton(), ColorTypes(11), iX, iY, True, True)
+						CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_MSG_KENTUCKY_DERBY",(CyUnit.getName(),)), iPlayer, 16, CyUnit.getButton(), ColorTypes(11), iX, iY, True, True)
 
 				elif KEY == "GREAT_ZIMBABWE":
 					if not CyCity.isFoodProduction():
@@ -2822,7 +2826,7 @@ class CvEventManager:
 					CyUnit = CyPlayer.initUnit(iUnit, iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
 					CyCity.addProductionExperience(CyUnit, False)
 					if iPlayer == GAME.getActivePlayer():
-						CvUtil.sendMessage(TRNSLTR.getText("TXT_NEW_ANIMAL",(CyUnit.getName(),)), iPlayer, 16, CyUnit.getButton(), ColorTypes(11), iX, iY, True, True)
+						CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_MSG_BIODOME",(CyUnit.getName(),)), iPlayer, 16, CyUnit.getButton(), ColorTypes(11), iX, iY, True, True)
 
 
 	'''

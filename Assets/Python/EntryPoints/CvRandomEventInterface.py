@@ -8288,11 +8288,11 @@ def doEventLawyer(argsList):
 			pCity.setHasCorporation(iCorpLoop, 0, 0, 0)
 
 		# Litigation succeeds
-		CyInterface().addMessage(iPlayer,False,25,CyTranslator().getText("TXT_KEY_MESSAGE_LITIGATION",(pCity.getName(),)),"AS2D_BUILD_BANK",InterfaceMessageTypes.MESSAGE_TYPE_INFO,pUnit.getButton(),ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
+		CyInterface().addMessage(iPlayer,False,25,CyTranslator().getText("TXT_KEY_MSG_LITIGATION",(pCity.getName(),)),"AS2D_BUILD_BANK",InterfaceMessageTypes.MESSAGE_TYPE_INFO,pUnit.getButton(),ColorTypes(8),pCity.getX(),pCity.getY(),True,True)
 
 	# Litigation fails
 	else:
-		CyInterface().addMessage(iPlayer,False,25,CyTranslator().getText("TXT_KEY_MESSAGE_LITIGATION_FAIL",(pCity.getName(),)),"AS2D_SABOTAGE",InterfaceMessageTypes.MESSAGE_TYPE_INFO,pUnit.getButton(),ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
+		CyInterface().addMessage(iPlayer,False,25,CyTranslator().getText("TXT_KEY_MSG_LITIGATION_FAIL",(pCity.getName(),)),"AS2D_SABOTAGE",InterfaceMessageTypes.MESSAGE_TYPE_INFO,pUnit.getButton(),ColorTypes(7),pCity.getX(),pCity.getY(),True,True)
 
 ## Captives and Slavery mod python ##
 
@@ -8364,7 +8364,7 @@ def doRemoveWVSlavery(argsList):
 				iSum += iCost
 
 				if bMessage:
-					msg = TRNSLTR.getText("TXT_KEY_MESSAGE_SLAVE_MARKET_SOLD", (sCityName,))
+					msg = TRNSLTR.getText("TXT_KEY_MSG_SLAVE_MARKET_SOLD", (sCityName,))
 					CvUtil.sendMessage(msg, iPlayer, 16, GC.getBuildingInfo(iSlaveMarket).getButton(), ColorTypes(8), iCityX, iCityY, True, True, 0, "AS2D_BUILD_BANK")
 
 			# Remove all other Slavery Buildings if they exist
@@ -8497,7 +8497,7 @@ def doRemoveWVCannibalism(argsList):
 				CyCity, i = CyPlayer.nextCity(i, False)
 
 			if iPlayer == GC.getGame().getActivePlayer():
-				CvUtil.sendImmediateMessage(TRNSLTR.getText("TXT_KEY_MESSAGE_NO_CANNIBALISM", ()))
+				CvUtil.sendImmediateMessage(TRNSLTR.getText("TXT_KEY_MSG_NO_CANNIBALISM", ()))
 				CyAudioGame().Play2DSound("AS2D_DISCOVERBONUS")
 
 def doRemoveWVHumanSacrifice(argsList):
@@ -8524,7 +8524,7 @@ def doRemoveWVHumanSacrifice(argsList):
 				loopCity.setNumRealBuilding(iWVSacrifice, 0)
 				CyAudioGame().Play2DSound("AS2D_DISCOVERBONUS")
 
-				CyInterface().addMessage(iPlayer,False,25,TRNSLTR.getText("TXT_KEY_MESSAGE_NO_HUMAN_SACRIFICE",(loopCity.getName(),)),"AS2D_BUILD_BANK",InterfaceMessageTypes.MESSAGE_TYPE_INFO,pUnit.getButton(),ColorTypes(8),loopCity.getX(),loopCity.getY(),True,True)
+				CyInterface().addMessage(iPlayer,False,25,TRNSLTR.getText("TXT_KEY_MSG_NO_HUMAN_SACRIFICE",(loopCity.getName(),)),"AS2D_BUILD_BANK",InterfaceMessageTypes.MESSAGE_TYPE_INFO,pUnit.getButton(),ColorTypes(8),loopCity.getX(),loopCity.getY(),True,True)
 				#~ break
 			# Sell the Alter if one exists
 			if loopCity.getNumActiveBuilding(iAltar) > 0:
@@ -8532,7 +8532,7 @@ def doRemoveWVHumanSacrifice(argsList):
 				loopCity.setNumRealBuilding(iAltar, 0)
 				CyAudioGame().Play2DSound("AS2D_DISCOVERBONUS")
 
-				CyInterface().addMessage(iPlayer,False,25,TRNSLTR.getText("TXT_KEY_MESSAGE_ALTAR_SOLD",(loopCity.getName(),)),"AS2D_BUILD_BANK",InterfaceMessageTypes.MESSAGE_TYPE_INFO,pUnit.getButton(),ColorTypes(8),loopCity.getX(),loopCity.getY(),True,True)
+				CyInterface().addMessage(iPlayer,False,25,TRNSLTR.getText("TXT_KEY_MSG_ALTAR_SOLD",(loopCity.getName(),)),"AS2D_BUILD_BANK",InterfaceMessageTypes.MESSAGE_TYPE_INFO,pUnit.getButton(),ColorTypes(8),loopCity.getX(),loopCity.getY(),True,True)
 
 			(loopCity, iter) = pPlayer.nextCity(iter, False)
 
@@ -8917,8 +8917,8 @@ def canBuildHorseBonusAndPasture(argsList):
 	# Check if Feature or Terrain makes invalid.
 	if pPlot.getFeatureType() in (GC.getInfoTypeForString("FEATURE_SWAMP"), GC.getInfoTypeForString("FEATURE_PEAT_BOG")): return 0
 	if pPlot.getTerrainType() in (
-		GC.getInfoTypeForString("TERRAIN_SALT_FLATS"),	GC.getInfoTypeForString("TERRAIN_DUNES"),		GC.getInfoTypeForString("TERRAIN_DESERT"),
-		GC.getInfoTypeForString("TERRAIN_TAIGA"),		GC.getInfoTypeForString("TERRAIN_ICE"),			GC.getInfoTypeForString("TERRAIN_TUNDRA"),
+		GC.getInfoTypeForString("TERRAIN_SALT_FLATS"),	GC.getInfoTypeForString("TERRAIN_DUNES"),	GC.getInfoTypeForString("TERRAIN_DESERT"),
+		GC.getInfoTypeForString("TERRAIN_TAIGA"),		GC.getInfoTypeForString("TERRAIN_ICE"),		GC.getInfoTypeForString("TERRAIN_TUNDRA"),
 		GC.getInfoTypeForString("TERRAIN_PERMAFROST"),	GC.getInfoTypeForString("TERRAIN_JAGGED"),	GC.getInfoTypeForString("TERRAIN_BADLAND"),
 		GC.getInfoTypeForString("TERRAIN_BARREN"), 		GC.getInfoTypeForString("TERRAIN_MARSH")
 		): return 0
@@ -9350,24 +9350,3 @@ def applyCivilWar(argsList):
 def canDoBestHunters1(argsList):
 	if GAME.isOption(GameOptionTypes.GAMEOPTION_WITHOUT_WARNING): return True
 	return False
-
-################ BOUNTIFUL ANIMALS ################
-
-# def canApplyBountifulAnimals(argsList):
-	# kTriggeredData = argsList[0]
-	# pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
-	# pCity = player.getCity(kTriggeredData.iCityId)
-
-	# aHerdBuildings = [ GC.getInfoTypeForString("BUILDING_DEER_HERD"),
-						# GC.getInfoTypeForString(""),
-						# ]
-	# for i in aHerdBuildings:
-		# if (pCity.isHasBuilding(i)):
-			# return True
-			# break
-
-
-
-#	newUnit1 = pPlayer.initUnit(GC.getInfoTypeForString('UNIT_ASSASSIN'), pCity.getX(),pCity.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-
-	# return False

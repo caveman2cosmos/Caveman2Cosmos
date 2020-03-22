@@ -46,11 +46,6 @@
 			<Civilopedia>TXT_KEY_CONCEPT_ACTIVE_DEFENSE_PEDIA</Civilopedia>
 		</NewConceptInfo>
 		<NewConceptInfo>
-			<Type>CONCEPT_ARCHER_BOMBARD</Type>
-			<Description>TXT_KEY_CONCEPT_ABOMBARD_TEXT</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_ABOMBARD_PEDIA</Civilopedia>
-		</NewConceptInfo>
-		<NewConceptInfo>
 			<Type>CONCEPT_REVDCM</Type>
 			<Description>TXT_KEY_CONCEPT_REVDCM_TEXT</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_REVDCM_PEDIA</Civilopedia>

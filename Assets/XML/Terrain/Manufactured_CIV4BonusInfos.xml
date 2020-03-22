@@ -1108,7 +1108,7 @@
 			<Description>TXT_KEY_BONUS_HEAVY_WATER</Description>
 			<Civilopedia>TXT_KEY_BONUS_HEAVY_WATER_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_ZINC_ORE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_HEAVY_WATER</ArtDefineTag>
 			<TechReveal>TECH_QUANTUM_PHYSICS</TechReveal>
 			<TechCityTrade>TECH_QUANTUM_PHYSICS</TechCityTrade>
 			<iAITradeModifier>10</iAITradeModifier>
@@ -1505,11 +1505,11 @@
 		</BonusInfo>
 	<!-- Mars Rocks -->
 		<BonusInfo>
-			<Type>BONUS_MARS_ROCKS</Type>
-			<Description>TXT_KEY_BONUS_MARS_ROCKS</Description>
-			<Civilopedia>TXT_KEY_BONUS_MARS_ROCKS_PEDIA</Civilopedia>
+			<Type>BONUS_MARTIAN_ROCKS</Type>
+			<Description>TXT_KEY_BONUS_MARTIAN_ROCKS</Description>
+			<Civilopedia>TXT_KEY_BONUS_MARTIAN_ROCKS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_MARS_ROCKS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_MARTIAN_ROCKS</ArtDefineTag>
 			<TechReveal>TECH_PLANETARY_EXPLORATION</TechReveal>
 			<TechCityTrade>TECH_PLANETARY_EXPLORATION</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
@@ -1620,7 +1620,7 @@
 			<Description>TXT_KEY_BONUS_MOON_ROCKS</Description>
 			<Civilopedia>TXT_KEY_BONUS_MOON_ROCKS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_MARS_ROCKS</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_MOON_ROCKS</ArtDefineTag>
 			<TechReveal>TECH_LUNAR_EXPLORATION</TechReveal>
 			<TechCityTrade>TECH_LUNAR_EXPLORATION</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
@@ -2405,6 +2405,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_STONE_TOOLS</ArtDefineTag>
 			<TechReveal>TECH_TOOL_MAKING</TechReveal>
 			<TechCityTrade>TECH_TOOL_MAKING</TechCityTrade>
+			<TechObsolete>TECH_IRON_WORKING</TechObsolete>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Straw -->
@@ -2435,7 +2436,7 @@
 			<Description>TXT_KEY_BONUS_SYNTHETIC_RUBBER</Description>
 			<Civilopedia>TXT_KEY_BONUS_SYNTHETIC_RUBBER_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_VULCANIZED_RUBBER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_SYNTHETIC_RUBBER</ArtDefineTag>
 			<TechReveal>TECH_POLYMERIZATION</TechReveal>
 			<TechCityTrade>TECH_POLYMERIZATION</TechCityTrade>
 			<iAITradeModifier>10</iAITradeModifier>
@@ -2598,13 +2599,13 @@
 			<iAIObjective>5</iAIObjective>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
-	<!-- Vacuum -->
+	<!-- Vacuum cleaners -->
 		<BonusInfo>
-			<Type>BONUS_VACUUM</Type>
-			<Description>TXT_KEY_BONUS_VACUUM</Description>
-			<Civilopedia>TXT_KEY_BONUS_VACUUM_PEDIA</Civilopedia>
+			<Type>BONUS_VACUUM_CLEANERS</Type>
+			<Description>TXT_KEY_BONUS_VACUUM_CLEANERS</Description>
+			<Civilopedia>TXT_KEY_BONUS_VACUUM_CLEANERS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_VACUUM</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_VACUUM_CLEANERS</ArtDefineTag>
 			<TechReveal>TECH_ELECTRONICS</TechReveal>
 			<TechCityTrade>TECH_ELECTRONICS</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
@@ -2799,66 +2800,66 @@
 		</BonusInfo>
 	<!-- Liquid Metal Wares -->
 		<BonusInfo>
-			<Type>BONUS_LIQUID_METAL_WARES</Type>
-			<Description>TXT_KEY_BONUS_LIQUID_METAL_WARES</Description>
-			<Civilopedia>TXT_KEY_BONUS_LIQUID_METAL_WARES_PEDIA</Civilopedia>
+			<Type>BONUS_LIQUID_METAL</Type>
+			<Description>TXT_KEY_BONUS_LIQUID_METAL</Description>
+			<Civilopedia>TXT_KEY_BONUS_LIQUID_METAL_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_LIQUID_METAL_WARES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_LIQUID_METAL</ArtDefineTag>
 			<TechReveal>TECH_LIQUID_METALS</TechReveal>
 			<TechCityTrade>TECH_LIQUID_METALS</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Megastrong Alloy Wares -->
 		<BonusInfo>
-			<Type>BONUS_MEGASTRONG_ALLOY_WARES</Type>
-			<Description>TXT_KEY_BONUS_MEGASTRONG_ALLOY_WARES</Description>
-			<Civilopedia>TXT_KEY_BONUS_MEGASTRONG_ALLOY_WARES_PEDIA</Civilopedia>
+			<Type>BONUS_MEGASTRONG_ALLOYS</Type>
+			<Description>TXT_KEY_BONUS_MEGASTRONG_ALLOYS</Description>
+			<Civilopedia>TXT_KEY_BONUS_MEGASTRONG_ALLOYS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_MEGASTRONG_ALLOY_WARES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_MEGASTRONG_ALLOYS</ArtDefineTag>
 			<TechReveal>TECH_MEGASTRONG_ALLOYS</TechReveal>
 			<TechCityTrade>TECH_MEGASTRONG_ALLOYS</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Metamaterial Wares -->
 		<BonusInfo>
-			<Type>BONUS_METAMATERIAL_WARES</Type>
-			<Description>TXT_KEY_BONUS_METAMATERIAL_WARES</Description>
-			<Civilopedia>TXT_KEY_BONUS_METAMATERIAL_WARES_PEDIA</Civilopedia>
+			<Type>BONUS_METAMATERIALS</Type>
+			<Description>TXT_KEY_BONUS_METAMATERIALS</Description>
+			<Civilopedia>TXT_KEY_BONUS_METAMATERIALS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_METAMATERIAL_WARES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_METAMATERIALS</ArtDefineTag>
 			<TechReveal>TECH_METAMATERIALS</TechReveal>
 			<TechCityTrade>TECH_METAMATERIALS</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Porcelain Wares -->
 		<BonusInfo>
-			<Type>BONUS_PORCELAIN_WARES</Type>
-			<Description>TXT_KEY_BONUS_PORCELAIN_WARES</Description>
-			<Civilopedia>TXT_KEY_BONUS_PORCELAIN_WARES_PEDIA</Civilopedia>
+			<Type>BONUS_PORCELAIN</Type>
+			<Description>TXT_KEY_BONUS_PORCELAIN</Description>
+			<Civilopedia>TXT_KEY_BONUS_PORCELAIN_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_PORCELAIN_WARES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_PORCELAIN</ArtDefineTag>
 			<TechReveal>TECH_AESTHETICS</TechReveal>
 			<TechCityTrade>TECH_AESTHETICS</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Superstrong Alloy Wares -->
 		<BonusInfo>
-			<Type>BONUS_SUPERSTRONG_ALLOY_WARES</Type>
-			<Description>TXT_KEY_BONUS_SUPERSTRONG_ALLOY_WARES</Description>
-			<Civilopedia>TXT_KEY_BONUS_SUPERSTRONG_ALLOY_WARES_PEDIA</Civilopedia>
+			<Type>BONUS_SUPERSTRONG_ALLOYS</Type>
+			<Description>TXT_KEY_BONUS_SUPERSTRONG_ALLOYS</Description>
+			<Civilopedia>TXT_KEY_BONUS_SUPERSTRONG_ALLOYS_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_SUPERSTRONG_ALLOY_WARES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_SUPERSTRONG_ALLOYS</ArtDefineTag>
 			<TechReveal>TECH_SUPERSTRONG_ALLOYS</TechReveal>
 			<TechCityTrade>TECH_SUPERSTRONG_ALLOYS</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 	<!-- Terracotta Wares -->
 		<BonusInfo>
-			<Type>BONUS_TERRACOTTA_WARES</Type>
-			<Description>TXT_KEY_BONUS_TERRACOTTA_WARES</Description>
-			<Civilopedia>TXT_KEY_BONUS_TERRACOTTA_WARES_PEDIA</Civilopedia>
+			<Type>BONUS_TERRACOTTA</Type>
+			<Description>TXT_KEY_BONUS_TERRACOTTA</Description>
+			<Civilopedia>TXT_KEY_BONUS_TERRACOTTA_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_TERRACOTTA_WARES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_TERRACOTTA</ArtDefineTag>
 			<TechReveal>TECH_ORNAMENTATION</TechReveal>
 			<TechCityTrade>TECH_ORNAMENTATION</TechCityTrade>
 			<iPlacementOrder>-1</iPlacementOrder>

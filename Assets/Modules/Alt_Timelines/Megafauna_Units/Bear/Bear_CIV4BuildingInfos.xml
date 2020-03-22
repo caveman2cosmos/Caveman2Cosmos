@@ -150,6 +150,9 @@
 			<Strategy>TXT_KEY_BUILDING_BEAR_TRAINER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BEAR_TRAINER_EFFECT</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<bNeverCapture>1</bNeverCapture>
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<iCost>-1</iCost>

@@ -515,47 +515,6 @@ void CvGame::updateColoredPlots()
 		}
 		// Dale - RB: Field Bombard END
 
-		// Dale - ARB: Archer Bombard START
-		if(GC.isDCM_ARCHER_BOMBARD())
-		{
-			iMaxAirRange = 0;
-
-			pSelectedUnitNode = gDLL->getInterfaceIFace()->headSelectionListNode();
-
-			while (pSelectedUnitNode != NULL)
-			{
-				pSelectedUnit = ::getUnit(pSelectedUnitNode->m_data);
-				pSelectedUnitNode = gDLL->getInterfaceIFace()->nextSelectionListNode(pSelectedUnitNode);
-
-				if (pSelectedUnit != NULL && pSelectedUnit->canArcherBombard())
-				{
-					iMaxAirRange = 1;
-				}
-			}
-
-			if (iMaxAirRange > 0)
-			{
-				for (iDX = -(iMaxAirRange); iDX <= iMaxAirRange; iDX++)
-				{
-					for (iDY = -(iMaxAirRange); iDY <= iMaxAirRange; iDY++)
-					{
-						pLoopPlot = plotXY(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), iDX, iDY);
-
-						if (pLoopPlot != NULL)
-						{
-							if (plotDistance(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), pLoopPlot->getX(), pLoopPlot->getY()) <= iMaxAirRange)
-							{
-								NiColorA color(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_WHITE")).getColor());
-								color.a = 0.4f;
-								gDLL->getEngineIFace()->addColoredPlot(pLoopPlot->getViewportX(), pLoopPlot->getViewportY(), color, PLOT_STYLE_TARGET, PLOT_LANDSCAPE_LAYER_BASE);
-							}
-						}
-					}
-				}
-			}
-		}
-		// Dale - ARB: Archer Bombard END
-
 		if (pHeadSelectedUnit->getDomainType() == DOMAIN_AIR)
 		{
 			iMaxAirRange = 0;
@@ -1466,7 +1425,6 @@ void CvGame::selectionListGameNetMessageInternal(int eMessage, int iData2, int i
 							case MISSION_AIRBOMB4:
 							case MISSION_AIRBOMB5:
 							case MISSION_RBOMBARD:
-							case MISSION_ABOMBARD:
 							case MISSION_FENGAGE:
 							case MISSION_CLAIM_TERRITORY:
 							case MISSION_PRETARGET_NUKE:

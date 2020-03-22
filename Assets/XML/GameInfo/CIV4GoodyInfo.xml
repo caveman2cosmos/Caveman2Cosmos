@@ -328,14 +328,14 @@
 			<Type>GOODY_STONE_AGE_SPEARMAN</Type>
 			<Description>TXT_KEY_GOODY_STONE_SPEARMAN</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<FreeUnit>UNIT_STONE_AGE_SPEARMAN</FreeUnit>
+			<FreeUnit>UNIT_STONE_SPEARMAN</FreeUnit>
 			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_STONE_AGE_AXEMAN</Type>
 			<Description>TXT_KEY_GOODY_STONE_AXEMAN</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
-			<FreeUnit>UNIT_STONE_AGE_AXEMAN</FreeUnit>
+			<FreeUnit>UNIT_STONE_AXEMAN</FreeUnit>
 			<EraType>C2C_ERA_PREHISTORIC</EraType>
 		</GoodyInfo>
 		<GoodyInfo>
@@ -396,7 +396,7 @@
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_RIFLEMAN</Type>
-			<Description>TXT_KEY_GOODY_RIFLEMAN</Description>
+			<Description>TXT_KEY_GOODY_INFANTRY</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
 			<FreeUnit>UNIT_RIFLEMAN</FreeUnit>
 			<EraType>C2C_ERA_INDUSTRIAL</EraType>
@@ -417,7 +417,7 @@
 		</GoodyInfo>
 		<GoodyInfo>
 			<Type>GOODY_TESLA_INFANTRY</Type>
-			<Description>TXT_KEY_GOODY_TESLA_INFANTRY</Description>
+			<Description>TXT_KEY_GOODY_INFANTRY</Description>
 			<Sound>AS2D_GOODY_WARRIOR</Sound>
 			<FreeUnit>UNIT_TESLA_INFANTRY</FreeUnit>
 			<EraType>C2C_ERA_NANOTECH</EraType>

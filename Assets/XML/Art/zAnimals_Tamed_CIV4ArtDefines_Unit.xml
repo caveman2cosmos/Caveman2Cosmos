@@ -320,30 +320,6 @@
 			</AudioRunSounds>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_TAMED_BEAR</Type>
-			<Button>Art/Interface/Buttons/units/sparth/tamed_bear.dds</Button>
-			<fScale>0.6</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<bActAsLand>0</bActAsLand>
-			<bActAsAir>0</bActAsAir>
-			<NIF>Art/Units/Bear/Bear.nif</NIF>
-			<KFM>Art/Units/Bear/Bear.kfm</KFM>
-			<SHADERNIF>Art/Units/Bear/Bear_FX.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/BearShadow.nif</ShadowNIF>
-				<ShadowAttachNode>LionBip Spine</ShadowAttachNode>
-				<fShadowScale>.6</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.35</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<bActAsRanged>0</bActAsRanged>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-			<AudioRunSounds>
-				<AudioRunTypeLoop />
-				<AudioRunTypeEnd />
-			</AudioRunSounds>
-		</UnitArtInfo>
-		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_TAMED_PANTHER</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/tamed_panther.dds</Button>
 			<fScale>0.5</fScale>
@@ -353,30 +329,6 @@
 			<NIF>Art/Units/Panther/Panther.nif</NIF>
 			<KFM>Art/Units/Panther/Panther.kfm</KFM>
 			<SHADERNIF>Art/Units/Panther/Panther_FX.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/PantherShadow.nif</ShadowNIF>
-				<ShadowAttachNode>LionBip Spine</ShadowAttachNode>
-				<fShadowScale>1.0</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.35</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<bActAsRanged>0</bActAsRanged>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-			<AudioRunSounds>
-				<AudioRunTypeLoop />
-				<AudioRunTypeEnd />
-			</AudioRunSounds>
-		</UnitArtInfo>
-		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_TAMED_CHEETAH</Type>
-			<Button>Art/Interface/Buttons/Units/sparth/tamed_cheetach.dds</Button>
-			<fScale>0.45</fScale>
-			<fInterfaceScale>1.3</fInterfaceScale>
-			<bActAsLand>0</bActAsLand>
-			<bActAsAir>0</bActAsAir>
-			<NIF>Art/Units/animals/Cheetah/Panther.nif</NIF>
-			<KFM>Art/Units/Panther/Panther.kfm</KFM>
-			<SHADERNIF>Art/Units/animals/Cheetah/Panther.nif</SHADERNIF>
 			<ShadowDef>
 				<ShadowNIF>Art/Units/01_UnitShadows/PantherShadow.nif</ShadowNIF>
 				<ShadowAttachNode>LionBip Spine</ShadowAttachNode>
@@ -696,30 +648,6 @@
 			<NIF>Art/Units/animals/Mammoth/mammoth9.nif</NIF>
 			<KFM>Art/Units/WarElephant/WarElephant.kfm</KFM>
 			<SHADERNIF>Art/Units/animals/Mammoth/mammoth9.nif</SHADERNIF>
-			<ShadowDef>
-				<ShadowNIF>Art/Units/01_UnitShadows/WarElephantShadow.nif</ShadowNIF>
-				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>
-				<fShadowScale>1.0</fShadowScale>
-			</ShadowDef>
-			<fBattleDistance>0.45</fBattleDistance>
-			<fRangedDeathTime>0.31</fRangedDeathTime>
-			<bActAsRanged>0</bActAsRanged>
-			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
-			<AudioRunSounds>
-				<AudioRunTypeLoop />
-				<AudioRunTypeEnd />
-			</AudioRunSounds>
-		</UnitArtInfo>
-		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_TAMED_RHINO</Type>
-			<Button>Art/Interface/Buttons/units/sparth/tamed_rhino.dds</Button>
-			<fScale>0.46</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<bActAsLand>0</bActAsLand>
-			<bActAsAir>0</bActAsAir>
-			<NIF>Art/Units/animals/Rhino/mounted_swordsman_mongol.nif</NIF>
-			<KFM>Art/Units/knight/knight.kfm</KFM>
-			<SHADERNIF>Art/Units/animals/Rhino/mounted_swordsman_mongol.nif</SHADERNIF>
 			<ShadowDef>
 				<ShadowNIF>Art/Units/01_UnitShadows/WarElephantShadow.nif</ShadowNIF>
 				<ShadowAttachNode>BIP Pelvis</ShadowAttachNode>

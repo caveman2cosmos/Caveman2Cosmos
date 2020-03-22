@@ -1,74 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by XMLSPY 2004 Professional Ed. Release 2, Installed Multi + SMP for 3 users (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- GameText Civilopedia Techs -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
-	<TEXT>
-		<Tag>TXT_KEY_TECH_YORUBA</Tag>
-		<English>Yoruba</English>
-		<Polish>Joruba</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_YORUBA_ADJECTIVE</Tag>
-		<English>Yoruba</English>
-		<French>
-			<Text>Yoruba</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>
-			<Text>Yoruba</Text>
-			<Gender>Neuter:Neuter:Neuter</Gender>
-			<Plural>0:0:0</Plural>
-		</German>
-		<Italian>
-			<Text>Yoruba</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Yoruba</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</Spanish>
-		<Polish>Joruba</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_YORUBA_PEDIA</Tag>
-		<English>RELIGION HELP: Yoruba doesn't work as usual religions does, it has a few particularities. The first is that the  missionary can only be built by first building a Pattaky of Olofin, which can be only constructed if Yoruba is your state religion and is present in the city, giving you no option but to start spreading from the founder city. Yoruba has no buildings, as the real religion never did, so they are replaced by the original form of transmission of this religion... pattakys. A pattaky is the sum of all storys, myths, songs, dances and believes belonging to a deity, from the creator god, Olodumare, to the orishas (greats kings of ancient times, made gods by Olodumare). In order to build the pattakys, you need to build first the pattaky of Olofin.The Yorùbá religion comprises religious beliefs and practices of the Yoruba people of old before the Yoruba community encountered Islam, Christianity and other faiths. It originated from Africa (chiefly in Nigeria and Benin Republic), and in the New World, where it has influenced or given birth to several Afro-American religions such as Lucumí in Cuba and Umbanda and Candomblé in Brazil in addition to the transplantation of the homeland religions. Though specific numbers are unknown, it is possibly the largest African-born religion in the world.[PARAGRAPH:2]Credits: icons by White Rabbit.</English>
-		<Italian>ATTENZIONE: Yoruba non funziona come le altre religioni. La prima differenza è che i missionari possono essere addestrati solo dopo aver costruito un Pattaky di Olofin, che può essere costruito solo se Yoruba è la tua religione di stato ed è presente in città, lasciando come unica opzione il diffonderla dalla sua Città Santa. Yoruba non ha edifici, che vengono sostituiti dalla forma di trasmissione di questa religione ... i pattaky. Un pattaky è la somma di tutti i racconti, miti, canti, danze e credenze appartenenti a una divinità, donate dal dio creatore, Olodumare, agli Orisha (grandi re dei tempi antichi resi divinità da Olodumare). Per poter costruire gli altri pattaky, devi prima costruire il pattaky di Olofin.La religione Yorùbá comprende le pratiche e le credenze religiose che il popolo Yoruba aveva prima dell'incontro con l'Islam, la Cristianità e altre fedi. Ha avuto origine in Africa (principalmente in Nigeria e Benin) e si è poi diffusa nel Nuovo Mondo, dove ha influenzato o dato origine a molte teligioni afro-americane, come i Lucumí a Cuba e gli Umbanda e i Candomblé in Brasile. Anche se non esistono numeri precisi, Yoruba è probabilmente la religione afro-americana più diffusa al mondo.[PARAGRAPH:2]Crediti: icone di White Rabbit.</Italian>
-		<Polish>Jorubowie - lud afrykański (populacja ok. 27 milionów osób - 2005), posługujący się językiem joruba z wielkiej rodziny nigero-kongijskiej (według niektórych klasyfikacji język ten należy do podrodziny kwa). Zamieszkują zachodnią część Afryki, największe skupiska w Nigerii, Beninie i Togo. Większość Jorubów mieszka obecnie w miastach, trudniąc się handlem i rzemiosłem (tkactwo, kowalstwo, rzeźba). Jorubowie mieszkający na wsi oprócz rolnictwa zajmują się tradycyjną sztuką ludową (rękodziełem). Jorubowie mają bogate tradycje historyczne i kulturowe. Jeszcze przed okresem kolonizacji europejskiej stworzyli cały system miast-państw, zarządzanych przez wspólnotę wodzów pod przywództwem władcy świętego według ich wierzeń miasta Ife. Sztuka Jorubów stoi na wysokim poziomie, znane są zwłaszcza wizerunki bóstw sporządzane z brązu oraz rytualne maski, dużą popularnością cieszą się ręcznie tkane makaty z motywami afrykańskimi i mitologicznymi. Spora część Jorubów oparła się zarówno chrystianizacji, jak i islamizacji, i wciąż pozostaje przy tradycyjnych wierzeniach. Ich mitologia i kultura jest obecna również na innych kontynentach, zwłaszcza w Ameryce Łacińskiej, co jest efektem wywozu z Afryki niewolników należących do tego właśnie ludu. Na Kubie, w nowych warunkach, zwłaszcza przy dużym nacisku na przyjęcie religii katolickiej, duchowość ta ewoluowała w kierunku synkretycznego kultu Santeria. W Brazylii wierzenia Jorubów stały się podstawą religii afrobrazylijskiej - candomblé, w nieznacznym stopniu synkretycznej z wierzeniami chrześcijańskimi. Jorubowie mają bardzo dobrze rozwiniętą mitologię, znani są też z należących do sfery kultowej wróżbiarstwa i zielarstwa.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_YORUBA_QUOTE</Tag>
-		<English>"A small child who is cutting a tree for the first time cannot know where the tree will fall, but an elder who has cut the tree before knows where it'll fall." - Yoruba Proverb</English>
-		<French>"Un petit enfant qui coupe un arbre pour la première fois ne peut pas savoir où l'arbre va tomber, mais un aîné qui a coupé l'arbre avant sait où il va tomber." - Proverbe Yoruba</French>
-		<Polish>"Małe dziecko ścinające drzewo po raz pierwszy nie wie jak to drzewo upadnie, ale starzec, który wiele razy ścinał drzewa wie jak one upadają." - przysłowie ludu Yoruba</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TECH_YORUBA_STRATEGY</Tag>
-		<English>Research Yoruba to Found a religion</English>
-		<French>Recherchez Yoruba pour fonder une religion</French>
-		<Spanish>Investiga la Yoruba para fundar una religión.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_YORUBA_MISSIONARY</Tag>
-		<English>Yoruba Missionary</English>
-		<French>Missionnaire Yoruba</French>
-		<Italian>
-			<Text>Missionario Yoruba</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Misjonarz Joruba</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_YORUBA_MISSIONARY_STRATEGY</Tag>
-		<English>Use this missionary to actively spread [COLOR_HIGHLIGHT_TEXT]Yoruba religion[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]). This increases your income if you have the [COLOR_BUILDING_TEXT]Pattaky of Olodumare[COLOR_REVERT].</English>
-		<Italian>Usa questo missionario per diffondere velocemente [COLOR_HIGHLIGHT_TEXT]Yoruba[COLOR_REVERT] nelle tue città, o nelle città straniere nelle quali hai [COLOR_HIGHLIGHT_TEXT]Diritto di passaggio[COLOR_REVERT]).</Italian>
-	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OBATALA</Tag>
 		<English>Pattaky of Obatala</English>
@@ -201,5 +132,69 @@
 		<Tag>TXT_KEY_BUILDING_YORUBA_SHRINE_STRATEGY</Tag>
 		<English>Build this pattaky to get gold from every city in the world where Yoruba is present.</English>
 		<Italian>Costruisci questo pattaky per ottenere oro da ogni città del mondo in cui è presente Yoruba.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_YORUBA</Tag>
+		<English>Yoruba</English>
+		<Polish>Joruba</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_YORUBA_ADJECTIVE</Tag>
+		<English>Yoruba</English>
+		<French>
+			<Text>Yoruba</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>
+			<Text>Yoruba</Text>
+			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Plural>0:0:0</Plural>
+		</German>
+		<Italian>
+			<Text>Yoruba</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Yoruba</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</Spanish>
+		<Polish>Joruba</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_YORUBA_PEDIA</Tag>
+		<English>RELIGION HELP: Yoruba doesn't work as usual religions does, it has a few particularities. The first is that the  missionary can only be built by first building a Pattaky of Olofin, which can be only constructed if Yoruba is your state religion and is present in the city, giving you no option but to start spreading from the founder city. Yoruba has no buildings, as the real religion never did, so they are replaced by the original form of transmission of this religion... pattakys. A pattaky is the sum of all storys, myths, songs, dances and believes belonging to a deity, from the creator god, Olodumare, to the orishas (greats kings of ancient times, made gods by Olodumare). In order to build the pattakys, you need to build first the pattaky of Olofin.The Yorùbá religion comprises religious beliefs and practices of the Yoruba people of old before the Yoruba community encountered Islam, Christianity and other faiths. It originated from Africa (chiefly in Nigeria and Benin Republic), and in the New World, where it has influenced or given birth to several Afro-American religions such as Lucumí in Cuba and Umbanda and Candomblé in Brazil in addition to the transplantation of the homeland religions. Though specific numbers are unknown, it is possibly the largest African-born religion in the world.[PARAGRAPH:2]Credits: icons by White Rabbit.</English>
+		<Italian>ATTENZIONE: Yoruba non funziona come le altre religioni. La prima differenza è che i missionari possono essere addestrati solo dopo aver costruito un Pattaky di Olofin, che può essere costruito solo se Yoruba è la tua religione di stato ed è presente in città, lasciando come unica opzione il diffonderla dalla sua Città Santa. Yoruba non ha edifici, che vengono sostituiti dalla forma di trasmissione di questa religione ... i pattaky. Un pattaky è la somma di tutti i racconti, miti, canti, danze e credenze appartenenti a una divinità, donate dal dio creatore, Olodumare, agli Orisha (grandi re dei tempi antichi resi divinità da Olodumare). Per poter costruire gli altri pattaky, devi prima costruire il pattaky di Olofin.La religione Yorùbá comprende le pratiche e le credenze religiose che il popolo Yoruba aveva prima dell'incontro con l'Islam, la Cristianità e altre fedi. Ha avuto origine in Africa (principalmente in Nigeria e Benin) e si è poi diffusa nel Nuovo Mondo, dove ha influenzato o dato origine a molte teligioni afro-americane, come i Lucumí a Cuba e gli Umbanda e i Candomblé in Brasile. Anche se non esistono numeri precisi, Yoruba è probabilmente la religione afro-americana più diffusa al mondo.[PARAGRAPH:2]Crediti: icone di White Rabbit.</Italian>
+		<Polish>Jorubowie - lud afrykański (populacja ok. 27 milionów osób - 2005), posługujący się językiem joruba z wielkiej rodziny nigero-kongijskiej (według niektórych klasyfikacji język ten należy do podrodziny kwa). Zamieszkują zachodnią część Afryki, największe skupiska w Nigerii, Beninie i Togo. Większość Jorubów mieszka obecnie w miastach, trudniąc się handlem i rzemiosłem (tkactwo, kowalstwo, rzeźba). Jorubowie mieszkający na wsi oprócz rolnictwa zajmują się tradycyjną sztuką ludową (rękodziełem). Jorubowie mają bogate tradycje historyczne i kulturowe. Jeszcze przed okresem kolonizacji europejskiej stworzyli cały system miast-państw, zarządzanych przez wspólnotę wodzów pod przywództwem władcy świętego według ich wierzeń miasta Ife. Sztuka Jorubów stoi na wysokim poziomie, znane są zwłaszcza wizerunki bóstw sporządzane z brązu oraz rytualne maski, dużą popularnością cieszą się ręcznie tkane makaty z motywami afrykańskimi i mitologicznymi. Spora część Jorubów oparła się zarówno chrystianizacji, jak i islamizacji, i wciąż pozostaje przy tradycyjnych wierzeniach. Ich mitologia i kultura jest obecna również na innych kontynentach, zwłaszcza w Ameryce Łacińskiej, co jest efektem wywozu z Afryki niewolników należących do tego właśnie ludu. Na Kubie, w nowych warunkach, zwłaszcza przy dużym nacisku na przyjęcie religii katolickiej, duchowość ta ewoluowała w kierunku synkretycznego kultu Santeria. W Brazylii wierzenia Jorubów stały się podstawą religii afrobrazylijskiej - candomblé, w nieznacznym stopniu synkretycznej z wierzeniami chrześcijańskimi. Jorubowie mają bardzo dobrze rozwiniętą mitologię, znani są też z należących do sfery kultowej wróżbiarstwa i zielarstwa.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_YORUBA_QUOTE</Tag>
+		<English>"A small child who is cutting a tree for the first time cannot know where the tree will fall, but an elder who has cut the tree before knows where it'll fall." - Yoruba Proverb</English>
+		<French>"Un petit enfant qui coupe un arbre pour la première fois ne peut pas savoir où l'arbre va tomber, mais un aîné qui a coupé l'arbre avant sait où il va tomber." - Proverbe Yoruba</French>
+		<Polish>"Małe dziecko ścinające drzewo po raz pierwszy nie wie jak to drzewo upadnie, ale starzec, który wiele razy ścinał drzewa wie jak one upadają." - przysłowie ludu Yoruba</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TECH_YORUBA_STRATEGY</Tag>
+		<English>Research Yoruba to Found a religion</English>
+		<French>Recherchez Yoruba pour fonder une religion</French>
+		<Spanish>Investiga la Yoruba para fundar una religión.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_YORUBA_MISSIONARY</Tag>
+		<English>Yoruba Missionary</English>
+		<French>Missionnaire Yoruba</French>
+		<Italian>
+			<Text>Missionario Yoruba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Misjonarz Joruba</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_YORUBA_MISSIONARY_STRATEGY</Tag>
+		<English>Use this missionary to actively spread [COLOR_HIGHLIGHT_TEXT]Yoruba religion[COLOR_REVERT] in friendly cities (or rival cities with whom you have [COLOR_HIGHLIGHT_TEXT]Open Borders[COLOR_REVERT]). This increases your income if you have the [COLOR_BUILDING_TEXT]Pattaky of Olodumare[COLOR_REVERT].</English>
+		<Italian>Usa questo missionario per diffondere velocemente [COLOR_HIGHLIGHT_TEXT]Yoruba[COLOR_REVERT] nelle tue città, o nelle città straniere nelle quali hai [COLOR_HIGHLIGHT_TEXT]Diritto di passaggio[COLOR_REVERT]).</Italian>
 	</TEXT>
 </Civ4GameText>
