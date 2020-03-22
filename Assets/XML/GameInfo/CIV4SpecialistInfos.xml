@@ -1,10 +1,4 @@
-<?xml version="1.0"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- ReModified by StrategyOnly -->
-	<!-- -->
-	<!-- Specialist -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4SpecialistInfos xmlns="x-schema:../Schema/C2C_CIV4GameInfoSchema.xml">
 	<SpecialistInfos>
 		<SpecialistInfo>
@@ -288,11 +282,11 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Specialists/doctor.dds</Button>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-			    <iAmountPerTurn>-2</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<iAmountPerTurn>-2</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 		</SpecialistInfo>
 		<SpecialistInfo>
@@ -812,8 +806,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/MainScreen/CityScreen/android.dds</Button>
 		</SpecialistInfo>
-		<!--
-		<SpecialistInfo>
+		<!-- <SpecialistInfo>
 			<Type>SPECIALIST_SENIOR_CITIZEN</Type>
 			<Description>TXT_KEY_SPECIALIST_CITIZEN</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_SPECIALISTS_PEDIA</Civilopedia>
@@ -839,8 +832,7 @@
 			<bCtrlDown>0</bCtrlDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/MainScreen/CityScreen/Citizen.dds</Button>
-		</SpecialistInfo>
-		-->
+		</SpecialistInfo> -->
 		<SpecialistInfo>
 			<Type>SPECIALIST_MILITARY_INSTRUCTOR</Type>
 			<Description>TXT_KEY_SPECIALIST_MILITARY_INSTRUCTOR</Description>
@@ -993,11 +985,11 @@
 			</UnitCombatExperienceTypes>
 			<Button>Art/Interface/buttons/specialists/great_doctor.dds</Button>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-			    <iAmountPerTurn>-5</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<iAmountPerTurn>-5</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 		</SpecialistInfo>
 		<SpecialistInfo>

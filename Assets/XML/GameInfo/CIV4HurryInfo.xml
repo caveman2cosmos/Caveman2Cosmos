@@ -1,10 +1,4 @@
-<?xml version="1.0"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jesse Smith (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Civ4HurryInfo - This structure describes the name for each multiplayer option. -->
-<!-- Caveman2Cosmos -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4HurryInfo xmlns="x-schema:../Schema/C2C_CIV4GameInfoSchema.xml">
 	<HurryInfos>
 		<HurryInfo>

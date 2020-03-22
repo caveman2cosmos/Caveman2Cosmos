@@ -5,7 +5,6 @@ Base XP gained when attacking
 Base XP gained when defending
 	<iXPValueDefense>int</iXPValueDefense>
 -->
-<!-- Unit Infos -->
 <Civ4UnitInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
@@ -3985,7 +3984,7 @@ Base XP gained when defending
 					<BuildType>BUILD_VACTRAIN</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
-                <Build>
+				<Build>
 					<BuildType>BUILD_GRAVITY_TRAIN</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -4377,7 +4376,7 @@ Base XP gained when defending
 					<BuildType>BUILD_VACTRAIN</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
-                <Build>
+				<Build>
 					<BuildType>BUILD_GRAVITY_TRAIN</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -66720,7 +66719,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_PRODUCTION</BuildingType>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_COMMERCE</BuildingType>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_SANITATION</BuildingType>
-				<BuildingType>BUILDING_SLAVE_COMPOUND_CRIME_PREVENTION</BuildingType>				
+				<BuildingType>BUILDING_SLAVE_COMPOUND_CRIME_PREVENTION</BuildingType>
 				<BuildingType>BUILDING_WV_CANNIBALISM</BuildingType>
 				<BuildingType>BUILDING_WV_HUMAN_SACRIFICE</BuildingType>
 			</Buildings>
