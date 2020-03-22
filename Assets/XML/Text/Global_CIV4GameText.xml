@@ -2866,6 +2866,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BLEND_INTO_CITY_TEXT</Tag>
 		<English>[ICON_BULLET]Enters all cities peacefully.</English>
+		<German>[ICON_BULLET]kann beliebige Städte ohne Angriff betreten</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BNCHEMISTRY</Tag>
@@ -16253,6 +16254,7 @@
 		<Tag>TXT_KEY_OUTCOME_HUNTING_KILL</Tag>
 		<English>Hunting Kill</English>
 		<French>Tuer la proie</French>
+		<German>Tier wird erlegt</German>
 		<Italian>Uccisione di caccia</Italian>
 		<Spanish>Presa de caza</Spanish>
 		<Polish>Zabij</Polish>
@@ -16339,6 +16341,7 @@
 		<Tag>TXT_KEY_OUTCOME_NEAREST_CITY</Tag>
 		<English>to nearest city</English>
 		<French>à la ville la plus proche</French>
+		<German>für die nächstgelegene Stadt</German>
 		<Italian>alla città più vicina</Italian>
 		<Spanish>a la ciudad más cercana</Spanish>
 		<Polish>do najbliższego miasta</Polish>
@@ -16362,6 +16365,7 @@
 		<Tag>TXT_KEY_OUTCOME_SUBDUE</Tag>
 		<English>Subdue Animal</English>
 		<French>Apprivoiser l'Animal</French>
+		<German>Tier wird eingefangen</German>
 		<Italian>Addomestica l'animale</Italian>
 		<Spanish>Domar animal</Spanish>
 		<Polish>Oswój</Polish>

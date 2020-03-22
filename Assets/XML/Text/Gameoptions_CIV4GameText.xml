@@ -1406,7 +1406,7 @@
 		<Tag>TXT_KEY_GAMEOPTION_TELEPORT_HUNTING_AWARDS_HELP</Tag>
 		<English>With this option, Subdued Animals are always teleported back to the nearest city.  Without it, they will generally only do so once your Civilization has learned the Sedentary Lifestyle Technology.</English>
 		<French>Avec cette option, les Animaux apprivoisés sont automatiquement téléportés dans la ville la plus proche. Sans l'option, la téléportation ne sera effective qu'à partir de la technologie 'Vie sédentaire'.</French>
-		<German>Bei eingeschalteter Option werden im Kampf gezähmte Tiere immer in die nächstgelegene Stadt teleportiert. Im normalen Spiel passiert das erst, wenn die betreffende Zivilisation die Sesshaftigkeit entdeckt hat.</German>
+		<German>Bei eingeschalteter Option werden im Kampf eingefangene Tiere immer in die nächstgelegene Stadt teleportiert. Im normalen Spiel passiert das erst, wenn die betreffende Zivilisation die Sesshaftigkeit entdeckt hat.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UPRANGE</Tag>
