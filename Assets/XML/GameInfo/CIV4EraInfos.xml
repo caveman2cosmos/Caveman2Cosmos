@@ -1,6 +1,5 @@
-<?xml version="1.0"?>
-<!--
-MODDERS: Removing ERA's can cause problems if you are not careful. If you must remove them, you need to do the following:
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- MODDERS: Removing ERA's can cause problems if you are not careful. If you must remove them, you need to do the following:
 	1. Clean up the references to the ERA's in CIV4BuildingInfos
 	2. Clean up the references to the ERA's in CIV4TechInfos
 	3. Clean up the references to the ERA's in CIV4LeaderHeadInfos
@@ -505,7 +504,7 @@ Good luck! -->
 			<AudioUnitDefeatScript>AS2D_LOSS_LATE</AudioUnitDefeatScript>
 			<Button>Art/Interface/mainscreen/Era/Information.dds</Button>
 		</EraInfo>
-        <EraInfo>
+		<EraInfo>
 			<Type>C2C_ERA_NANOTECH</Type>
 			<Description>TXT_KEY_ERA_NANOTECH</Description>
 			<Strategy>TXT_KEY_ERA_NANOTECH_STRATEGY</Strategy>

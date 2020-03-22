@@ -193,7 +193,7 @@
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Zbuduj[COLOR_REVERT] Mit Ptaków, Mit Nieba, Klatkę z ptakami[NEWLINE][ICON_BULLET]Pierzarza</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_GALAPOGOS_TORTOISE_HELP</Tag>
+		<Tag>TXT_KEY_UNIT_SUBDUED_GALAPAGOS_TORTOISE_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Reptile Myth and Cage, Shell Worker</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Reptile Myth and Cage, Shell Worker</French>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Costruisci[COLOR_REVERT][NEWLINE][ICON_BULLET]Mito dei rettili, Gabbia - Rettili[NEWLINE][ICON_BULLET]Capanna dell'intagliatore di carapaci</Italian>
@@ -516,8 +516,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TALESOF_HELP</Tag>
-		<English>[ICON_BULLET][ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth of sea animals , Convert into science and culture in a city</English>
-		<French>[ICON_BULLET][ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes des animaux marins, qui sont convertis en science et culture dans la ville</French>
+		<English>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth of sea animals, convert into science and culture in a city</English>
+		<French>[ICON_BULLET][Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes des animaux marins, qui sont convertis en science et culture dans la ville</French>
 		<Italian>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Costruisci[COLOR_REVERT] i miti degli animali marini [NEWLINE][ICON_BULLET]Converti in ricerca o cultura</Italian>
 		<Polish>[ICON_BULLET][COLOR_HIGHLIGHT_TEXT]Zbuduj[COLOR_REVERT] Mit Zwierząt Morskich [NEWLINE][ICON_BULLET]Zamień na naukę i kulturę w mieście</Polish>
 	</TEXT>

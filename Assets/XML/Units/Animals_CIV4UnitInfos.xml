@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-	<!-- -->
-	<!-- Unit Infos -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4UnitInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
@@ -7483,7 +7481,7 @@
 			</KillOutcomes>
 		</UnitInfo>
 		<UnitInfo>
-			<Type>UNIT_GALAPOGOS_TORTOISE</Type>
+			<Type>UNIT_GALAPAGOS_TORTOISE</Type>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_WILD</SubCombatType>
@@ -7501,8 +7499,8 @@
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
 			</SubCombatTypes>
-			<Description>TXT_KEY_UNIT_GALAPOGOS_TORTOISE</Description>
-			<Civilopedia>TXT_KEY_UNIT_GALAPOGOS_TORTOISE_PEDIA</Civilopedia>
+			<Description>TXT_KEY_UNIT_GALAPAGOS_TORTOISE</Description>
+			<Civilopedia>TXT_KEY_UNIT_GALAPAGOS_TORTOISE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -7549,7 +7547,7 @@
 				<Outcome>
 					<OutcomeType>OUTCOME_SUBDUE</OutcomeType>
 					<iChance>10</iChance>
-					<UnitType>UNIT_SUBDUED_GALAPOGOS_TORTOISE</UnitType>
+					<UnitType>UNIT_SUBDUED_GALAPAGOS_TORTOISE</UnitType>
 					<bUnitToCity>
 						<Has>
 							<GOMType>GOM_TECH</GOMType>

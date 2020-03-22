@@ -14770,6 +14770,12 @@
 		<Polish>[ICON_BULLET]Eliminuje jedno źródło Popłochu.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_REMOVE_STANDOUT_STATUS</Tag>
+		<English>Status (Remove Standout)</English>
+		<French>Statut (ne plus rester visible)</French>
+		<German>Weniger auffällig</German>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REMOVE_STAY_THE_HAND</Tag>
 		<English>Status (Remove Stay the Hand)</English>
 		<French>Statut (Enlever N'attaque pas)</French>

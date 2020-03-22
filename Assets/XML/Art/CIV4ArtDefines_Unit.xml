@@ -1,9 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http:/www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- -->
-	<!-- Unit art path information -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../Schema/Caveman2Cosmos.xsd">
 	<UnitArtInfos>
 		<UnitArtInfo>
@@ -58812,7 +58807,6 @@
 			<fRangedDeathTime>0.31</fRangedDeathTime>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
-
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_TOWN_WATCHMEN_ROME</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/town_watchman.dds</Button>
@@ -78353,7 +78347,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
-			<NIF>Art/unique/Philistines/Light_Hoplite/greekphalanx.nif</NIF>
+			<NIF>Art/unique/Philistine/Light_Hoplite/greekphalanx.nif</NIF>
 			<KFM>Art/Units/Charlemagne_PapalSpearman/PapalSpearman.kfm</KFM>
 			<ShadowDef>
 				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>

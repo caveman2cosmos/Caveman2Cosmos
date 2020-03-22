@@ -1,10 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- ReModified by StrategyOnly -->
-<!-- -->
-<!-- Building Infos -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4BuildingInfos xmlns="x-schema:../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
@@ -883,11 +877,11 @@
 			<PrereqTech>TECH_ANIMATION</PrereqTech>
 			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<PrereqAmountBuildings>
-                <PrereqBuilding>
+				<PrereqBuilding>
 					<BuildingType>BUILDING_NATURAL_WONDER_AUYANTEPUI</BuildingType>
-                    <iNumBuildingNeeded>1</iNumBuildingNeeded>
-                </PrereqBuilding>
-            </PrereqAmountBuildings>
+					<iNumBuildingNeeded>1</iNumBuildingNeeded>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMATION_STUDIO</BuildingType>
 			</PrereqInCityBuildings>
@@ -895,7 +889,7 @@
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAsset>18</iAsset>
 			<iCost>-1</iCost>
-            <bAutoBuild>1</bAutoBuild>
+			<bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>
