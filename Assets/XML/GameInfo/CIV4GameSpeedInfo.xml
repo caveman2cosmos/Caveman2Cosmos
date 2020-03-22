@@ -36,7 +36,7 @@
 				GameTurnInfos	= Contains all of the year increment levels (GameTurnInfo's)
 				GameTurnInfo	= Contains a iMonthIncrement or an iDayIncrement, and an iTurnsPerIncrement, see above.
 *GameSpeed*	-	*Total turns*	-	*Scale factor*
-Ultrafast	-		500			-	Normal*0.25 -- THIS SPEED IS FOR TESTING PURPOSES ONLY
+Ultrafast	-		500			-	Normal*0.25 - THIS SPEED IS FOR TESTING PURPOSES ONLY
 Blitz		-		1000		-	Normal*0.5
 Normal		-		2000		-	Normal*1
 Long		-		4000		-	Normal*2

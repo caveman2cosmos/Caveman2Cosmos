@@ -13828,7 +13828,7 @@
 					<PropertyType>PROPERTY_CRIME</PropertyType>
 					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
 					<RelationType>RELATION_ASSOCIATED</RelationType>
-					<iAmountPerTurn>-5</iAmountPerTurn><PropertySource>
+					<iAmountPerTurn>-5</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
