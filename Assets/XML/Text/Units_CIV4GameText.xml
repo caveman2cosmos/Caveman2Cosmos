@@ -8282,18 +8282,23 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>[ICON_BULLET]Requires a state religion
 [ICON_BULLET]+2 XP from every non-state religion in the city
 [ICON_BULLET]Purges non-state religions when capturing a city (but no holy cities)</English>
+
 		<French>[ICON_BULLET]Requiert une religion d'Etat
 [ICON_BULLET]+2 XP pour chaque autre religion dans la ville.
 [ICON_BULLET]Purge les religions non étatiques lors de la capture d'une ville (mais pas les villes saintes)</French>
+
 		<German>[ICON_BULLET]Benötigt eine Staatsreligion
 [ICON_BULLET]+2 XP von jeder Nicht-Staatsreligion in der Staat
 [ICON_BULLET]Vernichtet alle Nicht-Staatsreligionen wenn er eine Stadt einnimmt (aber keine heiligen Städte)</German>
+
 		<Italian>[ICON_BULLET]Richiede una religione di stato
 [ICON_BULLET]+2 XP da ogni religion non di stato in una città
 [ICON_BULLET]Purga le religioni non di stato quando cattura una città (ma non nelle Città Sante)</Italian>
+
 		<Polish>[ICON_BULLET]Wymaga religii państwowej
 [ICON_BULLET]+2 XP za każdą religię nie-państwową w mieście
 [ICON_BULLET]Usuwa nie-państwową religię kiedy miasto zostaje podbite (oprócz Świetych Miast)</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FANATIC_PEDIA</Tag>
@@ -12489,16 +12494,22 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_INQUISITOR_HELP</Tag>
 		<English>[ICON_BULLET]Requires active State Religion
 [ICON_BULLET]Intolerant civic must be active</English>
+
 		<French>[ICON_BULLET]Requiert une Religion d'Etat
 [ICON_BULLET]La doctrine 'Intolérance' doit être active</French>
+
 		<German>[ICON_BULLET]Benötigt eine aktive Staatsreligion
 [ICON_BULLET]Die Gesellschaftsform "Intolerant" muss aktiv sein</German>
+
 		<Italian>[ICON_BULLET]Richiede una Religione di stato
 [ICON_BULLET]La forma di governo Intollerante dev'essere attiva</Italian>
+
 		<Spanish>[ICON_BULLET]Requiere una religión oficial
 [ICON_BULLET]Requiere el principio Intolerancia activo</Spanish>
+
 		<Polish>[ICON_BULLET]Wymaga aktywnej Religii Narodowej
 [ICON_BULLET]Doktryna nietolerancja musi być aktywna</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INTERCEPT_AIRCRAFT_SPY</Tag>
@@ -17175,21 +17186,25 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 [ICON_BULLET]+4 XP from shrine of the state religion
 [ICON_BULLET]+4 XP if player is full member of the Apostolic Palace
 [ICON_BULLET]If defends successfully in a city, spreads the state religion if not present</English>
+
 		<French>[ICON_BULLET]Requiert une religion d'Etat
 [ICON_BULLET]+2 EXP pour chaque bâtiment religieux
 [ICON_BULLET]+4 EXP pour chaque sanctuaire religieux
 [ICON_BULLET]+4 EXP si le joueur membre du Palais Apostolique
 [ICON_BULLET]Lors de la défense d'une ville, propage automatiquement sa religion</French>
+
 		<German>[ICON_BULLET]Benötigt eine Staatsreligion
 [ICON_BULLET]+2 XP von jedem Gebäude der Staatsreligion
 [ICON_BULLET]+4 XP vom Schrein der Staatsreligion
 [ICON_BULLET]+4 XP falls der Spieler Vollmitglied des Apostolischen Palastes ist
 [ICON_BULLET]Falls er in einer Stadt erfolgreich verteidigt, wird die Staatsreligion verbreitet, falls diese nicht bereits anwesend ist</German>
+
 		<Italian>[ICON_BULLET]Richiede una Religione di stato
 [ICON_BULLET]+2 XP da ogni edificio della religione di stato
 [ICON_BULLET]+4 XP dal santuario della religione di stato
 [ICON_BULLET]+4 XP se il giocatore è un membro del Palazzo Apostolico
 [ICON_BULLET]Se si difende con successo in una città, diffonde automaticamente la religione in quella città se non è presente</Italian>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MONK_PEDIA</Tag>
@@ -19939,8 +19954,10 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_PIRATE_HELP</Tag>
 		<English>[ICON_BULLET]Can Capture Merchant Ships
 [ICON_BULLET]Can Loot Gold From Merchant Ships</English>
+
 		<French>[ICON_BULLET]Peut capturer des navires marchands
 [ICON_BULLET]Peut piller de l'or sur des navires marchands</French>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PIYE</Tag>
@@ -24766,12 +24783,14 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 [SPACE][SPACE] * Myth, Story and Stories - African Grey Parrot
 [SPACE][SPACE] * Myths of Sky and Birds, Bird Cage and Enclosure
 [SPACE][SPACE] * Feather Worker and Parrots</English>
+
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Perroquets gris d'Afrique, Mythes du ciel et des Oiseaux, Cage et Enclos d'oiseaux, Atelier des plumes et Perroquets</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Papuga Żako
 [SPACE][SPACE] * Mity Nieba i Ptaków
 [SPACE][SPACE] * Klatkę dla ptaków
 [SPACE][SPACE] * Warsztat Piórarza i Papugi</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_AFRICAN_PENGUIN</Tag>
@@ -24785,11 +24804,13 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 [SPACE][SPACE] * Myth, Story and Stories - African Penguin
 [SPACE][SPACE] * Myths of Sea, Flightless Birds and Birds
 [SPACE][SPACE] * Bird Cage and Enclosure</English>
+
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythe, Histoires des pingouins d'Afrique, Mythes de la Mer, cage à oiseaux et enclos</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Pingwin Przylądkowy
 [SPACE][SPACE] * Mity Morza, Nielotnych Ptaków i Ptaków
 [SPACE][SPACE] * Klatkę dla ptaków</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ASIANBEAR</Tag>
@@ -24807,11 +24828,13 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Moon Bear
 [SPACE][SPACE] * Myth - Bears, Bear Cage and Enclosure</English>
+
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours Lune, Mythe des Ours, Cages et Enclos à Ours</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Niedźwiedź Himalajski
 [SPACE][SPACE] * Mity - Niedźwiedzie
 [SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BARNOWL</Tag>
@@ -24829,12 +24852,14 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 [SPACE][SPACE] * Myth, Story and Stories - Barn Owl
 [SPACE][SPACE] * Myths of Sky, Owls and Birds
 [SPACE][SPACE] * Bird Cage, Enclosure and Feather Worker</English>
+
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Chouettes effraies, Mythes du ciel, des Chouettes, des oiseaux, Cage et Enclos d'oiseaux, Atelier des plumes</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Płomykówka Zwyczajna
 [SPACE][SPACE] * Mity Nieba, Sów i Ptaków
 [SPACE][SPACE] * Klatkę dla ptaków
 [SPACE][SPACE] * Warsztat Piórarza</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BARREDOWL</Tag>
@@ -24851,11 +24876,13 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Barred Owl, Birds and Owls
 [SPACE][SPACE] * Myth of Sky; Bird Cage and Enclosure, Feather Worker</English>
+
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Chouettes rayées, Oiseaux et Mythes du Ciel; Cage et Enclos d'oiseaux, Atelier des plumes</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]
 [SPACE][SPACE] * Mit, Opowieść i Historie - Puszczyk, Ptaków i Sów
 [SPACE][SPACE] * Mity Nieba, Klatkę dla ptaków
 [SPACE][SPACE] * Warsztat Piórarza</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BLACKBEAR</Tag>
@@ -24873,11 +24900,13 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Black Bear
 [SPACE][SPACE] * Myth - Bears, Bear Cage and Enclosure</English>
+
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours noirs, Mythes des Ours, Cages et Enclos des Ours</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]
 [SPACE][SPACE] * Mit, Opowieść i Historie - Baribal
 [SPACE][SPACE] * Mity - Niedźwiedzie
 [SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BOOBY</Tag>
@@ -24890,12 +24919,14 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Blue-footed Booby and Sea Bird
 [SPACE][SPACE] * Myths of Sky and Birds, Bird Cage and Enclosure, Feather Worker</English>
+
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Fous à pieds bleus et des oiseaux marins, Mythes du ciel et des Oiseaux, Cage et Enclos d'oiseaux, Atelier des plumes</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Głuptak Niebieskonogi i Ptaków Morskich
 [SPACE][SPACE] * Mity Nieba i Ptaków
 [SPACE][SPACE] * Klatkę dla ptaków
 [SPACE][SPACE] * Warsztat Piórarza</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BROWN_BEAR</Tag>
@@ -24913,12 +24944,14 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Brown Bear
 [SPACE][SPACE] * Myth - Bears, Bear Cage and Enclosure</English>
+
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours bruns, Mythes des Ours, Cages et Enclos pour Ours</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Niedźwiedź Brunatny
 [SPACE][SPACE] * Mity - Niedźwiedzie
 [SPACE][SPACE] * Klatkę dla ptaków
 [SPACE][SPACE] * Warsztat Piórarza i Papugi</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CAVE_BEAR</Tag>
@@ -24936,11 +24969,13 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Cave Bear and Bear
 [SPACE][SPACE] * Master Hunter, Bear Cage and Enclosure</English>
+
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire [COLOR_REVERT] Mythes, Histoire(s)des Ours des cavernes et autres ours, Maitre Chasseur, Cages et Enclos pour Ours</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Niedźwiedź Jaskiniowy i Niedźwiedź
 [SPACE][SPACE] * Mistrz Łowiectwa
 [SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_EMU_HELP</Tag>
@@ -24949,16 +24984,19 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 [SPACE][SPACE] * Myths of Sky, Flightless Birds and Birds
 [SPACE][SPACE] * Bird Cage and Enclosure
 [SPACE][SPACE] * Ratite Flock and Feather Worker</English>
+
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT]:
 [SPACE][SPACE] * Mythes, Histoire(s) des Emeus
 [SPACE][SPACE] * Mythes du Sky, des Oiseaux
 [SPACE][SPACE] * Cage et Enclos d'oiseaux
 [SPACE][SPACE] * Troupeaux d'Autruches et Atelier des plumes</French>
+
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:'
 [SPACE][SPACE] * Mit, Opowieść i Historie - Emu
 [SPACE][SPACE] * Mity Nieba, Nielotnych Ptaków i Ptaków
 [SPACE][SPACE] * Klatkę dla ptaków
 [SPACE][SPACE] * Stado Strusi i Warsztat Piórarza</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GALAPAGOS_PENGUIN</Tag>
@@ -24972,11 +25010,13 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 [SPACE][SPACE] * Myth, Story and Stories - Galapagos Penguin
 [SPACE][SPACE] * Myths of Sea, Flightless Birds and Birds
 [SPACE][SPACE] * Bird Cage and Enclosure</English>
+
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Pingouins des Galapagos, Mythes de la Mer, des Oiseaux, Cage et Enclos d'oiseaux</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Pingwin Równikowy
 [SPACE][SPACE] * Mity Morza, Nielotnych Ptaków i Ptaków
 [SPACE][SPACE] * Klatkę dla ptaków</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GRIZZLY</Tag>
@@ -24994,11 +25034,13 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Grizzly Bear
 [SPACE][SPACE] * Myth- Bears, Bear Cage and Enclosure</English>
+
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Grizzlys, Mythe de l'Ours, Cages et Enclos pour Ours</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Grizzly
 [SPACE][SPACE] * Mity - Niedźwiedzie
 [SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_HAAST_EAGLE_HELP</Tag>
@@ -25007,12 +25049,14 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 [SPACE][SPACE] * Myths of Sky, Phoenix and Paleolithic Bird
 [SPACE][SPACE] * Bird Cage, Enclosure, Master Hunter
 [SPACE][SPACE] * Hawking Hut and Feather Worker</English>
+
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Aigles de Haast, Rapaces et Oiseaux, Mythe du Ciel, du Phénix et de L'oiseau Paléolithique, Cages et Enclos à Oiseaux, Maître Chasseur, Hutte du Fauconnier et Atelier des plumes</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Orła Haasta, Raptors i Ptaków
 [SPACE][SPACE] * Mity Nieba, Phoenix i Paleolithic Bird
 [SPACE][SPACE] * Klatkę dla ptaków
 [SPACE][SPACE] * Mistrz Łowiectwa, Chatę Jastrzębia i Warsztat Piórarza</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_HARPYEAGLE</Tag>
@@ -25031,12 +25075,14 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 [SPACE][SPACE] * Myths of Sky and Birds
 [SPACE][SPACE] * Bird Cage and Enclosure
 [SPACE][SPACE] * Feather Worker and Parrots</English>
+
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Harpies féroces, Mythes du ciel et des Oiseaux, Cage et Enclos d'oiseaux, Atelier des plumes et Perroquets</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Harpia Wielka
 [SPACE][SPACE] * Mity Nieba i Ptaków
 [SPACE][SPACE] * Klatkę dla ptaków
 [SPACE][SPACE] * Warsztat Piórarza i Papugi</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_HAWK_HELP</Tag>
@@ -25044,12 +25090,14 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 [SPACE][SPACE] * Myth, Story and Stories - Hawk, Raptors and Birds
 [SPACE][SPACE] * Myths of Sky, Falcon Hut, Falconer
 [SPACE][SPACE] * Bird Cage, Enclosure, Feather Worker</English>
+
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Faucons, Rapaces et Oiseaux, Mythe du Ciel, Fauconnier, Cages pour Oiseaux, Atelier des plumes</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Jastrzębia, Ptaków Drapieżnych i Ptaków
 [SPACE][SPACE] * Mity Nieba, Chatka Sokołów i Sokolnika
 [SPACE][SPACE] * Klatkę dla ptaków
 [SPACE][SPACE] * Warsztat Piórarza</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_OSTRICH_HELP</Tag>
@@ -25058,12 +25106,14 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 [SPACE][SPACE] * Myths of Sky, Flightless Birds and Birds
 [SPACE][SPACE] * Bird Cage and Enclosure
 [SPACE][SPACE] * Ratite Flock and Feather Worker</English>
+
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Autruches, Mythe du Ciel, des Oiseaux, Cages pour Oiseaux, Troupeau d'autruches et Atelier des plumes</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Strusia
 [SPACE][SPACE] * Mity Nieba, Nielotnych Ptaków i Ptaków
 [SPACE][SPACE] * Klatkę dla ptaków
 [SPACE][SPACE] * Stado Strusi i Warsztat Piórarza</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PANDA_BEAR</Tag>
@@ -25081,11 +25131,13 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Panda Bear
 [SPACE][SPACE] * Myth- Bears, Bear Cage and Enclosure</English>
+
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours Panda, Mythe de l'Ours, Cages et Enclos pour Ours</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Panda
 [SPACE][SPACE] * Mity - Niedźwiedzie
 [SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PARROT</Tag>
@@ -25100,12 +25152,14 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 [SPACE][SPACE] * Myths of Sky and Birds
 [SPACE][SPACE] * Bird Cage and Enclosure
 [SPACE][SPACE] * Feather Worker and Parrots</English>
+
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Perroquets, Mythes du ciel et des Oiseaux, Cages pour Oiseaux, Atelier des plumes et Perroquets</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Papuga
 [SPACE][SPACE] * Mity Nieba i Ptaków
 [SPACE][SPACE] * Klatkę dla ptaków
 [SPACE][SPACE] * Warsztat Piórarza i Papugi</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_POLARBEAR</Tag>
@@ -25123,11 +25177,13 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Polar Bear
 [SPACE][SPACE] * Myth- Bears, Bear Cage and Enclosure</English>
+
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours Polaire, Mythe de l'Ours, Cages et Enclos pour Ours</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Niedźwiedź Polarny
 [SPACE][SPACE] * Mity - Niedźwiedzie
 [SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_RAVEN</Tag>
@@ -25141,12 +25197,14 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 [SPACE][SPACE] * Myth, Story and Stories - Raven
 [SPACE][SPACE] * Myths of Sky, Scavengers and Birds
 [SPACE][SPACE] * Bird Cage and Enclosure, Feather Worker</English>
+
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Corbeaux, Mythe du Ciel, Charognards et Oiseaux, Cage et Enclos d'oiseaux, Atelier des plumes</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Wrona
 [SPACE][SPACE] * Mity Nieba, Padlinożerców i Ptaków
 [SPACE][SPACE] * Klatkę dla ptaków
 [SPACE][SPACE] * Warsztat Piórarza</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_RAZORBILL</Tag>
@@ -25160,12 +25218,14 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 [SPACE][SPACE] * Myth, Story and Stories - Razorbill
 [SPACE][SPACE] * Myths of Sky, Sea, Sea Birds and Birds
 [SPACE][SPACE] * Bird Cage and Enclosure, Feather Worker</English>
+
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Pingouins torda, Mythe du Ciel, Mer Oiseaux marins et Oiseaux, Cage et Enclos d'oiseaux, Atelier des plumes</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Alka
 [SPACE][SPACE] * Mity Nieba, Morza, Morskich Ptaków i Ptaków
 [SPACE][SPACE] * Klatkę dla ptaków
 [SPACE][SPACE] * Warsztat Piórarza</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_REDPANDA</Tag>
@@ -25183,11 +25243,13 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Red Panda
 [SPACE][SPACE] * Myth- Bears, Bear Cage and Enclosure</English>
+
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Pandsa roux, Mythe de l'Ours, Cages et Enclos pour Ours</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Panda Czerwona
 [SPACE][SPACE] * Mity - Niedźwiedzie
 [SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_RHEA_HELP</Tag>
@@ -25196,12 +25258,14 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 [SPACE][SPACE] * Myths of Sky, Flightless Birds and Birds
 [SPACE][SPACE] * Bird Cage and Enclosure
 [SPACE][SPACE] * Ratite Flock and Feather Worker</English>
+
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Nandou, Mythe du Ciel, des Oiseaux, Cage et Enclos d'oiseaux, Troupeau d'autruches et Atelier des plumes</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Nandu
 [SPACE][SPACE] * Mity Nieba, Nielotnych Ptaków i Ptaków
 [SPACE][SPACE] * Klatkę dla ptaków
 [SPACE][SPACE] * Stado Strusi i Warsztat Piórarza</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SEAEAGLE</Tag>
@@ -25215,12 +25279,14 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 [SPACE][SPACE] * Myth, Story and Stories - Steller's Sea Eagle, Raptors and Birds
 [SPACE][SPACE] * Myths of Sky and Pheonix, Falcon Hut and Falconer
 [SPACE][SPACE] * Bird Cage, Enclosure and Feather Worker</English>
+
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Pigargues empereurs, Rapaces et Oiseaux, Mythe du Ciel et Phénix, Hutte du Fauconnier, Cage et Enclos d'oiseaux, Atelier des plumes</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Bielik Olbrzymi, Ptaków Drapieżnych i Ptaków
 [SPACE][SPACE] * Mity Nieba i Feniksa, Chatka Sokołów i Sokolnika
 [SPACE][SPACE] * Klatkę dla ptaków
 [SPACE][SPACE] * Warsztat Piórarza</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SECRETARYBIRD</Tag>
@@ -25234,12 +25300,14 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 [SPACE][SPACE] * Myth, Story and Stories - Secretary Bird
 [SPACE][SPACE] * Myths of Sky and Birds
 [SPACE][SPACE] * Bird Cage and Enclosure, Feather Worker</English>
+
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Messagers sagittaires, Mythes du ciel et des Oiseaux, Cage et Enclos d'oiseaux, Atelier des plumes</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Sekretarz
 [SPACE][SPACE] * Mity Nieba i Ptaków
 [SPACE][SPACE] * Klatkę dla ptaków
 [SPACE][SPACE] * Warsztat Piórarza</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SLOTHBEAR</Tag>
@@ -25257,11 +25325,13 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Sloth Bear
 [SPACE][SPACE] * Myth- Bears, Bear Cage and Enclosure</English>
+
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours lippu, Mythe de l'Ours, Cages et Enclos pour Ours</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Wargacz
 [SPACE][SPACE] * Mity - Niedźwiedzie
 [SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SPECTACLEDBEAR</Tag>
@@ -25279,11 +25349,13 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Spectacled Bear
 [SPACE][SPACE] * Myth- Bears, Bear Cage and Enclosure</English>
+
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours à lunettes, Mythe de l'Ours, Cages et Enclos pour Ours</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Niedźwiedź Andyjski
 [SPACE][SPACE] * Mity - Niedźwiedzie
 [SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SUNBEAR</Tag>
@@ -25301,11 +25373,13 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
 [SPACE][SPACE] * Myth, Story and Stories - Sun Bear
 [SPACE][SPACE] * Myth- Bears, Bear Cage and Enclosure</English>
+
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] des Mythes et Histoire(s) des Ours malais, Mythe de l'Ours, Cages et Enclos pour Ours</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Buduj[COLOR_REVERT]:
 [SPACE][SPACE] * Mit, Opowieść i Historie - Niedźwiedź Malajski
 [SPACE][SPACE] * Mity - Niedźwiedzie
 [SPACE][SPACE] * Klatkę z niedźwiedziem</Polish>
+
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBMARINE</Tag>
