@@ -1288,7 +1288,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_DEPARTMENT_FOREIGN_WONDER</ArtDefineTag>
 			<iAIWeight>1</iAIWeight>
-		</BuildingInfo>		
+		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Department of Motor Vehicles -->
 			<Type>BUILDING_DEPARTMENT_VEHICLES</Type>
@@ -1676,7 +1676,7 @@
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_FERTILITYFESTIVAL</ArtDefineTag>
 			<iAIWeight>1</iAIWeight>
-		</BuildingInfo>		
+		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Flak Tower -->
 			<Type>BUILDING_FLAK_TOWER</Type>

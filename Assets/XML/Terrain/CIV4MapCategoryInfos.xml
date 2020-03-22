@@ -12,7 +12,7 @@
 		<MapCategoryInfo>
 			<Type>MAPCATEGORY_SUBTERRANEAN</Type>
 			<Description>TXT_KEY_MAPCATEGORY_SUBTERRANEAN</Description>
-		</MapCategoryInfo>		
+		</MapCategoryInfo>
 		<MapCategoryInfo>
 			<Type>MAPCATEGORY_AQUATIC</Type>
 			<Description>TXT_KEY_MAPCATEGORY_AQUATIC</Description>

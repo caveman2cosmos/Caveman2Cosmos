@@ -506,7 +506,7 @@
 		<Tag>TXT_INTERFACE_TECH_HELP_RESEARCHING</Tag>
 		<English>Researching:</English>
 		<French>Recherche en cours :</French>
-	</TEXT>	
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_INTERFACE_TREASURYHELP_CITY_MAINTENANCE</Tag>
 		<English>City maintenance:</English>
@@ -1496,6 +1496,7 @@
 		<Tag>TXT_KEY_BLEND_INTO_CITY_TEXT</Tag>
 		<English>[ICON_BULLET]Enters all cities peacefully.</English>
 		<French>[ICON_BULLET]Entre dans les Villes de manière pacifique.</French>
+		<German>[ICON_BULLET]kann beliebige Städte ohne Angriff betreten</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BTS_FOREST_PRESERVE</Tag>
@@ -3333,7 +3334,7 @@ Time Frame: 12 000 BC - 1200 BC</English>
 		<French>Le terme Antiquité en ce qui concerne Caveman to Cosmos décrit le début des villes et l'arrivée de ce que l'on appelle l'âge du bronze. C'est une période où les sociétés tribales commencent à former de plus grandes villes et éventuellement des villes, et des œuvres d'art et une architecture plus élaborées. Les rois émergent à cette époque, l'un des premiers types de dirigeants puissants, issus de puissants chefs tribaux. La guerre se formalise, avec le développement d'armées professionnelles, l'entraînement des animaux à la guerre etc.
 
 Calendrier: 12 000 avant JC - 1200 avant JC</French>
-	</TEXT>	
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_ATOMIC</Tag>
 		<English>Atomic</English>
@@ -11118,6 +11119,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_OUTCOME_HUNTING_KILL</Tag>
 		<English>Hunting Kill</English>
 		<French>Tuer la proie</French>
+		<German>Tier wird erlegt</German>
 		<Italian>Uccisione di caccia</Italian>
 		<Spanish>Presa de caza</Spanish>
 		<Polish>Zabij</Polish>
@@ -11204,6 +11206,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_OUTCOME_NEAREST_CITY</Tag>
 		<English>to nearest city</English>
 		<French>à la ville la plus proche</French>
+		<German>für die nächstgelegene Stadt</German>
 		<Italian>alla città più vicina</Italian>
 		<Spanish>a la ciudad más cercana</Spanish>
 		<Polish>do najbliższego miasta</Polish>
@@ -11227,6 +11230,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_OUTCOME_SUBDUE</Tag>
 		<English>Subdue Animal</English>
 		<French>Apprivoiser l'Animal</French>
+		<German>Tier wird eingefangen</German>
 		<Italian>Addomestica l'animale</Italian>
 		<Spanish>Domar animal</Spanish>
 		<Polish>Oswój</Polish>

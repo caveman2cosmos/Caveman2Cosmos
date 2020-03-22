@@ -4016,7 +4016,7 @@
 					<BuildingType>BUILDING_SHOPPING_DISTRICT</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
-			</PrereqOrBuildings>											
+			</PrereqOrBuildings>
 			<!-- Obsolescence -->
 			<ReplaceBuildings>
 				<ReplaceBuilding>
@@ -12625,7 +12625,7 @@
 					<iProductonModifier>25</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<!-- Main effects -->								 
+			<!-- Main effects --> 
 			<iHappiness>-3</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -54492,7 +54492,7 @@
 					<iProductonModifier>25</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<!-- Main effects -->									  
+			<!-- Main effects -->  
 			<iHappiness>-3</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -59754,7 +59754,7 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>270</iCost>
-			<!-- Main effects -->					  
+			<!-- Main effects -->  
 			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -74755,7 +74755,7 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>40</iCost>
-			<!-- Main effects -->					  
+			<!-- Main effects -->  
 			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -81967,7 +81967,7 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>1685</iCost>
-			<!-- Main effects -->					  
+			<!-- Main effects -->  
 			<iHappiness>-3</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -89965,7 +89965,7 @@
 			</ReplaceBuildings>
 			<!-- Construction cost -->
 			<iCost>62</iCost>
-			<!-- Main effects -->					  
+			<!-- Main effects -->  
 			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -106031,7 +106031,7 @@
 			</Flavors>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<iAIWeight>1</iAIWeight>
-		</BuildingInfo>		
+		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SPY_HIDEOUT</Type>
 			<NotGameOption>GAMEOPTION_NO_ESPIONAGE</NotGameOption>
@@ -106191,7 +106191,7 @@
 					<iAmountPerTurn>4</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-		</BuildingInfo>		
+		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_FIRE_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_FIRE_MYTH</Description>
@@ -106261,7 +106261,7 @@
 					</Active>
 				</PropertySource>
 			</PropertyManipulators>
-		</BuildingInfo>		
+		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_METAL_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_METAL_MYTH</Description>
@@ -106332,7 +106332,7 @@
 					</Active>
 				</PropertySource>
 			</PropertyManipulators>
-		</BuildingInfo>		
+		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STONE_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_STONE_MYTH</Description>
@@ -106402,7 +106402,7 @@
 					</Active>
 				</PropertySource>
 			</PropertyManipulators>
-		</BuildingInfo>		
+		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NEGOTIATOR_HUT</Type>
 			<Description>TXT_KEY_BUILDING_NEGOTIATOR_HUT</Description>
@@ -107346,7 +107346,7 @@
 			</Flavors>
 			<iConquestProb>75</iConquestProb>
 			<iAIWeight>1</iAIWeight>
-		</BuildingInfo>		
+		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BURIAL_TRADITION_CAVE</Type>
 			<Description>TXT_KEY_BUILDING_BURIAL_TRADITION_CAVE</Description>
@@ -107947,7 +107947,7 @@
 					<iAmountPerTurn>-8</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-		</BuildingInfo>		
+		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SLAVE_MARKET</Type>
 			<Description>TXT_KEY_BUILDING_SLAVE_MARKET</Description>

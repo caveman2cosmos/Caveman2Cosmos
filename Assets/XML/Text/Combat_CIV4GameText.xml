@@ -249,6 +249,7 @@
 		<Tag>TXT_KEY_COMBAT_CLASS_NOT_ON_GAME_OPTION</Tag>
 		<English>[ICON_BULLET][COLOR_WARNING_TEXT]Not Available to Units on the %s1_Option Game Option being active.[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Non disponible lorsque l'option de jeu %s1_Option est active.[COLOR_REVERT]</French>
+		<German>[ICON_BULLET][COLOR_WARNING_TEXT]nicht verfügbar bei aktivierter Einstellung "%s1_Option".[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Non è disponibile per le unità se l'opzione %s1_Option è attiva.[COLOR_REVERT]</Italian>
 		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]Nie dostępne dla jednostek na %s1_Change%% Opcja Gry jest aktywna..[COLOR_REVERT]</Polish>
 	</TEXT>
@@ -256,7 +257,7 @@
 		<Tag>TXT_KEY_COMBAT_CLASS_ON_GAME_OPTION</Tag>
 		<English>[ICON_BULLET][COLOR_WARNING_TEXT]Not Available to Units without the %s1_Option Game Option being active.[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_WARNING_TEXT]Requiert l'option de jeu %s1_Option.[COLOR_REVERT]</French>
-		<German>[ICON_BULLET][COLOR_WARNING_TEXT]nicht verfügbar ohne aktivierte %s1_Option.[COLOR_REVERT]</German>
+		<German>[ICON_BULLET][COLOR_WARNING_TEXT]nicht verfügbar ohne aktivierte Einstellung "%s1_Option".[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET][COLOR_WARNING_TEXT]Non è disponibile per le unità se l'opzione %s1_Option è inattiva.[COLOR_REVERT]</Italian>
 		<Polish>[ICON_BULLET][COLOR_WARNING_TEXT]Nie dostępne dla jednostek bez %s1_Change%% Opcja Gry jest aktywna..[COLOR_REVERT]</Polish>
 	</TEXT>
@@ -986,6 +987,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Tier) Amphibie</German>
 		<Spanish>
 			<Text>Anfibio:Animales anfibios</Text>
 			<Gender>Male</Gender>
@@ -1001,6 +1003,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Tier) Vogel</German>
 		<Spanish>
 			<Text>Ave:Animales aves</Text>
 			<Gender>Male</Gender>
@@ -1016,6 +1019,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Natur) Graben</German>
 		<Spanish>
 			<Text>Excavador:Animales excavadores</Text>
 			<Gender>Male</Gender>
@@ -1031,6 +1035,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Natur) Tarnung</German>
 		<Spanish>
 			<Text>Camuflado:Animales con camuflaje</Text>
 			<Gender>Male</Gender>
@@ -1046,6 +1051,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Natur) Ansturm</German>
 		<Spanish>
 			<Text>Embestida:Animales con embestida</Text>
 			<Gender>Female:Male</Gender>
@@ -1061,6 +1067,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Natur) Verfolgung</German>
 		<Spanish>
 			<Text>Perseguidor:Animales perseguidores</Text>
 			<Gender>Male</Gender>
@@ -1076,6 +1083,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Natur) Würgen</German>
 		<Spanish>
 			<Text>Estrangulador:Animales estranguladores</Text>
 			<Gender>Male</Gender>
@@ -1091,6 +1099,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Natur) Verschlingen</German>
 		<Spanish>
 			<Text>Devorador:Animales devoradores</Text>
 			<Gender>Male</Gender>
@@ -1106,6 +1115,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Natur) Schnelle Reflexe</German>
 		<Spanish>
 			<Text>Reflejos rápidos:Animales con reflejos rápidos</Text>
 			<Gender>Male</Gender>
@@ -1121,6 +1131,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Natur) Exkrementangriff</German>
 		<Spanish>
 			<Text>Arrojador de heces:Animales arrojadores de heces</Text>
 			<Gender>Male</Gender>
@@ -1136,6 +1147,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Natur) Flucht</German>
 		<Spanish>
 			<Text>Huidizo:Animales huidizos</Text>
 			<Gender>Male</Gender>
@@ -1151,6 +1163,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Natur) Harter Panzer</German>
 		<Spanish>
 			<Text>Coraza dura:Animales con coraza dura</Text>
 			<Gender>Male</Gender>
@@ -1166,6 +1179,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Natur) Kopfstoß</German>
 		<Spanish>
 			<Text>Ataque con cornamenta:Animales de ataque con cornamenta</Text>
 			<Gender>Male</Gender>
@@ -1181,6 +1195,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Natur) Herde</German>
 		<Spanish>
 			<Text>En manada:Animales en manada</Text>
 			<Gender>Male</Gender>
@@ -1196,6 +1211,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Natur) Verstecken</German>
 		<Spanish>
 			<Text>Ocultación:Animales ocultos por naturaleza</Text>
 			<Gender>Male</Gender>
@@ -1211,6 +1227,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Natur) Scharfe Sinne</German>
 		<Spanish>
 			<Text>Sentidos agudos:Animales de sentidos agudos</Text>
 			<Gender>Male</Gender>
@@ -1226,6 +1243,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Natur) Biss</German>
 		<Spanish>
 			<Text>Mordedor:Animales mordedores</Text>
 			<Gender>Male</Gender>
@@ -1241,6 +1259,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Natur) Rudeljäger</German>
 		<Spanish>
 			<Text>Cazador en manada:Animales cazadores en manada</Text>
 			<Gender>Male</Gender>
@@ -1256,6 +1275,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Natur) Hacken</German>
 		<Spanish>
 			<Text>Pico:Animales con pico</Text>
 			<Gender>Male</Gender>
@@ -1271,6 +1291,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Natur) Sprungangriff</German>
 		<Spanish>
 			<Text>Ataque súbito:Animales de ataque súbito</Text>
 			<Gender>Male</Gender>
@@ -1286,6 +1307,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Natur) Kraftvolle Tritte</German>
 		<Spanish>
 			<Text>Patada potente:Animales de patada potente</Text>
 			<Gender>Male</Gender>
@@ -1301,6 +1323,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Natur) Prügel</German>
 		<Spanish>
 			<Text>Golpeador:Animales golpeadores</Text>
 			<Gender>Male</Gender>
@@ -1316,6 +1339,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Natur) Raserei</German>
 		<Spanish>
 			<Text>Rabioso:Animales rabiosos</Text>
 			<Gender>Male</Gender>
@@ -1331,6 +1355,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Natur) Abstoßend</German>
 		<Spanish>
 			<Text>Repelente:Animales repelentes</Text>
 			<Gender>Male</Gender>
@@ -1346,6 +1371,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Natur) Brüllen</German>
 		<Spanish>
 			<Text>Rugiente:Animales rugientes por naturaleza</Text>
 			<Gender>Male</Gender>
@@ -1361,6 +1387,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Natur) Kratzen</German>
 		<Spanish>
 			<Text>Arañador:Animales arañadores</Text>
 			<Gender>Male</Gender>
@@ -1376,6 +1403,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Natur) Scharfe Klauen</German>
 		<Spanish>
 			<Text>Garras afiladas:Animales con garras afiladas</Text>
 			<Gender>Female:Male</Gender>
@@ -1391,6 +1419,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Natur) Spitze Hörner</German>
 		<Spanish>
 			<Text>Cuernos afilados:Animales con cuernos afilados</Text>
 			<Gender>Male</Gender>
@@ -1406,6 +1435,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Natur) Scharfe Zähne</German>
 		<Spanish>
 			<Text>Dientes afilados:Animales con dientes afilados</Text>
 			<Gender>Male</Gender>
@@ -1421,6 +1451,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Natur) Panzer</German>
 		<Spanish>
 			<Text>Cáscara:Animales con cáscara</Text>
 			<Gender>Male</Gender>
@@ -1436,6 +1467,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Natur) Trampeln</German>
 		<Spanish>
 			<Text>Pisotón:Animales pisoteadores</Text>
 			<Gender>Male</Gender>
@@ -1451,6 +1483,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Natur) Tauchen</German>
 		<Spanish>
 			<Text>Sumergido:Animales sumergidos</Text>
 			<Gender>Male</Gender>
@@ -1466,6 +1499,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Natur) Schwanzschlag</German>
 		<Spanish>
 			<Text>Golpe de cola:Animales de golpe de cola</Text>
 			<Gender>Male</Gender>
@@ -1481,6 +1515,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Natur) Dickhäuter</German>
 		<Spanish>
 			<Text>Piel gruesa:Animales con piel gruesa</Text>
 			<Gender>Male</Gender>
@@ -1496,6 +1531,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Natur) Dickes Fell</German>
 		<Spanish>
 			<Text>Piel resistente:Animales con piel resistente</Text>
 			<Gender>Male</Gender>
@@ -1511,6 +1547,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Natur) Baumkletterer</German>
 		<Spanish>
 			<Text>Trepador de árboles:Animales trepadores de árboles</Text>
 			<Gender>Male</Gender>
@@ -1526,6 +1563,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Natur) Giftig</German>
 		<Spanish>
 			<Text>Venenoso:Animales venenosos</Text>
 			<Gender>Male</Gender>
@@ -1541,6 +1579,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Natur) Wachsam</German>
 		<Spanish>
 			<Text>Atento:Animales atentos por naturaleza</Text>
 			<Gender>Male</Gender>
@@ -1556,6 +1595,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Tier) Fisch</German>
 		<Spanish>
 			<Text>Pez:Animales peces</Text>
 			<Gender>Male</Gender>
@@ -1571,6 +1611,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Tier) Insekt</German>
 		<Spanish>
 			<Text>Insecto:Animales insectos</Text>
 			<Gender>Male</Gender>
@@ -1586,6 +1627,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Tier) Wirbellos</German>
 		<Spanish>
 			<Text>Invertebrado:Animales invertebrados</Text>
 			<Gender>Male</Gender>
@@ -1601,6 +1643,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Tier) Säugetier</German>
 		<Spanish>
 			<Text>Mamífero:Animales mamíferos</Text>
 			<Gender>Male</Gender>
@@ -1616,6 +1659,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Tier) Reptil</German>
 		<Spanish>
 			<Text>Reptil:Animales reptiles</Text>
 			<Gender>Male</Gender>
@@ -3868,6 +3912,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Vogel) Rabenvogel</German>
 		<Spanish>
 			<Text>Córvida:Aves córvidas</Text>
 			<Gender>Female</Gender>
@@ -3883,6 +3928,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Vogel) Wildgeflügel</German>
 		<Spanish>
 			<Text>Ave de caza:Aves de caza</Text>
 			<Gender>Male:Female</Gender>
@@ -3898,6 +3944,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Vogel) Eisvogel</German>
 		<Spanish>
 			<Text>Alcedina:Aves alcedinas</Text>
 			<Gender>Female</Gender>
@@ -3913,6 +3960,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>(Vogel) Papagei</German>
 		<Spanish>
 			<Text>Psitaciforme:Aves psitaciformes</Text>
 			<Gender>Female</Gender>
@@ -3928,6 +3976,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Vogel) Pinguin</German>
 		<Spanish>
 			<Text>Pingüino:Aves pingüinos</Text>
 			<Gender>Male:Female</Gender>
@@ -3943,6 +3992,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Vogel) Taube</German>
 		<Spanish>
 			<Text>Colúmbida:Aves colúmbidas</Text>
 			<Gender>Female</Gender>
@@ -3958,6 +4008,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Vogel) Raubvogel</German>
 		<Spanish>
 			<Text>Ave rapaz:Aves rapaces</Text>
 			<Gender>Male:Female</Gender>
@@ -3973,6 +4024,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Vogel) Laufvogel</German>
 		<Spanish>
 			<Text>Ratite:Aves ratites</Text>
 			<Gender>Female</Gender>
@@ -3988,6 +4040,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Vogel) Seevogel</German>
 		<Spanish>
 			<Text>Ave marina:Aves marinas</Text>
 			<Gender>Male:Female</Gender>
@@ -4003,6 +4056,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Vogel) Singvogel</German>
 		<Spanish>
 			<Text>Pájaro cantor:Aves cantoras</Text>
 			<Gender>Male:Female</Gender>
@@ -4018,6 +4072,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>(Vogel) Wasservogel</German>
 		<Spanish>
 			<Text>Anseriforme:Aves anseriformes</Text>
 			<Gender>Female</Gender>
@@ -4219,6 +4274,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_COSTLESS</Tag>
 		<English>Costless</English>
 		<French>Gratuit</French>
+		<German>Kostenlos</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_CRIMINAL</Tag>
@@ -9711,6 +9767,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_RECKLESS_ANIMAL</Tag>
 		<English>Reckless Animal</English>
 		<French>Animaux téméraires</French>
+		<German>Draufgänger</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITCOMBAT_RECON</Tag>
@@ -11050,6 +11107,11 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>
+			<Text>Gefangene Tiere:Gefangenen Tiere:Gefangenen Tieren:Gefangene Tiere</Text>
+			<Gender>Neuter</Gender>
+			<Plural>1</Plural>
+		</German>
 		<Spanish>
 			<Text>Unidad domada:Unidades domadas</Text>
 			<Gender>Female</Gender>

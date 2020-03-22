@@ -8505,10 +8505,6 @@
 		<English>Arlington</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_ARPAD</Tag>
-		<English>Arpad</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ARPINUM</Tag>
 		<English>Arpinum</English>
 	</TEXT>
@@ -8545,10 +8541,6 @@
 		<English>Atapuerca</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_ATHENS</Tag>
-		<English>Athens</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_AVARUA</Tag>
 		<English>Avarua</English>
 	</TEXT>
@@ -8567,10 +8559,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BALSAS</Tag>
 		<English>Balsas</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_BALTIMORE</Tag>
-		<English>Baltimore</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BANOLAS</Tag>
@@ -8737,10 +8725,6 @@
 		<English>Christiansfeld</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_CINCINNATI</Tag>
-		<English>Cincinnati</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CIRCEII</Tag>
 		<English>Circeii</English>
 	</TEXT>
@@ -8751,7 +8735,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CIVITAS_VANGIONUM</Tag>
 		<English>Civitas Vangionum</English>
-	</TEXT> 
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CLEVELAND</Tag>
 		<English>Cleveland</English>
@@ -9053,10 +9037,6 @@
 		<English>Hapalla</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_HARRAN</Tag>
-		<English>Harran</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HARRISBURG</Tag>
 		<English>Harrisburg</English>
 	</TEXT>
@@ -9111,10 +9091,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HONIARA</Tag>
 		<English>Honiara</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_HONOLULU</Tag>
-		<English>Honolulu</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HOROZ</Tag>
@@ -9485,10 +9461,6 @@
 		<English>Marassantiya</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_MARQASI</Tag>
-		<English>Marqasi</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MASA</Tag>
 		<English>Masa</English>
 	</TEXT>
@@ -9535,10 +9507,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_METZADA</Tag>
 		<English>Metzada</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_MIAMI</Tag>
-		<English>Miami</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MIDDELFART</Tag>
@@ -9679,10 +9647,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NETT</Tag>
 		<English>Nett</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_NEWCASTLE</Tag>
-		<English>Newcastle</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NGA</Tag>
@@ -10033,10 +9997,6 @@
 		<English>Sangsong</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_SANTA_FE</Tag>
-		<English>Santa Fe</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SATRICUM</Tag>
 		<English>Satricum</English>
 	</TEXT>
@@ -10107,10 +10067,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ST_AUGUSTINE</Tag>
 		<English>St. Augustine</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_ST_LOUIS</Tag>
-		<English>St. Louis</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ST_PAUL</Tag>
