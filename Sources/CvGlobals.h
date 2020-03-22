@@ -182,20 +182,20 @@ public:
 	void uninit();
 	void clearTypesMap();
 
-	CvDiplomacyScreen* getDiplomacyScreen() const;
-	CMPDiplomacyScreen* getMPDiplomacyScreen() const;
+	CvDiplomacyScreen* getDiplomacyScreen() const 		{ return m_diplomacyScreen; }
+	CMPDiplomacyScreen* getMPDiplomacyScreen() const 	{ return m_mpDiplomacyScreen; }
 
-	FMPIManager*& getFMPMgrPtr();
-	CvPortal& getPortal();
-	CvSetupData& getSetupData();
-	CvInitCore& getInitCore();
-	CvInitCore& getLoadedInitCore();
-	CvInitCore& getIniInitCore();
-	CvMessageCodeTranslator& getMessageCodes();
-	CvStatsReporter& getStatsReporter();
-	CvStatsReporter* getStatsReporterPtr() const;
-	CvInterface& getInterface();
-	CvInterface* getInterfacePtr() const;
+	FMPIManager*& getFMPMgrPtr()	 					{ return m_pFMPMgr; }
+	CvPortal& getPortal() const 						{ return *m_portal; }
+	CvSetupData& getSetupData() const 					{ return *m_setupData; }
+	CvInitCore& getInitCore() const 					{ return *m_initCore; }
+	CvInitCore& getLoadedInitCore() const 				{ return *m_loadedInitCore; }
+	CvInitCore& getIniInitCore() const 					{ return *m_iniInitCore; }
+	CvMessageCodeTranslator& getMessageCodes() const 	{ return *m_messageCodes; }
+	CvStatsReporter& getStatsReporter() const 			{ return *m_statsReporter; }
+	CvStatsReporter* getStatsReporterPtr() const 		{ return m_statsReporter; }
+	CvInterface& getInterface() const 					{ return *m_interface; }
+	CvInterface* getInterfacePtr() const 				{ return m_interface; }
 	int getMaxCivPlayers() const;
 	int getMaxPCPlayers() const;
 
@@ -234,34 +234,34 @@ public:
 /*******************************/
 /***** Parallel Maps - End *****/
 /*******************************/
-	inline CvGameAI& getGame() const { return *m_game; }
+	inline CvGameAI& getGame() const 			{ return *m_game; }
 	CvGameAI* getGamePointer();
-	CvRandom& getASyncRand();
-	CMessageQueue& getMessageQueue();
-	CMessageQueue& getHotMessageQueue();
-	CMessageControl& getMessageControl();
-	CvDropMgr& getDropMgr();
-	FAStar& getPathFinder();
-	FAStar& getInterfacePathFinder();
-	FAStar& getStepFinder();
-	FAStar& getRouteFinder();
-	FAStar& getBorderFinder();
-	FAStar& getAreaFinder();
-	FAStar& getPlotGroupFinder();
-	NiPoint3& getPt3Origin();
+	CvRandom& getASyncRand() const 				{ return *m_asyncRand; }
+	CMessageQueue& getMessageQueue() const 		{ return *m_messageQueue; }
+	CMessageQueue& getHotMessageQueue() const 	{ return *m_hotJoinMsgQueue; }
+	CMessageControl& getMessageControl() const 	{ return *m_messageControl; }
+	CvDropMgr& getDropMgr() const 				{ return *m_dropMgr; }
+	FAStar& getPathFinder() const 				{ return *m_pathFinder; }
+	FAStar& getInterfacePathFinder() const 		{ return *m_interfacePathFinder; }
+	FAStar& getStepFinder() const 				{ return *m_stepFinder; }
+	FAStar& getRouteFinder() const 				{ return *m_routeFinder; }
+	FAStar& getBorderFinder() const 			{ return *m_borderFinder; }
+	FAStar& getAreaFinder() const 				{ return *m_areaFinder; }
+	FAStar& getPlotGroupFinder() const 			{ return *m_plotGroupFinder; }
+	NiPoint3& getPt3Origin()	 				{ return m_pt3Origin; }
 
 	std::vector<CvInterfaceModeInfo*>& getInterfaceModeInfos();
 	CvInterfaceModeInfo& getInterfaceModeInfo(InterfaceModeTypes e);
 
-	NiPoint3& getPt3CameraDir();
+	NiPoint3& getPt3CameraDir()		 			{ return m_pt3CameraDir; }
 
-	bool& getLogging();
-	bool& getRandLogging();
-	bool& getSynchLogging();
-	bool& overwriteLogs();
+	bool& getLogging() 							{ return m_bLogging; }
+	bool& getRandLogging() 						{ return m_bRandLogging; }
+	bool& getSynchLogging() 					{ return m_bSynchLogging; }
+	bool& overwriteLogs() 						{ return m_bOverwriteLogs; }
 
-	inline bool	getIsInPedia() const { return m_bIsInPedia; }
-	inline void	setIsInPedia(bool bNewValue) { m_bIsInPedia = bNewValue; }
+	inline bool	getIsInPedia() const 			{ return m_bIsInPedia; }
+	inline void	setIsInPedia(bool bNewValue) 	{ m_bIsInPedia = bNewValue; }
 
 	int* getPlotDirectionX() const;
 	int* getPlotDirectionY() const;
@@ -277,7 +277,7 @@ public:
 	DirectionTypes getTurnRightDirection(int i) const;
 	DirectionTypes getXYDirection(const int i, const int j) const;
 
-/************************************************************************************************/
+/*********************************************************u***************************************/
 /* SORT_ALPHABET                           11/19/07                                MRGENIE      */
 /*                                                                                              */
 /* Method for alphabetically order tags                                                         */
