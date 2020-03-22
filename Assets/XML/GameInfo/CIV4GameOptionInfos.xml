@@ -1,27 +1,23 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- ReModified by StrategyOnly -->
-<!-- -->
-<!-- TB Notes regarding EnforcesGameOptionOnTypes and EnforcesGameOptionOffTypes (same formatting for Off, just change all Ons to Offs in the following-->
-<!-- Formatting:<EnforcesGameOptionOnTypes> -->
-<!--				<EnforcesGameOptionOnType>  Note: may use this set multiple times to indicate more options that fall under the same eforcement guideline -->
-<!-- 					<GameOptionType>GAMEOPTION_WHATEVERYOUWANNAINDICATE</GameOptionType> -->
-<!--					<bEnforcesGameOptionOn>1</bEnforcesGameOptionOn> -->
-<!-- 				</EnforcesGameOptionOnType> -->
-<!-- 			</EnforcesGameOptionOnTypes> -->
-<!-- These tags, if used, go under bVisible and EnforcesGameOptionOnTypes comes before EnforcesGameOptionOffTypes -->
-<!-- EnforcesGameOptionOn will turn on indicated option(s) as the game is initialized, regardless of whether the indicated option(s) were set on or not-->
-<!-- EnforcesGameOptionOff does the opposite, turns the indicated option(s) off if the option with the tag in use is on -->
-<!-- These effects should be indicated strongly in the Help text for the option, and in the Help text(s) for the effected option(s) too.  There's no way to add it automatically since the option help hover is completely handled in the core-->
-<!-- Thus use the following line in the text (for english anyhow) at the end of the normal Help string (copy and paste onto the end of the help text after a space and replace the (indicatedOption(s))): -->
-<!-- This Option requires, and thus will force the (indicated game option(s)) to be ON!-->
-<!-- Or: This Option is incompatible with, and thus will force the (indicated game option(s)) to be OFF! -->
-<!-- and on the enforced option(s): This Option is required for, and will thus be forced ON if (indicating GameOption) is used! -->
-<!-- and on the enforced off option(s): This Option is incompatible with, and will thus be forced OFF if (indicating GameOption) is used! -->
-<!-- -->
-<!-- Game Option -->
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- TB Notes regarding EnforcesGameOptionOnTypes and EnforcesGameOptionOffTypes (same formatting for Off, just change all Ons to Offs in the following)
+	Formatting: (note: may use this set multiple times to indicate more options that fall under the same enforcement guideline)
+				<EnforcesGameOptionOnTypes>
+					<EnforcesGameOptionOnType>
+						<GameOptionType>GAMEOPTION_WHATEVERYOUWANNAINDICATE</GameOptionType>
+						<bEnforcesGameOptionOn>1</bEnforcesGameOptionOn>
+					</EnforcesGameOptionOnType>
+				</EnforcesGameOptionOnTypes>
+	These tags, if used, go under bVisible and EnforcesGameOptionOnTypes comes before EnforcesGameOptionOffTypes.
+	EnforcesGameOptionOn will turn on indicated option(s) as the game is initialized, regardless of whether the indicated option(s) were set on or not.
+	EnforcesGameOptionOff does the opposite: turns the indicated option(s) off if the option with the tag in use is on.
+	These effects should be indicated strongly in the Help text for the option, and in the Help text(s) for the effected option(s) too.
+	There's no way to add it automatically since the option help hover is completely handled in the core.
+	Thus use the following line in the text (for english anyhow) at the end of the normal Help string
+	(copy and paste onto the end of the help text after a space and replace the (indicatedOption(s))):
+	"This option requires, and thus will force, the [indicated game option(s)] to be ON!"
+	or "This option is incompatible with, and thus will force, the [indicated game option(s)] to be OFF!"
+	and on the enforced option(s): "This option is required for, and will thus be forced ON, if [indicated game option] is used!"
+	and on the enforced off option(s): "This option is incompatible with, and will thus be forced OFF, if [indicated game option] is used!" -->
 <Civ4GameOptionInfos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Schema\Caveman2Cosmos.xsd">
 	<GameOptionInfos>
 		<GameOptionInfo>

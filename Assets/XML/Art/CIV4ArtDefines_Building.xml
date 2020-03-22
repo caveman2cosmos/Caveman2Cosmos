@@ -1,9 +1,4 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- -->
-	<!-- Building art path information -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Schema\Caveman2Cosmos.xsd">
 	<BuildingArtInfos>
 		<BuildingArtInfo>
@@ -3859,7 +3854,7 @@
 			<Button>Art/Interface/Buttons/Buildings/sculptor.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FIREPIT</Type>
+			<Type>ART_DEF_BUILDING_FIRE_PIT</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -4650,11 +4645,11 @@
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PLAGUE_HOSPITAL</Type>
-			<LSystem/>
+			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
-			<fScale>0</fScale>
-			<fInterfaceScale>0</fInterfaceScale>
-			<NIF/>
+			<fScale>1</fScale>
+			<fInterfaceScale>1</fInterfaceScale>
+			<NIF>Art/Structures/Buildings/infirmary.nif</NIF>
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/plague_hospital.dds</Button>
 		</BuildingArtInfo>
@@ -12120,7 +12115,7 @@
 			<Button>art/Craft/Art/officium.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BARK_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_BARK</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -18150,14 +18145,14 @@
 			<Button>art/Embassy/art/franksembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HATTIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_HAITIAN_EMBASSY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF/>
 			<KFM/>
-			<Button>art/Embassy/art/hattianembassy.dds</Button>
+			<Button>art/Embassy/art/haitianembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_HOPI_EMBASSY</Type>
@@ -18490,7 +18485,7 @@
 			<Button>art/Embassy/art/trojanembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_XIONGU_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_XIONGNU_EMBASSY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27572,7 +27567,6 @@
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/totem_sky.dds</Button>
 		</BuildingArtInfo>
-
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_STONE_MYTH</Type>
 			<LSystem/>
@@ -27593,7 +27587,6 @@
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/totem_stone.dds</Button>
 		</BuildingArtInfo>
-
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BUFFALO_HERD</Type>
 			<LSystem/>
@@ -28454,7 +28447,7 @@
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/ForeignPolicyWonder.dds</Button>
 		</BuildingArtInfo>
-             <BuildingArtInfo>
+		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_DEPARTMENT_FOREIGN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
@@ -28745,14 +28738,14 @@
 			<Button>art/Goods/harappan_fake_gems.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TERRA_SIGILLIATA_WORKSHOP</Type>
+			<Type>ART_DEF_BUILDING_TERRA_SIGILLATA_WORKSHOP</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF/>
 			<KFM/>
-			<Button>Art/Interface/Buttons/Buildings/terra_sigilliata_workshop.dds</Button>
+			<Button>Art/Interface/Buttons/Buildings/terra_sigillata_workshop.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MING_VASE_WORKSHOP</Type>
@@ -28995,14 +28988,14 @@
 			<Button>Art/Embassy/adenaembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_AFGHANISTAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_AFGHAN_EMBASSY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
-			<Button>Art/Embassy/afghanistanembassy.dds</Button>
+			<Button>Art/Embassy/afghanembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_AKSUMITE_EMBASSY</Type>
@@ -30235,14 +30228,14 @@
 			<Button>Art/Embassy/philipinoembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PHILISTINES_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_PHILISTINE_EMBASSY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
-			<Button>Art/Embassy/philistinesembassy.dds</Button>
+			<Button>Art/Embassy/philistineembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PILAGA_EMBASSY</Type>

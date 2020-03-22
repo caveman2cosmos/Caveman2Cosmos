@@ -257,7 +257,7 @@
 		<English>Chronology</English>
 		<French>Chronologie</French>
 		<German>Chronologisch</German>
-	</TEXT>	
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_CIV</Tag>
 		<English>Civilizations</English>
@@ -598,13 +598,13 @@
 		<English>Religious</English>
 		<French>Religieux</French>
 		<German>Religion</German>
-	</TEXT>	
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_RESOURCES</Tag>
 		<English>Resources</English>
 		<French>Ressources</French>
 		<German>Ressourcen</German>
-	</TEXT>	
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_ROUTES</Tag>
 		<English>Routes</English>
@@ -1044,7 +1044,7 @@
 		<Tag>TXT_KEY_PEDIA_TECH_REQUIRED</Tag>
 		<English>Tech Required:</English>
 		<French>Tech Requise :</French>
-	</TEXT>	
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_TECH_WORKER_SPEED</Tag>
 		<English>% Worker Speed</English>

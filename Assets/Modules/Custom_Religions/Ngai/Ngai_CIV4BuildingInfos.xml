@@ -14,6 +14,9 @@
 			<Strategy>TXT_KEY_BUILDING_NAITERUKOB_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NAITERUKOB</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_NGAIISM</ReligionType>
 			<StateReligion>RELIGION_NGAIISM</StateReligion>
 			<bStateReligion>1</bStateReligion>
@@ -79,6 +82,9 @@
 			<Strategy>TXT_KEY_BUILDING_NGAI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NGAI</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_NGAIISM</ReligionType>
 			<PrereqReligion>RELIGION_NGAIISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
@@ -138,6 +144,9 @@
 			<Strategy>TXT_KEY_BUILDING_NGAINANYOKE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NGAINANYOKE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_NGAIISM</ReligionType>
 			<StateReligion>RELIGION_NGAIISM</StateReligion>
 			<bStateReligion>1</bStateReligion>
@@ -203,6 +212,9 @@
 			<Strategy>TXT_KEY_BUILDING_NGAINAROK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NGAINAROK</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_NGAIISM</ReligionType>
 			<StateReligion>RELIGION_NGAIISM</StateReligion>
 			<bStateReligion>1</bStateReligion>
@@ -273,6 +285,9 @@
 			<Strategy>TXT_KEY_BUILDING_NGAINAROK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NGAINAROK_COW</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_NGAIISM</ReligionType>
 			<StateReligion>RELIGION_NGAIISM</StateReligion>
 			<bStateReligion>1</bStateReligion>
@@ -311,6 +326,9 @@
 			<Strategy>TXT_KEY_BUILDING_NGAINAROK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NGAINAROK_PIG</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_NGAIISM</ReligionType>
 			<StateReligion>RELIGION_NGAIISM</StateReligion>
 			<bStateReligion>1</bStateReligion>
@@ -349,6 +367,9 @@
 			<Strategy>TXT_KEY_BUILDING_NGAINAROK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_NGAINAROK_SHEEP</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_NGAIISM</ReligionType>
 			<StateReligion>RELIGION_NGAIISM</StateReligion>
 			<bStateReligion>1</bStateReligion>
@@ -386,6 +407,9 @@
 			<Strategy>TXT_KEY_BUILDING_NGAI_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OLDOINYO</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<MovieDefineTag>ART_DEF_MOVIE_OLDOINYO</MovieDefineTag>
 			<HolyCity>RELIGION_NGAIISM</HolyCity>
 			<ReligionType>RELIGION_NGAIISM</ReligionType>

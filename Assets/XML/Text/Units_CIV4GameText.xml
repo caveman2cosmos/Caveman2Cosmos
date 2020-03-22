@@ -1084,6 +1084,7 @@
 		<Tag>TXT_KEY_UNIT_ANIMAL_ON_KILL</Tag>
 		<English>On kill</English>
 		<French>En cas de Victoire</French>
+		<German>Im Falle eines Sieges</German>
 		<Italian>In caso di vittoria</Italian>
 		<Spanish>En caso de victoria</Spanish>
 		<Polish>Przy śmierci</Polish>
@@ -4101,7 +4102,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAMEL_TRENCH_CAVALRY_PEDIA</Tag>
 		<English>Even in the late Industrial era, to the extent that mounted warfare was persisted with, it was believed that the camel's endurance - and its sand-adapted hooves - gave it a slight edge over the horse as a mount for desert campaigns.</English>
-		<French>Même à la fin de l'ère industrielle, dans la mesure où la guerre à cheval persistait, on a gardé l'idée que l'endurance du chameau - et ses sabots adaptés au sable - lui donnait un léger avantage sur le cheval comme monture pour les campagnes dans le désert.</French>	
+		<French>Même à la fin de l'ère industrielle, dans la mesure où la guerre à cheval persistait, on a gardé l'idée que l'endurance du chameau - et ses sabots adaptés au sable - lui donnait un léger avantage sur le cheval comme monture pour les campagnes dans le désert.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAMEL_TRENCH_CAVALRY_STRATEGY</Tag>
@@ -4244,7 +4245,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_CAN_ONLY_TRAVERSE</Tag>
 		<English>Can Not Traverse</English>
 		<French>Ne peut pas Traverser</French>
-		<German>Überqueren unmöglich</German>
+		<German>Durchqueren unmöglich</German>
 		<Italian>Non può attraversare</Italian>
 		<Spanish>No puede atravesar</Spanish>
 		<Polish>Nie można przebić</Polish>
@@ -5436,24 +5437,28 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_COMBAT_MOD_PER_SIZE_LESS</Tag>
 		<English>[ICON_BULLET]%D1_Amount%% VS Each Size Rank Smaller</English>
 		<French>[ICON_BULLET]Modif. de Combat contre des unités plus petites: %D1_Amount%% par rang inférieur</French>
+		<German>[ICON_BULLET]%d1_Amount%% gegen kleinere Einheiten (pro Stufe Größenunterschied)</German>
 		<Polish>[ICON_BULLET]Modyfikator Walki kontra Mniejsze Jednostki: %D1_Amount%% na Poziom Wielkości mniej</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COMBAT_MOD_PER_SIZE_MORE</Tag>
 		<English>[ICON_BULLET]%D1_Amount%% VS Each Size Rank Larger</English>
 		<French>[ICON_BULLET]Modif. de Combat contre des unités plus grandes: %D1_Amount%% par rang supérieur</French>
+		<German>[ICON_BULLET]%d1_Amount%% gegen größere Einheiten (pro Stufe Größenunterschied)</German>
 		<Polish>[ICON_BULLET]Modyfikator Walki kontra Większe Jednostki: %D1_Amount%% na Poziom Wielkości więcej</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COMBAT_MOD_PER_VOLUME_LESS</Tag>
 		<English>[ICON_BULLET]%D1_Amount%% VS Each Group Rank Smaller</English>
 		<French>[ICON_BULLET]Modif. de Combat contre des groupes plus petits: %D1_Amount%% par Nb d'unités en moins</French>
+		<German>[ICON_BULLET]%d1_Amount%% gegen kleinere Gruppen (pro Stufe Größenunterschied)</German>
 		<Polish>[ICON_BULLET]Modyfikator Walki kontra Mniejsze Grupy: %D1_Amount%% na Poziom Wielkości mniej</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COMBAT_MOD_PER_VOLUME_MORE</Tag>
 		<English>[ICON_BULLET]%D1_Amount%% VS Each Group Rank Larger</English>
 		<French>[ICON_BULLET]Modif. de Combat contre des groupes plus grands: %D1_Amount%% par Nb d'unités suppl.</French>
+		<German>[ICON_BULLET]%d1_Amount%% gegen größere Gruppen (pro Stufe Größenunterschied)</German>
 		<Polish>[ICON_BULLET]Modyfikator Walki kontra Większe Grupy: %D1_Amount%% na Poziom Wielkości więcej</Polish>
 	</TEXT>
 	<TEXT>
@@ -9283,7 +9288,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Pingwin równikowy (Spheniscus mendiculus) - gatunek dużego ptaka wodnego z rodziny pingwinów (Spheniscidae), zamieszkujący wyłącznie wyspy Galapagos. Jest to jedyny gatunek pingwina gnieżdżący się na półkuli północnej.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GALAPOGOS_TORTOISE</Tag>
+		<Tag>TXT_KEY_UNIT_GALAPAGOS_TORTOISE</Tag>
 		<English>Galapagos Tortoise</English>
 		<French>
 			<Text>Tortue des Galapagos</Text>
@@ -9304,7 +9309,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Żółw Słoniowy</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GALAPOGOS_TORTOISE_PEDIA</Tag>
+		<Tag>TXT_KEY_UNIT_GALAPAGOS_TORTOISE_PEDIA</Tag>
 		<English>The Galápagos tortoise or Galápagos giant tortoise (Chelonoidis nigra) is the largest living species of tortoise, reaching weights of over 400 kg (880 lb) and lengths of over 1.8 meters (5.9 ft). With life spans in the wild of over 100 years, it is one of the longest-lived vertebrates. A captive individual lived at least 170 years.[PARAGRAPH:2]The tortoise is native to seven of the Galápagos Islands, a volcanic archipelago about 1,000 km (620 mi) west of the Ecuadorian mainland. Spanish explorers who discovered the islands in the 16th century named them after the Spanish galápago, meaning tortoise.[PARAGRAPH:2]Shell size and shape vary between populations. On islands with humid highlands, the tortoises are larger, with domed shells and short necks. On islands with dry lowlands, the tortoises are smaller, with "saddleback" shells and long necks. These island-to-island differences played a role in the inception of Charles Darwin's theory of evolution.[PARAGRAPH:2]Tortoise numbers declined from over 250,000 in the 16th century to a low of around 3,000 in the 1970s. The decline was caused by hunting for tortoise meat and oil, habitat clearance for agriculture, and introduction of non-native animals such as rats, goats, and pigs. Ten subspecies of the original fifteen survive in the wild. An eleventh subspecies (C. n. abingdoni) has only a single living individual, in captivity, nicknamed Lonesome George. Conservation efforts beginning in the 20th century have resulted in thousands of captive-bred juveniles being released onto their home islands, and it is estimated that numbers exceeded 19,000 at the start of the 21st century. Despite this rebound, the species as a whole is classified as "Vulnerable" by the International Union for Conservation of Nature (IUCN).(Source: Wikipedia)</English>
 		<German>Die Galápagos-Riesenschildkröte (Chelonoidis nigra) ist die größte rezente Landschildkröte, die ausschließlich auf dem Galápagos-Archipel lebt. Die Männchen sind deutlich größer als die Weibchen, haben einen längeren Schwanz, einen flacheren Rückenpanzer und längere Fußnägel. Frei lebende Tiere erreichen eine Panzerlänge von 134 cm und können bis zu 290 kg schwer werden, in Gefangenschaft sogar über 400 kg.[PARAGRAPH:2]Zahlreiche Pflanzen stehen auf dem Speiseplan der Galápagos-Riesenschildkröte. Besonders gern frisst sie Opuntien, aber auch andere Kakteen, Beeren, Gräser und Kräuter. Zur Paarungszeit legen die Weibchen bis zu 17 Eier in eine Nisthöhle, aus der sich die Jungtiere nach dem Schlüpfen selbstständig graben. Riesenschildkröten können weit über 100 Jahre alt werden.[PARAGRAPH:2]Die Galápagos-Riesenschildkröte ist eine bedrohte Tierart. Einige Unterarten sind bereits ausgestorben. Ihre Feinde sind vor allem Ziegen, Schweine und andere Tiere, welche die Gelege zerstören und Jungtiere töten. Eingeschleppte Pflanzen verdrängen die heimischen Arten und zerstören somit den Lebensraum der Schildkröte.</German>
 		<Polish>Żółw słoniowy (Chelonoidis nigra)? gatunek jednego z największych żółwi na świecie. Podobny rozmiarem do żółwi olbrzymich z wysp Oceanu Indyjskiego. Jego pancerz grzbietowy może mieć 150 cm długości, a największy znaleziony osobnik mierzył prawie 3 metry i ważył 1000 kg. Na ogół za duże uważa się osobniki, których waga przekracza 200 kg, a wysokość dochodzi do 1 metra. Samce są zwykle większe od samic. Żółwie słoniowe żyją na wyspach Galapagos.[PARAGRAPH:2]W stosunku do reszty ciała ich karapaks (górna część skorupy) jest bardzo duży. Wypukły, spadzisty karapaks jest z zewnątrz pokryty dużymi i gładkimi rogowymi tarczkami, od przodu wysoko uniesiony opada stromo ku tyłowi. Natomiast brak jest tarczki karkowej. Głowa mała osadzona na długiej szyi osłoniętej miękką skórą. Grube słupowate nogi (kształtem podobne do nóg słonia i stąd wzięła się nazwa tych żółwi) pokrywają duże tarczki, a palce zakończone są potężnymi pazurami. Podobnie jak inne żółwie nie mają zębów, a ich rolę spełniają ostre listwy rogowe, za pomocą których tną i miażdżą zjadaną roślinność. Całe ciało jest jednolicie brunatne lub czarnawe. Karapaks niektórych osobników nad głową zakrzywia się w górę umożliwiając żółwiowi dosięganie wyższych roślin. Poruszają się powoli na szeroko rozstawionych nogach w sposób typowy dla gadów. Takie ustawienie nóg powoduje, że więcej energii tracą na utrzymanie ciężaru ciała niż na rzeczywisty ruch. Wykonują powolne kroki noga za nogą zostawiając za sobą szeroki ślad. Są długowiecznymi zwierzętami, gdyż w sprzyjających warunkach mogą dożyć nawet 300 lat. Dobrym przykładem może być żółw o imieniu Tu'i Malila, podarowany przez kapitana J. Cooka królowi Tonga ok. 1777 r. Jeszcze w 1949 r. był w dobrej formie, a umarł w 1965 roku w wieku ok. 188 lat.[PARAGRAPH:2]Prawdopodobnie wszystkie podgatunki/gatunki żółwia rozwinęły się na Galapagos od wspólnego przodka, który został przyniesiony ze stałego lądu wraz z prądem morskim, a musiał być to Prąd Peruwiański. Chociaż to wydaje się nieprawdopodobne, faktem jest, że żółwie słoniowe potrafią pływać w morzu. Wystarczyłoby, że jedna zapłodniona samica albo para żółwi przebyłaby tę drogę np. na jakiejś pływającej wyspie z konarów drzew wyniesionej przez prąd rzeki po silnej ulewie na pełne morze by skolonizować wyspy. Jest wysoce prawdopodobne, że pierwszy żółw dopłynął do brzegów wyspy San Cristobal, a stamtąd jego potomkowie stopniowo rozproszyli się na pozostałe wyspy archipelagu tą samą drogą wraz z oceanicznym prądem. Najbliższym żyjącym krewnym żółwi słoniowych jest Chelonoidis chilensis, mały żółw znaleziony w Chile. Pierwotny przodek żółwi był prawdopodobnie przeciętnego rozmiaru, a rozwinął się do dzisiejszych dopiero po przybyciu na Galapagos. Jest to zjawisko zauważane w wielu ekosystemach, gdzie gigantyzm rozwija się tam, gdzie zwierzę nie ma wrogów, więc nie potrzebuje ukrywać się przed drapieżnikami, a także nie ma innych podobnych zwierząt, z którymi musiałoby współzawodniczyć o żywność. Żółwie ewoluowały na izolowanych wyspach do różnych podgatunków, które widzimy dzisiaj, niektóre mają pancerz w kształcie kopuły, a inne w kształcie siodła. Kształt siodła rozwinął się na różnych wyspach niezależnie od siebie, co świadczyłoby, że jest to udany projekt ewolucji.[PARAGRAPH:2]W XVI wieku piraci zaczęli używać Galapagos jako bazy, czemu sprzyjało dogodne położenie archipelagu blisko szlaku hiszpańskich statków wywożących złoto Inków. Tutaj uzupełniali zapasy wody i naprawiali swoje statki między łupieżczymi wypadami na hiszpańskie kolonie w Ameryce Południowej. Bogactwem wysp były żółwie słoniowe, które były zabierane i przechowywane żywe na pokładach statków przez wiele miesięcy. Dlatego, iż są niewiarygodnie wytrzymałe na brak wody i pożywienia oraz skromne warunki tlenowe panujące pod pokładami statków, były one niegdyś wykorzystywane przez żeglarzy jako "żywe konserwy". W XVIII wieku statki wielorybnicze i łowcy fok zabierali jako zapas świeżego mięsa po kilkaset żółwi, które mogły przetrwać na pokładzie (i w ładowni) wiele miesięcy bez jedzenia. Dużo więcej zabijali dla świetnego żółwiowego oleju. Od końca XVIII w. aż do początków XX w. ludzie, którzy tam się osiedlili polowali na nie dla mięsa i zagarnęli duże obszary pod rolnictwo. Osadnicy wprowadzili domowe zwierzęta, co miało zgubny wpływ na populację żółwi. Nie wiadomo dokładnie, ile żółwi słoniowych żyło pierwotnie na wyspach, ale szacuje się, że więcej niż 100 000 było zabitych przez ludzi. W wyniku tego dzisiaj trzy podgatunki żółwia słoniowego są wygasłe, a czwarta odmiana jest reprezentowana tylko przez jednego żółwia. Żółwie obecnie przeniosły się dalej od brzegów i żyją w pobliżu zboczy wulkanów. Prześladowania trwają, ale już w dużo mniejszej skali; mimo to od 1990 roku kłusownicy zabili ponad 120 żółwi słoniowych.[PARAGRAPH:2]Ogólnie wiodą spokojne, leniwe życie. Rano między 7:00 a 8:00 budzą się i wygrzewają w słońcu, aby podnieść temperaturę ciała. Są aktywne za dnia, spędzając czas na żerowaniu. Najgorętszą porę dnia przeczekują w cieniu schowane pod krzakami chroniąc się przed przegrzaniem. Około 4 albo 5 po południu zaczynają szukać miejsca, w którym spędzą chłodną noc. Wieczorem zasypiają, często w osłoniętym wgłębieniu w gruncie albo wpół zanurzone w błocie lub wodzie, co najpewniej pomaga utrzymać dłużej ciepło. Piją wodę i lubią taplać się w wodzie i błocie. Mają łagodne usposobienie. Dojrzałe samce nie są wobec siebie agresywne, a hierarchię między sobą ustalają na podstawie długości szyi. Zawody wygrywa ten, który potrafi wyżej wyciągnąć głowę, co dla drugiego samca żółwia oznacza wielkość i siłę przeciwnika. (źródło: Wikipedia)</Polish>
@@ -14881,8 +14886,8 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LIGHT_HOPLITE_STRATEGY</Tag>
-		<English>The [COLOR_UNIT_TEXT]Light Hoplite[COLOR_REVERT] is a Philistines unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Hoplite Léger[COLOR_REVERT] est une unité Philistines unique.</French>
+		<English>The [COLOR_UNIT_TEXT]Light Hoplite[COLOR_REVERT] is a Philistine unique unit.</English>
+		<French>Le [COLOR_UNIT_TEXT]Hoplite Léger[COLOR_REVERT] est une unité Philistine unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LIGHT_SWORDSMAN</Tag>
@@ -17470,8 +17475,8 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MUJAHIDEEN_STRATEGY</Tag>
-		<English>The [COLOR_UNIT_TEXT]Mujahideen[COLOR_REVERT] is a Afghanistan unique unit.</English>
-		<French>Le [COLOR_UNIT_TEXT]Mujahideen[COLOR_REVERT] est une unité Afghanistan unique.</French>
+		<English>The [COLOR_UNIT_TEXT]Mujahideen[COLOR_REVERT] is a Afghan unique unit.</English>
+		<French>Le [COLOR_UNIT_TEXT]Mujahideen[COLOR_REVERT] est une unité Afghan unique.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MUNGO_MAN</Tag>
@@ -18124,7 +18129,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_WAR_CANOE</Tag>
 		<English>Neanderthal War Canoe</English>
-		<French>Canoé de guerre de Néanderthal</French>		
+		<French>Canoé de guerre de Néanderthal</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NEANDERTHAL_WATCHER</Tag>
@@ -19010,6 +19015,11 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Struś</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_OSTRICH_PEDIA</Tag>
+		<English>TBD</English>
+		<German>Der [COLOR_UNIT_TEXT]Strauß[COLOR_REVERT] (Struthio camelus) ist der größte lebende Vogel der Erde. Ausgewachsene Hähne haben ein schwarzes Gefieder mit weißen Schwungfedern und Schwänzen. Sie erreichen Größen von bis zu 250 cm und ein Körpergewicht von bis zu 135 kg. Die Hennen tragen ein erdbraunes Gefieder und sind kleiner und leichter. Ähnlich sieht auch das Jugendkleid aus. Frisch geschlüpfte Küken hingegen sind rehbraun mit dunklen Tupfen.[NEWLINE]Der Strauß ist heutzutage nur noch in Ost- und Südafrika heimisch. Er bevorzugt Lebensräume mit kurzem Gras und nicht zu hohem Baumbestand, weshalb er häufig in Savannen lebt. Strauße sind tag- und besonders dämmerungsaktive Tiere. Außerhalb der Brutzeit leben sie in kleinen lockeren Verbänden zusammen, manchmal aber auch in Herden von hundert und mehr Tieren. Strauße ernähren sind hauptsächlich von Pflanzen, gelegentlich aber auch von Insekten und anderen Kleintieren. Ihre größten Fressfeinde sind Löwen und Leoparden, aber auch diesen Großkatzen kann ein gezielter Straußentritt lebensgefährliche Verletzungen zufügen.[NEWLINE]Der Strauß wurde wegen seiner Federn, seines Fleisches und seines Leders seit jeher vom Menschen gejagt. Im 18. Jahrhundert kamen Straußenfedern als Hutschmuck in Mode und die Vögel wurden bis zur Ausrottung gejagt. In Westasien, Nordafrika und Südafrika gibt es seither keine Strauße mehr. Im 19. Jahrhundert wurden die ersten Straußenfarmen gegründet, da frei lebende Strauße extrem selten geworden waren. Heute spielen die Federn zum Glück kaum noch eine Rolle. Die Vögel werden vor allem wegen ihres Fleisches und des Leders gezüchtet. Aus den Schalen der Straußeneier werden Lampenschirme und Schmuckgegenstände angefertigt.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OTTOMAN_JANISSARY_PEDIA</Tag>
@@ -20757,6 +20767,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_PURSUIT</Tag>
 		<English>[ICON_BULLET]Pursuit Chance: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Poursuite: peut ignorer la capacité de retrait de l'Ennemi (%d1_Amount%% de Chances)</French>
+		<German>[ICON_BULLET]Verfolgungsjagd - kann den Rückzug des Gegners verhindern (%d1_Amount%%)</German>
 		<Italian>[ICON_BULLET]Inseguimento: può impedire al nemico di ritirarsi (%d1_Amount%% di chance)</Italian>
 		<Polish>[ICON_BULLET]Pościg: Może zablokowć wrogą ucieczkę z pola walki (%d1_Amount%% Szans)</Polish>
 	</TEXT>
@@ -20764,6 +20775,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_PURSUIT_PROBABILITY</Tag>
 		<English>[ICON_BULLET]Pursuit Chance: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Poursuite: peut ignorer le retrait de %d1_Amount%%</French>
+		<German>[ICON_BULLET]Verfolgungsjagd (Rückzug verhindern): %d1_Amount%%</German>
 		<Italian>[ICON_BULLET]Inseguimento: può impedire la ritirata del %d1_Amount%%</Italian>
 		<Polish>[ICON_BULLET]Pościg: może zablokować ucieczkę %d1_Amount%%</Polish>
 	</TEXT>
@@ -20771,6 +20783,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_PURSUIT_PROBABILITY_SHORT</Tag>
 		<English>[ICON_BULLET]Pursuit Chance: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Poursuite: %d1_Amount%%</French>
+		<German>[ICON_BULLET]Verfolgungsjagd: %d1_Amount%%</German>
 		<Italian>[ICON_BULLET]Inseguimento: %d1_Amount%%</Italian>
 		<Polish>[ICON_BULLET]Pościg: %d1_Amount%%</Polish>
 	</TEXT>
@@ -22296,22 +22309,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Le Héros militaire Sumérien est [COLOR_UNIT_TEXT]Sargon[COLOR_REVERT]. Disponible dès l'antiquité et l'ère classique, il commence avec un [COLOR_HIGHLIGHT_TEXT]Prêtre[COLOR_REVERT] dans sa suite. Il peut être construit lorsque [COLOR_TECH_TEXT]Ecriture[COLOR_REVERT] et [COLOR_TECH_TEXT]Organisation Armée[COLOR_REVERT] sont recherchés.</French>
 		<Spanish>El héroe militar sumerio es [COLOR_UNIT_TEXT]Sargón[COLOR_REVERT]. Disponible a partir de la Antigüedad/Época clásica, comienza con el ascenso [COLOR_HIGHLIGHT_TEXT]Clérigo[COLOR_REVERT] en su séquito. Puede ser entrenado una vez investigadas la [COLOR_TECH_TEXT]Escritura[COLOR_REVERT] y la [COLOR_TECH_TEXT]Organización militar[COLOR_REVERT].</Spanish>
 		<Polish>Bohater Wojskowy Sumerów to [COLOR_UNIT_TEXT]Sargon Wielki[COLOR_REVERT]. Rozpoczyna w towarzystwie [COLOR_HIGHLIGHT_TEXT]Kapłana[COLOR_REVERT]. Może zostać wyszkolony wraz z odkryciem [COLOR_TECH_TEXT]Pisma[COLOR_REVERT] i [COLOR_TECH_TEXT]Alfabetu[COLOR_REVERT].</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SATURDAY</Tag>
-		<English>Windradyne</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SATURDAY_PEDIA</Tag>
-		<English>Windradyne (c. 1800 - 21 March 1829) was an Aboriginal warrior and resistance leader of the Wiradjuri nation, in what is now central-western New South Wales, Australia; he was also known to the British settlers as Saturday. Windradyne led his people in the Bathurst Wars, a resistance movement by the Indigenous Australians against the invasion of their lands by the British settlers.</English>
-		<French>Windradyne (v. 1800- 21 mars 1829) était un chef guerrier aborigène de la nation Wiradjuri, dans le centre-ouest de la Nouvelle-Galles du Sud, en Australie. Windradyne, aussi connu sous le nom de Saturday ("samedi"), a poussé son peuple à la résistance contre l'invasion de leurs terres.</French>
-		<Polish>Windradyne (ok.. 1800 - 1829) był aborygeńskim wojownikiem i przywódcą rebelii narodu Wiradjuri.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SATURDAY_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Windradyne[COLOR_REVERT] was a "Hero".</English>
-		<French>texte ici</French>
-		<Polish>[COLOR_UNIT_TEXT]Windradyne[COLOR_REVERT] był "Bohaterem"</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SAUD_CAVALRY</Tag>
@@ -27055,7 +27052,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRIREME_PEDIA</Tag>
 		<English>[TAB]Triremes were ancient war galleys with three rows of oars on each side. The trireme was an improvement upon an older type of ship called the "pentekonter," which was similar in design but possessed only one row of oars on each side. (The standard "galleys" found in Civilization IV are pentekonters.) The staggered seating of the rowers on the trireme allowed for more people to be packed into roughly the same amount of space, and (more importantly) the extra manpower allowed triremes to travel at faster speeds. Some ancient sources claim that the trireme existed as far back as the eighth century BC, but the first known account of their use was by Polycrates of Samos in 525 BC during an invasion of Egypt. By the middle of the fifth century BC, triremes were in common use throughout Greece. [PARAGRAPH:1]The average trireme was about 35 meters long, carrying 170 oarsmen, 20 crew members, and 10 marines under the command of a captain. According to ancient sources, triremes could reach a maximum speed of about 20 km/hour in battle, or sustain a slower speed of 13 km/hour for a long stretch of time. Triremes also possessed sails but they were not used during combat. A Trireme's main offensive weapon was its "beak," a stout piece of sharpened wood (often clad in metal) which protruded directly forward from its bow, at or below the waterline. In battle the primary tactic was to use the beaks to ram and sink enemy ships, which required building up as much speed as possible to punch through the opposing ship's hull. This was a difficult task and required a great deal of cooperation from the rowers, as even a single rower moving out of place could greatly slow the ship. For this reason the rowers on Greek triremes were not slaves but instead well-trained free men who received good pay for their services. [PARAGRAPH:1]During the Persian War, the Greeks used their triremes to defeat the Persians at the decisive Battle of Salamis. Triremes also formed the backbone of the Athenian navy during the Peloponnesian War. As the war progressed Sparta and her allies created their own powerful fleet of triremes; these would be put into good use in 404 BC during the Battle at Aegospotami, when Lysander destroyed Athen's navy, cutting off the city-state's trade and eventually starving her into submission. [PARAGRAPH:1]Triremes would eventually be supplanted by the larger and faster quinqueremes, but the design was revived years later by the Romans, who, facing no major naval enemies, preferred the smaller and cheaper triremes to the more expensive quinqueremes. </English>
-		<French>[TAB]La trirème est une galère de guerre disposant de trois rangs de rames sur chaque bord. Elle constitue une amélioration d'un type plus ancien de bateau appelé le pentécontère à la conception similaire mais avec un seul rang de rameurs sur chaque bord (le pentécontère est la "galère" standard de Civilization IV). L'échelonnement des rameurs sur la trirème permet d'en entasser plus sur une même surface et surtout lui permet de bénéficier d'une puissance supérieure autorisant une vitesse plus rapide. D'après certaines sources anciennes, la trirème existait déjà au huitième siècle av. J.-C., mais la première mention de son utilisation est faite par Polycrate de Samos en 525 av. J.-C. lors d'une invasion de l'Egypte. Au début du cinquième siècle av. J.-C., les trirèmes existent partout en Grèce. [PARAGRAPH:1]Une trirème mesure en moyenne 35 mètres de long et transporte 170 rameurs, 20 hommes d'équipage et 10 marins placés sous le commandement d'un capitaine. Elle peut atteindre une vitesse maximale de 20 km/h au combat et maintenir une vitesse de croisière de 13 km/h pendant une longue période. La trirème dispose aussi de voiles, mais celles-ci ne sont pas utilisées au combat. L'armement principal est constitué par un rostre, pièce de bois très robuste montée sur sa proue au niveau ou au-dessous de la ligne de flottaison et généralement renforcée de métal. Au combat, la principale tactique est d'utiliser le rostre pour éperonner et couler un navire ennemi, ce qui implique de prendre le plus de vitesse possible avant d'aller percuter la coque de l'embarcation adverse. C'est une manoeuvre difficile nécessitant l'entière coopération des rameurs, car même le déplacement d'un seul rameur peut grandement ralentir la trirème. C'est la raison pour laquelle les rameurs des trirèmes grecques ne sont pas des esclaves mais des hommes libres bien entraînés qui recevaient une bonne solde pour leurs services. [PARAGRAPH:1]Au cours des guerres médiques, les Grecs utilisent leurs trirèmes pour vaincre l'ennemi perse lors de la bataille décisive de Salamine. Les trirèmes forment aussi l'épine dorsale de la flotte athénienne au cours de la Guerre du Péloponnèse. Sparte et ses alliés constituent progressivement leur propre puissante flotte de trirèmes pendant la guerre. Elles s'avèrent très utiles en 404 av. J.-C. à la bataille d'Aigos Potamos quand Lysandre réussit à détruire la flotte athénienne et coupe les routes d'approvisionnement d'Athènes, affamant la cité-état ennemie et la soumettant enfin. [PARAGRAPH:1]Les trirèmes finissent par être supplantées par les plus grandes et plus rapides quinquérèmes, mais le modèle réapparaît bien des années plus tard chez les Romains qui, ne faisant face à aucune menace navale sérieuse, préfèrent les plus petites trirèmes aux quinquérèmes, bien plus coûteuses.</French>		
+		<French>[TAB]La trirème est une galère de guerre disposant de trois rangs de rames sur chaque bord. Elle constitue une amélioration d'un type plus ancien de bateau appelé le pentécontère à la conception similaire mais avec un seul rang de rameurs sur chaque bord (le pentécontère est la "galère" standard de Civilization IV). L'échelonnement des rameurs sur la trirème permet d'en entasser plus sur une même surface et surtout lui permet de bénéficier d'une puissance supérieure autorisant une vitesse plus rapide. D'après certaines sources anciennes, la trirème existait déjà au huitième siècle av. J.-C., mais la première mention de son utilisation est faite par Polycrate de Samos en 525 av. J.-C. lors d'une invasion de l'Egypte. Au début du cinquième siècle av. J.-C., les trirèmes existent partout en Grèce. [PARAGRAPH:1]Une trirème mesure en moyenne 35 mètres de long et transporte 170 rameurs, 20 hommes d'équipage et 10 marins placés sous le commandement d'un capitaine. Elle peut atteindre une vitesse maximale de 20 km/h au combat et maintenir une vitesse de croisière de 13 km/h pendant une longue période. La trirème dispose aussi de voiles, mais celles-ci ne sont pas utilisées au combat. L'armement principal est constitué par un rostre, pièce de bois très robuste montée sur sa proue au niveau ou au-dessous de la ligne de flottaison et généralement renforcée de métal. Au combat, la principale tactique est d'utiliser le rostre pour éperonner et couler un navire ennemi, ce qui implique de prendre le plus de vitesse possible avant d'aller percuter la coque de l'embarcation adverse. C'est une manoeuvre difficile nécessitant l'entière coopération des rameurs, car même le déplacement d'un seul rameur peut grandement ralentir la trirème. C'est la raison pour laquelle les rameurs des trirèmes grecques ne sont pas des esclaves mais des hommes libres bien entraînés qui recevaient une bonne solde pour leurs services. [PARAGRAPH:1]Au cours des guerres médiques, les Grecs utilisent leurs trirèmes pour vaincre l'ennemi perse lors de la bataille décisive de Salamine. Les trirèmes forment aussi l'épine dorsale de la flotte athénienne au cours de la Guerre du Péloponnèse. Sparte et ses alliés constituent progressivement leur propre puissante flotte de trirèmes pendant la guerre. Elles s'avèrent très utiles en 404 av. J.-C. à la bataille d'Aigos Potamos quand Lysandre réussit à détruire la flotte athénienne et coupe les routes d'approvisionnement d'Athènes, affamant la cité-état ennemie et la soumettant enfin. [PARAGRAPH:1]Les trirèmes finissent par être supplantées par les plus grandes et plus rapides quinquérèmes, mais le modèle réapparaît bien des années plus tard chez les Romains qui, ne faisant face à aucune menace navale sérieuse, préfèrent les plus petites trirèmes aux quinquérèmes, bien plus coûteuses.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRISONG_DETSEN</Tag>
@@ -28794,6 +28791,22 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Italian>[COLOR_YELLOW]XP iniziale gratis:[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_YELLOW]Experiencia gratuita:[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_YELLOW]Darmowe Doświadczenie:[COLOR_REVERT]</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WINDRADYNE</Tag>
+		<English>Windradyne</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WINDRADYNE_PEDIA</Tag>
+		<English>Windradyne (c. 1800 - 21 March 1829) was an Aboriginal warrior and resistance leader of the Wiradjuri nation, in what is now central-western New South Wales, Australia; he was also known to the British settlers as Saturday. Windradyne led his people in the Bathurst Wars, a resistance movement by the Indigenous Australians against the invasion of their lands by the British settlers.</English>
+		<French>Windradyne (v. 1800- 21 mars 1829) était un chef guerrier aborigène de la nation Wiradjuri, dans le centre-ouest de la Nouvelle-Galles du Sud, en Australie. Windradyne, aussi connu sous le nom de Saturday ("samedi"), a poussé son peuple à la résistance contre l'invasion de leurs terres.</French>
+		<Polish>Windradyne (ok.. 1800 - 1829) był aborygeńskim wojownikiem i przywódcą rebelii narodu Wiradjuri.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WINDRADYNE_STRATEGY</Tag>
+		<English>[COLOR_UNIT_TEXT]Windradyne[COLOR_REVERT] was a "Hero".</English>
+		<French>texte ici</French>
+		<Polish>[COLOR_UNIT_TEXT]Windradyne[COLOR_REVERT] był "Bohaterem"</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WINGED_CAVALRY</Tag>

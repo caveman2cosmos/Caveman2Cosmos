@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+<?xml version='1.0' encoding='UTF-8'?>
 <UnitFormations xmlns="x-schema:../Schema/C2C_Civ4FormationSchema.xml">
 	<UnitFormation>
 		<Name>IDLE (1)</Name>
@@ -4020,7 +4020,7 @@
 			<Direction>3.14159265359</Direction>
 			<DirVariation>0.0</DirVariation>
 		</UnitEntry>
-                <UnitEntry>
+		<UnitEntry>
 			<UnitEntryType>UNIT</UnitEntryType>
 			<Position>
 				<x>0.5</x>
@@ -4030,7 +4030,7 @@
 			<Direction>3.14159265359</Direction>
 			<DirVariation>0.0</DirVariation>
 		</UnitEntry>
-                <UnitEntry>
+		<UnitEntry>
 			<UnitEntryType>UNIT</UnitEntryType>
 			<Position>
 				<x>0.0</x>
@@ -4040,7 +4040,7 @@
 			<Direction>3.14159265359</Direction>
 			<DirVariation>0.0</DirVariation>
 		</UnitEntry>
-                <UnitEntry>
+		<UnitEntry>
 			<UnitEntryType>UNIT</UnitEntryType>
 			<Position>
 				<x>-0.5</x>
@@ -4095,7 +4095,7 @@
 			<Direction>3.14159265359</Direction>
 			<DirVariation>0.0</DirVariation>
 		</UnitEntry>
-                <UnitEntry>
+		<UnitEntry>
 			<UnitEntryType>UNIT</UnitEntryType>
 			<Position>
 				<x>0.5</x>
@@ -4105,7 +4105,7 @@
 			<Direction>3.14159265359</Direction>
 			<DirVariation>0.0</DirVariation>
 		</UnitEntry>
-                <UnitEntry>
+		<UnitEntry>
 			<UnitEntryType>UNIT</UnitEntryType>
 			<Position>
 				<x>0.0</x>
@@ -4160,7 +4160,7 @@
 			<Direction>3.14159265359</Direction>
 			<DirVariation>0.0</DirVariation>
 		</UnitEntry>
-                <UnitEntry>
+		<UnitEntry>
 			<UnitEntryType>UNIT</UnitEntryType>
 			<Position>
 				<x>0.5</x>
@@ -5900,7 +5900,7 @@
 			<Direction>3.14159265359</Direction>
 			<DirVariation>0.188679622641</DirVariation>
 		</UnitEntry>
-        </UnitFormation>
+	</UnitFormation>
 	<UnitFormation>
 		<Name>ELEPHANT IDLE (3)</Name>
 		<FormationType>FORMATION_TYPE_ELEPHANT</FormationType>
@@ -5965,7 +5965,7 @@
 			<Direction>3.14159265359</Direction>
 			<DirVariation>0.188679622641</DirVariation>
 		</UnitEntry>
-        </UnitFormation>
+	</UnitFormation>
 	<UnitFormation>
 		<Name>ELEPHANT IDLE (2)</Name>
 		<FormationType>FORMATION_TYPE_ELEPHANT</FormationType>
@@ -6020,7 +6020,7 @@
 			<Direction>3.14159265359</Direction>
 			<DirVariation>0.188679622641</DirVariation>
 		</UnitEntry>
-        </UnitFormation>
+	</UnitFormation>
 	<UnitFormation>
 		<Name>ELEPHANT IDLE (1)</Name>
 		<FormationType>FORMATION_TYPE_ELEPHANT</FormationType>
@@ -6065,7 +6065,7 @@
 			<Direction>3.14159265359</Direction>
 			<DirVariation>0.188679622641</DirVariation>
 		</UnitEntry>
-        </UnitFormation>
+	</UnitFormation>
 	<UnitFormation>
 		<Name>GALLIC_WARRIOR (3)</Name>
 		<FormationType>FORMATION_TYPE_BARB</FormationType>
@@ -15201,7 +15201,7 @@
 			<Direction>3.14159265359</Direction>
 			<DirVariation>0.0</DirVariation>
 		</UnitEntry>
-                <UnitEntry>
+		<UnitEntry>
 			<UnitEntryType>UNIT</UnitEntryType>
 			<Position>
 				<x>-0.6</x>
@@ -15211,7 +15211,7 @@
 			<Direction>3.14159265359</Direction>
 			<DirVariation>0.0</DirVariation>
 		</UnitEntry>
-                <UnitEntry>
+		<UnitEntry>
 			<UnitEntryType>UNIT</UnitEntryType>
 			<Position>
 				<x>0.6</x>
@@ -15221,7 +15221,7 @@
 			<Direction>3.14159265359</Direction>
 			<DirVariation>0.0</DirVariation>
 		</UnitEntry>
-                <UnitEntry>
+		<UnitEntry>
 			<UnitEntryType>UNIT</UnitEntryType>
 			<Position>
 				<x>-0.6</x>
@@ -15231,7 +15231,7 @@
 			<Direction>3.14159265359</Direction>
 			<DirVariation>0.0</DirVariation>
 		</UnitEntry>
-                <UnitEntry>
+		<UnitEntry>
 			<UnitEntryType>UNIT</UnitEntryType>
 			<Position>
 				<x>0.0</x>
@@ -15296,7 +15296,7 @@
 			<Direction>3.14159265359</Direction>
 			<DirVariation>0.0</DirVariation>
 		</UnitEntry>
-                <UnitEntry>
+		<UnitEntry>
 			<UnitEntryType>UNIT</UnitEntryType>
 			<Position>
 				<x>-0.6</x>
@@ -15306,7 +15306,7 @@
 			<Direction>3.14159265359</Direction>
 			<DirVariation>0.0</DirVariation>
 		</UnitEntry>
-                <UnitEntry>
+		<UnitEntry>
 			<UnitEntryType>UNIT</UnitEntryType>
 			<Position>
 				<x>0.6</x>
@@ -15316,7 +15316,7 @@
 			<Direction>3.14159265359</Direction>
 			<DirVariation>0.0</DirVariation>
 		</UnitEntry>
-                <UnitEntry>
+		<UnitEntry>
 			<UnitEntryType>UNIT</UnitEntryType>
 			<Position>
 				<x>-0.6</x>
@@ -15381,7 +15381,7 @@
 			<Direction>3.14159265359</Direction>
 			<DirVariation>0.0</DirVariation>
 		</UnitEntry>
-                <UnitEntry>
+		<UnitEntry>
 			<UnitEntryType>UNIT</UnitEntryType>
 			<Position>
 				<x>-0.6</x>
@@ -15391,7 +15391,7 @@
 			<Direction>3.14159265359</Direction>
 			<DirVariation>0.0</DirVariation>
 		</UnitEntry>
-                <UnitEntry>
+		<UnitEntry>
 			<UnitEntryType>UNIT</UnitEntryType>
 			<Position>
 				<x>0.6</x>
@@ -15456,7 +15456,7 @@
 			<Direction>3.14159265359</Direction>
 			<DirVariation>0.0</DirVariation>
 		</UnitEntry>
-                <UnitEntry>
+		<UnitEntry>
 			<UnitEntryType>UNIT</UnitEntryType>
 			<Position>
 				<x>-0.6</x>
@@ -15600,7 +15600,7 @@
 			<EventType>ENTITY_EVENT_HEAL</EventType>
 			<EventType>ENTITY_EVENT_SENTRY</EventType>
 			<EventType>ENTITY_EVENT_BEGIN_COMBAT</EventType>
-                </EventMaskList>
+		</EventMaskList>
 		<UnitEntry>
 			<UnitEntryType>UNIT</UnitEntryType>
 			<Position>
@@ -15655,7 +15655,7 @@
 			<EventType>ENTITY_EVENT_HEAL</EventType>
 			<EventType>ENTITY_EVENT_SENTRY</EventType>
 			<EventType>ENTITY_EVENT_BEGIN_COMBAT</EventType>
-                </EventMaskList>
+		</EventMaskList>
 		<UnitEntry>
 			<UnitEntryType>UNIT</UnitEntryType>
 			<Position>

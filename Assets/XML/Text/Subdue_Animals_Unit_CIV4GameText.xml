@@ -435,7 +435,7 @@
 		<Polish>Poskromiony Flaming</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_GALAPOGOS_TORTOISE</Tag>
+		<Tag>TXT_KEY_UNIT_SUBDUED_GALAPAGOS_TORTOISE</Tag>
 		<English>Subdued Galapagos Tortoise</English>
 		<French>
 			<Text>Tortue des Galapagos (App.)</Text>
@@ -1008,6 +1008,11 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Gefangener Strauß:Gefangenen Straußes:Gefangenem Strauß:Gefangenen Strauß:Gefangene Strauße:Gefangenen Strauße:Gefangenen Straußen:Gefangenen Strauße</Text>
+			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Struzzo addomesticato</Text>
 			<Gender>Male</Gender>
