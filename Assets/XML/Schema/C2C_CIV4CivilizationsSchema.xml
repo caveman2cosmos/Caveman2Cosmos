@@ -1,8 +1,4 @@
-<?xml version="1.0"?>
-<!-- Sid Meier's Civilization 4 Beyond the Sword -->
-<!-- Modified by the World of Civilization Team -->
-<!-- Civilizations Schema -->
-<!-- -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Schema xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">
   <ElementType name="ReplacementCondition"/>
   <ElementType name="ReplacementID"/>
@@ -57,7 +53,6 @@
 	<ElementType name="iLimit" content="textOnly" dt:type="int"/>
 	<ElementType name="iNoDecayAmount" content="textOnly" dt:type="int"/>
 	<ElementType name="Active"/>
-
 	<ElementType name="PropertySource" content="eltOnly" order="many">
 		<element type="PropertySourceType" minOccurs="1" maxOccurs="*"/>
 		<element type="PropertyType" minOccurs="1" maxOccurs="*"/>
@@ -71,7 +66,6 @@
 		<element type="iNoDecayAmount" minOccurs="0" maxOccurs="*"/>
 		<element type="Active" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="PropertyInteraction" content="eltOnly" order="many">
 		<element type="PropertyInteractionType" minOccurs="1" maxOccurs="*"/>
 		<element type="SourcePropertyType" minOccurs="1" maxOccurs="*"/>
@@ -84,7 +78,6 @@
 		<element type="iInhibitionPercent" minOccurs="0" maxOccurs="*"/>
 		<element type="Active" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="PropertyPropagator" content="eltOnly" order="many">
 		<element type="PropertyPropagatorType" minOccurs="1" maxOccurs="*"/>
 		<element type="PropertyType" minOccurs="1" maxOccurs="*"/>
@@ -99,7 +92,6 @@
 		<element type="iPercent" minOccurs="0" maxOccurs="*"/>
 		<element type="Active" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="PropertyManipulators" content="eltOnly" order="many">
     <element type="PropertySource" minOccurs="0" maxOccurs="*"/>
     <element type="PropertyInteraction" minOccurs="0" maxOccurs="*"/>
@@ -698,9 +690,9 @@
 	<ElementType name="iMaxTeamBuildingProductionModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iMaxPlayerBuildingProductionModifier" content="textOnly" dt:type="int"/>
 	<!-- Phungus Rev Trait Effects -->
-	<ElementType name="iRevIdxLocal" content= "textOnly" dt:type="int"/>
-	<ElementType name="iRevIdxNational" content= "textOnly" dt:type="int"/>
-	<ElementType name="iRevIdxDistanceModifier" content= "textOnly" dt:type="int"/>
+	<ElementType name="iRevIdxLocal" content="textOnly" dt:type="int"/>
+	<ElementType name="iRevIdxNational" content="textOnly" dt:type="int"/>
+	<ElementType name="iRevIdxDistanceModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iRevIdxHolyCityGood" content="textOnly" dt:type="int"/>
 	<ElementType name="iRevIdxHolyCityBad" content="textOnly" dt:type="int"/>
 	<ElementType name="fRevIdxNationalityMod" content="textOnly"/>
@@ -1068,7 +1060,6 @@
 		<element type="CivilizationInfos" minOccurs="0" maxOccurs="*"/>
 		<element type="UnitArtStyleTypeInfos" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="bPrefix" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bSuffix" content="textOnly" dt:type="boolean"/>
 	<ElementType name="Name" content="textOnly"/>
