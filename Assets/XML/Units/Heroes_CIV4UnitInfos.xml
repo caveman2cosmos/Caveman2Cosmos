@@ -19628,9 +19628,9 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_ATTACK</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_SATURDAY</Description>
-			<Civilopedia>TXT_KEY_UNIT_SATURDAY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SATURDAY_STRATEGY</Strategy>
+			<Description>TXT_KEY_UNIT_WINDRADYNE</Description>
+			<Civilopedia>TXT_KEY_UNIT_WINDRADYNE_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_WINDRADYNE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitarySupport>1</bMilitarySupport>

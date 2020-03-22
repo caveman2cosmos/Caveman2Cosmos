@@ -6231,6 +6231,7 @@
 		<English>Plot distance between capitals that qualifies another civ as a local neighbour to the emerging civ.
 The other civ must have a city on the same landmass as the emerging civ for it to be considered a neighbour.
 Civs emerging from barbarians adapt to their local neighbours in many different ways, e.g. tech level.
+
 A low value will make each such civ generation more generic.
 A high value can impact performance slightly, especially on large maps.
 The value set here is the value used for a 'Duel' world size.
