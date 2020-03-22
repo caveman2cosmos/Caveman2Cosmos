@@ -566,6 +566,11 @@
 		<Polish>Wybierz cel pocisku nuklearnego.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MISSION_RANGE_ATTACK</Tag>
+		<English>Range Attack</English>
+		<French>Attaque à Distance</French>
+	</TEXT>
+<TEXT>
 		<Tag>TXT_KEY_MISSION_RBOMBARD</Tag>
 		<English>Ranged Assault</English>
 		<French>Assaut à distance</French>
@@ -666,10 +671,5 @@
 		<Italian>Permette la selezione di una tecnologia che si vuole ricercare. L'unità dormirà finchè quella tecnologia potrà essere ricercata, poi l'unità si consumerà ricercando la tecnologia.</Italian>
 		<Spanish>Permite seleccionar la tecnología que se desea descubrir. La unidad dormirá hasta que dicha tecnología esté disponible, entonces la investigará y se consumirá.</Spanish>
 		<Polish>Pozwala zaznaczonej jednostce na późniejsze odkrycie technologii. Jednostka będzie uśpiona dopóki technologia nie będzie możliwa do wynalezienia. Gdy już będzie możliwe odkrycie danej technologii jednostka automatycznie zostanie wykorzystana do odkrycia jej.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISSION_RANGE_ATTACK</Tag>
-		<English>Range Attack</English>
-		<French>Attaque à Distance</French>
 	</TEXT>
 </Civ4GameText>

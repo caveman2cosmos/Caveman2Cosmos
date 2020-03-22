@@ -23,7 +23,7 @@
 		<English>It's against my better judgment, but we'll take it. Done.</English>
 		<French>C'est contraire à mon opinion, mais nous acceptons. Marché conclu.</French>
 		<German>Es ist zwar wider besseres Wissen, aber gut. Abgemacht.</German>
-		<Italian>È contro il mio punto di vista, ma accetteremo. Fatto.</Italian>
+		<Italian>Va contro il mio punto di vista, ma accetteremo. Fatto.</Italian>
 		<Spanish>Aceptamos a pesar de mis reservas. Trato hecho.</Spanish>
 		<Polish>To wbrew rozsądkowi, ale zgadzam się.</Polish>
 	</TEXT>
@@ -32,7 +32,7 @@
 		<English>Sounds fair to me. Done.</English>
 		<French>Ce marché me semble équitable. J'accepte.</French>
 		<German>Hört sich vernünftig an. Abgemacht.</German>
-		<Italian>Mi sembra onesto. Fatto.</Italian>
+		<Italian>Mi sembra equo. Fatto.</Italian>
 		<Spanish>Nos parece justo. Trato hecho.</Spanish>
 		<Polish>Brzmi dobrze. Zgoda.</Polish>
 	</TEXT>
@@ -68,7 +68,7 @@
 		<English>We accept your fair offer.</English>
 		<French>Nous acceptons votre offre équitable.</French>
 		<German>Ich akzeptiere Euer faires Angebot.</German>
-		<Italian>Accettiamo la tua onesta offerta.</Italian>
+		<Italian>Accettiamo la tua equa offerta.</Italian>
 		<Spanish>Aceptamos vuestra justa propuesta.</Spanish>
 		<Polish>Zgadzamy się na Twoją uczciwą ofertę.</Polish>
 	</TEXT>
@@ -113,7 +113,7 @@
 		<English>We can do business along these lines. Agreed.</English>
 		<French>Nous pouvons faire affaire en ces termes. Marché conclu.</French>
 		<German>Auf dieser Basis können wir ins Geschäft kommen. Einverstanden.</German>
-		<Italian>In questi termini possiamo fare affari. D'accordo.</Italian>
+		<Italian>Con questi termini, possiamo fare affari. D'accordo.</Italian>
 		<Spanish>Podemos aceptarlo con esas condiciones. Hecho.</Spanish>
 		<Polish>W ten sposób zawsze możemy się dogadać. Zgoda.</Polish>
 	</TEXT>
@@ -140,7 +140,7 @@
 		<English>It's a good deal. Done.</English>
 		<French>Ca me va. C'est d'accord.</French>
 		<German>Ein guter Handel. Einverstanden.</German>
-		<Italian>Mi pare onesto. Affare fatto.</Italian>
+		<Italian>Mi pare un accordo onesto. Affare fatto.</Italian>
 		<Spanish>Nos parece bien. Trato hecho.</Spanish>
 		<Polish>To dobry interes. Zgoda.</Polish>
 	</TEXT>
@@ -158,7 +158,7 @@
 		<English>You are a hard bargainer, [CT_NAME]. Agreed.</English>
 		<French>Vous savez vous y prendre en affaires, [CT_NAME]. C'est d'accord.</French>
 		<German>Ihr seid ein schwieriger Verhandlungspartner, [CT_NAME]. Abgemacht.</German>
-		<Italian>Sai fare gli affari, [CT_NAME]. D'accordo.</Italian>
+		<Italian>Sai come fare affari, [CT_NAME]. D'accordo.</Italian>
 		<Spanish>Es duro negociar con vos, [CT_NAME]. Hecho.</Spanish>
 		<Polish>Jesteś twardym negocjatorem, [CT_NAME]. Zgadzam się.</Polish>
 	</TEXT>
@@ -203,7 +203,7 @@
 		<English>Hrmph. This is highway robbery - but we'll take it.</English>
 		<French>Humpf... C'est du vol de grand chemin, mais nous acceptons.</French>
 		<German>Hrmph. Das grenzt an Wegelagerei... Aber ich nehme an.</German>
-		<Italian>Hrmph. Questa è una rapina a mano armata, ma accettiamo.</Italian>
+		<Italian>Umpf. Questa è una rapina a mano armata, ma accettiamo.</Italian>
 		<Spanish>Puf. Esto es un atraco a mano armada, pero lo aceptamos.</Spanish>
 		<Polish>Wrrr... To jest napad w biały dzień - ale zgadzam się.</Polish>
 	</TEXT>
@@ -284,7 +284,7 @@
 		<English>All right, then. But just remember: what goes around comes around!</English>
 		<French>Très bien, mais n'oubliez pas que tout finit par se payer!</French>
 		<German>Also gut. Aber denkt dran: Wie man in den Wald hineinruft, so schallt es heraus!</German>
-		<Italian>Perfetto. Ricorda solo una cosa: prima o poi tutto torna!</Italian>
+		<Italian>Perfetto. Ricorda solo una cosa però: quel che semini, raccogli!</Italian>
 		<Spanish>Entonces, de acuerdo. Pero recordad, se recoge lo que se siembra.</Spanish>
 		<Polish>W porządku. Ale pamiętaj: dosięgnie Cię powracająca fala!</Polish>
 	</TEXT>
@@ -293,7 +293,7 @@
 		<English>Sure: kick a civilization when it's down. I accept your terms.</English>
 		<French>Vous piétinez une civilisation qui est déjà à terre? Soit, j'accepte vos conditions.</French>
 		<German>Es ist natürlich leicht, die Schwachen zu treten. Ich füge mich, aber ich habe ein gutes Gedächtnis.</German>
-		<Italian>Sono d'accordo, infierire su una civiltà in ginocchio. Accetto le vostre condizioni.</Italian>
+		<Italian>Maramaldo, tu uccidi un uomo morto... Accetto le vostre condizioni.</Italian>
 		<Spanish>Muy bien, cebaos con una civilización indefensa... Aceptamos vuestros términos.</Spanish>
 		<Polish>No pewnie: możesz kopać leżącą cywilizację. Zgadzam się na Twe warunki.</Polish>
 	</TEXT>
@@ -2354,7 +2354,7 @@
 		<English>Give us what we want, now! Or face imminent destruction!</English>
 		<French>Donnez-nous immédiatement ce que nous voulons! Sinon, votre destruction sera imminente!</French>
 		<German>Ich gebe Euch nur diese eine Gelegenheit, Euren Untergang abzuwenden!</German>
-		<Italian>Dacci ciò che vogliamo immediatamente o preparati ad affrontare la distruzione totale.</Italian>
+		<Italian>Dacci ciò che vogliamo immediatamente o preparati a essere distrutto!</Italian>
 		<Spanish>¡Dadnos lo que queremos ahora mismo! ¡O enfrentaos a una destrucción inminente!</Spanish>
 		<Polish>Daj nam to czego chcemy albo stań przed obliczem zniszczenia!</Polish>
 	</TEXT>
@@ -2363,7 +2363,7 @@
 		<English>The [CT_CIV_ADJ] people are in great need, [CT_NAME]. Do not disappoint us.</English>
 		<French>Les [CT_CIV_ADJ] sont dans le besoin, [CT_NAME]. J'espère que vous ne les décevrez pas.</French>
 		<German>Mein Volk befindet sich in einer Notlage, [CT_NAME]. Bitte enttäuscht uns nicht.</German>
-		<Italian>Il popolo [CT_CIV_ADJ:1] vive nell'indigenza, [CT_NAME]. Non deluderci.</Italian>
+		<Italian>Il popolo [CT_CIV_ADJ:1] ne ha gran bisogno, [CT_NAME]. Non deluderci.</Italian>
 		<Spanish>El pueblo [CT_CIV_ADJ:1] tiene una gran necesidad, [CT_NAME]. No nos decepcionéis.</Spanish>
 		<Polish>Naród [CT_CIV_ADJ] jest w potrzebie, [CT_NAME]. Tylko nie rozczaruj mnie.</Polish>
 	</TEXT>
@@ -7514,14 +7514,14 @@
 		<English>Not until their blood fills the streets of their capital city!</English>
 		<French>Pas avant que leur sang remplisse les rues de leur Capitale!</French>
 		<German>Nicht bis ihr Blut die Straßen ihrer Hauptstadt überschwemmt!</German>
-		<Italian>Non finchè il loro sangue non riempirà le strade della loro capitale!</Italian>
+		<Italian>Non finché il loro sangue non riempirà le strade della loro capitale!</Italian>
 		<Spanish>¡No hasta que su sangre no riegue las calles de su capital!</Spanish>
 		<Polish>Nie dopóki krew nie popłynie ulicami ich stolicy!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>USER_DIPLO_NO_MAKE_PEACE_WITH_4</Tag>
-		<English>Never Give Up! Never Surrender!</English>
-		<French>N'abandonnerai Jamais! Jamais je ne me rendrai!</French>
+		<English>Never give up! Never surrender!</English>
+		<French>N'abandonnerai jamais! Jamais je ne me rendrai!</French>
 		<German>Nicht aufgeben! Niemals kapitulieren!</German>
 		<Italian>Mai mollare! Mai arrendersi!</Italian>
 		<Spanish>¡Nunca cederemos! ¡Jamás nos rendiremos!</Spanish>
@@ -7532,7 +7532,7 @@
 		<English>Fair enough. (exit)</English>
 		<French>D'accord. (Partir)</French>
 		<German>Ich verstehe. (Verhandlungsende)</German>
-		<Italian>Abbastanza onesto. (Esci)</Italian>
+		<Italian>Va bene. (Esci)</Italian>
 		<Spanish>Ya está bien. (Salir)</Spanish>
 		<Polish>Pięknie dziękuję. (Wyjście)</Polish>
 	</TEXT>
@@ -7604,7 +7604,7 @@
 		<English>Sorry, but it's no rose garden over here either.</English>
 		<French>Je regrette, mais ici non plus, la vie n'est pas rose tous les jours.</French>
 		<German>Bedaure, aber wir haben es selber nicht leicht.</German>
-		<Italian>Mi spiace, ma questo non è un giardino di rose.</Italian>
+		<Italian>Mi spiace, ma non è un buon momento nemmeno per noi.</Italian>
 		<Spanish>Lo sentimos, pero esto tampoco es un jardín de rosas.</Spanish>
 		<Polish>Przepraszam, ale nam też wiatr wieje w oczy.</Polish>
 	</TEXT>
@@ -7722,7 +7722,7 @@
 		<English>Your head would look good on the end of a pole. (WAR)</English>
 		<French>Votre tête serait très bien au bout d'une lance.</French>
 		<German>Euer Kopf wird sich gut auf einem Pfahl machen! (KRIEG)</German>
-		<Italian>La tua testa impalata sarebbe un bel trofeo. (GUERRA)</Italian>
+		<Italian>La tua testa infilzata su un palo sarà un bel trofeo. (GUERRA)</Italian>
 		<Spanish>Vuestra cabeza quedaría estupenda en la punta de una estaca. (GUERRA)</Spanish>
 		<Polish>Twoja głowa najlepiej wyglądałaby nabita na pal. (WOJNA)</Polish>
 	</TEXT>

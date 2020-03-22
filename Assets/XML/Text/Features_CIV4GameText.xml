@@ -842,24 +842,34 @@
 		<English>Volcano - Active</English>
 		<French>Volcan - Actif</French>
 		<German>Vulkan (aktiv)</German>
+		<Italian>
+			<Text>Vulcano attivo:Vulcani attivi</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Polish>Aktywny Wulkan</Polish>
 		<Spanish>
 			<Text>Volcán activo:Volcanes activos</Text>
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Aktywny Wulkan</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_VOLCANO_DORMANT</Tag>
 		<English>Volcano - Dormant</English>
 		<French>Volcan - Endormi</French>
 		<German>Vulkan (ruhend)</German>
+		<Italian>
+			<Text>Vulcano inattivo:Vulcani inattivi</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Polish>Uśpiony Wulkan</Polish>
 		<Spanish>
 			<Text>Volcán inactivo:Volcanes inactivos</Text>
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uśpiony Wulkan</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_VOLCANO_PEDIA</Tag>
