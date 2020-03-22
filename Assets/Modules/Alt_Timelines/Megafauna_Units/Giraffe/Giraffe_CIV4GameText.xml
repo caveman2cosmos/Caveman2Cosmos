@@ -22,10 +22,6 @@
 		<Italian>Gli [COLOR_UNIT_TEXT]Arcieri su giraffa[COLOR_REVERT] sono</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GIRAFFE_ARCHER</Tag>
-		<English>Giraffe Archer</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_GIRAFFE_CROSSBOW</Tag>
 		<English>Giraffe Crossbow</English>
 	</TEXT>

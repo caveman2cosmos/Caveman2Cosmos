@@ -1013,14 +1013,6 @@
 		<Polish>Rok Startowy</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_WB_START_YEAR</Tag>
-		<English>Start Year</English>
-		<French>Année de départ</French>
-		<German>Startjahr</German>
-		<Spanish>Año de inicio</Spanish>
-		<Polish>Rozpocznij Rok</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_WB_STATE_RELIGION</Tag>
 		<English>State Religion:</English>
 		<French>Religion d'État:</French>

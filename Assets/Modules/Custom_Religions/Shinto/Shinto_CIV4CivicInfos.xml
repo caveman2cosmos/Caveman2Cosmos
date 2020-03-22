@@ -11,7 +11,7 @@
 			<Type>CIVIC_FOLKLORE</Type>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDINGCLASS_SHAMANHUT</BuildingType>
+					<BuildingType>BUILDING_SHAMANHUT</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -35,7 +35,7 @@
 			<Type>CIVIC_CHURCH</Type>
 			<BuildingHealthChanges>
 				<BuildingHealthChange>
-					<BuildingType>BUILDINGCLASS_SHINTO_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_SHINTO_MONASTERY</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 			</BuildingHealthChanges>
@@ -56,13 +56,13 @@
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_EDUCATION</CivicOptionType>
-			<Type>CIVIC_RELIGIOUS_TRAINING</Type>
-			<BuildingClassProductionModifiers>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_SHINTO_MONASTERY</BuildingClassType>
+			<Type>CIVIC_RELIGIOUS</Type>
+			<BuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_SHINTO_MONASTERY</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
-				</BuildingClassProductionModifier>
-			</BuildingClassProductionModifiers>
+				</BuildingProductionModifier>
+			</BuildingProductionModifiers>
 		</CivicInfo>
 	</CivicInfos>
 </Civ4CivicInfos>

@@ -221,23 +221,6 @@
 		<Polish>Poskromiony Wilk Straszny</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_DONKEY</Tag>
-		<English>Subdued Donkey</English>
-		<French>
-			<Text>Ane (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Subdued Esel</German>
-		<Italian>
-			<Text>Asino addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>Subdued Burro</Spanish>
-		<Polish>Poskromiony Osioł</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ELEPHANT</Tag>
 		<English>Subdued Asian Elephant</English>
 		<French>
@@ -1298,7 +1281,7 @@
 		<Polish>Poskromiony Pyton Królewski</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_TORTOISE</Tag>
+		<Tag>TXT_KEY_UNIT_SUBDUED_DESERT_TORTOISE</Tag>
 		<English>Subdued Desert Tortoise</English>
 		<French>
 			<Text>Tortue du désert (App.)</Text>
@@ -1313,7 +1296,7 @@
 		<Polish>Poskromiony Żółw Pustynny</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_TORTOISE2</Tag>
+		<Tag>TXT_KEY_UNIT_SUBDUED_GALAPOGOS_TORTOISE</Tag>
 		<English>Subdued Galapagos Tortoise</English>
 		<French>
 			<Text>Tortue des Galapagos (App.)</Text>
@@ -2208,21 +2191,6 @@
 		<Polish>Poskromiony Szaympans</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_GATOR</Tag>
-		<English>Subdued Alligator</English>
-		<French>
-			<Text>Alligator (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Alligatore addomesticato</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Poskromiony Aligator</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_NILECROC</Tag>
 		<English>Subdued Nile Crocodile</English>
 		<French>
@@ -2286,8 +2254,8 @@
 		<Polish>Poskromiony</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_SEALION</Tag>
-		<English>Subdued Sealion</English>
+		<Tag>TXT_KEY_UNIT_SUBDUED_SEALION_LAND</Tag>
+		<English>Subdued Sealion (Land)</English>
 		<French>Lion de mer (App.)</French>
 		<Italian>
 			<Text>Leone marino addomesticato</Text>
@@ -2297,7 +2265,18 @@
 		<Polish>Poskromiony Lew Morski</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_TALESOF_SEALION</Tag>
+		<Tag>TXT_KEY_UNIT_SUBDUED_SEALION_SEA</Tag>
+		<English>Subdued Sealion (Sea)</English>
+		<French>Lion de mer (App.)</French>
+		<Italian>
+			<Text>Leone marino addomesticato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Poskromiony Lew Morski</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TALESOF_SEALION_SEA</Tag>
 		<English>Tales of Sealion</English>
 		<French>Histoires de Lions de mer</French>
 		<Italian>

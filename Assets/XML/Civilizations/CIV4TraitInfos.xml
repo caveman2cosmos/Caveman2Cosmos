@@ -697,7 +697,7 @@
 					<iBuildWorkerSpeedModifier>30</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_ROCK_GATHERER</BuildType>
+					<BuildType>BUILD_STONE_TOOLS_WORKSHOP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>30</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -709,15 +709,15 @@
 					<iBuildWorkerSpeedModifier>30</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_3FACTORY</BuildType>
+					<BuildType>BUILD_FACTORY</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_3FACTORY_2</BuildType>
+					<BuildType>BUILD_FACTORY_COLD_CLIMATE</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GEOTHERMAL_BOREHOLE</BuildType>
+					<BuildType>BUILD_GEOTHERMAL_FACTORY</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
@@ -765,7 +765,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_ROCK_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STONE_TOOLS_WORKSHOP</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -1082,7 +1082,7 @@
 					<iBuildWorkerSpeedModifier>30</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SUBURB</BuildType>
+					<BuildType>BUILD_SUBURBS</BuildType>
 					<iBuildWorkerSpeedModifier>30</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
@@ -1170,6 +1170,10 @@
 				</UnitProductionModifierType>
 				<UnitProductionModifierType>
 					<UnitType>UNIT_GATHERER</UnitType>
+					<iUnitProductionModifier>25</iUnitProductionModifier>
+				</UnitProductionModifierType>
+				<UnitProductionModifierType>
+					<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
 					<iUnitProductionModifier>25</iUnitProductionModifier>
 				</UnitProductionModifierType>
 				<UnitProductionModifierType>
@@ -1665,6 +1669,10 @@
 					<iUnitProductionModifier>25</iUnitProductionModifier>
 				</UnitProductionModifierType>
 				<UnitProductionModifierType>
+					<UnitType>UNIT_NEANDERTHAL_WORKBOAT</UnitType>
+					<iUnitProductionModifier>25</iUnitProductionModifier>
+				</UnitProductionModifierType>
+				<UnitProductionModifierType>
 					<UnitType>UNIT_CLASSIC_WORKBOAT</UnitType>
 					<iUnitProductionModifier>25</iUnitProductionModifier>
 				</UnitProductionModifierType>
@@ -1687,7 +1695,7 @@
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAIN_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SEED_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>-40</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 			</ImprovementUpgradeModifierTypes>
@@ -1713,7 +1721,7 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HARVEST_KELP_2</BuildType>
+					<BuildType>BUILD_HARVEST_KELP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
@@ -1873,7 +1881,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_CAMP</ImprovementType>
+					<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 					</YieldChanges>
@@ -1920,7 +1928,7 @@
 					<iBuildWorkerSpeedModifier>100</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_CAMP</BuildType>
+					<BuildType>BUILD_HUNTING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -2048,11 +2056,11 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PLANT_PICKER</BuildType>
+					<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PLANT_GATHERER</BuildType>
+					<BuildType>BUILD_PLANT_GATHERING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -2064,11 +2072,11 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FRUIT_GATHERER</BuildType>
+					<BuildType>BUILD_FRUIT_GATHERING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FRUIT_PICKER</BuildType>
+					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -3465,46 +3473,8 @@
 			<Description>TXT_KEY_TRAIT_BARBARIAN</Description>
 			<ShortDescription>TXT_KEY_TRAIT_BARBARIAN_SHORT</ShortDescription>
 			<Button>art/Buttons/Traits/TraitBarbarian.dds</Button>
-			<PromotionLine>PROMOTIONLINE_BARBARIAN</PromotionLine>
-			<bNegativeTrait>0</bNegativeTrait>
-			<bImpurePromotions>1</bImpurePromotions>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>-1</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>3</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>4</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>-3</iFlavor>
-				</Flavor>
-			</Flavors>
-			<iHealth>1</iHealth>
-			<iHappiness>2</iHappiness>
-			<iMaxAnarchy>-1</iMaxAnarchy>
-			<iLevelExperienceModifier>25</iLevelExperienceModifier>
-			<!-- Revolution Trait Effects Begin -->
+			<bBarbarianSelectionOnly>1</bBarbarianSelectionOnly>
 			<bUpgradeAnywhere>1</bUpgradeAnywhere>
-			<!-- Revolution Trait Effects End -->
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<BuildingProductionModifierTypes>
-				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CAVE_PAINTING</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-			</BuildingProductionModifierTypes>
 			<FreePromotionUnitCombatTypes>
 				<FreePromotionUnitCombatType>
 					<PromotionType>PROMOTION_AGGRESSIVE</PromotionType>
@@ -3513,10 +3483,13 @@
 					</UnitCombatTypes>
 				</FreePromotionUnitCombatType>
 			</FreePromotionUnitCombatTypes>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
+			</CommerceChanges>
+			<iLevelExperienceModifier>25</iLevelExperienceModifier>
 			<iWorkerSpeedModifier>75</iWorkerSpeedModifier>
-			<iBaseFreeUnits>4</iBaseFreeUnits>
-			<iFreeMilitaryUnitsPopulationPercent>35</iFreeMilitaryUnitsPopulationPercent>
-			<iMilitaryProductionModifier>35</iMilitaryProductionModifier>
 		</TraitInfo>
 		<!-- BEGIN: Base Level 1 Developing Leader Traits -->
 		<!-- BEGIN: POSITIVE_TRAIT -->
@@ -4169,7 +4142,7 @@
 					<iBuildWorkerSpeedModifier>30</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_ROCK_GATHERER</BuildType>
+					<BuildType>BUILD_STONE_TOOLS_WORKSHOP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>30</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -4181,15 +4154,15 @@
 					<iBuildWorkerSpeedModifier>30</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_3FACTORY</BuildType>
+					<BuildType>BUILD_FACTORY</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_3FACTORY_2</BuildType>
+					<BuildType>BUILD_FACTORY_COLD_CLIMATE</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_GEOTHERMAL_BOREHOLE</BuildType>
+					<BuildType>BUILD_GEOTHERMAL_FACTORY</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
@@ -4237,7 +4210,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_ROCK_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_STONE_TOOLS_WORKSHOP</ImprovementType>
 					<YieldChanges>
 						<iYield>0</iYield>
 						<iYield>1</iYield>
@@ -4557,7 +4530,7 @@
 					<iBuildWorkerSpeedModifier>30</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_SUBURB</BuildType>
+					<BuildType>BUILD_SUBURBS</BuildType>
 					<iBuildWorkerSpeedModifier>30</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
@@ -4646,6 +4619,10 @@
 				</UnitProductionModifierType>
 				<UnitProductionModifierType>
 					<UnitType>UNIT_GATHERER</UnitType>
+					<iUnitProductionModifier>25</iUnitProductionModifier>
+				</UnitProductionModifierType>
+				<UnitProductionModifierType>
+					<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
 					<iUnitProductionModifier>25</iUnitProductionModifier>
 				</UnitProductionModifierType>
 				<UnitProductionModifierType>
@@ -5118,6 +5095,10 @@
 					<iUnitProductionModifier>25</iUnitProductionModifier>
 				</UnitProductionModifierType>
 				<UnitProductionModifierType>
+					<UnitType>UNIT_NEANDERTHAL_WORKBOAT</UnitType>
+					<iUnitProductionModifier>25</iUnitProductionModifier>
+				</UnitProductionModifierType>
+				<UnitProductionModifierType>
 					<UnitType>UNIT_CLASSIC_WORKBOAT</UnitType>
 					<iUnitProductionModifier>25</iUnitProductionModifier>
 				</UnitProductionModifierType>
@@ -5140,7 +5121,7 @@
 					<iImprovementUpgradeModifier>50</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 				<ImprovementUpgradeModifierType>
-					<ImprovementType>IMPROVEMENT_GRAIN_GATHERER</ImprovementType>
+					<ImprovementType>IMPROVEMENT_SEED_CAMP</ImprovementType>
 					<iImprovementUpgradeModifier>-40</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
 			</ImprovementUpgradeModifierTypes>
@@ -5166,7 +5147,7 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_HARVEST_KELP_2</BuildType>
+					<BuildType>BUILD_HARVEST_KELP_KILL</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 			</BuildWorkerSpeedModifierTypes>
@@ -5317,7 +5298,7 @@
 					</YieldChanges>
 				</ImprovementYieldChange>
 				<ImprovementYieldChange>
-					<ImprovementType>IMPROVEMENT_CAMP</ImprovementType>
+					<ImprovementType>IMPROVEMENT_HUNTING_CAMP</ImprovementType>
 					<YieldChanges>
 						<iYield>1</iYield>
 					</YieldChanges>
@@ -5364,7 +5345,7 @@
 					<iBuildWorkerSpeedModifier>100</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_CAMP</BuildType>
+					<BuildType>BUILD_HUNTING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -5493,11 +5474,11 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PLANT_PICKER</BuildType>
+					<BuildType>BUILD_PLANT_PICKING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PLANT_GATHERER</BuildType>
+					<BuildType>BUILD_PLANT_GATHERING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -5509,11 +5490,11 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FRUIT_GATHERER</BuildType>
+					<BuildType>BUILD_FRUIT_GATHERING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_FRUIT_PICKER</BuildType>
+					<BuildType>BUILD_FRUIT_PICKING_CAMP</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -6930,71 +6911,6 @@
 			</BuildingProductionModifierTypes>
 		</TraitInfo>
 		<TraitInfo>
-			<Type>TRAIT_BARBARIAN1</Type>
-			<Description>TXT_KEY_TRAIT_BARBARIAN</Description>
-			<ShortDescription>TXT_KEY_TRAIT_BARBARIAN_SHORT</ShortDescription>
-			<Button>art/Buttons/Traits/TraitBarbarian.dds</Button>
-			<PromotionLine>PROMOTIONLINE_BARBARIAN</PromotionLine>
-			<iLinePriority>-1</iLinePriority>
-			<bNegativeTrait>0</bNegativeTrait>
-			<bImpurePromotions>1</bImpurePromotions>
-			<bBarbarianSelectionOnly>1</bBarbarianSelectionOnly>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>-2</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>3</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>4</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>-3</iFlavor>
-				</Flavor>
-			</Flavors>
-			<iHealth>1</iHealth>
-			<iHappiness>2</iHappiness>
-			<iMaxAnarchy>-1</iMaxAnarchy>
-			<iUpkeepModifier>-50</iUpkeepModifier>
-			<iLevelExperienceModifier>25</iLevelExperienceModifier>
-			<!-- Revolution Trait Effects Begin -->
-			<bUpgradeAnywhere>1</bUpgradeAnywhere>
-			<!-- Revolution Trait Effects End -->
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<BuildingProductionModifierTypes>
-				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CAVE_PAINTING</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_COMMUNITY_DISCUSSIONS</BuildingType>
-					<iBuildingProductionModifier>100</iBuildingProductionModifier>
-				</BuildingProductionModifierType>
-			</BuildingProductionModifierTypes>
-			<FreePromotionUnitCombatTypes>
-				<FreePromotionUnitCombatType>
-					<PromotionType>PROMOTION_AGGRESSIVE</PromotionType>
-					<UnitCombatTypes>
-						<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					</UnitCombatTypes>
-				</FreePromotionUnitCombatType>
-			</FreePromotionUnitCombatTypes>
-			<iWorkerSpeedModifier>75</iWorkerSpeedModifier>
-			<iBaseFreeUnits>4</iBaseFreeUnits>
-			<iFreeMilitaryUnitsPopulationPercent>35</iFreeMilitaryUnitsPopulationPercent>
-			<iMilitaryProductionModifier>35</iMilitaryProductionModifier>
-		</TraitInfo>
-		<TraitInfo>
 			<Type>TRAIT_ANCIENT_WAY_OF_THE_FIST</Type>
 			<Description>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_FIST</Description>
 			<ShortDescription>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_FIST_SHORT</ShortDescription>
@@ -7015,7 +6931,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_DETECTIVE</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_DETECTIVE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 		</TraitInfo>
 		<TraitInfo>
@@ -7039,7 +6955,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_GENERAL</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_GENERAL</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 		</TraitInfo>
 		<TraitInfo>
@@ -7063,7 +6979,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_HUNTER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_HUNTER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 		</TraitInfo>
 		<TraitInfo>
@@ -7087,7 +7003,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_ADMIRAL</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_ADMIRAL</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 		</TraitInfo>
 		<TraitInfo>
@@ -7111,7 +7027,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_GENERAL</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_GENERAL</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 		</TraitInfo>
 		<TraitInfo>
@@ -7135,7 +7051,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_GENERAL</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_GENERAL</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 		</TraitInfo>
 		<TraitInfo>
@@ -7159,7 +7075,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_GENERAL</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_GENERAL</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 		</TraitInfo>
 		<TraitInfo>
@@ -7183,7 +7099,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<GreatPeopleUnitClass>UNITCLASS_DOCTOR</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 		</TraitInfo>
 		<TraitInfo>
@@ -7207,7 +7123,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_HUNTER</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_HUNTER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 		</TraitInfo>
 		<TraitInfo>
@@ -7233,7 +7149,7 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<GreatPeopleUnitClass>UNITCLASS_GREAT_SPY</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 		</TraitInfo>
 	</TraitInfos>

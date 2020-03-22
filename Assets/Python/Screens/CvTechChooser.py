@@ -283,6 +283,7 @@ class CvTechChooser:
 		screen.showWindowBackground(False)
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
 
+		iPlayer = GC.getGame().getActivePlayer()
 		# Debug
 		import DebugUtils
 		if DebugUtils.bDebugMode:
@@ -293,7 +294,7 @@ class CvTechChooser:
 				if CyPlayerX.isAlive():
 					screen.addPullDownString(DDB, CyPlayerX.getName(), iPlayerX, iPlayerX, iPlayer == iPlayerX)
 
-		self.initForPlayer(GC.getGame().getActivePlayer())
+		self.initForPlayer(iPlayer)
 
 		print "CvTechChooser.interfaceScreen - DONE"
 
@@ -722,11 +723,9 @@ class CvTechChooser:
 			techBenefits.append([])
 			info = GC.getTechInfo(iTech)
 			if info.getGridX() > 0:
-				iType = info.getFirstFreeUnitClass()
+				iType = info.getFirstFreeUnit()
 				if iType > -1:
-					iType = GC.getUnitClassInfo(iType).getDefaultUnitIndex()
-					if iType > -1:
-						techBenefits[iTech].append(["FreeUnit", iType])
+					techBenefits[iTech].append(["FreeUnit", iType])
 				if info.getTradeRoutes():
 					techBenefits[iTech].append(["TradeRoute", -1])
 				if info.getHealth():

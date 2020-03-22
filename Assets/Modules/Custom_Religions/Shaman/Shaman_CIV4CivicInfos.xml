@@ -25,7 +25,7 @@
 			<Type>CIVIC_CHURCH</Type>
 			<BuildingHealthChanges>
 				<BuildingHealthChange>
-					<BuildingType>BUILDINGCLASS_SHAMAN_MONASTERY</BuildingType>
+					<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 			</BuildingHealthChanges>
@@ -46,13 +46,13 @@
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_EDUCATION</CivicOptionType>
-			<Type>CIVIC_RELIGIOUS_TRAINING</Type>
-			<BuildingClassProductionModifiers>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_SHAMAN_MONASTERY</BuildingClassType>
+			<Type>CIVIC_RELIGIOUS</Type>
+			<BuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_SHAMAN_MONASTERY</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
-				</BuildingClassProductionModifier>
-			</BuildingClassProductionModifiers>
+				</BuildingProductionModifier>
+			</BuildingProductionModifiers>
 		</CivicInfo>
 	</CivicInfos>
 </Civ4CivicInfos>

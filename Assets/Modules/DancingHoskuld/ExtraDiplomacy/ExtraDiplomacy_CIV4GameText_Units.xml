@@ -60,17 +60,6 @@
 		<Polish>Dyplomata - Współczesność</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_DIPLOMAT_GALACTIC</Tag>
-		<English>Diplomat - Galactic Era</English>
-		<French>Diplomate - Ere Galactique</French>
-		<Italian>
-			<Text>Diplomatico - Era galattica</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Dyplomata - Era Galaktyczna</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_UNIT_GREAT_STATESMAN</Tag>
 		<English>Great Statesman</English>
 		<French>Homme d'Etat Illustre</French>
@@ -1408,45 +1397,6 @@
 		</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_SIMON_BOLIVAR</Tag>
-		<English>Simon Bolivar</English>
-		<French>
-			<Text>Simon Bolivar</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Simon Bolivar</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Simon Bolivar</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Simón Bolívar</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Simon Bolivar</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-		<Chinese>
-			<Text>Simon Bolivar</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Chinese>
-		<Portuguese>
-			<Text>Simon Bolivar</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Portuguese>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_WILLY_BRANDT</Tag>
 		<English>Willy Brandt</English>
 		<French>
@@ -1642,45 +1592,6 @@
 		</Portuguese>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_ZHUGE_LIANG</Tag>
-		<English>Zhuge Liang</English>
-		<French>
-			<Text>Zhuge Liang</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Zhuge Liang</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Zhuge Liang</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Zhuge Liang</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Zhuge Liang</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-		<Chinese>
-			<Text>Zhuge Liang</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Chinese>
-		<Portuguese>
-			<Text>Zhuge Liang</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Portuguese>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GREAT_PERSON_YITZHAK_RABIN</Tag>
 		<English>Yitzhak Rabin</English>
 		<French>
@@ -1754,45 +1665,6 @@
 		</Chinese>
 		<Portuguese>
 			<Text>Selahadine Eyubi</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Portuguese>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GREAT_PERSON_PERICLES</Tag>
-		<English>Pericles</English>
-		<French>
-			<Text>Périclès</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Perikles</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
-		<Italian>
-			<Text>Pericle</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>
-			<Text>Pericles</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Russian>
-			<Text>Pericles</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Russian>
-		<Chinese>
-			<Text>Pericles</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Chinese>
-		<Portuguese>
-			<Text>Pericles</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Portuguese>

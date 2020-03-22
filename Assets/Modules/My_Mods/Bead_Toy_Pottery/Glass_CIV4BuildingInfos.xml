@@ -8,7 +8,6 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<!-- Glass Factory -->
-			<BuildingClass>BUILDINGCLASS_GLASS_FACTORY</BuildingClass>
 			<Type>BUILDING_GLASS_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_GLASS_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GLASS_FACTORY_PEDIA</Civilopedia>
@@ -24,22 +23,16 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
 			<Bonus>BONUS_SAND</Bonus>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_FACTORY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_GLASSSMITH</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_GLASSSMITH</BuildingClassType>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FACTORY</BuildingType>
+				<BuildingType>BUILDING_GLASSSMITH</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_GLASSSMITH</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
 			<!-- Construction cost -->
 			<iCost>710</iCost>
 			<!-- Main effects -->
@@ -47,18 +40,18 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<!--FreeBonus>BONUS_GLASS</FreeBonus>
+			<!--FreeBonus>BONUS_GLASSWARE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses-->
 			<!-- Special Yield and Commerce modifiers -->
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_INGOT_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_INGOTS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_INGOT_TIN</BonusType>
+					<BonusType>BONUS_TIN_INGOTS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
@@ -124,7 +117,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Glassmith -->
-			<BuildingClass>BUILDINGCLASS_GLASSSMITH</BuildingClass>
 			<Type>BUILDING_GLASSSMITH</Type>
 			<Description>TXT_KEY_BUILDING_GLASSSMITH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GLASSSMITH_PEDIA</Civilopedia>
@@ -141,45 +133,39 @@
 			<PrereqTech>TECH_GLASS_BLOWING</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Bonus>BONUS_SAND</Bonus>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_VIKING_TRADING_POST</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<!-- Obsolescence -->
 			<!--ObsoleteTech>TECH_INDUSTRIALISM</ObsoleteTech>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_GLASS_FACTORY</BuildingClassType>
+					<BuildingType>BUILDING_GLASS_FACTORY</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings-->
 			<!-- Construction cost -->
 			<iCost>200</iCost>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_INDUSTRIOUS</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_GLASS</FreeBonus>
+			<FreeBonus>BONUS_GLASSWARE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special Yield and Commerce modifiers -->
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_INGOT_LEAD</BonusType>
+					<BonusType>BONUS_LEAD_INGOTS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 				<BonusCommerceModifier>
-					<BonusType>BONUS_INGOT_TIN</BonusType>
+					<BonusType>BONUS_TIN_INGOTS</BonusType>
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>

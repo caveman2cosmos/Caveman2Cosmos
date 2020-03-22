@@ -239,379 +239,395 @@
 		<French>Effet (Histoires des Sangliers)</French>
 		<Polish>Efekt Historii - Dzik</Polish>
 	</TEXT>
-		<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_BONGO_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Bongo and Antelopes, Exotic Herbivore Cage and Enclosure</English>
-	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BONGO_MYTH</Tag>
 		<English>Myth - Bongo</English>
+		<French>Mythe du Bongo</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BONGO_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Bongo</English>
+		<French>Effet (Mythe du Bongo)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BONGO_STORY</Tag>
 		<English>Story - Bongo</English>
+		<French>Histoire du Bongo</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BONGO_STORIES</Tag>
 		<English>Stories - Bongo</English>
+		<French>Histoires de Bongo</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BONGO_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Bongo</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_CROW_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Crow and Sea Birds, Bird Cage and Enclosure, Feather Worker</English>
+		<French>Effet (Histoires de  Bongo)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CROW_MYTH</Tag>
 		<English>Myth - Crow</English>
+		<French>Mythe du Corbeau</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CROW_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Crow</English>
+		<French>Effet (Mythe du Corbeau)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CROW_STORY</Tag>
 		<English>Story - Crow</English>
+		<French>Histoire du Corbeau</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CROW_STORIES</Tag>
 		<English>Stories - Crow</English>
+		<French>Histoires de Corbeaux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CROW_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Crow</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_GAZELLE_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Gazelle and Antelopes, Exotic Herbivore Cage and Enclosure</English>
+		<French>Effet (Histoires de Corbeaux)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GAZELLE_MYTH</Tag>
 		<English>Myth - Gazelle</English>
+		<French>Mythe de la Gazelle</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GAZELLE_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Gazelle</English>
+		<French>Effet (Mythe de la Gazelle)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GAZELLE_STORY</Tag>
 		<English>Story - Gazelle</English>
+		<French>Histoire de la Gazelle</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GAZELLE_STORIES</Tag>
 		<English>Stories - Gazelle</English>
+		<French>Histoires de Gazelle</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GAZELLE_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Gazelle</English>
+		<French>Effet (Histoires de  Gazelle)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GELADA_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Gelada Babbon and Old Man Of the Forest, Primate Cage and Enclosure</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Babouin Gelada et Ancient de la Forêt, Cage et Enclos pour primates</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GELADA_MYTH</Tag>
 		<English>Myth - Gelada Babbon</English>
+		<French>Mythe du Babouin Gelada</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GELADA_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Gelada Babbon</English>
+		<French>Effet (Mythe du Babouin Gelada)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GELADA_STORY</Tag>
 		<English>Story - Gelada Babbon</English>
+		<French>Histoire du Babouin Gelada</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GELADA_STORIES</Tag>
 		<English>Stories - Gelada Babbon</English>
+		<French>Histoires de Babouins Gelada</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GELADA_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Gelada Babbon</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_GEMSBOK_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Gemsbok and Antelopes, Exotic Herbivore Cage and Enclosure</English>
+		<French>Effet (Histoires de Babouin Gelada)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GEMSBOK_MYTH</Tag>
 		<English>Myth - Gemsbok</English>
+		<French>Mythe de l'Oryx gazelle</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GEMSBOK_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Gemsbok</English>
+		<French>Effet (Mythe de l'Oryx gazelle)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GEMSBOK_STORY</Tag>
 		<English>Story - Gemsbok</English>
+		<French>Histoire de l'Oryx gazelle</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GEMSBOK_STORIES</Tag>
 		<English>Stories - Gemsbok</English>
+		<French>Histoires d'Oryx gazelle</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GEMSBOK_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Gemsbok</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_GERENUK_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Gerenuk and Antelopes, Exotic Herbivore Cage and Enclosure</English>
+		<French>Effet (Histoires d'Oryx gazelle)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GERENUK_MYTH</Tag>
 		<English>Myth - Gerenuk</English>
+		<French>Mythe de la Gazelle de Waller</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GERENUK_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Gerenuk</English>
+		<French>Effet (Mythe de la Gazelle de Waller)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GERENUK_STORY</Tag>
 		<English>Story - Gerenuk</English>
+		<French>Histoire de la Gazelle de Waller</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GERENUK_STORIES</Tag>
 		<English>Stories - Gerenuk</English>
+		<French>Histoires de Gazelle de Waller</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GERENUK_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Gerenuk</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_GORILLA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Gorilla and Old Man Of the Forest, Primate Cage and Enclosure</English>
+		<French>Effet (Histoires de  Gazelle de Waller)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GORILLA_MYTH</Tag>
 		<English>Myth - Gorilla</English>
+		<French>Mythe du Gorille</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GORILLA_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Gorilla</English>
+		<French>Effet (Mythe du Gorille)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GORILLA_STORY</Tag>
 		<English>Story - Gorilla</English>
+		<French>Histoire du Gorille</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GORILLA_STORIES</Tag>
 		<English>Stories - Gorilla</English>
+		<French>Histoires de Gorille</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GORILLA_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Gorilla</English>
+		<French>Effet (Histoires de  Gorille)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_KANGAROO_GREY_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Grey Kangaroo and Marsuipial, Marsuipial Herd, Cage and Enclosure</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Kangourou gris et Marsupial, Troupeau, Cage et Enclosure de Marsupiaux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KANGAROO_GREY_MYTH</Tag>
 		<English>Myth - Grey Kangaroo</English>
+		<French>Mythe du Kangourou gris</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KANGAROO_GREY_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Grey Kangaroo</English>
+		<French>Effet (Mythe du Kangourou gris)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KANGAROO_GREY_STORY</Tag>
 		<English>Story - Grey Kangaroo</English>
+		<French>Histoire du Kangourou gris</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KANGAROO_GREY_STORIES</Tag>
 		<English>Stories - Grey Kangaroo</English>
+		<French>Histoires de Kangourou gris</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KANGAROO_GREY_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Grey Kangaroo</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_GULL_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Gull, Birds and Sea Birds, Bird Cage and Enclosure, Feather Worker</English>
+		<French>Effet (Histoires de  Kangourou gris)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GULL_MYTH</Tag>
 		<English>Myth - Gull</English>
+		<French>Mythe du Goéland</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GULL_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Gull</English>
+		<French>Effet (Mythe du Goéland)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GULL_STORY</Tag>
 		<English>Story - Gull</English>
+		<French>Histoire du Goéland</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GULL_STORIES</Tag>
 		<English>Stories - Gull</English>
+		<French>Histoires de Goéland</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GULL_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Gull</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_HYENA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Hyena and Scavenger, Bad Boy Cage and Enclosure</English>
+		<French>Effet (Histoires de Goéland)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYENA_MYTH</Tag>
 		<English>Myth - Hyena</English>
+		<French>Mythe de la Hyène</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYENA_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Hyena</English>
+		<French>Effet (Mythe de la Hyène)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYENA_STORY</Tag>
 		<English>Story - Hyena</English>
+		<French>Histoire de la Hyène</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYENA_STORIES</Tag>
 		<English>Stories - Hyena</English>
+		<French>Histoires de Hyènes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HYENA_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Hyena</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_IMPALA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Impala and Antelopes, Exotic Herbivore Cage and Enclosure</English>
+		<French>Effet (Histoires de  Hyènes)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_SAIGA_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Saiga and Antelopes, Exotic Herbivore Cage and Enclosure</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Saiga et Antilopes, Cage et Enclos pour Herbivores exotiques</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IMPALA_MYTH</Tag>
 		<English>Myth - Impala</English>
+		<French>Mythe de l'Impala</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IMPALA_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Impala</English>
+		<French>Effet (Mythe de l'Impala)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IMPALA_STORY</Tag>
 		<English>Story - Impala</English>
+		<French>Histoire de l'Impala</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IMPALA_STORIES</Tag>
 		<English>Stories - Impala</English>
+		<French>Histoires de Impala</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IMPALA_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Impala</English>
+		<French>Effet (Histoires de  Impala)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_JAGUAR_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Jaguar and Spotted Cats, Big Cat Cage and Enclosure</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Jaguar et autres félins, Cage et Enclos pour les grands félins</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JAGUAR_MYTH</Tag>
 		<English>Myth - Jaguar</English>
+		<French>Mythe du Jaguar</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JAGUAR_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Jaguar</English>
+		<French>Effet (Mythe du Jaguar)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JAGUAR_STORY</Tag>
 		<English>Story - Jaguar</English>
+		<French>Histoire du Jaguar</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JAGUAR_STORIES</Tag>
 		<English>Stories - Jaguar</English>
+		<French>Histoires de Jaguar</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JAGUAR_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Jaguar</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_KOALA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Koala and Marsupials, Marsupial Cage and Enclosure</English>
+		<French>Effet (Histoires de  Jaguar)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KOALA_MYTH</Tag>
 		<English>Myth - Koala</English>
+		<French>Mythe du Koala</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KOALA_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Koala</English>
+		<French>Effet (Mythe du Koala)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KOALA_STORY</Tag>
 		<English>Story - Koala</English>
+		<French>Histoire du Koala</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KOALA_STORIES</Tag>
 		<English>Stories - Koala</English>
+		<French>Histoires de Koala</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KOALA_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Koala</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_KOOKABURRA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Kookaburra and Birds, Bird Cage and Enclosure, Feather Worker</English>
+		<French>Effet (Histoires de  Koala)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KOOKABURRA_MYTH</Tag>
 		<English>Myth - Kookaburra</English>
+		<French>Mythe du Kookaboura</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KOOKABURRA_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Kookaburra</English>
+		<French>Effet (Mythe du Kookaboura)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KOOKABURRA_STORY</Tag>
 		<English>Story - Kookaburra</English>
+		<French>Histoire du Kookaboura</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KOOKABURRA_STORIES</Tag>
 		<English>Stories - Kookaburra</English>
+		<French>Histoires de Kookaboura</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KOOKABURRA_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Kookaburra</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_LION_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Lion, Big Cat Cage and Enclosure</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LION_MYTH</Tag>
-		<English>Myth - Lion</English>
+		<French>Effet (Histoires de  Kookaboura)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LION_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Lion</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LION_STORY</Tag>
-		<English>Story - Lion</English>
+		<French>Effet (Mythe du Lion)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LION_STORIES</Tag>
 		<English>Stories - Lion</English>
+		<French>Histoires de Lion</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LION_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Lion</English>
+		<French>Effet (Histoires de Lion)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_IGUANA_PEDIA</Tag>
 		<English>Iguana is a genus of herbivorous lizards native to tropical areas of Mexico, Central America, and the Caribbean. The genus was first described in 1768 by Austrian naturalist Josephus Nicolaus Laurenti in his book Specimen Medicum, Exhibens Synopsin Reptilium Emendatam cum Experimentis circa Venena. Two species are included in the genus Iguana: the green iguana, which is widespread throughout its range and a popular pet, and the Lesser Antillean iguana, which is native to the Lesser Antilles and endangered due to habitat destruction.[PARAGRAPH:2]The word "iguana" is derived from the original Taino name for the species, iwana.[PARAGRAPH:2]In addition to the two species in the genus Iguana, several other related genera in the same family have common names of the species including the word "iguana".[PARAGRAPH:2]Source: Wikipedia</English>
 		<French>Ce sont des reptiles semi-arboricoles, terrestres ou marins, végétariens bien qu'ils mangent des mouches et des insectes volants. Les iguanes terrestres peuvent rester jusqu'à plusieurs heures sans bouger. Ils se tiennent seuls ou à plusieurs. Il s'agit d'animaux principalement diurnes. Leur peau écailleuse est d'une couleur leur permettant plus ou moins de se fondre dans le paysage et ainsi d'échapper à leurs prédateurs.[PARAGRAPH:2]Source: Wikipedia</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_IGUANA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Iguana, Myths of Earth and Reptiles, Reptile Cage and Enclosure</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Permet de construire[COLOR_REVERT] Mythe, Histoire et Histoires -  Iguane[NEWLINE][ICON_BULLET]Les Mythes de la Terre et des Reptiles[NEWLINE][ICON_BULLET]Cage à Reptiles Enclos</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_IGUANA_MYTH</Tag>
@@ -641,11 +657,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KOMODO_DRAGON_PEDIA</Tag>
 		<English>TBD [PARAGRAPH:2]Source: Wikipedia</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_KOMODO_DRAGON_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Komodo Dragon, Myths of Reptile and Dragon, Reptile Cage and Enclosure</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Construisez[COLOR_REVERT] les Mythe, Histoire et Histoires - des Dragons de Komodo[NEWLINE][ICON_BULLET]Mythe des Reptiles et Dragons[NEWLINE][ICON_BULLET]Cage et enclos à reptiles</French>
+		<French>TBD [PARAGRAPH:2]Source: Wikipedia</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KOMODO_DRAGON_MYTH</Tag>
@@ -690,6 +702,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NILE_MONITOR_PEDIA</Tag>
 		<English>TBD [PARAGRAPH:2]Source: Wikipedia</English>
+		<French>TBD [PARAGRAPH:2]Source: Wikipedia</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_NILE_MONITOR_HELP</Tag>
@@ -722,144 +735,169 @@
 		<French>Effet (Histoires des Varans du Nil)</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_LLAMA_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Llama, Exotic Herbivore Cage and Enclosure</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LLAMA_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Llama</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_LLAMA_STORY</Tag>
-		<English>Story - Llama</English>
+		<French>Effet (Mythe du Lama)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LLAMA_STORIES</Tag>
 		<English>Stories - Llama</English>
+		<French>Histoires de Lama</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LLAMA_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Llama</English>
+		<French>Effet (Histoires de Lama)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MANDRILL_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Mandrill and Old Man Of the Forest, Primate Cage and Enclosure</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Mandrill et Ancient de la Forêt, Cage et Enclos pour primates</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MANDRILL_MYTH</Tag>
 		<English>Myth - Mandrill</English>
+		<French>Mythe du Mandrill</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MANDRILL_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Mandrill</English>
+		<French>Effet (Mythe du Mandrill)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MANDRILL_STORY</Tag>
 		<English>Story - Mandrill</English>
+		<French>Histoire du Mandrill</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MANDRILL_STORIES</Tag>
 		<English>Stories - Mandrill</English>
+		<French>Histoires de Mandrill</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MANDRILL_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Mandrill</English>
+		<French>Effet (Histoires de  Mandrill)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_OKAPI_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Okapi and Myth - Giraffe, Carnival and Exotic Herbivore Cage and Enclosure</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Okapi et Mythe des Girafes, Carnaval et Cage et Enclos pour Herbivores exotiques</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OKAPI_MYTH</Tag>
 		<English>Myth - Okapi</English>
+		<French>Mythe de l'Okapi</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OKAPI_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Okapi</English>
+		<French>Effet (Mythe de l'Okapi)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OKAPI_STORY</Tag>
 		<English>Story - Okapi</English>
+		<French>Histoire de l'Okapi</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OKAPI_STORIES</Tag>
 		<English>Stories - Okapi</English>
+		<French>Histoires de Okapi</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OKAPI_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Okapi</English>
+		<French>Effet (Histoires de Okapi)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ORANGUTAN_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Orangutan and Old Man Of the Forest, Primate Cage and Enclosure</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Orangutan et Ancient de la Forêt, Cage et Enclos pour primates</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORANGUTAN_MYTH</Tag>
 		<English>Myth - Orangutan</English>
+		<French>Mythe de l'Orang-outan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORANGUTAN_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Orangutan</English>
+		<French>Effet (Mythe de l'Orang-outan)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORANGUTAN_STORY</Tag>
 		<English>Story - Orangutan</English>
+		<French>Histoire de l'Orang-outan</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORANGUTAN_STORIES</Tag>
 		<English>Stories - Orangutan</English>
+		<French>Histoires d'Orang-outans</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORANGUTAN_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Orangutan</English>
+		<French>Effet (Histoires d' Orang-outans)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_OXPECKER_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Oxpecker and Birds, Bird Cage and Enclosure, Feather Worker</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Piqueboeufs et des Oiseaux, Cages à oiseaux, Atelier de plumes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OXPECKER_MYTH</Tag>
 		<English>Myth - Oxpecker</English>
+		<French>Mythe du Piqueboeufs</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OXPECKER_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Oxpecker</English>
+		<French>Effet (Mythe du Piqueboeufs)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OXPECKER_STORY</Tag>
 		<English>Story - Oxpecker</English>
+		<French>Histoire du Piqueboeufs</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OXPECKER_STORIES</Tag>
 		<English>Stories - Oxpecker</English>
+		<French>Histoires de Piqueboeufs</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OXPECKER_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Oxpecker</English>
+		<French>Effet (Histoires de  Piqueboeufs)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PEACOCK_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Peacock and Birds, Bird Cage and Enclosure, Poultry Flock, Feather Worker and Flocks of Peacock</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Paon et des Oiseaux, Cages à Oiseaux, Atelier de Plumes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PEACOCK_MYTH</Tag>
 		<English>Myth - Peacock</English>
+		<French>Mythe du Paon</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PEACOCK_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Peacock</English>
+		<French>Effet (Mythe du Paon)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PEACOCK_STORY</Tag>
 		<English>Story - Peacock</English>
+		<French>Histoire du Paon</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PEACOCK_STORIES</Tag>
 		<English>Stories - Peacock</English>
+		<French>Histoires de Paon</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PEACOCK_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Peacock</English>
+		<French>Effet (Histoires de Paon)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PIG_NEW_MYTH</Tag>
@@ -894,102 +932,127 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_PROCOPTODON_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Procoptodon, Paleolithic Marsupial and Marsuipial, Marsuipial Herd, Cage and Enclosure</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Procoptodon, Marsupial Paléolithique, Troupeau, Cage et Enclos à Marsupiaux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROCOPTODON_MYTH</Tag>
 		<English>Myth - Procoptodon</English>
+		<French>Mythe du Procoptodon</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROCOPTODON_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Procoptodon</English>
+		<French>Effet (Mythe du Procoptodon)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROCOPTODON_STORY</Tag>
 		<English>Story - Procoptodon</English>
+		<French>Histoire du Procoptodon</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROCOPTODON_STORIES</Tag>
 		<English>Stories - Procoptodon</English>
+		<French>Histoires de Procoptodon</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROCOPTODON_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Procoptodon</English>
+		<French>Effet (Histoires de  Procoptodon)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROCOPTODON_REMAINS</Tag>
 		<English>Remains - Procoptodon</English>
+		<French>Remains - Procoptodon</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_QUOLL_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Quoll and Marsupials, Marsupial Cage and Enclosure</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Chat marsupial et autres Marsupiaux, Cage et Enclos pour Marsupiaux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_QUOLL_MYTH</Tag>
 		<English>Myth - Quoll</English>
+		<French>Mythe du Chat marsupial</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_QUOLL_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Quoll</English>
+		<French>Effet (Mythe du Chat marsupial)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_QUOLL_STORY</Tag>
 		<English>Story - Quoll</English>
+		<French>Histoire du Chat marsupial</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_QUOLL_STORIES</Tag>
 		<English>Stories - Quoll</English>
+		<French>Histoires de Chat marsupial</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_QUOLL_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Quoll</English>
+		<French>Effet (Histoires de Chat marsupial)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_RATEL_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Ratel and weasel, Nocturnal and Bad Boy Cage and Enclosure</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Ratel et de la Belette, Cage et Enclos pour nocturnes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RATEL_MYTH</Tag>
 		<English>Myth - Ratel</English>
+		<French>Mythe du Ratel</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RATEL_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Ratel</English>
+		<French>Effet (Mythe du Ratel)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RATEL_STORY</Tag>
 		<English>Story - Ratel</English>
+		<French>Histoire du Ratel</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RATEL_STORIES</Tag>
 		<English>Stories - Ratel</English>
+		<French>Histoires de Ratel</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RATEL_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Ratel</English>
+		<French>Effet (Histoires de Ratel)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_KANGAROO_RED_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Red Kangaroo and Marsuipial, Marsuipial Herd, Cage and Enclosure</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Kangourou roux et autres Marsupiaux, Troupeau, Cage et Enclos pour Marsupiaux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KANGAROO_RED_MYTH</Tag>
 		<English>Myth - Red Kangaroo</English>
+		<French>Mythe du Kangourou roux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KANGAROO_RED_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Red Kangaroo</English>
+		<French>Effet (Mythe du Kangourou roux)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KANGAROO_RED_STORY</Tag>
 		<English>Story - Red Kangaroo</English>
+		<French>Histoire du Kangourou roux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KANGAROO_RED_STORIES</Tag>
 		<English>Stories - Red Kangaroo</English>
+		<French>Histoires de Kangourou roux</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KANGAROO_RED_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Red Kangaroo</English>
+		<French>Effet (Histoires de  Kangourou roux)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COBRA_PEDIA</Tag>
@@ -1100,12 +1163,6 @@
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Histoires des Serpents[NEWLINE][ICON_BULLET]Cage des Reptiles et enclos[NEWLINE][ICON_BULLET]Fosse à Serpents et Charmeur</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_VIPER_PEDIA</Tag>
-		<English>The Viperidae (vipers) are a family of venomous snakes found all over the world, except in Antarctica, Australia, New Zealand, Madagascar, Hawaii, various other isolated islands, and north of the Arctic Circle. All have relatively long, hinged fangs that permit deep penetration and injection of venom. Four subfamilies are currently recognised. They are also known as viperids.[PARAGRAPH:2]Source: Wikipedia</English>
-		<German>Mit Ottern oder Vipern bezeichnet man eine über Amerika, Afrika und Eurasien verbreitete Familie von Schlangen, die allesamt giftig sind. Bei Viperngiften handelt es sich hauptsächlich um Blutgifte, die die Blutzellen und das umgebende Gewebe schädigen oder zerstören können und sehr schmerzhaft sind. Das Gift mancher Ottern greift auch das Nervensystem des Opfers an und kann Lähmungen hervorrufen.[PARAGRAPH:2]Ottern erreichen Längen von 30 cm bis über 3 m. Sie haben einen gedrungenen, massigen Körper une einen auffälligen, dreieckigen Kopf, der sich deutlich vom Hals absetzt. Falls alle Vipern haben senkrecht geschlitzte Pupillen, die auf eine dämmerungs- und nachtaktive Lebensweise hindeuten.[PARAGRAPH:2]Ottern verfügen über einen komplexen Giftapparat mit beweglichen, röhrenartigen Giftzähnen. Solange das Maul geschlossen ist, liegen sie eingeklappt in einer Bindegewebsfalte im Gaumendach. Beim Aufreißen des Mauls werden sie durch die Drehung zweier Knochen aufgerichtet, wodurch ein tiefes Eindringen in das Beutetier ermöglicht wird. Gift wird aber nicht immer injiziert. Die Schlangen können auch einen sogenannten trockenen Biss anbringen, wenn sie Angreifer abschrecken wollen, die nicht als Beute geeignet sind. Die meisten Ottern gebären ihre Jungtiere lebend, es gibt aber auch eierlegende Arten.</German>
-		<Polish>Żmija właściwa (Viperinae)? podrodzina w obrębie rodziny żmijowatych, w podrzędzie węży. Do podrodziny tej należy 12 rodzajów i około 60 gatunków stosunkowo niewielkich węży, o długości od kilkunastu do 200 centymetrów. W podrodzinie tej przeważa jajożyworodność, choć występują też gatunki jajorodne. Żmije zamieszkują różne środowiska i rejony geograficzne, również subarktyczny. (źródło: Wikipedia)</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_VIPER_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Viper, Myths of Earth and Snakes, Snake Cage and Enclosure, Snake pit and charmer</English>
 		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires des Vipères[NEWLINE][ICON_BULLET]Mythes de la Terre et des Serpents[NEWLINE][ICON_BULLET]Cage à Serpents et Enclos[NEWLINE][ICON_BULLET]Fosse à Serpents et Charmeur</French>
@@ -1168,97 +1225,111 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_WALLAROO_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Wallaroo and Marsuipial, Kangaroo Herd, Cage and Enclosure</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Wallaroo et Marsuipial, Kangaroo Herd, Cage et Enclosure</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WALLAROO_MYTH</Tag>
 		<English>Myth - Wallaroo</English>
+		<French>Mythe du Wallaroo</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WALLAROO_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Wallaroo</English>
+		<French>Effet (Mythe du Wallaroo)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WALLAROO_STORY</Tag>
 		<English>Story - Wallaroo</English>
+		<French>Histoire du Wallaroo</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WALLAROO_STORIES</Tag>
 		<English>Stories - Wallaroo</English>
+		<French>Histoires de Wallaroo</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WALLAROO_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Wallaroo</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_BUFFALO_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Buffalo and Bull, Buffalo Herd, Exotic Herbivore Cage and Enclosure</English>
+		<French>Effet (Histoires de  Wallaroo)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BUFFALO_MYTH</Tag>
 		<English>Myth - Buffalo</English>
+		<French>Mythe du Buffle</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BUFFALO_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Buffalo</English>
+		<French>Effet (Mythe du Buffle)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BUFFALO_STORY</Tag>
 		<English>Story - Buffalo</English>
+		<French>Histoire du Buffle</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BUFFALO_STORIES</Tag>
 		<English>Stories - Buffalo</English>
+		<French>Histoires de Buffle</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BUFFALO_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Buffalo</English>
+		<French>Effet (Histoires de  Buffle)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_WILDEBEEST_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Wildebeest and Antelopes, Exotic Herbivore Cage and Enclosure</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide: [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] Mythes, Histoire(s) de Gnou et Antilopes, Cage et Enclos pour Herbivores exotiques</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WILDEBEEST_MYTH</Tag>
 		<English>Myth - Wildebeest</English>
+		<French>Mythe du Gnou</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WILDEBEEST_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Wildebeest</English>
+		<French>Effet (Mythe du Gnou)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WILDEBEEST_STORY</Tag>
 		<English>Story - Wildebeest</English>
+		<French>Histoire du Gnou</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WILDEBEEST_STORIES</Tag>
 		<English>Stories - Wildebeest</English>
+		<French>Histoires de Gnou</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_WILDEBEEST_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Wildebeest</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_GALAPOGOS_TORTOISE_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Galapagos Tortoise and Reptiles, Reptile Cage and Enclosure</English>
+		<French>Effet (Histoires de Gnou)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALAPOGOS_TORTOISE_MYTH</Tag>
 		<English>Myth - Galapagos Tortoise</English>
+		<French>Mythe de la Tortue des Galapagos</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALAPOGOS_TORTOISE_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Galapagos Tortoise</English>
+		<French>Effet (Mythe de la Tortue des Galapagos)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALAPOGOS_TORTOISE_STORY</Tag>
 		<English>Story - Galapagos Tortoise</English>
+		<French>Histoire de la Tortue des Galapagos</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALAPOGOS_TORTOISE_STORIES</Tag>
 		<English>Stories - Galapagos Tortoise</English>
+		<French>Histoires de Tortues des Galapagos</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALAPOGOS_TORTOISE_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Galapagos Tortoise</English>
+		<French>Effet (Histoires de Tortues des Galapagos)</French>
 	</TEXT>
 </Civ4GameText>

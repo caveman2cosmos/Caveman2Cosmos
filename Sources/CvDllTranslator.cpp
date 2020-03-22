@@ -120,7 +120,7 @@ bool CvDllTranslator::replaceOur(const CvWString& szKey, int iForm, CvWString& s
 
 bool CvDllTranslator::replaceCt(const CvWString& szKey, int iForm, CvWString& szReplacement)
 {
-	CvPlayerAI& player = GET_PLAYER(GC.getGameINLINE().getActivePlayer());
+	CvPlayerAI& player = GET_PLAYER(GC.getGame().getActivePlayer());
 	if (szKey == L"[CT_NAME")
 	{
 		szReplacement = player.getName(iForm);

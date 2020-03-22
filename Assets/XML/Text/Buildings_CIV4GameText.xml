@@ -27,7 +27,7 @@
 		<Polish>Zbuduj 3D Body Atlas by zwiększyć rozwój naukowy w Twoich miastach.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ABU_SIMBEL</Tag>
+		<Tag>TXT_KEY_BUILDING_ABU</Tag>
 		<English>Abu Simbel</English>
 		<French>Abou Simbel</French>
 		<Spanish>
@@ -37,14 +37,14 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ABU_SIMBEL_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_ABU_PEDIA</Tag>
 		<English>Abu Simbel is an archaeological site comprising two massive rock temples in southern Egypt on the western bank of Lake Nasser. The twin temples were originally carved out of the mountainside during the reign of Pharaoh Ramesses II in the 13th century BC, as a lasting monument to himself and his queen Nefertari, to commemorate his alleged victory at the Battle of Kadesh, and to intimidate his Nubian neighbors. However, the complex was relocated in its entirety in the 1960s, on an artificial hill made from a domed structure, high above the Aswan dam reservoir. The relocation of the temples was necessary to avoid their being submerged during the creation of Lake Nasser, the massive artificial water reservoir formed after the building of the Aswan dam on the Nile River. Abu Simbel remains one of Egypt's top tourist attractions.</English>
 		<French>Les temples d'Abou Simbel sont deux temples de l'Égypte antique construits par le pharaon Ramsès II (-1304 / -1213, XIXe dynastie) pour son culte ainsi que celui de dieux égyptiens et de son épouse Néfertari à Abou Simbel, en Égypte, au nord du lac Nasser sur le Nil, à environ soixante-dix kilomètres de la deuxième cataracte du Nil.</French>
 		<German>Abu Simbel nennt man die zwei gewaltigen Felsentempel am Westufer des Nassersees in Südägypten am südöstlichen Ende des gleichnamigen Ortes. Das Areal wurde wahrscheinlich zwischen 1260 und 1250 v.Chr. zur Regierungszeit von Ramses II. erbaut. Der große Tempel ist dem ruhmreichen Herrscher selbst geweiht. In seinem Inneren sind viele Darstellungen der Kriegszüge Ramses II. zu finden. Der kleine Tempel ist seiner zur Bauzeit verstorbenen Hauptgemahlin Nefertari gewidmet.[PARAGRAPH:2]Abu Simbel ist bekannt für das sogenannte Sonnenwunder. Zweimal im Jahr fallen die Sonnenstrahlen durch den Tempeleingang für etwa 20 min auf drei der vier sitzenden Götterstatuen im inneren Heiligtum, die von Amun-Re, Re-Harachte und des vergöttlichten Ramses. Einzig der mit dem Totenreich assoziierte Ptah bleibt außerhalb des Sonnenlichts.[PARAGRAPH:2]Abu Simbel befindet sich inzwischen nicht mehr an seinem ursprünglichen Standort. Beide Tempel mussten vor dem mit Hilfe des Assuan-Staudamms künstlich angestauten Wasser des Nassersees in Sicherheit gebracht werden. Sie wurden in den Jahren 1963 bis 1968 abgetragen und auf der Hochebene von Abu Simbel 64 m höher wieder aufgebaut. So stehen sie seither auf einer Insel im Nassersee, die durch einen befahrbaren Damm mit dem gleichnamigen Ort verbunden ist. Seit 1979 steht der Tempelkomplex von Abu Simbel auf der Weltkulturerbeliste der UNESCO.</German>
 		<Polish>Abu Simbel - stanowisko archeologiczne w południowym Egipcie, w muhafazie Asuan. Położone niegdyś nad Nilem, teraz nad Jeziorem Nasera, w Dolnej Nubii, około 300 km na południe od Asuanu. W starożytności miasto rozwijało się prężnie dzięki znajdującym się w okolicy pokładom sjenitu (czerwonego granitu), miedzi i kamieni szlachetnych. W Abu Simbel znajduje się kompleks świątynny złożony z dwóch świątyń zbudowanych przez faraona Ramzesa II. Świątynie zbudowano w XIII wieku p.n.e., prawdopodobnie w latach 1274-1250 p.n.e., w czasie panowania Ramzesa II. Miały one ukazywać potęgę Egiptu przybyszom z Nubii.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ABU_SIMBEL_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_ABU_STRATEGY</Tag>
 		<English>Reduce maintenance costs of nearby cities.</English>
 		<French>Réduit le coût d'entretien des villes voisines.</French>
 		<German>Abu Simbel senkt die Verwaltungskosten in allen nahegelegenen Städten drastisch.</German>
@@ -630,23 +630,6 @@
 		<French>Augmente la production et le  commerce si les ressources requises par [COLOR_HIGHLIGHT_TEXT]Aluminum Co. sont disponibles dans la ville. Augmente également la science de la ville.</French>
 		<Spanish>Incrementa la producción y el comercio si la ciudad tiene acceso a los recursos necesarios por la corporación Standard Ethanol. Asimismo, aumenta la producción científica de la ciudad.</Spanish>
 		<Polish>Zwiększa produkcję oraz przychody z handlu jeśli surowce potrzebne Aluminium S.A. są dostępne w mieście. Zwiększa także rozwój naukowy.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ALUMINUM_FACTORY</Tag>
-		<English>Factory (Aluminum)</English>
-		<French>
-			<Text>Fabrique d'Aluminum</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Aluminiumfabrik</German>
-		<Italian>Fabbrica di alluminio</Italian>
-		<Spanish>
-			<Text>Fábrica de aluminio</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Fabryka Aluminium</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AMBULANCE_DRONE_CONTROL_CENTER</Tag>
@@ -1658,7 +1641,7 @@
 		<Polish>Zbuduj Rdzeń Sztucznej Inteligencji by zwiększyć rozwój naukowy w Twoich miastach.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ARTIST_COLONY</Tag>
+		<Tag>TXT_KEY_BUILDING_ARTIST_GUILD</Tag>
 		<English>Artist Colony</English>
 		<French>
 			<Text>Compagnie d'Artiste</Text>
@@ -1669,11 +1652,11 @@
 		<Polish>Kolonia Artystów</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ARTIST_COLONY_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_ARTIST_GUILD_PEDIA</Tag>
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ARTIST_COLONY_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_ARTIST_GUILD_STRATEGY</Tag>
 		<English>Increase cities culture output by 50%</English>
 		<French>La compagnie d'Artistes augmente la culture produite par votre ville de 50%!</French>
 		<Spanish>Los Gremios de artistas aumentan la producción cultural de las ciudades en un 50%.</Spanish>
@@ -2704,9 +2687,18 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BEAR_MYTH</Tag>
-		<English>Myth - Bears</English>
-		<French>Mythe des Ours</French>
-		<Polish>Mit - Niedźwiedzie</Polish>
+		<English>Myth - Bear</English>
+		<French>
+			<Text>Mythe de l'Ours</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<Italian>
+			<Text>Mito dell'orso</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Polish>Mit Niedźwiedzia</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BEAR_MYTH_EFFECT</Tag>
@@ -3500,6 +3492,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BONEMARROWER_STRATEGY</Tag>
 		<English>The [COLOR_BUILDING_TEXT]Bonemarrower[COLOR_REVERT] is a prehistoric era building that increases a city's [COLOR_GREEN]Food[COLOR_REVERT] production and provides [COLOR_GREEN]Healthiness[COLOR_REVERT] while also lowering [COLOR_GREEN]Disease[COLOR_REVERT] generation.</English>
+		<French>The [COLOR_BUILDING_TEXT]Bonemarrower[COLOR_REVERT] est un bâtiment de l'ère préhistorique qui augmente la production de  [COLOR_GREEN]Food[COLOR_REVERT] production and provides [COLOR_GREEN]Healthiness[COLOR_REVERT] while also lowering [COLOR_GREEN]Disease[COLOR_REVERT] generation.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BONNEVILE</Tag>
@@ -4369,7 +4362,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 		<Polish>Świątynia Buddyjska</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BUILDING_MOD</Tag>
+		<Tag>TXT_KEY_BUILDING_MOD</Tag>
 		<English>[ICON_BULLET]%D1_Mod%% Building Production</English>
 		<French>[ICON_BULLET]%D1_Mod%% Production de Bâtiment</French>
 		<German>[ICON_BULLET]%D1_Mod%% Gebäudebau</German>
@@ -4378,7 +4371,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 		<Polish>[ICON_BULLET]%D1_Mod%% do produkcji budynków</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_BUILDS_FASTER_BUILDINGCLASS</Tag>
+		<Tag>TXT_KEY_BUILDING_BUILDS_FASTER_BUILDING</Tag>
 		<English>[ICON_BULLET]Builds %s1 %d2%% Faster</English>
 		<French>[ICON_BULLET]Vitesse de production de "%s1": %d2%%</French>
 		<German>[ICON_BULLET]Errichtet die Einheit %s1 %d2%% schneller</German>
@@ -5637,6 +5630,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHILDBIRTH_HUT_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Enables Fertility Dance</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet la Danse de la Fertilité</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CHILDCAREHUT</Tag>
@@ -6675,6 +6669,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COMMUNITY_DISCUSSIONS_PEDIA</Tag>
 		<English>Humans have always been social creatures. Once language was really developed, regular community discussions were instrumental in rapidly expanding mankind's knowledge base. Those tribes that quickly figured out they could benefit from sharing and understanding the experiences of other people were far more capable of surviving and thriving in the early Prehistoric Era. This building represents the growing custom of having regular discussions rather than simply taking place at intermittent intervals and only as needs demand. It may have taken some surprising degree of effort to get this to happen, at some sacrifice to other potential efforts.</English>
+		<French>Humans have always been social creatures. Once language was really developed, regular community discussions were instrumental in rapidly expanding mankind's knowledge base. Those tribes that quickly figured out they could benefit from sharing and understanding the experiences of other people were far more capable of surviving and thriving in the early Prehistoric Era. This building represents the growing custom of having regular discussions rather than simply taking place at intermittent intervals and only as needs demand. It may have taken some surprising degree of effort to get this to happen, at some sacrifice to other potential efforts.</French>
 		<German>Öffentliche Diskussionen und Gedankenaustausch waren für den Wissenserwerb des Menschen schon in Urzeiten von entscheidender Bedeutung. Zunächst traf man sich einfach an markanten Orten in der Siedlung oder in der näheren Umgebung. Später wurden spezielle Versammlungsplätze angelegt, die dann immer weiter ausgebaut werden mussten, um der steigenden Anzahl an Individuen genug Platz zu bieten.</German>
 		<Polish>Dyskusja (od łac. discussio, aby to omówić) - jeden ze sposobów wymianypoglądów na określony temat, popartych argumentami, prowadzona w gronie dwóch lub więcej osób. Dyskusja może mieć formę ustną (komunikacja werbalna) lub pisemną. W wyniku dyskusji dochodzi do ścierania się różnych poglądów związanych z różnymi punktami widzenia osób prowadzących dyskusję. Określenie zbieżnego (wspólnego) stanowiska, o ile do tego dojdzie, może mieć formę kompromisu lub konsensu.</Polish>
 	</TEXT>
@@ -7414,6 +7409,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CRUSADE_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Free [COLOR_UNIT_TEXT]Crusader[COLOR_REVERT] Every Few Turns</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Un [COLOR_UNIT_TEXT]Croisé[COLOR_REVERT] gratuit à chaque tour</French>
 		<German>[ICON_BULLET]Kostenloser [COLOR_UNIT_TEXT]Kreuzritter[COLOR_REVERT] alle paar Runden</German>
 		<Spanish>[ICON_BULLET]Un [COLOR_UNIT_TEXT]Cruzado[COLOR_REVERT] gratis cada cierto número de turnos</Spanish>
 		<Polish>[ICON_BULLET]Darmowy [COLOR_UNIT_TEXT]Krzyżowiec[COLOR_REVERT] co kilka tur</Polish>
@@ -7497,6 +7493,131 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_LIANGZHU_STRATEGY</Tag>
 		<English>Flavour culture for the Chinese culture. Allows special Jade buildings and trade goods.</English>
+		<French>Flavour culture for the Chinese culture. Allows special Jade buildings and trade goods.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE</Tag>
+		<English>Active Culture</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_AFRICAN</Tag>
+		<English>C.Ac. African</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_ASIAN</Tag>
+		<English>C.Ac. Asian</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_EUROPEAN</Tag>
+		<English>C.Ac. European</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</Tag>
+		<English>C.Ac. Middle Eastern</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_NEANDERTHAL</Tag>
+		<English>C.Ac. Neanderthal</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</Tag>
+		<English>C.Ac. North American</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_OCEANIAN</Tag>
+		<English>C.Ac. Oceanian</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_PEDIA</Tag>
+		<English>C.Ac. = Culture Active[NEWLINE] This building shows that the culture is an integrated and recognized part of your nation's culture.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</Tag>
+		<English>C.Ac. South American</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED</Tag>
+		<English>Adopted Culture</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_AFRICAN</Tag>
+		<English>C.Ad. African</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_ASIAN</Tag>
+		<English>C.Ad. Asian</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_EUROPEAN</Tag>
+		<English>C.Ad. European</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_MIDDLE_EASTERN</Tag>
+		<English>C.Ad. Middle Eastern</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_NEANDERTHAL</Tag>
+		<English>C.Ad. Neanderthal</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_NORTH_AMERICAN</Tag>
+		<English>C.Ad. North American</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_OCEANIAN</Tag>
+		<English>C.Ad. Oceanian</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Tag>
+		<English>C.Ad. = Culture Adopted[NEWLINE]By owning 3 cities with the same foreign (Not your native culture) "Local Culture" you will get that foreign culture as an "Adopted Culture".</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_ADOPTED_SOUTH_AMERICAN</Tag>
+		<English>C.Ad. South American</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_BARBARIAN</Tag>
+		<English>Barbarian Culture</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL</Tag>
+		<English>Local Culture</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_AFRICAN</Tag>
+		<English>C.L. African</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_ASIAN</Tag>
+		<English>C.L. Asian</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_EUROPEAN</Tag>
+		<English>C.L. European</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</Tag>
+		<English>C.L. Middle Eastern</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_NEANDERTHAL</Tag>
+		<English>C.L. Neanderthal</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</Tag>
+		<English>C.L. North American</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_OCEANIAN</Tag>
+		<English>C.L. Oceanian</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_PEDIA</Tag>
+		<English>C.L. = Culture Local[NEWLINE]Each city has one or more local cultures, settlers bring these local cultures from the city they originate from to the new city they found. When the culture is made active, either by being your native culture or by becoming an adopted culture, it will be possible to build these local cultures.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</Tag>
+		<English>C.L. South American</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE</Tag>
@@ -7519,7 +7640,47 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 		<Polish>Tubylcza Kultura</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_AFRICAN</Tag>
+		<English>C.N. African</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_ASIAN</Tag>
+		<English>C.N. Asian</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_EUROPEAN</Tag>
+		<English>C.N. European</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</Tag>
+		<English>C.N. Middle Eastern</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_NEANDERTHAL</Tag>
+		<English>C.N. Neanderthal</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</Tag>
+		<English>C.N. North American</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_OCEANIAN</Tag>
+		<English>C.N. Oceanian</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_PEDIA</Tag>
+		<English>C.N. = Culture Native[NEWLINE]Every civilization have one explicit native culture.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</Tag>
+		<English>C.N. South American</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_NEANDERTHAL</Tag>
+		<English>C.N. Neanderthal Culture</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CULTURE_PEDIA</Tag>
 		<English>Culture - a particular form or stage of civilization, as that of a certain nation or period.</English>
 		<French>Culture - une forme ou état de la civilisation, correspondant à une nation ou période.</French>
 		<German>Im weitesten Sinn ist [COLOR_BUILDING_TEXT]Kultur[COLOR_REVERT] im Gegensatz zur Natur all das, was der Mensch selbst erschaffen hat. Im engeren Sinn werden als Kulturen Gruppen von Menschen bezeichnet, die sich durch jeweils bestimmte Wertvorstellungen, soziale Normen, Sitten und Gebräuche auszeichnen und vor allem voneinander unterscheiden.</German>
@@ -7905,7 +8066,7 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 		<Polish>Zbuduj Delta Assembler by zwiększyć produkcję w Twoich miastach.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DEPARTMENT_ENERGY</Tag>
+		<Tag>TXT_KEY_BUILDING_DOE</Tag>
 		<English>Department of Energy</English>
 		<French>
 			<Text>Département de l'Energie</Text>
@@ -7916,35 +8077,35 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 		<Polish>Ministerstwo Energii</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DEPARTMENT_ENERGY_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_DOE_PEDIA</Tag>
 		<English>The Department of Energy is responsible for electricity production, use and distribution throughout the Empire.</English>
 		<Italian>Il Ministero dell'energia ha la responsabilità della produzione, dell'uso e della distribuzione dell'elettricità nel tuo impero.</Italian>
 		<Polish>Ministerstwo Energii zajmuje się zarządzaniem siecią energetyczną i elektrowniami w Twoim imperiun.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DEPARTMENT_ENERGY_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_DOE_STRATEGY</Tag>
 		<English>Build a Department of Energy to provide FREE Power Lines in every city.</English>
 		<French>Construisez le [COLOR_BUILDING_TEXT]Département de l'Energie[COLOR_REVERT] pour obtenir des [COLOR_BUILDING_TEXT]Lignes Hautes-tension[COLOR_REVERT] dans toutes les villes.</French>
 		<Italian>Costruisci il Ministero dell'energia per ottenere delle linee dell'alta tensione gratuite in ogni città.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DEPARTMENT_FOREIGN</Tag>
+		<Tag>TXT_KEY_BUILDING_DEPT_FOREIGN_POLICY</Tag>
 		<English>Department of Foreign Policy</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DEPARTMENT_FOREIGN_EFFECT</Tag>
+		<Tag>TXT_KEY_BUILDING_DEPT_FOREIGN_POLICY_EFFECT</Tag>
 		<English>Effect - Department of Foreign Policy</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DEPARTMENT_FOREIGN_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_DEPT_FOREIGN_POLICY_PEDIA</Tag>
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DEPARTMENT_FOREIGN_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_DEPT_FOREIGN_POLICY_STRATEGY</Tag>
 		<English>Improve espionage and reduce war weariness.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DEPARTMENT_VEHICLES</Tag>
+		<Tag>TXT_KEY_BUILDING_DMV</Tag>
 		<English>Department of Motor Vehicles</English>
 		<French>Le Ministère de l'Automobile</French>
 		<German>Verkehrsministerium</German>
@@ -7952,18 +8113,18 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 		<Polish>Ministerstwo Transportu Samochodowego</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DEPARTMENT_VEHICLES_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_DMV_PEDIA</Tag>
 		<English>In the United States of America, a Department of Motor Vehicles (or DMV) is a state-level government agency that administers vehicle registration and driver licensing.</English>
 		<Italian>Negli Stati Uniti, il Department of Motor Vehicles (DMV) è un'agenzia federale che controlla la registrazione dei veicoli e le patenti di guida.</Italian>
 		<Polish>Właściwością Ministra Transportu było kierowanie działem administracji rządowej "transport",</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DEPARTMENT_VEHICLES_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_DMV_STRATEGY</Tag>
 		<English>Build the Department of Motor Vehicles to increase your cities Automobiles.</English>
 		<French>Augmente la mobilité de vos citoyens.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DEPARTMENT_WATER</Tag>
+		<Tag>TXT_KEY_BUILDING_WATER_DEPARTMENT</Tag>
 		<English>Department of Water</English>
 		<French>
 			<Text>Le Service des Eaux</Text>
@@ -7979,12 +8140,12 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 		<Polish>Ministerstwo Gospodarki Wodnej</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DEPARTMENT_WATER_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_WATER_DEPARTMENT_PEDIA</Tag>
 		<English>The Department of Water provides information to industry, technical support and professional guidance to government on the status of water and the viability of new water source developments. It also issues licences for groundwater wells throughout the Empire.</English>
 		<Polish>Ministerstwo zajmujące się hydrologią imperium.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DEPARTMENT_WATER_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_WATER_DEPARTMENT_STRATEGY</Tag>
 		<English>Build Department of Water to get FREE Water Pipes in Every City.</English>
 		<French>Construisez le Service des Eaux pour obtenir des Canalisations gratuites dans toutes vos villes.</French>
 		<Italian>Costruisci il Dipartimento dell'acqua potabile per ottenere tubi dell'acqua gratuiti in ogni città.</Italian>
@@ -8165,17 +8326,17 @@ The original habitats of the raccoon are deciduous and mixed forests, but due to
 		<Polish>Zbuduj Digitized Membrane Factory by zwiększyć ilość złota w Twoim mieście.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DUTCH_DIKE</Tag>
+		<Tag>TXT_KEY_BUILDING_NETHERLANDS_DIKE</Tag>
 		<English>Dutch Dike</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DUTCH_DIKE_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_NETHERLANDS_DIKE_PEDIA</Tag>
 		<English>The earliest indications of dike building date from the late Iron Age. During excavations of terps in the Frisian villages of Peins and Dongjum, among others, dike bodies were found - small dikes predating the building of the terp. These little dikes, no more than 70 cm high, were composed of neatly-stacked peat sods against a core of loose bulk material. Later on the structure was reinforced by adding an outer wall with a gentler gradient. The evolvement of dikes of carefully stacked clay to pile dikes into high-tech sensor dikes did not happen overnight. Already in Roman times, small dikes and dams were created.
 		[PARAGRAPH:1]A look into the long Dutch tradition of dike building gives us insight on a deeply rooted culture of trial and error in a country where the sea level rises and the ground level is dropping. History shows that either a big flood or a tiny worm, but also national welfare can lead to big consequences and shifts in the flood protection system. Key moments in the ever evolving dike network are described over different dike periods.
 		</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_DUTCH_DIKE_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_NETHERLANDS_DIKE_STRATEGY</Tag>
 		<English>Best built in a city surrounded by many rivers.</English>
 	</TEXT>
 	<TEXT>
@@ -8909,6 +9070,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EARTHWORM_PEDIA</Tag>
 		<English>Known to be high in protein and iron, eaten by various peoples such as the native Yekuana of Venezuela.</English>
+		<French>Known to be high in protein and iron, eaten by various peoples such as the native Yekuana of Venezuela.</French>
 		<Polish>Dżdżownicowate, dżdżownice (Lumbricidae) - rodzina skąposzczetówprzystosowanych do życia w glebie. Obejmuje ponad 670 gatunków, w tym większość glebowych skąposzczetów. Dżdżownicowate są jednym z ważniejszych czynników wpływających na przewietrzanie i nawożenie gleby. Są hermafrodytami (obojnakami), ale występuje u nich zapłodnienie krzyżowe. Nieliczne rozmnażają się partenogenetycznie.</Polish>
 	</TEXT>
 	<TEXT>
@@ -9323,7 +9485,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<French>Construisez un [COLOR_BUILDING_TEXT]Système de sécurité électronique[COLOR_REVERT] pour augmenter l'espionnage dans votre ville.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ELEMENTARY_SCHOOL</Tag>
+		<Tag>TXT_KEY_BUILDING_PUBLIC_SCHOOL</Tag>
 		<English>Elementary School</English>
 		<French>
 			<Text>Ecole élémentaire</Text>
@@ -9334,12 +9496,12 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Polish>Szkoła Podstawowa</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ELEMENTARY_SCHOOL_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_PUBLIC_SCHOOL_PEDIA</Tag>
 		<English>In most of the world, excluding England and Wales and some Commonwealth countries, a public school is an educational institution that is funded with tax revenue and most commonly administered by a local government or government agency. In England and Wales, the equivalent term would be state school.[PARAGRAPH:2]In most of the United Kingdom and in some Commonwealth countries, a public school is a traditional privately operated secondary school that is funded by the payment of tuition fees. These schools, wherever located, often follow a British educational tradition. Originally, many were single-sex boarding schools, but many are now co-educational with both boarders and day-pupils. This usage is synonymous with preparatory school in the USA, although in British English preparatory school has a different meaning. Whether a particular independent school is or is not a public school is not clearly defined, although there are some which indisputably are, and others which clearly are not. While this usage of the term public school is common in most of the United Kingdom, it can be ambiguous in Scotland, where it often refers to a publicly funded school.</English>
 		<Polish>Instytucja oświatowo-wychowawcza zajmująca się kształceniem i wychowaniem w państwie, a także siedziba (budynek) tej instytucji oraz jej uczniowie i personeli</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ELEMENTARY_SCHOOL_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_PUBLIC_SCHOOL_STRATEGY</Tag>
 		<English>Increases city's science and culture output in city. Extra happiness from science and culture every 20%</English>
 		<French>Améliore grandement l'éducation et la science de votre ville, ainsi que le bonheur en fonction de certaines doctrines.</French>
 		<Spanish>Aumenta la producción científica y cultural de la ciudad. Da felicidad extra por cada 20% de presupuesto científico y cultural.</Spanish>
@@ -10115,6 +10277,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FIREPIT_PEDIA</Tag>
 		<English>Fire pits have been in existence for a very long time and despite many technological advancements since the advent of man's use of fire, they have remained a popular item because of their versatility. A fire pit can physically vary from a pit dug into the ground to an elaborate gas burning compilation of stone, brick, and metal. The common feature of fire pits is that they are designed to contain a fire and prevent it from spreading.</English>
+		<French>Fire pits have been in existence for a very long time and despite many technological advancements since the advent of man's use of fire, they have remained a popular item because of their versatility. A fire pit can physically vary from a pit dug into the ground to an elaborate gas burning compilation of stone, brick, and metal. The common feature of fire pits is that they are designed to contain a fire and prevent it from spreading.</French>
 		<Polish>Palenisko - to część pieca lub kotła, w którym odbywa się spalanie paliwa.</Polish>
 	</TEXT>
 	<TEXT>
@@ -10636,7 +10799,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FROM_ATTACKS</Tag>
-		<English>[ICON_BULLET]1 %F1 per turn, per unit that dies attacking this city., Maximum of %d2 %F3 per turn, 1 %F4 Fades away after %d5 turns.</English>
+		<English>[ICON_BULLET]1 %F1 per turn, per unit that dies attacking this city. Maximum of %d2 %F3 per turn, 1 %F4 Fades away after %d5 turns.</English>
 		<French>[ICON_BULLET]1 %F1 par tour, par unité qui meurt en attaquant la ville.[NEWLINE][ICON_BULLET]Maximum de %d2 %F3 par tour[NEWLINE][ICON_BULLET]1 %F4 s'estompe après %d5 tours.</French>
 		<German>[ICON_BULLET]1 %F1 pro Runde für jede Einheit, die beim Angriff auf die Stadt stirbt.[NEWLINE][ICON_BULLET]Maximum von %d2 %F3 pro Runde[NEWLINE][ICON_BULLET]Wird nach %d5 Runden um 1 %F4 reduziert</German>
 		<Italian>[ICON_BULLET]1 %F1 ogni turno, per ogni unità che muore attaccando questa città.[NEWLINE][ICON_BULLET]Massimo di %d2 %F3 per turno[NEWLINE][ICON_BULLET]1 %F4 Svanisce dopo %d5 turni.</Italian>
@@ -11438,7 +11601,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Spanish>Los [COLOR_BUILDING_TEXT]Graneros[COLOR_REVERT] almacenan algunos alimentos para ayudar a aumentar la tasa de crecimiento de la ciudad. Estos añaden salud adicional si tu civilización tiene acceso al [COLOR_HIGHLIGHT_TEXT]Maíz[COLOR_REVERT], al [COLOR_HIGHLIGHT_TEXT]Trigo[COLOR_REVERT], al [COLOR_HIGHLIGHT_TEXT]Arroz[COLOR_REVERT], o a las [COLOR_HIGHLIGHT_TEXT]Patatas[COLOR_REVERT].</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GRAND_ESTATE</Tag>
+		<Tag>TXT_KEY_BUILDING_ESTATE</Tag>
 		<English>Grand Estate</English>
 		<French>
 			<Text>Grand Domaine</Text>
@@ -11449,12 +11612,12 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Polish>Wielka Posiadłość</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GRAND_ESTATE_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_ESTATE_PEDIA</Tag>
 		<English>A grand estate comprises the houses and outbuildings and supporting farmland and woods that surround the gardens and grounds of a very large property, such as a country house or mansion. It is an "estate" because the profits from its produce and rents are sufficient to support the household in the house at its center. Thus, "the estate" may refer to all other cottages and villages in the same ownership as the mansion itself.</English>
 		<Polish>Domena (łac. dominium, posiadłość, prawo własności) - w systemie feudalnym były to posiadłości ziemskie należące w całości do pana feudalnego (np. rycerza, możnowładcy, monarchy). Szczególną kategorię stanowiła własność państwa lub Kościoła (np. Warmia). W Królestwie Prus była to inna nazwa obszaru dworskiego.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GRAND_ESTATE_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_ESTATE_STRATEGY</Tag>
 		<English>An increase in Food and a Free Noble.  This building requires Feudal civic.</English>
 		<French>Augmente la nourriture et donne un Noble gratuit. Requiert la Doctrine [COLOR_HIGHLIGHT_TEXT]Féodal[COLOR_REVERT].</French>
 		<Italian>Incrementa la produzione di cibo e fornisce uno specialista nobile gratuito; richiede la forma di governo Feudale.</Italian>
@@ -11896,7 +12059,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Polish>Opowieść - Orzeł Haasta</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HADRIAN_WALL</Tag>
+		<Tag>TXT_KEY_BUILDING_ADRIANOS_WALL</Tag>
 		<English>Hadrian's Wall</English>
 		<French>Le Mur d'Hadrien</French>
 		<German>
@@ -11912,7 +12075,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Polish>Wał Hadriana</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HADRIAN_WALL_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_ADRIANOS_WALL_PEDIA</Tag>
 		<English>Hadrian's Wall is a stone and turf fortification built by the Roman Empire across the width of what is now northern England. Begun in AD 122, during the rule of emperor Hadrian, it was the middle of three such fortifications built across Great Britain, the first being from the River Clyde to the River Forth under Agricola and the last the Antonine Wall. All were built to prevent raids on Roman Britain by the Pictish tribes (ancient inhabitants of Scotland) to the north, to improve economic stability and provide peaceful conditions in Britain, and to mark physically the frontier of the Empire. Hadrian's Wall is the best known of the three because its physical presence remains most evident today.</English>
 		<German>Der Hadrianswall, der eigentlich von den Römern Vallum Aelium genannt wurde, ist das bekannteste und am besten erhaltene römische Befestigungssystem an der Grenze zwischen Schottland und England. Er ist nach Kaiser Hadrian benannt, der seinen Bau nach einem Besuch der nördlichen Provinzen angeordnet hatte.[PARAGRAPH:2]Die Römer herrschten fast 400 Jahre über Britannien, konnten die Insel aber nie vollständig erobern. Den unbändigen schottischen Ureinwohnern im Norden, den Pikten, war mit Waffengewalt nicht beizukommen, da sie mit dem rauen Klima besser klarkamen und den Römern in ihrem unwegsamen Heimatland überlegen waren. Da die nördlichen Ländereien für Rom auch nicht sonderlich verlockend waren, beschloss man sich im Süden zu verschanzen. Der Hadrianswall wurde zwischen 122 und 128 n. Chr. errichtet. Er sollte Angriffe der Pikten auf römische Siedlungen unterbinden und die unkontrollierte Einwanderung schottischer und irischer Stämme in die Provinz Britannia verhindern.[PARAGRAPH:2]Während im Westen nur ein Erdwall aufgehäuft wurde, bestand der Hadrianswall im gefährdeteren Osten aus einer 4,5 m hohen Steinmauer, die zusätzlich durch Gräben und eine Vielzahl an Türmen, Kastellen und Toren gesichert wurde. Große Teile der Anlage sind immer noch erhalten. Das eindrucksvolle Denkmal, dass seit 1987 zum UNESCO-Weltkulturerbe zählt, ist heute eine der größten Touristenattraktionen Nordenglands.</German>
 		<Polish>Wał Hadriana, inaczej mur Hadriana (łac. Vallum Hadriani, Vallum Aelium, ang. Hadrian's Wall, Roman Wall, the Wall) - rzymski wał obronny w północnej Brytanii wybudowany w latach 121-129 n.e. na odcinku od wsi Bowness nad zatoką Solway Firth do twierdzy Segedunum w Wallsend nad rzeką Tyne w czasach cesarza Hadriana. Pomyślany jako zapora przed wojowniczymi plemionami Piktów z Kaledonii, nigdy nie spełnił pokładanych w nim nadziei. Wał Hadriana budowali stacjonujący w Brytanii żołnierze trzech legionów rzymskich, wspomagani przez oddziały pomocnicze. W założeniu konstrukcja miała jedynie utrudniać przemieszczanie się między południową i północną częścią wyspy a strzec tego miały rozmieszczone co 500 metrów wieże strażnicze i co 1,5 kilometra niewielkie forty. Długość tej budowli wynosiła 117 km, szerokość 3 m, a wysokość do 5-6 m. W części wschodniej mur był wzniesiony z kamienia, a w zachodniej z darni.</Polish>
@@ -13165,6 +13328,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HOUSE_OF_PARLIMENT_PEDIA</Tag>
 		<English>A parliament is a legislature, especially in those countries whose system of government is based on the Westminster system modeled after that of the United Kingdom. The name is derived from the French parlement, the action of parler (to speak): a parlement is a discussion. The term came to mean a meeting at which such a discussion took place. It acquired its modern meaning as it came to be used for the body of people (in an institutional sense) who would meet to discuss matters of state. [PARAGRAPH:2]The origins of the modern concept of prime ministerial government go back to the Kingdom of Great Britain (1707 - 1800) and The Parliamentary System in Sweden 1721 - 1772, that coincided with each other. [PARAGRAPH:2]In theory, power resided in the monarch, who chaired cabinet and chose ministers. In reality, King George I's inability to speak English led the responsibility for chairing cabinet to go to the leading minister, literally the prime or first minister. The gradual democratisation of parliament with the broadening of the voting franchise increased parliament's role in controlling government, and in deciding who the king could ask to form a government. By the nineteenth century, the Great Reform Act of 1832 led to parliamentary dominance, with its choice invariably deciding who was prime minister and the complexion of the government.[PARAGRAPH:2]Other countries gradually adopted what came to be called the Westminster Model of government, with an executive answerable to parliament, but exercising powers nominally vested in the head of state, in the name of the head of state. Hence, the use of phrases like Her Majesty's government or His Excellency's government. Such a system became particularly prevalent in older British dominions, many of whom had their constitutions enacted by the British parliament. Examples include Australia, New Zealand, Canada, the Irish Free State and the Union of South Africa, though these parliaments themselves have often evolved or were reformed from their British model: the Australian Senate, for instance, more closely reflects the US Senate than the British House of Lords; whereas there is no upper house in New Zealand.[PARAGRAPH:2]In very ancient India, during the Vedic civilization, there are mentions of two Parliament-like gatherings of the Indo-Aryan kingdoms called the Sabha and the Samiti. During the time of the Buddha, many states were even tribal republics, called the Sanghas. The Sabha has been interpreted by the historians as a representative assembly of the elect-the important men of the clan, which ran day-to-day business with the king. The Samiti seems to be a gathering of all the male members of the kingdom, and probably convened only for the ratification/election of a new king. The two largely democratic institutions, which kept a check on the absolutism of the king, were given a sacred position, and have been called the daughters of the deity Prajapati in the Vedas, the holiest of all Hindu scriptures and the earliest Indo-European literature. However, these democratic institutions became weaker as republics became larger and elected chieftainship moved towards hereditary and absolute monarchy. The Sabha and the Samiti bear almost no mention in later literature. After this, India would not have any democratic legislature till the British times, culminating in its modern democratic Parliament (whose two Houses still bear the name of Sabha).</English>
+		<French>A parliament is a legislature, especially in those countries whose system of government is based on the Westminster system modeled after that of the United Kingdom. The name is derived from the French parlement, the action of parler (to speak): a parlement is a discussion. The term came to mean a meeting at which such a discussion took place. It acquired its modern meaning as it came to be used for the body of people (in an institutional sense) who would meet to discuss matters of state. [PARAGRAPH:2]The origins of the modern concept of prime ministerial government go back to the Kingdom of Great Britain (1707 - 1800) and The Parliamentary System in Sweden 1721 - 1772, that coincided with each other. [PARAGRAPH:2]In theory, power resided in the monarch, who chaired cabinet and chose ministers. In reality, King George I's inability to speak English led the responsibility for chairing cabinet to go to the leading minister, literally the prime or first minister. The gradual democratisation of parliament with the broadening of the voting franchise increased parliament's role in controlling government, and in deciding who the king could ask to form a government. By the nineteenth century, the Great Reform Act of 1832 led to parliamentary dominance, with its choice invariably deciding who was prime minister and the complexion of the government.[PARAGRAPH:2]Other countries gradually adopted what came to be called the Westminster Model of government, with an executive answerable to parliament, but exercising powers nominally vested in the head of state, in the name of the head of state. Hence, the use of phrases like Her Majesty's government or His Excellency's government. Such a system became particularly prevalent in older British dominions, many of whom had their constitutions enacted by the British parliament. Examples include Australia, New Zealand, Canada, the Irish Free State and the Union of South Africa, though these parliaments themselves have often evolved or were reformed from their British model: the Australian Senate, for instance, more closely reflects the US Senate than the British House of Lords; whereas there is no upper house in New Zealand.[PARAGRAPH:2]In very ancient India, during the Vedic civilization, there are mentions of two Parliament-like gatherings of the Indo-Aryan kingdoms called the Sabha and the Samiti. During the time of the Buddha, many states were even tribal republics, called the Sanghas. The Sabha has been interpreted by the historians as a representative assembly of the elect-the important men of the clan, which ran day-to-day business with the king. The Samiti seems to be a gathering of all the male members of the kingdom, and probably convened only for the ratification/election of a new king. The two largely democratic institutions, which kept a check on the absolutism of the king, were given a sacred position, and have been called the daughters of the deity Prajapati in the Vedas, the holiest of all Hindu scriptures and the earliest Indo-European literature. However, these democratic institutions became weaker as republics became larger and elected chieftainship moved towards hereditary and absolute monarchy. The Sabha and the Samiti bear almost no mention in later literature. After this, India would not have any democratic legislature till the British times, culminating in its modern democratic Parliament (whose two Houses still bear the name of Sabha).</French>
 		<Polish>Parlament - w państwach o demokratycznych systemach władzy, jest to najwyższy organ przedstawicielski, a jednocześnie zasadniczy organ władzy ustawodawczej. Parlament - w myśl Monteskiuszowskiej teorii podziału władzy - jest jednym z trzech pionów władzy państwowej i w żaden sposób nie jest ważniejszy od dwóch pozostałych. W systemach parlamentarno-gabinetowych (np. Polska) parlament jest najwyższym organem władzy państwowej. Z kolei w państwach realnego socjalizmu, parlamenty w mniejszym lub większym zakresie były kontrolowane przez partie komunistyczne. Pozycja parlamentu na przestrzeni dziejów zmieniała się. Wraz z przechodzeniem z monarchii przez monarchię konstytucyjną do parlamentarnej zauważany był wzrost roli parlamentu. Jednak w pierwszej połowie XX wieku dostrzegane jest osłabianie organu przedstawicielskiego na rzecz władzy wykonawczej.</Polish>
 	</TEXT>
 	<TEXT>
@@ -13193,10 +13357,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HOVERCRAFT_FACTORY_PEDIA</Tag>
 		<English>A hovercraft, also known as an air-cushion vehicle or ACV, is a craft capable of travelling over land, water, mud or ice and other surfaces both at speed and when stationary. Hovercraft are hybrid vessels operated by a pilot as an aircraft rather than a captain as a marine vessel. They operate by creating a cushion of low-pressure, high volume air between the hull of the vessel and the surface below. Typically, this cushion is contained within a flexible "skirt". They typically hover at heights between 200 mm (7.9 in) and 600 mm (24 in) above any surface and operate above 20 knots (23 mph) and can clear gradients up to 20 degrees. The first practical design for hovercraft derived from a British invention in the 1950s to 1960s. They are now used throughout the world as specialised transports in disaster relief, coastguard, military and survey applications as well as for sport or passenger service. Very large versions have been used to transport hundreds of people and vehicles across the English Channel whilst others have military applications used to transport tanks, soldiers and large equipment in hostile environments and terrain.</English>
-		<French>A hovercraft, also known as an air-cushion vehicle or ACV, is a craft capable of travelling over land, water, mud or ice and other surfaces both at speed and when stationary. Hovercraft are hybrid vessels operated by a pilot as an aircraft rather than a captain as a marine vessel.They operate by creating a cushion of low-pressure, high volume air between the hull of the vessel and the surface below. Typically this cushion is contained within a flexible "skirt". They typically hover at heights between 200 mm (7.9 in) and 600 mm (24 in) above any surface and operate above 20 knots (23 mph) and can clear gradients up to 20 degrees.The first practical design for hovercraft derived from a British invention in the 1950s to 1960s. They are now used throughout the world as specialised transports in disaster relief, coastguard, military and survey applications ainsi que for sport or passenger service. Very large versions have been used to transport hundreds of people and vehicles across the English Channel whilst others have military applications used to transport tanks, soldiers and large equipment in hostile environments and terrain</French>
 		<German>Ein Luftkissenfahrzeug ist ein Amphibienfahrzeug, das durch Luft getragen wird, die eine Art Kissen bildet. Es wird meist auf dem Wasser eingesetzt und dient dem Güter- und Personentransport, als Expeditionsfahrzeug oder als Hilfsfahrzeug bei Rettungsdiensten und Feuerwehren</German>
-		<Italian>A hovercraft, also known as an air-cushion vehicle or ACV, is a craft capable of travelling over land, water, mud or ice and other surfaces both at speed and when stationary. Hovercraft are hybrid vessels operated by a pilot as an aircraft rather than a captain as a marine vessel.They operate by creating a cushion of low-pressure, high volume air between the hull of the vessel and the surface below. Typically this cushion is contained within a flexible "skirt". They typically hover at heights between 200 mm (7.9 in) and 600 mm (24 in) above any surface and operate above 20 knots (23 mph) and can clear gradients up to 20 degrees.The first practical design for hovercraft derived from a British invention in the 1950s to 1960s. They are now used throughout the world as specialised transports in disaster relief, coastguard, military and survey applications as well as for sport or passenger service. Very large versions have been used to transport hundreds of people and vehicles across the English Channel whilst others have military applications used to transport tanks, soldiers and large equipment in hostile environments and terrain</Italian>
-		<Spanish>A hovercraft, also known as an air-cushion vehicle or ACV, is a craft capable of travelling over land, water, mud or ice and other surfaces both at speed and when stationary. Hovercraft are hybrid vessels operated by a pilot as an aircraft rather than a captain as a marine vessel.They operate by creating a cushion of low-pressure, high volume air between the hull of the vessel and the surface below. Typically this cushion is contained within a flexible "skirt". They typically hover at heights between 200 mm (7.9 in) and 600 mm (24 in) above any surface and operate above 20 knots (23 mph) and can clear gradients up to 20 degrees.The first practical design for hovercraft derived from a British invention in the 1950s to 1960s. They are now used throughout the world as specialised transports in disaster relief, coastguard, military and survey applications as well as for sport or passenger service. Very large versions have been used to transport hundreds of people and vehicles across the English Channel whilst others have military applications used to transport tanks, soldiers and large equipment in hostile environments and terrain</Spanish>
 		<Polish>Poduszkowiec (ang. hovercraft) - pojazd poruszający się na poduszce powietrznej. Poduszka ta powstaje gdy wentylator zasysa powietrze z otoczenia i wtłacza je pod spód pojazdu. Powietrze sprężane jest wewnątrz komory powstałej pomiędzy dnem maszyny, gruntem i elastycznym fartuchem. Gdy komora wypełni się powietrzem i poduszkowiec uniesie się na odpowiednią wysokość, nadmiar powietrza wydostaje się na zewnątrz. Wentylator musi mieć wystarczającą wydajność aby uzupełniał ubytek powietrza. Dzięki temu wysokość poduszki powietrznej pozostaje stała.</Polish>
 	</TEXT>
 	<TEXT>
@@ -13961,7 +14122,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Polish>Zbuduj Iron Reclamation Plant by zdobyć dostęp do nowego źródła surowców.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_IRONWORKS</Tag>
+		<Tag>TXT_KEY_BUILDING_IRON_WORKS</Tag>
 		<English>Ironworks</English>
 		<French>
 			<Text>L'Usine sidérurgique</Text>
@@ -14279,7 +14440,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Polish>Zbuduj Jetstream Power Plant to increase your cities electricity and therefore it's production.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_JEWELRY_STORE</Tag>
+		<Tag>TXT_KEY_BUILDING_JEWELLERY</Tag>
 		<English>Jeweler</English>
 		<French>
 			<Text>Boutique de bijoux</Text>
@@ -14290,12 +14451,12 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Polish>Sklep Jubilerski</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_JEWELRY_STORE_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_JEWELLERY_PEDIA</Tag>
 		<English>The first signs of established jewellery making in Ancient Egypt was around 3,000-5,000 years ago. The Egyptians preferred the luxury, rarity, and workability of gold over other metals. Predynastic Egypt had Jewellery in Egypt soon began to symbolize power and religious power in the community. Although it was worn by wealthy Egyptians in life, it was also worn by them in death, with jewellery commonly placed among grave goods. [PARAGRAPH:2]In conjunction with gold jewellery, Egyptians used coloured glass in place of precious gems. Although the Egyptians had access to gemstones, they preferred the colours they could create in glass over the natural colours of stones. For nearly each gemstone, there was a glass formulation used by the Egyptians to mimic it. The colour of the jewellery was very important, as different colours meant different things; the Book of the Dead dictated that the necklace of Isis around a mummy's neck must be red to satisfy Isis's need for blood, while green jewellery meant new growth for crops and fertility. Although lapis lazuli and silver had to be imported from beyond the country's borders, most other materials for jewellery were found in or near Egypt, for example in the Red Sea, where the Egyptians mined Cleopatra's favourite gem, the emerald. Egyptian jewellery was predominantly made in large workshops attached to temples or palaces.</English>
 		<Polish>Jubiler zajmuje się wytwarzaniem wyrobów ze złota, platyny, srebra, stopów, metali szlachetnych, kamieni szlachetnych oraz innych drogocennych materiałów. Termin jubilerstwo, dotyczący głównie czasów nowszych, obejmuje przede wszystkim wyrób klejnotów i ozdób ze złota, srebra i kamieni szlachetnych. W starożytności złotnictwo obejmowało głównie wytwarzanie luksusowych przedmiotów codziennego użytku (świeczniki, srebrne zastawy, szkatułki, wazony, figurki), różnego typu ozdób (diademy, naszyjniki, brosze, klamry, naramienniki, pierścienie), oraz przedmiotów służących kultowi religijnemu (złote lub srebrne relikwiarze, monstrancje, kielichy, puszki, pateny). Od XIII wieku w Europie Zachodniej, a od XIV wieku w Polsce działalność warsztatów złotniczych została ujęta przez struktury cechowe, które w późniejszym czasie wprowadziły obowiązek oznaczania wyrobów znakiem złotniczym (puncą).</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_JEWELRY_STORE_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_JEWELLERY_STRATEGY</Tag>
 		<English>The [COLOR_BUILDING_TEXT]Jewelry Store[COLOR_REVERT] is a prehistoric era building that increases a city's [COLOR_GREEN]Gold[COLOR_REVERT] production and having access to specific resources ([COLOR_CYAN]Gems[COLOR_REVERT], for example) can further increase a city's total [COLOR_GREEN]Gold[COLOR_REVERT] output by a given percentage up to a maximum of [COLOR_GREEN]+19%[COLOR_REVERT]. It also gives [COLOR_CYAN]Jewelry[COLOR_REVERT] which later enable some buildings ([COLOR_BUILDING_TEXT]Marriage Ceremony[COLOR_REVERT], for example).</English>
 		<French>Une Bijouterie augmente la richesse de la ville, ainsi que les revenus des routes commerciales. Procure du bonheur avec les ressources Or, Argent et Gemmes.</French>
 		<Spanish>La Joyería aumenta la riqueza y el rendimiento de las rutas comerciales de la ciudad. Proporciona felicidad por el Oro, la Plata y las Gemas.</Spanish>
@@ -15357,6 +15518,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LICHEN_BURNER_STRATEGY</Tag>
 		<English>The [COLOR_BUILDING_TEXT]Lichen Burner[COLOR_REVERT] is a prehistoric era building that increases a city's [COLOR_GREEN]Culture[COLOR_REVERT] production and provides [COLOR_GREEN]Healthiness[COLOR_REVERT] at the cost of raising [COLOR_RED]Flammability[COLOR_REVERT].</English>
+		<French>The [COLOR_BUILDING_TEXT]Lichen Burner[COLOR_REVERT] est un bâtiment de l'ère préhistorique qui augmente la production de  [COLOR_GREEN]Culture[COLOR_REVERT] production and provides [COLOR_GREEN]Healthiness[COLOR_REVERT] at the cost of raising [COLOR_RED]Flammability[COLOR_REVERT].</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LICHEN_GATHERER</Tag>
@@ -17550,7 +17712,6 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MINING_NANOBOT_CONTROL_CENTER_PEDIA</Tag>
 		<English>Called the Terranova Nanite, a colony of these mining nanites are primarily used to mine asteroids, but can be used on terrestrial surfaces with high caution. The Control Center has a kill switch that can shut down or self-destruct the nanites if they pose a significant threat.</English>
-		<French>Called the Terranova Nanite, a colony of these mining nanites are primarily used to mine asteroids, but can be used on terrestrial surfaces with high caution. The un Centre de Contrôle has a kill switch that can shut down or self destruct the nanites if they pose a significant threat.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MINING_NANOBOT_CONTROL_CENTER_STRATEGY</Tag>
@@ -18412,7 +18573,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Polish>Zbuduj National Belief (Resurrection) to decrease your cities War Weariness.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NATIONAL_BREEDER_CAMEL</Tag>
+		<Tag>TXT_KEY_BUILDING_CAMEL_NATIONAL</Tag>
 		<English>Central Breeder - Camel</English>
 		<French>
 			<Text>Eleveur National de Chameaux</Text>
@@ -18423,19 +18584,19 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Polish>Narodowa Hodowla Wielbłądów</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NATIONAL_BREEDER_CAMEL_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_CAMEL_NATIONAL_PEDIA</Tag>
 		<English>The Central Breeder - Camel is an alternative way to get Camels in your city.[NEWLINE][NEWLINE][BOLD]Designer Note:[\BOLD][PARAGRAPH:2]1. The National animal Breeder buildings are designed to allow players who have the resource in their nation but not in the work vicinity of any city access to it in one city. The building is equivalent to the farm building for the animal opening up the chain of buildings in that city only.[PARAGRAPH:2]2. This means that if you do have the animal in the working area of a city then you can use this wonder to allow the animal in another city as well. The turn slow down in insisting that at least one of the animal resources is not in the work radius of a city was not worth the effort required to implement.</English>
 		<Italian>L'allevamento nazionale di cammelli è un modo alternativo per ottenere i cammelli nella tua città.</Italian>
 		<Polish>Wielbłąd (Camelus) - rodzaj dużych ssaków z rodziny wielbłądowatych. Fizjologicznie przystosowane do życia w warunkach suchego i gorącego klimatu, są w wielu krajach wykorzystywane jako zwierzęta użytkowe.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NATIONAL_BREEDER_CAMEL_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_CAMEL_NATIONAL_STRATEGY</Tag>
 		<English>Build a Central Breeder - Camel to increase your cities pride.</English>
 		<French>Construisez un [COLOR_BUILDING_TEXT]Eleveur National de Chameaux[COLOR_REVERT] pour augmenter la fierté de vos villes.</French>
 		<Italian>Costruisci un allevamento nazionale di cammelli per incrementare l'orgoglio della tua città.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NATIONAL_BREEDER_ELEPHANT</Tag>
+		<Tag>TXT_KEY_BUILDING_ELEPHANT_NATIONAL</Tag>
 		<English>Central Breeder - Elephant</English>
 		<French>
 			<Text>Eleveur National d'Eléphants</Text>
@@ -18446,19 +18607,19 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Polish>Krajowa Hodowla Słoni</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NATIONAL_BREEDER_ELEPHANT_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_ELEPHANT_NATIONAL_PEDIA</Tag>
 		<English>The Central Breeder - Elephant is an alternative way to get Elephants in your city.[NEWLINE][NEWLINE][BOLD]Designer Note:[\BOLD][PARAGRAPH:2]1. The National animal Breeder buildings are designed to allow players who have the resource in their nation but not in the work vicinity of any city access to it in one city. The building is equivalent to the farm building for the animal opening up the chain of buildings in that city only.[PARAGRAPH:2]2. This means that if you do have the animal in the working area of a city then you can use this wonder to allow the animal in another city as well. The turn slow down in insisting that at least one of the animal resources is not in the work radius of a city was not worth the effort required to implement.</English>
 		<Italian>L'allevamento nazionale di elefanti è un modo alternativo per ottenere gli elefanti nella tua città.</Italian>
 		<Polish>Słoń indyjski (Elephas maximus) - ssak z rzędu trąbowców, jeden z trzech żyjących gatunków rodziny słoniowatych, zamieszkujący lasy i zarośla Azji Południowej i Południowo-Wschodniej.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NATIONAL_BREEDER_ELEPHANT_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_ELEPHANT_NATIONAL_STRATEGY</Tag>
 		<English>Build a Central Breeder - Elephant to increase your cities pride.</English>
 		<French>Construisez un [COLOR_BUILDING_TEXT]Eleveur National d'Eléphants[COLOR_REVERT] pour augmenter la fierté de vos villes.</French>
 		<Italian>Costruisci un allevamento nazionale di elefanti per incrementare l'orgoglio della tua città.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NATIONAL_BREEDER_HORSE</Tag>
+		<Tag>TXT_KEY_BUILDING_HORSE_NATIONAL</Tag>
 		<English>Central Breeder - Horse</English>
 		<French>
 			<Text>Eleveur National de Chevaux </Text>
@@ -18469,13 +18630,13 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Polish>Narodowa Stadnina Koni</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NATIONAL_BREEDER_HORSE_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_HORSE_NATIONAL_PEDIA</Tag>
 		<English>The Central Breeder - Horse is an alternative way to get Horses in your city.[NEWLINE][NEWLINE][BOLD]Designer Note:[\BOLD][PARAGRAPH:2]1. The National animal Breeder buildings are designed to allow players who have the resource in their nation but not in the work vicinity of any city access to it in one city. The building is equivalent to the farm building for the animal opening up the chain of buildings in that city only.[PARAGRAPH:2]2. This means that if you do have the animal in the working area of a city then you can use this wonder to allow the animal in another city as well. The turn slow down in insisting that at least one of the animal resources is not in the work radius of a city was not worth the effort required to implement.</English>
 		<Italian>L'allevamento nazionale di cavalli è un modo alternativo per ottenere i cavalli nella tua città.</Italian>
 		<Polish>Stadnina koni - ośrodek zajmujący się hodowlą lub reprodukcją koni, który jest wyposażony w stajnie i odpowiednie zaplecze gospodarcze. Zwykle ośrodki hodują jedną rasę lub typ konia. Stadniny zarodowe mają głównie na celu hodowlę ogierów reproduktorów dla Stad Ogierów (dawniej Państwowe Stado Ogierów), które utrzymują wartościowe ogiery hodowlane różnych ras i rozsyłają je do punktów krycia klaczy.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NATIONAL_BREEDER_HORSE_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_HORSE_NATIONAL_STRATEGY</Tag>
 		<English>Build a Central Breeder - Horse to increase your cities pride.</English>
 		<French>Construisez l'[COLOR_BUILDING_TEXT]Eleveur National de Chevaux[COLOR_REVERT] pour augmenter la fierté de vos villes.</French>
 		<Italian>Costruisci un allevamento nazionale di cavalli per incrementare l'orgoglio della tua città.</Italian>
@@ -18521,20 +18682,20 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Polish>Epopeja Narodowa</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NATIONAL_FIRE_SERVICE</Tag>
+		<Tag>TXT_KEY_BUILDING_NFS</Tag>
 		<English>National Fire Service</English>
 		<French>Service National du Feu</French>
 		<Italian>Servizio antincendio nazionale</Italian>
 		<Polish>Narodowa Służba Przeciwpożarowa</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NATIONAL_FIRE_SERVICE_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_NFS_PEDIA</Tag>
 		<English>The National Fire Service (NFS) was the single fire service created in Great Britain in 1941 during the Second World War; a separate National Fire Service (Northern Ireland) was created in 1942.</English>
 		<Italian>Il National Fire Service (NFS) fu fondato in Gran Bretagna nel 1941 durante la seconda guerra mondiale; un altro servizio antincendio venne fondato in Irlanda del Nord nel 1942.</Italian>
 		<Polish>Zbuduj National Fire Service by poprawić jakość zdrowia Twoich poddanych w miastach.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NATIONAL_FIRE_SERVICE_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_NFS_STRATEGY</Tag>
 		<English>Build a National Fire Service to increase your cities health.</English>
 		<French>Construisez un [COLOR_BUILDING_TEXT]Service National du Feu[COLOR_REVERT] pour augmenter la santé de toutes les villes.</French>
 		<Italian>Costruisci un servizio antincendio nazionale per incrementare la salute in tutte le tue città.</Italian>
@@ -18687,7 +18848,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<French>Mettez en place la Prohibition nationale de la Prostitution pour fermer tous les bordels et autres bâtiments du même genre dans toutes vos villes.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NATIONAL_SCIENCE_FOUNDATION</Tag>
+		<Tag>TXT_KEY_BUILDING_NSF</Tag>
 		<English>National Science Foundation</English>
 		<French>
 			<Text>Fondation scientifique nationale</Text>
@@ -18699,13 +18860,13 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Polish>Państwowa Akademia Nauk</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NATIONAL_SCIENCE_FOUNDATION_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_NSF_PEDIA</Tag>
 		<English>The National Science Foundation (NSF) is a government agency that supports fundamental research and education in all the non-medical fields of science and engineering.</English>
 		<Italian>La National Science Foundation (NSF) è un'agenzia governativa che supporta le ricerche in tutti i campi non medici dell'ingegneria e della scienza.</Italian>
 		<Polish>Państwowa instytucja naukowa realizująca działania służące rozwojowi, promocji, integracji i upowszechnianiu nauki oraz przyczyniające się do rozwoju edukacji i wzbogacania kultury narodowej. Akademia realizuje swoje cele w ramach korporacji uczonych oraz poprzez sieć instytutów i jednostek naukowych, prowadzących badania na możliwie najwyższym poziomie naukowym.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NATIONAL_SCIENCE_FOUNDATION_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_NSF_STRATEGY</Tag>
 		<English>Build the National Science Foundation to increase your cities science.</English>
 		<French>Augmente la science dans votre ville.</French>
 		<Italian>Costruisci la Fondazione scientifica nazionale per incrementare la ricerca nella tua città.</Italian>
@@ -18775,7 +18936,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<English>Pass Smoking Prohibition to reduce air pollution a bit.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NATIONAL_SPORTS_LEAGUE</Tag>
+		<Tag>TXT_KEY_BUILDING_NHL</Tag>
 		<English>National Sports League</English>
 		<French>
 			<Text>La Ligue Nationale de Sport</Text>
@@ -18792,12 +18953,12 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Polish>Narodowa Liga Sportowa</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NATIONAL_SPORTS_LEAGUE_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_NHL_PEDIA</Tag>
 		<English>TBD</English>
 		<Polish>Rozgrywki ligowe (system ligowy) - regularny cykl meczów w dyscyplinach drużynowych, prowadzony według modelu dwurundowego ("jesień-wiosna" lub "wiosna-jesień") "każdy z każdym - mecz i rewanż", w celu wyłonienia najlepszej drużyny w kraju, regionie itd.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NATIONAL_SPORTS_LEAGUE_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_NHL_STRATEGY</Tag>
 		<English>National Sports League increases culture in all cities by 10% and grants +2 free celebrities in the city it's built.</English>
 		<Spanish>La Liga deportiva nacional aumenta la cultura en un 10% en todas las ciudades, y otorga +2 Famosos gratis en la ciudad donde se construya.</Spanish>
 	</TEXT>
@@ -18850,7 +19011,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NATIONAL_WEATHER_SERVICE</Tag>
+		<Tag>TXT_KEY_BUILDING_NWS</Tag>
 		<English>National Weather Service</English>
 		<French>Service météorologique national</French>
 		<German>Nationaler Wetterdienst</German>
@@ -18863,11 +19024,11 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Polish>Narodowy Serwis Meteorologiczny</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NATIONAL_WEATHER_SERVICE_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_NWS_PEDIA</Tag>
 		<English>The National Weather Service (NWS), is one of the six scientific agencies that make up the National Oceanic and Atmospheric Administration (NOAA) of the United States government. It is tasked with providing "weather, hydrologic, and climate forecasts and warnings for the United States, its territories, adjacent waters and ocean areas, for the protection of life and property and the enhancement of the national economy." This is done through a collection of national and regional centers, and 122 local weather forecast offices (WFOs).</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_NATIONAL_WEATHER_SERVICE_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_NWS_STRATEGY</Tag>
 		<English>The National Weather Service organizes all weather forecasts and models for all other cities. It will grant all existing and new units the ability to use weather forecasting to aid their combat abilities, a sizeable advantage in any war.</English>
 		<French>Le Service météorologique national coordonne toutes les prévisions météorologiques pour toutes les autres villes. Il accordera à toutes les unités la capacité d'utiliser les prévisions météorologiques pour améliorer de leurs habiletés au combat, un avantage non négligeable en cas de guerre.</French>
 		<Spanish>El Servicio meteorológico nacional coordina todos los modelos y previsiones del tiempo para las demás ciudades. Dará a las unidades nuevas y existentes la capacidad de utilizar las previsiones meteorológicas en favor de sus habilidades de combate, una ventaja considerable para cualquier guerra.</Spanish>
@@ -20142,7 +20303,6 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PAINTBALL_ARENA_PEDIA</Tag>
 		<English>Paintball is a sport in which players compete; in teams or individually, to eliminate opponents by tagging them with capsules containing water-soluble dye and gelatin shell outside (referred to as paintballs) propelled from a device called a paintball marker (commonly referred to as a paintball gun). Paintballs are composed of a non-toxic, biodegradable, water-soluble polymer. The game is regularly played at a sporting level with organized competition involving worldwide leagues, tournaments, professional teams, and players. Paintball technology is also used by military forces, law enforcement, para-military and security organizations to supplement military training, as well as playing a role in riot response, and non-lethal suppression of dangerous suspects.</English>
-		<French>Paintball is a sport in which players compete; in teams or individually, to eliminate opponents by tagging them with capsules containing water soluble dye and gelatin shell outside (referred to as paintballs) propelled from a device called a paintball marker (commonly referred to as a paintball gun). Paintballs are composed of a non-toxic, biodegradable, water soluble polymer. The game is regularly played at a sporting level with organized competition involving worldwide leagues, tournaments, professional teams, and players. Paintball technology is also used by military forces, law enforcement, para-military and security organizations to supplement military training, ainsi que playing a role in riot response, and non-lethal suppression of dangerous suspects.</French>
 		<Polish>Paintball - rodzaj gry zespołowej, polegającej na prowadzeniu pozorowanej walki przy użyciu markerów, urządzeń zbliżonych kształtem i zasadą działania do broni pneumatycznej, które za pomocą sprężonego powietrza lubdwutlenku węgla wyrzucają kulki wypełnione farbą na bazie żelatynyspożywczej. Trafienie przeciwnika, podczas którego kulka rozbija się, pozostawiając kolorowy ślad (nazywany przez graczy splatem) na ciele, masce bądź markerze zawodnika, powoduje jego eliminację z gry.</Polish>
 	</TEXT>
 	<TEXT>
@@ -22760,7 +22920,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Polish>[COLOR_POSITIVE_TEXT]Wymaga doktryny do działania[COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_REQUIRES_ANY_BUILDINGCLASS</Tag>
+		<Tag>TXT_KEY_BUILDING_REQUIRES_ANY_BUILDING</Tag>
 		<English>[COLOR_WARNING_TEXT]Requires Anyone to have constructed %s1[COLOR_REVERT]</English>
 		<French>[COLOR_WARNING_TEXT]Requiert la construction de %s1[COLOR_REVERT]</French>
 		<German>[COLOR_WARNING_TEXT]%s1 muss bereits von irgendjemandem gebaut worden sein.[COLOR_REVERT]</German>
@@ -24433,7 +24593,6 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SINGULARITY_BRAIN_LAB_PEDIA</Tag>
 		<English>Replaces the Human brain completely with a 12th generation Artificial Intelligence Core, and can download knowledge from exocortex networks. Can be stacked together in 64 and 128 "brains" to run a small or large city. Required for mind uploading and memory replication.</English>
-		<French>Replaces the Human brain completely with a 12th generation un Coeur d'intelligence artificielle, and can download knowledge from exocortex networks. Can be stacked together in 64 and 128 "brains" to run a small or large city. required for mind uploading and memory replication.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SINGULARITY_BRAIN_LAB_STRATEGY</Tag>
@@ -24644,7 +24803,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Polish>Opowieść - Wargacz</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SMELTER_ALUMINUM</Tag>
+		<Tag>TXT_KEY_BUILDING_ALUMINUM_FACTORY</Tag>
 		<English>Smelter (Aluminum)</English>
 		<French>
 			<Text>Fondeur d'Aluminum</Text>
@@ -24655,20 +24814,20 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Polish>Odlewnik Aluminium</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SMELTER_ALUMINUM_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_ALUMINUM_FACTORY_PEDIA</Tag>
 		<English>An aluminium smelter is where bauxite ore is refined to a usable metal.</English>
 		<French>Une usine d'aluminium est l'endroit où le minerai de bauxite est raffiné et transformé en métal utilisable.</French>
 		<Polish>Fabryka Aluminium to miejsce, gdzie Ruda Boksytów jest rafinowana na Aluminium.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SMELTER_ALUMINUM_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_ALUMINUM_FACTORY_STRATEGY</Tag>
 		<English>Produces Aluminum from Bauxite Ore.</English>
 		<French>Produit de l'Aluminum à partir du minerai de Bauxite.</French>
 		<Spanish>Produce Aluminio a partir de la Bauxita.</Spanish>
 		<Polish>Produkuje Aluminium z Rudy Boksytów.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SMELTER_STEEL</Tag>
+		<Tag>TXT_KEY_BUILDING_STEEL_MILL</Tag>
 		<English>Smelter (Steel)</English>
 		<French>
 			<Text>Fondeur d'Acier</Text>
@@ -24679,12 +24838,12 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Polish>Odlewnik Stali</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SMELTER_STEEL_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_STEEL_MILL_PEDIA</Tag>
 		<English>A steel smelter is an industrial plant for the manufacture of steel. [PARAGRAPH:2]Steel is an alloy of iron and carbon. It is produced in a two-stage process. First, iron ore is reduced or smelted with coke and limestone in a blast furnace, producing molten iron which is either cast into pig iron or carried to the next stage as molten iron. In the second stage, known as steelmaking, impurities such as sulfur, phosphorus, and excess carbon are removed and alloying elements such as manganese, nickel, chromium and vanadium added to produce the exact steel required.</English>
 		<Polish>Stalownia - wydział huty, w którym wytwarza się stal. W zależności od sposobu produkowania rozróżnia się stalownie konwertorową (konwertor), martenowską (martenowski piec), elektryczną (elektrometalurgia). Podstawowe działy stalowni to: składowisko materiałów wsadowych z urządzeniami transportowymi, piece do wytwarzania stali z urządzeniami ładującymi, odlewnia oraz skład materiałów ogniotrwałych.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SMELTER_STEEL_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_STEEL_MILL_STRATEGY</Tag>
 		<English>Steel Mill increases city's production and converts Iron and Coal to Steel resource. It replaces also Forge.</English>
 		<Spanish>La Acería aumenta la producción de la ciudad, y transforman el Hierro y el Carbón en Acero. Reemplaza a la Fragua.</Spanish>
 	</TEXT>
@@ -24721,6 +24880,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SNAIL_PEDIA</Tag>
 		<English>Snail is a common name that is applied most often to land snails, terrestrial pulmonate gastropod molluscs. However, the common name "snail" is also applied to most of the members of the molluscan class Gastropoda that have a coiled shell that is large enough for the animal to retract completely into. When the word "snail" is used in this most general sense, it includes not just land snails but also thousands of species of sea snails and freshwater snails. Occasionally a few other molluscs that are not actually gastropods, such as the Monoplacophora, which superficially resemble small limpets, may also informally be referred to as "snails".</English>
+		<French>Snail is a common name that is applied most often to land snails, terrestrial pulmonate gastropod molluscs. However, the common name "snail" is also applied to most of the members of the molluscan class Gastropoda that have a coiled shell that is large enough for the animal to retract completely into. When the word "snail" is used in this most general sense, it includes not just land snails but also thousands of species of sea snails and freshwater snails. Occasionally a few other molluscs that are not actually gastropods, such as the Monoplacophora, which superficially resemble small limpets, may also informally be referred to as "snails".</French>
 		<Polish>Ślimaki lądowe w kuchni - ślimaki lądowe stanowią od tysięcy lat formę pożywienia dla ludzi, świadczą o tym wykopaliska archeologiczne związane zkulturą mezolityczną dokonane na terenie dzisiejszej Algierii i Tunezji. Dowody kulinarnego zastosowania ślimaków, czyli osmolone skorupy odnaleziono także w innych stanowiskach archeologicznych regionu śródziemnomorskiego sprzed od 12000 do 6000 lat.</Polish>
 	</TEXT>
 	<TEXT>
@@ -25456,7 +25616,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Polish>Zbuduj Steel Reclamation Plant by zdobyć dostęp do nowego źródła surowców.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_STELE</Tag>
+		<Tag>TXT_KEY_BUILDING_ABYSSINIA_STELE</Tag>
 		<English>Stele</English>
 		<French>
 			<Text>Stèle</Text>
@@ -25471,7 +25631,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Polish>Abisyńska Stela</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_STELE_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_ABYSSINIA_STELE_PEDIA</Tag>
 		<English>A stele is a stone or wooden slab, generally taller than it is wide, erected for funerary or commemorative purposes, most usually decorated with the names and titles of the deceased or living - inscribed, carved in relief, or painted onto the slab.[NEWLINE][NEWLINE]Stelae were also used as territorial markers, as the boundary stelae of Akhenaton at Amarna, or to commemorate military victories. They were widely used in the Ancient Near East, Greece, Egypt, Ethiopia, and, quite independently, in China and some Buddhist cultures (see the Nestorian Stele), and, more surely independently, by Mesoamerican civilisations, notably the Olmec and Maya. The huge number of stelae surviving from ancient Egypt and in Central America constitute one of the largest and most significant sources of information on those civilizations. An informative stele of Tiglath-Pileser III is preserved in the British Museum. Two stelae built into the walls of a church are major documents relating to the Etruscan language.[PARAGRAPH:2]</English>
 		<French>Une stèle est une dalle en pierre ou en bois, généralement plus haute que large, érigée à des fins funéraires ou commémoratif, le plus souvent décorées avec les noms et titres du défunt ou vivant - inscrits, sculptés en relief, ou peints sur la dalle.[PARAGRAPH:2]</French>
 		<Polish>Stela - kamienna, ustawiona pionowo płyta z inskrypcją lub płaskorzeźbioną dekoracją o wysokości od kilkunastu centymetrów do kilku metrów. Jest to rodzaj pomnika nagrobnego, rozpowszechniony zwłaszcza w starozytnym Egipcie i Grecji, gdzie występował już w okresie archaicznym. Stele wykonane były najczęściej z marmuru lub miękkiego kamienia i przechodziły ewolucję kształtu (od prostokątnej płyty zwienczonej palmetą do imitacji kolumnowego frontonu świątyni) i formy przedstawień (od plaskiego konturu poprzez wypukły relief do rzeźby pełnej, niekiedy polichromowanej).W cywilizacjach starożytnego Bliskiego Wschodu stele upamiętniały dokonania władców, ich wojny, działalność budowlaną oraz wydarzenia religijne.Osobną grupę stel stanowią tzw. stele nagrobne, ustawiane w miejscu pochówku. Głównym motywem przedstawień był na nich zmarły, sam lub otoczony rodziną w scenie pożegnania niekiedy uczty. Wykuwano na nich też jego imię, niekiedy tylko wizerunek, biografię lub epitafium.Stele nagrobne pojawiają się w niemal wszystkich kulturach basenu Morza Śródziemnego. W kulturze żydowskiej stela nagrobna nosi nazwę macewa.[PARAGRAPH:2]</Polish>
@@ -26855,7 +27015,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TOURISM_ACHIEVEMENT_EFFECT</Tag>
-		<English>Effect - Achievement (Touristic)</English>
+		<English>Effect - Achievement (Tourism)</English>
 		<French>Effet - Accomplissement (Tourisme)</French>
 		<Polish>Efekt - Osiągnięcie (Turystyka)</Polish>
 	</TEXT>
@@ -27080,7 +27240,6 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TRANCE_HUT_PEDIA</Tag>
 		<English>Trance denotes a variety of processes, ecstasy, techniques, modalities and states of mind, awareness and consciousness. Trance states may occur involuntarily and unbidden. A Trance Hut is a hut where people take various drugs to get in trance.</English>
-		<French>Trance denotes a variety of processes, ecstasy, techniques, modalities and states of mind, awareness and consciousness. Trance states may occur involuntarily and unbidden. A une Hutte de Transe is a hut were people take various drugs to get in trance.</French>
 		<Polish>Trans - jeden z rodzajów odmiennych stanów świadomości. Stan umysłu charakteryzujący się zmienioną świadomością, co oznacza również zmienioną wrażliwość na bodźce. Trans może wywoływać stan obniżonej lub podwyższonej świadomości. Osoby pogrążone w transie mogą wykonywać określone czynności podświadomie, w sposób niekontrolowany przez świadomość.</Polish>
 	</TEXT>
 	<TEXT>
@@ -29063,18 +29222,6 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		[PARAGRAPH:2]The university has an emphasis on research and has been associated with 56 Nobel Prize laureates. It is consistently ranked among Europe's top overall universities, and is an international education venue for doctoral students, with approximately 1,000 doctorates successfully completed every year, and with more than one third of the doctoral students coming from abroad. International students from some 130 countries account for more than 20 percent of the entire student body. Heidelberg comprises two major campuses: one in Heidelberg's Old Town and another in the Neuenheimer Feld quarter on the outskirts of the city. The university's noted alumni include eleven domestic and foreign Heads of State or Heads of Government.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_UNIVERSITY_OF_PADUA</Tag>
-		<English>EU University of Padua</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_UNIVERSITY_OF_PADUA_PEDIA</Tag>
-		<English>The University of Padua (Italian: Università degli Studi di Padova, UNIPD) is a premier Italian university located in the city of Padua, Italy. The University of Padua was founded in 1222 as a school of law and was one of the most prominent universities in early modern Europe. It is among the earliest universities of the world and the second oldest in Italy. The University of Padua is one of Italy's leading universities and ranks in the first position in all the recent ranking of Italian large universities. In 2010 the university had approximately 65,000 students  and in 2013 was ranked "best university" among Italian institutions of higher education with more than 40,000 students.
-		[PARAGRAPH:2]The university is conventionally said to have been founded in 1222 (which corresponds to the first time when the University is cited in a historical document as pre-existing, therefore it is quite certainly older) when a large group of students and professors left the University of Bologna in search of more academic freedom ('Libertas scholastica'). The first subjects to be taught were law and theology. The curriculum expanded rapidly, and by 1399 the institution had divided in two: a Universitas Iuristarum for civil law and Canon law, and a Universitas Artistarum which taught astronomy, dialectic, philosophy, grammar, medicine, and rhetoric. There was also a Universitas Theologorum, established in 1373 by Urban V.
-		[PARAGRAPH:2]From the fifteenth to the eighteenth century, the university was renowned for its research, particularly in the areas of medicine, astronomy, philosophy and law. During this time, the university adopted the Latin motto: Universa universis patavina libertas (Paduan Freedom is Universal for Everyone). Nevertheless, the university had a turbulent history, and there was no teaching in 1237-61, 1509-17, 1848-50.
-		[PARAGRAPH:2]The Botanical Garden of Padova, established by the university in 1545, was one of the oldest gardens of its kind in the world (after the Hanging Gardens of Babylon). Its title for oldest academic garden is in controversy because the Medici created one in Pisa in 1544. In addition to the garden, best visited in the spring and summer, the university also manages nine museums, including a History of physics museum.
-		[PARAGRAPH:2]As the publications of innumerable conferences and congresses show, the modern-day University of Padua plays an important role in scholarly and scientific research at both a European and world level. True to its origins, this is the direction in which the university intends to move in the future, establishing closer links of cooperation and exchange with all the world's major research universities.</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSITY_OF_CAMBRIDGE</Tag>
 		<English>EU University of Cambridge</English>
 	</TEXT>
@@ -29088,26 +29235,32 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EXILE_PRACTICES</Tag>
 		<English>Exile Practices</English>
+		<French>Pratiques de l'Exil</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EXILE_PRACTICES_STRATEGY</Tag>
 		<English>The [COLOR_BUILDING_TEXT]Exile Practices[COLOR_REVERT] is a prehistoric era building that lowers a city's [COLOR_GREEN]Crime[COLOR_REVERT] generation but decreases [COLOR_RED]Espionage[COLOR_REVERT] production. Once built a city can then train [COLOR_UNIT_TEXT]Exile[COLOR_REVERT] units that have hidden nationality, meaning that they can go inside other civilizations without the need for signing open borders or declaring war, making them a useful early-game unit for exploration and harming rivals. It can (albeit rarely) spawn a hidden barbarian [COLOR_UNIT_TEXT]Exile[COLOR_REVERT] unit that can further worsen a city's [COLOR_RED]Crime[COLOR_REVERT] situation if not caught.</English>
+		<French>Les [COLOR_BUILDING_TEXT]Pratiques de l'Exil[COLOR_REVERT] est un bâtiment de l'ère préhistorique qui réduit la génération de [COLOR_GREEN]Crime[COLOR_REVERT] d'une ville mais diminue la production [COLOR_RED]d'espionnage[COLOR_REVERT]. Une fois construite, une ville peut alors former des[COLOR_UNIT_TEXT]Exilés[COLOR_REVERT], des unités qui ont une nationalité cachée, ce qui signifie qu'elles peuvent pénétrer dans d'autres civilisations sans avoir besoin de signer un traité de frontières ouvertes ou de déclarer la guerre, ce qui en fait une unité de début de jeu utile pour l'exploration et qui peut nuire à ses rivaux. Il peut (quoique rarement) engendrer une unité barbare cachée [COLOR_UNIT_TEXT]Exilé[COLOR_REVERT] qui peut aggraver encore la situation au niveau [COLOR_RED]Crime[COLOR_REVERT] d'une ville si elle n'est pas capturée.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_EXILE_PRACTICES_PEDIA</Tag>
 		<English>To be in exile means to be away from one's home while either being explicitly refused permission to return or being threatened with imprisonment or death upon return. It can be a form of punishment and solitude. Exile is an early motif in ancient Greek tragedy. In the ancient Greek world, this was seen as a fate worse than death as sometimes being in exile meant being against the elements or wild beasts that could leave a person critically injured and consequently suffer for a long time before finally succumbing to their wounds.</English>
+		<French>Être en exil signifie s'éloigner de son domicile tout en se voyant explicitement refuser l'autorisation de rentrer ou être menacé d'emprisonnement ou de mort à son retour. Cela peut être une forme de punition et de solitude. L'exil est un des premiers motifs de la tragédie grecque antique. Dans le monde grec ancien, cela était considéré comme un sort pire que la mort car parfois en exil signifiait être contre les éléments ou les bêtes sauvages qui pouvaient laisser une personne gravement blessée et par conséquent souffrir longtemps avant de finalement succomber à leurs blessures.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SURGICAL_OFFICE</Tag>
 		<English>Surgeon's Office</English>
+		<French>Cabinet de chirurgien</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SURGICAL_OFFICE_PEDIA</Tag>
 		<English>A surgeon's is where a surgeon resides while he works.</English>
+		<French>Un cabinet de chirurgien est l'endroit où réside un chirurgien pendant qu'il travaille.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SURGICAL_OFFICE_STRATEGY</Tag>
 		<English>Surgeon's Office provides health to the city and helps units recover health.  It replaces the Doctor's Office and unlocks a new Surgeon Unit.  But it does not get replaced by a Hospital and as an Outpatient Surgical center, it remains valid until proper Medical Clinics emerge in the Modern Era.</English>
+		<French>Le cabinet du chirurgien fournit de la santé à la ville et aide les unités à retrouver la santé. Il remplace le bureau du médecin et déverrouille une nouvelle unité de chirurgien. Mais il n'est pas remplacé par un hôpital et en tant que centre de chirurgie ambulatoire, il reste valable jusqu'à ce que des cliniques médicales appropriées émergent à l'ère moderne.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SNAKE_OIL</Tag>
@@ -29124,6 +29277,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CONSPIRATORS_HIDEOUT</Tag>
 		<English>Conspirators' Hideout</English>
+		<French>Repaire de Conspirateurs</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CONSPIRATORS_HIDEOUT_STRATEGY</Tag>
@@ -29172,6 +29326,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOTORCYCLE_CLUB</Tag>
 		<English>Motorcycle Club</English>
+		<French>Club de Bikers</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MOTORCYCLE_CLUB_STRATEGY</Tag>
@@ -29208,6 +29363,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BLACK_HAT_HIDEOUT</Tag>
 		<English>Black Hat Hideout</English>
+		<French>Repaire de "Chapeaux noirs"</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BLACK_HAT_HIDEOUT_STRATEGY</Tag>
@@ -29220,87 +29376,104 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORBITAL_TARGETS</Tag>
 		<English>Orbital Targets</English>
+		<French>Cibles Orbitales</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORBITAL_TARGETS_STRATEGY</Tag>
 		<English>Replaces the Automated Firing Range with satellites placed in orbit to provide target practice for extremely long range targeting.  Includes the ground version of the Firing Range in its definition but adds this extra layer of skill training now that hand held targeting systems have become so advanced and laser weaponry has become the mainstay.  Unlocks the High Tech Sniper unit.</English>
+		<French>Remplace le champ de tir automatisé par des satellites placés en orbite pour fournir une pratique ciblée pour un ciblage à très longue portée. Inclut la version au sol du champ de tir dans sa définition, mais ajoute cette couche supplémentaire de formation des compétences maintenant que les systèmes de ciblage portatifs sont devenus si avancés et que les armes laser sont devenues le pilier. Déverrouille l'unité High Tech Sniper.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORBITAL_TARGETS_PEDIA</Tag>
 		<English>Satellites for Target practice from a standard Firing Range facility.</English>
+		<French>Satellites pour la pratique des cibles depuis une installation de tir standard.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROPERTY_SPAWN_BARB</Tag>
 		<English>[ICON_BULLET]Can spawn a barbarian %s1_Unit.</English>
+		<French>[ICON_BULLET]Peut faire appaître un %s1_Unit barbare.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PROPERTY_SPAWN_FRIENDLY</Tag>
 		<English>[ICON_BULLET]Can spawn a friendly %s1_Unit.</English>
+		<French>[ICON_BULLET]Peut faire apparaître un %s1_Unit amical.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPY_NETWORK</Tag>
 		<English>Spy Network</English>
 		<French>Réseau d'Espions</French>
+		<German>Spionage Netzwerk</German>
 		<Polish>Szpiegowska Sieć</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPY_NETWORK_STRATEGY</Tag>
 		<English>Build better espionage units</English>
 		<French>Permet d'entraîner de meilleurs espions</French>
+		<German>Bessere Spionageeinheiten können errichtet werden</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPY_NETWORK_PEDIA</Tag>
 		<English>Know yourself and know your enemy</English>
 		<French>Connais-toi toi-même, et connais tes ennemis...</French>
+		<German>Kenne deinen Feind wie dich selbst.</German>
 		<Polish>Znaj siebie i swojego wroga</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPY_TRAINING_FACILITY</Tag>
 		<English>Spy Training Facility</English>
 		<French>Centre d'entraînement d'Espions</French>
+		<German>Spionage-Ausbildungseinrichtung</German>
 		<Polish>Ośrodek Szkolenia Szpiegów</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPY_TRAINING_FACILITY_STRATEGY</Tag>
 		<English>Build better espionage units</English>
 		<French>Permet d'entraîner de meilleurs espions</French>
+		<German>Bessere Spionageeinheiten können errichtet werden</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPY_TRAINING_FACILITY_PEDIA</Tag>
 		<English>Trained spies are better.</English>
 		<French>Les espions bien entraînés sont bien plus efficaces.</French>
+		<German>Ausgebildete Spione sind wesentlich effektiver.</German>
 		<Polish>Wyszkoleni szpiedzy są lepsi.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPY_HIDEOUT</Tag>
 		<English>Spy Hideout</English>
-		<French>Repaire d'espion</French>
+		<French>Repaire d'Espions</French>
+		<German>Spion-Versteck</German>
 		<Polish>Kryjówka Szpiegów</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPY_HIDEOUT_STRATEGY</Tag>
 		<English>Improve your counter intelligence.</English>
 		<French>Améliore le contre-espionnage.</French>
+		<German>Verbessert die Spionageabwehr.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPY_HIDEOUT_PEDIA</Tag>
 		<English>In the game these are used to help train better spies and improve your defense against foreign espionage.</English>
+		<French>Dans le jeu, ceux-ci sont utilisés pour aider à former de meilleurs espions et à améliorer votre défense contre l'espionnage étranger.</French>
 		<Polish>W grze tego typu placówki są wykorzystywane do trenowania szpiegów i zwikszania twoich możliwości kontrwywiadowczych.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPY_SAFE_HOUSE</Tag>
 		<English>Spy Safe House</English>
 		<French>Planque sécurisée pour Espion</French>
+		<German>Sichere Unterkunf für Spione</German>
 		<Polish>Bezpieczny Dom</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPY_SAFE_HOUSE_STRATEGY</Tag>
 		<English>Improve your counter intelligence.</English>
 		<French>Améliore le contre-espionnage.</French>
+		<German>Verbessert die Spionageabwehr.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPY_SAFE_HOUSE_PEDIA</Tag>
 		<English>In the game these are used to help train better spies and improve your defense against foreign espionage.</English>
+		<German>Im Spiel hilft dies um Spione besser zu trainieren und verbessert die Abwehr gegen fremde Spionage.</German>
 		<Polish>W grze tego typu placówki są wykorzystywane do trenowania szpiegów i zwikszania twoich możliwości kontrwywiadowczych.</Polish>
 	</TEXT>
 	<TEXT>
@@ -29529,7 +29702,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	</TEXT>
 	<!-- Unsorted -->
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HIPPODROME</Tag>
+		<Tag>TXT_KEY_BUILDING_BYZANTINE_HIPPODROME</Tag>
 		<English>Hippodrome</English>
 		<French>
 			<Text>Hippodrome:Hippodromes</Text>
@@ -29554,7 +29727,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Polish>Hipodrom</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HIPPODROME_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_BYZANTINE_HIPPODROME_PEDIA</Tag>
 		<English>The Hippodrome of Constantinople (literally "Horse Path" in Greek) was constructed in 203 AD by the Emperor Septimius Severus. The building was a massive venue for chariot races. While the art of charioteering saw great advances in the Hippodrome - the first four-horse races were held here - much of the venue's renown would stem from its involvement in one of the most terrible massacres in Byzantine history. During the Nika Revolts, a brutal uprising between rival racing factions, nearly 30000 rioters were slain by Byzantine troops within the Hippodrome.</English>
 		<French>L'hippodrome de Constantinople (littéralement "Chemin du cheval" en grec) fut construit en 203 ap. J.C. par l'empereur Septime Sévère. Ce bâtiment est un immense lieu consacré aux courses de chars. Tandis que la conduite des chars connut de grandes avancées dans cet Hippodrome - c'est ici qu'eurent lieu les premières courses à quatre chevaux - une grande partie de la célébrité de ce lieu est due à son rôle dans l'un des plus terribles massacres de l'histoire byzantine. Pendant l'insurrection Nika, révolte brutale qui opposa deux factions rivales, presque 30 000 insurgés furent tués par les troupes byzantines à l'intérieur de l'hippodrome.</French>
 		<German>Das Hippodrom von Konstantinopel (wörtlich: griechisch "Pferdepfad") wurde 203 n. Chr. von Kaiser Septimius Severus errichtet. Das Gebäude war ein gewaltiger Veranstaltungsplatz für Wagenrennen. Obwohl die Kunst des Wagenlenkens im Hippodrom große Fortschritte machte - hier wurden die ersten Vierspännerrennen abgehalten - stammt viel von seiner Berühmtheit aus seiner Verwicklung in eines der schrecklichsten Massaker der byzantinischen Geschichte. Während des Nika-Aufstands, einer brutalen Revolte rivalisierender Parteien, wurden nahezu 30000 Aufständische im Hippodrom von byzantinischen Truppen getötet.</German>
@@ -29562,7 +29735,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Spanish>El hipódromo (en griego "camino de los caballos") de Constantinopla fue erigido en el año 203 d. C. por el emperador Septimo Severo. Era un colosal escenario en el que se celebraban carreras de carros. Aunque las carreras vivieron grandes avances en el hipódromo (se llegaron a celebrar carreras de cuatro caballos), parte de su fama derivaría de su relación con una de las más terribles masacres de la historia de Bizancio. Durante la revuelta de Nika, un brutal levantamiento entre facciones rivales, casi 30.000 personas fueron asesinadas en el interior del hipódromo por las tropas bizantinas.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HIPPODROME_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_BYZANTINE_HIPPODROME_STRATEGY</Tag>
 		<English>The [COLOR_BUILDING_TEXT]Hippodrome[COLOR_REVERT], the Byzantine replacement for the [COLOR_BUILDING_TEXT]Theatre[COLOR_REVERT], provides a bonus to happiness, an extra happiness for access to [COLOR_HIGHLIGHT_TEXT]Horses[COLOR_REVERT] and an increased happiness bonus from money dedicated to your cultural slider.</English>
 		<French>L'[COLOR_BUILDING_TEXT]Hippodrome[COLOR_REVERT] (bâtiment byzantin qui remplace le [COLOR_BUILDING_TEXT]Théâtre[COLOR_REVERT]) confère un bonus de bonheur, un visage heureux supplémentaire dû à l'accès aux [COLOR_HIGHLIGHT_TEXT]Chevaux[COLOR_REVERT] et un bonus de bonheur augmenté en raison de l'argent consacré à votre réglette de culture. </French>
 		<German>Das [COLOR_BUILDING_TEXT]Hippodrom[COLOR_REVERT], die byzantinische Variante des [COLOR_BUILDING_TEXT]Theaters[COLOR_REVERT], gewährt einen Zufriedenheitsbonus, einen zusätzlichen Zufriedenheitsbonus für den Zugang zu [COLOR_HIGHLIGHT_TEXT]Pferden[COLOR_REVERT] sowie einen erhöhten Zufriedenheitsbonus für Goldinvestitionen in die Regelung des Kulturwertes.</German>
@@ -29572,60 +29745,74 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNSANCTIONED_ASSASSINS_DEN</Tag>
 		<English>Assassin's Den (Unsanctioned)</English>
+		<French>Assassin's Den (Impuni)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNSANCTIONED_BANDITS_HIDEOUT1</Tag>
 		<English>Thieves' Hideout (Unsanctioned)</English>
+		<French>Repaire de Bandits (Impuni)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNSANCTIONED_BANDITS_HIDEOUT2</Tag>
 		<English>Rogues' Hideout (Unsanctioned)</English>
+		<French>Repaire de Maraudeurs (Impuni)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNSANCTIONED_BANDITS_HIDEOUT3</Tag>
 		<English>Burglars' Hideout (Unsanctioned)</English>
+		<French>Repaire de Contrebandiers (Impuni)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNSANCTIONED_BLACK_HAT_HIDEOUT</Tag>
 		<English>Black Hat Hideout (Unsanctioned)</English>
+		<French>Repaire de "Chapeaux Noirs" (Impuni)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNSANCTIONED_CONSPIRATORS_HIDEOUT</Tag>
 		<English>Conspirators' Hideout (Unsanctioned)</English>
+		<French>Repaire de Conspirateurs (Impuni)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNSANCTIONED_LOANSHARK</Tag>
 		<English>Loan Shark (Unsanctioned)</English>
+		<French>Usuriers (Impuni)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNSANCTIONED_MOB_STOREFRONT</Tag>
 		<English>Mob Storefront (Unsanctioned)</English>
+		<French>Vitrine de Motos (Impuni)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNSANCTIONED_MOTORCYCLE_CLUB</Tag>
 		<English>Motorcycle Club (Unsanctioned)</English>
+		<French>Club de Bikers (Impuni)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALBUILDING_GROUP_PREHISTORIC_CAVES</Tag>
 		<English>Prehistoric Caves</English>
+		<French>Cavernes Préhistoriques</French>
 		<German>Prähistorische Höhlen</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALBUILDING_GROUP_LEGENDARY_LANDSCAPES</Tag>
 		<English>Legendary Landscapes</English>
+		<French>Paysages Légendaires</French>
 		<German>Legendäre Landschaften</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALBUILDING_GROUP_DELUXE_WINERIES</Tag>
 		<English>Deluxe Wineries</English>
+		<French>Vignes De Luxe</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DISNEYLAND_EFFECT</Tag>
 		<English>Effect - Disneyland</English>
+		<French>Effet - Disneyland</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DISNEYLAND_EFFECT_PEDIA</Tag>
 		<English>Disneyland influence</English>
+		<French>Influence de Disneyland</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DISNEYLAND_EFFECT_STRATEGY</Tag>
@@ -29634,10 +29821,12 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_VALLEY_KINGS_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Build Sphinx and Pyramids in the same city to get Valley of the Kings wonder.</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Construisez Sphinx et Pyramides dans la même ville pour obtenir la merveille de la Vallée des Rois.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LASVEGASSTRIP_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Build Circus Circus Casino and Luxor Casino, and avoid building Monte Carlo Casino in the same city, if you want to build Las Vegas Strip wonder.</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Construisez le Circus Circus Casino et le Luxor Casino, et évitez de construire le Monte Carlo Casino dans la même ville, si vous voulez construire le Las Vegas Strip wonder.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AIRPORT_PEDIA</Tag>
@@ -29944,7 +30133,7 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 		<Spanish>La epopeya de Gilgamesh narra las aventuras de este héroe de Oriente Medio. De especial interés para los estudiosos de la Biblia, el documento fue encontrado entre las ruinas de Nínive. Este relato fue escrito aproximadamente en el 2000 a. C. en doce tablillas con más de tres mil versos. Gilgamesh fue un rey de Uruk, que en la actualidad se encuentra dentro de las fronteras de Irak.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_IRONWORKS_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_IRON_WORKS_PEDIA</Tag>
 		<English>As mankind's dependence on metals increased through the ages, it became very important to cheaply and effectively separate the base metal from impurities. The process of smelting, through the use of a structure called a blast furnace, achieved just that. Using carbon dioxide created from oxidized coke to absorb the oxygen from the molten iron, it leaves the metal slag to sink to the bottom of the furnace. This separation allows for a pure iron to be derived, which is then used for numerous purposes, including the creation of steel.</English>
 		<French>Au fil du temps, les hommes sont devenus plus dépendants des métaux et il est donc désormais essentiel de débarrasser efficacement et à faible coût les métaux non précieux de leurs impuretés. C'est ce que permet de faire le processus d'extraction par fusion qui se produit dans une structure appelée haut-fourneau. Le dioxyde de carbone créé par le coke oxydé permet d'absorber l'oxygène contenu dans le fer fondu, les scories tombant alors au fond du fourneau. Cette séparation permet d'obtenir des dérivés de fer pur qui peuvent servir à divers usages, et notamment à la création de l'acier.</French>
 		<German>Je mehr die Menschheit im Laufe der Jahrhunderte von Metallen abhängig wurde, desto wichtiger war es, diese auf möglichst preiswerte und effiziente Weise von anderen Substanzen separieren zu können. Das Schmelzverfahren im Hochofen war die Lösung für dieses Problem: Das aus oxidierter Kohle gewonnene Kohlendioxid absorbiert den Sauerstoff aus dem geschmolzenen Eisen, und die daraufhin verbleibende Metallschlacke sinkt auf den Boden des Ofens. Dieser Abscheidungsprozess ermöglicht die Gewinnung reinen Eisens, das dann für zahlreiche Zwecke verwendet werden kann, einschließlich der Stahlherstellung.</German>
@@ -30618,14 +30807,17 @@ As the interrogation progresses, a handle and ratchet mechanism attached to the 
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAVE_EFFECT</Tag>
 		<English>Cave exists near a city</English>
+		<French>Cave exists near a city</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAVE_EFFECT_PEDIA</Tag>
 		<English>This building is a game system building. It identifies when your nation has teh correct terrain feature near to one of your cities needed for a line of normal buildings.</English>
+		<French>This building is a game system building. It identifies when your nation has teh correct terrain feature near to one of your cities needed for a line of normal buildings.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_LASCAUX_EFFECT</Tag>
 		<English>Lascaux Caves Effect</English>
+		<French>Lascaux Caves Effect</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BIODOME</Tag>
@@ -30934,7 +31126,6 @@ e.g. The chance per rival is 1 in 75 turns with "smallest/fastest", and 1 in 790
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_NPT_STRATEGY</Tag>
 		<English>N/a</English>
-		<Polish>,</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_NPT_PEDIA</Tag>
@@ -30948,7 +31139,6 @@ e.g. The chance per rival is 1 in 75 turns with "smallest/fastest", and 1 in 790
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_IVY_MIKE_STRATEGY</Tag>
 		<English>N/a</English>
-		<Polish>.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROJECT_IVY_MIKE_PEDIA</Tag>
@@ -31049,6 +31239,7 @@ e.g. The chance per rival is 1 in 75 turns with "smallest/fastest", and 1 in 790
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GREAT_ZIMBABWE_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Cities Grow when Building With [ICON_FOOD]</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Les villes grandissent en construisant avec [ICON_FOOD]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THE_MOTHERLAND_CALLS</Tag>
@@ -31068,6 +31259,7 @@ e.g. The chance per rival is 1 in 75 turns with "smallest/fastest", and 1 in 790
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_THE_MOTHERLAND_CALLS_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Conscripts One Unit Per City When A Rival Declares War On You , +1[ICON_HAPPY] for 10 turns in All Cities When A Rival Declares War On You</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Conscrit une unité par ville lorsqu'un rival vous déclare la guerre, +1[ICON_HAPPY] pendant 10 tours dans toutes les villes lorsqu'un rival vous déclare la guerre</French>
 		<Polish>[ICON_BULLET]Werbuje jedna jednoste na miasto w momencie wypowiedzenia wojny Tobie przez obce Imperium/ [NEWLINE][ICON_BULLET]+1[ICON_HAPPY] na kazde 10 tur we wszystkich miastach w czasie wojny z wrogim Imperium.</Polish>
 	</TEXT>
 	<TEXT>
@@ -31109,6 +31301,7 @@ e.g. The chance per rival is 1 in 75 turns with "smallest/fastest", and 1 in 790
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_REICHSTAG_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Starts a Golden Age when another civilization becomes your vassal</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Commence un âge d'or lorsqu'une autre civilisation devient votre vassal</French>
 		<Polish>[ICON_BULLET]Kiedy inna cywilizacja zostaje Twoim wasalem w Twoim Imperium oglaszana jest Zlota Era</Polish>
 	</TEXT>
 	<TEXT>
@@ -32228,6 +32421,7 @@ e.g. The chance per rival is 1 in 75 turns with "smallest/fastest", and 1 in 790
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ROUTE_66_HELP</Tag>
 		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Places Route 66 Terminus in your largest city on the same continent, Builds Highway Between This City and Route 66 Terminus</English>
+		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Place le Terminus de la Route 66 dans votre plus grande ville du même continent, construit une autoroute entre cette ville et le Terminus de la Route 66</French>
 		<Italian>[ICON_BULLET]Piazza un Termine della Route 66 nella città più grande dello stesso continente[NEWLINE][ICON_BULLET]Costruisce un'autostrada tra questa città e il termine della Route 66</Italian>
 	</TEXT>
 	<TEXT>

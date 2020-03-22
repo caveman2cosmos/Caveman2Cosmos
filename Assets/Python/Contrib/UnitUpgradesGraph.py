@@ -75,11 +75,11 @@ class UnitUpgradesGraph:
 		return GC.getPromotionInfo(e).getType()
 
 	def getGraphEdges(self, graph):
-		for unitA in graph.iterkeys():
-			for iUnitClass in xrange(GC.getNumUnitClassInfos()):
-				unitB = GC.getUnitClassInfo(iUnitClass).getDefaultUnitIndex()
-				if GC.getUnitInfo(unitA).getUpgradeUnitClass(iUnitClass):
-					self.addUpgradePath(graph, unitA, unitB)
+		for iUnitA in graph.iterkeys():
+			CvUnitInfoA = GC.getUnitInfo(iUnitA)
+			for i in range(CvUnitInfoA.getNumUnitUpgrades()):
+				iUnitB = CvUnitInfoA.getUnitUpgrade(i)
+				self.addUpgradePath(graph, iUnitA, iUnitB)
 
 	def placeOnScreen(self, screen, unit, xPos, yPos):
 		screen.setImageButtonAt(self.pediaScreen.getNextWidgetName(), self.upgradesList, GC.getUnitInfo(unit).getButton(), xPos, yPos, self.buttonSize, self.buttonSize, WidgetTypes.WIDGET_PEDIA_JUMP_TO_UNIT, unit, 1)
@@ -581,36 +581,32 @@ class BuildingsGraph(UnitUpgradesGraph):
 			buildingReplacesA = []
 			buildingReplacesAList = []
 			#Create a list of buildings that replace buildingA
-			for numB in xrange(GC.getNumBuildingClassInfos()):
-				if GC.getBuildingInfo(buildingA).isReplaceBuildingClass(numB):
+			for numB in xrange(GC.getNumBuildingInfos()):
+				if GC.getBuildingInfo(buildingA).isReplaceBuilding(numB):
 					buildingReplacesA.append(numB)
 			#Create a list of buildings that replace the list buildingReplacesA
 			for numB in buildingReplacesA:
-				buildingB = GC.getBuildingClassInfo(numB).getDefaultBuildingIndex()
-				if GC.getBuildingInfo(buildingB) is None:
+				if GC.getBuildingInfo(numB) is None:
 					continue
-				for numC in xrange(GC.getNumBuildingClassInfos()):
-					if (GC.getBuildingInfo(buildingB).isReplaceBuildingClass(numC)):
+				for numC in xrange(GC.getNumBuildingInfos()):
+					if (GC.getBuildingInfo(numB).isReplaceBuilding(numC)):
 						if (buildingReplacesAList.count(numC) == 0):
 							buildingReplacesAList.append(numC)
 			#Create a deepcopy
 			replacesA = copy.deepcopy(buildingReplacesA)
 			#If the building is replaced by a building that replaces A, remove it from the path
 			for numB in replacesA:
-				buildingB = GC.getBuildingClassInfo(numB).getDefaultBuildingIndex()
-				if GC.getBuildingInfo(buildingB) is None:
+				if GC.getBuildingInfo(numB) is None:
 					continue
 				for numC in buildingReplacesAList:
-					buildingC = GC.getBuildingClassInfo(numC).getDefaultBuildingIndex()
-					if GC.getBuildingInfo(buildingC) is None:
+					if GC.getBuildingInfo(numC) is None:
 						continue
 					if numC == numB:
 						buildingReplacesA.remove(numB)
 						break
 			#Generate graph
 			for numB in buildingReplacesA:
-				buildingB = GC.getBuildingClassInfo(numB).getDefaultBuildingIndex()
-				self.addUpgradePath(graph, buildingA, buildingB)
+				self.addUpgradePath(graph, buildingA, numB)
 
 	def unitToString(self, unit):
 		return GC.getBuildingInfo(unit).getDescription() + ":%d"%(unit, )

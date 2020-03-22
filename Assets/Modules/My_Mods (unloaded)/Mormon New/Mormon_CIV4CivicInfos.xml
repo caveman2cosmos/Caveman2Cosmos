@@ -11,7 +11,7 @@
 			<Type>CIVIC_REPUBLIC</Type>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDINGCLASS_MORMON_TEMPLE</BuildingType>
+					<BuildingType>BUILDING_MORMON_TEMPLE</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -43,17 +43,17 @@
 			<Type>CIVIC_DEMOCRACY</Type>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDINGCLASS_MORMON_TEMPLE</BuildingType>
+					<BuildingType>BUILDING_MORMON_TEMPLE</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_GOVERNMENT</CivicOptionType>
-			<Type>CIVIC_FASCIST</Type>
+			<Type>CIVIC_TOTALITARIANISM</Type>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDINGCLASS_MORMON_TEMPLE</BuildingType>
+					<BuildingType>BUILDING_MORMON_TEMPLE</BuildingType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -91,17 +91,17 @@
 			<Type>CIVIC_FREE_CHURCH</Type>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDINGCLASS_MORMON_TEMPLE</BuildingType>
+					<BuildingType>BUILDING_MORMON_TEMPLE</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_RELIGION</CivicOptionType>
-			<Type>CIVIC_ATHEIST</Type>
+			<Type>CIVIC_ANTIRELIGION</Type>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDINGCLASS_MORMON_TEMPLE</BuildingType>
+					<BuildingType>BUILDING_MORMON_TEMPLE</BuildingType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -111,7 +111,7 @@
 			<Type>CIVIC_CHARITY</Type>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDINGCLASS_BISHOPS_STOREHOUSE</BuildingType>
+					<BuildingType>BUILDING_BISHOPS_STOREHOUSE</BuildingType>
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
@@ -121,37 +121,37 @@
 			<Type>CIVIC_CHURCH</Type>
 			<BuildingHealthChanges>
 				<BuildingHealthChange>
-					<BuildingType>BUILDINGCLASS_MORMON_TEMPLE</BuildingType>
+					<BuildingType>BUILDING_MORMON_TEMPLE</BuildingType>
 					<iHealthChange>1</iHealthChange>
 				</BuildingHealthChange>
 			</BuildingHealthChanges>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_EDUCATION</CivicOptionType>
-			<Type>CIVIC_RELIGIOUS_TRAINING</Type>
-			<BuildingClassProductionModifiers>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_MISSIONARY_TRAINING_CENTER</BuildingClassType>
+			<Type>CIVIC_RELIGIOUS</Type>
+			<BuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_MISSIONARY_TRAINING_CENTER</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
-				</BuildingClassProductionModifier>
-			</BuildingClassProductionModifiers>
+				</BuildingProductionModifier>
+			</BuildingProductionModifiers>
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_LANGUAGE</CivicOptionType>
-			<Type>CIVIC_EDUCATION_SPEAK</Type>
-			<BuildingClassProductionModifiers>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_MISSIONARY_TRAINING_CENTER</BuildingClassType>
+			<Type>CIVIC_CODIFIED</Type>
+			<BuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_MISSIONARY_TRAINING_CENTER</BuildingType>
 					<iProductionModifier>20</iProductionModifier>
-				</BuildingClassProductionModifier>
-			</BuildingClassProductionModifiers>
+				</BuildingProductionModifier>
+			</BuildingProductionModifiers>
 		</CivicInfo>
 		<CivicInfo>
-			<CivicOptionType>CIVICOPTION_LABOR</CivicOptionType>
-			<Type>CIVIC_SOCIALISM</Type>
+			<CivicOptionType>CIVICOPTION_WORKFORCE</CivicOptionType>
+			<Type>CIVIC_COLLECTIVIST</Type>
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
-					<BuildingType>BUILDINGCLASS_MORMON_TEMPLE</BuildingType>
+					<BuildingType>BUILDING_MORMON_TEMPLE</BuildingType>
 					<iHappinessChange>-1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>

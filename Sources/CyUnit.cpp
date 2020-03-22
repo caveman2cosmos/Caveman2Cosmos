@@ -489,10 +489,10 @@ int CyUnit::upgradePrice(int /*UnitTypes*/ eUnit)
 	return m_pUnit ? m_pUnit->upgradePrice((UnitTypes) eUnit) : -1;
 }
 
-bool CyUnit::upgradeAvailable(int /*UnitTypes*/ eFromUnit, int /*UnitClassTypes*/ eToUnitClass, int iCount)
+bool CyUnit::upgradeAvailable(int /*UnitTypes*/ eFromUnit, int /*UnitTypes*/ eToUnit, int iCount)
 {
 	FAssert(iCount == 0);
-	return m_pUnit ? m_pUnit->upgradeAvailable((UnitTypes) eFromUnit, (UnitClassTypes) eToUnitClass) : false;
+	return m_pUnit ? m_pUnit->upgradeAvailable((UnitTypes) eFromUnit, (UnitTypes) eToUnit) : false;
 }
 
 bool CyUnit::canUpgrade(int /*UnitTypes*/ eUnit, bool bTestVisible)			
@@ -520,9 +520,9 @@ int /*SpecialUnitTypes*/ CyUnit::getSpecialUnitType()
 	return m_pUnit ? (int) m_pUnit->getSpecialUnitType() : (int) NO_SPECIALUNIT;
 }
 
-int /*UnitTypes*/ CyUnit::getCaptureUnitType(int /*CivilizationTypes*/ eCivilization)
+int /*UnitTypes*/ CyUnit::getCaptureUnitType()
 {
-	return m_pUnit ? m_pUnit->getCaptureUnitType((CivilizationTypes)eCivilization) : -1;
+	return m_pUnit ? m_pUnit->getCaptureUnitType() : -1;
 }
 
 int /*UnitCombatTypes*/ CyUnit::getUnitCombatType()
@@ -943,11 +943,6 @@ int CyUnit::defenseXPValue()
 	return m_pUnit ? m_pUnit->defenseXPValue() : -1;
 }
 
-int CyUnit::maxXPValue()
-{
-	return m_pUnit ? m_pUnit->maxXPValue() : -1;
-}
-
 int CyUnit::firstStrikes()
 {
 	return m_pUnit ? m_pUnit->firstStrikes() : -1;
@@ -1288,14 +1283,14 @@ int CyUnit::featureDefenseModifier(int /*FeatureTypes*/ eFeature)
 	return m_pUnit ? m_pUnit->featureDefenseModifier((FeatureTypes) eFeature) : -1;
 }
 
-int CyUnit::unitClassAttackModifier(int /*UnitClassTypes*/ eUnitClass)
+int CyUnit::unitAttackModifier(int /*UnitTypes*/ eUnit)
 {
-	return m_pUnit ? m_pUnit->unitClassAttackModifier((UnitClassTypes) eUnitClass) : -1;
+	return m_pUnit ? m_pUnit->unitAttackModifier((UnitTypes) eUnit) : -1;
 }
 
-int CyUnit::unitClassDefenseModifier(int /*UnitClassTypes*/ eUnitClass)
+int CyUnit::unitDefenseModifier(int /*UnitTypes*/ eUnit)
 {
-	return m_pUnit ? m_pUnit->unitClassDefenseModifier((UnitClassTypes) eUnitClass) : -1;
+	return m_pUnit ? m_pUnit->unitDefenseModifier((UnitTypes) eUnit) : -1;
 }
 
 int CyUnit::unitCombatModifier(int /*UnitCombatTypes*/ eUnitCombat)
@@ -1407,19 +1402,19 @@ void CyUnit::setHotKeyNumber(int iNewValue)
 
 int CyUnit::getX()
 {
-	return m_pUnit ? m_pUnit->getX_INLINE() : -1;
+	return m_pUnit ? m_pUnit->getX() : -1;
 }
 
 int CyUnit::getY()
 {
-	return m_pUnit ? m_pUnit->getY_INLINE() : -1;
+	return m_pUnit ? m_pUnit->getY() : -1;
 }
 
 void CyUnit::setXY(int iX, int iY, bool bGroup, bool bUpdate, bool bShow)
 {
 	if (m_pUnit)
 	{
-		//GC.getGameINLINE().logOOSSpecial(23, m_pUnit->getID(), iX, iY);
+		//GC.getGame().logOOSSpecial(23, m_pUnit->getID(), iX, iY);
 		return m_pUnit->setXY(iX, iY, bGroup, bUpdate, bShow);
 	}
 }
@@ -1952,7 +1947,7 @@ void CyUnit::setPromotionReady(bool bNewValue)
 
 int CyUnit::getOwner()
 {
-	return m_pUnit ? m_pUnit->getOwnerINLINE() : -1;
+	return m_pUnit ? m_pUnit->getOwner() : -1;
 }
 
 int CyUnit::getVisualOwner()
@@ -1973,11 +1968,6 @@ int CyUnit::getTeam()
 int /*UnitTypes*/ CyUnit::getUnitType()
 {
 	return m_pUnit ? (int)m_pUnit->getUnitType() : -1;
-}
-
-int /*UnitClassTypes*/ CyUnit::getUnitClassType()
-{
-	return m_pUnit ? (int)m_pUnit->getUnitClassType() : -1;
 }
 
 int /*UnitTypes*/ CyUnit::getLeaderUnitType()

@@ -101,7 +101,7 @@ class CvWorldBuilderScreen:
 		self.m_iOtherPlayer = -1
 		self.m_iEventUnit = -1
 		self.m_iTechShareCivs = 1
-		self.m_iBuildingClass = 0
+		self.m_iBuildingType = 0
 		self.m_iBuildingModifier = 0
 		self.m_iRevealMode = 2
 		self.m_iBrushSize = 1
@@ -191,7 +191,7 @@ class CvWorldBuilderScreen:
 		self.m_iOtherPlayer = -1
 		self.m_iEventUnit = -1
 		self.m_iTechShareCivs = 1
-		self.m_iBuildingClass = 0
+		self.m_iBuildingType = 0
 		self.m_iBuildingModifier = 0
 		self.m_iRevealMode = 2
 		self.m_iBrushSize = 1
@@ -820,16 +820,16 @@ class CvWorldBuilderScreen:
 		iIndex = int(argsList[0])
 		if iIndex == 1:
 			for i in xrange(GC.getNumBuildingInfos()):
-				if isNationalWonderClass(GC.getBuildingInfo(i).getBuildingClassType()) or isWorldWonderClass(GC.getBuildingInfo(i).getBuildingClassType()): continue
+				if isNationalWonder(i) or isWorldWonder(i): continue
 				if self.m_pActivePlot.getPlotCity().canConstruct(i, True, True, True):
 					self.m_pActivePlot.getPlotCity().setNumRealBuilding(i, 1)
 		elif iIndex == 2:
 			for i in xrange(GC.getNumBuildingInfos()):
-				if isNationalWonderClass(GC.getBuildingInfo(i).getBuildingClassType()) or isWorldWonderClass(GC.getBuildingInfo(i).getBuildingClassType()): continue
+				if isNationalWonder(i) or isWorldWonder(i): continue
 				self.m_pActivePlot.getPlotCity().setNumRealBuilding(i, 0)
 		elif iIndex == 3:
 			for i in xrange(GC.getNumBuildingInfos()):
-				if isNationalWonderClass(GC.getBuildingInfo(i).getBuildingClassType()) or isWorldWonderClass(GC.getBuildingInfo(i).getBuildingClassType()): continue
+				if isNationalWonder(i) or isWorldWonder(i): continue
 				(loopCity, iter) = GC.getPlayer(self.m_iCurrentPlayer).firstCity(False)
 				while(loopCity):
 					if self.m_pActivePlot.getPlotCity().isHasBuilding(i):
@@ -931,8 +931,8 @@ class CvWorldBuilderScreen:
 		self.m_pActivePlot.getPlotCity().changeFreeBonus(int(strName), int(iIndex) - self.m_pActivePlot.getPlotCity().getFreeBonus(int(strName)))
 		return 1
 
-	def handleCityEditBuildingClassCB(self, argsList):
-		self.m_iBuildingClass = int(argsList[0])
+	def handleCityEditBuildingCB(self, argsList):
+		self.m_iBuildingType = int(argsList[0])
 		self.setCityEditInfo(True)
 		return 1
 
@@ -941,18 +941,17 @@ class CvWorldBuilderScreen:
 		self.setCityEditInfo(True)
 		return 1
 
-	def handleCityEditModifyBuildingClassCB(self, argsList):
-		lBuildingClass = []
-		for i in xrange(GC.getNumBuildingClassInfos()):
-			lBuildingClass.append(GC.getBuildingClassInfo(i).getDescription() + "_Platy_" + str(i))
-		lBuildingClass.sort()
-		iBuildingClass = int(lBuildingClass[self.m_iBuildingClass][lBuildingClass[self.m_iBuildingClass].find("_Platy_") +7:])
+	def handleCityEditModifyBuildingCB(self, argsList):
+		lBuilding = []
+		for i in xrange(GC.getNumBuildingInfos()):
+			lBuilding.append(GC.getBuildingInfo(i).getDescription() + "_Platy_" + str(i))
+		lBuilding.sort()
+		iBuilding = int(lBuilding[self.m_iBuildingType][lBuilding[self.m_iBuildingType].find("_Platy_") +7:])
 		pPlayer = GC.getPlayer(self.m_iCurrentPlayer)
-		iBuilding = GC.getCivilizationInfo(pPlayer.getCivilizationType()).getCivilizationBuildings(iBuildingClass)
 		if self.m_iBuildingModifier < 3:
-			self.m_pActivePlot.getPlotCity().setBuildingYieldChange(iBuildingClass, self.m_iBuildingModifier, int(argsList[0]))
+			self.m_pActivePlot.getPlotCity().setBuildingYieldChange(iBuilding, self.m_iBuildingModifier, int(argsList[0]))
 		else:
-			self.m_pActivePlot.getPlotCity().setBuildingCommerceChange(iBuildingClass, self.m_iBuildingModifier - 3, int(argsList[0]))
+			self.m_pActivePlot.getPlotCity().setBuildingCommerceChange(iBuilding, self.m_iBuildingModifier - 3, int(argsList[0]))
 		self.setCityEditInfo(True)
 		return 1
 
@@ -967,14 +966,11 @@ class CvWorldBuilderScreen:
 		for iUnit in xrange(GC.getNumUnitInfos()):
 			if pCity.canTrain(iUnit, True, False, False, False):
 				if iCount == iIndex:
-					iUnitClass = GC.getUnitInfo(iUnit).getUnitClassType()
-					if GC.getPlayer(self.m_iCurrentPlayer).getUnitClassCountPlusMaking(iUnitClass) == GC.getUnitClassInfo(iUnitClass).getMaxPlayerInstances():
+					CvUnitInfo = GC.getUnitInfo(iUnit)
+					if GC.getPlayer(self.m_iCurrentPlayer).getUnitCountPlusMaking(iUnit) == CvUnitInfo.getMaxPlayerInstances():
 						self.setCityEditInfo(True)
 						return 1
-					if GC.getTeam(self.m_iCurrentTeam).getUnitClassCountPlusMaking(iUnitClass) == GC.getUnitClassInfo(iUnitClass).getMaxTeamInstances():
-						self.setCityEditInfo(True)
-						return 1
-					if GC.getTeam(self.m_iCurrentTeam).getUnitClassCountPlusMaking(iUnitClass) == GC.getUnitClassInfo(iUnitClass).getMaxGlobalInstances():
+					if GC.getTeam(self.m_iCurrentTeam).getUnitCountPlusMaking(iUnit) == CvUnitInfo.getMaxGlobalInstances():
 						self.setCityEditInfo(True)
 						return 1
 					pCity.pushOrder(OrderTypes.ORDER_TRAIN, iUnit , -1, False, True, False, True)
@@ -984,14 +980,13 @@ class CvWorldBuilderScreen:
 		for iBuilding in xrange(GC.getNumBuildingInfos()):
 			if pCity.canConstruct(iBuilding, True, False, False):
 				if iCount == iIndex:
-					iBuildingClass = GC.getBuildingInfo(iBuilding).getBuildingClassType()
-					if GC.getPlayer(self.m_iCurrentPlayer).getBuildingClassCountPlusMaking(iBuildingClass) == GC.getBuildingClassInfo(iBuildingClass).getMaxPlayerInstances():
+					if GC.getPlayer(self.m_iCurrentPlayer).getBuildingCountPlusMaking(iBuilding) == GC.getBuildingInfo(iBuilding).getMaxPlayerInstances():
 						self.setCityEditInfo(True)
 						return 1
-					if GC.getTeam(self.m_iCurrentTeam).getBuildingClassCountPlusMaking(iBuildingClass) == GC.getBuildingClassInfo(iBuildingClass).getMaxTeamInstances():
+					if GC.getTeam(self.m_iCurrentTeam).getBuildingCountPlusMaking(iBuilding) == GC.getBuildingInfo(iBuilding).getMaxTeamInstances():
 						self.setCityEditInfo(True)
 						return 1
-					if GC.getTeam(self.m_iCurrentTeam).getBuildingClassCountPlusMaking(iBuildingClass) == GC.getBuildingClassInfo(iBuildingClass).getMaxGlobalInstances():
+					if GC.getTeam(self.m_iCurrentTeam).getBuildingCountPlusMaking(iBuilding) == GC.getBuildingInfo(iBuilding).getMaxGlobalInstances():
 						self.setCityEditInfo(True)
 						return 1
 					pCity.pushOrder(OrderTypes.ORDER_CONSTRUCT, iBuilding , -1, False, True, False, True)
@@ -2773,30 +2768,30 @@ class CvWorldBuilderScreen:
 		self.m_tabCtrlEdit.addSectionSpinner("CityEditGPRateCB", "CvScreensInterface", "WorldBuilderHandleCityEditGPRateCB", "CityEditGPRate", 0, 0, 1000, 1, pCity.getGreatPeopleRate(), 0, 0)
 ## Modify Buildings ##
 		self.m_tabCtrlEdit.addSectionLabel(TRNSLTR.getText("TXT_KEY_WB_MODIFIED_BUILDINGS",()),  0)
-		lBuildingClass = []
-		for i in xrange(GC.getNumBuildingClassInfos()):
-			lBuildingClass.append(GC.getBuildingClassInfo(i).getDescription() + "_Platy_" + str(i))
-		lBuildingClass.sort()
+		lBuilding = []
+		for i in xrange(GC.getNumBuildingInfos()):
+			lBuilding.append(GC.getBuildingInfo(i).getDescription() + "_Platy_" + str(i))
+		lBuilding.sort()
 
 		strTest = ()
-		for iBC in xrange(len(lBuildingClass)):
-			i = lBuildingClass[iBC]
-			sBuildingClass = i[:i.find("_Platy_")]
-			iBuildingClass = int(i[i.find("_Platy_") +7:])
-			strTest += (sBuildingClass,)
-		self.m_tabCtrlEdit.addSectionDropdown("CityEditBuildingClass", strTest, "CvScreensInterface", "WorldBuilderHandleCityEditBuildingClassCB", "iBuildingClass", 0, self.m_iBuildingClass)
+		for iBC in xrange(len(lBuilding)):
+			i = lBuilding[iBC]
+			sBuilding = i[:i.find("_Platy_")]
+			iBuilding = int(i[i.find("_Platy_") +7:])
+			strTest += (sBuilding,)
+		self.m_tabCtrlEdit.addSectionDropdown("CityEditBuilding", strTest, "CvScreensInterface", "WorldBuilderHandleCityEditBuildingCB", "iBuilding", 0, self.m_iBuildingType)
 		strTest = ()
 		for i in xrange(3):
 			strTest += (GC.getYieldInfo(i).getDescription(),)
 		for i in xrange(4):
 			strTest += (GC.getCommerceInfo(i).getDescription(),)
 		self.m_tabCtrlEdit.addSectionDropdown("CityEditModifer", strTest, "CvScreensInterface", "WorldBuilderHandleCityEditModiferCB", "CityEditModifer", 0, self.m_iBuildingModifier)
-		iBuildingClass = int(lBuildingClass[self.m_iBuildingClass][lBuildingClass[self.m_iBuildingClass].find("_Platy_") +7:])
+		iBuilding = int(lBuilding[self.m_iBuildingType][lBuilding[self.m_iBuildingType].find("_Platy_") +7:])
 		if self.m_iBuildingModifier < 3:
-			iModifier = pCity.getBuildingYieldChange(iBuildingClass, self.m_iBuildingModifier)
+			iModifier = pCity.getBuildingYieldChange(iBuilding, self.m_iBuildingModifier)
 		else:
-			iModifier = pCity.getBuildingCommerceChange(iBuildingClass, self.m_iBuildingModifier - 3)
-		self.m_tabCtrlEdit.addSectionSpinner("CityEditModifyBuildingClassCB", "CvScreensInterface", "WorldBuilderHandleCityEditModifyBuildingClassCB", "CityEditModifyBuildingClass", 0, -100, 100, 1, iModifier, 0, 0)
+			iModifier = pCity.getBuildingCommerceChange(iBuilding, self.m_iBuildingModifier - 3)
+		self.m_tabCtrlEdit.addSectionSpinner("CityEditModifyBuildingCB", "CvScreensInterface", "WorldBuilderHandleCityEditModifyBuildingCB", "CityEditModifyBuilding", 0, -100, 100, 1, iModifier, 0, 0)
 ## Current Production ##
 		self.m_tabCtrlEdit.addSectionLabel(TRNSLTR.getText("TXT_KEY_WB_CURRENT_PRODUCTION",()),  0)
 		strTest = (TRNSLTR.getText("TXT_KEY_WB_NONE",()),)
@@ -2877,9 +2872,8 @@ class CvWorldBuilderScreen:
 
 		lBuildings = []
 		for i in xrange(GC.getNumBuildingInfos()):
-			BuildingInfo = GC.getBuildingInfo(i)
-			if isNationalWonderClass(BuildingInfo.getBuildingClassType()) or isTeamWonderClass(BuildingInfo.getBuildingClassType()) or isWorldWonderClass(BuildingInfo.getBuildingClassType()): continue
-			lBuildings.append(BuildingInfo.getDescription() + "_Platy_" + str(i))
+			if isNationalWonder(i) or isTeamWonder(i) or isWorldWonder(i): continue
+			lBuildings.append(GC.getBuildingInfo(i).getDescription() + "_Platy_" + str(i))
 		lBuildings.sort()
 
 		iColumnLength = (len(lBuildings) +2) /iNumColumns
@@ -2918,13 +2912,12 @@ class CvWorldBuilderScreen:
 		lTeamWonders = []
 		lWorldWonders = []
 		for i in xrange(GC.getNumBuildingInfos()):
-			BuildingInfo = GC.getBuildingInfo(i)
-			if isNationalWonderClass(BuildingInfo.getBuildingClassType()):
-				lNationalWonders.append(BuildingInfo.getDescription() + "_Platy_" + str(i))
-			elif isTeamWonderClass(BuildingInfo.getBuildingClassType()):
-				lNationalWonders.append(BuildingInfo.getDescription() + "_Platy_" + str(i))
-			elif isWorldWonderClass(BuildingInfo.getBuildingClassType()):
-				lWorldWonders.append(BuildingInfo.getDescription() + "_Platy_" + str(i))
+			if isNationalWonder(i):
+				lNationalWonders.append(GC.getBuildingInfo(i).getDescription() + "_Platy_" + str(i))
+			elif isTeamWonder(i):
+				lNationalWonders.append(GC.getBuildingInfo(i).getDescription() + "_Platy_" + str(i))
+			elif isWorldWonder(i):
+				lWorldWonders.append(GC.getBuildingInfo(i).getDescription() + "_Platy_" + str(i))
 		lNationalWonders.sort()
 		lTeamWonders.sort()
 		lWorldWonders.sort()

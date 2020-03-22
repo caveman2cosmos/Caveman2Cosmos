@@ -26,7 +26,7 @@ FD="deps\fastdep\fastdep.exe"
 #### You shouldn't need to modify anything beyond this point ####
 #################################################################
 
-GAME_OPTIONS= /D_MOD_SENTRY /D_MOD_FRACTRADE /D_MOD_GOVWORKERS /DLOG_AI /D_MOD_GWARM /D_MOD_SHAM_SPOILER /DC2C_BUILD /DMULTI_FEATURE_MOD
+GAME_OPTIONS= /D_MOD_SENTRY /D_MOD_FRACTRADE /D_MOD_GOVWORKERS /DLOG_AI
 Debug_GLOBAL_CFLAGS= $(GAME_OPTIONS) /DFP_PROFILE_ENABLE /DUSE_INTERNAL_PROFILER
 # Turn OFF Civs own profiler, we are using 3rd party one for this build config (VTune/sleepy/VS profiler etc.)
 Profile_GLOBAL_CFLAGS= $(GAME_OPTIONS)

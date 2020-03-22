@@ -18,7 +18,7 @@
 			<Type>OUTCOME_LAUNCH_SATELLITE_CISLUNAR</Type>
 			<Description>TXT_KEY_OUTCOME_LAUNCH_SATELLITE_CISLUNAR</Description>
 			<Message>TXT_KEY_OUTCOME_LAUNCH_SATELLITE_CISLUNAR_MESSAGE</Message>
-			<PrereqTech>TECH_INTERSTELLAR_TRAVEL</PrereqTech>
+			<PrereqTech>TECH_ION_PROPULSION</PrereqTech>
 			<bNeutralTerritory>1</bNeutralTerritory>
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
@@ -99,7 +99,7 @@
 			<Type>OUTCOME_EXPLORE_OUTER_SOLAR_SYSTEM</Type>
 			<Description>TXT_KEY_OUTCOME_EXPLORE_OUTER_SOLAR_SYSTEM</Description>
 			<Message>TXT_KEY_OUTCOME_EXPLORE_OUTER_SOLAR_SYSTEM_MESSAGE</Message>
-			<PrereqTech>TECH_JUPITERE</PrereqTech>
+			<PrereqTech>TECH_JOVIAN_EXPLORATION</PrereqTech>
 			<bNeutralTerritory>1</bNeutralTerritory>
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
@@ -216,7 +216,7 @@
 			<Type>OUTCOME_EXPLORE_GALACTIC_CORE</Type>
 			<Description>TXT_KEY_OUTCOME_EXPLORE_GALACTIC_CORE</Description>
 			<Message>TXT_KEY_OUTCOME_EXPLORE_GALACTIC_CORE_MESSAGE</Message>
-			<PrereqTech>TECH_ANTIMATTER_ROCKET</PrereqTech>
+			<PrereqTech>TECH_ANTIMATTER_ROCKETS</PrereqTech>
 			<bNeutralTerritory>1</bNeutralTerritory>
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
@@ -234,7 +234,7 @@
 			<Type>OUTCOME_UPGRADE_CISLUNAR_SETTLER</Type>
 			<Description>TXT_KEY_OUTCOME_UPGRADE_CISLUNAR_SETTLER</Description>
 			<Message>TXT_KEY_OUTCOME_UPGRADE_CISLUNAR_SETTLER_MESSAGE</Message>
-			<PrereqTech>TECH_SPACE_COLONIES</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<bNeutralTerritory>1</bNeutralTerritory>
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
@@ -252,7 +252,7 @@
 			<Type>OUTCOME_UPGRADE_PLANET_SETTLER</Type>
 			<Description>TXT_KEY_OUTCOME_UPGRADE_PLANET_SETTLER</Description>
 			<Message>TXT_KEY_OUTCOME_UPGRADE_PLANET_SETTLER_MESSAGE</Message>
-			<PrereqTech>TECH_PLANET_COLONIZATION</PrereqTech>
+			<PrereqTech>TECH_PLANETARY_COLONIZATION</PrereqTech>
 			<bNeutralTerritory>1</bNeutralTerritory>
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
@@ -261,7 +261,7 @@
 			<Type>OUTCOME_EXPLORE_PLANET</Type>
 			<Description>TXT_KEY_OUTCOME_EXPLORE_PLANET</Description>
 			<Message>TXT_KEY_OUTCOME_EXPLORE_PLANET_MESSAGE</Message>
-			<PrereqTech>TECH_PLANET_EXPLORATION</PrereqTech>
+			<PrereqTech>TECH_PLANETARY_EXPLORATION</PrereqTech>
 			<bNeutralTerritory>1</bNeutralTerritory>
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
@@ -270,7 +270,7 @@
 			<Type>OUTCOME_EXPLORE_ASTEROID</Type>
 			<Description>TXT_KEY_OUTCOME_EXPLORE_ASTEROID</Description>
 			<Message>TXT_KEY_OUTCOME_EXPLORE_ASTEROID_MESSAGE</Message>
-			<PrereqTech>TECH_INTERSTELLAR_TRAVEL</PrereqTech>
+			<PrereqTech>TECH_ION_PROPULSION</PrereqTech>
 			<bNeutralTerritory>1</bNeutralTerritory>
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
@@ -288,7 +288,7 @@
 			<Type>OUTCOME_EXPLORE_JMOON</Type>
 			<Description>TXT_KEY_OUTCOME_EXPLORE_JMOON</Description>
 			<Message>TXT_KEY_OUTCOME_EXPLORE_JMOON_MESSAGE</Message>
-			<PrereqTech>TECH_JUPITERE</PrereqTech>
+			<PrereqTech>TECH_JOVIAN_EXPLORATION</PrereqTech>
 			<bNeutralTerritory>1</bNeutralTerritory>
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>
@@ -306,7 +306,7 @@
 			<Type>OUTCOME_CAPTURE_ASTEROID</Type>
 			<Description>TXT_KEY_OUTCOME_CAPTURE_ASTEROID</Description>
 			<Message>TXT_KEY_OUTCOME_CAPTURE_ASTEROID_MESSAGE</Message>
-			<PrereqTech>TECH_ASTEROIDPROBE</PrereqTech>
+			<PrereqTech>TECH_ASTEROID_BELT_PROBES</PrereqTech>
 			<bNeutralTerritory>1</bNeutralTerritory>
 			<bHostileTerritory>0</bHostileTerritory>
 			<bCity>0</bCity>

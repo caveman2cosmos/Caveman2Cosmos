@@ -6,10 +6,10 @@
 	<ReligionInfos>
 		<ReligionInfo>
 			<Type>RELIGION_JAINISM</Type>
-			<Description>TXT_KEY_RELIGION_JAINISM</Description>
-			<Civilopedia>TXT_KEY_RELIGION_JAINISM_PEDIA</Civilopedia>
+			<Description>TXT_KEY_TECH_JAINISM</Description>
+			<Civilopedia>TXT_KEY_TECH_JAINISM_PEDIA</Civilopedia>
 			<TechPrereq>TECH_JAINISM</TechPrereq>
-			<FreeUnitClass>UNITCLASS_JAINISM_MISSIONARY</FreeUnitClass>
+			<FreeUnit>UNIT_JAINISM_MISSIONARY</FreeUnit>
 			<iFreeUnits>1</iFreeUnits>
 			<iSpreadFactor>100</iSpreadFactor>
 			<iTGAIndex>16</iTGAIndex>

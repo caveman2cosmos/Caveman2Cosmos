@@ -154,7 +154,7 @@ class PediaUnit:
 		#Combat types
 		aList0 = []
 		aList1 = []
-		for k in range(GC.getNumUnitCombatInfos()):
+		for k in xrange(GC.getNumUnitCombatInfos()):
 			if CvTheUnitInfo.isSubCombatType(k):
 				CvUnitCombatInfo = GC.getUnitCombatInfo(k)
 				if not CvUnitCombatInfo.isGraphicalOnly():
@@ -189,7 +189,7 @@ class PediaUnit:
 		if iType != -1:
 			aReqList.append([szChild + str(iType) + "|" + str(n), GC.getTechInfo(iType).getButton()])
 			n += 1
-		for j in range(GC.getDefineINT("NUM_UNIT_AND_TECH_PREREQS")):
+		for j in xrange(GC.getDefineINT("NUM_UNIT_AND_TECH_PREREQS")):
 			iType = CvTheUnitInfo.getPrereqAndTechs(j)
 			if iType == -1:
 				break
@@ -198,7 +198,7 @@ class PediaUnit:
 		# Bonus Req
 		szChild = PF + "BONUS"
 		nOr = 0
-		for j in range(GC.getNUM_UNIT_PREREQ_OR_BONUSES()):
+		for j in xrange(GC.getNUM_UNIT_PREREQ_OR_BONUSES()):
 			iType = CvTheUnitInfo.getPrereqOrBonuses(j)
 			if iType == -1:
 				break
@@ -228,7 +228,7 @@ class PediaUnit:
 				nOr = 0
 		# Civic Req
 		szChild = PF + "CIVIC"
-		for iType in range(GC.getNumCivicInfos()):
+		for iType in xrange(GC.getNumCivicInfos()):
 			if CvTheUnitInfo.isPrereqOrCivics(iType):
 				aList0.append(iType)
 				nOr += 1
@@ -238,11 +238,11 @@ class PediaUnit:
 			if nOr > 1:
 				aReqList.append(braL)
 			iType = aList0.pop(0)
-			aReqList.append([szChild + str(iType) + "|" + str(n), GC.getBuildingInfo(iType).getButton()])
+			aReqList.append([szChild + str(iType) + "|" + str(n), GC.getCivicInfo(iType).getButton()])
 			n += 1
 			for iType in aList0:
 				aReqList.append(OR)
-				aReqList.append([szChild + str(iType) + "|" + str(n), GC.getBuildingInfo(iType).getButton()])
+				aReqList.append([szChild + str(iType) + "|" + str(n), GC.getCivicInfo(iType).getButton()])
 				n += 1
 			if nOr > 1:
 				aReqList.append(braR)
@@ -256,13 +256,10 @@ class PediaUnit:
 			n += 1
 		# Building Req
 		szChild = PF + "BUILDING"
-		iType = CvTheUnitInfo.getPrereqBuilding()
-		if iType != -1:
-			aList0.append(iType)
-		for i in range(GC.getNumBuildingClassInfos()):
-			if CvTheUnitInfo.isPrereqBuildingClass(i):
-				aList0.append(GC.getBuildingClassInfo(i).getDefaultBuildingIndex())
-		for i in range(CvTheUnitInfo.getPrereqOrBuildingsNum()):
+		for i in xrange(CvTheUnitInfo.getNumPrereqAndBuildings()):
+			aList0.append(CvTheUnitInfo.getPrereqAndBuilding(i))
+
+		for i in xrange(CvTheUnitInfo.getPrereqOrBuildingsNum()):
 			iType = CvTheUnitInfo.getPrereqOrBuilding(i)
 			if iType == -1:
 				break
@@ -293,10 +290,9 @@ class PediaUnit:
 		# Upgrades To
 		aUpgList = []
 		szChild = PF + "UNIT"
-		for iUnit in range(GC.getNumUnitInfos()):
-			CvUnitInfo = GC.getUnitInfo(iUnit)
-			if CvTheUnitInfo.getUpgradeUnitClass(CvUnitInfo.getUnitClassType()):
-				aUpgList.append([szChild + str(iUnit), CvUnitInfo.getButton()])
+		for i in xrange(CvTheUnitInfo.getNumUnitUpgrades()):
+			iUnit = CvTheUnitInfo.getUnitUpgrade(i)
+			aUpgList.append([szChild + str(iUnit),  GC.getUnitInfo(iUnit).getButton()])
 
 		iType = CvTheUnitInfo.getForceObsoleteTech()
 		if aReqList or aUpgList or iType != -1:
@@ -369,7 +365,7 @@ class PediaUnit:
 
 		# Promotions
 		aList0 = []
-		for k in range(GC.getNumPromotionInfos()):
+		for k in xrange(GC.getNumPromotionInfos()):
 			if CvTheUnitInfo.isQualifiedPromotionType(k):
 				CvPromotionInfo = GC.getPromotionInfo(k)
 				if not CvPromotionInfo.isGraphicalOnly():
@@ -402,7 +398,7 @@ class PediaUnit:
 			szSpecial += TRNSLTR.getText("TXT_KEY_PEDIA_UNIT_IGNORES_BUILDING_DEFENSE", ())
 		if CvTheUnitInfo.getConscriptionValue() > 0:
 			szSpecial += TRNSLTR.getText("TXT_KEY_PEDIA_UNIT_DRAFTABLE", ()) + "\n"
-		if CvTheUnitInfo.getUnitCaptureClassType() > 0:
+		if CvTheUnitInfo.getUnitCaptureType() > 0:
 			szSpecial += TRNSLTR.getText("TXT_KEY_PEDIA_UNIT_CAN_BE_CAPTURED", ()) + "\n"
 		szSpecial += CyGameTextMgr().getUnitHelp(iTheUnit, True, False, False, None)[1:]
 		# History

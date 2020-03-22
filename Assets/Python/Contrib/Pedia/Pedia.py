@@ -481,7 +481,7 @@ class Pedia:
 			elif (iDefaultUnitAIType in aListAI) or (CvUnitInfo.getSpecialUnitType() == GC.getInfoTypeForString("SPECIALUNIT_CAPTIVE")):
 				iCategory = self.PEDIA_UNITS_2
 				szSubCat = self.mapSubCat.get(iCategory)[3]
-			elif GC.getUnitClassInfo(CvUnitInfo.getUnitClassType()).getMaxGlobalInstances() == 1: ## World Unit
+			elif CvUnitInfo.getMaxGlobalInstances() == 1: ## World Unit
 				iCategory = self.PEDIA_UNITS_2
 				szSubCat = self.mapSubCat.get(iCategory)[0]
 			elif iBonusClassType == GC.getInfoTypeForString("BONUSCLASS_CULTURE"):
@@ -512,7 +512,7 @@ class Pedia:
 			bFuncByGroupCat = True
 			self.iGroupCategory = iGroupCategory = iCategory
 			CvBuildingInfo = GC.getBuildingInfo(iObjectType)
-			iBuildingType = self.getBuildingType(CvBuildingInfo)
+			iBuildingType = self.getBuildingType(CvBuildingInfo, iObjectType)
 			if iBuildingType != -1:
 				iCategory = self.PEDIA_BUILDINGS_2
 				szSubCat = self.mapSubCat.get(iCategory)[iBuildingType]
@@ -784,7 +784,7 @@ class Pedia:
 					bValid = True
 				else:
 					continue
-			elif GC.getUnitClassInfo(CvUnitInfo.getUnitClassType()).getMaxGlobalInstances() != -1:
+			elif CvUnitInfo.getMaxGlobalInstances() != -1:
 				if bWorld:
 					bValid = True
 				else:
@@ -913,9 +913,9 @@ class Pedia:
 			if CvBuildingInfo.isGraphicalOnly():
 				continue
 			if iBuildingType != -1:
-				if self.getBuildingType(CvBuildingInfo) == iBuildingType:
+				if self.getBuildingType(CvBuildingInfo, i) == iBuildingType:
 					bValid = True
-			elif self.getBuildingType(CvBuildingInfo) == -1:
+			elif self.getBuildingType(CvBuildingInfo, i) == -1:
 				if szSubCat == self.szCatAllEras:
 					bValid = True
 				else:
@@ -928,7 +928,7 @@ class Pedia:
 		aList.sort()
 		return aList
 
-	def getBuildingType(self, CvBuildingInfo):
+	def getBuildingType(self, CvBuildingInfo, iBuilding):
 		szStrat = CvBuildingInfo.getDescription()
 		iSpecialBuilding = CvBuildingInfo.getSpecialBuildingType()
 		if iSpecialBuilding != -1:
@@ -942,9 +942,9 @@ class Pedia:
 			return 5
 		elif CvBuildingInfo.getProductionCost() == -1 or CvBuildingInfo.isAutoBuild():
 			return 3
-		elif isWorldWonderClass(CvBuildingInfo.getBuildingClassType()):
+		elif isWorldWonder(iBuilding):
 			return 1
-		elif isNationalWonderClass(CvBuildingInfo.getBuildingClassType()):
+		elif isNationalWonder(iBuilding):
 			return 0
 		else:
 			return -1

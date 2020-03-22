@@ -70,7 +70,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MASTER_HUNTER_STRATEGY</Tag>
 		<English>Master Hunters are better hunters.</English>
-		<French>Les Maîtres-Chasseurs sont des chasseurs parmi les meilleurs</French>
+		<French>Les Maîtres-Chasseurs obtiennent ce titre car ils font partie des meilleurs</French>
 		<German>Meisterjäger sind bessere Jäger.</German>
 		<Polish>Wybitni Łowcy są lepiej wyszkolonymi rodzajami łowców.</Polish>
 	</TEXT>
@@ -125,7 +125,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MASTER_HUNTER_TRADITION_STRATEGY</Tag>
 		<English>Provides health and happiness bonuses with game animals. Units built here get free hunting promotion.</English>
-		<French>Procure des bonus en santé et bonheur grâce aux animaux. Les unités construites ici recoivent la promotion chasseur.</French>
+		<French>Procure des bonus en santé et bonheur grâce aux animaux. Les unités construites ici recoivent la promotion 'chasseur'.</French>
 		<German>Erzeugt Gesundheit und Zufriedenheit mit Großwild. Einheiten die hier gebaut werden, bekommen die Jagtbeförderung kostenlos.</German>
 	</TEXT>
 	<TEXT>

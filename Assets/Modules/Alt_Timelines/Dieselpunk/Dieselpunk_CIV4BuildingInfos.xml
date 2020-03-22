@@ -8,8 +8,9 @@
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DIESELPUNK_EMBASSY</BuildingClass>
 			<Type>BUILDING_DIESELPUNK_EMBASSY</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<bNoLimit>1</bNoLimit>
 			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_DIESELPUNK_EMBASSY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DIESELPUNK_EMBASSY_PEDIA</Civilopedia>
@@ -35,7 +36,6 @@
 			</CommerceChanges>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_AERODROME</BuildingClass>
 			<Type>BUILDING_AERODROME</Type>
 			<Description>TXT_KEY_BUILDING_AERODROME</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AERODROME_PEDIA</Civilopedia>
@@ -64,19 +64,19 @@
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_AIRPORT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_COMMERCIAL_AIRPORT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_AIRPORT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_COMMERCIAL_AIRPORT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
-					<BuildingClassType>BUILDINGCLASS_GRAND_AERODROME</BuildingClassType>
+					<BuildingType>BUILDING_GRAND_AERODROME</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings>
@@ -91,14 +91,13 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_GRAND_AERODROME</BuildingClass>
 			<Type>BUILDING_GRAND_AERODROME</Type>
 			<Description>TXT_KEY_BUILDING_GRAND_AERODROME</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GRAND_AERODROME_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GRAND_AERODROME_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_GRAND_AERODROME</ArtDefineTag>
-			<PrereqTech>TECH_ADVANCED_FLIGHT</PrereqTech>
+			<PrereqTech>TECH_ADVANCED_AVIATION</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_DIESELPUNK</PrereqTech>
 			</TechTypes>
@@ -123,16 +122,16 @@
 			<CommerceChanges>
 				<iCommerce>20</iCommerce>
 			</CommerceChanges>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_AIRPORT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_COMMERCIAL_AIRPORT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_AIRPORT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_COMMERCIAL_AIRPORT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -145,7 +144,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ZUSE_COMPUTER</BuildingClass>
 			<Type>BUILDING_ZUSE_COMPUTER</Type>
 			<Description>TXT_KEY_BUILDING_ZUSE_COMPUTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ZUSE_COMPUTER_PEDIA</Civilopedia>
@@ -161,12 +159,6 @@
 			<TechTypes>
 				<PrereqTech>TECH_DIESELPUNK</PrereqTech>
 			</TechTypes>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_SCIENTIFIC</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
 			<iCost>1130</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -189,7 +181,6 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DIRIGIBLE_TERMINAL</BuildingClass>
 			<Type>BUILDING_DIRIGIBLE_TERMINAL</Type>
 			<Description>TXT_KEY_BUILDING_DIRIGIBLE_TERMINAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DIRIGIBLE_TERMINAL_PEDIA</Civilopedia>
@@ -215,20 +206,19 @@
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
 			</CommerceChanges>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_SKYSCRAPER</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_EMPIRE_STATE_BUILDING</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_SKYSCRAPER</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_EMPIRE_STATE_BUILDING</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<iPrereqPopulation>13</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FARNSWORTH_LAB</BuildingClass>
 			<Type>BUILDING_FARNSWORTH_LAB</Type>
 			<Description>TXT_KEY_BUILDING_FARNSWORTH_LAB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FARNSWORTH_LAB_PEDIA</Civilopedia>
@@ -260,7 +250,6 @@
 			<iPrereqPopulation>13</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_THEREMIN_FACTORY</BuildingClass>
 			<Type>BUILDING_THEREMIN_FACTORY</Type>
 			<Description>TXT_KEY_BUILDING_THEREMIN_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_THEREMIN_FACTORY_PEDIA</Civilopedia>
@@ -287,12 +276,9 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_FACTORY</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FACTORY</BuildingType>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -304,7 +290,6 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_RADIOPLEX</BuildingClass>
 			<Type>BUILDING_RADIOPLEX</Type>
 			<Description>TXT_KEY_BUILDING_RADIOPLEX</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RADIOPLEX_PEDIA</Civilopedia>
@@ -319,18 +304,6 @@
 			<PrereqBonuses>
 				<Bonus>BONUS_RADIOS</Bonus>
 			</PrereqBonuses>
-			<ProductionTraits>
-				<ProductionTrait>
-					<ProductionTraitType>TRAIT_CREATIVE</ProductionTraitType>
-					<iProductionTrait>100</iProductionTrait>
-				</ProductionTrait>
-			</ProductionTraits>
-			<HappinessTraits>
-				<HappinessTrait>
-					<HappinessTraitType>TRAIT_CHARISMATIC</HappinessTraitType>
-					<iHappinessTrait>1</iHappinessTrait>
-				</HappinessTrait>
-			</HappinessTraits>
 			<iCost>1080</iCost>
 			<iHappiness>4</iHappiness>
 			<iAsset>5</iAsset>
@@ -349,11 +322,11 @@
 			<ConstructSound>AS2D_BUILD_BROADCASTTOWER</ConstructSound>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
-					<BonusType>BONUS_DRAMA</BonusType>
+					<BonusType>BONUS_HIT_MUSICALS</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 				<BonusHappinessChange>
-					<BonusType>BONUS_MUSIC</BonusType>
+					<BonusType>BONUS_HIT_SINGLES</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
@@ -367,21 +340,19 @@
 			<iPrereqPopulation>6</iPrereqPopulation>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FLIGHT_SCHOOL</BuildingClass>
 			<Type>BUILDING_FLIGHT_SCHOOL</Type>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_AERODROME</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_GRAND_AERODROME</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_AERODROME</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_GRAND_AERODROME</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_AMERICAN_MALL</BuildingClass>
 			<Type>BUILDING_AMERICAN_MALL</Type>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
@@ -393,7 +364,6 @@
 			</BonusCommerceModifiers>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_HYPERMARKET</BuildingClass>
 			<Type>BUILDING_HYPERMARKET</Type>
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>

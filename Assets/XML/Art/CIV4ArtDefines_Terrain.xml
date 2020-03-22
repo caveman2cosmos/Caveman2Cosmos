@@ -175,7 +175,7 @@
 			<TextureBlend15>15,0 16,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
 		<TerrainArtInfo>
-			<Type>ART_DEF_TERRAIN_GRASS</Type>
+			<Type>ART_DEF_TERRAIN_GRASSLAND</Type>
 			<Path>Art/Terrain/Textures/GrassBlend.dds</Path>
 			<Grid>Art/Terrain/Textures/GrassGrids.dds</Grid>
 			<Detail>Art/Terrain/Textures/GrassDetail.dds</Detail>
@@ -319,7 +319,7 @@
 			<TextureBlend15>15,0 16,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
 		<TerrainArtInfo>
-			<Type>ART_DEF_TERRAIN_ROCKY_ARID</Type>
+			<Type>ART_DEF_TERRAIN_BADLAND</Type>
 			<Path>Art/Terrain/Textures/Land/RockyBlend.dds</Path>
 			<Grid>Art/Terrain/Textures/Land/RockyGrid.dds</Grid>
 			<Detail>Art/Terrain/Textures/Land/RockyAridDetail.dds</Detail>
@@ -343,7 +343,7 @@
 			<TextureBlend15>15,0 16,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
 		<TerrainArtInfo>
-			<Type>ART_DEF_TERRAIN_ROCKY_COLD</Type>
+			<Type>ART_DEF_TERRAIN_JAGGED</Type>
 			<Path>Art/Terrain/Textures/Land/RockyBlend.dds</Path>
 			<Grid>Art/Terrain/Textures/Land/RockyGrid.dds</Grid>
 			<Detail>Art/Terrain/Textures/Land/RockyColdDetail.dds</Detail>
@@ -895,7 +895,7 @@
 			<TextureBlend15>15,0 16,0</TextureBlend15>
 		</TerrainArtInfo>
 		<TerrainArtInfo>
-			<Type>ART_DEF_TERRAIN_SLIMY_COAST</Type>
+			<Type>ART_DEF_TERRAIN_INFECTED_WATER</Type>
 			<Path>Art/Terrain/Textures/CoastBlend.dds</Path>
 			<Grid>Art/Terrain/Textures/CoastGrids.dds</Grid>
 			<Detail>Art/Terrain/Textures/slimycoastdetail.dds</Detail>
@@ -919,7 +919,7 @@
 			<TextureBlend15>29,0</TextureBlend15>
 		</TerrainArtInfo>
 		<TerrainArtInfo>
-			<Type>ART_DEF_TERRAIN_SLIMY_OCEAN</Type>
+			<Type>ART_DEF_TERRAIN_PLAGUED_WATER</Type>
 			<Path>Art/Terrain/Textures/CoastBlend.dds</Path>
 			<Grid>Art/Terrain/Textures/CoastGrids.dds</Grid>
 			<Detail>Art/Terrain/Textures/slimycoastdetail.dds</Detail>
@@ -1015,7 +1015,7 @@
 			<TextureBlend15>15,0 16,0 17,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
 		<TerrainArtInfo>
-			<Type>ART_DEF_TERRAIN_LUNAR_BASALT</Type>
+			<Type>ART_DEF_TERRAIN_LUNAR_DOME</Type>
 			<Path>Art/Terrain/Textures/GrassBlend.dds</Path>
 			<Grid>Art/Terrain/Textures/GrassGrids.dds</Grid>
 			<Detail>Art/Terrain/Textures/Lunar/LunarBasaltDetail.dds</Detail>
@@ -1039,7 +1039,7 @@
 			<TextureBlend15>15,0 16,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
 		<TerrainArtInfo>
-			<Type>ART_DEF_TERRAIN_LUNAR_PLAINS</Type>
+			<Type>ART_DEF_TERRAIN_LUNAR_MARE</Type>
 			<Path>Art/Terrain/Textures/LunarMariaBlend.dds</Path>
 			<Grid>Art/Terrain/Textures/LunarMariaGrids.dds</Grid>
 			<Detail>Art/Terrain/Textures/LunarMariaDETAIL.dds</Detail>
@@ -1063,7 +1063,7 @@
 			<TextureBlend15>15,0 16,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
 		<TerrainArtInfo>
-			<Type>ART_DEF_TERRAIN_LUNAR_ROCKY</Type>
+			<Type>ART_DEF_TERRAIN_LUNAR_HIGHLAND</Type>
 			<Path>Art/Terrain/Textures/Land/RockyBlend.dds</Path>
 			<Grid>Art/Terrain/Textures/Land/RockyGrid.dds</Grid>
 			<Detail>Art/Terrain/Textures/LunarHighlandsDetail.dds</Detail>
@@ -1087,7 +1087,7 @@
 			<TextureBlend15>15,0 16,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
 		<TerrainArtInfo>
-			<Type>ART_DEF_TERRAIN_LUNAR_BARREN</Type>
+			<Type>ART_DEF_TERRAIN_LUNAR_REGOLITH</Type>
 			<Path>Art/Terrain/Textures/LunarRegolithBlend.dds</Path>
 			<Grid>Art/Terrain/Textures/LunarRegolithGrids.dds</Grid>
 			<Detail>Art/Terrain/Textures/LunarRegolithDetail.dds</Detail>
@@ -1111,7 +1111,7 @@
 			<TextureBlend15>15,0 16,0 18,0 19,0 20,0 21,0 22,0 23,0 24,0 25,0 26,0 27,0 28,0 29,0 30,0 31,0 32,0</TextureBlend15>
 		</TerrainArtInfo>
 		<TerrainArtInfo>
-			<Type>ART_DEF_TERRAIN_LUNAR_DESERT</Type>
+			<Type>ART_DEF_TERRAIN_LUNAR_RILLE</Type>
 			<Path>Art/Terrain/Textures/IceBlend.dds</Path>
 			<Grid>Art/Terrain/Textures/IceGrids.dds</Grid>
 			<Detail>Art/Terrain/Textures/IceDetail.dds</Detail>
