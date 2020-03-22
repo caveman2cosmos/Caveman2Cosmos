@@ -7570,7 +7570,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-		</BuildingInfo>		
+		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Ottoman) -->
 			<Type>BUILDING_OTTOMAN_EMBASSY</Type>
@@ -7627,7 +7627,7 @@
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
-		</BuildingInfo>		
+		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Culture (Pakistani) -->
 			<Type>BUILDING_PAKISTANI_EMBASSY</Type>

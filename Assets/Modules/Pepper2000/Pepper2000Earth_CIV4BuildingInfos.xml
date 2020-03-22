@@ -2438,7 +2438,7 @@
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_FIRECRACKERS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
-				</ExtraFreeBonus>				
+				</ExtraFreeBonus>
 				<ExtraFreeBonus>
 					<FreeBonus>BONUS_MASKS</FreeBonus>
 					<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -8687,7 +8687,7 @@
 					<CommerceModifiers>
 						<iCommerce>1</iCommerce>
 					</CommerceModifiers>
-				</BonusCommerceModifier>				
+				</BonusCommerceModifier>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_BANANA</BonusType>
 					<CommerceModifiers>

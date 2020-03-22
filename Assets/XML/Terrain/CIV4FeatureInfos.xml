@@ -5559,7 +5559,7 @@
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_TUNDRA</TerrainType>
 					<bTerrain>1</bTerrain>
-				</TerrainBoolean>				
+				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_COAST</TerrainType>
 					<bTerrain>1</bTerrain>

@@ -1248,7 +1248,7 @@
 					<PropertyType>PROPERTY_TOURISM</PropertyType>
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
-			</PropertyManipulators>  
+			</PropertyManipulators>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<iConquestProb>100</iConquestProb>
@@ -1297,7 +1297,7 @@
 					<PropertyType>PROPERTY_TOURISM</PropertyType>
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
-			</PropertyManipulators>			   
+			</PropertyManipulators>   
 			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<iConquestProb>100</iConquestProb>
@@ -1969,7 +1969,7 @@
 			<iCost>40</iCost>
 			<!-- Main effects -->
 			<YieldChanges>
-				<iYield>3</iYield>			  
+				<iYield>3</iYield>  
 				<iYield>3</iYield>
 			</YieldChanges>
 			<CommerceChanges>
@@ -2095,7 +2095,7 @@
 					<PropertyType>PROPERTY_TOURISM</PropertyType>
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
-			</PropertyManipulators>		  
+			</PropertyManipulators>  
 			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<iConquestProb>100</iConquestProb>
@@ -6433,7 +6433,7 @@
 			<bCenterInCity>1</bCenterInCity>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>		
+			<PrereqTech>TECH_CAVE_DWELLING</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_CAVES</FeatureType>
@@ -6458,7 +6458,7 @@
 					<PropertyType>PROPERTY_TOURISM</PropertyType>
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
-			</PropertyManipulators> 
+			</PropertyManipulators>
 			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<iConquestProb>100</iConquestProb>
@@ -8710,7 +8710,7 @@
 			<iAsset>10</iAsset>
 			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>								  
+			<iAdvancedStartCost>-1</iAdvancedStartCost>  
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Penicillin -->
@@ -19137,7 +19137,7 @@
 					<iAmountPerTurn>-75</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-		</BuildingInfo>		
+		</BuildingInfo>
 		<!-- Via Appia -->
 		<BuildingInfo>
 			<Type>BUILDING_APPIAN_WAY</Type>
@@ -21866,7 +21866,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Help>TXT_KEY_BUILDING_ROUTE_66_HELP</Help>
-		</BuildingInfo>		
+		</BuildingInfo>
 		<!-- Scapa Flow -->
 		<BuildingInfo>
 			<Type>BUILDING_SCAPA_FLOW</Type>

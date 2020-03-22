@@ -242,7 +242,7 @@
 			<ArtDefineTag>ART_DEF_BONUS_OLMEC_JADE_FIGURINES</ArtDefineTag>
 			<TechReveal>TECH_BARTER</TechReveal>
 			<TechCityTrade>TECH_BARTER</TechCityTrade>
-			<iHappiness>1</iHappiness>			
+			<iHappiness>1</iHappiness>
 			<iPlacementOrder>-1</iPlacementOrder>
 		</BonusInfo>
 		<!-- Liangzhu Jades -->

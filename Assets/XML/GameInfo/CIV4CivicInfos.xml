@@ -2553,7 +2553,7 @@
 				<iYield>2</iYield>
 				<iYield>2</iYield>
 				<iYield>2</iYield>
-			</TradeYieldModifiers>	
+			</TradeYieldModifiers>
 			<CommerceModifiers/>
 			<CapitalCommerceModifiers>
 				<iCommerce>1</iCommerce>
@@ -5959,7 +5959,7 @@
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</ImprovementYields>
-				</ImprovementYieldChange> 	
+				</ImprovementYieldChange>
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_MANUFACTURING_COMPLEX</ImprovementType>
 					<ImprovementYields>

@@ -13791,6 +13791,6 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_CITY_RUINS</ArtDefineTag>
 			<PrereqTech>TECH_DUMMY</PrereqTech>
 			<bGraphicalOnly>1</bGraphicalOnly>
-		</ImprovementInfo>		
+		</ImprovementInfo>
 	</ImprovementInfos>
 </Civ4ImprovementInfos>

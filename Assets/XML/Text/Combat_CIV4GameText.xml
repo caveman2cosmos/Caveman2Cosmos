@@ -1115,7 +1115,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>(Natur) Schnelle Reflexe</German>		
+		<German>(Natur) Schnelle Reflexe</German>
 		<Spanish>
 			<Text>Reflejos rápidos:Animales con reflejos rápidos</Text>
 			<Gender>Male</Gender>
@@ -1371,7 +1371,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>(Natur) Brüllen</German>		
+		<German>(Natur) Brüllen</German>
 		<Spanish>
 			<Text>Rugiente:Animales rugientes por naturaleza</Text>
 			<Gender>Male</Gender>
