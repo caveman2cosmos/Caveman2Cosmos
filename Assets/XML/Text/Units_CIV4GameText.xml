@@ -614,12 +614,6 @@
 		<English>The Pima are a group of Indigenous Americans living in an area consisting of what is now central and southern Arizona. Currently, the majority population of the surviving two bands of the Akimel O'odham are based in two reservations: the Keli Akimel O'otham on the Gila River Indian Community (GRIC) and the On'k Akimel O'odham on the Salt River Pima-Maricopa Indian Community (SRPMIC). They are also closely related to other river people, the Ak-Chin O'odham, now forming the Ak-Chin Indian Community, and the Sobaipuri, whose descendants still reside on the San Xavier Indian Reservation or Wa:k (together with the Tohono O'odham) and in the Salt River Indian Community. Together with the kindred Tohono O'odham ("Desert People", formerly known as Papagos) of Eastern Papagueria and the Hia C-ed O'odham ("Sand Dune People", formerly known as Sand Papagos) of the Western Papagueria they form the Upper O'otham or Upper Pima (also known as Pima Alto).</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GROUPTITLE_SINGULAR</Tag>
-		<English>Singular </English>
-		<French>Singulier </French>
-		<German>(Einzelexemplar) </German>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_AKIMEL_BRIGADE_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Akimel Brigade[COLOR_REVERT] is a Pima unique unit.</English>
 		<French>La [COLOR_UNIT_TEXT]Brigade Akimel[COLOR_REVERT] est une unité Pima unique.</French>
@@ -637,18 +631,6 @@
 		<Tag>TXT_KEY_UNIT_AKSUM_MERCHANTS_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Aksum Merchants[COLOR_REVERT] is a Aksumite unique unit.</English>
 		<French>Le [COLOR_UNIT_TEXT]Marchand Aksum[COLOR_REVERT] est une unité Aksumite unique.</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GROUPTITLE_SOLITARY</Tag>
-		<English>Solitary </English>
-		<French>Solitaire </French>
-		<German>(Einzelexemplar) </German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GROUPTITLE_SOLO</Tag>
-		<English>Solo </English>
-		<French>Solo </French>
-		<German>(Einzelexemplar) </German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ALA_AL_DIN_HUSAYN</Tag>
@@ -4118,15 +4100,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<French>Cavalerie Camélidée des Tranchées</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_CAN_ONLY_TRAVERSE</Tag>
-		<English>Can Not Traverse</English>
-		<French>Ne peut pas Traverser</French>
-		<German>[ICON_BULLET]Durchqueren unmöglich</German>
-		<Italian>Non può attraversare</Italian>
-		<Spanish>No puede atravesar</Spanish>
-		<Polish>Nie można przebić</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_CAMEL_TRENCH_CAVALRY_PEDIA</Tag>
 		<English>Even in the late Industrial era, to the extent that mounted warfare was persisted with, it was believed that the camel's endurance - and its sand-adapted hooves - gave it a slight edge over the horse as a mount for desert campaigns.</English>
 		<French>Même à la fin de l'ère industrielle, dans la mesure où la guerre à cheval persistait, on a gardé l'idée que l'endurance du chameau - et ses sabots adaptés au sable - lui donnait un léger avantage sur le cheval comme monture pour les campagnes dans le désert.</French>	
@@ -4221,18 +4194,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>[ICON_BULLET]Nie można zająć wrogiego miasta lub jednostki.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_ADDS_CANNOT_CAPTURE</Tag>
-		<English>[ICON_BULLET]Gives cause for unit to be unable to capture enemy Cities or Units</English>
-		<French>[ICON_BULLET]Rend l'unité incapable de capturer les villes ou unités ennemies</French>
-		<German>[ICON_BULLET]Unfähigkeit zur Einnahme von Städten und Einheiten hinzugefügt</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_REMOVES_CANNOT_CAPTURE</Tag>
-		<English>[ICON_BULLET]Removes a cause for unit to be unable to capture enemy Cities or Units</English>
-		<French>[ICON_BULLET]Enlève l'incapacité de l'unité de capturer les villes ou unités ennemies</French>
-		<German>[ICON_BULLET]Unfähigkeit zur Einnahme von Städten und Einheiten entfernt</German>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_CANOE</Tag>
 		<English>Canoe</English>
 		<French>Canoé</French>
@@ -4284,7 +4245,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_CAN_ONLY_TRAVERSE</Tag>
 		<English>Can Not Traverse</English>
 		<French>Ne peut pas Traverser</French>
-		<German>Überqueren unmöglich</German>
+		<German>Durchqueren unmöglich</German>
 		<Italian>Non può attraversare</Italian>
 		<Spanish>No puede atravesar</Spanish>
 		<Polish>Nie można przebić</Polish>

@@ -19,11 +19,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ANIMAL_STRATEGY</Tag>
 		<English>Animals spawn in the wilderness and are barbarian animal units. See also [LINK=CONCEPT_SUBDUED_ANIMALS]Subdued Animals[\LINK] and [LINK=CONCEPT_TAMED_ANIMALS]Tamed Animals[\LINK].</English>
+		<French>Les animaux apparaissent dans la nature et sont des unités animales barbares. Voir également [LINK=CONCEPT_SUBDUED_ANIMALS]Animaux apprivoisés[\LINK] et [LINK=CONCEPT_TAMED_ANIMALS]Animaux dressés[\LINK].</French>
 		<German>Tiere sind eine spezielle Art von barbarischen Einheiten, die keiner Zivilisation angehören. Sie entstehen zufällig in der Wildnis und können schwachen Einheiten leicht gefährlich werden. Dafür liefern sie aber auch Nahrung und wichtige Rohstoffe, wenn sie besiegt werden. Mehr Informationen gibt es unter [LINK=CONCEPT_SUBDUED_ANIMALS]Gefangene Tiere[\LINK] und [LINK=CONCEPT_TAMED_ANIMALS]Gezähmte Tiere[\LINK]</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ANIMAL_STRATEGY</Tag>
 		<English>Subdued animals are primarily meant for use in constructing special buildings in cities.</English>
+		<French>Les animaux apprivoisés sont principalement destinés à la construction de bâtiments spéciaux dans les villes.</French>
 		<German>Mit Hilfe von gefangenen Tieren können in Städten spezielle Gebäude errichtet werden. Je nach Art können sie auch als Kampftiere abgerichtet werden oder der Stadt andere Vorteile bringen.</German>
 	<TEXT>
 	</TEXT>
@@ -39,12 +41,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_ANIMALS_TEXT</Tag>
 		<English>Animals in Caveman2Cosmos</English>
+		<French>Les Animaux dans Caveman2Cosmos</French>
 		<German>Tiere in Caveman2Cosmos</German>
 		<Polish>Zwierzęta w Caveman2Cosmos</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_TEXT</Tag>
 		<English>Subdued animals</English>
+		<French>Animaux apprivoisés</French>
 		<German>Gefangene Tiere</German>
 		<Italian>Animali addomesticati</Italian>
 		<Polish>Poskromione zwierzęta</Polish>
@@ -103,6 +107,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_TAMED_ANIMALS_TEXT</Tag>
 		<English>Tamed animals</English>
+		<French>Animaux Dressés</French>
 		<German>Gezähmte Tiere</German>
 		<Polish>Oswojone zwierzęta</Polish>
 	</TEXT>
@@ -303,12 +308,6 @@
 		<English>TBD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_ANIMALS_TEXT</Tag>
-		<English>Animals in Caveman2Cosmos</English>
-		<French>Les Animaux dans Caveman2Cosmos</French>
-		<Polish>Zwierzęta w Caveman2Cosmos</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_MYTHS_LEGENDS_STORIES_PEDIA</Tag>
 		<English>Myth buildings represent oral traditions and have the main aim of simulating the neolithic burst in "scientific" discovery by providing science. Some also provide a small boost to the production of other buildings, eg Crocodile Myth reduces the cost of building the Temple of Set. For the most part Myths are [LINK=CONCEPT_PSEUDO_NATIONAL_WONDERS]pseudo national wonders[/LINK] which means that they can only be built in one city but have effects in all your cities. The myth effects building is free and is used to provide access to the Story buildings.[PARAGRAPH:2]Story and Stories buildings represent the written tradition they don't provide science but do provide Education. You can only build a Story if you have the Writing and the Myth. Stories require Literature and the Story building but effectively provide the Story building effects in all your cities, including new ones.[PARAGRAPH:2] There are Myths about individual animals eg Moon Bear; Myths about animal groups eg Bears; Elemental Myths (Earth, Sky, Sea, etc.), Landscape Myths (a C2C extension to Platyping's Natural Wonders component) and Mythical Beasts.</English>
 		<French>Les bâtiments mythiques représentent les traditions orales et ont pour objectif principal de simuler l'éclatement néolithique de la découverte "scientifique" en fournissant la science. Certains fournissent également un petit coup de pouce à la production d'autres bâtiments, par exemple Mythe Crocodile réduit le coût de construction du Temple de Set. Pour la plupart, les mythes sont [LINK=CONCEPT_PSEUDO_NATIONAL_WONDERS]Pseudo-merveilles nationales[/ LINK], ce qui signifie qu'ils ne peuvent être construits que dans une seule ville mais ont des effets dans toutes vos villes. Le bâtiment des effets mythiques est gratuit et est utilisé pour donner accès aux bâtiments de l'histoire. [PARAGRAPH:2] Les bâtiments de l'histoire et des histoires représentent la tradition écrite qu'ils ne fournissent pas la science mais fournissent l'éducation. Vous ne pouvez construire une histoire que si vous avez l'écriture et le mythe. Les histoires nécessitent de la littérature et la construction de l'histoire mais fournissent efficacement les effets de construction de l'histoire dans toutes vos villes, y compris les nouvelles. [PARAGRAPH:2] Il y a des mythes sur les animaux individuels, par exemple Moon Bear; Mythes sur les groupes d'animaux, par exemple les ours; Mythes élémentaires (Terre, ciel, mer, etc.), Mythes du paysage (une extension C2C du composant Merveilles naturelles de Platyping) et Bêtes mythiques.</French>
@@ -336,13 +335,6 @@
 		<Italian>[H1]Animali addomesticati[\H1][PARAGRAPH]Gli animali addomesticati sono animali selvaggi catturati; vengono usati come animali da compagnia esotici, ed alcuni di loro diventano indispensabili per gli uomini.[PARAGRAPH:2]Gli animali addomesticati possono essere usati per:[NEWLINE][ICON_BULLET]Costruire edifici[NEWLINE][ICON_BULLET]Essere macellati in cambio di cibo, produzione o oro; ottieni migliori risultati macellando i tuoi animali in città invece che in territorio selvaggio, e risultati intermedi macellandoli nei tuoi territori.[NEWLINE][ICON_BULLET]Combattere nei giochi organizzati nelle tue arene in cambio di oro e felicità[NEWLINE][ICON_BULLET]Essere studiati in cambio di ricerca e cultura[PARAGRAPH:2][BOLD]Creature marine[\BOLD][PARAGRAPH:2]Le creature marine addomesticate sono di due tipi: "Storie di..." che sono storie narrate da avventurieri e pescatori riguardanti la cratura, e ".. addomesticato" che è realmente la creatura addomesticata. La versione che puoi ottenere dipende dall'animale che catturi e dalle tecnologie che hai ricercato.[PARAGRAPH]Una differenza delle creature marine rispetto agli animali terrestri è che la tua capitale potrebbe non essere sulla costa; in questo caso sarebbe impossibile costruire i miti legati alle creature marine. Per ovviare a questo problema puoi decidere dove costruire i tuoi miti, costruendo un Mito del mare, che sostituisce il palazzo come prerequisito per i miti. Il "Canto del mare" è un edificio costruito gratuitamente nelle altre città che ti impedisce di costruire ovunque i miti.[PARAGRAPH:2]All'inizio della partita puoi ottenere solo "Storie di...", che vengono trasportate direttamente alla tua città più vicina. Le "Storie di..." possono essere usate per costruire miti, ma non possono essere macellate.[PARAGRAPH]Con il progredire del tempo potrai inizare a catturare gli animali marini, partendo da quelli più piccoli. A seconda della latitudine e dell'amministrazione della tua città potresti essere in grado di costruire le pinne di pesce, e in seguito gli allevamenti costieri.[PARAGRAPH:2]Ricercando la "Biologia marina" potrai catturare anche gli animali più grandi; inoltre questa tecnologia sblocca molti edifici costruibili solo da creature marine.[PARAGRAPH]"Storie di narvali" e "Storie di dugonghi" possono costruire miti in qualsiasi città.[PARAGRAPH:2][BOLD]Opzioni[\BOLD][PARAGRAPH]Ci sono vari modi per modificare il funzionamento degli animali addomesticati in Caveman2Cosmos. Puoi modificare il tasso a cui gli animali compaiono e cosa succede ad un'unità quando la addomestichi. Le opzioni sono codificate nel file [BOLD]A_New_Dawn_GlobalDefines.XML[\BOLD] che si trova nella cartella Assets/XML. Le variabili sono:[NEWLINE][ICON_BULLET]ANIMAL_SPAWN_MODIFIER per il tasso a cui gli animali terrestri compaiono; si consiglia un valore compreso tra 100 e 200. Imposta questo valore a zero (0) se vuoi giocare senza animali terrestri.[NEWLINE][ICON_BULLET]SEA_ANIMAL_SPAWN_MODIFIER per il tasso a cui compaiono gli animali marini. Nota che iniziano a comparire più tardi degli animali terrestri.[NEWLINE][ICON_BULLET]DONT_ESCORT_SUBDUED_LAND_ANIMAL se è impostato su 1, gli animali addomesticati saranno trasportati istantaneamente alla città più vicina. Questa è l'opzione di default.[NEWLINE][ICON_BULLET]DONT_ESCORT_SUBDUED_SEA_ANIMAL come sopra, ma per le creature marine.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_TEXT</Tag>
-		<English>Subdued animals</English>
-		<French>Animaux apprivoisés</French>
-		<Italian>Animali addomesticati</Italian>
-		<Polish>Poskromione zwierzęta</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CONCEPT_SUBDUED_SEA_ANIMALS_PEDIA</Tag>
 		<English>Subdued sea animals are wild (barbarian) sea animals defeated in combat.</English>
 		<French>Les animaux marins apprivoisés sont des animaux marins sauvages (barbares) vaincus au combat.</French>
@@ -363,26 +355,10 @@
 		<Polish>Oswojone zwierzęta są identyczne z poskromionymi zwierzętami oprócz jednej rzeczy - masz możliwość "budowania" tych zwierząt w mieście.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CONCEPT_TAMED_ANIMALS_TEXT</Tag>
-		<English>Tamed animals</English>
-		<French>Animaux Dressés</French>
-		<Polish>Oswojone zwierzęta</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_ANIMAL_STRATEGY</Tag>
-		<English>Animals spawn in the wilderness and are barbarian animal units. See also [LINK=CONCEPT_SUBDUED_ANIMALS]Subdued Animals[\LINK] and [LINK=CONCEPT_TAMED_ANIMALS]Tamed Animals[\LINK].</English>
-		<French>Les animaux apparaissent dans la nature et sont des unités animales barbares. Voir également [LINK=CONCEPT_SUBDUED_ANIMALS]Animaux apprivoisés[\LINK] et [LINK=CONCEPT_TAMED_ANIMALS]Animaux dressés[\LINK].</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_HUNTER_PEDIA</Tag>
 		<English>Years of living in the wilderness on their own terms have taught these men a thing or two about the importance of stealth, speed and senses. They specialise in the hunting and subduing of animal units.</English>
 		<French>Des années de vie dans la nature selon leurs propres termes ont enseigné à ces hommes une ou deux choses sur l'importance de la furtivité, de la vitesse et des sens. Ils se spécialisent dans la chasse et la maîtrise des unités animales.</French>
 		<Italian>Anni di vita nella natura ed in solitudine hanno insegnato a questi uomini una o due cose sull'importanza della silenziosità, della velocità e delle percezioni. Sono specializzati nella caccia e nell'addomesticazione di animali selvaggi.</Italian>
 		<Polish>Łowy polowanie było jedną z najważniejszych czynności pierwotnych ludzi przez wiele tysiącleci. Nie było wówczas pojęcia "własności" i zwierzyna była niczyja. Polowania były głównym źródłem utrzymania i przeżycia ludzi oprócz pożywienia pozyskiwano w ten sposób skóry na okrycia, a kości i rogi na proste narzędzia. Na przestrzeni wieków, w wyniku zachodzących zmian cywilizacyjnych jak i społecznych, z powodu trzebienia puszcz, rozwoju rolnictwa, polowania przestały być głównym zajęciem człowieka, a stały się okazją do wykazania swojej siły, zręczności i męstwa w bezpośrednich spotkaniach z dzikim zwierzem. Poczynając od ok. X w. łowy zaczęły być w coraz większym stopniu przywilejem ludzi "dobrze urodzonych", cesarzy, królów, duchowieństwa i rycerstwa. Łowy stały się również głównym źródłem zaopatrzenia wojsk podczas wypraw wojennych.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_ANIMAL_STRATEGY</Tag>
-		<English>Subdued animals are primarily meant for use in constructing special buildings in cities.</English>
-		<French>Les animaux apprivoisés sont principalement destinés à la construction de bâtiments spéciaux dans les villes.</French>
 	</TEXT>
 </Civ4GameText>

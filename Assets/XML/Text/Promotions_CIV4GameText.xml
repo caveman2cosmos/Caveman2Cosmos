@@ -2230,6 +2230,7 @@
 		<Tag>TXT_KEY_PROMOTION_ADDS_CANNOT_CAPTURE</Tag>
 		<English>[ICON_BULLET]Gives cause for unit to be unable to capture enemy Cities or Units</English>
 		<French>[ICON_BULLET]Rend l'unité incapable de capturer les villes ou unités ennemies</French>
+		<German>[ICON_BULLET]Unfähigkeit zur Einnahme von Städten und Einheiten hinzugefügt</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ADDS_COLD_IMMUNITY_TEXT</Tag>
@@ -10242,40 +10243,6 @@
 		<Polish>Pies Myśliwski II</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_PUNCTURE_TEXT</Tag>
-		<English>[ICON_BULLET]%D1_Change Puncture Value</English>
-		<French>[ICON_BULLET]%D1_Change Valeur de Perforation</French>
-		<Italian>[ICON_BULLET]%D1_Change valore di perforazione</Italian>
-		<Polish>[ICON_BULLET]%D1_Change Wartość Przebicia</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_PUNCTURE_VERSUS_TEXT</Tag>
-		<English>[ICON_BULLET]%D1_Mod Puncture vs. [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</English>
-		<French>[ICON_BULLET]%D1_Mod Puncture contre [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</French>
-		<German>[ICON_BULLET]%D1_Mod Puncture gegen [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</German>
-		<Italian>[ICON_BULLET]%D1_Mod alla Perforazione contro [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</Italian>
-		<Spanish>[ICON_BULLET]%D1_Mod Puncture contra [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</Spanish>
-		<Polish>[ICON_BULLET]%D1_Mod do Przebicia vs: [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_PURSUIT_TEXT</Tag>
-		<English>[ICON_BULLET]Pursuit Chance: %D1_Change%%</English>
-		<French>[ICON_BULLET]%D1_Change%% Chances de poursuite</French>
-		<German>[ICON_BULLET]Verfolgungsjagd: %d1_Amount%%</German>
-		<Italian>[ICON_BULLET]%D1_Change%% di probabilità di inseguimento</Italian>
-		<Spanish>[ICON_BULLET]%D1_Change%% probabilidad de Pursuitón</Spanish>
-		<Polish>[ICON_BULLET]%D1_Change%% Szansy na Pościg</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_PURSUIT_VERSUS_TEXT</Tag>
-		<English>[ICON_BULLET]Pursuit vs. [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]: %D1_Mod%%</English>
-		<French>[ICON_BULLET]%D1_Mod%% Poursuite contre [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</French>
-		<German>[ICON_BULLET]%D1_Mod%% Verfolgung von [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</German>
-		<Italian>[ICON_BULLET]%D1_Mod%% all'Inseguimento contro [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</Italian>
-		<Spanish>[ICON_BULLET]%D1_Mod%% Pursuit contra [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</Spanish>
-		<Polish>[ICON_BULLET]%D1_Mod%% Pościg za [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HUNTING_DOG3</Tag>
 		<English>Hunting Dog III</English>
 		<French>
@@ -14066,6 +14033,7 @@
 		<Tag>TXT_KEY_PROMOTION_PURSUIT_TEXT</Tag>
 		<English>[ICON_BULLET]Pursuit Chance: %D1_Change%%</English>
 		<French>[ICON_BULLET]%D1_Change%% Chances de poursuite</French>
+		<German>[ICON_BULLET]Verfolgungsjagd: %d1_Amount%%</German>
 		<Italian>[ICON_BULLET]%D1_Change%% di probabilità di inseguimento</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change%% probabilidad de Pursuitón</Spanish>
 		<Polish>[ICON_BULLET]%D1_Change%% Szansy na Pościg</Polish>
@@ -14771,6 +14739,7 @@
 		<Tag>TXT_KEY_PROMOTION_REMOVES_CANNOT_CAPTURE</Tag>
 		<English>[ICON_BULLET]Removes a cause for unit to be unable to capture enemy Cities or Units</English>
 		<French>[ICON_BULLET]Enlève l'incapacité de l'unité de capturer les villes ou unités ennemies</French>
+		<German>[ICON_BULLET]Unfähigkeit zur Einnahme von Städten und Einheiten entfernt</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REMOVES_COLD_IMMUNITY_TEXT</Tag>
@@ -14952,34 +14921,6 @@
 		<English>Repair (Naval) II</English>
 		<French>Réparation (Navire) II</French>
 		<Polish>Naprawa (Okręty) II</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_UNIT_COMBAT_MOD_PER_SIZE_LESS</Tag>
-		<English>[ICON_BULLET]%d1_Amount%% VS Each Size Rank Smaller</English>
-		<French>[ICON_BULLET]Modif. de Combat contre des unités plus petites: %D1_Amount%% par rang inférieur</French>
-		<German>[ICON_BULLET]%d1_Amount%% gegen kleinere Einheiten (pro Stufe Größenunterschied)</German>
-		<Polish>[ICON_BULLET]Modyfiakator Walki vs Mniejszych Rozmiarów jednostki: %d1_Amount%% za różnicę w rozmiarze</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_UNIT_COMBAT_MOD_PER_SIZE_MORE</Tag>
-		<English>[ICON_BULLET]%d1_Amount%% VS Each Size Rank Larger</English>
-		<French>[ICON_BULLET]Modif. de Combat contre des unités plus grandes: %D1_Amount%% par rang supérieur</French>
-		<German>[ICON_BULLET]%d1_Amount%% gegen größere Einheiten (pro Stufe Größenunterschied)</German>
-		<Polish>[ICON_BULLET]Modyfiakator Walki vs Większych Rozmiarów jednostki: %d1_Amount%% za różnicę w rozmiarze</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_UNIT_COMBAT_MOD_PER_VOLUME_LESS</Tag>
-		<English>[ICON_BULLET]%d1_Amount%% VS Each Group Rank Smaller</English>
-		<French>[ICON_BULLET]Modif. de Combat contre des groupes plus petits: %D1_Amount%% par Nb d'unités en moins</French>
-		<German>[ICON_BULLET]%d1_Amount%% gegen kleinere Gruppen (pro Stufe Größenunterschied)</German>
-		<Polish>[ICON_BULLET]Modyfiakator Walki vs Mniejsze Grupy jednostek: %d1_Amount%% za różnicę w rozmiarze</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_UNIT_COMBAT_MOD_PER_VOLUME_MORE</Tag>
-		<English>[ICON_BULLET]%d1_Amount%% VS Each Group Rank Larger</English>
-		<French>[ICON_BULLET]Modif. de Combat contre des groupes plus grands: %D1_Amount%% par Nb d'unités suppl.</French>
-		<German>[ICON_BULLET]%d1_Amount%% gegen größere Gruppen (pro Stufe Größenunterschied)</German>
-		<Polish>[ICON_BULLET]Modyfiakator Walki vs Większych Grupy jednostek: %d1_Amount%% za różnicę w rozmiarze</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REPAIR_NAVAL3</Tag>
@@ -19082,24 +19023,28 @@
 		<Tag>TXT_KEY_PROMOTION_UNIT_COMBAT_MOD_PER_SIZE_LESS</Tag>
 		<English>[ICON_BULLET]%d1_Amount%% VS Each Size Rank Smaller</English>
 		<French>[ICON_BULLET]Modif. de Combat contre des unités plus petites: %D1_Amount%% par rang inférieur</French>
+		<German>[ICON_BULLET]%d1_Amount%% gegen kleinere Einheiten (pro Stufe Größenunterschied)</German>
 		<Polish>[ICON_BULLET]Modyfiakator Walki vs Mniejszych Rozmiarów jednostki: %d1_Amount%% za różnicę w rozmiarze</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_UNIT_COMBAT_MOD_PER_SIZE_MORE</Tag>
 		<English>[ICON_BULLET]%d1_Amount%% VS Each Size Rank Larger</English>
 		<French>[ICON_BULLET]Modif. de Combat contre des unités plus grandes: %D1_Amount%% par rang supérieur</French>
+		<German>[ICON_BULLET]%d1_Amount%% gegen größere Einheiten (pro Stufe Größenunterschied)</German>
 		<Polish>[ICON_BULLET]Modyfiakator Walki vs Większych Rozmiarów jednostki: %d1_Amount%% za różnicę w rozmiarze</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_UNIT_COMBAT_MOD_PER_VOLUME_LESS</Tag>
 		<English>[ICON_BULLET]%d1_Amount%% VS Each Group Rank Smaller</English>
 		<French>[ICON_BULLET]Modif. de Combat contre des groupes plus petits: %D1_Amount%% par Nb d'unités en moins</French>
+		<German>[ICON_BULLET]%d1_Amount%% gegen kleinere Gruppen (pro Stufe Größenunterschied)</German>
 		<Polish>[ICON_BULLET]Modyfiakator Walki vs Mniejsze Grupy jednostek: %d1_Amount%% za różnicę w rozmiarze</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_UNIT_COMBAT_MOD_PER_VOLUME_MORE</Tag>
 		<English>[ICON_BULLET]%d1_Amount%% VS Each Group Rank Larger</English>
 		<French>[ICON_BULLET]Modif. de Combat contre des groupes plus grands: %D1_Amount%% par Nb d'unités suppl.</French>
+		<German>[ICON_BULLET]%d1_Amount%% gegen größere Gruppen (pro Stufe Größenunterschied)</German>
 		<Polish>[ICON_BULLET]Modyfiakator Walki vs Większych Grupy jednostek: %d1_Amount%% za różnicę w rozmiarze</Polish>
 	</TEXT>
 	<TEXT>

@@ -624,20 +624,6 @@
 		<Polish>Poskromiony Hippopotam</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SUBDUED_OSTRICH</Tag>
-		<English>Subdued Ostrich</English>
-		<French>
-			<Text>Autruche (App.)</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>
-			<Text>Gefangener Strauß:Gefangenen Straußes:Gefangenem Strauß:Gefangenen Strauß:Gefangene Strauße:Gefangenen Strauße:Gefangenen Straußen:Gefangenen Strauße</Text>
-			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
-			<Plural>0:0:0:0:1:1:1:1</Plural>
-		</German>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_HORNEDOWL</Tag>
 		<English>Subdued Great Horned Owl</English>
 		<French>Grand hibou à cornes (App.)</French>
@@ -1022,6 +1008,11 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>
+			<Text>Gefangener Strauß:Gefangenen Straußes:Gefangenem Strauß:Gefangenen Strauß:Gefangene Strauße:Gefangenen Strauße:Gefangenen Straußen:Gefangenen Strauße</Text>
+			<Gender>Male:Male:Male:Male:Male:Male:Male:Male</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 		<Italian>
 			<Text>Struzzo addomesticato</Text>
 			<Gender>Male</Gender>
