@@ -3988,24 +3988,18 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BABIRUSA_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-		[ICON_BULLET] Myth, Story, Stories - Babirusa
-		[ICON_BULLET] Myth - Boar, Pig Herd
-		[ICON_BULLET] Exotic Herbavours Cage, Enclosure
-		[ICON_BULLET] Master Hunter, Boar Camp</English>
-		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT]:
-		[ICON_BULLET] Mythes et Histoire(s) de Babiroussa
-		[ICON_BULLET] Mythe des Ours
-		[ICON_BULLET] Enclos à cochons, camp d'ours
-		[ICON_BULLET] Maitre chasseur</French>
+		[SPACE][SPACE] * Myth, Story &#38; Stories - Babirusa
+		[SPACE][SPACE] * Myth - Boar &#38; Pig Herd
+		[SPACE][SPACE] * Exotic Herbavours Cage &#38; Enclosure
+		[SPACE][SPACE] * Master Hunter &#38; Boar Camp</English>
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires de Babiroussa, Mythe des Ours, Enclos à cochons, camp d'ours, Maitre chasseur</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BAIRDS_TAPIR_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-		[ICON_BULLET] Myth, Story, Stories - Tapir
-		[ICON_BULLET] Exotic Herbavours Cage, Enclosure</English>
-		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT]:
-		[ICON_BULLET] Mythes et Histoire(s) du Tapir
-		[ICON_BULLET] Bairds, Cage et Enclos pour Herbivores exotiques</French>
+		[SPACE][SPACE] * Myth, Story &#38; Stories - Tapir
+		[SPACE][SPACE] * Exotic Herbavours Cage &#38; Enclosure</English>
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Tapir et Tapir, Bairds, Cage et Enclos pour Herbivores exotiques</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Tapira</Polish>
 	</TEXT>
 	<TEXT>
@@ -4017,15 +4011,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BLACK_RHINO_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-		[ICON_BULLET] Myth, Story and Stories - Rhinocerous
-		[ICON_BULLET] Unicorn Myth
-		[ICON_BULLET] Master Hunter
-		[ICON_BULLET] Exotic Herbavours Cage</English>
-		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT]:
-		[ICON_BULLET] Mythes et Histoire(s) du Rhinocéros noir
-		[ICON_BULLET] Mythe - Rhinocéros et Licornes
-		[ICON_BULLET] Cage et Enclos des Herbivores exotiques
-		[ICON_BULLET] Camp de Rhinos et Maître Chasseur</French>
+		[SPACE][SPACE] * Myth, Story and Stories - Rhinocerous
+		[SPACE][SPACE] * Unicorn Myth &#38; Master Hunter
+		[SPACE][SPACE] * Exotic Herbavours Cage</English>
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Rhinocéros noir [NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Nosorożce</Polish>
 	</TEXT>
 	<TEXT>
@@ -4041,8 +4030,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_BRAZILIAN_TAPIR_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-		[ICON_BULLET] Myth, Story, Stories - Tapir
-		[ICON_BULLET] Exotic Herbavours Cage, Enclosure</English>
+		[SPACE][SPACE] * Myth, Story &#38; Stories - Tapir
+		[SPACE][SPACE] * Exotic Herbavours Cage &#38; Enclosure</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Tapir et Tapir, Brazilian, Cage et Enclos pour Herbivores exotiques</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Tapira</Polish>
 	</TEXT>
@@ -4059,9 +4048,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CAIMAN_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-		[ICON_BULLET] Myth, Story, Stories - Caiman
-		[ICON_BULLET] Myth - Crocodiles, Reptiles
-		[ICON_BULLET] Taxidermist, Zoo, Enclosure</English>
+		[SPACE][SPACE] * Myth, Story &#38; Stories - Caiman
+		[SPACE][SPACE] * Myth - Crocodiles &#38; Reptiles
+		[SPACE][SPACE] * Taxidermist, Zoo &#38; Enclosure</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Caiman, Mythe du Crocodiles, Cages à oiseaux, Atelier de Plumes et Perroquets</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Kajman</Polish>
 	</TEXT>
@@ -4073,8 +4062,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_CUSCUS_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-		[ICON_BULLET] Myth, Story, Stories - Cuscus
-		[ICON_BULLET] Marsupial Myth, Enclosure</English>
+		[SPACE][SPACE] * Myth, Story &#38; Stories - Cuscus
+		[SPACE][SPACE] * Marsupial Myth &#38; Enclosure</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) des couscous[NEWLINE][ICON_BULLET]Mythe - Marsupiaux[NEWLINE][ICON_BULLET]Cage et Enclos à Marsupiaux</French>
 	</TEXT>
 	<TEXT>
@@ -4094,8 +4083,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DART_FROG_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-		[ICON_BULLET] Myth, Story and Stories - Dart Frog
-		[ICON_BULLET] Amphibian Myth, Pond, Enclosure</English>
+		[SPACE][SPACE] * Myth, Story and Stories - Dart Frog
+		[SPACE][SPACE] * Amphibian Myth, Pond &#38; Enclosure</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) des Grenouilles venimeuses[NEWLINE][ICON_BULLET]Mythe - Amphibiens[NEWLINE][ICON_BULLET]Mare à amphibiens et enclos</French>
 	</TEXT>
 	<TEXT>
@@ -4127,10 +4116,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_DINGO_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-		[ICON_BULLET] Myth, Story, Stories - Dingo
-		[ICON_BULLET] Dog Breeder, Kennels
-		[ICON_BULLET] Wolf Myth, Enclosure</English>
-		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythes et Histoires du Dingo , Eleveur de chiens et Chenils, Cage et Enclos à loup</French>
+		[SPACE][SPACE] * Myth, Story &#38; Stories - Dingo
+		[SPACE][SPACE] * Dog Breeder &#38; Kennels
+		[SPACE][SPACE] * Wolf Myth &#38; Enclosure</English>
+		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires du Dingo , Eleveur de chiens et Chenils, Cage et Enclos à loup</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ELASMOTHERIUM</Tag>
@@ -4141,19 +4130,19 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_ELASMOTHERIUM_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-		[ICON_BULLET] Myth, Story, Stories, Remains - Elasmotherium
-		[ICON_BULLET] Myths - Rhino, Unicorn
-		[ICON_BULLET] Exotic Herbavour Cage, Enclosure
-		[ICON_BULLET] Master Hunter, Rhino Camp</English>
+		[SPACE][SPACE] * Myth, Story, Stories &#38; Remains - Elasmotherium
+		[SPACE][SPACE] * Myths - Rhino &#38; Unicorn
+		[SPACE][SPACE] * Exotic Herbavour Cage &#38; Enclosure
+		[SPACE][SPACE] * Master Hunter &#38; Rhino Camp</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Rhinocéros indien [NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Nosorożce</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_EMPEROR_PENGUIN_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-		[ICON_BULLET] Myth, Story and Stories - Emperor Penguin
-		[ICON_BULLET] Myths of Sea, Flightless Birds, Sea Birds
-		[ICON_BULLET] Bird Cage and Enclosure</English>
+		[SPACE][SPACE] * Myth, Story and Stories - Emperor Penguin
+		[SPACE][SPACE] * Myths of Sea, Flightless Birds &#38; Sea Birds
+		[SPACE][SPACE] * Bird Cage and Enclosure</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Construisez[COLOR_REVERT]:
 		[ICON_BULLET] Les Mythes et Histoires des Manchots Empereurs
 		[ICON_BULLET] Mythes de la mer, des Oiseaux terrestres et des Oiseaux des mers
@@ -4167,8 +4156,8 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_EWOLF_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-		[ICON_BULLET] Myth, Story, Stories - Ethiopian Wolf
-		[ICON_BULLET] Wolf Myth, Enclosure</English>
+		[SPACE][SPACE] * Myth, Story &#38; Stories - Ethiopian Wolf
+		[SPACE][SPACE] * Wolf Myth &#38; Enclosure</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Loup Ethiopien, Mythe des Loups, Cage et Enclos à loup</French>
 	</TEXT>
 	<TEXT>
@@ -4179,10 +4168,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_FENNECFOX_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-		[ICON_BULLET] Myth, Story and Stories - Fennec Fox
-		[ICON_BULLET] Zoo, Taxidermist, Totems
-		[ICON_BULLET] Fox Traps and Fur Farm</English>
-		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythes et Histoires de Fennec, pièges à renard, et fermes de fourrures, Cage et Enclos à loup</French>
+		[SPACE][SPACE] * Myth, Story and Stories - Fennec Fox
+		[SPACE][SPACE] * Zoo, Taxidermist &#38; Totems
+		[SPACE][SPACE] * Fox Traps and Fur Farm</English>
+		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires de Fennec, pièges à renard, et fermes de fourrures, Cage et Enclos à loup</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GATOR</Tag>
@@ -4207,18 +4196,18 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GATOR_ASIAN_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-		[ICON_BULLET] Myth, Story and Stories - Chinese Alligator
-		[ICON_BULLET] Myth - Reptile, Crocodile and Dragon
-		[ICON_BULLET] Master Hunter, Reptile Enclosure</English>
+		[SPACE][SPACE] * Myth, Story and Stories - Chinese Alligator
+		[SPACE][SPACE] * Myth - Reptile, Crocodile and Dragon
+		[SPACE][SPACE] * Master Hunter &#38; Reptile Enclosure</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) de l'Alligator de Chine, Maître chasseur, Mythe du Reptile, Crocodile et Dragon, Cage et Enclos pour reptiles</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Aligator Chiński</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GATOR_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-		[ICON_BULLET] Myth, Story and Stories - Americian Alligator
-		[ICON_BULLET] Master Hunter, Myth - Reptile, Crocodile and Dragon
-		[ICON_BULLET] Master Hunter, Reptile Enclosure</English>
+		[SPACE][SPACE] * Myth, Story and Stories - Americian Alligator
+		[SPACE][SPACE] * Master Hunter, Myth - Reptile, Crocodile and Dragon
+		[SPACE][SPACE] * Master Hunter &#38; Reptile Enclosure</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) de l'Alligator d'Amérique, Maître Chasseur, Mythe du Reptile, Crocodile et Dragon, Cage et Enclos pour reptiles</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Aligator Amerykański</Polish>
 	</TEXT>
@@ -4230,9 +4219,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GLYPTO_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-		[ICON_BULLET] Myth, Story, Stories, Remains - Glyptodon
-		[ICON_BULLET] Earth Myth, Taxidermist
-		[ICON_BULLET] Master Hunter, Zoo</English>
+		[SPACE][SPACE] * Myth, Story, Stories &#38; Remains - Glyptodon
+		[SPACE][SPACE] * Earth Myth &#38; Taxidermist
+		[SPACE][SPACE] * Master Hunter &#38; Zoo</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]Constuit[COLOR_REVERT] un Mythe, une ou des Histoires - Glyptodon[NEWLINE][ICON_BULLET]Restes - Glyptodon[NEWLINE][ICON_BULLET]Mythe la Terre</French>
 	</TEXT>
 	<TEXT>
@@ -4243,9 +4232,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_GROUNDSLOTH_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-		[ICON_BULLET] Myth, Story, Stories, Remains - Ground Sloth
-		[ICON_BULLET] Earth Myth, Taxidermist
-		[ICON_BULLET] Master Hunter, Zoo</English>
+		[SPACE][SPACE] * Myth, Story, Stories &#38; Remains - Ground Sloth
+		[SPACE][SPACE] * Earth Myth &#38; Taxidermist
+		[SPACE][SPACE] * Master Hunter &#38; Zoo</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Xénarthre, Restes de Xénarthre</French>
 	</TEXT>
 	<TEXT>
@@ -4262,10 +4251,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_INDIAN_RHINO_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-		[ICON_BULLET] Myth, Story, Stories - Indian Rhinoceros
-		[ICON_BULLET] Myth - Rhinoceros, Unicorn
-		[ICON_BULLET] Exotic Herbavour Cage, Enclosure
-		[ICON_BULLET] Rhino camp, master Hunter</English>
+		[SPACE][SPACE] * Myth, Story &#38; Stories - Indian Rhinoceros
+		[SPACE][SPACE] * Myth - Rhinoceros &#38; Unicorn
+		[SPACE][SPACE] * Exotic Herbavour Cage &#38; Enclosure
+		[SPACE][SPACE] * Rhino camp &#38; master Hunter</English>
 		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] les Mythes et Histoire(s) du Rhinocéros indien [NEWLINE][ICON_BULLET]Mythe - Rhinocéros et Licornes[NEWLINE][ICON_BULLET]Cage et Enclos des Herbivores exotiques[NEWLINE][ICON_BULLET]Camp de Rhinos et Maître Chasseur</French>
 		<Polish>[COLOR_HIGHLIGHT_TEXT]Wybuduj[COLOR_REVERT] Mit, Opowieść lub Historię - Nosorożce</Polish>
 	</TEXT>
@@ -4530,12 +4519,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_THYLACINE_HELP</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
-		[ICON_BULLET] Myth, Story, Stories, Remains - Thylacine
-		[ICON_BULLET] Myth - Marsupial and Paleolithic Marsupial</English>
-		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT]:
-		[ICON_BULLET] Mythes et Histoires du Thylacine
-		[ICON_BULLET] Restes de Thylacine
-		[ICON_BULLET] Mythe du Marsupial</French>
+		[SPACE][SPACE] * Myth, Story, Stories &#38; Remains - Thylacine
+		[SPACE][SPACE] * Myth - Marsupial and Paleolithic Marsupial</English>
+		<French>Permet de [COLOR_HIGHLIGHT_TEXT]Construire[COLOR_REVERT] le Mythe et les Histoires du Thylacine, Restes de Thylacine, Mythe du Marsupial</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_TREESLOTH</Tag>
