@@ -232,8 +232,8 @@ class CityDemolish:
 						break
 				if bContinue: continue
 				# Building Prereq
-				for i in xrange(CvTheUnitInfo.getNumPrereqAndBuildings()):
-					if not CyCity.getNumBuilding(CvTheUnitInfo.getPrereqAndBuilding(i)):
+				for i in xrange(CvUnitInfo.getNumPrereqAndBuildings()):
+					if not CyCity.getNumBuilding(CvUnitInfo.getPrereqAndBuilding(i)):
 						continue
 				# Bonus Prereq
 				iBonus = CvUnitInfo.getPrereqAndBonus()
