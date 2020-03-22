@@ -58,7 +58,7 @@
 			</BuildingProductionModifiers>
 		</CivicInfo>
 		<CivicInfo>
-			<CivicOptionType>CIVICOPTION_AGRICULTURE</CivicOptionType>
+			<CivicOptionType>CIVICOPTION_AGICULTURE</CivicOptionType>
 			<Type>CIVIC_LAB_GROWN_FOOD</Type>
 			<BuildingProductionModifiers>
 				<BuildingProductionModifier>

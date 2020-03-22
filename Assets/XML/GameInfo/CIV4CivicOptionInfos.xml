@@ -2,8 +2,8 @@
 <Civ4CivicOptionInfos xmlns="x-schema:../Schema/C2C_CIV4GameInfoSchema.xml">
 	<CivicOptionInfos>
 		<CivicOptionInfo>
-			<Type>CIVICOPTION_AGRICULTURE</Type>
-			<Description>TXT_KEY_CIVICOPTION_AGRICULTURE</Description>
+			<Type>CIVICOPTION_AGICULTURE</Type>
+			<Description>TXT_KEY_CIVICOPTION_AGICULTURE</Description>
 		</CivicOptionInfo>
 		<CivicOptionInfo>
 			<Type>CIVICOPTION_CURRENCY</Type>
