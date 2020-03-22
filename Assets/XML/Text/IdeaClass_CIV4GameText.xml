@@ -11,13 +11,13 @@
 		<French>Classe d'Idée (Héritage)</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_IDEA_HERITAGE_EUROPEAN</Tag>
-		<English>Idea (European Heritage)</English>
-		<French>Classe d'Idée (Héritage Européen)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_IDEA_CULTURE_CELTIC</Tag>
 		<English>Idea (Celtic Culture)</English>
 		<French>Classe d'Idée (Culture celte)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IDEA_HERITAGE_EUROPEAN</Tag>
+		<English>Idea (European Heritage)</English>
+		<French>Classe d'Idée (Héritage Européen)</French>
 	</TEXT>
 </Civ4GameText>

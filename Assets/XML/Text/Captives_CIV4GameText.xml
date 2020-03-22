@@ -491,7 +491,7 @@
 		<Tag>TXT_KEY_UNIT_FREED_SLAVE_PEDIA</Tag>
 		<English>If you capture a city which has settled slaves in it some of them will become eligible for upgrade into workers. The cost of the upgrade represents the cost of providing them with the tools and infrastructure your other workers have.</English>
 		<French>Si vous capturez une ville qui y a installé des esclaves, certains d'entre eux deviendront éligibles pour être améliorés en ouvriers. Le coût de la mise à niveau représente le coût de leur fournir les outils et l'infrastructure dont disposent vos autres employés.</French>
-		<Italian>Se catturi una città in cui sono stanziati degli schiavi, alcuni di essi potrebbero diventare lavoratori. Il costo dei miglioramenti rappresenta il costo del fornirli con gli utensili e le infrastrutture che gli altri tuoi lavoratori hanno.</Italian>
+		<Italian>Se catturi una città in cui sono stanziati degli schiavi, alcuni di essi potrebbero diventare lavoratori. Il costo della promozione include il costo del rifornirli degli utensili e delle infrastrutture che hanno gli altri tuoi lavoratori.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FREED_SLAVE_STRATEGY</Tag>
@@ -503,7 +503,7 @@
 		<Tag>TXT_MESSAGE_FREED_SLAVES_AS_FREED_SLAVES</Tag>
 		<English>Your settled slaves in %s1 have become %d2 freed slaves. (Captive - Freed Slave).</English>
 		<French>Vos Esclaves sédentaires de %s1 ont été libérés. (Prisonnier - Esclave libéré).</French>
-		<Italian>I tuoi schiavi sedentari a %s1 sono diventati %d2 schiavi liberati. (Prigioniero - Schiavo liberato)</Italian>
+		<Italian>I tuoi schiavi stanziali di %s1 sono diventati %d2 schiavi liberati. (Prigioniero - Schiavo liberato)</Italian>
 		<Polish>Twoi osadzeni niewolnicy w %s1 stali się %d2 wyzwoleńcami. (Wyzwoleni Niewolnicy).</Polish>
 	</TEXT>
 	<TEXT>
@@ -511,15 +511,15 @@
 		<English>Some (%d1) of your slaves in %s2 have become %d3 immigrants.</English>
 		<French>Certains (%d1) de vos esclaves de %S2 sont devenus %d3 émigrants.</French>
 		<German>Some (%d1) of your slaves in %s2 have become population(%d3).</German>
-		<Italian>Alcuni dei tuoi schiavi a %s2 sono diventati %d3 migranti.</Italian>
+		<Italian>Alcuni (%d1) dei tuoi schiavi di %s2 sono diventati %d3 immigrati.</Italian>
 		<Spanish>Some (%d1) of your slaves in %s2 have become population(%d3).</Spanish>
 		<Polish>Niektórzy (%d1) sprośród Twoich niewolników w %s2 zostali imigrantami.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_MESSAGE_FREED_SLAVES_JOINED_CITY_POPULATION</Tag>
-		<English>Some (%d1) of your slaves in %s2 have become population(%d3).</English>
+		<English>Some (%d1) of your slaves in %s2 have become population (%d3).</English>
 		<French>Certains (%d1) de vos esclaves de %S2 ont été intégrés à la population (%d3)</French>
-		<Italian>Alcuni dei tuoi schiavi a %s2 sono diventati popolazione(%d3).</Italian>
+		<Italian>Alcuni schiavi di %s2 sono diventati cittadini (%d3).</Italian>
 		<Polish>Niektórzy (%d1) sprośród Twoich niewolników w %s2 dołączyli do populacji miasta (%d3).</Polish>
 	</TEXT>
 </Civ4GameText>
