@@ -1665,6 +1665,11 @@
 		<Italian>Oggetti in cristallo</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_CRYSTAL_GLASSWARE_PEDIA</Tag>
+		<English></English>
+		<Italian></Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_CUBAN</Tag>
 		<English>Cuban</English>
 		<French>Cubain</French>
@@ -2141,6 +2146,11 @@
 		<English>Fake Gems</English>
 		<French>Fausses Gemmes</French>
 		<Italian>Gemme finte</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_FAKE_GEMS_PEDIA</Tag>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_FATIMID</Tag>
@@ -2959,6 +2969,11 @@
 		<Italian>Ieracosfinge</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_HIERACOSPHINX_PEDIA</Tag>
+		<English></English>
+		<Italian></Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_HIMYARITE</Tag>
 		<English>Himyarite</English>
 	</TEXT>
@@ -3669,6 +3684,11 @@
 		<Italian>Jackalope</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_JACKALOPE_PEDIA</Tag>
+		<English></English>
+		<Italian></Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_JADE</Tag>
 		<English>Jade</English>
 		<Italian>Giada</Italian>
@@ -3917,8 +3937,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LACQUERWARE_PEDIA</Tag>
-		<English>Lacquerware are objects decoratively covered with lacquer. The lacquer is sometimes inlaid or carved. Lacquerware includes boxes, tableware, buttons and even coffins painted with lacquer in cultures mostly in the Eastern Asia.</English>
-		<German>Die Lackkunst ist eine kunsthandwerkliche Technik, deren Ursprünge vor 3500 Jahren in China lagen. Dabei werden Lacke zur Oberflächenveredelung und Dekoration auf Alltagsgegenstände und Kunstgegenstände aufgetragen.</German>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LARD</Tag>
@@ -3929,8 +3949,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LARD_PEDIA</Tag>
-		<English>Lard is pig fat in both its rendered and unrendered forms. Lard was commonly used in many cuisines as a cooking fat or shortening, or as a spread similar to butter. Its use in contemporary cuisine has diminished; however, many contemporary cooks and bakers favor it over other fats for select uses. The culinary qualities of lard vary somewhat depending on the part of the pig from which the fat was taken and how the lard was processed.</English>
-		<Polish>Smalec - tłuszcz zwierzęcy wykorzystywany w sztuce kulinarnej do przyrządzania potraw, jak również bezpośredniego spożywania.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LATVIAN</Tag>
@@ -3947,8 +3967,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LAZULITE_ORE_PEDIA</Tag>
-		<English>Lazulite is a blue, phosphate mineral containing magnesium, iron, and aluminium phosphate. Lazulite forms one endmember of a solid solution series with the darker iron rich scorzalite.</English>
-		<Polish>Lazulit - rzadki minerał z gromady fosforanów. Nazwa pochodzi od arab. azul = niebo; pers. lazhward = niebieski oraz łac. lazulum = błękit, połączonego z gr. lithos = kamień (skała), nawiązując do charakterystycznej barwy tego minerału.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LA_PLATAN</Tag>
@@ -3971,8 +3991,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LEAD_ORE_PEDIA</Tag>
-		<English>Lead, symbol Pb (Latin plumbum, a lead weight), dense, bluish-grey metallic element that was one of the first known metals. The atomic number of lead is 82; the element is in group 14 (or IVa) of the periodic table. Lead is used in enormous quantities in storage batteries and in sheathing electric cables. Large quantities are used in industry for lining pipes, tanks, and X-ray apparatus. Because of its high density and nuclear properties, lead is used extensively as protective shielding for radioactive material. Among numerous alloys containing a high percentage of lead are solder, type metal, and various bearing metals. A considerable amount of lead is consumed in the form of its compounds, particularly in paints and pigments. Lead has been used by humans for at least 7000 years, because it is widespread, easy to extract and easy to work with. It is highly malleable and ductile as well as easy to melt. In the early bronze age lead was used with antimony and arsenic. Lead was mentioned in the Book of Exodus. Alchemists thought that lead was the oldest metal and associated it with the planet Saturn. Lead pipes that bear the insignia of Roman emperors are still in service and many Roman "pigs" (ingots) of lead figure in Derbyshire lead mining history and in the history of the industry in other English centres. Lead's symbol Pb is an abbreviation of its Latin name plumbum. The English word "plumbing" also derives from this Latin root. However, it is also toxic, and lead poisoning was recognized even by the ancients. Similarly, in the Twentieth Century, the use of lead in paint pigments was ended because of the danger of lead poisoning, especially to children. By the mid-1980s, a significant shift in lead end-use patterns had taken place. Much of this shift was a result of the U.S. lead consumers' compliance with environmental regulations that significantly reduced or eliminated the use of lead in nonbattery products, including gasoline, paints, solders, and water systems. Recently, lead use is being further curtailed by the RoHS directive.</English>
-		<French>Plomb, Pb de symbole (plumbum latin, un poids de plomb), l'élément métallique dense et gris-bleuâtre qui était l'un des premiers métaux connus. Le nombre atomique de plomb est 82 ; l'élément est dans le groupe 14 (ou IVa) de la table périodique. Le plomb est employé en énorme quantité dans des batteries de stockage et en engainant les câbles électriques. De grandes quantités sont employées dans l'industrie pour des pipes de doublure, des réservoirs, et l'appareillage de rayon X. En raison de ses propriétés à haute densité et nucléaires, le plomb est employé intensivement comme l'armature protectrice pour le matériel radioactif. Parmi de nombreux alliages contenant un pourcentage élevé de plomb soyez soudure, type métal, et divers métaux de roulement. Une quantité considérable de plomb est consommée sous forme de ses composés, en particulier en peintures et colorants. Le plomb a été employé par des humains pendant au moins 7000 années, parce qu'il est répandu, facile d'extraire et facile à travailler avec. Il est fortement malléable et malléable comme facile à fondre. Dans l'âge en bronze jeune le plomb a été employé avec de l'antimoine et l'arsenic. Le plomb a été mentionné dans le livre de l'exode. Les alchimistes ont pensé que menez était le métal le plus ancien et associé lui à la planète Saturne. Menez les pipes qui soutiennent les insignes des empereurs romains sont toujours en service et beaucoup de "porcs" romains (des lingots) de chiffre de plomb en plomb de Derbyshire extrayant l'histoire et dans l'histoire de l'industrie à d'autres centres anglais. Le Pb du symbole du plomb est une abréviation de son plumbum nommé latin. Le mot anglais "tuyauterie" dérive également de cette racine latine. Cependant, il est également toxique, et l'empoisonnement de plomb a été identifié même par les ancients. De même, au vingtième siècle, l'utilisation du plomb en colorants de peinture a été finie en raison du danger du plomb empoisonnant, particulièrement aux enfants. Par le milieu des années 80, une variation significative dans l'usage final de plomb a modelé avait eu lieu. Beaucoup de ce décalage était un résultat de la conformité des consommateurs de plomb des ETATS-UNIS aux règlements environnementaux qui ont réduit ou ont éliminé de manière significative l'utilisation du plomb dans des produits de nonbattery, y compris l'essence, des peintures, des soudures, et des systèmes de l'eau. Récemment, l'utilisation de plomb est encore raccourcie par la directive de RoHS.</French>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LEAD_WARES</Tag>
@@ -3990,8 +4010,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LEATHER_PEDIA</Tag>
-		<English>Leather is a durable and flexible material created via the tanning of putrescible animal rawhide and skin, primarily cattlehide. It can be produced through different manufacturing processes, ranging from cottage industry to heavy industry.</English>
-		<Italian>Il cuoio è un materiale durevole e flessibile creato con la conciatura della pelle animale. Può essere prodotta in diversi modi da una produzione artigiana ad una industriale su grande scala.</Italian>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LEBANESE</Tag>
@@ -4010,7 +4030,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LEMONS_PEDIA</Tag>
-		<English>The lemon is a citrus tree, a hybrid of cultivated origin. The fruit are cultivated primarily for their juice, though the pulp and rind (zest) are also used, primarily in cooking or mixing. Lemon juice is about 5% citric acid, which gives lemons a sour taste. This is a small tree, grows to 6 m (20 ft) but usually smaller. The branches are thorny, and form an open crown. The leaves are elliptical-acuminate. Flowers are violet and streaked in the interior and white on the outside. On a lemon tree, flowers and ripe fruits can be found at the same time. The first description of the lemon, which had been introduced from India two centuries earlier, is found in Arabic writings from the 12th century. They were cultivated in Genoa in the mid-fifteenth century, and appeared in the Azores in 1494. More recent research has identified lemons in the ruins of Pompeii. Lemons were once used by the British Royal navy to combat scurvy, as they provided a large amount of vitamin C.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LEONESE</Tag>
@@ -4027,7 +4048,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LEVITATION_GENERATORS_PEDIA</Tag>
-		<English>While levitation trough usage of room superconductors, magnetics, electricity, acoustics and optics was theoretically possible earlier, it wasn't economically feasible to do as energy requirements were enormous. Now with fusion reactors it is possible to use levitation anywhere and everywhere. That is levitation is no longer limited to maglev trains.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LIANGZHU</Tag>
@@ -4071,7 +4093,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LITHIUM_PEDIA</Tag>
-		<English>Lithium is a chemical element with symbol Li and atomic number 3. It is a soft, silver-white metal belonging to the alkali metal group of chemical elements. Under standard conditions it is the lightest metal and the least dense solid element. Like all alkali metals, lithium is highly reactive and flammable. For this reason, it is typically stored in mineral oil. When cut open, lithium exhibits a metallic luster, but contact with moist air corrodes the surface quickly to a dull silvery gray, then black tarnish. Because of its high reactivity, lithium never occurs freely in nature, and instead, only appears in compounds, which are usually ionic. Lithium occurs in a number of pegmatitic minerals, but due to its solubility as an ion is present in ocean water and is commonly obtained from brines and clays. On a commercial scale, lithium is isolated electrolytically from a mixture of lithium chloride and potassium chloride.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LITHUANIAN</Tag>
@@ -4088,8 +4111,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LIZARDS_PEDIA</Tag>
-		<English>Lizards are squamate reptiles that generally have four legs and external ears.</English>
-		<French>Les lézards sont des petits reptiles de l'ordre des Squamates. Ils partagent le fait d'avoir quatre pattes, des oreilles à tympan apparent sans conduit auditif externe, le corps recouvert d'écailles et la mue.</French>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LLAMA</Tag>
@@ -4101,7 +4124,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LLAMA_PEDIA</Tag>
-		<English>The llama (Lama glama) is a South American camelid, widely used as a meat and pack animal by Andean cultures since pre-Hispanic times. The Moche people frequently placed llamas and llama parts in the burials of important people, as offerings or provisions for the afterlife. The Moche culture of pre-Columbian Peru depicted llamas quite realistically in their ceramics. In the Inca empire, llamas were the only beasts of burden, and many of the peoples dominated by the Inca had long traditions of llama herding. For the Inca nobility, the llama was of symbolic significance, and llama figures were often buried with the dead. In South America, llamas are still used as beasts of burden, as well as for the production of fibre and meat.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LOBSTER</Tag>
@@ -4113,7 +4137,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LOBSTER_PEDIA</Tag>
-		<English>Lobsters are economically important as seafood, forming the basis of a global industry that nets more than 1 billion dollars annually. In North America, the American lobster did not achieve popularity until the mid-19th century, when New Yorkers and Bostonians developed a taste for it; not until the invention of a special boat, the lobster smack, did a commercial fishery flourish. The American Lobster is fished from Canada to New Jersey. In Massachusetts, the near-shore lobster fishery consists of independent fishermen who operate their own vessels. Lobster is the most valuable species caught in Massachusetts waters. Lobsters can be air-shipped anywhere in the world and arrive alive, making them the most expensive.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LONGOBARDIAN</Tag>
@@ -4127,8 +4152,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LSD_PEDIA</Tag>
-		<English>Lysergic acid diethylamide, abbreviated LSD or LSD-25, also known as lysergide (INN) and colloquially as acid, is a semisynthetic psychedelic drug of the ergoline family, well known for its psychological effects which can include altered thinking processes, closed and open eye visuals, synesthesia, an altered sense of time and spiritual experiences, as well as for its key role in 1960s counterculture. It is used mainly as an entheogen, recreational drug, and as an agent in psychedelic therapy. LSD is non-addictive, is not known to cause brain damage, and has extremely low toxicity relative to dose. However, adverse psychiatric reactions such as anxiety, paranoia, and delusions are possible.</English>
-		<Polish>Dietyloamid kwasu D-lizergowego (LSD, LSD-25) - organiczny związek chemiczny, psychodeliczna substancja psychoaktywna, pochodna ergoliny.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LUBA</Tag>
@@ -4164,7 +4189,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LYE_PEDIA</Tag>
-		<English>Lye is a term that can refer to the liquid obtained by leaching ashes (containing largely potassium carbonate or "potash"), or to a strong alkali which is highly soluble in water producing caustic basic solutions. It is commonly the alternative name of sodium hydroxide or historically potassium hydroxide.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MACEDONIAN</Tag>
@@ -4187,8 +4213,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MAGNESIUM_ORE_PEDIA</Tag>
-		<English>The free element (metal) is not found naturally on Earth, as it is highly reactive (though once produced, it is coated in a thin layer of oxide (see passivation), which partly masks this reactivity). Magnesium is the eighth-most-abundant element in the Earth's crust by mass and tied in seventh place with iron in terms of molarity. It is found in large deposits of magnesite, dolomite, and other minerals, and in mineral waters, where magnesium ion is soluble.</English>
-		<Polish>Proszek błyskowy (też fotobłysk) - proszek składający się z pyłu aluminiowego lub magnezowego i substancji utleniającej (na przykład chloranu potasu), podczas spalania której uzyskuje się bardzo jasny błysk białego światła. Służy do wytworzenia światła magnezowego. Używany w pirotechnice do uzyskania efektów świetlnych w fajerwerkach.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MAGNETIC_MONOPOLES</Tag>
@@ -4198,7 +4224,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MAGNETIC_MONOPOLES_PEDIA</Tag>
-		<English>A magnetic monopole is a hypothetical elementary particle in particle physics that is an isolated magnet with only one magnetic pole (a north pole without a south pole or vice versa). In more technical terms, a magnetic monopole would have a net "magnetic charge". Modern interest in the concept stems from particle theories, notably the grand unified and superstring theories, which predict their existence.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MALAGASY</Tag>
@@ -4234,7 +4261,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MAMMOTH_PEDIA</Tag>
-		<English>A mammoth is any species of the extinct genus Mammuthus. These proboscideans are members of Elephantidae, the family of elephants and mammoths, and close relatives of modern elephants. They were often equipped with long curved tusks and, in northern species, a covering of long hair. They lived from the Pliocene Epoch from around 4.8 million years ago, into the Holocene at about 4,500 years ago. The largest known species, Songhua River mammoth (Mammuthus sungari), reached heights of at least 5 metres (16 ft) at the shoulder. Mammoths would probably normally weigh in the region of 6 to 8 tons, but exceptionally large males may have exceeded 12 tons. However, most species of mammoth were only about as large as a modern Asian elephant. Fossils of species of dwarf mammoth have been found on the Californian Channel Islands (Mammuthus exilis) and the Mediterranean island of Sardinia (Mammuthus lamarmorae). There was also a race of dwarf woolly mammoths on Wrangel Island, north of Siberia, within the Arctic Circle.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MANCHURIAN</Tag>
@@ -4251,8 +4279,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MANGANESE_PEDIA</Tag>
-		<English>Manganese is a chemical element, designated by the symbol Mn. It has the atomic number 25. It is found as a free element in nature (often in combination with iron), and in many minerals. Manganese is a metal with important industrial metal alloy uses, particularly in stainless steels. Historically, manganese is named for various black minerals (such as pyrolusite) from the same region of Magnesia in Greece which gave names to similar-sounding magnesium, Mg, and magnetite, an ore of the element iron, Fe. By the mid-18th century, Swedish chemist Carl Wilhelm Scheele had used pyrolusite to produce chlorine. Scheele and others were aware that pyrolusite (now known to be manganese dioxide) contained a new element, but they were not able to isolate it. Johan Gottlieb Gahn was the first to isolate an impure sample of manganese metal in 1774, by reducing the dioxide with carbon.</English>
-		<Polish>Mangan (Mn, łac. manganum) - pierwiastek chemiczny należący w układzie okresowym do grupy metali przejściowych. Ma 15 izotopów z przedziału mas 49-62 i izomery jądrowe 51m, 52m, 54m. Trwały jest tylko izotop 55, który stanowi niemal 100% składu izotopowego manganu występującego w naturze.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MANGO</Tag>
@@ -4263,7 +4291,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MANGO_PEDIA</Tag>
-		<English>The mango is a fleshy stone fruit belonging to the genus Mangifera, consisting of numerous tropical fruiting trees in the flowering plant family Anacardiaceae. The mango is native to India from where it spread all over the world. It is one of the most cultivated fruits of the tropical world. While other Mangifera species are also grown on a more localized basis, Mangifera indica the common mango or Indian mango is the only mango tree commonly cultivated in many tropical and subtropical regions, and its fruit is distributed essentially worldwide. In several cultures, its fruit and leaves are ritually used as floral decorations at weddings, public celebrations and religious ceremonies.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MANI</Tag>
@@ -4289,7 +4318,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARBLE_PEDIA</Tag>
-		<English>Marble is a kind of limestone, used by man for millennia. It is a useful material for construction, especially in dry climates. Marble is an excellent material from which to make statues, as well. Marble surfaces can be polished to a beautiful sheen, but the rock remains attractive even when the surface is left rough. The Egyptians used marble blocks to line the outside of the Pyramid of Cheops. The Greeks used blocks of marble to construct some of their buildings; they also used the material to sculpt some of the world's great artworks. The Romans were the first to use slabs of marble as wall coverings. Marble remains one of the most popular construction and artistic materials extant.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARRI</Tag>
@@ -4384,8 +4414,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARZIPAN_PEDIA</Tag>
-		<English>Marzipan is a confection consisting primarily of sugar or honey and almond meal, sometimes augmented with almond oil or extract. It is often made into sweets; common uses are marzipan-filled chocolate and small marzipan imitations of fruits and vegetables. It is also rolled into thin sheets and glazed for icing cakes, primarily birthday and wedding cakes and Christmas cakes. This use is particularly common in England, on large fruitcakes. Marzipan (or almond paste) may also be used as a cake ingredient, as in stollen. In some countries, it is shaped into small figures of animals as a traditional treat for New Year's Day. Marzipan is also used in Tortell, and in some versions of king cake eaten during the Carnival season. Traditional Swedish Princess Cake is typically covered with a layer of marzipan that has been tinted pale green.</English>
-		<Polish>Marcepan - słodka masa cukiernicza utworzona głównie z prażonych i zmielonych migdałów i cukru z dodatkiem olejku migdałowego. Pod wpływem ciepła (wystarczy ogrzanie w dłoni) masa staje się plastyczna, dlatego bywa używana do wyrobu ozdobnych, skomplikowanych kształtów.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MASAI</Tag>
@@ -4400,7 +4430,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MASCAGNITE_PEDIA</Tag>
-		<English>Mascagnite is a rare ammonium sulfate mineral. It crystallizes in the orthorhombic system typically forming as stalactitic masses exhibiting good cleavage. It is soft (not higher than 2.5 on the Mohs Scale) and water soluble. Optical properties are variable; the purest form is transparent and colorless, but opaque gray or yellow deposits are also known.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MASKS</Tag>
@@ -4411,8 +4442,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MASKS_PEDIA</Tag>
-		<English>A mask is an object normally worn on the face, typically for protection, disguise, performance or entertainment. Masks have been used since antiquity for both ceremonial and practical purposes. They are usually worn on the face, although they may also be positioned for effect elsewhere on the wearer's body, so in parts of Australia giant totem masks cover the body, whilst Inuit women use finger masks during storytelling and dancing</English>
-		<Polish>Maska - przykrycie twarzy lub jej części, z otworami na oczy, początkowo używane w celach magicznych lub obrzędowych. Maski mogą mieć różne kształty, czasami przedstawiają emocje, innym razem zwierzę, demona lub potwora. Maski występują w różnych kulturach i obszarach geograficznych. W Europie znane np. w starożytnym teatrze greckim, od średniowiecza używane w czasie zabaw karnawałowych zwanych maskaradami. Od XVI w. wprowadzone do teatru dworskiego, później do commedii dell'arte.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MASSAGETAE</Tag>
@@ -4437,8 +4468,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MECHS_PEDIA</Tag>
-		<English>The majority of Mechs are bipedal and can be classed as either humanoid or reverse-joint ("chicken walker"). Humanoid-type BattleMechs are the most common and include the iconic Atlas and Summoner (Thor). Reverse-joint 'Mechs are slightly less common on the field of battle, but include such famous models as the Supernova, Marauder, Catapult, Timber Wolf (Mad Cat) and the Dire Wolf (Daishi). There are a few, however, with digitigrade legs that have a raised ankle and stand on their toes, like the legs of a dog, cat, etc. Examples include the Thanatos and Nova Cat.</English>
-		<Polish>Mecha - duże, najczęściej humanoidalne roboty, sterowane przez umieszczonego w jego wnętrzu pilota, autonomiczne bądź też zdalnie.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MEDIAN</Tag>
@@ -4485,7 +4516,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MELONS_PEDIA</Tag>
-		<English>Melon is a name given to various members of the plant family Cucurbitaceae with sweet flavored, fleshy fruit e.g. gourds or cucurbits. Melon can be referred as a plant or a fruit. Many different cultivars have been produced, particularly of muskmelons. The plant grows as a vine. Although the melon is a fruit, some varieties may be considered "culinary vegetables".</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MERINA</Tag>
@@ -4500,7 +4532,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_METALLIC_HYDROGEN_PEDIA</Tag>
-		<English>Metallic hydrogen is a kind of degenerate matter, a phase of hydrogen in which it behaves as an electrical conductor. This phase was predicted theoretically in 1935. It has yet to be unambiguously observed, but some observations consistent with metallic behaviour have been reported such as the possible observation of some new phases of solid hydrogen under static conditions, and, in dense liquid deuterium, electrical insulator-to-conductor transitions associated with an increase in optical reflectivity. At high pressure, on the order of hundreds of gigapascals, hydrogen might exist as a liquid rather than a gas. Liquid metallic hydrogen is thought to be present in large amounts in the gravitationally compressed interiors of Jupiter, Saturn, and in some extrasolar planets.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_METAL_FOAM</Tag>
@@ -4510,7 +4543,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_METAL_FOAM_PEDIA</Tag>
-		<English>A metal foam is a cellular structure consisting of a solid metal, frequently aluminium, as well as a large volume fraction of gas-filled pores. The pores can be sealed (closed-cell foam), or they can form an interconnected network (open-cell foam). The defining characteristic of metal foams is a very high porosity: typically 75-95% of the volume consists of void spaces making these ultralight materials. The strength of foamed metal possesses a power law relationship to its density; i.e., a 20% dense material is more than twice as strong as a 10% dense material.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_METAMATERIALS</Tag>
@@ -4547,7 +4581,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_METHANE_ICE_PEDIA</Tag>
-		<English>Methane clathrate, also called methane hydrate or methane ice, is a solid clathrate compound (more specifically, a clathrate hydrate) in which a large amount of methane is trapped within the crystal structure of water ice. Originally thought to occur only in the outer regions of the Solar System where temperatures are low and water ice is common, significant deposits of methane clathrate have been found under sediments on the ocean floors of Earth. Methane clathrates are common constituents of the shallow marine geosphere, and they occur both in deep sedimentary structures, and as outcrops on the ocean floor.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MEXICAN</Tag>
@@ -4566,7 +4601,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MICROCHIPS_PEDIA</Tag>
-		<English>An integrated circuit or monolithic integrated circuit (also referred to as an IC, a chip, or a microchip) is a set of electronic circuits on one small flat piece (or "chip") of semiconductor material that is normally silicon. The integration of large numbers of tiny MOS transistors into a small chip results in circuits that are orders of magnitude smaller, faster, and less expensive than those constructed of discrete electronic components. The IC's mass production capability, reliability, and building-block approach to circuit design has ensured the rapid adoption of standardized ICs in place of designs using discrete transistors. ICs are now used in virtually all electronic equipment and have revolutionized the world of electronics. Computers, mobile phones, and other digital home appliances are now inextricable parts of the structure of modern societies, made possible by the small size and low cost of ICs. </English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MICROGENERATORS</Tag>
@@ -4577,7 +4613,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MICROGENERATORS_PEDIA</Tag>
-		<English>Micropower describes the work that researchers at several universities are doing to develop very small electric generators and prime movers or devices to convert heat or motion to electricity, for use close to the generator. These devices offer the promise of a power source for portable electronic devices which is lighter weight and has a longer operating time than batteries. Micropower differs from microgeneration in being concerned with universities, mobility and milliwatts or watts rather than individuals, homes and kilowatts.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MICRONESIAN</Tag>
@@ -4595,8 +4632,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MICROWAVE_OVENS_PEDIA</Tag>
-		<English>A microwave oven, often colloquially shortened to microwave, is a kitchen appliance that heats food by bombarding it with electromagnetic radiation in the microwave spectrum causing polarized molecules in the food to rotate and build up thermal energy in a process known as dielectric heating. Microwave ovens heat foods quickly and efficiently because excitation is fairly uniform in the outer 25 - 38 mm of a dense (high water content) food item; food is more evenly heated throughout (except in thick, dense objects) than generally occurs in other cooking techniques.</English>
-		<Polish>Kuchenka mikrofalowa (potoczna nazwa: mikrofalówka, mikrofala) - urządzenie kuchenne służące do ogrzewania przedmiotów znajdujących się w jej wnętrzu poprzez poddanie ich działaniu mikrofal. Za wynalazcę kuchenki mikrofalowej uważa się Percy'ego Spencera. Pierwszą komercyjnie dostępną kuchenką mikrofalową była wyprodukowana w 1947 Radarange.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MILK</Tag>
@@ -4607,8 +4644,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MILK_PEDIA</Tag>
-		<English>Milk is a white liquid produced by the mammary glands of mammals. It provides the primary source of nutrition for young mammals before they are able to digest other types of food.</English>
-		<Italian>Il latte è un liquido bianco prodotto dalle ghiandole mammarie dei mammiferi; è la fonte principale di nutrimento dei mammiferi prima che essi siano in grado di digerire altri tipi di cibo.</Italian>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MING</Tag>
@@ -4619,6 +4656,11 @@
 		<English>Ming Vase</English>
 		<French>Vase Ming</French>
 		<Italian>Vaso Ming</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_MING_VASE_PEDIA</Tag>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MINOAN</Tag>
@@ -4718,7 +4760,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MUREX_PEDIA</Tag>
-		<English>Murex is a genus of medium to large sized predatory tropical sea snails. These are carnivorous marine gastropod molluscs in the family Muricidae, commonly called "murexes" or "rock snails". The common name murex is still used for a large number of species in the family Muricidae which were originally given the Latin generic name Murex in the past, but have more recently been regrouped into different newer genera. The word murex was used by Aristotle in reference to these kinds of snails, thus making it one of the oldest classical seashell names still in use by the scientific community.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MUSHROOMS</Tag>
@@ -4731,7 +4774,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MUSHROOMS_PEDIA</Tag>
-		<English>A mushroom (or toadstool) is the fleshy, spore-bearing fruiting body of a fungus, typically produced above ground on soil or on its food source. The standard for the name "mushroom" is the cultivated white button mushroom, Agaricus bisporus; hence the word "mushroom" is most often applied to those fungi (Basidiomycota, Agaricomycetes) that have a stem (stipe), a cap (pileus), and gills (lamellae, sing. lamella) on the underside of the cap. These gills produce microscopic spores that help the fungus spread across the ground or its occupant surface.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MUTAPA</Tag>
@@ -4760,8 +4804,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NANOACTUATORS_PEDIA</Tag>
-		<English>An actuator is a type of motor for moving or controlling a mechanism or system. It is operated by a source of energy, typically electric current, hydraulic fluid pressure, or pneumatic pressure, and converts that energy into motion. An actuator is the mechanism by which a control system acts upon an environment. The control system can be simple (a fixed mechanical or electronic system), software-based (e.g. a printer driver, robot control system), or a human or other agent. Nanoactuators do basically the same - just in nanoscale.</English>
-		<Polish>Nanosiłowniki to małe nanokonstrukty napędzające.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NANOBOTS</Tag>
@@ -4772,8 +4816,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NANOBOTS_PEDIA</Tag>
-		<English>Nanorobotics is the emerging technology field creating machines or robots whose components are at or close to the scale of a nanometer (10^-9 meters). More specifically, nanorobotics refers to the nanotechnology engineering discipline of designing and building nanorobots, with devices ranging in size from 0.1-10 micrometers and constructed of nanoscale or molecular components. The names nanobots, nanoids, nanites, nanomachines, or nanomites have also been used to describe these devices currently under research and development.</English>
-		<Polish>Nanoroboty są hipotetycznymi maszynami, skonstruowanymi dzięki nanotechnologii w nanoskali z komponentów nanometrycznych. Bardzo rzadko stosuje się inną definicję nanorobota. Jest to urządzenie, które pozwala na precyzyjną interakcję z obiektami w nanoskali. Taką definicję można przypisać zarówno małym robotom poruszającym się z nanometrową precyzją, jak i dużym urządzeniem, np. mikroskopowi sił atomowych. W niedalekiej przyszłości prawdopodobnie nanoboty będą mieć wiele zastosowań. W medycynie, nanoroboty mogą być użyteczne do identyfikowania komórek rakowych i ich niszczenia oraz prawdopodobnie, wprowadzone do organizmu byłyby wstanie znacznie wydłużyć czas życia naszego gatunku likwidując inne zagrożenia życia (choroby genetyczne) a nawet zapewnić nam nieśmiertelność (nieustanie "naprawiając" DNA- lecz to jedynie plotki). Innym potencjalnym zastosowaniem, jest detekcja toksycznych chemikaliów i pomiar ich koncentracji w środowisku.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NANOGENERATORS</Tag>
@@ -4784,8 +4828,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NANOGENERATORS_PEDIA</Tag>
-		<English>Nanogenerator is a technology that converts mechanical/thermal energy as produced by small-scale physical change into electricity. Nanogenerator has three typical approaches: piezoelectric, triboelectric, and pyroelectric nanogenerators. Both the piezoelectric and triboelectric nanogenerators can convert the mechanical energy into electricity. However, the pyroelectric nanogenerators can be used to harvest thermal energy from a time-dependent temperature fluctuation.</English>
-		<Polish>Nanogeneratory to mikrogeneratory oparte o nanotechnologię.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NANOMORPHIC_HABITATS</Tag>
@@ -4795,7 +4839,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NANOMORPHIC_HABITATS_PEDIA</Tag>
-		<English>These structures can dynamically configures themselves on the molecular level. They are ideal for quick construction of space habitats.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NANOTRUSSES</Tag>
@@ -4818,7 +4863,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NANOTUBES_PEDIA</Tag>
-		<English>Carbon nanotubes (CNTs) are allotropes of carbon with a cylindrical nanostructure. Nanotubes have been constructed with length-to-diameter ratio of up to 28,000,000:1, which is significantly larger than any other material. These cylindrical carbon molecules have novel properties that make them potentially useful in many applications in nanotechnology, electronics, optics and other fields of materials science, as well as potential uses in architectural fields. They exhibit extraordinary strength and unique electrical properties, and are efficient conductors of heat. Their final usage, however, may be limited by their potential toxicity. Nanotubes are members of the fullerene structural family, which also includes the spherical buckyballs. The ends of a nanotube might be capped with a hemisphere of the buckyball structure. Their name is derived from their size, since the diameter of a nanotube is on the order of a few nanometers (approximately 1/50,000th of the width of a human hair), while they can be up to several millimeters in length (as of 2008). Nanotubes are categorized as single-walled nanotubes (SWNTs) and multi-walled nanotubes (MWNTs). Carbon nanotubes are the strongest and stiffest materials yet discovered in terms of tensile strength and elastic modulus respectively. In 2000, a multi-walled carbon nanotube was tested to have a tensile strength of 63 gigapascals (GPa). This, for illustration, translates into the ability to endure weight of 6300 kg on a cable with cross-section of 1 square millimeter.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NATRON</Tag>
@@ -4827,7 +4873,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NATRON_PEDIA</Tag>
-		<English>Natron is a naturally occurring mixture of sodium carbonate decahydrate and about 17% sodium bicarbonate (also called nahcolite or baking soda, NaHCO3) along with small quantities of sodium chloride and sodium sulfate. Natron is white to colourless when pure, varying to gray or yellow with impurities. Natron deposits are sometimes found in saline lake beds which arose in arid environments. Throughout history natron has had many practical applications which continue in the wide range of modern uses of its constituent mineral components. In modern mineralogy the term natron has come to mean only the sodium carbonate decahydrate (hydrated soda ash) which makes up most of the historical salt.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NATURAL_GAS</Tag>
@@ -4840,7 +4887,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NATURAL_GAS_PEDIA</Tag>
-		<English>Natural gas is a fossil fuel formed when layers of buried plants, gases, and animals are exposed to intense heat and pressure over thousands of years. The energy that the plants originally obtained from the sun is stored in the form of chemical bonds in natural gas. Natural gas is a nonrenewable resource because it cannot be replenished on a human time frame. Natural gas is a hydrocarbon gas mixture consisting primarily of methane, but commonly includes varying amounts of other higher alkanes and sometimes a usually lesser percentage of carbon dioxide, nitrogen, and/or hydrogen sulfide. Natural gas is an energy source often used for heating, cooking, and electricity generation. It is also used as fuel for vehicles and as a chemical feedstock in the manufacture of plastics and other commercially important organic chemicals.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NAVAJO</Tag>
@@ -4878,8 +4926,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NEUROIMPLANTS_PEDIA</Tag>
-		<English>Brain implants, often referred to as neural implants, are technological devices that connect directly to a biological subject's brain - usually placed on the surface of the brain, or attached to the brain's cortex. A common purpose of modern brain implants and the focus of much current research is establishing a biomedical prosthesis circumventing areas in the brain that have become dysfunctional after a stroke or other head injuries. This includes sensory substitution, e.g., in vision. Other brain implants are used in animal experiments simply to record brain activity for scientific reasons. Some brain implants involve creating interfaces between neural systems and computer chips. This work is part of a wider research field called brain-computer interfaces. (Brain-computer interface research also includes technology such as EEG arrays that allow interface between mind and machine but do not require direct implantation of a device.)</English>
-		<Polish>Neuroimplanty - urządzenie techniczne łączące się bezpośrednio z mózgiem ludzkim lub zwierzęcym zwykle umieszczone na powierzchni mózgu lub podłączone do kory mózgowej (implantowane elektrody domózgowe). Obecnie badania neurobiologów i inżynierów biomedycznych koncentrują się na zbudowaniu takich implantów mózgowych, które byłyby zdolne zastąpić obszary mózgu uszkodzone po udarze lub urazie mózgowym. Obejmuje to także zastąpienie czynności uszkodzonych układów czuciowych, np. wzrokowego (proteza wzroku). Inne implanty mózgowe są wykorzystywane w doświadczeniach na zwierzętach w celu bezpośredniej rejestracji czynności elektrycznej mózgu dla celów naukowych. Niektóre implanty mózgowe umożliwiają stworzenie interfejsu pomiędzy układem nerwowym i układem scalonym komputera, co jest częścią szerszych badań nad interfejsami mózg-komputer.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NEUTRONIUM</Tag>
@@ -4888,7 +4936,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NEUTRONIUM_PEDIA</Tag>
-		<English>Neutronium (sometimes shortened to neutrium) is a proposed name for a substance composed purely of neutrons. The word was coined by scientist Andreas von Antropoff in 1926 (before the discovery of the neutron) for the conjectured 'element of atomic number zero' that he placed at the head of the periodic table. However, the meaning of the term has changed over time, and from the last half of the 20th century onward it has been also used legitimately to refer to extremely dense substances resembling the neutron-degenerate matter theorized to exist in the cores of neutron stars; henceforth 'degenerate neutronium' will refer to this. Science fiction and popular literature frequently use the term 'neutronium' to refer to a highly dense phase of matter composed primarily of neutrons.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NEWSPAPERS</Tag>
@@ -4900,8 +4949,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NEWSPAPERS_PEDIA</Tag>
-		<English>A newspaper is a periodical publication containing news regarding current events, informative articles, diverse features, editorials, and advertising. It usually is printed on relatively inexpensive, low-grade paper such as newsprint. By 2007, there were 6,580 daily newspapers in the world selling 395 million copies a day. The late 2000s-early 2010s global recession, combined with the rapid growth of web-based alternatives, caused a serious decline in advertising and circulation, as many papers closed or sharply retrenched operations.</English>
-		<German>Das Wort Zeitung war ursprünglich der Begriff für eine beliebige Nachricht; die Bedeutung hat sich jedoch im Laufe des 18. Jahrhunderts geändert. Heute versteht man darunter ein periodisch erscheinendes Druckerzeugnis mit aktuellem und universellem Inhalt. Dieser besteht aus mehreren inhaltlich in sich abgeschlossenen Texten, die Zeitungsartikel genannt werden und bei deren Abfassung verschiedene journalistische Stilmittel angewandt werden.</German>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NEW_ZEALANDER</Tag>
@@ -4919,8 +4968,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NICKEL_ORE_PEDIA</Tag>
-		<English>Because of nickel's slow rate of oxidation at room temperature, it is considered corrosion-resistant. Historically, this has led to its use for plating metals such as iron and brass, in chemical apparatus, and in certain alloys that retain a high silvery polish, such as German silver.</English>
-		<Polish>Nikiel (Ni, łac. niccolum) - pierwiastek chemiczny z grupy metali przejściowych w układzie okresowym. Został odkryty w roku 1751 przez szwedzkiego chemika, Axela Cronstedta. W 1804 r. otrzymano go po raz pierwszy w stanie czystym. Przed naszą erą był używany w stopach z miedzią i cynkiem.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NIGERIAN</Tag>
@@ -4941,7 +4990,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NOK_SCULPTURES_PEDIA</Tag>
-		<English>The Nok culture appeared in Nigeria around 1000 BC and vanished under unknown circumstances around 300 AD in the region of West Africa. This region lies in Northern and Central Nigeria. Its social system is thought to have been highly advanced. The Nok culture was considered to be the earliest sub-Saharan producer of life-sized Terracotta. It has been suggested that the Nok culture eventually evolved into the later Yoruba Culture of Ife based on similarities seen in the artwork from these two cultures.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NOONGAR</Tag>
@@ -4973,7 +5023,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NOVUS_CHEMICALS_PEDIA</Tag>
-		<English>It is becoming increasingly clear that a large number of chemical companies have failed to manage and nurture their business models well enough. Research and development funds have dried up, and new molecular discoveries are increasingly rare. Few specialty chemical companies have demonstrated the ability or nimbleness to adjust to the new, much more difficult realities in the industry. How well these companies adopt one of three business models will determine success or failure for individual outfits and the industry as a whole.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NUBIAN</Tag>
@@ -4994,8 +5045,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NUTELLA_PEDIA</Tag>
-		<English>Nutella is the brand name of a hazelnut chocolate spread. Manufactured by the Italian company Ferrero, it was introduced to the market in 1964. Nutella is made from sugar, modified palm oil, hazelnuts, cocoa, skimmed milk powder, whey powder, lecithin, and vanillin.</English>
-		<German>Nutella ist ein süßer Haselnussbrotaufstrich des italienischen Herstellers Ferrero, der in Konsistenz und Geschmack an Nougat erinnert. Er besteht aus Zucker, Pflanzenöl, gerösteten Haselnüssen, Kakao, Milchpulver, Sojalecithin und Vanillin.</German>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NUTS</Tag>
@@ -5006,8 +5057,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NUTS_PEDIA</Tag>
-		<English>A nut is a hard-shelled fruit of some plants having an indehiscent seed. While a wide variety of dried seeds and fruits are called nuts in English, only a certain number of them are considered by biologists to be true nuts. Nuts are an important source of nutrients for both humans and wildlife.</English>
-		<Italian>Una noce è un frutto nel quale il frutto è protetto da un involucro duro. Anche se una grande varietà di frutti vengono chiamati noci in Inghilterra, non tutti sono vere noci secondo le definizioni dei biologi. Le noci sono una grande fonte di nutrienti, sia per gli uomini sia per gli animali.</Italian>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NYLON</Tag>
@@ -5015,8 +5066,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NYLON_PEDIA</Tag>
-		<English>Nylon is a generic designation for a family of synthetic polymers known generically as polyamides, first produced on February 28, 1935, by Wallace Carothers at DuPont's research facility at the DuPont Experimental Station. Nylon is one of the most commonly used polymers.</English>
-		<Italian>Nylon è il nome generico di una famiglia di polimeri sintetici conosciuti come poliamidi, prodotti per la prima volta il 28 febbraio 1935 da Wallace Carothers ad una stazione di ricerca della DuPont Experimental Station. Il nylon è uno dei polimeri usati più comunemente.</Italian>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_OBSIDIAN</Tag>
@@ -5237,7 +5288,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PAPAYA_PEDIA</Tag>
-		<English>The papaya (from Carib via Spanish), papaw, or pawpaw is the fruit of the plant Carica papaya, the sole species in the genus Carica of the plant family Caricaceae. It is native to the tropics of the Americas, and was first cultivated in Mexico several centuries before the emergence of the Mesoamerican classical civilizations. The papaya is a large tree-like plant, with a single stem growing from 5 to 10 m tall, with spirally arranged leaves confined to the top of the trunk. The lower trunk is conspicuously scarred where leaves and fruit were borne. The leaves are large, 50-70 cm in diameter, deeply palmately lobed with 7 lobes. The tree is usually unbranched, unless lopped. The flowers are similar in shape to the flowers of the Plumeria, but are much smaller and wax-like. They appear on the axils of the leaves, maturing into the large 15-45 cm long, 10-30 cm diameter fruit. The fruit is ripe when it feels soft and its skin has attained an amber to orange hue. Carica papaya was the first fruit tree to have its genome deciphered.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PAPER</Tag>
@@ -5248,8 +5300,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PAPER_PEDIA</Tag>
-		<English>Paper is a thin material mainly used for writing upon, printing upon, drawing or for packaging. It is produced by pressing together moist fibers, typically cellulose pulp derived from wood, rags or grasses, and drying them into flexible sheets.</English>
-		<Italian>La carta è un mateiale sottile usato principalemnte per scrivere, stampare, disegnare o per gli imballaggi. Viene prodotta con la compressione di fibre vegetali, solitamente polpa di cellulosa derivata dagli alberi, che viene asciugata in fogli flessibili.</Italian>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PAPUAN</Tag>
@@ -5267,7 +5319,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PAPYRUS_PEDIA</Tag>
-		<English>The papyrus plant, Cyperus papyrus, a wetland plant that was once abundant in the Nile Delta of Egypt. The pith of the papyrus plant was used to make an early form of paper, papyrus, that was first known to have been used in ancient Egypt (circa 3050 BC), but it was also widely used throughout the Mediterranean region, as well as inland parts of Europe. The use of papyrus that was once common in Greece, Italy, and other regions of the ancient Mediterranean. However, the use of papyrus scrolls declined with the expansion of the use parchment (which was prepared from animal skins). By 800 AD the use of parchment and vellum had replaced papyrus in most of the Mediterranean, though its use in Egypt continued until it was replaced by more inexpensive paper introduced by Arabs.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PARAGUAYAN</Tag>
@@ -5285,7 +5338,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PARROTS_PEDIA</Tag>
-		<English>In ancient times and currently parrot feathers have been used in ceremonies, and for decoration. In Polynesian legend as current in the Marquesas Islands, the hero Laka/Aka is mentioned as having undertaken a long and dangerous voyage to Aotona in what are now the Cook Islands, to obtain the highly prized feathers of a red parrot as gifts for his son and daughter. On the voyage a hundred out of his 140 rowers died of hunger on their way, but the survivors reached Aotona and captured enough parrots to fill 140 bags with their feathers. Parrots have also been considered sacred. The Moche people of ancient Peru worshipped birds and often depicted parrots in their art.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PARTHIAN</Tag>
@@ -5303,8 +5357,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PARTS_PEDIA</Tag>
-		<English>Interchangeable parts are parts that are, for practical purposes, identical. They are made to specifications that ensure that they are so nearly identical that they will fit into any device of the same type.</English>
-		<Italian>I ricambi sono parti che vengono costruite identicamente, in serie, per usi pratici. Sono fatti in modo da funzionare esattamente in qualunque dispositivo per il quale vengono progettati.</Italian>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PASHTUN</Tag>
@@ -5319,8 +5373,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PASTA_PEDIA</Tag>
-		<English>Pasta is a type of noodle and is a staple food of traditional Italian cuisine, with the first reference dating to 1154 in Sicily. It is also commonly used to refer to the variety of pasta dishes. Typically pasta is made from an unleavened dough of a durum wheat flour mixed with water and formed into sheets or various shapes, then cooked and served in any number of dishes. It can be made with flour from other cereals or grains, and eggs may be used instead of water. Pastas may be divided into two broad categories, dried (pasta secca) and fresh (pasta fresca). Chicken eggs frequently dominate as the source of the liquid component in fresh pasta.</English>
-		<Polish>Makaron - produkt żywnościowy wytwarzany na bazie mąki, wody i niekiedy jaj (mówimy wtedy o makaronie jajecznym) oraz innych składników, o szerokiej gamie kształtów i zastosowań.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PEARLS</Tag>
@@ -5333,7 +5387,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PEARLS_PEDIA</Tag>
-		<English>A pearl is a hard, rounded object produced by certain mollusks, primarily oysters. Pearl is valued as a gemstone and is cultivated or harvested for jewellery. Pearls are formed inside the shell of certain bivalve mollusks. As a response to an irritating object inside its shell, the mollusk will deposit layers of calcium carbonate in the form of the minerals aragonite or calcite (both crystalline forms of calcium carbonate) held together by an organic horn-like compound called conchiolin. Before the beginning of the 20th Century, pearl hunting was the most common way of harvesting pearls. Divers manually pulled oysters from ocean floors and river bottoms and checked them individually for pearls.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PEAT</Tag>
@@ -5354,6 +5409,11 @@
 		<Italian>Pegaso</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_PEGASUS_PEDIA</Tag>
+		<English></English>
+		<Italian></Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_PELTS</Tag>
 		<English>Pelts</English>
 		<French>Peaux</French>
@@ -5362,8 +5422,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PELTS_PEDIA</Tag>
-		<English>In clothing, fur is leather with the hair retained for its insulating properties. Fur has long served as a source of clothing for hominoids including the Neanderthal. Animal furs used in garments and trim may be dyed bright colors or to mimic exotic animal patterns, or shorn down to imitate the feel of a soft velvet fabric. The term "a fur" is often used to refer to a fur coat, wrap, or shawl.</English>
-		<Italian>Una pelliccia è costituita da pelle con i peli attaccati, nota per le sue proprietà isolanti. Le pellicce sono state usate a lungo dagli ominidi per vestirsi, anche dagli uomini di Nenaderthal.Le pellicce possono essere tinte a piacere per ottenere qualsiasi disegno, oppure possono essere trattate per diventare come un soffice tessuto in velluto.</Italian>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PENCILS</Tag>
@@ -5374,7 +5434,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PENCILS_PEDIA</Tag>
-		<English>A pencil is a writing implement or art medium usually constructed of a narrow, solid pigment core inside a protective casing. The case prevents the core from breaking, and also from marking the user's hand during use. Pencils create marks via physical abrasion, leaving behind a trail of solid core material that adheres to a sheet of paper or other surface. They are noticeably distinct from pens, which dispense liquid or gel ink that stain the light colour of the paper. Most pencil cores are made of graphite mixed with a clay binder, leaving grey or black marks that can be easily erased. Graphite pencils are used for both writing and drawing, and the result is durable: although writing can usually be removed with an eraser, it is resistant to moisture, most chemicals, ultraviolet radiation and natural aging. Other types of pencil core are less widely used. Charcoal pencils are mainly used by artists for drawing and sketching. Coloured pencils are sometimes used by teachers or editors to correct submitted texts but are more usually regarded as art supplies, especially those with waxy core binders that tend to smear on paper instead of erasing. Grease pencils have a softer crayon-like waxy core that can leave marks on smooth surfaces such as glass or porcelain.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PERCUSSION_INSTRUMENTS</Tag>
@@ -5385,8 +5446,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PERCUSSION_INSTRUMENTS_PEDIA</Tag>
-		<English>A percussion instrument is any object which produces a sound when hit with an implement or when it is shaken, rubbed, scraped, or otherwise acted upon in a way that sets the object into vibration. The term usually applies to an object used in a rhythmic context or with musical intent.</English>
-		<Italian>Uno strumento a percussione è qualsiasi oggetto in grado di produrre un suono quando viene colpito, sbattuto, grattato o toccato in qualsiasi modo tale da produrre una vibrazione. Questo oggetto viene solitamente usato in un contesto ritmico o per produrre musica.</Italian>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PERFUME</Tag>
@@ -5397,8 +5458,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PERFUME_PEDIA</Tag>
-		<English>Perfume is a mixture of fragrant essential oils and/or aroma compounds, fixatives, and solvents used to give the human body, animals, objects, and living spaces a pleasant scent.</English>
-		<Italian>Il prfoumo è una mistura di oli essenziali, fissativi e solventi usati per dare un buon odore al corpo umano, agli animali, agli oggetti o agli spazi abitati.</Italian>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PERSIAN</Tag>
@@ -5480,7 +5541,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PEYOTE_PEDIA</Tag>
-		<English>Lophophora williamsii, better known by its common name Peyote (from the Nahuatl word peyotl), is a small, spineless cactus with psychoactive alkaloids, particularly mescaline. It is native to southwestern Texas and Mexico. It is found primarily in the Chihuahuan desert and in the states of Tamaulipas and San Luis Potosi among scrub, especially where there is limestone. Known for its psychoactive properties when ingested, it is used world wide as an entheogen and supplement to various transcendence practices, including meditation, psychonautics, and psychedelic psychotherapy. Peyote has a long history of ritualistic and medicinal use by indigenous Americans. It flowers from March through May, and sometimes as late as September. The flowers are pink, with thigmotactic anthers (like Opuntia).</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PHARMACEUTICALS</Tag>
@@ -5491,8 +5553,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PHARMACEUTICALS_PEDIA</Tag>
-		<English>A pharmaceutical drug, also referred to as a medicine or medication, can be loosely defined as any chemical substance - or product comprising such - intended for use in the medical diagnosis, cure, treatment, or prevention of disease. The word pharmaceutical comes from the Greek word Pharmakeia. The modern transliteration of Pharmakeia is Pharmacia.</English>
-		<Polish>Lek - każda substancja, niezależnie od pochodzenia (naturalnego lub syntetycznego), nadająca się do bezpośredniego wprowadzania do organizmu w odpowiedniej postaci farmaceutycznej w celu osiągnięcia pożądanego efektu terapeutycznego, lub w celu zapobiegania chorobie, często podawana w ściśle określonej dawce. Lekiem jest substancja modyfikująca procesy fizjologiczne w taki sposób, że hamuje przyczyny lub objawy choroby, lub zapobiega jej rozwojowi. Określenie lek stosuje się też w stosunku do substancji stosowanych w celach diagnostycznych (np. metoklopramid w diagnostyce hiperprolaktynemii) oraz środków modyfikujących nie zmienione chorobowo funkcje organizmu (np. środki antykoncepcyjne).</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PHILISTINE</Tag>
@@ -5512,6 +5574,12 @@
 		<French>Phénix</French>
 		<Italian>Fenice</Italian>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_PHOENIX_PEDIA</Tag>
+		<English></English>
+		<Italian></Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_PHONOGRAPHS</Tag>
 		<English>Phonographs</English>
 		<French>Phonographes</French>
@@ -5520,8 +5588,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PHONOGRAPHS_PEDIA</Tag>
-		<English>The phonograph, record player, or gramophone is a device introduced in 1877 for the recording and reproduction of sound recordings. The recordings played on such a device consist of waveforms that are engraved onto a rotating cylinder or disc. As the cylinder or disc rotates, a stylus or needle traces the waveforms and vibrates to reproduce the recorded sound waves.</English>
-		<Polish>Fonograf - jedno z pierwszych urządzeń służących do zapisu i odtwarzania dźwięku, poprzednik gramofonu. Został skonstruowany przez Thomasa Alva Edisona. Edison swój wynalazek zademonstrował 29 listopada 1877 r., a opatentował 19 lutego 1878 r. W fonografie dźwięk zapisywany był przy pomocy igły na cylindrze zakładanym na walec napędzany początkowo korbką, później mechanizmem sprężynowym. Odtwarzanie przebiegało w analogiczny sposób. Igła (rylec) wykonana była z diamentu. Dźwięk zapisywano rzeźbiąc rowek na folii cynowej nawiniętej na stalowy walec.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PICTISH</Tag>
@@ -5541,9 +5609,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PIG_PEDIA</Tag>
-		<English>The pig has been domesticated for about 5,000 to 7,000 years and the animal is found across Europe, the Middle East, and extends in Asia as far as Indonesia and Japan. Pigs are one of the most intelligent animals, and some are even kept as pets. Pigs are reportedly more trainable than dogs and cats.</English>
-		<French>Le cochon a été domestiqué il y a 5 à 7 000 ans. On le trouve dans toute l'Europe, au Moyen-Orient et jusqu'en Indonésie et au japon. Le cochon est un des animaux les plus intelligents, et il arrive parfois que l'on en fasse un animal de compagnie. Aux dires de certains, il serait même plus facile à dresser que le chat ou le chien.</French>
-		<Italian>Il primo maiale addomesticato risale a circa 5.000 o 7.000 anni fa. Questo animale è comunemente diffuso in Europa, Medio Oriente, Asia e persino in Indonesia e Giappone. I maiali sono tra gli animali più intelligenti e possono essere addirittura degli animali da compagnia, poiché sono più facilmente addestrabili di cani e gatti.</Italian>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PILAGA</Tag>
@@ -5564,7 +5631,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PISTACHIO_PEDIA</Tag>
-		<English>The pistachio a member of the cashew family, is a small tree originating from Central Asia and the Middle East. Pistachio trees can be found in regions of Iran, Syria, Lebanon, Turkey, Greece, Xinjiang (China), Tunisia, Kyrgyzstan, Tajikistan, Turkmenistan, India, Egypt, Italy (Sicily), Uzbekistan, Afghanistan (especially in the provinces of Samangan and Badghis), and the United States, specifically in California. It is indigenous to the eastern Mediterranean (Cyprus and Turkey to Israel and Syria), Central Asia (Turkmenistan, Uzbekistan, Afghanistan, Tajikistan, and Kyrgyzstan) and Xinjiang. The tree produces seeds that are widely consumed as food.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PLASMA_GENERATORS</Tag>
@@ -5575,7 +5643,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PLASMA_GENERATORS_PEDIA</Tag>
-		<English>Plasma is one of the four fundamental states of matter, and was first described by chemist Irving Langmuir in the 1920s. It consists of a gas of ions - atoms which have some of their orbital electrons removed – and free electrons. Plasma can be artificially generated by heating or subjecting a neutral gas to a strong electromagnetic field to the point where an ionized gaseous substance becomes increasingly electrically conductive. The resulting charged ions and electrons become influenced by long-range electromagnetic fields, making the plasma dynamics more sensitive to these fields than a neutral gas.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PLASTEEL</Tag>
@@ -5585,7 +5654,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PLASTEEL_PEDIA</Tag>
-		<English>Plasteel is a steel-reinforced plastic substance referenced in multiple works in the Star Wars expanded universe, Warhammer 40,000, RimWorld, Subnautica, Stellaris, and other science fiction franchises.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PLASTIC</Tag>
@@ -5596,8 +5666,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PLASTIC_PEDIA</Tag>
-		<English>A plastic material is any of a wide range of synthetic or semi-synthetic organic solids that are moldable. Plastics are typically organic polymers of high molecular mass, but they often contain other substances. They are usually synthetic, most commonly derived from petrochemicals, but many are partially natural.</English>
-		<Italian>Un materiale plastico è un qualsiasi materiale sintetico o semi-sintetico che ha la capacità di piegarsi allo stato solido. La plastica è solitamente un polimero organico con elevata massa molecolare, ma spesso contiene altre sostanze; è solitamente sintetica, derivata dai prodotti petrolchimici, ma alcune varietà hanno anche componenti naturali.</Italian>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PLATINUM_INGOTS</Tag>
@@ -5615,7 +5685,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PLATINUM_ORE_PEDIA</Tag>
-		<English>Platinum is a precious metal. Platinum was well-known to many ancient cultures, but most textbooks date the discovery of the metal to the eighteenth century when it was finally isolated in pure form. Archaeologists have discovered platinum artefacts originating from Egypt and Pre-Columbian America. The word platinum was derived from the Spanish platina or "little silver". Europeans became aware of platinum after Spanish Conquistadors brought it back with plundered gold and silver from the New World. Platinum became a very fashionable jewellery material during the nineteenth century. Many famous royal jewels including the Hope Diamond and the Star of Africa are mounted in platinum settings. During World War II, platinum use was banned in the US for any non-military purpose. This event suppressed consumer demand for platinum for decades, but it has made a strong resurgence in recent years as a premium jewellery material.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PLATINUM_WARES</Tag>
@@ -5632,7 +5703,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_POCKET_UNIVERSE_PEDIA</Tag>
-		<English>In narrative, pocket universes are fictional naturally or artificially-created universes that exist within the bounds of another universe. The term pocket universe is derived from its illustration in the actual universe where it is usually portrayed as an orb which would fit in a pocket.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_POISON</Tag>
@@ -5642,8 +5714,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_POISON_PEDIA</Tag>
-		<English>Throughout human history, intentional application of poison has been used as a method of assassination, murder, suicide, and execution.</English>
-		<Italian>Nel corso della storia il veleno è stato usato come metodi di assassinii, omicidi, suicidi ed esecuzioni.</Italian>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_POLISH</Tag>
@@ -5670,7 +5742,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_POMEGRANATE_PEDIA</Tag>
-		<English>A pomegranate is a fruit-bearing deciduous shrub or small tree growing between 5 and 8 m tall. The pomegranate is native to the Caucasus, the Himalayas in north Pakistan and Northern India. It has been cultivated in the Caucasus since ancient times, and today, is widely cultivated throughout Iran, Azerbaijan, Armenia, Afghanistan, India, Pakistan, Bangladesh, Iraq, Egypt, China, Burma, Saudi Arabia, Israel, Jordan, the drier parts of southeast Asia, the Mediterranean region of Southern Europe, and tropical Africa. Introduced into Latin America and California by Spanish settlers in 1769, pomegranate is now cultivated in parts of California and Arizona for juice production</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PORCELAIN</Tag>
@@ -5700,8 +5773,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_POTASH_PEDIA</Tag>
-		<English>Potash is any of various mined and manufactured salts that contain potassium in water-soluble form. The name derives from "pot ash", which refers to plant ashes soaked in water in a pot, the primary means of manufacturing the product before the industrial era.</English>
-		<Polish>Potaż (historyczna, regionalna pisownia również potasz od niem. Potasche) - zanieczyszczona postać węglanu potasu K2CO3, rozpuszczalna w wodzie część popiołu pochodzącego ze spalania węgla drzewnego, zawierająca również zmienne ilości innych związków potasu. Nazwa potaż używana jest czasami na określenie dowolnego minerału zawierającego potas, zwłaszcza w krajach anglojęzycznych.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_POTATOES</Tag>
@@ -5727,9 +5800,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_POTATO_CHIPS_PEDIA</Tag>
-		<English>A potato chip (known as a crisp in British English and Hiberno-English, and as either a chip or wafer in Indian English) is a thin slice of potato that is deep fried or baked until crunchy. Potato chips are commonly served as an appetizer, side dish, or snack. The basic chips are cooked and salted; additional varieties are manufactured using various flavorings and ingredients including seasonings, herbs, spices, cheeses, and artificial additives.</English>
-		<German>Kartoffelchips, kurz Chips, in der Schweiz auch Pommes-Chips, in (Ost-)Österreich früher, heute nur noch gelegentlich, Rohscheiben genannt, sind in dünne Scheiben geschnittene und frittierte oder gebackene Kartoffeln. Sie dienen als Beilage oder Snack. Kartoffelchips gehören zu den beliebtesten Snacks und werden weltweit in vielen Geschmacksvarianten angeboten. In den USA werden sie Chips genannt, in Großbritannien und Irland jedoch Crisps, da dort Pommes frites Chips genannt werden (vgl. "Fish and Chips").</German>
-		<Polish>Chipsy (lub czipsy) - popularna przekąska w postaci cienkich, osuszonych plastrów ziemniaków (najczęściej) lub innych warzyw, zazwyczaj obsmażonych w głębokim, gorącym tłuszczu. Ze względu na wysoką wartość energetyczną chipsów, do ich produkcji stosowane są również zamienniki tłuszczu oraz nowoczesne technologie produkcji, takie jak na przykład gotowanie z zastosowaniem mikrofal, a następnie spryskiwanie niewielką ilością oleju (bez zanurzenia w tłuszczu). Poszczególne smaki uzyskuje się dzięki doborowi przypraw i aromatów, rzadziej ziół.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_POTTERY</Tag>
@@ -5742,7 +5814,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_POTTERY_PEDIA</Tag>
-		<English>The invention of pottery was essential to the development of agricultural societies. To get the most out of seasonal crops and domesticated animals, a tribe needed sturdy, waterproof containers in which to store and protect surplus food. The discovery of the properties of clay, and the invention of the kiln and the potter's wheel made it possible to build such containers. The earliest examples of Western pottery date back to as early as 6500 BC. Most of the examples from this period were strictly utilitarian. Although use continued to be primarily practical, decorative pottery soon became a ritualistic and aesthetic art form in cultures all over the world. Some of the most impressive examples of artistic pottery comes from the pre-Columbian cultures of South America, and from the Ming dynasty in 14th century China.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_POULTRY</Tag>
@@ -5754,8 +5827,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_POULTRY_PEDIA</Tag>
-		<English>Poultry are domesticated birds kept by humans for the eggs they produce, their meat, their feathers, or sometimes as pets. These birds are most typically members of the superorder Galloanserae (fowl), especially the order Galliformes (which includes chickens, quails and turkeys) and the family Anatidae, in order Anseriformes, commonly known as "waterfowl" and including domestic ducks and domestic geese. Poultry also includes other birds that are killed for their meat, such as the young of pigeons (known as squabs) but does not include similar wild birds hunted for sport or food and known as game. The word "poultry" comes from the French/Norman word poule, itself derived from the Latin word pullus, which means small animal.</English>
-		<Polish>Drób - zbiorcze określenie udomowionych ptaków hodowanych ze względu na mięso, jaja, pierze oraz w celach dekoracyjnych. Do drobiu zalicza się między innymi kury, gęsi, indyki, kaczki, gołębie i perliczki. Do drobiu w sensie kulinarnym zaliczane bywają też potrawy z dzikich ptaków.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_POVERTY_POINT</Tag>
@@ -5772,8 +5845,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_POWER_TOOLS_PEDIA</Tag>
-		<English>A power tool is a tool that is actuated by an additional power source and mechanism other than the solely manual labour used with hand tools. The most common types of power tools use electric motors. Internal combustion engines and compressed air are also commonly used. Other power sources include steam engines, direct burning of fuels and propellants, or even natural power sources like wind or moving water. Tools directly driven by animal power are not generally considered power tools.</English>
-		<Polish>Elektronarzędzia są to narzędzia zasilane prądem elektrycznym, najczęściej o napięciu 230 V. Ułatwiają prace, których wykonywanie narzędziami ręcznymi byłoby uciążliwe, czasochłonne lub niewygodne.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_POYA</Tag>
@@ -5790,8 +5863,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PRICKLY_PEAR_PEDIA</Tag>
-		<English>The most common culinary species is the Indian fig opuntia (O. ficus-indica). Most culinary uses of the term "prickly pear" refer to this species. Prickly pears are also known as tuna (fruit) or nopal (paddle, plural nopales) from the Nahuatl word nopalli for the pads, or nostle, from the Nahuatl word nochtli for the fruit; or paddle cactus. Prickly pears typically grow with flat, rounded cladodes (also called platyclades) armed with two kinds of spines; large, smooth, fixed spines and small, hairlike prickles called glochids, that easily penetrate skin and detach from the plant. Many types of prickly pears grow into dense, tangled structures.</English>
-		<German>Als Kaktusfeigen werden die Früchte der Kakteenart Opuntia ficus-indica bezeichnet. Es handelt sich um etwa 6 bis 10 cm lange, eiförmige oder längliche Früchte von gelbgrüner, oranger oder roter Farbe. Sie werden zusammen mit ihren essbaren Kernen verzehrt und haben einen süß-säuerlichen Geschmack. Man ist Kaktusfeigen entweder roh oder verarbeitet sie zu Marmelade oder Likör. Der Feigenkaktus stammt vermutlich aus Mexiko. Er ist die domestizierte Form von Opuntia megacantha, die nur noch über harmlose Dornen verfügt. Er war eine traditionelle Heilpflanze der Azteken und wird auch heute noch in der Volksmedizin verwendet, z.B. gegen Diabetes.</German>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PRIME_TIMBER</Tag>
@@ -5804,9 +5877,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PRIME_TIMBER_PEDIA</Tag>
-		<English>Lumber or timber is wood that is used in any of its stages from felling through readiness for use as structural material for construction, or wood pulp for paper production. Lumber is supplied either rough or finished. Besides pulpwood, rough lumber is the raw material for furniture-making and other items requiring additional cutting and shaping. It is available in many species, usually hardwoods. Finished lumber is supplied in standard sizes, mostly for the construction industry, primarily softwood from coniferous species including pine, fir and spruce (collectively known as Spruce-pine-fir), cedar, hemlock, but also some hardwood, for high-grade flooring.</English>
-		<German>Unter Edelholz versteht man Holzsorten, die sich durch bestimmte Eigenschaften von weit verbreiteten Hölzern wie Birke oder Buche unterscheiden. Dazu zählen eine ausdrucksvolle Farbgebung, markante Kontraste, schöne Maserungen und andere Auffälligkeiten, aber auch seltenes Vorkommen und dementsprechend hoher Wert oder eine besondere Resistenz gegen Schädlingsbefall. Letzten Endes kann die Einklassifizierung als Edelholz auch von einer rein subjektiven Wertschätzung herrühren. Einige bekannte Beispiele für Edelhölzer sind Mahagoni, Palisander, Teak und Ebenholz. Edelholz wird gern für Kunstwerke und Musikinstrumente verwendet. Außerdem werden häufig Furniere und Intarsien für Möbel und Automobilausstattung aus Edelhölzern hergestellt.</German>
-		<Polish>Drewno - surowiec drzewny otrzymywany ze ściętych drzew i formowany przez obróbkę w różnego rodzaju sortymenty. Zajmuje przestrzeń pomiędzy rdzeniem a warstwą łyka i kory. Pod względem technicznym drewno jest naturalnym materiałem kompozytowym o osnowie polimerowej wzmacniany ciągłymi włóknami polimerowymi, którymi są podłużne komórki zorientowane jednoosiowo.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PRUSSIAN</Tag>
@@ -5829,7 +5901,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PUMICE_STONE_PEDIA</Tag>
-		<English>Pumice, called pumicite in its powdered or dust form, is a volcanic rock that consists of highly vesicular rough textured volcanic glass, which may or may not contain crystals. It is typically light colored. Scoria is another vesicular volcanic rock that differs from pumice in having larger vesicles and thicker vesicle walls and being dark colored and denser.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PUMPKIN</Tag>
@@ -5842,8 +5915,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PUMPKIN_PEDIA</Tag>
-		<English>A pumpkin is a gourd-like squash of the genus Cucurbita and the family Cucurbitaceae (which also includes gourds). It commonly refers to cultivars of any one of the species Cucurbita pepo, Cucurbita mixta, Cucurbita maxima, and Cucurbita moschata, and is native to North America. They typically have a thick, orange or yellow shell, creased from the stem to the bottom, containing the seeds and pulp.</English>
-		<German>Die Kürbisse (Cucurbita) sind die namensgebende Pflanzengattung aus der Familie der Kürbisgewächse (Cucurbitaceae). Es handelt sich um krautige Pflanzen mit meist sehr großen, auffälligen Früchten (Panzerbeeren), die in Form und Farbe sehr stark variieren. Die Früchte der Wildform verfügen über eine sehr harte, holzige Schale und sind voll von Bitterstoffen, sodass ursprünglich nur die nahrhaften Samen verwendet wurden. Erst durch Auslese im Rahmen der Domestizierung wurde die Nutzung als Gemüse möglich. Anhand von Funden gilt heute als sicher, dass Kürbisse bereits zwischen 8000 und 10000 v.Chr. domestiziert wurden. Der Gartenkürbis hat seinen Ursprung im südlichen Nordamerika, während der Riesenkürbis aus Süd- und der Moschuskürbis aus Mittelamerika stammt.</German>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PUNCH_CARDS</Tag>
@@ -5853,7 +5926,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PUNCH_CARDS_PEDIA</Tag>
-		<English>A punched card or punch card is a piece of stiff paper that can be used to contain digital data represented by the presence or absence of holes in predefined positions. Digital data can be used for data processing applications or, in earlier examples, used to directly control automated machinery. Punched cards were widely used through much of the 20th century in the data processing industry, where specialized and increasingly complex unit record machines, organized into semiautomatic data processing systems, used punched cards for data input, output, and storage. Many early digital computers used punched cards, often prepared using keypunch machines, as the primary medium for input of both computer programs and data. While punched cards are now obsolete as a storage medium, as of 2012, some voting machines still use punched cards to record votes.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PUNTIC</Tag>
@@ -5868,8 +5942,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PYRITE_PEDIA</Tag>
-		<English>The mineral pyrite, or iron pyrite, also known as fool's gold, is an iron sulfide with the formula FeS2. This mineral's metallic luster and pale brass-yellow hue give it a superficial resemblance to gold, hence the well-known nickname of fool's gold. The color has also led to the nicknames brass, brazzle, and Brazil, primarily used to refer to pyrite found in coal.</English>
-		<Polish>Piryt - minerał żelaza z gromady siarczków, nadsiarczek żelaza(II), FeS2. Nazwa pochodzi od gr. pyr = ogień oraz pyrites = iskrzący, gdyż minerał ten iskrzy się pod wpływem uderzeń krzesiwa (krzemienia, twardego metalu).</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_QIANG</Tag>
@@ -5940,6 +6014,11 @@
 		<Italian>Quetzalcoatl</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_QUETZALCOATL_PEDIA</Tag>
+		<English></English>
+		<Italian></Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_QULLA</Tag>
 		<English>Qulla</English>
 	</TEXT>
@@ -5972,6 +6051,11 @@
 		<English>Rainbow Serpent</English>
 		<French>Serpent Arc-en-ciel</French>
 		<Italian>Serpente arcobaleno</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_RAINBOW_SERPENT_PEDIA</Tag>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RAPA_NUI</Tag>
@@ -6038,9 +6122,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_REEDS_PEDIA</Tag>
-		<English>In polyphyletic botany, a reed is a type of tall, grass-like plant of wet places, it is also very flamable; the namesake vegetation of reed beds.</English>
-		<German>Schilfrohr (Phragmites australis oder Phragmites communis) oder kurz Schilf ist eine weltweit verbreitete Sumpfpflanze, die zu den Süßgräsern gehört. Schilfhalme können bis zu 4 m hoch werden. Sie bilden rispenförmige Blütenstände aus, die bis zu 50 cm groß sein können. Schilf verdrängt bei günstigen Nährstoffangebot andere Wildgräser und -kräuter, weshalb an stehenden und langsam fließenden Gewässern in der Regel natürliche Monokulturen entstehen. Schilf kann vielseitig verwendet werden. Als Naturbaustoff eignet es sich besonders in Form von Reet als Dachabdeckung, es kam aber auch beim Bau früher Schiffe zum Einsatz. Von Vorteil war hierbei der hohe Gehalt an Kieselsäure, durch den es eine brandhemmende Wirkung hatte. Schilf kann als Gemüse verzehrt und aus seinen getrockneten Wurzeln kann ein Mehl zum Brotbacken gewonnen werden. In der Antike war es als Schreibrohr jahrhundertelang das wichtigste Schreibgerät. Heute wird Schilf als Dämmstoff, in Pflanzenkläranlagen und als natürlicher Bodenfilter verwendet.</German>
-		<Polish>Trzcina (Phragmites L.) - rodzaj roślin należący do rodziny wiechlinowatych. Należy do niego 4-5 gatunków. W Polsce w środowisku naturalnym rośnie jeden tylko gatunek - trzcina pospolita (Phragmites australis), jest to zarazem gatunek typowy rodzaju.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_REFRIGERATORS</Tag>
@@ -6052,9 +6135,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_REFRIGERATORS_PEDIA</Tag>
-		<English>A refrigerator (colloquially fridge) is a common household appliance that consists of a thermally insulated compartment and a heat pump (mechanical, electronic, or chemical) that transfers heat from the inside of the fridge to its external environment so that the inside of the fridge is cooled to a temperature below the ambient temperature of the room. Refrigeration is an essential food storage technique in developed countries. Lower temperatures in a confined volume lowers the reproduction rate of bacteria, so the refrigerator reduces the rate of spoilage.</English>
-		<German>Ein Kühlschrank ist ein elektrisches oder gasbetriebenes schrankförmiges Gerät, das die Temperatur in seinem Inneren selbstständig niedrig hält. Mittels eines üblicherweise an der Rückseite befindlichen und per Temperaturregler geregelten Kühlaggregates wird das Kühlschrankinnere gekühlt. Kühlschränke finden Verwendung für die Lagerung von Nahrungsmitteln, Medikamenten, Chemikalien usw. Durch die niedrigere Temperatur laufen chemische Reaktionen und biologische Prozesse, die beispielsweise Lebensmittel ungenießbar und Medikamente unbrauchbar werden lassen, langsamer ab.</German>
-		<Polish>Chłodziarka (zwycz. lodówka) - urządzenie (maszyna cieplna), którego zadaniem jest obniżenie temperatury środowiska chłodzonego, kosztem doprowadzonej energii. W chłodziarkach absorpcyjnych energia dostarczana jest w postaci ciepła, natomiast w pozostałych (sprężarkowych, strumienicowych, termoelektrycznych) w postaci pracy. Chłodzonym czynnikiem może być powietrze, woda lub inny czynnik pośredniczący (chłodziwo).</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_REPLACEMENT_ORGANS</Tag>
@@ -6066,8 +6148,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_REPLACEMENT_ORGANS_PEDIA</Tag>
-		<English>An artificial organ is a man-made device that is implanted or integrated into a human to replace a natural organ, for the purpose of restoring a specific function or a group of related functions so the patient may return to as normal a life as possible. The replaced function doesn't necessarily have to be related to life support, but often is. Implied by this definition is the fact that the device must not be continuously tethered to a stationary power supply, or other stationary resources, such as filters or chemical processing units. (Periodic rapid recharging of batteries, refilling of chemicals, and/or cleaning/replacing of filters, would exclude a device from being called an artificial organ.) Thus a dialysis machine, while a very successful and critically important life support device that completely replaces the duties of a kidney, is not an artificial organ. At this time an efficient, self-contained artificial kidney has not become available.</English>
-		<German>Ein künstliches Organ ist ein von Menschen gemachtes Gerät das einem Menschen implantiert wird, um ein natürliches Organ zu ersetzen. Dies dient dem Zweck eine spezifische Funktion oder eine Gruppe verwandter Funktionen wiederherzustellen um dem Patient ein normales Leben zu ermöglichen. Das ersetzte Organ muss dabei nicht zwangsläufig eine lebenserhaltene Funktion erfüllen, tut dies aber meistens. Diese Definition impliziert dass das Gerät nicht dauerhaft an eine stationäre Energiequelle oder andere stationäre Ressourcen wie Filter, angeschlossen sein muss. (Das schnelle periodische Aufladen von Batterien, nachfüllen von Chemikalien und/oder säubern/ersetzen von Filtern würde ein Gerät nicht als künstliches Organ klassifizieren.) Somit ist eine Dialysemaschine, obwohl sie ein sehr erfolgreiches und notwendiges Gerät zur Lebenserhaltung ist, dass die Aufgaben der Niere komplett erfüllt, kein künstliches Organ sein. Zur Zeit sind effiziente, selbstversorgene Kunstnieren nicht verfügbar.</German>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_REPLICATORS</Tag>
@@ -6080,7 +6162,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_REPLICATORS_PEDIA</Tag>
-		<English>Replicators were advanced robots capable of reproducing themselves indefinitely, consuming all available resources in an area to create more of themselves. The Replicators were created at an unspecified time in the past on a Human world where an android called Reese was created. This machine had a childlike personality and was feared by the natives of the planet. In order to keep herself amused, she created the Replicators which were to be her toys. As the population of the world grew more fearful of Reese and the Replicators, she began to teach the machines to protect her and themselves. In order to accomplish this, they began the process of self replication. The Replicators grew too large in number, and Reese herself began to lose the ability to control them</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RESIN</Tag>
@@ -6093,9 +6176,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RESIN_PEDIA</Tag>
-		<English>Resin in the most specific use of the term is a hydrocarbon secretion of many plants, particularly coniferous trees. Resins are valued for their chemical properties and associated uses, such as the production of varnishes, adhesives, and food glazing agents; as an important source of raw materials for organic synthesis; and as constituents of incense and perfume. Plant resins have a very long history that was documented in ancient Greece by Theophrastus, in ancient Rome by Pliny the Elder, and especially in the resins known as frankincense and myrrh, prized in ancient Egypt. These were highly prized substances, and required as incense in some religious rites. Amber is a hard fossilized resin from ancient trees.</English>
-		<German>Harz werden verschiedene von Pflanzen oder Tieren abgesonderte zähe Flüssigkeiten genannt, die nicht wasserlöslich sind. Vor allem von Bäumen lässt sich Harz leicht gewinnen, denn sie produzieren es z.B. nach Verletzungen, um die Wunde schnell zu verschließen. Als einziger tierischer Lieferant gilt die Lackschildlaus (Kerria laccifera) aus Südostasien, die den Schellack liefert. Naturharz wurde früher vielseitig verwendet, unter anderem in der Kunst, der Medizin und im Schiffbau. Das bekannteste Produkt ist wohl das Kolophonium, ein Destillationsrückstand aus dem Harz von Kiefern und Fichten, der z.B. als Klebstoff für Heftpflaster, in Kaugummi und zur Behandlung der Bogenhaare bei Streichinstrumenten verwendet wird. Heute werden statt Naturharzen weitestgehend Kunstharze verwendet.</German>
-		<Polish>Żywica - substancja wytwarzana w niektórych roślinach, najczęściej w drzewach, szczególnie iglastych. Znajduje się w specjalnych przestrzeniach międzykomórkowych, lub przewodach żywicznych, i wytwarzana jest przez otaczające je komórki wydzielnicze (żywicorodne). U sosny przewody żywiczne są liczne, długie, biegną wzdłuż pnia i konarów, ponadto połączone są przewodami poprzecznymi, wskutek czego z miejsca uszkodzonego wypływają duże ilości żywicy przez długi czas. Żywica służy do zabezpieczania miejsc będących ranami drzewa. Barwa żywicy zależna jest od gatunku drzewa, z którego została pozyskana (od białej, przezroczystej do szarej).</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RHODESIAN</Tag>
@@ -6114,11 +6196,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RICE_PEDIA</Tag>
-		<English>Rice is a dietary staple of more than half of the world's human population. Rice is often grown in paddies - shallow puddles carefully controlled to ensure appropriate water depth. It is believed that rice cultivation began simultaneously in many countries over 6500 years ago. Modern world production of rice has risen steadily from about 200 million tons in 1960 to 600 million tons in 2000.</English>
-		<French>Le riz est l'élément de base de l'alimentation de plus de la moitié de la population mondiale. Il est souvent cultivé dans des rizières, des étendues d'eau peu profondes dont le niveau est soigneusement contrôlé. On estime que la culture du riz a débuté simultanément dans différentes régions, il y a plus de 6 500 ans. La production mondiale de riz a augmenté régulièrement ces dernières années, passant de 200 millions de tonnes en 1960 à 600 millions en 2000.</French>
-		<German>Als Reis werden die Getreidekörner der kultivierten Pflanzen der Gattung Oryza bezeichnet. Reis ist heute das Grundnahrungsmittel von mehr als 50% der Weltbevölkerung. Vermutlich wird Reis bereits seit etwa 6500 Jahren angebaut. Er wächst auf Reisfeldern, deren geringe Wassertiefe permanent überwacht werden muss. Interessant dabei ist, dass Reis ursprünglich keine Wasserpflanze war, sondern sich seit Jahrtausenden durch Zucht und natürliche Selektion an die Überflutung der Felder angepasst hat. Die Reisproduktion der modernen Welt steigt ständig an. Waren es 1960 noch 200 Millionen Tonnen jährlich, lag die Reisproduktion im Jahr 2000 bereits bei über 600 Millionen Tonnen.</German>
-		<Italian>Il riso è un alimento fondamentale nella dieta di più della metà della popolazione mondiale. Viene coltivato in piccole vasche o grandi pozze, monitorate con attenzione per poter controllare il livello dell'acqua. Si crede che la coltivazione del riso cominciò contemporaneamente in molte zone, circa 6.500 anni fa. L'odierna produzione di riso è passata dai 200 milioni di tonnellate annui del 1960 agli oltre 600 milioni di tonnellate del 2000.</Italian>
-		<Spanish>El arroz es una pieza fundamental de la dieta de más de la mitad de la población humana. Esta planta se cultiva a menudo en arrozales, que son charcas cuya profundidad está cuidadosamente controlada. Se cree que su cultivo comenzó simultáneamente en muchos países hace unos 6.500 años. La producción moderna de arroz ha crecido constantemente, desde doscientos millones de toneladas en 1960 a seiscientos millones en 2000.</Spanish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ROASTED_COFFEE</Tag>
@@ -6129,8 +6208,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ROASTED_COFFEE_PEDIA</Tag>
-		<English>Coffee is usually sold in a roasted state, and with rare exceptions all coffee is roasted before it is consumed. It can be sold roasted by the supplier, or it can be home roasted. The roasting process influences the taste of the beverage by changing the coffee seed both physically and chemically. The seed decreases in weight as moisture is lost and increases in volume, causing it to become less dense. The density of the seed also influences the strength of the coffee and requirements for packaging. The actual roasting begins when the temperature inside the seed reaches approximately 200 °C (392 °F), though different varieties of seeds differ in moisture and density and therefore roast at different rates. During roasting, caramelization occurs as intense heat breaks down starches, changing them to simple sugars that begin to brown, which alters the color of the seed. Sucrose is rapidly lost during the roasting process and may disappear entirely in darker roasts. During roasting, aromatic oils and acids weaken, changing the flavor; at 205 °C (401 °F), other oils start to develop. One of these oils, caffeol, is created at about 200 °C (392 °F), which is largely responsible for coffee's aroma and flavor.</English>
-		<Polish>Kawa - napój sporządzany z palonych, a następnie zmielonych lub poddanych instantyzacji ziaren kawowca, zwykle podawana na gorąco. Pochodzi z Etiopii, w Europie pojawiła się około XVI wieku. Jedna z najpopularniejszych używek na świecie i główne źródło kofeiny. Działa pobudzająco i orzeźwiająco oraz przyspiesza przemianę materii. Zawiera przeciwutleniacze, które zapobiegają powstawaniu wolnych rodników. Spożywana w dużych ilościach może jednak być szkodliwa dla zdrowia. Rocznie produkuje się około 6,7 miliona ton kawy.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ROCKET_FUEL</Tag>
@@ -6141,8 +6220,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ROCKET_FUEL_PEDIA</Tag>
-		<English>Rocket propellant is a material used by a rocket as, or to produce in a chemical reaction, the reaction mass (propulsive mass) that is ejected, typically with very high speed, from a rocket engine to produce thrust, and thus provide spacecraft propulsion.</English>
-		<Italian>Il carburante per mazzi è una sostanza che, grazie ad una reazione chimica, produce la spinta ad alta velocità che permette al razzo di avanzare; è un tipo di propulsione che funziona in assenza di ossigeno, quindi viene usata per i viaggi spaziali.</Italian>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ROMAN</Tag>
@@ -6166,9 +6245,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ROPE_PEDIA</Tag>
-		<English>A rope is a length of fibres, twisted or braided together to improve strength for pulling and connecting. It has tensile strength but is too flexible to provide compressive strength (i.e. it can be used for pulling, but not pushing). Rope is thicker and stronger than similarly constructed cord, line, string, and twine.</English>
-		<French>Une corde est une série de fibres, tordues ou tressées ensemble pour améliorer la résistance à la traction et la cohésion. Elle a une résistance à la traction, mais est trop souple pour fournir une résistance à la compression. La corde est plus épaisse et plus forte que le cordon, la ficelle, mais la fabrication est similaire.</French>
-		<Italian>Una corda è un insieme di fibre intrecciate o legate assieme per incrementare la resitenza agli sforzi di trazione. Ha un'ottima resitenza alla trazione, ma è troppo flessibile per fornire resitenza alla compressione (può essere usata per tirare, non per spingere). Le corde sono più spesse e più forti delle fibre singole di cui sono composte.</Italian>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ROXOLANI</Tag>
@@ -6187,7 +6265,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RUBBER_PEDIA</Tag>
-		<English>In its native Central America and South America, rubber has been collected for a long time. The Mesoamerican civilizations used rubber mostly from Castilla elastica. The Ancient Mesoamericans had a ball game using rubber balls, and a few Pre-Columbian rubber balls have been found (always in sites that were flooded under fresh water), the earliest dating to about 1600 BC. According to Bernal Díaz del Castillo, the Spanish Conquistadores were so astounded by the vigorous bouncing of the rubber balls of the Aztecs that they wondered if the balls were enchanted by evil spirits. The Maya also made a type of temporary rubber shoe by dipping their feet into a latex mixture. Rubber was used in various other contexts, such as strips to hold stone and metal tools to wooden handles, and padding for the tool handles. While the ancient Mesoamericans did not have vulcanization, they developed organic methods of processing the rubber with similar results, mixing the raw latex with various saps and juices of other vines, particularly Ipomoea alba, a species of Morning glory. In Brazil, the natives understood the use of rubber to make water-resistant cloth. A story says that the first European to return to Portugal from Brazil with samples of such water-repellent rubberised cloth so shocked people that he was brought to court on the charge of witchcraft.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RUBIES</Tag>
@@ -6200,8 +6279,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RUBIES_PEDIA</Tag>
-		<English>Ruby is a red gemstone, a variety of the mineral corundum (aluminium oxide). The colour is caused mainly by chromium. Its name comes from ruber, Latin for red. Natural rubies are exceptionally rare, but synthetic rubies (sometimes called created ruby) can be manufactured fairly cheaply. Other varieties of gem-quality corundum are called sapphires. It is considered one of the four precious gems together with the sapphire, the emerald and the diamond. Rubies are mined in Africa, Asia, Australia, and Greenland. They are most often found in Myanmar (Burma), Sri Lanka, Kenya, Madagascar, and Thailand, but they have also been found in the U.S. states of Montana, North Carolina and South Carolina. The Mogok Valley in Myanmar has produced some of the finest rubies but in recent years very few good rubies have been found there. In central Myanmar the area of Mong Hsu also produces rubies. The latest ruby deposit to be found in Myanmar is situated in Nam Ya. In 2002 rubies were found in the Waseges River area of Kenya. Rubies are being mined at Audilamena in northeastern Madagascar. Sometimes spinels are found along with rubies in the same rocks and are mistaken for rubies. However, fine red spinels may approach the average ruby in value. Rubies have a hardness of 9.0 on the Mohs scale of mineral hardness. Among the natural gems, only diamond is harder.</English>
-		<French>Le rubis est une pierre gemme rouge, une variété du corindon minéral (oxyde d'aluminium). La couleur est provoquée principalement par le chrome. Son nom vient du ruber, latin pour le rouge. Les rubis normaux sont exceptionnellement rares, mais des rubis synthétiques (parfois appelés le rubis créé) peuvent être fabriqués assez à bon marché. D'autres variétés de corindon de gemme-qualité s'appellent les saphirs. On le considère une des quatre gemmes précieuses ainsi que le saphir, l'émeraude et le diamant. Des rubis sont extraits en Afrique, en Asie, en Australie, et au Groenland. Ils le plus souvent sont trouvés Myanmar (Birmanie), au Sri Lanka, au Kenya, au Madagascar, et en Thaïlande, mais ils ont été également trouvés dans les états des ETATS-UNIS du Montana, de la Caroline du nord et de Sud Caroline. La vallée de Mogok dans Myanmar a produit certains des rubis les plus fins mais ces dernières années très peu de bons rubis ont été trouvés là. Dans Myanmar central le secteur de Mong Hsu produit également des rubis. Le dernier dépôt rouge à trouver dans Myanmar est situé dans Nam Ya. Dans 2002 rubis ont été trouvés dans la région de fleuve de Waseges du Kenya. Des rubis sont extraits chez Audilamena au Madagascar du nord-est. Parfois des spinelles sont trouvés avec des rubis dans les mêmes roches et sont confondus avec des rubis. Cependant, les spinelles rouges fins peuvent approcher le rubis moyen en valeur. Les rubis ont une dureté de 9.0 sur l'échelle de Mohs de la dureté minérale. Parmi les gemmes normales seulement le diamant est plus dur.</French>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RUSSIAN</Tag>
@@ -6226,8 +6305,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SADDLES_PEDIA</Tag>
-		<English>The saddle is a supportive structure for a rider or other load, fastened to an animal's back by a girth. The most common type is the equestrian saddle designed for a horse, but specialized saddles have been created for camels and other creatures.</English>
-		<Polish>Siodło - część rzędu końskiego stanowiąca siedzenie przeznaczone dla jeźdźca. Rusztowanie siodła to tzw. stelaż lub terlica, wykonany z drewna, metalu lub tworzywa sztucznego. Jego pokrycie to część wykonana z wyściółki (najczęściej z plastikowej pianki, dawniej ze słomy lub filcu) i obciągnięta skórą lub sztucznym materiałem. Chroni ona kręgosłup konia przed urazami oraz umożliwia mu swobodę poruszania. Kształt i wyprofilowanie siodła wpływa na dosiad i sylwetkę jeźdźca. Siodła są wytwarzane w różnych rozmiarach oraz ciężarach, tak, aby pasowały do różnych rodzajów koni i jeźdźców.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SAFAVID</Tag>
@@ -6249,8 +6328,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SAILS_PEDIA</Tag>
-		<English>A sail is any type of surface intended to generate thrust by being placed in a wind - in essence a vertically-oriented wing. Sails are used in sailing.</English>
-		<Italian>Una vela è qualsiasi superficie progettata per generare una spinta essendo posizionata in posizione perpendicolare ad una corrente d'aria; le vele sono state usate sin dall'antichità nella navigazione.</Italian>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SAKA</Tag>
@@ -6267,7 +6346,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SALT_PEDIA</Tag>
-		<English>Edible salt is a mineral, one of the few rocks humans eat. Salt is necessary for the survival of all living creatures, including humans. Salt is involved in regulating the water content (fluid balance) of the body. Salt flavor is one of the basic tastes. In the past, salt was difficult to obtain, but had a great importance in food preservation and as a vital food additive. Therefore, it was a highly valued trade item throughout history. Wars were fought over it; states were formed and destroyed because of it. Roman soldiers were partially paid with salt, and this is still evident in the English language as the word salary derives from the Latin word salarium that means payment in salt.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SAMI</Tag>
@@ -6287,8 +6367,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SAND_PEDIA</Tag>
-		<English>Sand is a naturally occurring granular material composed of finely divided rock and mineral particles.</English>
-		<Italian>La sabbia è un materiale naturale in forma granulare, formato da roccia e particelle minerali finemente tritate.</Italian>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SAPPHIRES</Tag>
@@ -6301,8 +6381,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SAPPHIRES_PEDIA</Tag>
-		<English>Sapphire (from the Hebrew word; Sapir) is the single-crystal form of aluminium oxide (Al2O3), a mineral known as corundum. It can be found naturally as gemstones or manufactured in large crystal boules for a variety of applications. The first ever laser produced was based on the ruby chromium impurity in sapphire. While this laser has few applications, the Ti-sapphire laser is popular due to the relatively rare ability to tune the laser wavelength in the red-to-near-infrared region of the electromagnetic spectrum. It can also be easily modelocked. In these lasers, a synthetically produced sapphire crystal with chromium or titanium impurities is irradiated with intense light from a special lamp, or another laser, to create stimulated emission. Pure sapphire ingots can be sliced into wafers and polished to form transparent crystal slices. Such slices are used as watch faces in high quality watches, as the material's exceptional hardness makes the face almost impossible to scratch. Since sapphire ranks a 9 on the Mohs Scale, owners of such watches should still be careful to avoid exposure to diamond jewellery, and should avoid striking their watches against artificial stone and simulated stone surfaces. Such surfaces often contain materials including silicon carbide, which, like diamond, are harder than sapphire and thus capable of causing scratches.</English>
-		<French>Saphir (du mot hébreu ; Sapir) est la forme de simple-cristal de l'oxyde d'aluminium (Al2O3), un minerai connu sous le nom de corindon. Il peut être trouvé naturellement comme pierres gemmes ou être fabriqué en grands boules en cristal pour une variété d'applications. Le premier laser produit a été basé sur l'impureté rouge de chrome en saphir. Tandis que ce laser a peu d'applications, le laser de Ti-saphir est dû populaire à la capacité relativement rare d'accorder la longueur d'onde de laser dans la région infrarouge rouge-à-proche du spectre électromagnétique. Il peut également être facilement modelocked. Dans des ces lasers, un cristal synthétiquement produit de saphir avec des impuretés de chrome ou de titane est irradié avec une lumière intense d'une lampe spéciale, ou un laser différent, pour créer l'émission stimulée. Des lingots purs de saphir peuvent être découpés en gaufrettes et être polis en tranches pour former les tranches en cristal transparentes. De telles tranches sont employées comme visages de montre dans des montres de haute qualité, car la dureté exceptionnelle du matériel rend le visage presque impossible pour rayer. Puisque le saphir range des 9 sur l'échelle de Mohs, les propriétaires de telles montres devraient encore faire attention à éviter l'exposition aux bijoux de diamant, et devraient éviter de frapper leurs montres contre la pierre artificielle et les surfaces en pierre simulées. De telles surfaces contiennent souvent les matériaux comprenant le carbure de silicium, qui, comme le diamant, sont plus durs que le saphir et capable de causer raye ainsi.</French>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SARMATIAN</Tag>
@@ -6331,8 +6411,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SAUSAGE_PEDIA</Tag>
-		<English>A sausage is a food usually made from ground meat (normally pork or beef), mixed with salt, herbs, and other spices, although vegetarian sausages are available.</English>
-		<Italian>Gli insaccati sono formati da carne animale (solitamente maiale o manzo) mischiata con sale, erbe e altre spezie; tuttavia, esistono anche salsicce vegetariane.</Italian>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SAXON</Tag>
@@ -6356,9 +6436,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SCROLLS_PEDIA</Tag>
-		<English>A scroll is a roll of papyrus, parchment, or paper which has been written, drawn or painted upon for the purpose of transmitting information or using as a decoration. It is distinguished from a roll by virtue of being intended for repeated use rather than continuous, but once-only use of the roll.</English>
-		<Italian>Una pergamena è fatta di papiro, pelle animale o carta sulla quale viene scritto, disegnato o dipinto per lo scopo di trasmettere informazioni o creare una decorazione. Viene distinta dai rotoli perchè la pergamena è creata per un uso ripetuto.</Italian>
-		<Polish>Zwój - pierwotna postać książki w formie długiej wstęgi nawiniętej na dwa drążki (umbilicus). Drążki te (wykonane najczęściej z drewna lub kości słoniowej) były dłuższe niż szerokość zwoju i nie były do niego przymocowane. Nadawały one zwojowi pożądaną sztywność. Przed rozpoczęciem czytania drążki te wysuwano. Wystające końce tych drążków wiązano ze sobą tasiemkami, a zwój owijano w obwolutę pergaminową, najczęściej koloru purpurowego i obwiązywano czerwonymi rzemykami. Zaopatrywano go dodatkowo w tytuł wypisany na skrawku pergaminu doczepionego do rękopisu. Po łacinie nazywany był on index lub titulus. W przypadku zwojów wytworniejszych miał kolor czerwony lub szafirowy. Taki doczepiony tytuł ułatwiał odszukiwanie konkretnego zwoju wśród wielu innych. Zwój czytano rozwijając sukcesywnie jego kolejne partie z jednej strony, zwijając je jednocześnie z drugiej strony (najczęściej już wtedy był to układ od lewej do prawej).</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SCULPTURES</Tag>
@@ -6368,9 +6447,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SCULPTURES_PEDIA</Tag>
-		<English>Sculpture is three-dimensional artwork created by shaping or combining hard materials - typically stone such as marble - or metal, glass, or wood.</English>
-		<Italian>Una scultura è un'opera d'arte in tre dimensioni creata scolpendo o intagliando vari materiali, come pietra, marmo, metallo, vetro o legno.</Italian>
-		<Polish>Rzeźba jest trójwymiarową kompozycją utworzoną przez kształtowanie lub łączenie twarde materiały - zazwyczaj kamień, taki jak marmur lub - metal, szkło lub drewno.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SCYTHIAN</Tag>
@@ -6443,8 +6521,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SERVICE_BOTS_PEDIA</Tag>
-		<English>Service robots assist human beings, typically by performing a job that is dirty, dull, distant, dangerous or repetitive, including household chores. They typically are autonomous and/or operated by a build in control system, with manual override options. The term "service robot" is less well-defined. The International Federation of Robotics (IFR) has proposed a tentative definition, "A service robot is a robot which operates semi- or fully autonomously to perform services useful to the well-being of humans and equipment, excluding manufacturing operations."</English>
-		<Polish>Robot - mechaniczne urządzenie wykonujące automatycznie pewne zadania. Działanie robota może być sterowane przez człowieka, przez wprowadzony wcześniej program, bądź przez zbiór ogólnych reguł, które zostają przełożone na działanie robota przy pomocy technik sztucznej inteligencji. Roboty często zastępują człowieka przy monotonnych, złożonych z powtarzających się kroków czynnościach, które mogą wykonywać znacznie szybciej od ludzi. Domeną ich zastosowań są też te zadania, które są niebezpieczne dla człowieka, na przykład związane z manipulacją szkodliwymi dla zdrowia substancjami lub przebywaniem w nieprzyjaznym środowisku.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SHANG</Tag>
@@ -6459,9 +6537,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SHANG_JADE_RITUAL_ITEMS_PEDIA</Tag>
-		<English>Used in religion and goventment rituals. Also used as burial goods.</English>
-		<French>Utilisés pour les rituels religieux. Ces objets sont également enterrés avec les morts.</French>
-		<Polish>Używane w religii i rytuałach. Stosowany również jako dobra pochówku.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SHEEP</Tag>
@@ -6474,8 +6551,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SHEEP_PEDIA</Tag>
-		<English>For centuries, sheep have had associations with many Mediterranean cultures. Many religions, such as Judaism and Christianity, use sheep-related images and parables. Raising sheep provided a steady source of income to ancient farmers since the animal can give milk, wool, and meat. Even in the 21st Century, sheep can provide a return on investment of up to 400%% of their annual cost (including reproduction gains).</English>
-		<French>Le mouton est depuis des siècles associé à de nombreuses civilisations méditerranéennes. De nombreuses religions, comme le Judaïsme et le Christianisme, utilisent des paraboles et une imagerie se rapportant au mouton. L'élevage de mouton offrait une source de revenus régulière aux agriculteurs de l'Antiquité, cet animal offrant du lait, de la laine et de la viande. Encore aujourd'hui, le mouton peut offrir un retour sur investissement de l'ordre de 400 %% de son coût annuel (bénéfice de la reproduction compris).</French>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SHELLFISH</Tag>
@@ -6486,9 +6563,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SHELLFISH_PEDIA</Tag>
-		<English>Shellfish is a culinary and fisheries term for exoskeleton-bearing aquatic invertebrates used as food, including various species of molluscs, crustaceans, and echinoderms.</English>
-		<Italian>Frutto di mare è il nome usato per indicare gli animali invertebrati acquatici dotati di esoscheletro, tra cui ci sono varie specie di molluschi, crostacei ed echinodermi.</Italian>
-		<Polish>Skorupiaki (Crustacea) - podtyp stawonogów, w większości wodnych. Wiele gatunków wchodzi w skład planktonu. Znanych jest ponad 50 tysięcy gatunków. Badaniem skorupiaków zajmuje się karcynologia.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SHOCKWAVE_ENGINES</Tag>
@@ -6499,8 +6575,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SHOCKWAVE_ENGINES_PEDIA</Tag>
-		<English>A wave disk engine or wave disk generator is a type of pistonless rotary engine being developed at Michigan State University and Warsaw Institute of Technology. The engine has a spinning disk with curved blades. Once fuel and air enter the engine, the rotation of the disk creates shockwaves that compress the mixture. When ignited, the burning mixture expands, pushing against the blades, causing them to spin. The spinning of the disk itself opens and closes intake and exhaust ports. The proposed concept was called a radial internal combustion wave rotor.</English>
-		<Polish>Głównym elementem silnika o roboczej nazwie Wave Disk Engine jest rotor, którego łopatki wraz z bocznymi ściankami tworzą komory promieniście rozłożone wokół środka. Gdy rotor się obraca, mieszanka paliwowo-powietrzna dociera do komór przez centralnie umiejscowione kanały. Jednak nie udaje się jej opuścić komór przez kanały wylotowe, gdyż rotor zdąży się obrócić i wyloty zostają zablokowane przez ścianki boczne rotora. W efekcie w rotorze gwałtownie rośnie ciśnienie i dochodzi do pojawienia się fali uderzeniowej, która kompresuje mieszankę paliwowo-powietrzną. Bezpośrednio przed tym, jak fala uderzeniowa dotrze do centralnych kanałów, rotor zdąży się obrócić i zostają one zamknięte. Wówczas skompresowana mieszanka jest podpalana, a w tym czasie obrót rotora sprawia, że zostają otwarte kanały wylotowe. Dochodzi wtedy do gwałtownego wyrzutu gorących gazów, które obracają łopatki rotora, utrzymując go w ciągłym ruchu, dzięki czemu wytwarza on elektryczność.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SHOES</Tag>
@@ -6511,9 +6587,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SHOES_PEDIA</Tag>
-		<English>A shoe is an item of footwear intended to protect and comfort the human foot while doing various activities. Shoes are also used as an item of decoration.</English>
-		<Italian>Una calzatura è un qualsiasi indumento progettato per proteggere e rendere comodo il piede umano mentre compie vare attività; le scarpe sono anche usate come oggetto decorativo.</Italian>
-		<Polish>Przeznaczeniem obuwia jest ochrona stóp przed urazami ze strony podłoża i zapewnienie komfortu podczas chodzenia. W zależności od typu, obuwie pełni również dodatkowe funkcje, takie jak zabezpieczenie przed zimnem i wodą, zapewnienie odpowiedniej przyczepności na śliskich powierzchniach, ochrona przed substancjami szkodliwymi i inne. Ważną rolą obuwia, czasami wręcz dominującą, jest uzyskanie odpowiedniego efektuestetycznego w połączeniu z całym ubiorem.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SHRIMP</Tag>
@@ -6526,8 +6601,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SHRIMP_PEDIA</Tag>
-		<English>The term shrimp is used to refer to some decapod crustaceans, although the exact animals covered can vary. Used broadly, it may cover any of the groups with elongated bodies and a primarily swimming mode of locomotion - chiefly Caridea and Dendrobranchiata. In some fields, however, the term is used more narrowly, and may be restricted to Caridea, to smaller species of either group, or to only the marine species. Under the broader definition, shrimp may be synonymous with prawn, covering stalk-eyed swimming crustaceans with long narrow muscular tails (abdomens), long whiskers (antennae) and slender legs. They swim forward by paddling with swimmerets on the underside of their abdomens. Crabs and lobsters have strong walking legs, whereas shrimp have thin fragile legs which they use primarily for perching.</English>
-		<Polish>Krewetki, krewetki właściwe (Caridea) - morskie i słodkowodne skorupiaki zaliczane do podrzędu Pleocyemata z rzędu dziesięcionogów. Zwyczajową nazwą krewetki określana jest też zaliczana do Caridea nadrodzina Palaemonoidea. Opisano około 2500 gatunków klasyfikowanych w kilkunastu nadrodzinach. Wiele z nich poławia się w celach konsumpcyjnych.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SIAMESE</Tag>
@@ -6569,8 +6644,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SILK_FIBERS_PEDIA</Tag>
-		<English>A single thread filament is too thin to use on its own so women combine many threads to produce a thicker, usable fiber. They do this by hand-reeling the threads onto a wooden spindle to produce a uniform strand of raw silk. The process takes around 40 hours to produce a half kilogram of silk.</English>
-		<Polish>Jedwab - włókno pochodzenia zwierzęcego (białkowe) uzyskiwane z kokonu jedwabnika morwowego lub jedwabnika dębowego. Swiatowa produkcja jedwabiu na poziomie ok. 50 000 ton rocznie stanowi 0,2% całej produkcjiwłókien.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SILK_PEDIA</Tag>
@@ -6593,7 +6668,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SILVER_ORE_PEDIA</Tag>
-		<English>Silver is a soft, white, lustrous transition metal, silver has the highest electrical and thermal conductivity of any metal and is found in mineral deposits and in free form. Slag heaps found in Asia Minor indicate that silver has been known about for a long time, and that it was being separated from lead as early as the fourth millennium BC. </English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SILVER_WARES</Tag>
@@ -6618,9 +6694,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SKIS_PEDIA</Tag>
-		<English>A ski is a long, narrow, flat plank like device worn under foot, usually attached via boots that click into bindings, designed to help the wearer slide smoothly over snow. Originally intended as an aid to travel in snowy regions, they are now mainly used for recreational and sporting purposes.</English>
-		<Italian>Uno sci è una lunga tavola stretta e piatta indossata sotto al piede, legata ad esso con uno stivale fissato con degli attacchi, creata per permettere all'uomo di muoversi velocemente sulla neve. Creati come mezzo di trasporto nelle regioni nevose, vengono oggi usati per divertimento e per sport.</Italian>
-		<Polish>Narty - długie, płaskie płozy mocowane do nóg poprzez system butów i wiązań, które umożliwiają ślizganie się po powierzchni śniegu. Narty ślizgają się po powierzchni śniegu ponieważ ciepło wytworzone tarciem nart powoduje, że topi się śnieg znajdujący się bezpośrednio pod nartą, co wytwarza bardzo cienką warstwę wody na powierzchni której mogą ślizgać się narty. Specjalne smary które są używane do smarowania nart obniżają temperaturę topnienia śniegu znajdującego się w styczności z nartą, ułatwiając tworzenie warstwy wody. Narty montowane są do butów narciarskich za pomocą specjalnych wiązań.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SLOVAKIAN</Tag>
@@ -6646,8 +6721,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SMART_MEDICINE_PEDIA</Tag>
-		<English>Smart Medicine, sometimes called smart drug delivery, is a method of delivering medication to a patient in a manner that increases the concentration of the medication in some parts of the body relative to others. The goal of a targeted drug delivery system is to prolong, localize, target and have a protected drug interaction with the diseased tissue. The conventional drug delivery system is the absorption of the drug across a biological membrane, whereas the targeted release system releases the drug in a dosage form. The advantages to the targeted release system is the reduction in the frequency of the dosages taken by the patient, having a more uniform effect of the drug, reduction of drug side-effects, and reduced fluctuation in circulating drug levels. The disadvantage of the system is high cost, which makes productivity more difficult and the reduced ability to adjust the dosages.</English>
-		<Polish>Lek - każda substancja, niezależnie od pochodzenia (naturalnego lub syntetycznego), nadająca się do bezpośredniego wprowadzania do organizmu w odpowiedniej postaci farmaceutycznej w celu osiągnięcia pożądanego efektu terapeutycznego, lub w celu zapobiegania chorobie, często podawana w ściśle określonej dawce. Lekiem jest substancja modyfikująca procesy fizjologiczne w taki sposób, że hamuje przyczyny lub objawy choroby, lub zapobiega jej rozwojowi. Określenie lek stosuje się też w stosunku do substancji stosowanych w celach diagnostycznych (np. metoklopramid w diagnostyce hiperprolaktynemii) oraz środków modyfikujących nie zmienione chorobowo funkcje organizmu (np. środki antykoncepcyjne).</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SOAP</Tag>
@@ -6658,8 +6733,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SOAP_PEDIA</Tag>
-		<English>In chemistry, soap is a salt of a fatty acid. Soaps are mainly used as surfactants for washing, bathing, and cleaning, but they are also used in textile spinning and are important components of lubricants. Soaps for cleansing are obtained by treating vegetable or animal oils and fats with a strongly alkaline solution. Fats and oils are composed of triglycerides; three molecules of fatty acids are attached to a single molecule of glycerol. The alkaline solution, which is often called lye (although the term "lye soap" refers almost exclusively to soaps made with sodium hydroxide), brings about a chemical reaction known as saponification. In saponification, the fats are first hydrolyzed into free fatty acids, which then combine with the alkali to form crude soap. Glycerol (glycerine) is liberated and is either left in or washed out and recovered as a useful byproduct, depending on the process employed.</English>
-		<Polish>W chemii, mydło jest solą kwasu tłuszczowego. Mydła są głównie stosowane jako środki powierzchniowo czynne do mycia, mycia i czyszczenia, ale są również stosowane w przędzenie włókien i są ważnymi składnikami środków smarujących. Mydła do oczyszczania uzyskuje się, traktując roślinne lub zwierzęce tłuszcze i oleje z silnie alkalicznego roztworu. Tłuszcze i oleje składają się z triglicerydów; trzy cząsteczki kwasów tłuszczowych są dołączone do jednej cząsteczki gliceryny.Alkaliczny roztwór, który jest często nazywany ług (choć określenie "ług mydło" odnosi się prawie wyłącznie z mydła wykonane z wodorotlenkiem sodu), doprowadza do reakcji chemicznej zwanej zmydlania. W zmydleniu tłuszcze najpierw hydrolizuje się do wolnych kwasów tłuszczowych, które następnie łączą się z zasadą z wytworzeniem surowego mydła. Glicerol (gliceryna), uwalnia się i jest albo w lewo lub wypłukiwane i odzyskiwane w postaci użytecznego produktu ubocznego, w zależności od procesu stosowanego.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SODA_POP</Tag>
@@ -6671,7 +6746,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SODA_POP_PEDIA</Tag>
-		<English>A soft drink (also called soda, pop, coke, soda pop, fizzy drink, tonic, seltzer, mineral, sparkling water, or carbonated beverage) is a beverage that typically contains water (often, but not always, carbonated water), usually a sweetener, and usually a flavoring agent. The sweetener may be sugar, high-fructose corn syrup, fruit juice, sugar substitutes (in the case of diet drinks) or some combination of these. Soft drinks may also contain caffeine, colorings, preservatives and other ingredients.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SOMALI</Tag>
@@ -6735,11 +6811,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SPICES_PEDIA</Tag>
-		<English>Certain types of plants have evolved in such a way that they produce mild toxins or repellents that make their odor or flavor distasteful to animals. Oddly enough, humans sought out many of these plants because of those smells and tastes. Merchants in the Middle East began a profitable spice trade before 2000 BC. Spices are used now, as they were in the ancient world, to preserve food and enhance its flavor. Although spices are now commercially cultivated and prepared, most types can still be found in abundance in nature. Many of the most popular spices, such as cloves and nutmeg, are extracted from plants that grow in tropical or swampy regions of the world.</English>
-		<French>Certains types de plantes ont évolué de telle manière qu'elles produisent des toxines rendant leur odeur ou leur saveur insupportable pour les animaux. Curieusement, ces odeurs et ces saveurs ont incité l'homme à rechercher ces plantes. Les marchands du Moyen-Orient ont créé vers 2000 av. J.-C. un marché des épices extrêmement lucratif. Les épices sont utilisées aujourd'hui, comme par le passé, pour conserver la nourriture et rehausser le goût des mets. Bien que de nos jours les épices soient cultivées et préparées à échelle commerciale, la plupart peuvent encore être trouvées en grande quantité dans la nature. Certaines des épices les plus recherchées, comme la muscade ou le clou de girofle, sont extraites de plantes qui poussent dans les régions tropicales ou marécageuses.</French>
-		<German>Bestimmte Pflanzen produzieren milde Gifte oder abstoßende Stoffe, deren Geruch oder Geschmack Tiere fernhält. Interessanterweise sind viele dieser Pflanzen bei den Menschen gerade wegen ihres Geruchs oder Geschmacks begehrt. Bereits 2000 vor Christus entstand im nahen Osten ein profitabler Gewürzhandel. Damals wie heute werden Gewürze benutzt, um Nahrungsmittel zu konservieren und ihren Geschmack zu verbessern. Zwar werden die Gewürzpflanzen mittlerweile kommerziell angebaut und aufbereitet, die meisten Sorten sind aber nach wie vor in großen Mengen auch in der freien Natur zu finden. Viele der beliebtesten Gewürze, wie Nelken und Muskat, werden aus Pflanzen gewonnen, die in den tropischen oder sumpfigen Regionen der Welt wachsen.</German>
-		<Italian>Alcuni tipi di piante si sono evoluti in modo da produrre tossine leggere o repellenti per rendere il loro odore o il loro sapore nauseante per gli animali. Stranamente, gli umani cercano queste piante proprio per queste caratteristiche; i mercanti del Medio Oriente cominciarono il commercio di spezie prima del 2000 a.C. Al giorno d'oggi, le spezie vengono usate per conservare e condire i cibi. Malgrado al giorno d'oggi molte spezie vengano coltivate e preparate industrialmente, la maggior parte si possono trovare abbondantemente in natura. Molte delle spezie più popolari, come i chiodi di garofano e le noci moscate, si estraggono da piante che crescono in regioni tropicali e paludose.</Italian>
-		<Spanish>Algunas clases de plantas han evolucionado de tal manera que generan toxinas o repelentes suaves que hacen que su olor o sabor resulte desagradable para los animales. Curiosamente, los humanos buscan muchas de esas plantas por sus olores y sabores. Los mercaderes de Oriente Medio iniciaron el rentable comercio de especias antes del año 2000 a.C. Al igual que en la antigüedad, se utilizan ahora para conservar la comida y potenciar su sabor. Aunque actualmente se cultivan y preparan de forma comercial, la mayor parte se sigue pudiendo encontrar en abundancia en la naturaleza. La mayoría de las especias más populares, como el clavo y la nuez moscada, se cultivan en regiones tropicales o pantanosas del mundo.</Spanish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SPONGES</Tag>
@@ -6751,8 +6824,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SPONGES_PEDIA</Tag>
-		<English>Sponges are animals of the phylum Porifera (meaning "pore bearer"). They are multicellular organisms which have bodies full of pores and channels allowing water to circulate through them, consisting of jelly-like mesohyl sandwiched between two thin layers of cells. Sponges have unspecialized cells that can transform into other types and which often migrate between the main cell layers and the mesohyl in the process. Sponges do not have nervous, digestive or circulatory systems. Instead, most rely on maintaining a constant water flow through their bodies to obtain food and oxygen and to remove wastes.</English>
-		<Polish>Gąbki są to zwierzęta z gromady Porifera (czyli "porów nośnika"). Są to organizmy wielokomórkowe, które mają pełne ciał kanałów umożliwiających porów i cyrkulację wody w nich, składający się z galaretowatej mesohyl umieszczonej pomiędzy dwoma cienkimi warstwami komórek. Gąbki niewyspecjalizowanych komórek, które można przekształcić do innych typów i które często migrują pomiędzy głównymi warstw komórek i mesohyl procesu. Gąbki nie mają nerwowego, pokarmowego lub układu krążenia. Zamiast tego, w większości opierają się na utrzymanie stałego przepływu wody przez ich ciała, aby zdobyć żywność i tlen i usunięcia odpadów.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SQUASH</Tag>
@@ -6765,9 +6838,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SQUASH_PEDIA</Tag>
-		<English>Squashes generally refer to four species of the genus Cucurbita native to Mexico and Central America, also called marrows depending on variety or the nationality of the speaker. These species include C. maxima (hubbard squash, buttercup squash, some varieties of prize pumpkins, such as Big Max), C. mixta (cushaw squash), C. moschata (butternut squash), and C. pepo (most pumpkins, acorn squash, summer squash, zucchini). In North America, squash is loosely grouped into summer squash or winter squash, depending on whether they are harvested as immature fruit (summer squash) or mature fruit (autumn squash or winter squash). Gourds are from the same family as squashes. Well known types of squash include the pumpkin and zucchini. Giant squash are derived from Cucurbita maxima and are routinely grown to weights nearing those of giant pumpkins.</English>
-		<German>Zucchini (Cucurbita pepo subsp. pepo convar. giromontiina), in der Deutschschweiz Zucchetti, gehören zur Familie der Kürbisgewächse (Cucurbitaceae). Die Pflanzen sehen Kürbispflanzen sehr ähnlich, haben aber deutlich kleinere Blätter und ranken nicht so stark. Der Farbton der Zucchini kann von weiß über gelb bis hin zu dunkelgrün reichen. Es gibt einfarbige und gestreifte Früchte. Es handelt sich um eine europäische Züchtung aus dem amerikanischen Gartenkürbis, die seit dem Ende des 17. Jahrhunderts bekannt ist. Wie am Namen leicht erkennbar, wurden Zucchini zuerst in Italien vermarktet. Dort wird auch heute noch am 7. Mai der Tag der Zucchini gefeiert.</German>
-		<Polish>Dynie na ogół odnoszą się do czterech gatunków z rodzaju Cucurbita native do Meksyku i Ameryki Srodkowej, zwany także dynie w zależności od odmiany i obywatelstwa głośnika. Gatunki te obejmują C. maxima (Hubbard squash, squash, kilka jaskier odmian dyni nagród, takich jak Big Max), C (cushaw squash mixta), C. moschata (piżmowa) i C. pepo (większość dyni, Żołądź squash, squash lato, cukinia). W Ameryce Północnej, squash jest luźno zgrupowane w dyni lub dyni olbrzymiej, w zależności od tego, czy są one zbierane jako niedojrzałe owoce (latem) lub squasha owoców dojrzałych (squash jesieni lub zimą squash). Tykwy pochodzą z tej samej rodziny co kabaczki. Dobrze znane typy squash to dyni i cukinii. Giant squash pochodzą z dynia olbrzymia i są rutynowo wzrosła do ciężarów zbliża tych olbrzymich dyni.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_STEEL_INGOTS</Tag>
@@ -6806,11 +6878,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_STONE_PEDIA</Tag>
-		<English>Stone has always been and remains one of the most important human building materials. In fact, stone tools predate human history. It appears as if the first stone tools were used by Paranthropus, an ancestor of man who lived about two million years ago. Most stone tools are created by chipping or grinding. The former is used when working with crystalline materials such as flint, chert and obsidian. The worker taps the stone with a harder stone, carefully chipping off stone flakes until the stone has been properly shaped. Mesoamerican tribes used this method to make their sharp and deadly obsidian swords. The grinding method is used when working with harder and coarser materials such as basalt and granite. This is a long and tedious process in which the toolmaker repeatedly grinds away the stone with a harder material or with sand, sometimes using water as a lubricant. Many of the earliest European stone axes were made using this process.</English>
-		<French>La pierre est depuis toujours le matériau de construction le plus répandu. L'apparition des outils en pierre marque même l'avènement de l'homme. C'est semble-t-il le Paranthropus, un ancêtre de l'homme qui vivait il y a deux millions d'années, qui fut le premier à utiliser des outils en pierre. La plupart des outils en pierre sont fabriqués en taillant ou en polissant la pierre. La première technique est utilisée avec les matériaux cristallins tels que le silex, le chert ou l'obsidienne. Elle consiste à frapper la pierre avec une pierre plus dure pour la tailler progressivement en enlevant des éclats. Les tribus d'Amérique centrale utilisaient cette méthode pour fabriquer leurs épées d'obsidienne. La méthode du polissage est utilisée avec les pierres plus dures, comme le basalte ou le granit. C'est un processus long et laborieux qui consiste à frotter de manière répétée la pierre avec un matériau plus dur ou avec du sable, en l'arrosant parfois pour la lubrifier. Les premières haches de pierre fabriquées en Europe sont nées de ce procédé.</French>
-		<German>Stein war, ist und bleibt das wichtigste Baumaterial der Menschen. Schon lange vor dem Beginn der Geschichtsschreibung hat es Steinwerkzeuge gegeben. Vermutlich wurden die ersten Steinwerkzeuge vom Paranthropus, einem Urahnen der Menschen, vor etwa zwei Millionen Jahren eingesetzt. Die meisten Steinwerkzeuge werden durch Abschlagen oder Schleifen geschaffen. Erstere Methode wird vor allem bei der Arbeit mit kristallinen Materialien wie Flint, Feuerstein und Obsidian eingesetzt. Der Arbeiter schlägt mit einem härteren Stein auf den Stein, bis dieser die gewünschte Form hat. Mesoamerikanische Stämme nutzten diese Methode, um ihre scharfen und tödlichen Obsidianschwerter herzustellen. Die Schleifmethode wird bei der Arbeit mit härteren Materialien, wie Basalt und Granit, eingesetzt. Bei diesem langen und ermüdenden Prozess schleift der Werkzeugmacher den Stein immer wieder mit einem härteren Material oder mit Sand ab. Manchmal wird dazu auch Wasser als Schmiermittel eingesetzt. Viele der frühen europäischen Steinäxte sind auf diese Art und Weise entstanden.</German>
-		<Italian>La pietra è da sempre il materiale più importante nelle opere di costruzione dell'uomo. Infatti, i primi oggetti in pietra risalgono agli albori della storia dell'umanità. Pare che fu addirittura il Paronthropus, un antenato dell'uomo vissuto due milioni di anni fa, a utilizzare i primi strumenti realizzati in pietra. La maggior parte degli oggetti in pietra veniva creata scheggiando e affilando: l'artigiano colpiva una pietra con un'altra pietra più dura, cercando di rimuovere piccole scaglie, fino a ottenere la forma desiderata. Le tribù mesoamericane usavano questo metodo per realizzare le loro letali e affilate spade di ossidiana. Il metodo di affilamento veniva utilizzato per lavorare materiali più ruvidi e grezzi, come il basalto e il granito; questo processo era lungo e ripetitivo per l'artigiano, che doveva affilare la pietra con materiale più duro o con sabbia, utilizzando acqua come lubrificante. Molte delle prime asce di pietra europee vennero realizzate con questo procedimento.</Italian>
-		<Spanish>La piedra ha sido y sigue siendo uno de los materiales más importantes de construcción de la humanidad. De hecho, las herramientas de piedra pertenecen a la Prehistoria. Parece ser que las primeras fueron empleadas por el parantropus, un antepasado del hombre que vivió hace unos dos millones de años. La mayoría de las herramientas de piedra se creaban a base de cincelar o amolar. La primera técnica se usaba al trabajar materiales cristalinos como el sílex, el pedernal y la obsidiana. El fabricante golpeaba la piedra con otra más dura, separando cuidadosamente escamas de piedra hasta que la herramienta tenía la forma adecuada. Las tribus centroamericanas empleaban este método para fabricar sus afiladas y mortíferas espadas de obsidiana. El método de amolar se empleaba al trabajar con materiales más duros y toscos como el basalto y el granito. Es un proceso largo y tedioso en el que el fabricante desbasta repetidamente la piedra con un material más duro o con arena, empleando a menudo agua como lubricante. Muchas de las primeras hachas de piedra europeas se crearon mediante este proceso.</Spanish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_STONE_TOOLS</Tag>
@@ -6822,10 +6891,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_STONE_TOOLS_PEDIA</Tag>
-		<English>A stone tool is, in the most general sense, any tool made either partially or entirely out of stone. Although stone tool-dependent societies and cultures still exist today, most stone tools are associated with prehistoric, particularly Stone Age cultures that have become extinct.</English>
-		<German>Als Steinwerkzeuge bezeichnen Archäologen alle von Menschen oder ihren Vorfahren bearbeiteten Steine, die als Werkzeuge genutzt wurden. Auch heutzutage werden regional noch Steinwerkzeuge z.B. in Form von Mahlsteinen oder Mörsern verwendet.</German>
-		<Italian>Un utensile in pietra è un qualsiasi utensile fatto parzialmente o interamente in pietra. Anche se esistono ancora culture dipendenti dagli utensili in pietra, la maggior parte di essi sono associati all'era preistorica.</Italian>
-		<Polish>Narzędzie kamienne, w najbardziej ogólnym sensie, jakieś narzędzie, wykonane w całości lub częściowo z kamienia. Chociaż kamienne narzędzie społeczeństw i kultur nadal istnieją zależne od dziś, większość narzędzi kamiennych są związane z prehistorycznych kultur, zwłaszcza z epoki kamienia, które wymarły.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_STRAW</Tag>
@@ -6836,8 +6903,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_STRAW_PEDIA</Tag>
-		<English>Straw is an agricultural by-product, the dry stalks of cereal plants, after the grain and chaff have been removed. Straw makes up about half of the yield of cereal crops such as barley, oats, rice, rye and wheat. It has many uses, including fuel, livestock bedding and fodder, thatching and basket-making. It is usually gathered and stored in a straw bale, which is a bundle of straw tightly bound with twine or wire. Bales may be square, rectangular, or round, depending on the type of baler used.</English>
-		<Polish>Słoma to uboczny produkt rolny, suche łodygi zbóż, ziarna i po plewy zostały usunięte. Słoma stanowi około połowy wydajności upraw zbóż takich jak jęczmień, owies, ryż, żyto i pszenica. Ma wiele zastosowań, w tym paliwa, ściółkę dla zwierząt gospodarskich i pasz, strzechy i koszyk decyzji. Jest to zwykle gromadzone i zapisywane w beli słomy, który jest wiązka słomy ściśle związana ze sznurka lub drutu. Bele może być kwadratowy, prostokątny, okrągły lub, w zależności od rodzaju prasy używany.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_STRING_INSTRUMENTS</Tag>
@@ -6848,9 +6915,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_STRING_INSTRUMENTS_PEDIA</Tag>
-		<English>A string instrument is a musical instrument that produces sound by means of vibrating strings.</English>
-		<Italian>Uno strumento a corde è uno strumento musicale che produce suoni facendo vibrare le corde.</Italian>
-		<Polish>Instrument strunowy instrument muzyczny jest który produkuje dźwięk za pomocą wibrujących strun.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SUDANESE</Tag>
@@ -6868,11 +6934,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SUGAR_PEDIA</Tag>
-		<English>Sugarcane is a tropical grass, probably native to New Guinea. Sugar refining was developed in China, India, and the Middle East, where it became a staple of cooking and desserts. During the eighteenth century, Europeans developed a taste for jams, candy, tea, coffee, and other sweets in greater numbers. These demands made sugar enormously popular, and its production and marketing have gone through a series of booms.</English>
-		<French>La canne à sucre est une plante tropicale, vraisemblablement originaire de Nouvelle-Guinée. L'extraction du sucre s'est développée en Chine, en Inde et au Moyen-Orient, où on l'utilisait déjà pour la cuisine et les desserts. Au cours du XVIIIe siècle, les Européens ont développé un goût prononcé pour la confiture, les confiseries, le thé, le café et autres douceurs en tout genre. Le sucre est alors devenu très populaire, et sa production a connu de nombreux "booms" successifs.</French>
-		<German>Zuckerrohr (Saccharum officinarum) ist ein tropisches Grasgewächs aus der Familie der Süßgräser, das vermutlich aus Neu-Guinea stammt. Die Zuckerverarbeitung wurde in China, Indien und dem Mittleren Osten erfunden. Dort entstanden wenig später zahlreiche Gerichte und Desserts auf der Grundlage von Zucker. Im 18. Jahrhundert kamen die Europäer auf den Geschmack und verzehrten in großen Mengen Marmeladen, Bonbons, gesüßten Tee und Kaffee sowie andere Süßigkeiten. Durch diese Nachfrage wurde der Zucker außerordentlich populär. Seitdem hat seine Produktion und Vermarktung mehrere Aufschwünge erlebt.</German>
-		<Italian>La canna da zucchero è un'erba tropicale, probabilmente originaria della Nuova Guinea. La raffinazione dello zucchero è stata sviluppata in Cina, India e Medio Oriente, dove è diventato un ingrediente fondamentale nella preparazione di cibi e dolci. Durante il XVIII secolo, gli europei svilupparono il culto di marmellate, caramelle, tè, caffè e altre squisitezze in grandi quantità; per questo motivo, lo zucchero divenne incredibilmente popolare e visse dei grandi boom commerciali.</Italian>
-		<Spanish>La caña de azúcar es una planta tropical, probablemente originaria de Nueva Guinea. El refinado del azúcar se desarrolló en China, India y Oriente Medio, donde se convirtió en un elemento básico de la cocina y los postres. Durante el siglo XVIII, los europeos se aficionaron de manera creciente a las mermeladas, los caramelos, el té, el café y otros productos azucarados. Esta alta demanda hizo enormemente popular al azúcar, y su producción y comercialización han tenido un gran auge. </Spanish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SULPHUR</Tag>
@@ -6885,9 +6948,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SULPHUR_PEDIA</Tag>
-		<English>Sulfur, in its native form, is a yellow crystaline solid. In nature, it can be found as the pure element or as sulfide and sulfate minerals. It is an essential element for life and is found in two amino acids. Its commercial uses are primarily in fertilizers but it is also widely used in gunpowder, matches, insecticides and fungicides. Gunpowder, whether black powder or smokeless powder, is a substance that burns very rapidly and is used as a propellant in firearms. As it burns, a subsonic deflagration wave is produced rather than the supersonic detonation wave which high explosives would produce. The first type of gunpowder was black powder. Historians of various cultures have postulated that it was invented between the seventh or ninth centuries by either the Arabs or the Chinese. It is also possible that black powder was invented by many cultures at around the same time. Regardless of origin, it was the first chemical propellant and the first explosive recorded in history. Black powder is a mix of sulphur, charcoal, and potassium or sodium nitrate, (sodium nitrate makes a less powerful compound), at a ratio of approximately 10:15:75. Historically, potassium nitrate was extracted from manure by a process superficially similar to composting. Nitre beds took about a year to produce crystallized potassium nitrate.</English>
-		<German>Schwefel wird sowohl in der chemischen als auch in der pharmazeutischen Industrie genutzt, unter anderem zur Produktion von Schwefelsäure, Farbstoffen, Insektiziden und Kunstdüngern. Schwefel findet auch bei der Herstellung von Schwarzpulver oder bei anderen Sprengstoffen Verwendung. Der pharmazeutische Nutzen von Schwefel war bereits im Altertum bekannt. Nach wie vor gibt es pharmazeutische Zubereitungen, die als Wirk- bzw. Hilfsstoff Schwefel enthalten. Schwarzpulver besteht aus einer Mischung von 75% Kaliumnitrat, 15% Holzkohle, vornehmlich aus dem Holz des Faulbaums gewonnen, und 10% Schwefel, welcher absolut säurefrei sein muss. Salpeter dient als Sauerstofflieferant, Kohlepulver als Brennstoff und Schwefel als Brennstoff und Sensibilisierer, damit es bei kleinster Berührung mit Funken zu brennen anfängt. Diese Bestandteile müssen fein zermahlen und gleichmäßig vermischt werden, wobei jeder Vorgang mehrere Stunden dauert und meistens in einer Pulvermühle geschieht. Danach wird das Gemisch in so genannte Kuchen feucht verpresst und getrocknet, die wiederum zerstoßen bzw. gekörnt werden. So erlangt man eine größere Oberfläche und Abbrandgeschwindigkeit. Das fertige Pulver wird noch getrocknet und kann dann abgefüllt bzw. verpackt werden. Es kann verhältnismäßig lange (luftdicht) gelagert werden.</German>
-		<Polish>Siarka to minerał z gromady pierwiastków rodzimych. Należy do grupy minerałów rzadkich. Siarka jako minerał jest w kolorze żółtym z odcieniami – zielonymi, czerwonymi i czarnej. Powstaje wskutek rozpadu siarkowodoru lub siarczanów (głównie gipsu). Niewielkie ilości siarki powstają w wyniku ekshalacji wulkanicznych. Używana w przemyśle: farmaceutycznym, chemicznym (do produkcji kwasu siarkowego), drzewnym, papierniczym, nawozów sztucznych.Zazwyczaj tworzy kryształy o pokroju bipiramidalnym, grubotabliczkowe. Występuje w skupieniach zbitych, ziemistych, ziarnistych, naciekowych, nerkowych. Tworzy też naskorupienia, impregnacje i zbliźniaczenia. Najładniejsze kryształy spotykane są w druzach powstałych w kawernach i szczelinach. Jest krucha, przezroczysta. Występuje w przyrodzie w trzech odmianach polformicznych m.in. siarka rodzima (sulfuryt), rosickyit. W temperaturze powyżej 95,3oC przechodzi w siarkę jednoskośną, w temperaturze powyżej 119, 3oC topi się. Łatwo elektryzuje się, jest złym przewodnikiem ciepła, pali się. Pod względem chemicznym jest dość czysta, bywa zanieczyszczona związkami organicznymi oraz mechanicznymi domieszkami kalcytu i gipsu. Niekiedy zawiera domieszkę selenu (siarka selenowa).</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SUMERIAN</Tag>
@@ -6909,7 +6971,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SUPERINTELLIGENT_COMPUTERS_PEDIA</Tag>
-		<English>A superintelligence is a hypothetical agent that possesses intelligence far surpassing that of the brightest and most gifted human minds. "Superintelligence" may also refer to a property of problem-solving systems (e.g., superintelligent language translators or engineering assistants) whether or not these high-level intellectual competencies are embodied in agents that act in the world. A superintelligence may or may not be created by an intelligence explosion and associated with a technological singularity.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SUPERSOLID_MATERIAL</Tag>
@@ -7000,9 +7063,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TABLETS_PEDIA</Tag>
-		<English>In the Ancient Near East, clay tablets were used as a writing medium, especially for writing in cuneiform, throughout the Bronze Age and well into the Iron Age.</English>
-		<French>Dans le Proche-Orient ancien, des tablettes d'argile ont été utilisés comme support d'écriture, en caractères cunéiformes, tout au long de l'âge du bronze et de l'âge de fer.</French>
-		<Polish>W starożytnym Bliskim Wschodzie, gliniane tabliczki były wykorzystywane jako nośnik zapisu, zwłaszcza do pisania w piśmie klinowym, w całej epoki brązu, a także w epoce żelaza.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TAGALOG</Tag>
@@ -7047,9 +7109,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TANKS_PEDIA</Tag>
-		<English>A tank is a tracked, armoured fighting vehicle designed for front-line combat which combines operational mobility and tactical offensive and defensive capabilities. Firepower is normally provided by a large-calibre main gun in a rotating turret and secondary machine guns, while heavy armour and all-terrain mobility provide protection for the tank and its crew, allowing it to perform all primary tasks of the armoured troops on the battlefield.</English>
-		<Italian>Un carro armato è un veicolo cingolato da combattimento, progettato per il combattimento in prima linea; combina mobilità operazionale, offensiva tattica e capacità difensive. La potenza di fuoco è fornita da un cannone principale di grosso calibro posizionato su una torretta girevole e da molte mitragliatrici secondarie; una pesante corazza e una mobilità su tutti i terreni forniscono protezione al carro e all'equipaggio, permettondogli di svolgere i ruoli di truppe corazzate sul campo di battaglia.</Italian>
-		<Polish>Czołg - gąsienicowy wóz bojowy, przeznaczony do walki z siłami przeciwnika na krótkich i średnich dystansach za pomocą prowadzenia ognia na wprost. Ciężki pancerz i duża mobilność zapewniają czołgom przetrwanie na polu bitwy, a napęd gąsienicowy pozwala na przemieszczanie się z dużą prędkością w trudnym terenie. Czołg jest zasadniczym środkiem prowadzenia walki lądowej, zwłaszcza natarcia.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TANNIN</Tag>
@@ -7060,8 +7121,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TANNIN_PEDIA</Tag>
-		<English>A tannin is an astringent, bitter plant polyphenolic compound that binds to and precipitates proteins and various other organic compounds including amino acids and alkaloids.</English>
-		<Polish>Taniny, garbniki roślinne, garbniki naturalne (E181) - grupa organicznych związków chemicznych, pochodne fenoli, naturalnie wytwarzane przez rośliny. Masa cząsteczkowa tanin mieści się w zakresie od kilkuset do kilku tysięcy Da. Wyróżniane są taniny łatwo hydrolizujące oraz skondensowane. Pierwsza grupa to związki powstałe w wyniku polimeryzacji kwasu galusowego lub innych kwasów fenolowych oraz cukrów, zwykle glukozy. Grupa ta łatwo ulega hydrolizie kwasowej. Druga grupa ulega hydrolizie jedynie przy zastosowaniu silnych kwasów. Taniny skondensowane tworzone są przez łączenie flawonoidów. Taniny nadają roślinom cierpki, nieprzyjemny smak, wykazują też działanie toksyczne w tym powodują denaturację białek. Polimeryzowane i przechowywane są w tanosomach. W roślinie pełnią funkcję obronną odstraszając zwierzęta roślinożerne. Taniny wydzielane przez rośliny wykazują także działanie allelopatin. Zdolność denaturacji białek została wykorzystana przez człowieka w garbarstwie. Denaturacja włókien kolagenowych, obecnych w skórach zwierzęcych, powoduje, że białka te stają się trudno dostępne dla drobnoustrojów.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TANZANIAN</Tag>
@@ -7078,8 +7139,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TAPESTRIES_PEDIA</Tag>
-		<English>Tapestry is a form of textile art, traditionally woven on a vertical loom. However, it can also be woven on a floor loom as well. It is composed of two sets of interlaced threads, those running parallel to the length (called the warp) and those parallel to the width (called the weft); the warp threads are set up under tension on a loom, and the weft thread is passed back and forth across part or all of the warps.</English>
-		<Polish>Tapiseria (z franc. tapisserie) - ogólna nazwa określająca jednostronną tkaninę o różnorodnej dekoracji: figuralnej (np. ze scenami mitologicznymi, biblijnymi), heraldycznej bądź zwierzęco-roślinnej (tzw. werdiura), służącą do dekoracji ścian. Potocznie termin "tapiseria" stosowany jest wymiennie z nazwami: gobelin i arras.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TAR</Tag>
@@ -7122,12 +7183,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TEA_PEDIA</Tag>
-		<English>Made from the leaves or buds of a bush, tea is the liquid created by soaking the extracted foliage in water and it is a popular beverage throughout the world. The "Camellia Sinesis," (tea plant), is grown in tropical and sub-tropical regions of the planet such as China or India. Originally from Southeast Asia, it early on became a staple in the diet of many person from the Orient. It was not until the sixteenth or seventeenth century that it was introduced to Europe as explorers crossed the globe in search of knowledge and treasure. Tea quickly became popular with the wealthy of Western Europe, and Britain would set up numerous plantations in its colony of India to help satiate the demand - India today remains the biggest producer of tea in the world.</English>
-		<French>Constitué de feuilles ou de bourgeons d'un buisson, le thé est préparé en trempant l'extrait de feuillage dans de l'eau, et c'est une boisson extrêmement populaire à travers le monde. Le "Camellia Sinesis" (la plante) pousse dans les régions tropicales et subtropicales de la planète, et notamment en Chine et en Inde. Originaire d'Asie du Sud-est, le thé devient très tôt un produit de base dans le régime alimentaire de nombreux habitants de l'Orient. Il n'est pas introduit avant le XVIe ou XVIIe siècles en Europe, quand les explorateurs font le tour du monde en quête de nouvelles connaissances et richesses. Le thé devient vite très populaire au sein des classes supérieures de l'Europe de l'ouest et la Grande-Bretagne crée de nombreuses plantations dans ses colonies des Indes pour répondre à la demande. L'Inde reste aujourd'hui le premier producteur mondial.</French>
-		<German>Tee ist ein heißes Aufgussgetränk aus den Blättern und Blattknospen der Teepflanze (Camellia sinensis). Diese immergrünen Sträucher wachsen wild in subtropischem Monsunklima, als Kulturpflanze wird er heute hauptsächlich in China und Indien angebaut. Das alte China ist das Mutterland des Teeanbaus. Hier ist bereits aus dem 2. Jahrhundert v.Chr. eine entsprechende Steuer belegt. Tee hatte eine immense Bedeutung für die chinesische und später auch die japanische Kultur. Dies spiegelt sich auch heute noch in den Teezeremonien wider, die ab dem 13. Jahrhundert entwickelt wurden. Erst im 16. oder 17. Jahrhundert brachten Forschungsreisende die Teepflanze schließlich auch nach Europa. Das Handelsmonopol lag zunächst bei den Niederländern und ging erst 1669 an die Britische Ostindien-Kompanie. Da der Tee als Getränk im reichen Westeuropa großen Anklang fand, legten die Briten in ihrer Kolonie Indien zahlreiche Plantagen an, um die steigende Nachfrage befriedigen zu können, und auch heute noch gehört Indien zu den größten Tee produzierenden Ländern der Welt.</German>
-		<Italian>Ricavato dalle foglie o dalle gemme di un arbusto, il tè è una bevanda popolare in tutto il mondo che si ottiene immergendo le foglie nell'acqua calda. la "camellia sinesis" (la pianta del tè) cresce nelle regioni tropicali e sub-tropicali del pianeta (Cina e India, per esempio). Originario del sudest asiatico, ben presto il tè entrò a far parte della dieta di molti orientali, mentre fu introdotto in Europa soltanto nel sedicesimo o diciassettesimo secolo, portato da esploratori che giravano il mondo in lungo e in largo in cerca di nuove conoscenze e tesori. Il tè raccolse in breve tempo il consenso delle classi agiate europee e per soddisfare la domanda, l'Inghilterra creò enormi piantagioni in India, che ancora oggi rimane il più grande produttore di tè al mondo.</Italian>
-		<Spanish>El té, líquido creado por la infusión en agua de las hojas o los brotes de un matorral, es una bebida que goza de gran fama en todo el mundo. La "camellia sinesis" (planta del té) crece en regiones tropicales y subtropicales del planeta, como China y la India. Procedente del sudeste de Asia, se convirtió desde muy pronto en la base de la dieta de muchos orientales. Hasta los siglos XVI o XVII no fue introducido en Europa por los aventureros que cruzaban el mundo en busca de conocimientos y tesoros. El té se hizo rápidamente popular entre la gente acomodada de Europa occidental, y los británicos crearían inmensas plantaciones en sus colonias de la India para satisfacer la demanda. En la actualidad, la India continúa siendo el mayor productor mundial.</Spanish>
-		<Polish>Herbata to zielona roślina z rodzaju kamelia, pochodząca z południowo-wschodniej Azji. Uprawia się krzewy herbaty chińskiej (Camellia sinensis, syn. Thea sinensis), drzewa herbaty asamskiej (Camellia assamica) oraz ich mieszańce – herbatę gruzińską i cejlońską. Uprawiana w wielu krajach strefy zwrotnikowej, także poza Azją, dla pączków i liści, z których po uprzednim przygotowaniu (suszenie, czasami fermentacja) przyrządza się napar o tej samej nazwie. Nazwą „herbata określa się również napary z innych ziół, np. herbata rumiankowa, herbata paragwajska, herbata Rooibos. Historia Herbaty - Jak głosi legenda, wszystko zaczęło się pewnego pięknego dnia w 2737 roku p.n.e. w Chinach. Tego dnia legendarny cesarz chiński - Szen Nung, zielarz i uczony, który ze względów higienicznych pił przegotowaną wodę, wypoczywał pod drzewem dzikiej herbaty. Wiał lekki wiatr i jego podmuch spowodował, że kilka listków wpadło do dzbana z wodą. Oczywiście cesarz zapatrzony w piękno natury nie zauważył tego, dopiero pijąc swój napój poznał smak, który go oczarował. Opowieść z Indii przypisuje początki picia herbaty mnichowi o imieniu Bodhidharma, który postanowił przez 7 lat medytować nie mrużąc oka. Gdy do końca kontemplacji został mu jeden dzień powieki zaczęły mu się zamykać, zerwał więc kilka liści z drzewa, pod którym się znajdował i zaczął je żuć. Od razu opuściło go zmęczenie. Japończycy mają inne zakończenie historii tego mnicha. Zmęczenie, które go opanowało przypisał powiekom, wyciął je więc i rzucił na ziemię. W tym miejscu natychmiast wyrósł krzew herbaty. Mnich zerwał kilka listków i zaczął je żuć. Jak się można domyślić, zmęczenie zniknęło. Takie są legendy, które w piękny sposób opisują odkrycie herbaty. A jak było naprawdę? Trudno powiedzieć. Wiadomo, że już od bardzo dawna napój ten znany jest w Chinach. Pierwsze pisemne wzmianki o tej roślinie pochodzą dopiero z VIII wieku p.n.e., z księgi Chou Huna (770 rok). Przez długie lata herbata była ceniona jako podstawowy napój, lek i środek wzmacniający, który wytwarzano z liści dzikiego drzewa herbacianego. Dopiero w III wieku n.e. rolnicy zaczęli sadzić krzaki herbaciane i z czasem rozwinęło się suszenie liści i przetwórstwo. W VIII wieku chiński poeta Lu You napisał Swiętą księgę herbaty, zawierającą opis krzewu herbacianego, narzędzi do zbioru i selekcji liści, przyborów do ceremonii przyrządzania i picia herbaty. Zawierała również spis plantacji i wielbicieli tego napoju. Liście herbaty zawierają znaczne ilości garbników (od 8 do 30%), z których najważniejszym jest tanina. Prócz nich występują tam: kofeina (teina) - do 4%, katechiny, cukry, związki białkowe, śladowe ilości olejku eterycznego, związki żywicowe, kwasy organiczne, enzymy, pektyny (2 - 3%), glikozydy i witaminy. W te ostatnie herbata jest bardzo bogata. Znaleźć w niej można karoten (prowitaminę A), witaminy B1, B2, PP, C, a przede wszystkim witaminę P (spośród roślin ją zawierających, herbata obok gryki ma jej najwięcej). Ponadto znajduje się w niej witamina K odpowiedzialna za krzepnięcie krwi.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TELEVISIONS</Tag>
@@ -7139,9 +7196,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TELEVISIONS_PEDIA</Tag>
-		<English>A television set (also called a television, TV set, TV, or "Telly" (UK) ) is a device that combines a tuner, display, and speakers for the purpose of viewing television. Television sets became a popular consumer product after the Second World War, using vacuum tubes and cathode ray tube displays. The addition of color to broadcast television after 1953 further increased the popularity of television sets, and an outdoor antenna became a common feature of suburban homes. The ubiquitous television set became the display device for the first generation of home computers.</English>
-		<German>Ein Fernsehgerät oder Fernsehapparat, in den 1930er Jahren auch Ferntonkino oder das Telehor (von altgriechisch horaosehen), ist ein Gerät zum Empfang und zur Wiedergabe von Fernsehsignalen. Die Idee für einen ersten mechanischen Fernsehapparat wurde bereits 1886 von Paul Nipkow in einem Patent dargelegt. Er gilt damit als der eigentliche Erfinder des Fernsehens. Gebräuchlich für Fernsehgeräte ist auch die Bezeichnung Fernsehempfänger.</German>
-		<Polish>Telewizor (zwany także telewizor, TV, TV, lub "Telly" (UK)) jest urządzeniem, które łączy w tuner, wyświetlacz i głośniki w celu oglądania telewizji. Telewizory stał się popularnym produktem konsumpcyjnym po II wojnie światowej, za pomocą lamp próżniowych i rur wyświetlacze katodowych. Dodanie koloru do transmisji telewizji po 1953 dalszy wzrost popularności telewizorów i antena zewnętrzna stała się wspólną cechą podmiejskich domów. Wszechobecne telewizor stał wyświetlacz do pierwszej generacji komputerów domowych.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TERRACOTTA</Tag>
@@ -7172,7 +7228,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TESSERACT_PEDIA</Tag>
-		<English>In geometry, the tesseract is the four-dimensional analog of the cube; the tesseract is to the cube as the cube is to the square. Just as the surface of the cube consists of six square faces, the hypersurface of the tesseract consists of eight cubical cells. The tesseract is one of the six convex regular 4-polytopes.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TEXAN</Tag>
@@ -7259,9 +7316,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TIRES_PEDIA</Tag>
-		<English>The fundamental materials of modern tires are synthetic rubber, natural rubber, fabric and wire, along with other compound chemicals. They consist of a tread and a body. The tread provides traction while the body ensures support.</English>
-		<Italian>I materiali base dei pneumatici moderni sono gomma sintetica, gomma naturale, tessuto e fili, oltre ad altri prodotti chimici. Hanno un'anima e un corpo; l'anima fornisce trazione, mentre il corpo fornisce supporto.</Italian>
-		<Polish>Opona pneumatyczna - zewnętrzna część koła o przekroju otwartym, nakładana na felgę lub obręcz i wypełniana powietrzem (lub innym gazem) pod ciśnieniem. Jest elementem pojazdu kontaktującym się z podłożem, zapewnia przenoszenie ciężaru pojazdu, sił napędu, hamowania i skrętu, a także podstawową amortyzację w czasie jazdy.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TITANIUM_INGOTS</Tag>
@@ -7279,8 +7335,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TITANIUM_ORE_PEDIA</Tag>
-		<English>Titanium is a precious metal. Titanium is Sometimes called the "space age" metal, as it is corrosion-resistant and has the highest strength-to-weight ratio of any metal. Titanium can be alloyed with iron, aluminium, vanadium, molybdenum, among other elements, to produce strong lightweight alloys for aerospace (jet engines, missiles, and spacecraft), military, industrial process (chemicals and petro-chemicals, desalination plants, pulp, and paper), automotive, agri-food, medical prostheses, orthopaedic implants, dental and endodontic instruments and files, dental implants, sporting goods, jewellery, mobile phones, and other applications. Titanium was discovered in England by William Gregor in 1791 and named by Martin Heinrich Klaproth for the Titans of Greek mythology.</English>
-		<Polish>Tytan jest metalem szlachetnym. Tytan jest czasami nazywany "ery kosmicznej" metalu, ponieważ jest odporny na korozję i ma najwyższy stosunek wytrzymałości do masy dowolnego metalu. Tytan może być stopiony z żelaza, aluminium, wanad, molibden, między innymi elementami, do produkcji stopów lekkich do mocnych lotniczym (silniki odrzutowe, rakiet kosmicznych), oraz, wojsko, procesów przemysłowych (chemikalia i Petro-chemicznych, zakładów odsalania wody, masy celulozowej, i papier), motoryzacyjny, rolno-spożywczy, protezy medyczne, implantów ortopedycznych, instrumenty i pliki stomatologiczne i endodontyczne, implanty stomatologiczne, artykuły sportowe, biżuteria, telefony komórkowe i inne aplikacje. Tytan został odkryty w Anglii przez Williama Gregora w 1791 roku i nazwany przez Martina Heinricha Klaproth dla tytanów z mitologii greckiej.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TITANIUM_WARES</Tag>
@@ -7316,8 +7372,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TOBACCO_PEDIA</Tag>
-		<English>It is believed that tobacco began growing in the Americas about 6,000 BCE, and by 1 BCE Native Americans were using tobacco in spiritual rituals and social gatherings. On October 15, 1492 Columbus was presented with a gift of dried tobacco leaves by the Native Americans. Soon after, it was brought to Europe where its popularity soared as people thought it cured everything from bad breath to cancer. The opposite, of course, was true. In 1847 Phillip Morris established selling hand rolled Turkish cigarettes. Cigarettes have served in every war since WW I, and have become entwined with images of war in the modern era. The active ingredient, Nicotine, is a highly toxic liquid alkaloid which has since been recognized as severely detrimental to health. The neuro-depressant is highly addictive, and also suppresses appetite while increasing blood pressure. New users experience a "high," while experienced users feel simple satisfaction.</English>
-		<French>On croit que le tabac a commencé à pousser en Amériques environ 6.000 avant J.C., et au premier siècle, les Américains indigènes employaient le tabac dans des rituels spirituels et des rassemblements sociaux. Le 15 octobre 1492, Christophe Colomb a été présenté avec un cadeau des feuilles sèches de tabac par les Américains indigènes. Peu après, il a été apporté à l'Europe où sa popularité a monté comme les gens ont pensé qu'elle a traité tout du mauvais souffle au cancer. L'opposé, naturellement, était vrai. En Phillip 1847 Morris a établi vendre la main les cigarettes turques roulées. Les cigarettes ont servi dans chaque guerre depuis WW I, et sont devenues enlacerées avec des images de guerre dans l'ère moderne. La substance active, nicotine, est un alcaloïde liquide fortement toxique qui a été depuis identifié comme sévèrement nuisible à la santé. Le neuro--dépresseur est fortement provoquant une dépendance, et supprime également l'appétit tout en augmentant la tension artérielle. Les nouveaux utilisateurs éprouvent une "haute," tandis que les utilisateurs expérimentés sentent la satisfaction simple.</French>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TOLTEC</Tag>
@@ -7341,8 +7397,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TOOLS_PEDIA</Tag>
-		<English>A stone tool is, in the most general sense, any tool made either partially or entirely out of stone. Although stone tool-dependent societies and cultures still exist today, most stone tools are associated with prehistoric, particularly Stone Age cultures that have become extinct.</English>
-		<Polish>Narzędzie - przedmiot lub urządzenie służące do bezpośredniego oddziaływania w procesie pracy na przedmiot pracy stanowiące wyposażenie człowieka lub maszyny. Większość prostych narzędzi jest maszynami prostymi. Narzędzie pozwala wykonać to, czego przeciętny człowiek nie byłby w stanie wykonać "gołymi rękami", lub ułatwia to, co może wykonać sam. Narzędziami posługują się też niektóre gatunki zwierząt.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TOTONAC</Tag>
@@ -7359,9 +7415,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TOYS_PEDIA</Tag>
-		<English>A toy is any object that can be used for play. Toys are associated commonly with children and pets. Playing with toys is often thought to be an enjoyable means of training the young for life in human society. Many items are designed to serve as toys, but goods produced for other purposes can also be used.</English>
-		<Italian>Un giocattolo è qualunque oggetto che può essere usato per giocare. I giocattoli vengono generalmetne associati con i bambini e gli animali da compagnia. I giocattoli sono ritenuti un ottimo mezzo educativo nella società umana; molti oggetti vengono creati come giocattoli, ma anche altri oggetti normali possono essere usati per giocare.</Italian>
-		<Polish>Zabawka - Jest przedmiotem wykorzystywanym głównie przez małe dzieci do gry i zabawy. Zabawka posiada wiele form np. lalki, samochody, domki, meble czy zwierzęta. Głównym założeniem zabawki jest szkolenie młodych ludzi do życia w społeczeństwie. Materiały z jakich wytwarzane są zabawki są odpowiednio dobierane do celów zabawki oraz wieku dziecka. Zabawki wspomagają rozwój dziecka już od pierwszych miesięcy jego życia.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TRANSISTORS</Tag>
@@ -7372,8 +7427,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TRANSISTORS_PEDIA</Tag>
-		<English>A transistor is a semiconductor device used to amplify and switch electronic signals and electrical power. It is composed of semiconductor material with at least three terminals for connection to an external circuit. A voltage or current applied to one pair of the transistor's terminals changes the current through another pair of terminals. Because the controlled (output) power can be higher than the controlling (input) power, a transistor can amplify a signal. Today, some transistors are packaged individually, but many more are found embedded in integrated circuits.</English>
-		<Polish>Tranzystor - trójelektrodowy (rzadko czteroelektrodowy) półprzewodnikowy element elektroniczny, posiadający zdolność wzmacniania sygnału elektrycznego. Nazwa urządzenia wywodzi się od słów transkonduktancja(transconductance) z "półprzewodnikowym" przyrostkiem -stor jak w warystor.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TRANSOXANIAN</Tag>
@@ -7389,7 +7444,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TRANSPARENT_ALUMINUM_PEDIA</Tag>
-		<English>Transparent aluminum is mass production of transparent aluminum oxide ceramics. Applications include electronic displays, construction, and shielding of military vehicles.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TROJAN</Tag>
@@ -7417,9 +7473,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TUNGSTEN_PEDIA</Tag>
-		<English>Tungsten is a very important metal for military applications.</English>
-		<Spanish>El tungsteno es un metal muy importante para aplicaciones militares.</Spanish>
-		<Polish>Wolfram (W, łac. wolframium) - pierwiastek chemiczny z grupy metali przejściowych w układzie okresowym. Nazwa pochodzi od wolframitu, minerału, z którego wolfram został wyodrębniony po raz pierwszy. Dawna nazwa polska tungsten pochodzi od szwedzkich słów tung ("ciężki") i sten ("kamień"); nazwa o takiej etymologii używana jest współcześnie w języku angielskim, francuskim i niektórych innych.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TUNGUS</Tag>
@@ -7458,7 +7513,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TURQUOISE_PEDIA</Tag>
-		<English>Turquoise is an opaque, blue-to-green mineral that is a hydrous phosphate of copper and aluminium. It is rare and valuable in finer grades and has been prized as a gem and ornamental stone for thousands of years owing to its unique hue.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TYPEWRITERS</Tag>
@@ -7469,8 +7525,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TYPEWRITERS_PEDIA</Tag>
-		<English>A typewriter is a mechanical or electromechanical machine for writing in characters similar to those produced by printer's type by means of keyboard-operated types striking a ribbon to transfer ink or carbon impressions onto the paper. Typically one character is printed per keypress. The machine prints characters by making ink impressions of type elements similar to the sorts used in movable type letterpress printing. After their invention in the 1860s, typewriters quickly became indispensable tools for practically all writing other than personal correspondence. They were widely used by professional writers, in offices, and for business correspondence in private homes. By the end of the 1980s, word processors and personal computers had largely displaced typewriters in most of these uses in the Western world, but as of the 2010s the typewriter is still prominent in many parts of the world including India.</English>
-		<Polish>Maszyna do pisania - urządzenie mechaniczne o napędzie ręcznym lub elektrycznym, posiadające klawisze, które naciskane powodują wydrukowanie metodą typograficzną określonych znaków na umieszczonym w maszynie podłożu drukowym (najczęściej papierze). Urządzenie może być również wspomagane modułem elektronicznym umożliwiającym zapamiętywanie wpisywanego tekstu.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_UIGHUR</Tag>
@@ -7704,8 +7760,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WALRUS_PEDIA</Tag>
-		<English>The walrus (Odobenus rosmarus) is a large flippered marine mammal with a discontinuous distribution about the North Pole in the Arctic Ocean and subarctic seas of the Northern Hemisphere. The walrus is the only living species in the family Odobenidae and genus Odobenus. This species is subdivided into two subspecies: the Atlantic walrus (O. r. rosmarus) which lives in the Atlantic Ocean and the Pacific walrus (O. r. divergens) which lives in the Pacific Ocean. </English>
-		<Polish>Mors (łac. Odobenus rosmarus) - gatunek dużego drapieżnego ssaka morskiego, jedyny współcześnie żyjący przedstawiciel dawniej licznej w gatunki rodziny morsowatych (Odobenidae) i jedyny gatunek z rodzaju Odobenus. Mors pełnił ważną rolę w życiu mieszkańców Arktyki, którzy polowali na niego dla mięsa, skór, tłuszczu, kłów i kości.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WARAY</Tag>
@@ -7728,7 +7784,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WARP_DRIVES_PEDIA</Tag>
-		<English>Warp drive is a faster-than-light (FTL) spacecraft propulsion system in many science fiction works, most notably Star Trek. A spacecraft equipped with a warp drive may travel at speeds greater than that of light by many orders of magnitude. In contrast to some other FTL technologies such as a jump drive or hyper drive, the warp drive does not permit instantaneous travel between two points but involves a measurable passage of time which is pertinent to the concept. Spacecraft at warp velocity theoretically continue to interact with objects in "normal space". The general concept of "warp drive" was introduced by John W. Campbell in his 1931 novel Islands of Space. Einstein's theory of special relativity states that energy and mass are interchangeable, thus, speed of light travel is impossible for material objects that weigh more than photons. The problem of a material object exceeding light speed is that an infinitely increasing amount of kinetic energy is required to attempt moving as fast as a massless photon. This problem can theoretically be solved by warping space to move an object instead of increasing the kinetic energy of the object to do so.</English>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WASHER_DRYER</Tag>
@@ -7739,8 +7796,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WASHER_DRYER_PEDIA</Tag>
-		<English>A washing machine (laundry machine, clothes washer, or washer) is a machine to wash laundry, such as clothing and sheets. The term is mostly applied only to machines that use water as opposed to dry cleaning (which uses alternative cleaning fluids, and is performed by specialist businesses) or ultrasonic cleaners. Washing entails immersing, dipping, rubbing, or scrubbing in water usually accompanied by detergent, or bleach. The simplest machines may simply agitate clothes in water while switched on; automatic machines may fill, empty, wash, spin, and heat in a cycle. Most washing machines remove substantial amounts of water from the laundry at the end of a wash cycle, but do not completely dry it.</English>
-		<Polish>Suszarka do ubrań - współcześnie, ze względu na konstrukcję, zwane suszarką bębnową to urządzenie domowe lub profesjonalne służące do suszenia ubrań. Do takiej suszarki ubrania wkłada się do bębna, podobnie jak w pralce automatycznej, najczęściej po uprzednim ich upraniu.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WATER_BOTTLES</Tag>
@@ -7751,8 +7808,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WATER_BOTTLES_PEDIA</Tag>
-		<English>A water bottle is a container used to hold water for consumption. This allows an individual to transport or carry the bottled water from one place to another. A water bottle is usually made of plastic, glass, or metal, and so most can be recycled.</English>
-		<Polish>Akratopega - woda podziemna, której mineralizacja wynosi 500-1000 mg/dm, a temperatura nie przekracza 20 C. W klasyfikacji wód ze względu na zawartość związków mineralnych znajduje się pomiędzy wodą słodką a mineralną. Produkowana jest w kilku rodzajach: silnie gazowana, gazowana, niegazowana, lekko gazowana oraz jako musująca Perlage.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WATERPROOF_CEMENT</Tag>
@@ -7774,8 +7831,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WAX_PEDIA</Tag>
-		<English>The best known animal wax is beeswax, but other insects secrete waxes. A major component of beeswax is the ester myricyl palmitate substance which is used in constructing their honeycombs.</English>
-		<Polish>Wosk pszczeli (wosk żółty, łac. Cera flava) - wydzielina gruczołów woskowych pszczół służąca im do budowania plastrów w ulu. Gruczoły woskowe pszczół znajdują się na spodniej części odwłoka pszczoły robotnicy. Produkcja wosku zależy od jej wieku. Największa jest w trzecim tygodniu życia pszczoły.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WAYANA</Tag>
@@ -7810,8 +7867,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WHALE_OIL_PEDIA</Tag>
-		<English>In much later times whale oil was favoured for its cleaner burning flame.</English>
-		<Italian>In tempi recenti l'olio di balena era molto usato per la sua fiamma più pulita.</Italian>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WHALE_PEDIA</Tag>
@@ -7829,11 +7886,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WHEAT_PEDIA</Tag>
-		<English>Wheat has been a staple crop for civilizations occupying temperate zones of the planet since pre-historic times. There is archeological evidence that bread wheat was cultivated in southern Turkestan as early as 6000 BC, though naturally occurring wheat was probably used for food purposes much earlier. Throughout the temperate zones, wheat has become the primary food crop. It is particularly well suited for growth in vast, open plains like those found in the central United States.</English>
-		<French>Le blé est une des principales ressources agricoles de nombreuses civilisations des régions tempérées, et ce depuis la Préhistoire. Il existe des traces archéologiques prouvant que le blé est cultivé au Sud du Turkestan depuis 6 000 ans av. J.-C., mais le blé sauvage est vraisemblablement consommé depuis plus longtemps. Dans les régions tempérées, le blé est le principal produit agricole alimentaire. Il est particulièrement bien adapté à la culture sur de grandes plaines ouvertes, comme celles du centre des Etats-Unis.</French>
-		<German>Weizen ist ein Getreide aus der Familie der Süßgräser, dass schon zu prähistorischen Urzeiten von den in gemäßigten klimatischen Regionen beheimateten Völkern als Grundnahrungsmittel genutzt wurde. Archäologische Funde beweisen, dass man bereits 6000 v.Chr. im südlichen Turkistan Brotweizen anbaute, während wilder Weizen vermutlich schon viel früher als Nahrungsmittel verwendet wurde. In Gegenden mit gemäßigtem Klima ist Weizen die wichtigste landwirtschaftliche Feldfrucht überhaupt. Besonders gut gedeiht Weizen auf großen offenen Ebenen wie im Zentrum der Vereinigten Staaten.</German>
-		<Italian>Il frumento è stato uno degli alimenti principali delle popolazioni residenti in zone temperate sin dalla preistoria. Esistono dei reperti archeologici che dimostrano che questo cereale veniva coltivato nel Turkistan già nel 6000 a.C., malgrado sia possibile che l'utilizzo del frumento non coltivato possa essere avvenuto molto prima. È particolarmente indicato per la coltivazioni in grandi pianure.</Italian>
-		<Spanish>El trigo ha sido un cultivo básico para las civilizaciones que ocupaban zonas templadas del planeta desde la Prehistoria. Existen pruebas arqueológicas de que el trigo para hacer pan se cultivaba en el sur del Turkestán allá por el año 6000 a.C., aunque el trigo natural seguramente se usaba como alimento mucho antes. Se ha convertido en el principal cultivo en todas las regiones templadas. Está especialmente adaptado para su cultivo en grandes llanuras abiertas como las del centro de los Estados Unidos.</Spanish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WINE_CHAMPAGNE</Tag>
@@ -7873,9 +7927,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WOODWIND_INSTRUMENTS_PEDIA</Tag>
-		<English>A woodwind instrument is a musical instrument which produces sound when the player blows air against a sharp edge or through a reed, causing the air within its resonator (usually a column of air) to vibrate. Most of these instruments are made of wood but can be made of other materials, such as metals or plastics.</English>
-		<Italian>Uno strumento a fuato è uno strumento musicale che produce suoni quando il musicista soffia attraverso un'apertura dello strumento, facendo vibrare l'aria all'interno della cassa di risonanza. La maggior parte di questi strumenti sono fatti in legno, ma possono essere costruiti anche in metallo o in plastica.</Italian>
-		<Polish>Instrument dęty drewniany - instrument dęty, w którym wibratorem jest drewniany stroik, bądź krawędź, o którą rozpraszany jest strumień powietrza. Sam instrument może być wykonany z dowolnego materiału, np. drewna, metalu, lub tworzywa sztucznego. Zródłem dźwięku w instrumentach dętych drewnianych są wibracje powietrza, których częstotliwość (wysokość dźwięku) jest regulowana przez zakrywanie otworów w korpusie instrumentu. Ponieważ przykrywanie wielu otworów naraz byłoby trudne lub nawet niewykonalne, w wielu instrumentach dętych drewnianych stosuje się mechanizm klapkowy.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WOOD_PEDIA</Tag>
@@ -7893,8 +7946,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WOOL_PEDIA</Tag>
-		<English>Wool is the textile fiber obtained from sheep and certain other animals, including cashmere from goats, mohair from goats, qiviut from muskoxen, angora from rabbits, and other types of wool from camelids. Wool has several qualities that distinguish it from hair or fur: it is crimped, it is elastic, and it grows in staples (clusters).</English>
-		<Polish>Wełna - włókno naturalne uzyskiwane z okrywy włosowej (sierści) owiec, lam, wielbłądów, kóz, królików i innych. Włókno wełniane posiada charakterystyczne cechy (karbikowatość, łuskowatość, zawiera lanolinę), dzięki którym nadaje się doskonale do wytwarzania wysokiej jakości, wyrobów włókienniczych.</Polish>
+		<English></English>
+		<Italian></Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_XIA</Tag>
