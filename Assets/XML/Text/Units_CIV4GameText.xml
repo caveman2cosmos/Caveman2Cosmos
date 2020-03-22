@@ -22294,22 +22294,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Bohater Wojskowy Sumerów to [COLOR_UNIT_TEXT]Sargon Wielki[COLOR_REVERT]. Rozpoczyna w towarzystwie [COLOR_HIGHLIGHT_TEXT]Kapłana[COLOR_REVERT]. Może zostać wyszkolony wraz z odkryciem [COLOR_TECH_TEXT]Pisma[COLOR_REVERT] i [COLOR_TECH_TEXT]Alfabetu[COLOR_REVERT].</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_SATURDAY</Tag>
-		<English>Windradyne</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SATURDAY_PEDIA</Tag>
-		<English>Windradyne (c. 1800 - 21 March 1829) was an Aboriginal warrior and resistance leader of the Wiradjuri nation, in what is now central-western New South Wales, Australia; he was also known to the British settlers as Saturday. Windradyne led his people in the Bathurst Wars, a resistance movement by the Indigenous Australians against the invasion of their lands by the British settlers.</English>
-		<French>Windradyne (v. 1800- 21 mars 1829) était un chef guerrier aborigène de la nation Wiradjuri, dans le centre-ouest de la Nouvelle-Galles du Sud, en Australie. Windradyne, aussi connu sous le nom de Saturday ("samedi"), a poussé son peuple à la résistance contre l'invasion de leurs terres.</French>
-		<Polish>Windradyne (ok.. 1800 - 1829) był aborygeńskim wojownikiem i przywódcą rebelii narodu Wiradjuri.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SATURDAY_STRATEGY</Tag>
-		<English>[COLOR_UNIT_TEXT]Windradyne[COLOR_REVERT] was a "Hero".</English>
-		<French>texte ici</French>
-		<Polish>[COLOR_UNIT_TEXT]Windradyne[COLOR_REVERT] był "Bohaterem"</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_SAUD_CAVALRY</Tag>
 		<English>Saud Cavalry</English>
 		<French>Saud Cavalerie</French>
@@ -28733,6 +28717,22 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Italian>[COLOR_YELLOW]XP iniziale gratis:[COLOR_REVERT]</Italian>
 		<Spanish>[COLOR_YELLOW]Experiencia gratuita:[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_YELLOW]Darmowe Doświadczenie:[COLOR_REVERT]</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WINDRADYNE</Tag>
+		<English>Windradyne</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WINDRADYNE_PEDIA</Tag>
+		<English>Windradyne (c. 1800 - 21 March 1829) was an Aboriginal warrior and resistance leader of the Wiradjuri nation, in what is now central-western New South Wales, Australia; he was also known to the British settlers as Saturday. Windradyne led his people in the Bathurst Wars, a resistance movement by the Indigenous Australians against the invasion of their lands by the British settlers.</English>
+		<French>Windradyne (v. 1800- 21 mars 1829) était un chef guerrier aborigène de la nation Wiradjuri, dans le centre-ouest de la Nouvelle-Galles du Sud, en Australie. Windradyne, aussi connu sous le nom de Saturday ("samedi"), a poussé son peuple à la résistance contre l'invasion de leurs terres.</French>
+		<Polish>Windradyne (ok.. 1800 - 1829) był aborygeńskim wojownikiem i przywódcą rebelii narodu Wiradjuri.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_WINDRADYNE_STRATEGY</Tag>
+		<English>[COLOR_UNIT_TEXT]Windradyne[COLOR_REVERT] was a "Hero".</English>
+		<French>texte ici</French>
+		<Polish>[COLOR_UNIT_TEXT]Windradyne[COLOR_REVERT] był "Bohaterem"</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WINGED_CAVALRY</Tag>
