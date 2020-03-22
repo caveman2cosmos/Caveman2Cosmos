@@ -1,10 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- -->
-	<!-- Civic Infos -->
-	<!-- Revolution Mod
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Revolution Mod
 		iRevIdxLocal: Local rebelliousness.
 		iRevIdxNational: National rebelliousness.
 		iRevIdxHolyCityGood: Appeasement from owning state religion holy city.
@@ -21,8 +16,7 @@
 		iRevDemocracyLevel:
 		bCommunism:
 		bFreeSpeech:
-		bCanDoElection:
-	-->
+		bCanDoElection: -->
 <Civ4CivicInfos xmlns="x-schema:../Schema/C2C_CIV4GameInfoSchema.xml">
 	<CivicInfos>
 		<CivicInfo>
@@ -897,8 +891,8 @@
 			<iTaxRateUnhappiness>0</iTaxRateUnhappiness>
 			<YieldModifiers>
 				<iYield>5</iYield>
-         		<iYield>5</iYield>
-         		<iYield>4</iYield>
+				<iYield>5</iYield>
+				<iYield>4</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers>
 				<iYield>2</iYield>
@@ -1149,8 +1143,8 @@
 			<iTaxRateUnhappiness>0</iTaxRateUnhappiness>
 			<YieldModifiers>
 				<iYield>5</iYield>
-         		<iYield>5</iYield>
-         		<iYield>5</iYield>
+				<iYield>5</iYield>
+				<iYield>5</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
@@ -1562,7 +1556,7 @@
 				</SpecialistCommercePercentChange>
 			</SpecialistCommercePercentChanges>
 		</CivicInfo>
-        <CivicInfo>
+		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_GOVERNMENT</CivicOptionType>
 			<Type>CIVIC_GESTALT_MIND</Type>
 			<Description>TXT_KEY_CIVIC_GESTALT_MIND</Description>
@@ -1618,8 +1612,8 @@
 			<iTaxRateUnhappiness>0</iTaxRateUnhappiness>
 			<YieldModifiers>
 				<iYield>0</iYield>
-         		<iYield>0</iYield>
-         		<iYield>10</iYield>
+				<iYield>0</iYield>
+				<iYield>10</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
@@ -1642,12 +1636,12 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-            <BuildingProductionModifiers>
+			<BuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_NETWORK_NODE</BuildingType>
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
-            </BuildingProductionModifiers>
+			</BuildingProductionModifiers>
 			<!-- Revolution Mod Start -->
 			<iRevIdxLocal>-3</iRevIdxLocal>
 			<iRevIdxNational>-3</iRevIdxNational>
@@ -1700,7 +1694,7 @@
 				</Flavor>
 			</Flavors>
 		</CivicInfo>
-        <CivicInfo>
+		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_GOVERNMENT</CivicOptionType>
 			<Type>CIVIC_GERONTOCRACY</Type>
 			<Description>TXT_KEY_CIVIC_GERONTOCRACY</Description>
@@ -1845,7 +1839,7 @@
 				</Flavor>
 			</Flavors>
 		</CivicInfo>
-        <CivicInfo>
+		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_GOVERNMENT</CivicOptionType>
 			<Type>CIVIC_GALACTIC_FEDERATION</Type>
 			<Description>TXT_KEY_CIVIC_GALACTIC_FEDERATION</Description>
@@ -1986,7 +1980,7 @@
 				</Flavor>
 			</Flavors>
 		</CivicInfo>
-        <CivicInfo>
+		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_GOVERNMENT</CivicOptionType>
 			<Type>CIVIC_UNIVERSAL_EMPIRE</Type>
 			<Description>TXT_KEY_CIVIC_UNIVERSAL_EMPIRE</Description>
@@ -2553,7 +2547,7 @@
 				<iYield>2</iYield>
 				<iYield>2</iYield>
 				<iYield>2</iYield>
-			</TradeYieldModifiers>	
+			</TradeYieldModifiers>
 			<CommerceModifiers/>
 			<CapitalCommerceModifiers>
 				<iCommerce>1</iCommerce>
@@ -3130,7 +3124,7 @@
 			<WeLoveTheKing/>
 			<Flavors/>
 		</CivicInfo>
-        <CivicInfo>
+		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_POWER</CivicOptionType>
 			<Type>CIVIC_PLUTOCRACY</Type>
 			<Description>TXT_KEY_CIVIC_PLUTOCRACY</Description>
@@ -3236,7 +3230,7 @@
 			<WeLoveTheKing/>
 			<Flavors/>
 		</CivicInfo>
-        <CivicInfo>
+		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_POWER</CivicOptionType>
 			<Type>CIVIC_PROTOCOL</Type>
 			<Description>TXT_KEY_CIVIC_PROTOCOL</Description>
@@ -3333,7 +3327,7 @@
 			<WeLoveTheKing/>
 			<Flavors/>
 		</CivicInfo>
-        <CivicInfo>
+		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_POWER</CivicOptionType>
 			<Type>CIVIC_COMPUTATION</Type>
 			<Description>TXT_KEY_CIVIC_COMPUTATION</Description>
@@ -4625,7 +4619,7 @@
 			<Flavors/>
 			<iPopulationgrowthratepercentage>0</iPopulationgrowthratepercentage>
 		</CivicInfo>
-        <CivicInfo>
+		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_RULE</CivicOptionType>
 			<Type>CIVIC_POLYSTATE</Type>
 			<Description>TXT_KEY_CIVIC_POLYSTATE</Description>
@@ -4727,7 +4721,7 @@
 			<iPopulationgrowthratepercentage>0</iPopulationgrowthratepercentage>
 			<Flavors/>
 		</CivicInfo>
-        <CivicInfo>
+		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_RULE</CivicOptionType>
 			<Type>CIVIC_MACHINE_RULE</Type>
 			<Description>TXT_KEY_CIVIC_MACHINE_RULE</Description>
@@ -4948,7 +4942,7 @@
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
 		</CivicInfo>
-        <CivicInfo>
+		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_RULE</CivicOptionType>
 			<Type>CIVIC_SOCIETAL_MOLDING</Type>
 			<Description>TXT_KEY_CIVIC_SOCIETAL_MOLDING</Description>
@@ -5055,7 +5049,7 @@
 			<iAttitudeShareMod>0</iAttitudeShareMod>
 			<Flavors/>
 		</CivicInfo>
-        <CivicInfo>
+		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_RULE</CivicOptionType>
 			<Type>CIVIC_PHRONESIS</Type>
 			<Description>TXT_KEY_CIVIC_PHRONESIS</Description>
@@ -5666,7 +5660,7 @@
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids/>
 			<BuildingHappinessChanges>
-                <BuildingHappinessChange>
+				<BuildingHappinessChange>
 					<BuildingType>BUILDING_SLAVE_MARKET</BuildingType>
 					<iHappinessChange>-2</iHappinessChange>
 				</BuildingHappinessChange>
@@ -5959,7 +5953,7 @@
 						<iYield>0</iYield>
 						<iYield>1</iYield>
 					</ImprovementYields>
-				</ImprovementYieldChange> 	
+				</ImprovementYieldChange>
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_MANUFACTURING_COMPLEX</ImprovementType>
 					<ImprovementYields>
@@ -6846,7 +6840,7 @@
 			<iPopulationgrowthratepercentage>0</iPopulationgrowthratepercentage>
 			<Flavors/>
 		</CivicInfo>
-        <CivicInfo>
+		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_SOCIETY</CivicOptionType>
 			<Type>CIVIC_BIOLOGICAL_CASTES</Type>
 			<Description>TXT_KEY_CIVIC_BIOLOGICAL_CASTES</Description>
@@ -7014,7 +7008,7 @@
 			<WeLoveTheKing/>
 			<Flavors/>
 		</CivicInfo>
-        <CivicInfo>
+		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_SOCIETY</CivicOptionType>
 			<Type>CIVIC_IMMATERIAL</Type>
 			<Description>TXT_KEY_CIVIC_IMMATERIAL</Description>
@@ -8607,19 +8601,19 @@
 			<bFixedBorders>0</bFixedBorders>
 			<WeLoveTheKing/>
 			<PropertyManipulators>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>-20</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>-20</iAmountPerTurn>
 				</PropertySource>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>-10</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>-10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<Flavors/>
@@ -8627,7 +8621,7 @@
 			<iLandmarkHappiness>1</iLandmarkHappiness>
 			<iRealCorporationMaintenanceModifier>15</iRealCorporationMaintenanceModifier>
 		</CivicInfo>
-        <CivicInfo>
+		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_ECONOMY</CivicOptionType>
 			<Type>CIVIC_POST_SCARCITY</Type>
 			<Description>TXT_KEY_CIVIC_POST_SCARCITY</Description>
@@ -8737,31 +8731,31 @@
 			<iHurryCostModifier>33</iHurryCostModifier>
 			<iSharedCivicTradeRouteModifier>0</iSharedCivicTradeRouteModifier>
 			<iRealCorporationMaintenanceModifier>-10</iRealCorporationMaintenanceModifier>
-            <PropertyManipulators>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>-25</iAmountPerTurn>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>-25</iAmountPerTurn>
 				</PropertySource>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>-25</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>-25</iAmountPerTurn>
 				</PropertySource>
-                <PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_CRIME</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>-10</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>-10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 		</CivicInfo>
-        <CivicInfo>
+		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_ECONOMY</CivicOptionType>
 			<Type>CIVIC_PANDIMENSIONAL</Type>
 			<Description>TXT_KEY_CIVIC_PANDIMENSIONAL</Description>
@@ -10127,7 +10121,7 @@
 				</SpecialistCommercePercentChange>
 			</SpecialistCommercePercentChanges>
 		</CivicInfo>
-        <CivicInfo>
+		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_RELIGION</CivicOptionType>
 			<Type>CIVIC_NEO_SYNCRETISM</Type>
 			<Description>TXT_KEY_CIVIC_NEO_SYNCRETISM</Description>
@@ -10225,7 +10219,7 @@
 			<WeLoveTheKing/>
 			<Flavors/>
 		</CivicInfo>
-        <CivicInfo>
+		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_RELIGION</CivicOptionType>
 			<Type>CIVIC_COSMIC_ENLIGHTENING</Type>
 			<Description>TXT_KEY_CIVIC_COSMIC_ENLIGHTENING</Description>
@@ -10327,7 +10321,7 @@
 			<WeLoveTheKing/>
 			<Flavors/>
 		</CivicInfo>
-        <CivicInfo>
+		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_RELIGION</CivicOptionType>
 			<Type>CIVIC_APOTHEOSIS</Type>
 			<Description>TXT_KEY_CIVIC_APOTHEOSIS</Description>
@@ -11777,19 +11771,19 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<PropertyManipulators>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>-100</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>-100</iAmountPerTurn>
 				</PropertySource>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>-100</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>-100</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 		</CivicInfo>
@@ -11901,7 +11895,7 @@
 				</UnitCombatProductionModifier>
 			</UnitCombatProductionModifiers>
 		</CivicInfo>
-        <CivicInfo>
+		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_WELFARE</CivicOptionType>
 			<Type>CIVIC_CORNUCOPIA</Type>
 			<Description>TXT_KEY_CIVIC_CORNUCOPIA</Description>
@@ -11994,30 +11988,30 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<PropertyManipulators>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>-50</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>-50</iAmountPerTurn>
 				</PropertySource>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>-50</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>-50</iAmountPerTurn>
 				</PropertySource>
-                <PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_CRIME</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>-10</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>-10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 		</CivicInfo>
-        <CivicInfo>
+		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_WELFARE</CivicOptionType>
 			<Type>CIVIC_EUDAIMONIA</Type>
 			<Description>TXT_KEY_CIVIC_EUDAIMONIA</Description>
@@ -12111,27 +12105,27 @@
 			<bFixedBorders>0</bFixedBorders>
 			<WeLoveTheKing/>
 			<Flavors/>
-            <PropertyManipulators>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>-40</iAmountPerTurn>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>-40</iAmountPerTurn>
 				</PropertySource>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>-40</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>-40</iAmountPerTurn>
 				</PropertySource>
-                <PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_CRIME</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>-20</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>-20</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 		</CivicInfo>
@@ -12234,12 +12228,12 @@
 				</CivicAttitudeChange>
 			</CivicAttitudeChanges>
 			<PropertyManipulators>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_DISEASE</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>1</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<Flavors/>
@@ -12361,12 +12355,12 @@
 				</CivicAttitudeChange>
 			</CivicAttitudeChanges>
 			<PropertyManipulators>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>2</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<Flavors/>
@@ -12470,12 +12464,12 @@
 				</CivicAttitudeChange>
 			</CivicAttitudeChanges>
 			<PropertyManipulators>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>2</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<Flavors/>
@@ -12584,19 +12578,19 @@
 				</CivicAttitudeChange>
 			</CivicAttitudeChanges>
 			<PropertyManipulators>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>1</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>2</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<Flavors/>
@@ -12815,19 +12809,19 @@
 				</CivicAttitudeChange>
 			</CivicAttitudeChanges>
 			<PropertyManipulators>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>3</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>5</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<Flavors/>
@@ -12939,17 +12933,17 @@
 				</CivicAttitudeChange>
 			</CivicAttitudeChanges>
 			<PropertyManipulators>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>2</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<Flavors/>
 		</CivicInfo>
-        <CivicInfo>
+		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_GARBAGE</CivicOptionType>
 			<Type>CIVIC_RECYCLED</Type>
 			<Description>TXT_KEY_CIVIC_RECYCLED</Description>
@@ -13056,19 +13050,19 @@
 				</CivicAttitudeChange>
 			</CivicAttitudeChanges>
 			<PropertyManipulators>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>-15</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>-15</iAmountPerTurn>
 				</PropertySource>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>-15</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>-15</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<Flavors/>
@@ -13173,7 +13167,7 @@
 			</CivicAttitudeChanges>
 			<Flavors/>
 		</CivicInfo>
-        <CivicInfo>
+		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_GARBAGE</CivicOptionType>
 			<Type>CIVIC_ATOMIZED</Type>
 			<Description>TXT_KEY_CIVIC_ATOMIZED</Description>
@@ -13226,8 +13220,8 @@
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
 				<iYield>5</iYield>
-         		<iYield>0</iYield>
-         		<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
@@ -13277,7 +13271,7 @@
 			</CivicAttitudeChanges>
 			<Flavors/>
 		</CivicInfo>
-        <CivicInfo>
+		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_GARBAGE</CivicOptionType>
 			<Type>CIVIC_DEMATERIALIZED</Type>
 			<Description>TXT_KEY_CIVIC_DEMATERIALIZED</Description>
@@ -13330,8 +13324,8 @@
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
 				<iYield>5</iYield>
-         		<iYield>0</iYield>
-         		<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers/>
@@ -13368,19 +13362,19 @@
 			<iAttitudeShareMod>0</iAttitudeShareMod>
 			<iPopulationgrowthratepercentage>-10</iPopulationgrowthratepercentage>
 			<PropertyManipulators>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>-15</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>-15</iAmountPerTurn>
 				</PropertySource>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>-15</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>-15</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<Flavors/>
@@ -13472,19 +13466,19 @@
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<WeLoveTheKing/>
 			<PropertyManipulators>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_CRIME</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>3</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_DISEASE</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>2</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
@@ -13594,19 +13588,19 @@
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<WeLoveTheKing/>
 			<PropertyManipulators>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_CRIME</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>4</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>4</iAmountPerTurn>
 				</PropertySource>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_DISEASE</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>4</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>4</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
@@ -13712,19 +13706,19 @@
 			<iPopulationgrowthratepercentage>20</iPopulationgrowthratepercentage>
 			<bFixedBorders>1</bFixedBorders>
 			<PropertyManipulators>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_CRIME</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>-3</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>-3</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_DISEASE</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>-2</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>-2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<Flavors/>
@@ -13829,18 +13823,19 @@
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<WeLoveTheKing/>
 			<PropertyManipulators>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_CRIME</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>-5</iAmountPerTurn><PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_DISEASE</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>-2</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>-5</iAmountPerTurn><PropertySource>
 				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>-2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
@@ -13953,19 +13948,19 @@
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<WeLoveTheKing/>
 			<PropertyManipulators>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_CRIME</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>-6</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>-6</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_DISEASE</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>-3</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>-3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
@@ -13973,7 +13968,7 @@
 			<bFixedBorders>1</bFixedBorders>
 			<Flavors/>
 		</CivicInfo>
-        <CivicInfo>
+		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_IMMIGRATION</CivicOptionType>
 			<Type>CIVIC_VIRTUAL_CITIZENSHIP</Type>
 			<Description>TXT_KEY_CIVIC_VIRTUAL_CITIZENSHIP</Description>
@@ -14071,19 +14066,19 @@
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<WeLoveTheKing/>
 			<PropertyManipulators>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_CRIME</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>-10</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>-10</iAmountPerTurn>
 				</PropertySource>
 				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_DISEASE</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>-4</iAmountPerTurn>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>-4</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
@@ -14091,7 +14086,7 @@
 			<bFixedBorders>1</bFixedBorders>
 			<Flavors/>
 		</CivicInfo>
-        <CivicInfo>
+		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_IMMIGRATION</CivicOptionType>
 			<Type>CIVIC_INTERSTELLAR</Type>
 			<Description>TXT_KEY_CIVIC_INTERSTELLAR</Description>
@@ -14143,10 +14138,10 @@
 			<iStateReligionBuildingProductionModifier>0</iStateReligionBuildingProductionModifier>
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
-                <iYield>0</iYield>
-                <iYield>0</iYield>
-                <iYield>5</iYield>
-            </YieldModifiers>
+				<iYield>0</iYield>
+				<iYield>0</iYield>
+				<iYield>5</iYield>
+			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers>
 				<iYield>0</iYield>
@@ -14191,26 +14186,26 @@
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<WeLoveTheKing/>
 			<PropertyManipulators>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_CRIME</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>5</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_DISEASE</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>5</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
 			<iPopulationgrowthratepercentage>-20</iPopulationgrowthratepercentage>
 			<Flavors/>
 		</CivicInfo>
-        <CivicInfo>
+		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_IMMIGRATION</CivicOptionType>
 			<Type>CIVIC_POST_BORDERS</Type>
 			<Description>TXT_KEY_CIVIC_POST_BORDERS</Description>
@@ -14301,12 +14296,12 @@
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<WeLoveTheKing/>
 			<PropertyManipulators>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_CRIME</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>-15</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>-15</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
@@ -14429,12 +14424,12 @@
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<WeLoveTheKing/>
 			<PropertyManipulators>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_EDUCATION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>2</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
@@ -14548,12 +14543,12 @@
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<WeLoveTheKing/>
 			<PropertyManipulators>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_EDUCATION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>3</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
@@ -14675,12 +14670,12 @@
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<WeLoveTheKing/>
 			<PropertyManipulators>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_EDUCATION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>4</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>4</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
@@ -14787,12 +14782,12 @@
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<WeLoveTheKing/>
 			<PropertyManipulators>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_EDUCATION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>5</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
@@ -14945,12 +14940,12 @@
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<WeLoveTheKing/>
 			<PropertyManipulators>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_EDUCATION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>6</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>6</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
@@ -15053,12 +15048,12 @@
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<WeLoveTheKing/>
 			<PropertyManipulators>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_EDUCATION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>5</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
@@ -15159,12 +15154,12 @@
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<WeLoveTheKing/>
 			<PropertyManipulators>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_EDUCATION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>7</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>7</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
@@ -15294,12 +15289,12 @@
 			<iNationalCaptureResistanceModifier>25</iNationalCaptureResistanceModifier>
 			<WeLoveTheKing/>
 			<PropertyManipulators>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_EDUCATION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>2</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
@@ -15401,12 +15396,12 @@
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<WeLoveTheKing/>
 			<PropertyManipulators>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_EDUCATION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>7</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>7</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
@@ -15522,12 +15517,12 @@
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<WeLoveTheKing/>
 			<PropertyManipulators>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_EDUCATION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>12</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>12</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
@@ -15630,12 +15625,12 @@
 			<iNationalCaptureResistanceModifier>0</iNationalCaptureResistanceModifier>
 			<WeLoveTheKing/>
 			<PropertyManipulators>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_EDUCATION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>20</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>20</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
@@ -15643,7 +15638,7 @@
 			<Flavors/>
 			<BuildingProductionModifiers/>
 		</CivicInfo>
-        <CivicInfo>
+		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_EDUCATION</CivicOptionType>
 			<Type>CIVIC_OMNISCIENCE</Type>
 			<Description>TXT_KEY_CIVIC_OMNISCIENCE</Description>
@@ -16819,7 +16814,7 @@
 			<Flavors/>
 			<iForeignTradeRouteModifier>20</iForeignTradeRouteModifier>
 		</CivicInfo>
-        <CivicInfo>
+		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_CURRENCY</CivicOptionType>
 			<Type>CIVIC_POST_CURRENCY</Type>
 			<Description>TXT_KEY_CIVIC_POST_CURRENCY</Description>
@@ -16900,13 +16895,13 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-            <PropertyManipulators>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_CRIME</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>-10</iAmountPerTurn>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>-10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<!-- Revolution Mod Start -->
@@ -16935,7 +16930,7 @@
 			<Flavors/>
 			<iForeignTradeRouteModifier>20</iForeignTradeRouteModifier>
 		</CivicInfo>
-        <CivicInfo>
+		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_CURRENCY</CivicOptionType>
 			<Type>CIVIC_ENERGY</Type>
 			<Description>TXT_KEY_CIVIC_ENERGY</Description>
@@ -16988,8 +16983,8 @@
 			<iStateReligionFreeExperience>0</iStateReligionFreeExperience>
 			<YieldModifiers>
 				<iYield>0</iYield>
-         		<iYield>10</iYield>
-         		<iYield>0</iYield>
+				<iYield>10</iYield>
+				<iYield>0</iYield>
 			</YieldModifiers>
 			<CapitalYieldModifiers/>
 			<TradeYieldModifiers>
@@ -17043,7 +17038,7 @@
 			<iForeignTradeRouteModifier>35</iForeignTradeRouteModifier>
 			<Flavors/>
 		</CivicInfo>
-        <CivicInfo>
+		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_CURRENCY</CivicOptionType>
 			<Type>CIVIC_KNOWLEDGE</Type>
 			<Description>TXT_KEY_CIVIC_KNOWLEDGE</Description>
@@ -18193,7 +18188,7 @@
 				</CivicAttitudeChange>
 			</CivicAttitudeChanges>
 		</CivicInfo>
-        <CivicInfo>
+		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_LANGUAGE</CivicOptionType>
 			<Type>CIVIC_XENOSEMIOTIC</Type>
 			<Description>TXT_KEY_CIVIC_XENOSEMIOTIC</Description>
@@ -18205,7 +18200,7 @@
 			<Upkeep>UPKEEP_EXTREME</Upkeep>
 			<iAIWeight>0</iAIWeight>
 			<iGreatPeopleRateModifier>5</iGreatPeopleRateModifier>
-            <iNationalCaptureProbabilityModifier>0</iNationalCaptureProbabilityModifier>
+			<iNationalCaptureProbabilityModifier>0</iNationalCaptureProbabilityModifier>
 			<iGreatGeneralRateModifier>0</iGreatGeneralRateModifier>
 			<iDomesticGreatGeneralRateModifier>0</iDomesticGreatGeneralRateModifier>
 			<iStateReligionGreatPeopleRateModifier>0</iStateReligionGreatPeopleRateModifier>
@@ -18289,12 +18284,12 @@
 			<WeLoveTheKing/>
 			<iAttitudeShareMod>0</iAttitudeShareMod>
 			<Flavors/>
-            <BuildingProductionModifiers>
-                <BuildingProductionModifier>
+			<BuildingProductionModifiers>
+				<BuildingProductionModifier>
 					<BuildingType>BUILDING_GALACTIC_CANTINA</BuildingType>
 					<iProductionModifier>100</iProductionModifier>
 				</BuildingProductionModifier>
-            </BuildingProductionModifiers>
+			</BuildingProductionModifiers>
 			<CivicAttitudeChanges>
 				<CivicAttitudeChange>
 					<CivicType>CIVIC_NONVERBAL</CivicType>
@@ -18960,19 +18955,19 @@
 			<iAttitudeShareMod>0</iAttitudeShareMod>
 			<iPopulationgrowthratepercentage>-15</iPopulationgrowthratepercentage>
 			<PropertyManipulators>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>3</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>3</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<Flavors/>
@@ -19195,24 +19190,24 @@
 			<iAttitudeShareMod>0</iAttitudeShareMod>
 			<iPopulationgrowthratepercentage>20</iPopulationgrowthratepercentage>
 			<PropertyManipulators>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>-5</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>-5</iAmountPerTurn>
 				</PropertySource>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>-5</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>-5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<Flavors/>
 		</CivicInfo>
-        <CivicInfo>
+		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_AGICULTURE</CivicOptionType>
 			<Type>CIVIC_LAB_GROWN_FOOD</Type>
 			<Description>TXT_KEY_CIVIC_LAB_GROWN_FOOD</Description>
@@ -19312,24 +19307,24 @@
 			<iAttitudeShareMod>0</iAttitudeShareMod>
 			<iPopulationgrowthratepercentage>-5</iPopulationgrowthratepercentage>
 			<PropertyManipulators>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>-20</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>-20</iAmountPerTurn>
 				</PropertySource>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>-20</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>-20</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<Flavors/>
 		</CivicInfo>
-        <CivicInfo>
+		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_AGICULTURE</CivicOptionType>
 			<Type>CIVIC_NUTRIENT_REPLICATION</Type>
 			<Description>TXT_KEY_CIVIC_NUTRIENT_REPLICATION</Description>
@@ -19406,20 +19401,20 @@
 			<BuildingHealthChanges/>
 			<FeatureHappinessChanges/>
 			<ImprovementYieldChanges/>
-            <PropertyManipulators>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>-30</iAmountPerTurn>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_AIR_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>-30</iAmountPerTurn>
 				</PropertySource>
-  				<PropertySource>
-   					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
-						<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-						<RelationType>RELATION_ASSOCIATED</RelationType>
-						<iAmountPerTurn>-30</iAmountPerTurn>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_WATER_POLLUTION</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_ASSOCIATED</RelationType>
+					<iAmountPerTurn>-30</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
 			<!-- Revolution Mod Start -->
@@ -20901,7 +20896,7 @@
 				</UnitProductionModifier>
 			</UnitProductionModifiers>
 		</CivicInfo>
-        <CivicInfo>
+		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_MILITARY</CivicOptionType>
 			<Type>CIVIC_STARFARING</Type>
 			<Description>TXT_KEY_CIVIC_STARFARING</Description>
@@ -21039,23 +21034,23 @@
 					<UnitCombatType>UNITCOMBAT_ORBITAL_AIRCRAFT</UnitCombatType>
 					<iProductionModifier>20</iProductionModifier>
 				</UnitCombatProductionModifier>
-                <UnitCombatProductionModifier>
+				<UnitCombatProductionModifier>
 					<UnitCombatType>UNITCOMBAT_EARLY_SPACESHIP</UnitCombatType>
 					<iProductionModifier>20</iProductionModifier>
 				</UnitCombatProductionModifier>
-                <UnitCombatProductionModifier>
+				<UnitCombatProductionModifier>
 					<UnitCombatType>UNITCOMBAT_SOLAR_SAIL_SPACESHIP</UnitCombatType>
 					<iProductionModifier>20</iProductionModifier>
 				</UnitCombatProductionModifier>
-                <UnitCombatProductionModifier>
+				<UnitCombatProductionModifier>
 					<UnitCombatType>UNITCOMBAT_NUCLEAR_SPACESHIP</UnitCombatType>
 					<iProductionModifier>20</iProductionModifier>
 				</UnitCombatProductionModifier>
-                <UnitCombatProductionModifier>
+				<UnitCombatProductionModifier>
 					<UnitCombatType>UNITCOMBAT_ANTIMATTER_SPACESHIP</UnitCombatType>
 					<iProductionModifier>20</iProductionModifier>
 				</UnitCombatProductionModifier>
-                <UnitCombatProductionModifier>
+				<UnitCombatProductionModifier>
 					<UnitCombatType>UNITCOMBAT_WORMHOLE_SPACESHIP</UnitCombatType>
 					<iProductionModifier>20</iProductionModifier>
 				</UnitCombatProductionModifier>
@@ -21199,7 +21194,7 @@
 				</UnitCombatProductionModifier>
 			</UnitCombatProductionModifiers>
 		</CivicInfo>
-        <CivicInfo>
+		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_MILITARY</CivicOptionType>
 			<Type>CIVIC_INTERDIMENSIONAL</Type>
 			<Description>TXT_KEY_CIVIC_INTERDIMENSIONAL</Description>
@@ -22311,7 +22306,7 @@
 			<WeLoveTheKing/>
 			<Flavors/>
 		</CivicInfo>
-        <CivicInfo>
+		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_WORKFORCE</CivicOptionType>
 			<Type>CIVIC_ENGINEERED</Type>
 			<Description>TXT_KEY_CIVIC_ENGINEERED</Description>
@@ -22429,7 +22424,7 @@
 			<Flavors/>
 			<iRealCorporationMaintenanceModifier>-85</iRealCorporationMaintenanceModifier>
 		</CivicInfo>
-        <CivicInfo>
+		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_WORKFORCE</CivicOptionType>
 			<Type>CIVIC_HYPERINTELLIGENT</Type>
 			<Description>TXT_KEY_CIVIC_HYPERINTELLIGENT</Description>
