@@ -990,7 +990,7 @@ Current techs which are not in this file:-
 			<Sound>AS2D_TECH_COOKING</Sound>
 			<SoundMP>AS2D_TECH_COOKING</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Button_CookedFood.dds</Button>
-		</TechInfo>		
+		</TechInfo>
 		<TechInfo>
 			<Type>TECH_PREHISTORIC_DANCE</Type>
 			<Description>TXT_KEY_TECH_PREHISTORIC_DANCE</Description>
@@ -1522,7 +1522,7 @@ Current techs which are not in this file:-
 			<Sound>AS2D_DRYING</Sound>
 			<SoundMP>AS2D_DRYING</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/drying.dds</Button>
-		</TechInfo>		
+		</TechInfo>
 		<TechInfo>
 			<Type>TECH_GAMES</Type>
 			<Description>TXT_KEY_TECH_GAMES</Description>
@@ -1764,7 +1764,7 @@ Current techs which are not in this file:-
 			<Sound>AS2D_TECH_TRACKING</Sound>
 			<SoundMP>AS2D_TECH_MP_HUNTING</SoundMP>
 			<Button>,Art/Interface/Buttons/TechTree/Hunting.dds,Art/Interface/Buttons/TechTree_Atlas.dds,7,4</Button>
-		</TechInfo>		
+		</TechInfo>
 		<TechInfo>
 			<Type>TECH_PETROGLYPHS</Type>
 			<Description>TXT_KEY_TECH_PETROGLYPHS</Description>
@@ -1997,7 +1997,7 @@ Current techs which are not in this file:-
 			<Sound>AS2D_TECH_NATUROPATHY</Sound>
 			<SoundMP>AS2D_TECH_NATUROPATHY</SoundMP>
 			<Button>,Art/Interface/Buttons/TechTree/naturopath.dds,Art/Interface/Buttons/RoM_Techtree_Atlas.dds,7,12</Button>
-		</TechInfo>		
+		</TechInfo>
 		<TechInfo>
 			<Type>TECH_THEFT</Type>
 			<Description>TXT_KEY_TECH_THEFT</Description>
@@ -2360,7 +2360,7 @@ Current techs which are not in this file:-
 			<Sound>AS2D_TECH_TATTOOS</Sound>
 			<SoundMP>AS2D_TECH_TATTOOS</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/tattoos.dds</Button>
-		</TechInfo>		
+		</TechInfo>
 		<TechInfo>
 			<Type>TECH_CEREMONIAL_BURIAL</Type>
 			<Description>TXT_KEY_TECH_CEREMONIAL_BURIAL</Description>
@@ -2622,7 +2622,7 @@ Current techs which are not in this file:-
 			<Sound>AS2D_TECH_STONE_BUILDING</Sound>
 			<SoundMP>AS2D_TECH_STONE_BUILDING</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Button_HutBuilding.dds</Button>
-		</TechInfo>		
+		</TechInfo>
 		<TechInfo>
 			<Type>TECH_BARTER</Type>
 			<Description>TXT_KEY_TECH_BARTER</Description>
@@ -2988,7 +2988,7 @@ Current techs which are not in this file:-
 			<Sound>AS2D_TECH_HUNTING</Sound>
 			<SoundMP>AS2D_TECH_HUNTING</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/huntingtactics.dds</Button>
-		</TechInfo>		
+		</TechInfo>
 		<TechInfo>
 			<Type>TECH_ANIMISM</Type>
 			<Description>TXT_KEY_TECH_ANIMISM</Description>
@@ -3162,7 +3162,7 @@ Current techs which are not in this file:-
 			<Sound>AS2D_TECH_NOCTURNALISM</Sound>
 			<SoundMP>AS2D_TECH_NOCTURNALISM</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Button_Nocturnalism.dds</Button>
-		</TechInfo>		
+		</TechInfo>
 <!--	(014, 17) TECH_SHAMANISM	-->
 <!--	(014, 19) TECH_DRUIDIC_TRADITIONS		-->
 		<TechInfo>
@@ -3329,7 +3329,7 @@ Current techs which are not in this file:-
 			<Sound>AS2D_TECH_SLAVERY</Sound>
 			<SoundMP>AS2D_TECH_SLAVERY</SoundMP>
 			<Button>,Art/Interface/Buttons/TechTree/slave.dds,Art/Interface/Buttons/RoM_Techtree_Atlas.dds,3,16</Button>
-		</TechInfo>		
+		</TechInfo>
 		<TechInfo>
 			<Type>TECH_CELEBRATION</Type>
 			<Description>TXT_KEY_TECH_CELEBRATION</Description>

@@ -1084,6 +1084,7 @@
 		<Tag>TXT_KEY_UNIT_ANIMAL_ON_KILL</Tag>
 		<English>On kill</English>
 		<French>En cas de Victoire</French>
+		<German>Im Falle eines Sieges</German>
 		<Italian>In caso di vittoria</Italian>
 		<Spanish>En caso de victoria</Spanish>
 		<Polish>Przy śmierci</Polish>
@@ -4244,7 +4245,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_CAN_ONLY_TRAVERSE</Tag>
 		<English>Can Not Traverse</English>
 		<French>Ne peut pas Traverser</French>
-		<German>Überqueren unmöglich</German>
+		<German>Durchqueren unmöglich</German>
 		<Italian>Non può attraversare</Italian>
 		<Spanish>No puede atravesar</Spanish>
 		<Polish>Nie można przebić</Polish>
@@ -5436,24 +5437,28 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_COMBAT_MOD_PER_SIZE_LESS</Tag>
 		<English>[ICON_BULLET]%D1_Amount%% VS Each Size Rank Smaller</English>
 		<French>[ICON_BULLET]Modif. de Combat contre des unités plus petites: %D1_Amount%% par rang inférieur</French>
+		<German>[ICON_BULLET]%d1_Amount%% gegen kleinere Einheiten (pro Stufe Größenunterschied)</German>
 		<Polish>[ICON_BULLET]Modyfikator Walki kontra Mniejsze Jednostki: %D1_Amount%% na Poziom Wielkości mniej</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COMBAT_MOD_PER_SIZE_MORE</Tag>
 		<English>[ICON_BULLET]%D1_Amount%% VS Each Size Rank Larger</English>
 		<French>[ICON_BULLET]Modif. de Combat contre des unités plus grandes: %D1_Amount%% par rang supérieur</French>
+		<German>[ICON_BULLET]%d1_Amount%% gegen größere Einheiten (pro Stufe Größenunterschied)</German>
 		<Polish>[ICON_BULLET]Modyfikator Walki kontra Większe Jednostki: %D1_Amount%% na Poziom Wielkości więcej</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COMBAT_MOD_PER_VOLUME_LESS</Tag>
 		<English>[ICON_BULLET]%D1_Amount%% VS Each Group Rank Smaller</English>
 		<French>[ICON_BULLET]Modif. de Combat contre des groupes plus petits: %D1_Amount%% par Nb d'unités en moins</French>
+		<German>[ICON_BULLET]%d1_Amount%% gegen kleinere Gruppen (pro Stufe Größenunterschied)</German>
 		<Polish>[ICON_BULLET]Modyfikator Walki kontra Mniejsze Grupy: %D1_Amount%% na Poziom Wielkości mniej</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COMBAT_MOD_PER_VOLUME_MORE</Tag>
 		<English>[ICON_BULLET]%D1_Amount%% VS Each Group Rank Larger</English>
 		<French>[ICON_BULLET]Modif. de Combat contre des groupes plus grands: %D1_Amount%% par Nb d'unités suppl.</French>
+		<German>[ICON_BULLET]%d1_Amount%% gegen größere Gruppen (pro Stufe Größenunterschied)</German>
 		<Polish>[ICON_BULLET]Modyfikator Walki kontra Większe Grupy: %D1_Amount%% na Poziom Wielkości więcej</Polish>
 	</TEXT>
 	<TEXT>
@@ -18997,6 +19002,11 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Struś</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_OSTRICH_PEDIA</Tag>
+		<English>TBD</English>
+		<German>Der [COLOR_UNIT_TEXT]Strauß[COLOR_REVERT] (Struthio camelus) ist der größte lebende Vogel der Erde. Ausgewachsene Hähne haben ein schwarzes Gefieder mit weißen Schwungfedern und Schwänzen. Sie erreichen Größen von bis zu 250 cm und ein Körpergewicht von bis zu 135 kg. Die Hennen tragen ein erdbraunes Gefieder und sind kleiner und leichter. Ähnlich sieht auch das Jugendkleid aus. Frisch geschlüpfte Küken hingegen sind rehbraun mit dunklen Tupfen.[NEWLINE]Der Strauß ist heutzutage nur noch in Ost- und Südafrika heimisch. Er bevorzugt Lebensräume mit kurzem Gras und nicht zu hohem Baumbestand, weshalb er häufig in Savannen lebt. Strauße sind tag- und besonders dämmerungsaktive Tiere. Außerhalb der Brutzeit leben sie in kleinen lockeren Verbänden zusammen, manchmal aber auch in Herden von hundert und mehr Tieren. Strauße ernähren sind hauptsächlich von Pflanzen, gelegentlich aber auch von Insekten und anderen Kleintieren. Ihre größten Fressfeinde sind Löwen und Leoparden, aber auch diesen Großkatzen kann ein gezielter Straußentritt lebensgefährliche Verletzungen zufügen.[NEWLINE]Der Strauß wurde wegen seiner Federn, seines Fleisches und seines Leders seit jeher vom Menschen gejagt. Im 18. Jahrhundert kamen Straußenfedern als Hutschmuck in Mode und die Vögel wurden bis zur Ausrottung gejagt. In Westasien, Nordafrika und Südafrika gibt es seither keine Strauße mehr. Im 19. Jahrhundert wurden die ersten Straußenfarmen gegründet, da frei lebende Strauße extrem selten geworden waren. Heute spielen die Federn zum Glück kaum noch eine Rolle. Die Vögel werden vor allem wegen ihres Fleisches und des Leders gezüchtet. Aus den Schalen der Straußeneier werden Lampenschirme und Schmuckgegenstände angefertigt.</German>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_OTTOMAN_JANISSARY_PEDIA</Tag>
 		<English>The Janissaries were an elite fighting force of infantry raised by the Ottoman sultans. They formed the sultan's household troops and bodyguard, eventually rising to a position of enormous influence before being disbanded in the nineteenth century. Murad I founded the Janissary corps around 1330; the troops were made up of non-Muslim boys who were captured in battle or bought as slaves and brought up as warriors. This was very similar to the Mameluk slave soldiers of Egypt, who may have been the inspiration for the Janissaries. Janissaries became the first infantry units in the Ottoman military forces, because at the time no free man would consent to fighting on foot. [PARAGRAPH:2]After 1380 the system for recruiting new soldiers into the Janissaries became standardized through a process called the "devshirmeh:" this was basically a "human tax" where each community had to contribute a certain number of young boys to the state. In practice these were almost always Christian slaves. [PARAGRAPH:2]The boys were sequestered in special barracks, where they would be converted to Islam and trained to become elite soldiers (a process very similar to that practiced by the Spartans of ancient Greece). Although slaves, the Janissaries received special privileges, including the right to bear weapons and higher pay than other soldiers. Although the Janissaries began their existence as a small bodyguard for the sultan, in time they came to comprise much of the Ottoman army, topping out at over 200,000 men at some points. [PARAGRAPH:2]The Janissaries originally were trained to be expert archers, but once firearms were invented they quickly adopted the new weapons, becoming fiercely proficient with muskets. They usually used axes or sabres for melee combat. Janissaries were present at all of the major battles in the early history of the Ottoman Empire, including the Siege of Constantinople in 1453. [PARAGRAPH:2]The very success of the Janissaries would eventually destroy them. Realizing their importance, they began demanding higher pay, threatening rebellion if their demands were refused. Their first rebellion took place in 1449, and it was followed by many more. By the eighteenth century, the Janissaries dominated the government. Through frequent palace coups they changed sultans as they wished, and they blocked much-needed modernization reforms in the Ottoman army. Many of the Janissaries became corrupted, no longer training for battle but instead pursuing commercial ventures or political office, and the weakness of the Ottomans in the face of Russian and Austrian expansion soon became obvious to all. Desperate to regain control of their country, the Ottoman rulers made determined efforts to eradicate them. [PARAGRAPH:2]Finally, in 1826 Mahmud II was able to form a non-Janissary army strong enough to challenge the Janissaries. The Janissaries did not go down peacefully, and Mahmud II had to use artillery to shell the Janissaries' barracks and batter them into submission. This event - known as the "Auspicious Incident," ended the Janissaries. Their characteristic marching music is the only trace of them that remains today. [PARAGRAPH:2]</English>
 		<French>Les janissaires sont les soldats d'une infanterie d'élite créée par les sultans ottomans. Ils forment les troupes et les gardes du corps du sultan et finissent par disposer d'une forte influence, avant d'être démantelés au XIXe siècle. Vers 1330, Murad Ier fonde le corps des janissaires, qui se compose de garçons non-musulmans capturés au combat ou achetés comme esclaves et élevés comme guerriers. Ce corps ressemble fortement aux soldats esclaves que sont les mamelouks d'Egypte, qui ont peut-être influencé les janissaires. Ceux-ci deviennent les premières unités d'infanterie des forces militaires ottomanes car à cette époque, aucun homme libre n'accepte de se battre à pied. [PARAGRAPH:2]Après 1380, le recrutement de nouveaux soldats dans le corps des janissaires est normalisé dans un système appelé "devchirmé": il s'agit en fait d'un "impôt sur le sang" selon lequel toute communauté doit fournir un certain nombre de jeunes garçons à l'Etat. En pratique, il s'agit presque toujours d'esclaves chrétiens. [PARAGRAPH:2]Ces garçons sont séquestrés dans des casernes spéciales, où ils sont convertis à l'islam et formés pour devenir des soldats d'élite. Cette pratique s'apparente à celle utilisée par les Spartiates dans la Grèce antique. Bien qu'ils soient esclaves, les janissaires bénéficient de privilèges spéciaux, notamment du droit de porter des armes et d'être mieux rémunérés que les autres soldats. Si les janissaires sont au départ de simples gardes du corps du sultan, ils finissent par constituer une grande partie de l'armée ottomane ; ils seront jusqu'à 200 000 hommes. [PARAGRAPH:2]Les janissaires sont initialement formés pour être des archers hors pair mais après l'invention des armes à feu, qu'ils adoptent rapidement, ils deviennent extrêmement doués pour le maniement du mousquet. Ils utilisent généralement des haches ou des sabres dans les mêlées. Les janissaires participent aux principales batailles du début de l'histoire de l'Empire ottoman, y compris le siège de Constantinople en 1453. [PARAGRAPH:2]Les janissaires sont finalement victimes de leur succès. Conscients de leur importance, ils commencent à exiger de meilleurs salaires, menaçant de se rebeller si leurs demandes ne sont pas satisfaites. La première rébellion a lieu en 1449 et elle est suivie de nombreuses autres. Au XVIIIe siècle, les janissaires contrôlent le gouvernement. Ils organisent fréquemment des coups d'Etat pour remplacer les sultans à leur gré et ils empêchent la mise en place de réformes nécessaires à la modernisation l'armée. De nombreux janissaires sont corrompus, ne s'entraînant plus au combat mais se lançant dans des aventures commerciales ou visant une fonction politique. La faiblesse des Ottomans face à l'expansion russe et autrichienne devient rapidement évidente pour tous. Déterminés à reprendre le contrôle de leur pays, les dirigeants ottomans font d'immenses efforts pour éradiquer les janissaires. [PARAGRAPH:2]En 1826, Mahmud II finit par réussir à former une armée sans janissaires suffisamment puissante pour mettre ces derniers au défi. Les janissaires ne se rendent pas sans se battre et Mahmud II doit utiliser l'artillerie pour pilonner leurs casernes et les contraindre à se soumettre, abolissant ainsi le corps d'armée tout entier. La musique militaire ottomane, dite janissaire, est la seule trace qu'il nous reste d'eux. [PARAGRAPH:2]</French>
@@ -20740,6 +20750,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_PURSUIT</Tag>
 		<English>[ICON_BULLET]Pursuit Chance: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Poursuite: peut ignorer la capacité de retrait de l'Ennemi (%d1_Amount%% de Chances)</French>
+		<German>[ICON_BULLET]Verfolgungsjagd - kann den Rückzug des Gegners verhindern (%d1_Amount%%)</German>
 		<Italian>[ICON_BULLET]Inseguimento: può impedire al nemico di ritirarsi (%d1_Amount%% di chance)</Italian>
 		<Polish>[ICON_BULLET]Pościg: Może zablokowć wrogą ucieczkę z pola walki (%d1_Amount%% Szans)</Polish>
 	</TEXT>
@@ -20747,6 +20758,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_PURSUIT_PROBABILITY</Tag>
 		<English>[ICON_BULLET]Pursuit Chance: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Poursuite: peut ignorer le retrait de %d1_Amount%%</French>
+		<German>[ICON_BULLET]Verfolgungsjagd (Rückzug verhindern): %d1_Amount%%</German>
 		<Italian>[ICON_BULLET]Inseguimento: può impedire la ritirata del %d1_Amount%%</Italian>
 		<Polish>[ICON_BULLET]Pościg: może zablokować ucieczkę %d1_Amount%%</Polish>
 	</TEXT>
@@ -20754,6 +20766,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_PURSUIT_PROBABILITY_SHORT</Tag>
 		<English>[ICON_BULLET]Pursuit Chance: %d1_Amount%%</English>
 		<French>[ICON_BULLET]Poursuite: %d1_Amount%%</French>
+		<German>[ICON_BULLET]Verfolgungsjagd: %d1_Amount%%</German>
 		<Italian>[ICON_BULLET]Inseguimento: %d1_Amount%%</Italian>
 		<Polish>[ICON_BULLET]Pościg: %d1_Amount%%</Polish>
 	</TEXT>

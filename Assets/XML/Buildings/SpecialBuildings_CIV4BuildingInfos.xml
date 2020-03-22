@@ -4299,7 +4299,7 @@
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<PrereqTech>TECH_ATOMIC_LIFESTYLE</PrereqTech>
 			<!-- Graphical and interface -->
-			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>			
+			<ArtDefineTag>ART_DEF_BUILDING_EQ</ArtDefineTag>
 			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -4993,7 +4993,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqInCityBuildings>			
+			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqAndCivics>
@@ -10015,7 +10015,7 @@
 			<!-- Graphical and interface -->
 			<ArtDefineTag>ART_DEF_BUILDING_AESOP_CRIME</ArtDefineTag>
 			<!-- Construction cost -->
-			<iCost>-1</iCost>			
+			<iCost>-1</iCost>
 			<!-- Special properties -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

@@ -925,7 +925,7 @@
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_EARLY_MOUNTAIN_MINE</ImprovementType>
 			<RouteType>NONE</RouteType>
-			<EntityEvent>ENTITY_EVENT_MINE</EntityEvent>			
+			<EntityEvent>ENTITY_EVENT_MINE</EntityEvent>
 			<HotKey>KB_M</HotKey>
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>

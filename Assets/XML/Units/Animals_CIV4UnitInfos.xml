@@ -14804,7 +14804,7 @@
 				</GroupSpawnUnitCombatType>
 			</GroupSpawnUnitCombatTypes>
 			<Description>TXT_KEY_UNIT_OSTRICH</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_SUBDUED_ANIMALS_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_UNIT_OSTRICH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_ANIMAL_STRATEGY</Strategy>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
