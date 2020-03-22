@@ -516,7 +516,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_SINGULAR</Tag>
 		<English>Singular </English>
-		<French>Singulier </French>
+		<French>(singulier) </French>
 		<German>(Einzelexemplar) </German>
 	</TEXT>
 	<TEXT>
@@ -537,13 +537,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_SOLITARY</Tag>
 		<English>Solitary </English>
-		<French>Solitaire </French>
+		<French>(solitaire) </French>
 		<German>(Einzelexemplar) </German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GROUPTITLE_SOLO</Tag>
 		<English>Solo </English>
-		<French>Solo </French>
+		<French>(solo) </French>
 		<German>(Einzelexemplar) </German>
 	</TEXT>
 	<TEXT>
