@@ -33,8 +33,8 @@ Valid NPC players for spawns:
 			<iMaxAreaTotalDensity>50</iMaxAreaTotalDensity>
 			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
-			<iStartDate>-17000</iStartDate>
-			<iEndDate>-10000</iEndDate>
+			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
+			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
 			<rateOverrideDefineName>NEANDERTHAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<iMinLatitude>50</iMinLatitude>
 			<BonusTypes>
