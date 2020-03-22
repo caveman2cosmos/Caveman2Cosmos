@@ -5312,7 +5312,7 @@
 			<Type>UNITCOMBAT_ERA_ANCIENT</Type>
 			<Description>TXT_KEY_UNITCOMBAT_ERA_ANCIENT</Description>
 			<EraType>C2C_ERA_ANCIENT</EraType>
-			<Button>Art/Interface/Buttons/units/sparth/categories/ERA_PREHISTORIC.dds</Button>
+			<Button>Art/Interface/Buttons/units/sparth/categories/era_ancient.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_ERA_CLASSICAL</Type>
@@ -6621,12 +6621,6 @@
 			<CultureType>BONUS_ZULU</CultureType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/culture_zulu.dds</Button>
 		</UnitCombatInfo>
-		<!-- Was on Wild animls but complaints about being unable to navigate the wilderness with lone criminals, along with the idea that perhaps disguise SHOULD be able to throw off animals (scent disguise, acting like an animal etc...) gives cause to remove this auto-see through for wild animals. Only commented out and left this note becasue I'm not sure it will be better this way.
-				<VisibilityIntensityChangeType>
-					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
-					<iIntensity>10</iIntensity>
-				</VisibilityIntensityChangeType>
-		-->
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_WILD</Type>
 			<Description>TXT_KEY_UNITCOMBAT_WILD</Description>
@@ -6634,6 +6628,10 @@
 			<iNoCaptureChange>1</iNoCaptureChange>
 			<iCaptureProbabilityModifierChange>-1000</iCaptureProbabilityModifierChange>
 			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
+					<iIntensity>10</iIntensity>
+				</VisibilityIntensityChangeType>
 				<VisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_POLITICAL</InvisibleType>
 					<iIntensity>10</iIntensity>
@@ -6842,8 +6840,8 @@
 			<Description>TXT_KEY_UNITCOMBAT_GROUP_MULTITUDES</Description>
 			<iExperiencePercent>-140</iExperiencePercent>
 			<iSelfHealModifier>-18</iSelfHealModifier>
-			<iGroupBase>9</iGroupBase>
 			<iCostModifierChange>200</iCostModifierChange>
+			<iGroupBase>9</iGroupBase>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
