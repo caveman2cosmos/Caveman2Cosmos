@@ -3278,7 +3278,7 @@
 			<Button>art/Interface/Buttons/Bonus/warp_drives.dds</Button>
 			<FontButtonIndex>104</FontButtonIndex>
 		</BonusArtInfo>
-        <BonusArtInfo>
+		<BonusArtInfo>
 			<Type>ART_DEF_BONUS_AB_MATTER</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>

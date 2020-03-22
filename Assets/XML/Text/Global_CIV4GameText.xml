@@ -1,5 +1,91 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
+<!-- Code placeholders
+	<TEXT>
+		<Tag>TXT_KEY_CIV_UNKNOWN</Tag>
+		<English>UNKNOWN CIV</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_COMBAT_ROUND_STUN_DEFENDER_MINUS_ATTACKER_ENDURANCE</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_GLOBELAYER_DEBUG</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_LESS_GROWTH</Tag>
+		<English>[ICON_BULLET]Gives terrain a lower chance to spread</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LANDMARK</Tag>
+		<English></English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_ATTACKER_REPELLED_HUMAN_ONSLAUGHT_HIDDEN</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_COMMERCE_TECH</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_GOLDEN_AGE_PLAYER_COMMERCE</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_PLUNDERED_CULTURE_FROM_VICTIMS</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_YOU_UNIT_WITHDRAW_ONSLAUGHT</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_YOU_UNIT_WITHDRAW_STAMPEDE</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MSG_HOLY_CITY_RESPAWNED</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_NO_INVISIBILIY_TEXT</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRADE_VOTE</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_ENDURANCE</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_FORTITUDE_MODIFIER_POSITIVE_TEXT</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_FORTITUDE_MODIFIER_NEGATIVE_TEXT</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_POWER_SHOT_PRECISION_MODIFIER_TOTAL_MODIFIER</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TIRING_TOTAL_SHORT</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TIRING_TOTAL</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_TRAP_DAMAGE</Tag>
+		<English>TBD</English>
+	</TEXT>
+-->
 	<TEXT>
 		<Tag>INTERFACE_BUILDING_TAB</Tag>
 		<English>Building Tab</English>
@@ -505,13 +591,6 @@
 		<Polish>+1 nieszczęśliwy</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Tag>
-		<English>'Achievements' are special wonders that can be built by National Heroes. There are twelve achievements available throughout the game, providing with different bonuses; However, sometimes, it is better to wait if you want to build an achievement from a later era. Though achievements don't provide huge bonuses at first, over time, they will give a civilization a significant boost in one area.</English>
-		<French>Les [COLOR_HIGHLIGHT_TEXT]Achï¿½vements[COLOR_REVERT] sont des merveilles spï¿½ciales qui peuvent ï¿½tre construites par les Hï¿½ros nationaux. Il y a 8 achï¿½vement possibles, procurant diffï¿½rents bonus, qu'il convient de bien examinï¿½, notamment par rapport ï¿½ l'Ere durant laquelle il est plus avisï¿½ de le dï¿½clencher. Sachant que comme les merveilles, ce n'est disponible que pous la premiï¿½re civilisation ï¿½ le dï¿½clencher.</French>
-		<Italian>Gli 'Obiettivi' sono speciali meraviglie che possono essere costruite dagli eroi nazionali. Ci sono 8 obiettivi disponibili, che danno bonus differenti; comunque, quando un obiettivo viene costruito da una civiltï¿½ non puï¿½ essere costruito da un'altra; in ogni caso, a volte ï¿½ meglio aspettare le ere piï¿½ moderne per costruire un obiettivo. Anche se li obiettivi non danno grandi bonus all'inizio, nel tempo danno ad una civiltï¿½ un grande vantaggio in un settore specifico.</Italian>
-		<Polish>'Osiągnięcia' to wyjątkowe cuda, które mogą zostać stworzone przez [COLOR_UNIT_TEXT]Bohaterów Narodowych[COLOR_REVERT]. W grze występuje osiem [COLOR_BUILDING_TEXT]Osiągnięć[COLOR_REVERT], które posiadają różne zalety; jednakże, kiedy jakieś [COLOR_BUILDING_TEXT]Osiągnięcie[COLOR_REVERT] zostanie stworzone przez jedną cywilizację, nie może już zostać zbudowane przez inną. Czasem dobrze jest poczekać jeśli chce się stworzyć [COLOR_BUILDING_TEXT]Osiągnięcie[COLOR_REVERT] dostępne w późniejszej erze. Choć na początku [COLOR_BUILDING_TEXT]Osiągnięcia[COLOR_REVERT] nie zapewniają ogromnych bonusów, to jednak z biegiem czasu ich zalety się zwiększają.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_ACTION_ASSASSIN_MISSION</Tag>
 		<English>Eliminate %s1_unit for %d2[ICON_ESPIONAGE] %d3_percent%% chance of success.</English>
 		<French>Eliminer %s1_unit pour %d2[ICON_ESPIONAGE] %d3_percent%% chances de succès.</French>
@@ -913,15 +992,6 @@
 		<Italian>[ICON_BULLET]%d1%% inflazione</Italian>
 		<Spanish>[ICON_BULLET]%d1%% de inflación</Spanish>
 		<Polish>[ICON_BULLET]%d1%% do Inflacji</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ADVENTURE_STRATEGY</Tag>
-		<English>Build this corporation in order to get adventure bonuses.</English>
-		<French>Construisez cette corporation pour obtenir des bonus d'aventure.</French>
-		<German>Gründe diese Gesellschaft, um Abenteuerboni zu erhalten.</German>
-		<Italian>Costruisci questa corporazione per ottenere bonus dall'avventura.</Italian>
-		<Spanish>Crea esta corporación para obtener bonificaciones relacionadas con el mundo de las aventuras.</Spanish>
-		<Polish>Zbuduj tą korporacje by zdobyć bonusy z podróży.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_AFFLICT_ON_ATTACK_IMMEDIATE_TEXT</Tag>
@@ -1626,33 +1696,20 @@
 		<Polish>[COLOR_WARNING_TEXT]Uwaga:[COLOR_REVERT] Ta gra nie obsługuje HOF lub GOTM.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ENEMY_WAR_WEAR</Tag>
-		<English>[ICON_BULLET]Enemies suffer %D1_percent%% War [ICON_UNHAPPY]</English>
-		<French>[ICON_BULLET]Les Ennemis souffrent de %D1_percent%% [ICON_UNHAPPY] lié à la guerre</French>
+		<Tag>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Tag>
+		<English>'Achievements' are special wonders that can be built by National Heroes. There are twelve achievements available throughout the game, providing with different bonuses; However, sometimes, it is better to wait if you want to build an achievement from a later era. Though achievements don't provide huge bonuses at first, over time, they will give a civilization a significant boost in one area.</English>
+		<French>Les [COLOR_HIGHLIGHT_TEXT]Achï¿½vements[COLOR_REVERT] sont des merveilles spï¿½ciales qui peuvent ï¿½tre construites par les Hï¿½ros nationaux. Il y a 8 achï¿½vement possibles, procurant diffï¿½rents bonus, qu'il convient de bien examinï¿½, notamment par rapport ï¿½ l'Ere durant laquelle il est plus avisï¿½ de le dï¿½clencher. Sachant que comme les merveilles, ce n'est disponible que pous la premiï¿½re civilisation ï¿½ le dï¿½clencher.</French>
+		<Italian>Gli 'Obiettivi' sono speciali meraviglie che possono essere costruite dagli eroi nazionali. Ci sono 8 obiettivi disponibili, che danno bonus differenti; comunque, quando un obiettivo viene costruito da una civiltï¿½ non puï¿½ essere costruito da un'altra; in ogni caso, a volte ï¿½ meglio aspettare le ere piï¿½ moderne per costruire un obiettivo. Anche se li obiettivi non danno grandi bonus all'inizio, nel tempo danno ad una civiltï¿½ un grande vantaggio in un settore specifico.</Italian>
+		<Polish>'Osiągnięcia' to wyjątkowe cuda, które mogą zostać stworzone przez [COLOR_UNIT_TEXT]Bohaterów Narodowych[COLOR_REVERT]. W grze występuje osiem [COLOR_BUILDING_TEXT]Osiągnięć[COLOR_REVERT], które posiadają różne zalety; jednakże, kiedy jakieś [COLOR_BUILDING_TEXT]Osiągnięcie[COLOR_REVERT] zostanie stworzone przez jedną cywilizację, nie może już zostać zbudowane przez inną. Czasem dobrze jest poczekać jeśli chce się stworzyć [COLOR_BUILDING_TEXT]Osiągnięcie[COLOR_REVERT] dostępne w późniejszej erze. Choć na początku [COLOR_BUILDING_TEXT]Osiągnięcia[COLOR_REVERT] nie zapewniają ogromnych bonusów, to jednak z biegiem czasu ich zalety się zwiększają.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GROUP_WONDER_ALLOWED</Tag>
-		<English>[ICON_BULLET]Group Wonder of %s1_Special (%d2_Num Allowed)</English>
-		<French>[ICON_BULLET]Groupe de Merveilles de %s1_Special (%d2_Num autorisé)</French>
-		<German>[ICON_BULLET]Gruppenwunder "%s1_Special" (%[d2_Num]x möglich)</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_GROUP_WONDER_LEFT</Tag>
-		<English>[SPACE](Group Wonder of %s1_Special: %d2_Num Left)</English>
-		<French>[SPACE](Groupe de Merveilles de %s1_Special: %d2_Num restant(s))</French>
-		<German>[SPACE](Gruppenwunder "%s1_Special": %d2_Num übrig)</German>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BULLET</Tag>
-		<English>[ICON_BULLET]</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BULLET_STARTS_WITH</Tag>
-		<English>[ICON_BULLET]Starts with[SPACE]</English>
-		<French>[ICON_BULLET]Commence avec[SPACE]</French>
-		<German>[ICON_BULLET]Beginnt mit[SPACE]</German>
-		<Italian>[ICON_BULLET]Inizia con[SPACE]</Italian>
-		<Spanish>[ICON_BULLET]Empieza con[SPACE]</Spanish>
+		<Tag>TXT_KEY_BUILDING_ADVENTURE_STRATEGY</Tag>
+		<English>Build this corporation in order to get adventure bonuses.</English>
+		<French>Construisez cette corporation pour obtenir des bonus d'aventure.</French>
+		<German>Gründe diese Gesellschaft, um Abenteuerboni zu erhalten.</German>
+		<Italian>Costruisci questa corporazione per ottenere bonus dall'avventura.</Italian>
+		<Spanish>Crea esta corporación para obtener bonificaciones relacionadas con el mundo de las aventuras.</Spanish>
+		<Polish>Zbuduj tą korporacje by zdobyć bonusy z podróży.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BULLSEYE_STRATEGY</Tag>
@@ -1669,6 +1726,167 @@
 		<Italian>Costruisci il [COLOR_BUILDING_TEXT]QG di Burgerworld[COLOR_REVERT] per creare la corporazione [COLOR_HIGHLIGHT_TEXT]Burgerworld[COLOR_REVERT] che consuma [COLOR_HIGHLIGHT_TEXT]Mucca[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Maiale[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Patata[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Grano[COLOR_REVERT] o [COLOR_HIGHLIGHT_TEXT]Caffè[COLOR_REVERT] e aggiunge un bonus alla cultura in ogni città dove [COLOR_HIGHLIGHT_TEXT]Burgerworld[COLOR_REVERT] è presente. Il QG fornisce oro per ogni città nel mondo dove Burgerworld è presente.</Italian>
 		<Spanish>Construye la maravilla [COLOR_BUILDING_TEXT]Burgerworld[COLOR_REVERT] para crear la corporación [COLOR_HIGHLIGHT_TEXT]Burgerworld[COLOR_REVERT], que consume [COLOR_HIGHLIGHT_TEXT]Reses[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cerdos[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Patatas[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Trigo[COLOR_REVERT] y [COLOR_HIGHLIGHT_TEXT]Café[COLOR_REVERT] y añade una bonificación a los alimentos en todas las ciudades donde [COLOR_HIGHLIGHT_TEXT]Burgerworld[COLOR_REVERT] esté presente. La sede proporciona oro por cada ciudad del mapa en la que haya una franquicia de Burgerworld.</Spanish>
 		<Polish>Zbuduj siedzibę [COLOR_BUILDING_TEXT]Świata Hamburgerów[COLOR_REVERT]by utworzyć [COLOR_HIGHLIGHT_TEXT]Korporacje Świata Hamburgerów[COLOR_REVERT] która zużywa [COLOR_HIGHLIGHT_TEXT]Krowy[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Świnie[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Ziemniaki[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Pszenicę[COLOR_REVERT] lub [COLOR_HIGHLIGHT_TEXT]Kawę[COLOR_REVERT] i daje bonus do kultury każdemu miastu w którym znajduje się [COLOR_HIGHLIGHT_TEXT]Korporacja Świata Hamburgerów[COLOR_REVERT]. Siedziba zapewnia złoto dla każdego mista w którym znajduje się ta korporacja.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_EMPCLOTH_STRATEGY</Tag>
+		<English>Build the [COLOR_BUILDING_TEXT]Emperors Clothing[COLOR_REVERT] Headquarters to create the [COLOR_HIGHLIGHT_TEXT]Emperors Clothing Corporation[COLOR_REVERT] which consumes [COLOR_HIGHLIGHT_TEXT]Silk[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cotton[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Dye[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Sheep[COLOR_REVERT] or [COLOR_HIGHLIGHT_TEXT]Fur[COLOR_REVERT] and adds a culture bonus to every city where the [COLOR_HIGHLIGHT_TEXT]Emperors Clothing Corporation[COLOR_REVERT] is present. The Headquarters provide gold for each city in the world with a Emperors Clothing franchise.</English>
+		<French>Construire le siège de [COLOR_BUILDING_TEXT]Habits Impériaux[COLOR_REVERT] pour créer la corporation [COLOR_HIGHLIGHT_TEXT]Habits Impériaux[COLOR_REVERT] qui consomme [COLOR_HIGHLIGHT_TEXT]Soie[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Coton[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Teinture[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Mouton[COLOR_REVERT] ou [COLOR_HIGHLIGHT_TEXT]Fourrures[COLOR_REVERT] et ajoute un bonus culture dans chaque ville où la corporation [COLOR_HIGHLIGHT_TEXT]Habits Impériaux[COLOR_REVERT] est présente. Le Siège génère de l'or, pour chaque ville pour laquelle il y a une franchise Habits Impériaux.</French>
+		<Italian>Costruisci il [COLOR_BUILDING_TEXT]QG di Emperors Clothing[COLOR_REVERT] per creare [COLOR_HIGHLIGHT_TEXT]Emperors Clothing[COLOR_REVERT] che consuma [COLOR_HIGHLIGHT_TEXT]Seta[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cotone[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Tintura[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Pecora[COLOR_REVERT] e [COLOR_HIGHLIGHT_TEXT]Pellicce[COLOR_REVERT] e aggiunge un bonus alla cultura dove è presente [COLOR_HIGHLIGHT_TEXT]Emperors Clothing[COLOR_REVERT]. Il QG fornisce oro per ogni città mondiale in cui la corporazione è diffusa.</Italian>
+		<Spanish>Construye la maravilla [COLOR_BUILDING_TEXT]Emperors Clothing[COLOR_REVERT] para crear la corporación [COLOR_HIGHLIGHT_TEXT]Emperors Clothing[COLOR_REVERT], que consume [COLOR_HIGHLIGHT_TEXT]Seda[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Algodón[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Tintura[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Ovejas[COLOR_REVERT] y [COLOR_HIGHLIGHT_TEXT]Pieles[COLOR_REVERT], y añade una bonificación a la cultura en todas las ciudades donde [COLOR_HIGHLIGHT_TEXT]Emperors Clothing[COLOR_REVERT] esté presente. La sede proporciona oro por cada ciudad del mapa en la que haya una franquicia de Emperors Clothing.</Spanish>
+		<Polish>Zbuduj siedzibę [COLOR_BUILDING_TEXT]Imperialnych ubrań[COLOR_REVERT]by utworzyć [COLOR_HIGHLIGHT_TEXT]Korporacje Imperialnych Ubrań[COLOR_REVERT] która zużywa [COLOR_HIGHLIGHT_TEXT]Jedwab[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Bawełne[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Barwniki[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Owce[COLOR_REVERT] lub [COLOR_HIGHLIGHT_TEXT]Futro[COLOR_REVERT] i daje bonus do kultury każdemu miastu w którym znajduje się [COLOR_HIGHLIGHT_TEXT]Korporacja Imperialne Ubrania[COLOR_REVERT]. Siedziba zapewnia złoto dla każdego mista w którym znajduje się ta korporacja.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ENEMY_WAR_WEAR</Tag>
+		<English>[ICON_BULLET]Enemies suffer %D1_percent%% War [ICON_UNHAPPY]</English>
+		<French>[ICON_BULLET]Les Ennemis souffrent de %D1_percent%% [ICON_UNHAPPY] lié à la guerre</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_EWTRADE_STRATEGY</Tag>
+		<English>Build this corporation in order to get bonuses.</English>
+		<French>Construisez cette corporation afin d'obtenir des bonus.</French>
+		<Spanish>Construye esta corporación para obtener bonificaciones.</Spanish>
+		<Polish>Zbuduj Siedzibę tej korporacji by otrzymać bonusy.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_FASHION_STRATEGY</Tag>
+		<English>Build the [COLOR_BUILDING_TEXT]Fashion House[COLOR_REVERT] Headquarters to create the [COLOR_HIGHLIGHT_TEXT]Fashion House Corporation[COLOR_REVERT] which consumes [COLOR_HIGHLIGHT_TEXT]Silk[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cotton[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Dye[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cow[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Wool[COLOR_REVERT] or [COLOR_HIGHLIGHT_TEXT]Fur[COLOR_REVERT] and adds a culture bonus to every city where the [COLOR_HIGHLIGHT_TEXT]Fashion House Corporation[COLOR_REVERT] is present. The Headquarters provide gold for each city in the world with a Fashion House franchise.</English>
+		<French>Construire le siège de [COLOR_BUILDING_TEXT]Maison de la Mode[COLOR_REVERT] pour créer la corporation [COLOR_HIGHLIGHT_TEXT]Maison de la Mode[COLOR_REVERT] qui consomme [COLOR_HIGHLIGHT_TEXT]Soie[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Coton[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Teinture[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Vache[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Laine[COLOR_REVERT] ou [COLOR_HIGHLIGHT_TEXT]Fourrures[COLOR_REVERT] et ajoute un bonus culture dans chaque ville où la corporation [COLOR_HIGHLIGHT_TEXT]Maison de la Mode[COLOR_REVERT] est présente. Le Siège génère de l'or, pour chaque ville pour laquelle il y a une franchise Maison de la Mode.</French>
+		<Italian>Costruisci il [COLOR_BUILDING_TEXT]QG di Fashion House[COLOR_REVERT] per creare la corporazione [COLOR_HIGHLIGHT_TEXT]Fashion House[COLOR_REVERT] che consuma [COLOR_HIGHLIGHT_TEXT]Seta[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cotone[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Tintura[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Bovini[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Lana[COLOR_REVERT] o COLOR_HIGHLIGHT_TEXT]Pellicce[COLOR_REVERT] e dà un bonus di cultura in tutte le città dove è presente [COLOR_HIGHLIGHT_TEXT]Fashion House[COLOR_REVERT]. Il QG fornisce oro per ogni città in cui è diffusa Fashion House.</Italian>
+		<Spanish>Construye la maravilla [COLOR_BUILDING_TEXT]Fashion House[COLOR_REVERT] para crear la corporación [COLOR_HIGHLIGHT_TEXT]Fashion House[COLOR_REVERT], que consume [COLOR_HIGHLIGHT_TEXT]Seda[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Algodón[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Tintura[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Reses[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Lana[COLOR_REVERT] y [COLOR_HIGHLIGHT_TEXT]Pieles[COLOR_REVERT], y añade una bonificación a la cultura en todas las ciudades donde [COLOR_HIGHLIGHT_TEXT]Fashion House[COLOR_REVERT] esté presente. La sede proporciona oro por cada ciudad del mapa en la que haya una franquicia de Fashion House.</Spanish>
+		<Polish>Zbuduj siedzibę [COLOR_BUILDING_TEXT]Domu Mody[COLOR_REVERT]by utworzyć [COLOR_HIGHLIGHT_TEXT]Korporacje Domów Mody[COLOR_REVERT] która zużywa [COLOR_HIGHLIGHT_TEXT]Jedwab[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Bawełne[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Barwniki[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Owce[COLOR_REVERT] lub [COLOR_HIGHLIGHT_TEXT]Futro[COLOR_REVERT] i daje bonus do kultury każdemu miastu w którym znajduje się [COLOR_HIGHLIGHT_TEXT]Korporacja Domów Mody[COLOR_REVERT]. Siedziba zapewnia złoto dla każdego mista w którym znajduje się ta korporacja.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GROUP_WONDER_ALLOWED</Tag>
+		<English>[ICON_BULLET]Group Wonder of %s1_Special (%d2_Num Allowed)</English>
+		<French>[ICON_BULLET]Groupe de Merveilles de %s1_Special (%d2_Num autorisé)</French>
+		<German>[ICON_BULLET]Gruppenwunder "%s1_Special" (%[d2_Num]x möglich)</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_GROUP_WONDER_LEFT</Tag>
+		<English>[SPACE](Group Wonder of %s1_Special: %d2_Num Left)</English>
+		<French>[SPACE](Groupe de Merveilles de %s1_Special: %d2_Num restant(s))</French>
+		<German>[SPACE](Gruppenwunder "%s1_Special": %d2_Num übrig)</German>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HELLENIC_CATHEDRAL_PEDIA</Tag>
+		<English>In Civilization IV, a cathedral is defined as an especially large and ornate religious building where the faithful worship. Only the most prosperous cities can afford to create cathedrals, as they require huge amounts of raw material and years of dedicated labor by skilled craftsmen. For example, the Notre Dame Cathedral in Paris, France, took over two centuries to complete.</English>
+		<French>Dans Civilization IV, un grand lieu de culte est défini comme un édifice religieux particulièrement grand et richement orné dans lequel les fidèles pratiquent leur religion: "cathédrales" pour les chrétiens, "mosquées" pour les musulmans et "synagogues" pour les juifs. Seules les villes les plus prospères ont les moyens de construire de tels édifices. En effet, ils nécessitent d'énormes quantités de matériaux bruts et des artisans spécialisés doivent y consacrer des années de travail. Ainsi, il a fallu plus de deux siècles pour terminer la cathédrale Notre-Dame à Paris.</French>
+		<German>In Civilization IV sind Kathedralen große und prächtige Gotteshäuser, in denen Gläubige beten. Nur die reichsten aller Städte können sich den Bau einer Kathedrale leisten, da hierfür große Mengen an Baumaterial und die jahrelange Arbeit erfahrener Handwerker erforderlich sind. Die Kathedrale von Notre Dame in Paris wurde beispielsweise erst nach 200-jähriger Bauzeit fertig gestellt.</German>
+		<Italian>In Civilization IV, viene definito cattedrale un edificio religioso particolarmente grande e sfarzoso adibito a luogo di culto per i fedeli. Solamente le città più prosperose possono permettersi l'edificazione di cattedrali poiché sono necessari un'enorme quantità di materiali e operai esperti. Per esempio, per completare la cattedrale di Notre-Dame de Paris, in Francia, ci sono voluti più di due secoli.</Italian>
+		<Spanish>En Civilization IV, una catedral se define como un edificio religioso especialmente grande y ornamentado en el que se reúnen los fieles para celebrar sus ritos. Solo las ciudades más grandes pueden permitirse el lujo de crear catedrales, puesto que requieren enormes cantidades de materias primas y años de dedicación por parte de trabajadores especializados. Por ejemplo, la catedral de Notre Dame, Francia, tardó dos siglos en completarse.</Spanish>
+		<Polish>W Cywilizacji IV katedra stanowi szczególnie doniosły i bogato przyozdobiony gmach religijny, w którym wierni oddają cześć swojemu bóstwu. Jedynie najbardziej majętne miasta mogą sobie pozwolić na wybudowanie katedry, jako że ich postawienie wymaga olbrzymiej ilości surowców do budowy oraz lat wytężonej pracy licznych, wprawnych w swym fachu rzemieślników. Dla przykładu ukończenie katedry Notre Dame w Paryżu, we Francji, zajęło ponad dwa stulecia.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HELLENIC_MONASTERY_PEDIA</Tag>
+		<English>A monastery is a building where monks can retreat from the world and concentrate upon the divine. Usually a monastery will have strict rules of conduct to protect its unworldly members from temptation. In some monasteries, the monks are totally silent; in others no visitors are allowed inside. Monasteries usually have many daily rituals and religious services. [PARAGRAPH:1] Throughout the ages monasteries have often been centers of learning. In remote areas the monks may be the only literate people for miles around. Monks have often been employed as scribes, copying out the words of their religion's sacred scripture. Monasteries frequently have extensive libraries, holding religious, scientific, medical and philosophical texts.</English>
+		<French>Un monastère est un édifice dans lequel les moines peuvent se retirer du monde et se concentrer sur le divin. Généralement, les règles de conduite y sont strictes afin de protéger ses membres, détachés du monde, de la tentation. Dans certains monastères, les moines sont totalement silencieux ; dans d'autres, les visiteurs ne sont pas autorisés à pénétrer dans leur enceinte. Les monastères ont généralement de nombreux rituels et services religieux quotidiens. [PARAGRAPH:1]A travers les siècles, les monastères ont souvent été des centres d'érudition. Dans les zones retirées, les moines étaient parfois les seules personnes sachant lire et écrire à des kilomètres à la ronde. Ils ont souvent servi de scribes, recopiant les textes sacrés de leur religion. Les monastères ont généralement de grandes bibliothèques possédant des textes religieux, scientifiques, médicaux et philosophiques.</French>
+		<German>Klöster sind Gebäude, in die sich Mönche zurückziehen, um sich auf Gott zu konzentrieren. In Klöstern gelten strenge Verhaltensregeln, die die Mönche vor Versuchungen bewahren sollen. In einigen Klöstern herrscht ein strenges Redeverbot, in anderen sind keine Besucher gestattet. Die Mönche selbst gehen täglich ihren religiösen Pflichten nach. [PARAGRAPH:1] In der Vergangenheit waren Klöster stets auch Zentren des Wissens. In abgelegenen Gegenden waren die Mönche oft die einzigen gebildeten Menschen, die als Schreiber ihre religiösen Schriften kopierten. Klöster haben nicht selten Bibliotheken, in denen unzählige religiöse, wissenschaftliche, medizinische und philosophische Texte aufbewahrt werden.</German>
+		<Italian>Il monastero è un edificio nel quale i monaci possono ritirarsi dal mondo e concentrarsi sul Divino. In genere, nel monastero vige un regolamento ferreo per proteggere i membri della comunità dalle tentazioni. In alcuni monasteri, i monaci erano completamente silenziosi e non erano permesse visite dall'esterno per non interrompere i rituali quotidiani e le cerimonie religiose. [PARAGRAPH:1] Nel corso dei secoli, i monasteri sono stati spesso centro di insegnamento: in alcune zone, i monaci erano sovente gli unici in grado di leggere e scrivere nel giro di diversi chilometri. Da sempre, i monaci sono stati utilizzati come scribi per copiare le parole sacre della propria religione; i monasteri ospitavano spesso delle biblioteche che contenevano testi religiosi, scientifici, medici e filosofici.</Italian>
+		<Spanish>Un monasterio es un edificio en el que los monjes pueden retirarse del mundo para concentrarse en los asuntos de la divinidad. Normalmente tienen estrictas reglas de comportamiento para proteger a sus miembros de la tentación. En algunos monasterios, los monjes guardan un silencio total, mientras que en otros no se permite el acceso a los visitantes. Lo habitual es que sus miembros tengan que celebrar a diario muchos rituales y servicios religiosos. [PARAGRAPH:1] A lo largo de la historia, los monasterios han sido muchas veces centros de estudio. En las regiones remotas, los monjes podían ser las únicas personas letradas en muchos kilómetros a la redonda. A menudo han sido empleados como escribas, y se han dedicado a copiar los textos sagrados de su religión. Normalmente cuentan con grandes bibliotecas, que contienen textos religiosos, científicos, médicos y filosóficos.</Spanish>
+		<Polish>Klasztor jest budynkiem, w którym mnisi zamykają się przed światem zewnętrznym, dzięki czemu mogą w ciszy kontemplować bóstwo. Zazwyczaj klasztory posiadają surowe reguły postępowania, które mają na celu ochronę swoich umarłych dla świata mieszkańców przed przyziemnymi pokusami. W niektórych klasztorach mnisi zobowiązują się do zachowywania zupełnej ciszy; inne nie zezwalają na żadne odwiedziny z zewnątrz. W obrębie klasztorów zazwyczaj codziennie odbywa się wiele rytuałów i posług religijnych. [PARAGRAPH:1]Poprzez wieki klasztory niejednokrotnie stanowiły centra naukowe. Nic dziwnego, skoro w wielu odległych rejonach w promieniu wielu kilometrów mnisi jako jedyni umieli czytać i pisać. Mnisi niejednokrotnie byli zatrudniani jako skrybowie, przepisywali ręcznie święte księgi wyznawanej religii. Klasztory często posiadają rozległe biblioteki, w których znaleźć można teksty religijne, naukowe, medyczne oraz filozoficzne.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_HELLENIC_TEMPLE_PEDIA</Tag>
+		<English>In Civilization IV, a temple is defined as a building where the faithful come to worship. Christians call their temples "churches," while Muslims call theirs "mosques," and Jews call theirs, simply, "temples." Temples are far more common than cathedrals, but much less large and ornate. Even the smallest village can possess a temple.</English>
+		<French>Dans Civilization IV, un petit lieu de culte est défini comme un édifice dans lequel les fidèles viennent pratiquer leur religion: "églises" pour les chrétiens, "petites mosquées" pour les musulmans et "petites synagogues" pour les juifs. Ces petits lieux de culte sont bien plus courants que les grands lieux de culte mais sont de taille plus réduite et sont bien moins richement ornés. Même le village le plus petit peut posséder un petit lieu de culte.</French>
+		<German>In Civilization IV sind Tempel Gebäude, in denen Gläubige beten. Christen nennen ihre Tempel "Kirchen", Moslems "Moscheen". Es gibt deutlich mehr Tempel als Kathedralen. Allerdings sind sie wesentlich kleiner und schlichter. Selbst das kleinste Dorf kann einen Tempel besitzen.</German>
+		<Italian>In Civilization IV, il tempio è un edificio all'interno del quale i fedeli si recano a pregare. I Cristiani chiamano i loro templi "chiese", i Musulmani "moschee", gli Ebrei semplicemente "templi". I templi sono più comuni delle cattedrali, ma sono più piccoli e poco fastosi. Anche il villaggio più piccolo ospita un tempio.</Italian>
+		<Spanish>En Civilization IV, un templo se define como un lugar al que los fieles acuden a venerar. Los cristianos llaman a sus templos "iglesias", mientras que para los musulmanes son "mezquitas" y para los judíos, sencillamente, "templos". Son mucho más comunes que las catedrales, pero también mucho más pequeños y humildes. Hasta la más pequeña aldea puede poseer uno.</Spanish>
+		<Polish>W Cywilizacji IV świątynia stanowi budynek, w którym wierni gromadzą się w celu oddawania czci swojemu bóstwu. Chrześcijanie nazywają swoje świątynie "kościołami", muzułmanie "meczetami", zaś Żydzi po prostu "świątyniami". Świątynie są znacznie powszechniejsze od katedr, jednakże również znacznie mniejsze i mnie przyozdobione. Świątynia może się znajdować nawet w najmniejszej wiosce.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MALLWART_STRATEGY</Tag>
+		<English>Build this corporation in order to get fruit and groceries bonuses.</English>
+		<French>Construisez cette corporation afin d'obtenir des bonus de fruits et d'épicerie.</French>
+		<Italian>Costruisci questa corporazione per ottenere bonus da frutta e verdura.</Italian>
+		<Spanish>Construye esta corporación para obtener bonificaciones relacionadas con el mundo de las frutas y las verduras.</Spanish>
+		<Polish>Zbuduj Siedzibę tej korporacji by zdobyć owoce i bonusy do żywności.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MAPSTER_STRATEGY</Tag>
+		<English>Mapster is a good way to inform the populace of your nation's enduring successes...</English>
+		<French>Mapster est un bon moyen d'informer la population des succès durables de votre nation...</French>
+		<Italian>Mapster è un ottimo modo per informare la popolazione della tua nazione del tuo successo...</Italian>
+		<Spanish>Mapster es una buena opción para informar a la población de los grandes éxitos de tu nación...</Spanish>
+		<Polish>Mapster jest dobrym sposobem informowania Twojej ludności o Twoich sukcesach...</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MCDOWELLS_STRATEGY</Tag>
+		<English>Build the [COLOR_BUILDING_TEXT]Big McDowells[COLOR_REVERT] Headquarters to create the [COLOR_HIGHLIGHT_TEXT]Big McDowells Corporation[COLOR_REVERT] which consumes [COLOR_HIGHLIGHT_TEXT]Cow[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Pig[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Potato[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Wheat[COLOR_REVERT] or [COLOR_HIGHLIGHT_TEXT]Salt[COLOR_REVERT] and adds a culture bonus to every city where the [COLOR_HIGHLIGHT_TEXT]Big McDowells Corporation[COLOR_REVERT] is present. The Headquarters provide gold for each city in the world with a Big McDowells franchise.</English>
+		<French>Construire le siège de [COLOR_BUILDING_TEXT]Big McDowells[COLOR_REVERT] pour créer la corporation [COLOR_HIGHLIGHT_TEXT]McDowells[COLOR_REVERT] qui consomme [COLOR_HIGHLIGHT_TEXT]Vache[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cochon[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]pommes de terre[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Blé[COLOR_REVERT] ou [COLOR_HIGHLIGHT_TEXT]Sel[COLOR_REVERT] et ajoute un bonus culture dans chaque ville où la corporation [COLOR_HIGHLIGHT_TEXT]McDowells[COLOR_REVERT] est présente. Le Siège génère de l'or, pour chaque ville pour laquelle il y a une franchise McDowells.</French>
+		<Italian>Costruisci il [COLOR_BUILDING_TEXT]QG di Big McDowells[COLOR_REVERT] per creare la corporazione [COLOR_HIGHLIGHT_TEXT]Big McDowells[COLOR_REVERT], che consuma [COLOR_HIGHLIGHT_TEXT]Bovino[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Maiale[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Patate[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Granoturco[COLOR_REVERT] o [COLOR_HIGHLIGHT_TEXT]Sale[COLOR_REVERT] e da un bonus alla cultura in ogni città dove è presente [COLOR_HIGHLIGHT_TEXT]Big McDowells[COLOR_REVERT]. Il QG fornisce oro per ogni città nel mondo in cui Big McDowells ha una filiale.</Italian>
+		<Spanish>Construye la maravilla [COLOR_BUILDING_TEXT]McDowells[COLOR_REVERT] para crear la corporación [COLOR_HIGHLIGHT_TEXT]McDowells [COLOR_REVERT], que consume [COLOR_HIGHLIGHT_TEXT]Reses[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cerdos[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Patatas[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Trigo[COLOR_REVERT] y [COLOR_HIGHLIGHT_TEXT]Sal[COLOR_REVERT] y añade una bonificación a los alimentos en todas las ciudades donde [COLOR_HIGHLIGHT_TEXT]McDowells[COLOR_REVERT] esté presente. La sede proporciona oro por cada ciudad del mapa en la que haya una franquicia de McDowells.</Spanish>
+		<Polish>Zbuduj siedzibę [COLOR_BUILDING_TEXT]McDonalda[COLOR_REVERT]by utworzyć [COLOR_HIGHLIGHT_TEXT]Korporacje McDonald[COLOR_REVERT] która zużywa [COLOR_HIGHLIGHT_TEXT]Krowy[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Świnie[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Ziemniaki[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Pszenice[COLOR_REVERT] lub [COLOR_HIGHLIGHT_TEXT]Sól[COLOR_REVERT] i daje bonus do kultury każdemu miastu w którym znajduje się [COLOR_HIGHLIGHT_TEXT]Korporacja McDonald[COLOR_REVERT]. Siedziba zapewnia złoto dla każdego mista w którym znajduje się ta korporacja.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MILEHIGH_STRATEGY</Tag>
+		<English>The best way to see the world is from an airplane</English>
+		<French>La meilleure façon de voir le monde est depuis un avion</French>
+		<Italian>Il modo migliore per vedere il mondo è da un aeroplano</Italian>
+		<Spanish>La mejor forma de ver el mundo desde un aeroplano.</Spanish>
+		<Polish>Najlepszy sposób na zwiedzenie świata to samolot</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MOBBY_STRATEGY</Tag>
+		<English>Build this corporation to get benefits from all meats bonuses.</English>
+		<French>Construisez cette corporation pour profiter de tous les bonus de viande.</French>
+		<Italian>Costruisci questa corporazione per ottenere bonus da tutti i tipi di carne.</Italian>
+		<Spanish>Construye esta corporación para obtener bonificaciones de todos los recursos cárnicos.</Spanish>
+		<Polish>Zbuduj siedzibę by zdobyć wszystkie bonusy do mięs.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_MOONBEAN_STRATEGY</Tag>
+		<English>Build this corporation in order to get economic bonuses.</English>
+		<French>Construisez cette corporation afin d'obtenir des bonus économiques.</French>
+		<Italian>Costruisci questa corporazione per ottenere bonus economici.</Italian>
+		<Spanish>Construye esta corporación para obtener bonificaciones económicas.</Spanish>
+		<Polish>Zbuduj siedzibę by zdobyć bonusy ekonomiczne.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_RED_STRATEGY</Tag>
+		<English>Build this corporation in order to get entertainment bonuses.</English>
+		<French>Construisez cette corporation afin d'obtenir des bonus de divertissement.</French>
+		<Italian>Costruisci questa corporazione per ottenere bonus dall'intrattenimento.</Italian>
+		<Spanish>Construye esta corporación para obtener bonificaciones relacionadas con el mundo del entretenimiento.</Spanish>
+		<Polish>Zbuduj siedzibę by zdobyć wszystkie bonusy z rozrywki.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_SAFARI_STRATEGY</Tag>
+		<English>Build this corporation in order to get hunting bonuses.</English>
+		<French>Construisez cette corporation afin d'obtenir des bonus de chasse.</French>
+		<Italian>Costruisci questa corporazione per ottenere bonus dalla caccia.</Italian>
+		<Spanish>Construye esta corporación para obtener bonificaciones relacionadas con el mundo de la caza.</Spanish>
+		<Polish>Zbuduj siedzibę by zdobyć bonusy z polowania.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_ULTSOLDIER_STRATEGY</Tag>
+		<English>Build this corporation in order to get military bonuses.</English>
+		<French>Construisez cette corporation afin d'obtenir des bonus militaires.</French>
+		<German>Baue diese Gesellschaft, um Militärboni zu erhalten.</German>
+		<Italian>Costruisci questa corporazione per di ottenere bonus militari.</Italian>
+		<Spanish>Construye esta corporación para obtener bonificaciones relacionadas con el mundo militar.</Spanish>
+		<Polish>Zbuduj siedzibę by zdobyć bonusy militarne.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WONKA_STRATEGY</Tag>
+		<English>Build this corporation in order to get Confectioneries bonuses.</English>
+		<French>Construire cette corporation pour obtenir la ressource Confiseries.</French>
+		<German>Baue diese Gesellschaft, um Zuckerwarenboni zu erhalten.</German>
+		<Italian>Costruisci questa corporazione per ottenere bonus dai derivati dello zucchero.</Italian>
+		<Spanish>Construye esta corporación para obtener bonificaciones relacionadas con el mundo de la pastelería.</Spanish>
+		<Polish>Zbuduj siedzibę by zdobyć bonusy cukiernicze.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BULLET</Tag>
+		<English>[ICON_BULLET]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BULLET_STARTS_WITH</Tag>
+		<English>[ICON_BULLET]Starts with[SPACE]</English>
+		<French>[ICON_BULLET]Commence avec[SPACE]</French>
+		<German>[ICON_BULLET]Beginnt mit[SPACE]</German>
+		<Italian>[ICON_BULLET]Inizia con[SPACE]</Italian>
+		<Spanish>[ICON_BULLET]Empieza con[SPACE]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CAN_FOUND_ON_PEAKS</Tag>
@@ -1961,152 +2179,6 @@
 		<Italian>Superato Limite</Italian>
 		<Spanish>Límite de cambios superado</Spanish>
 		<Polish>Przekroczono ilość zmian</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_HEAVY_CAVALRY_PEDIA</Tag>
-		<English>[BOLD]Strategy:[\BOLD][PARAGRAPH:1]Heavy Cavalry are more powerful versions of Light Cavalry. They are especially effective against Melee Units in open terrain, and they can generally crush any Light Cavalry or Horse Archers they come across. [NEWLINE][NEWLINE][BOLD]Background:[\BOLD][PARAGRAPH:1]To put it simply, a Heavy Cavalry unit is better-armed and armored than its Light Cavalry cousin. The creation of Heavy Cavalry required a number of technological advances: first, larger horses had to be bred; then metal armor had to be made lighter and more flexible. All of these required a fairly wealthy and advanced civilization, but the price was well worth it: few unarmored cavalry units could hope to stand against the determined charge of Heavy Cavalry.</English>
-		<French>
-			<Text>[BOLD]Stratégie:[\BOLD][PARAGRAPH:1]La cavalerie lourde est une version plus puissante de la cavalerie légère. Elle est particulièrement efficace en terrain dégagé contre les unités de combat rapproché et elle peut généralement écraser les cavaliers légers ou les archers montés qu'elle rencontre.[NEWLINE][NEWLINE][BOLD]Histoire:[\BOLD][PARAGRAPH:1]Pour faire bref, une unité de cavalerie lourde est mieux armée et mieux protégée qu'une unité de cavalerie légère. La création de la cavalerie lourde nécessita quelques avancées technologiques. Il fallut créer des chevaux plus grands et aussi rendre les armures métalliques plus légères et plus flexibles. Ce ne put être accompli que par une civilisation riche et avancée, mais l'investissement en valait la peine, car peu d'unités de cavalerie sans armure avaient une chance de résister à la charge de la cavalerie lourde.</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>[BOLD]Strategie:[\BOLD][PARAGRAPH:1]Die Schwere Kavallerie ist eine stärkere Version der Leichten Kavallerie. Sie ist vor allem gegen Nahkampfeinheiten auf offenem Gelände effektiv und kann generell jede Leichte Kavallerie und Berittene Bogenschützen zerschlagen.[NEWLINE][NEWLINE][BOLD]Hintergrund:[\BOLD][PARAGRAPH:1]Um es einfach auszudrücken: Einheiten der Schweren Kavallerie sind besser bewaffnet und gepanzert als Einheiten der Leichten Kavallerie. Für die Erschaffung der Schweren Kavallerie waren einige technologische Errungenschaften notwendig. Zunächst mussten größere Pferde gezüchtet werden. Dann musste die metallene Rüstung leichter und flexibler gemacht werden. Zu all dessen bedurfte es einer recht wohlhabenden und fortschrittlichen Zivilisation, doch der hohe Preis war es wert: Nur wenige ungepanzerte Kavallerieeinheiten konnten darauf hoffen, einem energischen Angriff der Schweren Kavallerie standhalten zu können.</German>
-		<Italian>
-			<Text>[BOLD]Strategia:[\BOLD][PARAGRAPH:1]La cavalleria pesante è una versione più potente di quella leggera. È particolarmente efficace su terreno aperto contro le unità da combattimento ravvicinato e può letteralmente schiacciare la cavalleria leggera o gli arcieri a cavallo che dovesse incontrare sulla propria strada. [NEWLINE][NEWLINE][BOLD]Informazioni:[\BOLD][PARAGRAPH:1]In parole povere, un'unità di cavalleria pesante è più corazzata e meglio armata della cugina, la cavalleria leggera. La creazione della cavalleria pesante necessitò di diversi sviluppi: dovettero essere riprodotti dei cavalli più grandi, quindi fu necessario rendere più leggere e flessibili le armature. Ciò richiedeva civiltà abbastanza ricche ed evolute, ma ne valeva la pena: ben poche unità di cavalleria leggera avevano qualche possibilità di cavarsela davanti a una carica della cavalleria pesante.</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>[BOLD]Estrategia:[\BOLD][PARAGRAPH:1]La caballería pesada es básicamente como ligera, solo que más potente. Resulta especialmente eficaz frente a unidades de cuerpo a cuerpo a campo abierto, y normalmente puede aplastar a cualquier unidad de caballería ligera o arqueros a caballo que se cruce en su camino. [NEWLINE][NEWLINE][BOLD]Historia:[\BOLD][PARAGRAPH:1]En pocas palabras, una unidad de caballería pesada es una versión mejor armada y equipada de la caballería ligera. La creación de la caballería pesada requería una serie de avances tecnológicos: para empezar, caballos más grandes. Luego, era necesario que la armadura de metal fuera más liviana y flexible. Todo esto solo podía darse en civilizaciones opulentas y avanzadas, pero el resultado merecía la pena: pocas unidades de caballería no pesada podían resistir una carga de una de estas unidades.</Spanish>
-		<Polish>Upadek wartości jazdy rycerskiej spowodował powstanie nowych formacji kawaleryjskich w skład których wchodzili żołnierze zaciężni (najemnicy). W XV wieku, obok tradycyjnych kopijników, pojawili się na polach bitew rajtarzy i arkebuzerzy uzbrojeni w broń palną. W XVI wieku powstała dragonia będąca początkowo konną piechotą. W Europie zachodniej jazda organizowała się na regimenty i kompanie. W Polsce w XV-tym wieku kawaleria dzieliła się na oddziały kopijnicze i strzelcze. W XVI wieku pojawiła się husaria, początkowo jazda lekka, z biegiem czasu stając się najcięższą kawalerią polską. Jazdę lżejszą w Polsce stanowili pancerni, zwani na Litwie petyhorcami, którzy z czasem stali się formacją średniozbrojną. Jazdę lekką stanowiły tzw. chorągwie wołoskie i tatarskie. W XVII wieku na zachodzie pojawili się kirasjerzy. W XVIII wieku w Polsce dawne pułki husarskie i pancerne przekształcono kawalerię narodową, a jazdę lekką na nowoczesnych ułanów. W czasach wojen napoleońskich pojawiły się oddziały lansjerów, szwoleżerów i strzelców konnych. W XIX wieku w związku z dalszym rozwojem broni palnej, znaczenie kawalerii upadło. Jednak jeszcze w czasie I wojny światowej wojska obu walczących stron zmobilizowały łącznie 63 dywizje jazdy, znaczną ich część rozwiązano zresztą w czasie trwania tej wojny.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_HEAVY_CAVALRY_STRATEGY</Tag>
-		<English>Good against melee units in the open and against Light Cavalry, Horse Archers, and Mounted Infantry.</English>
-		<French>
-			<Text>Unités efficaces en terrain dégagé contre les unités de combat rapproché, ainsi que contre la cavalerie légère, les archers montés et l'infanterie montée.</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Gut gegen Nahkampfeinheiten im Freien sowie gegen Leichte Kavallerie, Berittene Bogenschützen und Berittene Infanterie.</German>
-		<Italian>
-			<Text>Ottima su terreno aperto contro unità da combattimento ravvicinato e contro cavalleria leggera, arcieri a cavallo e fanteria a cavallo.</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>Es buena frente a unidades de cuerpo a cuerpo en campo abierto, así como frente a la Caballería ligera, Arqueros a caballo e Infantería montada.</Spanish>
-		<Polish>Jest to silna jednostka i doskonale nadaje się do walki z takimi jednostkami jak: Lekka Kawaleria, Łucznik Konny czy Konny Knecht.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_HEAVY_SWORDSMAN_PEDIA</Tag>
-		<English>[BOLD]Strategy:[\BOLD][PARAGRAPH:1]These more powerful sword units can take on moderately-defended cities when backed up by siege units.[NEWLINE][NEWLINE][BOLD]Background:[\BOLD][PARAGRAPH:1]Heavy swords tend to be longer and heavier (of course) than light swords. They often require two hands to wield, and are typically employed as slashing weapons. A Heavy Swordsman will generally be better-armored than a Light Swordsman, and thus able to both dish out and take more damage.</English>
-		<French>
-			<Text>[BOLD]Stratégie:[\BOLD][PARAGRAPH:1]Ces unités de spadassins plus puissantes peuvent attaquer des villes moyennement défendues avec l'appui d'unités de siège.[NEWLINE][NEWLINE][BOLD]Histoire:[\BOLD][PARAGRAPH:1]Les épées lourdes sont généralement plus longues et évidemment plus lourdes que les épées légères. Elles se manient souvent à deux mains et servent généralement à porter des coups de taille. Un spadassin lourd a généralement une meilleure armure qu'un spadassin léger, ce qui lui permet d'infliger et de recevoir plus de dégâts.</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>[BOLD]Strategie:[\BOLD][PARAGRAPH:1]Diese mächtigeren Schwerteinheiten können mäßig befestigte Städte einnehmen, wenn sie von Belagerungseinheiten unterstützt werden.[NEWLINE][NEWLINE][BOLD]Hintergrund:[\BOLD][PARAGRAPH:1]Schwere Schwerter sind länger und (natürlich) schwerer als leichte Schwerter. Man braucht oft beide Hände, um sie zu schwingen, und sie werden als Hiebwaffe eingesetzt. Ein schwerer Schwertkämpfer wird generell besser gepanzert sein als ein leichter und kann dadurch mehr Schaden einstecken und anrichten.</German>
-		<Italian>
-			<Text>[BOLD]Strategia:[\BOLD][PARAGRAPH:1]Queste unità armate con spada, più potenti di quelle normali, possono conquistare città moderatamente difese, con l'aiuto di unità d'assedio.[NEWLINE][NEWLINE][BOLD]Informazioni:[\BOLD][PARAGRAPH:1]Le spade pesanti tendono a essere più lunghe e pesanti (chiaramente) di quelle leggere. Di solito devono essere impugnate a due mani e sono tipicamente usate come armi da fendenti. Uno spadaccino pesante sarà generalmente più corazzato di uno leggero, e quindi in grado di causare e ricevere più danni.</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>[BOLD]Estrategia:[\BOLD][PARAGRAPH:1]Estas unidades son más poderosas que los espadachines normales y, si cuentan con el respaldo de unidades de asedio, pueden conquistar ciudades no demasiado bien defendidas.[NEWLINE][NEWLINE][BOLD]Historia:[\BOLD][PARAGRAPH:1]Las espadas pesadas eran más largas y, lógicamente,más pesadas que las normales. A menudo debían empuñarse con las dos manos, y normalmente se empleaban como armas cortantes. Normalmente los soldados con espada pesada llevaban mejor armadura que sus equivalentes más ligeros, lo que significa que podían tanto recibir como infligir más daño.</Spanish>
-		<Polish>W społeczeństwach plemiennych, w toczenie wojen bywała zaangażowana cała męska część populacji, np. u Gurkhów, Maorysów oraz w dawnych plemionach celtyckich, germańskich i słowiańskich. W bardziej rozwiniętych społeczeństwach wojownicy często tworzyli własną kastę lub stan.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_HEAVY_SWORDSMAN_STRATEGY</Tag>
-		<English>These more powerful sword units can take on moderately-defended cities when backed up by siege units.</English>
-		<French>
-			<Text>Ces unités de spadassins plus puissantes peuvent attaquer des villes moyennement défendues avec l'appui d'unités de siège.</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Diese mächtigeren Schwerteinheiten können mäßig befestigte Städte einnehmen, wenn sie von Belagerungseinheiten unterstützt werden.</German>
-		<Italian>
-			<Text>Queste unità armate con spada, più potenti di quelle normali, possono conquistare città moderatamente difese, con l'aiuto di unità d'assedio.</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>Estas unidades son más poderosas que los espadachines normales y, si cuentan con el respaldo de unidades de asedio, pueden conquistar ciudades no demasiado bien defendidas.</Spanish>
-		<Polish>Jest to silna jednostka obdarzona niezwykłą umiejętnością władania mieczem. Przydatna do wsparcia dla jednostek oblężniczych podczas ataku na miasto.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_LIGHT_CAVALRY_PEDIA</Tag>
-		<English>[BOLD]Strategy:[\BOLD][PARAGRAPH:1]While not particularly effective against defenders in cities, these mid-level horse units get a +25% bonus when fighting melee or archery units. Thus they can be especially effective against non-horse units in open terrain. [NEWLINE][NEWLINE][BOLD]Background:[\BOLD][PARAGRAPH:1] Before the invention of the stirrup, riders stayed atop their horses by knee pressure alone. Close combat was virtually impossible, as the shock from a blow - taken OR given - would very likely pitch the rider onto the ground. While the earliest stirrups appeared around 500 BC, they didn't reach Europe until the sixth or seventh century AD. At this point the European Light Cavalry was born. While lightly armored when compared with Heavy Cavalry or Knights, a Light Cavalry unit can still deliver a shocking blow to infantry or siege units.</English>
-		<French>[BOLD]Stratégie:[\BOLD][PARAGRAPH:1]Bien qu'elles ne soient pas particulièrement efficaces contre les défenseurs des villes, ces unités montées de niveau moyen obtiennent un bonus de 25 % contre les unités de combat rapproché et les archers. Elles peuvent donc être très efficaces contre les unités à pied en terrain dégagé. [NEWLINE][NEWLINE][BOLD]Histoire:[\BOLD][PARAGRAPH:1]Avant l'invention des étriers, les cavaliers se maintenaient sur leur monture simplement à l'aide de leurs genoux. Le combat rapproché était quasiment impossible, car le choc d'un coup donné ou reçu avait toutes les chances de désarçonner le cavalier. Les premiers étriers apparurent vers le IVe siècle av J.-C., mais n'arrivèrent pas en Europe avant le VIe ou le VIIe siècle. C'est alors que la cavalerie légère européenne fit son apparition. Même s'ils ont une armure bien plus légère que les cavaliers lourds ou les chevaliers, les cavaliers légers peuvent être très dangereux pour les unités de siège ou d'infanterie.</French>
-		<German>[BOLD]Strategie:[\BOLD][PARAGRAPH:1]Auch wenn sie nicht besonders effektiv im Einsatz gegen Verteidigungseinheiten in Städten sind, erhalten diese mittelklassigen berittenen Einheiten einen 25%igen Bonus, wenn sie im Nahkampf oder gegen Bogenschützen eingesetzt werden. Sie können also besonders effektiv gegen unberittene Einheiten auf offenem Feld sein.[NEWLINE][NEWLINE][BOLD]Hintergrund:[\BOLD][PARAGRAPH:1]Vor der Erfindung der Steigbügel hielten sich Reiter allein durch Druck ihrer Knie im Sattel. Ein Nahkampf war so nahezu unmöglich, da die Erschütterung eines Schlages - ausgeteilt wie eingesteckt - den Reiter wahrscheinlich auf den Boden geschleudert hätte. Auch wenn die ersten Steigbügel bereits aus dem Jahre 500 v. Chr. datieren, waren sie in Europa nicht vor dem 6. oder 7. Jahrhundert n. Chr. zu finden. Zu dieser Zeit wurde die europäische Leichte Kavallerie geboren. Auch wenn sie im Vergleich zur schweren Kavallerie oder den Rittern nur sehr leicht gepanzert waren, kann die Leichte Kavallerie der Infanterie oder Belagerungseinheiten einen schweren Schlag verpassen.</German>
-		<Italian>[BOLD]Strategia:[\BOLD][PARAGRAPH:1]Pur non essendo particolarmente efficaci contro i difensori nelle città, queste unità a cavallo di medio livello ottengono un +25% di bonus quando combattono unità da combattimento ravvicinato o arcieri. Sono quindi particolarmente efficaci contro unità non montate su terreno aperto. [NEWLINE][NEWLINE][BOLD]Informazioni:[\BOLD][PARAGRAPH:1] Prima dell'invenzione della staffa, i cavalieri rimanevano a cavallo unicamente grazie alla pressione delle ginocchia. Il combattimento ravvicinato era impossibile, visto che con un colpo (dato o ricevuto) il cavaliere sarebbe probabilmente caduto a terra. Pur essendo comparse attorno al 500 a.C., le staffe non raggiunsero l'Europa se non durante il sesto o settimo secolo d.C. A questo punto nacque la cavalleria leggera. Pur essendo poco corazzata, se confrontata con la cavalleria pesante o coi cavalieri, un'unità di cavalleria leggera può comunque infliggere colpi pesanti alla fanteria o a unità d'assedio.</Italian>
-		<Spanish>[BOLD]Estrategia:[\BOLD][PARAGRAPH:1]Aunque no son especialmente eficaces para atacar ciudades, estas unidades de caballería reciben una bonificación del 25%% frente a unidades de cuerpo a cuerpo o de arqueros. Por ello, pueden resultar letales contra unidades no montadas a campo abierto. [NEWLINE][NEWLINE][BOLD]Historia:[\BOLD][PARAGRAPH:1] Antes de la invención del estribo, los jinetes se mantenían sobre los caballos utilizando solo la presión de las rodillas. Entrar en combate cuerpo a cuerpo era prácticamente imposible para este tipo de unidades, puesto que era muy probable que el impacto de un golpe, ya fuera recibido o infligido, arrojase al jinete al suelo. Aunque los primeros estribos aparecieron alrededor del año 500 a. C., en Europa no hicieron su aparición hasta los siglos VI o VII d. C. Ése fue el nacimiento de la caballería ligera europea. Aunque está menos armada y peor equipada que la caballería pesada o los caballeros, la caballería ligera puede ser letal frente a las unidades de infantería o de asedio.</Spanish>
-		<Polish>W Europie we wczesnym średniowieczu w okresie wczesnofeudalnym jazda zorganizowana była jako przyboczny oddział władcy (księcia, kniazia). Była częścią drużyny książęcej, która istniała zarówno wśród prymitywnych plemion germańskich, jak i słowiańskich (w tych ostatnich pojawiła się nieco później). W Polsce, w okresie rządów pierwszych Piastów w skład drużyny książęcej wchodziła jazda ciężka (tzw. Pancerni) oraz jazda lekka.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_LIGHT_CAVALRY_STRATEGY</Tag>
-		<English>These units can be especially effective against archery or melee units in open terrain.</English>
-		<French>
-			<Text>Ces unités peuvent être particulièrement efficaces contre les unités de combat rapproché et les archers en terrain dégagé.</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Diese Einheiten können besonders effektiv gegen unberittene Einheiten auf offenem Feld sein.</German>
-		<Italian>
-			<Text>Queste unità sono particolarmente efficaci contro arcieri o unità da combattimento ravvicinato su terreno aperto.</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>Estas unidades pueden ser especialmente eficaces frente a arqueros o a unidades de cuerpo a cuerpo en campo abierto.</Spanish>
-		<Polish>Ta jednostka przydaje się do walki przeciwko jednostkom łuczniczym oraz walczącym wręcz na otwartych terenach.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_LIGHT_SWORDSMAN_PEDIA</Tag>
-		<English>[BOLD]Strategy:[\BOLD][PARAGRAPH:1]These early sword units can attack enemy cities that are not too heavily defended. Of course it's very useful to bring siege equipment when trying to take cities.[NEWLINE][NEWLINE][BOLD]Background:[\BOLD][PARAGRAPH:1]During the eighth century AD, European swords tended to be long and straight, with no crossguard to protect the wielder's hand (crossguards didn't appear in Europe until the Late Middle Ages). Light Swordsmen are unarmored, or wear leather armor at best.</English>
-		<French>[BOLD]Stratégie:[\BOLD][PARAGRAPH:1]Ces premières unités de spadassins peuvent attaquer les villes ennemies qui ne sont pas trop défendues. L'équipement de siège est bien sûr très utile pour prendre une ville.[NEWLINE][NEWLINE][BOLD]Histoire:[\BOLD][PARAGRAPH:1]Au cours du VIIIe siècle, les épées européennes étaient généralement longues, droites et dépourvues de garde pour protéger la main du combattant. La garde n'apparut pas en Europe avant le haut Moyen Age. Les spadassins légers ne portent pas d'armure ou au mieux une armure de cuir.</French>
-		<German>[BOLD]Strategie:[\BOLD][PARAGRAPH:1]Diese frühen Schwerteinheiten können feindliche Städte angreifen, die nicht allzu gut gesichert sind. Es ist natürlich immer nützlich, Belagerungsausrüstung mit sich zu führen, wenn man Städte einnimmt.[NEWLINE][NEWLINE][BOLD]Hintergrund:[\BOLD][PARAGRAPH:1]Während des 8. Jahrhunderts waren die Schwerter in Europa lang und gerade und hatten keine Parierstange, um die Hand des Kämpfers zu schützen. (Parierstangen waren in Europa nicht vor dem späten Mittelalter zu finden.) Leichte Schwertkämpfer sind ungepanzert oder tragen höchsten eine leichte Lederrüstung.</German>
-		<Italian>[BOLD]Strategia:[\BOLD][PARAGRAPH:1]Queste prime unità armate con spada possono attaccare città che non sono pesantemente difese. Chiaramente è sempre utile portare con sé unità d'assedio, quando si cerca di conquistare una città.[NEWLINE][NEWLINE][BOLD]Informazioni:[\BOLD][PARAGRAPH:1]Durante l'ottavo secolo d.C., le spade europee tendevano a essere lunghe e diritte, senza guardia per proteggere la mano di chi le impugnava (le guardie non comparvero in Europa fino al tardo Medioevo). Gli spadaccini leggeri sono senza corazza, o al massimo indossano corazze di cuoio.</Italian>
-		<Spanish>[BOLD]Estrategia:[\BOLD][PARAGRAPH:1]Estas unidades pueden atacar ciudades enemigas, siempre que no estén demasiado defendidas. En cualquier caso, es muy conveniente utilizar máquinas de asedio para atacar ciudades.[NEWLINE][NEWLINE][BOLD]Historia:[\BOLD][PARAGRAPH:1]En el siglo VIII d. C., las espadas europeas solían ser largas y rectas, y no tenían guarda para proteger la mano de su propietario (las guardas no aparecieron en Europa hasta la Baja Edad Media). Los soldados con espada ligera combaten sin armadura, o como mucho con armadura de cuero.</Spanish>
-		<Polish>W społeczeństwach plemiennych, w toczenie wojen bywała zaangażowana cała męska część populacji, np. u Gurkhów, Maorysów oraz w dawnych plemionach celtyckich, germańskich i słowiańskich. W bardziej rozwiniętych społeczeństwach wojownicy często tworzyli własną kastę lub stan.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_LIGHT_SWORDSMAN_STRATEGY</Tag>
-		<English>These early sword units can attack enemy cities that are not too heavily defended. Of course it's very useful to bring siege equipment when trying to take cities.</English>
-		<French>
-			<Text>Ces premières unités de spadassins peuvent attaquer les villes ennemies qui ne sont pas trop défendues. L'équipement de siège est bien sûr très utile pour prendre une ville.</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Diese frühen Schwerteinheiten können feindliche Städte angreifen, die nicht allzu gut gesichert sind. Es ist natürlich immer nützlich, Belagerungsausrüstung mit sich zu führen, wenn man Städte einnimmt</German>
-		<Italian>
-			<Text>Queste prime unità armate con spada possono attaccare città che non sono pesantemente difese. Chiaramente è sempre utile portare con sé unità d'assedio, quando si cerca di conquistare una città.</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>Estas unidades pueden atacar ciudades enemigas, siempre que no estén demasiado defendidas. En cualquier caso, es muy conveniente utilizar máquinas de asedio para atacar ciudades.</Spanish>
-		<Polish>W społeczeństwach plemiennych, w toczenie wojen bywała zaangażowana cała męska część populacji, np. u Gurkhów, Maorysów oraz w dawnych plemionach celtyckich, germańskich i słowiańskich. W bardziej rozwiniętych społeczeństwach wojownicy często tworzyli własną kastę lub stan.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_MOUNTED_INFANTRY_PEDIA</Tag>
-		<English>[BOLD]Strategy:[\BOLD][PARAGRAPH:1]Mounted Infantry are less powerful than Horse Archers; however, these units do receive terrain defensive bonuses, making them far more powerful when defending in hills, woods, or city. [NEWLINE][NEWLINE][BOLD]Background:[\BOLD][PARAGRAPH:1]Mounted Infantry soldiers use horses to get to the battlefield, but once there they dismount and fight on foot. They rarely take part in charges or other horseback maneuvers, and they tend to suffer badly when engaged in such against trained cavalry units. On the other hand, when fortified on a hill, Mounted Infantry can do serious damage to an attacking Horse Archer or Light Cavalry unit.</English>
-		<French>[BOLD]Stratégie:[\BOLD][PARAGRAPH:1]L'infanterie montée est moins puissante que les archers montés, mais bénéficie de bonus défensifs de terrain, ce qui lui permet de se défendre bien plus efficacement sur des collines, dans les bois ou dans les villes.[NEWLINE][NEWLINE][BOLD]Histoire:[\BOLD][PARAGRAPH:1]Les soldats de l'infanterie montée se rendent à cheval sur le champ de bataille, mais mettent pied à terre pour combattre une fois arrivés à destination. Ils participent rarement aux charges ou aux autres manoeuvres à cheval, et se font généralement malmener quand ils le font face à des cavaliers entraînés. En revanche, l'infanterie montée peut infliger de sérieux dégâts à une unité de cavalerie légère ou d'archers montés qui l'attaquerait sur une colline où elle aurait pris position.</French>
-		<German>[BOLD]Strategie:[\BOLD][PARAGRAPH:1]Die Berittene Infanterie ist weniger stark als die Berittenen Bogenschützen, erhält jedoch einen Gelände-Verteidigungsbonus, was sie wesentlich stärker macht, wenn sie zur Verteidigung in Hügeln, Wäldern oder Städten eingesetzt wird.[NEWLINE][NEWLINE][BOLD]Hintergrund:[\BOLD][PARAGRAPH:1] Soldaten der Berittenen Infanterie nutzen Pferde, um aufs Schlachtfeld zu gelangen. Sobald sie es erreicht haben, satteln sie jedoch ab und kämpfen zu Fuß. Sie nehmen nur selten an Vorstößen oder anderen Manövern zu Pferd teil, und wenn sie gegen ausgebildete Einheiten der Kavallerie eingesetzt werden, stecken sie meist viel Schaden ein. Wenn sie gefestigt auf einem Hügel stationiert ist, kann die Berittene Infanterie anrückenden Berittenen Bogenschützen oder Einheiten der Leichten Kavallerie jedoch schweren Schaden zufügen.</German>
-		<Italian>[BOLD]Strategia:[\BOLD][PARAGRAPH:1]La fanteria a cavallo è meno potente degli arcieri a cavallo, però queste unità ricevono bonus difensivi per il terreno, che le rendono molto più potenti quando difendono in collina, nelle foreste o in città. [NEWLINE][NEWLINE][BOLD]Informazioni:[\BOLD][PARAGRAPH:1]I soldati della fanteria a cavallo usano i cavalli per arrivare al campo di battaglia ma poi smontano e combattono a piedi. Di rado prendono parte a cariche o altre manovre a cavallo, e tendono a subire malamente gli attacchi delle unità di cavalleria. D'altro canto quando sono fortificate in collina, i fanti a cavallo possono infliggere seri danni ad arcieri a cavallo o cavalleria leggera.</Italian>
-		<Spanish>[BOLD]Estrategia:[\BOLD][PARAGRAPH:1]La infantería montada es menos potente que los arqueros a caballo; sin embargo, recibe bonificaciones defensivas por terreno, lo que resulta una enorme ventaja a la hora de defenderse en colinas, bosques o ciudades. [NEWLINE][NEWLINE][BOLD]Historia:[\BOLD][PARAGRAPH:1]Los soldados de la infantería montada usan sus caballos para llegar al campo de batalla, pero una vez allí desmontan y luchan a pie. Solo en raras ocasiones toman parte en cargas u otras maniobras típicas de caballería y, cuando se enfrentan con escuadrones de caballería profesional, normalmente llevan las de perder. Por otro lado, cuando está atrincherada en una colina, la infantería montada puede ser muy peligrosa para los arqueros a caballo o la caballería ligera.</Spanish>
-		<Polish>Upadek wartości jazdy rycerskiej spowodował powstanie nowych formacji kawaleryjskich w skład których wchodzili żołnierze zaciężni (najemnicy). W XV wieku, obok tradycyjnych kopijników, pojawili się na polach bitew rajtarzy i arkebuzerzy uzbrojeni w broń palną. W XVI wieku powstała dragonia będąca początkowo konną piechotą. W Europie zachodniej jazda organizowała się na regimenty i kompanie. W Polsce w XV-tym wieku kawaleria dzieliła się na oddziały kopijnicze i strzelcze. W XVI wieku pojawiła się husaria, początkowo jazda lekka, z biegiem czasu stając się najcięższą kawalerią polską. Jazdę lżejszą w Polsce stanowili pancerni, zwani na Litwie petyhorcami, którzy z czasem stali się formacją średniozbrojną. Jazdę lekką stanowiły tzw. chorągwie wołoskie i tatarskie. W XVII wieku na zachodzie pojawili się kirasjerzy. W XVIII wieku w Polsce dawne pułki husarskie i pancerne przekształcono kawalerię narodową, a jazdę lekką na nowoczesnych ułanów. W czasach wojen napoleońskich pojawiły się oddziały lansjerów, szwoleżerów i strzelców konnych. W XIX wieku w związku z dalszym rozwojem broni palnej, znaczenie kawalerii upadło. Jednak jeszcze w czasie I wojny światowej wojska obu walczących stron zmobilizowały łącznie 63 dywizje jazdy, znaczną ich część rozwiązano zresztą w czasie trwania tej wojny.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_MOUNTED_INFANTRY_STRATEGY</Tag>
-		<English>Use these speedy infantrymen as rapid-reaction forces and to defend hills and forests.</English>
-		<French>
-			<Text>Utilisez ces Spadassins pour intervenir rapidement ou pour défendre les collines et les forêts.</Text>
-			<Gender>Male</Gender>
-			<Plural>1</Plural>
-		</French>
-		<German>Setzen Sie diese schnellen Infanteriekämpfer als Streitkräfte für schnelle Gegenmaßnahmen und zur Verteidigung von Hügeln und Wäldern ein.</German>
-		<Italian>
-			<Text>Usa questi veloci fanti per reagire rapidamente e per difendere colline e foreste.</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>Utiliza a estas veloces unidades de infantería como fuerzas de reacción rápida, así como para defender colinas y bosques.</Spanish>
-		<Polish>Używaj tych szybkich jednostek w celu szybkiego reagowania oraz do obrony wzgórz i lasów.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CHEATERS_NEVER_PROSPER</Tag>
@@ -2781,6 +2853,10 @@
 		<French>Arrêter un Criminel</French>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_COMMAND_HOTKEY</Tag>
+		<English>Command Hotkey</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_COMMAND_MERGE</Tag>
 		<English>Merge with two like units on the same plot to create a single, more powerful unit</English>
 		<French>Regroupe l'unité avec deux autres afin de constituer une unité plus puissante</French>
@@ -3142,14 +3218,6 @@
 		<Polish>%D1: "Wyrzuciłeś naszych ambasadorów!"</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_EMPCLOTH_STRATEGY</Tag>
-		<English>Build the [COLOR_BUILDING_TEXT]Emperors Clothing[COLOR_REVERT] Headquarters to create the [COLOR_HIGHLIGHT_TEXT]Emperors Clothing Corporation[COLOR_REVERT] which consumes [COLOR_HIGHLIGHT_TEXT]Silk[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cotton[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Dye[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Sheep[COLOR_REVERT] or [COLOR_HIGHLIGHT_TEXT]Fur[COLOR_REVERT] and adds a culture bonus to every city where the [COLOR_HIGHLIGHT_TEXT]Emperors Clothing Corporation[COLOR_REVERT] is present. The Headquarters provide gold for each city in the world with a Emperors Clothing franchise.</English>
-		<French>Construire le siège de [COLOR_BUILDING_TEXT]Habits Impériaux[COLOR_REVERT] pour créer la corporation [COLOR_HIGHLIGHT_TEXT]Habits Impériaux[COLOR_REVERT] qui consomme [COLOR_HIGHLIGHT_TEXT]Soie[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Coton[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Teinture[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Mouton[COLOR_REVERT] ou [COLOR_HIGHLIGHT_TEXT]Fourrures[COLOR_REVERT] et ajoute un bonus culture dans chaque ville où la corporation [COLOR_HIGHLIGHT_TEXT]Habits Impériaux[COLOR_REVERT] est présente. Le Siège génère de l'or, pour chaque ville pour laquelle il y a une franchise Habits Impériaux.</French>
-		<Italian>Costruisci il [COLOR_BUILDING_TEXT]QG di Emperors Clothing[COLOR_REVERT] per creare [COLOR_HIGHLIGHT_TEXT]Emperors Clothing[COLOR_REVERT] che consuma [COLOR_HIGHLIGHT_TEXT]Seta[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cotone[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Tintura[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Pecora[COLOR_REVERT] e [COLOR_HIGHLIGHT_TEXT]Pellicce[COLOR_REVERT] e aggiunge un bonus alla cultura dove è presente [COLOR_HIGHLIGHT_TEXT]Emperors Clothing[COLOR_REVERT]. Il QG fornisce oro per ogni città mondiale in cui la corporazione è diffusa.</Italian>
-		<Spanish>Construye la maravilla [COLOR_BUILDING_TEXT]Emperors Clothing[COLOR_REVERT] para crear la corporación [COLOR_HIGHLIGHT_TEXT]Emperors Clothing[COLOR_REVERT], que consume [COLOR_HIGHLIGHT_TEXT]Seda[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Algodón[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Tintura[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Ovejas[COLOR_REVERT] y [COLOR_HIGHLIGHT_TEXT]Pieles[COLOR_REVERT], y añade una bonificación a la cultura en todas las ciudades donde [COLOR_HIGHLIGHT_TEXT]Emperors Clothing[COLOR_REVERT] esté presente. La sede proporciona oro por cada ciudad del mapa en la que haya una franquicia de Emperors Clothing.</Spanish>
-		<Polish>Zbuduj siedzibę [COLOR_BUILDING_TEXT]Imperialnych ubrań[COLOR_REVERT]by utworzyć [COLOR_HIGHLIGHT_TEXT]Korporacje Imperialnych Ubrań[COLOR_REVERT] która zużywa [COLOR_HIGHLIGHT_TEXT]Jedwab[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Bawełne[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Barwniki[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Owce[COLOR_REVERT] lub [COLOR_HIGHLIGHT_TEXT]Futro[COLOR_REVERT] i daje bonus do kultury każdemu miastu w którym znajduje się [COLOR_HIGHLIGHT_TEXT]Korporacja Imperialne Ubrania[COLOR_REVERT]. Siedziba zapewnia złoto dla każdego mista w którym znajduje się ta korporacja.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_EMPHASIZE_AVOID_ANGRY_CITIZENS</Tag>
 		<English>Avoid Angry Citizens</English>
 		<French>Aucun Citoyen Mécontent</French>
@@ -3167,6 +3235,10 @@
 		<Spanish>Se evitan los ciudadanos infelices dejando de crecer si se llega al límite de ciudadanos felices.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_EMPHASIZE_AVOID_GROWTH_STRATEGY</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_EMPHASIZE_AVOID_UNHEALTHY_CITIZENS</Tag>
 		<English>Avoid Unhealthy Citizens</English>
 		<French>Aucun Citoyen en mauvaise Santé</French>
@@ -3182,10 +3254,6 @@
 		<German>Vermeidung kranker Bürger durch Beschränkung des Wachstums auf die Obergrenze für gesunde Bürger.</German>
 		<Italian>Evita i cittadini ammalati impedendo la crescita olte le capacità di salute della città.</Italian>
 		<Spanish>Se evitan los ciudadanos enfermos dejando de crecer si se llega al límite de ciudadanos sanos.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EMPHASIZE_AVOID_GROWTH_STRATEGY</Tag>
-		<English>TBD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EMPHASIZE_COMMERCE_STRATEGY</Tag>
@@ -3261,6 +3329,7 @@
 		<English>The term Ancient in regards to Caveman to Cosmos describes the beginning of cities and the arrival of what is referred to as the bronze age. It is a period where tribal societies begin to form larger towns and eventually cities, and more elaborate artwork and architecture. Kings emerge in this period, one of the first kinds of powerful rulers, evolving out of powerful tribal leaders. Warfare becomes formalized, with the development of professional armies, the training of animals for war etc.
 
 Time Frame: 12 000 BC - 1200 BC</English>
+
 		<French>Le terme Antiquité en ce qui concerne Caveman to Cosmos décrit le début des villes et l'arrivée de ce que l'on appelle l'âge du bronze. C'est une période où les sociétés tribales commencent à former de plus grandes villes et éventuellement des villes, et des œuvres d'art et une architecture plus élaborées. Les rois émergent à cette époque, l'un des premiers types de dirigeants puissants, issus de puissants chefs tribaux. La guerre se formalise, avec le développement d'armées professionnelles, l'entraînement des animaux à la guerre etc.
 
 Calendrier: 12 000 avant JC - 1200 avant JC</French>
@@ -3278,8 +3347,9 @@ Calendrier: 12 000 avant JC - 1200 avant JC</French>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_ATOMIC_STRATEGY</Tag>
 		<English>The Atomic era describes the time of the second world war till roughly the end of the cold war. During this period air power becomes the strongest force on the battlefield and the doctrine of MAD, or mutually assured destruction, appears as nuclear weapons enter the picture. Also, the beginnings of space flight and computers occur in this period.
-		
+
 Time Frame: 1900 AD - 1990 AD</English>
+
 		<French>L'ère atomique décrit l'époque de la seconde guerre mondiale jusqu'à la fin de la guerre froide. Pendant cette période, la puissance aérienne devient la force la plus puissante sur le champ de bataille et la doctrine du MAD, ou destruction mutuellement assurée, apparaît alors que les armes nucléaires entrent en scène. En outre, les débuts du vol spatial et des ordinateurs se produisent au cours de cette période.
 
 Calendrier: 1900 AD - 1990 AD</French>
@@ -3314,6 +3384,7 @@ Calendrier: 1900 AD - 1990 AD</French>
 		<English>The Classical era picks up where the ancient era left off. During this period new ideas of religion, government, and political organization enter the picture. Technology has improved to the point in this era that larger empires become possible, and many would be conquerors try their hands at conquest. Further advances in architecture lead to better living conditions in some cases.
 
 Time Frame: 1200 BC - 450 AD</English>
+
 		<French>L'ère Classique reprend là où l'ère antique s'était arrêtée. Au cours de cette période, de nouvelles idées de religion, de gouvernement et d'organisation politique font leur apparition. La technologie s'est améliorée au point à cette époque que de plus grands empires deviennent possibles, et beaucoup seraient des conquérants s'essayer à la conquête. De nouveaux progrès dans l'architecture conduisent à de meilleures conditions de vie dans certains cas.
 
 Calendrier: 1200 avant JC - 450 après JC</French>
@@ -3333,6 +3404,7 @@ Calendrier: 1200 avant JC - 450 après JC</French>
 		<English>The Cosmic era describes a period where a civilization has surpassed the limitations of galactic travel and is able to explore nearby galaxies, spreading further across the universe. Further advances in space flight make this possible.
 
 Time Frame: 3000 AD - 4000 AD</English>
+
 		<French>L'ère Cosmique décrit une période où une civilisation a dépassé les limites du voyage galactique et est capable d'explorer des galaxies proches, se propageant plus à travers l'univers. De nouveaux progrès dans le vol spatial rendent cela possible.
 
 Calendrier: 3000 AD - 4000 AD</French>
@@ -3383,8 +3455,9 @@ Calendrier: 3000 AD - 4000 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_GALACTIC_STRATEGY</Tag>
 		<English>The Galactic Era represents a time when a civilization develops faster than light travel, allowing the exploration and colonization of nearby solar systems and increasingly, the galaxy. Further improvements in terraforming technology allow hostile planets to be transformed into earth-like worlds, greatly increasing the places humanity can call home. Interplanetary warfare is refined as well, and not all human space nations are friendly democracies. Some develop into deadly space empires.
-		
+
 Time Frame: 2300 AD - 3000 AD</English>
+
 		<French>L'ère galactique représente un moment où une civilisation se développe plus rapidement que le voyage de la lumière, permettant l'exploration et la colonisation des systèmes solaires proches et de plus en plus, la galaxie. De nouvelles améliorations dans la terraformation d'une technologie permettent aux planètes hostiles d'être transformées en mondes semblables à la terre, augmentant considérablement les endroits où l'humanité peut s'installer. La guerre interplanétaire est également affinée et toutes les nations de l'espace humain ne sont pas des démocraties amies. Certains se transforment en empires spatiaux mortels.
 
 Calendrier: 2300 AD - 3000 AD</French>
@@ -3417,8 +3490,9 @@ Calendrier: 2300 AD - 3000 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_INDUSTRIAL_STRATEGY</Tag>
 		<English>The Industrial Era begins with the invention of steam power and continues with the development of factories. Increasingly, warfare becomes mechanized, with the advent of automatic weapons. New ideas on the economy and society begin to shake the old order, with capitalism and communist ideas among others begin to establish themselves, clashing with traditional ideas of religion and government. Flight becomes possible for the first time, and warfare in general undergoes enormous changes, formational warfare and colorful uniforms giving way to drab uniforms and eventually camoflage.
-		
+
 Time Frame: 1750 AD - 1900 AD</English>
+
 		<French>L'ère Industrielle commence avec l'invention de la vapeur et se poursuit avec le développement des usines. De plus en plus, la guerre se mécanise, avec l'avènement des armes automatiques. De nouvelles idées sur l'économie et la société commencent à ébranler l'ancien ordre, avec le capitalisme et les idées communistes, entre autres, commencent à s'établir, en contradiction avec les idées traditionnelles de la religion et du gouvernement. Le vol devient possible pour la première fois, et la guerre en général subit d'énormes changements, une guerre de formation et des uniformes colorés cédant la place à des uniformes ternes et finalement au camouflage.
 
 Calendrier: 1750 AD - 1900 AD</French>
@@ -3435,8 +3509,9 @@ Calendrier: 1750 AD - 1900 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_INFORMATION_STRATEGY</Tag>
 		<English>The Information era represents roughly the time after the cold war in our world technologically. Computers become personal, the internet appears, and new forms of entertainment such as computer and console games mark the early part of this period. Later, with the advent of high-speed internet, cloud computing and mobile devices such as smart phones, society undergoes a great change as physical businesses begin to be replaced by digital businesses, and increasingly private ownership of things such as movies, music moves into the hands of corporate distribution with streaming technology. Eventually artificial intelligence evolves to the point of allowing first automated drones and driverless cars, to many jobs disappearing due to more advanced machines. Physical cash disappears, with all transactions being done digitally.
-		
+
 Time Frame: 1990 AD - 2050 AD</English>
+
 		<French>L'ère de l'information représente à peu près le temps après la guerre froide dans notre monde sur le plan technologique. Les ordinateurs deviennent personnels, Internet apparaît et de nouvelles formes de divertissement telles que les jeux informatiques et les consoles marquent le début de cette période. Plus tard, avec l'avènement de l'Internet haut débit, du cloud computing et des appareils mobiles tels que les téléphones intelligents, la société subit un grand changement à mesure que les entreprises physiques commencent à être remplacées par des entreprises numériques, et que la propriété privée de choses telles que les films, la musique s'installe de plus en plus aux mains de la distribution d'entreprise avec le streaming une technologie. Finalement, l'intelligence artificielle évolue au point de permettre les premiers drones automatisés et les voitures sans conducteur, de nombreux emplois disparaissant en raison de machines plus avancées. L'argent physique disparaît, toutes les transactions se faisant numériquement.
 
 Calendrier: 1990 AD - 2050 AD</French>
@@ -3469,8 +3544,9 @@ Calendrier: 1990 AD - 2050 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_MEDIEVAL_STRATEGY</Tag>
 		<English>A Medieval society is one which has reached further levels of refinement in culture and technology compared to Classical times. Stronger blacksmithing techniques allow heavier armor, making heavy cavalry and other forces the weapon of choice on the battlefield along with increasingly powerful siege weaponry. Fortifications improve, creating fortresses capable of sustaining a siege for months if need be due not only to sturdy construction but also food and supply storage. New structures like wind and watermills appear with the advent of the first gears. Gunpowder weapons begin to be refined toward the end of this period, foreshadowing the second great change in warfare since ancient times.
-		
+
 Time Frame: 450 AD - 1400 AD</English>
+
 		<French>Une société du Moyen-Âge est une société qui a atteint des niveaux de raffinement supplémentaires dans la culture et une technologie par rapport à l'époque Classique. Des techniques de forge plus fortes permettent des armures plus lourdes, faisant de la cavalerie lourde et d'autres forces l'arme de choix sur le champ de bataille ainsi que des armes de siège de plus en plus puissantes. Les fortifications s'améliorent, créant des forteresses capables de soutenir un siège pendant des mois si nécessaire en raison non seulement d'une construction robuste, mais aussi du stockage de la nourriture et des fournitures. De nouvelles structures comme le vent et les moulins à eau apparaissent avec l'avènement des premiers engrenages. Les armes à poudre commencent à être raffinées vers la fin de cette période, préfigurant le deuxième grand changement dans la guerre depuis les temps anciens.
 
 Calendrier: 450 AD - 1400 AD</French>
@@ -3487,8 +3563,9 @@ Calendrier: 450 AD - 1400 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_NANOTECH_STRATEGY</Tag>
 		<English>The Nanotech era is a logical evolution of the previous information age. Computers become sentient, and sentient robots begin to appear. Nanites are able to provide a nearly limitless capacity for construction, and small nano-factories find a place first in the homes of developed nations, then in developing nations. Poverty as we know it begins to disappear, and existing systems of government and society are shaken. Capitalism begins to give way to a post-scarcity economy. However not everything is all bring. Nanotech and robotics also become used as deadly weapons. Fierce wars are fought as traditional totalitarian governments fight to maintain control over populations suddenly able to produce nearly anything. MAD or mutually assured destruction is rendered obsolete due to nanotech. With the removal of nuclear deterrence, many powerful countries turn again towards conquest, but the dark spectre of nanotech hangs over the world as the potential for doomsday is much greater than the era of nuclear exchange. Machine governments become possible, and many sophisticated AI attempt at domination in order to protect humanity from itself.
-		
+
 Time Frame: 2050 AD - 2150 AD</English>
+
 		<French>L'ère Nanotech est une évolution logique de l'ère de l'information précédente. Les ordinateurs deviennent sensibles et les robots sensibles commencent à apparaître. Les nanites sont capables de fournir une capacité de construction presque illimitée, et les petites nano-usines trouvent leur place d'abord dans les foyers des pays développés, puis dans les pays en développement. La pauvreté telle que nous la connaissons commence à disparaître et les systèmes de gouvernement et de société existants sont ébranlés. Le capitalisme commence à céder la place à une économie post-pénurie. Cependant tout n'est pas tout apporter. La nanotechnologie et la robotique sont également utilisées comme armes mortelles. Des guerres féroces sont menées alors que les gouvernements totalitaires traditionnels se battent pour maintenir le contrôle sur des populations soudainement capables de produire presque tout. La destruction MAD ou mutuellement assurée est rendue obsolète en raison des nanotechnologies. Avec la suppression de la dissuasion nucléaire, de nombreux pays puissants se tournent à nouveau vers la conquête, mais le spectre sombre des nanotechnologies plane sur le monde, car le potentiel de la fin du monde est bien plus grand que l'ère des échanges nucléaires. Les gouvernements de machines deviennent possibles, et de nombreuses IA sophistiquées tentent de dominer afin de protéger l'humanité d'elle-même.
 
 Calendrier: 2050 AD - 2150 AD</French>
@@ -3509,8 +3586,9 @@ Calendrier: 2050 AD - 2150 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_PREHISTORIC_STRATEGY</Tag>
 		<English>Prehistory (Latin, pra = before; Greek, iotopia = history) is a term used to describe the period before recorded history. Paul Tournal originally coined the term Pré-historique in describing the finds he had made in the caves of southern France. The term "prehistory" can be used to refer to all time since the beginning of the universe, although it is more often used in referring to the period of time since life appeared on Earth, or even more specifically to the time since human-like beings appeared.
-		
+
 Time Frame: 200 000 BC - 12 000 BC</English>
+
 		<French>La préhistoire (latin, pra = avant; grec, iotopie = histoire) est un terme utilisé pour décrire la période avant l'histoire enregistrée. Paul Tournal a initialement inventé le terme Pré-historique en décrivant les découvertes qu'il avait faites dans les grottes du sud de la France. Le terme "préhistoire" peut être utilisé pour se référer à tous les temps depuis le début de l'univers, bien qu'il soit plus souvent utilisé pour se référer à la période de temps depuis que la vie est apparue sur Terre, ou même plus spécifiquement au temps depuis que les êtres humains sont apparus.
 
 Calendrier: 200 000 avant JC - 12 000 avant JC</French>
@@ -3543,8 +3621,9 @@ Calendrier: 200 000 avant JC - 12 000 avant JC</French>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_RENAISSANCE_STRATEGY</Tag>
 		<English>The Renaissance begins with the advent of the printing press, further refinements in gunpowder weaponry, and the advent of ships capable of traversing the world. New thoughts on government and religion, much like the Classical era, shape this period as well. Many religions schism as the traditional teachings are again brought to light. Science as a serious discipline emerges for the first time, and advances in medicine and astronomy improve the knowledge of the physical world. Religious explanations for existence and the origin of the universe are questioned, and serious schisms between science and religion occur in some cases, but not all. Towards the end of this period massive oceanic empires appear, colonizing far off lands and trading and dominating far off people. Many native peoples are displaced or enslaved.
-		
+
 Time Frame: 1400 AD - 1750 AD</English>
+
 		<French>La Renaissance commence avec l'avènement de l'imprimerie, de nouveaux perfectionnements dans l'armement à la poudre à canon et l'avènement de navires capables de traverser le monde. De nouvelles réflexions sur le gouvernement et la religion, tout comme l'ère Classique, façonnent également cette période. De nombreuses religions sont schistes alors que les enseignements traditionnels sont à nouveau mis en lumière. La science en tant que discipline sérieuse émerge pour la première fois, et les progrès de la médecine et de l'astronomie améliorent la connaissance du monde physique. Les explications religieuses de l'existence et de l'origine de l'univers sont remises en cause, et de graves schismes entre science et religion se produisent dans certains cas, mais pas tous. Vers la fin de cette période, des empires océaniques massifs apparaissent, colonisant des terres lointaines et commercialisant et dominant des peuples lointains. De nombreux peuples autochtones sont déplacés ou réduits en esclavage.
 
 Calendrier: 1400 AD - 1750 AD</French>
@@ -3562,8 +3641,9 @@ Calendrier: 1400 AD - 1750 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_TRANSCENDENT_STRATEGY</Tag>
 		<English>The Transcendent era is a period in the far future. Mankind has the ability to time travel, transverse diamensions, settle the known and increasingly unknown parts of the universe.
-		
+
 Time Frame: 4000 AD - 6000 AD</English>
+
 		<French>L'ère transcendantale est une période lointaine. L'humanité a la capacité de voyager dans le temps, des dimensions parallèles, de s'installer dans les parties connues et de plus en plus inconnues de l'univers.
 
 Calendrier: 4000 AD - 6000 AD</French>
@@ -3584,18 +3664,12 @@ Calendrier: 4000 AD - 6000 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_ERA_TRANSHUMAN_STRATEGY</Tag>
 		<English>The transhuman era represents a period following the nanotech era. In the transhuman era in order to combat the increased hostility between machine and human life, as well as improve themselves, and for some, reach some kind of immortality, some of mankind merges with technology. The transhuman movement actually began in the Information age, but only became possible with the advanced technologies of the late nanotech period. While some humans choose to embrace transhumanism, a counter movement, or new humanist movement also appears, which is diverse, including religious people of all stripes, some scientists warning of the possible negative ramifications of transhumanism, and others simply horrified or opposed to the idea. Some of the Transhumans attempt to force humans to convert. The line between machine and man begins to blur, as machine life becomes more human with emotions, many developing competing ideas, leading to further conflict. Transhumans, Machine factions, and normal humans continue to struggle, some against each other and some allied. Humanity also begins colonizing the solar system in this period, many escaping the warfare on earth to seek a better life. Primitive terraforming allows Mars to become habitable, and eventually the technology improves to allow the construction of massive artificial space colonies. Space warfare appears, first with space fightercraft, developed from shuttles, then with larger ships as well as space faring robots of massive size, some piloted by humans. Eventually interplanetary warfare becomes possible when ships no longer take enormous amounts of time to transverse space. Some of these wars are traditional wars of conquest over resources, others over ideology as the humanist/transhumanist and various machine factions battle it out in space.
-		
+
 Time Frame: 2150 AD - 2300 AD</English>
+
 		<French>L'ère transhumaine représente une période qui suit l'ère nanotechnologique. À l'ère transhumaine, afin de lutter contre l'hostilité accrue entre la machine et la vie humaine, ainsi que de s'améliorer, et pour certains, d'atteindre une sorte d'immortalité, une partie de l'humanité fusionne avec une technologie. Le mouvement transhumain a réellement commencé à l'ère de l'information, mais n'est devenu possible qu'avec les technologies avancées de la fin de la période nanotechnologique. Alors que certains humains choisissent d'embrasser le transhumanisme, un contre-mouvement ou un nouveau mouvement humaniste apparaît également, qui est diversifié, y compris des religieux de toutes les allégeances, certains scientifiques avertissant des ramifications négatives possibles du transhumanisme, et d'autres simplement horrifiés ou opposés à l'idée . Certains des Transhumains tentent de forcer les humains à se convertir. La frontière entre la machine et l'homme commence à s'estomper, alors que la vie de la machine devient plus humaine avec des émotions, beaucoup développant des idées concurrentes, conduisant à de nouveaux conflits. Les transhumains, les factions Machine et les humains normaux continuent de lutter, certains les uns contre les autres et certains alliés. L'humanité commence également à coloniser le système solaire à cette période, beaucoup échappant à la guerre sur terre pour chercher une vie meilleure. La terraformation primitive permet à Mars de devenir habitable, et finalement une technologie s'améliore pour permettre la construction de colonies spatiales artificielles massives. La guerre spatiale apparaît, d'abord avec des chasseurs spatiaux, développés à partir de navettes, puis avec des navires plus grands ainsi que des robots spatiaux de taille massive, certains pilotés par des humains. Finalement, la guerre interplanétaire devient possible lorsque les navires ne mettent plus énormément de temps à traverser l'espace. Certaines de ces guerres sont des guerres de conquête traditionnelles sur les ressources, d'autres sur l'idéologie, car les factions humanistes / transhumanistes et diverses machines se battent dans l'espace.
 
 Calendrier: 2150 AD - 2300 AD</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_EWTRADE_STRATEGY</Tag>
-		<English>Build this corporation in order to get bonuses.</English>
-		<French>Construisez cette corporation afin d'obtenir des bonus.</French>
-		<Spanish>Construye esta corporación para obtener bonificaciones.</Spanish>
-		<Polish>Zbuduj Siedzibę tej korporacji by otrzymać bonusy.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EXCILE_TEXT</Tag>
@@ -3699,14 +3773,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_EXPR_TRUE</Tag>
 		<English>True</English>
 		<French>vrai</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FASHION_STRATEGY</Tag>
-		<English>Build the [COLOR_BUILDING_TEXT]Fashion House[COLOR_REVERT] Headquarters to create the [COLOR_HIGHLIGHT_TEXT]Fashion House Corporation[COLOR_REVERT] which consumes [COLOR_HIGHLIGHT_TEXT]Silk[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cotton[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Dye[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cow[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Wool[COLOR_REVERT] or [COLOR_HIGHLIGHT_TEXT]Fur[COLOR_REVERT] and adds a culture bonus to every city where the [COLOR_HIGHLIGHT_TEXT]Fashion House Corporation[COLOR_REVERT] is present. The Headquarters provide gold for each city in the world with a Fashion House franchise.</English>
-		<French>Construire le siège de [COLOR_BUILDING_TEXT]Maison de la Mode[COLOR_REVERT] pour créer la corporation [COLOR_HIGHLIGHT_TEXT]Maison de la Mode[COLOR_REVERT] qui consomme [COLOR_HIGHLIGHT_TEXT]Soie[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Coton[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Teinture[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Vache[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Laine[COLOR_REVERT] ou [COLOR_HIGHLIGHT_TEXT]Fourrures[COLOR_REVERT] et ajoute un bonus culture dans chaque ville où la corporation [COLOR_HIGHLIGHT_TEXT]Maison de la Mode[COLOR_REVERT] est présente. Le Siège génère de l'or, pour chaque ville pour laquelle il y a une franchise Maison de la Mode.</French>
-		<Italian>Costruisci il [COLOR_BUILDING_TEXT]QG di Fashion House[COLOR_REVERT] per creare la corporazione [COLOR_HIGHLIGHT_TEXT]Fashion House[COLOR_REVERT] che consuma [COLOR_HIGHLIGHT_TEXT]Seta[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cotone[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Tintura[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Bovini[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Lana[COLOR_REVERT] o COLOR_HIGHLIGHT_TEXT]Pellicce[COLOR_REVERT] e dà un bonus di cultura in tutte le città dove è presente [COLOR_HIGHLIGHT_TEXT]Fashion House[COLOR_REVERT]. Il QG fornisce oro per ogni città in cui è diffusa Fashion House.</Italian>
-		<Spanish>Construye la maravilla [COLOR_BUILDING_TEXT]Fashion House[COLOR_REVERT] para crear la corporación [COLOR_HIGHLIGHT_TEXT]Fashion House[COLOR_REVERT], que consume [COLOR_HIGHLIGHT_TEXT]Seda[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Algodón[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Tintura[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Reses[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Lana[COLOR_REVERT] y [COLOR_HIGHLIGHT_TEXT]Pieles[COLOR_REVERT], y añade una bonificación a la cultura en todas las ciudades donde [COLOR_HIGHLIGHT_TEXT]Fashion House[COLOR_REVERT] esté presente. La sede proporciona oro por cada ciudad del mapa en la que haya una franquicia de Fashion House.</Spanish>
-		<Polish>Zbuduj siedzibę [COLOR_BUILDING_TEXT]Domu Mody[COLOR_REVERT]by utworzyć [COLOR_HIGHLIGHT_TEXT]Korporacje Domów Mody[COLOR_REVERT] która zużywa [COLOR_HIGHLIGHT_TEXT]Jedwab[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Bawełne[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Barwniki[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Owce[COLOR_REVERT] lub [COLOR_HIGHLIGHT_TEXT]Futro[COLOR_REVERT] i daje bonus do kultury każdemu miastu w którym znajduje się [COLOR_HIGHLIGHT_TEXT]Korporacja Domów Mody[COLOR_REVERT]. Siedziba zapewnia złoto dla każdego mista w którym znajduje się ta korporacja.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FINANCE_ADVISOR_CITY_MAINT_COST_DISTANCE</Tag>
@@ -4236,14 +4302,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>%D1_Change[ICON_HEALTHY] od Specjalistów</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GORILLA_PEDIA</Tag>
-		<English>Gorillas, the largest of the living primates, are ground-dwelling omnivores that inhabit the forests of Africa. Gorillas are divided into two species and (still under debate as of 2007) either four or five subspecies. Its DNA is 97%-98% identical to that of a human, and are the next closest living relatives to humans after the two chimpanzee species.</English>
-		<French>Les gorilles, le plus grand des primats vivants, sont des omnivores de terre-logement qui habitent les forêts de l'Afrique. Des gorilles sont encore divisés en deux espèces et (sous la discussion en date de 2007) quatre ou cinq sous-espèces. Son ADN est 97%-98% identique à celui d'un humain, et est les prochains parents vivants les plus étroits aux humains après les deux espèces de chimpanzé.</French>
-		<German>Gorillas, das größte der lebenden Primas, sind Boden-Wohnung Allesfresser, die die Wälder von Afrika bewohnen. Gorillas werden in zwei Sorten und (noch unter Debatte ab 2007) geteilt, entweder vier oder fünf Unterarten. Seine DNA ist 97%-98% identisch zu dem eines Menschen und ist die folgenden nähsten lebenden Verwandten zu den Menschen nach den zwei Schimpansesorten.</German>
-		<Italian>I gorillas, i più grandi dei primati viventi, sono onnivori della terra-dimora che abitano le foreste dell'Africa. I gorillas sono divisi ancora in due specie e (sotto il dibattito a partire da 2007) quattro o cinque sottospeci. Il relativo DNA è 97%-98% identico a quello di un essere umano ed è i parenti viventi più vicini seguenti agli esseri umani dopo le due specie dello scimpanzè.</Italian>
-		<Spanish>Los gorilas, los más grandes de los primates vivos, son los omnívoros de la tierra-vivienda que habitan los bosques de África. Los gorilas todavía se dividen en dos especies y (bajo discusión en fecha 2007) cuatro o cinco subespecies. Su DNA es 97%-98% idéntico a el de un ser humano, y es los parientes vivos más cercanos siguientes a los seres humanos después de las dos especies del chimpancé.</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GRAPH_SMOOTHING</Tag>
 		<English>Smooth Factor %d1_Num</English>
 		<French>Facteur de lissage %d1_Num</French>
@@ -4251,11 +4309,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Italian>Fattore di smoothing %d1_Num</Italian>
 		<Spanish>Factor de suavizado %d1_Num</Spanish>
 		<Polish>Współczynnik Wygładzania %d1_Num</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_GREAT_DOCTOR_STRATEGY</Tag>
-		<English>Use the Great Doctor to build the [LINK=BUILDING_UNIVERSAL_HEALTH_CARE]Universal Health Care[\LINK] National Wonder, discover a new technology or add to a city as a super specialist.</English>
-		<French>Utilisez le Docteur illustre pour construire la merveille nationale [LINK=BUILDING_UNIVERSAL_HEALTH_CARE]Couverture Santé Universelle[\ LINK], ou découvrir une nouvelle technologie ou encore ajoutez-le à une ville en tant que super spécialiste.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HANDICAP_CHIEFTAIN</Tag>
@@ -4570,7 +4623,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Italian>La tua unità %s1_UnitName ha effettuato un bombardamento ad area!</Italian>
 		<Spanish>¡[NUM1:Tu:Tu:Tus:Tus] %s1_UnitName [NUM1:ha:ha:han:han] cañoneado con éxito!</Spanish>
 		<Polish>Twoja jednostka (%s1_UnitName) ucierpiała z powodu ataku dystansowego!</Polish>
-	</TEXT>	
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_HEALTHY_TECH_SPECIALIST</Tag>
 		<English>+%d1[ICON_HEALTHY] "Our advanced society has made the efforts of some professions a cleaner affair!"</English>
@@ -4703,7 +4756,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<French>se détériore</French>
 		<Spanish>empeorando</Spanish>
 		<Polish>spada</Polish>
-	</TEXT>	
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_INSIDIOUSNESS_TEXT</Tag>
 		<English>[ICON_BULLET]Insidiousness (Ability to Evade Investigation): %s1_Amount%%</English>
@@ -5777,20 +5830,20 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>C.N</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MALLWART_STRATEGY</Tag>
-		<English>Build this corporation in order to get fruit and groceries bonuses.</English>
-		<French>Construisez cette corporation afin d'obtenir des bonus de fruits et d'épicerie.</French>
-		<Italian>Costruisci questa corporazione per ottenere bonus da frutta e verdura.</Italian>
-		<Spanish>Construye esta corporación para obtener bonificaciones relacionadas con el mundo de las frutas y las verduras.</Spanish>
-		<Polish>Zbuduj Siedzibę tej korporacji by zdobyć owoce i bonusy do żywności.</Polish>
+		<Tag>TXT_KEY_MAPSWITCH_EXAMPLE</Tag>
+		<English>TBD</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MAPSTER_STRATEGY</Tag>
-		<English>Mapster is a good way to inform the populace of your nation's enduring successes...</English>
-		<French>Mapster est un bon moyen d'informer la population des succès durables de votre nation...</French>
-		<Italian>Mapster è un ottimo modo per informare la popolazione della tua nazione del tuo successo...</Italian>
-		<Spanish>Mapster es una buena opción para informar a la población de los grandes éxitos de tu nación...</Spanish>
-		<Polish>Mapster jest dobrym sposobem informowania Twojej ludności o Twoich sukcesach...</Polish>
+		<Tag>TXT_KEY_MAPSWITCH_EXAMPLE_HELP</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_EXAMPLE</Tag>
+		<English>TBD</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MAP_EXAMPLE_HELP</Tag>
+		<English>TBD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MAP_SCRIPT_PERFECTMONGOOSE_DESCR</Tag>
@@ -5833,14 +5886,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_MARAUDER_YOU</Tag>
 		<English>[COLOR_SELECTED_TEXT]You have plundered %d2 [ICON_GOLD] from %s1![COLOR_REVERT]</English>
 		<French>[COLOR_SELECTED_TEXT]Vous avez pillé %d2 [ICON_GOLD] à %s1![COLOR_REVERT]</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MCDOWELLS_STRATEGY</Tag>
-		<English>Build the [COLOR_BUILDING_TEXT]Big McDowells[COLOR_REVERT] Headquarters to create the [COLOR_HIGHLIGHT_TEXT]Big McDowells Corporation[COLOR_REVERT] which consumes [COLOR_HIGHLIGHT_TEXT]Cow[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Pig[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Potato[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Wheat[COLOR_REVERT] or [COLOR_HIGHLIGHT_TEXT]Salt[COLOR_REVERT] and adds a culture bonus to every city where the [COLOR_HIGHLIGHT_TEXT]Big McDowells Corporation[COLOR_REVERT] is present. The Headquarters provide gold for each city in the world with a Big McDowells franchise.</English>
-		<French>Construire le siège de [COLOR_BUILDING_TEXT]Big McDowells[COLOR_REVERT] pour créer la corporation [COLOR_HIGHLIGHT_TEXT]McDowells[COLOR_REVERT] qui consomme [COLOR_HIGHLIGHT_TEXT]Vache[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cochon[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]pommes de terre[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Blé[COLOR_REVERT] ou [COLOR_HIGHLIGHT_TEXT]Sel[COLOR_REVERT] et ajoute un bonus culture dans chaque ville où la corporation [COLOR_HIGHLIGHT_TEXT]McDowells[COLOR_REVERT] est présente. Le Siège génère de l'or, pour chaque ville pour laquelle il y a une franchise McDowells.</French>
-		<Italian>Costruisci il [COLOR_BUILDING_TEXT]QG di Big McDowells[COLOR_REVERT] per creare la corporazione [COLOR_HIGHLIGHT_TEXT]Big McDowells[COLOR_REVERT], che consuma [COLOR_HIGHLIGHT_TEXT]Bovino[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Maiale[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Patate[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Granoturco[COLOR_REVERT] o [COLOR_HIGHLIGHT_TEXT]Sale[COLOR_REVERT] e da un bonus alla cultura in ogni città dove è presente [COLOR_HIGHLIGHT_TEXT]Big McDowells[COLOR_REVERT]. Il QG fornisce oro per ogni città nel mondo in cui Big McDowells ha una filiale.</Italian>
-		<Spanish>Construye la maravilla [COLOR_BUILDING_TEXT]McDowells[COLOR_REVERT] para crear la corporación [COLOR_HIGHLIGHT_TEXT]McDowells [COLOR_REVERT], que consume [COLOR_HIGHLIGHT_TEXT]Reses[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Cerdos[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Patatas[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Trigo[COLOR_REVERT] y [COLOR_HIGHLIGHT_TEXT]Sal[COLOR_REVERT] y añade una bonificación a los alimentos en todas las ciudades donde [COLOR_HIGHLIGHT_TEXT]McDowells[COLOR_REVERT] esté presente. La sede proporciona oro por cada ciudad del mapa en la que haya una franquicia de McDowells.</Spanish>
-		<Polish>Zbuduj siedzibę [COLOR_BUILDING_TEXT]McDonalda[COLOR_REVERT]by utworzyć [COLOR_HIGHLIGHT_TEXT]Korporacje McDonald[COLOR_REVERT] która zużywa [COLOR_HIGHLIGHT_TEXT]Krowy[COLOR_REVERT], [COLOR_HIGHLIGHT_TEXT]Świnie[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Ziemniaki[COLOR_REVERT],[COLOR_HIGHLIGHT_TEXT]Pszenice[COLOR_REVERT] lub [COLOR_HIGHLIGHT_TEXT]Sól[COLOR_REVERT] i daje bonus do kultury każdemu miastu w którym znajduje się [COLOR_HIGHLIGHT_TEXT]Korporacja McDonald[COLOR_REVERT]. Siedziba zapewnia złoto dla każdego mista w którym znajduje się ta korporacja.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MEMORY_BACKSTAB</Tag>
@@ -5931,14 +5976,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Italian>Il countdown del governo di pietà è stato abortito! La partita continua normalmente...</Italian>
 		<Spanish>¡Se ha abortado la cuenta atrás de la Regla de gracia! La partida continúa normalmente...</Spanish>
 		<Polish>Czas zasady litości zatrzymany! Normalna gra będzie kontynuowana...</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MILEHIGH_STRATEGY</Tag>
-		<English>The best way to see the world is from an airplane</English>
-		<French>La meilleure façon de voir le monde est depuis un avion</French>
-		<Italian>Il modo migliore per vedere il mondo è da un aeroplano</Italian>
-		<Spanish>La mejor forma de ver el mundo desde un aeroplano.</Spanish>
-		<Polish>Najlepszy sposób na zwiedzenie świata to samolot</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MILITARY_SITREP_DEFPACTS</Tag>
@@ -6691,6 +6728,11 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<German>[COLOR_NEGATIVE_TEXT]Die Stadt kann in dieser Runde keine weitere Einheit rekrutieren[COLOR_REVERT]</German>
 		<Spanish>[COLOR_NEGATIVE_TEXT]Esta ciudad no puede reclutar otra unidad durante este turno[COLOR_REVERT]</Spanish>
 		<Polish>[COLOR_NEGATIVE_TEXT]Miasto nie może zwerbować innej jednostki w tej turze[COLOR_REVERT]</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_CITY_MILITIA_EMERGED</Tag>
+		<English>City militia has emerged! Resistance:</English>
+		<French>Des Habitants ont pris les armes et se sont constitués en Milice ! Résistance :</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_CITY_PRODUCTION_DESTROYED</Tag>
@@ -9373,11 +9415,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>Twoje jednostki poniosły straty uboczne! (%d1_Num [NUM1:Unit:Units])</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_CITY_MILITIA_EMERGED</Tag>
-		<English>City militia has emerged! Resistance:</English>
-		<French>Des Habitants ont pris les armes et se sont constitués en Milice ! Résistance :</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_YOU_UNITS_UNDER_ATTACK</Tag>
 		<English>Your forces are under attack by %s1_player!</English>
 		<French>Vos forces sont attaquées par les troupes de %s1_player!</French>
@@ -9528,14 +9565,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<French>La Ville a établi une Zone de Contrôle. (Les Unités ennemies ne peuvent pas se déplacer directement d'une case adjacent à une autre.)</French>
 		<Italian>La città ha stabilito una zona di controllo. (Le unità nemiche non possono muoversi direttamente da uno spazio adiacente ad un altro spzio adiacente.)</Italian>
 		<Polish>Miasta mają włączoną Strefę Kontroli. (Jednostki wroga nie będą się mogły przemieszczać miedzy polami przyległymi.)</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MOBBY_STRATEGY</Tag>
-		<English>Build this corporation to get benefits from all meats bonuses.</English>
-		<French>Construisez cette corporation pour profiter de tous les bonus de viande.</French>
-		<Italian>Costruisci questa corporazione per ottenere bonus da tutti i tipi di carne.</Italian>
-		<Spanish>Construye esta corporación para obtener bonificaciones de todos los recursos cárnicos.</Spanish>
-		<Polish>Zbuduj siedzibę by zdobyć wszystkie bonusy do mięs.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MOD_AIAUTOPLAY</Tag>
@@ -10542,14 +10571,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>Wrzesień</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_MOONBEAN_STRATEGY</Tag>
-		<English>Build this corporation in order to get economic bonuses.</English>
-		<French>Construisez cette corporation afin d'obtenir des bonus économiques.</French>
-		<Italian>Costruisci questa corporazione per ottenere bonus economici.</Italian>
-		<Spanish>Construye esta corporación para obtener bonificaciones económicas.</Spanish>
-		<Polish>Zbuduj siedzibę by zdobyć bonusy ekonomiczne.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MORECIV4LERTS_BONUS_NOT_AVAIL</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]%s1 won't trade %s2[COLOR_REVERT]</English>
 		<French>[COLOR_HIGHLIGHT_TEXT]%s1 ne veut plus échanger: %s2[COLOR_REVERT]</French>
@@ -10907,33 +10928,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Italian>I Sindacati nell'impero %s1_civ_adjective sono fuorilegge!</Italian>
 		<Spanish>¡Los sindicatos han sido ilegalizados en el imperio %s1_civ_adjective!</Spanish>
 		<Polish>Związki zawodowe w Imperium %s1_civ_adjective Empire zostały zakazane.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HELLENIC_CATHEDRAL_PEDIA</Tag>
-		<English>In Civilization IV, a cathedral is defined as an especially large and ornate religious building where the faithful worship. Only the most prosperous cities can afford to create cathedrals, as they require huge amounts of raw material and years of dedicated labor by skilled craftsmen. For example, the Notre Dame Cathedral in Paris, France, took over two centuries to complete.</English>
-		<French>Dans Civilization IV, un grand lieu de culte est défini comme un édifice religieux particulièrement grand et richement orné dans lequel les fidèles pratiquent leur religion: "cathédrales" pour les chrétiens, "mosquées" pour les musulmans et "synagogues" pour les juifs. Seules les villes les plus prospères ont les moyens de construire de tels édifices. En effet, ils nécessitent d'énormes quantités de matériaux bruts et des artisans spécialisés doivent y consacrer des années de travail. Ainsi, il a fallu plus de deux siècles pour terminer la cathédrale Notre-Dame à Paris.</French>
-		<German>In Civilization IV sind Kathedralen große und prächtige Gotteshäuser, in denen Gläubige beten. Nur die reichsten aller Städte können sich den Bau einer Kathedrale leisten, da hierfür große Mengen an Baumaterial und die jahrelange Arbeit erfahrener Handwerker erforderlich sind. Die Kathedrale von Notre Dame in Paris wurde beispielsweise erst nach 200-jähriger Bauzeit fertig gestellt.</German>
-		<Italian>In Civilization IV, viene definito cattedrale un edificio religioso particolarmente grande e sfarzoso adibito a luogo di culto per i fedeli. Solamente le città più prosperose possono permettersi l'edificazione di cattedrali poiché sono necessari un'enorme quantità di materiali e operai esperti. Per esempio, per completare la cattedrale di Notre-Dame de Paris, in Francia, ci sono voluti più di due secoli.</Italian>
-		<Spanish>En Civilization IV, una catedral se define como un edificio religioso especialmente grande y ornamentado en el que se reúnen los fieles para celebrar sus ritos. Solo las ciudades más grandes pueden permitirse el lujo de crear catedrales, puesto que requieren enormes cantidades de materias primas y años de dedicación por parte de trabajadores especializados. Por ejemplo, la catedral de Notre Dame, Francia, tardó dos siglos en completarse.</Spanish>
-		<Polish>W Cywilizacji IV katedra stanowi szczególnie doniosły i bogato przyozdobiony gmach religijny, w którym wierni oddają cześć swojemu bóstwu. Jedynie najbardziej majętne miasta mogą sobie pozwolić na wybudowanie katedry, jako że ich postawienie wymaga olbrzymiej ilości surowców do budowy oraz lat wytężonej pracy licznych, wprawnych w swym fachu rzemieślników. Dla przykładu ukończenie katedry Notre Dame w Paryżu, we Francji, zajęło ponad dwa stulecia.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HELLENIC_MONASTERY_PEDIA</Tag>
-		<English>A monastery is a building where monks can retreat from the world and concentrate upon the divine. Usually a monastery will have strict rules of conduct to protect its unworldly members from temptation. In some monasteries, the monks are totally silent; in others no visitors are allowed inside. Monasteries usually have many daily rituals and religious services. [PARAGRAPH:1] Throughout the ages monasteries have often been centers of learning. In remote areas the monks may be the only literate people for miles around. Monks have often been employed as scribes, copying out the words of their religion's sacred scripture. Monasteries frequently have extensive libraries, holding religious, scientific, medical and philosophical texts.</English>
-		<French>Un monastère est un édifice dans lequel les moines peuvent se retirer du monde et se concentrer sur le divin. Généralement, les règles de conduite y sont strictes afin de protéger ses membres, détachés du monde, de la tentation. Dans certains monastères, les moines sont totalement silencieux ; dans d'autres, les visiteurs ne sont pas autorisés à pénétrer dans leur enceinte. Les monastères ont généralement de nombreux rituels et services religieux quotidiens. [PARAGRAPH:1]A travers les siècles, les monastères ont souvent été des centres d'érudition. Dans les zones retirées, les moines étaient parfois les seules personnes sachant lire et écrire à des kilomètres à la ronde. Ils ont souvent servi de scribes, recopiant les textes sacrés de leur religion. Les monastères ont généralement de grandes bibliothèques possédant des textes religieux, scientifiques, médicaux et philosophiques.</French>
-		<German>Klöster sind Gebäude, in die sich Mönche zurückziehen, um sich auf Gott zu konzentrieren. In Klöstern gelten strenge Verhaltensregeln, die die Mönche vor Versuchungen bewahren sollen. In einigen Klöstern herrscht ein strenges Redeverbot, in anderen sind keine Besucher gestattet. Die Mönche selbst gehen täglich ihren religiösen Pflichten nach. [PARAGRAPH:1] In der Vergangenheit waren Klöster stets auch Zentren des Wissens. In abgelegenen Gegenden waren die Mönche oft die einzigen gebildeten Menschen, die als Schreiber ihre religiösen Schriften kopierten. Klöster haben nicht selten Bibliotheken, in denen unzählige religiöse, wissenschaftliche, medizinische und philosophische Texte aufbewahrt werden.</German>
-		<Italian>Il monastero è un edificio nel quale i monaci possono ritirarsi dal mondo e concentrarsi sul Divino. In genere, nel monastero vige un regolamento ferreo per proteggere i membri della comunità dalle tentazioni. In alcuni monasteri, i monaci erano completamente silenziosi e non erano permesse visite dall'esterno per non interrompere i rituali quotidiani e le cerimonie religiose. [PARAGRAPH:1] Nel corso dei secoli, i monasteri sono stati spesso centro di insegnamento: in alcune zone, i monaci erano sovente gli unici in grado di leggere e scrivere nel giro di diversi chilometri. Da sempre, i monaci sono stati utilizzati come scribi per copiare le parole sacre della propria religione; i monasteri ospitavano spesso delle biblioteche che contenevano testi religiosi, scientifici, medici e filosofici.</Italian>
-		<Spanish>Un monasterio es un edificio en el que los monjes pueden retirarse del mundo para concentrarse en los asuntos de la divinidad. Normalmente tienen estrictas reglas de comportamiento para proteger a sus miembros de la tentación. En algunos monasterios, los monjes guardan un silencio total, mientras que en otros no se permite el acceso a los visitantes. Lo habitual es que sus miembros tengan que celebrar a diario muchos rituales y servicios religiosos. [PARAGRAPH:1] A lo largo de la historia, los monasterios han sido muchas veces centros de estudio. En las regiones remotas, los monjes podían ser las únicas personas letradas en muchos kilómetros a la redonda. A menudo han sido empleados como escribas, y se han dedicado a copiar los textos sagrados de su religión. Normalmente cuentan con grandes bibliotecas, que contienen textos religiosos, científicos, médicos y filosóficos.</Spanish>
-		<Polish>Klasztor jest budynkiem, w którym mnisi zamykają się przed światem zewnętrznym, dzięki czemu mogą w ciszy kontemplować bóstwo. Zazwyczaj klasztory posiadają surowe reguły postępowania, które mają na celu ochronę swoich umarłych dla świata mieszkańców przed przyziemnymi pokusami. W niektórych klasztorach mnisi zobowiązują się do zachowywania zupełnej ciszy; inne nie zezwalają na żadne odwiedziny z zewnątrz. W obrębie klasztorów zazwyczaj codziennie odbywa się wiele rytuałów i posług religijnych. [PARAGRAPH:1]Poprzez wieki klasztory niejednokrotnie stanowiły centra naukowe. Nic dziwnego, skoro w wielu odległych rejonach w promieniu wielu kilometrów mnisi jako jedyni umieli czytać i pisać. Mnisi niejednokrotnie byli zatrudniani jako skrybowie, przepisywali ręcznie święte księgi wyznawanej religii. Klasztory często posiadają rozległe biblioteki, w których znaleźć można teksty religijne, naukowe, medyczne oraz filozoficzne.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_HELLENIC_TEMPLE_PEDIA</Tag>
-		<English>In Civilization IV, a temple is defined as a building where the faithful come to worship. Christians call their temples "churches," while Muslims call theirs "mosques," and Jews call theirs, simply, "temples." Temples are far more common than cathedrals, but much less large and ornate. Even the smallest village can possess a temple.</English>
-		<French>Dans Civilization IV, un petit lieu de culte est défini comme un édifice dans lequel les fidèles viennent pratiquer leur religion: "églises" pour les chrétiens, "petites mosquées" pour les musulmans et "petites synagogues" pour les juifs. Ces petits lieux de culte sont bien plus courants que les grands lieux de culte mais sont de taille plus réduite et sont bien moins richement ornés. Même le village le plus petit peut posséder un petit lieu de culte.</French>
-		<German>In Civilization IV sind Tempel Gebäude, in denen Gläubige beten. Christen nennen ihre Tempel "Kirchen", Moslems "Moscheen". Es gibt deutlich mehr Tempel als Kathedralen. Allerdings sind sie wesentlich kleiner und schlichter. Selbst das kleinste Dorf kann einen Tempel besitzen.</German>
-		<Italian>In Civilization IV, il tempio è un edificio all'interno del quale i fedeli si recano a pregare. I Cristiani chiamano i loro templi "chiese", i Musulmani "moschee", gli Ebrei semplicemente "templi". I templi sono più comuni delle cattedrali, ma sono più piccoli e poco fastosi. Anche il villaggio più piccolo ospita un tempio.</Italian>
-		<Spanish>En Civilization IV, un templo se define como un lugar al que los fieles acuden a venerar. Los cristianos llaman a sus templos "iglesias", mientras que para los musulmanes son "mezquitas" y para los judíos, sencillamente, "templos". Son mucho más comunes que las catedrales, pero también mucho más pequeños y humildes. Hasta la más pequeña aldea puede poseer uno.</Spanish>
-		<Polish>W Cywilizacji IV świątynia stanowi budynek, w którym wierni gromadzą się w celu oddawania czci swojemu bóstwu. Chrześcijanie nazywają swoje świątynie "kościołami", muzułmanie "meczetami", zaś Żydzi po prostu "świątyniami". Świątynie są znacznie powszechniejsze od katedr, jednakże również znacznie mniejsze i mnie przyozdobione. Świątynia może się znajdować nawet w najmniejszej wiosce.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_NOT_INQUISITION_CONDITIONS</Tag>
@@ -12711,12 +12705,12 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>Twoja jednostka odrodziła się.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RED_STRATEGY</Tag>
-		<English>Build this corporation in order to get entertainment bonuses.</English>
-		<French>Construisez cette corporation afin d'obtenir des bonus de divertissement.</French>
-		<Italian>Costruisci questa corporazione per ottenere bonus dall'intrattenimento.</Italian>
-		<Spanish>Construye esta corporación para obtener bonificaciones relacionadas con el mundo del entretenimiento.</Spanish>
-		<Polish>Zbuduj siedzibę by zdobyć wszystkie bonusy z rozrywki.</Polish>
+		<Tag>TXT_KEY_RECRUITED</Tag>
+		<English>You've recruited a new militia unit.</English>
+		<French>Vous avec recruté une nouvelle unité de milice.</French>
+		<German>Ihr habt eine neue Miliz-Einheit rekrutiert.</German>
+		<Italian>Hai reclutato una nuova unità di milizia.</Italian>
+		<Polish>Zwerbowałeś nową jednostkę milicji</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_RELATION_NEAR</Tag>
@@ -13059,14 +13053,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_ROUTE_VACTRAIN</Tag>
 		<English>Vactrain</English>
 		<French>Ligne de Train sous vide</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_SAFARI_STRATEGY</Tag>
-		<English>Build this corporation in order to get hunting bonuses.</English>
-		<French>Construisez cette corporation afin d'obtenir des bonus de chasse.</French>
-		<Italian>Costruisci questa corporazione per ottenere bonus dalla caccia.</Italian>
-		<Spanish>Construye esta corporación para obtener bonificaciones relacionadas con el mundo de la caza.</Spanish>
-		<Polish>Zbuduj siedzibę by zdobyć bonusy z polowania.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SAME_UNITS_TYPE</Tag>
@@ -17035,15 +17021,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>Wolno</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ULTSOLDIER_STRATEGY</Tag>
-		<English>Build this corporation in order to get military bonuses.</English>
-		<French>Construisez cette corporation afin d'obtenir des bonus militaires.</French>
-		<German>Baue diese Gesellschaft, um Militärboni zu erhalten.</German>
-		<Italian>Costruisci questa corporazione per di ottenere bonus militari.</Italian>
-		<Spanish>Construye esta corporación para obtener bonificaciones relacionadas con el mundo militar.</Spanish>
-		<Polish>Zbuduj siedzibę by zdobyć bonusy militarne.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNHAPPY_AREA_BUILDINGS</Tag>
 		<English>+%d1[ICON_UNHAPPY] "Buildings and Effects that influence the region we are in are driving us crazy!"</English>
 		<French>+%d1[ICON_UNHAPPY] "Les bâtiments et effets influençant notre religion nous rendent fous!"</French>
@@ -18560,6 +18537,87 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>Dywizja V, Nunavut 2</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_GORILLA_PEDIA</Tag>
+		<English>Gorillas, the largest of the living primates, are ground-dwelling omnivores that inhabit the forests of Africa. Gorillas are divided into two species and (still under debate as of 2007) either four or five subspecies. Its DNA is 97%-98% identical to that of a human, and are the next closest living relatives to humans after the two chimpanzee species.</English>
+		<French>Les gorilles, le plus grand des primats vivants, sont des omnivores de terre-logement qui habitent les forêts de l'Afrique. Des gorilles sont encore divisés en deux espèces et (sous la discussion en date de 2007) quatre ou cinq sous-espèces. Son ADN est 97%-98% identique à celui d'un humain, et est les prochains parents vivants les plus étroits aux humains après les deux espèces de chimpanzé.</French>
+		<German>Gorillas, das größte der lebenden Primas, sind Boden-Wohnung Allesfresser, die die Wälder von Afrika bewohnen. Gorillas werden in zwei Sorten und (noch unter Debatte ab 2007) geteilt, entweder vier oder fünf Unterarten. Seine DNA ist 97%-98% identisch zu dem eines Menschen und ist die folgenden nähsten lebenden Verwandten zu den Menschen nach den zwei Schimpansesorten.</German>
+		<Italian>I gorillas, i più grandi dei primati viventi, sono onnivori della terra-dimora che abitano le foreste dell'Africa. I gorillas sono divisi ancora in due specie e (sotto il dibattito a partire da 2007) quattro o cinque sottospeci. Il relativo DNA è 97%-98% identico a quello di un essere umano ed è i parenti viventi più vicini seguenti agli esseri umani dopo le due specie dello scimpanzè.</Italian>
+		<Spanish>Los gorilas, los más grandes de los primates vivos, son los omnívoros de la tierra-vivienda que habitan los bosques de África. Los gorilas todavía se dividen en dos especies y (bajo discusión en fecha 2007) cuatro o cinco subespecies. Su DNA es 97%-98% idéntico a el de un ser humano, y es los parientes vivos más cercanos siguientes a los seres humanos después de las dos especies del chimpancé.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_GREAT_DOCTOR_STRATEGY</Tag>
+		<English>Use the Great Doctor to build the [LINK=BUILDING_UNIVERSAL_HEALTH_CARE]Universal Health Care[\LINK] National Wonder, discover a new technology or add to a city as a super specialist.</English>
+		<French>Utilisez le Docteur illustre pour construire la merveille nationale [LINK=BUILDING_UNIVERSAL_HEALTH_CARE]Couverture Santé Universelle[\ LINK], ou découvrir une nouvelle technologie ou encore ajoutez-le à une ville en tant que super spécialiste.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HEAVY_CAVALRY_PEDIA</Tag>
+		<English>[BOLD]Strategy:[\BOLD][PARAGRAPH:1]Heavy Cavalry are more powerful versions of Light Cavalry. They are especially effective against Melee Units in open terrain, and they can generally crush any Light Cavalry or Horse Archers they come across. [NEWLINE][NEWLINE][BOLD]Background:[\BOLD][PARAGRAPH:1]To put it simply, a Heavy Cavalry unit is better-armed and armored than its Light Cavalry cousin. The creation of Heavy Cavalry required a number of technological advances: first, larger horses had to be bred; then metal armor had to be made lighter and more flexible. All of these required a fairly wealthy and advanced civilization, but the price was well worth it: few unarmored cavalry units could hope to stand against the determined charge of Heavy Cavalry.</English>
+		<French>
+			<Text>[BOLD]Stratégie:[\BOLD][PARAGRAPH:1]La cavalerie lourde est une version plus puissante de la cavalerie légère. Elle est particulièrement efficace en terrain dégagé contre les unités de combat rapproché et elle peut généralement écraser les cavaliers légers ou les archers montés qu'elle rencontre.[NEWLINE][NEWLINE][BOLD]Histoire:[\BOLD][PARAGRAPH:1]Pour faire bref, une unité de cavalerie lourde est mieux armée et mieux protégée qu'une unité de cavalerie légère. La création de la cavalerie lourde nécessita quelques avancées technologiques. Il fallut créer des chevaux plus grands et aussi rendre les armures métalliques plus légères et plus flexibles. Ce ne put être accompli que par une civilisation riche et avancée, mais l'investissement en valait la peine, car peu d'unités de cavalerie sans armure avaient une chance de résister à la charge de la cavalerie lourde.</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>[BOLD]Strategie:[\BOLD][PARAGRAPH:1]Die Schwere Kavallerie ist eine stärkere Version der Leichten Kavallerie. Sie ist vor allem gegen Nahkampfeinheiten auf offenem Gelände effektiv und kann generell jede Leichte Kavallerie und Berittene Bogenschützen zerschlagen.[NEWLINE][NEWLINE][BOLD]Hintergrund:[\BOLD][PARAGRAPH:1]Um es einfach auszudrücken: Einheiten der Schweren Kavallerie sind besser bewaffnet und gepanzert als Einheiten der Leichten Kavallerie. Für die Erschaffung der Schweren Kavallerie waren einige technologische Errungenschaften notwendig. Zunächst mussten größere Pferde gezüchtet werden. Dann musste die metallene Rüstung leichter und flexibler gemacht werden. Zu all dessen bedurfte es einer recht wohlhabenden und fortschrittlichen Zivilisation, doch der hohe Preis war es wert: Nur wenige ungepanzerte Kavallerieeinheiten konnten darauf hoffen, einem energischen Angriff der Schweren Kavallerie standhalten zu können.</German>
+		<Italian>
+			<Text>[BOLD]Strategia:[\BOLD][PARAGRAPH:1]La cavalleria pesante è una versione più potente di quella leggera. È particolarmente efficace su terreno aperto contro le unità da combattimento ravvicinato e può letteralmente schiacciare la cavalleria leggera o gli arcieri a cavallo che dovesse incontrare sulla propria strada. [NEWLINE][NEWLINE][BOLD]Informazioni:[\BOLD][PARAGRAPH:1]In parole povere, un'unità di cavalleria pesante è più corazzata e meglio armata della cugina, la cavalleria leggera. La creazione della cavalleria pesante necessitò di diversi sviluppi: dovettero essere riprodotti dei cavalli più grandi, quindi fu necessario rendere più leggere e flessibili le armature. Ciò richiedeva civiltà abbastanza ricche ed evolute, ma ne valeva la pena: ben poche unità di cavalleria leggera avevano qualche possibilità di cavarsela davanti a una carica della cavalleria pesante.</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>[BOLD]Estrategia:[\BOLD][PARAGRAPH:1]La caballería pesada es básicamente como ligera, solo que más potente. Resulta especialmente eficaz frente a unidades de cuerpo a cuerpo a campo abierto, y normalmente puede aplastar a cualquier unidad de caballería ligera o arqueros a caballo que se cruce en su camino. [NEWLINE][NEWLINE][BOLD]Historia:[\BOLD][PARAGRAPH:1]En pocas palabras, una unidad de caballería pesada es una versión mejor armada y equipada de la caballería ligera. La creación de la caballería pesada requería una serie de avances tecnológicos: para empezar, caballos más grandes. Luego, era necesario que la armadura de metal fuera más liviana y flexible. Todo esto solo podía darse en civilizaciones opulentas y avanzadas, pero el resultado merecía la pena: pocas unidades de caballería no pesada podían resistir una carga de una de estas unidades.</Spanish>
+		<Polish>Upadek wartości jazdy rycerskiej spowodował powstanie nowych formacji kawaleryjskich w skład których wchodzili żołnierze zaciężni (najemnicy). W XV wieku, obok tradycyjnych kopijników, pojawili się na polach bitew rajtarzy i arkebuzerzy uzbrojeni w broń palną. W XVI wieku powstała dragonia będąca początkowo konną piechotą. W Europie zachodniej jazda organizowała się na regimenty i kompanie. W Polsce w XV-tym wieku kawaleria dzieliła się na oddziały kopijnicze i strzelcze. W XVI wieku pojawiła się husaria, początkowo jazda lekka, z biegiem czasu stając się najcięższą kawalerią polską. Jazdę lżejszą w Polsce stanowili pancerni, zwani na Litwie petyhorcami, którzy z czasem stali się formacją średniozbrojną. Jazdę lekką stanowiły tzw. chorągwie wołoskie i tatarskie. W XVII wieku na zachodzie pojawili się kirasjerzy. W XVIII wieku w Polsce dawne pułki husarskie i pancerne przekształcono kawalerię narodową, a jazdę lekką na nowoczesnych ułanów. W czasach wojen napoleońskich pojawiły się oddziały lansjerów, szwoleżerów i strzelców konnych. W XIX wieku w związku z dalszym rozwojem broni palnej, znaczenie kawalerii upadło. Jednak jeszcze w czasie I wojny światowej wojska obu walczących stron zmobilizowały łącznie 63 dywizje jazdy, znaczną ich część rozwiązano zresztą w czasie trwania tej wojny.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HEAVY_CAVALRY_STRATEGY</Tag>
+		<English>Good against melee units in the open and against Light Cavalry, Horse Archers, and Mounted Infantry.</English>
+		<French>
+			<Text>Unités efficaces en terrain dégagé contre les unités de combat rapproché, ainsi que contre la cavalerie légère, les archers montés et l'infanterie montée.</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Gut gegen Nahkampfeinheiten im Freien sowie gegen Leichte Kavallerie, Berittene Bogenschützen und Berittene Infanterie.</German>
+		<Italian>
+			<Text>Ottima su terreno aperto contro unità da combattimento ravvicinato e contro cavalleria leggera, arcieri a cavallo e fanteria a cavallo.</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>Es buena frente a unidades de cuerpo a cuerpo en campo abierto, así como frente a la Caballería ligera, Arqueros a caballo e Infantería montada.</Spanish>
+		<Polish>Jest to silna jednostka i doskonale nadaje się do walki z takimi jednostkami jak: Lekka Kawaleria, Łucznik Konny czy Konny Knecht.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HEAVY_SWORDSMAN_PEDIA</Tag>
+		<English>[BOLD]Strategy:[\BOLD][PARAGRAPH:1]These more powerful sword units can take on moderately-defended cities when backed up by siege units.[NEWLINE][NEWLINE][BOLD]Background:[\BOLD][PARAGRAPH:1]Heavy swords tend to be longer and heavier (of course) than light swords. They often require two hands to wield, and are typically employed as slashing weapons. A Heavy Swordsman will generally be better-armored than a Light Swordsman, and thus able to both dish out and take more damage.</English>
+		<French>
+			<Text>[BOLD]Stratégie:[\BOLD][PARAGRAPH:1]Ces unités de spadassins plus puissantes peuvent attaquer des villes moyennement défendues avec l'appui d'unités de siège.[NEWLINE][NEWLINE][BOLD]Histoire:[\BOLD][PARAGRAPH:1]Les épées lourdes sont généralement plus longues et évidemment plus lourdes que les épées légères. Elles se manient souvent à deux mains et servent généralement à porter des coups de taille. Un spadassin lourd a généralement une meilleure armure qu'un spadassin léger, ce qui lui permet d'infliger et de recevoir plus de dégâts.</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>[BOLD]Strategie:[\BOLD][PARAGRAPH:1]Diese mächtigeren Schwerteinheiten können mäßig befestigte Städte einnehmen, wenn sie von Belagerungseinheiten unterstützt werden.[NEWLINE][NEWLINE][BOLD]Hintergrund:[\BOLD][PARAGRAPH:1]Schwere Schwerter sind länger und (natürlich) schwerer als leichte Schwerter. Man braucht oft beide Hände, um sie zu schwingen, und sie werden als Hiebwaffe eingesetzt. Ein schwerer Schwertkämpfer wird generell besser gepanzert sein als ein leichter und kann dadurch mehr Schaden einstecken und anrichten.</German>
+		<Italian>
+			<Text>[BOLD]Strategia:[\BOLD][PARAGRAPH:1]Queste unità armate con spada, più potenti di quelle normali, possono conquistare città moderatamente difese, con l'aiuto di unità d'assedio.[NEWLINE][NEWLINE][BOLD]Informazioni:[\BOLD][PARAGRAPH:1]Le spade pesanti tendono a essere più lunghe e pesanti (chiaramente) di quelle leggere. Di solito devono essere impugnate a due mani e sono tipicamente usate come armi da fendenti. Uno spadaccino pesante sarà generalmente più corazzato di uno leggero, e quindi in grado di causare e ricevere più danni.</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>[BOLD]Estrategia:[\BOLD][PARAGRAPH:1]Estas unidades son más poderosas que los espadachines normales y, si cuentan con el respaldo de unidades de asedio, pueden conquistar ciudades no demasiado bien defendidas.[NEWLINE][NEWLINE][BOLD]Historia:[\BOLD][PARAGRAPH:1]Las espadas pesadas eran más largas y, lógicamente,más pesadas que las normales. A menudo debían empuñarse con las dos manos, y normalmente se empleaban como armas cortantes. Normalmente los soldados con espada pesada llevaban mejor armadura que sus equivalentes más ligeros, lo que significa que podían tanto recibir como infligir más daño.</Spanish>
+		<Polish>W społeczeństwach plemiennych, w toczenie wojen bywała zaangażowana cała męska część populacji, np. u Gurkhów, Maorysów oraz w dawnych plemionach celtyckich, germańskich i słowiańskich. W bardziej rozwiniętych społeczeństwach wojownicy często tworzyli własną kastę lub stan.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_HEAVY_SWORDSMAN_STRATEGY</Tag>
+		<English>These more powerful sword units can take on moderately-defended cities when backed up by siege units.</English>
+		<French>
+			<Text>Ces unités de spadassins plus puissantes peuvent attaquer des villes moyennement défendues avec l'appui d'unités de siège.</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Diese mächtigeren Schwerteinheiten können mäßig befestigte Städte einnehmen, wenn sie von Belagerungseinheiten unterstützt werden.</German>
+		<Italian>
+			<Text>Queste unità armate con spada, più potenti di quelle normali, possono conquistare città moderatamente difese, con l'aiuto di unità d'assedio.</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>Estas unidades son más poderosas que los espadachines normales y, si cuentan con el respaldo de unidades de asedio, pueden conquistar ciudades no demasiado bien defendidas.</Spanish>
+		<Polish>Jest to silna jednostka obdarzona niezwykłą umiejętnością władania mieczem. Przydatna do wsparcia dla jednostek oblężniczych podczas ataku na miasto.</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_INQUISITOR</Tag>
 		<English>Inquisitor</English>
 		<French>Inquisiteur</French>
@@ -18609,6 +18667,84 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 			<Plural>0</Plural>
 		</Spanish>
 		<Polish>Prawnik</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LIGHT_CAVALRY_PEDIA</Tag>
+		<English>[BOLD]Strategy:[\BOLD][PARAGRAPH:1]While not particularly effective against defenders in cities, these mid-level horse units get a +25% bonus when fighting melee or archery units. Thus they can be especially effective against non-horse units in open terrain. [NEWLINE][NEWLINE][BOLD]Background:[\BOLD][PARAGRAPH:1] Before the invention of the stirrup, riders stayed atop their horses by knee pressure alone. Close combat was virtually impossible, as the shock from a blow - taken OR given - would very likely pitch the rider onto the ground. While the earliest stirrups appeared around 500 BC, they didn't reach Europe until the sixth or seventh century AD. At this point the European Light Cavalry was born. While lightly armored when compared with Heavy Cavalry or Knights, a Light Cavalry unit can still deliver a shocking blow to infantry or siege units.</English>
+		<French>[BOLD]Stratégie:[\BOLD][PARAGRAPH:1]Bien qu'elles ne soient pas particulièrement efficaces contre les défenseurs des villes, ces unités montées de niveau moyen obtiennent un bonus de 25 % contre les unités de combat rapproché et les archers. Elles peuvent donc être très efficaces contre les unités à pied en terrain dégagé. [NEWLINE][NEWLINE][BOLD]Histoire:[\BOLD][PARAGRAPH:1]Avant l'invention des étriers, les cavaliers se maintenaient sur leur monture simplement à l'aide de leurs genoux. Le combat rapproché était quasiment impossible, car le choc d'un coup donné ou reçu avait toutes les chances de désarçonner le cavalier. Les premiers étriers apparurent vers le IVe siècle av J.-C., mais n'arrivèrent pas en Europe avant le VIe ou le VIIe siècle. C'est alors que la cavalerie légère européenne fit son apparition. Même s'ils ont une armure bien plus légère que les cavaliers lourds ou les chevaliers, les cavaliers légers peuvent être très dangereux pour les unités de siège ou d'infanterie.</French>
+		<German>[BOLD]Strategie:[\BOLD][PARAGRAPH:1]Auch wenn sie nicht besonders effektiv im Einsatz gegen Verteidigungseinheiten in Städten sind, erhalten diese mittelklassigen berittenen Einheiten einen 25%igen Bonus, wenn sie im Nahkampf oder gegen Bogenschützen eingesetzt werden. Sie können also besonders effektiv gegen unberittene Einheiten auf offenem Feld sein.[NEWLINE][NEWLINE][BOLD]Hintergrund:[\BOLD][PARAGRAPH:1]Vor der Erfindung der Steigbügel hielten sich Reiter allein durch Druck ihrer Knie im Sattel. Ein Nahkampf war so nahezu unmöglich, da die Erschütterung eines Schlages - ausgeteilt wie eingesteckt - den Reiter wahrscheinlich auf den Boden geschleudert hätte. Auch wenn die ersten Steigbügel bereits aus dem Jahre 500 v. Chr. datieren, waren sie in Europa nicht vor dem 6. oder 7. Jahrhundert n. Chr. zu finden. Zu dieser Zeit wurde die europäische Leichte Kavallerie geboren. Auch wenn sie im Vergleich zur schweren Kavallerie oder den Rittern nur sehr leicht gepanzert waren, kann die Leichte Kavallerie der Infanterie oder Belagerungseinheiten einen schweren Schlag verpassen.</German>
+		<Italian>[BOLD]Strategia:[\BOLD][PARAGRAPH:1]Pur non essendo particolarmente efficaci contro i difensori nelle città, queste unità a cavallo di medio livello ottengono un +25% di bonus quando combattono unità da combattimento ravvicinato o arcieri. Sono quindi particolarmente efficaci contro unità non montate su terreno aperto. [NEWLINE][NEWLINE][BOLD]Informazioni:[\BOLD][PARAGRAPH:1] Prima dell'invenzione della staffa, i cavalieri rimanevano a cavallo unicamente grazie alla pressione delle ginocchia. Il combattimento ravvicinato era impossibile, visto che con un colpo (dato o ricevuto) il cavaliere sarebbe probabilmente caduto a terra. Pur essendo comparse attorno al 500 a.C., le staffe non raggiunsero l'Europa se non durante il sesto o settimo secolo d.C. A questo punto nacque la cavalleria leggera. Pur essendo poco corazzata, se confrontata con la cavalleria pesante o coi cavalieri, un'unità di cavalleria leggera può comunque infliggere colpi pesanti alla fanteria o a unità d'assedio.</Italian>
+		<Spanish>[BOLD]Estrategia:[\BOLD][PARAGRAPH:1]Aunque no son especialmente eficaces para atacar ciudades, estas unidades de caballería reciben una bonificación del 25%% frente a unidades de cuerpo a cuerpo o de arqueros. Por ello, pueden resultar letales contra unidades no montadas a campo abierto. [NEWLINE][NEWLINE][BOLD]Historia:[\BOLD][PARAGRAPH:1] Antes de la invención del estribo, los jinetes se mantenían sobre los caballos utilizando solo la presión de las rodillas. Entrar en combate cuerpo a cuerpo era prácticamente imposible para este tipo de unidades, puesto que era muy probable que el impacto de un golpe, ya fuera recibido o infligido, arrojase al jinete al suelo. Aunque los primeros estribos aparecieron alrededor del año 500 a. C., en Europa no hicieron su aparición hasta los siglos VI o VII d. C. Ése fue el nacimiento de la caballería ligera europea. Aunque está menos armada y peor equipada que la caballería pesada o los caballeros, la caballería ligera puede ser letal frente a las unidades de infantería o de asedio.</Spanish>
+		<Polish>W Europie we wczesnym średniowieczu w okresie wczesnofeudalnym jazda zorganizowana była jako przyboczny oddział władcy (księcia, kniazia). Była częścią drużyny książęcej, która istniała zarówno wśród prymitywnych plemion germańskich, jak i słowiańskich (w tych ostatnich pojawiła się nieco później). W Polsce, w okresie rządów pierwszych Piastów w skład drużyny książęcej wchodziła jazda ciężka (tzw. Pancerni) oraz jazda lekka.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LIGHT_CAVALRY_STRATEGY</Tag>
+		<English>These units can be especially effective against archery or melee units in open terrain.</English>
+		<French>
+			<Text>Ces unités peuvent être particulièrement efficaces contre les unités de combat rapproché et les archers en terrain dégagé.</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Diese Einheiten können besonders effektiv gegen unberittene Einheiten auf offenem Feld sein.</German>
+		<Italian>
+			<Text>Queste unità sono particolarmente efficaci contro arcieri o unità da combattimento ravvicinato su terreno aperto.</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>Estas unidades pueden ser especialmente eficaces frente a arqueros o a unidades de cuerpo a cuerpo en campo abierto.</Spanish>
+		<Polish>Ta jednostka przydaje się do walki przeciwko jednostkom łuczniczym oraz walczącym wręcz na otwartych terenach.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LIGHT_SWORDSMAN_PEDIA</Tag>
+		<English>[BOLD]Strategy:[\BOLD][PARAGRAPH:1]These early sword units can attack enemy cities that are not too heavily defended. Of course it's very useful to bring siege equipment when trying to take cities.[NEWLINE][NEWLINE][BOLD]Background:[\BOLD][PARAGRAPH:1]During the eighth century AD, European swords tended to be long and straight, with no crossguard to protect the wielder's hand (crossguards didn't appear in Europe until the Late Middle Ages). Light Swordsmen are unarmored, or wear leather armor at best.</English>
+		<French>[BOLD]Stratégie:[\BOLD][PARAGRAPH:1]Ces premières unités de spadassins peuvent attaquer les villes ennemies qui ne sont pas trop défendues. L'équipement de siège est bien sûr très utile pour prendre une ville.[NEWLINE][NEWLINE][BOLD]Histoire:[\BOLD][PARAGRAPH:1]Au cours du VIIIe siècle, les épées européennes étaient généralement longues, droites et dépourvues de garde pour protéger la main du combattant. La garde n'apparut pas en Europe avant le haut Moyen Age. Les spadassins légers ne portent pas d'armure ou au mieux une armure de cuir.</French>
+		<German>[BOLD]Strategie:[\BOLD][PARAGRAPH:1]Diese frühen Schwerteinheiten können feindliche Städte angreifen, die nicht allzu gut gesichert sind. Es ist natürlich immer nützlich, Belagerungsausrüstung mit sich zu führen, wenn man Städte einnimmt.[NEWLINE][NEWLINE][BOLD]Hintergrund:[\BOLD][PARAGRAPH:1]Während des 8. Jahrhunderts waren die Schwerter in Europa lang und gerade und hatten keine Parierstange, um die Hand des Kämpfers zu schützen. (Parierstangen waren in Europa nicht vor dem späten Mittelalter zu finden.) Leichte Schwertkämpfer sind ungepanzert oder tragen höchsten eine leichte Lederrüstung.</German>
+		<Italian>[BOLD]Strategia:[\BOLD][PARAGRAPH:1]Queste prime unità armate con spada possono attaccare città che non sono pesantemente difese. Chiaramente è sempre utile portare con sé unità d'assedio, quando si cerca di conquistare una città.[NEWLINE][NEWLINE][BOLD]Informazioni:[\BOLD][PARAGRAPH:1]Durante l'ottavo secolo d.C., le spade europee tendevano a essere lunghe e diritte, senza guardia per proteggere la mano di chi le impugnava (le guardie non comparvero in Europa fino al tardo Medioevo). Gli spadaccini leggeri sono senza corazza, o al massimo indossano corazze di cuoio.</Italian>
+		<Spanish>[BOLD]Estrategia:[\BOLD][PARAGRAPH:1]Estas unidades pueden atacar ciudades enemigas, siempre que no estén demasiado defendidas. En cualquier caso, es muy conveniente utilizar máquinas de asedio para atacar ciudades.[NEWLINE][NEWLINE][BOLD]Historia:[\BOLD][PARAGRAPH:1]En el siglo VIII d. C., las espadas europeas solían ser largas y rectas, y no tenían guarda para proteger la mano de su propietario (las guardas no aparecieron en Europa hasta la Baja Edad Media). Los soldados con espada ligera combaten sin armadura, o como mucho con armadura de cuero.</Spanish>
+		<Polish>W społeczeństwach plemiennych, w toczenie wojen bywała zaangażowana cała męska część populacji, np. u Gurkhów, Maorysów oraz w dawnych plemionach celtyckich, germańskich i słowiańskich. W bardziej rozwiniętych społeczeństwach wojownicy często tworzyli własną kastę lub stan.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LIGHT_SWORDSMAN_STRATEGY</Tag>
+		<English>These early sword units can attack enemy cities that are not too heavily defended. Of course it's very useful to bring siege equipment when trying to take cities.</English>
+		<French>
+			<Text>Ces premières unités de spadassins peuvent attaquer les villes ennemies qui ne sont pas trop défendues. L'équipement de siège est bien sûr très utile pour prendre une ville.</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Diese frühen Schwerteinheiten können feindliche Städte angreifen, die nicht allzu gut gesichert sind. Es ist natürlich immer nützlich, Belagerungsausrüstung mit sich zu führen, wenn man Städte einnimmt</German>
+		<Italian>
+			<Text>Queste prime unità armate con spada possono attaccare città che non sono pesantemente difese. Chiaramente è sempre utile portare con sé unità d'assedio, quando si cerca di conquistare una città.</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>Estas unidades pueden atacar ciudades enemigas, siempre que no estén demasiado defendidas. En cualquier caso, es muy conveniente utilizar máquinas de asedio para atacar ciudades.</Spanish>
+		<Polish>W społeczeństwach plemiennych, w toczenie wojen bywała zaangażowana cała męska część populacji, np. u Gurkhów, Maorysów oraz w dawnych plemionach celtyckich, germańskich i słowiańskich. W bardziej rozwiniętych społeczeństwach wojownicy często tworzyli własną kastę lub stan.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MOUNTED_INFANTRY_PEDIA</Tag>
+		<English>[BOLD]Strategy:[\BOLD][PARAGRAPH:1]Mounted Infantry are less powerful than Horse Archers; however, these units do receive terrain defensive bonuses, making them far more powerful when defending in hills, woods, or city. [NEWLINE][NEWLINE][BOLD]Background:[\BOLD][PARAGRAPH:1]Mounted Infantry soldiers use horses to get to the battlefield, but once there they dismount and fight on foot. They rarely take part in charges or other horseback maneuvers, and they tend to suffer badly when engaged in such against trained cavalry units. On the other hand, when fortified on a hill, Mounted Infantry can do serious damage to an attacking Horse Archer or Light Cavalry unit.</English>
+		<French>[BOLD]Stratégie:[\BOLD][PARAGRAPH:1]L'infanterie montée est moins puissante que les archers montés, mais bénéficie de bonus défensifs de terrain, ce qui lui permet de se défendre bien plus efficacement sur des collines, dans les bois ou dans les villes.[NEWLINE][NEWLINE][BOLD]Histoire:[\BOLD][PARAGRAPH:1]Les soldats de l'infanterie montée se rendent à cheval sur le champ de bataille, mais mettent pied à terre pour combattre une fois arrivés à destination. Ils participent rarement aux charges ou aux autres manoeuvres à cheval, et se font généralement malmener quand ils le font face à des cavaliers entraînés. En revanche, l'infanterie montée peut infliger de sérieux dégâts à une unité de cavalerie légère ou d'archers montés qui l'attaquerait sur une colline où elle aurait pris position.</French>
+		<German>[BOLD]Strategie:[\BOLD][PARAGRAPH:1]Die Berittene Infanterie ist weniger stark als die Berittenen Bogenschützen, erhält jedoch einen Gelände-Verteidigungsbonus, was sie wesentlich stärker macht, wenn sie zur Verteidigung in Hügeln, Wäldern oder Städten eingesetzt wird.[NEWLINE][NEWLINE][BOLD]Hintergrund:[\BOLD][PARAGRAPH:1] Soldaten der Berittenen Infanterie nutzen Pferde, um aufs Schlachtfeld zu gelangen. Sobald sie es erreicht haben, satteln sie jedoch ab und kämpfen zu Fuß. Sie nehmen nur selten an Vorstößen oder anderen Manövern zu Pferd teil, und wenn sie gegen ausgebildete Einheiten der Kavallerie eingesetzt werden, stecken sie meist viel Schaden ein. Wenn sie gefestigt auf einem Hügel stationiert ist, kann die Berittene Infanterie anrückenden Berittenen Bogenschützen oder Einheiten der Leichten Kavallerie jedoch schweren Schaden zufügen.</German>
+		<Italian>[BOLD]Strategia:[\BOLD][PARAGRAPH:1]La fanteria a cavallo è meno potente degli arcieri a cavallo, però queste unità ricevono bonus difensivi per il terreno, che le rendono molto più potenti quando difendono in collina, nelle foreste o in città. [NEWLINE][NEWLINE][BOLD]Informazioni:[\BOLD][PARAGRAPH:1]I soldati della fanteria a cavallo usano i cavalli per arrivare al campo di battaglia ma poi smontano e combattono a piedi. Di rado prendono parte a cariche o altre manovre a cavallo, e tendono a subire malamente gli attacchi delle unità di cavalleria. D'altro canto quando sono fortificate in collina, i fanti a cavallo possono infliggere seri danni ad arcieri a cavallo o cavalleria leggera.</Italian>
+		<Spanish>[BOLD]Estrategia:[\BOLD][PARAGRAPH:1]La infantería montada es menos potente que los arqueros a caballo; sin embargo, recibe bonificaciones defensivas por terreno, lo que resulta una enorme ventaja a la hora de defenderse en colinas, bosques o ciudades. [NEWLINE][NEWLINE][BOLD]Historia:[\BOLD][PARAGRAPH:1]Los soldados de la infantería montada usan sus caballos para llegar al campo de batalla, pero una vez allí desmontan y luchan a pie. Solo en raras ocasiones toman parte en cargas u otras maniobras típicas de caballería y, cuando se enfrentan con escuadrones de caballería profesional, normalmente llevan las de perder. Por otro lado, cuando está atrincherada en una colina, la infantería montada puede ser muy peligrosa para los arqueros a caballo o la caballería ligera.</Spanish>
+		<Polish>Upadek wartości jazdy rycerskiej spowodował powstanie nowych formacji kawaleryjskich w skład których wchodzili żołnierze zaciężni (najemnicy). W XV wieku, obok tradycyjnych kopijników, pojawili się na polach bitew rajtarzy i arkebuzerzy uzbrojeni w broń palną. W XVI wieku powstała dragonia będąca początkowo konną piechotą. W Europie zachodniej jazda organizowała się na regimenty i kompanie. W Polsce w XV-tym wieku kawaleria dzieliła się na oddziały kopijnicze i strzelcze. W XVI wieku pojawiła się husaria, początkowo jazda lekka, z biegiem czasu stając się najcięższą kawalerią polską. Jazdę lżejszą w Polsce stanowili pancerni, zwani na Litwie petyhorcami, którzy z czasem stali się formacją średniozbrojną. Jazdę lekką stanowiły tzw. chorągwie wołoskie i tatarskie. W XVII wieku na zachodzie pojawili się kirasjerzy. W XVIII wieku w Polsce dawne pułki husarskie i pancerne przekształcono kawalerię narodową, a jazdę lekką na nowoczesnych ułanów. W czasach wojen napoleońskich pojawiły się oddziały lansjerów, szwoleżerów i strzelców konnych. W XIX wieku w związku z dalszym rozwojem broni palnej, znaczenie kawalerii upadło. Jednak jeszcze w czasie I wojny światowej wojska obu walczących stron zmobilizowały łącznie 63 dywizje jazdy, znaczną ich część rozwiązano zresztą w czasie trwania tej wojny.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_MOUNTED_INFANTRY_STRATEGY</Tag>
+		<English>Use these speedy infantrymen as rapid-reaction forces and to defend hills and forests.</English>
+		<French>
+			<Text>Utilisez ces Spadassins pour intervenir rapidement ou pour défendre les collines et les forêts.</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>Setzen Sie diese schnellen Infanteriekämpfer als Streitkräfte für schnelle Gegenmaßnahmen und zur Verteidigung von Hügeln und Wäldern ein.</German>
+		<Italian>
+			<Text>Usa questi veloci fanti per reagire rapidamente e per difendere colline e foreste.</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>Utiliza a estas veloces unidades de infantería como fuerzas de reacción rápida, así como para defender colinas y bosques.</Spanish>
+		<Polish>Używaj tych szybkich jednostek w celu szybkiego reagowania oraz do obrony wzgórz i lasów.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NUM_STEALTH_STRIKES_ATTACK</Tag>
@@ -19391,6 +19527,14 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>[ICON_BULLET][COLOR_CYAN]Przygotowujesz się do wojny[COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_WB_CURRENT_RESEARCH</Tag>
+		<English>Current Research:</English>
+		<French>Recherche actuelle:</French>
+		<Italian>Ricerca corrente:</Italian>
+		<Spanish>Investigación actual:</Spanish>
+		<Polish>Aktualne Badania:</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_WHALING_BOATS_PEDIA</Tag>
 		<English>Whaling is the hunting of whales mainly for meat and oil. Its earliest forms date to at least 3000 BC. Various coastal communities have long histories of sustenance whaling and harvesting beached whales. Industrial whaling emerged with organized fleets in the 17th century; competitive national whaling industries in the 18th and 19th centuries; and the introduction of factory ships along with the concept of whale harvesting in the first half of the 20th century. Wikipedia</English>
 		<French>La chasse à la baleine est la chasse aux baleines principalement pour la viande et l'huile. Ses premières formes datent d'au moins 3000 ans avant JC. Diverses communautés côtières ont une longue histoire de chasse à la baleine de subsistance et de chasse aux baleines échouées. La chasse industrielle a émergé avec des flottes organisées au 17ème siècle; des industries baleinières nationales compétitives aux XVIIIe et XIXe siècles; et l'introduction de navires-usines ainsi que le concept de la récolte des baleines dans la première moitié du 20e siècle. Wikipedia</French>
@@ -19464,15 +19608,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Italian>Hai completato %s1</Italian>
 		<Spanish>Habéis completado %s1</Spanish>
 		<Polish>Skończyłeś %s1</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_WONKA_STRATEGY</Tag>
-		<English>Build this corporation in order to get Confectioneries bonuses.</English>
-		<French>Construire cette corporation pour obtenir la ressource Confiseries.</French>
-		<German>Baue diese Gesellschaft, um Zuckerwarenboni zu erhalten.</German>
-		<Italian>Costruisci questa corporazione per ottenere bonus dai derivati dello zucchero.</Italian>
-		<Spanish>Construye esta corporación para obtener bonificaciones relacionadas con el mundo de la pastelería.</Spanish>
-		<Polish>Zbuduj siedzibę by zdobyć bonusy cukiernicze.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WORLD_DUEL</Tag>
@@ -19763,14 +19898,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Polish>Produkcja</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_RECRUITED</Tag>
-		<English>You've recruited a new militia unit.</English>
-		<French>Vous avec recruté une nouvelle unité de milice.</French>
-		<German>Ihr habt eine neue Miliz-Einheit rekrutiert.</German>
-		<Italian>Hai reclutato una nuova unità di milizia.</Italian>
-		<Polish>Zwerbowałeś nową jednostkę milicji</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_TB_PRESSALT_STR</Tag>
 		<English>Press ALT to view all Strength In Numbers Modifiers</English>
 		<French>Appuyer sur 'ALT' pour voir tous les modificateurs du Combat</French>
@@ -19805,118 +19932,4 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<German>[COLOR_HIGHLIGHT_TEXT]&lt;UMSCHALT&gt;[COLOR_REVERT] für Anzeige der Kategorien</German>
 		<Polish>Naciśnij SHIFT aby zobaczyć Klasy Bojowe</Polish>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_WB_CURRENT_RESEARCH</Tag>
-		<English>Current Research:</English>
-		<French>Recherche actuelle:</French>
-		<Italian>Ricerca corrente:</Italian>
-		<Spanish>Investigación actual:</Spanish>
-		<Polish>Aktualne Badania:</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_COMMAND_HOTKEY</Tag>
-		<English>Command Hotkey</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MAPSWITCH_EXAMPLE</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MAPSWITCH_EXAMPLE_HELP</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MAP_EXAMPLE</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MAP_EXAMPLE_HELP</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<!-- Code placeholders
-	<TEXT>
-		<Tag>TXT_KEY_CIV_UNKNOWN</Tag>
-		<English>UNKNOWN CIV</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_COMBAT_ROUND_STUN_DEFENDER_MINUS_ATTACKER_ENDURANCE</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_GLOBELAYER_DEBUG</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVEMENT_LESS_GROWTH</Tag>
-		<English>[ICON_BULLET]Gives terrain a lower chance to spread</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_LANDMARK</Tag>
-		<English></English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_ATTACKER_REPELLED_HUMAN_ONSLAUGHT_HIDDEN</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_COMMERCE_TECH</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_HELP_GOLDEN_AGE_PLAYER_COMMERCE</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_PLUNDERED_CULTURE_FROM_VICTIMS</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_YOU_UNIT_WITHDRAW_ONSLAUGHT</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_YOU_UNIT_WITHDRAW_STAMPEDE</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MSG_HOLY_CITY_RESPAWNED</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_NO_INVISIBILIY_TEXT</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRADE_VOTE</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_ENDURANCE</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_FORTITUDE_MODIFIER_POSITIVE_TEXT</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_FORTITUDE_MODIFIER_NEGATIVE_TEXT</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_POWER_SHOT_PRECISION_MODIFIER_TOTAL_MODIFIER</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TIRING_TOTAL_SHORT</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TIRING_TOTAL</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_TRAP_DAMAGE</Tag>
-		<English>TBD</English>
-	</TEXT>
-	-->
 </Civ4GameText>

@@ -16271,7 +16271,7 @@
 			</ReplaceBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_BARK_GATHERER</Type>
+			<Type>BUILDING_GATHERER_BARK</Type>
 			<ObsoleteTech>TECH_PLANETARY_ECONOMICS</ObsoleteTech>
 			<ReplaceBuildings>
 				<ReplaceBuilding>

@@ -572,7 +572,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_FORT</Tag>
 		<English>Fort</English>
-		<French>Fort</French>
 		<German>
 			<Text>Festung</Text>
 			<Gender>Male</Gender>
@@ -2057,7 +2056,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_VILLAGE</Tag>
 		<English>Village</English>
-
 		<German>
 			<Text>Dorf</Text>
 			<Gender>Male</Gender>

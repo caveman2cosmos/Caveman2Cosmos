@@ -2580,7 +2580,7 @@
 		</Spanish>
 		<Polish>Desant</Polish>
 	</TEXT>
- <TEXT>
+	<TEXT>
  	<Tag>TXT_KEY_PROMOTION_ANIMAL_HUNTER</Tag>
 		<English>Animal Hunter</English>
 		<French>Chasseur d'Animaux</French>
@@ -10662,7 +10662,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INITIATIVE1</Tag>
 		<English>Initiative I</English>
-		<French>Initiative I</French>
 		<Italian>Iniziativa I</Italian>
 		<Spanish>Iniciativa I</Spanish>
 		<Polish>Inicjatywa I</Polish>
@@ -10670,7 +10669,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INITIATIVE2</Tag>
 		<English>Initiative II</English>
-		<French>Initiative II</French>
 		<Italian>Iniziativa II</Italian>
 		<Spanish>Iniciativa II</Spanish>
 		<Polish>Inicjatywa II</Polish>
@@ -10678,7 +10676,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INITIATIVE3</Tag>
 		<English>Initiative III</English>
-		<French>Initiative III</French>
 		<Italian>Iniziativa III</Italian>
 		<Spanish>Iniciativa III</Spanish>
 		<Polish>Inicjatywa III</Polish>
@@ -10686,7 +10683,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INITIATIVE4</Tag>
 		<English>Initiative IV</English>
-		<French>Initiative IV</French>
 		<Italian>Iniziativa IV</Italian>
 		<Spanish>Iniciativa IV</Spanish>
 		<Polish>Inicjatywa IV</Polish>
@@ -11006,6 +11002,11 @@
 		<Polish>Broń z żelaza</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_IVORY_WEAPONS</Tag>
+		<English>Ivory Weapons</English>
+		<French>Armes d'Ivoire</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_JADED_DECADENCE</Tag>
 		<English>Quality Down(Jaded Decadence)</English>
 		<French>
@@ -11045,7 +11046,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_KANAI</Tag>
 		<English>Kanai</English>
-		<French>Kanaï</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_KEEN_EARS1</Tag>
@@ -14765,12 +14765,6 @@
 		<French>[ICON_BULLET]Elimine une source du comportement suicidaire.</French>
 		<Italian>[ICON_BULLET]Elimina una fonte dell'abilità Suicidio.</Italian>
 		<Polish>[ICON_BULLET]Eliminuje jedno źródło Popłochu.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_REMOVE_STANDOUT_STATUS</Tag>
-		<English>Status (Remove Standout)</English>
-		<French>Statut (ne plus rester visible)</French>
-		<German>Weniger auffällig</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REMOVE_STAY_THE_HAND</Tag>
@@ -19762,10 +19756,5 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ZEN</Tag>
 		<English>Zen</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_IVORY_WEAPONS</Tag>
-		<English>Ivory Weapons</English>
-		<French>Armes d'Ivoire</French>
 	</TEXT>
 </Civ4GameText>

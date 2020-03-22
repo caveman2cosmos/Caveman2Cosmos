@@ -8887,7 +8887,7 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_FIREPIT</BuildingType>
+					<BuildingType>BUILDING_FIRE_PIT</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
@@ -9015,7 +9015,7 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
-					<BuildingType>BUILDING_FIREPIT</BuildingType>
+					<BuildingType>BUILDING_FIRE_PIT</BuildingType>
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 				<PrereqOrBuilding>
@@ -10897,7 +10897,7 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<!-- Defense effects -->
-			<iDefense>50</iDefense>
+			<iDefense>20</iDefense>
 			<iBombardDefense>20</iBombardDefense>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
 			<!-- Special properties -->

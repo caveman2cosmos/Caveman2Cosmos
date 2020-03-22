@@ -4253,8 +4253,9 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<iSpawnRateModifier>70</iSpawnRateModifier><!--Range from -90 to as high as you want - higher is less-->
-			<iSpawnRateNPCPeaceModifier>95</iSpawnRateNPCPeaceModifier>
+			<!--Range from -90 to as high as you want - higher is less-->
+			<iSpawnRateModifier>0</iSpawnRateModifier>
+			<iSpawnRateNPCPeaceModifier>30</iSpawnRateNPCPeaceModifier>
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_ANIMAL_PREY</Type>
@@ -4289,8 +4290,9 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<iSpawnRateModifier>50</iSpawnRateModifier>
-			<iSpawnRateNPCPeaceModifier>100</iSpawnRateNPCPeaceModifier>
+			<!--Range from -90 to as high as you want - higher is less-->
+			<iSpawnRateModifier>0</iSpawnRateModifier>
+			<iSpawnRateNPCPeaceModifier>60</iSpawnRateNPCPeaceModifier>
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_ANIMAL_BEAST</Type>
@@ -4325,8 +4327,9 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<iSpawnRateModifier>60</iSpawnRateModifier>
-			<iSpawnRateNPCPeaceModifier>85</iSpawnRateNPCPeaceModifier>
+			<!--Range from -90 to as high as you want - higher is less-->
+			<iSpawnRateModifier>0</iSpawnRateModifier>
+			<iSpawnRateNPCPeaceModifier>40</iSpawnRateNPCPeaceModifier>
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_NPC_NEANDERTHAL</Type>
@@ -4447,7 +4450,7 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<iSpawnRateNPCPeaceModifier>25</iSpawnRateNPCPeaceModifier>
+			<iSpawnRateNPCPeaceModifier>30</iSpawnRateNPCPeaceModifier>
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_INSECTOID</Type>
@@ -4483,7 +4486,7 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<iSpawnRateNPCPeaceModifier>25</iSpawnRateNPCPeaceModifier>
+			<iSpawnRateNPCPeaceModifier>30</iSpawnRateNPCPeaceModifier>
 		</CivilizationInfo>
 		<CivilizationInfo>
 			<Type>CIVILIZATION_BARBARIAN</Type>
@@ -4610,7 +4613,7 @@
 					<bLeaderAvailability>1</bLeaderAvailability>
 				</Leader>
 			</Leaders>
-			<iSpawnRateNPCPeaceModifier>25</iSpawnRateNPCPeaceModifier>
+			<iSpawnRateNPCPeaceModifier>30</iSpawnRateNPCPeaceModifier>
 		</CivilizationInfo>
 	</CivilizationInfos>
 </Civ4CivilizationInfos>
