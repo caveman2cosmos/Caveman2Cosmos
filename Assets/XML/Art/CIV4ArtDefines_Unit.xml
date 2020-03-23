@@ -1,9 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http:/www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- -->
-	<!-- Unit art path information -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../Schema/Caveman2Cosmos.xsd">
 	<UnitArtInfos>
 		<UnitArtInfo>
@@ -148,7 +143,7 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIQUE_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_AEGIS</Type>
+			<Type>ART_DEF_UNIT_AEGIS_CRUISER</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/aegis_cruiser.dds</Button>
 			<fScale>0.6</fScale>
 			<fInterfaceScale>1.1</fInterfaceScale>
@@ -10541,7 +10536,7 @@
 			<ActionSound>AS3D_UN_DESTROYER_FORT</ActionSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_STONE_AGE_AXEMAN</Type>
+			<Type>ART_DEF_UNIT_STONE_AXEMAN</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/stone_axeman.dds</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -10575,7 +10570,7 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_STONE_AGE_SPEARMAN</Type>
+			<Type>ART_DEF_UNIT_STONE_SPEARMAN</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/stone_spearman.dds</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -12442,7 +12437,7 @@
 			<ActionSound>AS3D_UN_WRK_BOAT_ANC_FORT</ActionSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_WORKBOAT_SEDENTARY</Type>
+			<Type>ART_DEF_UNIT_WORKBOAT_CLASSIC</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/workboat_classic.dds</Button>
 			<fScale>0.19</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -12477,7 +12472,7 @@
 			<ActionSound>AS3D_UN_WRK_BOAT_ANC_FORT</ActionSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_MIDDLE_WORKBOAT</Type>
+			<Type>ART_DEF_UNIT_WORKBOAT_MIDDLE</Type>
 			<Button>,Art/Interface/Buttons/Units/WorkBoat.dds,Art/Interface/Buttons/Unit_Resource_Atlas.dds,4,9</Button>
 			<fScale>0.19</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -19398,7 +19393,7 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_STONE_AGE_AXEMAN_NATIVE_AMERICAN</Type>
+			<Type>ART_DEF_UNIT_STONE_AXEMAN_NATIVE_AMERICAN</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/stone_axeman.dds</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -19431,7 +19426,7 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_STONE_AGE_SPEARMAN_NATIVE_AMERICAN</Type>
+			<Type>ART_DEF_UNIT_STONE_SPEARMAN_NATIVE_AMERICAN</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/stone_spearman.dds</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -23327,7 +23322,7 @@
 			<ActionSound>AS3D_UN_SPY_SURR_VOX</ActionSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_STONE_AGE_AXEMAN_SOUTH_AMERICA</Type>
+			<Type>ART_DEF_UNIT_STONE_AXEMAN_SOUTH_AMERICA</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/stone_axeman.dds</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -23361,7 +23356,7 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_STONE_AGE_SPEARMAN_SOUTH_AMERICA</Type>
+			<Type>ART_DEF_UNIT_STONE_SPEARMAN_SOUTH_AMERICA</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/stone_spearman.dds</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -25391,7 +25386,7 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EUROPEAN</Type>
+			<Type>ART_DEF_UNIT_STONE_SPEARMAN_EUROPEAN</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/stone_spearman.dds</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -29219,7 +29214,7 @@
 			<ActionSound>AS3D_UN_SPY_SURR_VOX</ActionSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_STONE_AGE_AXEMAN_ASIAN</Type>
+			<Type>ART_DEF_UNIT_STONE_AXEMAN_ASIAN</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/stone_axeman.dds</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -29253,7 +29248,7 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_STONE_AGE_SPEARMAN_ASIAN</Type>
+			<Type>ART_DEF_UNIT_STONE_SPEARMAN_ASIAN</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/stone_spearman.dds</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -33548,7 +33543,7 @@
 			<ActionSound>AS3D_UN_SPY_SURR_VOX</ActionSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_STONE_AGE_AXEMAN_AFRICAN</Type>
+			<Type>ART_DEF_UNIT_STONE_AXEMAN_AFRICAN</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/stone_axeman.dds</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -33582,7 +33577,7 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_STONE_AGE_SPEARMAN_AFRICAN</Type>
+			<Type>ART_DEF_UNIT_STONE_SPEARMAN_AFRICAN</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/stone_spearman.dds</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -37119,7 +37114,7 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_STONE_AGE_AXEMAN_MEAST</Type>
+			<Type>ART_DEF_UNIT_STONE_AXEMAN_MEAST</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/stone_axeman.dds</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -42046,7 +42041,7 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_STONE_AGE_AXEMAN_EGYPTIAN</Type>
+			<Type>ART_DEF_UNIT_STONE_AXEMAN_EGYPTIAN</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/stone_axeman.dds</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -42063,7 +42058,7 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_STONE_AGE_SPEARMAN_EGYPTIAN</Type>
+			<Type>ART_DEF_UNIT_STONE_SPEARMAN_EGYPTIAN</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/stone_spearman.dds</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -45480,7 +45475,7 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_STONE_AGE_AXEMAN_INDIA</Type>
+			<Type>ART_DEF_UNIT_STONE_AXEMAN_INDIA</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/stone_axeman.dds</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -48057,7 +48052,7 @@
 			<ActionSound>AS3D_UN_SPY_SURR_VOX</ActionSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_STONE_AGE_AXEMAN_GREEK</Type>
+			<Type>ART_DEF_UNIT_STONE_AXEMAN_GREEK</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/stone_axeman.dds</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -48091,7 +48086,7 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_STONE_AGE_SPEARMAN_GREEK</Type>
+			<Type>ART_DEF_UNIT_STONE_SPEARMAN_GREEK</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/stone_axeman.dds</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -50426,7 +50421,7 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_STONE_AGE_AXEMAN_GERMAN</Type>
+			<Type>ART_DEF_UNIT_STONE_AXEMAN_GERMAN</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/stone_axeman.dds</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -54350,7 +54345,7 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_STONE_AGE_AXEMAN_BABYLON</Type>
+			<Type>ART_DEF_UNIT_STONE_AXEMAN_BABYLON</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/stone_axeman.dds</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -54384,7 +54379,7 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_STONE_AGE_SPEARMAN_BABYLON</Type>
+			<Type>ART_DEF_UNIT_STONE_SPEARMAN_BABYLON</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/stone_spearman.dds</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -56861,7 +56856,7 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_STONE_AGE_AXEMAN_MONGOL</Type>
+			<Type>ART_DEF_UNIT_STONE_AXEMAN_MONGOL</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/stone_axeman.dds</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -56895,7 +56890,7 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_STONE_AGE_SPEARMAN_MONGOL</Type>
+			<Type>ART_DEF_UNIT_STONE_SPEARMAN_MONGOL</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/stone_spearman.dds</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -58745,7 +58740,7 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_STONE_AGE_AXEMAN_ROME</Type>
+			<Type>ART_DEF_UNIT_STONE_AXEMAN_ROME</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/stone_axeman.dds</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -58779,7 +58774,7 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_STONE_AGE_SPEARMAN_ROME</Type>
+			<Type>ART_DEF_UNIT_STONE_SPEARMAN_ROME</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/stone_spearman.dds</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -58812,7 +58807,6 @@
 			<fRangedDeathTime>0.31</fRangedDeathTime>
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
-
 		<UnitArtInfo>
 			<Type>ART_DEF_UNIT_TOWN_WATCHMEN_ROME</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/town_watchman.dds</Button>
@@ -63620,7 +63614,7 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_STONE_AGE_AXEMAN_KOREA</Type>
+			<Type>ART_DEF_UNIT_STONE_AXEMAN_KOREA</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/stone_axeman.dds</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -67796,7 +67790,7 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_STONE_AGE_AXEMAN_POLYNESIA</Type>
+			<Type>ART_DEF_UNIT_STONE_AXEMAN_POLYNESIA</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/stone_axeman.dds</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -67830,7 +67824,7 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_STONE_AGE_SPEARMAN_POLYNESIA</Type>
+			<Type>ART_DEF_UNIT_STONE_SPEARMAN_POLYNESIA</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/stone_spearman.dds</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -71762,7 +71756,7 @@
 			<TrainSound>AS2D_UNIT_BUILD_UNIT</TrainSound>
 		</UnitArtInfo>
 		<UnitArtInfo>
-			<Type>ART_DEF_UNIT_STONE_AGE_SPEARMAN_VIKING</Type>
+			<Type>ART_DEF_UNIT_STONE_SPEARMAN_VIKING</Type>
 			<Button>Art/Interface/Buttons/Units/sparth/stone_spearman.dds</Button>
 			<fScale>0.44</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
@@ -78353,7 +78347,7 @@
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<bActAsLand>0</bActAsLand>
 			<bActAsAir>0</bActAsAir>
-			<NIF>Art/unique/Philistines/Light_Hoplite/greekphalanx.nif</NIF>
+			<NIF>Art/unique/Philistine/Light_Hoplite/greekphalanx.nif</NIF>
 			<KFM>Art/Units/Charlemagne_PapalSpearman/PapalSpearman.kfm</KFM>
 			<ShadowDef>
 				<ShadowNIF>Art/Units/01_UnitShadows/UnitShadow.nif</ShadowNIF>

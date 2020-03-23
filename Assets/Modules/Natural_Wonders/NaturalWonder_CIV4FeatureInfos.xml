@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4FeatureInfos xmlns="x-schema:../../XML/Schema/C2C_CIV4TerrainSchema.xml">
 	<FeatureInfos>
 		<FeatureInfo>
@@ -6,7 +6,6 @@
 			<Description>TXT_KEY_FEATURE_AUYANTEPUI</Description>
 			<Civilopedia>TXT_KEY_FEATURE_AUYANTEPUI_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_FEATURE_AUYANTEPUI</ArtDefineTag>
-			<iSeeThrough>0</iSeeThrough>
 			<bNoCoast>1</bNoCoast>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bNoCity>1</bNoCity>
@@ -78,7 +77,7 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</FeatureInfo>
-	       <FeatureInfo>
+		<FeatureInfo>
 			<Type>FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE</Type>
 			<Description>TXT_KEY_FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE</Description>
 			<Civilopedia>TXT_KEY_FEATURE_GREAT_BARRIER_PEDIA</Civilopedia>
@@ -401,6 +400,7 @@
 			<Description>TXT_KEY_FEATURE_NGORONGORO_CRATER</Description>
 			<Civilopedia>TXT_KEY_FEATURE_NGORONGORO_CRATER_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_FEATURE_NGORONGORO_CRATER</ArtDefineTag>
+			<bAddsFreshWater>1</bAddsFreshWater>
 			<iMovement>1</iMovement>
 			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bNoCity>1</bNoCity>

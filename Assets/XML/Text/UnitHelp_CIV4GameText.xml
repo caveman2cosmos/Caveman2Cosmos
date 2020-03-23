@@ -16,13 +16,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_INVISIBILITY_SPOT_PLOT_VALUE_ADJ</Tag>
 		<English>[ICON_BULLET]%D1_Change %F2_Type Spot on %s3_Plot (already tallied into total.)</English>
-		<French>[ICON_BULLET]%D1_Change Perception améliorée (%F2_Type) de  lorsque sur une case %s3_Plot (inclus dans le total)</French>
+		<French>[ICON_BULLET]%D1_Change Perception améliorée (%F2_Type) de lorsque sur une case %s3_Plot (inclus dans le total)</French>
 		<German>[ICON_BULLET]%s3_Plot: %D1_Change %F2_Type-Sicht (in Gesamtwert bereits eingerechnet)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_INVISIBILITY_VEIL_PLOT_VALUE_ADJ</Tag>
 		<English>[ICON_BULLET]%D1_Change %F2_Type Veil on %s3_Plot (already tallied into total.)</English>
-		<French>[ICON_BULLET]%D1_Change Invisibilité étendue (%F2_Type) de  lorsque sur une case %s3_Plot(inclus dans le total.)</French>
+		<French>[ICON_BULLET]%D1_Change Invisibilité étendue (%F2_Type) de lorsque sur une case %s3_Plot(inclus dans le total.)</French>
 		<German>[ICON_BULLET]%s3_Plot: %D1_Change %F2_Type-Unsichtbarkeit (in Gesamtwert bereits eingerechnet)</German>
 	</TEXT>
 -->
@@ -147,19 +147,19 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_INVISIBILITY_SPOT_PLOT_RANGE_VALUE</Tag>
 		<English>[ICON_BULLET]%D1_Change %F2_Type Spot Range on %s3_Plot</English>
-		<French>[ICON_BULLET]%D2_Change Portée étendue de Perception (%F2_Type)  lorsque sur une case %s3_Plot</French>
+		<French>[ICON_BULLET]%D2_Change Portée étendue de Perception (%F2_Type) lorsque sur une case %s3_Plot</French>
 		<German>[ICON_BULLET]%s3_Plot: %D1_Change %F2_Type-Sichtweite</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_INVISIBILITY_SPOT_PLOT_RANGE_VALUE_ADJ</Tag>
 		<English>[ICON_BULLET]%D1_Change %F2_Type Spot Range on %s3_Plot (already tallied into total.)</English>
-		<French>[ICON_BULLET%D2_Change Portée étendue de Perception (%F2_Type)  lorsque sur une case %s3_Plot (inclus dans le total.)</French>
+		<French>[ICON_BULLET%D2_Change Portée étendue de Perception (%F2_Type) lorsque sur une case %s3_Plot (inclus dans le total.)</French>
 		<German>[ICON_BULLET]%s3_Plot: %D1_Change %F2_Type-Sichtweite (in Gesamtwert bereits eingerechnet)</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_INVISIBILITY_SPOT_PLOT_VALUE</Tag>
 		<English>[ICON_BULLET]%D1_Change %F2_Type Spot on %s3_Plot</English>
-		<French>[ICON_BULLET]%D1_Change Perception améliorée (%F2_Type) de  lorsque sur une case %s3_Plot</French>
+		<French>[ICON_BULLET]%D1_Change Perception améliorée (%F2_Type) de lorsque sur une case %s3_Plot</French>
 		<German>[ICON_BULLET]%s3_Plot: %D1_Change %F2_Type-Sicht</German>
 	</TEXT>
 	<TEXT>
@@ -189,7 +189,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_INVISIBILITY_VEIL_PLOT_VALUE</Tag>
 		<English>[ICON_BULLET]%D1_Change %F2_Type Veil on %s3_Plot</English>
-		<French>[ICON_BULLET]%D1_Change Invisibilité étendue (%F2_Type) de  lorsque sur une case %s3_Plot</French>
+		<French>[ICON_BULLET]%D1_Change Invisibilité étendue (%F2_Type) de lorsque sur une case %s3_Plot</French>
 		<German>[ICON_BULLET]%s3_Plot: %D1_Change %F2_Type-Unsichtbarkeit</German>
 	</TEXT>
 	<TEXT>

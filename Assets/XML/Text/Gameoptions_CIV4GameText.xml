@@ -169,12 +169,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_BARBARIAN_CIV_HELP</Tag>
-		<English>When enabled: New civilizations may emerge from barbarian cities as minor civs.
-
-If you play with "Start as Minor Civ" then this option will change the rules for becoming a major civ. Achievements and randomness thereof decides when you become a major civ.</English>
-		<French>Lorsque activé : de nouvelles civilizations peuvent émerger des villes barbares, en tant que Civ mineures.
-
-Si vous jouez avec "Civs Mineures au départ", cette option changera les règles pour devenir une civilisation majeure. Les réalisations et leur caractère aléatoire décident quand vous devenez une civilisation majeure.</French>
+		<English>When enabled: New civilizations may emerge from barbarian cities as minor civs. If you play with "Start as Minor Civ" then this option will change the rules for becoming a major civ. Achievements and randomness thereof decides when you become a major civ.</English>
+		<French>Lorsque activé : de nouvelles civilizations peuvent émerger des villes barbares, en tant que Civ mineures. Si vous jouez avec "Civs Mineures au départ", cette option changera les règles pour devenir une civilisation majeure. Les réalisations et leur caractère aléatoire décident quand vous devenez une civilisation majeure.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_BARBARIAN_WORLD</Tag>
@@ -453,10 +449,10 @@ Si vous jouez avec "Civs Mineures au départ", cette option changera les règles
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_HEART_OF_WAR_HELP</Tag>
-		<English>Enables Repel, Knockback and Unyielding Abilities and Effects.  Will eventually include a Morale System.</English>
-		<French>Active les compétences de Répulsion, Piétinement, d'Inflexibilité.  Un système de Moral sera également inclus.</French>
+		<English>Enables Repel, Knockback and Unyielding Abilities and Effects. Will eventually include a Morale System.</English>
+		<French>Active les compétences de Répulsion, Piétinement, d'Inflexibilité. Un système de Moral sera également inclus.</French>
 		<German>Diese Mod ermöglicht das Zurückdrängen und Niederwerfen von Einheiten, bietet aber im Gegenzug auch Effekte und Fähigkeiten, die Einheiten Standhaftigkeit verleihen. Eventuell wird auch ein Moral-System integriert.</German>
-		<Polish>Pozwala na  Odpieranie, Odrzucanie i Ustępowanie w ogniu walki.  Docelowo będzie zawierać system Morale.</Polish>
+		<Polish>Pozwala na Odpieranie, Odrzucanie i Ustępowanie w ogniu walki. Docelowo będzie zawierać system Morale.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_HIDE_AND_SEEK</Tag>
@@ -466,7 +462,7 @@ Si vous jouez avec "Civs Mineures au départ", cette option changera les règles
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_HIDE_AND_SEEK_HELP</Tag>
-		<English>Adds new layers of invisibility.  Units can have more than one type and intensity of invisibility (and can also have multiple visibility types and intensities) and it requires the opponent to have visibilities of all types and intensity on a plot to see the unit. (Forces Without Warning ON)</English>
+		<English>Adds new layers of invisibility. Units can have more than one type and intensity of invisibility (and can also have multiple visibility types and intensities) and it requires the opponent to have visibilities of all types and intensity on a plot to see the unit. (Forces Without Warning ON)</English>
 		<French>Ajoute plusieurs types d'invisibilité. Les unités peuvent avoir plusieurs niveaux et types d'invisibilité, et il est nécessaire d'avoir un mode de détection compatible pour les repérer.</French>
 		<German>Statt simpler Standardunsichtbarkeit und entsprechenden Abwehrmechanismen gibt es nun feinere Unterteilungen. Mehrere Typen und Stärken von Unsichtbarkeit sorgen dafür, dass versteckte Einheiten nur entdeckt werden können, wenn der Gegner entsprechend geschulte Einheiten besitzt. (Die Mod Ohne Vorwarnung muss ebenfalls aktiviert sein.)</German>
 	</TEXT>
@@ -632,7 +628,13 @@ Si vous jouez avec "Civs Mineures au départ", cette option changera les règles
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_MORE_RESOURCES_HELP</Tag>
-		<English>Maps that use default resource spawn settings will spawn more resources</English>
+		<English>Maps that use default resource spawn settings will spawn more resources
+
+Has no effect on these mapscripts:
+[SPACE][SPACE] * PerfectWorld, PerfectMongoose and World
+
+Only affects SmartMap when "Bonus Placement = Standard"</English>
+
 		<French>Une carte avec les paramètres par défaut comprendra des ressources supplémentaires</French>
 		<German>Auf Karten mit Standardeinstellungen für Ressourcen werden mehr Ressourcen verteilt.</German>
 		<Polish>Mapy używające standardowych ustawień wygenerują więcej zasobów.</Polish>
@@ -646,7 +648,14 @@ Si vous jouez avec "Civs Mineures au départ", cette option changera les règles
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_MORE_RIVERS_HELP</Tag>
-		<English>Maps that use default river settings will spawn more rivers</English>
+		<English>Maps that use default river settings will spawn more rivers.
+
+Has no effect on these mapscripts:
+[SPACE][SPACE] * PerfectWorld, PerfectMongoose and World
+
+Only affects SmartMap if terrain options is:
+[SPACE][SPACE] * Standard, Great Plains or Oasis</English>
+
 		<French>Une carte avec les paramètres par défaut, fera apparaître des fleuves et rivières supplémentaires</French>
 		<German>Auf Karten mit Standardeinstellungen für Flüsse werden mehr Flüsse verteilt.</German>
 		<Polish>Mapy używające standardowych ustawień wygenerują więcej rzek.</Polish>
@@ -936,7 +945,7 @@ Si vous jouez avec "Civs Mineures au départ", cette option changera les règles
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS_HELP</Tag>
-		<English>A more advanced system of emergence and recovery for diseases and crimes.  Units may carry diseases and criminal mindsets and rub off on local cities and other units, sometimes even transferring through battle.  Outbreaks of diseases and crime waves are not automatic at certain disease or crime levels but become more likely, and harder to overcome, the worse these properties get.  There are levels of severity to each disease and crime wave type.  It can usually get worse and sometimes it has to before it's going to get better.  Cities can become resistant to previously experienced diseases.  The goal is a dynamic system which more closely emulates real transfers of these experiences from one community to the next. (IN DEVELOPMENT - ONLY PARTIALLY IMPLEMENTED)</English>
+		<English>A more advanced system of emergence and recovery for diseases and crimes. Units may carry diseases and criminal mindsets and rub off on local cities and other units, sometimes even transferring through battle. Outbreaks of diseases and crime waves are not automatic at certain disease or crime levels but become more likely, and harder to overcome, the worse these properties get. There are levels of severity to each disease and crime wave type. It can usually get worse and sometimes it has to before it's going to get better. Cities can become resistant to previously experienced diseases. The goal is a dynamic system which more closely emulates real transfers of these experiences from one community to the next. (IN DEVELOPMENT - ONLY PARTIALLY IMPLEMENTED)</English>
 		<French>Un système plus avancé d'émergence et de guérison des maladies et des délits. Les unités peuvent être porteuses de maladies et de mentalités criminelles et déteindre sur les villes locales et d'autres unités, parfois même transférées au combat. Les éclosions de maladies et les vagues de criminalité ne sont pas automatiques à certains niveaux de maladie ou de criminalité, mais deviennent plus probables et plus difficiles à surmonter, plus ces propriétés s'aggravent. Il existe des niveaux de gravité pour chaque type de vague de maladie et de crime. Elle peut généralement s'aggraver et parfois elle doit avant de s'améliorer. Les villes peuvent devenir résistantes à des maladies déjà connues. L'objectif est un système dynamique qui émule de plus près les transferts réels de ces expériences d'une communauté à l'autre. (EN DÉVELOPPEMENT - UNIQUEMENT PARTIELLEMENT MIS EN ŒUVRE)</French>
 		<German>Hierbei handelt es sich um ein ausgeklügelteres System der Entstehung und Eindämmung von Krankheiten und Straftaten. Einheiten können Krankheiten und kriminelles Gedankengut mitbringen und auf die eigenen Städte und andere Einheiten übertragen, manchmal sogar während der Schlacht. Krankheitsausbrüche und Verbrechenswellen entstehen nicht automatisch auf bestimmten Stufen, aber sie werden je nach Krankheits- und Kriminalitätsrate immer wahrscheinlicher und können immer schwerer überwunden werden. Es gibt Schweregrade für jeden Typ von Seuchenzug oder Verbrechenswelle. Außerdem können Städte nun resistent gegen bereits überstandene Krankheiten werden. Das Ziel ist ein dynamisches System, das die Übertragung von einer Gesellschaft zur anderen besser nachbildet. (NOCH IN DER ENTWICKLUNG UND NUR TEILWEISE IMPLEMENTIERT)</German>
 	</TEXT>
@@ -958,7 +967,7 @@ Si vous jouez avec "Civs Mineures au départ", cette option changera les règles
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_PEACE_AMONG_NPCS_HELP</Tag>
-		<English>Keeps NPC players from being in an eternal 'at war' state with each other.  Thus barbs don't attack animals.  Beast team animals don't attack Creature team animals.  And so on.</English>
+		<English>Keeps NPC players from being in an eternal 'at war' state with each other. Thus barbs don't attack animals. Beast team animals don't attack Creature team animals. And so on.</English>
 		<German>Diese Option verhindert, dass sich Computergegner in einem ewigen Kriegszustand miteinander befinden. Dadurch attackieren Barbaren keine Tiere und Tiere keine Barbaren mehr, usw.</German>
 		<French>Empêche les joueurs PNJ d'être dans un état éternel de «guerre» entre eux. Ainsi, les barbares n'attaquent pas les animaux. Les animaux de l'équipe "bêtes" n'attaquent pas les animaux de l'équipe "Créature". Etc.</French>
 	</TEXT>
@@ -1104,7 +1113,7 @@ Si vous jouez avec "Civs Mineures au départ", cette option changera les règles
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_REALISTIC_SIEGE_HELP</Tag>
-		<English>The city defense benefits of many defensive buildings, such as walls, cannot be entirely removed.  Many defensive buildings enforce that the city defense level must be reduced to a particular level before the city can be attacked.  More developments to come.</English>
+		<English>The city defense benefits of many defensive buildings, such as walls, cannot be entirely removed. Many defensive buildings enforce that the city defense level must be reduced to a particular level before the city can be attacked. More developments to come.</English>
 		<German>Die Stadtverteidigung aus Schutzeinrichtungen wie Stadtmauern lässt sich nicht mehr komplett zerstören. Viele Schutzeinrichtungen sorgen außerdem dafür, dass die Stadtverteidigung zunächst auf einen bestimmten Wert reduziert werden muss, bevor die Stadt direkt angegriffen werden kann.</German>
 		<French>Les avantages de la défense de la ville de nombreux bâtiments défensifs, tels que les murs, ne peuvent pas être entièrement supprimés. De nombreux bâtiments défensifs imposent que le niveau de défense de la ville soit réduit à un niveau particulier avant que la ville puisse être attaquée. Plus de développements à venir.</French>
 	</TEXT>
@@ -1148,11 +1157,11 @@ Si vous jouez avec "Civs Mineures au départ", cette option changera les règles
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_RELIGIOUS_DISABLING_HELP</Tag>
-		<English>Religious buildings of non-state religion go mostly inactive by default but effect may be avoided by strategic decisions.  WARNING: Option in Beta Testing phase and under further ongoing development.</English>
+		<English>Religious buildings of non-state religion go mostly inactive by default but effect may be avoided by strategic decisions. WARNING: Option in Beta Testing phase and under further ongoing development.</English>
 		<French>Les Bâtiments religieux d'une religion qui n'est pas la Religion d'Etat sont inactifs par défaut. Mais cet effet peut être annulé par des décisions stratégiques. ATTENTION: Option en Beta Test et nécessitant un développement futur.</French>
 		<German>Bei Staatsreligionen werden die Gebäude anderer Religionen standardmäßig deaktiviert, aber dieser Effekt kann durch strategische Entscheidungen umgangen werden. ACHTUNG! Diese Option befindet sich in der Betaphase.</German>
-		<Italian>Gli edifici religiosi delle religioni non di stato diventano inattivi, ma questo effetto può essere evitato per mezzo di decisioni strategiche.  ATTENZIONE: quest'opzione è attualmente in fase di Beta.</Italian>
-		<Polish>Budynki Religijne religii nienarodowej są w większości wyłączone, ale skutków tego można uniknąć poprzez strategiczne decyzje. [COLOR_WARNING_TEXT]Opcja w fazie Beta.[COLOR_REVERT]</Polish>
+		<Italian>Gli edifici religiosi delle religioni non di stato diventano inattivi, ma questo effetto può essere evitato per mezzo di decisioni strategiche. ATTENZIONE: quest'opzione è attualmente in fase di Beta.</Italian>
+		<Polish>Budynki Religijne religii nienarodowej są w większości wyłączone, ale skutków tego można uniknąć poprzez strategiczne decyzje. Opcja w fazie Beta.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_REVOLUTION</Tag>
@@ -1165,10 +1174,8 @@ Si vous jouez avec "Civs Mineures au départ", cette option changera les règles
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_REVOLUTION_HELP</Tag>
-		<English>Enables the Revolution mod component: New rebel civs will attempt to breakaway from an empire if their needs are not being met.
-WARNING: This option makes AI less challenging. Revolution mod hasn't been properly maintained and updated in C2C.</English>
-		<French>Active le composant de mod de révolution: Des rebelles peuvent tenter de se révolter et devenir indépendants d'un empire si leurs besoins ne sont pas satisfaits.
-AVERTISSEMENT: cette option rend l'IA moins difficile. Le mod Revolution n'a pas été correctement entretenu et mis à jour dans C2C.</French>
+		<English>Enables the Revolution mod component: New rebel civs will attempt to breakaway from an empire if their needs are not being met. WARNING: This option makes AI less challenging. Revolution mod hasn't been properly maintained and updated in C2C.</English>
+		<French>Active le composant de mod de révolution : Des rebelles peuvent tenter de se révolter et devenir indépendants d'un empire si leurs besoins ne sont pas satisfaits. AVERTISSEMENT : cette option rend l'IA moins difficile. Le mod Revolution n'a pas été correctement entretenu et mis à jour dans C2C.</French>
 		<German>Deaktiviert die Revolution-Mod: Es wird keine Rebellionen und Abspaltungsbestrebungen geben, wenn die Bedürfnisse der Bevölkerung nicht beachtet werden.</German>
 		<Italian>Disabilita il MOD "Revolution": nuove civiltà ribelli no possono tentare la secessione da un impero se i loro bisogni non vengono soddisfatti.</Italian>
 		<Spanish>Se desactiva el componente Revolution: no habrá civilizaciones rebeldes que intenten independizarse de un imperio si sus necesidades no son satisfechas.</Spanish>
@@ -1235,9 +1242,9 @@ AVERTISSEMENT: cette option rend l'IA moins difficile. Le mod Revolution n'a pas
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_SIZE_MATTERS_UNCUT_HELP</Tag>
-		<English>MUST ALSO PLAY WITH Size Matters option ON!  Forces all units start with their normal base strength and HP values.  Normal Size Matters alone will introduce some strength adjustments to units that differ from the core.  This enforces adherence to the core unit strengths.</English>
+		<English>MUST ALSO PLAY WITH Size Matters option ON! Forces all units start with their normal base strength and HP values. Normal Size Matters alone will introduce some strength adjustments to units that differ from the core. This enforces adherence to the core unit strengths.</English>
 		<French>DOIT ETRE SELECTIONNE avec le mod C2C : La Taille Compte! Actif ! .Force les unités à démarrer avec leurs valeurs standard de puissance et PV. Sinon, l'option La Taille Compte! ajuste les valeurs des unités. Cela renforce l'adhésion aux forces des l'unités.</French>
-		<German>FUNKTIONIERT NUR IN VERBINDUNG MIT DER GRUNDMOD "Größe ist wichtig"!  Mit dieser Zusatzoption starten alle Einheiten mit ihren normalen Basiswerten aus dem Standardspiel. Die Funktionalität der Mod "Größe ist wichtig" bleibt erhalten, aber die Änderung der Grundwerte wird hiermit unterbunden.</German>
+		<German>FUNKTIONIERT NUR IN VERBINDUNG MIT DER GRUNDMOD "Größe ist wichtig"! Mit dieser Zusatzoption starten alle Einheiten mit ihren normalen Basiswerten aus dem Standardspiel. Die Funktionalität der Mod "Größe ist wichtig" bleibt erhalten, aber die Änderung der Grundwerte wird hiermit unterbunden.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_START_AS_MINORS</Tag>
@@ -1315,9 +1322,9 @@ AVERTISSEMENT: cette option rend l'IA moins difficile. Le mod Revolution n'a pas
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_TELEPORT_HUNTING_AWARDS_HELP</Tag>
-		<English>With this option, Subdued Animals are always teleported back to the nearest city.  Without it, they will generally only do so once your Civilization has learned the Sedentary Lifestyle Technology.</English>
+		<English>With this option, Subdued Animals are always teleported back to the nearest city. Without it, they will generally only do so once your Civilization has learned the Sedentary Lifestyle Technology.</English>
 		<French>Avec cette option, les Animaux apprivoisés sont automatiquement téléportés dans la ville la plus proche. Sans l'option, la téléportation ne sera effective qu'à partir de la technologie 'Vie sédentaire'.</French>
-		<German>Bei eingeschalteter Option werden im Kampf gezähmte Tiere immer in die nächstgelegene Stadt teleportiert. Im normalen Spiel passiert das erst, wenn die betreffende Zivilisation die Sesshaftigkeit entdeckt hat.</German>
+		<German>Bei eingeschalteter Option werden im Kampf eingefangene Tiere immer in die nächstgelegene Stadt teleportiert. Im normalen Spiel passiert das erst, wenn die betreffende Zivilisation die Sesshaftigkeit entdeckt hat.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_UNITED_NATIONS</Tag>
@@ -1419,21 +1426,9 @@ AVERTISSEMENT: cette option rend l'IA moins difficile. Le mod Revolution n'a pas
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_VANILLA_COMBAT_ENGINE_HELP</Tag>
-		<English>This option returns the combat system to one much closer to the original.
-
-		In C2C combat, units recalculate their strength every round based on damage they may have taken in the last combat round.  Furthermore, it is not only one unit that hits each round but both can hit and both can miss.  The difference does change some aspects and the feel of combat and what you can expect from combat results.
-
-		For example, first strikes become much more powerful than they were on Vanilla BTS because hits taken before you can even counterattack will make all subsequent attacks you make much weaker.
-
-		In essence, this will mean that overwhelming numbers of units have a better chance to wear down stronger units whereas assumed C2C rules allow superior quality units to be much more powerful against lesser opponent units.</English>
-		<French>Cette option ramène le système de combat à un niveau beaucoup plus proche de l'original.
-
-En combat C2C, les unités recalculent leur force à chaque round en fonction des dégâts qu'elles peuvent avoir subis lors du dernier round de combat. De plus, ce n'est pas seulement une unité qui frappe à chaque tour, mais les deux peuvent frapper et les deux peuvent manquer. La différence change certains aspects et la sensation du combat et ce que vous pouvez attendre des résultats du combat.
-
-Par exemple, les premières frappes deviennent beaucoup plus puissantes qu'elles ne l'étaient sur Vanilla BTS parce que les frappes prises avant que vous ne puissiez même contre-attaquer rendront toutes les attaques suivantes que vous rendez beaucoup plus faibles.
-
-Essentiellement, cela signifie qu'un nombre écrasant d'unités ont de meilleures chances d'user des unités plus fortes, tandis que les règles C2C supposées permettent aux unités de qualité supérieure d'être beaucoup plus puissantes contre des unités adverses moins importantes.</French>
-		<German>Diese Einstellung setzt die durch C2C vorgenommenen Änderungen am Kampfsystem zurück, so dass es wieder viel näher am Original-BTS-Kampfsystem ist.</German>
+		<English>This option returns the combat system to one much closer to the original. In C2C combat, units recalculate their strength every round based on damage they may have taken in the last combat round. Furthermore, it is not only one unit that hits each round but both can hit and both can miss. The difference does change some aspects and the feel of combat and what you can expect from combat results. For example, first strikes become much more powerful than they were on BtS because hits taken before you can even counterattack will make all subsequent attacks you make much weaker. In essence, this will mean that overwhelming numbers of units have a better chance to wear down stronger units whereas assumed C2C rules allow superior quality units to be much more powerful against lesser opponent units.</English>
+		<French>Cette option ramène le système de combat à un niveau beaucoup plus proche de l'original. En combat C2C, les unités recalculent leur force à chaque round en fonction des dégâts qu'elles peuvent avoir subis lors du dernier round de combat. De plus, ce n'est pas seulement une unité qui frappe à chaque tour, mais les deux peuvent frapper et les deux peuvent manquer. La différence change certains aspects et la sensation du combat et ce que vous pouvez attendre des résultats du combat. Par exemple, les premières frappes deviennent beaucoup plus puissantes qu'elles ne l'étaient sur Vanilla BtS parce que les frappes prises avant que vous ne puissiez même contre-attaquer rendront toutes les attaques suivantes que vous rendez beaucoup plus faibles. Essentiellement, cela signifie qu'un nombre écrasant d'unités ont de meilleures chances d'user des unités plus fortes, tandis que les règles C2C supposées permettent aux unités de qualité supérieure d'être beaucoup plus puissantes contre des unités adverses moins importantes.</French>
+		<German>Diese Einstellung setzt die durch C2C vorgenommenen Änderungen am Kampfsystem zurück, so dass es wieder viel näher am Original-BtS-Kampfsystem ist.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_WIN_FOR_LOSING</Tag>
@@ -1443,7 +1438,7 @@ Essentiellement, cela signifie qu'un nombre écrasant d'unités ont de meilleure
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_WIN_FOR_LOSING_HELP</Tag>
-		<English>Smaller nations, by city count and population, are given research bonuses in direct proportion to how much smaller they are from the largest player nations on the map.  Influence begins once the player enters the Ancient era and beyond.</English>
+		<English>Smaller nations, by city count and population, are given research bonuses in direct proportion to how much smaller they are from the largest player nations on the map. Influence begins once the player enters the Ancient era and beyond.</English>
 		<German>Nationen mit weniger Städten und einer geringeren Bevölkerungsdichte erhalten Forschungsboni, die sich direkt aus dem Abstand zur größten Nation auf der Karte errechnen.</German>
 		<French>Les plus petits pays, par nombre de villes et par population, reçoivent des primes de recherche directement proportionnelles à leur taille par rapport aux plus grands pays joueurs sur la carte. L'influence commence une fois que le joueur entre dans l'ère antique et au-delà.</French>
 	</TEXT>
@@ -1482,15 +1477,7 @@ Essentiellement, cela signifie qu'un nombre écrasant d'unités ont de meilleure
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_GAMEOPTION_ZONE_OF_CONTROL_HELP</Tag>
-		<English>Zone of Control (ZoC) hinders enemy units from walking around manned forts or cities with moats, the effect has a one tile range. A unit that is inside an enemy ZoC cannot move to another plot within the ZoC, but must exit the ZoC before being able to reach other ZoC plots.
-
-Not reccomended at the moment as there is a known bug it creates for pathing and some players may find it terribly frustrating with the current forts.
-
-The author of this option also believes that it does not represent a fair combat scenario in many cases where you'd prefer to take the hit they threaten and would like to eventually make a form of ZoC that instead generates a free Ranged Assault on the offending unit rather than keeping it from moving at all (as that's the concept behind the effect anyhow.)</English>
-		<French>La zone de contrôle (ZoC) empêche les unités ennemies de marcher autour des forts habités ou des villes avec des douves, l'effet a une portée d'une case. Une unité qui se trouve à l'intérieur d'un ZoC ennemi ne peut pas se déplacer vers une autre parcelle dans le ZoC, mais doit quitter le ZoC avant de pouvoir atteindre d'autres parcelles ZoC.
-
-Non recommandé pour le moment car il existe un bug connu qu'il crée pour calcul des chemins et certains joueurs peuvent le trouver terriblement frustrant avec les forts actuels.
-
-L'auteur de cette option estime également que cela ne représente pas un scénario de combat équitable dans de nombreux cas où vous préféreriez prendre le coup qu'ils menacent et souhaitez éventuellement créer une forme de ZoC qui génère à la place un assaut à distance gratuit contre le délinquant. l'unité plutôt que de l'empêcher de bouger (comme c'est le concept derrière l'effet de toute façon.)</French>
+		<English>Zone of Control (ZoC) hinders enemy units from walking around manned forts or cities with moats, the effect has a one tile range. A unit that is inside an enemy ZoC cannot move to another plot within the ZoC, but must exit the ZoC before being able to reach other ZoC plots.	Not recomended at the moment as there is a known bug it creates for pathing and some players may find it terribly frustrating with the current forts. The author of this option also believes that it does not represent a fair combat scenario in many cases where you'd prefer to take the hit they threaten and would like to eventually make a form of ZoC that instead generates a free Ranged Assault on the offending unit rather than keeping it from moving at all (as that's the concept behind the effect anyhow.)</English>
+		<French>La zone de contrôle (ZoC) empêche les unités ennemies de marcher autour des forts habités ou des villes avec des douves, l'effet a une portée d'une case. Une unité qui se trouve à l'intérieur d'un ZoC ennemi ne peut pas se déplacer vers une autre parcelle dans le ZoC, mais doit quitter le ZoC avant de pouvoir atteindre d'autres parcelles ZoC. Non recommandé pour le moment car il existe un bug connu qu'il crée pour calcul des chemins et certains joueurs peuvent le trouver terriblement frustrant avec les forts actuels. L'auteur de cette option estime également que cela ne représente pas un scénario de combat équitable dans de nombreux cas où vous préféreriez prendre le coup qu'ils menacent et souhaitez éventuellement créer une forme de ZoC qui génère à la place un assaut à distance gratuit contre le délinquant. l'unité plutôt que de l'empêcher de bouger (comme c'est le concept derrière l'effet de toute façon.)</French>
 	</TEXT>
 </Civ4GameText>

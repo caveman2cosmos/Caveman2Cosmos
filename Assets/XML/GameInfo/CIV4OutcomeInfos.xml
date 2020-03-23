@@ -1,9 +1,4 @@
-<?xml version="1.0"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jesse Smith (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Upkeep -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4OutcomeInfos xmlns="x-schema:../Schema/C2C_CIV4GameInfoSchema.xml">
 	<OutcomeInfos>
 		<OutcomeInfo>
@@ -1324,7 +1319,7 @@
 			<PrereqTech>NONE</PrereqTech>
 			<bNeutralTerritory>0</bNeutralTerritory>
 			<bHostileTerritory>0</bHostileTerritory>
-            <bFriendlyTerritory>1</bFriendlyTerritory>
+			<bFriendlyTerritory>1</bFriendlyTerritory>
 			<bCity>1</bCity>
 			<PrereqBuildings>
 				<BuildingType>BUILDING_HUMAN_SACRIFICE</BuildingType>

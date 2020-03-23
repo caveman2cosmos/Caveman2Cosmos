@@ -66,7 +66,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_AIRBOMB4_HELP</Tag>
 		<English>Select an air unit that can airbomb, select the port airbomb mission, then click on the target city to damage and attempt to sink a ship.</English>
-		<French>Sélectionnez une unité aérienne capable de bombarder, puis la mission de bombardement du port. Cliquez ensuite sur la ville ciblée  et essayer de couler un navire.</French>
+		<French>Sélectionnez une unité aérienne capable de bombarder, puis la mission de bombardement du port. Cliquez ensuite sur la ville ciblée et essayer de couler un navire.</French>
 		<German>Wählen Sie eine Lufteinheit, die Luftbombardierungen durchführen kann, aktivieren Sie die Mission "Luftbombardierung Häfen" und klicken Sie dann auf die Zielstadt, um zu versuchen, dort ein Schiff zu beschädigen oder zu versenken.</German>
 		<Italian>Seleziona un'unità aerea in grado di bombardare, quindi "Bombarda porto", poi clicca sulla città bersaglio per cercare di danneggiare o affondare una nave.</Italian>
 		<Spanish>Selecciona una unidad que pueda realizar bombardeos aéreos, selecciona la misión "Bombardear puerto" y haz clic en la ciudad objetivo para intentar dañar o hundir un navío.</Spanish>
@@ -97,7 +97,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_AMBUSH_HELP</Tag>
-		<English>Attacks best defender of enemy target(s) on same plot.  WARNING:You should only have one unit selected at a time for this or else it will always choose the first available unit to attack with and will not show an accurate odds assessment.</English>
+		<English>Attacks best defender of enemy target(s) on same plot. WARNING:You should only have one unit selected at a time for this or else it will always choose the first available unit to attack with and will not show an accurate odds assessment.</English>
 		<French>Attaque le meilleur défenseur ennemi sur la même case. ATTENTION: Action à exécuter avec une seule unité sélectionnée. Sinon le combat sera lancé avec la première unité dans la liste!</French>
 	</TEXT>
 	<TEXT>
@@ -116,7 +116,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_ASSASSINATE_HELP</Tag>
-		<English>Attacks best defender of enemy target(s)(among unit types that this unit will target first in a stack) on same plot.  Works inside a city.  WARNING: You should only have one unit selected for this action.</English>
+		<English>Attacks best defender of enemy target(s)(among unit types that this unit will target first in a stack) on same plot. Works inside a city. WARNING: You should only have one unit selected for this action.</English>
 		<French>Attaque le meilleur défenseur de la cible ennemie présente sur la même case. Utilisable dans une ville. ATTENTION: ne sélectionner qu'une seule unité pour cette action.</French>
 	</TEXT>
 	<TEXT>
@@ -185,7 +185,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_BUILDUP_HELP</Tag>
-		<English>Select a Promotion Line and gain an additional auto-promotion from the next level on that line for each round (up to 5) that the unit stays building up the ability.  Unit loses all Build Up promotions when it next moves.  (An alternative form of Fortification.)</English>
+		<English>Select a Promotion Line and gain an additional auto-promotion from the next level on that line for each round (up to 5) that the unit stays building up the ability. Unit loses all Build Up promotions when it next moves. (An alternative form of Fortification.)</English>
 		<French>Permet de cumuler le retranchement tout en choisissant une Spécialisation permettant de développer des compétences (sous forme de promotion) à chaque tour tant que l'unité reste sur place. (Il s'agit d'une alternative à 'Se retrancher F'.)</French>
 		<German>Einheit zum Training in einer bestimmten Beförderungsreihe abstellen. Pro Runde Training erhält die Einheit eine Zusatzbeförderung (maximal 5 Runden lang). Diese Beförderungen sind nicht dauerhaft. Sie gehen verloren, sobald sich die Einheit bewegt.</German>
 		<Polish>Wybierz Linię Promocji i otrzymaj dodatkową auto-promocję z następnego poziomu tej linii promocji za każda turę Koncentracji na danym terenie (max 5 promocji). Jednostka traci Koncentrację kiedy się poruszy. (To jest alternatywa do Fortyfikacji jednostek).</Polish>
@@ -252,7 +252,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CONDUCT_TRADE_MISSION_HELP</Tag>
-		<English>Conduct a trade mission in this city. The amount of gold created is relative to the size of the city and distance to the city the unit was trained or born in, as well as if the city is foreign. It consumes a Great Person, but sends regular merchants and criminals back to the capital.  Criminals, attempting to trade their contraband, may fail an investigation check for this mission and thus fail to derive the gold, lose their movement for the turn and become 'Wanted'.</English>
+		<English>Conduct a trade mission in this city. The amount of gold created is relative to the size of the city and distance to the city the unit was trained or born in, as well as if the city is foreign. It consumes a Great Person, but sends regular merchants and criminals back to the capital. Criminals, attempting to trade their contraband, may fail an investigation check for this mission and thus fail to derive the gold, lose their movement for the turn and become 'Wanted'.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CURE</Tag>
@@ -385,7 +385,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_HEAL_BUILDUP_HELP</Tag>
-		<English>Automate build up selections (with emphasis on healing) for all units selected until fully healed.  Turns to heal is maximum - with this mission, units may take less time to heal (but may also be weaker while doing so.)</English>
+		<English>Automate build up selections (with emphasis on healing) for all units selected until fully healed. Turns to heal is maximum - with this mission, units may take less time to heal (but may also be weaker while doing so.)</English>
 		<French>Automatise la sélection du retranchement (spécialisation soins) pour toutes les unités sélectionnées, jusqu'à qu'elles soient complètement guéries. Le nombre de tours indiqué est un maximum - Car le bonus de soin est incrémental - l'unité met moins de temps pour se soigner, mais est plus vulnérable.</French>
 		<German>Automatische Steigerung der Regeneration der ausgewählten Einheiten bis zur kompletten Wiederherstellung. Einheiten sind auf diesem Weg schneller wieder einsatzbereit, dafür sind sie in der Rekonvaleszenzzeit aber schwächer und ungeschützter.</German>
 	</TEXT>
@@ -434,7 +434,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_INFILTRATE_HELP</Tag>
-		<English>This order will have the Spy or Criminal infiltrate a foreign city to bring home useful information (Espionage Points) about the rival. Spies use Espionage Points and are consumed.  Criminals must pass an investigation check to be successful.  If they are, they are sent back to the capital.  Otherwise, they become wanted and lose the rest of their movement for that turn.</English>
+		<English>This order will have the Spy or Criminal infiltrate a foreign city to bring home useful information (Espionage Points) about the rival. Spies use Espionage Points and are consumed. Criminals must pass an investigation check to be successful. If they are, they are sent back to the capital. Otherwise, they become wanted and lose the rest of their movement for that turn.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_INQUISITION</Tag>
@@ -534,7 +534,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_PLUNDER_CITY_HELP</Tag>
 		<English>This will order the [COLOR_UNIT_TEXT]Barbarian Leader[COLOR_REVERT] to plunder the city. Barbarians will sabotage [ICON_FOOD], [ICON_PRODUCTION] and steal [ICON_GOLD] for you. Citizens may be [COLOR_HIGHLIGHT_TEXT]enslaved[COLOR_REVERT] and the city's [ICON_CULTURE] will decrease.</English>
-		<French>Ordonne au [COLOR_UNIT_TEXT]Chef Barbare[COLOR_REVERT] de pillet la ville. Les Barbares saboteront  [ICON_FOOD], [ICON_PRODUCTION] et voleront [ICON_GOLD] pour vous. Les citoyens peuvent se retrouvés [COLOR_HIGHLIGHT_TEXT]esclaves[COLOR_REVERT] et la [ICON_CULTURE] va diminuer.</French>
+		<French>Ordonne au [COLOR_UNIT_TEXT]Chef Barbare[COLOR_REVERT] de pillet la ville. Les Barbares saboteront [ICON_FOOD], [ICON_PRODUCTION] et voleront [ICON_GOLD] pour vous. Les citoyens peuvent se retrouvés [COLOR_HIGHLIGHT_TEXT]esclaves[COLOR_REVERT] et la [ICON_CULTURE] va diminuer.</French>
 		<German>Der [COLOR_UNIT_TEXT]Barbarenanführer[COLOR_REVERT] wird angewiesen, die Stadt zu plündern. Die Barbaren werden die Produktion von [ICON_FOOD] und [ICON_PRODUCTION] sabotieren und [ICON_GOLD] stehlen. Außerdem sinkt die [ICON_CULTURE] der Stadt und mitunter werden sogar Bürger [COLOR_HIGHLIGHT_TEXT]versklavt[COLOR_REVERT].</German>
 		<Italian>Ordina al [COLOR_UNIT_TEXT]Leader barbaro[COLOR_REVERT] di saccheggiare la città. I barbari saboteranno [ICON_FOOD], [ICON_PRODUCTION] e ruberanno [ICON_GOLD] per te. Gli abitanti potrebbero essere [COLOR_HIGHLIGHT_TEXT]schiavizzati[COLOR_REVERT] e la [ICON_CULTURE] della città diminuirà.</Italian>
 		<Spanish>Esto ordenará al [COLOR_UNIT_TEXT]Líder bárbaro[COLOR_REVERT] saquear la ciudad. Los bárbaros sabotearán la [ICON_FOOD], [ICON_PRODUCTION] y robarán [ICON_GOLD] para tí. Algunos ciudadanos podrían ser [COLOR_HIGHLIGHT_TEXT]esclavizados[COLOR_REVERT] y la [ICON_CULTURE] de la ciudad disminuirá.</Spanish>
@@ -666,5 +666,10 @@
 		<Italian>Permette la selezione di una tecnologia che si vuole ricercare. L'unità dormirà finchè quella tecnologia potrà essere ricercata, poi l'unità si consumerà ricercando la tecnologia.</Italian>
 		<Spanish>Permite seleccionar la tecnología que se desea descubrir. La unidad dormirá hasta que dicha tecnología esté disponible, entonces la investigará y se consumirá.</Spanish>
 		<Polish>Pozwala zaznaczonej jednostce na późniejsze odkrycie technologii. Jednostka będzie uśpiona dopóki technologia nie będzie możliwa do wynalezienia. Gdy już będzie możliwe odkrycie danej technologii jednostka automatycznie zostanie wykorzystana do odkrycia jej.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISSION_RANGE_ATTACK</Tag>
+		<English>Range Attack</English>
+		<French>Attaque à Distance</French>
 	</TEXT>
 </Civ4GameText>

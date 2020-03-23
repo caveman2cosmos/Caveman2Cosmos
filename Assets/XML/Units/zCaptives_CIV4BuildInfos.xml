@@ -1,10 +1,4 @@
-<?xml version="1.0"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- ReModified by StrategyOnly -->
-	<!-- -->
-	<!-- Build Infos -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4BuildInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<BuildInfos>
 		<!-- Prehistoric -->
@@ -931,7 +925,7 @@
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_EARLY_MOUNTAIN_MINE</ImprovementType>
 			<RouteType>NONE</RouteType>
-			<EntityEvent>ENTITY_EVENT_MINE</EntityEvent>			
+			<EntityEvent>ENTITY_EVENT_MINE</EntityEvent>
 			<HotKey>KB_M</HotKey>
 			<bShiftDown>1</bShiftDown>
 			<iHotKeyPriority>0</iHotKeyPriority>
@@ -4491,13 +4485,13 @@
 			<Button>Art/Interface/Buttons/TerrainFeatures/Jungle.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
-			<Type>BUILD_PLANT_BAMBOO_GROVE_SLAVE</Type>
-			<Description>TXT_KEY_BUILD_PLANT_BAMBOO_GROVE_SLAVE</Description>
+			<Type>BUILD_PLANT_BAMBOO_SLAVE</Type>
+			<Description>TXT_KEY_BUILD_PLANT_BAMBOO_SLAVE</Description>
 			<PrereqTech>TECH_ECOLOGY</PrereqTech>
 			<iTime>2000</iTime>
 			<iCost>0</iCost>
 			<bKill>1</bKill>
-			<ImprovementType>IMPROVEMENT_PLANT_BAMBOO_GROVE</ImprovementType>
+			<ImprovementType>IMPROVEMENT_PLANT_BAMBOO</ImprovementType>
 			<RouteType>NONE</RouteType>
 			<FeatureChange>FEATURE_BAMBOO</FeatureChange>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -4921,7 +4915,7 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/gatherer_genericfruit.dds</Button>
 		</BuildInfo>
-        	<BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_GRAPE_GATHERING_CAMP_SLAVE</Type>
 			<Description>TXT_KEY_BUILD_GRAPE_GATHERING_CAMP_SLAVE</Description>
 			<PrereqTech>TECH_GATHERING</PrereqTech>

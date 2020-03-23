@@ -371,11 +371,7 @@ cvInternalGlobals::cvInternalGlobals()
 	/************************************************************************************************/
 	/* XML_MODULAR_ART_LOADING                 END                                                  */
 	/************************************************************************************************/
-	/************************************************************************************************/
-	/* Afforess	                  Start		 12/8/09                                                */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
+
 	, m_iPEAK_EXTRA_MOVEMENT(0)
 	, m_iPEAK_EXTRA_DEFENSE(0)
 	, m_bLoadedPlayerOptions(false)
@@ -401,7 +397,6 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_iUSE_CAN_DO_GOLD_CALLBACK(0)
 	, m_iUSE_CAN_DO_RESEARCH_CALLBACK(0)
 	, m_iUSE_UPGRADE_UNIT_PRICE_CALLBACK(0)
-	, m_iUSE_IS_VICTORY_CALLBACK(0)
 	, m_iUSE_AI_UPDATE_UNIT_CALLBACK(0)
 	, m_iUSE_AI_CHOOSE_PRODUCTION_CALLBACK(0)
 	, m_iUSE_EXTRA_PLAYER_COSTS_CALLBACK(0)
@@ -410,9 +405,6 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_iUSE_CAN_DO_COMBAT_CALLBACK(0)
 	, m_iUSE_AI_CAN_DO_WARPLANS_CALLBACK(0)
 
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
 	/************************************************************************************************/
 	/* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
 	/*                                                                                              */
@@ -3931,11 +3923,6 @@ void cvInternalGlobals::cacheGlobals()
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 
-/************************************************************************************************/
-/* Afforess	                  Start		 12/8/09                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	m_iPEAK_EXTRA_MOVEMENT = getDefineINT("PEAK_EXTRA_MOVEMENT");
 	m_iPEAK_EXTRA_DEFENSE = getDefineINT("PEAK_EXTRA_DEFENSE");
 	m_bXMLLogging = getDefineINT("XML_LOGGING_ENABLED");
@@ -3961,7 +3948,6 @@ void cvInternalGlobals::cacheGlobals()
 	m_iUSE_CAN_DO_GOLD_CALLBACK = getDefineINT("USE_CAN_DO_GOLD_CALLBACK");
 	m_iUSE_CAN_DO_RESEARCH_CALLBACK = getDefineINT("USE_CAN_DO_RESEARCH_CALLBACK");
 	m_iUSE_UPGRADE_UNIT_PRICE_CALLBACK = getDefineINT("USE_UPGRADE_UNIT_PRICE_CALLBACK");
-	m_iUSE_IS_VICTORY_CALLBACK = getDefineINT("USE_IS_VICTORY_CALLBACK");
 	m_iUSE_AI_UPDATE_UNIT_CALLBACK = getDefineINT("USE_AI_UPDATE_UNIT_CALLBACK");
 	m_iUSE_AI_CHOOSE_PRODUCTION_CALLBACK = getDefineINT("USE_AI_CHOOSE_PRODUCTION_CALLBACK");
 	m_iUSE_EXTRA_PLAYER_COSTS_CALLBACK = getDefineINT("USE_EXTRA_PLAYER_COSTS_CALLBACK");
@@ -3969,10 +3955,7 @@ void cvInternalGlobals::cacheGlobals()
 	m_iUSE_AI_BESTTECH_CALLBACK = getDefineINT("USE_AI_BESTTECH_CALLBACK");
 	m_iUSE_CAN_DO_COMBAT_CALLBACK = getDefineINT("USE_CAN_DO_COMBAT_CALLBACK");
 	m_iUSE_AI_CAN_DO_WARPLANS_CALLBACK = getDefineINT("USE_AI_CAN_DO_WARPLANS_CALLBACK");
-	
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 /************************************************************************************************/
 /* MODULES                                 11/13/07                            MRGENIE          */
 /*                                                                                              */
@@ -5725,11 +5708,6 @@ int cvInternalGlobals::getCOMBAT_DAMAGE() const
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 
-/************************************************************************************************/
-/* Afforess	                  Start		 12/8/09                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 int cvInternalGlobals::getPEAK_EXTRA_MOVEMENT() const
 {
 	return m_iPEAK_EXTRA_MOVEMENT;
@@ -5861,11 +5839,6 @@ int cvInternalGlobals::getUSE_UPGRADE_UNIT_PRICE_CALLBACK() const
 	return m_iUSE_UPGRADE_UNIT_PRICE_CALLBACK;
 }
 
-int cvInternalGlobals::getUSE_IS_VICTORY_CALLBACK() const
-{
-	return m_iUSE_IS_VICTORY_CALLBACK;
-}
-
 int cvInternalGlobals::getUSE_AI_UPDATE_UNIT_CALLBACK() const
 {
 	return m_iUSE_AI_UPDATE_UNIT_CALLBACK;
@@ -5901,9 +5874,6 @@ int cvInternalGlobals::getUSE_AI_CAN_DO_WARPLANS_CALLBACK() const
 	return m_iUSE_AI_CAN_DO_WARPLANS_CALLBACK;
 }
 
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 /************************************************************************************************/
 /* Mod Globals    Start                          09/13/10                           phungus420  */

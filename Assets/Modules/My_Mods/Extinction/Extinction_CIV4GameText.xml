@@ -1,10 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
-		<Tag>TXT_KEY_BONUSCLASS_EXTINCTION</Tag>
-		<English>Extinction</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_MAMMOTH_GRAVEYARD</Tag>
 		<English>Mammoth Graveyard</English>
 	</TEXT>

@@ -13,6 +13,9 @@
 			<Strategy>TXT_KEY_BUILDING_NEAR_CITY_STUFF_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CAVE_NEAR_CITY</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<!--ObsoleteTech>TECH_COMPULSORY_EDUCATION</ObsoleteTech-->
 			<iCost>-1</iCost>
 			<PrereqOrFeature>
@@ -31,6 +34,9 @@
 			<Strategy>TXT_KEY_BUILDING_NEAR_CITY_STUFF_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CAVE_IN_NATION</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<!--ObsoleteTech>TECH_COMPULSORY_EDUCATION</ObsoleteTech-->
 			<iCost>-1</iCost>
 		</BuildingInfo>
@@ -41,6 +47,9 @@
 			<Strategy>TXT_KEY_BUILDING_ELITE_HOUSING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ELITE_HOUSING</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<iCost>-1</iCost>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>

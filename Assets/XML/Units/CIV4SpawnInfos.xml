@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <!--
 <PlayerType> tag is now necessary to activate a spawn
 Valid NPC players for spawns:
@@ -14,12 +14,20 @@ Valid NPC players for spawns:
 	49 = NPC1_PLAYER
 	50 = NPC0_PLAYER
 
- <iMaxLocalDensity> Range: 1-49
-	Based on an area of 49 plots, 3 plots out in all directions.
-	Plots that is not of the same area as the spawn plot is not counted.
-	iAreaPlots (1-49) / iMaxLocalDensity (1-49) = Max units inside the Area. (Min. 1)
-	Set it to 1 for a max. limit of 49 units inside the area.
-	Set it to 49 for a max. limit of 1 unit inside the area.
+ <iMaxLocalDensity> Number of same unit allowed within an area
+	Area of 49 plots, 3 plots out in all directions from the spawn plot.
+	Plots that are not of the same area as the spawn plot is not counted.
+
+ <iTurns> Bigger value means less spawn.
+	Sets a spawn frequency per valid plot that does not adjust based on how many valid plots exist, so more valid plots means more spawns on the map.
+ <iGlobalTurns> Bigger value means less spawn.
+	Sets a spawn frequency per valid plot such that more valid plots on the map does not result in more spawned units than if there were less valid plots.
+	Translated to <iTurns>: iTurns = (iGlobalTurns / 100) * iValidPlots
+	iValidPlots = Number of Valid spawn plots on entire map
+Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
+  The smallest, after converting iGlobalTurns to iTurns, will set the minimum spawn frequency.
+  The biggest can only increase that spawn frequency above the minimum set by the smallest one.
+  The bigger the other is the less it will increase the frequency set by the smallest one.
 -->
 <Civ4SpawnInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<SpawnInfos>
@@ -27,8 +35,8 @@ Valid NPC players for spawns:
 			<Type>SPAWN_ANIMAL_JAGUAR_NATIVE</Type>
 			<UnitType>UNIT_ANIMAL_JAGUAR</UnitType>
 			<PlayerType>43</PlayerType>
-			<iTurns>400</iTurns>
-			<iMaxLocalDensity>49</iMaxLocalDensity>
+			<iTurns>600</iTurns>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -45,8 +53,8 @@ Valid NPC players for spawns:
 			<Type>SPAWN_BISON_NATIVE</Type>
 			<UnitType>UNIT_BISON</UnitType>
 			<PlayerType>44</PlayerType>
-			<iTurns>30</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>100</iTurns>
+			<iMaxLocalDensity>3</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -60,8 +68,8 @@ Valid NPC players for spawns:
 			<Type>SPAWN_BENGALTIGER_NATIVE</Type>
 			<UnitType>UNIT_BENGALTIGER</UnitType>
 			<PlayerType>43</PlayerType>
-			<iTurns>480</iTurns>
-			<iMaxLocalDensity>49</iMaxLocalDensity>
+			<iTurns>600</iTurns>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<iMaxLatitude>25</iMaxLatitude>
 			<iMinLongitude>60</iMinLongitude>
@@ -74,8 +82,8 @@ Valid NPC players for spawns:
 			<Type>SPAWN_BROWN_BEAR_FOREST</Type>
 			<UnitType>UNIT_BEAR</UnitType>
 			<PlayerType>43</PlayerType>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>10</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>3</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMinLatitude>0</iMinLatitude>
@@ -95,8 +103,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_BLACKBEAR</UnitType>
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>8</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -112,8 +120,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_CAMEL</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>30</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>100</iTurns>
+			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -129,7 +137,7 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_CAVEBEAR</UnitType>
 			<PlayerType>42</PlayerType>
 			<iTurns>300</iTurns>
-			<iMaxLocalDensity>18</iMaxLocalDensity>
+			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<ObsoleteTech>TECH_CHIEFDOM</ObsoleteTech>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -147,7 +155,7 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_CAVE_LION</UnitType>
 			<PlayerType>43</PlayerType>
 			<iTurns>250</iTurns>
-			<iMaxLocalDensity>49</iMaxLocalDensity>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -167,8 +175,8 @@ Valid NPC players for spawns:
 			<Type>SPAWN_CHEETAH_NATIVE</Type>
 			<UnitType>UNIT_CHEETAH</UnitType>
 			<PlayerType>43</PlayerType>
-			<iTurns>100</iTurns>
-			<iMaxLocalDensity>12</iMaxLocalDensity>
+			<iTurns>200</iTurns>
+			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -186,8 +194,8 @@ Valid NPC players for spawns:
 			<Type>SPAWN_COW_NATIVE</Type>
 			<UnitType>UNIT_COW</UnitType>
 			<PlayerType>44</PlayerType>
-			<iTurns>30</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>100</iTurns>
+			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<ObsoleteTech>TECH_RENAISSANCE_LIFESTYLE</ObsoleteTech>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<BonusTypes>
@@ -199,8 +207,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_STAG_DEER</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>30</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>100</iTurns>
+			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -215,8 +223,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_DONKEY</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>40</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>100</iTurns>
+			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<BonusTypes>
@@ -228,8 +236,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_DONKEY</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>250</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>500</iTurns>
+			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<BonusTypes>
@@ -241,8 +249,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_ELEPHANT_ASIAN</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>25</iTurns>
-			<iMaxLocalDensity>21</iMaxLocalDensity>
+			<iTurns>150</iTurns>
+			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -257,8 +265,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_FLAMINGO</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>125</iTurns>
-			<iMaxLocalDensity>4</iMaxLocalDensity>
+			<iTurns>200</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -275,8 +283,8 @@ Valid NPC players for spawns:
 			<Type>SPAWN_GORILLA_NATIVE</Type>
 			<UnitType>UNIT_GORILLA</UnitType>
 			<PlayerType>42</PlayerType>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>10</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMinLatitude>-40</iMinLatitude>
@@ -299,8 +307,8 @@ Valid NPC players for spawns:
 			<Type>SPAWN_GRIZZLY_NATIVE</Type>
 			<UnitType>UNIT_GRIZZLY</UnitType>
 			<PlayerType>43</PlayerType>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>10</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>3</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bFreshWaterOnly>1</bFreshWaterOnly>
@@ -317,8 +325,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_HORSE</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>50</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>100</iTurns>
+			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<BonusTypes>
@@ -329,12 +337,12 @@ Valid NPC players for spawns:
 			<Type>SPAWN_HYENA_NATIVE</Type>
 			<UnitType>UNIT_HYENA</UnitType>
 			<PlayerType>42</PlayerType>
-			<iTurns>120</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>500</iTurns>
+			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
-			<iMaxLatitude>0</iMaxLatitude>
+			<iMaxLatitude>10</iMaxLatitude>
 			<iMinLongitude>-60</iMinLongitude>
 			<iMaxLongitude>60</iMaxLongitude>
 			<BonusTypes>
@@ -350,8 +358,8 @@ Valid NPC players for spawns:
 			<Type>SPAWN_LION_NATIVE</Type>
 			<UnitType>UNIT_LION</UnitType>
 			<PlayerType>43</PlayerType>
-			<iTurns>160</iTurns>
-			<iMaxLocalDensity>20</iMaxLocalDensity>
+			<iTurns>500</iTurns>
+			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -371,8 +379,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_ORANGUTAN</UnitType>
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>240</iTurns>
-			<iMaxLocalDensity>10</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>3</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMinLatitude>-25</iMinLatitude>
@@ -395,8 +403,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_PANDA_BEAR</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>200</iTurns>
-			<iMaxLocalDensity>12</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>3</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMinLatitude>0</iMinLatitude>
@@ -421,8 +429,8 @@ Valid NPC players for spawns:
 			<Type>SPAWN_PANTHER_NATIVE</Type>
 			<UnitType>UNIT_PANTHER</UnitType>
 			<PlayerType>43</PlayerType>
-			<iTurns>150</iTurns>
-			<iMaxLocalDensity>12</iMaxLocalDensity>
+			<iTurns>600</iTurns>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<iMinLongitude>60</iMinLongitude>
 			<iMaxLongitude>-60</iMaxLongitude>
@@ -436,8 +444,8 @@ Valid NPC players for spawns:
 			<Type>SPAWN_PANTHER_RANDOM</Type>
 			<UnitType>UNIT_PANTHER</UnitType>
 			<PlayerType>43</PlayerType>
-			<iTurns>200</iTurns>
-			<iMaxLocalDensity>12</iMaxLocalDensity>
+			<iTurns>600</iTurns>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<iMinLongitude>60</iMinLongitude>
 			<iMaxLongitude>-60</iMaxLongitude>
@@ -452,8 +460,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_PENGUIN</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>120</iTurns>
-			<iMaxLocalDensity>4</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -467,8 +475,8 @@ Valid NPC players for spawns:
 			<Type>SPAWN_POLARBEAR_NATIVE</Type>
 			<UnitType>UNIT_POLARBEAR</UnitType>
 			<PlayerType>43</PlayerType>
-			<iTurns>60</iTurns>
-			<iMaxLocalDensity>14</iMaxLocalDensity>
+			<iTurns>100</iTurns>
+			<iMaxLocalDensity>3</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -482,8 +490,8 @@ Valid NPC players for spawns:
 			<Type>SPAWN_PUFFADDER_NATIVE</Type>
 			<UnitType>UNIT_PUFFADDER</UnitType>
 			<PlayerType>42</PlayerType>
-			<iTurns>200</iTurns>
-			<iMaxLocalDensity>4</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -503,8 +511,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_RACCOON</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>200</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bFreshWaterOnly>1</bFreshWaterOnly>
@@ -521,8 +529,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_REDPANDA</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>260</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bFreshWaterOnly>1</bFreshWaterOnly>
@@ -538,8 +546,8 @@ Valid NPC players for spawns:
 			<Type>SPAWN_SIBERIANTIGER_NATIVE</Type>
 			<UnitType>UNIT_SIBERIANTIGER</UnitType>
 			<PlayerType>43</PlayerType>
-			<iTurns>400</iTurns>
-			<iMaxLocalDensity>49</iMaxLocalDensity>
+			<iTurns>600</iTurns>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMinLatitude>50</iMinLatitude>
@@ -557,8 +565,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_WARTHOG</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>45</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>100</iTurns>
+			<iMaxLocalDensity>8</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -574,8 +582,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_AARDVARK</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>240</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMinLatitude>-70</iMinLatitude>
@@ -597,8 +605,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_BADGER</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>330</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -613,8 +621,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_BALLPYTHON</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>200</iTurns>
-			<iMaxLocalDensity>4</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMinLatitude>0</iMinLatitude>
@@ -629,8 +637,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_BEAVER</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>30</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>100</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -645,8 +653,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_BONGO</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>200</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMinLatitude>-30</iMinLatitude>
@@ -663,11 +671,11 @@ Valid NPC players for spawns:
 			</FeatureTerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
-			<Type>SPAWN_BUFFALO_NATIVE</Type>
-			<UnitType>UNIT_BUFFALO</UnitType>
+			<Type>SPAWN_BUFFALO_CAPE_1</Type>
+			<UnitType>UNIT_BUFFALO_CAPE</UnitType>
 			<PlayerType>44</PlayerType>
-			<iTurns>30</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>80</iTurns>
+			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -679,11 +687,11 @@ Valid NPC players for spawns:
 			</BonusTypes>
 		</SpawnInfo>
 		<SpawnInfo>
-			<Type>SPAWN_BUFFALO_NATIVE2</Type>
-			<UnitType>UNIT_BUFFALO</UnitType>
+			<Type>SPAWN_BUFFALO_CAPE_2</Type>
+			<UnitType>UNIT_BUFFALO_CAPE</UnitType>
 			<PlayerType>44</PlayerType>
-			<iTurns>60</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>160</iTurns>
+			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -698,8 +706,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_CARIBOU</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>60</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>200</iTurns>
+			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -717,8 +725,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_CARIBOU</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>90</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>100</iTurns>
+			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -733,7 +741,7 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_CASSOWARY</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
+			<iTurns>400</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -755,7 +763,7 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_COBRA</UnitType>
 			<PlayerType>43</PlayerType>
 			<iTurns>200</iTurns>
-			<iMaxLocalDensity>4</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<iMaxLatitude>40</iMaxLatitude>
 			<iMinLongitude>60</iMinLongitude>
@@ -770,8 +778,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_DUCK</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>200</iTurns>
-			<iMaxLocalDensity>4</iMaxLocalDensity>
+			<iTurns>600</iTurns>
+			<iMaxLocalDensity>12</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<FeatureTypes>
@@ -784,8 +792,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_DUCK</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>100</iTurns>
-			<iMaxLocalDensity>4</iMaxLocalDensity>
+			<iTurns>200</iTurns>
+			<iMaxLocalDensity>12</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<BonusTypes>
@@ -797,8 +805,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_EAGLE</UnitType>
 			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>10</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<iMaxLatitude>60</iMaxLatitude>
@@ -811,8 +819,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_EAGLE_BALD</UnitType>
 			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>10</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<iMinLatitude>25</iMinLatitude>
@@ -828,7 +836,7 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_EMU</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
+			<iTurns>300</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -846,8 +854,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_GEMSBOK</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>210</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMinLatitude>-40</iMinLatitude>
@@ -866,7 +874,7 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_HAAST_EAGLE</UnitType>
 			<PlayerType>43</PlayerType>
 			<iTurns>500</iTurns>
-			<iMaxLocalDensity>16</iMaxLocalDensity>
+			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<ObsoleteTech>TECH_RENAISSANCE_LIFESTYLE</ObsoleteTech>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -882,8 +890,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_HAWK</UnitType>
 			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>240</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<iMaxLatitude>60</iMaxLatitude>
@@ -898,8 +906,8 @@ Valid NPC players for spawns:
 			<Type>SPAWN_HIPPO_NATIVE</Type>
 			<UnitType>UNIT_HIPPO</UnitType>
 			<PlayerType>44</PlayerType>
-			<iTurns>280</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMinLatitude>-40</iMinLatitude>
@@ -917,8 +925,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_HORNEDOWL</UnitType>
 			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>12</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMinLatitude>30</iMinLatitude>
@@ -935,8 +943,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_IBEX</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>210</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<iMaxLatitude>40</iMaxLatitude>
 			<iMinLongitude>-60</iMinLongitude>
@@ -953,8 +961,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_IGUANA</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>350</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<iMaxLatitude>40</iMaxLatitude>
 			<iMaxLongitude>-60</iMaxLongitude>
@@ -969,8 +977,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_KANGAROO_RED</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>260</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>500</iTurns>
+			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMinLatitude>-60</iMinLatitude>
@@ -987,8 +995,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_KANGAROO_RED</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>175</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<BonusTypes>
@@ -1000,8 +1008,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_KANGAROO_GREY</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>300</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>500</iTurns>
+			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMinLatitude>-60</iMinLatitude>
@@ -1019,8 +1027,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_KANGAROO_GREY</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>200</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<iMaxLatitude>0</iMaxLatitude>
@@ -1035,8 +1043,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_KOALA</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>500</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMinLatitude>-45</iMinLatitude>
@@ -1052,8 +1060,8 @@ Valid NPC players for spawns:
 			<Type>SPAWN_KOMODO_NATIVE</Type>
 			<UnitType>UNIT_KOMODO_DRAGON</UnitType>
 			<PlayerType>42</PlayerType>
-			<iTurns>160</iTurns>
-			<iMaxLocalDensity>16</iMaxLocalDensity>
+			<iTurns>200</iTurns>
+			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<iMaxLatitude>35</iMaxLatitude>
@@ -1067,8 +1075,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_MANDRILL</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<iMaxLatitude>10</iMaxLatitude>
@@ -1084,8 +1092,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_MOA</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>300</iTurns>
-			<iMaxLocalDensity>12</iMaxLocalDensity>
+			<iTurns>500</iTurns>
+			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<ObsoleteTech>TECH_RENAISSANCE_LIFESTYLE</ObsoleteTech>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -1102,8 +1110,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_MOOSE</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>200</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>3</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -1124,8 +1132,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_MONITOR</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>360</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>3</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMinLatitude>-35</iMinLatitude>
@@ -1144,8 +1152,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_MOUFLON</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>240</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>8</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -1163,8 +1171,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_MUSKOX</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>150</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMinLatitude>40</iMinLatitude>
@@ -1179,8 +1187,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_OKAPI</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>320</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<iMaxLatitude>10</iMaxLatitude>
 			<iMinLongitude>-60</iMinLongitude>
@@ -1197,8 +1205,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_OSTRICH</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>250</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<iMinLongitude>-60</iMinLongitude>
 			<iMaxLongitude>60</iMaxLongitude>
@@ -1215,8 +1223,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_PHEASANT</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMinLatitude>30</iMinLatitude>
@@ -1231,8 +1239,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_RHEA</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>8</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMinLatitude>-50</iMinLatitude>
@@ -1253,13 +1261,14 @@ Valid NPC players for spawns:
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>550</iTurns>
-			<iMaxLocalDensity>4</iMaxLocalDensity>
+			<iMaxLocalDensity>12</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMaxLatitude>-40</iMaxLatitude>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_ICE</TerrainType>
+				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_JAGGED</TerrainType>
@@ -1269,8 +1278,8 @@ Valid NPC players for spawns:
 			<Type>SPAWN_SLOTHBEAR_NATIVE</Type>
 			<UnitType>UNIT_SLOTHBEAR</UnitType>
 			<PlayerType>42</PlayerType>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>10</iMaxLocalDensity>
+			<iTurns>360</iTurns>
+			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -1287,8 +1296,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_SPECTACLEDBEAR</UnitType>
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>10</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -1303,8 +1312,8 @@ Valid NPC players for spawns:
 			<Type>SPAWN_SUNBEAR_NATIVE</Type>
 			<UnitType>UNIT_SUNBEAR</UnitType>
 			<PlayerType>42</PlayerType>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>10</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -1320,8 +1329,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_TASMANIANDEVIL</UnitType>
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMinLatitude>-60</iMinLatitude>
@@ -1338,8 +1347,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_DESERT_TORTOISE</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>8</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<iMaxLatitude>40</iMaxLatitude>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -1349,12 +1358,12 @@ Valid NPC players for spawns:
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
-			<Type>SPAWN_GALAPOGOS_TORTOISE_NATIVE</Type>
-			<UnitType>UNIT_GALAPOGOS_TORTOISE</UnitType>
+			<Type>SPAWN_GALAPAGOS_TORTOISE_NATIVE</Type>
+			<UnitType>UNIT_GALAPAGOS_TORTOISE</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>350</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>8</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<iMaxLatitude>40</iMaxLatitude>
 			<iMaxLongitude>-60</iMaxLongitude>
@@ -1370,8 +1379,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_TURKEY</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>240</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>12</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMinLatitude>30</iMinLatitude>
@@ -1386,8 +1395,8 @@ Valid NPC players for spawns:
 			<Type>SPAWN_VIPER_NATIVE</Type>
 			<UnitType>UNIT_VIPER</UnitType>
 			<PlayerType>42</PlayerType>
-			<iTurns>460</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>500</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<iMinLatitude>-0</iMinLatitude>
 			<iMaxLatitude>66</iMaxLatitude>
@@ -1404,8 +1413,8 @@ Valid NPC players for spawns:
 			<Type>SPAWN_VIPER_CHAIN_NATIVE</Type>
 			<UnitType>UNIT_VIPER_CHAIN</UnitType>
 			<PlayerType>42</PlayerType>
-			<iTurns>520</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>800</iTurns>
+			<iMaxLocalDensity>8</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<iMinLatitude>-30</iMinLatitude>
 			<iMaxLatitude>30</iMaxLatitude>
@@ -1426,8 +1435,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_VULTURE</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>180</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>9</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<BonusTypes>
@@ -1447,8 +1456,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_WALLABY</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>210</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMinLatitude>-60</iMinLatitude>
@@ -1465,8 +1474,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_WALLABY</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>100</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>200</iTurns>
+			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<iMinLatitude>-45</iMinLatitude>
@@ -1482,8 +1491,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_WALLAROO</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>340</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMinLatitude>-60</iMinLatitude>
@@ -1503,8 +1512,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_WALLAROO</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>75</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>150</iTurns>
+			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<iMinLatitude>-45</iMinLatitude>
@@ -1520,8 +1529,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_GUANACO</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>200</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMinLatitude>-55</iMinLatitude>
@@ -1541,8 +1550,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_GUANACO</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>130</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>200</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -1559,8 +1568,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_WILDEBEEST</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>170</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>200</iTurns>
+			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMinLatitude>-40</iMinLatitude>
@@ -1580,8 +1589,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_WILDEBEEST</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>170</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>200</iTurns>
+			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMaxLatitude>0</iMaxLatitude>
@@ -1598,8 +1607,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_KOOKABURRA</UnitType>
 			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>200</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bFreshWaterOnly>1</bFreshWaterOnly>
@@ -1616,8 +1625,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_MACAW</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>250</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -1633,8 +1642,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_CAPYBARA</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>360</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>450</iTurns>
+			<iMaxLocalDensity>9</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMinLatitude>-35</iMinLatitude>
@@ -1652,8 +1661,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_GAZELLE</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>170</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>200</iTurns>
+			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMinLatitude>-40</iMinLatitude>
@@ -1673,8 +1682,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_RATEL</UnitType>
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMinLatitude>-40</iMinLatitude>
@@ -1692,8 +1701,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_SKUNK</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMinLatitude>0</iMinLatitude>
@@ -1709,8 +1718,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_WALRUS</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>40</iTurns>
-			<iMaxLocalDensity>12</iMaxLocalDensity>
+			<iTurns>100</iTurns>
+			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMinLatitude>50</iMinLatitude>
@@ -1724,8 +1733,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_WOLVERINE</UnitType>
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>350</iTurns>
-			<iMaxLocalDensity>12</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>3</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -1733,6 +1742,7 @@ Valid NPC players for spawns:
 			<iMaxLatitude>80</iMaxLatitude>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_ICE</TerrainType>
+				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
@@ -1741,8 +1751,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_OXPECKER</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -1759,8 +1769,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_TERN</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bFreshWaterOnly>1</bFreshWaterOnly>
@@ -1774,8 +1784,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_CROW</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>360</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bFreshWaterOnly>1</bFreshWaterOnly>
@@ -1792,8 +1802,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_GULL</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>60</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>200</iTurns>
+			<iMaxLocalDensity>12</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bFreshWaterOnly>1</bFreshWaterOnly>
@@ -1809,8 +1819,8 @@ Valid NPC players for spawns:
 			<Type>SPAWN_BISON_HERD</Type>
 			<UnitType>UNIT_BISON</UnitType>
 			<PlayerType>44</PlayerType>
-			<iTurns>360</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<ObsoleteTech>TECH_MEDIEVAL_LIFESTYLE</ObsoleteTech>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<iMaxLatitude>20</iMaxLatitude>
@@ -1829,8 +1839,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_BOAR</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>60</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>100</iTurns>
+			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<BonusTypes>
@@ -1842,8 +1852,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_PIG_NEW</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>60</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>200</iTurns>
+			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<iStartDate>-5000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<BonusTypes>
@@ -1856,7 +1866,7 @@ Valid NPC players for spawns:
 			<PlayerType>45</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>500</iTurns>
-			<iMaxLocalDensity>49</iMaxLocalDensity>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
 			<iMinLongitude>-40</iMinLongitude>
 			<iMaxLongitude>40</iMaxLongitude>
@@ -1875,7 +1885,7 @@ Valid NPC players for spawns:
 			<PlayerType>45</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>600</iTurns>
-			<iMaxLocalDensity>49</iMaxLocalDensity>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
 			<iMinLongitude>-40</iMinLongitude>
 			<iMaxLongitude>40</iMaxLongitude>
@@ -1890,10 +1900,10 @@ Valid NPC players for spawns:
 		<SpawnInfo>
 			<Type>SPAWN_LOCUST_LARGE_NATIVE</Type>
 			<UnitType>UNIT_LOCUST_LARGE_SWARM</UnitType>
-			<PlayerType>40</PlayerType>
+			<PlayerType>45</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>800</iTurns>
-			<iMaxLocalDensity>49</iMaxLocalDensity>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_CLASSICAL_LIFESTYLE</PrereqTech>
 			<iMinLongitude>-40</iMinLongitude>
 			<iMaxLongitude>40</iMaxLongitude>
@@ -1908,10 +1918,10 @@ Valid NPC players for spawns:
 		<SpawnInfo>
 			<Type>SPAWN_LOCUST_HUGE_NATIVE</Type>
 			<UnitType>UNIT_LOCUST_HUGE_SWARM</UnitType>
-			<PlayerType>40</PlayerType>
+			<PlayerType>45</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>1200</iTurns>
-			<iMaxLocalDensity>49</iMaxLocalDensity>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_MEDIEVAL_LIFESTYLE</PrereqTech>
 			<iMinLongitude>-40</iMinLongitude>
 			<iMaxLongitude>40</iMaxLongitude>
@@ -1929,8 +1939,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_ANTEATER</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>250</iTurns>
-			<iMaxLocalDensity>10</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -1951,8 +1961,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_LEMUR</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>175</iTurns>
-			<iMaxLocalDensity>4</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>12</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -1969,8 +1979,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_LOON</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bFreshWaterOnly>1</bFreshWaterOnly>
@@ -1987,8 +1997,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_PEACOCK</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>350</iTurns>
+			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bFreshWaterOnly>1</bFreshWaterOnly>
@@ -2008,8 +2018,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_PIGEON</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>4</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>12</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
@@ -2025,7 +2035,7 @@ Valid NPC players for spawns:
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>270</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -2042,7 +2052,7 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_IMPALA</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
+			<iTurns>400</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2059,8 +2069,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_IMPALA</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>60</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>100</iTurns>
+			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -2077,7 +2087,7 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_SAIGA</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
+			<iTurns>300</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2095,8 +2105,8 @@ Valid NPC players for spawns:
 			<Type>SPAWN_ASIANBEAR_NATIVE</Type>
 			<UnitType>UNIT_ASIANBEAR</UnitType>
 			<PlayerType>42</PlayerType>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>10</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -2110,8 +2120,8 @@ Valid NPC players for spawns:
 			<Type>SPAWN_CHIMPANZEE_NATIVE</Type>
 			<UnitType>UNIT_CHIMPANZEE</UnitType>
 			<PlayerType>42</PlayerType>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>10</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMinLatitude>-40</iMinLatitude>
@@ -2135,8 +2145,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_PLATYPUS</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>240</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>600</iTurns>
+			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -2152,8 +2162,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_TOUCAN</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>90</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>200</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<iMaxLatitude>35</iMaxLatitude>
 			<iMaxLongitude>-60</iMaxLongitude>
@@ -2167,8 +2177,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_CAPUCHIN</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>120</iTurns>
-			<iMaxLocalDensity>4</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>12</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMinLatitude>-40</iMinLatitude>
@@ -2184,8 +2194,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_SEALION_LAND</UnitType>
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>120</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>150</iTurns>
+			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<BonusTypes>
@@ -2197,8 +2207,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_LYNX</UnitType>
 			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>340</iTurns>
-			<iMaxLocalDensity>12</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>3</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -2213,8 +2223,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_SNOWLEOPARD</UnitType>
 			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>150</iTurns>
-			<iMaxLocalDensity>12</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>3</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -2224,6 +2234,7 @@ Valid NPC players for spawns:
 			<iMaxLongitude>160</iMaxLongitude>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_ICE</TerrainType>
+				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 				<TerrainType>TERRAIN_JAGGED</TerrainType>
@@ -2234,8 +2245,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_BARBARYAPE</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>175</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>200</iTurns>
+			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -2256,8 +2267,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_GELADA</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>175</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>200</iTurns>
+			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -2273,29 +2284,12 @@ Valid NPC players for spawns:
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
-			<Type>SPAWN_PROCOPTODON_NATIVE</Type>
+			<Type>SPAWN_PROCOPTODON_TERRAIN</Type>
 			<UnitType>UNIT_PROCOPTODON</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>160</iTurns>
-			<iMaxLocalDensity>16</iMaxLocalDensity>
-			<ObsoleteTech>TECH_CHIEFDOM</ObsoleteTech>
-			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
-			<bLatitudeAbs>0</bLatitudeAbs>
-			<iMinLatitude>-70</iMinLatitude>
-			<iMaxLatitude>0</iMaxLatitude>
-			<iMinLongitude>60</iMinLongitude>
-			<BonusTypes>
-				<BonusType>BONUS_KANGAROO</BonusType>
-			</BonusTypes>
-		</SpawnInfo>
-		<SpawnInfo>
-			<Type>SPAWN_PROCOPTODON_NATIVE1</Type>
-			<UnitType>UNIT_PROCOPTODON</UnitType>
-			<PlayerType>44</PlayerType>
-			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>260</iTurns>
-			<iMaxLocalDensity>16</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>3</iMaxLocalDensity>
 			<ObsoleteTech>TECH_CHIEFDOM</ObsoleteTech>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<iMinLatitude>-70</iMinLatitude>
@@ -2312,8 +2306,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_QUOLL</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>400</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>800</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMinLatitude>-60</iMinLatitude>
@@ -2337,8 +2331,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_GIRAFFE</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>175</iTurns>
-			<iMaxLocalDensity>10</iMaxLocalDensity>
+			<iTurns>200</iTurns>
+			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMinLatitude>-60</iMinLatitude>
@@ -2361,8 +2355,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_DARTFROG</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>200</iTurns>
-			<iMaxLocalDensity>1</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>20</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -2378,13 +2372,14 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_ARCTICFOX</UnitType>
 			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>250</iTurns>
-			<iMaxLocalDensity>12</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<iMinLatitude>80</iMinLatitude>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_ICE</TerrainType>
+				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
 			</TerrainTypes>
@@ -2394,7 +2389,7 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_DHOLE</UnitType>
 			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
+			<iTurns>350</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2416,7 +2411,7 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_DINGO</UnitType>
 			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>150</iTurns>
+			<iTurns>300</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<iStartDate>-10000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2435,8 +2430,8 @@ Valid NPC players for spawns:
 			<Type>SPAWN_DIREWOLF_NATIVE</Type>
 			<UnitType>UNIT_DIREWOLF</UnitType>
 			<PlayerType>43</PlayerType>
-			<iTurns>200</iTurns>
-			<iMaxLocalDensity>12</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>3</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -2455,7 +2450,7 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_EWOLF</UnitType>
 			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>150</iTurns>
+			<iTurns>250</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2475,8 +2470,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_FENNECFOX</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>150</iTurns>
-			<iMaxLocalDensity>12</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -2496,7 +2491,7 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_MANEDWOLF</UnitType>
 			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>260</iTurns>
+			<iTurns>300</iTurns>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2513,8 +2508,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_REDFOX</UnitType>
 			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>400</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>500</iTurns>
+			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -2535,8 +2530,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_THYLACINE</UnitType>
 			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>300</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>1000</iTurns>
+			<iMaxLocalDensity>7</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -2556,7 +2551,7 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_WOLF</UnitType>
 			<PlayerType>43</PlayerType>
 			<iTurns>140</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -2574,8 +2569,8 @@ Valid NPC players for spawns:
 			<Type>SPAWN_WOLF_PACK</Type>
 			<UnitType>UNIT_WOLF</UnitType>
 			<PlayerType>43</PlayerType>
-			<iTurns>3750</iTurns>
-			<iMaxLocalDensity>12</iMaxLocalDensity>
+			<iTurns>4000</iTurns>
+			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -2595,11 +2590,11 @@ Valid NPC players for spawns:
 			</SpawnGroup>
 		</SpawnInfo>
 		<SpawnInfo>
-			<Type>SPAWN_RIVERCROC_LARGE_NATIVE</Type>
+			<Type>SPAWN_RIVERCROC_LARGE_TERRAIN</Type>
 			<UnitType>UNIT_RIVER_CROC_LARGE</UnitType>
 			<PlayerType>42</PlayerType>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>14</iMaxLocalDensity>
+			<iTurns>500</iTurns>
+			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bFreshWaterOnly>1</bFreshWaterOnly>
@@ -2613,61 +2608,16 @@ Valid NPC players for spawns:
 				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
-				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_BADLAND</TerrainType>
-				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
-			<Type>SPAWN_RIVERCROC_LARGE_NATIVE2</Type>
+			<Type>SPAWN_RIVERCROC_LARGE_FEATURE</Type>
 			<UnitType>UNIT_RIVER_CROC_LARGE</UnitType>
 			<PlayerType>42</PlayerType>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>14</iMaxLocalDensity>
-			<iStartDate>-200000</iStartDate>
-			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
-			<bLatitudeAbs>0</bLatitudeAbs>
-			<iMinLatitude>-23</iMinLatitude>
-			<iMaxLatitude>0</iMaxLatitude>
-			<iMinLongitude>60</iMinLongitude>
-			<FeatureTypes>
-				<FeatureType>FEATURE_SWAMP</FeatureType>
-			</FeatureTypes>
-		</SpawnInfo>
-		<SpawnInfo>
-			<Type>SPAWN_RIVERCROC_SMALL_NATIVE</Type>
-			<UnitType>UNIT_RIVER_CROC_SMALL</UnitType>
-			<PlayerType>42</PlayerType>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
-			<iStartDate>-200000</iStartDate>
-			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
-			<bFreshWaterOnly>1</bFreshWaterOnly>
-			<bLatitudeAbs>0</bLatitudeAbs>
-			<iMinLatitude>-23</iMinLatitude>
-			<iMaxLatitude>0</iMaxLatitude>
-			<iMinLongitude>60</iMinLongitude>
-			<TerrainTypes>
-				<TerrainType>TERRAIN_MARSH</TerrainType>
-				<TerrainType>TERRAIN_MUDDY</TerrainType>
-				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
-				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_LUSH</TerrainType>
-				<TerrainType>TERRAIN_DESERT</TerrainType>
-				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_BADLAND</TerrainType>
-				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_BARREN</TerrainType>
-			</TerrainTypes>
-		</SpawnInfo>
-		<SpawnInfo>
-			<Type>SPAWN_RIVERCROC_SMALL_NATIVE2</Type>
-			<UnitType>UNIT_RIVER_CROC_SMALL</UnitType>
-			<PlayerType>42</PlayerType>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>500</iTurns>
+			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -2677,40 +2627,22 @@ Valid NPC players for spawns:
 			<FeatureTypes>
 				<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
+				<FeatureType>FEATURE_OASIS</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
 			</FeatureTypes>
 		</SpawnInfo>
 		<SpawnInfo>
-			<Type>SPAWN_CAIMAN_NATIVE</Type>
-			<UnitType>UNIT_CAIMAN</UnitType>
+			<Type>SPAWN_RIVERCROC_SMALL_TERRAIN</Type>
+			<UnitType>UNIT_RIVER_CROC_SMALL</UnitType>
 			<PlayerType>42</PlayerType>
-			<iTurns>240</iTurns>
-			<iMaxLocalDensity>14</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bFreshWaterOnly>1</bFreshWaterOnly>
 			<bLatitudeAbs>0</bLatitudeAbs>
-			<iMinLatitude>-25</iMinLatitude>
-			<iMaxLatitude>10</iMaxLatitude>
-			<iMaxLongitude>-60</iMaxLongitude>
-			<FeatureTypes>
-				<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
-				<FeatureType>FEATURE_SWAMP</FeatureType>
-			</FeatureTypes>
-		</SpawnInfo>
-		<SpawnInfo>
-			<Type>SPAWN_GHARIAL_NATIVE</Type>
-			<UnitType>UNIT_GHARIAL</UnitType>
-			<PlayerType>43</PlayerType>
-			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>150</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
-			<iStartDate>-200000</iStartDate>
-			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
-			<bFreshWaterOnly>1</bFreshWaterOnly>
-			<bLatitudeAbs>0</bLatitudeAbs>
-			<iMinLatitude>0</iMinLatitude>
-			<iMaxLatitude>23</iMaxLatitude>
+			<iMinLatitude>-23</iMinLatitude>
+			<iMaxLatitude>0</iMaxLatitude>
 			<iMinLongitude>60</iMinLongitude>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_MARSH</TerrainType>
@@ -2718,27 +2650,110 @@ Valid NPC players for spawns:
 				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
 				<TerrainType>TERRAIN_PLAINS</TerrainType>
 				<TerrainType>TERRAIN_LUSH</TerrainType>
-				<TerrainType>TERRAIN_DESERT</TerrainType>
 				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_BADLAND</TerrainType>
-				<TerrainType>TERRAIN_DUNES</TerrainType>
 				<TerrainType>TERRAIN_BARREN</TerrainType>
 			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
-			<Type>SPAWN_GHARIAL_NATIVE2</Type>
-			<UnitType>UNIT_GHARIAL</UnitType>
-			<PlayerType>43</PlayerType>
-			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>150</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<Type>SPAWN_RIVERCROC_SMALL_FEATURE</Type>
+			<UnitType>UNIT_RIVER_CROC_SMALL</UnitType>
+			<PlayerType>42</PlayerType>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
-			<iMinLatitude>0</iMinLatitude>
-			<iMaxLatitude>23</iMaxLatitude>
+			<iMinLatitude>-23</iMinLatitude>
+			<iMaxLatitude>0</iMaxLatitude>
 			<iMinLongitude>60</iMinLongitude>
 			<FeatureTypes>
+				<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
+				<FeatureType>FEATURE_MANGROVE</FeatureType>
+				<FeatureType>FEATURE_OASIS</FeatureType>
+				<FeatureType>FEATURE_SWAMP</FeatureType>
+			</FeatureTypes>
+		</SpawnInfo>
+		<SpawnInfo>
+			<Type>SPAWN_CAIMAN_BLACK_1</Type>
+			<UnitType>UNIT_CAIMAN_BLACK</UnitType>
+			<PlayerType>42</PlayerType>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>4</iMaxLocalDensity>
+			<iStartDate>-200000</iStartDate>
+			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
+			<bFreshWaterOnly>1</bFreshWaterOnly>
+			<iMaxLatitude>25</iMaxLatitude>
+			<iMaxLongitude>-60</iMaxLongitude>
+			<TerrainTypes>
+				<TerrainType>TERRAIN_MUDDY</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
+				<TerrainType>TERRAIN_LUSH</TerrainType>
+			</TerrainTypes>
+		</SpawnInfo>
+		<SpawnInfo>
+			<Type>SPAWN_CAIMAN_BLACK_2</Type>
+			<UnitType>UNIT_CAIMAN_BLACK</UnitType>
+			<PlayerType>42</PlayerType>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>4</iMaxLocalDensity>
+			<iStartDate>-200000</iStartDate>
+			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
+			<iMaxLatitude>25</iMaxLatitude>
+			<iMaxLongitude>-60</iMaxLongitude>
+			<TerrainTypes>
+				<TerrainType>TERRAIN_MARSH</TerrainType>
+			</TerrainTypes>
+		</SpawnInfo>
+		<SpawnInfo>
+			<Type>SPAWN_CAIMAN_BLACK_3</Type>
+			<UnitType>UNIT_CAIMAN_BLACK</UnitType>
+			<PlayerType>42</PlayerType>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>4</iMaxLocalDensity>
+			<iStartDate>-200000</iStartDate>
+			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
+			<iMaxLatitude>25</iMaxLatitude>
+			<iMaxLongitude>-60</iMaxLongitude>
+			<FeatureTypes>
+				<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
+				<FeatureType>FEATURE_SWAMP</FeatureType>
+			</FeatureTypes>
+		</SpawnInfo>
+		<SpawnInfo>
+			<Type>SPAWN_GHARIAL_TERRAIN</Type>
+			<UnitType>UNIT_GHARIAL</UnitType>
+			<PlayerType>43</PlayerType>
+			<bNeutralOnly>0</bNeutralOnly>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>6</iMaxLocalDensity>
+			<iStartDate>-200000</iStartDate>
+			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
+			<bFreshWaterOnly>1</bFreshWaterOnly>
+			<iMaxLatitude>25</iMaxLatitude>
+			<iMinLongitude>60</iMinLongitude>
+			<TerrainTypes>
+				<TerrainType>TERRAIN_MARSH</TerrainType>
+				<TerrainType>TERRAIN_MUDDY</TerrainType>
+				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
+				<TerrainType>TERRAIN_PLAINS</TerrainType>
+				<TerrainType>TERRAIN_LUSH</TerrainType>
+				<TerrainType>TERRAIN_ROCKY</TerrainType>
+				<TerrainType>TERRAIN_BARREN</TerrainType>
+			</TerrainTypes>
+		</SpawnInfo>
+		<SpawnInfo>
+			<Type>SPAWN_GHARIAL_FEATURE</Type>
+			<UnitType>UNIT_GHARIAL</UnitType>
+			<PlayerType>43</PlayerType>
+			<bNeutralOnly>0</bNeutralOnly>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>6</iMaxLocalDensity>
+			<iStartDate>-200000</iStartDate>
+			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
+			<iMaxLatitude>25</iMaxLatitude>
+			<iMinLongitude>60</iMinLongitude>
+			<FeatureTypes>
+				<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
 			</FeatureTypes>
 		</SpawnInfo>
@@ -2746,19 +2761,12 @@ Valid NPC players for spawns:
 			<Type>SPAWN_GATOR_NATIVE</Type>
 			<UnitType>UNIT_GATOR</UnitType>
 			<PlayerType>42</PlayerType>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>12</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>3</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
-			<bFreshWaterOnly>1</bFreshWaterOnly>
-			<bLatitudeAbs>0</bLatitudeAbs>
-			<iMinLatitude>0</iMinLatitude>
 			<iMaxLatitude>35</iMaxLatitude>
 			<iMaxLongitude>-60</iMaxLongitude>
-			<TerrainTypes>
-				<TerrainType>TERRAIN_MARSH</TerrainType>
-				<TerrainType>TERRAIN_MUDDY</TerrainType>
-			</TerrainTypes>
 			<FeatureTypes>
 				<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
@@ -2768,19 +2776,12 @@ Valid NPC players for spawns:
 			<Type>SPAWN_GATOR_ASIAN_NATIVE</Type>
 			<UnitType>UNIT_GATOR_ASIAN</UnitType>
 			<PlayerType>42</PlayerType>
-			<iTurns>360</iTurns>
-			<iMaxLocalDensity>12</iMaxLocalDensity>
+			<iTurns>500</iTurns>
+			<iMaxLocalDensity>3</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
-			<bFreshWaterOnly>1</bFreshWaterOnly>
-			<bLatitudeAbs>0</bLatitudeAbs>
-			<iMinLatitude>0</iMinLatitude>
 			<iMaxLatitude>35</iMaxLatitude>
 			<iMinLongitude>60</iMinLongitude>
-			<TerrainTypes>
-				<TerrainType>TERRAIN_MARSH</TerrainType>
-				<TerrainType>TERRAIN_MUDDY</TerrainType>
-			</TerrainTypes>
 			<FeatureTypes>
 				<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
@@ -2790,18 +2791,17 @@ Valid NPC players for spawns:
 			<Type>SPAWN_NILECROC_NATIVE</Type>
 			<UnitType>UNIT_NILECROC</UnitType>
 			<PlayerType>42</PlayerType>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>14</iMaxLocalDensity>
+			<iTurns>500</iTurns>
+			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
-			<bLatitudeAbs>0</bLatitudeAbs>
-			<iMinLatitude>-30</iMinLatitude>
-			<iMaxLatitude>25</iMaxLatitude>
+			<iMaxLatitude>30</iMaxLatitude>
 			<iMinLongitude>-15</iMinLongitude>
 			<iMaxLongitude>45</iMaxLongitude>
 			<FeatureTypes>
 				<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
 				<FeatureType>FEATURE_MANGROVE</FeatureType>
+				<FeatureType>FEATURE_OASIS</FeatureType>
 				<FeatureType>FEATURE_SWAMP</FeatureType>
 			</FeatureTypes>
 		</SpawnInfo>
@@ -2810,8 +2810,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_TAPIR</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>14</iMaxLocalDensity>
+			<iTurns>500</iTurns>
+			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<iMaxLatitude>23</iMaxLatitude>
 			<iMaxLongitude>-60</iMaxLongitude>
@@ -2825,8 +2825,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_BRAZILIAN_TAPIR</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>200</iTurns>
-			<iMaxLocalDensity>14</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -2841,8 +2841,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_MALAYAN_TAPIR</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>200</iTurns>
-			<iMaxLocalDensity>14</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -2858,8 +2858,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_MOUNTAIN_TAPIR</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>200</iTurns>
-			<iMaxLocalDensity>14</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -2875,8 +2875,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_AFRICANGREY</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>380</iTurns>
+			<iMaxLocalDensity>12</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<iMaxLatitude>10</iMaxLatitude>
@@ -2891,8 +2891,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_ELEPHANT_AFRICAN</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>40</iTurns>
-			<iMaxLocalDensity>21</iMaxLocalDensity>
+			<iTurns>150</iTurns>
+			<iMaxLocalDensity>2</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -2908,8 +2908,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_ARMADILLO</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>350</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -2926,7 +2926,7 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_BABIRUSA</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
+			<iTurns>400</iTurns>
 			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -2941,8 +2941,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_CUSCUS</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>120</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>500</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -2958,8 +2958,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_GLYPTO</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>360</iTurns>
-			<iMaxLocalDensity>20</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -2976,8 +2976,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_GROUNDSLOTH</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>100</iTurns>
-			<iMaxLocalDensity>20</iMaxLocalDensity>
+			<iTurns>200</iTurns>
+			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<ObsoleteTech>TECH_CLASSICAL_LIFESTYLE</ObsoleteTech>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<iMaxLatitude>80</iMaxLatitude>
@@ -2994,8 +2994,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_LIZARD</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>240</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>600</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<iMaxLatitude>50</iMaxLatitude>
@@ -3018,8 +3018,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_NUMBAT</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>100</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>500</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -3036,8 +3036,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_OPOSSUM</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>175</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>500</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -3060,8 +3060,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_PARROT</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>350</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -3078,8 +3078,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_PARROT</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>350</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<iMaxLatitude>23</iMaxLatitude>
@@ -3093,8 +3093,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_PARROT</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>350</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -3110,8 +3110,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_POSSUM</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>200</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -3127,8 +3127,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_PYGMYHIPPO</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>300</iTurns>
-			<iMaxLocalDensity>10</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -3144,8 +3144,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_RAVEN</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>175</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>500</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<BonusTypes>
@@ -3165,8 +3165,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_SECRETARYBIRD</UnitType>
 			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>8</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -3187,8 +3187,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_TREESLOTH</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>125</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -3204,8 +3204,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_WOMBAT</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>500</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -3221,8 +3221,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_BOOBY</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>12</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -3232,19 +3232,19 @@ Valid NPC players for spawns:
 			<BonusTypes>
 				<BonusType>BONUS_FISH</BonusType>
 			</BonusTypes>
-			<FeatureTerrainTypes>
+			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
-			</FeatureTerrainTypes>
+			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
 			<Type>SPAWN_BARREDOWL_NATIVE</Type>
 			<UnitType>UNIT_BARREDOWL</UnitType>
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>12</iMaxLocalDensity>
+			<iTurns>350</iTurns>
+			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -3260,8 +3260,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_SEAEAGLE</UnitType>
 			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>10</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -3271,18 +3271,19 @@ Valid NPC players for spawns:
 			<BonusTypes>
 				<BonusType>BONUS_FISH</BonusType>
 			</BonusTypes>
-			<FeatureTerrainTypes>
+			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
-			</FeatureTerrainTypes>
+			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
 			<Type>SPAWN_JUNGLE_TARANTULA_NATIVE</Type>
 			<UnitType>UNIT_JUNGLE_TARANTULA</UnitType>
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>280</iTurns>
+			<iTurns>500</iTurns>
+			<iMaxLocalDensity>20</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<iMaxLatitude>40</iMaxLatitude>
@@ -3295,7 +3296,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_DESERT_TARANTULA</UnitType>
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>280</iTurns>
+			<iTurns>500</iTurns>
+			<iMaxLocalDensity>20</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<iMaxLatitude>40</iMaxLatitude>
@@ -3309,8 +3311,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_BARNOWL</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>300</iTurns>
-			<iMaxLocalDensity>12</iMaxLocalDensity>
+			<iTurns>350</iTurns>
+			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -3326,8 +3328,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_BARNOWL</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>300</iTurns>
-			<iMaxLocalDensity>12</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -3343,8 +3345,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_BARNOWL</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>300</iTurns>
-			<iMaxLocalDensity>12</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -3360,8 +3362,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_HARPYEAGLE</UnitType>
 			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>360</iTurns>
-			<iMaxLocalDensity>10</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>5</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -3377,8 +3379,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_AFRICAN_PENGUIN</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -3389,19 +3391,19 @@ Valid NPC players for spawns:
 			<BonusTypes>
 				<BonusType>BONUS_FISH</BonusType>
 			</BonusTypes>
-			<FeatureTerrainTypes>
+			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
-			</FeatureTerrainTypes>
+			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
 			<Type>SPAWN_GALAPAGOS_PENGUIN_NATIVE</Type>
 			<UnitType>UNIT_GALAPAGOS_PENGUIN</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<iMaxLatitude>40</iMaxLatitude>
@@ -3409,19 +3411,19 @@ Valid NPC players for spawns:
 			<BonusTypes>
 				<BonusType>BONUS_FISH</BonusType>
 			</BonusTypes>
-			<FeatureTerrainTypes>
+			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
-			</FeatureTerrainTypes>
+			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
 			<Type>SPAWN_RAZORBILL_NATIVE</Type>
 			<UnitType>UNIT_RAZORBILL</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>350</iTurns>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -3432,18 +3434,13 @@ Valid NPC players for spawns:
 			<BonusTypes>
 				<BonusType>BONUS_FISH</BonusType>
 			</BonusTypes>
-			<FeatureTerrainTypes>
-				<TerrainType>TERRAIN_COAST</TerrainType>
-				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
-				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
-			</FeatureTerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
 			<Type>SPAWN_SABRETOOTH_NATIVE</Type>
 			<UnitType>UNIT_SABRETOOTH</UnitType>
 			<PlayerType>43</PlayerType>
-			<iTurns>460</iTurns>
-			<iMaxLocalDensity>49</iMaxLocalDensity>
+			<iTurns>500</iTurns>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<iMaxLongitude>-60</iMaxLongitude>
@@ -3461,8 +3458,8 @@ Valid NPC players for spawns:
 			<Type>SPAWN_BLACK_RHINO_NATIVE</Type>
 			<UnitType>UNIT_BLACK_RHINO</UnitType>
 			<PlayerType>44</PlayerType>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>16</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMinLatitude>-50</iMinLatitude>
@@ -3485,8 +3482,8 @@ Valid NPC players for spawns:
 			<Type>SPAWN_INDIAN_RHINO_NATIVE</Type>
 			<UnitType>UNIT_INDIAN_RHINO</UnitType>
 			<PlayerType>44</PlayerType>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>16</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -3509,8 +3506,8 @@ Valid NPC players for spawns:
 			<Type>SPAWN_JAVA_RHINO_NATIVE</Type>
 			<UnitType>UNIT_JAVA_RHINO</UnitType>
 			<PlayerType>44</PlayerType>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>16</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -3534,8 +3531,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_WHITE_RHINO</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>16</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -3558,8 +3555,8 @@ Valid NPC players for spawns:
 			<Type>SPAWN_ELASMOTHERIUM_NATIVE</Type>
 			<UnitType>UNIT_ELASMOTHERIUM</UnitType>
 			<PlayerType>44</PlayerType>
-			<iTurns>270</iTurns>
-			<iMaxLocalDensity>20</iMaxLocalDensity>
+			<iTurns>60</iTurns>
+			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<ObsoleteTech>TECH_TRIBALISM</ObsoleteTech>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -3581,8 +3578,8 @@ Valid NPC players for spawns:
 			<UnitType>UNIT_ZEBRA</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>45</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>50</iTurns>
+			<iMaxLocalDensity>6</iMaxLocalDensity>
 			<iStartDate>-200000</iStartDate>
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMinLatitude>-60</iMinLatitude>
@@ -3595,17 +3592,12 @@ Valid NPC players for spawns:
 			</BonusTypes>
 		</SpawnInfo>
 		<SpawnInfo>
-			<Type>SPAWN_MAMMOTH_NATIVE1</Type>
+			<Type>SPAWN_MAMMOTH_BONUS1</Type>
 			<UnitType>UNIT_MAMMOTH</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-<!--
-iGlobalTurns translated to iTurns:
-iTurns = (iGlobalTurns / 100) * iValidPlots
-iValidPlots = Number of Valid spawn plots on entire map
--->
-			<iGlobalTurns>500</iGlobalTurns>
-			<iMaxLocalDensity>21</iMaxLocalDensity>
+			<iGlobalTurns>800</iGlobalTurns>
+			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<ObsoleteTech>TECH_TRIBALISM</ObsoleteTech>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<BonusTypes>
@@ -3613,13 +3605,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			</BonusTypes>
 		</SpawnInfo>
 		<SpawnInfo>
-			<Type>SPAWN_MAMMOTH_NATIVE2</Type>
+			<Type>SPAWN_MAMMOTH_BONUS2</Type>
 			<UnitType>UNIT_MAMMOTH</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iGlobalTurns>1500</iGlobalTurns>
-			<iMaxLocalDensity>49</iMaxLocalDensity>
-			<PrereqTech>TECH_CHIEFDOM</PrereqTech>
+			<iGlobalTurns>2400</iGlobalTurns>
+			<iMaxLocalDensity>2</iMaxLocalDensity>
+			<PrereqTech>TECH_TRIBALISM</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<BonusTypes>
@@ -3627,26 +3619,44 @@ iValidPlots = Number of Valid spawn plots on entire map
 			</BonusTypes>
 		</SpawnInfo>
 		<SpawnInfo>
-			<Type>SPAWN_MAMMOTH_NATIVE3</Type>
+			<Type>SPAWN_MAMMOTH_BONUS3</Type>
 			<UnitType>UNIT_MAMMOTH</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>20</iTurns>
-			<iMaxLocalDensity>49</iMaxLocalDensity>
+			<iTurns>100</iTurns>
+			<iMaxLocalDensity>3</iMaxLocalDensity>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<BonusTypes>
 				<BonusType>BONUS_MAMMOTH</BonusType>
 			</BonusTypes>
 		</SpawnInfo>
-		<!-- Sea Animals -->
+		<SpawnInfo>
+			<Type>SPAWN_MAMMOTH_TERRAIN</Type>
+			<UnitType>UNIT_MAMMOTH</UnitType>
+			<PlayerType>44</PlayerType>
+			<bNeutralOnly>0</bNeutralOnly>
+			<iGlobalTurns>5000</iGlobalTurns>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
+			<PrereqTech>TECH_TRIBALISM</PrereqTech>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
+			<TerrainTypes>
+				<TerrainType>TERRAIN_ICE</TerrainType>
+				<TerrainType>TERRAIN_PERMAFROST</TerrainType>
+				<TerrainType>TERRAIN_TUNDRA</TerrainType>
+			</TerrainTypes>
+		</SpawnInfo>
+		<!--||||||||||||||
+		||| Sea Animals ||
+		|||||||||||||||-->
 		<SpawnInfo>
 			<Type>SPAWN_BELUGA_NATIVE</Type>
 			<UnitType>UNIT_BELUGA</UnitType>
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>250</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -3656,12 +3666,12 @@ iValidPlots = Number of Valid spawn plots on entire map
 			</FeatureTypes>
 		</SpawnInfo>
 		<SpawnInfo>
-			<Type>SPAWN_COD_NATIVE</Type>
+			<Type>SPAWN_COD_BONUS</Type>
 			<UnitType>UNIT_COD</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>75</iTurns>
-			<iMaxLocalDensity>4</iMaxLocalDensity>
+			<iTurns>100</iTurns>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -3669,22 +3679,34 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<BonusTypes>
 				<BonusType>BONUS_FISH</BonusType>
 			</BonusTypes>
-			<FeatureTerrainTypes>
+		</SpawnInfo>
+		<SpawnInfo>
+			<Type>SPAWN_COD_TERRAIN</Type>
+			<UnitType>UNIT_COD</UnitType>
+			<PlayerType>44</PlayerType>
+			<bNeutralOnly>0</bNeutralOnly>
+			<iTurns>3000</iTurns>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
+			<PrereqTech>TECH_FISHING</PrereqTech>
+			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
+			<bLatitudeAbs>0</bLatitudeAbs>
+			<iMinLatitude>40</iMinLatitude>
+			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
 				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
 				<TerrainType>TERRAIN_SEA</TerrainType>
 				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
 				<TerrainType>TERRAIN_OCEAN</TerrainType>
 				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
-			</FeatureTerrainTypes>
+			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
-			<Type>SPAWN_CRAB_NATIVE</Type>
+			<Type>SPAWN_CRAB_BONUS</Type>
 			<UnitType>UNIT_CRAB</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>100</iTurns>
-			<iMaxLocalDensity>4</iMaxLocalDensity>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<BonusTypes>
@@ -3692,12 +3714,27 @@ iValidPlots = Number of Valid spawn plots on entire map
 			</BonusTypes>
 		</SpawnInfo>
 		<SpawnInfo>
+			<Type>SPAWN_CRAB_NATIVE</Type>
+			<UnitType>UNIT_CRAB</UnitType>
+			<PlayerType>44</PlayerType>
+			<bNeutralOnly>0</bNeutralOnly>
+			<iTurns>1000</iTurns>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
+			<PrereqTech>TECH_FISHING</PrereqTech>
+			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
+			<TerrainTypes>
+				<TerrainType>TERRAIN_COAST</TerrainType>
+				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
+			</TerrainTypes>
+		</SpawnInfo>
+		<SpawnInfo>
 			<Type>SPAWN_DOLPHIN_NATIVE</Type>
 			<UnitType>UNIT_DOLPHIN</UnitType>
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>50</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<BonusTypes>
@@ -3709,11 +3746,10 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<UnitType>UNIT_DUGONG</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>175</iTurns>
-			<iMaxLocalDensity>10</iMaxLocalDensity>
+			<iTurns>600</iTurns>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
-			<iMaxLatitude>40</iMaxLatitude>
 			<FeatureTypes>
 				<FeatureType>FEATURE_SEA_GRASS</FeatureType>
 			</FeatureTypes>
@@ -3728,7 +3764,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>250</iTurns>
-			<iMaxLocalDensity>49</iMaxLocalDensity>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<BonusTypes>
@@ -3739,8 +3775,8 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<Type>SPAWN_GREATWHITE_NATIVE</Type>
 			<UnitType>UNIT_GREATWHITE</UnitType>
 			<PlayerType>43</PlayerType>
-			<iTurns>250</iTurns>
-			<iMaxLocalDensity>49</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<iMinLatitude>23</iMinLatitude>
@@ -3750,20 +3786,20 @@ iValidPlots = Number of Valid spawn plots on entire map
 				<BonusType>BONUS_WHALE</BonusType>
 				<BonusType>BONUS_SHRIMP</BonusType>
 			</BonusTypes>
-			<FeatureTerrainTypes>
+			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_SEA</TerrainType>
 				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
-			</FeatureTerrainTypes>
+			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
 			<Type>SPAWN_HAMMERHEAD_NATIVE</Type>
 			<UnitType>UNIT_HAMMERHEAD</UnitType>
 			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>250</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>300</iTurns>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<BonusTypes>
@@ -3771,11 +3807,11 @@ iValidPlots = Number of Valid spawn plots on entire map
 				<BonusType>BONUS_WHALE</BonusType>
 				<BonusType>BONUS_SHRIMP</BonusType>
 			</BonusTypes>
-			<FeatureTerrainTypes>
+			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
-			</FeatureTerrainTypes>
+			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
 			<Type>SPAWN_HUMPBACK_WHALE_NATIVE</Type>
@@ -3783,7 +3819,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>225</iTurns>
-			<iMaxLocalDensity>14</iMaxLocalDensity>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<BonusTypes>
@@ -3797,7 +3833,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>75</iTurns>
-			<iMaxLocalDensity>4</iMaxLocalDensity>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -3813,7 +3849,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>100</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<iMaxLatitude>40</iMaxLatitude>
@@ -3822,12 +3858,30 @@ iValidPlots = Number of Valid spawn plots on entire map
 			</BonusTypes>
 		</SpawnInfo>
 		<SpawnInfo>
+			<Type>SPAWN_MARLIN_NATIVE</Type>
+			<UnitType>UNIT_MARLIN</UnitType>
+			<PlayerType>42</PlayerType>
+			<bNeutralOnly>0</bNeutralOnly>
+			<iTurns>3000</iTurns>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
+			<PrereqTech>TECH_FISHING</PrereqTech>
+			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
+			<TerrainTypes>
+				<TerrainType>TERRAIN_COAST</TerrainType>
+				<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+			</TerrainTypes>
+		</SpawnInfo>
+		<SpawnInfo>
 			<Type>SPAWN_NARWHAL_NATIVE</Type>
 			<UnitType>UNIT_NARWHAL</UnitType>
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>250</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -3841,8 +3895,8 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<UnitType>UNIT_ORCA</UnitType>
 			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>150</iTurns>
-			<iMaxLocalDensity>49</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<BonusTypes>
@@ -3855,8 +3909,8 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<UnitType>UNIT_RAY_EAGLE</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>75</iTurns>
-			<iMaxLocalDensity>10</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<iMaxLatitude>30</iMaxLatitude>
@@ -3873,22 +3927,22 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<UnitType>UNIT_RAY_MANTA</UnitType>
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>75</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<iMaxLatitude>40</iMaxLatitude>
 			<BonusTypes>
 				<BonusType>BONUS_FISH</BonusType>
 			</BonusTypes>
-			<FeatureTerrainTypes>
+			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_SEA</TerrainType>
 				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_OCEAN</TerrainType>
 				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
-			</FeatureTerrainTypes>
+			</TerrainTypes>
 		</SpawnInfo>
 		<SpawnInfo>
 			<Type>SPAWN_REEF_SHARK_NATIVE</Type>
@@ -3896,7 +3950,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>300</iTurns>
-			<iMaxLocalDensity>14</iMaxLocalDensity>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<FeatureTypes>
@@ -3910,8 +3964,8 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<Type>SPAWN_SALTCROC_LARGE_NATIVE</Type>
 			<UnitType>UNIT_SALTWATER_CROC_LARGE</UnitType>
 			<PlayerType>42</PlayerType>
-			<iTurns>350</iTurns>
-			<iMaxLocalDensity>14</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -3927,7 +3981,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<UnitType>UNIT_SALTWATER_CROC_SMALL</UnitType>
 			<PlayerType>42</PlayerType>
 			<iTurns>300</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -3944,7 +3998,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>100</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<BonusTypes>
@@ -3957,7 +4011,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
 			<iTurns>225</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
@@ -3978,8 +4032,8 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<UnitType>UNIT_SEATURTLE</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>100</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>200</iTurns>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<iMaxLatitude>30</iMaxLatitude>
@@ -3997,8 +4051,8 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<UnitType>UNIT_TUNA</UnitType>
 			<PlayerType>44</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>75</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
+			<iTurns>100</iTurns>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<iMaxLatitude>30</iMaxLatitude>
@@ -4011,8 +4065,8 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<UnitType>UNIT_MINKIE_WHALE</UnitType>
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>150</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>400</iTurns>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<BonusTypes>
@@ -4025,20 +4079,20 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<UnitType>UNIT_WHALESHARK</UnitType>
 			<PlayerType>42</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>75</iTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iTurns>150</iTurns>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<iMaxLatitude>30</iMaxLatitude>
 			<BonusTypes>
 				<BonusType>BONUS_SHRIMP</BonusType>
 			</BonusTypes>
-			<FeatureTerrainTypes>
+			<TerrainTypes>
 				<TerrainType>TERRAIN_COAST</TerrainType>
 				<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
 				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
-			</FeatureTerrainTypes>
+			</TerrainTypes>
 		</SpawnInfo>
 		<!-- Neanderthals -->
 		<SpawnInfo>
@@ -4047,11 +4101,11 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>50</iGlobalTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<iMaxAreaTotalDensity>20</iMaxAreaTotalDensity>
 			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
-			<ObsoleteTech>TECH_TOOL_MAKING</ObsoleteTech>
+			<ObsoleteTech>TECH_SHARPENING</ObsoleteTech>
 			<rateOverrideDefineName>NEANDERTHAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
@@ -4064,10 +4118,10 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_NEANDERTHAL_STONE_THROWER</Type>
 			<UnitType>UNIT_NEANDERTHAL_STONE_THROWER</UnitType>
-			<PlayerType>46</PlayerType>
+			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>100</iGlobalTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<iMaxAreaTotalDensity>20</iMaxAreaTotalDensity>
 			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
@@ -4085,10 +4139,10 @@ iValidPlots = Number of Valid spawn plots on entire map
 		<SpawnInfo>
 			<Type>SPAWN_NEANDERTHAL_SLINGER</Type>
 			<UnitType>UNIT_NEANDERTHAL_SLINGER</UnitType>
-			<PlayerType>46</PlayerType>
+			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>200</iGlobalTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iMaxAreaTotalDensity>20</iMaxAreaTotalDensity>
 			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
@@ -4110,15 +4164,15 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>200</iGlobalTurns>
-			<iMaxLocalDensity>7</iMaxLocalDensity>
+			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<iMaxAreaTotalDensity>20</iMaxAreaTotalDensity>
 			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
+			<PrereqTech>TECH_NOMADISM</PrereqTech>
 			<ObsoleteTech>TECH_PERSISTENCE_HUNTING</ObsoleteTech>
 			<rateOverrideDefineName>NEANDERTHAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_TAIGA</TerrainType>
-				<TerrainType>TERRAIN_TUNDRA</TerrainType>
 			</TerrainTypes>
 			<FeatureTypes>
 				<FeatureType>FEATURE_CAVES</FeatureType>
@@ -4131,12 +4185,12 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>50</iGlobalTurns>
-			<iMaxLocalDensity>40</iMaxLocalDensity>
+			<iMaxLocalDensity>12</iMaxLocalDensity>
 			<iMaxAreaTotalDensity>20</iMaxAreaTotalDensity>
 			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
-			<PrereqTech>TECH_TOOL_MAKING</PrereqTech>
-			<ObsoleteTech>TECH_CHOPPING</ObsoleteTech>
+			<PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
+			<ObsoleteTech>TECH_SHARPENING</ObsoleteTech>
 			<rateOverrideDefineName>NEANDERTHAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<iMinLatitude>40</iMinLatitude>
 			<BonusTypes>
@@ -4163,13 +4217,13 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<UnitType>UNIT_NEANDERTHAL_WARRIOR</UnitType>
 			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
-			<iGlobalTurns>50</iGlobalTurns>
-			<iMaxLocalDensity>40</iMaxLocalDensity>
+			<iGlobalTurns>80</iGlobalTurns>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
 			<iMaxAreaTotalDensity>20</iMaxAreaTotalDensity>
 			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
-			<PrereqTech>TECH_CHOPPING</PrereqTech>
-			<ObsoleteTech>TECH_OBSIDIAN_WEAPONS</ObsoleteTech>
+			<PrereqTech>TECH_SHARPENING</PrereqTech>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<rateOverrideDefineName>NEANDERTHAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<iMinLatitude>50</iMinLatitude>
 			<TerrainTypes>
@@ -4243,7 +4297,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>700</iGlobalTurns>
-			<iMaxLocalDensity>2</iMaxLocalDensity>
+			<iMaxLocalDensity>4</iMaxLocalDensity>
 			<iMaxAreaTotalDensity>20</iMaxAreaTotalDensity>
 			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
@@ -4261,7 +4315,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>700</iGlobalTurns>
-			<iMaxLocalDensity>2</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iMaxAreaTotalDensity>20</iMaxAreaTotalDensity>
 			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
@@ -4286,7 +4340,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>700</iGlobalTurns>
-			<iMaxLocalDensity>2</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iMaxAreaTotalDensity>20</iMaxAreaTotalDensity>
 			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
@@ -4311,7 +4365,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>600</iGlobalTurns>
-			<iMaxLocalDensity>2</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iMaxAreaTotalDensity>20</iMaxAreaTotalDensity>
 			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
@@ -4337,7 +4391,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>600</iGlobalTurns>
-			<iMaxLocalDensity>2</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iMaxAreaTotalDensity>20</iMaxAreaTotalDensity>
 			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
@@ -4363,7 +4417,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>
-			<iMaxLocalDensity>2</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iMaxAreaTotalDensity>20</iMaxAreaTotalDensity>
 			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
@@ -4386,7 +4440,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>800</iGlobalTurns>
-			<iMaxLocalDensity>2</iMaxLocalDensity>
+			<iMaxLocalDensity>8</iMaxLocalDensity>
 			<iMaxAreaTotalDensity>20</iMaxAreaTotalDensity>
 			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
@@ -4411,7 +4465,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>700</iGlobalTurns>
-			<iMaxLocalDensity>2</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iMaxAreaTotalDensity>20</iMaxAreaTotalDensity>
 			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
@@ -4436,7 +4490,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>600</iGlobalTurns>
-			<iMaxLocalDensity>2</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iMaxAreaTotalDensity>20</iMaxAreaTotalDensity>
 			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
@@ -4462,7 +4516,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>600</iGlobalTurns>
-			<iMaxLocalDensity>2</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<iMaxAreaTotalDensity>20</iMaxAreaTotalDensity>
 			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
@@ -4484,35 +4538,12 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>600</iGlobalTurns>
-			<iMaxLocalDensity>2</iMaxLocalDensity>
+			<iMaxLocalDensity>8</iMaxLocalDensity>
 			<iMaxAreaTotalDensity>20</iMaxAreaTotalDensity>
 			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
-			<PrereqTech>TECH_TRAILS</PrereqTech>
+			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<ObsoleteTech>TECH_HUNTING</ObsoleteTech>
-			<rateOverrideDefineName>NEANDERTHAL_SPAWN_MODIFIER</rateOverrideDefineName>
-			<iMinLatitude>50</iMinLatitude>
-			<TerrainTypes>
-				<TerrainType>TERRAIN_TAIGA</TerrainType>
-				<TerrainType>TERRAIN_TUNDRA</TerrainType>
-			</TerrainTypes>
-			<FeatureTypes>
-				<FeatureType>FEATURE_CAVES</FeatureType>
-				<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
-			</FeatureTypes>
-		</SpawnInfo>
-		<SpawnInfo>
-			<Type>SPAWN_NEANDERTHAL_SCOUT</Type>
-			<UnitType>UNIT_NEANDERTHAL_SCOUT</UnitType>
-			<PlayerType>41</PlayerType>
-			<iTurns>0</iTurns>
-			<iGlobalTurns>600</iGlobalTurns>
-			<iMaxLocalDensity>2</iMaxLocalDensity>
-			<iMaxAreaTotalDensity>20</iMaxAreaTotalDensity>
-			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
-			<bTreatAsBarbarian>1</bTreatAsBarbarian>
-			<PrereqTech>TECH_TRAILS</PrereqTech>
-			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<rateOverrideDefineName>NEANDERTHAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<iMinLatitude>50</iMinLatitude>
 			<TerrainTypes>
@@ -4530,12 +4561,12 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>41</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>600</iGlobalTurns>
-			<iMaxLocalDensity>2</iMaxLocalDensity>
+			<iMaxLocalDensity>16</iMaxLocalDensity>
 			<iMaxAreaTotalDensity>20</iMaxAreaTotalDensity>
 			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_PERSISTENCE_HUNTING</PrereqTech>
-			<ObsoleteTech>TECH_TRAILS</ObsoleteTech>
+			<ObsoleteTech>TECH_TRACKING</ObsoleteTech>
 			<rateOverrideDefineName>NEANDERTHAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<iMinLatitude>50</iMinLatitude>
 			<TerrainTypes>
@@ -4554,8 +4585,9 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>750</iGlobalTurns>
-			<iMaxLocalDensity>4</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
+			<PrereqTech>TECH_NOMADISM</PrereqTech>
 			<ObsoleteTech>TECH_PERSISTENCE_HUNTING</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
@@ -4582,10 +4614,10 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>700</iGlobalTurns>
-			<iMaxLocalDensity>4</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_PERSISTENCE_HUNTING</PrereqTech>
-			<ObsoleteTech>TECH_TRAILS</ObsoleteTech>
+			<ObsoleteTech>TECH_TRACKING</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
@@ -4611,9 +4643,9 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>650</iGlobalTurns>
-			<iMaxLocalDensity>4</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
-			<PrereqTech>TECH_TRAILS</PrereqTech>
+			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<ObsoleteTech>TECH_HUNTING</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
@@ -4640,7 +4672,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>600</iGlobalTurns>
-			<iMaxLocalDensity>4</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<ObsoleteTech>TECH_BRONZE_WORKING</ObsoleteTech>
@@ -4669,7 +4701,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>650</iGlobalTurns>
-			<iMaxLocalDensity>4</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<ObsoleteTech>TECH_FEUDALISM</ObsoleteTech>
@@ -4698,7 +4730,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>700</iGlobalTurns>
-			<iMaxLocalDensity>4</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_FEUDALISM</PrereqTech>
 			<ObsoleteTech>TECH_MATCHLOCK</ObsoleteTech>
@@ -4727,7 +4759,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>750</iGlobalTurns>
-			<iMaxLocalDensity>4</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
@@ -4756,184 +4788,10 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>800</iGlobalTurns>
-			<iMaxLocalDensity>4</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<ObsoleteTech>TECH_URBAN_CULTURE</ObsoleteTech>
-			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
-			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
-				<TerrainType>TERRAIN_LUSH</TerrainType>
-				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_BARREN</TerrainType>
-				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_BADLAND</TerrainType>
-				<TerrainType>TERRAIN_JAGGED</TerrainType>
-				<TerrainType>TERRAIN_DESERT</TerrainType>
-				<TerrainType>TERRAIN_SCRUB</TerrainType>
-				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
-				<TerrainType>TERRAIN_TAIGA</TerrainType>
-				<TerrainType>TERRAIN_TUNDRA</TerrainType>
-				<TerrainType>TERRAIN_MARSH</TerrainType>
-				<TerrainType>TERRAIN_MUDDY</TerrainType>
-			</TerrainTypes>
-		</SpawnInfo>
-		<SpawnInfo>
-			<Type>SPAWN_BARBARIAN_SCOUT</Type>
-			<UnitType>UNIT_SCOUT</UnitType>
-			<PlayerType>40</PlayerType>
-			<iTurns>0</iTurns>
-			<iGlobalTurns>800</iGlobalTurns>
-			<iMaxLocalDensity>4</iMaxLocalDensity>
-			<bTreatAsBarbarian>1</bTreatAsBarbarian>
-			<PrereqTech>TECH_TRAILS</PrereqTech>
-			<ObsoleteTech>TECH_EXPLORATION</ObsoleteTech>
-			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
-			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
-				<TerrainType>TERRAIN_LUSH</TerrainType>
-				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_BARREN</TerrainType>
-				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_BADLAND</TerrainType>
-				<TerrainType>TERRAIN_JAGGED</TerrainType>
-				<TerrainType>TERRAIN_DESERT</TerrainType>
-				<TerrainType>TERRAIN_SCRUB</TerrainType>
-				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
-				<TerrainType>TERRAIN_TAIGA</TerrainType>
-				<TerrainType>TERRAIN_TUNDRA</TerrainType>
-				<TerrainType>TERRAIN_MARSH</TerrainType>
-				<TerrainType>TERRAIN_MUDDY</TerrainType>
-			</TerrainTypes>
-		</SpawnInfo>
-		<SpawnInfo>
-			<Type>SPAWN_BARBARIAN_GUIDE</Type>
-			<UnitType>UNIT_GUIDE</UnitType>
-			<PlayerType>40</PlayerType>
-			<iTurns>0</iTurns>
-			<iGlobalTurns>850</iGlobalTurns>
-			<iMaxLocalDensity>4</iMaxLocalDensity>
-			<bTreatAsBarbarian>1</bTreatAsBarbarian>
-			<PrereqTech>TECH_EXPLORATION</PrereqTech>
-			<ObsoleteTech>TECH_ROAD_BUILDING</ObsoleteTech>
-			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
-			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
-				<TerrainType>TERRAIN_LUSH</TerrainType>
-				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_BARREN</TerrainType>
-				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_BADLAND</TerrainType>
-				<TerrainType>TERRAIN_JAGGED</TerrainType>
-				<TerrainType>TERRAIN_DESERT</TerrainType>
-				<TerrainType>TERRAIN_SCRUB</TerrainType>
-				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
-				<TerrainType>TERRAIN_TAIGA</TerrainType>
-				<TerrainType>TERRAIN_TUNDRA</TerrainType>
-				<TerrainType>TERRAIN_MARSH</TerrainType>
-				<TerrainType>TERRAIN_MUDDY</TerrainType>
-			</TerrainTypes>
-		</SpawnInfo>
-		<SpawnInfo>
-			<Type>SPAWN_BARBARIAN_EXPLORER</Type>
-			<UnitType>UNIT_EXPLORER</UnitType>
-			<PlayerType>40</PlayerType>
-			<iTurns>0</iTurns>
-			<iGlobalTurns>900</iGlobalTurns>
-			<iMaxLocalDensity>4</iMaxLocalDensity>
-			<bTreatAsBarbarian>1</bTreatAsBarbarian>
-			<PrereqTech>TECH_ROAD_BUILDING</PrereqTech>
-			<ObsoleteTech>TECH_COMPASS</ObsoleteTech>
-			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
-			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
-				<TerrainType>TERRAIN_LUSH</TerrainType>
-				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_BARREN</TerrainType>
-				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_BADLAND</TerrainType>
-				<TerrainType>TERRAIN_JAGGED</TerrainType>
-				<TerrainType>TERRAIN_DESERT</TerrainType>
-				<TerrainType>TERRAIN_SCRUB</TerrainType>
-				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
-				<TerrainType>TERRAIN_TAIGA</TerrainType>
-				<TerrainType>TERRAIN_TUNDRA</TerrainType>
-				<TerrainType>TERRAIN_MARSH</TerrainType>
-				<TerrainType>TERRAIN_MUDDY</TerrainType>
-			</TerrainTypes>
-		</SpawnInfo>
-		<SpawnInfo>
-			<Type>SPAWN_BARBARIAN_ADVENTURER</Type>
-			<UnitType>UNIT_ADVENTURER</UnitType>
-			<PlayerType>40</PlayerType>
-			<iTurns>0</iTurns>
-			<iGlobalTurns>950</iGlobalTurns>
-			<iMaxLocalDensity>4</iMaxLocalDensity>
-			<bTreatAsBarbarian>1</bTreatAsBarbarian>
-			<PrereqTech>TECH_COMPASS</PrereqTech>
-			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
-			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
-			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
-				<TerrainType>TERRAIN_LUSH</TerrainType>
-				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_BARREN</TerrainType>
-				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_BADLAND</TerrainType>
-				<TerrainType>TERRAIN_JAGGED</TerrainType>
-				<TerrainType>TERRAIN_DESERT</TerrainType>
-				<TerrainType>TERRAIN_SCRUB</TerrainType>
-				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
-				<TerrainType>TERRAIN_TAIGA</TerrainType>
-				<TerrainType>TERRAIN_TUNDRA</TerrainType>
-				<TerrainType>TERRAIN_MARSH</TerrainType>
-				<TerrainType>TERRAIN_MUDDY</TerrainType>
-			</TerrainTypes>
-		</SpawnInfo>
-		<SpawnInfo>
-			<Type>SPAWN_BARBARIAN_MOTORCYCLE</Type>
-			<UnitType>UNIT_MOTORCYCLE</UnitType>
-			<PlayerType>40</PlayerType>
-			<iTurns>0</iTurns>
-			<iGlobalTurns>1000</iGlobalTurns>
-			<iMaxLocalDensity>4</iMaxLocalDensity>
-			<bTreatAsBarbarian>1</bTreatAsBarbarian>
-			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
-			<ObsoleteTech>TECH_MILITARY_ROBOTICS</ObsoleteTech>
-			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
-			<TerrainTypes>
-				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
-				<TerrainType>TERRAIN_LUSH</TerrainType>
-				<TerrainType>TERRAIN_PLAINS</TerrainType>
-				<TerrainType>TERRAIN_BARREN</TerrainType>
-				<TerrainType>TERRAIN_ROCKY</TerrainType>
-				<TerrainType>TERRAIN_BADLAND</TerrainType>
-				<TerrainType>TERRAIN_JAGGED</TerrainType>
-				<TerrainType>TERRAIN_DESERT</TerrainType>
-				<TerrainType>TERRAIN_SCRUB</TerrainType>
-				<TerrainType>TERRAIN_DUNES</TerrainType>
-				<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
-				<TerrainType>TERRAIN_TAIGA</TerrainType>
-				<TerrainType>TERRAIN_TUNDRA</TerrainType>
-				<TerrainType>TERRAIN_MARSH</TerrainType>
-				<TerrainType>TERRAIN_MUDDY</TerrainType>
-			</TerrainTypes>
-		</SpawnInfo>
-		<SpawnInfo>
-			<Type>SPAWN_BARBARIAN_UNMANNED_TRIKE</Type>
-			<UnitType>UNIT_UNMANNED_TRIKE</UnitType>
-			<PlayerType>40</PlayerType>
-			<iTurns>0</iTurns>
-			<iGlobalTurns>1100</iGlobalTurns>
-			<iMaxLocalDensity>4</iMaxLocalDensity>
-			<bTreatAsBarbarian>1</bTreatAsBarbarian>
-			<PrereqTech>TECH_MILITARY_ROBOTICS</PrereqTech>
-			<ObsoleteTech>TECH_NANOTROIDS</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
@@ -4959,9 +4817,9 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>
-			<iMaxLocalDensity>6</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
-			<ObsoleteTech>TECH_TOOL_MAKING</ObsoleteTech>
+			<ObsoleteTech>TECH_HARD_HAMMER_PERCUSSION</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
@@ -4987,10 +4845,10 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>450</iGlobalTurns>
-			<iMaxLocalDensity>6</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
-			<PrereqTech>TECH_TOOL_MAKING</PrereqTech>
-			<ObsoleteTech>TECH_PIERCING</ObsoleteTech>
+			<PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
+			<ObsoleteTech>TECH_SHARPENING</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
@@ -5016,9 +4874,9 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>400</iGlobalTurns>
-			<iMaxLocalDensity>6</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
-			<PrereqTech>TECH_PIERCING</PrereqTech>
+			<PrereqTech>TECH_SHARPENING</PrereqTech>
 			<ObsoleteTech>TECH_AXE_MAKING</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
@@ -5041,11 +4899,11 @@ iValidPlots = Number of Valid spawn plots on entire map
 		</SpawnInfo>
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_STONE_AGE_AXEMAN</Type>
-			<UnitType>UNIT_STONE_AGE_AXEMAN</UnitType>
+			<UnitType>UNIT_STONE_AXEMAN</UnitType>
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>450</iGlobalTurns>
-			<iMaxLocalDensity>6</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_AXE_MAKING</PrereqTech>
 			<ObsoleteTech>TECH_OBSIDIAN_WEAPONS</ObsoleteTech>
@@ -5074,7 +4932,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>
-			<iMaxLocalDensity>6</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
 			<ObsoleteTech>TECH_BRONZE_WORKING</ObsoleteTech>
@@ -5089,7 +4947,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>550</iGlobalTurns>
-			<iMaxLocalDensity>6</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<ObsoleteTech>TECH_ARMOR_CRAFTING</ObsoleteTech>
@@ -5118,7 +4976,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>550</iGlobalTurns>
-			<iMaxLocalDensity>6</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
 			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
@@ -5147,7 +5005,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>
-			<iMaxLocalDensity>6</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
 			<ObsoleteTech>TECH_IRON_WORKING</ObsoleteTech>
@@ -5162,7 +5020,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>550</iGlobalTurns>
-			<iMaxLocalDensity>6</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 			<ObsoleteTech>TECH_SMITHING</ObsoleteTech>
@@ -5191,7 +5049,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>
-			<iMaxLocalDensity>6</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_SMITHING</PrereqTech>
 			<ObsoleteTech>TECH_ARMOR_CRAFTING</ObsoleteTech>
@@ -5220,7 +5078,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>650</iGlobalTurns>
-			<iMaxLocalDensity>6</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
 			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
@@ -5249,7 +5107,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>
-			<iMaxLocalDensity>6</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_COMPOSITE_TOOLS</PrereqTech>
 			<ObsoleteTech>TECH_OBSIDIAN_WEAPONS</ObsoleteTech>
@@ -5278,7 +5136,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>550</iGlobalTurns>
-			<iMaxLocalDensity>6</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
 			<ObsoleteTech>TECH_BRONZE_WORKING</ObsoleteTech>
@@ -5293,7 +5151,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>600</iGlobalTurns>
-			<iMaxLocalDensity>6</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<ObsoleteTech>TECH_CIVIL_SERVICE</ObsoleteTech>
@@ -5322,7 +5180,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>700</iGlobalTurns>
-			<iMaxLocalDensity>6</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
 			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
@@ -5351,7 +5209,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>450</iGlobalTurns>
-			<iMaxLocalDensity>6</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_SIMPLE_WOOD_WORKING</PrereqTech>
 			<ObsoleteTech>TECH_SPEAR_MAKING</ObsoleteTech>
@@ -5376,11 +5234,11 @@ iValidPlots = Number of Valid spawn plots on entire map
 		</SpawnInfo>
 		<SpawnInfo>
 			<Type>SPAWN_BARBARIAN_STONE_AGE_SPEARMAN</Type>
-			<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+			<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>
-			<iMaxLocalDensity>6</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_SPEAR_MAKING</PrereqTech>
 			<ObsoleteTech>TECH_OBSIDIAN_WEAPONS</ObsoleteTech>
@@ -5409,7 +5267,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>550</iGlobalTurns>
-			<iMaxLocalDensity>6</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_OBSIDIAN_WEAPONS</PrereqTech>
 			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
@@ -5424,7 +5282,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>600</iGlobalTurns>
-			<iMaxLocalDensity>6</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<ObsoleteTech>TECH_SIEGE_WARFARE</ObsoleteTech>
@@ -5453,7 +5311,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>700</iGlobalTurns>
-			<iMaxLocalDensity>6</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
 			<ObsoleteTech>TECH_ARMOR_CRAFTING</ObsoleteTech>
@@ -5482,7 +5340,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>800</iGlobalTurns>
-			<iMaxLocalDensity>6</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_ARMOR_CRAFTING</PrereqTech>
 			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
@@ -5511,7 +5369,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>
-			<iMaxLocalDensity>6</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_ATLATL_MAKING</PrereqTech>
 			<ObsoleteTech>TECH_COPPER_WORKING</ObsoleteTech>
@@ -5540,7 +5398,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>450</iGlobalTurns>
-			<iMaxLocalDensity>6</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<ObsoleteTech>TECH_SIEGE_WARFARE</ObsoleteTech>
@@ -5569,10 +5427,10 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>
-			<iMaxLocalDensity>6</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_SIEGE_WARFARE</PrereqTech>
-			<ObsoleteTech>TECH_EXPLOSIVES</ObsoleteTech>
+			<ObsoleteTech>TECH_FLINTLOCK</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
@@ -5598,10 +5456,10 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>600</iGlobalTurns>
-			<iMaxLocalDensity>6</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
-			<PrereqTech>TECH_EXPLOSIVES</PrereqTech>
-			<ObsoleteTech>TECH_AUTOMATIC_WEAPONS</ObsoleteTech>
+			<PrereqTech>TECH_FLINTLOCK</PrereqTech>
+			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
 			<TerrainTypes>
 				<TerrainType>TERRAIN_GRASSLAND</TerrainType>
@@ -5627,7 +5485,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>800</iGlobalTurns>
-			<iMaxLocalDensity>6</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_TRENCH_WARFARE</PrereqTech>
 			<ObsoleteTech>TECH_AUTOMATIC_WEAPONS</ObsoleteTech>
@@ -5656,7 +5514,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>900</iGlobalTurns>
-			<iMaxLocalDensity>6</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_AUTOMATIC_WEAPONS</PrereqTech>
 			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
@@ -5685,7 +5543,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>1000</iGlobalTurns>
-			<iMaxLocalDensity>6</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_MANUFACTURING</PrereqTech>
 			<ObsoleteTech>TECH_POWERED_EXOSKELETON</ObsoleteTech>
@@ -5714,7 +5572,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>500</iGlobalTurns>
-			<iMaxLocalDensity>6</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<ObsoleteTech>TECH_BINDING</ObsoleteTech>
 			<rateOverrideDefineName>BARBARIAN_SPAWN_MODIFIER</rateOverrideDefineName>
@@ -5742,7 +5600,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>550</iGlobalTurns>
-			<iMaxLocalDensity>6</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_BINDING</PrereqTech>
 			<ObsoleteTech>TECH_ARCHERY</ObsoleteTech>
@@ -5771,7 +5629,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>550</iGlobalTurns>
-			<iMaxLocalDensity>6</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_ARCHERY</PrereqTech>
 			<ObsoleteTech>TECH_BRONZE_WORKING</ObsoleteTech>
@@ -5800,7 +5658,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>600</iGlobalTurns>
-			<iMaxLocalDensity>6</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<ObsoleteTech>TECH_YEOMANRY</ObsoleteTech>
@@ -5829,7 +5687,7 @@ iValidPlots = Number of Valid spawn plots on entire map
 			<PlayerType>40</PlayerType>
 			<iTurns>0</iTurns>
 			<iGlobalTurns>650</iGlobalTurns>
-			<iMaxLocalDensity>6</iMaxLocalDensity>
+			<iMaxLocalDensity>10</iMaxLocalDensity>
 			<bTreatAsBarbarian>1</bTreatAsBarbarian>
 			<PrereqTech>TECH_YEOMANRY</PrereqTech>
 			<ObsoleteTech>TECH_MATCHLOCK</ObsoleteTech>

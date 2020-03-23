@@ -142,7 +142,7 @@
 			<CommerceChanges>
 				<iCommerce>8</iCommerce>
 			</CommerceChanges>
-			<!--FreeBonus>BONUS_PORCELAIN_WARES</FreeBonus>
+			<!--FreeBonus>BONUS_PORCELAIN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses-->
 			<!-- Special Yield and Commerce modifiers -->
 			<BonusCommerceModifiers>
@@ -221,7 +221,7 @@
 			<CommerceChanges>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_PORCELAIN_WARES</FreeBonus>
+			<FreeBonus>BONUS_PORCELAIN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special Yield and Commerce modifiers -->
 			<BonusCommerceModifiers>
@@ -516,7 +516,7 @@
 			<CommerceChanges>
 				<iCommerce>6</iCommerce>
 			</CommerceChanges>
-			<!--FreeBonus>BONUS_TERRACOTTA_WARES</FreeBonus>
+			<!--FreeBonus>BONUS_TERRACOTTA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses-->
 			<!-- Special properties -->
 			<iHurryCostModifier>100</iHurryCostModifier>
@@ -584,7 +584,7 @@
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
-			<FreeBonus>BONUS_TERRACOTTA_WARES</FreeBonus>
+			<FreeBonus>BONUS_TERRACOTTA</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<!-- Special properties -->
 			<iHurryCostModifier>100</iHurryCostModifier>

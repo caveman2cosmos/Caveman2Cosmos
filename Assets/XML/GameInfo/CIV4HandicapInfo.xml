@@ -1,8 +1,4 @@
-<?xml version="1.0"?>
-<!-- 
-	iBarbarianCityCreationProb:
-		Base percent chance per turn for barbarian city spawn on normal gamespeed, on eternity a value of 1 means 0.1% chance per turn.:
- -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4HandicapInfo xmlns="x-schema:../Schema/C2C_CIV4GameInfoSchema.xml">
 	<HandicapInfos>
 		<HandicapInfo>

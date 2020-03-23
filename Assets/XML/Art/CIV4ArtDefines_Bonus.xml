@@ -1,6 +1,5 @@
-<?xml version="1.0"?>
-<!-- These entries should be ordered alphabetically. -->
-<!-- Use <FontButtonIndex>-364</FontButtonIndex> when a bonus doesn't have a unmique font icon -->
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Use <FontButtonIndex>-364</FontButtonIndex> when a bonus doesn't have a unique font icon -->
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Schema\Caveman2Cosmos.xsd">
 	<BonusArtInfos>
 		<BonusArtInfo>

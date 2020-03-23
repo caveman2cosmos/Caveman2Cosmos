@@ -58,8 +58,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_DOGS_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Build Canine buildings and units faster in this city.</English>
-		<French>Construit les bâtiments et unités canines plus vite dans cette Ville.</French>
+		<English>[ICON_BULLET]Build Canine buildings and units faster in this city.</English>
+		<French>[ICON_BULLET]Construit les bâtiments et unités canines plus vite dans cette Ville.</French>
 		<Italian>Questo edificio ti permette di addestrare le unità canine più velocemente.</Italian>
 		<Polish>Szybciej buduj jedn. psów i budynki z nimi związane.</Polish>
 	</TEXT>
@@ -76,8 +76,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_WORKERS_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Build Worker units faster in this city.</English>
-		<French>Les unités ouvriers sont entraînées plus vite dans cette ville</French>
+		<English>[ICON_BULLET]Build Worker units faster in this city.</English>
+		<French>[ICON_BULLET]Les unités ouvriers sont entraînées plus vite dans cette ville</French>
 		<Italian>Costruisce le unità di lavoratori più velocemente.</Italian>
 	</TEXT>
 	<TEXT>
@@ -328,27 +328,27 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAPYBARA_MYTH</Tag>
 		<English>Myth - Capybara</English>
-		<French>Mythe du Capybara</French>
+		<French>Mythe du Cabiaï</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAPYBARA_MYTH_EFFECT</Tag>
 		<English>Myth Effect - Capybara</English>
-		<French>Effet (Mythe du Capybara)</French>
+		<French>Effet (Mythe du Cabiaï)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAPYBARA_STORIES</Tag>
 		<English>Stories - Capybara</English>
-		<French>Histoires du Capybara</French>
+		<French>Histoires de Cabiaï</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAPYBARA_STORIES_EFFECT</Tag>
 		<English>Stories Effect - Capybara</English>
-		<French>Effet (Histoire du Capybara)</French>
+		<French>Effet (Histoire du Cabiaï)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CAPYBARA_STORY</Tag>
 		<English>Story - Capybara</English>
-		<French>Histoire du Capybara</French>
+		<French>Histoire du Cabiaï</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CARNIVAL</Tag>
@@ -974,68 +974,6 @@
 		<Polish>Mit Humpbaka</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_IBEX_CERIMONIAL_GUARD</Tag>
-		<English>Ibex - Cerimonial Guard</English>
-		<French>
-			<Text>Gardien de Cérémonie - Bouquetin</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Stambecco - Guardia cerimoniale</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Koziorożec - Strażnik Ceremonialny</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_IBEX_CHANGING_OF_THE_GUARD</Tag>
-		<English>Ibex - Changing of the Guard</English>
-		<French>
-			<Text>Ibex - Changement de Garde</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Stambecco - Cambio della guardia</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Koziorożec - Zmiana Straży</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_IBEX_COMPOUND</Tag>
-		<English>Herd (Ibex)</English>
-		<French>
-			<Text>Troupeau d'Ibex</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Branco - Stambecchi</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Stado - Koziorożce</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_KENNEL</Tag>
-		<English>Kennel</English>
-		<French>
-			<Text>Chenil (App.)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Zwinger</German>
-		<Italian>
-			<Text>Canile</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>Madriguera</Spanish>
-		<Polish>Psiarnia</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KRAKEN_MYTH</Tag>
 		<English>Myth - Kraken</English>
 		<French>
@@ -1372,22 +1310,6 @@
 		<Polish>Mit Orki</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_BEAR_MYTH</Tag>
-		<English>Myth - Paleolithic Bear</English>
-		<French>Mythe de l'Ours Paléolithique</French>
-		<Italian>
-			<Text>Mito dell'orso paleolitico</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Mit Niedźwiedź Jaskiniowy</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_BEAR_MYTH_EFFECT</Tag>
-		<English>Myth Effect - Paleolithic Bear</English>
-		<French>Effet (Mythe de l'ours Paléolithique)</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_PALEOLITHIC_CAT_MYTH</Tag>
 		<English>Myth - Paleolithic Cat</English>
 		<French>Mythe du Félin Paléolithique</French>
@@ -1657,21 +1579,6 @@
 			<Plural>0</Plural>
 		</Italian>
 		<Polish>Mit Gadów</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_RHINO_MYTH</Tag>
-		<English>Myth - Rhinoceros</English>
-		<French>
-			<Text>Mythe du Rhinocéros</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<Italian>
-			<Text>Mito del rinoceronte</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Polish>Mit Nosorożca</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RODENT_CAGE</Tag>
@@ -2113,7 +2020,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CRAB_PEDIA</Tag>
-		<English>Crabs are decapod crustaceans of the infraorder Brachyura, which typically have a very short projecting "tail" (abdomen), usually entirely hidden under the thorax. They live in all the world's oceans, in fresh water, and on land, are generally covered with a thick exoskeleton and have a single pair of claws. Many other animals with similar names  such as hermit crabs, king crabs, porcelain crabs, horseshoe crabs and crab lice  are not true crabs.[PARAGRAPH:2]Crabs are generally covered with a thick exoskeleton, composed primarily of calcium carbonate, and armed with a single pair of chelae (claws). Crabs are found in all of the world's oceans, while many crabs live in fresh water and on land, particularly in tropical regions. Crabs vary in size from the pea crab, a few millimetres wide, to the Japanese spider crab, with a leg span of up to 4 metres (13 ft).[PARAGRAPH:2]About 850 species of crab are freshwater, terrestrial or semi-terrestrial species; they are found throughout the world's tropical and semi-tropical regions. They were previously thought to be a monophyletic group, but are now believed to represent at least two distinct lineages, one in the Old World and one in the New World.[PARAGRAPH:2]The earliest unambiguous crab fossils date from the Jurassic, although Carboniferous Imocaris, known only from its carapace, may be a primitive crab. The radiation of crabs in the Cretaceous and afterward may be linked either to the break-up of Gondwana or to the concurrent radiation of bony fish, crabs' main predators.[PARAGRAPH:2]Source: Wikipedia</English>
+		<English>Crabs are decapod crustaceans of the infraorder Brachyura, which typically have a very short projecting "tail" (abdomen), usually entirely hidden under the thorax. They live in all the world's oceans, in fresh water, and on land, are generally covered with a thick exoskeleton and have a single pair of claws. Many other animals with similar names such as hermit crabs, king crabs, porcelain crabs, horseshoe crabs and crab lice are not true crabs.[PARAGRAPH:2]Crabs are generally covered with a thick exoskeleton, composed primarily of calcium carbonate, and armed with a single pair of chelae (claws). Crabs are found in all of the world's oceans, while many crabs live in fresh water and on land, particularly in tropical regions. Crabs vary in size from the pea crab, a few millimetres wide, to the Japanese spider crab, with a leg span of up to 4 metres (13 ft).[PARAGRAPH:2]About 850 species of crab are freshwater, terrestrial or semi-terrestrial species; they are found throughout the world's tropical and semi-tropical regions. They were previously thought to be a monophyletic group, but are now believed to represent at least two distinct lineages, one in the Old World and one in the New World.[PARAGRAPH:2]The earliest unambiguous crab fossils date from the Jurassic, although Carboniferous Imocaris, known only from its carapace, may be a primitive crab. The radiation of crabs in the Cretaceous and afterward may be linked either to the break-up of Gondwana or to the concurrent radiation of bony fish, crabs' main predators.[PARAGRAPH:2]Source: Wikipedia</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MACKEREL_PEDIA</Tag>
@@ -2129,23 +2036,43 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_COD_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Cod, Sea and Fish Myth, Fish Pens, Coastal Fish Pens, Marine Institute</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire [COLOR_REVERT] Mythe, Histoire(s) de la morue, Mythe de poissons, Filets de pêche, et Institut maritime</French>
+		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
+[SPACE][SPACE] * Myth, Story and Stories - Cod
+[SPACE][SPACE] * Sea and Fish Myth
+[SPACE][SPACE] * Fish Pens, Coastal Fish Pens
+[SPACE][SPACE] * Marine Institute</English>
+
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire [COLOR_REVERT] Mythe, Histoire(s) de la morue, Mythe de poissons, Filets de pêche, et Institut maritime</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MACKEREL_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Mackerel, Sea and Fish Myth, Fish Pens, Coastal Fish Pens, Marine Institute</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire [COLOR_REVERT] Mythe, Histoire(s) de Maquereaux, Mythe de le Mer et des Poissons, Filets de pêche, et Institut maritime</French>
+		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
+SPACE][SPACE] * Myth, Story and Stories - Mackerel
+SPACE][SPACE] * Sea and Fish Myth
+SPACE][SPACE] * Fish Pens, Coastal Fish Pens
+SPACE][SPACE] * Marine Institute</English>
+
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire [COLOR_REVERT] Mythe, Histoire(s) de Maquereaux, Mythe de le Mer et des Poissons, Filets de pêche, et Institut maritime</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_MARLIN_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Marlin, Sea and Fish Myth, Fish Pens, Coastal Fish Pens, Marine Institute</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire [COLOR_REVERT] Mythes et Histoire(s) du Marlin, Mythes de la Mer et des Poissons, Filets, Institut de Marine</French>
+		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
+SPACE][SPACE] * Myth, Story and Stories - Marlin
+SPACE][SPACE] * Sea and Fish Myth
+SPACE][SPACE] * Fish Pens, Coastal Fish Pens
+SPACE][SPACE] * Marine Institute</English>
+
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire [COLOR_REVERT] Mythes et Histoire(s) du Marlin, Mythes de la Mer et des Poissons, Filets, Institut de Marine</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUBDUED_RAY_EAGLE_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT] Myth, Story and Stories -  Eagle Ray, Sea and Fish Myth, Fish Pens, Coastal Fish Pens, Marine Institute</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Permet de [COLOR_HIGHLIGHT_TEXT]Construire [COLOR_REVERT] Mythe, Histoire(s) de l'aigle de mer, Mythes de le Mer et des Poissons, Filets de pêche, et Institut maritime</French>
+		<English>[COLOR_HIGHLIGHT_TEXT]Build[COLOR_REVERT]:
+SPACE][SPACE] * Myth, Story and Stories - Eagle Ray
+SPACE][SPACE] * Sea and Fish Myth
+SPACE][SPACE] * Fish Pens, Coastal Fish Pens
+SPACE][SPACE] * Marine Institute</English>
+
+		<French>[ICON_BULLET]Permet de [COLOR_HIGHLIGHT_TEXT]Construire [COLOR_REVERT] Mythe, Histoire(s) de l'aigle de mer, Mythes de le Mer et des Poissons, Filets de pêche, et Institut maritime</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TUNA_PEDIA</Tag>

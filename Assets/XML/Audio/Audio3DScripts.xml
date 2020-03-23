@@ -1,10 +1,4 @@
-<?xml version="1.0"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Dean Ray Johnson (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- ReModified by StrategyOnly -->
-<!-- -->
-<!-- 3D Audio Scripts -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Script3DSounds xmlns="x-schema:AudioScriptSchema.xml">
 	<Script3DSound>
 		<ScriptID>AS3D_ERROR</ScriptID>
@@ -23902,7 +23896,7 @@
 		<fMaxWetLevel>0.5</fMaxWetLevel>
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script3DSound>
-     <Script3DSound>
+	<Script3DSound>
 		<ScriptID>AS3D_UN_ELEPHANT</ScriptID>
 		<SoundID>SND_ELEPHANT</SoundID>
 		<SoundType>GAME_SFX</SoundType>
@@ -23931,7 +23925,7 @@
 		<fMaxWetLevel>0.5</fMaxWetLevel>
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script3DSound>
-    <Script3DSound>
+	<Script3DSound>
 		<ScriptID>AS3D_UN_GORILLA</ScriptID>
 		<SoundID>SND_GORILLA</SoundID>
 		<SoundType>GAME_SFX</SoundType>
@@ -23960,7 +23954,7 @@
 		<fMaxWetLevel>0.5</fMaxWetLevel>
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script3DSound>
-    <Script3DSound>
+	<Script3DSound>
 		<ScriptID>AS3D_UN_HAWK</ScriptID>
 		<SoundID>SND_HAWK</SoundID>
 		<SoundType>GAME_SFX</SoundType>
@@ -24424,7 +24418,7 @@
 		<fMaxWetLevel>0.5</fMaxWetLevel>
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script3DSound>
-        <Script3DSound>
+	<Script3DSound>
 		<ScriptID>AS3D_UN_SPIDER</ScriptID>
 		<SoundID>SND_SPIDER</SoundID>
 		<SoundType>GAME_SFX</SoundType>
@@ -24453,7 +24447,7 @@
 		<fMaxWetLevel>0.5</fMaxWetLevel>
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script3DSound>
-        <Script3DSound>
+	<Script3DSound>
 		<ScriptID>AS3D_UN_SPIDERSILK</ScriptID>
 		<SoundID>SND_SPIDERSILK</SoundID>
 		<SoundType>GAME_SFX</SoundType>

@@ -17,7 +17,8 @@
 				<TriggerText>
 					<Text>TXT_KEY_EVENT_TRIGGER_PEAT_1</Text>
 					<Era>NONE</Era>
-				</TriggerText>									</TriggerTexts>
+				</TriggerText>
+			</TriggerTexts>
 			<EventArt>Art/Event_Images/peatevent.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>

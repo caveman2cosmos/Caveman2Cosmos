@@ -23,7 +23,7 @@
 				<Module>
 					<Directory>Big_Cats</Directory>
 					<bLoad>1</bLoad>
-				</Module>				
+				</Module>
 				<Module>
 					<Directory>Bison_Rider</Directory>
 					<bLoad>1</bLoad>

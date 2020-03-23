@@ -648,7 +648,7 @@
 					<iBuildingProductionModifier>100</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ARTIST_GUILD</BuildingType>
+					<BuildingType>BUILDING_ARTIST_COLONY</BuildingType>
 					<iBuildingProductionModifier>100</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -736,7 +736,7 @@
 					<iBuildingProductionModifier>100</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_BYZANTINE_HIPPODROME</BuildingType>
+					<BuildingType>BUILDING_HIPPODROME</BuildingType>
 					<iBuildingProductionModifier>100</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -1072,11 +1072,11 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_OBELISK</BuildingType>
+					<BuildingType>BUILDING_MONUMENT</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_EGYPTIAN_OBELISK</BuildingType>
+					<BuildingType>BUILDING_OBELISK</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -1343,15 +1343,15 @@
 					<iUnitProductionModifier>25</iUnitProductionModifier>
 				</UnitProductionModifierType>
 				<UnitProductionModifierType>
-					<UnitType>UNIT_CLASSIC_WORKBOAT</UnitType>
+					<UnitType>UNIT_WORKBOAT_CLASSIC</UnitType>
 					<iUnitProductionModifier>25</iUnitProductionModifier>
 				</UnitProductionModifierType>
 				<UnitProductionModifierType>
-					<UnitType>UNIT_MIDDLE_WORKBOAT</UnitType>
+					<UnitType>UNIT_WORKBOAT_MIDDLE</UnitType>
 					<iUnitProductionModifier>25</iUnitProductionModifier>
 				</UnitProductionModifierType>
 				<UnitProductionModifierType>
-					<UnitType>UNIT_MODERN_WORKBOAT</UnitType>
+					<UnitType>UNIT_WORKBOAT_MODERN</UnitType>
 					<iUnitProductionModifier>25</iUnitProductionModifier>
 				</UnitProductionModifierType>
 			</UnitProductionModifierTypes>
@@ -3513,7 +3513,7 @@
 					<iBuildingProductionModifier>100</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ARTIST_GUILD</BuildingType>
+					<BuildingType>BUILDING_ARTIST_COLONY</BuildingType>
 					<iBuildingProductionModifier>100</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -3601,7 +3601,7 @@
 					<iBuildingProductionModifier>100</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_BYZANTINE_HIPPODROME</BuildingType>
+					<BuildingType>BUILDING_HIPPODROME</BuildingType>
 					<iBuildingProductionModifier>100</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -3940,11 +3940,11 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_OBELISK</BuildingType>
+					<BuildingType>BUILDING_MONUMENT</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_EGYPTIAN_OBELISK</BuildingType>
+					<BuildingType>BUILDING_OBELISK</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -4214,15 +4214,15 @@
 					<iUnitProductionModifier>25</iUnitProductionModifier>
 				</UnitProductionModifierType>
 				<UnitProductionModifierType>
-					<UnitType>UNIT_CLASSIC_WORKBOAT</UnitType>
+					<UnitType>UNIT_WORKBOAT_CLASSIC</UnitType>
 					<iUnitProductionModifier>25</iUnitProductionModifier>
 				</UnitProductionModifierType>
 				<UnitProductionModifierType>
-					<UnitType>UNIT_MIDDLE_WORKBOAT</UnitType>
+					<UnitType>UNIT_WORKBOAT_MIDDLE</UnitType>
 					<iUnitProductionModifier>25</iUnitProductionModifier>
 				</UnitProductionModifierType>
 				<UnitProductionModifierType>
-					<UnitType>UNIT_MODERN_WORKBOAT</UnitType>
+					<UnitType>UNIT_WORKBOAT_MODERN</UnitType>
 					<iUnitProductionModifier>25</iUnitProductionModifier>
 				</UnitProductionModifierType>
 			</UnitProductionModifierTypes>

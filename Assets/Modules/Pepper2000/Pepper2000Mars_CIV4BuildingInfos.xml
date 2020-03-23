@@ -393,7 +393,7 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
-			<Bonus>BONUS_MARS_ROCKS</Bonus>
+			<Bonus>BONUS_MARTIAN_ROCKS</Bonus>
 			<FreeBonus>BONUS_MARTIAN_MANUFACTURED_GOODS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
@@ -434,7 +434,7 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
-			<FreeBonus>BONUS_MARS_ROCKS</FreeBonus>
+			<FreeBonus>BONUS_MARTIAN_ROCKS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -776,7 +776,7 @@
 				<iCommerce>-3</iCommerce>
 				<iCommerce>600</iCommerce>
 			</CommerceChanges>
-			<Bonus>BONUS_MARS_ROCKS</Bonus>
+			<Bonus>BONUS_MARTIAN_ROCKS</Bonus>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>

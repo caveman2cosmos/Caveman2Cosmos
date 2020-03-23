@@ -12,6 +12,7 @@
 			<Type>TECH_RODNOVERA</Type>
 			<Description>TXT_KEY_TECH_RODNOVERA</Description>
 			<Civilopedia>TXT_KEY_TECH_RODNOVERA_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_TECH_RODNOVERA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<iCost>448</iCost>
 			<bGlobal>1</bGlobal>

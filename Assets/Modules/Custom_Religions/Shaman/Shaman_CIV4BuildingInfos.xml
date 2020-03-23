@@ -14,6 +14,9 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_CATHEDRAL2_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_CATHEDRAL2</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_SHAMANISM</ReligionType>
 			<StateReligion>RELIGION_SHAMANISM</StateReligion>
 			<bStateReligion>1</bStateReligion>
@@ -72,6 +75,9 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_CATHEDRAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_CATHEDRAL</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_SHAMANISM</ReligionType>
 			<StateReligion>RELIGION_SHAMANISM</StateReligion>
 			<bStateReligion>1</bStateReligion>
@@ -136,6 +142,9 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_MONASTERY</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_SHAMANISM</ReligionType>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<!--ObsoleteTech>TECH_MODERN_PHYSICS</ObsoleteTech-->
@@ -197,6 +206,9 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_MONASTERY_BISON</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_SHAMANISM</ReligionType>
 			<StateReligion>RELIGION_SHAMANISM</StateReligion>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
@@ -235,6 +247,9 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_MONASTERY_COW</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_SHAMANISM</ReligionType>
 			<StateReligion>RELIGION_SHAMANISM</StateReligion>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
@@ -273,6 +288,9 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_MONASTERY_DEER</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_SHAMANISM</ReligionType>
 			<StateReligion>RELIGION_SHAMANISM</StateReligion>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
@@ -311,6 +329,9 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_MONASTERY_PIG</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_SHAMANISM</ReligionType>
 			<StateReligion>RELIGION_SHAMANISM</StateReligion>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
@@ -349,6 +370,9 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_MONASTERY_SHEEP</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_SHAMANISM</ReligionType>
 			<StateReligion>RELIGION_SHAMANISM</StateReligion>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
@@ -387,6 +411,9 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_SHRINE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_SHAMAN</MovieDefineTag>
 			<HolyCity>RELIGION_SHAMANISM</HolyCity>
 			<ReligionType>RELIGION_SHAMANISM</ReligionType>
@@ -441,6 +468,9 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_TEMPLE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_SHAMANISM</ReligionType>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
@@ -494,6 +524,9 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_TEMPLE_BISON</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<!--ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech-->
 			<iCost>28</iCost>
@@ -529,6 +562,9 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_TEMPLE_COW</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<!--ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech-->
 			<iCost>28</iCost>
@@ -564,6 +600,9 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_TEMPLE_DEER</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<!--ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech-->
 			<iCost>28</iCost>
@@ -599,6 +638,9 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_TEMPLE_PIG</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<!--ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech-->
 			<iCost>28</iCost>
@@ -634,6 +676,9 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_TEMPLE_SHEEP</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<!--ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech-->
 			<iCost>28</iCost>
@@ -669,6 +714,9 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_MONASTERY_RABBIT</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_SHAMANISM</ReligionType>
 			<StateReligion>RELIGION_SHAMANISM</StateReligion>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
@@ -707,6 +755,9 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_MONASTERY_SEA_LIONS</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_SHAMANISM</ReligionType>
 			<StateReligion>RELIGION_SHAMANISM</StateReligion>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
@@ -745,6 +796,9 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_MONASTERY_WALRUS</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_SHAMANISM</ReligionType>
 			<StateReligion>RELIGION_SHAMANISM</StateReligion>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
@@ -783,6 +837,9 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_TEMPLE_RABBIT</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<!--ObsoleteTech>TECH_MODERN_PHYSICS</ObsoleteTech-->
 			<iCost>28</iCost>
@@ -818,6 +875,9 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_TEMPLE_SEA_LIONS</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<!--ObsoleteTech>TECH_MODERN_PHYSICS</ObsoleteTech-->
 			<iCost>28</iCost>
@@ -853,6 +913,9 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMAN_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMAN_TEMPLE_WALRUS</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_SHAMANISM</PrereqReligion>
 			<!--ObsoleteTech>TECH_MODERN_PHYSICS</ObsoleteTech-->
 			<iCost>28</iCost>

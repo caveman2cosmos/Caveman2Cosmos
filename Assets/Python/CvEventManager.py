@@ -259,7 +259,7 @@ class CvEventManager:
 				self.mapImpType = {
 					"IMPROVEMENT_GROW_FOREST"	: GC.getInfoTypeForString('IMPROVEMENT_GROW_FOREST'),
 					"IMPROVEMENT_YOUNG_FOREST"	: GC.getInfoTypeForString('IMPROVEMENT_YOUNG_FOREST'),
-					"IMPROVEMENT_PLANT_BAMBOO_GROVE"	: GC.getInfoTypeForString('IMPROVEMENT_PLANT_BAMBOO_GROVE'),
+					"IMPROVEMENT_PLANT_BAMBOO"	: GC.getInfoTypeForString('IMPROVEMENT_PLANT_BAMBOO'),
 					"IMPROVEMENT_PLANT_SAVANNA"	: GC.getInfoTypeForString('IMPROVEMENT_PLANT_SAVANNA'),
 					"IMPROVEMENT_FARM"			: GC.getInfoTypeForString('IMPROVEMENT_FARM')
 				}
@@ -1224,7 +1224,7 @@ class CvEventManager:
 			CyPlot.setImprovementType(-1)
 			CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_FOREST_YOUNG'), 0)
 
-		elif iImprovement == mapImpType['IMPROVEMENT_PLANT_BAMBOO_GROVE']:
+		elif iImprovement == mapImpType['IMPROVEMENT_PLANT_BAMBOO']:
 			CyPlot = GC.getMap().plot(iX, iY)
 			CyPlot.setImprovementType(-1)
 			CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_BAMBOO'), 0)
