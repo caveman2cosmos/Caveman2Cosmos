@@ -7028,80 +7028,79 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 			}
 			//Note: correct MapCategoryType checks throughout the code so that if one is valid that gets checked later, the validation is still there!
 
-			//	Safety valve - if there are over a certain number of total barbarian units in existance halt all spawns
-			//	else the game can run into fatal issues when it uses up the entire id space of units (8191 at once per
-			//	player)
-			if ( GET_PLAYER(ePlayer).getNumUnits() > MAX_BARB_UNITS_FOR_SPAWNING )
+			// Safety valve - if there are over a certain number of total barbarian units in existance halt all spawns
+			// else the game can run into fatal issues when it uses up the entire id space of units (8191 at once per player)
+			if (GET_PLAYER(ePlayer).getNumUnits() > MAX_BARB_UNITS_FOR_SPAWNING)
 			{
 				break;
 			}
 
-			if ( iTotalAreaSize / std::max(pPlot->area()->getUnitsPerPlayer(ePlayer),1) < iMaxAreaTotalDensity )  // could be in the threads but this way the units already spawned in this turn by this system are considered
+			// Could be in the threads but this way the units already spawned in this turn by this system are considered
+			if (iTotalAreaSize / std::max(pPlot->area()->getUnitsPerPlayer(ePlayer), 1) < iMaxAreaTotalDensity)
 			{
 				continue;
 			}
 
 			//	Adjust spawn rate for area ownership percentage
-			if ( pPlot->area()->getNumCities() == pPlot->area()->getCitiesPerPlayer(ePlayer) &&
-				 !pPlot->isWater() )
+			if (!pPlot->isWater() && pPlot->area()->getNumCities() == pPlot->area()->getCitiesPerPlayer(ePlayer))
 			{
-				//	No non-barb cities so dramatically reduce spawns since its essentially an
-				//	unplayed-in area for now
+				// No non-barb cities so dramatically reduce spawns since its essentially an unplayed-in area for now
 				iLocalSpawnRate *= 10;
 			}
 			else
 			{
 				const int percentOccupied = (100*pPlot->area()->getNumOwnedTiles())/pPlot->area()->getNumTiles();
-
 				//	Adjust spawn rate upward by up to trebbleing the normal rate in proportion with how
 				//	little wilderness is left in this area
-				iLocalSpawnRate = (iLocalSpawnRate*100)/(100 + 2*percentOccupied);
+				iLocalSpawnRate = iLocalSpawnRate * 100 / (100 + 2*percentOccupied);
 			}
 
-			if ( getSorenRandNum( std::max(1,iLocalSpawnRate), "Unit spawn") == 0 )
+			if (getSorenRandNum(std::max(1, iLocalSpawnRate), "Unit spawn") == 0)
 			{
 				// Check area unit type density not exceeded if specified
-				if ( iMaxAreaUnitDensity != 0 )
+				if (iMaxAreaUnitDensity != 0)
 				{
 					int	iExistingUnits = 0;
 
-					if ( areaPopulationMap[pPlot->getArea()].find(spawnInfo.getUnitType()) != areaPopulationMap[pPlot->getArea()].end() )
+					if (areaPopulationMap[pPlot->getArea()].find(spawnInfo.getUnitType()) != areaPopulationMap[pPlot->getArea()].end())
 					{
 						iExistingUnits = areaPopulationMap[pPlot->getArea()][spawnInfo.getUnitType()];
 					}
 
-					if ( iExistingUnits >= std::max(1,iTotalAreaSize/iMaxAreaUnitDensity) )
+					if (iExistingUnits >= std::max(1, iTotalAreaSize / iMaxAreaUnitDensity))
 					{
-						//	Total area density exceeded
-						continue;
+						continue; // Total area density exceeded
 					}
 				}
 
-				//	Check local max density not already exceeded
-				//	Use range 3 to define local
+				// Check local max density not already exceeded
+				int localAreaSize = 0;
+				int localUnitTypeCount = 0;
+				int localPlayerUnitCount = 0;
+
+				// 49 plot local area, radius = 3
 				const int LocalRange = 3;
 				const int TotalLocalArea = (LocalRange * 2 + 1) * (LocalRange * 2 + 1);
-				int localLandArea = 0;
-				int localCount = 0;
-				int localTotalCount = 0;
 
-				for( int iX = -LocalRange; iX <= LocalRange; iX++)
+				for (int iX = -LocalRange; iX <= LocalRange; iX++)
 				{
-					for(int iY = -LocalRange; iY <= LocalRange; iY++)
+					for (int iY = -LocalRange; iY <= LocalRange; iY++)
 					{
 						const CvPlot* pLoopPlot = plotXY(pPlot->getX(), pPlot->getY(), iX, iY);
-						if ( pLoopPlot != NULL && pLoopPlot->area() == pPlot->area() )
+						if (pLoopPlot != NULL && pLoopPlot->area() == pPlot->area())
 						{
-							localLandArea++;
-							localCount += pLoopPlot->plotCount(PUF_isUnitType, spawnInfo.getUnitType());
-							localTotalCount += pLoopPlot->getNumUnits();
+							localAreaSize++;
+							localUnitTypeCount += pLoopPlot->plotCount(PUF_isUnitType, spawnInfo.getUnitType());
+							localPlayerUnitCount += pLoopPlot->plotCount(PUF_isPlayer, spawnInfo.getPlayer());
 						}
 					}
 				}
-				const int GlobalDensity = 8;
-				if (localLandArea > 0
-					&& (localCount * 100 / localLandArea) < (spawnInfo.getMaxLocalDensity() * 100 / TotalLocalArea)
-					&& (localTotalCount * 100 / localLandArea) < (GlobalDensity * 100 / TotalLocalArea))
+				// We know that localAreaSize > 0 because pLoopPlot == pPlot in one of the above iterations.
+				if (localUnitTypeCount == 0
+				// Max 1.2 unit per plot in local area owned by spawn owner.
+				|| localPlayerUnitCount * 100 / localAreaSize < 120
+				// Max local density limit for this specific unit type.
+				&& localUnitTypeCount * 100 / localAreaSize < spawnInfo.getMaxLocalDensity() * 100 / TotalLocalArea)
 				{
 					//	Spawn a new unit
 					CvUnitInfo& kUnit = GC.getUnitInfo(spawnInfo.getUnitType());
