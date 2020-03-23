@@ -5512,21 +5512,6 @@ void cvInternalGlobals::resolveDelayedResolution()
 	m_delayedResolutionMap.clear();
 }
 
-int cvInternalGlobals::getNumDirections() const { return NUM_DIRECTION_TYPES; }
-int cvInternalGlobals::getNumGameOptions() const { return NUM_GAMEOPTION_TYPES; }
-int cvInternalGlobals::getNumMPOptions() const { return NUM_MPOPTION_TYPES; }
-int cvInternalGlobals::getNumSpecialOptions() const { return NUM_SPECIALOPTION_TYPES; }
-int cvInternalGlobals::getNumGraphicOptions() const { return NUM_GRAPHICOPTION_TYPES; }
-int cvInternalGlobals::getNumTradeableItems() const { return NUM_TRADEABLE_ITEMS; }
-int cvInternalGlobals::getNumBasicItems() const { return NUM_BASIC_ITEMS; }
-int cvInternalGlobals::getNumTradeableHeadings() const { return NUM_TRADEABLE_HEADINGS; }
-int cvInternalGlobals::getNumCommandInfos() const { return NUM_COMMAND_TYPES; }
-int cvInternalGlobals::getNumControlInfos() const { return NUM_CONTROL_TYPES; }
-int cvInternalGlobals::getNumPlayerOptionInfos() const { return NUM_PLAYEROPTION_TYPES; }
-int cvInternalGlobals::getMaxNumSymbols() const { return MAX_NUM_SYMBOLS; }
-int cvInternalGlobals::getNumGraphicLevels() const { return NUM_GRAPHICLEVELS; }
-int cvInternalGlobals::getNumGlobeLayers() const { return NUM_GLOBE_LAYER_TYPES; }
-
 int cvInternalGlobals::getNumMissionInfos() const
 { 
 #ifdef FIXED_MISSION_NUMBER

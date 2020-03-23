@@ -215,8 +215,8 @@ public:
 	int getNumIdeaInfos() const { return GC.getNumIdeaInfos(); }
 	//int getNumTraitOptionEditsInfos() const { return GC.getNumTraitOptionEditsInfos(); }
 	int getNumAutomateInfos() const { return GC.getNumAutomateInfos(); }
-	int getNumCommandInfos() const { return GC.getNumCommandInfos(); }
-	int getNumControlInfos() const { return GC.getNumControlInfos(); }
+	int getNumCommandInfos() const { return NUM_COMMAND_TYPES; }
+	int getNumControlInfos() const { return NUM_CONTROL_TYPES; }
 	int getNumMissionInfos() const { return GC.getNumMissionInfos(); }
 	int getNumActionInfos() const { return GC.getNumActionInfos(); }
 	int getNumPromotionInfos() const { return GC.getNumPromotionInfos(); }
@@ -243,7 +243,7 @@ public:
 	int getNumNewConceptInfos() const { return GC.getNumNewConceptInfos(); }
 	int getNumCityTabInfos() const { return GC.getNumCityTabInfos(); }
 	int getNumCalendarInfos() const { return GC.getNumCalendarInfos(); }
-	int getNumPlayerOptionInfos() const { return GC.getNumPlayerOptionInfos(); }
+	int getNumPlayerOptionInfos() const { return NUM_PLAYEROPTION_TYPES; }
 	int getNumGameOptionInfos() const { return GC.getNumGameOptionInfos(); }
 	int getNumMPOptionInfos() const { return GC.getNumMPOptionInfos(); }
 	int getNumForceControlInfos() const { return GC.getNumForceControlInfos(); }

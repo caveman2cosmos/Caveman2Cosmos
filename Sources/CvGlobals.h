@@ -800,6 +800,7 @@ public:
 	std::vector<CvActionInfo*>& getActionInfos();
 	CvActionInfo& getActionInfo(int i) const;
 
+	int getNumMissionInfos() const;
 	std::vector<CvMissionInfo*>& getMissionInfos();
 	CvMissionInfo& getMissionInfo(MissionTypes eMissionNum) const;
 
@@ -1049,7 +1050,6 @@ public:
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
 
-
 	int getMOVE_DENOMINATOR() const;
 	int getNUM_UNIT_PREREQ_OR_BONUSES() const;
 	int getNUM_BUILDING_PREREQ_OR_BONUSES() const;
@@ -1249,23 +1249,6 @@ public:
 	 void setBorderFinder(FAStar* pVal);
 	 void setAreaFinder(FAStar* pVal);
 	 void setPlotGroupFinder(FAStar* pVal);
-
-	// So that CvEnums are moddable in the DLL
-	 int getNumDirections() const;
-	 int getNumGameOptions() const;
-	 int getNumMPOptions() const;
-	 int getNumSpecialOptions() const;
-	 int getNumGraphicOptions() const;
-	 int getNumTradeableItems() const;
-	 int getNumBasicItems() const;
-	 int getNumTradeableHeadings() const;
-	 int getNumCommandInfos() const;
-	 int getNumControlInfos() const;
-	 int getNumMissionInfos() const;
-	 int getNumPlayerOptionInfos() const;
-	 int getMaxNumSymbols() const;
-	 int getNumGraphicLevels() const;
-	 int getNumGlobeLayers() const;
 
 // BUG - BUG Info - start
 	void setIsBug(bool bIsBug);
@@ -3610,82 +3593,61 @@ public:
 		PROXY_TRACK("setPlotGroupFinder");
 		gGlobals->setPlotGroupFinder(pVal);
 	}
-
 	// So that CvEnums are moddable in the DLL
 	DllExport int getNumDirections() const
 	{
 		PROXY_TRACK("getNumDirections");
-		return gGlobals->getNumDirections();
+		return NUM_DIRECTION_TYPES;
 	}
 	DllExport int getNumGameOptions() const
 	{
 		PROXY_TRACK("getNumGameOptions");
-		return gGlobals->getNumGameOptions();
+		return gGlobals->getNumGameOptionInfos();
 	}
 	DllExport int getNumMPOptions() const
 	{
 		PROXY_TRACK("getNumMPOptions");
-		return gGlobals->getNumMPOptions();
+		return NUM_MPOPTION_TYPES;
 	}
 	DllExport int getNumSpecialOptions() const
 	{
 		PROXY_TRACK("getNumSpecialOptions");
-		return gGlobals->getNumSpecialOptions();
+		return NUM_SPECIALOPTION_TYPES;
 	}
 	DllExport int getNumGraphicOptions() const
 	{
 		PROXY_TRACK("getNumGraphicOptions");
-		return gGlobals->getNumGraphicOptions();
+		return NUM_GRAPHICOPTION_TYPES;
 	}
 	DllExport int getNumTradeableItems() const
 	{
 		PROXY_TRACK("getNumTradeableItems");
-		return gGlobals->getNumTradeableItems();
+		return NUM_TRADEABLE_ITEMS;
 	}
 	DllExport int getNumBasicItems() const
 	{
 		PROXY_TRACK("getNumBasicItems");
-		return gGlobals->getNumBasicItems();
+		return NUM_BASIC_ITEMS;
 	}
 	DllExport int getNumTradeableHeadings() const
 	{
 		PROXY_TRACK("getNumTradeableHeadings");
-		return gGlobals->getNumTradeableHeadings();
-	}
-	int getNumCommandInfos() const
-	{
-		PROXY_TRACK("getNumCommandInfos");
-		return gGlobals->getNumCommandInfos();
-	}
-	int getNumControlInfos() const
-	{
-		PROXY_TRACK("getNumControlInfos");
-		return gGlobals->getNumControlInfos();
-	}
-	int getNumMissionInfos() const
-	{
-		PROXY_TRACK("getNumMissionInfos");
-		return gGlobals->getNumMissionInfos();
+		return NUM_TRADEABLE_HEADINGS;
 	}
 	DllExport int getNumPlayerOptionInfos() const
 	{
 		PROXY_TRACK("getNumPlayerOptionInfos");
-		return gGlobals->getNumPlayerOptionInfos();
+		return NUM_PLAYEROPTION_TYPES;
 	}
 	DllExport int getMaxNumSymbols() const
 	{
 		PROXY_TRACK("getMaxNumSymbols");
-		return gGlobals->getMaxNumSymbols();
+		return MAX_NUM_SYMBOLS;
 	}
 	DllExport int getNumGraphicLevels() const
 	{
 		PROXY_TRACK("getNumGraphicLevels");
-		return gGlobals->getNumGraphicLevels();
-	}
-	int getNumGlobeLayers() const
-	{
-		PROXY_TRACK("getNumGlobeLayers");
-		return gGlobals->getNumGlobeLayers();
+		return NUM_GRAPHICLEVELS;
 	}
 };
 
@@ -3714,23 +3676,6 @@ inline CvGlobals& CvGlobals::getInstance()
 //
 #define GC cvInternalGlobals::getInstance()
 #define gDLL g_DLL
-
-#ifndef _USRDLL
-#define NUM_DIRECTION_TYPES (GC.getNumDirections())
-#define NUM_GAMEOPTION_TYPES (GC.getNumGameOptions())
-#define NUM_MPOPTION_TYPES (GC.getNumMPOptions())
-#define NUM_SPECIALOPTION_TYPES (GC.getNumSpecialOptions())
-#define NUM_GRAPHICOPTION_TYPES (GC.getNumGraphicOptions())
-#define NUM_TRADEABLE_ITEMS (GC.getNumTradeableItems())
-#define NUM_BASIC_ITEMS (GC.getNumBasicItems())
-#define NUM_TRADEABLE_HEADINGS (GC.getNumTradeableHeadings())
-#define NUM_COMMAND_TYPES (GC.getNumCommandInfos())
-#define NUM_CONTROL_TYPES (GC.getNumControlInfos())
-#define NUM_PLAYEROPTION_TYPES (GC.getNumPlayerOptionInfos())
-#define MAX_NUM_SYMBOLS (GC.getMaxNumSymbols())
-#define NUM_GRAPHICLEVELS (GC.getNumGraphicLevels())
-#define NUM_GLOBE_LAYER_TYPES (GC.getNumGlobeLayers())
-#endif
 
 #ifndef FIXED_MISSION_NUMBER
 #define NUM_MISSION_TYPES (GC.getNumMissionInfos())
