@@ -25670,6 +25670,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ASCENSION_GATE</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
