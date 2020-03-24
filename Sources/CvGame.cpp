@@ -7036,7 +7036,9 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 			}
 
 			// Could be in the threads but this way the units already spawned in this turn by this system are considered
-			if (iTotalAreaSize / std::max(pPlot->area()->getUnitsPerPlayer(ePlayer), 1) < iMaxAreaTotalDensity)
+			// iMaxAreaTotalDensity isn't really meant for small areas where units cannot wander out of the local 49 plot spawn area.
+			if (iTotalAreaSize > (iMaxAreaTotalDensity > 49 ? iMaxAreaTotalDensity : 49)
+			&& iTotalAreaSize / std::max(1, pPlot->area()->getUnitsPerPlayer(ePlayer)) >= iMaxAreaTotalDensity)
 			{
 				continue;
 			}
@@ -7097,8 +7099,8 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 				}
 				// We know that localAreaSize > 0 because pLoopPlot == pPlot in one of the above iterations.
 				if (localUnitTypeCount == 0
-				// Max 1.2 unit per plot in local area owned by spawn owner.
-				|| localPlayerUnitCount * 100 / localAreaSize < 120
+				// Max 0.50 unit per plot in local area owned by spawn owner.
+				|| localPlayerUnitCount * 100 / localAreaSize < 50
 				// Max local density limit for this specific unit type.
 				&& localUnitTypeCount * 100 / localAreaSize < spawnInfo.getMaxLocalDensity() * 100 / TotalLocalArea)
 				{

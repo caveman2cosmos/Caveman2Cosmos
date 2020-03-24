@@ -6,9 +6,11 @@
 			<UnitType>UNIT_REEF_SHARK</UnitType>
 			<PlayerType>43</PlayerType>
 			<bNeutralOnly>0</bNeutralOnly>
-			<iTurns>1200</iTurns>
-			<iMaxLocalDensity>5</iMaxLocalDensity>
-			<iStartDate>-12000</iStartDate>
+			<iTurns>300</iTurns>
+			<iMaxAreaTotalDensity>10</iMaxAreaTotalDensity>
+			<iMaxAreaUnitDensity>20</iMaxAreaUnitDensity>
+			<iMaxLocalDensity>1</iMaxLocalDensity>
+			<PrereqTech>TECH_FISHING</PrereqTech>
 			<rateOverrideDefineName>SEA_ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<FeatureTypes>
 				<FeatureType>FEATURE_PLATY_GREAT_BARRIER</FeatureType>
