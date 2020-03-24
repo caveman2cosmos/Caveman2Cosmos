@@ -11559,6 +11559,7 @@
 			<Type>BUILDING_CRYSTALPUNK_EMBASSY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
+			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CRYSTALPUNK_EMBASSY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRYSTALPUNK_EMBASSY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CRYSTALPUNK_EMBASSY_STRATEGY</Strategy>
@@ -11583,6 +11584,7 @@
 			<Type>BUILDING_SPACEPUNK_EMBASSY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
+			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_SPACEPUNK_EMBASSY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SPACEPUNK_EMBASSY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SPACEPUNK_EMBASSY_STRATEGY</Strategy>
@@ -11607,6 +11609,7 @@
 			<Type>BUILDING_STARPUNK_EMBASSY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<bNoLimit>1</bNoLimit>
+			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_STARPUNK_EMBASSY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_STARPUNK_EMBASSY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_STARPUNK_EMBASSY_STRATEGY</Strategy>
