@@ -1758,6 +1758,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORBITAL_PRISON</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<iCost>1056</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>

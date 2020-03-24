@@ -4,6 +4,7 @@
 		<BuildingInfo>
 			<!-- Agricultural Achievement -->
 			<Type>BUILDING_AGRICULTURAL_ACHIEVEMENT</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_AGRICULTURAL_ACHIEVEMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_AGRICULTURAL_ACHIEVEMENT_STRATEGY</Strategy>
@@ -36,6 +37,7 @@
 		<BuildingInfo>
 			<!-- Commercial Achievement -->
 			<Type>BUILDING_COMMERCIAL_ACHIEVEMENT</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_COMMERCIAL_ACHIEVEMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_COMMERCIAL_ACHIEVEMENT_STRATEGY</Strategy>
@@ -207,6 +209,7 @@
 		<BuildingInfo>
 			<!-- Environmental Achievement -->
 			<Type>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_ENVIRONMENTAL_A</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ENVIRONMENTAL_A_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ENVIRONMENTAL_ACHIEVEMENT_EFFECT_STRATEGY</Strategy>
@@ -243,6 +246,7 @@
 		<BuildingInfo>
 			<!-- Industrial Achievement -->
 			<Type>BUILDING_INDUSTRIAL_ACHIEVEMENT</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_INDUSTRIAL_ACHIEVEMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_INDUSTRIAL_ACHIEVEMENT_STRATEGY</Strategy>
@@ -276,6 +280,7 @@
 		<BuildingInfo>
 			<!-- Medical Achievement -->
 			<Type>BUILDING_MEDICAL_ACHIEVEMENT</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_MEDICAL_A</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MEDICAL_A_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MEDICAL_A_STRATEGY</Strategy>
@@ -312,6 +317,7 @@
 		<BuildingInfo>
 			<!-- Military Achievement -->
 			<Type>BUILDING_MILITARY_ACHIEVEMENT</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_MILITARY_ACHIEVEMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MILITARY_ACHIEVEMENT_STRATEGY</Strategy>
@@ -343,6 +349,7 @@
 		<BuildingInfo>
 			<!-- Political Achievement -->
 			<Type>BUILDING_POLITICAL_ACHIEVEMENT</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_POLITICAL_ACHIEVEMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_POLITICAL_ACHIEVEMENT_STRATEGY</Strategy>
@@ -378,6 +385,7 @@
 		<BuildingInfo>
 			<!-- Safety Achievement -->
 			<Type>BUILDING_SAFETY_ACHIEVEMENT</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_SAFETY_A</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SAFETY_A_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SAFETY_A_STRATEGY</Strategy>
@@ -412,6 +420,7 @@
 		<BuildingInfo>
 			<!-- Scientific Achievement -->
 			<Type>BUILDING_SCIENTIFIC_ACHIEVEMENT</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_SCIENTIFIC_ACHIEVEMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SCIENTIFIC_ACHIEVEMENT_STRATEGY</Strategy>
@@ -445,6 +454,7 @@
 		<BuildingInfo>
 			<!-- Seafaring Achievement -->
 			<Type>BUILDING_SEAFARING_ACHIEVEMENT</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_SEAFARING_ACHIEVEMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SEAFARING_ACHIEVEMENT_STRATEGY</Strategy>
@@ -485,6 +495,7 @@
 		<BuildingInfo>
 			<!-- Tourism Achievement -->
 			<Type>BUILDING_TOURISM_ACHIEVEMENT</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_TOURISM_A</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TOURISM_A_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TOURISM_A_STRATEGY</Strategy>
@@ -520,6 +531,7 @@
 		<BuildingInfo>
 			<!-- National Belief (Karma) -->
 			<Type>BUILDING_NATIONAL_BELIEF_KARMA</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_NATIONAL_BELIEF_KARMA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_BELIEF_KARMA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_BELIEF_KARMA_STRATEGY</Strategy>
@@ -564,6 +576,7 @@
 		<BuildingInfo>
 			<!-- National Belief (Reincarnation) -->
 			<Type>BUILDING_NATIONAL_BELIEF_REINCARNATION</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_NATIONAL_BELIEF_REINCARNATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_BELIEF_REINCARNATION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_BELIEF_REINCARNATION_STRATEGY</Strategy>
@@ -604,6 +617,7 @@
 		<BuildingInfo>
 			<!-- National Belief (Resurrection) -->
 			<Type>BUILDING_NATIONAL_BELIEF_RESURRECTION</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_NATIONAL_BELIEF_RESURRECTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_BELIEF_RESURRECTION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_BELIEF_RESURRECTION_STRATEGY</Strategy>
@@ -8828,6 +8842,7 @@
 		<BuildingInfo>
 			<!-- Cultural Achievement -->
 			<Type>BUILDING_CULTURAL_ACHIEVEMENT</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_CULTURAL_ACHIEVEMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CULTURAL_ACHIEVEMENT_STRATEGY</Strategy>
@@ -14161,6 +14176,7 @@
 		<BuildingInfo>
 			<!-- National Alcohol Prohibition -->
 			<Type>BUILDING_NATIONAL_ALCOHOL_PROHIBITION</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_NATIONAL_ALCOHOL_PROHIBITION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_ALCOHOL_PROHIBITION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_ALCOHOL_PROHIBITION_STRATEGY</Strategy>
@@ -14189,6 +14205,7 @@
 		<BuildingInfo>
 			<!-- National Drug Prohibition -->
 			<Type>BUILDING_NATIONAL_DRUG_PROHIBITION</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_NATIONAL_DRUG_PROHIBITION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_DRUG_PROHIBITION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_DRUG_PROHIBITION_STRATEGY</Strategy>
@@ -14217,6 +14234,7 @@
 		<BuildingInfo>
 			<!-- National Gambling Ban -->
 			<Type>BUILDING_NATIONAL_GAMBLING_BAN</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_NATIONAL_GAMBLING_BAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_GAMBLING_BAN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_GAMBLING_BAN_STRATEGY</Strategy>
@@ -14245,6 +14263,7 @@
 		<BuildingInfo>
 			<!-- National Prostitution Ban -->
 			<Type>BUILDING_NATIONAL_PROSTITUTION_BAN</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_NATIONAL_PROSTITUTION_BAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_PROSTITUTION_BAN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_PROSTITUTION_BAN_STRATEGY</Strategy>
@@ -14273,6 +14292,7 @@
 		<BuildingInfo>
 			<!-- Ordinance - National Smoking Prohibition -->
 			<Type>BUILDING_NATIONAL_SMOKING_PROHIBITION</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_NATIONAL_SMOKING_PROHIBITION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_SMOKING_PROHIBITION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_SMOKING_PROHIBITION_STRATEGY</Strategy>
@@ -18366,6 +18386,7 @@
 		<BuildingInfo>
 			<!-- The National Standard of Measurement -->
 			<Type>BUILDING_NATIONAL_STANDARD_OF_MEASUREMENT</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_NATIONAL_STANDARD_OF_MEASUREMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_STANDARD_OF_MEASUREMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_STANDARD_OF_MEASUREMENT_STRATEGY</Strategy>
@@ -19364,6 +19385,7 @@
 		<BuildingInfo>
 			<!-- Tradition - Archery -->
 			<Type>BUILDING_TRADITION_ARCHERY</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -19436,6 +19458,7 @@
 		<BuildingInfo>
 			<!-- Tradition - Asthetic Appreciation -->
 			<Type>BUILDING_TRADITION_ASTHETIC_APPRECIATION</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -19504,6 +19527,7 @@
 		<BuildingInfo>
 			<!-- Tradition - Work Ethic -->
 			<Type>BUILDING_TRADITION_WORK_ETHIC</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
