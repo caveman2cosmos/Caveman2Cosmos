@@ -19108,6 +19108,7 @@
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<FreeBuilding>BUILDING_MASTER_SEA_HUNTER</FreeBuilding>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRADITION_HUNTER</Type>
@@ -19132,6 +19133,7 @@
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<FreeBuilding>BUILDING_MASTER_HUNTER_TRADITION</FreeBuilding>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRADITION_TOTEM</Type>
@@ -19151,6 +19153,7 @@
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<FreeBuilding>BUILDING_ANIMAL_TOTEM</FreeBuilding>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRADITION_NAVAL_TOTEM</Type>
@@ -19169,6 +19172,7 @@
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<FreeBuilding>BUILDING_NAVAL_TOTEM</FreeBuilding>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAVE_LION_MYTH</Type>

@@ -2607,6 +2607,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_COSMIC_EXPANSION_POWER_PLANT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_COSMIC_EXPANSION_POWER_PLANT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COSMIC_EXPANSION_POWER_PLANT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_COSMIC_EXPANSION_POWER_PLANT_STRATEGY</Strategy>

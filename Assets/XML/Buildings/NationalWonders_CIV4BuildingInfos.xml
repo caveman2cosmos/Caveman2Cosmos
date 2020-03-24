@@ -8338,6 +8338,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_BIODOME</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_BIODOME</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BIODOME_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BIODOME_STRATEGY</Strategy>
@@ -8414,6 +8415,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_WEMBLEY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_WEMBLEY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WEMBLEY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_WEMBLEY_STRATEGY</Strategy>

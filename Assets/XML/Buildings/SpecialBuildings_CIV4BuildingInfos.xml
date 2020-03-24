@@ -4,6 +4,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_AGRICULTURAL_ACHIEVEMENT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_AGRICULTURAL_ACHIEVEMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_AGRICULTURAL_ACHIEVEMENT_STRATEGY</Strategy>
@@ -30,6 +31,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_COMMERCIAL_ACHIEVEMENT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_COMMERCIAL_ACHIEVEMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_COMMERCIAL_ACHIEVEMENT_STRATEGY</Strategy>
@@ -170,6 +172,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_ENVIRONMENTAL_ACHIEVEMENT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_ENVIRONMENTAL_A</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ENVIRONMENTAL_A_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ENVIRONMENTAL_ACHIEVEMENT_EFFECT_STRATEGY</Strategy>
@@ -199,6 +202,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_INDUSTRIAL_ACHIEVEMENT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_INDUSTRIAL_ACHIEVEMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_INDUSTRIAL_ACHIEVEMENT_STRATEGY</Strategy>
@@ -226,6 +230,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_MEDICAL_ACHIEVEMENT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_MEDICAL_A</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MEDICAL_A_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MEDICAL_A_STRATEGY</Strategy>
@@ -255,6 +260,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_MILITARY_ACHIEVEMENT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_MILITARY_ACHIEVEMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MILITARY_ACHIEVEMENT_STRATEGY</Strategy>
@@ -279,6 +285,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_POLITICAL_ACHIEVEMENT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_POLITICAL_ACHIEVEMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_POLITICAL_ACHIEVEMENT_STRATEGY</Strategy>
@@ -308,6 +315,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_SAFETY_ACHIEVEMENT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_SAFETY_A</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SAFETY_A_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SAFETY_A_STRATEGY</Strategy>
@@ -336,6 +344,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_SCIENTIFIC_ACHIEVEMENT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_SCIENTIFIC_ACHIEVEMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SCIENTIFIC_ACHIEVEMENT_STRATEGY</Strategy>
@@ -363,6 +372,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_SEAFARING_ACHIEVEMENT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_SEAFARING_ACHIEVEMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SEAFARING_ACHIEVEMENT_STRATEGY</Strategy>
@@ -396,6 +406,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_TOURISM_ACHIEVEMENT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_TOURISM_A</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TOURISM_A_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TOURISM_A_STRATEGY</Strategy>
@@ -425,6 +436,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_BELIEF_KARMA</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_NATIONAL_BELIEF_KARMA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_BELIEF_KARMA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_BELIEF_KARMA_STRATEGY</Strategy>
@@ -464,6 +476,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_BELIEF_REINCARNATION</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_NATIONAL_BELIEF_REINCARNATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_BELIEF_REINCARNATION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_BELIEF_REINCARNATION_STRATEGY</Strategy>
@@ -499,6 +512,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_BELIEF_RESURRECTION</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_NATIONAL_BELIEF_RESURRECTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_BELIEF_RESURRECTION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_BELIEF_RESURRECTION_STRATEGY</Strategy>
@@ -7446,6 +7460,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_CULTURAL_ACHIEVEMENT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_CULTURAL_ACHIEVEMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ACHIEVEMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CULTURAL_ACHIEVEMENT_STRATEGY</Strategy>
@@ -9166,6 +9181,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_UNIVERSAL_HEALTH_CARE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_UNIVERSAL_HEALTH_CARE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_UNIVERSAL_HEALTH_CARE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_UNIVERSAL_HEALTH_CARE_STRATEGY</Strategy>
@@ -12163,6 +12179,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_ALCOHOL_PROHIBITION</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_NATIONAL_ALCOHOL_PROHIBITION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_ALCOHOL_PROHIBITION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_ALCOHOL_PROHIBITION_STRATEGY</Strategy>
@@ -12186,6 +12203,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_DRUG_PROHIBITION</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_NATIONAL_DRUG_PROHIBITION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_DRUG_PROHIBITION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_DRUG_PROHIBITION_STRATEGY</Strategy>
@@ -12209,6 +12227,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_GAMBLING_BAN</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_NATIONAL_GAMBLING_BAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_GAMBLING_BAN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_GAMBLING_BAN_STRATEGY</Strategy>
@@ -12232,6 +12251,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_PROSTITUTION_BAN</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_NATIONAL_PROSTITUTION_BAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_PROSTITUTION_BAN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_PROSTITUTION_BAN_STRATEGY</Strategy>
@@ -12255,6 +12275,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_SMOKING_PROHIBITION</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_NATIONAL_SMOKING_PROHIBITION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_SMOKING_PROHIBITION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_SMOKING_PROHIBITION_STRATEGY</Strategy>
@@ -14576,6 +14597,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_SCOTLAND_YARD</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_SCOTLAND_YARD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SCOTLAND_YARD_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SCOTLAND_YARD_STRATEGY</Strategy>
@@ -14626,6 +14648,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_ACADEMY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_ACADEMY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ACADEMY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ACADEMY_STRATEGY</Strategy>
@@ -15632,6 +15655,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_STANDARD_OF_MEASUREMENT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_NATIONAL_STANDARD_OF_MEASUREMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_STANDARD_OF_MEASUREMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_STANDARD_OF_MEASUREMENT_STRATEGY</Strategy>
@@ -16692,6 +16716,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_SPY_NETWORK</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<NotGameOption>GAMEOPTION_NO_ESPIONAGE</NotGameOption>
 			<Description>TXT_KEY_BUILDING_SPY_NETWORK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SPY_NETWORK_PEDIA</Civilopedia>

@@ -1930,6 +1930,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_INTERNET_OF_THINGS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_INTERNET_OF_THINGS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INTERNET_OF_THINGS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_INTERNET_OF_THINGS_STRATEGY</Strategy>
@@ -3658,6 +3659,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_SEMANTIC_WEB</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_SEMANTIC_WEB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SEMANTIC_WEB_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SEMANTIC_WEB_STRATEGY</Strategy>
@@ -5391,6 +5393,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_TIME_ZONES</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_TIME_ZONES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TIME_ZONES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TIME_ZONES_STRATEGY</Strategy>
@@ -5458,6 +5461,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_CENSUS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_NATIONAL_CENSUS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_CENSUS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_CENSUS_STRATEGY</Strategy>
@@ -6168,6 +6172,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_PRIME_DIRECTIVE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_PRIME_DIRECTIVE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PRIME_DIRECTIVE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PRIME_DIRECTIVE_STRATEGY</Strategy>
@@ -7096,6 +7101,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_CENTER_FOR_AI_SAFETY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_CENTER_FOR_AI_SAFETY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CENTER_FOR_AI_SAFETY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CENTER_FOR_AI_SAFETY_STRATEGY</Strategy>
@@ -7137,6 +7143,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_CENTER_FOR_BIOTECH_SAFETY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_CENTER_FOR_BIOTECH_SAFETY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CENTER_FOR_BIOTECH_SAFETY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CENTER_FOR_BIOTECH_SAFETY_STRATEGY</Strategy>
@@ -7176,6 +7183,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_CENTER_FOR_NANOTECH_SAFETY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_CENTER_FOR_NANOTECH_SAFETY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CENTER_FOR_NANOTECH_SAFETY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CENTER_FOR_NANOTECH_SAFETY_STRATEGY</Strategy>
@@ -11249,6 +11257,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_DIGITAL_EMBASSY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_DIGITAL_EMBASSY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DIGITAL_EMBASSY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DIGITAL_EMBASSY_STRATEGY</Strategy>
@@ -13434,6 +13443,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_SOCIAL_CREDIT_SYSTEM</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_SOCIAL_CREDIT_SYSTEM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SOCIAL_CREDIT_SYSTEM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SOCIAL_CREDIT_SYSTEM_STRATEGY</Strategy>
@@ -20331,6 +20341,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_MANTLE_VACTRAIN_NETWORK</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_MANTLE_VACTRAIN_NETWORK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MANTLE_VACTRAIN_NETWORK_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MANTLE_VACTRAIN_NETWORK_STRATEGY</Strategy>
@@ -24042,6 +24053,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_METI</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_METI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_METI_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_METI_STRATEGY</Strategy>
@@ -24140,6 +24152,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_MOON_ROCK_LAB</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_MOON_ROCK_LAB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MOON_ROCK_LAB_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MOON_ROCK_LAB_STRATEGY</Strategy>
@@ -24303,6 +24316,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_SKYHOOK</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_SKYHOOK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SKYHOOK_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SKYHOOK_STRATEGY</Strategy>
@@ -24878,6 +24892,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_INTERPLANETARY_RAIL</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_INTERPLANETARY_RAIL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INTERPLANETARY_RAIL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_INTERPLANETARY_RAIL_STRATEGY</Strategy>
@@ -24911,6 +24926,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_NEUROIMPLANT_EXPORTER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_NEUROIMPLANT_EXPORTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NEUROIMPLANT_EXPORTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NEUROIMPLANT_EXPORTER_STRATEGY</Strategy>
@@ -24968,6 +24984,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_GPS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_GPS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GPS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GPS_STRATEGY</Strategy>
@@ -25272,6 +25289,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_SENTINEL</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_SENTINEL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SENTINEL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SENTINEL_STRATEGY</Strategy>
@@ -25309,6 +25327,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_SOLAR_WEATHER_MONITOR</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_SOLAR_WEATHER_MONITOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SOLAR_WEATHER_MONITOR_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SOLAR_WEATHER_MONITOR_STRATEGY</Strategy>
@@ -25344,6 +25363,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_ASTEROID_DEFLECTION_SYSTEM</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_ASTEROID_DEFLECTION_SYSTEM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ASTEROID_DEFLECTION_SYSTEM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ASTEROID_DEFLECTION_SYSTEM_STRATEGY</Strategy>
@@ -25422,6 +25442,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_SOLAR_NOVA_SURVIVAL_PLAN</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_SOLAR_NOVA_SURVIVAL_PLAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SOLAR_NOVA_SURVIVAL_PLAN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SOLAR_NOVA_SURVIVAL_PLAN_STRATEGY</Strategy>
@@ -25593,6 +25614,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_INTERGALACTIC_CAPITOL</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_INTERGALACTIC_CAPITOL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INTERGALACTIC_CAPITOL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_INTERGALACTIC_CAPITOL_STRATEGY</Strategy>
@@ -25620,6 +25642,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_SECTION_31</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_SECTION_31</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SECTION_31_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SECTION_31_STRATEGY</Strategy>
