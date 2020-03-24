@@ -14575,7 +14575,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SCOTLAND_YARD</Type>
-			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_SCOTLAND_YARD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SCOTLAND_YARD_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SCOTLAND_YARD_STRATEGY</Strategy>
@@ -14585,7 +14585,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_POLITICAL_PHILOSOPHY</PrereqTech>
+			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<iCost>-1</iCost>
 			<CommerceChanges>
@@ -16691,6 +16691,7 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SPY_NETWORK</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<NotGameOption>GAMEOPTION_NO_ESPIONAGE</NotGameOption>
 			<Description>TXT_KEY_BUILDING_SPY_NETWORK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SPY_NETWORK_PEDIA</Civilopedia>
