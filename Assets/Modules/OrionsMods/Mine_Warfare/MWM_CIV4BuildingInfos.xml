@@ -4,6 +4,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_ADVANCED_MINE_TECHNOLOGY_CENTER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_ADVANCED_MINE_TECHNOLOGY_CENTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ADVANCED_MINE_TECHNOLOGY_CENTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ADVANCED_MINE_TECHNOLOGY_CENTER_STRATEGY</Strategy>

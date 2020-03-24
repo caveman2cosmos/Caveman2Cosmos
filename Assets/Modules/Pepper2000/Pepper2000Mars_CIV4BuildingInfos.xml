@@ -611,6 +611,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_MARS_CYCLER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_MARS_CYCLER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_CYCLER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MARS_CYCLER_STRATEGY</Strategy>

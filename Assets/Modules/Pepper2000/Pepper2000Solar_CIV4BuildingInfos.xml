@@ -1857,6 +1857,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_LASER_STARWAY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_LASER_STARWAY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LASER_STARWAY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_LASER_STARWAY_STRATEGY</Strategy>
@@ -3747,6 +3748,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_URANUS_MINE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_URANUS_MINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_URANUS_MINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_URANUS_MINE_STRATEGY</Strategy>
@@ -4307,6 +4309,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_NEPTUNE_ORBITAL_RING</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_NEPTUNE_ORBITAL_RING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NEPTUNE_ORBITAL_RING_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NEPTUNE_ORBITAL_RING_STRATEGY</Strategy>
@@ -4528,6 +4531,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_PLUTO_BASE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_PLUTO_BASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PLUTO_BASE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PLUTO_BASE_STRATEGY</Strategy>

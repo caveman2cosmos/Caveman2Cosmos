@@ -4,6 +4,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_OUTPOST</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_LUNAR_OUTPOST</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_OUTPOST_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_LUNAR_OUTPOST_STRATEGY</Strategy>

@@ -1758,6 +1758,8 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ORBITAL_PRISON</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<iCost>1056</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
@@ -1812,6 +1814,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_ANTIMATTER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_ANTIMATTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_ANTIMATTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CISLUNAR_ANTIMATTER_STRATEGY</Strategy>
@@ -1836,6 +1839,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_SOLAR_SATELLITES</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_SOLAR_SATELLITES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_SOLAR_SATELLITES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CISLUNAR_SOLAR_SATELLITES_STRATEGY</Strategy>
