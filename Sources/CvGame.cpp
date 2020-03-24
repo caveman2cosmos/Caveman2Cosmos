@@ -7038,7 +7038,7 @@ void CvGame::doSpawns(PlayerTypes ePlayer)
 			// Could be in the threads but this way the units already spawned in this turn by this system are considered
 			// iMaxAreaTotalDensity isn't really meant for small areas where units cannot wander out of the local 49 plot spawn area.
 			if (iTotalAreaSize > (iMaxAreaTotalDensity > 49 ? iMaxAreaTotalDensity : 49)
-			&& iTotalAreaSize / std::max(1, pPlot->area()->getUnitsPerPlayer(ePlayer)) >= iMaxAreaTotalDensity)
+			&& iTotalAreaSize / std::max(1, pPlot->area()->getUnitsPerPlayer(ePlayer)) <= iMaxAreaTotalDensity)
 			{
 				continue;
 			}
