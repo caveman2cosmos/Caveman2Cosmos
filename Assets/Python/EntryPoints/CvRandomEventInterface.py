@@ -4463,7 +4463,7 @@ def canTriggerSyntheticFuels(argsList):
   kTriggeredData = argsList[0]
   pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
 
-  iEthanol = GC.getInfoTypeForString("BUILDING_CORPORATION_3")
+  iEthanol = GC.getInfoTypeForString("BUILDING_CORPORATION_3_HQ")
   if pPlayer.getBuildingCountWithUpgrades(iEthanol) > 0:
     return False
   bOil = GC.getInfoTypeForString("BONUS_OIL")

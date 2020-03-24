@@ -4,6 +4,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_CISLUNAR_ECONOMY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_CISLUNAR_ECONOMY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CISLUNAR_ECONOMY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CISLUNAR_ECONOMY_STRATEGY</Strategy>
@@ -79,6 +80,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_SOLAR_ECONOMY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_SOLAR_ECONOMY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SOLAR_ECONOMY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SOLAR_ECONOMY_STRATEGY</Strategy>
@@ -130,6 +132,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_GALACTIC_ECONOMY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_GALACTIC_ECONOMY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GALACTIC_ECONOMY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GALACTIC_ECONOMY_STRATEGY</Strategy>
@@ -193,6 +196,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_UNIVERSAL_ECONOMY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_UNIVERSAL_ECONOMY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_UNIVERSAL_ECONOMY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_UNIVERSAL_ECONOMY_STRATEGY</Strategy>
@@ -248,6 +252,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_COSMIC_ECONOMY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_COSMIC_ECONOMY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COSMIC_ECONOMY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_COSMIC_ECONOMY_STRATEGY</Strategy>

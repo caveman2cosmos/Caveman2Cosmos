@@ -1,10 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- ReModified by StrategyOnly -->
-<!-- -->
-<!-- Route art path information -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4RouteModelInfos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\Xml\Schema\Caveman2Cosmos.xsd">
 	<RouteModelInfos>
 		<RouteModelInfo>
@@ -1849,7 +1843,7 @@
 		</RouteModelInfo>
 		<RouteModelInfo>
 			<ModelFile>Art/Terrain/Routes/Path/RoadD20.nif</ModelFile>
-			<LateModelFile>>Art/Terrain/Routes/Path/RoadD20.nif</LateModelFile>
+			<LateModelFile>Art/Terrain/Routes/Path/RoadD20.nif</LateModelFile>
 			<ModelFileKey>D20</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_PATH</RouteType>
@@ -6749,7 +6743,7 @@
 		</RouteModelInfo>
 		<RouteModelInfo>
 			<ModelFile>Art/Terrain/Routes/Path1/RoadD20.nif</ModelFile>
-			<LateModelFile>>Art/Terrain/Routes/Path/RoadD20.nif</LateModelFile>
+			<LateModelFile>Art/Terrain/Routes/Path/RoadD20.nif</LateModelFile>
 			<ModelFileKey>D20</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_TRAIL</RouteType>

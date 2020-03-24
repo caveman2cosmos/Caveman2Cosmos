@@ -439,7 +439,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_LIE_IN_WAIT</Tag>
 		<English>Build Up (Lie in Wait) Promotionline</English>
-		<French>Spécialisation Retranchement (Intrigue)</French>		
+		<French>Spécialisation Retranchement (Intrigue)</French>
 		<German>(Training) Auflauern</German>
 	</TEXT>
 	<TEXT>
@@ -770,7 +770,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_DECOYS</Tag>
 		<English>Decoys Promotionline</English>
-		<French>Spécialisation Leurre</French>		
+		<French>Spécialisation Leurre</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_DEFENSIVE_PROTOCOLS</Tag>
@@ -2230,6 +2230,7 @@
 		<Tag>TXT_KEY_PROMOTION_ADDS_CANNOT_CAPTURE</Tag>
 		<English>[ICON_BULLET]Gives cause for unit to be unable to capture enemy Cities or Units</English>
 		<French>[ICON_BULLET]Rend l'unité incapable de capturer les villes ou unités ennemies</French>
+		<German>[ICON_BULLET]Unfähigkeit zur Einnahme von Städten und Einheiten hinzugefügt</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ADDS_COLD_IMMUNITY_TEXT</Tag>
@@ -2580,7 +2581,7 @@
 		</Spanish>
 		<Polish>Desant</Polish>
 	</TEXT>
- <TEXT>
+	<TEXT>
  	<Tag>TXT_KEY_PROMOTION_ANIMAL_HUNTER</Tag>
 		<English>Animal Hunter</English>
 		<French>Chasseur d'Animaux</French>
@@ -8999,14 +9000,6 @@
 		<Polish>Dodatkowy Zbiornik Paliwa</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_FUSION_CANNON</Tag>
-		<English>Fusion MegaCannon</English>
-		<French>MégaCanon à Fusion</French>
-		<Italian>Megacannone a fusione</Italian>
-		<Spanish>Megacañón a fusión</Spanish>
-		<Polish>Mega Działo Fuzyjne</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FUSION_POWER_SOURCE</Tag>
 		<English>Fusion Power Source</English>
 		<French>Moteur à Fusion</French>
@@ -9354,7 +9347,7 @@
 			<Text>Gardien Tribal</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
-		</French>		
+		</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_GUARDIAN_TRIBAL_HELP</Tag>
@@ -10662,7 +10655,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INITIATIVE1</Tag>
 		<English>Initiative I</English>
-		<French>Initiative I</French>
 		<Italian>Iniziativa I</Italian>
 		<Spanish>Iniciativa I</Spanish>
 		<Polish>Inicjatywa I</Polish>
@@ -10670,7 +10662,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INITIATIVE2</Tag>
 		<English>Initiative II</English>
-		<French>Initiative II</French>
 		<Italian>Iniziativa II</Italian>
 		<Spanish>Iniciativa II</Spanish>
 		<Polish>Inicjatywa II</Polish>
@@ -10678,7 +10669,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INITIATIVE3</Tag>
 		<English>Initiative III</English>
-		<French>Initiative III</French>
 		<Italian>Iniziativa III</Italian>
 		<Spanish>Iniciativa III</Spanish>
 		<Polish>Inicjatywa III</Polish>
@@ -10686,7 +10676,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INITIATIVE4</Tag>
 		<English>Initiative IV</English>
-		<French>Initiative IV</French>
 		<Italian>Iniziativa IV</Italian>
 		<Spanish>Iniciativa IV</Spanish>
 		<Polish>Inicjatywa IV</Polish>
@@ -11006,6 +10995,11 @@
 		<Polish>Broń z żelaza</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_IVORY_WEAPONS</Tag>
+		<English>Ivory Weapons</English>
+		<French>Armes d'Ivoire</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_JADED_DECADENCE</Tag>
 		<English>Quality Down(Jaded Decadence)</English>
 		<French>
@@ -11045,7 +11039,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_KANAI</Tag>
 		<English>Kanai</English>
-		<French>Kanaï</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_KEEN_EARS1</Tag>
@@ -14032,6 +14025,7 @@
 		<Tag>TXT_KEY_PROMOTION_PURSUIT_TEXT</Tag>
 		<English>[ICON_BULLET]Pursuit Chance: %D1_Change%%</English>
 		<French>[ICON_BULLET]%D1_Change%% Chances de poursuite</French>
+		<German>[ICON_BULLET]Verfolgungsjagd: %d1_Amount%%</German>
 		<Italian>[ICON_BULLET]%D1_Change%% di probabilità di inseguimento</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change%% probabilidad de Pursuitón</Spanish>
 		<Polish>[ICON_BULLET]%D1_Change%% Szansy na Pościg</Polish>
@@ -14737,6 +14731,7 @@
 		<Tag>TXT_KEY_PROMOTION_REMOVES_CANNOT_CAPTURE</Tag>
 		<English>[ICON_BULLET]Removes a cause for unit to be unable to capture enemy Cities or Units</English>
 		<French>[ICON_BULLET]Enlève l'incapacité de l'unité de capturer les villes ou unités ennemies</French>
+		<German>[ICON_BULLET]Unfähigkeit zur Einnahme von Städten und Einheiten entfernt</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REMOVES_COLD_IMMUNITY_TEXT</Tag>
@@ -19026,24 +19021,28 @@
 		<Tag>TXT_KEY_PROMOTION_UNIT_COMBAT_MOD_PER_SIZE_LESS</Tag>
 		<English>[ICON_BULLET]%d1_Amount%% VS Each Size Rank Smaller</English>
 		<French>[ICON_BULLET]Modif. de Combat contre des unités plus petites: %D1_Amount%% par rang inférieur</French>
+		<German>[ICON_BULLET]%d1_Amount%% gegen kleinere Einheiten (pro Stufe Größenunterschied)</German>
 		<Polish>[ICON_BULLET]Modyfiakator Walki vs Mniejszych Rozmiarów jednostki: %d1_Amount%% za różnicę w rozmiarze</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_UNIT_COMBAT_MOD_PER_SIZE_MORE</Tag>
 		<English>[ICON_BULLET]%d1_Amount%% VS Each Size Rank Larger</English>
 		<French>[ICON_BULLET]Modif. de Combat contre des unités plus grandes: %D1_Amount%% par rang supérieur</French>
+		<German>[ICON_BULLET]%d1_Amount%% gegen größere Einheiten (pro Stufe Größenunterschied)</German>
 		<Polish>[ICON_BULLET]Modyfiakator Walki vs Większych Rozmiarów jednostki: %d1_Amount%% za różnicę w rozmiarze</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_UNIT_COMBAT_MOD_PER_VOLUME_LESS</Tag>
 		<English>[ICON_BULLET]%d1_Amount%% VS Each Group Rank Smaller</English>
 		<French>[ICON_BULLET]Modif. de Combat contre des groupes plus petits: %D1_Amount%% par Nb d'unités en moins</French>
+		<German>[ICON_BULLET]%d1_Amount%% gegen kleinere Gruppen (pro Stufe Größenunterschied)</German>
 		<Polish>[ICON_BULLET]Modyfiakator Walki vs Mniejsze Grupy jednostek: %d1_Amount%% za różnicę w rozmiarze</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_UNIT_COMBAT_MOD_PER_VOLUME_MORE</Tag>
 		<English>[ICON_BULLET]%d1_Amount%% VS Each Group Rank Larger</English>
 		<French>[ICON_BULLET]Modif. de Combat contre des groupes plus grands: %D1_Amount%% par Nb d'unités suppl.</French>
+		<German>[ICON_BULLET]%d1_Amount%% gegen größere Gruppen (pro Stufe Größenunterschied)</German>
 		<Polish>[ICON_BULLET]Modyfiakator Walki vs Większych Grupy jednostek: %d1_Amount%% za różnicę w rozmiarze</Polish>
 	</TEXT>
 	<TEXT>
@@ -19437,52 +19436,52 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_CENTAUR</Tag>
 		<English>Way of the Centaur</English>
-		<French>Voie du Centaure</French>		
+		<French>Voie du Centaure</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_FEATHER</Tag>
 		<English>Way of the Feather</English>
-		<French>Voie de la plume</French>		
+		<French>Voie de la plume</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_FIST</Tag>
 		<English>Way of the Fist</English>
-		<French>Voie du Poing</French>				
+		<French>Voie du Poing</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_LEECH</Tag>
 		<English>Way of the Leech</English>
-		<French>Voie de la Goule</French>		
+		<French>Voie de la Goule</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_SHADOWS</Tag>
 		<English>Way of the Shadows</English>
-		<French>Voie des Ombres</French>		
+		<French>Voie des Ombres</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_WARRIOR</Tag>
 		<English>Way of the Warrior</English>
-		<French>Voie du Guerrier</French>		
+		<French>Voie du Guerrier</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_WAVES</Tag>
 		<English>Way of the Waves</English>
-		<French>Voie des Vagues</French>		
+		<French>Voie des Vagues</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_WILD</Tag>
 		<English>Way of the Wild</English>
-		<French>Voie de la Nature</French>				
+		<French>Voie de la Nature</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_WIND</Tag>
 		<English>Way of the Wind</English>
-		<French>Voie du Vent</French>		
+		<French>Voie du Vent</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_WOLF</Tag>
 		<English>Way of the Wolf</English>
-		<French>Voie du Loup</French>		
+		<French>Voie du Loup</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WEAKEN_PER_TURN_NEGATIVE_TEXT</Tag>
@@ -19762,10 +19761,5 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ZEN</Tag>
 		<English>Zen</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_IVORY_WEAPONS</Tag>
-		<English>Ivory Weapons</English>
-		<French>Armes d'Ivoire</French>
 	</TEXT>
 </Civ4GameText>

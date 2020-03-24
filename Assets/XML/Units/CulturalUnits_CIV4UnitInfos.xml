@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4UnitInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
@@ -20755,14 +20755,14 @@
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY</OutcomeType>
 							<iChance>80</iChance>
 							<Commerces>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>
-							    <Adapt>
-							      <ID>ADAPT_DEFAULT</ID>
-							      <Constant>6</Constant>
-							    </Adapt>
-							  </iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>6</Constant>
+									</Adapt>
+								</iCommerce>
 							</Commerces>
 							<iReduceAnarchyLength>4</iReduceAnarchyLength>
 							<bKill>1</bKill>
@@ -20771,14 +20771,14 @@
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY_EXALTED</OutcomeType>
 							<iChance>20</iChance>
 							<Commerces>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>
-							    <Adapt>
-							      <ID>ADAPT_DEFAULT</ID>
-							      <Constant>12</Constant>
-							    </Adapt>
-							  </iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>12</Constant>
+									</Adapt>
+								</iCommerce>
 							</Commerces>
 							<PromotionType>PROMOTION_EXPERIENCED_ARTIST</PromotionType>
 							<iReduceAnarchyLength>5</iReduceAnarchyLength>
@@ -20869,22 +20869,19 @@
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<BonusType>BONUS_KONJAN</BonusType>
 			<PrereqTech>TECH_ROCKETRY</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_MECHANIZED_WARFARE</PrereqTech>
 			</TechTypes>
+			<BonusType>BONUS_KONJAN</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FIREARMS</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
+				<Has>
+					<GOMType>GOM_BONUS</GOMType>
+					<ID>BONUS_AMMUNITION</ID>
+				</Has>
 			</TrainCondition>
 			<iCost>920</iCost>
 			<iMoves>1</iMoves>
@@ -20993,21 +20990,15 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_AUTOMATIC_WEAPONS</PrereqTech>
+			<BonusType>BONUS_KURDISH</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FIREARMS</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_KURDISH</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-				</And>
+				<Has>
+					<GOMType>GOM_BONUS</GOMType>
+					<ID>BONUS_AMMUNITION</ID>
+				</Has>
 			</TrainCondition>
 			<iCost>990</iCost>
 			<iMoves>1</iMoves>
@@ -21714,17 +21705,14 @@
 			</UnitAIs>
 			<PrereqTech>TECH_AMPHIBIOUS_WARFARE</PrereqTech>
 			<BonusType>BONUS_ANGOLAN</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FIREARMS</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
+				<Has>
+					<GOMType>GOM_BONUS</GOMType>
+					<ID>BONUS_AMMUNITION</ID>
+				</Has>
 			</TrainCondition>
 			<iCost>1080</iCost>
 			<iMoves>1</iMoves>
@@ -21828,17 +21816,14 @@
 			</NotUnitAIs>
 			<PrereqTech>TECH_URBAN_CULTURE</PrereqTech>
 			<BonusType>BONUS_LEBANESE</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FIREARMS</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-				</And>
+				<Has>
+					<GOMType>GOM_BONUS</GOMType>
+					<ID>BONUS_AMMUNITION</ID>
+				</Has>
 			</TrainCondition>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_METH_LAB</BuildingType>
@@ -22511,7 +22496,7 @@
 					<BuildType>BUILD_EARLY_MOUNTAIN_MINE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
-				<Build>				
+				<Build>
 					<BuildType>BUILD_MOUNTAIN_MINE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -23522,15 +23507,14 @@
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
 			<BonusType>BONUS_MAMELUK</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FIREARMS</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
 						<ID>BONUS_CAMEL</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -25324,17 +25308,14 @@
 				<BuildingType>BUILDING_ORBITAL_TARGETS</BuildingType>
 			</PrereqOrBuildings>
 			<BonusType>BONUS_MOCOVI</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FIREARMS</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
+				<Has>
+					<GOMType>GOM_BONUS</GOMType>
+					<ID>BONUS_AMMUNITION</ID>
+				</Has>
 			</TrainCondition>
 			<UnitUpgrades>
 				<UnitType>UNIT_MSNIPER</UnitType>
@@ -25511,17 +25492,14 @@
 				<BuildingType>BUILDING_ORBITAL_TARGETS</BuildingType>
 			</PrereqOrBuildings>
 			<BonusType>BONUS_MOHAWK</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FIREARMS</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
+				<Has>
+					<GOMType>GOM_BONUS</GOMType>
+					<ID>BONUS_AMMUNITION</ID>
+				</Has>
 			</TrainCondition>
 			<UnitUpgrades>
 				<UnitType>UNIT_MSNIPER</UnitType>
@@ -26514,14 +26492,14 @@
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY</OutcomeType>
 							<iChance>80</iChance>
 							<Commerces>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>
-							    <Adapt>
-							      <ID>ADAPT_DEFAULT</ID>
-							      <Constant>5</Constant>
-							    </Adapt>
-							  </iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>5</Constant>
+									</Adapt>
+								</iCommerce>
 							</Commerces>
 							<iReduceAnarchyLength>3</iReduceAnarchyLength>
 							<bKill>1</bKill>
@@ -26530,14 +26508,14 @@
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY_EXALTED</OutcomeType>
 							<iChance>20</iChance>
 							<Commerces>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>
-							    <Adapt>
-							      <ID>ADAPT_DEFAULT</ID>
-							      <Constant>10</Constant>
-							    </Adapt>
-							  </iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>10</Constant>
+									</Adapt>
+								</iCommerce>
 							</Commerces>
 							<PromotionType>PROMOTION_EXPERIENCED_ARTIST</PromotionType>
 							<iReduceAnarchyLength>4</iReduceAnarchyLength>
@@ -27992,6 +27970,9 @@
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_TRENCH_WARFARE</PrereqTech>
 			<BonusType>BONUS_PAIUTE</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FIREARMS</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -28001,10 +27982,6 @@
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
 						<ID>BONUS_HORSE</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -28223,17 +28200,14 @@
 				<BuildingType>BUILDING_BIVOUAC_GROUNDS</BuildingType>
 			</PrereqAndBuildings>
 			<BonusType>BONUS_PAKISTANI</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FIREARMS</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
+				<Has>
+					<GOMType>GOM_BONUS</GOMType>
+					<ID>BONUS_AMMUNITION</ID>
+				</Has>
 			</TrainCondition>
 			<UnitUpgrades>
 				<UnitType>UNIT_HTSNIPER</UnitType>
@@ -28415,17 +28389,14 @@
 				<PrereqTech>TECH_MECHANIZED_WARFARE</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_PALESTINIAN</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FIREARMS</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
+				<Has>
+					<GOMType>GOM_BONUS</GOMType>
+					<ID>BONUS_AMMUNITION</ID>
+				</Has>
 			</TrainCondition>
 			<iCost>920</iCost>
 			<iMoves>1</iMoves>
@@ -28523,12 +28494,11 @@
 			</UnitAIs>
 			<PrereqTech>TECH_FORENSICS</PrereqTech>
 			<BonusType>BONUS_PANAMAN</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FIREARMS</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
 				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
 						<ID>BONUS_AMMUNITION</ID>
@@ -28728,17 +28698,14 @@
 			</UnitAIs>
 			<PrereqTech>TECH_AMPHIBIOUS_WARFARE</PrereqTech>
 			<BonusType>BONUS_PARAGUAYAN</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FIREARMS</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
+				<Has>
+					<GOMType>GOM_BONUS</GOMType>
+					<ID>BONUS_AMMUNITION</ID>
+				</Has>
 			</TrainCondition>
 			<iCost>1080</iCost>
 			<iMoves>1</iMoves>
@@ -29324,7 +29291,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
-			<BonusType>BONUS_PHILISTINES</BonusType>
+			<BonusType>BONUS_PHILISTINE</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_COPPER_WARES</BonusType>
 				<BonusType>BONUS_BRONZE_WARES</BonusType>
@@ -29642,17 +29609,14 @@
 			</UnitAIs>
 			<PrereqTech>TECH_AUTOMATIC_WEAPONS</PrereqTech>
 			<BonusType>BONUS_PIMA</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FIREARMS</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-				</And>
+				<Has>
+					<GOMType>GOM_BONUS</GOMType>
+					<ID>BONUS_AMMUNITION</ID>
+				</Has>
 			</TrainCondition>
 			<iCost>990</iCost>
 			<iMoves>1</iMoves>
@@ -29947,14 +29911,14 @@
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY</OutcomeType>
 							<iChance>80</iChance>
 							<Commerces>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>
-							    <Adapt>
-							      <ID>ADAPT_DEFAULT</ID>
-							      <Constant>6</Constant>
-							    </Adapt>
-							  </iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>6</Constant>
+									</Adapt>
+								</iCommerce>
 							</Commerces>
 							<iReduceAnarchyLength>4</iReduceAnarchyLength>
 							<bKill>1</bKill>
@@ -29963,14 +29927,14 @@
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY_EXALTED</OutcomeType>
 							<iChance>20</iChance>
 							<Commerces>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>
-							    <Adapt>
-							      <ID>ADAPT_DEFAULT</ID>
-							      <Constant>12</Constant>
-							    </Adapt>
-							  </iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+									<ID>ADAPT_DEFAULT</ID>
+									<Constant>12</Constant>
+									</Adapt>
+								</iCommerce>
 							</Commerces>
 							<PromotionType>PROMOTION_EXPERIENCED_ARTIST</PromotionType>
 							<iReduceAnarchyLength>5</iReduceAnarchyLength>
@@ -30496,17 +30460,14 @@
 			</UnitAIs>
 			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<BonusType>BONUS_QUEBECKER</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FIREARMS</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-				</And>
+				<Has>
+					<GOMType>GOM_BONUS</GOMType>
+					<ID>BONUS_AMMUNITION</ID>
+				</Has>
 			</TrainCondition>
 			<iCost>455</iCost>
 			<iMoves>1</iMoves>
@@ -31126,17 +31087,14 @@
 			</UnitAIs>
 			<PrereqTech>TECH_TRENCH_WARFARE</PrereqTech>
 			<BonusType>BONUS_RHODESIAN</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FIREARMS</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-				</And>
+				<Has>
+					<GOMType>GOM_BONUS</GOMType>
+					<ID>BONUS_AMMUNITION</ID>
+				</Has>
 			</TrainCondition>
 			<iCost>805</iCost>
 			<iMoves>1</iMoves>
@@ -31438,14 +31396,14 @@
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY</OutcomeType>
 							<iChance>80</iChance>
 							<Commerces>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>
-							    <Adapt>
-							      <ID>ADAPT_DEFAULT</ID>
-							      <Constant>5</Constant>
-							    </Adapt>
-							  </iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+									<ID>ADAPT_DEFAULT</ID>
+									<Constant>5</Constant>
+									</Adapt>
+								</iCommerce>
 							</Commerces>
 							<iReduceAnarchyLength>3</iReduceAnarchyLength>
 							<bKill>1</bKill>
@@ -31454,14 +31412,14 @@
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY_EXALTED</OutcomeType>
 							<iChance>20</iChance>
 							<Commerces>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>
-							    <Adapt>
-							      <ID>ADAPT_DEFAULT</ID>
-							      <Constant>10</Constant>
-							    </Adapt>
-							  </iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+									<ID>ADAPT_DEFAULT</ID>
+									<Constant>10</Constant>
+									</Adapt>
+								</iCommerce>
 							</Commerces>
 							<PromotionType>PROMOTION_EXPERIENCED_ARTIST</PromotionType>
 							<iReduceAnarchyLength>4</iReduceAnarchyLength>
@@ -31810,17 +31768,14 @@
 			</UnitAIs>
 			<PrereqTech>TECH_TRENCH_WARFARE</PrereqTech>
 			<BonusType>BONUS_SAMOAN</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FIREARMS</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-				</And>
+				<Has>
+					<GOMType>GOM_BONUS</GOMType>
+					<ID>BONUS_AMMUNITION</ID>
+				</Has>
 			</TrainCondition>
 			<iCost>805</iCost>
 			<iMoves>1</iMoves>
@@ -32098,17 +32053,14 @@
 			</UnitAIs>
 			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<BonusType>BONUS_AYMARA</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FIREARMS</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-				</And>
+				<Has>
+					<GOMType>GOM_BONUS</GOMType>
+					<ID>BONUS_AMMUNITION</ID>
+				</Has>
 			</TrainCondition>
 			<iCost>455</iCost>
 			<iMoves>1</iMoves>
@@ -32532,14 +32484,14 @@
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY</OutcomeType>
 							<iChance>80</iChance>
 							<Commerces>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>
-							    <Adapt>
-							      <ID>ADAPT_DEFAULT</ID>
-							      <Constant>6</Constant>
-							    </Adapt>
-							  </iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+									<ID>ADAPT_DEFAULT</ID>
+									<Constant>6</Constant>
+									</Adapt>
+								</iCommerce>
 							</Commerces>
 							<iReduceAnarchyLength>4</iReduceAnarchyLength>
 							<bKill>1</bKill>
@@ -32548,14 +32500,14 @@
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY_EXALTED</OutcomeType>
 							<iChance>20</iChance>
 							<Commerces>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>
-							    <Adapt>
-							      <ID>ADAPT_DEFAULT</ID>
-							      <Constant>12</Constant>
-							    </Adapt>
-							  </iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+									<ID>ADAPT_DEFAULT</ID>
+									<Constant>12</Constant>
+									</Adapt>
+								</iCommerce>
 							</Commerces>
 							<PromotionType>PROMOTION_EXPERIENCED_ARTIST</PromotionType>
 							<iReduceAnarchyLength>5</iReduceAnarchyLength>
@@ -32810,8 +32762,13 @@
 			<BonusType>BONUS_SERBIAN</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_FIREARMS</BonusType>
-				<BonusType>BONUS_AMMUNITION</BonusType>
 			</PrereqBonuses>
+			<TrainCondition>
+				<Has>
+					<GOMType>GOM_BONUS</GOMType>
+					<ID>BONUS_AMMUNITION</ID>
+				</Has>
+			</TrainCondition>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
 					<BonusType>BONUS_IRON_WARES</BonusType>
@@ -33398,8 +33355,13 @@
 			<BonusType>BONUS_SLOVAKIAN</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_FIREARMS</BonusType>
-				<BonusType>BONUS_AMMUNITION</BonusType>
 			</PrereqBonuses>
+			<TrainCondition>
+				<Has>
+					<GOMType>GOM_BONUS</GOMType>
+					<ID>BONUS_AMMUNITION</ID>
+				</Has>
+			</TrainCondition>
 			<UnitUpgrades>
 				<UnitType>UNIT_OUTLAW</UnitType>
 			</UnitUpgrades>
@@ -33716,8 +33678,13 @@
 			<BonusType>BONUS_AZANDE</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_FIREARMS</BonusType>
-				<BonusType>BONUS_AMMUNITION</BonusType>
 			</PrereqBonuses>
+			<TrainCondition>
+				<Has>
+					<GOMType>GOM_BONUS</GOMType>
+					<ID>BONUS_AMMUNITION</ID>
+				</Has>
+			</TrainCondition>
 			<UnitUpgrades>
 				<UnitType>UNIT_SNIPER</UnitType>
 			</UnitUpgrades>
@@ -34024,17 +33991,14 @@
 			</UnitAIs>
 			<PrereqTech>TECH_AUTOMATIC_WEAPONS</PrereqTech>
 			<BonusType>BONUS_SUDANESE</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FIREARMS</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-				</And>
+				<Has>
+					<GOMType>GOM_BONUS</GOMType>
+					<ID>BONUS_AMMUNITION</ID>
+				</Has>
 			</TrainCondition>
 			<iCost>990</iCost>
 			<iMoves>1</iMoves>
@@ -34143,14 +34107,14 @@
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY</OutcomeType>
 							<iChance>80</iChance>
 							<Commerces>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>
-							    <Adapt>
-							      <ID>ADAPT_DEFAULT</ID>
-							      <Constant>6</Constant>
-							    </Adapt>
-							  </iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>6</Constant>
+									</Adapt>
+								</iCommerce>
 							</Commerces>
 							<iReduceAnarchyLength>4</iReduceAnarchyLength>
 							<bKill>1</bKill>
@@ -34159,14 +34123,14 @@
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY_EXALTED</OutcomeType>
 							<iChance>20</iChance>
 							<Commerces>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>
-							    <Adapt>
-							      <ID>ADAPT_DEFAULT</ID>
-							      <Constant>12</Constant>
-							    </Adapt>
-							  </iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>12</Constant>
+									</Adapt>
+								</iCommerce>
 							</Commerces>
 							<PromotionType>PROMOTION_EXPERIENCED_ARTIST</PromotionType>
 							<iReduceAnarchyLength>5</iReduceAnarchyLength>
@@ -34252,17 +34216,14 @@
 				<PrereqTech>TECH_SEMI_AUTOMATIC_WEAPONS</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_SURINAMESE</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FIREARMS</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
+				<Has>
+					<GOMType>GOM_BONUS</GOMType>
+					<ID>BONUS_AMMUNITION</ID>
+				</Has>
 			</TrainCondition>
 			<UnitUpgrades>
 				<UnitType>UNIT_STREET_GANG</UnitType>
@@ -34737,6 +34698,9 @@
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_TRENCH_WARFARE</PrereqTech>
 			<BonusType>BONUS_TAGALOG</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FIREARMS</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -34746,10 +34710,6 @@
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
 						<ID>BONUS_HORSE</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -36157,17 +36117,14 @@
 				<BuildingType>BUILDING_SHERIFFS_OFFICE</BuildingType>
 			</PrereqAndBuildings>
 			<BonusType>BONUS_TEXAN</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FIREARMS</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
+				<Has>
+					<GOMType>GOM_BONUS</GOMType>
+					<ID>BONUS_AMMUNITION</ID>
+				</Has>
 			</TrainCondition>
 			<UnitUpgrades>
 				<UnitType>UNIT_RIOTPOLICE</UnitType>
@@ -37833,8 +37790,14 @@
 			<PrereqTech>TECH_TRENCH_WARFARE</PrereqTech>
 			<BonusType>BONUS_TURKISH</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_AMMUNITION</BonusType>
+				<BonusType>BONUS_FIREARMS</BonusType>
 			</PrereqBonuses>
+			<TrainCondition>
+				<Has>
+					<GOMType>GOM_BONUS</GOMType>
+					<ID>BONUS_AMMUNITION</ID>
+				</Has>
+			</TrainCondition>
 			<iCost>1050</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>35</iCombat>
@@ -38961,6 +38924,9 @@
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_TRENCH_WARFARE</PrereqTech>
 			<BonusType>BONUS_SAUDI</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FIREARMS</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -38970,10 +38936,6 @@
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
 						<ID>BONUS_HORSE</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
 					</Has>
 				</And>
 			</TrainCondition>
@@ -40013,13 +39975,13 @@
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
 			<BonusType>BONUS_WAYUU</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_HORSE</BonusType>
+				<BonusType>BONUS_FIREARMS</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
+						<ID>BONUS_HORSE</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -40490,7 +40452,7 @@
 			<TechTypes>
 				<PrereqTech>TECH_MOUNTED_ARCHERY</PrereqTech>
 			</TechTypes>
-			<BonusType>BONUS_XIONGU</BonusType>
+			<BonusType>BONUS_XIONGNU</BonusType>
 			<TrainCondition>
 				<And>
 					<Has>
@@ -41308,14 +41270,14 @@
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY</OutcomeType>
 							<iChance>80</iChance>
 							<Commerces>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>
-							    <Adapt>
-							      <ID>ADAPT_DEFAULT</ID>
-							      <Constant>5</Constant>
-							    </Adapt>
-							  </iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>5</Constant>
+									</Adapt>
+								</iCommerce>
 							</Commerces>
 							<iReduceAnarchyLength>3</iReduceAnarchyLength>
 							<bKill>1</bKill>
@@ -41324,14 +41286,14 @@
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY_EXALTED</OutcomeType>
 							<iChance>20</iChance>
 							<Commerces>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>
-							    <Adapt>
-							      <ID>ADAPT_DEFAULT</ID>
-							      <Constant>10</Constant>
-							    </Adapt>
-							  </iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>10</Constant>
+									</Adapt>
+								</iCommerce>
 							</Commerces>
 							<PromotionType>PROMOTION_EXPERIENCED_ARTIST</PromotionType>
 							<iReduceAnarchyLength>4</iReduceAnarchyLength>
@@ -42389,13 +42351,13 @@
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
 			<BonusType>BONUS_BEDOUIN</BonusType>
 			<PrereqBonuses>
-				<BonusType>BONUS_CAMEL</BonusType>
+				<BonusType>BONUS_FIREARMS</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
+						<ID>BONUS_CAMEL</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -42886,17 +42848,14 @@
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_ADVANCED_ROCKETRY</PrereqTech>
 			<BonusType>BONUS_AFGHAN</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FIREARMS</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
+				<Has>
+					<GOMType>GOM_BONUS</GOMType>
+					<ID>BONUS_AMMUNITION</ID>
+				</Has>
 			</TrainCondition>
 			<iCost>1345</iCost>
 			<iMoves>1</iMoves>
@@ -44699,17 +44658,14 @@
 			</UnitAIs>
 			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<BonusType>BONUS_CHECHEN</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FIREARMS</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-				</And>
+				<Has>
+					<GOMType>GOM_BONUS</GOMType>
+					<ID>BONUS_AMMUNITION</ID>
+				</Has>
 			</TrainCondition>
 			<iCost>455</iCost>
 			<iMoves>1</iMoves>
@@ -45472,12 +45428,11 @@
 				<BuildingType>BUILDING_POLICE_STATION</BuildingType>
 			</PrereqAndBuildings>
 			<BonusType>BONUS_COLOMBIAN</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FIREARMS</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
 				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
 						<ID>BONUS_AMMUNITION</ID>
@@ -46421,17 +46376,14 @@
 			</UnitAIs>
 			<PrereqTech>TECH_TRENCH_WARFARE</PrereqTech>
 			<BonusType>BONUS_ECUADORIAN</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FIREARMS</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-				</And>
+				<Has>
+					<GOMType>GOM_BONUS</GOMType>
+					<ID>BONUS_AMMUNITION</ID>
+				</Has>
 			</TrainCondition>
 			<iCost>805</iCost>
 			<iMoves>1</iMoves>
@@ -47077,17 +47029,14 @@
 				<BuildingType>BUILDING_ORBITAL_TARGETS</BuildingType>
 			</PrereqOrBuildings>
 			<BonusType>BONUS_FINNISH</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FIREARMS</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
+				<Has>
+					<GOMType>GOM_BONUS</GOMType>
+					<ID>BONUS_AMMUNITION</ID>
+				</Has>
 			</TrainCondition>
 			<UnitUpgrades>
 				<UnitType>UNIT_MSNIPER</UnitType>
@@ -47683,15 +47632,14 @@
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
 			<BonusType>BONUS_GAUCHO</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FIREARMS</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
 						<ID>BONUS_HORSE</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -48123,14 +48071,14 @@
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY</OutcomeType>
 							<iChance>80</iChance>
 							<Commerces>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>
-							    <Adapt>
-							      <ID>ADAPT_DEFAULT</ID>
-							      <Constant>6</Constant>
-							    </Adapt>
-							  </iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>6</Constant>
+									</Adapt>
+								</iCommerce>
 							</Commerces>
 							<iReduceAnarchyLength>4</iReduceAnarchyLength>
 							<bKill>1</bKill>
@@ -48139,14 +48087,14 @@
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY_EXALTED</OutcomeType>
 							<iChance>20</iChance>
 							<Commerces>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>
-							    <Adapt>
-							      <ID>ADAPT_DEFAULT</ID>
-							      <Constant>12</Constant>
-							    </Adapt>
-							  </iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>12</Constant>
+									</Adapt>
+								</iCommerce>
 							</Commerces>
 							<PromotionType>PROMOTION_EXPERIENCED_ARTIST</PromotionType>
 							<iReduceAnarchyLength>5</iReduceAnarchyLength>
@@ -50058,8 +50006,13 @@
 			<BonusType>BONUS_HOPI</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_FIREARMS</BonusType>
-				<BonusType>BONUS_AMMUNITION</BonusType>
 			</PrereqBonuses>
+			<TrainCondition>
+				<Has>
+					<GOMType>GOM_BONUS</GOMType>
+					<ID>BONUS_AMMUNITION</ID>
+				</Has>
+			</TrainCondition>
 			<UnitUpgrades>
 				<UnitType>UNIT_SNIPER</UnitType>
 			</UnitUpgrades>
@@ -50311,14 +50264,14 @@
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY</OutcomeType>
 							<iChance>80</iChance>
 							<Commerces>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>
-							    <Adapt>
-							      <ID>ADAPT_DEFAULT</ID>
-							      <Constant>5</Constant>
-							    </Adapt>
-							  </iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>5</Constant>
+									</Adapt>
+								</iCommerce>
 							</Commerces>
 							<iReduceAnarchyLength>3</iReduceAnarchyLength>
 							<bKill>1</bKill>
@@ -50327,14 +50280,14 @@
 							<OutcomeType>OUTCOME_ENTERTAIN_CITY_EXALTED</OutcomeType>
 							<iChance>20</iChance>
 							<Commerces>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>0</iCommerce>
-							  <iCommerce>
-							    <Adapt>
-							      <ID>ADAPT_DEFAULT</ID>
-							      <Constant>10</Constant>
-							    </Adapt>
-							  </iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>0</iCommerce>
+								<iCommerce>
+									<Adapt>
+										<ID>ADAPT_DEFAULT</ID>
+										<Constant>10</Constant>
+									</Adapt>
+								</iCommerce>
 							</Commerces>
 							<PromotionType>PROMOTION_EXPERIENCED_ARTIST</PromotionType>
 							<iReduceAnarchyLength>4</iReduceAnarchyLength>
@@ -51016,17 +50969,14 @@
 			</UnitAIs>
 			<PrereqTech>TECH_MANUFACTURING</PrereqTech>
 			<BonusType>BONUS_IRANIAN</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FIREARMS</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-				</And>
+				<Has>
+					<GOMType>GOM_BONUS</GOMType>
+					<ID>BONUS_AMMUNITION</ID>
+				</Has>
 			</TrainCondition>
 			<iCost>1180</iCost>
 			<iMoves>1</iMoves>
@@ -51125,17 +51075,14 @@
 			</UnitAIs>
 			<PrereqTech>TECH_RIFLING</PrereqTech>
 			<BonusType>BONUS_AMIS</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FIREARMS</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-				</And>
+				<Has>
+					<GOMType>GOM_BONUS</GOMType>
+					<ID>BONUS_AMMUNITION</ID>
+				</Has>
 			</TrainCondition>
 			<iCost>455</iCost>
 			<iMoves>1</iMoves>
@@ -51243,17 +51190,14 @@
 			</UnitAIs>
 			<PrereqTech>TECH_MANUFACTURING</PrereqTech>
 			<BonusType>BONUS_IRAQI</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FIREARMS</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-				</And>
+				<Has>
+					<GOMType>GOM_BONUS</GOMType>
+					<ID>BONUS_AMMUNITION</ID>
+				</Has>
 			</TrainCondition>
 			<iCost>1180</iCost>
 			<iMoves>1</iMoves>
@@ -52285,17 +52229,14 @@
 			</UnitAIs>
 			<PrereqTech>TECH_AMPHIBIOUS_WARFARE</PrereqTech>
 			<BonusType>BONUS_ESTONIAN</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FIREARMS</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
+				<Has>
+					<GOMType>GOM_BONUS</GOMType>
+					<ID>BONUS_AMMUNITION</ID>
+				</Has>
 			</TrainCondition>
 			<iCost>1080</iCost>
 			<iMoves>1</iMoves>
@@ -52395,17 +52336,14 @@
 			</UnitAIs>
 			<PrereqTech>TECH_MODERN_WARFARE</PrereqTech>
 			<BonusType>BONUS_JORDANIAN</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_FIREARMS</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
+				<Has>
+					<GOMType>GOM_BONUS</GOMType>
+					<ID>BONUS_AMMUNITION</ID>
+				</Has>
 			</TrainCondition>
 			<iCost>1475</iCost>
 			<iMoves>1</iMoves>
@@ -52543,6 +52481,6 @@
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-		</UnitInfo>		
+		</UnitInfo>
 	</UnitInfos>
 </Civ4UnitInfos>

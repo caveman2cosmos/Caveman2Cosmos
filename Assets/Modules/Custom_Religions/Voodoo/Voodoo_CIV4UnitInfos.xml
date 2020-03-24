@@ -1,9 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- Assets\Modules\Custom_Religions\Voodoo\Voodoo_CIV4UnitInfos.xml -->
-	<!-- Unit Infos -->
 <Civ4UnitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
@@ -114,7 +109,7 @@
 			</FreePromotions>
 			<iExtraCost>3</iExtraCost>
 			<iAsset>7</iAsset>
-			<iPower>20</iPower>
+			<iPower>15</iPower>
 			<UnitMeshGroups>
 				<iGroupSize>3</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>

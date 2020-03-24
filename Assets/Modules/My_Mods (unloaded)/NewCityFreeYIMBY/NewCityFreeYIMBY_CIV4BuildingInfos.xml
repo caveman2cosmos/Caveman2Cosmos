@@ -56,7 +56,7 @@
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_CONSUMERISM</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_FIREPIT</Type>
+			<Type>BUILDING_FIRE_PIT</Type>
 			<NewCityFree><Has><GOMType>GOM_TECH</GOMType><ID>TECH_FIRE_MAKING</ID></Has></NewCityFree>
 		</BuildingInfo>
 		<BuildingInfo>

@@ -305,14 +305,12 @@
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			<ForceObsoleteTech>TECH_COPPER_WORKING</ForceObsoleteTech>
-			<PrereqBonuses>
-				<BonusType>BONUS_MAMMOTH</BonusType>
-			</PrereqBonuses>
+			<BonusType>BONUS_MAMMOTH</BonusType>
 			<iCost>190</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>9</iCombat>
-			<iXPValueAttack>6</iXPValueAttack>
-			<iXPValueDefense>3</iXPValueDefense>
+			<iXPValueAttack>2</iXPValueAttack>
+			<iXPValueDefense>2</iXPValueDefense>
 			<iCityAttack>25</iCityAttack>
 			<FeatureAttacks>
 				<FeatureAttack>

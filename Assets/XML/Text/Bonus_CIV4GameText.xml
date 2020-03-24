@@ -44,7 +44,6 @@
 		<Tag>TXT_KEY_BONUS_AEROGEL</Tag>
 		<English>Aerogel</English>
 		<French>Aérogel</French>
-		<Italian>Aerogel</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AEROGEL_PEDIA</Tag>
@@ -61,7 +60,6 @@
 		<Tag>TXT_KEY_BONUS_AINU</Tag>
 		<English>Ainu</English>
 		<French>Aïnou</French>
-		<Italian>Ainu</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AIRCRAFT</Tag>
@@ -80,7 +78,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AKA</Tag>
 		<English>Aka</English>
-		<Italian>Aka</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AKKADIAN</Tag>
@@ -97,7 +94,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ALACALUFE</Tag>
 		<English>Alacalufe</English>
-		<Italian>Alacalufe</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ALBANIAN</Tag>
@@ -111,7 +107,6 @@
 		<French>Alcool</French>
 		<German>Alkohol</German>
 		<Italian>Alcool</Italian>
-		<Spanish>Alcohol</Spanish>
 		<Polish>Alkohol</Polish>
 	</TEXT>
 	<TEXT>
@@ -207,7 +202,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AMIS</Tag>
 		<English>Amis</English>
-		<Italian>Amis</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AMMUNITION</Tag>
@@ -226,8 +220,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ANASAZI</Tag>
 		<English>Anasazi</English>
-		<French>Anasazi</French>
-		<Italian>Anasazi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ANCIENT_RELICS</Tag>
@@ -247,7 +239,6 @@
 		<Tag>TXT_KEY_BONUS_ANDAMANESE</Tag>
 		<English>Andamanese</English>
 		<French>Andamanaise</French>
-		<Italian>Andamanese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ANDROIDS</Tag>
@@ -268,18 +259,6 @@
 		<Italian>Angolano</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_ANTI_GRAVITY_FIELD_GENERATORS</Tag>
-		<English>Anti-Gravity Field Generators</English>
-		<French>Générateurs de champ anti-gravité</French>
-		<Italian>Generatori di campo anti-gravità</Italian>
-		<Polish>Generatory pola antygrawitacyjnego</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_ANTI_GRAVITY_FIELD_GENERATORS_PEDIA</Tag>
-		<English>An anti-gravity field generator is a machinery that creates a field that is free from the force of gravity. The field produced can also provide protection to objects in it, by providing a force that allows to repel objects from outside the field.</English>
-		<Italian>Un generatore di campo anti-gravità è una macchina che crea un campo privo dalla forza di gravità. Questo campo può anche fornire un certo grado di protezione agli oggetti al suo interno, attraverso una forza repulsiva di qualsiasi oggetto che si trovi al di fuori del campo.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_ANTIMATTER</Tag>
 		<English>Antimatter</English>
 		<French>Antimatière</French>
@@ -292,9 +271,20 @@
 		<Italian>L'antimateria è definita, in fisica, come materia composta da particelle contrarie alle particelle della materia ordinaria (in altre parole, una particella e la sua corrispondente anti-particella hanno la stessa massa, ma carica elettrica opposta e altre differenze nei numeri quantici). Le antiparticelle si combinano fra loro per generare l'antimateria, in modo molto simile al modo in cui le particelle interagiscono fra loro per produrre materia, e possono essere utilizzate come carburante, come meccanismo di azionamento di armi oppure in campo medico, per terapie anti-cancro o nell'ambito di ricerca sulle radiazioni.</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_ANTI_GRAVITY_FIELD_GENERATORS</Tag>
+		<English>Anti-Gravity Field Generators</English>
+		<French>Générateurs de champ anti-gravité</French>
+		<Italian>Generatori di campo anti-gravità</Italian>
+		<Polish>Generatory pola antygrawitacyjnego</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_ANTI_GRAVITY_FIELD_GENERATORS_PEDIA</Tag>
+		<English>An anti-gravity field generator is a machinery that creates a field that is free from the force of gravity. The field produced can also provide protection to objects in it, by providing a force that allows to repel objects from outside the field.</English>
+		<Italian>Un generatore di campo anti-gravità è una macchina che crea un campo privo dalla forza di gravità. Questo campo può anche fornire un certo grado di protezione agli oggetti al suo interno, attraverso una forza repulsiva di qualsiasi oggetto che si trovi al di fuori del campo.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_APACHE</Tag>
 		<English>Apache</English>
-		<Italian>Apache</Italian>
 		<Polish>Apacze</Polish>
 	</TEXT>
 	<TEXT>
@@ -322,12 +312,10 @@
 		<Tag>TXT_KEY_BONUS_ARAGONESE</Tag>
 		<English>Aragonese</English>
 		<French>Aragone</French>
-		<Italian>Aragonese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ARAWAK</Tag>
 		<English>Arawak</English>
-		<Italian>Arawak</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ARGENTINIAN</Tag>
@@ -363,7 +351,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ASHANTI</Tag>
 		<English>Ashanti</English>
-		<Italian>Ashanti</Italian>
 		<Polish>Aszanti</Polish>
 	</TEXT>
 	<TEXT>
@@ -408,7 +395,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AUTOMOBILES</Tag>
 		<English>Automobiles</English>
-		<French>Automobiles</French>
 		<Italian>Automobili</Italian>
 		<Polish>Samochody</Polish>
 	</TEXT>
@@ -425,12 +411,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AYMARA</Tag>
 		<English>Aymara</English>
-		<Italian>Aymara</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AZANDE</Tag>
 		<English>Azande</English>
-		<Italian>Azande</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AZTEC</Tag>
@@ -488,7 +472,6 @@
 		<Tag>TXT_KEY_BONUS_BANDANESE</Tag>
 		<English>Bandanese</English>
 		<French>Bandanais</French>
-		<Italian>Bandanese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BANGLADESHI</Tag>
@@ -537,7 +520,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BASHKIR</Tag>
 		<English>Bashkir</English>
-		<French>Bashkir</French>
 		<Italian>Baschiro</Italian>
 	</TEXT>
 	<TEXT>
@@ -567,7 +549,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BATEK</Tag>
 		<English>Batek</English>
-		<Italian>Batek</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BAUXITE_ORE</Tag>
@@ -641,7 +622,6 @@
 		<Tag>TXT_KEY_BONUS_BENINESE</Tag>
 		<English>Beninese</English>
 		<French>Béninoise</French>
-		<Italian>Beninese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BERBER</Tag>
@@ -653,7 +633,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BERLINITE</Tag>
 		<English>Berlinite</English>
-		<Italian>Berlinite</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BERLINITE_PEDIA</Tag>
@@ -943,8 +922,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CAMBEBA</Tag>
 		<English>Cambeba</English>
-		<French>Cambeba</French>
-		<Italian>Cambeba</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CAMEL</Tag>
@@ -970,7 +947,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CANARI</Tag>
 		<English>Cañari</English>
-		<Italian>Cañari</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CANDLES</Tag>
@@ -1012,18 +988,15 @@
 		<Tag>TXT_KEY_BONUS_CANTONESE</Tag>
 		<English>Cantonese</English>
 		<French>Cantonais</French>
-		<Italian>Cantonese</Italian>
 		<Polish>Kantońska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CAPAYAN</Tag>
 		<English>Capayán</English>
-		<Italian>Capayán</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CARAL_SUPE</Tag>
 		<English>Caral Supe</English>
-		<Italian>Caral Supe</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CARBON_DIOXIDE_ICE</Tag>
@@ -1052,7 +1025,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CARBYNE</Tag>
 		<English>Carbyne</English>
-		<Italian>Carbyne</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CARBYNE_PEDIA</Tag>
@@ -1125,15 +1097,15 @@
 		<Polish>Koty</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_CAT_PEDIA</Tag>
-		<English>A cat is a small carnivorous mammal. It is the only domesticated species in the family Felidae and often referred to as "domestic cat" to distinguish it from wild members of the family. The cat is similar in anatomy to the other feline species, has a strong flexible body, quick reflexes, sharp teeth and retractable claws adapted to killing small prey. Its night vision and sense of smell are well developed. Domestic cats are valued by humans for companionship and for their ability to hunt rodents.</English>
-		<Italian>Un gatto è un piccolo mammifero carnivoro. È l'unica specie della famiglia dei felidi a essere stata addomesticata ed è spesso indicata come "gatto domestico" per distinguerlo dai membri selvatici della famiglia. Il gatto è simile in anatomia agli altri felidi, ha un corpo forte e flessibile, riflessi rapidi, denti aguzzi e artigli retrattili adattati all'uccisione di piccole prede. La sua visione notturna e l'olfatto sono ben sviluppati. I gatti domestici sono apprezzati dagli umani per la compagnia e per la loro capacità di cacciare i roditori.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_CATALONIAN</Tag>
 		<English>Catalonian</English>
 		<French>Catalane</French>
 		<Italian>Catalano</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_CAT_PEDIA</Tag>
+		<English>A cat is a small carnivorous mammal. It is the only domesticated species in the family Felidae and often referred to as "domestic cat" to distinguish it from wild members of the family. The cat is similar in anatomy to the other feline species, has a strong flexible body, quick reflexes, sharp teeth and retractable claws adapted to killing small prey. Its night vision and sense of smell are well developed. Domestic cats are valued by humans for companionship and for their ability to hunt rodents.</English>
+		<Italian>Un gatto è un piccolo mammifero carnivoro. È l'unica specie della famiglia dei felidi a essere stata addomesticata ed è spesso indicata come "gatto domestico" per distinguerlo dai membri selvatici della famiglia. Il gatto è simile in anatomia agli altri felidi, ha un corpo forte e flessibile, riflessi rapidi, denti aguzzi e artigli retrattili adattati all'uccisione di piccole prede. La sua visione notturna e l'olfatto sono ben sviluppati. I gatti domestici sono apprezzati dagli umani per la compagnia e per la loro capacità di cacciare i roditori.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CELLPHONES</Tag>
@@ -1188,7 +1160,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CERMET</Tag>
 		<English>Cermet</English>
-		<Italian>Cermet</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CERMET_PEDIA</Tag>
@@ -1211,8 +1182,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHACHAPOYA</Tag>
 		<English>Chachapoya</English>
-		<French>Chachapoya</French>
-		<Italian>Chachapoya</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHALK</Tag>
@@ -1229,7 +1198,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHAM</Tag>
 		<English>Cham</English>
-		<Italian>Cham</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHAMORRAN</Tag>
@@ -1262,7 +1230,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHAVIN</Tag>
 		<English>Chavín</English>
-		<Italian>Chavín</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHECHEN</Tag>
@@ -1299,12 +1266,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHEROKEE</Tag>
 		<English>Cherokee</English>
-		<Italian>Cherokee</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHEYENNE</Tag>
 		<English>Cheyenne</English>
-		<Italian>Cheyenne</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHILEAN</Tag>
@@ -1315,7 +1280,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHIMU</Tag>
 		<English>Chimú</English>
-		<Italian>Chimú</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHINESE</Tag>
@@ -1327,7 +1291,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHIPPEWA</Tag>
 		<English>Chippewa</English>
-		<Italian>Chippewa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHOCOLATE</Tag>
@@ -1344,7 +1307,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHOLA</Tag>
 		<English>Chola</English>
-		<Italian>Chola</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHROMITE_ORE</Tag>
@@ -1371,7 +1333,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHUMASH</Tag>
 		<English>Chumash</English>
-		<Italian>Chumash</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CINNABAR_ORE</Tag>
@@ -1409,11 +1370,6 @@
 		<Polish>Glina</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_CLAY_PEDIA</Tag>
-		<English>Clay is an aluminum silicate composed mainly of fine-grained materials. Clay minerals have peculiar physical-chemical characteristics that give them a sensitive plasticity (if mixed with water) or refractory (if dehydrated) - properties that have allowed the development of the brick and ceramic industries.</English>
-		<Italian>L'argilla è un silicato d'alluminio composto principalmente di materiali a grana fine. I minerali argillosi hanno caratteristiche fisico-chimiche peculiari che conferiscono loro una sensibile plasticità (se miscelato con acqua) o refrattarietà (se disidratato) - proprietà che hanno permesso lo sviluppo dell'industria laterizia e ceramica.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_CLAYTRONIC_ATOMS</Tag>
 		<English>Claytronic Atoms</English>
 		<French>Atomes claytroniques</French>
@@ -1425,6 +1381,11 @@
 		<Italian>Gli atomi claytronici (o "catomi") sono singoli computer di scala nanometrica che interagiscono fra loro per produrre oggetti tangibili, che un essere umano può a sua volta utilizzare. Questi atomi hanno il potenziale di influenzare notevolmente molte aree della vita quotidiana, come le telecomunicazioni, le interfacce uomo-computer e l'industria dell'intrattenimento.</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_CLAY_PEDIA</Tag>
+		<English>Clay is an aluminum silicate composed mainly of fine-grained materials. Clay minerals have peculiar physical-chemical characteristics that give them a sensitive plasticity (if mixed with water) or refractory (if dehydrated) - properties that have allowed the development of the brick and ceramic industries.</English>
+		<Italian>L'argilla è un silicato d'alluminio composto principalmente di materiali a grana fine. I minerali argillosi hanno caratteristiche fisico-chimiche peculiari che conferiscono loro una sensibile plasticità (se miscelato con acqua) o refrattarietà (se disidratato) - proprietà che hanno permesso lo sviluppo dell'industria laterizia e ceramica.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_CLOTH</Tag>
 		<English>Cloth</English>
 		<French>Tissu</French>
@@ -1432,11 +1393,6 @@
 		<Italian>Tessuti</Italian>
 		<Spanish>Paño</Spanish>
 		<Polish>Tkanina</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_CLOTH_PEDIA</Tag>
-		<English>A fabric is a product with a flat, thin and flexible surface, made by intertwining threads perpendicular to each other; the operation necessary to make it is called weaving. It consists of two elements: the warp or chain (the set of threads stretched on the loom) and the weft (a single thread that runs the warp from one side to the other). Fabrics made their appearance in the Neolithic period and, depending on materials, weaves, colors and machinery involved, marked the cultural and technical evolution of human civilization.</English>
-		<Italian>Un tessuto è un manufatto a superficie piana, sottile e flessibile, realizzato tramite un intreccio di fili perpendicolari tra di loro; l'operazione necessaria per realizzarlo si chiama tessitura. È costituito da due elementi: l'ordito o catena (l'insieme di fili tesi sul telaio) e la trama (un unico filo che percorre da una parte all'altra l'ordito). I tessuti fecero la loro comparsa nel neolitico e segnarono nei materiali usati, negli intrecci, nei colori e nelle attrezzature utilizzate per costruirli l'evoluzione culturale e tecnica della civiltà umana.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CLOTHING</Tag>
@@ -1449,6 +1405,11 @@
 		<Tag>TXT_KEY_BONUS_CLOTHING_PEDIA</Tag>
 		<English>A dress is a specifically weaved fabric to be worn by a human being, covering it wholly or partially, and defining its external appearance. Depending on the culture, some clothes can have a very particular cultural and social significance, such as marking the belonging to a given community or of a particular (civil, social, religious) status within the community.</English>
 		<Italian>Un vestito è un tessuto realizzato appositamente per essere indossato da un essere umano, coprendolo in tutto o in parte e definendone l'aspetto esteriore. Alcuni vestiti, in base alla cultura, possono rivestire un significato culturale e sociale molto particolare, come l'appartenenza a una data comunità o la segnalazione di un particolare status (civile, sociale, religioso...) all'interno della comunità.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_CLOTH_PEDIA</Tag>
+		<English>A fabric is a product with a flat, thin and flexible surface, made by intertwining threads perpendicular to each other; the operation necessary to make it is called weaving. It consists of two elements: the warp or chain (the set of threads stretched on the loom) and the weft (a single thread that runs the warp from one side to the other). Fabrics made their appearance in the Neolithic period and, depending on materials, weaves, colors and machinery involved, marked the cultural and technical evolution of human civilization.</English>
+		<Italian>Un tessuto è un manufatto a superficie piana, sottile e flessibile, realizzato tramite un intreccio di fili perpendicolari tra di loro; l'operazione necessaria per realizzarlo si chiama tessitura. È costituito da due elementi: l'ordito o catena (l'insieme di fili tesi sul telaio) e la trama (un unico filo che percorre da una parte all'altra l'ordito). I tessuti fecero la loro comparsa nel neolitico e segnarono nei materiali usati, negli intrecci, nei colori e nelle attrezzature utilizzate per costruirli l'evoluzione culturale e tecnica della civiltà umana.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_COAL</Tag>
@@ -1480,8 +1441,6 @@
 		<Tag>TXT_KEY_BONUS_COCA</Tag>
 		<English>Coca</English>
 		<German>Koka</German>
-		<Italian>Coca</Italian>
-		<Spanish>Coca</Spanish>
 		<Polish>Koka</Polish>
 	</TEXT>
 	<TEXT>
@@ -1541,7 +1500,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_COMANCHE</Tag>
 		<English>Comanche</English>
-		<Italian>Comanche</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_COMPUTERS</Tag>
@@ -1645,11 +1603,6 @@
 		<Polish>Bawełna</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_COTTON_PEDIA</Tag>
-		<English>Cotton is a soft, fluffy staple fiber that grows in a boll, or protective case, around the seeds of the cotton plants. Under natural conditions, the cotton bolls will increase the dispersal of the seeds. The plant is a shrub native to tropical and subtropical regions around the world, and was independently domesticated in the various continents. The use of cotton for fabric is known to date to prehistoric times, with some fragments of cotton fabric found that were dated around 6-5th millennium BC.</English>
-		<Italian>Il cotone è una fibra di base morbida e soffice che cresce in una capsula, o custodia protettiva, attorno ai semi delle piante. In condizioni naturali, le capsule di cotone aumentano la dispersione dei semi. La pianta è un arbusto originario delle regioni tropicali e subtropicali di tutto il mondo ed è stata resa coltivabile in modo indipendente nei vari continenti. L'uso del cotone per realizzare tessuti è noto fino alla preistoria: alcuni frammenti di tessuto di cotone risalgono al VI-V millennio a.C.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_COTTON_FIBERS</Tag>
 		<English>Cotton Fibers</English>
 		<French>Fibres de coton</French>
@@ -1660,6 +1613,11 @@
 		<Tag>TXT_KEY_BONUS_COTTON_FIBERS_PEDIA</Tag>
 		<English>Cotton fiber is a fiber made of almost pure cellulose. It is most often spun into yarn or thread and used to make a soft, breathable textile. Cotton fibers occur naturally in colors of white, brown, pink and green, even though fears of contaminating the genetics of white cotton have led many cotton-growing locations to ban the growing of colored cotton varieties.</English>
 		<Italian>La fibra di cotone è una fibra di cellulosa quasi pura. Viene spesso filata e utilizzata per creare un tessuto morbido e traspirante. Le fibre di cotone si presentano naturalmente nei colori bianco, marrone, rosa e verde, anche se i timori di contaminare i campi di cotone bianco hanno portato molte zone di coltivazione del cotone a vietare la coltivazione di varietà colorate.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_COTTON_PEDIA</Tag>
+		<English>Cotton is a soft, fluffy staple fiber that grows in a boll, or protective case, around the seeds of the cotton plants. Under natural conditions, the cotton bolls will increase the dispersal of the seeds. The plant is a shrub native to tropical and subtropical regions around the world, and was independently domesticated in the various continents. The use of cotton for fabric is known to date to prehistoric times, with some fragments of cotton fabric found that were dated around 6-5th millennium BC.</English>
+		<Italian>Il cotone è una fibra di base morbida e soffice che cresce in una capsula, o custodia protettiva, attorno ai semi delle piante. In condizioni naturali, le capsule di cotone aumentano la dispersione dei semi. La pianta è un arbusto originario delle regioni tropicali e subtropicali di tutto il mondo ed è stata resa coltivabile in modo indipendente nei vari continenti. L'uso del cotone per realizzare tessuti è noto fino alla preistoria: alcuni frammenti di tessuto di cotone risalgono al VI-V millennio a.C.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_COW</Tag>
@@ -1692,7 +1650,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CREE</Tag>
 		<English>Cree</English>
-		<Italian>Cree</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CROATIAN</Tag>
@@ -1700,6 +1657,12 @@
 		<French>Croate</French>
 		<Italian>Croato</Italian>
 		<Polish>Chorwacka</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_CRYSTAL_GLASSWARE</Tag>
+		<English>Crystal Glassware</English>
+		<French>Verrerie en cristal</French>
+		<Italian>Oggetti in cristallo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CUBAN</Tag>
@@ -1743,7 +1706,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_DAHOMEY</Tag>
 		<English>Dahomey</English>
-		<Italian>Dahomey</Italian>
 		<Polish>Dahomejska</Polish>
 	</TEXT>
 	<TEXT>
@@ -1781,7 +1743,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_DAYAK</Tag>
 		<English>Dayak</English>
-		<Italian>Dayak</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_DEEP_SPACE_LIFEFORMS</Tag>
@@ -1823,7 +1784,6 @@
 		<Tag>TXT_KEY_BONUS_DENE</Tag>
 		<English>Dene</English>
 		<French>Déné</French>
-		<Italian>Dene</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_DIAMOND</Tag>
@@ -1835,11 +1795,6 @@
 		<Polish>Diamenty</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_DIAMOND_PEDIA</Tag>
-		<English>Diamond is a solid form of carbon with its atoms arranged in a crystal structure. Because the arrangement of atoms is extremely rigid, few types of impurity can contaminate it: small numbers of defects or impurities may color diamond blue (boron), yellow (nitrogen), brown (defects), green (radiation exposure), purple, pink, orange or red. Diamonds have the highest hardness and thermal conductivity of any natural material, properties that are utilized in major industrial applications such as cutting and polishing tools. Most natural diamonds have ages between 1 and 3.5 billion years.</English>
-		<Italian>Il diamante è una forma solida di carbonio, i cui atomi sono disposti in una struttura cristallina. Poiché la disposizione degli atomi è estremamente rigida, pochi tipi di impurità possono contaminarla: piccoli difetti o impurità possono dare al diamante un colore blu (boro), giallo (azoto), marrone (difetti), verde (esposizione alle radiazioni), viola, rosa, arancione o rosso. I diamanti hanno il più alto grado di durezza e conducibilità termica di qualsiasi altro materiale naturale e per questo sono usati come utensili da taglio e lucidatura. La maggior parte dei diamanti naturali ha un'età compresa tra 1 e 3,5 miliardi di anni.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_DIAMOND_NANOTHREADS</Tag>
 		<English>Diamond Nanothreads</English>
 		<French>Diamant nanothreads</French>
@@ -1849,6 +1804,11 @@
 		<Tag>TXT_KEY_BONUS_DIAMOND_NANOTHREADS_PEDIA</Tag>
 		<English>A diamond nanothread, also called carbon nanothread, is a one-dimensional carbon crystalline nanomaterial. Nanothreads consist of a stiff, strong carbon core surrounded by hydrogen atoms, and are more than 20,000 times thinner than a human hair. They are synthesized by compressing liquid benzene to extreme pressure of 20 GPa (around 200,000 times the air pressure at the surface of the Earth), and then slowly relieving that pressure. Their extremely high specific strength is used for space elevators and in other applications related to transportation, aerospace, and sports equipment.</English>
 		<Italian>Un nanofilamento in diamante, chiamato anche nanofilamento di carbonio, è un nanomateriale di carbonio cristallino unidimensionale. I nanofilamenti sono costituiti da un nucleo di carbonio rigido circondato da atomi di idrogeno e sono oltre 20.000 volte più sottili di un capello umano. Sono sintetizzati comprimendo il benzene liquido a una pressione estrema di 20 GPa (circa 200.000 volte la pressione dell'aria sulla Terra) e quindi alleviando lentamente quella pressione. La loro resistenza estremamente elevata viene utilizzata per gli elevatori spaziali e in altre applicazioni relative al trasporto, al settore aerospaziale e alle attrezzature sportive.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_DIAMOND_PEDIA</Tag>
+		<English>Diamond is a solid form of carbon with its atoms arranged in a crystal structure. Because the arrangement of atoms is extremely rigid, few types of impurity can contaminate it: small numbers of defects or impurities may color diamond blue (boron), yellow (nitrogen), brown (defects), green (radiation exposure), purple, pink, orange or red. Diamonds have the highest hardness and thermal conductivity of any natural material, properties that are utilized in major industrial applications such as cutting and polishing tools. Most natural diamonds have ages between 1 and 3.5 billion years.</English>
+		<Italian>Il diamante è una forma solida di carbonio, i cui atomi sono disposti in una struttura cristallina. Poiché la disposizione degli atomi è estremamente rigida, pochi tipi di impurità possono contaminarla: piccoli difetti o impurità possono dare al diamante un colore blu (boro), giallo (azoto), marrone (difetti), verde (esposizione alle radiazioni), viola, rosa, arancione o rosso. I diamanti hanno il più alto grado di durezza e conducibilità termica di qualsiasi altro materiale naturale e per questo sono usati come utensili da taglio e lucidatura. La maggior parte dei diamanti naturali ha un'età compresa tra 1 e 3,5 miliardi di anni.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_DIGITIZED_MEMBRANES</Tag>
@@ -2000,7 +1960,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ECSTASY</Tag>
 		<English>Ecstasy</English>
-		<Italian>Ecstasy</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ECSTASY_PEDIA</Tag>
@@ -2178,6 +2137,12 @@
 		<Polish>[SPACE](%s2_player eksportuje %d1_num_bonus)[SPACE]</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_FAKE_GEMS</Tag>
+		<English>Fake Gems</English>
+		<French>Fausses Gemmes</French>
+		<Italian>Gemme finte</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_FATIMID</Tag>
 		<English>Fatimid</English>
 		<French>Fatimide</French>
@@ -2198,7 +2163,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_FEMTOBOTS</Tag>
 		<English>Femtobots</English>
-		<French>Femtobots</French>
 		<Italian>Femtobot</Italian>
 	</TEXT>
 	<TEXT>
@@ -2338,11 +2302,6 @@
 		<Polish>Ryba</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_FISH_PEDIA</Tag>
-		<English>Fish are gill-bearing aquatic craniate animals that lack limbs with digits. Most fish are ectothermic ("cold-blooded"), allowing their body temperatures to vary as ambient temperatures change, though some of the large active swimmers like white shark and tuna can hold a higher core temperature. Fish are abundant in most bodies of water. They can be found in nearly all aquatic environments, from high mountain streams to the abyssal, and even hadal, depths of the deepest oceans. They are also an important resource for humans worldwide, especially as food, and have had a role in culture through the ages, serving as deities, religious symbols, and as the subjects of art, books and movies.</English>
-		<Italian>I pesci sono animali acquatici, forniti di branchie e privi di arti. La maggior parte dei pesci sono ectotermici ("a sangue freddo"), consentendo alle loro temperature corporee di variare al variare della temperatura ambientale (anche se alcune specie, come lo squalo bianco e il tonno) possono mantenere una temperatura interna più elevata. I pesci sono abbondanti nella maggior parte dei corpi idrici. Possono essere trovati in quasi tutti gli ambienti acquatici, dai torrenti di alta montagna alle acque più profonde, e talvolta agli abissi, degli oceani. I pesci sono anche una risorsa importante per gli esseri umani in tutto il mondo, soprattutto alimentare, e hanno avuto un ruolo nella cultura attraverso i secoli, fungendo da divinità, simboli religiosi e come soggetti di arte, libri e film.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_FISH_OIL</Tag>
 		<English>Fish Oil</English>
 		<French>Huile de poisson</French>
@@ -2353,6 +2312,11 @@
 		<Tag>TXT_KEY_BONUS_FISH_OIL_PEDIA</Tag>
 		<English>Fish oil is an oil derived from the tissues of oily fish. Fish oils contain omega-3 fatty acids eicosapentaenoic acid (EPA) and docosahexaenoic acid (DHA), precursors of certain eicosanoids that are known to reduce inflammation in human body and improve hypertriglyceridemia. Use of fish oil and omega-3 fatty acids have also been studied in a wide variety of other conditions, such as cardiovascular diseases, clinical depression, anxiety, cancer, and macular degeneration, yet their benefit in these conditions has also not been verified. Fish oil is also used as a component in aquaculture feed.</English>
 		<Italian>L'olio di pesce è un olio derivato dai tessuti dei pesci grassi. Gli oli di pesce contengono acidi grassi omega-3 come l'acido eicosapentaenoico (EPA) e l'acido docosaesaenoico (DHA), precursori di alcuni eicosanoidi che sono noti per ridurre le infiammazioni nel corpo umano e migliorare l'ipertrigliceridemia. L'uso di olio di pesce e acidi grassi omega-3 è stato studiato anche per un'ampia varietà di altre malattie, come malattie cardiovascolari, depressione clinica, ansia, cancro e degenerazione maculare, ma i loro benefici in queste condizioni non sono stati verificati. L'olio di pesce è anche usato come componente nei mangimi per l'acquacoltura.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_FISH_PEDIA</Tag>
+		<English>Fish are gill-bearing aquatic craniate animals that lack limbs with digits. Most fish are ectothermic ("cold-blooded"), allowing their body temperatures to vary as ambient temperatures change, though some of the large active swimmers like white shark and tuna can hold a higher core temperature. Fish are abundant in most bodies of water. They can be found in nearly all aquatic environments, from high mountain streams to the abyssal, and even hadal, depths of the deepest oceans. They are also an important resource for humans worldwide, especially as food, and have had a role in culture through the ages, serving as deities, religious symbols, and as the subjects of art, books and movies.</English>
+		<Italian>I pesci sono animali acquatici, forniti di branchie e privi di arti. La maggior parte dei pesci sono ectotermici ("a sangue freddo"), consentendo alle loro temperature corporee di variare al variare della temperatura ambientale (anche se alcune specie, come lo squalo bianco e il tonno) possono mantenere una temperatura interna più elevata. I pesci sono abbondanti nella maggior parte dei corpi idrici. Possono essere trovati in quasi tutti gli ambienti acquatici, dai torrenti di alta montagna alle acque più profonde, e talvolta agli abissi, degli oceani. I pesci sono anche una risorsa importante per gli esseri umani in tutto il mondo, soprattutto alimentare, e hanno avuto un ruolo nella cultura attraverso i secoli, fungendo da divinità, simboli religiosi e come soggetti di arte, libri e film.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_FLASH_MEMORY_DEVICES</Tag>
@@ -2376,11 +2340,6 @@
 		<Polish>Len</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_FLAX_PEDIA</Tag>
-		<English>Flax is a food and fiber crop, cultivated in cooler regions of the world. Textiles made from flax are known in the Western countries as linen, and traditionally used for bed sheets, underclothes, and table linen. Flax is also grown for its seeds, which can be ground into a meal or turned into linseed oil, a product used as a nutritional supplement and as an ingredient in many wood-finishing products. Flax is also grown as an ornamental plant in gardens.</English>
-		<Italian>Il lino è una pianta coltivata nelle regioni più fredde del mondo. I tessuti in lino tradizionalmente utilizzati nei paesi occidentali per lenzuola, biancheria intima e biancheria da tavola. Il lino viene anche coltivato per i suoi semi, che possono essere macinati per essere mangiati o trasformati in olio di semi di lino, un prodotto usato come integratore alimentare e come ingrediente in molti prodotti per la finitura del legno. Il lino viene anche coltivato come pianta ornamentale nei giardini.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_FLAX_FIBERS</Tag>
 		<English>Flax Fibers</English>
 		<French>Fibres de lin</French>
@@ -2391,6 +2350,11 @@
 		<Tag>TXT_KEY_BONUS_FLAX_FIBERS_PEDIA</Tag>
 		<English>Flax fiber is a soft, lustrous, and flexible fiber extracted from the bast beneath the surface of the stem of the flax plant. It is stronger than cotton fiber, but less elastic. The best grades are used for fabrics such as damasks, lace, and sheeting. Coarser grades are used for the manufacturing of twine and rope, and historically, for canvas and webbing equipment. Flax fiber is a raw material used in the high-quality paper industry for the use of printed banknotes, laboratory paper (blotting and filter), rolling paper for cigarettes, and tea bags.</English>
 		<Italian>La fibra di lino è una fibra morbida, lucente e flessibile estratta dalla rafia sotto la superficie dello stelo della pianta di lino. È più forte della fibra di cotone, ma meno elastica. La qualità migliori sono usate per tessuti come damaschi, pizzi e teli. Le qualità più grossolane sono invece utilizzate per la produzione di spago e corda e, storicamente, per le tele e le attrezzature tessili. La fibra di lino è una materia prima utilizzata nell'industria della carta di alta qualità per l'uso di banconote stampate, carta da laboratorio (carta assorbente e filtro), carta in rotoli per sigarette e bustine di tè.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_FLAX_PEDIA</Tag>
+		<English>Flax is a food and fiber crop, cultivated in cooler regions of the world. Textiles made from flax are known in the Western countries as linen, and traditionally used for bed sheets, underclothes, and table linen. Flax is also grown for its seeds, which can be ground into a meal or turned into linseed oil, a product used as a nutritional supplement and as an ingredient in many wood-finishing products. Flax is also grown as an ornamental plant in gardens.</English>
+		<Italian>Il lino è una pianta coltivata nelle regioni più fredde del mondo. I tessuti in lino tradizionalmente utilizzati nei paesi occidentali per lenzuola, biancheria intima e biancheria da tavola. Il lino viene anche coltivato per i suoi semi, che possono essere macinati per essere mangiati o trasformati in olio di semi di lino, un prodotto usato come integratore alimentare e come ingrediente in molti prodotti per la finitura del legno. Il lino viene anche coltivato come pianta ornamentale nei giardini.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_FLEMISH</Tag>
@@ -2436,18 +2400,6 @@
 		<Italian>Un fiore è la struttura riproduttiva che si trova nelle piante da fiore. La funzione biologica di un fiore è di influenzare la riproduzione, di solito fornendo un meccanismo per l'unione dello sperma con le uova. Molti fiori si sono evoluti per essere più attraenti per gli animali, in modo da renderli vettori per il trasferimento di polline. Dopo la fecondazione, l'ovaio del fiore si sviluppa in frutti contenenti semi. Oltre a facilitare la riproduzione delle piante, i fiori sono stati a lungo utilizzati dagli esseri umani per abbellire ambienti, come oggetti di gesti romantici, rituali o religiosi, come mezzo per produrre medicinali e come fonte di cibo.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_FOSSIL_BEDS</Tag>
-		<English>Fossil Beds</English>
-		<French>Lagerstätte</French>
-		<German>Fossillagerstätte</German>
-		<Italian>Lagerstätte</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_FOSSIL_BEDS_PEDIA</Tag>
-		<English>A fossil bed ("Lagerstätte") is a sedimentary body that offers an exceptional amount of information on prehistoric life, due to the abundance of the specimens contained (Konzentrat-Lagerstätten, or "accumulation deposits") or to their extraordinary state of conservation (Konservat-Lagerstätten, or "storage fields").</English>
-		<Italian>Una Lagerstätte è un corpo sedimentario che offre un'eccezionale quantità di informazioni sulla vita preistorica, a causa dell'abbondanza degli esemplari contenuti (Konzentrat-Lagerstätten o "giacimenti per accumulo") oppure del loro straordinario stato di conservazione (Konservat-Lagerstätten o "giacimenti per conservazione").</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_FOSSILS</Tag>
 		<English>Fossils</English>
 		<French>Fossiles</French>
@@ -2458,6 +2410,18 @@
 		<Tag>TXT_KEY_BONUS_FOSSILS_PEDIA</Tag>
 		<English>A fossil is any preserved remains, impression, or trace of any once-living thing from a past geological age. Examples include bones, shells, exoskeletons, stone imprints of animals or microbes, objects preserved in amber, hair, petrified wood, oil, coal, and DNA remnants. The totality of fossils is known as the fossil record.</English>
 		<Italian>Il termine "fossile" indica i resti integri o parziali di organismi un tempo viventi. Più in generale, viene usato per una qualsiasi testimonianza di vita geologicamente passata, come resti animali (ossa, denti, uova, conchiglie), resti vegetali (foglie, tronchi, pollini), evidenze di attività vitale (tane, orme) o tracce legate all'alimentazione (coproliti).</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_FOSSIL_BEDS</Tag>
+		<English>Fossil Beds</English>
+		<French>Lagerstätte</French>
+		<German>Fossillagerstätte</German>
+		<Italian>Lagerstätte</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_FOSSIL_BEDS_PEDIA</Tag>
+		<English>A fossil bed ("Lagerstätte") is a sedimentary body that offers an exceptional amount of information on prehistoric life, due to the abundance of the specimens contained (Konzentrat-Lagerstätten, or "accumulation deposits") or to their extraordinary state of conservation (Konservat-Lagerstätten, or "storage fields").</English>
+		<Italian>Una Lagerstätte è un corpo sedimentario che offre un'eccezionale quantità di informazioni sulla vita preistorica, a causa dell'abbondanza degli esemplari contenuti (Konzentrat-Lagerstätten o "giacimenti per accumulo") oppure del loro straordinario stato di conservazione (Konservat-Lagerstätten o "giacimenti per conservazione").</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_FRANKISH</Tag>
@@ -2501,7 +2465,6 @@
 		<Tag>TXT_KEY_BONUS_FULLERENE</Tag>
 		<English>Fullerene</English>
 		<French>Fullerène</French>
-		<Italian>Fullerene</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_FULLERENE_PEDIA</Tag>
@@ -2518,14 +2481,8 @@
 		<Polish>Futro</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_FUR_PEDIA</Tag>
-		<English>Fur is a thick growth of hair that covers the skin of many animals, and it is a defining characteristic of mammals. The fur of mammals has many uses: protection, sensory purposes, waterproofing, and camouflage, with the primary usage being thermoregulation. Fur has also long served as a source of clothing for humans, including Neanderthals. Historically, it was worn for its insulating quality, with aesthetics becoming a factor over time. Common fur-bearers used include fox, rabbit, mink, beaver, ermine, otter, sable, seal, coyote, chinchilla, raccoon, and possum. The use of fur in clothing has become controversial during XX century, but fur clothing is still a large market.</English>
-		<Italian>La pelliccia è una folta coltre di peli che copre la pelle di molti animali ed è una caratteristica distintiva dei mammiferi. La pelliccia dei mammiferi ha molti usi, come protezione, impermeabilizzazione e mimetizzazione, ma principalmente viene usata per la termoregolazione. Le pellicce degli animali sono state a lungo anche oggetto di abbigliamento per l'uomo, compresi i Neanderthal. Storicamente, sono state usate per le loro qualità isolanti, mentre le qualità estetiche sono diventate un fattore decisivo con l'evolvere della società. Gli animali più comunemente usati per la loro pelliccia sono la volpe, il coniglio, il visone, il castoro, l'ermellino, la lontra, lo zibellino, la foca, il coyote, il cincillà, il procione e l'opossum. L'uso delle pellicce animali nell'industria dell'abbigliamento è diventato controverso nel corso del XX secolo, ma continua ad avere ancora un grande mercato.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_FURAWI</Tag>
 		<English>Furawi</English>
-		<Italian>Furawi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_FURNITURE</Tag>
@@ -2540,6 +2497,11 @@
 		<Italian>I mobili sono oggetti destinati a supportare varie attività umane, come sedersi (sedie, sgabelli, divani), mangiare (tavoli) o dormire (letti). I mobili vengono anche utilizzati per tenere oggetti ad un'altezza conveniente per il lavoro (tavoli, scrivanie) o per riporre oggetti (armadi, scaffali). L'arredamento può essere un prodotto di design ed è considerato una forma di arte decorativa. Oltre al suo ruolo funzionale, l'arredamento può servire per uno scopo simbolico o religioso. Può essere realizzato con molti materiali, tra cui metallo, plastica e legno. I mobili possono essere realizzati utilizzando una varietà di giunti in legno che, spesso, riflettono la cultura locale.</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_FUR_PEDIA</Tag>
+		<English>Fur is a thick growth of hair that covers the skin of many animals, and it is a defining characteristic of mammals. The fur of mammals has many uses: protection, sensory purposes, waterproofing, and camouflage, with the primary usage being thermoregulation. Fur has also long served as a source of clothing for humans, including Neanderthals. Historically, it was worn for its insulating quality, with aesthetics becoming a factor over time. Common fur-bearers used include fox, rabbit, mink, beaver, ermine, otter, sable, seal, coyote, chinchilla, raccoon, and possum. The use of fur in clothing has become controversial during XX century, but fur clothing is still a large market.</English>
+		<Italian>La pelliccia è una folta coltre di peli che copre la pelle di molti animali ed è una caratteristica distintiva dei mammiferi. La pelliccia dei mammiferi ha molti usi, come protezione, impermeabilizzazione e mimetizzazione, ma principalmente viene usata per la termoregolazione. Le pellicce degli animali sono state a lungo anche oggetto di abbigliamento per l'uomo, compresi i Neanderthal. Storicamente, sono state usate per le loro qualità isolanti, mentre le qualità estetiche sono diventate un fattore decisivo con l'evolvere della società. Gli animali più comunemente usati per la loro pelliccia sono la volpe, il coniglio, il visone, il castoro, l'ermellino, la lontra, lo zibellino, la foca, il coyote, il cincillà, il procione e l'opossum. L'uso delle pellicce animali nell'industria dell'abbigliamento è diventato controverso nel corso del XX secolo, ma continua ad avere ancora un grande mercato.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_GALATIAN</Tag>
 		<English>Galatian</English>
 		<French>Galatienne</French>
@@ -2548,7 +2510,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_GAUCHO</Tag>
 		<English>Gaucho</English>
-		<Italian>Gaucho</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_GEMSTONE</Tag>
@@ -2780,7 +2741,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_GUARANI</Tag>
 		<English>Guaraní</English>
-		<Italian>Guaraní</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_GUATEMALAN</Tag>
@@ -2837,7 +2797,6 @@
 		<Tag>TXT_KEY_BONUS_HAIDA</Tag>
 		<English>Haida</English>
 		<French>Haïda</French>
-		<Italian>Haida</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HAITIAN</Tag>
@@ -2850,8 +2809,8 @@
 		<Tag>TXT_KEY_BONUS_HAPPY</Tag>
 		<English>Happy: +%d1_Change[ICON_HAPPY]</English>
 		<French>Moral: +%d1_Change[ICON_HAPPY]</French>
-		<German>[ICON_BULLET]Zufriedenheit: +%d1_Change[ICON_HAPPY]</German>
-		<Italian>Felici: +%d1_Change[ICON_HAPPY]</Italian>
+		<German>Zufriedenheit: +%d1_Change[ICON_HAPPY]</German>
+		<Italian>Morale: +%d1_Change[ICON_HAPPY]</Italian>
 		<Spanish>Feliz: +%d1_Change[ICON_HAPPY]</Spanish>
 		<Polish>Szczęśliwy: +%d1_Change[ICON_HAPPY]</Polish>
 	</TEXT>
@@ -2871,7 +2830,6 @@
 		<Tag>TXT_KEY_BONUS_HAUSA</Tag>
 		<English>Hausa</English>
 		<French>Haoussa</French>
-		<Italian>Hausa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HAWAIIAN</Tag>
@@ -2945,11 +2903,6 @@
 		<Polish>Konopie</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HEMP_PEDIA</Tag>
-		<English>Hemp is a phenotype of the Cannabis sativa plant species. It is grown for industrial uses of its derived products, as well as for various phytochemicals other than THC. It is one of the fastest growing plants and was one of the first plants to be spun into usable fiber 10,000 years ago. It can be refined into a variety of commercial items, including paper, textiles, clothing, biodegradable plastics, paint, insulation, biofuel, food, and animal feed.</English>
-		<Italian>La canapa è un fenotipo delle specie di piante di Cannabis sativa. Viene coltivata per gli usi industriali dei suoi prodotti derivati, nonché per vari prodotti fitochimici diversi dal THC. È una delle piante a più rapida crescita ed è stata una delle prime piante a essere trasformata in fibre utilizzabili 10.000 anni fa. Può essere raffinata in una serie di articoli commerciali, tra cui carta, tessuti, abbigliamento, plastica biodegradabile, vernici, isolanti, biocarburanti, alimenti per umani e per animali.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_HEMP_FIBERS</Tag>
 		<English>Hemp Fibers</English>
 		<French>Fibres de chanvre</French>
@@ -2962,15 +2915,18 @@
 		<Italian>La fibra di canapa è stata ampiamente utilizzata nel corso della storia per oggetti che vanno dalla corda ai tessuti. La canapa pura ha una consistenza simile al lino e, per la sua versatilità d'uso, viene utilizzata in numerosi beni di consumo, tra cui abbigliamento, scarpe, accessori, collari per cani e articoli per la casa.</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_HEMP_PEDIA</Tag>
+		<English>Hemp is a phenotype of the Cannabis sativa plant species. It is grown for industrial uses of its derived products, as well as for various phytochemicals other than THC. It is one of the fastest growing plants and was one of the first plants to be spun into usable fiber 10,000 years ago. It can be refined into a variety of commercial items, including paper, textiles, clothing, biodegradable plastics, paint, insulation, biofuel, food, and animal feed.</English>
+		<Italian>La canapa è un fenotipo delle specie di piante di Cannabis sativa. Viene coltivata per gli usi industriali dei suoi prodotti derivati, nonché per vari prodotti fitochimici diversi dal THC. È una delle piante a più rapida crescita ed è stata una delle prime piante a essere trasformata in fibre utilizzabili 10.000 anni fa. Può essere raffinata in una serie di articoli commerciali, tra cui carta, tessuti, abbigliamento, plastica biodegradabile, vernici, isolanti, biocarburanti, alimenti per umani e per animali.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_HEMUDU</Tag>
 		<English>Hemudu</English>
-		<Italian>Hemudu</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HENNA</Tag>
 		<English>Henna</English>
 		<French>Henné</French>
-		<German>Henna</German>
 		<Italian>Hennè</Italian>
 		<Spanish>Alheña</Spanish>
 	</TEXT>
@@ -2983,7 +2939,6 @@
 		<Tag>TXT_KEY_BONUS_HERERO</Tag>
 		<English>Herero</English>
 		<French>Héréro</French>
-		<Italian>Herero</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HIDE</Tag>
@@ -2998,9 +2953,20 @@
 		<Italian>Una pelle trattata è una pelle di animale trattata per uso umano. Sebbene di solito provengano da grandi animali come mucche o bufali, può anche riferirsi a pelli di animali più piccoli, come capre, pecore, cervi, maiali, pesci, alligatori, serpenti, ecc. Tutti questi tipi di pelle sono usati per produrre scarpe, vestiti, borse, cinture e altri accessori, ma anche per tappezzerie e decorazioni d'interni o di automobili, finimenti per cavalli e imbracature. Talvolta, alcune pelli possono provenire da animali cacciati e lavorate a livello domestico o artigianale, ma la maggior parte della produzione di pelletteria è ora industrializzata e su larga scala.</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_HIERACOSPHINX</Tag>
+		<English>Hieracosphinx</English>
+		<French>Hiéracosphinx</French>
+		<Italian>Ieracosfinge</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_HIMYARITE</Tag>
 		<English>Himyarite</English>
-		<Italian>Himyarita</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_HITTITE</Tag>
+		<English>Hittite</English>
+		<Italian>Ittita</Italian>
+		<Polish>Hetycka</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HIT_MOVIES</Tag>
@@ -3045,12 +3011,6 @@
 		<Italian>Una canzone di successo è un brano registrato o strumentale che diventa ampiamente popolare o noto. Sebbene il termine "canzone di successo" sia comunemente usato per indicare qualsiasi canzone ampiamente suonata o conosciuta, il termine specifico di solito si riferisce a un singolo che è apparso in una classifica musicale ufficiale, attraverso ripetute trasmissioni radiofoniche o vendite commerciali significative.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HITTITE</Tag>
-		<English>Hittite</English>
-		<Italian>Ittita</Italian>
-		<Polish>Hetycka</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_HOLOGRAPHIC_PROJECTORS</Tag>
 		<English>Holographic Projectors</English>
 		<French>Projecteurs holographiques</French>
@@ -3091,12 +3051,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HOPEWELL</Tag>
 		<English>Hopewell</English>
-		<Italian>Hopewell</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HOPI</Tag>
 		<English>Hopi</English>
-		<Italian>Hopi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HORSE</Tag>
@@ -3453,7 +3411,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUN</Tag>
 		<English>Hun</English>
-		<French>Hun</French>
 		<Italian>Unno</Italian>
 		<Polish>Huńska</Polish>
 	</TEXT>
@@ -3517,6 +3474,13 @@
 		<Italian>Un ipospray è un iniettore a getto che eroga farmaci per via intramuscolare, se applicato nella parte superiore del braccio, oppure per via endovenosa o intra-arteriosa, se applicato sul collo. Può anche essere applicato attraverso l'abbigliamento. L'ipospray è estremamente versatile, poiché le fiale del medicinale possono essere rapidamente sostituite dal fondo. Poiché privo di un ago, non viene contaminato dall'uso. Ciò consente di utilizzarlo su molte persone fino all'esaurimento della fornitura di medicinali.</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_ICELANDIC</Tag>
+		<English>Icelandic</English>
+		<French>Icelandais</French>
+		<Italian>Islandese</Italian>
+		<Polish>Islandzka</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_ICE_CREAM</Tag>
 		<English>Ice Cream</English>
 		<French>Glaces</French>
@@ -3527,13 +3491,6 @@
 		<Tag>TXT_KEY_BONUS_ICE_CREAM_PEDIA</Tag>
 		<English>Ice cream is a sweetened, smooth, semi-solid food, typically eaten as a snack or dessert. It may be made from dairy milk or cream and is flavoured with a sweetener (either sugar or an alternative) and any spice, such as cocoa or vanilla. Colourings are usually added, in addition to stabilizers. The mixture is stirred to incorporate air spaces and cooled below the freezing point of water to prevent detectable ice crystals from forming. Ice cream may be served in dishes, for eating with a spoon, or licked from edible cones. Ice cream may be served with other desserts, such as apple pie, or as an ingredient in ice cream floats, sundaes, milkshakes, ice cream cakes and even baked items.</English>
 		<Italian>Un gelato è un alimento zuccherato semi-solido, tipicamente consumato come spuntino o dessert. Può essere fatto con latte o crema di latte ed è aromatizzato con un dolcificante (come lo zucchero o simili) e qualsiasi spezia, come il cacao o la vaniglia. Di solito vengono aggiunti coloranti, oltre agli stabilizzanti. La miscela viene agitata per incorporare aria e raffreddata sotto la temperatura di congelamento dell'acqua per impedire la formazione di cristalli di ghiaccio rilevabili. Il gelato può essere servito in un piatto, mangiato con un cucchiaio o leccato su un cono commestibile. Il gelato può essere servito con altri dessert, come la torta di mele, o come ingrediente in gelati, sunda, frappè, torte gelato e persino prodotti da forno.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_ICELANDIC</Tag>
-		<English>Icelandic</English>
-		<French>Icelandais</French>
-		<Italian>Islandese</Italian>
-		<Polish>Islandzka</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ILLYRIAN</Tag>
@@ -3598,7 +3555,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_INDIGO</Tag>
 		<English>Indigo</English>
-		<German>Indigo</German>
 		<Italian>Indaco</Italian>
 		<Spanish>Índigo</Spanish>
 		<Polish>Indygo</Polish>
@@ -3618,7 +3574,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_INDUS</Tag>
 		<English>Indus</English>
-		<Italian>Indus</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_INGOTS_PEDIA</Tag>
@@ -3628,7 +3583,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_INUIT</Tag>
 		<English>Inuit</English>
-		<Italian>Inuit</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_IRANIAN</Tag>
@@ -3677,7 +3631,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_IROQUOIS</Tag>
 		<English>Iroquois</English>
-		<French>Iroquois</French>
 		<Italian>Irochese</Italian>
 		<Polish>Irokezów</Polish>
 	</TEXT>
@@ -3710,18 +3663,16 @@
 		<Italian>L'avorio è un materiale duro e bianco proveniente dalle zanne e dai denti degli animali, tradizionalmente elefanti, anche se il commercio di denti e zanne di altri animali è ben consolidato e diffuso; pertanto, "avorio" può essere correttamente utilizzato per descrivere eventuali denti o zanne di mammiferi di interesse commerciale che sono abbastanza grandi da poter essere scolpiti o lavorati. L'avorio è stato apprezzato fin dall'antichità nell'arte e per la realizzazione di una gamma di sculture in avorio, come denti finti, tasti di pianoforte, ventole, pedine del domino e tubi articolati. A partire dalla fine del XX secolo, il commercio nazionale e internazionale di avorio di specie minacciate è stato dichiarato illegale.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_JADE</Tag>
-		<English>Jade</English>
-		<French>Jade</French>
-		<German>Jade</German>
-		<Italian>Giada</Italian>
-		<Spanish>Jade</Spanish>
-		<Polish>Jadeity</Polish>
+		<Tag>TXT_KEY_BONUS_JACKALOPE</Tag>
+		<English>Jackalope</English>
+		<French>Jackalope</French>
+		<Italian>Jackalope</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_JADE_PEDIA</Tag>
-		<English>Jade is an ornamental mineral, mostly known for its green varieties. It can refer to either of two different minerals: nephrite, a silicate of calcium and magnesium, or jadeite, a silicate of sodium and aluminium. The former can be found in a creamy white form, as well as in a variety of light green colours; the latter is rarer and shows more colour variations, including blue, brown, red, black, dark green, lavender and white. Both materials were used from prehistoric periods for ornaments and decorative objects: among the earliest known jade artifacts excavated from prehistoric sites are simple ornaments with bead, button, and tubular shapes. Additionally, jade was used for adze heads, knives, and other weapons, which can be delicately shaped.</English>
-		<Italian>La giada è un minerale ornamentale, noto soprattutto per le sue varietà verdi. Il termine può riferirsi a due diversi minerali: la nefrite, un silicato di calcio e magnesio, e la giadeite, un silicato di sodio e alluminio. La prima va dal bianco crema a una varietà di sfumature verdi chiare; l'altra è più rara e mostra più variazioni di colore, tra cui blu, marrone, rosso, nero, verde scuro, lavanda e bianco. Entrambi i materiali sono stati utilizzati dalla preistoria per ornamenti e oggetti decorativi: tra i primi manufatti di giada noti, vi sono semplici ornamenti con perline, bottoni e forme tubolari. Inoltre, la giada veniva utilizzata per asce, coltelli e altre armi che possono essere modellate delicatamente.</Italian>
+		<Tag>TXT_KEY_BONUS_JADE</Tag>
+		<English>Jade</English>
+		<Italian>Giada</Italian>
+		<Polish>Jadeity</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_JADE_DEATH_MASKS</Tag>
@@ -3734,6 +3685,11 @@
 		<Tag>TXT_KEY_BONUS_JADE_DEATH_MASKS_PEDIA</Tag>
 		<English>A jade death mask is an impression of a person's face after their death, usually made by putting together several pieces of jade. Death masks may be mementos of the dead, or be used for creation of portraits. It is sometimes possible to identify portraits that have been painted from death masks, because of the characteristic slight distortions of the face features.</English>
 		<Italian>Una maschera mortuaria di giada è un'impressione del volto di una persona dopo la sua morte, di solito realizzata mettendo insieme diversi pezzi di giada. Le maschere mortuarie possono essere ricordi dei morti o essere utilizzate per la creazione di ritratti. A volte è possibile identificare i ritratti che sono stati dipinti dalle maschere, a causa delle lievi distorsioni caratteristiche dei lineamenti del viso.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_JADE_PEDIA</Tag>
+		<English>Jade is an ornamental mineral, mostly known for its green varieties. It can refer to either of two different minerals: nephrite, a silicate of calcium and magnesium, or jadeite, a silicate of sodium and aluminium. The former can be found in a creamy white form, as well as in a variety of light green colours; the latter is rarer and shows more colour variations, including blue, brown, red, black, dark green, lavender and white. Both materials were used from prehistoric periods for ornaments and decorative objects: among the earliest known jade artifacts excavated from prehistoric sites are simple ornaments with bead, button, and tubular shapes. Additionally, jade was used for adze heads, knives, and other weapons, which can be delicately shaped.</English>
+		<Italian>La giada è un minerale ornamentale, noto soprattutto per le sue varietà verdi. Il termine può riferirsi a due diversi minerali: la nefrite, un silicato di calcio e magnesio, e la giadeite, un silicato di sodio e alluminio. La prima va dal bianco crema a una varietà di sfumature verdi chiare; l'altra è più rara e mostra più variazioni di colore, tra cui blu, marrone, rosso, nero, verde scuro, lavanda e bianco. Entrambi i materiali sono stati utilizzati dalla preistoria per ornamenti e oggetti decorativi: tra i primi manufatti di giada noti, vi sono semplici ornamenti con perline, bottoni e forme tubolari. Inoltre, la giada veniva utilizzata per asce, coltelli e altre armi che possono essere modellate delicatamente.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_JAMAICAN</Tag>
@@ -3782,12 +3738,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_JIVARO</Tag>
 		<English>Jivaro</English>
-		<Italian>Jivaro</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_JOMON</Tag>
 		<English>Jomon</English>
-		<Italian>Jomon</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_JORDANIAN</Tag>
@@ -3800,7 +3754,6 @@
 		<Tag>TXT_KEY_BONUS_JOSEON</Tag>
 		<English>Joseon</English>
 		<French>Joséon</French>
-		<Italian>Joseon</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_JUTE</Tag>
@@ -3810,7 +3763,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KANEM_BORNU</Tag>
 		<English>Kanem-Bornu</English>
-		<Italian>Kanem-Bornu</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KANGAROO</Tag>
@@ -3828,10 +3780,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KAVA</Tag>
 		<English>Kava</English>
-		<French>Kava</French>
-		<German>Kava</German>
-		<Italian>Kava</Italian>
-		<Spanish>Kava</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KAVA_PEDIA</Tag>
@@ -3853,7 +3801,6 @@
 		<Tag>TXT_KEY_BONUS_KEROSENE</Tag>
 		<English>Kerosene</English>
 		<French>Kérosène</French>
-		<Italian>Kerosene</Italian>
 		<Polish>Nafta</Polish>
 	</TEXT>
 	<TEXT>
@@ -3864,7 +3811,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KEVLAR</Tag>
 		<English>Kevlar</English>
-		<Italian>Kevlar</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KEVLAR_PEDIA</Tag>
@@ -3884,7 +3830,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KHMER</Tag>
 		<English>Khmer</English>
-		<Italian>Khmer</Italian>
 		<Polish>Khmerska</Polish>
 	</TEXT>
 	<TEXT>
@@ -3895,12 +3840,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KILLKE</Tag>
 		<English>Killke</English>
-		<Italian>Killke</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KIPCHAK</Tag>
 		<English>Kipchak</English>
-		<Italian>Kipchak</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KITARAN</Tag>
@@ -3910,12 +3853,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KLAMATH</Tag>
 		<English>Klamath</English>
-		<Italian>Klamath</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KOGI</Tag>
 		<English>Kogi</English>
-		<Italian>Kogi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KONGOLESE</Tag>
@@ -3939,7 +3880,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KUGELBLITZ</Tag>
 		<English>Kugelblitz</English>
-		<Italian>Kugelblitz</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KUGELBLITZ_PEDIA</Tag>
@@ -4077,7 +4017,6 @@
 		<Tag>TXT_KEY_BONUS_LEONESE</Tag>
 		<English>Leonese</English>
 		<French>Léonais</French>
-		<Italian>Leonese</Italian>
 		<Polish>Leońska</Polish>
 	</TEXT>
 	<TEXT>
@@ -4094,8 +4033,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LIANGZHU</Tag>
 		<English>Liangzhu</English>
-		<French>Liangzhu</French>
-		<Italian>Liangzhu</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LIANGZHU_JADES</Tag>
@@ -4161,7 +4098,6 @@
 		<French>Lama</French>
 		<German>Lama</German>
 		<Italian>Lama</Italian>
-		<Spanish>Llama</Spanish>
 		<Polish>Lamy</Polish>
 	</TEXT>
 	<TEXT>
@@ -4189,7 +4125,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LSD</Tag>
 		<English>LSD</English>
-		<Italian>LSD</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LSD_PEDIA</Tag>
@@ -4199,17 +4134,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LUBA</Tag>
 		<English>Luba</English>
-		<Italian>Luba</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LULE</Tag>
 		<English>Lule</English>
-		<Italian>Lule</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LUNDA</Tag>
 		<English>Lunda</English>
-		<Italian>Lunda</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LUSITANIAN</Tag>
@@ -4245,7 +4177,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MADAN</Tag>
 		<English>Madan</English>
-		<Italian>Madan</Italian>
 		<Polish>Madańska</Polish>
 	</TEXT>
 	<TEXT>
@@ -4287,7 +4218,6 @@
 		<Tag>TXT_KEY_BONUS_MALINESE</Tag>
 		<English>Malinese</English>
 		<French>Malinais</French>
-		<Italian>Malinese</Italian>
 		<Polish>Malinezyjska</Polish>
 	</TEXT>
 	<TEXT>
@@ -4318,7 +4248,6 @@
 		<Tag>TXT_KEY_BONUS_MANGANESE</Tag>
 		<English>Manganese</English>
 		<French>Manganèse</French>
-		<Italian>Manganese</Italian>
 		<Polish>Mangan</Polish>
 	</TEXT>
 	<TEXT>
@@ -4331,7 +4260,6 @@
 		<English>Mango</English>
 		<French>Mangues</French>
 		<German>Mangos</German>
-		<Italian>Mango</Italian>
 		<Spanish>Mangos</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4341,18 +4269,15 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MANI</Tag>
 		<English>Mani</English>
-		<Italian>Mani</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MAORI</Tag>
 		<English>Maori</English>
-		<Italian>Maori</Italian>
 		<Polish>Maoryska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MAPUCHE</Tag>
 		<English>Mapuche</English>
-		<Italian>Mapuche</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARBLE</Tag>
@@ -4467,13 +4392,11 @@
 		<Tag>TXT_KEY_BONUS_MASAI</Tag>
 		<English>Masai</English>
 		<French>Masaï</French>
-		<Italian>Masai</Italian>
 		<Polish>Masajska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MASCAGNITE</Tag>
 		<English>Mascagnite</English>
-		<Italian>Mascagnite</Italian>
 		<Polish>Maskagnit</Polish>
 	</TEXT>
 	<TEXT>
@@ -4556,7 +4479,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MELONS</Tag>
 		<English>Melons</English>
-		<French>Melons</French>
 		<German>Melonen</German>
 		<Italian>Meloni</Italian>
 		<Spanish>Melones</Spanish>
@@ -4569,7 +4491,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MERINA</Tag>
 		<English>Merina</English>
-		<Italian>Merina</Italian>
+		<Polish>Metina</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_METALLIC_HYDROGEN</Tag>
@@ -4692,7 +4614,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MING</Tag>
 		<English>Ming</English>
-		<Italian>Ming</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_MING_VASE</Tag>
+		<English>Ming Vase</English>
+		<French>Vase Ming</French>
+		<Italian>Vaso Ming</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MINOAN</Tag>
@@ -4716,7 +4643,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MITHRIL</Tag>
 		<English>Mithril</English>
-		<Italian>Mithril</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MITHRIL_PEDIA</Tag>
@@ -4734,22 +4660,18 @@
 		<Tag>TXT_KEY_BONUS_MOCHE</Tag>
 		<English>Moche</English>
 		<French>Mochica</French>
-		<Italian>Moche</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MOCOVI</Tag>
 		<English>Mocoví</English>
-		<Italian>Mocoví</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MOHAWK</Tag>
 		<English>Mohawk</English>
-		<Italian>Mohawk</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MOLLO</Tag>
 		<English>Mollo</English>
-		<Italian>Mollo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MONGOLIAN</Tag>
@@ -4782,13 +4704,11 @@
 		<Tag>TXT_KEY_BONUS_MUGHAL</Tag>
 		<English>Mughal</English>
 		<French>Moghol</French>
-		<Italian>Mughal</Italian>
 		<Polish>Mugali</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MUISCA</Tag>
 		<English>Muisca</English>
-		<Italian>Muisca</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MUREX</Tag>
@@ -4817,7 +4737,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MUTAPA</Tag>
 		<English>Mutapa</English>
-		<Italian>Mutapa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NABATEANS</Tag>
@@ -4828,12 +4747,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NAHUA</Tag>
 		<English>Nahua</English>
-		<Italian>Nahua</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NAMA</Tag>
 		<English>Nama</English>
-		<Italian>Nama</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NANOACTUATORS</Tag>
@@ -4908,7 +4825,6 @@
 		<Tag>TXT_KEY_BONUS_NATRON</Tag>
 		<English>Natron</English>
 		<French>Soude</French>
-		<Italian>Natron</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NATRON_PEDIA</Tag>
@@ -4930,19 +4846,16 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NAVAJO</Tag>
 		<English>Navajo</English>
-		<Italian>Navajo</Italian>
 		<Polish>Nawahowie</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NAZCA</Tag>
 		<English>Nazca</English>
-		<Italian>Nazca</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NEPALESE</Tag>
 		<English>Nepalese</English>
 		<French>Nepalais</French>
-		<Italian>Nepalese</Italian>
 		<Polish>Nepalska</Polish>
 	</TEXT>
 	<TEXT>
@@ -5019,7 +4932,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NOK</Tag>
 		<English>Nok</English>
-		<Italian>Nok</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NOK_SCULPTURES</Tag>
@@ -5035,12 +4947,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NOONGAR</Tag>
 		<English>Noongar</English>
-		<Italian>Noongar</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NOOTKA</Tag>
 		<English>Nootka</English>
-		<Italian>Nootka</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NORMAN</Tag>
@@ -5082,7 +4992,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NUTELLA</Tag>
 		<English>Nutella</English>
-		<Italian>Nutella</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NUTELLA_PEDIA</Tag>
@@ -5104,7 +5013,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NYLON</Tag>
 		<English>Nylon</English>
-		<Italian>Nylon</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NYLON_PEDIA</Tag>
@@ -5115,7 +5023,6 @@
 		<Tag>TXT_KEY_BONUS_OBSIDIAN</Tag>
 		<English>Obsidian</English>
 		<French>Obsidienne</French>
-		<German>Obsidian</German>
 		<Italian>Ossidiana</Italian>
 		<Spanish>Obsidiana</Spanish>
 		<Polish>Obsydian</Polish>
@@ -5135,7 +5042,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ODAWA</Tag>
 		<English>Odawa</English>
-		<Italian>Odawa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_OIL</Tag>
@@ -5152,6 +5058,18 @@
 		<Italian>Il petrolio è un liquido naturale di colore giallo-nero che si trova nelle formazioni geologiche sotto la superficie terrestre. Il petrolio si forma quando grandi quantità di organismi morti, principalmente zooplancton e alghe, vengono sepolte sotto la roccia sedimentaria e sottoposte a calore e pressione intensi. È costituito da idrocarburi naturali di vario peso molecolare e può contenere composti organici vari. È comunemente raffinato in numerosi prodotti di consumo, dalla benzina al cherosene, dall'asfalto ai reagenti chimici utilizzati per la fabbricazione di materie plastiche, pesticidi e prodotti farmaceutici. Il suo uso come combustibile, tuttavia, è una delle principali cause del riscaldamento globale e dell'acidificazione degli oceani.</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_OLIVES</Tag>
+		<English>Olives</English>
+		<German>Oliven</German>
+		<Italian>Olive</Italian>
+		<Spanish>Aceitunas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_OLIVES_PEDIA</Tag>
+		<English>Olives are the fruits of the olive tree, a short and squat tree found in the Mediterranean Basin, the Arabian Peninsula, and southern Asia, that rarely exceeds 8-15 m (26-49 ft) in height. Olives are small drupes, 1–2.5 cm (0.39–0.98 in) long, thinner-fleshed and smaller in wild plants than in orchard cultivars. Olives are harvested in the green to purple stage, and are of major agricultural importance in the Mediterranean region as the source of olive oil, being one of the core ingredients in Mediterranean cuisine.</English>
+		<Italian>Le olive sono i frutti dell'albero di olivo, un albero corto e tozzo che si trova nel bacino del Mediterraneo, nella penisola arabica e in Asia meridionale, che raramente supera gli 8-15 m di altezza. Le olive sono piccole drupe, lunghe 1-2,5 cm, a polpa più sottile e più piccole nelle piante selvatiche rispetto alle cultivar di frutteto. Le olive vengono raccolte quando hanno il tipico colorito da verde a viola e sono di grande importanza agricola nella regione mediterranea come fonte di olio d'oliva, essendo uno degli ingredienti fondamentali della cucina mediterranea.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_OLIVE_OIL</Tag>
 		<English>Olive Oil</English>
 		<French>Huile d'olive</French>
@@ -5162,19 +5080,6 @@
 		<Tag>TXT_KEY_BONUS_OLIVE_OIL_PEDIA</Tag>
 		<English>Olive oil is a liquid fat obtained by pressing whole olives. It is commonly used in cooking, for frying foods or as a salad dressing. It is also used in cosmetics, pharmaceuticals, and soaps, and as a fuel for traditional oil lamps, and has additional uses in some religions. There is limited evidence of its possible health benefits. The composition of olive oil varies with the cultivar, altitude, time of harvest and extraction process. It consists mainly of oleic acid (up to 83%), with smaller amounts of other fatty acids including linoleic acid (up to 21%) and palmitic acid (up to 20%). Extra virgin olive oil is required to have no more than 0.8% free acidity and is considered to have favorable flavor characteristics.</English>
 		<Italian>L'olio d'oliva è un grasso liquido ottenuto dalla spremitura di olive intere. È comunemente usato in cucina, per friggere cibi o come condimento per insalate. È anche usato per cosmetici, prodotti farmaceutici e saponi e come combustibile per le tradizionali lampade a olio e ha usi aggiuntivi in alcune religioni. Vi sono prove limitate dei suoi possibili benefici per la salute. La composizione dell'olio d'oliva varia a seconda della cultivar, dell'altitudine, del tempo di raccolta e del processo di estrazione. È costituito principalmente da acido oleico (fino all'83%), con quantità minori di altri acidi grassi tra cui acido linoleico (fino al 21%) e acido palmitico (fino al 20%). L'olio extra vergine di oliva deve avere un'acidità libera non superiore allo 0,8% ed è considerato avere caratteristiche aromatiche favorevoli.</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_OLIVES</Tag>
-		<English>Olives</English>
-		<French>Olives</French>
-		<German>Oliven</German>
-		<Italian>Olive</Italian>
-		<Spanish>Aceitunas</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_OLIVES_PEDIA</Tag>
-		<English>Olives are the fruits of the olive tree, a short and squat tree found in the Mediterranean Basin, the Arabian Peninsula, and southern Asia, that rarely exceeds 8-15 m (26-49 ft) in height. Olives are small drupes, 1–2.5 cm (0.39–0.98 in) long, thinner-fleshed and smaller in wild plants than in orchard cultivars. Olives are harvested in the green to purple stage, and are of major agricultural importance in the Mediterranean region as the source of olive oil, being one of the core ingredients in Mediterranean cuisine.</English>
-		<Italian>Le olive sono i frutti dell'albero di olivo, un albero corto e tozzo che si trova nel bacino del Mediterraneo, nella penisola arabica e in Asia meridionale, che raramente supera gli 8-15 m di altezza. Le olive sono piccole drupe, lunghe 1-2,5 cm, a polpa più sottile e più piccole nelle piante selvatiche rispetto alle cultivar di frutteto. Le olive vengono raccolte quando hanno il tipico colorito da verde a viola e sono di grande importanza agricola nella regione mediterranea come fonte di olio d'oliva, essendo uno degli ingredienti fondamentali della cucina mediterranea.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_OLMEC</Tag>
@@ -5221,8 +5126,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_OPIUM</Tag>
 		<English>Opium</English>
-		<French>Opium</French>
-		<German>Opium</German>
 		<Italian>Oppio</Italian>
 		<Spanish>Opio</Spanish>
 	</TEXT>
@@ -5234,7 +5137,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ORANG_ASLI</Tag>
 		<English>Orang Asli</English>
-		<Italian>Orang Asli</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ORGANIC_COMPUTERS</Tag>
@@ -5305,7 +5207,6 @@
 		<Tag>TXT_KEY_BONUS_PAIUTE</Tag>
 		<English>Paiute</English>
 		<French>Païute</French>
-		<Italian>Paiute</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PAKISTANI</Tag>
@@ -5361,7 +5262,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PAPYRUS</Tag>
 		<English>Papyrus</English>
-		<German>Papyrus</German>
 		<Italian>Papiro</Italian>
 		<Spanish>Papiro</Spanish>
 		<Polish>Papirus</Polish>
@@ -5380,7 +5280,6 @@
 		<Tag>TXT_KEY_BONUS_PARROTS</Tag>
 		<English>Parrots</English>
 		<French>Perroquets</French>
-		<German>Parrots</German>
 		<Italian>Pappagalli</Italian>
 		<Spanish>Loros</Spanish>
 		<Polish>Papugi</Polish>
@@ -5412,13 +5311,11 @@
 		<Tag>TXT_KEY_BONUS_PASHTUN</Tag>
 		<English>Pashtun</English>
 		<French>Pashtoune</French>
-		<Italian>Pashtun</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PASTA</Tag>
 		<English>Pasta</English>
 		<French>Pâtes</French>
-		<Italian>Pasta</Italian>
 		<Polish>Makaron</Polish>
 	</TEXT>
 	<TEXT>
@@ -5450,6 +5347,12 @@
 		<Tag>TXT_KEY_BONUS_PEAT_PEDIA</Tag>
 		<English>Peat, also known as turf, is an accumulation of partially decayed vegetation or organic matter. Peat forms in wetland conditions, where flooding or stagnant water obstructs the flow of oxygen from the atmosphere, slowing the rate of decomposition. The peatland ecosystem is the most efficient carbon sink on the planet, because peatland plants capture carbon dioxide naturally released from the peat, maintaining an equilibrium. Over time, the formation of peat is often the first step in the geological formation of fossil fuels such as coal, particularly low-grade coal such as lignite. Peat is harvested as an important source of fuel in certain parts of the world.</English>
 		<Italian>La torba è un accumulo di vegetazione parzialmente decomposta o di materia organica. La torba si forma in zone umide, dove inondazioni o acqua stagnante ostruiscono il flusso di ossigeno dall'atmosfera, rallentando il tasso di decomposizione. Una torbiera è il dissipatore di carbonio più efficiente del pianeta, perché le piante catturano l'anidride carbonica rilasciata naturalmente, mantenendo un equilibrio. Nel tempo, la formazione della torba è spesso il primo passo nella formazione geologica di combustibili fossili come il carbone, in particolare quello di bassa qualità come la lignite. La torba viene usata come importante fonte di combustibile in alcune parti del mondo.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_PEGASUS</Tag>
+		<English>Pegasus</English>
+		<French>Pégase</French>
+		<Italian>Pegaso</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PELTS</Tag>
@@ -5573,9 +5476,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PEYOTE</Tag>
 		<English>Peyote</English>
-		<French>Peyote</French>
-		<German>Peyote</German>
-		<Italian>Peyote</Italian>
 		<Spanish>Peyotes</Spanish>
 		<Polish>Pejotl</Polish>
 	</TEXT>
@@ -5596,7 +5496,7 @@
 		<Polish>Lek - każda substancja, niezależnie od pochodzenia (naturalnego lub syntetycznego), nadająca się do bezpośredniego wprowadzania do organizmu w odpowiedniej postaci farmaceutycznej w celu osiągnięcia pożądanego efektu terapeutycznego, lub w celu zapobiegania chorobie, często podawana w ściśle określonej dawce. Lekiem jest substancja modyfikująca procesy fizjologiczne w taki sposób, że hamuje przyczyny lub objawy choroby, lub zapobiega jej rozwojowi. Określenie lek stosuje się też w stosunku do substancji stosowanych w celach diagnostycznych (np. metoklopramid w diagnostyce hiperprolaktynemii) oraz środków modyfikujących nie zmienione chorobowo funkcje organizmu (np. środki antykoncepcyjne).</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_PHILISTINES</Tag>
+		<Tag>TXT_KEY_BONUS_PHILISTINE</Tag>
 		<English>Philistines</English>
 		<Italian>Filisteo</Italian>
 	</TEXT>
@@ -5606,6 +5506,12 @@
 		<French>Phoenicien</French>
 		<Italian>Fenicio</Italian>
 		<Polish>Fenicka</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_PHOENIX</Tag>
+		<English>Phoenix</English>
+		<French>Phénix</French>
+		<Italian>Fenice</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PHONOGRAPHS</Tag>
@@ -5644,12 +5550,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PILAGA</Tag>
 		<English>Pilagá</English>
-		<Italian>Pilagá</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PIMA</Tag>
 		<English>Pima</English>
-		<Italian>Pima</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PISTACHIO</Tag>
@@ -5876,7 +5780,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_POYA</Tag>
 		<English>Poya</English>
-		<Italian>Poya</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PRICKLY_PEAR</Tag>
@@ -5917,7 +5820,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PUELCHE</Tag>
 		<English>Puelche</English>
-		<Italian>Puelche</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PUMICE_STONE</Tag>
@@ -5974,18 +5876,25 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_QIANG</Tag>
 		<English>Qiang</English>
-		<French>Qiang</French>
-		<Italian>Qiang</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_QILIN</Tag>
+		<English>Qilin</English>
+		<French>Qilin</French>
+		<Italian>Qilin</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_QILIN_PEDIA</Tag>
+		<English>A qilin is a mythical chimerical creature known in Chinese and other East Asian cultures, said to appear with the imminent arrival or passing of a sage or illustrious ruler. Qilin generally have Chinese dragon-like features, most notably their heads, eyes with thick eyelashes, manes that always flow upward and beards. The body is fully or partially scaled and often shaped like an ox, deer, or horse. They are always shown with cloven hooves. Qilin are thought to be a symbol of luck, good omens, protection, prosperity, success, and longevity by the Chinese; they are also a symbol of fertility, and often depicted in decorations as bringing a baby to a family.</English>
+		<Italian>Un qilin è una creatura mitica chimerica, nota nelle culture cinese e dell'Asia orientale, che si dice appaia all'arrivo o al passaggio imminente di un sovrano saggio o illustre. Generalmente, i lineamenti di un qilin sono simili a quelli di un dragone cinese, in particolare la testa, gli occhi con ciglia folte, le criniere che scorrono sempre verso l'alto e la barba. Il corpo è completamente o parzialmente coperto da scaglie, spesso a forma di bue, cervo o cavallo, e hanno sempre gli zoccoli. Si pensa che un qilin sia un simbolo di fortuna, buoni auspici, protezione, prosperità, successo e longevità da parte dei cinesi; sono anche un simbolo di fertilità e spesso raffigurati nelle decorazioni mentre portano un bimbo a una famiglia.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_QIN</Tag>
 		<English>Qin</English>
-		<Italian>Qin</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_QING</Tag>
 		<English>Qing</English>
-		<Italian>Qing</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_QUANTONIUM_CRYSTAL</Tag>
@@ -6020,18 +5929,21 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_QUECHUA</Tag>
 		<English>Quechua</English>
-		<Italian>Quechua</Italian>
 		<Polish>Keczua</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_QUERANDI</Tag>
 		<English>Querandi</English>
-		<Italian>Querandi</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_QUETZALCOATL</Tag>
+		<English>Quetzalcoatl</English>
+		<French>Quetzalcoatl</French>
+		<Italian>Quetzalcoatl</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_QULLA</Tag>
 		<English>Qulla</English>
-		<Italian>Qulla</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RABBIT</Tag>
@@ -6058,9 +5970,14 @@
 		<Italian>Un ricevitore radio, noto anche come radio, è un dispositivo elettronico che riceve le onde radio e converte le informazioni trasportate da loro in una forma utilizzabile. Viene utilizzato con un'antenna, che intercetta le onde radio elettromagnetiche e le converte in modo che il ricevitore possa estrarre le informazioni desiderate. Il ricevitore utilizza filtri elettronici per separare il segnale di radiofrequenza desiderato da tutti gli altri segnali raccolti dall'antenna, un amplificatore elettronico per aumentare la potenza del segnale per un'ulteriore elaborazione e infine recuperare le informazioni desiderate attraverso la demodulazione. Il tipo più familiare di ricevitore radio per la maggior parte delle persone è un ricevitore radio che riproduce il suono trasmesso dalle stazioni radio; tuttavia i radioricevitori sono ampiamente utilizzati in televisori, telefoni cellulari, modem wireless e altri componenti di sistemi di comunicazione, controllo remoto e rete wireless.</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_RAINBOW_SERPENT</Tag>
+		<English>Rainbow Serpent</English>
+		<French>Serpent Arc-en-ciel</French>
+		<Italian>Serpente arcobaleno</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_RAPA_NUI</Tag>
 		<English>Rapa Nui</English>
-		<Italian>Rapa Nui</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RARE_EARTH_MINERALS</Tag>
@@ -6112,7 +6029,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RED_OCHER</Tag>
 		<English>Red Ocher</English>
-		<Italian>Red Ocher</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_REEDS</Tag>
@@ -6341,7 +6257,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SAKA</Tag>
 		<English>Saka</English>
-		<Italian>Saka</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SALT</Tag>
@@ -6359,7 +6274,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SAMI</Tag>
 		<English>Sami</English>
-		<Italian>Sami</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SAMOAN</Tag>
@@ -6468,6 +6382,17 @@
 		<Polish>Scytyjska</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_SEASONING</Tag>
+		<English>Seasoning</English>
+		<French>Condiments</French>
+		<Italian>Condimenti</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_SEASONING_PEDIA</Tag>
+		<English>Seasoning is the process of adding salts, herbs, or spices to food to enhance the flavour. Substances used in seasoning depend on habits, which in turn may depend also on historical and geographical differences. These substances can be added before, during or after cooking food, depending on the recipe and on the effect that one wants to obtain.</English>
+		<Italian>Il condimento è il processo di aggiunta di sali, erbe o spezie al cibo per accrescere il sapore. Le sostanze utilizzate dipendono dalle abitudini, che a loro volta possono dipendere anche dalle differenze storiche e geografiche. Queste sostanze possono essere aggiunte prima, durante o dopo la cottura dei cibi, a seconda della ricetta e dell'effetto che si desidera ottenere.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_SEA_LION_AND_SEAL</Tag>
 		<English>Sea Lion and Seal</English>
 		<French>Lion de mer et phoque</French>
@@ -6482,18 +6407,6 @@
 		<Italian>I leoni marini e le foche costituiscono la famiglia delle Otariidae. La principale distinzione tra loro è la presenza di uno spesso strato di lanugine sotto la pelliccia nelle foche. Gli otariidi hanno proporzionalmente grandi pinne e muscoli pettorali e hanno la capacità di girare in avanti gli arti posteriori e camminare a quattro zampe, caratteristica che gli permette di camminare meglio sulla terraferma. Sono generalmente considerati meno adattati a uno stile di vita acquatico; tuttavia, possono raggiungere picchi di velocità più elevati e avere una maggiore manovrabilità in acqua. Erano, e sono tuttora, cacciati per le loro pelli, la loro carne e anche il loro grasso, usati per produrre olio di foca.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_SEASONING</Tag>
-		<English>Seasoning</English>
-		<French>Condiments</French>
-		<Italian>Condimenti</Italian>
-		<Polish>Seasoning</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_SEASONING_PEDIA</Tag>
-		<English>Seasoning is the process of adding salts, herbs, or spices to food to enhance the flavour. Substances used in seasoning depend on habits, which in turn may depend also on historical and geographical differences. These substances can be added before, during or after cooking food, depending on the recipe and on the effect that one wants to obtain.</English>
-		<Italian>Il condimento è il processo di aggiunta di sali, erbe o spezie al cibo per accrescere il sapore. Le sostanze utilizzate dipendono dalle abitudini, che a loro volta possono dipendere anche dalle differenze storiche e geografiche. Queste sostanze possono essere aggiunte prima, durante o dopo la cottura dei cibi, a seconda della ricetta e dell'effetto che si desidera ottenere.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_SELJUK</Tag>
 		<English>Seljuk</English>
 		<Italian>Selgiuchide</Italian>
@@ -6501,12 +6414,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SEMANG</Tag>
 		<English>Semang</English>
-		<Italian>Semang</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SEMINOLE</Tag>
 		<English>Seminole</English>
-		<Italian>Seminole</Italian>
 		<Polish>Seminolska</Polish>
 	</TEXT>
 	<TEXT>
@@ -6518,7 +6429,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SENNAR</Tag>
 		<English>Sennar</English>
-		<Italian>Sennar</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SERBIAN</Tag>
@@ -6541,7 +6451,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SHANG</Tag>
 		<English>Shang</English>
-		<Italian>Shang</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SHANG_JADE_RITUAL_ITEMS</Tag>
@@ -6626,7 +6535,6 @@
 		<Tag>TXT_KEY_BONUS_SIAMESE</Tag>
 		<English>Siamese</English>
 		<French>Siamois</French>
-		<Italian>Siamese</Italian>
 		<Polish>Syjamska</Polish>
 	</TEXT>
 	<TEXT>
@@ -6639,7 +6547,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SICAN</Tag>
 		<English>Sicán</English>
-		<Italian>Sicán</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SICILIAN</Tag>
@@ -6657,11 +6564,6 @@
 		<Polish>Jedwab</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_SILK_PEDIA</Tag>
-		<English>Silk is a natural protein fiber, consisting of two main proteins, sericin and fibroin. It is one of the strongest natural fibers, while being also smooth, soft, and durable. It is mainly produced by the larvae of insects undergoing complete metamorphosis, but many insects and arachnids produce silk throughout their lives. Generally only the silk of moth caterpillars has been used for textile manufacturing. Silk's absorbency makes it comfortable to wear in warm weather and protects from insect bites. It is often used for clothing or for industrial uses, such as parachutes, bicycle tires, comforter filling and artillery gunpowder bags.</English>
-		<Italian>La seta è una fibra proteica naturale, composta da due proteine principali, sericina e fibroina. È una delle fibre naturali più resistenti, pur essendo liscia, morbida e resistente. È prodotta principalmente dalle larve di insetti che compiono una completa metamorfosi, ma molti insetti e aracnidi producono seta durante la loro esistenza. Generalmente solo la seta dei bruchi falena viene utilizzata per la produzione tessile. La capacità di assorbenza della seta la rende comoda da indossare quando fa caldo e protegge dalle punture di insetti. È spesso usata per l'abbigliamento o per usi industriali, come paracadute, pneumatici per biciclette, imbottitura di piumini e sacchi di polvere da sparo per artiglieria.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_SILK_FIBERS</Tag>
 		<English>Silk Fibers</English>
 		<French>Fibres de soie</French>
@@ -6671,6 +6573,11 @@
 		<Tag>TXT_KEY_BONUS_SILK_FIBERS_PEDIA</Tag>
 		<English>A single thread filament is too thin to use on its own so women combine many threads to produce a thicker, usable fiber. They do this by hand-reeling the threads onto a wooden spindle to produce a uniform strand of raw silk. The process takes around 40 hours to produce a half kilogram of silk.</English>
 		<Polish>Jedwab - włókno pochodzenia zwierzęcego (białkowe) uzyskiwane z kokonu jedwabnika morwowego lub jedwabnika dębowego. Swiatowa produkcja jedwabiu na poziomie ok. 50 000 ton rocznie stanowi 0,2% całej produkcjiwłókien.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_SILK_PEDIA</Tag>
+		<English>Silk is a natural protein fiber, consisting of two main proteins, sericin and fibroin. It is one of the strongest natural fibers, while being also smooth, soft, and durable. It is mainly produced by the larvae of insects undergoing complete metamorphosis, but many insects and arachnids produce silk throughout their lives. Generally only the silk of moth caterpillars has been used for textile manufacturing. Silk's absorbency makes it comfortable to wear in warm weather and protects from insect bites. It is often used for clothing or for industrial uses, such as parachutes, bicycle tires, comforter filling and artillery gunpowder bags.</English>
+		<Italian>La seta è una fibra proteica naturale, composta da due proteine principali, sericina e fibroina. È una delle fibre naturali più resistenti, pur essendo liscia, morbida e resistente. È prodotta principalmente dalle larve di insetti che compiono una completa metamorfosi, ma molti insetti e aracnidi producono seta durante la loro esistenza. Generalmente solo la seta dei bruchi falena viene utilizzata per la produzione tessile. La capacità di assorbenza della seta la rende comoda da indossare quando fa caldo e protegge dalle punture di insetti. È spesso usata per l'abbigliamento o per usi industriali, come paracadute, pneumatici per biciclette, imbottitura di piumini e sacchi di polvere da sparo per artiglieria.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SILVER_INGOTS</Tag>
@@ -6700,13 +6607,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SINTASHTA</Tag>
 		<English>Sintashta</English>
-		<Italian>Sintashta</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SIOUX</Tag>
 		<English>Sioux</English>
-		<French>Sioux</French>
-		<Italian>Sioux</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SKIS</Tag>
@@ -6781,7 +6685,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SONGHAI</Tag>
 		<English>Songhai</English>
-		<Italian>Songhai</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SOUTH_AFRICAN</Tag>
@@ -6955,7 +6858,6 @@
 		<Tag>TXT_KEY_BONUS_SUDANESE</Tag>
 		<English>Sudanese</English>
 		<French>Soudanaise</French>
-		<Italian>Sudanese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SUGAR</Tag>
@@ -7000,7 +6902,6 @@
 		<Tag>TXT_KEY_BONUS_SUNDANESE</Tag>
 		<English>Sundanese</English>
 		<French>Sundanaise</French>
-		<Italian>Sundanese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SUPERINTELLIGENT_COMPUTERS</Tag>
@@ -7038,17 +6939,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SURINAMESE</Tag>
 		<English>Surinamese</English>
-		<Italian>Surinamese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SWAHILI</Tag>
 		<English>Swahili</English>
-		<Italian>Swahili</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SWAZI</Tag>
 		<English>Swazi</English>
-		<Italian>Swazi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SWEDISH</Tag>
@@ -7111,7 +7009,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TAGALOG</Tag>
 		<English>Tagalog</English>
-		<Italian>Tagalog</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TAHITIAN</Tag>
@@ -7123,13 +7020,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TAIRONA</Tag>
 		<English>Tairona</English>
-		<Italian>Tairona</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TAIWANESE</Tag>
 		<English>Taiwanese</English>
 		<French>Taiwanais</French>
-		<Italian>Taiwanese</Italian>
 		<Polish>Tajwańska</Polish>
 	</TEXT>
 	<TEXT>
@@ -7140,12 +7035,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TAMIL</Tag>
 		<English>Tamil</English>
-		<Italian>Tamil</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TANG</Tag>
 		<English>Tang</English>
-		<Italian>Tang</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TANKS</Tag>
@@ -7199,9 +7092,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TAR_PEDIA</Tag>
-		<English>Tar was used as seal for roofing shingles and to seal the hulls of ships and boats. For millennia wood tar was used to waterproof sails and boats, but today sails made from inherently waterproof synthetic substances have negated the need for tar. Wood tar is still used to seal traditional wooden boats and the roofs of historical shingle-roofed churches, as well as painting exterior walls of log buildings. Tar is also a general disinfectant.</English>
-		<Italian>Il catrame veniva usato come sigillante per i tetti e per le chiglie delle navi. Per millenni il catame è stato usato per rendere impermeabili vari tipi di imbarcazione; al giorno d'oggi, sostanze impermeabilizzanti sintetiche hanno reso il catrame obsoleto. Il catrame veine ancora usato per sigillare barche tradizionali e chiese con i tetti in legno, oltre che impermeabilizzare le pareti esterne delle case in legno; il catrame è anche un generico disinfettante.</Italian>
-		<Polish>Smoła, smoła surowa - produkty odgazowania węgla, łupków bitumicznych lub drewna, rzadko torfu. Składa się głównie z mieszaniny wielu rodzajów węglowodorów oraz innych związków organicznych, zawierających tlen, azot i siarkę, ponadto niektóre rodzaje smoły mogą zawierać pewną ilość grafitu i fulerenów.</Polish>
+		<English>Tar is a dark brown or black viscous liquid made of hydrocarbons and free carbon, obtained from a wide variety of organic materials through destructive distillation. Tar can be produced from coal, wood, petroleum, or peat. Tar-like products can also be produced from other forms of organic matter. Tar was used as seal for roofing shingles and tar paper, to seal the hulls of ships and boats, and also a general disinfectant. Tar was also used for public humiliation, known as "tarring and feathering", but it was quickly abandoned due to the temporary and permanent physical damage caused by the burns of the tar from the application.</English>
+		<Italian>Il catrame è un liquido viscoso marrone scuro o nero prodotto da idrocarburi e carbonio libero, ottenuto da un'ampia varietà di materiali organici attraverso distillazione distruttiva. Il catrame può essere prodotto da carbone, legno, petrolio o torba. Prodotti simili al catrame possono anche essere ottenuti da altre forme di materia organica. Il catrame veniva usato come impermeabilizzante per tegole e carta catramata, per gli scafi di navi e imbarcazioni e anche come disinfettante generale. Il catrame è stato anche usato come forma di tortura e punizione, nel quale una persona veniva incatramata e poi ricoperta di piume; il metodo fu rapidamente abbandonato a causa dei danni fisici temporanei e permanenti delle ustioni provocate del catrame ancora caldo.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TARASCAN</Tag>
@@ -7257,7 +7149,6 @@
 		<Tag>TXT_KEY_BONUS_TERRACOTTA</Tag>
 		<English>Terracotta</English>
 		<French>Terre cuite</French>
-		<Italian>Terracotta</Italian>
 		<Polish>Terakota</Polish>
 	</TEXT>
 	<TEXT>
@@ -7266,10 +7157,19 @@
 		<Italian>La terracotta è una ceramica a base di argilla dal corpo poroso. La terracotta infornata non è a tenuta stagna, ma la brunitura superficiale del corpo prima della cottura può ridurne la porosità e uno strato di smalto può renderlo a tenuta stagna. È adatta per trasportare acqua in pressione sottoterra, per i vasi da giardino o per le decorazione di ambienti e per i contenitori di olio, le lampade a olio o i forni. La maggior parte degli altri usi, come stoviglie, tubazioni sanitarie o decorazione di edifici in ambienti freddi, richiede che la terracotta venga prima smaltata.</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_TERRA_SIGILLATA</Tag>
+		<English>Terra Sigillata</English>
+		<French>Céramique sigillée</French>
+		<Italian>Ceramica sigillata</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_TERRA_SIGILLATA_PEDIA</Tag>
+		<English>Terra sigillata is a term with at least three distinct meanings: as a description of medieval medicinal earth; in archaeology, as a general term for some of the fine red Ancient Roman pottery with glossy surface slips made in specific areas of the Roman Empire; and more recently, as a description of a contemporary studio pottery technique supposedly inspired by ancient pottery. Usually roughly translated as 'sealed earth', the meaning of 'terra sigillata' is 'clay bearing little images' (Latin sigilla), not 'clay with a sealed (impervious) surface'. The archaeological term is applied, however, to plain-surfaced pots as well as those decorated with figures in relief. </English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_TESSERACT</Tag>
 		<English>Tesseract</English>
 		<French>Tesseracte</French>
-		<Italian>Tesseract</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TESSERACT_PEDIA</Tag>
@@ -7393,22 +7293,18 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TIWI</Tag>
 		<English>Tiwi</English>
-		<Italian>Tiwi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TLATILCO</Tag>
 		<English>Tlatilco</English>
-		<Italian>Tlatilco</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TLAXCALTEC</Tag>
 		<English>Tlaxcaltec</English>
-		<Italian>Tlaxcaltec</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TOBA</Tag>
 		<English>Toba</English>
-		<Italian>Toba</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TOBACCO</Tag>
@@ -7507,12 +7403,10 @@
 		<Tag>TXT_KEY_BONUS_TUAREG</Tag>
 		<English>Tuareg</English>
 		<French>Touareg</French>
-		<Italian>Tuareg</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TUCANO</Tag>
 		<English>Tucano</English>
-		<Italian>Tucano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TUNGSTEN</Tag>
@@ -7531,7 +7425,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TUNGUS</Tag>
 		<English>Tungus</English>
-		<Italian>Tungus</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TUNISIAN</Tag>
@@ -7542,7 +7435,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TUPI</Tag>
 		<English>Tupi</English>
-		<Italian>Tupi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TURKISH</Tag>
@@ -7560,7 +7452,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TURQUOISE</Tag>
 		<English>Turquoise</English>
-		<French>Turquoise</French>
 		<German>Türkise</German>
 		<Italian>Turchesi</Italian>
 		<Spanish>Turquesas</Spanish>
@@ -7610,8 +7501,8 @@
 		<Tag>TXT_KEY_BONUS_UNHAPPY</Tag>
 		<English>Unhappy: +%d1_Change[ICON_UNHAPPY]</English>
 		<French>Moral: +%d1_Change[ICON_UNHAPPY]</French>
-		<German>[ICON_BULLET]Unzufriedenheit: +%d1_Change[ICON_UNHAPPY]</German>
-		<Italian>Infelici: +%d1_Change[ICON_UNHAPPY]</Italian>
+		<German>Unzufriedenheit: +%d1_Change[ICON_UNHAPPY]</German>
+		<Italian>Morale: +%d1_Change[ICON_UNHAPPY]</Italian>
 		<Spanish>Infeliz: +%d1_Change[ICON_UNHAPPY]</Spanish>
 		<Polish>Niezadowoleni: +%d1_Change[ICON_UNHAPPY]</Polish>
 	</TEXT>
@@ -7641,7 +7532,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_URANIUM</Tag>
 		<English>Uranium</English>
-		<French>Uranium</French>
 		<German>Uran</German>
 		<Italian>Uranio</Italian>
 		<Spanish>Uranio</Spanish>
@@ -7821,7 +7711,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WARAY</Tag>
 		<English>Waray</English>
-		<Italian>Waray</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WARES_PEDIA</Tag>
@@ -7831,7 +7720,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WARI</Tag>
 		<English>Wari</English>
-		<Italian>Wari</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WARP_DRIVES</Tag>
@@ -7868,6 +7756,17 @@
 		<Polish>Akratopega - woda podziemna, której mineralizacja wynosi 500-1000 mg/dm, a temperatura nie przekracza 20 C. W klasyfikacji wód ze względu na zawartość związków mineralnych znajduje się pomiędzy wodą słodką a mineralną. Produkowana jest w kilku rodzajach: silnie gazowana, gazowana, niegazowana, lekko gazowana oraz jako musująca Perlage.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_WATERPROOF_CEMENT</Tag>
+		<English>Waterproof Cement</English>
+		<French>Ciment imperméable</French>
+		<Italian>Cemento impermeabile</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_WATERPROOF_CEMENT_PEDIA</Tag>
+		<English>Waterproof cement is a composite material composed of fine and coarse aggregate bonded together with a fluid cement ("cement paste") that hardens over time, with the addition of crystalline admixtures during batching to lower permeability. The reaction takes place when exposed to water and un-hydrated cement particles to form insoluble needle-shaped crystals, which fill capillary pores and micro-cracks. The mixture can expect to self-seal as constant exposure to water will continuously initiate crystallization to ensure permanent waterproof protection.</English>
+		<Italian>Il cemento impermeabile è un materiale composito fatto da aggregato fine e grossolano unito con un cemento fluido ("pasta di cemento") che si indurisce nel tempo, con l'aggiunta di additivi cristallini durante il dosaggio per ridurre la permeabilità. La reazione ha luogo quando acqua e particelle di cemento non idratate entrano in contatto, formando cristalli insolubili a forma di ago, che riempiono i pori e le micro-crepe. La mistura di fatto si autosigilla, poiché l'esposizione costante all'acqua avvia continuamente la cristallizzazione per garantire una protezione impermeabile permanente.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_WAX</Tag>
 		<English>Wax</English>
 		<French>Cire</French>
@@ -7882,12 +7781,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WAYANA</Tag>
 		<English>Wayana</English>
-		<Italian>Wayana</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WAYUU</Tag>
 		<English>Wayuu</English>
-		<Italian>Wayuu</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WELSH</Tag>
@@ -7906,11 +7803,6 @@
 		<Polish>Wieloryby</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_WHALE_PEDIA</Tag>
-		<English>Whales are a widely distributed and diverse group of fully aquatic placental marine mammals. Whales are creatures of the open ocean: they feed, mate, give birth, suckle and raise their young at sea. Whales range in size from the 2.6 metres (8.5 ft) and 135 kilograms (298 lb) dwarf sperm whale to the 29.9 metres (98 ft) and 190 metric tons (210 short tons) blue whale, which is the largest known creature that has ever lived. Once relentlessly hunted for their products, whales are now protected by international law. Whales are typically hunted for their meat, blubber, bones (for tools), oil (for lamp fuel and lubricants), baleen (for corsets and skirt hoops), and ambergris (for fixative for perfumes).</English>
-		<Italian>Le balene sono un gruppo ampiamente distribuito e diversificato di mammiferi marini placentare completamente acquatici. Le balene sono creature dell'oceano: si nutrono, si accoppiano, danno alla luce, allattano e allevano i loro piccoli in mare. Le balene variano in dimensione dai 2,6 metri e 135 chilogrammi del capodoglio nano ai 29,9 metri e 190 tonnellate delle balene blu, che sono le più grandi creature conosciute mai vissute. Una volta cacciate incessantemente per i loro prodotti, le balene sono ora protette dal diritto internazionale. Le balene sono in genere cacciate per la carne, il grasso, le ossa (per utensili), l'olio (per lampade e lubrificanti), il fanone (per corsetti e cerchietti per gonna) e l'ambra grigia (fissativo per profumi).</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_WHALE_OIL</Tag>
 		<English>Whale Oil</English>
 		<French>Huile de baleine</French>
@@ -7921,6 +7813,11 @@
 		<Tag>TXT_KEY_BONUS_WHALE_OIL_PEDIA</Tag>
 		<English>In much later times whale oil was favoured for its cleaner burning flame.</English>
 		<Italian>In tempi recenti l'olio di balena era molto usato per la sua fiamma più pulita.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_WHALE_PEDIA</Tag>
+		<English>Whales are a widely distributed and diverse group of fully aquatic placental marine mammals. Whales are creatures of the open ocean: they feed, mate, give birth, suckle and raise their young at sea. Whales range in size from the 2.6 metres (8.5 ft) and 135 kilograms (298 lb) dwarf sperm whale to the 29.9 metres (98 ft) and 190 metric tons (210 short tons) blue whale, which is the largest known creature that has ever lived. Once relentlessly hunted for their products, whales are now protected by international law. Whales are typically hunted for their meat, blubber, bones (for tools), oil (for lamp fuel and lubricants), baleen (for corsets and skirt hoops), and ambergris (for fixative for perfumes).</English>
+		<Italian>Le balene sono un gruppo ampiamente distribuito e diversificato di mammiferi marini placentare completamente acquatici. Le balene sono creature dell'oceano: si nutrono, si accoppiano, danno alla luce, allattano e allevano i loro piccoli in mare. Le balene variano in dimensione dai 2,6 metri e 135 chilogrammi del capodoglio nano ai 29,9 metri e 190 tonnellate delle balene blu, che sono le più grandi creature conosciute mai vissute. Una volta cacciate incessantemente per i loro prodotti, le balene sono ora protette dal diritto internazionale. Le balene sono in genere cacciate per la carne, il grasso, le ossa (per utensili), l'olio (per lampade e lubrificanti), il fanone (per corsetti e cerchietti per gonna) e l'ambra grigia (fissativo per profumi).</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WHEAT</Tag>
@@ -7969,11 +7866,6 @@
 		<Polish>Drewno</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_WOOD_PEDIA</Tag>
-		<English>Wood is a porous and fibrous structural tissue found in the stems and roots of trees and other woody plants. It is a natural composite of cellulose fibers that are strong in tension and embedded in a matrix of lignin that resists compression. In a living tree it performs a support function, enabling woody plants to grow large or to stand up by themselves. It also conveys water and nutrients between the leaves, other growing tissues, and the roots. Wood has been used for thousands of years for fuel, as a construction material, for making tools and weapons, furniture and paper. During 20th century, it emerged as a feedstock for the production of purified cellulose and its derivatives, such as cellophane and cellulose acetate.</English>
-		<Italian>Il legno è un tessuto strutturale poroso e fibroso trovato negli steli e nelle radici di alberi e altre piante legnose. È un composito naturale di fibre di cellulosa in forte tensione e incorporato in una matrice di lignina che resiste alla compressione. In un albero vivente svolge una funzione di supporto, permettendo alle piante legnose di crescere grandi o di restare in piedi da sole. Trasmette anche acqua e sostanze nutritive tra le foglie, altri tessuti in crescita e le radici. Il legno è stato usato per migliaia di anni come combustibile, come materiale da costruzione e per fabbricare strumenti, armi, mobili e carta. Nel corso del XX secolo, è emerso come materia prima per la produzione di cellulosa purificata e suoi derivati, come cellophane e acetato di cellulosa.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_WOODWIND_INSTRUMENTS</Tag>
 		<English>Woodwind Instruments</English>
 		<French>Instruments à vent</French>
@@ -7985,6 +7877,11 @@
 		<English>A woodwind instrument is a musical instrument which produces sound when the player blows air against a sharp edge or through a reed, causing the air within its resonator (usually a column of air) to vibrate. Most of these instruments are made of wood but can be made of other materials, such as metals or plastics.</English>
 		<Italian>Uno strumento a fuato è uno strumento musicale che produce suoni quando il musicista soffia attraverso un'apertura dello strumento, facendo vibrare l'aria all'interno della cassa di risonanza. La maggior parte di questi strumenti sono fatti in legno, ma possono essere costruiti anche in metallo o in plastica.</Italian>
 		<Polish>Instrument dęty drewniany - instrument dęty, w którym wibratorem jest drewniany stroik, bądź krawędź, o którą rozpraszany jest strumień powietrza. Sam instrument może być wykonany z dowolnego materiału, np. drewna, metalu, lub tworzywa sztucznego. Zródłem dźwięku w instrumentach dętych drewnianych są wibracje powietrza, których częstotliwość (wysokość dźwięku) jest regulowana przez zakrywanie otworów w korpusie instrumentu. Ponieważ przykrywanie wielu otworów naraz byłoby trudne lub nawet niewykonalne, w wielu instrumentach dętych drewnianych stosuje się mechanizm klapkowy.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_WOOD_PEDIA</Tag>
+		<English>Wood is a porous and fibrous structural tissue found in the stems and roots of trees and other woody plants. It is a natural composite of cellulose fibers that are strong in tension and embedded in a matrix of lignin that resists compression. In a living tree it performs a support function, enabling woody plants to grow large or to stand up by themselves. It also conveys water and nutrients between the leaves, other growing tissues, and the roots. Wood has been used for thousands of years for fuel, as a construction material, for making tools and weapons, furniture and paper. During 20th century, it emerged as a feedstock for the production of purified cellulose and its derivatives, such as cellophane and cellulose acetate.</English>
+		<Italian>Il legno è un tessuto strutturale poroso e fibroso trovato negli steli e nelle radici di alberi e altre piante legnose. È un composito naturale di fibre di cellulosa in forte tensione e incorporato in una matrice di lignina che resiste alla compressione. In un albero vivente svolge una funzione di supporto, permettendo alle piante legnose di crescere grandi o di restare in piedi da sole. Trasmette anche acqua e sostanze nutritive tra le foglie, altri tessuti in crescita e le radici. Il legno è stato usato per migliaia di anni come combustibile, come materiale da costruzione e per fabbricare strumenti, armi, mobili e carta. Nel corso del XX secolo, è emerso come materia prima per la produzione di cellulosa purificata e suoi derivati, come cellophane e acetato di cellulosa.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WOOL</Tag>
@@ -8003,37 +7900,30 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_XIA</Tag>
 		<English>Xia</English>
-		<Italian>Xia</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_XIANBEI</Tag>
 		<English>Xianbei</English>
-		<Italian>Xianbei</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_XIONGU</Tag>
+		<Tag>TXT_KEY_BONUS_XIONGNU</Tag>
 		<English>Xiongnu</English>
-		<Italian>Xiongnu</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_YAGHAN</Tag>
 		<English>Yaghan</English>
-		<Italian>Yaghan</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_YAGUA</Tag>
 		<English>Yagua</English>
-		<Italian>Yagua</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_YAMATO</Tag>
 		<English>Yamato</English>
-		<Italian>Yamato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_YANOMAMI</Tag>
 		<English>Yanomami</English>
-		<Italian>Yanomami</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_YEMENI</Tag>
@@ -8056,7 +7946,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_YOLNGU</Tag>
 		<English>Yolngu</English>
-		<Italian>Yolngu</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ZANZIBARI</Tag>
@@ -8073,7 +7962,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ZENU</Tag>
 		<English>Zenú</English>
-		<Italian>Zenú</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ZIMBABWEAN</Tag>
@@ -8096,12 +7984,10 @@
 		<Tag>TXT_KEY_BONUS_ZULU</Tag>
 		<English>Zulu</English>
 		<French>Zoulou</French>
-		<Italian>Zulu</Italian>
 		<Polish>Zulusów</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ZUNI</Tag>
 		<English>Zuñi</English>
-		<Italian>Zuñi</Italian>
 	</TEXT>
 </Civ4GameText>

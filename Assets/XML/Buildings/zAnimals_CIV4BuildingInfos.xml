@@ -1,6 +1,4 @@
-<?xml version="1.0"?>
-	<!-- Modified by Strategyonly -->
-	<!-- ###################################################################################### -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4BuildingInfos xmlns="x-schema:../Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
@@ -15725,12 +15723,12 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<PropertyManipulators>
-			     <PropertySource>
-			         <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			         <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			           <iAmountPerTurn>1</iAmountPerTurn>
-			     </PropertySource>
-	           </PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TAPIR_STORIES</Type>
@@ -15766,11 +15764,11 @@
 				</Flavor>
 			</Flavors>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			    <iAmountPerTurn>1</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -15796,12 +15794,12 @@
 				</Flavor>
 			</Flavors>
 			<PropertyManipulators>
-			     <PropertySource>
-			         <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			         <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			           <iAmountPerTurn>1</iAmountPerTurn>
-			     </PropertySource>
-	           </PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MALAYAN_TAPIR_MYTH</Type>
@@ -15895,12 +15893,12 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<PropertyManipulators>
-			     <PropertySource>
-			         <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			         <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			           <iAmountPerTurn>1</iAmountPerTurn>
-			     </PropertySource>
-	           </PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MALAYAN_TAPIR_STORIES</Type>
@@ -15936,11 +15934,11 @@
 				</Flavor>
 			</Flavors>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			    <iAmountPerTurn>1</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -15966,12 +15964,12 @@
 				</Flavor>
 			</Flavors>
 			<PropertyManipulators>
-			     <PropertySource>
-			         <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			         <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			           <iAmountPerTurn>1</iAmountPerTurn>
-			     </PropertySource>
-	           </PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MOUNTAIN_TAPIR_MYTH</Type>
@@ -16065,12 +16063,12 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<PropertyManipulators>
-			     <PropertySource>
-			         <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			         <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			           <iAmountPerTurn>1</iAmountPerTurn>
-			     </PropertySource>
-	           </PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MOUNTAIN_TAPIR_STORIES</Type>
@@ -16106,11 +16104,11 @@
 				</Flavor>
 			</Flavors>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			    <iAmountPerTurn>1</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -16136,13 +16134,13 @@
 				</Flavor>
 			</Flavors>
 			<PropertyManipulators>
-			     <PropertySource>
-			        <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-						<PropertyType>PROPERTY_EDUCATION</PropertyType>
-			            <iAmountPerTurn>1</iAmountPerTurn>
-					</PropertySource>
-	            </PropertyManipulators>
-	    </BuildingInfo>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
+		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BAIRDS_TAPIR_MYTH</Type>
 			<Description>TXT_KEY_BUILDING_BAIRDS_TAPIR_MYTH</Description>
@@ -16235,12 +16233,12 @@
 				</ReplaceBuilding>
 			</ReplaceBuildings>
 			<PropertyManipulators>
-			     <PropertySource>
-			         <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			         <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			           <iAmountPerTurn>1</iAmountPerTurn>
-			     </PropertySource>
-	           </PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BAIRDS_TAPIR_STORIES</Type>
@@ -16276,11 +16274,11 @@
 				</Flavor>
 			</Flavors>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			    <iAmountPerTurn>1</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -16306,12 +16304,12 @@
 				</Flavor>
 			</Flavors>
 			<PropertyManipulators>
-			     <PropertySource>
-			         <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			         <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			           <iAmountPerTurn>1</iAmountPerTurn>
-			     </PropertySource>
-	           </PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BRAZILIAN_TAPIR_MYTH</Type>
@@ -16446,11 +16444,11 @@
 				</Flavor>
 			</Flavors>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			    <iAmountPerTurn>1</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -16476,12 +16474,12 @@
 				</Flavor>
 			</Flavors>
 			<PropertyManipulators>
-			     <PropertySource>
-			         <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			         <PropertyType>PROPERTY_EDUCATION</PropertyType>
-			           <iAmountPerTurn>1</iAmountPerTurn>
-			     </PropertySource>
-	           </PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AMPHIBIAN_POND</Type>
@@ -17038,9 +17036,9 @@
 			<iAsset>3</iAsset>
 			<fVisibilityPriority>10</fVisibilityPriority>
 			<CommerceModifiers>
-            	<iCommerce>0</iCommerce>
-            	<iCommerce>0</iCommerce>
-            	<iCommerce>5</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>5</iCommerce>
 			</CommerceModifiers>
 			<SpecialistCounts>
 				<SpecialistCount>
@@ -17231,7 +17229,7 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_COASTAL_FISH_FARM</ArtDefineTag>
 			<PrereqTech>TECH_AQUACULTURE</PrereqTech>
-      		<FreeBonus>BONUS_FISH</FreeBonus>
+			<FreeBonus>BONUS_FISH</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>-1</iCost>
 			<MapCategoryTypes>
@@ -17283,7 +17281,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_COW_HERD</ArtDefineTag>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
-      		<FreeBonus>BONUS_COW</FreeBonus>
+			<FreeBonus>BONUS_COW</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
@@ -17347,7 +17345,7 @@
 			<Strategy>TXT_KEY_BUILDING_DEER_HERD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DEER_HERD</ArtDefineTag>
-      		<FreeBonus>BONUS_DEER</FreeBonus>
+			<FreeBonus>BONUS_DEER</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
@@ -17398,11 +17396,11 @@
 					<UnitCombatType>UNITCOMBAT_CANINE</UnitCombatType>
 					<iExperience>2</iExperience>
 				</UnitCombatFreeExperience>
-                 <UnitCombatFreeExperience>
+				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
  					<iExperience>1</iExperience>
 				</UnitCombatFreeExperience>
-                 <UnitCombatFreeExperience>
+				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
  					<iExperience>1</iExperience>
 				</UnitCombatFreeExperience>
@@ -17430,7 +17428,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DONKEY_HERD</ArtDefineTag>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
-      		<FreeBonus>BONUS_DONKEY</FreeBonus>
+			<FreeBonus>BONUS_DONKEY</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
@@ -17463,7 +17461,7 @@
 			<Strategy>TXT_KEY_BUILDING_ELEPHANT_HERD_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ELEPHANT_HERD</ArtDefineTag>
-      		<FreeBonus>BONUS_ELEPHANTS</FreeBonus>
+			<FreeBonus>BONUS_ELEPHANTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
@@ -17713,7 +17711,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HORSE_HERD</ArtDefineTag>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
-      		<FreeBonus>BONUS_HORSE</FreeBonus>
+			<FreeBonus>BONUS_HORSE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
@@ -17823,7 +17821,7 @@
 					<iExperience>3</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<BonusHealthChanges>
 				<BonusHealthChange>
 					<BonusType>BONUS_DEER</BonusType>
@@ -17862,7 +17860,7 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>25</iConquestProb>
-        </BuildingInfo>
+		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Master Hunter Tradition -->
 			<Type>BUILDING_MASTER_HUNTER_TRADITION</Type>
@@ -17906,7 +17904,7 @@
 					<iExperience>3</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<!-- Special Health and Happiness  modifiers -->
+			<!-- Special Health and Happiness modifiers -->
 			<BonusHealthChanges>
 				<BonusHealthChange>
 					<BonusType>BONUS_DEER</BonusType>
@@ -17947,23 +17945,23 @@
 			<iConquestProb>100</iConquestProb>
 		</BuildingInfo>
 		<BuildingInfo>
-            <Type>BUILDING_MASTER_SEA_HUNTER</Type>
-            <Description>TXT_KEY_BUILDING_MASTER_SEA_HUNTER</Description>
-            <Civilopedia>TXT_KEY_BUILDING_MASTER_SEA_HUNTER_PEDIA</Civilopedia>
+			<Type>BUILDING_MASTER_SEA_HUNTER</Type>
+			<Description>TXT_KEY_BUILDING_MASTER_SEA_HUNTER</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MASTER_SEA_HUNTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MASTER_SEA_HUNTER_STRATEGY</Strategy>
-            <Advisor>ADVISOR_MILITARY</Advisor>
-            <ArtDefineTag>ART_DEF_BUILDING_MASTER_SEA_HUNTER</ArtDefineTag>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_MASTER_SEA_HUNTER</ArtDefineTag>
  			<ObsoleteTech>TECH_SATELLITES</ObsoleteTech>
 			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
-	        <FreePromotion>PROMOTION_SEA_HUNTER1</FreePromotion>
-            <iCost>-1</iCost>
+			<FreePromotion>PROMOTION_SEA_HUNTER1</FreePromotion>
+			<iCost>-1</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-            <iConquestProb>25</iConquestProb>
-            <iAsset>1</iAsset>
-            <iPower>4</iPower>
-            <fVisibilityPriority>10</fVisibilityPriority>
+			<iConquestProb>25</iConquestProb>
+			<iAsset>1</iAsset>
+			<iPower>4</iPower>
+			<fVisibilityPriority>10</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -17975,17 +17973,17 @@
 					<iExperience>1</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-           <Flavors>
-                <Flavor>
-                    <FlavorType>FLAVOR_GROWTH</FlavorType>
-                    <iFlavor>5</iFlavor>
-                </Flavor>
-                <Flavor>
-                    <FlavorType>FLAVOR_MILITARY</FlavorType>
-                    <iFlavor>10</iFlavor>
-                </Flavor>
-            </Flavors>
-        </BuildingInfo>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_GROWTH</FlavorType>
+					<iFlavor>5</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_MILITARY</FlavorType>
+					<iFlavor>10</iFlavor>
+				</Flavor>
+			</Flavors>
+		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MULE_TRAINER</Type>
 			<Description>TXT_KEY_BUILDING_MULE_TRAINER</Description>
@@ -18040,7 +18038,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MUSKOX_HERD</ArtDefineTag>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
-      		<FreeBonus>BONUS_CARCASS</FreeBonus>
+			<FreeBonus>BONUS_CARCASS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iCost>-1</iCost>
 			<MapCategoryTypes>
@@ -18145,7 +18143,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_PIG_HERD</ArtDefineTag>
 			<PrereqTech>TECH_ANIMAL_HUSBANDRY</PrereqTech>
-      		<FreeBonus>BONUS_PIG</FreeBonus>
+			<FreeBonus>BONUS_PIG</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
 				<ExtraFreeBonus>
@@ -19110,6 +19108,7 @@
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<FreeBuilding>BUILDING_MASTER_SEA_HUNTER</FreeBuilding>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRADITION_HUNTER</Type>
@@ -19134,6 +19133,7 @@
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<FreeBuilding>BUILDING_MASTER_HUNTER_TRADITION</FreeBuilding>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRADITION_TOTEM</Type>
@@ -19153,6 +19153,7 @@
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<FreeBuilding>BUILDING_ANIMAL_TOTEM</FreeBuilding>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TRADITION_NAVAL_TOTEM</Type>
@@ -19171,6 +19172,7 @@
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<FreeBuilding>BUILDING_NAVAL_TOTEM</FreeBuilding>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CAVE_LION_MYTH</Type>
@@ -35550,18 +35552,18 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GALAPOGOS_TORTOISE_MYTH</Type>
-			<Description>TXT_KEY_BUILDING_GALAPOGOS_TORTOISE_MYTH</Description>
+			<Type>BUILDING_GALAPAGOS_TORTOISE_MYTH</Type>
+			<Description>TXT_KEY_BUILDING_GALAPAGOS_TORTOISE_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GALAPOGOS_TORTOISE_MYTH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GALAPAGOS_TORTOISE_MYTH</ArtDefineTag>
 			<iCost>-1</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>			<iAsset>2</iAsset>
 			<iPower>2</iPower>
-			<FreeBuilding>BUILDING_GALAPOGOS_TORTOISE_MYTH_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_GALAPAGOS_TORTOISE_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -35591,30 +35593,30 @@
 			</PrereqInCityBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_GALAPOGOS_TORTOISE_MYTH_EFFECT</BuildingMustNotHave>
+					<BuildingMustNotHave>BUILDING_GALAPAGOS_TORTOISE_MYTH_EFFECT</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GALAPOGOS_TORTOISE_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_GALAPOGOS_TORTOISE_MYTH_EFFECT</Description>
+			<Type>BUILDING_GALAPAGOS_TORTOISE_MYTH_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_GALAPAGOS_TORTOISE_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GALAPOGOS_TORTOISE_MYTH</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GALAPAGOS_TORTOISE_MYTH</ArtDefineTag>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>-1</iCost>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GALAPOGOS_TORTOISE_STORY</Type>
-			<Description>TXT_KEY_BUILDING_GALAPOGOS_TORTOISE_STORY</Description>
+			<Type>BUILDING_GALAPAGOS_TORTOISE_STORY</Type>
+			<Description>TXT_KEY_BUILDING_GALAPAGOS_TORTOISE_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GALAPOGOS_TORTOISE_STORY</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GALAPAGOS_TORTOISE_STORY</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<iCost>-1</iCost>
 			<MapCategoryTypes>
@@ -35624,7 +35626,7 @@
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_GALAPOGOS_TORTOISE_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_GALAPAGOS_TORTOISE_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_STORY_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
 			<Flavors>
@@ -35635,7 +35637,7 @@
 			</Flavors>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
-					<BuildingType>BUILDING_GALAPOGOS_TORTOISE_STORIES_EFFECT</BuildingType>
+					<BuildingType>BUILDING_GALAPAGOS_TORTOISE_STORIES_EFFECT</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings>
@@ -35648,12 +35650,12 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GALAPOGOS_TORTOISE_STORIES</Type>
-			<Description>TXT_KEY_BUILDING_GALAPOGOS_TORTOISE_STORIES</Description>
+			<Type>BUILDING_GALAPAGOS_TORTOISE_STORIES</Type>
+			<Description>TXT_KEY_BUILDING_GALAPAGOS_TORTOISE_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GALAPOGOS_TORTOISE_STORIES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GALAPAGOS_TORTOISE_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<iCost>-1</iCost>
 			<MapCategoryTypes>
@@ -35662,14 +35664,14 @@
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
-			<FreeBuilding>BUILDING_GALAPOGOS_TORTOISE_STORIES_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_GALAPAGOS_TORTOISE_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_GALAPOGOS_TORTOISE_STORY</BuildingType>
+				<BuildingType>BUILDING_GALAPAGOS_TORTOISE_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_GALAPOGOS_TORTOISE_STORIES_EFFECT</BuildingMustNotHave>
+					<BuildingMustNotHave>BUILDING_GALAPAGOS_TORTOISE_STORIES_EFFECT</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
@@ -35688,12 +35690,12 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_GALAPOGOS_TORTOISE_STORIES_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_GALAPOGOS_TORTOISE_STORIES_EFFECT</Description>
+			<Type>BUILDING_GALAPAGOS_TORTOISE_STORIES_EFFECT</Type>
+			<Description>TXT_KEY_BUILDING_GALAPAGOS_TORTOISE_STORIES_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GALAPOGOS_TORTOISE_STORIES</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BUILDING_GALAPAGOS_TORTOISE_STORIES</ArtDefineTag>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<iCost>-1</iCost>
 			<MapCategoryTypes>

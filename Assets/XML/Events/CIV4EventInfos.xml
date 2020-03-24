@@ -5665,7 +5665,7 @@
 			<Type>EVENT_HARDY_CROPS_1</Type>
 			<Description>TXT_KEY_EVENT_HARDY_CROPS_1</Description>
 			<PlotExtraYields>
-	            		<PlotExtraYield>
+				<PlotExtraYield>
 					 <YieldType>YIELD_FOOD</YieldType>
 					 <iExtraYield>2</iExtraYield>
 				</PlotExtraYield>
@@ -6206,13 +6206,6 @@
 				</PlotExtraYield>
 			</PlotExtraYields>
 			<PythonCallback>applyLandmarkFromEvent</PythonCallback>
-			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
-			<iAIValue>1000</iAIValue>
-		</EventInfo>
-		<EventInfo>
-			<Type>EVENT_CAKE_FLOUR_1</Type>
-			<Description>TXT_KEY_EVENT_CAKE_FLOUR_1</Description>
-			<iGold>42</iGold>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 			<iAIValue>1000</iAIValue>
 		</EventInfo>

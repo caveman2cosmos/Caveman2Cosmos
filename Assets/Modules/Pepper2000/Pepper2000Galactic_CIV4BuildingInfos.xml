@@ -7008,6 +7008,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_GALACTIC_CORE_BASE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_GALACTIC_CORE_BASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GALACTIC_CORE_BASE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GALACTIC_CORE_BASE_STRATEGY</Strategy>

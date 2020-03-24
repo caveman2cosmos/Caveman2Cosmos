@@ -5559,7 +5559,7 @@
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_TUNDRA</TerrainType>
 					<bTerrain>1</bTerrain>
-				</TerrainBoolean>				
+				</TerrainBoolean>
 				<TerrainBoolean>
 					<TerrainType>TERRAIN_COAST</TerrainType>
 					<bTerrain>1</bTerrain>
@@ -5629,7 +5629,7 @@
 			<Description>TXT_KEY_FEATURE_CAVES</Description>
 			<Civilopedia>TXT_KEY_FEATURE_CAVES_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_FEATURE_CAVES</ArtDefineTag>
-			<iDefense>50</iDefense>
+			<iDefense>30</iDefense>
 			<iAppearance>500</iAppearance>
 			<bNoAdjacent>1</bNoAdjacent>
 			<iPopDestroys>-1</iPopDestroys>
