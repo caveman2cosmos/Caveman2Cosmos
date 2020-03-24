@@ -5,10 +5,10 @@ skip_tags: true
 skip_branch_with_pr: true
 
 # Disabled as it isn't working right
-# cache:
-# - Build\Debug -> Tools\deps.exe, Tools\_MakeDLL.bat, Sources\, appveyor.yml
-# - Build\Release -> Tools\deps.exe, Tools\_MakeDLL.bat, Sources\, appveyor.yml
-# - Build\FinalRelease -> Tools\deps.exe, Tools\_MakeDLL.bat, Sources\, appveyor.yml
+cache:
+- Build\Debug -> Tools\deps.exe, Tools\_MakeDLL.bat, Sources\, appveyor.yml
+- Build\Release -> Tools\deps.exe, Tools\_MakeDLL.bat, Sources\, appveyor.yml
+- Build\FinalRelease -> Tools\deps.exe, Tools\_MakeDLL.bat, Sources\, appveyor.yml
 # - Build\cache
 
 # setup remote desktop access
@@ -41,6 +41,8 @@ build_script:
     call "%APPVEYOR_BUILD_FOLDER%\Tools\_MakeDLL.bat" Release build
 
     call "%APPVEYOR_BUILD_FOLDER%\Tools\_TrimFBuildCache.bat"
+
+    del "%APPVEYOR_BUILD_FOLDER%\Sources\fbuild.fdb"
 
 test_script:
 - cmd: >-
