@@ -58,7 +58,7 @@ class WoodlandCycle:
 				CyPlot.setFeatureType(-1, -1)
 				if CyPlot.canHaveFeature(self.FEATURE_BAMBOO) and not GAME.getSorenRandNum(9, "Bamboo"):
 					CyPlot.setFeatureType(self.FEATURE_BAMBOO, 0)
-				elif CyPlot.canHaveFeature(self.FEATURE_FOREST_YOUNG):
+				elif CyPlot.canHaveFeature(self.FEATURE_FOREST_YOUNG) and not GAME.getSorenRandNum(3, "Bamboo"):
 					CyPlot.setFeatureType(self.FEATURE_FOREST_YOUNG, 0)
 				else:
 					CyPlot.setFeatureType(iFeature, 0)
@@ -71,10 +71,10 @@ class WoodlandCycle:
 				CyPlot.setFeatureType(self.FEATURE_FOREST, 0)
 
 			elif iFeature == self.FEATURE_FOREST:
-				iRand = GAME.getSorenRandNum(5, "forestChange")
-				if not iRand: 
+				iRand = GAME.getSorenRandNum(7, "forestChange")
+				if iRand < 2:
 					CyPlot.setFeatureType(self.FEATURE_FOREST_BURNT, 0)
-				elif iRand < 3:
+				elif iRand < 4:
 					CyPlot.setFeatureType(self.FEATURE_FOREST_ANCIENT, 0)
 
 			elif iFeature == self.FEATURE_FOREST_ANCIENT:
