@@ -214,6 +214,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_MORMON_MONASTERY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_MORMON_MONASTERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MORMON_MONASTERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MORMON_MONASTERY_STRATEGY</Strategy>
@@ -1132,7 +1133,7 @@
 			<iCost>4440</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<iConquestProb>80</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 			<iFoodKept>20</iFoodKept>
 			<iMaintenanceModifier>10</iMaintenanceModifier>
 			<iAsset>6</iAsset>

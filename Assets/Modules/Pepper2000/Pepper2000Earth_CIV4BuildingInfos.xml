@@ -564,6 +564,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_FRAUNHOFER_SOCIETY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_FRAUNHOFER_SOCIETY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FRAUNHOFER_SOCIETY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_FRAUNHOFER_SOCIETY_STRATEGY</Strategy>
@@ -1930,6 +1931,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_INTERNET_OF_THINGS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_INTERNET_OF_THINGS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INTERNET_OF_THINGS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_INTERNET_OF_THINGS_STRATEGY</Strategy>
@@ -3658,6 +3660,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_SEMANTIC_WEB</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_SEMANTIC_WEB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SEMANTIC_WEB_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SEMANTIC_WEB_STRATEGY</Strategy>
@@ -4452,6 +4455,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_ORICHALCUM_FORGE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ORICHALCUM_FORGE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ORICHALCUM_FORGE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ORICHALCUM_FORGE_STRATEGY</Strategy>
@@ -5391,6 +5395,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_TIME_ZONES</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_TIME_ZONES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TIME_ZONES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TIME_ZONES_STRATEGY</Strategy>
@@ -5458,6 +5463,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_CENSUS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_NATIONAL_CENSUS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_CENSUS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_CENSUS_STRATEGY</Strategy>
@@ -5752,6 +5758,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_AMNESTY_INTERNATIONAL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_AMNESTY_INTERNATIONAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AMNESTY_INTERNATIONAL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_AMNESTY_INTERNATIONAL_STRATEGY</Strategy>
@@ -6168,6 +6175,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_PRIME_DIRECTIVE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_PRIME_DIRECTIVE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PRIME_DIRECTIVE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PRIME_DIRECTIVE_STRATEGY</Strategy>
@@ -6476,6 +6484,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_ONE_BELT_ONE_ROAD</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ONE_BELT_ONE_ROAD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ONE_BELT_ONE_ROAD_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ONE_BELT_ONE_ROAD_STRATEGY</Strategy>
@@ -6753,6 +6762,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_AI_SINGLETON</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_AI_SINGLETON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AI_SINGLETON_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_AI_SINGLETON_STRATEGY</Strategy>
@@ -7096,6 +7106,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_CENTER_FOR_AI_SAFETY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_CENTER_FOR_AI_SAFETY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CENTER_FOR_AI_SAFETY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CENTER_FOR_AI_SAFETY_STRATEGY</Strategy>
@@ -7137,6 +7148,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_CENTER_FOR_BIOTECH_SAFETY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_CENTER_FOR_BIOTECH_SAFETY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CENTER_FOR_BIOTECH_SAFETY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CENTER_FOR_BIOTECH_SAFETY_STRATEGY</Strategy>
@@ -7176,6 +7188,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_CENTER_FOR_NANOTECH_SAFETY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_CENTER_FOR_NANOTECH_SAFETY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CENTER_FOR_NANOTECH_SAFETY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CENTER_FOR_NANOTECH_SAFETY_STRATEGY</Strategy>
@@ -7216,6 +7229,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_ARXIV</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ARXIV</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ARXIV_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ARXIV_STRATEGY</Strategy>
@@ -7245,6 +7259,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_BIOSPHERE_2</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_BIOSPHERE_2</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BIOSPHERE_2_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BIOSPHERE_2_STRATEGY</Strategy>
@@ -7333,6 +7348,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_PORTLAND_BUILDING</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_PORTLAND_BUILDING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PORTLAND_BUILDING_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PORTLAND_BUILDING_STRATEGY</Strategy>
@@ -7544,6 +7560,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_CHURCH_TURING_THESIS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_CHURCH_TURING_THESIS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CHURCH_TURING_THESIS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CHURCH_TURING_THESIS_STRATEGY</Strategy>
@@ -7577,6 +7594,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_FERMATS_LAST_THEOREM</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_FERMATS_LAST_THEOREM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FERMATS_LAST_THEOREM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_FERMATS_LAST_THEOREM_STRATEGY</Strategy>
@@ -7607,6 +7625,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_FOUR_COLOR_THEOREM</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_FOUR_COLOR_THEOREM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOUR_COLOR_THEOREM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_FOUR_COLOR_THEOREM_STRATEGY</Strategy>
@@ -7640,6 +7659,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_GODEL_INCOMPLETENESS_THEOREM</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_GODEL_INCOMPLETENESS_THEOREM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GODEL_INCOMPLETENESS_THEOREM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GODEL_INCOMPLETENESS_THEOREM_STRATEGY</Strategy>
@@ -7669,6 +7689,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_MILLENNIUM_PROBLEMS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_MILLENNIUM_PROBLEMS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MILLENNIUM_PROBLEMS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MILLENNIUM_PROBLEMS_STRATEGY</Strategy>
@@ -7798,6 +7819,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_METRIC_SYSTEM</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_METRIC_SYSTEM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_METRIC_SYSTEM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_METRIC_SYSTEM_STRATEGY</Strategy>
@@ -7840,6 +7862,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_AMUNDSEN_SCOTT_SOUTH_POLE_STATION</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_AMUNDSEN_SCOTT_SOUTH_POLE_STATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AMUNDSEN_SCOTT_SOUTH_POLE_STATION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_AMUNDSEN_SCOTT_SOUTH_POLE_STATION_STRATEGY</Strategy>
@@ -8052,6 +8075,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_STANDARD_MODEL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_STANDARD_MODEL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_STANDARD_MODEL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_STANDARD_MODEL_STRATEGY</Strategy>
@@ -8112,6 +8136,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_BELL_LABS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_BELL_LABS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BELL_LABS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BELL_LABS_STRATEGY</Strategy>
@@ -8219,6 +8244,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_DARPA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_DARPA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DARPA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DARPA_STRATEGY</Strategy>
@@ -9316,6 +9342,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_PALEO_PARK</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_PALEO_PARK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PALEO_PARK_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PALEO_PARK_STRATEGY</Strategy>
@@ -9754,6 +9781,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_ENCYCLOPEDIA_GALACTICA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ENCYCLOPEDIA_GALACTICA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ENCYCLOPEDIA_GALACTICA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ENCYCLOPEDIA_GALACTICA_STRATEGY</Strategy>
@@ -9880,6 +9908,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_DEEP_THOUGHT</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_DEEP_THOUGHT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DEEP_THOUGHT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DEEP_THOUGHT_STRATEGY</Strategy>
@@ -9977,6 +10006,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_10000_YEAR_CLOCK</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_10000_YEAR_CLOCK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_10000_YEAR_CLOCK_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_10000_YEAR_CLOCK_STRATEGY</Strategy>
@@ -10068,6 +10098,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_HUNGER_GAMES</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_HUNGER_GAMES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HUNGER_GAMES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HUNGER_GAMES_STRATEGY</Strategy>
@@ -10729,6 +10760,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_INTERNET_ARCHIVE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_INTERNET_ARCHIVE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INTERNET_ARCHIVE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_INTERNET_ARCHIVE_STRATEGY</Strategy>
@@ -10947,6 +10979,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_ALZHEIMERS_CURE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ALZHEIMERS_CURE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ALZHEIMERS_CURE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ALZHEIMERS_CURE_STRATEGY</Strategy>
@@ -11249,6 +11282,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_DIGITAL_EMBASSY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_DIGITAL_EMBASSY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DIGITAL_EMBASSY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DIGITAL_EMBASSY_STRATEGY</Strategy>
@@ -11505,6 +11539,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_FLATLAND</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_FLATLAND</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FLATLAND_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_FLATLAND_STRATEGY</Strategy>
@@ -11558,7 +11593,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_CRYSTALPUNK_EMBASSY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<bNoLimit>1</bNoLimit>
+			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CRYSTALPUNK_EMBASSY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRYSTALPUNK_EMBASSY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CRYSTALPUNK_EMBASSY_STRATEGY</Strategy>
@@ -11582,7 +11619,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_SPACEPUNK_EMBASSY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<bNoLimit>1</bNoLimit>
+			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_SPACEPUNK_EMBASSY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SPACEPUNK_EMBASSY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SPACEPUNK_EMBASSY_STRATEGY</Strategy>
@@ -11606,7 +11645,9 @@
 		<BuildingInfo>
 			<Type>BUILDING_STARPUNK_EMBASSY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<bNoLimit>1</bNoLimit>
+			<SpecialBuildingType>SPECIALBUILDING_C2C_CULTURE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_STARPUNK_EMBASSY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_STARPUNK_EMBASSY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_STARPUNK_EMBASSY_STRATEGY</Strategy>
@@ -12051,6 +12092,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_HYPERLOOP</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_HYPERLOOP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYPERLOOP_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HYPERLOOP_STRATEGY</Strategy>
@@ -12177,6 +12219,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_CHUO_SHINKANSEN</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_CHUO_SHINKANSEN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CHUO_SHINKANSEN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CHUO_SHINKANSEN_STRATEGY</Strategy>
@@ -12220,6 +12263,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_MORLOCK</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_MORLOCK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MORLOCK_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MORLOCK_STRATEGY</Strategy>
@@ -12344,6 +12388,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_INTERCONTINENTAL_RAIL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_INTERCONTINENTAL_RAIL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INTERCONTINENTAL_RAIL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_INTERCONTINENTAL_RAIL_STRATEGY</Strategy>
@@ -12396,6 +12441,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_TRANSATLANTIC_TUNNEL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_TRANSATLANTIC_TUNNEL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRANSATLANTIC_TUNNEL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TRANSATLANTIC_TUNNEL_STRATEGY</Strategy>
@@ -12976,6 +13022,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_FUTURE_VENICE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_FUTURE_VENICE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FUTURE_VENICE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_FUTURE_VENICE_STRATEGY</Strategy>
@@ -13099,6 +13146,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_WORLD_ELECTRIC_GRID</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_WORLD_ELECTRIC_GRID</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WORLD_ELECTRIC_GRID_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_WORLD_ELECTRIC_GRID_STRATEGY</Strategy>
@@ -13204,6 +13252,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_GREEN_WALL_OF_CHINA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_GREEN_WALL_OF_CHINA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GREEN_WALL_OF_CHINA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GREEN_WALL_OF_CHINA_STRATEGY</Strategy>
@@ -13277,6 +13326,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_BIZARRO_WORLD</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_BIZARRO_WORLD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BIZARRO_WORLD_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BIZARRO_WORLD_STRATEGY</Strategy>
@@ -13314,6 +13364,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_NEO_PYRAMID</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_NEO_PYRAMID</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NEO_PYRAMID_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NEO_PYRAMID_STRATEGY</Strategy>
@@ -13397,6 +13448,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_PERIODIC_TABLE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_PERIODIC_TABLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PERIODIC_TABLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PERIODIC_TABLE_STRATEGY</Strategy>
@@ -13431,6 +13483,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_SOCIAL_CREDIT_SYSTEM</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_SOCIAL_CREDIT_SYSTEM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SOCIAL_CREDIT_SYSTEM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SOCIAL_CREDIT_SYSTEM_STRATEGY</Strategy>
@@ -13456,6 +13509,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_MORSE_CODE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_MORSE_CODE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MORSE_CODE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MORSE_CODE_STRATEGY</Strategy>
@@ -19813,6 +19867,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_PALM_ISLANDS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_PALM_ISLANDS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PALM_ISLANDS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PALM_ISLANDS_STRATEGY</Strategy>
@@ -19851,6 +19906,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_KHAZAR_ISLANDS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_KHAZAR_ISLANDS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KHAZAR_ISLANDS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_KHAZAR_ISLANDS_STRATEGY</Strategy>
@@ -20025,6 +20081,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_OCEAN_SPIRAL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_OCEAN_SPIRAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_OCEAN_SPIRAL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_OCEAN_SPIRAL_STRATEGY</Strategy>
@@ -20328,6 +20385,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_MANTLE_VACTRAIN_NETWORK</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_MANTLE_VACTRAIN_NETWORK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MANTLE_VACTRAIN_NETWORK_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MANTLE_VACTRAIN_NETWORK_STRATEGY</Strategy>
@@ -20509,6 +20567,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_SPACE_NEEDLE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_SPACE_NEEDLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SPACE_NEEDLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SPACE_NEEDLE_STRATEGY</Strategy>
@@ -20563,6 +20622,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_JEDDAH_TOWER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_JEDDAH_TOWER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_JEDDAH_TOWER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_JEDDAH_TOWER_STRATEGY</Strategy>
@@ -20595,6 +20655,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_DUBAI_CITY_TOWER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_DUBAI_CITY_TOWER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DUBAI_CITY_TOWER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DUBAI_CITY_TOWER_STRATEGY</Strategy>
@@ -20631,6 +20692,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_BIONIC_TOWER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_BIONIC_TOWER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BIONIC_TOWER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BIONIC_TOWER_STRATEGY</Strategy>
@@ -20667,6 +20729,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_AEROPOLIS_2001</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_AEROPOLIS_2001</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AEROPOLIS_2001_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_AEROPOLIS_2001_STRATEGY</Strategy>
@@ -20699,6 +20762,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_CRYSTAL_ISLAND</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_CRYSTAL_ISLAND</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRYSTAL_ISLAND_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CRYSTAL_ISLAND_STRATEGY</Strategy>
@@ -20934,6 +20998,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_TALL_TOWER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_TALL_TOWER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TALL_TOWER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TALL_TOWER_STRATEGY</Strategy>
@@ -21000,6 +21065,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_SPACESCRAPER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_SPACESCRAPER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SPACESCRAPER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SPACESCRAPER_STRATEGY</Strategy>
@@ -21072,6 +21138,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_ARCONIC_TOWER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ARCONIC_TOWER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ARCONIC_TOWER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ARCONIC_TOWER_STRATEGY</Strategy>
@@ -21379,6 +21446,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_ARCOSANTI</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ARCOSANTI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ARCOSANTI_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ARCOSANTI_STRATEGY</Strategy>
@@ -21418,6 +21486,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_PLYMOUTH_ARCOLOGY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_PLYMOUTH_ARCOLOGY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PLYMOUTH_ARCOLOGY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PLYMOUTH_ARCOLOGY_STRATEGY</Strategy>
@@ -21495,6 +21564,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_XSEED_4000</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_XSEED_4000</Description>
 			<Civilopedia>TXT_KEY_BUILDING_XSEED_4000_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_XSEED_4000_STRATEGY</Strategy>
@@ -21539,6 +21609,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_ULTIMA_TOWER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ULTIMA_TOWER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ULTIMA_TOWER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ULTIMA_TOWER_STRATEGY</Strategy>
@@ -21584,6 +21655,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_SHIMIZU_MEGACITY_PYRAMID</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_SHIMIZU_MEGACITY_PYRAMID</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SHIMIZU_MEGACITY_PYRAMID_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SHIMIZU_MEGACITY_PYRAMID_STRATEGY</Strategy>
@@ -21629,6 +21701,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_BOSTON_ARCOLOGY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_BOSTON_ARCOLOGY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BOSTON_ARCOLOGY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BOSTON_ARCOLOGY_STRATEGY</Strategy>
@@ -21672,6 +21745,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_LEAN_LINEAR_CITY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_LEAN_LINEAR_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LEAN_LINEAR_CITY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_LEAN_LINEAR_CITY_STRATEGY</Strategy>
@@ -21731,6 +21805,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_NUDING_SPACE_ARCOLOGY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_NUDING_SPACE_ARCOLOGY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NUDING_SPACE_ARCOLOGY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NUDING_SPACE_ARCOLOGY_STRATEGY</Strategy>
@@ -21782,6 +21857,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_DARCO</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_DARCO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DARCO_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DARCO_STRATEGY</Strategy>
@@ -21809,6 +21885,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_EXODUS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_EXODUS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EXODUS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_EXODUS_STRATEGY</Strategy>
@@ -21930,6 +22007,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_SEASIDE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_SEASIDE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SEASIDE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SEASIDE_STRATEGY</Strategy>
@@ -22015,6 +22093,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_MASDAR_CITY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_MASDAR_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MASDAR_CITY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MASDAR_CITY_STRATEGY</Strategy>
@@ -22049,6 +22128,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_DUBAI_WORLD_CENTRAL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_DUBAI_WORLD_CENTRAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DUBAI_WORLD_CENTRAL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DUBAI_WORLD_CENTRAL_STRATEGY</Strategy>
@@ -22084,6 +22164,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_SONGDO_INTERNATIONAL_BUSINESS_DISTRICT</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_SONGDO_INTERNATIONAL_BUSINESS_DISTRICT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SONGDO_INTERNATIONAL_BUSINESS_DISTRICT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SONGDO_INTERNATIONAL_BUSINESS_DISTRICT_STRATEGY</Strategy>
@@ -22119,6 +22200,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_DEHLI_MUMBAI_INDUSTRIAL_CORRIDOR</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_DEHLI_MUMBAI_INDUSTRIAL_CORRIDOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DEHLI_MUMBAI_INDUSTRIAL_CORRIDOR_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DEHLI_MUMBAI_INDUSTRIAL_CORRIDOR_STRATEGY</Strategy>
@@ -22160,6 +22242,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_HUDSON_YARDS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_HUDSON_YARDS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HUDSON_YARDS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HUDSON_YARDS_STRATEGY</Strategy>
@@ -22190,6 +22273,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_KING_ABDULLAH_ECONOMIC_CITY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_KING_ABDULLAH_ECONOMIC_CITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KING_ABDULLAH_ECONOMIC_CITY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_KING_ABDULLAH_ECONOMIC_CITY_STRATEGY</Strategy>
@@ -22218,6 +22302,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_NEOM</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_NEOM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NEOM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NEOM_STRATEGY</Strategy>
@@ -22331,6 +22416,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_VENUS_PROJECT</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_VENUS_PROJECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENUS_PROJECT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_VENUS_PROJECT_STRATEGY</Strategy>
@@ -22765,6 +22851,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_ECUMENOPOLIS_EARTH</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ECUMENOPOLIS_EARTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ECUMENOPOLIS_EARTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ECUMENOPOLIS_EARTH_STRATEGY</Strategy>
@@ -22812,6 +22899,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_ATLANTIS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ATLANTIS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ATLANTIS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ATLANTIS_STRATEGY</Strategy>
@@ -22892,6 +22980,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_MISSION_TO_CALLISTO</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_MISSION_TO_CALLISTO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MISSION_TO_CALLISTO_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MISSION_TO_CALLISTO_STRATEGY</Strategy>
@@ -22928,6 +23017,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_BAIKONUR_COSMODROME</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_BAIKONUR_COSMODROME</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BAIKONUR_COSMODROME_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BAIKONUR_COSMODROME_STRATEGY</Strategy>
@@ -22966,6 +23056,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_CASSINI_HUYGENS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_CASSINI_HUYGENS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CASSINI_HUYGENS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CASSINI_HUYGENS_STRATEGY</Strategy>
@@ -22999,6 +23090,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_DAWN</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_DAWN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DAWN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DAWN_STRATEGY</Strategy>
@@ -23031,6 +23123,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_NEW_HORIZONS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_NEW_HORIZONS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NEW_HORIZONS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NEW_HORIZONS_STRATEGY</Strategy>
@@ -23063,6 +23156,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_GALILEO</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_GALILEO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GALILEO_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GALILEO_STRATEGY</Strategy>
@@ -23096,6 +23190,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_MARINER_PROGRAM</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_MARINER_PROGRAM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARINER_PROGRAM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MARINER_PROGRAM_STRATEGY</Strategy>
@@ -23129,6 +23224,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_MARS_SCIENCE_LAB</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_MARS_SCIENCE_LAB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_SCIENCE_LAB_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MARS_SCIENCE_LAB_STRATEGY</Strategy>
@@ -23169,6 +23265,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_MIR</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_MIR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MIR_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MIR_STRATEGY</Strategy>
@@ -23202,6 +23299,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_PROJECT_GEMINI</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_PROJECT_GEMINI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PROJECT_GEMINI_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PROJECT_GEMINI_STRATEGY</Strategy>
@@ -23232,6 +23330,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_PROJECT_MERCURY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_PROJECT_MERCURY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PROJECT_MERCURY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PROJECT_MERCURY_STRATEGY</Strategy>
@@ -23261,6 +23360,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_VOYAGER_PROGRAM</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_VOYAGER_PROGRAM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VOYAGER_PROGRAM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_VOYAGER_PROGRAM_STRATEGY</Strategy>
@@ -23301,6 +23401,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_SKYLAB</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_SKYLAB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SKYLAB_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SKYLAB_STRATEGY</Strategy>
@@ -23332,6 +23433,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_IKAROS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_IKAROS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_IKAROS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_IKAROS_STRATEGY</Strategy>
@@ -23363,6 +23465,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_TITAN_PROBE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_TITAN_PROBE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TITAN_PROBE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TITAN_PROBE_STRATEGY</Strategy>
@@ -23395,6 +23498,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_PROBE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_INTERSTELLAR_PROBE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_PROBE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_INTERSTELLAR_PROBE_STRATEGY</Strategy>
@@ -23425,6 +23529,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_EURO_ELT</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_EURO_ELT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EURO_ELT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_EURO_ELT_STRATEGY</Strategy>
@@ -23455,6 +23560,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_EUROPA_PROBE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_EUROPA_PROBE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EUROPA_PROBE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_EUROPA_PROBE_STRATEGY</Strategy>
@@ -23487,6 +23593,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_KEPLER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_KEPLER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KEPLER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_KEPLER_STRATEGY</Strategy>
@@ -23527,6 +23634,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_ET_DISCOVERY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ET_DISCOVERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ET_DISCOVERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ET_DISCOVERY_STRATEGY</Strategy>
@@ -23579,6 +23687,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_SEDNA_PROBE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_SEDNA_PROBE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SEDNA_PROBE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SEDNA_PROBE_STRATEGY</Strategy>
@@ -23614,6 +23723,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_SDSS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_SDSS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SDSS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SDSS_STRATEGY</Strategy>
@@ -23644,6 +23754,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_JAMESWEBB_TELESCOPE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_JAMESWEBB_TELESCOPE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_JAMESWEBB_TELESCOPE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_JAMESWEBB_TELESCOPE_STRATEGY</Strategy>
@@ -23680,6 +23791,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_SPUTNIK</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_SPUTNIK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SPUTNIK_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SPUTNIK_STRATEGY</Strategy>
@@ -23719,6 +23831,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_WMAP</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_WMAP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WMAP_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_WMAP_STRATEGY</Strategy>
@@ -23751,6 +23864,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_MISSION_MARS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_MISSION_MARS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MISSION_MARS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MISSION_MARS_STRATEGY</Strategy>
@@ -23982,6 +24096,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_BREAKTHROUGH_STARSHOT</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_BREAKTHROUGH_STARSHOT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BREAKTHROUGH_STARSHOT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BREAKTHROUGH_STARSHOT_STRATEGY</Strategy>
@@ -24016,6 +24131,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_ATLAST_SPACE_TELESCOPE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ATLAST_SPACE_TELESCOPE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ATLAST_SPACE_TELESCOPE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ATLAST_SPACE_TELESCOPE_STRATEGY</Strategy>
@@ -24039,6 +24155,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_METI</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_METI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_METI_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_METI_STRATEGY</Strategy>
@@ -24087,6 +24204,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_XPRIZE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_LUNAR_XPRIZE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_XPRIZE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_LUNAR_XPRIZE_STRATEGY</Strategy>
@@ -24117,6 +24235,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_DEEP_SPACE_GATEWAY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_DEEP_SPACE_GATEWAY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DEEP_SPACE_GATEWAY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DEEP_SPACE_GATEWAY_STRATEGY</Strategy>
@@ -24137,6 +24256,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_MOON_ROCK_LAB</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_MOON_ROCK_LAB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MOON_ROCK_LAB_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MOON_ROCK_LAB_STRATEGY</Strategy>
@@ -24158,6 +24278,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_YUTU</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_YUTU</Description>
 			<Civilopedia>TXT_KEY_BUILDING_YUTU_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_YUTU_STRATEGY</Strategy>
@@ -24183,6 +24304,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_NEPTUNE_ATMOSPHERE_PROBE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_NEPTUNE_ATMOSPHERE_PROBE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NEPTUNE_ATMOSPHERE_PROBE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NEPTUNE_ATMOSPHERE_PROBE_STRATEGY</Strategy>
@@ -24215,6 +24337,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_URANUS_ATMOSPHERE_PROBE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_URANUS_ATMOSPHERE_PROBE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_URANUS_ATMOSPHERE_PROBE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_URANUS_ATMOSPHERE_PROBE_STRATEGY</Strategy>
@@ -24300,6 +24423,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_SKYHOOK</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_SKYHOOK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SKYHOOK_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SKYHOOK_STRATEGY</Strategy>
@@ -24329,6 +24453,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_ORBITAL_RING</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ORBITAL_RING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ORBITAL_RING_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ORBITAL_RING_STRATEGY</Strategy>
@@ -24551,6 +24676,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_STARTRAM</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_STARTRAM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_STARTRAM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_STARTRAM_STRATEGY</Strategy>
@@ -24875,6 +25001,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_INTERPLANETARY_RAIL</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_INTERPLANETARY_RAIL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INTERPLANETARY_RAIL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_INTERPLANETARY_RAIL_STRATEGY</Strategy>
@@ -24908,6 +25035,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_NEUROIMPLANT_EXPORTER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_NEUROIMPLANT_EXPORTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NEUROIMPLANT_EXPORTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NEUROIMPLANT_EXPORTER_STRATEGY</Strategy>
@@ -24965,6 +25093,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_GPS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_GPS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GPS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GPS_STRATEGY</Strategy>
@@ -25074,6 +25203,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_MITHRIL_IMPORTER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_MITHRIL_IMPORTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MITHRIL_IMPORTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MITHRIL_IMPORTER_STRATEGY</Strategy>
@@ -25269,6 +25399,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_SENTINEL</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_SENTINEL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SENTINEL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SENTINEL_STRATEGY</Strategy>
@@ -25306,6 +25437,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_SOLAR_WEATHER_MONITOR</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_SOLAR_WEATHER_MONITOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SOLAR_WEATHER_MONITOR_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SOLAR_WEATHER_MONITOR_STRATEGY</Strategy>
@@ -25341,6 +25473,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_ASTEROID_DEFLECTION_SYSTEM</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_ASTEROID_DEFLECTION_SYSTEM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ASTEROID_DEFLECTION_SYSTEM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ASTEROID_DEFLECTION_SYSTEM_STRATEGY</Strategy>
@@ -25389,6 +25522,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_FRIEDLANDER_SKYSHADE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_FRIEDLANDER_SKYSHADE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FRIEDLANDER_SKYSHADE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_FRIEDLANDER_SKYSHADE_STRATEGY</Strategy>
@@ -25419,6 +25553,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_SOLAR_NOVA_SURVIVAL_PLAN</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_SOLAR_NOVA_SURVIVAL_PLAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SOLAR_NOVA_SURVIVAL_PLAN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SOLAR_NOVA_SURVIVAL_PLAN_STRATEGY</Strategy>
@@ -25455,6 +25590,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_EYE_IN_SKY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_EYE_IN_SKY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EYE_IN_SKY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_EYE_IN_SKY_STRATEGY</Strategy>
@@ -25520,6 +25656,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_STARFLEET_ACADEMY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_STARFLEET_ACADEMY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_STARFLEET_ACADEMY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_STARFLEET_ACADEMY_STRATEGY</Strategy>
@@ -25563,6 +25700,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_UNITED_FEDERATION_OF_PLANETS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_UNITED_FEDERATION_OF_PLANETS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_UNITED_FEDERATION_OF_PLANETS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_UNITED_FEDERATION_OF_PLANETS_STRATEGY</Strategy>
@@ -25590,6 +25728,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_INTERGALACTIC_CAPITOL</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_INTERGALACTIC_CAPITOL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INTERGALACTIC_CAPITOL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_INTERGALACTIC_CAPITOL_STRATEGY</Strategy>
@@ -25617,6 +25756,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_SECTION_31</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_SECTION_31</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SECTION_31_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SECTION_31_STRATEGY</Strategy>
@@ -25671,6 +25811,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_ASCENSION_GATE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>

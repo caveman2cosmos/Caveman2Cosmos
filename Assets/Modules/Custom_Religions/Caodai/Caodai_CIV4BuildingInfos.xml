@@ -124,7 +124,6 @@
 			<AndDependencyTypes>
 				<DependencyType>RELIGION_CAO_DAI</DependencyType>
 			</AndDependencyTypes>
-			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_CAODAI_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CAODAI_SHRINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CAODAI_SHRINE_STRATEGY</Strategy>

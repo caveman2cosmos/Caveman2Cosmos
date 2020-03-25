@@ -1546,7 +1546,7 @@
 					<iProductionModifier>50</iProductionModifier>
 				</BuildingProductionModifier>
 			</BuildingProductionModifiers>
-			<iConquestProb>10</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -2232,7 +2232,7 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_BLACKFOOT</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iConquestProb>10</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -3484,7 +3484,7 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_DZUNGAR</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iConquestProb>10</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<bNukeImmune>1</bNukeImmune>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>

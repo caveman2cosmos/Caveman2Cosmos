@@ -683,7 +683,6 @@
 				</Flavor>
 			</Flavors>
 		</CivicInfo>
-		<!--Switch Democracy & Republic Names-->
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_GOVERNMENT</CivicOptionType>
 			<Type>CIVIC_REPUBLIC</Type>
@@ -1085,7 +1084,6 @@
 				</Flavor>
 			</Flavors>
 		</CivicInfo>
-		<!--Rename Democracy to Republic-->
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_GOVERNMENT</CivicOptionType>
 			<Type>CIVIC_DEMOCRACY</Type>
