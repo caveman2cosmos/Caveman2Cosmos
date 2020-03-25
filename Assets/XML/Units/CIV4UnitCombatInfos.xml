@@ -8793,7 +8793,7 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_CULTURE_MURRI</Type>
 			<Description>TXT_KEY_UNITCOMBAT_CULTURE_MURRI</Description>
-			<CultureType>BONUS_MARRI</CultureType>
+			<CultureType>BONUS_MARIC</CultureType>
 			<Button>Art/categories/culture_newcultures.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
