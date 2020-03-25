@@ -1443,22 +1443,6 @@ CvRouteModelInfo& cvInternalGlobals::getRouteModelInfo(int i) const
 	return *(m_paRouteModelInfo[i]);
 }
 
-int cvInternalGlobals::getNumRiverInfos() const
-{
-	return (int)m_paRiverInfo.size();
-}
-
-std::vector<CvRiverInfo*>& cvInternalGlobals::getRiverInfos()
-{
-	return m_paRiverInfo;
-}
-
-CvRiverInfo& cvInternalGlobals::getRiverInfo(RiverTypes e) const
-{
-	FAssertMsg(e >= 0 && e < GC.getNumRiverInfos(), "RiverInfo index out of bounds");
-	return *(m_paRiverInfo[e]);
-}
-
 int cvInternalGlobals::getNumRiverModelInfos() const
 {
 	return (int)m_paRiverModelInfo.size();
@@ -1633,17 +1617,6 @@ CvUnitFormationInfo& cvInternalGlobals::getUnitFormationInfo(int i) const
 {
 	FAssertMsg(i >= 0 && i < GC.getNumUnitFormationInfos(), "UnitFormationInfo index out of bounds");
 	return *(m_paUnitFormationInfo[i]);
-}
-
-// TEXT
-int cvInternalGlobals::getNumGameTextXML() const
-{
-	return (int)m_paGameTextXML.size();
-}
-
-std::vector<CvGameText*>& cvInternalGlobals::getGameTextXMLs()
-{
-	return m_paGameTextXML;
 }
 
 // Landscape INFOS
@@ -4995,7 +4968,6 @@ void cvInternalGlobals::deleteInfoArrays()
 
 	deleteInfoArray(m_paRouteInfo);
 	deleteInfoArray(m_paRouteModelInfo);
-	deleteInfoArray(m_paRiverInfo);
 	deleteInfoArray(m_paRiverModelInfo);
 
 	deleteInfoArray(m_paWaterPlaneInfo);
