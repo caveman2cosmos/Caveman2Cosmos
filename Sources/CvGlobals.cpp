@@ -468,6 +468,10 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_iStoreExeSettingsBonusInfo(0)
 	, m_bSignsCleared(false)
 {
+	for (int i = 0; i < NUM_INT_GLOBAL_DEFINES; i++)
+	{
+		m_GlobalDefinesINT.push_back(0);
+	}
 }
 
 cvInternalGlobals::~cvInternalGlobals()
@@ -1443,22 +1447,6 @@ CvRouteModelInfo& cvInternalGlobals::getRouteModelInfo(int i) const
 	return *(m_paRouteModelInfo[i]);
 }
 
-int cvInternalGlobals::getNumRiverInfos() const
-{
-	return (int)m_paRiverInfo.size();
-}
-
-std::vector<CvRiverInfo*>& cvInternalGlobals::getRiverInfos()
-{
-	return m_paRiverInfo;
-}
-
-CvRiverInfo& cvInternalGlobals::getRiverInfo(RiverTypes e) const
-{
-	FAssertMsg(e >= 0 && e < GC.getNumRiverInfos(), "RiverInfo index out of bounds");
-	return *(m_paRiverInfo[e]);
-}
-
 int cvInternalGlobals::getNumRiverModelInfos() const
 {
 	return (int)m_paRiverModelInfo.size();
@@ -1633,17 +1621,6 @@ CvUnitFormationInfo& cvInternalGlobals::getUnitFormationInfo(int i) const
 {
 	FAssertMsg(i >= 0 && i < GC.getNumUnitFormationInfos(), "UnitFormationInfo index out of bounds");
 	return *(m_paUnitFormationInfo[i]);
-}
-
-// TEXT
-int cvInternalGlobals::getNumGameTextXML() const
-{
-	return (int)m_paGameTextXML.size();
-}
-
-std::vector<CvGameText*>& cvInternalGlobals::getGameTextXMLs()
-{
-	return m_paGameTextXML;
 }
 
 // Landscape INFOS
@@ -3751,6 +3728,10 @@ void cvInternalGlobals::cacheGlobals()
 
 	strcpy(gVersionString, getDefineSTRING("C2C_VERSION"));
 
+#define CACHE_INT_GLOBAL_DEFINE(VAR) \
+	m_GlobalDefinesINT[VAR] = getDefineINT(#VAR);
+	DO_FOR_EACH_INT_GLOBAL_DEFINE(CACHE_INT_GLOBAL_DEFINE)
+
 	/************************************************************************************************/
 	/* Mod Globals    Start                          09/13/10                           phungus420  */
 	/*                                                                                              */
@@ -4995,7 +4976,6 @@ void cvInternalGlobals::deleteInfoArrays()
 
 	deleteInfoArray(m_paRouteInfo);
 	deleteInfoArray(m_paRouteModelInfo);
-	deleteInfoArray(m_paRiverInfo);
 	deleteInfoArray(m_paRiverModelInfo);
 
 	deleteInfoArray(m_paWaterPlaneInfo);

@@ -3925,11 +3925,11 @@
 			<iConstAppearance>0</iConstAppearance>
 		</BonusInfo>
 		<BonusInfo>
-			<Type>BONUS_MARRI</Type>
-			<Description>TXT_KEY_BONUS_MARRI</Description>
+			<Type>BONUS_MARIC</Type>
+			<Description>TXT_KEY_BONUS_MARIC</Description>
 			<Civilopedia>TXT_KEY_BONUS_CULTURE_PEDIA</Civilopedia>
 			<BonusClassType>BONUSCLASS_CULTURE</BonusClassType>
-			<ArtDefineTag>ART_DEF_BONUS_MARRI</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_BONUS_MARIC</ArtDefineTag>
 			<TechReveal>NONE</TechReveal>
 			<TechCityTrade>NONE</TechCityTrade>
 			<TechObsolete>NONE</TechObsolete>
