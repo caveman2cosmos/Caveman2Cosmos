@@ -26,15 +26,11 @@ class CvStatsReporter;
 class CvDLLInterfaceIFaceBase;
 class CvPlayerAI;
 class CvDiplomacyScreen;
-class CvCivicsScreen;
-class CvWBUnitEditScreen;
-class CvWBCityEditScreen;
 class CMPDiplomacyScreen;
 class FMPIManager;
 class FAStar;
 class CvInterface;
 class CMainMenu;
-class CvEngine;
 class CvArtFileMgr;
 class FVariableSystem;
 class CvMap;
@@ -50,7 +46,6 @@ class CvColorInfo;
 class CvPlayerColorInfo;
 class CvAdvisorInfo;
 class CvRouteModelInfo;
-class CvRiverInfo;
 class CvRiverModelInfo;
 class CvWaterPlaneInfo;
 class CvTerrainPlaneInfo;
@@ -62,7 +57,6 @@ class CvEffectInfo;
 class CvAttachableInfo;
 class CvCameraInfo;
 class CvUnitFormationInfo;
-class CvGameText;
 class CvLandscapeInfo;
 class CvTerrainInfo;
 class CvBonusClassInfo;
@@ -410,10 +404,6 @@ public:
 	std::vector<CvRouteModelInfo*>& getRouteModelInfos();
 	CvRouteModelInfo& getRouteModelInfo(int i) const;
 
-	int getNumRiverInfos() const;
-	std::vector<CvRiverInfo*>& getRiverInfos();
-	CvRiverInfo& getRiverInfo(RiverTypes e) const;
-
 	int getNumRiverModelInfos() const;
 	std::vector<CvRiverModelInfo*>& getRiverModelInfos();
 	CvRiverModelInfo& getRiverModelInfo(int i) const;
@@ -457,9 +447,6 @@ public:
 	int getNumUnitFormationInfos() const;
 	std::vector<CvUnitFormationInfo*>& getUnitFormationInfos();
 	CvUnitFormationInfo& getUnitFormationInfo(int i) const;
-
-	int getNumGameTextXML() const;
-	std::vector<CvGameText*>& getGameTextXMLs();
 
 	int getNumLandscapeInfos() const;
 	std::vector<CvLandscapeInfo*>& getLandscapeInfos();
@@ -961,6 +948,8 @@ public:
 	FVariableSystem* getDefinesVarSystem() const;
 	void cacheGlobals();
 
+	inline int getDefineINT(GlobalDefineINT var) const	{ return m_GlobalDefinesINT[var]; }
+
 	// ***** EXPOSED TO PYTHON *****
 /************************************************************************************************/
 /* MOD_COMPONENT_CONTROL                   08/02/07                            MRGENIE          */
@@ -1392,6 +1381,7 @@ protected:
 	typedef std::map<int*,std::pair<CvString,CvString> > DelayedResolutionMap;
 	DelayedResolutionMap m_delayedResolutionMap;
 
+	std::vector<int> m_GlobalDefinesINT;
 
 	std::vector<CvColorInfo*> m_paColorInfo;
 	std::vector<CvPlayerColorInfo*> m_paPlayerColorInfo;
@@ -1523,7 +1513,6 @@ protected:
 	std::vector<CvHurryInfo*> m_paHurryInfo;
 	std::vector<CvVictoryInfo*> m_paVictoryInfo;
 	std::vector<CvRouteModelInfo*> m_paRouteModelInfo;
-	std::vector<CvRiverInfo*> m_paRiverInfo;
 	std::vector<CvRiverModelInfo*> m_paRiverModelInfo;
 	std::vector<CvWaterPlaneInfo*> m_paWaterPlaneInfo;
 	std::vector<CvTerrainPlaneInfo*> m_paTerrainPlaneInfo;
@@ -1555,9 +1544,6 @@ protected:
 /*******************************/
 /***** Parallel Maps - End *****/
 /*******************************/
-
-	// Game Text
-	std::vector<CvGameText*> m_paGameTextXML;
 
 	//////////////////////////////////////////////////////////////////////////
 	// GLOBAL TYPES

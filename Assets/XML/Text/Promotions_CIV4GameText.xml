@@ -6704,6 +6704,10 @@
 		<French>Moyen-Orient</French>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_CULTURE_NEANDERTHAL</Tag>
+		<English>Neanderthal</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURE_NORTH_AMERICAN</Tag>
 		<English>North American</English>
 		<French>Nord-américain</French>
