@@ -1220,7 +1220,6 @@ bool CvXMLLoadUtility::LoadPostMenuGlobals()
 
 	UpdateProgressCB("Global Rivers");
 
-	LoadGlobalClassInfo(GC.getRiverInfos(), "CIV4RiverInfos", "Misc", L"/Civ4RiverInfos/RiverInfos/RiverInfo", false);
 	LoadGlobalClassInfo(GC.getRiverModelInfos(), "CIV4RiverModelInfos", "Art", L"/Civ4RiverModelInfos/RiverModelInfos/RiverModelInfo", false);
 
 	UpdateProgressCB("Global Other");
