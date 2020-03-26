@@ -260,14 +260,14 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 
 	updateCultureLevel(false);
 
-	if (pPlot->getCulture(getOwner()) < GC.getDefineINT("FREE_CITY_CULTURE"))
+	if (pPlot->getCulture(getOwner()) < GC.getDefineINT(FREE_CITY_CULTURE))
 	{
-		pPlot->setCulture(getOwner(), GC.getDefineINT("FREE_CITY_CULTURE"), bBumpUnits, false);
+		pPlot->setCulture(getOwner(), GC.getDefineINT(FREE_CITY_CULTURE), bBumpUnits, false);
 	}
 
 	if (!GC.getGame().isOption(GAMEOPTION_1_CITY_TILE_FOUNDING))
 	{
-		const int iAdjCulture = GC.getDefineINT("FREE_CITY_ADJACENT_CULTURE");
+		const int iAdjCulture = GC.getDefineINT(FREE_CITY_ADJACENT_CULTURE);
 		for (int iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
 		{
 			CvPlot* pAdjacentPlot = plotDirection(getX(), getY(), ((DirectionTypes)iI));
@@ -287,7 +287,7 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 	{
 		if (GET_TEAM(getTeam()).isVassal((TeamTypes)iI))
 		{
-			pPlot->changeAdjacentSight((TeamTypes)iI, GC.getDefineINT("PLOT_VISIBILITY_RANGE"), true, NULL, false);
+			pPlot->changeAdjacentSight((TeamTypes)iI, GC.getDefineINT(PLOT_VISIBILITY_RANGE), true, NULL, false);
 		}
 	}
 
@@ -337,9 +337,9 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 	setGameTurnFounded(GC.getGame().getGameTurn());
 	setGameTurnAcquired(GC.getGame().getGameTurn());
 
-	changePopulation(GC.getDefineINT("INITIAL_CITY_POPULATION") + GC.getEraInfo(GC.getGame().getStartEra()).getFreePopulation());
+	changePopulation(GC.getDefineINT(INITIAL_CITY_POPULATION) + GC.getEraInfo(GC.getGame().getStartEra()).getFreePopulation());
 
-	changeAirUnitCapacity(GC.getDefineINT("CITY_AIR_UNIT_CAPACITY"));
+	changeAirUnitCapacity(GC.getDefineINT(CITY_AIR_UNIT_CAPACITY));
 
 	updateFreshWaterHealth();
 	updateFeatureHealth();
@@ -1009,7 +1009,7 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 		{
 			m_pabWorkingPlot[iI] = false;
 		}
-		int iMaxTradeRoutes = GC.getDefineINT("MAX_TRADE_ROUTES");
+		int iMaxTradeRoutes = GC.getDefineINT(MAX_TRADE_ROUTES);
 		if (getOwner() != NO_PLAYER)
 		{
 			iMaxTradeRoutes += GET_PLAYER(getOwner()).getMaxTradeRoutesAdjustment();
@@ -1361,11 +1361,11 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 	FAssertMsg(getBaseYieldRate(YIELD_COMMERCE) == 0, "getBaseYieldRate(YIELD_COMMERCE) is expected to be 0");
 	FAssertMsg(!isProduction(), "isProduction is expected to be false");
 
-	PlayerTypes eOwner = getOwner();
+	const PlayerTypes eOwner = getOwner();
 
-	bool bCapital = isCapital();
+	const bool bCapital = isCapital();
 
-	pPlot->setImprovementType((ImprovementTypes)(GC.getDefineINT("RUINS_IMPROVEMENT")));
+	pPlot->setImprovementType((ImprovementTypes)GC.getDefineINT(RUINS_IMPROVEMENT));
 
 	CvPlayer& kOwner = GET_PLAYER(eOwner);
 
@@ -1395,7 +1395,7 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 	{
 		if (GET_TEAM(kOwner.getTeam()).isVassal((TeamTypes)iI))
 		{
-			pPlot->changeAdjacentSight((TeamTypes)iI, GC.getDefineINT("PLOT_VISIBILITY_RANGE"), false, NULL, false);
+			pPlot->changeAdjacentSight((TeamTypes)iI, GC.getDefineINT(PLOT_VISIBILITY_RANGE), false, NULL, false);
 		}
 	}
 
@@ -1403,7 +1403,7 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 	{
 		if (abEspionageVisibility[iI])
 		{
-			pPlot->changeAdjacentSight((TeamTypes)iI, GC.getDefineINT("PLOT_VISIBILITY_RANGE"), false, NULL, false);
+			pPlot->changeAdjacentSight((TeamTypes)iI, GC.getDefineINT(PLOT_VISIBILITY_RANGE), false, NULL, false);
 		}
 	}
 
@@ -1419,7 +1419,7 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 		{
 			if (GET_TEAM(kOwner.getTeam()).isHasEmbassy((TeamTypes)iI))
 			{
-				pPlot->changeAdjacentSight((TeamTypes)iI, GC.getDefineINT("PLOT_VISIBILITY_RANGE"), false, NULL, false);
+				pPlot->changeAdjacentSight((TeamTypes)iI, GC.getDefineINT(PLOT_VISIBILITY_RANGE), false, NULL, false);
 			}
 		}
 		kOwner.findNewCapital();
@@ -1672,7 +1672,7 @@ void CvCity::doTurn()
 	{
 		setWeLoveTheKingDay(false);
 	}
-	else if ((getPopulation() >= GC.getDefineINT("WE_LOVE_THE_KING_POPULATION_MIN_POPULATION")) && (GC.getGame().getSorenRandNum(GC.getDefineINT("WE_LOVE_THE_KING_RAND"), "Do We Love The King?") < getPopulation()))
+	else if ((getPopulation() >= GC.getDefineINT(WE_LOVE_THE_KING_POPULATION_MIN_POPULATION)) && (GC.getGame().getSorenRandNum(GC.getDefineINT(WE_LOVE_THE_KING_RAND), "Do We Love The King?") < getPopulation()))
 	{
 		setWeLoveTheKingDay(true);
 	}
@@ -4875,7 +4875,7 @@ bool CvCity::hurryOverflow(HurryTypes eHurry, int* iProduction, int* iGold, bool
 		iTotal = getProductionNeeded(eUnit);
 		iCurrent = getUnitProduction(eUnit);
 		iModifier = getProductionModifier(eUnit);
-		iGoldPercent = GC.getDefineINT("MAXED_UNIT_GOLD_PERCENT");
+		iGoldPercent = GC.getDefineINT(MAXED_UNIT_GOLD_PERCENT);
 	}
 	else if (isProductionBuilding())
 	{
@@ -4884,7 +4884,7 @@ bool CvCity::hurryOverflow(HurryTypes eHurry, int* iProduction, int* iGold, bool
 		iTotal = getProductionNeeded(eBuilding);
 		iCurrent = getBuildingProduction(eBuilding);
 		iModifier = getProductionModifier(eBuilding);
-		iGoldPercent = GC.getDefineINT("MAXED_BUILDING_GOLD_PERCENT");
+		iGoldPercent = GC.getDefineINT(MAXED_BUILDING_GOLD_PERCENT);
 	}
 	else if (isProductionProject())
 	{
@@ -4893,7 +4893,7 @@ bool CvCity::hurryOverflow(HurryTypes eHurry, int* iProduction, int* iGold, bool
 		iTotal = getProductionNeeded(eProject);
 		iCurrent = getProjectProduction(eProject);
 		iModifier = getProductionModifier(eProject);
-		iGoldPercent = GC.getDefineINT("MAXED_PROJECT_GOLD_PERCENT");
+		iGoldPercent = GC.getDefineINT(MAXED_PROJECT_GOLD_PERCENT);
 	}
 	else
 	{
@@ -4957,35 +4957,31 @@ UnitTypes CvCity::getConscriptUnit() const
 
 int CvCity::getConscriptPopulation() const
 {
-	UnitTypes eConscriptUnit = getConscriptUnit();
+	const UnitTypes eConscriptUnit = getConscriptUnit();
 
 	if (eConscriptUnit == NO_UNIT)
 	{
 		return 0;
 	}
 
-	if (GC.getDefineINT("CONSCRIPT_POPULATION_PER_COST") == 0)
+	if (GC.getDefineINT(CONSCRIPT_POPULATION_PER_COST) == 0)
 	{
 		return 0;
 	}
 
-	return std::max(1, ((GC.getUnitInfo(eConscriptUnit).getProductionCost()) / GC.getDefineINT("CONSCRIPT_POPULATION_PER_COST")));
+	return std::max(1, (GC.getUnitInfo(eConscriptUnit).getProductionCost() / GC.getDefineINT(CONSCRIPT_POPULATION_PER_COST)));
 }
 
 
 int CvCity::conscriptMinCityPopulation() const
 {
-	int iPopulation = GC.getDefineINT("CONSCRIPT_MIN_CITY_POPULATION");
-
-	iPopulation += getConscriptPopulation();
-
-	return iPopulation;
+	return GC.getDefineINT(CONSCRIPT_MIN_CITY_POPULATION) + getConscriptPopulation();
 }
 
 
 int CvCity::flatConscriptAngerLength() const
 {
-	int iAnger = GC.getDefineINT("CONSCRIPT_ANGER_DIVISOR");
+	int iAnger = GC.getDefineINT(CONSCRIPT_ANGER_DIVISOR);
 
 	iAnger *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getHurryConscriptAngerPercent();
 	iAnger /= 100;
@@ -5025,7 +5021,7 @@ bool CvCity::canConscript(bool bOnCapture) const
 	}
 
 	//Team Project (6)
-	if (plot()->calculateTeamCulturePercent(getTeam()) < GC.getDefineINT("CONSCRIPT_MIN_CULTURE_PERCENT") && !bOnCapture)
+	if (plot()->calculateTeamCulturePercent(getTeam()) < GC.getDefineINT(CONSCRIPT_MIN_CULTURE_PERCENT) && !bOnCapture)
 	{
 		return false;
 	}
@@ -5040,7 +5036,7 @@ bool CvCity::canConscript(bool bOnCapture) const
 
 CvUnit* CvCity::initConscriptedUnit()
 {
-	UnitTypes eConscriptUnit = getConscriptUnit();
+	const UnitTypes eConscriptUnit = getConscriptUnit();
 	if (NO_UNIT == eConscriptUnit)
 	{
 		return NULL;
@@ -6318,7 +6314,7 @@ int CvCity::getNoMilitaryPercentAnger() const
 {
 	if (getMilitaryHappinessUnits() == 0)
 	{
-		return GC.getDefineINT("NO_MILITARY_PERCENT_ANGER");
+		return GC.getDefineINT(NO_MILITARY_PERCENT_ANGER);
 	}
 	return 0;
 }
@@ -6326,7 +6322,7 @@ int CvCity::getNoMilitaryPercentAnger() const
 
 int CvCity::getCulturePercentAnger() const
 {
-	int iTotalCulture = plot()->countTotalCulture();
+	const int iTotalCulture = plot()->countTotalCulture();
 
 	if (iTotalCulture == 0)
 	{
@@ -6350,12 +6346,12 @@ int CvCity::getCulturePercentAnger() const
 						if (iCulture > MAX_INT / 1000)
 						{
 							iCulture /= 100;
-							iCulture *= std::max(0, (GC.getDefineINT("AT_WAR_CULTURE_ANGER_MODIFIER") + 100));
+							iCulture *= std::max(0, (GC.getDefineINT(AT_WAR_CULTURE_ANGER_MODIFIER) + 100));
 							iCulture *= 100;
 						}
 						else
 						{
-							iCulture *= std::max(0, (GC.getDefineINT("AT_WAR_CULTURE_ANGER_MODIFIER") + 100));
+							iCulture *= std::max(0, (GC.getDefineINT(AT_WAR_CULTURE_ANGER_MODIFIER) + 100));
 							iCulture /= 100;
 						}
 					}
@@ -6366,7 +6362,7 @@ int CvCity::getCulturePercentAnger() const
 		}
 	}
 
-	return ((GC.getDefineINT("CULTURE_PERCENT_ANGER") * iAngryCulture) / iTotalCulture);
+	return ((GC.getDefineINT(CULTURE_PERCENT_ANGER) * iAngryCulture) / iTotalCulture);
 }
 
 
@@ -6377,7 +6373,7 @@ int CvCity::getReligionPercentAnger() const
 		return 0;
 	}
 
-	int religionCount = getReligionCount();
+	const int religionCount = getReligionCount();
 	if (religionCount == 0)
 	{
 		return 0;
@@ -6404,7 +6400,7 @@ int CvCity::getReligionPercentAnger() const
 		}
 	}
 
-	int iAnger = GC.getDefineINT("RELIGION_PERCENT_ANGER");
+	int iAnger = GC.getDefineINT(RELIGION_PERCENT_ANGER);
 
 	iAnger *= iCount;
 	iAnger /= GC.getGame().getNumCities();
