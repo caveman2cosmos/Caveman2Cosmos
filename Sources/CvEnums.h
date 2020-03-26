@@ -6,6 +6,7 @@
 // enums.h
 
 #include "CvDefines.h"
+#include "GlobalDefines.h"
 
 
 enum GameStateTypes					// Exposed to Python
@@ -3534,6 +3535,13 @@ enum PropertyPropagatorTypes
 	PROPERTYPROPAGATOR_DIFFUSE,
 
 	NUM_PROPERTYPROPAGATORS
+};
+
+#define MAKE_ENUMERATOR(VAR) VAR,
+enum GlobalDefineINT
+{
+	DO_FOR_EACH_INT_GLOBAL_DEFINE(MAKE_ENUMERATOR)
+	NUM_INT_GLOBAL_DEFINES
 };
 
 #endif	// CVENUMS_h
