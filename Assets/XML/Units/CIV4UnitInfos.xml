@@ -625,6 +625,11 @@ Base XP gained when defending
 			<bWorkerTrade>1</bWorkerTrade>
 			<UnitUpgrades>
 				<UnitType>UNIT_WORKANIMAL</UnitType>
+				<UnitType>UNIT_WORKBUFFALO</UnitType>
+				<UnitType>UNIT_WORKELEPHANT</UnitType>
+				<UnitType>UNIT_WORKMULE</UnitType>
+				<UnitType>UNIT_WORKLLAMA</UnitType>
+				<UnitType>UNIT_WORKCAMEL</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
@@ -931,11 +936,7 @@ Base XP gained when defending
 			<bFood>1</bFood>
 			<bWorkerTrade>1</bWorkerTrade>
 			<UnitUpgrades>
-				<UnitType>UNIT_WORKBUFFALO</UnitType>
-				<UnitType>UNIT_WORKELEPHANT</UnitType>
-				<UnitType>UNIT_WORKMULE</UnitType>
-				<UnitType>UNIT_WORKLLAMA</UnitType>
-				<UnitType>UNIT_WORKCAMEL</UnitType>
+				<UnitType>UNIT_WORKER_INDUSTRIAL</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
