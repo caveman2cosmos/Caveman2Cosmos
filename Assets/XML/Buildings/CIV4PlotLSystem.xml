@@ -1,56 +1,40 @@
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- ReModified by StrategyOnly -->
-<!-- -->
-<!-- Plot L System -->
-<!-- -->
 <!-- When debugging LSystems, refer to Civ4/Logs/LSystem.log for help -->
-<!-- Attribute Overview
-
-     On specific art:	ONE artref is picked as long as it satisfies all the subconstraints below
-        Bonus
-        Improvement
-        Scalars:
-			bApplyRotation	- if set, the art will be rotated according to its cumulative rotation when placed
-			bZMode_Ground	- if set, the builder will try to force the art to not z-write nor z-test
-			bIsPartOfImprovement, bIsPartOfBonus - when provided once during a plot build on any placed artref, this will
-			                                       prevent the LSystem from falling back to a fixed placement alg
-
-	On nodes:
-		RegionTest			- if value is 1, then the node will be tested against cut regions when expanded
-							- if the value is 0 then this won't happen
-							- if value is 0NW then the node won't be region tested or water tested
-							- if the value is 1NW then the node will be region tested but won't be water tested
-
-     On productions:
-        Bonus			- can be multiple, if any met constraint met, then the production is expandable
-        Improvement		- as with bonus
-		Scalars:
-			bGoalOnly:1	- if true, then the production can only be expanded if we're in GOAL seek mode
-						- note, this does not prevent child nodes from being visited by DFS or BFS
-			bExtraGoalOnly:1	- same behavior as bGoalOnly, but when placing nodes defined by szExtra attributes on a goal artref
-
-		-->
+<!-- Attribute Overview -->
+<!-- On specific art: ONE artref is picked as long as it satisfies all the subconstraints below:
+		* Bonus
+		* Improvement
+		* Scalars:
+					bApplyRotation	- if set, the art will be rotated according to its cumulative rotation when placed
+					bZMode_Ground	- if set, the builder will try to force the art to not z-write nor z-test
+					bIsPartOfImprovement, bIsPartOfBonus -	when provided once during a plot build on any placed artref,
+															this will prevent the LSystem from falling back to a fixed placement alg
+	 On nodes:
+		* RegionTest - if value is 1, then the node will be tested against cut regions when expanded
+					 - if value is 0, then this won't happen
+					 - if value is 0NW, then the node won't be region tested or water tested
+					 - if value is 1NW, then the node will be region tested but won't be water tested
+	 On productions:
+		* Bonus - can be multiple, if any met constraint met, then production is expandable
+		* Improvement - as with bonus
+		* Scalars:
+					bGoalOnly:1	-	if true, then the production can only be expanded if we're in GOAL seek mode
+									(NOTE: this does not prevent child nodes from being visited by DFS or BFS)
+					bExtraGoalOnly:1 - same behavior as bGoalOnly, but when placing nodes defined by szExtra attributes on a goal artref
+-->
 <LSystemInfos xmlns="x-schema:CIV4LSystemSchema.xml">
-	<!-- ******************************************************************************************** -->
-	<!-- Modders: this might help you understand what is going on ... -->
-	<!-- ******************************************************************************************** -->
+	<!-- Modders: this might help you understand what is going on -->
 	<Attribute Class="Scalar">bEnableLogging:0</Attribute>
 	<!-- Plots and Cities output a log of LSystem actions to LSystem.log if 1 -->
-	<!-- ******************************************************************************************** -->
 	<!-- Breakpoint and system-wide attributes : Debug builds only -->
-	<!-- ******************************************************************************************** -->
 	<Attribute Class="Scalar">szProductionBreakpoint:</Attribute>
 	<!-- when a production of this name is expanded, break -->
 	<Attribute Class="Scalar">szNodeBreakpoint:</Attribute>
-	<!-- when a node of this name is instantiated, break   -->
+	<!-- when a node of this name is instantiated, break -->
 	<LNode Name="Node_6x6">
 		<Width>6</Width>
 		<Height>6</Height>
 	</LNode>
-	<!-- ******************************************************************************************** -->
-	<!-- GLeaf 2x1                                               May collide with roads,rivers,cities -->
-	<!-- ******************************************************************************************** -->
+	<!-- GLeaf 2x1 - may collide with roads, rivers, cities -->
 	<LNode Name="GLeaf_2x1">
 		<Width>2</Width>
 		<Height>1</Height>
@@ -108,9 +92,7 @@
 			<Scale>0.5</Scale>
 		</ArtRef>
 	</LNode>
-	<!-- ******************************************************************************************** -->
-	<!-- GLeaf 2x2                                               May collide with roads,rivers,cities -->
-	<!-- ******************************************************************************************** -->
+	<!-- GLeaf 2x2 - may collide with roads, rivers, cities -->
 	<LNode Name="GLeaf_2x2">
 		<Width>2</Width>
 		<Height>2</Height>
@@ -167,7 +149,7 @@
 			<Attribute Class="Scalar">szBatchGroup:farm_crop</Attribute>
 			<Scale>0.5</Scale>
 		</ArtRef>
-<!--		<ArtRef Name="art:crop">
+		<!-- <ArtRef Name="art:crop">
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/rice/rice.nif</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_FARM,IMPROVEMENT_VERTICAL_FARM</Attribute>
 			<Attribute Class="Bonus">NO_BONUS,BONUS_ALL,!BONUS_WHEAT,!BONUS_CORN,!BONUS_POTATOES</Attribute>
@@ -182,9 +164,7 @@
 			<Scale>0.5</Scale>
 		</ArtRef> -->
 	</LNode>
-	<!-- ******************************************************************************************** -->
-	<!-- GLeaf 3x2                                               May collide with roads,rivers,cities -->
-	<!-- ******************************************************************************************** -->
+	<!-- GLeaf 3x2 - may collide with roads, rivers, cities -->
 	<LNode Name="GLeaf_3x2">
 		<Width>3</Width>
 		<Height>2</Height>
@@ -248,9 +228,7 @@
 			<Rotate>90</Rotate>
 		</ArtRef>
 	</LNode>
-	<!-- ******************************************************************************************** -->
-	<!-- GLeaf 4x2                                               May collide with roads,rivers,cities -->
-	<!-- ******************************************************************************************** -->
+	<!-- GLeaf 4x2 - may collide with roads, rivers, cities -->
 	<LNode Name="GLeaf_4x2">
 		<Width>4</Width>
 		<Height>2</Height>
@@ -308,14 +286,11 @@
 			<Scale>0.5</Scale>
 		</ArtRef>
 	</LNode>
-	<!-- ******************************************************************************************** -->
-	<!-- BLeaf 1x1                                                  Tests against roads,rivers,cities -->
-	<!-- ******************************************************************************************** -->
+	<!-- BLeaf 1x1 Tests against roads, rivers, cities -->
 	<LNode Name="BLeaf_1x1">
 		<Width>1</Width>
 		<Height>1</Height>
 		<!-- Villages, etc -->
-
 		<!-- 1x1 GENERIC INDUSTRIAL/MODERN/FUTURE -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_NANOTECH,C2C_ERA_TRANSHUMAN,C2C_ERA_GALACTIC,C2C_ERA_COSMIC,C2C_ERA_TRANSCENDENT,C2C_ERA_FUTURE</Attribute>
@@ -374,7 +349,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_mod_eu</Attribute>
 			<Scale>0.35</Scale>
 		</ArtRef>
-
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_BARBARIAN</Attribute>
@@ -420,7 +394,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_ind_eu</Attribute>
 			<Scale>0.35</Scale>
 		</ArtRef>
-
 		<!-- 1x1 GENERIC ANCIENT -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_ANCIENT</Attribute>
@@ -530,7 +503,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_an_eu</Attribute>
 			<Scale>0.35</Scale>
 		</ArtRef>
-
 		<!-- 1x1 GENERIC MEDITERRANEAN RENAISSANCE/INDUSTRIAL/MODERN -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE,C2C_ERA_INDUSTRIAL,C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
@@ -577,7 +549,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_ren_mediterranean</Attribute>
 			<Scale>0.28</Scale>
 		</ArtRef>
-
 		<!-- 1x1 AFRO ANCIENT/CLASSICAL -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
@@ -670,7 +641,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_med_africa</Attribute>
 			<Scale>0.28</Scale>
 		</ArtRef>
-
 		<!-- 1x1 ARAB ANCIENT/CLASSICAL -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
@@ -755,7 +725,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<!-- 1x1 ARAB RENAISSANCE/INDUSTRIAL/MODERN -->
-<!--		<ArtRef Name="art:building">
+		<!-- <ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/mod_India.nif::1x1_01</Attribute>
@@ -773,7 +743,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_mod_india</Attribute>
 			<Scale>0.35</Scale>
 		</ArtRef> -->
-
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE,C2C_ERA_INDUSTRIAL,C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
@@ -801,7 +770,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_ren_arabia</Attribute>
 			<Scale>0.32</Scale>
 		</ArtRef>
-
 		<!-- 1x1 ASIAN/JAPANESE ANCIENT/CLASSICAL/MEDIEVAL -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
@@ -904,7 +872,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_med_asia</Attribute>
 			<Scale>0.32</Scale>
 		</ArtRef>
-
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ASIA,ARTSTYLE_JAPAN</Attribute>
@@ -925,7 +892,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_mod_eu</Attribute>
 			<Scale>0.35</Scale>
 		</ArtRef>
-
 		<!-- 1x1 JAPANESE RENAISSANCE/INDUSTRIAL/MODERN/FUTURE -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE,C2C_ERA_INDUSTRIAL,C2C_ERA_ATOMIC,C2C_ERA_INFORMATION,C2C_ERA_NANOTECH,C2C_ERA_TRANSHUMAN,C2C_ERA_GALACTIC,C2C_ERA_COSMIC,C2C_ERA_TRANSCENDENT,C2C_ERA_FUTURE</Attribute>
@@ -977,7 +943,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_med_japan</Attribute>
 			<Scale>0.32</Scale>
 		</ArtRef>
-
 		<!-- 1x1 MONGOL ANCIENT_TO_MODERN -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">ERA_ALL,!C2C_ERA_NANOTECH,!C2C_ERA_TRANSHUMAN,!C2C_ERA_FUTURE</Attribute>
@@ -1015,7 +980,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_an_Mongolia</Attribute>
 			<Scale>0.32</Scale>
 		</ArtRef>
-
 		<!-- 1x1 SOUTH_EAST_ASIAN ANCIENT/CLASSICAL/MEDIEVAL -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
@@ -1108,7 +1072,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_med_SouthEastAsia</Attribute>
 			<Scale>0.35</Scale>
 		</ArtRef>
-
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_EAST_ASIA,ARTSTYLE_MONGOLIA</Attribute>
@@ -1127,7 +1090,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_mod_eu</Attribute>
 			<Scale>0.35</Scale>
 		</ArtRef>
-
 		<!-- 1x1 EGYPT ANCIENT/CLASSICAL/MEDIEVAL -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_ANCIENT</Attribute>
@@ -1147,7 +1109,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_an_egypt</Attribute>
 			<Scale>0.32</Scale>
 		</ArtRef>
-
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_EGYPT</Attribute>
@@ -1193,7 +1154,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_med_egypt</Attribute>
 			<Scale>0.32</Scale>
 		</ArtRef>
-
 		<!-- 1x1 CRESCENT ANCIENT/CLASSICAL/MEDIEVAL -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
@@ -1276,7 +1236,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_an_egypt</Attribute>
 			<Scale>0.31</Scale>
 		</ArtRef>
-
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_CRESCENT</Attribute>
@@ -1387,7 +1346,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_ren_eastern</Attribute>
 			<Scale>0.35</Scale>
 		</ArtRef>
-
 		<!-- 1x1 ANGLO/EUROPEAN CLASSICAL -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
@@ -1631,7 +1589,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_colony_euro_late</Attribute>
 			<Scale>0.35</Scale>
 		</ArtRef>
-
 		<!-- 1x1 EUROPEAN RENAISSANCE -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE</Attribute>
@@ -1715,7 +1672,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_ind_europe</Attribute>
 			<Scale>0.35</Scale>
 		</ArtRef>
-
 		<!-- 1x1 ANGLO_AMERICAN/NORSE INDUSTRIAL -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
@@ -1762,7 +1718,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_ind_Anglo_America</Attribute>
 			<Scale>0.35</Scale>
 		</ArtRef>
-
 		<!-- 1x1 GRECO_ROMAN CLASSICAL/MEDIEVAL -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
@@ -1801,7 +1756,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<!-- 1x1 GRECO_ROMAN MODERN -->
-<!--		<ArtRef Name="art:building">
+		<!-- <ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_GRECO_ROMAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/mod_India.nif::1x1_01</Attribute>
@@ -1819,7 +1774,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_mod_India</Attribute>
 			<Scale>0.35</Scale>
 		</ArtRef> -->
-
 		<!-- 1x1 IBERIAN CLASSICAL -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
@@ -1985,7 +1939,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_ren_Iberia</Attribute>
 			<Scale>0.30</Scale>
 		</ArtRef>
-
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL,C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
@@ -2022,7 +1975,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_ind_Mediterranean</Attribute>
 			<Scale>0.38</Scale>
 		</ArtRef>
-
 		<!-- 1x1 NORSE ANCIENT/CLASSICAL/MEDIEVAL -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
@@ -2069,7 +2021,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_clas_norsca</Attribute>
 			<Scale>0.29</Scale>
 		</ArtRef>
-
 		<!-- 1x1 RUSSIAN ANCIENT/CLASSICAL -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
@@ -2191,7 +2142,6 @@
 			<Rotate>90</Rotate>
 			<Scale>0.27</Scale>
 		</ArtRef>
-
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
@@ -2228,8 +2178,7 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_ind_russia</Attribute>
 			<Scale>0.27</Scale>
 		</ArtRef>
-
-<!--		<ArtRef Name="art:building">
+		<!-- <ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_eu.nif::1x1_03</Attribute>
@@ -2275,7 +2224,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_med_russia</Attribute>
 			<Scale>0.3</Scale>
 		</ArtRef>
-
 		<!-- 1x1 INDIAN ANCIENT/CLASSICAL -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
@@ -2386,7 +2334,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_med_egypt</Attribute>
 			<Scale>0.31</Scale>
 		</ArtRef>
-
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_INDIA</Attribute>
@@ -2433,7 +2380,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_ren_eastern</Attribute>
 			<Scale>0.35</Scale>
 		</ArtRef>
-
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE,C2C_ERA_INDUSTRIAL,C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_INDIA</Attribute>
@@ -2480,7 +2426,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_ren_eastern</Attribute>
 			<Scale>0.35</Scale>
 		</ArtRef>
-
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_NANOTECH,C2C_ERA_TRANSHUMAN,C2C_ERA_GALACTIC,C2C_ERA_COSMIC,C2C_ERA_TRANSCENDENT,C2C_ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_INDIA</Attribute>
@@ -2508,7 +2453,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_mod_India</Attribute>
 			<Scale>0.32</Scale>
 		</ArtRef>
-
 		<!-- 1x1 PACIFIC PALMTREES -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">ERA_ALL</Attribute>
@@ -2537,7 +2481,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_palmtrees</Attribute>
 			<Scale>1.0</Scale>
 		</ArtRef>
-
 		<!-- 1x1 INCA/PACIFIC ANCIENT/CLASSICAL -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
@@ -2621,7 +2564,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_med_South_America</Attribute>
 			<Scale>0.32</Scale>
 		</ArtRef>
-
 		<!-- 1x1 MESO ANCIENT/CLASSICAL -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
@@ -2801,7 +2743,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_mod_Meso_America</Attribute>
 			<Scale>0.35</Scale>
 		</ArtRef>
-
 		<!-- 1x1 NATIVE ANCIENT/CLASSICAL -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
@@ -2828,7 +2769,7 @@
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
 			<Attribute Class="Scalar">szForceContourNode:BUILDING</Attribute>
 			<Attribute Class="Scalar">szBatchGroup:buildings_an_Native_American</Attribute>
-<!--			<Rotate>45</Rotate> -->
+			<!-- <Rotate>45</Rotate> -->
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<!-- 1x1 NATIVE MEDIEVAL/RENAISSANCE -->
@@ -2866,7 +2807,7 @@
 			<Attribute Class="Improvement">IMPROVEMENT_COTTAGE,IMPROVEMENT_HAMLET,IMPROVEMENT_VILLAGE,IMPROVEMENT_TOWN,IMPROVEMENT_SUBURBS</Attribute>
 			<Attribute Class="Scalar">szForceContourNode:BUILDING</Attribute>
 			<Attribute Class="Scalar">szBatchGroup:buildings_med_Native_American</Attribute>
-<!--			<Rotate>45</Rotate> -->
+			<!-- <Rotate>45</Rotate> -->
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<!-- 1x1 NATIVE/ANGLO INDUSTRIAL -->
@@ -2907,7 +2848,6 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<!-- NATIVE MODERN/FUTURE IS GENERIC -->
-
 		<!-- 1x1 PACIFIC MEDIEVAL_TO_FUTURE -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL,C2C_ERA_RENAISSANCE,C2C_ERA_INDUSTRIAL,C2C_ERA_ATOMIC,C2C_ERA_INFORMATION,C2C_ERA_NANOTECH,C2C_ERA_TRANSHUMAN,C2C_ERA_GALACTIC,C2C_ERA_COSMIC,C2C_ERA_TRANSCENDENT,C2C_ERA_FUTURE</Attribute>
@@ -2927,8 +2867,7 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_South_Pacific</Attribute>
 			<Scale>0.27</Scale>
 		</ArtRef>
-
-		<!-- Other stuff -->
+		<!-- Other Stuff -->
 		<ArtRef Name="goal:IMPROVEMENT_COTTAGE">
 			<Attribute Class="Scalar">bPlace:0</Attribute>
 			<Attribute Class="Scalar">iCropArea:5</Attribute>
@@ -2970,13 +2909,11 @@
 			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
 		</ArtRef>
 	</LNode>
-	<!-- ******************************************************************************************** -->
-	<!-- BLeaf 2x1                                                  Tests against roads,rivers,cities -->
-	<!-- ******************************************************************************************** -->
+	<!-- BLeaf 2x1 Tests against roads, rivers, cities -->
 	<LNode Name="BLeaf_2x1">
 		<Width>2</Width>
 		<Height>1</Height>
-		<!--Ancient LandWorked -->
+		<!--Ancient Land Worked -->
 		<ArtRef Name="goal:IMPROVEMENT_LAND_WORKED">
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL,C2C_ERA_RENAISSANCE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/LandWorked/sm_farm_house.nif</Attribute>
@@ -2990,7 +2927,7 @@
 			<Attribute Class="Scalar">fTwist:-0.7853981633</Attribute>
 			<Scale>0.8</Scale>
 		</ArtRef>
-		<!--Modern LandWorked -->
+		<!--Modern Land Worked -->
 		<ArtRef Name="goal:IMPROVEMENT_LAND_WORKED">
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL,C2C_ERA_ATOMIC,C2C_ERA_INFORMATION,C2C_ERA_NANOTECH,C2C_ERA_TRANSHUMAN,C2C_ERA_GALACTIC,C2C_ERA_COSMIC,C2C_ERA_TRANSCENDENT,C2C_ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/LandWorked/sm_farm_house_mod.nif</Attribute>
@@ -3004,8 +2941,8 @@
 			<Attribute Class="Scalar">fTwist:-0.7853981633</Attribute>
 			<Scale>0.8</Scale>
 		</ArtRef>
-		<!--Testing Modern LandWorked -->
-<!--		<ArtRef Name="goal:IMPROVEMENT_LAND_WORKED">
+		<!--Testing Modern Land Worked -->
+		<!-- <ArtRef Name="goal:IMPROVEMENT_LAND_WORKED">
 			<Attribute Class="Era">C2C_ERA_ATOMIC,C2C_ERA_INFORMATION,C2C_ERA_NANOTECH,C2C_ERA_TRANSHUMAN,C2C_ERA_GALACTIC,C2C_ERA_COSMIC,C2C_ERA_TRANSCENDENT,C2C_ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/LandWorked/sm_farm_house_test.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/LandWorked/sm_farm_house_mod.kfm</Attribute>
@@ -3017,9 +2954,8 @@
 			<Attribute Class="Scalar">iPlayAnimationID:0</Attribute>
 			<Attribute Class="Scalar">fTwist:-0.7853981633</Attribute>
 			<Scale>0.8</Scale>
-		</ArtRef>  -->
-
-		<!-- modern workshop -->
+		</ArtRef> -->
+		<!-- Modern Workshop -->
 		<ArtRef Name="goal:IMPROVEMENT_WORKSHOP">
 			<Attribute Class="Improvement">IMPROVEMENT_WORKSHOP</Attribute>
 			<Attribute Class="Era">C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
@@ -3030,8 +2966,7 @@
 			<Attribute Class="Scalar">bCutTrees:1</Attribute>
 			<Scale>0.6</Scale>
 		</ArtRef>
-
-		<!-- modern lumbermill -->
+		<!-- Modern Lumbermill -->
 		<ArtRef Name="goal:IMPROVEMENT_LUMBERMILL">
 			<Attribute Class="Improvement">IMPROVEMENT_LUMBERMILL</Attribute>
 			<Attribute Class="Era">C2C_ERA_ATOMIC,C2C_ERA_INFORMATION,C2C_ERA_NANOTECH,C2C_ERA_TRANSHUMAN,C2C_ERA_GALACTIC,C2C_ERA_COSMIC,C2C_ERA_TRANSCENDENT,C2C_ERA_FUTURE</Attribute>
@@ -3042,8 +2977,7 @@
 			<Attribute Class="Scalar">bCutTrees:0</Attribute>
 			<Scale>0.75</Scale>
 		</ArtRef>
-
-		<!-- villages -->
+		<!-- Villages -->
 		<!-- 2x1 GENERIC INDUSTRIAL/MODERN/FUTURE -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_NANOTECH,C2C_ERA_TRANSHUMAN,C2C_ERA_GALACTIC,C2C_ERA_COSMIC,C2C_ERA_TRANSCENDENT,C2C_ERA_FUTURE</Attribute>
@@ -3190,7 +3124,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_mod_eu</Attribute>
 			<Scale>0.35</Scale>
 		</ArtRef>
-
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_EUROPE,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_BARBARIAN</Attribute>
@@ -3261,7 +3194,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_ind_eu</Attribute>
 			<Scale>0.35</Scale>
 		</ArtRef>
-
 		<!-- 2x1 GENERIC ANCIENT -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_ANCIENT</Attribute>
@@ -3313,7 +3245,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_an_eu</Attribute>
 			<Scale>0.35</Scale>
 		</ArtRef>
-
 		<!-- 2x1 GENERIC MEDITERRANEAN RENAISSANCE/INDUSTRIAL/MODERN -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE,C2C_ERA_INDUSTRIAL,C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
@@ -3405,7 +3336,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_ren_mediterranean</Attribute>
 			<Scale>0.32</Scale>
 		</ArtRef>
-
 		<!-- 2x1 AFRO ANCIENT/CLASSICAL/MEDIEVAL/RENAISSANCE -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
@@ -3588,7 +3518,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_med_africa</Attribute>
 			<Scale>0.28</Scale>
 		</ArtRef>
-
 		<!-- 2x1 ARABIAN ANCIENT/CLASSICAL -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
@@ -3762,7 +3691,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_mod_india</Attribute>
 			<Scale>0.35</Scale>
 		</ArtRef>
-
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE,C2C_ERA_INDUSTRIAL,C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
@@ -3823,7 +3751,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_ren_arabia</Attribute>
 			<Scale>0.28</Scale>
 		</ArtRef>
-
 		<!-- 2x1 ASIAN/JAPANESE ANCIENT/CLASSICAL/MEDIEVAL -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
@@ -3986,7 +3913,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_med_asia</Attribute>
 			<Scale>0.32</Scale>
 		</ArtRef>
-
 		<!-- 2x1 JAPANESE MEDIEVAL/RENAISSANCE/INDUSTRIAL/MODERN/FUTURE -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE,C2C_ERA_INDUSTRIAL,C2C_ERA_ATOMIC,C2C_ERA_INFORMATION,C2C_ERA_NANOTECH,C2C_ERA_TRANSHUMAN,C2C_ERA_GALACTIC,C2C_ERA_COSMIC,C2C_ERA_TRANSCENDENT,C2C_ERA_FUTURE</Attribute>
@@ -4068,7 +3994,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_med_Japan</Attribute>
 			<Scale>0.32</Scale>
 		</ArtRef>
-
 		<!-- 2x1 MONGOL ANCIENT_TO_MODERN -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">ERA_ALL,!!C2C_ERA_ANCIENT,!C2C_ERA_NANOTECH,!C2C_ERA_TRANSHUMAN,!C2C_ERA_FUTURE</Attribute>
@@ -4180,7 +4105,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_an_Mongolia</Attribute>
 			<Scale>0.26</Scale>
 		</ArtRef>
-
 		<!-- 2x1 SOUTH_EAST_ASIAN ANCIENT/CLASSICAL/MEDIEVAL -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
@@ -4333,7 +4257,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_med_SouthEastAsia</Attribute>
 			<Scale>0.32</Scale>
 		</ArtRef>
-
 		<!-- 2x1 CRESCENT ANCIENT/CLASSICAL/MEDIEVAL -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
@@ -4395,7 +4318,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_an_egypt</Attribute>
 			<Scale>0.31</Scale>
 		</ArtRef>
-
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_CRESCENT</Attribute>
@@ -4608,7 +4530,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_ren_eastern</Attribute>
 			<Scale>0.32</Scale>
 		</ArtRef>
-
 		<!-- 2x1 EGYPT ANCIENT/CLASSICAL/MEDIEVAL -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_ANCIENT</Attribute>
@@ -4670,7 +4591,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_an_egypt</Attribute>
 			<Scale>0.32</Scale>
 		</ArtRef>
-
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_EGYPT</Attribute>
@@ -4761,7 +4681,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_med_egypt</Attribute>
 			<Scale>0.32</Scale>
 		</ArtRef>
-
 		<!-- 2x1 ANGLO/EUROPEAN CLASSICAL -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
@@ -4773,7 +4692,7 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_an_eu</Attribute>
 			<Scale>0.35</Scale>
 		</ArtRef>
-<!--		<ArtRef Name="art:building">
+		<!-- <ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_EUROPE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_eu.nif::1x2_02</Attribute>
@@ -5092,7 +5011,6 @@
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Scale>0.35</Scale>
 		</ArtRef>
-
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_BARBARIAN</Attribute>
@@ -5104,7 +5022,7 @@
 			<Scale>0.44</Scale>
 			<Rotate>90</Rotate>
 		</ArtRef>
-<!--		<ArtRef Name="art:building">
+		<!-- <ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_NORSE,ARTSTYLE_BARBARIAN</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_Anglo_America.nif::1x2_02</Attribute>
@@ -5293,7 +5211,6 @@
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Scale>0.35</Scale>
 		</ArtRef>
-
 		<!-- 2x1 EUROPEAN RENAISSANCE -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE</Attribute>
@@ -5387,7 +5304,7 @@
 			<Scale>0.44</Scale>
 			<Rotate>90</Rotate>
 		</ArtRef>
-<!--		<ArtRef Name="art:building">
+		<!-- <ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_europe.nif::1x2_02</Attribute>
@@ -5569,7 +5486,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_ind_europe</Attribute>
 			<Scale>0.41</Scale>
 		</ArtRef>
-
 		<!-- 2x1 GRECO_ROMAN CLASSICAL/MEDIEVAL -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
@@ -5651,7 +5567,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_greco_roman</Attribute>
 			<Scale>0.35</Scale>
 		</ArtRef>
-
 		<!-- 2x1 IBERIAN CLASSICAL -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
@@ -5895,7 +5810,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_ren_Iberia</Attribute>
 			<Scale>0.29</Scale>
 		</ArtRef>
-
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL,C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
@@ -5989,7 +5903,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_ind_mediterranean</Attribute>
 			<Scale>0.41</Scale>
 		</ArtRef>
-
 		<!-- 2x1 NORSE ANCIENT/CLASSICAL/MEDIEVAL -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
@@ -6081,7 +5994,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_clas_norsca</Attribute>
 			<Scale>0.29</Scale>
 		</ArtRef>
-
 		<!-- 2x1 RUSSIAN ANCIENT/CLASSICAL -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
@@ -6274,7 +6186,6 @@
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Scale>0.32</Scale>
 		</ArtRef>
-
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL,C2C_ERA_RENAISSANCE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
@@ -6376,7 +6287,6 @@
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Scale>0.32</Scale>
 		</ArtRef>
-
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
@@ -6447,7 +6357,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_ind_Europe</Attribute>
 			<Scale>0.35</Scale>
 		</ArtRef>
-
 		<!-- 2x1 INDIAN ANCIENT/CLASSICAL -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
@@ -6550,7 +6459,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_med_egypt</Attribute>
 			<Scale>0.31</Scale>
 		</ArtRef>
-
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_INDIA</Attribute>
@@ -6632,7 +6540,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_ren_eastern</Attribute>
 			<Scale>0.32</Scale>
 		</ArtRef>
-
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE,C2C_ERA_INDUSTRIAL,C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_INDIA</Attribute>
@@ -6704,7 +6611,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_ren_eastern</Attribute>
 			<Scale>0.32</Scale>
 		</ArtRef>
-
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_NANOTECH,C2C_ERA_TRANSHUMAN,C2C_ERA_GALACTIC,C2C_ERA_COSMIC,C2C_ERA_TRANSCENDENT,C2C_ERA_FUTURE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_INDIA</Attribute>
@@ -6725,7 +6631,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_mod_India</Attribute>
 			<Scale>0.35</Scale>
 		</ArtRef>
-
 		<!-- 2x1 INCA/PACIFIC ANCIENT/CLASSICAL -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
@@ -6777,7 +6682,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_an_South_America</Attribute>
 			<Scale>0.32</Scale>
 		</ArtRef>
-
 		<!-- 2x1 INCA CLASSICAL_TO_INDUSTRIAL -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL,C2C_ERA_RENAISSANCE,C2C_ERA_INDUSTRIAL</Attribute>
@@ -6865,7 +6769,6 @@
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Scale>0.35</Scale>
 		</ArtRef>
-
 		<!-- 2x1 MESO ANCIENT/CLASSICAL -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
@@ -7128,7 +7031,7 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_mod_Meso_America</Attribute>
 			<Scale>0.35</Scale>
 		</ArtRef>
-<!--		<ArtRef Name="art:building">
+		<!-- <ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_MESO_AMERICA,ARTSTYLE_SOUTH_AMERICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/mod_Meso_America.nif::2x1_01</Attribute>
@@ -7168,7 +7071,6 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_mod_Meso_America</Attribute>
 			<Scale>0.41</Scale>
 		</ArtRef>
-
 		<!-- 2x1 NATIVE ANCIENT/CLASSICAL -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
@@ -7192,7 +7094,7 @@
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Scale>0.32</Scale>
 		</ArtRef>
-<!--		<ArtRef Name="art:building">
+		<!-- <ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_NATIVE_AMERICA</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_Native_American.nif::1x2_03</Attribute>
@@ -7536,7 +7438,6 @@
 			<Attribute Class="Scalar">bHasNoShadow:1</Attribute>
 			<Scale>0.35</Scale>
 		</ArtRef>
-
 		<!-- 2x1 PACIFIC MEDIEVAL_TO_FUTURE -->
 		<ArtRef Name="art:building">
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL,C2C_ERA_RENAISSANCE,C2C_ERA_INDUSTRIAL,C2C_ERA_ATOMIC,C2C_ERA_INFORMATION,C2C_ERA_NANOTECH,C2C_ERA_TRANSHUMAN,C2C_ERA_GALACTIC,C2C_ERA_COSMIC,C2C_ERA_TRANSCENDENT,C2C_ERA_FUTURE</Attribute>
@@ -7598,8 +7499,7 @@
 			<Attribute Class="Scalar">szBatchGroup:buildings_South_Pacific</Attribute>
 			<Scale>0.27</Scale>
 		</ArtRef>
-
-		<!-- corn -->
+		<!-- Corn -->
 		<ArtRef Name="art:corn_crop">
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Corn/crops.nif::2x1_01</Attribute>
 			<Attribute Class="Bonus">BONUS_CORN</Attribute>
@@ -7620,7 +7520,7 @@
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Scale>0.8</Scale>
 		</ArtRef>
-		<!-- grapes -->
+		<!-- Grapes -->
 		<ArtRef Name="art:grapes">
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Wine/Wine_L_System.nif::2x1_01_Worked</Attribute>
 			<Attribute Class="Bonus">BONUS_GRAPES</Attribute>
@@ -7664,13 +7564,11 @@
 			<Scale>1.0</Scale>
 		</ArtRef>
 	</LNode>
-	<!-- ******************************************************************************************** -->
-	<!-- BLeaf 2x2                                                  Tests against roads,rivers,cities -->
-	<!-- ******************************************************************************************** -->
+	<!-- BLeaf 2x2 Tests against roads, rivers, cities -->
 	<LNode Name="BLeaf_2x2">
 		<Width>2</Width>
 		<Height>2</Height>
-		<!-- CORN -->
+		<!-- Corn -->
 		<ArtRef Name="art:corn_crop">
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Corn/crops.nif::2x2_01</Attribute>
 			<Attribute Class="Bonus">BONUS_CORN</Attribute>
@@ -7689,7 +7587,7 @@
 			<Attribute Class="Scalar">szForceContourNode:building</Attribute>
 			<Scale>0.8</Scale>
 		</ArtRef>
-		<!-- SILK crops -->
+		<!-- Silk crops -->
 		<ArtRef Name="art:silk_crop">
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Silk/Silk_LSystem.nif::2x2_01_Silk_Normal</Attribute>
 			<Attribute Class="Improvement">NO_IMPROVEMENT,IMPROVEMENT_ALL,!IMPROVEMENT_SILK_FARM</Attribute>
@@ -7721,7 +7619,7 @@
 			<Attribute Class="Scalar">szBatchGroup:silk_crop</Attribute>
 			<Scale>0.6</Scale>
 		</ArtRef>
-		<!-- SILK improvement crap -->
+		<!-- Silk improvements -->
 		<ArtRef Name="art:SILK_PLANTATION_RACK">
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Silk/Silk_LSystem.nif::1x3_01_Rack_NotWorked</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
@@ -7752,7 +7650,7 @@
 			<Attribute Class="Scalar">bImprovementWorkedOnly:0</Attribute>
 			<Scale>0.6</Scale>
 		</ArtRef>
-		<!-- SPICE crops -->
+		<!-- Spice crops -->
 		<ArtRef Name="art:spice_crop">
 			<!-- when worked by plantation -->
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Spices/Spices_LSystem.nif::2x2_01_Spice_Worked</Attribute>
@@ -7766,7 +7664,7 @@
 			<Rotate>+45</Rotate>
 		</ArtRef>
 		<ArtRef Name="art:Spice_crop">
-			<!-- when improved but not worked by plantation -->
+			<!-- when improved, but not worked by plantation -->
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Spices/Spices_LSystem.nif::2x2_01_Spice_NotWorked</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
@@ -7779,7 +7677,7 @@
 			<Rotate>+45</Rotate>
 		</ArtRef>
 		<ArtRef Name="art:Spice_crop">
-			<!-- when in the rough ... there's anotehr in 3x2 for farms -->
+			<!-- when in the rough... there's another in 3x2 for farms -->
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Spices/Spices_LSystem.nif::2x2_01_Spice_Normal</Attribute>
 			<Attribute Class="Improvement">NO_IMPROVEMENT,IMPROVEMENT_ALL,!IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
@@ -7790,7 +7688,7 @@
 			<Scale>0.8</Scale>
 			<Rotate>+45</Rotate>
 		</ArtRef>
-		<!-- Spice improvement crap -->
+		<!-- Spice improvements -->
 		<ArtRef Name="art:SPICE_PLANTATION_RACK">
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Spices/Spices_LSystem.nif::1x3_01_Rack_NotWorked</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
@@ -7824,7 +7722,7 @@
 			<Attribute Class="Scalar">bImprovementWorkedOnly:0</Attribute>
 			<Attribute Class="Scalar">bCutTrees:1</Attribute>
 		</ArtRef>
-		<!-- OLIVES crops -->
+		<!-- Olives crops -->
 		<ArtRef Name="art:olives_crop">
 			<!-- when worked by plantation -->
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Olives/Olives.nif::2x2_01_Olives_Worked</Attribute>
@@ -7838,7 +7736,7 @@
 			<Rotate>+45</Rotate>
 		</ArtRef>
 		<ArtRef Name="art:Olives_crop">
-			<!-- when improved but not worked by plantation -->
+			<!-- when improved, but not worked by plantation -->
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Olives/Olives.nif::2x2_01_Olives_NotWorked</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_FRUIT_PICKING_CAMP</Attribute>
 			<Attribute Class="Bonus">BONUS_OLIVES</Attribute>
@@ -7851,7 +7749,7 @@
 			<Rotate>+45</Rotate>
 		</ArtRef>
 		<ArtRef Name="art:Olives_crop">
-			<!-- when in the rough ... there's anotehr in 3x2 for farms -->
+			<!-- when in the rough... there's another in 3x2 for farms -->
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Olives/Olives.nif::2x2_01_Olives_Normal</Attribute>
 			<Attribute Class="Improvement">NO_IMPROVEMENT,IMPROVEMENT_LAND_WORKED,IMPROVEMENT_FARM,IMPROVEMENT_VERTICAL_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_OLIVES</Attribute>
@@ -7862,7 +7760,7 @@
 			<Scale>0.8</Scale>
 			<Rotate>+45</Rotate>
 		</ArtRef>
-		<!-- COTTON crops -->
+		<!-- Cotton crops -->
 		<ArtRef Name="art:cotton_crop">
 			<!-- when worked by plantation -->
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Cotton/Cotton.nif::2x2_01_Sugar_Worked</Attribute>
@@ -7876,7 +7774,7 @@
 			<Rotate>+45</Rotate>
 		</ArtRef>
 		<ArtRef Name="art:Cotton_crop">
-			<!-- when improved but not worked by plantation -->
+			<!-- when improved, but not worked by plantation -->
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Cotton/Cotton.nif::2x2_01_Sugar_NotWorked</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_COTTON</Attribute>
@@ -7889,7 +7787,7 @@
 			<Rotate>+45</Rotate>
 		</ArtRef>
 		<ArtRef Name="art:Cotton_crop">
-			<!-- when in the rough ... there's anotehr in 3x2 for farms -->
+			<!-- when in the rough... there's another in 3x2 for farms -->
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Cotton/Cotton.nif::2x2_01_Sugar_Normal</Attribute>
 			<Attribute Class="Improvement">NO_IMPROVEMENT,IMPROVEMENT_LAND_WORKED,IMPROVEMENT_FARM,IMPROVEMENT_VERTICAL_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_COTTON</Attribute>
@@ -7900,7 +7798,7 @@
 			<Scale>0.8</Scale>
 			<Rotate>+45</Rotate>
 		</ArtRef>
-		<!-- Cotton improvement crap -->
+		<!-- Cotton improvements -->
 		<ArtRef Name="art:COTTON_PLANTATION_RACK">
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Cotton/Cotton.nif::1x3_01_Rack_NotWorked</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
@@ -7917,7 +7815,7 @@
 			<Attribute Class="Scalar">bImprovementWorkedOnly:1</Attribute>
 			<Scale>0.8</Scale>
 		</ArtRef>
-		<!-- TOBACCO crops -->
+		<!-- Tobacco crops -->
 		<ArtRef Name="art:tobacco_crop">
 			<!-- when worked by plantation -->
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Tobacco/Tobacco.nif::2x2_01_Tobacco_Worked</Attribute>
@@ -7931,7 +7829,7 @@
 			<Rotate>+45</Rotate>
 		</ArtRef>
 		<ArtRef Name="art:Tobacco_crop">
-			<!-- when improved but not worked by plantation -->
+			<!-- when improved, but not worked by plantation -->
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Tobacco/Tobacco.nif::2x2_01_Tobacco_NotWorked</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_TOBACCO</Attribute>
@@ -7944,7 +7842,7 @@
 			<Rotate>+45</Rotate>
 		</ArtRef>
 		<ArtRef Name="art:Tobacco_crop">
-			<!-- when in the rough ... there's anotehr in 3x2 for farms -->
+			<!-- when in the rough... there's another in 3x2 for farms -->
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Tobacco/Tobacco.nif::2x2_01_Tobacco_Normal</Attribute>
 			<Attribute Class="Improvement">NO_IMPROVEMENT,IMPROVEMENT_LAND_WORKED,IMPROVEMENT_FARM,IMPROVEMENT_VERTICAL_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_TOBACCO</Attribute>
@@ -7955,7 +7853,7 @@
 			<Scale>0.8</Scale>
 			<Rotate>+45</Rotate>
 		</ArtRef>
-		<!-- Tobacco improvement crap -->
+		<!-- Tobacco improvements -->
 		<ArtRef Name="art:TOBACCO_PLANTATION_RACK">
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Tobacco/Tobacco.nif::1x3_01_Rack_NotWorked</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
@@ -7972,7 +7870,7 @@
 			<Attribute Class="Scalar">bImprovementWorkedOnly:1</Attribute>
 			<Scale>0.8</Scale>
 		</ArtRef>
-		<!-- SUGAR crops -->
+		<!-- Sugar crops -->
 		<ArtRef Name="art:sugar_crop">
 			<!-- when worked by plantation -->
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Sugar/Sugar_LSystem.nif::2x2_01_Sugar_Worked</Attribute>
@@ -8000,7 +7898,7 @@
 			<Scale>0.8</Scale>
 		</ArtRef>
 		<ArtRef Name="art:sugar_crop">
-			<!-- when improved but not worked by plantation -->
+			<!-- when improved, but not worked by plantation -->
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Sugar/Sugar_LSystem.nif::2x2_01_Sugar_NotWorked</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
@@ -8014,7 +7912,7 @@
 			<Scale>0.6</Scale>
 		</ArtRef>
 		<ArtRef Name="art:sugar_crop">
-			<!-- when improved but not worked by plantation -->
+			<!-- when improved, but not worked by plantation -->
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Sugar/Sugar_LSystem.nif::2x2_02_Sugar_NotWorked</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
@@ -8053,7 +7951,7 @@
 			<Attribute Class="Scalar">szForceContourNode:BUILDING</Attribute>
 			<Scale>0.8</Scale>
 		</ArtRef>
-		<!-- SUGAR improvement crap -->
+		<!-- Sugar improvements -->
 		<ArtRef Name="art:SUGAR_PLANTATION_RACK">
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Sugar/Sugar_LSystem.nif::1x3_01_Rack_NotWorked</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
@@ -8117,7 +8015,7 @@
 			<Attribute Class="Scalar">bBonusImprovedOnly:0</Attribute>
 			<Attribute Class="Scalar">bIsPartOfBonus:1</Attribute>
 		</ArtRef>
-		<!-- Coffee (Cofwe/s) improvement crap -->
+		<!-- Coffee (Cofwe/s) improvements -->
 		<ArtRef Name="art:COFWE_PLANTATION_RACK">
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Coffee/Cofwes_LSystem.nif::1x3_01_Rack_NotWorked</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
@@ -8151,7 +8049,7 @@
 			<Attribute Class="Scalar">bImprovementWorkedOnly:0</Attribute>
 			<Attribute Class="Scalar">bCutTrees:1</Attribute>
 		</ArtRef>
-		<!-- LEMON (Lemqes) crops -->
+		<!-- Lemon (Lemqes) crops -->
 		<ArtRef Name="art:lemon_crop">
 			<!-- when worked by plantation -->
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Lemon/Lemqes_LSystem.nif::2x2_01_Lemqe_Worked</Attribute>
@@ -8165,7 +8063,7 @@
 			<Rotate>+45</Rotate>
 		</ArtRef>
 		<ArtRef Name="art:lemqe_crop">
-			<!-- when improved but not worked by plantation -->
+			<!-- when improved, but not worked by plantation -->
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Lemon/Lemqes_LSystem.nif::2x2_01_Lemqe_NotWorked</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_LEMONS</Attribute>
@@ -8178,7 +8076,7 @@
 			<Rotate>+45</Rotate>
 		</ArtRef>
 		<ArtRef Name="art:lemqe_crop">
-			<!-- when in the rough ... there's anotehr in 3x2 for farms -->
+			<!-- when in the rough... there's another in 3x2 for farms -->
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Lemon/Lemqes_LSystem.nif::2x2_01_Lemqe_Normal</Attribute>
 			<Attribute Class="Improvement">NO_IMPROVEMENT,IMPROVEMENT_LAND_WORKED,IMPROVEMENT_FARM,IMPROVEMENT_VERTICAL_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_LEMONS</Attribute>
@@ -8189,7 +8087,7 @@
 			<Scale>0.8</Scale>
 			<Rotate>+45</Rotate>
 		</ArtRef>
-		<!-- Lemon improvement crap -->
+		<!-- Lemon improvements -->
 		<ArtRef Name="art:LEMON_PLANTATION_RACK">
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Lemon/Lemqes_LSystem.nif::1x3_01_Rack_NotWorked</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
@@ -8223,7 +8121,7 @@
 			<Attribute Class="Scalar">bImprovementWorkedOnly:0</Attribute>
 			<Attribute Class="Scalar">bCutTrees:1</Attribute>
 		</ArtRef>
-		<!-- CANNABIS (Cnq) crops -->
+		<!-- Cannabis (Cnq) crops -->
 		<ArtRef Name="art:cnq_crop">
 			<!-- when worked by plantation -->
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Cannabis/Cnq_LSystem.nif::2x2_01_Cnq_Worked</Attribute>
@@ -8238,7 +8136,7 @@
 			<Rotate>+45</Rotate>
 		</ArtRef>
 		<ArtRef Name="art:cnq_crop">
-			<!-- when improved but not worked by plantation -->
+			<!-- when improved, but not worked by plantation -->
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Cannabis/Cnq_LSystem.nif::2x2_01_Cnq_Worked</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_HEMP</Attribute>
@@ -8264,7 +8162,7 @@
 			<Scale>0.8</Scale>
 			<Rotate>+45</Rotate>
 		</ArtRef>
-		<!-- CANNABIS (Cnq)  improvement crap -->
+		<!-- Cannabis (Cnq) improvements -->
 		<ArtRef Name="art:CNQ_PLANTATION_RACK">
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Cannabis/Cnq_LSystem.nif::1x3_01_Rack_NotWorked</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
@@ -8307,7 +8205,7 @@
 			<Rotate>+45</Rotate>
 		</ArtRef>
 		<ArtRef Name="art:Tea_crop">
-			<!-- when improved but not worked by plantation -->
+			<!-- when improved, but not worked by plantation -->
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Tea/Spices_LSystem.nif::2x2_01_Spice_NotWorked</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_TEA</Attribute>
@@ -8320,7 +8218,7 @@
 			<Rotate>+45</Rotate>
 		</ArtRef>
 		<ArtRef Name="art:Tea_crop">
-			<!-- when in the rough ... there's anotehr in 3x2 for farms -->
+			<!-- when in the rough... there's another in 3x2 for farms -->
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Tea/Spices_LSystem.nif::2x2_01_Spice_Normal</Attribute>
 			<Attribute Class="Improvement">NO_IMPROVEMENT,IMPROVEMENT_ALL,!IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_TEA</Attribute>
@@ -8366,13 +8264,11 @@
 			<Attribute Class="Scalar">bCutTrees:1</Attribute>
 		</ArtRef>
 	</LNode>
-	<!-- ******************************************************************************************** -->
-	<!-- BLeaf 3x2                                                  Tests against roads,rivers,cities -->
-	<!-- ******************************************************************************************** -->
+	<!-- BLeaf 3x2 Tests against roads, rivers, cities -->
 	<LNode Name="BLeaf_3x2">
 		<Width>3</Width>
 		<Height>2</Height>
-		<!-- CORN -->
+		<!-- Corn -->
 		<ArtRef Name="art:corn_crop">
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Corn/crops.nif::3x2_02</Attribute>
 			<Attribute Class="Bonus">BONUS_CORN</Attribute>
@@ -8692,8 +8588,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.32</Scale>
 		</ArtRef>
-
-		<!-- SILK -->
+		<!-- Silk -->
 		<ArtRef Name="art:silk_crop">
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Silk/Silk_LSystem.nif::2x2_01_Silk_Normal</Attribute>
 			<Attribute Class="Improvement">NO_IMPROVEMENT,IMPROVEMENT_ALL,!IMPROVEMENT_SILK_FARM</Attribute>
@@ -8705,7 +8600,7 @@
 			<Scale>0.8</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- ancient worked silk plantation -->
+			<!-- Ancient Worked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -8724,7 +8619,7 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- modern worked silk plantation -->
+			<!-- Modern Worked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -8742,7 +8637,7 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- unworked ancient silk plantation -->
+			<!-- Unworked Ancient Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
@@ -8761,7 +8656,7 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- unworked modern silk plantation -->
+			<!-- Unworked Modern Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
@@ -8785,9 +8680,9 @@
 			<Attribute Class="Scalar">bIsPartOfBonus:1</Attribute>
 			<Attribute Class="Scalar">fTwist:-0.7853981633</Attribute>
 		</ArtRef>
-		<!-- Afro silk plantation -->
+		<!-- Afro Silk Plantation -->
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- early worked silk plantation -->
+			<!-- Early Worked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -8806,7 +8701,7 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- renaissance worked silk plantation -->
+			<!-- Renaissance Worked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -8825,7 +8720,7 @@
 			<Scale>0.23</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- early unworked silk plantation -->
+			<!-- Early Unworked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
@@ -8844,7 +8739,7 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- renaissance unworked silk plantation -->
+			<!-- Renaissance Unworked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
@@ -8862,9 +8757,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.23</Scale>
 		</ArtRef>
-		<!-- Khmer silk plantation -->
+		<!-- Khmer Silk Plantation -->
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- renaissance worked silk plantation -->
+			<!-- Renaissance Worked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -8883,7 +8778,7 @@
 			<Scale>0.23</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- renaissance unworked silk plantation -->
+			<!-- Renaissance Unworked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
@@ -8901,9 +8796,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.23</Scale>
 		</ArtRef>
-		<!-- Mediterranean silk plantation -->
+		<!-- Mediterranean Silk Plantation -->
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- early worked silk plantation -->
+			<!-- Early Worked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -8922,7 +8817,7 @@
 			<Scale>0.44</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- renaissance worked silk plantation -->
+			<!-- Renaissance Worked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -8941,7 +8836,7 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- early unworked silk plantation -->
+			<!-- Early Unworked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
@@ -8960,7 +8855,7 @@
 			<Scale>0.44</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- renaissance unworked silk plantation -->
+			<!-- Renaissance Unworked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
@@ -8978,9 +8873,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.9</Scale>
 		</ArtRef>
-		<!-- Meso silk plantation -->
+		<!-- Meso Silk Plantation -->
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- early worked silk plantation -->
+			<!-- Early Worked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -8999,7 +8894,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- renaissance worked silk plantation -->
+			<!-- Renaissance Worked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -9018,7 +8913,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- early unworked silk plantation -->
+			<!-- Early Unworked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
@@ -9037,7 +8932,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- renaissance unworked silk plantation -->
+			<!-- Renaissance Unworked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
@@ -9055,9 +8950,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.29</Scale>
 		</ArtRef>
-		<!-- Middle East silk plantation -->
+		<!-- Middle East Silk Plantation -->
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- early worked silk plantation -->
+			<!-- Early Worked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -9076,7 +8971,7 @@
 			<Scale>0.26</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- renaissance worked silk plantation -->
+			<!-- Renaissance Worked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -9095,7 +8990,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- early unworked silk plantation -->
+			<!-- Early Unworked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
@@ -9114,7 +9009,7 @@
 			<Scale>0.26</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- renaissance unworked silk plantation -->
+			<!-- Renaissance Unworked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
@@ -9132,9 +9027,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.32</Scale>
 		</ArtRef>
-		<!-- Native silk plantation -->
+		<!-- Native Silk Plantation -->
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- early worked silk plantation -->
+			<!-- Early Worked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -9153,7 +9048,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- medieval worked silk plantation -->
+			<!-- Medieval Worked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -9172,7 +9067,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- early unworked silk plantation -->
+			<!-- Early Unworked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
@@ -9191,7 +9086,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- medieval unworked silk plantation -->
+			<!-- Medieval Unworked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
@@ -9209,9 +9104,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.29</Scale>
 		</ArtRef>
-		<!-- Inca silk plantation -->
+		<!-- Inca Silk Plantation -->
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- early worked silk plantation -->
+			<!-- Early Worked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -9230,7 +9125,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- early unworked silk plantation -->
+			<!-- Early Unworked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
@@ -9248,9 +9143,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.29</Scale>
 		</ArtRef>
-		<!-- Pacific silk plantation -->
+		<!-- Pacific Silk Plantation -->
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- early worked silk plantation -->
+			<!-- Early Worked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -9267,7 +9162,7 @@
 			<Scale>0.25</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- early unworked silk plantation -->
+			<!-- Early Unworked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
@@ -9283,9 +9178,9 @@
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Scale>0.25</Scale>
 		</ArtRef>
-		<!-- European silk plantation -->
+		<!-- European Silk Plantation -->
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- early worked silk plantation -->
+			<!-- Early Worked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -9304,7 +9199,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- medieval worked silk plantation -->
+			<!-- Medieval Worked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -9323,7 +9218,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- industrial worked silk plantation -->
+			<!-- Industrial Worked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -9342,7 +9237,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- industrial worked silk plantation -->
+			<!-- Industrial Worked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -9361,7 +9256,7 @@
 			<Scale>0.26</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- early unworked silk plantation -->
+			<!-- Early Unworked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
@@ -9380,7 +9275,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- medieval unworked silk plantation -->
+			<!-- Medieval Unworked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
@@ -9399,7 +9294,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- industrial unworked silk plantation -->
+			<!-- Industrial Unworked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
@@ -9418,7 +9313,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- industrial unworked silk plantation -->
+			<!-- Industrial Unworked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
@@ -9436,9 +9331,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.26</Scale>
 		</ArtRef>
-		<!-- Norse/Russian silk plantation -->
+		<!-- Norse/Russian Silk Plantation -->
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- early worked silk plantation -->
+			<!-- Early Worked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -9457,7 +9352,7 @@
 			<Scale>0.26</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- renaissance worked silk plantation -->
+			<!-- Renaissance Worked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -9476,7 +9371,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_SILK_FARM">
-			<!-- renaissance worked silk plantation -->
+			<!-- Renaissance Worked Silk Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_SILK_FARM</Attribute>
 			<Attribute Class="Bonus">BONUS_SILK</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -9551,10 +9446,9 @@
 			<Attribute Class="Scalar">fCenterCut:60</Attribute>
 			<Scale>0.26</Scale>
 		</ArtRef>
-
 		<!-- Spices -->
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- worked ancient spices plantation -->
+			<!-- Worked Ancient Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -9572,7 +9466,7 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- worked modern spices plantation -->
+			<!-- Worked Modern Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -9589,7 +9483,7 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- unworked ancient spices plantation -->
+			<!-- Unworked Ancient Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:8</Attribute>
@@ -9607,7 +9501,7 @@
 			<Attribute Class="Rotation">0,180</Attribute>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- unworked modern spices plantation -->
+			<!-- Unworked Modern Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:8</Attribute>
@@ -9624,7 +9518,7 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:BONUS_SPICES">
-			<!-- unworked spice -->
+			<!-- Unworked Spice -->
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Improvement">NO_IMPROVEMENT,IMPROVEMENT_ALL,!IMPROVEMENT_FARM,!IMPROVEMENT_VERTICAL_FARM</Attribute>
 			<Attribute Class="Scalar">bGoalOnly:1</Attribute>
@@ -9646,9 +9540,9 @@
 			<Scale>0.8</Scale>
 			<Rotate>+45</Rotate>
 		</ArtRef>
-		<!-- Afro spices plantation -->
+		<!-- Afro Spices Plantation -->
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- early worked spices plantation -->
+			<!-- Early Worked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -9666,7 +9560,7 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- renaissance worked spices plantation -->
+			<!-- Renaissance Worked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -9684,7 +9578,7 @@
 			<Scale>0.23</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- early unworked spices plantation -->
+			<!-- Early Unworked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:8</Attribute>
@@ -9702,7 +9596,7 @@
 			<Attribute Class="Rotation">90,270</Attribute>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- renaissance unworked spices plantation -->
+			<!-- Renaissance Unworked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:8</Attribute>
@@ -9719,9 +9613,9 @@
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Scale>0.23</Scale>
 		</ArtRef>
-		<!-- Khmer spices plantation -->
+		<!-- Khmer Spices Plantation -->
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- renaissance worked spices plantation -->
+			<!-- Renaissance Worked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -9739,7 +9633,7 @@
 			<Scale>0.23</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- renaissance unworked spices plantation -->
+			<!-- Renaissance Unworked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:8</Attribute>
@@ -9756,9 +9650,9 @@
 			<Attribute Class="Scalar">bIsPartOfBonus:1</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 		</ArtRef>
-		<!-- Mediterranean spices plantation -->
+		<!-- Mediterranean Spices Plantation -->
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- early worked spices plantation -->
+			<!-- Early Worked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -9776,7 +9670,7 @@
 			<Scale>0.44</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- renaissance worked spices plantation -->
+			<!-- Renaissance Worked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -9794,7 +9688,7 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- early unworked spices plantation -->
+			<!-- Early Unworked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:8</Attribute>
@@ -9812,7 +9706,7 @@
 			<Attribute Class="Rotation">0,180</Attribute>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- renaissance unworked spices plantation -->
+			<!-- Renaissance Unworked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:8</Attribute>
@@ -9829,9 +9723,9 @@
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Scale>0.9</Scale>
 		</ArtRef>
-		<!-- Meso spices plantation -->
+		<!-- Meso Spices Plantation -->
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- early worked spices plantation -->
+			<!-- Early Worked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -9849,7 +9743,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- renaissance worked spices plantation -->
+			<!-- Renaissance Worked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -9867,7 +9761,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- early unworked spices plantation -->
+			<!-- Early Unworked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:8</Attribute>
@@ -9885,7 +9779,7 @@
 			<Attribute Class="Rotation">0,180</Attribute>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- renaissance unworked spices plantation -->
+			<!-- Renaissance Unworked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:8</Attribute>
@@ -9902,9 +9796,9 @@
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Scale>0.29</Scale>
 		</ArtRef>
-		<!-- Middle East spices plantation -->
+		<!-- Middle East Spices Plantation -->
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- early worked spices plantation -->
+			<!-- Early Worked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -9922,7 +9816,7 @@
 			<Scale>0.26</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- renaissance worked spices plantation -->
+			<!-- Renaissance Worked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -9940,7 +9834,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- early unworked spices plantation -->
+			<!-- Early Unworked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:8</Attribute>
@@ -9958,7 +9852,7 @@
 			<Attribute Class="Rotation">0,180</Attribute>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- renaissance unworked spices plantation -->
+			<!-- Renaissance Unworked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:8</Attribute>
@@ -9975,9 +9869,9 @@
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Scale>0.32</Scale>
 		</ArtRef>
-		<!-- Native spices plantation -->
+		<!-- Native Spices Plantation -->
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- early worked spices plantation -->
+			<!-- Early Worked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -9995,7 +9889,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- medieval worked spices plantation -->
+			<!-- Medieval Worked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -10013,7 +9907,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- early unworked spices plantation -->
+			<!-- Early Unworked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:8</Attribute>
@@ -10031,7 +9925,7 @@
 			<Attribute Class="Rotation">0,180</Attribute>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- medieval unworked spices plantation -->
+			<!-- Medieval Unworked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:8</Attribute>
@@ -10048,9 +9942,9 @@
 			<Attribute Class="Scalar">bIsPartOfBonus:1</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 		</ArtRef>
-		<!-- Inca spices plantation -->
+		<!-- Inca Spices Plantation -->
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- early worked spices plantation -->
+			<!-- Early Worked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -10068,7 +9962,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- early unworked spices plantation -->
+			<!-- Early Unworked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:8</Attribute>
@@ -10085,9 +9979,9 @@
 			<Attribute Class="Scalar">bIsPartOfBonus:1</Attribute>
 			<Attribute Class="Rotation">90,270</Attribute>
 		</ArtRef>
-		<!-- Pacific spices plantation -->
+		<!-- Pacific Spices Plantation -->
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- early worked spices plantation -->
+			<!-- Early Worked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -10105,7 +9999,7 @@
 			<Scale>0.25</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- early unworked spices plantation -->
+			<!-- Early Unworked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:8</Attribute>
@@ -10122,9 +10016,9 @@
 			<Attribute Class="Scalar">bIsPartOfBonus:1</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 		</ArtRef>
-		<!-- European spices plantation -->
+		<!-- European Spices Plantation -->
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- early worked spices plantation -->
+			<!-- Early Worked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -10142,7 +10036,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- medieval worked spices plantation -->
+			<!-- Medieval Worked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -10160,7 +10054,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- industrial worked spices plantation -->
+			<!-- Industrial Worked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -10178,7 +10072,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- industrial worked spices plantation -->
+			<!-- Industrial Worked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -10196,7 +10090,7 @@
 			<Scale>0.26</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- early unworked spices plantation -->
+			<!-- Early Unworked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:8</Attribute>
@@ -10214,7 +10108,7 @@
 			<Attribute Class="Rotation">0,180</Attribute>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- medieval unworked spices plantation -->
+			<!-- Medieval Unworked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:8</Attribute>
@@ -10232,7 +10126,7 @@
 			<Attribute Class="Rotation">90,270</Attribute>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- industrial unworked spices plantation -->
+			<!-- Industrial Unworked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:8</Attribute>
@@ -10250,7 +10144,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- industrial unworked spices plantation -->
+			<!-- Industrial Unworked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:8</Attribute>
@@ -10267,9 +10161,9 @@
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Scale>0.26</Scale>
 		</ArtRef>
-		<!-- Norse/Russian spices plantation -->
+		<!-- Norse/Russian Spices Plantation -->
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- early worked spices plantation -->
+			<!-- Early Worked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -10287,7 +10181,7 @@
 			<Scale>0.26</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- renaissance worked spices plantation -->
+			<!-- Renaissance Worked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -10305,7 +10199,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- renaissance worked spices plantation -->
+			<!-- Renaissance Worked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -10323,7 +10217,7 @@
 			<Scale>0.26</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- early unworked spices plantation -->
+			<!-- Early Unworked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:8</Attribute>
@@ -10341,7 +10235,7 @@
 			<Attribute Class="Rotation">0,180</Attribute>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- renaissance unworked spices plantation -->
+			<!-- Renaissance Unworked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:8</Attribute>
@@ -10359,7 +10253,7 @@
 			<Attribute Class="Rotation">90,270</Attribute>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- renaissance unworked spices plantation -->
+			<!-- Renaissance Unworked Spices Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SPICES</Attribute>
 			<Attribute Class="Scalar">iCropArea:8</Attribute>
@@ -10376,10 +10270,9 @@
 			<Attribute Class="Scalar">bIsPartOfBonus:1</Attribute>
 			<Attribute Class="Rotation">0,180</Attribute>
 		</ArtRef>
-
 		<!-- Olives -->
 		<ArtRef Name="goal:BONUS_OLIVES">
-			<!-- unworked olives -->
+			<!-- Unworked Olives -->
 			<Attribute Class="Bonus">BONUS_OLIVES</Attribute>
 			<Attribute Class="Improvement">NO_IMPROVEMENT,IMPROVEMENT_ALL,!IMPROVEMENT_FARM,!IMPROVEMENT_VERTICAL_FARM</Attribute>
 			<Attribute Class="Scalar">bGoalOnly:1</Attribute>
@@ -10403,7 +10296,7 @@
 		</ArtRef>
 		<!-- Cotton -->
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- worked ancient cotton plantation -->
+			<!-- Worked Ancient Cotton Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_COTTON</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -10419,7 +10312,7 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- worked modern cotton plantation -->
+			<!-- Worked Modern Cotton Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_COTTON</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -10435,7 +10328,7 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- unworked ancient cotton plantation -->
+			<!-- Unworked Ancient Cotton Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_COTTON</Attribute>
 			<Attribute Class="Scalar">iCropArea:8</Attribute>
@@ -10451,7 +10344,7 @@
 			<Attribute Class="Rotation">0,180</Attribute>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- unworked modern cotton plantation -->
+			<!-- Unworked Modern Cotton Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_COTTON</Attribute>
 			<Attribute Class="Scalar">iCropArea:8</Attribute>
@@ -10467,7 +10360,7 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:BONUS_COTTON">
-			<!-- unworked cotton -->
+			<!-- Unworked Cotton -->
 			<Attribute Class="Bonus">BONUS_COTTON</Attribute>
 			<Attribute Class="Improvement">NO_IMPROVEMENT,IMPROVEMENT_ALL,!IMPROVEMENT_FARM,!IMPROVEMENT_VERTICAL_FARM</Attribute>
 			<Attribute Class="Scalar">bGoalOnly:1</Attribute>
@@ -10491,7 +10384,7 @@
 		</ArtRef>
 		<!-- Tobacco -->
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- worked ancient tobacco plantation -->
+			<!-- Worked Ancient Tobacco Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_TOBACCO</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -10507,7 +10400,7 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- worked modern tobacco plantation -->
+			<!-- Worked Modern Tobacco Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_TOBACCO</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -10523,7 +10416,7 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- unworked ancient tobacco plantation -->
+			<!-- Unworked Ancient Tobacco Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_TOBACCO</Attribute>
 			<Attribute Class="Scalar">iCropArea:8</Attribute>
@@ -10539,7 +10432,7 @@
 			<Attribute Class="Rotation">0,180</Attribute>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- unworked modern tobacco plantation -->
+			<!-- Unworked Modern Tobacco Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_TOBACCO</Attribute>
 			<Attribute Class="Scalar">iCropArea:8</Attribute>
@@ -10555,7 +10448,7 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:BONUS_TOBACCO">
-			<!-- unworked tobacco -->
+			<!-- Unworked Tobacco -->
 			<Attribute Class="Bonus">BONUS_TOBACCO</Attribute>
 			<Attribute Class="Improvement">NO_IMPROVEMENT,IMPROVEMENT_ALL,!IMPROVEMENT_FARM,!IMPROVEMENT_VERTICAL_FARM</Attribute>
 			<Attribute Class="Scalar">bGoalOnly:1</Attribute>
@@ -10579,7 +10472,7 @@
 		</ArtRef>
 		<!-- Sugar -->
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- worked ancient sugar plantation -->
+			<!-- Worked Ancient Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -10596,7 +10489,7 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- worked modern sugar plantation -->
+			<!-- Worked Modern Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -10611,9 +10504,8 @@
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Scale>0.9</Scale>
 		</ArtRef>
-
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- unworked ancient sugar plantation -->
+			<!-- Unworked Ancient Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -10630,7 +10522,7 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- unworked modern sugar plantation -->
+			<!-- Unworked Modern Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -10646,7 +10538,7 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:BONUS_SUGAR">
-			<!-- unworked sugar -->
+			<!-- Unworked Sugar -->
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Improvement">NO_IMPROVEMENT,IMPROVEMENT_ALL,!IMPROVEMENT_FARM,!IMPROVEMENT_VERTICAL_FARM</Attribute>
 			<Attribute Class="Scalar">bGoalOnly:1</Attribute>
@@ -10683,7 +10575,7 @@
 			<Scale>0.8</Scale>
 		</ArtRef>
 		<ArtRef Name="art:sugar_crop">
-			<!-- when improved but not worked by plantation -->
+			<!-- when improved, but not worked by plantation -->
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Sugar/Sugar_LSystem.nif::2x2_01_Sugar_NotWorked</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
@@ -10697,7 +10589,7 @@
 			<Scale>0.6</Scale>
 		</ArtRef>
 		<ArtRef Name="art:sugar_crop">
-			<!-- when improved but not worked by plantation -->
+			<!-- when improved, but not worked by plantation -->
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Sugar/Sugar_LSystem.nif::2x2_02_Sugar_NotWorked</Attribute>
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
@@ -10736,9 +10628,9 @@
 			<Attribute Class="Scalar">szForceContourNode:BUILDING</Attribute>
 			<Scale>0.8</Scale>
 		</ArtRef>
-		<!-- Afro sugar plantation -->
+		<!-- Afro Sugar Plantation -->
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- early worked sugar plantation -->
+			<!-- Early Worked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -10755,7 +10647,7 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- renaissance worked sugar plantation -->
+			<!-- Renaissance Worked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -10772,7 +10664,7 @@
 			<Scale>0.23</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- early unworked sugar plantation -->
+			<!-- Early Unworked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -10789,7 +10681,7 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- renaissance unworked sugar plantation -->
+			<!-- Renaissance Unworked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -10805,9 +10697,9 @@
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Scale>0.23</Scale>
 		</ArtRef>
-		<!-- Khmer sugar plantation -->
+		<!-- Khmer Sugar Plantation -->
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- renaissance worked sugar plantation -->
+			<!-- Renaissance Worked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -10824,7 +10716,7 @@
 			<Scale>0.23</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- renaissance unworked sugar plantation -->
+			<!-- Renaissance Unworked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -10840,9 +10732,9 @@
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Scale>0.23</Scale>
 		</ArtRef>
-		<!-- Mediterranean sugar plantation -->
+		<!-- Mediterranean Sugar Plantation -->
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- early worked sugar plantation -->
+			<!-- Early Worked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -10859,7 +10751,7 @@
 			<Scale>0.44</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- renaissance worked sugar plantation -->
+			<!-- Renaissance Worked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -10876,7 +10768,7 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- early unworked sugar plantation -->
+			<!-- Early Unworked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -10893,7 +10785,7 @@
 			<Scale>0.44</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- renaissance unworked sugar plantation -->
+			<!-- Renaissance Unworked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -10909,9 +10801,9 @@
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Scale>0.9</Scale>
 		</ArtRef>
-		<!-- Meso sugar plantation -->
+		<!-- Meso Sugar Plantation -->
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- early worked sugar plantation -->
+			<!-- Early Worked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -10928,7 +10820,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- renaissance worked sugar plantation -->
+			<!-- Renaissance Worked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -10945,7 +10837,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- early unworked sugar plantation -->
+			<!-- Early Unworked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -10962,7 +10854,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- renaissance unworked sugar plantation -->
+			<!-- Renaissance Unworked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -10978,9 +10870,9 @@
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Scale>0.29</Scale>
 		</ArtRef>
-		<!-- Middle East sugar plantation -->
+		<!-- Middle East Sugar Plantation -->
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- early worked sugar plantation -->
+			<!-- Early Worked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -10997,7 +10889,7 @@
 			<Scale>0.26</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- renaissance worked sugar plantation -->
+			<!-- Renaissance Worked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -11014,7 +10906,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- early unworked sugar plantation -->
+			<!-- Early Unworked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -11031,7 +10923,7 @@
 			<Scale>0.26</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- renaissance unworked sugar plantation -->
+			<!-- Renaissance Unworked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -11047,9 +10939,9 @@
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Scale>0.32</Scale>
 		</ArtRef>
-		<!-- Native sugar plantation -->
+		<!-- Native Sugar Plantation -->
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- early worked sugar plantation -->
+			<!-- Early Worked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -11066,7 +10958,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- medieval worked sugar plantation -->
+			<!-- Medieval Worked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -11083,7 +10975,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- early unworked sugar plantation -->
+			<!-- Early Unworked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -11100,7 +10992,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- medieval unworked sugar plantation -->
+			<!-- Medieval Unworked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -11116,9 +11008,9 @@
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Scale>0.29</Scale>
 		</ArtRef>
-		<!-- Inca sugar plantation -->
+		<!-- Inca Sugar Plantation -->
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- early worked sugar plantation -->
+			<!-- Early Worked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -11135,7 +11027,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- early unworked sugar plantation -->
+			<!-- Early Unworked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -11151,9 +11043,9 @@
 			<Attribute Class="Rotation">90,270</Attribute>
 			<Scale>0.29</Scale>
 		</ArtRef>
-		<!-- Pacific sugar plantation -->
+		<!-- Pacific Sugar Plantation -->
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- early worked sugar plantation -->
+			<!-- Early Worked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -11170,7 +11062,7 @@
 			<Scale>0.25</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- early unworked sugar plantation -->
+			<!-- Early Unworked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -11186,9 +11078,9 @@
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Scale>0.25</Scale>
 		</ArtRef>
-		<!-- European sugar plantation -->
+		<!-- European Sugar Plantation -->
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- early worked sugar plantation -->
+			<!-- Early Worked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -11205,7 +11097,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- medieval worked sugar plantation -->
+			<!-- Medieval Worked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -11222,7 +11114,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- industrial worked sugar plantation -->
+			<!-- Industrial Worked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -11239,7 +11131,7 @@
 			<Scale>0.32</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- industrial worked sugar plantation -->
+			<!-- Industrial Worked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -11256,7 +11148,7 @@
 			<Scale>0.26</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- early unworked sugar plantation -->
+			<!-- Early Unworked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -11273,7 +11165,7 @@
 			<Scale>0.29</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- medieval unworked sugar plantation -->
+			<!-- Medieval Unworked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -11290,7 +11182,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- industrial unworked sugar plantation -->
+			<!-- Industrial Unworked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -11307,7 +11199,7 @@
 			<Scale>0.26</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- industrial unworked sugar plantation -->
+			<!-- Industrial Unworked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -11323,9 +11215,9 @@
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Scale>0.32</Scale>
 		</ArtRef>
-		<!-- Norse/Russian sugar plantation -->
+		<!-- Norse/Russian Sugar Plantation -->
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- early worked sugar plantation -->
+			<!-- Early Worked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -11342,7 +11234,7 @@
 			<Scale>0.26</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- renaissance worked sugar plantation -->
+			<!-- Renaissance Worked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -11359,7 +11251,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- renaissance worked sugar plantation -->
+			<!-- Renaissance Worked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -11376,7 +11268,7 @@
 			<Scale>0.26</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- early unworked sugar plantation -->
+			<!-- Early Unworked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -11393,7 +11285,7 @@
 			<Scale>0.26</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- renaissance unworked sugar plantation -->
+			<!-- Renaissance Unworked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -11410,7 +11302,7 @@
 			<Scale>0.35</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- renaissance unworked sugar plantation -->
+			<!-- Renaissance Unworked Sugar Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_SUGAR</Attribute>
 			<Attribute Class="Scalar">iCropArea:2</Attribute>
@@ -11426,7 +11318,6 @@
 			<Attribute Class="Rotation">0,180</Attribute>
 			<Scale>0.26</Scale>
 		</ArtRef>
-
 		<!-- Wine -->
 		<ArtRef Name="art:grapes">
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Wine/Wine_L_System.nif::3x2_01_Worked</Attribute>
@@ -11465,7 +11356,7 @@
 		</ArtRef>
 		<!-- Lemon -->
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- worked ancient lemon plantation -->
+			<!-- Worked Ancient Lemon Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_LEMONS</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -11482,7 +11373,7 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- worked ancient lemon plantation -->
+			<!-- Worked Ancient Lemon Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_LEMONS</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -11498,7 +11389,7 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- unworked ancient lemon plantation -->
+			<!-- Unworked Ancient Lemon Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_LEMONS</Attribute>
 			<Attribute Class="Scalar">iCropArea:8</Attribute>
@@ -11515,7 +11406,7 @@
 			<Attribute Class="Rotation">0,180</Attribute>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- unworked modern lemon plantation -->
+			<!-- Unworked Modern Lemon Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_LEMONS</Attribute>
 			<Attribute Class="Scalar">iCropArea:8</Attribute>
@@ -11531,7 +11422,7 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:BONUS_LEMONS">
-			<!-- unworked lemon -->
+			<!-- Unworked Lemon -->
 			<Attribute Class="Bonus">BONUS_LEMONS</Attribute>
 			<Attribute Class="Improvement">NO_IMPROVEMENT,IMPROVEMENT_ALL,!IMPROVEMENT_FARM,!IMPROVEMENT_VERTICAL_FARM</Attribute>
 			<Attribute Class="Scalar">bGoalOnly:1</Attribute>
@@ -11555,7 +11446,7 @@
 		</ArtRef>
 		<!-- Cannabis (Cnq) -->
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- worked ancient cannabis plantation -->
+			<!-- Worked Ancient Cannabis Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_HEMP</Attribute>
 			<Attribute Class="Scalar">iCropArea:24</Attribute>
@@ -11571,7 +11462,7 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- worked modern cannabis plantation -->
+			<!-- Worked Modern Cannabis Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_HEMP</Attribute>
 			<Attribute Class="Scalar">iCropArea:24</Attribute>
@@ -11586,7 +11477,7 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- unworked ancient cannabis plantation -->
+			<!-- Unworked Ancient Cannabis Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_HEMP</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
@@ -11602,7 +11493,7 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- unworked modern cannabis plantation -->
+			<!-- Unworked Modern Cannabis Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_HEMP</Attribute>
 			<Attribute Class="Scalar">iCropArea:10</Attribute>
@@ -11617,7 +11508,7 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:BONUS_HEMP">
-			<!-- unworked cannabis -->
+			<!-- Unworked Cannabis -->
 			<Attribute Class="Bonus">BONUS_HEMP</Attribute>
 			<Attribute Class="Improvement">NO_IMPROVEMENT,IMPROVEMENT_ALL,!IMPROVEMENT_FARM,!IMPROVEMENT_VERTICAL_FARM</Attribute>
 			<Attribute Class="Scalar">bGoalOnly:1</Attribute>
@@ -11641,7 +11532,7 @@
 		</ArtRef>
 		<!-- Coffee -->
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- worked ancient coffee plantation -->
+			<!-- Worked Ancient Coffee Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_COFFEE</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -11658,7 +11549,7 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- worked ancient coffee plantation -->
+			<!-- Worked Ancient Coffee Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_COFFEE</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -11674,7 +11565,7 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- unworked ancient coffee plantation -->
+			<!-- Unworked Ancient Coffee Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_COFFEE</Attribute>
 			<Attribute Class="Scalar">iCropArea:8</Attribute>
@@ -11691,7 +11582,7 @@
 			<Attribute Class="Rotation">0,180</Attribute>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- unworked modern coffee plantation -->
+			<!-- Unworked Modern Coffee Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_COFFEE</Attribute>
 			<Attribute Class="Scalar">iCropArea:8</Attribute>
@@ -11707,7 +11598,7 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:BONUS_COFFEE">
-			<!-- unworked coffee -->
+			<!-- Unworked Coffee -->
 			<Attribute Class="Bonus">BONUS_COFFEE</Attribute>
 			<Attribute Class="Improvement">NO_IMPROVEMENT,IMPROVEMENT_ALL,!IMPROVEMENT_FARM,!IMPROVEMENT_VERTICAL_FARM</Attribute>
 			<Attribute Class="Scalar">bGoalOnly:1</Attribute>
@@ -11729,10 +11620,9 @@
 			<Scale>0.8</Scale>
 			<Rotate>+45</Rotate>
 		</ArtRef>
-		<!-- Rise of Mankind 2.7 -->
 		<!-- Tea -->
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- worked ancient tea plantation -->
+			<!-- Worked Ancient Tea Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_TEA</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -11749,7 +11639,7 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- worked ancient tea plantation -->
+			<!-- Worked Ancient Tea Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_TEA</Attribute>
 			<Attribute Class="Scalar">iCropArea:16</Attribute>
@@ -11765,7 +11655,7 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- unworked ancient tea plantation -->
+			<!-- Unworked Ancient Tea Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_TEA</Attribute>
 			<Attribute Class="Scalar">iCropArea:8</Attribute>
@@ -11782,7 +11672,7 @@
 			<Attribute Class="Rotation">0,180</Attribute>
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_PLANTATION">
-			<!-- unworked modern tea plantation -->
+			<!-- Unworked Modern Tea Plantation -->
 			<Attribute Class="Improvement">IMPROVEMENT_PLANTATION</Attribute>
 			<Attribute Class="Bonus">BONUS_TEA</Attribute>
 			<Attribute Class="Scalar">iCropArea:8</Attribute>
@@ -11798,7 +11688,7 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 		<ArtRef Name="goal:BONUS_TEA">
-			<!-- unworked tea -->
+			<!-- Unworked Tea -->
 			<Attribute Class="Bonus">BONUS_TEA</Attribute>
 			<Attribute Class="Improvement">NO_IMPROVEMENT,IMPROVEMENT_ALL,!IMPROVEMENT_FARM,!IMPROVEMENT_VERTICAL_FARM</Attribute>
 			<Attribute Class="Scalar">bGoalOnly:1</Attribute>
@@ -11820,7 +11710,7 @@
 			<Scale>0.8</Scale>
 			<Rotate>+45</Rotate>
 		</ArtRef>
-		<!-- future era workshop -->
+		<!-- Future Era Workshop -->
 		<ArtRef Name="goal:IMPROVEMENT_WORKSHOP">
 			<Attribute Class="Improvement">IMPROVEMENT_WORKSHOP</Attribute>
 			<Attribute Class="Era">C2C_ERA_NANOTECH,C2C_ERA_TRANSHUMAN,C2C_ERA_GALACTIC,C2C_ERA_COSMIC,C2C_ERA_TRANSCENDENT,C2C_ERA_FUTURE</Attribute>
@@ -11834,13 +11724,11 @@
 			<Rotate>+45</Rotate>
 		</ArtRef>
 	</LNode>
-	<!-- ******************************************************************************************** -->
-	<!-- BLeaf 4x2                                                  Tests against roads,rivers,cities -->
-	<!-- ******************************************************************************************** -->
+	<!-- BLeaf 4x2 Tests against roads, rivers, cities -->
 	<LNode Name="BLeaf_4x2">
 		<Width>4</Width>
 		<Height>2</Height>
-		<!-- CORN -->
+		<!-- Corn -->
 		<ArtRef Name="art:corn_crop">
 			<Attribute Class="Scalar">NIF:Art/Terrain/Resources/Corn/crops.nif::4x2_01</Attribute>
 			<Attribute Class="Bonus">BONUS_CORN</Attribute>
@@ -11906,9 +11794,7 @@
 			<Attribute Class="Scalar">szBatchGroup:wine_crop</Attribute>
 		</ArtRef>
 	</LNode>
-	<!-- ******************************************************************************************** -->
-	<!-- BLeaf 4x4                                                  Tests against roads,rivers,cities -->
-	<!-- ******************************************************************************************** -->
+	<!-- BLeaf 4x4 Tests against roads, rivers, cities -->
 	<LNode Name="BLeaf_4x4">
 		<Width>4</Width>
 		<Height>4</Height>
@@ -11938,9 +11824,7 @@
 			<Rotate>+45</Rotate>
 		</ArtRef>
 	</LNode>
-	<!-- ******************************************************************************************** -->
-	<!-- BLeaf 4x3                                                  Tests against roads,rivers,cities -->
-	<!-- ******************************************************************************************** -->
+	<!-- BLeaf 4x3 Tests against roads, rivers, cities -->
 	<LNode Name="BLeaf_4x3">
 		<Width>6</Width>
 		<Height>6</Height>
@@ -11952,9 +11836,6 @@
 			<Scale>0.9</Scale>
 		</ArtRef>
 	</LNode>
-	<!-- ************************************************************************** -->
-	<!-- ************************************************************************** -->
-	<!-- ************************************************************************** -->
 	<LNode Name="Leaf_Farm_1x1">
 		<!-- pointed at by Farm_4x4 production -->
 		<Width>1</Width>
@@ -11963,7 +11844,7 @@
 		<Attribute Class="RegionTest">0</Attribute>
 		<!-- if the farm has been placed, then we don't need to region test *AGAIN*! -->
 		<Attribute Class="Scalar">bNotBFS:1</Attribute>
-		<!-- ANCIENT/CLASSICAL AFRO FARMHOUSES -->
+		<!-- Ancient/Classical Afro Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_Africa.nif::1x1x1_01</Attribute>
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
@@ -11999,7 +11880,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.35</Scale>
 		</ArtRef>
-		<!-- MEDIEVAL/RENAISSANCE AFRO FARMHOUSES -->
+		<!-- Medieval/Renaissance Afro Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_Africa.nif::2x1x2_01</Attribute>
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL,C2C_ERA_RENAISSANCE</Attribute>
@@ -12034,7 +11915,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.35</Scale>
 		</ArtRef>
-		<!-- INDUSTRIAL/MODERN AFRO FARMHOUSES -->
+		<!-- Industrial/Modern Afro Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_Africa.nif::1x2x2_03</Attribute>
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL,C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
@@ -12086,9 +11967,8 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.35</Scale>
 		</ArtRef>
-		<!-- FUTURE AFRO FARMHOUSES -->
-
-		<!-- ANCIENT/CLASSICAL ARABIAN FARMHOUSES -->
+		<!-- Future Afro Farmhouses -->
+		<!-- Ancient/Classical Arabian Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_Arabia.nif::1x1x1_01</Attribute>
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
@@ -12123,7 +12003,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.35</Scale>
 		</ArtRef>
-		<!-- MEDIEVAL ARABIAN FARMHOUSES -->
+		<!-- Medieval Arabian Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_Arabia.nif::1x1x1_01</Attribute>
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL</Attribute>
@@ -12175,7 +12055,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.35</Scale>
 		</ArtRef>
-		<!-- RENAISSANCE/INDUSTRIAL ARABIAN FARMHOUSES -->
+		<!-- Renaissance/Industrial Arabian Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_Arabia.nif::1x1x1_02</Attribute>
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE,C2C_ERA_INDUSTRIAL</Attribute>
@@ -12227,9 +12107,8 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.35</Scale>
 		</ArtRef>
-		<!-- FUTURE ARABIAN FARMHOUSES -->
-
-		<!-- ANCIENT/CLASSICAL ASIAN/JAPANESE/SOUTH_EAST_ASIAN FARMHOUSES -->
+		<!-- Future Arabian Farmhouses -->
+		<!-- Ancient/Classical Asian/Japanese/South East Asian Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_asia.nif::1x1_05</Attribute>
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
@@ -12264,7 +12143,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.35</Scale>
 		</ArtRef>
-		<!-- MEDIEVAL ASIAN/JAPANESE/SOUTH_EAST_ASIAN FARMHOUSES -->
+		<!-- Medieval Asian/Japanese/South East Asian Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_asia.nif::1x1_05</Attribute>
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL</Attribute>
@@ -12299,8 +12178,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.35</Scale>
 		</ArtRef>
-
-		<!-- RENAISSANCE/INDUSTRIAL/MODERN ASIAN FARMHOUSES -->
+		<!-- Renaissance/Industrial/Modern Asian Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_asia.nif::1x1_01</Attribute>
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE,C2C_ERA_INDUSTRIAL,C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
@@ -12352,9 +12230,8 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.35</Scale>
 		</ArtRef>
-		<!-- FUTURE ASIAN FARMHOUSES IN FUTURE GENERIC FARMHOUSES -->
-
-		<!-- RENAISSANCE/INDUSTRIAL/MODERN JAPANESE FARMHOUSES -->
+		<!-- Future Asian Farmhouses in Future Generic Farmhouses -->
+		<!-- Renaissance/Industrial/Modern Japanese Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_japan.nif::1x1_01</Attribute>
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE,C2C_ERA_INDUSTRIAL,C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
@@ -12406,9 +12283,8 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.35</Scale>
 		</ArtRef>
-		<!-- FUTURE JAPANESE FARMHOUSES IN GENERIC FUTURE FARMHOUSES -->
-
-		<!-- ANCIENT/CLASSICAL MONGOL FARMHOUSES -->
+		<!-- Future Japanese Farmhouses in Generic Future Farmhouses -->
+		<!-- Ancient/Classical Mongol Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_Mongolia.nif::1x1x2_02</Attribute>
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
@@ -12443,7 +12319,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.38</Scale>
 		</ArtRef>
-		<!-- MEDIEVAL/RENAISSANCE MONGOL FARMHOUSES -->
+		<!-- Medieval/Renaissance Mongol Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_Mongolia.nif::1x1x1_01</Attribute>
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL,C2C_ERA_RENAISSANCE</Attribute>
@@ -12478,7 +12354,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.35</Scale>
 		</ArtRef>
-		<!-- INDUSTRIAL/MODERN MONGOL FARMHOUSES -->
+		<!-- Industrial/Modern Mongol Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_Mongolia.nif::1x2x2_05</Attribute>
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL,C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
@@ -12530,9 +12406,8 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.41</Scale>
 		</ArtRef>
-		<!-- FUTURE MONGOL FARMHOUSES IN GENERIC FUTURE FARMHOUSES -->
-
-		<!-- RENAISSANCE/INDUSTRIAL/MODERN SOUTHEASTASIAN FARMHOUSES -->
+		<!-- Future Mongol Farmhouses in Generic Future Farmhouses -->
+		<!-- Renaissance/Industrial/Modern South East Asian Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_southeastasia.nif::1x1_05</Attribute>
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE,C2C_ERA_INDUSTRIAL,C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
@@ -12584,9 +12459,8 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.35</Scale>
 		</ArtRef>
-		<!-- FUTURE SOUTHEASTASIAN FARMHOUSES IN GENERIC FUTURE FARMHOUSES-->
-
-		<!-- ANCIENT CRESCENT/EGYPTIAN/INDIAN FARMHOUSES -->
+		<!-- Future Southeastasian Farmhouses in Generic Future Farmhouses-->
+		<!-- Ancient Crescent/Egyptian/Indian Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_egypt.nif::1x1_04</Attribute>
 			<Attribute Class="Era">C2C_ERA_ANCIENT</Attribute>
@@ -12621,7 +12495,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.38</Scale>
 		</ArtRef>
-		<!-- CLASSICAL CRESCENT/EGYPTIAN/INDIAN FARMHOUSES -->
+		<!-- Classical Crescent/Egyptian/Indian Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_egypt.nif::1x1_09</Attribute>
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
@@ -12656,7 +12530,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.41</Scale>
 		</ArtRef>
-		<!-- MEDIEVAL CRESCENT/EGYPTIAN/INDIAN FARMHOUSES -->
+		<!-- Medieval Crescent/Egyptian/Indian Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_egypt.nif::1x1x2_01</Attribute>
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL</Attribute>
@@ -12691,7 +12565,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.41</Scale>
 		</ArtRef>
-		<!-- RENAISSANCE/INDUSTRIAL CRESCENT/EGYPTIAN/INDIAN FARMHOUSES -->
+		<!-- Renaissance/Industrial Crescent/Egyptian/Indian Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_eastern.nif::2x1_02</Attribute>
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE,C2C_ERA_INDUSTRIAL</Attribute>
@@ -12726,7 +12600,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.41</Scale>
 		</ArtRef>
-		<!-- MODERN ARABIAN/CRESCENT/EGYPTIAN/INDIAN FARMHOUSES -->
+		<!-- Modern Arabian/Crescent/Egyptian/Indian Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_eastern.nif::2x1_02</Attribute>
 			<Attribute Class="Era">C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
@@ -12761,9 +12635,8 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.38</Scale>
 		</ArtRef>
-		<!-- FUTURE ARABIAN/CRESCENT/EGYPTIAN/INDIAN FARMHOUSES IN GENERIC FARMHOUSES -->
-
-		<!-- EUROPEAN INDUSTRIAL FARMHOUSES -->
+		<!-- Future Arabian/Crescent/Egyptian/Indian Farmhouses in Generic Farmhouses -->
+		<!-- European Industrial Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_eu.nif::1x1_02</Attribute>
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
@@ -12798,8 +12671,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.44</Scale>
 		</ArtRef>
-
-		<!-- ANCIENT GRECO_ROMAN FARMHOUSES -->
+		<!-- Ancient Greco-Roman Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_eu.nif::1x1_06</Attribute>
 			<Attribute Class="Era">C2C_ERA_ANCIENT</Attribute>
@@ -12830,7 +12702,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.41</Scale>
 		</ArtRef>
-		<!-- CLASSICAL/MEDIEVAL GRECO_ROMAN FARMHOUSES -->
+		<!-- Classical/Medieval Greco-Roman Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/Greco_Roman.nif::1x1_03</Attribute>
 			<Attribute Class="Era">C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
@@ -12875,7 +12747,7 @@
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Scale>0.41</Scale>
 		</ArtRef>
-		<!-- RENAISSANCE/INDUSTRIAL GRECO_ROMAN FARMHOUSES -->
+		<!-- Renaissance/Industrial Greco-Roman Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_mediterranean.nif::1x1x2_01</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_GRECO_ROMAN</Attribute>
@@ -12910,8 +12782,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.35</Scale>
 		</ArtRef>
-
-		<!-- ANCIENT IBERIAN FARMHOUSES -->
+		<!-- Ancient Iberian Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_eu.nif::2x2_01</Attribute>
 			<Attribute Class="Era">C2C_ERA_ANCIENT</Attribute>
@@ -12942,7 +12813,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.32</Scale>
 		</ArtRef>
-		<!-- CLASSICAL IBERIAN FARMHOUSES -->
+		<!-- Classical Iberian Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/clas_Iberia.nif::2x2_01</Attribute>
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
@@ -12973,7 +12844,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.35</Scale>
 		</ArtRef>
-		<!-- MEDIEVAL IBERIAN FARMHOUSES -->
+		<!-- Medieval Iberian Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_Iberia.nif::1x1x2_01</Attribute>
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL</Attribute>
@@ -13006,7 +12877,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.4</Scale>
 		</ArtRef>
-		<!-- RENAISSANCE/INDUSTRIAL IBERIAN FARMHOUSES -->
+		<!-- Renaissance/Industrial Iberian Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_Iberia.nif::1x1x1_02</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
@@ -13041,7 +12912,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.35</Scale>
 		</ArtRef>
-		<!-- MODERN IBERIAN FARMHOUSES -->
+		<!-- Modern Iberian Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_Mediterranean.nif::park_1x1</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_IBERIA</Attribute>
@@ -13076,8 +12947,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.35</Scale>
 		</ArtRef>
-
-		<!-- CLASSICAL NORSE/RUSSIAN FARMHOUSES -->
+		<!-- Classical Norse/Russian Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/clas_norsca.nif::1x1x1_01</Attribute>
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
@@ -13108,7 +12978,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.32</Scale>
 		</ArtRef>
-		<!-- MEDIEVAL NORSE/RUSSIAN FARMHOUSES -->
+		<!-- Medieval Norse/Russian Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/clas_norsca.nif::1x1x1_02</Attribute>
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL</Attribute>
@@ -13139,8 +13009,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.29</Scale>
 		</ArtRef>
-
-		<!-- RENAISSANCE RUSSIAN FARMHOUSES -->
+		<!-- Renaissance Russian Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_russia.nif::1x2_01</Attribute>
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE</Attribute>
@@ -13171,7 +13040,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.44</Scale>
 		</ArtRef>
-		<!-- INDUSTRIAL RUSSIAN FARMHOUSES -->
+		<!-- Industrial Russian Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_russia.nif::1x1_02</Attribute>
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
@@ -13202,7 +13071,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.29</Scale>
 		</ArtRef>
-		<!-- MODERN RUSSIAN FARMHOUSES -->
+		<!-- Modern Russian Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ind_russia.nif::1x1_05</Attribute>
 			<Attribute Class="Era">C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
@@ -13233,8 +13102,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.35</Scale>
 		</ArtRef>
-
-		<!-- ANCIENT/CLASSICAL INCA FARMHOUSES -->
+		<!-- Ancient/Classical Inca Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_South_America.nif::1x1_03</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_AMERICA,ARTSTYLE_SOUTH_PACIFIC</Attribute>
@@ -13269,7 +13137,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.35</Scale>
 		</ArtRef>
-		<!-- MEDIEVAL/RENAISSANCE INCA FARMHOUSES -->
+		<!-- Medieval/Renaissance Inca Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_South_America.nif::1x1x1_02</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_AMERICA</Attribute>
@@ -13304,7 +13172,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.35</Scale>
 		</ArtRef>
-		<!-- INDUSTRIAL INCA FARMHOUSES -->
+		<!-- Industrial Inca Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_South_America.nif::1x1x1_02</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_AMERICA</Attribute>
@@ -13339,8 +13207,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.35</Scale>
 		</ArtRef>
-
-		<!-- ANCIENT/CLASSICAL NATIVE FARMHOUSES -->
+		<!-- Ancient/Classical Native Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_Native_American.nif::1x1_01</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_NATIVE_AMERICA</Attribute>
@@ -13375,7 +13242,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.35</Scale>
 		</ArtRef>
-		<!-- MEDIEVAL/RENAISSANCE NATIVE FARMHOUSES -->
+		<!-- Medieval/Renaissance Native Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_Native_American.nif::1x1_01</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_NATIVE_AMERICA</Attribute>
@@ -13410,9 +13277,8 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.35</Scale>
 		</ArtRef>
-		<!-- INDUSTRIAL/MODERN/FUTURE NATIVE FARMHOUSES IN GENERIC FARMHOUSES-->
-
-		<!-- ANCIENT/CLASSICAL MESO FARMHOUSES -->
+		<!-- Industrial/Modern/Future Native Farmhouses in Generic Farmhouses-->
+		<!-- Ancient/Classical Meso Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_Meso_America.nif::1x1_02</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_MESO_AMERICA</Attribute>
@@ -13447,7 +13313,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.35</Scale>
 		</ArtRef>
-		<!-- MEDIEVAL MESO FARMHOUSES -->
+		<!-- Medieval Meso Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_Meso_America.nif::1x1_02</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_MESO_AMERICA</Attribute>
@@ -13482,7 +13348,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.44</Scale>
 		</ArtRef>
-		<!-- RENAISSANCE MESO FARMHOUSES -->
+		<!-- Renaissance Meso Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_Meso_America.nif::1x1_02</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_MESO_AMERICA</Attribute>
@@ -13517,7 +13383,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.44</Scale>
 		</ArtRef>
-		<!-- INDUSTRIAL MESO FARMHOUSES -->
+		<!-- Industrial Meso Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_Meso_America.nif::1x1_02</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_MESO_AMERICA</Attribute>
@@ -13552,7 +13418,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.44</Scale>
 		</ArtRef>
-		<!-- MODERN INCA/MESO FARMHOUSES -->
+		<!-- Modern Inca/Meso Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/mod_Meso_America.nif::1x1_02</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_MESO_AMERICA,ARTSTYLE_SOUTH_AMERICA</Attribute>
@@ -13588,8 +13454,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.41</Scale>
 		</ArtRef>
-
-		<!-- MEDIEVAL/RENAISSANCE/INDUSTRIAL/MODERN PACIFIC FARMHOUSES -->
+		<!-- Medieval/Renaissance/Industrial/Modern Pacific Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/South_Pacific.nif::1x1x1_01</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_PACIFIC</Attribute>
@@ -13641,8 +13506,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.28</Scale>
 		</ArtRef>
-
-		<!-- GENERIC ANCIENT FARMHOUSES -->
+		<!-- Generic Ancient Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Farm/an_eu_farm02.nif</Attribute>
 			<Attribute Class="Era">C2C_ERA_ANCIENT</Attribute>
@@ -13673,7 +13537,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>1.0</Scale>
 		</ArtRef>
-		<!-- GENERIC CLASSICAL FARMHOUSES -->
+		<!-- Generic Classical Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/an_eu.nif::1x1_04</Attribute>
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
@@ -13704,7 +13568,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.38</Scale>
 		</ArtRef>
-		<!-- GENERIC MEDIEVAL FARMHOUSES -->
+		<!-- Generic Medieval Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/med_europe.nif::1x1_02</Attribute>
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL</Attribute>
@@ -13739,7 +13603,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.5</Scale>
 		</ArtRef>
-		<!-- GENERIC RENAISSANCE FARMHOUSES -->
+		<!-- Generic Renaissance Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Cities/ren_Norsca.nif::1x1x1_02</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_BARBARIAN,ARTSTYLE_EUROPE,ARTSTYLE_NORSE</Attribute>
@@ -13774,8 +13638,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.35</Scale>
 		</ArtRef>
-
-		<!-- GENERIC INDUSTRIAL FARMHOUSES -->
+		<!-- Generic Industrial Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Farm/ind_anglo_farm_1x1.nif</Attribute>
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
@@ -13810,8 +13673,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.32</Scale>
 		</ArtRef>
-
-		<!-- GENERIC MODERN FARMHOUSES -->
+		<!-- Generic Modern Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Farm/mod_eu_farm02.nif</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_BARBARIAN,ARTSTYLE_EUROPE,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_NORSE</Attribute>
@@ -13863,8 +13725,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.35</Scale>
 		</ArtRef>
-
-		<!-- GENERIC FUTURE FARMHOUSES -->
+		<!-- Generic Future Farmhouses -->
 		<ArtRef Name="art:IMPROVEMENT_FARM1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Farm/mod_eu_farm02.nif</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ALL</Attribute>
@@ -13916,7 +13777,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.35</Scale>
 		</ArtRef>
-		<!-- VERTICAL FARM BUILDINGS TRANSHUMAN -->
+		<!-- Vertical Farm Buildings Transhuman -->
 		<ArtRef Name="art:IMPROVEMENT_VERTICAL_FARM_1">
 			<Attribute Class="Scalar">NIF:Art/Structures/Buildings/SMAC_Caretakers/Caretakers_City2.nif::1x1_01</Attribute>
 			<Attribute Class="Era">C2C_ERA_NANOTECH,C2C_ERA_TRANSHUMAN,C2C_ERA_GALACTIC,C2C_ERA_COSMIC,C2C_ERA_TRANSCENDENT,C2C_ERA_FUTURE</Attribute>
@@ -13973,14 +13834,13 @@
 			<Attribute Class="Scalar">szForceContourGeometry:Shadow</Attribute>
 			<Scale>0.4</Scale>
 		</ArtRef>
-		<!-- END VERTICAL FARM BUILDINGS TRANSHUMAN -->
 	</LNode>
 	<LNode Name="Leaf_Farm_4x4">
 		<!-- pointed at by two Farm_4x4 production -->
 		<Width>4</Width>
 		<Height>4</Height>
 		<Attribute Class="Scalar">bNotBFS:1</Attribute>
-		<!-- generic ancient farms -->
+		<!-- Generic Ancient Farms -->
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
 			<Attribute Class="Era">C2C_ERA_ANCIENT</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ALL,!ARTSTYLE_AFRICA,!ARTSTYLE_MESO_AMERICA,!ARTSTYLE_MONGOLIA,!ARTSTYLE_NATIVE_AMERICA,!ARTSTYLE_SOUTH_AMERICA</Attribute>
@@ -14073,7 +13933,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.0</Scale>
 		</ArtRef>
-		<!-- generic classical farms -->
+		<!-- Generic Classical Farms -->
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_BARBARIAN,ARTSTYLE_EUROPE,ARTSTYLE_IBERIA,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA</Attribute>
@@ -14117,7 +13977,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.5</Scale>
 		</ArtRef>
-		<!-- generic medieval farms -->
+		<!-- Generic Medieval Farms -->
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_BARBARIAN,ARTSTYLE_EUROPE,ARTSTYLE_IBERIA,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA</Attribute>
@@ -14164,8 +14024,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.5</Scale>
 		</ArtRef>
-
-		<!-- generic renaissance farms -->
+		<!-- Generic Renaissance Farms -->
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_BARBARIAN,ARTSTYLE_EUROPE,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA</Attribute>
@@ -14212,8 +14071,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.4</Scale>
 		</ArtRef>
-
-		<!-- generic industrial farms -->
+		<!-- Generic Industrial Farms -->
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_BARBARIAN,ARTSTYLE_NORSE,ARTSTYLE_NATIVE_AMERICA</Attribute>
@@ -14260,8 +14118,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.2</Scale>
 		</ArtRef>
-
-		<!-- generic modern farms -->
+		<!-- Generic Modern Farms -->
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
 			<Attribute Class="Era">C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ANGLO_AMERICA,ARTSTYLE_BARBARIAN,ARTSTYLE_EUROPE,ARTSTYLE_NORSE,ARTSTYLE_RUSSIA,ARTSTYLE_NATIVE_AMERICA</Attribute>
@@ -14311,8 +14168,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.35</Scale>
 		</ArtRef>
-
-		<!-- generic future farms -->
+		<!-- Generic Future Farms -->
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
 			<Attribute Class="Era">C2C_ERA_NANOTECH,C2C_ERA_TRANSHUMAN,C2C_ERA_GALACTIC,C2C_ERA_COSMIC,C2C_ERA_TRANSCENDENT,C2C_ERA_FUTURE</Attribute>
 			<Attribute Class="Bonus">NO_BONUS,BONUS_ALL,!BONUS_RICE,!BONUS_WHEAT,!BONUS_CORN,!BONUS_POTATOES</Attribute>
@@ -14359,8 +14215,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.35</Scale>
 		</ArtRef>
-
-		<!-- ANCIENT/CLASSICAL AFRO/ARABIAN/INCA/MESO/MONGOL/NATIVE FARMS -->
+		<!-- Ancient/Classical Afro/Arabian/Inca/Meso/Mongol/Native Farms -->
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA,ARTSTYLE_ARABIA,ARTSTYLE_MESO_AMERICA,ARTSTYLE_MONGOLIA,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_SOUTH_AMERICA,ARTSTYLE_SOUTH_PACIFIC</Attribute>
@@ -14453,7 +14308,7 @@
 			<Scale>0.0</Scale>
 			<Rotate>-45</Rotate>
 		</ArtRef>
-		<!-- MEDIEVAL/RENAISSANCE AFRO/INCA/MONGOL/MESO/NATIVE FARMS -->
+		<!-- Medieval/Renaissance Afro/Inca/Mongol/Meso/Native Farms -->
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL,C2C_ERA_RENAISSANCE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA,ARTSTYLE_MESO_AMERICA,ARTSTYLE_MONGOLIA,ARTSTYLE_NATIVE_AMERICA,ARTSTYLE_SOUTH_AMERICA</Attribute>
@@ -14500,8 +14355,7 @@
 			<Scale>0.5</Scale>
 			<Rotate>-45</Rotate>
 		</ArtRef>
-
-		<!-- INDUSTRIAL/MODERN AFRO/INCA/MESO/MONGOL FARMS -->
+		<!-- Industrial/Modern Afro/Inca/Meso/Mongol Farms -->
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL,C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_AFRICA,ARTSTYLE_MESO_AMERICA,ARTSTYLE_MONGOLIA,ARTSTYLE_SOUTH_AMERICA</Attribute>
@@ -14554,9 +14408,8 @@
 			<Scale>0.5</Scale>
 			<Rotate>-45</Rotate>
 		</ArtRef>
-		<!-- FUTURE AFRO FARMS IN GENERIC FARMS -->
-
-		<!-- MEDIEVAL/RENAISSANCE PACIFIC FARMS -->
+		<!-- Future Afro Farms in Generic Farms -->
+		<!-- Medieval/Renaissance Pacific Farms -->
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL,C2C_ERA_RENAISSANCE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_PACIFIC</Attribute>
@@ -14649,7 +14502,7 @@
 			<Scale>0.0</Scale>
 			<Rotate>-45</Rotate>
 		</ArtRef>
-		<!-- PACIFIC INDUSTRIAL/MODERN FARMS -->
+		<!-- Pacific Industrial/Modern Farms -->
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL,C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_PACIFIC</Attribute>
@@ -14699,9 +14552,8 @@
 			<Scale>0.5</Scale>
 			<Rotate>-45</Rotate>
 		</ArtRef>
-
-		<!-- ANCIENT/CLASSICAL ARABIAN FARMS IN AFRO FARMS -->
-		<!-- MEDIEVAL/RENAISSANCE/INDUSTRIAL ARABIAN FARMS -->
+		<!-- Ancient/Classical Arabian Farms in Afro Farms -->
+		<!-- Medieval/Renaissance/Industrial Arabian Farms -->
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL,C2C_ERA_RENAISSANCE,C2C_ERA_INDUSTRIAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
@@ -14751,11 +14603,10 @@
 			<Scale>0.5</Scale>
 			<Rotate>-45</Rotate>
 		</ArtRef>
-		<!-- MODERN ARABIAN FARMS IN CRESCENT MODERN FARMS -->
-		<!-- FUTURE ARABIAN FARMS IN GENERIC FUTURE FARMS -->
-
-		<!-- ASIAN/JAPANESE/SOUTH_EAST_ASIAN ANCIENT FARMS IN GENERIC ANCIENT FARMS -->
-		<!-- ASIAN/JAPANESE/SOUTH_EAST_ASIAN CLASSICAL/MEDIEVAL FARMS -->
+		<!-- Modern Arabian Farms in Crescent Modern Farms -->
+		<!-- Future Arabian Farms in Generic Future Farms -->
+		<!-- Asian/Japanese/South East Asian Ancient Farms in Generic Ancient Farms -->
+		<!-- Asian/Japanese/South East Asian Classical/Medieval Farms -->
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ASIA,ARTSTYLE_JAPAN,ARTSTYLE_SOUTH_EAST_ASIA</Attribute>
@@ -14800,7 +14651,7 @@
 			<Scale>0.5</Scale>
 			<Rotate>-45</Rotate>
 		</ArtRef>
-		<!-- ASIAN RENAISSANCE/INDUSTRIAL/MODERN FARMS -->
+		<!-- Asian Renaissance/Industrial/Modern Farms -->
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE,C2C_ERA_INDUSTRIAL,C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ASIA,ARTSTYLE_JAPAN,ARTSTYLE_SOUTH_EAST_ASIA</Attribute>
@@ -14850,7 +14701,7 @@
 			<Scale>0.5</Scale>
 			<Rotate>-45</Rotate>
 		</ArtRef>
-		<!-- PACIFIC INDUSTRIAL/MODERN FARMS -->
+		<!-- Pacific Industrial/Modern Farms -->
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL,C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_SOUTH_PACIFIC</Attribute>
@@ -14900,8 +14751,7 @@
 			<Scale>0.5</Scale>
 			<Rotate>-45</Rotate>
 		</ArtRef>
-
-		<!-- MEDIEVAL/RENAISSANCE/INDUSTRIAL ARABIAN FARMS -->
+		<!-- Medieval/Renaissance/Industrial Arabian Farms -->
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
 			<Attribute Class="Era">C2C_ERA_MEDIEVAL,C2C_ERA_RENAISSANCE,C2C_ERA_INDUSTRIAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA</Attribute>
@@ -14951,11 +14801,10 @@
 			<Scale>0.5</Scale>
 			<Rotate>-45</Rotate>
 		</ArtRef>
-		<!-- MODERN ARABIAN FARMS IN CRESCENT MODERN FARMS -->
-		<!-- FUTURE ARABIAN FARMS IN GENERIC FUTURE FARMS -->
-
-		<!-- ASIAN/JAPANESE/SOUTH_EAST_ASIAN ANCIENT FARMS IN GENERIC ANCIENT FARMS -->
-		<!-- ASIAN/JAPANESE/SOUTH_EAST_ASIAN CLASSICAL/MEDIEVAL FARMS -->
+		<!-- Modern Arabian Farms in Crescent Modern Farms -->
+		<!-- Future Arabian Farms in Generic Future Farms -->
+		<!-- Asian/Japanese/South East Asian Ancient Farms in Generic Ancient Farms -->
+		<!-- Asian/Japanese/South East Asian Classical/Medieval Farms -->
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ASIA,ARTSTYLE_JAPAN,ARTSTYLE_SOUTH_EAST_ASIA</Attribute>
@@ -15000,7 +14849,7 @@
 			<Scale>0.5</Scale>
 			<Rotate>-45</Rotate>
 		</ArtRef>
-		<!-- ASIAN RENAISSANCE/INDUSTRIAL/MODERN FARMS -->
+		<!-- Asian Renaissance/Industrial/Modern Farms -->
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE,C2C_ERA_INDUSTRIAL,C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ASIA,ARTSTYLE_JAPAN,ARTSTYLE_SOUTH_EAST_ASIA</Attribute>
@@ -15050,8 +14899,7 @@
 			<Scale>0.5</Scale>
 			<Rotate>-45</Rotate>
 		</ArtRef>
-
-		<!-- CLASSICAL/MEDIEVAL CRESCENT/EGYPTIAN/INDIAN FARMS -->
+		<!-- Classical/Medieval Crescent/Egyptian/Indian Farms -->
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_CRESCENT,ARTSTYLE_EGYPT,ARTSTYLE_INDIA</Attribute>
@@ -15096,7 +14944,7 @@
 			<Scale>0.5</Scale>
 			<Rotate>-45</Rotate>
 		</ArtRef>
-		<!-- CRESCENT/EGYPTIAN/INDIAN RENAISSANCE/INDUSTRIAL FARMS -->
+		<!-- Crescent/Egyptian/Indian Renaissance/Industrial Farms -->
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE,C2C_ERA_INDUSTRIAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_CRESCENT,ARTSTYLE_EGYPT,ARTSTYLE_INDIA</Attribute>
@@ -15140,7 +14988,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.75</Scale>
 		</ArtRef>
-		<!-- MODERN ARABIAN/CRESCENT/EGYPTIAN/INDIAN FARMS -->
+		<!-- Modern Arabian/Crescent/Egyptian/Indian Farms -->
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
 			<Attribute Class="Era">C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA,ARTSTYLE_CRESCENT,ARTSTYLE_EGYPT,ARTSTYLE_INDIA</Attribute>
@@ -15187,9 +15035,8 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.4</Scale>
 		</ArtRef>
-		<!-- FUTURE ARABIAN/CRESCENT/EGYPTIAN/INDIAN FARMS IN FUTURE GENERIC FARMS -->
-
-		<!-- EUROPEAN INDUSTRIAL FARMS -->
+		<!-- Future Arabian/Crescent/Egyptian/Indian Farms in Future Generic Farms -->
+		<!-- European Industrial Farms -->
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_EUROPE</Attribute>
@@ -15236,8 +15083,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.25</Scale>
 		</ArtRef>
-
-		<!-- CLASSICAL/MEDIEVAL GRECO_ROMAN FARMS -->
+		<!-- Classical/Medieval Greco-Roman Farms -->
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
 			<Attribute Class="Era">C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_GRECO_ROMAN</Attribute>
@@ -15338,7 +15184,7 @@
 			<Scale>0.0</Scale>
 			<Rotate>-45</Rotate>
 		</ArtRef>
-		<!-- RENAISSANCE/INDUSTRIAL/MODERN GRECO_ROMAN/IBERIAN FARMS -->
+		<!-- Renaissance/Industrial/Modern Greco-Roman/Iberian Farms -->
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
 			<Attribute Class="Era">C2C_ERA_RENAISSANCE,C2C_ERA_INDUSTRIAL,C2C_ERA_ATOMIC,C2C_ERA_INFORMATION</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_GRECO_ROMAN,ARTSTYLE_IBERIA</Attribute>
@@ -15385,8 +15231,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.55</Scale>
 		</ArtRef>
-
-		<!-- RUSSIAN INDUSTRIAL FARMS -->
+		<!-- Russian Industrial Farms -->
 		<ArtRef Name="goal:IMPROVEMENT_FARM">
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_RUSSIA</Attribute>
@@ -15433,8 +15278,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.18</Scale>
 		</ArtRef>
-
-		<!-- START VERTICAL FARM IMPROVEMENT -->
+		<!-- Vertical Farm Improvement -->
 		<ArtRef Name="goal:IMPROVEMENT_VERTICAL_FARM">
 			<Attribute Class="Era">C2C_ERA_NANOTECH,C2C_ERA_TRANSHUMAN,C2C_ERA_GALACTIC,C2C_ERA_COSMIC,C2C_ERA_TRANSCENDENT,C2C_ERA_FUTURE</Attribute>
 			<Attribute Class="Bonus">NO_BONUS,BONUS_ALL,!BONUS_RICE,!BONUS_WHEAT,!BONUS_CORN,!BONUS_POTATOES</Attribute>
@@ -15492,9 +15336,7 @@
 			<Rotate>-45</Rotate>
 			<Scale>0.8</Scale>
 		</ArtRef>
-		<!-- END VERTICAL FARM IMPROVEMENT -->
-
-		<!--- corn crop -->
+		<!--- Corn Crop -->
 		<ArtRef Name="goal:BONUS_CORN">
 			<Attribute Class="Bonus">BONUS_CORN</Attribute>
 			<Attribute Class="Scalar">iCropAreaMultiplier:10</Attribute>
@@ -15503,9 +15345,7 @@
 			<Attribute Class="Scalar">bIsPartOfBonus:1</Attribute>
 		</ArtRef>
 	</LNode>
-
-<!--- ERA WATERWORKED START -->
-
+	<!--- Era Waterworked -->
 	<LNode Name="Leaf_Water_Worked_4x4">
 		<Width>4</Width>
 		<Height>4</Height>
@@ -15550,13 +15390,12 @@
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Waterworked/Waterworked.kfm</Attribute>
 		</ArtRef>
 	</LNode>
-
 	<LNode Name="Leaf_Water_Improvement_4x4">
 		<Width>4</Width>
 		<Height>4</Height>
 		<Attribute Class="Scalar">bNotBFS:1</Attribute>
 		<Attribute Class="RegionTest">0NW</Attribute>
-		<!-- fish -->
+		<!-- Fish -->
 		<ArtRef Name="goal:IMPROVEMENT_FISHING_BOATS">
 			<Attribute Class="Improvement">IMPROVEMENT_FISHING_BOATS</Attribute>
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
@@ -15595,7 +15434,7 @@
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Nets/Nets_Modern.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Nets/Nets.kfm</Attribute>
 		</ArtRef>
-		<!-- whale -->
+		<!-- Whale -->
 		<ArtRef Name="goal:IMPROVEMENT_WHALING_BOATS">
 			<Attribute Class="Improvement">IMPROVEMENT_WHALING_BOATS</Attribute>
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL,C2C_ERA_RENAISSANCE,C2C_ERA_INDUSTRIAL</Attribute>
@@ -15611,15 +15450,12 @@
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Whalingboat_Modern/WhalingBoat_Modern.kfm</Attribute>
 		</ArtRef>
 	</LNode>
-
-	<!--- ERA WATERWORKED END -->
-
 	<LNode Name="Leaf_LandImprovement_4x4">
 		<Width>4</Width>
 		<Height>4</Height>
 		<Attribute Class="Scalar">bNotBFS:1</Attribute>
 		<Attribute Class="RegionTest">0NW</Attribute>
-		<!-- mine -->
+		<!-- Mine -->
 		<ArtRef Name="goal:IMPROVEMENT_MINE">
 			<Attribute Class="Improvement">IMPROVEMENT_MINE</Attribute>
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_RENAISSANCE,C2C_ERA_INDUSTRIAL</Attribute>
@@ -15640,7 +15476,7 @@
 			<Attribute Class="Scalar">bCutTrees:1</Attribute>
 			<Attribute Class="Scalar">fCenterCut:40</Attribute>
 		</ArtRef>
-		<!-- shaft mine -->
+		<!-- Shaft Mine -->
 		<ArtRef Name="goal:IMPROVEMENT_SHAFT_MINE">
 			<Attribute Class="Improvement">IMPROVEMENT_SHAFT_MINE</Attribute>
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_RENAISSANCE</Attribute>
@@ -15671,10 +15507,10 @@
 			<Attribute Class="Scalar">bCutTrees:1</Attribute>
 			<Attribute Class="Scalar">fCenterCut:50</Attribute>
 		</ArtRef>
-		<!-- fort -->
+		<!-- Fort -->
 		<ArtRef Name="goal:IMPROVEMENT_FORT">
 			<Attribute Class="Improvement">IMPROVEMENT_FORT</Attribute>
-<!--			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute> -->
+			<!-- <Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute> -->
 			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
 			<Attribute Class="Scalar">bApplyRotation:1</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Fort/eu_an_fort.nif</Attribute>
@@ -15684,8 +15520,7 @@
 			<Attribute Class="Scalar">bZMode_Ground:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:shadow</Attribute>
 		</ArtRef>
-
-		<!-- PACIFIC FORT -->
+		<!-- Pacific Fort -->
 		<ArtRef Name="goal:IMPROVEMENT_FORT">
 			<Attribute Class="Improvement">IMPROVEMENT_FORT</Attribute>
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL,C2C_ERA_RENAISSANCE</Attribute>
@@ -15699,8 +15534,7 @@
 			<Attribute Class="Scalar">bZMode_Ground:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:shadow</Attribute>
 		</ArtRef>
-
-		<!-- AFRO FORT -->
+		<!-- Afro Fort -->
 		<ArtRef Name="goal:IMPROVEMENT_FORT">
 			<Attribute Class="Improvement">IMPROVEMENT_FORT</Attribute>
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
@@ -15741,8 +15575,7 @@
 			<Attribute Class="Scalar">szForceContourGeometry:shadow</Attribute>
 			<Scale>0.55</Scale>
 		</ArtRef>
-
-		<!-- NATIVE FORT -->
+		<!-- Native Fort -->
 		<ArtRef Name="goal:IMPROVEMENT_FORT">
 			<Attribute Class="Improvement">IMPROVEMENT_FORT</Attribute>
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL,C2C_ERA_RENAISSANCE</Attribute>
@@ -15770,8 +15603,7 @@
 			<Attribute Class="Scalar">szForceContourGeometry:shadow</Attribute>
 			<Scale>0.55</Scale>
 		</ArtRef>
-
-		<!-- MESO FORT -->
+		<!-- Meso Fort -->
 		<ArtRef Name="goal:IMPROVEMENT_FORT">
 			<Attribute Class="Improvement">IMPROVEMENT_FORT</Attribute>
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
@@ -15799,8 +15631,7 @@
 			<Attribute Class="Scalar">szForceContourGeometry:shadow</Attribute>
 			<Scale>0.55</Scale>
 		</ArtRef>
-
-		<!-- CRESCENT FORT -->
+		<!-- Crescent Fort -->
 		<ArtRef Name="goal:IMPROVEMENT_FORT">
 			<Attribute Class="Improvement">IMPROVEMENT_FORT</Attribute>
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL,C2C_ERA_MEDIEVAL</Attribute>
@@ -15817,7 +15648,7 @@
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_FORT">
 			<Attribute Class="Improvement">IMPROVEMENT_FORT</Attribute>
-			<Attribute 			Class="Era">C2C_ERA_CLASSICAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_CLASSICAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA,ARTSTYLE_EGYPT,ARTSTYLE_INDIA,ARTSTYLE_CRESCENT</Attribute>
 			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
 			<Attribute Class="Scalar">bApplyRotation:1</Attribute>
@@ -15831,7 +15662,7 @@
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_FORT">
 			<Attribute Class="Improvement">IMPROVEMENT_FORT</Attribute>
-			<Attribute 			Class="Era">C2C_ERA_MEDIEVAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_MEDIEVAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ARABIA,ARTSTYLE_EGYPT,ARTSTYLE_INDIA,ARTSTYLE_CRESCENT</Attribute>
 			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
 			<Attribute Class="Scalar">bApplyRotation:1</Attribute>
@@ -15871,8 +15702,7 @@
 			<Attribute Class="Scalar">szForceContourGeometry:shadow</Attribute>
 			<Scale>0.55</Scale>
 		</ArtRef>
-
-		<!-- EUROPEAN FORT -->
+		<!-- European Fort -->
 		<ArtRef Name="goal:IMPROVEMENT_FORT">
 			<Attribute Class="Improvement">IMPROVEMENT_FORT</Attribute>
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
@@ -15971,8 +15801,7 @@
 			<Attribute Class="Scalar">szForceContourGeometry:shadow</Attribute>
 			<Scale>0.35</Scale>
 		</ArtRef>
-
-		<!-- MEDITERRANEAN FORT -->
+		<!-- Mediterranean Fort -->
 		<ArtRef Name="goal:IMPROVEMENT_FORT">
 			<Attribute Class="Improvement">IMPROVEMENT_FORT</Attribute>
 			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
@@ -15987,8 +15816,7 @@
 			<Attribute Class="Scalar">szForceContourGeometry:shadow</Attribute>
 			<Scale>0.55</Scale>
 		</ArtRef>
-
-		<!-- MONGOL FORT -->
+		<!-- Mongol Fort -->
 		<ArtRef Name="goal:IMPROVEMENT_FORT">
 			<Attribute Class="Improvement">IMPROVEMENT_FORT</Attribute>
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
@@ -16003,7 +15831,7 @@
 			<Attribute Class="Scalar">szForceContourGeometry:shadow</Attribute>
 			<Scale>0.55</Scale>
 		</ArtRef>
-		<!-- ASIAN FORT -->
+		<!-- Asian Fort -->
 		<ArtRef Name="goal:IMPROVEMENT_FORT">
 			<Attribute Class="Improvement">IMPROVEMENT_FORT</Attribute>
 			<Attribute Class="Era">C2C_ERA_ANCIENT,C2C_ERA_CLASSICAL</Attribute>
@@ -16020,7 +15848,7 @@
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_FORT">
 			<Attribute Class="Improvement">IMPROVEMENT_FORT</Attribute>
-			<Attribute 						Class="Era">C2C_ERA_MEDIEVAL,C2C_ERA_RENAISSANCE</Attribute>
+			<Attribute Class="Era">C2C_ERA_MEDIEVAL,C2C_ERA_RENAISSANCE</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ASIA,ARTSTYLE_JAPAN,ARTSTYLE_MONGOLIA,ARTSTYLE_SOUTH_EAST_ASIA,ARTSTYLE_INDIA</Attribute>
 			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
 			<Attribute Class="Scalar">bApplyRotation:1</Attribute>
@@ -16034,7 +15862,7 @@
 		</ArtRef>
 		<ArtRef Name="goal:IMPROVEMENT_FORT">
 			<Attribute Class="Improvement">IMPROVEMENT_FORT</Attribute>
-			<Attribute 									Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
+			<Attribute Class="Era">C2C_ERA_INDUSTRIAL</Attribute>
 			<Attribute Class="ArtStyle">ARTSTYLE_ASIA,ARTSTYLE_JAPAN,ARTSTYLE_MONGOLIA,ARTSTYLE_SOUTH_EAST_ASIA,ARTSTYLE_INDIA</Attribute>
 			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
 			<Attribute Class="Scalar">bApplyRotation:1</Attribute>
@@ -16046,7 +15874,7 @@
 			<Attribute Class="Scalar">szForceContourGeometry:shadow</Attribute>
 			<Scale>0.35</Scale>
 		</ArtRef>
-		<!-- MODERN/FUTURE FORT -->
+		<!-- Modern/Future Fort -->
 		<ArtRef Name="goal:IMPROVEMENT_FORT">
 			<Attribute Class="Improvement">IMPROVEMENT_FORT</Attribute>
 			<Attribute Class="Era">C2C_ERA_ATOMIC,C2C_ERA_INFORMATION,C2C_ERA_NANOTECH,C2C_ERA_TRANSHUMAN,C2C_ERA_GALACTIC,C2C_ERA_COSMIC,C2C_ERA_TRANSCENDENT,C2C_ERA_FUTURE</Attribute>
@@ -16060,7 +15888,6 @@
 			<Attribute Class="Scalar">bZMode_Ground:1</Attribute>
 			<Attribute Class="Scalar">szForceContourGeometry:shadow</Attribute>
 		</ArtRef>
-
 		<!-- Pasture -->
 		<ArtRef Name="goal:IMPROVEMENT_PASTURE">
 			<Attribute Class="Improvement">IMPROVEMENT_PASTURE</Attribute>
@@ -16094,7 +15921,6 @@
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Pasture/mod_pasture.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Pasture/mod_pasture.kfm</Attribute>
 		</ArtRef>
-
 		<!-- Quarry -->
 		<ArtRef Name="goal:IMPROVEMENT_QUARRY">
 			<Attribute Class="Improvement">IMPROVEMENT_QUARRY</Attribute>
@@ -16112,7 +15938,6 @@
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/Quarry/QuarryModern.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/Quarry/QuarryModern.kfm</Attribute>
 		</ArtRef>
-
 		<!-- Windmill -->
 		<ArtRef Name="goal:IMPROVEMENT_WINDMILL">
 			<Attribute Class="Improvement">IMPROVEMENT_WINDMILL</Attribute>
@@ -16130,16 +15955,15 @@
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/WindMill/WindMill_mod.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/WindMill/WindMill_mod.kfm</Attribute>
 		</ArtRef>
-
 		<!-- Watermill -->
 		<ArtRef Name="goal:IMPROVEMENT_WATERMILL">
 			<Attribute Class="Improvement">IMPROVEMENT_WATERMILL</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/WaterMill/WaterMill.nif</Attribute>
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/WaterMill/WaterMill.kfm</Attribute>
-<!-- bExtraGoalOnly:1 seems to be a key attribute -->
+			<!-- bExtraGoalOnly:1 seems to be a key attribute -->
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 		</ArtRef>
-<!--		<ArtRef Name="goal:IMPROVEMENT_WATERMILL">
+		<!-- <ArtRef Name="goal:IMPROVEMENT_WATERMILL">
 			<Attribute Class="Improvement">IMPROVEMENT_WATERMILL</Attribute>
 			<Attribute Class="Era">C2C_ERA_ATOMIC,C2C_ERA_INFORMATION,C2C_ERA_NANOTECH,C2C_ERA_TRANSHUMAN,C2C_ERA_GALACTIC,C2C_ERA_COSMIC,C2C_ERA_TRANSCENDENT,C2C_ERA_FUTURE</Attribute>
 			<Attribute Class="Scalar">NIF:Art/Structures/Improvements/WindMill/WindMill_mod.nif</Attribute>
@@ -16147,7 +15971,6 @@
 			<Attribute Class="Scalar">bExtraGoalOnly:1</Attribute>
 			<Attribute Class="Scalar">bIsPartOfImprovement:1</Attribute>
 		</ArtRef> -->
-		<!-- Rise of Mankind 2.7 -->
 		<!-- Workshop -->
 		<ArtRef Name="goal:IMPROVEMENT_WORKSHOP">
 			<Attribute Class="Improvement">IMPROVEMENT_WORKSHOP</Attribute>
@@ -16159,7 +15982,6 @@
 			<Attribute Class="Scalar">bCutTrees:1</Attribute>
 			<Attribute Class="Scalar">fCenterCut:50</Attribute>
 		</ArtRef>
-
 		<!-- Bunker -->
 		<ArtRef Name="goal:IMPROVEMENT_COMMAND_BUNKER">
 			<Attribute Class="Improvement">IMPROVEMENT_COMMAND_BUNKER</Attribute>
@@ -16183,7 +16005,6 @@
 			<Attribute Class="Scalar">bCutTrees:1</Attribute>
 			<Attribute Class="Scalar">fCenterCut:40</Attribute>
 		</ArtRef>
-		<!-- Rise of Mankind 2.8 -->
 		<!-- Future Bunker -->
 		<ArtRef Name="goal:IMPROVEMENT_COMMAND_CENTER">
 			<Attribute Class="Improvement">IMPROVEMENT_COMMAND_CENTER</Attribute>
@@ -16198,7 +16019,7 @@
 			<Attribute Class="Scalar">szForceContourGeometry:shadow</Attribute>
 			<Scale>3.5</Scale>
 		</ArtRef>
-		<!-- DESERT WINDMILL -->
+		<!-- Desert Windmill -->
 		<ArtRef Name="goal:IMPROVEMENT_DESERT_WINDMILL">
 			<Attribute Class="Improvement">IMPROVEMENT_DESERT_WINDMILL</Attribute>
 			<Attribute Class="Era">C2C_ERA_ATOMIC,C2C_ERA_INFORMATION,C2C_ERA_NANOTECH,C2C_ERA_TRANSHUMAN,C2C_ERA_GALACTIC,C2C_ERA_COSMIC,C2C_ERA_TRANSCENDENT,C2C_ERA_FUTURE</Attribute>
@@ -16208,10 +16029,6 @@
 			<Attribute Class="Scalar">KFM:Art/Structures/Improvements/WindMill/WindMill_mod.kfm</Attribute>
 		</ArtRef>
 	</LNode>
-
-	<!-- *************************************************************************** -->
-	<!-- *************************************************************************** -->
-	<!-- *************************************************************************** -->
 	<LNode Name="Node_4x4">
 		<Width>4</Width>
 		<Height>4</Height>
@@ -16220,12 +16037,7 @@
 		<Width>4</Width>
 		<Height>4</Height>
 	</LNode>
-	<!-- *************************************************************************** -->
-	<!-- *************************************************************************** -->
-	<!-- *************************************************************************** -->
-
-	<!-- ERA WATERWORKED START -->
-
+	<!-- Era Waterworked -->
 	<LProduction From="PLOT_ROOT">
 		<Attribute Class="Improvement">NO_IMPROVEMENT,IMPROVEMENT_ALL,!IMPROVEMENT_WATER_WORKED,!IMPROVEMENT_MINE,!IMPROVEMENT_SHAFT_MINE,!IMPROVEMENT_MODERN_MINE,!IMPROVEMENT_PASTURE,!IMPROVEMENT_QUARRY,!IMPROVEMENT_WHALING_BOATS,!IMPROVEMENT_WINDMILL,!IMPROVEMENT_WATERMILL,!IMPROVEMENT_FORT,!IMPROVEMENT_GEOTHERMAL_FACTORY,!IMPROVEMENT_COMMAND_BUNKER,!IMPROVEMENT_COMMAND_CENTER,!IMPROVEMENT_DESERT_WINDMILL</Attribute>
 		<To Name="Node_12x12"/>
@@ -16236,21 +16048,17 @@
 		<To Name="Node_12x12"/>
 		<To Name="Leaf_LandImprovement_4x4"/>
 	</LProduction>
-	<!-- *************************************************************************** -->
-
 	<LProduction From="PLOT_ROOT" Name="LandImprovementProd">
 		<Attribute Class="Improvement">IMPROVEMENT_MINE,IMPROVEMENT_SHAFT_MINE,IMPROVEMENT_MODERN_MINE,IMPROVEMENT_WINDMILL,IMPROVEMENT_WATERMILL,IMPROVEMENT_FORT,IMPROVEMENT_COMMAND_BUNKER,IMPROVEMENT_GEOTHERMAL_FACTORY,IMPROVEMENT_COMMAND_CENTER,IMPROVEMENT_DESERT_WINDMILL</Attribute>
 		<Attribute Class="Bonus">NO_BONUS</Attribute>
 		<Attribute Class="Scalar">bNotBFS:1</Attribute>
 		<To Name="Leaf_LandImprovement_4x4"/>
 	</LProduction>
-
 	<LProduction From="PLOT_ROOT" Name="LandImprovementProd">
 		<Attribute Class="Improvement">IMPROVEMENT_PASTURE,IMPROVEMENT_QUARRY</Attribute>
 		<Attribute Class="Scalar">bNotBFS:1</Attribute>
 		<To Name="Leaf_LandImprovement_4x4"/>
 	</LProduction>
-
 	<LProduction From="PLOT_ROOT" Name="WaterImprovementProd">
 		<Attribute Class="Improvement">IMPROVEMENT_WHALING_BOATS,IMPROVEMENT_FISHING_BOATS</Attribute>
 		<Attribute Class="Scalar">bNotBFS:1</Attribute>
@@ -16258,9 +16066,6 @@
 			<Translate>0,0</Translate>
 		</To>
 	</LProduction>
-
-	<!-- ERA WATERWORKED END -->
-
 	<LProduction From="PLOT_ROOT" Name="WaterWorkedProd">
 		<Attribute Class="Improvement">IMPROVEMENT_WATER_WORKED</Attribute>
 		<Attribute Class="Scalar">bNotBFS:1</Attribute>
@@ -16317,7 +16122,7 @@
 			<Rotate>90</Rotate>
 		</To>
 	</LProduction>
-	<!-- farm node -->
+	<!-- Farm node -->
 	<LProduction From="Farm_4x4">
 		<Attribute Class="Scalar">bNotBFS:1</Attribute>
 		<To Name="Leaf_Farm_4x4"/>
@@ -16337,7 +16142,7 @@
 			<Translate>-1.3,1.0</Translate>
 		</To>
 	</LProduction>
-	<!-- Regular Non-rice farm:     Place a farm in the mix -->
+	<!-- Regular non-Rice Farm: place a farm in the mix -->
 	<LProduction From="Node_4x4">
 		<Attribute Class="Improvement">IMPROVEMENT_FARM,IMPROVEMENT_VERTICAL_FARM</Attribute>
 		<Attribute Class="Bonus">NO_BONUS,BONUS_ALL,!BONUS_RICE,!BONUS_WHEAT,!BONUS_POTATOES</Attribute>
@@ -16353,7 +16158,7 @@
 			<Translate>0,-1</Translate>
 		</To>
 	</LProduction>
-	<!-- SPECIAL Rice & wheat farm:			Place a farm in the top-right of the plot -->
+	<!-- SPECIAL Rice and Wheat Farm: place a farm in the top-right of the plot -->
 	<LProduction Name="4x4_Farm_Rice" From="Node_12x12">
 		<Attribute Class="Improvement">IMPROVEMENT_FARM,IMPROVEMENT_VERTICAL_FARM</Attribute>
 		<Attribute Class="Bonus">BONUS_RICE,BONUS_WHEAT,BONUS_POTATOES</Attribute>
@@ -16412,12 +16217,6 @@
 		<Attribute Class="Improvement">IMPROVEMENT_FORT,IMPROVEMENT_COMMAND_BUNKER,IMPROVEMENT_COMMAND_CENTER</Attribute>
 		<To Name="BLeaf_4x4"/>
 	</LProduction>
-	<!-- *************************************************************************** -->
-	<!-- *************************************************************************** -->
-	<!-- *************************************************************************** -->
-	<!-- *************************************************************************** -->
-	<!-- *************************************************************************** -->
-	<!-- *************************************************************************** -->
 	<!-- Production generated by LSysTool converter with input=E:\Test.bmp -->
 	<LProduction From="Node_12x12">
 		<Attribute Class="Improvement">NO_IMPROVEMENT,IMPROVEMENT_ALL,!IMPROVEMENT_COTTAGE,!IMPROVEMENT_HAMLET,!IMPROVEMENT_VILLAGE,!IMPROVEMENT_TOWN,!IMPROVEMENT_SUBURBS</Attribute>
@@ -16488,7 +16287,7 @@
 			<Translate>5.000000,5.500000</Translate>
 		</To>
 	</LProduction>
-	<!-- 4x4 node ***************************** -->
+	<!-- 4x4 node -->
 	<LProduction From="Node_4x4">
 		<To Name="Node_4x2">
 			<Rotate>90</Rotate>
@@ -16507,7 +16306,7 @@
 			<Translate>0,1</Translate>
 		</To>
 	</LProduction>
-	<!-- 4x2 node ***************************** -->
+	<!-- 4x2 node -->
 	<LProduction From="Node_4x2" Name="P4x2_A">
 		<Attribute Class="Improvement">IMPROVEMENT_FARM,IMPROVEMENT_VERTICAL_FARM</Attribute>
 		<Attribute Class="RegionTest">0</Attribute>
@@ -16568,7 +16367,7 @@
 			<Translate>0.5,0</Translate>
 		</To>
 	</LProduction>
-	<!-- 3x2 node ***************************** -->
+	<!-- 3x2 node -->
 	<LProduction From="Node_3x2">
 		<Attribute Class="Improvement">NO_IMPROVEMENT,IMPROVEMENT_ALL,!IMPROVEMENT_COTTAGE,!IMPROVEMENT_HAMLET,!IMPROVEMENT_VILLAGE,!IMPROVEMENT_TOWN,!IMPROVEMENT_SUBURBS</Attribute>
 		<Attribute Class="RegionTest">0</Attribute>
@@ -16604,7 +16403,7 @@
 			<Rotate>90</Rotate>
 		</To>
 	</LProduction>
-	<!-- 2x2 node ***************************** -->
+	<!-- 2x2 node -->
 	<LProduction From="Node_2x2">
 		<Attribute Class="Improvement">IMPROVEMENT_ALL,!IMPROVEMENT_COTTAGE,!IMPROVEMENT_HAMLET,!IMPROVEMENT_VILLAGE,!IMPROVEMENT_TOWN,!IMPROVEMENT_SUBURBS</Attribute>
 		<To Name="GLeaf_2x2"/>
@@ -16643,7 +16442,7 @@
 			<Rotate>-90</Rotate>
 		</To>
 	</LProduction>
-	<!-- 2x1 node ***************************** -->
+	<!-- 2x1 node -->
 	<LProduction From="Node_2x1">
 		<Attribute Class="Improvement">NO_IMPROVEMENT,IMPROVEMENT_ALL,!IMPROVEMENT_COTTAGE,!IMPROVEMENT_HAMLET,!IMPROVEMENT_VILLAGE,!IMPROVEMENT_TOWN,!IMPROVEMENT_SUBURBS</Attribute>
 		<To Name="GLeaf_2x1"/>
@@ -16667,10 +16466,7 @@
 			<Translate>+.5,0</Translate>
 		</To>
 	</LProduction>
-	<!-- *************************************************************************** -->
-	<!-- *************************************************************************** -->
-	<!-- *************************************************************************** -->
-	<!-- Productions generated by LSysTool follow -->
+	<!-- Productions generated by LSysTool -->
 	<!-- input=PlotBuilder_Productions/12x12_01.bmp -->
 	<LProduction From="Node_12x12">
 		<To Name="Node_6x6">

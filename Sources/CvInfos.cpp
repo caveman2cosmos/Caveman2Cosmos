@@ -4499,7 +4499,7 @@ int CvPromotionInfo::getNumOnGameOptions() const
 
 bool CvPromotionInfo::isOnGameOption(int i) const
 {
-	FAssert (i > -1 && i < GC.getNumGameOptions());
+	FAssert (i > -1 && i < GC.getNumGameOptionInfos());
 	if (find(m_aiOnGameOptions.begin(), m_aiOnGameOptions.end(), i) == m_aiOnGameOptions.end())
 	{
 		return false;
@@ -4519,7 +4519,7 @@ int CvPromotionInfo::getNumNotOnGameOptions() const
 
 bool CvPromotionInfo::isNotOnGameOption(int i) const
 {
-	FAssert (i > -1 && i < GC.getNumGameOptions());
+	FAssert (i > -1 && i < GC.getNumGameOptionInfos());
 	if (find(m_aiNotOnGameOptions.begin(), m_aiNotOnGameOptions.end(), i) == m_aiNotOnGameOptions.end())
 	{
 		return false;
@@ -12506,32 +12506,6 @@ void CvSpecialBuildingInfo::getCheckSum(unsigned int& iSum)
 	CheckSum(iSum, m_bValid);
 
 	// Arrays
-}
-
-//======================================================================================================
-//					CvRiverInfo
-//======================================================================================================
-
-//------------------------------------------------------------------------------------------------------
-//
-//  FUNCTION:   CvRiverInfo()
-//
-//  PURPOSE :   Default constructor
-//
-//------------------------------------------------------------------------------------------------------
-CvRiverInfo::CvRiverInfo()
-{
-}
-
-//------------------------------------------------------------------------------------------------------
-//
-//  FUNCTION:   ~CvRiverInfo()
-//
-//  PURPOSE :   Default destructor
-//
-//------------------------------------------------------------------------------------------------------
-CvRiverInfo::~CvRiverInfo()
-{
 }
 
 //======================================================================================================
@@ -26072,7 +26046,7 @@ int CvTraitInfo::getNumNotOnGameOptions() const
 
 bool CvTraitInfo::isNotOnGameOption(int i) const
 {
-	FAssert (i > -1 && i < GC.getNumGameOptions());
+	FAssert (i > -1 && i < GC.getNumGameOptionInfos());
 	if (find(m_aiNotOnGameOptions.begin(), m_aiNotOnGameOptions.end(), i) == m_aiNotOnGameOptions.end())
 	{
 		return false;
@@ -26092,7 +26066,7 @@ int CvTraitInfo::getNumOnGameOptions() const
 
 bool CvTraitInfo::isOnGameOption(int i) const
 {
-	FAssert (i > -1 && i < GC.getNumGameOptions());
+	FAssert (i > -1 && i < GC.getNumGameOptionInfos());
 	if (find(m_aiOnGameOptions.begin(), m_aiOnGameOptions.end(), i) == m_aiOnGameOptions.end())
 	{
 		return false;
@@ -34817,7 +34791,7 @@ int CvEventTriggerInfo::getNumNotOnGameOptions() const
 
 bool CvEventTriggerInfo::isNotOnGameOption(int i)
 {
-	FAssert (i > -1 && i < GC.getNumGameOptions());
+	FAssert (i > -1 && i < GC.getNumGameOptionInfos());
 	if (find(m_aiNotOnGameOptions.begin(), m_aiNotOnGameOptions.end(), i) == m_aiNotOnGameOptions.end())
 	{
 		return false;
@@ -34837,7 +34811,7 @@ int CvEventTriggerInfo::getNumOnGameOptions() const
 
 bool CvEventTriggerInfo::isOnGameOption(int i)
 {
-	FAssert (i > -1 && i < GC.getNumGameOptions());
+	FAssert (i > -1 && i < GC.getNumGameOptionInfos());
 	if (find(m_aiOnGameOptions.begin(), m_aiOnGameOptions.end(), i) == m_aiOnGameOptions.end())
 	{
 		return false;
@@ -39362,7 +39336,7 @@ int CvPromotionLineInfo::getNumOnGameOptions() const
 
 bool CvPromotionLineInfo::isOnGameOption(int i) const
 {
-	FAssert (i > -1 && i < GC.getNumGameOptions());
+	FAssert (i > -1 && i < GC.getNumGameOptionInfos());
 	if (find(m_aiOnGameOptions.begin(), m_aiOnGameOptions.end(), i) == m_aiOnGameOptions.end())
 	{
 		return false;
@@ -39382,7 +39356,7 @@ int CvPromotionLineInfo::getNumNotOnGameOptions() const
 
 bool CvPromotionLineInfo::isNotOnGameOption(int i) const
 {
-	FAssert (i > -1 && i < GC.getNumGameOptions());
+	FAssert (i > -1 && i < GC.getNumGameOptionInfos());
 	if (find(m_aiNotOnGameOptions.begin(), m_aiNotOnGameOptions.end(), i) == m_aiNotOnGameOptions.end())
 	{
 		return false;

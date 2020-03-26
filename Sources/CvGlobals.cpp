@@ -1443,22 +1443,6 @@ CvRouteModelInfo& cvInternalGlobals::getRouteModelInfo(int i) const
 	return *(m_paRouteModelInfo[i]);
 }
 
-int cvInternalGlobals::getNumRiverInfos() const
-{
-	return (int)m_paRiverInfo.size();
-}
-
-std::vector<CvRiverInfo*>& cvInternalGlobals::getRiverInfos()
-{
-	return m_paRiverInfo;
-}
-
-CvRiverInfo& cvInternalGlobals::getRiverInfo(RiverTypes e) const
-{
-	FAssertMsg(e >= 0 && e < GC.getNumRiverInfos(), "RiverInfo index out of bounds");
-	return *(m_paRiverInfo[e]);
-}
-
 int cvInternalGlobals::getNumRiverModelInfos() const
 {
 	return (int)m_paRiverModelInfo.size();
@@ -1633,17 +1617,6 @@ CvUnitFormationInfo& cvInternalGlobals::getUnitFormationInfo(int i) const
 {
 	FAssertMsg(i >= 0 && i < GC.getNumUnitFormationInfos(), "UnitFormationInfo index out of bounds");
 	return *(m_paUnitFormationInfo[i]);
-}
-
-// TEXT
-int cvInternalGlobals::getNumGameTextXML() const
-{
-	return (int)m_paGameTextXML.size();
-}
-
-std::vector<CvGameText*>& cvInternalGlobals::getGameTextXMLs()
-{
-	return m_paGameTextXML;
 }
 
 // Landscape INFOS
@@ -4746,21 +4719,6 @@ int cvInternalGlobals::getNPC0_TEAM() const
 	return NPC0_TEAM;
 }
 
-int cvInternalGlobals::getINVALID_PLOT_COORD() const
-{
-	return INVALID_PLOT_COORD;
-}
-
-int cvInternalGlobals::getNUM_CITY_PLOTS() const
-{
-	return NUM_CITY_PLOTS;
-}
-
-int cvInternalGlobals::getCITY_HOME_PLOT() const
-{
-	return CITY_HOME_PLOT;
-}
-
 void cvInternalGlobals::setDLLProfiler(FProfiler* prof)
 {
 	m_Profiler = prof;
@@ -4949,52 +4907,6 @@ void cvInternalGlobals::setTypesEnum(const char* szType, int iEnum)
 }
 
 
-int cvInternalGlobals::getNUM_ENGINE_DIRTY_BITS() const
-{
-	return NUM_ENGINE_DIRTY_BITS;
-}
-
-int cvInternalGlobals::getNUM_INTERFACE_DIRTY_BITS() const
-{
-	return NUM_INTERFACE_DIRTY_BITS;
-}
-
-int cvInternalGlobals::getNUM_YIELD_TYPES() const
-{
-	return NUM_YIELD_TYPES;
-}
-
-int cvInternalGlobals::getNUM_COMMERCE_TYPES() const
-{
-	return NUM_COMMERCE_TYPES;
-}
-
-int cvInternalGlobals::getNUM_FORCECONTROL_TYPES() const
-{
-	return NUM_FORCECONTROL_TYPES;
-}
-
-int cvInternalGlobals::getNUM_INFOBAR_TYPES() const
-{
-	return NUM_INFOBAR_TYPES;
-}
-
-int cvInternalGlobals::getNUM_HEALTHBAR_TYPES() const
-{
-	return NUM_HEALTHBAR_TYPES;
-}
-
-int cvInternalGlobals::getNUM_CONTROL_TYPES() const
-{
-	return NUM_CONTROL_TYPES;
-}
-
-int cvInternalGlobals::getNUM_LEADERANIM_TYPES() const
-{
-	return NUM_LEADERANIM_TYPES;
-}
-
-
 void cvInternalGlobals::deleteInfoArrays()
 {
 	deleteInfoArray(m_paBuildingInfo);
@@ -5056,7 +4968,6 @@ void cvInternalGlobals::deleteInfoArrays()
 
 	deleteInfoArray(m_paRouteInfo);
 	deleteInfoArray(m_paRouteModelInfo);
-	deleteInfoArray(m_paRiverInfo);
 	deleteInfoArray(m_paRiverModelInfo);
 
 	deleteInfoArray(m_paWaterPlaneInfo);
@@ -5555,21 +5466,6 @@ void cvInternalGlobals::resolveDelayedResolution()
 	}
 	m_delayedResolutionMap.clear();
 }
-
-int cvInternalGlobals::getNumDirections() const { return NUM_DIRECTION_TYPES; }
-int cvInternalGlobals::getNumGameOptions() const { return NUM_GAMEOPTION_TYPES; }
-int cvInternalGlobals::getNumMPOptions() const { return NUM_MPOPTION_TYPES; }
-int cvInternalGlobals::getNumSpecialOptions() const { return NUM_SPECIALOPTION_TYPES; }
-int cvInternalGlobals::getNumGraphicOptions() const { return NUM_GRAPHICOPTION_TYPES; }
-int cvInternalGlobals::getNumTradeableItems() const { return NUM_TRADEABLE_ITEMS; }
-int cvInternalGlobals::getNumBasicItems() const { return NUM_BASIC_ITEMS; }
-int cvInternalGlobals::getNumTradeableHeadings() const { return NUM_TRADEABLE_HEADINGS; }
-int cvInternalGlobals::getNumCommandInfos() const { return NUM_COMMAND_TYPES; }
-int cvInternalGlobals::getNumControlInfos() const { return NUM_CONTROL_TYPES; }
-int cvInternalGlobals::getNumPlayerOptionInfos() const { return NUM_PLAYEROPTION_TYPES; }
-int cvInternalGlobals::getMaxNumSymbols() const { return MAX_NUM_SYMBOLS; }
-int cvInternalGlobals::getNumGraphicLevels() const { return NUM_GRAPHICLEVELS; }
-int cvInternalGlobals::getNumGlobeLayers() const { return NUM_GLOBE_LAYER_TYPES; }
 
 int cvInternalGlobals::getNumMissionInfos() const
 { 

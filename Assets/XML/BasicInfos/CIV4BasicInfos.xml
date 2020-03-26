@@ -1,28 +1,26 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Basic Infos -->
-<!-- -->
+<?xml version='1.0' encoding='UTF-8'?>
 <!-- This file contains the Civ IV and BtS game concepts. Don't change. -->
-<!-- -->
 <Civ4BasicInfos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Schema\Caveman2Cosmos.xsd">
 	<ConceptInfos>
-		<ConceptInfo>
-			<Type>CONCEPT_ANIMALS</Type>
-			<Description>TXT_KEY_CONCEPT_ANIMALS</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_ANIMALS_PEDIA</Civilopedia>
-		</ConceptInfo>
 		<ConceptInfo>
 			<Type>CONCEPT_AIR_COMBAT</Type>
 			<Description>TXT_KEY_CONCEPT_AIR_COMBAT</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_AIR_COMBAT_PEDIA_SR</Civilopedia>
 		</ConceptInfo>
 		<ConceptInfo>
+			<Type>CONCEPT_AIR_PROMOTIONS</Type>
+			<Description>TXT_KEY_CONCEPT_AIR_PROMOTIONS</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_AIR_PROMOTIONS_PEDIA</Civilopedia>
+		</ConceptInfo>
+		<ConceptInfo>
 			<Type>CONCEPT_AIR_UNITS</Type>
 			<Description>TXT_KEY_CONCEPT_AIR_UNITS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_AIR_UNITS_PEDIA</Civilopedia>
+		</ConceptInfo>
+		<ConceptInfo>
+			<Type>CONCEPT_ANIMALS</Type>
+			<Description>TXT_KEY_CONCEPT_ANIMALS</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_ANIMALS_PEDIA</Civilopedia>
 		</ConceptInfo>
 		<ConceptInfo>
 			<Type>CONCEPT_APOSTOLIC_PALACE</Type>
@@ -58,11 +56,6 @@
 			<Type>CONCEPT_BTS_LEADERS</Type>
 			<Description>TXT_KEY_BTS_LEADERS</Description>
 			<Civilopedia>TXT_KEY_BTS_LEADERS_PEDIA</Civilopedia>
-		</ConceptInfo>
-		<ConceptInfo>
-			<Type>CONCEPT_AIR_PROMOTIONS</Type>
-			<Description>TXT_KEY_CONCEPT_AIR_PROMOTIONS</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_AIR_PROMOTIONS_PEDIA</Civilopedia>
 		</ConceptInfo>
 		<ConceptInfo>
 			<Type>CONCEPT_BTS_RULES_CHANGES</Type>
@@ -145,14 +138,14 @@
 			<Civilopedia>TXT_KEY_CONCEPT_ESPIONAGE_PEDIA_SR</Civilopedia>
 		</ConceptInfo>
 		<ConceptInfo>
-			<Type>CONCEPT_EXPLORATION</Type>
-			<Description>TXT_KEY_CONCEPT_EXPLORATION</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_EXPLORATION_PEDIA</Civilopedia>
-		</ConceptInfo>
-		<ConceptInfo>
 			<Type>CONCEPT_EVENTS</Type>
 			<Description>TXT_KEY_CONCEPT_EVENTS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_EVENTS_PEDIA</Civilopedia>
+		</ConceptInfo>
+		<ConceptInfo>
+			<Type>CONCEPT_EXPLORATION</Type>
+			<Description>TXT_KEY_CONCEPT_EXPLORATION</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_EXPLORATION_PEDIA</Civilopedia>
 		</ConceptInfo>
 		<ConceptInfo>
 			<Type>CONCEPT_FLANK_ATTACK</Type>
@@ -173,6 +166,11 @@
 			<Type>CONCEPT_GOLDEN_AGE</Type>
 			<Description>TXT_KEY_CONCEPT_GOLDEN_AGE</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GOLDEN_AGE_PEDIA</Civilopedia>
+		</ConceptInfo>
+		<ConceptInfo>
+			<Type>CONCEPT_GREAT_GENERALS</Type>
+			<Description>TXT_KEY_CONCEPT_GREAT_GENERALS</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
 		</ConceptInfo>
 		<ConceptInfo>
 			<Type>CONCEPT_GREAT_PEOPLE</Type>
@@ -203,6 +201,11 @@
 			<Type>CONCEPT_IMPROVEMENTS</Type>
 			<Description>TXT_KEY_CONCEPT_IMPROVEMENTS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_IMPROVEMENTS_PEDIA</Civilopedia>
+		</ConceptInfo>
+		<ConceptInfo>
+			<Type>CONCEPT_IRRIGATION</Type>
+			<Description>TXT_KEY_CONCEPT_IRRIGATION</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_IRRIGATION_PEDIA</Civilopedia>
 		</ConceptInfo>
 		<ConceptInfo>
 			<Type>CONCEPT_LATE_START</Type>
@@ -315,14 +318,19 @@
 			<Civilopedia>TXT_KEY_CONCEPT_TREASURY_PEDIA</Civilopedia>
 		</ConceptInfo>
 		<ConceptInfo>
+			<Type>CONCEPT_UNITED_NATIONS</Type>
+			<Description>TXT_KEY_CONCEPT_UNITED_NATIONS</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_UNITED_NATIONS_PEDIA</Civilopedia>
+		</ConceptInfo>
+		<ConceptInfo>
 			<Type>CONCEPT_UNITS</Type>
 			<Description>TXT_KEY_CONCEPT_UNITS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_UNITS_PEDIA</Civilopedia>
 		</ConceptInfo>
 		<ConceptInfo>
-			<Type>CONCEPT_UNITED_NATIONS</Type>
-			<Description>TXT_KEY_CONCEPT_UNITED_NATIONS</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_UNITED_NATIONS_PEDIA</Civilopedia>
+			<Type>CONCEPT_VASSAL_STATES</Type>
+			<Description>TXT_KEY_CONCEPT_VASSAL_STATES</Description>
+			<Civilopedia>TXT_KEY_CONCEPT_VASSAL_STATES_PEDIA</Civilopedia>
 		</ConceptInfo>
 		<ConceptInfo>
 			<Type>CONCEPT_VICTORY</Type>
@@ -348,21 +356,6 @@
 			<Type>CONCEPT_WONDERS</Type>
 			<Description>TXT_KEY_CONCEPT_WONDERS</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_WONDERS_PEDIA</Civilopedia>
-		</ConceptInfo>
-		<ConceptInfo>
-			<Type>CONCEPT_GREAT_GENERALS</Type>
-			<Description>TXT_KEY_CONCEPT_GREAT_GENERALS</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_GREAT_GENERALS_PEDIA</Civilopedia>
-		</ConceptInfo>
-		<ConceptInfo>
-			<Type>CONCEPT_VASSAL_STATES</Type>
-			<Description>TXT_KEY_CONCEPT_VASSAL_STATES</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_VASSAL_STATES_PEDIA</Civilopedia>
-		</ConceptInfo>
-		<ConceptInfo>
-			<Type>CONCEPT_IRRIGATION</Type>
-			<Description>TXT_KEY_CONCEPT_IRRIGATION</Description>
-			<Civilopedia>TXT_KEY_CONCEPT_IRRIGATION_PEDIA</Civilopedia>
 		</ConceptInfo>
 	</ConceptInfos>
 </Civ4BasicInfos>

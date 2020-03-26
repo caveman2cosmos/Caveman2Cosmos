@@ -1220,7 +1220,6 @@ bool CvXMLLoadUtility::LoadPostMenuGlobals()
 
 	UpdateProgressCB("Global Rivers");
 
-	LoadGlobalClassInfo(GC.getRiverInfos(), "CIV4RiverInfos", "Misc", L"/Civ4RiverInfos/RiverInfos/RiverInfo", false);
 	LoadGlobalClassInfo(GC.getRiverModelInfos(), "CIV4RiverModelInfos", "Art", L"/Civ4RiverModelInfos/RiverModelInfos/RiverModelInfo", false);
 
 	UpdateProgressCB("Global Other");
@@ -4241,7 +4240,7 @@ DllExport bool CvXMLLoadUtility::LoadPlayerOptions()
 		return false;
 
 	LoadGlobalClassInfo(GC.getPlayerOptionInfos(), "CIV4PlayerOptionInfos", "GameInfo", L"/Civ4PlayerOptionInfos/PlayerOptionInfos/PlayerOptionInfo", false);
-	FAssert(GC.getNumPlayerOptionInfos() == NUM_PLAYEROPTION_TYPES);
+	FAssert(static_cast<int>(GC.m_paPlayerOptionInfos.size()) == NUM_PLAYEROPTION_TYPES);
 
 	DestroyFXml();
 	return true;
@@ -4253,7 +4252,7 @@ DllExport bool CvXMLLoadUtility::LoadGraphicOptions()
 		return false;
 
 	LoadGlobalClassInfo(GC.getGraphicOptionInfos(), "CIV4GraphicOptionInfos", "GameInfo", L"/Civ4GraphicOptionInfos/GraphicOptionInfos/GraphicOptionInfo", false);
-	FAssert(GC.getNumGraphicOptions() == NUM_GRAPHICOPTION_TYPES);
+	FAssert(static_cast<int>(GC.m_paGraphicOptionInfos.size()) == NUM_GRAPHICOPTION_TYPES);
 
 	DestroyFXml();
 	return true;
@@ -4510,7 +4509,7 @@ bool CvXMLLoadUtility::doResetGlobalInfoClasses()
 		return false;
 
 	LoadGlobalClassInfo(GC.getPlayerOptionInfos(), "CIV4PlayerOptionInfos", "GameInfo", L"/CIV4PlayerOptionInfos/PlayerOptionInfos/PlayerOptionInfo", false);
-	FAssert(GC.getNumPlayerOptionInfos() == NUM_PLAYEROPTION_TYPES);
+	FAssert(static_cast<int>(GC.m_paPlayerOptionInfos.size()) == NUM_PLAYEROPTION_TYPES);
 
 	DestroyFXml();
 

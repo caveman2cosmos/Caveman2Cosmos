@@ -9000,14 +9000,6 @@
 		<Polish>Dodatkowy Zbiornik Paliwa</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_FUSION_CANNON</Tag>
-		<English>Fusion MegaCannon</English>
-		<French>MégaCanon à Fusion</French>
-		<Italian>Megacannone a fusione</Italian>
-		<Spanish>Megacañón a fusión</Spanish>
-		<Polish>Mega Działo Fuzyjne</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FUSION_POWER_SOURCE</Tag>
 		<English>Fusion Power Source</English>
 		<French>Moteur à Fusion</French>
@@ -14768,6 +14760,12 @@
 		<French>[ICON_BULLET]Elimine une source du comportement suicidaire.</French>
 		<Italian>[ICON_BULLET]Elimina una fonte dell'abilità Suicidio.</Italian>
 		<Polish>[ICON_BULLET]Eliminuje jedno źródło Popłochu.</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_REMOVE_STANDOUT_STATUS</Tag>
+		<English>Status (Remove Standout)</English>
+		<French>Statut (ne plus rester visible)</French>
+		<German>Weniger auffällig</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REMOVE_STAY_THE_HAND</Tag>

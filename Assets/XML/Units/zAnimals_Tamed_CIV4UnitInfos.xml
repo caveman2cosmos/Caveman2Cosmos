@@ -1,10 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- Modified by Strategyonly -->
-	<!-- Assets\Modules\DancingHoskuld\Subdue_Animals\Subdue_Animals_CIV4UnitInfos.xml-->
-	<!-- Unit Infos -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4UnitInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
@@ -2590,15 +2584,15 @@
 					<UnitAIType>UNITAI_COUNTER</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-       			<UnitAI>
-         			<UnitAIType>UNITAI_PILLAGE_COUNTER</UnitAIType>
-          			<bUnitAI>1</bUnitAI>
-        		</UnitAI>
-       			<UnitAI>
-         			<UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
-          			<bUnitAI>1</bUnitAI>
-        		</UnitAI>
-      		</UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_PILLAGE_COUNTER</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
+					<UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</UnitAIs>
 			<Buildings>
 				<BuildingType>BUILDING_DOG_KENNEL</BuildingType>
 				<BuildingType>BUILDING_WOLF_CAGE</BuildingType>

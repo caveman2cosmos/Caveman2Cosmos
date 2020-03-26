@@ -1415,7 +1415,6 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 			}
 		}
 
-
 		finishMoves();
 
 		if (IsSelected())
@@ -1509,7 +1508,6 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 		setHasUnitCombat(((UnitCombatTypes)iI), false, false);
 	}
 
-
 	GET_PLAYER(getOwner()).changeAssets(-assetValueTotal());
 
 	GET_PLAYER(getOwner()).changeUnitPower(-getPowerValueTotal());
@@ -1538,39 +1536,35 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 
 		if ((eCapturingPlayer != NO_PLAYER) && (eCaptureUnitType != NO_UNIT) && !(GET_PLAYER(eCapturingPlayer).isNPC()))
 		{
-			if (GET_PLAYER(eCapturingPlayer).isHuman() || GET_PLAYER(eCapturingPlayer).AI_captureUnit(eCaptureUnitType, pPlot) || 0 == GC.getDefineINT("AI_CAN_DISBAND_UNITS"))
+			CvUnit* pkCapturedUnit = GET_PLAYER(eCapturingPlayer).initUnit(eCaptureUnitType, pPlot->getX(), pPlot->getY(), NO_UNITAI, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
+
+			if (pkCapturedUnit != NULL)
 			{
-				CvUnit* pkCapturedUnit = GET_PLAYER(eCapturingPlayer).initUnit(eCaptureUnitType, pPlot->getX(), pPlot->getY(), NO_UNITAI, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
-
-				if (pkCapturedUnit != NULL)
+// BUG - Unit Captured Event - start
+				CvEventReporter::getInstance().unitCaptured(eFromPlayer, eCapturedUnitType, pkCapturedUnit);
+// BUG - Unit Captured Event - end
+				if (pCapturingUnit != NULL && pCapturingUnit->isHiddenNationality())
 				{
-	// BUG - Unit Captured Event - start
-					CvEventReporter::getInstance().unitCaptured(eFromPlayer, eCapturedUnitType, pkCapturedUnit);
-	// BUG - Unit Captured Event - end
-					if (pCapturingUnit != NULL && pCapturingUnit->isHiddenNationality())
+					pkCapturedUnit->doHNCapture();
+				}
+				MEMORY_TRACK_EXEMPT();
+
+				szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_CAPTURED_UNIT", GC.getUnitInfo(eCaptureUnitType).getTextKeyWide());
+				AddDLLMessage(eCapturingPlayer, true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNITCAPTURE", MESSAGE_TYPE_INFO, pkCapturedUnit->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
+
+				// Add a captured mission
+				addMission(CvMissionDefinition(MISSION_CAPTURED, pPlot, pkCapturedUnit));
+
+				pkCapturedUnit->finishMoves();
+
+				if (!GET_PLAYER(eCapturingPlayer).isHuman())
+				{
+					CvPlot* pPlot = pkCapturedUnit->plot();
+					if (pPlot && !pPlot->isCity(false))
 					{
-						pkCapturedUnit->doHNCapture();
-					}
-					MEMORY_TRACK_EXEMPT();
-
-					szBuffer = gDLL->getText("TXT_KEY_MISC_YOU_CAPTURED_UNIT", GC.getUnitInfo(eCaptureUnitType).getTextKeyWide());
-					AddDLLMessage(eCapturingPlayer, true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_UNITCAPTURE", MESSAGE_TYPE_INFO, pkCapturedUnit->getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), pPlot->getX(), pPlot->getY());
-
-
-					// Add a captured mission
-					addMission(CvMissionDefinition(MISSION_CAPTURED, pPlot, pkCapturedUnit));
-
-					pkCapturedUnit->finishMoves();
-
-					if (!GET_PLAYER(eCapturingPlayer).isHuman())
-					{
-						CvPlot* pPlot = pkCapturedUnit->plot();
-						if (pPlot && !pPlot->isCity(false))
+						if (GET_PLAYER(eCapturingPlayer).AI_getPlotDanger(pPlot) && GC.getDefineINT("AI_CAN_DISBAND_UNITS"))
 						{
-							if (GET_PLAYER(eCapturingPlayer).AI_getPlotDanger(pPlot) && GC.getDefineINT("AI_CAN_DISBAND_UNITS"))
-							{
-								pkCapturedUnit->kill(false, NO_PLAYER, true);
-							}
+							pkCapturedUnit->kill(false, NO_PLAYER, true);
 						}
 					}
 				}
@@ -1578,7 +1572,6 @@ void CvUnit::killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 		}
 
 		GET_PLAYER(getOwner()).deleteUnit(getID());
-
 	}
 }
 

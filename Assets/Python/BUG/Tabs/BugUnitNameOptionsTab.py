@@ -706,7 +706,7 @@ class BugUnitNameOptionsTab(BugOptionsTab.BugOptionsTab):
 		#~ self.addTextEdit(screen, columnL, columnR, "UnitNaming__Combat_CULTURE_VIETNAMESE")
 		#~ self.addTextEdit(screen, columnL, columnR, "UnitNaming__Combat_CULTURE_VIKING")
 		#~ self.addTextEdit(screen, columnL, columnR, "UnitNaming__Combat_CULTURE_WELSH")
-		#~ self.addTextEdit(screen, columnL, columnR, "UnitNaming__Combat_CULTURE_XIONGU")
+		#~ self.addTextEdit(screen, columnL, columnR, "UnitNaming__Combat_CULTURE_XIONGNU")
 		#~ self.addTextEdit(screen, columnL, columnR, "UnitNaming__Combat_CULTURE_YAMATO")
 		#~ self.addTextEdit(screen, columnL, columnR, "UnitNaming__Combat_CULTURE_ZAPOTEC")
 		#~ self.addTextEdit(screen, columnL, columnR, "UnitNaming__Combat_CULTURE_ZULU")

@@ -5,7 +5,6 @@ Base XP gained when attacking
 Base XP gained when defending
 	<iXPValueDefense>int</iXPValueDefense>
 -->
-<!-- Unit Infos -->
 <Civ4UnitInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
@@ -3985,7 +3984,7 @@ Base XP gained when defending
 					<BuildType>BUILD_VACTRAIN</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
-                <Build>
+				<Build>
 					<BuildType>BUILD_GRAVITY_TRAIN</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -4377,7 +4376,7 @@ Base XP gained when defending
 					<BuildType>BUILD_VACTRAIN</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
-                <Build>
+				<Build>
 					<BuildType>BUILD_GRAVITY_TRAIN</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -56501,7 +56500,7 @@ Base XP gained when defending
 			</HealUnitCombatTypes>
 			<iExtraCost>1</iExtraCost>
 			<iAsset>2</iAsset>
-			<iPower>1</iPower>
+			<iPower>2</iPower>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -56827,9 +56826,7 @@ Base XP gained when defending
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bPassage>1</bPassage>
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
-			<PrereqBonuses>
-				<BonusType>BONUS_DOG</BonusType>
-			</PrereqBonuses>
+			<BonusType>BONUS_DOG</BonusType>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
@@ -57149,7 +57146,7 @@ Base XP gained when defending
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iAsset>1</iAsset>
-			<iPower>3</iPower>
+			<iPower>4</iPower>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
 				<fMaxSpeed>2.25</fMaxSpeed>
@@ -57262,7 +57259,7 @@ Base XP gained when defending
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>2</iCargo>
 			<iAsset>3</iAsset>
-			<iPower>2</iPower>
+			<iPower>3</iPower>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
 				<fMaxSpeed>2.25</fMaxSpeed>
@@ -57311,6 +57308,21 @@ Base XP gained when defending
 				<SubCombatType>UNITCOMBAT_HEALS_AS_NAVAL</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_LAKE</TerrainType>
+			</TerrainImpassableTypes>
 			<DefaultUnitAI>UNITAI_ASSAULT_SEA</DefaultUnitAI>
 			<UnitAIs>
 				<UnitAI>
@@ -57355,21 +57367,6 @@ Base XP gained when defending
 			<iCost>100</iCost>
 			<iMinAreaSize>5</iMinAreaSize>
 			<iMoves>1</iMoves>
-			<TerrainImpassableTypes>
-				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
-				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
-				<TerrainType>TERRAIN_SEA</TerrainType>
-				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
-				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
-				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
-				<TerrainType>TERRAIN_OCEAN</TerrainType>
-				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
-				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
-				<TerrainType>TERRAIN_TRENCH</TerrainType>
-				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
-				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
-				<TerrainType>TERRAIN_LAKE</TerrainType>
-			</TerrainImpassableTypes>
 			<iCombat>2</iCombat>
 			<iXPValueAttack>1</iXPValueAttack>
 			<iXPValueDefense>3</iXPValueDefense>
@@ -57383,7 +57380,7 @@ Base XP gained when defending
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>1</iCargo>
 			<iAsset>2</iAsset>
-			<iPower>1</iPower>
+			<iPower>2</iPower>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
 				<fMaxSpeed>2.25</fMaxSpeed>
@@ -57704,8 +57701,8 @@ Base XP gained when defending
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
-			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<TechTypes>
+				<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 				<PrereqTech>TECH_ELEPHANT_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_ELEPHANTS</BonusType>
@@ -57957,7 +57954,7 @@ Base XP gained when defending
 			</BonusProductionModifiers>
 			<iConscription>2</iConscription>
 			<iAsset>1</iAsset>
-			<iPower>3</iPower>
+			<iPower>5</iPower>
 			<UnitMeshGroups>
 				<iGroupSize>3</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -58056,7 +58053,7 @@ Base XP gained when defending
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iAsset>2</iAsset>
-			<iPower>6</iPower>
+			<iPower>4</iPower>
 			<UnitMeshGroups>
 				<iGroupSize>3</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -58469,7 +58466,7 @@ Base XP gained when defending
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iAsset>1</iAsset>
-			<iPower>4</iPower>
+			<iPower>6</iPower>
 			<UnitMeshGroups>
 				<iGroupSize>3</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -59060,7 +59057,7 @@ Base XP gained when defending
 			<iXPValueDefense>2</iXPValueDefense>
 			<iExtraCost>1</iExtraCost>
 			<iAsset>2</iAsset>
-			<iPower>3</iPower>
+			<iPower>2</iPower>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -64081,17 +64078,14 @@ Base XP gained when defending
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<BonusType>BONUS_SULPHUR</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_CAMEL</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_CAMEL</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-				</And>
+				<Has>
+					<GOMType>GOM_BONUS</GOMType>
+					<ID>BONUS_FIREARMS</ID>
+				</Has>
 			</TrainCondition>
 			<iCost>380</iCost>
 			<iMoves>2</iMoves>
@@ -64229,20 +64223,15 @@ Base XP gained when defending
 				<BuildingType>BUILDING_CAMEL_TRAINER</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
+			<BonusType>BONUS_FIREARMS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_CAMEL</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
+				<Has>
+					<GOMType>GOM_BONUS</GOMType>
+					<ID>BONUS_AMMUNITION</ID>
+				</Has>
 			</TrainCondition>
 			<iCost>525</iCost>
 			<iMoves>2</iMoves>
@@ -64376,20 +64365,15 @@ Base XP gained when defending
 				<BuildingType>BUILDING_CAMEL_TRAINER</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_TRENCH_WARFARE</PrereqTech>
+			<BonusType>BONUS_FIREARMS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_CAMEL</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
+				<Has>
+					<GOMType>GOM_BONUS</GOMType>
+					<ID>BONUS_AMMUNITION</ID>
+				</Has>
 			</TrainCondition>
 			<iCost>900</iCost>
 			<iMoves>2</iMoves>
@@ -64731,6 +64715,12 @@ Base XP gained when defending
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_STORY_TELLER</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_UNIT_STORY_TELLER</Description>
+			<Civilopedia>TXT_KEY_UNIT_STORY_TELLER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_STORY_TELLER_STRATEGY</Strategy>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_STORY_TELLER</Capture>
 			<Combat>UNITCOMBAT_ENTERTAINER</Combat>
@@ -64744,24 +64734,22 @@ Base XP gained when defending
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_STORY_TELLER</Description>
-			<Civilopedia>TXT_KEY_UNIT_STORY_TELLER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_STORY_TELLER_STRATEGY</Strategy>
-			<Advisor>ADVISOR_CULTURE</Advisor>
-			<bRivalTerritory>1</bRivalTerritory>
-			<UnitUpgrades>
-				<UnitType>UNIT_BARD</UnitType>
-			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_PROPERTY_CONTROL</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+			<bRivalTerritory>1</bRivalTerritory>
+			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
+			<UnitUpgrades>
+				<UnitType>UNIT_BARD</UnitType>
+			</UnitUpgrades>
+			<iCost>12</iCost>
+			<iExtraCost>1</iExtraCost>
+			<Advisor>ADVISOR_CULTURE</Advisor>
+			<iMoves>2</iMoves>
 			<Buildings>
 				<BuildingType>BUILDING_RAIN_DANCE</BuildingType>
 				<BuildingType>BUILDING_WAR_DANCE</BuildingType>
@@ -64771,27 +64759,6 @@ Base XP gained when defending
 				<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
 				<BuildingType>BUILDING_BLOOD_DANCE</BuildingType>
 			</Buildings>
-			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
-			<iCost>12</iCost>
-			<iMoves>2</iMoves>
-			<!--
-iTradeMultiplier>3</iTradeMultiplier>
-			<iGreatWorkCulture>7</iGreatWorkCulture
-			-->
-			<iExtraCost>1</iExtraCost>
-			<iAsset>1</iAsset>
-			<UnitMeshGroups>
-				<iGroupSize>1</iGroupSize>
-				<fMaxSpeed>1.75</fMaxSpeed>
-				<fPadTime>1</fPadTime>
-				<iMeleeWaveSize>1</iMeleeWaveSize>
-				<iRangedWaveSize>0</iRangedWaveSize>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_STORY_TELLER</EarlyArtDefineTag>
-				</UnitMeshGroup>
-			</UnitMeshGroups>
-			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_ENTERTAIN_CITY</MissionType>
@@ -64841,6 +64808,19 @@ iTradeMultiplier>3</iTradeMultiplier>
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<UnitMeshGroups>
+				<iGroupSize>1</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>1</iMeleeWaveSize>
+				<iRangedWaveSize>0</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_STORY_TELLER</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_BARD</Type>
@@ -67519,7 +67499,6 @@ iTradeMultiplier>3</iTradeMultiplier>
 										<Constant>10</Constant>
 									</Adapt>
 								</iYield>
-								<iYield>0</iYield>
 							</Yields>
 						</Outcome>
 						<Outcome>
@@ -67541,7 +67520,6 @@ iTradeMultiplier>3</iTradeMultiplier>
 										<Constant>15</Constant>
 									</Adapt>
 								</iYield>
-								<iYield>0</iYield>
 							</Yields>
 						</Outcome>
 					</ActionOutcomes>
@@ -67940,7 +67918,6 @@ iTradeMultiplier>3</iTradeMultiplier>
 										<Constant>2</Constant>
 									</Adapt>
 								</iYield>
-								<iYield>0</iYield>
 							</Yields>
 						</Outcome>
 						<Outcome>
@@ -67959,7 +67936,6 @@ iTradeMultiplier>3</iTradeMultiplier>
 										<Constant>4</Constant>
 									</Adapt>
 								</iYield>
-								<iYield>0</iYield>
 							</Yields>
 						</Outcome>
 					</ActionOutcomes>

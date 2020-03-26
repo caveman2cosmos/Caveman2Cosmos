@@ -16,7 +16,7 @@
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			<iCost>624</iCost>
-			<iConquestProb>0</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
 			<YieldChanges>

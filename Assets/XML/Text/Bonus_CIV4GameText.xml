@@ -1659,6 +1659,12 @@
 		<Polish>Chorwacka</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_CRYSTAL_GLASSWARE</Tag>
+		<English>Crystal Glassware</English>
+		<French>Verrerie en cristal</French>
+		<Italian>Oggetti in cristallo</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_CUBAN</Tag>
 		<English>Cuban</English>
 		<French>Cubain</French>
@@ -2129,6 +2135,12 @@
 		<Italian>[SPACE](%s2_player esporta %d1_num_bonus)[SPACE]</Italian>
 		<Spanish>[SPACE](%s2_player está exportando %d1_num_bonus)[SPACE]</Spanish>
 		<Polish>[SPACE](%s2_player eksportuje %d1_num_bonus)[SPACE]</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_FAKE_GEMS</Tag>
+		<English>Fake Gems</English>
+		<French>Fausses Gemmes</French>
+		<Italian>Gemme finte</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_FATIMID</Tag>
@@ -2797,8 +2809,8 @@
 		<Tag>TXT_KEY_BONUS_HAPPY</Tag>
 		<English>Happy: +%d1_Change[ICON_HAPPY]</English>
 		<French>Moral: +%d1_Change[ICON_HAPPY]</French>
-		<German>[ICON_BULLET]Zufriedenheit: +%d1_Change[ICON_HAPPY]</German>
-		<Italian>Felici: +%d1_Change[ICON_HAPPY]</Italian>
+		<German>Zufriedenheit: +%d1_Change[ICON_HAPPY]</German>
+		<Italian>Morale: +%d1_Change[ICON_HAPPY]</Italian>
 		<Spanish>Feliz: +%d1_Change[ICON_HAPPY]</Spanish>
 		<Polish>Szczęśliwy: +%d1_Change[ICON_HAPPY]</Polish>
 	</TEXT>
@@ -2939,6 +2951,12 @@
 		<Tag>TXT_KEY_BONUS_HIDE_PEDIA</Tag>
 		<English>A hide is an animal skin treated for human use. Although they are usually from large animals such as cows or buffalos, it can also refer to skins of smaller animals, such as goats, sheeps, deers, pigs, fishes, alligators, snakes, etc. All are used for shoes, clothes, leather bags, belts and other fashion accessories. Leather is also used in cars, upholstery, interior decorating, horse tack and harnesses. Skins are sometimes still gathered from hunting and processed at a domestic or artisanal level, but most leather making is now industrialized and large-scale.</English>
 		<Italian>Una pelle trattata è una pelle di animale trattata per uso umano. Sebbene di solito provengano da grandi animali come mucche o bufali, può anche riferirsi a pelli di animali più piccoli, come capre, pecore, cervi, maiali, pesci, alligatori, serpenti, ecc. Tutti questi tipi di pelle sono usati per produrre scarpe, vestiti, borse, cinture e altri accessori, ma anche per tappezzerie e decorazioni d'interni o di automobili, finimenti per cavalli e imbracature. Talvolta, alcune pelli possono provenire da animali cacciati e lavorate a livello domestico o artigianale, ma la maggior parte della produzione di pelletteria è ora industrializzata e su larga scala.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_HIERACOSPHINX</Tag>
+		<English>Hieracosphinx</English>
+		<French>Hiéracosphinx</French>
+		<Italian>Ieracosfinge</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HIMYARITE</Tag>
@@ -3645,6 +3663,12 @@
 		<Italian>L'avorio è un materiale duro e bianco proveniente dalle zanne e dai denti degli animali, tradizionalmente elefanti, anche se il commercio di denti e zanne di altri animali è ben consolidato e diffuso; pertanto, "avorio" può essere correttamente utilizzato per descrivere eventuali denti o zanne di mammiferi di interesse commerciale che sono abbastanza grandi da poter essere scolpiti o lavorati. L'avorio è stato apprezzato fin dall'antichità nell'arte e per la realizzazione di una gamma di sculture in avorio, come denti finti, tasti di pianoforte, ventole, pedine del domino e tubi articolati. A partire dalla fine del XX secolo, il commercio nazionale e internazionale di avorio di specie minacciate è stato dichiarato illegale.</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_JACKALOPE</Tag>
+		<English>Jackalope</English>
+		<French>Jackalope</French>
+		<Italian>Jackalope</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_JADE</Tag>
 		<English>Jade</English>
 		<Italian>Giada</Italian>
@@ -4269,9 +4293,8 @@
 		<English>Marble is a kind of limestone, used by man for millennia. It is a useful material for construction, especially in dry climates. Marble is an excellent material from which to make statues, as well. Marble surfaces can be polished to a beautiful sheen, but the rock remains attractive even when the surface is left rough. The Egyptians used marble blocks to line the outside of the Pyramid of Cheops. The Greeks used blocks of marble to construct some of their buildings; they also used the material to sculpt some of the world's great artworks. The Romans were the first to use slabs of marble as wall coverings. Marble remains one of the most popular construction and artistic materials extant.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_MARRI</Tag>
-		<English>Marri</English>
-		<Italian>Marri</Italian>
+		<Tag>TXT_KEY_BONUS_MARIC</Tag>
+		<English>Maric</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARTIAN_ALGAE</Tag>
@@ -4590,6 +4613,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MING</Tag>
 		<English>Ming</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_MING_VASE</Tag>
+		<English>Ming Vase</English>
+		<French>Vase Ming</French>
+		<Italian>Vaso Ming</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MINOAN</Tag>
@@ -5319,6 +5348,12 @@
 		<Italian>La torba è un accumulo di vegetazione parzialmente decomposta o di materia organica. La torba si forma in zone umide, dove inondazioni o acqua stagnante ostruiscono il flusso di ossigeno dall'atmosfera, rallentando il tasso di decomposizione. Una torbiera è il dissipatore di carbonio più efficiente del pianeta, perché le piante catturano l'anidride carbonica rilasciata naturalmente, mantenendo un equilibrio. Nel tempo, la formazione della torba è spesso il primo passo nella formazione geologica di combustibili fossili come il carbone, in particolare quello di bassa qualità come la lignite. La torba viene usata come importante fonte di combustibile in alcune parti del mondo.</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_PEGASUS</Tag>
+		<English>Pegasus</English>
+		<French>Pégase</French>
+		<Italian>Pegaso</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_PELTS</Tag>
 		<English>Pelts</English>
 		<French>Peaux</French>
@@ -5460,7 +5495,7 @@
 		<Polish>Lek - każda substancja, niezależnie od pochodzenia (naturalnego lub syntetycznego), nadająca się do bezpośredniego wprowadzania do organizmu w odpowiedniej postaci farmaceutycznej w celu osiągnięcia pożądanego efektu terapeutycznego, lub w celu zapobiegania chorobie, często podawana w ściśle określonej dawce. Lekiem jest substancja modyfikująca procesy fizjologiczne w taki sposób, że hamuje przyczyny lub objawy choroby, lub zapobiega jej rozwojowi. Określenie lek stosuje się też w stosunku do substancji stosowanych w celach diagnostycznych (np. metoklopramid w diagnostyce hiperprolaktynemii) oraz środków modyfikujących nie zmienione chorobowo funkcje organizmu (np. środki antykoncepcyjne).</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_PHILISTINES</Tag>
+		<Tag>TXT_KEY_BONUS_PHILISTINE</Tag>
 		<English>Philistines</English>
 		<Italian>Filisteo</Italian>
 	</TEXT>
@@ -5470,6 +5505,12 @@
 		<French>Phoenicien</French>
 		<Italian>Fenicio</Italian>
 		<Polish>Fenicka</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_PHOENIX</Tag>
+		<English>Phoenix</English>
+		<French>Phénix</French>
+		<Italian>Fenice</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PHONOGRAPHS</Tag>
@@ -5836,6 +5877,17 @@
 		<English>Qiang</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_QILIN</Tag>
+		<English>Qilin</English>
+		<French>Qilin</French>
+		<Italian>Qilin</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_QILIN_PEDIA</Tag>
+		<English>A qilin is a mythical chimerical creature known in Chinese and other East Asian cultures, said to appear with the imminent arrival or passing of a sage or illustrious ruler. Qilin generally have Chinese dragon-like features, most notably their heads, eyes with thick eyelashes, manes that always flow upward and beards. The body is fully or partially scaled and often shaped like an ox, deer, or horse. They are always shown with cloven hooves. Qilin are thought to be a symbol of luck, good omens, protection, prosperity, success, and longevity by the Chinese; they are also a symbol of fertility, and often depicted in decorations as bringing a baby to a family.</English>
+		<Italian>Un qilin è una creatura mitica chimerica, nota nelle culture cinese e dell'Asia orientale, che si dice appaia all'arrivo o al passaggio imminente di un sovrano saggio o illustre. Generalmente, i lineamenti di un qilin sono simili a quelli di un dragone cinese, in particolare la testa, gli occhi con ciglia folte, le criniere che scorrono sempre verso l'alto e la barba. Il corpo è completamente o parzialmente coperto da scaglie, spesso a forma di bue, cervo o cavallo, e hanno sempre gli zoccoli. Si pensa che un qilin sia un simbolo di fortuna, buoni auspici, protezione, prosperità, successo e longevità da parte dei cinesi; sono anche un simbolo di fertilità e spesso raffigurati nelle decorazioni mentre portano un bimbo a una famiglia.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_QIN</Tag>
 		<English>Qin</English>
 	</TEXT>
@@ -5883,6 +5935,12 @@
 		<English>Querandi</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_QUETZALCOATL</Tag>
+		<English>Quetzalcoatl</English>
+		<French>Quetzalcoatl</French>
+		<Italian>Quetzalcoatl</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_QULLA</Tag>
 		<English>Qulla</English>
 	</TEXT>
@@ -5909,6 +5967,12 @@
 		<Tag>TXT_KEY_BONUS_RADIOS_PEDIA</Tag>
 		<English>A radio receiver, also known as radio, is an electronic device that receives radio waves and converts the information carried by them to a usable form. It is used with an antenna, that intercepts radio electromagnetic waves and converts them in such a way to allow the receiver to extract the desired information. The receiver uses electronic filters to separate the desired radio frequency signal from all the other signals picked up by the antenna, an electronic amplifier to increase the power of the signal for further processing, and finally recovers the desired information through demodulation. The most familiar type of radio receiver for most people is a broadcast radio receiver, which reproduces sound transmitted by radio broadcasting stations; however radio receivers are very widely used in televisions, cell phones, wireless modems and other components of communications, remote control, and wireless networking systems.</English>
 		<Italian>Un ricevitore radio, noto anche come radio, è un dispositivo elettronico che riceve le onde radio e converte le informazioni trasportate da loro in una forma utilizzabile. Viene utilizzato con un'antenna, che intercetta le onde radio elettromagnetiche e le converte in modo che il ricevitore possa estrarre le informazioni desiderate. Il ricevitore utilizza filtri elettronici per separare il segnale di radiofrequenza desiderato da tutti gli altri segnali raccolti dall'antenna, un amplificatore elettronico per aumentare la potenza del segnale per un'ulteriore elaborazione e infine recuperare le informazioni desiderate attraverso la demodulazione. Il tipo più familiare di ricevitore radio per la maggior parte delle persone è un ricevitore radio che riproduce il suono trasmesso dalle stazioni radio; tuttavia i radioricevitori sono ampiamente utilizzati in televisori, telefoni cellulari, modem wireless e altri componenti di sistemi di comunicazione, controllo remoto e rete wireless.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_RAINBOW_SERPENT</Tag>
+		<English>Rainbow Serpent</English>
+		<French>Serpent Arc-en-ciel</French>
+		<Italian>Serpente arcobaleno</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RAPA_NUI</Tag>
@@ -7026,16 +7090,15 @@
 		<Polish>Smoła</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_TAR_PEDIA</Tag>
+		<English>Tar is a dark brown or black viscous liquid made of hydrocarbons and free carbon, obtained from a wide variety of organic materials through destructive distillation. Tar can be produced from coal, wood, petroleum, or peat. Tar-like products can also be produced from other forms of organic matter. Tar was used as seal for roofing shingles and tar paper, to seal the hulls of ships and boats, and also a general disinfectant. Tar was also used for public humiliation, known as "tarring and feathering", but it was quickly abandoned due to the temporary and permanent physical damage caused by the burns of the tar from the application.</English>
+		<Italian>Il catrame è un liquido viscoso marrone scuro o nero prodotto da idrocarburi e carbonio libero, ottenuto da un'ampia varietà di materiali organici attraverso distillazione distruttiva. Il catrame può essere prodotto da carbone, legno, petrolio o torba. Prodotti simili al catrame possono anche essere ottenuti da altre forme di materia organica. Il catrame veniva usato come impermeabilizzante per tegole e carta catramata, per gli scafi di navi e imbarcazioni e anche come disinfettante generale. Il catrame è stato anche usato come forma di tortura e punizione, nel quale una persona veniva incatramata e poi ricoperta di piume; il metodo fu rapidamente abbandonato a causa dei danni fisici temporanei e permanenti delle ustioni provocate del catrame ancora caldo.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_TARASCAN</Tag>
 		<English>Tarascan</English>
 		<Italian>Tarasco</Italian>
 		<Polish>Taraskańska</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_TAR_PEDIA</Tag>
-		<English>Tar was used as seal for roofing shingles and to seal the hulls of ships and boats. For millennia wood tar was used to waterproof sails and boats, but today sails made from inherently waterproof synthetic substances have negated the need for tar. Wood tar is still used to seal traditional wooden boats and the roofs of historical shingle-roofed churches, as well as painting exterior walls of log buildings. Tar is also a general disinfectant.</English>
-		<Italian>Il catrame veniva usato come sigillante per i tetti e per le chiglie delle navi. Per millenni il catame è stato usato per rendere impermeabili vari tipi di imbarcazione; al giorno d'oggi, sostanze impermeabilizzanti sintetiche hanno reso il catrame obsoleto. Il catrame veine ancora usato per sigillare barche tradizionali e chiese con i tetti in legno, oltre che impermeabilizzare le pareti esterne delle case in legno; il catrame è anche un generico disinfettante.</Italian>
-		<Polish>Smoła, smoła surowa - produkty odgazowania węgla, łupków bitumicznych lub drewna, rzadko torfu. Składa się głównie z mieszaniny wielu rodzajów węglowodorów oraz innych związków organicznych, zawierających tlen, azot i siarkę, ponadto niektóre rodzaje smoły mogą zawierać pewną ilość grafitu i fulerenów.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TASMANIAN</Tag>
@@ -7091,6 +7154,16 @@
 		<Tag>TXT_KEY_BONUS_TERRACOTTA_PEDIA</Tag>
 		<English>Terracotta, terra cotta or terra-cotta is a clay-based ceramic where the fired body is porous. Fired terracotta is not watertight, but surface-burnishing the body before firing can decrease its porousness and a layer of glaze can make it watertight. It is suitable for use below ground to carry pressurized water (an archaic use), for garden pots or building decoration, and for oil containers, oil lamps, or ovens. Most other uses, such as for tableware, sanitary piping, or building decoration in freezing environments, require the material to be glazed.</English>
 		<Italian>La terracotta è una ceramica a base di argilla dal corpo poroso. La terracotta infornata non è a tenuta stagna, ma la brunitura superficiale del corpo prima della cottura può ridurne la porosità e uno strato di smalto può renderlo a tenuta stagna. È adatta per trasportare acqua in pressione sottoterra, per i vasi da giardino o per le decorazione di ambienti e per i contenitori di olio, le lampade a olio o i forni. La maggior parte degli altri usi, come stoviglie, tubazioni sanitarie o decorazione di edifici in ambienti freddi, richiede che la terracotta venga prima smaltata.</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_TERRA_SIGILLATA</Tag>
+		<English>Terra Sigillata</English>
+		<French>Céramique sigillée</French>
+		<Italian>Ceramica sigillata</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_TERRA_SIGILLATA_PEDIA</Tag>
+		<English>Terra sigillata is a term with at least three distinct meanings: as a description of medieval medicinal earth; in archaeology, as a general term for some of the fine red Ancient Roman pottery with glossy surface slips made in specific areas of the Roman Empire; and more recently, as a description of a contemporary studio pottery technique supposedly inspired by ancient pottery. Usually roughly translated as 'sealed earth', the meaning of 'terra sigillata' is 'clay bearing little images' (Latin sigilla), not 'clay with a sealed (impervious) surface'. The archaeological term is applied, however, to plain-surfaced pots as well as those decorated with figures in relief. </English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TESSERACT</Tag>
@@ -7427,8 +7500,8 @@
 		<Tag>TXT_KEY_BONUS_UNHAPPY</Tag>
 		<English>Unhappy: +%d1_Change[ICON_UNHAPPY]</English>
 		<French>Moral: +%d1_Change[ICON_UNHAPPY]</French>
-		<German>[ICON_BULLET]Unzufriedenheit: +%d1_Change[ICON_UNHAPPY]</German>
-		<Italian>Infelici: +%d1_Change[ICON_UNHAPPY]</Italian>
+		<German>Unzufriedenheit: +%d1_Change[ICON_UNHAPPY]</German>
+		<Italian>Morale: +%d1_Change[ICON_UNHAPPY]</Italian>
 		<Spanish>Infeliz: +%d1_Change[ICON_UNHAPPY]</Spanish>
 		<Polish>Niezadowoleni: +%d1_Change[ICON_UNHAPPY]</Polish>
 	</TEXT>
@@ -7682,6 +7755,17 @@
 		<Polish>Akratopega - woda podziemna, której mineralizacja wynosi 500-1000 mg/dm, a temperatura nie przekracza 20 C. W klasyfikacji wód ze względu na zawartość związków mineralnych znajduje się pomiędzy wodą słodką a mineralną. Produkowana jest w kilku rodzajach: silnie gazowana, gazowana, niegazowana, lekko gazowana oraz jako musująca Perlage.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_WATERPROOF_CEMENT</Tag>
+		<English>Waterproof Cement</English>
+		<French>Ciment imperméable</French>
+		<Italian>Cemento impermeabile</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_WATERPROOF_CEMENT_PEDIA</Tag>
+		<English>Waterproof cement is a composite material composed of fine and coarse aggregate bonded together with a fluid cement ("cement paste") that hardens over time, with the addition of crystalline admixtures during batching to lower permeability. The reaction takes place when exposed to water and un-hydrated cement particles to form insoluble needle-shaped crystals, which fill capillary pores and micro-cracks. The mixture can expect to self-seal as constant exposure to water will continuously initiate crystallization to ensure permanent waterproof protection.</English>
+		<Italian>Il cemento impermeabile è un materiale composito fatto da aggregato fine e grossolano unito con un cemento fluido ("pasta di cemento") che si indurisce nel tempo, con l'aggiunta di additivi cristallini durante il dosaggio per ridurre la permeabilità. La reazione ha luogo quando acqua e particelle di cemento non idratate entrano in contatto, formando cristalli insolubili a forma di ago, che riempiono i pori e le micro-crepe. La mistura di fatto si autosigilla, poiché l'esposizione costante all'acqua avvia continuamente la cristallizzazione per garantire una protezione impermeabile permanente.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_WAX</Tag>
 		<English>Wax</English>
 		<French>Cire</French>
@@ -7821,7 +7905,7 @@
 		<English>Xianbei</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_XIONGU</Tag>
+		<Tag>TXT_KEY_BONUS_XIONGNU</Tag>
 		<English>Xiongnu</English>
 	</TEXT>
 	<TEXT>
