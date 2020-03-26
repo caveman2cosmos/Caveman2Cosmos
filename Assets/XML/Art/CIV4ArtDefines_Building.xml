@@ -1,9 +1,4 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- -->
-	<!-- Building art path information -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Schema\Caveman2Cosmos.xsd">
 	<BuildingArtInfos>
 		<BuildingArtInfo>
@@ -378,7 +373,7 @@
 			<Button>Art/Interface/Buttons/National_Wonders/triumph_column.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_OBELISK</Type>
+			<Type>ART_DEF_BUILDING_MONUMENT</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1.25</fScale>
@@ -388,7 +383,7 @@
 			<Button>,Art/Interface/Buttons/Buildings/Obelisk.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,6,4</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_EGYPTIAN_OBELISK</Type>
+			<Type>ART_DEF_BUILDING_OBELISK</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1.25</fScale>
@@ -528,7 +523,7 @@
 			<Button>,Art/Interface/Buttons/Buildings/Theatre.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,3,2</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BYZANTINE_HIPPODROME</Type>
+			<Type>ART_DEF_BUILDING_HIPPODROME</Type>
 			<LSystem>LSYSTEM_3x3</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0.77</fScale>
@@ -788,7 +783,7 @@
 			<Button>,Art/Interface/Buttons/Buildings/Wall.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,5,8</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NETHERLANDS_DIKE</Type>
+			<Type>ART_DEF_BUILDING_DUTCH_DIKE</Type>
 			<LSystem>LSYSTEM_COAST</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1</fScale>
@@ -1238,7 +1233,7 @@
 			<Button>Art/Interface/Buttons/National_Wonders/scotland_yard.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PYRAMID</Type>
+			<Type>ART_DEF_BUILDING_GREAT_PYRAMID</Type>
 			<LSystem>LSYSTEM_4x4</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>3.03</fScale>
@@ -1828,7 +1823,7 @@
 			<Button>Art/Interface/Buttons/Great_Wonders/silk_road.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SPHINX</Type>
+			<Type>ART_DEF_BUILDING_GREAT_SPHINX</Type>
 			<LSystem>LSYSTEM_4x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>1.3</fScale>
@@ -2298,7 +2293,7 @@
 			<Button>,Art/Interface/Buttons/Buildings/Harems.dds,Art/Interface/Buttons/RoM_Building_Atlas.dds,4,4</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_JEWELLERY</Type>
+			<Type>ART_DEF_BUILDING_JEWELER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -2568,7 +2563,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Religions/Kemetism/temple_of_isis.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_IROQUOIS_LONGHOUSE</Type>
+			<Type>ART_DEF_BUILDING_LONGHOUSE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -3749,7 +3744,7 @@
 			<Button>Art/Interface/Buttons/Buildings/Control_Tower.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NWS</Type>
+			<Type>ART_DEF_BUILDING_NATIONAL_WEATHER_SERVICE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -3859,7 +3854,7 @@
 			<Button>Art/Interface/Buttons/Buildings/sculptor.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_FIREPIT</Type>
+			<Type>ART_DEF_BUILDING_FIRE_PIT</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -8250,7 +8245,7 @@
 			<Button>Art/Interface/Buttons/Buildings/jetstreampowerplant.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_LAVA_ROCK_QUARRY</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_LAVA_ROCK</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -9630,7 +9625,7 @@
 			<Button>Art/Interface/Buttons/Buildings/blooddance.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_EARTHWORM</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_EARTHWORM</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -9640,7 +9635,7 @@
 			<Button>Art/Interface/Buttons/Buildings/earthwormfetcher.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SNAIL</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_SNAIL</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -9940,7 +9935,7 @@
 			<Button>Art/Interface/Buttons/Buildings/weavingspider.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_LICHEN_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_LICHEN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -11190,7 +11185,7 @@
 			<Button>art/Craft/art/woodcarver.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BERRY_BUSHES</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_BERRY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -11200,7 +11195,7 @@
 			<Button>art/Craft/art/berrybushes.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CARRION</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_CARRION</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -11220,7 +11215,7 @@
 			<Button>art/Craft/art/termitemound.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BONEWORKERS_HUT</Type>
+			<Type>ART_DEF_BUILDING_BONEWORKER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -11450,7 +11445,7 @@
 			<Button>art/Craft/art/bambooarmourer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ROOT_TUBERS</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_TUBER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -11740,7 +11735,7 @@
 			<Button>art/Craft/Art/shipwright.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_WILD_MUSHROOMS</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_MUSHROOM</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -12080,7 +12075,7 @@
 			<Button>Art/Interface/Buttons/National_Wonders/captured_fire.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_STICK_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_STICK</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -12090,7 +12085,7 @@
 			<Button>art/Craft/Art/stickgatherer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_ROCK_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_ROCK</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -12120,7 +12115,7 @@
 			<Button>art/Craft/Art/officium.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BARK_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_BARK</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -12900,7 +12895,7 @@
 			<Button>art/Craft/Art/aluminumsmith.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_VINE_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_VINE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -12910,7 +12905,7 @@
 			<Button>art/Craft/Art/vinegatherer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_REED_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_REED</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -12920,7 +12915,7 @@
 			<Button>art/Craft/Art/reedgatherer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_GRASS_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_GRASS</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -12930,7 +12925,7 @@
 			<Button>art/Craft/Art/grassgatherer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_STRAW_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_STRAW</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -12940,7 +12935,7 @@
 			<Button>art/Craft/Art/strawgatherer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DRIFTWOOD_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_DRIFTWOOD</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -16210,7 +16205,7 @@
 			<Button>art/Crops/Art/brazilwoodgrove.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_WHEAT_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_WHEAT</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -16220,7 +16215,7 @@
 			<Button>art/Crops/Art/wheatgatherer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_BARLEY_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_BARLEY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -16230,7 +16225,7 @@
 			<Button>art/Crops/Art/barleygatherer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_RICE_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_RICE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -16240,7 +16235,7 @@
 			<Button>art/Crops/Art/ricegatherer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_CORN_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_CORN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -16250,7 +16245,7 @@
 			<Button>art/Crops/Art/corngatherer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_INDIGO_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_INDIGO</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -16260,7 +16255,7 @@
 			<Button>art/Crops/Art/indigogatherer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HENNA_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_HENNA</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -16690,7 +16685,7 @@
 			<Button>art/Electricity/art/powerlines.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DOE</Type>
+			<Type>ART_DEF_BUILDING_DEPARTMENT_ENERGY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -18150,14 +18145,14 @@
 			<Button>art/Embassy/art/franksembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_HATTIAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_HAITIAN_EMBASSY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF/>
 			<KFM/>
-			<Button>art/Embassy/art/hattianembassy.dds</Button>
+			<Button>art/Embassy/art/haitianembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_HOPI_EMBASSY</Type>
@@ -18490,7 +18485,7 @@
 			<Button>art/Embassy/art/trojanembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_XIONGU_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_XIONGNU_EMBASSY</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -19674,7 +19669,7 @@
 			<Button>art/Farming/Art/familyfarm.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_SEED_CAMP</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_GRAIN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -19784,7 +19779,7 @@
 			<Button>art/Firestorm/Buttons/Fire_Dock.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NFS</Type>
+			<Type>ART_DEF_BUILDING_NATIONAL_FIRE_SERVICE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -22354,7 +22349,7 @@
 			<Button>art/Minerals/Art/platinummine.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_JADE_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_JADE</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -22364,7 +22359,7 @@
 			<Button>art/Minerals/Art/jadegatherer.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_AMBER_GATHERER</Type>
+			<Type>ART_DEF_BUILDING_GATHERER_AMBER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -23874,7 +23869,7 @@
 			<Button>art/Science/art/chemistrylab.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_NSF</Type>
+			<Type>ART_DEF_BUILDING_NATIONAL_SCIENCE_FOUNDATION</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -25454,7 +25449,7 @@
 			<Button>Art/Interface/Buttons/National_Wonders/grand_central_station.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DMV</Type>
+			<Type>ART_DEF_BUILDING_DEPARTMENT_VEHICLES</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -26364,7 +26359,7 @@
 			<Button>art/Water/art/waterpipes.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_WATER_DEPARTMENT</Type>
+			<Type>ART_DEF_BUILDING_DEPARTMENT_WATER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -27572,7 +27567,6 @@
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/totem_sky.dds</Button>
 		</BuildingArtInfo>
-
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_STONE_MYTH</Type>
 			<LSystem/>
@@ -27593,7 +27587,6 @@
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/totem_stone.dds</Button>
 		</BuildingArtInfo>
-
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_BUFFALO_HERD</Type>
 			<LSystem/>
@@ -28445,7 +28438,7 @@
 			<Button>Art/Interface/Buttons/Buildings/The_Atomium.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DEPT_FOREIGN_POLICY_WONDER</Type>
+			<Type>ART_DEF_BUILDING_DEPARTMENT_FOREIGN_WONDER</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -28454,8 +28447,8 @@
 			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/ForeignPolicyWonder.dds</Button>
 		</BuildingArtInfo>
-             <BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_DEPT_FOREIGN_POLICY</Type>
+		<BuildingArtInfo>
+			<Type>ART_DEF_BUILDING_DEPARTMENT_FOREIGN</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
@@ -28745,14 +28738,14 @@
 			<Button>art/Goods/harappan_fake_gems.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_TERRA_SIGILLIATA_WORKSHOP</Type>
+			<Type>ART_DEF_BUILDING_TERRA_SIGILLATA_WORKSHOP</Type>
 			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF/>
 			<KFM/>
-			<Button>Art/Interface/Buttons/Buildings/terra_sigilliata_workshop.dds</Button>
+			<Button>Art/Interface/Buttons/Buildings/terra_sigillata_workshop.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_MING_VASE_WORKSHOP</Type>
@@ -28995,14 +28988,14 @@
 			<Button>Art/Embassy/adenaembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_AFGHANISTAN_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_AFGHAN_EMBASSY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
-			<Button>Art/Embassy/afghanistanembassy.dds</Button>
+			<Button>Art/Embassy/afghanembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_AKSUMITE_EMBASSY</Type>
@@ -30235,14 +30228,14 @@
 			<Button>Art/Embassy/philipinoembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PHILISTINES_EMBASSY</Type>
+			<Type>ART_DEF_BUILDING_PHILISTINE_EMBASSY</Type>
 			<LSystem>LSYSTEM_1x1</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/empty.nif</NIF>
 			<KFM/>
-			<Button>Art/Embassy/philistinesembassy.dds</Button>
+			<Button>Art/Embassy/philistineembassy.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_PILAGA_EMBASSY</Type>

@@ -1,10 +1,4 @@
 <?xml version="1.0"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- ReModified by StrategyOnly -->
-<!-- -->
-<!-- Basic Infos -->
 <Civ4UnitCombatInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<UnitCombatInfos>
 		<UnitCombatInfo>
@@ -5318,7 +5312,7 @@
 			<Type>UNITCOMBAT_ERA_ANCIENT</Type>
 			<Description>TXT_KEY_UNITCOMBAT_ERA_ANCIENT</Description>
 			<EraType>C2C_ERA_ANCIENT</EraType>
-			<Button>Art/Interface/Buttons/units/sparth/categories/ERA_PREHISTORIC.dds</Button>
+			<Button>Art/Interface/Buttons/units/sparth/categories/era_ancient.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_ERA_CLASSICAL</Type>
@@ -6604,9 +6598,9 @@
 			<Button>Art/Interface/Buttons/units/sparth/categories/culture_welsh.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
-			<Type>UNITCOMBAT_CULTURE_XIONGU</Type>
-			<Description>TXT_KEY_UNITCOMBAT_CULTURE_XIONGU</Description>
-			<CultureType>BONUS_XIONGU</CultureType>
+			<Type>UNITCOMBAT_CULTURE_XIONGNU</Type>
+			<Description>TXT_KEY_UNITCOMBAT_CULTURE_XIONGNU</Description>
+			<CultureType>BONUS_XIONGNU</CultureType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/culture_xiongnu.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -6627,12 +6621,6 @@
 			<CultureType>BONUS_ZULU</CultureType>
 			<Button>Art/Interface/Buttons/units/sparth/categories/culture_zulu.dds</Button>
 		</UnitCombatInfo>
-		<!-- Was on Wild animls but complaints about being unable to navigate the wilderness with lone criminals, along with the idea that perhaps disguise SHOULD be able to throw off animals (scent disguise, acting like an animal etc...) gives cause to remove this auto-see through for wild animals.  Only commented out and left this note becasue I'm not sure it will be better this way.
-				<VisibilityIntensityChangeType>
-					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
-					<iIntensity>10</iIntensity>
-				</VisibilityIntensityChangeType>
-		-->
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_WILD</Type>
 			<Description>TXT_KEY_UNITCOMBAT_WILD</Description>
@@ -6640,6 +6628,10 @@
 			<iNoCaptureChange>1</iNoCaptureChange>
 			<iCaptureProbabilityModifierChange>-1000</iCaptureProbabilityModifierChange>
 			<VisibilityIntensityChangeTypes>
+				<VisibilityIntensityChangeType>
+					<InvisibleType>INVISIBLE_DISGUISED</InvisibleType>
+					<iIntensity>10</iIntensity>
+				</VisibilityIntensityChangeType>
 				<VisibilityIntensityChangeType>
 					<InvisibleType>INVISIBLE_POLITICAL</InvisibleType>
 					<iIntensity>10</iIntensity>
@@ -6848,8 +6840,8 @@
 			<Description>TXT_KEY_UNITCOMBAT_GROUP_MULTITUDES</Description>
 			<iExperiencePercent>-140</iExperiencePercent>
 			<iSelfHealModifier>-18</iSelfHealModifier>
-			<iGroupBase>9</iGroupBase>
 			<iCostModifierChange>200</iCostModifierChange>
+			<iGroupBase>9</iGroupBase>
 			<OnGameOptions>
 				<GameOptionType>GAMEOPTION_SIZE_MATTERS</GameOptionType>
 			</OnGameOptions>
@@ -8156,7 +8148,7 @@
 			</VisibilityIntensityChangeTypes>
 			<Button>Art/Interface/Buttons/units/sparth/categories/size_fine.dds</Button>
 		</UnitCombatInfo>
-        <UnitCombatInfo>
+		<UnitCombatInfo>
 			<Type>UNITCOMBAT_SPACE_WORKER</Type>
 			<Description>TXT_KEY_UNITCOMBAT_SPACE_WORKER</Description>
 			<bCannotMergeSplit>1</bCannotMergeSplit>
@@ -8169,8 +8161,8 @@
 			<Button>Art/categories/culture_newcultures.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
-			<Type>UNITCOMBAT_CULTURE_AFGHANISTAN</Type>
-			<Description>TXT_KEY_UNITCOMBAT_CULTURE_AFGHANISTAN</Description>
+			<Type>UNITCOMBAT_CULTURE_AFGHAN</Type>
+			<Description>TXT_KEY_UNITCOMBAT_CULTURE_AFGHAN</Description>
 			<CultureType>BONUS_AFGHAN</CultureType>
 			<Button>Art/categories/culture_newcultures.dds</Button>
 		</UnitCombatInfo>
@@ -8801,7 +8793,7 @@
 		<UnitCombatInfo>
 			<Type>UNITCOMBAT_CULTURE_MURRI</Type>
 			<Description>TXT_KEY_UNITCOMBAT_CULTURE_MURRI</Description>
-			<CultureType>BONUS_MARRI</CultureType>
+			<CultureType>BONUS_MARIC</CultureType>
 			<Button>Art/categories/culture_newcultures.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
@@ -8907,9 +8899,9 @@
 			<Button>Art/categories/culture_newcultures.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>
-			<Type>UNITCOMBAT_CULTURE_PHILISTINES</Type>
-			<Description>TXT_KEY_UNITCOMBAT_CULTURE_PHILISTINES</Description>
-			<CultureType>BONUS_PHILISTINES</CultureType>
+			<Type>UNITCOMBAT_CULTURE_PHILISTINE</Type>
+			<Description>TXT_KEY_UNITCOMBAT_CULTURE_PHILISTINE</Description>
+			<CultureType>BONUS_PHILISTINE</CultureType>
 			<Button>Art/categories/culture_newcultures.dds</Button>
 		</UnitCombatInfo>
 		<UnitCombatInfo>

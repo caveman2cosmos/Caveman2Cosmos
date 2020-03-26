@@ -4463,7 +4463,7 @@ def canTriggerSyntheticFuels(argsList):
   kTriggeredData = argsList[0]
   pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
 
-  iEthanol = GC.getInfoTypeForString("BUILDING_CORPORATION_3")
+  iEthanol = GC.getInfoTypeForString("BUILDING_CORPORATION_3_HQ")
   if pPlayer.getBuildingCountWithUpgrades(iEthanol) > 0:
     return False
   bOil = GC.getInfoTypeForString("BONUS_OIL")
@@ -8917,8 +8917,8 @@ def canBuildHorseBonusAndPasture(argsList):
 	# Check if Feature or Terrain makes invalid.
 	if pPlot.getFeatureType() in (GC.getInfoTypeForString("FEATURE_SWAMP"), GC.getInfoTypeForString("FEATURE_PEAT_BOG")): return 0
 	if pPlot.getTerrainType() in (
-		GC.getInfoTypeForString("TERRAIN_SALT_FLATS"),	GC.getInfoTypeForString("TERRAIN_DUNES"),		GC.getInfoTypeForString("TERRAIN_DESERT"),
-		GC.getInfoTypeForString("TERRAIN_TAIGA"),		GC.getInfoTypeForString("TERRAIN_ICE"),			GC.getInfoTypeForString("TERRAIN_TUNDRA"),
+		GC.getInfoTypeForString("TERRAIN_SALT_FLATS"),	GC.getInfoTypeForString("TERRAIN_DUNES"),	GC.getInfoTypeForString("TERRAIN_DESERT"),
+		GC.getInfoTypeForString("TERRAIN_TAIGA"),		GC.getInfoTypeForString("TERRAIN_ICE"),		GC.getInfoTypeForString("TERRAIN_TUNDRA"),
 		GC.getInfoTypeForString("TERRAIN_PERMAFROST"),	GC.getInfoTypeForString("TERRAIN_JAGGED"),	GC.getInfoTypeForString("TERRAIN_BADLAND"),
 		GC.getInfoTypeForString("TERRAIN_BARREN"), 		GC.getInfoTypeForString("TERRAIN_MARSH")
 		): return 0
@@ -9350,24 +9350,3 @@ def applyCivilWar(argsList):
 def canDoBestHunters1(argsList):
 	if GAME.isOption(GameOptionTypes.GAMEOPTION_WITHOUT_WARNING): return True
 	return False
-
-################ BOUNTIFUL ANIMALS ################
-
-# def canApplyBountifulAnimals(argsList):
-	# kTriggeredData = argsList[0]
-	# pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
-	# pCity = player.getCity(kTriggeredData.iCityId)
-
-	# aHerdBuildings = [ GC.getInfoTypeForString("BUILDING_DEER_HERD"),
-						# GC.getInfoTypeForString(""),
-						# ]
-	# for i in aHerdBuildings:
-		# if (pCity.isHasBuilding(i)):
-			# return True
-			# break
-
-
-
-#	newUnit1 = pPlayer.initUnit(GC.getInfoTypeForString('UNIT_ASSASSIN'), pCity.getX(),pCity.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-
-	# return False

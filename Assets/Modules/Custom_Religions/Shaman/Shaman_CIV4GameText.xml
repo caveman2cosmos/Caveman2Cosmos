@@ -398,9 +398,4 @@
 		<English>[BOLD]Shaman[\BOLD] perform a plethora of functions depending upon the society wherein they practise their art: healing; leading a sacrifice; preserving the tradition by storytelling and songs; fortune-telling; acting as a psychopomp (literal meaning, “guide of souls”). In some cultures, a shaman may fulfill several functions in one person.[NEWLINE][PARAGRAPH:1][BOLD]Shaman[\BOLD] act as "mediators" in their culture. The shaman is seen as communicating with the spirits on behalf of the community, including the spirits of the dead. In some cultures, this mediator function of the shaman may be illustrated well by some of the shaman's objects and symbols.</English>
 		<Polish>Szaman - osoba pełniąca funkcję religijną, polegającą na sformalizowanej i instytucjonalnej więzi ekstatycznej z istotami nadludzkimi, duchami przodków lub demonami.</Polish>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_SHAMAN_STRATEGY</Tag>
-		<English>Build [COLOR_UNIT_TEXT]Shamans[COLOR_REVERT] to heal stack units faster.</English>
-		<Spanish>Entrena [COLOR_UNIT_TEXT]Chamanes[COLOR_REVERT] para curar grupos de unidades más rápido.</Spanish>
-	</TEXT>
 </Civ4GameText>

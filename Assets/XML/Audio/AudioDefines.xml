@@ -1,10 +1,4 @@
-<?xml version="1.0"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Dean Ray Johnson (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- ReModified by StrategyOnly -->
-<!-- -->
-<!-- AudioDefines -->
+<?xml version='1.0' encoding='UTF-8'?>
 <AudioDefines xmlns="x-schema:AudioDefinesSchema.xml">
 	<SoundDatas>
 		<SoundData>
@@ -3836,7 +3830,7 @@
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
-                <SoundData>
+		<SoundData>
 			<SoundID>SND_BUILD_TAJ_MAHAL</SoundID>
 			<Filename>Sounds/Buildings/Taj_Mahal</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
@@ -12383,21 +12377,21 @@
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
-        <SoundData>
+		<SoundData>
 			<SoundID>SND_ELEPHANT</SoundID>
 			<Filename>Sounds/Units/Elephant</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
-       <SoundData>
+		<SoundData>
 			<SoundID>SND_HORSE</SoundID>
 			<Filename>Sounds/Units/Horse</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
-        <SoundData>
+		<SoundData>
 			<SoundID>SND_GORILLA</SoundID>
 			<Filename>Sounds/Units/Gorilla</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
@@ -12411,14 +12405,14 @@
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
-        <SoundData>
+		<SoundData>
 			<SoundID>SND_HAWK</SoundID>
 			<Filename>Sounds/Units/Hawk</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
-        <SoundData>
+		<SoundData>
 			<SoundID>SND_SEA_SERPENT</SoundID>
 			<Filename>Sounds/Units/SeaSerpent</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
@@ -13608,7 +13602,7 @@
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
-        	<SoundData>
+		<SoundData>
 			<SoundID>SND_SEASERPENT</SoundID>
 			<Filename>Sounds/Units/SeaSerpent</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
@@ -15575,7 +15569,7 @@
 			<bIsCompressed>1</bIsCompressed>
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
-        <SoundData>
+		<SoundData>
 			<SoundID>SND_SPIDER</SoundID>
 			<Filename>Sounds/Units/Spider</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>

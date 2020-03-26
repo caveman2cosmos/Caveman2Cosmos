@@ -2,10 +2,11 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>TXT_KEY_FIRST_FOUND_WONDER</Tag>
-		<English>For your discovery you receive %d1 gold!</English>
-		<French>Vous recevez %d1 d'or pour votre découverte!</French>
+		<English>For your discovery you receive %d1 [ICON_GOLD]!</English>
+		<French>Vous recevez %d1 [ICON_GOLD] pour votre découverte!</French>
 		<German>Die Belohnung für die Entdeckung beträgt %d1 [ICON_GOLD]!</German>
-		<Polish>Za to odkrycie otrzymujesz %d1 złota!</Polish>
+		<Italian>Per la tua scoperta, hai ricevuto %d1 [ICON_GOLD]!</Italian>
+		<Polish>Za to odkrycie otrzymujesz %d1 [ICON_GOLD]!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CORAL_MYTH</Tag>

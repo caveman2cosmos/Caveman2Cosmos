@@ -8,18 +8,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_GIRAFFE_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Build Giraffe buildings and units faster in this city.</English>
+		<English>[ICON_BULLET]Build Giraffe buildings and units faster in this city.</English>
 		<French>Construit les bâtiments et unités Girafes plus vite dans cette Ville.</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_GIRAFFE_PEDIA</Tag>
-		<English>Military Standard (Giraffe) -b </English>
-		<French>Standards Militaires (Girafe)</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_ANIMAL_TOTEM_GIRAFFE_STRATEGY</Tag>
-		<English>Reduce the training costs of Giraffe units.</English>
-		<French>Réduit les coûts d'entrainements des unités avec Girafes</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GIRAFFE_TRAINER</Tag>
@@ -40,7 +30,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GIRAFFE_TRAINER_EFFECT_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]This free building is used to enable the building of the special Giraffeunits in all your cities.</English>
+		<English>[ICON_BULLET]This free building is used to enable the building of the special Giraffeunits in all your cities.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GIRAFFE_TRAINER_HERITAGE</Tag>

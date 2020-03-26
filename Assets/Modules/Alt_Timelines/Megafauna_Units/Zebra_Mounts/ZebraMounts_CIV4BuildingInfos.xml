@@ -1,6 +1,4 @@
 <?xml version="1.0"?>
-<!-- Modified by Strategyonly -->
-<!-- ###################################################################################### -->
 <Civ4BuildingInfos xmlns="x-schema:../../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
@@ -38,6 +36,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_ZEBRA_TRAINER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ZEBRA_TRAINER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ZEBRA_TRAINER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ZEBRA_TRAINER_STRATEGY</Strategy>

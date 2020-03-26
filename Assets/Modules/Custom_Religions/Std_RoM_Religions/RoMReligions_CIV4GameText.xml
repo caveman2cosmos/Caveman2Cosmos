@@ -175,7 +175,7 @@
 		<Italian>Costruisci il tempio di Ptah to ottenere una scuola di scribi gratuita in tutte le tue città.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PYRAMID_OF_THE_MOON</Tag>
+		<Tag>TXT_KEY_BUILDING_GREAT_PYRAMID_OF_THE_MOON</Tag>
 		<English>Pyramid of the Moon</English>
 		<French>La Pyramide de la Lune</French>
 		<Italian>
@@ -186,19 +186,19 @@
 		<Polish>Piramida Księżyca</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PYRAMID_OF_THE_MOON_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_GREAT_PYRAMID_OF_THE_MOON_PEDIA</Tag>
 		<English>The Pyramid of the Moon is the second largest building in Teotihuacan after the Pyramid of the Sun. The Pyramid of the Moon is located in the northern part of Teotihuacan and it mimics the contours of Cerro Gordo. Some have called it Tenan which in Nahuatl means "mother or protective stone." The Pyramid of the Moon covers a structure older than the Pyramid of the Sun which existed prior to 200 A. D.The Pyramid's construction between 200 and 450 A.D. completed the bilateral symmetry of the temple complex. A slope in front of the staircase gives access to the Avenue of the Dead, a platform atop the pyramid was used to conduct ceremonies in honor of Chalchiuhtlicue, the goddess of water and of the moon. This platform and the sculpture found at the pyramid's bottom are thus dedicated to Chalchiuhtlicue.</English>
 		<French>The Pyramid of the Moon is the second largest building in Teotihuacan after the Pyramid of the Sun. The Pyramid of the Moon is located in the northern part of Teotihuacan and it mimics the contours of Cerro Gordo. Some have called it Tenan which in Nahuatl means "mother or protective stone." The Pyramid of the Moon covers a structure older than the Pyramid of the Sun which existed prior to 200 A. D.The Pyramid's construction between 200 and 450 A.D. completed the bilateral symmetry of the temple complex. A slope in front of the staircase gives access to the Avenue of the Dead, a platform atop the pyramid was used to conduct ceremonies in honor of Chalchiuhtlicue, the goddess of water and of the moon. This platform and the sculpture found at the pyramid's bottom are thus dedicated to Chalchiuhtlicue.</French>
 		<Italian>La Piramide della Luna è il secondo edificio più grande di Teotihuacan, dopo la Piramide del Sole. La Piramide della Luna si trova nella parte settentrionale di Teotihuacan e imita i contorni di Cerro Gordo. Alcuni l'hanno chiamata Tenan, che in lingua nahuatl significa "madre o pietra di protezione." La Piramide della Luna si estende su una struttura più antica della Piramide del Sole che esisteva prima del 200 d.C.La costruzione della piramide, effettuata tra il 200 e il 450 d.C., ha completato la simmetria bilaterale del complesso del tempio. Un pendio di fronte alla scalinata dà accesso al Viale dei Morti, una piattaforma in cima alla piramide che veniva utilizzata per condurre le cerimonie in onore di Chalchiuhtlicue, la dea dell'acqua e della luna. Questa piattaforma e la scultura trovata ai piedi della piramide sono quindi dedicate a Chalchiuhtlicue.</Italian>
 		<Polish>Piramida Księżyca - piramida położona w starożytnym mieście Teotihuacán w Meksyku. Jest drugą co do wielkości budowlą w mieście, po Piramidzie Słońca i jedną z najstarszych w Mezoameryce. Zbudowana została przy Alei Zmarłych, która razem z Piramidą Słońca i Cytadelą otoczoną mniejszymi świątyniami tworzy centrum kultowe miasta. Swoim wyglądem przypomina kształt masywu górskiego Cerro Gordo, który otacza pobliską dolinę. Budowla bywa czasem nazywana Tenan, co w języku Nahuatl oznacza "matkę" lub "kamień ochronny". Piramidę wzniesiono między 200 a 450 rokiem n.e. Na jej szczycie znajdowała się platforma, na której odprawiano ceremonie poświęcone Wielkiej Bogini Teotihuacan, opiekunce wody, ziemi i urodzaju. Przed piramidą rozciąga się Plac Księżyca z centralnym ołtarzem i kamiennymi, prostokątnymi konstrukcjami tworzącymi tak zwany "Krzyż Teotihuacan".</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PYRAMID_OF_THE_MOON_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_GREAT_PYRAMID_OF_THE_MOON_STRATEGY</Tag>
 		<English>Build the Pyramid of the Moon to increase your cities science.</English>
 		<Italian>Costruisci la Piramide della Luna per incrementare la ricerca della tua città.</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PYRAMID_OF_THE_SUN</Tag>
+		<Tag>TXT_KEY_BUILDING_GREAT_PYRAMID_OF_THE_SUN</Tag>
 		<English>Pyramid of the Sun</English>
 		<French>La Pyramide du Soleil</French>
 		<Italian>
@@ -209,13 +209,13 @@
 		<Polish>Piramida Słońca</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PYRAMID_OF_THE_SUN_PEDIA</Tag>
+		<Tag>TXT_KEY_BUILDING_GREAT_PYRAMID_OF_THE_SUN_PEDIA</Tag>
 		<English>The Pyramid of the Sun is the largest building in Teotihuacán and one of the largest in Mesoamerica. Found along the Avenue of the Dead, in between the Pyramid of the Moon and the Ciudadela, and in the shadow of the massive mountain Cerro Gordo, the pyramid is part of a large complex in the heart of the city.</English>
 		<Italian>La Piramide del Sole è l'edificio più grande di Teotihuacán e uno dei più grandi di tutta la Mesoamerica. Situata lundo il Viale dei Morti, tra la Piramide della Luna e la Ciudadela e ai piedi dell'imponente montagna nota come Cerro Gordo, la piramide fa parte di un grande complesso al centro della città.</Italian>
 		<Polish>Piramida Słońca - jedna z największych i najstarszych piramid w Mezoameryce. Znajduje się przy Alei Zmarłych w starożytnym mieście Teotihuacán w Meksyku. Razem z pobliską Piramidą Księżyca oraz Cytadelą otoczoną licznymi mniejszymi świątyniami tworzy centrum kultowe miasta. Jej wygląd, podobnie jak Piramidy Księżyca, przypomina kształt masywu Cerro Gordo, który otacza pobliską dolinę. Obecną nazwę nadali jej Aztekowie, którzy przybyli do Teotihuacán kilka wieków po jego opuszczeniu przez pierwszych mieszkańców. Oryginalna nazwa budowli nie jest znana.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_PYRAMID_OF_THE_SUN_STRATEGY</Tag>
+		<Tag>TXT_KEY_BUILDING_GREAT_PYRAMID_OF_THE_SUN_STRATEGY</Tag>
 		<English>Build the Pyramid of the Sun to increase your cities gold.</English>
 		<Italian>Costruisci la Piramide del Sole per incrementare la produzione d'oro della tua città.</Italian>
 	</TEXT>

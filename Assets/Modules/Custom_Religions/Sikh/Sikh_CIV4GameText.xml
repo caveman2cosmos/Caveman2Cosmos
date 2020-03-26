@@ -79,36 +79,6 @@
 		<Spanish>Los [COLOR_BUILDING_TEXT]Templos[COLOR_REVERT] aumentan la felicidad y cultura de la ciudad. Son especialmente útiles para expandir las fronteras de la civilización al principio de la partida.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TP_SIKH_FOUNDING</Tag>
-		<English>Amritsar (Sikh Founding)</English>
-		<French>Amritsar</French>
-		<German>Amritsar</German>
-		<Italian>
-			<Text>Amritsar</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Italian>
-		<Spanish>Amritsar</Spanish>
-		<Polish>Amritsar (Sikh)</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TP_SIKH_FOUNDING_PEDIA</Tag>
-		<English>Building Amritsar founds Sikhism.  Guru Nanak (1469-1539), the founder of the Sikh religion used to come to the lake to meditate. After his passing, his disciples continued to frequent the site; over the centuries it became the primary sacred shrine of the Sikhs. Amritsar, the original name of first the ancient lake, then the temple complex,  and still later the surrounding city, means "pool of ambrosial nectar." The temple's architecture draws on both Hindu and Moslem artistic styles yet  represents a unique coevolution of the two.</English>
-		<French>Sikhisme</French>
-		<German>Sikhism</German>
-		<Italian>Costruire Amritsar fonda il sikhismo. Guru Nanak (1469-1539), il fondatore della religione Sikh era solito venire a questo lago per meditare. Dopo la sua morte, i suoi discepoli continuarono a frequentare il sito; nel corso dei secoli divenne il santuario principale dei Sikh. Amritsar, nome originale dell'antico lago, poi nome del complesso del tempio, e più tardi ancora della città circostante, significa "piscina di nettare ambrosia." L'architettura del tempio attinge sia dagli stili artistici indù che musulmani e rappresenta una coevoluzione unica dei due.</Italian>
-		<Spanish>Sikhism</Spanish>
-		<Polish>Amritsar (pendż. Sadzawka Nektaru Nieśmiertelności) - miasto w północno-zachodnich Indiach, w stanie Pendżab, w pobliżu granicy z Pakistanem. Około 1,1 mln mieszkańców. W mieście tym znajduje się najważniejszy obiekt kultu Sikhów - Złota Swiątynia zwana Darbar Sahib (Dwór Pana) lub Harmandir (Swiątynia Boża), w której przechowywany jest oryginał świętej księgi Sikhów.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_TP_SIKH_FOUNDING_STRATEGY</Tag>
-		<English>Sikhism allows temples that add to the health of a city.  Sikhs have an impressive military history and units trained in the holy city start with extra experience.  Sikhs do not have monasteries or missionaries.</English>
-		<French>Sikhisme</French>
-		<German>Sikhism</German>
-		<Italian>Il sikhismo permette templi che aumentano la salute di una città. I sikh hanno un'impressionante storia militare, tanto che le unità addestrate nella città santa ricevono più esperienza. I sikh non hanno monasteri nè missionari.</Italian>
-		<Spanish>Sikhism</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_TECH_SIKHISM</Tag>
 		<English>Sikhism</English>
 		<French>Sikhisme</French>

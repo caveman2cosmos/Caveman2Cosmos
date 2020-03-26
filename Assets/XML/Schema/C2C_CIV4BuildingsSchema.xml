@@ -774,6 +774,7 @@
 		<element type="iMaxGlobalInstances" minOccurs="0"/>
 		<element type="iMaxPlayerInstances" minOccurs="0"/>
 		<element type="iExtraPlayerInstances" minOccurs="0"/>
+		<element type="VictoryThresholds" minOccurs="0"/>
 <!-- XMLCOPY				02/20/2008			MRGENIE		-->
 		<element type="bForceOverwrite" minOccurs="0"/>
 		<element type="bForceDelete" minOccurs="0"/>

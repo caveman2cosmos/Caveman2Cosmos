@@ -1,9 +1,4 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Ed Piper (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Interface art path information -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Schema\Caveman2Cosmos.xsd">
 	<InterfaceArtInfos>
 		<InterfaceArtInfo>
@@ -1596,7 +1591,7 @@
 			<Path>Art/Interface/UnitUpgradesGraph/line-arrow.dds</Path>
 		</InterfaceArtInfo>
 		<!-- BUG - Sevopedia - end -->
-		<!-- BUG - specialists  - start  -->
+		<!-- BUG - specialists - start -->
 		<InterfaceArtInfo>
 			<Type>OVERLAY_CHEVRON5</Type>
 			<Path>Art/Interface/screens/medallion_Chevron5.dds</Path>
@@ -1609,7 +1604,7 @@
 			<Type>OVERLAY_CHEVRON20</Type>
 			<Path>Art/Interface/screens/medallion_Chevron20.dds</Path>
 		</InterfaceArtInfo>
-		<!-- BUG - specialists  - end  -->
+		<!-- BUG - specialists - end -->
 		<!-- BUG - Raw Yields - start -->
 		<InterfaceArtInfo>
 			<Type>RAW_YIELDS_TRADE</Type>
@@ -1692,7 +1687,6 @@
 			<Type>INTERFACE_BUTTON_NULL</Type>
 			<Path>Art/BUG/Null.dds</Path>
 		</InterfaceArtInfo>
-
 		<InterfaceArtInfo>
 			<Type>ART_DEF_BACKGROUND_ADMIRAL</Type>
 			<Path>Art/interface/great_people/bg_admiral.dds</Path>
@@ -6541,8 +6535,7 @@
 			<Type>ART_DEF_GREAT_PERSON_MONTALBANO</Type>
 			<Path>Art/interface/great_people/great_spy.dds</Path>
 		</InterfaceArtInfo>
-
-		<!-- Orion's  Immigration Mod -->
+		<!-- Orion's Immigration Mod -->
 		<InterfaceArtInfo>
 			<Type>INTERFACE_JOIN_CITY</Type>
 			<Path>Art/Interface/Buttons/Missions/JoinCity.dds</Path>

@@ -60,7 +60,7 @@
 		</BuildingArtInfo>
 		<!-- Nagualismo -->
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PYRAMID_OF_THE_MOON</Type>
+			<Type>ART_DEF_BUILDING_GREAT_PYRAMID_OF_THE_MOON</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>2.5</fScale>
@@ -70,7 +70,7 @@
 			<Button>Art/Interface/Buttons/buildings/Religions/Nagualism/pyramid_of_the_moon.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
-			<Type>ART_DEF_BUILDING_PYRAMID_OF_THE_SUN</Type>
+			<Type>ART_DEF_BUILDING_GREAT_PYRAMID_OF_THE_SUN</Type>
 			<LSystem>LSYSTEM_2x2</LSystem>
 			<bAnimated>0</bAnimated>
 			<fScale>2.5</fScale>

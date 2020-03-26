@@ -393,7 +393,7 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
-			<Bonus>BONUS_MARS_ROCKS</Bonus>
+			<Bonus>BONUS_MARTIAN_ROCKS</Bonus>
 			<FreeBonus>BONUS_MARTIAN_MANUFACTURED_GOODS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<ExtraFreeBonuses>
@@ -434,7 +434,7 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
-			<FreeBonus>BONUS_MARS_ROCKS</FreeBonus>
+			<FreeBonus>BONUS_MARTIAN_ROCKS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -611,6 +611,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_MARS_CYCLER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_MARS_CYCLER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_CYCLER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MARS_CYCLER_STRATEGY</Strategy>
@@ -776,7 +777,7 @@
 				<iCommerce>-3</iCommerce>
 				<iCommerce>600</iCommerce>
 			</CommerceChanges>
-			<Bonus>BONUS_MARS_ROCKS</Bonus>
+			<Bonus>BONUS_MARTIAN_ROCKS</Bonus>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -1447,6 +1448,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_PHOBOS_INDUSTRIAL_COMPLEX</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_PHOBOS_INDUSTRIAL_COMPLEX</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PHOBOS_INDUSTRIAL_COMPLEX_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PHOBOS_INDUSTRIAL_COMPLEX_STRATEGY</Strategy>
@@ -2027,6 +2029,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_URBAN_MARS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_URBAN_MARS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_URBAN_MARS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_URBAN_MARS_STRATEGY</Strategy>
@@ -2073,6 +2076,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_MARS_TERRA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_MARS_TERRA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MARS_TERRA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MARS_TERRA_STRATEGY</Strategy>
@@ -2168,6 +2172,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_RING_OF_MARS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_RING_OF_MARS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RING_OF_MARS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_RING_OF_MARS_STRATEGY</Strategy>

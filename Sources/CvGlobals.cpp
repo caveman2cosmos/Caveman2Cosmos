@@ -371,11 +371,7 @@ cvInternalGlobals::cvInternalGlobals()
 	/************************************************************************************************/
 	/* XML_MODULAR_ART_LOADING                 END                                                  */
 	/************************************************************************************************/
-	/************************************************************************************************/
-	/* Afforess	                  Start		 12/8/09                                                */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
+
 	, m_iPEAK_EXTRA_MOVEMENT(0)
 	, m_iPEAK_EXTRA_DEFENSE(0)
 	, m_bLoadedPlayerOptions(false)
@@ -401,7 +397,6 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_iUSE_CAN_DO_GOLD_CALLBACK(0)
 	, m_iUSE_CAN_DO_RESEARCH_CALLBACK(0)
 	, m_iUSE_UPGRADE_UNIT_PRICE_CALLBACK(0)
-	, m_iUSE_IS_VICTORY_CALLBACK(0)
 	, m_iUSE_AI_UPDATE_UNIT_CALLBACK(0)
 	, m_iUSE_AI_CHOOSE_PRODUCTION_CALLBACK(0)
 	, m_iUSE_EXTRA_PLAYER_COSTS_CALLBACK(0)
@@ -410,9 +405,6 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_iUSE_CAN_DO_COMBAT_CALLBACK(0)
 	, m_iUSE_AI_CAN_DO_WARPLANS_CALLBACK(0)
 
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
 	/************************************************************************************************/
 	/* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
 	/*                                                                                              */
@@ -476,6 +468,10 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_iStoreExeSettingsBonusInfo(0)
 	, m_bSignsCleared(false)
 {
+	for (int i = 0; i < NUM_INT_GLOBAL_DEFINES; i++)
+	{
+		m_GlobalDefinesINT.push_back(0);
+	}
 }
 
 cvInternalGlobals::~cvInternalGlobals()
@@ -1295,22 +1291,6 @@ CvRouteModelInfo& cvInternalGlobals::getRouteModelInfo(int i) const
 	return *(m_paRouteModelInfo[i]);
 }
 
-int cvInternalGlobals::getNumRiverInfos() const
-{
-	return (int)m_paRiverInfo.size();
-}
-
-std::vector<CvRiverInfo*>& cvInternalGlobals::getRiverInfos()
-{
-	return m_paRiverInfo;
-}
-
-CvRiverInfo& cvInternalGlobals::getRiverInfo(RiverTypes e) const
-{
-	FAssertMsg(e >= 0 && e < GC.getNumRiverInfos(), "RiverInfo index out of bounds");
-	return *(m_paRiverInfo[e]);
-}
-
 int cvInternalGlobals::getNumRiverModelInfos() const
 {
 	return (int)m_paRiverModelInfo.size();
@@ -1485,17 +1465,6 @@ CvUnitFormationInfo& cvInternalGlobals::getUnitFormationInfo(int i) const
 {
 	FAssertMsg(i >= 0 && i < GC.getNumUnitFormationInfos(), "UnitFormationInfo index out of bounds");
 	return *(m_paUnitFormationInfo[i]);
-}
-
-// TEXT
-int cvInternalGlobals::getNumGameTextXML() const
-{
-	return (int)m_paGameTextXML.size();
-}
-
-std::vector<CvGameText*>& cvInternalGlobals::getGameTextXMLs()
-{
-	return m_paGameTextXML;
 }
 
 // Landscape INFOS
@@ -3603,6 +3572,10 @@ void cvInternalGlobals::cacheGlobals()
 
 	strcpy(gVersionString, getDefineSTRING("C2C_VERSION"));
 
+#define CACHE_INT_GLOBAL_DEFINE(VAR) \
+	m_GlobalDefinesINT[VAR] = getDefineINT(#VAR);
+	DO_FOR_EACH_INT_GLOBAL_DEFINE(CACHE_INT_GLOBAL_DEFINE)
+
 	/************************************************************************************************/
 	/* Mod Globals    Start                          09/13/10                           phungus420  */
 	/*                                                                                              */
@@ -3775,11 +3748,6 @@ void cvInternalGlobals::cacheGlobals()
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 
-/************************************************************************************************/
-/* Afforess	                  Start		 12/8/09                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	m_iPEAK_EXTRA_MOVEMENT = getDefineINT("PEAK_EXTRA_MOVEMENT");
 	m_iPEAK_EXTRA_DEFENSE = getDefineINT("PEAK_EXTRA_DEFENSE");
 	m_bXMLLogging = getDefineINT("XML_LOGGING_ENABLED");
@@ -3805,7 +3773,6 @@ void cvInternalGlobals::cacheGlobals()
 	m_iUSE_CAN_DO_GOLD_CALLBACK = getDefineINT("USE_CAN_DO_GOLD_CALLBACK");
 	m_iUSE_CAN_DO_RESEARCH_CALLBACK = getDefineINT("USE_CAN_DO_RESEARCH_CALLBACK");
 	m_iUSE_UPGRADE_UNIT_PRICE_CALLBACK = getDefineINT("USE_UPGRADE_UNIT_PRICE_CALLBACK");
-	m_iUSE_IS_VICTORY_CALLBACK = getDefineINT("USE_IS_VICTORY_CALLBACK");
 	m_iUSE_AI_UPDATE_UNIT_CALLBACK = getDefineINT("USE_AI_UPDATE_UNIT_CALLBACK");
 	m_iUSE_AI_CHOOSE_PRODUCTION_CALLBACK = getDefineINT("USE_AI_CHOOSE_PRODUCTION_CALLBACK");
 	m_iUSE_EXTRA_PLAYER_COSTS_CALLBACK = getDefineINT("USE_EXTRA_PLAYER_COSTS_CALLBACK");
@@ -3813,10 +3780,7 @@ void cvInternalGlobals::cacheGlobals()
 	m_iUSE_AI_BESTTECH_CALLBACK = getDefineINT("USE_AI_BESTTECH_CALLBACK");
 	m_iUSE_CAN_DO_COMBAT_CALLBACK = getDefineINT("USE_CAN_DO_COMBAT_CALLBACK");
 	m_iUSE_AI_CAN_DO_WARPLANS_CALLBACK = getDefineINT("USE_AI_CAN_DO_WARPLANS_CALLBACK");
-	
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 /************************************************************************************************/
 /* MODULES                                 11/13/07                            MRGENIE          */
 /*                                                                                              */
@@ -4607,21 +4571,6 @@ int cvInternalGlobals::getNPC0_TEAM() const
 	return NPC0_TEAM;
 }
 
-int cvInternalGlobals::getINVALID_PLOT_COORD() const
-{
-	return INVALID_PLOT_COORD;
-}
-
-int cvInternalGlobals::getNUM_CITY_PLOTS() const
-{
-	return NUM_CITY_PLOTS;
-}
-
-int cvInternalGlobals::getCITY_HOME_PLOT() const
-{
-	return CITY_HOME_PLOT;
-}
-
 void cvInternalGlobals::setDLLProfiler(FProfiler* prof)
 {
 	m_Profiler = prof;
@@ -4810,52 +4759,6 @@ void cvInternalGlobals::setTypesEnum(const char* szType, int iEnum)
 }
 
 
-int cvInternalGlobals::getNUM_ENGINE_DIRTY_BITS() const
-{
-	return NUM_ENGINE_DIRTY_BITS;
-}
-
-int cvInternalGlobals::getNUM_INTERFACE_DIRTY_BITS() const
-{
-	return NUM_INTERFACE_DIRTY_BITS;
-}
-
-int cvInternalGlobals::getNUM_YIELD_TYPES() const
-{
-	return NUM_YIELD_TYPES;
-}
-
-int cvInternalGlobals::getNUM_COMMERCE_TYPES() const
-{
-	return NUM_COMMERCE_TYPES;
-}
-
-int cvInternalGlobals::getNUM_FORCECONTROL_TYPES() const
-{
-	return NUM_FORCECONTROL_TYPES;
-}
-
-int cvInternalGlobals::getNUM_INFOBAR_TYPES() const
-{
-	return NUM_INFOBAR_TYPES;
-}
-
-int cvInternalGlobals::getNUM_HEALTHBAR_TYPES() const
-{
-	return NUM_HEALTHBAR_TYPES;
-}
-
-int cvInternalGlobals::getNUM_CONTROL_TYPES() const
-{
-	return NUM_CONTROL_TYPES;
-}
-
-int cvInternalGlobals::getNUM_LEADERANIM_TYPES() const
-{
-	return NUM_LEADERANIM_TYPES;
-}
-
-
 void cvInternalGlobals::deleteInfoArrays()
 {
 	deleteInfoArray(m_paBuildingInfo);
@@ -4917,7 +4820,6 @@ void cvInternalGlobals::deleteInfoArrays()
 
 	deleteInfoArray(m_paRouteInfo);
 	deleteInfoArray(m_paRouteModelInfo);
-	deleteInfoArray(m_paRiverInfo);
 	deleteInfoArray(m_paRiverModelInfo);
 
 	deleteInfoArray(m_paWaterPlaneInfo);
@@ -5417,21 +5319,6 @@ void cvInternalGlobals::resolveDelayedResolution()
 	m_delayedResolutionMap.clear();
 }
 
-int cvInternalGlobals::getNumDirections() const { return NUM_DIRECTION_TYPES; }
-int cvInternalGlobals::getNumGameOptions() const { return NUM_GAMEOPTION_TYPES; }
-int cvInternalGlobals::getNumMPOptions() const { return NUM_MPOPTION_TYPES; }
-int cvInternalGlobals::getNumSpecialOptions() const { return NUM_SPECIALOPTION_TYPES; }
-int cvInternalGlobals::getNumGraphicOptions() const { return NUM_GRAPHICOPTION_TYPES; }
-int cvInternalGlobals::getNumTradeableItems() const { return NUM_TRADEABLE_ITEMS; }
-int cvInternalGlobals::getNumBasicItems() const { return NUM_BASIC_ITEMS; }
-int cvInternalGlobals::getNumTradeableHeadings() const { return NUM_TRADEABLE_HEADINGS; }
-int cvInternalGlobals::getNumCommandInfos() const { return NUM_COMMAND_TYPES; }
-int cvInternalGlobals::getNumControlInfos() const { return NUM_CONTROL_TYPES; }
-int cvInternalGlobals::getNumPlayerOptionInfos() const { return NUM_PLAYEROPTION_TYPES; }
-int cvInternalGlobals::getMaxNumSymbols() const { return MAX_NUM_SYMBOLS; }
-int cvInternalGlobals::getNumGraphicLevels() const { return NUM_GRAPHICLEVELS; }
-int cvInternalGlobals::getNumGlobeLayers() const { return NUM_GLOBE_LAYER_TYPES; }
-
 int cvInternalGlobals::getNumMissionInfos() const
 { 
 #ifdef FIXED_MISSION_NUMBER
@@ -5645,11 +5532,6 @@ int cvInternalGlobals::getCOMBAT_DAMAGE() const
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 
-/************************************************************************************************/
-/* Afforess	                  Start		 12/8/09                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 int cvInternalGlobals::getPEAK_EXTRA_MOVEMENT() const
 {
 	return m_iPEAK_EXTRA_MOVEMENT;
@@ -5781,11 +5663,6 @@ int cvInternalGlobals::getUSE_UPGRADE_UNIT_PRICE_CALLBACK() const
 	return m_iUSE_UPGRADE_UNIT_PRICE_CALLBACK;
 }
 
-int cvInternalGlobals::getUSE_IS_VICTORY_CALLBACK() const
-{
-	return m_iUSE_IS_VICTORY_CALLBACK;
-}
-
 int cvInternalGlobals::getUSE_AI_UPDATE_UNIT_CALLBACK() const
 {
 	return m_iUSE_AI_UPDATE_UNIT_CALLBACK;
@@ -5821,9 +5698,6 @@ int cvInternalGlobals::getUSE_AI_CAN_DO_WARPLANS_CALLBACK() const
 	return m_iUSE_AI_CAN_DO_WARPLANS_CALLBACK;
 }
 
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 /************************************************************************************************/
 /* Mod Globals    Start                          09/13/10                           phungus420  */

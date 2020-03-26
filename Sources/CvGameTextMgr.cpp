@@ -318,13 +318,6 @@ void CvGameTextMgr::setInterfaceTime(CvWString& szString, PlayerTypes ePlayer)
 	{
 		szString.Format(L"%c(%d) ", gDLL->getSymbolID(GOLDEN_AGE_CHAR), GET_PLAYER(ePlayer).getGoldenAgeTurns());
 	}
-/************************************************************************************************/
-/* Afforess					  Start		 02/02/10
-	else if (GET_PLAYER(ePlayer).isDarkAge())
-	{
-		szString.Format(L"%s", gDLL->getText("TXT_KEY_TURNS_LEFT_IN_DARK_AGE", GET_PLAYER(ePlayer).getDarkAgeTurns()));
-	}
-/************************************************************************************************/
 	else
 	{
 		szString.clear();
@@ -24996,7 +24989,7 @@ void CvGameTextMgr::buildBuildingRequiresString(CvWStringBuffer& szBuffer, Build
 			if (pCity == NULL || GC.getGame().getBuildingCreatedCount(ePrereqBuilding) == 0)
 			{
 				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_ANY_Building", GC.getBuildingInfo(ePrereqBuilding).getDescription()));
+				szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_REQUIRES_ANY_BUILDING", GC.getBuildingInfo(ePrereqBuilding).getDescription()));
 			}
 		}
 
@@ -38119,7 +38112,7 @@ void CvGameTextMgr::assignFontIds(int iFirstSymbolCode, int iPadAmount)
 	//8500
 
 	// set commerce symbols
-	for (i = 0;i<GC.getNUM_COMMERCE_TYPES();i++)
+	for (i = 0; i < NUM_COMMERCE_TYPES; i++)
 	{
 		GC.getCommerceInfo((CommerceTypes) i).setChar(iCurSymbolID);
 		++iCurSymbolID;

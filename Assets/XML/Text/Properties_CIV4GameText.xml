@@ -8,12 +8,6 @@
 		<Spanish>Propiedades</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROPERTIES_SPECIAL</Tag>
-		<English>Specials</English>
-		<French>Spéciaux</French>
-		<Spanish>Especiales</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROPERTY_ACTIVE</Tag>
 		<English>with </English>
 		<French>avec: </French>

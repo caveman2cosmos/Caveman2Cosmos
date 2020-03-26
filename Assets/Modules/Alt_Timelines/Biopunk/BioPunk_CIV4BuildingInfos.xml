@@ -196,6 +196,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_DESIGNED_ANIMAL_SHOW</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_DESIGNED_ANIMAL_SHOW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DESIGNED_ANIMAL_SHOW_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DESIGNED_ANIMAL_SHOW_STRATEGY</Strategy>
