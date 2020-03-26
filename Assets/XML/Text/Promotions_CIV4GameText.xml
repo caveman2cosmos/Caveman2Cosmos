@@ -6718,10 +6718,6 @@
 		<French>Océanique</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_CULTURE_NEANDERTHAL</Tag>
-		<English>Neanderthal</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURE_PILLAGE_TEXT</Tag>
 		<English>[ICON_BULLET]Pillages [ICON_CULTURE] in addition to [ICON_GOLD]</English>
 		<French>[ICON_BULLET]Récupère de la [ICON_CULTURE] en plus de l'[ICON_GOLD] lors des pillages</French>
