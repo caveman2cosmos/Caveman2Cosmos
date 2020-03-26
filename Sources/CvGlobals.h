@@ -26,15 +26,11 @@ class CvStatsReporter;
 class CvDLLInterfaceIFaceBase;
 class CvPlayerAI;
 class CvDiplomacyScreen;
-class CvCivicsScreen;
-class CvWBUnitEditScreen;
-class CvWBCityEditScreen;
 class CMPDiplomacyScreen;
 class FMPIManager;
 class FAStar;
 class CvInterface;
 class CMainMenu;
-class CvEngine;
 class CvArtFileMgr;
 class FVariableSystem;
 class CvMap;
@@ -50,7 +46,6 @@ class CvColorInfo;
 class CvPlayerColorInfo;
 class CvAdvisorInfo;
 class CvRouteModelInfo;
-class CvRiverInfo;
 class CvRiverModelInfo;
 class CvWaterPlaneInfo;
 class CvTerrainPlaneInfo;
@@ -62,7 +57,6 @@ class CvEffectInfo;
 class CvAttachableInfo;
 class CvCameraInfo;
 class CvUnitFormationInfo;
-class CvGameText;
 class CvLandscapeInfo;
 class CvTerrainInfo;
 class CvBonusClassInfo;
@@ -410,10 +404,6 @@ public:
 	std::vector<CvRouteModelInfo*>& getRouteModelInfos();
 	CvRouteModelInfo& getRouteModelInfo(int i) const;
 
-	int getNumRiverInfos() const;
-	std::vector<CvRiverInfo*>& getRiverInfos();
-	CvRiverInfo& getRiverInfo(RiverTypes e) const;
-
 	int getNumRiverModelInfos() const;
 	std::vector<CvRiverModelInfo*>& getRiverModelInfos();
 	CvRiverModelInfo& getRiverModelInfo(int i) const;
@@ -457,9 +447,6 @@ public:
 	int getNumUnitFormationInfos() const;
 	std::vector<CvUnitFormationInfo*>& getUnitFormationInfos();
 	CvUnitFormationInfo& getUnitFormationInfo(int i) const;
-
-	int getNumGameTextXML() const;
-	std::vector<CvGameText*>& getGameTextXMLs();
 
 	int getNumLandscapeInfos() const;
 	std::vector<CvLandscapeInfo*>& getLandscapeInfos();
@@ -793,6 +780,7 @@ public:
 	std::vector<CvActionInfo*>& getActionInfos();
 	CvActionInfo& getActionInfo(int i) const;
 
+	int getNumMissionInfos() const;
 	std::vector<CvMissionInfo*>& getMissionInfos();
 	CvMissionInfo& getMissionInfo(MissionTypes eMissionNum) const;
 
@@ -905,16 +893,6 @@ public:
 	//
 	int getTypesEnum(const char* szType) const;				// use this when searching for a type
 	void setTypesEnum(const char* szType, int iEnum);
-
-	int getNUM_ENGINE_DIRTY_BITS() const;
-	int getNUM_INTERFACE_DIRTY_BITS() const;
-	int getNUM_YIELD_TYPES() const;
-	int getNUM_COMMERCE_TYPES() const;
-	int getNUM_FORCECONTROL_TYPES() const;
-	int getNUM_INFOBAR_TYPES() const;
-	int getNUM_HEALTHBAR_TYPES() const;
-	int getNUM_CONTROL_TYPES() const;
-	int getNUM_LEADERANIM_TYPES() const;
 
 	int& getNumEntityEventTypes();
 	CvString*& getEntityEventTypes();
@@ -1052,7 +1030,6 @@ public:
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
 
-
 	int getMOVE_DENOMINATOR() const;
 	int getNUM_UNIT_PREREQ_OR_BONUSES() const;
 	int getNUM_BUILDING_PREREQ_OR_BONUSES() const;
@@ -1172,9 +1149,6 @@ public:
 	int getNPC1_TEAM() const;
 	int getNPC0_PLAYER() const;
 	int getNPC0_TEAM() const;
-	int getINVALID_PLOT_COORD() const;
-	int getNUM_CITY_PLOTS() const;
-	int getCITY_HOME_PLOT() const;
 
 	// ***** END EXPOSED TO PYTHON *****
 
@@ -1255,23 +1229,6 @@ public:
 	 void setBorderFinder(FAStar* pVal);
 	 void setAreaFinder(FAStar* pVal);
 	 void setPlotGroupFinder(FAStar* pVal);
-
-	// So that CvEnums are moddable in the DLL
-	 int getNumDirections() const;
-	 int getNumGameOptions() const;
-	 int getNumMPOptions() const;
-	 int getNumSpecialOptions() const;
-	 int getNumGraphicOptions() const;
-	 int getNumTradeableItems() const;
-	 int getNumBasicItems() const;
-	 int getNumTradeableHeadings() const;
-	 int getNumCommandInfos() const;
-	 int getNumControlInfos() const;
-	 int getNumMissionInfos() const;
-	 int getNumPlayerOptionInfos() const;
-	 int getMaxNumSymbols() const;
-	 int getNumGraphicLevels() const;
-	 int getNumGlobeLayers() const;
 
 // BUG - BUG Info - start
 	void setIsBug(bool bIsBug);
@@ -1553,7 +1510,6 @@ protected:
 	std::vector<CvHurryInfo*> m_paHurryInfo;
 	std::vector<CvVictoryInfo*> m_paVictoryInfo;
 	std::vector<CvRouteModelInfo*> m_paRouteModelInfo;
-	std::vector<CvRiverInfo*> m_paRiverInfo;
 	std::vector<CvRiverModelInfo*> m_paRiverModelInfo;
 	std::vector<CvWaterPlaneInfo*> m_paWaterPlaneInfo;
 	std::vector<CvTerrainPlaneInfo*> m_paTerrainPlaneInfo;
@@ -1585,9 +1541,6 @@ protected:
 /*******************************/
 /***** Parallel Maps - End *****/
 /*******************************/
-
-	// Game Text
-	std::vector<CvGameText*> m_paGameTextXML;
 
 	//////////////////////////////////////////////////////////////////////////
 	// GLOBAL TYPES
@@ -2615,37 +2568,37 @@ public:
 	DllExport int getNUM_ENGINE_DIRTY_BITS() const
 	{
 		PROXY_TRACK("getNUM_ENGINE_DIRTY_BITS");
-		return gGlobals->getNUM_ENGINE_DIRTY_BITS();
+		return NUM_ENGINE_DIRTY_BITS;
 	}
 	DllExport int getNUM_INTERFACE_DIRTY_BITS() const
 	{
 		PROXY_TRACK("getNUM_INTERFACE_DIRTY_BITS");
-		return gGlobals->getNUM_INTERFACE_DIRTY_BITS();
+		return NUM_INTERFACE_DIRTY_BITS;
 	}
 	DllExport int getNUM_YIELD_TYPES() const
 	{
 		PROXY_TRACK("getNUM_YIELD_TYPES");
-		return gGlobals->getNUM_YIELD_TYPES();
+		return NUM_YIELD_TYPES;
 	}
 	DllExport int getNUM_FORCECONTROL_TYPES() const
 	{
 		PROXY_TRACK("getNUM_FORCECONTROL_TYPES");
-		return gGlobals->getNUM_FORCECONTROL_TYPES();
+		return NUM_FORCECONTROL_TYPES;
 	}
 	DllExport int getNUM_INFOBAR_TYPES() const
 	{
 		PROXY_TRACK("getNUM_INFOBAR_TYPES");
-		return gGlobals->getNUM_INFOBAR_TYPES();
+		return NUM_INFOBAR_TYPES;
 	}
 	DllExport int getNUM_HEALTHBAR_TYPES() const
 	{
 		PROXY_TRACK("getNUM_HEALTHBAR_TYPES");
-		return gGlobals->getNUM_HEALTHBAR_TYPES();
+		return NUM_HEALTHBAR_TYPES;
 	}
 	DllExport int getNUM_LEADERANIM_TYPES() const
 	{
 		PROXY_TRACK("getNUM_LEADERANIM_TYPES");
-		return gGlobals->getNUM_LEADERANIM_TYPES();
+		return NUM_LEADERANIM_TYPES;
 	}
 	DllExport int& getNumArtStyleTypes()
 	{
@@ -3070,62 +3023,61 @@ public:
 		PROXY_TRACK("setPlotGroupFinder");
 		gGlobals->setPlotGroupFinder(pVal);
 	}
-
 	// So that CvEnums are moddable in the DLL
 	DllExport int getNumDirections() const
 	{
 		PROXY_TRACK("getNumDirections");
-		return gGlobals->getNumDirections();
+		return NUM_DIRECTION_TYPES;
 	}
 	DllExport int getNumGameOptions() const
 	{
 		PROXY_TRACK("getNumGameOptions");
-		return gGlobals->getNumGameOptions();
+		return gGlobals->getNumGameOptionInfos();
 	}
 	DllExport int getNumMPOptions() const
 	{
 		PROXY_TRACK("getNumMPOptions");
-		return gGlobals->getNumMPOptions();
+		return NUM_MPOPTION_TYPES;
 	}
 	DllExport int getNumSpecialOptions() const
 	{
 		PROXY_TRACK("getNumSpecialOptions");
-		return gGlobals->getNumSpecialOptions();
+		return NUM_SPECIALOPTION_TYPES;
 	}
 	DllExport int getNumGraphicOptions() const
 	{
 		PROXY_TRACK("getNumGraphicOptions");
-		return gGlobals->getNumGraphicOptions();
+		return NUM_GRAPHICOPTION_TYPES;
 	}
 	DllExport int getNumTradeableItems() const
 	{
 		PROXY_TRACK("getNumTradeableItems");
-		return gGlobals->getNumTradeableItems();
+		return NUM_TRADEABLE_ITEMS;
 	}
 	DllExport int getNumBasicItems() const
 	{
 		PROXY_TRACK("getNumBasicItems");
-		return gGlobals->getNumBasicItems();
+		return NUM_BASIC_ITEMS;
 	}
 	DllExport int getNumTradeableHeadings() const
 	{
 		PROXY_TRACK("getNumTradeableHeadings");
-		return gGlobals->getNumTradeableHeadings();
+		return NUM_TRADEABLE_HEADINGS;
 	}
 	DllExport int getNumPlayerOptionInfos() const
 	{
 		PROXY_TRACK("getNumPlayerOptionInfos");
-		return gGlobals->getNumPlayerOptionInfos();
+		return NUM_PLAYEROPTION_TYPES;
 	}
 	DllExport int getMaxNumSymbols() const
 	{
 		PROXY_TRACK("getMaxNumSymbols");
-		return gGlobals->getMaxNumSymbols();
+		return MAX_NUM_SYMBOLS;
 	}
 	DllExport int getNumGraphicLevels() const
 	{
 		PROXY_TRACK("getNumGraphicLevels");
-		return gGlobals->getNumGraphicLevels();
+		return NUM_GRAPHICLEVELS;
 	}
 };
 
@@ -3154,23 +3106,6 @@ inline CvGlobals& CvGlobals::getInstance()
 //
 #define GC cvInternalGlobals::getInstance()
 #define gDLL g_DLL
-
-#ifndef _USRDLL
-#define NUM_DIRECTION_TYPES (GC.getNumDirections())
-#define NUM_GAMEOPTION_TYPES (GC.getNumGameOptions())
-#define NUM_MPOPTION_TYPES (GC.getNumMPOptions())
-#define NUM_SPECIALOPTION_TYPES (GC.getNumSpecialOptions())
-#define NUM_GRAPHICOPTION_TYPES (GC.getNumGraphicOptions())
-#define NUM_TRADEABLE_ITEMS (GC.getNumTradeableItems())
-#define NUM_BASIC_ITEMS (GC.getNumBasicItems())
-#define NUM_TRADEABLE_HEADINGS (GC.getNumTradeableHeadings())
-#define NUM_COMMAND_TYPES (GC.getNumCommandInfos())
-#define NUM_CONTROL_TYPES (GC.getNumControlInfos())
-#define NUM_PLAYEROPTION_TYPES (GC.getNumPlayerOptionInfos())
-#define MAX_NUM_SYMBOLS (GC.getMaxNumSymbols())
-#define NUM_GRAPHICLEVELS (GC.getNumGraphicLevels())
-#define NUM_GLOBE_LAYER_TYPES (GC.getNumGlobeLayers())
-#endif
 
 #ifndef FIXED_MISSION_NUMBER
 #define NUM_MISSION_TYPES (GC.getNumMissionInfos())

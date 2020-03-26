@@ -1452,6 +1452,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_HYPERURANION</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_HYPERURANION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYPERURANION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HYPERURANION_STRATEGY</Strategy>
@@ -1484,6 +1485,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_FAIRYLAND</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_FAIRYLAND</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FAIRYLAND_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_FAIRYLAND_STRATEGY</Strategy>
@@ -1516,6 +1518,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_COSMIC_AC</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_COSMIC_AC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COSMIC_AC_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_COSMIC_AC_STRATEGY</Strategy>
@@ -1573,6 +1576,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_UNIVERSE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_UNIVERSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_UNIVERSE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_UNIVERSE_STRATEGY</Strategy>

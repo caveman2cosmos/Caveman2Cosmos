@@ -3,13 +3,9 @@
 #ifndef CvDLLEngineIFaceBase_h
 #define CvDLLEngineIFaceBase_h
 
-//#include "CvEnums.h"
-//#include "CvStructs.h"
-
 //
 // abstract interface for CvEngine functions used by DLL
 //
-class CvEngine;
 class CvDLLEngineIFaceBase
 {
 public:
@@ -21,14 +17,14 @@ public:
 	virtual void SaveReplay(PlayerTypes ePlayer = NO_PLAYER) = 0;
 	virtual void SaveGame(CvString& szFilename, SaveGameTypes eType = SAVEGAME_NORMAL) = 0;
 	virtual void DoTurn() = 0;
-	virtual void ClearMinimap()	 = 0;
+	virtual void ClearMinimap() = 0;
 	virtual byte GetLandscapePlotTerrainData(uint uiX, uint uiY, uint uiPointX, uint uiPointY) = 0;
 	virtual byte GetLandscapePlotHeightData(uint uiX, uint uiY, uint uiPointX, uint uiPointY) = 0;
 	virtual LoadType getLoadType() = 0;
 	virtual void ClampToWorldCoords(NiPoint3* pPt3, float fOffset = 0.0f) = 0;
 	virtual void SetCameraZoom(float zoom) = 0;
 	virtual float GetUpdateRate() = 0;
-	virtual bool SetUpdateRate( float fUpdateRate ) = 0;
+	virtual bool SetUpdateRate(float fUpdateRate) = 0;
 	virtual void toggleGlobeview() = 0;
 	virtual bool isGlobeviewUp() = 0;
 	virtual void toggleResourceLayer() = 0;

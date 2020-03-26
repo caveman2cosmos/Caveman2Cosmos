@@ -38112,7 +38112,7 @@ void CvGameTextMgr::assignFontIds(int iFirstSymbolCode, int iPadAmount)
 	//8500
 
 	// set commerce symbols
-	for (i = 0;i<GC.getNUM_COMMERCE_TYPES();i++)
+	for (i = 0; i < NUM_COMMERCE_TYPES; i++)
 	{
 		GC.getCommerceInfo((CommerceTypes) i).setChar(iCurSymbolID);
 		++iCurSymbolID;

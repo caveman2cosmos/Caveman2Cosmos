@@ -17,7 +17,7 @@
 			</MapCategoryTypes>
             <Bonus>BONUS_DEER</Bonus>
 			<iCost>624</iCost>
-			<iConquestProb>0</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 			<iMinLatitude>45</iMinLatitude>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iAsset>4</iAsset>

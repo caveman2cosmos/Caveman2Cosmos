@@ -29,7 +29,7 @@
 			<iCost>1860</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<iConquestProb>0</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>100.0</fVisibilityPriority>
