@@ -1124,33 +1124,33 @@ public:
 /************************************************************************************************/
 /* MODULES                                 END                                                  */
 /************************************************************************************************/
-	int getMAX_CIV_PLAYERS() const;
-	int getMAX_PC_PLAYERS() const;
-	int getMAX_PLAYERS() const;
-	int getMAX_PC_TEAMS() const;
-	int getMAX_TEAMS() const;
-	int getBARBARIAN_PLAYER() const;
-	int getBARBARIAN_TEAM() const;
-	int getNEANDERTHAL_PLAYER() const;
-	int getNEANDERTHAL_TEAM() const;
-	int getBEAST_PLAYER() const;
-	int getBEAST_TEAM() const;
-	int getPREDATOR_PLAYER() const;
-	int getPREDATOR_TEAM() const;
-	int getPREY_PLAYER() const;
-	int getPREY_TEAM() const;
-	int getINSECT_PLAYER() const;
-	int getINSECT_TEAM() const;
-	int getNPC4_PLAYER() const;
-	int getNPC4_TEAM() const;
-	int getNPC3_PLAYER() const;
-	int getNPC3_TEAM() const;
-	int getNPC2_PLAYER() const;
-	int getNPC2_TEAM() const;
-	int getNPC1_PLAYER() const;
-	int getNPC1_TEAM() const;
-	int getNPC0_PLAYER() const;
-	int getNPC0_TEAM() const;
+	int getMAX_CIV_PLAYERS() const		{ return MAX_PC_PLAYERS; }
+	int getMAX_PC_PLAYERS() const		{ return MAX_PC_PLAYERS; }
+	int getMAX_PLAYERS() const			{ return MAX_PLAYERS; }
+	int getMAX_PC_TEAMS() const			{ return MAX_PC_TEAMS; }
+	int getMAX_TEAMS() const			{ return MAX_TEAMS; }
+	int getBARBARIAN_PLAYER() const		{ return BARBARIAN_PLAYER; }
+	int getBARBARIAN_TEAM() const		{ return BARBARIAN_TEAM; }
+	int getNEANDERTHAL_PLAYER() const	{ return NEANDERTHAL_PLAYER; }
+	int getNEANDERTHAL_TEAM() const		{ return NEANDERTHAL_TEAM; }
+	int getBEAST_PLAYER() const			{ return BEAST_PLAYER; }
+	int getBEAST_TEAM() const			{ return BEAST_TEAM; }
+	int getPREDATOR_PLAYER() const		{ return PREDATOR_PLAYER; }
+	int getPREDATOR_TEAM() const		{ return PREDATOR_TEAM; }
+	int getPREY_PLAYER() const			{ return PREY_PLAYER; }
+	int getPREY_TEAM() const			{ return PREY_TEAM; }
+	int getINSECT_PLAYER() const		{ return INSECT_PLAYER; }
+	int getINSECT_TEAM() const			{ return INSECT_TEAM; }
+	int getNPC4_PLAYER() const			{ return NPC4_PLAYER; }
+	int getNPC4_TEAM() const			{ return NPC4_TEAM; }
+	int getNPC3_PLAYER() const			{ return NPC3_PLAYER; }
+	int getNPC3_TEAM() const			{ return NPC3_TEAM; }
+	int getNPC2_PLAYER() const			{ return NPC2_PLAYER; }
+	int getNPC2_TEAM() const			{ return NPC2_TEAM; }
+	int getNPC1_PLAYER() const			{ return NPC1_PLAYER; }
+	int getNPC1_TEAM() const			{ return NPC1_TEAM; }
+	int getNPC0_PLAYER() const			{ return NPC0_PLAYER; }
+	int getNPC0_TEAM() const			{ return NPC0_TEAM; }
 
 	// ***** END EXPOSED TO PYTHON *****
 
