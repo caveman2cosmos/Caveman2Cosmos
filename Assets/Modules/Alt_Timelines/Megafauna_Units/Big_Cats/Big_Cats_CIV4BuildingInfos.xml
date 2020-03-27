@@ -116,7 +116,6 @@
 			<Strategy>TXT_KEY_BUILDING_BIG_CAT_TRAINER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BIG_CAT_TRAINER_EFFECT</ArtDefineTag>
-			<iCost>-1</iCost>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
@@ -139,7 +138,6 @@
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
-			<iCost>-1</iCost>
 			<iConquestProb>25</iConquestProb>
 			<iAsset>2</iAsset>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>

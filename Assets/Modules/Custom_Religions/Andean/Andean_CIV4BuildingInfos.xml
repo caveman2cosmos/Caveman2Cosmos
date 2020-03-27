@@ -266,7 +266,6 @@
 			<ReligionType>RELIGION_ANDEANISM</ReligionType>
 			<HolyCity>RELIGION_ANDEANISM</HolyCity>
 			<!-- Construction cost -->
-			<iCost>-1</iCost>
 			<!-- Special Yield and Commerce modifiers -->
 			<ObsoleteSafeCommerceChanges>
 				<iCommerce>2</iCommerce>

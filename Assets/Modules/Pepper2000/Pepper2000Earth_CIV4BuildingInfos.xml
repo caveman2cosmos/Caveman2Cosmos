@@ -6205,7 +6205,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_PRIME_DIRECTIVE_EFFECT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ASTROIMPERIALISM</PrereqTech>
-			<iCost>-1</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_CISLUNAR</MapCategoryType>
@@ -22991,7 +22990,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ACCELERATED_GERMINATION</PrereqTech>
-			<iCost>-1</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>20</iCommerce>
@@ -23067,7 +23065,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PLANETARY_EXPLORATION</PrereqTech>
-			<iCost>-1</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>12</iCommerce>
@@ -23101,7 +23098,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ION_PROPULSION</PrereqTech>
-			<iCost>-1</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>18</iCommerce>
@@ -23134,7 +23130,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ION_PROPULSION</PrereqTech>
-			<iCost>-1</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>18</iCommerce>
@@ -23167,7 +23162,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PLANETARY_EXPLORATION</PrereqTech>
-			<iCost>-1</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
@@ -23201,7 +23195,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PLANETARY_EXPLORATION</PrereqTech>
-			<iCost>-1</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>8</iCommerce>
@@ -23235,7 +23228,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PLANETARY_EXPLORATION</PrereqTech>
-			<iCost>-1</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
@@ -23276,7 +23268,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SPACE_STATIONS</PrereqTech>
-			<iCost>-1</iCost>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
 				<iCommerce>8</iCommerce>
@@ -23310,7 +23301,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ASTRO_ENVIRONMENTAL_SYSTEMS</PrereqTech>
-			<iCost>-1</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
@@ -23341,7 +23331,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SATELLITES</PrereqTech>
-			<iCost>-1</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
@@ -23371,7 +23360,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_PLANETARY_EXPLORATION</PrereqTech>
-			<iCost>-1</iCost>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 				<iCommerce>8</iCommerce>
@@ -23412,7 +23400,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SPACE_STATIONS</PrereqTech>
-			<iCost>-1</iCost>
 			<CommerceChanges>
 				<iCommerce>-3</iCommerce>
 				<iCommerce>10</iCommerce>
@@ -23444,7 +23431,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SOLAR_PROPULSION</PrereqTech>
-			<iCost>-1</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>18</iCommerce>
@@ -23476,7 +23462,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_JOVIAN_EXPLORATION</PrereqTech>
-			<iCost>-1</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>15</iCommerce>
@@ -23509,7 +23494,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ASTROGATION_CONSTELLATION</PrereqTech>
-			<iCost>-1</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>20</iCommerce>
@@ -23571,7 +23555,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_JOVIAN_EXPLORATION</PrereqTech>
-			<iCost>-1</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>15</iCommerce>
@@ -23604,7 +23587,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_EXOPLANET_DISCOVERY</PrereqTech>
-			<iCost>-1</iCost>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 				<iCommerce>10</iCommerce>
@@ -23698,7 +23680,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MAGNETIC_SAILS</PrereqTech>
-			<iCost>-1</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>25</iCommerce>
@@ -23765,7 +23746,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_EXOPLANET_DISCOVERY</PrereqTech>
-			<iCost>-1</iCost>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 				<iCommerce>20</iCommerce>
@@ -23842,7 +23822,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SUPERSTRING_THEORY</PrereqTech>
-			<iCost>-1</iCost>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 				<iCommerce>25</iCommerce>
@@ -23875,7 +23854,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ASTEROID_BELT_PROBES</PrereqTech>
-			<iCost>-1</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
@@ -23929,7 +23907,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CLIMATE_MODELS</PrereqTech>
-			<iCost>-1</iCost>
 			<ObsoleteTech>TECH_WEATHER_CONTROL</ObsoleteTech>
 			<CommerceChanges>
 				<iCommerce>-5</iCommerce>
@@ -24142,7 +24119,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_JOVIAN_EXPLORATION</PrereqTech>
-			<iCost>-1</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>50</iCommerce>
@@ -24215,7 +24191,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COMMERCIAL_SPACEFLIGHT</PrereqTech>
-			<iCost>-1</iCost>
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
@@ -24246,7 +24221,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ASTEROID_BELT_PROBES</PrereqTech>
-			<iCost>-1</iCost>
 			<CommerceChanges>
 				<iCommerce>-100</iCommerce>
 				<iCommerce>50</iCommerce>
@@ -24267,7 +24241,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LUNAR_EXPLORATION</PrereqTech>
-			<iCost>-1</iCost>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 				<iCommerce>40</iCommerce>
@@ -24289,7 +24262,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MACHINE_LEARNING</PrereqTech>
-			<iCost>-1</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>50</iCommerce>
@@ -24315,7 +24287,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_JOVIAN_EXPLORATION</PrereqTech>
-			<iCost>-1</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>60</iCommerce>
@@ -24348,7 +24319,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_JOVIAN_EXPLORATION</PrereqTech>
-			<iCost>-1</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>60</iCommerce>
@@ -24407,7 +24377,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SPACE_TOURISM</PrereqTech>
-			<iCost>-1</iCost>
 			<ObsoleteTech>TECH_FUSION_SPACECRAFT</ObsoleteTech>
 			<CommerceChanges>
 				<iCommerce>25</iCommerce>
@@ -24513,7 +24482,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ASTEROID_MINING</PrereqTech>
-			<iCost>-1</iCost>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>50</iYield>
@@ -24554,7 +24522,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ASTEROID_MINING</PrereqTech>
-			<iCost>-1</iCost>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>20</iCommerce>
@@ -24707,7 +24674,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ACOUSTOPHORESIS</PrereqTech>
-			<iCost>-1</iCost>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
@@ -25083,7 +25049,6 @@
 			</MapCategoryTypes>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_COMPREHENSIVE_CYBERNETICS</PrereqTech>
-			<iCost>-1</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -25139,7 +25104,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_COMMUNICATION_NETWORKS</PrereqTech>
-			<iCost>-1</iCost>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WEARABLE_COMPUTERS</PrereqTech>
@@ -25198,7 +25162,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ADVANCED_ROCKETRY</PrereqTech>
-			<iCost>-1</iCost>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MITHRIL_IMPORTER</Type>
@@ -25410,7 +25373,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SOLAR_PROPULSION</PrereqTech>
-			<iCost>-1</iCost>
 			<CommerceChanges>
 				<iCommerce>-50</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -25448,7 +25410,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SOLAR_PROPULSION</PrereqTech>
-			<iCost>-1</iCost>
 			<CommerceChanges>
 				<iCommerce>-50</iCommerce>
 				<iCommerce>10</iCommerce>
@@ -25484,7 +25445,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_ASTEROID_BELT_PROBES</PrereqTech>
-			<iCost>-1</iCost>
 			<CommerceChanges>
 				<iCommerce>-100</iCommerce>
 				<iCommerce>10</iCommerce>
