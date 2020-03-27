@@ -7749,18 +7749,19 @@ def doMinorFire(argsList):
 		if CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1 or isLimitedWonder(j):
 			continue
 		CvBuilding = GC.getBuildingInfo(j)
-		if CvBuilding.getProductionCost() > 0 and not CvBuilding.isNukeImmune() and not CvBuilding.isAutoBuild():
+		if CvBuilding.isNukeImmune() or CvBuilding.isAutoBuild():
+			continue
 
-			for k in xrange(GC.getNumBuildingInfos()):
-				if CyCity.getNumRealBuilding(k) > 0 and CvBuilding.isReplaceBuilding(k):
-					break
-			else:
-				randNum = GAME.getSorenRandNum(iFlammRand, "Buildings destroyed by fire.")
-				iFlamm = CvBuilding.getProperties().getValueByProperty(GC.getInfoTypeForString("PROPERTY_FLAMMABILITY"))
-				iFlammScore = iFlamm + randNum
-				if iFlammScore > iHighFlamm:
-					iHighFlamm = iFlammScore
-					iBurnBuilding = j
+		for k in xrange(GC.getNumBuildingInfos()):
+			if CyCity.getNumRealBuilding(k) > 0 and CvBuilding.isReplaceBuilding(k):
+				break
+		else:
+			randNum = GAME.getSorenRandNum(iFlammRand, "Buildings destroyed by fire.")
+			iFlamm = CvBuilding.getProperties().getValueByProperty(GC.getInfoTypeForString("PROPERTY_FLAMMABILITY"))
+			iFlammScore = iFlamm + randNum
+			if iFlammScore > iHighFlamm:
+				iHighFlamm = iFlammScore
+				iBurnBuilding = j
 
 	if iBurnBuilding != -1:
 		szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", (GC.getBuildingInfo(iBurnBuilding).getTextKey(), ))
@@ -7790,18 +7791,19 @@ def doMajorFire(argsList):
 			if CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1 or isLimitedWonder(j):
 				continue
 			CvBuilding = GC.getBuildingInfo(j)
-			if CvBuilding.getProductionCost() > 0 and not CvBuilding.isNukeImmune() and not CvBuilding.isAutoBuild():
+			if CvBuilding.isNukeImmune() or CvBuilding.isAutoBuild():
+				continue
 
-				for k in xrange(GC.getNumBuildingInfos()):
-					if CyCity.getNumRealBuilding(k) > 0 and CvBuilding.isReplaceBuilding(k):
-						break
-				else:
-					randNum = GAME.getSorenRandNum(iFlammRand, "Buildings destroyed by fire.")
-					iFlamm = CvBuilding.getProperties().getValueByProperty(GC.getInfoTypeForString("PROPERTY_FLAMMABILITY"))
-					iFlammScore = iFlamm + randNum
-					if iFlammScore > iHighFlamm:
-						iHighFlamm = iFlammScore
-						iBurnBuilding = j
+			for k in xrange(GC.getNumBuildingInfos()):
+				if CyCity.getNumRealBuilding(k) > 0 and CvBuilding.isReplaceBuilding(k):
+					break
+			else:
+				randNum = GAME.getSorenRandNum(iFlammRand, "Buildings destroyed by fire.")
+				iFlamm = CvBuilding.getProperties().getValueByProperty(GC.getInfoTypeForString("PROPERTY_FLAMMABILITY"))
+				iFlammScore = iFlamm + randNum
+				if iFlammScore > iHighFlamm:
+					iHighFlamm = iFlammScore
+					iBurnBuilding = j
 		if iBurnBuilding != -1:
 			szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", (GC.getBuildingInfo(iBurnBuilding).getTextKey(), ))
 			CyInterface().addMessage(kTriggeredData.ePlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, GC.getBuildingInfo(iBurnBuilding).getButton(), GC.getInfoTypeForString("COLOR_RED"), CyCity.getX(), CyCity.getY(), True, True)
@@ -7841,18 +7843,19 @@ def doCatastrophicFire(argsList):
 			if CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1 or isLimitedWonder(j):
 				continue
 			CvBuilding = GC.getBuildingInfo(j)
-			if CvBuilding.getProductionCost() > 0 and not CvBuilding.isNukeImmune() and not CvBuilding.isAutoBuild():
+			if CvBuilding.isNukeImmune() or CvBuilding.isAutoBuild():
+				continue
 
-				for k in xrange(GC.getNumBuildingInfos()):
-					if CyCity.getNumRealBuilding(k) > 0 and CvBuilding.isReplaceBuilding(k):
-						break
-				else:
-					randNum = GAME.getSorenRandNum(iFlammRand, "Buildings destroyed by fire.")
-					iFlamm = CvBuilding.getProperties().getValueByProperty(iProp)
-					iFlammScore = iFlamm + randNum
-					if iFlammScore > iHighFlamm:
-						iHighFlamm = iFlammScore
-						iBurnBuilding = j
+			for k in xrange(GC.getNumBuildingInfos()):
+				if CyCity.getNumRealBuilding(k) > 0 and CvBuilding.isReplaceBuilding(k):
+					break
+			else:
+				randNum = GAME.getSorenRandNum(iFlammRand, "Buildings destroyed by fire.")
+				iFlamm = CvBuilding.getProperties().getValueByProperty(iProp)
+				iFlammScore = iFlamm + randNum
+				if iFlammScore > iHighFlamm:
+					iHighFlamm = iFlammScore
+					iBurnBuilding = j
 		if iBurnBuilding != -1:
 			szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", (GC.getBuildingInfo(iBurnBuilding).getTextKey(),))
 			CyInterface().addMessage(kTriggeredData.ePlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, GC.getBuildingInfo(iBurnBuilding).getButton(), GC.getInfoTypeForString("COLOR_RED"), CyCity.getX(), CyCity.getY(), True, True)
