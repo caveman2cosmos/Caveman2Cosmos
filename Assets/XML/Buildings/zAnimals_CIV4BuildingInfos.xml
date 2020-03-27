@@ -3,108 +3,77 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<Type>BUILDING_ANIMAL_MYTH_REQUIRE</Type>
-			<Description>TXT_KEY_BUILDING_ANIMAL_MYTH_REQUIRE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_REQUIRE_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DART_FROG_MYTH</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_ANIMAL_MYTH_REQUIRE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_REQUIRE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
-			<!--PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_COMMUNITY_DISCUSSIONS</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_KNOWLEDGE_INHERITANCE</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_LIBRARY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-			</PrereqOrBuildings-->
 			<bAutoBuild>1</bAutoBuild>
+			<bNukeImmune>1</bNukeImmune>
+			<ArtDefineTag>ART_DEF_BUILDING_DART_FROG_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANIMAL_STORY_REQUIRE</Type>
-			<Description>TXT_KEY_BUILDING_ANIMAL_STORY_REQUIRE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_REQUIRE_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DART_FROG_MYTH</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_ANIMAL_STORY_REQUIRE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_REQUIRE_PEDIA</Civilopedia>
 			<PrereqTech>TECH_WRITING</PrereqTech>
-			<!--PrereqOrBuildings>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_SCHOOL_OF_SCRIBES</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-				<PrereqOrBuilding>
-					<BuildingType>BUILDING_LIBRARY</BuildingType>
-					<bPrereqBuilding>1</bPrereqBuilding>
-				</PrereqOrBuilding>
-			</PrereqOrBuildings-->
 			<bAutoBuild>1</bAutoBuild>
+			<bNukeImmune>1</bNukeImmune>
+			<ArtDefineTag>ART_DEF_BUILDING_DART_FROG_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ANIMAL_TAMER_COMPLEX</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ANIMAL_TAMER_COMPLEX</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TAMER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_TAMER_COMPLEX_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TAMER_COMPLEX</ArtDefineTag>
+			<ConstructSound>AS2D_BUILD_STABLE</ConstructSound>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>176</iCost>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<iAsset>4</iAsset>
-			<iPower>2</iPower>
-			<ConstructSound>AS2D_BUILD_STABLE</ConstructSound>
+			<iAIWeight>1</iAIWeight>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>7</iFlavor>
+					<iFlavor>2</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>5</iFlavor>
+					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iAIWeight>1</iAIWeight>
+			<ArtDefineTag>ART_DEF_BUILDING_ANIMAL_TAMER_COMPLEX</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COD_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_COD_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_COD_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_COD_MYTH_EFFECT</BuildingMustNotHave>
+					<bPrereqNot>1</bPrereqNot>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 			<FreeBuilding>BUILDING_COD_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_COMMERCIAL_WHALING</PrereqTech>
@@ -115,59 +84,50 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_COD_MYTH_EFFECT</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>2</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_COD_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COD_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_COD_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_COD_MYTH</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_COD_MYTH_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_COD_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COD_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_COD_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_COD_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COD_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_STORY_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingType>BUILDING_COD_STORIES_EFFECT</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings>
+			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -175,23 +135,27 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_COD_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COD_STORIES</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_COD_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_COD_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
-			<FreeBuilding>BUILDING_COD_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COD_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -202,12 +166,7 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
+			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -215,28 +174,27 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_COD_STORIES_EFFECT</FreeBuilding>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_COD_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_COD_STORIES_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_COD_STORIES_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_COD_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
+			<Description>TXT_KEY_BUILDING_COD_STORIES_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Strategy>
+			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -244,33 +202,34 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_COD_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRAB_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_CRAB_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CRAB_MYTH</ArtDefineTag>
 			<bWater>1</bWater>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_CRAB_MYTH_EFFECT</BuildingMustNotHave>
+					<bPrereqNot>1</bPrereqNot>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 			<FreeBuilding>BUILDING_CRAB_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_MARINE_BIOLOGY</PrereqTech>
@@ -281,59 +240,50 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_CRAB_MYTH_EFFECT</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>2</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_CRAB_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRAB_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_CRAB_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CRAB_MYTH</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_CRAB_MYTH_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_CRAB_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRAB_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_CRAB_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CRAB_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CRAB_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_STORY_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingType>BUILDING_CRAB_STORIES_EFFECT</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings>
+			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -341,23 +291,27 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_CRAB_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRAB_STORIES</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_CRAB_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CRAB_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
-			<FreeBuilding>BUILDING_CRAB_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CRAB_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -368,12 +322,7 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
+			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -381,28 +330,27 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_CRAB_STORIES_EFFECT</FreeBuilding>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_CRAB_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CRAB_STORIES_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_CRAB_STORIES_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CRAB_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
+			<Description>TXT_KEY_BUILDING_CRAB_STORIES_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Strategy>
+			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -410,32 +358,33 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_CRAB_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DART_FROG_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_DART_FROG_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DART_FROG_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_DART_FROG_MYTH_EFFECT</BuildingMustNotHave>
+					<bPrereqNot>1</bPrereqNot>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 			<FreeBuilding>BUILDING_DART_FROG_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_WRITING</PrereqTech>
@@ -446,59 +395,50 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_DART_FROG_MYTH_EFFECT</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>2</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_DART_FROG_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DART_FROG_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_DART_FROG_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DART_FROG_MYTH</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_DART_FROG_MYTH_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_DART_FROG_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DART_FROG_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_DART_FROG_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DART_FROG_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DART_FROG_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_STORY_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingType>BUILDING_DART_FROG_STORIES_EFFECT</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -506,23 +446,27 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_DART_FROG_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DART_FROG_STORIES</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_DART_FROG_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DART_FROG_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
-			<FreeBuilding>BUILDING_DART_FROG_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DART_FROG_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -533,12 +477,7 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -546,28 +485,27 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_DART_FROG_STORIES_EFFECT</FreeBuilding>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_DART_FROG_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DART_FROG_STORIES_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_DART_FROG_STORIES_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DART_FROG_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
+			<Description>TXT_KEY_BUILDING_DART_FROG_STORIES_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Strategy>
+			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -575,33 +513,34 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_DART_FROG_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RAY_EAGLE_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_RAY_EAGLE_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_RAY_EAGLE_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_RAY_EAGLE_MYTH_EFFECT</BuildingMustNotHave>
+					<bPrereqNot>1</bPrereqNot>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
 			<FreeBuilding>BUILDING_RAY_EAGLE_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_COMMERCIAL_WHALING</PrereqTech>
@@ -613,59 +552,50 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
-			</PrereqInCityBuildings>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_RAY_EAGLE_MYTH_EFFECT</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>2</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_RAY_EAGLE_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RAY_EAGLE_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_RAY_EAGLE_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_RAY_EAGLE_MYTH</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_RAY_EAGLE_MYTH_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_RAY_EAGLE_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RAY_EAGLE_STORY</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_RAY_EAGLE_STORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_RAY_EAGLE_STORY</ArtDefineTag>
-			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_RAY_EAGLE_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_STORY_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingType>BUILDING_RAY_EAGLE_STORIES_EFFECT</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings>
+			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -673,23 +603,27 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_RAY_EAGLE_STORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RAY_EAGLE_STORIES</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_RAY_EAGLE_STORIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_RAY_EAGLE_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
-			<FreeBuilding>BUILDING_RAY_EAGLE_STORIES_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_RAY_EAGLE_STORY</BuildingType>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
@@ -700,12 +634,7 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
+			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -713,28 +642,27 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<FreeBuilding>BUILDING_RAY_EAGLE_STORIES_EFFECT</FreeBuilding>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_RAY_EAGLE_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_RAY_EAGLE_STORIES_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_RAY_EAGLE_STORIES_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_RAY_EAGLE_STORIES</ArtDefineTag>
-			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_LIBRARY</ConstructSound>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
+			<Description>TXT_KEY_BUILDING_RAY_EAGLE_STORIES_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_STORIES_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Strategy>
+			<ObsoleteTech>TECH_MARINE_BIOLOGY</ObsoleteTech>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -742,6 +670,9 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_RAY_EAGLE_STORIES</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MACKEREL_MYTH</Type>
@@ -761,7 +692,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -926,7 +856,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -1092,7 +1021,6 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -1260,7 +1188,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -1425,7 +1352,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -1590,7 +1516,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -1755,7 +1680,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -1922,7 +1846,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -2134,7 +2057,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -2299,7 +2221,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -2464,7 +2385,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -2638,7 +2558,6 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -2689,7 +2608,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -2854,7 +2772,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -3019,7 +2936,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -3184,7 +3100,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -3349,7 +3264,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -3514,7 +3428,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -3679,7 +3592,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -3844,7 +3756,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -4009,7 +3920,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -4174,7 +4084,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -4339,7 +4248,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -4504,7 +4412,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -4669,7 +4576,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -4834,7 +4740,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -4999,7 +4904,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -5164,7 +5068,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -5329,7 +5232,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -5503,7 +5405,6 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -5554,7 +5455,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -5719,7 +5619,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -5884,7 +5783,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -6049,7 +5947,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -6223,7 +6120,6 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -6274,7 +6170,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -6439,7 +6334,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -6604,7 +6498,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -6769,7 +6662,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -6934,7 +6826,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -7099,7 +6990,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -7264,7 +7154,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -7429,7 +7318,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -7594,7 +7482,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -7759,7 +7646,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -7933,7 +7819,6 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -7984,7 +7869,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -8149,7 +8033,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -8314,7 +8197,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -8479,7 +8361,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -8644,7 +8525,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -8809,7 +8689,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -8974,7 +8853,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -9148,7 +9026,6 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -9199,7 +9076,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -9364,7 +9240,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -9529,7 +9404,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -9694,7 +9568,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -9860,7 +9733,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -10034,7 +9906,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -10199,7 +10070,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -10364,7 +10234,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -10529,7 +10398,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -10694,7 +10562,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -10859,7 +10726,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -11024,7 +10890,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -11189,7 +11054,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -11354,7 +11218,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -11700,7 +11563,6 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -11932,7 +11794,6 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -11985,7 +11846,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -12153,7 +12013,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -12318,7 +12177,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -12513,7 +12371,6 @@
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -12561,7 +12418,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -12735,7 +12591,6 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -12786,7 +12641,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -12951,7 +12805,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -13116,7 +12969,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -13281,7 +13133,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -13446,7 +13297,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -13631,7 +13481,6 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -13682,7 +13531,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -13847,7 +13695,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -14014,7 +13861,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -14202,7 +14048,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -14367,7 +14212,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -14532,7 +14376,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -14697,7 +14540,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -14862,7 +14704,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -15027,7 +14868,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -15194,7 +15034,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -15374,7 +15213,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -15539,7 +15377,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -15704,7 +15541,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -15869,7 +15705,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -16048,7 +15883,6 @@
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -16081,7 +15915,6 @@
 			<iConquestProb>25</iConquestProb>
 			<iAsset>1</iAsset>
 			<iPower>1</iPower>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_CIVILIAN</UnitCombatType>
@@ -16122,7 +15955,6 @@
 			</MapCategoryTypes>
 			<iConquestProb>25</iConquestProb>
 			<iAsset>2</iAsset>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 			</PrereqInCityBuildings>
@@ -16171,7 +16003,6 @@
 			</MapCategoryTypes>
 			<iConquestProb>25</iConquestProb>
 			<iAsset>2</iAsset>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 			</PrereqInCityBuildings>
@@ -16207,7 +16038,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</ObsoleteSafeCommerceChanges>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_CARNIVAL</BuildingType>
@@ -16253,7 +16083,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</ObsoleteSafeCommerceChanges>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
@@ -16313,7 +16142,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</ObsoleteSafeCommerceChanges>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
@@ -16373,7 +16201,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</ObsoleteSafeCommerceChanges>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
@@ -16455,7 +16282,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</ObsoleteSafeCommerceChanges>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 			</PrereqInCityBuildings>
@@ -16840,7 +16666,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</ObsoleteSafeCommerceChanges>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 			</PrereqInCityBuildings>
@@ -16903,7 +16728,6 @@
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_ANIMAL</UnitCombatType>
@@ -17019,7 +16843,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</ObsoleteSafeCommerceChanges>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_CARNIVAL</BuildingType>
@@ -17103,7 +16926,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</ObsoleteSafeCommerceChanges>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GOVENORS_PETS</BuildingType>
 			</PrereqInCityBuildings>
@@ -17147,7 +16969,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</ObsoleteSafeCommerceChanges>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_CULTURE</FlavorType>
@@ -17259,7 +17080,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</ObsoleteSafeCommerceChanges>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
@@ -17467,7 +17287,6 @@
 			<iAsset>1</iAsset>
 			<iPower>4</iPower>
 			<fVisibilityPriority>10</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
@@ -17572,7 +17391,6 @@
 			</MapCategoryTypes>
 			<iConquestProb>25</iConquestProb>
 			<iAsset>2</iAsset>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
@@ -17609,7 +17427,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</ObsoleteSafeCommerceChanges>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_ZOO</BuildingType>
@@ -17712,7 +17529,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</ObsoleteSafeCommerceChanges>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_CARNIVAL</BuildingType>
@@ -17799,7 +17615,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</ObsoleteSafeCommerceChanges>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_CARNIVAL</BuildingType>
@@ -17847,7 +17662,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</ObsoleteSafeCommerceChanges>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_CARNIVAL</BuildingType>
@@ -17979,7 +17793,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</ObsoleteSafeCommerceChanges>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
@@ -18032,7 +17845,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</ObsoleteSafeCommerceChanges>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_HUNTER</UnitCombatType>
@@ -18123,7 +17935,6 @@
 			</CommerceChanges>
 			<iConquestProb>75</iConquestProb>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -18171,7 +17982,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_CULTURE</FlavorType>
@@ -18226,7 +18036,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</ObsoleteSafeCommerceChanges>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CARNIVAL</BuildingType>
 			</PrereqInCityBuildings>
@@ -18256,7 +18065,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</ObsoleteSafeCommerceChanges>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
@@ -18583,7 +18391,6 @@
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<FreeBuilding>BUILDING_MASTER_SEA_HUNTER</FreeBuilding>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
@@ -18607,7 +18414,6 @@
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<FreeBuilding>BUILDING_MASTER_HUNTER_TRADITION</FreeBuilding>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
@@ -18626,7 +18432,6 @@
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<FreeBuilding>BUILDING_ANIMAL_TOTEM</FreeBuilding>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
@@ -18644,7 +18449,6 @@
 			</MapCategoryTypes>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<FreeBuilding>BUILDING_NAVAL_TOTEM</FreeBuilding>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNeverCapture>1</bNeverCapture>
@@ -18667,7 +18471,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -18838,7 +18641,6 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -18889,7 +18691,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -19051,7 +18852,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -19213,7 +19013,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -19375,7 +19174,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -19537,7 +19335,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -19699,7 +19496,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -19861,7 +19657,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -20023,7 +19818,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -20185,7 +19979,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -20348,7 +20141,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LEVIATHAN_MYTH_EFFECT</BuildingType>
 			</PrereqInCityBuildings>
@@ -20513,7 +20305,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -20675,7 +20466,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -20837,7 +20627,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -20999,7 +20788,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -21161,7 +20949,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -21323,7 +21110,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -21485,7 +21271,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -21647,7 +21432,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -21809,7 +21593,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -21971,7 +21754,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -22133,7 +21915,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -22298,7 +22079,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -22463,7 +22243,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -22628,7 +22407,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -22795,7 +22573,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -22962,7 +22739,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -23129,7 +22905,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -23297,7 +23072,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
@@ -23465,7 +23239,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -23631,7 +23404,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
@@ -23797,7 +23569,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
@@ -23963,7 +23734,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
@@ -24129,7 +23899,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMAL_MYTH_REQUIRE</BuildingType>
 			</PrereqInCityBuildings>
@@ -24295,7 +24064,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LEVIATHAN_MYTH_EFFECT</BuildingType>
 			</PrereqInCityBuildings>
@@ -24461,7 +24229,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LEVIATHAN_MYTH_EFFECT</BuildingType>
 			</PrereqInCityBuildings>
@@ -24626,7 +24393,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -24791,7 +24557,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -24956,7 +24721,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -25121,7 +24885,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -25287,7 +25050,6 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -25449,7 +25211,6 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -25611,7 +25372,6 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -25773,7 +25533,6 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -25935,7 +25694,6 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -26097,7 +25855,6 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -26259,7 +26016,6 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -26632,7 +26388,6 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -26683,7 +26438,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
 			</PrereqInCityBuildings>
@@ -26725,7 +26479,6 @@
 				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
 			</PrereqInCityBuildings>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -26780,7 +26533,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LEVIATHAN_MYTH_EFFECT</BuildingType>
 			</PrereqInCityBuildings>
@@ -26836,7 +26588,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -27001,7 +26752,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -27166,7 +26916,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -27331,7 +27080,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -27496,7 +27244,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -27661,7 +27408,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -27826,7 +27572,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -27991,7 +27736,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -28157,7 +27901,6 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -28324,7 +28067,6 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -28491,7 +28233,6 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -28658,7 +28399,6 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -28825,7 +28565,6 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -28992,7 +28731,6 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -29159,7 +28897,6 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -29326,7 +29063,6 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -29493,7 +29229,6 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -29660,7 +29395,6 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -29827,7 +29561,6 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -29994,7 +29727,6 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -30160,7 +29892,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -30206,7 +29937,6 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -30373,7 +30103,6 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -30540,7 +30269,6 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -30706,7 +30434,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -30871,7 +30598,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -31036,7 +30762,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -31202,7 +30927,6 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -31370,7 +31094,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -31547,7 +31270,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -31727,7 +31449,6 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -31894,7 +31615,6 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -32061,7 +31781,6 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -32228,7 +31947,6 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -32395,7 +32113,6 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -32562,7 +32279,6 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -32737,7 +32453,6 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -32789,7 +32504,6 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -32956,7 +32670,6 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -33123,7 +32836,6 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -33301,7 +33013,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -33466,7 +33177,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -33633,7 +33343,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -33817,7 +33526,6 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -34090,7 +33798,6 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -34252,7 +33959,6 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -34414,7 +34120,6 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
@@ -34576,7 +34281,6 @@
 				<iCommerce>0</iCommerce>
 			</CommerceChanges>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
