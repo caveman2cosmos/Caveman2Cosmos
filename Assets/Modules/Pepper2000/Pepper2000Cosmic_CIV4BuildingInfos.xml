@@ -2628,7 +2628,7 @@
 			<CommerceChanges>
 				<iCommerce>1000</iCommerce>
 			</CommerceChanges>
-			<FreeBuilding>BUILDING_COSMIC_EXPANSION_POWER_PLANT</FreeBuilding>
+			<FreeBuilding>BUILDING_COSMIC_EXPANSION_POWER_PLANT_EFFECT</FreeBuilding>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GALACTIC_SUPERCLUSTER_COLONY</BuildingType>
 			</PrereqInCityBuildings>
