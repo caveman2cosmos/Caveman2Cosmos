@@ -467,11 +467,10 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_iStoreExeSettingsCorporationInfo(0)
 	, m_iStoreExeSettingsBonusInfo(0)
 	, m_bSignsCleared(false)
+#define ADD_TO_CONSTRUCTOR(VAR) \
+	, m_i##VAR##(0)
+	DO_FOR_EACH_INT_GLOBAL_DEFINE(ADD_TO_CONSTRUCTOR)
 {
-	for (int i = 0; i < NUM_INT_GLOBAL_DEFINES; i++)
-	{
-		m_GlobalDefinesINT.push_back(0);
-	}
 }
 
 cvInternalGlobals::~cvInternalGlobals()
@@ -3729,7 +3728,7 @@ void cvInternalGlobals::cacheGlobals()
 	strcpy(gVersionString, getDefineSTRING("C2C_VERSION"));
 
 #define CACHE_INT_GLOBAL_DEFINE(VAR) \
-	m_GlobalDefinesINT[VAR] = getDefineINT(#VAR);
+	m_i##VAR = getDefineINT(#VAR);
 	DO_FOR_EACH_INT_GLOBAL_DEFINE(CACHE_INT_GLOBAL_DEFINE)
 
 	/************************************************************************************************/

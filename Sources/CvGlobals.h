@@ -567,6 +567,10 @@ public:
 
 	void updateReplacements();
 
+#define DECLARE_GET_METHOD(VAR) \
+	int get##VAR() const { return m_i##VAR; }
+	DO_FOR_EACH_INT_GLOBAL_DEFINE(DECLARE_GET_METHOD)
+
 	int getSCORE_FREE_PERCENT() const;
 	int getSCORE_POPULATION_FACTOR() const;
 	int getSCORE_LAND_FACTOR() const;
@@ -947,8 +951,6 @@ public:
 
 	FVariableSystem* getDefinesVarSystem() const;
 	void cacheGlobals();
-
-	inline int getDefineINT(GlobalDefineINT var) const	{ return m_GlobalDefinesINT[var]; }
 
 	// ***** EXPOSED TO PYTHON *****
 /************************************************************************************************/
@@ -1381,8 +1383,6 @@ protected:
 	typedef std::map<int*,std::pair<CvString,CvString> > DelayedResolutionMap;
 	DelayedResolutionMap m_delayedResolutionMap;
 
-	std::vector<int> m_GlobalDefinesINT;
-
 	std::vector<CvColorInfo*> m_paColorInfo;
 	std::vector<CvPlayerColorInfo*> m_paPlayerColorInfo;
 	std::vector<CvAdvisorInfo*> m_paAdvisorInfo;
@@ -1592,6 +1592,10 @@ protected:
 	//////////////////////////////////////////////////////////////////////////
 
 	FVariableSystem* m_VarSystem;
+
+#define DECLARE_MEMBER_VAR(VAR) \
+	int m_i##VAR##;
+	DO_FOR_EACH_INT_GLOBAL_DEFINE(DECLARE_MEMBER_VAR)
 
 /************************************************************************************************/
 /* Mod Globals    Start                          09/13/10                           phungus420  */
