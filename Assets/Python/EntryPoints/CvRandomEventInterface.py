@@ -7746,9 +7746,10 @@ def doMinorFire(argsList):
 	iBurnBuilding = -1
 	iHighFlamm = 0
 	for j in xrange(GC.getNumBuildingInfos()):
-		if CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1: continue
+		if CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1 or isLimitedWonder(j):
+			continue
 		CvBuilding = GC.getBuildingInfo(j)
-		if CvBuilding.getProductionCost() > 0 and not isLimitedWonder(j) and not CvBuilding.isAutoBuild():
+		if CvBuilding.getProductionCost() > 0 and not CvBuilding.isNukeImmune() and not CvBuilding.isAutoBuild():
 
 			for k in xrange(GC.getNumBuildingInfos()):
 				if CyCity.getNumRealBuilding(k) > 0 and CvBuilding.isReplaceBuilding(k):
@@ -7786,9 +7787,10 @@ def doMajorFire(argsList):
 		if currFlamm <= iFlammEnd:
 			break
 		for j in xrange(GC.getNumBuildingInfos()):
-			if CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1: continue
+			if CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1 or isLimitedWonder(j):
+				continue
 			CvBuilding = GC.getBuildingInfo(j)
-			if CvBuilding.getProductionCost() > 0 and not CvBuilding.isAutoBuild() and not isLimitedWonder(j):
+			if CvBuilding.getProductionCost() > 0 and not CvBuilding.isNukeImmune() and not CvBuilding.isAutoBuild():
 
 				for k in xrange(GC.getNumBuildingInfos()):
 					if CyCity.getNumRealBuilding(k) > 0 and CvBuilding.isReplaceBuilding(k):
@@ -7836,9 +7838,10 @@ def doCatastrophicFire(argsList):
 		iHighFlamm = 0
 
 		for j in xrange(GC.getNumBuildingInfos()):
-			if CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1: continue
+			if CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1 or isLimitedWonder(j):
+				continue
 			CvBuilding = GC.getBuildingInfo(j)
-			if CvBuilding.getProductionCost() > 0 and not isLimitedWonder(j) and not CvBuilding.isAutoBuild():
+			if CvBuilding.getProductionCost() > 0 and not CvBuilding.isNukeImmune() and not CvBuilding.isAutoBuild():
 
 				for k in xrange(GC.getNumBuildingInfos()):
 					if CyCity.getNumRealBuilding(k) > 0 and CvBuilding.isReplaceBuilding(k):
@@ -7857,28 +7860,13 @@ def doCatastrophicFire(argsList):
 
 
 def getHelpMinorFire(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-
-  szHelp = TRNSLTR.getText("TXT_KEY_EVENT_FIRE_MINOR_1_HELP",())
-
-  return szHelp
+  return TRNSLTR.getText("TXT_KEY_EVENT_FIRE_MINOR_1_HELP",())
 
 def getHelpMajorFire(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-
-  szHelp = TRNSLTR.getText("TXT_KEY_EVENT_FIRE_MAJOR_1_HELP",())
-
-  return szHelp
+  return TRNSLTR.getText("TXT_KEY_EVENT_FIRE_MAJOR_1_HELP",())
 
 def getHelpCatastrophicFire(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-
-  szHelp = TRNSLTR.getText("TXT_KEY_EVENT_FIRE_CATASTROPHIC_1_HELP",())
-
-  return szHelp
+  return TRNSLTR.getText("TXT_KEY_EVENT_FIRE_CATASTROPHIC_1_HELP",())
 
 def canTriggerBlarneyVisit(argsList):
 	if not GAME.getGameTurn() % 50:

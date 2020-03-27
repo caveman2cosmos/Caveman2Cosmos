@@ -396,35 +396,35 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_AFRICAN</BuildingType>
-					<iProductionModifier>-5</iProductionModifier>
+					<iProductionModifier>1</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_EUROPEAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<FreePromoTypes>
@@ -439,7 +439,7 @@
 				</FreePromoType>
 			</FreePromoTypes>
 			<bNukeImmune>1</bNukeImmune>
-			<iConquestProb>70</iConquestProb>
+			<iConquestProb>85</iConquestProb>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_LOCAL_ASIAN</Type>
@@ -462,35 +462,35 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_AFRICAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
-					<iProductionModifier>-5</iProductionModifier>
+					<iProductionModifier>1</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_EUROPEAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<FreePromoTypes>
@@ -505,7 +505,7 @@
 				</FreePromoType>
 			</FreePromoTypes>
 			<bNukeImmune>1</bNukeImmune>
-			<iConquestProb>70</iConquestProb>
+			<iConquestProb>85</iConquestProb>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_LOCAL_EUROPEAN</Type>
@@ -528,35 +528,35 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_AFRICAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_EUROPEAN</BuildingType>
-					<iProductionModifier>-5</iProductionModifier>
+					<iProductionModifier>1</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<FreePromoTypes>
@@ -571,7 +571,7 @@
 				</FreePromoType>
 			</FreePromoTypes>
 			<bNukeImmune>1</bNukeImmune>
-			<iConquestProb>70</iConquestProb>
+			<iConquestProb>85</iConquestProb>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</Type>
@@ -594,35 +594,35 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_AFRICAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_EUROPEAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingType>
-					<iProductionModifier>-5</iProductionModifier>
+					<iProductionModifier>1</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<FreePromoTypes>
@@ -637,7 +637,7 @@
 				</FreePromoType>
 			</FreePromoTypes>
 			<bNukeImmune>1</bNukeImmune>
-			<iConquestProb>70</iConquestProb>
+			<iConquestProb>85</iConquestProb>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_LOCAL_NEANDERTHAL</Type>
@@ -665,35 +665,35 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_AFRICAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_EUROPEAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-					<iProductionModifier>-5</iProductionModifier>
+					<iProductionModifier>1</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<FreePromoTypes>
@@ -708,7 +708,7 @@
 				</FreePromoType>
 			</FreePromoTypes>
 			<bNukeImmune>1</bNukeImmune>
-			<iConquestProb>70</iConquestProb>
+			<iConquestProb>85</iConquestProb>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</Type>
@@ -731,35 +731,35 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_AFRICAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_EUROPEAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</BuildingType>
-					<iProductionModifier>-5</iProductionModifier>
+					<iProductionModifier>1</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<FreePromoTypes>
@@ -774,7 +774,7 @@
 				</FreePromoType>
 			</FreePromoTypes>
 			<bNukeImmune>1</bNukeImmune>
-			<iConquestProb>70</iConquestProb>
+			<iConquestProb>85</iConquestProb>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_LOCAL_OCEANIAN</Type>
@@ -797,35 +797,35 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_AFRICAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_EUROPEAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
-					<iProductionModifier>-5</iProductionModifier>
+					<iProductionModifier>1</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<FreePromoTypes>
@@ -840,7 +840,7 @@
 				</FreePromoType>
 			</FreePromoTypes>
 			<bNukeImmune>1</bNukeImmune>
-			<iConquestProb>70</iConquestProb>
+			<iConquestProb>85</iConquestProb>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</Type>
@@ -863,35 +863,35 @@
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_AFRICAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_ASIAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_EUROPEAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_MIDDLE_EASTERN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_NORTH_AMERICAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_OCEANIAN</BuildingType>
-					<iProductionModifier>-10</iProductionModifier>
+					<iProductionModifier>-3</iProductionModifier>
 				</BuildingProductionModifier>
 				<BuildingProductionModifier>
 					<BuildingType>BUILDING_CULTURE_LOCAL_SOUTH_AMERICAN</BuildingType>
-					<iProductionModifier>-5</iProductionModifier>
+					<iProductionModifier>1</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
 			<FreePromoTypes>
@@ -906,7 +906,7 @@
 				</FreePromoType>
 			</FreePromoTypes>
 			<bNukeImmune>1</bNukeImmune>
-			<iConquestProb>70</iConquestProb>
+			<iConquestProb>85</iConquestProb>
 		</BuildingInfo>
 		<!--||||||||||||||||||
 		||| Native Culture |||
