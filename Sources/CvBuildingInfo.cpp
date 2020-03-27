@@ -43,7 +43,7 @@ m_iFreeAreaBuilding(NO_BUILDING),
 m_iFreePromotion(NO_PROMOTION),
 m_iCivicOption(NO_CIVICOPTION),
 m_iAIWeight(0),
-m_iProductionCost(0),
+m_iProductionCost(-1),
 m_iHurryCostModifier(0),
 m_iHurryAngerModifier(0),
 m_iAdvancedStartCost(100),
@@ -90,16 +90,8 @@ m_iPowerValue(0),
 m_iSpecialBuildingType(NO_SPECIALBUILDING),
 m_iAdvisorType(NO_ADVISOR),
 
-/********************************************************************************/
-/**		REVDCM									2/16/10				phungus420	*/
-/**																				*/
-/**		CanConstruct															*/
-/********************************************************************************/
 m_iPrereqGameOption(NO_GAMEOPTION),
 m_iNotGameOption(NO_GAMEOPTION),
-/********************************************************************************/
-/**		REVDCM									END								*/
-/********************************************************************************/
 
 m_iHolyCity(NO_RELIGION),
 m_iReligionType(NO_RELIGION),
@@ -138,18 +130,10 @@ m_iBombardDefenseModifier(0),
 m_iAllCityDefenseModifier(0),
 m_iEspionageDefenseModifier(0),
 
-/********************************************************************************/
-/**		REVDCM									4/09/10				phungus420	*/
-/**																				*/
-/**		Building Effects														*/
-/********************************************************************************/
 m_iUnitUpgradePriceModifier(0),
 m_iRevIdxLocal(0),
 m_iRevIdxNational(0),
 m_iRevIdxDistanceModifier(0),
-/********************************************************************************/
-/**		REVDCM									END								*/
-/********************************************************************************/
 
 m_iMissionType(NO_MISSION),
 m_iVoteSourceType(NO_VOTESOURCE),
@@ -371,8 +355,7 @@ m_ppaiBonusYieldModifier(NULL)
 ,m_ePropertySpawnUnit(NO_UNIT)
 ,m_ePropertySpawnProperty(NO_PROPERTY)
 ,m_ePromotionLineType(NO_PROMOTIONLINE)
-{
-}
+{ }
 
 //------------------------------------------------------------------------------------------------------
 //
