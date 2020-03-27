@@ -14012,15 +14012,12 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOURISM_PLUS1</Type>
-			<Description>TXT_KEY_BUILDING_TOURISM_PLUS1</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TOURISM_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_TOURISM_PLUS1</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_TOURISM_STRATEGY</Strategy>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -14028,8 +14025,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<bNukeImmune>1</bNukeImmune>
-			<iConquestProb>100</iConquestProb>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14052,18 +14047,18 @@
 					<iAmountPerTurn>2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iConquestProb>100</iConquestProb>
+			<bNukeImmune>1</bNukeImmune>
+			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOURISM_PLUS2</Type>
-			<Description>TXT_KEY_BUILDING_TOURISM_PLUS2</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TOURISM_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_TOURISM_PLUS2</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_TOURISM_STRATEGY</Strategy>
 			<PrereqTech>TECH_CLASSICAL_LIFESTYLE</PrereqTech>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -14071,8 +14066,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<bNukeImmune>1</bNukeImmune>
-			<iConquestProb>100</iConquestProb>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14095,18 +14088,18 @@
 					<iAmountPerTurn>2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iConquestProb>100</iConquestProb>
+			<bNukeImmune>1</bNukeImmune>
+			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOURISM_PLUS3</Type>
-			<Description>TXT_KEY_BUILDING_TOURISM_PLUS3</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TOURISM_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_TOURISM_PLUS3</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_TOURISM_STRATEGY</Strategy>
 			<PrereqTech>TECH_MEDIEVAL_LIFESTYLE</PrereqTech>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -14114,8 +14107,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<bNukeImmune>1</bNukeImmune>
-			<iConquestProb>100</iConquestProb>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14138,18 +14129,18 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iConquestProb>100</iConquestProb>
+			<bNukeImmune>1</bNukeImmune>
+			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOURISM_PLUS4</Type>
-			<Description>TXT_KEY_BUILDING_TOURISM_PLUS4</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TOURISM_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_TOURISM_PLUS4</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_TOURISM_STRATEGY</Strategy>
 			<PrereqTech>TECH_RENAISSANCE_LIFESTYLE</PrereqTech>
 			<iHappiness>2</iHappiness>
 			<CommerceChanges>
@@ -14157,8 +14148,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<bNukeImmune>1</bNukeImmune>
-			<iConquestProb>100</iConquestProb>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14181,18 +14170,18 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iConquestProb>100</iConquestProb>
+			<bNukeImmune>1</bNukeImmune>
+			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOURISM_PLUS5</Type>
-			<Description>TXT_KEY_BUILDING_TOURISM_PLUS5</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TOURISM_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_TOURISM_PLUS5</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_TOURISM_STRATEGY</Strategy>
 			<PrereqTech>TECH_INDUSTRIAL_LIFESTYLE</PrereqTech>
 			<iHappiness>2</iHappiness>
 			<CommerceChanges>
@@ -14200,8 +14189,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<bNukeImmune>1</bNukeImmune>
-			<iConquestProb>100</iConquestProb>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14224,18 +14211,18 @@
 					<iAmountPerTurn>4</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iConquestProb>100</iConquestProb>
+			<bNukeImmune>1</bNukeImmune>
+			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOURISM_PLUS6</Type>
-			<Description>TXT_KEY_BUILDING_TOURISM_PLUS6</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TOURISM_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_TOURISM_PLUS6</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_TOURISM_STRATEGY</Strategy>
 			<PrereqTech>TECH_ATOMIC_LIFESTYLE</PrereqTech>
 			<iHappiness>2</iHappiness>
 			<CommerceChanges>
@@ -14243,8 +14230,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<bNukeImmune>1</bNukeImmune>
-			<iConquestProb>100</iConquestProb>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14267,18 +14252,18 @@
 					<iAmountPerTurn>4</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iConquestProb>100</iConquestProb>
+			<bNukeImmune>1</bNukeImmune>
+			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOURISM_PLUS7</Type>
-			<Description>TXT_KEY_BUILDING_TOURISM_PLUS7</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TOURISM_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_TOURISM_PLUS7</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_TOURISM_STRATEGY</Strategy>
 			<PrereqTech>TECH_INFORMATION_LIFESTYLE</PrereqTech>
 			<iHappiness>3</iHappiness>
 			<CommerceChanges>
@@ -14286,8 +14271,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<bNukeImmune>1</bNukeImmune>
-			<iConquestProb>100</iConquestProb>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14310,18 +14293,18 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iConquestProb>100</iConquestProb>
+			<bNukeImmune>1</bNukeImmune>
+			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOURISM_PLUS8</Type>
-			<Description>TXT_KEY_BUILDING_TOURISM_PLUS8</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TOURISM_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_TOURISM_PLUS8</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_TOURISM_STRATEGY</Strategy>
 			<PrereqTech>TECH_NANOTECH_LIFESTYLE</PrereqTech>
 			<iHappiness>3</iHappiness>
 			<CommerceChanges>
@@ -14329,8 +14312,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<bNukeImmune>1</bNukeImmune>
-			<iConquestProb>100</iConquestProb>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14353,18 +14334,18 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iConquestProb>100</iConquestProb>
+			<bNukeImmune>1</bNukeImmune>
+			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOURISM_PLUS9</Type>
-			<Description>TXT_KEY_BUILDING_TOURISM_PLUS9</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TOURISM_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_TOURISM_PLUS9</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_TOURISM_STRATEGY</Strategy>
 			<PrereqTech>TECH_TRANSHUMAN_LIFESTYLE</PrereqTech>
 			<iHappiness>3</iHappiness>
 			<CommerceChanges>
@@ -14372,8 +14353,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<bNukeImmune>1</bNukeImmune>
-			<iConquestProb>100</iConquestProb>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14396,18 +14375,18 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iConquestProb>100</iConquestProb>
+			<bNukeImmune>1</bNukeImmune>
+			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TOURISM_PLUS10</Type>
-			<Description>TXT_KEY_BUILDING_TOURISM_PLUS10</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TOURISM_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_TOURISM_PLUS10</Description>
+			<Civilopedia>TXT_KEY_BUILDING_TOURISM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_TOURISM_STRATEGY</Strategy>
 			<PrereqTech>TECH_GALACTIC_LIFESTYLE</PrereqTech>
 			<iHappiness>4</iHappiness>
 			<CommerceChanges>
@@ -14439,27 +14418,27 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iConquestProb>100</iConquestProb>
+			<bNukeImmune>1</bNukeImmune>
+			<ArtDefineTag>ART_DEF_BUILDING_TOURISM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ZOROASTRIAN_SHRINE</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ZOROASTRIAN_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ZOROASTRIAN_SHRINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ZOROASTRIAN_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ZOROASTRIAN_SHRINE</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_ISLAMIC</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_ISLAMIC</ConstructSound>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ReligionType>RELIGION_ZOROASTRIANISM</ReligionType>
 			<HolyCity>RELIGION_ZOROASTRIANISM</HolyCity>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -14470,11 +14449,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</GlobalCommerceModifiers>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_ZOROASTRIANISM</ReligionType>
@@ -14493,42 +14467,41 @@
 			<iAsset>8</iAsset>
 			<Flavors>
 				<Flavor>
+					<FlavorType>FLAVOR_CULTURE</FlavorType>
+					<iFlavor>4</iFlavor>
+				</Flavor>
+				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>10</iFlavor>
+					<iFlavor>8</iFlavor>
 				</Flavor>
 			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
+			<ArtDefineTag>ART_DEF_BUILDING_ZOROASTRIAN_SHRINE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_ISLAMIC</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MESOAMERICAN_SHRINE</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_MESOAMERICAN_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MESOAMERICAN_SHRINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MESOAMERICAN_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MESOAMERICAN_SHRINE</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_ISLAMIC</ConstructSound>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ReligionType>RELIGION_NAGHUALISM</ReligionType>
 			<HolyCity>RELIGION_NAGHUALISM</HolyCity>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_NAGHUALISM</ReligionType>
@@ -14553,43 +14526,40 @@
 			<iAsset>8</iAsset>
 			<Flavors>
 				<Flavor>
+					<FlavorType>FLAVOR_CULTURE</FlavorType>
+					<iFlavor>4</iFlavor>
+				</Flavor>
+				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>10</iFlavor>
+					<iFlavor>8</iFlavor>
 				</Flavor>
 			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
+			<ArtDefineTag>ART_DEF_BUILDING_MESOAMERICAN_SHRINE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHRISTIAN_SHRINE</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_CHRISTIAN_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CHRISTIAN_SHRINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CHRISTIAN_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CHRISTIAN_SHRINE</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_CHRISTIAN</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_CHRISTIAN</ConstructSound>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ReligionType>RELIGION_CHRISTIANITY</ReligionType>
 			<HolyCity>RELIGION_CHRISTIANITY</HolyCity>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_CHRISTIANITY</ReligionType>
@@ -14608,43 +14578,42 @@
 			<iAsset>8</iAsset>
 			<Flavors>
 				<Flavor>
+					<FlavorType>FLAVOR_CULTURE</FlavorType>
+					<iFlavor>4</iFlavor>
+				</Flavor>
+				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>10</iFlavor>
+					<iFlavor>8</iFlavor>
 				</Flavor>
 			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<ArtDefineTag>ART_DEF_BUILDING_CHRISTIAN_SHRINE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_CHRISTIAN</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TAOIST_SHRINE</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_TAOIST_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TAOIST_SHRINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TAOIST_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_TAOIST_SHRINE</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_TAOIST</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_TAOIST</ConstructSound>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ReligionType>RELIGION_TAOISM</ReligionType>
 			<HolyCity>RELIGION_TAOISM</HolyCity>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_TAOISM</ReligionType>
@@ -14663,32 +14632,37 @@
 			<iAsset>8</iAsset>
 			<Flavors>
 				<Flavor>
+					<FlavorType>FLAVOR_CULTURE</FlavorType>
+					<iFlavor>4</iFlavor>
+				</Flavor>
+				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>10</iFlavor>
+					<iFlavor>8</iFlavor>
 				</Flavor>
 			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<ArtDefineTag>ART_DEF_BUILDING_TAOIST_SHRINE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_TAOIST</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EGYPT_MYTH_SHRINE</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_EGYPT_MYTH_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EGYPT_MYTH_SHRINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_EGYPT_MYTH_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_EGYPT_MYTH_SHRINE</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_ISLAMIC</ConstructSound>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ReligionType>RELIGION_KEMETISM</ReligionType>
 			<HolyCity>RELIGION_KEMETISM</HolyCity>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -14699,11 +14673,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</SpecialistExtraCommerces>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_KEMETISM</ReligionType>
@@ -14722,43 +14691,40 @@
 			<iAsset>8</iAsset>
 			<Flavors>
 				<Flavor>
+					<FlavorType>FLAVOR_CULTURE</FlavorType>
+					<iFlavor>4</iFlavor>
+				</Flavor>
+				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>10</iFlavor>
+					<iFlavor>8</iFlavor>
 				</Flavor>
 			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
+			<ArtDefineTag>ART_DEF_BUILDING_EGYPT_MYTH_SHRINE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HINDU_SHRINE</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_HINDU_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HINDU_SHRINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HINDU_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_HINDU_SHRINE</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_HINDU</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_HINDU</ConstructSound>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ReligionType>RELIGION_HINDUISM</ReligionType>
 			<HolyCity>RELIGION_HINDUISM</HolyCity>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_HINDUISM</ReligionType>
@@ -14777,43 +14743,42 @@
 			<iAsset>8</iAsset>
 			<Flavors>
 				<Flavor>
+					<FlavorType>FLAVOR_CULTURE</FlavorType>
+					<iFlavor>4</iFlavor>
+				</Flavor>
+				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>10</iFlavor>
+					<iFlavor>8</iFlavor>
 				</Flavor>
 			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<ArtDefineTag>ART_DEF_BUILDING_HINDU_SHRINE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_HINDU</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CONFUCIAN_SHRINE</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_CONFUCIAN_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CONFUCIAN_SHRINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CONFUCIAN_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CONFUCIAN_SHRINE</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_CONFUCIAN</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_CONFUCIAN</ConstructSound>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ReligionType>RELIGION_CONFUCIANISM</ReligionType>
 			<HolyCity>RELIGION_CONFUCIANISM</HolyCity>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_CONFUCIANISM</ReligionType>
@@ -14833,43 +14798,46 @@
 			<iAsset>8</iAsset>
 			<Flavors>
 				<Flavor>
+					<FlavorType>FLAVOR_CULTURE</FlavorType>
+					<iFlavor>4</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_MILITARY</FlavorType>
+					<iFlavor>2</iFlavor>
+				</Flavor>
+				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>10</iFlavor>
+					<iFlavor>8</iFlavor>
 				</Flavor>
 			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<ArtDefineTag>ART_DEF_BUILDING_CONFUCIAN_SHRINE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_CONFUCIAN</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_BUDDHIST_SHRINE</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_BUDDHIST_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BUDDHIST_SHRINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BUDDHIST_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_BUDDHIST_SHRINE</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_BUDDHIST</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_BUDDHIST</ConstructSound>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ReligionType>RELIGION_BUDDHISM</ReligionType>
 			<HolyCity>RELIGION_BUDDHISM</HolyCity>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_BUDDHISM</ReligionType>
@@ -14888,43 +14856,42 @@
 			<iAsset>8</iAsset>
 			<Flavors>
 				<Flavor>
+					<FlavorType>FLAVOR_CULTURE</FlavorType>
+					<iFlavor>4</iFlavor>
+				</Flavor>
+				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>10</iFlavor>
+					<iFlavor>8</iFlavor>
 				</Flavor>
 			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<ArtDefineTag>ART_DEF_BUILDING_BUDDHIST_SHRINE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_BUDDHIST</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ISLAMIC_SHRINE</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_ISLAMIC_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ISLAMIC_SHRINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ISLAMIC_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ISLAMIC_SHRINE</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_ISLAMIC</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_ISLAMIC</ConstructSound>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ReligionType>RELIGION_ISLAM</ReligionType>
 			<HolyCity>RELIGION_ISLAM</HolyCity>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_ISLAM</ReligionType>
@@ -14943,25 +14910,30 @@
 			<iAsset>8</iAsset>
 			<Flavors>
 				<Flavor>
+					<FlavorType>FLAVOR_CULTURE</FlavorType>
+					<iFlavor>4</iFlavor>
+				</Flavor>
+				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>10</iFlavor>
+					<iFlavor>8</iFlavor>
 				</Flavor>
 			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<ArtDefineTag>ART_DEF_BUILDING_ISLAMIC_SHRINE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_ISLAMIC</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_NATIONAL_STANDARD_OF_MEASUREMENT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
-			<bNeverCapture>1</bNeverCapture>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATIONAL_STANDARD_OF_MEASUREMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_STANDARD_OF_MEASUREMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_STANDARD_OF_MEASUREMENT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_STANDARD_OF_MEASUREMENT</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<PrereqTech>TECH_STANDARDIZATION</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<GlobalCommerceModifiers>
@@ -14972,8 +14944,6 @@
 				<iYield>5</iYield>
 				<iYield>10</iYield>
 			</GlobalYieldModifiers>
-			<bNukeImmune>1</bNukeImmune>
-			<iAsset>10</iAsset>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14981,36 +14951,32 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>10</iAsset>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_STANDARD_OF_MEASUREMENT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STATUE_OF_ZEUS</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_STATUE_OF_ZEUS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_STATUE_OF_ZEUS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_STATUE_OF_ZEUS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_STATUE_OF_ZEUS</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_STATUE_OF_ZEUS</MovieDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ReligionType>RELIGION_HELLENISM</ReligionType>
 			<HolyCity>RELIGION_HELLENISM</HolyCity>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_HELLENISM</ReligionType>
@@ -15031,49 +14997,50 @@
 			<iPower>4</iPower>
 			<Flavors>
 				<Flavor>
+					<FlavorType>FLAVOR_CULTURE</FlavorType>
+					<iFlavor>5</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_MILITARY</FlavorType>
+					<iFlavor>6</iFlavor>
+				</Flavor>
+				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>10</iFlavor>
+					<iFlavor>8</iFlavor>
 				</Flavor>
 			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<ArtDefineTag>ART_DEF_BUILDING_STATUE_OF_ZEUS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_STATUE_OF_ZEUS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_JEWISH_SHRINE</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_JEWISH_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_JEWISH_SHRINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_JEWISH_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_JEWISH_SHRINE</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_JEWISH</MovieDefineTag>
 			<ConstructSound>AS2D_BUILD_JEWISH</ConstructSound>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<ReligionType>RELIGION_JUDAISM</ReligionType>
 			<HolyCity>RELIGION_JUDAISM</HolyCity>
-			<iHealth>5</iHealth>
-			<iHappiness>10</iHappiness>
 			<CommerceModifiers>
 				<iCommerce>7</iCommerce>
 			</CommerceModifiers>
-			<ObsoleteSafeCommerceChanges>
+			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
-			</ObsoleteSafeCommerceChanges>
+			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<CommerceChangeOriginalOwners>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>0</bCommerceChangeOriginalOwner>
-				<bCommerceChangeOriginalOwner>1</bCommerceChangeOriginalOwner>
-			</CommerceChangeOriginalOwners>
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_JUDAISM</ReligionType>
@@ -15092,31 +15059,50 @@
 			<iAsset>8</iAsset>
 			<Flavors>
 				<Flavor>
+					<FlavorType>FLAVOR_CULTURE</FlavorType>
+					<iFlavor>4</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_GOLD</FlavorType>
+					<iFlavor>2</iFlavor>
+				</Flavor>
+				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
-					<iFlavor>10</iFlavor>
+					<iFlavor>8</iFlavor>
 				</Flavor>
 			</Flavors>
 			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
+			<fVisibilityPriority>1</fVisibilityPriority>
+			<ArtDefineTag>ART_DEF_BUILDING_JEWISH_SHRINE</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_JEWISH</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_VALLEY_KINGS</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNoLimit>1</bNoLimit>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_VALLEY_KINGS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VALLEY_KINGS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_VALLEY_KINGS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VALLEY_KINGS</ArtDefineTag>
-			<MovieDefineTag>ART_DEF_MOVIE_VALLEY_KINGS</MovieDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<PrereqTech>TECH_SCULPTURE</PrereqTech>
 			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_GREAT_PYRAMID</BuildingType>
-				<BuildingType>BUILDING_GREAT_SPHINX</BuildingType>
+				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
-			<bAutoBuild>1</bAutoBuild>
-			<iHealth>5</iHealth>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_GREAT_PYRAMID</BuildingType>
+					<iNumBuildingNeeded>1</iNumBuildingNeeded>
+				</PrereqBuilding>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_GREAT_SPHINX</BuildingType>
+					<iNumBuildingNeeded>1</iNumBuildingNeeded>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<iHealth>4</iHealth>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -15126,8 +15112,6 @@
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iFreeTechs>1</iFreeTechs>
 			<bGoldenAge>1</bGoldenAge>
-			<bNukeImmune>1</bNukeImmune>
-			<iConquestProb>100</iConquestProb>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -15135,16 +15119,20 @@
 					<iAmountPerTurn>6</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bAutoBuild>1</bAutoBuild>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_VALLEY_KINGS</ArtDefineTag>
+			<MovieDefineTag>ART_DEF_MOVIE_VALLEY_KINGS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UNSANCTIONED_BANDITS_HIDEOUT1</Type>
-			<Description>TXT_KEY_BUILDING_UNSANCTIONED_BANDITS_HIDEOUT1</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BANDITS_HIDEOUT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BANDITS_HIDEOUT_STRATEGY</Strategy>
-			<ArtDefineTag>ART_DEF_BUILDING_BANDITS_HIDEOUT</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_UNSANCTIONED_BANDITS_HIDEOUT1</Description>
+			<Civilopedia>TXT_KEY_BUILDING_BANDITS_HIDEOUT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_BANDITS_HIDEOUT_STRATEGY</Strategy>
 			<PrereqTech>TECH_THEFT</PrereqTech>
 			<ObsoleteTech>TECH_MATCHLOCK</ObsoleteTech>
 			<CommerceChanges>
@@ -15153,30 +15141,22 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
+			<iInsidiousness>5</iInsidiousness>
+			<iRevIdxLocal>1</iRevIdxLocal>
 			<PropertySpawnUnit>UNIT_THIEF</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
-			<iInsidiousness>5</iInsidiousness>
-			<bNeverCapture>1</bNeverCapture>
-<!--
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>4</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
--->
-			<iRevIdxLocal>1</iRevIdxLocal>
+			<iConquestProb>100</iConquestProb>
+			<bNukeImmune>1</bNukeImmune>
+			<ArtDefineTag>ART_DEF_BUILDING_BANDITS_HIDEOUT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UNSANCTIONED_BANDITS_HIDEOUT2</Type>
-			<Description>TXT_KEY_BUILDING_UNSANCTIONED_BANDITS_HIDEOUT2</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BANDITS_HIDEOUT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BANDITS_HIDEOUT_STRATEGY</Strategy>
-			<ArtDefineTag>ART_DEF_BUILDING_BANDITS_HIDEOUT</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_UNSANCTIONED_BANDITS_HIDEOUT2</Description>
+			<Civilopedia>TXT_KEY_BUILDING_BANDITS_HIDEOUT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_BANDITS_HIDEOUT_STRATEGY</Strategy>
 			<PrereqTech>TECH_NOCTURNALISM</PrereqTech>
 			<ObsoleteTech>TECH_MATCHLOCK</ObsoleteTech>
 			<CommerceChanges>
@@ -15185,30 +15165,22 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>-2</iCommerce>
 			</CommerceChanges>
+			<iInsidiousness>7</iInsidiousness>
+			<iRevIdxLocal>2</iRevIdxLocal>
 			<PropertySpawnUnit>UNIT_ROGUE</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
-			<iInsidiousness>7</iInsidiousness>
-			<bNeverCapture>1</bNeverCapture>
-<!--
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>8</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
--->
-			<iRevIdxLocal>2</iRevIdxLocal>
+			<iConquestProb>100</iConquestProb>
+			<bNukeImmune>1</bNukeImmune>
+			<ArtDefineTag>ART_DEF_BUILDING_BANDITS_HIDEOUT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UNSANCTIONED_BANDITS_HIDEOUT3</Type>
-			<Description>TXT_KEY_BUILDING_UNSANCTIONED_BANDITS_HIDEOUT3</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BANDITS_HIDEOUT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BANDITS_HIDEOUT_STRATEGY</Strategy>
-			<ArtDefineTag>ART_DEF_BUILDING_BANDITS_HIDEOUT</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_UNSANCTIONED_BANDITS_HIDEOUT3</Description>
+			<Civilopedia>TXT_KEY_BUILDING_BANDITS_HIDEOUT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_BANDITS_HIDEOUT_STRATEGY</Strategy>
 			<PrereqTech>TECH_LOCKS</PrereqTech>
 			<ObsoleteTech>TECH_MATCHLOCK</ObsoleteTech>
 			<CommerceChanges>
@@ -15217,31 +15189,22 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>-3</iCommerce>
 			</CommerceChanges>
+			<iInsidiousness>15</iInsidiousness>
+			<iRevIdxLocal>3</iRevIdxLocal>
 			<PropertySpawnUnit>UNIT_BURGLAR</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
-			<iInsidiousness>15</iInsidiousness>
-			<bNeverCapture>1</bNeverCapture>
-<!--
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>10</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
--->
-			<iRevIdxLocal>3</iRevIdxLocal>
+			<iConquestProb>100</iConquestProb>
+			<bNukeImmune>1</bNukeImmune>
+			<ArtDefineTag>ART_DEF_BUILDING_BANDITS_HIDEOUT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UNSANCTIONED_ASSASSINS_DEN</Type>
-			<Description>TXT_KEY_BUILDING_UNSANCTIONED_ASSASSINS_DEN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ASSASSINS_DEN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ASSASSINS_DEN_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ASSASSINS_DEN</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_UNSANCTIONED_ASSASSINS_DEN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ASSASSINS_DEN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ASSASSINS_DEN_STRATEGY</Strategy>
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			<ObsoleteTech>TECH_MATCHLOCK</ObsoleteTech>
 			<iHappiness>-1</iHappiness>
@@ -15251,8 +15214,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
-			<PropertySpawnUnit>UNIT_ASSASSIN</PropertySpawnUnit>
-			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_CRIMINAL</UnitCombatType>
@@ -15260,58 +15221,43 @@
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
 			<iInsidiousness>15</iInsidiousness>
-			<iPower>1</iPower>
-			<bNeverCapture>1</bNeverCapture>
-			<bNukeImmune>1</bNukeImmune>
-<!--
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>12</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
--->
 			<iRevIdxLocal>5</iRevIdxLocal>
+			<PropertySpawnUnit>UNIT_ASSASSIN</PropertySpawnUnit>
+			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
+			<iPower>1</iPower>
+			<iConquestProb>100</iConquestProb>
+			<bNukeImmune>1</bNukeImmune>
+			<ArtDefineTag>ART_DEF_BUILDING_ASSASSINS_DEN</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UNSANCTIONED_LOANSHARK</Type>
-			<Description>TXT_KEY_BUILDING_UNSANCTIONED_LOANSHARK</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LOANSHARK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_LOANSHARK_STRATEGY</Strategy>
-			<ArtDefineTag>ART_DEF_BUILDING_LOANSHARK</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_UNSANCTIONED_LOANSHARK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LOANSHARK_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_LOANSHARK_STRATEGY</Strategy>
 			<PrereqTech>TECH_USURY</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<CommerceModifiers>
 				<iCommerce>2</iCommerce>
 			</CommerceModifiers>
+			<iInsidiousness>2</iInsidiousness>
 			<PropertySpawnUnit>UNIT_CUTTHROAT</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
 			<iAsset>1</iAsset>
-			<bNeverCapture>1</bNeverCapture>
-			<iInsidiousness>2</iInsidiousness>
-<!--
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>14</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
--->
+			<iConquestProb>100</iConquestProb>
+			<bNukeImmune>1</bNukeImmune>
+			<ArtDefineTag>ART_DEF_BUILDING_LOANSHARK</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UNSANCTIONED_CONSPIRATORS_HIDEOUT</Type>
-			<Description>TXT_KEY_BUILDING_UNSANCTIONED_CONSPIRATORS_HIDEOUT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_CONSPIRATORS_HIDEOUT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_CONSPIRATORS_HIDEOUT_STRATEGY</Strategy>
-			<ArtDefineTag>ART_DEF_BUILDING_CONSPIRATORS_HIDEOUT</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_UNSANCTIONED_CONSPIRATORS_HIDEOUT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_CONSPIRATORS_HIDEOUT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_CONSPIRATORS_HIDEOUT_STRATEGY</Strategy>
 			<PrereqTech>TECH_POLITICAL_PHILOSOPHY</PrereqTech>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -15321,37 +15267,30 @@
 			</CommerceChanges>
 			<iInsidiousness>20</iInsidiousness>
 			<iEspionageDefense>-5</iEspionageDefense>
+			<iRevIdxLocal>20</iRevIdxLocal>
 			<PropertySpawnUnit>UNIT_SCOUNDREL</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
-			<bNeverCapture>1</bNeverCapture>
-			<iRevIdxLocal>20</iRevIdxLocal>
 			<PropertyManipulators>
-<!--
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>16</iAmountPerTurn>
-				</PropertySource>
--->
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
 					<PropertyType>PROPERTY_EDUCATION</PropertyType>
 					<iAmountPerTurn>4</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iConquestProb>100</iConquestProb>
+			<bNukeImmune>1</bNukeImmune>
+			<ArtDefineTag>ART_DEF_BUILDING_CONSPIRATORS_HIDEOUT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UNSANCTIONED_MOB_STOREFRONT</Type>
-			<Description>TXT_KEY_BUILDING_UNSANCTIONED_MOB_STOREFRONT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MOB_STOREFRONT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MOB_STOREFRONT_STRATEGY</Strategy>
-			<ArtDefineTag>ART_DEF_BUILDING_MOB_STOREFRONT</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_UNSANCTIONED_MOB_STOREFRONT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MOB_STOREFRONT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_MOB_STOREFRONT_STRATEGY</Strategy>
 			<PrereqTech>TECH_AUTOMATIC_WEAPONS</PrereqTech>
 			<ObsoleteTech>TECH_THOUGHT_SCANNING</ObsoleteTech>
-			<iInsidiousness>35</iInsidiousness>
 			<iHealth>-1</iHealth>
 			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
@@ -15360,8 +15299,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
-			<PropertySpawnUnit>UNIT_MOBSTER_CAR</PropertySpawnUnit>
-			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
 			<BonusHealthChanges>
 				<BonusHealthChange>
 					<BonusType>BONUS_TOBACCO</BonusType>
@@ -15382,28 +15319,22 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
-			<bNeverCapture>1</bNeverCapture>
-			<bNukeImmune>1</bNukeImmune>
-<!--
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>20</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
--->
+			<iInsidiousness>35</iInsidiousness>
 			<iRevIdxLocal>10</iRevIdxLocal>
+			<PropertySpawnUnit>UNIT_MOBSTER_CAR</PropertySpawnUnit>
+			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
+			<iConquestProb>100</iConquestProb>
+			<bNukeImmune>1</bNukeImmune>
+			<ArtDefineTag>ART_DEF_BUILDING_MOB_STOREFRONT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UNSANCTIONED_MOTORCYCLE_CLUB</Type>
-			<Description>TXT_KEY_BUILDING_UNSANCTIONED_MOTORCYCLE_CLUB</Description>
-			<Civilopedia>TXT_KEY_BUILDING_MOTORCYCLE_CLUB_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_MOTORCYCLE_CLUB_STRATEGY</Strategy>
-			<ArtDefineTag>ART_DEF_BUILDING_MOTORCYCLE_CLUB</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_UNSANCTIONED_MOTORCYCLE_CLUB</Description>
+			<Civilopedia>TXT_KEY_BUILDING_MOTORCYCLE_CLUB_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_MOTORCYCLE_CLUB_STRATEGY</Strategy>
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
 			<PrereqBonuses>
@@ -15421,26 +15352,18 @@
 			<iInsidiousness>25</iInsidiousness>
 			<PropertySpawnUnit>UNIT_BIKER_GANG</PropertySpawnUnit>
 			<PropertySpawnProperty>PROPERTY_CRIME</PropertySpawnProperty>
-			<iConquestProb>75</iConquestProb>
-<!--
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>25</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
--->
+			<iConquestProb>100</iConquestProb>
+			<bNukeImmune>1</bNukeImmune>
+			<ArtDefineTag>ART_DEF_BUILDING_MOTORCYCLE_CLUB</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UNSANCTIONED_BLACK_HAT_HIDEOUT</Type>
-			<Description>TXT_KEY_BUILDING_UNSANCTIONED_BLACK_HAT_HIDEOUT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_BLACK_HAT_HIDEOUT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_BLACK_HAT_HIDEOUT_STRATEGY</Strategy>
-			<ArtDefineTag>ART_DEF_BUILDING_BLACK_HAT_HIDEOUT</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_UNSANCTIONED_BLACK_HAT_HIDEOUT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_BLACK_HAT_HIDEOUT_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_BLACK_HAT_HIDEOUT_STRATEGY</Strategy>
 			<PrereqTech>TECH_COMMUNICATION_NETWORKS</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_WIRELESS_NETWORK</BuildingType>
@@ -15460,44 +15383,31 @@
 					<iHeal>-6</iHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
-			<bNeverCapture>1</bNeverCapture>
-<!--
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_CRIME</PropertyType>
-					<iAmountPerTurn>35</iAmountPerTurn>
-				</PropertySource>
-			</PropertyManipulators>
--->
+			<iConquestProb>100</iConquestProb>
+			<bNukeImmune>1</bNukeImmune>
+			<ArtDefineTag>ART_DEF_BUILDING_BLACK_HAT_HIDEOUT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DISNEYLAND_EFFECT</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_DISNEYLAND_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DISNEYLAND_EFFECT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DISNEYLAND_EFFECT_STRATEGY</Strategy>
-			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DISNEYLAND</ArtDefineTag>
-			<fVisibilityPriority>10000</fVisibilityPriority>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iHappinessPercentPerPopulation>10</iHappinessPercentPerPopulation>
+			<iHappiness>1</iHappiness>
 			<bNukeImmune>1</bNukeImmune>
-			<iAsset>10</iAsset>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_DISNEYLAND</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_LASCAUX_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_LASCAUX_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LASCAUX_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_LASCAUX_STRATEGY</Strategy>
-			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_LASCAUX</ArtDefineTag>
-			<bCenterInCity>1</bCenterInCity>
-			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_LASCAUX_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LASCAUX_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_LASCAUX_STRATEGY</Strategy>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -15531,6 +15441,9 @@
 					</Active>
 				</PropertySource>
 			</PropertyManipulators>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_LASCAUX</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WV_CANNIBALISM</Type>
@@ -15541,6 +15454,7 @@
 			<Civilopedia>TXT_KEY_BUILDING_WV_CANNIBALISM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_WV_CANNIBALISM_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_WV_CANNIBALISM_HELP</Help>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
@@ -15555,8 +15469,8 @@
 					<iFlavor>2</iFlavor>
 				</Flavor>
 			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
 			<ArtDefineTag>ART_DEF_BUILDING_WV_CANNIBALISM</ArtDefineTag>
 		</BuildingInfo>
@@ -15568,6 +15482,7 @@
 			<Description>TXT_KEY_BUILDING_CANNIBALISM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WV_CANNIBALISM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_WV_CANNIBALISM_STRATEGY</Strategy>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_WV_CANNIBALISM</BuildingType>
@@ -15575,8 +15490,8 @@
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
 			<bAutoBuild>1</bAutoBuild>
+			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<ArtDefineTag>ART_DEF_BUILDING_CANNIBALISM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -15586,6 +15501,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_CANNIBALISM_BAD_I</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WORLDVIEW_BAD_PEDIA</Civilopedia>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<PrereqTech>TECH_PHILOSOPHY</PrereqTech>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -15595,8 +15511,8 @@
 			</PrereqAmountBuildings>
 			<iHappiness>-1</iHappiness>
 			<bAutoBuild>1</bAutoBuild>
+			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<ArtDefineTag>ART_DEF_BUILDING_CANNIBALISM_BAD_I</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -15606,6 +15522,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_CANNIBALISM_BAD_II</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WORLDVIEW_BAD_PEDIA</Civilopedia>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<PrereqTech>TECH_CODE_OF_LAWS</PrereqTech>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -15615,8 +15532,8 @@
 			</PrereqAmountBuildings>
 			<iHappiness>-2</iHappiness>
 			<bAutoBuild>1</bAutoBuild>
+			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<ArtDefineTag>ART_DEF_BUILDING_CANNIBALISM_BAD_II</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -15626,6 +15543,7 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_CANNIBALISM_BAD_III</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WORLDVIEW_BAD_PEDIA</Civilopedia>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<PrereqTech>TECH_HUMANISM</PrereqTech>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -15635,10 +15553,11 @@
 			</PrereqAmountBuildings>
 			<iHappiness>-1</iHappiness>
 			<bAutoBuild>1</bAutoBuild>
+			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<ArtDefineTag>ART_DEF_BUILDING_CANNIBALISM_BAD_III</ArtDefineTag>
 		</BuildingInfo>
+<!-- Should be given by python when butchering units.
 		<BuildingInfo>
 			<Type>BUILDING_DISEASE_KURU</Type>
 			<MapCategoryTypes>
@@ -15647,41 +15566,39 @@
 			<Description>TXT_KEY_BUILDING_DISEASE_KURU</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DISEASE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DISEASE_STRATEGY</Strategy>
+			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_WV_CANNIBALISM</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<iHealth>-1</iHealth>
+			<iHealth>-4</iHealth>
 			<YieldModifiers>
 				<iYield>0</iYield>
 				<iYield>-5</iYield>
 			</YieldModifiers>
+			<iConquestProb>100</iConquestProb>
 			<bNukeImmune>1</bNukeImmune>
-			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<ArtDefineTag>ART_DEF_BUILDING_DISEASE_KURU</ArtDefineTag>
 		</BuildingInfo>
+-->
 		<BuildingInfo>
 			<Type>BUILDING_WV_HUMAN_SACRIFICE</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_WV_HUMAN_SACRIFICE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WV_HUMAN_SACRIFICE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_WV_HUMAN_SACRIFICE_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_WV_HUMAN_SACRIFICE_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_WV_HUMAN_SACRIFICE</ArtDefineTag>
-			<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
-			<FreeBuilding>BUILDING_HUMAN_SACRIFICE</FreeBuilding>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>3</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_CEREMONIAL_ALTAR</ConstructSound>
+			<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
+			<FreeBuilding>BUILDING_HUMAN_SACRIFICE</FreeBuilding>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
@@ -15692,47 +15609,30 @@
 					<iFlavor>2</iFlavor>
 				</Flavor>
 			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_WV_HUMAN_SACRIFICE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HUMAN_SACRIFICE</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_HUMAN_SACRIFICE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WV_HUMAN_SACRIFICE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_WV_HUMAN_SACRIFICE_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_SACRIFICE</ArtDefineTag>
+			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>3</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_CEREMONIAL_ALTAR</ConstructSound>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>5</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_SACRIFICE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_GOOD_ALCATRAZ</Type>
-			<Description>TXT_KEY_BUILDING_GOOD_ALCATRAZ</Description>
-			<Civilopedia>TXT_KEY_BUILDING_GOOD_ALCATRAZ_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_GOOD_ALCATRAZ_STRATEGY</Strategy>
-			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GOOD_ALCATRAZ</ArtDefineTag>
-			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
-			<iHurryCostModifier>100</iHurryCostModifier>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<iConquestProb>100</iConquestProb>
-			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_GOOD_ALCATRAZ</Description>
+			<Civilopedia>TXT_KEY_BUILDING_GOOD_ALCATRAZ_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_GOOD_ALCATRAZ_STRATEGY</Strategy>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -15740,26 +15640,25 @@
 					<iAmountPerTurn>-50</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_GOOD_ALCATRAZ</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ROUTE_66_TERMINUS</Type>
-			<Description>TXT_KEY_BUILDING_ROUTE_66_TERMINUS</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ROUTE_66_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ROUTE_66_TERMINUS_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_ROUTE_66_TERMINUS</ArtDefineTag>
-			<ObsoleteTech>TECH_SKYROADS</ObsoleteTech>
-			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
-			<bNukeImmune>1</bNukeImmune>
-			<iHurryCostModifier>100</iHurryCostModifier>
-			<iConquestProb>100</iConquestProb>
-			<iTradeRoutes>3</iTradeRoutes>
-			<iTradeRouteModifier>50</iTradeRouteModifier>
-			<iAsset>10</iAsset>
-			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_ROUTE_66_TERMINUS</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ROUTE_66_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ROUTE_66_TERMINUS_STRATEGY</Strategy>
+			<ObsoleteTech>TECH_SKYROADS</ObsoleteTech>
+			<iTradeRoutes>3</iTradeRoutes>
+			<iTradeRouteModifier>50</iTradeRouteModifier>
+			<iAsset>10</iAsset>
+			<iConquestProb>100</iConquestProb>
+			<bNukeImmune>1</bNukeImmune>
+			<ArtDefineTag>ART_DEF_BUILDING_ROUTE_66_TERMINUS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DEPARTMENT_FOREIGN_EFFECT</Type>
@@ -15780,6 +15679,7 @@
 					<iExperience>1</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
+			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_DEPARTMENT_FOREIGN</ArtDefineTag>
 		</BuildingInfo>
@@ -15802,6 +15702,7 @@
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<iFoodKept>5</iFoodKept>
+			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_FERTILITYFESTIVAL</ArtDefineTag>
 		</BuildingInfo>
@@ -15814,12 +15715,12 @@
 			<Description>TXT_KEY_BUILDING_TRADITION_ARCHERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRADITION_ARCHERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MILITARY_TRADITION_STRATEGY</Strategy>
+			<Advisor>ADVISOR_MILITARY</Advisor>
 			<PrereqTech>TECH_ARCHERY</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FLETCHER</BuildingType>
 			</PrereqInCityBuildings>
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
-			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ObsoleteSafeCommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -15831,16 +15732,15 @@
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
 			<FreeBuilding>BUILDING_TRADITION_ARCHERY_EFFECT</FreeBuilding>
-			<iAsset>8</iAsset>
-			<iPower>4</iPower>
+			<iAsset>4</iAsset>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
-					<iFlavor>10</iFlavor>
+					<iFlavor>4</iFlavor>
 				</Flavor>
 			</Flavors>
-			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_TRADITION_SSTAR</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TRADITION_ARCHERY</MovieDefineTag>
 		</BuildingInfo>
@@ -15852,6 +15752,7 @@
 			<Description>TXT_KEY_BUILDING_TRADITION_ARCHERY_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRADITION_ARCHERY_EFFECT_PEDIA</Civilopedia>
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
+			<bApplyFreePromotionOnMove>1</bApplyFreePromotionOnMove>
 			<FreePromotion>PROMOTION_ARCHER_TRADITION</FreePromotion>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -15859,9 +15760,9 @@
 					<iExperience>2</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<bNeverCapture>1</bNeverCapture>
-			<iAsset>1</iAsset>
 			<iPower>1</iPower>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_TRADITION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -15873,25 +15774,24 @@
 			<Description>TXT_KEY_BUILDING_TRADITION_ASTHETIC_APPRECIATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRADITION_ASTHETIC_APPRECIATION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_WORKER_TRADITION_STRATEGY</Strategy>
+			<Advisor>ADVISOR_CULTURE</Advisor>
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<ObsoleteTech>TECH_CIVIL_ENGINEERING</ObsoleteTech>
-			<Advisor>ADVISOR_CULTURE</Advisor>
 			<GlobalCommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</GlobalCommerceModifiers>
 			<FreeBuilding>BUILDING_TRADITION_ASTHETIC_APPRECIATION_EFFECT</FreeBuilding>
-			<iAsset>8</iAsset>
-			<iPower>4</iPower>
+			<iAsset>6</iAsset>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_CULTURE</FlavorType>
-					<iFlavor>10</iFlavor>
+					<iFlavor>4</iFlavor>
 				</Flavor>
 			</Flavors>
-			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_TRADITION_SSTAR</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TRADITION_ASTHETIC_APPRECIATION</MovieDefineTag>
 		</BuildingInfo>
@@ -15903,9 +15803,8 @@
 			<Description>TXT_KEY_BUILDING_TRADITION_ASTHETIC_APPRECIATION_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRADITION_ASTHETIC_APPRECIATION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_WORKER_TRADITION_STRATEGY</Strategy>
-			<FreePromotion>PROMOTION_TRADITION_ASTHETIC_APPRECIATION</FreePromotion>
 			<bApplyFreePromotionOnMove>1</bApplyFreePromotionOnMove>
-			<iAsset>1</iAsset>
+			<FreePromotion>PROMOTION_TRADITION_ASTHETIC_APPRECIATION</FreePromotion>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -15918,6 +15817,7 @@
 					<iAmountPerTurn>-2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_TRADITION</ArtDefineTag>
 		</BuildingInfo>
@@ -15930,9 +15830,9 @@
 			<Description>TXT_KEY_BUILDING_TRADITION_WORK_ETHIC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRADITION_WORK_ETHIC_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_WORKER_TRADITION_STRATEGY</Strategy>
+			<Advisor>ADVISOR_GROWTH</Advisor>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
-			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ObsoleteSafeCommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -15944,16 +15844,15 @@
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
 			<FreeBuilding>BUILDING_TRADITION_WORK_ETHIC_EFFECT</FreeBuilding>
-			<iAsset>8</iAsset>
-			<iPower>4</iPower>
+			<iAsset>6</iAsset>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>10</iFlavor>
+					<iFlavor>4</iFlavor>
 				</Flavor>
 			</Flavors>
-			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_TRADITION_SSTAR</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_TRADITION_WORK_ETHIC</MovieDefineTag>
 		</BuildingInfo>
@@ -15965,33 +15864,24 @@
 			<Description>TXT_KEY_BUILDING_TRADITION_WORK_ETHIC_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRADITION_WORK_ETHIC_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_WORKER_TRADITION_STRATEGY</Strategy>
-			<FreePromotion>PROMOTION_TRADITION_WORK_ETHIC</FreePromotion>
 			<bApplyFreePromotionOnMove>1</bApplyFreePromotionOnMove>
-			<iAsset>8</iAsset>
-			<iPower>4</iPower>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>5</iFlavor>
-				</Flavor>
-			</Flavors>
+			<FreePromotion>PROMOTION_TRADITION_WORK_ETHIC</FreePromotion>
+			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_TRADITION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SPY_NETWORK</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
-			<bNeverCapture>1</bNeverCapture>
 			<NotGameOption>GAMEOPTION_NO_ESPIONAGE</NotGameOption>
-			<Description>TXT_KEY_BUILDING_SPY_NETWORK</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SPY_NETWORK_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SPY_NETWORK_STRATEGY</Strategy>
-			<ArtDefineTag>ART_DEF_BUILDING_SPY_NETWORK</ArtDefineTag>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_WRITING</PrereqTech>
+			<Description>TXT_KEY_BUILDING_SPY_NETWORK</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SPY_NETWORK_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_SPY_NETWORK_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
+			<PrereqTech>TECH_WRITING</PrereqTech>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -16062,55 +15952,46 @@
 				</TechSpecialistChange>
 			</TechSpecialistChanges>
 			<iAsset>8</iAsset>
-			<iPower>8</iPower>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
-					<iFlavor>10</iFlavor>
+					<iFlavor>8</iFlavor>
 				</Flavor>
 			</Flavors>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_SPY_NETWORK</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_EARTH_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_EARTH_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_EARTH_MYTH</ArtDefineTag>
 			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
-			<FreeBuilding>BUILDING_EARTH_MYTH_EFFECT</FreeBuilding>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_EARTH_MYTH_EFFECT</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
+			<FreeBuilding>BUILDING_EARTH_MYTH_EFFECT</FreeBuilding>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
+			</CommerceChanges>
+			<TechCommerceChanges>
+				<TechCommerceChange>
+					<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
+					<TechCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-1</iCommerce>
+					</TechCommerce>
+				</TechCommerceChange>
+			</TechCommerceChanges>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -16135,149 +16016,77 @@
 					</Active>
 				</PropertySource>
 			</PropertyManipulators>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_EARTH_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_EARTH_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_EFFECT_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_EARTH_MYTH_EFFECT</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_FIRE_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_FIRE_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_EFFECT_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FIRE_MYTH_EFFECT</ArtDefineTag>
-			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_METAL_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_METAL_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_EFFECT_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_METAL_MYTH_EFFECT</ArtDefineTag>
-			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_SEA_MYTH</Type>
-			<Description>TXT_KEY_BUILDING_SEA_MYTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SEA_MYTH</ArtDefineTag>
-			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
-			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
-			<FreeBuilding>BUILDING_SEA_MYTH_EFFECT</FreeBuilding>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<iAsset>2</iAsset>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<TechCommerceChanges>
-				<TechCommerceChange>
-					<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-					<TechCommerce>
-						<iCommerce>0</iCommerce>
-						<iCommerce>-1</iCommerce>
-					</TechCommerce>
-				</TechCommerceChange>
-			</TechCommerceChanges>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_EARTH_MYTH</ArtDefineTag>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_EARTH_MYTH_EFFECT</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_EARTH_MYTH_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_EFFECT_STRATEGY</Strategy>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_EARTH_MYTH_EFFECT</ArtDefineTag>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_FIRE_MYTH_EFFECT</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_FIRE_MYTH_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_EFFECT_STRATEGY</Strategy>
+			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_FIRE_MYTH_EFFECT</ArtDefineTag>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_METAL_MYTH_EFFECT</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_METAL_MYTH_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_EFFECT_STRATEGY</Strategy>
+			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_METAL_MYTH_EFFECT</ArtDefineTag>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_SEA_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_SEA_MYTH</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_STRATEGY</Strategy>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
+			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
 			<PrereqNotBuildings>
 				<PrereqNotBuilding>
 					<BuildingMustNotHave>BUILDING_SEA_MYTH_EFFECT</BuildingMustNotHave>
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<PropertyManipulators>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-				<PropertySource>
-					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-					<PropertyType>PROPERTY_EDUCATION</PropertyType>
-					<iAmountPerTurn>-1</iAmountPerTurn>
-					<Active>
-						<Has>
-							<GOMType>GOM_TECH</GOMType>
-							<ID>TECH_CHEMISTRY</ID>
-						</Has>
-					</Active>
-				</PropertySource>
-			</PropertyManipulators>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_SEA_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_SEA_MYTH_EFFECT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_EFFECT_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SEA_MYTH_EFFECT</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_SKY_MYTH</Type>
-			<Description>TXT_KEY_BUILDING_SKY_MYTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SKY_MYTH</ArtDefineTag>
-			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
-			<bNeverCapture>1</bNeverCapture>
-			<FreeBuilding>BUILDING_SKY_MYTH_EFFECT</FreeBuilding>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
+			<FreeBuilding>BUILDING_SEA_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
@@ -16287,12 +16096,6 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<PrereqNotBuildings>
-				<PrereqNotBuilding>
-					<BuildingMustNotHave>BUILDING_SKY_MYTH_EFFECT</BuildingMustNotHave>
-					<bPrereqNot>1</bPrereqNot>
-				</PrereqNotBuilding>
-			</PrereqNotBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -16317,341 +16120,424 @@
 					</Active>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>4</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_SEA_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<Type>BUILDING_SKY_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_SKY_MYTH_EFFECT</Description>
+			<Type>BUILDING_SEA_MYTH_EFFECT</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_SEA_MYTH_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_EFFECT_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SKY_MYTH_EFFECT</ArtDefineTag>
-			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
+			<bNukeImmune>1</bNukeImmune>
 			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_SEA_MYTH_EFFECT</ArtDefineTag>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_SKY_MYTH</Type>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_STONE_MYTH_EFFECT</Type>
-			<Description>TXT_KEY_BUILDING_STONE_MYTH_EFFECT</Description>
+			<Description>TXT_KEY_BUILDING_SKY_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_EFFECT_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_STONE_MYTH_EFFECT</ArtDefineTag>
-			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_DRAGON_MYTH</Type>
-			<Description>TXT_KEY_BUILDING_DRAGON_MYTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_DRAGON_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
+			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
+			<PrereqNotBuildings>
+				<PrereqNotBuilding>
+					<BuildingMustNotHave>BUILDING_SKY_MYTH_EFFECT</BuildingMustNotHave>
+					<bPrereqNot>1</bPrereqNot>
+				</PrereqNotBuilding>
+			</PrereqNotBuildings>
+			<FreeBuilding>BUILDING_SKY_MYTH_EFFECT</FreeBuilding>
 			<CommerceChanges>
-				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_EARTH_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_FIRE_MYTH_EFFECT</BuildingType>
-			</PrereqInCityBuildings>
+			<TechCommerceChanges>
+				<TechCommerceChange>
+					<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
+					<TechCommerce>
+						<iCommerce>0</iCommerce>
+						<iCommerce>-1</iCommerce>
+					</TechCommerce>
+				</TechCommerceChange>
+			</TechCommerceChanges>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_SEDENTARY_LIFESTYLE</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_EDUCATION</PropertyType>
+					<iAmountPerTurn>-1</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_CHEMISTRY</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+			</PropertyManipulators>
+			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_SKY_MYTH</ArtDefineTag>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_SKY_MYTH_EFFECT</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_SKY_MYTH_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_EFFECT_STRATEGY</Strategy>
+			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_SKY_MYTH_EFFECT</ArtDefineTag>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_STONE_MYTH_EFFECT</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_STONE_MYTH_EFFECT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ELEMENTAL_MYTH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ELEMENTAL_MYTH_EFFECT_STRATEGY</Strategy>
+			<FreeStartEra>C2C_ERA_MEDIEVAL</FreeStartEra>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_STONE_MYTH_EFFECT</ArtDefineTag>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_DRAGON_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_DRAGON_MYTH</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_EARTH_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FIRE_MYTH_EFFECT</BuildingType>
+			</PrereqInCityBuildings>
+			<CommerceChanges>
+				<iCommerce>1</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>1</iCommerce>
+			</CommerceChanges>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>10</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_DRAGON_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_MERMAID_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_MERMAID_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_MERMAID_MYTH</ArtDefineTag>
 			<bWater>1</bWater>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
+			</PrereqInCityBuildings>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
-			</PrereqInCityBuildings>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_ENTERTAINER</UnitCombatType>
 					<iExperience>1</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
+			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
+					<iFlavor>8</iFlavor>
 				</Flavor>
 			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_MERMAID_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PHOENIX_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_PHOENIX_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_PHOENIX_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FIRE_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_SKY_MYTH_EFFECT</BuildingType>
+			</PrereqInCityBuildings>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_FIRE_MYTH_EFFECT</BuildingType>
-				<BuildingType>BUILDING_SKY_MYTH_EFFECT</BuildingType>
-			</PrereqInCityBuildings>
+			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
+					<iFlavor>8</iFlavor>
 				</Flavor>
 			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_PHOENIX_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_UNICORN_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_UNICORN_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_UNICORN_MYTH</ArtDefineTag>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_HEALTH_CARE</UnitCombatType>
 					<iExperience>1</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
+			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_UNICORN_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AUTOBUILD_ALUMINUM_NEAR</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_AUTOBUILD_ALUMINUM_NEAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_ALUMINUM_NEAR</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<RawVicinityBonus>BONUS_BAUXITE_ORE</RawVicinityBonus>
 			<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
+			<RawVicinityBonus>BONUS_BAUXITE_ORE</RawVicinityBonus>
 			<bAutoBuild>1</bAutoBuild>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_ALUMINUM_NEAR</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AUTOBUILD_COPPER_NEAR</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_AUTOBUILD_COPPER_NEAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_COPPER_NEAR</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<RawVicinityBonus>BONUS_COPPER_ORE</RawVicinityBonus>
 			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
+			<RawVicinityBonus>BONUS_COPPER_ORE</RawVicinityBonus>
 			<bAutoBuild>1</bAutoBuild>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_COPPER_NEAR</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AUTOBUILD_GOLD_NEAR</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_AUTOBUILD_GOLD_NEAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_GOLD_NEAR</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<RawVicinityBonus>BONUS_GOLD_ORE</RawVicinityBonus>
 			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
+			<RawVicinityBonus>BONUS_GOLD_ORE</RawVicinityBonus>
 			<bAutoBuild>1</bAutoBuild>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_GOLD_NEAR</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AUTOBUILD_IRON_NEAR</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_AUTOBUILD_IRON_NEAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_IRON_NEAR</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<RawVicinityBonus>BONUS_IRON_ORE</RawVicinityBonus>
 			<PrereqTech>TECH_MINING</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
+			<RawVicinityBonus>BONUS_IRON_ORE</RawVicinityBonus>
 			<bAutoBuild>1</bAutoBuild>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_IRON_NEAR</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AUTOBUILD_LEAD_NEAR</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_AUTOBUILD_LEAD_NEAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_LEAD_NEAR</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<RawVicinityBonus>BONUS_LEAD_ORE</RawVicinityBonus>
 			<PrereqTech>TECH_MINING</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
+			<RawVicinityBonus>BONUS_LEAD_ORE</RawVicinityBonus>
 			<bAutoBuild>1</bAutoBuild>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_LEAD_NEAR</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AUTOBUILD_PLATINUM_NEAR</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_AUTOBUILD_PLATINUM_NEAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_PLATINUM_NEAR</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<RawVicinityBonus>BONUS_PLATINUM_ORE</RawVicinityBonus>
 			<PrereqTech>TECH_METAL_CASTING</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
+			<RawVicinityBonus>BONUS_PLATINUM_ORE</RawVicinityBonus>
 			<bAutoBuild>1</bAutoBuild>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_PLATINUM_NEAR</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AUTOBUILD_SILVER_NEAR</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_AUTOBUILD_SILVER_NEAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_SILVER_NEAR</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<RawVicinityBonus>BONUS_SILVER_ORE</RawVicinityBonus>
 			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
+			<RawVicinityBonus>BONUS_SILVER_ORE</RawVicinityBonus>
 			<bAutoBuild>1</bAutoBuild>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_SILVER_NEAR</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AUTOBUILD_TIN_NEAR</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_AUTOBUILD_TIN_NEAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_TIN_NEAR</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<RawVicinityBonus>BONUS_TIN_ORE</RawVicinityBonus>
 			<PrereqTech>TECH_SOFT_HAMMER_PERCUSSION</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
+			<RawVicinityBonus>BONUS_TIN_ORE</RawVicinityBonus>
 			<bAutoBuild>1</bAutoBuild>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_TIN_NEAR</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AUTOBUILD_TITANIUM_NEAR</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_AUTOBUILD_TITANIUM_NEAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_AUTOBUILD_METAL_NEAR_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_TITANIUM_NEAR</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<RawVicinityBonus>BONUS_TITANIUM_ORE</RawVicinityBonus>
 			<PrereqTech>TECH_ADVANCED_METALLURGY</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
+			<RawVicinityBonus>BONUS_TITANIUM_ORE</RawVicinityBonus>
 			<bAutoBuild>1</bAutoBuild>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_TITANIUM_NEAR</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AUTOBUILD_CAMEL_NEAR</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_AUTOBUILD_CAMEL_NEAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_ANIMAL_NEAR_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_AUTOBUILD_ANIMAL_NEAR_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_CAMEL_NEAR</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<RawVicinityBonus>BONUS_CAMEL</RawVicinityBonus>
 			<PrereqTech>TECH_SCAVENGING</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
+			<RawVicinityBonus>BONUS_CAMEL</RawVicinityBonus>
 			<bAutoBuild>1</bAutoBuild>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_CAMEL_NEAR</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AUTOBUILD_ELEPHANT_NEAR</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_AUTOBUILD_ELEPHANT_NEAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_ANIMAL_NEAR_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_AUTOBUILD_ANIMAL_NEAR_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_ELEPHANT_NEAR</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<RawVicinityBonus>BONUS_ELEPHANTS</RawVicinityBonus>
 			<PrereqTech>TECH_SCAVENGING</PrereqTech>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
+			<RawVicinityBonus>BONUS_ELEPHANTS</RawVicinityBonus>
 			<bAutoBuild>1</bAutoBuild>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_ELEPHANT_NEAR</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AUTOBUILD_HORSE_NEAR</Type>
-			<Description>TXT_KEY_BUILDING_AUTOBUILD_HORSE_NEAR</Description>
-			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_ANIMAL_NEAR_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_AUTOBUILD_ANIMAL_NEAR_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_HORSE_NEAR</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
-			<RawVicinityBonus>BONUS_HORSE</RawVicinityBonus>
-			<PrereqTech>TECH_SCAVENGING</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_AUTOBUILD_HORSE_NEAR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_AUTOBUILD_ANIMAL_NEAR_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_AUTOBUILD_ANIMAL_NEAR_STRATEGY</Strategy>
+			<PrereqTech>TECH_SCAVENGING</PrereqTech>
+			<RawVicinityBonus>BONUS_HORSE</RawVicinityBonus>
 			<bAutoBuild>1</bAutoBuild>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_GAME_AUTOBUILD_HORSE_NEAR</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WV_SLAVERY</Type>
@@ -16660,34 +16546,20 @@
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_WV_SLAVERY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WV_SLAVERY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_WV_SLAVERY_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_WV_SLAVERY_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_WV_SLAVERY</ArtDefineTag>
-			<PrereqTech>TECH_SLAVERY</PrereqTech>
-			<FreeBuilding>BUILDING_SLAVERY</FreeBuilding>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>3</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
+			<PrereqTech>TECH_SLAVERY</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>5</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
+			<FreeBuilding>BUILDING_SLAVERY</FreeBuilding>
 			<Hurrys>
 				<Hurry>
 					<HurryType>HURRY_POPULATION</HurryType>
@@ -16733,6 +16605,20 @@
 					<iProductionModifier>-50</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
+			<iAsset>3</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+					<iFlavor>5</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_GOLD</FlavorType>
+					<iFlavor>2</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_WV_SLAVERY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SLAVERY</Type>
@@ -16741,17 +16627,12 @@
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
-			<Description>TXT_KEY_BUILDING_SLAVERY</Description>
-			<Civilopedia>TXT_KEY_BUILDING_WV_SLAVERY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_WV_SLAVERY_STRATEGY</Strategy>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_WV_SLAVERY</ArtDefineTag>
-			<bNeverCapture>1</bNeverCapture>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iAsset>3</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
+			<Description>TXT_KEY_BUILDING_SLAVERY</Description>
+			<Civilopedia>TXT_KEY_BUILDING_WV_SLAVERY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_WV_SLAVERY_STRATEGY</Strategy>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_SLAVES</SpecialistType>
@@ -16929,58 +16810,44 @@
 					<iProductionModifier>-100</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>5</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_WV_SLAVERY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SLAVERY_BAD_ZORO_I</Type>
-			<Description>TXT_KEY_BUILDING_SLAVERY_BAD_ZORO_I</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SLAVERY_ZORO_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SLAVERY_BAD_ZORO</ArtDefineTag>
-			<ReligionType>RELIGION_ZOROASTRIANISM</ReligionType>
-			<PrereqReligion>RELIGION_ZOROASTRIANISM</PrereqReligion>
-			<bNeverCapture>1</bNeverCapture>
-			<iHappiness>-1</iHappiness>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iAsset>3</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
+			<Description>TXT_KEY_BUILDING_SLAVERY_BAD_ZORO_I</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SLAVERY_ZORO_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SLAVERY</BuildingType>
 			</PrereqInCityBuildings>
+			<ReligionType>RELIGION_ZOROASTRIANISM</ReligionType>
+			<PrereqReligion>RELIGION_ZOROASTRIANISM</PrereqReligion>
+			<iHappiness>-1</iHappiness>
 			<bAutoBuild>1</bAutoBuild>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_SLAVERY_BAD_ZORO</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SLAVERY_BAD_ZORO_II</Type>
-			<Description>TXT_KEY_BUILDING_SLAVERY_BAD_ZORO_II</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SLAVERY_ZORO_PEDIA</Civilopedia>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SLAVERY_BAD_ZORO</ArtDefineTag>
-			<StateReligion>RELIGION_ZOROASTRIANISM</StateReligion>
-			<bNeverCapture>1</bNeverCapture>
-			<iHappiness>-3</iHappiness>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iAsset>3</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
+			<Description>TXT_KEY_BUILDING_SLAVERY_BAD_ZORO_II</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SLAVERY_ZORO_PEDIA</Civilopedia>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SLAVERY</BuildingType>
 			</PrereqInCityBuildings>
+			<StateReligion>RELIGION_ZOROASTRIANISM</StateReligion>
+			<iHappiness>-3</iHappiness>
 			<bAutoBuild>1</bAutoBuild>
+			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_SLAVERY_BAD_ZORO</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SLAVE_COMPOUND</Type>
@@ -16989,19 +16856,20 @@
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_SLAVE_COMPOUND</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SLAVE_COMPOUND_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SLAVE_COMPOUND_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_SLAVE_COMPOUND_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_MARKET</ArtDefineTag>
+			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
 			<PrereqTech>TECH_SLAVERY</PrereqTech>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SLAVERY</BuildingType>
+			</PrereqInCityBuildings>
 			<iMilitaryProductionModifier>-5</iMilitaryProductionModifier>
-			<iAsset>3</iAsset>
 			<YieldModifiers>
 				<iYield>0</iYield>
 				<iYield>5</iYield>
@@ -17012,10 +16880,7 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_SLAVERY</BuildingType>
-			</PrereqInCityBuildings>
+			<iAsset>3</iAsset>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
@@ -17026,6 +16891,8 @@
 					<iFlavor>2</iFlavor>
 				</Flavor>
 			</Flavors>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_MARKET</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SLAVE_COMPOUND_MILITARY_SUPPORT</Type>
@@ -17034,27 +16901,16 @@
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_SLAVE_COMPOUND_MILITARY_SUPPORT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SLAVE_COMPOUND_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SLAVE_COMPOUND_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_SLAVE_COMPOUND_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_COMPOUND_MILITARY</ArtDefineTag>
-			<PrereqTech>TECH_MILITARY_TRAINING</PrereqTech>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iMilitaryProductionModifier>5</iMilitaryProductionModifier>
-			<iAsset>3</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<SpecialistCounts>
-				<SpecialistCount>
-					<SpecialistType>SPECIALIST_SLAVES</SpecialistType>
-					<iSpecialistCount>1</iSpecialistCount>
-				</SpecialistCount>
-			</SpecialistCounts>
 			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
+			<PrereqTech>TECH_MILITARY_TRAINING</PrereqTech>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_GARRISON</BuildingType>
@@ -17068,45 +16924,39 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
 			</PrereqInCityBuildings>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>5</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
-		</BuildingInfo>
-		<BuildingInfo>
-			<Type>BUILDING_SLAVE_COMPOUND_ENTERTAINMENT</Type>
-			<Description>TXT_KEY_BUILDING_SLAVE_COMPOUND_ENTERTAINMENT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_SLAVE_COMPOUND_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_SLAVE_COMPOUND_STRATEGY</Strategy>
-			<Help>TXT_KEY_BUILDING_SLAVE_COMPOUND_HELP</Help>
-			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_COMPOUND_ENTERTAINMENT</ArtDefineTag>
-			<PrereqTech>TECH_SLAVERY</PrereqTech>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iHappiness>1</iHappiness>
-			<iAsset>3</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>2</iCommerce>
-			</CommerceChanges>
+			<iMilitaryProductionModifier>5</iMilitaryProductionModifier>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_SLAVES</SpecialistType>
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
+			<iAsset>1</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_MILITARY</FlavorType>
+					<iFlavor>3</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_COMPOUND_MILITARY</ArtDefineTag>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_SLAVE_COMPOUND_ENTERTAINMENT</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_SLAVE_COMPOUND_ENTERTAINMENT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_SLAVE_COMPOUND_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_SLAVE_COMPOUND_STRATEGY</Strategy>
+			<Help>TXT_KEY_BUILDING_SLAVE_COMPOUND_HELP</Help>
+			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
+			<PrereqTech>TECH_SLAVERY</PrereqTech>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_STORYTELLERS_HUT</BuildingType>
@@ -17140,6 +16990,19 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
 			</PrereqInCityBuildings>
+			<iHappiness>1</iHappiness>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>2</iCommerce>
+			</CommerceChanges>
+			<SpecialistCounts>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_SLAVES</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
+			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
@@ -17150,22 +17013,24 @@
 					<iFlavor>2</iFlavor>
 				</Flavor>
 			</Flavors>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_COMPOUND_ENTERTAINMENT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SLAVE_COMPOUND_FOOD</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_SLAVE_COMPOUND_FOOD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SLAVE_COMPOUND_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SLAVE_COMPOUND_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_SLAVE_COMPOUND_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_COMPOUND_FOOD</ArtDefineTag>
+			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
 			<PrereqTech>TECH_SLAVERY</PrereqTech>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>3</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
+			</PrereqInCityBuildings>
 			<YieldChanges>
 				<iYield>2</iYield>
 			</YieldChanges>
@@ -17175,20 +17040,19 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
-			</PrereqInCityBuildings>
+			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>5</iFlavor>
+					<FlavorType>FLAVOR_GROWTH</FlavorType>
+					<iFlavor>4</iFlavor>
 				</Flavor>
 				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
+					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
 					<iFlavor>2</iFlavor>
 				</Flavor>
 			</Flavors>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_COMPOUND_FOOD</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SLAVE_COMPOUND_PRODUCTION</Type>
@@ -17197,19 +17061,19 @@
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_SLAVE_COMPOUND_PRODUCTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SLAVE_COMPOUND_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SLAVE_COMPOUND_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_SLAVE_COMPOUND_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_COMPOUND_PRODUCTION</ArtDefineTag>
+			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
 			<PrereqTech>TECH_SLAVERY</PrereqTech>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>3</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
+			</PrereqInCityBuildings>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>2</iYield>
@@ -17220,36 +17084,31 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
-			</PrereqInCityBuildings>
+			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
 					<iFlavor>5</iFlavor>
 				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
 			</Flavors>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_COMPOUND_PRODUCTION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SLAVE_COMPOUND_COMMERCE</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_SLAVE_COMPOUND_COMMERCE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SLAVE_COMPOUND_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SLAVE_COMPOUND_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_SLAVE_COMPOUND_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_COMPOUND_COMMERCE</ArtDefineTag>
+			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
 			<PrereqTech>TECH_TRADE</PrereqTech>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>3</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
+			</PrereqInCityBuildings>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -17261,57 +17120,42 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
-			</PrereqInCityBuildings>
+			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>5</iFlavor>
+					<iFlavor>2</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>2</iFlavor>
+					<iFlavor>4</iFlavor>
 				</Flavor>
 			</Flavors>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_COMPOUND_COMMERCE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SLAVE_COMPOUND_SANITATION</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_SLAVE_COMPOUND_SANITATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SLAVE_COMPOUND_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SLAVE_COMPOUND_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_SLAVE_COMPOUND_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_COMPOUND_SANITATION</ArtDefineTag>
-			<PrereqTech>TECH_SANITATION</PrereqTech>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iHealth>1</iHealth>
-			<iAsset>3</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
+			<PrereqTech>TECH_SANITATION</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_SLAVE_COMPOUND</BuildingType>
 			</PrereqInCityBuildings>
+			<iHealth>1</iHealth>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_SLAVES</SpecialistType>
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>5</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -17329,23 +17173,32 @@
 					<iAmountPerTurn>-1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>2</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_GROWTH</FlavorType>
+					<iFlavor>4</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+					<iFlavor>2</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_COMPOUND_SANITATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_SLAVE_COMPOUND_CRIME_PREVENTION</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_SLAVE_COMPOUND_CRIME_PREVENTION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SLAVE_COMPOUND_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SLAVE_COMPOUND_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_SLAVE_COMPOUND_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_COMPOUND_CRIME_PREVENTION</ArtDefineTag>
-			<PrereqTech>TECH_SANITATION</PrereqTech>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>3</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_SLAVE_MARKET</ConstructSound>
+			<PrereqTech>TECH_SANITATION</PrereqTech>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_SENTRY_POST</BuildingType>
@@ -17381,16 +17234,6 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
-					<iFlavor>5</iFlavor>
-				</Flavor>
-				<Flavor>
-					<FlavorType>FLAVOR_GOLD</FlavorType>
-					<iFlavor>2</iFlavor>
-				</Flavor>
-			</Flavors>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -17398,6 +17241,23 @@
 					<iAmountPerTurn>-2</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>2</iAsset>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_GOLD</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_GROWTH</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+				<Flavor>
+					<FlavorType>FLAVOR_PRODUCTION</FlavorType>
+					<iFlavor>2</iFlavor>
+				</Flavor>
+			</Flavors>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_SLAVE_COMPOUND_CRIME_PREVENTION</ArtDefineTag>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

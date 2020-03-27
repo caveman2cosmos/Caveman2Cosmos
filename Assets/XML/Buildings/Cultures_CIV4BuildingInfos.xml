@@ -13,8 +13,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_ACTIVE_ASIAN</Type>
@@ -25,8 +25,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_ACTIVE_EUROPEAN</Type>
@@ -37,8 +37,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</Type>
@@ -49,8 +49,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</Type>
@@ -66,8 +66,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</Type>
@@ -78,8 +78,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_ACTIVE_OCEANIAN</Type>
@@ -90,8 +90,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</Type>
@@ -102,14 +102,15 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<!--|||||||||||||||||||
 		||| Adopted Culture |||
 		||||||||||||||||||||-->
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_ADOPTED_AFRICAN</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_AFRICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
@@ -135,12 +136,12 @@
 			</PrereqNotBuildings>
 			<FreeBuilding>BUILDING_CULTURE_ACTIVE_AFRICAN</FreeBuilding>
 			<bAutoBuild>1</bAutoBuild>
-			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_ADOPTED_ASIAN</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_ASIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
@@ -166,12 +167,12 @@
 			</PrereqNotBuildings>
 			<FreeBuilding>BUILDING_CULTURE_ACTIVE_ASIAN</FreeBuilding>
 			<bAutoBuild>1</bAutoBuild>
-			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_ADOPTED_EUROPEAN</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_EUROPEAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
@@ -197,12 +198,12 @@
 			</PrereqNotBuildings>
 			<FreeBuilding>BUILDING_CULTURE_ACTIVE_EUROPEAN</FreeBuilding>
 			<bAutoBuild>1</bAutoBuild>
-			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_ADOPTED_MIDDLE_EASTERN</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_MIDDLE_EASTERN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
@@ -228,12 +229,12 @@
 			</PrereqNotBuildings>
 			<FreeBuilding>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</FreeBuilding>
 			<bAutoBuild>1</bAutoBuild>
-			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_ADOPTED_NEANDERTHAL</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_NEANDERTHAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
@@ -259,13 +260,13 @@
 			</PrereqNotBuildings>
 			<FreeBuilding>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</FreeBuilding>
 			<bAutoBuild>1</bAutoBuild>
-			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_ADOPTED_NORTH_AMERICAN</Type>
 			<bNoLimit>1</bNoLimit>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_NORTH_AMERICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
 			<Help>TXT_KEY_BUILDING_CULTURE_ADOPTED</Help>
@@ -290,12 +291,12 @@
 			</PrereqNotBuildings>
 			<FreeBuilding>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</FreeBuilding>
 			<bAutoBuild>1</bAutoBuild>
-			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_ADOPTED_OCEANIAN</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_OCEANIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
@@ -321,12 +322,12 @@
 			</PrereqNotBuildings>
 			<FreeBuilding>BUILDING_CULTURE_ACTIVE_OCEANIAN</FreeBuilding>
 			<bAutoBuild>1</bAutoBuild>
-			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CULTURE_ADOPTED_SOUTH_AMERICAN</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<bNoLimit>1</bNoLimit>
 			<Description>TXT_KEY_BUILDING_CULTURE_ADOPTED_SOUTH_AMERICAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CULTURE_ADOPTED_PEDIA</Civilopedia>
@@ -352,9 +353,8 @@
 			</PrereqNotBuildings>
 			<FreeBuilding>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</FreeBuilding>
 			<bAutoBuild>1</bAutoBuild>
-			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
-			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 		</BuildingInfo>
 		<!--|||||||||||||||||
 		||| Local Culture |||
@@ -904,8 +904,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 			<FreeBuilding>BUILDING_CULTURE_ACTIVE_AFRICAN</FreeBuilding>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -917,8 +917,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 			<FreeBuilding>BUILDING_CULTURE_ACTIVE_ASIAN</FreeBuilding>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -930,8 +930,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 			<FreeBuilding>BUILDING_CULTURE_ACTIVE_EUROPEAN</FreeBuilding>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -943,8 +943,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 			<FreeBuilding>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</FreeBuilding>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -961,8 +961,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 			<FreeBuilding>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</FreeBuilding>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -974,8 +974,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 			<FreeBuilding>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</FreeBuilding>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -987,8 +987,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 			<FreeBuilding>BUILDING_CULTURE_ACTIVE_OCEANIAN</FreeBuilding>
 		</BuildingInfo>
 		<BuildingInfo>
@@ -1000,8 +1000,8 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
+			<bNeverCapture>1</bNeverCapture>
 			<FreeBuilding>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</FreeBuilding>
 		</BuildingInfo>
 		<!--|||||||||||||||||||

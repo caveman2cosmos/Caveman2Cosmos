@@ -8492,40 +8492,34 @@ def doRemoveWVCannibalism(argsList):
 				CyAudioGame().Play2DSound("AS2D_DISCOVERBONUS")
 
 def doRemoveWVHumanSacrifice(argsList):
-	pUnit = argsList[0]
+	CyUnit = argsList[0]
 
-	if pUnit == None:
+	if CyUnit == None:
 		return # False call
 
-	pPlayer = GC.getPlayer( pUnit.getOwner( ) )
-	iPlayer = pPlayer.getID( )
-	civ = GC.getCivilizationInfo(pPlayer.getCivilizationType())
-
-	if not pPlayer.isAlive():
-		return
-
 	iWVSacrifice = GC.getInfoTypeForString("BUILDING_WV_HUMAN_SACRIFICE")
-	iAltar = GC.getInfoTypeForString("BUILDING_HUMAN_SACRIFICE_ALTAR")
 	if iWVSacrifice > -1:
-		(loopCity, iter) = pPlayer.firstCity(False)
-		while(loopCity):
-			# Remove the main slavery building
-			if loopCity.getNumActiveBuilding(iWVSacrifice) > 0:
+		iAltar = GC.getInfoTypeForString("BUILDING_HUMAN_SACRIFICE_ALTAR")
+		iToken = GC.getInfoTypeForString("BUILDING_HUMAN_SACRIFICE")
+		CyPlayer = GC.getPlayer(CyUnit.getOwner())
 
-				loopCity.setNumRealBuilding(iWVSacrifice, 0)
+		CyCity, i = CyPlayer.firstCity(False)
+		while CyCity:
+			# Remove the main worldview building
+			if CyCity.getNumActiveBuilding(iWVSacrifice) > 0:
+				CyCity.setNumRealBuilding(iWVSacrifice, 0)
 				CyAudioGame().Play2DSound("AS2D_DISCOVERBONUS")
 
-				CyInterface().addMessage(iPlayer,False,25,TRNSLTR.getText("TXT_KEY_MSG_NO_HUMAN_SACRIFICE",(loopCity.getName(),)),"AS2D_BUILD_BANK",InterfaceMessageTypes.MESSAGE_TYPE_INFO,pUnit.getButton(),ColorTypes(8),loopCity.getX(),loopCity.getY(),True,True)
-				#~ break
-			# Sell the Alter if one exists
-			if loopCity.getNumActiveBuilding(iAltar) > 0:
+				CyInterface().addMessage(CyPlayer.getID(),False,25,TRNSLTR.getText("TXT_KEY_MSG_NO_HUMAN_SACRIFICE",(CyCity.getName(),)),"AS2D_BUILD_BANK",InterfaceMessageTypes.MESSAGE_TYPE_INFO,pUnit.getButton(),ColorTypes(8),CyCity.getX(),CyCity.getY(),True,True)
 
-				loopCity.setNumRealBuilding(iAltar, 0)
-				CyAudioGame().Play2DSound("AS2D_DISCOVERBONUS")
+			# Remove the worldview token building
+			CyCity.setNumRealBuilding(iToken, 0)
 
-				CyInterface().addMessage(iPlayer,False,25,TRNSLTR.getText("TXT_KEY_MSG_ALTAR_SOLD",(loopCity.getName(),)),"AS2D_BUILD_BANK",InterfaceMessageTypes.MESSAGE_TYPE_INFO,pUnit.getButton(),ColorTypes(8),loopCity.getX(),loopCity.getY(),True,True)
+			# Remove the human sacrifice altar
+			if CyCity.getNumActiveBuilding(iAltar) > 0:
+				CyCity.setNumRealBuilding(iAltar, 0)
 
-			(loopCity, iter) = pPlayer.nextCity(iter, False)
+			CyCity, i = CyPlayer.nextCity(i, False)
 
 def getNumNonSpecialistSlaves(argsList):
 	# Returns the number of non specialist slave specialists more than the number of specialist slave specialists
@@ -8831,9 +8825,9 @@ def doSacrificeCaptive(argsList):
 		return # bad call
 
 	if  pCity.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_SACRIFICIAL_ALTAR")) > 0:
-		iGoldenAgeLength = iGoldenAgeLength + 2
+		iGoldenAgeLength += 1
 	elif pCity.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_HUMAN_SACRIFICE_ALTAR")) > 0:
-		iGoldenAgeLength = iGoldenAgeLength + 1
+		iGoldenAgeLength += 2
 
 	iDruid = GC.getInfoTypeForString("RELIGION_DRUIDIC_TRADITIONS")
 	iMeasoamerican = GC.getInfoTypeForString("RELIGION_NAGHUALISM")
