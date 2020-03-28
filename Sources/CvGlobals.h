@@ -1610,23 +1610,16 @@ public:
 //	by the core engine to establish memory allocators)
 class CvGlobals
 {
-//	friend class CvDLLUtilityIFace;
 	friend class CvXMLLoadUtility;
 	friend class ProxyTracker;
 protected:
 	void CheckProxy(const char* fnName) const;
 
 public:
-
-	// singleton accessor
 	DllExport inline static CvGlobals& getInstance();
 
-	CvGlobals()
-	{
-	}
-	virtual ~CvGlobals()
-	{
-	}
+	CvGlobals() {}
+	virtual ~CvGlobals() {}
 
 	DllExport void init()
 	{
@@ -1638,7 +1631,6 @@ public:
 		PROXY_TRACK("uninit");
 		gGlobals->uninit();
 	}
-
 	DllExport CvDiplomacyScreen* getDiplomacyScreen()
 	{
 		PROXY_TRACK("getDiplomacyScreen");
@@ -1789,7 +1781,6 @@ public:
 		PROXY_TRACK("getInterfaceModeInfo");
 		return gGlobals->getInterfaceModeInfo(e);
 	}
-
 	DllExport bool& getLogging()
 	{
 		PROXY_TRACK("getLogging");
@@ -1810,7 +1801,6 @@ public:
 		PROXY_TRACK("overwriteLogs");
 		return gGlobals->overwriteLogs();
 	}
-
 	DllExport int* getPlotDirectionX()
 	{
 		PROXY_TRACK("getPlotDirectionX");
@@ -1950,7 +1940,6 @@ public:
 		PROXY_TRACK("getTerrainPlaneInfo");
 		return gGlobals->getTerrainPlaneInfo(i);
 	}
-
 	DllExport int getNumCameraOverlayInfos()
 	{
 		PROXY_TRACK("getNumCameraOverlayInfos");
@@ -2317,12 +2306,10 @@ public:
 		PROXY_TRACK("getFootstepAudioTags");
 		return gGlobals->getFootstepAudioTags(i);
 	}
-
 	//
 	///////////////// BEGIN global defines
 	// THESE ARE READ-ONLY
 	//
-
 	DllExport FVariableSystem* getDefinesVarSystem()
 	{
 		PROXY_TRACK("getDefinesVarSystem");
@@ -2469,7 +2456,6 @@ public:
 			delete gGlobals;
 		}
 	}
-
 	DllExport CvDLLUtilityIFaceBase* getDLLIFaceNonInl()
 	{
 		//PROXY_TRACK("getDLLIFaceNonInl");
@@ -2625,11 +2611,9 @@ public:
 		PROXY_TRACK("writeEventTriggerInfoArray");
 		gGlobals->writeEventTriggerInfoArray(pStream);
 	}
-
 	//
 	// additional accessors for initting globals
 	//
-
 	DllExport void setInterface(CvInterface* pVal)
 	{
 		PROXY_TRACK("setInterface");

@@ -291,6 +291,11 @@ public:
 	//////////////////////
 
 	CyVariableSystem* getCyDefinesVarSystem();
+
+#define ADD_GLOBAL_DEFINE_TO_PYTHON_WRAPPER_CLASS(VAR) \
+	int get##VAR() const { return GC.get##VAR(); }
+	DO_FOR_EACH_EXPOSED_INT_GLOBAL_DEFINE(ADD_GLOBAL_DEFINE_TO_PYTHON_WRAPPER_CLASS)
+
 /************************************************************************************************/
 /* MOD_COMPONENT_CONTROL                   08/02/07                            MRGENIE          */
 /*                                                                                              */
@@ -311,43 +316,7 @@ public:
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	bool isDCM_BATTLE_EFFECTS() const { return GC.isDCM_BATTLE_EFFECTS(); }
-	int getBATTLE_EFFECT_LESS_FOOD() const { return GC.getBATTLE_EFFECT_LESS_FOOD(); }
-	int getBATTLE_EFFECT_LESS_PRODUCTION() const { return GC.getBATTLE_EFFECT_LESS_PRODUCTION(); }
-	int getBATTLE_EFFECT_LESS_COMMERCE() const { return GC.getBATTLE_EFFECT_LESS_COMMERCE(); }
-	int getBATTLE_EFFECTS_MINIMUM_TURN_INCREMENTS() const { return GC.getBATTLE_EFFECTS_MINIMUM_TURN_INCREMENTS(); }
-	int getMAX_BATTLE_TURNS() const { return GC.getMAX_BATTLE_TURNS(); }
-
-	bool isDCM_AIR_BOMBING() const { return GC.isDCM_AIR_BOMBING(); }
-	bool isDCM_RANGE_BOMBARD() const { return GC.isDCM_RANGE_BOMBARD(); }
-	int getDCM_RB_CITY_INACCURACY() const { return GC.getDCM_RB_CITY_INACCURACY(); }
-	int getDCM_RB_CITYBOMBARD_CHANCE() const { return GC.getDCM_RB_CITYBOMBARD_CHANCE(); }
-	bool isDCM_ATTACK_SUPPORT() const { return GC.isDCM_ATTACK_SUPPORT(); }
-	bool isDCM_OPP_FIRE() const { return GC.isDCM_OPP_FIRE(); }
-	bool isDCM_ACTIVE_DEFENSE() const { return GC.isDCM_ACTIVE_DEFENSE(); }
-	bool isDCM_FIGHTER_ENGAGE() const { return GC.isDCM_FIGHTER_ENGAGE(); }
-
 	bool isDYNAMIC_CIV_NAMES() const { return GC.isDYNAMIC_CIV_NAMES(); }
-
-	bool isIDW_ENABLED() const { return GC.isIDW_ENABLED(); }
-	float getIDW_BASE_COMBAT_INFLUENCE() const { return GC.getIDW_BASE_COMBAT_INFLUENCE(); }
-	float getIDW_NO_CITY_DEFENDER_MULTIPLIER() const { return GC.getIDW_NO_CITY_DEFENDER_MULTIPLIER(); }
-	float getIDW_FORT_CAPTURE_MULTIPLIER() const { return GC.getIDW_FORT_CAPTURE_MULTIPLIER(); }
-	float getIDW_EXPERIENCE_FACTOR() const { return GC.getIDW_EXPERIENCE_FACTOR(); }
-	float getIDW_WARLORD_MULTIPLIER() const { return GC.getIDW_WARLORD_MULTIPLIER(); }
-	int getIDW_INFLUENCE_RADIUS() const { return GC.getIDW_INFLUENCE_RADIUS(); }
-	float getIDW_PLOT_DISTANCE_FACTOR() const { return GC.getIDW_PLOT_DISTANCE_FACTOR(); }
-	float getIDW_WINNER_PLOT_MULTIPLIER() const { return GC.getIDW_WINNER_PLOT_MULTIPLIER(); }
-	float getIDW_LOSER_PLOT_MULTIPLIER() const { return GC.getIDW_LOSER_PLOT_MULTIPLIER(); }
-	bool isIDW_EMERGENCY_DRAFT_ENABLED() const { return GC.isIDW_EMERGENCY_DRAFT_ENABLED(); }
-	int getIDW_EMERGENCY_DRAFT_MIN_POPULATION() const { return GC.getIDW_EMERGENCY_DRAFT_MIN_POPULATION(); }
-	float getIDW_EMERGENCY_DRAFT_STRENGTH() const { return GC.getIDW_EMERGENCY_DRAFT_STRENGTH(); }
-	float getIDW_EMERGENCY_DRAFT_ANGER_MULTIPLIER() const { return GC.getIDW_EMERGENCY_DRAFT_ANGER_MULTIPLIER(); }
-	bool isIDW_NO_BARBARIAN_INFLUENCE() const { return GC.isIDW_NO_BARBARIAN_INFLUENCE(); }
-	bool isIDW_NO_NAVAL_INFLUENCE() const { return GC.isIDW_NO_NAVAL_INFLUENCE(); }
-	bool isIDW_PILLAGE_INFLUENCE_ENABLED() const { return GC.isIDW_PILLAGE_INFLUENCE_ENABLED(); }
-	float getIDW_BASE_PILLAGE_INFLUENCE() const { return GC.getIDW_BASE_PILLAGE_INFLUENCE(); }
-	float getIDW_CITY_TILE_MULTIPLIER() const { return GC.getIDW_CITY_TILE_MULTIPLIER(); }
 
 	bool isSS_ENABLED() const { return GC.isSS_ENABLED(); }
 	bool isSS_BRIBE() const { return GC.isSS_BRIBE(); }
@@ -355,40 +324,6 @@ public:
 /************************************************************************************************/
 /* Mod Globals                        END                                           phungus420  */
 /************************************************************************************************/
-
-	int getMOVE_DENOMINATOR() const { return GC.getMOVE_DENOMINATOR(); }
-	int getNUM_UNIT_PREREQ_OR_BONUSES() const { return GC.getNUM_UNIT_PREREQ_OR_BONUSES(); }
-	int getNUM_BUILDING_PREREQ_OR_BONUSES() const { return GC.getNUM_BUILDING_PREREQ_OR_BONUSES(); }
-	int getFOOD_CONSUMPTION_PER_POPULATION() const { return GC.getFOOD_CONSUMPTION_PER_POPULATION(); }
-	int getMAX_HIT_POINTS() const { return GC.getMAX_HIT_POINTS(); }
-	int getHILLS_EXTRA_DEFENSE() const { return GC.getHILLS_EXTRA_DEFENSE(); }
-	int getRIVER_ATTACK_MODIFIER() const { return GC.getRIVER_ATTACK_MODIFIER(); }
-	int getAMPHIB_ATTACK_MODIFIER() const { return GC.getAMPHIB_ATTACK_MODIFIER(); }
-	int getHILLS_EXTRA_MOVEMENT() const { return GC.getHILLS_EXTRA_MOVEMENT(); }
-	int getMAX_PLOT_LIST_ROWS() const { return GC.getMAX_PLOT_LIST_ROWS(); }
-	int getUNIT_MULTISELECT_MAX() const { return GC.getUNIT_MULTISELECT_MAX(); }
-	int getPERCENT_ANGER_DIVISOR() const { return GC.getPERCENT_ANGER_DIVISOR(); }
-	int getEVENT_MESSAGE_TIME() const { return GC.getEVENT_MESSAGE_TIME(); }
-	int getROUTE_FEATURE_GROWTH_MODIFIER() const { return GC.getROUTE_FEATURE_GROWTH_MODIFIER(); }
-	int getFEATURE_GROWTH_MODIFIER() const { return GC.getFEATURE_GROWTH_MODIFIER(); }
-	int getMIN_CITY_RANGE() const { return GC.getMIN_CITY_RANGE(); }
-	int getCITY_MAX_NUM_BUILDINGS() const { return GC.getCITY_MAX_NUM_BUILDINGS(); }
-	int getNUM_UNIT_AND_TECH_PREREQS() const { return GC.getNUM_UNIT_AND_TECH_PREREQS(); }
-	int getNUM_AND_TECH_PREREQS() const { return GC.getNUM_AND_TECH_PREREQS(); }
-	int getNUM_OR_TECH_PREREQS() const { return GC.getNUM_OR_TECH_PREREQS(); }
-	int getLAKE_MAX_AREA_SIZE() const { return GC.getLAKE_MAX_AREA_SIZE(); }
-	int getNUM_ROUTE_PREREQ_OR_BONUSES() const { return GC.getNUM_ROUTE_PREREQ_OR_BONUSES(); }
-	int getNUM_BUILDING_AND_TECH_PREREQS() const { return GC.getNUM_BUILDING_AND_TECH_PREREQS(); }
-	int getMIN_WATER_SIZE_FOR_OCEAN() const { return GC.getMIN_WATER_SIZE_FOR_OCEAN(); }
-	int getFORTIFY_MODIFIER_PER_TURN() const { return GC.getFORTIFY_MODIFIER_PER_TURN(); }
-	int getMAX_CITY_DEFENSE_DAMAGE() const { return GC.getMAX_CITY_DEFENSE_DAMAGE(); }
-	int getNUM_CORPORATION_PREREQ_BONUSES() const { return GC.getNUM_CORPORATION_PREREQ_BONUSES(); }
-	int getPEAK_SEE_THROUGH_CHANGE() const { return GC.getPEAK_SEE_THROUGH_CHANGE(); }
-	int getHILLS_SEE_THROUGH_CHANGE() const { return GC.getHILLS_SEE_THROUGH_CHANGE(); }
-	int getSEAWATER_SEE_FROM_CHANGE() const { return GC.getSEAWATER_SEE_FROM_CHANGE(); }
-	int getPEAK_SEE_FROM_CHANGE() const { return GC.getPEAK_SEE_FROM_CHANGE(); }
-	int getHILLS_SEE_FROM_CHANGE() const { return GC.getHILLS_SEE_FROM_CHANGE(); }
-	int getUSE_SPIES_NO_ENTER_BORDERS() const { return GC.getUSE_SPIES_NO_ENTER_BORDERS(); }
 
 	float getCAMERA_MIN_YAW() const { return GC.getCAMERA_MIN_YAW(); }
 	float getCAMERA_MAX_YAW() const { return GC.getCAMERA_MAX_YAW(); }
@@ -445,8 +380,6 @@ public:
 /*                                                                                              */
 /*                                                                                              */
 /************************************************************************************************/
-	int getPEAK_EXTRA_DEFENSE() const { return GC.getPEAK_EXTRA_DEFENSE(); }
-	int getPEAK_EXTRA_MOVEMENT() const { return GC.getPEAK_EXTRA_MOVEMENT(); }
 	bool isXMLLogging() const { return GC.isXMLLogging(); }
 	void setXMLLogging(bool bNewVal) { GC.setXMLLogging(bNewVal); }
 	
