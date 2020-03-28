@@ -154,6 +154,7 @@ class CvMapSwitchInfo;
 /*******************************/
 
 #include "CvInfoReplacements.h"
+#include "GlobalDefines.h"
 #include <stack>
 
 extern CvDLLUtilityIFaceBase* g_DLL;
