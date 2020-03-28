@@ -2582,7 +2582,7 @@ bool CvCity::canTrainInternal(UnitTypes eUnit, bool bContinue, bool bTestVisible
 		return false;
 	}
 
-	if (GC.getUSE_CAN_TRAIN_CALLBACK(eUnit))
+	if (GC.getUSE_CAN_TRAIN_CALLBACK())
 	{
 		PROFILE("canTrain.Python");
 
@@ -2692,7 +2692,7 @@ bool CvCity::canTrainInternal(UnitTypes eUnit, bool bContinue, bool bTestVisible
 		return false;
 	}
 
-	if (GC.getUSE_CANNOT_TRAIN_CALLBACK(eUnit))
+	if (GC.getUSE_CANNOT_TRAIN_CALLBACK())
 	{
 		if (Cy::call<bool>(PYGameModule, "cannotTrain", Cy::Args()
 			<< const_cast<CvCity*>(this)

@@ -3223,7 +3223,7 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 	//	Tech requirements are not checked here - they are checked in CvPlayer::canBuild() which will also be called
 	//	when necessary (which is why the enabling tech is not checked here)
 
-	if(bIncludePythonOverrides && GC.getUSE_CAN_BUILD_CALLBACK(eBuild))
+	if(bIncludePythonOverrides && GC.getUSE_CAN_BUILD_CALLBACK())
 	{
 		long lResult = canBuildFromPython(eBuild, ePlayer);
 

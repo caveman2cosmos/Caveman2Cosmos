@@ -142,17 +142,10 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_paszDirectionTypes(NULL)
 	, m_paszFootstepAudioTypes(NULL)
 	, m_paszFootstepAudioTags(NULL)
-	, m_bDCM_BATTLE_EFFECTS(false)
-	, m_iBATTLE_EFFECT_LESS_FOOD(0)
-	, m_iBATTLE_EFFECT_LESS_PRODUCTION(0)
-	, m_iBATTLE_EFFECT_LESS_COMMERCE(0)
-	, m_iBATTLE_EFFECTS_MINIMUM_TURN_INCREMENTS(0)
-	, m_iMAX_BATTLE_TURNS(0)
 
+	, m_bDCM_BATTLE_EFFECTS(false)
 	, m_bDCM_AIR_BOMBING(false)
 	, m_bDCM_RANGE_BOMBARD(false)
-	, m_iDCM_RB_CITY_INACCURACY(0)
-	, m_iDCM_RB_CITYBOMBARD_CHANCE(0)
 	, m_bDCM_ATTACK_SUPPORT(false)
 	, m_bDCM_OPP_FIRE(false)
 	, m_bDCM_ACTIVE_DEFENSE(false)
@@ -169,12 +162,10 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_fIDW_FORT_CAPTURE_MULTIPLIER(1.0f)
 	, m_fIDW_EXPERIENCE_FACTOR(0)
 	, m_fIDW_WARLORD_MULTIPLIER(1.0f)
-	, m_iIDW_INFLUENCE_RADIUS(0)
 	, m_fIDW_PLOT_DISTANCE_FACTOR(0)
 	, m_fIDW_WINNER_PLOT_MULTIPLIER(1.0f)
 	, m_fIDW_LOSER_PLOT_MULTIPLIER(1.0f)
 	, m_bIDW_EMERGENCY_DRAFT_ENABLED(false)
-	, m_iIDW_EMERGENCY_DRAFT_MIN_POPULATION(2)
 	, m_fIDW_EMERGENCY_DRAFT_STRENGTH(1.0f)
 	, m_fIDW_EMERGENCY_DRAFT_ANGER_MULTIPLIER(0)
 	, m_bIDW_NO_BARBARIAN_INFLUENCE(false)
@@ -235,43 +226,6 @@ cvInternalGlobals::cvInternalGlobals()
 	//, m_aPlayerOptionsInfo(NULL)
 	, m_Profiler(NULL)
 	, m_VarSystem(NULL)
-	, m_iMOVE_DENOMINATOR(0)
-	, m_iNUM_UNIT_PREREQ_OR_BONUSES(0)
-	, m_iNUM_BUILDING_PREREQ_OR_BONUSES(0)
-	, m_iFOOD_CONSUMPTION_PER_POPULATION(0)
-	, m_iMAX_HIT_POINTS(0)
-	, m_iPATH_DAMAGE_WEIGHT(0)
-	, m_iHILLS_EXTRA_DEFENSE(0)
-	, m_iRIVER_ATTACK_MODIFIER(0)
-	, m_iAMPHIB_ATTACK_MODIFIER(0)
-	, m_iHILLS_EXTRA_MOVEMENT(0)
-	, m_iRIVER_EXTRA_MOVEMENT(0)
-	, m_iMAX_PLOT_LIST_ROWS(0)
-	, m_iUNIT_MULTISELECT_MAX(0)
-	, m_iPERCENT_ANGER_DIVISOR(0)
-	, m_iEVENT_MESSAGE_TIME(0)
-	, m_iROUTE_FEATURE_GROWTH_MODIFIER(0)
-	, m_iFEATURE_GROWTH_MODIFIER(0)
-	, m_iMIN_CITY_RANGE(0)
-	, m_iCITY_MAX_NUM_BUILDINGS(0)
-	, m_iNUM_UNIT_AND_TECH_PREREQS(0)
-	, m_iNUM_AND_TECH_PREREQS(0)
-	, m_iNUM_OR_TECH_PREREQS(0)
-	, m_iLAKE_MAX_AREA_SIZE(0)
-	, m_iNUM_ROUTE_PREREQ_OR_BONUSES(0)
-	, m_iNUM_BUILDING_AND_TECH_PREREQS(0)
-	, m_iMIN_WATER_SIZE_FOR_OCEAN(0)
-	, m_iFORTIFY_MODIFIER_PER_TURN(0)
-	, m_iESTABLISH_MODIFIER_PER_TURN(0)
-	, m_iESCAPE_MODIFIER_PER_TURN(0)
-	, m_iMAX_CITY_DEFENSE_DAMAGE(0)
-	, m_iNUM_CORPORATION_PREREQ_BONUSES(0)
-	, m_iPEAK_SEE_THROUGH_CHANGE(0)
-	, m_iHILLS_SEE_THROUGH_CHANGE(0)
-	, m_iSEAWATER_SEE_FROM_CHANGE(0)
-	, m_iPEAK_SEE_FROM_CHANGE(0)
-	, m_iHILLS_SEE_FROM_CHANGE(0)
-	, m_iUSE_SPIES_NO_ENTER_BORDERS(0)
 	, m_fCAMERA_MIN_YAW(0)
 	, m_fCAMERA_MAX_YAW(0)
 	, m_fCAMERA_FAR_CLIP_Z_HEIGHT(0)
@@ -291,55 +245,6 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_fSAD_FACTOR_2(0)
 	, m_fSAD_FACTOR_3(0)
 	, m_fSAD_FACTOR_4(0)
-	, m_iUSE_CANNOT_FOUND_CITY_CALLBACK(0)
-	, m_iUSE_CAN_FOUND_CITIES_ON_WATER_CALLBACK(0)
-	, m_iUSE_IS_PLAYER_RESEARCH_CALLBACK(0)
-	, m_iUSE_CAN_RESEARCH_CALLBACK(0)
-	, m_iUSE_CANNOT_DO_CIVIC_CALLBACK(0)
-	, m_iUSE_CAN_DO_CIVIC_CALLBACK(0)
-	, m_iUSE_CANNOT_CONSTRUCT_CALLBACK(0)
-	, m_iUSE_CAN_CONSTRUCT_CALLBACK(0)
-	, m_iUSE_CAN_DECLARE_WAR_CALLBACK(0)
-	, m_iUSE_CANNOT_RESEARCH_CALLBACK(0)
-	, m_iUSE_GET_UNIT_COST_MOD_CALLBACK(0)
-	, m_iUSE_GET_CITY_FOUND_VALUE_CALLBACK(0)
-	, m_iUSE_CANNOT_HANDLE_ACTION_CALLBACK(0)
-	, m_iUSE_CAN_BUILD_CALLBACK(0)
-	, m_iUSE_CANNOT_TRAIN_CALLBACK(0)
-	, m_iUSE_CAN_TRAIN_CALLBACK(0)
-	, m_iUSE_UNIT_CANNOT_MOVE_INTO_CALLBACK(0)
-	, m_iUSE_USE_CANNOT_SPREAD_RELIGION_CALLBACK(0)
-	, m_iUSE_FINISH_TEXT_CALLBACK(0)
-	, m_iUSE_ON_UNIT_SET_XY_CALLBACK(0)
-	, m_iUSE_ON_UNIT_SELECTED_CALLBACK(0)
-	, m_iUSE_ON_UPDATE_CALLBACK(0)
-	, m_iUSE_ON_UNIT_CREATED_CALLBACK(0)
-	, m_iUSE_ON_UNIT_LOST_CALLBACK(0)
-	, m_iLAND_UNITS_CAN_ATTACK_WATER_CITIES(0)
-	, m_iBASE_UNIT_UPGRADE_COST(0)
-	, m_iUPGRADE_ROUND_LIMIT(0)
-	, m_iCITY_BARBARIAN_DEFENSE_MODIFIER(0)
-	, m_iUNIT_VISIBILITY_RANGE(0)
-	, m_iMAX_UNIT_VISIBILITY_RANGE(0)
-	, m_iGREATER_COMMERCE_SWITCH_POINT(0)
-	, m_iWORKER_TRADE_VALUE_PERCENT_ADJUSTMENT(0)
-	, m_iTRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT(0)
-	, m_iINFILTRATE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT(0)
-	, m_iESPIONAGE_MISSION_COST_END_TOTAL_PERCENT_ADJUSTMENT(0)
-	, m_iWATER_POTENTIAL_CITY_WORK_FOR_AREA(0)
-	, m_iSAD_MAX_MODIFIER(0)
-	, m_iUPSCALED_RESEARCH_COST_MODIFIER(0)
-	, m_iENABLE_DYNAMIC_UNIT_ENTITIES(0)
-	/************************************************************************************************/
-	/* MODULES                                 11/13/07                            MRGENIE          */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-	, m_iTGA_RELIGIONS(0)                            // GAMEFONT_TGA_RELIGIONS
-	, m_iTGA_CORPORATIONS(0)                         // GAMEFONT_TGA_CORPORATIONS
-	/************************************************************************************************/
-	/* MODULES                                 END                                                  */
-	/************************************************************************************************/
 	, m_bMultimapsEnabled(false)
 	, m_bViewportsEnabled(false)
 	, m_iViewportFocusBorder(0)
@@ -363,48 +268,13 @@ cvInternalGlobals::cvInternalGlobals()
 	/*                                                                                              */
 	/*                                                                                              */
 	/************************************************************************************************/
-	/*
-	m_paMainMenus(NULL)
-	*/
 	, m_paMainMenus(NULL)
 	, m_cszModDir("NONE")
 	/************************************************************************************************/
 	/* XML_MODULAR_ART_LOADING                 END                                                  */
 	/************************************************************************************************/
-
-	, m_iPEAK_EXTRA_MOVEMENT(0)
-	, m_iPEAK_EXTRA_DEFENSE(0)
 	, m_bLoadedPlayerOptions(false)
 	, m_bXMLLogging(false)
-	, m_iSCORE_FREE_PERCENT(0)
-	, m_iSCORE_POPULATION_FACTOR(0)
-	, m_iSCORE_LAND_FACTOR(0)
-	, m_iSCORE_TECH_FACTOR(0)
-	, m_iSCORE_WONDER_FACTOR(0)
-	//New Python Callbacks
-	, m_iUSE_CAN_CREATE_PROJECT_CALLBACK(0)
-	, m_iUSE_CANNOT_CREATE_PROJECT_CALLBACK(0)
-	, m_iUSE_CAN_DO_MELTDOWN_CALLBACK(0)
-	, m_iUSE_CAN_MAINTAIN_PROCESS_CALLBACK(0)
-	, m_iUSE_CANNOT_MAINTAIN_PROCESS_CALLBACK(0)
-	, m_iUSE_CAN_DO_GROWTH_CALLBACK(0)
-	, m_iUSE_CAN_DO_CULTURE_CALLBACK(0)
-	, m_iUSE_CAN_DO_PLOT_CULTURE_CALLBACK(0)
-	, m_iUSE_CAN_DO_PRODUCTION_CALLBACK(0)
-	, m_iUSE_CAN_DO_RELIGION_CALLBACK(0)
-	, m_iUSE_CAN_DO_GREATPEOPLE_CALLBACK(0)
-	, m_iUSE_CAN_RAZE_CITY_CALLBACK(0)
-	, m_iUSE_CAN_DO_GOLD_CALLBACK(0)
-	, m_iUSE_CAN_DO_RESEARCH_CALLBACK(0)
-	, m_iUSE_UPGRADE_UNIT_PRICE_CALLBACK(0)
-	, m_iUSE_AI_UPDATE_UNIT_CALLBACK(0)
-	, m_iUSE_AI_CHOOSE_PRODUCTION_CALLBACK(0)
-	, m_iUSE_EXTRA_PLAYER_COSTS_CALLBACK(0)
-	, m_iUSE_AI_DO_DIPLO_CALLBACK(0)
-	, m_iUSE_AI_BESTTECH_CALLBACK(0)
-	, m_iUSE_CAN_DO_COMBAT_CALLBACK(0)
-	, m_iUSE_AI_CAN_DO_WARPLANS_CALLBACK(0)
-
 	/************************************************************************************************/
 	/* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
 	/*                                                                                              */
@@ -413,30 +283,10 @@ cvInternalGlobals::cvInternalGlobals()
 	// BBAI Options
 	, m_bBBAI_AIR_COMBAT(false)
 	, m_bBBAI_HUMAN_VASSAL_WAR_BUILD(false)
-	, m_iBBAI_DEFENSIVE_PACT_BEHAVIOR(0)
 	, m_bBBAI_HUMAN_AS_VASSAL_OPTION(false)
-
-	// BBAI AI Variables
-	, m_iWAR_SUCCESS_CITY_CAPTURING(25)
-	, m_iBBAI_ATTACK_CITY_STACK_RATIO(110)
-	, m_iBBAI_SKIP_BOMBARD_BEST_ATTACK_ODDS(12)
-	, m_iBBAI_SKIP_BOMBARD_BASE_STACK_RATIO(300)
-	, m_iBBAI_SKIP_BOMBARD_MIN_STACK_RATIO(140)
 
 	// Tech Diffusion
 	, m_bTECH_DIFFUSION_ENABLE(false)
-	, m_iTECH_DIFFUSION_KNOWN_TEAM_MODIFIER(30)
-	, m_iTECH_DIFFUSION_WELFARE_THRESHOLD(88)
-	, m_iTECH_DIFFUSION_WELFARE_MODIFIER(30)
-	, m_iTECH_COST_FIRST_KNOWN_PREREQ_MODIFIER(20)
-	, m_iTECH_COST_KNOWN_PREREQ_MODIFIER(20)
-	, m_iTECH_COST_MODIFIER(100)
-	, m_iUNIT_PRODUCTION_PERCENT_SM(100)
-	, m_iUNIT_PRODUCTION_PERCENT(100)
-	, m_iBUILDING_PRODUCTION_PERCENT(100)
-
-	, m_iCOMBAT_DIE_SIDES(-1)
-	, m_iCOMBAT_DAMAGE(-1)
 	/************************************************************************************************/
 	/* BETTER_BTS_AI_MOD                       END                                                  */
 	/************************************************************************************************/
@@ -458,7 +308,6 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_iNumArtStyleTypes(0)
 	, m_iNumCitySizeTypes(0)
 	, m_iNumFootstepAudioTypes(0)
-	, m_iUSE_GET_BUILDING_COST_MOD_CALLBACK(0)
 	, m_iViewportSizeX(0)
 	, m_iViewportSizeY(0)
 	, m_iStoreExeSettingsCommerceInfo(0)
@@ -468,7 +317,7 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_iStoreExeSettingsBonusInfo(0)
 	, m_bSignsCleared(false)
 #define ADD_TO_CONSTRUCTOR(VAR) \
-	, m_i##VAR##(0)
+	, m_i##VAR(0)
 	DO_FOR_EACH_INT_GLOBAL_DEFINE(ADD_TO_CONSTRUCTOR)
 {
 }
@@ -3737,12 +3586,6 @@ void cvInternalGlobals::cacheGlobals()
 	/*                                                                                              */
 	/************************************************************************************************/
 	m_bDCM_BATTLE_EFFECTS = (getDefineINT("DCM_BATTLE_EFFECTS") > 0) ? true : false;
-	m_iBATTLE_EFFECT_LESS_FOOD = getDefineINT("BATTLE_EFFECT_LESS_FOOD");
-	m_iBATTLE_EFFECT_LESS_PRODUCTION = getDefineINT("BATTLE_EFFECT_LESS_PRODUCTION");
-	m_iBATTLE_EFFECT_LESS_COMMERCE = getDefineINT("BATTLE_EFFECT_LESS_COMMERCE");
-	m_iBATTLE_EFFECTS_MINIMUM_TURN_INCREMENTS = getDefineINT("BATTLE_EFFECTS_MINIMUM_TURN_INCREMENTS");
-	m_iMAX_BATTLE_TURNS = getDefineINT("MAX_BATTLE_TURNS");
-
 	m_bDCM_AIR_BOMBING = (getDefineINT("DCM_AIR_BOMBING") > 0) ? true : false;
 	m_bDCM_RANGE_BOMBARD = (getDefineINT("DCM_RANGE_BOMBARD") > 0) ? true : false;
 	m_iDCM_RB_CITY_INACCURACY = getDefineINT("DCM_RB_CITY_INACCURACY");
@@ -3763,12 +3606,10 @@ void cvInternalGlobals::cacheGlobals()
 	m_fIDW_FORT_CAPTURE_MULTIPLIER = getDefineFLOAT("IDW_FORT_CAPTURE_MULTIPLIER");
 	m_fIDW_EXPERIENCE_FACTOR = getDefineFLOAT("IDW_EXPERIENCE_FACTOR");
 	m_fIDW_WARLORD_MULTIPLIER = getDefineFLOAT("IDW_WARLORD_MULTIPLIER");
-	m_iIDW_INFLUENCE_RADIUS = getDefineINT("IDW_INFLUENCE_RADIUS");
 	m_fIDW_PLOT_DISTANCE_FACTOR = getDefineFLOAT("IDW_PLOT_DISTANCE_FACTOR");
 	m_fIDW_WINNER_PLOT_MULTIPLIER = getDefineFLOAT("IDW_WINNER_PLOT_MULTIPLIER");
 	m_fIDW_LOSER_PLOT_MULTIPLIER = getDefineFLOAT("IDW_LOSER_PLOT_MULTIPLIER");
 	m_bIDW_EMERGENCY_DRAFT_ENABLED = (getDefineINT("IDW_EMERGENCY_DRAFT_ENABLED") > 0) ? true : false;
-	m_iIDW_EMERGENCY_DRAFT_MIN_POPULATION = (getDefineINT("IDW_EMERGENCY_DRAFT_MIN_POPULATION") > 1) ? getDefineINT("IDW_EMERGENCY_DRAFT_ENABLED") : 2;
 	m_fIDW_EMERGENCY_DRAFT_STRENGTH = getDefineFLOAT("IDW_EMERGENCY_DRAFT_STRENGTH");
 	m_fIDW_EMERGENCY_DRAFT_ANGER_MULTIPLIER = getDefineFLOAT("IDW_EMERGENCY_DRAFT_ANGER_MULTIPLIER");
 	m_bIDW_NO_BARBARIAN_INFLUENCE = (getDefineINT("IDW_NO_BARBARIAN_INFLUENCE") > 0) ? true : false;
@@ -3783,43 +3624,6 @@ void cvInternalGlobals::cacheGlobals()
 /************************************************************************************************/
 /* Mod Globals                        END                                           phungus420  */
 /************************************************************************************************/
-	m_iMOVE_DENOMINATOR = getDefineINT("MOVE_DENOMINATOR");
-	m_iNUM_UNIT_PREREQ_OR_BONUSES = getDefineINT("NUM_UNIT_PREREQ_OR_BONUSES");
-	m_iNUM_BUILDING_PREREQ_OR_BONUSES = getDefineINT("NUM_BUILDING_PREREQ_OR_BONUSES");
-	m_iFOOD_CONSUMPTION_PER_POPULATION = getDefineINT("FOOD_CONSUMPTION_PER_POPULATION");
-	m_iMAX_HIT_POINTS = getDefineINT("MAX_HIT_POINTS");
-	m_iPATH_DAMAGE_WEIGHT = getDefineINT("PATH_DAMAGE_WEIGHT");
-	m_iHILLS_EXTRA_DEFENSE = getDefineINT("HILLS_EXTRA_DEFENSE");
-	m_iRIVER_ATTACK_MODIFIER = getDefineINT("RIVER_ATTACK_MODIFIER");
-	m_iAMPHIB_ATTACK_MODIFIER = getDefineINT("AMPHIB_ATTACK_MODIFIER");
-	m_iHILLS_EXTRA_MOVEMENT = getDefineINT("HILLS_EXTRA_MOVEMENT");
-	m_iRIVER_EXTRA_MOVEMENT = getDefineINT("RIVER_EXTRA_MOVEMENT");
-	m_iMAX_PLOT_LIST_ROWS = getDefineINT("MAX_PLOT_LIST_ROWS");
-	m_iUNIT_MULTISELECT_MAX = getDefineINT("UNIT_MULTISELECT_MAX");
-	m_iPERCENT_ANGER_DIVISOR = getDefineINT("PERCENT_ANGER_DIVISOR");
-	m_iEVENT_MESSAGE_TIME = getDefineINT("EVENT_MESSAGE_TIME");
-	m_iROUTE_FEATURE_GROWTH_MODIFIER = getDefineINT("ROUTE_FEATURE_GROWTH_MODIFIER");
-	m_iFEATURE_GROWTH_MODIFIER = getDefineINT("FEATURE_GROWTH_MODIFIER");
-	m_iMIN_CITY_RANGE = getDefineINT("MIN_CITY_RANGE");
-	m_iCITY_MAX_NUM_BUILDINGS = getDefineINT("CITY_MAX_NUM_BUILDINGS");
-	m_iNUM_UNIT_AND_TECH_PREREQS = getDefineINT("NUM_UNIT_AND_TECH_PREREQS");
-	m_iNUM_AND_TECH_PREREQS = getDefineINT("NUM_AND_TECH_PREREQS");
-	m_iNUM_OR_TECH_PREREQS = getDefineINT("NUM_OR_TECH_PREREQS");
-	m_iLAKE_MAX_AREA_SIZE = getDefineINT("LAKE_MAX_AREA_SIZE");
-	m_iNUM_ROUTE_PREREQ_OR_BONUSES = getDefineINT("NUM_ROUTE_PREREQ_OR_BONUSES");
-	m_iNUM_BUILDING_AND_TECH_PREREQS = getDefineINT("NUM_BUILDING_AND_TECH_PREREQS");
-	m_iMIN_WATER_SIZE_FOR_OCEAN = getDefineINT("MIN_WATER_SIZE_FOR_OCEAN");
-	m_iFORTIFY_MODIFIER_PER_TURN = getDefineINT("FORTIFY_MODIFIER_PER_TURN");
-	m_iESTABLISH_MODIFIER_PER_TURN = getDefineINT("ESTABLISH_MODIFIER_PER_TURN");
-	m_iESCAPE_MODIFIER_PER_TURN = getDefineINT("ESCAPE_MODIFIER_PER_TURN");
-	m_iMAX_CITY_DEFENSE_DAMAGE = getDefineINT("MAX_CITY_DEFENSE_DAMAGE");
-	m_iNUM_CORPORATION_PREREQ_BONUSES = getDefineINT("NUM_CORPORATION_PREREQ_BONUSES");
-	m_iPEAK_SEE_THROUGH_CHANGE = getDefineINT("PEAK_SEE_THROUGH_CHANGE");
-	m_iHILLS_SEE_THROUGH_CHANGE = getDefineINT("HILLS_SEE_THROUGH_CHANGE");
-	m_iSEAWATER_SEE_FROM_CHANGE = getDefineINT("SEAWATER_SEE_FROM_CHANGE");
-	m_iPEAK_SEE_FROM_CHANGE = getDefineINT("PEAK_SEE_FROM_CHANGE");
-	m_iHILLS_SEE_FROM_CHANGE = getDefineINT("HILLS_SEE_FROM_CHANGE");
-	m_iUSE_SPIES_NO_ENTER_BORDERS = getDefineINT("USE_SPIES_NO_ENTER_BORDERS");
 	
 	m_fCAMERA_MIN_YAW = getDefineFLOAT("CAMERA_MIN_YAW");
 	m_fCAMERA_MAX_YAW = getDefineFLOAT("CAMERA_MAX_YAW");
@@ -3841,32 +3645,6 @@ void cvInternalGlobals::cacheGlobals()
 	m_fSAD_FACTOR_3 =getDefineFLOAT("SAD_FACTOR_3");
 	m_fSAD_FACTOR_4 =getDefineFLOAT("SAD_FACTOR_4");
 
-	m_iUSE_CANNOT_FOUND_CITY_CALLBACK = getDefineINT("USE_CANNOT_FOUND_CITY_CALLBACK");
-	m_iUSE_CAN_FOUND_CITIES_ON_WATER_CALLBACK = getDefineINT("USE_CAN_FOUND_CITIES_ON_WATER_CALLBACK");
-	m_iUSE_IS_PLAYER_RESEARCH_CALLBACK = getDefineINT("USE_IS_PLAYER_RESEARCH_CALLBACK");
-	m_iUSE_CAN_RESEARCH_CALLBACK = getDefineINT("USE_CAN_RESEARCH_CALLBACK");
-	m_iUSE_CANNOT_DO_CIVIC_CALLBACK = getDefineINT("USE_CANNOT_DO_CIVIC_CALLBACK");
-	m_iUSE_CAN_DO_CIVIC_CALLBACK = getDefineINT("USE_CAN_DO_CIVIC_CALLBACK");
-	m_iUSE_CANNOT_CONSTRUCT_CALLBACK = getDefineINT("USE_CANNOT_CONSTRUCT_CALLBACK");
-	m_iUSE_CAN_CONSTRUCT_CALLBACK = getDefineINT("USE_CAN_CONSTRUCT_CALLBACK");
-	m_iUSE_CAN_DECLARE_WAR_CALLBACK = getDefineINT("USE_CAN_DECLARE_WAR_CALLBACK");
-	m_iUSE_CANNOT_RESEARCH_CALLBACK = getDefineINT("USE_CANNOT_RESEARCH_CALLBACK");
-	m_iUSE_GET_UNIT_COST_MOD_CALLBACK = getDefineINT("USE_GET_UNIT_COST_MOD_CALLBACK");
-	m_iUSE_GET_BUILDING_COST_MOD_CALLBACK = getDefineINT("USE_GET_BUILDING_COST_MOD_CALLBACK");
-	m_iUSE_GET_CITY_FOUND_VALUE_CALLBACK = getDefineINT("USE_GET_CITY_FOUND_VALUE_CALLBACK");
-	m_iUSE_CANNOT_HANDLE_ACTION_CALLBACK = getDefineINT("USE_CANNOT_HANDLE_ACTION_CALLBACK");
-	m_iUSE_CAN_BUILD_CALLBACK = getDefineINT("USE_CAN_BUILD_CALLBACK");
-	m_iUSE_CANNOT_TRAIN_CALLBACK = getDefineINT("USE_CANNOT_TRAIN_CALLBACK");
-	m_iUSE_CAN_TRAIN_CALLBACK = getDefineINT("USE_CAN_TRAIN_CALLBACK");
-	m_iUSE_UNIT_CANNOT_MOVE_INTO_CALLBACK = getDefineINT("USE_UNIT_CANNOT_MOVE_INTO_CALLBACK");
-	m_iUSE_USE_CANNOT_SPREAD_RELIGION_CALLBACK = getDefineINT("USE_USE_CANNOT_SPREAD_RELIGION_CALLBACK");
-	m_iUSE_FINISH_TEXT_CALLBACK = getDefineINT("USE_FINISH_TEXT_CALLBACK");
-	m_iUSE_ON_UNIT_SET_XY_CALLBACK = getDefineINT("USE_ON_UNIT_SET_XY_CALLBACK");
-	m_iUSE_ON_UNIT_SELECTED_CALLBACK = getDefineINT("USE_ON_UNIT_SELECTED_CALLBACK");
-	m_iUSE_ON_UPDATE_CALLBACK = getDefineINT("USE_ON_UPDATE_CALLBACK");
-	m_iUSE_ON_UNIT_CREATED_CALLBACK = getDefineINT("USE_ON_UNIT_CREATED_CALLBACK");
-	m_iUSE_ON_UNIT_LOST_CALLBACK = getDefineINT("USE_ON_UNIT_LOST_CALLBACK");
-
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
 /*                                                                                              */
@@ -3875,77 +3653,16 @@ void cvInternalGlobals::cacheGlobals()
 // BBAI Options
 	m_bBBAI_AIR_COMBAT = !(getDefineINT("BBAI_AIR_COMBAT") == 0);
 	m_bBBAI_HUMAN_VASSAL_WAR_BUILD = !(getDefineINT("BBAI_HUMAN_VASSAL_WAR_BUILD") == 0);
-	m_iBBAI_DEFENSIVE_PACT_BEHAVIOR = getDefineINT("BBAI_DEFENSIVE_PACT_BEHAVIOR");
 	m_bBBAI_HUMAN_AS_VASSAL_OPTION = !(getDefineINT("BBAI_HUMAN_AS_VASSAL_OPTION") == 0);
-
-// BBAI AI Variables
-	m_iWAR_SUCCESS_CITY_CAPTURING = getDefineINT("WAR_SUCCESS_CITY_CAPTURING", m_iWAR_SUCCESS_CITY_CAPTURING);
-	m_iBBAI_ATTACK_CITY_STACK_RATIO = getDefineINT("BBAI_ATTACK_CITY_STACK_RATIO", m_iBBAI_ATTACK_CITY_STACK_RATIO);
-	m_iBBAI_SKIP_BOMBARD_BEST_ATTACK_ODDS = getDefineINT("BBAI_SKIP_BOMBARD_BEST_ATTACK_ODDS", m_iBBAI_SKIP_BOMBARD_BEST_ATTACK_ODDS);
-	m_iBBAI_SKIP_BOMBARD_BASE_STACK_RATIO = getDefineINT("BBAI_SKIP_BOMBARD_BASE_STACK_RATIO", m_iBBAI_SKIP_BOMBARD_BASE_STACK_RATIO);
-	m_iBBAI_SKIP_BOMBARD_MIN_STACK_RATIO = getDefineINT("BBAI_SKIP_BOMBARD_MIN_STACK_RATIO", m_iBBAI_SKIP_BOMBARD_MIN_STACK_RATIO);
 
 // Tech Diffusion
 	m_bTECH_DIFFUSION_ENABLE = !(getDefineINT("TECH_DIFFUSION_ENABLE") == 0);
-	m_iTECH_DIFFUSION_KNOWN_TEAM_MODIFIER = getDefineINT("TECH_DIFFUSION_KNOWN_TEAM_MODIFIER", m_iTECH_DIFFUSION_KNOWN_TEAM_MODIFIER);
-	m_iTECH_DIFFUSION_WELFARE_THRESHOLD = getDefineINT("TECH_DIFFUSION_WELFARE_THRESHOLD", m_iTECH_DIFFUSION_WELFARE_THRESHOLD);
-	m_iTECH_DIFFUSION_WELFARE_MODIFIER = getDefineINT("TECH_DIFFUSION_WELFARE_MODIFIER", m_iTECH_DIFFUSION_WELFARE_MODIFIER);
-	m_iTECH_COST_FIRST_KNOWN_PREREQ_MODIFIER = getDefineINT("TECH_COST_FIRST_KNOWN_PREREQ_MODIFIER", m_iTECH_COST_FIRST_KNOWN_PREREQ_MODIFIER);
-	m_iTECH_COST_KNOWN_PREREQ_MODIFIER = getDefineINT("TECH_COST_KNOWN_PREREQ_MODIFIER", m_iTECH_COST_KNOWN_PREREQ_MODIFIER);
-	m_iTECH_COST_MODIFIER = getDefineINT("TECH_COST_MODIFIER", m_iTECH_COST_MODIFIER);
-	m_iUNIT_PRODUCTION_PERCENT_SM = getDefineINT("UNIT_PRODUCTION_PERCENT_SM", m_iUNIT_PRODUCTION_PERCENT_SM);
-	m_iUNIT_PRODUCTION_PERCENT = getDefineINT("UNIT_PRODUCTION_PERCENT", m_iUNIT_PRODUCTION_PERCENT);
-	m_iBUILDING_PRODUCTION_PERCENT = getDefineINT("BUILDING_PRODUCTION_PERCENT", m_iBUILDING_PRODUCTION_PERCENT);
-	
-	m_iCOMBAT_DIE_SIDES = getDefineINT("COMBAT_DIE_SIDES");
-	m_iCOMBAT_DAMAGE = getDefineINT("COMBAT_DAMAGE");
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 
-	m_iPEAK_EXTRA_MOVEMENT = getDefineINT("PEAK_EXTRA_MOVEMENT");
-	m_iPEAK_EXTRA_DEFENSE = getDefineINT("PEAK_EXTRA_DEFENSE");
 	m_bXMLLogging = getDefineINT("XML_LOGGING_ENABLED");
-	m_iSCORE_FREE_PERCENT = getDefineINT("SCORE_FREE_PERCENT");
-	m_iSCORE_POPULATION_FACTOR = getDefineINT("SCORE_POPULATION_FACTOR");
-	m_iSCORE_LAND_FACTOR = getDefineINT("SCORE_LAND_FACTOR");
-	m_iSCORE_TECH_FACTOR = getDefineINT("SCORE_TECH_FACTOR");
-	m_iSCORE_WONDER_FACTOR = getDefineINT("SCORE_WONDER_FACTOR");
 	
-	//New Python Callbacks
-	m_iUSE_CAN_CREATE_PROJECT_CALLBACK = getDefineINT("USE_CAN_CREATE_PROJECT_CALLBACK");
-	m_iUSE_CANNOT_CREATE_PROJECT_CALLBACK = getDefineINT("USE_CANNOT_CREATE_PROJECT_CALLBACK");
-	m_iUSE_CAN_DO_MELTDOWN_CALLBACK = getDefineINT("USE_CAN_DO_MELTDOWN_CALLBACK");
-	m_iUSE_CAN_MAINTAIN_PROCESS_CALLBACK = getDefineINT("USE_CAN_MAINTAIN_PROCESS_CALLBACK");
-	m_iUSE_CANNOT_MAINTAIN_PROCESS_CALLBACK = getDefineINT("USE_CANNOT_MAINTAIN_PROCESS_CALLBACK");
-	m_iUSE_CAN_DO_GROWTH_CALLBACK = getDefineINT("USE_CAN_DO_GROWTH_CALLBACK");
-	m_iUSE_CAN_DO_CULTURE_CALLBACK = getDefineINT("USE_CAN_DO_CULTURE_CALLBACK");
-	m_iUSE_CAN_DO_PLOT_CULTURE_CALLBACK = getDefineINT("USE_CAN_DO_PLOT_CULTURE_CALLBACK");
-	m_iUSE_CAN_DO_PRODUCTION_CALLBACK = getDefineINT("USE_CAN_DO_PRODUCTION_CALLBACK");
-	m_iUSE_CAN_DO_RELIGION_CALLBACK = getDefineINT("USE_CAN_DO_RELIGION_CALLBACK");
-	m_iUSE_CAN_DO_GREATPEOPLE_CALLBACK = getDefineINT("USE_CAN_DO_GREATPEOPLE_CALLBACK");
-	m_iUSE_CAN_RAZE_CITY_CALLBACK = getDefineINT("USE_CAN_RAZE_CITY_CALLBACK");
-	m_iUSE_CAN_DO_GOLD_CALLBACK = getDefineINT("USE_CAN_DO_GOLD_CALLBACK");
-	m_iUSE_CAN_DO_RESEARCH_CALLBACK = getDefineINT("USE_CAN_DO_RESEARCH_CALLBACK");
-	m_iUSE_UPGRADE_UNIT_PRICE_CALLBACK = getDefineINT("USE_UPGRADE_UNIT_PRICE_CALLBACK");
-	m_iUSE_AI_UPDATE_UNIT_CALLBACK = getDefineINT("USE_AI_UPDATE_UNIT_CALLBACK");
-	m_iUSE_AI_CHOOSE_PRODUCTION_CALLBACK = getDefineINT("USE_AI_CHOOSE_PRODUCTION_CALLBACK");
-	m_iUSE_EXTRA_PLAYER_COSTS_CALLBACK = getDefineINT("USE_EXTRA_PLAYER_COSTS_CALLBACK");
-	m_iUSE_AI_DO_DIPLO_CALLBACK = getDefineINT("USE_AI_DO_DIPLO_CALLBACK");
-	m_iUSE_AI_BESTTECH_CALLBACK = getDefineINT("USE_AI_BESTTECH_CALLBACK");
-	m_iUSE_CAN_DO_COMBAT_CALLBACK = getDefineINT("USE_CAN_DO_COMBAT_CALLBACK");
-	m_iUSE_AI_CAN_DO_WARPLANS_CALLBACK = getDefineINT("USE_AI_CAN_DO_WARPLANS_CALLBACK");
-
-/************************************************************************************************/
-/* MODULES                                 11/13/07                            MRGENIE          */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	m_iTGA_RELIGIONS = getDefineINT("GAMEFONT_TGA_RELIGIONS");													// GAMEFONT_TGA_RELIGIONS
-	m_iTGA_CORPORATIONS = getDefineINT("GAMEFONT_TGA_CORPORATIONS");											// GAMEFONT_TGA_CORPORATIONS
-/************************************************************************************************/
-/* MODULES                                 END                                                  */
-/************************************************************************************************/
 	m_bMultimapsEnabled = (getDefineINT("ENABLE_MULTIMAPS") != 0);
 	m_bViewportsEnabled = (getDefineINT("ENABLE_VIEWPORTS") != 0);
 	m_iViewportFocusBorder = GC.getDefineINT("VIEWPORT_FOCUS_BORDER");
@@ -3957,22 +3674,6 @@ void cvInternalGlobals::cacheGlobals()
 	{
 		m_szAlternateProfilSampleName = "";
 	}
-
-	m_iLAND_UNITS_CAN_ATTACK_WATER_CITIES = getDefineINT("LAND_UNITS_CAN_ATTACK_WATER_CITIES");
-	m_iBASE_UNIT_UPGRADE_COST = getDefineINT("BASE_UNIT_UPGRADE_COST");
-	m_iUPGRADE_ROUND_LIMIT = getDefineINT("UPGRADE_ROUND_LIMIT");
-	m_iCITY_BARBARIAN_DEFENSE_MODIFIER = getDefineINT("CITY_BARBARIAN_DEFENSE_MODIFIER");
-	m_iUNIT_VISIBILITY_RANGE = getDefineINT("UNIT_VISIBILITY_RANGE");
-	m_iMAX_UNIT_VISIBILITY_RANGE = getDefineINT("MAX_UNIT_VISIBILITY_RANGE");
-	m_iGREATER_COMMERCE_SWITCH_POINT = getDefineINT("GREATER_COMMERCE_SWITCH_POINT");
-	m_iWORKER_TRADE_VALUE_PERCENT_ADJUSTMENT = getDefineINT("WORKER_TRADE_VALUE_PERCENT_ADJUSTMENT");
-	m_iTRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT = getDefineINT("TRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT");
-	m_iINFILTRATE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT = getDefineINT("INFILTRATE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT");
-	m_iESPIONAGE_MISSION_COST_END_TOTAL_PERCENT_ADJUSTMENT = getDefineINT("ESPIONAGE_MISSION_COST_END_TOTAL_PERCENT_ADJUSTMENT");
-	m_iWATER_POTENTIAL_CITY_WORK_FOR_AREA = getDefineINT("WATER_POTENTIAL_CITY_WORK_FOR_AREA");
-	m_iSAD_MAX_MODIFIER = getDefineINT("SAD_MAX_MODIFIER");
-	m_iUPSCALED_RESEARCH_COST_MODIFIER = getDefineINT("UPSCALED_RESEARCH_COST_MODIFIER");
-	m_iENABLE_DYNAMIC_UNIT_ENTITIES = getDefineINT("ENABLE_DYNAMIC_UNIT_ENTITIES");
 
 	OutputDebugString("Caching Globals: End");
 }
@@ -4081,191 +3782,6 @@ void cvInternalGlobals::setDefineSTRING( const char * szName, const char * szVal
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
 
-int cvInternalGlobals::getMOVE_DENOMINATOR() const
-{
-	return m_iMOVE_DENOMINATOR;
-}
-
-int cvInternalGlobals::getNUM_UNIT_PREREQ_OR_BONUSES() const
-{
-	return m_iNUM_UNIT_PREREQ_OR_BONUSES;
-}
-
-int cvInternalGlobals::getNUM_BUILDING_PREREQ_OR_BONUSES() const
-{
-	return m_iNUM_BUILDING_PREREQ_OR_BONUSES;
-}
-
-int cvInternalGlobals::getFOOD_CONSUMPTION_PER_POPULATION() const
-{
-	return m_iFOOD_CONSUMPTION_PER_POPULATION;
-}
-
-int cvInternalGlobals::getMAX_HIT_POINTS() const
-{
-	return m_iMAX_HIT_POINTS;
-}
-
-int cvInternalGlobals::getPATH_DAMAGE_WEIGHT() const
-{
-	return m_iPATH_DAMAGE_WEIGHT;
-}
-
-int cvInternalGlobals::getHILLS_EXTRA_DEFENSE() const
-{
-	return m_iHILLS_EXTRA_DEFENSE;
-}
-
-int cvInternalGlobals::getRIVER_ATTACK_MODIFIER() const
-{
-	return m_iRIVER_ATTACK_MODIFIER;
-}
-
-int cvInternalGlobals::getAMPHIB_ATTACK_MODIFIER() const
-{
-	return m_iAMPHIB_ATTACK_MODIFIER;
-}
-
-int cvInternalGlobals::getHILLS_EXTRA_MOVEMENT() const
-{
-	return m_iHILLS_EXTRA_MOVEMENT;
-}
-
-int cvInternalGlobals::getRIVER_EXTRA_MOVEMENT() const
-{
-	return m_iRIVER_EXTRA_MOVEMENT;
-}
-
-int cvInternalGlobals::getMAX_PLOT_LIST_ROWS() const
-{
-	return m_iMAX_PLOT_LIST_ROWS;
-}
-
-int cvInternalGlobals::getUNIT_MULTISELECT_MAX() const
-{
-	return m_iUNIT_MULTISELECT_MAX;
-}
-
-int cvInternalGlobals::getPERCENT_ANGER_DIVISOR() const
-{
-	return m_iPERCENT_ANGER_DIVISOR;
-}
-
-int cvInternalGlobals::getEVENT_MESSAGE_TIME() const
-{
-	return m_iEVENT_MESSAGE_TIME;
-}
-
-int cvInternalGlobals::getROUTE_FEATURE_GROWTH_MODIFIER() const
-{
-	return m_iROUTE_FEATURE_GROWTH_MODIFIER;
-}
-
-int cvInternalGlobals::getFEATURE_GROWTH_MODIFIER() const
-{
-	return m_iFEATURE_GROWTH_MODIFIER;
-}
-
-int cvInternalGlobals::getMIN_CITY_RANGE() const
-{
-	return m_iMIN_CITY_RANGE;
-}
-
-int cvInternalGlobals::getCITY_MAX_NUM_BUILDINGS() const
-{
-	return m_iCITY_MAX_NUM_BUILDINGS;
-}
-
-int cvInternalGlobals::getNUM_UNIT_AND_TECH_PREREQS() const
-{
-	return m_iNUM_UNIT_AND_TECH_PREREQS;
-}
-
-int cvInternalGlobals::getNUM_AND_TECH_PREREQS() const
-{
-	return m_iNUM_AND_TECH_PREREQS;
-}
-
-int cvInternalGlobals::getNUM_OR_TECH_PREREQS() const
-{
-	return m_iNUM_OR_TECH_PREREQS;
-}
-
-int cvInternalGlobals::getLAKE_MAX_AREA_SIZE() const
-{
-	return m_iLAKE_MAX_AREA_SIZE;
-}
-
-int cvInternalGlobals::getNUM_ROUTE_PREREQ_OR_BONUSES() const
-{
-	return m_iNUM_ROUTE_PREREQ_OR_BONUSES;
-}
-
-int cvInternalGlobals::getNUM_BUILDING_AND_TECH_PREREQS() const
-{
-	return m_iNUM_BUILDING_AND_TECH_PREREQS;
-}
-
-int cvInternalGlobals::getMIN_WATER_SIZE_FOR_OCEAN() const
-{
-	return m_iMIN_WATER_SIZE_FOR_OCEAN;
-}
-
-int cvInternalGlobals::getFORTIFY_MODIFIER_PER_TURN() const
-{
-	return m_iFORTIFY_MODIFIER_PER_TURN;
-}
-
-int cvInternalGlobals::getESTABLISH_MODIFIER_PER_TURN() const
-{
-	return m_iESTABLISH_MODIFIER_PER_TURN;
-}
-
-int cvInternalGlobals::getESCAPE_MODIFIER_PER_TURN() const
-{
-	return m_iESCAPE_MODIFIER_PER_TURN;
-}
-
-int cvInternalGlobals::getMAX_CITY_DEFENSE_DAMAGE() const
-{
-	return m_iMAX_CITY_DEFENSE_DAMAGE;
-}
-
-int cvInternalGlobals::getPEAK_SEE_THROUGH_CHANGE() const
-{
-	return m_iPEAK_SEE_THROUGH_CHANGE;
-}
-
-int cvInternalGlobals::getHILLS_SEE_THROUGH_CHANGE() const
-{
-	return m_iHILLS_SEE_THROUGH_CHANGE;
-}
-
-int cvInternalGlobals::getSEAWATER_SEE_FROM_CHANGE() const
-{
-	return m_iSEAWATER_SEE_FROM_CHANGE;
-}
-
-int cvInternalGlobals::getPEAK_SEE_FROM_CHANGE() const
-{
-	return m_iPEAK_SEE_FROM_CHANGE;
-}
-
-int cvInternalGlobals::getHILLS_SEE_FROM_CHANGE() const
-{
-	return m_iHILLS_SEE_FROM_CHANGE;
-}
-
-int cvInternalGlobals::getUSE_SPIES_NO_ENTER_BORDERS() const
-{
-	return m_iUSE_SPIES_NO_ENTER_BORDERS;
-}
-
-int cvInternalGlobals::getNUM_CORPORATION_PREREQ_BONUSES() const
-{
-	return m_iNUM_CORPORATION_PREREQ_BONUSES;
-}
-
 float cvInternalGlobals::getCAMERA_MIN_YAW() const
 {
 	return m_fCAMERA_MIN_YAW;
@@ -4344,221 +3860,6 @@ float cvInternalGlobals::getUNIT_MULTISELECT_DISTANCE() const
 	return m_fUNIT_MULTISELECT_DISTANCE;
 }
 
-int cvInternalGlobals::getUSE_CANNOT_FOUND_CITY_CALLBACK() const
-{
-	return m_iUSE_CANNOT_FOUND_CITY_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_CAN_FOUND_CITIES_ON_WATER_CALLBACK() const
-{
-	return m_iUSE_CAN_FOUND_CITIES_ON_WATER_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_IS_PLAYER_RESEARCH_CALLBACK() const
-{
-	return m_iUSE_IS_PLAYER_RESEARCH_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_CAN_RESEARCH_CALLBACK() const
-{
-	return m_iUSE_CAN_RESEARCH_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_CANNOT_DO_CIVIC_CALLBACK() const
-{
-	return m_iUSE_CANNOT_DO_CIVIC_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_CAN_DO_CIVIC_CALLBACK() const
-{
-	return m_iUSE_CAN_DO_CIVIC_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_CANNOT_CONSTRUCT_CALLBACK() const
-{
-	return m_iUSE_CANNOT_CONSTRUCT_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_CAN_CONSTRUCT_CALLBACK() const
-{
-	return m_iUSE_CAN_CONSTRUCT_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_CAN_DECLARE_WAR_CALLBACK() const
-{
-	return m_iUSE_CAN_DECLARE_WAR_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_CANNOT_RESEARCH_CALLBACK() const
-{
-	return m_iUSE_CANNOT_RESEARCH_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_GET_UNIT_COST_MOD_CALLBACK() const
-{
-	return m_iUSE_GET_UNIT_COST_MOD_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_GET_BUILDING_COST_MOD_CALLBACK() const
-{
-	return m_iUSE_GET_BUILDING_COST_MOD_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_GET_CITY_FOUND_VALUE_CALLBACK() const
-{
-	return m_iUSE_GET_CITY_FOUND_VALUE_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_CANNOT_HANDLE_ACTION_CALLBACK() const
-{
-	return m_iUSE_CANNOT_HANDLE_ACTION_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_CAN_BUILD_CALLBACK() const
-{
-	return m_iUSE_CAN_BUILD_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_CANNOT_TRAIN_CALLBACK() const
-{
-	return m_iUSE_CANNOT_TRAIN_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_CAN_TRAIN_CALLBACK() const
-{
-	return m_iUSE_CAN_TRAIN_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_CAN_BUILD_CALLBACK(BuildTypes eBuild) const
-{
-	return m_iUSE_CAN_BUILD_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_CANNOT_TRAIN_CALLBACK(UnitTypes eUnit) const
-{
-	return m_iUSE_CANNOT_TRAIN_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_CAN_TRAIN_CALLBACK(UnitTypes eUnit) const
-{
-	return m_iUSE_CAN_TRAIN_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_UNIT_CANNOT_MOVE_INTO_CALLBACK() const
-{
-	return m_iUSE_UNIT_CANNOT_MOVE_INTO_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_USE_CANNOT_SPREAD_RELIGION_CALLBACK() const
-{
-	return m_iUSE_USE_CANNOT_SPREAD_RELIGION_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_FINISH_TEXT_CALLBACK() const
-{
-	return m_iUSE_FINISH_TEXT_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_ON_UNIT_SET_XY_CALLBACK() const
-{
-	return m_iUSE_ON_UNIT_SET_XY_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_ON_UNIT_SELECTED_CALLBACK() const
-{
-	return m_iUSE_ON_UNIT_SELECTED_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_ON_UPDATE_CALLBACK() const
-{
-	return m_iUSE_ON_UPDATE_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_ON_UNIT_CREATED_CALLBACK() const
-{
-	return m_iUSE_ON_UNIT_CREATED_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_ON_UNIT_LOST_CALLBACK() const
-{
-	return m_iUSE_ON_UNIT_LOST_CALLBACK;
-}
-
-int cvInternalGlobals::getLAND_UNITS_CAN_ATTACK_WATER_CITIES() const
-{
-	return m_iLAND_UNITS_CAN_ATTACK_WATER_CITIES;
-}
-
-int cvInternalGlobals::getBASE_UNIT_UPGRADE_COST() const
-{
-	return m_iBASE_UNIT_UPGRADE_COST;
-}
-
-int cvInternalGlobals::getUPGRADE_ROUND_LIMIT() const
-{
-	return m_iUPGRADE_ROUND_LIMIT;
-}
-
-int cvInternalGlobals::getCITY_BARBARIAN_DEFENSE_MODIFIER() const
-{
-	return m_iCITY_BARBARIAN_DEFENSE_MODIFIER;
-}
-
-int cvInternalGlobals::getUNIT_VISIBILITY_RANGE() const
-{
-	return m_iUNIT_VISIBILITY_RANGE;
-}
-
-int cvInternalGlobals::getMAX_UNIT_VISIBILITY_RANGE() const
-{
-	return m_iMAX_UNIT_VISIBILITY_RANGE;
-}
-
-int cvInternalGlobals::getGREATER_COMMERCE_SWITCH_POINT() const
-{
-	return m_iGREATER_COMMERCE_SWITCH_POINT;
-}
-
-int cvInternalGlobals::getWORKER_TRADE_VALUE_PERCENT_ADJUSTMENT() const
-{
-	return m_iWORKER_TRADE_VALUE_PERCENT_ADJUSTMENT;
-}
-
-int cvInternalGlobals::getTRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT() const
-{
-	return m_iTRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT;
-}
-
-int cvInternalGlobals::getINFILTRATE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT() const
-{
-	return m_iINFILTRATE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT;
-}
-
-int cvInternalGlobals::getESPIONAGE_MISSION_COST_END_TOTAL_PERCENT_ADJUSTMENT() const
-{
-	return m_iESPIONAGE_MISSION_COST_END_TOTAL_PERCENT_ADJUSTMENT;
-}
-
-int cvInternalGlobals::getWATER_POTENTIAL_CITY_WORK_FOR_AREA() const
-{
-	return m_iWATER_POTENTIAL_CITY_WORK_FOR_AREA;
-}
-
-int cvInternalGlobals::getSAD_MAX_MODIFIER() const
-{
-	return m_iSAD_MAX_MODIFIER;
-}
-
-int cvInternalGlobals::getUPSCALED_RESEARCH_COST_MODIFIER() const
-{
-	return m_iUPSCALED_RESEARCH_COST_MODIFIER;
-}
-
-int cvInternalGlobals::getENABLE_DYNAMIC_UNIT_ENTITIES() const
-{
-	return m_iENABLE_DYNAMIC_UNIT_ENTITIES;
-}
-
 float cvInternalGlobals::getSAD_FACTOR_1() const
 {
 	return m_fSAD_FACTOR_1;
@@ -4579,24 +3880,6 @@ float cvInternalGlobals::getSAD_FACTOR_4() const
 	return m_fSAD_FACTOR_4;
 }
 
-/************************************************************************************************/
-/* MODULES                                 11/13/07                            MRGENIE          */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-int cvInternalGlobals::getTGA_RELIGIONS() const								// GAMEFONT_TGA_RELIGIONS
-{
-	return m_iTGA_RELIGIONS;
-}
-
-int cvInternalGlobals::getTGA_CORPORATIONS() const							// GAMEFONT_TGA_CORPORATIONS
-{
-	return m_iTGA_CORPORATIONS;
-}
-
-/************************************************************************************************/
-/* MODULES                                 END                                                  */
-/************************************************************************************************/
 int cvInternalGlobals::getMAX_CIV_PLAYERS() const
 {
 	return MAX_PC_PLAYERS;
@@ -5586,41 +4869,9 @@ bool cvInternalGlobals::getBBAI_HUMAN_VASSAL_WAR_BUILD() const
 	return m_bBBAI_HUMAN_VASSAL_WAR_BUILD;
 }
 
-int cvInternalGlobals::getBBAI_DEFENSIVE_PACT_BEHAVIOR() const
-{
-	return m_iBBAI_DEFENSIVE_PACT_BEHAVIOR;
-}
-
 bool cvInternalGlobals::getBBAI_HUMAN_AS_VASSAL_OPTION() const
 {
 	return m_bBBAI_HUMAN_AS_VASSAL_OPTION;
-}
-
-	
-// BBAI AI Variables
-int cvInternalGlobals::getWAR_SUCCESS_CITY_CAPTURING() const
-{
-	return m_iWAR_SUCCESS_CITY_CAPTURING;
-}
-
-int cvInternalGlobals::getBBAI_ATTACK_CITY_STACK_RATIO() const
-{
-	return m_iBBAI_ATTACK_CITY_STACK_RATIO;
-}
-
-int cvInternalGlobals::getBBAI_SKIP_BOMBARD_BEST_ATTACK_ODDS() const
-{
-	return m_iBBAI_SKIP_BOMBARD_BEST_ATTACK_ODDS;
-}
-
-int cvInternalGlobals::getBBAI_SKIP_BOMBARD_BASE_STACK_RATIO() const
-{
-	return m_iBBAI_SKIP_BOMBARD_BASE_STACK_RATIO;
-}
-
-int cvInternalGlobals::getBBAI_SKIP_BOMBARD_MIN_STACK_RATIO() const
-{
-	return m_iBBAI_SKIP_BOMBARD_MIN_STACK_RATIO;
 }
 
 // Tech Diffusion
@@ -5628,74 +4879,9 @@ bool cvInternalGlobals::getTECH_DIFFUSION_ENABLE() const
 {
 	return m_bTECH_DIFFUSION_ENABLE;
 }
-
-int cvInternalGlobals::getTECH_DIFFUSION_KNOWN_TEAM_MODIFIER() const
-{
-	return m_iTECH_DIFFUSION_KNOWN_TEAM_MODIFIER;
-}
-
-int cvInternalGlobals::getTECH_DIFFUSION_WELFARE_THRESHOLD() const
-{
-	return m_iTECH_DIFFUSION_WELFARE_THRESHOLD;
-}
-
-int cvInternalGlobals::getTECH_DIFFUSION_WELFARE_MODIFIER() const
-{
-	return m_iTECH_DIFFUSION_WELFARE_MODIFIER;
-}
-
-int cvInternalGlobals::getTECH_COST_FIRST_KNOWN_PREREQ_MODIFIER() const
-{
-	return m_iTECH_COST_FIRST_KNOWN_PREREQ_MODIFIER;
-}
-
-int cvInternalGlobals::getTECH_COST_KNOWN_PREREQ_MODIFIER() const
-{
-	return m_iTECH_COST_KNOWN_PREREQ_MODIFIER;
-}
-
-int cvInternalGlobals::getTECH_COST_MODIFIER() const
-{
-	return m_iTECH_COST_MODIFIER;
-}
-
-int cvInternalGlobals::getUNIT_PRODUCTION_PERCENT_SM() const
-{
-	return m_iUNIT_PRODUCTION_PERCENT_SM;
-}
-
-int cvInternalGlobals::getUNIT_PRODUCTION_PERCENT() const
-{
-	return m_iUNIT_PRODUCTION_PERCENT;
-}
-
-int cvInternalGlobals::getBUILDING_PRODUCTION_PERCENT() const
-{
-	return m_iBUILDING_PRODUCTION_PERCENT;
-}
-
-int cvInternalGlobals::getCOMBAT_DIE_SIDES() const
-{
-	return m_iCOMBAT_DIE_SIDES;
-}
-
-int cvInternalGlobals::getCOMBAT_DAMAGE() const
-{
-	return m_iCOMBAT_DAMAGE;
-}
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
-
-int cvInternalGlobals::getPEAK_EXTRA_MOVEMENT() const
-{
-	return m_iPEAK_EXTRA_MOVEMENT;
-}
-
-int cvInternalGlobals::getPEAK_EXTRA_DEFENSE() const
-{
-	return m_iPEAK_EXTRA_DEFENSE;
-}
 
 bool cvInternalGlobals::isLoadedPlayerOptions() const
 {
@@ -5717,143 +4903,6 @@ bool cvInternalGlobals::isXMLLogging() const
 	return m_bXMLLogging;
 }
 
-int cvInternalGlobals::getSCORE_FREE_PERCENT() const
-{
-	return m_iSCORE_FREE_PERCENT;
-}
-
-int cvInternalGlobals::getSCORE_POPULATION_FACTOR() const
-{
-	return m_iSCORE_POPULATION_FACTOR;
-}
-
-int cvInternalGlobals::getSCORE_LAND_FACTOR() const
-{
-	return m_iSCORE_LAND_FACTOR;
-}
-
-int cvInternalGlobals::getSCORE_TECH_FACTOR() const
-{
-	return m_iSCORE_TECH_FACTOR;
-}
-
-int cvInternalGlobals::getSCORE_WONDER_FACTOR() const
-{
-	return m_iSCORE_WONDER_FACTOR;
-}
-
-//New Python Callbacks
-int cvInternalGlobals::getUSE_CAN_CREATE_PROJECT_CALLBACK() const
-{
-	return m_iUSE_CAN_CREATE_PROJECT_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_CANNOT_CREATE_PROJECT_CALLBACK() const
-{
-	return m_iUSE_CANNOT_CREATE_PROJECT_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_CAN_DO_MELTDOWN_CALLBACK() const
-{
-	return m_iUSE_CAN_DO_MELTDOWN_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_CAN_MAINTAIN_PROCESS_CALLBACK() const
-{
-	return m_iUSE_CAN_MAINTAIN_PROCESS_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_CANNOT_MAINTAIN_PROCESS_CALLBACK() const
-{
-	return m_iUSE_CANNOT_MAINTAIN_PROCESS_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_CAN_DO_GROWTH_CALLBACK() const
-{
-	return m_iUSE_CAN_DO_GROWTH_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_CAN_DO_CULTURE_CALLBACK() const
-{
-	return m_iUSE_CAN_DO_CULTURE_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_CAN_DO_PLOT_CULTURE_CALLBACK() const
-{
-	return m_iUSE_CAN_DO_PLOT_CULTURE_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_CAN_DO_PRODUCTION_CALLBACK() const
-{
-	return m_iUSE_CAN_DO_PRODUCTION_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_CAN_DO_RELIGION_CALLBACK() const
-{
-	return m_iUSE_CAN_DO_RELIGION_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_CAN_DO_GREATPEOPLE_CALLBACK() const
-{
-	return m_iUSE_CAN_DO_GREATPEOPLE_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_CAN_RAZE_CITY_CALLBACK() const
-{
-	return m_iUSE_CAN_RAZE_CITY_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_CAN_DO_GOLD_CALLBACK() const
-{
-	return m_iUSE_CAN_DO_GOLD_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_CAN_DO_RESEARCH_CALLBACK() const
-{
-	return m_iUSE_CAN_DO_RESEARCH_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_UPGRADE_UNIT_PRICE_CALLBACK() const
-{
-	return m_iUSE_UPGRADE_UNIT_PRICE_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_AI_UPDATE_UNIT_CALLBACK() const
-{
-	return m_iUSE_AI_UPDATE_UNIT_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_AI_CHOOSE_PRODUCTION_CALLBACK() const
-{
-	return m_iUSE_AI_CHOOSE_PRODUCTION_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_EXTRA_PLAYER_COSTS_CALLBACK() const
-{
-	return m_iUSE_EXTRA_PLAYER_COSTS_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_AI_DO_DIPLO_CALLBACK() const
-{
-	return m_iUSE_AI_DO_DIPLO_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_AI_BESTTECH_CALLBACK() const
-{
-	return m_iUSE_AI_BESTTECH_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_CAN_DO_COMBAT_CALLBACK() const
-{
-	return m_iUSE_CAN_DO_COMBAT_CALLBACK;
-}
-
-int cvInternalGlobals::getUSE_AI_CAN_DO_WARPLANS_CALLBACK() const
-{
-	return m_iUSE_AI_CAN_DO_WARPLANS_CALLBACK;
-}
-
-
 /************************************************************************************************/
 /* Mod Globals    Start                          09/13/10                           phungus420  */
 /*                                                                                              */
@@ -5864,31 +4913,6 @@ bool cvInternalGlobals::isDCM_BATTLE_EFFECTS() const
 	return m_bDCM_BATTLE_EFFECTS;
 }
 
-int cvInternalGlobals::getBATTLE_EFFECT_LESS_FOOD() const
-{
-	return m_iBATTLE_EFFECT_LESS_FOOD;
-}
-
-int cvInternalGlobals::getBATTLE_EFFECT_LESS_PRODUCTION() const
-{
-	return m_iBATTLE_EFFECT_LESS_PRODUCTION;
-}
-
-int cvInternalGlobals::getBATTLE_EFFECT_LESS_COMMERCE() const
-{
-	return m_iBATTLE_EFFECT_LESS_COMMERCE;
-}
-
-int cvInternalGlobals::getBATTLE_EFFECTS_MINIMUM_TURN_INCREMENTS() const
-{
-	return m_iBATTLE_EFFECTS_MINIMUM_TURN_INCREMENTS;
-}
-
-int cvInternalGlobals::getMAX_BATTLE_TURNS() const
-{
-	return m_iMAX_BATTLE_TURNS;
-}
-
 bool cvInternalGlobals::isDCM_AIR_BOMBING() const
 {
 	return m_bDCM_AIR_BOMBING;
@@ -5897,16 +4921,6 @@ bool cvInternalGlobals::isDCM_AIR_BOMBING() const
 bool cvInternalGlobals::isDCM_RANGE_BOMBARD() const
 {
 	return m_bDCM_RANGE_BOMBARD;
-}
-
-int cvInternalGlobals::getDCM_RB_CITY_INACCURACY() const
-{
-	return m_iDCM_RB_CITY_INACCURACY;
-}
-
-int cvInternalGlobals::getDCM_RB_CITYBOMBARD_CHANCE() const
-{
-	return m_iDCM_RB_CITYBOMBARD_CHANCE;
 }
 
 bool cvInternalGlobals::isDCM_ATTACK_SUPPORT() const
@@ -5974,11 +4988,6 @@ float cvInternalGlobals::getIDW_WARLORD_MULTIPLIER() const
 	return m_fIDW_WARLORD_MULTIPLIER;
 }
 
-int cvInternalGlobals::getIDW_INFLUENCE_RADIUS() const
-{
-	return m_iIDW_INFLUENCE_RADIUS;
-}
-
 float cvInternalGlobals::getIDW_PLOT_DISTANCE_FACTOR() const
 {
 	return m_fIDW_PLOT_DISTANCE_FACTOR;
@@ -5997,11 +5006,6 @@ float cvInternalGlobals::getIDW_LOSER_PLOT_MULTIPLIER() const
 bool cvInternalGlobals::isIDW_EMERGENCY_DRAFT_ENABLED() const
 {
 	return m_bIDW_EMERGENCY_DRAFT_ENABLED;
-}
-
-int cvInternalGlobals::getIDW_EMERGENCY_DRAFT_MIN_POPULATION() const
-{
-	return m_iIDW_EMERGENCY_DRAFT_MIN_POPULATION;
 }
 
 float cvInternalGlobals::getIDW_EMERGENCY_DRAFT_STRENGTH() const
