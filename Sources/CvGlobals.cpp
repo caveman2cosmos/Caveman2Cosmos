@@ -1440,21 +1440,6 @@ CvAttachableInfo& cvInternalGlobals::getAttachableInfo(int i) const
 	return *(m_paAttachableInfo[i]);
 }
 
-int cvInternalGlobals::getNumCameraInfos() const
-{
-	return (int)m_paCameraInfo.size();
-}
-
-std::vector<CvCameraInfo*>& cvInternalGlobals::getCameraInfos()
-{
-	return m_paCameraInfo;
-}
-
-CvCameraInfo& cvInternalGlobals::getCameraInfo(CameraAnimationTypes eCameraAnimationNum) const
-{
-	return *(m_paCameraInfo[eCameraAnimationNum]);
-}
-
 int cvInternalGlobals::getNumUnitFormationInfos() const
 {
 	return (int)m_paUnitFormationInfo.size();
@@ -4243,7 +4228,6 @@ void cvInternalGlobals::deleteInfoArrays()
 	deleteInfoArray(m_paColorInfo);
 	deleteInfoArray(m_paPlayerColorInfo);
 	deleteInfoArray(m_paInterfaceModeInfo);
-	deleteInfoArray(m_paCameraInfo);
 	deleteInfoArray(m_paAdvisorInfo);
 	deleteInfoArray(m_paThroneRoomCamera);
 	deleteInfoArray(m_paThroneRoomInfo);
