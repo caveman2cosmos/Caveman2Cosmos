@@ -296,6 +296,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_TERRAFORMED_TITAN</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_TERRAFORMED_TITAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRAFORMED_TITAN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_TITAN_STRATEGY</Strategy>
@@ -335,6 +336,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_COMPUTRONIUM_TITAN</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_COMPUTRONIUM_TITAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COMPUTRONIUM_TITAN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_COMPUTRONIUM_TITAN_STRATEGY</Strategy>

@@ -4,6 +4,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_BISON_TRAINER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_BISON_TRAINER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BISON_TRAINER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BISON_TRAINER_STRATEGY</Strategy>

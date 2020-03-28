@@ -954,7 +954,7 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iConquestProb>75</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 			<!-- Properties diffusion -->
 			<Properties>
 				<Property>
@@ -3131,6 +3131,7 @@
 			<!-- Ekal Masharti -->
 			<Type>BUILDING_ASSYRIA_EKAL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3287,7 +3288,7 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iConquestProb>75</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -3850,6 +3851,7 @@
 			<!-- Golden Gate Bridge -->
 			<Type>BUILDING_GOLDEN_GATE_BRIDGE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -3916,6 +3918,7 @@
 			<!-- Grand Earth Festival -->
 			<Type>BUILDING_EARTH_FESTIVAL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4137,6 +4140,7 @@
 			<!-- Grand Fire Festival -->
 			<Type>BUILDING_FIRE_FESTIVAL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4363,6 +4367,7 @@
 			<!-- Grand Marine Festival -->
 			<Type>BUILDING_MARINE_FESTIVAL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4619,6 +4624,7 @@
 			<!-- Grand Sky Festival -->
 			<Type>BUILDING_SKY_FESTIVAL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -4899,6 +4905,7 @@
 			<!-- Great Firewall -->
 			<Type>BUILDING_GREAT_FIREWALL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5172,7 +5179,7 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iConquestProb>75</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 			<!-- Properties diffusion -->
 			<Properties>
 				<Property>
@@ -5498,6 +5505,7 @@
 			<!-- Ho Trai Library -->
 			<Type>BUILDING_SIAM_HO_TRAI</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5685,6 +5693,7 @@
 			<!-- Humphrey Metrodome -->
 			<Type>BUILDING_HUMPHREY_METRODOME</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5731,6 +5740,7 @@
 			<!-- Ikhanda -->
 			<Type>BUILDING_ZULU_IKHANDA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -5855,6 +5865,7 @@
 			<!-- International Dog Show -->
 			<Type>BUILDING_DOG_SHOW</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7732,6 +7743,7 @@
 			<!-- Mission to Challenger Deep -->
 			<Type>BUILDING_DEEPSEA_MISSION</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7780,6 +7792,7 @@
 			<!-- Mission to Earth's Core -->
 			<Type>BUILDING_EARTHCORE_MISSION</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -7826,6 +7839,7 @@
 			<!-- Moai Statues -->
 			<Type>BUILDING_MOAI_STATUES</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8447,6 +8461,7 @@
 			<!-- Olympic Games -->
 			<Type>BUILDING_OLYMPIC_GAMES</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -9529,7 +9544,7 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iConquestProb>75</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- SETI Program -->
@@ -9991,6 +10006,7 @@
 			<!-- Smithsonian Institution -->
 			<Type>BUILDING_SMITHSONIAN</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -10124,7 +10140,7 @@
 					<iFlavor>15</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iConquestProb>90</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -10137,6 +10153,7 @@
 			<!-- Solar Updraft Tower -->
 			<Type>BUILDING_SOLAR_TOWER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -13594,7 +13611,7 @@
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iConquestProb>75</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -14788,6 +14805,7 @@
 			<!-- X-Games -->
 			<Type>BUILDING_X_GAMES</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -14885,6 +14903,7 @@
 			<!-- Harvard University -->
 			<Type>BUILDING_HARVARD_UNIVERSITY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -15005,6 +15024,7 @@
 			<!-- University of Bologna-->
 			<Type>BUILDING_UNIVERSITY_OF_BOLOGNA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -15125,6 +15145,7 @@
 			<!-- University of Salamanca -->
 			<Type>BUILDING_UNIVERSITY_OF_SALAMANCA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -15245,6 +15266,7 @@
 			<!-- University of Coimbra -->
 			<Type>BUILDING_UNIVERSITY_OF_COIMBRA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -15368,6 +15390,7 @@
 			<!-- University of Barcelona -->
 			<Type>BUILDING_UNIVERSITY_OF_BARCELONA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -15491,6 +15514,7 @@
 			<!-- Montpellier University -->
 			<Type>BUILDING_MONTPELLIER_UNIVERSITY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -15614,6 +15638,7 @@
 			<!-- Sorbonne University -->
 			<Type>BUILDING_SORBONNE_UNIVERSITY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -15735,6 +15760,7 @@
 			<!-- University of Basel -->
 			<Type>BUILDING_UNIVERSITY_OF_BASEL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -15856,6 +15882,7 @@
 			<!-- Jagiellonian University -->
 			<Type>BUILDING_JAGIELLONIAN_UNIVERSITY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -15977,6 +16004,7 @@
 			<!-- University of Murcia -->
 			<Type>BUILDING_UNIVERSITY_OF_MURCIA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -16096,6 +16124,7 @@
 			<!-- Oxford University -->
 			<Type>BUILDING_OXFORD_UNIVERSITY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -16220,6 +16249,7 @@
 			<!-- University of Edinburgh -->
 			<Type>BUILDING_UNIVERSITY_OF_EDINBURGH</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -16339,6 +16369,7 @@
 			<!-- University of Padova -->
 			<Type>BUILDING_UNIVERSITY_OF_PADUA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -16427,6 +16458,7 @@
 			<!-- University of Cambridge -->
 			<Type>BUILDING_UNIVERSITY_OF_CAMBRIDGE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -16515,6 +16547,7 @@
 			<!-- Heidelberg University -->
 			<Type>BUILDING_HEIDELBERG_UNIVERSITY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -16613,7 +16646,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_CHILEHAUS</MovieDefineTag>
 			<PrereqTech>TECH_EXPRESSIONISM</PrereqTech>
 			<iCost>5220</iCost>
-			<iConquestProb>70</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 			<CommerceChanges>
 				<iCommerce>5</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -16658,7 +16691,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_DALI_THEATRE</MovieDefineTag>
 			<PrereqTech>TECH_SURREALISM</PrereqTech>
 			<iCost>7080</iCost>
-			<iConquestProb>70</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -16701,7 +16734,7 @@
 			<PrereqTech>TECH_GEOCENTRISM</PrereqTech>
 			<ObsoleteTech>TECH_HELIOCENTRISM</ObsoleteTech>
 			<iCost>1680</iCost>
-			<iConquestProb>70</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>7</iCommerce>
@@ -16747,7 +16780,7 @@
 			<PrereqTech>TECH_HELIOCENTRISM</PrereqTech>
 			<ObsoleteTech>TECH_RADAR</ObsoleteTech>
 			<iCost>2730</iCost>
-			<iConquestProb>70</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 			<iHappiness>-2</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -16798,7 +16831,7 @@
 			<PrereqTech>TECH_HYDRAULIC_MINING</PrereqTech>
 			<ObsoleteTech>TECH_NITROGLYCERIN</ObsoleteTech>
 			<iCost>1152</iCost>
-			<iConquestProb>70</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>8</iYield>
@@ -16833,7 +16866,7 @@
 			<MovieDefineTag>ART_DEF_MOVIE_THE_ATOMIUM</MovieDefineTag>
 			<PrereqTech>TECH_FISSION</PrereqTech>
 			<iCost>6480</iCost>
-			<iConquestProb>70</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -17180,6 +17213,7 @@
 			<!-- Brazen Bull -->
 			<Type>BUILDING_BRAZEN_BULL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17238,6 +17272,7 @@
 			<!-- Ancient Way of the Fist -->
 			<Type>BUILDING_ANCIENT_WAY_OF_THE_FIST</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17285,6 +17320,7 @@
 			<!-- Ancient Way of the Feather -->
 			<Type>BUILDING_ANCIENT_WAY_OF_THE_FEATHER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17338,6 +17374,7 @@
 			<!-- Ancient Way of the Shadows -->
 			<Type>BUILDING_ANCIENT_WAY_OF_THE_SHADOWS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17393,6 +17430,7 @@
 			<!-- Ancient Way of the Centaur -->
 			<Type>BUILDING_ANCIENT_WAY_OF_THE_CENTAUR</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17449,6 +17487,7 @@
 			<!-- Ancient Way of the Warrior -->
 			<Type>BUILDING_ANCIENT_WAY_OF_THE_WARRIOR</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17496,6 +17535,7 @@
 			<!-- Ancient Way of the Waves -->
 			<Type>BUILDING_ANCIENT_WAY_OF_THE_WAVES</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17547,6 +17587,7 @@
 			<!-- Ancient Way of the Wind -->
 			<Type>BUILDING_ANCIENT_WAY_OF_THE_WIND</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17594,6 +17635,7 @@
 			<!-- Ancient Way of the Wild -->
 			<Type>BUILDING_ANCIENT_WAY_OF_THE_WILD</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17641,6 +17683,7 @@
 			<!-- Ancient Way of the Leech -->
 			<Type>BUILDING_ANCIENT_WAY_OF_THE_LEECH</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17688,6 +17731,7 @@
 			<!-- Ancient Way of the Wolf -->
 			<Type>BUILDING_ANCIENT_WAY_OF_THE_WOLF</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -17794,7 +17838,7 @@
 					<iFlavor>5</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iConquestProb>75</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Ming Vase Workshop -->
@@ -17858,7 +17902,7 @@
 					<iFlavor>5</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iConquestProb>75</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Terra Sigillata Workshop -->
@@ -17925,7 +17969,7 @@
 					<iFlavor>5</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iConquestProb>75</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Murano Glassmakers -->
@@ -17987,7 +18031,7 @@
 					<iFlavor>5</iFlavor>
 				</Flavor>
 			</Flavors>
-			<iConquestProb>75</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CATACOMBS</Type>
@@ -18748,7 +18792,7 @@
 			<iCost>4800</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<iConquestProb>0</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 			<iAsset>10</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ObsoleteSafeCommerceChanges>
@@ -19139,6 +19183,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_BANK_OF_CHINA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_BANK_OF_CHINA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BANK_OF_CHINA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BANK_OF_CHINA_STRATEGY</Strategy>
@@ -19191,6 +19236,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_BAUHAUS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_BAUHAUS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BAUHAUS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BAUHAUS_STRATEGY</Strategy>
@@ -19274,6 +19320,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_BAYREUTH</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_BAYREUTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BAYREUTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BAYREUTH_STRATEGY</Strategy>
@@ -19356,6 +19403,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_BERLIN_WALL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_BERLIN_WALL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BERLIN_WALL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BERLIN_WALL_STRATEGY</Strategy>
@@ -19486,6 +19534,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_BURNINGMAN</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_BURNINGMAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BURNINGMAN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BURNINGMAN_STRATEGY</Strategy>
@@ -19813,6 +19862,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_CRYSTAL_PALACE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_CRYSTAL_PALACE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CRYSTAL_PALACE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CRYSTAL_PALACE_STRATEGY</Strategy>
@@ -20423,6 +20473,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_HILLTARA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_HILLTARA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HILLTARA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HILLTARA_STRATEGY</Strategy>
@@ -20680,6 +20731,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_KRAK_DES_CHEVS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_KRAK_DES_CHEVS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KRAK_DES_CHEVS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_KRAK_DES_CHEVS_STRATEGY</Strategy>
@@ -21304,6 +21356,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_PERE_LACHAISE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_PERE_LACHAISE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PERE_LACHAISE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PERE_LACHAISE_STRATEGY</Strategy>
@@ -22271,6 +22324,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_WARHOL_FACTORY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_WARHOL_FACTORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WARHOL_FACTORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_WARHOL_FACTORY_STRATEGY</Strategy>
@@ -22357,6 +22411,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_WESTMINSTER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_WESTMINSTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WESTMINSTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_WESTMINSTER_STRATEGY</Strategy>

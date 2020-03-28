@@ -1930,7 +1930,7 @@
 			<FontButtonIndex>145</FontButtonIndex>
 		</BonusArtInfo>
 		<BonusArtInfo>
-			<Type>ART_DEF_BONUS_MARRI</Type>
+			<Type>ART_DEF_BONUS_MARIC</Type>
 			<fScale>1.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>

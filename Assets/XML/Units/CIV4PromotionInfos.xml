@@ -26436,7 +26436,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_CULTURE_NEANDERTHAL</Type>
-			<Description>TXT_KEY_PROMOTION_CULTURE_SOUTH_AMERICAN</Description>
+			<Description>TXT_KEY_PROMOTION_CULTURE_NEANDERTHAL</Description>
 			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>

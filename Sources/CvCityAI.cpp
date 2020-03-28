@@ -361,7 +361,7 @@ void CvCityAI::AI_assignWorkingPlots()
 {
 	PROFILE_FUNC();
 
-	if (0 != GC.getDefineINT("AI_SHOULDNT_MANAGE_PLOT_ASSIGNMENT"))
+	if (0 != GC.getDefineINT(AI_SHOULDNT_MANAGE_PLOT_ASSIGNMENT))
 	{
 		return;
 	}
@@ -406,7 +406,7 @@ void CvCityAI::AI_assignWorkingPlots()
 		// make sure at least the forced amount of specialists are assigned
 		for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 		{
-			int iForcedSpecialistCount = getForceSpecialistCount((SpecialistTypes)iI);
+			const int iForcedSpecialistCount = getForceSpecialistCount((SpecialistTypes)iI);
 			if (iForcedSpecialistCount > 0)
 			{
 				bIsSpecialistForced = true;
@@ -575,7 +575,7 @@ bool CvCityAI::AI_avoidGrowth()
 		// ignore military unhappy, since we assume it will be fixed quickly, grow anyway
 		if (getMilitaryHappinessUnits() == 0)
 		{
-			iHappinessLevel += ((GC.getDefineINT("NO_MILITARY_PERCENT_ANGER") * (getPopulation() + 1)) / GC.getPERCENT_ANGER_DIVISOR());
+			iHappinessLevel += ((GC.getDefineINT(NO_MILITARY_PERCENT_ANGER) * (getPopulation() + 1)) / GC.getPERCENT_ANGER_DIVISOR());
 		}
 
 		if(GC.getGame().isOption(GAMEOPTION_REVOLUTION))
@@ -603,7 +603,7 @@ bool CvCityAI::AI_avoidGrowth()
 
 		if (getFoodTurnsLeft() == 1)
 		{
-			int iHappyFacesLeft = happyLevel() - unhappyLevel(getHappinessTimer() > 0 ? GC.getDefineINT("TEMP_HAPPY") : 0);
+			const int iHappyFacesLeft = happyLevel() - unhappyLevel(getHappinessTimer() > 0 ? GC.getDefineINT(TEMP_HAPPY) : 0);
 
 			if (iHappyFacesLeft < 1)
 			{
@@ -621,7 +621,7 @@ bool CvCityAI::AI_avoidGrowth()
 
 		if (getFoodTurnsLeft() == 1)
 		{
-			int iHealthyFacesLeft = goodHealth() - badHealth();
+			const int iHealthyFacesLeft = goodHealth() - badHealth();
 
 			if (iHealthyFacesLeft < 1)
 			{
@@ -805,7 +805,7 @@ int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth,
 	}
 	else
 	{
-		SpecialistTypes eGenericCitizen = (SpecialistTypes)GC.getDefineINT("DEFAULT_SPECIALIST");
+		const SpecialistTypes eGenericCitizen = (SpecialistTypes)GC.getDefineINT(DEFAULT_SPECIALIST);
 
 		// are we the generic specialist?
 		if (eSpecialist == eGenericCitizen)
@@ -829,8 +829,8 @@ int CvCityAI::AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth,
 	}
 	if (0 != iExperience)
 	{
-		int iProductionRank = findYieldRateRank(YIELD_PRODUCTION);
-		int iHasMetCount = GET_TEAM(getTeam()).getHasMetCivCount(true);
+		const int iProductionRank = findYieldRateRank(YIELD_PRODUCTION);
+		const int iHasMetCount = GET_TEAM(getTeam()).getHasMetCivCount(true);
 
 		iValue += (iExperience * ((iHasMetCount > 0) ? 4 : 2));
 		if (iProductionRank <= GET_PLAYER(getOwner()).getNumCities() / 2 + 1)
@@ -5278,7 +5278,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 	}
 	else if (!(bProvidesPower || isPower()))  //if the city is still without power after building this
 	{
-		int iUnhealthyPopulationFromBuildingPlusPower = std::min(0,(badHealth() - goodHealth() - getEspionageHealthCounter())) + iBadHealthFromBuilding - GC.getDefineINT("DIRTY_POWER_HEALTH_CHANGE");
+		int iUnhealthyPopulationFromBuildingPlusPower = std::min(0,(badHealth() - goodHealth() - getEspionageHealthCounter())) + iBadHealthFromBuilding - GC.getDefineINT(DIRTY_POWER_HEALTH_CHANGE);
 		if (iUnhealthyPopulationFromBuildingPlusPower > 0 && (iBaseFoodDifference + iAllowedShrinkRate < iUnhealthyPopulationFromBuildingPlusPower ))
 		{
 			bShrinksWithPower = true;
@@ -6140,7 +6140,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 					PROFILE("CvCityAI::AI_buildingValueThresholdOriginal.Maintenance");
 
 					int iExtraMaintenance = 0;
-					if ( kBuilding.getCommerceChange(COMMERCE_GOLD) < 0 && GC.getDefineINT("TREAT_NEGATIVE_GOLD_AS_MAINTENANCE"))
+					if ( kBuilding.getCommerceChange(COMMERCE_GOLD) < 0 && GC.getDefineINT(TREAT_NEGATIVE_GOLD_AS_MAINTENANCE))
 					{
 						iExtraMaintenance = -kBuilding.getCommerceChange(COMMERCE_GOLD) * 100;
 					}
@@ -6171,10 +6171,10 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 					int iCurrentSpecialistsRunnable = 0;
 					for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 					{
-						if (iI != GC.getDefineINT("DEFAULT_SPECIALIST"))
+						if (iI != GC.getDefineINT(DEFAULT_SPECIALIST))
 						{
-							bool bUnlimited = (GET_PLAYER(getOwner()).isSpecialistValid((SpecialistTypes)iI));
-							int iRunnable = (getMaxSpecialistCount((SpecialistTypes)iI) > 0);
+							const bool bUnlimited = (GET_PLAYER(getOwner()).isSpecialistValid((SpecialistTypes)iI));
+							const int iRunnable = (getMaxSpecialistCount((SpecialistTypes)iI) > 0);
 
 							if (bUnlimited || (iRunnable > 0))
 							{
@@ -8370,13 +8370,13 @@ int CvCityAI::AI_totalBestBuildValue(CvArea* pArea)
 	{
 		if (iI != CITY_HOME_PLOT)
 		{
-			CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
+			const CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
 
 			if (pLoopPlot != NULL)
 			{
 				if (pLoopPlot->area() == pArea)
 				{
-					if (pLoopPlot->getImprovementType() == NO_IMPROVEMENT || !(GET_PLAYER(getOwner()).isOption(PLAYEROPTION_SAFE_AUTOMATION) && !(pLoopPlot->getImprovementType() == (GC.getDefineINT("RUINS_IMPROVEMENT")))))
+					if (pLoopPlot->getImprovementType() == NO_IMPROVEMENT || !(GET_PLAYER(getOwner()).isOption(PLAYEROPTION_SAFE_AUTOMATION) && pLoopPlot->getImprovementType() != GC.getDefineINT("RUINS_IMPROVEMENT")))
 					{
 						iTotalValue += AI_getBestBuildValue(iI);
 					}
@@ -10089,8 +10089,8 @@ void CvCityAI::AI_doDraft(bool bForce)
 				conscript();
 				return;
 			}
-			bool bLandWar = ((area()->getAreaAIType(getTeam()) == AREAAI_OFFENSIVE) || (area()->getAreaAIType(getTeam()) == AREAAI_DEFENSIVE) || (area()->getAreaAIType(getTeam()) == AREAAI_MASSING));
-			bool bDanger = (!AI_isDefended() && AI_isDanger());
+			const bool bLandWar = ((area()->getAreaAIType(getTeam()) == AREAAI_OFFENSIVE) || (area()->getAreaAIType(getTeam()) == AREAAI_DEFENSIVE) || (area()->getAreaAIType(getTeam()) == AREAAI_MASSING));
+			const bool bDanger = (!AI_isDefended() && AI_isDanger());
 
 			// Don't go broke from drafting
 			if( !bDanger && GET_PLAYER(getOwner()).AI_isFinancialTrouble() )
@@ -10099,14 +10099,14 @@ void CvCityAI::AI_doDraft(bool bForce)
 			}
 
 			// Don't shrink cities too much
-			int iConscriptPop = getConscriptPopulation();
+			const int iConscriptPop = getConscriptPopulation();
 			if ( !bDanger && (3 * (getPopulation() - iConscriptPop) < getHighestPopulation() * 2) )
 			{
 				return;
 			}
 
 			// Large cities want a little spare happiness
-			int iHappyDiff = GC.getDefineINT("CONSCRIPT_POP_ANGER") - iConscriptPop + getPopulation()/10;
+			const int iHappyDiff = GC.getDefineINT(CONSCRIPT_POP_ANGER) - iConscriptPop + getPopulation()/10;
 
 			if (bLandWar && (0 == angryPopulation(iHappyDiff)))
 			{
@@ -10128,8 +10128,8 @@ void CvCityAI::AI_doDraft(bool bForce)
 				if( bWait && bDanger )
 				{
 					// If city might be captured, don't hold back
-					int iOurDefense = GET_TEAM(getTeam()).AI_getOurPlotStrength(plot(),0,true,false,true);
-					int iEnemyOffense = GET_PLAYER(getOwner()).AI_getEnemyPlotStrength(plot(),2,false,false);
+					const int iOurDefense = GET_TEAM(getTeam()).AI_getOurPlotStrength(plot(),0,true,false,true);
+					const int iEnemyOffense = GET_PLAYER(getOwner()).AI_getEnemyPlotStrength(plot(),2,false,false);
 
 					if( (iOurDefense == 0) || (3*iEnemyOffense > 2*iOurDefense) )
 					{
@@ -10498,9 +10498,9 @@ void CvCityAI::AI_doHurry(bool bForce)
 					}
 				}
 
-				if (GC.getDefineINT("DEFAULT_SPECIALIST") != NO_SPECIALIST)
+				if (GC.getDefineINT(DEFAULT_SPECIALIST) != NO_SPECIALIST)
 				{
-					if (getSpecialistCount((SpecialistTypes)(GC.getDefineINT("DEFAULT_SPECIALIST"))) > 0)
+					if (getSpecialistCount((SpecialistTypes)GC.getDefineINT(DEFAULT_SPECIALIST)) > 0)
 					{
 						for (int iJ = 0; iJ < GC.getNumSpecialistInfos(); iJ++)
 						{
@@ -11228,7 +11228,7 @@ bool CvCityAI::AI_bestSpreadUnit(bool bMissionary, bool bExecutive, int iBaseCha
 
 								if (kPlayer.getEffectiveGold() >= iCost)
 								{
-									iCost *= GC.getDefineINT("CORPORATION_FOREIGN_SPREAD_COST_PERCENT");
+									iCost *= GC.getDefineINT(CORPORATION_FOREIGN_SPREAD_COST_PERCENT);
 									iCost /= 100;
 									if (kPlayer.getEffectiveGold() < iCost && iTotalCount > 1)
 									{
@@ -11508,16 +11508,16 @@ bool CvCityAI::AI_removeWorstCitizen(SpecialistTypes eIgnoreSpecialist)
 	if (extraFreeSpecialists() < 0)
 	{
 		// does generic 'citizen' specialist exist?
-		if (GC.getDefineINT("DEFAULT_SPECIALIST") != NO_SPECIALIST)
+		if (GC.getDefineINT(DEFAULT_SPECIALIST) != NO_SPECIALIST)
 		{
 			// is ignore something other than generic citizen?
-			if (eIgnoreSpecialist != GC.getDefineINT("DEFAULT_SPECIALIST"))
+			if (eIgnoreSpecialist != GC.getDefineINT(DEFAULT_SPECIALIST))
 			{
 				// do we have at least one more generic citizen than we are forcing?
-				if (getSpecialistCount((SpecialistTypes)(GC.getDefineINT("DEFAULT_SPECIALIST"))) > getForceSpecialistCount((SpecialistTypes)(GC.getDefineINT("DEFAULT_SPECIALIST"))))
+				if (getSpecialistCount((SpecialistTypes)GC.getDefineINT(DEFAULT_SPECIALIST)) > getForceSpecialistCount((SpecialistTypes)(GC.getDefineINT("DEFAULT_SPECIALIST"))))
 				{
 					// remove the extra generic citzen
-					changeSpecialistCount(((SpecialistTypes)(GC.getDefineINT("DEFAULT_SPECIALIST"))), -1);
+					changeSpecialistCount((SpecialistTypes)GC.getDefineINT(DEFAULT_SPECIALIST), -1);
 					return true;
 				}
 			}
@@ -12187,7 +12187,7 @@ int CvCityAI::AI_yieldValueInternal(short* piYields, short* piCommerceYields, bo
 						{
 							if (GET_PLAYER(getOwner()).getNumCities() > 2)
 							{
-								iHappinessLevel += ((GC.getDefineINT("NO_MILITARY_PERCENT_ANGER") * (iPopulation + 1)) / GC.getPERCENT_ANGER_DIVISOR());
+								iHappinessLevel += ((GC.getDefineINT(NO_MILITARY_PERCENT_ANGER) * (iPopulation + 1)) / GC.getPERCENT_ANGER_DIVISOR());
 							}
 						}
 
@@ -13697,7 +13697,7 @@ int CvCityAI::AI_getHappyFromHurry(HurryTypes eHurry)
 
 int CvCityAI::AI_getHappyFromHurry(int iHurryPopulation)
 {
-	int iHappyDiff = iHurryPopulation - GC.getDefineINT("HURRY_POP_ANGER");
+	const int iHappyDiff = iHurryPopulation - GC.getDefineINT(HURRY_POP_ANGER);
 	if (iHappyDiff > 0)
 	{
 		if (getHurryAngerTimer() <= 1)
@@ -14001,8 +14001,8 @@ void CvCityAI::AI_buildGovernorChooseProduction()
 	if (!isHuman() || GET_PLAYER(getOwner()).isOption(PLAYEROPTION_MODDER_1))
 	{
 #endif
-	int iExistingWorkers = GET_PLAYER(getOwner()).AI_totalAreaUnitAIs(area(), UNITAI_WORKER);
-	int iNeededWorkers = GET_PLAYER(getOwner()).AI_neededWorkers(area());
+	const int iExistingWorkers = GET_PLAYER(getOwner()).AI_totalAreaUnitAIs(area(), UNITAI_WORKER);
+	const int iNeededWorkers = GET_PLAYER(getOwner()).AI_neededWorkers(area());
 
 	if (!bDanger && (iExistingWorkers < ((iNeededWorkers + 1) / 2)))
 	{
@@ -14016,9 +14016,9 @@ void CvCityAI::AI_buildGovernorChooseProduction()
 #endif
 // BUG - Governor Builds Workers - end
 
-	if (GC.getDefineINT("DEFAULT_SPECIALIST") != NO_SPECIALIST)
+	if (GC.getDefineINT(DEFAULT_SPECIALIST) != NO_SPECIALIST)
 	{
-		if (getSpecialistCount((SpecialistTypes)(GC.getDefineINT("DEFAULT_SPECIALIST"))) > 0)
+		if (getSpecialistCount((SpecialistTypes)GC.getDefineINT(DEFAULT_SPECIALIST)) > 0)
 		{
 			if (AI_chooseBuilding(BUILDINGFOCUS_SPECIALIST, 60))
 			{
@@ -14390,7 +14390,7 @@ int CvCityAI::AI_buildingSpecialYieldChangeValue(BuildingTypes eBuilding, YieldT
 	}
 	if (iWorkedCount == 0)
 	{
-		SpecialistTypes eDefaultSpecialist = (SpecialistTypes)GC.getDefineINT("DEFAULT_SPECIALIST");
+		const SpecialistTypes eDefaultSpecialist = (SpecialistTypes)GC.getDefineINT(DEFAULT_SPECIALIST);
 		if ((getPopulation() > 2) && ((eDefaultSpecialist == NO_SPECIALIST) || (getSpecialistCount(eDefaultSpecialist) == 0)))
 		{
 			iValue /= 2;
@@ -15409,7 +15409,7 @@ bool CvCityAI::AI_trainInquisitor()
 	{
 		return false;
 	}
-	if(getPopulation() < GC.getDefineINT("MIN_POP_CONSIDER_INQUISITORS"))
+	if(getPopulation() < GC.getDefineINT(MIN_POP_CONSIDER_INQUISITORS))
 	{
 		return false;
 	}
@@ -16725,7 +16725,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 				}
 				else if (!(bProvidesPower || isPower()))  //if the city is still without power after building this
 				{
-					int iUnhealthyPopulationFromBuildingPlusPower = std::min(0,(badHealth() - goodHealth() - getEspionageHealthCounter())) + iBadHealthFromBuilding - GC.getDefineINT("DIRTY_POWER_HEALTH_CHANGE");
+					int iUnhealthyPopulationFromBuildingPlusPower = std::min(0,(badHealth() - goodHealth() - getEspionageHealthCounter())) + iBadHealthFromBuilding - GC.getDefineINT(DIRTY_POWER_HEALTH_CHANGE);
 					if (iUnhealthyPopulationFromBuildingPlusPower > 0 && (iBaseFoodDifference + iAllowedShrinkRate < iUnhealthyPopulationFromBuildingPlusPower ))
 					{
 						bShrinksWithPower = true;
@@ -17603,7 +17603,7 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 							PROFILE("CalculateAllBuildingValues.Maintenance");
 							int iValue = 0;
 							int iExtraMaintenance = 0;
-							if ( kBuilding.getCommerceChange(COMMERCE_GOLD) < 0 && GC.getDefineINT("TREAT_NEGATIVE_GOLD_AS_MAINTENANCE"))
+							if ( kBuilding.getCommerceChange(COMMERCE_GOLD) < 0 && GC.getDefineINT(TREAT_NEGATIVE_GOLD_AS_MAINTENANCE))
 							{
 								iExtraMaintenance = -kBuilding.getCommerceChange(COMMERCE_GOLD) * 100;
 							}
@@ -17637,10 +17637,10 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 							int iCurrentSpecialistsRunnable = 0;
 							for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
 							{
-								if (iI != GC.getDefineINT("DEFAULT_SPECIALIST"))
+								if (iI != GC.getDefineINT(DEFAULT_SPECIALIST))
 								{
-									bool bUnlimited = (GET_PLAYER(getOwner()).isSpecialistValid((SpecialistTypes)iI));
-									int iRunnable = (getMaxSpecialistCount((SpecialistTypes)iI) > 0);
+									const bool bUnlimited = (GET_PLAYER(getOwner()).isSpecialistValid((SpecialistTypes)iI));
+									const int iRunnable = (getMaxSpecialistCount((SpecialistTypes)iI) > 0);
 
 									if (bUnlimited || (iRunnable > 0))
 									{
@@ -18611,7 +18611,7 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 /************************************************************************************************/
 	int iBaseCommerceChange = GC.getBuildingInfo(eBuilding).getCommerceChange((CommerceTypes)iI);
 
-	if ( iBaseCommerceChange < 0 && iI == COMMERCE_GOLD && GC.getDefineINT("TREAT_NEGATIVE_GOLD_AS_MAINTENANCE") )
+	if ( iBaseCommerceChange < 0 && iI == COMMERCE_GOLD && GC.getDefineINT(TREAT_NEGATIVE_GOLD_AS_MAINTENANCE) )
 	{
 		iBaseCommerceChange = 0;
 	}

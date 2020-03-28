@@ -33,7 +33,7 @@
 			<iCost>1056</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<iConquestProb>0</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 			<iStateReligionHappiness>3</iStateReligionHappiness>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>100.0</fVisibilityPriority>
@@ -104,7 +104,7 @@
 			<iCost>1056</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<iConquestProb>0</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 			<iStateReligionHappiness>3</iStateReligionHappiness>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>100.0</fVisibilityPriority>
@@ -206,7 +206,7 @@
 			<iCost>1566</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<iConquestProb>0</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 			<iHappiness>1</iHappiness>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
 			<iDefense>100</iDefense>
@@ -296,7 +296,7 @@
 			<iCost>1104</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<iConquestProb>0</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 			<iHappiness>1</iHappiness>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>100.0</fVisibilityPriority>
@@ -393,7 +393,7 @@
 			<iCost>1566</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<iConquestProb>0</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 			<iHappiness>1</iHappiness>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
 			<iAsset>2</iAsset>
@@ -470,6 +470,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_GREAT_PYRAMID_OF_THE_MOON</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_GREAT_PYRAMID_OF_THE_MOON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GREAT_PYRAMID_OF_THE_MOON_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GREAT_PYRAMID_OF_THE_MOON_STRATEGY</Strategy>
@@ -574,7 +575,7 @@
 			<iCost>1404</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<iConquestProb>0</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 			<iGreatPeopleRateModifier>10</iGreatPeopleRateModifier>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
 			<iAsset>2</iAsset>
@@ -661,7 +662,7 @@
 			<iCost>1008</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<iConquestProb>0</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 			<iHappiness>1</iHappiness>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iAsset>2</iAsset>
@@ -733,7 +734,7 @@
 			<iCost>1008</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<iConquestProb>0</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 			<iDomesticGreatGeneralRateModifier>50</iDomesticGreatGeneralRateModifier>
 			<iMaintenanceModifier>-25</iMaintenanceModifier>
 			<iWarWearinessModifier>-25</iWarWearinessModifier>
@@ -813,7 +814,7 @@
 			<PrereqTech>TECH_AESTHETICS</PrereqTech>
 			<Bonus>BONUS_STONE</Bonus>
 			<iCost>1566</iCost>
-			<iConquestProb>25</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>4</iGreatPeopleRateChange>
 			<iHappiness>2</iHappiness>
@@ -866,7 +867,7 @@
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>4</iGreatPeopleRateChange>
 			<iCost>1620</iCost>
-			<iConquestProb>25</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 			<iHealth>2</iHealth>
 			<iGlobalHealth>2</iGlobalHealth>
 			<iAsset>2</iAsset>
@@ -912,7 +913,7 @@
 			<iGreatPeopleRateChange>4</iGreatPeopleRateChange>
 			<FreePromotion>PROMOTION_MORALE</FreePromotion>
 			<iCost>1860</iCost>
-			<iConquestProb>25</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 			<iAsset>2</iAsset>
 			<ObsoleteSafeCommerceChanges>
 				<iCommerce>0</iCommerce>

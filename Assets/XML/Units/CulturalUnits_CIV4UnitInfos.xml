@@ -26037,7 +26037,7 @@
 				</UnitAI>
 			</UnitAIs>
 			<PrereqTech>TECH_SMITHING</PrereqTech>
-			<BonusType>BONUS_MARRI</BonusType>
+			<BonusType>BONUS_MARIC</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_IRON_WARES</BonusType>
 			</PrereqBonuses>

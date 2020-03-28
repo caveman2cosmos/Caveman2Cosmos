@@ -942,6 +942,8 @@ public:
 	FVariableSystem* getDefinesVarSystem() const;
 	void cacheGlobals();
 
+	inline int getDefineINT(GlobalDefineINT var) const	{ return m_GlobalDefinesINT[var]; }
+
 	// ***** EXPOSED TO PYTHON *****
 /************************************************************************************************/
 /* MOD_COMPONENT_CONTROL                   08/02/07                            MRGENIE          */
@@ -1373,6 +1375,7 @@ protected:
 	typedef std::map<int*,std::pair<CvString,CvString> > DelayedResolutionMap;
 	DelayedResolutionMap m_delayedResolutionMap;
 
+	std::vector<int> m_GlobalDefinesINT;
 
 	std::vector<CvColorInfo*> m_paColorInfo;
 	std::vector<CvPlayerColorInfo*> m_paPlayerColorInfo;

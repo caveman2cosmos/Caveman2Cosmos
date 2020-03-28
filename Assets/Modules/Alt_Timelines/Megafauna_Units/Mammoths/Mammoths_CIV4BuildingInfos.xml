@@ -47,6 +47,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_MAMMOTH_TRAINER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_MAMMOTH_TRAINER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MAMMOTH_TRAINER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MAMMOTH_TRAINER_STRATEGY</Strategy>
