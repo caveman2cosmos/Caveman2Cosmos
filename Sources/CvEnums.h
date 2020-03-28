@@ -6,7 +6,6 @@
 // enums.h
 
 #include "CvDefines.h"
-#include "GlobalDefines.h"
 
 
 enum GameStateTypes					// Exposed to Python
