@@ -1365,7 +1365,7 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 
 	const bool bCapital = isCapital();
 
-	pPlot->setImprovementType((ImprovementTypes)GC.getDefineINT(RUINS_IMPROVEMENT));
+	pPlot->setImprovementType(CvImprovementInfo::getImprovementRuins());
 
 	CvPlayer& kOwner = GET_PLAYER(eOwner);
 

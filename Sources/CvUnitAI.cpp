@@ -1415,7 +1415,7 @@ bool CvUnitAI::AI_bestCityBuild(CvCity* pCity, CvPlot** ppBestPlot, BuildTypes* 
 
 	int iBestValue = 0;
 	const CvPlayerAI& kOwner = GET_PLAYER(getOwner());
-	const ImprovementTypes eRuins = (ImprovementTypes)GC.getDefineINT("RUINS_IMPROVEMENT");
+	const ImprovementTypes eRuins = CvImprovementInfo::getImprovementRuins();
 	const bool bSafeAutomation = kOwner.isOption(PLAYEROPTION_SAFE_AUTOMATION);
 
 	BuildTypes eBestBuild = NO_BUILD;
@@ -24531,7 +24531,7 @@ bool CvUnitAI::AI_improveCity(CvCity* pCity)
 bool CvUnitAI::AI_improveLocalPlot(int iRange, CvCity* pIgnoreCity)
 {
 	const CvPlayerAI& kOwner = GET_PLAYER(getOwner());
-	const ImprovementTypes eRuins = (ImprovementTypes)GC.getDefineINT("RUINS_IMPROVEMENT");
+	const ImprovementTypes eRuins = CvImprovementInfo::getImprovementRuins();
 	const bool bSafeAutomation = kOwner.isOption(PLAYEROPTION_SAFE_AUTOMATION);
 
 	int iPathTurns;
@@ -24839,7 +24839,7 @@ bool CvUnitAI::AI_irrigateTerritory()
 	const CvPlayerAI& kOwner = GET_PLAYER(getOwner());
 	const bool bLeaveForests = kOwner.isOption(PLAYEROPTION_LEAVE_FORESTS);
 	const bool bSafeAutomation = kOwner.isOption(PLAYEROPTION_SAFE_AUTOMATION);
-	const ImprovementTypes eRuins = (ImprovementTypes)GC.getDefineINT("RUINS_IMPROVEMENT");
+	const ImprovementTypes eRuins = CvImprovementInfo::getImprovementRuins();
 
 	BuildTypes eBestBuild = NO_BUILD;
 	CvPlot* pBestPlot = NULL;
@@ -25079,7 +25079,7 @@ bool CvUnitAI::AI_improveBonus(int iMinValue, CvPlot** ppBestPlot, BuildTypes* p
 		iMaxDistFromBorder = GC.getDefineINT("AI_WORKER_MAX_DISTANCE_FROM_CITY_OUT_BORDERS");
 	}
 	const int iBasePathFlags = MOVE_SAFE_TERRITORY | MOVE_AVOID_ENEMY_UNITS | (isHuman() ? MOVE_OUR_TERRITORY : MOVE_IGNORE_DANGER | MOVE_RECONSIDER_ON_LEAVING_OWNED);
-	const ImprovementTypes eRuins = (ImprovementTypes)GC.getDefineINT("RUINS_IMPROVEMENT");
+	const ImprovementTypes eRuins = CvImprovementInfo::getImprovementRuins();
 	const PlayerTypes ePlayer = getOwner();
 	const CvPlayerAI& kOwner = GET_PLAYER(ePlayer);
 	const bool bLeaveForests = kOwner.isOption(PLAYEROPTION_LEAVE_FORESTS);
