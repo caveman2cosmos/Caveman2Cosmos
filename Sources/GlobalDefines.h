@@ -84,25 +84,6 @@
 	DO(WE_LOVE_THE_KING_POPULATION_MIN_POPULATION) \
 	DO(WE_LOVE_THE_KING_RAND) \
 	DO(VASSAL_HAPPINESS) \
-	DO(WASTAGE_START_CONSUMPTION_PERCENT) \
-	//DO() \
-	DO() \
-	DO() \
-	DO() \
-	DO() \
-	DO() \
-	DO() \
-	DO() \
-	DO() \
-	DO() \
-	DO() \
-	DO() \
-	DO() \
-	DO() \
-	DO() \
-	DO() \
-	DO() \
-	DO() \
-	DO() \
+	DO(WASTAGE_START_CONSUMPTION_PERCENT)
 
 #endif

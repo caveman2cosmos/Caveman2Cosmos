@@ -9225,31 +9225,6 @@ private:
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //
-//  class : CvCameraInfo
-//
-//
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvCameraInfo :
-	public CvInfoBase
-{
-public:
-
-	CvCameraInfo() {}
-	virtual ~CvCameraInfo() {}
-
-	const TCHAR* getPath() const { return m_szPath; }
-	void setPath(const TCHAR* szVal) { m_szPath = szVal; }
-
-	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvCameraInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-private:
-	CvString m_szPath;
-};
-
-
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//
 //  class : CvQuestInfo
 //
 //
