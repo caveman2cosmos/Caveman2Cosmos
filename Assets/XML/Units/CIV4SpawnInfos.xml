@@ -2068,7 +2068,7 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
 			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
 			<iMaxLocalDensity>4</iMaxLocalDensity>
-			<iStartDate>-5000</iStartDate>
+			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<BonusTypes>
 				<BonusType>BONUS_PIG</BonusType>
@@ -2687,7 +2687,7 @@ Using both <iGlobalTurns> and <iTurns> will not yield predictable results:
 			<iMaxAreaTotalDensity>5</iMaxAreaTotalDensity>
 			<iMaxAreaUnitDensity>10</iMaxAreaUnitDensity>
 			<iMaxLocalDensity>7</iMaxLocalDensity>
-			<iStartDate>-10000</iStartDate>
+			<iStartDate>-200000</iStartDate>
 			<rateOverrideDefineName>ANIMAL_SPAWN_MODIFIER</rateOverrideDefineName>
 			<bLatitudeAbs>0</bLatitudeAbs>
 			<iMinLatitude>-80</iMinLatitude>
