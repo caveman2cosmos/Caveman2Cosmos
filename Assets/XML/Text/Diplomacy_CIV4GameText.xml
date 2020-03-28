@@ -374,7 +374,7 @@
 		<English>%s1 is a useless waste of space, as far as I'm concerned. (Annoyed)</English>
 		<French>En ce qui me concerne, %s1 n'est qu'un parasite inutile. (S'inquiète)</French>
 		<German>%s1 ist so überflüssig wie ein Kropf, das sage ich Euch. (Verärgert)</German>
-		<Italian>%s1 è utile soltanto a occupare spazio, per quanto mi riguarda. (Tono infastidito)</Italian>
+		<Italian>%s1 è buono soltanto a occupare spazio, per quanto mi riguarda. (Tono infastidito)</Italian>
 		<Polish>%s1 tylko marnuje przestrzeń na ziemi. Takie jest moje zdanie. (Zdenerwowany)</Polish>
 		<Spanish>Por lo que a nosotros respecta, %s1 solo sirve para desperdiciar espacio. (Molesta)</Spanish>
 	</TEXT>
@@ -509,7 +509,7 @@
 		<English>I haven't made up my mind yet. (Cautious)</English>
 		<French>Je ne me suis pas encore fait une opinion à son sujet. (se méfie)</French>
 		<German>Zu %s1 habe ich mir noch kein Urteil gebildet. (Vorsichtig)</German>
-		<Italian>Non ho ancora le idee chiare a proposito. (Tono cauto)</Italian>
+		<Italian>Non ho ancora le idee chiare in proposito. (Tono cauto)</Italian>
 		<Polish>Czort wie... (Ostrożny)</Polish>
 		<Spanish>Aún no sabemos muy bien qué pensar. (Cauta)</Spanish>
 	</TEXT>
@@ -609,8 +609,8 @@
 		<French>Nous faisons confiance à %s1. Parfois... (se méfie)</French>
 		<German>Ich vertraue %s1. Manchmal. (Vorsichtig)</German>
 		<Italian>Ci fidiamo di %s1. Qualche volta. (Tono cauto)</Italian>
-		<Spanish>%s1 nos parece de fiar. A veces. (Cauta)</Spanish>
 		<Polish>%s1? Okazujemy zaufanie. Czasami... (Ostrożny)</Polish>
+		<Spanish>%s1 nos parece de fiar. A veces. (Cauta)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_CAUTIOUS_9</Tag>
@@ -618,8 +618,8 @@
 		<French>J'ai du mal à me faire une opinion de %s1. (se méfie)</French>
 		<German>Ich bin nicht sicher, was ich von %s1 halten soll. (Vorsichtig)</German>
 		<Italian>Non so cosa pensare di %s1. (Tono cauto)</Italian>
-		<Spanish>No sabemos qué opinión forjarnos de %s1. (Cauta)</Spanish>
 		<Polish>%s1? Prawdę mówiąc nie wiem co mam myśleć. (Ostrożny)</Polish>
+		<Spanish>No sabemos qué opinión forjarnos de %s1. (Cauta)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_FRIENDLY_1</Tag>
@@ -635,7 +635,7 @@
 		<English>A better friend would be hard to find. (Friendly)</English>
 		<French>Il serait difficile de trouver meilleure compagnie. (Amical)</French>
 		<German>Eine verlässlichere Person als %s1 kann man kaum finden. (Erfreut)</German>
-		<Italian>Sarebbe difficile trovare amicizie migliori. (Tono amichevole)</Italian>
+		<Italian>È difficile trovare [NUM1:un amico:un'amica] migliore. (Tono amichevole)</Italian>
 		<Spanish>Es difícil de encontrar una amistad mejor. (Amistosa)</Spanish>
 		<Polish>Lepszego przyjaciela trudno znaleźć (Przyjacielski)</Polish>
 	</TEXT>
@@ -644,7 +644,7 @@
 		<English>%s1 has many admirable traits. (Friendly)</English>
 		<French>%s1 a beaucoup de qualités admirables. (Amical)</French>
 		<German>%s1 besitzt viele bewundernswerte Charaktereigenschaften. (Freundlich)</German>
-		<Italian>%s1 ha molti principi ammirevoli. (Tono amichevole)</Italian>
+		<Italian>%s1 ha molte qualità ammirevoli. (Tono amichevole)</Italian>
 		<Spanish>%s1 tiene muchas cualidades dignas de admiración. (Amistosa)</Spanish>
 		<Polish>%s1 posiada wiele zalet godnych podziwu. (Przyjacielski)</Polish>
 	</TEXT>
@@ -653,7 +653,7 @@
 		<English>%s1 is a leader of quality. (Friendly)</English>
 		<French>%s1 règne avec grandeur et sagesse. (Amical)</French>
 		<German>%s1 ist ein verantwortungsbewusstes Staatsoberhaupt. (Freundlich)</German>
-		<Italian>%s1 è un leader di qualità. (Tono amichevole)</Italian>
+		<Italian>%s1 è [NUM1:un:una] leader di qualità. (Tono amichevole)</Italian>
 		<Spanish>%s1 es [NUM1:un:una] líder como [NUM1:pocos:pocas]. (Amistosa)</Spanish>
 		<Polish>%s1 to przywódca wielkiego formatu. (Przyjacielski)</Polish>
 	</TEXT>
@@ -680,7 +680,7 @@
 		<English>They don't come any better than %s1! (Friendly)</English>
 		<French>Difficile de trouver quelqu'un de plus agréable! (Amical)</French>
 		<German>Niemand ist besser als %s1! (Freundlich)</German>
-		<Italian>Difficile trovare una persona migliore di %s1! (Tono amichevole)</Italian>
+		<Italian>È difficile trovare una persona migliore di %s1! (Tono amichevole)</Italian>
 		<Spanish>¡Ya no se encuentra gente como %s1! (Amistosa)</Spanish>
 		<Polish>%s1 - i wszystko wiadomo! (Przyjacielski)</Polish>
 	</TEXT>
@@ -743,7 +743,7 @@
 		<English>%s1 is a faithful friend and boon companion. (Friendly)</English>
 		<French>%s1 est fidèle en amitié et très sociable. (Amical)</French>
 		<German>Mit %s1 kann man durch dick und dünn gehen. (Erfreut)</German>
-		<Italian>%s1 è una persona sulla quale puoi contare ed è anche di buona compagnia. (Tono amichevole)</Italian>
+		<Italian>%s1 è [NUM1:un amico:un'amica] e [NUM1:un compagno:una compagna] fedele. (Tono amichevole)</Italian>
 		<Spanish>%s1 es [NUM1:un amigo:una amiga] fiel y [NUM1:un compañero:una compañera] excepcional. (Amistosa)</Spanish>
 		<Polish>%s1 jest wiernym przyjacielem i miłym towarzyszem. (Przyjacielski)</Polish>
 	</TEXT>
@@ -833,7 +833,7 @@
 		<English>I neither like nor trust %s1. (Furious)</English>
 		<French>Je n'aime pas %s1 et je ne lui fais pas confiance. (Colère)</French>
 		<German>%s1? Ich mag diese Person nicht und traue ihr auch nicht über den Weg! (Wütend)</German>
-		<Italian>Nemmeno io mi fido di %s1! (Tono furioso)</Italian>
+		<Italian>Non mi piace, né mi fido di %s1! (Tono furioso)</Italian>
 		<Spanish>Ni nos gusta %s1 ni confiamos en [NUM1:él:ella]. (Furiosa)</Spanish>
 		<Polish>%s1? Doradzam brak zaufania. (Wściekły)</Polish>
 	</TEXT>
@@ -851,7 +851,7 @@
 		<English>%s1 is a deceitful cretin! (Furious)</English>
 		<French>%s1 est un summum de bêtise! (Colère)</French>
 		<German>%s1 ist ein hinterlistiger Kretin! (Wütend)</German>
-		<Italian>%s1 è [NUM1:una schifosa disonesta:uno schifoso disonesto]! (Tono furioso)</Italian>
+		<Italian>%s1 è [NUM1:uno schifoso disonesto:una schifosa disonesta]! (Tono furioso)</Italian>
 		<Spanish>¡%s1 es [NUM1:un cretino embustero:una cretina embustera]! (Furiosa)</Spanish>
 		<Polish>%s1 jest oszukańczym kretynem! (Wściekły)</Polish>
 	</TEXT>
@@ -878,7 +878,7 @@
 		<English>%s1? A treacherous cowardly baboon. (Furious)</English>
 		<French>%s1? C'est la trahison, la lâcheté et la bêtise réunies. (Colère)</French>
 		<German>%s1 hat keinen Funken Ehre im Leib! (Wütend)</German>
-		<Italian>%s1? [NUM1:Un babbuino traditore:Una babbuina traditrice]. (Tono furioso)</Italian>
+		<Italian>%s1? [NUM1:Un babbuino codardo:Una babbuina codarda] e [NUM1:traditore:traditrice]. (Tono furioso)</Italian>
 		<Spanish>¿%s1? Es [NUM1:un:una] chimpancé [NUM1:traicionero:traicionera] y cobarde. (Furiosa)</Spanish>
 		<Polish>%s1? Zdradziecki, tchórzliwy pawian. (Wściekły)</Polish>
 	</TEXT>
@@ -887,7 +887,7 @@
 		<English>%s1 is not worth a bucket of owl spit. (Furious)</English>
 		<French>%s1 n'a absolument pas le moindre intérêt. (Colère)</French>
 		<German>%s1 ist nicht mal das Schwarze unter dem Fingernagel wert! (Wütend)</German>
-		<Italian>%s1 non vale lo sterco di un cane. (Tono furioso)</Italian>
+		<Italian>%s1 non vale l'aria che respira. (Tono furioso)</Italian>
 		<Spanish>%s1 no vale ni una boñiga pinchada en un palo. (Furiosa)</Spanish>
 		<Polish>%s1 nie jest wart wiadra śliny sowy. (Wściekły)</Polish>
 	</TEXT>
@@ -968,7 +968,7 @@
 		<English>No complaints here! (Pleased)</English>
 		<French>Je n'ai pas lieu de me plaindre! (Favorable)</French>
 		<German>Über %s1 kann ich nichts Schlechtes sagen! (Zufrieden)</German>
-		<Italian>Niente da dire da parte nostra! (Tono contento)</Italian>
+		<Italian>Niente da ridire da parte nostra! (Tono contento)</Italian>
 		<Spanish>¡Ninguna queja al respecto! (Amable)</Spanish>
 		<Polish>Ja nie narzekam! (Uprzejmy)</Polish>
 	</TEXT>
@@ -977,7 +977,7 @@
 		<English>%s1? A good person to have at your back. (Pleased)</English>
 		<French>%s1? C'est quelqu'un d'utile à garder dans ses relations. (Favorable)</French>
 		<German>Auf %s1 kann man sich verlassen. (Zufrieden)</German>
-		<Italian>%s1? Una brava persona per guardarti le spalle. (Tono contento)</Italian>
+		<Italian>%s1? Una persona di cui puoi fidarti. (Tono contento)</Italian>
 		<Spanish>¿%s1? Es una buena persona. (Amable)</Spanish>
 		<Polish>%s1? Świetne zabezpieczenie tyłów. (Uprzejmy)</Polish>
 	</TEXT>
@@ -1049,7 +1049,7 @@
 		<English>I suppose you know best.</English>
 		<French>Je suppose que vous savez ce que vous faites...</French>
 		<German>Ich nehme an, Ihr wisst es besser.</German>
-		<Italian>Credo tu sappia ciò che è meglio.</Italian>
+		<Italian>Immagino che tu sappia ciò che è meglio.</Italian>
 		<Spanish>Suponemos que sabéis lo que hacéis.</Spanish>
 		<Polish>Przypuszczam, że wiesz lepiej co dla Ciebie dobre....</Polish>
 	</TEXT>
@@ -1058,7 +1058,7 @@
 		<English>On your head be it.</English>
 		<French>A vos risques et périls...</French>
 		<German>Auf Eure Verantwortung.</German>
-		<Italian>Così sia.</Italian>
+		<Italian>Ricada sulla tua coscienza.</Italian>
 		<Spanish>Queda sobre vuestra conciencia.</Spanish>
 		<Polish>Ten ciężar spocznie na Twoim sumieniu.</Polish>
 	</TEXT>
@@ -1094,7 +1094,7 @@
 		<English>Please join us by adopting %s1.</English>
 		<French>Rejoignez-nous et adoptez: %s1.</French>
 		<German>Bitte nehmt wie wir die Gesellschaftsform "%s1" an.</German>
-		<Italian>Unisciti a noi scegliendo la forma di governo: %s1.</Italian>
+		<Italian>Unisciti a noi scegliendo %s1 come forma di governo: .</Italian>
 		<Spanish>Por favor, uníos a nosotros y adoptad [NUM1:el:la:los:las] %s1.</Spanish>
 		<Polish>Proszę dołącz do nas i przyjmij: %s1.</Polish>
 	</TEXT>
@@ -1103,7 +1103,7 @@
 		<English>Adopt %s1 - before it's too late!</English>
 		<French>Adoptez: %s1! Après, il sera trop tard!</French>
 		<German>Nehmt die Gesellschaftsform "%s1" an, bevor es zu spät ist!</German>
-		<Italian>Passa alla forma di governo: %s1, prima che sia troppo tardi!</Italian>
+		<Italian>Adotta %s1 come forma di governo, prima che sia troppo tardi!</Italian>
 		<Spanish>¡Adoptad [NUM1:el:la:los:las] %s1 antes de que sea demasiado tarde!</Spanish>
 		<Polish>Przyjmij: %s1! Zanim będzie za późno!</Polish>
 	</TEXT>
@@ -1112,7 +1112,7 @@
 		<English>All the cool civs are adopting %s1, [CT_NAME]. How about you?</English>
 		<French>[CT_NAME], toutes les civilisations évoluées adoptent: %s1. Pourquoi pas vous?</French>
 		<German>Alle fortschrittlichen Völker entscheiden sich für die Gesellschaftsform "%s1". Wie steht es mit Euch, [CT_NAME]?</German>
-		<Italian>Tutte le civiltà stanno adottando la forma di governo: %s1, [CT_NAME]. E tu?</Italian>
+		<Italian>Tutte le civiltà stanno adottando %s1 come forma di governo, [CT_NAME]. E tu?</Italian>
 		<Spanish>Todas las civilizaciones que se precian están adoptando [NUM1:el:la:los:las] %s1, [CT_NAME]. ¿Y vosotros?</Spanish>
 		<Polish>[CT_NAME], wszystkie cywilizacje, które są w porządku, przyjmują: %s1. A Ty?</Polish>
 	</TEXT>
@@ -1121,7 +1121,7 @@
 		<English>Have you considered adopting %s1? it will bring our two civilizations even closer together.</English>
 		<French>Avez-vous pensé à adopter: %s1? Cela rapprocherait encore plus nos deux civilisations.</French>
 		<German>Könntet Ihr Euch vorstellen, die Gesellschaftsform "%s1" anzunehmen? Das würde das Verhältnis zwischen unseren Völkern deutlich verbessern.</German>
-		<Italian>Hai preso in considerazione la forma di governo %s1? Le nostre due civiltà saranno ancora più vicine.</Italian>
+		<Italian>Hai considerato %s1 come forma di governo? Le nostre due civiltà saranno ancora più vicine.</Italian>
 		<Spanish>¿Habéis pensado en adoptar [NUM1:el:la:los:las] %s1? Eso uniría todavía más a nuestras civilizaciones.</Spanish>
 		<Polish>Czy rozważyłeś przyjęcie: %s1? to zbliży nasze cywilizacje.</Polish>
 	</TEXT>
@@ -1130,7 +1130,7 @@
 		<English>I urge you to adopt %s1, [CT_NAME]. Your civilization will be the better for it.</English>
 		<French>[CT_NAME], je vous conseille vivement d'adopter: %s1. Votre civilisation n'en tirerait que des avantages.</French>
 		<German>Ich rate Euch dringend, die Gesellschaftsform "%s1" anzunehmen. Euer Volk würde gewiss davon profitieren.</German>
-		<Italian>Ti sprono ad adottare la forma di governo: %s1, [CT_NAME]. La tua civiltà renderà al meglio.</Italian>
+		<Italian>Ti sprono ad adottare %s1 come forma di governo, [CT_NAME]. La tua civiltà ne trarrà vantaggio.</Italian>
 		<Spanish>Os instamos a que adoptéis [NUM1:el:la:los:las] %s1, [CT_NAME]. Vuestra civilización se beneficiará de ello.</Spanish>
 		<Polish>[CT_NAME], nalegam na przyjęcie przez Ciebie: %s1. To tylko dla dobra Twojej cywilizacji.</Polish>
 	</TEXT>
@@ -1139,7 +1139,7 @@
 		<English>%s1 is extremely useful, [CT_NAME]. [CT_CIV_SHORT] would do well to adopt it.</English>
 		<French>[CT_NAME], nous trouvons ceci extrêmement utile: %s1. Les [CT_CIV_SHORT] feraient mieux de l'adopter.</French>
 		<German>Die Gesellschaftsform "%s1" ist extrem sinnvoll, [CT_NAME]. Euer Volk würde davon profitieren.</German>
-		<Italian>La forma di governo: %s1 è estremamente utile, [CT_NAME]. [CT_CIV_SHORT:1] farebbe bene ad adottarla.</Italian>
+		<Italian>%s1 è estremamente utile, [CT_NAME]. [CT_CIV_SHORT:1] farebbe bene ad adottarla come forma di governo.</Italian>
 		<Spanish>[NUM1:El:La:Los:Las] %s1 [NUM1:es muy útil:es muy útil:son muy útiles:son muy útiles], [CT_NAME]. [CT_CIV_SHORT] haría bien en [NUM1:adoptarlo:adoptarla:adoptarlos:adoptarlas].</Spanish>
 		<Polish>%s1 - ta doktryna jest niezmiernie przydatna, [CT_NAME]. Lud [CT_CIV_SHORT] dobrze by zrobił, gdyby ją wprowadził.</Polish>
 	</TEXT>
