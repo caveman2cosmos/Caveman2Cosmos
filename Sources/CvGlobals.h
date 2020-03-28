@@ -55,7 +55,6 @@ class CvAnimationCategoryInfo;
 class CvEntityEventInfo;
 class CvEffectInfo;
 class CvAttachableInfo;
-class CvCameraInfo;
 class CvUnitFormationInfo;
 class CvLandscapeInfo;
 class CvTerrainInfo;
@@ -125,7 +124,6 @@ class CvVoteSourceInfo;
 class CvMainMenuInfo;
 class CvPropertyInfo;
 class CvOutcomeInfo;
-class CvCivNameInfo;
 class CvUnitCombatInfo;
 //TB Promotion Line Mod begin
 class CvPromotionLineInfo;
@@ -439,10 +437,6 @@ public:
 	int getNumAttachableInfos() const;
 	std::vector<CvAttachableInfo*>& getAttachableInfos();
 	CvAttachableInfo& getAttachableInfo(int i) const;
-
-	int getNumCameraInfos() const;
-	std::vector<CvCameraInfo*>& getCameraInfos();
-	CvCameraInfo& getCameraInfo(CameraAnimationTypes eCameraAnimationNum) const;
 
 	int getNumUnitFormationInfos() const;
 	std::vector<CvUnitFormationInfo*>& getUnitFormationInfos();
@@ -1520,7 +1514,6 @@ protected:
 	std::vector<CvUnitFormationInfo*> m_paUnitFormationInfo;
 	std::vector<CvEffectInfo*> m_paEffectInfo;
 	std::vector<CvAttachableInfo*> m_paAttachableInfo;
-	std::vector<CvCameraInfo*> m_paCameraInfo;
 	std::vector<CvQuestInfo*> m_paQuestInfo;
 	std::vector<CvTutorialInfo*> m_paTutorialInfo;
 	std::vector<CvEventTriggerInfo*> m_paEventTriggerInfo;
@@ -1531,7 +1524,6 @@ protected:
 	std::vector<CvUnitArtStyleTypeInfo*> m_paUnitArtStyleTypeInfo;
 	std::vector<CvPropertyInfo*> m_paPropertyInfo;
 	std::vector<CvOutcomeInfo*> m_paOutcomeInfo;
-	std::vector<CvCivNameInfo*> m_paCivNameInfo;
 
 /*********************************/
 /***** Parallel Maps - Begin *****/
