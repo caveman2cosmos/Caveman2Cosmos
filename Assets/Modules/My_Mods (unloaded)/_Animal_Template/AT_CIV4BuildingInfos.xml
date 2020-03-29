@@ -13,7 +13,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iCost>-1</iCost>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_CROW_MYTH_EFFECT</FreeBuilding>
@@ -62,7 +61,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>-1</iCost>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CROW_STORY</Type>
@@ -75,7 +73,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<iCost>-1</iCost>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -115,7 +112,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<iCost>-1</iCost>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -156,7 +152,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<iCost>-1</iCost>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>

@@ -16,7 +16,6 @@
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings>
-			<iCost>-1</iCost>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
@@ -42,7 +41,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MAPINGUARI_COMPOUND</BuildingType>
 			</PrereqInCityBuildings>
-			<iCost>-1</iCost>
 			<bAutoBuild>1</bAutoBuild>
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>

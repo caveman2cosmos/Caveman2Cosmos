@@ -1249,11 +1249,9 @@ bool CvXMLLoadUtility::LoadPostMenuGlobals()
 
 	UpdateProgressCB("Global Interface");
 
-	LoadGlobalClassInfo(GC.getCameraInfos(), "CIV4CameraInfos", "Interface", L"/Civ4CameraInfos/CameraInfos/CameraInfo", false);
 	LoadGlobalClassInfo(GC.getInterfaceModeInfos(), "CIV4InterfaceModeInfos", "Interface", L"/Civ4InterfaceModeInfos/InterfaceModeInfos/InterfaceModeInfo", false);
 
 	SetGlobalActionInfo();
-
 
 	// Load the formation info
 	LoadGlobalClassInfo(GC.getUnitFormationInfos(), "CIV4FormationInfos", "Units", L"/UnitFormations/UnitFormation", false);

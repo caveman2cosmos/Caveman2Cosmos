@@ -6704,6 +6704,10 @@
 		<French>Moyen-Orient</French>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_CULTURE_NEANDERTHAL</Tag>
+		<English>Neanderthal</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURE_NORTH_AMERICAN</Tag>
 		<English>North American</English>
 		<French>Nord-américain</French>
@@ -6712,10 +6716,6 @@
 		<Tag>TXT_KEY_PROMOTION_CULTURE_OCEANIAN</Tag>
 		<English>Oceanian</English>
 		<French>Océanique</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_CULTURE_NEANDERTHAL</Tag>
-		<English>Neanderthal</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURE_PILLAGE_TEXT</Tag>

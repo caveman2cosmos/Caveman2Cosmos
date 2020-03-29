@@ -468,6 +468,10 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_iStoreExeSettingsBonusInfo(0)
 	, m_bSignsCleared(false)
 {
+	for (int i = 0; i < NUM_INT_GLOBAL_DEFINES; i++)
+	{
+		m_GlobalDefinesINT.push_back(0);
+	}
 }
 
 cvInternalGlobals::~cvInternalGlobals()
@@ -1586,21 +1590,6 @@ CvAttachableInfo& cvInternalGlobals::getAttachableInfo(int i) const
 {
 	FAssertMsg(i >= 0 && i < GC.getNumAttachableInfos(), "AttachableInfo index out of bounds");
 	return *(m_paAttachableInfo[i]);
-}
-
-int cvInternalGlobals::getNumCameraInfos() const
-{
-	return (int)m_paCameraInfo.size();
-}
-
-std::vector<CvCameraInfo*>& cvInternalGlobals::getCameraInfos()
-{
-	return m_paCameraInfo;
-}
-
-CvCameraInfo& cvInternalGlobals::getCameraInfo(CameraAnimationTypes eCameraAnimationNum) const
-{
-	return *(m_paCameraInfo[eCameraAnimationNum]);
 }
 
 int cvInternalGlobals::getNumUnitFormationInfos() const
@@ -3724,6 +3713,10 @@ void cvInternalGlobals::cacheGlobals()
 
 	strcpy(gVersionString, getDefineSTRING("C2C_VERSION"));
 
+#define CACHE_INT_GLOBAL_DEFINE(VAR) \
+	m_GlobalDefinesINT[VAR] = getDefineINT(#VAR);
+	DO_FOR_EACH_INT_GLOBAL_DEFINE(CACHE_INT_GLOBAL_DEFINE)
+
 	/************************************************************************************************/
 	/* Mod Globals    Start                          09/13/10                           phungus420  */
 	/*                                                                                              */
@@ -4953,7 +4946,6 @@ void cvInternalGlobals::deleteInfoArrays()
 	deleteInfoArray(m_paColorInfo);
 	deleteInfoArray(m_paPlayerColorInfo);
 	deleteInfoArray(m_paInterfaceModeInfo);
-	deleteInfoArray(m_paCameraInfo);
 	deleteInfoArray(m_paAdvisorInfo);
 	deleteInfoArray(m_paThroneRoomCamera);
 	deleteInfoArray(m_paThroneRoomInfo);

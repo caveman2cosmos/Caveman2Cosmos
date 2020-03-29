@@ -17,7 +17,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<!--ObsoleteTech>TECH_COMPULSORY_EDUCATION</ObsoleteTech-->
-			<iCost>-1</iCost>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_CAVES</FeatureType>
@@ -38,7 +37,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<!--ObsoleteTech>TECH_COMPULSORY_EDUCATION</ObsoleteTech-->
-			<iCost>-1</iCost>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_ELITE_HOUSING</Type>
@@ -50,7 +48,6 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<iCost>-1</iCost>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_HOUSE_ERA1_LDHW</BuildingType>
