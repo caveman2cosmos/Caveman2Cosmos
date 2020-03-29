@@ -1183,11 +1183,6 @@ CvWorldInfo& cvInternalGlobals::getWorldInfo(WorldSizeTypes e) const
 	return *(m_paWorldInfo[e]);
 }
 
-CvInfoReplacements<CvWorldInfo>* cvInternalGlobals::getWorldInfoReplacements()
-{
-	return &m_WorldInfoReplacements;
-}
-
 /////////////////////////////////////////////
 // CLIMATE
 /////////////////////////////////////////////
@@ -1652,11 +1647,6 @@ CvTerrainInfo& cvInternalGlobals::getTerrainInfo(TerrainTypes eTerrainNum) const
 	return *(m_paTerrainInfo[eTerrainNum]);
 }
 
-CvInfoReplacements<CvTerrainInfo>* cvInternalGlobals::getTerrainInfoReplacements()
-{
-	return &m_TerrainInfoReplacements;
-}
-
 int cvInternalGlobals::getNumBonusClassInfos() const
 {
 	return (int)m_paBonusClassInfo.size();
@@ -1671,11 +1661,6 @@ CvBonusClassInfo& cvInternalGlobals::getBonusClassInfo(BonusClassTypes eBonusNum
 {
 	FAssertMsg(eBonusNum >= 0 && eBonusNum < GC.getNumBonusClassInfos(), "BonusClassInfo index out of bounds");
 	return *(m_paBonusClassInfo[eBonusNum]);
-}
-
-CvInfoReplacements<CvBonusClassInfo>* cvInternalGlobals::getBonusClassInfoReplacements()
-{
-	return &m_BonusClassInfoReplacements;
 }
 
 
@@ -1695,11 +1680,6 @@ CvBonusInfo& cvInternalGlobals::getBonusInfo(BonusTypes eBonusNum) const
 	return *(m_paBonusInfo[eBonusNum]);
 }
 
-CvInfoReplacements<CvBonusInfo>* cvInternalGlobals::getBonusInfoReplacements()
-{
-	return &m_BonusInfoReplacements;
-}
-
 int cvInternalGlobals::getNumFeatureInfos() const
 {
 	return (int)m_paFeatureInfo.size();
@@ -1714,11 +1694,6 @@ CvFeatureInfo& cvInternalGlobals::getFeatureInfo(FeatureTypes eFeatureNum) const
 {
 	FAssertMsg(eFeatureNum >= 0 && eFeatureNum < GC.getNumFeatureInfos(), "FeatureInfo index out of bounds");
 	return *(m_paFeatureInfo[eFeatureNum]);
-}
-
-CvInfoReplacements<CvFeatureInfo>* cvInternalGlobals::getFeatureInfoReplacements()
-{
-	return &m_FeatureInfoReplacements;
 }
 
 int& cvInternalGlobals::getNumPlayableCivilizationInfos()
@@ -1747,11 +1722,6 @@ CvCivilizationInfo& cvInternalGlobals::getCivilizationInfo(CivilizationTypes eCi
 	return *(m_paCivilizationInfo[eCivilizationNum]);
 }
 
-CvInfoReplacements<CvCivilizationInfo>* cvInternalGlobals::getCivilizationInfoReplacements()
-{
-	return &m_CivilizationInfoReplacements;
-}
-
 
 int cvInternalGlobals::getNumLeaderHeadInfos() const
 {
@@ -1769,11 +1739,6 @@ CvLeaderHeadInfo& cvInternalGlobals::getLeaderHeadInfo(LeaderHeadTypes eLeaderHe
 	return *(m_paLeaderHeadInfo[eLeaderHeadNum]);
 }
 
-CvInfoReplacements<CvLeaderHeadInfo>* cvInternalGlobals::getLeaderHeadInfoReplacements()
-{
-	return &m_LeaderHeadInfoReplacements;
-}
-
 
 int cvInternalGlobals::getNumTraitInfos() const
 {
@@ -1789,11 +1754,6 @@ CvTraitInfo& cvInternalGlobals::getTraitInfo(TraitTypes eTraitNum) const
 {
 	FAssertMsg(eTraitNum >= 0 && eTraitNum < GC.getNumTraitInfos(), "TraitInfo index out of bounds");
 	return *(m_paTraitInfo[eTraitNum]);
-}
-
-CvInfoReplacements<CvTraitInfo>* cvInternalGlobals::getTraitInfoReplacements()
-{
-	return &m_TraitInfoReplacements;
 }
 
 
@@ -1941,11 +1901,6 @@ CvUnitInfo& cvInternalGlobals::getUnitInfo(UnitTypes eUnitNum) const
 	return *(m_paUnitInfo[eUnitNum]);
 }
 
-CvInfoReplacements<CvUnitInfo>* cvInternalGlobals::getUnitInfoReplacements()
-{
-	return &m_UnitInfoReplacements;
-}
-
 int cvInternalGlobals::getNumSpawnInfos() const
 {
 	return (int)m_paSpawnInfo.size();
@@ -1960,11 +1915,6 @@ CvSpawnInfo& cvInternalGlobals::getSpawnInfo(SpawnTypes eSpawnNum) const
 {
 	FAssertMsg(eSpawnNum >= 0 && eSpawnNum < GC.getNumSpawnInfos(), "SpawnInfo index out of bounds");
 	return *(m_paSpawnInfo[eSpawnNum]);
-}
-
-CvInfoReplacements<CvSpawnInfo>* cvInternalGlobals::getSpawnInfoReplacements()
-{
-	return &m_SpawnInfoReplacements;
 }
 
 int cvInternalGlobals::getNumSpecialUnitInfos() const
@@ -2752,11 +2702,6 @@ CvRouteInfo& cvInternalGlobals::getRouteInfo(RouteTypes eRouteNum) const
 	return *(m_paRouteInfo[eRouteNum]);
 }
 
-CvInfoReplacements<CvRouteInfo>* cvInternalGlobals::getRouteInfoReplacements()
-{
-	return &m_RouteInfoReplacements;
-}
-
 int cvInternalGlobals::getNumImprovementInfos() const
 {
 	return (int)m_paImprovementInfo.size();
@@ -2772,11 +2717,6 @@ CvImprovementInfo& cvInternalGlobals::getImprovementInfo(ImprovementTypes eImpro
 	FAssert(eImprovementNum > -1);
 	FAssert(eImprovementNum < GC.getNumImprovementInfos());
 	return *(m_paImprovementInfo[eImprovementNum]);
-}
-
-CvInfoReplacements<CvImprovementInfo>* cvInternalGlobals::getImprovementInfoReplacements()
-{
-	return &m_ImprovementInfoReplacements;
 }
 
 int cvInternalGlobals::getNumGoodyInfos() const
@@ -2813,11 +2753,6 @@ CvBuildInfo& cvInternalGlobals::getBuildInfo(BuildTypes eBuildNum) const
 	return *(m_paBuildInfo[eBuildNum]);
 }
 
-CvInfoReplacements<CvBuildInfo>* cvInternalGlobals::getBuildInfoReplacements()
-{
-	return &m_BuildInfoReplacements;
-}
-
 int cvInternalGlobals::getNumHandicapInfos() const
 {
 	return (int)m_paHandicapInfo.size();
@@ -2835,11 +2770,6 @@ CvHandicapInfo& cvInternalGlobals::getHandicapInfo(HandicapTypes eHandicapNum) c
 	return *(m_paHandicapInfo[eHandicapNum]);
 }
 
-CvInfoReplacements<CvHandicapInfo>* cvInternalGlobals::getHandicapInfoReplacements()
-{
-	return &m_HandicapInfoReplacements;
-}
-
 int cvInternalGlobals::getNumGameSpeedInfos() const
 {
 	return (int)m_paGameSpeedInfo.size();
@@ -2855,11 +2785,6 @@ CvGameSpeedInfo& cvInternalGlobals::getGameSpeedInfo(GameSpeedTypes eGameSpeedNu
 	FAssert(eGameSpeedNum > -1);
 	FAssert(eGameSpeedNum < GC.getNumGameSpeedInfos());
 	return *(m_paGameSpeedInfo[eGameSpeedNum]);
-}
-
-CvInfoReplacements<CvGameSpeedInfo>* cvInternalGlobals::getGameSpeedInfoReplacements()
-{
-	return &m_GameSpeedInfoReplacements;
 }
 
 int cvInternalGlobals::getNumTurnTimerInfos() const
@@ -2896,11 +2821,6 @@ CvProcessInfo& cvInternalGlobals::getProcessInfo(ProcessTypes e) const
 	return *(m_paProcessInfo[e]);
 }
 
-CvInfoReplacements<CvProcessInfo>* cvInternalGlobals::getProcessInfoReplacements()
-{
-	return &m_ProcessInfoReplacements;
-}
-
 int cvInternalGlobals::getNumVoteInfos() const
 {
 	return (int)m_paVoteInfo.size();
@@ -2935,11 +2855,6 @@ CvProjectInfo& cvInternalGlobals::getProjectInfo(ProjectTypes e) const
 	return *(m_paProjectInfo[e]);
 }
 
-CvInfoReplacements<CvProjectInfo>* cvInternalGlobals::getProjectInfoReplacements()
-{
-	return &m_ProjectInfoReplacements;
-}
-
 int cvInternalGlobals::getNumBuildingInfos() const
 {
 	return (int)m_paBuildingInfo.size();
@@ -2957,11 +2872,6 @@ CvBuildingInfo& cvInternalGlobals::getBuildingInfo(BuildingTypes eBuildingNum) c
 	return *(m_paBuildingInfo[eBuildingNum]);
 }
 
-CvInfoReplacements<CvBuildingInfo>* cvInternalGlobals::getBuildingInfoReplacements()
-{
-	return &m_BuildingInfoReplacements;
-}
-
 int cvInternalGlobals::getNumSpecialBuildingInfos() const
 {
 	return (int)m_paSpecialBuildingInfo.size();
@@ -2977,11 +2887,6 @@ CvSpecialBuildingInfo& cvInternalGlobals::getSpecialBuildingInfo(SpecialBuilding
 	FAssert(eSpecialBuildingNum > -1);
 	FAssert(eSpecialBuildingNum < GC.getNumSpecialBuildingInfos());
 	return *(m_paSpecialBuildingInfo[eSpecialBuildingNum]);
-}
-
-CvInfoReplacements<CvSpecialBuildingInfo>* cvInternalGlobals::getSpecialBuildingInfoReplacements()
-{
-	return &m_SpecialBuildingInfoReplacements;
 }
 
 int cvInternalGlobals::getNumActionInfos() const
@@ -3072,11 +2977,6 @@ CvPromotionInfo& cvInternalGlobals::getPromotionInfo(PromotionTypes ePromotionNu
 	return *(m_paPromotionInfo[ePromotionNum]);
 }
 
-CvInfoReplacements<CvPromotionInfo>* cvInternalGlobals::getPromotionInfoReplacements()
-{
-	return &m_PromotionInfoReplacements;
-}
-
 PromotionTypes cvInternalGlobals::findPromotion(PromotionPredicateFn predicateFn) const
 {
 	for (int idx = 0; idx < static_cast<int>(m_paPromotionInfo.size()); ++idx)
@@ -3106,11 +3006,6 @@ CvTechInfo& cvInternalGlobals::getTechInfo(TechTypes eTechNum) const
 	return *(m_paTechInfo[eTechNum]);
 }
 
-CvInfoReplacements<CvTechInfo>* cvInternalGlobals::getTechInfoReplacements()
-{
-	return &m_TechInfoReplacements;
-}
-
 int cvInternalGlobals::getNumReligionInfos() const
 {
 	return (int)m_paReligionInfo.size();
@@ -3126,11 +3021,6 @@ CvReligionInfo& cvInternalGlobals::getReligionInfo(ReligionTypes eReligionNum) c
 	FAssert(eReligionNum > -1);
 	FAssert(eReligionNum < GC.getNumReligionInfos());
 	return *(m_paReligionInfo[eReligionNum]);
-}
-
-CvInfoReplacements<CvReligionInfo>* cvInternalGlobals::getReligionInfoReplacements()
-{
-	return &m_ReligionInfoReplacements;
 }
 
 int cvInternalGlobals::getNumCorporationInfos() const
@@ -3150,11 +3040,6 @@ CvCorporationInfo& cvInternalGlobals::getCorporationInfo(CorporationTypes eCorpo
 	return *(m_paCorporationInfo[eCorporationNum]);
 }
 
-CvInfoReplacements<CvCorporationInfo>* cvInternalGlobals::getCorporationInfoReplacements()
-{
-	return &m_CorporationInfoReplacements;
-}
-
 int cvInternalGlobals::getNumSpecialistInfos() const
 {
 	return (int)m_paSpecialistInfo.size();
@@ -3170,11 +3055,6 @@ CvSpecialistInfo& cvInternalGlobals::getSpecialistInfo(SpecialistTypes eSpeciali
 	FAssert(eSpecialistNum > -1);
 	FAssert(eSpecialistNum < GC.getNumSpecialistInfos());
 	return *(m_paSpecialistInfo[eSpecialistNum]);
-}
-
-CvInfoReplacements<CvSpecialistInfo>* cvInternalGlobals::getSpecialistInfoReplacements()
-{
-	return &m_SpecialistInfoReplacements;
 }
 
 int cvInternalGlobals::getNumCivicOptionInfos() const
@@ -3211,11 +3091,6 @@ CvCivicInfo& cvInternalGlobals::getCivicInfo(CivicTypes eCivicNum) const
 	return *(m_paCivicInfo[eCivicNum]);
 }
 
-CvInfoReplacements<CvCivicInfo>* cvInternalGlobals::getCivicInfoReplacements()
-{
-	return &m_CivicInfoReplacements;
-}
-
 int cvInternalGlobals::getNumDiplomacyInfos() const
 {
 	return (int)m_paDiplomacyInfo.size();
@@ -3248,11 +3123,6 @@ CvEraInfo& cvInternalGlobals::getEraInfo(EraTypes eEraNum) const
 	FAssert(eEraNum > -1);
 	FAssert(eEraNum < GC.getNumEraInfos());
 	return *(m_aEraInfo[eEraNum]);
-}
-
-CvInfoReplacements<CvEraInfo>* cvInternalGlobals::getEraInfoReplacements()
-{
-	return &m_EraInfoReplacements;
 }
 
 int cvInternalGlobals::getNumHurryInfos() const
@@ -3323,11 +3193,6 @@ CvCultureLevelInfo& cvInternalGlobals::getCultureLevelInfo(CultureLevelTypes eCu
 	return *(m_paCultureLevelInfo[eCultureLevelNum]);
 }
 
-CvInfoReplacements<CvCultureLevelInfo>* cvInternalGlobals::getCultureLevelInfoReplacements()
-{
-	return &m_CultureLevelInfoReplacements;
-}
-
 int cvInternalGlobals::getNumVictoryInfos() const
 {
 	return (int)m_paVictoryInfo.size();
@@ -3396,11 +3261,6 @@ CvEventTriggerInfo& cvInternalGlobals::getEventTriggerInfo(EventTriggerTypes eEv
 	return *(m_paEventTriggerInfo[eEventTrigger]);
 }
 
-CvInfoReplacements<CvEventTriggerInfo>* cvInternalGlobals::getEventTriggerInfoReplacements()
-{
-	return &m_EventTriggerInfoReplacements;
-}
-
 int cvInternalGlobals::getNumEventInfos() const
 {
 	return (int)m_paEventInfo.size();
@@ -3416,11 +3276,6 @@ CvEventInfo& cvInternalGlobals::getEventInfo(EventTypes eEvent) const
 	FAssert(eEvent > -1);
 	FAssert(eEvent < GC.getNumEventInfos());
 	return *(m_paEventInfo[eEvent]);
-}
-
-CvInfoReplacements<CvEventInfo>* cvInternalGlobals::getEventInfoReplacements()
-{
-	return &m_EventInfoReplacements;
 }
 
 int cvInternalGlobals::getNumEspionageMissionInfos() const

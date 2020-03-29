@@ -338,7 +338,6 @@ public:
 	int getNumWorldInfos() const;
 	std::vector<CvWorldInfo*>& getWorldInfos();
 	CvWorldInfo& getWorldInfo(WorldSizeTypes e) const;
-	CvInfoReplacements<CvWorldInfo>* getWorldInfoReplacements();
 
 	int getNumClimateInfos() const;
 	std::vector<CvClimateInfo*>& getClimateInfos();
@@ -451,39 +450,32 @@ public:
 	int getNumTerrainInfos() const;
 	std::vector<CvTerrainInfo*>& getTerrainInfos();
 	CvTerrainInfo& getTerrainInfo(TerrainTypes eTerrainNum) const;
-	CvInfoReplacements<CvTerrainInfo>* getTerrainInfoReplacements();
 
 	int getNumBonusClassInfos() const;
 	std::vector<CvBonusClassInfo*>& getBonusClassInfos();
 	CvBonusClassInfo& getBonusClassInfo(BonusClassTypes eBonusNum) const;
-	CvInfoReplacements<CvBonusClassInfo>* getBonusClassInfoReplacements();
 
 	int getNumBonusInfos() const;
 	std::vector<CvBonusInfo*>& getBonusInfos();
 	CvBonusInfo& getBonusInfo(BonusTypes eBonusNum) const;
-	CvInfoReplacements<CvBonusInfo>* getBonusInfoReplacements();
 
 	int getNumFeatureInfos() const;
 	std::vector<CvFeatureInfo*>& getFeatureInfos();
 	CvFeatureInfo& getFeatureInfo(FeatureTypes eFeatureNum) const;
-	CvInfoReplacements<CvFeatureInfo>* getFeatureInfoReplacements();
 
 	int& getNumPlayableCivilizationInfos();
 	int& getNumAIPlayableCivilizationInfos();
 	int getNumCivilizationInfos() const;
 	std::vector<CvCivilizationInfo*>& getCivilizationInfos();
 	CvCivilizationInfo& getCivilizationInfo(CivilizationTypes eCivilizationNum) const;
-	CvInfoReplacements<CvCivilizationInfo>* getCivilizationInfoReplacements();
 
 	int getNumLeaderHeadInfos() const;
 	std::vector<CvLeaderHeadInfo*>& getLeaderHeadInfos();
 	CvLeaderHeadInfo& getLeaderHeadInfo(LeaderHeadTypes eLeaderHeadNum) const;
-	CvInfoReplacements<CvLeaderHeadInfo>* getLeaderHeadInfoReplacements();
 
 	int getNumTraitInfos() const;
 	std::vector<CvTraitInfo*>& getTraitInfos();
 	CvTraitInfo& getTraitInfo(TraitTypes eTraitNum) const;
-	CvInfoReplacements<CvTraitInfo>* getTraitInfoReplacements();
 
 	int getNumCursorInfos() const;
 	std::vector<CvCursorInfo*>& getCursorInfos();
@@ -520,12 +512,10 @@ public:
 	int getNumUnitInfos() const;
 	std::vector<CvUnitInfo*>& getUnitInfos();
 	CvUnitInfo& getUnitInfo(UnitTypes eUnitNum) const;
-	CvInfoReplacements<CvUnitInfo>* getUnitInfoReplacements();
 
 	int getNumSpawnInfos() const;
 	std::vector<CvSpawnInfo*>& getSpawnInfos();
 	CvSpawnInfo& getSpawnInfo(SpawnTypes eSpawnNum) const;
-	CvInfoReplacements<CvSpawnInfo>* getSpawnInfoReplacements();
 
 	int getNumSpecialUnitInfos() const;
 	std::vector<CvSpecialUnitInfo*>& getSpecialUnitInfos();
@@ -716,12 +706,10 @@ public:
 	int getNumRouteInfos() const;
 	std::vector<CvRouteInfo*>& getRouteInfos();
 	CvRouteInfo& getRouteInfo(RouteTypes eRouteNum) const;
-	CvInfoReplacements<CvRouteInfo>* getRouteInfoReplacements();
 
 	int getNumImprovementInfos() const;
 	std::vector<CvImprovementInfo*>& getImprovementInfos();
 	CvImprovementInfo& getImprovementInfo(ImprovementTypes eImprovementNum) const;
-	CvInfoReplacements<CvImprovementInfo>* getImprovementInfoReplacements();
 
 	int getNumGoodyInfos() const;
 	std::vector<CvGoodyInfo*>& getGoodyInfos();
@@ -730,17 +718,14 @@ public:
 	int getNumBuildInfos() const;
 	std::vector<CvBuildInfo*>& getBuildInfos();
 	CvBuildInfo& getBuildInfo(BuildTypes eBuildNum) const;
-	CvInfoReplacements<CvBuildInfo>* getBuildInfoReplacements();
 
 	int getNumHandicapInfos() const;
 	std::vector<CvHandicapInfo*>& getHandicapInfos();
 	CvHandicapInfo& getHandicapInfo(HandicapTypes eHandicapNum) const;
-	CvInfoReplacements<CvHandicapInfo>* getHandicapInfoReplacements();
 
 	int getNumGameSpeedInfos() const;
 	std::vector<CvGameSpeedInfo*>& getGameSpeedInfos();
 	CvGameSpeedInfo& getGameSpeedInfo(GameSpeedTypes eGameSpeedNum) const;
-	CvInfoReplacements<CvGameSpeedInfo>* getGameSpeedInfoReplacements();
 
 	int getNumTurnTimerInfos() const;
 	std::vector<CvTurnTimerInfo*>& getTurnTimerInfos();
@@ -749,7 +734,6 @@ public:
 	int getNumProcessInfos() const;
 	std::vector<CvProcessInfo*>& getProcessInfos();
 	CvProcessInfo& getProcessInfo(ProcessTypes e) const;
-	CvInfoReplacements<CvProcessInfo>* getProcessInfoReplacements();
 
 	int getNumVoteInfos() const;
 	std::vector<CvVoteInfo*>& getVoteInfos();
@@ -758,17 +742,14 @@ public:
 	int getNumProjectInfos() const;
 	std::vector<CvProjectInfo*>& getProjectInfos();
 	CvProjectInfo& getProjectInfo(ProjectTypes e) const;
-	CvInfoReplacements<CvProjectInfo>* getProjectInfoReplacements();
 
 	int getNumBuildingInfos() const;
 	std::vector<CvBuildingInfo*>& getBuildingInfos();
 	CvBuildingInfo& getBuildingInfo(BuildingTypes eBuildingNum) const;
-	CvInfoReplacements<CvBuildingInfo>* getBuildingInfoReplacements();
 
 	int getNumSpecialBuildingInfos() const;
 	std::vector<CvSpecialBuildingInfo*>& getSpecialBuildingInfos();
 	CvSpecialBuildingInfo& getSpecialBuildingInfo(SpecialBuildingTypes eSpecialBuildingNum) const;
-	CvInfoReplacements<CvSpecialBuildingInfo>* getSpecialBuildingInfoReplacements();
 
 	int getNumActionInfos() const;
 	std::vector<CvActionInfo*>& getActionInfos();
@@ -791,29 +772,24 @@ public:
 	int getNumPromotionInfos() const;
 	std::vector<CvPromotionInfo*>& getPromotionInfos();
 	CvPromotionInfo& getPromotionInfo(PromotionTypes ePromotionNum) const;
-	CvInfoReplacements<CvPromotionInfo>* getPromotionInfoReplacements();
 	typedef bst::function<bool(const CvPromotionInfo*, PromotionTypes)> PromotionPredicateFn;
 	PromotionTypes findPromotion(PromotionPredicateFn predicateFn) const;
 
 	int getNumTechInfos() const;
 	std::vector<CvTechInfo*>& getTechInfos();
 	CvTechInfo& getTechInfo(TechTypes eTechNum) const;
-	CvInfoReplacements<CvTechInfo>* getTechInfoReplacements();
 
 	int getNumReligionInfos() const;
 	std::vector<CvReligionInfo*>& getReligionInfos();
 	CvReligionInfo& getReligionInfo(ReligionTypes eReligionNum) const;
-	CvInfoReplacements<CvReligionInfo>* getReligionInfoReplacements();
 
 	int getNumCorporationInfos() const;
 	std::vector<CvCorporationInfo*>& getCorporationInfos();
 	CvCorporationInfo& getCorporationInfo(CorporationTypes eCorporationNum) const;
-	CvInfoReplacements<CvCorporationInfo>* getCorporationInfoReplacements();
 
 	int getNumSpecialistInfos() const;
 	std::vector<CvSpecialistInfo*>& getSpecialistInfos();
 	CvSpecialistInfo& getSpecialistInfo(SpecialistTypes eSpecialistNum) const;
-	CvInfoReplacements<CvSpecialistInfo>* getSpecialistInfoReplacements();
 
 	int getNumCivicOptionInfos() const;
 	std::vector<CvCivicOptionInfo*>& getCivicOptionInfos();
@@ -822,7 +798,6 @@ public:
 	int getNumCivicInfos() const;
 	std::vector<CvCivicInfo*>& getCivicInfos();
 	CvCivicInfo& getCivicInfo(CivicTypes eCivicNum) const;
-	CvInfoReplacements<CvCivicInfo>* getCivicInfoReplacements();
 
 	int getNumDiplomacyInfos() const;
 	std::vector<CvDiplomacyInfo*>& getDiplomacyInfos();
@@ -831,7 +806,6 @@ public:
 	int getNumEraInfos() const;
 	std::vector<CvEraInfo*>& getEraInfos();
 	CvEraInfo& getEraInfo(EraTypes eEraNum) const;
-	CvInfoReplacements<CvEraInfo>* getEraInfoReplacements();
 
 	int getNumHurryInfos() const;
 	std::vector<CvHurryInfo*>& getHurryInfos();
@@ -848,7 +822,6 @@ public:
 	int getNumCultureLevelInfos() const;
 	std::vector<CvCultureLevelInfo*>& getCultureLevelInfos();
 	CvCultureLevelInfo& getCultureLevelInfo(CultureLevelTypes eCultureLevelNum) const;
-	CvInfoReplacements<CvCultureLevelInfo>* getCultureLevelInfoReplacements();
 
 	int getNumVictoryInfos() const;
 	std::vector<CvVictoryInfo*>& getVictoryInfos();
@@ -865,12 +838,10 @@ public:
 	int getNumEventTriggerInfos() const;
 	std::vector<CvEventTriggerInfo*>& getEventTriggerInfos();
 	CvEventTriggerInfo& getEventTriggerInfo(EventTriggerTypes eEventTrigger) const;
-	CvInfoReplacements<CvEventTriggerInfo>* getEventTriggerInfoReplacements();
 
 	int getNumEventInfos() const;
 	std::vector<CvEventInfo*>& getEventInfos();
 	CvEventInfo& getEventInfo(EventTypes eEvent) const;
-	CvInfoReplacements<CvEventInfo>* getEventInfoReplacements();
 
 	int getNumEspionageMissionInfos() const;
 	std::vector<CvEspionageMissionInfo*>& getEspionageMissionInfos();
