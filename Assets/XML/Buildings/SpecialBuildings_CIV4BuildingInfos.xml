@@ -2421,9 +2421,6 @@
 			<Description>TXT_KEY_BUILDING_EQ_MINUS10</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EQ_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_EQ_STRATEGY</Strategy>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<PrereqTech>TECH_TRANSHUMAN_LIFESTYLE</PrereqTech>
 			<YieldModifiers>
 				<iYield>0</iYield>
