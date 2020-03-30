@@ -422,6 +422,13 @@
 					</FreePromotionCondition>
 				</FreePromoType>
 			</FreePromoTypes>
+			<iAIWeight>2</iAIWeight>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_CULTURE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<iConquestProb>85</iConquestProb>
 		</BuildingInfo>
@@ -488,6 +495,13 @@
 					</FreePromotionCondition>
 				</FreePromoType>
 			</FreePromoTypes>
+			<iAIWeight>2</iAIWeight>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_CULTURE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<iConquestProb>85</iConquestProb>
 		</BuildingInfo>
@@ -554,6 +568,13 @@
 					</FreePromotionCondition>
 				</FreePromoType>
 			</FreePromoTypes>
+			<iAIWeight>2</iAIWeight>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_CULTURE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<iConquestProb>85</iConquestProb>
 		</BuildingInfo>
@@ -620,6 +641,13 @@
 					</FreePromotionCondition>
 				</FreePromoType>
 			</FreePromoTypes>
+			<iAIWeight>2</iAIWeight>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_CULTURE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<iConquestProb>85</iConquestProb>
 		</BuildingInfo>
@@ -691,6 +719,13 @@
 					</FreePromotionCondition>
 				</FreePromoType>
 			</FreePromoTypes>
+			<iAIWeight>2</iAIWeight>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_CULTURE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<iConquestProb>85</iConquestProb>
 		</BuildingInfo>
@@ -757,6 +792,13 @@
 					</FreePromotionCondition>
 				</FreePromoType>
 			</FreePromoTypes>
+			<iAIWeight>2</iAIWeight>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_CULTURE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<iConquestProb>85</iConquestProb>
 		</BuildingInfo>
@@ -823,6 +865,13 @@
 					</FreePromotionCondition>
 				</FreePromoType>
 			</FreePromoTypes>
+			<iAIWeight>2</iAIWeight>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_CULTURE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<iConquestProb>85</iConquestProb>
 		</BuildingInfo>
@@ -889,6 +938,13 @@
 					</FreePromotionCondition>
 				</FreePromoType>
 			</FreePromoTypes>
+			<iAIWeight>2</iAIWeight>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_CULTURE</FlavorType>
+					<iFlavor>1</iFlavor>
+				</Flavor>
+			</Flavors>
 			<bNukeImmune>1</bNukeImmune>
 			<iConquestProb>85</iConquestProb>
 		</BuildingInfo>
