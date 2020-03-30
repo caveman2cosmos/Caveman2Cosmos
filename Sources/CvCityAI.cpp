@@ -6906,7 +6906,7 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 						if (directCommerceValue != 0)
 						{
 							//	Make sure we don't reduce 1 to 0!
-							if ( directCommerceValue >= 2 )
+							if (directCommerceValue >= 2)
 							{
 								directCommerceValue /= 2;
 							}
@@ -6925,13 +6925,13 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 							{
 								aiCommerceRank[iI] = findCommerceRateRank((CommerceTypes) iI);
 							}
-							if (bIsLimitedWonder && ((aiCommerceRank[iI] > (3 + iLimitedWonderLimit)))
-								|| (bCulturalVictory1 && (iI == COMMERCE_CULTURE) && (aiCommerceRank[iI] == 1)))
+							if (bIsLimitedWonder && aiCommerceRank[iI] > 3 + iLimitedWonderLimit
+							|| bCulturalVictory1 && iI == COMMERCE_CULTURE && aiCommerceRank[iI] == 1)
 							{
 								directCommerceValue *= -1;
 
 								// for culture, just set it to zero, not negative, just about every wonder gives culture
-								if (iI == COMMERCE_CULTURE)
+								if (bIsLimitedWonder && iI == COMMERCE_CULTURE)
 								{
 									directCommerceValue = 0;
 								}
@@ -6942,12 +6942,9 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 					for (int iI = 0; iI < GC.getNumReligionInfos(); iI++)
 					{
-						if (kBuilding.getReligionChange(iI) > 0)
+						if (kBuilding.getReligionChange(iI) > 0 && kTeam.hasHolyCity((ReligionTypes)iI))
 						{
-							if (kTeam.hasHolyCity((ReligionTypes)iI))
-							{
-								iValue += (kBuilding.getReligionChange(iI) * ((eStateReligion == iI) ? 10 : 1));
-							}
+							iValue += (kBuilding.getReligionChange(iI) * ((eStateReligion == iI) ? 10 : 1));
 						}
 					}
 
@@ -6984,12 +6981,9 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 					}
 				}
 
-				if ((iThreshold > 0) && (iPass == 0))
+				if (iThreshold > 0 && iPass == 0 && iValue < iThreshold)
 				{
-					if (iValue < iThreshold)
-					{
-						iValue = 0;
-					}
+					iValue = 0;
 				}
 
 				if (iPass > 0 && !bForTech)
@@ -7009,9 +7003,9 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 		//	If we are really seeking an answer specifically on the values from the specific flags
 		//	then the rest is just a tie-breaker so dramatically boost the value of the flag-specific
 		//	stuff from pass1
-		if ( bMaximizeFlaggedValue )
+		if (bMaximizeFlaggedValue)
 		{
-			iValue += iPass1Value*19;
+			iValue += iPass1Value * 19;
 		}
 		else
 		{
@@ -7311,12 +7305,7 @@ int CvCityAI::AI_processValue(ProcessTypes eProcess, CommerceTypes eCommerceType
 		iValue += GC.getProcessInfo(eProcess).getProductionToCommerceModifier(COMMERCE_CULTURE);
 	}
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      04/30/09                                jdog5000      */
-/*                                                                                              */
-/* Cultural Victory AI                                                                          */
-/************************************************************************************************/
-	if ( GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3) )
+	if (GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3))
 	{
 		// Final city for cultural victory will build culture to speed up victory
 		if( findCommerceRateRank(COMMERCE_CULTURE) == GC.getGame().culturalVictoryNumCultureCities() )
@@ -7324,9 +7313,7 @@ int CvCityAI::AI_processValue(ProcessTypes eProcess, CommerceTypes eCommerceType
 			iValue += 2*GC.getProcessInfo(eProcess).getProductionToCommerceModifier(COMMERCE_CULTURE);
 		}
 	}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+
 	bool bValid = (eCommerceType == NO_COMMERCE);
 	for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 	{
@@ -7338,28 +7325,17 @@ int CvCityAI::AI_processValue(ProcessTypes eProcess, CommerceTypes eCommerceType
 		}
 
 		iTempValue *= GET_PLAYER(getOwner()).AI_commerceWeight(((CommerceTypes)iI), this);
-
 		iTempValue /= 100;
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      07/08/09                                jdog5000      */
-/*                                                                                              */
-/* Gold AI                                                                                      */
-/************************************************************************************************/
 		iTempValue *= GET_PLAYER(getOwner()).AI_averageCommerceExchange((CommerceTypes)iI);
-
 		iTempValue /= 60;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
 		//	Koshling - take into account external factors determining which commerce types
 		//	we WANT most right now
-		if ( commerceWeights != NULL )
+		if (commerceWeights != NULL)
 		{
 			iTempValue *= commerceWeights[iI];
 		}
-
 		iValue += iTempValue;
 	}
 
@@ -7397,10 +7373,10 @@ bool CvCityAI::AI_finalProcessSelection()
 				iValue += GC.getProcessInfo(eProcess).getProductionToCommerceModifier(COMMERCE_CULTURE);
 			}
 
-			if ( GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3) )
+			if (GET_PLAYER(getOwner()).AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3))
 			{
 				// Final city for cultural victory will build culture to speed up victory
-				if( findCommerceRateRank(COMMERCE_CULTURE) == GC.getGame().culturalVictoryNumCultureCities() )
+				if (findCommerceRateRank(COMMERCE_CULTURE) == GC.getGame().culturalVictoryNumCultureCities())
 				{
 					iValue += 2*GC.getProcessInfo(eProcess).getProductionToCommerceModifier(COMMERCE_CULTURE);
 				}
@@ -18299,13 +18275,13 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 									{
 										aiCommerceRank[iI] = findCommerceRateRank((CommerceTypes) iI);
 									}
-									if (bIsLimitedWonder && ((aiCommerceRank[iI] > (3 + iLimitedWonderLimit)))
-										|| (bCulturalVictory1 && (iI == COMMERCE_CULTURE) && (aiCommerceRank[iI] == 1)))
+									if (bIsLimitedWonder && aiCommerceRank[iI] > 3 + iLimitedWonderLimit
+									|| bCulturalVictory1 && iI == COMMERCE_CULTURE && aiCommerceRank[iI] == 1)
 									{
 										directCommerceValue *= -1;
 
 										// for culture, just set it to zero, not negative, just about every wonder gives culture
-										if (iI == COMMERCE_CULTURE)
+										if (bIsLimitedWonder && iI == COMMERCE_CULTURE)
 										{
 											directCommerceValue = 0;
 										}
@@ -18383,33 +18359,20 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 	// unused: bool bCulturalVictory2 = kOwner.AI_isDoVictoryStrategy(AI_VICTORY_CULTURE2);
 	bool bCulturalVictory3 = kOwner.AI_isDoVictoryStrategy(AI_VICTORY_CULTURE3);
 	ReligionTypes eStateReligion = kOwner.getStateReligion();
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
-/************************************************************************************************/
-/* Afforess	                  Start		 3/24/09                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	int iBaseCommerceChange = GC.getBuildingInfo(eBuilding).getCommerceChange((CommerceTypes)iI);
 
-	if ( iBaseCommerceChange < 0 && iI == COMMERCE_GOLD && GC.getDefineINT(TREAT_NEGATIVE_GOLD_AS_MAINTENANCE) )
+	if (iBaseCommerceChange < 0 && iI == COMMERCE_GOLD && GC.getDefineINT(TREAT_NEGATIVE_GOLD_AS_MAINTENANCE))
 	{
 		iBaseCommerceChange = 0;
 	}
-	iBaseCommerceChange += ((GC.getBuildingInfo(eBuilding).getCommercePerPopChange((CommerceTypes)iI) * getPopulation())/100);
+	iBaseCommerceChange += GC.getBuildingInfo(eBuilding).getCommercePerPopChange((CommerceTypes)iI) * getPopulation() / 100;
 
 	int iResult = 0;
-	iResult += ((iBaseCommerceChange + GET_TEAM(getTeam()).getBuildingCommerceChange(eBuilding, (CommerceTypes)iI) + aiFreeSpecialistCommerce[iI]) * 4);
-	/* Was:
-	iResult += (kBuilding.getCommerceChange(iI) * 4);
-	*/
-	iResult += (kBuilding.getObsoleteSafeCommerceChange(iI) * 4);
-	iResult += (kBuilding.getCommerceAttacks(iI) * 2);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+	iResult += 4*(iBaseCommerceChange + GET_TEAM(getTeam()).getBuildingCommerceChange(eBuilding, (CommerceTypes)iI) + aiFreeSpecialistCommerce[iI]);
+
+	iResult += kBuilding.getObsoleteSafeCommerceChange(iI) * 4;
+	iResult += kBuilding.getCommerceAttacks(iI) * 2;
 
 	if ((CommerceTypes)iI == COMMERCE_CULTURE)
 	{
@@ -18425,14 +18388,15 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 
 	if (kBuilding.getCommerceChangeDoubleTime(iI) > 0)
 	{
-		iResult += (iResult*500)/(500+kBuilding.getCommerceChangeDoubleTime(iI));
+		iResult += iResult*500 / (500 + kBuilding.getCommerceChangeDoubleTime(iI));
 	}
 
 	//	Multiply up by the city's current commerce rate modifier
-	iResult = (iResult*getTotalCommerceRateModifier((CommerceTypes)iI))/100;
+	iResult = iResult * getTotalCommerceRateModifier((CommerceTypes)iI) / 100;
 
 	//	Factor in yield changes
-	int iTempValue = (((kBuilding.getYieldModifier(YIELD_COMMERCE) + GET_TEAM(getTeam()).getBuildingYieldModifier(eBuilding, YIELD_COMMERCE)) * getBaseYieldRate(YIELD_COMMERCE)));
+	int iTempValue = getBaseYieldRate(YIELD_COMMERCE)
+		* (kBuilding.getYieldModifier(YIELD_COMMERCE) + GET_TEAM(getTeam()).getBuildingYieldModifier(eBuilding, YIELD_COMMERCE));
 
 	iTempValue *= kOwner.getCommercePercent((CommerceTypes)iI);
 
@@ -18470,15 +18434,13 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 
 	// add value for a commerce modifier
 	int iCommerceModifier = kBuilding.getCommerceModifier(iI) + GET_TEAM(getTeam()).getBuildingCommerceModifier(eBuilding, (CommerceTypes)iI);
-	/* Was:
-	int iCommerceModifier = kBuilding.getCommerceModifier(iI);
-	*/
+
 	for (int iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
 	{
 		iCommerceModifier += kBuilding.getBonusCommerceModifier(iJ,iI);
 	}
 
-	if ( aiBaseCommerceRate[iI] == MAX_INT )
+	if (aiBaseCommerceRate[iI] == MAX_INT)
 	{
 		aiBaseCommerceRate[iI] = getBaseCommerceRate((CommerceTypes) iI);
 	}
@@ -18493,11 +18455,12 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 	//	We therefore apply a small boost to reflect futures, and compare to the whole
 	//	and make an upward adjustment proportional to the ratio with the civilization whole.
 	//
-	//	We don't apply this fo culture, since it isn't really a civ-wide quantity for most purposes
-	if ( iCommerceMultiplierValue > 0 && iI != COMMERCE_CULTURE)
+	//	We don't apply this for culture, since it isn't really a civ-wide quantity for most purposes
+	if (iCommerceMultiplierValue > 0 && iI != COMMERCE_CULTURE)
 	{
-		iCommerceMultiplierValue += 120;	//	Discounted futures
-		iCommerceMultiplierValue += 2*iCommerceMultiplierValue*std::max(1,aiBaseCommerceRate[iI])/std::max(1,aiPlayerCommerceRate[iI]);	//	Proportion of whole
+		iCommerceMultiplierValue += 120; // Discounted futures
+		iCommerceMultiplierValue += 2*iCommerceMultiplierValue * std::max(1,aiBaseCommerceRate[iI])
+			/ std::max(1, aiPlayerCommerceRate[iI]); // Proportion of whole
 	}
 
 	if (((CommerceTypes) iI) == COMMERCE_CULTURE && iCommerceModifier != 0)
@@ -18570,9 +18533,8 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 	}
 	iResult += iCommerceMultiplierValue;
 
-	iResult += (kBuilding.getGlobalCommerceModifier(iI) * GET_PLAYER(getOwner()).getCommerceRate((CommerceTypes) iI))/8;
-	//iResult += ((kBuilding.getGlobalCommerceModifier(iI) * kOwner.getNumCities()) / 4);
-	iResult += ((kBuilding.getSpecialistExtraCommerce(iI) * kOwner.getTotalPopulation()) / 3);
+	iResult += kBuilding.getGlobalCommerceModifier(iI) * GET_PLAYER(getOwner()).getCommerceRate((CommerceTypes) iI) / 8;
+	iResult += kBuilding.getSpecialistExtraCommerce(iI) * kOwner.getTotalPopulation() / 3;
 
 	if (eStateReligion != NO_RELIGION)
 	{
@@ -18596,33 +18558,24 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 
 		for (int iCorp = 0; iCorp < GC.getNumCorporationInfos(); iCorp++)
 		{
-			if (iCorp != eCorporation)
+			if (iCorp != eCorporation && kOwner.hasHeadquarters((CorporationTypes)iCorp)
+			&& GC.getGame().isCompetingCorporation(eCorporation, (CorporationTypes)iCorp))
 			{
-				if (kOwner.hasHeadquarters((CorporationTypes)iCorp))
+				if (kOwner.AI_corporationValue((CorporationTypes)iCorp, this) > iCorpValue)
 				{
-					if (GC.getGame().isCompetingCorporation(eCorporation, (CorporationTypes)iCorp))
-					{
-						if (kOwner.AI_corporationValue((CorporationTypes)iCorp, this) > iCorpValue)
-						{
-							iCorpValue = -1;
-							break;
-						}
-						else
-						{
-							if (!isHasCorporation((CorporationTypes)iCorp))
-							{
-								iCorpValue = -1;
-							}
-						}
-					}
+					iCorpValue = -1;
+					break;
+				}
+				else if (!isHasCorporation((CorporationTypes)iCorp))
+				{
+					iCorpValue = -1;
 				}
 			}
 		}
-
 		iResult += iCorpValue / 25;
 	}
 
-	if (iCorpValue >= 0)//Don't build if it'll hurt us.
+	if (iCorpValue >= 0) // Don't build if it'll hurt us.
 	{
 		if (kBuilding.getGlobalCorporationCommerce() != NO_CORPORATION)
 		{
@@ -18651,25 +18604,22 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 		iResult += iCorpValue;
 	}
 
-	if (kBuilding.isCommerceFlexible(iI))
+	if (kBuilding.isCommerceFlexible(iI) && !kOwner.isCommerceFlexible((CommerceTypes)iI))
 	{
-		if (!(kOwner.isCommerceFlexible((CommerceTypes)iI)))
-		{
-			iResult += 40;
-		}
+		iResult += 40;
 	}
 
 	if (kBuilding.isCommerceChangeOriginalOwner(iI))
 	{
-		if ((kBuilding.getCommerceChange(iI) > 0) ||
-			(kBuilding.getCommercePerPopChange(iI) > 0) ||
-			(kBuilding.getObsoleteSafeCommerceChange(iI) > 0))
+		if (kBuilding.getCommerceChange(iI) > 0
+		|| kBuilding.getCommercePerPopChange(iI) > 0
+		|| kBuilding.getObsoleteSafeCommerceChange(iI) > 0)
 		{
 			iResult++;
 		}
 	}
 
-	if ( iI == COMMERCE_GOLD && kOwner.AI_isFinancialTrouble())
+	if (iI == COMMERCE_GOLD && kOwner.AI_isFinancialTrouble())
 	{
 		iResult *= 2;
 	}
@@ -18682,33 +18632,31 @@ int CvCityAI::getBuildingCommerceValue(BuildingTypes eBuilding, int iI, int* aiF
 
 	//	If we are desperate for SOME culture boost non-trivial producers
 	// cppcheck-suppress knownConditionTrueFalse
-	if (iI == COMMERCE_CULTURE && getCommerceRate(COMMERCE_CULTURE) == 0 && AI_calculateTargetCulturePerTurn() == 1)
+	if (iI == COMMERCE_CULTURE && iResult >= 3
+	&& getCommerceRate(COMMERCE_CULTURE) == 0 && AI_calculateTargetCulturePerTurn() == 1)
 	{
-		if (iResult >= 3)
-		{
-			iResult += 7;
-		}
+		iResult += 7;
 	}
 
 	//	For research if this is a significant boost to our total (civ wide) then give it significant
 	//	extra weight
-	if ( iI == COMMERCE_RESEARCH )
+	if (iI == COMMERCE_RESEARCH)
 	{
 		int iPlayerTotal = GET_PLAYER(getOwner()).getCommerceRate(COMMERCE_RESEARCH);
 
-		if ( iPlayerTotal <= 0 )
+		if (iPlayerTotal < 1)
 		{
 			iPlayerTotal = 1;
 		}
-
-		//	iResult should be approx 8*<research gain> so
-		//	we are adding a multiplier based on the proportion of the total
-		//	doubling our total will multiply by 9 (+= 8*)
-		iResult += (iResult*iResult)/iPlayerTotal;
+		// iResult should be approx 8*<research gain> so
+		// we are adding a multiplier based on the proportion of the total
+		// doubling our total will multiply by 9 (+= 8*)
+		iResult += iResult*iResult / iPlayerTotal;
 	}
 
 	return iResult;
 }
+
 
 int CvCityAI::tradeRouteValue(CvBuildingInfo& kBuilding, YieldTypes eYield, bool bForeignTrade) const
 {
