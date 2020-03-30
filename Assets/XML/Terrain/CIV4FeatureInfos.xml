@@ -6510,7 +6510,7 @@
 			<iPopDestroys>-1</iPopDestroys>
 			<TerrainBooleans>
 				<TerrainBoolean>
-					<TerrainType>TERRAIN_SPACE</TerrainType>
+					<TerrainType>TERRAIN_CISLUNAR_SPACE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>

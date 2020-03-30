@@ -11410,7 +11410,7 @@
 			<bOutsideBorders>1</bOutsideBorders>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_SPACE</TerrainType>
+					<TerrainType>TERRAIN_CISLUNAR_SPACE</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 				<TerrainMakesValid>

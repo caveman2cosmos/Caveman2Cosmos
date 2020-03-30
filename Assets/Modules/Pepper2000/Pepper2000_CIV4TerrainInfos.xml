@@ -7,10 +7,6 @@
 <Civ4TerrainInfos xmlns="x-schema:../../XML/Schema/C2C_CIV4TerrainSchema.xml">
 	<TerrainInfos>
 		<TerrainInfo>
-			<Type>TERRAIN_SPACE</Type>
-			<Description>TXT_KEY_TERRAIN_CISLUNAR_SPACE</Description>
-		</TerrainInfo>
-		<TerrainInfo>
 			<Type>TERRAIN_MERCURY</Type>
 			<Description>TXT_KEY_TERRAIN_MERCURY</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_MERCURY_PEDIA</Civilopedia>

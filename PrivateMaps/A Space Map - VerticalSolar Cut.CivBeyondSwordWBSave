@@ -527,7 +527,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=0,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -898,12 +898,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=0,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=0,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -935,12 +935,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=0,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=0,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -1564,7 +1564,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=1,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -1927,12 +1927,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=1,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=1,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -1963,12 +1963,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=1,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=1,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -2596,7 +2596,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=2,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -2962,12 +2962,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=2,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=2,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -2998,12 +2998,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=2,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=2,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -3630,7 +3630,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=3,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -3997,12 +3997,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=3,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=3,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -4036,12 +4036,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=3,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=3,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -4662,7 +4662,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=4,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -5033,12 +5033,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=4,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=4,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -5072,12 +5072,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=4,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=4,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -5328,162 +5328,162 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=4,y=145
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=4,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=4,y=147
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=4,y=148
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=4,y=149
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=4,y=150
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=4,y=151
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=4,y=152
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=4,y=153
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=4,y=154
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=4,y=155
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=4,y=156
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=4,y=157
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=4,y=158
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=4,y=159
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=4,y=160
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=4,y=161
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=4,y=162
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=4,y=163
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=4,y=164
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=4,y=165
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=4,y=166
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=4,y=167
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=4,y=168
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=4,y=169
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=4,y=170
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=4,y=171
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=4,y=172
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=4,y=173
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=4,y=174
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=4,y=175
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=4,y=176
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -5706,7 +5706,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=5,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -6072,12 +6072,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=5,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=5,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -6110,12 +6110,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=5,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=5,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -6372,7 +6372,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=5,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -6745,7 +6745,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=6,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -7116,12 +7116,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=6,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=6,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -7152,12 +7152,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=6,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=6,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -7413,7 +7413,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=6,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -7787,7 +7787,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=7,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -8152,12 +8152,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=7,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=7,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -8188,12 +8188,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=7,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=7,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -8445,7 +8445,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=7,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -8820,7 +8820,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=8,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -9186,12 +9186,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=8,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=8,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -9223,12 +9223,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=8,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=8,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -9482,7 +9482,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=8,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -9858,7 +9858,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=9,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -10226,12 +10226,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=9,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=9,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -10262,12 +10262,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=9,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=9,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -10525,7 +10525,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=9,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -10896,7 +10896,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=10,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -11269,12 +11269,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=10,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=10,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -11304,12 +11304,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=10,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=10,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -11566,7 +11566,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=10,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -11942,7 +11942,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=11,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -12324,12 +12324,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=11,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=11,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -12361,12 +12361,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=11,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=11,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -12622,7 +12622,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=11,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -13001,7 +13001,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=12,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -13384,12 +13384,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=12,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=12,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -13419,12 +13419,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=12,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=12,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -13683,7 +13683,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=12,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -14058,7 +14058,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=13,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -14449,12 +14449,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=13,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=13,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -14487,12 +14487,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=13,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=13,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -14746,7 +14746,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=13,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -15130,7 +15130,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=14,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -15514,12 +15514,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=14,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=14,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -15549,12 +15549,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=14,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=14,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -15812,7 +15812,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=14,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -16187,7 +16187,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=15,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -16579,12 +16579,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=15,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=15,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -16616,12 +16616,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=15,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=15,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -16879,7 +16879,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=15,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -17252,7 +17252,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=16,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -17652,12 +17652,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=16,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=16,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -17689,12 +17689,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=16,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=16,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -17954,7 +17954,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=16,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -18338,7 +18338,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=17,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -18730,12 +18730,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=17,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=17,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -18767,12 +18767,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=17,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=17,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -19027,7 +19027,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=17,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -19418,7 +19418,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=18,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -19820,12 +19820,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=18,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=18,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -19856,12 +19856,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=18,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=18,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -20119,7 +20119,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=18,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -20505,7 +20505,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -20922,12 +20922,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=19,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -20959,12 +20959,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=19,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -21226,7 +21226,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -21610,7 +21610,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=20,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -22015,12 +22015,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=20,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=20,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -22051,12 +22051,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=20,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=20,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -22312,7 +22312,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=20,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -22700,7 +22700,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=21,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -23105,12 +23105,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=21,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=21,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -23142,12 +23142,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=21,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=21,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -23400,7 +23400,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=21,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -23797,7 +23797,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=22,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -24209,12 +24209,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=22,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=22,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -24245,12 +24245,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=22,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=22,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -24506,7 +24506,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=22,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -24900,7 +24900,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -25305,12 +25305,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=23,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -25340,12 +25340,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=23,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -25600,7 +25600,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -25987,7 +25987,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=24,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -26373,12 +26373,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=24,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=24,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -26408,12 +26408,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=24,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=24,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -26667,7 +26667,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=24,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -27049,7 +27049,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -27434,12 +27434,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=25,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -27470,12 +27470,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=25,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -27731,7 +27731,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -28128,7 +28128,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -28529,12 +28529,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=26,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -28566,12 +28566,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=26,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -28827,7 +28827,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -29214,7 +29214,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=27,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -29612,12 +29612,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=27,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=27,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -29649,12 +29649,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=27,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=27,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -29914,7 +29914,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=27,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -30291,7 +30291,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=28,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -30681,12 +30681,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=28,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=28,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -30718,12 +30718,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=28,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=28,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -30979,7 +30979,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=28,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -31359,7 +31359,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=29,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -31795,12 +31795,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=29,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=29,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -31831,12 +31831,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=29,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=29,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -32095,7 +32095,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=29,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -32477,7 +32477,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -32893,12 +32893,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=30,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -32928,12 +32928,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=30,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -33191,7 +33191,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -33575,7 +33575,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -33994,12 +33994,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=31,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -34029,12 +34029,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=31,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -34289,7 +34289,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -34669,7 +34669,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=32,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -35076,12 +35076,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=32,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=32,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -35113,12 +35113,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=32,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=32,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -35374,7 +35374,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=32,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -35753,7 +35753,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=33,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -36169,12 +36169,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=33,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=33,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -36204,12 +36204,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=33,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=33,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -36466,7 +36466,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=33,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -36840,7 +36840,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=34,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -37248,12 +37248,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=34,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=34,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -37284,12 +37284,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=34,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=34,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -37547,7 +37547,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=34,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -37930,7 +37930,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=35,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -38351,12 +38351,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=35,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=35,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -38387,12 +38387,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=35,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=35,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -38647,7 +38647,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=35,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -39028,7 +39028,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=36,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -39418,12 +39418,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=36,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=36,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -39455,12 +39455,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=36,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=36,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -39713,7 +39713,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=36,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -40088,7 +40088,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=37,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -40482,12 +40482,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=37,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=37,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -40517,7 +40517,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=37,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -40776,7 +40776,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=37,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -41158,7 +41158,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -41550,12 +41550,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=38,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -41587,7 +41587,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -41848,7 +41848,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -42233,7 +42233,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=39,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -42605,12 +42605,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=39,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=39,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -42641,12 +42641,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=39,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=39,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -42908,7 +42908,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=39,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -43289,7 +43289,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=40,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -43667,12 +43667,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=40,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=40,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -43703,12 +43703,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=40,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=40,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -43966,7 +43966,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=40,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -44355,7 +44355,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=41,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -44731,12 +44731,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=41,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=41,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -44768,12 +44768,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=41,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=41,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -45028,7 +45028,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=41,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -45418,7 +45418,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=42,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -45790,12 +45790,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=42,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=42,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -45826,12 +45826,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=42,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=42,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -46086,7 +46086,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=42,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -46479,7 +46479,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=43,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -46846,12 +46846,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=43,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=43,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -46882,12 +46882,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=43,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=43,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -47141,7 +47141,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=43,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -47534,7 +47534,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=44,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -47901,12 +47901,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=44,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=44,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -47937,12 +47937,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=44,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=44,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -48203,7 +48203,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=44,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -48594,7 +48594,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=45,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -48962,12 +48962,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=45,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=45,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -49000,12 +49000,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=45,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=45,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -49261,7 +49261,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=45,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -49650,7 +49650,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=46,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -50020,12 +50020,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=46,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=46,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -50056,12 +50056,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=46,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=46,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -50321,7 +50321,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=46,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -50708,7 +50708,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=47,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -51070,12 +51070,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=47,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=47,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -51106,12 +51106,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=47,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=47,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -51369,7 +51369,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=47,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -51755,7 +51755,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=48,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -52136,12 +52136,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=48,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=48,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -52174,12 +52174,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=48,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=48,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -52436,7 +52436,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=48,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -52816,7 +52816,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=49,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -53197,12 +53197,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=49,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=49,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -53233,12 +53233,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=49,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=49,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -53496,7 +53496,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=49,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -53871,7 +53871,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=50,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -54250,12 +54250,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=50,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=50,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -54286,12 +54286,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=50,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=50,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -54548,7 +54548,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=50,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -54928,7 +54928,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=51,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -55316,12 +55316,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=51,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=51,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -55352,12 +55352,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=51,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=51,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -55612,7 +55612,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=51,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -55989,7 +55989,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=52,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -56382,12 +56382,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=52,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=52,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -56418,12 +56418,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=52,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=52,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -56682,7 +56682,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=52,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -57056,7 +57056,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -57460,12 +57460,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=53,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -57497,12 +57497,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=53,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -57758,7 +57758,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -58132,7 +58132,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=54,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -58537,12 +58537,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=54,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=54,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -58574,12 +58574,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=54,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=54,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -58835,7 +58835,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=54,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -59205,7 +59205,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -59587,12 +59587,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=55,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -59622,12 +59622,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=55,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -59882,7 +59882,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -60253,7 +60253,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=56,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -60644,12 +60644,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=56,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=56,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -60680,12 +60680,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=56,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=56,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -60939,7 +60939,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=56,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -61321,7 +61321,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -61709,12 +61709,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=57,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -61746,12 +61746,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=57,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -62007,7 +62007,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -62392,7 +62392,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=58,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -62777,12 +62777,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=58,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=58,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -62815,12 +62815,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=58,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=58,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -63078,7 +63078,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=58,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -63462,7 +63462,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=59,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -63869,12 +63869,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=59,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=59,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -63904,12 +63904,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=59,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=59,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -64168,7 +64168,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=59,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -64545,7 +64545,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -64940,12 +64940,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=60,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -64978,12 +64978,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=60,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -65241,7 +65241,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=60,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -65624,7 +65624,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=61,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -66016,12 +66016,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=61,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=61,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -66052,12 +66052,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=61,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=61,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -66310,7 +66310,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=61,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -66686,7 +66686,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=62,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -67095,12 +67095,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=62,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=62,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -67130,12 +67130,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=62,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=62,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -67393,7 +67393,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=62,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -67779,7 +67779,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=63,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -68194,12 +68194,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=63,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=63,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -68231,12 +68231,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=63,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=63,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -68489,7 +68489,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=63,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -68868,7 +68868,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=64,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -69293,12 +69293,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=64,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=64,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -69329,12 +69329,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=64,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=64,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -69592,7 +69592,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=64,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -69980,7 +69980,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=65,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -70409,12 +70409,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=65,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=65,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -70445,12 +70445,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=65,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=65,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -70707,7 +70707,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=65,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -71091,7 +71091,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=66,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -71528,12 +71528,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=66,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=66,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -71564,12 +71564,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=66,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=66,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -71823,7 +71823,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=66,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -72205,7 +72205,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=67,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -72625,12 +72625,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=67,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=67,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -72661,12 +72661,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=67,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=67,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -72921,7 +72921,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=67,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -73303,7 +73303,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=68,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -73730,12 +73730,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=68,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=68,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -73765,12 +73765,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=68,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=68,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -74022,7 +74022,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=68,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -74406,7 +74406,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=69,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -74822,12 +74822,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=69,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=69,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -74858,12 +74858,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=69,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=69,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -75120,7 +75120,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=69,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -75502,7 +75502,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=70,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -75929,12 +75929,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=70,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=70,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -75966,12 +75966,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=70,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=70,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -76228,7 +76228,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=70,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -76600,7 +76600,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=71,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -77005,12 +77005,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=71,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=71,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -77041,12 +77041,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=71,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=71,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -77305,7 +77305,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=71,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -77682,7 +77682,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -78080,12 +78080,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=72,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -78116,12 +78116,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=72,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -78375,7 +78375,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=72,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -78757,7 +78757,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=73,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -79159,12 +79159,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=73,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=73,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -79195,12 +79195,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=73,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=73,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -79459,7 +79459,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=73,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -79837,7 +79837,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=74,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -80253,12 +80253,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=74,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=74,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -80292,12 +80292,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=74,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=74,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -80550,7 +80550,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=74,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -80941,7 +80941,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=75,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -81336,12 +81336,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=75,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=75,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -81372,12 +81372,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=75,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=75,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -81632,7 +81632,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=75,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -82019,7 +82019,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=76,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -82419,12 +82419,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=76,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=76,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -82455,12 +82455,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=76,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=76,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -82715,7 +82715,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=76,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -83107,7 +83107,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=77,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -83529,12 +83529,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=77,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=77,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -83565,12 +83565,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=77,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=77,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -83824,7 +83824,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=77,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -84220,7 +84220,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -84606,12 +84606,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=78,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -84644,12 +84644,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=78,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -84904,7 +84904,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=78,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -85290,7 +85290,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=79,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -85672,12 +85672,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=79,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=79,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -85709,12 +85709,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=79,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=79,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -85969,7 +85969,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=79,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -86361,7 +86361,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=80,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -86752,12 +86752,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=80,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=80,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -86788,12 +86788,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=80,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=80,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -87051,7 +87051,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=80,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -87428,7 +87428,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=81,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -87808,12 +87808,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=81,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=81,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -87846,12 +87846,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=81,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=81,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -88109,7 +88109,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=81,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -88493,7 +88493,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=82,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -88864,12 +88864,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=82,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=82,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -88901,12 +88901,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=82,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=82,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -89163,7 +89163,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=82,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -89548,7 +89548,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=83,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -89939,12 +89939,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=83,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=83,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -89976,12 +89976,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=83,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=83,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -90237,7 +90237,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=83,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -90613,7 +90613,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=84,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -91018,12 +91018,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=84,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=84,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -91054,12 +91054,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=84,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=84,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -91317,7 +91317,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=84,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -91697,7 +91697,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=85,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -92087,12 +92087,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=85,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=85,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -92123,12 +92123,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=85,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=85,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -92390,7 +92390,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=85,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -92766,7 +92766,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=86,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -93160,12 +93160,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=86,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=86,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -93197,12 +93197,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=86,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=86,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -93459,7 +93459,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=86,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -93836,7 +93836,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=87,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -94227,12 +94227,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=87,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=87,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -94264,12 +94264,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=87,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=87,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -94526,7 +94526,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=87,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -94899,7 +94899,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=88,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -95290,12 +95290,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=88,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=88,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -95326,12 +95326,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=88,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=88,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -95594,7 +95594,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=88,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -95968,7 +95968,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=89,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -96359,12 +96359,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=89,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=89,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -96396,12 +96396,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=89,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=89,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -96657,7 +96657,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=89,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -97035,7 +97035,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=90,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -97427,12 +97427,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=90,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=90,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -97464,12 +97464,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=90,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=90,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -97725,7 +97725,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=90,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -98105,7 +98105,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=91,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -98507,12 +98507,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=91,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=91,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -98543,12 +98543,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=91,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=91,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -98800,7 +98800,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=91,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -99181,7 +99181,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=92,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -99572,12 +99572,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=92,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=92,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -99609,12 +99609,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=92,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=92,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -99868,7 +99868,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=92,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -100257,7 +100257,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=93,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -100645,12 +100645,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=93,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=93,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -100681,12 +100681,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=93,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=93,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -100942,7 +100942,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=93,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -101321,7 +101321,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=94,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -101699,12 +101699,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=94,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=94,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -101738,12 +101738,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=94,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=94,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -101999,7 +101999,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=94,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -102374,7 +102374,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=95,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -102758,12 +102758,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=95,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=95,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -102795,12 +102795,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=95,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=95,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -103058,7 +103058,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=95,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -103440,7 +103440,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=96,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -103827,12 +103827,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=96,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=96,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -103862,12 +103862,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=96,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=96,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -104121,7 +104121,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=96,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -104507,7 +104507,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=97,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -104893,12 +104893,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=97,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=97,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -104930,12 +104930,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=97,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=97,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -105195,7 +105195,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=97,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -105597,7 +105597,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=98,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -106003,12 +106003,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=98,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=98,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -106040,12 +106040,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=98,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=98,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -106301,7 +106301,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=98,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -106690,7 +106690,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=99,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -107101,12 +107101,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=99,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=99,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -107138,12 +107138,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=99,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=99,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -107401,7 +107401,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=99,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -107794,7 +107794,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=100,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -108224,12 +108224,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=100,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=100,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -108261,12 +108261,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=100,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=100,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -108523,7 +108523,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=100,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -108913,7 +108913,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=101,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -109334,12 +109334,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=101,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=101,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -109373,12 +109373,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=101,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=101,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -109634,7 +109634,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=101,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -110030,7 +110030,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=102,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -110445,12 +110445,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=102,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=102,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -110482,12 +110482,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=102,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=102,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -110745,7 +110745,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=102,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -111130,7 +111130,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=103,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -111538,12 +111538,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=103,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=103,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -111576,12 +111576,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=103,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=103,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -111835,7 +111835,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=103,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -112218,7 +112218,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=104,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -112630,12 +112630,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=104,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=104,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -112666,12 +112666,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=104,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=104,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -112928,7 +112928,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=104,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -113304,7 +113304,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=105,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -113730,12 +113730,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=105,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=105,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -113768,12 +113768,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=105,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=105,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -114029,7 +114029,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=105,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -114403,7 +114403,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=106,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -114807,12 +114807,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=106,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=106,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -114844,12 +114844,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=106,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=106,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -115103,7 +115103,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=106,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -115479,7 +115479,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=107,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -115882,12 +115882,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=107,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=107,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -115919,12 +115919,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=107,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=107,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -116179,7 +116179,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=107,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -116554,7 +116554,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=108,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -116958,12 +116958,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=108,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=108,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -116995,12 +116995,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=108,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=108,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -117255,7 +117255,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=108,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -117630,7 +117630,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=109,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -118028,12 +118028,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=109,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=109,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -118064,12 +118064,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=109,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=109,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -118328,7 +118328,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=109,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -118707,7 +118707,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=110,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -119104,12 +119104,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=110,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=110,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -119141,12 +119141,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=110,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=110,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -119403,7 +119403,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=110,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -119774,7 +119774,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=111,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -120167,12 +120167,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=111,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=111,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -120202,12 +120202,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=111,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=111,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -120464,7 +120464,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=111,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -120839,7 +120839,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=112,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -121215,12 +121215,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=112,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=112,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -121253,7 +121253,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=112,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -121513,7 +121513,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=112,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -121885,7 +121885,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=113,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -122270,12 +122270,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=113,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=113,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -122306,12 +122306,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=113,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=113,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -122570,7 +122570,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=113,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -122946,7 +122946,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=114,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -123357,12 +123357,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=114,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=114,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -123394,12 +123394,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=114,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=114,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -123657,7 +123657,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=114,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -124030,7 +124030,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=115,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -124432,12 +124432,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=115,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=115,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -124468,12 +124468,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=115,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=115,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -124721,162 +124721,162 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=115,y=145
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=115,y=146
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=115,y=147
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=115,y=148
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=115,y=149
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=115,y=150
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=115,y=151
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=115,y=152
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=115,y=153
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=115,y=154
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=115,y=155
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=115,y=156
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=115,y=157
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=115,y=158
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=115,y=159
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=115,y=160
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=115,y=161
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=115,y=162
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=115,y=163
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=115,y=164
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=115,y=165
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=115,y=166
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=115,y=167
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=115,y=168
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=115,y=169
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=115,y=170
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=115,y=171
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=115,y=172
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=115,y=173
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=115,y=174
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=115,y=175
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=115,y=176
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -125097,7 +125097,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=116,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -125487,12 +125487,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=116,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=116,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -125523,12 +125523,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=116,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=116,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -126156,7 +126156,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=117,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -126536,12 +126536,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=117,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=117,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -126572,12 +126572,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=117,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=117,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -127203,7 +127203,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=118,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -127582,12 +127582,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=118,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=118,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -127619,12 +127619,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=118,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=118,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -128249,7 +128249,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=119,y=19
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -128627,12 +128627,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=119,y=89
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=119,y=90
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
@@ -128664,12 +128664,12 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=119,y=96
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
 	x=119,y=97
-	TerrainType=TERRAIN_SPACE
+	TerrainType=TERRAIN_CISLUNAR_SPACE
 	PlotType=2
 EndPlot
 BeginPlot
