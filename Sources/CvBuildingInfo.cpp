@@ -260,6 +260,7 @@ m_ppaiBonusYieldModifier(NULL)
 //New Integer Arrays
 ,m_piBuildingProductionModifier(NULL)
 ,m_piGlobalBuildingProductionModifier(NULL)
+,m_piGlobalBuildingCostModifier(NULL)
 ,m_piTechHappinessChanges(NULL)
 ,m_piTechHealthChanges(NULL)
 ,m_piUnitProductionModifier(NULL)
@@ -422,6 +423,7 @@ CvBuildingInfo::~CvBuildingInfo()
 	SAFE_DELETE_ARRAY(m_piBonusDefenseChanges);
 	SAFE_DELETE_ARRAY(m_piBuildingProductionModifier);
 	SAFE_DELETE_ARRAY(m_piGlobalBuildingProductionModifier);
+	SAFE_DELETE_ARRAY(m_piGlobalBuildingCostModifier);
 	SAFE_DELETE_ARRAY(m_piTechHappinessChanges);
 	SAFE_DELETE_ARRAY(m_piTechHealthChanges);
 	SAFE_DELETE_ARRAY(m_piUnitCombatExtraStrength);
@@ -2204,6 +2206,21 @@ int CvBuildingInfo::getGlobalBuildingProductionModifier(int i) const
 	}
 }
 
+int CvBuildingInfo::getGlobalBuildingCostModifier(int i) const
+{
+	FAssertMsg(i < GC.getNumBuildingInfos(), "Index out of bounds");
+	FAssertMsg(i >= -1, "Index out of bounds");
+
+	if (i == -1)
+	{
+		return (m_piGlobalBuildingCostModifier == NULL) ? 0 : 1;
+	}
+	else
+	{
+		return m_piGlobalBuildingCostModifier ? m_piGlobalBuildingCostModifier[i] : 0;
+	}
+}
+
 int CvBuildingInfo::getTechHappinessChanges(int i) const
 {
 	FAssertMsg(i < GC.getNumTechInfos(), "Index out of bounds");
@@ -3419,6 +3436,7 @@ void CvBuildingInfo::getCheckSum(unsigned int& iSum)
 	CheckSumI(iSum, GC.getNumBuildingInfos(), m_pbReplaceBuilding);
 	CheckSumI(iSum, GC.getNumBuildingInfos(), m_piBuildingProductionModifier);
 	CheckSumI(iSum, GC.getNumBuildingInfos(), m_piGlobalBuildingProductionModifier);
+	CheckSumI(iSum, GC.getNumBuildingInfos(), m_piGlobalBuildingCostModifier);
 	CheckSumI(iSum, GC.getNumTechInfos(), m_piTechHappinessChanges);
 	CheckSumI(iSum, GC.getNumTechInfos(), m_piTechHealthChanges);
 
@@ -5339,6 +5357,7 @@ bool CvBuildingInfo::readPass2(CvXMLLoadUtility* pXML)
 	pXML->SetVariableListTagPair(&m_pbPrereqNotBuilding, L"PrereqNotBuildings",  GC.getNumBuildingInfos());
 	pXML->SetVariableListTagPair(&m_piBuildingProductionModifier, L"BuildingProductionModifiers",  GC.getNumBuildingInfos());
 	pXML->SetVariableListTagPair(&m_piGlobalBuildingProductionModifier, L"GlobalBuildingProductionModifiers",  GC.getNumBuildingInfos());
+	pXML->SetVariableListTagPair(&m_piGlobalBuildingCostModifier, L"GlobalBuildingCostModifiers",  GC.getNumBuildingInfos());
 
 	return true;
 }
@@ -6917,6 +6936,15 @@ void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLL
 				CvXMLLoadUtility::InitList(&m_piGlobalBuildingProductionModifier,GC.getNumBuildingInfos(),iDefault);
 			}
 			m_piGlobalBuildingProductionModifier[j] = pClassInfo->getGlobalBuildingProductionModifier(j);
+		}
+
+		if ( getGlobalBuildingCostModifier(j) == iDefault && pClassInfo->getGlobalBuildingCostModifier(j) != iDefault)
+		{
+			if ( NULL == m_piGlobalBuildingCostModifier )
+			{
+				CvXMLLoadUtility::InitList(&m_piGlobalBuildingCostModifier,GC.getNumBuildingInfos(),iDefault);
+			}
+			m_piGlobalBuildingCostModifier[j] = pClassInfo->getGlobalBuildingCostModifier(j);
 		}
 
 		if ( isReplaceBuilding(j) == bDefault && pClassInfo->isReplaceBuilding(j) != bDefault )

@@ -3934,12 +3934,12 @@ class CvMainInterface:
 						if CyUnit.isHurt():
 							fPercentHP = float(CyUnit.currHitPoints()) / CyUnit.maxHitPoints()
 							fStrength = strengthBase * fPercentHP
-							szTxt2 += "%.1f" % fStrength
+							szTxt2 += self.floatToString(fStrength)
 							if szTxt2[-1] == "0":
 								szTxt2 = szTxt2[:-2]
 							szTxt2 += "/"
 
-						szTxt2 += "%.1f" % strengthBase
+						szTxt2 += self.floatToString(strengthBase)
 						if szTxt2[-1] == "0":
 							szTxt2 = szTxt2[:-2]
 						szTxt2 += self.iconStrength

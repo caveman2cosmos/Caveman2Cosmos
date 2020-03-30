@@ -4632,6 +4632,10 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Italian>+%d1[ICON_HEALTHY] "La nostra società avanzata ha reso molte professioni decisamente più pulite!"</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_HELP_LIST</Tag>
+		<English>[NEWLINE][SPACE][SPACE] * </English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_HINT_11</Tag>
 		<English>An unescorted settler, galleon, or transport are all huge risks - make sure you are willing to take them!</English>
 		<French>Un colon, un galion ou un transport sans escorte courent tous d'énormes risques... voulez-vous vraiment les perdre?</French>

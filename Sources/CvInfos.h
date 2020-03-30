@@ -3783,6 +3783,7 @@ public:
 	bool isPrereqNotBuilding(int i) const;
 	int  getBuildingProductionModifier(int i) const;
 	int  getGlobalBuildingProductionModifier(int i) const;
+	int  getGlobalBuildingCostModifier(int i) const;
 
 	int  getBonusDefenseChanges(int i) const;
 
@@ -4068,6 +4069,7 @@ protected:
 	bool* m_pbPrereqOrFeature;
 	int* m_piBuildingProductionModifier;
 	int* m_piGlobalBuildingProductionModifier;
+	int* m_piGlobalBuildingCostModifier;
 	int* m_piBonusDefenseChanges;
 	bool* m_pbPrereqNotBuilding;
 	bool* m_pbReplaceBuilding;

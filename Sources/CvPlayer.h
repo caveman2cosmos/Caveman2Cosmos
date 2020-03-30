@@ -1569,6 +1569,8 @@ public:
 
 	int getBuildingProductionModifier(BuildingTypes eIndex) const;
 	void changeBuildingProductionModifier(BuildingTypes eIndex, int iChange);
+	int getBuildingCostModifier(BuildingTypes eIndex) const;
+	void changeBuildingCostModifier(BuildingTypes eIndex, int iChange);
 
 	int getUnitProductionModifier(UnitTypes eIndex) const;
 	void changeUnitProductionModifier(UnitTypes eIndex, int iChange);
@@ -1733,6 +1735,7 @@ protected:
 	int** m_ppiBonusCommerceModifier;
 	int* m_paiUnitCombatProductionModifier;
 	int* m_paiBuildingProductionModifier;
+	int* m_paiBuildingCostModifier;
 	int* m_paiUnitProductionModifier;
 	int* m_paiBonusMintedPercent;
 	int* m_paiPlayerWideAfflictionCount;
