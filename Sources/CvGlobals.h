@@ -188,8 +188,6 @@ public:
 	CvStatsReporter* getStatsReporterPtr() const;
 	CvInterface& getInterface();
 	CvInterface* getInterfacePtr() const;
-	int getMaxCivPlayers() const;
-	int getMaxPCPlayers() const;
 
 /*********************************/
 /***** Parallel Maps - Begin *****/
@@ -1118,7 +1116,6 @@ public:
 /************************************************************************************************/
 /* MODULES                                 END                                                  */
 /************************************************************************************************/
-	int getMAX_CIV_PLAYERS() const;
 	int getMAX_PC_PLAYERS() const;
 	int getMAX_PLAYERS() const;
 	int getMAX_PC_TEAMS() const;
@@ -1997,10 +1994,13 @@ public:
 		PROXY_TRACK("getInterfacePtr");
 		return gGlobals->getInterfacePtr();
 	}
+	// This determines how many starting civs can be chosen in the custom game staging room screen.
+	// Currently it allows you to add more civs than there are civ slots.
+	// If this is reduced to the correct number, the city bar and city graphics for the neanderthal NPC will never be updated as the exe doesn't understand that their cities exist.
 	DllExport int getMaxCivPlayers() const
 	{
 		PROXY_TRACK("getMaxCivPlayers");
-		return gGlobals->getMaxCivPlayers();
+		return MAX_PLAYERS-1;
 	}
 	DllExport CvMapExternal& getMap()
 	{
@@ -2739,7 +2739,7 @@ public:
 	DllExport int getMAX_CIV_PLAYERS()
 	{
 		PROXY_TRACK("getMAX_CIV_PLAYERS");
-		return gGlobals->getMAX_CIV_PLAYERS();
+		return MAX_PC_PLAYERS;
 	}
 	// ***** END EXPOSED TO PYTHON *****
 
