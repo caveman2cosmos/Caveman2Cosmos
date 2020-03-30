@@ -406,7 +406,7 @@
 									gc = CyGlobalContext()
 									if not gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY()):
 										return False
-									valid_terrain_strings = ['SPACE']
+									valid_terrain_strings = ['CISLUNAR_SPACE']
 									valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -4341,11 +4341,11 @@
 			</MapCategoryTypes>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
 			<TerrainImpassableTypes>
-				<TerrainType>TERRAIN_SPACE</TerrainType>
+				<TerrainType>TERRAIN_CISLUNAR_SPACE</TerrainType>
 			</TerrainImpassableTypes>
 			<TerrainPassableTechs>
 				<TerrainPassableTech>
-					<TerrainType>TERRAIN_SPACE</TerrainType>
+					<TerrainType>TERRAIN_CISLUNAR_SPACE</TerrainType>
 					<PassableTech>TECH_ION_PROPULSION</PassableTech>
 				</TerrainPassableTech>
 			</TerrainPassableTechs>
@@ -4416,7 +4416,7 @@
 								import random
 								def isPossible(unit,plot):
 									gc = CyGlobalContext()
-									valid_terrain_strings = ['SPACE']
+									valid_terrain_strings = ['CISLUNAR_SPACE']
 									valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -4479,7 +4479,7 @@
 			</MapCategoryTypes>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
 			<TerrainImpassableTypes>
-			<TerrainType>TERRAIN_SPACE</TerrainType>
+			<TerrainType>TERRAIN_CISLUNAR_SPACE</TerrainType>
 			</TerrainImpassableTypes>
 			<UnitUpgrades>
 				<UnitType>UNIT_HEAVY_ROCKET</UnitType>

@@ -5499,7 +5499,7 @@
 			<Type>TERRAIN_ORBIT</Type>
 			<Description>TXT_KEY_TERRAIN_ORBIT</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_ORBIT_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_TERRAIN_SPACE</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_TERRAIN_CISLUNAR_SPACE</ArtDefineTag>
 			<bFound>1</bFound>
 			<iCultureDistance>3</iCultureDistance>
 			<bImpassable>1</bImpassable>
@@ -5510,10 +5510,10 @@
 			</MapCategoryTypes>
 		</TerrainInfo>
 		<TerrainInfo>
-			<Type>TERRAIN_SPACE</Type>
-			<Description>TXT_KEY_TERRAIN_SPACE</Description>
-			<Civilopedia>TXT_KEY_TERRAIN_SPACE_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_TERRAIN_SPACE</ArtDefineTag>
+			<Type>TERRAIN_CISLUNAR_SPACE</Type>
+			<Description>TXT_KEY_TERRAIN_CISLUNAR_SPACE</Description>
+			<Civilopedia>TXT_KEY_TERRAIN_CISLUNAR_SPACE_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_TERRAIN_CISLUNAR_SPACE</ArtDefineTag>
 			<bFound>1</bFound>
 			<iCultureDistance>2</iCultureDistance>
 			<iMovement>1</iMovement>
