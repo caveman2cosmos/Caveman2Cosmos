@@ -15,12 +15,15 @@ def verifyModDir(szModPath):
 g_ModPath = verifyModDir(SP.modDir)
 
 
-dllFiles = ["CyCityInterface1.cpp"]
+dllFiles = ["CyCityInterface1.cpp",
+			"CyCityInterface2.cpp"]
 
 def init():
 	logFile = open(os.path.join(g_ModPath, "Assets", "Python", "Matt", "log.txt"), "w")
 
-	C2CPythonFiles = getGlob(os.path.join(g_ModPath, "Assets", "Python"))
+	PythonFiles  = getGlob(os.path.join(g_ModPath, "Assets", "Python"))
+	PythonFiles += getGlob(os.path.join(SP.dirBtS, "Assets", "Python"))
+
 	for fileName in dllFiles:
 		path = os.path.join(g_ModPath, "Sources", fileName)
 		pFile = open(path)
@@ -28,15 +31,15 @@ def init():
 		for line in pFile:
 			functionName = getFunctionName(line)
 			logFile.write(functionName + "\n")
-			if len(functionName) == 0 or find(C2CPythonFiles, functionName):
+			if len(functionName) == 0 or find(PythonFiles, "." + functionName + "("):
 				usedFunctions += line
 		pFile.close()
-
-		logFile.close()
 
 		newFile = open(path + ".new", "w")
 		newFile.write(usedFunctions)
 		newFile.close()
+
+	logFile.close()
 
 
 def getFunctionName(line):
