@@ -192,6 +192,7 @@ m_cachedBonusCount(NULL)
 	m_paiBonusMintedPercent = NULL;
 	m_pabAutomatedCanBuild = NULL;
 	m_paiBuildingProductionModifier = NULL;
+	m_paiBuildingCostModifier = NULL;
 	m_paiUnitProductionModifier = NULL;
 	m_ppaaiTerrainYieldChange = NULL;
 	m_paiResourceConsumption = NULL;
@@ -739,6 +740,7 @@ void CvPlayer::uninit()
 	SAFE_DELETE_ARRAY(m_paiUnitCombatProductionModifier);
 	SAFE_DELETE_ARRAY(m_paiBonusMintedPercent);
 	SAFE_DELETE_ARRAY(m_paiBuildingProductionModifier);
+	SAFE_DELETE_ARRAY(m_paiBuildingCostModifier);
 	SAFE_DELETE_ARRAY(m_paiUnitProductionModifier);
 	SAFE_DELETE_ARRAY(m_pabAutomatedCanBuild);
 	SAFE_DELETE_ARRAY(m_paiResourceConsumption);
@@ -1465,11 +1467,15 @@ void CvPlayer::reset(PlayerTypes eID, bool bConstructorCall)
 			m_paiBonusMintedPercent[iI] = 0;
 		}
 
-		FAssertMsg(m_paiBuildingProductionModifier==NULL, "about to leak memory, CvPlayer::m_paiBuildingProductionModifier");
+		FAssertMsg(m_paiBuildingProductionModifier == NULL, "about to leak memory, CvPlayer::m_paiBuildingProductionModifier");
+		FAssertMsg(m_paiBuildingCostModifier == NULL, "about to leak memory, CvPlayer::m_paiBuildingCostModifier");
 		m_paiBuildingProductionModifier = new int [GC.getNumBuildingInfos()];
+		m_paiBuildingCostModifier = new int [GC.getNumBuildingInfos()];
+
 		for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 		{
 			m_paiBuildingProductionModifier[iI] = 0;
+			m_paiBuildingCostModifier[iI] = 0;
 		}
 
 		FAssertMsg(m_paiUnitProductionModifier==NULL, "about to leak memory, CvPlayer::m_paiUnitProductionModifier");
@@ -8724,78 +8730,58 @@ int CvPlayer::getProductionNeeded(UnitTypes eUnit) const
 int CvPlayer::getProductionNeeded(BuildingTypes eBuilding) const
 {
 
-	int iInitialProduction = GC.getBuildingInfo(eBuilding).getProductionCost();
-	if (iInitialProduction < 0)
+	const int iBaseCost = GC.getBuildingInfo(eBuilding).getProductionCost();
+	if (iBaseCost < 1)
 	{
 		return -1;
 	}
-	unsigned long long iProductionNeeded = (unsigned long long)iInitialProduction;
+	unsigned long long iProductionNeeded = (unsigned long long) 100*iBaseCost;
 
-	iProductionNeeded *= 100;
-
-	int iModifier = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
-	iProductionNeeded *= iModifier;
+	iProductionNeeded *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
 	iProductionNeeded /= 100;
 
-	iModifier = GC.getHandicapInfo(getHandicapType()).getConstructPercent();
-	iProductionNeeded *= iModifier;
+	iProductionNeeded *= GC.getHandicapInfo(getHandicapType()).getConstructPercent();
 	iProductionNeeded /= 100;
 
-	EraTypes eEra = getCurrentEra();
-	iModifier = 0;
-	if (GC.getGame().isOption(GAMEOPTION_BEELINE_STINGS))
-	{
-		iModifier = GC.getEraInfo(eEra).getConstructPercent();
-	}
-	else
-	{
-		if (GC.getBuildingInfo(eBuilding).getPrereqAndTech() != NO_TECH)
-		{
-			eEra = (EraTypes)GC.getTechInfo((TechTypes)GC.getBuildingInfo(eBuilding).getPrereqAndTech()).getEra();
-		}
-		iModifier = GC.getEraInfo(eEra).getConstructPercent();
-	}
-	iProductionNeeded *= iModifier;
+	iProductionNeeded *= GC.getEraInfo(getCurrentEra()).getConstructPercent();
 	iProductionNeeded /= 100;
 
-	iModifier = GC.getEraInfo(getCurrentEra()).getConstructPercent();
-	iProductionNeeded *= iModifier;
-	iProductionNeeded /= 100;
-
-	iModifier = GC.getBUILDING_PRODUCTION_PERCENT();
-	iProductionNeeded *= iModifier;
+	iProductionNeeded *= GC.getBUILDING_PRODUCTION_PERCENT();
 	iProductionNeeded /= 100;
 
 	if (!isHuman() && !isNPC())
 	{
 		if (isWorldWonder(eBuilding))
 		{
-			iModifier = GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIWorldConstructPercent();
-			iProductionNeeded *= iModifier;
+			iProductionNeeded *= GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIWorldConstructPercent();
 			iProductionNeeded /= 100;
 		}
 		else
 		{
-			iModifier = GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIConstructPercent();
-			iProductionNeeded *= iModifier;
+			iProductionNeeded *= GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIConstructPercent();
 			iProductionNeeded /= 100;
 		}
-
-		iModifier = std::max(0, ((GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIPerEraModifier() * getCurrentEra()) + 100));
-		iProductionNeeded *= iModifier;
+		iProductionNeeded *= std::max(0, 100 + getCurrentEra() * GC.getHandicapInfo(GC.getGame().getHandicapType()).getAIPerEraModifier());
 		iProductionNeeded /= 100;
 	}
 
-	iProductionNeeded /=100;
+	const int iMod = getBuildingCostModifier(eBuilding);
 
-	if (iProductionNeeded > MAX_INT)
+	if (iMod < 0)
 	{
-		iProductionNeeded = MAX_INT;
+		iProductionNeeded = iProductionNeeded * 100 / (-1 * iMod + 100);
+	}
+	else if (iMod > 0)
+	{
+		iProductionNeeded *= 100 + iMod;
+		iProductionNeeded /= 100;
 	}
 
-	int iTotal = (int)iProductionNeeded;
+	iProductionNeeded /= 100;
 
-	return std::max(1, iTotal);
+	if (iProductionNeeded > MAX_INT) iProductionNeeded = MAX_INT;
+
+	return std::max(1, (int)iProductionNeeded);
 }
 
 
@@ -9135,6 +9121,7 @@ void CvPlayer::processBuilding(BuildingTypes eBuilding, int iChange, CvArea* pAr
 	{
 		changeExtraBuildingHappiness((BuildingTypes)iI, (GC.getBuildingInfo(eBuilding).getBuildingHappinessChanges(iI) * iChange));
 		changeBuildingProductionModifier((BuildingTypes)iI, GC.getBuildingInfo(eBuilding).getGlobalBuildingProductionModifier(iI) * iChange);
+		changeBuildingCostModifier((BuildingTypes)iI, GC.getBuildingInfo(eBuilding).getGlobalBuildingCostModifier(iI) * iChange);
 	}
 
 	for (int iI = 0; iI < GC.getNumSpecialistInfos(); iI++)
@@ -22657,6 +22644,7 @@ void CvPlayer::read(FDataStreamBase* pStream)
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiBonusMintedPercent);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatProductionModifier);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingProductionModifier);
+		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingCostModifier);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiUnitProductionModifier);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiResourceConsumption);
 		WRAPPER_READ_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_paiFreeSpecialistCount);
@@ -23783,6 +23771,7 @@ void CvPlayer::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiBonusMintedPercent);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_COMBATINFOS, GC.getNumUnitCombatInfos(), m_paiUnitCombatProductionModifier);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingProductionModifier);
+		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BUILDINGS, GC.getNumBuildingInfos(), m_paiBuildingCostModifier);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_UNITS, GC.getNumUnitInfos(), m_paiUnitProductionModifier);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiResourceConsumption);
 		WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvPlayer", REMAPPED_CLASS_TYPE_SPECIALISTS, GC.getNumSpecialistInfos(), m_paiFreeSpecialistCount);
@@ -30453,6 +30442,19 @@ void CvPlayer::changeBuildingProductionModifier(BuildingTypes eIndex, int iChang
 	}
 }
 
+int CvPlayer::getBuildingCostModifier(BuildingTypes eIndex) const
+{
+	return m_paiBuildingCostModifier[eIndex];
+}
+
+void CvPlayer::changeBuildingCostModifier(BuildingTypes eIndex, int iChange)
+{
+	if (iChange != 0)
+	{
+		m_paiBuildingCostModifier[eIndex] += iChange;
+	}
+}
+
 int CvPlayer::getUnitProductionModifier(UnitTypes eIndex) const
 {
 	return m_paiUnitProductionModifier[eIndex];
@@ -32330,11 +32332,7 @@ void CvPlayer::clearModifierTotals()
 	m_iMilitaryProductionModifier = 0;
 	m_iSpaceProductionModifier = 0;
 	m_iCityDefenseModifier = 0;
-/************************************************************************************************/
-/* REVDCM                                 09/02/10                                phungus420    */
-/*                                                                                              */
-/* Player Functions                                                                             */
-/************************************************************************************************/
+
 	m_iNonStateReligionCommerceCount = 0;
 	m_iUpgradeAnywhereCount = 0;
 	m_iRevIdxDistanceModifier = 0;
@@ -32346,9 +32344,7 @@ void CvPlayer::clearModifierTotals()
 	m_iCityLimit = 0;
 	m_iCityOverLimitUnhappy = 0;
 	m_iForeignUnhappyPercent = 0;
-/************************************************************************************************/
-/* REVDCM                                  END                                                  */
-/************************************************************************************************/
+
 	m_iBaseFreeUnits = 0;
 	m_iBaseFreeMilitaryUnits = 0;
 	m_iFreeUnitsPopulationPercent = 0;
@@ -32542,6 +32538,7 @@ void CvPlayer::clearModifierTotals()
 	for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
 	{
 		m_paiBuildingProductionModifier[iI] = 0;
+		m_paiBuildingCostModifier[iI] = 0;
 	}
 
 	for (iI = 0; iI < GC.getNumTerrainInfos(); iI++)

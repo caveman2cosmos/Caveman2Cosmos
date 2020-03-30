@@ -1275,6 +1275,13 @@
 	<ElementType name="GlobalBuildingProductionModifiers" content="eltOnly">
 		<element type="BuildingProductionModifier" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
+	<ElementType name="BuildingCostModifier" content="eltOnly">
+		<element type="BuildingType"/>
+		<element type="iModifier"/>
+	</ElementType>
+	<ElementType name="GlobalBuildingCostModifiers" content="eltOnly">
+		<element type="BuildingCostModifier" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
 
 	<ElementType name="BonusCommerceModifier" content="eltOnly">
 		<element type="BonusType"/>
