@@ -456,6 +456,9 @@ class CvEventManager:
 
 			elif iModifiers == 3:
 
+				import FileUtil
+				FileUtil.init()
+
 				if key == 16: # D
 					DebugUtils.toggleDebugMode()
 					return 1
