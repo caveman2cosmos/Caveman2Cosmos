@@ -6,8 +6,8 @@
 		<French>C'est d'accord.</French>
 		<German>Einverstanden.</German>
 		<Italian>D'accordo.</Italian>
-		<Spanish>Hecho.</Spanish>
 		<Polish>Zgoda.</Polish>
+		<Spanish>Hecho.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_10</Tag>
@@ -15,17 +15,17 @@
 		<French>C'est d'accord.</French>
 		<German>So soll es denn geschehen.</German>
 		<Italian>D'accordo.</Italian>
-		<Spanish>De acuerdo.</Spanish>
 		<Polish>Zgadzam się.</Polish>
+		<Spanish>De acuerdo.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_11</Tag>
 		<English>It's against my better judgment, but we'll take it. Done.</English>
 		<French>C'est contraire à mon opinion, mais nous acceptons. Marché conclu.</French>
 		<German>Es ist zwar wider besseres Wissen, aber gut. Abgemacht.</German>
-		<Italian>Va contro il mio punto di vista, ma accetteremo. Fatto.</Italian>
-		<Spanish>Aceptamos a pesar de mis reservas. Trato hecho.</Spanish>
+		<Italian>Nonostante le mie riserve, accettiamo l'offerta. Fatto.</Italian>
 		<Polish>To wbrew rozsądkowi, ale zgadzam się.</Polish>
+		<Spanish>Aceptamos a pesar de mis reservas. Trato hecho.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_12</Tag>
@@ -33,8 +33,8 @@
 		<French>Ce marché me semble équitable. J'accepte.</French>
 		<German>Hört sich vernünftig an. Abgemacht.</German>
 		<Italian>Mi sembra equo. Fatto.</Italian>
-		<Spanish>Nos parece justo. Trato hecho.</Spanish>
 		<Polish>Brzmi dobrze. Zgoda.</Polish>
+		<Spanish>Nos parece justo. Trato hecho.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_13</Tag>
@@ -42,8 +42,8 @@
 		<French>Vos conditions sont acceptables. C'est d'accord.</French>
 		<German>Darauf kann ich mich einlassen. Abgemacht.</German>
 		<Italian>Mi sembra accettabile. E sia.</Italian>
-		<Spanish>Eso nos resulta aceptable. Trato hecho.</Spanish>
 		<Polish>To jest do zaakceptowania. Zgoda.</Polish>
+		<Spanish>Eso nos resulta aceptable. Trato hecho.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_14</Tag>
@@ -51,8 +51,8 @@
 		<French>J'ai horreur de marchander. C'est d'accord.</French>
 		<German>Ich feilsche nicht gern, also abgemacht.</German>
 		<Italian>Non mi piace contrattare. D'accordo.</Italian>
-		<Spanish>No nos gusta regatear. Hecho.</Spanish>
 		<Polish>Nie lubię targowania się. Zgoda.</Polish>
+		<Spanish>No nos gusta regatear. Hecho.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_15</Tag>
@@ -60,8 +60,8 @@
 		<French>Votre offre est insuffisante, mais nous acceptons.</French>
 		<German>Das Angebot ist etwas dürftig - aber ich nehme an.</German>
 		<Italian>L'offerta è un po' scarsa, ma la accettiamo.</Italian>
-		<Spanish>La propuesta es algo inconsistente, pero la aceptamos.</Spanish>
 		<Polish>Twoja oferta nie jest zbyt korzystna - ale zgodzimy się na nią.</Polish>
+		<Spanish>La propuesta es algo inconsistente, pero la aceptamos.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_16</Tag>
@@ -69,8 +69,8 @@
 		<French>Nous acceptons votre offre équitable.</French>
 		<German>Ich akzeptiere Euer faires Angebot.</German>
 		<Italian>Accettiamo la tua equa offerta.</Italian>
-		<Spanish>Aceptamos vuestra justa propuesta.</Spanish>
 		<Polish>Zgadzamy się na Twoją uczciwą ofertę.</Polish>
+		<Spanish>Aceptamos vuestra justa propuesta.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_17</Tag>
@@ -78,8 +78,8 @@
 		<French>Nous acceptons votre offre courtoise.</French>
 		<German>Ich akzeptiere Euer großzügiges Angebot.</German>
 		<Italian>Accettiamo la tua generosa offerta.</Italian>
-		<Spanish>Aceptamos vuestra generosa propuesta.</Spanish>
 		<Polish>Zgadzamy się na Twoją łaskawą ofertę.</Polish>
+		<Spanish>Aceptamos vuestra generosa propuesta.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_18</Tag>
@@ -87,8 +87,8 @@
 		<French>Alors, nous sommes d'accord.</French>
 		<German>Damit sind wir uns einig.</German>
 		<Italian>Allora siamo d'accordo.</Italian>
-		<Spanish>Entonces, estamos de acuerdo.</Spanish>
 		<Polish>Doszliśmy do porozumienia.</Polish>
+		<Spanish>Entonces, estamos de acuerdo.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_19</Tag>
@@ -96,8 +96,8 @@
 		<French>Nous pouvons accepter ces conditions. C'est d'accord.</French>
 		<German>Diese Bedingungen sind akzeptabel. Abgemacht.</German>
 		<Italian>Possiamo accettare queste condizioni. Va bene.</Italian>
-		<Spanish>Aceptamos estas condiciones. Trato hecho.</Spanish>
 		<Polish>Możemy przystać na te warunki. Zgoda.</Polish>
+		<Spanish>Aceptamos estas condiciones. Trato hecho.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_2</Tag>
@@ -105,8 +105,8 @@
 		<French>Très bien, nous sommes d'accord.</French>
 		<German>In Ordnung, einverstanden.</German>
 		<Italian>Va bene, d'accordo.</Italian>
-		<Spanish>Entonces de acuerdo. Hecho.</Spanish>
 		<Polish>W porządku, zgadzam się.</Polish>
+		<Spanish>Entonces de acuerdo. Hecho.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_20</Tag>
@@ -114,8 +114,8 @@
 		<French>Nous pouvons faire affaire en ces termes. Marché conclu.</French>
 		<German>Auf dieser Basis können wir ins Geschäft kommen. Einverstanden.</German>
 		<Italian>Con questi termini, possiamo fare affari. D'accordo.</Italian>
-		<Spanish>Podemos aceptarlo con esas condiciones. Hecho.</Spanish>
 		<Polish>W ten sposób zawsze możemy się dogadać. Zgoda.</Polish>
+		<Spanish>Podemos aceptarlo con esas condiciones. Hecho.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_21</Tag>
@@ -123,8 +123,8 @@
 		<French>Nous acceptons.</French>
 		<German>Ich nehme an.</German>
 		<Italian>Accettiamo.</Italian>
-		<Spanish>Aceptamos.</Spanish>
 		<Polish>Biorę to.</Polish>
+		<Spanish>Aceptamos.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_22</Tag>
@@ -132,8 +132,8 @@
 		<French>Très bien, nous acceptons.</French>
 		<German>Also gut, darauf kann ich mich einlassen.</German>
 		<Italian>Bene, affare fatto.</Italian>
-		<Spanish>Muy bien, lo aceptamos.</Spanish>
 		<Polish>Bardzo dobrze, przystajemy.</Polish>
+		<Spanish>Muy bien, lo aceptamos.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_23</Tag>
@@ -141,8 +141,8 @@
 		<French>Ca me va. C'est d'accord.</French>
 		<German>Ein guter Handel. Einverstanden.</German>
 		<Italian>Mi pare un accordo onesto. Affare fatto.</Italian>
-		<Spanish>Nos parece bien. Trato hecho.</Spanish>
 		<Polish>To dobry interes. Zgoda.</Polish>
+		<Spanish>Nos parece bien. Trato hecho.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_24</Tag>
@@ -150,17 +150,17 @@
 		<French>Vos conditions sont acceptables.</French>
 		<German>Eure Bedingungen sind annehmbar.</German>
 		<Italian>Le tue condizioni sono accettabili.</Italian>
-		<Spanish>Vuestras condiciones son aceptables.</Spanish>
 		<Polish>Twoje warunki odpowiadają nam.</Polish>
+		<Spanish>Vuestras condiciones son aceptables.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_25</Tag>
 		<English>You are a hard bargainer, [CT_NAME]. Agreed.</English>
 		<French>Vous savez vous y prendre en affaires, [CT_NAME]. C'est d'accord.</French>
 		<German>Ihr seid ein schwieriger Verhandlungspartner, [CT_NAME]. Abgemacht.</German>
-		<Italian>Sai come fare affari, [CT_NAME]. D'accordo.</Italian>
-		<Spanish>Es duro negociar con vos, [CT_NAME]. Hecho.</Spanish>
+		<Italian>Sei davvero un osso duro, [CT_NAME]. D'accordo.</Italian>
 		<Polish>Jesteś twardym negocjatorem, [CT_NAME]. Zgadzam się.</Polish>
+		<Spanish>Es duro negociar con vos, [CT_NAME]. Hecho.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_26</Tag>
@@ -168,8 +168,8 @@
 		<French>Excellent. Voilà une bonne chose de faite.</French>
 		<German>Ausgezeichnet. Ich bin einverstanden.</German>
 		<Italian>Eccellente. Ecco fatto.</Italian>
-		<Spanish>Excelente. Trato hecho.</Spanish>
 		<Polish>Doskonale. Umowa stoi.</Polish>
+		<Spanish>Excelente. Trato hecho.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_27</Tag>
@@ -177,8 +177,8 @@
 		<French>Les [OUR_CIV_SHORT] vous remercient. C'est fait.</French>
 		<German>Ich nehme im Namen meines Volkes an.</German>
 		<Italian>[OUR_CIV_SHORT] ti ringrazia. Fatto.</Italian>
-		<Spanish>[OUR_CIV_SHORT] os da las gracias. Trato hecho.</Spanish>
 		<Polish>Lud [OUR_CIV_ADJ] dziękuje Ci. Zgoda.</Polish>
+		<Spanish>[OUR_CIV_SHORT] os da las gracias. Trato hecho.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_3</Tag>
@@ -186,8 +186,8 @@
 		<French>Voilà qui est fait.</French>
 		<German>Abgemacht.</German>
 		<Italian>Fatto.</Italian>
-		<Spanish>Trato hecho.</Spanish>
 		<Polish>Załatwione.</Polish>
+		<Spanish>Trato hecho.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_4</Tag>
@@ -195,8 +195,8 @@
 		<French>Parfait. Nous sommes d'accord.</French>
 		<German>Ausgezeichnet. Dann sind wir uns ja einig.</German>
 		<Italian>Ottimo, siamo d'accordo.</Italian>
-		<Spanish>Excelente. Estamos de acuerdo.</Spanish>
 		<Polish>Doskonale. Dogadaliśmy się.</Polish>
+		<Spanish>Excelente. Estamos de acuerdo.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_5</Tag>
@@ -204,17 +204,17 @@
 		<French>Humpf... C'est du vol de grand chemin, mais nous acceptons.</French>
 		<German>Hrmph. Das grenzt an Wegelagerei... Aber ich nehme an.</German>
 		<Italian>Umpf. Questa è una rapina a mano armata, ma accettiamo.</Italian>
-		<Spanish>Puf. Esto es un atraco a mano armada, pero lo aceptamos.</Spanish>
 		<Polish>Wrrr... To jest napad w biały dzień - ale zgadzam się.</Polish>
+		<Spanish>Puf. Esto es un atraco a mano armada, pero lo aceptamos.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_6</Tag>
 		<English>Well, if that's the best you can do, I guess we'll take it. Done.</English>
 		<French>Si vous ne pouvez pas faire mieux, je pense que nous allons accepter.</French>
 		<German>Hrmph. Also, wenn das alles ist, was Ihr bieten könnt... Abgemacht.</German>
-		<Italian>Bene, se è il massimo che puoi fare, credo che accetterò. Fatto.</Italian>
-		<Spanish>Bueno, si es lo mejor que podéis hacer, supongo que lo aceptamos. Trato hecho.</Spanish>
+		<Italian>Bene, se è il massimo che puoi fare, credo che accetteremo. Fatto.</Italian>
 		<Polish>Jeżeli to wszystko co możesz zaoferować, to myślę, że się zgodzę. Załatwione.</Polish>
+		<Spanish>Bueno, si es lo mejor que podéis hacer, supongo que lo aceptamos. Trato hecho.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_7</Tag>
@@ -222,8 +222,8 @@
 		<French>J'accepte vos conditions.</French>
 		<German>Ich akzeptiere Eure Bedingungen.</German>
 		<Italian>Accetto le tue condizioni.</Italian>
-		<Spanish>Aceptamos vuestras condiciones.</Spanish>
 		<Polish>Zgadzam się na Twoje warunki.</Polish>
+		<Spanish>Aceptamos vuestras condiciones.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_8</Tag>
@@ -231,17 +231,17 @@
 		<French>Je crois que nous pouvons accepter. Marché conclu.</French>
 		<German>Ich glaube, ich kann das akzeptieren. Einverstanden.</German>
 		<Italian>Credo che possiamo accettare. D'accordo.</Italian>
-		<Spanish>Creemos que podemos aceptarlo. Hecho.</Spanish>
 		<Polish>Sądzę, że możemy to zaakceptować. Załatwione.</Polish>
+		<Spanish>Creemos que podemos aceptarlo. Hecho.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_9</Tag>
 		<English>I think I can accept these terms. It is agreed.</English>
 		<French>Je pense pouvoir accepter ces conditions. C'est d'accord.</French>
 		<German>Ich denke, ich kann auf diese Bedingungen eingehen. Also abgemacht.</German>
-		<Italian>Credo che possiamo accettare queste condizioni. D'accordo.</Italian>
-		<Spanish>Creemos que podemos aceptar estas condiciones. De acuerdo.</Spanish>
+		<Italian>Credo di poter accettare queste condizioni. D'accordo.</Italian>
 		<Polish>Myślę, że możemy na to przystać. Zgadzam się.</Polish>
+		<Spanish>Creemos que podemos aceptar estas condiciones. De acuerdo.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_ASK_1</Tag>
@@ -249,8 +249,8 @@
 		<French>Je suis toujours là pour vous aider...</French>
 		<German>Ich helfe doch jederzeit gern...</German>
 		<Italian>Sempre felice di aiutare...</Italian>
-		<Spanish>Siempre estamos encantados de ayudar...</Spanish>
 		<Polish>Zawsze gotowi pomóc...</Polish>
+		<Spanish>Siempre estamos encantados de ayudar...</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_DEMAND_1</Tag>
@@ -258,8 +258,8 @@
 		<French>Nous accédons à vos requêtes exagérées.</French>
 		<German>Ich stimme Euren unsinnigen Forderungen zu. Ihr wisst hoffentlich, was Ihr tut.</German>
 		<Italian>Accettiamo le tue insensate richieste.</Italian>
-		<Spanish>No podemos acceder a vuestras exigencias tan poco razonables.</Spanish>
 		<Polish>Zgadzamy się na Twe nieracjonalne żądania.</Polish>
+		<Spanish>No podemos acceder a vuestras exigencias tan poco razonables.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_DEMAND_2</Tag>
@@ -267,8 +267,8 @@
 		<French>J'accepte vos conditions pour l'instant. Mais ce sera différent la prochaine fois!</French>
 		<German>Ich akzeptiere Eure Bedingungen - fürs Erste! Aber wartet nur bis zum nächsten Mal!</German>
 		<Italian>Accetto le tue condizioni, per il momento. Ma la prossima volta vedrai!</Italian>
-		<Spanish>Aceptamos vuestras condiciones, de momento. ¡Pero ya veréis la próxima vez!</Spanish>
 		<Polish>Tym razem się zgadzam. Ale poczekaj jeszcze!</Polish>
+		<Spanish>Aceptamos vuestras condiciones, de momento. ¡Pero ya veréis la próxima vez!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_DEMAND_3</Tag>
@@ -276,26 +276,26 @@
 		<French>Il semble que je n'ai pas d'autre choix que d'accepter.</French>
 		<German>Ich habe offenbar keine andere Wahl, als mich darauf einzulassen!</German>
 		<Italian>Pare che non abbia altra scelta che accettare.</Italian>
-		<Spanish>Parece que no nos queda otra que aceptar.</Spanish>
 		<Polish>Wygląda na to, że nie mam wyboru i muszę się zgodzić.</Polish>
+		<Spanish>Parece que no nos queda otra que aceptar.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_DEMAND_4</Tag>
 		<English>All right, then. But just remember: what goes around comes around!</English>
 		<French>Très bien, mais n'oubliez pas que tout finit par se payer!</French>
 		<German>Also gut. Aber denkt dran: Wie man in den Wald hineinruft, so schallt es heraus!</German>
-		<Italian>Perfetto. Ricorda solo una cosa però: quel che semini, raccogli!</Italian>
-		<Spanish>Entonces, de acuerdo. Pero recordad, se recoge lo que se siembra.</Spanish>
+		<Italian>E va bene. Ricorda solo una cosa però: quel che semini, raccogli!</Italian>
 		<Polish>W porządku. Ale pamiętaj: dosięgnie Cię powracająca fala!</Polish>
+		<Spanish>Entonces, de acuerdo. Pero recordad, se recoge lo que se siembra.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_DEMAND_5</Tag>
 		<English>Sure: kick a civilization when it's down. I accept your terms.</English>
 		<French>Vous piétinez une civilisation qui est déjà à terre? Soit, j'accepte vos conditions.</French>
 		<German>Es ist natürlich leicht, die Schwachen zu treten. Ich füge mich, aber ich habe ein gutes Gedächtnis.</German>
-		<Italian>Maramaldo, tu uccidi un uomo morto... Accetto le vostre condizioni.</Italian>
-		<Spanish>Muy bien, cebaos con una civilización indefensa... Aceptamos vuestros términos.</Spanish>
+		<Italian>Maramaldo, tu uccidi un uomo morto... Accetto le tue condizioni.</Italian>
 		<Polish>No pewnie: możesz kopać leżącą cywilizację. Zgadzam się na Twe warunki.</Polish>
+		<Spanish>Muy bien, cebaos con una civilización indefensa... Aceptamos vuestros términos.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_DEMAND_6</Tag>
@@ -303,8 +303,8 @@
 		<French>J'accepte vos conditions. Pour l'instant...</French>
 		<German>Also gut, momentan habt Ihr gute Argumente.</German>
 		<Italian>Accetto le tue condizioni. Per il momento.</Italian>
-		<Spanish>Aceptamos vuestras condiciones. Por ahora.</Spanish>
 		<Polish>Na razie zgadzam się na Twe warunki. Na razie.</Polish>
+		<Spanish>Aceptamos vuestras condiciones. Por ahora.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ACCEPT_DEMAND_TEAM_1</Tag>
@@ -312,17 +312,17 @@
 		<French>Nous sommes toujours ravis de vous aider!</French>
 		<German>Euch zu helfen ist mir ein Vergnügen!</German>
 		<Italian>Siamo sempre felici di aiutare!</Italian>
-		<Spanish>¡Siempre estamos encantados de ayudar!</Spanish>
 		<Polish>Zawsze do usług!</Polish>
+		<Spanish>¡Siempre estamos encantados de ayudar!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ASSUME_NOT_SNUFFED</Tag>
 		<English>What a shame. My diplomats enjoyed your openness and all it revealed about you.</English>
 		<French>Quel dommage! Mes diplomates avaient apprécié votre ouverture d'esprit qui en disait long sur vous.</French>
 		<German>Was für ein Jammer! Meine Diplomaten genossen Eure Offenheit und was sie über Euch verriet.</German>
-		<Italian>Che peccato. I miei diplomatci apprezzavano moltissimo la tua disponibilità.</Italian>
-		<Spanish>Que lástima. Mis diplomáticos disfrutaban de vuestra franqueza y todo lo que revelaba sobre ti.</Spanish>
+		<Italian>Che peccato. I miei diplomatici hanno apprezzato moltissimo la tua eloquente disponibilità.</Italian>
 		<Polish>Jaka szkoda. Moi dyplomaci cieszyli się z Twojej otwartości i wszystkiego co z tego wynikało.</Polish>
+		<Spanish>Que lástima. Mis diplomáticos disfrutaban de vuestra franqueza y todo lo que revelaba sobre ti.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ASSUME_REALLY_SNUFFED</Tag>
@@ -330,17 +330,17 @@
 		<French>Qu'il en soit soit ainsi. Mais la prochaine fois que l'on se recontrera, ce sera peut-être sur le champ de bataille!</French>
 		<German>So sei es! Doch unser nächstes Treffen könnte auf dem Schlachtfeld sein!</German>
 		<Italian>Così sia! Ma la prossima volta che ci incontreremo, sarà sul campo di battaglia!</Italian>
-		<Spanish>Así sea. Pero la próxima vez que nos encontremos, ¡podría ser en el campo de batalla!</Spanish>
 		<Polish>Niech tak będzie. Ale następnym razem spotkamy się na polu bitwy!</Polish>
+		<Spanish>Así sea. Pero la próxima vez que nos encontremos, ¡podría ser en el campo de batalla!</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ASSUME_SNUFFED</Tag>
-		<English>So be it. But if we need you at the table, your absense may not be to your advantage.</English>
+		<English>So be it. But if we need you at the table, your absence may not be to your advantage.</English>
 		<French>Alors faites le, mais si nous avons besoin de vous la prochaine fois, ça ne sera pas à vÔtre avantage.</French>
 		<German>So sei es. Eure Abwesenheit vom Verhandlungstisch wird jedoch nicht zu Eurem Vorteil sein.</German>
-		<Italian>Così sia. Ma se abbiamo bisogni di te al tavolo delle trattative, la tua assenza non ti sarà di vantaggio.</Italian>
-		<Spanish>Así sea. Pero si os necesitamos en la mesa de negociaciones, puede que vuestra ausencia no os sea ventajosa.</Spanish>
+		<Italian>Così sia. Ma se avremo bisogno di te al tavolo delle trattative, la tua assenza non ti sarà di vantaggio.</Italian>
 		<Polish>Niech tak będzie. Ale jeśli będziemy musieli spotkać się przy stole, niech Twoja nieobecnośc nie będzie świadczyć na Twoją korzyść!</Polish>
+		<Spanish>Así sea. Pero si os necesitamos en la mesa de negociaciones, puede que vuestra ausencia no os sea ventajosa.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_1</Tag>
@@ -348,17 +348,17 @@
 		<French>Oui?</French>
 		<German>Ja?</German>
 		<Italian>Sì?</Italian>
-		<Spanish>¿Sí?</Spanish>
 		<Polish>Tak?</Polish>
+		<Spanish>¿Sí?</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_ANNOYED_1</Tag>
 		<English>We're becoming increasingly frustrated with %s1's behavior! (Annoyed)</English>
 		<French>Le comportement de %s1 nous irrite de plus en plus! (S'inquiète)</French>
 		<German>Das Verhalten von %s1 wird immer unerträglicher! (Verärgert)</German>
-		<Italian>Il comportamento di %s1 ci sta letteralmente irritando! (Tono infastidito)</Italian>
-		<Spanish>¡Cada vez nos irrita más el comportamiento de %s1! (Molesta)</Spanish>
+		<Italian>Il comportamento di %s1 ci sta irritando sempre più! (Tono infastidito)</Italian>
 		<Polish>%s1 sprawia, że nasza frustracja stale rośnie! (Zdenerwowany)</Polish>
+		<Spanish>¡Cada vez nos irrita más el comportamiento de %s1! (Molesta)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_ANNOYED_10</Tag>
@@ -366,17 +366,17 @@
 		<French>%s1 est vraiment pénible. (S'inquiète)</French>
 		<German>%s1 geht mir mächtig auf den Geist. (Verärgert)</German>
 		<Italian>%s1 è come il mal di schiena. (Tono infastidito)</Italian>
-		<Spanish>%s1 es una mosca cojonera. (Molesta)</Spanish>
 		<Polish>%s1 to prawdziwy wrzód na tyłku. (Zdenerwowany)</Polish>
+		<Spanish>%s1 es una mosca cojonera. (Molesta)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_ANNOYED_11</Tag>
 		<English>%s1 is a useless waste of space, as far as I'm concerned. (Annoyed)</English>
 		<French>En ce qui me concerne, %s1 n'est qu'un parasite inutile. (S'inquiète)</French>
 		<German>%s1 ist so überflüssig wie ein Kropf, das sage ich Euch. (Verärgert)</German>
-		<Italian>%s1 occupa solamente dello spazio inutile, per quanto mi riguarda. (Tono infastidito)</Italian>
-		<Spanish>Por lo que a nosotros respecta, %s1 solo sirve para desperdiciar espacio. (Molesta)</Spanish>
+		<Italian>%s1 è buono soltanto a occupare spazio, per quanto mi riguarda. (Tono infastidito)</Italian>
 		<Polish>%s1 tylko marnuje przestrzeń na ziemi. Takie jest moje zdanie. (Zdenerwowany)</Polish>
+		<Spanish>Por lo que a nosotros respecta, %s1 solo sirve para desperdiciar espacio. (Molesta)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_ANNOYED_12</Tag>
@@ -384,35 +384,35 @@
 		<French>Je ne fais absolument pas confiance à %s1. (S'inquiète)</French>
 		<German>Vor %s1 bin ich auf der Hut. (Verärgert)</German>
 		<Italian>Difficilmente credo che mi fiderei di %s1. (Tono infastidito)</Italian>
-		<Spanish>No me fío un pelo de %s1. (Molesta)</Spanish>
 		<Polish>%s1? - lepiej nie odwracaj się plecami. (Zdenerwowany)</Polish>
+		<Spanish>No me fío un pelo de %s1. (Molesta)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_ANNOYED_13</Tag>
 		<English>%s1 is a petty criminal masquerading as a world leader. (Annoyed)</English>
 		<French>%s1 n'est qu'une ignoble crapule sous ses traits de chef d'état. (S'inquiète)</French>
 		<German>%s1 ist ein kriminelles Individuum, dass sich als Staatsoberhaupt tarnt. (Verärgert)</German>
-		<Italian>%s1 è [NUM1:un criminale mascherato:una criminale mascherata] da leader. (Tono infastidito)</Italian>
+		<Italian>%s1 è [NUM1:un piccolo criminale camuffato:una piccola criminale camuffata] da leader. (Tono infastidito)</Italian>
+		<Polish>%s1 - tylko zgrywa się na światowego przywódcę, a jest przestępcą. (Zdenerwowany)</Polish>
 		<Spanish>%s1 es [NUM1:un:una] delincuente de pacotilla [NUM1:disfrazado:disfrazada] de líder mundial. (Molesta)</Spanish>
-		<Polish>%s1 - tylko zgrywa się na światowego przywódcę, a jest przestępcą.(Zdenerwowany)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_ANNOYED_14</Tag>
 		<English>A cheap, jumped-up little weasel. (Annoyed)</English>
 		<French>Ce n'est qu'une misérable fouine pleine de prétention. (S'inquiète)</French>
 		<German>%s1 ist einer dieser billigen Emporkömmlinge. (Verärgert)</German>
-		<Italian>È una donnola astuta. (Tono infastidito)</Italian>
-		<Spanish>Una sabandija chiflada de tres al cuarto. (Molesta)</Spanish>
+		<Italian>È una dannata donnola da quattro soldi. (Tono infastidito)</Italian>
 		<Polish>Mała, zawsze wyślizgująca się wydra. (Zdenerwowany)</Polish>
+		<Spanish>Una sabandija chiflada de tres al cuarto. (Molesta)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_ANNOYED_15</Tag>
 		<English>%s1 is a pain in the neck, to be honest. (Annoyed)</English>
 		<French>%s1 me fatigue vraiment, pour parler franchement. (S'inquiète)</French>
 		<German>Frei von der Leber weg, %s1 ist eine echte Nervensäge. (Verärgert)</German>
-		<Italian>Ad essere sinceri %s1 è come il torcicollo. (Tono infastidito)</Italian>
+		<Italian>A essere sinceri, %s1 è come il torcicollo. (Tono infastidito)</Italian>
+		<Polish>%s1 tylko przyprawia mi ból głowy, żeby nie skłamać. (Zdenerwowany)</Polish>
 		<Spanish>%s1 es toda una molestia, para ser sinceros. (Molesta)</Spanish>
-		<Polish>%s1 tylko przyprawia mi ból głowy, żeby nie skłamać.(Zdenerwowany)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_ANNOYED_2</Tag>
@@ -420,44 +420,44 @@
 		<French>%s1 est une personne extrêmement agaçante. (S'inquiète)</French>
 		<German>%s1 ist eine extrem nervige Person! (Verärgert)</German>
 		<Italian>%s1 è una persona estremamente fastidiosa. (Tono infastidito)</Italian>
-		<Spanish>%s1 es una persona tremendamente fastidiosa. (Molesta)</Spanish>
 		<Polish>%s1 jest niezmiernie irytującą osobą. (Zdenerwowany)</Polish>
+		<Spanish>%s1 es una persona tremendamente fastidiosa. (Molesta)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_ANNOYED_3</Tag>
 		<English>%s1 tries my patience. (Annoyed)</English>
 		<French>%s1 pousse ma patience à bout. (S'inquiète)</French>
 		<German>%s1 stellt meine Geduld wirklich auf eine harte Probe! (Verärgert)</German>
-		<Italian>%s1 sta mettendo a dura prova la mia pazienza. (Tono infastidito)</Italian>
-		<Spanish>%s1 pone a prueba mi paciencia. (Molesta)</Spanish>
+		<Italian>%s1 mette a dura prova la mia pazienza. (Tono infastidito)</Italian>
 		<Polish>%s1 chce sprawdzić jak wielka jest moja cierpliwość. (Zdenerwowany)</Polish>
+		<Spanish>%s1 pone a prueba mi paciencia. (Molesta)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_ANNOYED_4</Tag>
 		<English>I don't like %s1 much, to be honest. (Annoyed)</English>
 		<French>Je n'aime pas beaucoup %s1, pour être honnête. (S'inquiète)</French>
 		<German>%s1 mag ich nicht besonders, um ehrlich zu sein. (Verärgert)</German>
-		<Italian>Ad essere sinceri, %s1 non mi piace molto. (Tono infastidito)</Italian>
+		<Italian>A essere sinceri, %s1 non mi piace molto. (Tono infastidito)</Italian>
+		<Polish>%s1? Szczerze mówiąc - nie lubię. (Zdenerwowany)</Polish>
 		<Spanish>La verdad es que no apreciamos mucho a %s1. (Molesta)</Spanish>
-		<Polish>%s1? Szczerze mówiąc - nie lubię.(Zdenerwowany)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_ANNOYED_5</Tag>
 		<English>%s1 is more trouble than [NUM1:he:she:x:x] is worth. (Annoyed)</English>
 		<French>%s1 ne vaut pas la peine qu'on s'intéresse à [NUM1:lui:elle:x:x]. (S'inquiète)</French>
 		<German>%s1 verursacht mehr Ärger, als [NUM1:er:sie:x:x] es wert ist. (Verärgert)</German>
-		<Italian>%s1 è più [NUM1:noioso:noiosa] di quanto valga. (Tono infastidito)</Italian>
-		<Spanish>%s1 no trae más que problemas. (Molesta)</Spanish>
+		<Italian>%s1 crea più fastidi di quanti ne risolve. (Tono infastidito)</Italian>
 		<Polish>%s1 tylko sprawia kłopoty. (Zdenerwowany)</Polish>
+		<Spanish>%s1 no trae más que problemas. (Molesta)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_ANNOYED_6</Tag>
 		<English>I think that the world would be better off without %s1. (Annoyed)</English>
 		<French>Je crois que le monde se porterait bien mieux sans %s1. (S'inquiète)</French>
 		<German>Ich denke, die Welt wäre ohne %s1 besser dran. (Verärgert)</German>
-		<Italian>Credo che il mondo potrebbe essere un posto migliore senza la presenza di %s1. (Tono infastidito)</Italian>
-		<Spanish>Creo que el mundo estaría mejor sin %s1. (Molesta)</Spanish>
+		<Italian>Credo che il mondo potrebbe essere un posto migliore senza %s1. (Tono infastidito)</Italian>
 		<Polish>%s1? Myślę, że świat byłby lepszym miejscem bez takiej osoby. (Zdenerwowany)</Polish>
+		<Spanish>Creo que el mundo estaría mejor sin %s1. (Molesta)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_ANNOYED_7</Tag>
@@ -465,26 +465,26 @@
 		<French>Je n'apprécie pas beaucoup %s1. (S'inquiète)</French>
 		<German>Von %s1 halte ich nicht besonders viel. (Verärgert)</German>
 		<Italian>Non ho una grande considerazione di %s1. (Tono infastidito)</Italian>
-		<Spanish>No tenemos muy buena opinión de %s1, que digamos. (Molesta)</Spanish>
 		<Polish>%s1? Nie myślę zbyt wiele o takich ludziach. (Zdenerwowany)</Polish>
+		<Spanish>No tenemos muy buena opinión de %s1, que digamos. (Molesta)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_ANNOYED_8</Tag>
 		<English>%s1 is no better than [NUM1:he:she:x:x] should be. (Annoyed)</English>
 		<French>%s1 ne vaut pas mieux que ce qu'[NUM1:il:elle:x:x] est. (S'inquiète)</French>
 		<German>%s1 ist keinen Deut besser als erwartet. (Verärgert)</German>
-		<Italian>%s1 è esattamente come dovrebbe essere. (Tono infastidito)</Italian>
-		<Spanish>%s1 no es trigo limpio. (Molesta)</Spanish>
+		<Italian>%s1 non è migliore di come dovrebbe essere. (Tono infastidito)</Italian>
 		<Polish>%s1 jest dokładnie tym, na co ługuje. (Zdenerwowany)</Polish>
+		<Spanish>%s1 no es trigo limpio. (Molesta)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_ANNOYED_9</Tag>
 		<English>A worthless windbag, in my opinion. (Annoyed)</English>
 		<French>A mon avis, ce n'est qu'un moulin à paroles vides de sens. (S'inquiète)</French>
 		<German>Meiner Meinung nach kommt von %s1 nichts als heiße Luft. (Verärgert)</German>
-		<Italian>Secondo me dice solo un sacco di baggianate. (Tono infastidito)</Italian>
-		<Spanish>En nuestra opinión, esa persona es todo palabras huecas. (Molesta)</Spanish>
+		<Italian>Secondo me, è [NUM1:un parolaio:una parolaia] da quattro soldi. (Tono infastidito)</Italian>
 		<Polish>Moim zdaniem to bezwartościowa gaduła. (Zdenerwowany)</Polish>
+		<Spanish>En nuestra opinión, esa persona es todo palabras huecas. (Molesta)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_CAUTIOUS_1</Tag>
@@ -492,26 +492,26 @@
 		<French>Nous ne savons pas encore que penser de %s1. (se méfie)</French>
 		<German>Ich bin mir nicht sicher, was ich von %s1 halten soll. (Vorsichtig)</German>
 		<Italian>Ancora non sappiamo cosa pensare di %s1. (Tono cauto)</Italian>
-		<Spanish>No estamos muy seguros de qué pensar de %s1. (Cauta)</Spanish>
 		<Polish>Jeszcze nie wyrobiliśmy sobie opinii. (Ostrożny)</Polish>
+		<Spanish>No estamos muy seguros de qué pensar de %s1. (Cauta)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_CAUTIOUS_10</Tag>
 		<English>I'm adopting a "wait and see" attitude on %s1. (Cautious)</English>
 		<French>En ce qui concerne %s1, je préfère "attendre et voir". (se méfie)</French>
 		<German>Was %s1 angeht, warte ich erst mal ab. (Vorsichtig)</German>
-		<Italian>Con %s1 ho adottato una strategia di "attesa". (Tono cauto)</Italian>
-		<Spanish>Respecto a %s1, nuestra política es mantenernos a la expectativa. (Cauta)</Spanish>
+		<Italian>Con %s1 ho adottato una strategia attendista. (Tono cauto)</Italian>
 		<Polish>%s1? Niech przemówią czyny. Poczekajmy. (Ostrożny)</Polish>
+		<Spanish>Respecto a %s1, nuestra política es mantenernos a la expectativa. (Cauta)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_CAUTIOUS_11</Tag>
 		<English>I haven't made up my mind yet. (Cautious)</English>
 		<French>Je ne me suis pas encore fait une opinion à son sujet. (se méfie)</French>
 		<German>Zu %s1 habe ich mir noch kein Urteil gebildet. (Vorsichtig)</German>
-		<Italian>Non ho ancora le idee chiare a proposito. (Tono cauto)</Italian>
-		<Spanish>Aún no sabemos muy bien qué pensar. (Cauta)</Spanish>
+		<Italian>Non ho ancora le idee chiare in proposito. (Tono cauto)</Italian>
 		<Polish>Czort wie... (Ostrożny)</Polish>
+		<Spanish>Aún no sabemos muy bien qué pensar. (Cauta)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_CAUTIOUS_12</Tag>
@@ -519,17 +519,17 @@
 		<French>J'ai l'impression que %s1 mijote quelque chose, mais je ne peux encore rien prouver. (se méfie)</French>
 		<German>Mein Gefühl sagt mir, dass %s1 etwas vorhat, aber noch fehlen mir die Beweise. (Vorsichtig)</German>
 		<Italian>Ho la sensazione che %s1 stia tramando qualcosa, ma non ne ho le prove. (Tono cauto)</Italian>
-		<Spanish>Nos da la sensación de que %s1 trama algo, pero aún no tenemos pruebas. (Cauta)</Spanish>
 		<Polish>Mam przeczucie, że %s1 knuje jakiś szczwany plan, ale nie mam na to żadnych dowodów. (Ostrożny)</Polish>
+		<Spanish>Nos da la sensación de que %s1 trama algo, pero aún no tenemos pruebas. (Cauta)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_CAUTIOUS_13</Tag>
 		<English>%s1? Who knows? (Cautious)</English>
 		<French>%s1? Allez savoir... (se méfie)</French>
 		<German>%s1? Wer weiß? (Vorsichtig)</German>
-		<Italian>%s1? Chissà...? (Tono cauto)</Italian>
-		<Spanish>¿%s1? ¿Quién sabe? (Cauta)</Spanish>
+		<Italian>%s1? Chissà... (Tono cauto)</Italian>
 		<Polish>%s1? Kto wie? (Ostrożny)</Polish>
+		<Spanish>¿%s1? ¿Quién sabe? (Cauta)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_CAUTIOUS_14</Tag>
@@ -537,17 +537,17 @@
 		<French>Pour être tout à fait honnête, je ne sais que penser de %s1. (se méfie)</French>
 		<German>Um ehrlich zu sein, ich weiß nicht, was ich von %s1 halten soll. (Vorsichtig)</German>
 		<Italian>A essere sinceri, non so cosa pensare di %s1. (Tono cauto)</Italian>
-		<Spanish>No sabemos qué pensar de %s1, para qué engañaros. (Cauta)</Spanish>
 		<Polish>%s1? - zupełnie nie mam zdania. (Ostrożny)</Polish>
+		<Spanish>No sabemos qué pensar de %s1, para qué engañaros. (Cauta)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_CAUTIOUS_15</Tag>
 		<English>Reply hazy. Ask again later. (Cautious)</English>
 		<French>Je ne sais pas quoi vous dire. Reposez-moi la question plus tard. (se méfie)</French>
 		<German>Da habt Ihr mich auf dem falschen Fuß erwischt. Fragt später noch einmal. (Vorsichtig)</German>
-		<Italian>Risposta confusa. Riprova più tardi. (Tono cauto)</Italian>
-		<Spanish>Mmm... Ahora mismo no sabemos qué pensar. (Cauta)</Spanish>
+		<Italian>Non so cosa rispondere... magari richiedimelo più tardi. (Tono cauto)</Italian>
 		<Polish>Odpowiedź mglista. Spytaj później. (Ostrożny)</Polish>
+		<Spanish>Mmm... Ahora mismo no sabemos qué pensar. (Cauta)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_CAUTIOUS_2</Tag>
@@ -555,8 +555,8 @@
 		<French>%s1 est quelqu'un de correct, je pense... (se méfie)</French>
 		<German>%s1 scheint in Ordnung zu sein. (Vorsichtig))</German>
 		<Italian>Credo che %s1 sia una persona a posto. (Tono cauto)</Italian>
-		<Spanish>%s1 no es un problema para nosotros, suponemos. (Cauta)</Spanish>
 		<Polish>%s1 jest w porządku, Tak przypuszczam. (Ostrożny)</Polish>
+		<Spanish>%s1 no es un problema para nosotros, suponemos. (Cauta)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_CAUTIOUS_3</Tag>
@@ -564,8 +564,8 @@
 		<French>%s1 pourrait nous être utile. (se méfie)</French>
 		<German>%s1 könnte nützlich werden. (Vorsichtig)</German>
 		<Italian>%s1 ha la sua utilità. (Tono cauto)</Italian>
-		<Spanish>%s1 cumple su papel. (Cauta)</Spanish>
 		<Polish>%s1? - posiada właściwe zastosowanie. (Ostrożny)</Polish>
+		<Spanish>%s1 cumple su papel. (Cauta)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_CAUTIOUS_4</Tag>
@@ -573,35 +573,35 @@
 		<French>Je n'ai aucun problème avec %s1. (se méfie)</French>
 		<German>Mit %s1 habe ich bisher keine Probleme. (Vorsichtig)</German>
 		<Italian>Non ho problemi con %s1. (Tono cauto)</Italian>
-		<Spanish>No tenemos problemas con %s1. (Cauta)</Spanish>
 		<Polish>%s1 nie sprawia mi kłopotów. (Ostrożny)</Polish>
+		<Spanish>No tenemos problemas con %s1. (Cauta)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_CAUTIOUS_5</Tag>
 		<English>%s1 is all right, I guess. (Cautious)</English>
 		<French>J'imagine que %s1 est quelqu'un de bien. (se méfie)</French>
 		<German>Mit %s1 scheint es keine Probleme zu geben. (Vorsichtig)</German>
-		<Italian>Credo che %s1 sia in gamba. (Tono cauto)</Italian>
-		<Spanish>%s1 no es un problema para nosotros, suponemos. (Cauta)</Spanish>
+		<Italian>Credo che %s1 sia una persona in gamba. (Tono cauto)</Italian>
 		<Polish>%s1 jest w porządku, tak sądzę. (Ostrożny)</Polish>
+		<Spanish>%s1 no es un problema para nosotros, suponemos. (Cauta)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_CAUTIOUS_6</Tag>
 		<English>I'm not too sure about %s1, to be honest. (Cautious)</English>
 		<French>Je ne sais que penser de %s1, pour être honnête. (se méfie)</French>
 		<German>Zu %s1 habe ich mir ehrlich gesagt noch keine rechte Meinung gebildet. (Vorsichtig)</German>
-		<Italian>Ad essere sinceri, non so ancora cosa pensare di %s1. (Tono cauto)</Italian>
-		<Spanish>No sabemos qué pensar de %s1, para ser sinceros. (Cauta)</Spanish>
+		<Italian>A essere sinceri, non so ancora cosa pensare di %s1. (Tono cauto)</Italian>
 		<Polish>%s1? - mówiąc szczerze, nie wyrobiłem sobie jeszcze opinii. (Ostrożny)</Polish>
+		<Spanish>No sabemos qué pensar de %s1, para ser sinceros. (Cauta)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_CAUTIOUS_7</Tag>
 		<English>%s1 is all right as long as you keep an eye on [NUM1:him:her:x:x]. (Cautious)</English>
 		<French>Vous n'avez rien à craindre de %s1 tant que vous [NUM1:le:la:x:x] surveillez. (se méfie)</French>
 		<German>%s1 ist in Ordnung, solange man [NUM1:ihn:sie:x:x] im Auge behält. (Vorsichtig)</German>
-		<Italian>%s1 è una persona a posto, almeno finché [NUM1:gli:le] terrai gli occhi addosso. (Tono cauto)</Italian>
-		<Spanish>%s1 no es un problema siempre que no [NUM1:lo:la] perdáis de vista. (Cauta)</Spanish>
+		<Italian>%s1 è una persona a posto, almeno finché [NUM1:gli:le] tieni gli occhi addosso. (Tono cauto)</Italian>
 		<Polish>%s1 jest w porządku, dopóki zachowujesz czujność. (Ostrożny)</Polish>
+		<Spanish>%s1 no es un problema siempre que no [NUM1:lo:la] perdáis de vista. (Cauta)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_CAUTIOUS_8</Tag>
@@ -609,8 +609,8 @@
 		<French>Nous faisons confiance à %s1. Parfois... (se méfie)</French>
 		<German>Ich vertraue %s1. Manchmal. (Vorsichtig)</German>
 		<Italian>Ci fidiamo di %s1. Qualche volta. (Tono cauto)</Italian>
-		<Spanish>%s1 nos parece de fiar. A veces. (Cauta)</Spanish>
 		<Polish>%s1? Okazujemy zaufanie. Czasami... (Ostrożny)</Polish>
+		<Spanish>%s1 nos parece de fiar. A veces. (Cauta)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_CAUTIOUS_9</Tag>
@@ -618,8 +618,8 @@
 		<French>J'ai du mal à me faire une opinion de %s1. (se méfie)</French>
 		<German>Ich bin nicht sicher, was ich von %s1 halten soll. (Vorsichtig)</German>
 		<Italian>Non so cosa pensare di %s1. (Tono cauto)</Italian>
-		<Spanish>No sabemos qué opinión forjarnos de %s1. (Cauta)</Spanish>
 		<Polish>%s1? Prawdę mówiąc nie wiem co mam myśleć. (Ostrożny)</Polish>
+		<Spanish>No sabemos qué opinión forjarnos de %s1. (Cauta)</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_ATTITUDE_PLAYER_FRIENDLY_1</Tag>
@@ -635,7 +635,7 @@
 		<English>A better friend would be hard to find. (Friendly)</English>
 		<French>Il serait difficile de trouver meilleure compagnie. (Amical)</French>
 		<German>Eine verlässlichere Person als %s1 kann man kaum finden. (Erfreut)</German>
-		<Italian>Sarebbe difficile trovare amicizie migliori. (Tono amichevole)</Italian>
+		<Italian>È difficile trovare [NUM1:un amico:un'amica] migliore. (Tono amichevole)</Italian>
 		<Spanish>Es difícil de encontrar una amistad mejor. (Amistosa)</Spanish>
 		<Polish>Lepszego przyjaciela trudno znaleźć (Przyjacielski)</Polish>
 	</TEXT>
@@ -644,7 +644,7 @@
 		<English>%s1 has many admirable traits. (Friendly)</English>
 		<French>%s1 a beaucoup de qualités admirables. (Amical)</French>
 		<German>%s1 besitzt viele bewundernswerte Charaktereigenschaften. (Freundlich)</German>
-		<Italian>%s1 ha molti principi ammirevoli. (Tono amichevole)</Italian>
+		<Italian>%s1 ha molte qualità ammirevoli. (Tono amichevole)</Italian>
 		<Spanish>%s1 tiene muchas cualidades dignas de admiración. (Amistosa)</Spanish>
 		<Polish>%s1 posiada wiele zalet godnych podziwu. (Przyjacielski)</Polish>
 	</TEXT>
@@ -653,7 +653,7 @@
 		<English>%s1 is a leader of quality. (Friendly)</English>
 		<French>%s1 règne avec grandeur et sagesse. (Amical)</French>
 		<German>%s1 ist ein verantwortungsbewusstes Staatsoberhaupt. (Freundlich)</German>
-		<Italian>%s1 è un leader di qualità. (Tono amichevole)</Italian>
+		<Italian>%s1 è [NUM1:un:una] leader di qualità. (Tono amichevole)</Italian>
 		<Spanish>%s1 es [NUM1:un:una] líder como [NUM1:pocos:pocas]. (Amistosa)</Spanish>
 		<Polish>%s1 to przywódca wielkiego formatu. (Przyjacielski)</Polish>
 	</TEXT>
@@ -680,7 +680,7 @@
 		<English>They don't come any better than %s1! (Friendly)</English>
 		<French>Difficile de trouver quelqu'un de plus agréable! (Amical)</French>
 		<German>Niemand ist besser als %s1! (Freundlich)</German>
-		<Italian>Difficile trovare una persona migliore di %s1! (Tono amichevole)</Italian>
+		<Italian>È difficile trovare una persona migliore di %s1! (Tono amichevole)</Italian>
 		<Spanish>¡Ya no se encuentra gente como %s1! (Amistosa)</Spanish>
 		<Polish>%s1 - i wszystko wiadomo! (Przyjacielski)</Polish>
 	</TEXT>
@@ -743,7 +743,7 @@
 		<English>%s1 is a faithful friend and boon companion. (Friendly)</English>
 		<French>%s1 est fidèle en amitié et très sociable. (Amical)</French>
 		<German>Mit %s1 kann man durch dick und dünn gehen. (Erfreut)</German>
-		<Italian>%s1 è un'amicizia sulla quale contare e una piacevole compagnia. (Tono amichevole)</Italian>
+		<Italian>%s1 è [NUM1:un amico:un'amica] e [NUM1:un compagno:una compagna] fedele. (Tono amichevole)</Italian>
 		<Spanish>%s1 es [NUM1:un amigo:una amiga] fiel y [NUM1:un compañero:una compañera] excepcional. (Amistosa)</Spanish>
 		<Polish>%s1 jest wiernym przyjacielem i miłym towarzyszem. (Przyjacielski)</Polish>
 	</TEXT>
@@ -797,7 +797,7 @@
 		<English>Not to be trusted at all. (Furious)</English>
 		<French>Il ne faut jamais lui faire confiance. (Colère)</French>
 		<German>%s1 darf man keinesfalls trauen. (Wütend)</German>
-		<Italian>Da non fidarsi per niente al mondo. (Tono furioso)</Italian>
+		<Italian>Non puoi fidarti per niente al mondo. (Tono furioso)</Italian>
 		<Spanish>No le confiaría ni un alfiler. (Furiosa)</Spanish>
 		<Polish>Nie można mu zupełnie ufać. (Wściekły)</Polish>
 	</TEXT>
@@ -815,7 +815,7 @@
 		<English>%s1 is a rat fink. (Furious)</English>
 		<French>%s1 n'est qu'une crapule. (Colère)</French>
 		<German>%s1 ist eine ganz miese Ratte! (Wütend)</German>
-		<Italian>%s1 è una sporca spia. (Tono furioso)</Italian>
+		<Italian>%s1 è uno sporco ratto. (Tono furioso)</Italian>
 		<Spanish>%s1 es una rata despreciable. (Furiosa)</Spanish>
 		<Polish>%s1 to wysuszony, szczurzy bobek! (Wściekły)</Polish>
 	</TEXT>
@@ -833,7 +833,7 @@
 		<English>I neither like nor trust %s1. (Furious)</English>
 		<French>Je n'aime pas %s1 et je ne lui fais pas confiance. (Colère)</French>
 		<German>%s1? Ich mag diese Person nicht und traue ihr auch nicht über den Weg! (Wütend)</German>
-		<Italian>Nemmeno io mi fido di %s1! (Tono furioso)</Italian>
+		<Italian>Non mi piace, né mi fido di %s1! (Tono furioso)</Italian>
 		<Spanish>Ni nos gusta %s1 ni confiamos en [NUM1:él:ella]. (Furiosa)</Spanish>
 		<Polish>%s1? Doradzam brak zaufania. (Wściekły)</Polish>
 	</TEXT>
@@ -851,7 +851,7 @@
 		<English>%s1 is a deceitful cretin! (Furious)</English>
 		<French>%s1 est un summum de bêtise! (Colère)</French>
 		<German>%s1 ist ein hinterlistiger Kretin! (Wütend)</German>
-		<Italian>%s1 è [NUM1:una schifosa disonesta:uno schifoso disonesto]! (Tono furioso)</Italian>
+		<Italian>%s1 è [NUM1:uno schifoso disonesto:una schifosa disonesta]! (Tono furioso)</Italian>
 		<Spanish>¡%s1 es [NUM1:un cretino embustero:una cretina embustera]! (Furiosa)</Spanish>
 		<Polish>%s1 jest oszukańczym kretynem! (Wściekły)</Polish>
 	</TEXT>
@@ -878,7 +878,7 @@
 		<English>%s1? A treacherous cowardly baboon. (Furious)</English>
 		<French>%s1? C'est la trahison, la lâcheté et la bêtise réunies. (Colère)</French>
 		<German>%s1 hat keinen Funken Ehre im Leib! (Wütend)</German>
-		<Italian>%s1? [NUM1:Un babbuino traditore:Una babbuina traditrice]. (Tono furioso)</Italian>
+		<Italian>%s1? [NUM1:Un babbuino codardo:Una babbuina codarda] e [NUM1:traditore:traditrice]. (Tono furioso)</Italian>
 		<Spanish>¿%s1? Es [NUM1:un:una] chimpancé [NUM1:traicionero:traicionera] y cobarde. (Furiosa)</Spanish>
 		<Polish>%s1? Zdradziecki, tchórzliwy pawian. (Wściekły)</Polish>
 	</TEXT>
@@ -887,7 +887,7 @@
 		<English>%s1 is not worth a bucket of owl spit. (Furious)</English>
 		<French>%s1 n'a absolument pas le moindre intérêt. (Colère)</French>
 		<German>%s1 ist nicht mal das Schwarze unter dem Fingernagel wert! (Wütend)</German>
-		<Italian>%s1 non vale lo sterco di un cane. (Tono furioso)</Italian>
+		<Italian>%s1 non vale l'aria che respira. (Tono furioso)</Italian>
 		<Spanish>%s1 no vale ni una boñiga pinchada en un palo. (Furiosa)</Spanish>
 		<Polish>%s1 nie jest wart wiadra śliny sowy. (Wściekły)</Polish>
 	</TEXT>
@@ -968,7 +968,7 @@
 		<English>No complaints here! (Pleased)</English>
 		<French>Je n'ai pas lieu de me plaindre! (Favorable)</French>
 		<German>Über %s1 kann ich nichts Schlechtes sagen! (Zufrieden)</German>
-		<Italian>Niente da dire da parte nostra! (Tono contento)</Italian>
+		<Italian>Niente da ridire da parte nostra! (Tono contento)</Italian>
 		<Spanish>¡Ninguna queja al respecto! (Amable)</Spanish>
 		<Polish>Ja nie narzekam! (Uprzejmy)</Polish>
 	</TEXT>
@@ -977,7 +977,7 @@
 		<English>%s1? A good person to have at your back. (Pleased)</English>
 		<French>%s1? C'est quelqu'un d'utile à garder dans ses relations. (Favorable)</French>
 		<German>Auf %s1 kann man sich verlassen. (Zufrieden)</German>
-		<Italian>%s1? Una brava persona per guardarti le spalle. (Tono contento)</Italian>
+		<Italian>%s1? Una persona di cui puoi fidarti. (Tono contento)</Italian>
 		<Spanish>¿%s1? Es una buena persona. (Amable)</Spanish>
 		<Polish>%s1? Świetne zabezpieczenie tyłów. (Uprzejmy)</Polish>
 	</TEXT>
@@ -1049,7 +1049,7 @@
 		<English>I suppose you know best.</English>
 		<French>Je suppose que vous savez ce que vous faites...</French>
 		<German>Ich nehme an, Ihr wisst es besser.</German>
-		<Italian>Credo tu sappia ciò che è meglio.</Italian>
+		<Italian>Immagino che tu sappia ciò che è meglio.</Italian>
 		<Spanish>Suponemos que sabéis lo que hacéis.</Spanish>
 		<Polish>Przypuszczam, że wiesz lepiej co dla Ciebie dobre....</Polish>
 	</TEXT>
@@ -1058,7 +1058,7 @@
 		<English>On your head be it.</English>
 		<French>A vos risques et périls...</French>
 		<German>Auf Eure Verantwortung.</German>
-		<Italian>Così sia.</Italian>
+		<Italian>Ricada sulla tua coscienza.</Italian>
 		<Spanish>Queda sobre vuestra conciencia.</Spanish>
 		<Polish>Ten ciężar spocznie na Twoim sumieniu.</Polish>
 	</TEXT>
@@ -1094,7 +1094,7 @@
 		<English>Please join us by adopting %s1.</English>
 		<French>Rejoignez-nous et adoptez: %s1.</French>
 		<German>Bitte nehmt wie wir die Gesellschaftsform "%s1" an.</German>
-		<Italian>Unisciti a noi scegliendo la forma di governo: %s1.</Italian>
+		<Italian>Unisciti a noi scegliendo %s1 come forma di governo: .</Italian>
 		<Spanish>Por favor, uníos a nosotros y adoptad [NUM1:el:la:los:las] %s1.</Spanish>
 		<Polish>Proszę dołącz do nas i przyjmij: %s1.</Polish>
 	</TEXT>
@@ -1103,7 +1103,7 @@
 		<English>Adopt %s1 - before it's too late!</English>
 		<French>Adoptez: %s1! Après, il sera trop tard!</French>
 		<German>Nehmt die Gesellschaftsform "%s1" an, bevor es zu spät ist!</German>
-		<Italian>Passa alla forma di governo: %s1, prima che sia troppo tardi!</Italian>
+		<Italian>Adotta %s1 come forma di governo, prima che sia troppo tardi!</Italian>
 		<Spanish>¡Adoptad [NUM1:el:la:los:las] %s1 antes de que sea demasiado tarde!</Spanish>
 		<Polish>Przyjmij: %s1! Zanim będzie za późno!</Polish>
 	</TEXT>
@@ -1112,7 +1112,7 @@
 		<English>All the cool civs are adopting %s1, [CT_NAME]. How about you?</English>
 		<French>[CT_NAME], toutes les civilisations évoluées adoptent: %s1. Pourquoi pas vous?</French>
 		<German>Alle fortschrittlichen Völker entscheiden sich für die Gesellschaftsform "%s1". Wie steht es mit Euch, [CT_NAME]?</German>
-		<Italian>Tutte le civiltà stanno adottando la forma di governo: %s1, [CT_NAME]. E tu?</Italian>
+		<Italian>Tutte le civiltà stanno adottando %s1 come forma di governo, [CT_NAME]. E tu?</Italian>
 		<Spanish>Todas las civilizaciones que se precian están adoptando [NUM1:el:la:los:las] %s1, [CT_NAME]. ¿Y vosotros?</Spanish>
 		<Polish>[CT_NAME], wszystkie cywilizacje, które są w porządku, przyjmują: %s1. A Ty?</Polish>
 	</TEXT>
@@ -1121,7 +1121,7 @@
 		<English>Have you considered adopting %s1? it will bring our two civilizations even closer together.</English>
 		<French>Avez-vous pensé à adopter: %s1? Cela rapprocherait encore plus nos deux civilisations.</French>
 		<German>Könntet Ihr Euch vorstellen, die Gesellschaftsform "%s1" anzunehmen? Das würde das Verhältnis zwischen unseren Völkern deutlich verbessern.</German>
-		<Italian>Hai preso in considerazione la forma di governo %s1? Le nostre due civiltà saranno ancora più vicine.</Italian>
+		<Italian>Hai considerato %s1 come forma di governo? Le nostre due civiltà saranno ancora più vicine.</Italian>
 		<Spanish>¿Habéis pensado en adoptar [NUM1:el:la:los:las] %s1? Eso uniría todavía más a nuestras civilizaciones.</Spanish>
 		<Polish>Czy rozważyłeś przyjęcie: %s1? to zbliży nasze cywilizacje.</Polish>
 	</TEXT>
@@ -1130,7 +1130,7 @@
 		<English>I urge you to adopt %s1, [CT_NAME]. Your civilization will be the better for it.</English>
 		<French>[CT_NAME], je vous conseille vivement d'adopter: %s1. Votre civilisation n'en tirerait que des avantages.</French>
 		<German>Ich rate Euch dringend, die Gesellschaftsform "%s1" anzunehmen. Euer Volk würde gewiss davon profitieren.</German>
-		<Italian>Ti sprono ad adottare la forma di governo: %s1, [CT_NAME]. La tua civiltà renderà al meglio.</Italian>
+		<Italian>Ti sprono ad adottare %s1 come forma di governo, [CT_NAME]. La tua civiltà ne trarrà vantaggio.</Italian>
 		<Spanish>Os instamos a que adoptéis [NUM1:el:la:los:las] %s1, [CT_NAME]. Vuestra civilización se beneficiará de ello.</Spanish>
 		<Polish>[CT_NAME], nalegam na przyjęcie przez Ciebie: %s1. To tylko dla dobra Twojej cywilizacji.</Polish>
 	</TEXT>
@@ -1139,7 +1139,7 @@
 		<English>%s1 is extremely useful, [CT_NAME]. [CT_CIV_SHORT] would do well to adopt it.</English>
 		<French>[CT_NAME], nous trouvons ceci extrêmement utile: %s1. Les [CT_CIV_SHORT] feraient mieux de l'adopter.</French>
 		<German>Die Gesellschaftsform "%s1" ist extrem sinnvoll, [CT_NAME]. Euer Volk würde davon profitieren.</German>
-		<Italian>La forma di governo: %s1 è estremamente utile, [CT_NAME]. [CT_CIV_SHORT:1] farebbe bene ad adottarla.</Italian>
+		<Italian>%s1 è estremamente utile, [CT_NAME]. [CT_CIV_SHORT:1] farebbe bene ad adottarla come forma di governo.</Italian>
 		<Spanish>[NUM1:El:La:Los:Las] %s1 [NUM1:es muy útil:es muy útil:son muy útiles:son muy útiles], [CT_NAME]. [CT_CIV_SHORT] haría bien en [NUM1:adoptarlo:adoptarla:adoptarlos:adoptarlas].</Spanish>
 		<Polish>%s1 - ta doktryna jest niezmiernie przydatna, [CT_NAME]. Lud [CT_CIV_SHORT] dobrze by zrobił, gdyby ją wprowadził.</Polish>
 	</TEXT>
@@ -1877,7 +1877,7 @@
 		<English>To be honest, raw greed is the only thing stopping us from destroying your puny civilization. Pay us what we want, or perish.</English>
 		<French>Je vais être honnête avec vous: la cupidité est la seule chose qui nous empêche de rayer votre médiocre civilisation de la carte. Donnez-nous ce que nous demandons ou mourez.</French>
 		<German>Um ehrlich zu sein, hat mich bisher nur die reine Gier davon abgehalten, Eure mickrige Zivilisation zu vernichten! Zahlt mir, was ich verlange, oder sterbt!</German>
-		<Italian>Ad essere sinceri, è l'avidità che ci trattiene dal distruggere la tua insignificante civiltà. Dacci quello che vogliamo, o la pagherai.</Italian>
+		<Italian>A essere sinceri, è l'avidità che ci trattiene dal distruggere la tua insignificante civiltà. Dacci quello che vogliamo o la pagherai cara.</Italian>
 		<Spanish>Para ser sinceros, la pura avaricia es lo único que nos impide destruir vuestra insignificante civilización. Pagadnos lo que queremos o pereced.</Spanish>
 		<Polish>Prawdę mówiąc, to tylko zwykła chciwość powstrzymuje nas od zniszczenia twojej słabowitej cywilizacji. Zapłać nam, albo giń.</Polish>
 	</TEXT>
@@ -1922,7 +1922,7 @@
 		<English>I believe in peace at any price, [CT_NAME]. This is your price.</English>
 		<French>Je veux la paix à n'importe quel prix, [CT_NAME]. Et voici celui que vous devez payer.</French>
 		<German>Ich glaube an Frieden um jeden Preis, [CT_NAME]. Hier ist mein Preis.</German>
-		<Italian>Io credo nella pace ad ogni prezzo, [CT_NAME]. Questo è il tuo.</Italian>
+		<Italian>Io credo nella pace a ogni costo, [CT_NAME]. Questo è il tuo.</Italian>
 		<Spanish>Creemos en la paz a cualquier precio, [CT_NAME]. Éste es vuestro precio.</Spanish>
 		<Polish>Wierzę w pokój za wszelką cenę, [CT_NAME]. A to jest cena dla Ciebie.</Polish>
 	</TEXT>
@@ -4053,7 +4053,7 @@
 		<English>Here's the deal.</English>
 		<French>Voici le marché.</French>
 		<German>Das ist unser Vorschlag.</German>
-		<Italian>Ecco l'affare.</Italian>
+		<Italian>Ecco la proposta.</Italian>
 		<Spanish>Éste es el trato.</Spanish>
 		<Polish>Oto warunki.</Polish>
 	</TEXT>
@@ -6408,10 +6408,10 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_RESUME_TALKS_RELUCTANT</Tag>
-		<English>If you insist. But I have enjoyed your absense.</English>
+		<English>If you insist. But I have enjoyed your absence.</English>
 		<French>Si vous le souhaitez, mais j'ai apprécié votre absence.</French>
 		<German>Wenn Ihr darauf besteht. Aber ich genoss Eure Abwesenheit.</German>
-		<Italian>Se insisti, ma mi sono goduto la tua assenza.</Italian>
+		<Italian>Se insisti... ma ho apprezzato la tua assenza.</Italian>
 		<Spanish>Si insistís... Pero debo decir que he disfrutado vuestra ausencia.</Spanish>
 		<Polish>Jeśli nalegasz. Cieszyłem się z Twojej nieobecności.</Polish>
 	</TEXT>
@@ -7640,7 +7640,7 @@
 		<English>Care to negotiate?</English>
 		<French>Voulez-vous renégocier?</French>
 		<German>Wollen wir darüber verhandeln?</German>
-		<Italian>Vuoi negoziare di nuovo?</Italian>
+		<Italian>Ti interessa negoziare?</Italian>
 		<Spanish>¿Os importaría renegociar?</Spanish>
 		<Polish>Może po negocjujemy?</Polish>
 	</TEXT>
@@ -7656,14 +7656,15 @@
 	<TEXT>
 		<Tag>USER_DIPLO_RESEARCH_TECH_1</Tag>
 		<English>%s1...</English>
-		<Spanish>...%s1?</Spanish>
+		<Italian>...%s1</Italian>
+		<Spanish>...%s1</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>USER_DIPLO_REVOLUTION_1</Tag>
 		<English>But of course... we now see the error of our ways. (Start Revolution)</English>
 		<French>Mais bien sûr... nous comprenons maintenant nos erreurs. (Révolution)</French>
 		<German>Natürlich... Die Zeit ist wirklich reif für einen Umbruch. (Revolution)</German>
-		<Italian>Ma naturalmente... adesso vediamo gli errori che abbiamo commesso. (Inizia la rivoluzione)</Italian>
+		<Italian>Ma certo... adesso possiamo vedere gli errori che abbiamo commesso. (Inizia la rivoluzione)</Italian>
 		<Spanish>Claro... Ahora vemos cuán equivocados estábamos. (Iniciar una revolución)</Spanish>
 		<Polish>Ależ oczywiście... teraz widzimy, że pobłądziliśmy. (Rozpoczyna się Rewolucja)</Polish>
 	</TEXT>
@@ -7699,7 +7700,7 @@
 		<English>Lets stop this pointless fighting and declare peace!</English>
 		<French>Mettons fin à cette guerre inutile et faisons la paix!</French>
 		<German>Lasst uns dieses sinnlose Blutvergießen beenden und Frieden schließen!</German>
-		<Italian>Interrompiamo questi combattimenti senza senso e dichiariamo la pace!</Italian>
+		<Italian>Interrompiamo questa lotta senza senso e facciamo pace!</Italian>
 		<Spanish>¡Detengamos esta lucha absurda y hagamos las paces!</Spanish>
 		<Polish>Zakończmy tę bezsensowną walkę i zawrzyjmy pokój!</Polish>
 	</TEXT>
@@ -7715,6 +7716,7 @@
 	<TEXT>
 		<Tag>USER_DIPLO_TARGET_CITY_1</Tag>
 		<English>%s1...</English>
+		<Italian>...%s1?</Italian>
 		<Spanish>...%s1?</Spanish>
 	</TEXT>
 	<TEXT>

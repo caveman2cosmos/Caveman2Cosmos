@@ -110,6 +110,7 @@
 		<Tag>TXT_KEY_CITY_NAME_ADDIS_ABABA</Tag>
 		<English>Addis Abeba</English>
 		<French>Addis-Abeba</French>
+		<Italian>Addis Abeba</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ADDI_GALAMO</Tag>
@@ -860,7 +861,7 @@
 		<English>Asyut</English>
 		<French>Assiout</French>
 		<German>Assiut</German>
-		<Italian>AsyuT</Italian>
+		<Italian>Asyūṭ</Italian>
 		<Spanish>Asiut</Spanish>
 	</TEXT>
 	<TEXT>
@@ -2257,6 +2258,7 @@
 		<Tag>TXT_KEY_CITY_NAME_CORDOBA</Tag>
 		<English>Córdoba</English>
 		<French>Cordoue</French>
+		<Italian>Cordoba</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CORFINIUM</Tag>
@@ -2389,6 +2391,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_DAMASCUS</Tag>
 		<English>Damascus</English>
+		<Italian>Damasco</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_DAMASQU</Tag>
@@ -2531,6 +2534,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_DHAKA</Tag>
 		<English>Dhaka</English>
+		<Italian>Dacca</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_DHAMAR</Tag>
@@ -2968,7 +2972,7 @@
 		<English>Etruscan</English>
 		<French>Etrusques</French>
 		<German>Etrusker</German>
-		<Italian>Etrusca</Italian>
+		<Italian>Etruria</Italian>
 		<Spanish>Etrusca</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3288,6 +3292,7 @@
 		<English>Giza</English>
 		<French>Gizeh</French>
 		<German>Gizeh</German>
+		<Italian>Giza</Italian>
 		<Spanish>Guiza</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3301,6 +3306,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_GOA</Tag>
 		<English>Goa</English>
+		<Italian>Goa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_GOIOGOUEN</Tag>
@@ -3334,7 +3340,7 @@
 		<English>Goth</English>
 		<French>Goths</French>
 		<German>Gote</German>
-		<Italian>Gota</Italian>
+		<Italian>Gotica</Italian>
 		<Spanish>Goda</Spanish>
 	</TEXT>
 	<TEXT>
@@ -3473,6 +3479,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HAIFA</Tag>
 		<English>Haifa</English>
+		<Italian>Haifa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HAKODATE</Tag>
@@ -4180,6 +4187,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_IZMIT</Tag>
 		<English>İzmit</English>
+		<Italian>İzmit</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_IZTAPAM</Tag>
@@ -9471,7 +9479,7 @@
 		<English>Trebizond</English>
 		<French>Trébizonde</French>
 		<German>Trapezunt</German>
-		<Italian>Trapesunta</Italian>
+		<Italian>Trebisonda</Italian>
 		<Spanish>Trapezunta</Spanish>
 	</TEXT>
 	<TEXT>
