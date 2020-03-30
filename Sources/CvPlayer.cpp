@@ -8148,12 +8148,12 @@ bool CvPlayer::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool
 
 bool CvPlayer::canConstruct(BuildingTypes eBuilding, bool bContinue, bool bTestVisible, bool bIgnoreCost, TechTypes eIgnoreTechReq, int* probabilityEverConstructable, bool bAffliction, bool bExposed) const
 {
-	bool bResult;
-	bool bHaveCachedResult;
-
 	PROFILE_FUNC();
 
 	if (eBuilding == NO_BUILDING) return false;
+
+	bool bResult;
+	bool bHaveCachedResult;
 
 	//	Cache the param variant with false, true, true as this is used VERY heavily and
 	//	also the default param flavor
@@ -16581,7 +16581,7 @@ bool CvPlayer::canHurry(HurryTypes eIndex) const
 }
 
 
-bool CvPlayer::canPopRush()
+bool CvPlayer::canPopRush() const
 {
 	return (m_iPopRushHurryCount > 0);
 }
