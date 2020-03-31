@@ -9697,8 +9697,6 @@ void CvCity::changeBonusGoodHealth(int iChange)
 	if (iChange != 0)
 	{
 		m_iBonusGoodHealth += iChange;
-		FAssertMsg(getBonusGoodHealth() >= 0, "getBonusGoodHealth is expected to be >= 0");
-
 		AI_setAssignWorkDirty(true);
 
 		if (getTeam() == GC.getGame().getActiveTeam())
@@ -9714,8 +9712,6 @@ void CvCity::changeBonusBadHealth(int iChange)
 	if (iChange != 0)
 	{
 		m_iBonusBadHealth += iChange;
-		FAssertMsg(getBonusBadHealth() <= 0, "getBonusBadHealth is expected to be <= 0");
-
 		AI_setAssignWorkDirty(true);
 
 		if (getTeam() == GC.getGame().getActiveTeam())
@@ -9752,35 +9748,13 @@ void CvCity::changeMilitaryHappinessUnits(int iChange)
 
 int CvCity::getBuildingGoodHappiness() const
 {
-	/************************************************************************************************/
-	/* Afforess	                  Start		 08/29/10                                               */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-	/*
-		return m_iBuildingGoodHappiness
-	*/
 	return m_iBuildingGoodHappiness + std::max(0, calculatePopulationHappiness());
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
 }
 
 
 int CvCity::getBuildingBadHappiness() const
 {
-	/************************************************************************************************/
-	/* Afforess	                  Start		 08/29/10                                               */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-	/*
-		return m_iBuildingBadHappiness
-	*/
 	return m_iBuildingBadHappiness + std::min(0, calculatePopulationHappiness());
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
 }
 
 
@@ -10656,10 +10630,6 @@ int CvCity::getExtraBuildingBadHealth() const
 }
 
 
-/********************************************************************************/
-/* 	New Civic AI						02.08.2010				Fuyu			*/
-/********************************************************************************/
-//Fuyu bLimited
 void CvCity::updateExtraBuildingHealth(bool bLimited)
 {
 	int iNewExtraBuildingGoodHealth = 0;
@@ -10705,9 +10675,6 @@ void CvCity::updateExtraBuildingHealth(bool bLimited)
 		}
 	}
 }
-/********************************************************************************/
-/* 	New Civic AI												END 			*/
-/********************************************************************************/
 
 
 int CvCity::getFeatureGoodHappiness() const
@@ -10722,24 +10689,12 @@ int CvCity::getFeatureBadHappiness() const
 }
 
 
-/********************************************************************************/
-/* 	New Civic AI						02.08.2010				Fuyu			*/
-/********************************************************************************/
-//Fuyu bLimited
 void CvCity::updateFeatureHappiness(bool bLimited)
 {
 	int iNewFeatureGoodHappiness = 0;
 	int iNewFeatureBadHappiness = 0;
 
-	/************************************************************************************************/
-	/* JOOYO_ADDON, Added by Jooyo, 06/17/09                                                        */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
 	for (int iI = 0; iI < getNumCityPlots(); iI++)
-		/************************************************************************************************/
-		/* JOOYO_ADDON                          END                                                     */
-		/************************************************************************************************/
 	{
 		CvPlot* pLoopPlot = getCityIndexPlot(iI);
 
@@ -10765,11 +10720,7 @@ void CvCity::updateFeatureHappiness(bool bLimited)
 			if (NO_IMPROVEMENT != eImprovement)
 			{
 				int iHappy = GC.getImprovementInfo(eImprovement).getHappiness();
-				/************************************************************************************************/
-				/* Afforess	                  Start		 07/20/10                                               */
-				/*                                                                                              */
-				/*                                                                                              */
-				/************************************************************************************************/
+
 				CvPlayer& kPlayer = GET_PLAYER(getOwner());
 				for (int iJ = 0; iJ < GC.getNumCivicOptionInfos(); iJ++)
 				{
@@ -10778,9 +10729,6 @@ void CvCity::updateFeatureHappiness(bool bLimited)
 						iHappy += GC.getCivicInfo(kPlayer.getCivics((CivicOptionTypes)iJ)).getImprovementHappinessChanges(eImprovement);
 					}
 				}
-				/************************************************************************************************/
-				/* Afforess	                     END                                                            */
-				/************************************************************************************************/
 
 				if (iHappy > 0)
 				{
@@ -10816,9 +10764,6 @@ void CvCity::updateFeatureHappiness(bool bLimited)
 		}
 	}
 }
-/********************************************************************************/
-/* 	New Civic AI												END 			*/
-/********************************************************************************/
 
 
 int CvCity::getBonusGoodHappiness() const
@@ -10837,9 +10782,7 @@ void CvCity::changeBonusGoodHappiness(int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iBonusGoodHappiness = (m_iBonusGoodHappiness + iChange);
-		FAssert(getBonusGoodHappiness() >= 0);
-
+		m_iBonusGoodHappiness += iChange;
 		AI_setAssignWorkDirty(true);
 	}
 }
@@ -10849,9 +10792,7 @@ void CvCity::changeBonusBadHappiness(int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iBonusBadHappiness = (m_iBonusBadHappiness + iChange);
-		FAssert(getBonusBadHappiness() <= 0);
-
+		m_iBonusBadHappiness += iChange;
 		AI_setAssignWorkDirty(true);
 	}
 }
