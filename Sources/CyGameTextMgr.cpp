@@ -4,21 +4,12 @@
 #include "CvGameCoreDLL.h"
 #include "CyGameTextMgr.h"
 
-CyGameTextMgr::CyGameTextMgr() : 
-m_pGameTextMgr(NULL)
+CyGameTextMgr::CyGameTextMgr() : m_pGameTextMgr(NULL)
 {
 	m_pGameTextMgr = &CvGameTextMgr::GetInstance();
 }
 
-CyGameTextMgr::CyGameTextMgr(CvGameTextMgr* pGameTextMgr) : m_pGameTextMgr(pGameTextMgr)
-{
-
-}
-
-void CyGameTextMgr::Reset()
-{
-	GAMETEXT.Reset();
-}
+CyGameTextMgr::CyGameTextMgr(CvGameTextMgr* pGameTextMgr) : m_pGameTextMgr(pGameTextMgr) {}
 
 std::wstring CyGameTextMgr::getTimeStr(int iGameTurn, bool bSave)
 {
@@ -226,16 +217,6 @@ std::wstring CyGameTextMgr::getHappinessHelp()
 	return szBuffer.getCString();
 }
 
-std::wstring CyGameTextMgr::getTradeString(TradeData* pTradeData, int iPlayer1, int iPlayer2)
-{
-	CvWStringBuffer szBuffer;
-	if (NULL != pTradeData)
-	{
-		GAMETEXT.getTradeString(szBuffer, *pTradeData, (PlayerTypes)iPlayer1, (PlayerTypes) iPlayer2);
-	}
-	return szBuffer.getCString();
-}
-
 std::wstring CyGameTextMgr::getSpecialistHelp(int iSpecialist, bool bCivilopediaText)
 {
 	CvWStringBuffer szBuffer;
@@ -268,13 +249,6 @@ std::wstring CyGameTextMgr::setRevolutionHelp(int iPlayer)
 {
 	CvWStringBuffer szBuffer;
 	GAMETEXT.setRevolutionHelp(szBuffer, (PlayerTypes)iPlayer);
-	return szBuffer.getCString();
-}
-
-std::wstring CyGameTextMgr::setVassalRevoltHelp(int iMaster, int iVassal)
-{
-	CvWStringBuffer szBuffer;
-	GAMETEXT.setVassalRevoltHelp(szBuffer, (TeamTypes)iMaster, (TeamTypes)iVassal);
 	return szBuffer.getCString();
 }
 

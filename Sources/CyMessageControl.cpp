@@ -11,11 +11,6 @@ void CyMessageControl::sendDoTask(int iCity, int eTask, int iData1, int iData2, 
 	CvMessageControl::getInstance().sendDoTask(iCity, (TaskTypes) eTask, iData1, iData2, bOption, bAlt, bShift, bCtrl);
 }
 
-void CyMessageControl::sendTurnComplete()
-{
-	CvMessageControl::getInstance().sendTurnComplete();
-}
-
 void CyMessageControl::sendUpdateCivics(boost::python::list& iCivics)
 {
 	int *PYiCivics = NULL;		//	do not delete this memory
@@ -27,11 +22,6 @@ void CyMessageControl::sendUpdateCivics(boost::python::list& iCivics)
 	}
 	CvMessageControl::getInstance().sendUpdateCivics(aiCivics);
 	delete[] PYiCivics;
-}
-
-void CyMessageControl::sendConvert(int  iReligion)
-{
-	CvMessageControl::getInstance().sendConvert( (ReligionTypes) iReligion);
 }
 
 void CyMessageControl::sendEmpireSplit(int /*PlayerTypes*/ ePlayer, int iAreaId)
@@ -64,9 +54,6 @@ void CyMessageControl::sendModNetMessage(int iData1, int iData2, int iData3, int
 	CvMessageControl::getInstance().sendModNetMessage(iData1, iData2, iData3, iData4, iData5);
 }
 
-//
-// return true if succeeded
-//
 int CyMessageControl::GetFirstBadConnection()
 {
 	return gDLL->getFirstBadConnection();
@@ -75,24 +62,4 @@ int CyMessageControl::GetFirstBadConnection()
 int CyMessageControl::GetConnState(int iPlayer)
 {
 	return gDLL->getConnState((PlayerTypes)iPlayer);
-}
-
-void CyMessageControl::sendChooseTrait(int  iTrait, bool bNewValue)
-{
-	CvMessageControl::getInstance().sendChooseTrait((TraitTypes)iTrait, bNewValue);
-}
-
-void CyMessageControl::sendMergeUnit(int  iUnitID)
-{
-	CvMessageControl::getInstance().sendMergeUnit(iUnitID);
-}
-
-void CyMessageControl::sendSplitUnit(bool bConfirm)
-{
-	CvMessageControl::getInstance().sendSplitUnit(bConfirm);
-}
-
-void CyMessageControl::sendImprovementUpgrade(int iImprovement, int iX, int iY, bool bConfirm)
-{
-	CvMessageControl::getInstance().sendImprovementUpgrade((ImprovementTypes)iImprovement, iX, iY, bConfirm);
 }

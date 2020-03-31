@@ -3,7 +3,6 @@
 #ifndef CyMap_h
 #define CyMap_h
 
-//#include "CvEnums.h"
 //
 // Python wrapper class for CvMap 
 // SINGLETON
@@ -26,18 +25,13 @@ public:
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
-	int getType();
-	void setType(int iNewType);
 	CyMap& operator = (CvMap& kMap);
 
-	bool viewportsEnabled();
-	int	getViewportWidth();
-	int	getViewportHeight();
-	int	getMapXFromViewportX(int iX);
-	int	getMapYFromViewportY(int iY);
-	int	getViewportXFromMapX(int iX);
-	int	getViewportYFromMapY(int iY);
-	bool isInViewport(int X, int Y);
+	int	getViewportWidth() const;
+	int	getViewportHeight() const;
+	int	getViewportXFromMapX(int iX) const;
+	int	getViewportYFromMapY(int iY) const;
+	bool isInViewport(int X, int Y) const;
 
 	void closeAdvisor(int advisorWidth, int iMinimapLeft, int iMinimapRight, int iMinimapTop, int iMinimapBottom);
 	void bringIntoView(int iX, int iY, bool bLookAt, bool bForceCenter, bool bDisplayCityScreen, bool bSelectCity, bool bAddSelectedCity);
@@ -45,99 +39,64 @@ public:
 /***** Parallel Maps - End *****/
 /*******************************/	
 	
-/************************************************************************************************/
-/* REVOLUTION_MOD                         02/29/08                                jdog5000      */
-/*                                                                                              */
-/* Used by barbarian civ                                                                        */
-/************************************************************************************************/
 	void verifyUnitValidPlot();
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
 
-	void erasePlots();
-	void setRevealedPlots(int /*TeamTypes*/ eTeam, bool bNewValue, bool bTerrainOnly);
 	void resetRevealedPlots(int /*TeamTypes*/ eTeam);
 	void setAllPlotTypes(int /*PlotTypes*/ ePlotType);
 
 	void updateVisibility();
-	CyPlot* syncRandPlot(int iFlags, int iArea, int iMinUnitDistance, int iTimeout);
+	CyPlot* syncRandPlot(int iFlags, int iArea, int iMinUnitDistance, int iTimeout) const;
 
-	CyCity* findCity(int iX, int iY, int /*PlayerTypes*/ eOwner, int /*TeamTypes*/ eTeam, bool bSameArea, bool bCoastalOnly, int /*TeamTypes*/ eTeamAtWarWith, int /*DirectionTypes*/ eDirection, CyCity* pSkipCity);
-	CySelectionGroup* findSelectionGroup(int iX, int iY, int /*PlayerTypes*/ eOwner, bool bReadyToSelect, bool bWorkers);
+	CyCity* findCity(int iX, int iY, int /*PlayerTypes*/ eOwner, int /*TeamTypes*/ eTeam, bool bSameArea, bool bCoastalOnly, int /*TeamTypes*/ eTeamAtWarWith, int /*DirectionTypes*/ eDirection, CyCity* pSkipCity) const;
 
-	CyArea* findBiggestArea(bool bWater);
+	CyArea* findBiggestArea(bool bWater) const;
 
-	int getMapFractalFlags();
-	bool findWater(CyPlot* pPlot, int iRange, bool bFreshWater);
-	bool isPlot(int iX, int iY);
-	int numPlots();
-	int plotNum(int iX, int iY);
-	int plotX(int iIndex);
-	int plotY(int iIndex);
-	int getGridWidth();
-	int getGridHeight();
+	int getMapFractalFlags() const;
+	int numPlots() const;
+	int plotNum(int iX, int iY) const;
+	int getGridWidth() const;
+	int getGridHeight() const;
 
-	int getLandPlots();
-	int getOwnedPlots();
+	int getLandPlots() const;
+	int getOwnedPlots() const;
 
-	int getTopLatitude();
-	int getBottomLatitude();
+	int getTopLatitude() const;
+	int getBottomLatitude() const;
 
-	int getNextRiverID();
+	int getNextRiverID() const;
 	void incrementNextRiverID();
 
-	bool isWrapX();
-	bool isWrapY();
-	std::wstring getMapScriptName();
-	WorldSizeTypes getWorldSize();
-	ClimateTypes getClimate();
-	SeaLevelTypes getSeaLevel();
-	int getNumCustomMapOptions();
-	CustomMapOptionTypes getCustomMapOption(int iOption);
-	int getNumBonuses(int /* BonusTypes */ eIndex);
-	int getNumBonusesOnLand(int /* BonusTypes */ eIndex);
+	bool isWrapX() const;
+	bool isWrapY() const;
+	std::wstring getMapScriptName() const;
+	WorldSizeTypes getWorldSize() const;
+	ClimateTypes getClimate() const;
+	SeaLevelTypes getSeaLevel() const;
+	int getNumCustomMapOptions() const;
+	CustomMapOptionTypes getCustomMapOption(int iOption) const;
+	int getNumBonuses(int /*BonusTypes*/ eIndex) const;
 
-	CyPlot* plotByIndex(int iIndex);
-	CyPlot* sPlotByIndex(int iIndex);
-	CyPlot* plot(int iX, int iY);
-	CyPlot* sPlot(int iX, int iY) ;
-	CyPlot* pointToPlot(float fX, float fY);
-	int getIndexAfterLastArea();
-	int getNumAreas();
-	int getNumLandAreas();
-	CyArea* getArea(int iID);
+	CyPlot* plotByIndex(int iIndex) const;
+	CyPlot* sPlotByIndex(int iIndex) const;
+	CyPlot* plot(int iX, int iY) const;
+	CyPlot* sPlot(int iX, int iY) const;
+	int getIndexAfterLastArea() const;
+	int getNumAreas() const;
+	int getNumLandAreas() const;
+	CyArea* getArea(int iID) const;
 	void recalculateAreas();
-	void resetPathDistance();
 
-	int calculatePathDistance(CyPlot* pSource, CyPlot* pDest);
 	void rebuild(int iGridW, int iGridH, int iTopLatitude, int iBottomLatitude, bool bWrapX, bool bWrapY, WorldSizeTypes eWorldSize, ClimateTypes eClimate, SeaLevelTypes eSeaLevel, int iNumCustomMapOptions, CustomMapOptionTypes * aeCustomMapOptions);
-	void regenerateGameElements();
-	void updateFog();
 	void updateMinimapColor();
-	void updateMinOriginalStartDist(CyArea* pArea);
 
 	// AIAndy: Expose path generation functionality to Python
-	bool generatePathForHypotheticalUnit(CyPlot* pFrom, CyPlot* pTo, int /*PlayerTypes*/ ePlayer, int /*UnitTypes*/ eUnit, int iFlags, int iMaxTurns);
-	int getLastPathStepNum();
-	CyPlot* getLastPathPlotByIndex(int index);
-
-	// Super Forts begin *canal* *choke*
-	void calculateCanalAndChokePoints();
-	// Super Forts end
+	bool generatePathForHypotheticalUnit(CyPlot* pFrom, CyPlot* pTo, int /*PlayerTypes*/ ePlayer, int /*UnitTypes*/ eUnit, int iFlags, int iMaxTurns) const;
+	int getLastPathStepNum() const;
+	CyPlot* getLastPathPlotByIndex(int index) const;
 
 	// PYTHON HELPER FUNCTIONS
 	//int getNumPlayerOwnedPlots(int /*PlayerTypes*/ iPlayer);
-/************************************************************************************************/
-/* Afforess	                  Start		 07/15/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	python::tuple firstArea(bool bRev);	// returns tuple of (CyArea, iterOut)
-	python::tuple nextArea(int iterIn, bool bRev);		// returns tuple of (CyArea, iterOut)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 protected:
 	CvMap* m_pMap;
 };

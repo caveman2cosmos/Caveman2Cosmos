@@ -28,9 +28,6 @@ public:
 	explicit CyArtFileMgr(CvArtFileMgr* pArtFileMgr);			// Call from C++
 	bool isNone() { return (m_pArtFileMgr==NULL); }
 
-	void Reset();
-	void buildArtFileInfoMaps();
-
 	CvArtInfoInterface* getInterfaceArtInfo( const char * szArtDefineTag ) const;
 	CvArtInfoMovie* getMovieArtInfo( const char * szArtDefineTag ) const;
 	CvArtInfoMisc* getMiscArtInfo( const char * szArtDefineTag ) const;
@@ -39,11 +36,8 @@ public:
 	CvArtInfoGenericCity* getGenericCityArtInfo( const char * szArtDefineTag ) const;
 	CvArtInfoBuilding* getBuildingArtInfo( const char * szArtDefineTag ) const;
 	CvArtInfoCivilization* getCivilizationArtInfo( const char * szArtDefineTag ) const;
-	CvArtInfoLeaderhead* getLeaderheadArtInfo( const char * szArtDefineTag ) const;
 	CvArtInfoBonus* getBonusArtInfo( const char * szArtDefineTag ) const;
 	CvArtInfoImprovement* getImprovementArtInfo( const char * szArtDefineTag ) const;
-	CvArtInfoTerrain* getTerrainArtInfo( const char * szArtDefineTag ) const;
-	CvArtInfoFeature* getFeatureArtInfo( const char * szArtDefineTag ) const;
 	
 protected:
 	CvArtFileMgr* m_pArtFileMgr;

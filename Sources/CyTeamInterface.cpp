@@ -35,22 +35,14 @@ void CyTeamPythonInterface()
 
 		.def("getAssets", &CyTeam::getAssets, "int ()")
 		.def("getPower", &CyTeam::getPower, "int (bool bIncludeVassals)")
-		.def("getDefensivePower", &CyTeam::getDefensivePower, "int ()")
-		.def("getNumNukeUnits", &CyTeam::getNumNukeUnits, "int ()")
 //Sevo Begin--VCM
 		.def("getTotalVictoryScore", &CyTeam::getTotalVictoryScore, "int ()")
 //Sevo End VCM
 
 		.def("getAtWarCount", &CyTeam::getAtWarCount, "int (bool bIgnoreMinors)")
-		.def("getWarPlanCount", &CyTeam::getWarPlanCount, "int (int /*WarPlanTypes*/ eWarPlan, bool bIgnoreMinors)")
-		.def("getAnyWarPlanCount", &CyTeam::getAnyWarPlanCount, "int (bool bIgnoreMinors)")
-		.def("getChosenWarCount", &CyTeam::getChosenWarCount, "int (bool bIgnoreMinors)")
 		.def("getHasMetCivCount", &CyTeam::getHasMetCivCount, "int (bool bIgnoreMinors)")
-		.def("hasMetHuman", &CyTeam::hasMetHuman, "bool ()")
-		.def("getDefensivePactCount", &CyTeam::getDefensivePactCount, "int ()")
 		.def("isAVassal", &CyTeam::isAVassal, "bool ()")
 
-		.def("getBuildingMaking", &CyTeam::getBuildingMaking, "int (int (BuildingTypes) eBuilding)")
 		.def("getBuildingCountPlusMaking", &CyTeam::getBuildingCountPlusMaking, "int (int (BuildingTypes) eBuilding)")
 		.def("getUnitMaking", &CyTeam::getUnitMaking, "int (int (UnitTypes) eUnit)")
 		.def("getUnitCountPlusMaking", &CyTeam::getUnitCountPlusMaking, "int (int (UnitTypes) eUnit)")
@@ -59,16 +51,9 @@ void CyTeamPythonInterface()
 
 		.def("countTotalCulture", &CyTeam::countTotalCulture, "int ()")
 
-		.def("countNumUnitsByArea", &CyTeam::countNumUnitsByArea, "int (CyArea* pArea)")
 		.def("countNumCitiesByArea", &CyTeam::countNumCitiesByArea, "int (CyArea* pArea)")
-		.def("countTotalPopulationByArea", &CyTeam::countTotalPopulationByArea, "int (CyArea* pArea)")
-		.def("countPowerByArea", &CyTeam::countPowerByArea, "int (CyArea* pArea)")
-		.def("countEnemyPowerByArea", &CyTeam::countEnemyPowerByArea, "int (CyArea* pArea)")
-		.def("countNumAIUnitsByArea", &CyTeam::countNumAIUnitsByArea, "int (CyArea* pArea, int /*UnitAITypes*/ eUnitAI)")
-		.def("countEnemyDangerByArea", &CyTeam::countEnemyDangerByArea, "int (CyArea* pArea)")
 
 		.def("getResearchCost", &CyTeam::getResearchCost, "int (TechID) - total cost of Tech")
-		.def("getResearchLeft", &CyTeam::getResearchLeft, "int (TechID) - Amount of remaining research necessary")
 
 		.def("hasHolyCity", &CyTeam::hasHolyCity, "bool (int (ReligionTypes) eReligion) - does this team have eReligion's holy city?")
 		.def("hasHeadquarters", &CyTeam::hasHeadquarters, "bool (int (CorporationTypes) eCorporation) - does this team have eCorporation's headquarters?")
@@ -88,7 +73,6 @@ void CyTeamPythonInterface()
 		/*		REVOLUTION_MOD							END								*/
 		/********************************************************************************/	
 		.def("getLeaderID", &CyTeam::getLeaderID, "int (PlayerTypes) ()")
-		.def("getSecretaryID", &CyTeam::getSecretaryID, "int (PlayerTypes) ()")
 		.def("getHandicapType", &CyTeam::getHandicapType, "int (HandicapTypes) ()")
 		.def("getName", &CyTeam::getName, "str ()")
 
@@ -154,10 +138,8 @@ void CyTeamPythonInterface()
 
 		.def("getID", &CyTeam::getID, "int () - team ID")
 
-		.def("isStolenVisibility", &CyTeam::isStolenVisibility, "int (int /*TeamTypes*/ eIndex)")
 		.def("getWarWeariness", &CyTeam::getWarWeariness, "int (int /*TeamTypes*/ eIndex)")
 		.def("setWarWeariness", &CyTeam::setWarWeariness, "void (int /*TeamTypes*/ eIndex, iNewValue)")
-		.def("changeWarWeariness", &CyTeam::changeWarWeariness, "void (int /*TeamTypes*/ eIndex, iChange)")
 		.def("getTechShareCount", &CyTeam::getTechShareCount, "int (int iIndex)")
 		.def("isTechShare", &CyTeam::isTechShare, "bool (int iIndex)")
 		.def("changeTechShareCount", &CyTeam::changeTechShareCount, "void (int iIndex, iChange)")
@@ -172,11 +154,9 @@ void CyTeamPythonInterface()
 		.def("isAtWar", &CyTeam::isAtWar, "bool (int /*TeamTypes*/ eIndex)")
 		.def("isPermanentWarPeace", &CyTeam::isPermanentWarPeace, "bool (int /*TeamTypes*/ eIndex)")
 		.def("setPermanentWarPeace", &CyTeam::setPermanentWarPeace, "void (int /*TeamTypes*/ eIndex, bool bNewValue)")
-		.def("isFreeTrade", &CyTeam::isFreeTrade, "bool (TeamTypes)")
 		.def("isOpenBorders", &CyTeam::isOpenBorders, "bool (TeamTypes)")
 		.def("isForcePeace", &CyTeam::isForcePeace, "bool (TeamTypes)")
 		.def("isVassal", &CyTeam::isVassal, "bool (TeamTypes)")
-		.def("setVassal", &CyTeam::setVassal, "void (TeamTypes, bool)")
 		.def("assignVassal", &CyTeam::assignVassal, "void (TeamTypes, bool)")
 		.def("freeVassal", &CyTeam::freeVassal, "void (TeamTypes)")
 		.def("isDefensivePact", &CyTeam::isDefensivePact, "bool (TeamTypes)")
@@ -184,18 +164,13 @@ void CyTeamPythonInterface()
 		.def("changeRouteChange", &CyTeam::changeRouteChange, "void (int /*RouteType*/ eIndex, int iChange)")
 		.def("getProjectCount", &CyTeam::getProjectCount, "bool (int /*ProjectTypes*/ eIndex)")
 		.def("getProjectDefaultArtType", &CyTeam::getProjectDefaultArtType, "bool (int /*ProjectTypes*/ eIndex)")
-		.def("setProjectDefaultArtType", &CyTeam::setProjectDefaultArtType, "void (int /*ProjectTypes*/ eIndex, int value)")
-		.def("getProjectArtType", &CyTeam::getProjectArtType, "int (int /*ProjectTypes*/ eIndex, int number)")
 		.def("setProjectArtType", &CyTeam::setProjectArtType, "void (int /*ProjectTypes*/ eIndex, int number, int value)")
-		.def("isProjectMaxedOut", &CyTeam::isProjectMaxedOut, "bool (int /*ProjectTypes*/ eIndex, int iExtra)")
-		.def("isProjectAndArtMaxedOut", &CyTeam::isProjectAndArtMaxedOut, "bool (int /*ProjectTypes*/ eIndex)")
 		.def("changeProjectCount", &CyTeam::changeProjectCount, "void (int /*ProjectTypes*/ eIndex, int iChange)")
 		.def("getProjectMaking", &CyTeam::getProjectMaking, "bool (int /*ProjectTypes*/ eIndex)")
 		.def("getBuildingCount", &CyTeam::getBuildingCount, "bool (int /*BuildingTypes*/ eIndex)")
 		.def("isBuildingMaxedOut", &CyTeam::isBuildingMaxedOut, "bool (BuildingTypes, iExtra)")
 		.def("getUnitCount", &CyTeam::getUnitCount, "int (int (UnitTypes) eIndex)")
 		.def("isUnitMaxedOut", &CyTeam::isUnitMaxedOut, "bool (int (UnitTypes) eIndex, int iExtra)")
-		.def("getObsoleteBuildingCount", &CyTeam::getObsoleteBuildingCount)
 		.def("isObsoleteBuilding", &CyTeam::isObsoleteBuilding, "bool (BuildingID - is BuildingID obsolete?")
 
 		.def("getResearchProgress", &CyTeam::getResearchProgress, "int (TechID) - progress towards finishing research on TechID")
@@ -208,7 +183,6 @@ void CyTeamPythonInterface()
 		.def("isHasTech", &CyTeam::isHasTech, "bool (TechID) - has the team researched techID")
 		.def("setHasTech", &CyTeam::setHasTech, "void (TechID, bNewValue, iPlayer, bFirst, bAnnounce)")
 		.def("isNoTradeTech", &CyTeam::isNoTradeTech, "bool (TechID)")
-		.def("setNoTradeTech", &CyTeam::setNoTradeTech, "void (TechID, bNewValue)")
 
 		.def("getImprovementYieldChange", &CyTeam::getImprovementYieldChange,	"int (int /*ImprovementTypes*/ eIndex1, int /*YieldTypes*/ eIndex2)")
 		.def("changeImprovementYieldChange", &CyTeam::changeImprovementYieldChange, "void (int /*ImprovementTypes*/ eIndex1, int /*YieldTypes*/ eIndex2, iChange)")
@@ -234,27 +208,22 @@ void CyTeamPythonInterface()
 		.def("changeEspionagePointsAgainstTeam", &CyTeam::changeEspionagePointsAgainstTeam, "void (TeamTypes eIndex, int iChange)")
 		.def("getEspionagePointsEver", &CyTeam::getEspionagePointsEver, "int ()")
 		.def("setEspionagePointsEver", &CyTeam::setEspionagePointsEver, "void (int iValue)")
-		.def("changeEspionagePointsEver", &CyTeam::changeEspionagePointsEver, "void (int iChange)")
 		.def("getCounterespionageTurnsLeftAgainstTeam", &CyTeam::getCounterespionageTurnsLeftAgainstTeam, "int (TeamTypes eIndex)")
 		.def("setCounterespionageTurnsLeftAgainstTeam", &CyTeam::setCounterespionageTurnsLeftAgainstTeam, "void (TeamTypes eIndex, int iValue)")
 		.def("changeCounterespionageTurnsLeftAgainstTeam", &CyTeam::changeCounterespionageTurnsLeftAgainstTeam, "void (TeamTypes eIndex, int iChange)")
 		.def("getCounterespionageModAgainstTeam", &CyTeam::getCounterespionageModAgainstTeam, "int (TeamTypes eIndex)")
 		.def("setCounterespionageModAgainstTeam", &CyTeam::setCounterespionageModAgainstTeam, "void (TeamTypes eIndex, int iValue)")
-		.def("changeCounterespionageModAgainstTeam", &CyTeam::changeCounterespionageModAgainstTeam, "void (TeamTypes eIndex, int iChange)")
 		.def("AI_shareWar", &CyTeam::AI_shareWar, "bool (TeamTypes)")
-		.def("AI_setWarPlan", &CyTeam::AI_setWarPlan, "void (int /*TeamTypes*/ eIndex, int /*WarPlanTypes*/ eNewValue)")
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                      01/12/09                                jdog5000      */
 /*                                                                                              */
 /* Player Interface                                                                             */
 /************************************************************************************************/
-		.def("AI_getWarPlan", &CyTeam::AI_getWarPlan, "int (int /*TeamTypes*/ eIndex)")
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
 		.def("AI_getAtWarCounter", &CyTeam::AI_getAtWarCounter, "int (TeamTypes)")
 		.def("AI_getAtPeaceCounter", &CyTeam::AI_getAtPeaceCounter, "int (TeamTypes)")
 		.def("AI_getWarSuccess", &CyTeam::AI_getWarSuccess, "int (TeamTypes)")
-		.def("getWinForLosingResearchModifier", &CyTeam::getWinForLosingResearchModifier, "void")
 		;
 }
