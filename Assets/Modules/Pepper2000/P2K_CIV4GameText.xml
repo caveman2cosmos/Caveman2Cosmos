@@ -3,92 +3,105 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ABANDONED_CIVILIZATION</Tag>
 		<English>Abandoned Civilization</English>
-		<French>Civilization Abandonnée</French>
+		<French>Civilization abandonnée</French>
+		<Italian>Rovine di una civiltà</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ABANDONED_CIVILIZATION_PEDIA</Tag>
-		<English>The ruins of a not-very-advanced civilization lie here. Maybe they had a nuclear war, or they collapsed from resources shortages, or they didn't build enough policing units and crime got too high. You may never know.</English>
+		<English>The ruins of a not-very-advanced civilization lie here. Maybe they had a nuclear war, or collapsed from resources shortages, or didn't build enough policing units and crime got too high. You may never know.</English>
 		<French>Les ruines d'une civilisation peu avancée se trouvent ici. Peut-être qu'ils ont eu une guerre nucléaire, ou qu'ils se sont effondrés à cause d'une pénurie de ressources, ou qu'ils n'ont pas construit suffisamment d'unités de police et que la criminalité est devenue trop élevée. Vous ne le saurez peut-être jamais.</French>
+		<Italian>Le rovine di una civiltà non così avanzata si trovano qui. Magari sono stati spazzati via da una guerra nucleare, sono collassati in seguito a una carenza di risorse oppure non hanno costruito unità di polizia a sufficienza e sono stati soffocati dal crimine. Non ne sarai mai sicuro.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ABANDONED_MEGASTRUCTURE</Tag>
 		<English>Abandoned Megastructure</English>
-		<French>Mégastructure Abandonnée</French>
+		<French>Mégastructure abandonnée</French>
+		<Italian>Megastruttura abbandonata</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ABANDONED_MEGASTRUCTURE_PEDIA</Tag>
 		<English>The ruins of a spacefaring civilization lie here. It's not clear whether they died out or chose to abandon this structure. For that matter, you aren't entirely sure what it is, though it looks like some sort of Dyson Sphere.</English>
-		<French>The ruins of a spacefaring civilization lie here. It's not clear whether they died out or chose to abandon this structure. For that matter, you aren't entirely sure what it is, though it looks like some sort of Sphère de Dyson.</French>
+		<Italian>Le rovine di una civiltà spaziale si trovano qui. Non è chiaro se si siano estinti o abbiano scelto di abbandonare questa struttura. Del resto, non sei del tutto sicuro di cosa sia la struttura, sebbene sembri una sorta di sfera di Dyson.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_EXOTIC_LIFEFORMS</Tag>
 		<English>Exotic Lifeforms</English>
 		<French>Formes de vie exotiques</French>
+		<Italian>Forme di vita spaziali</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_EXOTIC_LIFEFORMS_PEDIA</Tag>
-		<English>The universe is very large (citation needed), and therefore there are many extremely unusual lifeforms and objects to be found in the distant cosmos. Whale-like creatres that are millions of kilometers across and capable of crossing the interstellar void are just one.</English>
-		<French>The universe is very large (citation needed), and therefore there are many extremely unusual lifeforms and objects to be found in the distant cosmos. Whale-like creatres that are millions of kilometers across and capable of crossing the interstellaire void are just one.</French>
+		<English>The universe is very large, therefore there are many extremely unusual lifeforms to be found in the distant cosmos. Whale-like creatures that are millions of kilometers across and capable of crossing the interstellar void are just one.</English>
+		<Italian>L'universo è molto ampio, pertanto ci sono molte forme di vita estremamente inusuali che abitano il cosmo lontano. Come per esempio delle creature simili a balene, lunghe milioni di chilometri e capaci di viaggiare nel vuoto interstellare.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_EXTRATERRESTRIAL_MICROBES</Tag>
 		<English>Extraterrestrial Microbes</English>
-		<French>Microbes Extraterrestres</French>
+		<French>Microbes extraterrestres</French>
+		<Italian>Microbi extraterrestri</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_EXTRATERRESTRIAL_MICROBES_PEDIA</Tag>
-		<English>Several places in the Solar System, including Mars, Europa, Titan, and Enceladus could conceivably host single-celled life.</English>
-		<French>Plusieurs endroits du système solaire, y compris Mars, Europa, Titan et Enceladus, pourraient théoriquement héberger une vie unicellulaire.</French>
+		<English>Several places in the Solar System (including Mars, Europa, Titan, and Enceladus) could conceivably host single-celled life.</English>
+		<French>Plusieurs endroits du système solaire (y compris Mars, Europa, Titan et Enceladus) pourraient théoriquement héberger une vie unicellulaire.</French>
+		<Italian>Vari posti nel Sistema solare (come Marte, Europa, Titano ed Encelado) possono teoricamente ospitare organismi monocellulari.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARTIAN_BLUEBERRIES</Tag>
 		<English>Martian Blueberries</English>
-		<French>Myrtilles Martiennes</French>
+		<French>Myrtilles martiennes</French>
+		<Italian>Mirtilli marziani</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARTIAN_BLUEBERRIES_PEDIA</Tag>
 		<English>These are not edible blueberries. They are especially rich deposits of useful metals.</English>
 		<French>Ce ne sont pas des bleuets comestibles. Ce sont des gisements particulièrement riches de métaux utiles.</French>
+		<Italian>Benché si chiamino "mirtilli", non sono frutti commestibili, ma depositi particolarmente ricchi di metalli utili.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_METALLIC_ASTEROID</Tag>
 		<English>Metallic Asteroid</English>
-		<French>Astéroïde Métallique</French>
+		<French>Astéroïde métallique</French>
+		<Italian>Asteroide metallico</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_METALLIC_ASTEROID_PEDIA</Tag>
 		<English>This asteroid is especially high in metal content, which is useful for mining.</English>
 		<French>Cet astéroïde est particulièrement riche en métaux, ce qui est utile pour l'exploitation minière.</French>
+		<Italian>Questo asteroide è particolarmente ricco di metallo e può essere sfruttato come giacimento.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ORGANIC_VOLATILES</Tag>
 		<English>Organic Volatiles</English>
 		<French>Volatiles Organiques</French>
+		<Italian>Sostanze volatili organiche</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ORGANIC_VOLATILES_PEDIA</Tag>
-		<English>Organic Volatiles are compounds that are useful for synthesizing life.</English>
-		<French>Volatiles Organiques are compounds that are useful for synthesizing life.</French>
+		<English>Organic volatiles are compounds that are useful for synthesizing life.</English>
+		<Italian>Una sostanza volatile organica è un composto utile per sintetizzare una vita.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_XENOFAUNA</Tag>
 		<English>Xenofauna</English>
 		<French>Xéno-faune</French>
+		<Italian>Xenofauna</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_XENOFAUNA_PEDIA</Tag>
-		<English>Xenofauna is animal life that originated in a planet other than Earth. It is distinct from lifeforms that are engineered by humans and living off Earth.</English>
-		<French>Xéno-faune is animal life that originated in a planet other than Earth. It is distinct from lifeforms that are engineered by humans and living off Earth.</French>
+		<English>Xenofauna is a term to define animal life that originated in a planet other than Earth. It is distinct from lifeforms that are engineered by humans and living off Earth.</English>
+		<Italian>Xenofauna è un termine utilizzato per definire gli animali che si sono originati su un pianeta diverso dalla Terra. Non vi rientrano quelli che sono state creati dagli esseri umani e che vivono al di fuori della Terra.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_XENOFLORA</Tag>
 		<English>Xenoflora</English>
 		<French>Xéno-flore</French>
+		<Italian>Xenoflora</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_XENOFLORA_PEDIA</Tag>
-		<English>Xenoflora is plant life that originated in a planet other than Earth. It is distinct from lifeforms that are engineered by humans and living off Earth.</English>
-		<French>Xéno-flore is plant life that originated in a planet other than Earth. It is distinct from lifeforms that are engineered by humans and living off Earth.</French>
+		<English>Xenoflora is a term to define plant life that originated in a planet other than Earth. It is distinct from lifeforms that are engineered by humans and living off Earth.</English>
+		<Italian>Xenofauna è un termine utilizzato per definire le piante che si sono originate su un pianeta diverso dalla Terra. Non vi rientrano quelle che sono state create dagli esseri umani e che vivono al di fuori della Terra.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_ARCOLOGY_MOON</Tag>
@@ -558,7 +571,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_CISLUNAR_BASE_PEDIA</Tag>
 		<English>A military base in cislunar space.</English>
-		<French>A military base in cislunaire space.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_CISLUNAR_EXPANSION_MODULE</Tag>
@@ -568,7 +580,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_CISLUNAR_EXPANSION_MODULE_PEDIA</Tag>
 		<English>An expanded module for a cislunar colony.</English>
-		<French>An expanded module for a cislunaire colony.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_COSMIC_EXPANSION_NODE</Tag>
@@ -678,7 +689,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_INTERSTELLAR_BASE_PEDIA</Tag>
 		<English>A military base in interstellar space.</English>
-		<French>A military base in interstellaire space.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_INTERSTELLAR_COLONY</Tag>
@@ -688,7 +698,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_INTERSTELLAR_COLONY_PEDIA</Tag>
 		<English>A colony of the regional interstellar power.</English>
-		<French>A colony of the regional interstellaire power.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_INTERSTELLAR_RESEARCH_BASE</Tag>
@@ -1047,17 +1056,15 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_VENUS_AERIAL_FARM_PEDIA</Tag>
 		<English>A high-tech farm that floats on the clouds of Venus.</English>
-		<French>A high-tech farm that floats on the clouds of Vénus.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_VENUS_SURFACE_MINE</Tag>
 		<English>Venus Surface Mine</English>
-		<French>Mine de Surface de Vénus</French>
+		<French>Mine de surface de Vénus</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_VENUS_SURFACE_MINE_PEDIA</Tag>
 		<English>A mine on the surface of Venus. It is very challenging to build due to the intense heat, pressure, and corrosive atmosphere at the surface.</English>
-		<French>A mine on the surface of Vénus. It is very challenging to build due to the intense heat, pressure, and corrosive atmosphere at the surface.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_CAPTURE_ASTEROID</Tag>
@@ -1072,7 +1079,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_ANCIENT_CIVILIZATION</Tag>
 		<English>Explore an Ancient Civilization</English>
-		<French>Explorer une Civilization Antique</French>
+		<French>Explorer une civilization antique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_ANCIENT_CIVILIZATION_HELP</Tag>
@@ -1092,7 +1099,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_DISTANT</Tag>
 		<English>Explore Distant Cosmos</English>
-		<French>Explorer le Cosmos lointain</French>
+		<French>Explorer le cosmos lointain</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_DISTANT_COSMOS</Tag>
@@ -1102,12 +1109,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_DISTANT_COSMOS_HELP</Tag>
 		<English>Explore the distant cosmos</English>
-		<French>Explorer le Cosmos distant</French>
+		<French>Explorer le cosmos distant</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_DISTANT_HELP</Tag>
 		<English>Explore the distant cosmos</English>
-		<French>Explorer le Cosmos distant</French>
+		<French>Explorer le cosmos distant</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_EUROPA</Tag>
@@ -1122,22 +1129,22 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_EXOPLANET</Tag>
 		<English>Explore an Exoplanet</English>
-		<French>Explore une Exoplanète</French>
+		<French>Explore une exoplanète</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_EXOPLANET_HELP</Tag>
 		<English>Explore an Exoplanet</English>
-		<French>Explore une Exoplanète</French>
+		<French>Explore une exoplanète</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_GALACTIC</Tag>
 		<English>Explore Galactic Space</English>
-		<French>Explore L'Espace Galactique</French>
+		<French>Explore l'espace galactique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_GALACTIC_CORE</Tag>
 		<English>Explore the Galactic Core</English>
-		<French>Explorer le Coeur de la Galaxie</French>
+		<French>Explorer le coeur de la galaxie</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_GALACTIC_CORE_HELP</Tag>
@@ -1152,7 +1159,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_HYPERSPACE</Tag>
 		<English>Explore Hyperspace</English>
-		<French>Explorer l'Hyperespace</French>
+		<French>Explorer l'hyperespace</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_HYPERSPACE_HELP</Tag>
@@ -1172,22 +1179,21 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_INTERGALACTIC</Tag>
 		<English>Explore Intergalactic Space</English>
-		<French>Explorer L'Espace Intergalactique</French>
+		<French>Explorer l'espace intergalactique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_INTERGALACTIC_HELP</Tag>
 		<English>Explore a 'nearby' galaxy</English>
-		<French>Explorer une Galaxie proche</French>
+		<French>Explorer une galaxie proche</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_INTERSTELLAR</Tag>
 		<English>Explore Interstellar Space</English>
-		<French>Explorer l'Espace Interstellaire</French>
+		<French>Explorer l'espace interstellaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_INTERSTELLAR_HELP</Tag>
 		<English>Explore the interstellar space near the Sun</English>
-		<French>Explore the interstellaire space near the Sun</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_INTERSTELLAR_LIFE</Tag>
@@ -1252,7 +1258,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_MOON_SURFACE</Tag>
 		<English>Explore Moon Surface</English>
-		<French>Explorer la Lune Surface</French>
+		<French>Explorer la surface de la Lune</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_MOON_SURFACE_HELP</Tag>
@@ -1262,7 +1268,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_MULTIVERSE</Tag>
 		<English>Explore Multiverse</English>
-		<French>Explorer le Multiverse</French>
+		<French>Explorer le multiverse</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_MULTIVERSE_HELP</Tag>
@@ -1282,22 +1288,22 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_OORT_CLOUD</Tag>
 		<English>Explore an Oort Cloud Object</English>
-		<French>Explorer un Objet du Nuage d'Oort</French>
+		<French>Explorer un objet du Nuage d'Oort</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_OORT_CLOUD_HELP</Tag>
 		<English>Explore an Oort Cloud object</English>
-		<French>Explorer un Objet du Nuage d'Oort</French>
+		<French>Explorer un objet du Nuage d'Oort</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_OUTER_SOLAR_SYSTEM</Tag>
 		<English>Explore Outer Solar System</English>
-		<French>Explorez Après le Système solaire</French>
+		<French>Explorez après le Système solaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_OUTER_SOLAR_SYSTEM_HELP</Tag>
 		<English>Explore the Outer Solar System</English>
-		<French>Explorer l'Extérieur du Système Solaire</French>
+		<French>Explorer l'extérieur du Système Solaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_SATURN</Tag>
@@ -1322,12 +1328,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_SOLAR_SYSTEM_LIFE</Tag>
 		<English>Search for Extraterrestrial Life</English>
-		<French>Rechercher de la Vie Extraterrestre</French>
+		<French>Rechercher de la vie extraterrestre</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_SOLAR_SYSTEM_LIFE_HELP</Tag>
 		<English>Search for microbial life</English>
-		<French>Rechercher de la Vie microbienne</French>
+		<French>Rechercher de la vie microbienne</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_EXPLORE_SS1</Tag>
@@ -1909,7 +1915,7 @@
 		<English>Free building or science boost</English>
 		<French>Bâtiment gratuit, ou bonus scientifique</French>
 	</TEXT>
-    <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_ASTEROID_REWARD</Tag>
 		<English>Mission Reward (Asteroid)</English>
 		<French>Retour de Mission (Asteroid)</French>
@@ -1931,7 +1937,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ATTACKSHIP_PEDIA</Tag>
-		<English>An attack ship for the solar system.  Meant for invading O'Neill colonies.</English>
+		<English>An attack ship for the solar system. Meant for invading O'Neill colonies.</English>
 		<French>Un Vaisseau d'attaque pour le système solaire. Destiné à envahir les colonies O'Neill.</French>
 	</TEXT>
 	<TEXT>
@@ -1947,14 +1953,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BACTERIA_SWARM_PEDIA</Tag>
 		<English>A swarm of bacteria that can cross interstellar voids.</English>
-		<French>A swarm of bacteria that can cross interstellaire voids.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BACTERIA_SWARM_STRATEGY</Tag>
 		<English>Planned for use in Cosmic and Transcendent Era evolution.</English>
 		<French>Prévu pour une utilisation dans l'évolution de l'ère cosmique et transcendante.</French>
 	</TEXT>
-    <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_BRACEWELL_PROBE</Tag>
 		<English>Bracewell Probe</English>
 		<French>Sonde Bracewell</French>
@@ -1999,7 +2004,7 @@
 		<English>Build asteroid buildings. The Captured Comet does the same things as Captured Asteroid but a bit better.</English>
 		<French>Construit des bâtiments d'astéroides. The Comète capturée does the same things as Astéroide capturé but a bit better.</French>
 	</TEXT>
-    <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_CHRONOFORM_SHIP</Tag>
 		<English>Chronoforming Ship</English>
 		<French>Vaisseau Chronomorphe</French>
@@ -2046,7 +2051,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CISLUNAR_INVADER_PEDIA</Tag>
-		<English>An attack ship for cislunar space.  Meant for invading space stations.</English>
+		<English>An attack ship for cislunar space. Meant for invading space stations.</English>
 		<French>Un Vaisseau d'attaque pour l'espace cislunaire. Destiné à envahir les stations spatiales.</French>
 	</TEXT>
 	<TEXT>
@@ -2079,7 +2084,7 @@
 		<English>Construction Ship</English>
 		<French>Vaisseau de construction
 		</French>
-	</TEXT>
+	</TEXT><!--
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CONSTRUCTION_SHIP_PEDIA</Tag>
 		<English>TBD</English>
@@ -2087,7 +2092,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CONSTRUCTION_SHIP_STRATEGY</Tag>
 		<English>TBD</English>
-	</TEXT>
+	</TEXT>-->
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COSMIC_WORKER</Tag>
 		<English>Cosmic Worker</English>
@@ -2118,7 +2123,7 @@
 		<English>The Work Crew units help accelerate the growth of space cities by adding production.</English>
 		<French>Les unités d'équipages d'ouvriers contribuent à accélérer la croissance des villes spatiales en augmentant la production.</French>
 	</TEXT>
-    <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_CYBERNETIC_WORK_CREW</Tag>
 		<English>Cybernetic Work Crew</English>
 		<French>Equipage d'ouvriers Cybernetic</French>
@@ -2133,7 +2138,7 @@
 		<English>The Work Crew units help accelerate the growth of space cities by adding production.</English>
 		<French>Les unités d'équipages d'ouvriers contribuent à accélérer la croissance des villes spatiales en augmentant la production.</French>
 	</TEXT>
-    <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_DEEPSPACE_INFANTRY</Tag>
 		<English>Deep Space Infantry</English>
 		<French>Infanterie de l'Espace lointain</French>
@@ -2163,7 +2168,7 @@
 		<English>Free building or science boost</English>
 		<French>Bâtiment gratuit, ou bonus scientifique</French>
 	</TEXT>
-    <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_ENERGY_ENTITY</Tag>
 		<English>Energy Swarm</English>
 		<French>Essaim d'énergie</French>
@@ -2208,7 +2213,7 @@
 		<English>Free building or science boost</English>
 		<French>Bâtiment gratuit, ou bonus scientifique</French>
 	</TEXT>
-    <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_GALACTIC_CORE_REWARD</Tag>
 		<English>Mission Reward (Galactic Core)</English>
 		<French>Retour de Mission (Galactic Core)</French>
@@ -2246,8 +2251,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEAVY_ROCKET_HOVER</Tag>
 		<English>[ICON_BULLET]While this unit can be built on Earth, it is useful only outside of Earth.[NEWLINE]Upgrade to a space settler on Space Station Lv. 3</English>
-		<French>[ICON_BULLET]Bien que cette unité puisse être construite sur Terre, elle n'est utile qu'en dehors de la Terre.[NEWLINE]Améliore les colons spatiaqux sur la Station spatiale de Niv. 3
-</French>
+		<French>[ICON_BULLET]Bien que cette unité puisse être construite sur Terre, elle n'est utile qu'en dehors de la Terre.[NEWLINE]Améliore les colons spatiaqux sur la Station spatiale de Niv. 3.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEAVY_ROCKET_PEDIA</Tag>
@@ -2274,7 +2278,7 @@
 		<English>The Work Crew units help accelerate the growth of space cities by adding production.</English>
 		<French>Les unités d'équipages d'ouvriers contribuent à accélérer la croissance des villes spatiales en augmentant la production.</French>
 	</TEXT>
-    <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_HYPERSHIP</Tag>
 		<English>Hyperseedship</English>
 		<French>HyperVaisseau-Colonisateur</French>
@@ -2314,14 +2318,14 @@
 		<English>Free building or science boost</English>
 		<French>Bâtiment gratuit, ou bonus scientifique</French>
 	</TEXT>
-    <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_HYPER_BATTLECRUISER</Tag>
 		<English>Neutronium Battlecruiser</English>
 		<French>Croiseur de Bataille à Neutronium</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HYPER_BATTLECRUISER_PEDIA</Tag>
-		<English>The ultimate offensive unit.  Can traverse any territory.</English>
+		<English>The ultimate offensive unit. Can traverse any territory.</English>
 		<French>L'unité offensive ultime. Peut traverser n'importe quel territoire.</French>
 	</TEXT>
 	<TEXT>
@@ -2352,7 +2356,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INTERDIMENSIONAL_PROBE_PEDIA</Tag>
 		<English>The Interdimensional Probe can explore hyperspace and other exotic locations.</English>
-		<French>The Interdimensional Sonde can explore hyperespace and other exotic locations.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INTERDIMENSIONAL_PROBE_STRATEGY</Tag>
@@ -2387,9 +2390,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INTERSTELLAR_LIFE_REWARD_STRATEGY</Tag>
 		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit, ou bonus scientifique</French>
+		<French>Bâtiment gratuit ou bonus scientifique</French>
 	</TEXT>
-    <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_INTERSTELLAR_PROBE</Tag>
 		<English>Interstellar Probe</English>
 		<French>Sonde Interstellar</French>
@@ -2397,7 +2400,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INTERSTELLAR_PROBE_PEDIA</Tag>
 		<English>An interstellar probe to explore nearby stars</English>
-		<French>An interstellaire probe to explore nearby stars</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INTERSTELLAR_PROBE_STRATEGY</Tag>
@@ -2441,7 +2443,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INT_BATTLECRUISER_PEDIA</Tag>
-		<English>An attack ship for interstellar space.  Meant for invading colonies.</English>
+		<English>An attack ship for interstellar space. Meant for invading colonies.</English>
 		<French>Un navire d'attaque pour l'espace interstellaire. Destiné à envahir les colonies.</French>
 	</TEXT>
 	<TEXT>
@@ -2456,7 +2458,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_INT_INVADER_PEDIA</Tag>
-		<English>An attack ship for interstellar space.  Meant for invading colonies.</English>
+		<English>An attack ship for interstellar space. Meant for invading colonies.</English>
 		<French>Un vaisseau d'attaque pour l'espace interstellaire. Destiné à envahir les colonies.</French>
 	</TEXT>
 	<TEXT>
@@ -2492,7 +2494,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_KBO_REWARD_STRATEGY</Tag>
 		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit, ou bonus scientifique</French>
+		<French>Bâtiment gratuit ou bonus scientifique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LIFE_SWARM</Tag>
@@ -2509,7 +2511,7 @@
 		<English>Planned for use in Cosmic and Transcendent Era evolution.</English>
 		<French>Prévu pour une utilisation dans l'évolution de l'ère cosmique et transcendante.</French>
 	</TEXT>
-    <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_LOE_REWARD</Tag>
 		<English>Mission Reward (Low Earth Orbit)</English>
 		<French>Retour de Mission (Orbite terrestre basse)</French>
@@ -2522,7 +2524,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LOE_REWARD_STRATEGY</Tag>
 		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit, ou bonus scientifique</French>
+		<French>Bâtiment gratuit ou bonus scientifique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNARSETTLER</Tag>
@@ -2542,7 +2544,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNAR_INFANTRY</Tag>
 		<English>Lunar Infantry</English>
-		<French>Infanterie Lunaire</French>
+		<French>Infanterie lunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNAR_INFANTRY_PEDIA</Tag>
@@ -2567,7 +2569,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNAR_REWARD_STRATEGY</Tag>
 		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit, ou bonus scientifique</French>
+		<French>Bâtiment gratuit ou bonus scientifique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNAR_WORKER</Tag>
@@ -2587,7 +2589,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MAGSAIL_WORKER_STRATEGY</Tag>
 		<English>Works Cislunar Space and can harvest asteroids</English>
-		<French>Peut travailler sur l'espace Cislunaire et récolter les astéroides</French>
+		<French>Peut travailler sur l'espace cislunaire et récolter les astéroides</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MARSSETTLER</Tag>
@@ -2607,7 +2609,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MARS_REWARD_STRATEGY</Tag>
 		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit, ou bonus scientifique</French>
+		<French>Bâtiment gratuit ou bonus scientifique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MARTIAN_INFANTRY</Tag>
@@ -2659,14 +2661,14 @@
 		<English>Free building or science boost</English>
 		<French>Bâtiment gratuit, ou bonus scientifique</French>
 	</TEXT>
-    <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_NANOWORKER</Tag>
 		<English>Nanoworker</English>
 		<French>Nano-ouvrier</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NANOWORKER_PEDIA</Tag>
-		<English>Advanced worker.  A swarm of solar-powered nanobots that can move freely throughout the Solar System.</English>
+		<English>Advanced worker. A swarm of solar-powered nanobots that can move freely throughout the Solar System.</English>
 		<French>Ouvrier avancé. Un essaim de nanobots à énergie solaire qui peuvent se déplacer librement dans tout le système solaire.</French>
 	</TEXT>
 	<TEXT>
@@ -2712,9 +2714,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OORT_CLOUD_REWARD_STRATEGY</Tag>
 		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit, ou bonus scientifique</French>
+		<French>Bâtiment gratuit ou bonus scientifique</French>
 	</TEXT>
-    <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_OUTER_SOLAR_SYSTEM_REWARD</Tag>
 		<English>Mission Reward (Outer Solar System)</English>
 		<French>Retour de Mission (Outer Solar System)</French>
@@ -2727,7 +2729,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OUTER_SOLAR_SYSTEM_REWARD_STRATEGY</Tag>
 		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit, ou bonus scientifique</French>
+		<French>Bâtiment gratuit ou bonus scientifique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PLANETARYSETTLER</Tag>
@@ -2742,7 +2744,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PLANETARY_INFANTRY</Tag>
 		<English>Planetary Infantry</English>
-		<French>Infanterie Planétaire</French>
+		<French>Infanterie planétaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PLANETARY_INFANTRY_PEDIA</Tag>
@@ -2784,7 +2786,7 @@
 		<English>The Work Crew units help accelerate the growth of space cities by adding production.</English>
 		<French>Les unités d'équipages d'ouvriers contribuent à accélérer la croissance des villes spatiales en augmentant la production.</French>
 	</TEXT>
-    <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_QUANTUM_PROBE</Tag>
 		<English>Quantum Probe</English>
 		<French>Sonde Quantum</French>
@@ -2792,7 +2794,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_QUANTUM_PROBE_PEDIA</Tag>
 		<English>The Quantum Probe uses quantum ramjet technology to break the boundaries of the observable universe.</English>
-		<French>The Quantum Sonde uses quantum ramjet technology to break the boundaries of the observable universe.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_QUANTUM_PROBE_STRATEGY</Tag>
@@ -2844,7 +2845,7 @@
 		<English>Free building or science boost</English>
 		<French>Bâtiment gratuit, ou bonus scientifique</French>
 	</TEXT>
-    <TEXT>
+ <TEXT>
 		<Tag>TXT_KEY_UNIT_SHAPESHIFTING_WORK_CREW</Tag>
 		<English>Shapeshifting Work Crew</English>
 		<French>Equipage d'ouvriers Shapeshifting</French>
@@ -2859,7 +2860,7 @@
 		<English>The Work Crew units help accelerate the growth of space cities by adding production.</English>
 		<French>Les unités d'équipages d'ouvriers contribuent à accélérer la croissance des villes spatiales en augmentant la production.</French>
 	</TEXT>
-    <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_SOLARSAIL_WORKER</Tag>
 		<English>Solar Sail Worker</English>
 		<French>Ouvrier Solar Sail</French>
@@ -2889,7 +2890,7 @@
 		<English>Free building or science boost</English>
 		<French>Bâtiment gratuit, ou bonus scientifique</French>
 	</TEXT>
-    <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_SOLAR_WORKER</Tag>
 		<English>Solar Workship</English>
 		<French>Vaisseau-atelier Solaire</French>
@@ -2929,7 +2930,7 @@
 		<English>The Work Crew units help accelerate the growth of space cities by adding production.</English>
 		<French>Les unités d'équipages d'ouvriers contribuent à accélérer la croissance des villes spatiales en augmentant la production.</French>
 	</TEXT>
-    <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_SS1_REWARD</Tag>
 		<English>Mission Reward (Space Station Lv. 1)</English>
 		<French>Retour de Mission (Station spatiale Niv. 1)</French>
@@ -2942,7 +2943,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SS1_REWARD_STRATEGY</Tag>
 		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit, ou bonus scientifique</French>
+		<French>Bâtiment gratuit ou bonus scientifique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SS2_REWARD</Tag>
@@ -2972,13 +2973,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SS3_REWARD_STRATEGY</Tag>
 		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit, ou bonus scientifique</French>
+		<French>Bâtiment gratuit ou bonus scientifique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUPPLY_SHIP</Tag>
 		<English>Supply Ship</English>
 		<French>Vaisseau de ravitaillement</French>
-	</TEXT>
+	</TEXT><!--
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUPPLY_SHIP_PEDIA</Tag>
 		<English>TBD</English>
@@ -2986,7 +2987,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUPPLY_SHIP_STRATEGY</Tag>
 		<English>TBD</English>
-	</TEXT>
+	</TEXT>-->
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TITAN_REWARD</Tag>
 		<English>Mission Reward (Titan)</English>
@@ -3000,7 +3001,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TITAN_REWARD_STRATEGY</Tag>
 		<English>Free building or science boost</English>
-		<French>Bâtiment gratuit, ou bonus scientifique</French>
+		<French>Bâtiment gratuit ou bonus scientifique</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRANSHUMAN_WORK_CREW</Tag>
@@ -3017,7 +3018,7 @@
 		<English>The Work Crew units help accelerate the growth of space cities by adding production.</English>
 		<French>Les unités d'équipages d'ouvriers contribuent à accélérer la croissance des villes spatiales en augmentant la production.</French>
 	</TEXT>
-    <TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_TRANSNEPTUNIAN_REWARD</Tag>
 		<English>Mission Reward (Transneptunian)</English>
 		<French>Retour de Mission (Transneptunian)</French>
