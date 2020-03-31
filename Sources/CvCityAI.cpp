@@ -6921,19 +6921,22 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 							// if this is a limited wonder, and we are not one of the top 4 in this category, subtract the value
 							// we do _not_ want to build this here (unless the value was small anyway)
-							if (MAX_INT == aiCommerceRank[iI])
+							if (bIsLimitedWonder)
 							{
-								aiCommerceRank[iI] = findCommerceRateRank((CommerceTypes) iI);
-							}
-							if (bIsLimitedWonder && aiCommerceRank[iI] > 3 + iLimitedWonderLimit
-							|| bCulturalVictory1 && iI == COMMERCE_CULTURE && aiCommerceRank[iI] == 1)
-							{
-								directCommerceValue *= -1;
-
-								// for culture, just set it to zero, not negative, just about every wonder gives culture
-								if (bIsLimitedWonder && iI == COMMERCE_CULTURE)
+								if (MAX_INT == aiCommerceRank[iI])
 								{
-									directCommerceValue = 0;
+									aiCommerceRank[iI] = findCommerceRateRank((CommerceTypes) iI);
+								}
+								if (aiCommerceRank[iI] > 3 + iLimitedWonderLimit
+								|| bCulturalVictory1 && iI == COMMERCE_CULTURE && aiCommerceRank[iI] == 1)
+								{
+									directCommerceValue *= -1;
+
+									// for culture, just set it to zero, not negative, just about every wonder gives culture
+									if (iI == COMMERCE_CULTURE)
+									{
+										directCommerceValue = 0;
+									}
 								}
 							}
 							iValue += directCommerceValue;
@@ -7029,75 +7032,50 @@ int CvCityAI::AI_buildingValueThresholdOriginalUncached(BuildingTypes eBuilding,
 
 int CvCityAI::AI_buildingYieldValue(YieldTypes eYield, BuildingTypes eBuilding, CvBuildingInfo& kBuilding, bool bForeignTrade, int iFoodDifference, int iFreeSpecialistYield)
 {
-	int iValue;
-	int iTempValue;
+	int iValue = tradeRouteValue(kBuilding, eYield, bForeignTrade);
 
-	// trade routes
-	iValue = tradeRouteValue(kBuilding, eYield, bForeignTrade);
+	iValue += AI_buildingSpecialYieldChangeValue(eBuilding, eYield);
 
-	if (kBuilding.getSeaPlotYieldChange(eYield) > 0)
-	{
-		iTempValue = kBuilding.getSeaPlotYieldChange(eYield) * AI_buildingSpecialYieldChangeValue(eBuilding, eYield);
+	const int iBaseRate = getBaseYieldRate(eYield);
 
-		if ( eYield == YIELD_FOOD )
-		{
-			if ((iTempValue < 8) && (getPopulation() > 3))
-			{
-				// don't bother
-			}
-			else
-			{
-				iValue += ((iTempValue * 4) / std::max(2, iFoodDifference));
-			}
-		}
-		else
-		{
-			iValue += iTempValue;
-		}
-	}
+	iValue += iBaseRate * GET_TEAM(getTeam()).getBuildingYieldModifier(eBuilding, eYield) / 8;
 
-	iTempValue = 0;
-	iTempValue += ((GET_TEAM(getTeam()).getBuildingYieldModifier(eBuilding, eYield) * getBaseYieldRate(eYield)) / 8);
-	iTempValue += ((kBuilding.getYieldChange(eYield) + ((kBuilding.getYieldPerPopChange(eYield)*getPopulation())/100) + GET_TEAM(getTeam()).getBuildingYieldChange(eBuilding, eYield) + iFreeSpecialistYield) * 8);
-	iTempValue += ((kBuilding.getYieldModifier(eYield) + GET_TEAM(getTeam()).getBuildingYieldModifier(eBuilding, eYield)) * getBaseYieldRate(eYield) / 12);
+	iValue += 8 * (
+		kBuilding.getYieldChange(eYield) + iFreeSpecialistYield
+		+ getPopulation() * kBuilding.getYieldPerPopChange(eYield) / 100
+		+ GET_TEAM(getTeam()).getBuildingYieldChange(eBuilding, eYield)
+		);
+
+	iValue += iBaseRate * (
+		kBuilding.getYieldModifier(eYield) + GET_TEAM(getTeam()).getBuildingYieldModifier(eBuilding, eYield)
+		) / 12;
+
 	for (int iJ = 0; iJ < GC.getNumBonusInfos(); iJ++)
 	{
 		if (hasBonus((BonusTypes)iJ))
 		{
-			iTempValue += (kBuilding.getBonusYieldModifier(iJ, eYield) * getBaseYieldRate(eYield) / 12);
+			iValue += kBuilding.getBonusYieldModifier(iJ, eYield) * iBaseRate / 12;
 			if (kBuilding.getVicinityBonusYieldChanges(iJ, eYield) != 0 && (hasVicinityBonus((BonusTypes)iJ) || hasRawVicinityBonus((BonusTypes)iJ)))
 			{
-				iTempValue += (kBuilding.getVicinityBonusYieldChanges(iJ, eYield) * 8);
+				iValue += (kBuilding.getVicinityBonusYieldChanges(iJ, eYield) * 8);
 			}
 
 		}
 	}
-	iValue += iTempValue;
 
 	if (kBuilding.getRiverPlotYieldChange(eYield) > 0)
 	{
-		iValue += (kBuilding.getRiverPlotYieldChange(eYield) * countNumRiverPlots() * 4);
+		iValue += kBuilding.getRiverPlotYieldChange(eYield) * countNumRiverPlots() * 4;
 	}
 
-	if (!isPower() && (kBuilding.isPower() || ((kBuilding.getPowerBonus() != NO_BONUS) && hasBonus((BonusTypes)(kBuilding.getPowerBonus()))) || kBuilding.isAreaCleanPower()))
+	if (!isPower() && (kBuilding.isPower() || kBuilding.getPowerBonus() != NO_BONUS && hasBonus((BonusTypes)kBuilding.getPowerBonus()) || kBuilding.isAreaCleanPower()))
 	{
-/********************************************************************************/
-/* 	Alternative Building Evaluation				18/01/10		Fuyu		    */
-/********************************************************************************/
-/* original code
-		iTempValue += ((getPowerYieldRateModifier(YIELD_PRODUCTION) * getBaseYieldRate(YIELD_PRODUCTION)) / 12);
-
-*/
-		//Fuyu "/ 12" is too much. -> "/ 20"
-		iValue += ((getPowerYieldRateModifier(eYield) * getBaseYieldRate(eYield)) / 20);
-/********************************************************************************/
-/* ABE END																	    */
-/********************************************************************************/
+		iValue += iBaseRate * getPowerYieldRateModifier(eYield) / 20;
 	}
-
 
 	return iValue;
 }
+
 
 ProjectTypes CvCityAI::AI_bestProject()
 {
@@ -14223,65 +14201,50 @@ void CvCityAI::AI_stealPlots()
 }
 
 
-
-
-// +1/+3/+5 plot based on base food yield (1/2/3)
-// +4 if being worked.
-// +4 if a bonus.
-// Unworked ocean ranks very lowly. Unworked lake ranks at 3. Worked lake at 7.
-// Worked bonus in ocean ranks at like 11
 int CvCityAI::AI_buildingSpecialYieldChangeValue(BuildingTypes eBuilding, YieldTypes eYield)
 {
+	const int iChange = GC.getBuildingInfo(eBuilding).getSeaPlotYieldChange(eYield);
+	if (iChange == 0) return 0;
+
 	int iValue = 0;
-	CvBuildingInfo& kBuilding = GC.getBuildingInfo(eBuilding);
 	int iWorkedCount = 0;
-
-	int iYieldChange = kBuilding.getSeaPlotYieldChange(eYield);
-	if (iYieldChange > 0)
+	for (int iI = 0; iI < getNumCityPlots(); iI++)
 	{
-		int iWaterCount = 0;
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 06/17/09                                                        */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-		for (int iI = 0; iI < getNumCityPlots(); iI++)
-/************************************************************************************************/
-/* JOOYO_ADDON                          END                                                     */
-/************************************************************************************************/
+		if (iI != CITY_HOME_PLOT)
 		{
-			if (iI != CITY_HOME_PLOT)
+			CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
+			if (pLoopPlot != NULL && pLoopPlot->isWater() && pLoopPlot->getWorkingCity() == this)
 			{
-				CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
-				if ((pLoopPlot != NULL) && (pLoopPlot->getWorkingCity() == this))
-				{
-					if (pLoopPlot->isWater())
-					{
-						iWaterCount++;
-						int iFood = pLoopPlot->getYield(YIELD_FOOD);
-						iFood += (eYield == YIELD_FOOD) ? iYieldChange : 0;
+				// Food is main yield from water plots,
+				// so additional yield of any kind holds more value the more food yield the plot have
+				// because food yield is the main reason to work the tile in the first place.
+				iValue += 2 * pLoopPlot->getYield(YIELD_FOOD);
 
-						iValue += std::max(0, iFood * 2 - 1);
-						if (pLoopPlot->isBeingWorked())
-						{
-							iValue += 4;
-							iWorkedCount++;
-						}
-						iValue += ((pLoopPlot->getBonusType(getTeam()) != NO_BONUS) ? 8 : 0);
-					}
+				if (eYield == YIELD_FOOD)
+				{
+					iValue += 2 * iChange;
 				}
+				else iValue += iChange;
+
+				// +4 if being worked.
+				if (pLoopPlot->isBeingWorked())
+				{
+					iValue += 4;
+					iWorkedCount++;
+				}
+				// +6 if a bonus.
+				iValue += (pLoopPlot->getBonusType(getTeam()) != NO_BONUS ? 6 : 0);
 			}
 		}
 	}
 	if (iWorkedCount == 0)
 	{
 		const SpecialistTypes eDefaultSpecialist = (SpecialistTypes)GC.getDefineINT(DEFAULT_SPECIALIST);
-		if ((getPopulation() > 2) && ((eDefaultSpecialist == NO_SPECIALIST) || (getSpecialistCount(eDefaultSpecialist) == 0)))
+		if (eDefaultSpecialist == NO_SPECIALIST || getSpecialistCount(eDefaultSpecialist) == 0)
 		{
 			iValue /= 2;
 		}
 	}
-
 	return iValue;
 }
 
@@ -18271,19 +18234,22 @@ void CvCityAI::CalculateAllBuildingValues(int iFocusFlags)
 
 									// if this is a limited wonder, and we are not one of the top 4 in this category, subtract the value
 									// we do _not_ want to build this here (unless the value was small anyway)
-									if (MAX_INT == aiCommerceRank[iI])
+									if (bIsLimitedWonder)
 									{
-										aiCommerceRank[iI] = findCommerceRateRank((CommerceTypes) iI);
-									}
-									if (bIsLimitedWonder && aiCommerceRank[iI] > 3 + iLimitedWonderLimit
-									|| bCulturalVictory1 && iI == COMMERCE_CULTURE && aiCommerceRank[iI] == 1)
-									{
-										directCommerceValue *= -1;
-
-										// for culture, just set it to zero, not negative, just about every wonder gives culture
-										if (bIsLimitedWonder && iI == COMMERCE_CULTURE)
+										if (MAX_INT == aiCommerceRank[iI])
 										{
-											directCommerceValue = 0;
+											aiCommerceRank[iI] = findCommerceRateRank((CommerceTypes) iI);
+										}
+										if (aiCommerceRank[iI] > 3 + iLimitedWonderLimit
+										|| bCulturalVictory1 && iI == COMMERCE_CULTURE && aiCommerceRank[iI] == 1)
+										{
+											directCommerceValue *= -1;
+
+											// for culture, just set it to zero, not negative, just about every wonder gives culture
+											if (iI == COMMERCE_CULTURE)
+											{
+												directCommerceValue = 0;
+											}
 										}
 									}
 									iValue += directCommerceValue;
