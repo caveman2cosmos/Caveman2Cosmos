@@ -4958,30 +4958,10 @@ bool CvPlayerAI::AI_isFinancialTrouble() const
 {
 	PROFILE_FUNC();
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  06/12/09								jdog5000	  */
-/*																							  */
-/* Barbarian AI																				 */
-/************************************************************************************************/
-	if( isNPC() )
+	if (!isNPC() && AI_costAsPercentIncome() < AI_safeCostAsPercentIncome())
 	{
-		return false;
+		return true;
 	}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
-
-	//if (getCommercePercent(COMMERCE_GOLD) > 50)
-	{
-		int iFundedPercent = AI_costAsPercentIncome();
-		int iSafePercent = AI_safeCostAsPercentIncome();
-
-		if (iFundedPercent < iSafePercent)
-		{
-			return true;
-		}
-	}
-
 	return false;
 }
 

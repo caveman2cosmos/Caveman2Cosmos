@@ -19144,19 +19144,17 @@ void CvUnit::changeExperience100(int iChange, int iMax, bool bFromCombat, bool b
 			kPlayer.changeFractionalCombatExperience(iChangeTotal, getGGExperienceEarnedTowardsType());
 		}
 
-		int iExperiencePercent = getExperiencePercent();
-        if (iExperiencePercent < 0)
-        {
-            iExperiencePercent = (-1 * iExperiencePercent + 100);
-            iUnitExperience = iUnitExperience * 100 / iExperiencePercent;
-        }
-        else if (iExperiencePercent > 0)
-        {
-            iUnitExperience *= 100 + iExperiencePercent;
-            iUnitExperience /= 100;
-        }
+		const int iMod = getExperiencePercent();
+		if (iMod < 0)
+		{
+			iUnitExperience = iUnitExperience * 100 / (-1 * iMod + 100);
+		}
+		else if (iMod > 0)
+		{
+			iUnitExperience *= 100 + iMod;
+			iUnitExperience /= 100;
+		}
 
-		// Great Commanders
 		CvUnit* pCommander = getUsedCommander();
 		if (pCommander != NULL)
 		{

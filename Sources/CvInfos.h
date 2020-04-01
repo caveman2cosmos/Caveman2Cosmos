@@ -1902,7 +1902,6 @@ public:
 	bool isIgnoreTerrainCost() const;			// Exposed to Python
 	bool isNukeImmune() const;					// Exposed to Python
 	bool isPrereqBonuses() const;				// Exposed to Python
-	bool isPrereqReligion() const;				// Exposed to Python
 	bool isMechUnit() const;					// Exposed to Python
 	bool isRenderBelowWater() const;			// Exposed to Python
 	bool isRenderAlways() const;				// Exposed to Python
@@ -2578,7 +2577,6 @@ protected:
 	bool m_bIgnoreTerrainCost;
 	bool m_bNukeImmune;
 	bool m_bPrereqBonuses;
-	bool m_bPrereqReligion;
 	bool m_bMechanized;
 	bool m_bRenderBelowWater;
 	bool m_bRenderAlways;
@@ -3629,7 +3627,6 @@ public:
 	bool isBuildingOnlyHealthy() const;			// Exposed to Python
 	bool isNeverCapture() const;				// Exposed to Python
 	bool isNukeImmune() const;					// Exposed to Python
-	bool isPrereqReligion() const;				// Exposed to Python
 	bool isCenterInCity() const;				// Exposed to Python
 	bool isStateReligion() const;				// Exposed to Python
 	bool isAllowsNukes() const;					// Exposed to Python
@@ -3783,6 +3780,7 @@ public:
 	bool isPrereqNotBuilding(int i) const;
 	int  getBuildingProductionModifier(int i) const;
 	int  getGlobalBuildingProductionModifier(int i) const;
+	int  getGlobalBuildingCostModifier(int i) const;
 
 	int  getBonusDefenseChanges(int i) const;
 
@@ -4068,6 +4066,7 @@ protected:
 	bool* m_pbPrereqOrFeature;
 	int* m_piBuildingProductionModifier;
 	int* m_piGlobalBuildingProductionModifier;
+	int* m_piGlobalBuildingCostModifier;
 	int* m_piBonusDefenseChanges;
 	bool* m_pbPrereqNotBuilding;
 	bool* m_pbReplaceBuilding;
@@ -4232,7 +4231,6 @@ protected:
 	bool m_bBuildingOnlyHealthy;
 	bool m_bNeverCapture;
 	bool m_bNukeImmune;
-	bool m_bPrereqReligion;
 	bool m_bCenterInCity;
 	bool m_bStateReligion;
 	bool m_bAllowsNukes;

@@ -7749,7 +7749,7 @@ def doMinorFire(argsList):
 		if CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1 or isLimitedWonder(j):
 			continue
 		CvBuilding = GC.getBuildingInfo(j)
-		if CvBuilding.isNukeImmune() or CvBuilding.isAutoBuild():
+		if CvBuilding.getProductionCost() < 1 or CvBuilding.isNukeImmune() or CvBuilding.isAutoBuild():
 			continue
 
 		for k in xrange(GC.getNumBuildingInfos()):
@@ -7791,7 +7791,7 @@ def doMajorFire(argsList):
 			if CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1 or isLimitedWonder(j):
 				continue
 			CvBuilding = GC.getBuildingInfo(j)
-			if CvBuilding.isNukeImmune() or CvBuilding.isAutoBuild():
+			if CvBuilding.getProductionCost() < 1 or CvBuilding.isNukeImmune() or CvBuilding.isAutoBuild():
 				continue
 
 			for k in xrange(GC.getNumBuildingInfos()):
@@ -7843,7 +7843,7 @@ def doCatastrophicFire(argsList):
 			if CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1 or isLimitedWonder(j):
 				continue
 			CvBuilding = GC.getBuildingInfo(j)
-			if CvBuilding.isNukeImmune() or CvBuilding.isAutoBuild():
+			if CvBuilding.getProductionCost() < 1 or CvBuilding.isNukeImmune() or CvBuilding.isAutoBuild():
 				continue
 
 			for k in xrange(GC.getNumBuildingInfos()):
