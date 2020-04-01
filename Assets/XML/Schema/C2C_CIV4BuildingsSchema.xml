@@ -1261,7 +1261,6 @@
 	<ElementType name="GlobalBuildingCostModifiers" content="eltOnly">
 		<element type="BuildingCostModifier" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-
 	<ElementType name="BonusCommerceModifier" content="eltOnly">
 		<element type="BonusType"/>
 		<element type="CommerceModifiers"/>
@@ -1336,5 +1335,4 @@
 	<ElementType name="PrereqOrGameSpeeds" content="eltOnly">
 		<element type="PrereqOrGameSpeed" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<!-- Afforess -->
 </Schema>
