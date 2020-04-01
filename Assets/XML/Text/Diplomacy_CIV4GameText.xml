@@ -1465,7 +1465,7 @@
 		<German>Gebt mir, was ich verlange, oder bereitet Euch auf Eure totale Vernichtung vor!</German>
 		<Italian>Dacci ciò che vogliamo o preparati a essere distrutto.</Italian>
 		<Polish>Daj nam to czego chcemy albo zostaniesz zniszczony</Polish>
-		<Spanish>Dadnos lo que queremos o disponeos a ser destruidos.</Spanish>
+		<Spanish>Danos lo que queremos o disponeos a ser destruidos.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_5</Tag>
@@ -1474,7 +1474,7 @@
 		<German>Seid nicht dumm, [CT_NAME], und erfüllt unsere Forderungen!</German>
 		<Italian>Sii ragionevole, [CT_NAME], e dacci ciò che vogliamo.</Italian>
 		<Polish>Bądź mądry, [CT_NAME], i poddaj się naszej woli.</Polish>
-		<Spanish>Sed razonable, [CT_NAME], y aceptad nuestras exigencias.</Spanish>
+		<Spanish>Sea razonable, [CT_NAME], y aceptas nuestras exigencias.</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_1</Tag>
