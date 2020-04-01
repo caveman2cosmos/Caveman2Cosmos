@@ -8231,55 +8231,37 @@ FeatureTypes CvPlot::getFeatureType() const
 
 void CvPlot::setFeatureType(FeatureTypes eNewValue, int iVariety, bool bImprovementSet)
 {
-
 	FeatureTypes eOldFeature = getFeatureType();
-
-	CvCity* pLoopCity;
-	CvPlot* pLoopPlot;
-	int iI;
-	bool bUpdateSight;
 
 	if (eNewValue != NO_FEATURE)
 	{
 		if (iVariety == -1)
 		{
-			iVariety = ((GC.getFeatureInfo(eNewValue).getArtInfo()->getNumVarieties() * ((getLatitude() * 9) / 8)) / 90);
+			iVariety = GC.getFeatureInfo(eNewValue).getArtInfo()->getNumVarieties() * (getLatitude()*9/8) / 90;
 		}
-
 		iVariety = range(iVariety, 0, (GC.getFeatureInfo(eNewValue).getArtInfo()->getNumVarieties() - 1));
 	}
 	else
 	{
 		iVariety = 0;
 	}
-/************************************************************************************************/
-/* Afforess	                  Start		 05/15/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	//Feature Removed or Fallout
 	if (GC.getGame().isOption(GAMEOPTION_PERSONALIZED_MAP))
 	{
-		if ((eNewValue == NO_FEATURE || GC.getFeatureInfo(eNewValue).getHealthPercent() < 0))
+		if (getOwner() != NO_PLAYER
+		&& (eNewValue == NO_FEATURE || GC.getFeatureInfo(eNewValue).getHealthPercent() < 0)
+		&& (getLandmarkType() == LANDMARK_FOREST || getLandmarkType() == LANDMARK_JUNGLE))
 		{
-			if (getOwner() != NO_PLAYER)
+			for (int iI = 0; iI < NUM_CITY_PLOTS; ++iI)
 			{
-				if (getLandmarkType() == LANDMARK_FOREST || getLandmarkType() == LANDMARK_JUNGLE)
+				CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
+				if (pLoopPlot != NULL)
 				{
-					for (iI = 0; iI < NUM_CITY_PLOTS; ++iI)
+					CvCity* pLoopCity = pLoopPlot->getPlotCity();
+					if (pLoopCity != NULL && pLoopCity->getOwner() == getOwner())
 					{
-						pLoopPlot = plotCity(getX(), getY(), iI);
-						if (pLoopPlot != NULL)
-						{
-							pLoopCity = pLoopPlot->getPlotCity();
-							if (pLoopCity != NULL)
-							{
-								if (pLoopCity->getOwner() == getOwner())
-								{
-									pLoopCity->changeLandmarkAngerTimer(GC.getDefineINT("LANDMARK_ANGER_DIVISOR") * 2);
-								}
-							}
-						}
+						pLoopCity->changeLandmarkAngerTimer(GC.getDefineINT("LANDMARK_ANGER_DIVISOR") * 2);
 					}
 				}
 			}
@@ -8290,66 +8272,51 @@ void CvPlot::setFeatureType(FeatureTypes eNewValue, int iVariety, bool bImprovem
 			removeSignForAllPlayers();
 		}
 	}
-	/*if (eNewValue == NO_FEATURE)
+
+	if (eOldFeature != eNewValue || m_iFeatureVariety != iVariety)
 	{
-		setOvergrown(false);
-	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-	if ((eOldFeature != eNewValue) || (m_iFeatureVariety != iVariety))
-	{
-		if ((eOldFeature == NO_FEATURE) ||
-			  (eNewValue == NO_FEATURE) ||
-			  (GC.getFeatureInfo(eOldFeature).getSeeThroughChange() != GC.getFeatureInfo(eNewValue).getSeeThroughChange()))
+		bool bUpdateSight = false;
+
+		if (eOldFeature == NO_FEATURE || eNewValue == NO_FEATURE
+		|| GC.getFeatureInfo(eOldFeature).getSeeThroughChange() != GC.getFeatureInfo(eNewValue).getSeeThroughChange())
 		{
 			bUpdateSight = true;
 		}
-		else
-		{
-			bUpdateSight = false;
-		}
-
 		if (bUpdateSight)
 		{
 			updateSeeFromSight(false, true);
 		}
 
-		if ( eOldFeature != NO_FEATURE )
+		if (eOldFeature != NO_FEATURE)
 		{
 			m_movementCharacteristicsHash ^= GC.getFeatureInfo(eOldFeature).getZobristValue();
 		}
-		if ( eNewValue != NO_FEATURE )
+		if (eNewValue != NO_FEATURE)
 		{
 			m_movementCharacteristicsHash ^= GC.getFeatureInfo(eNewValue).getZobristValue();
 		}
-
 		m_eFeatureType = eNewValue;
 		m_iFeatureVariety = iVariety;
-
-		updateYield();
 
 		if (bUpdateSight)
 		{
 			updateSeeFromSight(true, true);
 		}
-
+		updateYield();
 		updateFeatureSymbol();
 
-		if (((eOldFeature != NO_FEATURE) && (GC.getFeatureInfo(eOldFeature).getArtInfo()->isRiverArt())) ||
-			  ((getFeatureType() != NO_FEATURE) && (GC.getFeatureInfo(getFeatureType()).getArtInfo()->isRiverArt())))
+		if (eOldFeature != NO_FEATURE && GC.getFeatureInfo(eOldFeature).getArtInfo()->isRiverArt()
+		|| getFeatureType() != NO_FEATURE && GC.getFeatureInfo(getFeatureType()).getArtInfo()->isRiverArt())
 		{
 			updateRiverSymbolArt(true);
 		}
 
-		for (iI = 0; iI < NUM_CITY_PLOTS; ++iI)
+		for (int iI = 0; iI < NUM_CITY_PLOTS; ++iI)
 		{
-			pLoopPlot = plotCity(getX(), getY(), iI);
-
+			CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
 			if (pLoopPlot != NULL)
 			{
-				pLoopCity = pLoopPlot->getPlotCity();
-
+				CvCity* pLoopCity = pLoopPlot->getPlotCity();
 				if (pLoopCity != NULL)
 				{
 					pLoopCity->updateFeatureHealth();
@@ -8360,16 +8327,12 @@ void CvPlot::setFeatureType(FeatureTypes eNewValue, int iVariety, bool bImprovem
 
 		if (getFeatureType() == NO_FEATURE)
 		{
-			if (getImprovementType() != NO_IMPROVEMENT)
+			if (getImprovementType() != NO_IMPROVEMENT && !bImprovementSet
+			&& GC.getImprovementInfo(getImprovementType()).isRequiresFeature())
 			{
-				if (GC.getImprovementInfo(getImprovementType()).isRequiresFeature() && !bImprovementSet)
-				{
-					setImprovementType(NO_IMPROVEMENT);
-				}
+				setImprovementType(NO_IMPROVEMENT);
 			}
 		}
-		// Mongoose FeatureDamageFix BEGIN
-		//
 		else if (GC.getFeatureInfo(getFeatureType()).getTurnDamage() > 0)
 		{
 			CLLNode<IDInfo>* pUnitNode;
@@ -8387,8 +8350,6 @@ void CvPlot::setFeatureType(FeatureTypes eNewValue, int iVariety, bool bImprovem
 				}
 			}
 		}
-		//
-		// Mongoose FeatureDamageFix END
 	}
 }
 
