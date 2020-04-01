@@ -559,14 +559,14 @@ public:
 
 	void updateReplacements();
 
-#define DECLARE_GET_METHOD(VAR) \
-	int get##VAR() const { return m_i##VAR; }
+#define DECLARE_GET_METHOD(dataType, VAR) \
+	dataType get##VAR() const { return m_##VAR; }
 	DO_FOR_EACH_INT_GLOBAL_DEFINE(DECLARE_GET_METHOD)
+	DO_FOR_EACH_FLOAT_GLOBAL_DEFINE(DECLARE_GET_METHOD)
 
-	float getSAD_FACTOR_1() const;
-	float getSAD_FACTOR_2() const;
-	float getSAD_FACTOR_3() const;
-	float getSAD_FACTOR_4() const;
+#define DECLARE_BOOL_GET_METHOD(dataType, VAR) \
+	dataType is##VAR() const { return m_##VAR; }
+	DO_FOR_EACH_BOOL_GLOBAL_DEFINE(DECLARE_BOOL_GET_METHOD)
 
 	int getNumCityTabInfos() const;
 	std::vector<CvInfoBase*>& getCityTabInfos();
@@ -912,48 +912,6 @@ public:
 /* MOD_COMPONENT_CONTROL                   END                                                  */
 /************************************************************************************************/
 
-/************************************************************************************************/
-/* Mod Globals    Start                          09/13/10                           phungus420  */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	bool isDCM_BATTLE_EFFECTS() const;
-	bool isDCM_AIR_BOMBING() const;
-	bool isDCM_RANGE_BOMBARD() const;
-	bool isDCM_ATTACK_SUPPORT() const;
-	bool isDCM_OPP_FIRE() const;
-	bool isDCM_ACTIVE_DEFENSE() const;
-	bool isDCM_FIGHTER_ENGAGE() const;
-
-	bool isDYNAMIC_CIV_NAMES() const;
-
-	bool isLIMITED_RELIGIONS_EXCEPTIONS() const;
-	bool isOC_RESPAWN_HOLY_CITIES() const;
-
-	bool isIDW_ENABLED() const;
-	float getIDW_BASE_COMBAT_INFLUENCE() const;
-	float getIDW_NO_CITY_DEFENDER_MULTIPLIER() const;
-	float getIDW_FORT_CAPTURE_MULTIPLIER() const;
-	float getIDW_EXPERIENCE_FACTOR() const;
-	float getIDW_WARLORD_MULTIPLIER() const;
-	float getIDW_PLOT_DISTANCE_FACTOR() const;
-	float getIDW_WINNER_PLOT_MULTIPLIER() const;
-	float getIDW_LOSER_PLOT_MULTIPLIER() const;
-	bool isIDW_EMERGENCY_DRAFT_ENABLED() const;
-	float getIDW_EMERGENCY_DRAFT_STRENGTH() const;
-	float getIDW_EMERGENCY_DRAFT_ANGER_MULTIPLIER() const;
-	bool isIDW_NO_BARBARIAN_INFLUENCE() const;
-	bool isIDW_NO_NAVAL_INFLUENCE() const;
-	bool isIDW_PILLAGE_INFLUENCE_ENABLED() const;
-	float getIDW_BASE_PILLAGE_INFLUENCE() const;
-	float getIDW_CITY_TILE_MULTIPLIER() const;
-
-	bool isSS_ENABLED() const;
-	bool isSS_BRIBE() const;
-	bool isSS_ASSASSINATE() const;
-/************************************************************************************************/
-/* Mod Globals                        END                                           phungus420  */
-/************************************************************************************************/
 	void setGraphicalDetailPagingEnabled(bool bEnabled);
 	bool getGraphicalDetailPagingEnabled() const;
 	int getGraphicalDetailPageInRange();
@@ -973,21 +931,7 @@ public:
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
 
-	float getCAMERA_MIN_YAW() const;
-	float getCAMERA_MAX_YAW() const;
-	float getCAMERA_FAR_CLIP_Z_HEIGHT() const;
-	float getCAMERA_MAX_TRAVEL_DISTANCE() const;
-	float getCAMERA_START_DISTANCE() const;
-	float getAIR_BOMB_HEIGHT() const;
 	float getPLOT_SIZE() const;
-	float getCAMERA_SPECIAL_PITCH() const;
-	float getCAMERA_MAX_TURN_OFFSET() const;
-	float getCAMERA_MIN_DISTANCE() const;
-	float getCAMERA_UPPER_PITCH() const;
-	float getCAMERA_LOWER_PITCH() const;
-	float getFIELD_OF_VIEW() const;
-	float getSHADOW_SCALE() const;
-	float getUNIT_MULTISELECT_DISTANCE() const;
 
 	int getMAX_CIV_PLAYERS() const;
 	int getMAX_PC_PLAYERS() const;
@@ -1454,75 +1398,14 @@ protected:
 
 	FVariableSystem* m_VarSystem;
 
-#define DECLARE_MEMBER_VAR(VAR) \
-	int m_i##VAR;
-	DO_FOR_EACH_INT_GLOBAL_DEFINE(DECLARE_MEMBER_VAR)
-
-/************************************************************************************************/
-/* Mod Globals    Start                          09/13/10                           phungus420  */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	bool m_bDCM_BATTLE_EFFECTS;
-	bool m_bDCM_AIR_BOMBING;
-	bool m_bDCM_RANGE_BOMBARD;
-	bool m_bDCM_ATTACK_SUPPORT;
-	bool m_bDCM_OPP_FIRE;
-	bool m_bDCM_ACTIVE_DEFENSE;
-	bool m_bDCM_FIGHTER_ENGAGE;
-
-	bool m_bDYNAMIC_CIV_NAMES;
-
-	bool m_bLIMITED_RELIGIONS_EXCEPTIONS;
-	bool m_bOC_RESPAWN_HOLY_CITIES;
-
-	bool m_bIDW_ENABLED;
-	float m_fIDW_BASE_COMBAT_INFLUENCE;
-	float m_fIDW_NO_CITY_DEFENDER_MULTIPLIER;
-	float m_fIDW_FORT_CAPTURE_MULTIPLIER;
-	float m_fIDW_EXPERIENCE_FACTOR;
-	float m_fIDW_WARLORD_MULTIPLIER;
-	float m_fIDW_PLOT_DISTANCE_FACTOR;
-	float m_fIDW_WINNER_PLOT_MULTIPLIER;
-	float m_fIDW_LOSER_PLOT_MULTIPLIER;
-	bool m_bIDW_EMERGENCY_DRAFT_ENABLED;
-	float m_fIDW_EMERGENCY_DRAFT_STRENGTH;
-	float m_fIDW_EMERGENCY_DRAFT_ANGER_MULTIPLIER;
-	bool m_bIDW_NO_BARBARIAN_INFLUENCE;
-	bool m_bIDW_NO_NAVAL_INFLUENCE;
-	bool m_bIDW_PILLAGE_INFLUENCE_ENABLED;
-	float m_fIDW_BASE_PILLAGE_INFLUENCE;
-	float m_fIDW_CITY_TILE_MULTIPLIER;
-
-	bool m_bSS_ENABLED;
-	bool m_bSS_BRIBE;
-	bool m_bSS_ASSASSINATE;
-/************************************************************************************************/
-/* Mod Globals                        END                                           phungus420  */
-/************************************************************************************************/
+#define DECLARE_MEMBER_VAR(dataType, VAR) \
+	dataType m_##VAR;
+	DO_FOR_EACH_GLOBAL_DEFINE(DECLARE_MEMBER_VAR)
 
 	bool m_bXMLLogging;
 	bool m_bLoadedPlayerOptions;
 
-	float m_fCAMERA_MIN_YAW;
-	float m_fCAMERA_MAX_YAW;
-	float m_fCAMERA_FAR_CLIP_Z_HEIGHT;
-	float m_fCAMERA_MAX_TRAVEL_DISTANCE;
-	float m_fCAMERA_START_DISTANCE;
-	float m_fAIR_BOMB_HEIGHT;
 	float m_fPLOT_SIZE;
-	float m_fCAMERA_SPECIAL_PITCH;
-	float m_fCAMERA_MAX_TURN_OFFSET;
-	float m_fCAMERA_MIN_DISTANCE;
-	float m_fCAMERA_UPPER_PITCH;
-	float m_fCAMERA_LOWER_PITCH;
-	float m_fFIELD_OF_VIEW;
-	float m_fSHADOW_SCALE;
-	float m_fUNIT_MULTISELECT_DISTANCE;
-	float m_fSAD_FACTOR_1;
-	float m_fSAD_FACTOR_2;
-	float m_fSAD_FACTOR_3;
-	float m_fSAD_FACTOR_4;
 
 	bool m_bMultimapsEnabled;
 	bool m_bViewportsEnabled;

@@ -124,11 +124,6 @@ void CvGlobals::CheckProxy(const char* fnName) const
 // CONSTRUCTOR
 //
 cvInternalGlobals::cvInternalGlobals() 
-/************************************************************************************************/
-/* Mod Globals    Start                          09/13/10                           phungus420  */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	: m_paszEntityEventTypes2(NULL)
 	, m_paszEntityEventTypes(NULL)
 	, m_paszAnimationOperatorTypes(NULL)
@@ -142,44 +137,6 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_paszDirectionTypes(NULL)
 	, m_paszFootstepAudioTypes(NULL)
 	, m_paszFootstepAudioTags(NULL)
-
-	, m_bDCM_BATTLE_EFFECTS(false)
-	, m_bDCM_AIR_BOMBING(false)
-	, m_bDCM_RANGE_BOMBARD(false)
-	, m_bDCM_ATTACK_SUPPORT(false)
-	, m_bDCM_OPP_FIRE(false)
-	, m_bDCM_ACTIVE_DEFENSE(false)
-	, m_bDCM_FIGHTER_ENGAGE(false)
-
-	, m_bDYNAMIC_CIV_NAMES(false)
-
-	, m_bLIMITED_RELIGIONS_EXCEPTIONS(false)
-	, m_bOC_RESPAWN_HOLY_CITIES(false)
-
-	, m_bIDW_ENABLED(false)
-	, m_fIDW_BASE_COMBAT_INFLUENCE(0)
-	, m_fIDW_NO_CITY_DEFENDER_MULTIPLIER(1.0f)
-	, m_fIDW_FORT_CAPTURE_MULTIPLIER(1.0f)
-	, m_fIDW_EXPERIENCE_FACTOR(0)
-	, m_fIDW_WARLORD_MULTIPLIER(1.0f)
-	, m_fIDW_PLOT_DISTANCE_FACTOR(0)
-	, m_fIDW_WINNER_PLOT_MULTIPLIER(1.0f)
-	, m_fIDW_LOSER_PLOT_MULTIPLIER(1.0f)
-	, m_bIDW_EMERGENCY_DRAFT_ENABLED(false)
-	, m_fIDW_EMERGENCY_DRAFT_STRENGTH(1.0f)
-	, m_fIDW_EMERGENCY_DRAFT_ANGER_MULTIPLIER(0)
-	, m_bIDW_NO_BARBARIAN_INFLUENCE(false)
-	, m_bIDW_NO_NAVAL_INFLUENCE(false)
-	, m_bIDW_PILLAGE_INFLUENCE_ENABLED(false)
-	, m_fIDW_BASE_PILLAGE_INFLUENCE(0)
-	, m_fIDW_CITY_TILE_MULTIPLIER(0)
-
-	, m_bSS_ENABLED(false)
-	, m_bSS_BRIBE(false)
-	, m_bSS_ASSASSINATE(false)
-	/************************************************************************************************/
-	/* Mod Globals                        END                                           phungus420  */
-	/************************************************************************************************/
 	, m_bGraphicsInitialized(false)
 	, m_bLogging(false)
 	, m_bRandLogging(false)
@@ -222,29 +179,9 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_aiCityPlotPriority(NULL)
 	, m_aeTurnLeftDirection(NULL)
 	, m_aeTurnRightDirection(NULL)
-	//, m_aGameOptionsInfo(NULL)
-	//, m_aPlayerOptionsInfo(NULL)
 	, m_Profiler(NULL)
 	, m_VarSystem(NULL)
-	, m_fCAMERA_MIN_YAW(0)
-	, m_fCAMERA_MAX_YAW(0)
-	, m_fCAMERA_FAR_CLIP_Z_HEIGHT(0)
-	, m_fCAMERA_MAX_TRAVEL_DISTANCE(0)
-	, m_fCAMERA_START_DISTANCE(0)
-	, m_fAIR_BOMB_HEIGHT(0)
 	, m_fPLOT_SIZE(0)
-	, m_fCAMERA_SPECIAL_PITCH(0)
-	, m_fCAMERA_MAX_TURN_OFFSET(0)
-	, m_fCAMERA_MIN_DISTANCE(0)
-	, m_fCAMERA_UPPER_PITCH(0)
-	, m_fCAMERA_LOWER_PITCH(0)
-	, m_fFIELD_OF_VIEW(0)
-	, m_fSHADOW_SCALE(0)
-	, m_fUNIT_MULTISELECT_DISTANCE(0)
-	, m_fSAD_FACTOR_1(0)
-	, m_fSAD_FACTOR_2(0)
-	, m_fSAD_FACTOR_3(0)
-	, m_fSAD_FACTOR_4(0)
 	, m_bMultimapsEnabled(false)
 	, m_bViewportsEnabled(false)
 	, m_iViewportFocusBorder(0)
@@ -316,9 +253,15 @@ cvInternalGlobals::cvInternalGlobals()
 	, m_iStoreExeSettingsCorporationInfo(0)
 	, m_iStoreExeSettingsBonusInfo(0)
 	, m_bSignsCleared(false)
-#define ADD_TO_CONSTRUCTOR(VAR) \
-	, m_i##VAR(0)
-	DO_FOR_EACH_INT_GLOBAL_DEFINE(ADD_TO_CONSTRUCTOR)
+
+#define ADD_INT_TO_CONSTRUCTOR(dataType, VAR) \
+	, m_##VAR(0)
+	DO_FOR_EACH_INT_GLOBAL_DEFINE(ADD_INT_TO_CONSTRUCTOR)
+	DO_FOR_EACH_FLOAT_GLOBAL_DEFINE(ADD_INT_TO_CONSTRUCTOR)
+
+#define ADD_BOOL_TO_CONSTRUCTOR(dataType, VAR) \
+	, m_##VAR(false)
+	DO_FOR_EACH_BOOL_GLOBAL_DEFINE(ADD_BOOL_TO_CONSTRUCTOR)
 {
 }
 
@@ -3561,75 +3504,19 @@ void cvInternalGlobals::cacheGlobals()
 
 	strcpy(gVersionString, getDefineSTRING("C2C_VERSION"));
 
-#define CACHE_INT_GLOBAL_DEFINE(VAR) \
-	m_i##VAR = getDefineINT(#VAR);
+#define CACHE_INT_GLOBAL_DEFINE(dataType, VAR) \
+	m_##VAR = getDefineINT(#VAR);
 	DO_FOR_EACH_INT_GLOBAL_DEFINE(CACHE_INT_GLOBAL_DEFINE)
 
-	/************************************************************************************************/
-	/* Mod Globals    Start                          09/13/10                           phungus420  */
-	/*                                                                                              */
-	/*                                                                                              */
-	/************************************************************************************************/
-	m_bDCM_BATTLE_EFFECTS = (getDefineINT("DCM_BATTLE_EFFECTS") > 0) ? true : false;
-	m_bDCM_AIR_BOMBING = (getDefineINT("DCM_AIR_BOMBING") > 0) ? true : false;
-	m_bDCM_RANGE_BOMBARD = (getDefineINT("DCM_RANGE_BOMBARD") > 0) ? true : false;
-	m_iDCM_RB_CITY_INACCURACY = getDefineINT("DCM_RB_CITY_INACCURACY");
-	m_iDCM_RB_CITYBOMBARD_CHANCE = getDefineINT("DCM_RB_CITYBOMBARD_CHANCE");
-	m_bDCM_ATTACK_SUPPORT = (getDefineINT("DCM_ATTACK_SUPPORT") > 0) ? true : false;
-	m_bDCM_OPP_FIRE = (getDefineINT("DCM_OPP_FIRE") > 0) ? true : false;
-	m_bDCM_ACTIVE_DEFENSE = (getDefineINT("DCM_ACTIVE_DEFENSE") > 0) ? true : false;
-	m_bDCM_FIGHTER_ENGAGE = (getDefineINT("DCM_FIGHTER_ENGAGE") > 0) ? true : false;
+#define CACHE_BOOL_GLOBAL_DEFINE(dataType, VAR) \
+	m_##VAR = getDefineBOOL(#VAR);
+	DO_FOR_EACH_BOOL_GLOBAL_DEFINE(CACHE_BOOL_GLOBAL_DEFINE)
 
-	m_bDYNAMIC_CIV_NAMES = (getDefineINT("DYNAMIC_CIV_NAMES") > 0) ? true : false;
+#define CACHE_FLOAT_GLOBAL_DEFINE(dataType, VAR) \
+	m_##VAR = getDefineFLOAT(#VAR);
+	DO_FOR_EACH_FLOAT_GLOBAL_DEFINE(CACHE_FLOAT_GLOBAL_DEFINE)
 
-	m_bLIMITED_RELIGIONS_EXCEPTIONS = (getDefineINT("LIMITED_RELIGIONS_EXCEPTIONS") > 0) ? true : false;
-	m_bOC_RESPAWN_HOLY_CITIES = (getDefineINT("OC_RESPAWN_HOLY_CITIES") > 0) ? true : false;
-
-	m_bIDW_ENABLED = (getDefineINT("IDW_ENABLED") > 0) ? true : false;
-	m_fIDW_BASE_COMBAT_INFLUENCE = getDefineFLOAT("IDW_BASE_COMBAT_INFLUENCE");
-	m_fIDW_NO_CITY_DEFENDER_MULTIPLIER = getDefineFLOAT("IDW_NO_CITY_DEFENDER_MULTIPLIER");
-	m_fIDW_FORT_CAPTURE_MULTIPLIER = getDefineFLOAT("IDW_FORT_CAPTURE_MULTIPLIER");
-	m_fIDW_EXPERIENCE_FACTOR = getDefineFLOAT("IDW_EXPERIENCE_FACTOR");
-	m_fIDW_WARLORD_MULTIPLIER = getDefineFLOAT("IDW_WARLORD_MULTIPLIER");
-	m_fIDW_PLOT_DISTANCE_FACTOR = getDefineFLOAT("IDW_PLOT_DISTANCE_FACTOR");
-	m_fIDW_WINNER_PLOT_MULTIPLIER = getDefineFLOAT("IDW_WINNER_PLOT_MULTIPLIER");
-	m_fIDW_LOSER_PLOT_MULTIPLIER = getDefineFLOAT("IDW_LOSER_PLOT_MULTIPLIER");
-	m_bIDW_EMERGENCY_DRAFT_ENABLED = (getDefineINT("IDW_EMERGENCY_DRAFT_ENABLED") > 0) ? true : false;
-	m_fIDW_EMERGENCY_DRAFT_STRENGTH = getDefineFLOAT("IDW_EMERGENCY_DRAFT_STRENGTH");
-	m_fIDW_EMERGENCY_DRAFT_ANGER_MULTIPLIER = getDefineFLOAT("IDW_EMERGENCY_DRAFT_ANGER_MULTIPLIER");
-	m_bIDW_NO_BARBARIAN_INFLUENCE = (getDefineINT("IDW_NO_BARBARIAN_INFLUENCE") > 0) ? true : false;
-	m_bIDW_NO_NAVAL_INFLUENCE = (getDefineINT("IDW_NO_NAVAL_INFLUENCE") > 0) ? true : false;
-	m_bIDW_PILLAGE_INFLUENCE_ENABLED = (getDefineINT("IDW_PILLAGE_INFLUENCE_ENABLED") > 0) ? true : false;
-	m_fIDW_BASE_PILLAGE_INFLUENCE = getDefineFLOAT("IDW_BASE_PILLAGE_INFLUENCE");
-	m_fIDW_CITY_TILE_MULTIPLIER = getDefineFLOAT("IDW_CITY_TILE_MULTIPLIER");
-
-	m_bSS_ENABLED = (getDefineINT("SS_ENABLED") > 0) ? true : false;
-	m_bSS_BRIBE = (getDefineINT("SS_BRIBE") > 0) ? true : false;
-	m_bSS_ASSASSINATE = (getDefineINT("SS_ASSASSINATE") > 0) ? true : false;
-/************************************************************************************************/
-/* Mod Globals                        END                                           phungus420  */
-/************************************************************************************************/
-	
-	m_fCAMERA_MIN_YAW = getDefineFLOAT("CAMERA_MIN_YAW");
-	m_fCAMERA_MAX_YAW = getDefineFLOAT("CAMERA_MAX_YAW");
-	m_fCAMERA_FAR_CLIP_Z_HEIGHT = getDefineFLOAT("CAMERA_FAR_CLIP_Z_HEIGHT");
-	m_fCAMERA_MAX_TRAVEL_DISTANCE = getDefineFLOAT("CAMERA_MAX_TRAVEL_DISTANCE");
-	m_fCAMERA_START_DISTANCE = getDefineFLOAT("CAMERA_START_DISTANCE");
-	m_fAIR_BOMB_HEIGHT = getDefineFLOAT("AIR_BOMB_HEIGHT");
 	m_fPLOT_SIZE = getDefineFLOAT("PLOT_SIZE");
-	m_fCAMERA_SPECIAL_PITCH = getDefineFLOAT("CAMERA_SPECIAL_PITCH");
-	m_fCAMERA_MAX_TURN_OFFSET = getDefineFLOAT("CAMERA_MAX_TURN_OFFSET");
-	m_fCAMERA_MIN_DISTANCE = getDefineFLOAT("CAMERA_MIN_DISTANCE");
-	m_fCAMERA_UPPER_PITCH = getDefineFLOAT("CAMERA_UPPER_PITCH");
-	m_fCAMERA_LOWER_PITCH = getDefineFLOAT("CAMERA_LOWER_PITCH");
-	m_fFIELD_OF_VIEW = getDefineFLOAT("FIELD_OF_VIEW");
-	m_fSHADOW_SCALE = getDefineFLOAT("SHADOW_SCALE");
-	m_fUNIT_MULTISELECT_DISTANCE = getDefineFLOAT("UNIT_MULTISELECT_DISTANCE");
-	m_fSAD_FACTOR_1 =getDefineFLOAT("SAD_FACTOR_1");
-	m_fSAD_FACTOR_2 =getDefineFLOAT("SAD_FACTOR_2");
-	m_fSAD_FACTOR_3 =getDefineFLOAT("SAD_FACTOR_3");
-	m_fSAD_FACTOR_4 =getDefineFLOAT("SAD_FACTOR_4");
-
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
 /*                                                                                              */
@@ -3767,102 +3654,12 @@ void cvInternalGlobals::setDefineSTRING( const char * szName, const char * szVal
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
 
-float cvInternalGlobals::getCAMERA_MIN_YAW() const
-{
-	return m_fCAMERA_MIN_YAW;
-}
-
-float cvInternalGlobals::getCAMERA_MAX_YAW() const
-{
-	return m_fCAMERA_MAX_YAW;
-}
-
-float cvInternalGlobals::getCAMERA_FAR_CLIP_Z_HEIGHT() const
-{
-	return m_fCAMERA_FAR_CLIP_Z_HEIGHT;
-}
-
-float cvInternalGlobals::getCAMERA_MAX_TRAVEL_DISTANCE() const
-{
-	return m_fCAMERA_MAX_TRAVEL_DISTANCE;
-}
-
-float cvInternalGlobals::getCAMERA_START_DISTANCE() const
-{
-	return m_fCAMERA_START_DISTANCE;
-}
-
-float cvInternalGlobals::getAIR_BOMB_HEIGHT() const
-{
-	return m_fAIR_BOMB_HEIGHT;
-}
-
 float cvInternalGlobals::getPLOT_SIZE() const
 {
 	CvMapExternal& kMap = GC.getMapExternal();
 	kMap.mapCoordinates(true);
 
 	return m_fPLOT_SIZE;
-}
-
-float cvInternalGlobals::getCAMERA_SPECIAL_PITCH() const
-{
-	return m_fCAMERA_SPECIAL_PITCH;
-}
-
-float cvInternalGlobals::getCAMERA_MAX_TURN_OFFSET() const
-{
-	return m_fCAMERA_MAX_TURN_OFFSET;
-}
-
-float cvInternalGlobals::getCAMERA_MIN_DISTANCE() const
-{
-	return m_fCAMERA_MIN_DISTANCE;
-}
-
-float cvInternalGlobals::getCAMERA_UPPER_PITCH() const
-{
-	return m_fCAMERA_UPPER_PITCH;
-}
-
-float cvInternalGlobals::getCAMERA_LOWER_PITCH() const
-{
-	return m_fCAMERA_LOWER_PITCH;
-}
-
-float cvInternalGlobals::getFIELD_OF_VIEW() const
-{
-	return m_fFIELD_OF_VIEW;
-}
-
-float cvInternalGlobals::getSHADOW_SCALE() const
-{
-	return m_fSHADOW_SCALE;
-}
-
-float cvInternalGlobals::getUNIT_MULTISELECT_DISTANCE() const
-{
-	return m_fUNIT_MULTISELECT_DISTANCE;
-}
-
-float cvInternalGlobals::getSAD_FACTOR_1() const
-{
-	return m_fSAD_FACTOR_1;
-}
-
-float cvInternalGlobals::getSAD_FACTOR_2() const
-{
-	return m_fSAD_FACTOR_2;
-}
-
-float cvInternalGlobals::getSAD_FACTOR_3() const
-{
-	return m_fSAD_FACTOR_3;
-}
-
-float cvInternalGlobals::getSAD_FACTOR_4() const
-{
-	return m_fSAD_FACTOR_4;
 }
 
 int cvInternalGlobals::getMAX_CIV_PLAYERS() const
@@ -4887,161 +4684,6 @@ bool cvInternalGlobals::isXMLLogging() const
 	return m_bXMLLogging;
 }
 
-/************************************************************************************************/
-/* Mod Globals    Start                          09/13/10                           phungus420  */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-bool cvInternalGlobals::isDCM_BATTLE_EFFECTS() const
-{
-	return m_bDCM_BATTLE_EFFECTS;
-}
-
-bool cvInternalGlobals::isDCM_AIR_BOMBING() const
-{
-	return m_bDCM_AIR_BOMBING;
-}
-
-bool cvInternalGlobals::isDCM_RANGE_BOMBARD() const
-{
-	return m_bDCM_RANGE_BOMBARD;
-}
-
-bool cvInternalGlobals::isDCM_ATTACK_SUPPORT() const
-{
-	return m_bDCM_ATTACK_SUPPORT;
-}
-
-bool cvInternalGlobals::isDCM_OPP_FIRE() const
-{
-	return m_bDCM_OPP_FIRE;
-}
-
-bool cvInternalGlobals::isDCM_ACTIVE_DEFENSE() const
-{
-	return m_bDCM_ACTIVE_DEFENSE;
-}
-
-bool cvInternalGlobals::isDCM_FIGHTER_ENGAGE() const
-{
-	return m_bDCM_FIGHTER_ENGAGE;
-}
-
-bool cvInternalGlobals::isDYNAMIC_CIV_NAMES() const
-{
-	return m_bDYNAMIC_CIV_NAMES;
-}
-
-bool cvInternalGlobals::isLIMITED_RELIGIONS_EXCEPTIONS() const
-{
-	return m_bLIMITED_RELIGIONS_EXCEPTIONS;
-}
-
-bool cvInternalGlobals::isOC_RESPAWN_HOLY_CITIES() const
-{
-	return m_bOC_RESPAWN_HOLY_CITIES;
-}
-
-bool cvInternalGlobals::isIDW_ENABLED() const
-{
-	return m_bIDW_ENABLED;
-}
-
-float cvInternalGlobals::getIDW_BASE_COMBAT_INFLUENCE() const
-{
-	return m_fIDW_BASE_COMBAT_INFLUENCE;
-}
-
-float cvInternalGlobals::getIDW_NO_CITY_DEFENDER_MULTIPLIER() const
-{
-	return m_fIDW_NO_CITY_DEFENDER_MULTIPLIER;
-}
-
-float cvInternalGlobals::getIDW_FORT_CAPTURE_MULTIPLIER() const
-{
-	return m_fIDW_FORT_CAPTURE_MULTIPLIER;
-}
-
-float cvInternalGlobals::getIDW_EXPERIENCE_FACTOR() const
-{
-	return m_fIDW_EXPERIENCE_FACTOR;
-}
-
-float cvInternalGlobals::getIDW_WARLORD_MULTIPLIER() const
-{
-	return m_fIDW_WARLORD_MULTIPLIER;
-}
-
-float cvInternalGlobals::getIDW_PLOT_DISTANCE_FACTOR() const
-{
-	return m_fIDW_PLOT_DISTANCE_FACTOR;
-}
-
-float cvInternalGlobals::getIDW_WINNER_PLOT_MULTIPLIER() const
-{
-	return m_fIDW_WINNER_PLOT_MULTIPLIER;
-}
-
-float cvInternalGlobals::getIDW_LOSER_PLOT_MULTIPLIER() const
-{
-	return m_fIDW_LOSER_PLOT_MULTIPLIER;
-}
-
-bool cvInternalGlobals::isIDW_EMERGENCY_DRAFT_ENABLED() const
-{
-	return m_bIDW_EMERGENCY_DRAFT_ENABLED;
-}
-
-float cvInternalGlobals::getIDW_EMERGENCY_DRAFT_STRENGTH() const
-{
-	return m_fIDW_EMERGENCY_DRAFT_STRENGTH;
-}
-
-float cvInternalGlobals::getIDW_EMERGENCY_DRAFT_ANGER_MULTIPLIER() const
-{
-	return m_fIDW_EMERGENCY_DRAFT_ANGER_MULTIPLIER;
-}
-
-bool cvInternalGlobals::isIDW_NO_BARBARIAN_INFLUENCE() const
-{
-	return m_bIDW_NO_BARBARIAN_INFLUENCE;
-}
-
-bool cvInternalGlobals::isIDW_NO_NAVAL_INFLUENCE() const
-{
-	return m_bIDW_NO_NAVAL_INFLUENCE;
-}
-
-bool cvInternalGlobals::isIDW_PILLAGE_INFLUENCE_ENABLED() const
-{
-	return m_bIDW_PILLAGE_INFLUENCE_ENABLED;
-}
-
-float cvInternalGlobals::getIDW_BASE_PILLAGE_INFLUENCE() const
-{
-	return m_fIDW_BASE_PILLAGE_INFLUENCE;
-}
-
-float cvInternalGlobals::getIDW_CITY_TILE_MULTIPLIER() const
-{
-	return m_fIDW_CITY_TILE_MULTIPLIER;
-}
-
-bool cvInternalGlobals::isSS_ENABLED() const
-{
-	return m_bSS_ENABLED;
-}
-
-bool cvInternalGlobals::isSS_BRIBE() const
-{
-	return m_bSS_BRIBE;
-}
-
-bool cvInternalGlobals::isSS_ASSASSINATE() const
-{
-	return m_bSS_ASSASSINATE;
-}
-
 void cvInternalGlobals::setGraphicalDetailPagingEnabled(bool bEnabled)
 {
 	m_bGraphicalDetailPagingEnabled = bEnabled;
@@ -5056,10 +4698,6 @@ int cvInternalGlobals::getGraphicalDetailPageInRange()
 {
 	return std::max(getGame().getXResolution(), getGame().getYResolution())/150;
 }
-
-/************************************************************************************************/
-/* Mod Globals                        END                                           phungus420  */
-/************************************************************************************************/
 
 // calculate asset checksum
 unsigned int cvInternalGlobals::getAssetCheckSum()
