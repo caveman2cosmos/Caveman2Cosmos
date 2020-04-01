@@ -430,54 +430,22 @@ void CyInfoPythonInterface1()
 		.def("isFlatMovementCost", &CvUnitInfo::isFlatMovementCost, "bool ()")
 		.def("isIgnoreTerrainCost", &CvUnitInfo::isIgnoreTerrainCost, "bool ()")
 		.def("isNukeImmune", &CvUnitInfo::isNukeImmune, "bool ()")
-/************************************************************************************************/
-/* REVDCM_OC                              02/16/10                                phungus420    */
-/*                                                                                              */
-/* Inquisitions                                                                                 */
-/************************************************************************************************/
 		.def("isInquisitor", &CvUnitInfo::isInquisitor, "bool ()")
-/************************************************************************************************/
-/* REVDCM_OC                               END                                                  */
-/************************************************************************************************/
 		.def("isPrereqBonuses", &CvUnitInfo::isPrereqBonuses, "bool ()")
-		.def("isPrereqReligion", &CvUnitInfo::isPrereqReligion, "bool ()")
 		.def("isMechUnit", &CvUnitInfo::isMechUnit, "bool ()")
 		.def("isRenderBelowWater", &CvUnitInfo::isRenderBelowWater, "bool ()")
 		.def("isSuicide", &CvUnitInfo::isSuicide, "bool ()")
 		.def("isLineOfSight", &CvUnitInfo::isLineOfSight, "bool ()")
 		.def("isHiddenNationality", &CvUnitInfo::isHiddenNationality, "bool ()")
 		.def("isAlwaysHostile", &CvUnitInfo::isAlwaysHostile, "bool ()")
-/*****************************************************************************************************/
-/**  Author: TheLadiesOgre                                                                          **/
-/**  Date: 21.09.2009                                                                               **/
-/**  ModComp: TLOTags                                                                               **/
-/**  Reason Added: New Tag Definition                                                               **/
-/**  Notes:                                                                                         **/
-/*****************************************************************************************************/
 		.def("isFreeDrop", &CvUnitInfo::isFreeDrop, "bool ()")
-/*****************************************************************************************************/
-/**  TheLadiesOgre; 21.09.2009; TLOTags                                                             **/
-/*****************************************************************************************************/
-
-/************************************************************************************************/
-/* REVOLUTION_MOD                         01/01/08                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 		.def("isCanBeRebel", &CvUnitInfo::isCanBeRebel, "bool ()")
 		.def("isCanRebelCapture", &CvUnitInfo::isCanRebelCapture, "bool ()")
 		.def("isCannotDeffect", &CvUnitInfo::isCannotDefect, "bool ()")
 		.def("isCanQuellRebellion", &CvUnitInfo::isCanQuellRebellion, "bool ()")
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
-
 		.def("getUnitMaxSpeed", &CvUnitInfo::getUnitMaxSpeed, "float ()")
 		.def("getUnitPadTime", &CvUnitInfo::getUnitPadTime, "float ()")
-		
-// BUG - Unit Experience - start
 		.def("canAcquireExperience", &CvUnitInfo::canAcquireExperience, "int ()")
-// BUG - Unit Experience - end
 
 		// Arrays
 		.def("getPrereqAndTechs", &CvUnitInfo::getPrereqAndTechs, "int (int i)")
@@ -528,11 +496,6 @@ void CyInfoPythonInterface1()
 		.def("getFreePromotions", &CvUnitInfo::getFreePromotions, "bool (int i)")
 		.def("getLeaderPromotion", &CvUnitInfo::getLeaderPromotion, "int ()")
 		.def("getLeaderExperience", &CvUnitInfo::getLeaderExperience, "int ()")
-/************************************************************************************************/
-/* Afforess	                  Start		 03/10/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 		.def("getEarlyArtDefineTag", &CvUnitInfo::getEarlyArtDefineTag, "string (int i, UnitArtStyleTypes eStyle)")
 		.def("getClassicalArtDefineTag", &CvUnitInfo::getClassicalArtDefineTag, "string (int i, UnitArtStyleTypes eStyle)")
 		.def("getMiddleArtDefineTag", &CvUnitInfo::getMiddleArtDefineTag, "string (int i, UnitArtStyleTypes eStyle)")
@@ -540,9 +503,6 @@ void CyInfoPythonInterface1()
 		.def("getIndustrialArtDefineTag", &CvUnitInfo::getIndustrialArtDefineTag, "string (int i, UnitArtStyleTypes eStyle)")
 		.def("getLateArtDefineTag", &CvUnitInfo::getLateArtDefineTag, "string (int i, UnitArtStyleTypes eStyle)")
 		.def("getFutureArtDefineTag", &CvUnitInfo::getFutureArtDefineTag, "string (int i, UnitArtStyleTypes eStyle)")
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 		.def("getUnitNames", &CvUnitInfo::getUnitNames, "string (int i)")
 		.def("getArtInfo", &CvUnitInfo::getArtInfo,  python::return_value_policy<python::reference_existing_object>(), "CvArtInfoUnit* (int i, bool bLate)")
 		//TB SubCombat Mod begin  TB Combat Mods Begin
@@ -832,7 +792,6 @@ void CyInfoPythonInterface1()
 		.def("isBuildingOnlyHealthy", &CvBuildingInfo::isBuildingOnlyHealthy, "bool ()")
 		.def("isNeverCapture", &CvBuildingInfo::isNeverCapture, "bool ()")
 		.def("isNukeImmune", &CvBuildingInfo::isNukeImmune, "bool ()")
-		.def("isPrereqReligion", &CvBuildingInfo::isPrereqReligion, "bool ()")
 		.def("isCenterInCity", &CvBuildingInfo::isCenterInCity, "bool ()")
 		.def("isStateReligion", &CvBuildingInfo::isStateReligion, "bool ()")
 		.def("isAllowsNukes", &CvBuildingInfo::isAllowsNukes, "bool ()")

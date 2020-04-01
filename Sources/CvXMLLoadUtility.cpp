@@ -309,10 +309,10 @@ void CvXMLLoadUtility::ResetLandscapeInfo()
 {
 	for (int i = 0; i < GC.getNumLandscapeInfos(); ++i)
 	{
-		SAFE_DELETE(GC.getLandscapeInfos()[i]);
+		SAFE_DELETE(GC.m_paLandscapeInfo[i]);
 	}
 
-	GC.getLandscapeInfos().clear();
+	GC.m_paLandscapeInfo.clear();
 
 	SetupGlobalLandscapeInfo();
 }
@@ -328,12 +328,12 @@ void CvXMLLoadUtility::ResetGlobalEffectInfo()
 {
 	for (int i = 0; i < GC.getNumEffectInfos(); ++i)
 	{
-		SAFE_DELETE(GC.getEffectInfos()[i]);
+		SAFE_DELETE(GC.m_paEffectInfo[i]);
 	}
 
-	GC.getEffectInfos().clear();
+	GC.m_paEffectInfo.clear();
 
-	LoadGlobalClassInfo(GC.getEffectInfos(), "CIV4EffectInfos", "Misc", L"/Civ4EffectInfos/EffectInfos/EffectInfo", false);
+	LoadGlobalClassInfo(GC.m_paEffectInfo, "CIV4EffectInfos", "Misc", L"/Civ4EffectInfos/EffectInfos/EffectInfo", false);
 }
 
 

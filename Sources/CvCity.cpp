@@ -2315,11 +2315,6 @@ int CvCity::findCommerceRateRank(CommerceTypes eCommerce) const
 }
 
 
-/************************************************************************************************/
-/* REVDCM                                 02/16/10                                phungus420    */
-/*                                                                                              */
-/* CanTrain                                                                                     */
-/************************************************************************************************/
 bool CvCity::isPlotTrainable(UnitTypes eUnit, bool bContinue, bool bTestVisible) const
 {
 	PROFILE_FUNC();
@@ -2381,7 +2376,7 @@ bool CvCity::isPlotTrainable(UnitTypes eUnit, bool bContinue, bool bTestVisible)
 	return true;
 }
 
-//Returns true if the city can train a unit, or any upgrade for that unit that forces it obsolete
+// Returns true if the city can train a unit that force obsoletes eUnit
 bool CvCity::isSupersedingUnitAvailable(UnitTypes eUnit) const
 {
 	PROFILE_FUNC();
@@ -2396,9 +2391,6 @@ bool CvCity::isSupersedingUnitAvailable(UnitTypes eUnit) const
 	}
 	return false;
 }
-/************************************************************************************************/
-/* REVDCM                                  END                                                  */
-/************************************************************************************************/
 
 
 // Returns one of the upgrades...
@@ -2599,6 +2591,21 @@ bool CvCity::canTrainInternal(UnitTypes eUnit, bool bContinue, bool bTestVisible
 		}
 	}
 
+	const CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
+
+	if (kUnit.getPrereqReligion() != NO_RELIGION && !isHasReligion((ReligionTypes)kUnit.getPrereqReligion()))
+	{
+		return false;
+	}
+	if (kUnit.getPrereqCorporation() != NO_CORPORATION && !isActiveCorporation((CorporationTypes)kUnit.getPrereqCorporation()))
+	{
+		return false;
+	}
+	if (kUnit.getHolyCity() != NO_RELIGION && !isHolyCity((ReligionTypes)kUnit.getHolyCity()))
+	{
+		return false;
+	}
+
 	if (!plot()->canTrain(eUnit, bContinue, bTestVisible))
 	{
 		return false;
@@ -2614,31 +2621,26 @@ bool CvCity::canTrainInternal(UnitTypes eUnit, bool bContinue, bool bTestVisible
 		return false;
 	}
 
-	CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
 	if (kUnit.isForceUpgrade() && canUpgradeUnit(eUnit))
 	{
 		return false;
 	}
 
-	bool bQual = false;
 	if (isNPC() && GC.getCivilizationInfo(getCivilizationType()).isStronglyRestricted())
 	{
+		bool bValid = false;
 		for (int iI = 0; iI < kUnit.getNumEnabledCivilizationTypes(); iI++)
 		{
 			if (getCivilizationType() == kUnit.getEnabledCivilizationType(iI).eCivilization)
 			{
-				bQual = true;
+				bValid = true;
 				break;
 			}
 		}
-	}
-	else
-	{
-		bQual = true;
-	}
-	if (!bQual)
-	{
-		return false;
+		if (!bValid)
+		{
+			return false;
+		}
 	}
 
 	if (!bTestVisible && kUnit.isRequiresStateReligionInCity())
@@ -2775,69 +2777,68 @@ bool CvCity::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool b
 	{
 		return false;
 	}
-	else
 #ifdef CAN_TRAIN_CACHING
-		if (!bContinue && !bTestVisible && !bIgnoreCost && !bIgnoreUpgrades)
+	if (!bContinue && !bTestVisible && !bIgnoreCost && !bIgnoreUpgrades)
+	{
+		if (m_canTrainCachePopulated)
 		{
-			if (m_canTrainCachePopulated)
+			bool bHaveCachedResult;
+			bool bResult;
+
+			if (m_canTrainCacheDirty)
 			{
-				bool bHaveCachedResult;
-				bool bResult;
+				PROFILE("CvCity::canTrain.ProcessDirtyCache");
 
-				if (m_canTrainCacheDirty)
-				{
-					PROFILE("CvCity::canTrain.ProcessDirtyCache");
-
-					//	Needs repopulating
-					populateCanTrainCache();
-				}
-
-				stdext::hash_map<UnitTypes, bool>::iterator itr = m_canTrainCacheUnits.find(eUnit);
-				if (itr == m_canTrainCacheUnits.end())
-				{
-#ifdef VALIDATE_CAN_TRAIN_CACHE_CONSISTENCY
-					if (canTrainInternal(eUnit))
-					{
-						FAssertMsg(false, "Consistency check failure in canTrain cache - false negative\n");
-					}
-#endif
-					bResult = false;
-					bHaveCachedResult = true;
-				}
-				else if (itr->second)
-				{
-#ifdef VALIDATE_CAN_TRAIN_CACHE_CONSISTENCY
-					if (!canTrainInternal(eUnit))
-					{
-						FAssertMsg(false, "Consistency check failure in canTrain cache - false positive\n");
-					}
-#endif
-					bResult = true;
-					bHaveCachedResult = true;
-				}
-				else	//	In map but with false => recalculate
-				{
-					bHaveCachedResult = false;
-				}
-
-				if (!bHaveCachedResult)
-				{
-					bResult = canTrainInternal(eUnit);
-
-					if (bResult)
-					{
-						m_canTrainCacheUnits[eUnit] = true;
-					}
-					else
-					{
-						m_canTrainCacheUnits.erase(eUnit);
-					}
-
-				}
-
-				return bResult;
+				//	Needs repopulating
+				populateCanTrainCache();
 			}
+
+			stdext::hash_map<UnitTypes, bool>::iterator itr = m_canTrainCacheUnits.find(eUnit);
+			if (itr == m_canTrainCacheUnits.end())
+			{
+#ifdef VALIDATE_CAN_TRAIN_CACHE_CONSISTENCY
+				if (canTrainInternal(eUnit))
+				{
+					FAssertMsg(false, "Consistency check failure in canTrain cache - false negative\n");
+				}
+#endif
+				bResult = false;
+				bHaveCachedResult = true;
+			}
+			else if (itr->second)
+			{
+#ifdef VALIDATE_CAN_TRAIN_CACHE_CONSISTENCY
+				if (!canTrainInternal(eUnit))
+				{
+					FAssertMsg(false, "Consistency check failure in canTrain cache - false positive\n");
+				}
+#endif
+				bResult = true;
+				bHaveCachedResult = true;
+			}
+			else	//	In map but with false => recalculate
+			{
+				bHaveCachedResult = false;
+			}
+
+			if (!bHaveCachedResult)
+			{
+				bResult = canTrainInternal(eUnit);
+
+				if (bResult)
+				{
+					m_canTrainCacheUnits[eUnit] = true;
+				}
+				else
+				{
+					m_canTrainCacheUnits.erase(eUnit);
+				}
+
+			}
+
+			return bResult;
 		}
+	}
 #endif
 
 	PROFILE("canTrain.NonStandard");
@@ -3054,18 +3055,6 @@ bool CvCity::canConstructInternal(BuildingTypes eBuilding, bool bContinue, bool 
 
 	if (!bExposed)
 	{
-		if (kBuilding.isPrereqReligion())
-		{
-			if (getReligionCount() > 0)
-			{
-				if (probabilityEverConstructable != NULL)
-				{
-					*probabilityEverConstructable = 80;
-				}
-				return false;
-			}
-		}
-
 		if (kBuilding.isStateReligion())
 		{
 			ReligionTypes eStateReligion = GET_PLAYER(getOwner()).getStateReligion();
