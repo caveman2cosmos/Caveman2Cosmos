@@ -14670,77 +14670,36 @@ void CvPlot::applyEvent(EventTypes eEvent)
 	}
 }
 
+
 bool CvPlot::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible) const
 {
 	PROFILE_FUNC();
 
-	CvCity* pCity = getPlotCity();
-/************************************************************************************************/
-/* REVDCM                                 04/16/10                                phungus420    */
-/*                                                                                              */
-/* CanTrain Performance                                                                         */
-/************************************************************************************************/
 	CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
-	int iI;
-
-	if (kUnit.isPrereqReligion())
-	{
-		if (NULL == pCity || pCity->getReligionCount() > 0)
-		{
-			return false;
-		}
-	}
-
-	if (kUnit.getPrereqReligion() != NO_RELIGION)
-	{
-		if (NULL == pCity || !pCity->isHasReligion((ReligionTypes)(kUnit.getPrereqReligion())))
-		{
-			return false;
-		}
-	}
-
-	if (kUnit.getPrereqCorporation() != NO_CORPORATION)
-	{
-		if (NULL == pCity || !pCity->isActiveCorporation((CorporationTypes)(kUnit.getPrereqCorporation())))
-		{
-			return false;
-		}
-	}
 
 	if (kUnit.isPrereqBonuses())
 	{
 		if (kUnit.getDomainType() == DOMAIN_SEA)
 		{
 			bool bValid = false;
-
-			for (iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+			for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
 			{
 				CvPlot* pLoopPlot = plotDirection(getX(), getY(), ((DirectionTypes)iI));
 
-				if (pLoopPlot != NULL)
+				if (pLoopPlot != NULL && pLoopPlot->isWater() && pLoopPlot->area()->getNumTotalBonuses() > 0)
 				{
-					if (pLoopPlot->isWater())
-					{
-						if (pLoopPlot->area()->getNumTotalBonuses() > 0)
-						{
-							bValid = true;
-							break;
-						}
-					}
+					bValid = true;
+					break;
 				}
 			}
-
 			if (!bValid)
 			{
 				return false;
 			}
 		}
-		else
+		else if (area()->getNumTotalBonuses() > 0)
 		{
-			if (area()->getNumTotalBonuses() > 0)
-			{
-				return false;
-			}
+			return false;
 		}
 	}
 
@@ -14753,12 +14712,9 @@ bool CvPlot::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible) const
 				return false;
 			}
 		}
-		else
+		else if (area()->getNumTiles() < kUnit.getMinAreaSize())
 		{
-			if (area()->getNumTiles() < kUnit.getMinAreaSize())
-			{
-				return false;
-			}
+			return false;
 		}
 	}
 	else
@@ -14788,9 +14744,9 @@ bool CvPlot::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible) const
 		}
 	}
 
-	int iCount = kUnit.getNumMapCategoryTypes();
+	const int iCount = kUnit.getNumMapCategoryTypes();
 	bool bFound = (iCount < 1);
-	for (iI = 0; iI < iCount; iI++)
+	for (int iI = 0; iI < iCount; iI++)
 	{
 		if (isMapCategoryType((MapCategoryTypes)kUnit.getMapCategoryType(iI)))
 		{
@@ -14805,13 +14761,7 @@ bool CvPlot::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible) const
 
 	if (!bTestVisible)
 	{
-		if (kUnit.getHolyCity() != NO_RELIGION)
-		{
-			if (NULL == pCity || !pCity->isHolyCity(((ReligionTypes)(kUnit.getHolyCity()))))
-			{
-				return false;
-			}
-		}
+		CvCity* pCity = getPlotCity();
 
 		if (kUnit.getPrereqAndBonus() != NO_BONUS)
 		{
@@ -14822,51 +14772,39 @@ bool CvPlot::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible) const
 					return false;
 				}
 			}
-			else
+			else if (!pCity->hasBonus((BonusTypes)kUnit.getPrereqAndBonus()))
 			{
-				if (!pCity->hasBonus((BonusTypes)kUnit.getPrereqAndBonus()))
-				{
-					return false;
-				}
+				return false;
 			}
 		}
 
-		bool bRequiresBonus = false;
-		bool bNeedsBonus = true;
-
-		for (iI = 0; iI < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); ++iI)
+		bool bValid = true;
+		for (int iI = 0; iI < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); ++iI)
 		{
 			if (kUnit.getPrereqOrBonuses(iI) != NO_BONUS)
 			{
-				bRequiresBonus = true;
+				bValid = false;
 
 				if (NULL == pCity)
 				{
 					if (isPlotGroupConnectedBonus(getOwner(), (BonusTypes)kUnit.getPrereqOrBonuses(iI)))
 					{
-						bNeedsBonus = false;
+						bValid = true;
 						break;
 					}
 				}
-				else
+				else if (pCity->hasBonus((BonusTypes)kUnit.getPrereqOrBonuses(iI)))
 				{
-					if (pCity->hasBonus((BonusTypes)kUnit.getPrereqOrBonuses(iI)))
-/************************************************************************************************/
-/* REVDCM                                  END Performance                                      */
-/************************************************************************************************/
-					{
-						bNeedsBonus = false;
-						break;
-					}
+					bValid = true;
+					break;
 				}
 			}
 		}
-		if (bRequiresBonus && bNeedsBonus)
+		if (!bValid)
 		{
 			return false;
 		}
 	}
-
 	return true;
 }
 

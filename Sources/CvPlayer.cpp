@@ -2241,11 +2241,7 @@ bool CvPlayer::addStartUnitAI(const UnitAITypes eUnitAI, const int iCount)
 	return false;
 }
 
-/************************************************************************************************/
-/* LoR                                        11/03/10                          phungus420      */
-/*                                                                                              */
-/* Colonists                                                                                    */
-/************************************************************************************************/
+
 UnitTypes CvPlayer::getBestUnitType(UnitAITypes eUnitAI) const
 {
 	UnitTypes eBestUnit = NO_UNIT;
@@ -2272,9 +2268,6 @@ int CvPlayer::getBestUnitTypeCargoVolume(UnitAITypes eUnitAI) const
 	UnitTypes eBestUnitType = getBestUnitType(eUnitAI);
 	return (eBestUnitType != NO_UNIT ? GC.getUnitInfo(eBestUnitType).getBaseCargoVolume() : 0);
 }
-/************************************************************************************************/
-/* LoR                            END                                                           */
-/************************************************************************************************/
 
 
 int CvPlayer::startingPlotRange() const
@@ -8010,18 +8003,10 @@ void CvPlayer::found(int iX, int iY, CvUnit *pUnit)
 
 	CvEventReporter::getInstance().cityBuilt(pCity, pUnit);
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      10/02/09                                jdog5000      */
-/*                                                                                              */
-/* AI logging                                                                                   */
-/************************************************************************************************/
-	if( gPlayerLogLevel >= 1 )
+	if (gPlayerLogLevel >= 1)
 	{
 		logBBAI("  Player %d (%S) founds new city %S at %d, %d", getID(), getCivilizationDescription(0), pCity->getName(0).GetCString(), iX, iY );
 	}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 }
 
 
