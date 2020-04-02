@@ -266,7 +266,7 @@ public:
 	DirectionTypes getTurnRightDirection(int i) const;
 	DirectionTypes getXYDirection(const int i, const int j) const;
 
-/*********************************************************u***************************************/
+/************************************************************************************************/
 /* SORT_ALPHABET                           11/19/07                                MRGENIE      */
 /*                                                                                              */
 /* Method for alphabetically order tags                                                         */
