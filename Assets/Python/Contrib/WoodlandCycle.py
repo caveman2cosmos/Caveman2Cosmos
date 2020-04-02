@@ -1,9 +1,10 @@
 
 from CvPythonExtensions import *
-#import BugUtil
+import CvUtil #, BugUtil
 # globals
 GC = CyGlobalContext()
 GAME = GC.getGame()
+TRNSLTR = CyTranslator()
 
 class WoodlandCycle:
 
@@ -44,12 +45,12 @@ class WoodlandCycle:
 			iCount += 1
 			if 25 <= GAME.getSorenRandNum(self.iFactorGS, "New"): continue
 
+			bBurn = False
 			CyPlot = self.plots[plotIndex.pop()]
+			iImp = CyPlot.getImprovementType()
 			iFeature = CyPlot.getFeatureType()
 			if iFeature == -1:
 				if not GAME.getSorenRandNum(10, "New"):
-					iImp = CyPlot.getImprovementType()
-
 					if CyPlot.canHaveFeature(self.FEATURE_BAMBOO) and not GAME.getSorenRandNum(9, "Bamboo"):
 						CyPlot.setFeatureType(self.FEATURE_BAMBOO, 0)
 					elif CyPlot.canHaveFeature(self.FEATURE_FOREST_YOUNG):
@@ -61,11 +62,13 @@ class WoodlandCycle:
 					CyPlot.setFeatureType(self.FEATURE_BAMBOO, 0)
 				elif CyPlot.canHaveFeature(self.FEATURE_FOREST_YOUNG) and not GAME.getSorenRandNum(3, "Bamboo"):
 					CyPlot.setFeatureType(self.FEATURE_FOREST_YOUNG, 0)
-				else:
-					CyPlot.setFeatureType(iFeature, 0)
+
+				if iImp != CyPlot.getImprovementType() and CyPlot.canHaveImprovement(iImp, -1, True):
+					CyPlot.setImprovementType(iImp)
 
 			elif iFeature == self.FEATURE_BAMBOO:
 				if not GAME.getSorenRandNum(50, "Burn"):
+					bBurn = True
 					CyPlot.setFeatureType(self.FEATURE_FOREST_BURNT, 0)
 
 			elif iFeature == self.FEATURE_FOREST_YOUNG:
@@ -74,6 +77,7 @@ class WoodlandCycle:
 			elif iFeature == self.FEATURE_FOREST:
 				iRand = GAME.getSorenRandNum(148, "forestChange")
 				if iRand < 3:
+					bBurn = True
 					CyPlot.setFeatureType(self.FEATURE_FOREST_BURNT, 0)
 				elif iRand < 7:
 					CyPlot.setFeatureType(self.FEATURE_FOREST_ANCIENT, 0)
@@ -81,10 +85,40 @@ class WoodlandCycle:
 			elif iFeature == self.FEATURE_FOREST_ANCIENT:
 				iRand = GAME.getSorenRandNum(64, "Burn")
 				if iRand < 4:
+					bBurn = True
 					CyPlot.setFeatureType(self.FEATURE_FOREST_BURNT, 0)
 				elif iRand == 4:
 					CyPlot.setFeatureType(-1, 0)
 					if CyPlot.canHaveFeature(self.FEATURE_JUNGLE):
 						CyPlot.setFeatureType(self.FEATURE_JUNGLE, 0)
 					else: CyPlot.setFeatureType(self.FEATURE_FOREST_ANCIENT, 0)
+
+			if bBurn:
+				iPlayer = CyPlot.getOwner()
+				if iPlayer > -1 and iPlayer == GAME.getActivePlayer():
+					bActivePlayer = True
+					CyCity = CyPlot.getWorkingCity()
+					if CyCity:
+						CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_FOREST_FIRE_CITY_VICINITY", (CyCity.getName(),)), iPlayer, 10, \
+							'Art/Terrain/Features/Forest_Burnt/ButtonBurntForest.dds', ColorTypes(13), CyPlot.getX(), CyPlot.getY(), True, True)
+					else: CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_FOREST_FIRE_REMOTE",()), iPlayer, 6, \
+							'Art/Terrain/Features/Forest_Burnt/ButtonBurntForest.dds', ColorTypes(4), CyPlot.getX(), CyPlot.getY(), True, True)
+				else: bActivePlayer = False
+
+				if CyPlot.isActiveVisible(GAME.isDebugMode()):
+					point = CyPlot.getPoint()
+					CyEngine().triggerEffect(GC.getInfoTypeForString('EFFECT_FOREST_FIRE'), point)
+					CyAudioGame().Play3DSound("AS3D_FOREST_FIRE", point.x, point.y, point.z)
+
+				for i in range(CyPlot.getNumUnits()):
+					CyUnit = CyPlot.getUnit(i)
+					if CyUnit.canFight():
+						iHP = CyUnit.currHitPoints()
+						iDamage = 5 + GAME.getSorenRandNum(29, "Ouch")
+						if iHP > iDamage:
+							CyUnit.changeDamage(iDamage, -1)
+						else:
+							if bActivePlayer:
+								CvUtil.sendMessage(TRNSLTR.getText("TXT_KEY_FOREST_FIRE_UNIT_LOST",(CyUnit.getName(),)), iPlayer, 6, eColor=ColorTypes(9))
+							CyUnit.kill(False, -1)
 		#timer.log()
