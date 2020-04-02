@@ -24476,4 +24476,33 @@
 		<fMaxWetLevel>0.5</fMaxWetLevel>
 		<iNotPlayPercent>0</iNotPlayPercent>
 	</Script3DSound>
+	<Script3DSound>
+		<ScriptID>AS3D_FOREST_FIRE</ScriptID>
+		<SoundID>SND_FOREST_FIRE</SoundID>
+		<SoundType>GAME_SFX</SoundType>
+		<iMinVolume>50</iMinVolume>
+		<iMaxVolume>140</iMaxVolume>
+		<iPitchChangeDown>0</iPitchChangeDown>
+		<iPitchChangeUp>0</iPitchChangeUp>
+		<bLooping>0</bLooping>
+		<iMinTimeDelay>0</iMinTimeDelay>
+		<iMaxTimeDelay>0</iMaxTimeDelay>
+		<StartPosition>NONE</StartPosition>
+		<EndPosition>NONE</EndPosition>
+		<iMinVelocity>0</iMinVelocity>
+		<iMaxVelocity>0</iMaxVelocity>
+		<iMinDistanceFromListener>0</iMinDistanceFromListener>
+		<iMaxDistanceFromListener>0</iMaxDistanceFromListener>
+		<iMinDistanceForMaxVolume>500</iMinDistanceForMaxVolume>
+		<iMaxDistanceForMaxVolume>3000</iMaxDistanceForMaxVolume>
+		<iMinCutoffDistance>6000</iMinCutoffDistance>
+		<iMaxCutoffDistance>12000</iMaxCutoffDistance>
+		<bTaperForSoundtracks>0</bTaperForSoundtracks>
+		<iLengthOfSound>0</iLengthOfSound>
+		<fMinDryLevel>1.0</fMinDryLevel>
+		<fMaxDryLevel>1.0</fMaxDryLevel>
+		<fMinWetLevel>0.5</fMinWetLevel>
+		<fMaxWetLevel>0.5</fMaxWetLevel>
+		<iNotPlayPercent>0</iNotPlayPercent>
+	</Script3DSound>
 </Script3DSounds>
