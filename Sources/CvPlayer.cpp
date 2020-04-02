@@ -13720,7 +13720,7 @@ int CvPlayer::getCitiesLost() const
 
 void CvPlayer::changeCitiesLost(int iChange)
 {
-	m_iCitiesLost = (m_iCitiesLost + iChange);
+	m_iCitiesLost += iChange;
 }
 
 
@@ -13732,22 +13732,21 @@ int CvPlayer::getWinsVsBarbs() const
 
 void CvPlayer::changeWinsVsBarbs(int iChange)
 {
-	m_iWinsVsBarbs = (m_iWinsVsBarbs + iChange);
-	FAssert(getWinsVsBarbs() >= 0);
+	m_iWinsVsBarbs += iChange;
+	FAssert(m_iWinsVsBarbs >= 0);
 }
 
 
 int CvPlayer::getAssets() const
 {
-	int iTotal = m_iAssets / 100;
-	return iTotal;
+	return m_iAssets / 100;
 }
 
 
 void CvPlayer::changeAssets(int iChange)
 {
-	m_iAssets = (m_iAssets + iChange);
-	FAssertRecalcMsg(getAssets() >= 0, "Player assets value fell below 0");
+	m_iAssets += iChange;
+	FAssertRecalcMsg(m_iAssets >= 0, "Player assets value fell below 0");
 }
 
 
