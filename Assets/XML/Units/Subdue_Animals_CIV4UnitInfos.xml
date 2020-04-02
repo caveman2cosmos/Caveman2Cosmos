@@ -7,11 +7,6 @@
 			<Capture>UNIT_SUBDUED_AARDVARK</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_ANTEATER</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HARD_PLATED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_SLOW</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -67,12 +62,6 @@
 			<Capture>UNIT_SUBDUED_ANTEATER</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_ANTEATER</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_CLAWED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_ROARING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_SLOW</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -128,10 +117,6 @@
 			<Capture>UNIT_SUBDUED_AFRICANGREY</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_PARROT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_NIP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -192,12 +177,6 @@
 			<Capture>UNIT_SUBDUED_AFRICAN_PENGUIN</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_PENGUIN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PECK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -271,19 +250,6 @@
 			<Capture>UNIT_SUBDUED_ARCTICFOX</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_CANINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POUNCE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHASING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_BURROWING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HIDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_KEEN_SENSES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -342,11 +308,6 @@
 			<Capture>UNIT_SUBDUED_ARMADILLO</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_ANTEATER</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HARD_PLATED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_SLOW</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -401,16 +362,6 @@
 			<Capture>UNIT_SUBDUED_ASIANBEAR</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_URSINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_CLAWED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_ROARING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CONSTRICT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_KEEN_SENSES</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -470,16 +421,6 @@
 			<Capture>UNIT_SUBDUED_BABIRUSA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_SWINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_ROARING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -574,13 +515,6 @@
 			<Capture>UNIT_SUBDUED_BADGER</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_MUSTELIDAE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_CLAWED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_BURROWING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -654,12 +588,6 @@
 			<Capture>UNIT_SUBDUED_BALLPYTHON</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_REPTILE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_REPTILE_SNAKE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CONSTRICT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TREECLIMBING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -720,13 +648,6 @@
 			<Capture>UNIT_SUBDUED_BARBARYAPE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_MONKEY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_ROARING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TREECLIMBING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FECAL_FLINGING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -783,10 +704,6 @@
 			<Capture>UNIT_SUBDUED_BARNOWL</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_RAPTOR</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_CLAWED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PECK</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -850,10 +767,6 @@
 			<Capture>UNIT_SUBDUED_BARREDOWL</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_RAPTOR</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_CLAWED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PECK</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -917,20 +830,10 @@
 			<Capture>UNIT_SUBDUED_BEAR</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_URSINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_CLAWED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_ROARING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CONSTRICT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_KEEN_SENSES</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -985,12 +888,6 @@
 			<Capture>UNIT_SUBDUED_BEAVER</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_RODENT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HIDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TAIL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -1049,20 +946,10 @@
 			<Capture>UNIT_SUBDUED_BELUGA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_SEA_ANIMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_WHALE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TAIL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
 				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WHALE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
@@ -1117,18 +1004,6 @@
 			<Capture>UNIT_SUBDUED_BENGALTIGER</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_FELINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_CLAWED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POUNCE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_ROARING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHASING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -1221,22 +1096,10 @@
 			<Capture>UNIT_SUBDUED_BISON</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_BOVINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_HORNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_WARNING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_STOMP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HEAD_BUTT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POWER_KICK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -1328,16 +1191,6 @@
 			<Capture>UNIT_SUBDUED_BLACKBEAR</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_URSINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_CLAWED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_ROARING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CONSTRICT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_KEEN_SENSES</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -1396,16 +1249,6 @@
 			<Capture>UNIT_SUBDUED_BOAR</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_SWINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_ROARING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -1500,20 +1343,10 @@
 			<Capture>UNIT_SUBDUED_BONGO</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_ANTELOPE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_HORNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POWER_KICK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -1604,12 +1437,6 @@
 			<Capture>UNIT_SUBDUED_BOOBY</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_SEABIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PECK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -1671,13 +1498,6 @@
 			<Capture>UNIT_SUBDUED_BRAZILIAN_TAPIR</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_TAPIR</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HIDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -1736,20 +1556,10 @@
 			<Capture>UNIT_SUBDUED_BUFFALO</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_BOVINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_HORNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HEAD_BUTT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POWER_KICK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_STOMP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_SLOW</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -1842,17 +1652,10 @@
 			<Capture>UNIT_SUBDUED_CAIMAN</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_REPTILE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_REPTILE_CROCODILIAN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TAIL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HARD_PLATED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -1944,19 +1747,10 @@
 			<Capture>UNIT_SUBDUED_CAMEL</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_CAMELID</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_STOMP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_REPELLENT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POWER_KICK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -2044,15 +1838,6 @@
 			<Capture>UNIT_SUBDUED_CAPUCHIN</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_MONKEY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_WARNING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_REPELLENT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_NIP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TREECLIMBING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PUMMEL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FECAL_FLINGING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -2112,12 +1897,6 @@
 			<Capture>UNIT_SUBDUED_CAPYBARA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_RODENT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -2174,22 +1953,10 @@
 			<Capture>UNIT_SUBDUED_CARIBOU</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_CERVID</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_HORNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HEAD_BUTT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POWER_KICK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_STOMP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -2283,13 +2050,6 @@
 			<Capture>UNIT_SUBDUED_CASSOWARY</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_RATITE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PECK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -2390,21 +2150,10 @@
 			<Capture>UNIT_SUBDUED_CAVE_LION</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_FELINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_CLAWED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POUNCE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_ROARING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHASING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -2496,20 +2245,10 @@
 			<Capture>UNIT_SUBDUED_CAVEBEAR</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_URSINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_CLAWED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_ROARING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CONSTRICT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_KEEN_SENSES</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -2565,17 +2304,6 @@
 			<Capture>UNIT_SUBDUED_CHEETAH</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_FELINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_CLAWED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POUNCE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_ROARING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHASING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -2668,14 +2396,6 @@
 			<Capture>UNIT_SUBDUED_CHIMPANZEE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_APE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_WARNING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TREECLIMBING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PUMMEL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FECAL_FLINGING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -2769,14 +2489,6 @@
 			<Capture>UNIT_SUBDUED_COBRA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_REPTILE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_REPTILE_SNAKE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_VENEMOUS</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HIDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -2838,11 +2550,6 @@
 			<Capture>UNIT_SUBDUED_COD</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_SEA_ANIMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_FISH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_FISH_BONEY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -2901,21 +2608,10 @@
 			<Capture>UNIT_SUBDUED_COW</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_BOVINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_HORNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_WARNING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_STOMP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HEAD_BUTT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POWER_KICK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -3031,13 +2727,6 @@
 			<Capture>UNIT_SUBDUED_CRAB</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_SEA_ANIMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_INVERTEBRATE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_INVERTEBRATE_CRUSTACEAN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHELLED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_NIP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_SLOW</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -3092,11 +2781,6 @@
 			<Capture>UNIT_SUBDUED_CROW</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_CORVID</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PECK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_WARNING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -3156,11 +2840,6 @@
 			<Capture>UNIT_SUBDUED_CUSCUS</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_MARSUPIAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TREECLIMBING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -3216,12 +2895,6 @@
 			<Capture>UNIT_SUBDUED_DARTFROG</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_AMPHIBIAN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_AMPHIBIAN_FROG</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_VENEMOUS</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TREECLIMBING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HIDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -3283,11 +2956,6 @@
 			<Capture>UNIT_SUBDUED_DESERT_TORTOISE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_REPTILE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_REPTILE_TURTLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHELLED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_NIP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_SLOW</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -3344,21 +3012,6 @@
 			<Capture>UNIT_SUBDUED_DHOLE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_CANINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POUNCE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHASING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_BURROWING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_WARNING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HIDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_KEEN_SENSES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PACK_HUNTER</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -3422,18 +3075,6 @@
 			<Capture>UNIT_SUBDUED_DINGO</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_CANINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POUNCE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHASING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_WARNING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_KEEN_SENSES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PACK_HUNTER</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -3492,19 +3133,6 @@
 			<Capture>UNIT_SUBDUED_DIREWOLF</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_CANINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POUNCE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHASING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_WARNING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PACK_HUNTER</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_KEEN_SENSES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -3607,18 +3235,6 @@
 			<Capture>UNIT_SUBDUED_DOLPHIN</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_SEA_ANIMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_WHALE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_KEEN_SENSES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PACK_HUNTER</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -3678,17 +3294,10 @@
 			<Capture>UNIT_SUBDUED_DONKEY</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_EQUINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_NIP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POWER_KICK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -3776,11 +3385,6 @@
 			<Capture>UNIT_SUBDUED_DUCK</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_WATERFOWL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PECK</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -3842,19 +3446,10 @@
 			<Capture>UNIT_SUBDUED_DUGONG</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_SEA_ANIMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_SIRENIA</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TAIL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_SLOW</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
@@ -3904,11 +3499,6 @@
 			<Capture>UNIT_SUBDUED_EAGLE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_RAPTOR</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PECK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_KEEN_SENSES</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -3975,11 +3565,6 @@
 			<Capture>UNIT_SUBDUED_EAGLE_BALD</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_RAPTOR</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PECK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_KEEN_SENSES</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -4049,19 +3634,10 @@
 			<Capture>UNIT_SUBDUED_AFRICANELEPHANT</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_PACHYDERM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_HORNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_STOMP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CONSTRICT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_HUGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -4154,19 +3730,10 @@
 			<Capture>UNIT_SUBDUED_ELEPHANT</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_PACHYDERM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_HORNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_STOMP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CONSTRICT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_HUGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -4259,12 +3826,6 @@
 			<Capture>UNIT_SUBDUED_EMU</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_RATITE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PECK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -4366,19 +3927,6 @@
 			<Capture>UNIT_SUBDUED_EWOLF</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_CANINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POUNCE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHASING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_WARNING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PACK_HUNTER</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_KEEN_SENSES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -4479,19 +4027,6 @@
 			<Capture>UNIT_SUBDUED_FENNECFOX</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_CANINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POUNCE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHASING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_BURROWING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HIDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_KEEN_SENSES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -4548,10 +4083,6 @@
 			<Capture>UNIT_SUBDUED_FLAMINGO</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_WATERFOWL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PECK</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -4649,12 +4180,6 @@
 			<Capture>UNIT_SUBDUED_GALAPAGOS_PENGUIN</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_PENGUIN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PECK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -4728,11 +4253,6 @@
 			<Capture>UNIT_SUBDUED_GALAPAGOS_TORTOISE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_REPTILE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_REPTILE_TURTLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHELLED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_NIP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_SLOW</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -4790,17 +4310,10 @@
 			<Capture>UNIT_SUBDUED_GATOR</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_REPTILE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_REPTILE_CROCODILIAN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TAIL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HARD_PLATED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -4894,17 +4407,10 @@
 			<Capture>UNIT_SUBDUED_GATOR_ASIAN</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_REPTILE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_REPTILE_CROCODILIAN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TAIL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HARD_PLATED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -4997,19 +4503,10 @@
 			<Capture>UNIT_SUBDUED_GAZELLE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_ANTELOPE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HEAD_BUTT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_HORNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -5062,19 +4559,10 @@
 			<Capture>UNIT_SUBDUED_GEMSBOK</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_ANTELOPE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HEAD_BUTT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -5165,14 +4653,6 @@
 			<Capture>UNIT_SUBDUED_GERENUK</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_ANTELOPE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HEAD_BUTT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -5267,14 +4747,6 @@
 			<Capture>UNIT_SUBDUED_GELADA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_MONKEY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_ROARING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TREECLIMBING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PUMMEL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -5335,16 +4807,10 @@
 			<Capture>UNIT_SUBDUED_GHARIAL</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_REPTILE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_REPTILE_CROCODILIAN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HARD_PLATED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TAIL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -5437,17 +4903,10 @@
 			<Capture>UNIT_SUBDUED_GIANT_SQUID</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_SEA_ANIMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_INVERTEBRATE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_INVERTEBRATE_MOLLUSK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PECK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CONSTRICT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_HUGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
@@ -5503,18 +4962,10 @@
 			<Capture>UNIT_SUBDUED_GIRAFFE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_GIRAFFE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_STOMP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HEAD_BUTT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_HUGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -5592,16 +5043,10 @@
 			<Capture>UNIT_SUBDUED_GLYPTO</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_ANTEATER</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HARD_PLATED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHELLED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_SLOW</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -5655,20 +5100,10 @@
 			<Capture>UNIT_SUBDUED_GORILLA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_APE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_ROARING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TREECLIMBING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PUMMEL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -5761,19 +5196,10 @@
 			<Capture>UNIT_SUBDUED_GREATWHITE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_SEA_ANIMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_FISH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_FISH_SHARK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
@@ -5832,20 +5258,10 @@
 			<Capture>UNIT_SUBDUED_GRIZZLY</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_URSINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_CLAWED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_ROARING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CONSTRICT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_KEEN_SENSES</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -5901,19 +5317,10 @@
 			<Capture>UNIT_SUBDUED_GROUNDSLOTH</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_ANTEATER</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_CLAWED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_ROARING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CONSTRICT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_SLOW</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_HUGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -5966,12 +5373,6 @@
 			<Capture>UNIT_SUBDUED_GULL</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_SEABIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PECK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -6030,10 +5431,6 @@
 			<Capture>UNIT_SUBDUED_HAAST_EAGLE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_RAPTOR</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PECK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_CLAWED</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -6103,19 +5500,10 @@
 			<Capture>UNIT_SUBDUED_HAMMERHEAD</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_SEA_ANIMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_FISH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_FISH_SHARK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
@@ -6174,11 +5562,6 @@
 			<Capture>UNIT_SUBDUED_HARPYEAGLE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_RAPTOR</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PECK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_KEEN_SENSES</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -6243,10 +5626,6 @@
 			<Capture>UNIT_SUBDUED_HAWK</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_RAPTOR</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PECK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -6312,21 +5691,10 @@
 			<Capture>UNIT_SUBDUED_HIPPO</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_HIPPO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_ROARING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_STOMP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_SLOW</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -6419,16 +5787,10 @@
 			<Capture>UNIT_SUBDUED_PANDA_BEAR</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_URSINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_CLAWED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -6483,12 +5845,6 @@
 			<Capture>UNIT_SUBDUED_PIG_NEW</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_SWINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_WARNING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -6546,21 +5902,10 @@
 			<Capture>UNIT_SUBDUED_POLARBEAR</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_URSINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_CLAWED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_ROARING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CONSTRICT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_KEEN_SENSES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -6616,21 +5961,10 @@
 			<Capture>UNIT_SUBDUED_PYGMYHIPPO</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_HIPPO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_ROARING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_STOMP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_SLOW</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -6723,10 +6057,6 @@
 			<Capture>UNIT_SUBDUED_HORNEDOWL</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_RAPTOR</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_CLAWED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PECK</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -6790,18 +6120,10 @@
 			<Capture>UNIT_SUBDUED_HORSE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_EQUINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_STOMP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POWER_KICK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -6917,18 +6239,10 @@
 			<Capture>UNIT_SUBDUED_HUMPBACK_WHALE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_SEA_ANIMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_WHALE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HEAD_BUTT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TAIL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_HUGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
@@ -6986,18 +6300,6 @@
 			<Capture>UNIT_SUBDUED_HYENA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_HYENA</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHASING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_WARNING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PACK_HUNTER</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_KEEN_SENSES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -7089,13 +6391,6 @@
 			<Capture>UNIT_SUBDUED_IBEX</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_GOAT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_HORNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HEAD_BUTT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POWER_KICK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -7217,11 +6512,6 @@
 			<Capture>UNIT_SUBDUED_IGUANA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_REPTILE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_REPTILE_LIZARD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_NIP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_SLOW</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -7278,16 +6568,6 @@
 			<Capture>UNIT_SUBDUED_IMPALA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_ANTELOPE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_HORNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HEAD_BUTT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POWER_KICK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -7382,17 +6662,6 @@
 			<Capture>UNIT_SUBDUED_JAGUAR</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_FELINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_CLAWED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_ROARING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHASING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POUNCE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -7485,12 +6754,6 @@
 			<Capture>UNIT_SUBDUED_KANGAROO_GREY</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_MARSUPIAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POWER_KICK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -7586,19 +6849,10 @@
 			<Capture>UNIT_SUBDUED_KANGAROO_RED</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_MARSUPIAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POWER_KICK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PUMMEL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TAIL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_STOMP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -7691,11 +6945,6 @@
 			<Capture>UNIT_SUBDUED_KOALA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_MARSUPIAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TREECLIMBING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -7753,12 +7002,6 @@
 			<Capture>UNIT_SUBDUED_KOMODO_DRAGON</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_REPTILE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_REPTILE_LIZARD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_VENEMOUS</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_SLOW</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -7815,12 +7058,6 @@
 			<Capture>UNIT_SUBDUED_KOOKABURRA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_KINGFISHER</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PECK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -7880,12 +7117,6 @@
 			<Capture>UNIT_SUBDUED_LEMUR</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_PROSIMIAN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TREECLIMBING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -7939,11 +7170,6 @@
 			<Capture>UNIT_SUBDUED_LIZARD</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_REPTILE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_REPTILE_LIZARD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_NIP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_SLOW</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -8001,18 +7227,10 @@
 			<Capture>UNIT_SUBDUED_LLAMA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_CAMELID</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POWER_KICK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_REPELLENT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -8065,18 +7283,6 @@
 			<Capture>UNIT_SUBDUED_LION</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_FELINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_CLAWED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POUNCE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHASING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_ROARING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -8168,10 +7374,6 @@
 			<Capture>UNIT_SUBDUED_LOON</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_WATERFOWL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PECK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -8231,16 +7433,6 @@
 			<Capture>UNIT_SUBDUED_LYNX</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_FELINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_CLAWED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POUNCE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HIDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TREECLIMBING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -8333,10 +7525,6 @@
 			<Capture>UNIT_SUBDUED_MACAW</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_PARROT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_NIP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -8397,11 +7585,6 @@
 			<Capture>UNIT_SUBDUED_MACKEREL</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_SEA_ANIMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_FISH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_FISH_BONEY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -8461,13 +7644,6 @@
 			<Capture>UNIT_SUBDUED_MALAYAN_TAPIR</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_TAPIR</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HIDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -8527,19 +7703,10 @@
 			<Capture>UNIT_SUBDUED_MAMMOTH</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_PACHYDERM</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_HORNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_STOMP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CONSTRICT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_HUGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_SUBDUED_MAMMOTH</Description>
@@ -8632,19 +7799,6 @@
 			<Capture>UNIT_SUBDUED_MANEDWOLF</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_CANINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POUNCE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHASING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_WARNING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PACK_HUNTER</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_KEEN_SENSES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -8745,15 +7899,6 @@
 			<Capture>UNIT_SUBDUED_MANDRILL</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_MONKEY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PUMMEL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_ROARING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TREECLIMBING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -8850,11 +7995,6 @@
 			<Capture>UNIT_SUBDUED_RAY_MANTA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_SEA_ANIMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_FISH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_FISH_RAY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TAIL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -8914,11 +8054,6 @@
 			<Capture>UNIT_SUBDUED_MARLIN</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_SEA_ANIMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_FISH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_FISH_BONEY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -8976,18 +8111,10 @@
 			<Capture>UNIT_SUBDUED_MINKIE_WHALE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_SEA_ANIMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_WHALE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HEAD_BUTT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TAIL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
@@ -9044,18 +8171,10 @@
 			<Capture>UNIT_SUBDUED_MOA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_RATITE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PECK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POWER_KICK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHASING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -9157,20 +8276,10 @@
 			<Capture>UNIT_SUBDUED_MOOSE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_CERVID</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_HORNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HEAD_BUTT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POWER_KICK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_STOMP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -9264,13 +8373,6 @@
 			<Capture>UNIT_SUBDUED_MONITOR</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_REPTILE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_REPTILE_LIZARD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TREECLIMBING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -9327,13 +8429,6 @@
 			<Capture>UNIT_SUBDUED_MOUFLON</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_GOAT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HEAD_BUTT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -9420,13 +8515,6 @@
 			<Capture>UNIT_SUBDUED_MOUNTAIN_TAPIR</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_TAPIR</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HIDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -9485,19 +8573,10 @@
 			<Capture>UNIT_SUBDUED_MUSKOX</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_GOAT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_HORNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HEAD_BUTT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_STOMP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_WARNING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -9590,14 +8669,6 @@
 			<Capture>UNIT_SUBDUED_NARWHAL</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_SEA_ANIMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_WHALE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_HORNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -9659,17 +8730,10 @@
 			<Capture>UNIT_SUBDUED_NILECROC</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_REPTILE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_REPTILE_CROCODILIAN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TAIL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HARD_PLATED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -9762,13 +8826,6 @@
 			<Capture>UNIT_SUBDUED_NUMBAT</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_MARSUPIAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HIDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_KEEN_SENSES</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -9824,18 +8881,10 @@
 			<Capture>UNIT_SUBDUED_OKAPI</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_GIRAFFE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HEAD_BUTT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -9926,13 +8975,6 @@
 			<Capture>UNIT_SUBDUED_OPOSSUM</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_MARSUPIAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TREECLIMBING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HIDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_KEEN_SENSES</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -9988,21 +9030,10 @@
 			<Capture>UNIT_SUBDUED_ORCA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_SEA_ANIMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_WHALE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HEAD_BUTT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHASING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TAIL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PACK_HUNTER</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_KEEN_SENSES</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
@@ -10059,13 +9090,6 @@
 			<Capture>UNIT_SUBDUED_ORANGUTAN</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_APE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PUMMEL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_ROARING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TREECLIMBING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -10158,14 +9182,6 @@
 			<Capture>UNIT_SUBDUED_OSTRICH</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_RATITE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PECK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POWER_KICK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -10267,11 +9283,6 @@
 			<Capture>UNIT_SUBDUED_OXPECKER</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_SONGBIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PECK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -10331,18 +9342,6 @@
 			<Capture>UNIT_SUBDUED_PANTHER</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_FELINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_CLAWED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POUNCE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHASING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_ROARING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TREECLIMBING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -10435,10 +9434,6 @@
 			<Capture>UNIT_SUBDUED_PARROT</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_PARROT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_NIP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -10499,11 +9494,6 @@
 			<Capture>UNIT_SUBDUED_PEACOCK</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_GAMEBIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PECK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -10564,12 +9554,6 @@
 			<Capture>UNIT_SUBDUED_PENGUIN</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_PENGUIN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PECK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -10638,11 +9622,6 @@
 			<Capture>UNIT_SUBDUED_PHEASANT</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_GAMEBIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PECK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -10720,17 +9699,6 @@
 			<Capture>UNIT_SUBDUED_PLATYPUS</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_MONOTREME</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_VENEMOUS</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_NIP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TAIL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HIDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -10791,11 +9759,6 @@
 			<Capture>UNIT_SUBDUED_PIGEON</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_PIGEON</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PECK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -10856,11 +9819,6 @@
 			<Capture>UNIT_SUBDUED_POSSUM</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_MARSUPIAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TREECLIMBING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -10916,17 +9874,10 @@
 			<Capture>UNIT_SUBDUED_PROCOPTODON</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_MARSUPIAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POWER_KICK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PUMMEL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TAIL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_STOMP</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_HUGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -11020,16 +9971,6 @@
 			<Capture>UNIT_SUBDUED_PUFFADDER</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_REPTILE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_REPTILE_SNAKE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_VENEMOUS</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HIDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_WARNING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -11091,16 +10032,6 @@
 			<Capture>UNIT_SUBDUED_QUOLL</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_MARSUPIAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_NIP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POUNCE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHASING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HIDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_KEEN_SENSES</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -11156,15 +10087,6 @@
 			<Capture>UNIT_SUBDUED_RACCOON</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_RACCOON</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_NIP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_BURROWING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HIDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TREECLIMBING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -11222,14 +10144,6 @@
 			<Capture>UNIT_SUBDUED_RATEL</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_MUSTELIDAE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_NIP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_BURROWING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -11314,11 +10228,6 @@
 			<Capture>UNIT_SUBDUED_RAVEN</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_CORVID</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PECK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_WARNING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -11379,11 +10288,6 @@
 			<Capture>UNIT_SUBDUED_RAY_EAGLE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_SEA_ANIMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_FISH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_FISH_RAY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_VENEMOUS</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -11443,11 +10347,6 @@
 			<Capture>UNIT_SUBDUED_RAZORBILL</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_SEABIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PECK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_KEEN_SENSES</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -11510,18 +10409,6 @@
 			<Capture>UNIT_SUBDUED_REDFOX</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_CANINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POUNCE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHASING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_BURROWING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HIDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_KEEN_SENSES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -11580,12 +10467,6 @@
 			<Type>UNIT_SUBDUED_REDPANDA</Type>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_RACCOON</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_NIP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HIDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TREECLIMBING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -11645,16 +10526,6 @@
 			<Capture>UNIT_SUBDUED_WARTHOG</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_SWINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_ROARING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -11750,19 +10621,6 @@
 			<Capture>UNIT_SUBDUED_WOLF</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_CANINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POUNCE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHASING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_WARNING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PACK_HUNTER</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_KEEN_SENSES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -11863,14 +10721,6 @@
 			<Capture>UNIT_SUBDUED_REEF_SHARK</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_SEA_ANIMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_FISH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_FISH_SHARK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHASING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PACK_HUNTER</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -11933,13 +10783,6 @@
 			<Capture>UNIT_SUBDUED_RHEA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_RATITE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PECK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -12021,18 +10864,10 @@
 			<Capture>UNIT_SUBDUED_ELASMOTHERIUM</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_RHINO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_HORNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HEAD_BUTT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_STOMP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -12088,18 +10923,10 @@
 			<Capture>UNIT_SUBDUED_BLACK_RHINO</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_RHINO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_HORNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HEAD_BUTT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_STOMP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -12154,18 +10981,10 @@
 			<Capture>UNIT_SUBDUED_INDIAN_RHINO</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_RHINO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_HORNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HEAD_BUTT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_STOMP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -12220,18 +11039,10 @@
 			<Capture>UNIT_SUBDUED_JAVA_RHINO</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_RHINO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_HORNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HEAD_BUTT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_STOMP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -12286,18 +11097,10 @@
 			<Capture>UNIT_SUBDUED_WHITE_RHINO</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_RHINO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_HORNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HEAD_BUTT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_STOMP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -12353,17 +11156,10 @@
 			<Capture>UNIT_SUBDUED_RIVER_CROC_LARGE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_REPTILE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_REPTILE_CROCODILIAN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HARD_PLATED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TAIL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -12457,13 +11253,6 @@
 			<Capture>UNIT_SUBDUED_RIVER_CROC_SMALL</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_REPTILE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_REPTILE_CROCODILIAN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HARD_PLATED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TAIL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -12559,12 +11348,6 @@
 			<Capture>UNIT_SUBDUED_ROCKHOPPER</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_PENGUIN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PECK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -12635,17 +11418,6 @@
 			<Capture>UNIT_SUBDUED_SABRETOOTH</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_FELINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_CLAWED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POUNCE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_ROARING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHASING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -12740,15 +11512,6 @@
 			<Capture>UNIT_SUBDUED_SAIGA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_ANTELOPE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_HORNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HEAD_BUTT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -12843,18 +11606,10 @@
 			<Capture>UNIT_SUBDUED_SALTWATER_CROCL</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_SEA_ANIMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_REPTILE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_REPTILE_CROCODILIAN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HARD_PLATED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TAIL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
@@ -12949,14 +11704,6 @@
 			<Capture>UNIT_SUBDUED_SALTWATER_CROCS</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_SEA_ANIMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_REPTILE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_REPTILE_CROCODILIAN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HARD_PLATED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TAIL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -13054,11 +11801,6 @@
 			<Capture>UNIT_SUBDUED_SEAEAGLE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_RAPTOR</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PECK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_KEEN_SENSES</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -13126,13 +11868,6 @@
 			<Capture>UNIT_SUBDUED_SEALION_LAND</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_PINNIPED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_ROARING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_SLOW</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -13190,14 +11925,6 @@
 			<Capture>UNIT_SUBDUED_SEALION_SEA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_SEA_ANIMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_PINNIPED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_ROARING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -13256,18 +11983,6 @@
 			<Capture>UNIT_SUBDUED_SEAOTTER</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_SEA_ANIMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_MUSTELIDAE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_NIP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_KEEN_SENSES</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -13326,13 +12041,6 @@
 			<Capture>UNIT_SUBDUED_SEATURTLE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_SEA_ANIMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_REPTILE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_REPTILE_TURTLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHELLED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_NIP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_SLOW</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -13391,11 +12099,6 @@
 			<Capture>UNIT_SUBDUED_SECRETARYBIRD</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_RAPTOR</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PECK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -13455,18 +12158,6 @@
 			<Capture>UNIT_SUBDUED_SIBERIANTIGER</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_FELINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_CLAWED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POUNCE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_ROARING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHASING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -13559,12 +12250,6 @@
 			<Capture>UNIT_SUBDUED_SKUNK</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_MUSTELIDAE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_REPELLENT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_NIP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HIDING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -13621,16 +12306,6 @@
 			<Capture>UNIT_SUBDUED_SLOTHBEAR</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_URSINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_CLAWED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_ROARING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CONSTRICT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_KEEN_SENSES</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -13690,16 +12365,6 @@
 			<Capture>UNIT_SUBDUED_SNOWLEOPARD</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_FELINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_CLAWED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POUNCE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHASING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -13792,16 +12457,6 @@
 			<Capture>UNIT_SUBDUED_SPECTACLEDBEAR</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_URSINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_CLAWED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_ROARING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CONSTRICT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_KEEN_SENSES</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -13860,21 +12515,10 @@
 			<Capture>UNIT_SUBDUED_STAG_DEER</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_CERVID</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_HORNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HEAD_BUTT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POWER_KICK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_KEEN_SENSES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -13964,16 +12608,6 @@
 			<Capture>UNIT_SUBDUED_SUNBEAR</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_URSINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_CLAWED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_ROARING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CONSTRICT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_KEEN_SENSES</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -14033,13 +12667,6 @@
 			<Capture>UNIT_SUBDUED_TAPIR</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_TAPIR</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HIDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -14098,13 +12725,6 @@
 			<Capture>UNIT_SUBDUED_JUNGLE_TARANTULA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_INSECT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_VENEMOUS</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HIDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TREECLIMBING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POUNCE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -14162,13 +12782,6 @@
 			<Capture>UNIT_SUBDUED_DESERT_TARANTULA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_INSECT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_VENEMOUS</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HIDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TREECLIMBING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POUNCE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -14224,16 +12837,6 @@
 			<Capture>UNIT_SUBDUED_TASMANIANDEVIL</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_MARSUPIAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHASING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TREECLIMBING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_KEEN_SENSES</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -14304,11 +12907,6 @@
 			<Capture>UNIT_SUBDUED_TERN</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_SEABIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PECK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -14371,17 +12969,6 @@
 			<Capture>UNIT_SUBDUED_THYLACINE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_MARSUPIAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POUNCE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHASING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HIDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_KEEN_SENSES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -14439,10 +13026,6 @@
 			<Capture>UNIT_SUBDUED_TOUCAN</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_PARROT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PECK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -14503,11 +13086,6 @@
 			<Capture>UNIT_SUBDUED_TREESLOTH</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_ANTEATER</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HIDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -14562,13 +13140,6 @@
 			<Capture>UNIT_SUBDUED_TUNA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_SEA_ANIMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_FISH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_FISH_BONEY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -14627,12 +13198,6 @@
 			<Capture>UNIT_SUBDUED_TURKEY</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_GAMEBIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PECK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -14710,16 +13275,6 @@
 			<Capture>UNIT_SUBDUED_VIPER</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_REPTILE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_REPTILE_SNAKE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_VENEMOUS</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HIDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_WARNING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TREECLIMBING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -14781,11 +13336,6 @@
 			<Capture>UNIT_SUBDUED_VULTURE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_RAPTOR</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PECK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_CLAWED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_WARNING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -14845,12 +13395,6 @@
 			<Capture>UNIT_SUBDUED_WALLABY</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_MARSUPIAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POWER_KICK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -14906,12 +13450,6 @@
 			<Capture>UNIT_SUBDUED_WALLAROO</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_MARSUPIAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POWER_KICK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -14970,18 +13508,10 @@
 			<Capture>UNIT_SUBDUED_WALRUS</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_PINNIPED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_ROARING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_SLOW</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -15036,17 +13566,10 @@
 			<Capture>UNIT_SUBDUED_WHALESHARK</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_SEA_ANIMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_FISH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_FISH_SHARK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SUBMERGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_SLOW</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_NAVAL</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_HUGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
@@ -15106,21 +13629,10 @@
 			<Capture>UNIT_SUBDUED_WILDEBEEST</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_BOVINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_THICK_SKINNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_HORNED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HEAD_BUTT</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POWER_KICK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_STOMP</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CHARGING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPEED_FAST</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
@@ -15212,16 +13724,6 @@
 			<Capture>UNIT_SUBDUED_WOLVERINE</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_MUSTELIDAE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_CLAWED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SHARP_TOOTHED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_BURROWING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_ROARING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_RAGING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -15314,11 +13816,6 @@
 			<Capture>UNIT_SUBDUED_WOMBAT</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_MARSUPIAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_BURROWING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -16353,19 +14850,10 @@
 			<Capture>UNIT_SUBDUED_ZEBRA</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_MAMMAL</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MAMMAL_EQUINE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_TOUGH_HIDE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_POWER_KICK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FAST_REFLEXES</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_FLEEING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_CAMOFLAGED</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_HERDING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_AS_ANIMALS</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_MEDIUM</SubCombatType>
 				<SubCombatType>UNITCOMBAT_COSTLESS</SubCombatType>
 			</SubCombatTypes>
 			<Description>TXT_KEY_UNIT_SUBDUED_ZEBRA</Description>

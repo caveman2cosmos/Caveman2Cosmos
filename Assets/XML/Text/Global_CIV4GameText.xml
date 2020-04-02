@@ -3935,6 +3935,18 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>[ICON_BULLET]%d1%% Przychód z zagranicznych szlaków handlowych</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_FOREST_FIRE_CITY_VICINITY</Tag>
+		<English>There's been a forest fire close to %s.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FOREST_FIRE_REMOTE</Tag>
+		<English>There's been reports about a forest fire in the remote countryside.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FOREST_FIRE_UNIT_LOST</Tag>
+		<English>%s perished in the fire!</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_FOUNDED_RELIGION</Tag>
 		<English>You have founded a new religion! What do you wish to call it?</English>
 		<French>Vous avez fondé une nouvelle religion! Quel nom voulez-vous lui donner?</French>

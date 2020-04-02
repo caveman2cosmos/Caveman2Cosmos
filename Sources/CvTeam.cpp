@@ -2196,27 +2196,24 @@ int CvTeam::getNumNukeUnits() const
 
 bool CvTeam::isUnitPrereqOrBonusesMet(const CvUnitInfo& unit) const
 {
-	bool bFound = false;
-	bool bRequires = false;
-	for (int i = 0; i < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); ++i)
+	bool bMet = true;
+	for (int iI = 0; iI < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); ++iI)
 	{
-		if (NO_BONUS != unit.getPrereqOrBonuses(i))
+		if (NO_BONUS != unit.getPrereqOrBonuses(iI))
 		{
-			TechTypes eTech = (TechTypes)GC.getBonusInfo((BonusTypes)unit.getPrereqOrBonuses(i)).getTechCityTrade();
+			TechTypes eTech = (TechTypes)GC.getBonusInfo((BonusTypes)unit.getPrereqOrBonuses(iI)).getTechCityTrade();
 			if (NO_TECH != eTech)
 			{
-				bRequires = true;
-
 				if (isHasTech(eTech))
 				{
-					bFound = true;
+					bMet = true;
 					break;
 				}
+				bMet = false;
 			}
 		}
 	}
-
-	return !bRequires || bFound;
+	return bMet;
 }
 
 

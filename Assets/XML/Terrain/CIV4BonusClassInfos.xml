@@ -19,7 +19,7 @@
 		</BonusClassInfo>
 		<BonusClassInfo>
 			<Type>BONUSCLASS_STRATEGIC</Type>
-			<iUnique>3</iUnique>
+			<iUnique>1</iUnique>
 		</BonusClassInfo>
 		<BonusClassInfo>
 			<Type>BONUSCLASS_LUXURY</Type>
@@ -27,7 +27,7 @@
 		</BonusClassInfo>
 		<BonusClassInfo>
 			<Type>BONUSCLASS_PRODUCTION</Type>
-			<iUnique>2</iUnique>
+			<iUnique>3</iUnique>
 		</BonusClassInfo>
 		<!-- Represents resources, that are produced by buildings, and are not meant to be placed on map -->
 		<BonusClassInfo>

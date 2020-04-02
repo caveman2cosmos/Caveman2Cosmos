@@ -2241,11 +2241,7 @@ bool CvPlayer::addStartUnitAI(const UnitAITypes eUnitAI, const int iCount)
 	return false;
 }
 
-/************************************************************************************************/
-/* LoR                                        11/03/10                          phungus420      */
-/*                                                                                              */
-/* Colonists                                                                                    */
-/************************************************************************************************/
+
 UnitTypes CvPlayer::getBestUnitType(UnitAITypes eUnitAI) const
 {
 	UnitTypes eBestUnit = NO_UNIT;
@@ -2272,9 +2268,6 @@ int CvPlayer::getBestUnitTypeCargoVolume(UnitAITypes eUnitAI) const
 	UnitTypes eBestUnitType = getBestUnitType(eUnitAI);
 	return (eBestUnitType != NO_UNIT ? GC.getUnitInfo(eBestUnitType).getBaseCargoVolume() : 0);
 }
-/************************************************************************************************/
-/* LoR                            END                                                           */
-/************************************************************************************************/
 
 
 int CvPlayer::startingPlotRange() const
@@ -8010,18 +8003,10 @@ void CvPlayer::found(int iX, int iY, CvUnit *pUnit)
 
 	CvEventReporter::getInstance().cityBuilt(pCity, pUnit);
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      10/02/09                                jdog5000      */
-/*                                                                                              */
-/* AI logging                                                                                   */
-/************************************************************************************************/
-	if( gPlayerLogLevel >= 1 )
+	if (gPlayerLogLevel >= 1)
 	{
 		logBBAI("  Player %d (%S) founds new city %S at %d, %d", getID(), getCivilizationDescription(0), pCity->getName(0).GetCString(), iX, iY );
 	}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 }
 
 
@@ -13735,7 +13720,7 @@ int CvPlayer::getCitiesLost() const
 
 void CvPlayer::changeCitiesLost(int iChange)
 {
-	m_iCitiesLost = (m_iCitiesLost + iChange);
+	m_iCitiesLost += iChange;
 }
 
 
@@ -13747,22 +13732,21 @@ int CvPlayer::getWinsVsBarbs() const
 
 void CvPlayer::changeWinsVsBarbs(int iChange)
 {
-	m_iWinsVsBarbs = (m_iWinsVsBarbs + iChange);
-	FAssert(getWinsVsBarbs() >= 0);
+	m_iWinsVsBarbs += iChange;
+	FAssert(m_iWinsVsBarbs >= 0);
 }
 
 
 int CvPlayer::getAssets() const
 {
-	int iTotal = m_iAssets / 100;
-	return iTotal;
+	return m_iAssets / 100;
 }
 
 
 void CvPlayer::changeAssets(int iChange)
 {
-	m_iAssets = (m_iAssets + iChange);
-	FAssertRecalcMsg(getAssets() >= 0, "Player assets value fell below 0");
+	m_iAssets += iChange;
+	FAssertRecalcMsg(m_iAssets >= 0, "Player assets value fell below 0");
 }
 
 
