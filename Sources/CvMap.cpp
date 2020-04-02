@@ -22,6 +22,11 @@
 /***** Parallel Maps - End *****/
 /*******************************/
 
+#define forEachPlot(map, func) \
+	for (int iI = 0; iI < map->numPlots(); iI++) \
+		map->plotByIndex(iI)->func;
+
+
 // Public Functions...
 
 CvMap::CvMap()
@@ -325,10 +330,7 @@ void CvMap::setupGraphical()
 
 void CvMap::erasePlots()
 {
-	for (int iI = 0; iI < numPlots(); iI++)
-	{
-		plotByIndex(iI)->erase();
-	}
+	forEachPlot(this, CvPlot::erase());
 }
 
 
@@ -336,10 +338,7 @@ void CvMap::setRevealedPlots(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly)
 {
 	PROFILE_FUNC();
 
-	for (int iI = 0; iI < numPlots(); iI++)
-	{
-		plotByIndex(iI)->setRevealed(eTeam, bNewValue, bTerrainOnly, NO_TEAM, false);
-	}
+	forEachPlot(this, CvPlot::setRevealed(eTeam, bNewValue, bTerrainOnly, NO_TEAM, false));
 
 	GC.getGame().updatePlotGroups();
 }
@@ -365,10 +364,7 @@ void CvMap::setAllPlotTypes(PlotTypes ePlotType)
 {
 	//float startTime = (float) timeGetTime();
 
-	for(int i = 0; i < numPlots(); i++)
-	{
-		plotByIndex(i)->setPlotType(ePlotType, false, false);
-	}
+	forEachPlot(this, CvPlot::setPlotType(ePlotType, false, false));
 
 	recalculateAreas();
 
@@ -384,16 +380,12 @@ void CvMap::setAllPlotTypes(PlotTypes ePlotType)
 }
 
 
-// XXX generalize these funcs? (macro?)
 void CvMap::doTurn()
 {
 	MEMORY_TRACE_FUNCTION();
 	PROFILE("CvMap::doTurn()")
 
-	for (int iI = 0; iI < numPlots(); iI++)
-	{
-		plotByIndex(iI)->doTurn();
-	}
+	forEachPlot(this, CvPlot::doTurn());
 }
 
 
@@ -423,28 +415,19 @@ void CvMap::updateFog()
 {
 	PROFILE_FUNC();
 
-	for (int iI = 0; iI < numPlots(); iI++)
-	{
-		plotByIndex(iI)->updateFog();
-	}
+	forEachPlot(this, CvPlot::updateFog());
 }
 
 
 void CvMap::updateVisibility()
 {
-	for (int iI = 0; iI < numPlots(); iI++)
-	{
-		plotByIndex(iI)->updateVisibility();
-	}
+	forEachPlot(this, CvPlot::updateVisibility());
 }
 
 
 void CvMap::updateSymbolVisibility()
 {
-	for (int iI = 0; iI < numPlots(); iI++)
-	{
-		plotByIndex(iI)->updateSymbolVisibility();
-	}
+	forEachPlot(this, CvPlot::updateSymbolVisibility());
 }
 
 
@@ -454,10 +437,7 @@ void CvMap::updateSymbols()
 
 	//	Ignore this while we are demand-creating symbols to minimize memory usage - REMOVED FOR NOW FOR VIEWPORTS
 	
-	for (int iI = 0; iI < numPlots(); iI++)
-	{
-		plotByIndex(iI)->updateSymbols();
-	}
+	forEachPlot(this, CvPlot::updateSymbols());
 }
 
 
@@ -465,21 +445,15 @@ void CvMap::updateMinimapColor()
 {
 	PROFILE_FUNC();
 
-	for (int iI = 0; iI < numPlots(); iI++)
-	{
-		plotByIndex(iI)->updateMinimapColor();
-	}
+	forEachPlot(this, CvPlot::updateMinimapColor());
 }
 
 
 void CvMap::updateSight(bool bIncrement, bool bUpdatePlotGroups)
 {
-	for (int iI = 0; iI < numPlots(); iI++)
-	{
-		plotByIndex(iI)->updateSight(bIncrement, false);
-	}
+	forEachPlot(this, CvPlot::updateSight(bIncrement, false));
 
-	if ( bUpdatePlotGroups )
+	if (bUpdatePlotGroups)
 	{
 		GC.getGame().updatePlotGroups();
 	}
@@ -488,28 +462,19 @@ void CvMap::updateSight(bool bIncrement, bool bUpdatePlotGroups)
 
 void CvMap::updateIrrigated()
 {
-	for (int iI = 0; iI < numPlots(); iI++)
-	{
-		plotByIndex(iI)->updateIrrigated();
-	}
+	forEachPlot(this, CvPlot::updateIrrigated());
 }
 
 
 void CvMap::updateCenterUnit()
 {
-	for (int iI = 0; iI < numPlots(); iI++)
-	{
-		plotByIndex(iI)->updateCenterUnit();
-	}
+	forEachPlot(this, CvPlot::updateCenterUnit());
 }
 
 
 void CvMap::updateWorkingCity()
 {
-	for (int iI = 0; iI < numPlots(); iI++)
-	{
-		plotByIndex(iI)->updateWorkingCity();
-	}
+	forEachPlot(this, CvPlot::updateWorkingCity());
 }
 
 
@@ -560,19 +525,13 @@ void CvMap::updateMinOriginalStartDist(CvArea* pArea)
 
 void CvMap::updateYield()
 {
-	for (int iI = 0; iI < numPlots(); iI++)
-	{
-		plotByIndex(iI)->updateYield();
-	}
+	forEachPlot(this, CvPlot::updateYield());
 }
 
 
 void CvMap::verifyUnitValidPlot()
 {
-	for (int iI = 0; iI < numPlots(); iI++)
-	{
-		plotByIndex(iI)->verifyUnitValidPlot();
-	}
+	forEachPlot(this, CvPlot::verifyUnitValidPlot());
 }
 
 
@@ -1111,10 +1070,7 @@ void CvMap::recalculateAreas()
 {
 	PROFILE("CvMap::recalculateAreas");
 
-	for (int iI = 0; iI < numPlots(); iI++)
-	{
-		plotByIndex(iI)->setArea(FFreeList::INVALID_INDEX);
-	}
+	forEachPlot(this, CvPlot::setArea(FFreeList::INVALID_INDEX));
 
 	m_areas.removeAll();
 
@@ -1141,12 +1097,12 @@ int CvMap::calculatePathDistance(CvPlot *pSource, CvPlot *pDest, CvPlot *pInvali
 
 	// Super Forts begin *canal* *choke*
 	// 1 must be added because 0 is already being used as the default value for iInfo in GeneratePath()
-	int iInvalidPlot = (pInvalidPlot == NULL) ? 0 : GC.getMap().plotNum(pInvalidPlot->getX(), pInvalidPlot->getY()) + 1;
+	const int iInvalidPlot = (pInvalidPlot == NULL) ? 0 : GC.getMap().plotNum(pInvalidPlot->getX(), pInvalidPlot->getY()) + 1;
 
 	if (gDLL->getFAStarIFace()->GeneratePath(&GC.getStepFinder(), pSource->getX(), pSource->getY(), pDest->getX(), pDest->getY(), false, iInvalidPlot, true))
 	// Super Forts end
 	{
-		FAStarNode* pNode = gDLL->getFAStarIFace()->GetLastNode(&GC.getStepFinder());
+		const FAStarNode* pNode = gDLL->getFAStarIFace()->GetLastNode(&GC.getStepFinder());
 
 		if (pNode != NULL)
 		{
@@ -1266,10 +1222,7 @@ void CvMap::read(FDataStreamBase* pStream)
 	{
 		m_pMapPlots = new CvPlot[numPlots()];
 
-		for (int iI = 0; iI < numPlots(); iI++)
-		{
-			m_pMapPlots[iI].read(pStream);
-		}
+		forEachPlot(this, CvPlot::read(pStream));
 	}
 
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvPlot", &g_plotTypeZobristHashes, SAVE_VALUE_TYPE_INT_ARRAY);
@@ -1313,10 +1266,7 @@ void CvMap::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvMap" ,REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiNumBonus);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvMap" ,REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiNumBonusOnLand);
 
-	for (int iI = 0; iI < numPlots(); iI++)
-	{
-		m_pMapPlots[iI].write(pStream);
-	}
+	forEachPlot(this, CvPlot::write(pStream));
 
 	// call the read of the free list CvArea class allocations
 	WriteStreamableFFreeListTrashArray(m_areas, pStream);
@@ -1378,10 +1328,7 @@ void CvMap::beforeSwitch()
 	
 	GC.clearSigns();
 
-	for (i = 0; i < numPlots(); i++)
-	{
-		plotByIndex(i)->destroyGraphics();
-	}
+	forEachPlot(this, CvPlot::destroyGraphics());
 }
 
 void CvMap::afterSwitch()
