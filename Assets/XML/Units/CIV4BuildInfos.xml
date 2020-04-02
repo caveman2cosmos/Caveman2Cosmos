@@ -958,6 +958,7 @@
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
+					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
@@ -1359,6 +1360,7 @@
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
+					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
@@ -1608,6 +1610,7 @@
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
+					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
@@ -1875,6 +1878,7 @@
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
+					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
@@ -2142,6 +2146,7 @@
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
+					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
@@ -2387,6 +2392,7 @@
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
+					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_CITY_RUINS</FeatureType>
@@ -3164,6 +3170,7 @@
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
+					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
@@ -3425,6 +3432,7 @@
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
+					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
@@ -3828,6 +3836,7 @@
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
+					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
@@ -4096,6 +4105,7 @@
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
+					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
@@ -4363,6 +4373,7 @@
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
+					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
@@ -5542,6 +5553,7 @@
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
+					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
@@ -6013,6 +6025,7 @@
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
+					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
@@ -6255,6 +6268,7 @@
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
+					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
@@ -6566,6 +6580,7 @@
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
+					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
@@ -6814,6 +6829,7 @@
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
+					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
@@ -7062,6 +7078,7 @@
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
+					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
@@ -7310,6 +7327,7 @@
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
+					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
@@ -7558,6 +7576,7 @@
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
+					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
@@ -7806,6 +7825,7 @@
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
+					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
@@ -8054,6 +8074,7 @@
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
+					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
@@ -8302,6 +8323,7 @@
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
+					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
@@ -8550,6 +8572,7 @@
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
+					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
@@ -8798,6 +8821,7 @@
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
+					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
@@ -9218,118 +9242,6 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>Art/Interface/Buttons/Builds/gatherer_mushroom.dds</Button>
 		</BuildInfo>
-		<!-- Colony Habitat (Small) -->
-		<BuildInfo>
-			<Type>BUILD_COLONY_HABITAT_SMALL</Type>
-			<Description>TXT_KEY_BUILD_COLONY_HABITAT_SMALL</Description>
-			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
-			<iTime>1000</iTime>
-			<iCost>500</iCost>
-			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_COLONY_HABITAT_SMALL</ImprovementType>
-			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
-			<HotKey>KB_T</HotKey>
-			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Structures/Improvements/habitats/button.dds</Button>
-		</BuildInfo>
-		<!-- Colony Habitat (Medium) -->
-		<BuildInfo>
-			<Type>BUILD_COLONY_HABITAT_MEDIUM</Type>
-			<Description>TXT_KEY_BUILD_COLONY_HABITAT_MEDIUM</Description>
-			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
-			<iTime>1500</iTime>
-			<iCost>1000</iCost>
-			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_COLONY_HABITAT_MEDIUM</ImprovementType>
-			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
-			<HotKey>KB_T</HotKey>
-			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Structures/Improvements/habitats/button.dds</Button>
-		</BuildInfo>
-		<!-- Colony Habitat (Large) -->
-		<BuildInfo>
-			<Type>BUILD_COLONY_HABITAT_LARGE</Type>
-			<Description>TXT_KEY_BUILD_COLONY_HABITAT_LARGE</Description>
-			<PrereqTech>TECH_PLANETARY_MANUFACTURING</PrereqTech>
-			<iTime>2000</iTime>
-			<iCost>1500</iCost>
-			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_COLONY_HABITAT_LARGE</ImprovementType>
-			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
-			<HotKey>KB_T</HotKey>
-			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Structures/Improvements/habitats/button.dds</Button>
-		</BuildInfo>
-		<!-- Colony Habitat (Huge) -->
-		<BuildInfo>
-			<Type>BUILD_COLONY_HABITAT_HUGE</Type>
-			<Description>TXT_KEY_BUILD_COLONY_HABITAT_HUGE</Description>
-			<PrereqTech>TECH_LUNAR_TRADE</PrereqTech>
-			<iTime>3000</iTime>
-			<iCost>2500</iCost>
-			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_COLONY_HABITAT_HUGE</ImprovementType>
-			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
-			<HotKey>KB_T</HotKey>
-			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Structures/Improvements/habitats/button.dds</Button>
-		</BuildInfo>
-		<!-- Colony Hydroponics -->
-		<BuildInfo>
-			<Type>BUILD_COLONY_HYDROPONICS</Type>
-			<Description>TXT_KEY_BUILD_COLONY_HYDROPONICS</Description>
-			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
-			<iTime>800</iTime>
-			<iCost>400</iCost>
-			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_COLONY_HYDROPONICS</ImprovementType>
-			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
-			<HotKey>KB_T</HotKey>
-			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Structures/Improvements/habitats/button.dds</Button>
-		</BuildInfo>
-		<!-- Colony Extraction Facility -->
-		<BuildInfo>
-			<Type>BUILD_COLONY_EXTRACTION_FACILITY</Type>
-			<Description>TXT_KEY_BUILD_COLONY_EXTRACTION_FACILITY</Description>
-			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
-			<iTime>1200</iTime>
-			<iCost>800</iCost>
-			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_COLONY_EXTRACTION_FACILITY</ImprovementType>
-			<EntityEvent>ENTITY_EVENT_MINE</EntityEvent>
-			<HotKey>KB_T</HotKey>
-			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Structures/Improvements/habitats/button.dds</Button>
-		</BuildInfo>
-		<!-- Colony Solar Array -->
-		<BuildInfo>
-			<Type>BUILD_COLONY_SOLAR_ARRAY</Type>
-			<Description>TXT_KEY_BUILD_COLONY_SOLAR_ARRAY</Description>
-			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
-			<iTime>1000</iTime>
-			<iCost>500</iCost>
-			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_COLONY_SOLAR_ARRAY</ImprovementType>
-			<EntityEvent>ENTITY_EVENT_MINE</EntityEvent>
-			<HotKey>KB_T</HotKey>
-			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Structures/Improvements/habitats/button.dds</Button>
-		</BuildInfo>
-		<!-- Colony Manufactory -->
-		<BuildInfo>
-			<Type>BUILD_COLONY_MANUFACTORY</Type>
-			<Description>TXT_KEY_BUILD_COLONY_MANUFACTORY</Description>
-			<PrereqTech>TECH_LUNAR_MANUFACTURING</PrereqTech>
-			<iTime>1500</iTime>
-			<iCost>1200</iCost>
-			<bKill>0</bKill>
-			<ImprovementType>IMPROVEMENT_COLONY_MANUFACTORY</ImprovementType>
-			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
-			<HotKey>KB_T</HotKey>
-			<iHotKeyPriority>0</iHotKeyPriority>
-			<Button>Art/Structures/Improvements/habitats/button.dds</Button>
-		</BuildInfo>
 		<!-- Tidal Harness -->
 		<BuildInfo>
 			<Type>BUILD_TIDAL_HARNESS</Type>
@@ -9561,6 +9473,7 @@
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
+					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
@@ -9842,6 +9755,7 @@
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
+					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
@@ -10103,6 +10017,7 @@
 					<iTime>400</iTime>
 					<iProduction>5</iProduction>
 					<bRemove>1</bRemove>
+					<bCanRemoveWithNoProductionGain>1</bCanRemoveWithNoProductionGain>
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>

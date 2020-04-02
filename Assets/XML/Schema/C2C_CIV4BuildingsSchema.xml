@@ -403,7 +403,6 @@
 	<ElementType name="bBuildingOnlyHealthy" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNeverCapture" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNukeImmune" content="textOnly" dt:type="boolean"/>
-	<ElementType name="bPrereqReligion" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bCenterInCity" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iAIWeight" content="textOnly" dt:type="int"/>
 	<ElementType name="iCost" content="textOnly" dt:type="int"/>
@@ -850,7 +849,6 @@
 		<element type="bBuildingOnlyHealthy" minOccurs="0"/>
 		<element type="bNeverCapture" minOccurs="0"/>
 		<element type="bNukeImmune" minOccurs="0"/>
-		<element type="bPrereqReligion" minOccurs="0"/>
 		<element type="bNoHolyCity" minOccurs="0"/>
 		<element type="bCenterInCity" minOccurs="0"/>
 		<element type="iAIWeight" minOccurs="0"/>
@@ -1274,6 +1272,13 @@
 	</ElementType>
 	<ElementType name="GlobalBuildingProductionModifiers" content="eltOnly">
 		<element type="BuildingProductionModifier" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="BuildingCostModifier" content="eltOnly">
+		<element type="BuildingType"/>
+		<element type="iModifier"/>
+	</ElementType>
+	<ElementType name="GlobalBuildingCostModifiers" content="eltOnly">
+		<element type="BuildingCostModifier" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 
 	<ElementType name="BonusCommerceModifier" content="eltOnly">

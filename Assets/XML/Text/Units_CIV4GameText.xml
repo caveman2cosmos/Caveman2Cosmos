@@ -21557,10 +21557,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_REQUIRES</Tag>
-		<English>[COLOR_WARNING_TEXT]To receive benefits, Unit Requires[SPACE]</English>
-		<French>[COLOR_WARNING_TEXT]Pour en bénéficier, l'Unité requiert[SPACE]</French>
-		<Italian>[COLOR_WARNING_TEXT]Per ricevere i benefici, l'unità richiede[SPACE]</Italian>
-		<Polish>[COLOR_WARNING_TEXT]Aby otrzymać bonusy, jednostka wymaga:[SPACE]</Polish>
+		<English>Valid for[SPACE]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_REQUIRES_STATE_RELIGION</Tag>

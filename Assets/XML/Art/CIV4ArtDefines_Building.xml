@@ -30886,7 +30886,7 @@
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>art/scarecrows.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
@@ -30896,7 +30896,7 @@
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>art/ratcatcher.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
@@ -30906,7 +30906,7 @@
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>art/cryptologycenter.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
@@ -30916,7 +30916,7 @@
 			<fScale>12</fScale>
 			<fInterfaceScale>0.6</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/biodome/biodome.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/National_Wonders/montreal_biodome.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
@@ -30926,7 +30926,7 @@
 			<fScale>1.0</fScale>
 			<fInterfaceScale>0.4</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Catacombs/fortmeso1.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/Catacombs.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
@@ -30936,7 +30936,7 @@
 			<fScale>0.25</fScale>
 			<fInterfaceScale>0.5</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/CyrusCylinder/CyrusCylinder.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Great_Wonders/cyrus_cylinder.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
@@ -30946,7 +30946,7 @@
 			<fScale>5.0</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Cyrus_Tomb/CyrusTomb.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Great_Wonders/cyrustomb.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
@@ -30956,7 +30956,7 @@
 			<fScale>0.7</fScale>
 			<fInterfaceScale>0.25</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/EmpireStateBuilding/empire.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Great_Wonders/empirestatebuilding.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
@@ -30966,7 +30966,7 @@
 			<fScale>2</fScale>
 			<fInterfaceScale>0.4</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/Famensi/library.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/B_Famensi.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
@@ -30976,7 +30976,7 @@
 			<fScale>0.8</fScale>
 			<fInterfaceScale>0.5</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/NazcaLines/nazca.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Great_Wonders/nazcalines.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
@@ -30986,7 +30986,7 @@
 			<fScale>1.5</fScale>
 			<fInterfaceScale>0.52</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/PergamonAltar/pergamonaltar.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Great_Wonders/pergamonaltar.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
@@ -30996,7 +30996,7 @@
 			<fScale>1.4</fScale>
 			<fInterfaceScale>0.25</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/taipei_101/taipei6.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Great_Wonders/taipei101.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
@@ -31006,7 +31006,7 @@
 			<fScale>1.0</fScale>
 			<fInterfaceScale>0.8</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/tsukiji/tsukiji.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Great_Wonders/tsukiji.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
@@ -31016,7 +31016,7 @@
 			<fScale>0.8</fScale>
 			<fInterfaceScale>0.5</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/wembley/wembley03.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/National_Wonders/wembley.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
@@ -31026,7 +31026,7 @@
 			<fScale>1.8</fScale>
 			<fInterfaceScale>0.15</fInterfaceScale>
 			<NIF>Art/Structures/Buildings/zizkov/zizkov.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Great_Wonders/zizkovtv.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
@@ -31046,7 +31046,7 @@
 			<fScale>0.5</fScale>
 			<fInterfaceScale>0.5</fInterfaceScale>
 			<NIF>art/great_zimbabwe.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Great_Wonders/great_zimbabwe.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
@@ -31056,7 +31056,7 @@
 			<fScale>0.06</fScale>
 			<fInterfaceScale>0.4</fInterfaceScale>
 			<NIF>art/helsinki.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Great_Wonders/b_helsinki.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
@@ -31066,7 +31066,7 @@
 			<fScale>0.06</fScale>
 			<fInterfaceScale>0.35</fInterfaceScale>
 			<NIF>art/motherland.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Great_Wonders/motherland.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
@@ -31076,157 +31076,157 @@
 			<fScale>0.3</fScale>
 			<fInterfaceScale>0.5</fInterfaceScale>
 			<NIF>art/Reichstag.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>Art/Interface/Buttons/Great_Wonders/reichstag.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_WV_SLAVERY</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
-			<NIF />
-			<KFM />
+			<NIF/>
+			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/WorldViewSlavery.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SLAVERY_BAD_ZORO</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
-			<NIF />
-			<KFM />
+			<NIF/>
+			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/slavery_bad_zoro.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SLAVE_COMPOUND_MILITARY</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
-			<NIF />
-			<KFM />
+			<NIF/>
+			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/SlaveMilitary.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SLAVE_COMPOUND_ENTERTAINMENT</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
-			<NIF />
-			<KFM />
+			<NIF/>
+			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/SlaveEntertain.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SLAVE_COMPOUND_FOOD</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
-			<NIF />
-			<KFM />
+			<NIF/>
+			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/SlaveFood.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SLAVE_COMPOUND_PRODUCTION</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
-			<NIF />
-			<KFM />
+			<NIF/>
+			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/SlaveProd.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SLAVE_COMPOUND_COMMERCE</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
-			<NIF />
-			<KFM />
+			<NIF/>
+			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/SlaveCom.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SLAVE_COMPOUND_SANITATION</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
-			<NIF />
-			<KFM />
+			<NIF/>
+			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/SlaveHealth.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_SLAVE_COMPOUND_CRIME_PREVENTION</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
-			<NIF />
-			<KFM />
+			<NIF/>
+			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/SlaveMilitary.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_WV_CANNIBALISM</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
-			<NIF />
-			<KFM />
+			<NIF/>
+			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/WorldViewCannibalism.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CANNIBALISM</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
-			<NIF />
-			<KFM />
+			<NIF/>
+			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/cannibalism.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CANNIBALISM_BAD_I</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
-			<NIF />
-			<KFM />
+			<NIF/>
+			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/worldview_cannibalism_dowside_1.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CANNIBALISM_BAD_II</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
-			<NIF />
-			<KFM />
+			<NIF/>
+			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/worldview_cannibalism_dowside_2.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_CANNIBALISM_BAD_III</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
-			<NIF />
-			<KFM />
+			<NIF/>
+			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/worldview_cannibalism_dowside_3.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_DISEASE_KURU</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
-			<NIF />
-			<KFM />
+			<NIF/>
+			<KFM/>
 			<Button>art/Disease/art/disease.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
@@ -31871,32 +31871,32 @@
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_HUMAN_SACRIFICE</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
-			<NIF />
-			<KFM />
+			<NIF/>
+			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/humansacrifice.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_WV_HUMAN_SACRIFICE</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
-			<NIF />
-			<KFM />
+			<NIF/>
+			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/WorldViewHumanSacrifice.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_HUMAN_SACRIFICE_ALTAR</Type>
-			<LSystem />
+			<LSystem/>
 			<bAnimated>0</bAnimated>
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
-			<NIF />
-			<KFM />
+			<NIF/>
+			<KFM/>
 			<Button>Art/Interface/Buttons/Buildings/humansacrificealter.dds</Button>
 		</BuildingArtInfo>
 		<BuildingArtInfo>
@@ -31906,7 +31906,7 @@
 			<fScale>0</fScale>
 			<fInterfaceScale>0</fInterfaceScale>
 			<NIF>Art/Empty.nif</NIF>
-			<KFM />
+			<KFM/>
 			<Button>art/organiccomputerlab.dds</Button>
 		</BuildingArtInfo>
 	</BuildingArtInfos>

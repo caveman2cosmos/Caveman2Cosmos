@@ -1322,7 +1322,6 @@
 	<ElementType name="bIgnoreTerrainCost" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNukeImmune" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bPrereqBonuses" content="textOnly" dt:type="boolean"/>
-	<ElementType name="bPrereqReligion" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bMechanized" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bRenderBelowWater" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bRenderAlways" content="textOnly" dt:type="boolean"/>
@@ -1895,7 +1894,6 @@
 		<element type="bIgnoreTerrainCost" minOccurs="0"/>
 		<element type="bNukeImmune" minOccurs="0"/>
 		<element type="bPrereqBonuses" minOccurs="0"/>
-		<element type="bPrereqReligion" minOccurs="0"/>
 		<element type="bMechanized" minOccurs="0"/>
 		<element type="bRenderBelowWater" minOccurs="0"/>
 		<element type="bRenderAlways" minOccurs="0"/>

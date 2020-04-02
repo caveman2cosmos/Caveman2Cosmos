@@ -33337,51 +33337,6 @@ void CvAttachableInfo::copyNonDefaults(CvAttachableInfo* pClassInfo, CvXMLLoadUt
 	if (getPath() == cDefault) setPath(pClassInfo->getPath());
 }
 
-
-//////////////////////////////////////////////////////////////////////////
-//
-//	CvCameraInfo			Interface\CIV4CameraInfos.xml
-//
-//
-bool CvCameraInfo::read(CvXMLLoadUtility* pXML)
-{
-	CvString szTextVal;
-	if (!CvInfoBase::read(pXML))
-	{
-		return false;
-	}
-
-	pXML->GetChildXmlValByName(szTextVal, L"Path");
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 10/27/07								MRGENIE	  */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
-	CvXMLLoadUtilityModTools* p_aszDirName = new CvXMLLoadUtilityModTools;
-	p_aszDirName->setLocationName( &szTextVal, (GC.getModDir()).c_str());
-	SAFE_DELETE(p_aszDirName);
-/************************************************************************************************/
-/* XML_MODULAR_ART_LOADING				 END												  */
-/************************************************************************************************/
-	setPath(szTextVal);
-
-	return true;
-}
-void CvCameraInfo::copyNonDefaults(CvCameraInfo* pClassInfo, CvXMLLoadUtility* pXML)
-{
-	bool bDefault = false;
-	int iDefault = 0;
-	int iTextDefault = -1;  //all integers which are TEXT_KEYS in the xml are -1 by default
-	int iAudioDefault = -1;  //all audio is default -1
-	float fDefault = 0.0f;
-	CvString cDefault = CvString::format("").GetCString();
-	CvWString wDefault = CvWString::format(L"").GetCString();
-
-	CvInfoBase::copyNonDefaults(pClassInfo, pXML);
-	if (getPath() == cDefault) setPath(pClassInfo->getPath());
-}
-
-
 //////////////////////////////////////////////////////////////////////////
 //
 //	CvQuestInfo			Misc\CIV4QuestInfos.xml

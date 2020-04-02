@@ -234,7 +234,6 @@
 			<GlobalReligionCommerce>RELIGION_SHINTO</GlobalReligionCommerce>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<bNukeImmune>1</bNukeImmune>
-			<iCost>-1</iCost>
 			<iConquestProb>100</iConquestProb>
 			<iMaintenanceModifier>-25</iMaintenanceModifier>
 			<iAsset>8</iAsset>

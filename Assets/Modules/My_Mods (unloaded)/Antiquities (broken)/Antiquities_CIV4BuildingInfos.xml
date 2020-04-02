@@ -17,7 +17,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CEREMONIAL_BURIAL</PrereqTech>
-			<iCost>-1</iCost>
 			<FreeBonus>BONUS_ANTIQUITIES_GRAVE_GOODS_CAVE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PrereqInCityBuildings>
@@ -37,7 +36,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CEREMONIAL_BURIAL</PrereqTech>
-			<iCost>-1</iCost>
 			<FreeBonus>BONUS_ANTIQUITIES_GRAVE_GOODS_EARTH</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PrereqInCityBuildings>
@@ -57,7 +55,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CEREMONIAL_BURIAL</PrereqTech>
-			<iCost>-1</iCost>
 			<FreeBonus>BONUS_ANTIQUITIES_GRAVE_GOODS_FIRE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PrereqInCityBuildings>
@@ -77,7 +74,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CEREMONIAL_BURIAL</PrereqTech>
-			<iCost>-1</iCost>
 			<FreeBonus>BONUS_ANTIQUITIES_GRAVE_GOODS_SKY</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<PrereqInCityBuildings>
