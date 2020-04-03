@@ -11775,8 +11775,6 @@
 					<iTerrainDefense>10</iTerrainDefense>
 				</TerrainDefense>
 			</TerrainDefenses>
-			<TerrainDoubleMoves>
-			</TerrainDoubleMoves>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
@@ -11847,10 +11845,6 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<iAirRangeChange>2</iAirRangeChange>
-			<TerrainDefenses>
-			</TerrainDefenses>
-			<TerrainDoubleMoves>
-			</TerrainDoubleMoves>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_EARLY_FIGHTERS</UnitCombatType>
@@ -11911,8 +11905,6 @@
 					<iTerrainDefense>10</iTerrainDefense>
 				</TerrainDefense>
 			</TerrainDefenses>
-			<TerrainDoubleMoves>
-			</TerrainDoubleMoves>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
@@ -21581,8 +21573,6 @@
 			<StateReligionPrereq>RELIGION_TAOISM</StateReligionPrereq>
 			<PromotionLine>PROMOTIONLINE_MARTIAL_ARTS</PromotionLine>
 			<iLinePriority>1</iLinePriority>
-			<TerrainDefenses>
-			</TerrainDefenses>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_SEA</DomainType>
 			</NotOnDomainTypes>
@@ -21600,8 +21590,6 @@
 					<iUnitCombatMod>25</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<TerrainDoubleMoves>
-			</TerrainDoubleMoves>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
@@ -21623,8 +21611,6 @@
 			<PromotionLine>PROMOTIONLINE_MARTIAL_ARTS</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iFirstStrikesChange>1</iFirstStrikesChange>
-			<TerrainDefenses>
-			</TerrainDefenses>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_SEA</DomainType>
 			</NotOnDomainTypes>
@@ -21642,8 +21628,6 @@
 					<iUnitCombatMod>25</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<TerrainDoubleMoves>
-			</TerrainDoubleMoves>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
@@ -21668,8 +21652,6 @@
 			<PromotionLine>PROMOTIONLINE_MARTIAL_ARTS</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iFirstStrikesChange>2</iFirstStrikesChange>
-			<TerrainDefenses>
-			</TerrainDefenses>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_SEA</DomainType>
 			</NotOnDomainTypes>
@@ -21687,8 +21669,6 @@
 					<iUnitCombatMod>50</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<TerrainDoubleMoves>
-			</TerrainDoubleMoves>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
@@ -22108,8 +22088,6 @@
 			<PromotionPrereq>PROMOTION_SLAVE_MASTER2</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_SLAVE_MASTER</PromotionLine>
 			<iLinePriority>3</iLinePriority>
-			<UnitCombatMods>
-			</UnitCombatMods>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
@@ -22126,8 +22104,6 @@
 			<PromotionPrereq>PROMOTION_SLAVE_MASTER3</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_SLAVE_MASTER</PromotionLine>
 			<iLinePriority>4</iLinePriority>
-			<UnitCombatMods>
-			</UnitCombatMods>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
@@ -22144,8 +22120,6 @@
 			<PromotionPrereq>PROMOTION_SLAVE_MASTER4</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_SLAVE_MASTER</PromotionLine>
 			<iLinePriority>5</iLinePriority>
-			<UnitCombatMods>
-			</UnitCombatMods>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
@@ -22216,8 +22190,6 @@
 			<PromotionLine>PROMOTIONLINE_UNQUESTIONING_OBEDIENCE</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<iCombatPercent>1</iCombatPercent>
-			<UnitCombatMods>
-			</UnitCombatMods>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
@@ -22235,8 +22207,6 @@
 			<PromotionLine>PROMOTIONLINE_UNQUESTIONING_OBEDIENCE</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iCombatPercent>1</iCombatPercent>
-			<UnitCombatMods>
-			</UnitCombatMods>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
@@ -22254,8 +22224,6 @@
 			<PromotionLine>PROMOTIONLINE_UNQUESTIONING_OBEDIENCE</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iCombatPercent>1</iCombatPercent>
-			<UnitCombatMods>
-			</UnitCombatMods>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
@@ -22273,8 +22241,6 @@
 			<PromotionLine>PROMOTIONLINE_UNQUESTIONING_OBEDIENCE</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<iCombatPercent>1</iCombatPercent>
-			<UnitCombatMods>
-			</UnitCombatMods>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
@@ -22292,8 +22258,6 @@
 			<PromotionLine>PROMOTIONLINE_UNQUESTIONING_OBEDIENCE</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<iCombatPercent>1</iCombatPercent>
-			<UnitCombatMods>
-			</UnitCombatMods>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
@@ -22490,8 +22454,6 @@
 			<PromotionPrereq>PROMOTION_BARK</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_HERDING</PromotionLine>
 			<iLinePriority>1</iLinePriority>
-			<UnitCombatMods>
-			</UnitCombatMods>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_CANINE</UnitCombatType>
@@ -22508,8 +22470,6 @@
 			<PromotionPrereq>PROMOTION_HERDING1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_HERDING</PromotionLine>
 			<iLinePriority>2</iLinePriority>
-			<UnitCombatMods>
-			</UnitCombatMods>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_CANINE</UnitCombatType>
@@ -22527,8 +22487,6 @@
 			<PromotionLine>PROMOTIONLINE_PREDATORIAL_BLOODLUST</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iCombatPercent>25</iCombatPercent>
-			<UnitCombatMods>
-			</UnitCombatMods>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_FELINE</UnitCombatType>
@@ -22545,8 +22503,6 @@
 			<PromotionLine>PROMOTIONLINE_PREDATORIAL_BLOODLUST</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<iCombatPercent>15</iCombatPercent>
-			<UnitCombatMods>
-			</UnitCombatMods>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_FELINE</UnitCombatType>
@@ -22576,8 +22532,6 @@
 			<Description>TXT_KEY_PROMOTION_HARAKIRI</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_BUSHIDO1</PromotionPrereq>
-			<UnitCombatMods>
-			</UnitCombatMods>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
