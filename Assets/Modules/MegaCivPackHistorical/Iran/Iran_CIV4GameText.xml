@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- ReModified by the StrategyOnly -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_IRAN_DESC</Tag>
+		<English>Islamic Republic of Iran</English>
+		<French>Islamic Republic of Iran</French>
+		<German>Islamic Republic of Iran</German>
+		<Italian>Islamic Republic of Iran</Italian>
+		<Spanish>Islamic Republic of Iran</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_IRAN_SHORT_DESC</Tag>
+		<English>Iran</English>
+		<French>Iran</French>
+		<German>Iran</German>
+		<Italian>Iran</Italian>
+		<Spanish>Iran</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_IRAN_PEDIA</Tag>
+		<English>[TAB]Iran, officially the Islamic Republic of Iran, is a country in Western Asia. It is bordered 
+to the northwest by Armenia, the de facto independent Nagorno-Karabakh Republic, and Azerbaijan; with 
+Kazakhstan and Russia across the Caspian Sea; to the northeast by Turkmenistan; to the east by Afghanistan 
+and Pakistan; to the south by the Persian Gulf and the Gulf of Oman; and to the west by Turkey and Iraq. 
+Comprising a land area of 1,648,195 km2 (636,372 sq mi), it is the second-largest nation in the Middle 
+East and the 18th-largest in the world; with 78.4 million inhabitants, Iran is the world's 17th most 
+populous nation. It is the only country that has both a Caspian Sea and Indian Ocean coastline. Iran 
+has long been of geostrategic importance because of its central location in Eurasia and Western Asia, 
+and its proximity to the Strait of Hormuz.</English>
+		<French>[TAB]Iran, officially the Islamic Republic of Iran, is a country in Western Asia. It is bordered 
+to the northwest by Armenia, the de facto independent Nagorno-Karabakh Republic, and Azerbaijan; with 
+Kazakhstan and Russia across the Caspian Sea; to the northeast by Turkmenistan; to the east by Afghanistan 
+and Pakistan; to the south by the Persian Gulf and the Gulf of Oman; and to the west by Turkey and Iraq. 
+Comprising a land area of 1,648,195 km2 (636,372 sq mi), it is the second-largest nation in the Middle 
+East and the 18th-largest in the world; with 78.4 million inhabitants, Iran is the world's 17th most 
+populous nation. It is the only country that has both a Caspian Sea and Indian Ocean coastline. Iran 
+has long been of geostrategic importance because of its central location in Eurasia and Western Asia, 
+and its proximity to the Strait of Hormuz.</French>
+		<German>[TAB]Iran, officially the Islamic Republic of Iran, is a country in Western Asia. It is bordered 
+to the northwest by Armenia, the de facto independent Nagorno-Karabakh Republic, and Azerbaijan; with 
+Kazakhstan and Russia across the Caspian Sea; to the northeast by Turkmenistan; to the east by Afghanistan 
+and Pakistan; to the south by the Persian Gulf and the Gulf of Oman; and to the west by Turkey and Iraq. 
+Comprising a land area of 1,648,195 km2 (636,372 sq mi), it is the second-largest nation in the Middle 
+East and the 18th-largest in the world; with 78.4 million inhabitants, Iran is the world's 17th most 
+populous nation. It is the only country that has both a Caspian Sea and Indian Ocean coastline. Iran 
+has long been of geostrategic importance because of its central location in Eurasia and Western Asia, 
+and its proximity to the Strait of Hormuz.</German>
+		<Italian>[TAB]Iran, officially the Islamic Republic of Iran, is a country in Western Asia. It is bordered 
+to the northwest by Armenia, the de facto independent Nagorno-Karabakh Republic, and Azerbaijan; with 
+Kazakhstan and Russia across the Caspian Sea; to the northeast by Turkmenistan; to the east by Afghanistan 
+and Pakistan; to the south by the Persian Gulf and the Gulf of Oman; and to the west by Turkey and Iraq. 
+Comprising a land area of 1,648,195 km2 (636,372 sq mi), it is the second-largest nation in the Middle 
+East and the 18th-largest in the world; with 78.4 million inhabitants, Iran is the world's 17th most 
+populous nation. It is the only country that has both a Caspian Sea and Indian Ocean coastline. Iran 
+has long been of geostrategic importance because of its central location in Eurasia and Western Asia, 
+and its proximity to the Strait of Hormuz.</Italian>
+		<Spanish>[TAB]Iran, officially the Islamic Republic of Iran, is a country in Western Asia. It is bordered 
+to the northwest by Armenia, the de facto independent Nagorno-Karabakh Republic, and Azerbaijan; with 
+Kazakhstan and Russia across the Caspian Sea; to the northeast by Turkmenistan; to the east by Afghanistan 
+and Pakistan; to the south by the Persian Gulf and the Gulf of Oman; and to the west by Turkey and Iraq. 
+Comprising a land area of 1,648,195 km2 (636,372 sq mi), it is the second-largest nation in the Middle 
+East and the 18th-largest in the world; with 78.4 million inhabitants, Iran is the world's 17th most 
+populous nation. It is the only country that has both a Caspian Sea and Indian Ocean coastline. Iran 
+has long been of geostrategic importance because of its central location in Eurasia and Western Asia, 
+and its proximity to the Strait of Hormuz.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_IRAN_ADJECTIVE</Tag>
+		<English>Iranian</English>
+		<French>Iranian</French>
+		<German>Iranian</German>
+		<Italian>Iranian</Italian>
+		<Spanish>Iranian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_KHOMEINI</Tag>
+		<English>Khomeini</English>
+		<French>Khomeini</French>
+		<German>Khomeini</German>
+		<Italian>Khomeini</Italian>
+		<Spanish>Khomeini</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_KHOMEINI_PEDIA</Tag>
+		<English>[H1]Ruhollah Khomeini [\H1][NEWLINE][BOLD]Founder of the Islamic Republic of Iran[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 24 September 1902 - 3 June 1989[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Ruhollah 
+Moosavi Khomeini was an Iranian Mujtahid , revolutionary, politician, the founder of the Islamic Republic 
+of Iran as the first Islamic government in the modern age and the leader of the 1979 Iranian Revolution 
+which saw the overthrow of the Pahlavi monarchy and Mohammad Reza Pahlavi, the Shah of Iran who was supported 
+by the United States. Following the revolution, Khomeini became the country's Supreme Leader, a position 
+created in the constitution of the Islamic Republic as the highest-ranking political and religious authority 
+of the nation, which he held until his death. He was succeeded by Ali Khamenei. Khomeini was a Mujtahid 
+or faqih (an expert in Islamic law) and author of more than 40 books, but he is primarily known for his 
+political activities. He spent more than 15 years in exile for his opposition to the last Shah. In his 
+writings and preachings he expanded the theory of velayat-e faqih, the "guardianship of the jurisconsult 
+(clerical authority)", to include theocratic political rule by Islamic jurists. This principle was appended 
+to the new Iranian constitution[13] after being put to a referendum.</English>
+		<French>[H1]Ruhollah Khomeini [\H1][NEWLINE][BOLD]Founder of the Islamic Republic of Iran[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 24 September 1902 - 3 June 1989[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Ruhollah 
+Moosavi Khomeini was an Iranian Mujtahid , revolutionary, politician, the founder of the Islamic Republic 
+of Iran as the first Islamic government in the modern age and the leader of the 1979 Iranian Revolution 
+which saw the overthrow of the Pahlavi monarchy and Mohammad Reza Pahlavi, the Shah of Iran who was supported 
+by the United States. Following the revolution, Khomeini became the country's Supreme Leader, a position 
+created in the constitution of the Islamic Republic as the highest-ranking political and religious authority 
+of the nation, which he held until his death. He was succeeded by Ali Khamenei. Khomeini was a Mujtahid 
+or faqih (an expert in Islamic law) and author of more than 40 books, but he is primarily known for his 
+political activities. He spent more than 15 years in exile for his opposition to the last Shah. In his 
+writings and preachings he expanded the theory of velayat-e faqih, the "guardianship of the jurisconsult 
+(clerical authority)", to include theocratic political rule by Islamic jurists. This principle was appended 
+to the new Iranian constitution[13] after being put to a referendum.</French>
+		<German>[H1]Ruhollah Khomeini [\H1][NEWLINE][BOLD]Founder of the Islamic Republic of Iran[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 24 September 1902 - 3 June 1989[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Ruhollah 
+Moosavi Khomeini was an Iranian Mujtahid , revolutionary, politician, the founder of the Islamic Republic 
+of Iran as the first Islamic government in the modern age and the leader of the 1979 Iranian Revolution 
+which saw the overthrow of the Pahlavi monarchy and Mohammad Reza Pahlavi, the Shah of Iran who was supported 
+by the United States. Following the revolution, Khomeini became the country's Supreme Leader, a position 
+created in the constitution of the Islamic Republic as the highest-ranking political and religious authority 
+of the nation, which he held until his death. He was succeeded by Ali Khamenei. Khomeini was a Mujtahid 
+or faqih (an expert in Islamic law) and author of more than 40 books, but he is primarily known for his 
+political activities. He spent more than 15 years in exile for his opposition to the last Shah. In his 
+writings and preachings he expanded the theory of velayat-e faqih, the "guardianship of the jurisconsult 
+(clerical authority)", to include theocratic political rule by Islamic jurists. This principle was appended 
+to the new Iranian constitution[13] after being put to a referendum.</German>
+		<Italian>[H1]Ruhollah Khomeini [\H1][NEWLINE][BOLD]Founder of the Islamic Republic of Iran[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 24 September 1902 - 3 June 1989[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Ruhollah 
+Moosavi Khomeini was an Iranian Mujtahid , revolutionary, politician, the founder of the Islamic Republic 
+of Iran as the first Islamic government in the modern age and the leader of the 1979 Iranian Revolution 
+which saw the overthrow of the Pahlavi monarchy and Mohammad Reza Pahlavi, the Shah of Iran who was supported 
+by the United States. Following the revolution, Khomeini became the country's Supreme Leader, a position 
+created in the constitution of the Islamic Republic as the highest-ranking political and religious authority 
+of the nation, which he held until his death. He was succeeded by Ali Khamenei. Khomeini was a Mujtahid 
+or faqih (an expert in Islamic law) and author of more than 40 books, but he is primarily known for his 
+political activities. He spent more than 15 years in exile for his opposition to the last Shah. In his 
+writings and preachings he expanded the theory of velayat-e faqih, the "guardianship of the jurisconsult 
+(clerical authority)", to include theocratic political rule by Islamic jurists. This principle was appended 
+to the new Iranian constitution[13] after being put to a referendum.</Italian>
+		<Spanish>[H1]Ruhollah Khomeini [\H1][NEWLINE][BOLD]Founder of the Islamic Republic of Iran[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 24 September 1902 - 3 June 1989[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Ruhollah 
+Moosavi Khomeini was an Iranian Mujtahid , revolutionary, politician, the founder of the Islamic Republic 
+of Iran as the first Islamic government in the modern age and the leader of the 1979 Iranian Revolution 
+which saw the overthrow of the Pahlavi monarchy and Mohammad Reza Pahlavi, the Shah of Iran who was supported 
+by the United States. Following the revolution, Khomeini became the country's Supreme Leader, a position 
+created in the constitution of the Islamic Republic as the highest-ranking political and religious authority 
+of the nation, which he held until his death. He was succeeded by Ali Khamenei. Khomeini was a Mujtahid 
+or faqih (an expert in Islamic law) and author of more than 40 books, but he is primarily known for his 
+political activities. He spent more than 15 years in exile for his opposition to the last Shah. In his 
+writings and preachings he expanded the theory of velayat-e faqih, the "guardianship of the jurisconsult 
+(clerical authority)", to include theocratic political rule by Islamic jurists. This principle was appended 
+to the new Iranian constitution[13] after being put to a referendum.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_KHOMEINI_1</Tag>
+		<English>Greetings, [CT_NAME]. I am [OUR_NAME] of the [OUR_EMPIRE]. Love truth even if it harms you, and hate lies even if they serve you. These are words of wisdom to live by.</English>
+		<French>Greetings, [CT_NAME]. I am [OUR_NAME] of the [OUR_EMPIRE]. Love truth even if it harms you, and hate lies even if they serve you. These are words of wisdom to live by.</French>
+		<German>Greetings, [CT_NAME]. I am [OUR_NAME] of the [OUR_EMPIRE]. Love truth even if it harms you, and hate lies even if they serve you. These are words of wisdom to live by.</German>
+		<Italian>Greetings, [CT_NAME]. I am [OUR_NAME] of the [OUR_EMPIRE]. Love truth even if it harms you, and hate lies even if they serve you. These are words of wisdom to live by.</Italian>
+		<Spanish>Greetings, [CT_NAME]. I am [OUR_NAME] of the [OUR_EMPIRE]. Love truth even if it harms you, and hate lies even if they serve you. These are words of wisdom to live by.</Spanish>
+	</TEXT>
+</Civ4GameText>

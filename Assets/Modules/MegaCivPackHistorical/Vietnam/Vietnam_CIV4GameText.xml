@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- re-Modified by strategyonly -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_VIETNAM_DESC</Tag>
+		<English>Vietnamese Empire</English>
+		<French>Vietnamese Empire</French>
+		<German>Vietnamese Empire</German>
+		<Italian>Vietnamese Empire</Italian>
+		<Spanish>Vietnam Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_VIETNAM_SHORT_DESC</Tag>
+		<English>Vietnam</English>
+		<French>Vietnam</French>
+		<German>Vietnam</German>
+		<Italian>Vietnam</Italian>
+		<Spanish>Vietnam</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_VIETNAM_PEDIA</Tag>
+		<English> [TAB]The Vietnamese civilization has existed for thousands of years. Vietnamese legends hold that native people populated and civilized the land more than 4,000 years ago. Chinese historical records tell of an indigenous people that existed about 2,500 years ago. Some historians, both in Asia and in the West, hold that the various peoples of today's Vietnam were brought together by a Qin Dynasty-era general who was fed up with the despotic rule of the Qin Shi Huang (First emperor of China proper) and escaped to the "southern Yue [Viet] mountains" to set up his own kingdom. He and his soldiers conquered the land and established a civilized society modeled after ancient Chinese customs. This Chinese general adopted the native language (which sounded similar to southern Chinese dialects anyway) and married local women, who gave birth to sons that inherited the kingdom. Whether this is indeed historically true or not is still subject to debate.[PARAGRAPH:2]What is known for sure is that for most of the period from 207 BC to the early 10th century, it was under the rule of successive dynasties of China. Sporadic independence movements were attempted, but were quickly extinguished by the Chinese army. In 939, the Vietnamese defeated Chinese forces at the Bach Dang River and gained independence. They gained complete autonomy a century later. For most of its history, Vietnam has been strongly influenced by its much bigger northern neighbor, China. However, during the rule of the Tran Dynasty, it defeated three Mongol attempts of invasion by the Yuan Dynasty. Feudalism in Vietnam reached its zenith in the Le Dynasty 1400s, especially with the emperor Le Thanh Tong. Between the 13th and 17th centuries, the Vietnamese expanded southward in a process known as nam tien (southward expansion). They eventually conquered the kingdom of Champa and much of the Khmer empire. [PARAGRAPH:2]The independent period ended in the mid-19th century, when the country was colonized by France.  French rule continued until World War II, when Japan briefly occupied Vietnam and used the country as a base to launch attacks against the rest of Indochina and India. When the war ended, France attempted to re-establish control but failed, after they were defeated at Dien Bien Phu. There was overwhelming support for a unified country, however, the West, particularly the United States feared that the highly popular Ho Chi Minh would easily win any election.[PARAGRAPH:2]The US under the Kennedy administration began to send military advisors into Vietnam and things quickly escalated from there.  The Communist strongholds in the North were supported by China and the Soviet Union while the regime set up in the South was supported by the United States. The conflict quickly escalated into the Vietnam War; one of the most controversial wars in history.  All American troops were withdrawn by March 29, 1973. By April 30, 1975, North Vietnam had overtaken the puppet regime in South Vietnam and by 1976, Vietnam was finally unified the Socialist Republic of Vietnam. This is the government that currently exists today. </English>
+		<French>The Vietnamese civilization has existed for thousands of years. Vietnamese legends hold that native people populated and civilized the land more than 4,000 years ago. Chinese historical records tell of an indigenous people that existed about 2,500 years ago. Some historians, both in Asia and in the West, hold that the various peoples of today's Vietnam were brought together by a Qin Dynasty-era general who was fed up with the despotic rule of the Qin Shi Huang (First emperor of China proper) and escaped to the "southern Yue [Viet] mountains" to set up his own kingdom. He and his soldiers conquered the land and established a civilized society modeled after ancient Chinese customs. This Chinese general adopted the native language (which sounded similar to southern Chinese dialects anyway) and married local women, who gave birth to sons that inherited the kingdom. Whether this is indeed historically true or not is still subject to debate.[NEWLINE][PARAGRAPH:2]What is known for sure is that for most of the period from 207 BC to the early 10th century, it was under the rule of successive dynasties of China. Sporadic independence movements were attempted, but were quickly extinguished by the Chinese army. In 939, the Vietnamese defeated Chinese forces at the Bach Dang River and gained independence. They gained complete autonomy a century later. For most of its history, Vietnam has been strongly influenced by its much bigger northern neighbor, China. However, during the rule of the Tran Dynasty, it defeated three Mongol attempts of invasion by the Yuan Dynasty. Feudalism in Vietnam reached its zenith in the Le Dynasty 1400s, especially with the emperor Le Thanh Tong. Between the 13th and 17th centuries, the Vietnamese expanded southward in a process known as nam tien (southward expansion). They eventually conquered the kingdom of Champa and much of the Khmer empire.[NEWLINE] [PARAGRAPH:2]The independent period ended in the mid-19th century, when the country was colonized by France.  French rule continued until World War II, when Japan briefly occupied Vietnam and used the country as a base to launch attacks against the rest of Indochina and India. When the war ended, France attempted to re-establish control but failed, after they were defeated at Dien Bien Phu. There was overwhelming support for a unified country, however, the West, particularly the United States feared that the highly popular Ho Chi Minh would easily win any election. [PARAGRAPH:2]The US under the Kennedy administration began to send military advisors into Vietnam and things quickly escalated from there.  The Communist strongholds in the North were supported by China and the Soviet Union while the regime set up in the South was supported by the United States. The conflict quickly escalated into the Vietnam War; one of the most controversial wars in history.  All American troops were withdrawn by March 29, 1973. By April 30, 1975, North Vietnam had overtaken the puppet regime in South Vietnam and by 1976, Vietnam was finally unified the Socialist Republic of Vietnam. This is the government that currently exists today. </French>
+		<German>The Vietnamese civilization has existed for thousands of years. Vietnamese legends hold that native people populated and civilized the land more than 4,000 years ago. Chinese historical records tell of an indigenous people that existed about 2,500 years ago. Some historians, both in Asia and in the West, hold that the various peoples of today's Vietnam were brought together by a Qin Dynasty-era general who was fed up with the despotic rule of the Qin Shi Huang (First emperor of China proper) and escaped to the "southern Yue [Viet] mountains" to set up his own kingdom. He and his soldiers conquered the land and established a civilized society modeled after ancient Chinese customs. This Chinese general adopted the native language (which sounded similar to southern Chinese dialects anyway) and married local women, who gave birth to sons that inherited the kingdom. Whether this is indeed historically true or not is still subject to debate.[NEWLINE][PARAGRAPH:2]What is known for sure is that for most of the period from 207 BC to the early 10th century, it was under the rule of successive dynasties of China. Sporadic independence movements were attempted, but were quickly extinguished by the Chinese army. In 939, the Vietnamese defeated Chinese forces at the Bach Dang River and gained independence. They gained complete autonomy a century later. For most of its history, Vietnam has been strongly influenced by its much bigger northern neighbor, China. However, during the rule of the Tran Dynasty, it defeated three Mongol attempts of invasion by the Yuan Dynasty. Feudalism in Vietnam reached its zenith in the Le Dynasty 1400s, especially with the emperor Le Thanh Tong. Between the 13th and 17th centuries, the Vietnamese expanded southward in a process known as nam tien (southward expansion). They eventually conquered the kingdom of Champa and much of the Khmer empire. [NEWLINE][PARAGRAPH:2]The independent period ended in the mid-19th century, when the country was colonized by France.  French rule continued until World War II, when Japan briefly occupied Vietnam and used the country as a base to launch attacks against the rest of Indochina and India. When the war ended, France attempted to re-establish control but failed, after they were defeated at Dien Bien Phu. There was overwhelming support for a unified country, however, the West, particularly the United States feared that the highly popular Ho Chi Minh would easily win any election.[PARAGRAPH:2] The US under the Kennedy administration began to send military advisors into Vietnam and things quickly escalated from there.  The Communist strongholds in the North were supported by China and the Soviet Union while the regime set up in the South was supported by the United States. The conflict quickly escalated into the Vietnam War; one of the most controversial wars in history.  All American troops were withdrawn by March 29, 1973. By April 30, 1975, North Vietnam had overtaken the puppet regime in South Vietnam and by 1976, Vietnam was finally unified the Socialist Republic of Vietnam. This is the government that currently exists today.</German>
+		<Italian>The Vietnamese civilization has existed for thousands of years. Vietnamese legends hold that native people populated and civilized the land more than 4,000 years ago. Chinese historical records tell of an indigenous people that existed about 2,500 years ago. Some historians, both in Asia and in the West, hold that the various peoples of today's Vietnam were brought together by a Qin Dynasty-era general who was fed up with the despotic rule of the Qin Shi Huang (First emperor of China proper) and escaped to the "southern Yue [Viet] mountains" to set up his own kingdom. He and his soldiers conquered the land and established a civilized society modeled after ancient Chinese customs. This Chinese general adopted the native language (which sounded similar to southern Chinese dialects anyway) and married local women, who gave birth to sons that inherited the kingdom. Whether this is indeed historically true or not is still subject to debate.[NEWLINE][PARAGRAPH:2]What is known for sure is that for most of the period from 207 BC to the early 10th century, it was under the rule of successive dynasties of China. Sporadic independence movements were attempted, but were quickly extinguished by the Chinese army. In 939, the Vietnamese defeated Chinese forces at the Bach Dang River and gained independence. They gained complete autonomy a century later. For most of its history, Vietnam has been strongly influenced by its much bigger northern neighbor, China. However, during the rule of the Tran Dynasty, it defeated three Mongol attempts of invasion by the Yuan Dynasty. Feudalism in Vietnam reached its zenith in the Le Dynasty 1400s, especially with the emperor Le Thanh Tong. Between the 13th and 17th centuries, the Vietnamese expanded southward in a process known as nam tien (southward expansion). They eventually conquered the kingdom of Champa and much of the Khmer empire.[NEWLINE] [PARAGRAPH:2]The independent period ended in the mid-19th century, when the country was colonized by France.  French rule continued until World War II, when Japan briefly occupied Vietnam and used the country as a base to launch attacks against the rest of Indochina and India. When the war ended, France attempted to re-establish control but failed, after they were defeated at Dien Bien Phu. There was overwhelming support for a unified country, however, the West, particularly the United States feared that the highly popular Ho Chi Minh would easily win any election. [PARAGRAPH:2]The US under the Kennedy administration began to send military advisors into Vietnam and things quickly escalated from there.  The Communist strongholds in the North were supported by China and the Soviet Union while the regime set up in the South was supported by the United States. The conflict quickly escalated into the Vietnam War; one of the most controversial wars in history.  All American troops were withdrawn by March 29, 1973. By April 30, 1975, North Vietnam had overtaken the puppet regime in South Vietnam and by 1976, Vietnam was finally unified the Socialist Republic of Vietnam. This is the government that currently exists today.</Italian>
+		<Spanish>The Vietnamese civilization has existed for thousands of years. Vietnamese legends hold that native people populated and civilized the land more than 4,000 years ago. Chinese historical records tell of an indigenous people that existed about 2,500 years ago. Some historians, both in Asia and in the West, hold that the various peoples of today's Vietnam were brought together by a Qin Dynasty-era general who was fed up with the despotic rule of the Qin Shi Huang (First emperor of China proper) and escaped to the "southern Yue [Viet] mountains" to set up his own kingdom. He and his soldiers conquered the land and established a civilized society modeled after ancient Chinese customs. This Chinese general adopted the native language (which sounded similar to southern Chinese dialects anyway) and married local women, who gave birth to sons that inherited the kingdom. Whether this is indeed historically true or not is still subject to debate.[NEWLINE][PARAGRAPH:2]What is known for sure is that for most of the period from 207 BC to the early 10th century, it was under the rule of successive dynasties of China. Sporadic independence movements were attempted, but were quickly extinguished by the Chinese army. In 939, the Vietnamese defeated Chinese forces at the Bach Dang River and gained independence. They gained complete autonomy a century later. For most of its history, Vietnam has been strongly influenced by its much bigger northern neighbor, China. However, during the rule of the Tran Dynasty, it defeated three Mongol attempts of invasion by the Yuan Dynasty. Feudalism in Vietnam reached its zenith in the Le Dynasty 1400s, especially with the emperor Le Thanh Tong. Between the 13th and 17th centuries, the Vietnamese expanded southward in a process known as nam tien (southward expansion). They eventually conquered the kingdom of Champa and much of the Khmer empire. [NEWLINE][PARAGRAPH:2]The independent period ended in the mid-19th century, when the country was colonized by France.  French rule continued until World War II, when Japan briefly occupied Vietnam and used the country as a base to launch attacks against the rest of Indochina and India. When the war ended, France attempted to re-establish control but failed, after they were defeated at Dien Bien Phu. There was overwhelming support for a unified country, however, the West, particularly the United States feared that the highly popular Ho Chi Minh would easily win any election. [PARAGRAPH:2]The US under the Kennedy administration began to send military advisors into Vietnam and things quickly escalated from there.  The Communist strongholds in the North were supported by China and the Soviet Union while the regime set up in the South was supported by the United States. The conflict quickly escalated into the Vietnam War; one of the most controversial wars in history.  All American troops were withdrawn by March 29, 1973. By April 30, 1975, North Vietnam had overtaken the puppet regime in South Vietnam and by 1976, Vietnam was finally unified the Socialist Republic of Vietnam. This is the government that currently exists today.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_VIETNAM_ADJECTIVE</Tag>
+		<English>Vietnamese </English>
+		<French>Vietnamese </French>
+		<German>Vietnamese </German>
+		<Italian>Vietnamese </Italian>
+		<Spanish>Vietnamese </Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_TRUNG</Tag>
+		<English>Trung</English>
+		<French>Trung</French>
+		<German>Trung</German>
+		<Italian>Trung</Italian>
+		<Spanish>Trung</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_TRUNG_PEDIA</Tag>
+		<English>[H1]Trung Trac[\H1][NEWLINE][BOLD]Queen of Vietnam[\BOLD][NEWLINE][BOLD]Lived: c.12 - 43 AD[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]The Trung Sisters, known in Vietnamese as Hai Ba Trung (the two Trung ladies), were regarded as national heroines of Vietnam after they successfully repelled Chinese invasions for three years. The sisters were known as Trung Trac and Trung Nhi and were born during the thousand-year Chinese occupation of Vietnam. The dates of their birth are unknown, but Trrung Trac was older than Trung Nhi. The exact date of their death is unknown but they both died in the year AD 43.[PARAGRAPH:1]The Trung sisters were born in a rural Vietnamese village, into a military family. Their father was a prefect of Me Linh, therefore the sisters grew up in a house well-versed in the martial arts. They also witnessed the cruel treatment of the Viets by their Chinese overlords. The Trung sisters spent much time studying the art of warfare, as well as learning fighting skills.[PARAGRAPH:1]In AD 39 Trung Trac and Trung Nhi, after successfully repelling a small Chinese unit from their village, assembled a large army, consisting mostly of women. Within months, they had taken back many (about 65) citadels from the Chinese, and had liberated much of Vietnam. They became queens of the country, and managed to resist all Chinese attacks on Vietnam for over two years.[PARAGRAPH:1]Their revolution was short lived however, as the Chinese gathered a huge expeditionary army to crush the native fighters. Legend has it that the Chinese army did this by going into battle unclothed. The enemy's brazenness so shamed the Vietnamese female warriors that they fled the battle scene, leaving the weakened forces easily defeated by the Chinese.[PARAGRAPH:1]Despite the many heroic efforts, the Trung sisters realised that they had been defeated and that to fight further would mean death at the hands of the Chinese. Therefore to protect their honour, and to elude ridicule, the two queens committed suicide by drowning themselves in the Hat River (AD 43).[PARAGRAPH:1]The Trung Sisters are highly revered in Vietnam, as they led the first resistance movement against the occupying Chinese after 247 years of domination. Many temples are dedicated to them, and a yearly holiday, occurring in February, to commemorate their deaths is observed by many Vietnamese. A district in Hanoi is named after them. In addition, numerous large streets in major cities are named after them. They are often depicted riding on elephants into battle.  </English>
+		<French>[H1]Trung Trac[\H1][NEWLINE][BOLD]Queen of Vietnam[\BOLD][NEWLINE][BOLD]Lived: c.12 - 43 AD[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]The Trung Sisters, known in Vietnamese as Hai Ba Trung (the two Trung ladies), were regarded as national heroines of Vietnam after they successfully repelled Chinese invasions for three years. The sisters were known as Trung Trac and Trung Nhi and were born during the thousand-year Chinese occupation of Vietnam. The dates of their birth are unknown, but Trrung Trac was older than Trung Nhi. The exact date of their death is unknown but they both died in the year AD 43.[PARAGRAPH:1]The Trung sisters were born in a rural Vietnamese village, into a military family. Their father was a prefect of Me Linh, therefore the sisters grew up in a house well-versed in the martial arts. They also witnessed the cruel treatment of the Viets by their Chinese overlords. The Trung sisters spent much time studying the art of warfare, as well as learning fighting skills.[PARAGRAPH:1]In AD 39 Trung Trac and Trung Nhi, after successfully repelling a small Chinese unit from their village, assembled a large army, consisting mostly of women. Within months, they had taken back many (about 65) citadels from the Chinese, and had liberated much of Vietnam. They became queens of the country, and managed to resist all Chinese attacks on Vietnam for over two years.[PARAGRAPH:1]Their revolution was short lived however, as the Chinese gathered a huge expeditionary army to crush the native fighters. Legend has it that the Chinese army did this by going into battle unclothed. The enemy's brazenness so shamed the Vietnamese female warriors that they fled the battle scene, leaving the weakened forces easily defeated by the Chinese.[PARAGRAPH:1]Despite the many heroic efforts, the Trung sisters realised that they had been defeated and that to fight further would mean death at the hands of the Chinese. Therefore to protect their honour, and to elude ridicule, the two queens committed suicide by drowning themselves in the Hat River (AD 43).[PARAGRAPH:1]The Trung Sisters are highly revered in Vietnam, as they led the first resistance movement against the occupying Chinese after 247 years of domination. Many temples are dedicated to them, and a yearly holiday, occurring in February, to commemorate their deaths is observed by many Vietnamese. A district in Hanoi is named after them. In addition, numerous large streets in major cities are named after them. They are often depicted riding on elephants into battle. </French>
+		<German>[H1]Trung Trac[\H1][NEWLINE][BOLD]Queen of Vietnam[\BOLD][NEWLINE][BOLD]Lived: c.12 - 43 AD[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]The Trung Sisters, known in Vietnamese as Hai Ba Trung (the two Trung ladies), were regarded as national heroines of Vietnam after they successfully repelled Chinese invasions for three years. The sisters were known as Trung Trac and Trung Nhi and were born during the thousand-year Chinese occupation of Vietnam. The dates of their birth are unknown, but Trrung Trac was older than Trung Nhi. The exact date of their death is unknown but they both died in the year AD 43.[PARAGRAPH:1]The Trung sisters were born in a rural Vietnamese village, into a military family. Their father was a prefect of Me Linh, therefore the sisters grew up in a house well-versed in the martial arts. They also witnessed the cruel treatment of the Viets by their Chinese overlords. The Trung sisters spent much time studying the art of warfare, as well as learning fighting skills.[PARAGRAPH:1]In AD 39 Trung Trac and Trung Nhi, after successfully repelling a small Chinese unit from their village, assembled a large army, consisting mostly of women. Within months, they had taken back many (about 65) citadels from the Chinese, and had liberated much of Vietnam. They became queens of the country, and managed to resist all Chinese attacks on Vietnam for over two years.[PARAGRAPH:1]Their revolution was short lived however, as the Chinese gathered a huge expeditionary army to crush the native fighters. Legend has it that the Chinese army did this by going into battle unclothed. The enemy's brazenness so shamed the Vietnamese female warriors that they fled the battle scene, leaving the weakened forces easily defeated by the Chinese.[PARAGRAPH:1]Despite the many heroic efforts, the Trung sisters realised that they had been defeated and that to fight further would mean death at the hands of the Chinese. Therefore to protect their honour, and to elude ridicule, the two queens committed suicide by drowning themselves in the Hat River (AD 43).[PARAGRAPH:1]The Trung Sisters are highly revered in Vietnam, as they led the first resistance movement against the occupying Chinese after 247 years of domination. Many temples are dedicated to them, and a yearly holiday, occurring in February, to commemorate their deaths is observed by many Vietnamese. A district in Hanoi is named after them. In addition, numerous large streets in major cities are named after them. They are often depicted riding on elephants into battle. </German>
+		<Italian>[H1]Trung Trac[\H1][NEWLINE][BOLD]Queen of Vietnam[\BOLD][NEWLINE][BOLD]Lived: c.12 - 43 AD[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]The Trung Sisters, known in Vietnamese as Hai Ba Trung (the two Trung ladies), were regarded as national heroines of Vietnam after they successfully repelled Chinese invasions for three years. The sisters were known as Trung Trac and Trung Nhi and were born during the thousand-year Chinese occupation of Vietnam. The dates of their birth are unknown, but Trrung Trac was older than Trung Nhi. The exact date of their death is unknown but they both died in the year AD 43.[PARAGRAPH:1]The Trung sisters were born in a rural Vietnamese village, into a military family. Their father was a prefect of Me Linh, therefore the sisters grew up in a house well-versed in the martial arts. They also witnessed the cruel treatment of the Viets by their Chinese overlords. The Trung sisters spent much time studying the art of warfare, as well as learning fighting skills.[PARAGRAPH:1]In AD 39 Trung Trac and Trung Nhi, after successfully repelling a small Chinese unit from their village, assembled a large army, consisting mostly of women. Within months, they had taken back many (about 65) citadels from the Chinese, and had liberated much of Vietnam. They became queens of the country, and managed to resist all Chinese attacks on Vietnam for over two years.[PARAGRAPH:1]Their revolution was short lived however, as the Chinese gathered a huge expeditionary army to crush the native fighters. Legend has it that the Chinese army did this by going into battle unclothed. The enemy's brazenness so shamed the Vietnamese female warriors that they fled the battle scene, leaving the weakened forces easily defeated by the Chinese.[PARAGRAPH:1]Despite the many heroic efforts, the Trung sisters realised that they had been defeated and that to fight further would mean death at the hands of the Chinese. Therefore to protect their honour, and to elude ridicule, the two queens committed suicide by drowning themselves in the Hat River (AD 43).[PARAGRAPH:1]The Trung Sisters are highly revered in Vietnam, as they led the first resistance movement against the occupying Chinese after 247 years of domination. Many temples are dedicated to them, and a yearly holiday, occurring in February, to commemorate their deaths is observed by many Vietnamese. A district in Hanoi is named after them. In addition, numerous large streets in major cities are named after them. They are often depicted riding on elephants into battle. </Italian>
+		<Spanish>[H1]Trung Trac[\H1][NEWLINE][BOLD]Queen of Vietnam[\BOLD][NEWLINE][BOLD]Lived: c.12 - 43 AD[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]The Trung Sisters, known in Vietnamese as Hai Ba Trung (the two Trung ladies), were regarded as national heroines of Vietnam after they successfully repelled Chinese invasions for three years. The sisters were known as Trung Trac and Trung Nhi and were born during the thousand-year Chinese occupation of Vietnam. The dates of their birth are unknown, but Trrung Trac was older than Trung Nhi. The exact date of their death is unknown but they both died in the year AD 43.[PARAGRAPH:1]The Trung sisters were born in a rural Vietnamese village, into a military family. Their father was a prefect of Me Linh, therefore the sisters grew up in a house well-versed in the martial arts. They also witnessed the cruel treatment of the Viets by their Chinese overlords. The Trung sisters spent much time studying the art of warfare, as well as learning fighting skills.[PARAGRAPH:1]In AD 39 Trung Trac and Trung Nhi, after successfully repelling a small Chinese unit from their village, assembled a large army, consisting mostly of women. Within months, they had taken back many (about 65) citadels from the Chinese, and had liberated much of Vietnam. They became queens of the country, and managed to resist all Chinese attacks on Vietnam for over two years.[PARAGRAPH:1]Their revolution was short lived however, as the Chinese gathered a huge expeditionary army to crush the native fighters. Legend has it that the Chinese army did this by going into battle unclothed. The enemy's brazenness so shamed the Vietnamese female warriors that they fled the battle scene, leaving the weakened forces easily defeated by the Chinese.[PARAGRAPH:1]Despite the many heroic efforts, the Trung sisters realised that they had been defeated and that to fight further would mean death at the hands of the Chinese. Therefore to protect their honour, and to elude ridicule, the two queens committed suicide by drowning themselves in the Hat River (AD 43).[PARAGRAPH:1]The Trung Sisters are highly revered in Vietnam, as they led the first resistance movement against the occupying Chinese after 247 years of domination. Many temples are dedicated to them, and a yearly holiday, occurring in February, to commemorate their deaths is observed by many Vietnamese. A district in Hanoi is named after them. In addition, numerous large streets in major cities are named after them. They are often depicted riding on elephants into battle. </Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_TRUNG_1</Tag>
+		<English>[CT_NAME]... I am [OUR_NAME] of the [OUR_EMPIRE]. Remember, don't trouble until trouble troubles you.</English>
+		<French>I caution you against aggression, [CT_NAME] of the [CT_EMPIRE]. You will kill 10 of our men, and we will kill 1 of yours, and in the end it will be you who tire of it.</French>
+		<German>I caution you against aggression, [CT_NAME] of the [CT_EMPIRE]. You will kill 10 of our men, and we will kill 1 of yours, and in the end it will be you who tire of it.</German>
+		<Italian>I caution you against aggression, [CT_NAME] of the [CT_EMPIRE]. You will kill 10 of our men, and we will kill 1 of yours, and in the end it will be you who tire of it.</Italian>
+		<Spanish>I caution you against aggression, [CT_NAME] of the [CT_EMPIRE]. You will kill 10 of our men, and we will kill 1 of yours, and in the end it will be you who tire of it.</Spanish>
+		<Russian>I caution you against aggression, [CT_NAME] of the [CT_EMPIRE]. You will kill 10 of our men, and we will kill 1 of yours, and in the end it will be you who tire of it.</Russian>
+		<Chinese>I caution you against aggression, [CT_NAME] of the [CT_EMPIRE]. You will kill 10 of our men, and we will kill 1 of yours, and in the end it will be you who tire of it.</Chinese>
+		
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_HO_CHI_MINH</Tag>
+		<English>Ho Chi Minh</English>
+		<French>Ho Chi Minh</French>
+		<German>Ho Chi Minh</German>
+		<Italian>Ho Chi Minh</Italian>
+		<Spanish>Ho Chi Minh</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_HO_CHI_MINH_PEDIA</Tag>
+		<English>[H1]Ho Chi Minh[\H1][NEWLINE][BOLD]Chairman of the Communist Party of Vietnam[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1890 - 1969 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Ho Chi Minh was the leader of the Vietnamese independence struggles against both the French and American Empires. Ho Chi Minh, real name Nguyen Tat Thanh (1890-1969), Vietnamese Communist leader and the principal force behind the Vietnamese struggle against French colonial rule. Ho was born on May 19, 1890, in the village of Kimlien, Annam (central Vietnam), the son of an official who had resigned in protest against French domination of his country. Ho attended school in Hue and then briefly taught at a private school in Phan Thiet. In 1911 he was employed as a cook on a French steamship liner and thereafter worked in London and Paris. After World War I, using the pseudonym Nguyen Ai Quoc (Nguyen the Patriot), Ho engaged in radical activities and was in the founding group of the French Communist party. He was summoned to Moscow for training and, in late 1924, he was sent to Canton, China, where he organized a revolutionary movement among Vietnamese exiles.[PARAGRAPH:1]  He was forced to leave China when local authorities cracked down on Communist activities, but he returned in 1930 to found the Indochinese Communist party (ICP). He stayed in Hong Kong as representative of the Communist International. In June 1931 Ho was arrested there by British police and remained in prison until his release in 1933. He then made his way back to the Soviet Union, where he reportedly spent several years recovering from tuberculosis.[PARAGRAPH:1] In 1938 he returned to China and served as an adviser with Chinese Communist armed forces. When Japan occupied Vietnam in 1941, he resumed contact with ICP leaders and helped to found a new Communist-dominated independence movement, popularly known as the Vietminh, that fought the Japanese.[PARAGRAPH:1] In August 1945, when Japan surrendered, the Vietminh seized power and proclaimed the Democratic Republic of Vietnam (DRV) in Hanoi. Ho Chi Minh, now known by his final and best-known pseudonym (which means the Enlightener), became president. The French were unwilling to grant independence to their colonial subjects, and in late 1946 war broke out. For eight years Vietminh guerrillas fought French troops in the mountains and rice paddies of Vietnam, finally defeating them in the decisive Battle of Dien Bien Phu in 1954. Ho, however, was deprived of his victory.[PARAGRAPH:1] Subsequent negotiations at Geneva divided the country, with only the North assigned to the Vietminh. The DRV, with Ho still president, now devoted its efforts to constructing a Communist society in North Vietnam. In the early 1960s, however, conflict resumed in the South, where Communist-led guerrillas mounted an insurgency against the U.S.-supported regime in Saigon. Ho, now in poor health, was reduced to a largely ceremonial role, while policy was shaped by others. On September 3, 1969, he died in Hanoi of heart failure. In his honor, after the Communist conquest of the South in 1975, Saigon was renamed Ho Chi Minh City. Ho Chi Minh was not only the founder of Vietnamese communism, he was the very soul of the revolution and of Vietnam's struggle for independence. His personal qualities of simplicity, integrity, and determination were widely admired, not only within Vietnam but elsewhere as well.  </English>
+		<French>[H1]Ho Chi Minh[\H1][NEWLINE][BOLD]Chairman of the Communist Party of Vietnam[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1890 - 1969 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Ho Chi Minh was the leader of the Vietnamese independence struggles against both the French and American Empires. Ho Chi Minh, real name Nguyen Tat Thanh (1890-1969), Vietnamese Communist leader and the principal force behind the Vietnamese struggle against French colonial rule. Ho was born on May 19, 1890, in the village of Kimlien, Annam (central Vietnam), the son of an official who had resigned in protest against French domination of his country. Ho attended school in Hue and then briefly taught at a private school in Phan Thiet. In 1911 he was employed as a cook on a French steamship liner and thereafter worked in London and Paris. After World War I, using the pseudonym Nguyen Ai Quoc (Nguyen the Patriot), Ho engaged in radical activities and was in the founding group of the French Communist party. He was summoned to Moscow for training and, in late 1924, he was sent to Canton, China, where he organized a revolutionary movement among Vietnamese exiles.[PARAGRAPH:1]  He was forced to leave China when local authorities cracked down on Communist activities, but he returned in 1930 to found the Indochinese Communist party (ICP). He stayed in Hong Kong as representative of the Communist International. In June 1931 Ho was arrested there by British police and remained in prison until his release in 1933. He then made his way back to the Soviet Union, where he reportedly spent several years recovering from tuberculosis.[PARAGRAPH:1] In 1938 he returned to China and served as an adviser with Chinese Communist armed forces. When Japan occupied Vietnam in 1941, he resumed contact with ICP leaders and helped to found a new Communist-dominated independence movement, popularly known as the Vietminh, that fought the Japanese.[PARAGRAPH:1] In August 1945, when Japan surrendered, the Vietminh seized power and proclaimed the Democratic Republic of Vietnam (DRV) in Hanoi. Ho Chi Minh, now known by his final and best-known pseudonym (which means the Enlightener), became president. The French were unwilling to grant independence to their colonial subjects, and in late 1946 war broke out. For eight years Vietminh guerrillas fought French troops in the mountains and rice paddies of Vietnam, finally defeating them in the decisive Battle of Dien Bien Phu in 1954. Ho, however, was deprived of his victory.[PARAGRAPH:1] Subsequent negotiations at Geneva divided the country, with only the North assigned to the Vietminh. The DRV, with Ho still president, now devoted its efforts to constructing a Communist society in North Vietnam. In the early 1960s, however, conflict resumed in the South, where Communist-led guerrillas mounted an insurgency against the U.S.-supported regime in Saigon. Ho, now in poor health, was reduced to a largely ceremonial role, while policy was shaped by others. On September 3, 1969, he died in Hanoi of heart failure. In his honor, after the Communist conquest of the South in 1975, Saigon was renamed Ho Chi Minh City. Ho Chi Minh was not only the founder of Vietnamese communism, he was the very soul of the revolution and of Vietnam's struggle for independence. His personal qualities of simplicity, integrity, and determination were widely admired, not only within Vietnam but elsewhere as well. </French>
+		<German>[H1]Ho Chi Minh[\H1][NEWLINE][BOLD]Chairman of the Communist Party of Vietnam[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1890 - 1969 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Ho Chi Minh was the leader of the Vietnamese independence struggles against both the French and American Empires. Ho Chi Minh, real name Nguyen Tat Thanh (1890-1969), Vietnamese Communist leader and the principal force behind the Vietnamese struggle against French colonial rule. Ho was born on May 19, 1890, in the village of Kimlien, Annam (central Vietnam), the son of an official who had resigned in protest against French domination of his country. Ho attended school in Hue and then briefly taught at a private school in Phan Thiet. In 1911 he was employed as a cook on a French steamship liner and thereafter worked in London and Paris. After World War I, using the pseudonym Nguyen Ai Quoc (Nguyen the Patriot), Ho engaged in radical activities and was in the founding group of the French Communist party. He was summoned to Moscow for training and, in late 1924, he was sent to Canton, China, where he organized a revolutionary movement among Vietnamese exiles.[PARAGRAPH:1]  He was forced to leave China when local authorities cracked down on Communist activities, but he returned in 1930 to found the Indochinese Communist party (ICP). He stayed in Hong Kong as representative of the Communist International. In June 1931 Ho was arrested there by British police and remained in prison until his release in 1933. He then made his way back to the Soviet Union, where he reportedly spent several years recovering from tuberculosis.[PARAGRAPH:1] In 1938 he returned to China and served as an adviser with Chinese Communist armed forces. When Japan occupied Vietnam in 1941, he resumed contact with ICP leaders and helped to found a new Communist-dominated independence movement, popularly known as the Vietminh, that fought the Japanese.[PARAGRAPH:1] In August 1945, when Japan surrendered, the Vietminh seized power and proclaimed the Democratic Republic of Vietnam (DRV) in Hanoi. Ho Chi Minh, now known by his final and best-known pseudonym (which means the Enlightener), became president. The French were unwilling to grant independence to their colonial subjects, and in late 1946 war broke out. For eight years Vietminh guerrillas fought French troops in the mountains and rice paddies of Vietnam, finally defeating them in the decisive Battle of Dien Bien Phu in 1954. Ho, however, was deprived of his victory.[PARAGRAPH:1] Subsequent negotiations at Geneva divided the country, with only the North assigned to the Vietminh. The DRV, with Ho still president, now devoted its efforts to constructing a Communist society in North Vietnam. In the early 1960s, however, conflict resumed in the South, where Communist-led guerrillas mounted an insurgency against the U.S.-supported regime in Saigon. Ho, now in poor health, was reduced to a largely ceremonial role, while policy was shaped by others. On September 3, 1969, he died in Hanoi of heart failure. In his honor, after the Communist conquest of the South in 1975, Saigon was renamed Ho Chi Minh City. Ho Chi Minh was not only the founder of Vietnamese communism, he was the very soul of the revolution and of Vietnam's struggle for independence. His personal qualities of simplicity, integrity, and determination were widely admired, not only within Vietnam but elsewhere as well. </German>
+		<Italian>[H1]Ho Chi Minh[\H1][NEWLINE][BOLD]Chairman of the Communist Party of Vietnam[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1890 - 1969 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Ho Chi Minh was the leader of the Vietnamese independence struggles against both the French and American Empires. Ho Chi Minh, real name Nguyen Tat Thanh (1890-1969), Vietnamese Communist leader and the principal force behind the Vietnamese struggle against French colonial rule. Ho was born on May 19, 1890, in the village of Kimlien, Annam (central Vietnam), the son of an official who had resigned in protest against French domination of his country. Ho attended school in Hue and then briefly taught at a private school in Phan Thiet. In 1911 he was employed as a cook on a French steamship liner and thereafter worked in London and Paris. After World War I, using the pseudonym Nguyen Ai Quoc (Nguyen the Patriot), Ho engaged in radical activities and was in the founding group of the French Communist party. He was summoned to Moscow for training and, in late 1924, he was sent to Canton, China, where he organized a revolutionary movement among Vietnamese exiles.[PARAGRAPH:1]  He was forced to leave China when local authorities cracked down on Communist activities, but he returned in 1930 to found the Indochinese Communist party (ICP). He stayed in Hong Kong as representative of the Communist International. In June 1931 Ho was arrested there by British police and remained in prison until his release in 1933. He then made his way back to the Soviet Union, where he reportedly spent several years recovering from tuberculosis.[PARAGRAPH:1] In 1938 he returned to China and served as an adviser with Chinese Communist armed forces. When Japan occupied Vietnam in 1941, he resumed contact with ICP leaders and helped to found a new Communist-dominated independence movement, popularly known as the Vietminh, that fought the Japanese.[PARAGRAPH:1] In August 1945, when Japan surrendered, the Vietminh seized power and proclaimed the Democratic Republic of Vietnam (DRV) in Hanoi. Ho Chi Minh, now known by his final and best-known pseudonym (which means the Enlightener), became president. The French were unwilling to grant independence to their colonial subjects, and in late 1946 war broke out. For eight years Vietminh guerrillas fought French troops in the mountains and rice paddies of Vietnam, finally defeating them in the decisive Battle of Dien Bien Phu in 1954. Ho, however, was deprived of his victory.[PARAGRAPH:1] Subsequent negotiations at Geneva divided the country, with only the North assigned to the Vietminh. The DRV, with Ho still president, now devoted its efforts to constructing a Communist society in North Vietnam. In the early 1960s, however, conflict resumed in the South, where Communist-led guerrillas mounted an insurgency against the U.S.-supported regime in Saigon. Ho, now in poor health, was reduced to a largely ceremonial role, while policy was shaped by others. On September 3, 1969, he died in Hanoi of heart failure. In his honor, after the Communist conquest of the South in 1975, Saigon was renamed Ho Chi Minh City. Ho Chi Minh was not only the founder of Vietnamese communism, he was the very soul of the revolution and of Vietnam's struggle for independence. His personal qualities of simplicity, integrity, and determination were widely admired, not only within Vietnam but elsewhere as well. </Italian>
+		<Spanish>[H1]Ho Chi Minh[\H1][NEWLINE][BOLD]Chairman of the Communist Party of Vietnam[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1890 - 1969 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Ho Chi Minh was the leader of the Vietnamese independence struggles against both the French and American Empires. Ho Chi Minh, real name Nguyen Tat Thanh (1890-1969), Vietnamese Communist leader and the principal force behind the Vietnamese struggle against French colonial rule. Ho was born on May 19, 1890, in the village of Kimlien, Annam (central Vietnam), the son of an official who had resigned in protest against French domination of his country. Ho attended school in Hue and then briefly taught at a private school in Phan Thiet. In 1911 he was employed as a cook on a French steamship liner and thereafter worked in London and Paris. After World War I, using the pseudonym Nguyen Ai Quoc (Nguyen the Patriot), Ho engaged in radical activities and was in the founding group of the French Communist party. He was summoned to Moscow for training and, in late 1924, he was sent to Canton, China, where he organized a revolutionary movement among Vietnamese exiles.[PARAGRAPH:1]  He was forced to leave China when local authorities cracked down on Communist activities, but he returned in 1930 to found the Indochinese Communist party (ICP). He stayed in Hong Kong as representative of the Communist International. In June 1931 Ho was arrested there by British police and remained in prison until his release in 1933. He then made his way back to the Soviet Union, where he reportedly spent several years recovering from tuberculosis.[PARAGRAPH:1] In 1938 he returned to China and served as an adviser with Chinese Communist armed forces. When Japan occupied Vietnam in 1941, he resumed contact with ICP leaders and helped to found a new Communist-dominated independence movement, popularly known as the Vietminh, that fought the Japanese.[PARAGRAPH:1] In August 1945, when Japan surrendered, the Vietminh seized power and proclaimed the Democratic Republic of Vietnam (DRV) in Hanoi. Ho Chi Minh, now known by his final and best-known pseudonym (which means the Enlightener), became president. The French were unwilling to grant independence to their colonial subjects, and in late 1946 war broke out. For eight years Vietminh guerrillas fought French troops in the mountains and rice paddies of Vietnam, finally defeating them in the decisive Battle of Dien Bien Phu in 1954. Ho, however, was deprived of his victory.[PARAGRAPH:1] Subsequent negotiations at Geneva divided the country, with only the North assigned to the Vietminh. The DRV, with Ho still president, now devoted its efforts to constructing a Communist society in North Vietnam. In the early 1960s, however, conflict resumed in the South, where Communist-led guerrillas mounted an insurgency against the U.S.-supported regime in Saigon. Ho, now in poor health, was reduced to a largely ceremonial role, while policy was shaped by others. On September 3, 1969, he died in Hanoi of heart failure. In his honor, after the Communist conquest of the South in 1975, Saigon was renamed Ho Chi Minh City. Ho Chi Minh was not only the founder of Vietnamese communism, he was the very soul of the revolution and of Vietnam's struggle for independence. His personal qualities of simplicity, integrity, and determination were widely admired, not only within Vietnam but elsewhere as well. </Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_HO_CHI_MINH_1</Tag>
+		<English>I caution you against aggression, [CT_NAME] of the [CT_EMPIRE]. You will kill 10 of our men, and we will kill 1 of yours, and in the end it will be you who tire of it.</English>
+		<French>I caution you against aggression, [CT_NAME] of the [CT_EMPIRE]. You will kill 10 of our men, and we will kill 1 of yours, and in the end it will be you who tire of it.</French>
+		<German>I caution you against aggression, [CT_NAME] of the [CT_EMPIRE]. You will kill 10 of our men, and we will kill 1 of yours, and in the end it will be you who tire of it.</German>
+		<Italian>I caution you against aggression, [CT_NAME] of the [CT_EMPIRE]. You will kill 10 of our men, and we will kill 1 of yours, and in the end it will be you who tire of it.</Italian>
+		<Spanish>I caution you against aggression, [CT_NAME] of the [CT_EMPIRE]. You will kill 10 of our men, and we will kill 1 of yours, and in the end it will be you who tire of it.</Spanish>
+		<Russian>I caution you against aggression, [CT_NAME] of the [CT_EMPIRE]. You will kill 10 of our men, and we will kill 1 of yours, and in the end it will be you who tire of it.</Russian>
+		<Chinese>I caution you against aggression, [CT_NAME] of the [CT_EMPIRE]. You will kill 10 of our men, and we will kill 1 of yours, and in the end it will be you who tire of it.</Chinese>
+		
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_HANOI</Tag>
+		<English>Hanoi</English>
+		<French>
+			<Text>Hanoi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Hanoi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Hanoi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Hanoi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAIGON</Tag>
+		<English>Saigon</English>
+		<French>
+			<Text>Saigon</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Saigon</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Saigon</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Saigon</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_HUE</Tag>
+		<English>Hue</English>
+		<French>
+			<Text>Hue</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Hue</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Hue</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Hue</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_HAIPHONG</Tag>
+		<English>Haiphong</English>
+		<French>
+			<Text>Haiphong</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Haiphong</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Haiphong</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Haiphong</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DANANG</Tag>
+		<English>Danang</English>
+		<French>
+			<Text>Danang</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Danang</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Danang</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Danang</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CANTHO</Tag>
+		<English>Cantho</English>
+		<French>
+			<Text>Cantho</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Cantho</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Cantho</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Cantho</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NHA_TRANG</Tag>
+		<English>Nha Trang</English>
+		<French>
+			<Text>Nha Trang</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Nha Trang</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Nha Trang</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Nha Trang</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_QUI_NHON</Tag>
+		<English>Qui Nhon</English>
+		<French>
+			<Text>Qui Nhon</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Qui Nhon</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Qui Nhon</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Qui Nhon</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VINH</Tag>
+		<English>Vinh</English>
+		<French>
+			<Text>Vinh</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Vinh</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Vinh</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Vinh</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LONG_XUYEN</Tag>
+		<English>Long Xuyen</English>
+		<French>
+			<Text>Long Xuyen</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Long Xuyen</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Long Xuyen</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Long Xuyen</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NAM_DINH</Tag>
+		<English>Nam Dinh</English>
+		<French>
+			<Text>Nam Dinh</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Nam Dinh</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Nam Dinh</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Nam Dinh</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_HALONG</Tag>
+		<English>Halong</English>
+		<French>
+			<Text>Halong</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Halong</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Halong</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Halong</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DALAT</Tag>
+		<English>Dalat</English>
+		<French>
+			<Text>Dalat</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Dalat</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Dalat</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Dalat</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TRANH_HOA</Tag>
+		<English>Thanh Hoa</English>
+		<French>
+			<Text>Thanh Hoa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Thanh Hoa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Thanh Hoa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Thanh Hoa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VIET_TRI</Tag>
+		<English>Viet Tri</English>
+		<French>
+			<Text>Viet Tri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Viet Tri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Viet Tri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Viet Tri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MYTHO</Tag>
+		<English>Mytho</English>
+		<French>
+			<Text>Mytho</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mytho</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Mytho</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mytho</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BEN_TRE</Tag>
+		<English>Ben Tre</English>
+		<French>
+			<Text>Ben Tre</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ben Tre</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ben Tre</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ben Tre</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BAC_NINH</Tag>
+		<English>Bac Ninh</English>
+		<French>
+			<Text>Bac Ninh</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Bac Ninh</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Bac Ninh</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Bac Ninh</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAPA</Tag>
+		<English>Sapa</English>
+		<French>
+			<Text>Sapa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sapa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sapa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sapa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BIEN_HOA</Tag>
+		<English>Bien Hoa</English>
+		<French>
+			<Text>Bien Hoa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Bien Hoa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Bien Hoa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Bien Hoa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VINH_LONG</Tag>
+		<English>Vinh Long</English>
+		<French>
+			<Text>Vinh Long</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Vinh Long</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Vinh Long</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Vinh Long</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_THAI_NGUYEN</Tag>
+		<English>Thai Nguyen</English>
+		<French>
+			<Text>Thai Nguyen</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Thai Nguyen</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Thai Nguyen</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Thai Nguyen</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_RACH_GIA</Tag>
+		<English>Rach Gia</English>
+		<French>
+			<Text>Rach Gia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Rach Gia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Rach Gia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Rach Gia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SOC_TRANG</Tag>
+		<English>Soc Trang</English>
+		<French>
+			<Text>Soc Trang</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Soc Trang</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Soc Trang</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Soc Trang</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BAC_LIEU</Tag>
+		<English>Bac Lieu</English>
+		<French>
+			<Text>Bac Lieu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Bac Lieu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Bac Lieu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Bac Lieu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DIEN_BIEN_PHU</Tag>
+		<English>Dien Bien Phu</English>
+		<French>
+			<Text>Dien Bien Phu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Dien Bien Phu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Dien Bien Phu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Dien Bien Phu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+</Civ4GameText>

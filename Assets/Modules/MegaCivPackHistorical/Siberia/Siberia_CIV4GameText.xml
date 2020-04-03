@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- -->
+<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SIBERIA_DESC</Tag>
+		<English>Siberian Empire</English>
+		<French>Siberian Empire</French>
+		<German>Siberian Empire</German>
+		<Italian>Siberian Empire</Italian>
+		<Spanish>Siberian Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SIBERIA_SHORT_DESC</Tag>
+		<English>Sibir</English>
+		<French>Sibir</French>
+		<German>Sibir</German>
+		<Italian>Sibir</Italian>
+		<Spanish>Sibir</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SIBERIA_ADJECTIVE</Tag>
+		<English>Siberian</English>
+		<French>Siberian</French>
+		<German>Siberian</German>
+		<Italian>Siberian</Italian>
+		<Spanish>Siberian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SIBERIA_PEDIA</Tag>
+		<English>[BOLD]Strategy:[\BOLD][PARAGRAPH:1]The Siberians are an, if not the, all-round strong force for the more Hit-and-Run tacticans. Use the military bonuses from Modu's "Aggressive" and "Protective" traits well together with the speed of their UU [COLOR_UNIT_TEXT]Qazan Tatars[COLOR_REVERT] to astonish an unprepeared enemy while the quick-built [COLOR_BUILDING_TEXT]Yarenga[COLOR_REVERT] will support your massive horde with the money needed to pay for them. With all these bonuses, even Genghis Khan would have to think twice before attacking the Siberian Empire.[NEWLINE][NEWLINE][BOLD]Background:[\BOLD][PARAGRAPH:1]The Khanate of Sibir was a state in modern day Siberia, Russia founded in the late 15th century by Taibuga. A tatar state, the original capital of the Khans were Chimgi-Tura. The reign of Taibuga's descendants (the Taibugids) were eventually contested by the mongolic Shaybanid familiy.[PARAGRAPH:1]The Taibugids' control of the region between the Tobol and middle Irtysh was not uncontested. The Shaybanids, descendants of Jochi, frequently claimed the area as their own. Ibak Khan, a member of a junior branch of the Shaybanid house, killed Mar and seized Chimgi-Tura. A Taibugid restoration occurred when Mar's grandson Muhammad fled to the eastern territories around the Irtysh and killed Ibak in battle in c. 1493. Muhammad decided not to remain at Chimgi-Tura, but chose a new capital named Qashliq located on the Irtysh.[PARAGRAPH:1]The Russian conquest of Kazan in 1552 prompted the Taibugid khan of Sibir, Yadigar, to seek friendly relations with Moscow. Yadigar, however, was challenged by a Shaybanid, Kuchum. Several years of fighting (1556–1563) ended with Yadigar's death and Kuchum becoming khan.[PARAGRAPH:1]Kuchum attempted to convert the Siberian Tatars, who were mostly Shamanists, to Islam. His decision to conduct a raid on the Stroganov trading posts resulted in an expedition led by the Cossack Yermak against the Khanate of Sibir. Kuchum's forces were defeated by Yermak at the Battle of Chuvash Cape in 1582 and the Cossacks entered Iskar later that year. Kuchum reorganized his forces, killed Yermak in battle in 1584, and reasserted his authority over Sibir. Over the next fourteen years, however, the Russians slowly conquered the khanate. In 1598 Kuchum was defeated on the banks of the Ob and was forced to flee to the territories of the Nogai, bringing an end to his rule and the start of the Russian Conquest of Siberia.</English>
+		<French>INSERT</French>
+		<German>INSERT</German>
+		<Italian>INSERT</Italian>
+		<Spanish>INSERT</Spanish>
+	</TEXT>
+<!-- Leaders -->
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_KUCHUM</Tag>
+		<English>Kuchum Khan</English>
+		<French>Kuchum Khan</French>
+		<German>Kuchum Khan</German>
+		<Italian>Kuchum Khan</Italian>
+		<Spanish>Kuchum Khan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_KUCHUM_PEDIA</Tag>
+		<English>[H1]Kuchum Khan[\H1][NEWLINE][BOLD]Last Khan of the Siberian Khanate[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]? - c. 1605[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Kuchum was the last Khan of the Siberian Khanate from 1563 to 1598. In 1554, he contested the throne of the Siberia Khanate against the incumbents brothers Yadegar and Bekbulat, who were both vassals of Russia. In 1563, Yadegar was defeated and Kuchum assumed the throne. In 1573, Kuchum conducted a raid on Perm. It was this and other minor raids which prompted the Tsar of Russia to support a Cossack invasion of Siberia. He is perhaps most know for his stiff resistance to this invasion. Kuchum also attempted to spread Islam among his people to unify them.[PARAGRAPH:1]In 1582, Siberia were attacked by the Cossacks, who defeated Kuchum at the capital Qashliq which then had to retreat into the steppes. However, on the night of August 6th, 1584, he counter-attacked and killed most the Cossack leader Yermak and most of his army, regaining control of his now ruined capital. However, his attempt to once again unify Siberia were met by stiff resistance by the nobles, and he had to move his horde to the steppe south of the Irtysh river. There he established a new Khanate, engaging in war against the Russian governors.[PARAGRAPH:1]In 1590 Kuchum raided the Tatars around Tobolsk who were paying tribute to the Russians. In 1591 Koltsov caught Kuchum on the Ishym River and captured two of his wives and his son Abdul-Khair who was later given estates in Russia. In 1594 the fort at Tara was built in part to control Kuchum who was in the area. In 1595 Kuchum's followers were raided on the upper Irtysh. In 1597 Kuchum asked for negotiations and the Tsar and Abdul-Khair wrote from Russia offering estates in Russia in return for surrender. Before September 1598 Andrey Voyeykov caught a large group of his followers at a place called Ub Lake and later caught Kuchum on the Ob River. Kuchum fled, but the Russians killed two of his sons and captured five other sons, eight wives and eight daughters. A Muslim cleric was sent to negotiate. Kuchum replied, describing himself as deaf and blind and without subsistence and said that he had not submitted before and would not submit now. This was his last contact with the Russians. He is believed to have died c. 1605 in Bukhara. In 1620 his son Ishim-khan married a daughter of Kho Orluk who was then leading his people from Dzugharia to the Volga.[PARAGRAPH:1]Kuchum is portrayed in numerous Tatar and Russian songs and legends. His descendants remained in Muscovy, eventually assuming the title of Sibirsky.[PARAGRAPH:1]</English>
+		<French>Iwan</French>
+		<German>Iwan</German>
+		<Italian>Iwan</Italian>
+		<Spanish>Iwan</Spanish>
+	</TEXT>
+<!-- UU and UB -->
+</Civ4GameText>

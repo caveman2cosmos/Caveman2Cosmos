@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- Modified by the Civ Gold Team -->
+<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_MKAPA</Tag>
+		<English>Benjamin Mkapa</English>
+		<French>Benjamin Mkapa</French>
+		<German>Benjamin Mkapa</German>
+		<Italian>Benjamin Mkapa</Italian>
+		<Spanish>Benjamin Mkapa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_MKAPA_PEDIA</Tag>
+		<English>[H1]Benjamin Mkapa [\H1][NEWLINE][BOLD]President of Tanzania[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] born 12 November 1938[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Benjamin William Mkapa was the third President of Tanzania, in office from 1995 to 2005. He was also Chairman of the Revolutionary State Party (Chama Cha Mapinduzi, CCM). Mkapa was born in 1938 in Ndanda, near Masasi in southern Tanganyika. He graduated from Makerere University in Uganda in 1962 with a degree in English. He also attended Columbia University in 1963 and was awarded a master's degree in international affairs.[3] Previous posts include being the administrative officer in Dodoma and the Minister for Science, Technology and Higher Education. He also led the Tanzania mission to Canada in 1982 and to the United States from 1983 to 1984.[4] He was the Minister of Foreign Affairs from 1977 to 1980 and again from 1984 to 1990.</English>
+		<French>[H1]Benjamin Mkapa [\H1][NEWLINE][BOLD]President of Tanzania[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] born 12 November 1938[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Benjamin William Mkapa was the third President of Tanzania, in office from 1995 to 2005. He was also Chairman of the Revolutionary State Party (Chama Cha Mapinduzi, CCM). Mkapa was born in 1938 in Ndanda, near Masasi in southern Tanganyika. He graduated from Makerere University in Uganda in 1962 with a degree in English. He also attended Columbia University in 1963 and was awarded a master's degree in international affairs.[3] Previous posts include being the administrative officer in Dodoma and the Minister for Science, Technology and Higher Education. He also led the Tanzania mission to Canada in 1982 and to the United States from 1983 to 1984.[4] He was the Minister of Foreign Affairs from 1977 to 1980 and again from 1984 to 1990.</French>
+		<German>[H1]Benjamin Mkapa [\H1][NEWLINE][BOLD]President of Tanzania[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] born 12 November 1938[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Benjamin William Mkapa was the third President of Tanzania, in office from 1995 to 2005. He was also Chairman of the Revolutionary State Party (Chama Cha Mapinduzi, CCM). Mkapa was born in 1938 in Ndanda, near Masasi in southern Tanganyika. He graduated from Makerere University in Uganda in 1962 with a degree in English. He also attended Columbia University in 1963 and was awarded a master's degree in international affairs.[3] Previous posts include being the administrative officer in Dodoma and the Minister for Science, Technology and Higher Education. He also led the Tanzania mission to Canada in 1982 and to the United States from 1983 to 1984.[4] He was the Minister of Foreign Affairs from 1977 to 1980 and again from 1984 to 1990.</German>
+		<Italian>[H1]Benjamin Mkapa [\H1][NEWLINE][BOLD]President of Tanzania[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] born 12 November 1938[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Benjamin William Mkapa was the third President of Tanzania, in office from 1995 to 2005. He was also Chairman of the Revolutionary State Party (Chama Cha Mapinduzi, CCM). Mkapa was born in 1938 in Ndanda, near Masasi in southern Tanganyika. He graduated from Makerere University in Uganda in 1962 with a degree in English. He also attended Columbia University in 1963 and was awarded a master's degree in international affairs.[3] Previous posts include being the administrative officer in Dodoma and the Minister for Science, Technology and Higher Education. He also led the Tanzania mission to Canada in 1982 and to the United States from 1983 to 1984.[4] He was the Minister of Foreign Affairs from 1977 to 1980 and again from 1984 to 1990.</Italian>
+		<Spanish>[H1]Benjamin Mkapa [\H1][NEWLINE][BOLD]President of Tanzania[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] born 12 November 1938[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Benjamin William Mkapa was the third President of Tanzania, in office from 1995 to 2005. He was also Chairman of the Revolutionary State Party (Chama Cha Mapinduzi, CCM). Mkapa was born in 1938 in Ndanda, near Masasi in southern Tanganyika. He graduated from Makerere University in Uganda in 1962 with a degree in English. He also attended Columbia University in 1963 and was awarded a master's degree in international affairs.[3] Previous posts include being the administrative officer in Dodoma and the Minister for Science, Technology and Higher Education. He also led the Tanzania mission to Canada in 1982 and to the United States from 1983 to 1984.[4] He was the Minister of Foreign Affairs from 1977 to 1980 and again from 1984 to 1990.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_MKAPA_1</Tag>
+		<English>Greetings to you, [CT_NAME]. I am pleased to meet you, but do remember that friendship likes distance.</English>
+		<French>Greetings to you, [CT_NAME]. I am pleased to meet you, but do remember that friendship likes distance.</French>
+		<German>Greetings to you, [CT_NAME]. I am pleased to meet you, but do remember that friendship likes distance.</German>
+		<Italian>Greetings to you, [CT_NAME]. I am pleased to meet you, but do remember that friendship likes distance.</Italian>
+		<Spanish>Greetings to you, [CT_NAME]. I am pleased to meet you, but do remember that friendship likes distance.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TANZANIA_DESC</Tag>
+		<English>Tanzanian Empire</English>
+		<French>
+			<Text>Tanzanian Empire</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tanzanian Empire</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tanzanian Empire</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tanzanian Empire</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TANZANIA_SHORT_DESC</Tag>
+		<English>Tanzania</English>
+		<French>
+			<Text>Tanzania</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tanzania</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tanzania</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tanzania</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TANZANIA_PEDIA</Tag>
+		<English>[TAB]Tanzania, officially the United Republic of Tanzania, is a country in East Africa within the African Great Lakes region. It is bordered by Kenya and Uganda to the north; Rwanda, Burundi, and the Democratic Republic of the Congo to the west; Zambia, Malawi, and Mozambique to the south; and the Indian Ocean to the east. Kilimanjaro, Africa's highest mountain, is in northeastern Tanzania. Tanzania's population of 44.9 million is highly diverse, composed of numerous ethnic, linguistic, and religious groups. Tanzania is a presidential constitutional republic, and since 1996, its official capital has been Dodoma, where the President's Office, the National Assembly, and some government ministries are located. Dar es Salaam, the former capital, retains most government offices and is the country's largest city, principal port, and leading commercial center.</English>
+		<French>[TAB]Tanzania, officially the United Republic of Tanzania, is a country in East Africa within the African Great Lakes region. It is bordered by Kenya and Uganda to the north; Rwanda, Burundi, and the Democratic Republic of the Congo to the west; Zambia, Malawi, and Mozambique to the south; and the Indian Ocean to the east. Kilimanjaro, Africa's highest mountain, is in northeastern Tanzania. Tanzania's population of 44.9 million is highly diverse, composed of numerous ethnic, linguistic, and religious groups. Tanzania is a presidential constitutional republic, and since 1996, its official capital has been Dodoma, where the President's Office, the National Assembly, and some government ministries are located. Dar es Salaam, the former capital, retains most government offices and is the country's largest city, principal port, and leading commercial center.</French>
+		<German>[TAB]Tanzania, officially the United Republic of Tanzania, is a country in East Africa within the African Great Lakes region. It is bordered by Kenya and Uganda to the north; Rwanda, Burundi, and the Democratic Republic of the Congo to the west; Zambia, Malawi, and Mozambique to the south; and the Indian Ocean to the east. Kilimanjaro, Africa's highest mountain, is in northeastern Tanzania. Tanzania's population of 44.9 million is highly diverse, composed of numerous ethnic, linguistic, and religious groups. Tanzania is a presidential constitutional republic, and since 1996, its official capital has been Dodoma, where the President's Office, the National Assembly, and some government ministries are located. Dar es Salaam, the former capital, retains most government offices and is the country's largest city, principal port, and leading commercial center.</German>
+		<Italian>[TAB]Tanzania, officially the United Republic of Tanzania, is a country in East Africa within the African Great Lakes region. It is bordered by Kenya and Uganda to the north; Rwanda, Burundi, and the Democratic Republic of the Congo to the west; Zambia, Malawi, and Mozambique to the south; and the Indian Ocean to the east. Kilimanjaro, Africa's highest mountain, is in northeastern Tanzania. Tanzania's population of 44.9 million is highly diverse, composed of numerous ethnic, linguistic, and religious groups. Tanzania is a presidential constitutional republic, and since 1996, its official capital has been Dodoma, where the President's Office, the National Assembly, and some government ministries are located. Dar es Salaam, the former capital, retains most government offices and is the country's largest city, principal port, and leading commercial center.</Italian>
+		<Spanish>[TAB]Tanzania, officially the United Republic of Tanzania, is a country in East Africa within the African Great Lakes region. It is bordered by Kenya and Uganda to the north; Rwanda, Burundi, and the Democratic Republic of the Congo to the west; Zambia, Malawi, and Mozambique to the south; and the Indian Ocean to the east. Kilimanjaro, Africa's highest mountain, is in northeastern Tanzania. Tanzania's population of 44.9 million is highly diverse, composed of numerous ethnic, linguistic, and religious groups. Tanzania is a presidential constitutional republic, and since 1996, its official capital has been Dodoma, where the President's Office, the National Assembly, and some government ministries are located. Dar es Salaam, the former capital, retains most government offices and is the country's largest city, principal port, and leading commercial center.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TANZANIA_ADJECTIVE</Tag>
+		<English>Tanzanian</English>
+		<French>
+			<Text>Tanzanian</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tanzanian</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tanzanian</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tanzanian</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+</Civ4GameText>

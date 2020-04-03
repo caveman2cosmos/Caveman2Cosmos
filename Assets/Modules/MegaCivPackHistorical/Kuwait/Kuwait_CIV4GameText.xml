@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- ReModified by the StrategyOnly -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KUWAIT_DESC</Tag>
+		<English>Kuwait Empire</English>
+		<French>Kuwait Empire</French>
+		<German>Kuwait Empire</German>
+		<Italian>Kuwait Empire</Italian>
+		<Spanish>Kuwait Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KUWAIT_SHORT_DESC</Tag>
+		<English>Kuwait</English>
+		<French>Kuwait</French>
+		<German>Kuwait</German>
+		<Italian>Kuwait</Italian>
+		<Spanish>Kuwait</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KUWAIT_PEDIA</Tag>
+		<English>[TAB]Kuwait, officially the State of Kuwait, is an Arab country in Western Asia. Situated 
+in the northern edge of Eastern Arabia at the tip of the Persian Gulf, it shares borders with Iraq and 
+Saudi Arabia. As of 2014, Kuwait has a population of 4.1 million people; 1.2 million are Kuwaitis and 
+2.8 million are expatriates. During the eighteenth and nineteenth centuries, Kuwait was a prosperous 
+trade hub. Starting in the early 20th century, its regional economic importance declined, and by 1934 
+Kuwait had lost its prominence in long-distance trade. Kuwait's economy was devastated by several trade 
+blockades. During World War I, the British Empire imposed a blockade against Kuwait because its ruler 
+supported the Ottoman Empire.Following the Kuwait-Najd War of 1919-1920, Saudi Arabia maintained a trade 
+blockade against the country from 1923 until 1937. In 1990, Kuwait was invaded by Iraq. The Iraqi occupation 
+came to an end in 1991 after military intervention by United States-led forces.</English>
+		<French>[TAB]Kuwait, officially the State of Kuwait, is an Arab country in Western Asia. Situated in 
+the northern edge of Eastern Arabia at the tip of the Persian Gulf, it shares borders with Iraq and Saudi 
+Arabia. As of 2014, Kuwait has a population of 4.1 million people; 1.2 million are Kuwaitis and 2.8 million 
+are expatriates. During the eighteenth and nineteenth centuries, Kuwait was a prosperous trade hub. Starting 
+in the early 20th century, its regional economic importance declined, and by 1934 Kuwait had lost its 
+prominence in long-distance trade. Kuwait's economy was devastated by several trade blockades. During 
+World War I, the British Empire imposed a blockade against Kuwait because its ruler supported the Ottoman 
+Empire.Following the Kuwait-Najd War of 1919-1920, Saudi Arabia maintained a trade blockade against the 
+country from 1923 until 1937. In 1990, Kuwait was invaded by Iraq. The Iraqi occupation came to an end 
+in 1991 after military intervention by United States-led forces.</French>
+		<German>[TAB]Kuwait, officially the State of Kuwait, is an Arab country in Western Asia. Situated in 
+the northern edge of Eastern Arabia at the tip of the Persian Gulf, it shares borders with Iraq and Saudi 
+Arabia. As of 2014, Kuwait has a population of 4.1 million people; 1.2 million are Kuwaitis and 2.8 million 
+are expatriates. During the eighteenth and nineteenth centuries, Kuwait was a prosperous trade hub. Starting 
+in the early 20th century, its regional economic importance declined, and by 1934 Kuwait had lost its 
+prominence in long-distance trade. Kuwait's economy was devastated by several trade blockades. During 
+World War I, the British Empire imposed a blockade against Kuwait because its ruler supported the Ottoman 
+Empire.Following the Kuwait-Najd War of 1919-1920, Saudi Arabia maintained a trade blockade against the 
+country from 1923 until 1937. In 1990, Kuwait was invaded by Iraq. The Iraqi occupation came to an end 
+in 1991 after military intervention by United States-led forces.</German>
+		<Italian>[TAB]Kuwait, officially the State of Kuwait, is an Arab country in Western Asia. Situated 
+in the northern edge of Eastern Arabia at the tip of the Persian Gulf, it shares borders with Iraq and 
+Saudi Arabia. As of 2014, Kuwait has a population of 4.1 million people; 1.2 million are Kuwaitis and 
+2.8 million are expatriates. During the eighteenth and nineteenth centuries, Kuwait was a prosperous 
+trade hub. Starting in the early 20th century, its regional economic importance declined, and by 1934 
+Kuwait had lost its prominence in long-distance trade. Kuwait's economy was devastated by several trade 
+blockades. During World War I, the British Empire imposed a blockade against Kuwait because its ruler 
+supported the Ottoman Empire.Following the Kuwait-Najd War of 1919-1920, Saudi Arabia maintained a trade 
+blockade against the country from 1923 until 1937. In 1990, Kuwait was invaded by Iraq. The Iraqi occupation 
+came to an end in 1991 after military intervention by United States-led forces.</Italian>
+		<Spanish>[TAB]Kuwait, officially the State of Kuwait, is an Arab country in Western Asia. Situated 
+in the northern edge of Eastern Arabia at the tip of the Persian Gulf, it shares borders with Iraq and 
+Saudi Arabia. As of 2014, Kuwait has a population of 4.1 million people; 1.2 million are Kuwaitis and 
+2.8 million are expatriates. During the eighteenth and nineteenth centuries, Kuwait was a prosperous 
+trade hub. Starting in the early 20th century, its regional economic importance declined, and by 1934 
+Kuwait had lost its prominence in long-distance trade. Kuwait's economy was devastated by several trade 
+blockades. During World War I, the British Empire imposed a blockade against Kuwait because its ruler 
+supported the Ottoman Empire.Following the Kuwait-Najd War of 1919-1920, Saudi Arabia maintained a trade 
+blockade against the country from 1923 until 1937. In 1990, Kuwait was invaded by Iraq. The Iraqi occupation 
+came to an end in 1991 after military intervention by United States-led forces.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KUWAIT_ADJECTIVE</Tag>
+		<English>Kuwaiti</English>
+		<French>Kuwaiti</French>
+		<German>Kuwaiti</German>
+		<Italian>Kuwaiti</Italian>
+		<Spanish>Kuwaiti</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_ALSALIM</Tag>
+		<English>Abdullah Al-Salim</English>
+		<French>Abdullah Al-Salim</French>
+		<German>Abdullah Al-Salim</German>
+		<Italian>Abdullah Al-Salim</Italian>
+		<Spanish>Abdullah Al-Salim</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_ALSALIM_PEDIA</Tag>
+		<English>[H1]Abdullah Al-Salim Al-Sabah [\H1][NEWLINE][BOLD]1st Emir of Kuwait[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1895 - 24 November 1965[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Abdullah III 
+Al-Salim Al-Sabah was the 1st Emir of Kuwait and the Commander of the Military of Kuwait from 29 January 
+1950 until his death, and the eldest son of Salem Al-Mubarak Al-Sabah. As the eleventh ruler of the al-Sabah 
+dynasty in Kuwait, he took power after the death of his cousin Sheikh Ahmad Al-Jaber Al-Sabah. He also 
+ruled as regent upon the death of his father until the election of Sheikh Ahmad. Unlike his predecessors, 
+he was more pro-Arab than pro-British. He effectively ended the British "protectorate" status of Kuwait 
+by signing a treaty with the British on 19 June 1961. He was regarded as a very progressive leader. He 
+introduced the Constitution of Kuwait in 1962, followed by the parliament in 1963.</English>
+		<French>[H1]Abdullah Al-Salim Al-Sabah [\H1][NEWLINE][BOLD]1st Emir of Kuwait[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1895 - 24 November 1965[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Abdullah III 
+Al-Salim Al-Sabah was the 1st Emir of Kuwait and the Commander of the Military of Kuwait from 29 January 
+1950 until his death, and the eldest son of Salem Al-Mubarak Al-Sabah. As the eleventh ruler of the al-Sabah 
+dynasty in Kuwait, he took power after the death of his cousin Sheikh Ahmad Al-Jaber Al-Sabah. He also 
+ruled as regent upon the death of his father until the election of Sheikh Ahmad. Unlike his predecessors, 
+he was more pro-Arab than pro-British. He effectively ended the British "protectorate" status of Kuwait 
+by signing a treaty with the British on 19 June 1961. He was regarded as a very progressive leader. He 
+introduced the Constitution of Kuwait in 1962, followed by the parliament in 1963.</French>
+		<German>[H1]Abdullah Al-Salim Al-Sabah [\H1][NEWLINE][BOLD]1st Emir of Kuwait[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1895 - 24 November 1965[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Abdullah III 
+Al-Salim Al-Sabah was the 1st Emir of Kuwait and the Commander of the Military of Kuwait from 29 January 
+1950 until his death, and the eldest son of Salem Al-Mubarak Al-Sabah. As the eleventh ruler of the al-Sabah 
+dynasty in Kuwait, he took power after the death of his cousin Sheikh Ahmad Al-Jaber Al-Sabah. He also 
+ruled as regent upon the death of his father until the election of Sheikh Ahmad. Unlike his predecessors, 
+he was more pro-Arab than pro-British. He effectively ended the British "protectorate" status of Kuwait 
+by signing a treaty with the British on 19 June 1961. He was regarded as a very progressive leader. He 
+introduced the Constitution of Kuwait in 1962, followed by the parliament in 1963.</German>
+		<Italian>[H1]Abdullah Al-Salim Al-Sabah [\H1][NEWLINE][BOLD]1st Emir of Kuwait[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1895 - 24 November 1965[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Abdullah III 
+Al-Salim Al-Sabah was the 1st Emir of Kuwait and the Commander of the Military of Kuwait from 29 January 
+1950 until his death, and the eldest son of Salem Al-Mubarak Al-Sabah. As the eleventh ruler of the al-Sabah 
+dynasty in Kuwait, he took power after the death of his cousin Sheikh Ahmad Al-Jaber Al-Sabah. He also 
+ruled as regent upon the death of his father until the election of Sheikh Ahmad. Unlike his predecessors, 
+he was more pro-Arab than pro-British. He effectively ended the British "protectorate" status of Kuwait 
+by signing a treaty with the British on 19 June 1961. He was regarded as a very progressive leader. He 
+introduced the Constitution of Kuwait in 1962, followed by the parliament in 1963.</Italian>
+		<Spanish>[H1]Abdullah Al-Salim Al-Sabah [\H1][NEWLINE][BOLD]1st Emir of Kuwait[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1895 - 24 November 1965[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Abdullah III 
+Al-Salim Al-Sabah was the 1st Emir of Kuwait and the Commander of the Military of Kuwait from 29 January 
+1950 until his death, and the eldest son of Salem Al-Mubarak Al-Sabah. As the eleventh ruler of the al-Sabah 
+dynasty in Kuwait, he took power after the death of his cousin Sheikh Ahmad Al-Jaber Al-Sabah. He also 
+ruled as regent upon the death of his father until the election of Sheikh Ahmad. Unlike his predecessors, 
+he was more pro-Arab than pro-British. He effectively ended the British "protectorate" status of Kuwait 
+by signing a treaty with the British on 19 June 1961. He was regarded as a very progressive leader. He 
+introduced the Constitution of Kuwait in 1962, followed by the parliament in 1963.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ALSALIM_1</Tag>
+		<English>Greetings, [CT_NAME]. I am [OUR_NAME] of the [OUR_EMPIRE]. Love truth even if it harms you, and hate lies even if they serve you. These are words of wisdom to live by.</English>
+		<French>Greetings, [CT_NAME]. I am [OUR_NAME] of the [OUR_EMPIRE]. Love truth even if it harms you, and hate lies even if they serve you. These are words of wisdom to live by.</French>
+		<German>Greetings, [CT_NAME]. I am [OUR_NAME] of the [OUR_EMPIRE]. Love truth even if it harms you, and hate lies even if they serve you. These are words of wisdom to live by.</German>
+		<Italian>Greetings, [CT_NAME]. I am [OUR_NAME] of the [OUR_EMPIRE]. Love truth even if it harms you, and hate lies even if they serve you. These are words of wisdom to live by.</Italian>
+		<Spanish>Greetings, [CT_NAME]. I am [OUR_NAME] of the [OUR_EMPIRE]. Love truth even if it harms you, and hate lies even if they serve you. These are words of wisdom to live by.</Spanish>
+	</TEXT>
+</Civ4GameText>

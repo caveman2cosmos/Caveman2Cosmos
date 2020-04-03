@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<Civ4CivilizationInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4CivilizationsSchema.xml">
+	<CivilizationInfos>
+		<CivilizationInfo>
+			<Type>CIVILIZATION_IRAQ</Type>
+			<Description>TXT_KEY_CIV_IRAQ_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_IRAQ_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_IRAQ_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_IRAQ_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_IRAQ</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_IRAQ</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_CRESCENT</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_MIDDLE_EAST</UnitArtStyleType>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>Baghdad</City>
+				<City>Basra</City>
+				<City>Arbil</City>
+				<City>Sulaymaniyah</City>
+				<City>Mosul</City>
+				<City>Kirkuk</City>
+				<City>Fallujah</City>
+				<City>Karbala</City>
+				<City>Najaf</City>
+				<City>Ramadi</City>
+				<City>Zubayr</City>
+				<City>Umm Qasr</City>
+				<City>Tikrit</City>
+				<City>Shamia</City>
+				<City>Nasiriyah</City>
+				<City>Kut</City>
+				<City>Iskandariya</City>
+				<City>Samawah</City>
+				<City>Zakho</City>
+				<City>Taji</City>
+				<City>Balad</City>
+				<City>Ar Rutba</City>
+				<City>Muqdadiyah</City>
+				<City>Hit</City>
+				<City>Erbil</City>
+				<City>Najaf</City>
+				<City>Samarra</City>
+				<City>Tel Keppe</City>
+				<City>Ad-Dawr</City>
+				<City>Baiji</City>
+				<City>Dahuk</City>
+				<City>Amarah</City>
+				<City>Kish</City>
+				<City>Khanaqin</City>
+				<City>Al Diwaniyah</City>
+				<City>Nineveh</City>
+				<City>Al Hillah</City>
+				<City>Nippur</City>
+				<City>Halabja</City>
+				<City>Tal Afar</City>
+				<City>Haditha</City>
+				<City>Al Kut</City>
+				<City>Al-Qa'im</City>
+				<City>Afak</City>
+				<City>Baqubah</City>
+			</Cities>
+
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
+			<InitialCivics>
+				<CivicType>CIVIC_ANARCHISM</CivicType>
+				<CivicType>CIVIC_OBEDIENCE</CivicType>
+				<CivicType>CIVIC_STRONGMAN</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
+				<CivicType>CIVIC_MILITIA</CivicType>
+				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SURVIVAL</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
+				<CivicType>CIVIC_UNORGANIZED</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_SADDAM</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<DerivativeCiv>CIVILIZATION_ARABIA</DerivativeCiv>
+			<CivilizationSelectionSound>AS3D_ARABIA_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_ARABIA_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+	</CivilizationInfos>
+</Civ4CivilizationInfos>

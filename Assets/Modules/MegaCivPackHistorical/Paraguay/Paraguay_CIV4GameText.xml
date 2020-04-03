@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- Modified by the Civ Gold Team -->
+<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_PARAGUAY_DESC</Tag>
+		<English>Paraguayan Empire</English>
+		<French>Paraguayan Empire</French>
+		<German>Paraguayan Empire</German>
+		<Italian>Paraguayan Empire</Italian>
+		<Spanish>Paraguayan Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_PARAGUAY_SHORT_DESC</Tag>
+		<English>Paraguay</English>
+		<French>Paraguay</French>
+		<German>Paraguay</German>
+		<Italian>Paraguay</Italian>
+		<Spanish>Paraguay</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_PARAGUAY_ADJECTIVE</Tag>
+		<English>Paraguayan</English>
+		<French>Paraguayan</French>
+		<German>Paraguayan</German>
+		<Italian>Paraguayan</Italian>
+		<Spanish>Paraguayan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_PARAGUAY_PEDIA</Tag>
+		<English>[TAB]Paraguay, officially the Republic of Paraguay, is a landlocked country in central South America, bordered by Argentina to the south and southwest, Brazil to the east and northeast, and Bolivia to the northwest. Paraguay lies on both banks of the Paraguay River, which runs through the center of the country from north to south. Due to its central location in South America, it is sometimes referred to as Corazón de América ("Heart of America").</English>
+		<French>[TAB]Paraguay, officially the Republic of Paraguay, is a landlocked country in central South America, bordered by Argentina to the south and southwest, Brazil to the east and northeast, and Bolivia to the northwest. Paraguay lies on both banks of the Paraguay River, which runs through the center of the country from north to south. Due to its central location in South America, it is sometimes referred to as Corazón de América ("Heart of America").</French>
+		<German>[TAB]Paraguay, officially the Republic of Paraguay, is a landlocked country in central South America, bordered by Argentina to the south and southwest, Brazil to the east and northeast, and Bolivia to the northwest. Paraguay lies on both banks of the Paraguay River, which runs through the center of the country from north to south. Due to its central location in South America, it is sometimes referred to as Corazón de América ("Heart of America").</German>
+		<Italian>[TAB]Paraguay, officially the Republic of Paraguay, is a landlocked country in central South America, bordered by Argentina to the south and southwest, Brazil to the east and northeast, and Bolivia to the northwest. Paraguay lies on both banks of the Paraguay River, which runs through the center of the country from north to south. Due to its central location in South America, it is sometimes referred to as Corazón de América ("Heart of America").</Italian>
+		<Spanish>[TAB]Paraguay, officially the Republic of Paraguay, is a landlocked country in central South America, bordered by Argentina to the south and southwest, Brazil to the east and northeast, and Bolivia to the northwest. Paraguay lies on both banks of the Paraguay River, which runs through the center of the country from north to south. Due to its central location in South America, it is sometimes referred to as Corazón de América ("Heart of America").</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SOLANO</Tag>
+		<English>Francisco Solano López</English>
+		<French>Francisco Solano López</French>
+		<German>Francisco Solano López</German>
+		<Italian>Francisco Solano López</Italian>
+		<Spanish>Francisco Solano López</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SOLANO_PEDIA</Tag>
+		<English>[H1]Francisco Solano López [\H1][NEWLINE][BOLD]President of Paraguay[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 10 September 1862 - 1 March 1870[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Francisco Solano López Carrillo was president of Paraguay from 1862 until his death in 1870. He was the eldest son of Juana Pabla Carrillo and the president Carlos Antonio López, who had left his son a prosperous nation. Solano López is widely regarded as being responsible for the disastrous War of the Triple Alliance, which led to his death. There is a debate within Paraguay as to whether he was a fearless leader who led his troops to the end, or whether he foolishly led Paraguay into a war which it could never possibly win, and which nearly eliminated the country from the map.</English>
+		<French>[H1]Francisco Solano López [\H1][NEWLINE][BOLD]President of Paraguay[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 10 September 1862 - 1 March 1870[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Francisco Solano López Carrillo was president of Paraguay from 1862 until his death in 1870. He was the eldest son of Juana Pabla Carrillo and the president Carlos Antonio López, who had left his son a prosperous nation. Solano López is widely regarded as being responsible for the disastrous War of the Triple Alliance, which led to his death. There is a debate within Paraguay as to whether he was a fearless leader who led his troops to the end, or whether he foolishly led Paraguay into a war which it could never possibly win, and which nearly eliminated the country from the map.</French>
+		<German>[H1]Francisco Solano López [\H1][NEWLINE][BOLD]President of Paraguay[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 10 September 1862 - 1 March 1870[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Francisco Solano López Carrillo was president of Paraguay from 1862 until his death in 1870. He was the eldest son of Juana Pabla Carrillo and the president Carlos Antonio López, who had left his son a prosperous nation. Solano López is widely regarded as being responsible for the disastrous War of the Triple Alliance, which led to his death. There is a debate within Paraguay as to whether he was a fearless leader who led his troops to the end, or whether he foolishly led Paraguay into a war which it could never possibly win, and which nearly eliminated the country from the map.</German>
+		<Italian>[H1]Francisco Solano López [\H1][NEWLINE][BOLD]President of Paraguay[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 10 September 1862 - 1 March 1870[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Francisco Solano López Carrillo was president of Paraguay from 1862 until his death in 1870. He was the eldest son of Juana Pabla Carrillo and the president Carlos Antonio López, who had left his son a prosperous nation. Solano López is widely regarded as being responsible for the disastrous War of the Triple Alliance, which led to his death. There is a debate within Paraguay as to whether he was a fearless leader who led his troops to the end, or whether he foolishly led Paraguay into a war which it could never possibly win, and which nearly eliminated the country from the map.</Italian>
+		<Spanish>[H1]Francisco Solano López [\H1][NEWLINE][BOLD]President of Paraguay[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 10 September 1862 - 1 March 1870[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Francisco Solano López Carrillo was president of Paraguay from 1862 until his death in 1870. He was the eldest son of Juana Pabla Carrillo and the president Carlos Antonio López, who had left his son a prosperous nation. Solano López is widely regarded as being responsible for the disastrous War of the Triple Alliance, which led to his death. There is a debate within Paraguay as to whether he was a fearless leader who led his troops to the end, or whether he foolishly led Paraguay into a war which it could never possibly win, and which nearly eliminated the country from the map.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SOLANO_1</Tag>
+		<English>Welcome [CT_NAME]. I have found yet another friend here. And with such a friend we will together form a team, like a soccer team. This will be a fighting team.</English>
+		<French>Welcome [CT_NAME]. I have found yet another friend here. And with such a friend we will together form a team, like a soccer team. This will be a fighting team.</French>
+		<German>Welcome [CT_NAME]. I have found yet another friend here. And with such a friend we will together form a team, like a soccer team. This will be a fighting team.</German>
+		<Italian>Welcome [CT_NAME]. I have found yet another friend here. And with such a friend we will together form a team, like a soccer team. This will be a fighting team.</Italian>
+		<Spanish>Welcome [CT_NAME]. I have found yet another friend here. And with such a friend we will together form a team, like a soccer team. This will be a fighting team.</Spanish>
+	</TEXT>
+</Civ4GameText>

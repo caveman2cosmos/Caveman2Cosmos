@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- ReModified by the StrategyOnly -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_QUEBEC_DESC</Tag>
+		<English>Quebec Empire</English>
+		<French>Quebec Empire</French>
+		<German>Quebec Empire</German>
+		<Italian>Quebec Empire</Italian>
+		<Spanish>Quebec Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_QUEBEC_SHORT_DESC</Tag>
+		<English>Quebec</English>
+		<French>
+			<Text>Quebec</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>
+			<Text>Quebec</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Quebec</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Quebec</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_QUEBEC_ADJECTIVE</Tag>
+		<English>Quebecois</English>
+		<French>
+			<Text>Quebecois</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>
+			<Text>Quebecois</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Quebecois</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Quebecois</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_QUEBEC_PEDIA</Tag>
+		<English>[TAB]Quebec (French: Québec) is a province in east-central Canada. It is the only Canadian 
+province that has a predominantly French-speaking population, and the only one to have French as its 
+sole provincial official language. Quebec is Canada's largest province by area and its second-largest 
+administrative division; only the territory of Nunavut is larger. It is bordered to the west by the province 
+of Ontario, James Bay, and Hudson Bay; to the north by Hudson Strait and Ungava Bay; to the east by the 
+Gulf of Saint Lawrence and the province of Newfoundland and Labrador; it is bordered on the south by 
+the province of New Brunswick and the U.S. states of Maine, New Hampshire, Vermont, and New York. It 
+also shares maritime borders with Nunavut, Prince Edward Island, and Nova Scotia. Quebec independence 
+debates have played a large role in the politics of the province. Parti Québécois governments held referendums 
+on sovereignty in 1980 and 1995; both were voted down by voters, the latter defeated by a very narrow 
+margin.[11] Analysis of regional results show that in both referendums, a majority of francophones voted 
+"Yes". In 2006, the House of Commons of Canada passed a symbolic motion recognizing the "Québécois as 
+a nation within a united Canada.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_GODBOUT</Tag>
+		<English>Adélard Godbout</English>
+		<French>
+			<Text>Adélard Godbout</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Adélard Godbout</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Adélard Godbout</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Adélard Godbout</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_GODBOUT_PEDIA</Tag>
+		<English>[H1]Adélard Godbout [\H1][NEWLINE][BOLD]Premier of Quebec[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1892 - 1956[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Joseph-Adélard Godbout was an agronomist and politician in Québec, Canada. He served as the 15th Premier of Quebec briefly in 1936, and again from 1939 to 1944. He was also leader of the Parti Libéral du Québec (PLQ).</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_GODBOUT_1</Tag>
+		<English>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. We offer you the friendship of the glorious nation of [OUR_CIV_SHORT]!</English>
+	</TEXT>
+</Civ4GameText>

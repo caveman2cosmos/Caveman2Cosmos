@@ -1,0 +1,673 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- re-Modified by strategyonly -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BENIN_DESC</Tag>
+		<English>Benin Empire</English>
+		<French>Benin Empire</French>
+		<German>Reich von Benin</German>
+		<Italian>Benin Empire</Italian>
+		<Spanish>Imperio de Benin</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BENIN_SHORT_DESC</Tag>
+		<English>Benin</English>
+		<French>Benin</French>
+		<German>Benin</German>
+		<Italian>Benin</Italian>
+		<Spanish>Benin</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BENIN_PEDIA</Tag>
+		<English>[TAB]The Benin Empire or Edo Empire was a large pre-colonial African state of modern Nigeria. 
+According to one traditional account, the original people and founders of the Benin Empire, the Bini, 
+were initially ruled by the Ogisos (Kings of the Sky). The city of Ibinu (later called Benin City) was 
+founded in 1180 AD. About 36 known Ogiso are accounted for as rulers of the empire. [PARAGRAPH:2]Oranmiyan, 
+the son of Ekaladerhan aka Oduduwa, agreed to go to Benin. He spent some years in Benin and came back 
+to Ife after his wife gave birth to a son named Eweka. Eweka I became the first Oba of Benin. In 1440, 
+Oba Ewuare (Ewuare the Great) came to power and turned the city-state into an empire. Around 1470, he 
+named the new state Edo. The Oba had become the paramount power within the region. Oba Ewuare, the first 
+Golden Age Oba, is credited with turning Benin City into a military fortress protected by moats and walls. 
+It was from this bastion that he launched his military campaigns and began the expansion of the kingdom 
+from the Edo-speaking heartlands. The lands of Idah, Owo, Akure all came under the central authority 
+of the Edo Empire.[PARAGRAPH:2]At its maximum extent the empire is claimed by the Edos to have extended 
+from Onitsha in the east, through the forested southwestern region of Nigeria and into the present-day 
+nation of Ghana. The Ga peoples of Ghana trace their ancestry to the ancient Kingdom of Benin. The state 
+developed an advanced artistic culture especially in its famous artifacts of bronze, iron and ivory. 
+These include bronze wall plaques and life-sized bronze heads of the Obas of Benin. The most common artifact 
+is based on Queen Idia, porpularly called the FESTAC mask. Benin grew increasingly rich during the 16th 
+and 17th centuries on the slave trade with Europe; slaves from enemy states of the interior were sold, 
+and carried to the Americas in Dutch and Portuguese ships. The Bight of Benin's shore soon came to be 
+known as the "Slave Coast."[PARAGRAPH:2]The city and empire of Benin declined after 1700, but revived 
+in the 19th century with the development of the trade in palm oil, enslaved captives, and textiles. To 
+preserve Benin's independence, bit by bit the Oba banned the export of goods from Benin, until the trade 
+was exclusively in palm oil.[PARAGRAPH:2]Benin resisted signing a protectorate treaty with Great Britain 
+through most of the 1880s and 1890s. However, after the slaying of eight British representatives in Benin 
+territory, a 'Punitive Expedition' was launched in 1897, in which a British force, under the command 
+of Admiral Sir Harry Rawson, conquered and burned the city, destroying much of the country’s treasured 
+art and dispersing nearly all that remained. The portrait figures, busts, and groups created in iron, 
+carved ivory, and especially in brass (conventionally called the "Benin Bronzes") made in Benin are now 
+displayed in museums around the world.</English>
+		<French>[TAB]The Benin Empire or Edo Empire was a large pre-colonial African state of modern Nigeria.[PARAGRAPH:2]According 
+to one traditional account, the original people and founders of the Benin Empire, the Bini, were initially 
+ruled by the Ogisos (Kings of the Sky). The city of Ibinu (later called Benin City) was founded in 1180 
+AD. About 36 known Ogiso are accounted for as rulers of the empire. [PARAGRAPH:2]Oranmiyan, the son of 
+Ekaladerhan aka Oduduwa, agreed to go to Benin. He spent some years in Benin and came back to Ife after 
+his wife gave birth to a son named Eweka. Eweka I became the first Oba of Benin. In 1440, Oba Ewuare 
+(Ewuare the Great) came to power and turned the city-state into an empire. Around 1470, he named the 
+new state Edo. The Oba had become the paramount power within the region. Oba Ewuare, the first Golden 
+Age Oba, is credited with turning Benin City into a military fortress protected by moats and walls. It 
+was from this bastion that he launched his military campaigns and began the expansion of the kingdom 
+from the Edo-speaking heartlands. The lands of Idah, Owo, Akure all came under the central authority 
+of the Edo Empire.[PARAGRAPH:2]At its maximum extent the empire is claimed by the Edos to have extended 
+from Onitsha in the east, through the forested southwestern region of Nigeria and into the present-day 
+nation of Ghana. The Ga peoples of Ghana trace their ancestry to the ancient Kingdom of Benin. The state 
+developed an advanced artistic culture especially in its famous artifacts of bronze, iron and ivory. 
+These include bronze wall plaques and life-sized bronze heads of the Obas of Benin. The most common artifact 
+is based on Queen Idia, porpularly called the FESTAC mask. Benin grew increasingly rich during the 16th 
+and 17th centuries on the slave trade with Europe; slaves from enemy states of the interior were sold, 
+and carried to the Americas in Dutch and Portuguese ships. The Bight of Benin's shore soon came to be 
+known as the "Slave Coast."[PARAGRAPH:2]The city and empire of Benin declined after 1700, but revived 
+in the 19th century with the development of the trade in palm oil, enslaved captives, and textiles. To 
+preserve Benin's independence, bit by bit the Oba banned the export of goods from Benin, until the trade 
+was exclusively in palm oil.[PARAGRAPH:2]Benin resisted signing a protectorate treaty with Great Britain 
+through most of the 1880s and 1890s. However, after the slaying of eight British representatives in Benin 
+territory, a 'Punitive Expedition' was launched in 1897, in which a British force, under the command 
+of Admiral Sir Harry Rawson, conquered and burned the city, destroying much of the country’s treasured 
+art and dispersing nearly all that remained. The portrait figures, busts, and groups created in iron, 
+carved ivory, and especially in brass (conventionally called the "Benin Bronzes") made in Benin are now 
+displayed in museums around the world.</French>
+		<German>[TAB]The Benin Empire or Edo Empire was a large pre-colonial African state of modern Nigeria.[PARAGRAPH:2]According 
+to one traditional account, the original people and founders of the Benin Empire, the Bini, were initially 
+ruled by the Ogisos (Kings of the Sky). The city of Ibinu (later called Benin City) was founded in 1180 
+AD. About 36 known Ogiso are accounted for as rulers of the empire. [PARAGRAPH:2]Oranmiyan, the son of 
+Ekaladerhan aka Oduduwa, agreed to go to Benin. He spent some years in Benin and came back to Ife after 
+his wife gave birth to a son named Eweka. Eweka I became the first Oba of Benin. In 1440, Oba Ewuare 
+(Ewuare the Great) came to power and turned the city-state into an empire. Around 1470, he named the 
+new state Edo. The Oba had become the paramount power within the region. Oba Ewuare, the first Golden 
+Age Oba, is credited with turning Benin City into a military fortress protected by moats and walls. It 
+was from this bastion that he launched his military campaigns and began the expansion of the kingdom 
+from the Edo-speaking heartlands. The lands of Idah, Owo, Akure all came under the central authority 
+of the Edo Empire.[PARAGRAPH:2]At its maximum extent the empire is claimed by the Edos to have extended 
+from Onitsha in the east, through the forested southwestern region of Nigeria and into the present-day 
+nation of Ghana. The Ga peoples of Ghana trace their ancestry to the ancient Kingdom of Benin. The state 
+developed an advanced artistic culture especially in its famous artifacts of bronze, iron and ivory. 
+These include bronze wall plaques and life-sized bronze heads of the Obas of Benin. The most common artifact 
+is based on Queen Idia, porpularly called the FESTAC mask. Benin grew increasingly rich during the 16th 
+and 17th centuries on the slave trade with Europe; slaves from enemy states of the interior were sold, 
+and carried to the Americas in Dutch and Portuguese ships. The Bight of Benin's shore soon came to be 
+known as the "Slave Coast."[PARAGRAPH:2]The city and empire of Benin declined after 1700, but revived 
+in the 19th century with the development of the trade in palm oil, enslaved captives, and textiles. To 
+preserve Benin's independence, bit by bit the Oba banned the export of goods from Benin, until the trade 
+was exclusively in palm oil.[PARAGRAPH:2]Benin resisted signing a protectorate treaty with Great Britain 
+through most of the 1880s and 1890s. However, after the slaying of eight British representatives in Benin 
+territory, a 'Punitive Expedition' was launched in 1897, in which a British force, under the command 
+of Admiral Sir Harry Rawson, conquered and burned the city, destroying much of the country’s treasured 
+art and dispersing nearly all that remained. The portrait figures, busts, and groups created in iron, 
+carved ivory, and especially in brass (conventionally called the "Benin Bronzes") made in Benin are now 
+displayed in museums around the world.</German>
+		<Italian>[TAB]The Benin Empire or Edo Empire was a large pre-colonial African state of modern Nigeria.[PARAGRAPH:2]According 
+to one traditional account, the original people and founders of the Benin Empire, the Bini, were initially 
+ruled by the Ogisos (Kings of the Sky). The city of Ibinu (later called Benin City) was founded in 1180 
+AD. About 36 known Ogiso are accounted for as rulers of the empire. [PARAGRAPH:2]Oranmiyan, the son of 
+Ekaladerhan aka Oduduwa, agreed to go to Benin. He spent some years in Benin and came back to Ife after 
+his wife gave birth to a son named Eweka. Eweka I became the first Oba of Benin. In 1440, Oba Ewuare 
+(Ewuare the Great) came to power and turned the city-state into an empire. Around 1470, he named the 
+new state Edo. The Oba had become the paramount power within the region. Oba Ewuare, the first Golden 
+Age Oba, is credited with turning Benin City into a military fortress protected by moats and walls. It 
+was from this bastion that he launched his military campaigns and began the expansion of the kingdom 
+from the Edo-speaking heartlands. The lands of Idah, Owo, Akure all came under the central authority 
+of the Edo Empire.[PARAGRAPH:2]At its maximum extent the empire is claimed by the Edos to have extended 
+from Onitsha in the east, through the forested southwestern region of Nigeria and into the present-day 
+nation of Ghana. The Ga peoples of Ghana trace their ancestry to the ancient Kingdom of Benin. The state 
+developed an advanced artistic culture especially in its famous artifacts of bronze, iron and ivory. 
+These include bronze wall plaques and life-sized bronze heads of the Obas of Benin. The most common artifact 
+is based on Queen Idia, porpularly called the FESTAC mask. Benin grew increasingly rich during the 16th 
+and 17th centuries on the slave trade with Europe; slaves from enemy states of the interior were sold, 
+and carried to the Americas in Dutch and Portuguese ships. The Bight of Benin's shore soon came to be 
+known as the "Slave Coast."[PARAGRAPH:2]The city and empire of Benin declined after 1700, but revived 
+in the 19th century with the development of the trade in palm oil, enslaved captives, and textiles. To 
+preserve Benin's independence, bit by bit the Oba banned the export of goods from Benin, until the trade 
+was exclusively in palm oil.[PARAGRAPH:2]Benin resisted signing a protectorate treaty with Great Britain 
+through most of the 1880s and 1890s. However, after the slaying of eight British representatives in Benin 
+territory, a 'Punitive Expedition' was launched in 1897, in which a British force, under the command 
+of Admiral Sir Harry Rawson, conquered and burned the city, destroying much of the country’s treasured 
+art and dispersing nearly all that remained. The portrait figures, busts, and groups created in iron, 
+carved ivory, and especially in brass (conventionally called the "Benin Bronzes") made in Benin are now 
+displayed in museums around the world.</Italian>
+		<Spanish>El Reino de Benín o Reino Edo fue un antiguo Estado africano, famoso por su arte estatuario en bronce, que tuvo su centro en la ciudad homónima (Benin City) situada al sudoeste de la actual Nigeria. País rico por el comercio de marfil, pimienta, aceite de palma y esclavos, fue sometido por los británicos en 1897.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BENIN_ADJECTIVE</Tag>
+		<English>Beni</English>
+		<French>Beni</French>
+		<German>Beni</German>
+		<Italian>Beni</Italian>
+		<Spanish>Benines</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BENIN_CITY</Tag>
+		<English>Benin City</English>
+		<French>
+			<Text>Benin City</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Benin City</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Benin City</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Benin City</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_UGHOTON</Tag>
+		<English>Ughoton</English>
+		<French>
+			<Text>Ughoton</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ughoton</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ughoton</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ughoton</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_USELU</Tag>
+		<English>Uselu</English>
+		<French>
+			<Text>Uselu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Uselu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Uselu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Uselu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_IFE</Tag>
+		<English>Ife</English>
+		<French>
+			<Text>Ife</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ife</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ife</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ife</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_WARRI</Tag>
+		<English>Warri</English>
+		<French>
+			<Text>Warri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Warri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Warri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Warri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_EKO</Tag>
+		<English>Eko</English>
+		<French>
+			<Text>Eko</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Eko</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Eko</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Eko</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_USE</Tag>
+		<English>Use</English>
+		<French>
+			<Text>Use</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Use</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Use</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Use</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_EGO</Tag>
+		<English>Ego</English>
+		<French>
+			<Text>Ego</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ego</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ego</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ego</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ONITSHA</Tag>
+		<English>Onitsha</English>
+		<French>
+			<Text>Onitsha</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Onitsha</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Onitsha</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Onitsha</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_UDO</Tag>
+		<English>Udo</English>
+		<French>
+			<Text>Udo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Udo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Udo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Udo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_OWO</Tag>
+		<English>Owo</English>
+		<French>
+			<Text>Owo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Owo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Owo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Owo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_AKURE</Tag>
+		<English>Akure</English>
+		<French>
+			<Text>Akure</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Akure</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Akure</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Akure</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_IHIMWIRIN</Tag>
+		<English>Ihimwirin</English>
+		<French>
+			<Text>Ihimwirin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ihimwirin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ihimwirin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ihimwirin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_EHOR</Tag>
+		<English>Ehor</English>
+		<French>
+			<Text>Ehor</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ehor</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ehor</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ehor</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_EGOR</Tag>
+		<English>Egor</English>
+		<French>
+			<Text>Egor</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Egor</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Egor</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Egor</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_OKA</Tag>
+		<English>Oka</English>
+		<French>
+			<Text>Oka</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Oka</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Oka</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Oka</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ULA_UBIE</Tag>
+		<English>Ula-Ubie</English>
+		<French>
+			<Text>Ula-Ubie</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ula-Ubie</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ula-Ubie</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ula-Ubie</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_UHE</Tag>
+		<English>Uhe</English>
+		<French>
+			<Text>Uhe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Uhe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Uhe</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Uhe</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_AUCHI</Tag>
+		<English>Auchi</English>
+		<French>
+			<Text>Auchi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Auchi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Auchi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Auchi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_EWUARE</Tag>
+		<English>Ewuare</English>
+		<French>Ewuare</French>
+		<German>Ewuare</German>
+		<Italian>Ewuare</Italian>
+		<Spanish>Ewuare</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_EWUARE_PEDIA</Tag>
+		<English>[H1]Oba Ewuare[\H1][NEWLINE][BOLD]King of the Benin Empire[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]c.1420 
+- 1480 2003[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Oba Ewuare was the greatest warrior 
+legend and the most outstanding king in the history of Benin Empire. The title Ewuare (Oworuare), meaning 
+it is cool or the trouble has ceased, and as a result the war is over. The title symbolizes an epoch 
+of reconciliation, reconstruction and the return of peace among the warring factions in Benin between 
+1435-1440 AD.[PARAGRAPH:1]Oba Ewuare ruled Benin kingdom between 1440-1473 AD. His reign marked the beginning 
+of recovery and reform which opened up the pathway to the power and advancement of Benin Kingdom and 
+the emergence of Benin Empire in the fifteen century. Ewuare’s political intelligence, unmatched by any 
+Oba in Benin history, transformed the character of the state along its quest for imperial expansion until 
+the British invasion and conquest in February 1897.</English>
+		<French>[H1]Oba Ewuare[\H1][NEWLINE][BOLD]King of the Benin Empire[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]c.1420 
+- 1480 2003[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Oba Ewuare was the greatest warrior 
+legend and the most outstanding king in the history of Benin Empire. The title Ewuare (Oworuare), meaning 
+it is cool or the trouble has ceased, and as a result the war is over. The title symbolizes an epoch 
+of reconciliation, reconstruction and the return of peace among the warring factions in Benin between 
+1435-1440 AD.[PARAGRAPH:1]Oba Ewuare ruled Benin kingdom between 1440-1473 AD. His reign marked the beginning 
+of recovery and reform which opened up the pathway to the power and advancement of Benin Kingdom and 
+the emergence of Benin Empire in the fifteen century. Ewuare’s political intelligence, unmatched by any 
+Oba in Benin history, transformed the character of the state along its quest for imperial expansion until 
+the British invasion and conquest in February 1897.</French>
+		<German>[H1]Oba Ewuare[\H1][NEWLINE][BOLD]King of the Benin Empire[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]c.1420 
+- 1480 2003[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Oba Ewuare was the greatest warrior 
+legend and the most outstanding king in the history of Benin Empire. The title Ewuare (Oworuare), meaning 
+it is cool or the trouble has ceased, and as a result the war is over. The title symbolizes an epoch 
+of reconciliation, reconstruction and the return of peace among the warring factions in Benin between 
+1435-1440 AD.[PARAGRAPH:1]Oba Ewuare ruled Benin kingdom between 1440-1473 AD. His reign marked the beginning 
+of recovery and reform which opened up the pathway to the power and advancement of Benin Kingdom and 
+the emergence of Benin Empire in the fifteen century. Ewuare’s political intelligence, unmatched by any 
+Oba in Benin history, transformed the character of the state along its quest for imperial expansion until 
+the British invasion and conquest in February 1897.</German>
+		<Italian>[H1]Oba Ewuare[\H1][NEWLINE][BOLD]King of the Benin Empire[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]c.1420 
+- 1480 2003[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Oba Ewuare was the greatest warrior 
+legend and the most outstanding king in the history of Benin Empire. The title Ewuare (Oworuare), meaning 
+it is cool or the trouble has ceased, and as a result the war is over. The title symbolizes an epoch 
+of reconciliation, reconstruction and the return of peace among the warring factions in Benin between 
+1435-1440 AD.[PARAGRAPH:1]Oba Ewuare ruled Benin kingdom between 1440-1473 AD. His reign marked the beginning 
+of recovery and reform which opened up the pathway to the power and advancement of Benin Kingdom and 
+the emergence of Benin Empire in the fifteen century. Ewuare’s political intelligence, unmatched by any 
+Oba in Benin history, transformed the character of the state along its quest for imperial expansion until 
+the British invasion and conquest in February 1897.</Italian>
+		<Spanish>[H1]Oba Ewuare[\H1][NEWLINE][BOLD], rey del imperio de Benin[\BOLD][NEWLINE][BOLD]Vivio: [\BOLD]c.1420 
+- 1480 2003[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Oba Ewuare el mayor heroe guerrero 
+y el rey mas prospero en la historia del Imperio de Benin. El titulo Ewuare (Oworuare), significa el 
+fin de los problemas, como resultado del fin de la guerra. Dicho titulo simboliza una epoca de reconcialiacion, 
+recostruccion y el regreso a la paz, despues de las guerras facticas en el pais entre 1435/1440. [PARAGRAPH:1]Oba 
+Ewuare goberno Benin entre 1440/1473, y su reinado fue el comienzo de la recuperacion y la reforma que 
+abrio la puerta al surgimiento del Gran Imperio de Benin del siglo XV.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_EWUARE_1</Tag>
+		<English>I am [OUR_NAME] of the great [OUR_EMPIRE]. We will wary of you like a rotting tooth, and chewing slowly in the meantime.</English>
+		<French>I am [OUR_NAME] of the great [OUR_EMPIRE]. We will wary of you like a rotting tooth, and chewing slowly in the meantime.</French>
+		<German>I am [OUR_NAME] of the great [OUR_EMPIRE]. We will wary of you like a rotting tooth, and chewing slowly in the meantime.</German>
+		<Italian>I am [OUR_NAME] of the great [OUR_EMPIRE]. We will wary of you like a rotting tooth, and chewing slowly in the meantime.</Italian>
+		<Spanish>Soy [OUR_NAME] del gran [OUR_EMPIRE]. Si no estas entre nuestros amigos te daremos mas problemas que un diente podrido, y te haremos masticar lentamente.</Spanish>
+	</TEXT>
+</Civ4GameText>

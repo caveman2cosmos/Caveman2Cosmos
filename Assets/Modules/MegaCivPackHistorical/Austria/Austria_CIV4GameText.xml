@@ -1,0 +1,1523 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- re-Modified by strategyonly -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_AUSTRIA_DESC</Tag>
+		<English>Austrian Empire</English>
+		<French>Austrian Empire</French>
+		<German>Austrian Empire</German>
+		<Italian>Austrian Empire</Italian>
+		<Spanish>Imperio Austriaco</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_AUSTRIA_SHORT_DESC</Tag>
+		<English>Austria</English>
+		<French>Austria</French>
+		<German>Austria</German>
+		<Italian>Austria</Italian>
+		<Spanish>Austria</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_AUSTRIA_PEDIA</Tag>
+		<English>[TAB]The territory of Austria originally known as the Celtic kingdom of Noricum, was a long 
+time ally of Rome. It was occupied rather than conquered by the Romans during the reign of Augustus and 
+made the province Noricum in 16 BC. Later it was conquered by Huns, Rugii, Lombards, Ostrogoths, Bavarii, 
+Avars (until c. 800), and Franks (in that order). Finally, after 48 years of Hungarian rule (907 to 955), 
+the core territory of Austria was awarded to Leopold of Babenberg in 976. Being part of the Holy Roman 
+Empire the Babenbergs ruled and expanded Austria from the 10th century to the 13th century.[PARAGRAPH:2]After 
+Duke Frederick II died in 1246 and left no successor, the German King Rudolf I of Habsburg gave the lands 
+to his sons marking the beginning of the line of the Habsburgs, who continued to govern Austria until 
+the 20th century.[PARAGRAPH:2]With the short exception of Charles VII Albert of Bavaria, Austrian Habsburgs 
+held the position of German Emperor beginning in 1438 with Albert II of Habsburg until the end of the 
+Holy Roman Empire. During the 14th and 15th century Austria continued to expand its territory until it 
+reached the position of a European superpower at the end of the 15th century until the end of the Habsburg 
+monarchy in 1918.[PARAGRAPH:2]Just two years before the abolition of the Holy Roman Empire in 1806, in 
+1804 the Empire of Austria was founded, which was transformed in 1867 into the double-monarchy Austria-Hungary. 
+The empire was split into several independent states in 1918, after the defeat of the Central Powers 
+in World War I, with most of the German-speaking parts becoming a republic. Between 1918 and 1919 it 
+was officially known as the Republic of German Austria. After the Entente powers forbade German Austria 
+to unite with Germany, they also forbade the name, and then it was changed to simply Republic of Austria. 
+The democratic republic lasted until 1933 when the chancellor Engelbert Dollfuss established an autocratic 
+regime oriented towards Italian fascism.[PARAGRAPH:2]Austria became part of Germany in 1938 through the 
+Anschluss and remained under Nazi rule until the end of World War II. After the defeat of the Axis Powers, 
+the Allies occupied Austria until 1955, when the country became a fully independent republic under the 
+condition that it would remain neutral. Austria also became a member of the UN in the same year. After 
+the collapse of communism in Eastern Europe, Austria became increasingly involved in European affairs, 
+and in 1995, Austria joined the European Union, and the Euro monetary system in 1999.</English>
+		<French>[TAB]The territory of Austria originally known as the Celtic kingdom of Noricum, was a long 
+time ally of Rome. It was occupied rather than conquered by the Romans during the reign of Augustus and 
+made the province Noricum in 16 BC. Later it was conquered by Huns, Rugii, Lombards, Ostrogoths, Bavarii, 
+Avars (until c. 800), and Franks (in that order). Finally, after 48 years of Hungarian rule (907 to 955), 
+the core territory of Austria was awarded to Leopold of Babenberg in 976. Being part of the Holy Roman 
+Empire the Babenbergs ruled and expanded Austria from the 10th century to the 13th century.[PARAGRAPH:2]After 
+Duke Frederick II died in 1246 and left no successor, the German King Rudolf I of Habsburg gave the lands 
+to his sons marking the beginning of the line of the Habsburgs, who continued to govern Austria until 
+the 20th century.[PARAGRAPH:2]With the short exception of Charles VII Albert of Bavaria, Austrian Habsburgs 
+held the position of German Emperor beginning in 1438 with Albert II of Habsburg until the end of the 
+Holy Roman Empire. During the 14th and 15th century Austria continued to expand its territory until it 
+reached the position of a European superpower at the end of the 15th century until the end of the Habsburg 
+monarchy in 1918.[PARAGRAPH:2]Just two years before the abolition of the Holy Roman Empire in 1806, in 
+1804 the Empire of Austria was founded, which was transformed in 1867 into the double-monarchy Austria-Hungary. 
+The empire was split into several independent states in 1918, after the defeat of the Central Powers 
+in World War I, with most of the German-speaking parts becoming a republic. Between 1918 and 1919 it 
+was officially known as the Republic of German Austria. After the Entente powers forbade German Austria 
+to unite with Germany, they also forbade the name, and then it was changed to simply Republic of Austria. 
+The democratic republic lasted until 1933 when the chancellor Engelbert Dollfuss established an autocratic 
+regime oriented towards Italian fascism.[PARAGRAPH:2]Austria became part of Germany in 1938 through the 
+Anschluss and remained under Nazi rule until the end of World War II. After the defeat of the Axis Powers, 
+the Allies occupied Austria until 1955, when the country became a fully independent republic under the 
+condition that it would remain neutral. Austria also became a member of the UN in the same year. After 
+the collapse of communism in Eastern Europe, Austria became increasingly involved in European affairs, 
+and in 1995, Austria joined the European Union, and the Euro monetary system in 1999.</French>
+		<German>[TAB]The territory of Austria originally known as the Celtic kingdom of Noricum, was a long 
+time ally of Rome. It was occupied rather than conquered by the Romans during the reign of Augustus and 
+made the province Noricum in 16 BC. Later it was conquered by Huns, Rugii, Lombards, Ostrogoths, Bavarii, 
+Avars (until c. 800), and Franks (in that order). Finally, after 48 years of Hungarian rule (907 to 955), 
+the core territory of Austria was awarded to Leopold of Babenberg in 976. Being part of the Holy Roman 
+Empire the Babenbergs ruled and expanded Austria from the 10th century to the 13th century.[PARAGRAPH:2]After 
+Duke Frederick II died in 1246 and left no successor, the German King Rudolf I of Habsburg gave the lands 
+to his sons marking the beginning of the line of the Habsburgs, who continued to govern Austria until 
+the 20th century.[PARAGRAPH:2]With the short exception of Charles VII Albert of Bavaria, Austrian Habsburgs 
+held the position of German Emperor beginning in 1438 with Albert II of Habsburg until the end of the 
+Holy Roman Empire. During the 14th and 15th century Austria continued to expand its territory until it 
+reached the position of a European superpower at the end of the 15th century until the end of the Habsburg 
+monarchy in 1918.[PARAGRAPH:2]Just two years before the abolition of the Holy Roman Empire in 1806, in 
+1804 the Empire of Austria was founded, which was transformed in 1867 into the double-monarchy Austria-Hungary. 
+The empire was split into several independent states in 1918, after the defeat of the Central Powers 
+in World War I, with most of the German-speaking parts becoming a republic. Between 1918 and 1919 it 
+was officially known as the Republic of German Austria. After the Entente powers forbade German Austria 
+to unite with Germany, they also forbade the name, and then it was changed to simply Republic of Austria. 
+The democratic republic lasted until 1933 when the chancellor Engelbert Dollfuss established an autocratic 
+regime oriented towards Italian fascism.[PARAGRAPH:2]Austria became part of Germany in 1938 through the 
+Anschluss and remained under Nazi rule until the end of World War II. After the defeat of the Axis Powers, 
+the Allies occupied Austria until 1955, when the country became a fully independent republic under the 
+condition that it would remain neutral. Austria also became a member of the UN in the same year. After 
+the collapse of communism in Eastern Europe, Austria became increasingly involved in European affairs, 
+and in 1995, Austria joined the European Union, and the Euro monetary system in 1999.</German>
+		<Italian>[TAB]The territory of Austria originally known as the Celtic kingdom of Noricum, was a long 
+time ally of Rome. It was occupied rather than conquered by the Romans during the reign of Augustus and 
+made the province Noricum in 16 BC. Later it was conquered by Huns, Rugii, Lombards, Ostrogoths, Bavarii, 
+Avars (until c. 800), and Franks (in that order). Finally, after 48 years of Hungarian rule (907 to 955), 
+the core territory of Austria was awarded to Leopold of Babenberg in 976. Being part of the Holy Roman 
+Empire the Babenbergs ruled and expanded Austria from the 10th century to the 13th century.[PARAGRAPH:2]After 
+Duke Frederick II died in 1246 and left no successor, the German King Rudolf I of Habsburg gave the lands 
+to his sons marking the beginning of the line of the Habsburgs, who continued to govern Austria until 
+the 20th century.[PARAGRAPH:2]With the short exception of Charles VII Albert of Bavaria, Austrian Habsburgs 
+held the position of German Emperor beginning in 1438 with Albert II of Habsburg until the end of the 
+Holy Roman Empire. During the 14th and 15th century Austria continued to expand its territory until it 
+reached the position of a European superpower at the end of the 15th century until the end of the Habsburg 
+monarchy in 1918.[PARAGRAPH:2]Just two years before the abolition of the Holy Roman Empire in 1806, in 
+1804 the Empire of Austria was founded, which was transformed in 1867 into the double-monarchy Austria-Hungary. 
+The empire was split into several independent states in 1918, after the defeat of the Central Powers 
+in World War I, with most of the German-speaking parts becoming a republic. Between 1918 and 1919 it 
+was officially known as the Republic of German Austria. After the Entente powers forbade German Austria 
+to unite with Germany, they also forbade the name, and then it was changed to simply Republic of Austria. 
+The democratic republic lasted until 1933 when the chancellor Engelbert Dollfuss established an autocratic 
+regime oriented towards Italian fascism.[PARAGRAPH:2]Austria became part of Germany in 1938 through the 
+Anschluss and remained under Nazi rule until the end of World War II. After the defeat of the Axis Powers, 
+the Allies occupied Austria until 1955, when the country became a fully independent republic under the 
+condition that it would remain neutral. Austria also became a member of the UN in the same year. After 
+the collapse of communism in Eastern Europe, Austria became increasingly involved in European affairs, 
+and in 1995, Austria joined the European Union, and the Euro monetary system in 1999.</Italian>
+		<Spanish>El Imperio austríaco (en alemán: Kaisertum Österreich) fue fundado en 1804 como reacción a la creación del Primer Imperio Francés bajo Napoleón I. El primer emperador de Austria fue Francisco I, también ostentando el título de emperador Sacro-Romano con el nombre de Francisco II. Más tarde abdicaría de éste cuando el imperio fue abolido en la reorganización napoleónica de Alemania en 1806. Para mantener su título imperial elevó a Austria de la categoría de archiducado a la de imperio.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_AUSTRIA_ADJECTIVE</Tag>
+		<English>Austrian</English>
+		<French>Austrian</French>
+		<German>Austrian</German>
+		<Italian>Austrian</Italian>
+		<Spanish>Austriaco</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_WIEN</Tag>
+		<English>Wien</English>
+		<French>
+			<Text>Wien</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Wien</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Wien</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Wien</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GRAZ</Tag>
+		<English>Graz</English>
+		<French>
+			<Text>Graz</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Graz</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Graz</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Graz</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LINZ</Tag>
+		<English>Linz</English>
+		<French>
+			<Text>Linz</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Linz</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Linz</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Linz</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SALZBURG</Tag>
+		<English>Salzburg</English>
+		<French>
+			<Text>Salzburg</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Salzburg</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Salzburg</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Salzburg</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_INNSBRUCK</Tag>
+		<English>Innsbruck</English>
+		<French>
+			<Text>Innsbruck</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Innsbruck</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Innsbruck</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Innsbruck</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KLAGENFURT</Tag>
+		<English>Klagenfurt</English>
+		<French>
+			<Text>Klagenfurt</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Klagenfurt</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Klagenfurt</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Klagenfurt</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VILLACH</Tag>
+		<English>Villach</English>
+		<French>
+			<Text>Villach</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Villach</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Linz7</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Villach</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_WELS</Tag>
+		<English>Wels</English>
+		<French>
+			<Text>Wels</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Wels</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Wels</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Wels</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SANKTPOLTEN</Tag>
+		<English>Sanktpolten</English>
+		<French>
+			<Text>Sanktpolten</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sanktpolten</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sanktpolten</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sanktpolten</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DORNBIRN</Tag>
+		<English>Dornbirn</English>
+		<French>
+			<Text>Dornbirn</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Dornbirn</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Dornbirn</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Dornbirn</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_STEYR</Tag>
+		<English>Steyr</English>
+		<French>
+			<Text>Steyr</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Steyr</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Steyr</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Steyr</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_WIENERNEUSTADT</Tag>
+		<English>Wienerneustadt</English>
+		<French>
+			<Text>Wienerneustadt</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Wienerneustadt</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Wienerneustadt</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Wienerneustadt</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_FELDKIRCH</Tag>
+		<English>Feldkirch</English>
+		<French>
+			<Text>Feldkirch</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Feldkirch</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Feldkirch</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Feldkirch</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BREGENZ</Tag>
+		<English>Bregenz</English>
+		<French>
+			<Text>Bregenz</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Bregenz</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Bregenz</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Bregenz</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KLOSTERNEUBURG</Tag>
+		<English>Klosterneuburg</English>
+		<French>
+			<Text>Klosterneuburg</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Klosterneuburg</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Klosterneuburg</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Klosterneuburg</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_WOLFSBERG</Tag>
+		<English>Wolfsberg</English>
+		<French>
+			<Text>Wolfsberg</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Wolfsberg</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Wolfsberg</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Wolfsberg</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LEOBEN</Tag>
+		<English>Leoben</English>
+		<French>
+			<Text>Leoben</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Leoben</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Leoben</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Leoben</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BADEN</Tag>
+		<English>Baden</English>
+		<French>
+			<Text>Baden</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Baden</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Baden</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Baden</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TRAUN</Tag>
+		<English>Traun</English>
+		<French>
+			<Text>Traun</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Traun</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Traun</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Traun</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ANDERDONAU</Tag>
+		<English>Anderdonau</English>
+		<French>
+			<Text>Anderdonau</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Anderdonau</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Anderdonau</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Anderdonau</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KREMS</Tag>
+		<English>Krems</English>
+		<French>
+			<Text>Krems</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Krems</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Krems</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Krems</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LEONDING</Tag>
+		<English>Leonding</English>
+		<French>
+			<Text>Leonding</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Leonding</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Leonding</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Leonding</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_AMSTETTEN</Tag>
+		<English>Amstetten</English>
+		<French>
+			<Text>Amstetten</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Amstetten</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Amstetten</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Amstetten</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KAPFENBERG</Tag>
+		<English>Kapfenberg</English>
+		<French>
+			<Text>Kapfenberg</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kapfenberg</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kapfenberg</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kapfenberg</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_FRANZ</Tag>
+		<English>Franz Josef</English>
+		<French>Franz Josef</French>
+		<German>Franz Josef</German>
+		<Italian>Franz Josef</Italian>
+		<Spanish>Francisco Jose</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_FRANZ_PEDIA</Tag>
+		<English>[H1]Franz Josef[\H1][NEWLINE][BOLD]Emperor of Austria[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]1830 
+- 1916[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Francis Joseph I (in German often abbreviated 
+Franz Joseph or Franz Josef, and in English also Francis Joseph) of the Habsburg Dynasty was Emperor 
+of Austria and King of Bohemia from 1848 until 1916, and Apostolic King of Hungary from 1867 until 1916. 
+He was born in Vienna, Austria. His 68 years on the throne makes him one of the longest-serving monarchs 
+in European history, and while his heir Karl took over for two years upon his death in 1916, Franz Joseph 
+is clearly the last of the great Habsburg monarchs.[PARAGRAPH:1]Archduke Franz was the oldest son of 
+Archduke Franz Karl, who was brother and heir of Austrian Emperor Ferdinand I, and his wife Sophie, Archduchess 
+of Austria and Princess of Bavaria). Franz was also the older brother of Emperor Maximilian I of Mexico. 
+Because his father renounced his claim to the throne, Franz was brought up by his mother as a future 
+Emperor with emphasis on devoutness, responsibility and diligence. His youth was marked with seclusion 
+and he never got approximated even with his brothers and sisters. At the age of 13 he started a career 
+as a colonel in Austrian army. Since then his fashion was dictated by army style and he wore the uniform 
+for most of his life.[PARAGRAPH:1]He became Austrian Emperor as Franz Joseph I when Ferdinand abdicated 
+near the end of the Revolution of 1848, on December 2, 1848. His imperial career was at first connected 
+with the personality of Felix Schwarzenberg and was targeted to restore absolutism and regain the powerful 
+position in foreign affairs. He abolished the Constitution of 1849 and became a sovereign monarch in 
+1852. However, the 1850s witnessed several failures of Austrian external policy (Crimean War and breaking-up 
+with Russia, Austro-Sardinian War of 1859 against armies of the House of Savoy and Napoleon III).[PARAGRAPH:1]The 
+set-backs continued in the 1860s with Austro-Prussian War of 1866. It resulted in Austrian-Hungarian 
+Dualism in 1867.[PARAGRAPH:1]In 1854 Franz Joseph married Duchess Elisabeth in Bavaria (also Princess 
+of Bavaria through her mother's side of the family), who became Elisabeth of Austria ("Sisi" or "Sissi"). 
+Their only son, Crown Prince Rudolf, committed suicide in 1889 in the (in)famous Mayerling episode with 
+his young mistress Baroness Mary Vetsera. Rudolf's killing of the Baroness Vetsera was an extremely grim 
+chapter in the long line of outbreaks of mental instability in the Habsburg Dynasty caused by their long 
+history of inbreeding. The younger brother to Emperor Franz Joseph, the Archduke Viktor Ludwig, spent 
+most of his life exiled on the island of Capri, following a series of scandals involving dressing up 
+in women's clothes and molesting his military aides.[PARAGRAPH:1]Notwithstanding the scandals, there 
+were times when Franz Joseph took firm moral stands. When Pope Pius IX detained the six-year-old Jewish 
+boy Edgardo Mortara on account of the claim that a housekeeper had secretly baptized him, Emperor Franz 
+Joseph sent the Pope a plea to return the child to his parents. The Pope refused his request.[PARAGRAPH:1]When 
+World War I erupted, Austria-Hungary fought in alliance with Germany, but the Austro-Hungarian Army proved 
+ill-prepared and ill-equipped. Franz Joseph's conservatism was partly to blame: when presented with the 
+suggestion that the army should acquire a newly-developed mechanical weapon, namely tanks, he famously 
+retorted: "Absolutely not. The horses will be startled!".[PARAGRAPH:1]Their three other children were 
+Archduchess Sophie of Austria (1855 - 1858), Archduchess Gisela of Austria (1856 - 1932) and Archduchess 
+Marie-Valerie of Austria (1868 - 1924).[PARAGRAPH:1]The archipelago Franz Josef Land in the Russian high 
+arctic was named in his honor in 1873. Franz Josef Glacier in New Zealand's South Island also bears his name.</English>
+		<French>[H1]Franz Josef[\H1][NEWLINE][BOLD]Emperor of Austria[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]1830 
+- 1916[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Francis Joseph I (in German often abbreviated 
+Franz Joseph or Franz Josef, and in English also Francis Joseph) of the Habsburg Dynasty was Emperor 
+of Austria and King of Bohemia from 1848 until 1916, and Apostolic King of Hungary from 1867 until 1916. 
+He was born in Vienna, Austria. His 68 years on the throne makes him one of the longest-serving monarchs 
+in European history, and while his heir Karl took over for two years upon his death in 1916, Franz Joseph 
+is clearly the last of the great Habsburg monarchs.[PARAGRAPH:1]Archduke Franz was the oldest son of 
+Archduke Franz Karl, who was brother and heir of Austrian Emperor Ferdinand I, and his wife Sophie, Archduchess 
+of Austria and Princess of Bavaria). Franz was also the older brother of Emperor Maximilian I of Mexico. 
+Because his father renounced his claim to the throne, Franz was brought up by his mother as a future 
+Emperor with emphasis on devoutness, responsibility and diligence. His youth was marked with seclusion 
+and he never got approximated even with his brothers and sisters. At the age of 13 he started a career 
+as a colonel in Austrian army. Since then his fashion was dictated by army style and he wore the uniform 
+for most of his life.[PARAGRAPH:1]He became Austrian Emperor as Franz Joseph I when Ferdinand abdicated 
+near the end of the Revolution of 1848, on December 2, 1848. His imperial career was at first connected 
+with the personality of Felix Schwarzenberg and was targeted to restore absolutism and regain the powerful 
+position in foreign affairs. He abolished the Constitution of 1849 and became a sovereign monarch in 
+1852. However, the 1850s witnessed several failures of Austrian external policy (Crimean War and breaking-up 
+with Russia, Austro-Sardinian War of 1859 against armies of the House of Savoy and Napoleon III).[PARAGRAPH:1]The 
+set-backs continued in the 1860s with Austro-Prussian War of 1866. It resulted in Austrian-Hungarian 
+Dualism in 1867.[PARAGRAPH:1]In 1854 Franz Joseph married Duchess Elisabeth in Bavaria (also Princess 
+of Bavaria through her mother's side of the family), who became Elisabeth of Austria ("Sisi" or "Sissi"). 
+Their only son, Crown Prince Rudolf, committed suicide in 1889 in the (in)famous Mayerling episode with 
+his young mistress Baroness Mary Vetsera. Rudolf's killing of the Baroness Vetsera was an extremely grim 
+chapter in the long line of outbreaks of mental instability in the Habsburg Dynasty caused by their long 
+history of inbreeding. The younger brother to Emperor Franz Joseph, the Archduke Viktor Ludwig, spent 
+most of his life exiled on the island of Capri, following a series of scandals involving dressing up 
+in women's clothes and molesting his military aides.[PARAGRAPH:1]Notwithstanding the scandals, there 
+were times when Franz Joseph took firm moral stands. When Pope Pius IX detained the six-year-old Jewish 
+boy Edgardo Mortara on account of the claim that a housekeeper had secretly baptized him, Emperor Franz 
+Joseph sent the Pope a plea to return the child to his parents. The Pope refused his request.[PARAGRAPH:1]When 
+World War I erupted, Austria-Hungary fought in alliance with Germany, but the Austro-Hungarian Army proved 
+ill-prepared and ill-equipped. Franz Joseph's conservatism was partly to blame: when presented with the 
+suggestion that the army should acquire a newly-developed mechanical weapon, namely tanks, he famously 
+retorted: "Absolutely not. The horses will be startled!".[PARAGRAPH:1]Their three other children were 
+Archduchess Sophie of Austria (1855 - 1858), Archduchess Gisela of Austria (1856 - 1932) and Archduchess 
+Marie-Valerie of Austria (1868 - 1924).[PARAGRAPH:1]The archipelago Franz Josef Land in the Russian high 
+arctic was named in his honor in 1873. Franz Josef Glacier in New Zealand's South Island also bears his name.</French>
+		<German>[H1]Franz Josef[\H1][NEWLINE][BOLD]Emperor of Austria[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]1830 
+- 1916[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Francis Joseph I (in German often abbreviated 
+Franz Joseph or Franz Josef, and in English also Francis Joseph) of the Habsburg Dynasty was Emperor 
+of Austria and King of Bohemia from 1848 until 1916, and Apostolic King of Hungary from 1867 until 1916. 
+He was born in Vienna, Austria. His 68 years on the throne makes him one of the longest-serving monarchs 
+in European history, and while his heir Karl took over for two years upon his death in 1916, Franz Joseph 
+is clearly the last of the great Habsburg monarchs.[PARAGRAPH:1]Archduke Franz was the oldest son of 
+Archduke Franz Karl, who was brother and heir of Austrian Emperor Ferdinand I, and his wife Sophie, Archduchess 
+of Austria and Princess of Bavaria). Franz was also the older brother of Emperor Maximilian I of Mexico. 
+Because his father renounced his claim to the throne, Franz was brought up by his mother as a future 
+Emperor with emphasis on devoutness, responsibility and diligence. His youth was marked with seclusion 
+and he never got approximated even with his brothers and sisters. At the age of 13 he started a career 
+as a colonel in Austrian army. Since then his fashion was dictated by army style and he wore the uniform 
+for most of his life.[PARAGRAPH:1]He became Austrian Emperor as Franz Joseph I when Ferdinand abdicated 
+near the end of the Revolution of 1848, on December 2, 1848. His imperial career was at first connected 
+with the personality of Felix Schwarzenberg and was targeted to restore absolutism and regain the powerful 
+position in foreign affairs. He abolished the Constitution of 1849 and became a sovereign monarch in 
+1852. However, the 1850s witnessed several failures of Austrian external policy (Crimean War and breaking-up 
+with Russia, Austro-Sardinian War of 1859 against armies of the House of Savoy and Napoleon III).[PARAGRAPH:1]The 
+set-backs continued in the 1860s with Austro-Prussian War of 1866. It resulted in Austrian-Hungarian 
+Dualism in 1867.[PARAGRAPH:1]In 1854 Franz Joseph married Duchess Elisabeth in Bavaria (also Princess 
+of Bavaria through her mother's side of the family), who became Elisabeth of Austria ("Sisi" or "Sissi"). 
+Their only son, Crown Prince Rudolf, committed suicide in 1889 in the (in)famous Mayerling episode with 
+his young mistress Baroness Mary Vetsera. Rudolf's killing of the Baroness Vetsera was an extremely grim 
+chapter in the long line of outbreaks of mental instability in the Habsburg Dynasty caused by their long 
+history of inbreeding. The younger brother to Emperor Franz Joseph, the Archduke Viktor Ludwig, spent 
+most of his life exiled on the island of Capri, following a series of scandals involving dressing up 
+in women's clothes and molesting his military aides.[PARAGRAPH:1]Notwithstanding the scandals, there 
+were times when Franz Joseph took firm moral stands. When Pope Pius IX detained the six-year-old Jewish 
+boy Edgardo Mortara on account of the claim that a housekeeper had secretly baptized him, Emperor Franz 
+Joseph sent the Pope a plea to return the child to his parents. The Pope refused his request.[PARAGRAPH:1]When 
+World War I erupted, Austria-Hungary fought in alliance with Germany, but the Austro-Hungarian Army proved 
+ill-prepared and ill-equipped. Franz Joseph's conservatism was partly to blame: when presented with the 
+suggestion that the army should acquire a newly-developed mechanical weapon, namely tanks, he famously 
+retorted: "Absolutely not. The horses will be startled!".[PARAGRAPH:1]Their three other children were 
+Archduchess Sophie of Austria (1855 - 1858), Archduchess Gisela of Austria (1856 - 1932) and Archduchess 
+Marie-Valerie of Austria (1868 - 1924).[PARAGRAPH:1]The archipelago Franz Josef Land in the Russian high 
+arctic was named in his honor in 1873. Franz Josef Glacier in New Zealand's South Island also bears his name.</German>
+		<Italian>[H1]Franz Josef[\H1][NEWLINE][BOLD]Emperor of Austria[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]1830 
+- 1916[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Francis Joseph I (in German often abbreviated 
+Franz Joseph or Franz Josef, and in English also Francis Joseph) of the Habsburg Dynasty was Emperor 
+of Austria and King of Bohemia from 1848 until 1916, and Apostolic King of Hungary from 1867 until 1916. 
+He was born in Vienna, Austria. His 68 years on the throne makes him one of the longest-serving monarchs 
+in European history, and while his heir Karl took over for two years upon his death in 1916, Franz Joseph 
+is clearly the last of the great Habsburg monarchs.[PARAGRAPH:1]Archduke Franz was the oldest son of 
+Archduke Franz Karl, who was brother and heir of Austrian Emperor Ferdinand I, and his wife Sophie, Archduchess 
+of Austria and Princess of Bavaria). Franz was also the older brother of Emperor Maximilian I of Mexico. 
+Because his father renounced his claim to the throne, Franz was brought up by his mother as a future 
+Emperor with emphasis on devoutness, responsibility and diligence. His youth was marked with seclusion 
+and he never got approximated even with his brothers and sisters. At the age of 13 he started a career 
+as a colonel in Austrian army. Since then his fashion was dictated by army style and he wore the uniform 
+for most of his life.[PARAGRAPH:1]He became Austrian Emperor as Franz Joseph I when Ferdinand abdicated 
+near the end of the Revolution of 1848, on December 2, 1848. His imperial career was at first connected 
+with the personality of Felix Schwarzenberg and was targeted to restore absolutism and regain the powerful 
+position in foreign affairs. He abolished the Constitution of 1849 and became a sovereign monarch in 
+1852. However, the 1850s witnessed several failures of Austrian external policy (Crimean War and breaking-up 
+with Russia, Austro-Sardinian War of 1859 against armies of the House of Savoy and Napoleon III).[PARAGRAPH:1]The 
+set-backs continued in the 1860s with Austro-Prussian War of 1866. It resulted in Austrian-Hungarian 
+Dualism in 1867.[PARAGRAPH:1]In 1854 Franz Joseph married Duchess Elisabeth in Bavaria (also Princess 
+of Bavaria through her mother's side of the family), who became Elisabeth of Austria ("Sisi" or "Sissi"). 
+Their only son, Crown Prince Rudolf, committed suicide in 1889 in the (in)famous Mayerling episode with 
+his young mistress Baroness Mary Vetsera. Rudolf's killing of the Baroness Vetsera was an extremely grim 
+chapter in the long line of outbreaks of mental instability in the Habsburg Dynasty caused by their long 
+history of inbreeding. The younger brother to Emperor Franz Joseph, the Archduke Viktor Ludwig, spent 
+most of his life exiled on the island of Capri, following a series of scandals involving dressing up 
+in women's clothes and molesting his military aides.[PARAGRAPH:1]Notwithstanding the scandals, there 
+were times when Franz Joseph took firm moral stands. When Pope Pius IX detained the six-year-old Jewish 
+boy Edgardo Mortara on account of the claim that a housekeeper had secretly baptized him, Emperor Franz 
+Joseph sent the Pope a plea to return the child to his parents. The Pope refused his request.[PARAGRAPH:1]When 
+World War I erupted, Austria-Hungary fought in alliance with Germany, but the Austro-Hungarian Army proved 
+ill-prepared and ill-equipped. Franz Joseph's conservatism was partly to blame: when presented with the 
+suggestion that the army should acquire a newly-developed mechanical weapon, namely tanks, he famously 
+retorted: "Absolutely not. The horses will be startled!".[PARAGRAPH:1]Their three other children were 
+Archduchess Sophie of Austria (1855 - 1858), Archduchess Gisela of Austria (1856 - 1932) and Archduchess 
+Marie-Valerie of Austria (1868 - 1924).[PARAGRAPH:1]The archipelago Franz Josef Land in the Russian high 
+arctic was named in his honor in 1873. Franz Josef Glacier in New Zealand's South Island also bears his name.</Italian>
+		<Spanish>Francisco José I de Habsburgo-Lorena (en alemán: Franz Josef Karl von Habsburg-Lothringen; en húngaro: Habsburg-Lotaringiai Ferenc József; Palacio de Schönbrunn, Viena, 18 de agosto de 1830 - Ibídem 21 de noviembre de 1916), emperador de Austria, rey apostólico de Hungría y rey de Bohemia, entre otros títulos,1 desde el 2 de diciembre de 1848 hasta su muerte en 1916. Su reinado de casi 68 años es el tercero más prolongado de la historia europea, después de Luis XIV de Francia y Juan II de Liechtenstein. Su lema personal era Viribus Unitis (Con unión de fuerzas).</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_FRANZ_1</Tag>
+		<English>Greetings to you, [CT_NAME]. Let us work side by side. It is said that success has more than one father.</English>
+		<French>Greetings to you, [CT_NAME]. Let us work side by side. It is said that success has more than one father.</French>
+		<German>Greetings to you, [CT_NAME]. Let us work side by side. It is said that success has more than one father.</German>
+		<Italian>Greetings to you, [CT_NAME]. Let us work side by side. It is said that success has more than one father.</Italian>
+		<Spanish>Se te saluda, [CT_NAME]. Trabajemos codo con codo. Siempre se ha dicho que el progreso tiene mas de un padre.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_MARIA</Tag>
+		<English>Maria Theresa</English>
+		<French>Maria Theresa</French>
+		<German>Maria Theresa</German>
+		<Italian>Maria Theresa</Italian>
+		<Spanish>Maria Teresa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_MARIA_PEDIA</Tag>
+		<English>[H1]Maria Theresa[\H1][NEWLINE][BOLD]Archduchess of Austria[\BOLD][NEWLINE][BOLD]Reigned: 
+[\BOLD] 1717 - 1780[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Maria Theresa was the 
+first and only female head of the Habsburg dynasty. She was Archduchess of Austria, and Queen of Hungary 
+and Bohemia and ruler of other territories from 1740 until her death. She also became the Holy Roman 
+Empress when her husband was elected Holy Roman Emperor. She was one of the so-called "enlightened monarchs" 
+(also refered to as "enlightened despots"). She was one of the most powerful rulers of her time, ruling 
+over much of central Europe.[PARAGRAPH:1]Her Imperial and Royal Highness Maria Theresa, Princess Imperial 
+and Archduchess of Austria, Princess Royal of Hungary and Bohemia was the eldest daughter of Charles 
+VI, whose sole male heir - his son Leopold Johann - died as an infant in 1716. In 1713 Charles issued 
+the Pragmatic Sanction which guaranteed his daughter the right to succeed to the Austrian throne and 
+inherit his united lands on his death. Initially, many European monarchs agreed to the Pragmatic Sanction 
+when it was issued. However, soon after Maria Theresa assumed the throne upon Charles' death on October 
+20, 1740, the War of Austrian Succession began.[PARAGRAPH:1]Maria Theresa was married to Francis Stephen, 
+Duke of Lorraine. In the end, she had 16 children by him, with 11 daughters (all of whom had the first 
+name "Marie") and 5 sons surviving to adulthood. Her youngest daughter was Maria Antonia (better known 
+under her French name Marie Antoinette) who would be promised in marriage to Louis, heir apparent to 
+the king of France, later King Louis XVI. After her husband's death, she made her son Joseph II co-regent 
+of her Austrian dominions, but she actually kept most of the power to herself, which led to tension between 
+her and her son. It was not until her death that he could fully exercise his powers.[PARAGRAPH:1]Many 
+people believe that Maria Theresa was the archetypical mother (indeed, many see her as a mother of the 
+nation still today), loving but stern. Most agree that she had a very loving and caring attitude towards 
+her husband, forgiving his many affairs. From the early years of their marital life, a number of anecdotes 
+survive, one of which says that during their honeymoon, they managed to break a bed in one of the places 
+they stayed.[PARAGRAPH:1]Another said that, when she received news that she had become a grandmother, 
+she ran into the royal theater, only dressed in a nightgown, interrupted the play and shouted, in Viennese 
+dialect, to the audience: "Denkt's enk, der Poldl hat an Buam, und grad auf mein' Hochzeitstag - alstern 
+der is galant, is net wahr?" (which can be roughly translated to: "Can you imagine it, Leopold has a 
+little boy, and just on my wedding anniversary. That's quite polite of him, isn't it`?")[PARAGRAPH:1]Maria 
+Theresa's father had assumed that she would yield the true power to her husband. Because of this, her 
+father hadn't given Maria Theresa any information on the workings of the government, leaving her to learn 
+the job on her own. Additionally, the army was weak and the treasury depleted due to two wars near the 
+end of her father's reign.[PARAGRAPH:1]The War of the Austrian Succession began with Frederick II of 
+Prussia invading and occupying Silesia. While Bavaria and France also invaded Austrian western territories, 
+it was Frederick (later known as Frederick the Great) who became Maria Theresa's main foe during her 
+reign. Therefore she focused her internal and external policies on defeating Prussia and regaining the 
+lands that had been taken from Austria.[PARAGRAPH:1]In 1748, France gave the Austrian Low Countries that 
+it conquered back to Maria Theresa. In exchange, Maria Theresa ceded Parma, Piacenza, and Guastalla to 
+the Infante Felipe of Spain.[PARAGRAPH:1]She increased the number of troops in the army by 200%, changed 
+taxes to guarantee a steady annual income to support the government and military. She centralized the 
+government by combining the Austrian and Bohemian chancelleries, formerly separate, into one administrative 
+office. Before this, justice and administration were overseen by the same officials, but she created 
+a supreme court with the sole responsibility for upholding justice in her lands. These reforms strengthened 
+the economy. She dropped the Kingdom of Great Britain as an ally on the advice of her state chancellor, 
+Wenzel Anton von Kaunitz, and allied with Russia and France. In 1752 she established a military academy 
+(the first worldwide), and in 1754 she established an academy of engineering science. She also demanded 
+that the University of Vienna be given the money to make the medical faculty more efficient. When she 
+felt her army was strong enough, she prepared to attack Prussia in 1756. Frederick II attacked first 
+however, invading Saxony, another ally of Austria, beginning the Seven Years' War. The war ended in 1763 
+with Maria Theresa signing the Treaty of Hubertusberg which recognized Prussian ownership of Silesia.[PARAGRAPH:1]Her 
+husband died two years later. Her devotion to him was so great that she dressed in mourning clothes until 
+her own death 15 years later and became more closeted from her people. Her focus changed from attempting 
+to regain Silesia, to maintaining the peace. She also recognized Joseph II, her eldest son, as coregent 
+and emperor. She allowed him only limited powers because she felt he was too rash and arrogant.[PARAGRAPH:1]In 
+the later years of her reign, she focused on reforming laws and some see her as being relatively progressive 
+for her time. However, many agree that she did not do this out of genuine care for their population (at 
+least not directly), but for the greater good of the state.[PARAGRAPH:1]In the 1760s, smallpox claimed 
+a few victims in the royal family. Even Maria Theresa got infected and she did receive the last rites 
+in 1767, but she recovered. Afterwards, she became an outspoken supporter of vaccination and made sure 
+that all of her children received vaccinations against small pox.[PARAGRAPH:1]In 1771, she issued the 
+Robot Patent, a reform that regulated the serf's labor payments in her lands, providing them some relief.[PARAGRAPH:2]Other 
+important reforms included the outlawing of witch-burning and torture, and for the first time in Austrian 
+history, capital punishment was taken off the penal code, it was replaced with forced labor. However, 
+the death penalty was later reintroduced. Historians mostly agree that Maria Theresa did not solely act 
+out of care for her population, but rather to strengthen the economy of the Habsburg territories, especially 
+after the loss of Silesia.[PARAGRAPH:1]This was also the main reason for the introduction of mandatory 
+education in 1774 - the goal was to form an educated class from which civil servants could be recruited.[PARAGRAPH:1]Another 
+installation of hers was a decency police which was to patrol everywhere, especially Vienna and apprehend 
+anyone suspected of doing something that could be deemed indecent (some say this was due to her husband's 
+supposed infidelity). Arrested prostitutes, for example, would be sent into villages in the eastern parts 
+of the realm which led some contemporary writers to note that these villages had 'exceptionally beautiful 
+women' living there.[PARAGRAPH:1]She died in 1780, the only female to rule during the 650-year-long Habsburg 
+dynasty. She is buried in tomb number 56 in the Imperial Crypt in Vienna. Her son Joseph II succeeded her.</English>
+		<French>[H1]Maria Theresa[\H1][NEWLINE][BOLD]Archduchess of Austria[\BOLD][NEWLINE][BOLD]Reigned: [\BOLD] 
+1717 - 1780[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Maria Theresa was the first and 
+only female head of the Habsburg dynasty. She was Archduchess of Austria, and Queen of Hungary and Bohemia 
+and ruler of other territories from 1740 until her death. She also became the Holy Roman Empress when 
+her husband was elected Holy Roman Emperor. She was one of the so-called "enlightened monarchs" (also 
+refered to as "enlightened despots"). She was one of the most powerful rulers of her time, ruling over 
+much of central Europe.[PARAGRAPH:1]Her Imperial and Royal Highness Maria Theresa, Princess Imperial 
+and Archduchess of Austria, Princess Royal of Hungary and Bohemia was the eldest daughter of Charles 
+VI, whose sole male heir - his son Leopold Johann - died as an infant in 1716. In 1713 Charles issued 
+the Pragmatic Sanction which guaranteed his daughter the right to succeed to the Austrian throne and 
+inherit his united lands on his death. Initially, many European monarchs agreed to the Pragmatic Sanction 
+when it was issued. However, soon after Maria Theresa assumed the throne upon Charles' death on October 
+20, 1740, the War of Austrian Succession began.[PARAGRAPH:1]Maria Theresa was married to Francis Stephen, 
+Duke of Lorraine. In the end, she had 16 children by him, with 11 daughters (all of whom had the first 
+name "Marie") and 5 sons surviving to adulthood. Her youngest daughter was Maria Antonia (better known 
+under her French name Marie Antoinette) who would be promised in marriage to Louis, heir apparent to 
+the king of France, later King Louis XVI. After her husband's death, she made her son Joseph II co-regent 
+of her Austrian dominions, but she actually kept most of the power to herself, which led to tension between 
+her and her son. It was not until her death that he could fully exercise his powers.[PARAGRAPH:1]Many 
+people believe that Maria Theresa was the archetypical mother (indeed, many see her as a mother of the 
+nation still today), loving but stern. Most agree that she had a very loving and caring attitude towards 
+her husband, forgiving his many affairs. From the early years of their marital life, a number of anecdotes 
+survive, one of which says that during their honeymoon, they managed to break a bed in one of the places 
+they stayed.[PARAGRAPH:1]Another said that, when she received news that she had become a grandmother, 
+she ran into the royal theater, only dressed in a nightgown, interrupted the play and shouted, in Viennese 
+dialect, to the audience: "Denkt's enk, der Poldl hat an Buam, und grad auf mein' Hochzeitstag - alstern 
+der is galant, is net wahr?" (which can be roughly translated to: "Can you imagine it, Leopold has a 
+little boy, and just on my wedding anniversary. That's quite polite of him, isn't it`?")[PARAGRAPH:1]Maria 
+Theresa's father had assumed that she would yield the true power to her husband. Because of this, her 
+father hadn't given Maria Theresa any information on the workings of the government, leaving her to learn 
+the job on her own. Additionally, the army was weak and the treasury depleted due to two wars near the 
+end of her father's reign.[PARAGRAPH:1]The War of the Austrian Succession began with Frederick II of 
+Prussia invading and occupying Silesia. While Bavaria and France also invaded Austrian western territories, 
+it was Frederick (later known as Frederick the Great) who became Maria Theresa's main foe during her 
+reign. Therefore she focused her internal and external policies on defeating Prussia and regaining the 
+lands that had been taken from Austria.[PARAGRAPH:1]In 1748, France gave the Austrian Low Countries that 
+it conquered back to Maria Theresa. In exchange, Maria Theresa ceded Parma, Piacenza, and Guastalla to 
+the Infante Felipe of Spain.[PARAGRAPH:1]She increased the number of troops in the army by 200%, changed 
+taxes to guarantee a steady annual income to support the government and military. She centralized the 
+government by combining the Austrian and Bohemian chancelleries, formerly separate, into one administrative 
+office. Before this, justice and administration were overseen by the same officials, but she created 
+a supreme court with the sole responsibility for upholding justice in her lands. These reforms strengthened 
+the economy. She dropped the Kingdom of Great Britain as an ally on the advice of her state chancellor, 
+Wenzel Anton von Kaunitz, and allied with Russia and France. In 1752 she established a military academy 
+(the first worldwide), and in 1754 she established an academy of engineering science. She also demanded 
+that the University of Vienna be given the money to make the medical faculty more efficient. When she 
+felt her army was strong enough, she prepared to attack Prussia in 1756. Frederick II attacked first 
+however, invading Saxony, another ally of Austria, beginning the Seven Years' War. The war ended in 1763 
+with Maria Theresa signing the Treaty of Hubertusberg which recognized Prussian ownership of Silesia.[PARAGRAPH:1]Her 
+husband died two years later. Her devotion to him was so great that she dressed in mourning clothes until 
+her own death 15 years later and became more closeted from her people. Her focus changed from attempting 
+to regain Silesia, to maintaining the peace. She also recognized Joseph II, her eldest son, as coregent 
+and emperor. She allowed him only limited powers because she felt he was too rash and arrogant.[PARAGRAPH:1]In 
+the later years of her reign, she focused on reforming laws and some see her as being relatively progressive 
+for her time. However, many agree that she did not do this out of genuine care for their population (at 
+least not directly), but for the greater good of the state.[PARAGRAPH:1]In the 1760s, smallpox claimed 
+a few victims in the royal family. Even Maria Theresa got infected and she did receive the last rites 
+in 1767, but she recovered. Afterwards, she became an outspoken supporter of vaccination and made sure 
+that all of her children received vaccinations against small pox.[PARAGRAPH:1]In 1771, she issued the 
+Robot Patent, a reform that regulated the serf's labor payments in her lands, providing them some relief.[PARAGRAPH:2]Other 
+important reforms included the outlawing of witch-burning and torture, and for the first time in Austrian 
+history, capital punishment was taken off the penal code, it was replaced with forced labor. However, 
+the death penalty was later reintroduced. Historians mostly agree that Maria Theresa did not solely act 
+out of care for her population, but rather to strengthen the economy of the Habsburg territories, especially 
+after the loss of Silesia.[PARAGRAPH:1]This was also the main reason for the introduction of mandatory 
+education in 1774 - the goal was to form an educated class from which civil servants could be recruited.[PARAGRAPH:1]Another 
+installation of hers was a decency police which was to patrol everywhere, especially Vienna and apprehend 
+anyone suspected of doing something that could be deemed indecent (some say this was due to her husband's 
+supposed infidelity). Arrested prostitutes, for example, would be sent into villages in the eastern parts 
+of the realm which led some contemporary writers to note that these villages had 'exceptionally beautiful 
+women' living there.[PARAGRAPH:1]She died in 1780, the only female to rule during the 650-year-long Habsburg 
+dynasty. She is buried in tomb number 56 in the Imperial Crypt in Vienna. Her son Joseph II succeeded her.</French>
+		<German>[H1]Maria Theresa[\H1][NEWLINE][BOLD]Archduchess of Austria[\BOLD][NEWLINE][BOLD]Reigned: [\BOLD] 
+1717 - 1780[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Maria Theresa was the first and 
+only female head of the Habsburg dynasty. She was Archduchess of Austria, and Queen of Hungary and Bohemia 
+and ruler of other territories from 1740 until her death. She also became the Holy Roman Empress when 
+her husband was elected Holy Roman Emperor. She was one of the so-called "enlightened monarchs" (also 
+refered to as "enlightened despots"). She was one of the most powerful rulers of her time, ruling over 
+much of central Europe.[PARAGRAPH:1]Her Imperial and Royal Highness Maria Theresa, Princess Imperial 
+and Archduchess of Austria, Princess Royal of Hungary and Bohemia was the eldest daughter of Charles 
+VI, whose sole male heir - his son Leopold Johann - died as an infant in 1716. In 1713 Charles issued 
+the Pragmatic Sanction which guaranteed his daughter the right to succeed to the Austrian throne and 
+inherit his united lands on his death. Initially, many European monarchs agreed to the Pragmatic Sanction 
+when it was issued. However, soon after Maria Theresa assumed the throne upon Charles' death on October 
+20, 1740, the War of Austrian Succession began.[PARAGRAPH:1]Maria Theresa was married to Francis Stephen, 
+Duke of Lorraine. In the end, she had 16 children by him, with 11 daughters (all of whom had the first 
+name "Marie") and 5 sons surviving to adulthood. Her youngest daughter was Maria Antonia (better known 
+under her French name Marie Antoinette) who would be promised in marriage to Louis, heir apparent to 
+the king of France, later King Louis XVI. After her husband's death, she made her son Joseph II co-regent 
+of her Austrian dominions, but she actually kept most of the power to herself, which led to tension between 
+her and her son. It was not until her death that he could fully exercise his powers.[PARAGRAPH:1]Many 
+people believe that Maria Theresa was the archetypical mother (indeed, many see her as a mother of the 
+nation still today), loving but stern. Most agree that she had a very loving and caring attitude towards 
+her husband, forgiving his many affairs. From the early years of their marital life, a number of anecdotes 
+survive, one of which says that during their honeymoon, they managed to break a bed in one of the places 
+they stayed.[PARAGRAPH:1]Another said that, when she received news that she had become a grandmother, 
+she ran into the royal theater, only dressed in a nightgown, interrupted the play and shouted, in Viennese 
+dialect, to the audience: "Denkt's enk, der Poldl hat an Buam, und grad auf mein' Hochzeitstag - alstern 
+der is galant, is net wahr?" (which can be roughly translated to: "Can you imagine it, Leopold has a 
+little boy, and just on my wedding anniversary. That's quite polite of him, isn't it`?")[PARAGRAPH:1]Maria 
+Theresa's father had assumed that she would yield the true power to her husband. Because of this, her 
+father hadn't given Maria Theresa any information on the workings of the government, leaving her to learn 
+the job on her own. Additionally, the army was weak and the treasury depleted due to two wars near the 
+end of her father's reign.[PARAGRAPH:1]The War of the Austrian Succession began with Frederick II of 
+Prussia invading and occupying Silesia. While Bavaria and France also invaded Austrian western territories, 
+it was Frederick (later known as Frederick the Great) who became Maria Theresa's main foe during her 
+reign. Therefore she focused her internal and external policies on defeating Prussia and regaining the 
+lands that had been taken from Austria.[PARAGRAPH:1]In 1748, France gave the Austrian Low Countries that 
+it conquered back to Maria Theresa. In exchange, Maria Theresa ceded Parma, Piacenza, and Guastalla to 
+the Infante Felipe of Spain.[PARAGRAPH:1]She increased the number of troops in the army by 200%, changed 
+taxes to guarantee a steady annual income to support the government and military. She centralized the 
+government by combining the Austrian and Bohemian chancelleries, formerly separate, into one administrative 
+office. Before this, justice and administration were overseen by the same officials, but she created 
+a supreme court with the sole responsibility for upholding justice in her lands. These reforms strengthened 
+the economy. She dropped the Kingdom of Great Britain as an ally on the advice of her state chancellor, 
+Wenzel Anton von Kaunitz, and allied with Russia and France. In 1752 she established a military academy 
+(the first worldwide), and in 1754 she established an academy of engineering science. She also demanded 
+that the University of Vienna be given the money to make the medical faculty more efficient. When she 
+felt her army was strong enough, she prepared to attack Prussia in 1756. Frederick II attacked first 
+however, invading Saxony, another ally of Austria, beginning the Seven Years' War. The war ended in 1763 
+with Maria Theresa signing the Treaty of Hubertusberg which recognized Prussian ownership of Silesia.[PARAGRAPH:1]Her 
+husband died two years later. Her devotion to him was so great that she dressed in mourning clothes until 
+her own death 15 years later and became more closeted from her people. Her focus changed from attempting 
+to regain Silesia, to maintaining the peace. She also recognized Joseph II, her eldest son, as coregent 
+and emperor. She allowed him only limited powers because she felt he was too rash and arrogant.[PARAGRAPH:1]In 
+the later years of her reign, she focused on reforming laws and some see her as being relatively progressive 
+for her time. However, many agree that she did not do this out of genuine care for their population (at 
+least not directly), but for the greater good of the state.[PARAGRAPH:1]In the 1760s, smallpox claimed 
+a few victims in the royal family. Even Maria Theresa got infected and she did receive the last rites 
+in 1767, but she recovered. Afterwards, she became an outspoken supporter of vaccination and made sure 
+that all of her children received vaccinations against small pox.[PARAGRAPH:1]In 1771, she issued the 
+Robot Patent, a reform that regulated the serf's labor payments in her lands, providing them some relief.[PARAGRAPH:2]Other 
+important reforms included the outlawing of witch-burning and torture, and for the first time in Austrian 
+history, capital punishment was taken off the penal code, it was replaced with forced labor. However, 
+the death penalty was later reintroduced. Historians mostly agree that Maria Theresa did not solely act 
+out of care for her population, but rather to strengthen the economy of the Habsburg territories, especially 
+after the loss of Silesia.[PARAGRAPH:1]This was also the main reason for the introduction of mandatory 
+education in 1774 - the goal was to form an educated class from which civil servants could be recruited.[PARAGRAPH:1]Another 
+installation of hers was a decency police which was to patrol everywhere, especially Vienna and apprehend 
+anyone suspected of doing something that could be deemed indecent (some say this was due to her husband's 
+supposed infidelity). Arrested prostitutes, for example, would be sent into villages in the eastern parts 
+of the realm which led some contemporary writers to note that these villages had 'exceptionally beautiful 
+women' living there.[PARAGRAPH:1]She died in 1780, the only female to rule during the 650-year-long Habsburg 
+dynasty. She is buried in tomb number 56 in the Imperial Crypt in Vienna. Her son Joseph II succeeded her.</German>
+		<Italian>[H1]Maria Theresa[\H1][NEWLINE][BOLD]Archduchess of Austria[\BOLD][NEWLINE][BOLD]Reigned: 
+[\BOLD] 1717 - 1780[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Maria Theresa was the 
+first and only female head of the Habsburg dynasty. She was Archduchess of Austria, and Queen of Hungary 
+and Bohemia and ruler of other territories from 1740 until her death. She also became the Holy Roman 
+Empress when her husband was elected Holy Roman Emperor. She was one of the so-called "enlightened monarchs" 
+(also refered to as "enlightened despots"). She was one of the most powerful rulers of her time, ruling 
+over much of central Europe.[PARAGRAPH:1]Her Imperial and Royal Highness Maria Theresa, Princess Imperial 
+and Archduchess of Austria, Princess Royal of Hungary and Bohemia was the eldest daughter of Charles 
+VI, whose sole male heir - his son Leopold Johann - died as an infant in 1716. In 1713 Charles issued 
+the Pragmatic Sanction which guaranteed his daughter the right to succeed to the Austrian throne and 
+inherit his united lands on his death. Initially, many European monarchs agreed to the Pragmatic Sanction 
+when it was issued. However, soon after Maria Theresa assumed the throne upon Charles' death on October 
+20, 1740, the War of Austrian Succession began.[PARAGRAPH:1]Maria Theresa was married to Francis Stephen, 
+Duke of Lorraine. In the end, she had 16 children by him, with 11 daughters (all of whom had the first 
+name "Marie") and 5 sons surviving to adulthood. Her youngest daughter was Maria Antonia (better known 
+under her French name Marie Antoinette) who would be promised in marriage to Louis, heir apparent to 
+the king of France, later King Louis XVI. After her husband's death, she made her son Joseph II co-regent 
+of her Austrian dominions, but she actually kept most of the power to herself, which led to tension between 
+her and her son. It was not until her death that he could fully exercise his powers.[PARAGRAPH:1]Many 
+people believe that Maria Theresa was the archetypical mother (indeed, many see her as a mother of the 
+nation still today), loving but stern. Most agree that she had a very loving and caring attitude towards 
+her husband, forgiving his many affairs. From the early years of their marital life, a number of anecdotes 
+survive, one of which says that during their honeymoon, they managed to break a bed in one of the places 
+they stayed.[PARAGRAPH:1]Another said that, when she received news that she had become a grandmother, 
+she ran into the royal theater, only dressed in a nightgown, interrupted the play and shouted, in Viennese 
+dialect, to the audience: "Denkt's enk, der Poldl hat an Buam, und grad auf mein' Hochzeitstag - alstern 
+der is galant, is net wahr?" (which can be roughly translated to: "Can you imagine it, Leopold has a 
+little boy, and just on my wedding anniversary. That's quite polite of him, isn't it`?")[PARAGRAPH:1]Maria 
+Theresa's father had assumed that she would yield the true power to her husband. Because of this, her 
+father hadn't given Maria Theresa any information on the workings of the government, leaving her to learn 
+the job on her own. Additionally, the army was weak and the treasury depleted due to two wars near the 
+end of her father's reign.[PARAGRAPH:1]The War of the Austrian Succession began with Frederick II of 
+Prussia invading and occupying Silesia. While Bavaria and France also invaded Austrian western territories, 
+it was Frederick (later known as Frederick the Great) who became Maria Theresa's main foe during her 
+reign. Therefore she focused her internal and external policies on defeating Prussia and regaining the 
+lands that had been taken from Austria.[PARAGRAPH:1]In 1748, France gave the Austrian Low Countries that 
+it conquered back to Maria Theresa. In exchange, Maria Theresa ceded Parma, Piacenza, and Guastalla to 
+the Infante Felipe of Spain.[PARAGRAPH:1]She increased the number of troops in the army by 200%, changed 
+taxes to guarantee a steady annual income to support the government and military. She centralized the 
+government by combining the Austrian and Bohemian chancelleries, formerly separate, into one administrative 
+office. Before this, justice and administration were overseen by the same officials, but she created 
+a supreme court with the sole responsibility for upholding justice in her lands. These reforms strengthened 
+the economy. She dropped the Kingdom of Great Britain as an ally on the advice of her state chancellor, 
+Wenzel Anton von Kaunitz, and allied with Russia and France. In 1752 she established a military academy 
+(the first worldwide), and in 1754 she established an academy of engineering science. She also demanded 
+that the University of Vienna be given the money to make the medical faculty more efficient. When she 
+felt her army was strong enough, she prepared to attack Prussia in 1756. Frederick II attacked first 
+however, invading Saxony, another ally of Austria, beginning the Seven Years' War. The war ended in 1763 
+with Maria Theresa signing the Treaty of Hubertusberg which recognized Prussian ownership of Silesia.[PARAGRAPH:1]Her 
+husband died two years later. Her devotion to him was so great that she dressed in mourning clothes until 
+her own death 15 years later and became more closeted from her people. Her focus changed from attempting 
+to regain Silesia, to maintaining the peace. She also recognized Joseph II, her eldest son, as coregent 
+and emperor. She allowed him only limited powers because she felt he was too rash and arrogant.[PARAGRAPH:1]In 
+the later years of her reign, she focused on reforming laws and some see her as being relatively progressive 
+for her time. However, many agree that she did not do this out of genuine care for their population (at 
+least not directly), but for the greater good of the state.[PARAGRAPH:1]In the 1760s, smallpox claimed 
+a few victims in the royal family. Even Maria Theresa got infected and she did receive the last rites 
+in 1767, but she recovered. Afterwards, she became an outspoken supporter of vaccination and made sure 
+that all of her children received vaccinations against small pox.[PARAGRAPH:1]In 1771, she issued the 
+Robot Patent, a reform that regulated the serf's labor payments in her lands, providing them some relief.[PARAGRAPH:2]Other 
+important reforms included the outlawing of witch-burning and torture, and for the first time in Austrian 
+history, capital punishment was taken off the penal code, it was replaced with forced labor. However, 
+the death penalty was later reintroduced. Historians mostly agree that Maria Theresa did not solely act 
+out of care for her population, but rather to strengthen the economy of the Habsburg territories, especially 
+after the loss of Silesia.[PARAGRAPH:1]This was also the main reason for the introduction of mandatory 
+education in 1774 - the goal was to form an educated class from which civil servants could be recruited.[PARAGRAPH:1]Another 
+installation of hers was a decency police which was to patrol everywhere, especially Vienna and apprehend 
+anyone suspected of doing something that could be deemed indecent (some say this was due to her husband's 
+supposed infidelity). Arrested prostitutes, for example, would be sent into villages in the eastern parts 
+of the realm which led some contemporary writers to note that these villages had 'exceptionally beautiful 
+women' living there.[PARAGRAPH:1]She died in 1780, the only female to rule during the 650-year-long Habsburg 
+dynasty. She is buried in tomb number 56 in the Imperial Crypt in Vienna. Her son Joseph II succeeded her.</Italian>
+		<Spanish>María Teresa I de AustriaNota 1 (13 de mayo de 1717 – 29 de noviembre de 1780) fue la primera 
+y única mujer que gobernó sobre los dominios de los Habsburgo y la última jefa de la casa de Habsburgo, 
+pues a partir de su matrimonio la dinastía pasó a llamarse Casa de Habsburgo-Lorena.Fue archiduquesa 
+y soberana de Austria, Hungría, Bohemia y Croacia, duquesa de Mantua, Milán, Galitzia y Lodomeria, Parma 
+y los Países Bajos Austríacos desde 1740 hasta su muerte. Por su matrimonio con Francisco I, fue también 
+emperatriz consorte del Sacro Imperio Romano Germánico, duquesa de Lorena y gran duquesa de Toscana.1 
+Está considerada como una déspota ilustrada y fue la cabeza de uno de los Estados más importantes de 
+su época, pues gobernó gran parte de la Europa Central.Su reinado de 40 años comenzó con la muerte de 
+su padre Carlos VI, en octubre de 1740. Su ascenso al trono solo fue posible con la promulgación de la 
+Pragmática Sanción de 1713, ya que los territorios de los Habsburgo estaban regidos por la Ley Sálica, 
+que impedía la sucesión femenina.2 Cuando este murió, Sajonia, Prusia, Baviera y Francia rechazaron el 
+documento que habían reconocido como legítimo hasta entonces. Prusia invadió la provincia de Silesia 
+y provocó un conflicto de nueve años, conocido como la Guerra de Sucesión Austriaca. Más tarde, María 
+Teresa intentaría sin éxito reconquistar Silesia durante la Guerra de los Siete Años.Se casó con Francisco 
+Esteban de Lorena, el futuro Francisco I del Sacro Imperio Romano Germánico y tuvo con él 16 hijos, entre 
+ellos las reinas María Antonieta de Austria y María Carolina de Austria, la duquesa María Amelia de Habsburgo-Lorena 
+y dos emperadores del Sacro Imperio Romano Germánico: José II y Leopoldo II (ambos cogobernantes de Austria 
+y Bohemia, junto con su madre).3María Teresa fue responsable de la mayoría de las grandes reformas financieras 
+y educativas realizadas en sus dominios, con el apoyo del conde Federico Guillermo de Haugwitz y Gottfried 
+Van Swieten, promovió el comercio, desarrolló la agricultura y reorganizó el ejército austriaco, lo que 
+fortaleció la posición internacional de Austria. Sin embargo, se negó a permitir la tolerancia religiosa,Nota 
+2 lo que hizo que sus contemporáneos calificaran su régimen como prejuicioso y supersticioso.4 Como joven 
+monarca que luchó en dos guerras dinásticas, María Teresa creía que su causa debería ser la de sus súbditos 
+pero, en sus últimos años, pasó a creer que su causa era la que debía prevalecer.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_MARIA_1</Tag>
+		<English>Pleased to see me, [CT_NAME]? Remember, a light is still a light even if the blind cannot see it.</English>
+		<French>Pleased to see me, [CT_NAME]? Remember, a light is still a light even if the blind cannot see it.</French>
+		<German>Pleased to see me, [CT_NAME]? Remember, a light is still a light even if the blind cannot see it.</German>
+		<Italian>Pleased to see me, [CT_NAME]? Remember, a light is still a light even if the blind cannot see it.</Italian>
+		<Spanish>Estaras agradecido de verme, [CT_NAME]? Recuerda, la luz sigue siendo luz aun cuando el ciego no puede verla.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_MAXIMILIAN</Tag>
+		<English>Maximilian I</English>
+		<French>Maximilien Ier</French>
+		<German>Maximilian I.</German>
+		<Italian>Massimiliano I</Italian>
+		<Spanish>Maximiliano I</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_MAXIMILIAN_PEDIA</Tag>
+		<English>[H1]Maximilian I[\H1][NEWLINE][BOLD]Holy Roman Emperor[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] 
+March 22, 1459 - January 12, 1519 AD[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Maximilian 
+I, Holy Roman emperor, son of the emperor Frederick III and Leonora, daughter of Edward, King of Portugal, 
+was born at Vienna Neustadt on the 22nd of March 1459. On the 18th of August 1477, by his marriage at 
+Ghent to Mary, who had just inherited Burgundy and the Netherlands from her father Charles the Bold, 
+Duke of Burgundy, he effected a union of great importance in the history of the house of Habsburg. He 
+at once undertook the defense of his wife's dominions from an attack by Louis XI, king of France, and 
+defeated the French forces at Guinegatte, the modern Enguinegatte, on the 7th of August 1479. But Maximilian 
+was regarded with suspicion by the states of Netherlands, and after suppressing a rising in Gelderland 
+his position was further weakened by the death of his wife on the 27th of March 1482. He claimed to be 
+recognized as guardian of his young son Philip and as regent of the Netherlands, but some of the states 
+refused to agree to his demands and disorder was general. Maximilian was compelled to assent to the treaty 
+of Arras in 1482 between the states of the Netherlands and Louis XI. This treaty provided that Maximilian's 
+daughter Margaret of Austria should marry Charles, the dauphin of France, and have for her dowry Artois 
+and Franche-Comté, two of the provinces in dispute, while the claim of Louis on the Duchy of Burgundy 
+was tacitly admitted. Maximilian did not, however, abandon the struggle in the Netherlands. Having crushed 
+a rebellion at Utrecht, he compelled the burghers of Ghent to restore Philip to him in 1485, and returning 
+to Germany was chosen king of the Romans, or German king, at Frankfurt on the 16th of February 1486, 
+and crowned at Aix-la-Chapelle on the 9th of the following April. Again in the Netherlands, he made a 
+treaty with Francis II, Duke of Brittany, whose independence was threatened by the French regent, Anne 
+of Beaujeu, and the struggle with France was soon renewed. This war was very unpopular with the trading 
+cities of the Netherlands, and early in 1488 Maximilian, having entered Bruges, was detained there as 
+a prisoner for nearly three months, and only set at liberty on the approach of his father with a large 
+force. On his release he had promised he would maintain the treaty of Arras and withdraw from the Netherlands; 
+but he delayed his departure for nearly a year and took part in a punitive campaign against his captors 
+and their allies. On his return to Germany he made peace with France at Frankfurt in July 1489, and in 
+October several of the states of the Netherlands recognized him as their ruler and as guardian of his 
+son. In March 1490 the county of Tirol was added to his possessions through the abdication of his kinsman, 
+Count Sigismund, and this district soon became his favorite residence.[PARAGRAPH:2]In August 1493 the 
+death of the emperor left Maximilian sole ruler of Germany and head of the house of Habsburg; and on 
+the 16th of March 1494 he married at Innsbruck Bianca Maria Sforza, daughter of Galeazzo Sforza, Duke 
+of Milan (d. 1476). At this time Bianca's uncle, Ludovico Sforza, was invested with the Duchy of Milan 
+in return for the substantial dowry which his niece brought to the king.[PARAGRAPH:2]Maximilian harbored 
+the idea of driving the Turks from Europe; but his appeal to all Christian sovereigns was ineffectual. 
+In 1494 he was again in the Netherlands, where he led an expedition against the rebels of Gelderland, 
+assisted Perkin Warbeck to make a descent upon England, and formally handed over the government of the 
+Low Countries to Philip. His attention was next turned to Italy, and, alarmed at the progress of Charles 
+VIII in the peninsula, he signed the league of Venice in March 1495, and about the same time arranged 
+a marriage between his son Philip and Joanna, daughter of Ferdinand and Queen Isabella, king and queen 
+of Castile and Aragon. The need for help to prosecute the war in Italy caused the king to call the diet 
+to Worms in March 1495, when he urged the necessity of checking the progress of Charles. As during his 
+father's lifetime Maximilian had favored the reforming party among the princes, proposals for the better 
+government of the empire were brought forward at Worms as a necessary preliminary to financial and military 
+support. Some reforms were adopted, the public peace was proclaimed without any limitation of time and 
+a general tax was levied.[PARAGRAPH:2]The three succeeding years were mainly occupied with quarrels with 
+the diet, with two invasions of France, and a war in Gelderland against Charles, count of Egmont, who 
+claimed that duchy, and was supported by French troops. The reforms of 1495 were rendered abortive by 
+the refusal of Maximilian to attend the diets or to take any part in the working of the new constitution, 
+and in 1497 he strengthened his own authority by establishing an Aulic Council (Reichshofrath), which 
+he declared was competent to deal with all business of the empire, and about the same time set up a court 
+to centralize the financial administration of Germany.[PARAGRAPH:2]In February 1499 the king became involved 
+in a war with the Swiss, who had refused to pay the imperial taxes or to furnish a contribution for the 
+Italian expedition. Aided by France they defeated the German troops, and the peace of Basel in September 
+1499 recognized them as virtually independent of the empire. About this time Maximilian's ally, Ludovico 
+of Milan, was taken prisoner by Louis XII, King of France, and Maximilian was again compelled to ask 
+the diet for help. An elaborate scheme for raising an army was agreed to, and in return a council of 
+regency (Reichsregiment) was established, which amounted, in the words of a Venetian envoy, to a deposition 
+of the king. The relations were now very strained between the reforming princes and Maximilian, who, 
+unable to raise an army, refused to attend the meetings of the council at Nuremberg, while both parties 
+treated for peace with France. The hostility of the king rendered the council impotent. He was successful 
+in winning the support of many of the younger princes, and in establishing a new court of justice, the 
+members of which were named by himself. The negotiations with France ended in the treaty of Blois, signed 
+in September 1504, when Maximilian's grandson Charles was betrothed to Claude, daughter of Louis XII, 
+and Louis, invested with the Duchy of Milan, agreed to aid the king of the Romans to secure the imperial 
+crown. A succession difficulty in Bavaria-Landshut was only decided after Maximilian had taken up arms 
+and narrowly escaped with his life at Regensburg. In the settlement of this question, made in 1505, he 
+secured a considerable increase of territory, and when the king met the diet at Cologne in 1505 he was 
+at the height of his power. His enemies at home were crushed, and their leader, Berthold, elector of 
+Mainz, was dead; while the outlook abroad was more favorable than it had been since his accession.</English>
+		<French>[H1]Maximilian I[\H1][NEWLINE][BOLD]Holy Roman Emperor[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] March 
+22, 1459 - January 12, 1519 AD[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Maximilian 
+I, Holy Roman emperor, son of the emperor Frederick III and Leonora, daughter of Edward, King of Portugal, 
+was born at Vienna Neustadt on the 22nd of March 1459. On the 18th of August 1477, by his marriage at 
+Ghent to Mary, who had just inherited Burgundy and the Netherlands from her father Charles the Bold, 
+Duke of Burgundy, he effected a union of great importance in the history of the house of Habsburg. He 
+at once undertook the defense of his wife's dominions from an attack by Louis XI, king of France, and 
+defeated the French forces at Guinegatte, the modern Enguinegatte, on the 7th of August 1479. But Maximilian 
+was regarded with suspicion by the states of Netherlands, and after suppressing a rising in Gelderland 
+his position was further weakened by the death of his wife on the 27th of March 1482. He claimed to be 
+recognized as guardian of his young son Philip and as regent of the Netherlands, but some of the states 
+refused to agree to his demands and disorder was general. Maximilian was compelled to assent to the treaty 
+of Arras in 1482 between the states of the Netherlands and Louis XI. This treaty provided that Maximilian's 
+daughter Margaret of Austria should marry Charles, the dauphin of France, and have for her dowry Artois 
+and Franche-Comté, two of the provinces in dispute, while the claim of Louis on the Duchy of Burgundy 
+was tacitly admitted. Maximilian did not, however, abandon the struggle in the Netherlands. Having crushed 
+a rebellion at Utrecht, he compelled the burghers of Ghent to restore Philip to him in 1485, and returning 
+to Germany was chosen king of the Romans, or German king, at Frankfurt on the 16th of February 1486, 
+and crowned at Aix-la-Chapelle on the 9th of the following April. Again in the Netherlands, he made a 
+treaty with Francis II, Duke of Brittany, whose independence was threatened by the French regent, Anne 
+of Beaujeu, and the struggle with France was soon renewed. This war was very unpopular with the trading 
+cities of the Netherlands, and early in 1488 Maximilian, having entered Bruges, was detained there as 
+a prisoner for nearly three months, and only set at liberty on the approach of his father with a large 
+force. On his release he had promised he would maintain the treaty of Arras and withdraw from the Netherlands; 
+but he delayed his departure for nearly a year and took part in a punitive campaign against his captors 
+and their allies. On his return to Germany he made peace with France at Frankfurt in July 1489, and in 
+October several of the states of the Netherlands recognized him as their ruler and as guardian of his 
+son. In March 1490 the county of Tirol was added to his possessions through the abdication of his kinsman, 
+Count Sigismund, and this district soon became his favorite residence.[PARAGRAPH:2]In August 1493 the 
+death of the emperor left Maximilian sole ruler of Germany and head of the house of Habsburg; and on 
+the 16th of March 1494 he married at Innsbruck Bianca Maria Sforza, daughter of Galeazzo Sforza, Duke 
+of Milan (d. 1476). At this time Bianca's uncle, Ludovico Sforza, was invested with the Duchy of Milan 
+in return for the substantial dowry which his niece brought to the king.[PARAGRAPH:2]Maximilian harbored 
+the idea of driving the Turks from Europe; but his appeal to all Christian sovereigns was ineffectual. 
+In 1494 he was again in the Netherlands, where he led an expedition against the rebels of Gelderland, 
+assisted Perkin Warbeck to make a descent upon England, and formally handed over the government of the 
+Low Countries to Philip. His attention was next turned to Italy, and, alarmed at the progress of Charles 
+VIII in the peninsula, he signed the league of Venice in March 1495, and about the same time arranged 
+a marriage between his son Philip and Joanna, daughter of Ferdinand and Queen Isabella, king and queen 
+of Castile and Aragon. The need for help to prosecute the war in Italy caused the king to call the diet 
+to Worms in March 1495, when he urged the necessity of checking the progress of Charles. As during his 
+father's lifetime Maximilian had favored the reforming party among the princes, proposals for the better 
+government of the empire were brought forward at Worms as a necessary preliminary to financial and military 
+support. Some reforms were adopted, the public peace was proclaimed without any limitation of time and 
+a general tax was levied.[PARAGRAPH:2]The three succeeding years were mainly occupied with quarrels with 
+the diet, with two invasions of France, and a war in Gelderland against Charles, count of Egmont, who 
+claimed that duchy, and was supported by French troops. The reforms of 1495 were rendered abortive by 
+the refusal of Maximilian to attend the diets or to take any part in the working of the new constitution, 
+and in 1497 he strengthened his own authority by establishing an Aulic Council (Reichshofrath), which 
+he declared was competent to deal with all business of the empire, and about the same time set up a court 
+to centralize the financial administration of Germany.[PARAGRAPH:2]In February 1499 the king became involved 
+in a war with the Swiss, who had refused to pay the imperial taxes or to furnish a contribution for the 
+Italian expedition. Aided by France they defeated the German troops, and the peace of Basel in September 
+1499 recognized them as virtually independent of the empire. About this time Maximilian's ally, Ludovico 
+of Milan, was taken prisoner by Louis XII, King of France, and Maximilian was again compelled to ask 
+the diet for help. An elaborate scheme for raising an army was agreed to, and in return a council of 
+regency (Reichsregiment) was established, which amounted, in the words of a Venetian envoy, to a deposition 
+of the king. The relations were now very strained between the reforming princes and Maximilian, who, 
+unable to raise an army, refused to attend the meetings of the council at Nuremberg, while both parties 
+treated for peace with France. The hostility of the king rendered the council impotent. He was successful 
+in winning the support of many of the younger princes, and in establishing a new court of justice, the 
+members of which were named by himself. The negotiations with France ended in the treaty of Blois, signed 
+in September 1504, when Maximilian's grandson Charles was betrothed to Claude, daughter of Louis XII, 
+and Louis, invested with the Duchy of Milan, agreed to aid the king of the Romans to secure the imperial 
+crown. A succession difficulty in Bavaria-Landshut was only decided after Maximilian had taken up arms 
+and narrowly escaped with his life at Regensburg. In the settlement of this question, made in 1505, he 
+secured a considerable increase of territory, and when the king met the diet at Cologne in 1505 he was 
+at the height of his power. His enemies at home were crushed, and their leader, Berthold, elector of 
+Mainz, was dead; while the outlook abroad was more favorable than it had been since his accession.</French>
+		<German>[H1]Maximilian I[\H1][NEWLINE][BOLD]Holy Roman Emperor[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] March 
+22, 1459 - January 12, 1519 AD[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Maximilian 
+I, Holy Roman emperor, son of the emperor Frederick III and Leonora, daughter of Edward, King of Portugal, 
+was born at Vienna Neustadt on the 22nd of March 1459. On the 18th of August 1477, by his marriage at 
+Ghent to Mary, who had just inherited Burgundy and the Netherlands from her father Charles the Bold, 
+Duke of Burgundy, he effected a union of great importance in the history of the house of Habsburg. He 
+at once undertook the defense of his wife's dominions from an attack by Louis XI, king of France, and 
+defeated the French forces at Guinegatte, the modern Enguinegatte, on the 7th of August 1479. But Maximilian 
+was regarded with suspicion by the states of Netherlands, and after suppressing a rising in Gelderland 
+his position was further weakened by the death of his wife on the 27th of March 1482. He claimed to be 
+recognized as guardian of his young son Philip and as regent of the Netherlands, but some of the states 
+refused to agree to his demands and disorder was general. Maximilian was compelled to assent to the treaty 
+of Arras in 1482 between the states of the Netherlands and Louis XI. This treaty provided that Maximilian's 
+daughter Margaret of Austria should marry Charles, the dauphin of France, and have for her dowry Artois 
+and Franche-Comté, two of the provinces in dispute, while the claim of Louis on the Duchy of Burgundy 
+was tacitly admitted. Maximilian did not, however, abandon the struggle in the Netherlands. Having crushed 
+a rebellion at Utrecht, he compelled the burghers of Ghent to restore Philip to him in 1485, and returning 
+to Germany was chosen king of the Romans, or German king, at Frankfurt on the 16th of February 1486, 
+and crowned at Aix-la-Chapelle on the 9th of the following April. Again in the Netherlands, he made a 
+treaty with Francis II, Duke of Brittany, whose independence was threatened by the French regent, Anne 
+of Beaujeu, and the struggle with France was soon renewed. This war was very unpopular with the trading 
+cities of the Netherlands, and early in 1488 Maximilian, having entered Bruges, was detained there as 
+a prisoner for nearly three months, and only set at liberty on the approach of his father with a large 
+force. On his release he had promised he would maintain the treaty of Arras and withdraw from the Netherlands; 
+but he delayed his departure for nearly a year and took part in a punitive campaign against his captors 
+and their allies. On his return to Germany he made peace with France at Frankfurt in July 1489, and in 
+October several of the states of the Netherlands recognized him as their ruler and as guardian of his 
+son. In March 1490 the county of Tirol was added to his possessions through the abdication of his kinsman, 
+Count Sigismund, and this district soon became his favorite residence.[PARAGRAPH:2]In August 1493 the 
+death of the emperor left Maximilian sole ruler of Germany and head of the house of Habsburg; and on 
+the 16th of March 1494 he married at Innsbruck Bianca Maria Sforza, daughter of Galeazzo Sforza, Duke 
+of Milan (d. 1476). At this time Bianca's uncle, Ludovico Sforza, was invested with the Duchy of Milan 
+in return for the substantial dowry which his niece brought to the king.[PARAGRAPH:2]Maximilian harbored 
+the idea of driving the Turks from Europe; but his appeal to all Christian sovereigns was ineffectual. 
+In 1494 he was again in the Netherlands, where he led an expedition against the rebels of Gelderland, 
+assisted Perkin Warbeck to make a descent upon England, and formally handed over the government of the 
+Low Countries to Philip. His attention was next turned to Italy, and, alarmed at the progress of Charles 
+VIII in the peninsula, he signed the league of Venice in March 1495, and about the same time arranged 
+a marriage between his son Philip and Joanna, daughter of Ferdinand and Queen Isabella, king and queen 
+of Castile and Aragon. The need for help to prosecute the war in Italy caused the king to call the diet 
+to Worms in March 1495, when he urged the necessity of checking the progress of Charles. As during his 
+father's lifetime Maximilian had favored the reforming party among the princes, proposals for the better 
+government of the empire were brought forward at Worms as a necessary preliminary to financial and military 
+support. Some reforms were adopted, the public peace was proclaimed without any limitation of time and 
+a general tax was levied.[PARAGRAPH:2]The three succeeding years were mainly occupied with quarrels with 
+the diet, with two invasions of France, and a war in Gelderland against Charles, count of Egmont, who 
+claimed that duchy, and was supported by French troops. The reforms of 1495 were rendered abortive by 
+the refusal of Maximilian to attend the diets or to take any part in the working of the new constitution, 
+and in 1497 he strengthened his own authority by establishing an Aulic Council (Reichshofrath), which 
+he declared was competent to deal with all business of the empire, and about the same time set up a court 
+to centralize the financial administration of Germany.[PARAGRAPH:2]In February 1499 the king became involved 
+in a war with the Swiss, who had refused to pay the imperial taxes or to furnish a contribution for the 
+Italian expedition. Aided by France they defeated the German troops, and the peace of Basel in September 
+1499 recognized them as virtually independent of the empire. About this time Maximilian's ally, Ludovico 
+of Milan, was taken prisoner by Louis XII, King of France, and Maximilian was again compelled to ask 
+the diet for help. An elaborate scheme for raising an army was agreed to, and in return a council of 
+regency (Reichsregiment) was established, which amounted, in the words of a Venetian envoy, to a deposition 
+of the king. The relations were now very strained between the reforming princes and Maximilian, who, 
+unable to raise an army, refused to attend the meetings of the council at Nuremberg, while both parties 
+treated for peace with France. The hostility of the king rendered the council impotent. He was successful 
+in winning the support of many of the younger princes, and in establishing a new court of justice, the 
+members of which were named by himself. The negotiations with France ended in the treaty of Blois, signed 
+in September 1504, when Maximilian's grandson Charles was betrothed to Claude, daughter of Louis XII, 
+and Louis, invested with the Duchy of Milan, agreed to aid the king of the Romans to secure the imperial 
+crown. A succession difficulty in Bavaria-Landshut was only decided after Maximilian had taken up arms 
+and narrowly escaped with his life at Regensburg. In the settlement of this question, made in 1505, he 
+secured a considerable increase of territory, and when the king met the diet at Cologne in 1505 he was 
+at the height of his power. His enemies at home were crushed, and their leader, Berthold, elector of 
+Mainz, was dead; while the outlook abroad was more favorable than it had been since his accession.</German>
+		<Italian>[H1]Maximilian I[\H1][NEWLINE][BOLD]Holy Roman Emperor[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] 
+March 22, 1459 - January 12, 1519 AD[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Maximilian 
+I, Holy Roman emperor, son of the emperor Frederick III and Leonora, daughter of Edward, King of Portugal, 
+was born at Vienna Neustadt on the 22nd of March 1459. On the 18th of August 1477, by his marriage at 
+Ghent to Mary, who had just inherited Burgundy and the Netherlands from her father Charles the Bold, 
+Duke of Burgundy, he effected a union of great importance in the history of the house of Habsburg. He 
+at once undertook the defense of his wife's dominions from an attack by Louis XI, king of France, and 
+defeated the French forces at Guinegatte, the modern Enguinegatte, on the 7th of August 1479. But Maximilian 
+was regarded with suspicion by the states of Netherlands, and after suppressing a rising in Gelderland 
+his position was further weakened by the death of his wife on the 27th of March 1482. He claimed to be 
+recognized as guardian of his young son Philip and as regent of the Netherlands, but some of the states 
+refused to agree to his demands and disorder was general. Maximilian was compelled to assent to the treaty 
+of Arras in 1482 between the states of the Netherlands and Louis XI. This treaty provided that Maximilian's 
+daughter Margaret of Austria should marry Charles, the dauphin of France, and have for her dowry Artois 
+and Franche-Comté, two of the provinces in dispute, while the claim of Louis on the Duchy of Burgundy 
+was tacitly admitted. Maximilian did not, however, abandon the struggle in the Netherlands. Having crushed 
+a rebellion at Utrecht, he compelled the burghers of Ghent to restore Philip to him in 1485, and returning 
+to Germany was chosen king of the Romans, or German king, at Frankfurt on the 16th of February 1486, 
+and crowned at Aix-la-Chapelle on the 9th of the following April. Again in the Netherlands, he made a 
+treaty with Francis II, Duke of Brittany, whose independence was threatened by the French regent, Anne 
+of Beaujeu, and the struggle with France was soon renewed. This war was very unpopular with the trading 
+cities of the Netherlands, and early in 1488 Maximilian, having entered Bruges, was detained there as 
+a prisoner for nearly three months, and only set at liberty on the approach of his father with a large 
+force. On his release he had promised he would maintain the treaty of Arras and withdraw from the Netherlands; 
+but he delayed his departure for nearly a year and took part in a punitive campaign against his captors 
+and their allies. On his return to Germany he made peace with France at Frankfurt in July 1489, and in 
+October several of the states of the Netherlands recognized him as their ruler and as guardian of his 
+son. In March 1490 the county of Tirol was added to his possessions through the abdication of his kinsman, 
+Count Sigismund, and this district soon became his favorite residence.[PARAGRAPH:2]In August 1493 the 
+death of the emperor left Maximilian sole ruler of Germany and head of the house of Habsburg; and on 
+the 16th of March 1494 he married at Innsbruck Bianca Maria Sforza, daughter of Galeazzo Sforza, Duke 
+of Milan (d. 1476). At this time Bianca's uncle, Ludovico Sforza, was invested with the Duchy of Milan 
+in return for the substantial dowry which his niece brought to the king.[PARAGRAPH:2]Maximilian harbored 
+the idea of driving the Turks from Europe; but his appeal to all Christian sovereigns was ineffectual. 
+In 1494 he was again in the Netherlands, where he led an expedition against the rebels of Gelderland, 
+assisted Perkin Warbeck to make a descent upon England, and formally handed over the government of the 
+Low Countries to Philip. His attention was next turned to Italy, and, alarmed at the progress of Charles 
+VIII in the peninsula, he signed the league of Venice in March 1495, and about the same time arranged 
+a marriage between his son Philip and Joanna, daughter of Ferdinand and Queen Isabella, king and queen 
+of Castile and Aragon. The need for help to prosecute the war in Italy caused the king to call the diet 
+to Worms in March 1495, when he urged the necessity of checking the progress of Charles. As during his 
+father's lifetime Maximilian had favored the reforming party among the princes, proposals for the better 
+government of the empire were brought forward at Worms as a necessary preliminary to financial and military 
+support. Some reforms were adopted, the public peace was proclaimed without any limitation of time and 
+a general tax was levied.[PARAGRAPH:2]The three succeeding years were mainly occupied with quarrels with 
+the diet, with two invasions of France, and a war in Gelderland against Charles, count of Egmont, who 
+claimed that duchy, and was supported by French troops. The reforms of 1495 were rendered abortive by 
+the refusal of Maximilian to attend the diets or to take any part in the working of the new constitution, 
+and in 1497 he strengthened his own authority by establishing an Aulic Council (Reichshofrath), which 
+he declared was competent to deal with all business of the empire, and about the same time set up a court 
+to centralize the financial administration of Germany.[PARAGRAPH:2]In February 1499 the king became involved 
+in a war with the Swiss, who had refused to pay the imperial taxes or to furnish a contribution for the 
+Italian expedition. Aided by France they defeated the German troops, and the peace of Basel in September 
+1499 recognized them as virtually independent of the empire. About this time Maximilian's ally, Ludovico 
+of Milan, was taken prisoner by Louis XII, King of France, and Maximilian was again compelled to ask 
+the diet for help. An elaborate scheme for raising an army was agreed to, and in return a council of 
+regency (Reichsregiment) was established, which amounted, in the words of a Venetian envoy, to a deposition 
+of the king. The relations were now very strained between the reforming princes and Maximilian, who, 
+unable to raise an army, refused to attend the meetings of the council at Nuremberg, while both parties 
+treated for peace with France. The hostility of the king rendered the council impotent. He was successful 
+in winning the support of many of the younger princes, and in establishing a new court of justice, the 
+members of which were named by himself. The negotiations with France ended in the treaty of Blois, signed 
+in September 1504, when Maximilian's grandson Charles was betrothed to Claude, daughter of Louis XII, 
+and Louis, invested with the Duchy of Milan, agreed to aid the king of the Romans to secure the imperial 
+crown. A succession difficulty in Bavaria-Landshut was only decided after Maximilian had taken up arms 
+and narrowly escaped with his life at Regensburg. In the settlement of this question, made in 1505, he 
+secured a considerable increase of territory, and when the king met the diet at Cologne in 1505 he was 
+at the height of his power. His enemies at home were crushed, and their leader, Berthold, elector of 
+Mainz, was dead; while the outlook abroad was more favorable than it had been since his accession.</Italian>
+		<Spanish>Maximiliano I de Habsburgo (Wiener Neustadt, Austria, 22 de marzo de 1459 - Wels, 12 de enero 
+de 1519), rey de Romanos y emperador electo del Sacro Imperio Romano Germánico de 1486 hasta su muerte.Archiduque 
+de Austria. Hijo del emperador Federico III y Leonor de Avis, se casó con la heredera de la Casa de Borgoña, 
+la Duquesa María, hija única de Carlos el Temerario.En 1494, al año siguiente de la muerte de su padre, 
+el emperador Federico III comenzó la intervención de Francia en Italia, iniciando un largo ciclo de conflictos. 
+Se alía con Venecia en 1495 y luego con la Santa Liga en 1511 para contener a los franceses.En 1508 se 
+proclama emperador electo del Sacro Imperio, con la autorización del papa Julio II.Maximiliano es más 
+conocido probablemente por llevar a cabo la reforma de la Dieta de Worms que concluyó la Reforma imperial 
+(Reichsreform) modificando una parte muy grande de la constitución del Imperio.A fin de reducir las presiones 
+crecientes a que estaban sometidos sus territorios por los tratados hechos entre los reyes de Francia, 
+Polonia, Hungría, Bohemia y Rusia, así como para asegurar Bohemia y Hungría para los Habsburgo, Maximiliano 
+se reúne con los reyes de la dinastía Jagellón Vladislao II, rey de Hungría y de Bohemia, y Segismundo 
+I de Polonia en Viena en 1515. Diez años más tarde, puso bajo el control de los Habsburgo al reino de 
+Hungría y de Bohemia mediante matrimonios concertados.Murió el 12 de enero de 1519 a los 59 años, en 
+Wels, Austria. Tras su muerte fue elegido su nieto Carlos V como rey de Romanos.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_MAXIMILIAN_1</Tag>
+		<English>I am Maximilian. My titles would take all day. Let us have a good old joust instead.</English>
+		<French>I am Maximilian. My titles would take all day. Let us have a good old joust instead.</French>
+		<German>Ich bin Maximilian. Das Aufzählen meiner Titel würde den ganzen Tag dauern, lass uns stattdessen eine Tjost abhalten.</German>
+		<Italian>I am Maximilian. My titles would take all day. Let us have a good old joust instead.</Italian>
+		<Spanish>Llamame simplemente Maximiliano, mis titulos nos llevarian todo el dia. En lugar de eso disfrutemos de una justa a la antigua usanza.</Spanish>
+	</TEXT>
+</Civ4GameText>

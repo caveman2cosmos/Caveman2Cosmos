@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- Modified by the Civ Gold Team -->
+<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_URUGUAY_DESC</Tag>
+		<English>Uruguayan Empire</English>
+		<French>Uruguayan Empire</French>
+		<German>Uruguayan Empire</German>
+		<Italian>Uruguayan Empire</Italian>
+		<Spanish>Uruguayan Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_URUGUAY_SHORT_DESC</Tag>
+		<English>Uruguay</English>
+		<French>Uruguay</French>
+		<German>Uruguay</German>
+		<Italian>Uruguay</Italian>
+		<Spanish>Uruguay</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_URUGUAY_ADJECTIVE</Tag>
+		<English>Uruguayan</English>
+		<French>Uruguayan</French>
+		<German>Uruguayan</German>
+		<Italian>Uruguayan</Italian>
+		<Spanish>Uruguayan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_URUGUAY_PEDIA</Tag>
+		<English>[TAB]Uruguay, officially the República Oriental del Uruguay (Eastern Republic of Uruguay), is a country in the southeastern region of South America. It is bordered by Argentina to its west and Brazil to its north and east, with the Atlantic Ocean to the south and southeast. Uruguay is home to 3.3 million people,[1] of whom 1.8 million live in the metropolitan area of its capital and largest city, Montevideo. With an area of approximately 176,000 square kilometres (68,000 sq mi), Uruguay is geographically the second-smallest nation in South America after Suriname.</English>
+		<French>[TAB]Uruguay, officially the República Oriental del Uruguay (Eastern Republic of Uruguay), is a country in the southeastern region of South America. It is bordered by Argentina to its west and Brazil to its north and east, with the Atlantic Ocean to the south and southeast. Uruguay is home to 3.3 million people,[1] of whom 1.8 million live in the metropolitan area of its capital and largest city, Montevideo. With an area of approximately 176,000 square kilometres (68,000 sq mi), Uruguay is geographically the second-smallest nation in South America after Suriname.</French>
+		<German>[TAB]Uruguay, officially the República Oriental del Uruguay (Eastern Republic of Uruguay), is a country in the southeastern region of South America. It is bordered by Argentina to its west and Brazil to its north and east, with the Atlantic Ocean to the south and southeast. Uruguay is home to 3.3 million people,[1] of whom 1.8 million live in the metropolitan area of its capital and largest city, Montevideo. With an area of approximately 176,000 square kilometres (68,000 sq mi), Uruguay is geographically the second-smallest nation in South America after Suriname.</German>
+		<Italian>[TAB]Uruguay, officially the República Oriental del Uruguay (Eastern Republic of Uruguay), is a country in the southeastern region of South America. It is bordered by Argentina to its west and Brazil to its north and east, with the Atlantic Ocean to the south and southeast. Uruguay is home to 3.3 million people,[1] of whom 1.8 million live in the metropolitan area of its capital and largest city, Montevideo. With an area of approximately 176,000 square kilometres (68,000 sq mi), Uruguay is geographically the second-smallest nation in South America after Suriname.</Italian>
+		<Spanish>[TAB]Uruguay, officially the República Oriental del Uruguay (Eastern Republic of Uruguay), is a country in the southeastern region of South America. It is bordered by Argentina to its west and Brazil to its north and east, with the Atlantic Ocean to the south and southeast. Uruguay is home to 3.3 million people,[1] of whom 1.8 million live in the metropolitan area of its capital and largest city, Montevideo. With an area of approximately 176,000 square kilometres (68,000 sq mi), Uruguay is geographically the second-smallest nation in South America after Suriname.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_MUJICA</Tag>
+		<English>José Mujica</English>
+		<French>José Mujica</French>
+		<German>José Mujica</German>
+		<Italian>José Mujica</Italian>
+		<Spanish>José Mujica</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_MUJICA_PEDIA</Tag>
+		<English>[H1]José Mujica [\H1][NEWLINE][BOLD]President of Uruguay[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] born 20 May 1935[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]José Alberto "Pepe" Mujica Cordano is a Uruguayan politician who was President of Uruguay between 2010 and 2015. A former urban guerrilla fighter with the Tupamaros, he was imprisoned for 13 years during the military dictatorship in the 1970s and 1980s. A member of the Broad Front coalition of left-wing parties, Mujica was Minister of Livestock, Agriculture, and Fisheries from 2005 to 2008 and a Senator afterwards. As the candidate of the Broad Front, he won the 2009 presidential election and took office as President on 1 March 2010.</English>
+		<French>[H1]José Mujica [\H1][NEWLINE][BOLD]President of Uruguay[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] born 20 May 1935[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]José Alberto "Pepe" Mujica Cordano is a Uruguayan politician who was President of Uruguay between 2010 and 2015. A former urban guerrilla fighter with the Tupamaros, he was imprisoned for 13 years during the military dictatorship in the 1970s and 1980s. A member of the Broad Front coalition of left-wing parties, Mujica was Minister of Livestock, Agriculture, and Fisheries from 2005 to 2008 and a Senator afterwards. As the candidate of the Broad Front, he won the 2009 presidential election and took office as President on 1 March 2010.</French>
+		<German>[H1]José Mujica [\H1][NEWLINE][BOLD]President of Uruguay[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] born 20 May 1935[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]José Alberto "Pepe" Mujica Cordano is a Uruguayan politician who was President of Uruguay between 2010 and 2015. A former urban guerrilla fighter with the Tupamaros, he was imprisoned for 13 years during the military dictatorship in the 1970s and 1980s. A member of the Broad Front coalition of left-wing parties, Mujica was Minister of Livestock, Agriculture, and Fisheries from 2005 to 2008 and a Senator afterwards. As the candidate of the Broad Front, he won the 2009 presidential election and took office as President on 1 March 2010.</German>
+		<Italian>[H1]José Mujica [\H1][NEWLINE][BOLD]President of Uruguay[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] born 20 May 1935[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]José Alberto "Pepe" Mujica Cordano is a Uruguayan politician who was President of Uruguay between 2010 and 2015. A former urban guerrilla fighter with the Tupamaros, he was imprisoned for 13 years during the military dictatorship in the 1970s and 1980s. A member of the Broad Front coalition of left-wing parties, Mujica was Minister of Livestock, Agriculture, and Fisheries from 2005 to 2008 and a Senator afterwards. As the candidate of the Broad Front, he won the 2009 presidential election and took office as President on 1 March 2010.</Italian>
+		<Spanish>[H1]José Mujica [\H1][NEWLINE][BOLD]President of Uruguay[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] born 20 May 1935[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]José Alberto "Pepe" Mujica Cordano is a Uruguayan politician who was President of Uruguay between 2010 and 2015. A former urban guerrilla fighter with the Tupamaros, he was imprisoned for 13 years during the military dictatorship in the 1970s and 1980s. A member of the Broad Front coalition of left-wing parties, Mujica was Minister of Livestock, Agriculture, and Fisheries from 2005 to 2008 and a Senator afterwards. As the candidate of the Broad Front, he won the 2009 presidential election and took office as President on 1 March 2010.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_MUJICA_1</Tag>
+		<English>Welcome [CT_NAME]. I have found yet another friend here. And with such a friend we will together form a team, like a soccer team. This will be a fighting team.</English>
+		<French>Welcome [CT_NAME]. I have found yet another friend here. And with such a friend we will together form a team, like a soccer team. This will be a fighting team.</French>
+		<German>Welcome [CT_NAME]. I have found yet another friend here. And with such a friend we will together form a team, like a soccer team. This will be a fighting team.</German>
+		<Italian>Welcome [CT_NAME]. I have found yet another friend here. And with such a friend we will together form a team, like a soccer team. This will be a fighting team.</Italian>
+		<Spanish>Welcome [CT_NAME]. I have found yet another friend here. And with such a friend we will together form a team, like a soccer team. This will be a fighting team.</Spanish>
+	</TEXT>
+</Civ4GameText>

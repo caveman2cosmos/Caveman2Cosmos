@@ -1,0 +1,107 @@
+﻿<?xml version="1.0"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- ReModified by the StrategyOnly -->
+<!-- -->
+<!-- Civilization Infos -->
+<Civ4CivilizationInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4CivilizationsSchema.xml">
+	<CivilizationInfos>
+		<CivilizationInfo>
+			<Type>CIVILIZATION_ROMANIA</Type>
+			<Description>TXT_KEY_CIV_ROMANIA_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_ROMANIA_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_ROMANIA_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_ROMANIA_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_ROMANIA</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_ROMANIA</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_EUROPEAN</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_EUROPEAN</UnitArtStyleType>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>Bucuresti</City>
+				<City>Iasi</City>
+				<City>Cluj-Napoca</City>
+				<City>Timisoara</City>
+				<City>Constanta</City>
+				<City>Craiova</City>
+				<City>Galati</City>
+				<City>Brasov</City>
+				<City>Ploiesti</City>
+				<City>Sibiu</City>
+				<City>Sighisoara</City>
+				<City>Braila</City>
+				<City>Oradea</City>
+				<City>Bacau</City>
+				<City>Arad</City>
+				<City>Alba Iulia</City>
+				<City>Pitesti</City>
+				<City>Târgu Mures</City>
+				<City>Deva</City>
+				<City>Hunnedoara</City>
+				<City>Baia Mare</City>
+				<City>TXT_KEY_CITY_NAME_BUZAU</City>
+				<City>TXT_KEY_CITY_NAME_SATUMARE</City>
+				<City>Medias</City>
+				<City>TXT_KEY_CITY_NAME_BOTOSANI</City>
+				<City>TXT_KEY_CITY_NAME_RAMNICUVALCEA</City>
+				<City>TXT_KEY_CITY_NAME_SUSEAVA</City>
+				<City>TXT_KEY_CITY_NAME_PIATRANEAMT</City>
+				<City>Rasnov</City>
+				<City>TXT_KEY_CITY_NAME_DROBETATURNUSEVERIN</City>
+				<City>TXT_KEY_CITY_NAME_FOCSANI</City>
+				<City>TXT_KEY_CITY_NAME_TARGUJIU</City>
+				<City>Rupea</City>
+				<City>TXT_KEY_CITY_NAME_TALCEA</City>
+				<City>Beirtan</City>
+				<City>Agnita</City>
+				<City>Tecuci</City>
+				<City>Petrila</City>
+				<City>Carta</City>
+				<City>Pogoanele</City>
+				<City>Cristesi</City>
+				<City>Zemes</City>
+				<City>Zlatna</City>
+				<City>Brad</City>
+				<City>Galbinasi</City>
+			</Cities>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
+			<InitialCivics>
+				<CivicType>CIVIC_ANARCHISM</CivicType>
+				<CivicType>CIVIC_OBEDIENCE</CivicType>
+				<CivicType>CIVIC_STRONGMAN</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
+				<CivicType>CIVIC_MILITIA</CivicType>
+				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SURVIVAL</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
+				<CivicType>CIVIC_UNORGANIZED</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_CUZA</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<DerivativeCiv>NONE</DerivativeCiv>
+			<CivilizationSelectionSound>AS3D_ROME_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_ROME_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+	</CivilizationInfos>
+</Civ4CivilizationInfos>

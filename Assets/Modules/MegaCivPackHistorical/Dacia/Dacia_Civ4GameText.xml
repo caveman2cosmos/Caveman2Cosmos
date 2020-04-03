@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- Copyright Firaxis Games 2005 -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_DACIA_DESC</Tag>
+		<English>Dacian Empire</English>
+		<French>Dacian Empire</French>
+		<German>Dacian Empire</German>
+		<Italian>Dacian Empire</Italian>
+		<Spanish>Dacian Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_DACIA_SHORT_DESC</Tag>
+		<English>Dacia</English>
+		<French>Dacia</French>
+		<German>Dacia</German>
+		<Italian>Dacia</Italian>
+		<Spanish>Dacia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_DACIA_ADJECTIVE</Tag>
+		<English>Dacian</English>
+		<French>Dacian</French>
+		<German>Dacian</German>
+		<Italian>Dacian</Italian>
+		<Spanish>Dacian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_DACIA_PEDIA</Tag>
+		<English>[TAB]In ancient geography, especially in Roman sources, Dacia was the land inhabited by the 
+Dacians. The Greeks referred to them as the Getae, which were specifically a branch of the Thracians 
+north of the Haemus range. Dacia was bounded in the south approximately by the Danubius river (Danube), 
+in Greek sources the Istros, or at its greatest extent, by the Haemus Mons (the Balkan Mountains). Moesia 
+(Dobrogea), a region south of the Danube, was a core area where the Getae lived and interacted with the 
+Ancient Greeks. In the east it was bounded by the Pontus Euxinus (Black Sea) and the river Danastris 
+(Dniester), in Greek sources the Tyras. But several Dacian settlements are recorded between the rivers 
+Dniester and Hypanis (Southern Bug), and the Tisia (Tisza) to the west. At times Dacia included areas 
+between the Tisa and the Middle Danube. The Carpathian Mountains were located in the middle of Dacia. 
+It thus corresponds to the present day countries of Romania and Moldova, as well as smaller parts of 
+Bulgaria, Serbia, Hungary, and Ukraine. Dacians (or Getae) were North Thracian tribes. Dacian tribes 
+had both peaceful and military encounters with other neighboring tribes, such as Sarmatians, Scythians, 
+and Celts. A Dacian Kingdom of variable size existed between 82 BC until the Roman conquest in AD 106. 
+The capital of Dacia, Sarmizegetusa, located in modern Romania, was destroyed by the Romans, but its 
+name was added to that of the new city (Ulpia Traiana Sarmizegetusa) built by the latter to serve as 
+the capital of the Roman province of Dacia.</English>
+		<French>[TAB]In ancient geography, especially in Roman sources, Dacia was the land inhabited by the 
+Dacians. The Greeks referred to them as the Getae, which were specifically a branch of the Thracians 
+north of the Haemus range. Dacia was bounded in the south approximately by the Danubius river (Danube), 
+in Greek sources the Istros, or at its greatest extent, by the Haemus Mons (the Balkan Mountains). Moesia 
+(Dobrogea), a region south of the Danube, was a core area where the Getae lived and interacted with the 
+Ancient Greeks. In the east it was bounded by the Pontus Euxinus (Black Sea) and the river Danastris 
+(Dniester), in Greek sources the Tyras. But several Dacian settlements are recorded between the rivers 
+Dniester and Hypanis (Southern Bug), and the Tisia (Tisza) to the west. At times Dacia included areas 
+between the Tisa and the Middle Danube. The Carpathian Mountains were located in the middle of Dacia. 
+It thus corresponds to the present day countries of Romania and Moldova, as well as smaller parts of 
+Bulgaria, Serbia, Hungary, and Ukraine. Dacians (or Getae) were North Thracian tribes. Dacian tribes 
+had both peaceful and military encounters with other neighboring tribes, such as Sarmatians, Scythians, 
+and Celts. A Dacian Kingdom of variable size existed between 82 BC until the Roman conquest in AD 106. 
+The capital of Dacia, Sarmizegetusa, located in modern Romania, was destroyed by the Romans, but its 
+name was added to that of the new city (Ulpia Traiana Sarmizegetusa) built by the latter to serve as 
+the capital of the Roman province of Dacia.</French>
+		<German>[TAB]In ancient geography, especially in Roman sources, Dacia was the land inhabited by the 
+Dacians. The Greeks referred to them as the Getae, which were specifically a branch of the Thracians 
+north of the Haemus range. Dacia was bounded in the south approximately by the Danubius river (Danube), 
+in Greek sources the Istros, or at its greatest extent, by the Haemus Mons (the Balkan Mountains). Moesia 
+(Dobrogea), a region south of the Danube, was a core area where the Getae lived and interacted with the 
+Ancient Greeks. In the east it was bounded by the Pontus Euxinus (Black Sea) and the river Danastris 
+(Dniester), in Greek sources the Tyras. But several Dacian settlements are recorded between the rivers 
+Dniester and Hypanis (Southern Bug), and the Tisia (Tisza) to the west. At times Dacia included areas 
+between the Tisa and the Middle Danube. The Carpathian Mountains were located in the middle of Dacia. 
+It thus corresponds to the present day countries of Romania and Moldova, as well as smaller parts of 
+Bulgaria, Serbia, Hungary, and Ukraine. Dacians (or Getae) were North Thracian tribes. Dacian tribes 
+had both peaceful and military encounters with other neighboring tribes, such as Sarmatians, Scythians, 
+and Celts. A Dacian Kingdom of variable size existed between 82 BC until the Roman conquest in AD 106. 
+The capital of Dacia, Sarmizegetusa, located in modern Romania, was destroyed by the Romans, but its 
+name was added to that of the new city (Ulpia Traiana Sarmizegetusa) built by the latter to serve as 
+the capital of the Roman province of Dacia.</German>
+		<Italian>[TAB]In ancient geography, especially in Roman sources, Dacia was the land inhabited by the 
+Dacians. The Greeks referred to them as the Getae, which were specifically a branch of the Thracians 
+north of the Haemus range. Dacia was bounded in the south approximately by the Danubius river (Danube), 
+in Greek sources the Istros, or at its greatest extent, by the Haemus Mons (the Balkan Mountains). Moesia 
+(Dobrogea), a region south of the Danube, was a core area where the Getae lived and interacted with the 
+Ancient Greeks. In the east it was bounded by the Pontus Euxinus (Black Sea) and the river Danastris 
+(Dniester), in Greek sources the Tyras. But several Dacian settlements are recorded between the rivers 
+Dniester and Hypanis (Southern Bug), and the Tisia (Tisza) to the west. At times Dacia included areas 
+between the Tisa and the Middle Danube. The Carpathian Mountains were located in the middle of Dacia. 
+It thus corresponds to the present day countries of Romania and Moldova, as well as smaller parts of 
+Bulgaria, Serbia, Hungary, and Ukraine. Dacians (or Getae) were North Thracian tribes. Dacian tribes 
+had both peaceful and military encounters with other neighboring tribes, such as Sarmatians, Scythians, 
+and Celts. A Dacian Kingdom of variable size existed between 82 BC until the Roman conquest in AD 106. 
+The capital of Dacia, Sarmizegetusa, located in modern Romania, was destroyed by the Romans, but its 
+name was added to that of the new city (Ulpia Traiana Sarmizegetusa) built by the latter to serve as 
+the capital of the Roman province of Dacia.</Italian>
+		<Spanish>[TAB]In ancient geography, especially in Roman sources, Dacia was the land inhabited by the 
+Dacians. The Greeks referred to them as the Getae, which were specifically a branch of the Thracians 
+north of the Haemus range. Dacia was bounded in the south approximately by the Danubius river (Danube), 
+in Greek sources the Istros, or at its greatest extent, by the Haemus Mons (the Balkan Mountains). Moesia 
+(Dobrogea), a region south of the Danube, was a core area where the Getae lived and interacted with the 
+Ancient Greeks. In the east it was bounded by the Pontus Euxinus (Black Sea) and the river Danastris 
+(Dniester), in Greek sources the Tyras. But several Dacian settlements are recorded between the rivers 
+Dniester and Hypanis (Southern Bug), and the Tisia (Tisza) to the west. At times Dacia included areas 
+between the Tisa and the Middle Danube. The Carpathian Mountains were located in the middle of Dacia. 
+It thus corresponds to the present day countries of Romania and Moldova, as well as smaller parts of 
+Bulgaria, Serbia, Hungary, and Ukraine. Dacians (or Getae) were North Thracian tribes. Dacian tribes 
+had both peaceful and military encounters with other neighboring tribes, such as Sarmatians, Scythians, 
+and Celts. A Dacian Kingdom of variable size existed between 82 BC until the Roman conquest in AD 106. 
+The capital of Dacia, Sarmizegetusa, located in modern Romania, was destroyed by the Romans, but its 
+name was added to that of the new city (Ulpia Traiana Sarmizegetusa) built by the latter to serve as 
+the capital of the Roman province of Dacia.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_DECEBALUS</Tag>
+		<English>Decebalus</English>
+		<French>Decebalus</French>
+		<German>Decebalus</German>
+		<Italian>Decebalus</Italian>
+		<Spanish>Decebalus</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_DECEBALUS_PEDIA</Tag>
+		<English>[H1]Decebalus [\H1][NEWLINE][BOLD]King of Dacia[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 87-106 
+AD[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Decebalus (ruled 87-106) was the last king 
+of Dacia. He is famous for fighting three wars, with varying success, against the Roman Empire under 
+two emperors. After raiding across the Danube, he defeated a Roman invasion in the reign of Domitian, 
+securing a period of independence during which Decebalus consolidated his power. When Trajan came to 
+power, he invaded Dacia to weaken its threat to Roman border territory. Decebalus was defeated. He remained 
+in power as a client king, but continued to assert his independence, leading to a final and overwhelming 
+Roman invasion in 105. Trajan reduced the Dacian capital Sarmizegetusa in 106, absorbing Dacia into the 
+Empire. Decebalus committed suicide to avoid capture. Since the mid 19th century Decebalus has been portrayed 
+as a national hero in Romania, the modern successor to ancient Dacia. There are several monuments depicting 
+him.</English>
+		<French>[H1]Decebalus [\H1][NEWLINE][BOLD]King of Dacia[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 87-106 
+AD[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Decebalus (ruled 87-106) was the last king 
+of Dacia. He is famous for fighting three wars, with varying success, against the Roman Empire under 
+two emperors. After raiding across the Danube, he defeated a Roman invasion in the reign of Domitian, 
+securing a period of independence during which Decebalus consolidated his power. When Trajan came to 
+power, he invaded Dacia to weaken its threat to Roman border territory. Decebalus was defeated. He remained 
+in power as a client king, but continued to assert his independence, leading to a final and overwhelming 
+Roman invasion in 105. Trajan reduced the Dacian capital Sarmizegetusa in 106, absorbing Dacia into the 
+Empire. Decebalus committed suicide to avoid capture. Since the mid 19th century Decebalus has been portrayed 
+as a national hero in Romania, the modern successor to ancient Dacia. There are several monuments depicting 
+him.</French>
+		<German>[H1]Decebalus [\H1][NEWLINE][BOLD]King of Dacia[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 87-106 
+AD[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Decebalus (ruled 87-106) was the last king 
+of Dacia. He is famous for fighting three wars, with varying success, against the Roman Empire under 
+two emperors. After raiding across the Danube, he defeated a Roman invasion in the reign of Domitian, 
+securing a period of independence during which Decebalus consolidated his power. When Trajan came to 
+power, he invaded Dacia to weaken its threat to Roman border territory. Decebalus was defeated. He remained 
+in power as a client king, but continued to assert his independence, leading to a final and overwhelming 
+Roman invasion in 105. Trajan reduced the Dacian capital Sarmizegetusa in 106, absorbing Dacia into the 
+Empire. Decebalus committed suicide to avoid capture. Since the mid 19th century Decebalus has been portrayed 
+as a national hero in Romania, the modern successor to ancient Dacia. There are several monuments depicting 
+him.</German>
+		<Italian>[H1]Decebalus [\H1][NEWLINE][BOLD]King of Dacia[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 87-106 
+AD[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Decebalus (ruled 87-106) was the last king 
+of Dacia. He is famous for fighting three wars, with varying success, against the Roman Empire under 
+two emperors. After raiding across the Danube, he defeated a Roman invasion in the reign of Domitian, 
+securing a period of independence during which Decebalus consolidated his power. When Trajan came to 
+power, he invaded Dacia to weaken its threat to Roman border territory. Decebalus was defeated. He remained 
+in power as a client king, but continued to assert his independence, leading to a final and overwhelming 
+Roman invasion in 105. Trajan reduced the Dacian capital Sarmizegetusa in 106, absorbing Dacia into the 
+Empire. Decebalus committed suicide to avoid capture. Since the mid 19th century Decebalus has been portrayed 
+as a national hero in Romania, the modern successor to ancient Dacia. There are several monuments depicting 
+him.</Italian>
+		<Spanish>[H1]Decebalus [\H1][NEWLINE][BOLD]King of Dacia[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 87-106 
+AD[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Decebalus (ruled 87-106) was the last king 
+of Dacia. He is famous for fighting three wars, with varying success, against the Roman Empire under 
+two emperors. After raiding across the Danube, he defeated a Roman invasion in the reign of Domitian, 
+securing a period of independence during which Decebalus consolidated his power. When Trajan came to 
+power, he invaded Dacia to weaken its threat to Roman border territory. Decebalus was defeated. He remained 
+in power as a client king, but continued to assert his independence, leading to a final and overwhelming 
+Roman invasion in 105. Trajan reduced the Dacian capital Sarmizegetusa in 106, absorbing Dacia into the 
+Empire. Decebalus committed suicide to avoid capture. Since the mid 19th century Decebalus has been portrayed 
+as a national hero in Romania, the modern successor to ancient Dacia. There are several monuments depicting 
+him.</Spanish>
+	</TEXT>
+</Civ4GameText>

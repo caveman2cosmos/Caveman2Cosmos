@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- Modified by the Civ Gold Team -->
+<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_OLMEC_DESC</Tag>
+		<English>Olmec Empire</English>
+		<French>Olmec Empire</French>
+		<German>Olmec Empire</German>
+		<Italian>Olmec Empire</Italian>
+		<Spanish>Olmec Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_OLMEC_SHORT_DESC</Tag>
+		<English>Olmec</English>
+		<French>Olmec</French>
+		<German>Olmec</German>
+		<Italian>Olmec</Italian>
+		<Spanish>Olmec</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_OLMEC_ADJECTIVE</Tag>
+		<English>Olmec</English>
+		<French>Olmec</French>
+		<German>Olmec</German>
+		<Italian>Olmec</Italian>
+		<Spanish>Olmec</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_OLMEC_PEDIA</Tag>
+		<English>[TAB]The Olmec were an ancient Pre-Columbian people living in the tropical lowlands of south-central Mexico, roughly in what are the modern-day states of Veracruz and Tabasco on the Isthmus of Tehuantepec. Their immediate cultural influence, however, extends far beyond this region. The Olmec flourished during the Formative (or Preclassic) period, dating from 1200 BC to about 400 BC, and are believed to have been the progenitor civilization of later Mesoamerican civilizations.[PARAGRAPH:2]Olmec history originated at its base within San Lorenzo Tenochtitlán, where distinctively Olmec features begin to emerge before 1200 BC. The rise of civilization here was probably assisted by the local ecology of well-watered rich alluvial soil, encouraging high maize production. This ecology may be compared to that of other ancient centers of civilization: the Nile, Indus, and Yellow River valleys, and Mesopotamia. It is thought that the dense population concentration at San Lorenzo encouraged the rise of an elite class that eventually ensured Olmec dominance and provided the social basis for the production of the symbolic and sophisticated luxury artifacts that define Olmec culture. Many of these luxury artifacts, such as jade, obsidian and magnetite, came from distant locations and suggest that early Olmec elites had access to an extensive trading network in Mesoamerica. The source of the most valued jade, for example, is found in the Motagua River valley in eastern Guatemala, and their obsidian is mainly from sources also in the Guatemala highlands, such as El Chayal and San Martín Jilotepeque.[PARAGRAPH:2]The first Olmec center, San Lorenzo, was all but abandoned around 900 BC at about the same time that La Venta rose to prominence. Environmental changes may have been responsible for this move, with certain important rivers changing course. A wholesale destruction of many San Lorenzo monuments also occurred around this time, circa 950 BC, which may point to an internal uprising or, less likely, an invasion. Following the decline of San Lorenzo, La Venta became the most prominent Olmec center, lasting from 900 BC until its abandonment around 400 BC. During this period, the Great Pyramid and various other ceremonial complexes were built at La Venta.[PARAGRAPH:2]It is not known with any clarity what caused the eventual extinction of the Olmec culture. It is known that between 400 and 350 BC, population in the eastern half of the Olmec heartland dropped precipitously, and the area would remain sparsely inhabited until the 19th century. This depopulation was likely the result of environmental changes: perhaps the result of important rivers changing course or silting up due to agricultural practices. What ever the cause, within a few hundred years of the abandonment of the last Olmec cities, successor cultures had become firmly established. The Tres Zapotes site, on the western edge of the Olmec heartland, continued to be occupied well past 400 BC, but without the hallmarks of the Olmec culture. This post-Olmec culture, often labeled Epi-Olmec, has features similar to those found at Izapa, some 330 miles (550 km) to the southeast.</English>
+		<French>[TAB]The Olmec were an ancient Pre-Columbian people living in the tropical lowlands of south-central Mexico, roughly in what are the modern-day states of Veracruz and Tabasco on the Isthmus of Tehuantepec. Their immediate cultural influence, however, extends far beyond this region. The Olmec flourished during the Formative (or Preclassic) period, dating from 1200 BC to about 400 BC, and are believed to have been the progenitor civilization of later Mesoamerican civilizations.[PARAGRAPH:2]Olmec history originated at its base within San Lorenzo Tenochtitlán, where distinctively Olmec features begin to emerge before 1200 BC. The rise of civilization here was probably assisted by the local ecology of well-watered rich alluvial soil, encouraging high maize production. This ecology may be compared to that of other ancient centers of civilization: the Nile, Indus, and Yellow River valleys, and Mesopotamia. It is thought that the dense population concentration at San Lorenzo encouraged the rise of an elite class that eventually ensured Olmec dominance and provided the social basis for the production of the symbolic and sophisticated luxury artifacts that define Olmec culture. Many of these luxury artifacts, such as jade, obsidian and magnetite, came from distant locations and suggest that early Olmec elites had access to an extensive trading network in Mesoamerica. The source of the most valued jade, for example, is found in the Motagua River valley in eastern Guatemala, and their obsidian is mainly from sources also in the Guatemala highlands, such as El Chayal and San Martín Jilotepeque.[PARAGRAPH:2]The first Olmec center, San Lorenzo, was all but abandoned around 900 BC at about the same time that La Venta rose to prominence. Environmental changes may have been responsible for this move, with certain important rivers changing course. A wholesale destruction of many San Lorenzo monuments also occurred around this time, circa 950 BC, which may point to an internal uprising or, less likely, an invasion. Following the decline of San Lorenzo, La Venta became the most prominent Olmec center, lasting from 900 BC until its abandonment around 400 BC. During this period, the Great Pyramid and various other ceremonial complexes were built at La Venta.[PARAGRAPH:2]It is not known with any clarity what caused the eventual extinction of the Olmec culture. It is known that between 400 and 350 BC, population in the eastern half of the Olmec heartland dropped precipitously, and the area would remain sparsely inhabited until the 19th century. This depopulation was likely the result of environmental changes: perhaps the result of important rivers changing course or silting up due to agricultural practices. What ever the cause, within a few hundred years of the abandonment of the last Olmec cities, successor cultures had become firmly established. The Tres Zapotes site, on the western edge of the Olmec heartland, continued to be occupied well past 400 BC, but without the hallmarks of the Olmec culture. This post-Olmec culture, often labeled Epi-Olmec, has features similar to those found at Izapa, some 330 miles (550 km) to the southeast.</French>
+		<German>[TAB]The Olmec were an ancient Pre-Columbian people living in the tropical lowlands of south-central Mexico, roughly in what are the modern-day states of Veracruz and Tabasco on the Isthmus of Tehuantepec. Their immediate cultural influence, however, extends far beyond this region. The Olmec flourished during the Formative (or Preclassic) period, dating from 1200 BC to about 400 BC, and are believed to have been the progenitor civilization of later Mesoamerican civilizations.[PARAGRAPH:2]Olmec history originated at its base within San Lorenzo Tenochtitlán, where distinctively Olmec features begin to emerge before 1200 BC. The rise of civilization here was probably assisted by the local ecology of well-watered rich alluvial soil, encouraging high maize production. This ecology may be compared to that of other ancient centers of civilization: the Nile, Indus, and Yellow River valleys, and Mesopotamia. It is thought that the dense population concentration at San Lorenzo encouraged the rise of an elite class that eventually ensured Olmec dominance and provided the social basis for the production of the symbolic and sophisticated luxury artifacts that define Olmec culture. Many of these luxury artifacts, such as jade, obsidian and magnetite, came from distant locations and suggest that early Olmec elites had access to an extensive trading network in Mesoamerica. The source of the most valued jade, for example, is found in the Motagua River valley in eastern Guatemala, and their obsidian is mainly from sources also in the Guatemala highlands, such as El Chayal and San Martín Jilotepeque.[PARAGRAPH:2]The first Olmec center, San Lorenzo, was all but abandoned around 900 BC at about the same time that La Venta rose to prominence. Environmental changes may have been responsible for this move, with certain important rivers changing course. A wholesale destruction of many San Lorenzo monuments also occurred around this time, circa 950 BC, which may point to an internal uprising or, less likely, an invasion. Following the decline of San Lorenzo, La Venta became the most prominent Olmec center, lasting from 900 BC until its abandonment around 400 BC. During this period, the Great Pyramid and various other ceremonial complexes were built at La Venta.[PARAGRAPH:2]It is not known with any clarity what caused the eventual extinction of the Olmec culture. It is known that between 400 and 350 BC, population in the eastern half of the Olmec heartland dropped precipitously, and the area would remain sparsely inhabited until the 19th century. This depopulation was likely the result of environmental changes: perhaps the result of important rivers changing course or silting up due to agricultural practices. What ever the cause, within a few hundred years of the abandonment of the last Olmec cities, successor cultures had become firmly established. The Tres Zapotes site, on the western edge of the Olmec heartland, continued to be occupied well past 400 BC, but without the hallmarks of the Olmec culture. This post-Olmec culture, often labeled Epi-Olmec, has features similar to those found at Izapa, some 330 miles (550 km) to the southeast.</German>
+		<Italian>[TAB]The Olmec were an ancient Pre-Columbian people living in the tropical lowlands of south-central Mexico, roughly in what are the modern-day states of Veracruz and Tabasco on the Isthmus of Tehuantepec. Their immediate cultural influence, however, extends far beyond this region. The Olmec flourished during the Formative (or Preclassic) period, dating from 1200 BC to about 400 BC, and are believed to have been the progenitor civilization of later Mesoamerican civilizations.[PARAGRAPH:2]Olmec history originated at its base within San Lorenzo Tenochtitlán, where distinctively Olmec features begin to emerge before 1200 BC. The rise of civilization here was probably assisted by the local ecology of well-watered rich alluvial soil, encouraging high maize production. This ecology may be compared to that of other ancient centers of civilization: the Nile, Indus, and Yellow River valleys, and Mesopotamia. It is thought that the dense population concentration at San Lorenzo encouraged the rise of an elite class that eventually ensured Olmec dominance and provided the social basis for the production of the symbolic and sophisticated luxury artifacts that define Olmec culture. Many of these luxury artifacts, such as jade, obsidian and magnetite, came from distant locations and suggest that early Olmec elites had access to an extensive trading network in Mesoamerica. The source of the most valued jade, for example, is found in the Motagua River valley in eastern Guatemala, and their obsidian is mainly from sources also in the Guatemala highlands, such as El Chayal and San Martín Jilotepeque.[PARAGRAPH:2]The first Olmec center, San Lorenzo, was all but abandoned around 900 BC at about the same time that La Venta rose to prominence. Environmental changes may have been responsible for this move, with certain important rivers changing course. A wholesale destruction of many San Lorenzo monuments also occurred around this time, circa 950 BC, which may point to an internal uprising or, less likely, an invasion. Following the decline of San Lorenzo, La Venta became the most prominent Olmec center, lasting from 900 BC until its abandonment around 400 BC. During this period, the Great Pyramid and various other ceremonial complexes were built at La Venta.[PARAGRAPH:2]It is not known with any clarity what caused the eventual extinction of the Olmec culture. It is known that between 400 and 350 BC, population in the eastern half of the Olmec heartland dropped precipitously, and the area would remain sparsely inhabited until the 19th century. This depopulation was likely the result of environmental changes: perhaps the result of important rivers changing course or silting up due to agricultural practices. What ever the cause, within a few hundred years of the abandonment of the last Olmec cities, successor cultures had become firmly established. The Tres Zapotes site, on the western edge of the Olmec heartland, continued to be occupied well past 400 BC, but without the hallmarks of the Olmec culture. This post-Olmec culture, often labeled Epi-Olmec, has features similar to those found at Izapa, some 330 miles (550 km) to the southeast.</Italian>
+		<Spanish>[TAB]The Olmec were an ancient Pre-Columbian people living in the tropical lowlands of south-central Mexico, roughly in what are the modern-day states of Veracruz and Tabasco on the Isthmus of Tehuantepec. Their immediate cultural influence, however, extends far beyond this region. The Olmec flourished during the Formative (or Preclassic) period, dating from 1200 BC to about 400 BC, and are believed to have been the progenitor civilization of later Mesoamerican civilizations.[PARAGRAPH:2]Olmec history originated at its base within San Lorenzo Tenochtitlán, where distinctively Olmec features begin to emerge before 1200 BC. The rise of civilization here was probably assisted by the local ecology of well-watered rich alluvial soil, encouraging high maize production. This ecology may be compared to that of other ancient centers of civilization: the Nile, Indus, and Yellow River valleys, and Mesopotamia. It is thought that the dense population concentration at San Lorenzo encouraged the rise of an elite class that eventually ensured Olmec dominance and provided the social basis for the production of the symbolic and sophisticated luxury artifacts that define Olmec culture. Many of these luxury artifacts, such as jade, obsidian and magnetite, came from distant locations and suggest that early Olmec elites had access to an extensive trading network in Mesoamerica. The source of the most valued jade, for example, is found in the Motagua River valley in eastern Guatemala, and their obsidian is mainly from sources also in the Guatemala highlands, such as El Chayal and San Martín Jilotepeque.[PARAGRAPH:2]The first Olmec center, San Lorenzo, was all but abandoned around 900 BC at about the same time that La Venta rose to prominence. Environmental changes may have been responsible for this move, with certain important rivers changing course. A wholesale destruction of many San Lorenzo monuments also occurred around this time, circa 950 BC, which may point to an internal uprising or, less likely, an invasion. Following the decline of San Lorenzo, La Venta became the most prominent Olmec center, lasting from 900 BC until its abandonment around 400 BC. During this period, the Great Pyramid and various other ceremonial complexes were built at La Venta.[PARAGRAPH:2]It is not known with any clarity what caused the eventual extinction of the Olmec culture. It is known that between 400 and 350 BC, population in the eastern half of the Olmec heartland dropped precipitously, and the area would remain sparsely inhabited until the 19th century. This depopulation was likely the result of environmental changes: perhaps the result of important rivers changing course or silting up due to agricultural practices. What ever the cause, within a few hundred years of the abandonment of the last Olmec cities, successor cultures had become firmly established. The Tres Zapotes site, on the western edge of the Olmec heartland, continued to be occupied well past 400 BC, but without the hallmarks of the Olmec culture. This post-Olmec culture, often labeled Epi-Olmec, has features similar to those found at Izapa, some 330 miles (550 km) to the southeast.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_PO_NGBE</Tag>
+		<English>Po Ngbe</English>
+		<French>Po Ngbe</French>
+		<German>Po Ngbe</German>
+		<Italian>Po Ngbe</Italian>
+		<Spanish>Po Ngbe</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_PO_NGBE_PEDIA</Tag>
+		<English>[H1]Po Ngbe [\H1][NEWLINE][BOLD]King of the Olmec[\BOLD][NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Between 900-600 BC one of the major rulers at Guerrero was Po Ngbe. There is also an important tablet from Ahuelican, Guerrero of mottled green stone that also mentions King Po Ngbe, and his building of a great temple at his site.[PARAGRAPH:1]The Guerrero celt makes it clear that Po Ngbe was recognized as a member of the craftsmen caste. He was ruler of the place where these artifacts were found. This celt also makes it clear that Po Ngbe was probably buried in a pyramid. This view is supported by the Ahuelican, Guerrero Tablet. This artifact was made of the same stone as the Teo mask and the Guerrero celt. Recently a mask of Po Ngbe was recently discovered and published. The mask of Po Ngbe has an inscription written on the inside of the mask.[PARAGRAPH:1]In the first column of the Teo Mask inscription we read the following:[PARAGRAPH:2]"Cause (here) the conferring of all virtue to this very good abode. Admiration indeed (Oh) Governor. Indeed (you are) wonder. Thou (art) a spirit of tranquility . (Thou art like) the Jaguar (a master of the bush). Righteousness takes root here in this tomb of Na Po Ngbe. This habitation of the devotee (is) a habitation of propriety. Order (Na Po Ngbe) this object of respect to be an envoy on a mission (to) hold upright purity. He who is a powerful spirit (in) thine tomb. Righteousness takes root here (in your) tomb. [Na Po Ngbe] A boundless source of great spiritual tranquility (your) abode. The tomb is powerful. lay low (the celebrity) [in the tomb] to realize spiritual tranquility."</English>
+		<French>[H1]Po Ngbe [\H1][NEWLINE][BOLD]King of the Olmec[\BOLD][NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Between 900-600 BC one of the major rulers at Guerrero was Po Ngbe. There is also an important tablet from Ahuelican, Guerrero of mottled green stone that also mentions King Po Ngbe, and his building of a great temple at his site.[PARAGRAPH:1]The Guerrero celt makes it clear that Po Ngbe was recognized as a member of the craftsmen caste. He was ruler of the place where these artifacts were found. This celt also makes it clear that Po Ngbe was probably buried in a pyramid. This view is supported by the Ahuelican, Guerrero Tablet. This artifact was made of the same stone as the Teo mask and the Guerrero celt. Recently a mask of Po Ngbe was recently discovered and published. The mask of Po Ngbe has an inscription written on the inside of the mask.[PARAGRAPH:1]In the first column of the Teo Mask inscription we read the following:[PARAGRAPH:2]"Cause (here) the conferring of all virtue to this very good abode. Admiration indeed (Oh) Governor. Indeed (you are) wonder. Thou (art) a spirit of tranquility . (Thou art like) the Jaguar (a master of the bush). Righteousness takes root here in this tomb of Na Po Ngbe. This habitation of the devotee (is) a habitation of propriety. Order (Na Po Ngbe) this object of respect to be an envoy on a mission (to) hold upright purity. He who is a powerful spirit (in) thine tomb. Righteousness takes root here (in your) tomb. [Na Po Ngbe] A boundless source of great spiritual tranquility (your) abode. The tomb is powerful. lay low (the celebrity) [in the tomb] to realize spiritual tranquility."</French>
+		<German>[H1]Po Ngbe [\H1][NEWLINE][BOLD]King of the Olmec[\BOLD][NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Between 900-600 BC one of the major rulers at Guerrero was Po Ngbe. There is also an important tablet from Ahuelican, Guerrero of mottled green stone that also mentions King Po Ngbe, and his building of a great temple at his site.[PARAGRAPH:1]The Guerrero celt makes it clear that Po Ngbe was recognized as a member of the craftsmen caste. He was ruler of the place where these artifacts were found. This celt also makes it clear that Po Ngbe was probably buried in a pyramid. This view is supported by the Ahuelican, Guerrero Tablet. This artifact was made of the same stone as the Teo mask and the Guerrero celt. Recently a mask of Po Ngbe was recently discovered and published. The mask of Po Ngbe has an inscription written on the inside of the mask.[PARAGRAPH:1]In the first column of the Teo Mask inscription we read the following:[PARAGRAPH:2]"Cause (here) the conferring of all virtue to this very good abode. Admiration indeed (Oh) Governor. Indeed (you are) wonder. Thou (art) a spirit of tranquility . (Thou art like) the Jaguar (a master of the bush). Righteousness takes root here in this tomb of Na Po Ngbe. This habitation of the devotee (is) a habitation of propriety. Order (Na Po Ngbe) this object of respect to be an envoy on a mission (to) hold upright purity. He who is a powerful spirit (in) thine tomb. Righteousness takes root here (in your) tomb. [Na Po Ngbe] A boundless source of great spiritual tranquility (your) abode. The tomb is powerful. lay low (the celebrity) [in the tomb] to realize spiritual tranquility."</German>
+		<Italian>[H1]Po Ngbe [\H1][NEWLINE][BOLD]King of the Olmec[\BOLD][NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Between 900-600 BC one of the major rulers at Guerrero was Po Ngbe. There is also an important tablet from Ahuelican, Guerrero of mottled green stone that also mentions King Po Ngbe, and his building of a great temple at his site.[PARAGRAPH:1]The Guerrero celt makes it clear that Po Ngbe was recognized as a member of the craftsmen caste. He was ruler of the place where these artifacts were found. This celt also makes it clear that Po Ngbe was probably buried in a pyramid. This view is supported by the Ahuelican, Guerrero Tablet. This artifact was made of the same stone as the Teo mask and the Guerrero celt. Recently a mask of Po Ngbe was recently discovered and published. The mask of Po Ngbe has an inscription written on the inside of the mask.[PARAGRAPH:1]In the first column of the Teo Mask inscription we read the following:[PARAGRAPH:2]"Cause (here) the conferring of all virtue to this very good abode. Admiration indeed (Oh) Governor. Indeed (you are) wonder. Thou (art) a spirit of tranquility . (Thou art like) the Jaguar (a master of the bush). Righteousness takes root here in this tomb of Na Po Ngbe. This habitation of the devotee (is) a habitation of propriety. Order (Na Po Ngbe) this object of respect to be an envoy on a mission (to) hold upright purity. He who is a powerful spirit (in) thine tomb. Righteousness takes root here (in your) tomb. [Na Po Ngbe] A boundless source of great spiritual tranquility (your) abode. The tomb is powerful. lay low (the celebrity) [in the tomb] to realize spiritual tranquility."</Italian>
+		<Spanish>[H1]Po Ngbe [\H1][NEWLINE][BOLD]King of the Olmec[\BOLD][NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Between 900-600 BC one of the major rulers at Guerrero was Po Ngbe. There is also an important tablet from Ahuelican, Guerrero of mottled green stone that also mentions King Po Ngbe, and his building of a great temple at his site.[PARAGRAPH:1]The Guerrero celt makes it clear that Po Ngbe was recognized as a member of the craftsmen caste. He was ruler of the place where these artifacts were found. This celt also makes it clear that Po Ngbe was probably buried in a pyramid. This view is supported by the Ahuelican, Guerrero Tablet. This artifact was made of the same stone as the Teo mask and the Guerrero celt. Recently a mask of Po Ngbe was recently discovered and published. The mask of Po Ngbe has an inscription written on the inside of the mask.[PARAGRAPH:1]In the first column of the Teo Mask inscription we read the following:[PARAGRAPH:2]"Cause (here) the conferring of all virtue to this very good abode. Admiration indeed (Oh) Governor. Indeed (you are) wonder. Thou (art) a spirit of tranquility . (Thou art like) the Jaguar (a master of the bush). Righteousness takes root here in this tomb of Na Po Ngbe. This habitation of the devotee (is) a habitation of propriety. Order (Na Po Ngbe) this object of respect to be an envoy on a mission (to) hold upright purity. He who is a powerful spirit (in) thine tomb. Righteousness takes root here (in your) tomb. [Na Po Ngbe] A boundless source of great spiritual tranquility (your) abode. The tomb is powerful. lay low (the celebrity) [in the tomb] to realize spiritual tranquility."</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_PO_NGBE_1</Tag>
+		<English>Welcome, [CT_NAME]! I am [OUR_NAME] of the [OUR_CIV_ADJ] people. My spiritual tranquility is boundless, my patience is not.</English>
+		<French>Welcome, [CT_NAME]! I am [OUR_NAME] of the [OUR_CIV_ADJ] people. My spiritual tranquility is boundless, my patience is not.</French>
+		<German>Welcome, [CT_NAME]! I am [OUR_NAME] of the [OUR_CIV_ADJ] people. My spiritual tranquility is boundless, my patience is not.</German>
+		<Italian>Welcome, [CT_NAME]! I am [OUR_NAME] of the [OUR_CIV_ADJ] people. My spiritual tranquility is boundless, my patience is not.</Italian>
+		<Spanish>Welcome, [CT_NAME]! I am [OUR_NAME] of the [OUR_CIV_ADJ] people. My spiritual tranquility is boundless, my patience is not.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAN_LORENZO</Tag>
+		<English>San Lorenzo</English>
+		<French>
+			<Text>San Lorenzo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>San Lorenzo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>San Lorenzo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>San Lorenzo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TRES_ZAPOTES</Tag>
+		<English>Tres Zapotes</English>
+		<French>
+			<Text>Tres Zapotes</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tres Zapotes</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tres Zapotes</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tres Zapotes</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LA_VENTA</Tag>
+		<English>La Venta</English>
+		<French>
+			<Text>La Venta</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>La Venta</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>La Venta</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>La Venta</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LOS_CERROS</Tag>
+		<English>Los Cerros</English>
+		<French>
+			<Text>Los Cerros</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Los Cerros</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Los Cerros</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Los Cerros</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_EL_AZUZUL</Tag>
+		<English>El Azuzul</English>
+		<French>
+			<Text>El Azuzul</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>El Azuzul</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>El Azuzul</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>El Azuzul</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAN_ANDRES</Tag>
+		<English>San Andres</English>
+		<French>
+			<Text>San Andres</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>San Andres</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>San Andres</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>San Andres</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_POTRERO_NUEVO</Tag>
+		<English>Portrero Nuevo</English>
+		<French>
+			<Text>Portrero Nuevo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Portrero Nuevo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Portrero Nuevo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Portrero Nuevo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_EL_MANATI</Tag>
+		<English>El Manati</English>
+		<French>
+			<Text>El Manati</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>El Manati</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>El Manati</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>El Manati</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LAS_LIMAS</Tag>
+		<English>Las Limas</English>
+		<French>
+			<Text>Las Limas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Las Limas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Las Limas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Las Limas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ARROYO_SONSO</Tag>
+		<English>Arroyo Sonso</English>
+		<French>
+			<Text>Arroyo Sonso</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Arroyo Sonso</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Arroyo Sonso</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Arroyo Sonso</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAN_MARTIN</Tag>
+		<English>San Martin</English>
+		<French>
+			<Text>San Martin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>San Martin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>San Martin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>San Martin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LLANO_DEL_JICARO</Tag>
+		<English>Llano del Jicaro</English>
+		<French>
+			<Text>Llano del Jicaro</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Llano del Jicaro</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Llano del Jicaro</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Llano del Jicaro</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TLATILCO</Tag>
+		<English>Tlatilco</English>
+		<French>
+			<Text>Tlatilco</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tlatilco</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tlatilco</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tlatilco</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TLAPACOYA</Tag>
+		<English>Tlapacoya</English>
+		<French>
+			<Text>Tlapacoya</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tlapacoya</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tlapacoya</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tlapacoya</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ABAJ_TAKALIK</Tag>
+		<English>Abaj Takalik</English>
+		<French>
+			<Text>Abaj Takalik</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Abaj Takalik</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Abaj Takalik</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Abaj Takalik</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ZAZACATLA</Tag>
+		<English>Zazacatla</English>
+		<French>
+			<Text>Zazacatla</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Zazacatla</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Zazacatla</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Zazacatla</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CHALCATZINGO</Tag>
+		<English>Chalcatzingo</English>
+		<French>
+			<Text>Chalcatzingo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Chalcatzingo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Chalcatzingo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Chalcatzingo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TEOPANTECUANITLAN</Tag>
+		<English>Teopantecuanitlan</English>
+		<French>
+			<Text>Teopantecuanitlan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Teopantecuanitlan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Teopantecuanitlan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Teopantecuanitlan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_JUXTLAHUACA</Tag>
+		<English>Juxtlahuaca</English>
+		<French>
+			<Text>Juxtlahuaca</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Juxtlahuaca</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Juxtlahuaca</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Juxtlahuaca</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_OXTOTITLAN</Tag>
+		<English>Oxtotitlan</English>
+		<French>
+			<Text>Oxtotitlan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Oxtotitlan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Oxtotitlan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Oxtotitlan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_XALAPA</Tag>
+		<English>Xalapa</English>
+		<French>
+			<Text>Xalapa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Xalapa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Xalapa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Xalapa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LAS_MESAS</Tag>
+		<English>Las Mesas</English>
+		<French>
+			<Text>Las Mesas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Las Mesas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Las Mesas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Las Mesas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_IZAPA</Tag>
+		<English>Izapa</English>
+		<French>
+			<Text>Izapa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Izapa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Izapa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Izapa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+</Civ4GameText>

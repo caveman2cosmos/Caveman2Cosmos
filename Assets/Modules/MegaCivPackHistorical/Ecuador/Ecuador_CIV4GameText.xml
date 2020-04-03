@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- Modified by the Civ Gold Team -->
+<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ECUADOR_DESC</Tag>
+		<English>Ecuadorian Empire</English>
+		<French>Ecuadorian Empire</French>
+		<German>Ecuadorian Empire</German>
+		<Italian>Ecuadorian Empire</Italian>
+		<Spanish>Ecuadorian Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ECUADOR_SHORT_DESC</Tag>
+		<English>Ecuador</English>
+		<French>Ecuador</French>
+		<German>Ecuador</German>
+		<Italian>Ecuador</Italian>
+		<Spanish>Ecuador</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ECUADOR_ADJECTIVE</Tag>
+		<English>Ecuadorian</English>
+		<French>Ecuadorian</French>
+		<German>Ecuadorian</German>
+		<Italian>Ecuadorian</Italian>
+		<Spanish>Ecuadorian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ECUADOR_PEDIA</Tag>
+		<English>[TAB]Ecuador, officially the Republic of Ecuador, which literally translates as "Republic of the Equator"), is a representative democratic republic in northwestern South America, bordered by Colombia on the north, Peru on the east and south, and the Pacific Ocean to the west. Ecuador also includes the Galápagos Islands in the Pacific, about 1,000 kilometres (620 mi) west of the mainland. What is now Ecuador was home to a variety of indigenous groups that were gradually incorporated into the Inca Empire during the fifteenth century. The territory was colonized by Spain during the sixteenth century, achieving independence in 1820 as part of Gran Colombia, from which it emerged as its own sovereign state in 1830. The legacy of both empires is reflected in Ecuador's ethnically diverse population, with most of its 15.2 million people being mestizos, followed by large minorities of European, Amerindian, and African descendants.</English>
+		<French>[TAB]Ecuador, officially the Republic of Ecuador, which literally translates as "Republic of the Equator"), is a representative democratic republic in northwestern South America, bordered by Colombia on the north, Peru on the east and south, and the Pacific Ocean to the west. Ecuador also includes the Galápagos Islands in the Pacific, about 1,000 kilometres (620 mi) west of the mainland. What is now Ecuador was home to a variety of indigenous groups that were gradually incorporated into the Inca Empire during the fifteenth century. The territory was colonized by Spain during the sixteenth century, achieving independence in 1820 as part of Gran Colombia, from which it emerged as its own sovereign state in 1830. The legacy of both empires is reflected in Ecuador's ethnically diverse population, with most of its 15.2 million people being mestizos, followed by large minorities of European, Amerindian, and African descendants.</French>
+		<German>[TAB]Ecuador, officially the Republic of Ecuador, which literally translates as "Republic of the Equator"), is a representative democratic republic in northwestern South America, bordered by Colombia on the north, Peru on the east and south, and the Pacific Ocean to the west. Ecuador also includes the Galápagos Islands in the Pacific, about 1,000 kilometres (620 mi) west of the mainland. What is now Ecuador was home to a variety of indigenous groups that were gradually incorporated into the Inca Empire during the fifteenth century. The territory was colonized by Spain during the sixteenth century, achieving independence in 1820 as part of Gran Colombia, from which it emerged as its own sovereign state in 1830. The legacy of both empires is reflected in Ecuador's ethnically diverse population, with most of its 15.2 million people being mestizos, followed by large minorities of European, Amerindian, and African descendants.</German>
+		<Italian>[TAB]Ecuador, officially the Republic of Ecuador, which literally translates as "Republic of the Equator"), is a representative democratic republic in northwestern South America, bordered by Colombia on the north, Peru on the east and south, and the Pacific Ocean to the west. Ecuador also includes the Galápagos Islands in the Pacific, about 1,000 kilometres (620 mi) west of the mainland. What is now Ecuador was home to a variety of indigenous groups that were gradually incorporated into the Inca Empire during the fifteenth century. The territory was colonized by Spain during the sixteenth century, achieving independence in 1820 as part of Gran Colombia, from which it emerged as its own sovereign state in 1830. The legacy of both empires is reflected in Ecuador's ethnically diverse population, with most of its 15.2 million people being mestizos, followed by large minorities of European, Amerindian, and African descendants.</Italian>
+		<Spanish>[TAB]Ecuador, officially the Republic of Ecuador, which literally translates as "Republic of the Equator"), is a representative democratic republic in northwestern South America, bordered by Colombia on the north, Peru on the east and south, and the Pacific Ocean to the west. Ecuador also includes the Galápagos Islands in the Pacific, about 1,000 kilometres (620 mi) west of the mainland. What is now Ecuador was home to a variety of indigenous groups that were gradually incorporated into the Inca Empire during the fifteenth century. The territory was colonized by Spain during the sixteenth century, achieving independence in 1820 as part of Gran Colombia, from which it emerged as its own sovereign state in 1830. The legacy of both empires is reflected in Ecuador's ethnically diverse population, with most of its 15.2 million people being mestizos, followed by large minorities of European, Amerindian, and African descendants.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_FLORES</Tag>
+		<English>Juan José Flores</English>
+		<French>Juan José Flores</French>
+		<German>Juan José Flores</German>
+		<Italian>Juan José Flores</Italian>
+		<Spanish>Juan José Flores</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_FLORES_PEDIA</Tag>
+		<English>[H1]Juan José Flores [\H1][NEWLINE][BOLD]President of Ecuador[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] July 19, 1800 - October 1, 1864[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Juan José Flores y Aramburu was a Venezuelan military general who became Supreme Chief, and later the first President of the new Republic of Ecuador. He later served two more terms from 1839 to 1843 and from 1843 to 1845, and is often referred to as "The Founder of the Republic".</English>
+		<French>[H1]Juan José Flores [\H1][NEWLINE][BOLD]President of Ecuador[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] July 19, 1800 - October 1, 1864[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Juan José Flores y Aramburu was a Venezuelan military general who became Supreme Chief, and later the first President of the new Republic of Ecuador. He later served two more terms from 1839 to 1843 and from 1843 to 1845, and is often referred to as "The Founder of the Republic".</French>
+		<German>[H1]Juan José Flores [\H1][NEWLINE][BOLD]President of Ecuador[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] July 19, 1800 - October 1, 1864[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Juan José Flores y Aramburu was a Venezuelan military general who became Supreme Chief, and later the first President of the new Republic of Ecuador. He later served two more terms from 1839 to 1843 and from 1843 to 1845, and is often referred to as "The Founder of the Republic".</German>
+		<Italian>[H1]Juan José Flores [\H1][NEWLINE][BOLD]President of Ecuador[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] July 19, 1800 - October 1, 1864[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Juan José Flores y Aramburu was a Venezuelan military general who became Supreme Chief, and later the first President of the new Republic of Ecuador. He later served two more terms from 1839 to 1843 and from 1843 to 1845, and is often referred to as "The Founder of the Republic".</Italian>
+		<Spanish>[H1]Juan José Flores [\H1][NEWLINE][BOLD]President of Ecuador[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] July 19, 1800 - October 1, 1864[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Juan José Flores y Aramburu was a Venezuelan military general who became Supreme Chief, and later the first President of the new Republic of Ecuador. He later served two more terms from 1839 to 1843 and from 1843 to 1845, and is often referred to as "The Founder of the Republic".</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_FLORES_1</Tag>
+		<English>Welcome [CT_NAME]. I have found yet another friend here. And with such a friend we will together form a team, like a soccer team. This will be a fighting team.</English>
+		<French>Welcome [CT_NAME]. I have found yet another friend here. And with such a friend we will together form a team, like a soccer team. This will be a fighting team.</French>
+		<German>Welcome [CT_NAME]. I have found yet another friend here. And with such a friend we will together form a team, like a soccer team. This will be a fighting team.</German>
+		<Italian>Welcome [CT_NAME]. I have found yet another friend here. And with such a friend we will together form a team, like a soccer team. This will be a fighting team.</Italian>
+		<Spanish>Welcome [CT_NAME]. I have found yet another friend here. And with such a friend we will together form a team, like a soccer team. This will be a fighting team.</Spanish>
+	</TEXT>
+</Civ4GameText>

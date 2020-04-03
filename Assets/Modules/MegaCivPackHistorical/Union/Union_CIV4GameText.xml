@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- ReModified by the StrategyOnly -->
+<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_UNION_DESC</Tag>
+		<English>Union</English>
+		<French>Union</French>
+		<German>Union</German>
+		<Italian>Union</Italian>
+		<Spanish>Union</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_UNION_SHORT_DESC</Tag>
+		<English>Union</English>
+		<French>
+			<Text>Union</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>
+			<Text>Union</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Union</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Union</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_UNION_ADJECTIVE</Tag>
+		<English>Unionist</English>
+		<French>
+			<Text>Unionist</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>
+			<Text>Unionist</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Unionist</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Unionist</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_UNION_PEDIA</Tag>
+		<English>[TAB]During the American Civil War, the Union was the term used to refer to the United States of America, and specifically to the national government and the 20 free states and five border slave states which supported it. The Union was opposed by 11 southern states that formed the Confederate States of America, or "the Confederacy". All the Union states provided soldiers for the U.S. Army; the border areas also sent large numbers of soldiers to the Confederacy. The Border states played a major role as a supply base for the Union invasion of the Confederacy. The Northeast provided the industrial resources for a mechanized war producing large quantities of munitions and supplies, as well as financing for the war. The Midwest provided soldiers, food and horses, as well as financial support and training camps. Army hospitals were set up across the Union. Most states had Republican governors who energetically supported the war effort and suppressed anti-war subversion in 1863-64. The Democratic Party strongly supported the war in 1861 but was split by 1862 between the War Democrats and the anti-war element led by the "Copperheads". The Democrats made major electoral gains in 1862 in state elections, most notably in New York. They lost ground in 1863, especially in Ohio. In 1864 the Republicans campaigned under the Union Party banner, which attracted many War Democrats and soldiers and scored a landslide victory for Lincoln and his entire ticket.</English>
+	</TEXT>
+    <TEXT>
+		<Tag>TXT_KEY_LEADER_GRANT</Tag>
+		<English>Ulysses S. Grant</English>
+		<French>
+			<Text>Ulysses S. Grant</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ulysses S. Grant</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ulysses S. Grant</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ulysses S. Grant</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_GRANT_PEDIA</Tag>
+		<English>[H1]Ulysses S. Grant [\H1][NEWLINE][BOLD]Commanding General[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] March 4, 1869 - March 4, 1877[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Was the 18th President of the United States (1869-77). As Commanding General, Grant worked closely with President Abraham Lincoln to lead the Union Army to victory over the Confederacy in the American Civil War. He implemented Congressional Reconstruction, often at odds with Lincoln's successor, Andrew Johnson. Twice elected president, Grant led the Republicans in their effort to remove the vestiges of Confederate nationalism and slavery, protect African-American citizenship, and support economic prosperity nationwide. His presidency has often come under criticism for tolerating corruption and in his second term leading the nation into a severe economic depression.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_GRANT_1</Tag>
+		<English>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. We offer you the friendship of the glorious nation of [OUR_CIV_SHORT]!</English>
+		<French>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. We offer you the friendship of the glorious nation of [OUR_CIV_SHORT]!</French>
+		<German>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. We offer you the friendship of the glorious nation of [OUR_CIV_SHORT]!</German>
+		<Italian>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. We offer you the friendship of the glorious nation of [OUR_CIV_SHORT]!</Italian>
+		<Spanish>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. We offer you the friendship of the glorious nation of [OUR_CIV_SHORT]!</Spanish>
+		<Russian>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. We offer you the friendship of the glorious nation of [OUR_CIV_SHORT]!</Russian>
+		
+		<Chinese>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. We offer you the friendship of the glorious nation of [OUR_CIV_SHORT]!</Chinese>
+	</TEXT>
+    <TEXT>
+		<Tag>TXT_KEY_LEADER_SHERMAN</Tag>
+		<English>William Tecumseh Sherman</English>
+		<French>
+			<Text>William Tecumseh Sherman</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>William Tecumseh Sherman</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>William Tecumseh Sherman</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>William Tecumseh Sherman</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SHERMAN_PEDIA</Tag>
+		<English>[H1]William Tecumseh Sherman [\H1][NEWLINE][BOLD]Great General[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] February 8, 1820 - February 14, 1891[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Was an American soldier, businessman, educator and author. He served as a General in the Union Army during the American Civil War (1861-65), for which he received recognition for his outstanding command of military strategy as well as criticism for the harshness of the "scorched earth" policies that he implemented in conducting total war against the Confederate States. Sherman served under General Ulysses S. Grant in 1862 and 1863 during the campaigns that led to the fall of the Confederate stronghold of Vicksburg on the Mississippi River and culminated with the routing of the Confederate armies in the state of Tennessee. In 1864, Sherman succeeded Grant as the Union commander in the western theater of the war. He proceeded to lead his troops to the capture of the city of Atlanta, a military success that contributed to the re-election of U.S. President Abraham Lincoln. Sherman's subsequent march through Georgia and the Carolinas further undermined the Confederacy's ability to continue fighting. He accepted the surrender of all the Confederate armies in the Carolinas, Georgia, and Florida in April 1865.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SHERMAN_1</Tag>
+		<English>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. We offer you the friendship of the glorious nation of [OUR_CIV_SHORT]!</English>
+		<French>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. We offer you the friendship of the glorious nation of [OUR_CIV_SHORT]!</French>
+		<German>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. We offer you the friendship of the glorious nation of [OUR_CIV_SHORT]!</German>
+		<Italian>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. We offer you the friendship of the glorious nation of [OUR_CIV_SHORT]!</Italian>
+		<Spanish>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. We offer you the friendship of the glorious nation of [OUR_CIV_SHORT]!</Spanish>
+		<Russian>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. We offer you the friendship of the glorious nation of [OUR_CIV_SHORT]!</Russian>
+		
+		<Chinese>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. We offer you the friendship of the glorious nation of [OUR_CIV_SHORT]!</Chinese>
+	</TEXT>
+</Civ4GameText>

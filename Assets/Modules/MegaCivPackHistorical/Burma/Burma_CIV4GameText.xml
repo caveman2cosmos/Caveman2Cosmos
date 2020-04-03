@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- re-Modified by strategyonly -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BURMA_DESC</Tag>
+		<English>Burmese Empire</English>
+		<French>Burmese Empire</French>
+		<German>Burmese Empire</German>
+		<Italian>Burmese Empire</Italian>
+		<Spanish>Burmese Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BURMA_SHORT_DESC</Tag>
+		<English>Burma</English>
+		<French>Burma</French>
+		<German>Burma</German>
+		<Italian>Burma</Italian>
+		<Spanish>Burma</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BURMA_PEDIA</Tag>
+		<English>[TAB]Burma, officially the Republic of the Union of Myanmar, commonly shortened to Myanmar, 
+is a sovereign state in Southeast Asia bordered by Bangladesh, India, China, Laos and Thailand. One-third 
+of Burma's total perimeter of 1,930 km (1,200 miles) forms an uninterrupted coastline along the Bay of 
+Bengal and the Andaman Sea. Burma has a population of 51 million people. Burma is 676,578 square kilometres 
+(261,227 sq mi) in size. Burma's capital city is Naypyidaw and its largest city is Yangon. Early civilisations 
+in Burma included the Tibeto-Burman-speaking Pyu in Upper Burma and the Mon in Lower Burma.[11] In the 
+9th century, the Burmans of the Kingdom of Nanzhao entered the upper Irrawaddy valley and, following 
+the establishment of the Pagan Empire in the 1050s, the Burmese language, culture and Theravada Buddhism 
+slowly became dominant in the country. The Pagan Empire fell due to the Mongol invasions and several 
+warring states emerged. In the 16th century, reunified by the Taungoo Dynasty, the country was for a 
+brief period the largest empire in the history of Southeast Asia. The early 19th century Konbaung Dynasty 
+ruled over an area that included modern Burma and briefly controlled Manipur and Assam as well. The British 
+conquered Burma after three Anglo-Burmese Wars in the 19th century and the country became a British colony. 
+Burma became an independent nation in 1948, initially as a democratic nation and then, following a coup 
+in 1962, a military dictatorship which formally ended in 2011.</English>
+		<French>[TAB]Burma, officially the Republic of the Union of Myanmar, commonly shortened to Myanmar, 
+is a sovereign state in Southeast Asia bordered by Bangladesh, India, China, Laos and Thailand. One-third 
+of Burma's total perimeter of 1,930 km (1,200 miles) forms an uninterrupted coastline along the Bay of 
+Bengal and the Andaman Sea. Burma has a population of 51 million people. Burma is 676,578 square kilometres 
+(261,227 sq mi) in size. Burma's capital city is Naypyidaw and its largest city is Yangon. Early civilisations 
+in Burma included the Tibeto-Burman-speaking Pyu in Upper Burma and the Mon in Lower Burma.[11] In the 
+9th century, the Burmans of the Kingdom of Nanzhao entered the upper Irrawaddy valley and, following 
+the establishment of the Pagan Empire in the 1050s, the Burmese language, culture and Theravada Buddhism 
+slowly became dominant in the country. The Pagan Empire fell due to the Mongol invasions and several 
+warring states emerged. In the 16th century, reunified by the Taungoo Dynasty, the country was for a 
+brief period the largest empire in the history of Southeast Asia. The early 19th century Konbaung Dynasty 
+ruled over an area that included modern Burma and briefly controlled Manipur and Assam as well. The British 
+conquered Burma after three Anglo-Burmese Wars in the 19th century and the country became a British colony. 
+Burma became an independent nation in 1948, initially as a democratic nation and then, following a coup 
+in 1962, a military dictatorship which formally ended in 2011.</French>
+		<German>[TAB]Burma, officially the Republic of the Union of Myanmar, commonly shortened to Myanmar, 
+is a sovereign state in Southeast Asia bordered by Bangladesh, India, China, Laos and Thailand. One-third 
+of Burma's total perimeter of 1,930 km (1,200 miles) forms an uninterrupted coastline along the Bay of 
+Bengal and the Andaman Sea. Burma has a population of 51 million people. Burma is 676,578 square kilometres 
+(261,227 sq mi) in size. Burma's capital city is Naypyidaw and its largest city is Yangon. Early civilisations 
+in Burma included the Tibeto-Burman-speaking Pyu in Upper Burma and the Mon in Lower Burma.[11] In the 
+9th century, the Burmans of the Kingdom of Nanzhao entered the upper Irrawaddy valley and, following 
+the establishment of the Pagan Empire in the 1050s, the Burmese language, culture and Theravada Buddhism 
+slowly became dominant in the country. The Pagan Empire fell due to the Mongol invasions and several 
+warring states emerged. In the 16th century, reunified by the Taungoo Dynasty, the country was for a 
+brief period the largest empire in the history of Southeast Asia. The early 19th century Konbaung Dynasty 
+ruled over an area that included modern Burma and briefly controlled Manipur and Assam as well. The British 
+conquered Burma after three Anglo-Burmese Wars in the 19th century and the country became a British colony. 
+Burma became an independent nation in 1948, initially as a democratic nation and then, following a coup 
+in 1962, a military dictatorship which formally ended in 2011.</German>
+		<Italian>[TAB]Burma, officially the Republic of the Union of Myanmar, commonly shortened to Myanmar, 
+is a sovereign state in Southeast Asia bordered by Bangladesh, India, China, Laos and Thailand. One-third 
+of Burma's total perimeter of 1,930 km (1,200 miles) forms an uninterrupted coastline along the Bay of 
+Bengal and the Andaman Sea. Burma has a population of 51 million people. Burma is 676,578 square kilometres 
+(261,227 sq mi) in size. Burma's capital city is Naypyidaw and its largest city is Yangon. Early civilisations 
+in Burma included the Tibeto-Burman-speaking Pyu in Upper Burma and the Mon in Lower Burma.[11] In the 
+9th century, the Burmans of the Kingdom of Nanzhao entered the upper Irrawaddy valley and, following 
+the establishment of the Pagan Empire in the 1050s, the Burmese language, culture and Theravada Buddhism 
+slowly became dominant in the country. The Pagan Empire fell due to the Mongol invasions and several 
+warring states emerged. In the 16th century, reunified by the Taungoo Dynasty, the country was for a 
+brief period the largest empire in the history of Southeast Asia. The early 19th century Konbaung Dynasty 
+ruled over an area that included modern Burma and briefly controlled Manipur and Assam as well. The British 
+conquered Burma after three Anglo-Burmese Wars in the 19th century and the country became a British colony. 
+Burma became an independent nation in 1948, initially as a democratic nation and then, following a coup 
+in 1962, a military dictatorship which formally ended in 2011.</Italian>
+		<Spanish>[TAB]Burma, officially the Republic of the Union of Myanmar, commonly shortened to Myanmar, 
+is a sovereign state in Southeast Asia bordered by Bangladesh, India, China, Laos and Thailand. One-third 
+of Burma's total perimeter of 1,930 km (1,200 miles) forms an uninterrupted coastline along the Bay of 
+Bengal and the Andaman Sea. Burma has a population of 51 million people. Burma is 676,578 square kilometres 
+(261,227 sq mi) in size. Burma's capital city is Naypyidaw and its largest city is Yangon. Early civilisations 
+in Burma included the Tibeto-Burman-speaking Pyu in Upper Burma and the Mon in Lower Burma.[11] In the 
+9th century, the Burmans of the Kingdom of Nanzhao entered the upper Irrawaddy valley and, following 
+the establishment of the Pagan Empire in the 1050s, the Burmese language, culture and Theravada Buddhism 
+slowly became dominant in the country. The Pagan Empire fell due to the Mongol invasions and several 
+warring states emerged. In the 16th century, reunified by the Taungoo Dynasty, the country was for a 
+brief period the largest empire in the history of Southeast Asia. The early 19th century Konbaung Dynasty 
+ruled over an area that included modern Burma and briefly controlled Manipur and Assam as well. The British 
+conquered Burma after three Anglo-Burmese Wars in the 19th century and the country became a British colony. 
+Burma became an independent nation in 1948, initially as a democratic nation and then, following a coup 
+in 1962, a military dictatorship which formally ended in 2011.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BURMA_ADJECTIVE</Tag>
+		<English>Burmese</English>
+		<French>Burmese</French>
+		<German>Burmese</German>
+		<Italian>Burmese</Italian>
+		<Spanish>Burmese</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SUUKYI</Tag>
+		<English>Suu Kyi</English>
+		<French>Suu Kyi</French>
+		<German>Suu Kyi</German>
+		<Italian>Suu Kyi</Italian>
+		<Spanish>Suu Kyi</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SUUKYI_PEDIA</Tag>
+		<English>[H1]Aung San Suu Kyi [\H1][NEWLINE][BOLD]Leader of Burma[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 
+born 19 June 1945[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Aung San Suu Kyi is a Burmese 
+opposition politician and chairperson of the National League for Democracy (NLD) in Burma. In the 1990 
+general election, the NLD won 59% of the national votes and 81% (392 of 485) of the seats in Parliament. 
+She had, however, already been detained under house arrest before the elections. She remained under house 
+arrest in Burma for almost 15 of the 21 years from 20 July 1989 until her most recent release on 13 November 
+2010, becoming one of the world's most prominent political prisoners. Suu Kyi received the Rafto Prize 
+and the Sakharov Prize for Freedom of Thought in 1990 and the Nobel Peace Prize in 1991. In 1992 she 
+was awarded the Jawaharlal Nehru Award for International Understanding by the government of India and 
+the International Simon Bolívar Prize from the government of Venezuela. In 2007, the Government of Canada 
+made her an honorary citizen of that country, the fourth person ever to receive the honour. In 2011, 
+she was awarded the Wallenberg Medal.[15] On 19 September 2012, Aung San Suu Kyi was also presented with 
+the Congressional Gold Medal, which is, along with the Presidential Medal of Freedom, the highest civilian 
+honour in the United States.</English>
+		<French>[H1]Aung San Suu Kyi [\H1][NEWLINE][BOLD]Leader of Burma[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 
+born 19 June 1945[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Aung San Suu Kyi is a Burmese 
+opposition politician and chairperson of the National League for Democracy (NLD) in Burma. In the 1990 
+general election, the NLD won 59% of the national votes and 81% (392 of 485) of the seats in Parliament. 
+She had, however, already been detained under house arrest before the elections. She remained under house 
+arrest in Burma for almost 15 of the 21 years from 20 July 1989 until her most recent release on 13 November 
+2010, becoming one of the world's most prominent political prisoners. Suu Kyi received the Rafto Prize 
+and the Sakharov Prize for Freedom of Thought in 1990 and the Nobel Peace Prize in 1991. In 1992 she 
+was awarded the Jawaharlal Nehru Award for International Understanding by the government of India and 
+the International Simon Bolívar Prize from the government of Venezuela. In 2007, the Government of Canada 
+made her an honorary citizen of that country, the fourth person ever to receive the honour. In 2011, 
+she was awarded the Wallenberg Medal.[15] On 19 September 2012, Aung San Suu Kyi was also presented with 
+the Congressional Gold Medal, which is, along with the Presidential Medal of Freedom, the highest civilian 
+honour in the United States.</French>
+		<German>[H1]Aung San Suu Kyi [\H1][NEWLINE][BOLD]Leader of Burma[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 
+born 19 June 1945[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Aung San Suu Kyi is a Burmese 
+opposition politician and chairperson of the National League for Democracy (NLD) in Burma. In the 1990 
+general election, the NLD won 59% of the national votes and 81% (392 of 485) of the seats in Parliament. 
+She had, however, already been detained under house arrest before the elections. She remained under house 
+arrest in Burma for almost 15 of the 21 years from 20 July 1989 until her most recent release on 13 November 
+2010, becoming one of the world's most prominent political prisoners. Suu Kyi received the Rafto Prize 
+and the Sakharov Prize for Freedom of Thought in 1990 and the Nobel Peace Prize in 1991. In 1992 she 
+was awarded the Jawaharlal Nehru Award for International Understanding by the government of India and 
+the International Simon Bolívar Prize from the government of Venezuela. In 2007, the Government of Canada 
+made her an honorary citizen of that country, the fourth person ever to receive the honour. In 2011, 
+she was awarded the Wallenberg Medal.[15] On 19 September 2012, Aung San Suu Kyi was also presented with 
+the Congressional Gold Medal, which is, along with the Presidential Medal of Freedom, the highest civilian 
+honour in the United States.</German>
+		<Italian>[H1]Aung San Suu Kyi [\H1][NEWLINE][BOLD]Leader of Burma[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 
+born 19 June 1945[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Aung San Suu Kyi is a Burmese 
+opposition politician and chairperson of the National League for Democracy (NLD) in Burma. In the 1990 
+general election, the NLD won 59% of the national votes and 81% (392 of 485) of the seats in Parliament. 
+She had, however, already been detained under house arrest before the elections. She remained under house 
+arrest in Burma for almost 15 of the 21 years from 20 July 1989 until her most recent release on 13 November 
+2010, becoming one of the world's most prominent political prisoners. Suu Kyi received the Rafto Prize 
+and the Sakharov Prize for Freedom of Thought in 1990 and the Nobel Peace Prize in 1991. In 1992 she 
+was awarded the Jawaharlal Nehru Award for International Understanding by the government of India and 
+the International Simon Bolívar Prize from the government of Venezuela. In 2007, the Government of Canada 
+made her an honorary citizen of that country, the fourth person ever to receive the honour. In 2011, 
+she was awarded the Wallenberg Medal.[15] On 19 September 2012, Aung San Suu Kyi was also presented with 
+the Congressional Gold Medal, which is, along with the Presidential Medal of Freedom, the highest civilian 
+honour in the United States.</Italian>
+		<Spanish>[H1]Aung San Suu Kyi [\H1][NEWLINE][BOLD]Leader of Burma[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 
+born 19 June 1945[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Aung San Suu Kyi is a Burmese 
+opposition politician and chairperson of the National League for Democracy (NLD) in Burma. In the 1990 
+general election, the NLD won 59% of the national votes and 81% (392 of 485) of the seats in Parliament. 
+She had, however, already been detained under house arrest before the elections. She remained under house 
+arrest in Burma for almost 15 of the 21 years from 20 July 1989 until her most recent release on 13 November 
+2010, becoming one of the world's most prominent political prisoners. Suu Kyi received the Rafto Prize 
+and the Sakharov Prize for Freedom of Thought in 1990 and the Nobel Peace Prize in 1991. In 1992 she 
+was awarded the Jawaharlal Nehru Award for International Understanding by the government of India and 
+the International Simon Bolívar Prize from the government of Venezuela. In 2007, the Government of Canada 
+made her an honorary citizen of that country, the fourth person ever to receive the honour. In 2011, 
+she was awarded the Wallenberg Medal.[15] On 19 September 2012, Aung San Suu Kyi was also presented with 
+the Congressional Gold Medal, which is, along with the Presidential Medal of Freedom, the highest civilian 
+honour in the United States.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SUUKYI_1</Tag>
+		<English>[CT_NAME]... I am [OUR_NAME] of the [OUR_EMPIRE]. Remember, don't trouble until trouble troubles you.</English>
+		<French>I caution you against aggression, [CT_NAME] of the [CT_EMPIRE]. You will kill 10 of our men, and we will kill 1 of yours, and in the end it will be you who tire of it.</French>
+		<German>I caution you against aggression, [CT_NAME] of the [CT_EMPIRE]. You will kill 10 of our men, and we will kill 1 of yours, and in the end it will be you who tire of it.</German>
+		<Italian>I caution you against aggression, [CT_NAME] of the [CT_EMPIRE]. You will kill 10 of our men, and we will kill 1 of yours, and in the end it will be you who tire of it.</Italian>
+		<Spanish>I caution you against aggression, [CT_NAME] of the [CT_EMPIRE]. You will kill 10 of our men, and we will kill 1 of yours, and in the end it will be you who tire of it.</Spanish>
+		<Russian>I caution you against aggression, [CT_NAME] of the [CT_EMPIRE]. You will kill 10 of our men, and we will kill 1 of yours, and in the end it will be you who tire of it.</Russian>
+		<Chinese>I caution you against aggression, [CT_NAME] of the [CT_EMPIRE]. You will kill 10 of our men, and we will kill 1 of yours, and in the end it will be you who tire of it.</Chinese>
+	</TEXT>
+</Civ4GameText>

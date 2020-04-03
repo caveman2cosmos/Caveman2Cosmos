@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- ReModified by the StrategyOnly -->
+<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CHIPPEWA</Tag>
+		<English>Chippewa</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CHIPPEWA_DESC</Tag>
+		<English>Chippewa Empire</English>
+		<French>Empire Chippewa</French>
+		<German>Chippewa Empire</German>
+		<Italian>Impero Chippewa</Italian>
+		<Spanish>Chippewa Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CHIPPEWA_SHORT_DESC</Tag>
+		<English>Chippewa</English>
+		<French>Chippewa</French>
+		<German>Chippewa</German>
+		<Italian>Chippewa</Italian>
+		<Spanish>Chippewa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CHIPPEWA_ADJECTIVE</Tag>
+		<English>Chippewa</English>
+		<French>Chippewa</French>
+		<German>Chippewa</German>
+		<Italian>Chippewa</Italian>
+		<Spanish>Chippewa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CHIPPEWA_PEDIA</Tag>
+		<English>[TAB]The Fond du Lac Indian Reservation (or Nah-Gah-Chi-Wa-Nong (Nagaajiwanaang in the Double Vowel orthography), meaning "Where the current is blocked" in the Ojibwe language) is an Indian reservation in northern Minnesota near Cloquet in Carlton and St. Louis counties, with off-reservation holdings in Douglas County in Wisconsin. The total land area of these tribal lands is 153.8375 sq mi (398.437 km²). It is the land-base for the Fond du Lac Band of Lake Superior Chippewa. Before the establishment of this reservation, the Fond du Lac Band of Lake Superior Chippewa were located at the head of Lake Superior, closer to the mouth of the St. Louis River.[PARAGRAPH:2]The tribe ceded land as part of an 1837 treaty along with other Ojibwa bands, located mainly from east-central Minnesota to north-central Wisconsin. Later, along with other Ojibwa tribes, the Fond du Lac Band ceded large tracts of land located mainly in the Lake Superior watershed in Wisconsin and western Upper Peninsula of Michigan as part of a treaty in 1842. In addition, the tribe ceded land as part of an 1854 treaty with the Lake Superior Band of Chippewa (largely situated along the northern shore of Lake Superior in Minnesota). With this treaty, the Fond du Lac Indian Reservation was established farther up the St. Louis River at its present location. The original Nagaajiwanaang Reservation was 1.25 times the current size. However, the treaty discussions clearly promised the inclusion of the Perch and Big Lakes but the original reservation did not, but instead extended westward to the western boundaries of the 1854 Ceded Territory. With an appeal, the Reservation was extended southward to include the two said lakes, but as a concession, the western boundaries were shortened eastward to its present location.</English>
+		<French>[TAB]The Fond du Lac Indian Reservation (or Nah-Gah-Chi-Wa-Nong (Nagaajiwanaang in the Double Vowel orthography), meaning "Where the current is blocked" in the Ojibwe language) is an Indian reservation in northern Minnesota near Cloquet in Carlton and St. Louis counties, with off-reservation holdings in Douglas County in Wisconsin. The total land area of these tribal lands is 153.8375 sq mi (398.437 km²). It is the land-base for the Fond du Lac Band of Lake Superior Chippewa. Before the establishment of this reservation, the Fond du Lac Band of Lake Superior Chippewa were located at the head of Lake Superior, closer to the mouth of the St. Louis River.[PARAGRAPH:2]The tribe ceded land as part of an 1837 treaty along with other Ojibwa bands, located mainly from east-central Minnesota to north-central Wisconsin. Later, along with other Ojibwa tribes, the Fond du Lac Band ceded large tracts of land located mainly in the Lake Superior watershed in Wisconsin and western Upper Peninsula of Michigan as part of a treaty in 1842. In addition, the tribe ceded land as part of an 1854 treaty with the Lake Superior Band of Chippewa (largely situated along the northern shore of Lake Superior in Minnesota). With this treaty, the Fond du Lac Indian Reservation was established farther up the St. Louis River at its present location. The original Nagaajiwanaang Reservation was 1.25 times the current size. However, the treaty discussions clearly promised the inclusion of the Perch and Big Lakes but the original reservation did not, but instead extended westward to the western boundaries of the 1854 Ceded Territory. With an appeal, the Reservation was extended southward to include the two said lakes, but as a concession, the western boundaries were shortened eastward to its present location.</French>
+		<German>[TAB]The Fond du Lac Indian Reservation (or Nah-Gah-Chi-Wa-Nong (Nagaajiwanaang in the Double Vowel orthography), meaning "Where the current is blocked" in the Ojibwe language) is an Indian reservation in northern Minnesota near Cloquet in Carlton and St. Louis counties, with off-reservation holdings in Douglas County in Wisconsin. The total land area of these tribal lands is 153.8375 sq mi (398.437 km²). It is the land-base for the Fond du Lac Band of Lake Superior Chippewa. Before the establishment of this reservation, the Fond du Lac Band of Lake Superior Chippewa were located at the head of Lake Superior, closer to the mouth of the St. Louis River.[PARAGRAPH:2]The tribe ceded land as part of an 1837 treaty along with other Ojibwa bands, located mainly from east-central Minnesota to north-central Wisconsin. Later, along with other Ojibwa tribes, the Fond du Lac Band ceded large tracts of land located mainly in the Lake Superior watershed in Wisconsin and western Upper Peninsula of Michigan as part of a treaty in 1842. In addition, the tribe ceded land as part of an 1854 treaty with the Lake Superior Band of Chippewa (largely situated along the northern shore of Lake Superior in Minnesota). With this treaty, the Fond du Lac Indian Reservation was established farther up the St. Louis River at its present location. The original Nagaajiwanaang Reservation was 1.25 times the current size. However, the treaty discussions clearly promised the inclusion of the Perch and Big Lakes but the original reservation did not, but instead extended westward to the western boundaries of the 1854 Ceded Territory. With an appeal, the Reservation was extended southward to include the two said lakes, but as a concession, the western boundaries were shortened eastward to its present location.</German>
+		<Italian>[TAB]The Fond du Lac Indian Reservation (or Nah-Gah-Chi-Wa-Nong (Nagaajiwanaang in the Double Vowel orthography), meaning "Where the current is blocked" in the Ojibwe language) is an Indian reservation in northern Minnesota near Cloquet in Carlton and St. Louis counties, with off-reservation holdings in Douglas County in Wisconsin. The total land area of these tribal lands is 153.8375 sq mi (398.437 km²). It is the land-base for the Fond du Lac Band of Lake Superior Chippewa. Before the establishment of this reservation, the Fond du Lac Band of Lake Superior Chippewa were located at the head of Lake Superior, closer to the mouth of the St. Louis River.[PARAGRAPH:2]The tribe ceded land as part of an 1837 treaty along with other Ojibwa bands, located mainly from east-central Minnesota to north-central Wisconsin. Later, along with other Ojibwa tribes, the Fond du Lac Band ceded large tracts of land located mainly in the Lake Superior watershed in Wisconsin and western Upper Peninsula of Michigan as part of a treaty in 1842. In addition, the tribe ceded land as part of an 1854 treaty with the Lake Superior Band of Chippewa (largely situated along the northern shore of Lake Superior in Minnesota). With this treaty, the Fond du Lac Indian Reservation was established farther up the St. Louis River at its present location. The original Nagaajiwanaang Reservation was 1.25 times the current size. However, the treaty discussions clearly promised the inclusion of the Perch and Big Lakes but the original reservation did not, but instead extended westward to the western boundaries of the 1854 Ceded Territory. With an appeal, the Reservation was extended southward to include the two said lakes, but as a concession, the western boundaries were shortened eastward to its present location.</Italian>
+		<Spanish>[TAB]The Fond du Lac Indian Reservation (or Nah-Gah-Chi-Wa-Nong (Nagaajiwanaang in the Double Vowel orthography), meaning "Where the current is blocked" in the Ojibwe language) is an Indian reservation in northern Minnesota near Cloquet in Carlton and St. Louis counties, with off-reservation holdings in Douglas County in Wisconsin. The total land area of these tribal lands is 153.8375 sq mi (398.437 km²). It is the land-base for the Fond du Lac Band of Lake Superior Chippewa. Before the establishment of this reservation, the Fond du Lac Band of Lake Superior Chippewa were located at the head of Lake Superior, closer to the mouth of the St. Louis River.[PARAGRAPH:2]The tribe ceded land as part of an 1837 treaty along with other Ojibwa bands, located mainly from east-central Minnesota to north-central Wisconsin. Later, along with other Ojibwa tribes, the Fond du Lac Band ceded large tracts of land located mainly in the Lake Superior watershed in Wisconsin and western Upper Peninsula of Michigan as part of a treaty in 1842. In addition, the tribe ceded land as part of an 1854 treaty with the Lake Superior Band of Chippewa (largely situated along the northern shore of Lake Superior in Minnesota). With this treaty, the Fond du Lac Indian Reservation was established farther up the St. Louis River at its present location. The original Nagaajiwanaang Reservation was 1.25 times the current size. However, the treaty discussions clearly promised the inclusion of the Perch and Big Lakes but the original reservation did not, but instead extended westward to the western boundaries of the 1854 Ceded Territory. With an appeal, the Reservation was extended southward to include the two said lakes, but as a concession, the western boundaries were shortened eastward to its present location.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_BIAUSWAH_II</Tag>
+		<English>Biauswah</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_BIAUSWAH_II_PEDIA</Tag>
+		<English>Biauswah was the Chippewa Chieftan who lived between 1700ish to 1770ish.  Bayaaswaa , recorded variously in English as Biauswah, Bajasswa, Byianswa or Biaswah, was the principal Chief of the Sandy Lake Ojibwa, whose village was located at either terminus of the Savanna Portage, Sandy Lake and opposite the mouth of the East Savanna River in Minnesota.  
+According to William Whipple Warren, based on oral history regarding Bayaaswaa, as a child Bayaaswaa was captured by the Fox and whose father Bayaaswaa traded his life for his son's. Bayaaswaa and few other survivors went to Fond du Lac, and the Fond du Lac Band drove the Fox out of northern Wisconsin. 
+The oral history, Warren continues, recalled a major battle with the Dakota at the mouth of the Crow Wing River. Sixty Ojibwa led by Bayaaswaa engaged three hundred Dakota who they said had destroyed their village at Sandy Lake. Supposedly, the battle lasted for three days. The Ojibwa established their village at Sandy Lake, establishing the Sandy Lake Band, and then ventured to Red Lake and Pembina. Other oral history accounts, however, suggest the Cree aided the Ojibwa against the Dakota. According to Richard Alan Nelson, Bayaaswaa was a jiisakiiwinini (Shaking-tent Seer) and lived to the age of 109. 
+Bayaaswaa's son Gaa-dawaabide ("Broken Tooth") later becomes Chief of the Sandy Lake Band.Biauswah Lake in Itasca County, Minnesota, is named after him, as is the Biauswah Bridge, a bridge for the Minnesota State Highway 23 over the St. Louis River out of the Fond du Lac neighbourhood of Duluth, Minnesota.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_BIAUSWAH_II_1</Tag>
+		<English>Hello. I am [OUR_NAME], chief and protector of the [OUR_CIV_ADJ] people. I consider you a friend. It is in your best interest that I never change that opinion.</English>
+		<French>Bonjour. Je suis [OUR_NAME], chef et protecteur des [OUR_CIV_ADJ:3]. Je vous considère comme mon ami. Il va de votre intérêt que je ne change jamais d'opinion.</French>
+		<German>Hallo. Ich bin [OUR_NAME], Oberhaupt und Beschützer des [OUR_CIV_ADJ:2] Volkes. Ich betrachte Euch als Freund. Ich hoffe für Euch, dass ich diese Meinung nie ändere.</German>
+		<Italian>Salve. Mi chiamo [OUR_NAME], capo e protettore del popolo [OUR_CIV_ADJ]. Ti considero un amico. È nel tuo migliore interesse che io non cambi mai idea.</Italian>
+		<Spanish>Hola. Soy [OUR_NAME], jefe y protector del pueblo [OUR_CIV_ADJ:1]. Os considero mis amigos. Y más os vale que nunca cambie de opinión.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_BIAUSWAH_II_1</Tag>
+		<English>You want to talk? It is a little too late for that.</English>
+		<French>Vous voulez parler ? C'est un peu tard pour ça.</French>
+		<German>Ihr wollt reden? Dafür ist es etwas zu spät.</German>
+		<Italian>Vuoi parlare? È un po' troppo tardi per farlo.</Italian>
+		<Spanish>¿Ahora queréis hablar? Es un poco tarde para eso.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_BIAUSWAH_II_1</Tag>
+		<English>Peace? Never!</English>
+		<French>La paix ? Jamais !</French>
+		<German>Frieden? Niemals!</German>
+		<Italian>Pace? Mai!</Italian>
+		<Spanish>¿Paz? ¡Jamás!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_BIAUSWAH_II_1</Tag>
+		<English>It is good to hear from the [CT_EMPIRE]. To what do I owe this honor?</English>
+		<French>Quel plaisir d'avoir de vos nouvelles ! Que me vaut cet honneur ? </French>
+		<German>Es ist gut, etwas vom [CT_EMPIRE:3] zu hören. Womit haben wir diese Ehre verdient?</German>
+		<Italian>È bello avere notizie da [CT_EMPIRE]. A cosa debbo quest'onore?</Italian>
+		<Spanish>Es un placer oír al [CT_EMPIRE]. ¿A qué debo este honor?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_BIAUSWAH_II_1</Tag>
+		<English>You have started down a path that will lead to your destruction. Feel free to try to explain yourself.</English>
+		<French>Vous vous êtes engagé sur la voie qui menera à votre destruction. J'attends vos explications.  </French>
+		<German>Ihr habt begonnen, einen Pfad zu beschreiten, der zu Eurer Vernichtung führen wird. Wollt Ihr Euch möglicherweise rechtfertigen?</German>
+		<Italian>Ti sei avviato lungo un cammino che porterà alla tua distruzione. Prova pure a cercare di spiegarti.</Italian>
+		<Spanish>Habéis hollado una senda que os llevará a la destrucción. Intentad explicaros como queráis.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_BIAUSWAH_II_1</Tag>
+		<English>My people are in need, can the [CT_EMPIRE] help?</English>
+		<French>Ma personnes est dans le besoin, l'[CT_EMPIRE] peut-il nous aider ?</French>
+		<German>Mein Stamm ist in Not, kann uns das [CT_EMPIRE:2] helfen?</German>
+		<Italian>La mia tribù ha bisogno di aiuto, potete aiutarci?</Italian>
+		<Spanish>Mi puebla está necesitada. ¿Podrá ayudarnos el [CT_EMPIRE]?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_BIAUSWAH_II_1</Tag>
+		<English>I come in peace to ask for assistance. What do you say?</English>
+		<French>Je suis venu en paix vous demander de l'aide. Qu'avez-vous à répondre ?</French>
+		<German>Ich komme in Frieden und bitte um Unterstützung. Wie lautet Eure Antwort?</German>
+		<Italian>Vengo in pace alla ricerca di aiuto. Cosa mi rispondi?</Italian>
+		<Spanish>Vengo en son de paz a pedir ayuda. ¿Qué me decís?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_BIAUSWAH_II_1</Tag>
+		<English>I hold the fate of the [CT_EMPIRE] in my hand. Give me what I demand.</English>
+		<French>Je tiens le destin de l'[CT_EMPIRE] dans ma main. Donnez-moi ce que j'exige.</French>
+		<German>Ich halte das Schicksal vom [CT_EMPIRE:3] in meinen Händen. Gebt mir, was ich verlange.</German>
+		<Italian>Ho nelle mani il destino di [CT_EMPIRE]. Dammi ciò che chiedo.</Italian>
+		<Spanish>Tengo el destino del [CT_EMPIRE] en mis manos. Dadme lo que os exijo.</Spanish>
+	</TEXT>
+</Civ4GameText>

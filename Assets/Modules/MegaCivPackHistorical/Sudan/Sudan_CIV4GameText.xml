@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- Modified by the Civ Gold Team -->
+<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_AHMAD</Tag>
+		<English>Muhammad Ahmad</English>
+		<French>Muhammad Ahmad</French>
+		<German>Muhammad Ahmad</German>
+		<Italian>Muhammad Ahmad</Italian>
+		<Spanish>Muhammad Ahmad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_AHMAD_PEDIA</Tag>
+		<English>[H1]Muhammad Ahmad [\H1][NEWLINE][BOLD]Leader of Sudan[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] August 12, 1844 – June 22, 1885[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Muhammad Ahmad bin Abd Allah was a religious leader of the Samaniyya order in Sudan who, on June 29, 1881, proclaimed himself the Mahdi (or Madhi), the messianic redeemer of the Islamic faith. His proclamation came during a period of widespread resentment among the Sudanese population of the oppressive policies of the Turco-Egyptian rulers, and capitalized on the messianic beliefs popular among the various Sudanese religious sects of the time. More broadly, the Mahdiyya, as Muhammad Ahmad's movement was called, was influenced by earlier Mahdist movements in West Africa, as well as Wahabism and other puritanical forms of Islamic revivalism that developed in reaction to the growing military and economic dominance of the European powers throughout the 19th century.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_AHMAD_1</Tag>
+		<English>Greetings to you, [CT_NAME]. I am pleased to meet you, but do remember that friendship likes distance.</English>
+		<French>Greetings to you, [CT_NAME]. I am pleased to meet you, but do remember that friendship likes distance.</French>
+		<German>Greetings to you, [CT_NAME]. I am pleased to meet you, but do remember that friendship likes distance.</German>
+		<Italian>Greetings to you, [CT_NAME]. I am pleased to meet you, but do remember that friendship likes distance.</Italian>
+		<Spanish>Greetings to you, [CT_NAME]. I am pleased to meet you, but do remember that friendship likes distance.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SUDAN_DESC</Tag>
+		<English>Sudanese Empire</English>
+		<French>
+			<Text>Sudanese Empire</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sudanese Empire</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sudanese Empire</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sudanese Empire</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SUDAN_SHORT_DESC</Tag>
+		<English>Sudan</English>
+		<French>
+			<Text>Sudan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sudan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sudan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sudan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SUDAN_PEDIA</Tag>
+		<English>[TAB]Sudan, officially the Republic of the Sudan, is an Arab republic in the Nile Valley of North Africa, bordered by Egypt to the north, the Red Sea, Eritrea and Ethiopia to the east, South Sudan to the south, the Central African Republic to the southwest, Chad to the west and Libya to the northwest. It is the third largest country in Africa. The Nile River divides the country into eastern and western halves. Its predominant religion is Islam. Sudan was home to numerous ancient civilizations, such as the Kingdom of Kush, Kerma, Nobatia, Alodia, Makuria, Meroë and others, most of which flourished along the Nile River. During the predynastic period Nubia and Nagadan Upper Egypt were identical, simultaneously evolved systems of pharaonic kingship by 3300 BC. By virtue of its proximity to Egypt, the Sudan participated in the wider history of the Near East inasmuch as it was Christianized by the 6th century, and Islamized in the 7th. As a result of Christianization, the Old Nubian language stands as the oldest recorded Nilo-Saharan language (earliest records dating to the 9th century). Sudan was the largest country in Africa and the Arab world until 2011, when South Sudan separated into an independent country, following an independence referendum. Sudan is now the third largest country in Africa (after Algeria and the Democratic Republic of the Congo) and also the third largest country in the Arab world (after Algeria and Saudi Arabia).</English>
+		<French>[TAB]Sudan, officially the Republic of the Sudan, is an Arab republic in the Nile Valley of North Africa, bordered by Egypt to the north, the Red Sea, Eritrea and Ethiopia to the east, South Sudan to the south, the Central African Republic to the southwest, Chad to the west and Libya to the northwest. It is the third largest country in Africa. The Nile River divides the country into eastern and western halves. Its predominant religion is Islam. Sudan was home to numerous ancient civilizations, such as the Kingdom of Kush, Kerma, Nobatia, Alodia, Makuria, Meroë and others, most of which flourished along the Nile River. During the predynastic period Nubia and Nagadan Upper Egypt were identical, simultaneously evolved systems of pharaonic kingship by 3300 BC. By virtue of its proximity to Egypt, the Sudan participated in the wider history of the Near East inasmuch as it was Christianized by the 6th century, and Islamized in the 7th. As a result of Christianization, the Old Nubian language stands as the oldest recorded Nilo-Saharan language (earliest records dating to the 9th century). Sudan was the largest country in Africa and the Arab world until 2011, when South Sudan separated into an independent country, following an independence referendum. Sudan is now the third largest country in Africa (after Algeria and the Democratic Republic of the Congo) and also the third largest country in the Arab world (after Algeria and Saudi Arabia).</French>
+		<German>[TAB]Sudan, officially the Republic of the Sudan, is an Arab republic in the Nile Valley of North Africa, bordered by Egypt to the north, the Red Sea, Eritrea and Ethiopia to the east, South Sudan to the south, the Central African Republic to the southwest, Chad to the west and Libya to the northwest. It is the third largest country in Africa. The Nile River divides the country into eastern and western halves. Its predominant religion is Islam. Sudan was home to numerous ancient civilizations, such as the Kingdom of Kush, Kerma, Nobatia, Alodia, Makuria, Meroë and others, most of which flourished along the Nile River. During the predynastic period Nubia and Nagadan Upper Egypt were identical, simultaneously evolved systems of pharaonic kingship by 3300 BC. By virtue of its proximity to Egypt, the Sudan participated in the wider history of the Near East inasmuch as it was Christianized by the 6th century, and Islamized in the 7th. As a result of Christianization, the Old Nubian language stands as the oldest recorded Nilo-Saharan language (earliest records dating to the 9th century). Sudan was the largest country in Africa and the Arab world until 2011, when South Sudan separated into an independent country, following an independence referendum. Sudan is now the third largest country in Africa (after Algeria and the Democratic Republic of the Congo) and also the third largest country in the Arab world (after Algeria and Saudi Arabia).</German>
+		<Italian>[TAB]Sudan, officially the Republic of the Sudan, is an Arab republic in the Nile Valley of North Africa, bordered by Egypt to the north, the Red Sea, Eritrea and Ethiopia to the east, South Sudan to the south, the Central African Republic to the southwest, Chad to the west and Libya to the northwest. It is the third largest country in Africa. The Nile River divides the country into eastern and western halves. Its predominant religion is Islam. Sudan was home to numerous ancient civilizations, such as the Kingdom of Kush, Kerma, Nobatia, Alodia, Makuria, Meroë and others, most of which flourished along the Nile River. During the predynastic period Nubia and Nagadan Upper Egypt were identical, simultaneously evolved systems of pharaonic kingship by 3300 BC. By virtue of its proximity to Egypt, the Sudan participated in the wider history of the Near East inasmuch as it was Christianized by the 6th century, and Islamized in the 7th. As a result of Christianization, the Old Nubian language stands as the oldest recorded Nilo-Saharan language (earliest records dating to the 9th century). Sudan was the largest country in Africa and the Arab world until 2011, when South Sudan separated into an independent country, following an independence referendum. Sudan is now the third largest country in Africa (after Algeria and the Democratic Republic of the Congo) and also the third largest country in the Arab world (after Algeria and Saudi Arabia).</Italian>
+		<Spanish>[TAB]Sudan, officially the Republic of the Sudan, is an Arab republic in the Nile Valley of North Africa, bordered by Egypt to the north, the Red Sea, Eritrea and Ethiopia to the east, South Sudan to the south, the Central African Republic to the southwest, Chad to the west and Libya to the northwest. It is the third largest country in Africa. The Nile River divides the country into eastern and western halves. Its predominant religion is Islam. Sudan was home to numerous ancient civilizations, such as the Kingdom of Kush, Kerma, Nobatia, Alodia, Makuria, Meroë and others, most of which flourished along the Nile River. During the predynastic period Nubia and Nagadan Upper Egypt were identical, simultaneously evolved systems of pharaonic kingship by 3300 BC. By virtue of its proximity to Egypt, the Sudan participated in the wider history of the Near East inasmuch as it was Christianized by the 6th century, and Islamized in the 7th. As a result of Christianization, the Old Nubian language stands as the oldest recorded Nilo-Saharan language (earliest records dating to the 9th century). Sudan was the largest country in Africa and the Arab world until 2011, when South Sudan separated into an independent country, following an independence referendum. Sudan is now the third largest country in Africa (after Algeria and the Democratic Republic of the Congo) and also the third largest country in the Arab world (after Algeria and Saudi Arabia).</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SUDAN_ADJECTIVE</Tag>
+		<English>Sudanese</English>
+		<French>
+			<Text>Sudanese</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sudanese</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sudanese</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sudanese</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+</Civ4GameText>

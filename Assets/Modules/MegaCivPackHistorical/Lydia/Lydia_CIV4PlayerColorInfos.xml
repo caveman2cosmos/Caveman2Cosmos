@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
+	<!-- Sid Meier's Civilization 4 -->
+	<!-- Copyright Firaxis Games 2005 -->
+	<!-- -->
+	<!-- Player Color -->
+<Civ4PlayerColorInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4InterfaceSchema.xml">
+	<PlayerColorInfos>
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_LYDIA</Type>
+			<ColorTypePrimary>COLOR_YELLOW</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_RED</ColorTypeSecondary>
+			<TextColorType>COLOR_YELLOW</TextColorType>
+		</PlayerColorInfo>
+	</PlayerColorInfos>
+</Civ4PlayerColorInfos>

@@ -1,0 +1,1206 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- re-Modified by strategyonly -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_APACHE_REDSLEEVES</Tag>
+		<English>Red Sleeves' Warrior</English>
+		<French>Guerrier Peau rouge</French>
+		<German>Red Sleeves' Warrior</German>
+		<Italian>Guerriero dalle maniche rosse</Italian>
+		<Spanish>Red Sleeves' Warrior</Spanish>
+		<Russian>Red Sleeves' Warrior</Russian>
+		<Chinese>Red Sleeves' Warrior</Chinese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_APACHE_REDSLEEVES_PEDIA</Tag>
+		<English>[TAB]In 1837, Mangas Coloradas or Dasoda-hae (Red Sleeves) became principal chief and war 
+leader and began a series of retaliatory raids against the Mexicans. When the United States went to war 
+against Mexico, many Apache bands promised U.S. soldiers safe passage through their lands. When the U.S. 
+claimed former territories of Mexico in 1846, Mangas Coloradas signed a peace treaty, respecting them 
+as conquerors of the Mexican's land. An uneasy peace (a centuries old tradition) between the Apache and 
+the now citizens of the United States held until the 1850s, when an influx of gold miners into the Santa 
+Rita Mountains led to conflict. This period is sometimes called the Apache Wars.</English>
+		<French>[TAB]In 1837, Mangas Coloradas or Dasoda-hae (Red Sleeves) became principal chief and war leader 
+and began a series of retaliatory raids against the Mexicans. When the United States went to war against 
+Mexico, many Apache bands promised U.S. soldiers safe passage through their lands. When the U.S. claimed 
+former territories of Mexico in 1846, Mangas Coloradas signed a peace treaty, respecting them as conquerors 
+of the Mexican's land. An uneasy peace (a centuries old tradition) between the Apache and the now citizens 
+of the United States held until the 1850s, when an influx of gold miners into the Santa Rita Mountains 
+led to conflict. This period is sometimes called the Apache Wars.</French>
+		<German>[TAB]In 1837, Mangas Coloradas or Dasoda-hae (Red Sleeves) became principal chief and war leader 
+and began a series of retaliatory raids against the Mexicans. When the United States went to war against 
+Mexico, many Apache bands promised U.S. soldiers safe passage through their lands. When the U.S. claimed 
+former territories of Mexico in 1846, Mangas Coloradas signed a peace treaty, respecting them as conquerors 
+of the Mexican's land. An uneasy peace (a centuries old tradition) between the Apache and the now citizens 
+of the United States held until the 1850s, when an influx of gold miners into the Santa Rita Mountains 
+led to conflict. This period is sometimes called the Apache Wars.</German>
+		<Italian>[TAB]In 1837, Mangas Coloradas or Dasoda-hae (Red Sleeves) became principal chief and war 
+leader and began a series of retaliatory raids against the Mexicans. When the United States went to war 
+against Mexico, many Apache bands promised U.S. soldiers safe passage through their lands. When the U.S. 
+claimed former territories of Mexico in 1846, Mangas Coloradas signed a peace treaty, respecting them 
+as conquerors of the Mexican's land. An uneasy peace (a centuries old tradition) between the Apache and 
+the now citizens of the United States held until the 1850s, when an influx of gold miners into the Santa 
+Rita Mountains led to conflict. This period is sometimes called the Apache Wars.</Italian>
+		<Spanish>[TAB]In 1837, Mangas Coloradas or Dasoda-hae (Red Sleeves) became principal chief and war 
+leader and began a series of retaliatory raids against the Mexicans. When the United States went to war 
+against Mexico, many Apache bands promised U.S. soldiers safe passage through their lands. When the U.S. 
+claimed former territories of Mexico in 1846, Mangas Coloradas signed a peace treaty, respecting them 
+as conquerors of the Mexican's land. An uneasy peace (a centuries old tradition) between the Apache and 
+the now citizens of the United States held until the 1850s, when an influx of gold miners into the Santa 
+Rita Mountains led to conflict. This period is sometimes called the Apache Wars.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_COCHISE</Tag>
+		<English>Cochise</English>
+		<French>
+			<Text>Cochise</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Cochise</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Cochise</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Cochise</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_COCHISE_PEDIA</Tag>
+		<English>[H1]Cochise [\H1][NEWLINE][BOLD]Chief of the Chiricahua Apache [\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1805 - 1874[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB] Adatlichi, better known 
+as 'Cochise' (meaning 'hardwood') was a chief of the Chokonen band of the Chiricahua Apache and the leader 
+of an uprising that began in 1861. Cochise was described as a large man (for the time), with a muscular 
+frame, classical Roman features, and long black hair which he wore in traditional Apache style. [PARAGRAPH:1]Cochise 
+and the Chokonen-Chiricahua lived in the area that is now the northern Mexican region of Sonora, and 
+New Mexico and Arizona, which were traditional Apache territories until the coming of the Europeans. 
+Due to encroachment by Spain and later Mexico, the Chokonen and Nednhi-Chiricahua became increasingly 
+dependent upon food rations issued by the Mexican government to placate them. When this practice was 
+abruptly ended in 1831, the various Chiricahua bands resumed raids to acquire food. Mexican troops were 
+largely unsuccessful in their attempts to address this and were often fought to a standstill by the Apache. 
+As part of their attempts at controlling the Chiricahua, Mexican forces, often with the help of American 
+and Native American mercenaries, began to kill Apache civilians, including Cochise's father. Mexican 
+forces were finally able to capture Cochise in 1848 during an Apache raid on Fronteras, Sonora, but they 
+exchanged him for nearly a dozen Mexican hostages. [PARAGRAPH:1]At Apache Pass in 1862, Cochise and his 
+father-in-law, Mangas Coloradas, with 500 fighters, held their ground against a force of 3,000 California 
+volunteers under Carleton until howitzer artillery fire was brought to bear on their position. The impasse 
+continued until both parties agreed to parley. During what was to be a peaceful parley session, the Americans 
+took the unsuspecting Mangas Coloradas prisoner and then later executed him. This continued a series 
+of incidents that fanned the flames of enmity between the encroaching Americans and the Apache. For Cochise, 
+the Americans held nothing sacred and had violated the rules of war by capturing Mangas Coloradas during 
+a parley session. Cochise and the Apache continued their raids against American and Mexican settlements 
+and military positions throughout the 1860s. [PARAGRAPH:1]Following various skirmishes, Cochise and his 
+men were gradually driven into the Dragoon Mountains but were nevertheless able to use the mountains 
+as cover and as a base from which to continue significant skirmishes against white settlements. This 
+was the situation until 1871 when General George Crook assumed command and used other Apaches as scouts 
+and informants and was thereby able to force Cochise's men to surrender. Cochise was taken into custody 
+in September of that year. The next year, the Chiricahua were ordered to Tularosa Reservation in New 
+Mexico but refused to leave their ancestral lands in Arizona, which were guaranteed to them under treaty. 
+Cochise managed to escape again and renewed raids and skirmishes against settlements through most of 
+1872. A new treaty was later negotiated by General Oliver O. Howard as the Americans relented to some 
+of the Apaches' terms. Cochise quietly retired to an Arizona reservation, where he died of natural causes.</English>
+		<French>[H1]Cochise [\H1][NEWLINE][BOLD]Chief of the Chiricahua Apache [\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1805 - 1874[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB] Adatlichi, better known 
+as 'Cochise' (meaning 'hardwood') was a chief of the Chokonen band of the Chiricahua Apache and the leader 
+of an uprising that began in 1861. Cochise was described as a large man (for the time), with a muscular 
+frame, classical Roman features, and long black hair which he wore in traditional Apache style. [PARAGRAPH:1]Cochise 
+and the Chokonen-Chiricahua lived in the area that is now the northern Mexican region of Sonora, and 
+New Mexico and Arizona, which were traditional Apache territories until the coming of the Europeans. 
+Due to encroachment by Spain and later Mexico, the Chokonen and Nednhi-Chiricahua became increasingly 
+dependent upon food rations issued by the Mexican government to placate them. When this practice was 
+abruptly ended in 1831, the various Chiricahua bands resumed raids to acquire food. Mexican troops were 
+largely unsuccessful in their attempts to address this and were often fought to a standstill by the Apache. 
+As part of their attempts at controlling the Chiricahua, Mexican forces, often with the help of American 
+and Native American mercenaries, began to kill Apache civilians, including Cochise's father. Mexican 
+forces were finally able to capture Cochise in 1848 during an Apache raid on Fronteras, Sonora, but they 
+exchanged him for nearly a dozen Mexican hostages. [PARAGRAPH:1]At Apache Pass in 1862, Cochise and his 
+father-in-law, Mangas Coloradas, with 500 fighters, held their ground against a force of 3,000 California 
+volunteers under Carleton until howitzer artillery fire was brought to bear on their position. The impasse 
+continued until both parties agreed to parley. During what was to be a peaceful parley session, the Americans 
+took the unsuspecting Mangas Coloradas prisoner and then later executed him. This continued a series 
+of incidents that fanned the flames of enmity between the encroaching Americans and the Apache. For Cochise, 
+the Americans held nothing sacred and had violated the rules of war by capturing Mangas Coloradas during 
+a parley session. Cochise and the Apache continued their raids against American and Mexican settlements 
+and military positions throughout the 1860s. [PARAGRAPH:1]Following various skirmishes, Cochise and his 
+men were gradually driven into the Dragoon Mountains but were nevertheless able to use the mountains 
+as cover and as a base from which to continue significant skirmishes against white settlements. This 
+was the situation until 1871 when General George Crook assumed command and used other Apaches as scouts 
+and informants and was thereby able to force Cochise's men to surrender. Cochise was taken into custody 
+in September of that year. The next year, the Chiricahua were ordered to Tularosa Reservation in New 
+Mexico but refused to leave their ancestral lands in Arizona, which were guaranteed to them under treaty. 
+Cochise managed to escape again and renewed raids and skirmishes against settlements through most of 
+1872. A new treaty was later negotiated by General Oliver O. Howard as the Americans relented to some 
+of the Apaches' terms. Cochise quietly retired to an Arizona reservation, where he died of natural causes.</French>
+		<German>[H1]Cochise [\H1][NEWLINE][BOLD]Chief of the Chiricahua Apache [\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1805 - 1874[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB] Adatlichi, better known 
+as 'Cochise' (meaning 'hardwood') was a chief of the Chokonen band of the Chiricahua Apache and the leader 
+of an uprising that began in 1861. Cochise was described as a large man (for the time), with a muscular 
+frame, classical Roman features, and long black hair which he wore in traditional Apache style. [PARAGRAPH:1]Cochise 
+and the Chokonen-Chiricahua lived in the area that is now the northern Mexican region of Sonora, and 
+New Mexico and Arizona, which were traditional Apache territories until the coming of the Europeans. 
+Due to encroachment by Spain and later Mexico, the Chokonen and Nednhi-Chiricahua became increasingly 
+dependent upon food rations issued by the Mexican government to placate them. When this practice was 
+abruptly ended in 1831, the various Chiricahua bands resumed raids to acquire food. Mexican troops were 
+largely unsuccessful in their attempts to address this and were often fought to a standstill by the Apache. 
+As part of their attempts at controlling the Chiricahua, Mexican forces, often with the help of American 
+and Native American mercenaries, began to kill Apache civilians, including Cochise's father. Mexican 
+forces were finally able to capture Cochise in 1848 during an Apache raid on Fronteras, Sonora, but they 
+exchanged him for nearly a dozen Mexican hostages. [PARAGRAPH:1]At Apache Pass in 1862, Cochise and his 
+father-in-law, Mangas Coloradas, with 500 fighters, held their ground against a force of 3,000 California 
+volunteers under Carleton until howitzer artillery fire was brought to bear on their position. The impasse 
+continued until both parties agreed to parley. During what was to be a peaceful parley session, the Americans 
+took the unsuspecting Mangas Coloradas prisoner and then later executed him. This continued a series 
+of incidents that fanned the flames of enmity between the encroaching Americans and the Apache. For Cochise, 
+the Americans held nothing sacred and had violated the rules of war by capturing Mangas Coloradas during 
+a parley session. Cochise and the Apache continued their raids against American and Mexican settlements 
+and military positions throughout the 1860s. [PARAGRAPH:1]Following various skirmishes, Cochise and his 
+men were gradually driven into the Dragoon Mountains but were nevertheless able to use the mountains 
+as cover and as a base from which to continue significant skirmishes against white settlements. This 
+was the situation until 1871 when General George Crook assumed command and used other Apaches as scouts 
+and informants and was thereby able to force Cochise's men to surrender. Cochise was taken into custody 
+in September of that year. The next year, the Chiricahua were ordered to Tularosa Reservation in New 
+Mexico but refused to leave their ancestral lands in Arizona, which were guaranteed to them under treaty. 
+Cochise managed to escape again and renewed raids and skirmishes against settlements through most of 
+1872. A new treaty was later negotiated by General Oliver O. Howard as the Americans relented to some 
+of the Apaches' terms. Cochise quietly retired to an Arizona reservation, where he died of natural causes.</German>
+		<Italian>[H1]Cochise [\H1][NEWLINE][BOLD]Chief of the Chiricahua Apache [\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1805 - 1874[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB] Adatlichi, better known 
+as 'Cochise' (meaning 'hardwood') was a chief of the Chokonen band of the Chiricahua Apache and the leader 
+of an uprising that began in 1861. Cochise was described as a large man (for the time), with a muscular 
+frame, classical Roman features, and long black hair which he wore in traditional Apache style. [PARAGRAPH:1]Cochise 
+and the Chokonen-Chiricahua lived in the area that is now the northern Mexican region of Sonora, and 
+New Mexico and Arizona, which were traditional Apache territories until the coming of the Europeans. 
+Due to encroachment by Spain and later Mexico, the Chokonen and Nednhi-Chiricahua became increasingly 
+dependent upon food rations issued by the Mexican government to placate them. When this practice was 
+abruptly ended in 1831, the various Chiricahua bands resumed raids to acquire food. Mexican troops were 
+largely unsuccessful in their attempts to address this and were often fought to a standstill by the Apache. 
+As part of their attempts at controlling the Chiricahua, Mexican forces, often with the help of American 
+and Native American mercenaries, began to kill Apache civilians, including Cochise's father. Mexican 
+forces were finally able to capture Cochise in 1848 during an Apache raid on Fronteras, Sonora, but they 
+exchanged him for nearly a dozen Mexican hostages. [PARAGRAPH:1]At Apache Pass in 1862, Cochise and his 
+father-in-law, Mangas Coloradas, with 500 fighters, held their ground against a force of 3,000 California 
+volunteers under Carleton until howitzer artillery fire was brought to bear on their position. The impasse 
+continued until both parties agreed to parley. During what was to be a peaceful parley session, the Americans 
+took the unsuspecting Mangas Coloradas prisoner and then later executed him. This continued a series 
+of incidents that fanned the flames of enmity between the encroaching Americans and the Apache. For Cochise, 
+the Americans held nothing sacred and had violated the rules of war by capturing Mangas Coloradas during 
+a parley session. Cochise and the Apache continued their raids against American and Mexican settlements 
+and military positions throughout the 1860s. [PARAGRAPH:1]Following various skirmishes, Cochise and his 
+men were gradually driven into the Dragoon Mountains but were nevertheless able to use the mountains 
+as cover and as a base from which to continue significant skirmishes against white settlements. This 
+was the situation until 1871 when General George Crook assumed command and used other Apaches as scouts 
+and informants and was thereby able to force Cochise's men to surrender. Cochise was taken into custody 
+in September of that year. The next year, the Chiricahua were ordered to Tularosa Reservation in New 
+Mexico but refused to leave their ancestral lands in Arizona, which were guaranteed to them under treaty. 
+Cochise managed to escape again and renewed raids and skirmishes against settlements through most of 
+1872. A new treaty was later negotiated by General Oliver O. Howard as the Americans relented to some 
+of the Apaches' terms. Cochise quietly retired to an Arizona reservation, where he died of natural causes.</Italian>
+		<Spanish>[H1]Cochise [\H1][NEWLINE][BOLD]Chief of the Chiricahua Apache [\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1805 - 1874[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB] Adatlichi, better known 
+as 'Cochise' (meaning 'hardwood') was a chief of the Chokonen band of the Chiricahua Apache and the leader 
+of an uprising that began in 1861. Cochise was described as a large man (for the time), with a muscular 
+frame, classical Roman features, and long black hair which he wore in traditional Apache style. [PARAGRAPH:1]Cochise 
+and the Chokonen-Chiricahua lived in the area that is now the northern Mexican region of Sonora, and 
+New Mexico and Arizona, which were traditional Apache territories until the coming of the Europeans. 
+Due to encroachment by Spain and later Mexico, the Chokonen and Nednhi-Chiricahua became increasingly 
+dependent upon food rations issued by the Mexican government to placate them. When this practice was 
+abruptly ended in 1831, the various Chiricahua bands resumed raids to acquire food. Mexican troops were 
+largely unsuccessful in their attempts to address this and were often fought to a standstill by the Apache. 
+As part of their attempts at controlling the Chiricahua, Mexican forces, often with the help of American 
+and Native American mercenaries, began to kill Apache civilians, including Cochise's father. Mexican 
+forces were finally able to capture Cochise in 1848 during an Apache raid on Fronteras, Sonora, but they 
+exchanged him for nearly a dozen Mexican hostages. [PARAGRAPH:1]At Apache Pass in 1862, Cochise and his 
+father-in-law, Mangas Coloradas, with 500 fighters, held their ground against a force of 3,000 California 
+volunteers under Carleton until howitzer artillery fire was brought to bear on their position. The impasse 
+continued until both parties agreed to parley. During what was to be a peaceful parley session, the Americans 
+took the unsuspecting Mangas Coloradas prisoner and then later executed him. This continued a series 
+of incidents that fanned the flames of enmity between the encroaching Americans and the Apache. For Cochise, 
+the Americans held nothing sacred and had violated the rules of war by capturing Mangas Coloradas during 
+a parley session. Cochise and the Apache continued their raids against American and Mexican settlements 
+and military positions throughout the 1860s. [PARAGRAPH:1]Following various skirmishes, Cochise and his 
+men were gradually driven into the Dragoon Mountains but were nevertheless able to use the mountains 
+as cover and as a base from which to continue significant skirmishes against white settlements. This 
+was the situation until 1871 when General George Crook assumed command and used other Apaches as scouts 
+and informants and was thereby able to force Cochise's men to surrender. Cochise was taken into custody 
+in September of that year. The next year, the Chiricahua were ordered to Tularosa Reservation in New 
+Mexico but refused to leave their ancestral lands in Arizona, which were guaranteed to them under treaty. 
+Cochise managed to escape again and renewed raids and skirmishes against settlements through most of 
+1872. A new treaty was later negotiated by General Oliver O. Howard as the Americans relented to some 
+of the Apaches' terms. Cochise quietly retired to an Arizona reservation, where he died of natural causes.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_COCHISE_1</Tag>
+		<English>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. I warn you, do not settle on our land or I will fight you!</English>
+		<French>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. I warn you, do not settle on our land or I will fight you!</French>
+		<German>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. I warn you, do not settle on our land or I will fight you!</German>
+		<Italian>Saluti! Io sono [OUR_NAME] dell'[OUR_EMPIRE]. Ti avverto, non stabilirti nella nostra terra o ti ucciderò!</Italian>
+		<Spanish>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. I warn you, do not settle on our land or I will fight you!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_GOYATHLAY</Tag>
+		<English>Geronimo</English>
+		<French>
+			<Text>Geronimo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Geronimo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Geronimo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Geronimo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_GOYATHLAY_PEDIA</Tag>
+		<English>[H1]Goyathlay [\H1][NEWLINE][BOLD]Leader of the Chiricahua Apache [\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1829 - 1909[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Geronimo or 'Goyathlay' 
+('one who yawns') was a prominent leader of the Chiricahua Apache who long warred against the encroachment 
+of settlers of European descent on tribal lands. [PARAGRAPH:1]He grew up to be a respected medicine man 
+and, later, an accomplished warrior who fought frequently with Mexican troops. Mexican soldiers massacred 
+his first wife and three children during a supposedly peaceful trading session in 1858, and as a result 
+he hated all Mexicans for the rest of his life. His Mexican friends gave him the nickname of "Gerï¿½nimo". 
+The reasons for this name are not known. Some believe it was a transcription of the Spanish attempt to 
+pronounce the name Goyathlay. Others believe that his Spanish enemies called out to Saint Jerome for 
+assistance while attacking or in the midst of violent defeat. [PARAGRAPH:1]Geronimo fought against ever 
+increasing numbers of both Mexican and United States troops and became famous for his daring exploits 
+and numerous escapes from capture. At the last, these 38 men, women and children evaded 5000 U.S. troops 
+(one fourth of the army at the time) and the Mexican army for a year. His forces became the last major 
+force of independent Indian warriors who refused to acknowledge the United States Government in the American 
+West. This came to an end on September 4, 1886, when Geronimo surrendered to United States Army General 
+Thomas W. Sampson at Skeleton Canyon, Arizona. [PARAGRAPH:1]Geronimo was sent in as a prisoner to Fort 
+Pickens, Florida. In 1894 he was moved to Fort Sill, Oklahoma. In his old age Geronimo became something 
+of a celebrity. He appeared at fairs, including the 1904 World's Fair in St. Louis, and selling souvenirs 
+and photographs of himself. However, he was not allowed to return to the land of his birth. He rode in 
+the United States President Theodore Roosevelt's 1905 inaugural parade. He died of pneumonia at Fort 
+Sill, where he is now buried at the Apache Indian Prisoner of War cemetery. [PARAGRAPH:1]Geronimo is 
+a popular figure in cinema and television. Characters based on Geronimo have appeared in many films. 
+Characterisations of Geronimo also appeared in Gunsmoke: The Last Apache, and the 1993 telefilm Geronimo. 
+The 1976 film I Due superpiedi quasi piatti features a character who believes himself to be Geronimo. 
+The manga and anime television series Kinnikuman and Ultimate Muscle: The Kinnikuman Legacy features 
+a highly stereotyped native wrestler, based loosely on the historical figure. In 1940, the night before 
+their first mass jump, U.S. paratroopers at Fort Benning saw a film about Geronimo, and began shouting 
+his name during jumps, a trend which has caught on elsewhere.</English>
+		<French>[H1]Goyathlay [\H1][NEWLINE][BOLD]Leader of the Chiricahua Apache [\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1829 - 1909[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Geronimo or 'Goyathlay' 
+('one who yawns') was a prominent leader of the Chiricahua Apache who long warred against the encroachment 
+of settlers of European descent on tribal lands. [PARAGRAPH:1]He grew up to be a respected medicine man 
+and, later, an accomplished warrior who fought frequently with Mexican troops. Mexican soldiers massacred 
+his first wife and three children during a supposedly peaceful trading session in 1858, and as a result 
+he hated all Mexicans for the rest of his life. His Mexican friends gave him the nickname of "Gerï¿½nimo". 
+The reasons for this name are not known. Some believe it was a transcription of the Spanish attempt to 
+pronounce the name Goyathlay. Others believe that his Spanish enemies called out to Saint Jerome for 
+assistance while attacking or in the midst of violent defeat. [PARAGRAPH:1]Geronimo fought against ever 
+increasing numbers of both Mexican and United States troops and became famous for his daring exploits 
+and numerous escapes from capture. At the last, these 38 men, women and children evaded 5000 U.S. troops 
+(one fourth of the army at the time) and the Mexican army for a year. His forces became the last major 
+force of independent Indian warriors who refused to acknowledge the United States Government in the American 
+West. This came to an end on September 4, 1886, when Geronimo surrendered to United States Army General 
+Thomas W. Sampson at Skeleton Canyon, Arizona. [PARAGRAPH:1]Geronimo was sent in as a prisoner to Fort 
+Pickens, Florida. In 1894 he was moved to Fort Sill, Oklahoma. In his old age Geronimo became something 
+of a celebrity. He appeared at fairs, including the 1904 World's Fair in St. Louis, and selling souvenirs 
+and photographs of himself. However, he was not allowed to return to the land of his birth. He rode in 
+the United States President Theodore Roosevelt's 1905 inaugural parade. He died of pneumonia at Fort 
+Sill, where he is now buried at the Apache Indian Prisoner of War cemetery. [PARAGRAPH:1]Geronimo is 
+a popular figure in cinema and television. Characters based on Geronimo have appeared in many films. 
+Characterisations of Geronimo also appeared in Gunsmoke: The Last Apache, and the 1993 telefilm Geronimo. 
+The 1976 film I Due superpiedi quasi piatti features a character who believes himself to be Geronimo. 
+The manga and anime television series Kinnikuman and Ultimate Muscle: The Kinnikuman Legacy features 
+a highly stereotyped native wrestler, based loosely on the historical figure. In 1940, the night before 
+their first mass jump, U.S. paratroopers at Fort Benning saw a film about Geronimo, and began shouting 
+his name during jumps, a trend which has caught on elsewhere.</French>
+		<German>[H1]Goyathlay [\H1][NEWLINE][BOLD]Leader of the Chiricahua Apache [\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1829 - 1909[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Geronimo or 'Goyathlay' 
+('one who yawns') was a prominent leader of the Chiricahua Apache who long warred against the encroachment 
+of settlers of European descent on tribal lands. [PARAGRAPH:1]He grew up to be a respected medicine man 
+and, later, an accomplished warrior who fought frequently with Mexican troops. Mexican soldiers massacred 
+his first wife and three children during a supposedly peaceful trading session in 1858, and as a result 
+he hated all Mexicans for the rest of his life. His Mexican friends gave him the nickname of "Gerï¿½nimo". 
+The reasons for this name are not known. Some believe it was a transcription of the Spanish attempt to 
+pronounce the name Goyathlay. Others believe that his Spanish enemies called out to Saint Jerome for 
+assistance while attacking or in the midst of violent defeat. [PARAGRAPH:1]Geronimo fought against ever 
+increasing numbers of both Mexican and United States troops and became famous for his daring exploits 
+and numerous escapes from capture. At the last, these 38 men, women and children evaded 5000 U.S. troops 
+(one fourth of the army at the time) and the Mexican army for a year. His forces became the last major 
+force of independent Indian warriors who refused to acknowledge the United States Government in the American 
+West. This came to an end on September 4, 1886, when Geronimo surrendered to United States Army General 
+Thomas W. Sampson at Skeleton Canyon, Arizona. [PARAGRAPH:1]Geronimo was sent in as a prisoner to Fort 
+Pickens, Florida. In 1894 he was moved to Fort Sill, Oklahoma. In his old age Geronimo became something 
+of a celebrity. He appeared at fairs, including the 1904 World's Fair in St. Louis, and selling souvenirs 
+and photographs of himself. However, he was not allowed to return to the land of his birth. He rode in 
+the United States President Theodore Roosevelt's 1905 inaugural parade. He died of pneumonia at Fort 
+Sill, where he is now buried at the Apache Indian Prisoner of War cemetery. [PARAGRAPH:1]Geronimo is 
+a popular figure in cinema and television. Characters based on Geronimo have appeared in many films. 
+Characterisations of Geronimo also appeared in Gunsmoke: The Last Apache, and the 1993 telefilm Geronimo. 
+The 1976 film I Due superpiedi quasi piatti features a character who believes himself to be Geronimo. 
+The manga and anime television series Kinnikuman and Ultimate Muscle: The Kinnikuman Legacy features 
+a highly stereotyped native wrestler, based loosely on the historical figure. In 1940, the night before 
+their first mass jump, U.S. paratroopers at Fort Benning saw a film about Geronimo, and began shouting 
+his name during jumps, a trend which has caught on elsewhere.</German>
+		<Italian>[H1]Goyathlay [\H1][NEWLINE][BOLD]Leader of the Chiricahua Apache [\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1829 - 1909[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Geronimo or 'Goyathlay' 
+('one who yawns') was a prominent leader of the Chiricahua Apache who long warred against the encroachment 
+of settlers of European descent on tribal lands. [PARAGRAPH:1]He grew up to be a respected medicine man 
+and, later, an accomplished warrior who fought frequently with Mexican troops. Mexican soldiers massacred 
+his first wife and three children during a supposedly peaceful trading session in 1858, and as a result 
+he hated all Mexicans for the rest of his life. His Mexican friends gave him the nickname of "Gerï¿½nimo". 
+The reasons for this name are not known. Some believe it was a transcription of the Spanish attempt to 
+pronounce the name Goyathlay. Others believe that his Spanish enemies called out to Saint Jerome for 
+assistance while attacking or in the midst of violent defeat. [PARAGRAPH:1]Geronimo fought against ever 
+increasing numbers of both Mexican and United States troops and became famous for his daring exploits 
+and numerous escapes from capture. At the last, these 38 men, women and children evaded 5000 U.S. troops 
+(one fourth of the army at the time) and the Mexican army for a year. His forces became the last major 
+force of independent Indian warriors who refused to acknowledge the United States Government in the American 
+West. This came to an end on September 4, 1886, when Geronimo surrendered to United States Army General 
+Thomas W. Sampson at Skeleton Canyon, Arizona. [PARAGRAPH:1]Geronimo was sent in as a prisoner to Fort 
+Pickens, Florida. In 1894 he was moved to Fort Sill, Oklahoma. In his old age Geronimo became something 
+of a celebrity. He appeared at fairs, including the 1904 World's Fair in St. Louis, and selling souvenirs 
+and photographs of himself. However, he was not allowed to return to the land of his birth. He rode in 
+the United States President Theodore Roosevelt's 1905 inaugural parade. He died of pneumonia at Fort 
+Sill, where he is now buried at the Apache Indian Prisoner of War cemetery. [PARAGRAPH:1]Geronimo is 
+a popular figure in cinema and television. Characters based on Geronimo have appeared in many films. 
+Characterisations of Geronimo also appeared in Gunsmoke: The Last Apache, and the 1993 telefilm Geronimo. 
+The 1976 film I Due superpiedi quasi piatti features a character who believes himself to be Geronimo. 
+The manga and anime television series Kinnikuman and Ultimate Muscle: The Kinnikuman Legacy features 
+a highly stereotyped native wrestler, based loosely on the historical figure. In 1940, the night before 
+their first mass jump, U.S. paratroopers at Fort Benning saw a film about Geronimo, and began shouting 
+his name during jumps, a trend which has caught on elsewhere.</Italian>
+		<Spanish>[H1]Goyathlay [\H1][NEWLINE][BOLD]Leader of the Chiricahua Apache [\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1829 - 1909[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Geronimo or 'Goyathlay' 
+('one who yawns') was a prominent leader of the Chiricahua Apache who long warred against the encroachment 
+of settlers of European descent on tribal lands. [PARAGRAPH:1]He grew up to be a respected medicine man 
+and, later, an accomplished warrior who fought frequently with Mexican troops. Mexican soldiers massacred 
+his first wife and three children during a supposedly peaceful trading session in 1858, and as a result 
+he hated all Mexicans for the rest of his life. His Mexican friends gave him the nickname of "Gerï¿½nimo". 
+The reasons for this name are not known. Some believe it was a transcription of the Spanish attempt to 
+pronounce the name Goyathlay. Others believe that his Spanish enemies called out to Saint Jerome for 
+assistance while attacking or in the midst of violent defeat. [PARAGRAPH:1]Geronimo fought against ever 
+increasing numbers of both Mexican and United States troops and became famous for his daring exploits 
+and numerous escapes from capture. At the last, these 38 men, women and children evaded 5000 U.S. troops 
+(one fourth of the army at the time) and the Mexican army for a year. His forces became the last major 
+force of independent Indian warriors who refused to acknowledge the United States Government in the American 
+West. This came to an end on September 4, 1886, when Geronimo surrendered to United States Army General 
+Thomas W. Sampson at Skeleton Canyon, Arizona. [PARAGRAPH:1]Geronimo was sent in as a prisoner to Fort 
+Pickens, Florida. In 1894 he was moved to Fort Sill, Oklahoma. In his old age Geronimo became something 
+of a celebrity. He appeared at fairs, including the 1904 World's Fair in St. Louis, and selling souvenirs 
+and photographs of himself. However, he was not allowed to return to the land of his birth. He rode in 
+the United States President Theodore Roosevelt's 1905 inaugural parade. He died of pneumonia at Fort 
+Sill, where he is now buried at the Apache Indian Prisoner of War cemetery. [PARAGRAPH:1]Geronimo is 
+a popular figure in cinema and television. Characters based on Geronimo have appeared in many films. 
+Characterisations of Geronimo also appeared in Gunsmoke: The Last Apache, and the 1993 telefilm Geronimo. 
+The 1976 film I Due superpiedi quasi piatti features a character who believes himself to be Geronimo. 
+The manga and anime television series Kinnikuman and Ultimate Muscle: The Kinnikuman Legacy features 
+a highly stereotyped native wrestler, based loosely on the historical figure. In 1940, the night before 
+their first mass jump, U.S. paratroopers at Fort Benning saw a film about Geronimo, and began shouting 
+his name during jumps, a trend which has caught on elsewhere.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_GOYATHLAY_1</Tag>
+		<English>The great [OUR_CIV_ADJ] people welcome you, [CT_NAME]. I yawn if you don't have something interesting to offer.</English>
+		<French>The great [OUR_CIV_ADJ] people welcome you, [CT_NAME]. I yawn if you don't have something interesting to offer.</French>
+		<German>The great [OUR_CIV_ADJ] people welcome you, [CT_NAME]. I yawn if you don't have something interesting to offer.</German>
+		<Italian>Il grande popolo [OUR_CIV_ADJ] ti da il benvenuto, [CT_NAME]. Sbadiglio se non hai niente di interessante da offrirmi.</Italian>
+		<Spanish>The great [OUR_CIV_ADJ] people welcome you, [CT_NAME]. I yawn if you don't have something interesting to offer.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_APACHE_DESC</Tag>
+		<English>Apache Empire</English>
+		<French>Empire apache</French>
+		<German>Apache Empire</German>
+		<Italian>Impero Apache</Italian>
+		<Spanish>Apache Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_APACHE_SHORT_DESC</Tag>
+		<English>Apache</English>
+		<French>Apache</French>
+		<German>Apache</German>
+		<Italian>Apache</Italian>
+		<Spanish>Apache</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_APACHE_ADJECTIVE</Tag>
+		<English>Apache</English>
+		<French>Apache</French>
+		<German>Apache</German>
+		<Italian>Apache</Italian>
+		<Spanish>Apache</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_APACHE_PEDIA</Tag>
+		<English>[TAB]Natives of the inhospitable southwestern United States and northern Mexico, the Apache 
+were nomadic people who built their society on a balance of commerce and raids. Thanks in part to their 
+nomadic lifestyle and harsh homeland, the Apache were considered among the most formidable mounted warriors 
+of the southwest. The name Apache itself came from a Zuni native word meaning "enemy." [PARAGRAPH:2]The 
+Spanish were the first to encounter the Apache when Francisco de Coronado, the Spanish conquistador who 
+combed the American Southwest in the 16th century, met and traded with them. Relations between the Apache 
+and the colonists remained relatively benign until the 19th century, when Mexico declared its independence 
+from Spain. In the 1830s, seeking to gain control of the Southwest, the Mexican government began offering 
+a reward for the scalps of the Apache. [PARAGRAPH:2]The violence that followed led many Apache, normally 
+a series of independent tribes, to unite under the leadership of Mangas Coloradas. Coloradas' war against 
+the Mexicans would continue for almost a decade before the United States, declaring war in 1846, defeated 
+Mexico and laid claim to their territories. Coloradas agreed to sign a treaty with the Americans in return 
+for self-sovereignty, but it did not last. The discovery of a wealth of minerals in Apache territory 
+brought white settlers flocking to their lands. Seeing them as trespassers, the Apache led raids against 
+the American settlers. In response, the US military sent forth troops to make war on the Apache. The 
+ensuing conflict, which became known as the Apache Wars, continued for roughly ten years. [PARAGRAPH:2]During 
+this time, Mangas Coloradas, as well as the Apache leader Cochise and the medicine man Geronimo, led 
+guerilla forces against the Americans. The decade of war took its toll on the Apache - Coloradas was 
+captured and executed during a treaty negotiation in 1863 and Cochise too was captured. To help stem 
+the tide of violence, the American government authorized the creation of a reservation in San Carlos, 
+Arizona, where the Apache could live separated from the white settlers. At first the Apache agreed to 
+live on the territory, but found the restricting life on the reservation little to their liking. Geronimo 
+along with numerous others escaped from the reservation on multiple occasions to wreak havoc on American 
+encampments. During his final escape in 1886, nearly 6000 soldiers and volunteers were mobilized to try 
+and recapture the Apache leader. [PARAGRAPH:2]After the surrender of Geronimo later that year, there 
+was a great demand among the white settlers that the Apache be relocated, as it was clear the reservation 
+could not hold them. Bowing to their constituents' demands, the American government scattered the Apache 
+to the four winds. Some were moved east to Oklahoma. Geromino and his followers were imprisoned in Florida 
+and not allowed to return to their home territory until 1914. Today, most modern Apache still live in 
+the same region as their ancestors - Arizona and New Mexico, with many still living on their original 
+reservation at San Carlos.</English>
+		<French>[TAB]Natives of the inhospitable southwestern United States and northern Mexico, the Apache 
+were nomadic people who built their society on a balance of commerce and raids. Thanks in part to their 
+nomadic lifestyle and harsh homeland, the Apache were considered among the most formidable mounted warriors 
+of the southwest. The name Apache itself came from a Zuni native word meaning "enemy." [PARAGRAPH:2]The 
+Spanish were the first to encounter the Apache when Francisco de Coronado, the Spanish conquistador who 
+combed the American Southwest in the 16th century, met and traded with them. Relations between the Apache 
+and the colonists remained relatively benign until the 19th century, when Mexico declared its independence 
+from Spain. In the 1830s, seeking to gain control of the Southwest, the Mexican government began offering 
+a reward for the scalps of the Apache. [PARAGRAPH:2]The violence that followed led many Apache, normally 
+a series of independent tribes, to unite under the leadership of Mangas Coloradas. Coloradas' war against 
+the Mexicans would continue for almost a decade before the United States, declaring war in 1846, defeated 
+Mexico and laid claim to their territories. Coloradas agreed to sign a treaty with the Americans in return 
+for self-sovereignty, but it did not last. The discovery of a wealth of minerals in Apache territory 
+brought white settlers flocking to their lands. Seeing them as trespassers, the Apache led raids against 
+the American settlers. In response, the US military sent forth troops to make war on the Apache. The 
+ensuing conflict, which became known as the Apache Wars, continued for roughly ten years. [PARAGRAPH:2]During 
+this time, Mangas Coloradas, as well as the Apache leader Cochise and the medicine man Geronimo, led 
+guerilla forces against the Americans. The decade of war took its toll on the Apache - Coloradas was 
+captured and executed during a treaty negotiation in 1863 and Cochise too was captured. To help stem 
+the tide of violence, the American government authorized the creation of a reservation in San Carlos, 
+Arizona, where the Apache could live separated from the white settlers. At first the Apache agreed to 
+live on the territory, but found the restricting life on the reservation little to their liking. Geronimo 
+along with numerous others escaped from the reservation on multiple occasions to wreak havoc on American 
+encampments. During his final escape in 1886, nearly 6000 soldiers and volunteers were mobilized to try 
+and recapture the Apache leader. [PARAGRAPH:2]After the surrender of Geronimo later that year, there 
+was a great demand among the white settlers that the Apache be relocated, as it was clear the reservation 
+could not hold them. Bowing to their constituents' demands, the American government scattered the Apache 
+to the four winds. Some were moved east to Oklahoma. Geromino and his followers were imprisoned in Florida 
+and not allowed to return to their home territory until 1914. Today, most modern Apache still live in 
+the same region as their ancestors - Arizona and New Mexico, with many still living on their original 
+reservation at San Carlos.</French>
+		<German>[TAB]Natives of the inhospitable southwestern United States and northern Mexico, the Apache 
+were nomadic people who built their society on a balance of commerce and raids. Thanks in part to their 
+nomadic lifestyle and harsh homeland, the Apache were considered among the most formidable mounted warriors 
+of the southwest. The name Apache itself came from a Zuni native word meaning "enemy." [PARAGRAPH:2]The 
+Spanish were the first to encounter the Apache when Francisco de Coronado, the Spanish conquistador who 
+combed the American Southwest in the 16th century, met and traded with them. Relations between the Apache 
+and the colonists remained relatively benign until the 19th century, when Mexico declared its independence 
+from Spain. In the 1830s, seeking to gain control of the Southwest, the Mexican government began offering 
+a reward for the scalps of the Apache. [PARAGRAPH:2]The violence that followed led many Apache, normally 
+a series of independent tribes, to unite under the leadership of Mangas Coloradas. Coloradas' war against 
+the Mexicans would continue for almost a decade before the United States, declaring war in 1846, defeated 
+Mexico and laid claim to their territories. Coloradas agreed to sign a treaty with the Americans in return 
+for self-sovereignty, but it did not last. The discovery of a wealth of minerals in Apache territory 
+brought white settlers flocking to their lands. Seeing them as trespassers, the Apache led raids against 
+the American settlers. In response, the US military sent forth troops to make war on the Apache. The 
+ensuing conflict, which became known as the Apache Wars, continued for roughly ten years. [PARAGRAPH:2]During 
+this time, Mangas Coloradas, as well as the Apache leader Cochise and the medicine man Geronimo, led 
+guerilla forces against the Americans. The decade of war took its toll on the Apache - Coloradas was 
+captured and executed during a treaty negotiation in 1863 and Cochise too was captured. To help stem 
+the tide of violence, the American government authorized the creation of a reservation in San Carlos, 
+Arizona, where the Apache could live separated from the white settlers. At first the Apache agreed to 
+live on the territory, but found the restricting life on the reservation little to their liking. Geronimo 
+along with numerous others escaped from the reservation on multiple occasions to wreak havoc on American 
+encampments. During his final escape in 1886, nearly 6000 soldiers and volunteers were mobilized to try 
+and recapture the Apache leader. [PARAGRAPH:2]After the surrender of Geronimo later that year, there 
+was a great demand among the white settlers that the Apache be relocated, as it was clear the reservation 
+could not hold them. Bowing to their constituents' demands, the American government scattered the Apache 
+to the four winds. Some were moved east to Oklahoma. Geromino and his followers were imprisoned in Florida 
+and not allowed to return to their home territory until 1914. Today, most modern Apache still live in 
+the same region as their ancestors - Arizona and New Mexico, with many still living on their original 
+reservation at San Carlos.</German>
+		<Italian>[TAB]Natives of the inhospitable southwestern United States and northern Mexico, the Apache 
+were nomadic people who built their society on a balance of commerce and raids. Thanks in part to their 
+nomadic lifestyle and harsh homeland, the Apache were considered among the most formidable mounted warriors 
+of the southwest. The name Apache itself came from a Zuni native word meaning "enemy." [PARAGRAPH:2]The 
+Spanish were the first to encounter the Apache when Francisco de Coronado, the Spanish conquistador who 
+combed the American Southwest in the 16th century, met and traded with them. Relations between the Apache 
+and the colonists remained relatively benign until the 19th century, when Mexico declared its independence 
+from Spain. In the 1830s, seeking to gain control of the Southwest, the Mexican government began offering 
+a reward for the scalps of the Apache. [PARAGRAPH:2]The violence that followed led many Apache, normally 
+a series of independent tribes, to unite under the leadership of Mangas Coloradas. Coloradas' war against 
+the Mexicans would continue for almost a decade before the United States, declaring war in 1846, defeated 
+Mexico and laid claim to their territories. Coloradas agreed to sign a treaty with the Americans in return 
+for self-sovereignty, but it did not last. The discovery of a wealth of minerals in Apache territory 
+brought white settlers flocking to their lands. Seeing them as trespassers, the Apache led raids against 
+the American settlers. In response, the US military sent forth troops to make war on the Apache. The 
+ensuing conflict, which became known as the Apache Wars, continued for roughly ten years. [PARAGRAPH:2]During 
+this time, Mangas Coloradas, as well as the Apache leader Cochise and the medicine man Geronimo, led 
+guerilla forces against the Americans. The decade of war took its toll on the Apache - Coloradas was 
+captured and executed during a treaty negotiation in 1863 and Cochise too was captured. To help stem 
+the tide of violence, the American government authorized the creation of a reservation in San Carlos, 
+Arizona, where the Apache could live separated from the white settlers. At first the Apache agreed to 
+live on the territory, but found the restricting life on the reservation little to their liking. Geronimo 
+along with numerous others escaped from the reservation on multiple occasions to wreak havoc on American 
+encampments. During his final escape in 1886, nearly 6000 soldiers and volunteers were mobilized to try 
+and recapture the Apache leader. [PARAGRAPH:2]After the surrender of Geronimo later that year, there 
+was a great demand among the white settlers that the Apache be relocated, as it was clear the reservation 
+could not hold them. Bowing to their constituents' demands, the American government scattered the Apache 
+to the four winds. Some were moved east to Oklahoma. Geromino and his followers were imprisoned in Florida 
+and not allowed to return to their home territory until 1914. Today, most modern Apache still live in 
+the same region as their ancestors - Arizona and New Mexico, with many still living on their original 
+reservation at San Carlos.</Italian>
+		<Spanish>[TAB]Natives of the inhospitable southwestern United States and northern Mexico, the Apache 
+were nomadic people who built their society on a balance of commerce and raids. Thanks in part to their 
+nomadic lifestyle and harsh homeland, the Apache were considered among the most formidable mounted warriors 
+of the southwest. The name Apache itself came from a Zuni native word meaning "enemy." [PARAGRAPH:2]The 
+Spanish were the first to encounter the Apache when Francisco de Coronado, the Spanish conquistador who 
+combed the American Southwest in the 16th century, met and traded with them. Relations between the Apache 
+and the colonists remained relatively benign until the 19th century, when Mexico declared its independence 
+from Spain. In the 1830s, seeking to gain control of the Southwest, the Mexican government began offering 
+a reward for the scalps of the Apache. [PARAGRAPH:2]The violence that followed led many Apache, normally 
+a series of independent tribes, to unite under the leadership of Mangas Coloradas. Coloradas' war against 
+the Mexicans would continue for almost a decade before the United States, declaring war in 1846, defeated 
+Mexico and laid claim to their territories. Coloradas agreed to sign a treaty with the Americans in return 
+for self-sovereignty, but it did not last. The discovery of a wealth of minerals in Apache territory 
+brought white settlers flocking to their lands. Seeing them as trespassers, the Apache led raids against 
+the American settlers. In response, the US military sent forth troops to make war on the Apache. The 
+ensuing conflict, which became known as the Apache Wars, continued for roughly ten years. [PARAGRAPH:2]During 
+this time, Mangas Coloradas, as well as the Apache leader Cochise and the medicine man Geronimo, led 
+guerilla forces against the Americans. The decade of war took its toll on the Apache - Coloradas was 
+captured and executed during a treaty negotiation in 1863 and Cochise too was captured. To help stem 
+the tide of violence, the American government authorized the creation of a reservation in San Carlos, 
+Arizona, where the Apache could live separated from the white settlers. At first the Apache agreed to 
+live on the territory, but found the restricting life on the reservation little to their liking. Geronimo 
+along with numerous others escaped from the reservation on multiple occasions to wreak havoc on American 
+encampments. During his final escape in 1886, nearly 6000 soldiers and volunteers were mobilized to try 
+and recapture the Apache leader. [PARAGRAPH:2]After the surrender of Geronimo later that year, there 
+was a great demand among the white settlers that the Apache be relocated, as it was clear the reservation 
+could not hold them. Bowing to their constituents' demands, the American government scattered the Apache 
+to the four winds. Some were moved east to Oklahoma. Geromino and his followers were imprisoned in Florida 
+and not allowed to return to their home territory until 1914. Today, most modern Apache still live in 
+the same region as their ancestors - Arizona and New Mexico, with many still living on their original 
+reservation at San Carlos.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TIIS_TSEBA</Tag>
+		<English>Tiis Tseba</English>
+		<French>
+			<Text>Tiis Tseba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tiis Tseba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tiis Tseba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tiis Tseba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BIGAGOTEEL</Tag>
+		<English>Bigagoteel</English>
+		<French>
+			<Text>Bigagoteel</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Bigagoteel</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Bigagoteel</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Bigagoteel</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TEEHACH</Tag>
+		<English>Teehach</English>
+		<French>
+			<Text>Teehach</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Teehach</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Teehach</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Teehach</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TICHIOG</Tag>
+		<English>Tichiog</English>
+		<French>
+			<Text>Tichiog</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tichiog</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tichiog</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tichiog</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KIIS_CHIINTIIDN</Tag>
+		<English>Kiis Chiintiidn</English>
+		<French>
+			<Text>Kiis Chiintiidn</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kiis Chiintiidn</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kiis Chiintiidn</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kiis Chiintiidn</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TS_TSSKIDN</Tag>
+		<English>Ts'Tsskidn</English>
+		<French>
+			<Text>Ts'Tsskidn</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ts'Tsskidn</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ts'Tsskidn</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ts'Tsskidn</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DZI_LIKESILAN</Tag>
+		<English>Dzi Likesilan</English>
+		<French>
+			<Text>Dzi Likesilan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Dzi Likesilan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Dzi Likesilan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Dzi Likesilan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TSEBAINASTI</Tag>
+		<English>Tsebainasti</English>
+		<French>
+			<Text>Tsebainasti</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tsebainasti</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tsebainasti</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tsebainasti</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_HAKIY</Tag>
+		<English>Hakiy</English>
+		<French>
+			<Text>Hakiy</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Hakiy</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Hakiy</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Hakiy</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TS_LTAH</Tag>
+		<English>Ts'Ltah</English>
+		<French>
+			<Text>Ts'Ltah</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ts'Ltah</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ts'Ltah</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ts'Ltah</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NALEEI_DANAKAIY</Tag>
+		<English>Naleei Danakaiy</English>
+		<French>
+			<Text>Naleei Danakaiy</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Naleei Danakaiy</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Naleei Danakaiy</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Naleei Danakaiy</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_T_YADNLIN</Tag>
+		<English>T'Yadnlin</English>
+		<French>
+			<Text>T'Yadnlin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>T'Yadnlin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>T'Yadnlin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>T'Yadnlin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NAGONLTIN</Tag>
+		<English>Nagonltin</English>
+		<French>
+			<Text>Nagonltin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Nagonltin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Nagonltin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Nagonltin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CHICHIIL_DA_KIZH</Tag>
+		<English>Chichiil Da'Kizh</English>
+		<French>
+			<Text>Chichiil Da'Kizh</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Chichiil Da'Kizh</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Chichiil Da'Kizh</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Chichiil Da'Kizh</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_IZEE_DIGHIN</Tag>
+		<English>Izee Dighin</English>
+		<French>
+			<Text>Izee Dighin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Izee Dighin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Izee Dighin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Izee Dighin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TS_DADLIT_AS</Tag>
+		<English>Ts'Dadlit as</English>
+		<French>
+			<Text>Ts'Dadlit as</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ts'Dadlit as</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ts'Dadlit as</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ts'Dadlit as</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_T_EDN</Tag>
+		<English>T'Edn</English>
+		<French>
+			<Text>T'Edn</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>T'Edn</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>T'Edn</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>T'Edn</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TSE_NANESNASDZ</Tag>
+		<English>Tse'Nanesnasdz</English>
+		<French>
+			<Text>Tse'Nanesnasdz</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tse'Nanesnasdz</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tse'Nanesnasdz</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tse'Nanesnasdz</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TS_YA_KIH_NASTL</Tag>
+		<English>Ts'Ya Kih Nastl</English>
+		<French>
+			<Text>Ts'Ya Kih Nastl</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ts'Ya Kih Nastl</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ts'Ya Kih Nastl</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ts'Ya Kih Nastl</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_IYAH_HAJIN</Tag>
+		<English>Iyah Hajin</English>
+		<French>
+			<Text>Iyah Hajin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Iyah Hajin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Iyah Hajin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Iyah Hajin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_T_NADIDOH</Tag>
+		<English>T'Nadidoh</English>
+		<French>
+			<Text>T'Nadidoh</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>T'Nadidoh</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>T'Nadidoh</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>T'Nadidoh</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MA_BIJAA_DASLAA</Tag>
+		<English>Ma Bijaa Daslaa</English>
+		<French>
+			<Text>Ma Bijaa Daslaa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ma Bijaa Daslaa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ma Bijaa Daslaa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ma Bijaa Daslaa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TSE_DASN</Tag>
+		<English>Tse'Dasn</English>
+		<French>
+			<Text>Tse'Dasn</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tse'Dasn</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tse'Dasn</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tse'Dasn</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DIB_TUD</Tag>
+		<English>Dib Tud</English>
+		<French>
+			<Text>Dib Tud</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Dib Tud</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Dib Tud</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Dib Tud</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TSE_YE_GOCHA</Tag>
+		<English>Tse'Ye Gocha</English>
+		<French>
+			<Text>Tse'Ye Gocha</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tse'Ye Gocha</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tse'Ye Gocha</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tse'Ye Gocha</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+</Civ4GameText>

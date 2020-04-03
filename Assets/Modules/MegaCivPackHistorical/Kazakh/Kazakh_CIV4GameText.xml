@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- Modified by the Civ Gold Team -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KAZAKH_DESC</Tag>
+		<English>Republic of Kazakhstan</English>
+		<French>Republic of Kazakhstan</French>
+		<German>Republic of Kazakhstan</German>
+		<Spanish>Republic of Kazakhstan</Spanish>
+		<Italian>Republic of Kazakhstan</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KAZAKH_SHORT_DESC</Tag>
+		<English>Kazakhstan</English>
+		<French>Kazakhstan</French>
+		<German>Kazakhstan</German>
+		<Spanish>Kazakhstan</Spanish>
+		<Italian>Kazakhstan</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KAZAKH_PEDIA</Tag>
+		<English>[TAB]Kazakhstan has been inhabited since the Stone Age: the region's climate and terrain are 
+best suited for nomads practicing pastoralism. Historians believe that humans first domesticated the 
+horse in the region's vast steppes. While ancient cities Taraz (Aulie-Ata) and Hazrat-e Turkestan had 
+long served as important way-stations along the Silk Road connecting East and West, real political consolidation 
+only began with the Mongol invasion of the early 13th century. Under the Mongol Empire, administrative 
+districts were established, and these eventually came under the emergent Kazakh Khanate.[PARAGRAPH:2]During 
+the 17th century Kazakhs fought Oirats, a federation of western Mongol tribes, among which the Dzungars 
+were particularly aggressive. The beginning of the 18th century marked the zenith of the Kazakh Khanate. 
+During this period the Little Horde participated in the 1723-1730 war against the Dzungars, following 
+their "Great Disaster" invasion of Kazakh territories. Under leadership Abul Khair Khan the Kazakhs won 
+major victories over the Dzungar at the Bulanty River, in 1726, and at the Battle of Anrakay in 1729.Ablai 
+Khan participated in the most significant battles against the Dzungars from the 1720s to the 1750s, for 
+which he was declared a "batyr" ("hero") by the people. Kazakhs were also a victims of constant raids 
+carried out by the Volga Kalmyks.[PARAGRAPH:2]The Russian Empire introduced a system of administration 
+and built military garrisons and barracks in its effort to establish a presence in Central Asia in the 
+so-called "Great Game" between it and the British Empire. The first Russian outpost, Orsk, was built 
+in 1735. Russia enforced the Russian language in all schools and governmental organisations. Russian 
+efforts to impose its system aroused the extreme resentment by the Kazakh people, and by the 1860s, most 
+Kazakhs resisted Russia's annexation largely because of the disruption it wrought upon the traditional 
+nomadic lifestyle and livestock-based economy, and the associated hunger which was rapidly wiping out 
+some Kazakh tribes. The Kazakh national movement, which began in the late 1800s, sought to preserve the 
+native language and identity by resisting the attempts of the Russian Empire to assimilate and stifle 
+them.[PARAGRAPH:2]Soviet repression of the traditional elite, along with forced collectivization in late 
+1920s-1930s, brought mass hunger and led to unrest. Between 1926 and 1939, the Kazakh population declined 
+by 22%, due to starvation, violence and mass emigration. Today, the estimates suggest that the population 
+of Kazakhstan would be closer to 20 million if there had been no starvation or massacre of Kazakhs. During 
+the 1930s, many renowned Kazakh writers, thinkers, poets, politicians and historians were slaughtered 
+on Stalin's orders, both as part of the repression and as a methodical pattern of suppressing Kazakh 
+identity and culture. The Kazakh Soviet Socialist Republic (SSR) contributed five national divisions 
+to the Soviet Union's World War II effort.[PARAGRAPH:2]Caught up in the groundswell of Soviet republics 
+seeking greater autonomy, Kazakhstan declared its sovereignty as a republic within the Union of Soviet 
+Socialist Republics in October 1990. Following the August 1991 aborted coup attempt in Moscow and the 
+subsequent dissolution of the Soviet Union, Kazakhstan declared independence on December 16, 1991. It 
+was the last of the Soviet republics to declare independence.[PARAGRAPH:2]The years following independence 
+have been marked by significant reforms to the Soviet-style economy and political monopoly on power. 
+Under Nursultan Nazarbayev, who initially came to power in 1989 as the head of the Communist Party of 
+Kazakhstan and was eventually elected President in 1991, Kazakhstan has made significant progress toward 
+developing a market economy. The country has enjoyed significant economic growth since 2000, partly due 
+to its large oil, gas, and mineral reserves. Democracy, however, has not gained much ground since 1991.</English>
+		<French>[TAB]Kazakhstan has been inhabited since the Stone Age: the region's climate and terrain are 
+best suited for nomads practicing pastoralism. Historians believe that humans first domesticated the 
+horse in the region's vast steppes. While ancient cities Taraz (Aulie-Ata) and Hazrat-e Turkestan had 
+long served as important way-stations along the Silk Road connecting East and West, real political consolidation 
+only began with the Mongol invasion of the early 13th century. Under the Mongol Empire, administrative 
+districts were established, and these eventually came under the emergent Kazakh Khanate.[PARAGRAPH:2]During 
+the 17th century Kazakhs fought Oirats, a federation of western Mongol tribes, among which the Dzungars 
+were particularly aggressive. The beginning of the 18th century marked the zenith of the Kazakh Khanate. 
+During this period the Little Horde participated in the 1723-1730 war against the Dzungars, following 
+their "Great Disaster" invasion of Kazakh territories. Under leadership Abul Khair Khan the Kazakhs won 
+major victories over the Dzungar at the Bulanty River, in 1726, and at the Battle of Anrakay in 1729.Ablai 
+Khan participated in the most significant battles against the Dzungars from the 1720s to the 1750s, for 
+which he was declared a "batyr" ("hero") by the people. Kazakhs were also a victims of constant raids 
+carried out by the Volga Kalmyks.[PARAGRAPH:2]The Russian Empire introduced a system of administration 
+and built military garrisons and barracks in its effort to establish a presence in Central Asia in the 
+so-called "Great Game" between it and the British Empire. The first Russian outpost, Orsk, was built 
+in 1735. Russia enforced the Russian language in all schools and governmental organisations. Russian 
+efforts to impose its system aroused the extreme resentment by the Kazakh people, and by the 1860s, most 
+Kazakhs resisted Russia's annexation largely because of the disruption it wrought upon the traditional 
+nomadic lifestyle and livestock-based economy, and the associated hunger which was rapidly wiping out 
+some Kazakh tribes. The Kazakh national movement, which began in the late 1800s, sought to preserve the 
+native language and identity by resisting the attempts of the Russian Empire to assimilate and stifle 
+them.[PARAGRAPH:2]Soviet repression of the traditional elite, along with forced collectivization in late 
+1920s-1930s, brought mass hunger and led to unrest. Between 1926 and 1939, the Kazakh population declined 
+by 22%, due to starvation, violence and mass emigration. Today, the estimates suggest that the population 
+of Kazakhstan would be closer to 20 million if there had been no starvation or massacre of Kazakhs. During 
+the 1930s, many renowned Kazakh writers, thinkers, poets, politicians and historians were slaughtered 
+on Stalin's orders, both as part of the repression and as a methodical pattern of suppressing Kazakh 
+identity and culture. The Kazakh Soviet Socialist Republic (SSR) contributed five national divisions 
+to the Soviet Union's World War II effort.[PARAGRAPH:2]Caught up in the groundswell of Soviet republics 
+seeking greater autonomy, Kazakhstan declared its sovereignty as a republic within the Union of Soviet 
+Socialist Republics in October 1990. Following the August 1991 aborted coup attempt in Moscow and the 
+subsequent dissolution of the Soviet Union, Kazakhstan declared independence on December 16, 1991. It 
+was the last of the Soviet republics to declare independence.[PARAGRAPH:2]The years following independence 
+have been marked by significant reforms to the Soviet-style economy and political monopoly on power. 
+Under Nursultan Nazarbayev, who initially came to power in 1989 as the head of the Communist Party of 
+Kazakhstan and was eventually elected President in 1991, Kazakhstan has made significant progress toward 
+developing a market economy. The country has enjoyed significant economic growth since 2000, partly due 
+to its large oil, gas, and mineral reserves. Democracy, however, has not gained much ground since 1991.</French>
+		<German>[TAB]Kazakhstan has been inhabited since the Stone Age: the region's climate and terrain are 
+best suited for nomads practicing pastoralism. Historians believe that humans first domesticated the 
+horse in the region's vast steppes. While ancient cities Taraz (Aulie-Ata) and Hazrat-e Turkestan had 
+long served as important way-stations along the Silk Road connecting East and West, real political consolidation 
+only began with the Mongol invasion of the early 13th century. Under the Mongol Empire, administrative 
+districts were established, and these eventually came under the emergent Kazakh Khanate.[PARAGRAPH:2]During 
+the 17th century Kazakhs fought Oirats, a federation of western Mongol tribes, among which the Dzungars 
+were particularly aggressive. The beginning of the 18th century marked the zenith of the Kazakh Khanate. 
+During this period the Little Horde participated in the 1723-1730 war against the Dzungars, following 
+their "Great Disaster" invasion of Kazakh territories. Under leadership Abul Khair Khan the Kazakhs won 
+major victories over the Dzungar at the Bulanty River, in 1726, and at the Battle of Anrakay in 1729.Ablai 
+Khan participated in the most significant battles against the Dzungars from the 1720s to the 1750s, for 
+which he was declared a "batyr" ("hero") by the people. Kazakhs were also a victims of constant raids 
+carried out by the Volga Kalmyks.[PARAGRAPH:2]The Russian Empire introduced a system of administration 
+and built military garrisons and barracks in its effort to establish a presence in Central Asia in the 
+so-called "Great Game" between it and the British Empire. The first Russian outpost, Orsk, was built 
+in 1735. Russia enforced the Russian language in all schools and governmental organisations. Russian 
+efforts to impose its system aroused the extreme resentment by the Kazakh people, and by the 1860s, most 
+Kazakhs resisted Russia's annexation largely because of the disruption it wrought upon the traditional 
+nomadic lifestyle and livestock-based economy, and the associated hunger which was rapidly wiping out 
+some Kazakh tribes. The Kazakh national movement, which began in the late 1800s, sought to preserve the 
+native language and identity by resisting the attempts of the Russian Empire to assimilate and stifle 
+them.[PARAGRAPH:2]Soviet repression of the traditional elite, along with forced collectivization in late 
+1920s-1930s, brought mass hunger and led to unrest. Between 1926 and 1939, the Kazakh population declined 
+by 22%, due to starvation, violence and mass emigration. Today, the estimates suggest that the population 
+of Kazakhstan would be closer to 20 million if there had been no starvation or massacre of Kazakhs. During 
+the 1930s, many renowned Kazakh writers, thinkers, poets, politicians and historians were slaughtered 
+on Stalin's orders, both as part of the repression and as a methodical pattern of suppressing Kazakh 
+identity and culture. The Kazakh Soviet Socialist Republic (SSR) contributed five national divisions 
+to the Soviet Union's World War II effort.[PARAGRAPH:2]Caught up in the groundswell of Soviet republics 
+seeking greater autonomy, Kazakhstan declared its sovereignty as a republic within the Union of Soviet 
+Socialist Republics in October 1990. Following the August 1991 aborted coup attempt in Moscow and the 
+subsequent dissolution of the Soviet Union, Kazakhstan declared independence on December 16, 1991. It 
+was the last of the Soviet republics to declare independence.[PARAGRAPH:2]The years following independence 
+have been marked by significant reforms to the Soviet-style economy and political monopoly on power. 
+Under Nursultan Nazarbayev, who initially came to power in 1989 as the head of the Communist Party of 
+Kazakhstan and was eventually elected President in 1991, Kazakhstan has made significant progress toward 
+developing a market economy. The country has enjoyed significant economic growth since 2000, partly due 
+to its large oil, gas, and mineral reserves. Democracy, however, has not gained much ground since 1991.</German>
+		<Italian>[TAB]Kazakhstan has been inhabited since the Stone Age: the region's climate and terrain are 
+best suited for nomads practicing pastoralism. Historians believe that humans first domesticated the 
+horse in the region's vast steppes. While ancient cities Taraz (Aulie-Ata) and Hazrat-e Turkestan had 
+long served as important way-stations along the Silk Road connecting East and West, real political consolidation 
+only began with the Mongol invasion of the early 13th century. Under the Mongol Empire, administrative 
+districts were established, and these eventually came under the emergent Kazakh Khanate.[PARAGRAPH:2]During 
+the 17th century Kazakhs fought Oirats, a federation of western Mongol tribes, among which the Dzungars 
+were particularly aggressive. The beginning of the 18th century marked the zenith of the Kazakh Khanate. 
+During this period the Little Horde participated in the 1723-1730 war against the Dzungars, following 
+their "Great Disaster" invasion of Kazakh territories. Under leadership Abul Khair Khan the Kazakhs won 
+major victories over the Dzungar at the Bulanty River, in 1726, and at the Battle of Anrakay in 1729.Ablai 
+Khan participated in the most significant battles against the Dzungars from the 1720s to the 1750s, for 
+which he was declared a "batyr" ("hero") by the people. Kazakhs were also a victims of constant raids 
+carried out by the Volga Kalmyks.[PARAGRAPH:2]The Russian Empire introduced a system of administration 
+and built military garrisons and barracks in its effort to establish a presence in Central Asia in the 
+so-called "Great Game" between it and the British Empire. The first Russian outpost, Orsk, was built 
+in 1735. Russia enforced the Russian language in all schools and governmental organisations. Russian 
+efforts to impose its system aroused the extreme resentment by the Kazakh people, and by the 1860s, most 
+Kazakhs resisted Russia's annexation largely because of the disruption it wrought upon the traditional 
+nomadic lifestyle and livestock-based economy, and the associated hunger which was rapidly wiping out 
+some Kazakh tribes. The Kazakh national movement, which began in the late 1800s, sought to preserve the 
+native language and identity by resisting the attempts of the Russian Empire to assimilate and stifle 
+them.[PARAGRAPH:2]Soviet repression of the traditional elite, along with forced collectivization in late 
+1920s-1930s, brought mass hunger and led to unrest. Between 1926 and 1939, the Kazakh population declined 
+by 22%, due to starvation, violence and mass emigration. Today, the estimates suggest that the population 
+of Kazakhstan would be closer to 20 million if there had been no starvation or massacre of Kazakhs. During 
+the 1930s, many renowned Kazakh writers, thinkers, poets, politicians and historians were slaughtered 
+on Stalin's orders, both as part of the repression and as a methodical pattern of suppressing Kazakh 
+identity and culture. The Kazakh Soviet Socialist Republic (SSR) contributed five national divisions 
+to the Soviet Union's World War II effort.[PARAGRAPH:2]Caught up in the groundswell of Soviet republics 
+seeking greater autonomy, Kazakhstan declared its sovereignty as a republic within the Union of Soviet 
+Socialist Republics in October 1990. Following the August 1991 aborted coup attempt in Moscow and the 
+subsequent dissolution of the Soviet Union, Kazakhstan declared independence on December 16, 1991. It 
+was the last of the Soviet republics to declare independence.[PARAGRAPH:2]The years following independence 
+have been marked by significant reforms to the Soviet-style economy and political monopoly on power. 
+Under Nursultan Nazarbayev, who initially came to power in 1989 as the head of the Communist Party of 
+Kazakhstan and was eventually elected President in 1991, Kazakhstan has made significant progress toward 
+developing a market economy. The country has enjoyed significant economic growth since 2000, partly due 
+to its large oil, gas, and mineral reserves. Democracy, however, has not gained much ground since 1991.</Italian>
+		<Spanish>[TAB]Kazakhstan has been inhabited since the Stone Age: the region's climate and terrain are 
+best suited for nomads practicing pastoralism. Historians believe that humans first domesticated the 
+horse in the region's vast steppes. While ancient cities Taraz (Aulie-Ata) and Hazrat-e Turkestan had 
+long served as important way-stations along the Silk Road connecting East and West, real political consolidation 
+only began with the Mongol invasion of the early 13th century. Under the Mongol Empire, administrative 
+districts were established, and these eventually came under the emergent Kazakh Khanate.[PARAGRAPH:2]During 
+the 17th century Kazakhs fought Oirats, a federation of western Mongol tribes, among which the Dzungars 
+were particularly aggressive. The beginning of the 18th century marked the zenith of the Kazakh Khanate. 
+During this period the Little Horde participated in the 1723-1730 war against the Dzungars, following 
+their "Great Disaster" invasion of Kazakh territories. Under leadership Abul Khair Khan the Kazakhs won 
+major victories over the Dzungar at the Bulanty River, in 1726, and at the Battle of Anrakay in 1729.Ablai 
+Khan participated in the most significant battles against the Dzungars from the 1720s to the 1750s, for 
+which he was declared a "batyr" ("hero") by the people. Kazakhs were also a victims of constant raids 
+carried out by the Volga Kalmyks.[PARAGRAPH:2]The Russian Empire introduced a system of administration 
+and built military garrisons and barracks in its effort to establish a presence in Central Asia in the 
+so-called "Great Game" between it and the British Empire. The first Russian outpost, Orsk, was built 
+in 1735. Russia enforced the Russian language in all schools and governmental organisations. Russian 
+efforts to impose its system aroused the extreme resentment by the Kazakh people, and by the 1860s, most 
+Kazakhs resisted Russia's annexation largely because of the disruption it wrought upon the traditional 
+nomadic lifestyle and livestock-based economy, and the associated hunger which was rapidly wiping out 
+some Kazakh tribes. The Kazakh national movement, which began in the late 1800s, sought to preserve the 
+native language and identity by resisting the attempts of the Russian Empire to assimilate and stifle 
+them.[PARAGRAPH:2]Soviet repression of the traditional elite, along with forced collectivization in late 
+1920s-1930s, brought mass hunger and led to unrest. Between 1926 and 1939, the Kazakh population declined 
+by 22%, due to starvation, violence and mass emigration. Today, the estimates suggest that the population 
+of Kazakhstan would be closer to 20 million if there had been no starvation or massacre of Kazakhs. During 
+the 1930s, many renowned Kazakh writers, thinkers, poets, politicians and historians were slaughtered 
+on Stalin's orders, both as part of the repression and as a methodical pattern of suppressing Kazakh 
+identity and culture. The Kazakh Soviet Socialist Republic (SSR) contributed five national divisions 
+to the Soviet Union's World War II effort.[PARAGRAPH:2]Caught up in the groundswell of Soviet republics 
+seeking greater autonomy, Kazakhstan declared its sovereignty as a republic within the Union of Soviet 
+Socialist Republics in October 1990. Following the August 1991 aborted coup attempt in Moscow and the 
+subsequent dissolution of the Soviet Union, Kazakhstan declared independence on December 16, 1991. It 
+was the last of the Soviet republics to declare independence.[PARAGRAPH:2]The years following independence 
+have been marked by significant reforms to the Soviet-style economy and political monopoly on power. 
+Under Nursultan Nazarbayev, who initially came to power in 1989 as the head of the Communist Party of 
+Kazakhstan and was eventually elected President in 1991, Kazakhstan has made significant progress toward 
+developing a market economy. The country has enjoyed significant economic growth since 2000, partly due 
+to its large oil, gas, and mineral reserves. Democracy, however, has not gained much ground since 1991.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KAZAKH_ADJECTIVE</Tag>
+		<English>Kazakh</English>
+		<French>Kazakh</French>
+		<German>Kazakh</German>
+		<Spanish>Kazakh</Spanish>
+		<Italian>Kazakh</Italian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_ABLAY</Tag>
+		<English>Ablai</English>
+		<French>
+			<Text>Ablai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ablai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ablai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ablai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_ABLAY_PEDIA</Tag>
+		<English>[H1]Ablai Khan[\H1][NEWLINE][BOLD]Kazakh Khan of the Middle Juz[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1711 - 1781 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Born as Abilmansur, Ablai 
+Khan belonged to the senior branch of descendants of the 15th century founder of the Kazakh state, Janybek 
+Khan. In the first half of the 18th century, Ablai Khan proved to be a talented organizer and commander 
+as he headed detachments of the Kazakh militia fighting the Dzungars. He participated in the most significant 
+battles against the Dzungars from the 1720s to the 1750s, for which he was declared a "batyr" ("hero") 
+by the people.[PARAGRAPH:1]Ablai's activity aimed to create a strong and independent Kazakh state. He 
+headed the unified forces of the Kazakhs and furthered the centralization of state power in Kazakhstan. 
+Until his election as the khan of the three jüzes, Ablai had to compete with Khan Abul Mambet and his 
+descendants of Middle jüz for leadership. Initially, Russia recognized Abul Mambet as the Khan of Middle 
+jüz, while Ablai was supported by China. Ablai's talent in playing China against Russia gradually made 
+him the unrivalled Khan of the steppe. Unlike Abul Khair Khan of Little jüz, Ablai never submitted to 
+Russian rule. In 1771, at the meeting of the representatives of the three jüzes, Ablai was elected as 
+the Kazakh khan. Russian Empress requested that the title of khan should be recognized and officially 
+approved by Russia. To that end, she sent an official letter to Petropavl, where Ablai was expected to 
+receive the title in 1779. He never showed up at the fort, declining Russia's request to appoint him 
+as the khan of Middle jüz. In contrast to Ablai, other khans and sultans had been competing for the lavish 
+gifts and stipends of the Emperors of Russia in return for their submission.[PARAGRAPH:1]During the Qing 
+campaigns against the Dzungars, Ablai Khan chose not to take sides in the Dzungar-Chinese conflict. Once 
+the conflict was settled, Ablai offered his submission to the Qianlong Emperor. Ablai was confirmed as 
+Kazakh khan by both the Chinese and the Russians. He lead numerous campaigns against Kokand Khanate and 
+Kyrgyzs. In the last campaign his troops liberated many cities in Southern Kazakhstan and even captured 
+Tashkent. Then he procedeed to present day Kyrgyzstan and won the furious battle with troops of local 
+warlords. Upon his death in 1781 he was interred in the Mausoleum of Khoja Ahmed Yasavi in Hazrat-e Turkestan.</English>
+		<French>[H1]Ablai Khan[\H1][NEWLINE][BOLD]Kazakh Khan of the Middle Juz[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1711 - 1781 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Born as Abilmansur, Ablai 
+Khan belonged to the senior branch of descendants of the 15th century founder of the Kazakh state, Janybek 
+Khan. In the first half of the 18th century, Ablai Khan proved to be a talented organizer and commander 
+as he headed detachments of the Kazakh militia fighting the Dzungars. He participated in the most significant 
+battles against the Dzungars from the 1720s to the 1750s, for which he was declared a "batyr" ("hero") 
+by the people.[PARAGRAPH:1]Ablai's activity aimed to create a strong and independent Kazakh state. He 
+headed the unified forces of the Kazakhs and furthered the centralization of state power in Kazakhstan. 
+Until his election as the khan of the three jüzes, Ablai had to compete with Khan Abul Mambet and his 
+descendants of Middle jüz for leadership. Initially, Russia recognized Abul Mambet as the Khan of Middle 
+jüz, while Ablai was supported by China. Ablai's talent in playing China against Russia gradually made 
+him the unrivalled Khan of the steppe. Unlike Abul Khair Khan of Little jüz, Ablai never submitted to 
+Russian rule. In 1771, at the meeting of the representatives of the three jüzes, Ablai was elected as 
+the Kazakh khan. Russian Empress requested that the title of khan should be recognized and officially 
+approved by Russia. To that end, she sent an official letter to Petropavl, where Ablai was expected to 
+receive the title in 1779. He never showed up at the fort, declining Russia's request to appoint him 
+as the khan of Middle jüz. In contrast to Ablai, other khans and sultans had been competing for the lavish 
+gifts and stipends of the Emperors of Russia in return for their submission.[PARAGRAPH:1]During the Qing 
+campaigns against the Dzungars, Ablai Khan chose not to take sides in the Dzungar-Chinese conflict. Once 
+the conflict was settled, Ablai offered his submission to the Qianlong Emperor. Ablai was confirmed as 
+Kazakh khan by both the Chinese and the Russians. He lead numerous campaigns against Kokand Khanate and 
+Kyrgyzs. In the last campaign his troops liberated many cities in Southern Kazakhstan and even captured 
+Tashkent. Then he procedeed to present day Kyrgyzstan and won the furious battle with troops of local 
+warlords. Upon his death in 1781 he was interred in the Mausoleum of Khoja Ahmed Yasavi in Hazrat-e Turkestan.</French>
+		<German>[H1]Ablai Khan[\H1][NEWLINE][BOLD]Kazakh Khan of the Middle Juz[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1711 - 1781 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Born as Abilmansur, Ablai 
+Khan belonged to the senior branch of descendants of the 15th century founder of the Kazakh state, Janybek 
+Khan. In the first half of the 18th century, Ablai Khan proved to be a talented organizer and commander 
+as he headed detachments of the Kazakh militia fighting the Dzungars. He participated in the most significant 
+battles against the Dzungars from the 1720s to the 1750s, for which he was declared a "batyr" ("hero") 
+by the people.[PARAGRAPH:1]Ablai's activity aimed to create a strong and independent Kazakh state. He 
+headed the unified forces of the Kazakhs and furthered the centralization of state power in Kazakhstan. 
+Until his election as the khan of the three jüzes, Ablai had to compete with Khan Abul Mambet and his 
+descendants of Middle jüz for leadership. Initially, Russia recognized Abul Mambet as the Khan of Middle 
+jüz, while Ablai was supported by China. Ablai's talent in playing China against Russia gradually made 
+him the unrivalled Khan of the steppe. Unlike Abul Khair Khan of Little jüz, Ablai never submitted to 
+Russian rule. In 1771, at the meeting of the representatives of the three jüzes, Ablai was elected as 
+the Kazakh khan. Russian Empress requested that the title of khan should be recognized and officially 
+approved by Russia. To that end, she sent an official letter to Petropavl, where Ablai was expected to 
+receive the title in 1779. He never showed up at the fort, declining Russia's request to appoint him 
+as the khan of Middle jüz. In contrast to Ablai, other khans and sultans had been competing for the lavish 
+gifts and stipends of the Emperors of Russia in return for their submission.[PARAGRAPH:1]During the Qing 
+campaigns against the Dzungars, Ablai Khan chose not to take sides in the Dzungar-Chinese conflict. Once 
+the conflict was settled, Ablai offered his submission to the Qianlong Emperor. Ablai was confirmed as 
+Kazakh khan by both the Chinese and the Russians. He lead numerous campaigns against Kokand Khanate and 
+Kyrgyzs. In the last campaign his troops liberated many cities in Southern Kazakhstan and even captured 
+Tashkent. Then he procedeed to present day Kyrgyzstan and won the furious battle with troops of local 
+warlords. Upon his death in 1781 he was interred in the Mausoleum of Khoja Ahmed Yasavi in Hazrat-e Turkestan.</German>
+		<Italian>[H1]Ablai Khan[\H1][NEWLINE][BOLD]Kazakh Khan of the Middle Juz[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1711 - 1781 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Born as Abilmansur, Ablai 
+Khan belonged to the senior branch of descendants of the 15th century founder of the Kazakh state, Janybek 
+Khan. In the first half of the 18th century, Ablai Khan proved to be a talented organizer and commander 
+as he headed detachments of the Kazakh militia fighting the Dzungars. He participated in the most significant 
+battles against the Dzungars from the 1720s to the 1750s, for which he was declared a "batyr" ("hero") 
+by the people.[PARAGRAPH:1]Ablai's activity aimed to create a strong and independent Kazakh state. He 
+headed the unified forces of the Kazakhs and furthered the centralization of state power in Kazakhstan. 
+Until his election as the khan of the three jüzes, Ablai had to compete with Khan Abul Mambet and his 
+descendants of Middle jüz for leadership. Initially, Russia recognized Abul Mambet as the Khan of Middle 
+jüz, while Ablai was supported by China. Ablai's talent in playing China against Russia gradually made 
+him the unrivalled Khan of the steppe. Unlike Abul Khair Khan of Little jüz, Ablai never submitted to 
+Russian rule. In 1771, at the meeting of the representatives of the three jüzes, Ablai was elected as 
+the Kazakh khan. Russian Empress requested that the title of khan should be recognized and officially 
+approved by Russia. To that end, she sent an official letter to Petropavl, where Ablai was expected to 
+receive the title in 1779. He never showed up at the fort, declining Russia's request to appoint him 
+as the khan of Middle jüz. In contrast to Ablai, other khans and sultans had been competing for the lavish 
+gifts and stipends of the Emperors of Russia in return for their submission.[PARAGRAPH:1]During the Qing 
+campaigns against the Dzungars, Ablai Khan chose not to take sides in the Dzungar-Chinese conflict. Once 
+the conflict was settled, Ablai offered his submission to the Qianlong Emperor. Ablai was confirmed as 
+Kazakh khan by both the Chinese and the Russians. He lead numerous campaigns against Kokand Khanate and 
+Kyrgyzs. In the last campaign his troops liberated many cities in Southern Kazakhstan and even captured 
+Tashkent. Then he procedeed to present day Kyrgyzstan and won the furious battle with troops of local 
+warlords. Upon his death in 1781 he was interred in the Mausoleum of Khoja Ahmed Yasavi in Hazrat-e Turkestan.</Italian>
+		<Spanish>[H1]Ablai Khan[\H1][NEWLINE][BOLD]Kazakh Khan of the Middle Juz[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1711 - 1781 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Born as Abilmansur, Ablai 
+Khan belonged to the senior branch of descendants of the 15th century founder of the Kazakh state, Janybek 
+Khan. In the first half of the 18th century, Ablai Khan proved to be a talented organizer and commander 
+as he headed detachments of the Kazakh militia fighting the Dzungars. He participated in the most significant 
+battles against the Dzungars from the 1720s to the 1750s, for which he was declared a "batyr" ("hero") 
+by the people.[PARAGRAPH:1]Ablai's activity aimed to create a strong and independent Kazakh state. He 
+headed the unified forces of the Kazakhs and furthered the centralization of state power in Kazakhstan. 
+Until his election as the khan of the three jüzes, Ablai had to compete with Khan Abul Mambet and his 
+descendants of Middle jüz for leadership. Initially, Russia recognized Abul Mambet as the Khan of Middle 
+jüz, while Ablai was supported by China. Ablai's talent in playing China against Russia gradually made 
+him the unrivalled Khan of the steppe. Unlike Abul Khair Khan of Little jüz, Ablai never submitted to 
+Russian rule. In 1771, at the meeting of the representatives of the three jüzes, Ablai was elected as 
+the Kazakh khan. Russian Empress requested that the title of khan should be recognized and officially 
+approved by Russia. To that end, she sent an official letter to Petropavl, where Ablai was expected to 
+receive the title in 1779. He never showed up at the fort, declining Russia's request to appoint him 
+as the khan of Middle jüz. In contrast to Ablai, other khans and sultans had been competing for the lavish 
+gifts and stipends of the Emperors of Russia in return for their submission.[PARAGRAPH:1]During the Qing 
+campaigns against the Dzungars, Ablai Khan chose not to take sides in the Dzungar-Chinese conflict. Once 
+the conflict was settled, Ablai offered his submission to the Qianlong Emperor. Ablai was confirmed as 
+Kazakh khan by both the Chinese and the Russians. He lead numerous campaigns against Kokand Khanate and 
+Kyrgyzs. In the last campaign his troops liberated many cities in Southern Kazakhstan and even captured 
+Tashkent. Then he procedeed to present day Kyrgyzstan and won the furious battle with troops of local 
+warlords. Upon his death in 1781 he was interred in the Mausoleum of Khoja Ahmed Yasavi in Hazrat-e Turkestan.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ABLAY_1</Tag>
+		<English>Hello, [CT_NAME]! Your wanderings have brought you to the [OUR_CIV_ADJ] steppe. I advise you to be friendly with the [OUR_CIV_ADJ] people, for these are our lands!</English>
+		<French>Hello, [CT_NAME]! Your wanderings have brought you to the [OUR_CIV_ADJ] steppe. I advise you to be friendly with the [OUR_CIV_ADJ] people, for these are our lands!</French>
+		<German>Hello, [CT_NAME]! Your wanderings have brought you to the [OUR_CIV_ADJ] steppe. I advise you to be friendly with the [OUR_CIV_ADJ] people, for these are our lands!</German>
+		<Italian>Hello, [CT_NAME]! Your wanderings have brought you to the [OUR_CIV_ADJ] steppe. I advise you to be friendly with the [OUR_CIV_ADJ] people, for these are our lands!</Italian>
+		<Spanish>Hello, [CT_NAME]! Your wanderings have brought you to the [OUR_CIV_ADJ] steppe. I advise you to be friendly with the [OUR_CIV_ADJ] people, for these are our lands!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ASTANA</Tag>
+		<English>Astana</English>
+		<French>Astana</French>
+		<German>Astana</German>
+		<Italian>Astana</Italian>
+		<Spanish>Astana</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ALMATY</Tag>
+		<English>Almaty</English>
+		<French>Almaty</French>
+		<German>Almaty</German>
+		<Italian>Almaty</Italian>
+		<Spanish>Almaty</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KARAGANDA</Tag>
+		<English>Karaganda</English>
+		<French>Karaganda</French>
+		<German>Karaganda</German>
+		<Italian>Karaganda</Italian>
+		<Spanish>Karaganda</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SHYMKENT</Tag>
+		<English>Shymkent</English>
+		<French>Shymkent</French>
+		<German>Shymkent</German>
+		<Italian>Shymkent</Italian>
+		<Spanish>Shymkent</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_QYZYL-ORDA</Tag>
+		<English>Qyzyl-Orda</English>
+		<French>Qyzyl-Orda</French>
+		<German>Qyzyl-Orda</German>
+		<Italian>Qyzyl-Orda</Italian>
+		<Spanish>Qyzyl-Orda</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TALDYQORGAN</Tag>
+		<English>Taldyqorgan</English>
+		<French>Taldyqorgan</French>
+		<German>Taldyqorgan</German>
+		<Italian>Taldyqorgan</Italian>
+		<Spanish>Taldyqorgan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_AKTAU</Tag>
+		<English>Aktau</English>
+		<French>Aktau</French>
+		<German>Aktau</German>
+		<Italian>Aktau</Italian>
+		<Spanish>Aktau</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_AKTOBE</Tag>
+		<English>Aktobe</English>
+		<French>Aktobe</French>
+		<German>Aktobe</German>
+		<Italian>Aktobe</Italian>
+		<Spanish>Aktobe</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KOSTANAY</Tag>
+		<English>Kostanay</English>
+		<French>Kostanay</French>
+		<German>Kostanay</German>
+		<Italian>Kostanay</Italian>
+		<Spanish>Kostanay</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KOKSHETAU</Tag>
+		<English>Kokshetau</English>
+		<French>Kokshetau</French>
+		<German>Kokshetau</German>
+		<Italian>Kokshetau</Italian>
+		<Spanish>Kokshetau</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PAVLODAR</Tag>
+		<English>Pavlodar</English>
+		<French>Pavlodar</French>
+		<German>Pavlodar</German>
+		<Italian>Pavlodar</Italian>
+		<Spanish>Pavlodar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_OSKEMEN</Tag>
+		<English>Oskemen</English>
+		<French>Oskemen</French>
+		<German>Oskemen</German>
+		<Italian>Oskemen</Italian>
+		<Spanish>Oskemen</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ORAL</Tag>
+		<English>Oral</English>
+		<French>Oral</French>
+		<German>Oral</German>
+		<Italian>Oral</Italian>
+		<Spanish>Oral</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ATYRAU</Tag>
+		<English>Atyrau</English>
+		<French>Atyrau</French>
+		<German>Atyrau</German>
+		<Italian>Atyrau</Italian>
+		<Spanish>Atyrau</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PETROPAVL</Tag>
+		<English>Petropavl</English>
+		<French>Petropavl</French>
+		<German>Petropavl</German>
+		<Italian>Petropavl</Italian>
+		<Spanish>Petropavl</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SEMEY</Tag>
+		<English>Semey</English>
+		<French>Semey</French>
+		<German>Semey</German>
+		<Italian>Semey</Italian>
+		<Spanish>Semey</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ZHEZKAZGAN</Tag>
+		<English>Zhezkazgan</English>
+		<French>Zhezkazgan</French>
+		<German>Zhezkazgan</German>
+		<Italian>Zhezkazgan</Italian>
+		<Spanish>Zhezkazgan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TARAZ</Tag>
+		<English>Taraz</English>
+		<French>Taraz</French>
+		<German>Taraz</German>
+		<Italian>Taraz</Italian>
+		<Spanish>Taraz</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KANDYAGASH</Tag>
+		<English>Kandyagash</English>
+		<French>Kandyagash</French>
+		<German>Kandyagash</German>
+		<Italian>Kandyagash</Italian>
+		<Spanish>Kandyagash</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BALKASH</Tag>
+		<English>Balkash</English>
+		<French>Balkash</French>
+		<German>Balkash</German>
+		<Italian>Balkash</Italian>
+		<Spanish>Balkash</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ARAL</Tag>
+		<English>Aral</English>
+		<French>Aral</French>
+		<German>Aral</German>
+		<Italian>Aral</Italian>
+		<Spanish>Aral</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TURKISTAN</Tag>
+		<English>Turkistan</English>
+		<French>Turkistan</French>
+		<German>Turkistan</German>
+		<Italian>Turkistan</Italian>
+		<Spanish>Turkistan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SHU</Tag>
+		<English>Shu</English>
+		<French>Shu</French>
+		<German>Shu</German>
+		<Italian>Shu</Italian>
+		<Spanish>Shu</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TALGAR</Tag>
+		<English>Talgar</English>
+		<French>Talgar</French>
+		<German>Talgar</German>
+		<Italian>Talgar</Italian>
+		<Spanish>Talgar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SARQAND</Tag>
+		<English>Sarqand</English>
+		<French>Sarqand</French>
+		<German>Sarqand</German>
+		<Italian>Sarqand</Italian>
+		<Spanish>Sarqand</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_YESIL</Tag>
+		<English>Yesil</English>
+		<French>Yesil</French>
+		<German>Yesil</German>
+		<Italian>Yesil</Italian>
+		<Spanish>Yesil</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_QARAZHAL</Tag>
+		<English>Qarazhal</English>
+		<French>Qarazhal</French>
+		<German>Qarazhal</German>
+		<Italian>Qarazhal</Italian>
+		<Spanish>Qarazhal</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SARYAGASH</Tag>
+		<English>Saryagash</English>
+		<French>Saryagash</French>
+		<German>Saryagash</German>
+		<Italian>Saryagash</Italian>
+		<Spanish>Saryagash</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ALGA</Tag>
+		<English>Alga</English>
+		<French>Alga</French>
+		<German>Alga</German>
+		<Italian>Alga</Italian>
+		<Spanish>Alga</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ATBASAR</Tag>
+		<English>Atbasar</English>
+		<French>Atbasar</French>
+		<German>Atbasar</German>
+		<Italian>Atbasar</Italian>
+		<Spanish>Atbasar</Spanish>
+	</TEXT>
+</Civ4GameText>

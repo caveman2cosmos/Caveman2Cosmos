@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- ReModified by StrategyOnly -->
+	<!-- -->
+<Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Xml\Schema\Caveman2Cosmos.xsd">
+	<LeaderheadArtInfos>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_HIDALGO</Type>
+			<Button>Modules/Custom_Civilizations/Mexico/leaders/hildago_small.dds</Button>
+			<NIF>Modules/Custom_Civilizations/Mexico/leaders/Hildago.dds</NIF>
+			<KFM/>
+			<NoShaderNIF/>
+			<BackgroundKFM/>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_SANTA_ANNA</Type>
+			<Button>Modules/Custom_Civilizations/Mexico/leaders/Santa_Anna_small.dds</Button>
+			<NIF>Modules/Custom_Civilizations/Mexico/leaders/santa_anna.dds</NIF>
+			<KFM/>
+			<NoShaderNIF/>
+			<BackgroundKFM/>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_JUAREZ</Type>
+			<Button>Modules/Custom_Civilizations/Mexico/leaders/Benito_Juarez_small.dds</Button>
+			<NIF>Modules/Custom_Civilizations/Mexico/leaders/Benito_Juarez.dds</NIF>
+			<KFM/>
+			<NoShaderNIF/>
+			<BackgroundKFM/>
+		</LeaderheadArtInfo>
+	</LeaderheadArtInfos>
+</Civ4ArtDefines>

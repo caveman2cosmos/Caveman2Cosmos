@@ -1,0 +1,1284 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- Modified by the Civ Gold Team -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NUBIAN_DESC</Tag>
+		<English>Nubian Empire</English>
+		<French>
+			<Text>Nubian Empire</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Nubian Empire</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Nubian Empire</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Nubian Empire</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NUBIAN_SHORT_DESC</Tag>
+		<English>Nubia</English>
+		<French>
+			<Text>Nubia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Nubia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Nubia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Nubia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NUBIAN_PEDIA</Tag>
+		<English>[TAB]The Kingdom of Nubia was an ancient African state situated on the confluences of the 
+Blue Nile, White Nile and River Atbara in what is now the Republic of Sudan.[NEWLINE][NEWLINE][TAB]Established 
+after the Bronze Age collapse and the disintegration of the New Kingdom of Egypt, it was centered at 
+Napata in its early phase. After king Kashta invaded Egypt in the 8th century BC, the Nubian kings ruled 
+as Pharaohs of the Twenty-fifth dynasty of Egypt for a century, until they were expelled by Psamtik I 
+in 656 BC.[NEWLINE][NEWLINE][TAB]During Classical Antiquity, the Nubian imperial capital was at Meroe. 
+In early Greek geography, the Meroitic kingdom was known as Ethiopia. The Nubian kingdom with its capital 
+at Meroe persisted until the 4th century AD, when it weakened and disintegrated due to internal rebellion. 
+The Nubian capital was subsequently captured by the Beja Dynasty, who tried to revive the empire. The 
+Nubian capital was eventually captured and destroyed by the kingdom of Axum. After the collapse of the 
+Nubian empire several states emerged in its former territories, among them Nubia.</English>
+		<French>eported in the annals of other nations. The first noticeable cultures in Nubia include first 
+the Badarian culture, then the Amratian and finally the Gerzean. From the Gerzean the first native culture 
+developed known as the A-Group, which began roughly at the same time as the First dynasty of Egypt around 
+3100 BC. It consisted of semi-nomadic groups who subsided by herding sheep, goats, and some cattle. It 
+is known from its distinctive burial rituals and pottery. Prehistoric tools discovered in Nubia date 
+to circa 65,000 BC, found along the Nile Valley.[PARAGRAPH:2]This culture began to decline in the early-28th 
+century BC. The succeeding culture is known as B-Group. Previously, the B-Group people were thought to 
+have invaded from elsewhere. Today most historians believe that B-Group was merely A-Group but far poorer. 
+The causes of this is uncertain, but it was perhaps caused by Egyptian invasions and pillaging that began 
+at this time.[PARAGRAPH:2]As trade between Egypt and Nubia increased so did wealth and stability. By 
+the Egyptian 6th dynasty, Nubia was divided into a series of small kingdoms. There is debate over whether 
+these C-Group peoples, who flourished from c. 2240 BC to c. 2150 BC, were another internal evolution 
+or invaders. There are definite similarities between the pottery of A-Group and C-Group, so it may be 
+a return of the ousted Group-As, or an internal revival of lost arts. At this time, the Sahara Desert 
+was becoming too arid to support human beings, and it is possible that there was a sudden influx of Saharan 
+nomads. C-Group pottery is characterized by all-over incised geometric lines with white infill and impressed 
+imitations of basketry.[PARAGRAPH:2]A contemporaneous but distinct culture from the C-Group was the Pan 
+Grave culture, so called because of their shallow graves. The Pan Graves are associated with the East 
+bank of the Nile, but the Pan Graves and C-Group defintiely interacted. Their pottery is characterized 
+by incised lines of a more limited character than those of the C-Group, generally having interspersed 
+undecorated spaces within the geometric scheme. From the C-Group culture, the first kingdom to unify 
+much of the region arose, the Kingdom of Kerma, named for its presumed capital at Kerma. When Egyptian 
+power revived under the New Kingdom they began to expand southwards. By the end of the reign of Thutmose 
+I in 1520 BC, all of northern Nubia had been annexed.[PARAGRAPH:2]Nubia[PARAGRAPH:2]When the Egyptians 
+pulled out, they left a lasting legacy that was merged with indigenous customs forming the kingdom of 
+Nubia. Nubia adopted many Egyptian practices such as their religion and the practice of building pyramids. 
+The kingdom of Nubia survived longer than that of Egypt, even invading and controlling Egypt itself for 
+a period (the Nubian dynasty) in the 8th century BC. Nubia was never annexed by the Romans. The Nubians 
+did trade with the Romans, and were also a source of mercenaries.[PARAGRAPH:2]During this time, the different 
+parts of the region divided into smaller groups with individual leaders, or generals, each commanding 
+small armies of mercenaries. They fought for control of what is now Nubia and its surrounding territories, 
+leaving the entire region weak and vulnerable to attack.[PARAGRAPH:2]At some point, Nubia was conquered 
+by the Noba people, from which the name Nubia may derive (another possibility is that it comes from Nub, 
+the Egyptian word for gold). From then on, the Romans referred to the area as the Nobatae. Indeed, recent 
+studies in population genetics suggest that there was a south-north gene flow through the Nile Valley. 
+[2] Similarly, linguistic evidence suggests that the Nubians from the Nile Valley originally came from 
+the south or southwest. Historical comparative research into the Nubian language group has indicated 
+that the Nile-Nubian languages must have split off from the Nubian languages still spoken in the Nuba 
+Mountains in Kordofan, Sudan, at least 2500 years ago.[PARAGRAPH:2]Present-day Sudan is the largest country 
+by area in Africa, situated in North Africa. In 1820, Sudan came under Egyptian rule when Mehemet Ali, 
+the Ottoman viceroy of Egypt, sent armies led by his son Ismail Pasha and Mahommed Bey to conquer eastern 
+Sudan. In the 1880s, religious leader Muhammad ibn Abdalla, self-proclaimed Mahdi (Messiah), attempted 
+to unify the tribes of western and central Sudan. He led a nationalist revolt against Egyptian rule culminating 
+in the fall of Khartoum in 1885, in which the British General Gordon was killed, and during which a tribe 
+in the region of Port Sudan inspired Rudyard Kipling's poem Fuzzy Wuzzy. But in 1898, the Mahdist state 
+was overwhelmed by an Anglo-Egyptian force under Lord Kitchener. Great Britain ran Sudan as two essentially 
+separate colonies, the south and the north, until 1956.[PARAGRAPH:2]The year before independence in 1956, 
+Southern Sudanese embarked upon a civil war. During British rule, it was illegal for people living above 
+the 10th parallel to go further south and people above the 8th parallel further north. The law was enacted 
+to prevent the spread of malaria and other tropical diseases that had ravaged British troops. This sparked 
+17 years of civil war from 1955 to 1972. In 1972, the Addis Ababa Agreement led to a cessation of the 
+north-south civil war and a degree of self-rule. This led to a ten-year hiatus in the civil war.[PARAGRAPH:2]In 
+September 1983, President Gaafar Nimeiry, created a Federated Sudan which included 3 federal states in 
+Southern Sudan. It was the introduction of Sharia law and the dissolution of the 3 federal states in 
+the South that led to the reinvigoration of the civil war.</French>
+		<German/>
+		<Italian>[TAB]The earliest cultures of Nubia left no writings and are unreported in the annals of other 
+nations. The first noticeable cultures in Nubia include first the Badarian culture, then the Amratian 
+and finally the Gerzean. From the Gerzean the first native culture developed known as the A-Group, which 
+began roughly at the same time as the First dynasty of Egypt around 3100 BC. It consisted of semi-nomadic 
+groups who subsided by herding sheep, goats, and some cattle. It is known from its distinctive burial 
+rituals and pottery. Prehistoric tools discovered in Nubia date to circa 65,000 BC, found along the Nile 
+Valley.[PARAGRAPH:2]This culture began to decline in the early-28th century BC. The succeeding culture 
+is known as B-Group. Previously, the B-Group people were thought to have invaded from elsewhere. Today 
+most historians believe that B-Group was merely A-Group but far poorer. The causes of this is uncertain, 
+but it was perhaps caused by Egyptian invasions and pillaging that began at this time.[PARAGRAPH:2]As 
+trade between Egypt and Nubia increased so did wealth and stability. By the Egyptian 6th dynasty, Nubia 
+was divided into a series of small kingdoms. There is debate over whether these C-Group peoples, who 
+flourished from c. 2240 BC to c. 2150 BC, were another internal evolution or invaders. There are definite 
+similarities between the pottery of A-Group and C-Group, so it may be a return of the ousted Group-As, 
+or an internal revival of lost arts. At this time, the Sahara Desert was becoming too arid to support 
+human beings, and it is possible that there was a sudden influx of Saharan nomads. C-Group pottery is 
+characterized by all-over incised geometric lines with white infill and impressed imitations of basketry.[PARAGRAPH:2]A 
+contemporaneous but distinct culture from the C-Group was the Pan Grave culture, so called because of 
+their shallow graves. The Pan Graves are associated with the East bank of the Nile, but the Pan Graves 
+and C-Group defintiely interacted. Their pottery is characterized by incised lines of a more limited 
+character than those of the C-Group, generally having interspersed undecorated spaces within the geometric 
+scheme. From the C-Group culture, the first kingdom to unify much of the region arose, the Kingdom of 
+Kerma, named for its presumed capital at Kerma. When Egyptian power revived under the New Kingdom they 
+began to expand southwards. By the end of the reign of Thutmose I in 1520 BC, all of northern Nubia had 
+been annexed.[PARAGRAPH:2]Nubia[PARAGRAPH:2]When the Egyptians pulled out, they left a lasting legacy 
+that was merged with indigenous customs forming the kingdom of Nubia. Nubia adopted many Egyptian practices 
+such as their religion and the practice of building pyramids. The kingdom of Nubia survived longer than 
+that of Egypt, even invading and controlling Egypt itself for a period (the Nubian dynasty) in the 8th 
+century BC. Nubia was never annexed by the Romans. The Nubians did trade with the Romans, and were also 
+a source of mercenaries.[PARAGRAPH:2]During this time, the different parts of the region divided into 
+smaller groups with individual leaders, or generals, each commanding small armies of mercenaries. They 
+fought for control of what is now Nubia and its surrounding territories, leaving the entire region weak 
+and vulnerable to attack.[PARAGRAPH:2]At some point, Nubia was conquered by the Noba people, from which 
+the name Nubia may derive (another possibility is that it comes from Nub, the Egyptian word for gold). 
+From then on, the Romans referred to the area as the Nobatae. Indeed, recent studies in population genetics 
+suggest that there was a south-north gene flow through the Nile Valley. [2] Similarly, linguistic evidence 
+suggests that the Nubians from the Nile Valley originally came from the south or southwest. Historical 
+comparative research into the Nubian language group has indicated that the Nile-Nubian languages must 
+have split off from the Nubian languages still spoken in the Nuba Mountains in Kordofan, Sudan, at least 
+2500 years ago.[PARAGRAPH:2]Present-day Sudan is the largest country by area in Africa, situated in North 
+Africa. In 1820, Sudan came under Egyptian rule when Mehemet Ali, the Ottoman viceroy of Egypt, sent 
+armies led by his son Ismail Pasha and Mahommed Bey to conquer eastern Sudan. In the 1880s, religious 
+leader Muhammad ibn Abdalla, self-proclaimed Mahdi (Messiah), attempted to unify the tribes of western 
+and central Sudan. He led a nationalist revolt against Egyptian rule culminating in the fall of Khartoum 
+in 1885, in which the British General Gordon was killed, and during which a tribe in the region of Port 
+Sudan inspired Rudyard Kipling's poem Fuzzy Wuzzy. But in 1898, the Mahdist state was overwhelmed by 
+an Anglo-Egyptian force under Lord Kitchener. Great Britain ran Sudan as two essentially separate colonies, 
+the south and the north, until 1956.[PARAGRAPH:2]The year before independence in 1956, Southern Sudanese 
+embarked upon a civil war. During British rule, it was illegal for people living above the 10th parallel 
+to go further south and people above the 8th parallel further north. The law was enacted to prevent the 
+spread of malaria and other tropical diseases that had ravaged British troops. This sparked 17 years 
+of civil war from 1955 to 1972. In 1972, the Addis Ababa Agreement led to a cessation of the north-south 
+civil war and a degree of self-rule. This led to a ten-year hiatus in the civil war.[PARAGRAPH:2]In September 
+1983, President Gaafar Nimeiry, created a Federated Sudan which included 3 federal states in Southern 
+Sudan. It was the introduction of Sharia law and the dissolution of the 3 federal states in the South 
+that led to the reinvigoration of the civil war.</Italian>
+		<Spanish>[TAB]The earliest cultures of Nubia left no writings and are unreported in the annals of other 
+nations. The first noticeable cultures in Nubia include first the Badarian culture, then the Amratian 
+and finally the Gerzean. From the Gerzean the first native culture developed known as the A-Group, which 
+began roughly at the same time as the First dynasty of Egypt around 3100 BC. It consisted of semi-nomadic 
+groups who subsided by herding sheep, goats, and some cattle. It is known from its distinctive burial 
+rituals and pottery. Prehistoric tools discovered in Nubia date to circa 65,000 BC, found along the Nile 
+Valley.[PARAGRAPH:2]This culture began to decline in the early-28th century BC. The succeeding culture 
+is known as B-Group. Previously, the B-Group people were thought to have invaded from elsewhere. Today 
+most historians believe that B-Group was merely A-Group but far poorer. The causes of this is uncertain, 
+but it was perhaps caused by Egyptian invasions and pillaging that began at this time.[PARAGRAPH:2]As 
+trade between Egypt and Nubia increased so did wealth and stability. By the Egyptian 6th dynasty, Nubia 
+was divided into a series of small kingdoms. There is debate over whether these C-Group peoples, who 
+flourished from c. 2240 BC to c. 2150 BC, were another internal evolution or invaders. There are definite 
+similarities between the pottery of A-Group and C-Group, so it may be a return of the ousted Group-As, 
+or an internal revival of lost arts. At this time, the Sahara Desert was becoming too arid to support 
+human beings, and it is possible that there was a sudden influx of Saharan nomads. C-Group pottery is 
+characterized by all-over incised geometric lines with white infill and impressed imitations of basketry.[PARAGRAPH:2]A 
+contemporaneous but distinct culture from the C-Group was the Pan Grave culture, so called because of 
+their shallow graves. The Pan Graves are associated with the East bank of the Nile, but the Pan Graves 
+and C-Group defintiely interacted. Their pottery is characterized by incised lines of a more limited 
+character than those of the C-Group, generally having interspersed undecorated spaces within the geometric 
+scheme. From the C-Group culture, the first kingdom to unify much of the region arose, the Kingdom of 
+Kerma, named for its presumed capital at Kerma. When Egyptian power revived under the New Kingdom they 
+began to expand southwards. By the end of the reign of Thutmose I in 1520 BC, all of northern Nubia had 
+been annexed.[PARAGRAPH:2]Nubia[PARAGRAPH:2]When the Egyptians pulled out, they left a lasting legacy 
+that was merged with indigenous customs forming the kingdom of Nubia. Nubia adopted many Egyptian practices 
+such as their religion and the practice of building pyramids. The kingdom of Nubia survived longer than 
+that of Egypt, even invading and controlling Egypt itself for a period (the Nubian dynasty) in the 8th 
+century BC. Nubia was never annexed by the Romans. The Nubians did trade with the Romans, and were also 
+a source of mercenaries.[PARAGRAPH:2]During this time, the different parts of the region divided into 
+smaller groups with individual leaders, or generals, each commanding small armies of mercenaries. They 
+fought for control of what is now Nubia and its surrounding territories, leaving the entire region weak 
+and vulnerable to attack.[PARAGRAPH:2]At some point, Nubia was conquered by the Noba people, from which 
+the name Nubia may derive (another possibility is that it comes from Nub, the Egyptian word for gold). 
+From then on, the Romans referred to the area as the Nobatae. Indeed, recent studies in population genetics 
+suggest that there was a south-north gene flow through the Nile Valley. [2] Similarly, linguistic evidence 
+suggests that the Nubians from the Nile Valley originally came from the south or southwest. Historical 
+comparative research into the Nubian language group has indicated that the Nile-Nubian languages must 
+have split off from the Nubian languages still spoken in the Nuba Mountains in Kordofan, Sudan, at least 
+2500 years ago.[PARAGRAPH:2]Present-day Sudan is the largest country by area in Africa, situated in North 
+Africa. In 1820, Sudan came under Egyptian rule when Mehemet Ali, the Ottoman viceroy of Egypt, sent 
+armies led by his son Ismail Pasha and Mahommed Bey to conquer eastern Sudan. In the 1880s, religious 
+leader Muhammad ibn Abdalla, self-proclaimed Mahdi (Messiah), attempted to unify the tribes of western 
+and central Sudan. He led a nationalist revolt against Egyptian rule culminating in the fall of Khartoum 
+in 1885, in which the British General Gordon was killed, and during which a tribe in the region of Port 
+Sudan inspired Rudyard Kipling's poem Fuzzy Wuzzy. But in 1898, the Mahdist state was overwhelmed by 
+an Anglo-Egyptian force under Lord Kitchener. Great Britain ran Sudan as two essentially separate colonies, 
+the south and the north, until 1956.[PARAGRAPH:2]The year before independence in 1956, Southern Sudanese 
+embarked upon a civil war. During British rule, it was illegal for people living above the 10th parallel 
+to go further south and people above the 8th parallel further north. The law was enacted to prevent the 
+spread of malaria and other tropical diseases that had ravaged British troops. This sparked 17 years 
+of civil war from 1955 to 1972. In 1972, the Addis Ababa Agreement led to a cessation of the north-south 
+civil war and a degree of self-rule. This led to a ten-year hiatus in the civil war.[PARAGRAPH:2]In September 
+1983, President Gaafar Nimeiry, created a Federated Sudan which included 3 federal states in Southern 
+Sudan. It was the introduction of Sharia law and the dissolution of the 3 federal states in the South 
+that led to the reinvigoration of the civil war.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NUBIAN_ADJECTIVE</Tag>
+		<English>Nubian</English>
+		<French>
+			<Text>Nubian</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Nubian</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Nubian</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Nubian</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_TAHARQA_PEDIA</Tag>
+		<English>[H1]Taharqa[\H1][NEWLINE][BOLD]King of Nubia[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.710 BC 
+- 664 BC[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Taharqa was a Nubian pharaoh of Egypt. 
+He was the last ruler of the Twenty-fifth Dynasty, the so-called Ethiopian Dynasty, and was driven out 
+of Lower Egypt by the Assyrians as they began to conquer Egypt. [PARAGRAPH:1]When Shabaka conquered Lower 
+Egypt and thus asserted Nubian rule, he was accompanied by his nephew Taharqa, who was about age 20. 
+Later, during Shabaka's reign as pharaoh, Egypt confronted the growing might of Assyria on the battlefield. 
+Taharqa was at the head of the Egyptian army, but it is not clear whether the two forces actually fought. 
+Taharqa's brother Shabataka succeeded Shabaka, and he made Taharqa his coregent in order to assure his 
+succession. About 688 BC, approximately 23 years after Nubian rule had been imposed over Egypt, Taharqa 
+assumed the throne in his own right. [PARAGRAPH:1]The next few years were peaceful, and Taharqa moved 
+his capital to Tanis in the Delta so that he could stay well informed about events in the neighboring 
+Asian countries. By 671 BC Egypt and Assyria again approached a confrontation, so Taharqa prepared to 
+fight for the continued survival of Egypt. But the Assyrian king, Esarhaddon, crossed the Sinai Desert 
+and defeated Taharqa's army on the frontier. In 2 weeks he was besieging Memphis. The Egyptian army crumbled 
+under the attack of the better-disciplined Assyrian army, which was armed with iron weapons. [PARAGRAPH:1]Taharqa 
+fled to Upper Egypt, leaving Esarhaddon to take control of Lower Egypt. Two years later Taharqa returned 
+with a fresh army and managed to recover control of the Delta, but this success was short-lived, and 
+Esarhaddon's successor, Ashurbanipal, drove Taharqa south again. After this final defeat he never again 
+tried to campaign in the north. Egypt then entered into a long era of successive foreign rulers. [PARAGRAPH:1]During 
+his period of Egyptian rule Taharqa had encouraged many architectural projects, as had his Nubian predecessors. 
+He indulged in rebuilding the temple at Kawa, across the Nile from present-day Dongola, which became 
+a major center for the Nubian kings. He erected monuments at Karnak, Thebes, and Tanis in Lower Egypt, 
+and he built a number of important temples in Nubia, as the Upper Egyptian Nubian state was then known. 
+During the last 8 years of his life in Nubia, he continued to foster his architectural interests. [PARAGRAPH:1]It 
+was during his reign that Egypt's enemy Assyria at last invaded Egypt. Esarhaddon led several campaigns 
+against Taharqa, which he recorded on several monuments. His first attack in 677 BC, aimed to pacify 
+Arab tribes around the Dead Sea, led him as far as the Brook of Egypt. Esarhaddon invaded Egypt proper 
+in Taharqa's 17th regnal year, after Esarhaddon had settled a revolt at Ashkelon. Taharqa defeated the 
+Assyrians on that occasion, but three years later (671 BC) the Assyrian king captured and sacked Memphis, 
+where he captured numerous members of the royal family. Taharqa fled to the south, and Esarhaddon reorganized 
+the political scene in the north, establishing Necho I of the 26th dynasty as king at Sais. [PARAGRAPH:1]Upon 
+the Assyrian king's departure, however, Taharqa intrigued in the affairs of Lower Egypt, and fanned numerous 
+revolts. Esarhaddon died before he could return to Egypt, and it was left to his heir Assurbanipal to 
+once again invade Egypt. Assurbanipal defeated Taharqa, who afterwards fled first to Thebes, then up 
+the Nile into Nubia. After appointing Tantamani, the son of Shabaka, as his successor, he died in exile 
+and was buried at El-Kurru.</English>
+		<French>[H1]Taharqa[\H1][NEWLINE][BOLD]Nubian Pharaoh of Egypt[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 
+c.710 BC - 664 BC[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Taharqa was a Nubian pharaoh 
+of Egypt. He was the last ruler of the Twenty-fifth Dynasty, the so-called Ethiopian Dynasty, and was 
+driven out of Lower Egypt by the Assyrians as they began to conquer Egypt. [PARAGRAPH:1]When Shabaka 
+conquered Lower Egypt and thus asserted Nubian rule, he was accompanied by his nephew Taharqa, who was 
+about age 20. Later, during Shabaka's reign as pharaoh, Egypt confronted the growing might of Assyria 
+on the battlefield. Taharqa was at the head of the Egyptian army, but it is not clear whether the two 
+forces actually fought. Taharqa's brother Shabataka succeeded Shabaka, and he made Taharqa his coregent 
+in order to assure his succession. About 688 BC, approximately 23 years after Nubian rule had been imposed 
+over Egypt, Taharqa assumed the throne in his own right. [PARAGRAPH:1]The next few years were peaceful, 
+and Taharqa moved his capital to Tanis in the Delta so that he could stay well informed about events 
+in the neighboring Asian countries. By 671 BC Egypt and Assyria again approached a confrontation, so 
+Taharqa prepared to fight for the continued survival of Egypt. But the Assyrian king, Esarhaddon, crossed 
+the Sinai Desert and defeated Taharqa's army on the frontier. In 2 weeks he was besieging Memphis. The 
+Egyptian army crumbled under the attack of the better-disciplined Assyrian army, which was armed with 
+iron weapons. [PARAGRAPH:1]Taharqa fled to Upper Egypt, leaving Esarhaddon to take control of Lower Egypt. 
+Two years later Taharqa returned with a fresh army and managed to recover control of the Delta, but this 
+success was short-lived, and Esarhaddon's successor, Ashurbanipal, drove Taharqa south again. After this 
+final defeat he never again tried to campaign in the north. Egypt then entered into a long era of successive 
+foreign rulers. [PARAGRAPH:1]During his period of Egyptian rule Taharqa had encouraged many architectural 
+projects, as had his Nubian predecessors. He indulged in rebuilding the temple at Kawa, across the Nile 
+from present-day Dongola, which became a major center for the Nubian kings. He erected monuments at Karnak, 
+Thebes, and Tanis in Lower Egypt, and he built a number of important temples in Nubia, as the Upper Egyptian 
+Nubian state was then known. During the last 8 years of his life in Nubia, he continued to foster his 
+architectural interests. [PARAGRAPH:1]It was during his reign that Egypt's enemy Assyria at last invaded 
+Egypt. Esarhaddon led several campaigns against Taharqa, which he recorded on several monuments. His 
+first attack in 677 BC, aimed to pacify Arab tribes around the Dead Sea, led him as far as the Brook 
+of Egypt. Esarhaddon invaded Egypt proper in Taharqa's 17th regnal year, after Esarhaddon had settled 
+a revolt at Ashkelon. Taharqa defeated the Assyrians on that occasion, but three years later (671 BC) 
+the Assyrian king captured and sacked Memphis, where he captured numerous members of the royal family. 
+Taharqa fled to the south, and Esarhaddon reorganized the political scene in the north, establishing 
+Necho I of the 26th dynasty as king at Sais. [PARAGRAPH:1]Upon the Assyrian king's departure, however, 
+Taharqa intrigued in the affairs of Lower Egypt, and fanned numerous revolts. Esarhaddon died before 
+he could return to Egypt, and it was left to his heir Assurbanipal to once again invade Egypt. Assurbanipal 
+defeated Taharqa, who afterwards fled first to Thebes, then up the Nile into Nubia. After appointing 
+Tantamani, the son of Shabaka, as his successor, he died in exile and was buried at El-Kurru.</French>
+		<German>[H1]Taharqa[\H1][NEWLINE][BOLD]Nubian Pharaoh of Egypt[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 
+c.710 BC - 664 BC[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Taharqa was a Nubian pharaoh 
+of Egypt. He was the last ruler of the Twenty-fifth Dynasty, the so-called Ethiopian Dynasty, and was 
+driven out of Lower Egypt by the Assyrians as they began to conquer Egypt. [PARAGRAPH:1]When Shabaka 
+conquered Lower Egypt and thus asserted Nubian rule, he was accompanied by his nephew Taharqa, who was 
+about age 20. Later, during Shabaka's reign as pharaoh, Egypt confronted the growing might of Assyria 
+on the battlefield. Taharqa was at the head of the Egyptian army, but it is not clear whether the two 
+forces actually fought. Taharqa's brother Shabataka succeeded Shabaka, and he made Taharqa his coregent 
+in order to assure his succession. About 688 BC, approximately 23 years after Nubian rule had been imposed 
+over Egypt, Taharqa assumed the throne in his own right. [PARAGRAPH:1]The next few years were peaceful, 
+and Taharqa moved his capital to Tanis in the Delta so that he could stay well informed about events 
+in the neighboring Asian countries. By 671 BC Egypt and Assyria again approached a confrontation, so 
+Taharqa prepared to fight for the continued survival of Egypt. But the Assyrian king, Esarhaddon, crossed 
+the Sinai Desert and defeated Taharqa's army on the frontier. In 2 weeks he was besieging Memphis. The 
+Egyptian army crumbled under the attack of the better-disciplined Assyrian army, which was armed with 
+iron weapons. [PARAGRAPH:1]Taharqa fled to Upper Egypt, leaving Esarhaddon to take control of Lower Egypt. 
+Two years later Taharqa returned with a fresh army and managed to recover control of the Delta, but this 
+success was short-lived, and Esarhaddon's successor, Ashurbanipal, drove Taharqa south again. After this 
+final defeat he never again tried to campaign in the north. Egypt then entered into a long era of successive 
+foreign rulers. [PARAGRAPH:1]During his period of Egyptian rule Taharqa had encouraged many architectural 
+projects, as had his Nubian predecessors. He indulged in rebuilding the temple at Kawa, across the Nile 
+from present-day Dongola, which became a major center for the Nubian kings. He erected monuments at Karnak, 
+Thebes, and Tanis in Lower Egypt, and he built a number of important temples in Nubia, as the Upper Egyptian 
+Nubian state was then known. During the last 8 years of his life in Nubia, he continued to foster his 
+architectural interests. [PARAGRAPH:1]It was during his reign that Egypt's enemy Assyria at last invaded 
+Egypt. Esarhaddon led several campaigns against Taharqa, which he recorded on several monuments. His 
+first attack in 677 BC, aimed to pacify Arab tribes around the Dead Sea, led him as far as the Brook 
+of Egypt. Esarhaddon invaded Egypt proper in Taharqa's 17th regnal year, after Esarhaddon had settled 
+a revolt at Ashkelon. Taharqa defeated the Assyrians on that occasion, but three years later (671 BC) 
+the Assyrian king captured and sacked Memphis, where he captured numerous members of the royal family. 
+Taharqa fled to the south, and Esarhaddon reorganized the political scene in the north, establishing 
+Necho I of the 26th dynasty as king at Sais. [PARAGRAPH:1]Upon the Assyrian king's departure, however, 
+Taharqa intrigued in the affairs of Lower Egypt, and fanned numerous revolts. Esarhaddon died before 
+he could return to Egypt, and it was left to his heir Assurbanipal to once again invade Egypt. Assurbanipal 
+defeated Taharqa, who afterwards fled first to Thebes, then up the Nile into Nubia. After appointing 
+Tantamani, the son of Shabaka, as his successor, he died in exile and was buried at El-Kurru.</German>
+		<Italian>[H1]Taharqa[\H1][NEWLINE][BOLD]Nubian Pharaoh of Egypt[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 
+c.710 BC - 664 BC[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Taharqa was a Nubian pharaoh 
+of Egypt. He was the last ruler of the Twenty-fifth Dynasty, the so-called Ethiopian Dynasty, and was 
+driven out of Lower Egypt by the Assyrians as they began to conquer Egypt. [PARAGRAPH:1]When Shabaka 
+conquered Lower Egypt and thus asserted Nubian rule, he was accompanied by his nephew Taharqa, who was 
+about age 20. Later, during Shabaka's reign as pharaoh, Egypt confronted the growing might of Assyria 
+on the battlefield. Taharqa was at the head of the Egyptian army, but it is not clear whether the two 
+forces actually fought. Taharqa's brother Shabataka succeeded Shabaka, and he made Taharqa his coregent 
+in order to assure his succession. About 688 BC, approximately 23 years after Nubian rule had been imposed 
+over Egypt, Taharqa assumed the throne in his own right. [PARAGRAPH:1]The next few years were peaceful, 
+and Taharqa moved his capital to Tanis in the Delta so that he could stay well informed about events 
+in the neighboring Asian countries. By 671 BC Egypt and Assyria again approached a confrontation, so 
+Taharqa prepared to fight for the continued survival of Egypt. But the Assyrian king, Esarhaddon, crossed 
+the Sinai Desert and defeated Taharqa's army on the frontier. In 2 weeks he was besieging Memphis. The 
+Egyptian army crumbled under the attack of the better-disciplined Assyrian army, which was armed with 
+iron weapons. [PARAGRAPH:1]Taharqa fled to Upper Egypt, leaving Esarhaddon to take control of Lower Egypt. 
+Two years later Taharqa returned with a fresh army and managed to recover control of the Delta, but this 
+success was short-lived, and Esarhaddon's successor, Ashurbanipal, drove Taharqa south again. After this 
+final defeat he never again tried to campaign in the north. Egypt then entered into a long era of successive 
+foreign rulers. [PARAGRAPH:1]During his period of Egyptian rule Taharqa had encouraged many architectural 
+projects, as had his Nubian predecessors. He indulged in rebuilding the temple at Kawa, across the Nile 
+from present-day Dongola, which became a major center for the Nubian kings. He erected monuments at Karnak, 
+Thebes, and Tanis in Lower Egypt, and he built a number of important temples in Nubia, as the Upper Egyptian 
+Nubian state was then known. During the last 8 years of his life in Nubia, he continued to foster his 
+architectural interests. [PARAGRAPH:1]It was during his reign that Egypt's enemy Assyria at last invaded 
+Egypt. Esarhaddon led several campaigns against Taharqa, which he recorded on several monuments. His 
+first attack in 677 BC, aimed to pacify Arab tribes around the Dead Sea, led him as far as the Brook 
+of Egypt. Esarhaddon invaded Egypt proper in Taharqa's 17th regnal year, after Esarhaddon had settled 
+a revolt at Ashkelon. Taharqa defeated the Assyrians on that occasion, but three years later (671 BC) 
+the Assyrian king captured and sacked Memphis, where he captured numerous members of the royal family. 
+Taharqa fled to the south, and Esarhaddon reorganized the political scene in the north, establishing 
+Necho I of the 26th dynasty as king at Sais. [PARAGRAPH:1]Upon the Assyrian king's departure, however, 
+Taharqa intrigued in the affairs of Lower Egypt, and fanned numerous revolts. Esarhaddon died before 
+he could return to Egypt, and it was left to his heir Assurbanipal to once again invade Egypt. Assurbanipal 
+defeated Taharqa, who afterwards fled first to Thebes, then up the Nile into Nubia. After appointing 
+Tantamani, the son of Shabaka, as his successor, he died in exile and was buried at El-Kurru.</Italian>
+		<Spanish>[H1]Taharqa[\H1][NEWLINE][BOLD]Nubian Pharaoh of Egypt[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 
+c.710 BC - 664 BC[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Taharqa was a Nubian pharaoh 
+of Egypt. He was the last ruler of the Twenty-fifth Dynasty, the so-called Ethiopian Dynasty, and was 
+driven out of Lower Egypt by the Assyrians as they began to conquer Egypt. [PARAGRAPH:1]When Shabaka 
+conquered Lower Egypt and thus asserted Nubian rule, he was accompanied by his nephew Taharqa, who was 
+about age 20. Later, during Shabaka's reign as pharaoh, Egypt confronted the growing might of Assyria 
+on the battlefield. Taharqa was at the head of the Egyptian army, but it is not clear whether the two 
+forces actually fought. Taharqa's brother Shabataka succeeded Shabaka, and he made Taharqa his coregent 
+in order to assure his succession. About 688 BC, approximately 23 years after Nubian rule had been imposed 
+over Egypt, Taharqa assumed the throne in his own right. [PARAGRAPH:1]The next few years were peaceful, 
+and Taharqa moved his capital to Tanis in the Delta so that he could stay well informed about events 
+in the neighboring Asian countries. By 671 BC Egypt and Assyria again approached a confrontation, so 
+Taharqa prepared to fight for the continued survival of Egypt. But the Assyrian king, Esarhaddon, crossed 
+the Sinai Desert and defeated Taharqa's army on the frontier. In 2 weeks he was besieging Memphis. The 
+Egyptian army crumbled under the attack of the better-disciplined Assyrian army, which was armed with 
+iron weapons. [PARAGRAPH:1]Taharqa fled to Upper Egypt, leaving Esarhaddon to take control of Lower Egypt. 
+Two years later Taharqa returned with a fresh army and managed to recover control of the Delta, but this 
+success was short-lived, and Esarhaddon's successor, Ashurbanipal, drove Taharqa south again. After this 
+final defeat he never again tried to campaign in the north. Egypt then entered into a long era of successive 
+foreign rulers. [PARAGRAPH:1]During his period of Egyptian rule Taharqa had encouraged many architectural 
+projects, as had his Nubian predecessors. He indulged in rebuilding the temple at Kawa, across the Nile 
+from present-day Dongola, which became a major center for the Nubian kings. He erected monuments at Karnak, 
+Thebes, and Tanis in Lower Egypt, and he built a number of important temples in Nubia, as the Upper Egyptian 
+Nubian state was then known. During the last 8 years of his life in Nubia, he continued to foster his 
+architectural interests. [PARAGRAPH:1]It was during his reign that Egypt's enemy Assyria at last invaded 
+Egypt. Esarhaddon led several campaigns against Taharqa, which he recorded on several monuments. His 
+first attack in 677 BC, aimed to pacify Arab tribes around the Dead Sea, led him as far as the Brook 
+of Egypt. Esarhaddon invaded Egypt proper in Taharqa's 17th regnal year, after Esarhaddon had settled 
+a revolt at Ashkelon. Taharqa defeated the Assyrians on that occasion, but three years later (671 BC) 
+the Assyrian king captured and sacked Memphis, where he captured numerous members of the royal family. 
+Taharqa fled to the south, and Esarhaddon reorganized the political scene in the north, establishing 
+Necho I of the 26th dynasty as king at Sais. [PARAGRAPH:1]Upon the Assyrian king's departure, however, 
+Taharqa intrigued in the affairs of Lower Egypt, and fanned numerous revolts. Esarhaddon died before 
+he could return to Egypt, and it was left to his heir Assurbanipal to once again invade Egypt. Assurbanipal 
+defeated Taharqa, who afterwards fled first to Thebes, then up the Nile into Nubia. After appointing 
+Tantamani, the son of Shabaka, as his successor, he died in exile and was buried at El-Kurru.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_TAHARQA</Tag>
+		<English>Taharqa</English>
+		<French>Taharqa</French>
+		<German>Taharqa</German>
+		<Italian>Taharqa</Italian>
+		<Spanish>Taharqa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_TAHARQA_1</Tag>
+		<English>Greetings, [CT_NAME] of the feeble [CT_EMPIRE]. We tolerate your presence in these lands. A termite can do nothing to a stone but lick it.</English>
+		<French>Greetings, [CT_NAME] of the feeble [CT_EMPIRE]. We tolerate your presence in these lands. A termite can do nothing to a stone but lick it.</French>
+		<German>Greetings, [CT_NAME] of the feeble [CT_EMPIRE]. We tolerate your presence in these lands. A termite can do nothing to a stone but lick it.</German>
+		<Italian>Greetings, [CT_NAME] of the feeble [CT_EMPIRE]. We tolerate your presence in these lands. A termite can do nothing to a stone but lick it.</Italian>
+		<Spanish>Greetings, [CT_NAME] of the feeble [CT_EMPIRE]. We tolerate your presence in these lands. A termite can do nothing to a stone but lick it.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_SAMPLE_LEADER_1</Tag>
+		<English>Your Refuse to talk response</English>
+		<French>Your Refuse to talk response</French>
+		<German>Your Refuse to talk response</German>
+		<Italian>Your Refuse to talk response</Italian>
+		<Spanish>Your Refuse to talk response</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_SAMPLE_LEADER_1</Tag>
+		<English>Your refuse to peace talks response</English>
+		<French>Your refuse to peace talks response</French>
+		<German>Your refuse to peace talks response</German>
+		<Italian>Your refuse to peace talks response</Italian>
+		<Spanish>Your refuse to peace talks response</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_SAMPLE_LEADER_1</Tag>
+		<English>Your Friendly Hello Response</English>
+		<French>Your Friendly Hello Response</French>
+		<German>Your Friendly Hello Response</German>
+		<Italian>Your Friendly Hello Response</Italian>
+		<Spanish>Your Friendly Hello Response</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_SAMPLE_LEADER_1</Tag>
+		<English>Your Unfriendly Hello Response</English>
+		<French>Your Unfriendly Hello Response</French>
+		<German>Your Unfriendly Hello Response</German>
+		<Italian>Your Unfriendly Hello Response</Italian>
+		<Spanish>Your Unfriendly Hello Response</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_SAMPLE_LEADER_1</Tag>
+		<English>Your Demands to another civ when you are weaker then they are</English>
+		<French>Your Demands to another civ when you are weaker then they are</French>
+		<German>Your Demands to another civ when you are weaker then they are</German>
+		<Italian>Your Demands to another civ when you are weaker then they are</Italian>
+		<Spanish>Your Demands to another civ when you are weaker then they are</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_SAMPLE_LEADER_1</Tag>
+		<English>Your Demands to another civ when you are Equal to power as they are</English>
+		<French>Your Demands to another civ when you are Equal to power as they are</French>
+		<German>Your Demands to another civ when you are Equal to power as they are</German>
+		<Italian>Your Demands to another civ when you are Equal to power as they are</Italian>
+		<Spanish>Your Demands to another civ when you are Equal to power as they are</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_SAMPLE_LEADER_1</Tag>
+		<English>Your Demands to another civ when you are stronger then they are</English>
+		<French>Your Demands to another civ when you are stronger then they are</French>
+		<German>Your Demands to another civ when you are stronger then they are</German>
+		<Italian>Your Demands to another civ when you are stronger then they are</Italian>
+		<Spanish>Your Demands to another civ when you are stronger then they are</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KERMA</Tag>
+		<English>Kerma</English>
+		<French>
+			<Text>Kerma</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kerma</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kerma</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kerma</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NAPATA</Tag>
+		<English>Napata</English>
+		<French>
+			<Text>Napata</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Napata</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Napata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Napata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MEROE</Tag>
+		<English>Meroe</English>
+		<French>
+			<Text>Meroe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Meroe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Meroe</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Meroe</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KHARTOUM</Tag>
+		<English>Khartoum</English>
+		<French>
+			<Text>Khartoum</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Khartoum</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Khartoum</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Khartoum</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DONGOLA</Tag>
+		<English>Dongola</English>
+		<French>
+			<Text>Dongola</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Dongola</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Dongola</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Dongola</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NURI</Tag>
+		<English>Nuri</English>
+		<French>
+			<Text>Nuri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Nuri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Nuri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Nuri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NAQA</Tag>
+		<English>Naqa</English>
+		<French>
+			<Text>Naqa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Naqa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Naqa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Naqa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ASWAN</Tag>
+		<English>Aswan</English>
+		<French>
+			<Text>Aswan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Aswan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Aswan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Aswan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DABOD</Tag>
+		<English>Dabod</English>
+		<French>
+			<Text>Dabod</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Dabod</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Dabod</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Dabod</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PHILAE</Tag>
+		<English>Philae</English>
+		<French>
+			<Text>Philae</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Philae</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Philae</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Philae</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DAKKA</Tag>
+		<English>Dakka</English>
+		<French>
+			<Text>Dakka</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Dakka</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Dakka</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Dakka</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BALLANA</Tag>
+		<English>Ballana</English>
+		<French>
+			<Text>Ballana</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ballana</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ballana</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ballana</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_FARAS</Tag>
+		<English>Faras</English>
+		<French>
+			<Text>Faras</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Faras</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Faras</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Faras</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ABINDAN</Tag>
+		<English>Abindan</English>
+		<French>
+			<Text>Abindan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Abindan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Abindan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Abindan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BUHEN</Tag>
+		<English>Buhen</English>
+		<French>
+			<Text>Buhen</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Buhen</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Buhen</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Buhen</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DORGINARTI</Tag>
+		<English>Dorginarti</English>
+		<French>
+			<Text>Dorginarti</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Dorginarti</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Dorginarti</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Dorginarti</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SOFEB</Tag>
+		<English>Sofeb</English>
+		<French>
+			<Text>Sofeb</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sofeb</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sofeb</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sofeb</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_EL_KURRU</Tag>
+		<English>el Kurru</English>
+		<French>
+			<Text>el Kurru</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>el Kurru</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>el Kurru</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>el Kurru</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GEBEL_BARKAL</Tag>
+		<English>Gebel Barkal</English>
+		<French>
+			<Text>Gebel Barkal</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Gebel Barkal</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Gebel Barkal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Gebel Barkal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KALABSHA</Tag>
+		<English>Kalabsha</English>
+		<French>
+			<Text>Kalabsha</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kalabsha</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kalabsha</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kalabsha</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_QUSTUL</Tag>
+		<English>Qustul</English>
+		<French>
+			<Text>Qustul</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Qustul</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Qustul</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Qustul</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ABU_SIMBEL</Tag>
+		<English>Abu Simbel</English>
+		<French>
+			<Text>Abu Simbel</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Abu Simbel</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Abu Simbel</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Abu Simbel</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SEMNA</Tag>
+		<English>Semna</English>
+		<French>
+			<Text>Semna</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Semna</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Semna</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Semna</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BEIT_EL_WALI</Tag>
+		<English>Beit el Wali</English>
+		<French>
+			<Text>Beit el Wali</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Beit el Wali</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Beit el Wali</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Beit el Wali</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_QASR_IBRIM</Tag>
+		<English>Qasr Ibrim</English>
+		<French>
+			<Text>Qasr Ibrim</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Qasr Ibrim</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Qasr Ibrim</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Qasr Ibrim</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SERRA</Tag>
+		<English>Serra</English>
+		<French>
+			<Text>Serra</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Serra</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Serra</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Serra</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SOBA</Tag>
+		<English>Soba</English>
+		<French>
+			<Text>Soba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Soba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Soba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Soba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SANAM</Tag>
+		<English>Sanam</English>
+		<French>
+			<Text>Sanam</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sanam</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sanam</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sanam</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_FIRKA</Tag>
+		<English>Firka</English>
+		<French>
+			<Text>Firka</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Firka</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Firka</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Firka</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GEMAI</Tag>
+		<English>Gemai</English>
+		<French>
+			<Text>Gemai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Gemai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Gemai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Gemai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TABO</Tag>
+		<English>Tabo</English>
+		<French>
+			<Text>Tabo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tabo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tabo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tabo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KAWA</Tag>
+		<English>Kawa</English>
+		<French>
+			<Text>Kawa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kawa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kawa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kawa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+</Civ4GameText>

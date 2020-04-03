@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- re-Modified by Strategyonly -->
+	<!-- -->
+	<!-- Player Color -->
+<Civ4PlayerColorInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4InterfaceSchema.xml">
+	<PlayerColorInfos>
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_KIOWA</Type>
+			<ColorTypePrimary>COLOR_BLUE</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_WHITE</ColorTypeSecondary>
+			<TextColorType>COLOR_BLUE</TextColorType>
+		</PlayerColorInfo>
+	</PlayerColorInfos>
+</Civ4PlayerColorInfos>

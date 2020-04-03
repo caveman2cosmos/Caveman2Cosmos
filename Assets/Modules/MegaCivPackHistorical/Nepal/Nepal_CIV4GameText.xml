@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- re-Modified by strategyonly -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NEPAL_DESC</Tag>
+		<English>Nepalese Empire</English>
+		<French>Nepalese Empire</French>
+		<German>Nepalese Empire</German>
+		<Italian>Nepalese Empire</Italian>
+		<Spanish>Nepalese Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NEPAL_SHORT_DESC</Tag>
+		<English>Nepal</English>
+		<French>Nepal</French>
+		<German>Nepal</German>
+		<Italian>Nepal</Italian>
+		<Spanish>Nepal</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NEPAL_PEDIA</Tag>
+		<English>[TAB]Nepal, officially the Federal Democratic Republic of Nepal, is a landlocked country located in South Asia. With an area of 147,181 square kilometres (56,827 sq mi) and a population of approximately 27 million, Nepal is the world's 93rd largest country by land mass and the 41st most populous country. It is located in the Himalayas and bordered to the north by the People's Republic of China, and to the south, east, and west by the Republic of India. Nepal is separated from Bangladesh by the narrow Indian Siliguri Corridor and from Bhutan by the Indian state of Sikkim. Kathmandu is the nation's capital and largest metropolis.</English>
+		<French>[TAB]Nepal, officially the Federal Democratic Republic of Nepal, is a landlocked country located in South Asia. With an area of 147,181 square kilometres (56,827 sq mi) and a population of approximately 27 million, Nepal is the world's 93rd largest country by land mass and the 41st most populous country. It is located in the Himalayas and bordered to the north by the People's Republic of China, and to the south, east, and west by the Republic of India. Nepal is separated from Bangladesh by the narrow Indian Siliguri Corridor and from Bhutan by the Indian state of Sikkim. Kathmandu is the nation's capital and largest metropolis.</French>
+		<German>[TAB]Nepal, officially the Federal Democratic Republic of Nepal, is a landlocked country located in South Asia. With an area of 147,181 square kilometres (56,827 sq mi) and a population of approximately 27 million, Nepal is the world's 93rd largest country by land mass and the 41st most populous country. It is located in the Himalayas and bordered to the north by the People's Republic of China, and to the south, east, and west by the Republic of India. Nepal is separated from Bangladesh by the narrow Indian Siliguri Corridor and from Bhutan by the Indian state of Sikkim. Kathmandu is the nation's capital and largest metropolis.</German>
+		<Italian>[TAB]Nepal, officially the Federal Democratic Republic of Nepal, is a landlocked country located in South Asia. With an area of 147,181 square kilometres (56,827 sq mi) and a population of approximately 27 million, Nepal is the world's 93rd largest country by land mass and the 41st most populous country. It is located in the Himalayas and bordered to the north by the People's Republic of China, and to the south, east, and west by the Republic of India. Nepal is separated from Bangladesh by the narrow Indian Siliguri Corridor and from Bhutan by the Indian state of Sikkim. Kathmandu is the nation's capital and largest metropolis.</Italian>
+		<Spanish>[TAB]Nepal, officially the Federal Democratic Republic of Nepal, is a landlocked country located in South Asia. With an area of 147,181 square kilometres (56,827 sq mi) and a population of approximately 27 million, Nepal is the world's 93rd largest country by land mass and the 41st most populous country. It is located in the Himalayas and bordered to the north by the People's Republic of China, and to the south, east, and west by the Republic of India. Nepal is separated from Bangladesh by the narrow Indian Siliguri Corridor and from Bhutan by the Indian state of Sikkim. Kathmandu is the nation's capital and largest metropolis.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NEPAL_ADJECTIVE</Tag>
+		<English>Nepalese</English>
+		<French>Nepalese</French>
+		<German>Nepalese</German>
+		<Italian>Nepalese</Italian>
+		<Spanish>Nepalese</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_NARAYAN</Tag>
+		<English>Prithvi Narayan</English>
+		<French>Prithvi Narayan</French>
+		<German>Prithvi Narayan</German>
+		<Italian>Prithvi Narayan</Italian>
+		<Spanish>Prithvi Narayan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_NARAYAN_PEDIA</Tag>
+		<English>[H1]Prithvi Narayan Shah [\H1][NEWLINE][BOLD]King of Nepal[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1723-1775[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Prithvi Narayan Shah, King of Nepal was the first king of the unified Nepal. He is credited for starting the campaign for a unified Nepal, which had been divided and weakened under Malla confederacy. He was the ninth generation descendant of Dravya Shah (1559–1570), the founder of the ruling house of Gorkha. Prithvi Narayan Shah succeeded his father, King Nara Bhupal Shah to the throne of the Gorkha Kingdom in 1743.</English>
+		<French>[H1]Prithvi Narayan Shah [\H1][NEWLINE][BOLD]King of Nepal[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1723-1775[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Prithvi Narayan Shah, King of Nepal was the first king of the unified Nepal. He is credited for starting the campaign for a unified Nepal, which had been divided and weakened under Malla confederacy. He was the ninth generation descendant of Dravya Shah (1559–1570), the founder of the ruling house of Gorkha. Prithvi Narayan Shah succeeded his father, King Nara Bhupal Shah to the throne of the Gorkha Kingdom in 1743.</French>
+		<German>[H1]Prithvi Narayan Shah [\H1][NEWLINE][BOLD]King of Nepal[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1723-1775[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Prithvi Narayan Shah, King of Nepal was the first king of the unified Nepal. He is credited for starting the campaign for a unified Nepal, which had been divided and weakened under Malla confederacy. He was the ninth generation descendant of Dravya Shah (1559–1570), the founder of the ruling house of Gorkha. Prithvi Narayan Shah succeeded his father, King Nara Bhupal Shah to the throne of the Gorkha Kingdom in 1743.</German>
+		<Italian>[H1]Prithvi Narayan Shah [\H1][NEWLINE][BOLD]King of Nepal[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1723-1775[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Prithvi Narayan Shah, King of Nepal was the first king of the unified Nepal. He is credited for starting the campaign for a unified Nepal, which had been divided and weakened under Malla confederacy. He was the ninth generation descendant of Dravya Shah (1559–1570), the founder of the ruling house of Gorkha. Prithvi Narayan Shah succeeded his father, King Nara Bhupal Shah to the throne of the Gorkha Kingdom in 1743.</Italian>
+		<Spanish>[H1]Prithvi Narayan Shah [\H1][NEWLINE][BOLD]King of Nepal[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1723-1775[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Prithvi Narayan Shah, King of Nepal was the first king of the unified Nepal. He is credited for starting the campaign for a unified Nepal, which had been divided and weakened under Malla confederacy. He was the ninth generation descendant of Dravya Shah (1559–1570), the founder of the ruling house of Gorkha. Prithvi Narayan Shah succeeded his father, King Nara Bhupal Shah to the throne of the Gorkha Kingdom in 1743.</Spanish>
+	</TEXT>
+</Civ4GameText>

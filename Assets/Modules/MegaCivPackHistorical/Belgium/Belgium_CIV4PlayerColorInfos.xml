@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- re-Modified by strategyonly -->
+	<!-- -->
+	<!-- Player Color -->
+<Civ4PlayerColorInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4InterfaceSchema.xml">
+	<PlayerColorInfos>
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_BELGIUM</Type>
+			<ColorTypePrimary>COLOR_BELGIAN_GOLDENROD</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_BELGIAN_BLACK</ColorTypeSecondary>
+			<TextColorType>COLOR_BELGIAN_GOLDENROD</TextColorType>
+		</PlayerColorInfo>
+	</PlayerColorInfos>
+</Civ4PlayerColorInfos>

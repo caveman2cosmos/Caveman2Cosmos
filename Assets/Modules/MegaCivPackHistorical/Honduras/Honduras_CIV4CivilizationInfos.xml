@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<Civ4CivilizationInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4CivilizationsSchema.xml">
+	<CivilizationInfos>
+		<CivilizationInfo>
+			<Type>CIVILIZATION_HONDURAS</Type>
+			<Description>TXT_KEY_CIV_HONDURAS_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_HONDURAS_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_HONDURAS_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_HONDURAS_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_HONDURAS</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_HONDURAS</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_MESO_AMERICA</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_SOUTH_AMERICA</UnitArtStyleType>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>TXT_KEY_CITY_NAME_TEGUCIGALPA</City>
+				<City>TXT_KEY_CITY_NAME_SANPEDROSULA</City>
+				<City>TXT_KEY_CITY_NAME_TRUJILLO</City>
+				<City>TXT_KEY_CITY_NAME_MOSQUITIA</City>
+				<City>TXT_KEY_CITY_NAME_PUERTOLEMPIRA</City>
+				<City>TXT_KEY_CITY_NAME_LEIMUS</City>
+				<City>TXT_KEY_CITY_NAME_ELTIGRE</City>
+				<City>TXT_KEY_CITY_NAME_COPANRUINAS</City>
+				<City>TXT_KEY_CITY_NAME_COMAYAGUA</City>
+				<City>TXT_KEY_CITY_NAME_SAVA</City>
+				<City>TXT_KEY_CITY_NAME_PALACIOS</City>
+				<City>TXT_KEY_CITY_NAME_SANLORENZO</City>
+				<City>TXT_KEY_CITY_NAME_DANLI</City>
+				<City>TXT_KEY_CITY_NAME_TELA</City>
+				<City>La Ceiba</City>
+				<City>Guaimaca</City>
+				<City>Langue</City>
+				<City>Zambrano</City>
+				<City>El Paraiso</City>
+				<City>San Marcos</City>
+				<City>Champeltique</City>
+				<City>Jacuapa</City>
+				<City>Marcala</City>
+				<City>Jesus de Otoro</City>
+				<City>Erandique</City>
+				<City>Apopa</City>
+				<City>San Juan</City>
+				<City>Santa Ana</City>
+				<City>Nueva Concepcion</City>
+				<City>San Luis</City>
+				<City>Carbajales</City>
+				<City>Nacaome</City>
+				<City>Tocoa</City>
+				<City>Poloros</City>
+				<City>El Pino</City>
+				<City>Arenal</City>
+				<City>Rio Esteban</City>
+				<City>Trujillo</City>
+				<City>Bonito Oriental</City>
+				<City>El Pedernal</City>
+				<City>Limon</City>
+				<City>Corocito</City>
+				<City>Ahuas</City>
+				<City>La Masica</City>
+				<City>El Juncal</City>
+
+			</Cities>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
+			<InitialCivics>
+				<CivicType>CIVIC_ANARCHISM</CivicType>
+				<CivicType>CIVIC_OBEDIENCE</CivicType>
+				<CivicType>CIVIC_STRONGMAN</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
+				<CivicType>CIVIC_MILITIA</CivicType>
+				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SURVIVAL</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
+				<CivicType>CIVIC_UNORGANIZED</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_LMM</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<DerivativeCiv>NONE</DerivativeCiv>
+			<CivilizationSelectionSound>AS3D_SPAIN_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_SPAIN_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+	</CivilizationInfos>
+</Civ4CivilizationInfos>

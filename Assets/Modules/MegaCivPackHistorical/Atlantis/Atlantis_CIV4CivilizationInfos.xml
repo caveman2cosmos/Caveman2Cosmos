@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
+	<!-- Sid Meier's Civilization 4 -->
+	<!-- Copyright Firaxis Games 2005 -->
+	<!-- ReModified by the StrategyOnly -->
+	<!-- -->
+<Civ4CivilizationInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4CivilizationsSchema.xml">
+	<CivilizationInfos>
+		<CivilizationInfo>
+			<Type>CIVILIZATION_ATLANTIS</Type>
+			<Description>TXT_KEY_CIV_ATLANTIS_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_ATLANTIS_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_ATLANTIS_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_ATLANTIS_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_DARK_BLUE</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_ATLANTIS</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_GRECO_ROMAN</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_GREEK</UnitArtStyleType>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>Atlantis City</City>
+				<City>Zeuspolis</City>
+				<City>Appolopolis</City>
+				<City>Poseidonpolis</City>
+				<City>Athenapolis</City>
+				<City>Heraclopolis</City>
+				<City>Demeteropolis</City>
+				<City>Wavetown</City>
+				<City>Atlanto</City>
+				<City>Artemisopolis</City>
+				<City>Hephaesteupolis</City>
+				<City>Eunomia</City>
+				<City>Zelos City</City>
+				<City>Aurapolis</City>
+				<City>Hestiapolis</City>
+				<City>Pillars of Heracles</City>
+				<City>Selenepolis</City>
+				<City>Lelantos</City>
+				<City>Urania</City>
+				<City>Hadesopolis</City>
+				<City>Ganimedopolis</City>
+				<City>Aglae</City>
+				<City>Tytanopolis</City>
+				<City>Kashatopolis</City>
+				<City>Europopolis</City>
+				<City>Heliospolis</City>
+				<City>Pandia</City>
+				<City>Nikepolis</City>
+				<City>Gaiapolis</City>
+				<City>Tychopolis</City>
+				<City>Alectopolis</City>
+				<City>Adikia</City>
+				<City>Hyporberraneum</City>
+				<City>Phobos City</City>
+				<City>Cetopolis</City>
+				<City>Tethys City</City>
+				<City>Arielopolis</City>
+				<City>Clotho</City>
+				<City>Iaepethus</City>
+				<City>Ophion</City>
+				<City>Atropos</City>
+				<City>Enipeus</City>
+				<City>Hebepolis</City>
+				<City>Thalaia</City>
+				<City>Typhon City</City>
+			</Cities>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
+			<InitialCivics>
+				<CivicType>CIVIC_ANARCHISM</CivicType>
+				<CivicType>CIVIC_OBEDIENCE</CivicType>
+				<CivicType>CIVIC_STRONGMAN</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
+				<CivicType>CIVIC_MILITIA</CivicType>
+				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SURVIVAL</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
+				<CivicType>CIVIC_UNORGANIZED</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_NEDAKH</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<DerivativeCiv>CIVILIZATION_GREECE</DerivativeCiv>
+			<CivilizationSelectionSound>AS3D_GREECE_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_GREECE_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+	</CivilizationInfos>
+</Civ4CivilizationInfos>

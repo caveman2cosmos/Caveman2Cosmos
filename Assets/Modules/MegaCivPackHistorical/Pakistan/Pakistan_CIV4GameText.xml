@@ -1,0 +1,1730 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- Modified by the Civ Gold Team -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_PAKISTAN_DESC</Tag>
+		<English>Islamic Republic of Pakistan</English>
+		<French>Islamic Republic of Pakistan</French>
+		<German>Islamic Republic of Pakistan</German>
+		<Italian>Islamic Republic of Pakistan</Italian>
+		<Spanish>Islamic Republic of Pakistan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_PAKISTAN_SHORT_DESC</Tag>
+		<English>Pakistan</English>
+		<French>Pakistan</French>
+		<German>Pakistan</German>
+		<Italian>Pakistan</Italian>
+		<Spanish>Pakistan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_PAKISTAN_ADJECTIVE</Tag>
+		<English>Pakistani</English>
+		<French>Pakistani</French>
+		<German>Pakistani</German>
+		<Italian>Pakistani</Italian>
+		<Spanish>Pakistani</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_PAKISTAN_PEDIA</Tag>
+		<English>[TAB]The modern state of Pakistan was established in 1947, but the region has an extensive 
+ancient history that overlaps with the histories of Ancient India, Iran and Afghanistan. The region was 
+a crossroads of historic trade routes, including the Silk Road, and was settled over thousands of years 
+by many groups including Dravidians, Indo-Aryans, Persians, Greeks, Scythians, Kushans, White Huns, Afghans, 
+Turks and Arabs. Historian and geographer de Blij Muller characterized quite aptly while describing the 
+historical embodiment of the land when he said,"If, as is so often said, Egypt is the gift of the Nile, 
+then Pakistan is the gift of the Indus." The earliest evidence of humans is pebble tools of the Soan 
+Culture in the Punjab province between 500,000 to 100,000 years ago. The Indus region was the site of 
+several ancient cultures including Mehrgarh, one of the world's earliest towns, and the Indus Valley 
+Civilisation at Harrappa and Mohenjo-Daro. The Indus Valley Civilisation collapsed in the middle of the 
+second millennium BCE and was followed by the Vedic Civilisation which extended over much of northern 
+India and Pakistan. Successive empires and kingdoms ruled the region from the Achaemenid Persian empire 
+around 543 BCE, to Alexander the Great in 326 BCE and the Mauryan empire. The Indo-Greek Kingdom founded 
+by Demetrius of Bactria included Gandhara and Punjab from 184 BCE, and reached its greatest extent under 
+Menander, establishing the Greco-Buddhist period with advances in trade and culture. The city of Taxila 
+(Takshashila) became a major centre of learning prior to the arrival of Islam - the ruins may still be 
+seen within the Swat Valley, to the west of Islamabad.[PARAGRAPH:2]In AD 712, the Arab general Muhammad 
+bin Qasim conquered Sindh and Multan in southern Punjab, setting the stage for several successive Muslim 
+empires including the Ghaznavid Empire, the Ghorid Kingdom, the Delhi Sultanate and the Mughal Empire. 
+During this period Sufi missionaries played a pivotal role in converting a majority of the regional population 
+to Islam. The gradual decline of the Mughal Empire in the early eighteenth century provided opportunities 
+for the Afghans, Balochis and Sikhs to exercise control over large areas until the British East India 
+Company gained ascendancy over South Asia.[PARAGRAPH:2]17th Century Badshahi Masjid built by Mughal emperor 
+Aurangzeb in LahoreThe 1857 War of Independence was the region's last major armed struggle against the 
+British, but it laid the foundations for the generally unarmed freedom struggle led by the Congress. 
+However the Muslim League rose to popularity in the late 1930's amid fears of under-representation and 
+neglect of Muslims in politics. In 1930 Allama Iqbal called for a separate Muslim state in northwest 
+and eastern South Asia. Muhammad Ali Jinnah espoused the Two Nation Theory and led the Muslim League 
+to adopt the Lahore Resolution of 1940, which led to independence in 1947. [PARAGRAPH:2]Pakistan was 
+formed on August 14, 1947 with two Muslim-majority wings in the eastern and northwestern regions of the 
+South Asia, separated by Hindu-majority India, and comprising the provinces of Balochistan, East Bengal, 
+the North-West Frontier Province, West Punjab and Sindh. The partition of British India resulted in communal 
+riots across India and Pakistan-millions of Muslims moved to Pakistan and millions of Hindus and Sikhs 
+moved to India. Disputes arose over several princely states including Jammu and Kashmir which led to 
+the First Kashmir War (1948) ending with Pakistan and India each occupying large parts of the state. 
+From 1947 to 1956, Pakistan was a Dominion in the Commonwealth of Nations. The republic declared in 1958 
+was stalled by a coup d'etat by Ayub Khan (1958-69), who was president during a period of internal instability 
+and a second war with India in 1965. His successor, Yahya Khan (1969-71) had to deal with the cyclone 
+which caused 500,000 deaths in East Pakistan.[PARAGRAPH:2]Economic and political dissent in East Pakistan 
+led to violent political repression and tensions escalating into civil war (Bangladesh Liberation War) 
+and the Indo-Pakistani War of 1971 and ultimately the secession of East Pakistan as the independent state 
+of Bangladesh. Civilian rule resumed from 1972 to 1977 under Zulfikar Ali Bhutto, but he was deposed 
+(and hanged to death in 1979 by court orders) by General Zia-ul-Haq, who became the third military president. 
+The secular policies of the past were replaced by Zia's introduction of the Islamic Shariat legal code, 
+and increased religious influences on the civil service and the military. Muhammad Khan Junejo was elected 
+in 1985 as Prime Minister, but with the death of General Zia in a plane crash in 1988, Benazir Bhutto, 
+daughter of Zulfikar Ali Bhutto, was elected as the first female Prime Minister of Pakistan. Over the 
+next decade, she alternated in power with Nawaz Sharif as the political and economic situation worsened.[PARAGRAPH:2]Military 
+tensions in the Kargil conflict with India in 1999 were followed by a military coup in which General 
+Pervez Musharraf assumed executive powers. In 2001, he became President after the resignation of Rafiq 
+Tarar and after the 2002 parliamentary elections, transferred executive powers to newly elected Prime 
+Minister Zafarullah Khan Jamali, who was succeeded in 2004 by Shaukat Aziz. On 8 October 2005, a powerful 
+earthquake of magnitude of 7.6 on the Richter scale struck the northern mountains of Pakistan and neighbouring 
+regions in India and Afghanistan with the official death toll on 8 November standing at 87,350[20] and 
+an estimated 3.3 million left homeless in Pakistan.</English>
+		<French>[TAB]The modern state of Pakistan was established in 1947, but the region has an extensive 
+ancient history that overlaps with the histories of Ancient India, Iran and Afghanistan. The region was 
+a crossroads of historic trade routes, including the Silk Road, and was settled over thousands of years 
+by many groups including Dravidians, Indo-Aryans, Persians, Greeks, Scythians, Kushans, White Huns, Afghans, 
+Turks and Arabs. Historian and geographer de Blij Muller characterized quite aptly while describing the 
+historical embodiment of the land when he said,"If, as is so often said, Egypt is the gift of the Nile, 
+then Pakistan is the gift of the Indus." The earliest evidence of humans is pebble tools of the Soan 
+Culture in the Punjab province between 500,000 to 100,000 years ago. The Indus region was the site of 
+several ancient cultures including Mehrgarh, one of the world's earliest towns, and the Indus Valley 
+Civilisation at Harrappa and Mohenjo-Daro. The Indus Valley Civilisation collapsed in the middle of the 
+second millennium BCE and was followed by the Vedic Civilisation which extended over much of northern 
+India and Pakistan. Successive empires and kingdoms ruled the region from the Achaemenid Persian empire 
+around 543 BCE, to Alexander the Great in 326 BCE and the Mauryan empire. The Indo-Greek Kingdom founded 
+by Demetrius of Bactria included Gandhara and Punjab from 184 BCE, and reached its greatest extent under 
+Menander, establishing the Greco-Buddhist period with advances in trade and culture. The city of Taxila 
+(Takshashila) became a major centre of learning prior to the arrival of Islam - the ruins may still be 
+seen within the Swat Valley, to the west of Islamabad.[PARAGRAPH:2]In AD 712, the Arab general Muhammad 
+bin Qasim conquered Sindh and Multan in southern Punjab, setting the stage for several successive Muslim 
+empires including the Ghaznavid Empire, the Ghorid Kingdom, the Delhi Sultanate and the Mughal Empire. 
+During this period Sufi missionaries played a pivotal role in converting a majority of the regional population 
+to Islam. The gradual decline of the Mughal Empire in the early eighteenth century provided opportunities 
+for the Afghans, Balochis and Sikhs to exercise control over large areas until the British East India 
+Company gained ascendancy over South Asia.[PARAGRAPH:2]17th Century Badshahi Masjid built by Mughal emperor 
+Aurangzeb in LahoreThe 1857 War of Independence was the region's last major armed struggle against the 
+British, but it laid the foundations for the generally unarmed freedom struggle led by the Congress. 
+However the Muslim League rose to popularity in the late 1930's amid fears of under-representation and 
+neglect of Muslims in politics. In 1930 Allama Iqbal called for a separate Muslim state in northwest 
+and eastern South Asia. Muhammad Ali Jinnah espoused the Two Nation Theory and led the Muslim League 
+to adopt the Lahore Resolution of 1940, which led to independence in 1947. [PARAGRAPH:2]Pakistan was 
+formed on August 14, 1947 with two Muslim-majority wings in the eastern and northwestern regions of the 
+South Asia, separated by Hindu-majority India, and comprising the provinces of Balochistan, East Bengal, 
+the North-West Frontier Province, West Punjab and Sindh. The partition of British India resulted in communal 
+riots across India and Pakistan-millions of Muslims moved to Pakistan and millions of Hindus and Sikhs 
+moved to India. Disputes arose over several princely states including Jammu and Kashmir which led to 
+the First Kashmir War (1948) ending with Pakistan and India each occupying large parts of the state. 
+From 1947 to 1956, Pakistan was a Dominion in the Commonwealth of Nations. The republic declared in 1958 
+was stalled by a coup d'etat by Ayub Khan (1958-69), who was president during a period of internal instability 
+and a second war with India in 1965. His successor, Yahya Khan (1969-71) had to deal with the cyclone 
+which caused 500,000 deaths in East Pakistan.[PARAGRAPH:2]Economic and political dissent in East Pakistan 
+led to violent political repression and tensions escalating into civil war (Bangladesh Liberation War) 
+and the Indo-Pakistani War of 1971 and ultimately the secession of East Pakistan as the independent state 
+of Bangladesh. Civilian rule resumed from 1972 to 1977 under Zulfikar Ali Bhutto, but he was deposed 
+(and hanged to death in 1979 by court orders) by General Zia-ul-Haq, who became the third military president. 
+The secular policies of the past were replaced by Zia's introduction of the Islamic Shariat legal code, 
+and increased religious influences on the civil service and the military. Muhammad Khan Junejo was elected 
+in 1985 as Prime Minister, but with the death of General Zia in a plane crash in 1988, Benazir Bhutto, 
+daughter of Zulfikar Ali Bhutto, was elected as the first female Prime Minister of Pakistan. Over the 
+next decade, she alternated in power with Nawaz Sharif as the political and economic situation worsened.[PARAGRAPH:2]Military 
+tensions in the Kargil conflict with India in 1999 were followed by a military coup in which General 
+Pervez Musharraf assumed executive powers. In 2001, he became President after the resignation of Rafiq 
+Tarar and after the 2002 parliamentary elections, transferred executive powers to newly elected Prime 
+Minister Zafarullah Khan Jamali, who was succeeded in 2004 by Shaukat Aziz. On 8 October 2005, a powerful 
+earthquake of magnitude of 7.6 on the Richter scale struck the northern mountains of Pakistan and neighbouring 
+regions in India and Afghanistan with the official death toll on 8 November standing at 87,350[20] and 
+an estimated 3.3 million left homeless in Pakistan.</French>
+		<German>[TAB]The modern state of Pakistan was established in 1947, but the region has an extensive 
+ancient history that overlaps with the histories of Ancient India, Iran and Afghanistan. The region was 
+a crossroads of historic trade routes, including the Silk Road, and was settled over thousands of years 
+by many groups including Dravidians, Indo-Aryans, Persians, Greeks, Scythians, Kushans, White Huns, Afghans, 
+Turks and Arabs. Historian and geographer de Blij Muller characterized quite aptly while describing the 
+historical embodiment of the land when he said,"If, as is so often said, Egypt is the gift of the Nile, 
+then Pakistan is the gift of the Indus." The earliest evidence of humans is pebble tools of the Soan 
+Culture in the Punjab province between 500,000 to 100,000 years ago. The Indus region was the site of 
+several ancient cultures including Mehrgarh, one of the world's earliest towns, and the Indus Valley 
+Civilisation at Harrappa and Mohenjo-Daro. The Indus Valley Civilisation collapsed in the middle of the 
+second millennium BCE and was followed by the Vedic Civilisation which extended over much of northern 
+India and Pakistan. Successive empires and kingdoms ruled the region from the Achaemenid Persian empire 
+around 543 BCE, to Alexander the Great in 326 BCE and the Mauryan empire. The Indo-Greek Kingdom founded 
+by Demetrius of Bactria included Gandhara and Punjab from 184 BCE, and reached its greatest extent under 
+Menander, establishing the Greco-Buddhist period with advances in trade and culture. The city of Taxila 
+(Takshashila) became a major centre of learning prior to the arrival of Islam - the ruins may still be 
+seen within the Swat Valley, to the west of Islamabad.[PARAGRAPH:2]In AD 712, the Arab general Muhammad 
+bin Qasim conquered Sindh and Multan in southern Punjab, setting the stage for several successive Muslim 
+empires including the Ghaznavid Empire, the Ghorid Kingdom, the Delhi Sultanate and the Mughal Empire. 
+During this period Sufi missionaries played a pivotal role in converting a majority of the regional population 
+to Islam. The gradual decline of the Mughal Empire in the early eighteenth century provided opportunities 
+for the Afghans, Balochis and Sikhs to exercise control over large areas until the British East India 
+Company gained ascendancy over South Asia.[PARAGRAPH:2]17th Century Badshahi Masjid built by Mughal emperor 
+Aurangzeb in LahoreThe 1857 War of Independence was the region's last major armed struggle against the 
+British, but it laid the foundations for the generally unarmed freedom struggle led by the Congress. 
+However the Muslim League rose to popularity in the late 1930's amid fears of under-representation and 
+neglect of Muslims in politics. In 1930 Allama Iqbal called for a separate Muslim state in northwest 
+and eastern South Asia. Muhammad Ali Jinnah espoused the Two Nation Theory and led the Muslim League 
+to adopt the Lahore Resolution of 1940, which led to independence in 1947. [PARAGRAPH:2]Pakistan was 
+formed on August 14, 1947 with two Muslim-majority wings in the eastern and northwestern regions of the 
+South Asia, separated by Hindu-majority India, and comprising the provinces of Balochistan, East Bengal, 
+the North-West Frontier Province, West Punjab and Sindh. The partition of British India resulted in communal 
+riots across India and Pakistan-millions of Muslims moved to Pakistan and millions of Hindus and Sikhs 
+moved to India. Disputes arose over several princely states including Jammu and Kashmir which led to 
+the First Kashmir War (1948) ending with Pakistan and India each occupying large parts of the state. 
+From 1947 to 1956, Pakistan was a Dominion in the Commonwealth of Nations. The republic declared in 1958 
+was stalled by a coup d'etat by Ayub Khan (1958-69), who was president during a period of internal instability 
+and a second war with India in 1965. His successor, Yahya Khan (1969-71) had to deal with the cyclone 
+which caused 500,000 deaths in East Pakistan.[PARAGRAPH:2]Economic and political dissent in East Pakistan 
+led to violent political repression and tensions escalating into civil war (Bangladesh Liberation War) 
+and the Indo-Pakistani War of 1971 and ultimately the secession of East Pakistan as the independent state 
+of Bangladesh. Civilian rule resumed from 1972 to 1977 under Zulfikar Ali Bhutto, but he was deposed 
+(and hanged to death in 1979 by court orders) by General Zia-ul-Haq, who became the third military president. 
+The secular policies of the past were replaced by Zia's introduction of the Islamic Shariat legal code, 
+and increased religious influences on the civil service and the military. Muhammad Khan Junejo was elected 
+in 1985 as Prime Minister, but with the death of General Zia in a plane crash in 1988, Benazir Bhutto, 
+daughter of Zulfikar Ali Bhutto, was elected as the first female Prime Minister of Pakistan. Over the 
+next decade, she alternated in power with Nawaz Sharif as the political and economic situation worsened.[PARAGRAPH:2]Military 
+tensions in the Kargil conflict with India in 1999 were followed by a military coup in which General 
+Pervez Musharraf assumed executive powers. In 2001, he became President after the resignation of Rafiq 
+Tarar and after the 2002 parliamentary elections, transferred executive powers to newly elected Prime 
+Minister Zafarullah Khan Jamali, who was succeeded in 2004 by Shaukat Aziz. On 8 October 2005, a powerful 
+earthquake of magnitude of 7.6 on the Richter scale struck the northern mountains of Pakistan and neighbouring 
+regions in India and Afghanistan with the official death toll on 8 November standing at 87,350[20] and 
+an estimated 3.3 million left homeless in Pakistan.</German>
+		<Italian>[TAB]The modern state of Pakistan was established in 1947, but the region has an extensive 
+ancient history that overlaps with the histories of Ancient India, Iran and Afghanistan. The region was 
+a crossroads of historic trade routes, including the Silk Road, and was settled over thousands of years 
+by many groups including Dravidians, Indo-Aryans, Persians, Greeks, Scythians, Kushans, White Huns, Afghans, 
+Turks and Arabs. Historian and geographer de Blij Muller characterized quite aptly while describing the 
+historical embodiment of the land when he said,"If, as is so often said, Egypt is the gift of the Nile, 
+then Pakistan is the gift of the Indus." The earliest evidence of humans is pebble tools of the Soan 
+Culture in the Punjab province between 500,000 to 100,000 years ago. The Indus region was the site of 
+several ancient cultures including Mehrgarh, one of the world's earliest towns, and the Indus Valley 
+Civilisation at Harrappa and Mohenjo-Daro. The Indus Valley Civilisation collapsed in the middle of the 
+second millennium BCE and was followed by the Vedic Civilisation which extended over much of northern 
+India and Pakistan. Successive empires and kingdoms ruled the region from the Achaemenid Persian empire 
+around 543 BCE, to Alexander the Great in 326 BCE and the Mauryan empire. The Indo-Greek Kingdom founded 
+by Demetrius of Bactria included Gandhara and Punjab from 184 BCE, and reached its greatest extent under 
+Menander, establishing the Greco-Buddhist period with advances in trade and culture. The city of Taxila 
+(Takshashila) became a major centre of learning prior to the arrival of Islam - the ruins may still be 
+seen within the Swat Valley, to the west of Islamabad.[PARAGRAPH:2]In AD 712, the Arab general Muhammad 
+bin Qasim conquered Sindh and Multan in southern Punjab, setting the stage for several successive Muslim 
+empires including the Ghaznavid Empire, the Ghorid Kingdom, the Delhi Sultanate and the Mughal Empire. 
+During this period Sufi missionaries played a pivotal role in converting a majority of the regional population 
+to Islam. The gradual decline of the Mughal Empire in the early eighteenth century provided opportunities 
+for the Afghans, Balochis and Sikhs to exercise control over large areas until the British East India 
+Company gained ascendancy over South Asia.[PARAGRAPH:2]17th Century Badshahi Masjid built by Mughal emperor 
+Aurangzeb in LahoreThe 1857 War of Independence was the region's last major armed struggle against the 
+British, but it laid the foundations for the generally unarmed freedom struggle led by the Congress. 
+However the Muslim League rose to popularity in the late 1930's amid fears of under-representation and 
+neglect of Muslims in politics. In 1930 Allama Iqbal called for a separate Muslim state in northwest 
+and eastern South Asia. Muhammad Ali Jinnah espoused the Two Nation Theory and led the Muslim League 
+to adopt the Lahore Resolution of 1940, which led to independence in 1947. [PARAGRAPH:2]Pakistan was 
+formed on August 14, 1947 with two Muslim-majority wings in the eastern and northwestern regions of the 
+South Asia, separated by Hindu-majority India, and comprising the provinces of Balochistan, East Bengal, 
+the North-West Frontier Province, West Punjab and Sindh. The partition of British India resulted in communal 
+riots across India and Pakistan-millions of Muslims moved to Pakistan and millions of Hindus and Sikhs 
+moved to India. Disputes arose over several princely states including Jammu and Kashmir which led to 
+the First Kashmir War (1948) ending with Pakistan and India each occupying large parts of the state. 
+From 1947 to 1956, Pakistan was a Dominion in the Commonwealth of Nations. The republic declared in 1958 
+was stalled by a coup d'etat by Ayub Khan (1958-69), who was president during a period of internal instability 
+and a second war with India in 1965. His successor, Yahya Khan (1969-71) had to deal with the cyclone 
+which caused 500,000 deaths in East Pakistan.[PARAGRAPH:2]Economic and political dissent in East Pakistan 
+led to violent political repression and tensions escalating into civil war (Bangladesh Liberation War) 
+and the Indo-Pakistani War of 1971 and ultimately the secession of East Pakistan as the independent state 
+of Bangladesh. Civilian rule resumed from 1972 to 1977 under Zulfikar Ali Bhutto, but he was deposed 
+(and hanged to death in 1979 by court orders) by General Zia-ul-Haq, who became the third military president. 
+The secular policies of the past were replaced by Zia's introduction of the Islamic Shariat legal code, 
+and increased religious influences on the civil service and the military. Muhammad Khan Junejo was elected 
+in 1985 as Prime Minister, but with the death of General Zia in a plane crash in 1988, Benazir Bhutto, 
+daughter of Zulfikar Ali Bhutto, was elected as the first female Prime Minister of Pakistan. Over the 
+next decade, she alternated in power with Nawaz Sharif as the political and economic situation worsened.[PARAGRAPH:2]Military 
+tensions in the Kargil conflict with India in 1999 were followed by a military coup in which General 
+Pervez Musharraf assumed executive powers. In 2001, he became President after the resignation of Rafiq 
+Tarar and after the 2002 parliamentary elections, transferred executive powers to newly elected Prime 
+Minister Zafarullah Khan Jamali, who was succeeded in 2004 by Shaukat Aziz. On 8 October 2005, a powerful 
+earthquake of magnitude of 7.6 on the Richter scale struck the northern mountains of Pakistan and neighbouring 
+regions in India and Afghanistan with the official death toll on 8 November standing at 87,350[20] and 
+an estimated 3.3 million left homeless in Pakistan.</Italian>
+		<Spanish>[TAB]The modern state of Pakistan was established in 1947, but the region has an extensive 
+ancient history that overlaps with the histories of Ancient India, Iran and Afghanistan. The region was 
+a crossroads of historic trade routes, including the Silk Road, and was settled over thousands of years 
+by many groups including Dravidians, Indo-Aryans, Persians, Greeks, Scythians, Kushans, White Huns, Afghans, 
+Turks and Arabs. Historian and geographer de Blij Muller characterized quite aptly while describing the 
+historical embodiment of the land when he said,"If, as is so often said, Egypt is the gift of the Nile, 
+then Pakistan is the gift of the Indus." The earliest evidence of humans is pebble tools of the Soan 
+Culture in the Punjab province between 500,000 to 100,000 years ago. The Indus region was the site of 
+several ancient cultures including Mehrgarh, one of the world's earliest towns, and the Indus Valley 
+Civilisation at Harrappa and Mohenjo-Daro. The Indus Valley Civilisation collapsed in the middle of the 
+second millennium BCE and was followed by the Vedic Civilisation which extended over much of northern 
+India and Pakistan. Successive empires and kingdoms ruled the region from the Achaemenid Persian empire 
+around 543 BCE, to Alexander the Great in 326 BCE and the Mauryan empire. The Indo-Greek Kingdom founded 
+by Demetrius of Bactria included Gandhara and Punjab from 184 BCE, and reached its greatest extent under 
+Menander, establishing the Greco-Buddhist period with advances in trade and culture. The city of Taxila 
+(Takshashila) became a major centre of learning prior to the arrival of Islam - the ruins may still be 
+seen within the Swat Valley, to the west of Islamabad.[PARAGRAPH:2]In AD 712, the Arab general Muhammad 
+bin Qasim conquered Sindh and Multan in southern Punjab, setting the stage for several successive Muslim 
+empires including the Ghaznavid Empire, the Ghorid Kingdom, the Delhi Sultanate and the Mughal Empire. 
+During this period Sufi missionaries played a pivotal role in converting a majority of the regional population 
+to Islam. The gradual decline of the Mughal Empire in the early eighteenth century provided opportunities 
+for the Afghans, Balochis and Sikhs to exercise control over large areas until the British East India 
+Company gained ascendancy over South Asia.[PARAGRAPH:2]17th Century Badshahi Masjid built by Mughal emperor 
+Aurangzeb in LahoreThe 1857 War of Independence was the region's last major armed struggle against the 
+British, but it laid the foundations for the generally unarmed freedom struggle led by the Congress. 
+However the Muslim League rose to popularity in the late 1930's amid fears of under-representation and 
+neglect of Muslims in politics. In 1930 Allama Iqbal called for a separate Muslim state in northwest 
+and eastern South Asia. Muhammad Ali Jinnah espoused the Two Nation Theory and led the Muslim League 
+to adopt the Lahore Resolution of 1940, which led to independence in 1947. [PARAGRAPH:2]Pakistan was 
+formed on August 14, 1947 with two Muslim-majority wings in the eastern and northwestern regions of the 
+South Asia, separated by Hindu-majority India, and comprising the provinces of Balochistan, East Bengal, 
+the North-West Frontier Province, West Punjab and Sindh. The partition of British India resulted in communal 
+riots across India and Pakistan-millions of Muslims moved to Pakistan and millions of Hindus and Sikhs 
+moved to India. Disputes arose over several princely states including Jammu and Kashmir which led to 
+the First Kashmir War (1948) ending with Pakistan and India each occupying large parts of the state. 
+From 1947 to 1956, Pakistan was a Dominion in the Commonwealth of Nations. The republic declared in 1958 
+was stalled by a coup d'etat by Ayub Khan (1958-69), who was president during a period of internal instability 
+and a second war with India in 1965. His successor, Yahya Khan (1969-71) had to deal with the cyclone 
+which caused 500,000 deaths in East Pakistan.[PARAGRAPH:2]Economic and political dissent in East Pakistan 
+led to violent political repression and tensions escalating into civil war (Bangladesh Liberation War) 
+and the Indo-Pakistani War of 1971 and ultimately the secession of East Pakistan as the independent state 
+of Bangladesh. Civilian rule resumed from 1972 to 1977 under Zulfikar Ali Bhutto, but he was deposed 
+(and hanged to death in 1979 by court orders) by General Zia-ul-Haq, who became the third military president. 
+The secular policies of the past were replaced by Zia's introduction of the Islamic Shariat legal code, 
+and increased religious influences on the civil service and the military. Muhammad Khan Junejo was elected 
+in 1985 as Prime Minister, but with the death of General Zia in a plane crash in 1988, Benazir Bhutto, 
+daughter of Zulfikar Ali Bhutto, was elected as the first female Prime Minister of Pakistan. Over the 
+next decade, she alternated in power with Nawaz Sharif as the political and economic situation worsened.[PARAGRAPH:2]Military 
+tensions in the Kargil conflict with India in 1999 were followed by a military coup in which General 
+Pervez Musharraf assumed executive powers. In 2001, he became President after the resignation of Rafiq 
+Tarar and after the 2002 parliamentary elections, transferred executive powers to newly elected Prime 
+Minister Zafarullah Khan Jamali, who was succeeded in 2004 by Shaukat Aziz. On 8 October 2005, a powerful 
+earthquake of magnitude of 7.6 on the Richter scale struck the northern mountains of Pakistan and neighbouring 
+regions in India and Afghanistan with the official death toll on 8 November standing at 87,350[20] and 
+an estimated 3.3 million left homeless in Pakistan.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_BHUTTO</Tag>
+		<English>Bhutto</English>
+		<French>Bhutto</French>
+		<German>Bhutto</German>
+		<Italian>Bhutto</Italian>
+		<Spanish>Bhutto</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_BHUTTO_PEDIA</Tag>
+		<English>[H1]Benazir Bhutto[\H1][NEWLINE][BOLD]President of Pakistan[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]1953 
+- 2007 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Benazir Bhutto was the first woman 
+to lead a post-colonial Muslim state. She was elected Prime Minister of Pakistan in 1988, only to be 
+deposed 20 months later by the country's military supported president Ghulam Ishaq Khan who used the 
+Eighth Amendment to dissolve parliament and force an election. She was re-elected in 1993 but was dismissed 
+three years later amid various corruption scandals by the then president Farooq Leghari, who also used 
+the Eighth Amendment discretionary powers. Some of these scandals involved contracts awarded to Swiss 
+companies during her regime about which she faces charges in Switzerland which remain unresolved. Her 
+husband, Asif Ali Zardari, spent eight years in jail until he was released November 2004.[PARAGRAPH:1]After 
+completing university, she returned to Pakistan, but in the course of her father's imprisonment and execution, 
+she was placed under house arrest. Having been allowed in 1984 to go back to the UK, she became leader 
+in exile of the Pakistan Peoples Party (PPP), her father's party, but was unable to make her political 
+presence felt in Pakistan until the death of General Muhammad Zia-ul-Haq.[PARAGRAPH:1]On November 16, 
+1988, in the first open election in more than a decade, Benazir's PPP won the single largest bloc of 
+seats in the National Assembly. Bhutto was sworn in as Prime Minister of a coalition government on December 
+2, becoming at age thirty five the youngest person and also the first woman to head the government of 
+a Muslim-majority state in modern times.[PARAGRAPH:1]After being dismissed by the then-president of Pakistan 
+under charges of corruption, her party lost the elections held in October 1990. She served as the leader 
+of the opposition while Nawaz Sharif became PM for the next three years. In October 1993 elections were 
+again held, which were won by the PPP coalition, returning Bhutto to office until 1996, when once again 
+her government was dismissed on corruption charges. Bhutto maintains that all the cases are politicaly 
+motivated and says she is ready to face them. [PARAGRAPH:1]Bhutto returned to Pakistan on October 18, 
+2007, after reaching an understanding with President Pervez Musharraf by which she was granted amnesty 
+and all corruption charges were withdrawn. She was assassinated on December 27, 2007, after departing 
+a PPP rally in the Pakistani city of Rawalpindi, two weeks before the scheduled Pakistani general election 
+of 2008 where she was a leading opposition candidate.</English>
+		<French>[H1]Benazir Bhutto[\H1][NEWLINE][BOLD]President of Pakistan[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]1953 
+- 2007 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Benazir Bhutto was the first woman 
+to lead a post-colonial Muslim state. She was elected Prime Minister of Pakistan in 1988, only to be 
+deposed 20 months later by the country's military supported president Ghulam Ishaq Khan who used the 
+Eighth Amendment to dissolve parliament and force an election. She was re-elected in 1993 but was dismissed 
+three years later amid various corruption scandals by the then president Farooq Leghari, who also used 
+the Eighth Amendment discretionary powers. Some of these scandals involved contracts awarded to Swiss 
+companies during her regime about which she faces charges in Switzerland which remain unresolved. Her 
+husband, Asif Ali Zardari, spent eight years in jail until he was released November 2004.[PARAGRAPH:1]After 
+completing university, she returned to Pakistan, but in the course of her father's imprisonment and execution, 
+she was placed under house arrest. Having been allowed in 1984 to go back to the UK, she became leader 
+in exile of the Pakistan Peoples Party (PPP), her father's party, but was unable to make her political 
+presence felt in Pakistan until the death of General Muhammad Zia-ul-Haq.[PARAGRAPH:1]On November 16, 
+1988, in the first open election in more than a decade, Benazir's PPP won the single largest bloc of 
+seats in the National Assembly. Bhutto was sworn in as Prime Minister of a coalition government on December 
+2, becoming at age thirty five the youngest person and also the first woman to head the government of 
+a Muslim-majority state in modern times.[PARAGRAPH:1]After being dismissed by the then-president of Pakistan 
+under charges of corruption, her party lost the elections held in October 1990. She served as the leader 
+of the opposition while Nawaz Sharif became PM for the next three years. In October 1993 elections were 
+again held, which were won by the PPP coalition, returning Bhutto to office until 1996, when once again 
+her government was dismissed on corruption charges. Bhutto maintains that all the cases are politicaly 
+motivated and says she is ready to face them. [PARAGRAPH:1]Bhutto returned to Pakistan on October 18, 
+2007, after reaching an understanding with President Pervez Musharraf by which she was granted amnesty 
+and all corruption charges were withdrawn. She was assassinated on December 27, 2007, after departing 
+a PPP rally in the Pakistani city of Rawalpindi, two weeks before the scheduled Pakistani general election 
+of 2008 where she was a leading opposition candidate.</French>
+		<German>[H1]Benazir Bhutto[\H1][NEWLINE][BOLD]President of Pakistan[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]1953 
+- 2007 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Benazir Bhutto was the first woman 
+to lead a post-colonial Muslim state. She was elected Prime Minister of Pakistan in 1988, only to be 
+deposed 20 months later by the country's military supported president Ghulam Ishaq Khan who used the 
+Eighth Amendment to dissolve parliament and force an election. She was re-elected in 1993 but was dismissed 
+three years later amid various corruption scandals by the then president Farooq Leghari, who also used 
+the Eighth Amendment discretionary powers. Some of these scandals involved contracts awarded to Swiss 
+companies during her regime about which she faces charges in Switzerland which remain unresolved. Her 
+husband, Asif Ali Zardari, spent eight years in jail until he was released November 2004.[PARAGRAPH:1]After 
+completing university, she returned to Pakistan, but in the course of her father's imprisonment and execution, 
+she was placed under house arrest. Having been allowed in 1984 to go back to the UK, she became leader 
+in exile of the Pakistan Peoples Party (PPP), her father's party, but was unable to make her political 
+presence felt in Pakistan until the death of General Muhammad Zia-ul-Haq.[PARAGRAPH:1]On November 16, 
+1988, in the first open election in more than a decade, Benazir's PPP won the single largest bloc of 
+seats in the National Assembly. Bhutto was sworn in as Prime Minister of a coalition government on December 
+2, becoming at age thirty five the youngest person and also the first woman to head the government of 
+a Muslim-majority state in modern times.[PARAGRAPH:1]After being dismissed by the then-president of Pakistan 
+under charges of corruption, her party lost the elections held in October 1990. She served as the leader 
+of the opposition while Nawaz Sharif became PM for the next three years. In October 1993 elections were 
+again held, which were won by the PPP coalition, returning Bhutto to office until 1996, when once again 
+her government was dismissed on corruption charges. Bhutto maintains that all the cases are politicaly 
+motivated and says she is ready to face them. [PARAGRAPH:1]Bhutto returned to Pakistan on October 18, 
+2007, after reaching an understanding with President Pervez Musharraf by which she was granted amnesty 
+and all corruption charges were withdrawn. She was assassinated on December 27, 2007, after departing 
+a PPP rally in the Pakistani city of Rawalpindi, two weeks before the scheduled Pakistani general election 
+of 2008 where she was a leading opposition candidate.</German>
+		<Italian>[H1]Benazir Bhutto[\H1][NEWLINE][BOLD]President of Pakistan[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]1953 
+- 2007 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Benazir Bhutto was the first woman 
+to lead a post-colonial Muslim state. She was elected Prime Minister of Pakistan in 1988, only to be 
+deposed 20 months later by the country's military supported president Ghulam Ishaq Khan who used the 
+Eighth Amendment to dissolve parliament and force an election. She was re-elected in 1993 but was dismissed 
+three years later amid various corruption scandals by the then president Farooq Leghari, who also used 
+the Eighth Amendment discretionary powers. Some of these scandals involved contracts awarded to Swiss 
+companies during her regime about which she faces charges in Switzerland which remain unresolved. Her 
+husband, Asif Ali Zardari, spent eight years in jail until he was released November 2004.[PARAGRAPH:1]After 
+completing university, she returned to Pakistan, but in the course of her father's imprisonment and execution, 
+she was placed under house arrest. Having been allowed in 1984 to go back to the UK, she became leader 
+in exile of the Pakistan Peoples Party (PPP), her father's party, but was unable to make her political 
+presence felt in Pakistan until the death of General Muhammad Zia-ul-Haq.[PARAGRAPH:1]On November 16, 
+1988, in the first open election in more than a decade, Benazir's PPP won the single largest bloc of 
+seats in the National Assembly. Bhutto was sworn in as Prime Minister of a coalition government on December 
+2, becoming at age thirty five the youngest person and also the first woman to head the government of 
+a Muslim-majority state in modern times.[PARAGRAPH:1]After being dismissed by the then-president of Pakistan 
+under charges of corruption, her party lost the elections held in October 1990. She served as the leader 
+of the opposition while Nawaz Sharif became PM for the next three years. In October 1993 elections were 
+again held, which were won by the PPP coalition, returning Bhutto to office until 1996, when once again 
+her government was dismissed on corruption charges. Bhutto maintains that all the cases are politicaly 
+motivated and says she is ready to face them. [PARAGRAPH:1]Bhutto returned to Pakistan on October 18, 
+2007, after reaching an understanding with President Pervez Musharraf by which she was granted amnesty 
+and all corruption charges were withdrawn. She was assassinated on December 27, 2007, after departing 
+a PPP rally in the Pakistani city of Rawalpindi, two weeks before the scheduled Pakistani general election 
+of 2008 where she was a leading opposition candidate.</Italian>
+		<Spanish>[H1]Benazir Bhutto[\H1][NEWLINE][BOLD]President of Pakistan[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]1953 
+- 2007 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Benazir Bhutto was the first woman 
+to lead a post-colonial Muslim state. She was elected Prime Minister of Pakistan in 1988, only to be 
+deposed 20 months later by the country's military supported president Ghulam Ishaq Khan who used the 
+Eighth Amendment to dissolve parliament and force an election. She was re-elected in 1993 but was dismissed 
+three years later amid various corruption scandals by the then president Farooq Leghari, who also used 
+the Eighth Amendment discretionary powers. Some of these scandals involved contracts awarded to Swiss 
+companies during her regime about which she faces charges in Switzerland which remain unresolved. Her 
+husband, Asif Ali Zardari, spent eight years in jail until he was released November 2004.[PARAGRAPH:1]After 
+completing university, she returned to Pakistan, but in the course of her father's imprisonment and execution, 
+she was placed under house arrest. Having been allowed in 1984 to go back to the UK, she became leader 
+in exile of the Pakistan Peoples Party (PPP), her father's party, but was unable to make her political 
+presence felt in Pakistan until the death of General Muhammad Zia-ul-Haq.[PARAGRAPH:1]On November 16, 
+1988, in the first open election in more than a decade, Benazir's PPP won the single largest bloc of 
+seats in the National Assembly. Bhutto was sworn in as Prime Minister of a coalition government on December 
+2, becoming at age thirty five the youngest person and also the first woman to head the government of 
+a Muslim-majority state in modern times.[PARAGRAPH:1]After being dismissed by the then-president of Pakistan 
+under charges of corruption, her party lost the elections held in October 1990. She served as the leader 
+of the opposition while Nawaz Sharif became PM for the next three years. In October 1993 elections were 
+again held, which were won by the PPP coalition, returning Bhutto to office until 1996, when once again 
+her government was dismissed on corruption charges. Bhutto maintains that all the cases are politicaly 
+motivated and says she is ready to face them. [PARAGRAPH:1]Bhutto returned to Pakistan on October 18, 
+2007, after reaching an understanding with President Pervez Musharraf by which she was granted amnesty 
+and all corruption charges were withdrawn. She was assassinated on December 27, 2007, after departing 
+a PPP rally in the Pakistani city of Rawalpindi, two weeks before the scheduled Pakistani general election 
+of 2008 where she was a leading opposition candidate.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_BHUTTO_1</Tag>
+		<English>I pray, [CT_NAME], we can triumph in achieving freedom and rights for both the [OUR_EMPIRE] and [CT_EMPIRE].</English>
+		<French>I pray, [CT_NAME], we can triumph in achieving freedom and rights for both the [OUR_EMPIRE] and [CT_EMPIRE].</French>
+		<German>I pray, [CT_NAME], we can triumph in achieving freedom and rights for both the [OUR_EMPIRE] and [CT_EMPIRE].</German>
+		<Italian>I pray, [CT_NAME], we can triumph in achieving freedom and rights for both the [OUR_EMPIRE] and [CT_EMPIRE].</Italian>
+		<Spanish>I pray, [CT_NAME], we can triumph in achieving freedom and rights for both the [OUR_EMPIRE] and [CT_EMPIRE].</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ISLAMABAD</Tag>
+		<English>Islamabad</English>
+		<French>
+			<Text>Islamabad</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Islamabad</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Islamabad</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Islamabad</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KARACHI</Tag>
+		<English>Karachi</English>
+		<French>
+			<Text>Karachi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Karachi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Karachi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Karachi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LAHORE</Tag>
+		<English>Lahore</English>
+		<French>
+			<Text>Lahore</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Lahore</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Lahore</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Lahore</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_HARRAPPA</Tag>
+		<English>Harrappa</English>
+		<French>
+			<Text>Harrappa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Harrappa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Harrappa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Harrappa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_FAISALABAD</Tag>
+		<English>Faisalabad</English>
+		<French>
+			<Text>Faisalabad</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Faisalabad</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Faisalabad</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Faisalabad</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_RAWALPINDI</Tag>
+		<English>Rawalpindi</English>
+		<French>
+			<Text>Rawalpindi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Rawalpindi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Rawalpindi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Rawalpindi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MULTAN</Tag>
+		<English>Multan</English>
+		<French>
+			<Text>Multan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Multan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Multan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Multan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_HYDERABAD</Tag>
+		<English>Hyderabad</English>
+		<French>
+			<Text>Hyderabad</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Hyderabad</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Hyderabad</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Hyderabad</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MOHENJO_DARO</Tag>
+		<English>Mohenjo-Daro</English>
+		<French>
+			<Text>Mohenjo-Daro</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mohenjo-Daro</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Mohenjo-Daro</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mohenjo-Daro</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GUJRANWALA</Tag>
+		<English>Gujranwala</English>
+		<French>
+			<Text>Gujranwala</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Gujranwala</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Gujranwala</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Gujranwala</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PESHAWAR</Tag>
+		<English>Peshawar</English>
+		<French>
+			<Text>Peshawar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Peshawar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Peshawar</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Peshawar</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_QUETTA</Tag>
+		<English>Quetta</English>
+		<French>
+			<Text>Quetta</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Quetta</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Quetta</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Quetta</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SARGODHA</Tag>
+		<English>Sargodha</English>
+		<French>
+			<Text>Sargodha</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sargodha</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sargodha</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sargodha</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SIALKOT</Tag>
+		<English>Sialkot</English>
+		<French>
+			<Text>Sialkot</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sialkot</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sialkot</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sialkot</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BAHAWALPUR</Tag>
+		<English>Bahawalpur</English>
+		<French>
+			<Text>Bahawalpur</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Bahawalpur</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Bahawalpur</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Bahawalpur</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SUKKUR</Tag>
+		<English>Sukkur</English>
+		<French>
+			<Text>Sukkur</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sukkur</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sukkur</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sukkur</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TAXILA</Tag>
+		<English>Taxila</English>
+		<French>
+			<Text>Taxila</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Taxila</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Taxila</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Taxila</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_JHANG_MAGHIANA</Tag>
+		<English>Jhang Maghiana</English>
+		<French>
+			<Text>Jhang Maghiana</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Jhang Maghiana</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Jhang Maghiana</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Jhang Maghiana</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SHEKHUPURA</Tag>
+		<English>Shekhupura</English>
+		<French>
+			<Text>Shekhupura</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Shekhupura</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Shekhupura</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Shekhupura</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LARKANA</Tag>
+		<English>Larkana</English>
+		<French>
+			<Text>Larkana</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Larkana</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Larkana</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Larkana</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GUJRAT</Tag>
+		<English>Gujrat</English>
+		<French>
+			<Text>Gujrat</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Gujrat</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Gujrat</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Gujrat</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MARDAN</Tag>
+		<English>Mardan</English>
+		<French>
+			<Text>Mardan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mardan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Mardan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mardan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KASUR</Tag>
+		<English>Kasur</English>
+		<French>
+			<Text>Kasur</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kasur</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kasur</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kasur</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_RAHIMYAR_KHAN</Tag>
+		<English>Rahimyar Khan</English>
+		<French>
+			<Text>Rahimyar Khan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Rahimyar Khan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Rahimyar Khan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Rahimyar Khan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAHIWAL</Tag>
+		<English>Sahiwal</English>
+		<French>
+			<Text>Sahiwal</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sahiwal</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sahiwal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sahiwal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_OKARA</Tag>
+		<English>Okara</English>
+		<French>
+			<Text>Okara</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Okara</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Okara</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Okara</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_WAH</Tag>
+		<English>Wah</English>
+		<French>
+			<Text>Wah</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Wah</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Wah</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Wah</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DERA_GHAZI_KHAN</Tag>
+		<English>Dera Ghazi Khan</English>
+		<French>
+			<Text>Dera Ghazi Khan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Dera Ghazi Khan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Dera Ghazi Khan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Dera Ghazi Khan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CHINIOT</Tag>
+		<English>Chiniot</English>
+		<French>
+			<Text>Chiniot</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Chiniot</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Chiniot</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Chiniot</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MIRPUR_KHAS</Tag>
+		<English>Mirpur Khas</English>
+		<French>
+			<Text>Mirpur Khas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mirpur Khas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Mirpur Khas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mirpur Khas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_HAFIZABAD</Tag>
+		<English>Hafizabad</English>
+		<French>
+			<Text>Hafizabad</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Hafizabad</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Hafizabad</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Hafizabad</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BUREWALA</Tag>
+		<English>Burewala</English>
+		<French>
+			<Text>Burewala</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Burewala</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Burewala</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Burewala</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MIANWALI</Tag>
+		<English>Mianwali</English>
+		<French>
+			<Text>Mianwali</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mianwali</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Mianwali</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mianwali</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_JHELUM</Tag>
+		<English>Jhelum</English>
+		<French>
+			<Text>Jhelum</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Jhelum</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Jhelum</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Jhelum</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KHANEWAL</Tag>
+		<English>Khanewal</English>
+		<French>
+			<Text>Khanewal</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Khanewal</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Khanewal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Khanewal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SADIQABAD</Tag>
+		<English>Sadiqabad</English>
+		<French>
+			<Text>Sadiqabad</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sadiqabad</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sadiqabad</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sadiqabad</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KOHAT</Tag>
+		<English>Kohat</English>
+		<French>
+			<Text>Kohat</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kohat</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kohat</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kohat</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SHIKARPUR</Tag>
+		<English>Shikarpur</English>
+		<French>
+			<Text>Shikarpur</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Shikarpur</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Shikarpur</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Shikarpur</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GOJRA</Tag>
+		<English>Gojra</English>
+		<French>
+			<Text>Gojra</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Gojra</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Gojra</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Gojra</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ABBOTTABAD</Tag>
+		<English>Abbottabad</English>
+		<French>
+			<Text>Abbottabad</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Abbottabad</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Abbottabad</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Abbottabad</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BAHAWALNAGAR</Tag>
+		<English>Bahawalnagar</English>
+		<French>
+			<Text>Bahawalnagar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Bahawalnagar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Bahawalnagar</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Bahawalnagar</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DASKA</Tag>
+		<English>Daska</English>
+		<French>
+			<Text>Daska</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Daska</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Daska</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Daska</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_JARANWALA</Tag>
+		<English>Jaranwala</English>
+		<French>
+			<Text>Jaranwala</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Jaranwala</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Jaranwala</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Jaranwala</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KHANPUR</Tag>
+		<English>Khanpur</English>
+		<French>
+			<Text>Khanpur</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Khanpur</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Khanpur</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Khanpur</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CHISHTIAN_MANDI</Tag>
+		<English>Chishtian Mandi</English>
+		<French>
+			<Text>Chishtian Mandi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Chishtian Mandi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Chishtian Mandi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Chishtian Mandi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TANDO_ADAM</Tag>
+		<English>Tando Adam</English>
+		<French>
+			<Text>Tando Adam</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tando Adam</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tando Adam</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tando Adam</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PAKPATTAN</Tag>
+		<English>Pakpattan</English>
+		<French>
+			<Text>Pakpattan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Pakpattan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Pakpattan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Pakpattan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MURIDIKE</Tag>
+		<English>Muridike</English>
+		<French>
+			<Text>Muridike</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Muridike</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Muridike</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Muridike</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VIHARI</Tag>
+		<English>Vihari</English>
+		<French>
+			<Text>Vihari</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Vihari</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Vihari</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Vihari</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_AHMADPUR</Tag>
+		<English>Ahmadpur</English>
+		<French>
+			<Text>Ahmadpur</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ahmadpur</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ahmadpur</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ahmadpur</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CHARSADDA</Tag>
+		<English>Charsadda</English>
+		<French>
+			<Text>Charsadda</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Charsadda</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Charsadda</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Charsadda</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DADU</Tag>
+		<English>Dadu</English>
+		<French>
+			<Text>Dadu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Dadu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Dadu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Dadu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MANDI_BAHAUDDIN</Tag>
+		<English>Mandi Bahauddin</English>
+		<French>
+			<Text>Mandi Bahauddin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mandi Bahauddin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Mandi Bahauddin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mandi Bahauddin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+</Civ4GameText>

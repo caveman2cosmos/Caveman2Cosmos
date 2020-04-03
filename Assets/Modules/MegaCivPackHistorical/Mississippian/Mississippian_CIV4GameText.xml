@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- re-Modified by Strategyonly -->
+<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MISSISSIPPIAN_DESC</Tag>
+		<English>Mississippian Empire</English>
+		<French>Mississippian Empire</French>
+		<German>Mississippian Empire</German>
+		<Italian>Mississippian Empire</Italian>
+		<Spanish>Mississippian Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MISSISSIPPIAN_SHORT_DESC</Tag>
+		<English>Mississippian</English>
+		<French>Mississippian</French>
+		<German>Mississippian</German>
+		<Italian>Mississippian</Italian>
+		<Spanish>Mississippian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MISSISSIPPIAN_ADJECTIVE</Tag>
+		<English>Mississippians</English>
+		<French>Mississippians</French>
+		<German>Mississippians</German>
+		<Italian>Mississippians</Italian>
+		<Spanish>Mississippians</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MISSISSIPPIAN_PEDIA</Tag>
+		<English>[TAB]The Mississippian culture was a mound-building Native American culture that flourished in what is now the Midwestern, Eastern, and Southeastern United States from approximately 800 to 1600 CE, varying regionally. The Mississippian way of life began to develop in the Mississippi River Valley (for which it is named). Cultures in the tributary Tennessee River Valley may have also begun to develop Mississippian characteristics at this point. Almost all dated Mississippian sites predate 1539-1540 (when Hernando de Soto explored the area), with notable exceptions being Natchez communities that maintained Mississippian cultural practices into the 18th century.</English>
+		<French>[TAB]The Mississippian culture was a mound-building Native American culture that flourished in what is now the Midwestern, Eastern, and Southeastern United States from approximately 800 to 1600 CE, varying regionally. The Mississippian way of life began to develop in the Mississippi River Valley (for which it is named). Cultures in the tributary Tennessee River Valley may have also begun to develop Mississippian characteristics at this point. Almost all dated Mississippian sites predate 1539-1540 (when Hernando de Soto explored the area), with notable exceptions being Natchez communities that maintained Mississippian cultural practices into the 18th century.</French>
+		<German>[TAB]The Mississippian culture was a mound-building Native American culture that flourished in what is now the Midwestern, Eastern, and Southeastern United States from approximately 800 to 1600 CE, varying regionally. The Mississippian way of life began to develop in the Mississippi River Valley (for which it is named). Cultures in the tributary Tennessee River Valley may have also begun to develop Mississippian characteristics at this point. Almost all dated Mississippian sites predate 1539-1540 (when Hernando de Soto explored the area), with notable exceptions being Natchez communities that maintained Mississippian cultural practices into the 18th century.</German>
+		<Italian>[TAB]The Mississippian culture was a mound-building Native American culture that flourished in what is now the Midwestern, Eastern, and Southeastern United States from approximately 800 to 1600 CE, varying regionally. The Mississippian way of life began to develop in the Mississippi River Valley (for which it is named). Cultures in the tributary Tennessee River Valley may have also begun to develop Mississippian characteristics at this point. Almost all dated Mississippian sites predate 1539-1540 (when Hernando de Soto explored the area), with notable exceptions being Natchez communities that maintained Mississippian cultural practices into the 18th century.</Italian>
+		<Spanish>[TAB]The Mississippian culture was a mound-building Native American culture that flourished in what is now the Midwestern, Eastern, and Southeastern United States from approximately 800 to 1600 CE, varying regionally. The Mississippian way of life began to develop in the Mississippi River Valley (for which it is named). Cultures in the tributary Tennessee River Valley may have also begun to develop Mississippian characteristics at this point. Almost all dated Mississippian sites predate 1539-1540 (when Hernando de Soto explored the area), with notable exceptions being Natchez communities that maintained Mississippian cultural practices into the 18th century.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_PUSHMATAHA</Tag>
+		<English>Pushmataha</English>
+		<French>Pushmataha</French>
+		<German>Pushmataha</German>
+		<Italian>Pushmataha</Italian>
+		<Spanish>Pushmataha</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_PUSHMATAHA_PEDIA</Tag>
+		<English>[H1]Pushmataha [\H1][NEWLINE][BOLD]Chief of Mississippi[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c. 1760s-December 24, 1824[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Pushmataha, the "Indian General", was one of the three regional chiefs of the major divisions of the Choctaw in the 19th century. Many historians considered him the "greatest of all Choctaw chiefs". Pushmataha was highly regarded among Native Americans, Europeans, and white Americans, for his skill and cunning in both war and diplomacy. Rejecting the offers of alliance and reconquest proffered by Tecumseh, Pushmataha led the Choctaw to fight on the side of the United States in the War of 1812. He negotiated several treaties with the United States. In 1824, he traveled to Washington to petition the Federal government against further cessions of Choctaw land; he met with John C. Calhoun and Marquis de Lafayette, and his portrait was painted by Charles Bird King. He died in the capital city and was buried with full military honors in the Congressional Cemetery in Washington, D.C.</English>
+		<French>[H1]Pushmataha [\H1][NEWLINE][BOLD]Chief of Mississippi[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c. 1760s-December 24, 1824[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Pushmataha, the "Indian General", was one of the three regional chiefs of the major divisions of the Choctaw in the 19th century. Many historians considered him the "greatest of all Choctaw chiefs". Pushmataha was highly regarded among Native Americans, Europeans, and white Americans, for his skill and cunning in both war and diplomacy. Rejecting the offers of alliance and reconquest proffered by Tecumseh, Pushmataha led the Choctaw to fight on the side of the United States in the War of 1812. He negotiated several treaties with the United States. In 1824, he traveled to Washington to petition the Federal government against further cessions of Choctaw land; he met with John C. Calhoun and Marquis de Lafayette, and his portrait was painted by Charles Bird King. He died in the capital city and was buried with full military honors in the Congressional Cemetery in Washington, D.C.</French>
+		<German>[H1]Pushmataha [\H1][NEWLINE][BOLD]Chief of Mississippi[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c. 1760s-December 24, 1824[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Pushmataha, the "Indian General", was one of the three regional chiefs of the major divisions of the Choctaw in the 19th century. Many historians considered him the "greatest of all Choctaw chiefs". Pushmataha was highly regarded among Native Americans, Europeans, and white Americans, for his skill and cunning in both war and diplomacy. Rejecting the offers of alliance and reconquest proffered by Tecumseh, Pushmataha led the Choctaw to fight on the side of the United States in the War of 1812. He negotiated several treaties with the United States. In 1824, he traveled to Washington to petition the Federal government against further cessions of Choctaw land; he met with John C. Calhoun and Marquis de Lafayette, and his portrait was painted by Charles Bird King. He died in the capital city and was buried with full military honors in the Congressional Cemetery in Washington, D.C.</German>
+		<Italian>[H1]Pushmataha [\H1][NEWLINE][BOLD]Chief of Mississippi[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c. 1760s-December 24, 1824[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Pushmataha, the "Indian General", was one of the three regional chiefs of the major divisions of the Choctaw in the 19th century. Many historians considered him the "greatest of all Choctaw chiefs". Pushmataha was highly regarded among Native Americans, Europeans, and white Americans, for his skill and cunning in both war and diplomacy. Rejecting the offers of alliance and reconquest proffered by Tecumseh, Pushmataha led the Choctaw to fight on the side of the United States in the War of 1812. He negotiated several treaties with the United States. In 1824, he traveled to Washington to petition the Federal government against further cessions of Choctaw land; he met with John C. Calhoun and Marquis de Lafayette, and his portrait was painted by Charles Bird King. He died in the capital city and was buried with full military honors in the Congressional Cemetery in Washington, D.C.</Italian>
+		<Spanish>[H1]Pushmataha [\H1][NEWLINE][BOLD]Chief of Mississippi[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c. 1760s-December 24, 1824[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Pushmataha, the "Indian General", was one of the three regional chiefs of the major divisions of the Choctaw in the 19th century. Many historians considered him the "greatest of all Choctaw chiefs". Pushmataha was highly regarded among Native Americans, Europeans, and white Americans, for his skill and cunning in both war and diplomacy. Rejecting the offers of alliance and reconquest proffered by Tecumseh, Pushmataha led the Choctaw to fight on the side of the United States in the War of 1812. He negotiated several treaties with the United States. In 1824, he traveled to Washington to petition the Federal government against further cessions of Choctaw land; he met with John C. Calhoun and Marquis de Lafayette, and his portrait was painted by Charles Bird King. He died in the capital city and was buried with full military honors in the Congressional Cemetery in Washington, D.C.</Spanish>
+	</TEXT>
+</Civ4GameText>

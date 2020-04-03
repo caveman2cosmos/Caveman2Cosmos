@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- ReModified by the StrategyOnly -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_MIKHEIL</Tag>
+		<English>Saakashvili</English>
+		<French>Saakashvili</French>
+		<German>Saakashvili</German>
+		<Italian>Saakashvili</Italian>
+		<Spanish>Saakashvili</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_MIKHEIL_PEDIA</Tag>
+		<English>[H1]Mikheil Saakashvili[\H1][NEWLINE][BOLD]President of Georgia[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD]1967 - [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Saakashvili became President 
+of Georgia on 25 January 2004 after President Eduard Shevardnadze resigned in a November 2003 bloodless 
+"Rose Revolution" led by Saakashvili and his political allies, Nino Burjanadze and Zurab Zhvania. He 
+was re-elected in the early Georgian presidential election of 5 January 2008. He is widely regarded as 
+a pro-Western leader who has spearheaded a series of political and economical reforms, but has been criticized 
+for authoritarian tendencies and worsening human rights record in the country. Opposition parties have 
+also accused him of rigging elections and using riot police to crush opposition rallies.[PARAGRAPH:1]Saakashvili's 
+"storming of Georgia's parliament" in 2003 put U.S. diplomats off guard. He ousted a leader the U.S. 
+had long backed, Eduard Shevardnadze. Seeking support, Saakashvili went outside the U.S. State Department. 
+He hired Randy Scheunemann, now Sen. McCain's top foreign-policy adviser, as a lobbyist and used Daniel 
+Kunin of USAID and the NDI as a full-time adviser[PARAGRAPH:1]In the first months of his presidency, 
+Saakashvili faced a major political crisis in the southwestern Autonomous Republic of Adjara run by an 
+authoritarian regional leader, Aslan Abashidze, who largely ignored the central Georgian government and 
+was viewed by many as a pro-Russian politician. The crisis threatened to develop into an armed confrontation, 
+but Saakashvili's government managed to resolve the conflict peacefully, forcing Abashidze to resign 
+on 6 May 2004. Success in Adjara encouraged the new president to intensify his efforts towards bringing 
+the breakaway South Ossetia back under the Georgian jurisdiction. The separatist authorities responded 
+with intense militarization in the region, that led to armed clashes in August 2004. A stalemate ensued, 
+and despite a new peace plan proposed by the Georgian government in 2005, the conflict remains unresolved. 
+Recently, in late July 2006, Saakashvili's government managed to deal successfully with another major 
+crisis, this time in Abkhazia's Kodori Gorge where Georgia's police forces disarmed a defiant militia 
+led by a local warlord Emzar Kvitsiani.[PARAGRAPH:1]Although the reforms initiated by President Saakashvili 
+are considered to have mixed success, still the rate of corruption in the country has drastically reduced. 
+According to the World Bank accounts, Georgia is named as the number one economic reformer in the world 
+and the country ranks as 18 in term of ease of doing business, when most of the country's neighbours' 
+are in the 100s of the World Bank's rank.</English>
+		<French>[H1]Mikheil Saakashvili[\H1][NEWLINE][BOLD]President of Georgia[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD]1967 - [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Saakashvili became President 
+of Georgia on 25 January 2004 after President Eduard Shevardnadze resigned in a November 2003 bloodless 
+"Rose Revolution" led by Saakashvili and his political allies, Nino Burjanadze and Zurab Zhvania. He 
+was re-elected in the early Georgian presidential election of 5 January 2008. He is widely regarded as 
+a pro-Western leader who has spearheaded a series of political and economical reforms, but has been criticized 
+for authoritarian tendencies and worsening human rights record in the country. Opposition parties have 
+also accused him of rigging elections and using riot police to crush opposition rallies.[PARAGRAPH:1]Saakashvili's 
+"storming of Georgia's parliament" in 2003 put U.S. diplomats off guard. He ousted a leader the U.S. 
+had long backed, Eduard Shevardnadze. Seeking support, Saakashvili went outside the U.S. State Department. 
+He hired Randy Scheunemann, now Sen. McCain's top foreign-policy adviser, as a lobbyist and used Daniel 
+Kunin of USAID and the NDI as a full-time adviser[PARAGRAPH:1]In the first months of his presidency, 
+Saakashvili faced a major political crisis in the southwestern Autonomous Republic of Adjara run by an 
+authoritarian regional leader, Aslan Abashidze, who largely ignored the central Georgian government and 
+was viewed by many as a pro-Russian politician. The crisis threatened to develop into an armed confrontation, 
+but Saakashvili's government managed to resolve the conflict peacefully, forcing Abashidze to resign 
+on 6 May 2004. Success in Adjara encouraged the new president to intensify his efforts towards bringing 
+the breakaway South Ossetia back under the Georgian jurisdiction. The separatist authorities responded 
+with intense militarization in the region, that led to armed clashes in August 2004. A stalemate ensued, 
+and despite a new peace plan proposed by the Georgian government in 2005, the conflict remains unresolved. 
+Recently, in late July 2006, Saakashvili's government managed to deal successfully with another major 
+crisis, this time in Abkhazia's Kodori Gorge where Georgia's police forces disarmed a defiant militia 
+led by a local warlord Emzar Kvitsiani.[PARAGRAPH:1]Although the reforms initiated by President Saakashvili 
+are considered to have mixed success, still the rate of corruption in the country has drastically reduced. 
+According to the World Bank accounts, Georgia is named as the number one economic reformer in the world 
+and the country ranks as 18 in term of ease of doing business, when most of the country's neighbours' 
+are in the 100s of the World Bank's rank.</French>
+		<German>[H1]Mikheil Saakashvili[\H1][NEWLINE][BOLD]President of Georgia[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD]1967 - [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Saakashvili became President 
+of Georgia on 25 January 2004 after President Eduard Shevardnadze resigned in a November 2003 bloodless 
+"Rose Revolution" led by Saakashvili and his political allies, Nino Burjanadze and Zurab Zhvania. He 
+was re-elected in the early Georgian presidential election of 5 January 2008. He is widely regarded as 
+a pro-Western leader who has spearheaded a series of political and economical reforms, but has been criticized 
+for authoritarian tendencies and worsening human rights record in the country. Opposition parties have 
+also accused him of rigging elections and using riot police to crush opposition rallies.[PARAGRAPH:1]Saakashvili's 
+"storming of Georgia's parliament" in 2003 put U.S. diplomats off guard. He ousted a leader the U.S. 
+had long backed, Eduard Shevardnadze. Seeking support, Saakashvili went outside the U.S. State Department. 
+He hired Randy Scheunemann, now Sen. McCain's top foreign-policy adviser, as a lobbyist and used Daniel 
+Kunin of USAID and the NDI as a full-time adviser[PARAGRAPH:1]In the first months of his presidency, 
+Saakashvili faced a major political crisis in the southwestern Autonomous Republic of Adjara run by an 
+authoritarian regional leader, Aslan Abashidze, who largely ignored the central Georgian government and 
+was viewed by many as a pro-Russian politician. The crisis threatened to develop into an armed confrontation, 
+but Saakashvili's government managed to resolve the conflict peacefully, forcing Abashidze to resign 
+on 6 May 2004. Success in Adjara encouraged the new president to intensify his efforts towards bringing 
+the breakaway South Ossetia back under the Georgian jurisdiction. The separatist authorities responded 
+with intense militarization in the region, that led to armed clashes in August 2004. A stalemate ensued, 
+and despite a new peace plan proposed by the Georgian government in 2005, the conflict remains unresolved. 
+Recently, in late July 2006, Saakashvili's government managed to deal successfully with another major 
+crisis, this time in Abkhazia's Kodori Gorge where Georgia's police forces disarmed a defiant militia 
+led by a local warlord Emzar Kvitsiani.[PARAGRAPH:1]Although the reforms initiated by President Saakashvili 
+are considered to have mixed success, still the rate of corruption in the country has drastically reduced. 
+According to the World Bank accounts, Georgia is named as the number one economic reformer in the world 
+and the country ranks as 18 in term of ease of doing business, when most of the country's neighbours' 
+are in the 100s of the World Bank's rank.</German>
+		<Italian>[H1]Mikheil Saakashvili[\H1][NEWLINE][BOLD]President of Georgia[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD]1967 - [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Saakashvili became President 
+of Georgia on 25 January 2004 after President Eduard Shevardnadze resigned in a November 2003 bloodless 
+"Rose Revolution" led by Saakashvili and his political allies, Nino Burjanadze and Zurab Zhvania. He 
+was re-elected in the early Georgian presidential election of 5 January 2008. He is widely regarded as 
+a pro-Western leader who has spearheaded a series of political and economical reforms, but has been criticized 
+for authoritarian tendencies and worsening human rights record in the country. Opposition parties have 
+also accused him of rigging elections and using riot police to crush opposition rallies.[PARAGRAPH:1]Saakashvili's 
+"storming of Georgia's parliament" in 2003 put U.S. diplomats off guard. He ousted a leader the U.S. 
+had long backed, Eduard Shevardnadze. Seeking support, Saakashvili went outside the U.S. State Department. 
+He hired Randy Scheunemann, now Sen. McCain's top foreign-policy adviser, as a lobbyist and used Daniel 
+Kunin of USAID and the NDI as a full-time adviser[PARAGRAPH:1]In the first months of his presidency, 
+Saakashvili faced a major political crisis in the southwestern Autonomous Republic of Adjara run by an 
+authoritarian regional leader, Aslan Abashidze, who largely ignored the central Georgian government and 
+was viewed by many as a pro-Russian politician. The crisis threatened to develop into an armed confrontation, 
+but Saakashvili's government managed to resolve the conflict peacefully, forcing Abashidze to resign 
+on 6 May 2004. Success in Adjara encouraged the new president to intensify his efforts towards bringing 
+the breakaway South Ossetia back under the Georgian jurisdiction. The separatist authorities responded 
+with intense militarization in the region, that led to armed clashes in August 2004. A stalemate ensued, 
+and despite a new peace plan proposed by the Georgian government in 2005, the conflict remains unresolved. 
+Recently, in late July 2006, Saakashvili's government managed to deal successfully with another major 
+crisis, this time in Abkhazia's Kodori Gorge where Georgia's police forces disarmed a defiant militia 
+led by a local warlord Emzar Kvitsiani.[PARAGRAPH:1]Although the reforms initiated by President Saakashvili 
+are considered to have mixed success, still the rate of corruption in the country has drastically reduced. 
+According to the World Bank accounts, Georgia is named as the number one economic reformer in the world 
+and the country ranks as 18 in term of ease of doing business, when most of the country's neighbours' 
+are in the 100s of the World Bank's rank.</Italian>
+		<Spanish>[H1]Mikheil Saakashvili[\H1][NEWLINE][BOLD]President of Georgia[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD]1967 - [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Saakashvili became President 
+of Georgia on 25 January 2004 after President Eduard Shevardnadze resigned in a November 2003 bloodless 
+"Rose Revolution" led by Saakashvili and his political allies, Nino Burjanadze and Zurab Zhvania. He 
+was re-elected in the early Georgian presidential election of 5 January 2008. He is widely regarded as 
+a pro-Western leader who has spearheaded a series of political and economical reforms, but has been criticized 
+for authoritarian tendencies and worsening human rights record in the country. Opposition parties have 
+also accused him of rigging elections and using riot police to crush opposition rallies.[PARAGRAPH:1]Saakashvili's 
+"storming of Georgia's parliament" in 2003 put U.S. diplomats off guard. He ousted a leader the U.S. 
+had long backed, Eduard Shevardnadze. Seeking support, Saakashvili went outside the U.S. State Department. 
+He hired Randy Scheunemann, now Sen. McCain's top foreign-policy adviser, as a lobbyist and used Daniel 
+Kunin of USAID and the NDI as a full-time adviser[PARAGRAPH:1]In the first months of his presidency, 
+Saakashvili faced a major political crisis in the southwestern Autonomous Republic of Adjara run by an 
+authoritarian regional leader, Aslan Abashidze, who largely ignored the central Georgian government and 
+was viewed by many as a pro-Russian politician. The crisis threatened to develop into an armed confrontation, 
+but Saakashvili's government managed to resolve the conflict peacefully, forcing Abashidze to resign 
+on 6 May 2004. Success in Adjara encouraged the new president to intensify his efforts towards bringing 
+the breakaway South Ossetia back under the Georgian jurisdiction. The separatist authorities responded 
+with intense militarization in the region, that led to armed clashes in August 2004. A stalemate ensued, 
+and despite a new peace plan proposed by the Georgian government in 2005, the conflict remains unresolved. 
+Recently, in late July 2006, Saakashvili's government managed to deal successfully with another major 
+crisis, this time in Abkhazia's Kodori Gorge where Georgia's police forces disarmed a defiant militia 
+led by a local warlord Emzar Kvitsiani.[PARAGRAPH:1]Although the reforms initiated by President Saakashvili 
+are considered to have mixed success, still the rate of corruption in the country has drastically reduced. 
+According to the World Bank accounts, Georgia is named as the number one economic reformer in the world 
+and the country ranks as 18 in term of ease of doing business, when most of the country's neighbours' 
+are in the 100s of the World Bank's rank.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_MIKHEIL_1</Tag>
+		<English>We will work together, [CT_NAME], but I remain forever faithful to the people of [OUR_EMPIRE].</English>
+		<French>We will work together, [CT_NAME], but I remain forever faithful to the people of [OUR_EMPIRE].</French>
+		<German>We will work together, [CT_NAME], but I remain forever faithful to the people of [OUR_EMPIRE].</German>
+		<Italian>We will work together, [CT_NAME], but I remain forever faithful to the people of [OUR_EMPIRE].</Italian>
+		<Spanish>We will work together, [CT_NAME], but I remain forever faithful to the people of [OUR_EMPIRE].</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GEORGIA_DESC</Tag>
+		<English>Georgia</English>
+		<French>Georgia</French>
+		<German>Georgia</German>
+		<Italian>Georgia</Italian>
+		<Spanish>Georgia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GEORGIA_SHORT_DESC</Tag>
+		<English>Georgia</English>
+		<French>Georgia</French>
+		<German>Georgia</German>
+		<Italian>Georgia</Italian>
+		<Spanish>Georgia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GEORGIA_PEDIA</Tag>
+		<English>[TAB]Evidence for the earliest occupation of the territory of present day Georgia goes back 
+to ca. 1.8 million years ago, as evident from the excavations of Dmanisi in the south-eastern part of 
+the country. Later prehistoric remains (Acheulian, Mousterian and the Upper Palaeolithic) are known from 
+numerous cave and open-air sites in Georgia. The earliest agricultural Neolithic occupation is dated 
+sometime between 6000 and 5000 B.C. known as the Shulaveri-Shomu culture, where people used local obsidian 
+for tools, raised animals such as cattle and pigs, and grow crops, including grapes.[PARAGRAPH:2]The 
+history of Georgia can be traced back to the ancient kingdoms of Colchis and Iberia, and it was one of 
+the first countries to adopt Christianity as an official religion, early in the 4th century.[PARAGRAPH:2]Between 
+2100 and 750 B.C., the area survived the invasions by the Hittites, Urartians, Medes, Proto-Persians 
+and Cimmerians.The first two Georgian states emerged in the west known as the Kingdom of Colchis and 
+in the east as the Kingdom of Iberia.[PARAGRAPH:2]A second Georgian tribal union emerged in the 13th 
+century BC on the Black Sea coast under the Kingdom of Colchis in western Georgia.The ancient Greeks 
+knew of Colchis, and it featured in the Greek legend of Jason and the Argonauts, who travelled there 
+in search of the Golden Fleece. In the eastern part of Georgia there was a struggle for the leadership 
+among the various Georgian confederations during the 6th – 4th centuries BC which was finally won by 
+the Kartlian tribes from the region of Mtskheta. According to the Georgian tradition, the Kingdom of 
+Kartli (known as Iberia in the Greek-Roman literature) was founded around 300 BC by Parnavaz I, the first 
+ruler of the Parnavazid dynasty.[PARAGRAPH:2] At the beginning of the 19th century Georgia became a part 
+of the Russian Empire. After a brief period of independence following the Russian Revolution of 1917, 
+Georgia was forcibly incorporated into the Soviet Union in 1922.[PARAGRAPH:2]Independence was restored 
+in 1991. Like many post-communist countries Georgia suffered from the economic crisis and civil unrest 
+during the 1990s. After the bloodless Rose Revolution, however, the new leadership has established efficient 
+government institutions, reformed the economy and guided the country through a period of the fastest 
+economic growth in its history.[PARAGRAPH:2]Georgia is a representative democracy, organized as a secular, 
+unitary semi-presidential republic; however the idea to restore the constitutional monarchy is popular 
+in certain circles, most notably in the Georgian Orthodox Church It is currently a member of the United 
+Nations, the Council of Europe, the World Trade Organization, the Organization of the Black Sea Economic 
+Cooperation, and GUAM Organization for Democracy and Economic Development. The country seeks to join 
+NATO and, in the longer term, accession to the European Union.[PARAGRAPH:2]In August 2008, Georgia engaged 
+in an armed conflict with Russia and separatist groups from South Ossetia and Abkhazia. In the aftermath 
+of the conflict Russia recognized the Georgian regions of South Ossetia and Abkhazia as independent states, 
+but at present only Nicaragua, the Hamas government in the Gaza Strip, and the de facto independent republic 
+of Transnistria have followed suit. On August 28, 2008, the Parliament of Georgia passed a resolution 
+declaring Abkhazia and South Ossetia "Russian-occupied territories".</English>
+		<French>[TAB]Evidence for the earliest occupation of the territory of present day Georgia goes back 
+to ca. 1.8 million years ago, as evident from the excavations of Dmanisi in the south-eastern part of 
+the country. Later prehistoric remains (Acheulian, Mousterian and the Upper Palaeolithic) are known from 
+numerous cave and open-air sites in Georgia. The earliest agricultural Neolithic occupation is dated 
+sometime between 6000 and 5000 B.C. known as the Shulaveri-Shomu culture, where people used local obsidian 
+for tools, raised animals such as cattle and pigs, and grow crops, including grapes.[PARAGRAPH:2]The 
+history of Georgia can be traced back to the ancient kingdoms of Colchis and Iberia, and it was one of 
+the first countries to adopt Christianity as an official religion, early in the 4th century.[PARAGRAPH:2]Between 
+2100 and 750 B.C., the area survived the invasions by the Hittites, Urartians, Medes, Proto-Persians 
+and Cimmerians.The first two Georgian states emerged in the west known as the Kingdom of Colchis and 
+in the east as the Kingdom of Iberia.[PARAGRAPH:2]A second Georgian tribal union emerged in the 13th 
+century BC on the Black Sea coast under the Kingdom of Colchis in western Georgia.The ancient Greeks 
+knew of Colchis, and it featured in the Greek legend of Jason and the Argonauts, who travelled there 
+in search of the Golden Fleece. In the eastern part of Georgia there was a struggle for the leadership 
+among the various Georgian confederations during the 6th – 4th centuries BC which was finally won by 
+the Kartlian tribes from the region of Mtskheta. According to the Georgian tradition, the Kingdom of 
+Kartli (known as Iberia in the Greek-Roman literature) was founded around 300 BC by Parnavaz I, the first 
+ruler of the Parnavazid dynasty.[PARAGRAPH:2] At the beginning of the 19th century Georgia became a part 
+of the Russian Empire. After a brief period of independence following the Russian Revolution of 1917, 
+Georgia was forcibly incorporated into the Soviet Union in 1922.[PARAGRAPH:2]Independence was restored 
+in 1991. Like many post-communist countries Georgia suffered from the economic crisis and civil unrest 
+during the 1990s. After the bloodless Rose Revolution, however, the new leadership has established efficient 
+government institutions, reformed the economy and guided the country through a period of the fastest 
+economic growth in its history.[PARAGRAPH:2]Georgia is a representative democracy, organized as a secular, 
+unitary semi-presidential republic; however the idea to restore the constitutional monarchy is popular 
+in certain circles, most notably in the Georgian Orthodox Church It is currently a member of the United 
+Nations, the Council of Europe, the World Trade Organization, the Organization of the Black Sea Economic 
+Cooperation, and GUAM Organization for Democracy and Economic Development. The country seeks to join 
+NATO and, in the longer term, accession to the European Union.[PARAGRAPH:2]In August 2008, Georgia engaged 
+in an armed conflict with Russia and separatist groups from South Ossetia and Abkhazia. In the aftermath 
+of the conflict Russia recognized the Georgian regions of South Ossetia and Abkhazia as independent states, 
+but at present only Nicaragua, the Hamas government in the Gaza Strip, and the de facto independent republic 
+of Transnistria have followed suit. On August 28, 2008, the Parliament of Georgia passed a resolution 
+declaring Abkhazia and South Ossetia "Russian-occupied territories".</French>
+		<German>[TAB]Evidence for the earliest occupation of the territory of present day Georgia goes back 
+to ca. 1.8 million years ago, as evident from the excavations of Dmanisi in the south-eastern part of 
+the country. Later prehistoric remains (Acheulian, Mousterian and the Upper Palaeolithic) are known from 
+numerous cave and open-air sites in Georgia. The earliest agricultural Neolithic occupation is dated 
+sometime between 6000 and 5000 B.C. known as the Shulaveri-Shomu culture, where people used local obsidian 
+for tools, raised animals such as cattle and pigs, and grow crops, including grapes.[PARAGRAPH:2]The 
+history of Georgia can be traced back to the ancient kingdoms of Colchis and Iberia, and it was one of 
+the first countries to adopt Christianity as an official religion, early in the 4th century.[PARAGRAPH:2]Between 
+2100 and 750 B.C., the area survived the invasions by the Hittites, Urartians, Medes, Proto-Persians 
+and Cimmerians.The first two Georgian states emerged in the west known as the Kingdom of Colchis and 
+in the east as the Kingdom of Iberia.[PARAGRAPH:2]A second Georgian tribal union emerged in the 13th 
+century BC on the Black Sea coast under the Kingdom of Colchis in western Georgia.The ancient Greeks 
+knew of Colchis, and it featured in the Greek legend of Jason and the Argonauts, who travelled there 
+in search of the Golden Fleece. In the eastern part of Georgia there was a struggle for the leadership 
+among the various Georgian confederations during the 6th – 4th centuries BC which was finally won by 
+the Kartlian tribes from the region of Mtskheta. According to the Georgian tradition, the Kingdom of 
+Kartli (known as Iberia in the Greek-Roman literature) was founded around 300 BC by Parnavaz I, the first 
+ruler of the Parnavazid dynasty.[PARAGRAPH:2] At the beginning of the 19th century Georgia became a part 
+of the Russian Empire. After a brief period of independence following the Russian Revolution of 1917, 
+Georgia was forcibly incorporated into the Soviet Union in 1922.[PARAGRAPH:2]Independence was restored 
+in 1991. Like many post-communist countries Georgia suffered from the economic crisis and civil unrest 
+during the 1990s. After the bloodless Rose Revolution, however, the new leadership has established efficient 
+government institutions, reformed the economy and guided the country through a period of the fastest 
+economic growth in its history.[PARAGRAPH:2]Georgia is a representative democracy, organized as a secular, 
+unitary semi-presidential republic; however the idea to restore the constitutional monarchy is popular 
+in certain circles, most notably in the Georgian Orthodox Church It is currently a member of the United 
+Nations, the Council of Europe, the World Trade Organization, the Organization of the Black Sea Economic 
+Cooperation, and GUAM Organization for Democracy and Economic Development. The country seeks to join 
+NATO and, in the longer term, accession to the European Union.[PARAGRAPH:2]In August 2008, Georgia engaged 
+in an armed conflict with Russia and separatist groups from South Ossetia and Abkhazia. In the aftermath 
+of the conflict Russia recognized the Georgian regions of South Ossetia and Abkhazia as independent states, 
+but at present only Nicaragua, the Hamas government in the Gaza Strip, and the de facto independent republic 
+of Transnistria have followed suit. On August 28, 2008, the Parliament of Georgia passed a resolution 
+declaring Abkhazia and South Ossetia "Russian-occupied territories".</German>
+		<Italian>[TAB]Evidence for the earliest occupation of the territory of present day Georgia goes back 
+to ca. 1.8 million years ago, as evident from the excavations of Dmanisi in the south-eastern part of 
+the country. Later prehistoric remains (Acheulian, Mousterian and the Upper Palaeolithic) are known from 
+numerous cave and open-air sites in Georgia. The earliest agricultural Neolithic occupation is dated 
+sometime between 6000 and 5000 B.C. known as the Shulaveri-Shomu culture, where people used local obsidian 
+for tools, raised animals such as cattle and pigs, and grow crops, including grapes.[PARAGRAPH:2]The 
+history of Georgia can be traced back to the ancient kingdoms of Colchis and Iberia, and it was one of 
+the first countries to adopt Christianity as an official religion, early in the 4th century.[PARAGRAPH:2]Between 
+2100 and 750 B.C., the area survived the invasions by the Hittites, Urartians, Medes, Proto-Persians 
+and Cimmerians.The first two Georgian states emerged in the west known as the Kingdom of Colchis and 
+in the east as the Kingdom of Iberia.[PARAGRAPH:2]A second Georgian tribal union emerged in the 13th 
+century BC on the Black Sea coast under the Kingdom of Colchis in western Georgia.The ancient Greeks 
+knew of Colchis, and it featured in the Greek legend of Jason and the Argonauts, who travelled there 
+in search of the Golden Fleece. In the eastern part of Georgia there was a struggle for the leadership 
+among the various Georgian confederations during the 6th – 4th centuries BC which was finally won by 
+the Kartlian tribes from the region of Mtskheta. According to the Georgian tradition, the Kingdom of 
+Kartli (known as Iberia in the Greek-Roman literature) was founded around 300 BC by Parnavaz I, the first 
+ruler of the Parnavazid dynasty.[PARAGRAPH:2] At the beginning of the 19th century Georgia became a part 
+of the Russian Empire. After a brief period of independence following the Russian Revolution of 1917, 
+Georgia was forcibly incorporated into the Soviet Union in 1922.[PARAGRAPH:2]Independence was restored 
+in 1991. Like many post-communist countries Georgia suffered from the economic crisis and civil unrest 
+during the 1990s. After the bloodless Rose Revolution, however, the new leadership has established efficient 
+government institutions, reformed the economy and guided the country through a period of the fastest 
+economic growth in its history.[PARAGRAPH:2]Georgia is a representative democracy, organized as a secular, 
+unitary semi-presidential republic; however the idea to restore the constitutional monarchy is popular 
+in certain circles, most notably in the Georgian Orthodox Church It is currently a member of the United 
+Nations, the Council of Europe, the World Trade Organization, the Organization of the Black Sea Economic 
+Cooperation, and GUAM Organization for Democracy and Economic Development. The country seeks to join 
+NATO and, in the longer term, accession to the European Union.[PARAGRAPH:2]In August 2008, Georgia engaged 
+in an armed conflict with Russia and separatist groups from South Ossetia and Abkhazia. In the aftermath 
+of the conflict Russia recognized the Georgian regions of South Ossetia and Abkhazia as independent states, 
+but at present only Nicaragua, the Hamas government in the Gaza Strip, and the de facto independent republic 
+of Transnistria have followed suit. On August 28, 2008, the Parliament of Georgia passed a resolution 
+declaring Abkhazia and South Ossetia "Russian-occupied territories".</Italian>
+		<Spanish>[TAB]Evidence for the earliest occupation of the territory of present day Georgia goes back 
+to ca. 1.8 million years ago, as evident from the excavations of Dmanisi in the south-eastern part of 
+the country. Later prehistoric remains (Acheulian, Mousterian and the Upper Palaeolithic) are known from 
+numerous cave and open-air sites in Georgia. The earliest agricultural Neolithic occupation is dated 
+sometime between 6000 and 5000 B.C. known as the Shulaveri-Shomu culture, where people used local obsidian 
+for tools, raised animals such as cattle and pigs, and grow crops, including grapes.[PARAGRAPH:2]The 
+history of Georgia can be traced back to the ancient kingdoms of Colchis and Iberia, and it was one of 
+the first countries to adopt Christianity as an official religion, early in the 4th century.[PARAGRAPH:2]Between 
+2100 and 750 B.C., the area survived the invasions by the Hittites, Urartians, Medes, Proto-Persians 
+and Cimmerians.The first two Georgian states emerged in the west known as the Kingdom of Colchis and 
+in the east as the Kingdom of Iberia.[PARAGRAPH:2]A second Georgian tribal union emerged in the 13th 
+century BC on the Black Sea coast under the Kingdom of Colchis in western Georgia.The ancient Greeks 
+knew of Colchis, and it featured in the Greek legend of Jason and the Argonauts, who travelled there 
+in search of the Golden Fleece. In the eastern part of Georgia there was a struggle for the leadership 
+among the various Georgian confederations during the 6th – 4th centuries BC which was finally won by 
+the Kartlian tribes from the region of Mtskheta. According to the Georgian tradition, the Kingdom of 
+Kartli (known as Iberia in the Greek-Roman literature) was founded around 300 BC by Parnavaz I, the first 
+ruler of the Parnavazid dynasty.[PARAGRAPH:2] At the beginning of the 19th century Georgia became a part 
+of the Russian Empire. After a brief period of independence following the Russian Revolution of 1917, 
+Georgia was forcibly incorporated into the Soviet Union in 1922.[PARAGRAPH:2]Independence was restored 
+in 1991. Like many post-communist countries Georgia suffered from the economic crisis and civil unrest 
+during the 1990s. After the bloodless Rose Revolution, however, the new leadership has established efficient 
+government institutions, reformed the economy and guided the country through a period of the fastest 
+economic growth in its history.[PARAGRAPH:2]Georgia is a representative democracy, organized as a secular, 
+unitary semi-presidential republic; however the idea to restore the constitutional monarchy is popular 
+in certain circles, most notably in the Georgian Orthodox Church It is currently a member of the United 
+Nations, the Council of Europe, the World Trade Organization, the Organization of the Black Sea Economic 
+Cooperation, and GUAM Organization for Democracy and Economic Development. The country seeks to join 
+NATO and, in the longer term, accession to the European Union.[PARAGRAPH:2]In August 2008, Georgia engaged 
+in an armed conflict with Russia and separatist groups from South Ossetia and Abkhazia. In the aftermath 
+of the conflict Russia recognized the Georgian regions of South Ossetia and Abkhazia as independent states, 
+but at present only Nicaragua, the Hamas government in the Gaza Strip, and the de facto independent republic 
+of Transnistria have followed suit. On August 28, 2008, the Parliament of Georgia passed a resolution 
+declaring Abkhazia and South Ossetia "Russian-occupied territories".</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GEORGIA_ADJECTIVE</Tag>
+		<English>Georgian</English>
+		<French>Georgian</French>
+		<German>Georgian</German>
+		<Italian>Georgian</Italian>
+		<Spanish>Georgian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TBILISI</Tag>
+		<English>Tbilisi</English>
+		<French>
+			<Text>Tbilisi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tbilisi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tbilisi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tbilisi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KUTAISI</Tag>
+		<English>Kutaisi</English>
+		<French>
+			<Text>Kutaisi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kutaisi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kutaisi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kutaisi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BATUMI</Tag>
+		<English>Batumi</English>
+		<French>
+			<Text>Batumi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Batumi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Batumi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Batumi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CHIATURA</Tag>
+		<English>Chiatura</English>
+		<French>
+			<Text>Chiatura</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Chiatura</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Chiatura</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Chiatura</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GAGRA</Tag>
+		<English>Gagra</English>
+		<French>
+			<Text>Gagra</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Gagra</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Gagra</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Gagra</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GORI</Tag>
+		<English>Gori</English>
+		<French>
+			<Text>Gori</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Gori</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Gori</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Gori</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_POTI</Tag>
+		<English>Poti</English>
+		<French>
+			<Text>Poti</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Poti</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Poti</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Poti</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_RUSTAVI</Tag>
+		<English>Rustavi</English>
+		<French>
+			<Text>Rustavi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Rustavi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Rustavi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Rustavi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SUKHUMI</Tag>
+		<English>Sukhumi</English>
+		<French>
+			<Text>Sukhumi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sukhumi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sukhumi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sukhumi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TKIBULI</Tag>
+		<English>Tkibuli</English>
+		<French>
+			<Text>Tkibuli</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tkibuli</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tkibuli</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tkibuli</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TSKALTUBO</Tag>
+		<English>Tskaltubo</English>
+		<French>
+			<Text>Tskaltubo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tskaltubo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tskaltubo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tskaltubo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TSKHINVALI</Tag>
+		<English>Tskhinvali</English>
+		<French>
+			<Text>Tskhinvali</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tskhinvali</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tskhinvali</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tskhinvali</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ZUGDIDI</Tag>
+		<English>Zugdidi</English>
+		<French>
+			<Text>Zugdidi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Zugdidi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Zugdidi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Zugdidi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_AKHALTSIKHI</Tag>
+		<English>Akhaltsikhi</English>
+		<French>
+			<Text>Akhaltsikhi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Akhaltsikhi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Akhaltsikhi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Akhaltsikhi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_OZURGETI</Tag>
+		<English>Ozurgeti</English>
+		<French>
+			<Text>Ozurgeti</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ozurgeti</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ozurgeti</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ozurgeti</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+</Civ4GameText>

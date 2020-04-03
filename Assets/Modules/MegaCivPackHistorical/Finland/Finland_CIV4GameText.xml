@@ -1,0 +1,963 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- ReModified by the StrategyOnly -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_FINLAND_DESC</Tag>
+		<English>Finland</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_FINLAND_SHORT_DESC</Tag>
+		<English>Finland</English>
+		<French>Finland</French>
+		<German>Finland</German>
+		<Italian>Finland</Italian>
+		<Spanish>Finland</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_FINLAND_PEDIA</Tag>
+		<English>[TAB]According to archaeological evidence, the area now comprising Finland was first settled 
+around 8500 BC during the Stone Age as the ice shield of the last ice age receded. The earliest people 
+were probably hunter-gatherers, living primarily off what the tundra and sea could offer. Pottery is 
+known from around 5300 BC (see Comb Ceramic Culture). The existence of an extensive exchange system during 
+the mesolithic is indicated by the spread of asbestos and soapstone from eastern Finland, and by finds 
+of flint from southern Scandinavia and Russia and slate from Lake Onega and northern Scandinavia. It 
+has been postulated and held probable that the speakers of the Finno-Ugric language arrived in the area 
+during the Stone Age, and were possibly even among the first Mesolithic settlers [1]. The arrival of 
+the Battle-Axe Culture (or Cord-Ceramic Culture) in southern coastal Finland around 3200 BC may have 
+coincided with the start of agriculture. However, the earliest certain records of agriculture are from 
+the late 3rd millennium BC Hunting and fishing continued to be important parts of the subsistence economy, 
+especially in the northern and eastern parts of the country.[PARAGRAPH:2]The beginning of Finland's nearly 
+700-year association with the Kingdom of Sweden is traditionally connected with the year 1154 and the 
+hypothesized introduction of Christianity by Sweden's King Erik. However, archaeological evidence points 
+to prior Christian influences in south-western and south-eastern Finland and include both western and 
+eastern Christian artefacts. Historically (more documented), the union began upon Birger Jarl's expedition 
+to Finland in 1249. Swedish became the dominant language of administration and education; Finnish chiefly 
+a language for the peasantry, clergy and local courts in predominantly Finnish-speaking areas.[PARAGRAPH:2]On 
+March 29, 1809, after being conquered by the armies of Russian Emperor Alexander I, Finland became an 
+autonomous Grand Duchy under the Russian Empire until the end of 1917. During this time, Finnish started 
+gaining recognition by both the imperial court and the governing bodies, first probably to sever the 
+cultural and emotional ties with Sweden and thereafter, from the 1860s onwards, as a result of a strong 
+nationalist movement, known as the Fennoman movement. Milestones included the publication of what would 
+become Finland's national epic, the Kalevala, in 1835; and the Finnish language achieving equal legal 
+status with Swedish in 1892.[PARAGRAPH:2]During World War II, Finland fought the Soviet Union twice: 
+in the Winter War of 1939-1940 and in the Continuation War of 1941-1944 in accordance with Operation 
+Barbarossa in which Germany invaded the Soviet Union. This was followed by the Lapland War of 1944-1945, 
+when Finland forced the Germans out of northern Finland.[PARAGRAPH:2]Treaties signed in 1947 and 1948 
+with the Soviet Union included obligations, restraints, and reparations on Finland vis-à-vis the Soviet 
+Union as well as further Finnish territorial concessions (cf. the Moscow Peace Treaty of 1940). Finland 
+ceded most of Finnish Karelia, Salla, and Petsamo, which amounted to 10% of land area, 20% of industrial 
+capacity and 400,000 evacuees. The reparations to the Soviet Union forced Finland to transform itself 
+from a primarily agrarian economy to an industrialised one. Nevertheless, most trade was with other Western 
+countries. Even after reparations were fulfilled, Finland continued to trade with the Soviet Union in 
+the framework of bilateral trade. (Russia has assumed a large part of the Soviet national debt which 
+is slowly being remunerated in raw materials and electricity).[PARAGRAPH:2]The post-war era was a period 
+of rapid economic growth and increasing wealth and stability for Finland. In all, the war-ravaged agrarian 
+country was transformed into a technologically advanced market economy with a sophisticated social welfare 
+system. When the Soviet Union fell in 1991, the bilateral trade disappeared overnight, and Finland was 
+simultaneously hit by a "home-cooked" severe recession. This left a mass unemployment problem, but the 
+economy survived and began growing at a high rate after the recession. Finland joined the European Union 
+in 1995, where she is an advocate of federalism contrary to the other Nordic countries that are predominantly 
+supportive of confederalism.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_FINLAND_ADJECTIVE</Tag>
+		<English>Finnish</English>
+		<French>Finnish</French>
+		<German>Finnish</German>
+		<Italian>Finnish</Italian>
+		<Spanish>Finnish</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_KEKKONEN</Tag>
+		<English>Kekkonen</English>
+		<French>Kekkonen</French>
+		<German>Kekkonen</German>
+		<Italian>Kekkonen</Italian>
+		<Spanish>Kekkonen</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_KEKKONEN_PEDIA</Tag>
+		<English>[H1]Urho Kekkonen[\H1][NEWLINE][BOLD]President of Finland[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 
+1900 - 1986[NEWLINE][NEWLINE][TAB]Urho Kaleva Kekkonen was a Finnish politician who served as Prime Minister 
+of Finland and later as President of Finland. Kekkonen continued the "active neutrality" policy of President 
+Juho Kusti Paasikivi, which came to be known as the Paasikivi-Kekkonen Line. This policy allowed Finland 
+to live with both the nations of the North Atlantic Treaty Organisation and the Warsaw Pact. Kekkonen 
+was the longest-serving president of Finland.[PARAGRAPH:1]Throughout his time as president, Kekkonen 
+did his best to keep political rivals in check. The Centre Party's rival, National Coalition Party was 
+kept in opposition despite good performance in elections. On a few occasions, the parliament was dissolved 
+as the political composition did not please Kekkonen. Too prominent Centre Party members often found 
+themselves sidelined, as Kekkonen negotiated directly with the lower lever. The "Mill Letters" of Kekkonen 
+were a continuous stream of directives to high officials, politicians, journalists etc.[PARAGRAPH:1]In 
+the 1960s Kekkonen was responsible for a number of foreign-policy initiatives, involving for example 
+the Nordic nuclear-free zone, the border agreement with Norway and a Conference on Security and Cooperation 
+in Europe in 1969. The purpose of these initiatives was to avoid the enforcement of the military articles 
+in the FCMA treaty - in other words, military co-operation between Finland and the Soviet Union - and 
+thus to strengthen Finland's attempt to practice a policy of neutrality. Following the invasion of Czechoslovakia 
+in 1968 pressure for neutrality increased. Kekkonen informed the Soviets in 1970 that he would not continue 
+as president, nor would the FCMA treaty be extended, if the Soviet Union was no longer prepared to recognise 
+Finland's neutrality.[PARAGRAPH:1]Kekkonen was re-elected normally in 1968. In 1973, he was re-elected 
+by emergency law which saw his presidency extended by four years. The elimination of any significant 
+opposition and competition meant de facto political autocracy for Kekkonen. The year 1975 can be regarded 
+as marking the zenith of his power, when he dissolved parliament and hosted the Conference on Security 
+and Cooperation in Europe (CSCE) in Helsinki with the assistance of a caretaker government. In the 1978 
+Presidential election, with Kekkonen's candidacy being supported by the Social Democratic, Centre and 
+National Coalition parties, there were no serious rivals left. Kekkonen won 259 out of the 300 electoral 
+college votes, with his nearest rival, Raino Westerholm of the Christian Union. receiving 24.[PARAGRAPH:1]In 
+1979 Urho Kekkonen was awarded Lenin Peace Prize. In 1981, Kekkonen begun to suffer from an undisclosed 
+disease that seemed to affect his brain functions. In the same year, Prime Minister Mauno Koivisto had 
+already defied Kekkonen and he still refused to resign. In September, Kekkonen left for sick leave, and 
+in October he resigned. There is no public report about his illness.[PARAGRAPH:1]Kekkonen died at Tamminiemi 
+in 1986 and was buried with full honors.</English>
+		<French>[H1]Urho Kekkonen[\H1][NEWLINE][BOLD]President of Finland[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 
+1900 - 1986[NEWLINE][NEWLINE][TAB]Urho Kaleva Kekkonen was a Finnish politician who served as Prime Minister 
+of Finland and later as President of Finland. Kekkonen continued the "active neutrality" policy of President 
+Juho Kusti Paasikivi, which came to be known as the Paasikivi-Kekkonen Line. This policy allowed Finland 
+to live with both the nations of the North Atlantic Treaty Organisation and the Warsaw Pact. Kekkonen 
+was the longest-serving president of Finland.[PARAGRAPH:1]Throughout his time as president, Kekkonen 
+did his best to keep political rivals in check. The Centre Party's rival, National Coalition Party was 
+kept in opposition despite good performance in elections. On a few occasions, the parliament was dissolved 
+as the political composition did not please Kekkonen. Too prominent Centre Party members often found 
+themselves sidelined, as Kekkonen negotiated directly with the lower lever. The "Mill Letters" of Kekkonen 
+were a continuous stream of directives to high officials, politicians, journalists etc.[PARAGRAPH:1]In 
+the 1960s Kekkonen was responsible for a number of foreign-policy initiatives, involving for example 
+the Nordic nuclear-free zone, the border agreement with Norway and a Conference on Security and Cooperation 
+in Europe in 1969. The purpose of these initiatives was to avoid the enforcement of the military articles 
+in the FCMA treaty - in other words, military co-operation between Finland and the Soviet Union - and 
+thus to strengthen Finland's attempt to practice a policy of neutrality. Following the invasion of Czechoslovakia 
+in 1968 pressure for neutrality increased. Kekkonen informed the Soviets in 1970 that he would not continue 
+as president, nor would the FCMA treaty be extended, if the Soviet Union was no longer prepared to recognise 
+Finland's neutrality.[PARAGRAPH:1]Kekkonen was re-elected normally in 1968. In 1973, he was re-elected 
+by emergency law which saw his presidency extended by four years. The elimination of any significant 
+opposition and competition meant de facto political autocracy for Kekkonen. The year 1975 can be regarded 
+as marking the zenith of his power, when he dissolved parliament and hosted the Conference on Security 
+and Cooperation in Europe (CSCE) in Helsinki with the assistance of a caretaker government. In the 1978 
+Presidential election, with Kekkonen's candidacy being supported by the Social Democratic, Centre and 
+National Coalition parties, there were no serious rivals left. Kekkonen won 259 out of the 300 electoral 
+college votes, with his nearest rival, Raino Westerholm of the Christian Union. receiving 24.[PARAGRAPH:1]In 
+1979 Urho Kekkonen was awarded Lenin Peace Prize. In 1981, Kekkonen begun to suffer from an undisclosed 
+disease that seemed to affect his brain functions. In the same year, Prime Minister Mauno Koivisto had 
+already defied Kekkonen and he still refused to resign. In September, Kekkonen left for sick leave, and 
+in October he resigned. There is no public report about his illness.[PARAGRAPH:1]Kekkonen died at Tamminiemi 
+in 1986 and was buried with full honors.</French>
+		<German>[H1]Urho Kekkonen[\H1][NEWLINE][BOLD]President of Finland[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 
+1900 - 1986[NEWLINE][NEWLINE][TAB]Urho Kaleva Kekkonen was a Finnish politician who served as Prime Minister 
+of Finland and later as President of Finland. Kekkonen continued the "active neutrality" policy of President 
+Juho Kusti Paasikivi, which came to be known as the Paasikivi-Kekkonen Line. This policy allowed Finland 
+to live with both the nations of the North Atlantic Treaty Organisation and the Warsaw Pact. Kekkonen 
+was the longest-serving president of Finland.[PARAGRAPH:1]Throughout his time as president, Kekkonen 
+did his best to keep political rivals in check. The Centre Party's rival, National Coalition Party was 
+kept in opposition despite good performance in elections. On a few occasions, the parliament was dissolved 
+as the political composition did not please Kekkonen. Too prominent Centre Party members often found 
+themselves sidelined, as Kekkonen negotiated directly with the lower lever. The "Mill Letters" of Kekkonen 
+were a continuous stream of directives to high officials, politicians, journalists etc.[PARAGRAPH:1]In 
+the 1960s Kekkonen was responsible for a number of foreign-policy initiatives, involving for example 
+the Nordic nuclear-free zone, the border agreement with Norway and a Conference on Security and Cooperation 
+in Europe in 1969. The purpose of these initiatives was to avoid the enforcement of the military articles 
+in the FCMA treaty - in other words, military co-operation between Finland and the Soviet Union - and 
+thus to strengthen Finland's attempt to practice a policy of neutrality. Following the invasion of Czechoslovakia 
+in 1968 pressure for neutrality increased. Kekkonen informed the Soviets in 1970 that he would not continue 
+as president, nor would the FCMA treaty be extended, if the Soviet Union was no longer prepared to recognise 
+Finland's neutrality.[PARAGRAPH:1]Kekkonen was re-elected normally in 1968. In 1973, he was re-elected 
+by emergency law which saw his presidency extended by four years. The elimination of any significant 
+opposition and competition meant de facto political autocracy for Kekkonen. The year 1975 can be regarded 
+as marking the zenith of his power, when he dissolved parliament and hosted the Conference on Security 
+and Cooperation in Europe (CSCE) in Helsinki with the assistance of a caretaker government. In the 1978 
+Presidential election, with Kekkonen's candidacy being supported by the Social Democratic, Centre and 
+National Coalition parties, there were no serious rivals left. Kekkonen won 259 out of the 300 electoral 
+college votes, with his nearest rival, Raino Westerholm of the Christian Union. receiving 24.[PARAGRAPH:1]In 
+1979 Urho Kekkonen was awarded Lenin Peace Prize. In 1981, Kekkonen begun to suffer from an undisclosed 
+disease that seemed to affect his brain functions. In the same year, Prime Minister Mauno Koivisto had 
+already defied Kekkonen and he still refused to resign. In September, Kekkonen left for sick leave, and 
+in October he resigned. There is no public report about his illness.[PARAGRAPH:1]Kekkonen died at Tamminiemi 
+in 1986 and was buried with full honors.</German>
+		<Italian>[H1]Urho Kekkonen[\H1][NEWLINE][BOLD]President of Finland[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 
+1900 - 1986[NEWLINE][NEWLINE][TAB]Urho Kaleva Kekkonen was a Finnish politician who served as Prime Minister 
+of Finland and later as President of Finland. Kekkonen continued the "active neutrality" policy of President 
+Juho Kusti Paasikivi, which came to be known as the Paasikivi-Kekkonen Line. This policy allowed Finland 
+to live with both the nations of the North Atlantic Treaty Organisation and the Warsaw Pact. Kekkonen 
+was the longest-serving president of Finland.[PARAGRAPH:1]Throughout his time as president, Kekkonen 
+did his best to keep political rivals in check. The Centre Party's rival, National Coalition Party was 
+kept in opposition despite good performance in elections. On a few occasions, the parliament was dissolved 
+as the political composition did not please Kekkonen. Too prominent Centre Party members often found 
+themselves sidelined, as Kekkonen negotiated directly with the lower lever. The "Mill Letters" of Kekkonen 
+were a continuous stream of directives to high officials, politicians, journalists etc.[PARAGRAPH:1]In 
+the 1960s Kekkonen was responsible for a number of foreign-policy initiatives, involving for example 
+the Nordic nuclear-free zone, the border agreement with Norway and a Conference on Security and Cooperation 
+in Europe in 1969. The purpose of these initiatives was to avoid the enforcement of the military articles 
+in the FCMA treaty - in other words, military co-operation between Finland and the Soviet Union - and 
+thus to strengthen Finland's attempt to practice a policy of neutrality. Following the invasion of Czechoslovakia 
+in 1968 pressure for neutrality increased. Kekkonen informed the Soviets in 1970 that he would not continue 
+as president, nor would the FCMA treaty be extended, if the Soviet Union was no longer prepared to recognise 
+Finland's neutrality.[PARAGRAPH:1]Kekkonen was re-elected normally in 1968. In 1973, he was re-elected 
+by emergency law which saw his presidency extended by four years. The elimination of any significant 
+opposition and competition meant de facto political autocracy for Kekkonen. The year 1975 can be regarded 
+as marking the zenith of his power, when he dissolved parliament and hosted the Conference on Security 
+and Cooperation in Europe (CSCE) in Helsinki with the assistance of a caretaker government. In the 1978 
+Presidential election, with Kekkonen's candidacy being supported by the Social Democratic, Centre and 
+National Coalition parties, there were no serious rivals left. Kekkonen won 259 out of the 300 electoral 
+college votes, with his nearest rival, Raino Westerholm of the Christian Union. receiving 24.[PARAGRAPH:1]In 
+1979 Urho Kekkonen was awarded Lenin Peace Prize. In 1981, Kekkonen begun to suffer from an undisclosed 
+disease that seemed to affect his brain functions. In the same year, Prime Minister Mauno Koivisto had 
+already defied Kekkonen and he still refused to resign. In September, Kekkonen left for sick leave, and 
+in October he resigned. There is no public report about his illness.[PARAGRAPH:1]Kekkonen died at Tamminiemi 
+in 1986 and was buried with full honors.</Italian>
+		<Spanish>[H1]Urho Kekkonen[\H1][NEWLINE][BOLD]President of Finland[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 
+1900 - 1986[NEWLINE][NEWLINE][TAB]Urho Kaleva Kekkonen was a Finnish politician who served as Prime Minister 
+of Finland and later as President of Finland. Kekkonen continued the "active neutrality" policy of President 
+Juho Kusti Paasikivi, which came to be known as the Paasikivi-Kekkonen Line. This policy allowed Finland 
+to live with both the nations of the North Atlantic Treaty Organisation and the Warsaw Pact. Kekkonen 
+was the longest-serving president of Finland.[PARAGRAPH:1]Throughout his time as president, Kekkonen 
+did his best to keep political rivals in check. The Centre Party's rival, National Coalition Party was 
+kept in opposition despite good performance in elections. On a few occasions, the parliament was dissolved 
+as the political composition did not please Kekkonen. Too prominent Centre Party members often found 
+themselves sidelined, as Kekkonen negotiated directly with the lower lever. The "Mill Letters" of Kekkonen 
+were a continuous stream of directives to high officials, politicians, journalists etc.[PARAGRAPH:1]In 
+the 1960s Kekkonen was responsible for a number of foreign-policy initiatives, involving for example 
+the Nordic nuclear-free zone, the border agreement with Norway and a Conference on Security and Cooperation 
+in Europe in 1969. The purpose of these initiatives was to avoid the enforcement of the military articles 
+in the FCMA treaty - in other words, military co-operation between Finland and the Soviet Union - and 
+thus to strengthen Finland's attempt to practice a policy of neutrality. Following the invasion of Czechoslovakia 
+in 1968 pressure for neutrality increased. Kekkonen informed the Soviets in 1970 that he would not continue 
+as president, nor would the FCMA treaty be extended, if the Soviet Union was no longer prepared to recognise 
+Finland's neutrality.[PARAGRAPH:1]Kekkonen was re-elected normally in 1968. In 1973, he was re-elected 
+by emergency law which saw his presidency extended by four years. The elimination of any significant 
+opposition and competition meant de facto political autocracy for Kekkonen. The year 1975 can be regarded 
+as marking the zenith of his power, when he dissolved parliament and hosted the Conference on Security 
+and Cooperation in Europe (CSCE) in Helsinki with the assistance of a caretaker government. In the 1978 
+Presidential election, with Kekkonen's candidacy being supported by the Social Democratic, Centre and 
+National Coalition parties, there were no serious rivals left. Kekkonen won 259 out of the 300 electoral 
+college votes, with his nearest rival, Raino Westerholm of the Christian Union. receiving 24.[PARAGRAPH:1]In 
+1979 Urho Kekkonen was awarded Lenin Peace Prize. In 1981, Kekkonen begun to suffer from an undisclosed 
+disease that seemed to affect his brain functions. In the same year, Prime Minister Mauno Koivisto had 
+already defied Kekkonen and he still refused to resign. In September, Kekkonen left for sick leave, and 
+in October he resigned. There is no public report about his illness.[PARAGRAPH:1]Kekkonen died at Tamminiemi 
+in 1986 and was buried with full honors.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_KEKKONEN_1</Tag>
+		<English>Welcome, [CT_NAME] of the [CT_EMPIRE]. An argument rips, but peace builds. Let us build it together.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_HELSINKI</Tag>
+		<English>Helsinki</English>
+		<French>
+			<Text>Helsinki</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Helsinki</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Helsinki</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Helsinki</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ESPOO</Tag>
+		<English>Espoo</English>
+		<French>
+			<Text>Espoo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Espoo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Espoo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Espoo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VANTAA</Tag>
+		<English>Vantaa</English>
+		<French>
+			<Text>Vantaa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Vantaa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Vantaa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Vantaa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TAMPERE</Tag>
+		<English>Tampere</English>
+		<French>
+			<Text>Tampere</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tampere</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tampere</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tampere</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TURKU</Tag>
+		<English>Turku</English>
+		<French>
+			<Text>Turku</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Turku</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Turku</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Turku</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_OULU</Tag>
+		<English>Oulu</English>
+		<French>
+			<Text>Oulu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Oulu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Oulu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Oulu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LAHTI</Tag>
+		<English>Lahti</English>
+		<French>
+			<Text>Lahti</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Lahti</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Lahti</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Lahti</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KUOPIO</Tag>
+		<English>Kuopio</English>
+		<French>
+			<Text>Kuopio</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kuopio</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kuopio</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kuopio</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_JYVASKYLA</Tag>
+		<English>Jyvaskyla</English>
+		<French>
+			<Text>Jyvaskyla</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Jyvaskyla</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Jyvaskyla</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Jyvaskyla</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PORI</Tag>
+		<English>Pori</English>
+		<French>
+			<Text>Pori</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Pori</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Pori</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Pori</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LAPPEENRANTA</Tag>
+		<English>Lappeenranta</English>
+		<French>
+			<Text>Lappeenranta</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Lappeenranta</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Lappeenranta</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Lappeenranta</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_JOENSUU</Tag>
+		<English>Joensuu</English>
+		<French>
+			<Text>Joensuu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Joensuu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Joensuu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Joensuu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VAASA</Tag>
+		<English>Vaasa</English>
+		<French>
+			<Text>Vaasa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Vaasa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Vaasa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Vaasa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KOTKA</Tag>
+		<English>Kotka</English>
+		<French>
+			<Text>Kotka</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kotka</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kotka</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kotka</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_HAMEENLINNA</Tag>
+		<English>Hameenlinna</English>
+		<French>
+			<Text>Hameenlinna</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Hameenlinna</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Hameenlinna</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Hameenlinna</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PORVOO</Tag>
+		<English>Porvoo</English>
+		<French>
+			<Text>Porvoo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Porvoo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Porvoo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Porvoo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MIKKELI</Tag>
+		<English>Mikkeli</English>
+		<French>
+			<Text>Mikkeli</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mikkeli</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Mikkeli</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mikkeli</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_HYVINKAA</Tag>
+		<English>Hyvinkaa</English>
+		<French>
+			<Text>Hyvinkaa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Hyvinkaa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Hyvinkaa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Hyvinkaa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_JARVENPAA</Tag>
+		<English>Jarvenpaa</English>
+		<French>
+			<Text>Jarvenpaa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Jarvenpaa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Jarvenpaa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Jarvenpaa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_RAUMA</Tag>
+		<English>Rauma</English>
+		<French>
+			<Text>Rauma</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Rauma</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Rauma</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Rauma</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MURMIJARVI</Tag>
+		<English>Nurmijarvi</English>
+		<French>
+			<Text>Nurmijarvi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Nurmijarvi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Nurmijarvi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Nurmijarvi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LOHJA</Tag>
+		<English>Lohja</English>
+		<French>
+			<Text>Lohja</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Lohja</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Lohja</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Lohja</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KOKKOLA</Tag>
+		<English>Kokkola</English>
+		<French>
+			<Text>Kokkola</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kokkola</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kokkola</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kokkola</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KAJAANI</Tag>
+		<English>Kajaani</English>
+		<French>
+			<Text>Kajaani</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kajaani</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kajaani</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kajaani</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SEINAJOKI</Tag>
+		<English>Seinajoki</English>
+		<French>
+			<Text>Seinajoki</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Seinajoki</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Seinajoki</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Seinajoki</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ROVANIEMI</Tag>
+		<English>Rovaniemi</English>
+		<French>
+			<Text>Rovaniemi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Rovaniemi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Rovaniemi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Rovaniemi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TUUSULA</Tag>
+		<English>Tuusula</English>
+		<French>
+			<Text>Tuusula</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tuusula</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tuusula</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tuusula</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KIRKKONUMMI</Tag>
+		<English>Kirkkonummi</English>
+		<French>
+			<Text>Kirkkonummi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kirkkonummi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kirkkonummi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kirkkonummi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_UUSIKAUPUNKI</Tag>
+		<English>Uusikaupunki</English>
+		<French>
+			<Text>Uusikaupunki</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Uusikaupunki</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Uusikaupunki</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Uusikaupunki</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KOUVOLA</Tag>
+		<English>Kouvola</English>
+		<French>
+			<Text>Kouvola</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kouvola</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kouvola</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kouvola</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+</Civ4GameText>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- re-Modified by Strategyonly -->
+<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HURON_DESC</Tag>
+		<English>Huron Empire</English>
+		<French>Huron Empire</French>
+		<German>Huron Empire</German>
+		<Italian>Huron Empire</Italian>
+		<Spanish>Huron Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HURON_SHORT_DESC</Tag>
+		<English>Huron</English>
+		<French>Huron</French>
+		<German>Huron</German>
+		<Italian>Huron</Italian>
+		<Spanish>Huron</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HURON_ADJECTIVE</Tag>
+		<English>Huron</English>
+		<French>Huron</French>
+		<German>Huron</German>
+		<Italian>Huron</Italian>
+		<Spanish>Huron</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HURON_PEDIA</Tag>
+		<English>[TAB]The Wyandot people or wendat, also called Huron, are indigenous peoples of North America. They traditionally spoke the Wyandot language, an Iroquoian language. By the 15th century, the pre-contact Wyandots settled in the area of the north shore of present-day Lake Ontario, before migrating to Georgian Bay. It was in that later location that they first encountered the French explorer Samuel de Champlain in 1615. The modern Wyandot emerged in the late 17th century from the remnants of two earlier groups, the Wendat or Huron Confederacy and the Tionontate, called the Petun (tobacco people) by the French because of their cultivation of the crop. They were located in the southern part of what is now the Canadian province of Ontario around Georgian Bay. Drastically reduced in number by epidemic diseases after 1634, they were dispersed by war in 1649 from the Iroquois, the Haudenosaunee, then based in New York.</English>
+		<French>[TAB]The Wyandot people or wendat, also called Huron, are indigenous peoples of North America. They traditionally spoke the Wyandot language, an Iroquoian language. By the 15th century, the pre-contact Wyandots settled in the area of the north shore of present-day Lake Ontario, before migrating to Georgian Bay. It was in that later location that they first encountered the French explorer Samuel de Champlain in 1615. The modern Wyandot emerged in the late 17th century from the remnants of two earlier groups, the Wendat or Huron Confederacy and the Tionontate, called the Petun (tobacco people) by the French because of their cultivation of the crop. They were located in the southern part of what is now the Canadian province of Ontario around Georgian Bay. Drastically reduced in number by epidemic diseases after 1634, they were dispersed by war in 1649 from the Iroquois, the Haudenosaunee, then based in New York.</French>
+		<German>[TAB]The Wyandot people or wendat, also called Huron, are indigenous peoples of North America. They traditionally spoke the Wyandot language, an Iroquoian language. By the 15th century, the pre-contact Wyandots settled in the area of the north shore of present-day Lake Ontario, before migrating to Georgian Bay. It was in that later location that they first encountered the French explorer Samuel de Champlain in 1615. The modern Wyandot emerged in the late 17th century from the remnants of two earlier groups, the Wendat or Huron Confederacy and the Tionontate, called the Petun (tobacco people) by the French because of their cultivation of the crop. They were located in the southern part of what is now the Canadian province of Ontario around Georgian Bay. Drastically reduced in number by epidemic diseases after 1634, they were dispersed by war in 1649 from the Iroquois, the Haudenosaunee, then based in New York.</German>
+		<Italian>[TAB]The Wyandot people or wendat, also called Huron, are indigenous peoples of North America. They traditionally spoke the Wyandot language, an Iroquoian language. By the 15th century, the pre-contact Wyandots settled in the area of the north shore of present-day Lake Ontario, before migrating to Georgian Bay. It was in that later location that they first encountered the French explorer Samuel de Champlain in 1615. The modern Wyandot emerged in the late 17th century from the remnants of two earlier groups, the Wendat or Huron Confederacy and the Tionontate, called the Petun (tobacco people) by the French because of their cultivation of the crop. They were located in the southern part of what is now the Canadian province of Ontario around Georgian Bay. Drastically reduced in number by epidemic diseases after 1634, they were dispersed by war in 1649 from the Iroquois, the Haudenosaunee, then based in New York.</Italian>
+		<Spanish>[TAB]The Wyandot people or wendat, also called Huron, are indigenous peoples of North America. They traditionally spoke the Wyandot language, an Iroquoian language. By the 15th century, the pre-contact Wyandots settled in the area of the north shore of present-day Lake Ontario, before migrating to Georgian Bay. It was in that later location that they first encountered the French explorer Samuel de Champlain in 1615. The modern Wyandot emerged in the late 17th century from the remnants of two earlier groups, the Wendat or Huron Confederacy and the Tionontate, called the Petun (tobacco people) by the French because of their cultivation of the crop. They were located in the southern part of what is now the Canadian province of Ontario around Georgian Bay. Drastically reduced in number by epidemic diseases after 1634, they were dispersed by war in 1649 from the Iroquois, the Haudenosaunee, then based in New York.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_TANACHARISON</Tag>
+		<English>Tanacharison</English>
+		<French>Tanacharison</French>
+		<German>Tanacharison</German>
+		<Italian>Tanacharison</Italian>
+		<Spanish>Tanacharison</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_TANACHARISON_PEDIA</Tag>
+		<English>[H1]Tanacharison [\H1][NEWLINE][BOLD]Huron Chief[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c. 1700 - 4 October 1754[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Tanacharison or Tanaghrisson was an American Indian leader who played a pivotal role in the beginning of the French and Indian War. He was known to European-Americans as the Half King, a title also used to describe several other historically important American Indian leaders. His name has been spelled in a variety of ways.</English>
+		<French>[H1]Tanacharison [\H1][NEWLINE][BOLD]Huron Chief[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c. 1700 - 4 October 1754[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Tanacharison or Tanaghrisson was an American Indian leader who played a pivotal role in the beginning of the French and Indian War. He was known to European-Americans as the Half King, a title also used to describe several other historically important American Indian leaders. His name has been spelled in a variety of ways.</French>
+		<German>[H1]Tanacharison [\H1][NEWLINE][BOLD]Huron Chief[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c. 1700 - 4 October 1754[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Tanacharison or Tanaghrisson was an American Indian leader who played a pivotal role in the beginning of the French and Indian War. He was known to European-Americans as the Half King, a title also used to describe several other historically important American Indian leaders. His name has been spelled in a variety of ways.</German>
+		<Italian>[H1]Tanacharison [\H1][NEWLINE][BOLD]Huron Chief[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c. 1700 - 4 October 1754[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Tanacharison or Tanaghrisson was an American Indian leader who played a pivotal role in the beginning of the French and Indian War. He was known to European-Americans as the Half King, a title also used to describe several other historically important American Indian leaders. His name has been spelled in a variety of ways.</Italian>
+		<Spanish>[H1]Tanacharison [\H1][NEWLINE][BOLD]Huron Chief[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c. 1700 - 4 October 1754[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Tanacharison or Tanaghrisson was an American Indian leader who played a pivotal role in the beginning of the French and Indian War. He was known to European-Americans as the Half King, a title also used to describe several other historically important American Indian leaders. His name has been spelled in a variety of ways.</Spanish>
+	</TEXT>
+</Civ4GameText>

@@ -1,0 +1,104 @@
+﻿<?xml version="1.0"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- re-Modified by Strategyonly -->
+<!-- -->
+<Civ4CivilizationInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4CivilizationsSchema.xml">
+	<CivilizationInfos>
+		<CivilizationInfo>
+			<Type>CIVILIZATION_URUGUAY</Type>
+			<Description>TXT_KEY_CIV_URUGUAY_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_URUGUAY_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_URUGUAY_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_URUGUAY_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_URUGUAY</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_URUGUAY</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_IBERIA</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_SOUTH_AMERICA</UnitArtStyleType>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>Montevideo</City>
+				<City>Salto</City>
+				<City>Ciudad de la Costa</City>
+				<City>Paysandú</City>
+				<City>Las Piedras</City>
+				<City>Rivera</City>
+				<City>Maldonado</City>
+				<City>Tacuarembó</City>
+				<City>Melo</City>
+				<City>Mercedes</City>
+				<City>Artigas</City>
+				<City>Minas</City>
+				<City>San Jose de Mayo</City>
+				<City>Durazno</City>
+				<City>Florida</City>
+				<City>Barros Blancos</City>
+				<City>Ciudad del Plata</City>
+				<City>San Carlos</City>
+				<City>Colonia del Sacramento</City>
+				<City>Pando</City>
+				<City>Treinta y Tres</City>
+				<City>Rocha</City>
+				<City>Fray Bentos</City>
+				<City>Trinidad</City>
+				<City>La Paz</City>
+				<City>Canelones</City>
+				<City>Carmelo</City>
+				<City>Dolores</City>
+				<City>Young</City>
+				<City>Santa Lucía</City>
+				<City>Progreso</City>
+				<City>Rio Branco</City>
+				<City>Paso de los Toros</City>
+				<City>Juan Lacaze</City>
+				<City>Bella Union</City>
+				<City>Nueva Helvecia</City>
+				<City>Libertad</City>
+				<City>Rosario</City>
+				<City>Nueva Palmira</City>
+				<City>Chuy</City>
+				<City>Punta del Este</City>
+				<City>Piriapolis</City>
+				<City>Salinas</City>
+				<City>Parque del Plata</City>
+				<City>Lascano</City>
+			</Cities>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
+			<InitialCivics>
+				<CivicType>CIVIC_ANARCHISM</CivicType>
+				<CivicType>CIVIC_OBEDIENCE</CivicType>
+				<CivicType>CIVIC_STRONGMAN</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
+				<CivicType>CIVIC_MILITIA</CivicType>
+				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SURVIVAL</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
+				<CivicType>CIVIC_UNORGANIZED</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_MUJICA</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<DerivativeCiv>NONE</DerivativeCiv>
+			<CivilizationSelectionSound>AS3D_SPAIN_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_SPAIN_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+	</CivilizationInfos>
+</Civ4CivilizationInfos>

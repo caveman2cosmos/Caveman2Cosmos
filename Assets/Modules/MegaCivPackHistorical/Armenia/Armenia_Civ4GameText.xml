@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- ReModified by the StrategyOnly -->
+<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ARMENIA_DESC</Tag>
+		<English>Armenian Empire</English>
+		<French>Armenian Empire</French>
+		<German>Armenian Empire</German>
+		<Italian>Imperio Armeni</Italian>
+		<Spanish>Armenian Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ARMENIA_SHORT_DESC</Tag>
+		<English>Armenia</English>
+		<French>Armenia</French>
+		<German>Armenia</German>
+		<Italian>Armenia</Italian>
+		<Spanish>Armenia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ARMENIA_ADJECTIVE</Tag>
+		<English>Armenian</English>
+		<French>Armenian</French>
+		<German>Armenian</German>
+		<Italian>Armenian</Italian>
+		<Spanish>Armenian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ARMENIA_PEDIA</Tag>
+		<English>[TAB]Armenia, officially the Republic of Armenia, is a landlocked mountainous country in Eurasia between the Black Sea and the Caspian Sea, located in the Southern Caucasus. It shares borders with Turkey to the west, Georgia to the north, Azerbaijan to the east, and Iran and the Nakhichevan exclave of Azerbaijan to the south. A former republic of the Soviet Union, Armenia is a unitary, multiparty, democratic nation-state and one of the oldest and most historic civilizations in the world with a rich cultural heritage, as well as the first nation to adopt Christianity as its official religion. Although Armenia is constitutionally a secular state, the Christian faith plays a major role in both its history and the identification of the Armenian people.[PARAGRAPH:2]Culturally, historically, and politically, Armenia is considered to be part of Europe. However, its location in the southern Caucasus means that it can also be considered to be at the arbitrary border between Europe and Asia: in other words, a transcontinental nation.[PARAGRAPH:2]The original Armenian name for the country was Hayq. The name later evolved into Hayastan a combination of Hayasa or Hayk with the Persian suffix '-stan' (land) in the Middle Ages. Hayk was one of the great Armenian leaders after whom the The Land of Hayk was named. According to legend, Hayk was a great-great-grandson of Noah (son of Togarmah, who was a son of Gomer, who was a son of Japheth, who was a son of Noah), and according to an ancient Armenian tradition, a forefather of all Armenians. He is said to have settled at the foot of Mount Ararat, traveled to assist in building the Tower of Babel, and, after his return, defeated the Babylonian king Bel (believed by some researchers to be Nimrod) in 2492 BC near the mountains of Lake Van, in the southwestern part of historic Armenia (present-day eastern Turkey). Pre-Christian accounts suggest that Nairi, meaning "land of rivers", used to be an ancient name for the country's mountainous region, first used by Assyrians around 1200 BC. Greek Armenoi is attested in Herodotus, who reports that the Armenians were colonists of the Phrygians. The traditional etymology for the ethnology is from Armenak or Aram, the great-grandson of Haik's great-grandson, and another leader who is, according to Armenian tradition, the ancestor of all Armenians.[PARAGRAPH:2]Armenia has been populated since prehistoric times, and has been proposed as the site of the Biblical Garden of Eden. Armenia lies in the highlands surrounding the Biblical mountains of Ararat, upon which, as tradition states, Noah's Ark came to rest after the flood. (Gen. 8:4). Archaeologists continue to uncover evidence that Armenia and the Armenian Highlands were among the earliest sites of human civilization. From 6000 BC to 1000 BC, tools and trinkets of copper, bronze and iron were commonly produced in Armenia and traded in neighbouring lands where those metals were less abundant. The territory of Armenia is also one of the candidates for the legendary Aratta, mentioned in Sumerian records. In the Bronze Age, several states flourished in the area of Greater Armenia, including the Hittite Empire (at the height of its power), Mitanni (South-Western historic Armenia) and Hayasa-Azzi (15th - 12th cc BC). In the Iron Age, the Indo-European Phrygians and Mushkis arrive in the Near East, and topple the Mitanni Kingdom. Then, the Nairi people (12th - 9th cc BC) and the Kingdom of Urartu (9th - 6th cc BC) successively establish their sovereignty over the Armenian Highland. Each of the aforementioned nations and tribes participated in the ethnogenesis of the Armenian people. Yerevan, the modern capital of Armenia, was founded in 782 BC by the Urartian king Argishti I.</English>
+		<French>[TAB]Armenia, officially the Republic of Armenia, is a landlocked mountainous country in Eurasia between the Black Sea and the Caspian Sea, located in the Southern Caucasus. It shares borders with Turkey to the west, Georgia to the north, Azerbaijan to the east, and Iran and the Nakhichevan exclave of Azerbaijan to the south. A former republic of the Soviet Union, Armenia is a unitary, multiparty, democratic nation-state and one of the oldest and most historic civilizations in the world with a rich cultural heritage, as well as the first nation to adopt Christianity as its official religion. Although Armenia is constitutionally a secular state, the Christian faith plays a major role in both its history and the identification of the Armenian people.[PARAGRAPH:2]Culturally, historically, and politically, Armenia is considered to be part of Europe. However, its location in the southern Caucasus means that it can also be considered to be at the arbitrary border between Europe and Asia: in other words, a transcontinental nation.[PARAGRAPH:2]The original Armenian name for the country was Hayq. The name later evolved into Hayastan a combination of Hayasa or Hayk with the Persian suffix '-stan' (land) in the Middle Ages. Hayk was one of the great Armenian leaders after whom the The Land of Hayk was named. According to legend, Hayk was a great-great-grandson of Noah (son of Togarmah, who was a son of Gomer, who was a son of Japheth, who was a son of Noah), and according to an ancient Armenian tradition, a forefather of all Armenians. He is said to have settled at the foot of Mount Ararat, traveled to assist in building the Tower of Babel, and, after his return, defeated the Babylonian king Bel (believed by some researchers to be Nimrod) in 2492 BC near the mountains of Lake Van, in the southwestern part of historic Armenia (present-day eastern Turkey). Pre-Christian accounts suggest that Nairi, meaning "land of rivers", used to be an ancient name for the country's mountainous region, first used by Assyrians around 1200 BC. Greek Armenoi is attested in Herodotus, who reports that the Armenians were colonists of the Phrygians. The traditional etymology for the ethnology is from Armenak or Aram, the great-grandson of Haik's great-grandson, and another leader who is, according to Armenian tradition, the ancestor of all Armenians.[PARAGRAPH:2]Armenia has been populated since prehistoric times, and has been proposed as the site of the Biblical Garden of Eden. Armenia lies in the highlands surrounding the Biblical mountains of Ararat, upon which, as tradition states, Noah's Ark came to rest after the flood. (Gen. 8:4). Archaeologists continue to uncover evidence that Armenia and the Armenian Highlands were among the earliest sites of human civilization. From 6000 BC to 1000 BC, tools and trinkets of copper, bronze and iron were commonly produced in Armenia and traded in neighbouring lands where those metals were less abundant. The territory of Armenia is also one of the candidates for the legendary Aratta, mentioned in Sumerian records. In the Bronze Age, several states flourished in the area of Greater Armenia, including the Hittite Empire (at the height of its power), Mitanni (South-Western historic Armenia) and Hayasa-Azzi (15th - 12th cc BC). In the Iron Age, the Indo-European Phrygians and Mushkis arrive in the Near East, and topple the Mitanni Kingdom. Then, the Nairi people (12th - 9th cc BC) and the Kingdom of Urartu (9th - 6th cc BC) successively establish their sovereignty over the Armenian Highland. Each of the aforementioned nations and tribes participated in the ethnogenesis of the Armenian people. Yerevan, the modern capital of Armenia, was founded in 782 BC by the Urartian king Argishti I.</French>
+		<German>[TAB]Armenia, officially the Republic of Armenia, is a landlocked mountainous country in Eurasia between the Black Sea and the Caspian Sea, located in the Southern Caucasus. It shares borders with Turkey to the west, Georgia to the north, Azerbaijan to the east, and Iran and the Nakhichevan exclave of Azerbaijan to the south. A former republic of the Soviet Union, Armenia is a unitary, multiparty, democratic nation-state and one of the oldest and most historic civilizations in the world with a rich cultural heritage, as well as the first nation to adopt Christianity as its official religion. Although Armenia is constitutionally a secular state, the Christian faith plays a major role in both its history and the identification of the Armenian people.[PARAGRAPH:2]Culturally, historically, and politically, Armenia is considered to be part of Europe. However, its location in the southern Caucasus means that it can also be considered to be at the arbitrary border between Europe and Asia: in other words, a transcontinental nation.[PARAGRAPH:2]The original Armenian name for the country was Hayq. The name later evolved into Hayastan a combination of Hayasa or Hayk with the Persian suffix '-stan' (land) in the Middle Ages. Hayk was one of the great Armenian leaders after whom the The Land of Hayk was named. According to legend, Hayk was a great-great-grandson of Noah (son of Togarmah, who was a son of Gomer, who was a son of Japheth, who was a son of Noah), and according to an ancient Armenian tradition, a forefather of all Armenians. He is said to have settled at the foot of Mount Ararat, traveled to assist in building the Tower of Babel, and, after his return, defeated the Babylonian king Bel (believed by some researchers to be Nimrod) in 2492 BC near the mountains of Lake Van, in the southwestern part of historic Armenia (present-day eastern Turkey). Pre-Christian accounts suggest that Nairi, meaning "land of rivers", used to be an ancient name for the country's mountainous region, first used by Assyrians around 1200 BC. Greek Armenoi is attested in Herodotus, who reports that the Armenians were colonists of the Phrygians. The traditional etymology for the ethnology is from Armenak or Aram, the great-grandson of Haik's great-grandson, and another leader who is, according to Armenian tradition, the ancestor of all Armenians.[PARAGRAPH:2]Armenia has been populated since prehistoric times, and has been proposed as the site of the Biblical Garden of Eden. Armenia lies in the highlands surrounding the Biblical mountains of Ararat, upon which, as tradition states, Noah's Ark came to rest after the flood. (Gen. 8:4). Archaeologists continue to uncover evidence that Armenia and the Armenian Highlands were among the earliest sites of human civilization. From 6000 BC to 1000 BC, tools and trinkets of copper, bronze and iron were commonly produced in Armenia and traded in neighbouring lands where those metals were less abundant. The territory of Armenia is also one of the candidates for the legendary Aratta, mentioned in Sumerian records. In the Bronze Age, several states flourished in the area of Greater Armenia, including the Hittite Empire (at the height of its power), Mitanni (South-Western historic Armenia) and Hayasa-Azzi (15th - 12th cc BC). In the Iron Age, the Indo-European Phrygians and Mushkis arrive in the Near East, and topple the Mitanni Kingdom. Then, the Nairi people (12th - 9th cc BC) and the Kingdom of Urartu (9th - 6th cc BC) successively establish their sovereignty over the Armenian Highland. Each of the aforementioned nations and tribes participated in the ethnogenesis of the Armenian people. Yerevan, the modern capital of Armenia, was founded in 782 BC by the Urartian king Argishti I.</German>
+		<Italian>[TAB]Armenia, officially the Republic of Armenia, is a landlocked mountainous country in Eurasia between the Black Sea and the Caspian Sea, located in the Southern Caucasus. It shares borders with Turkey to the west, Georgia to the north, Azerbaijan to the east, and Iran and the Nakhichevan exclave of Azerbaijan to the south. A former republic of the Soviet Union, Armenia is a unitary, multiparty, democratic nation-state and one of the oldest and most historic civilizations in the world with a rich cultural heritage, as well as the first nation to adopt Christianity as its official religion. Although Armenia is constitutionally a secular state, the Christian faith plays a major role in both its history and the identification of the Armenian people.[PARAGRAPH:2]Culturally, historically, and politically, Armenia is considered to be part of Europe. However, its location in the southern Caucasus means that it can also be considered to be at the arbitrary border between Europe and Asia: in other words, a transcontinental nation.[PARAGRAPH:2]The original Armenian name for the country was Hayq. The name later evolved into Hayastan a combination of Hayasa or Hayk with the Persian suffix '-stan' (land) in the Middle Ages. Hayk was one of the great Armenian leaders after whom the The Land of Hayk was named. According to legend, Hayk was a great-great-grandson of Noah (son of Togarmah, who was a son of Gomer, who was a son of Japheth, who was a son of Noah), and according to an ancient Armenian tradition, a forefather of all Armenians. He is said to have settled at the foot of Mount Ararat, traveled to assist in building the Tower of Babel, and, after his return, defeated the Babylonian king Bel (believed by some researchers to be Nimrod) in 2492 BC near the mountains of Lake Van, in the southwestern part of historic Armenia (present-day eastern Turkey). Pre-Christian accounts suggest that Nairi, meaning "land of rivers", used to be an ancient name for the country's mountainous region, first used by Assyrians around 1200 BC. Greek Armenoi is attested in Herodotus, who reports that the Armenians were colonists of the Phrygians. The traditional etymology for the ethnology is from Armenak or Aram, the great-grandson of Haik's great-grandson, and another leader who is, according to Armenian tradition, the ancestor of all Armenians.[PARAGRAPH:2]Armenia has been populated since prehistoric times, and has been proposed as the site of the Biblical Garden of Eden. Armenia lies in the highlands surrounding the Biblical mountains of Ararat, upon which, as tradition states, Noah's Ark came to rest after the flood. (Gen. 8:4). Archaeologists continue to uncover evidence that Armenia and the Armenian Highlands were among the earliest sites of human civilization. From 6000 BC to 1000 BC, tools and trinkets of copper, bronze and iron were commonly produced in Armenia and traded in neighbouring lands where those metals were less abundant. The territory of Armenia is also one of the candidates for the legendary Aratta, mentioned in Sumerian records. In the Bronze Age, several states flourished in the area of Greater Armenia, including the Hittite Empire (at the height of its power), Mitanni (South-Western historic Armenia) and Hayasa-Azzi (15th - 12th cc BC). In the Iron Age, the Indo-European Phrygians and Mushkis arrive in the Near East, and topple the Mitanni Kingdom. Then, the Nairi people (12th - 9th cc BC) and the Kingdom of Urartu (9th - 6th cc BC) successively establish their sovereignty over the Armenian Highland. Each of the aforementioned nations and tribes participated in the ethnogenesis of the Armenian people. Yerevan, the modern capital of Armenia, was founded in 782 BC by the Urartian king Argishti I.</Italian>
+		<Spanish>[TAB]Armenia, officially the Republic of Armenia, is a landlocked mountainous country in Eurasia between the Black Sea and the Caspian Sea, located in the Southern Caucasus. It shares borders with Turkey to the west, Georgia to the north, Azerbaijan to the east, and Iran and the Nakhichevan exclave of Azerbaijan to the south. A former republic of the Soviet Union, Armenia is a unitary, multiparty, democratic nation-state and one of the oldest and most historic civilizations in the world with a rich cultural heritage, as well as the first nation to adopt Christianity as its official religion. Although Armenia is constitutionally a secular state, the Christian faith plays a major role in both its history and the identification of the Armenian people.[PARAGRAPH:2]Culturally, historically, and politically, Armenia is considered to be part of Europe. However, its location in the southern Caucasus means that it can also be considered to be at the arbitrary border between Europe and Asia: in other words, a transcontinental nation.[PARAGRAPH:2]The original Armenian name for the country was Hayq. The name later evolved into Hayastan a combination of Hayasa or Hayk with the Persian suffix '-stan' (land) in the Middle Ages. Hayk was one of the great Armenian leaders after whom the The Land of Hayk was named. According to legend, Hayk was a great-great-grandson of Noah (son of Togarmah, who was a son of Gomer, who was a son of Japheth, who was a son of Noah), and according to an ancient Armenian tradition, a forefather of all Armenians. He is said to have settled at the foot of Mount Ararat, traveled to assist in building the Tower of Babel, and, after his return, defeated the Babylonian king Bel (believed by some researchers to be Nimrod) in 2492 BC near the mountains of Lake Van, in the southwestern part of historic Armenia (present-day eastern Turkey). Pre-Christian accounts suggest that Nairi, meaning "land of rivers", used to be an ancient name for the country's mountainous region, first used by Assyrians around 1200 BC. Greek Armenoi is attested in Herodotus, who reports that the Armenians were colonists of the Phrygians. The traditional etymology for the ethnology is from Armenak or Aram, the great-grandson of Haik's great-grandson, and another leader who is, according to Armenian tradition, the ancestor of all Armenians.[PARAGRAPH:2]Armenia has been populated since prehistoric times, and has been proposed as the site of the Biblical Garden of Eden. Armenia lies in the highlands surrounding the Biblical mountains of Ararat, upon which, as tradition states, Noah's Ark came to rest after the flood. (Gen. 8:4). Archaeologists continue to uncover evidence that Armenia and the Armenian Highlands were among the earliest sites of human civilization. From 6000 BC to 1000 BC, tools and trinkets of copper, bronze and iron were commonly produced in Armenia and traded in neighbouring lands where those metals were less abundant. The territory of Armenia is also one of the candidates for the legendary Aratta, mentioned in Sumerian records. In the Bronze Age, several states flourished in the area of Greater Armenia, including the Hittite Empire (at the height of its power), Mitanni (South-Western historic Armenia) and Hayasa-Azzi (15th - 12th cc BC). In the Iron Age, the Indo-European Phrygians and Mushkis arrive in the Near East, and topple the Mitanni Kingdom. Then, the Nairi people (12th - 9th cc BC) and the Kingdom of Urartu (9th - 6th cc BC) successively establish their sovereignty over the Armenian Highland. Each of the aforementioned nations and tribes participated in the ethnogenesis of the Armenian people. Yerevan, the modern capital of Armenia, was founded in 782 BC by the Urartian king Argishti I.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_TIGRANES</Tag>
+		<English>Tigranes</English>
+		<French>Tigranes</French>
+		<German>Tigranes</German>
+		<Italian>Tigranes</Italian>
+		<Spanish>Tigranes</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_TIGRANES_PEDIA</Tag>
+		<English>[H1]Tigranes II[\H1][NEWLINE][BOLD]King of Armenia[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]c. 140 – 55 BC[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]Tigranes had been a hostage until the age of 40 at the court of King Mithradates II of Parthia who defeated the Armenians in 105 BCE. Other sources give the date as much earlier, at around 112-111 BCE.  After the death of King Tigranes I in 95 BCE, Tigranes bought his freedom, according to Strabo, by handing over "seventy valleys" in Atropatene to the Parthians.  When he came to power, the foundation upon which Tigranes was to build his Empire was already in place, thanks to the founder of the Artaxiad Dynasty, Artaxias I, and subsequent kings. The mountains of Armenia, however, formed natural borders between the different regions of the country and as a result, the feudalistic nakharars had significant influence over the regions or provinces in which they were based. This did not suit Tigranes, who wanted to create a centralist empire. He thus proceeded by consolidating his power within Armenia before embarking on his campaign.  He deposed Artanes, the last king of Armenian Sophene and a descendant of Zariadres.
+
+During the First Mithridatic War (90-85 BCE), Tigranes supported Mithridates VI of Pontus but was careful not to become directly involved in the war.  He rapidly built up his power, allying with Mithridates VI of Pontus and marrying his daughter Cleopatra. Tigranes had agreed that he was to extend his influence in the East, while Mithridates was to conquer Roman land in Anatolia and in Europe. By creating a stronger Hellenistic state, Mithridates was to contend with the well-established Roman foothold in Europe.  At that time, the Romans had accused Mithridates of massacring about 80,000 Romans in the Anatolian province of Asia. Ultimately, the two kings' attempts to control Cappadocia, as well as the alleged massacres, resulted in Roman intervention. The senate decided on Lucius Cornelius Sulla, who was then one of the current consuls, to be commander of the army against Mithridates.
+
+In 83 BCE, after a bloody strife for the throne of Syria, governed by the Seleucids, the Syrians decided to choose Tigranes as the protector of their kingdom and offered him the crown of Syria.  Magadates was appointed as his governor in Antioch. He then conquered Phoenicia and Cilicia, effectively putting an end to the last remnants of the Seleucid Empire, though a few holdout cities appear to have recognized the shadowy boy-king Seleucus VII Philometor as the legitimate king during his reign. The southern border of his domain reached as far as Ptolemais (modern Akko). Many of the inhabitants of conquered cities were sent to his new metropolis of Tigranakert (Latin name, Tigranocerta).   its height, his empire extended from the Pontic Alps (in modern north-eastern Turkey) to Mesopotamia, and from the Caspian Sea to the Mediterranean. Tigranes apparently invaded territories as far away as Ecbatana and took the title king of kings which, at the time, according to their coins, even the Parthian kings did not assume. He was called "Tigranes the Great" by many Western historians and writers, such as Plutarch. The "King of Kings" never appeared in public without having four kings attending him. Cicero, referring to his success in the east, said that he "made the Republic of Rome tremble before the prowess of his arms."  Armenian rulers prior to Tigranes did not issue coins, he being the first one to do so. He took up the Seleucid tradition and struck coins of great interest. These were minted at Antioch and Damascus, cities under his rule during his occupation of Syria from 83 to 69 BCE. They consist of tetradrachms and copper coins having on the obverse his portrait wearing a decorated Armenian tiara with ear-flaps. The reverse has a completely original design. There are the seated Tyche of Antioch and the river god Orontes at her feet. There are even specimens struck in gold.
+
+Mithridates had found refuge in Armenian land after confronting Rome, considering the fact that Tigranes was his ally and relative. The "King of Kings" eventually came into direct contact with Rome. The Roman commander, Lucullus, demanded the expulsion of Mithridates from Armenia - to comply with such a demand would be, in effect, to accept the status of vassal to Rome and this Tigranes refused.  Lucullus' reaction was an attack that was so precipitate that he took Tigranes by surprise. According to Roman historians, the messenger who first brought news of the unexpected Roman attack was executed.   Eventually Mithrobazanes, one of Tigranes generals, told Tigranes of the Roman approach. Tigranes was, according to Keaveney, so impressed by Mithrobazanes' courage that he appointed Mithrobazanes to command an army against Lucullus - Mithrobazanes was however defeated and killed.  After this defeat Tigranes withdrew north to Armenia to regroup which left Lucullus free to put Tigranocerta under siege.  When Tigranes had gathered a large army he returned to confront Lucullus. On October 6, 69 BCE, Tigranes' much larger force was decisively defeated by the Roman army under Lucullus in the Battle of Tigranocerta. Tigranes' treatment of the inhabitants (the majority of the population had been forced to move to the city) led disgruntled city guards to open the gates of the city to the Romans. Learning of this, Tigranes hurriedly sent 6000 cavalrymen to the city in order to rescue his wives and some of his assets. Tigranes escaped capture with a small escort.  On the 6 October 68 BCE, the Romans approached the old capital of Artaxata. Tigranes' and Mithridates' combined Armeno-Pontian army of 70,000 men formed up to face them but were resoundingly defeated. Once again, both Mithridates and Tigranes evaded capture by the victorious Romans.  The long campaigning and hardships that Lucullus' troops had endured for years, combined with a perceived lack of reward in the form of plunder, led to successive mutinies among the legions in 68-67. Frustrated by the rough terrain of Northern Armenia and seeing the worsening moral of his troops, Lucullus moved back south and put Nisibis under siege. Tigranes concluded (wrongly) that Nisibis would hold out and sought to regain those parts of Armenia that the Romans had captured.  Despite his continuous success in battle, Lucullus could still not capture either one of the monarchs. With Lucullus' troops now refusing to obey his commands, but agreeing to defend positions from attack, the senate sent Gnaeus Pompey to recall Lucullus to Rome and take over his command.  In 67 BCE Pompey was given the task of defeating Mithradates and Tigranes.  Pompey first concentrated on attacking Mithradates while distracting Tigranes by engineering a Parthian attack on Gordyeyne.  Phraates III, the Parthian king was soon persuaded to take things a little further than an anexation of Gordyeyne when a son of Tigranes (also named Tigranes) went to join the Parthians and persuaded Phraates to invade Armenia in an attempt to replace the elder Tigranes with the younger.  Tigranes decided not to meet the invasion in the field but instead ensured that his capital, Artaxata, was well defended and withdrew to the hill country. Phraates soon realized that Artaxata would not fall without a protracted siege, the time for which he could not spare due his fear of plots at home. Once Phraates left Tigranes came back down from the hills and drove his son from Armenia. The son then fled to Pompey.  In 66 BCE, Pompey advanced into Armenia with the younger Tigranes, and Tigranes the Great, now almost 75 years old, surrendered. Pompey treated him generously and allowed him to retain his kingdom shorn of his conquests in return for 6,000 talents of silver. His unfaithful son was sent back to Rome as a prisoner.  Tigranes continued to rule Armenia as an ally of Rome until his death in 55/54.</English>
+		<French>[H1]Tigranes II[\H1][NEWLINE][BOLD]King of Armenia[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]c. 140 – 55 BC[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]Tigranes had been a hostage until the age of 40 at the court of King Mithradates II of Parthia who defeated the Armenians in 105 BCE. Other sources give the date as much earlier, at around 112-111 BCE.  After the death of King Tigranes I in 95 BCE, Tigranes bought his freedom, according to Strabo, by handing over "seventy valleys" in Atropatene to the Parthians.  When he came to power, the foundation upon which Tigranes was to build his Empire was already in place, thanks to the founder of the Artaxiad Dynasty, Artaxias I, and subsequent kings. The mountains of Armenia, however, formed natural borders between the different regions of the country and as a result, the feudalistic nakharars had significant influence over the regions or provinces in which they were based. This did not suit Tigranes, who wanted to create a centralist empire. He thus proceeded by consolidating his power within Armenia before embarking on his campaign.  He deposed Artanes, the last king of Armenian Sophene and a descendant of Zariadres.
+
+During the First Mithridatic War (90-85 BCE), Tigranes supported Mithridates VI of Pontus but was careful not to become directly involved in the war.  He rapidly built up his power, allying with Mithridates VI of Pontus and marrying his daughter Cleopatra. Tigranes had agreed that he was to extend his influence in the East, while Mithridates was to conquer Roman land in Anatolia and in Europe. By creating a stronger Hellenistic state, Mithridates was to contend with the well-established Roman foothold in Europe.  At that time, the Romans had accused Mithridates of massacring about 80,000 Romans in the Anatolian province of Asia. Ultimately, the two kings' attempts to control Cappadocia, as well as the alleged massacres, resulted in Roman intervention. The senate decided on Lucius Cornelius Sulla, who was then one of the current consuls, to be commander of the army against Mithridates.
+
+In 83 BCE, after a bloody strife for the throne of Syria, governed by the Seleucids, the Syrians decided to choose Tigranes as the protector of their kingdom and offered him the crown of Syria.  Magadates was appointed as his governor in Antioch. He then conquered Phoenicia and Cilicia, effectively putting an end to the last remnants of the Seleucid Empire, though a few holdout cities appear to have recognized the shadowy boy-king Seleucus VII Philometor as the legitimate king during his reign. The southern border of his domain reached as far as Ptolemais (modern Akko). Many of the inhabitants of conquered cities were sent to his new metropolis of Tigranakert (Latin name, Tigranocerta).   its height, his empire extended from the Pontic Alps (in modern north-eastern Turkey) to Mesopotamia, and from the Caspian Sea to the Mediterranean. Tigranes apparently invaded territories as far away as Ecbatana and took the title king of kings which, at the time, according to their coins, even the Parthian kings did not assume. He was called "Tigranes the Great" by many Western historians and writers, such as Plutarch. The "King of Kings" never appeared in public without having four kings attending him. Cicero, referring to his success in the east, said that he "made the Republic of Rome tremble before the prowess of his arms."  Armenian rulers prior to Tigranes did not issue coins, he being the first one to do so. He took up the Seleucid tradition and struck coins of great interest. These were minted at Antioch and Damascus, cities under his rule during his occupation of Syria from 83 to 69 BCE. They consist of tetradrachms and copper coins having on the obverse his portrait wearing a decorated Armenian tiara with ear-flaps. The reverse has a completely original design. There are the seated Tyche of Antioch and the river god Orontes at her feet. There are even specimens struck in gold.
+
+Mithridates had found refuge in Armenian land after confronting Rome, considering the fact that Tigranes was his ally and relative. The "King of Kings" eventually came into direct contact with Rome. The Roman commander, Lucullus, demanded the expulsion of Mithridates from Armenia - to comply with such a demand would be, in effect, to accept the status of vassal to Rome and this Tigranes refused.  Lucullus' reaction was an attack that was so precipitate that he took Tigranes by surprise. According to Roman historians, the messenger who first brought news of the unexpected Roman attack was executed.   Eventually Mithrobazanes, one of Tigranes generals, told Tigranes of the Roman approach. Tigranes was, according to Keaveney, so impressed by Mithrobazanes' courage that he appointed Mithrobazanes to command an army against Lucullus - Mithrobazanes was however defeated and killed.  After this defeat Tigranes withdrew north to Armenia to regroup which left Lucullus free to put Tigranocerta under siege.  When Tigranes had gathered a large army he returned to confront Lucullus. On October 6, 69 BCE, Tigranes' much larger force was decisively defeated by the Roman army under Lucullus in the Battle of Tigranocerta. Tigranes' treatment of the inhabitants (the majority of the population had been forced to move to the city) led disgruntled city guards to open the gates of the city to the Romans. Learning of this, Tigranes hurriedly sent 6000 cavalrymen to the city in order to rescue his wives and some of his assets. Tigranes escaped capture with a small escort.  On the 6 October 68 BCE, the Romans approached the old capital of Artaxata. Tigranes' and Mithridates' combined Armeno-Pontian army of 70,000 men formed up to face them but were resoundingly defeated. Once again, both Mithridates and Tigranes evaded capture by the victorious Romans.  The long campaigning and hardships that Lucullus' troops had endured for years, combined with a perceived lack of reward in the form of plunder, led to successive mutinies among the legions in 68-67. Frustrated by the rough terrain of Northern Armenia and seeing the worsening moral of his troops, Lucullus moved back south and put Nisibis under siege. Tigranes concluded (wrongly) that Nisibis would hold out and sought to regain those parts of Armenia that the Romans had captured.  Despite his continuous success in battle, Lucullus could still not capture either one of the monarchs. With Lucullus' troops now refusing to obey his commands, but agreeing to defend positions from attack, the senate sent Gnaeus Pompey to recall Lucullus to Rome and take over his command.  In 67 BCE Pompey was given the task of defeating Mithradates and Tigranes.  Pompey first concentrated on attacking Mithradates while distracting Tigranes by engineering a Parthian attack on Gordyeyne.  Phraates III, the Parthian king was soon persuaded to take things a little further than an anexation of Gordyeyne when a son of Tigranes (also named Tigranes) went to join the Parthians and persuaded Phraates to invade Armenia in an attempt to replace the elder Tigranes with the younger.  Tigranes decided not to meet the invasion in the field but instead ensured that his capital, Artaxata, was well defended and withdrew to the hill country. Phraates soon realized that Artaxata would not fall without a protracted siege, the time for which he could not spare due his fear of plots at home. Once Phraates left Tigranes came back down from the hills and drove his son from Armenia. The son then fled to Pompey.  In 66 BCE, Pompey advanced into Armenia with the younger Tigranes, and Tigranes the Great, now almost 75 years old, surrendered. Pompey treated him generously and allowed him to retain his kingdom shorn of his conquests in return for 6,000 talents of silver. His unfaithful son was sent back to Rome as a prisoner.  Tigranes continued to rule Armenia as an ally of Rome until his death in 55/54.</French>
+		<German>[H1]Tigranes II[\H1][NEWLINE][BOLD]King of Armenia[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]c. 140 – 55 BC[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]Tigranes had been a hostage until the age of 40 at the court of King Mithradates II of Parthia who defeated the Armenians in 105 BCE. Other sources give the date as much earlier, at around 112-111 BCE.  After the death of King Tigranes I in 95 BCE, Tigranes bought his freedom, according to Strabo, by handing over "seventy valleys" in Atropatene to the Parthians.  When he came to power, the foundation upon which Tigranes was to build his Empire was already in place, thanks to the founder of the Artaxiad Dynasty, Artaxias I, and subsequent kings. The mountains of Armenia, however, formed natural borders between the different regions of the country and as a result, the feudalistic nakharars had significant influence over the regions or provinces in which they were based. This did not suit Tigranes, who wanted to create a centralist empire. He thus proceeded by consolidating his power within Armenia before embarking on his campaign.  He deposed Artanes, the last king of Armenian Sophene and a descendant of Zariadres.
+
+During the First Mithridatic War (90-85 BCE), Tigranes supported Mithridates VI of Pontus but was careful not to become directly involved in the war.  He rapidly built up his power, allying with Mithridates VI of Pontus and marrying his daughter Cleopatra. Tigranes had agreed that he was to extend his influence in the East, while Mithridates was to conquer Roman land in Anatolia and in Europe. By creating a stronger Hellenistic state, Mithridates was to contend with the well-established Roman foothold in Europe.  At that time, the Romans had accused Mithridates of massacring about 80,000 Romans in the Anatolian province of Asia. Ultimately, the two kings' attempts to control Cappadocia, as well as the alleged massacres, resulted in Roman intervention. The senate decided on Lucius Cornelius Sulla, who was then one of the current consuls, to be commander of the army against Mithridates.
+
+In 83 BCE, after a bloody strife for the throne of Syria, governed by the Seleucids, the Syrians decided to choose Tigranes as the protector of their kingdom and offered him the crown of Syria.  Magadates was appointed as his governor in Antioch. He then conquered Phoenicia and Cilicia, effectively putting an end to the last remnants of the Seleucid Empire, though a few holdout cities appear to have recognized the shadowy boy-king Seleucus VII Philometor as the legitimate king during his reign. The southern border of his domain reached as far as Ptolemais (modern Akko). Many of the inhabitants of conquered cities were sent to his new metropolis of Tigranakert (Latin name, Tigranocerta).   its height, his empire extended from the Pontic Alps (in modern north-eastern Turkey) to Mesopotamia, and from the Caspian Sea to the Mediterranean. Tigranes apparently invaded territories as far away as Ecbatana and took the title king of kings which, at the time, according to their coins, even the Parthian kings did not assume. He was called "Tigranes the Great" by many Western historians and writers, such as Plutarch. The "King of Kings" never appeared in public without having four kings attending him. Cicero, referring to his success in the east, said that he "made the Republic of Rome tremble before the prowess of his arms."  Armenian rulers prior to Tigranes did not issue coins, he being the first one to do so. He took up the Seleucid tradition and struck coins of great interest. These were minted at Antioch and Damascus, cities under his rule during his occupation of Syria from 83 to 69 BCE. They consist of tetradrachms and copper coins having on the obverse his portrait wearing a decorated Armenian tiara with ear-flaps. The reverse has a completely original design. There are the seated Tyche of Antioch and the river god Orontes at her feet. There are even specimens struck in gold.
+
+Mithridates had found refuge in Armenian land after confronting Rome, considering the fact that Tigranes was his ally and relative. The "King of Kings" eventually came into direct contact with Rome. The Roman commander, Lucullus, demanded the expulsion of Mithridates from Armenia - to comply with such a demand would be, in effect, to accept the status of vassal to Rome and this Tigranes refused.  Lucullus' reaction was an attack that was so precipitate that he took Tigranes by surprise. According to Roman historians, the messenger who first brought news of the unexpected Roman attack was executed.   Eventually Mithrobazanes, one of Tigranes generals, told Tigranes of the Roman approach. Tigranes was, according to Keaveney, so impressed by Mithrobazanes' courage that he appointed Mithrobazanes to command an army against Lucullus - Mithrobazanes was however defeated and killed.  After this defeat Tigranes withdrew north to Armenia to regroup which left Lucullus free to put Tigranocerta under siege.  When Tigranes had gathered a large army he returned to confront Lucullus. On October 6, 69 BCE, Tigranes' much larger force was decisively defeated by the Roman army under Lucullus in the Battle of Tigranocerta. Tigranes' treatment of the inhabitants (the majority of the population had been forced to move to the city) led disgruntled city guards to open the gates of the city to the Romans. Learning of this, Tigranes hurriedly sent 6000 cavalrymen to the city in order to rescue his wives and some of his assets. Tigranes escaped capture with a small escort.  On the 6 October 68 BCE, the Romans approached the old capital of Artaxata. Tigranes' and Mithridates' combined Armeno-Pontian army of 70,000 men formed up to face them but were resoundingly defeated. Once again, both Mithridates and Tigranes evaded capture by the victorious Romans.  The long campaigning and hardships that Lucullus' troops had endured for years, combined with a perceived lack of reward in the form of plunder, led to successive mutinies among the legions in 68-67. Frustrated by the rough terrain of Northern Armenia and seeing the worsening moral of his troops, Lucullus moved back south and put Nisibis under siege. Tigranes concluded (wrongly) that Nisibis would hold out and sought to regain those parts of Armenia that the Romans had captured.  Despite his continuous success in battle, Lucullus could still not capture either one of the monarchs. With Lucullus' troops now refusing to obey his commands, but agreeing to defend positions from attack, the senate sent Gnaeus Pompey to recall Lucullus to Rome and take over his command.  In 67 BCE Pompey was given the task of defeating Mithradates and Tigranes.  Pompey first concentrated on attacking Mithradates while distracting Tigranes by engineering a Parthian attack on Gordyeyne.  Phraates III, the Parthian king was soon persuaded to take things a little further than an anexation of Gordyeyne when a son of Tigranes (also named Tigranes) went to join the Parthians and persuaded Phraates to invade Armenia in an attempt to replace the elder Tigranes with the younger.  Tigranes decided not to meet the invasion in the field but instead ensured that his capital, Artaxata, was well defended and withdrew to the hill country. Phraates soon realized that Artaxata would not fall without a protracted siege, the time for which he could not spare due his fear of plots at home. Once Phraates left Tigranes came back down from the hills and drove his son from Armenia. The son then fled to Pompey.  In 66 BCE, Pompey advanced into Armenia with the younger Tigranes, and Tigranes the Great, now almost 75 years old, surrendered. Pompey treated him generously and allowed him to retain his kingdom shorn of his conquests in return for 6,000 talents of silver. His unfaithful son was sent back to Rome as a prisoner.  Tigranes continued to rule Armenia as an ally of Rome until his death in 55/54.</German>
+		<Italian>[H1]Tigranes II[\H1][NEWLINE][BOLD]King of Armenia[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]c. 140 – 55 BC[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]Tigranes had been a hostage until the age of 40 at the court of King Mithradates II of Parthia who defeated the Armenians in 105 BCE. Other sources give the date as much earlier, at around 112-111 BCE.  After the death of King Tigranes I in 95 BCE, Tigranes bought his freedom, according to Strabo, by handing over "seventy valleys" in Atropatene to the Parthians.  When he came to power, the foundation upon which Tigranes was to build his Empire was already in place, thanks to the founder of the Artaxiad Dynasty, Artaxias I, and subsequent kings. The mountains of Armenia, however, formed natural borders between the different regions of the country and as a result, the feudalistic nakharars had significant influence over the regions or provinces in which they were based. This did not suit Tigranes, who wanted to create a centralist empire. He thus proceeded by consolidating his power within Armenia before embarking on his campaign.  He deposed Artanes, the last king of Armenian Sophene and a descendant of Zariadres.
+
+During the First Mithridatic War (90-85 BCE), Tigranes supported Mithridates VI of Pontus but was careful not to become directly involved in the war.  He rapidly built up his power, allying with Mithridates VI of Pontus and marrying his daughter Cleopatra. Tigranes had agreed that he was to extend his influence in the East, while Mithridates was to conquer Roman land in Anatolia and in Europe. By creating a stronger Hellenistic state, Mithridates was to contend with the well-established Roman foothold in Europe.  At that time, the Romans had accused Mithridates of massacring about 80,000 Romans in the Anatolian province of Asia. Ultimately, the two kings' attempts to control Cappadocia, as well as the alleged massacres, resulted in Roman intervention. The senate decided on Lucius Cornelius Sulla, who was then one of the current consuls, to be commander of the army against Mithridates.
+
+In 83 BCE, after a bloody strife for the throne of Syria, governed by the Seleucids, the Syrians decided to choose Tigranes as the protector of their kingdom and offered him the crown of Syria.  Magadates was appointed as his governor in Antioch. He then conquered Phoenicia and Cilicia, effectively putting an end to the last remnants of the Seleucid Empire, though a few holdout cities appear to have recognized the shadowy boy-king Seleucus VII Philometor as the legitimate king during his reign. The southern border of his domain reached as far as Ptolemais (modern Akko). Many of the inhabitants of conquered cities were sent to his new metropolis of Tigranakert (Latin name, Tigranocerta).   its height, his empire extended from the Pontic Alps (in modern north-eastern Turkey) to Mesopotamia, and from the Caspian Sea to the Mediterranean. Tigranes apparently invaded territories as far away as Ecbatana and took the title king of kings which, at the time, according to their coins, even the Parthian kings did not assume. He was called "Tigranes the Great" by many Western historians and writers, such as Plutarch. The "King of Kings" never appeared in public without having four kings attending him. Cicero, referring to his success in the east, said that he "made the Republic of Rome tremble before the prowess of his arms."  Armenian rulers prior to Tigranes did not issue coins, he being the first one to do so. He took up the Seleucid tradition and struck coins of great interest. These were minted at Antioch and Damascus, cities under his rule during his occupation of Syria from 83 to 69 BCE. They consist of tetradrachms and copper coins having on the obverse his portrait wearing a decorated Armenian tiara with ear-flaps. The reverse has a completely original design. There are the seated Tyche of Antioch and the river god Orontes at her feet. There are even specimens struck in gold.
+
+Mithridates had found refuge in Armenian land after confronting Rome, considering the fact that Tigranes was his ally and relative. The "King of Kings" eventually came into direct contact with Rome. The Roman commander, Lucullus, demanded the expulsion of Mithridates from Armenia - to comply with such a demand would be, in effect, to accept the status of vassal to Rome and this Tigranes refused.  Lucullus' reaction was an attack that was so precipitate that he took Tigranes by surprise. According to Roman historians, the messenger who first brought news of the unexpected Roman attack was executed.   Eventually Mithrobazanes, one of Tigranes generals, told Tigranes of the Roman approach. Tigranes was, according to Keaveney, so impressed by Mithrobazanes' courage that he appointed Mithrobazanes to command an army against Lucullus - Mithrobazanes was however defeated and killed.  After this defeat Tigranes withdrew north to Armenia to regroup which left Lucullus free to put Tigranocerta under siege.  When Tigranes had gathered a large army he returned to confront Lucullus. On October 6, 69 BCE, Tigranes' much larger force was decisively defeated by the Roman army under Lucullus in the Battle of Tigranocerta. Tigranes' treatment of the inhabitants (the majority of the population had been forced to move to the city) led disgruntled city guards to open the gates of the city to the Romans. Learning of this, Tigranes hurriedly sent 6000 cavalrymen to the city in order to rescue his wives and some of his assets. Tigranes escaped capture with a small escort.  On the 6 October 68 BCE, the Romans approached the old capital of Artaxata. Tigranes' and Mithridates' combined Armeno-Pontian army of 70,000 men formed up to face them but were resoundingly defeated. Once again, both Mithridates and Tigranes evaded capture by the victorious Romans.  The long campaigning and hardships that Lucullus' troops had endured for years, combined with a perceived lack of reward in the form of plunder, led to successive mutinies among the legions in 68-67. Frustrated by the rough terrain of Northern Armenia and seeing the worsening moral of his troops, Lucullus moved back south and put Nisibis under siege. Tigranes concluded (wrongly) that Nisibis would hold out and sought to regain those parts of Armenia that the Romans had captured.  Despite his continuous success in battle, Lucullus could still not capture either one of the monarchs. With Lucullus' troops now refusing to obey his commands, but agreeing to defend positions from attack, the senate sent Gnaeus Pompey to recall Lucullus to Rome and take over his command.  In 67 BCE Pompey was given the task of defeating Mithradates and Tigranes.  Pompey first concentrated on attacking Mithradates while distracting Tigranes by engineering a Parthian attack on Gordyeyne.  Phraates III, the Parthian king was soon persuaded to take things a little further than an anexation of Gordyeyne when a son of Tigranes (also named Tigranes) went to join the Parthians and persuaded Phraates to invade Armenia in an attempt to replace the elder Tigranes with the younger.  Tigranes decided not to meet the invasion in the field but instead ensured that his capital, Artaxata, was well defended and withdrew to the hill country. Phraates soon realized that Artaxata would not fall without a protracted siege, the time for which he could not spare due his fear of plots at home. Once Phraates left Tigranes came back down from the hills and drove his son from Armenia. The son then fled to Pompey.  In 66 BCE, Pompey advanced into Armenia with the younger Tigranes, and Tigranes the Great, now almost 75 years old, surrendered. Pompey treated him generously and allowed him to retain his kingdom shorn of his conquests in return for 6,000 talents of silver. His unfaithful son was sent back to Rome as a prisoner.  Tigranes continued to rule Armenia as an ally of Rome until his death in 55/54.</Italian>
+		<Spanish>[H1]Tigranes II[\H1][NEWLINE][BOLD]King of Armenia[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]c. 140 – 55 BC[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]Tigranes had been a hostage until the age of 40 at the court of King Mithradates II of Parthia who defeated the Armenians in 105 BCE. Other sources give the date as much earlier, at around 112-111 BCE.  After the death of King Tigranes I in 95 BCE, Tigranes bought his freedom, according to Strabo, by handing over "seventy valleys" in Atropatene to the Parthians.  When he came to power, the foundation upon which Tigranes was to build his Empire was already in place, thanks to the founder of the Artaxiad Dynasty, Artaxias I, and subsequent kings. The mountains of Armenia, however, formed natural borders between the different regions of the country and as a result, the feudalistic nakharars had significant influence over the regions or provinces in which they were based. This did not suit Tigranes, who wanted to create a centralist empire. He thus proceeded by consolidating his power within Armenia before embarking on his campaign.  He deposed Artanes, the last king of Armenian Sophene and a descendant of Zariadres.
+
+During the First Mithridatic War (90-85 BCE), Tigranes supported Mithridates VI of Pontus but was careful not to become directly involved in the war.  He rapidly built up his power, allying with Mithridates VI of Pontus and marrying his daughter Cleopatra. Tigranes had agreed that he was to extend his influence in the East, while Mithridates was to conquer Roman land in Anatolia and in Europe. By creating a stronger Hellenistic state, Mithridates was to contend with the well-established Roman foothold in Europe.  At that time, the Romans had accused Mithridates of massacring about 80,000 Romans in the Anatolian province of Asia. Ultimately, the two kings' attempts to control Cappadocia, as well as the alleged massacres, resulted in Roman intervention. The senate decided on Lucius Cornelius Sulla, who was then one of the current consuls, to be commander of the army against Mithridates.
+
+In 83 BCE, after a bloody strife for the throne of Syria, governed by the Seleucids, the Syrians decided to choose Tigranes as the protector of their kingdom and offered him the crown of Syria.  Magadates was appointed as his governor in Antioch. He then conquered Phoenicia and Cilicia, effectively putting an end to the last remnants of the Seleucid Empire, though a few holdout cities appear to have recognized the shadowy boy-king Seleucus VII Philometor as the legitimate king during his reign. The southern border of his domain reached as far as Ptolemais (modern Akko). Many of the inhabitants of conquered cities were sent to his new metropolis of Tigranakert (Latin name, Tigranocerta).   its height, his empire extended from the Pontic Alps (in modern north-eastern Turkey) to Mesopotamia, and from the Caspian Sea to the Mediterranean. Tigranes apparently invaded territories as far away as Ecbatana and took the title king of kings which, at the time, according to their coins, even the Parthian kings did not assume. He was called "Tigranes the Great" by many Western historians and writers, such as Plutarch. The "King of Kings" never appeared in public without having four kings attending him. Cicero, referring to his success in the east, said that he "made the Republic of Rome tremble before the prowess of his arms."  Armenian rulers prior to Tigranes did not issue coins, he being the first one to do so. He took up the Seleucid tradition and struck coins of great interest. These were minted at Antioch and Damascus, cities under his rule during his occupation of Syria from 83 to 69 BCE. They consist of tetradrachms and copper coins having on the obverse his portrait wearing a decorated Armenian tiara with ear-flaps. The reverse has a completely original design. There are the seated Tyche of Antioch and the river god Orontes at her feet. There are even specimens struck in gold.
+
+Mithridates had found refuge in Armenian land after confronting Rome, considering the fact that Tigranes was his ally and relative. The "King of Kings" eventually came into direct contact with Rome. The Roman commander, Lucullus, demanded the expulsion of Mithridates from Armenia - to comply with such a demand would be, in effect, to accept the status of vassal to Rome and this Tigranes refused.  Lucullus' reaction was an attack that was so precipitate that he took Tigranes by surprise. According to Roman historians, the messenger who first brought news of the unexpected Roman attack was executed.   Eventually Mithrobazanes, one of Tigranes generals, told Tigranes of the Roman approach. Tigranes was, according to Keaveney, so impressed by Mithrobazanes' courage that he appointed Mithrobazanes to command an army against Lucullus - Mithrobazanes was however defeated and killed.  After this defeat Tigranes withdrew north to Armenia to regroup which left Lucullus free to put Tigranocerta under siege.  When Tigranes had gathered a large army he returned to confront Lucullus. On October 6, 69 BCE, Tigranes' much larger force was decisively defeated by the Roman army under Lucullus in the Battle of Tigranocerta. Tigranes' treatment of the inhabitants (the majority of the population had been forced to move to the city) led disgruntled city guards to open the gates of the city to the Romans. Learning of this, Tigranes hurriedly sent 6000 cavalrymen to the city in order to rescue his wives and some of his assets. Tigranes escaped capture with a small escort.  On the 6 October 68 BCE, the Romans approached the old capital of Artaxata. Tigranes' and Mithridates' combined Armeno-Pontian army of 70,000 men formed up to face them but were resoundingly defeated. Once again, both Mithridates and Tigranes evaded capture by the victorious Romans.  The long campaigning and hardships that Lucullus' troops had endured for years, combined with a perceived lack of reward in the form of plunder, led to successive mutinies among the legions in 68-67. Frustrated by the rough terrain of Northern Armenia and seeing the worsening moral of his troops, Lucullus moved back south and put Nisibis under siege. Tigranes concluded (wrongly) that Nisibis would hold out and sought to regain those parts of Armenia that the Romans had captured.  Despite his continuous success in battle, Lucullus could still not capture either one of the monarchs. With Lucullus' troops now refusing to obey his commands, but agreeing to defend positions from attack, the senate sent Gnaeus Pompey to recall Lucullus to Rome and take over his command.  In 67 BCE Pompey was given the task of defeating Mithradates and Tigranes.  Pompey first concentrated on attacking Mithradates while distracting Tigranes by engineering a Parthian attack on Gordyeyne.  Phraates III, the Parthian king was soon persuaded to take things a little further than an anexation of Gordyeyne when a son of Tigranes (also named Tigranes) went to join the Parthians and persuaded Phraates to invade Armenia in an attempt to replace the elder Tigranes with the younger.  Tigranes decided not to meet the invasion in the field but instead ensured that his capital, Artaxata, was well defended and withdrew to the hill country. Phraates soon realized that Artaxata would not fall without a protracted siege, the time for which he could not spare due his fear of plots at home. Once Phraates left Tigranes came back down from the hills and drove his son from Armenia. The son then fled to Pompey.  In 66 BCE, Pompey advanced into Armenia with the younger Tigranes, and Tigranes the Great, now almost 75 years old, surrendered. Pompey treated him generously and allowed him to retain his kingdom shorn of his conquests in return for 6,000 talents of silver. His unfaithful son was sent back to Rome as a prisoner.  Tigranes continued to rule Armenia as an ally of Rome until his death in 55/54.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_ANDRANIK</Tag>
+		<English>Andranik</English>
+		<French>Andranik</French>
+		<German>Andranik</German>
+		<Italian>Andranik</Italian>
+		<Spanish>Andranik</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ANDRANIK_1</Tag>
+		<English>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. I hope that our two great peoples can live together in peace, but if we cannot, I will fight you even if you have a vastly superior army!</English>
+		<French>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. I hope that our two great peoples can live together in peace, but if we cannot, I will fight you even if you have a vastly superior army!</French>
+		<German>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. I hope that our two great peoples can live together in peace, but if we cannot, I will fight you even if you have a vastly superior army!</German>
+		<Italian>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. I hope that our two great peoples can live together in peace, but if we cannot, I will fight you even if you have a vastly superior army!</Italian>
+		<Spanish>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. I hope that our two great peoples can live together in peace, but if we cannot, I will fight you even if you have a vastly superior army!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_ANDRANIK_PEDIA</Tag>
+		<English>[H1]Andranik Toros Ozanian[\H1][NEWLINE][BOLD]National Hero of Armenia[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1865 - 1927 AD[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]The first name in the Armenian struggle for national liberation in modern times is Andranik. "Like an eagle he soars over the mountains and ridges." Andranik Toros Ozanian was born in historic Shabin-Karahisar ("Shabin, the black fortress," 80 miles northeast of Erzurum). He was destined more, perhaps, than any of the other Armenian revolutionaries, to provide leadership, rationality, acumen, prudence, and effectiveness to Armenia's rising up against the brutal Ottoman oppression. Even during his adolescence Andranik recognized the pattern of Ottoman oppression and the sufferings of his people. So it was that at the tender age of 22, having lost his wife and two children, Andranik joined a partisan group formed in his native town. Inspired with the ideals of liberation for his people, Andranik went to Constantinople to meet those who had already been deeply involved in the liberation movement. He readily accepted tasks assigned to him.[PARAGRAPH:1]When the leader, Serob Aghbiur, of a fighting group which Andranik had joined, was killed, Andranik was named leader. It was in 1901 when his fighting group held out in the Arakelots Vank against an overwhelmingly superior force that Andranik's name became famous for his effectiveness as a revolutionary leader. There were many more similar occurrences to come. Andranik, at first, joined the Hunchak party; it was through party organization that he could be effective in securing men and material with which to carry on. But disagreement with party policies led Andranik to leave the Hunchak ranks and join the Dashnak party.[PARAGRAPH:1]There too, when that party engaged in practices judged to be wrong in principle, Andranik resigned. During the period 1907-13 Andranik committed his energies to helping the Bulgarian liberation movement. In it he created an Armenian division, which brought honor to itself by its effective participation. For his efforts Andranik was decorated and commissioned an officer. With World War I under way (1914-1918) Andranik went to the Caucasus and assisted in organizing Armenian battle units to fight the Turks alongside the Russian army units. In 1915 Andranik was named commander of all Armenian volunteer units within the Russian army.[PARAGRAPH:1]The overthrow of the Tsarist regime in Russia (1917) and the consequent collapse of the Russian imperial army found Andranik on the side of the working class out of which the social revolution in Russia had arisen. Early in 1918 he began to organize a separate army to liberate western Armenia. Made a Major General, Andranik had many thousands under his command, Armenian soldiers from the old Russian army, and many thousand Armenians who had volunteered from all over the world. However, short on re-sources and back-up military fighting units, Andranik had to abandon his plan to take Erzurum. With the collapse of the Tsarist Russian government an independent Armenian Republic was set up in May 1918. Andranik was in sympathy with the social principles that came with the new Russian order and desired to maintain amicable relations with Russia. However, Armenia's ruling party, the Dashnaks, did not favor such a relationship. As a result Andranik once again had a falling out with them. The brilliant defense of Zangezur (1918-19) under Andranik's command marked the end of his  military career.[PARAGRAPH:1]Leaving Armenian lands he traveled to Europe and eventually to America (1922), finally settling in Fresno, California, with his new wife. His name and fame enabled him to be effective in fund-raising activities in America for aid to Armenian orphans. His life in Fresno, with frequent visits elsewhere in response to calls, was spent very much in the public eye. But his health was failing. While seeking to regain strength in a sanatorium in Chico, California, the death that he had eluded in his many years of fierce battle encounters, now finally caught up with him. The date was August 31, 1927. City-wide public attention was accorded him at his funeral in Fresno, where he was interred (September 7, 1927) in the Ararat Cemetery. A few months later Andranik's remains were exhumed and taken to Paris (accompanied by his widow) for a second funeral service and interment. Few heroes have been as well acclaimed during their lives as was Andranik.[PARAGRAPH:1]</English>
+		<French>[H1]Andranik Toros Ozanian[\H1][NEWLINE][BOLD]National Hero of Armenia[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1865 - 1927 AD[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]The first name in the Armenian struggle for national liberation in modern times is Andranik. "Like an eagle he soars over the mountains and ridges." Andranik Toros Ozanian was born in historic Shabin-Karahisar ("Shabin, the black fortress," 80 miles northeast of Erzurum). He was destined more, perhaps, than any of the other Armenian revolutionaries, to provide leadership, rationality, acumen, prudence, and effectiveness to Armenia's rising up against the brutal Ottoman oppression. Even during his adolescence Andranik recognized the pattern of Ottoman oppression and the sufferings of his people. So it was that at the tender age of 22, having lost his wife and two children, Andranik joined a partisan group formed in his native town. Inspired with the ideals of liberation for his people, Andranik went to Constantinople to meet those who had already been deeply involved in the liberation movement. He readily accepted tasks assigned to him.[PARAGRAPH:1]When the leader, Serob Aghbiur, of a fighting group which Andranik had joined, was killed, Andranik was named leader. It was in 1901 when his fighting group held out in the Arakelots Vank against an overwhelmingly superior force that Andranik's name became famous for his effectiveness as a revolutionary leader. There were many more similar occurrences to come. Andranik, at first, joined the Hunchak party; it was through party organization that he could be effective in securing men and material with which to carry on. But disagreement with party policies led Andranik to leave the Hunchak ranks and join the Dashnak party.[PARAGRAPH:1]There too, when that party engaged in practices judged to be wrong in principle, Andranik resigned. During the period 1907-13 Andranik committed his energies to helping the Bulgarian liberation movement. In it he created an Armenian division, which brought honor to itself by its effective participation. For his efforts Andranik was decorated and commissioned an officer. With World War I under way (1914-1918) Andranik went to the Caucasus and assisted in organizing Armenian battle units to fight the Turks alongside the Russian army units. In 1915 Andranik was named commander of all Armenian volunteer units within the Russian army.[PARAGRAPH:1]The overthrow of the Tsarist regime in Russia (1917) and the consequent collapse of the Russian imperial army found Andranik on the side of the working class out of which the social revolution in Russia had arisen. Early in 1918 he began to organize a separate army to liberate western Armenia. Made a Major General, Andranik had many thousands under his command, Armenian soldiers from the old Russian army, and many thousand Armenians who had volunteered from all over the world. However, short on re-sources and back-up military fighting units, Andranik had to abandon his plan to take Erzurum. With the collapse of the Tsarist Russian government an independent Armenian Republic was set up in May 1918. Andranik was in sympathy with the social principles that came with the new Russian order and desired to maintain amicable relations with Russia. However, Armenia's ruling party, the Dashnaks, did not favor such a relationship. As a result Andranik once again had a falling out with them. The brilliant defense of Zangezur (1918-19) under Andranik's command marked the end of his  military career.[PARAGRAPH:1]Leaving Armenian lands he traveled to Europe and eventually to America (1922), finally settling in Fresno, California, with his new wife. His name and fame enabled him to be effective in fund-raising activities in America for aid to Armenian orphans. His life in Fresno, with frequent visits elsewhere in response to calls, was spent very much in the public eye. But his health was failing. While seeking to regain strength in a sanatorium in Chico, California, the death that he had eluded in his many years of fierce battle encounters, now finally caught up with him. The date was August 31, 1927. City-wide public attention was accorded him at his funeral in Fresno, where he was interred (September 7, 1927) in the Ararat Cemetery. A few months later Andranik's remains were exhumed and taken to Paris (accompanied by his widow) for a second funeral service and interment. Few heroes have been as well acclaimed during their lives as was Andranik.[PARAGRAPH:1]</French>
+		<German>[H1]Andranik Toros Ozanian[\H1][NEWLINE][BOLD]National Hero of Armenia[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1865 - 1927 AD[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]The first name in the Armenian struggle for national liberation in modern times is Andranik. "Like an eagle he soars over the mountains and ridges." Andranik Toros Ozanian was born in historic Shabin-Karahisar ("Shabin, the black fortress," 80 miles northeast of Erzurum). He was destined more, perhaps, than any of the other Armenian revolutionaries, to provide leadership, rationality, acumen, prudence, and effectiveness to Armenia's rising up against the brutal Ottoman oppression. Even during his adolescence Andranik recognized the pattern of Ottoman oppression and the sufferings of his people. So it was that at the tender age of 22, having lost his wife and two children, Andranik joined a partisan group formed in his native town. Inspired with the ideals of liberation for his people, Andranik went to Constantinople to meet those who had already been deeply involved in the liberation movement. He readily accepted tasks assigned to him.[PARAGRAPH:1]When the leader, Serob Aghbiur, of a fighting group which Andranik had joined, was killed, Andranik was named leader. It was in 1901 when his fighting group held out in the Arakelots Vank against an overwhelmingly superior force that Andranik's name became famous for his effectiveness as a revolutionary leader. There were many more similar occurrences to come. Andranik, at first, joined the Hunchak party; it was through party organization that he could be effective in securing men and material with which to carry on. But disagreement with party policies led Andranik to leave the Hunchak ranks and join the Dashnak party.[PARAGRAPH:1]There too, when that party engaged in practices judged to be wrong in principle, Andranik resigned. During the period 1907-13 Andranik committed his energies to helping the Bulgarian liberation movement. In it he created an Armenian division, which brought honor to itself by its effective participation. For his efforts Andranik was decorated and commissioned an officer. With World War I under way (1914-1918) Andranik went to the Caucasus and assisted in organizing Armenian battle units to fight the Turks alongside the Russian army units. In 1915 Andranik was named commander of all Armenian volunteer units within the Russian army.[PARAGRAPH:1]The overthrow of the Tsarist regime in Russia (1917) and the consequent collapse of the Russian imperial army found Andranik on the side of the working class out of which the social revolution in Russia had arisen. Early in 1918 he began to organize a separate army to liberate western Armenia. Made a Major General, Andranik had many thousands under his command, Armenian soldiers from the old Russian army, and many thousand Armenians who had volunteered from all over the world. However, short on re-sources and back-up military fighting units, Andranik had to abandon his plan to take Erzurum. With the collapse of the Tsarist Russian government an independent Armenian Republic was set up in May 1918. Andranik was in sympathy with the social principles that came with the new Russian order and desired to maintain amicable relations with Russia. However, Armenia's ruling party, the Dashnaks, did not favor such a relationship. As a result Andranik once again had a falling out with them. The brilliant defense of Zangezur (1918-19) under Andranik's command marked the end of his  military career.[PARAGRAPH:1]Leaving Armenian lands he traveled to Europe and eventually to America (1922), finally settling in Fresno, California, with his new wife. His name and fame enabled him to be effective in fund-raising activities in America for aid to Armenian orphans. His life in Fresno, with frequent visits elsewhere in response to calls, was spent very much in the public eye. But his health was failing. While seeking to regain strength in a sanatorium in Chico, California, the death that he had eluded in his many years of fierce battle encounters, now finally caught up with him. The date was August 31, 1927. City-wide public attention was accorded him at his funeral in Fresno, where he was interred (September 7, 1927) in the Ararat Cemetery. A few months later Andranik's remains were exhumed and taken to Paris (accompanied by his widow) for a second funeral service and interment. Few heroes have been as well acclaimed during their lives as was Andranik.[PARAGRAPH:1]</German>
+		<Italian>[H1]Andranik Toros Ozanian[\H1][NEWLINE][BOLD]National Hero of Armenia[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1865 - 1927 AD[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]The first name in the Armenian struggle for national liberation in modern times is Andranik. "Like an eagle he soars over the mountains and ridges." Andranik Toros Ozanian was born in historic Shabin-Karahisar ("Shabin, the black fortress," 80 miles northeast of Erzurum). He was destined more, perhaps, than any of the other Armenian revolutionaries, to provide leadership, rationality, acumen, prudence, and effectiveness to Armenia's rising up against the brutal Ottoman oppression. Even during his adolescence Andranik recognized the pattern of Ottoman oppression and the sufferings of his people. So it was that at the tender age of 22, having lost his wife and two children, Andranik joined a partisan group formed in his native town. Inspired with the ideals of liberation for his people, Andranik went to Constantinople to meet those who had already been deeply involved in the liberation movement. He readily accepted tasks assigned to him.[PARAGRAPH:1]When the leader, Serob Aghbiur, of a fighting group which Andranik had joined, was killed, Andranik was named leader. It was in 1901 when his fighting group held out in the Arakelots Vank against an overwhelmingly superior force that Andranik's name became famous for his effectiveness as a revolutionary leader. There were many more similar occurrences to come. Andranik, at first, joined the Hunchak party; it was through party organization that he could be effective in securing men and material with which to carry on. But disagreement with party policies led Andranik to leave the Hunchak ranks and join the Dashnak party.[PARAGRAPH:1]There too, when that party engaged in practices judged to be wrong in principle, Andranik resigned. During the period 1907-13 Andranik committed his energies to helping the Bulgarian liberation movement. In it he created an Armenian division, which brought honor to itself by its effective participation. For his efforts Andranik was decorated and commissioned an officer. With World War I under way (1914-1918) Andranik went to the Caucasus and assisted in organizing Armenian battle units to fight the Turks alongside the Russian army units. In 1915 Andranik was named commander of all Armenian volunteer units within the Russian army.[PARAGRAPH:1]The overthrow of the Tsarist regime in Russia (1917) and the consequent collapse of the Russian imperial army found Andranik on the side of the working class out of which the social revolution in Russia had arisen. Early in 1918 he began to organize a separate army to liberate western Armenia. Made a Major General, Andranik had many thousands under his command, Armenian soldiers from the old Russian army, and many thousand Armenians who had volunteered from all over the world. However, short on re-sources and back-up military fighting units, Andranik had to abandon his plan to take Erzurum. With the collapse of the Tsarist Russian government an independent Armenian Republic was set up in May 1918. Andranik was in sympathy with the social principles that came with the new Russian order and desired to maintain amicable relations with Russia. However, Armenia's ruling party, the Dashnaks, did not favor such a relationship. As a result Andranik once again had a falling out with them. The brilliant defense of Zangezur (1918-19) under Andranik's command marked the end of his  military career.[PARAGRAPH:1]Leaving Armenian lands he traveled to Europe and eventually to America (1922), finally settling in Fresno, California, with his new wife. His name and fame enabled him to be effective in fund-raising activities in America for aid to Armenian orphans. His life in Fresno, with frequent visits elsewhere in response to calls, was spent very much in the public eye. But his health was failing. While seeking to regain strength in a sanatorium in Chico, California, the death that he had eluded in his many years of fierce battle encounters, now finally caught up with him. The date was August 31, 1927. City-wide public attention was accorded him at his funeral in Fresno, where he was interred (September 7, 1927) in the Ararat Cemetery. A few months later Andranik's remains were exhumed and taken to Paris (accompanied by his widow) for a second funeral service and interment. Few heroes have been as well acclaimed during their lives as was Andranik.[PARAGRAPH:1]</Italian>
+		<Spanish>[H1]Andranik Toros Ozanian[\H1][NEWLINE][BOLD]National Hero of Armenia[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1865 - 1927 AD[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]The first name in the Armenian struggle for national liberation in modern times is Andranik. "Like an eagle he soars over the mountains and ridges." Andranik Toros Ozanian was born in historic Shabin-Karahisar ("Shabin, the black fortress," 80 miles northeast of Erzurum). He was destined more, perhaps, than any of the other Armenian revolutionaries, to provide leadership, rationality, acumen, prudence, and effectiveness to Armenia's rising up against the brutal Ottoman oppression. Even during his adolescence Andranik recognized the pattern of Ottoman oppression and the sufferings of his people. So it was that at the tender age of 22, having lost his wife and two children, Andranik joined a partisan group formed in his native town. Inspired with the ideals of liberation for his people, Andranik went to Constantinople to meet those who had already been deeply involved in the liberation movement. He readily accepted tasks assigned to him.[PARAGRAPH:1]When the leader, Serob Aghbiur, of a fighting group which Andranik had joined, was killed, Andranik was named leader. It was in 1901 when his fighting group held out in the Arakelots Vank against an overwhelmingly superior force that Andranik's name became famous for his effectiveness as a revolutionary leader. There were many more similar occurrences to come. Andranik, at first, joined the Hunchak party; it was through party organization that he could be effective in securing men and material with which to carry on. But disagreement with party policies led Andranik to leave the Hunchak ranks and join the Dashnak party.[PARAGRAPH:1]There too, when that party engaged in practices judged to be wrong in principle, Andranik resigned. During the period 1907-13 Andranik committed his energies to helping the Bulgarian liberation movement. In it he created an Armenian division, which brought honor to itself by its effective participation. For his efforts Andranik was decorated and commissioned an officer. With World War I under way (1914-1918) Andranik went to the Caucasus and assisted in organizing Armenian battle units to fight the Turks alongside the Russian army units. In 1915 Andranik was named commander of all Armenian volunteer units within the Russian army.[PARAGRAPH:1]The overthrow of the Tsarist regime in Russia (1917) and the consequent collapse of the Russian imperial army found Andranik on the side of the working class out of which the social revolution in Russia had arisen. Early in 1918 he began to organize a separate army to liberate western Armenia. Made a Major General, Andranik had many thousands under his command, Armenian soldiers from the old Russian army, and many thousand Armenians who had volunteered from all over the world. However, short on re-sources and back-up military fighting units, Andranik had to abandon his plan to take Erzurum. With the collapse of the Tsarist Russian government an independent Armenian Republic was set up in May 1918. Andranik was in sympathy with the social principles that came with the new Russian order and desired to maintain amicable relations with Russia. However, Armenia's ruling party, the Dashnaks, did not favor such a relationship. As a result Andranik once again had a falling out with them. The brilliant defense of Zangezur (1918-19) under Andranik's command marked the end of his  military career.[PARAGRAPH:1]Leaving Armenian lands he traveled to Europe and eventually to America (1922), finally settling in Fresno, California, with his new wife. His name and fame enabled him to be effective in fund-raising activities in America for aid to Armenian orphans. His life in Fresno, with frequent visits elsewhere in response to calls, was spent very much in the public eye. But his health was failing. While seeking to regain strength in a sanatorium in Chico, California, the death that he had eluded in his many years of fierce battle encounters, now finally caught up with him. The date was August 31, 1927. City-wide public attention was accorded him at his funeral in Fresno, where he was interred (September 7, 1927) in the Ararat Cemetery. A few months later Andranik's remains were exhumed and taken to Paris (accompanied by his widow) for a second funeral service and interment. Few heroes have been as well acclaimed during their lives as was Andranik.[PARAGRAPH:1]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_YEREVAN</Tag>
+		<English>Yerevan</English>
+		<French>Yerevan</French>
+		<German>Yerevan</German>
+		<Italian>Yerevan</Italian>
+		<Spanish>Yerevan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ANI</Tag>
+		<English>Ani</English>
+		<French>Ani</French>
+		<German>Ani</German>
+		<Italian>Ani</Italian>
+		<Spanish>Ani</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DVIN</Tag>
+		<English>Dvin</English>
+		<French>Dvin</French>
+		<German>Dvin</German>
+		<Italian>Dvin</Italian>
+		<Spanish>Dvin</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ARTASHAT</Tag>
+		<English>Artashat</English>
+		<French>Artashat</French>
+		<German>Artashat</German>
+		<Italian>Artashat</Italian>
+		<Spanish>Artashat</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KARS</Tag>
+		<English>Kars</English>
+		<French>Kars</French>
+		<German>Kars</German>
+		<Italian>Kars</Italian>
+		<Spanish>Kars</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TRABZON</Tag>
+		<English>Trabzon</English>
+		<French>Trabzon</French>
+		<German>Trabzon</German>
+		<Italian>Trabzon</Italian>
+		<Spanish>Trabzon</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NICOPOLIS</Tag>
+		<English>Nicopolis</English>
+		<French>Nicopolis</French>
+		<German>Nicopolis</German>
+		<Italian>Nicopolis</Italian>
+		<Spanish>Nicopolis</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CAESAREA</Tag>
+		<English>Caesarea</English>
+		<French>Caesarea</French>
+		<German>Caesarea</German>
+		<Italian>Caesarea</Italian>
+		<Spanish>Caesarea</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TIGRANAKERT</Tag>
+		<English>Tigranakert</English>
+		<French>Tigranakert</French>
+		<German>Tigranakert</German>
+		<Italian>Tigranakert</Italian>
+		<Spanish>Tigranakert</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_EDESSA</Tag>
+		<English>Edessa</English>
+		<French>Edessa</French>
+		<German>Edessa</German>
+		<Italian>Edessa</Italian>
+		<Spanish>Edessa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SASUN</Tag>
+		<English>Sasun</English>
+		<French>Sasun</French>
+		<German>Sasun</German>
+		<Italian>Sasun</Italian>
+		<Spanish>Sasun</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NISIBIN</Tag>
+		<English>Nisibin</English>
+		<French>Nisibin</French>
+		<German>Nisibin</German>
+		<Italian>Nisibin</Italian>
+		<Spanish>Nisibin</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ARDAHAN</Tag>
+		<English>Ardahan</English>
+		<French>Ardahan</French>
+		<German>Ardahan</German>
+		<Italian>Ardahan</Italian>
+		<Spanish>Ardahan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ERIZA</Tag>
+		<English>Eriza</English>
+		<French>Eriza</French>
+		<German>Eriza</German>
+		<Italian>Eriza</Italian>
+		<Spanish>Eriza</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BABERT</Tag>
+		<English>Babert</English>
+		<French>Babert</French>
+		<German>Babert</German>
+		<Italian>Babert</Italian>
+		<Spanish>Babert</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ALEXANDROPOL</Tag>
+		<English>Alexandropol</English>
+		<French>Alexandropol</French>
+		<German>Alexandropol</German>
+		<Italian>Alexandropol</Italian>
+		<Spanish>Alexandropol</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VAN</Tag>
+		<English>Van</English>
+		<French>Van</French>
+		<German>Van</German>
+		<Italian>Van</Italian>
+		<Spanish>Van</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NAKHICHEVAN</Tag>
+		<English>Nakhichevan</English>
+		<French>Nakhichevan</French>
+		<German>Nakhichevan</German>
+		<Italian>Nakhichevan</Italian>
+		<Spanish>Nakhichevan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BITLIS</Tag>
+		<English>Bitlis</English>
+		<French>Bitlis</French>
+		<German>Bitlis</German>
+		<Italian>Bitlis</Italian>
+		<Spanish>Bitlis</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KAINEPOLIS</Tag>
+		<English>Kainepolis</English>
+		<French>Kainepolis</French>
+		<German>Kainepolis</German>
+		<Italian>Kainepolis</Italian>
+		<Spanish>Kainepolis</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ERZURUM</Tag>
+		<English>Erzurum</English>
+		<French>Erzurum</French>
+		<German>Erzurum</German>
+		<Italian>Erzurum</Italian>
+		<Spanish>Erzurum</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SIS</Tag>
+		<English>Sis</English>
+		<French>Sis</French>
+		<German>Sis</German>
+		<Italian>Sis</Italian>
+		<Spanish>Sis</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TARSUS</Tag>
+		<English>Tarsus</English>
+		<French>Tarsus</French>
+		<German>Tarsus</German>
+		<Italian>Tarsus</Italian>
+		<Spanish>Tarsus</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CILICIA</Tag>
+		<English>Cilicia</English>
+		<French>Cilicia</French>
+		<German>Cilicia</German>
+		<Italian>Cilicia</Italian>
+		<Spanish>Cilicia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SEVAN</Tag>
+		<English>Sevan</English>
+		<French>Sevan</French>
+		<German>Sevan</German>
+		<Italian>Sevan</Italian>
+		<Spanish>Sevan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GYUMRI</Tag>
+		<English>Gyumri</English>
+		<French>Gyumri</French>
+		<German>Gyumri</German>
+		<Italian>Gyumri</Italian>
+		<Spanish>Gyumri</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VANADZOR</Tag>
+		<English>Vanadzor</English>
+		<French>Vanadzor</French>
+		<German>Vanadzor</German>
+		<Italian>Vanadzor</Italian>
+		<Spanish>Vanadzor</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_EJMIASIN</Tag>
+		<English>Ejmiasin</English>
+		<French>Ejmiasin</French>
+		<German>Ejmiasin</German>
+		<Italian>Ejmiasin</Italian>
+		<Spanish>Ejmiasin</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ARARAT</Tag>
+		<English>Ararat</English>
+		<French>Ararat</French>
+		<German>Ararat</German>
+		<Italian>Ararat</Italian>
+		<Spanish>Ararat</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MEGRI</Tag>
+		<English>Megri</English>
+		<French>Megri</French>
+		<German>Megri</German>
+		<Italian>Megri</Italian>
+		<Spanish>Megri</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_HRAZDAN</Tag>
+		<English>Hrazdan</English>
+		<French>Hrazdan</French>
+		<German>Hrazdan</German>
+		<Italian>Hrazdan</Italian>
+		<Spanish>Hrazdan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ALAVERDI</Tag>
+		<English>Alaverdi</English>
+		<French>Alaverdi</French>
+		<German>Alaverdi</German>
+		<Italian>Alaverdi</Italian>
+		<Spanish>Alaverdi</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VARDENIS</Tag>
+		<English>Vardenis</English>
+		<French>Vardenis</French>
+		<German>Vardenis</German>
+		<Italian>Vardenis</Italian>
+		<Spanish>Vardenis</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_IJEVAN</Tag>
+		<English>Ijevan</English>
+		<French>Ijevan</French>
+		<German>Ijevan</German>
+		<Italian>Ijevan</Italian>
+		<Spanish>Ijevan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ASHTARAK</Tag>
+		<English>Ashtarak</English>
+		<French>Ashtarak</French>
+		<German>Ashtarak</German>
+		<Italian>Ashtarak</Italian>
+		<Spanish>Ashtarak</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SPITAK</Tag>
+		<English>Spitak</English>
+		<French>Spitak</French>
+		<German>Spitak</German>
+		<Italian>Spitak</Italian>
+		<Spanish>Spitak</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ABOVIAN</Tag>
+		<English>Abovian</English>
+		<French>Abovian</French>
+		<German>Abovian</German>
+		<Italian>Abovian</Italian>
+		<Spanish>Abovian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ARMAVIR</Tag>
+		<English>Armavir</English>
+		<French>Armavir</French>
+		<German>Armavir</German>
+		<Italian>Armavir</Italian>
+		<Spanish>Armavir</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KOTAYK</Tag>
+		<English>Kotayk</English>
+		<French>Kotayk</French>
+		<German>Kotayk</German>
+		<Italian>Kotayk</Italian>
+		<Spanish>Kotayk</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LORI</Tag>
+		<English>Lori</English>
+		<French>Lori</French>
+		<German>Lori</German>
+		<Italian>Lori</Italian>
+		<Spanish>Lori</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_STEPANAKERT</Tag>
+		<English>Stepanakert</English>
+		<French>Stepanakert</French>
+		<German>Stepanakert</German>
+		<Italian>Stepanakert</Italian>
+		<Spanish>Stepanakert</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SHUSHI</Tag>
+		<English>Shushi</English>
+		<French>Shushi</French>
+		<German>Shushi</German>
+		<Italian>Shushi</Italian>
+		<Spanish>Shushi</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VARDENIS</Tag>
+		<English>Vardenis</English>
+		<French>Vardenis</French>
+		<German>Vardenis</German>
+		<Italian>Vardenis</Italian>
+		<Spanish>Vardenis</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ARZNI</Tag>
+		<English>Arzni</English>
+		<French>Arzni</French>
+		<German>Arzni</German>
+		<Italian>Arzni</Italian>
+		<Spanish>Arzni</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SISIAN</Tag>
+		<English>Sisian</English>
+		<French>Sisian</French>
+		<German>Sisian</German>
+		<Italian>Sisian</Italian>
+		<Spanish>Sisian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GARNI</Tag>
+		<English>Garni</English>
+		<French>Garni</French>
+		<German>Garni</German>
+		<Italian>Garni</Italian>
+		<Spanish>Garni</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GEHARD</Tag>
+		<English>Gehard</English>
+		<French>Gehard</French>
+		<German>Gehard</German>
+		<Italian>Gehard</Italian>
+		<Spanish>Gehard</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BERD</Tag>
+		<English>Berd</English>
+		<French>Berd</French>
+		<German>Berd</German>
+		<Italian>Berd</Italian>
+		<Spanish>Berd</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VEDI</Tag>
+		<English>Vedi</English>
+		<French>Vedi</French>
+		<German>Vedi</German>
+		<Italian>Vedi</Italian>
+		<Spanish>Vedi</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KAPAN</Tag>
+		<English>Kapan</English>
+		<French>Kapan</French>
+		<German>Kapan</German>
+		<Italian>Kapan</Italian>
+		<Spanish>Kapan</Spanish>
+	</TEXT>
+</Civ4GameText>

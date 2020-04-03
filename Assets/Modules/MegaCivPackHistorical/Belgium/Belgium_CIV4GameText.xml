@@ -1,0 +1,503 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- re-Modified by strategyonly -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BELGIUM_DESC</Tag>
+		<English>Belgian Empire</English>
+		<French>Belgian Empire</French>
+		<German>Belgian Empire</German>
+		<Italian>Belgian Empire</Italian>
+		<Spanish>Imperio Belga</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BELGIUM_SHORT_DESC</Tag>
+		<English>Belgium</English>
+		<French>Belgium</French>
+		<German>Belgium</German>
+		<Italian>Belgium</Italian>
+		<Spanish>Belgica</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BELGIUM_ADJECTIVE</Tag>
+		<English>Belgian</English>
+		<French>Belgian</French>
+		<German>Belgian</German>
+		<Italian>Belgian</Italian>
+		<Spanish>Belga</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BELGIUM_PEDIA</Tag>
+		<English>[TAB]In the 1st century BC, the Romans defeated the local tribes and created the province 
+of Gallia Belgica. A gradual immigration by Germanic Frankish tribes during the 5th century brought the 
+area under the rule of the Merovingian kings. A gradual shift of power during the 8th century led the 
+kingdom of the Franks to evolve into the Carolingian Empire. The Treaty of Verdun in 843 divided the 
+region into Middle and Western Francia and therefore into a set of more or less independent fiefdoms 
+which, during the Middle Ages, were vassals either of the King of France or of the Holy Roman Emperor. 
+Many of these fiefdoms were united in the Burgundian Netherlands of the 14th and 15th centuries. Emperor 
+Charles V extended the personal union of the Seventeen Provinces in the 1540s, making it far more than 
+a personal union by the Pragmatic Sanction of 1549 and increased his influence over the Prince-Bishopric 
+of Liège.[PARAGRAPH:1]The Eighty Years' War (1568–1648) divided the Low Countries into the northern United 
+Provinces (Belgica Foederata in Latin, the "Federated Netherlands") and the Southern Netherlands (Belgica 
+Regia, the "Royal Netherlands"). The latter were ruled successively by the Spanish and the Austrian Habsburgs 
+and comprised most of modern Belgium. This was the theatre of most Franco-Spanish and Franco-Austrian 
+wars during the 17th and 18th centuries. Following the campaigns of 1794 in the French Revolutionary 
+Wars, the Low Countries—including territories that were never nominally under Habsburg rule, such as 
+the Prince-Bishopric of Liège—were annexed by the French First Republic, ending Austrian rule in the 
+region. The reunification of the Low Countries as the United Kingdom of the Netherlands occurred at the 
+dissolution of the First French Empire in 1815.[PARAGRAPH:1]The 1830 Belgian Revolution led to the establishment 
+of an independent, Catholic and neutral Belgium under a provisional government and a national congress. 
+Since the installation of Leopold I as king in 1831, Belgium has been a constitutional monarchy and parliamentary 
+democracy. Although the franchise was initially restricted, universal suffrage for men was introduced 
+in 1893 (with plural voting until 1919) and for women in 1949. The main political parties of the 19th 
+century were the Catholic Party and the Liberal Party, with the Belgian Labour Party emerging towards 
+the end of the century. French was originally the single official language adopted by the nobility and 
+the bourgeoisie. It progressively lost its overall importance as Dutch became recognized as well. This 
+recognition became official in 1898 and in 1967 a Dutch version of the Constitution was legally accepted.[PARAGRAPH:1]The 
+Berlin Conference of 1885 ceded control of the Congo Free State to King Leopold II as his private possession. 
+From around 1900 there was growing international concern for the extreme and savage treatment of the 
+Congolese population under Leopold II, for whom the Congo was primarily a source of revenue from ivory 
+and rubber production. In 1908 this outcry led the Belgian state to assume responsibility for the government 
+of the colony, henceforth called the Belgian Congo.[PARAGRAPH:1]Germany invaded Belgium in 1914 as part 
+of the Schlieffen Plan, and much of the Western Front fighting of World War I occurred in western parts 
+of the country. Belgium took over the German colonies of Ruanda-Urundi (modern day Rwanda and Burundi) 
+during the war, and they were mandated to Belgium in 1924 by the League of Nations. In the aftermath 
+of the First World War, the Prussian districts of Eupen and Malmedy were annexed by Belgium in 1925, 
+thereby causing the presence of a German-speaking minority. The country was again invaded by Germany 
+in 1940 during the Blitzkrieg offensive and occupied until its liberation in 1945 by the Allies. The 
+Belgian Congo gained independence in 1960 during the Congo Crisis; Ruanda-Urundi followed with its independence 
+two years later.[PARAGRAPH:l]After World War II, Belgium joined NATO as a founding member and formed 
+the Benelux group of nations with the Netherlands and Luxembourg. Belgium became one of the six founding 
+members of the European Coal and Steel Community in 1951 and of the European Atomic Energy Community 
+and European Economic Community, established in 1957. The latter is now the European Union, for which 
+Belgium hosts major administrations and institutions, including the European Commission, the Council 
+of the European Union and the extraordinary and committee sessions of the European Parliament.</English>
+		<French>[TAB]In the 1st century BC, the Romans defeated the local tribes and created the province of 
+Gallia Belgica. A gradual immigration by Germanic Frankish tribes during the 5th century brought the 
+area under the rule of the Merovingian kings. A gradual shift of power during the 8th century led the 
+kingdom of the Franks to evolve into the Carolingian Empire. The Treaty of Verdun in 843 divided the 
+region into Middle and Western Francia and therefore into a set of more or less independent fiefdoms 
+which, during the Middle Ages, were vassals either of the King of France or of the Holy Roman Emperor. 
+Many of these fiefdoms were united in the Burgundian Netherlands of the 14th and 15th centuries. Emperor 
+Charles V extended the personal union of the Seventeen Provinces in the 1540s, making it far more than 
+a personal union by the Pragmatic Sanction of 1549 and increased his influence over the Prince-Bishopric 
+of Liège.[PARAGRAPH:1]The Eighty Years' War (1568–1648) divided the Low Countries into the northern United 
+Provinces (Belgica Foederata in Latin, the "Federated Netherlands") and the Southern Netherlands (Belgica 
+Regia, the "Royal Netherlands"). The latter were ruled successively by the Spanish and the Austrian Habsburgs 
+and comprised most of modern Belgium. This was the theatre of most Franco-Spanish and Franco-Austrian 
+wars during the 17th and 18th centuries. Following the campaigns of 1794 in the French Revolutionary 
+Wars, the Low Countries—including territories that were never nominally under Habsburg rule, such as 
+the Prince-Bishopric of Liège—were annexed by the French First Republic, ending Austrian rule in the 
+region. The reunification of the Low Countries as the United Kingdom of the Netherlands occurred at the 
+dissolution of the First French Empire in 1815.[PARAGRAPH:1]The 1830 Belgian Revolution led to the establishment 
+of an independent, Catholic and neutral Belgium under a provisional government and a national congress. 
+Since the installation of Leopold I as king in 1831, Belgium has been a constitutional monarchy and parliamentary 
+democracy. Although the franchise was initially restricted, universal suffrage for men was introduced 
+in 1893 (with plural voting until 1919) and for women in 1949. The main political parties of the 19th 
+century were the Catholic Party and the Liberal Party, with the Belgian Labour Party emerging towards 
+the end of the century. French was originally the single official language adopted by the nobility and 
+the bourgeoisie. It progressively lost its overall importance as Dutch became recognized as well. This 
+recognition became official in 1898 and in 1967 a Dutch version of the Constitution was legally accepted.[PARAGRAPH:1]The 
+Berlin Conference of 1885 ceded control of the Congo Free State to King Leopold II as his private possession. 
+From around 1900 there was growing international concern for the extreme and savage treatment of the 
+Congolese population under Leopold II, for whom the Congo was primarily a source of revenue from ivory 
+and rubber production. In 1908 this outcry led the Belgian state to assume responsibility for the government 
+of the colony, henceforth called the Belgian Congo.[PARAGRAPH:1]Germany invaded Belgium in 1914 as part 
+of the Schlieffen Plan, and much of the Western Front fighting of World War I occurred in western parts 
+of the country. Belgium took over the German colonies of Ruanda-Urundi (modern day Rwanda and Burundi) 
+during the war, and they were mandated to Belgium in 1924 by the League of Nations. In the aftermath 
+of the First World War, the Prussian districts of Eupen and Malmedy were annexed by Belgium in 1925, 
+thereby causing the presence of a German-speaking minority. The country was again invaded by Germany 
+in 1940 during the Blitzkrieg offensive and occupied until its liberation in 1945 by the Allies. The 
+Belgian Congo gained independence in 1960 during the Congo Crisis; Ruanda-Urundi followed with its independence 
+two years later.[PARAGRAPH:l]After World War II, Belgium joined NATO as a founding member and formed 
+the Benelux group of nations with the Netherlands and Luxembourg. Belgium became one of the six founding 
+members of the European Coal and Steel Community in 1951 and of the European Atomic Energy Community 
+and European Economic Community, established in 1957. The latter is now the European Union, for which 
+Belgium hosts major administrations and institutions, including the European Commission, the Council 
+of the European Union and the extraordinary and committee sessions of the European Parliament.</French>
+		<German>[TAB]In the 1st century BC, the Romans defeated the local tribes and created the province of 
+Gallia Belgica. A gradual immigration by Germanic Frankish tribes during the 5th century brought the 
+area under the rule of the Merovingian kings. A gradual shift of power during the 8th century led the 
+kingdom of the Franks to evolve into the Carolingian Empire. The Treaty of Verdun in 843 divided the 
+region into Middle and Western Francia and therefore into a set of more or less independent fiefdoms 
+which, during the Middle Ages, were vassals either of the King of France or of the Holy Roman Emperor. 
+Many of these fiefdoms were united in the Burgundian Netherlands of the 14th and 15th centuries. Emperor 
+Charles V extended the personal union of the Seventeen Provinces in the 1540s, making it far more than 
+a personal union by the Pragmatic Sanction of 1549 and increased his influence over the Prince-Bishopric 
+of Liège.[PARAGRAPH:1]The Eighty Years' War (1568–1648) divided the Low Countries into the northern United 
+Provinces (Belgica Foederata in Latin, the "Federated Netherlands") and the Southern Netherlands (Belgica 
+Regia, the "Royal Netherlands"). The latter were ruled successively by the Spanish and the Austrian Habsburgs 
+and comprised most of modern Belgium. This was the theatre of most Franco-Spanish and Franco-Austrian 
+wars during the 17th and 18th centuries. Following the campaigns of 1794 in the French Revolutionary 
+Wars, the Low Countries—including territories that were never nominally under Habsburg rule, such as 
+the Prince-Bishopric of Liège—were annexed by the French First Republic, ending Austrian rule in the 
+region. The reunification of the Low Countries as the United Kingdom of the Netherlands occurred at the 
+dissolution of the First French Empire in 1815.[PARAGRAPH:1]The 1830 Belgian Revolution led to the establishment 
+of an independent, Catholic and neutral Belgium under a provisional government and a national congress. 
+Since the installation of Leopold I as king in 1831, Belgium has been a constitutional monarchy and parliamentary 
+democracy. Although the franchise was initially restricted, universal suffrage for men was introduced 
+in 1893 (with plural voting until 1919) and for women in 1949. The main political parties of the 19th 
+century were the Catholic Party and the Liberal Party, with the Belgian Labour Party emerging towards 
+the end of the century. French was originally the single official language adopted by the nobility and 
+the bourgeoisie. It progressively lost its overall importance as Dutch became recognized as well. This 
+recognition became official in 1898 and in 1967 a Dutch version of the Constitution was legally accepted.[PARAGRAPH:1]The 
+Berlin Conference of 1885 ceded control of the Congo Free State to King Leopold II as his private possession. 
+From around 1900 there was growing international concern for the extreme and savage treatment of the 
+Congolese population under Leopold II, for whom the Congo was primarily a source of revenue from ivory 
+and rubber production. In 1908 this outcry led the Belgian state to assume responsibility for the government 
+of the colony, henceforth called the Belgian Congo.[PARAGRAPH:1]Germany invaded Belgium in 1914 as part 
+of the Schlieffen Plan, and much of the Western Front fighting of World War I occurred in western parts 
+of the country. Belgium took over the German colonies of Ruanda-Urundi (modern day Rwanda and Burundi) 
+during the war, and they were mandated to Belgium in 1924 by the League of Nations. In the aftermath 
+of the First World War, the Prussian districts of Eupen and Malmedy were annexed by Belgium in 1925, 
+thereby causing the presence of a German-speaking minority. The country was again invaded by Germany 
+in 1940 during the Blitzkrieg offensive and occupied until its liberation in 1945 by the Allies. The 
+Belgian Congo gained independence in 1960 during the Congo Crisis; Ruanda-Urundi followed with its independence 
+two years later.[PARAGRAPH:l]After World War II, Belgium joined NATO as a founding member and formed 
+the Benelux group of nations with the Netherlands and Luxembourg. Belgium became one of the six founding 
+members of the European Coal and Steel Community in 1951 and of the European Atomic Energy Community 
+and European Economic Community, established in 1957. The latter is now the European Union, for which 
+Belgium hosts major administrations and institutions, including the European Commission, the Council 
+of the European Union and the extraordinary and committee sessions of the European Parliament.</German>
+		<Italian>[TAB]In the 1st century BC, the Romans defeated the local tribes and created the province 
+of Gallia Belgica. A gradual immigration by Germanic Frankish tribes during the 5th century brought the 
+area under the rule of the Merovingian kings. A gradual shift of power during the 8th century led the 
+kingdom of the Franks to evolve into the Carolingian Empire. The Treaty of Verdun in 843 divided the 
+region into Middle and Western Francia and therefore into a set of more or less independent fiefdoms 
+which, during the Middle Ages, were vassals either of the King of France or of the Holy Roman Emperor. 
+Many of these fiefdoms were united in the Burgundian Netherlands of the 14th and 15th centuries. Emperor 
+Charles V extended the personal union of the Seventeen Provinces in the 1540s, making it far more than 
+a personal union by the Pragmatic Sanction of 1549 and increased his influence over the Prince-Bishopric 
+of Liège.[PARAGRAPH:1]The Eighty Years' War (1568–1648) divided the Low Countries into the northern United 
+Provinces (Belgica Foederata in Latin, the "Federated Netherlands") and the Southern Netherlands (Belgica 
+Regia, the "Royal Netherlands"). The latter were ruled successively by the Spanish and the Austrian Habsburgs 
+and comprised most of modern Belgium. This was the theatre of most Franco-Spanish and Franco-Austrian 
+wars during the 17th and 18th centuries. Following the campaigns of 1794 in the French Revolutionary 
+Wars, the Low Countries—including territories that were never nominally under Habsburg rule, such as 
+the Prince-Bishopric of Liège—were annexed by the French First Republic, ending Austrian rule in the 
+region. The reunification of the Low Countries as the United Kingdom of the Netherlands occurred at the 
+dissolution of the First French Empire in 1815.[PARAGRAPH:1]The 1830 Belgian Revolution led to the establishment 
+of an independent, Catholic and neutral Belgium under a provisional government and a national congress. 
+Since the installation of Leopold I as king in 1831, Belgium has been a constitutional monarchy and parliamentary 
+democracy. Although the franchise was initially restricted, universal suffrage for men was introduced 
+in 1893 (with plural voting until 1919) and for women in 1949. The main political parties of the 19th 
+century were the Catholic Party and the Liberal Party, with the Belgian Labour Party emerging towards 
+the end of the century. French was originally the single official language adopted by the nobility and 
+the bourgeoisie. It progressively lost its overall importance as Dutch became recognized as well. This 
+recognition became official in 1898 and in 1967 a Dutch version of the Constitution was legally accepted.[PARAGRAPH:1]The 
+Berlin Conference of 1885 ceded control of the Congo Free State to King Leopold II as his private possession. 
+From around 1900 there was growing international concern for the extreme and savage treatment of the 
+Congolese population under Leopold II, for whom the Congo was primarily a source of revenue from ivory 
+and rubber production. In 1908 this outcry led the Belgian state to assume responsibility for the government 
+of the colony, henceforth called the Belgian Congo.[PARAGRAPH:1]Germany invaded Belgium in 1914 as part 
+of the Schlieffen Plan, and much of the Western Front fighting of World War I occurred in western parts 
+of the country. Belgium took over the German colonies of Ruanda-Urundi (modern day Rwanda and Burundi) 
+during the war, and they were mandated to Belgium in 1924 by the League of Nations. In the aftermath 
+of the First World War, the Prussian districts of Eupen and Malmedy were annexed by Belgium in 1925, 
+thereby causing the presence of a German-speaking minority. The country was again invaded by Germany 
+in 1940 during the Blitzkrieg offensive and occupied until its liberation in 1945 by the Allies. The 
+Belgian Congo gained independence in 1960 during the Congo Crisis; Ruanda-Urundi followed with its independence 
+two years later.[PARAGRAPH:l]After World War II, Belgium joined NATO as a founding member and formed 
+the Benelux group of nations with the Netherlands and Luxembourg. Belgium became one of the six founding 
+members of the European Coal and Steel Community in 1951 and of the European Atomic Energy Community 
+and European Economic Community, established in 1957. The latter is now the European Union, for which 
+Belgium hosts major administrations and institutions, including the European Commission, the Council 
+of the European Union and the extraordinary and committee sessions of the European Parliament.</Italian>
+		<Spanish>Bélgica —de forma oficial el Reino de Bélgica (en neerlandés: Koninkrijk België, en francés: 
+Royaume de Belgique, en alemán: Königreich Belgien)— es un país soberano, miembro de la Unión Europea, 
+situado en el noroeste europeo. Este país cubre una superficie de 30 528 kilómetros cuadrados y posee 
+una población aproximada de 11 millones de habitantes. Su capital y ciudad más poblada es Bruselas.Bélgica 
+está lingüísticamente dividida. Tiene tres lenguas oficiales: el 60% de su población, principalmente 
+en la región de Flandes, habla neerlandés, mientras que cerca del 35% habla francés (en la región de 
+Valonia, al sur, y en la Región de Bruselas-Capital, una región oficialmente bilingüe que acoge también 
+una minoría de hablantes de neerlandés). Menos de un 1% de los belgas vive en la Comunidad germanófona 
+donde hablan alemán, al este del país. A menudo, esta diversidad lingüística lleva a conflictos políticos 
+y culturales, y se refleja en el complejo sistema de gobierno de Bélgica y en su historia política.Bélgica 
+recibe su nombre del nombre latino de la parte más septentrional de la Galia, Gallia Belgica, cuyo nombre 
+procede de un grupo de tribus celtas, los belgas. Históricamente, Bélgica ha sido parte de los Países 
+Bajos de los Habsburgo, que también comprenden los actuales Países Bajos y Luxemburgo, y cubrían una 
+región algo mayor que el actual Benelux.Desde finales de la Edad Media hasta el siglo XVII, fue un floreciente 
+centro de comercio y cultura. Desde el siglo XVIII hasta la Revolución belga de 1830, Bélgica, en aquella 
+época llamada los Países Bajos del Sur, fue el lugar de muchas batallas entre los poderes europeos, y 
+es por ello que se ha ganado el apodo de "el campo de batalla de Europa"2 o "la cabina de Europa".3Es 
+uno de los miembros fundadores de la Unión Europea cuyas instituciones principales son hospedadas en 
+el país, así como muchas otras organizaciones internacionales, como la OTAN.</Spanish>
+	</TEXT>
+	<!-- Leaders -->
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_LEOPOLD_II</Tag>
+		<English>Leopold II</English>
+		<French>Leopold II</French>
+		<German>Leopold II</German>
+		<Italian>Leopold II</Italian>
+		<Spanish>Leopoldo II</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_LEOPOLD_II_PEDIA</Tag>
+		<English>[H1]Leopold II[\H1][NEWLINE][BOLD]King of the Belgians[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] 
+1835 - 1909 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Leopold II was King of the Belgians. 
+Born in Brussels the second (but eldest surviving) son of Leopold I and Louise-Marie of Orléans, he succeeded 
+his father to the throne in 1865 and remained king until his death. He was the brother of Empress Carlota 
+of Mexico and first cousin to Queen Victoria of the United Kingdom. Leopold is chiefly remembered as 
+the founder and sole owner of the Congo Free State, a private project undertaken by the King. Leopold 
+fervently believed that overseas colonies were the key to a country's greatness, and he worked tirelessly 
+to acquire colonial territory for Belgium. Neither the Belgian people nor the Belgian government were 
+interested, however, and Leopold eventually began trying to acquire a colony in his private capacity 
+as an ordinary citizen. The Belgian government lent him money for this venture.[PARAGRAPH:1]He used Henry 
+Morton Stanley to help him lay claim to the Congo, an area now known as the Democratic Republic of the 
+Congo. Leopold ran the Congo brutally, by proxy through a mercenary force for his own personal gain. 
+Forced labor was extorted from innocent civilians. The abuses suffered were horrific not only in the 
+rubber industry, including enslavement and mutilation of the native population. Missionary John Harris 
+of Baringa, for example, was so shocked by what he had come across that he wrote to Leopold's chief agent 
+in the Congo saying: "I have just returned from a journey inland to the village of Insongo Mboyo. The 
+abject misery and utter abandon is positively indescribable. I was so moved, Your Excellency, by the 
+people's stories that I took the liberty of promising them that in future you will only kill them for 
+crimes they commit."[PARAGRAPH:1]Reports of outrageous exploitation and widespread human rights abuses 
+led to international outcry in the early 1900s. The campaign to examine Leopold's regime became the first 
+mass human rights movement. Rubber gatherers were tortured, maimed and slaughtered until the turn of 
+the century, when the Western world forced Brussels to call a halt. Finally, in 1908, the Belgian parliament 
+compelled the King to cede the Congo Free State to Belgium. Emperor Franz Joseph of Austria-Hungary once 
+described his fellow ruler as a "thoroughly bad man." Though he extracted a personal fortune from the 
+Congo, his harsh regime was directly or indirectly responsible for the death of millions of people.[PARAGRAPH:1]Though 
+extremely disliked by his subjects at the end of his reign — his funeral cortege was booed — Leopold 
+II is remembered today by many Belgians as the "Builder King" (Koning-Bouwer in Dutch, le Roi-Bâtisseur 
+in French) because he commissioned a great number of buildings and urban projects, mainly in Brussels, 
+Ostend and Antwerp. These buildings include the Royal Glasshouses in the grounds of the Palace at Laken, 
+the Japanese Tower, the Chinese Pavilion, the Musée du Congo, and their surrounding park in Tervuren, 
+the Cinquantenaire in Brussels, and the Antwerp railway station hall. He also built an important country 
+estate in Saint-Jean-Cap-Ferrat on the French Riviera, including the Villa des Cèdres, which is now a 
+botanical garden. These were all built using the profits from the Congo. In 1900, he created the Royal 
+Trust, by which means he donated most of his property to the Belgian nation. Leopold II is still a controversial 
+figure in the Democratic Republic of Congo, with statues to him going up and being torn down quickly.</English>
+		<French>[H1]Leopold II[\H1][NEWLINE][BOLD]King of the Belgians[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] 1835 
+- 1909 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Leopold II was King of the Belgians. 
+Born in Brussels the second (but eldest surviving) son of Leopold I and Louise-Marie of Orléans, he succeeded 
+his father to the throne in 1865 and remained king until his death. He was the brother of Empress Carlota 
+of Mexico and first cousin to Queen Victoria of the United Kingdom. Leopold is chiefly remembered as 
+the founder and sole owner of the Congo Free State, a private project undertaken by the King. Leopold 
+fervently believed that overseas colonies were the key to a country's greatness, and he worked tirelessly 
+to acquire colonial territory for Belgium. Neither the Belgian people nor the Belgian government were 
+interested, however, and Leopold eventually began trying to acquire a colony in his private capacity 
+as an ordinary citizen. The Belgian government lent him money for this venture.[PARAGRAPH:1]He used Henry 
+Morton Stanley to help him lay claim to the Congo, an area now known as the Democratic Republic of the 
+Congo. Leopold ran the Congo brutally, by proxy through a mercenary force for his own personal gain. 
+Forced labor was extorted from innocent civilians. The abuses suffered were horrific not only in the 
+rubber industry, including enslavement and mutilation of the native population. Missionary John Harris 
+of Baringa, for example, was so shocked by what he had come across that he wrote to Leopold's chief agent 
+in the Congo saying: "I have just returned from a journey inland to the village of Insongo Mboyo. The 
+abject misery and utter abandon is positively indescribable. I was so moved, Your Excellency, by the 
+people's stories that I took the liberty of promising them that in future you will only kill them for 
+crimes they commit."[PARAGRAPH:1]Reports of outrageous exploitation and widespread human rights abuses 
+led to international outcry in the early 1900s. The campaign to examine Leopold's regime became the first 
+mass human rights movement. Rubber gatherers were tortured, maimed and slaughtered until the turn of 
+the century, when the Western world forced Brussels to call a halt. Finally, in 1908, the Belgian parliament 
+compelled the King to cede the Congo Free State to Belgium. Emperor Franz Joseph of Austria-Hungary once 
+described his fellow ruler as a "thoroughly bad man." Though he extracted a personal fortune from the 
+Congo, his harsh regime was directly or indirectly responsible for the death of millions of people.[PARAGRAPH:1]Though 
+extremely disliked by his subjects at the end of his reign — his funeral cortege was booed — Leopold 
+II is remembered today by many Belgians as the "Builder King" (Koning-Bouwer in Dutch, le Roi-Bâtisseur 
+in French) because he commissioned a great number of buildings and urban projects, mainly in Brussels, 
+Ostend and Antwerp. These buildings include the Royal Glasshouses in the grounds of the Palace at Laken, 
+the Japanese Tower, the Chinese Pavilion, the Musée du Congo, and their surrounding park in Tervuren, 
+the Cinquantenaire in Brussels, and the Antwerp railway station hall. He also built an important country 
+estate in Saint-Jean-Cap-Ferrat on the French Riviera, including the Villa des Cèdres, which is now a 
+botanical garden. These were all built using the profits from the Congo. In 1900, he created the Royal 
+Trust, by which means he donated most of his property to the Belgian nation. Leopold II is still a controversial 
+figure in the Democratic Republic of Congo, with statues to him going up and being torn down quickly.</French>
+		<German>[H1]Leopold II[\H1][NEWLINE][BOLD]King of the Belgians[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] 1835 
+- 1909 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Leopold II was King of the Belgians. 
+Born in Brussels the second (but eldest surviving) son of Leopold I and Louise-Marie of Orléans, he succeeded 
+his father to the throne in 1865 and remained king until his death. He was the brother of Empress Carlota 
+of Mexico and first cousin to Queen Victoria of the United Kingdom. Leopold is chiefly remembered as 
+the founder and sole owner of the Congo Free State, a private project undertaken by the King. Leopold 
+fervently believed that overseas colonies were the key to a country's greatness, and he worked tirelessly 
+to acquire colonial territory for Belgium. Neither the Belgian people nor the Belgian government were 
+interested, however, and Leopold eventually began trying to acquire a colony in his private capacity 
+as an ordinary citizen. The Belgian government lent him money for this venture.[PARAGRAPH:1]He used Henry 
+Morton Stanley to help him lay claim to the Congo, an area now known as the Democratic Republic of the 
+Congo. Leopold ran the Congo brutally, by proxy through a mercenary force for his own personal gain. 
+Forced labor was extorted from innocent civilians. The abuses suffered were horrific not only in the 
+rubber industry, including enslavement and mutilation of the native population. Missionary John Harris 
+of Baringa, for example, was so shocked by what he had come across that he wrote to Leopold's chief agent 
+in the Congo saying: "I have just returned from a journey inland to the village of Insongo Mboyo. The 
+abject misery and utter abandon is positively indescribable. I was so moved, Your Excellency, by the 
+people's stories that I took the liberty of promising them that in future you will only kill them for 
+crimes they commit."[PARAGRAPH:1]Reports of outrageous exploitation and widespread human rights abuses 
+led to international outcry in the early 1900s. The campaign to examine Leopold's regime became the first 
+mass human rights movement. Rubber gatherers were tortured, maimed and slaughtered until the turn of 
+the century, when the Western world forced Brussels to call a halt. Finally, in 1908, the Belgian parliament 
+compelled the King to cede the Congo Free State to Belgium. Emperor Franz Joseph of Austria-Hungary once 
+described his fellow ruler as a "thoroughly bad man." Though he extracted a personal fortune from the 
+Congo, his harsh regime was directly or indirectly responsible for the death of millions of people.[PARAGRAPH:1]Though 
+extremely disliked by his subjects at the end of his reign — his funeral cortege was booed — Leopold 
+II is remembered today by many Belgians as the "Builder King" (Koning-Bouwer in Dutch, le Roi-Bâtisseur 
+in French) because he commissioned a great number of buildings and urban projects, mainly in Brussels, 
+Ostend and Antwerp. These buildings include the Royal Glasshouses in the grounds of the Palace at Laken, 
+the Japanese Tower, the Chinese Pavilion, the Musée du Congo, and their surrounding park in Tervuren, 
+the Cinquantenaire in Brussels, and the Antwerp railway station hall. He also built an important country 
+estate in Saint-Jean-Cap-Ferrat on the French Riviera, including the Villa des Cèdres, which is now a 
+botanical garden. These were all built using the profits from the Congo. In 1900, he created the Royal 
+Trust, by which means he donated most of his property to the Belgian nation. Leopold II is still a controversial 
+figure in the Democratic Republic of Congo, with statues to him going up and being torn down quickly.</German>
+		<Italian>[H1]Leopold II[\H1][NEWLINE][BOLD]King of the Belgians[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] 
+1835 - 1909 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Leopold II was King of the Belgians. 
+Born in Brussels the second (but eldest surviving) son of Leopold I and Louise-Marie of Orléans, he succeeded 
+his father to the throne in 1865 and remained king until his death. He was the brother of Empress Carlota 
+of Mexico and first cousin to Queen Victoria of the United Kingdom. Leopold is chiefly remembered as 
+the founder and sole owner of the Congo Free State, a private project undertaken by the King. Leopold 
+fervently believed that overseas colonies were the key to a country's greatness, and he worked tirelessly 
+to acquire colonial territory for Belgium. Neither the Belgian people nor the Belgian government were 
+interested, however, and Leopold eventually began trying to acquire a colony in his private capacity 
+as an ordinary citizen. The Belgian government lent him money for this venture.[PARAGRAPH:1]He used Henry 
+Morton Stanley to help him lay claim to the Congo, an area now known as the Democratic Republic of the 
+Congo. Leopold ran the Congo brutally, by proxy through a mercenary force for his own personal gain. 
+Forced labor was extorted from innocent civilians. The abuses suffered were horrific not only in the 
+rubber industry, including enslavement and mutilation of the native population. Missionary John Harris 
+of Baringa, for example, was so shocked by what he had come across that he wrote to Leopold's chief agent 
+in the Congo saying: "I have just returned from a journey inland to the village of Insongo Mboyo. The 
+abject misery and utter abandon is positively indescribable. I was so moved, Your Excellency, by the 
+people's stories that I took the liberty of promising them that in future you will only kill them for 
+crimes they commit."[PARAGRAPH:1]Reports of outrageous exploitation and widespread human rights abuses 
+led to international outcry in the early 1900s. The campaign to examine Leopold's regime became the first 
+mass human rights movement. Rubber gatherers were tortured, maimed and slaughtered until the turn of 
+the century, when the Western world forced Brussels to call a halt. Finally, in 1908, the Belgian parliament 
+compelled the King to cede the Congo Free State to Belgium. Emperor Franz Joseph of Austria-Hungary once 
+described his fellow ruler as a "thoroughly bad man." Though he extracted a personal fortune from the 
+Congo, his harsh regime was directly or indirectly responsible for the death of millions of people.[PARAGRAPH:1]Though 
+extremely disliked by his subjects at the end of his reign — his funeral cortege was booed — Leopold 
+II is remembered today by many Belgians as the "Builder King" (Koning-Bouwer in Dutch, le Roi-Bâtisseur 
+in French) because he commissioned a great number of buildings and urban projects, mainly in Brussels, 
+Ostend and Antwerp. These buildings include the Royal Glasshouses in the grounds of the Palace at Laken, 
+the Japanese Tower, the Chinese Pavilion, the Musée du Congo, and their surrounding park in Tervuren, 
+the Cinquantenaire in Brussels, and the Antwerp railway station hall. He also built an important country 
+estate in Saint-Jean-Cap-Ferrat on the French Riviera, including the Villa des Cèdres, which is now a 
+botanical garden. These were all built using the profits from the Congo. In 1900, he created the Royal 
+Trust, by which means he donated most of his property to the Belgian nation. Leopold II is still a controversial 
+figure in the Democratic Republic of Congo, with statues to him going up and being torn down quickly.</Italian>
+		<Spanish>Leopoldo II de Bélgica (Léopold Louis Philippe Marie Victor de Saxe-Cobourg et Gotha) (Bruselas, 9 de abril de 1835 – 17 de diciembre de 1909), fue el segundo rey de los belgas y propietario del Estado Libre del Congo. Sucedió a su padre, Leopoldo I, en el trono de Bélgica en 1865 y permaneció hasta su muerte. Leopoldo II es responsable de la muerte de más de 8 millones de congoleños .</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_LEOPOLD_II_1</Tag>
+		<English>You are in front of [OUR_NAME] of the mighty [OUR_EMPIRE]. Our friends feast between the countless treasures that comes from the outer sea ... if you are not among the, well, after killing 10 millions in the work fields, my lands are more than tristhy for new workes.</English>
+		<French>You are in front of [OUR_NAME] of the mighty [OUR_EMPIRE]. Our friends feast between the countless treasures that comes from the outer sea ... if you are not among the, well, after killing 10 millions in the work fields, my lands are more than tristhy for new workes.</French>
+		<German>You are in front of [OUR_NAME] of the mighty [OUR_EMPIRE]. Our friends feast between the countless treasures that comes from the outer sea ... if you are not among the, well, after killing 10 millions in the work fields, my lands are more than tristhy for new workes.</German>
+		<Italian>You are in front of [OUR_NAME] of the mighty [OUR_EMPIRE]. Our friends feast between the countless treasures that comes from the outer sea ... if you are not among the, well, after killing 10 millions in the work fields, my lands are more than tristhy for new workes.</Italian>
+		<Spanish>Estas frente a [OUR_NAME] del gran [OUR_EMPIRE]. Nuestros amigos festejan entre las incontables riquezas que llegan del otro lado del mar ... si no estas entre ellos, bien, despues de matar 10 millones en los campos de trabajo, mis tierras estan sedientas de nueva mano de obra.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_ROGIER</Tag>
+		<English>Charles Rogier</English>
+		<French>Charles Rogier</French>
+		<German>Charles Rogier</German>
+		<Italian>Charles Rogier</Italian>
+		<Spanish>Charles Rogier</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_ROGIER_PEDIA</Tag>
+		<English>[H1]Charles Rogier[\H1][NEWLINE][BOLD]Belgian Statesman[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] 
+1800 - 1855 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Charles Latour Rogier (17 August 
+1800–27 May 1885) was a Belgian liberal statesman and a leader in the Belgian Revolution of 1830. He 
+was born at Saint-Quentin, France, studied law at the University of Liège and was admitted to the bar, 
+devoting himself, however, with greater zeal to journalistic campaigns against the Dutch rule in Belgium. 
+Upon the outbreak of the insurrection at Brussels in August, 1830, Rogier went to Brussels with about 
+300 Liègeois (citizens of Liège) militia, where he gained note as one of the most active among the patriot 
+leaders. He became a member of the provisional government established in October, and after the election 
+of Leopold as King in June 1831, was made Governor of Antwerp. He was the eighth Belgian Prime Minister 
+on two separate occasions: first from 1847 to 1852, and secondly from 1857 to 1868. He brought into existence 
+the Belgian railway system during his first stint as Interior Minister from 1832 to 1834. From 1840 to 
+1841 he was Minister of Public Works and Education, and from 1861 to 1868 he served as Minister for Foreign 
+Affairs.[PARAGRAPH:1]He descended from a Belgian family settled in the department of the Nord in France. 
+His father, an officer in the French army, perished in the Russian campaign of 1812; and the family moved 
+to Liege, where the eldest son, Firmin, held a professorship. Charles, after being called to the bar, 
+founded in 1824, in collaboration with his lifelong friends Paul Devaux and Joseph Lebeau, the journal 
+Mathieu Laensberg (afterwards Le Politique), which by its ardent patriotism and its attacks on the Dutch 
+administration soon acquired a widespread influence. Today, one of central Brussels' landmarks, the Place 
+Rogier, commemorates his name.</English>
+		<French>[H1]Charles Rogier[\H1][NEWLINE][BOLD]Belgian Statesman[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] 
+1800 - 1855 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Charles Latour Rogier (17 August 
+1800–27 May 1885) was a Belgian liberal statesman and a leader in the Belgian Revolution of 1830. He 
+was born at Saint-Quentin, France, studied law at the University of Liège and was admitted to the bar, 
+devoting himself, however, with greater zeal to journalistic campaigns against the Dutch rule in Belgium. 
+Upon the outbreak of the insurrection at Brussels in August, 1830, Rogier went to Brussels with about 
+300 Liègeois (citizens of Liège) militia, where he gained note as one of the most active among the patriot 
+leaders. He became a member of the provisional government established in October, and after the election 
+of Leopold as King in June 1831, was made Governor of Antwerp. He was the eighth Belgian Prime Minister 
+on two separate occasions: first from 1847 to 1852, and secondly from 1857 to 1868. He brought into existence 
+the Belgian railway system during his first stint as Interior Minister from 1832 to 1834. From 1840 to 
+1841 he was Minister of Public Works and Education, and from 1861 to 1868 he served as Minister for Foreign 
+Affairs.[PARAGRAPH:1]He descended from a Belgian family settled in the department of the Nord in France. 
+His father, an officer in the French army, perished in the Russian campaign of 1812; and the family moved 
+to Liege, where the eldest son, Firmin, held a professorship. Charles, after being called to the bar, 
+founded in 1824, in collaboration with his lifelong friends Paul Devaux and Joseph Lebeau, the journal 
+Mathieu Laensberg (afterwards Le Politique), which by its ardent patriotism and its attacks on the Dutch 
+administration soon acquired a widespread influence. Today, one of central Brussels' landmarks, the Place 
+Rogier, commemorates his name.</French>
+		<German>[H1]Charles Rogier[\H1][NEWLINE][BOLD]Belgian Statesman[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] 
+1800 - 1855 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Charles Latour Rogier (17 August 
+1800–27 May 1885) was a Belgian liberal statesman and a leader in the Belgian Revolution of 1830. He 
+was born at Saint-Quentin, France, studied law at the University of Liège and was admitted to the bar, 
+devoting himself, however, with greater zeal to journalistic campaigns against the Dutch rule in Belgium. 
+Upon the outbreak of the insurrection at Brussels in August, 1830, Rogier went to Brussels with about 
+300 Liègeois (citizens of Liège) militia, where he gained note as one of the most active among the patriot 
+leaders. He became a member of the provisional government established in October, and after the election 
+of Leopold as King in June 1831, was made Governor of Antwerp. He was the eighth Belgian Prime Minister 
+on two separate occasions: first from 1847 to 1852, and secondly from 1857 to 1868. He brought into existence 
+the Belgian railway system during his first stint as Interior Minister from 1832 to 1834. From 1840 to 
+1841 he was Minister of Public Works and Education, and from 1861 to 1868 he served as Minister for Foreign 
+Affairs.[PARAGRAPH:1]He descended from a Belgian family settled in the department of the Nord in France. 
+His father, an officer in the French army, perished in the Russian campaign of 1812; and the family moved 
+to Liege, where the eldest son, Firmin, held a professorship. Charles, after being called to the bar, 
+founded in 1824, in collaboration with his lifelong friends Paul Devaux and Joseph Lebeau, the journal 
+Mathieu Laensberg (afterwards Le Politique), which by its ardent patriotism and its attacks on the Dutch 
+administration soon acquired a widespread influence. Today, one of central Brussels' landmarks, the Place 
+Rogier, commemorates his name.</German>
+		<Italian>[H1]Charles Rogier[\H1][NEWLINE][BOLD]Belgian Statesman[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] 
+1800 - 1855 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Charles Latour Rogier (17 August 
+1800–27 May 1885) was a Belgian liberal statesman and a leader in the Belgian Revolution of 1830. He 
+was born at Saint-Quentin, France, studied law at the University of Liège and was admitted to the bar, 
+devoting himself, however, with greater zeal to journalistic campaigns against the Dutch rule in Belgium. 
+Upon the outbreak of the insurrection at Brussels in August, 1830, Rogier went to Brussels with about 
+300 Liègeois (citizens of Liège) militia, where he gained note as one of the most active among the patriot 
+leaders. He became a member of the provisional government established in October, and after the election 
+of Leopold as King in June 1831, was made Governor of Antwerp. He was the eighth Belgian Prime Minister 
+on two separate occasions: first from 1847 to 1852, and secondly from 1857 to 1868. He brought into existence 
+the Belgian railway system during his first stint as Interior Minister from 1832 to 1834. From 1840 to 
+1841 he was Minister of Public Works and Education, and from 1861 to 1868 he served as Minister for Foreign 
+Affairs.[PARAGRAPH:1]He descended from a Belgian family settled in the department of the Nord in France. 
+His father, an officer in the French army, perished in the Russian campaign of 1812; and the family moved 
+to Liege, where the eldest son, Firmin, held a professorship. Charles, after being called to the bar, 
+founded in 1824, in collaboration with his lifelong friends Paul Devaux and Joseph Lebeau, the journal 
+Mathieu Laensberg (afterwards Le Politique), which by its ardent patriotism and its attacks on the Dutch 
+administration soon acquired a widespread influence. Today, one of central Brussels' landmarks, the Place 
+Rogier, commemorates his name.</Italian>
+		<Spanish>Charles Latour Rogier (San Quintín, 17 de agosto de 1800- Saint-Josse-ten-Noode, 27 de mayo 
+de 1885) periodista y político belga líder en la Revolución belga de 1830. Fue Primer ministro de Bélgica 
+de 1847 a 1852, y de 1857 a 1868.Descendiente de una familia belga asentada en Francia; su padre, un 
+oficial del Ejército Francés falleció en una ofensiva rusa de 1812. La familia se mudó a Lieja donde 
+era profesor el primogénito, Firmin. Charles Rogier estudió derecho en la Universidad de Lieja y fue 
+admitido en el colegio de abogados, pero se dedicó al periodismo con campañas contra el mando holandés 
+en Bélgica. En 1824, fundó con sus amigos Paul Devaux y Joseph Lebeau, la publicación Mathieu Laensberg 
+(más tarde Le Politique).Al estallar la insurrección contra los holandeses en Bruselas en agosto de 1830, 
+Rogier acudió a la lucha con una milicia de 300 liejenses. En Bruselas se ganó el reconocimiento como 
+uno de los más activos líderes patrióticos convirtiéndose en miembro de la llamada Comisión Administrativa 
+luego Gobierno Provisional. Su opinión fue decisiva en el nombramiento por la Comisión Administrativa 
+de su amigo el militar español de origen flamenco Juan Van Halen como Comandante en Jefe de las Fuerzas 
+Activas de Bélgica, que en lo que ahora se llamaría una "guerra relámpago" logró expulsar a los holandeses 
+primero de Bruselas y luego de todo el país. Rogier había traducido las Memorias de Van Halen y las había 
+hecho publicar en París en 1827 e inmediatamente en Lieja y en Bruselas. Tras la elección de Leopoldo 
+I como rey en junio de 1831, Rogier fue Gobernador de Amberes. Como ministro de Interior de 1832 a 1834 
+asentó las bases para una red ferroviaria y fue ministro de Obras Públicas y Educación de 1840 1841 y 
+de Asuntos Exteriores de 1861 a 1868.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ROGIER_1</Tag>
+		<English>I am [OUR_NAME] of the great [OUR_EMPIRE]. Tell me, do you need a hand to expel invaders from your country? I can provide 300, no more are needed.</English>
+		<French>I am [OUR_NAME] of the great [OUR_EMPIRE]. Tell me, do you need a hand to expel invaders from your country? I can provide 300, no more are needed.</French>
+		<German>I am [OUR_NAME] of the great [OUR_EMPIRE]. Tell me, do you need a hand to expel invaders from your country? I can provide 300, no more are needed.</German>
+		<Italian>I am [OUR_NAME] of the great [OUR_EMPIRE]. Tell me, do you need a hand to expel invaders from your country? I can provide 300, no more are needed.</Italian>
+		<Spanish>Soy [OUR_NAME] del gran [OUR_EMPIRE]. Dime, necesitas que te eche una mano para expulsar al invasor de tus tierras? Te dare 300, no haran falta mas.</Spanish>
+	</TEXT>
+</Civ4GameText>

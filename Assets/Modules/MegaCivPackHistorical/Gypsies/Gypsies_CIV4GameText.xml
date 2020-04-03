@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- Modified by the Civ Gold Team -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GYPSIES_DESC</Tag>
+		<English>Gypsy Empire</English>
+		<French>Gypsy Empire</French>
+		<German>Gypsy Empire</German>
+		<Italian>Gypsy Empire</Italian>
+		<Spanish>Gypsy Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GYPSIES_SHORT_DESC</Tag>
+		<English>Gypsies</English>
+		<French>Gypsies</French>
+		<German>Gypsies</German>
+		<Italian>Gypsies</Italian>
+		<Spanish>Gypsies</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GYPSIES_ADJECTIVE</Tag>
+		<English>
+			<Text>Mughal:Gypsy</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</English>
+		<French>
+			<Text>Mughal:Gypsy</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</French>
+		<German>
+			<Text>Mughal:Gypsy</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</German>
+		<Italian>
+			<Text>Mughal:Gypsy</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mughal:Gypsy</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GYPSIES_PEDIA</Tag>
+		<English>[TAB]The Romani (also spelled Romany), or Roma, are a traditionally itinerant ethnicity living 
+mostly in Europe and the Americas. Ultimately of Northern Indian origin, the Romani are widely known 
+among English-speaking people by the exonym "Gypsies" (or Gipsies). Other exonyms are Ashkali and Balkan 
+Egyptians and Sinti. Romani are dispersed, with their concentrated populations in Europe—especially Central 
+and Eastern Europe and Anatolia, Spain and Southern France. They originated in India and arrived in Mid-West 
+Asia, then Europe, around 1,000 years ago, either separating from the Dom people or, at least, having 
+a similar history; the ancestors of both the Romani and the Dom left North India sometime between the 
+sixth and eleventh century. Since the nineteenth century, some Romani have also migrated to the Americas. 
+There are an estimated one million Roma in the United States; and 800,000 in Brazil, most of whose ancestors 
+emigrated in the nineteenth century from eastern Europe. Brazil also includes some Romani descended from 
+people deported by the government of Portugal during the Inquisition in the colonial era. In migrations 
+since the late nineteenth century, Romani have also moved to other countries in South America and to 
+Canada. The Romani language is divided into several dialects, which add up to an estimated number of 
+speakers larger than two million. The total number of Romani people is at least twice as large (several 
+times as large according to high estimates). Many Romani are native speakers of the language current 
+in their country of residence, or of mixed languages combining the two; those varieties are sometimes 
+called Para-Romani.</English>
+		<French>[TAB]The Romani (also spelled Romany), or Roma, are a traditionally itinerant ethnicity living 
+mostly in Europe and the Americas. Ultimately of Northern Indian origin, the Romani are widely known 
+among English-speaking people by the exonym "Gypsies" (or Gipsies). Other exonyms are Ashkali and Balkan 
+Egyptians and Sinti. Romani are dispersed, with their concentrated populations in Europe—especially Central 
+and Eastern Europe and Anatolia, Spain and Southern France. They originated in India and arrived in Mid-West 
+Asia, then Europe, around 1,000 years ago, either separating from the Dom people or, at least, having 
+a similar history; the ancestors of both the Romani and the Dom left North India sometime between the 
+sixth and eleventh century. Since the nineteenth century, some Romani have also migrated to the Americas. 
+There are an estimated one million Roma in the United States; and 800,000 in Brazil, most of whose ancestors 
+emigrated in the nineteenth century from eastern Europe. Brazil also includes some Romani descended from 
+people deported by the government of Portugal during the Inquisition in the colonial era. In migrations 
+since the late nineteenth century, Romani have also moved to other countries in South America and to 
+Canada. The Romani language is divided into several dialects, which add up to an estimated number of 
+speakers larger than two million. The total number of Romani people is at least twice as large (several 
+times as large according to high estimates). Many Romani are native speakers of the language current 
+in their country of residence, or of mixed languages combining the two; those varieties are sometimes 
+called Para-Romani.</French>
+		<German>[TAB]The Romani (also spelled Romany), or Roma, are a traditionally itinerant ethnicity living 
+mostly in Europe and the Americas. Ultimately of Northern Indian origin, the Romani are widely known 
+among English-speaking people by the exonym "Gypsies" (or Gipsies). Other exonyms are Ashkali and Balkan 
+Egyptians and Sinti. Romani are dispersed, with their concentrated populations in Europe—especially Central 
+and Eastern Europe and Anatolia, Spain and Southern France. They originated in India and arrived in Mid-West 
+Asia, then Europe, around 1,000 years ago, either separating from the Dom people or, at least, having 
+a similar history; the ancestors of both the Romani and the Dom left North India sometime between the 
+sixth and eleventh century. Since the nineteenth century, some Romani have also migrated to the Americas. 
+There are an estimated one million Roma in the United States; and 800,000 in Brazil, most of whose ancestors 
+emigrated in the nineteenth century from eastern Europe. Brazil also includes some Romani descended from 
+people deported by the government of Portugal during the Inquisition in the colonial era. In migrations 
+since the late nineteenth century, Romani have also moved to other countries in South America and to 
+Canada. The Romani language is divided into several dialects, which add up to an estimated number of 
+speakers larger than two million. The total number of Romani people is at least twice as large (several 
+times as large according to high estimates). Many Romani are native speakers of the language current 
+in their country of residence, or of mixed languages combining the two; those varieties are sometimes 
+called Para-Romani.</German>
+		<Italian>[TAB]The Romani (also spelled Romany), or Roma, are a traditionally itinerant ethnicity living 
+mostly in Europe and the Americas. Ultimately of Northern Indian origin, the Romani are widely known 
+among English-speaking people by the exonym "Gypsies" (or Gipsies). Other exonyms are Ashkali and Balkan 
+Egyptians and Sinti. Romani are dispersed, with their concentrated populations in Europe—especially Central 
+and Eastern Europe and Anatolia, Spain and Southern France. They originated in India and arrived in Mid-West 
+Asia, then Europe, around 1,000 years ago, either separating from the Dom people or, at least, having 
+a similar history; the ancestors of both the Romani and the Dom left North India sometime between the 
+sixth and eleventh century. Since the nineteenth century, some Romani have also migrated to the Americas. 
+There are an estimated one million Roma in the United States; and 800,000 in Brazil, most of whose ancestors 
+emigrated in the nineteenth century from eastern Europe. Brazil also includes some Romani descended from 
+people deported by the government of Portugal during the Inquisition in the colonial era. In migrations 
+since the late nineteenth century, Romani have also moved to other countries in South America and to 
+Canada. The Romani language is divided into several dialects, which add up to an estimated number of 
+speakers larger than two million. The total number of Romani people is at least twice as large (several 
+times as large according to high estimates). Many Romani are native speakers of the language current 
+in their country of residence, or of mixed languages combining the two; those varieties are sometimes 
+called Para-Romani.</Italian>
+		<Spanish>[TAB]The Romani (also spelled Romany), or Roma, are a traditionally itinerant ethnicity living 
+mostly in Europe and the Americas. Ultimately of Northern Indian origin, the Romani are widely known 
+among English-speaking people by the exonym "Gypsies" (or Gipsies). Other exonyms are Ashkali and Balkan 
+Egyptians and Sinti. Romani are dispersed, with their concentrated populations in Europe—especially Central 
+and Eastern Europe and Anatolia, Spain and Southern France. They originated in India and arrived in Mid-West 
+Asia, then Europe, around 1,000 years ago, either separating from the Dom people or, at least, having 
+a similar history; the ancestors of both the Romani and the Dom left North India sometime between the 
+sixth and eleventh century. Since the nineteenth century, some Romani have also migrated to the Americas. 
+There are an estimated one million Roma in the United States; and 800,000 in Brazil, most of whose ancestors 
+emigrated in the nineteenth century from eastern Europe. Brazil also includes some Romani descended from 
+people deported by the government of Portugal during the Inquisition in the colonial era. In migrations 
+since the late nineteenth century, Romani have also moved to other countries in South America and to 
+Canada. The Romani language is divided into several dialects, which add up to an estimated number of 
+speakers larger than two million. The total number of Romani people is at least twice as large (several 
+times as large according to high estimates). Many Romani are native speakers of the language current 
+in their country of residence, or of mixed languages combining the two; those varieties are sometimes 
+called Para-Romani.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_RAZVAN</Tag>
+		<English>Stefan Razvan</English>
+		<French>Stefan Razvan</French>
+		<German>Stefan Razvan</German>
+		<Italian>Stefan Razvan</Italian>
+		<Spanish>Stefan Razvan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_RAZVAN_PEDIA</Tag>
+		<English>[H1]Stefan Razvan [\H1][NEWLINE][BOLD]Romani Voivode[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] died 
+December 1595[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Ștefan Răzvan was a Voivode 
+(Prince) of Moldavia (between 24 April 1595 and August 1595) of Romani descent from the historical Romanian 
+state of Wallachia. The father of Ștefan Răzvan was a Muslim Rom from the Ottoman Empire who emigrated 
+north of Danube, in Wallachia, while his mother was a Romanian peasant from the new country of settlement. 
+At that time, all the Romani people living in the Romanian states of Wallachia and Moldavia were slaves. 
+The rule was applied also to any Romani immigrants, excepting the Ottoman citizens. Benefiting of this 
+exception, the father and later the son could remain free and become an active part in the local society. 
+Stefan Razvan appears as a political player at the beginning of Michael the Brave's rule in Wallachia 
+(1593–1601), as a close noble ally of the Wallachian Prince. He previously converted from Islam to Christianity, 
+attracting the wrath of the Ottomans. He had the boyar social status and he was a cultured person. Later 
+he becomes involved in the politics of the neighbouring Romanian country of Moldavia, where he was appointed 
+as part of the Princiary council, with the title of hatman (second in rank in the army after the Prince), 
+during the reign of Aaron the Tyrant. He led the campaigns of the Moldavian army against Tighina, Chilia, 
+Cetatea Albă and Northern Dobruja, then occupied by the Ottomans. Ștefan became very popular among the 
+soldiers and, with their support and with the help of the Transylvanian Prince Sigismund Báthory, he 
+ousted Aaron the Tyrant (whose image was eroded among the population), on 24 April 1595. His leadership 
+did not last long, because the neighboring political power, the Polish-Lithuanian Commonwealth did not 
+agree with Ștefan Răzvan's alliance with Transylvania and Wallachia. They invaded Moldavia in August, 
+bringing Ieremia Movilă as the Prince accepted by the Poles. The decisive battle was on the Suceava's 
+plains (on 3 December 1595), concluded, after three hours of fight, with the Polish victory. Ștefan fled 
+towards Transylvania, but he was captured and impaled.</English>
+		<French>[H1]Stefan Razvan [\H1][NEWLINE][BOLD]Romani Voivode[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] died 
+December 1595[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Ștefan Răzvan was a Voivode 
+(Prince) of Moldavia (between 24 April 1595 and August 1595) of Romani descent from the historical Romanian 
+state of Wallachia. The father of Ștefan Răzvan was a Muslim Rom from the Ottoman Empire who emigrated 
+north of Danube, in Wallachia, while his mother was a Romanian peasant from the new country of settlement. 
+At that time, all the Romani people living in the Romanian states of Wallachia and Moldavia were slaves. 
+The rule was applied also to any Romani immigrants, excepting the Ottoman citizens. Benefiting of this 
+exception, the father and later the son could remain free and become an active part in the local society. 
+Stefan Razvan appears as a political player at the beginning of Michael the Brave's rule in Wallachia 
+(1593–1601), as a close noble ally of the Wallachian Prince. He previously converted from Islam to Christianity, 
+attracting the wrath of the Ottomans. He had the boyar social status and he was a cultured person. Later 
+he becomes involved in the politics of the neighbouring Romanian country of Moldavia, where he was appointed 
+as part of the Princiary council, with the title of hatman (second in rank in the army after the Prince), 
+during the reign of Aaron the Tyrant. He led the campaigns of the Moldavian army against Tighina, Chilia, 
+Cetatea Albă and Northern Dobruja, then occupied by the Ottomans. Ștefan became very popular among the 
+soldiers and, with their support and with the help of the Transylvanian Prince Sigismund Báthory, he 
+ousted Aaron the Tyrant (whose image was eroded among the population), on 24 April 1595. His leadership 
+did not last long, because the neighboring political power, the Polish-Lithuanian Commonwealth did not 
+agree with Ștefan Răzvan's alliance with Transylvania and Wallachia. They invaded Moldavia in August, 
+bringing Ieremia Movilă as the Prince accepted by the Poles. The decisive battle was on the Suceava's 
+plains (on 3 December 1595), concluded, after three hours of fight, with the Polish victory. Ștefan fled 
+towards Transylvania, but he was captured and impaled.</French>
+		<German>[H1]Stefan Razvan [\H1][NEWLINE][BOLD]Romani Voivode[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] died 
+December 1595[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Ștefan Răzvan was a Voivode 
+(Prince) of Moldavia (between 24 April 1595 and August 1595) of Romani descent from the historical Romanian 
+state of Wallachia. The father of Ștefan Răzvan was a Muslim Rom from the Ottoman Empire who emigrated 
+north of Danube, in Wallachia, while his mother was a Romanian peasant from the new country of settlement. 
+At that time, all the Romani people living in the Romanian states of Wallachia and Moldavia were slaves. 
+The rule was applied also to any Romani immigrants, excepting the Ottoman citizens. Benefiting of this 
+exception, the father and later the son could remain free and become an active part in the local society. 
+Stefan Razvan appears as a political player at the beginning of Michael the Brave's rule in Wallachia 
+(1593–1601), as a close noble ally of the Wallachian Prince. He previously converted from Islam to Christianity, 
+attracting the wrath of the Ottomans. He had the boyar social status and he was a cultured person. Later 
+he becomes involved in the politics of the neighbouring Romanian country of Moldavia, where he was appointed 
+as part of the Princiary council, with the title of hatman (second in rank in the army after the Prince), 
+during the reign of Aaron the Tyrant. He led the campaigns of the Moldavian army against Tighina, Chilia, 
+Cetatea Albă and Northern Dobruja, then occupied by the Ottomans. Ștefan became very popular among the 
+soldiers and, with their support and with the help of the Transylvanian Prince Sigismund Báthory, he 
+ousted Aaron the Tyrant (whose image was eroded among the population), on 24 April 1595. His leadership 
+did not last long, because the neighboring political power, the Polish-Lithuanian Commonwealth did not 
+agree with Ștefan Răzvan's alliance with Transylvania and Wallachia. They invaded Moldavia in August, 
+bringing Ieremia Movilă as the Prince accepted by the Poles. The decisive battle was on the Suceava's 
+plains (on 3 December 1595), concluded, after three hours of fight, with the Polish victory. Ștefan fled 
+towards Transylvania, but he was captured and impaled.</German>
+		<Italian>[H1]Stefan Razvan [\H1][NEWLINE][BOLD]Romani Voivode[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] died 
+December 1595[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Ștefan Răzvan was a Voivode 
+(Prince) of Moldavia (between 24 April 1595 and August 1595) of Romani descent from the historical Romanian 
+state of Wallachia. The father of Ștefan Răzvan was a Muslim Rom from the Ottoman Empire who emigrated 
+north of Danube, in Wallachia, while his mother was a Romanian peasant from the new country of settlement. 
+At that time, all the Romani people living in the Romanian states of Wallachia and Moldavia were slaves. 
+The rule was applied also to any Romani immigrants, excepting the Ottoman citizens. Benefiting of this 
+exception, the father and later the son could remain free and become an active part in the local society. 
+Stefan Razvan appears as a political player at the beginning of Michael the Brave's rule in Wallachia 
+(1593–1601), as a close noble ally of the Wallachian Prince. He previously converted from Islam to Christianity, 
+attracting the wrath of the Ottomans. He had the boyar social status and he was a cultured person. Later 
+he becomes involved in the politics of the neighbouring Romanian country of Moldavia, where he was appointed 
+as part of the Princiary council, with the title of hatman (second in rank in the army after the Prince), 
+during the reign of Aaron the Tyrant. He led the campaigns of the Moldavian army against Tighina, Chilia, 
+Cetatea Albă and Northern Dobruja, then occupied by the Ottomans. Ștefan became very popular among the 
+soldiers and, with their support and with the help of the Transylvanian Prince Sigismund Báthory, he 
+ousted Aaron the Tyrant (whose image was eroded among the population), on 24 April 1595. His leadership 
+did not last long, because the neighboring political power, the Polish-Lithuanian Commonwealth did not 
+agree with Ștefan Răzvan's alliance with Transylvania and Wallachia. They invaded Moldavia in August, 
+bringing Ieremia Movilă as the Prince accepted by the Poles. The decisive battle was on the Suceava's 
+plains (on 3 December 1595), concluded, after three hours of fight, with the Polish victory. Ștefan fled 
+towards Transylvania, but he was captured and impaled.</Italian>
+		<Spanish>[H1]Stefan Razvan [\H1][NEWLINE][BOLD]Romani Voivode[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] died 
+December 1595[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Ștefan Răzvan was a Voivode 
+(Prince) of Moldavia (between 24 April 1595 and August 1595) of Romani descent from the historical Romanian 
+state of Wallachia. The father of Ștefan Răzvan was a Muslim Rom from the Ottoman Empire who emigrated 
+north of Danube, in Wallachia, while his mother was a Romanian peasant from the new country of settlement. 
+At that time, all the Romani people living in the Romanian states of Wallachia and Moldavia were slaves. 
+The rule was applied also to any Romani immigrants, excepting the Ottoman citizens. Benefiting of this 
+exception, the father and later the son could remain free and become an active part in the local society. 
+Stefan Razvan appears as a political player at the beginning of Michael the Brave's rule in Wallachia 
+(1593–1601), as a close noble ally of the Wallachian Prince. He previously converted from Islam to Christianity, 
+attracting the wrath of the Ottomans. He had the boyar social status and he was a cultured person. Later 
+he becomes involved in the politics of the neighbouring Romanian country of Moldavia, where he was appointed 
+as part of the Princiary council, with the title of hatman (second in rank in the army after the Prince), 
+during the reign of Aaron the Tyrant. He led the campaigns of the Moldavian army against Tighina, Chilia, 
+Cetatea Albă and Northern Dobruja, then occupied by the Ottomans. Ștefan became very popular among the 
+soldiers and, with their support and with the help of the Transylvanian Prince Sigismund Báthory, he 
+ousted Aaron the Tyrant (whose image was eroded among the population), on 24 April 1595. His leadership 
+did not last long, because the neighboring political power, the Polish-Lithuanian Commonwealth did not 
+agree with Ștefan Răzvan's alliance with Transylvania and Wallachia. They invaded Moldavia in August, 
+bringing Ieremia Movilă as the Prince accepted by the Poles. The decisive battle was on the Suceava's 
+plains (on 3 December 1595), concluded, after three hours of fight, with the Polish victory. Ștefan fled 
+towards Transylvania, but he was captured and impaled.</Spanish>
+	</TEXT>
+</Civ4GameText>

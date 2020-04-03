@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- Modified by the Civ Gold Team -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BAKTRIA_DESC</Tag>
+		<English>Baktrian Empire</English>
+		<French>Baktrian Empire</French>
+		<German>Baktrian Empire</German>
+		<Italian>Baktrian Empire</Italian>
+		<Spanish>Baktrian Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BAKTRIA_SHORT_DESC</Tag>
+		<English>Baktria</English>
+		<French>Baktria</French>
+		<German>Baktria</German>
+		<Italian>Baktria</Italian>
+		<Spanish>Baktria</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BAKTRIA_ADJECTIVE</Tag>
+		<English>Baktrian</English>
+		<French>
+			<Text>Baktrian</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>
+			<Text>Baktrian</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Baktrian</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Baktrian</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BAKTRIA_PEDIA</Tag>
+		<English>[TAB]"Of all the frontiers of the ancient world, none has endured so long in the poetic imagination 
+as the kingdom of Baktria. In those distant haunts of the Hindu Kush, nearly three thousand miles east 
+of Athens, the Hellenes imagined a never-never land untouched by civilization. Rivers of honey oozed 
+on the Baktrian frontier; fierce griffins guarded the precious gold mined by giant ants; people had ears 
+the size of an elephant's, ate their parents, and lived for centuries." According to tradition, the god 
+Dionysos was the first to tame this land, then Herakles, and finally Alexandros. The realities of the 
+kingdom of Baktria are more difficult to come by however, and the influence of the Iranian peoples played 
+a larger role than the legends reveal. While the history and culture of the kingdom of Baktria is obscured 
+in the mists at its home near the top of the world, it is known that at its largest extent it encompassed 
+an area consisting of all of Turkmenistan, Tadzhikistan, Uzbekistan, Afghanistan, and Pakistan, up to 
+the Indus."[PARAGRAPH:2]The Baktrian Kingdom was founded around 250 BC by the Seleukid King Antiochos 
+II's satrap Diodotos in the region, when he secured his satrapy's independence from the seemingly irresponsible 
+Seleukids. Though Diodotos' reign was relatively free of major emergencies, it was exceedingly brief, 
+and was ended by one of the first internal feuds that characterized Baktrian politics for almost all 
+of it's history.[PARAGRAPH:2]In 230 BC, Diodotos was overthrown and killed by Euthydemos, who managed 
+to secure the kingdom's possessions in the North around Ferghana and Sogdiane. During the first decade 
+of his reign, Euthydemos fought frequently and inconclusively with the Parthians in the West, but reportedly 
+secured some minor new Western territories, though these minor operations received no follow-up. Only 
+ten years after his reign began, an expedition out of Alexandreia Eschate, resulted in the first Hellenic 
+contact with China. Though the two peoples did maintain a profitable trade agreement, it led to a great 
+mixing of cultures between both. The Baktrian Hellenes were mostly unaffected (though Chinese goods would 
+eventually grace the shelves of Baktrian markets more frequently), but the contact supposedly inspired 
+a great many principles within Chinese art that had been previously unseen in the mainstream. One particular 
+notable instance suggested by Chinese records is the first Emperor Qin's terracota army, which might 
+have been inspired by Hellenic figure design. This first expedition also led to the contacts that would 
+eventually develop the Silk Road. With a comfortable frontier in the North and East, Euthydemos eventually 
+met the Seleukid army under the direct command of King Antiochos III, approaching his South-Western border 
+after successful campaigning in the area. During the ensuing conflict, Euthydemos managed to first repel 
+an attack by the full Seleukid force, and to resist a two year siege; eventually managing to convince 
+Antiochos of the value of an independent Hellenic kingdom in the far East. Recognizing the potential 
+danger of the warlike nomads in the East, Antiochos decided to grant Euthydemos' kingdom it's independence 
+so that they might serve as a buffer against further Eastern incursions in to the empire, and sealed 
+the agreement by marrying one of his daughters to Euthydemos' son Demetrios.[PARAGRAPH:2]With the Seleukid 
+threat to his kingdom neutralized, the Baktrians began focusing on conquest and the assimilation of several 
+Western territories. Only a few years after Antiochos' departure, Euthydemos managed to absorb some of 
+the old Northern provinces of Persia, and finally managed to subdue much of Parthia, thanks to their 
+state of weakness after Antiochos' victories against them. Having secured much of Parthia, Euthydemos 
+ruled for about a decade more before his death, of seemingly natural causes. During this time and the 
+early years of his son's rule, the Baktrian borders remained static, save for a few varying losses and 
+acquisitions in the West. His most significant undertaking, however, was an invasion of the Sungan kingdom 
+in Northern India. This invasion was incredibly successful, with Demetrios securing almost all of the 
+Sungan possessions, up to their capital - bringing the Hellenic rulers for the first time into power 
+over lands heavily populated by an Indian majority. The influx of Hellenes into these possessions brought 
+about a culture mingling between the Buddhists of India and the Hellenes, that would continue for five 
+centuries after the rule of Hellenes ended in the region, influencing modern Buddhism in a variety of 
+ways - and creating the Gandhara culture that would last a millenia. Examples of this Hellenic influence 
+are more apparent then most would imagine, as the first statues of the Buddha himself were very likely 
+executed by Hellenic artisans or commissioned by Hellenes. Before the Hellenes' arrival, most Buddhists 
+in Northern India represented the Buddha with a small plethora of symbols; almost never giving him his 
+human form in their design. It was also the Hellenes who first depicted him as standing or walking in 
+their statuary design.[PARAGRAPH:2]By 175 BC, the conquest of India was completed, and most of Northern 
+and North-Western India wasin Hellenic hands. Hellenic rule here was so successful, that it would outlast 
+the actual Baktrian kingdom itself in the North, where even at this time internal feuding was once again 
+disrupting the kingdom's growth. In Baktria itself, Antiochos III's cousin Eukratides had managed to 
+secure the loyalty of all Demetrios' possessions before the path he followed to India. At the beginning 
+of his rule, the Parthians reconquored the Baktrian's Western possessions, and Demetrios' brother Anthimachos 
+I led an unsuccessful resistance to his rebellion, weakening him against the eventual reprisals of Demetrios, 
+who was approaching once again from India. The two confronted each other, when Demetrios marched an army 
+of 60,000 men, composed of Hellenes, Indians, and even some of his levies from inside Baktria itself. 
+Despite numerical superiority, Eukratides managed to defeat Demetrios, forcing him to retreat into India 
+- where his successors would rule for almost two centuries, promoting a further melding of cultures that 
+would nearly complete the development of the Gandhara culture, and the creation of a Greaco-Hindu Buddhist 
+pantheon focused around Apollo and the Buddha. Though Demetrius had been defeated by the Greaco-Baktrian 
+army, his future successor Menandros I took his revenge for him, by recapturing most of Southern Baktria 
+from Eukratides' successor, Eukratides II. After only a few years on the throne, Eukratides was also 
+replaced through the political maneuvering of Platon Epiphanes around 166 BC, who ruled for twenty years 
+of territorial loss and internal feuding. Upon Eukratides' death, Heliokles came into power, and ruled 
+over the finally collapsing Graeco-Baktrian kingdom. The kingdom's final downfall came in 125 when he 
+abandoned Baktria to the Yuezhi who had been eating up his territory for most of his rule, and moved 
+his capital into the Hellenic territory of Northern India.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_DIODOTUS</Tag>
+		<English>Diodotus I</English>
+		<French>
+			<Text>Diodotus I</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Diodotus I</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Diodotus I</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Diodotus I</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_DIODOTUS_PEDIA</Tag>
+		<English>[H1]Diodotus[\H1][NEWLINE][BOLD]Satrap of the Baktrian Kingdom[\BOLD][NEWLINE][BOLD]Ruled: 
+[\BOLD] 3rd Century BC[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB] Satrap (governor) 
+of the Seleucid province of Baktria, who, with his son of the same name, founded the Greek kingdom of 
+Baktria.[NEWLINE][TAB]At first subject to the Seleucid king Antiochus I and later to Antiochus II, Diodotus 
+rebelled in about 250 and took the title of king. Little is known of his reign, but, according to some 
+scholars, the Seleucid king Seleucus II, in order to secure Diodotus' friendship, married one of his 
+sisters to him during a time (246) when the Seleucid Empire was in chaos. Diodotus was succeeded by his 
+son, Diodotus II, and after his death was called by the cult-name Soter (Saviour).</English>
+		<French>[H1]Diodotus[\H1][NEWLINE][BOLD]Satrap of the Baktrian Kingdom[\BOLD][NEWLINE][BOLD]Ruled: 
+[\BOLD] 3rd Century BC[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB] Satrap (governor) 
+of the Seleucid province of Baktria, who, with his son of the same name, founded the Greek kingdom of 
+Baktria.[NEWLINE][TAB]At first subject to the Seleucid king Antiochus I and later to Antiochus II, Diodotus 
+rebelled in about 250 and took the title of king. Little is known of his reign, but, according to some 
+scholars, the Seleucid king Seleucus II, in order to secure Diodotus' friendship, married one of his 
+sisters to him during a time (246) when the Seleucid Empire was in chaos. Diodotus was succeeded by his 
+son, Diodotus II, and after his death was called by the cult-name Soter (Saviour).</French>
+		<German>[H1]Diodotus[\H1][NEWLINE][BOLD]Satrap of the Baktrian Kingdom[\BOLD][NEWLINE][BOLD]Ruled: 
+[\BOLD] 3rd Century BC[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB] Satrap (governor) 
+of the Seleucid province of Baktria, who, with his son of the same name, founded the Greek kingdom of 
+Baktria.[NEWLINE][TAB]At first subject to the Seleucid king Antiochus I and later to Antiochus II, Diodotus 
+rebelled in about 250 and took the title of king. Little is known of his reign, but, according to some 
+scholars, the Seleucid king Seleucus II, in order to secure Diodotus' friendship, married one of his 
+sisters to him during a time (246) when the Seleucid Empire was in chaos. Diodotus was succeeded by his 
+son, Diodotus II, and after his death was called by the cult-name Soter (Saviour).</German>
+		<Italian>[H1]Diodotus[\H1][NEWLINE][BOLD]Satrap of the Baktrian Kingdom[\BOLD][NEWLINE][BOLD]Ruled: 
+[\BOLD] 3rd Century BC[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB] Satrap (governor) 
+of the Seleucid province of Baktria, who, with his son of the same name, founded the Greek kingdom of 
+Baktria.[NEWLINE][TAB]At first subject to the Seleucid king Antiochus I and later to Antiochus II, Diodotus 
+rebelled in about 250 and took the title of king. Little is known of his reign, but, according to some 
+scholars, the Seleucid king Seleucus II, in order to secure Diodotus' friendship, married one of his 
+sisters to him during a time (246) when the Seleucid Empire was in chaos. Diodotus was succeeded by his 
+son, Diodotus II, and after his death was called by the cult-name Soter (Saviour).</Italian>
+		<Spanish>[H1]Diodotus[\H1][NEWLINE][BOLD]Satrap of the Baktrian Kingdom[\BOLD][NEWLINE][BOLD]Ruled: 
+[\BOLD] 3rd Century BC[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB] Satrap (governor) 
+of the Seleucid province of Baktria, who, with his son of the same name, founded the Greek kingdom of 
+Baktria.[NEWLINE][TAB]At first subject to the Seleucid king Antiochus I and later to Antiochus II, Diodotus 
+rebelled in about 250 and took the title of king. Little is known of his reign, but, according to some 
+scholars, the Seleucid king Seleucus II, in order to secure Diodotus' friendship, married one of his 
+sisters to him during a time (246) when the Seleucid Empire was in chaos. Diodotus was succeeded by his 
+son, Diodotus II, and after his death was called by the cult-name Soter (Saviour).</Spanish>
+		<Russian>[H1]Diodotus[\H1][NEWLINE][BOLD]Satrap of the Baktrian Kingdom[\BOLD][NEWLINE][BOLD]Ruled: 
+[\BOLD] 3rd Century BC[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB] Satrap (governor) 
+of the Seleucid province of Baktria, who, with his son of the same name, founded the Greek kingdom of 
+Baktria.[NEWLINE][TAB]At first subject to the Seleucid king Antiochus I and later to Antiochus II, Diodotus 
+rebelled in about 250 and took the title of king. Little is known of his reign, but, according to some 
+scholars, the Seleucid king Seleucus II, in order to secure Diodotus' friendship, married one of his 
+sisters to him during a time (246) when the Seleucid Empire was in chaos. Diodotus was succeeded by his 
+son, Diodotus II, and after his death was called by the cult-name Soter (Saviour).</Russian>
+		<Chinese>[H1]Diodotus[\H1][NEWLINE][BOLD]Satrap of the Baktrian Kingdom[\BOLD][NEWLINE][BOLD]Ruled: 
+[\BOLD] 3rd Century BC[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB] Satrap (governor) 
+of the Seleucid province of Baktria, who, with his son of the same name, founded the Greek kingdom of 
+Baktria.[NEWLINE][TAB]At first subject to the Seleucid king Antiochus I and later to Antiochus II, Diodotus 
+rebelled in about 250 and took the title of king. Little is known of his reign, but, according to some 
+scholars, the Seleucid king Seleucus II, in order to secure Diodotus' friendship, married one of his 
+sisters to him during a time (246) when the Seleucid Empire was in chaos. Diodotus was succeeded by his 
+son, Diodotus II, and after his death was called by the cult-name Soter (Saviour).</Chinese>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_DIODOTUS_1</Tag>
+		<English>Welcome [CT_NAME] I the great and powerful [OUR_NAME] greet you.  Shall we live in peace or shall the warlike peoples of the [OUR_CIV_SHORT] pillage the [CT_EMPIRE]!</English>
+		<French>Welcome [CT_NAME] I the great and powerful [OUR_NAME] greet you.  Shall we live in peace or shall the warlike peoples of the [OUR_CIV_SHORT] pillage the [CT_EMPIRE]!</French>
+		<German>Welcome [CT_NAME] I the great and powerful [OUR_NAME] greet you.  Shall we live in peace or shall the warlike peoples of the [OUR_CIV_SHORT] pillage the [CT_EMPIRE]!</German>
+		<Italian>Welcome [CT_NAME] I the great and powerful [OUR_NAME] greet you.  Shall we live in peace or shall the warlike peoples of the [OUR_CIV_SHORT] pillage the [CT_EMPIRE]!</Italian>
+		<Spanish>Welcome [CT_NAME] I the great and powerful [OUR_NAME] greet you.  Shall we live in peace or shall the warlike peoples of the [OUR_CIV_SHORT] pillage the [CT_EMPIRE]</Spanish>
+		<Russian>Welcome [CT_NAME] I the great and powerful [OUR_NAME] greet you.  Shall we live in peace or shall the warlike peoples of the [OUR_CIV_SHORT] pillage the [CT_EMPIRE]</Russian>
+		<Chinese>Welcome [CT_NAME] I the great and powerful [OUR_NAME] greet you.  Shall we live in peace or shall the warlike peoples of the [OUR_CIV_SHORT] pillage the [CT_EMPIRE]</Chinese>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BAKTRA</Tag>
+		<English>Baktra</English>
+		<French>
+			<Text>Baktra</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Baktra</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Baktra</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Baktra</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KUNDUZ</Tag>
+		<English>Kunduz</English>
+		<French>
+			<Text>Kunduz</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kunduz</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kunduz</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kunduz</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ALKHANOUM</Tag>
+		<English>Ai Khanoum</English>
+		<French>
+			<Text>Ai Khanoum</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ai Khanoum</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ai Khanoum</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ai Khanoum</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TAKHT-ISANGIN</Tag>
+		<English>Takht-i Sangin</English>
+		<French>
+			<Text>Takht-i Sangin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Takht-i Sangin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Takht-i Sangin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Takht-i Sangin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TASHKURGAN</Tag>
+		<English>Tashkurgan</English>
+		<French>
+			<Text>Tashkurgan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tashkurgan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tashkurgan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tashkurgan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_EMSHITEPE</Tag>
+		<English>Emshi-Tepe</English>
+		<French>
+			<Text>Emshi-Tepe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Emshi-Tepe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Emshi-Tepe</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Emshi-Tepe</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SHIBERGHAN</Tag>
+		<English>Shiberghan</English>
+		<French>
+			<Text>Shiberghan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Shiberghan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Shiberghan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Shiberghan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TILLYATEPE</Tag>
+		<English>Tillya-Tepe</English>
+		<French>
+			<Text>Tillya-Tepe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tillya-Tepe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tillya-Tepe</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tillya-Tepe</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TERMEZ</Tag>
+		<English>Termez</English>
+		<French>
+			<Text>Termez</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Termez</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Termez</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Termez</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KILIF</Tag>
+		<English>Kilif</English>
+		<French>
+			<Text>Kilif</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kilif</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kilif</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kilif</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KAMPYRTEPE</Tag>
+		<English>Kampyr-Tepe</English>
+		<French>
+			<Text>Kampyr-Tepe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kampyr-Tepe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kampyr-Tepe</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kampyr-Tepe</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DALVERZINTEPE</Tag>
+		<English>Dalverzin-Tepe</English>
+		<French>
+			<Text>Dalverzin-Tepe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Dalverzin-Tepe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Dalverzin-Tepe</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Dalverzin-Tepe</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KOBADIAN</Tag>
+		<English>Kobadian</English>
+		<French>
+			<Text>Kobadian</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kobadian</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kobadian</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kobadian</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_AORNOS</Tag>
+		<English>Aornos</English>
+		<French>
+			<Text>Aornos</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Aornos</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Aornos</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Aornos</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GANDARIS</Tag>
+		<English>Gandaris</English>
+		<French>
+			<Text>Gandaris</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Gandaris</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Gandaris</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Gandaris</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+</Civ4GameText>

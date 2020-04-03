@@ -1,0 +1,280 @@
+<?xml version="1.0"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- Modified by the World of Civilization Team -->
+<!-- Interface Schema -->
+<!-- -->
+<Schema xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">
+	<ElementType name="Type" content="textOnly"/>
+<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+	<ElementType name="bTypeDependency" content="textOnly" dt:type="boolean"/>
+	<ElementType name="DependencyType" content="textOnly"/>
+	<ElementType name="AndDependencyTypes" content="eltOnly">
+		<element type="DependencyType" minOccurs="1"/>
+	</ElementType>
+	<ElementType name="OrDependencyTypes" content="eltOnly">
+		<element type="DependencyType" minOccurs="1"/>
+	</ElementType>
+<!-- XMLCOPY				END					MRGENIE		-->	
+	<ElementType name="fRed" content="textOnly"/>
+	<ElementType name="fGreen" content="textOnly"/>
+	<ElementType name="fBlue" content="textOnly"/>
+	<ElementType name="fAlpha" content="textOnly"/>
+	<ElementType name="ColorVal" content="eltOnly">
+		<element type="Type"/>
+<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<element type="bTypeDependency" minOccurs="0"/>
+		<element type="AndDependencyTypes" minOccurs="0"/>
+		<element type="OrDependencyTypes" minOccurs="0"/>
+<!-- XMLCOPY				END					MRGENIE		-->
+		<element type="fRed"/>
+		<element type="fGreen"/>
+		<element type="fBlue"/>
+		<element type="fAlpha"/>
+	</ElementType>
+	<ElementType name="ColorVals" content="eltOnly">
+		<element type="ColorVal" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="ColorTypePrimary" content="textOnly"/>
+	<ElementType name="ColorTypeSecondary" content="textOnly"/>
+	<ElementType name="TextColorType" content="textOnly"/>
+	<ElementType name="PlayerColorInfo" content="eltOnly">
+		<element type="Type"/>
+<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<element type="bTypeDependency" minOccurs="0"/>
+		<element type="AndDependencyTypes" minOccurs="0"/>
+		<element type="OrDependencyTypes" minOccurs="0"/>
+<!-- XMLCOPY				END					MRGENIE		-->
+		<element type="ColorTypePrimary" minOccurs="0"/>
+		<element type="ColorTypeSecondary" minOccurs="0"/>
+		<element type="TextColorType" minOccurs="0"/>
+	</ElementType>
+	<ElementType name="PlayerColorInfos" content="eltOnly">
+		<element type="PlayerColorInfo" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Description" content="textOnly"/>
+	<ElementType name="Help" content="textOnly"/>
+	<ElementType name="CursorType" content="textOnly"/>
+	<ElementType name="Mission" content="textOnly"/>
+	<ElementType name="HotKey" content="textOnly"/>
+	<ElementType name="bAltDown" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bShiftDown" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bCtrlDown" content="textOnly" dt:type="boolean"/>
+	<ElementType name="iHotKeyPriority" content="textOnly" dt:type="int"/>
+	<ElementType name="HotKeyAlt" content="textOnly"/>
+	<ElementType name="bAltDownAlt" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bShiftDownAlt" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bCtrlDownAlt" content="textOnly" dt:type="boolean"/>
+	<ElementType name="iHotKeyPriorityAlt" content="textOnly" dt:type="int"/>
+	<ElementType name="bVisible" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bGotoPlot" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bHighlightPlot" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bSelectType" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bSelectAll" content="textOnly" dt:type="boolean"/>
+	<ElementType name="Button" content="textOnly"/>
+	<ElementType name="iOrderPriority" content="textOnly" dt:type="int"/>
+	<ElementType name="InterfaceModeInfo" content="eltOnly">
+		<element type="Type"/>
+<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<element type="bTypeDependency" minOccurs="0"/>
+		<element type="AndDependencyTypes" minOccurs="0"/>
+		<element type="OrDependencyTypes" minOccurs="0"/>
+<!-- XMLCOPY				END					MRGENIE		-->
+		<element type="Description" minOccurs="0"/>
+		<element type="Help" minOccurs="0"/>
+		<element type="CursorType" minOccurs="0"/>
+		<element type="Mission" minOccurs="0"/>
+		<element type="HotKey" minOccurs="0"/>
+		<element type="bAltDown" minOccurs="0"/>
+		<element type="bShiftDown" minOccurs="0"/>
+		<element type="bCtrlDown" minOccurs="0"/>
+		<element type="iHotKeyPriority" minOccurs="0"/>
+		<element type="HotKeyAlt" minOccurs="0"/>
+		<element type="bAltDownAlt" minOccurs="0"/>
+		<element type="bShiftDownAlt" minOccurs="0"/>
+		<element type="bCtrlDownAlt" minOccurs="0"/>
+		<element type="iHotKeyPriorityAlt" minOccurs="0"/>
+		<element type="bVisible" minOccurs="0"/>
+		<element type="bGotoPlot" minOccurs="0"/>
+		<element type="bHighlightPlot" minOccurs="0"/>
+		<element type="bSelectType" minOccurs="0"/>
+		<element type="bSelectAll" minOccurs="0"/>
+		<element type="Button" minOccurs="0"/>
+		<element type="iOrderPriority" minOccurs="0"/>
+	</ElementType>
+	<ElementType name="InterfaceModeInfos" content="eltOnly">
+		<element type="InterfaceModeInfo" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Texture" content="textOnly"/>
+	<ElementType name="EventCodes" content="eltOnly">
+		<element type="iEnableCode"/>
+		<element type="iDisableCode"/>
+	</ElementType>
+	<ElementType name="iEnableCode" content="textOnly" dt:type="int"/>
+	<ElementType name="iDisableCode" content="textOnly" dt:type="int"/>
+	<ElementType name="AdvisorInfo" content="eltOnly">
+		<element type="Type"/>
+<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<element type="bTypeDependency" minOccurs="0"/>
+		<element type="AndDependencyTypes" minOccurs="0"/>
+		<element type="OrDependencyTypes" minOccurs="0"/>
+<!-- XMLCOPY				END					MRGENIE		-->
+		<element type="Description" minOccurs="0"/>
+		<element type="EventCodes" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="AdvisorInfos" content="eltOnly">
+		<element type="AdvisorInfo" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Event" content="textOnly"/>
+	<ElementType name="iFromState" content="textOnly" dt:type="int"/>
+	<ElementType name="iToState" content="textOnly" dt:type="int"/>
+	<ElementType name="NodeName" content="textOnly"/>
+	<ElementType name="ProjectName" content="textOnly"/>
+	<ElementType name="CameraUpAxis" content="textOnly"/>
+	<ElementType name="InfoType" content="textOnly"/>
+	<ElementType name="PartNumber" content="textOnly" dt:type="int"/>
+	<ElementType name="ArtType" content="textOnly" dt:type="int"/>
+	<ElementType name="EventCode" content="textOnly" dt:type="int"/>
+	<ElementType name="iAnimation" content="textOnly" dt:type="int"/>
+	<ElementType name="FileName" content="textOnly"/>
+	<ElementType name="ThroneRoomCamera" content="eltOnly">
+		<element type="FileName" minOccurs="0"/>
+	</ElementType>
+	<ElementType name="ThroneRoomInfo" content="eltOnly">
+		<element type="Event" minOccurs="0"/>
+		<element type="Description" minOccurs="0"/>
+		<element type="iFromState" minOccurs="0"/>
+		<element type="iToState" minOccurs="0"/>
+		<element type="NodeName" minOccurs="0"/>
+		<element type="iAnimation" minOccurs="0"/>
+	</ElementType>
+	<ElementType name="ThroneRoomInfos" content="eltOnly">
+		<element type="ThroneRoomInfo" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="ThroneRoomCameraInfos" content="eltOnly">
+		<element type="ThroneRoomCamera"/>
+	</ElementType>
+	<ElementType name="ArtStyleType" content="textOnly"/>
+	<ElementType name="EraType" content="textOnly"/>
+	<ElementType name="TextureName" content="textOnly"/>
+	<ElementType name="ThroneRoomStyleInfo" content="eltOnly">
+		<element type="ArtStyleType" minOccurs="0"/>
+		<element type="EraType" minOccurs="0"/>
+		<element type="FileName" minOccurs="0"/>
+		<element type="NodeName" minOccurs="0" maxOccurs="*"/>
+		<element type="TextureName" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="ThroneRoomStyleInfos" content="eltOnly">
+		<element type="ThroneRoomStyleInfo" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Path" content="textOnly"/>
+	<ElementType name="TransitionType" content="textOnly"/>
+	<ElementType name="fStartTime" content="textOnly"/>
+	<ElementType name="SlideShowInfo" content="eltOnly">
+		<element type="Path" minOccurs="0"/>
+		<element type="TransitionType" minOccurs="0"/>
+		<element type="fStartTime" minOccurs="0"/>
+	</ElementType>
+	<ElementType name="SlideShowRandomInfo" content="eltOnly">
+		<element type="Path" minOccurs="0"/>
+	</ElementType>
+	<ElementType name="SlideShowInfos" content="eltOnly">
+		<element type="SlideShowInfo" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="SlideShowRandomInfos" content="eltOnly">
+		<element type="SlideShowRandomInfo" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="MapName" content="textOnly"/>
+	<ElementType name="ModelFile" content="textOnly"/>
+	<ElementType name="Size" content="textOnly"/>
+	<ElementType name="Sizes" content="eltOnly">
+		<element type="Size" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="ClimatePath" content="textOnly"/>
+	<ElementType name="Climates" content="eltOnly">
+		<element type="ClimatePath" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="WaterLevelDecalPath" content="textOnly"/>
+	<ElementType name="WaterLevelDecals" content="eltOnly">
+		<element type="WaterLevelDecalPath" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="WaterLevelGlossPath" content="textOnly"/>
+	<ElementType name="WaterLevelGloss" content="eltOnly">
+		<element type="WaterLevelGlossPath" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="WorldPickerInfo" content="eltOnly">
+		<element type="MapName" minOccurs="0"/>
+		<element type="ModelFile" minOccurs="0"/>
+		<element type="Sizes" minOccurs="0"/>
+		<element type="Climates" minOccurs="0"/>
+		<element type="WaterLevelDecals" minOccurs="0"/>
+		<element type="WaterLevelGloss" minOccurs="0"/>
+	</ElementType>
+	<ElementType name="WorldPickerInfos" content="eltOnly">
+		<element type="WorldPickerInfo" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="SpaceShipInfo" content="eltOnly">
+		<element type="InfoType"/>
+		<element type="NodeName" minOccurs="0"/>
+		<element type="ProjectName" minOccurs="0"/>
+		<element type="CameraUpAxis"/>
+		<element type="PartNumber" minOccurs="0"/>
+		<element type="ArtType" minOccurs="0"/>
+		<element type="EventCode" minOccurs="0"/>
+	</ElementType>
+	<ElementType name="SpaceShipInfos" content="eltOnly">
+		<element type="SpaceShipInfo" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="CameraInfo" content="eltOnly">
+		<element type="Type"/>
+<!-- XMLCOPY				02/20/2008			MRGENIE		-->
+		<element type="bTypeDependency" minOccurs="0"/>
+		<element type="AndDependencyTypes" minOccurs="0"/>
+		<element type="OrDependencyTypes" minOccurs="0"/>
+<!-- XMLCOPY				END					MRGENIE		-->
+		<element type="Description" minOccurs="0"/>
+		<element type="Path" minOccurs="0"/>
+	</ElementType>
+	<ElementType name="CameraInfos" content="eltOnly">
+		<element type="CameraInfo" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Civ4CameraInfos" content="eltOnly">
+		<element type="CameraInfos" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Civ4ColorVals" content="eltOnly">
+		<element type="ColorVals" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Civ4PlayerColorInfos" content="eltOnly">
+		<element type="PlayerColorInfos"/>
+	</ElementType>
+	<ElementType name="Civ4InterfaceModeInfos" content="eltOnly">
+		<element type="InterfaceModeInfos" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Civ4Interface" content="eltOnly">
+		<element type="ColorVals" minOccurs="0" maxOccurs="*"/>
+		<element type="InterfaceModeInfos" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Civ4AdvisorInfos" content="eltOnly">
+		<element type="AdvisorInfos" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Civ4ThroneRoomInfos" content="eltOnly">
+		<element type="ThroneRoomInfos" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Civ4ThroneRoomCameraInfos" content="eltOnly">
+		<element type="ThroneRoomCameraInfos" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Civ4ThroneRoomStyleInfos" content="eltOnly">
+		<element type="ThroneRoomStyleInfos" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Civ4SlideShowInfos" content="eltOnly">
+		<element type="SlideShowInfos" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Civ4SlideShowRandomInfos" content="eltOnly">
+		<element type="SlideShowRandomInfos" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Civ4WorldPickerInfos" content="eltOnly">
+		<element type="WorldPickerInfos" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+	<ElementType name="Civ4SpaceShipInfos" content="eltOnly">
+		<element type="SpaceShipInfos" minOccurs="0" maxOccurs="*"/>
+	</ElementType>
+</Schema>

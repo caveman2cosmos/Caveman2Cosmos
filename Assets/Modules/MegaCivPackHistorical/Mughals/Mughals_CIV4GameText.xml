@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- Modified by the Civ Gold Team -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MUGHALS_DESC</Tag>
+		<English>Mughal Empire</English>
+		<French>Mughal Empire</French>
+		<German>Mughal Empire</German>
+		<Italian>Mughal Empire</Italian>
+		<Spanish>Mughal Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MUGHALS_DESC_DEFAULT</Tag>
+		<English>Mughal Empire</English>
+		<French>Mughal Empire</French>
+		<German>Mughal Empire</German>
+		<Italian>Mughal Empire</Italian>
+		<Spanish>Mughal Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MUGHALS_SHORT_DESC</Tag>
+		<English>Mughals</English>
+		<French>Mughals</French>
+		<German>Mughals</German>
+		<Italian>Mughals</Italian>
+		<Spanish>Mughals</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MUGHALS_ADJECTIVE</Tag>
+		<English>
+			<Text>Mughal:Mughals</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</English>
+		<French>
+			<Text>Mughal:Mughals</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</French>
+		<German>
+			<Text>Mughal:Mughals</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</German>
+		<Italian>
+			<Text>Mughal:Mughals</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mughal:Mughals</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MUGHALS_PEDIA</Tag>
+		<English>[TAB]The Mughal Empire was an Indian-Islamic imperial power that ruled a large portion of 
+the Indian subcontinent which began in 1526, invaded and ruled most of South Asia by the late 17th and 
+early 18th centuries by forming alliance with Indian Maharaja, and ended in the mid-19th century. The 
+Mughal Emperors were descendants of the Timurids, and at the height of their power around 1700, they 
+controlled most of the Indian Subcontinent extending from Bengal in the east to Balochistan in the west, 
+Kashmir in the north to the Kaveri basin in the south. Its population at that time has been estimated 
+as between 110 and 130 million, over a territory of over 4 million sq.km (1.5 million square miles).[PARAGRAPH:1]The 
+"classic period" of the Empire started in 1556 with the accession of Jalaluddin Mohammad Akbar, better 
+known as Akbar the Great. It ended with the death of Emperor Aurangzeb in 1707, although the Empire continued 
+for another 150 years. During this period, the Empire was marked by a highly centralized administration 
+connecting the different regions. All the significant monuments of the Mughals, their most visible legacy, 
+date to this period which was characterised by the expansion of Persian cultural influence in the Indian 
+subcontinent, with brilliant literary, artistic and architectural results.[PARAGRAPH:1]Following 1725 
+the empire declined rapidly, weakened by wars of succession, agrarian crises fueling local revolts, the 
+growth of religious intolerance, the rise of the Maratha, Durrani, and Sikh empires and finally British 
+colonialism. The last king, Bahadur Zafar Shah II, whose rule was restricted to the city of Delhi, was 
+imprisoned and exiled by the British after the Indian Rebellion of 1857.[PARAGRAPH:1]The name Mughal 
+is derived from the original homelands of the Timurids, the Central Asian steppes once conquered by Genghis 
+Khan and hence known as Moghulistan, "Land of Mongols". Although early Mughals spoke the Chagatai language 
+and maintained Turko-Mongol practices, they were essentially Persianized. They transferred the Persian 
+literature and culture to India, thus forming the base for the Indo-Persian culture.</English>
+		<French>[TAB]The Mughal Empire was an Indian-Islamic imperial power that ruled a large portion of the 
+Indian subcontinent which began in 1526, invaded and ruled most of South Asia by the late 17th and early 
+18th centuries by forming alliance with Indian Maharaja, and ended in the mid-19th century. The Mughal 
+Emperors were descendants of the Timurids, and at the height of their power around 1700, they controlled 
+most of the Indian Subcontinent extending from Bengal in the east to Balochistan in the west, Kashmir 
+in the north to the Kaveri basin in the south. Its population at that time has been estimated as between 
+110 and 130 million, over a territory of over 4 million sq.km (1.5 million square miles).[PARAGRAPH:1]The 
+"classic period" of the Empire started in 1556 with the accession of Jalaluddin Mohammad Akbar, better 
+known as Akbar the Great. It ended with the death of Emperor Aurangzeb in 1707, although the Empire continued 
+for another 150 years. During this period, the Empire was marked by a highly centralized administration 
+connecting the different regions. All the significant monuments of the Mughals, their most visible legacy, 
+date to this period which was characterised by the expansion of Persian cultural influence in the Indian 
+subcontinent, with brilliant literary, artistic and architectural results.[PARAGRAPH:1]Following 1725 
+the empire declined rapidly, weakened by wars of succession, agrarian crises fueling local revolts, the 
+growth of religious intolerance, the rise of the Maratha, Durrani, and Sikh empires and finally British 
+colonialism. The last king, Bahadur Zafar Shah II, whose rule was restricted to the city of Delhi, was 
+imprisoned and exiled by the British after the Indian Rebellion of 1857.[PARAGRAPH:1]The name Mughal 
+is derived from the original homelands of the Timurids, the Central Asian steppes once conquered by Genghis 
+Khan and hence known as Moghulistan, "Land of Mongols". Although early Mughals spoke the Chagatai language 
+and maintained Turko-Mongol practices, they were essentially Persianized. They transferred the Persian 
+literature and culture to India, thus forming the base for the Indo-Persian culture.</French>
+		<German>[TAB]The Mughal Empire was an Indian-Islamic imperial power that ruled a large portion of the 
+Indian subcontinent which began in 1526, invaded and ruled most of South Asia by the late 17th and early 
+18th centuries by forming alliance with Indian Maharaja, and ended in the mid-19th century. The Mughal 
+Emperors were descendants of the Timurids, and at the height of their power around 1700, they controlled 
+most of the Indian Subcontinent extending from Bengal in the east to Balochistan in the west, Kashmir 
+in the north to the Kaveri basin in the south. Its population at that time has been estimated as between 
+110 and 130 million, over a territory of over 4 million sq.km (1.5 million square miles).[PARAGRAPH:1]The 
+"classic period" of the Empire started in 1556 with the accession of Jalaluddin Mohammad Akbar, better 
+known as Akbar the Great. It ended with the death of Emperor Aurangzeb in 1707, although the Empire continued 
+for another 150 years. During this period, the Empire was marked by a highly centralized administration 
+connecting the different regions. All the significant monuments of the Mughals, their most visible legacy, 
+date to this period which was characterised by the expansion of Persian cultural influence in the Indian 
+subcontinent, with brilliant literary, artistic and architectural results.[PARAGRAPH:1]Following 1725 
+the empire declined rapidly, weakened by wars of succession, agrarian crises fueling local revolts, the 
+growth of religious intolerance, the rise of the Maratha, Durrani, and Sikh empires and finally British 
+colonialism. The last king, Bahadur Zafar Shah II, whose rule was restricted to the city of Delhi, was 
+imprisoned and exiled by the British after the Indian Rebellion of 1857.[PARAGRAPH:1]The name Mughal 
+is derived from the original homelands of the Timurids, the Central Asian steppes once conquered by Genghis 
+Khan and hence known as Moghulistan, "Land of Mongols". Although early Mughals spoke the Chagatai language 
+and maintained Turko-Mongol practices, they were essentially Persianized. They transferred the Persian 
+literature and culture to India, thus forming the base for the Indo-Persian culture.</German>
+		<Italian>[TAB]The Mughal Empire was an Indian-Islamic imperial power that ruled a large portion of 
+the Indian subcontinent which began in 1526, invaded and ruled most of South Asia by the late 17th and 
+early 18th centuries by forming alliance with Indian Maharaja, and ended in the mid-19th century. The 
+Mughal Emperors were descendants of the Timurids, and at the height of their power around 1700, they 
+controlled most of the Indian Subcontinent extending from Bengal in the east to Balochistan in the west, 
+Kashmir in the north to the Kaveri basin in the south. Its population at that time has been estimated 
+as between 110 and 130 million, over a territory of over 4 million sq.km (1.5 million square miles).[PARAGRAPH:1]The 
+"classic period" of the Empire started in 1556 with the accession of Jalaluddin Mohammad Akbar, better 
+known as Akbar the Great. It ended with the death of Emperor Aurangzeb in 1707, although the Empire continued 
+for another 150 years. During this period, the Empire was marked by a highly centralized administration 
+connecting the different regions. All the significant monuments of the Mughals, their most visible legacy, 
+date to this period which was characterised by the expansion of Persian cultural influence in the Indian 
+subcontinent, with brilliant literary, artistic and architectural results.[PARAGRAPH:1]Following 1725 
+the empire declined rapidly, weakened by wars of succession, agrarian crises fueling local revolts, the 
+growth of religious intolerance, the rise of the Maratha, Durrani, and Sikh empires and finally British 
+colonialism. The last king, Bahadur Zafar Shah II, whose rule was restricted to the city of Delhi, was 
+imprisoned and exiled by the British after the Indian Rebellion of 1857.[PARAGRAPH:1]The name Mughal 
+is derived from the original homelands of the Timurids, the Central Asian steppes once conquered by Genghis 
+Khan and hence known as Moghulistan, "Land of Mongols". Although early Mughals spoke the Chagatai language 
+and maintained Turko-Mongol practices, they were essentially Persianized. They transferred the Persian 
+literature and culture to India, thus forming the base for the Indo-Persian culture.</Italian>
+		<Spanish>[TAB]The Mughal Empire was an Indian-Islamic imperial power that ruled a large portion of 
+the Indian subcontinent which began in 1526, invaded and ruled most of South Asia by the late 17th and 
+early 18th centuries by forming alliance with Indian Maharaja, and ended in the mid-19th century. The 
+Mughal Emperors were descendants of the Timurids, and at the height of their power around 1700, they 
+controlled most of the Indian Subcontinent extending from Bengal in the east to Balochistan in the west, 
+Kashmir in the north to the Kaveri basin in the south. Its population at that time has been estimated 
+as between 110 and 130 million, over a territory of over 4 million sq.km (1.5 million square miles).[PARAGRAPH:1]The 
+"classic period" of the Empire started in 1556 with the accession of Jalaluddin Mohammad Akbar, better 
+known as Akbar the Great. It ended with the death of Emperor Aurangzeb in 1707, although the Empire continued 
+for another 150 years. During this period, the Empire was marked by a highly centralized administration 
+connecting the different regions. All the significant monuments of the Mughals, their most visible legacy, 
+date to this period which was characterised by the expansion of Persian cultural influence in the Indian 
+subcontinent, with brilliant literary, artistic and architectural results.[PARAGRAPH:1]Following 1725 
+the empire declined rapidly, weakened by wars of succession, agrarian crises fueling local revolts, the 
+growth of religious intolerance, the rise of the Maratha, Durrani, and Sikh empires and finally British 
+colonialism. The last king, Bahadur Zafar Shah II, whose rule was restricted to the city of Delhi, was 
+imprisoned and exiled by the British after the Indian Rebellion of 1857.[PARAGRAPH:1]The name Mughal 
+is derived from the original homelands of the Timurids, the Central Asian steppes once conquered by Genghis 
+Khan and hence known as Moghulistan, "Land of Mongols". Although early Mughals spoke the Chagatai language 
+and maintained Turko-Mongol practices, they were essentially Persianized. They transferred the Persian 
+literature and culture to India, thus forming the base for the Indo-Persian culture.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_AKBAR</Tag>
+		<English>Akbar</English>
+		<French>
+			<Text>Akbar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Akbar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Akbar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Akbar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_AKBAR_PEDIA</Tag>
+		<English>[H1]Jalaluddin Muhammad Akbar ("The Great")[\H1][NEWLINE][BOLD]Emperor of India[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1542 - 1605[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Jalaluddin Muhammad Akbar 
+was the son of Nasiruddin Humayun whom he succeeded as ruler of the Mughal Empire from 1556 to 1605. 
+He was the grandson of Babur who founded the Mughal dynasty. On the eve of his death in 1605, the Mughal 
+empire spanned almost 1 million square kilometers (doubling during Akbar's reign).[PARAGRAPH:1]Akbar, 
+widely considered the greatest of the Mughal emperors, was only 14 when he ascended the throne in Delhi, 
+following the death of his father Humayun. He was descended from Turks, Mongols, and Iranians  the three 
+peoples who predominated in the political elites of northern India in medieval times. It took him the 
+better part of two decades to consolidate his power and bring parts of northern and central India into 
+his realm. During his reign, he reduced external military threats from the Afghan descendants of Sher 
+Shah by waging wars against Afghan tribes, and at the Second Battle of Panipat he defeated the Hindu 
+king Samrat Hemu Chandra Vikramaditya, also called Hemu. The emperor solidified his rule by pursuing 
+diplomacy with the powerful Rajput caste, and by admitting Rajput princesses in his harem.[PARAGRAPH:1]Akbar 
+is recorded as saying "A monarch should be ever intent on conquest, lest his neighbours rise in arms 
+against him", and he went on to expand the Mughal empire to include Malwa (1562), Gujarat (1572), Bengal 
+(1574), Kabul (1581), Kashmir (1586), and Kandesh (1601), among others. Akbar installed a governor over 
+each of the conquered provinces, under his authority.[PARAGRAPH:1]Akbar's tax reforms were especially 
+noteworthy, and formed the basis of the Mughal Empire's immense wealth in succeeding generations. His 
+officials prepared a detailed and accurate cadaster (land register) noting each land parcel's soil quality, 
+water access, etc., and so assessed their value, taking account of prevailing prices for various crops 
+in each region. This was a distinct improvement on earlier land tax systems, including the Egyptian and 
+Roman ones, which had levied land taxes as an in-kind share of the harvest. By making taxes reflect the 
+value of the land rather than the harvest, this stimulated both improvements in investments and more 
+productive use of the land. The economic effect was such that the revered Qing emperor Kang Xi adopted 
+similar measures a century later in China, with similar success.[PARAGRAPH:1]Akbar was an artisan, artist, 
+armorer, blacksmith, carpenter, emperor, general, inventor, animal trainer (reputedly keeping thousands 
+of hunting cheetahs during his reign and training many himself), lacemaker, technologist and theologian. 
+His most lasting contributions were to the arts. He initiated a large collection of literature, including 
+the Akbar-nama and the Ain-i-Akbari, and incorporated art from around the world into the Mughal collections. 
+He also commissioned the building of widely admired buildings, and invented the first prefabricated homes 
+and movable structures. Akbar began a series of religious debates where Muslim scholars would debate 
+religious matters with Sikhs, Hindus, Carvaka atheists and even Jesuits from Portugal. He founded his 
+own religious cult, the Din-i-Ilahi or the "Divine Faith"; however, it amounted only to a form of personality 
+cult for Akbar, and quickly dissolved after his death leaving his wife behind.</English>
+		<French>[H1]Jalaluddin Muhammad Akbar ("The Great")[\H1][NEWLINE][BOLD]Emperor of India[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1542 - 1605[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Jalaluddin Muhammad Akbar 
+was the son of Nasiruddin Humayun whom he succeeded as ruler of the Mughal Empire from 1556 to 1605. 
+He was the grandson of Babur who founded the Mughal dynasty. On the eve of his death in 1605, the Mughal 
+empire spanned almost 1 million square kilometers (doubling during Akbar's reign).[PARAGRAPH:1]Akbar, 
+widely considered the greatest of the Mughal emperors, was only 14 when he ascended the throne in Delhi, 
+following the death of his father Humayun. He was descended from Turks, Mongols, and Iranians  the three 
+peoples who predominated in the political elites of northern India in medieval times. It took him the 
+better part of two decades to consolidate his power and bring parts of northern and central India into 
+his realm. During his reign, he reduced external military threats from the Afghan descendants of Sher 
+Shah by waging wars against Afghan tribes, and at the Second Battle of Panipat he defeated the Hindu 
+king Samrat Hemu Chandra Vikramaditya, also called Hemu. The emperor solidified his rule by pursuing 
+diplomacy with the powerful Rajput caste, and by admitting Rajput princesses in his harem.[PARAGRAPH:1]Akbar 
+is recorded as saying "A monarch should be ever intent on conquest, lest his neighbours rise in arms 
+against him", and he went on to expand the Mughal empire to include Malwa (1562), Gujarat (1572), Bengal 
+(1574), Kabul (1581), Kashmir (1586), and Kandesh (1601), among others. Akbar installed a governor over 
+each of the conquered provinces, under his authority.[PARAGRAPH:1]Akbar's tax reforms were especially 
+noteworthy, and formed the basis of the Mughal Empire's immense wealth in succeeding generations. His 
+officials prepared a detailed and accurate cadaster (land register) noting each land parcel's soil quality, 
+water access, etc., and so assessed their value, taking account of prevailing prices for various crops 
+in each region. This was a distinct improvement on earlier land tax systems, including the Egyptian and 
+Roman ones, which had levied land taxes as an in-kind share of the harvest. By making taxes reflect the 
+value of the land rather than the harvest, this stimulated both improvements in investments and more 
+productive use of the land. The economic effect was such that the revered Qing emperor Kang Xi adopted 
+similar measures a century later in China, with similar success.[PARAGRAPH:1]Akbar was an artisan, artist, 
+armorer, blacksmith, carpenter, emperor, general, inventor, animal trainer (reputedly keeping thousands 
+of hunting cheetahs during his reign and training many himself), lacemaker, technologist and theologian. 
+His most lasting contributions were to the arts. He initiated a large collection of literature, including 
+the Akbar-nama and the Ain-i-Akbari, and incorporated art from around the world into the Mughal collections. 
+He also commissioned the building of widely admired buildings, and invented the first prefabricated homes 
+and movable structures. Akbar began a series of religious debates where Muslim scholars would debate 
+religious matters with Sikhs, Hindus, Carvaka atheists and even Jesuits from Portugal. He founded his 
+own religious cult, the Din-i-Ilahi or the "Divine Faith"; however, it amounted only to a form of personality 
+cult for Akbar, and quickly dissolved after his death leaving his wife behind.</French>
+		<German>[H1]Jalaluddin Muhammad Akbar ("The Great")[\H1][NEWLINE][BOLD]Emperor of India[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1542 - 1605[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Jalaluddin Muhammad Akbar 
+was the son of Nasiruddin Humayun whom he succeeded as ruler of the Mughal Empire from 1556 to 1605. 
+He was the grandson of Babur who founded the Mughal dynasty. On the eve of his death in 1605, the Mughal 
+empire spanned almost 1 million square kilometers (doubling during Akbar's reign).[PARAGRAPH:1]Akbar, 
+widely considered the greatest of the Mughal emperors, was only 14 when he ascended the throne in Delhi, 
+following the death of his father Humayun. He was descended from Turks, Mongols, and Iranians  the three 
+peoples who predominated in the political elites of northern India in medieval times. It took him the 
+better part of two decades to consolidate his power and bring parts of northern and central India into 
+his realm. During his reign, he reduced external military threats from the Afghan descendants of Sher 
+Shah by waging wars against Afghan tribes, and at the Second Battle of Panipat he defeated the Hindu 
+king Samrat Hemu Chandra Vikramaditya, also called Hemu. The emperor solidified his rule by pursuing 
+diplomacy with the powerful Rajput caste, and by admitting Rajput princesses in his harem.[PARAGRAPH:1]Akbar 
+is recorded as saying "A monarch should be ever intent on conquest, lest his neighbours rise in arms 
+against him", and he went on to expand the Mughal empire to include Malwa (1562), Gujarat (1572), Bengal 
+(1574), Kabul (1581), Kashmir (1586), and Kandesh (1601), among others. Akbar installed a governor over 
+each of the conquered provinces, under his authority.[PARAGRAPH:1]Akbar's tax reforms were especially 
+noteworthy, and formed the basis of the Mughal Empire's immense wealth in succeeding generations. His 
+officials prepared a detailed and accurate cadaster (land register) noting each land parcel's soil quality, 
+water access, etc., and so assessed their value, taking account of prevailing prices for various crops 
+in each region. This was a distinct improvement on earlier land tax systems, including the Egyptian and 
+Roman ones, which had levied land taxes as an in-kind share of the harvest. By making taxes reflect the 
+value of the land rather than the harvest, this stimulated both improvements in investments and more 
+productive use of the land. The economic effect was such that the revered Qing emperor Kang Xi adopted 
+similar measures a century later in China, with similar success.[PARAGRAPH:1]Akbar was an artisan, artist, 
+armorer, blacksmith, carpenter, emperor, general, inventor, animal trainer (reputedly keeping thousands 
+of hunting cheetahs during his reign and training many himself), lacemaker, technologist and theologian. 
+His most lasting contributions were to the arts. He initiated a large collection of literature, including 
+the Akbar-nama and the Ain-i-Akbari, and incorporated art from around the world into the Mughal collections. 
+He also commissioned the building of widely admired buildings, and invented the first prefabricated homes 
+and movable structures. Akbar began a series of religious debates where Muslim scholars would debate 
+religious matters with Sikhs, Hindus, Carvaka atheists and even Jesuits from Portugal. He founded his 
+own religious cult, the Din-i-Ilahi or the "Divine Faith"; however, it amounted only to a form of personality 
+cult for Akbar, and quickly dissolved after his death leaving his wife behind.</German>
+		<Italian>[H1]Jalaluddin Muhammad Akbar ("The Great")[\H1][NEWLINE][BOLD]Emperor of India[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1542 - 1605[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Jalaluddin Muhammad Akbar 
+was the son of Nasiruddin Humayun whom he succeeded as ruler of the Mughal Empire from 1556 to 1605. 
+He was the grandson of Babur who founded the Mughal dynasty. On the eve of his death in 1605, the Mughal 
+empire spanned almost 1 million square kilometers (doubling during Akbar's reign).[PARAGRAPH:1]Akbar, 
+widely considered the greatest of the Mughal emperors, was only 14 when he ascended the throne in Delhi, 
+following the death of his father Humayun. He was descended from Turks, Mongols, and Iranians  the three 
+peoples who predominated in the political elites of northern India in medieval times. It took him the 
+better part of two decades to consolidate his power and bring parts of northern and central India into 
+his realm. During his reign, he reduced external military threats from the Afghan descendants of Sher 
+Shah by waging wars against Afghan tribes, and at the Second Battle of Panipat he defeated the Hindu 
+king Samrat Hemu Chandra Vikramaditya, also called Hemu. The emperor solidified his rule by pursuing 
+diplomacy with the powerful Rajput caste, and by admitting Rajput princesses in his harem.[PARAGRAPH:1]Akbar 
+is recorded as saying "A monarch should be ever intent on conquest, lest his neighbours rise in arms 
+against him", and he went on to expand the Mughal empire to include Malwa (1562), Gujarat (1572), Bengal 
+(1574), Kabul (1581), Kashmir (1586), and Kandesh (1601), among others. Akbar installed a governor over 
+each of the conquered provinces, under his authority.[PARAGRAPH:1]Akbar's tax reforms were especially 
+noteworthy, and formed the basis of the Mughal Empire's immense wealth in succeeding generations. His 
+officials prepared a detailed and accurate cadaster (land register) noting each land parcel's soil quality, 
+water access, etc., and so assessed their value, taking account of prevailing prices for various crops 
+in each region. This was a distinct improvement on earlier land tax systems, including the Egyptian and 
+Roman ones, which had levied land taxes as an in-kind share of the harvest. By making taxes reflect the 
+value of the land rather than the harvest, this stimulated both improvements in investments and more 
+productive use of the land. The economic effect was such that the revered Qing emperor Kang Xi adopted 
+similar measures a century later in China, with similar success.[PARAGRAPH:1]Akbar was an artisan, artist, 
+armorer, blacksmith, carpenter, emperor, general, inventor, animal trainer (reputedly keeping thousands 
+of hunting cheetahs during his reign and training many himself), lacemaker, technologist and theologian. 
+His most lasting contributions were to the arts. He initiated a large collection of literature, including 
+the Akbar-nama and the Ain-i-Akbari, and incorporated art from around the world into the Mughal collections. 
+He also commissioned the building of widely admired buildings, and invented the first prefabricated homes 
+and movable structures. Akbar began a series of religious debates where Muslim scholars would debate 
+religious matters with Sikhs, Hindus, Carvaka atheists and even Jesuits from Portugal. He founded his 
+own religious cult, the Din-i-Ilahi or the "Divine Faith"; however, it amounted only to a form of personality 
+cult for Akbar, and quickly dissolved after his death leaving his wife behind.</Italian>
+		<Spanish>[H1]Jalaluddin Muhammad Akbar ("The Great")[\H1][NEWLINE][BOLD]Emperor of India[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1542 - 1605[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Jalaluddin Muhammad Akbar 
+was the son of Nasiruddin Humayun whom he succeeded as ruler of the Mughal Empire from 1556 to 1605. 
+He was the grandson of Babur who founded the Mughal dynasty. On the eve of his death in 1605, the Mughal 
+empire spanned almost 1 million square kilometers (doubling during Akbar's reign).[PARAGRAPH:1]Akbar, 
+widely considered the greatest of the Mughal emperors, was only 14 when he ascended the throne in Delhi, 
+following the death of his father Humayun. He was descended from Turks, Mongols, and Iranians  the three 
+peoples who predominated in the political elites of northern India in medieval times. It took him the 
+better part of two decades to consolidate his power and bring parts of northern and central India into 
+his realm. During his reign, he reduced external military threats from the Afghan descendants of Sher 
+Shah by waging wars against Afghan tribes, and at the Second Battle of Panipat he defeated the Hindu 
+king Samrat Hemu Chandra Vikramaditya, also called Hemu. The emperor solidified his rule by pursuing 
+diplomacy with the powerful Rajput caste, and by admitting Rajput princesses in his harem.[PARAGRAPH:1]Akbar 
+is recorded as saying "A monarch should be ever intent on conquest, lest his neighbours rise in arms 
+against him", and he went on to expand the Mughal empire to include Malwa (1562), Gujarat (1572), Bengal 
+(1574), Kabul (1581), Kashmir (1586), and Kandesh (1601), among others. Akbar installed a governor over 
+each of the conquered provinces, under his authority.[PARAGRAPH:1]Akbar's tax reforms were especially 
+noteworthy, and formed the basis of the Mughal Empire's immense wealth in succeeding generations. His 
+officials prepared a detailed and accurate cadaster (land register) noting each land parcel's soil quality, 
+water access, etc., and so assessed their value, taking account of prevailing prices for various crops 
+in each region. This was a distinct improvement on earlier land tax systems, including the Egyptian and 
+Roman ones, which had levied land taxes as an in-kind share of the harvest. By making taxes reflect the 
+value of the land rather than the harvest, this stimulated both improvements in investments and more 
+productive use of the land. The economic effect was such that the revered Qing emperor Kang Xi adopted 
+similar measures a century later in China, with similar success.[PARAGRAPH:1]Akbar was an artisan, artist, 
+armorer, blacksmith, carpenter, emperor, general, inventor, animal trainer (reputedly keeping thousands 
+of hunting cheetahs during his reign and training many himself), lacemaker, technologist and theologian. 
+His most lasting contributions were to the arts. He initiated a large collection of literature, including 
+the Akbar-nama and the Ain-i-Akbari, and incorporated art from around the world into the Mughal collections. 
+He also commissioned the building of widely admired buildings, and invented the first prefabricated homes 
+and movable structures. Akbar began a series of religious debates where Muslim scholars would debate 
+religious matters with Sikhs, Hindus, Carvaka atheists and even Jesuits from Portugal. He founded his 
+own religious cult, the Din-i-Ilahi or the "Divine Faith"; however, it amounted only to a form of personality 
+cult for Akbar, and quickly dissolved after his death leaving his wife behind.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_AKBAR_1</Tag>
+		<English>I bring you the peace of the [OUR_EMPIRE]! A monarch should be ever intent on conquest, lest his neighbours rise in arms against him.</English>
+		<French>I bring you the peace of the [OUR_EMPIRE]! A monarch should be ever intent on conquest, lest his neighbours rise in arms against him.</French>
+		<German>I bring you the peace of the [OUR_EMPIRE]! A monarch should be ever intent on conquest, lest his neighbours rise in arms against him.</German>
+		<Italian>I bring you the peace of the [OUR_EMPIRE]! A monarch should be ever intent on conquest, lest his neighbours rise in arms against him.</Italian>
+		<Spanish>I bring you the peace of the [OUR_EMPIRE]! A monarch should be ever intent on conquest, lest his neighbours rise in arms against him.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_BABUR</Tag>
+		<English>Babur</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_BABUR_PEDIA</Tag>
+		<English>[H1]Babur[\H1][NEWLINE][BOLD]Mughal Emperor of India[\BOLD][NEWLINE][BOLD]Lived:[\BOLD]February 23 1483 - January 5 1531[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_BABUR_1</Tag>
+		<English>I bring you the peace of the [OUR_EMPIRE]! A monarch should be ever intent on conquest, lest his neighbours rise in arms against him.</English>
+		<French>I bring you the peace of the [OUR_EMPIRE]! A monarch should be ever intent on conquest, lest his neighbours rise in arms against him.</French>
+		<German>I bring you the peace of the [OUR_EMPIRE]! A monarch should be ever intent on conquest, lest his neighbours rise in arms against him.</German>
+		<Italian>I bring you the peace of the [OUR_EMPIRE]! A monarch should be ever intent on conquest, lest his neighbours rise in arms against him.</Italian>
+		<Spanish>I bring you the peace of the [OUR_EMPIRE]! A monarch should be ever intent on conquest, lest his neighbours rise in arms against him.</Spanish>
+	</TEXT>
+</Civ4GameText>

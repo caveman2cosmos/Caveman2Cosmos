@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- Modified by the Civ Gold Team -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NORWAY_DESC</Tag>
+		<English>Kingdom of Norway</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NORWAY_SHORT_DESC</Tag>
+		<English>Norway</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NORWAY_ADJECTIVE</Tag>
+		<English>Norwegian</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NORWAY_PEDIA</Tag>
+		<English>Norway officially the Kingdom of Norway, is a Nordic country in Northern Europe occupying 
+the western portion of the Scandinavian Peninsula, as well as Jan Mayen and the Arctic archipelago of 
+Svalbard.[note 1] Norway has a total area of 385,252 square kilometres (148,747 sq mi) and a population 
+of about 4.8 million.[2]  It is one of the most sparsely populated countries in Europe. The majority 
+of the country shares a border to the east with Sweden; its northernmost region is bordered by Finland 
+to the south and Russia to the east; and Denmark lies south of its southern tip across the Skagerrak 
+Strait. The capital city of Norway is Oslo. Norway's extensive coastline, facing the North Atlantic Ocean 
+and the Barents Sea, is home to its famous fjords.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_HARALD</Tag>
+		<English>Harald I</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_HARALD_PEDIA</Tag>
+		<English>Little is known of the historical Harald. The only contemporary sources mentioning him are 
+the two skaldic poems Haraldskvæði and Glymdrápa, by Þorbjörn Hornklofi. The first poem describes life 
+at Harald's court, mentions that he took a Danish wife, and that he won a victory at Hafrsfjord. The 
+second relates a series of battles Harald has won. He is not mentioned in any contemporary foreign sources. 
+His life was described in several of the Kings' sagas, but the first of these were not written until 
+the end of the 12th century, over 250 years after his death. Their accounts of Harald and his life differ 
+on several points, and much of the content is clearly mythological. He is credited with having unified 
+Norway into one kingdom. Modern historians assume that his rule was limited to the coastal areas of southern 
+Norway.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_HARALD_1</Tag>
+		<English>Greetings to you, [CT_NAME]. Let us work side by side. It is said that success has more than one father.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_OSLO</Tag>
+		<English>Oslo</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BERGEN</Tag>
+		<English>Bergen</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_STAVANGER</Tag>
+		<English>Stavanger</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TRONDHEIM</Tag>
+		<English>Trondheim</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_FREDRIKSTAD</Tag>
+		<English>Fredrikstad</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KRISTIANSAND</Tag>
+		<English>Kristiansand</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DRAMMEN</Tag>
+		<English>Drammen</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GRENLAND</Tag>
+		<English>Grenland</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TROMSE</Tag>
+		<English>Tromse</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ALESUND</Tag>
+		<English>Alesund</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_HAUGESUND</Tag>
+		<English>Haugesund</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MOSS</Tag>
+		<English>Moss</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SANDEFJORD</Tag>
+		<English>Sandefjord</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BODE</Tag>
+		<English>Bode</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ARENDAL</Tag>
+		<English>Arendal</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_HAMAR</Tag>
+		<English>Hamar</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LARVIK</Tag>
+		<English>Larvik</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_HAIDEN</Tag>
+		<English>Haiden</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LILLEHAMMER</Tag>
+		<English>Lillehammer</English>
+	</TEXT>
+</Civ4GameText>

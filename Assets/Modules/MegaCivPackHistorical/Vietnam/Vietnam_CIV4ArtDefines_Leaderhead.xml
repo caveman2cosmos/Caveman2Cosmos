@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- Re_Modified by Strategyonly -->
+<!-- -->
+<Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\..\Xml\Schema\Caveman2Cosmos.xsd">
+	<LeaderheadArtInfos>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_TRUNG</Type>
+			<Button>Modules/Custom_civilizations/Vietnam/leaders/Trung_small.dds</Button>
+			<NIF>Modules/Custom_civilizations/Vietnam/leaders/Trung.dds</NIF>
+			<KFM />
+			<NoShaderNIF />
+			<BackgroundKFM />
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_HO_CHI_MINH</Type>
+			<Button>Modules/Custom_civilizations/Vietnam/leaders/HoChiMinh_small.dds</Button>
+			<NIF>Modules/Custom_civilizations/Vietnam/leaders/HoChiMinh.dds</NIF>
+			<KFM />
+			<NoShaderNIF />
+			<BackgroundKFM />
+		</LeaderheadArtInfo>
+	</LeaderheadArtInfos>
+</Civ4ArtDefines>

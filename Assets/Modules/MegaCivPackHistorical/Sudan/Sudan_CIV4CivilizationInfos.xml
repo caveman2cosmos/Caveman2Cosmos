@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- ReModified by the StrategyOnly -->
+<!-- -->
+<Civ4CivilizationInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4CivilizationsSchema.xml">
+	<CivilizationInfos>
+		<CivilizationInfo>
+			<Type>CIVILIZATION_SUDAN</Type>
+			<Description>TXT_KEY_CIV_SUDAN_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_SUDAN_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_SUDAN_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_SUDAN_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_SUDAN</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_SUDAN</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_AFRICAN</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_MALI</UnitArtStyleType>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>Khartoum</City>
+				<City>Omdurman</City>
+				<City>Khartoum Bahri</City>
+				<City>Nyala</City>
+				<City>Port Sudan</City>
+				<City>Kassala</City>
+				<City>Ubayyid</City>
+				<City>Kosti</City>
+				<City>Wad Madani</City>
+				<City>Qadarif</City>
+				<City>Fashir</City>
+				<City>Daein</City>
+				<City>Damazin</City>
+				<City>Geneina</City>
+				<City>Rabak</City>
+				<City>Sennar</City>
+				<City>Managil</City>
+				<City>Nahud</City>
+				<City>Damir</City>
+				<City>Atbarah</City>
+				<City>Kaduqli</City>
+				<City>Dueim</City>
+				<City>New Halfa</City>
+				<City>Umm Rawaba</City>
+				<City>Shendi</City>
+				<City>Sindscha</City>
+				<City>Delgo</City>
+				<City>El Ait</City>
+				<City>Rabak</City>
+				<City>Umm Bel</City>
+				<City>Suakin</City>
+				<City>Malualkon</City>
+				<City>Geneina</City>
+				<City>Wad Banda</City>
+				<City>Umm Shanqa</City>
+				<City>Bentiu</City>
+				<City>Er Rahad</City>
+				<City>Hala'ib</City>
+				<City>Singa</City>
+				<City>Umm Qantur</City>
+				<City>Umm Rawaba</City>
+				<City>Dongola</City>
+				<City>Ed Dueim</City>
+				<City>Kassala</City>
+				<City>Umm Gafala</City>
+			</Cities>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_AFRICAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
+			<InitialCivics>
+				<CivicType>CIVIC_ANARCHISM</CivicType>
+				<CivicType>CIVIC_OBEDIENCE</CivicType>
+				<CivicType>CIVIC_STRONGMAN</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
+				<CivicType>CIVIC_MILITIA</CivicType>
+				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SURVIVAL</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
+				<CivicType>CIVIC_UNORGANIZED</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_AHMAD</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<DerivativeCiv>NONE</DerivativeCiv>
+			<CivilizationSelectionSound>AS3D_ARABIA_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_ARABIA_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+	</CivilizationInfos>
+</Civ4CivilizationInfos>

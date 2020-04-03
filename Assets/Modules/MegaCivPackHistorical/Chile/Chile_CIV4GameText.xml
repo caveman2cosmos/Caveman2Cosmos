@@ -1,0 +1,1014 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- ReModified by the StrategyOnly -->
+<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CHILE_DESC</Tag>
+		<English>Chilean Empire</English>
+		<French>Chilean Empire</French>
+		<German>Chilean Empire</German>
+		<Italian>Chilean Empire</Italian>
+		<Spanish>Chilean Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CHILE_SHORT_DESC</Tag>
+		<English>Chile</English>
+		<French>Chile</French>
+		<German>Chile</German>
+		<Italian>Chile</Italian>
+		<Spanish>Chile</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CHILE_ADJECTIVE</Tag>
+		<English>Chilean</English>
+		<French>Chilean</French>
+		<German>Chilean</German>
+		<Italian>Chilean</Italian>
+		<Spanish>Chilean</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CHILE_PEDIA</Tag>
+		<English>[TAB]About 10,000 years ago, migrating Native Americans settled in fertile valleys and along the coast of what is now Chile. The Incas briefly extended their empire into what is now northern Chile, but the area's barrenness prevented extensive settlement.[PARAGRAPH:2]In 1520, while attempting to circumnavigate the earth, the Portuguese Ferdinand Magellan, discovered the southern passage now named after him, the Strait of Magellan. The next Europeans to reach Chile were Diego de Almagro and his band of Spanish conquistadors, who came from Peru in 1535 seeking gold. The Spanish encountered hundreds of thousands of Native Americans from various cultures in the area that modern Chile now occupies. These cultures supported themselves principally through slash-and-burn agriculture and hunting. The conquest of Chile began in earnest in 1540 and was carried out by Pedro de Valdivia, one of Francisco Pizarro's lieutenants, who founded the city of Santiago on February 12, 1541. [PARAGRAPH:2]In 1817 an army led by Jose de San Martin and Chile's most renowned patriot Bernardo O'Higgins crossed the Andes into Chile and defeated the royalists. On February 12, 1818, Chile was proclaimed an independent republic under San Martin's leadership. A military coup led by General Luis Altamirano in 1924 set off a period of great political instability that lasted until 1932. When constitutional rule was restored in 1932, a strong middle-class party, the Radicals, emerged. It became the key force in coalition governments for the next 20 years. [PARAGRAPH:2]By early 1973, inflation was out of control. The crippled economy was further battered by prolonged and sometimes simultaneous strikes by physicians, teachers, students, truck owners, copper workers, and the small business class. A military coup overthrew Allende on September 11, 1973. As the armed forces bombarded the presidential palace, Allende reportedly committed suicide. A military government, led by General Augusto Pinochet Ugarte, took over control of the country. The first years of the regime were marked by serious human rights violations. A new Constitution was approved by a highly irregular and undemocratic plebiscite characterized by the absence of registration lists, on September 11, 1980, and General Pinochet became President of the Republic for an 8-year term.[PARAGRAPH:2]In the late 1980s, the regime gradually permitted greater freedom of assembly, speech, and association, to include trade union and limited political activity. The right-wing military government pursued free market economic policies. During Pinochet's nearly 17 years in power, Chile moved away from state involvement, toward a largely free market economy that saw an increase in domestic and foreign private investment. In a plebiscite on October 5, 1988, General Pinochet was denied a second 8-year term as president (56% against 44%). Chileans elected a new president and the majority of members of a two-chamber congress on December 14, 1989.[PARAGRAPH:2]</English>
+		<French>[TAB]About 10,000 years ago, migrating Native Americans settled in fertile valleys and along the coast of what is now Chile. The Incas briefly extended their empire into what is now northern Chile, but the area's barrenness prevented extensive settlement.[PARAGRAPH:2]In 1520, while attempting to circumnavigate the earth, the Portuguese Ferdinand Magellan, discovered the southern passage now named after him, the Strait of Magellan. The next Europeans to reach Chile were Diego de Almagro and his band of Spanish conquistadors, who came from Peru in 1535 seeking gold. The Spanish encountered hundreds of thousands of Native Americans from various cultures in the area that modern Chile now occupies. These cultures supported themselves principally through slash-and-burn agriculture and hunting. The conquest of Chile began in earnest in 1540 and was carried out by Pedro de Valdivia, one of Francisco Pizarro's lieutenants, who founded the city of Santiago on February 12, 1541. [PARAGRAPH:2]In 1817 an army led by Jose de San Martin and Chile's most renowned patriot Bernardo O'Higgins crossed the Andes into Chile and defeated the royalists. On February 12, 1818, Chile was proclaimed an independent republic under San Martin's leadership. A military coup led by General Luis Altamirano in 1924 set off a period of great political instability that lasted until 1932. When constitutional rule was restored in 1932, a strong middle-class party, the Radicals, emerged. It became the key force in coalition governments for the next 20 years. [PARAGRAPH:2]By early 1973, inflation was out of control. The crippled economy was further battered by prolonged and sometimes simultaneous strikes by physicians, teachers, students, truck owners, copper workers, and the small business class. A military coup overthrew Allende on September 11, 1973. As the armed forces bombarded the presidential palace, Allende reportedly committed suicide. A military government, led by General Augusto Pinochet Ugarte, took over control of the country. The first years of the regime were marked by serious human rights violations. A new Constitution was approved by a highly irregular and undemocratic plebiscite characterized by the absence of registration lists, on September 11, 1980, and General Pinochet became President of the Republic for an 8-year term.[PARAGRAPH:2]In the late 1980s, the regime gradually permitted greater freedom of assembly, speech, and association, to include trade union and limited political activity. The right-wing military government pursued free market economic policies. During Pinochet's nearly 17 years in power, Chile moved away from state involvement, toward a largely free market economy that saw an increase in domestic and foreign private investment. In a plebiscite on October 5, 1988, General Pinochet was denied a second 8-year term as president (56% against 44%). Chileans elected a new president and the majority of members of a two-chamber congress on December 14, 1989.[PARAGRAPH:2]</French>
+		<German>[TAB]About 10,000 years ago, migrating Native Americans settled in fertile valleys and along the coast of what is now Chile. The Incas briefly extended their empire into what is now northern Chile, but the area's barrenness prevented extensive settlement.[PARAGRAPH:2]In 1520, while attempting to circumnavigate the earth, the Portuguese Ferdinand Magellan, discovered the southern passage now named after him, the Strait of Magellan. The next Europeans to reach Chile were Diego de Almagro and his band of Spanish conquistadors, who came from Peru in 1535 seeking gold. The Spanish encountered hundreds of thousands of Native Americans from various cultures in the area that modern Chile now occupies. These cultures supported themselves principally through slash-and-burn agriculture and hunting. The conquest of Chile began in earnest in 1540 and was carried out by Pedro de Valdivia, one of Francisco Pizarro's lieutenants, who founded the city of Santiago on February 12, 1541. [PARAGRAPH:2]In 1817 an army led by Jose de San Martin and Chile's most renowned patriot Bernardo O'Higgins crossed the Andes into Chile and defeated the royalists. On February 12, 1818, Chile was proclaimed an independent republic under San Martin's leadership. A military coup led by General Luis Altamirano in 1924 set off a period of great political instability that lasted until 1932. When constitutional rule was restored in 1932, a strong middle-class party, the Radicals, emerged. It became the key force in coalition governments for the next 20 years. [PARAGRAPH:2]By early 1973, inflation was out of control. The crippled economy was further battered by prolonged and sometimes simultaneous strikes by physicians, teachers, students, truck owners, copper workers, and the small business class. A military coup overthrew Allende on September 11, 1973. As the armed forces bombarded the presidential palace, Allende reportedly committed suicide. A military government, led by General Augusto Pinochet Ugarte, took over control of the country. The first years of the regime were marked by serious human rights violations. A new Constitution was approved by a highly irregular and undemocratic plebiscite characterized by the absence of registration lists, on September 11, 1980, and General Pinochet became President of the Republic for an 8-year term.[PARAGRAPH:2]In the late 1980s, the regime gradually permitted greater freedom of assembly, speech, and association, to include trade union and limited political activity. The right-wing military government pursued free market economic policies. During Pinochet's nearly 17 years in power, Chile moved away from state involvement, toward a largely free market economy that saw an increase in domestic and foreign private investment. In a plebiscite on October 5, 1988, General Pinochet was denied a second 8-year term as president (56% against 44%). Chileans elected a new president and the majority of members of a two-chamber congress on December 14, 1989.[PARAGRAPH:2]</German>
+		<Italian>[TAB]About 10,000 years ago, migrating Native Americans settled in fertile valleys and along the coast of what is now Chile. The Incas briefly extended their empire into what is now northern Chile, but the area's barrenness prevented extensive settlement.[PARAGRAPH:2]In 1520, while attempting to circumnavigate the earth, the Portuguese Ferdinand Magellan, discovered the southern passage now named after him, the Strait of Magellan. The next Europeans to reach Chile were Diego de Almagro and his band of Spanish conquistadors, who came from Peru in 1535 seeking gold. The Spanish encountered hundreds of thousands of Native Americans from various cultures in the area that modern Chile now occupies. These cultures supported themselves principally through slash-and-burn agriculture and hunting. The conquest of Chile began in earnest in 1540 and was carried out by Pedro de Valdivia, one of Francisco Pizarro's lieutenants, who founded the city of Santiago on February 12, 1541. [PARAGRAPH:2]In 1817 an army led by Jose de San Martin and Chile's most renowned patriot Bernardo O'Higgins crossed the Andes into Chile and defeated the royalists. On February 12, 1818, Chile was proclaimed an independent republic under San Martin's leadership. A military coup led by General Luis Altamirano in 1924 set off a period of great political instability that lasted until 1932. When constitutional rule was restored in 1932, a strong middle-class party, the Radicals, emerged. It became the key force in coalition governments for the next 20 years. [PARAGRAPH:2]By early 1973, inflation was out of control. The crippled economy was further battered by prolonged and sometimes simultaneous strikes by physicians, teachers, students, truck owners, copper workers, and the small business class. A military coup overthrew Allende on September 11, 1973. As the armed forces bombarded the presidential palace, Allende reportedly committed suicide. A military government, led by General Augusto Pinochet Ugarte, took over control of the country. The first years of the regime were marked by serious human rights violations. A new Constitution was approved by a highly irregular and undemocratic plebiscite characterized by the absence of registration lists, on September 11, 1980, and General Pinochet became President of the Republic for an 8-year term.[PARAGRAPH:2]In the late 1980s, the regime gradually permitted greater freedom of assembly, speech, and association, to include trade union and limited political activity. The right-wing military government pursued free market economic policies. During Pinochet's nearly 17 years in power, Chile moved away from state involvement, toward a largely free market economy that saw an increase in domestic and foreign private investment. In a plebiscite on October 5, 1988, General Pinochet was denied a second 8-year term as president (56% against 44%). Chileans elected a new president and the majority of members of a two-chamber congress on December 14, 1989.[PARAGRAPH:2]</Italian>
+		<Spanish>[TAB]About 10,000 years ago, migrating Native Americans settled in fertile valleys and along the coast of what is now Chile. The Incas briefly extended their empire into what is now northern Chile, but the area's barrenness prevented extensive settlement.[PARAGRAPH:2]In 1520, while attempting to circumnavigate the earth, the Portuguese Ferdinand Magellan, discovered the southern passage now named after him, the Strait of Magellan. The next Europeans to reach Chile were Diego de Almagro and his band of Spanish conquistadors, who came from Peru in 1535 seeking gold. The Spanish encountered hundreds of thousands of Native Americans from various cultures in the area that modern Chile now occupies. These cultures supported themselves principally through slash-and-burn agriculture and hunting. The conquest of Chile began in earnest in 1540 and was carried out by Pedro de Valdivia, one of Francisco Pizarro's lieutenants, who founded the city of Santiago on February 12, 1541. [PARAGRAPH:2]In 1817 an army led by Jose de San Martin and Chile's most renowned patriot Bernardo O'Higgins crossed the Andes into Chile and defeated the royalists. On February 12, 1818, Chile was proclaimed an independent republic under San Martin's leadership. A military coup led by General Luis Altamirano in 1924 set off a period of great political instability that lasted until 1932. When constitutional rule was restored in 1932, a strong middle-class party, the Radicals, emerged. It became the key force in coalition governments for the next 20 years. [PARAGRAPH:2]By early 1973, inflation was out of control. The crippled economy was further battered by prolonged and sometimes simultaneous strikes by physicians, teachers, students, truck owners, copper workers, and the small business class. A military coup overthrew Allende on September 11, 1973. As the armed forces bombarded the presidential palace, Allende reportedly committed suicide. A military government, led by General Augusto Pinochet Ugarte, took over control of the country. The first years of the regime were marked by serious human rights violations. A new Constitution was approved by a highly irregular and undemocratic plebiscite characterized by the absence of registration lists, on September 11, 1980, and General Pinochet became President of the Republic for an 8-year term.[PARAGRAPH:2]In the late 1980s, the regime gradually permitted greater freedom of assembly, speech, and association, to include trade union and limited political activity. The right-wing military government pursued free market economic policies. During Pinochet's nearly 17 years in power, Chile moved away from state involvement, toward a largely free market economy that saw an increase in domestic and foreign private investment. In a plebiscite on October 5, 1988, General Pinochet was denied a second 8-year term as president (56% against 44%). Chileans elected a new president and the majority of members of a two-chamber congress on December 14, 1989.[PARAGRAPH:2]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_PINOCHET</Tag>
+		<English>Pinochet</English>
+		<French>Pinochet</French>
+		<German>Pinochet</German>
+		<Italian>Pinochet</Italian>
+		<Spanish>Pinochet</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_PINOCHET_PEDIA</Tag>
+		<English>[H1]Augusto José Ramón Pinochet Ugarte[\H1][NEWLINE][BOLD]President of Chile[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]1915 - 2006[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Augusto José Ramón Pinochet Ugarte was a Chilean military officer and dictator. He was the leader of the Government Junta of Chile from 1973 to 1974 and President of Chile from 1974 until the return of democratic rule in 1990. From the beginning, the military government led by Pinochet implemented harsh measures against its political opponents, which included systematic suspensions of civil liberties and violations of human rights and for which he faced several criminal indictments beginning in 1998 until his death in 2006. At the time of his death he had not been convicted of any crimes, although investigations were ongoing.[PARAGRAPH:1]The military government also implemented economic reforms, including the privatization of several state controlled industries and the rollback of many state welfare institutions. These policies were initially very successful in recovering economic growth, and are often called el milagro económico ("the economic miracle") of the military regime in Chile, but they dramatically increased inequality and some attribute the devastating effect of the 1982 monetary crisis in the Chilean economy to these policies.[PARAGRAPH:1]On September 11, 1973, Pinochet, who twenty days before had been appointed Commander-in-Chief of the Chilean Army by socialist President Salvador Allende, led a coup d'état which put an end to Allende's government, and, along with the Navy, Air Force and Carabineros (a national police force), established a military dictatorship. With active support from the CIA Pinochet implemented a series of military operations in which (according to the 1993 Rettig Report) over 3,200 people were killed, while (according to the 2004 Valech Report) at least 80,000 were incarcerated without trials and 30,000 subjected to torture. Another 200,000 people went into exile, particularly in Argentina and Peru, and applied as political refugees; however, some key individuals were followed in their exile by the DINA secret police, in the framework of Operation Condor which linked South American dictatorships together against political opponents.[PARAGRAPH:1]In December 1974, the junta appointed Pinochet as President by a joint decree, to which Air Force General Gustavo Leigh disagreed. The legality of such appointment was confirmed through a highly controversial plebiscite in 1980, which approved a new Constitution drafted by a government-appointed commission. Pinochet remained in power until 1990, after his attempt to stay in power was defeated in the 1988 plebiscite. After stepping down, he continued to serve as Commander in Chief of the Chilean Army until March 10, 1998, when he retired and became a senator-for-life in accordance with the 1980 Constitution.[PARAGRAPH:1]At the time of his death in December 2006, around 300 criminal charges were still pending against him in Chile for human rights abuses (torture, forced disappearance, assassination, etc.), tax evasion and embezzlement under his rule and afterwards in 2006, Pinochet's total wealth was estimated to be at least US$28 million.</English>
+		<French>[H1]Augusto José Ramón Pinochet Ugarte[\H1][NEWLINE][BOLD]President of Chile[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]1915 - 2006[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Augusto José Ramón Pinochet Ugarte was a Chilean military officer and dictator. He was the leader of the Government Junta of Chile from 1973 to 1974 and President of Chile from 1974 until the return of democratic rule in 1990. From the beginning, the military government led by Pinochet implemented harsh measures against its political opponents, which included systematic suspensions of civil liberties and violations of human rights and for which he faced several criminal indictments beginning in 1998 until his death in 2006. At the time of his death he had not been convicted of any crimes, although investigations were ongoing.[PARAGRAPH:1]The military government also implemented economic reforms, including the privatization of several state controlled industries and the rollback of many state welfare institutions. These policies were initially very successful in recovering economic growth, and are often called el milagro económico ("the economic miracle") of the military regime in Chile, but they dramatically increased inequality and some attribute the devastating effect of the 1982 monetary crisis in the Chilean economy to these policies.[PARAGRAPH:1]On September 11, 1973, Pinochet, who twenty days before had been appointed Commander-in-Chief of the Chilean Army by socialist President Salvador Allende, led a coup d'état which put an end to Allende's government, and, along with the Navy, Air Force and Carabineros (a national police force), established a military dictatorship. With active support from the CIA Pinochet implemented a series of military operations in which (according to the 1993 Rettig Report) over 3,200 people were killed, while (according to the 2004 Valech Report) at least 80,000 were incarcerated without trials and 30,000 subjected to torture. Another 200,000 people went into exile, particularly in Argentina and Peru, and applied as political refugees; however, some key individuals were followed in their exile by the DINA secret police, in the framework of Operation Condor which linked South American dictatorships together against political opponents.[PARAGRAPH:1]In December 1974, the junta appointed Pinochet as President by a joint decree, to which Air Force General Gustavo Leigh disagreed. The legality of such appointment was confirmed through a highly controversial plebiscite in 1980, which approved a new Constitution drafted by a government-appointed commission. Pinochet remained in power until 1990, after his attempt to stay in power was defeated in the 1988 plebiscite. After stepping down, he continued to serve as Commander in Chief of the Chilean Army until March 10, 1998, when he retired and became a senator-for-life in accordance with the 1980 Constitution.[PARAGRAPH:1]At the time of his death in December 2006, around 300 criminal charges were still pending against him in Chile for human rights abuses (torture, forced disappearance, assassination, etc.), tax evasion and embezzlement under his rule and afterwards in 2006, Pinochet's total wealth was estimated to be at least US$28 million.</French>
+		<German>[H1]Augusto José Ramón Pinochet Ugarte[\H1][NEWLINE][BOLD]President of Chile[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]1915 - 2006[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Augusto José Ramón Pinochet Ugarte was a Chilean military officer and dictator. He was the leader of the Government Junta of Chile from 1973 to 1974 and President of Chile from 1974 until the return of democratic rule in 1990. From the beginning, the military government led by Pinochet implemented harsh measures against its political opponents, which included systematic suspensions of civil liberties and violations of human rights and for which he faced several criminal indictments beginning in 1998 until his death in 2006. At the time of his death he had not been convicted of any crimes, although investigations were ongoing.[PARAGRAPH:1]The military government also implemented economic reforms, including the privatization of several state controlled industries and the rollback of many state welfare institutions. These policies were initially very successful in recovering economic growth, and are often called el milagro económico ("the economic miracle") of the military regime in Chile, but they dramatically increased inequality and some attribute the devastating effect of the 1982 monetary crisis in the Chilean economy to these policies.[PARAGRAPH:1]On September 11, 1973, Pinochet, who twenty days before had been appointed Commander-in-Chief of the Chilean Army by socialist President Salvador Allende, led a coup d'état which put an end to Allende's government, and, along with the Navy, Air Force and Carabineros (a national police force), established a military dictatorship. With active support from the CIA Pinochet implemented a series of military operations in which (according to the 1993 Rettig Report) over 3,200 people were killed, while (according to the 2004 Valech Report) at least 80,000 were incarcerated without trials and 30,000 subjected to torture. Another 200,000 people went into exile, particularly in Argentina and Peru, and applied as political refugees; however, some key individuals were followed in their exile by the DINA secret police, in the framework of Operation Condor which linked South American dictatorships together against political opponents.[PARAGRAPH:1]In December 1974, the junta appointed Pinochet as President by a joint decree, to which Air Force General Gustavo Leigh disagreed. The legality of such appointment was confirmed through a highly controversial plebiscite in 1980, which approved a new Constitution drafted by a government-appointed commission. Pinochet remained in power until 1990, after his attempt to stay in power was defeated in the 1988 plebiscite. After stepping down, he continued to serve as Commander in Chief of the Chilean Army until March 10, 1998, when he retired and became a senator-for-life in accordance with the 1980 Constitution.[PARAGRAPH:1]At the time of his death in December 2006, around 300 criminal charges were still pending against him in Chile for human rights abuses (torture, forced disappearance, assassination, etc.), tax evasion and embezzlement under his rule and afterwards in 2006, Pinochet's total wealth was estimated to be at least US$28 million.</German>
+		<Italian>[H1]Augusto José Ramón Pinochet Ugarte[\H1][NEWLINE][BOLD]President of Chile[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]1915 - 2006[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Augusto José Ramón Pinochet Ugarte was a Chilean military officer and dictator. He was the leader of the Government Junta of Chile from 1973 to 1974 and President of Chile from 1974 until the return of democratic rule in 1990. From the beginning, the military government led by Pinochet implemented harsh measures against its political opponents, which included systematic suspensions of civil liberties and violations of human rights and for which he faced several criminal indictments beginning in 1998 until his death in 2006. At the time of his death he had not been convicted of any crimes, although investigations were ongoing.[PARAGRAPH:1]The military government also implemented economic reforms, including the privatization of several state controlled industries and the rollback of many state welfare institutions. These policies were initially very successful in recovering economic growth, and are often called el milagro económico ("the economic miracle") of the military regime in Chile, but they dramatically increased inequality and some attribute the devastating effect of the 1982 monetary crisis in the Chilean economy to these policies.[PARAGRAPH:1]On September 11, 1973, Pinochet, who twenty days before had been appointed Commander-in-Chief of the Chilean Army by socialist President Salvador Allende, led a coup d'état which put an end to Allende's government, and, along with the Navy, Air Force and Carabineros (a national police force), established a military dictatorship. With active support from the CIA Pinochet implemented a series of military operations in which (according to the 1993 Rettig Report) over 3,200 people were killed, while (according to the 2004 Valech Report) at least 80,000 were incarcerated without trials and 30,000 subjected to torture. Another 200,000 people went into exile, particularly in Argentina and Peru, and applied as political refugees; however, some key individuals were followed in their exile by the DINA secret police, in the framework of Operation Condor which linked South American dictatorships together against political opponents.[PARAGRAPH:1]In December 1974, the junta appointed Pinochet as President by a joint decree, to which Air Force General Gustavo Leigh disagreed. The legality of such appointment was confirmed through a highly controversial plebiscite in 1980, which approved a new Constitution drafted by a government-appointed commission. Pinochet remained in power until 1990, after his attempt to stay in power was defeated in the 1988 plebiscite. After stepping down, he continued to serve as Commander in Chief of the Chilean Army until March 10, 1998, when he retired and became a senator-for-life in accordance with the 1980 Constitution.[PARAGRAPH:1]At the time of his death in December 2006, around 300 criminal charges were still pending against him in Chile for human rights abuses (torture, forced disappearance, assassination, etc.), tax evasion and embezzlement under his rule and afterwards in 2006, Pinochet's total wealth was estimated to be at least US$28 million.</Italian>
+		<Spanish>[H1]Augusto José Ramón Pinochet Ugarte[\H1][NEWLINE][BOLD]President of Chile[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]1915 - 2006[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Augusto José Ramón Pinochet Ugarte was a Chilean military officer and dictator. He was the leader of the Government Junta of Chile from 1973 to 1974 and President of Chile from 1974 until the return of democratic rule in 1990. From the beginning, the military government led by Pinochet implemented harsh measures against its political opponents, which included systematic suspensions of civil liberties and violations of human rights and for which he faced several criminal indictments beginning in 1998 until his death in 2006. At the time of his death he had not been convicted of any crimes, although investigations were ongoing.[PARAGRAPH:1]The military government also implemented economic reforms, including the privatization of several state controlled industries and the rollback of many state welfare institutions. These policies were initially very successful in recovering economic growth, and are often called el milagro económico ("the economic miracle") of the military regime in Chile, but they dramatically increased inequality and some attribute the devastating effect of the 1982 monetary crisis in the Chilean economy to these policies.[PARAGRAPH:1]On September 11, 1973, Pinochet, who twenty days before had been appointed Commander-in-Chief of the Chilean Army by socialist President Salvador Allende, led a coup d'état which put an end to Allende's government, and, along with the Navy, Air Force and Carabineros (a national police force), established a military dictatorship. With active support from the CIA Pinochet implemented a series of military operations in which (according to the 1993 Rettig Report) over 3,200 people were killed, while (according to the 2004 Valech Report) at least 80,000 were incarcerated without trials and 30,000 subjected to torture. Another 200,000 people went into exile, particularly in Argentina and Peru, and applied as political refugees; however, some key individuals were followed in their exile by the DINA secret police, in the framework of Operation Condor which linked South American dictatorships together against political opponents.[PARAGRAPH:1]In December 1974, the junta appointed Pinochet as President by a joint decree, to which Air Force General Gustavo Leigh disagreed. The legality of such appointment was confirmed through a highly controversial plebiscite in 1980, which approved a new Constitution drafted by a government-appointed commission. Pinochet remained in power until 1990, after his attempt to stay in power was defeated in the 1988 plebiscite. After stepping down, he continued to serve as Commander in Chief of the Chilean Army until March 10, 1998, when he retired and became a senator-for-life in accordance with the 1980 Constitution.[PARAGRAPH:1]At the time of his death in December 2006, around 300 criminal charges were still pending against him in Chile for human rights abuses (torture, forced disappearance, assassination, etc.), tax evasion and embezzlement under his rule and afterwards in 2006, Pinochet's total wealth was estimated to be at least US$28 million.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_PINOCHET_1</Tag>
+		<English>Not a leaf moves in [OUR_EMPIRE] if I don't know about it. Take care to mind your steps, [CT_NAME], lest I take whatever measures necessary to protect the beloved fatherland.</English>
+		<French>Not a leaf moves in [OUR_EMPIRE] if I don't know about it. Take care to mind your steps, [CT_NAME], lest I take whatever measures necessary to protect the beloved fatherland.</French>
+		<German>Not a leaf moves in [OUR_EMPIRE] if I don't know about it. Take care to mind your steps, [CT_NAME], lest I take whatever measures necessary to protect the beloved fatherland.</German>
+		<Italian>Not a leaf moves in [OUR_EMPIRE] if I don't know about it. Take care to mind your steps, [CT_NAME], lest I take whatever measures necessary to protect the beloved fatherland.</Italian>
+		<Spanish>Not a leaf moves in [OUR_EMPIRE] if I don't know about it. Take care to mind your steps, [CT_NAME], lest I take whatever measures necessary to protect the beloved fatherland.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_OHIGGINS</Tag>
+		<English>O'Higgins</English>
+		<French>
+			<Text>O'Higgins</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>O'Higgins</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>O'Higgins</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>O'Higgins</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_OHIGGINS_PEDIA</Tag>
+		<English>[H1]Bernardo O'Higgins[\H1][NEWLINE][BOLD]Supreme Director of Chile[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1778 - 1842[NEWLINE][PARAGRAPH:1][BOLD]Background:[\BOLD][NEWLINE][TAB]Bernardo O'Higgins Riquelme, South American independence leader, was one of the commanders - together with Jose de San Martin - of the military forces that freed Chile from Spanish rule in the Chilean War of Independence. Although he was the third Supreme Director of Chile (1817-23), O'Higgins was the first holder of this title to head a fully independent Chilean state. When his father Ambrose O'Higgins became Viceroy of Peru, Bernardo was sent to a Catholic school in London to complete his studies.There, Bernardo became acquainted with American-independist ideas: he knew Venezuelan Francisco de Miranda and joined the Masonic Logia Lautaro.[PARAGRAPH:1]In 1810, he joined the nationalist rebels fighting for independence from Spain. In 1814, his Chilean rebels were defeated by the Spanish and retreated into the Andes. In 1817, O'Higgins went back on the offensive with the aid of Argentine General José de San Martín. On February 12, 1817, he led a cavalry charge that won the Battle of Chacabuco. He became the first leader of independent Chile, and was granted dictatorial powers as Supreme Director on February 16, 1817. On February 12, 1818, Chile was proclaimed an independent republic.[PARAGRAPH:1]His six-year rule saw the founding of the Military Academy and the approval of the new (and current) Chilean flag. However, his more radical and liberal reforms, (such as the establishment of democracy and abolition of nobility titles) were resisted by the powerful conservative large-land owners. During his government, he founded the cities of La Union and Vicuna. From his later exile in Peru, he promoted the Chilean expansion southward, concluding in the foundation of Punta Arenas in 1845. Also, his government was involved in the killing of adversary independist leaders Jose Miguel Carrera, his brothers Juan José and Luis in Argentina, and Carreras' friend and guerrilla leader Manuel Rodriguez. He was deposed by a conservative coup on January 28, 1823.[PARAGRAPH:1]During his government, he also assisted Jose de San Martin to organize the Expedition and an Army and Navy to support the Independence of Peru. He also organized the Chilean Army and the first Chilean Navy, under the command of Lord Cochrane and Manuel Blanco Encalada.</English>
+		<French>[H1]Bernardo O'Higgins[\H1][NEWLINE][BOLD]Supreme Director of Chile[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1778 - 1842[NEWLINE][PARAGRAPH:1][BOLD]Background:[\BOLD][NEWLINE][TAB]Bernardo O'Higgins Riquelme, South American independence leader, was one of the commanders - together with Jose de San Martin - of the military forces that freed Chile from Spanish rule in the Chilean War of Independence. Although he was the third Supreme Director of Chile (1817-23), O'Higgins was the first holder of this title to head a fully independent Chilean state. When his father Ambrose O'Higgins became Viceroy of Peru, Bernardo was sent to a Catholic school in London to complete his studies.There, Bernardo became acquainted with American-independist ideas: he knew Venezuelan Francisco de Miranda and joined the Masonic Logia Lautaro.[PARAGRAPH:1]In 1810, he joined the nationalist rebels fighting for independence from Spain. In 1814, his Chilean rebels were defeated by the Spanish and retreated into the Andes. In 1817, O'Higgins went back on the offensive with the aid of Argentine General José de San Martín. On February 12, 1817, he led a cavalry charge that won the Battle of Chacabuco. He became the first leader of independent Chile, and was granted dictatorial powers as Supreme Director on February 16, 1817. On February 12, 1818, Chile was proclaimed an independent republic.[PARAGRAPH:1]His six-year rule saw the founding of the Military Academy and the approval of the new (and current) Chilean flag. However, his more radical and liberal reforms, (such as the establishment of democracy and abolition of nobility titles) were resisted by the powerful conservative large-land owners. During his government, he founded the cities of La Union and Vicuna. From his later exile in Peru, he promoted the Chilean expansion southward, concluding in the foundation of Punta Arenas in 1845. Also, his government was involved in the killing of adversary independist leaders Jose Miguel Carrera, his brothers Juan José and Luis in Argentina, and Carreras' friend and guerrilla leader Manuel Rodriguez. He was deposed by a conservative coup on January 28, 1823.[PARAGRAPH:1]During his government, he also assisted Jose de San Martin to organize the Expedition and an Army and Navy to support the Independence of Peru. He also organized the Chilean Army and the first Chilean Navy, under the command of Lord Cochrane and Manuel Blanco Encalada.</French>
+		<German>[H1]Bernardo O'Higgins[\H1][NEWLINE][BOLD]Supreme Director of Chile[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1778 - 1842[NEWLINE][PARAGRAPH:1][BOLD]Background:[\BOLD][NEWLINE][TAB]Bernardo O'Higgins Riquelme, South American independence leader, was one of the commanders - together with Jose de San Martin - of the military forces that freed Chile from Spanish rule in the Chilean War of Independence. Although he was the third Supreme Director of Chile (1817-23), O'Higgins was the first holder of this title to head a fully independent Chilean state. When his father Ambrose O'Higgins became Viceroy of Peru, Bernardo was sent to a Catholic school in London to complete his studies.There, Bernardo became acquainted with American-independist ideas: he knew Venezuelan Francisco de Miranda and joined the Masonic Logia Lautaro.[PARAGRAPH:1]In 1810, he joined the nationalist rebels fighting for independence from Spain. In 1814, his Chilean rebels were defeated by the Spanish and retreated into the Andes. In 1817, O'Higgins went back on the offensive with the aid of Argentine General José de San Martín. On February 12, 1817, he led a cavalry charge that won the Battle of Chacabuco. He became the first leader of independent Chile, and was granted dictatorial powers as Supreme Director on February 16, 1817. On February 12, 1818, Chile was proclaimed an independent republic.[PARAGRAPH:1]His six-year rule saw the founding of the Military Academy and the approval of the new (and current) Chilean flag. However, his more radical and liberal reforms, (such as the establishment of democracy and abolition of nobility titles) were resisted by the powerful conservative large-land owners. During his government, he founded the cities of La Union and Vicuna. From his later exile in Peru, he promoted the Chilean expansion southward, concluding in the foundation of Punta Arenas in 1845. Also, his government was involved in the killing of adversary independist leaders Jose Miguel Carrera, his brothers Juan José and Luis in Argentina, and Carreras' friend and guerrilla leader Manuel Rodriguez. He was deposed by a conservative coup on January 28, 1823.[PARAGRAPH:1]During his government, he also assisted Jose de San Martin to organize the Expedition and an Army and Navy to support the Independence of Peru. He also organized the Chilean Army and the first Chilean Navy, under the command of Lord Cochrane and Manuel Blanco Encalada.</German>
+		<Italian>[H1]Bernardo O'Higgins[\H1][NEWLINE][BOLD]Supreme Director of Chile[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1778 - 1842[NEWLINE][PARAGRAPH:1][BOLD]Background:[\BOLD][NEWLINE][TAB]Bernardo O'Higgins Riquelme, South American independence leader, was one of the commanders - together with Jose de San Martin - of the military forces that freed Chile from Spanish rule in the Chilean War of Independence. Although he was the third Supreme Director of Chile (1817-23), O'Higgins was the first holder of this title to head a fully independent Chilean state. When his father Ambrose O'Higgins became Viceroy of Peru, Bernardo was sent to a Catholic school in London to complete his studies.There, Bernardo became acquainted with American-independist ideas: he knew Venezuelan Francisco de Miranda and joined the Masonic Logia Lautaro.[PARAGRAPH:1]In 1810, he joined the nationalist rebels fighting for independence from Spain. In 1814, his Chilean rebels were defeated by the Spanish and retreated into the Andes. In 1817, O'Higgins went back on the offensive with the aid of Argentine General José de San Martín. On February 12, 1817, he led a cavalry charge that won the Battle of Chacabuco. He became the first leader of independent Chile, and was granted dictatorial powers as Supreme Director on February 16, 1817. On February 12, 1818, Chile was proclaimed an independent republic.[PARAGRAPH:1]His six-year rule saw the founding of the Military Academy and the approval of the new (and current) Chilean flag. However, his more radical and liberal reforms, (such as the establishment of democracy and abolition of nobility titles) were resisted by the powerful conservative large-land owners. During his government, he founded the cities of La Union and Vicuna. From his later exile in Peru, he promoted the Chilean expansion southward, concluding in the foundation of Punta Arenas in 1845. Also, his government was involved in the killing of adversary independist leaders Jose Miguel Carrera, his brothers Juan José and Luis in Argentina, and Carreras' friend and guerrilla leader Manuel Rodriguez. He was deposed by a conservative coup on January 28, 1823.[PARAGRAPH:1]During his government, he also assisted Jose de San Martin to organize the Expedition and an Army and Navy to support the Independence of Peru. He also organized the Chilean Army and the first Chilean Navy, under the command of Lord Cochrane and Manuel Blanco Encalada.</Italian>
+		<Spanish>[H1]Bernardo O'Higgins[\H1][NEWLINE][BOLD]Supreme Director of Chile[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1778 - 1842[NEWLINE][PARAGRAPH:1][BOLD]Background:[\BOLD][NEWLINE][TAB]Bernardo O'Higgins Riquelme, South American independence leader, was one of the commanders - together with Jose de San Martin - of the military forces that freed Chile from Spanish rule in the Chilean War of Independence. Although he was the third Supreme Director of Chile (1817-23), O'Higgins was the first holder of this title to head a fully independent Chilean state. When his father Ambrose O'Higgins became Viceroy of Peru, Bernardo was sent to a Catholic school in London to complete his studies.There, Bernardo became acquainted with American-independist ideas: he knew Venezuelan Francisco de Miranda and joined the Masonic Logia Lautaro.[PARAGRAPH:1]In 1810, he joined the nationalist rebels fighting for independence from Spain. In 1814, his Chilean rebels were defeated by the Spanish and retreated into the Andes. In 1817, O'Higgins went back on the offensive with the aid of Argentine General José de San Martín. On February 12, 1817, he led a cavalry charge that won the Battle of Chacabuco. He became the first leader of independent Chile, and was granted dictatorial powers as Supreme Director on February 16, 1817. On February 12, 1818, Chile was proclaimed an independent republic.[PARAGRAPH:1]His six-year rule saw the founding of the Military Academy and the approval of the new (and current) Chilean flag. However, his more radical and liberal reforms, (such as the establishment of democracy and abolition of nobility titles) were resisted by the powerful conservative large-land owners. During his government, he founded the cities of La Union and Vicuna. From his later exile in Peru, he promoted the Chilean expansion southward, concluding in the foundation of Punta Arenas in 1845. Also, his government was involved in the killing of adversary independist leaders Jose Miguel Carrera, his brothers Juan José and Luis in Argentina, and Carreras' friend and guerrilla leader Manuel Rodriguez. He was deposed by a conservative coup on January 28, 1823.[PARAGRAPH:1]During his government, he also assisted Jose de San Martin to organize the Expedition and an Army and Navy to support the Independence of Peru. He also organized the Chilean Army and the first Chilean Navy, under the command of Lord Cochrane and Manuel Blanco Encalada.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_OHIGGINS_1</Tag>
+		<English>Greetings, [CT_NAME]. I am [OUR_NAME], in battle I'm brave to the point of insanity.</English>
+		<French>Greetings, [CT_NAME]. I am [OUR_NAME], in battle I'm brave to the point of insanity.</French>
+		<German>Greetings, [CT_NAME]. I am [OUR_NAME], in battle I'm brave to the point of insanity.</German>
+		<Italian>Greetings, [CT_NAME]. I am [OUR_NAME], in battle I'm brave to the point of insanity.</Italian>
+		<Spanish>Greetings, [CT_NAME]. I am [OUR_NAME], in battle I'm brave to the point of insanity.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SANITAGO</Tag>
+		<English>Sanitago</English>
+		<French>
+			<Text>Sanitago</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sanitago</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sanitago</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sanitago</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LA_SERENA</Tag>
+		<English>La Serena</English>
+		<French>
+			<Text>La Serena</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>La Serena</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>La Serena</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>La Serena</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CONCEPCION</Tag>
+		<English>Concepcion</English>
+		<French>
+			<Text>Concepcion</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Concepcion</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Concepcion</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Concepcion</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VALDIVIA</Tag>
+		<English>Valdivia</English>
+		<French>
+			<Text>Valdivia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Valdivia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Valdivia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Valdivia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VALPARAISO</Tag>
+		<English>Valparaiso</English>
+		<French>
+			<Text>Valparaiso</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Valparaiso</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Valparaiso</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Valparaiso</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VILLARRICA</Tag>
+		<English>Villarrica</English>
+		<French>
+			<Text>Villarrica</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Villarrica</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Villarrica</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Villarrica</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PUENTE_ALTO</Tag>
+		<English>Puente Alto</English>
+		<French>
+			<Text>Puente Alto</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Puente Alto</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Puente Alto</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Puente Alto</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VINA_DEL_MAR</Tag>
+		<English>Vina del Mar</English>
+		<French>
+			<Text>Vina del Mar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Vina del Mar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Vina del Mar</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Vina del Mar</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ANTOFAGASTA</Tag>
+		<English>Antofagasta</English>
+		<French>
+			<Text>Antofagasta</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Antofagasta</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Antofagasta</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Antofagasta</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAN_BERNARDO</Tag>
+		<English>San Bernardo</English>
+		<French>
+			<Text>San Bernardo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>San Bernardo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>San Bernardo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>San Bernardo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TEMUCO</Tag>
+		<English>Temuco</English>
+		<French>
+			<Text>Temuco</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Temuco</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Temuco</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Temuco</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_RANCAGUA</Tag>
+		<English>Rancagua</English>
+		<French>
+			<Text>Rancagua</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Rancagua</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Rancagua</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Rancagua</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TALCA</Tag>
+		<English>Talca</English>
+		<French>
+			<Text>Talca</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Talca</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Talca</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Talca</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ARITA</Tag>
+		<English>Arita</English>
+		<French>
+			<Text>Arita</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Arita</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Arita</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Arita</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_IQUIQUE</Tag>
+		<English>Iquique</English>
+		<French>
+			<Text>Iquique</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Iquique</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Iquique</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Iquique</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TALCAHUANO</Tag>
+		<English>Talcahuano</English>
+		<French>
+			<Text>Talcahuano</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Talcahuano</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Talcahuano</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Talcahuano</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PUERTO_MONTT</Tag>
+		<English>Puerto Montt</English>
+		<French>
+			<Text>Puerto Montt</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Puerto Montt</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Puerto Montt</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Puerto Montt</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_COQUIMBO</Tag>
+		<English>Coquimbo</English>
+		<French>
+			<Text>Coquimbo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Coquimbo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Coquimbo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Coquimbo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CHILLAN</Tag>
+		<English>Chillan</English>
+		<French>
+			<Text>Chillan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Chillan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Chillan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Chillan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_OSORNO</Tag>
+		<English>Osorno</English>
+		<French>
+			<Text>Osorno</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Osorno</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Osorno</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Osorno</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VALDIVIA</Tag>
+		<English>Valdivia</English>
+		<French>
+			<Text>Valdivia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Valdivia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Valdivia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Valdivia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_QUILPUE</Tag>
+		<English>Quilpue</English>
+		<French>
+			<Text>Quilpue</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Quilpue</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Quilpue</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Quilpue</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CALAMA</Tag>
+		<English>Calama</English>
+		<French>
+			<Text>Calama</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Calama</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Calama</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Calama</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_COPIAPO</Tag>
+		<English>Copiapo</English>
+		<French>
+			<Text>Copiapo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Copiapo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Copiapo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Copiapo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LOS_ANGELES</Tag>
+		<English>Los Angeles</English>
+		<French>
+			<Text>Los Angeles</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Los Angeles</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Los Angeles</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Los Angeles</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PUNTA_ARENAS</Tag>
+		<English>Punta Arenas</English>
+		<French>
+			<Text>Punta Arenas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Punta Arenas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Punta Arenas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Punta Arenas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VILLA_ALEMANA</Tag>
+		<English>Villa Alemana</English>
+		<French>
+			<Text>Villa Alemana</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Villa Alemana</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Villa Alemana</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Villa Alemana</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CURICO</Tag>
+		<English>Curico</English>
+		<French>
+			<Text>Curico</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Curico</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Curico</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Curico</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CORONEL</Tag>
+		<English>Coronel</English>
+		<French>
+			<Text>Coronel</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Coronel</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Coronel</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Coronel</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_HUALPEN</Tag>
+		<English>Hualpen</English>
+		<French>
+			<Text>Hualpen</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Hualpen</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Hualpen</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Hualpen</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_QUILLOTA</Tag>
+		<English>Quillota</English>
+		<French>
+			<Text>Quillota</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Quillota</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Quillota</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Quillota</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAN_ANTONIO</Tag>
+		<English>San Antonio</English>
+		<French>
+			<Text>San Antonio</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>San Antonio</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>San Antonio</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>San Antonio</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LOS_ANDES</Tag>
+		<English>Los Andes</English>
+		<French>
+			<Text>Los Andes</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Los Andes</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Los Andes</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Los Andes</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAN_FELIPE</Tag>
+		<English>San Felipe</English>
+		<French>
+			<Text>San Felipe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>San Felipe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>San Felipe</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>San Felipe</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LIMACHE</Tag>
+		<English>Limache</English>
+		<French>
+			<Text>Limache</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Limache</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Limache</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Limache</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SANTA_CRUZ</Tag>
+		<English>Santa Cruz</English>
+		<French>
+			<Text>Santa Cruz</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Santa Cruz</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Santa Cruz</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Santa Cruz</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LA_LAJA</Tag>
+		<English>La Laja</English>
+		<French>
+			<Text>La Laja</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>La Laja</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>La Laja</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>La Laja</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_EL_QUISCO</Tag>
+		<English>El Quisco</English>
+		<French>
+			<Text>El Quisco</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>El Quisco</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>El Quisco</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>El Quisco</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+</Civ4GameText>

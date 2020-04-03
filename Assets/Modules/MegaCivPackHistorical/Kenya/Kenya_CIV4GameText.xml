@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- Modified by the Civ Gold Team -->
+<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_KENYATTA</Tag>
+		<English>Jomo Kenyatta</English>
+		<French>Jomo Kenyatta</French>
+		<German>Jomo Kenyatta</German>
+		<Italian>Jomo Kenyatta</Italian>
+		<Spanish>Jomo Kenyatta</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_KENYATTA_PEDIA</Tag>
+		<English>[H1]Jomo Kenyatta[\H1][NEWLINE][BOLD]First President of the Kenya[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c. 1889 – 22 August 1978[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]was the leader of Kenya from independence in 1963 to his death in 1978, serving first as Prime Minister (1963–64) and then as President (1964–78). He is considered the founding father of the Kenyan nation.</English>
+		<French>[H1]Jomo Kenyatta[\H1][NEWLINE][BOLD]First President of the Kenya[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c. 1889 – 22 August 1978[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]was the leader of Kenya from independence in 1963 to his death in 1978, serving first as Prime Minister (1963–64) and then as President (1964–78). He is considered the founding father of the Kenyan nation.</French>
+		<German>[H1]Jomo Kenyatta[\H1][NEWLINE][BOLD]First President of the Kenya[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c. 1889 – 22 August 1978[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]was the leader of Kenya from independence in 1963 to his death in 1978, serving first as Prime Minister (1963–64) and then as President (1964–78). He is considered the founding father of the Kenyan nation.</German>
+		<Italian>[H1]Jomo Kenyatta[\H1][NEWLINE][BOLD]First President of the Kenya[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c. 1889 – 22 August 1978[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]was the leader of Kenya from independence in 1963 to his death in 1978, serving first as Prime Minister (1963–64) and then as President (1964–78). He is considered the founding father of the Kenyan nation.</Italian>
+		<Spanish>[H1]Jomo Kenyatta[\H1][NEWLINE][BOLD]First President of the Kenya[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c. 1889 – 22 August 1978[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]was the leader of Kenya from independence in 1963 to his death in 1978, serving first as Prime Minister (1963–64) and then as President (1964–78). He is considered the founding father of the Kenyan nation.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_KENYATTA_1</Tag>
+		<English>Greetings to you, [CT_NAME]. I am pleased to meet you, but do remember that friendship likes distance.</English>
+		<French>Greetings to you, [CT_NAME]. I am pleased to meet you, but do remember that friendship likes distance.</French>
+		<German>Greetings to you, [CT_NAME]. I am pleased to meet you, but do remember that friendship likes distance.</German>
+		<Italian>Greetings to you, [CT_NAME]. I am pleased to meet you, but do remember that friendship likes distance.</Italian>
+		<Spanish>Greetings to you, [CT_NAME]. I am pleased to meet you, but do remember that friendship likes distance.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KENYA_DESC</Tag>
+		<English>Republic of Kenya</English>
+		<French>
+			<Text>Republic of Kenya</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Republic of Kenya</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Republic of Kenya</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Republic of Kenya</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KENYA_SHORT_DESC</Tag>
+		<English>Kenya</English>
+		<French>
+			<Text>Kenya</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kenya</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kenya</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kenya</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KENYA_PEDIA</Tag>
+		<English>[TAB]Republic of Kenya, is a country in Africa. Its capital and largest city is Nairobi. Kenya lies on the equator with the Indian Ocean to the south-east, Tanzania to the south, Uganda to the west, South Sudan to the north-west, Ethiopia to the north and Somalia to the north-east. Kenya covers 581,309 km2 (224,445 sq mi), and had a population of approximately 44 million people in July 2012.</English>
+		<French>[TAB]Republic of Kenya, is a country in Africa. Its capital and largest city is Nairobi. Kenya lies on the equator with the Indian Ocean to the south-east, Tanzania to the south, Uganda to the west, South Sudan to the north-west, Ethiopia to the north and Somalia to the north-east. Kenya covers 581,309 km2 (224,445 sq mi), and had a population of approximately 44 million people in July 2012.</French>
+		<German>[TAB]Republic of Kenya, is a country in Africa. Its capital and largest city is Nairobi. Kenya lies on the equator with the Indian Ocean to the south-east, Tanzania to the south, Uganda to the west, South Sudan to the north-west, Ethiopia to the north and Somalia to the north-east. Kenya covers 581,309 km2 (224,445 sq mi), and had a population of approximately 44 million people in July 2012.</German>
+		<Italian>[TAB]Republic of Kenya, is a country in Africa. Its capital and largest city is Nairobi. Kenya lies on the equator with the Indian Ocean to the south-east, Tanzania to the south, Uganda to the west, South Sudan to the north-west, Ethiopia to the north and Somalia to the north-east. Kenya covers 581,309 km2 (224,445 sq mi), and had a population of approximately 44 million people in July 2012.</Italian>
+		<Spanish>[TAB]Republic of Kenya, is a country in Africa. Its capital and largest city is Nairobi. Kenya lies on the equator with the Indian Ocean to the south-east, Tanzania to the south, Uganda to the west, South Sudan to the north-west, Ethiopia to the north and Somalia to the north-east. Kenya covers 581,309 km2 (224,445 sq mi), and had a population of approximately 44 million people in July 2012.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KENYA_ADJECTIVE</Tag>
+		<English>Kenyan</English>
+		<French>
+			<Text>Kenyan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kenyan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kenyan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kenyan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+</Civ4GameText>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- Modified by the Civ Gold Team -->
+	<!-- -->
+<Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Xml\Schema\Caveman2Cosmos.xsd">
+	<LeaderheadArtInfos>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_ARPAD</Type>
+			<Button>Modules/Custom_Civilizations/Hungary/leaders/arpad_small.dds</Button>
+			<NIF>Modules/Custom_Civilizations/Hungary/leaders/arpad.dds</NIF>
+			<KFM/>
+			<NoShaderNIF/>
+			<BackgroundKFM/>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_MATTHIAS</Type>
+			<Button>Modules/Custom_Civilizations/Hungary/leaders/Matthias_small.dds</Button>
+			<NIF>Modules/Custom_Civilizations/Hungary/leaders/Matthias.dds</NIF>
+			<KFM/>
+			<NoShaderNIF/>
+			<BackgroundKFM/>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_HUNGARY_KOSSUTH</Type>
+			<Button>Modules/Custom_Civilizations/Hungary/leaders/Kossuth_small.dds</Button>
+			<NIF>Modules/Custom_Civilizations/Hungary/leaders/Kossuth.dds</NIF>
+			<KFM/>
+			<NoShaderNIF/>
+			<BackgroundKFM/>
+		</LeaderheadArtInfo>
+	</LeaderheadArtInfos>
+</Civ4ArtDefines>

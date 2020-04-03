@@ -1,0 +1,1203 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- Modified by the Civ Gold Team -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_MBATIAN</Tag>
+		<English>Mbatian</English>
+		<French>Mbatian</French>
+		<German>Mbatian</German>
+		<Italian>Mbatian</Italian>
+		<Spanish>Mbatian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_MBATIAN_PEDIA</Tag>
+		<English>[H1]Mbatian[\H1][NEWLINE][BOLD]Great Laibon of the Maasai[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 
+1820 - 1890[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]According to Maasai oral tradition, 
+the C19 was a period when two charismatic Prophets, Supeet and Mbatian, had a dominant influence and 
+they were largely responsible to unifying Maasai moran against powerful enemies. This suggests that the 
+policy of unification sought to build up altruism and group indulgence as amanyata virtue that overrode 
+family feuds and clan hostilities in the interests of Maasai dominance throughout the region. [PARAGRAPH:1]His 
+reputation as a medicine man and prophet earned him the title of the Great Laibon. He lived at the dawn 
+of the white man's entry into central Africa, at a time when the Maasai were perhaps at the peak of their 
+formidable strength. But Mbatian was tormented by terrible visions. He called the Maasai elders together 
+and said to them, 'I am about to die. I see a large black rhino cutting a line across the land. There 
+are pink men on his back. I see the end of my children and of the land. Do not move from your land, for 
+if you do you will die of a terrible unknown disease, your cattle will perish, you will fight with a 
+powerful enemy and you will be beaten.' [PARAGRAPH:1] In 1890 Mbatian, the Maasai Oloiboni (the ritual 
+expert) had died leaving his succession in dispute between his two sons - Senteu and Olonana. The Great 
+Laibon was succeeded by his son, Lenana, who promised his people that by giving some of their best land 
+to the white man, they would appease the invaders and avoid further tragedy. He was wrong.[PARAGRAPH:1]If 
+this brief history conveys an impression of a sweeping migration, coming like a storm, wild and full 
+of quick destruction and plunder, it has misled. The Maasai's progress was a drift rather than a drive. 
+They trod softly rather than thundered. But the demands of their cattle were paramount and all who resisted 
+perished. The destruction of their enemies was total; their progress like the flow of molten rock from 
+an ancient volcano: slow, deadly, irresistible. They pushed all before them until the Maasai territory 
+stretched from the Indian Ocean to the great lakes, from the snows of Kilimanjaro to the edges of the 
+Sudanese wastelands.  (picture: Maasai warrior used to represent Mbatian)</English>
+		<French>[H1]Mbatian[\H1][NEWLINE][BOLD]Great Laibon of the Maasai[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 
+1820 - 1890[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]According to Maasai oral tradition, 
+the C19 was a period when two charismatic Prophets, Supeet and Mbatian, had a dominant influence and 
+they were largely responsible to unifying Maasai moran against powerful enemies. This suggests that the 
+policy of unification sought to build up altruism and group indulgence as amanyata virtue that overrode 
+family feuds and clan hostilities in the interests of Maasai dominance throughout the region. [PARAGRAPH:1]His 
+reputation as a medicine man and prophet earned him the title of the Great Laibon. He lived at the dawn 
+of the white man's entry into central Africa, at a time when the Maasai were perhaps at the peak of their 
+formidable strength. But Mbatian was tormented by terrible visions. He called the Maasai elders together 
+and said to them, 'I am about to die. I see a large black rhino cutting a line across the land. There 
+are pink men on his back. I see the end of my children and of the land. Do not move from your land, for 
+if you do you will die of a terrible unknown disease, your cattle will perish, you will fight with a 
+powerful enemy and you will be beaten.' [PARAGRAPH:1] In 1890 Mbatian, the Maasai Oloiboni (the ritual 
+expert) had died leaving his succession in dispute between his two sons - Senteu and Olonana. The Great 
+Laibon was succeeded by his son, Lenana, who promised his people that by giving some of their best land 
+to the white man, they would appease the invaders and avoid further tragedy. He was wrong.[PARAGRAPH:1]If 
+this brief history conveys an impression of a sweeping migration, coming like a storm, wild and full 
+of quick destruction and plunder, it has misled. The Maasai's progress was a drift rather than a drive. 
+They trod softly rather than thundered. But the demands of their cattle were paramount and all who resisted 
+perished. The destruction of their enemies was total; their progress like the flow of molten rock from 
+an ancient volcano: slow, deadly, irresistible. They pushed all before them until the Maasai territory 
+stretched from the Indian Ocean to the great lakes, from the snows of Kilimanjaro to the edges of the 
+Sudanese wastelands.  (picture: Maasai warrior used to represent Mbatian)</French>
+		<German>[H1]Mbatian[\H1][NEWLINE][BOLD]Great Laibon of the Maasai[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 
+1820 - 1890[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]According to Maasai oral tradition, 
+the C19 was a period when two charismatic Prophets, Supeet and Mbatian, had a dominant influence and 
+they were largely responsible to unifying Maasai moran against powerful enemies. This suggests that the 
+policy of unification sought to build up altruism and group indulgence as amanyata virtue that overrode 
+family feuds and clan hostilities in the interests of Maasai dominance throughout the region. [PARAGRAPH:1]His 
+reputation as a medicine man and prophet earned him the title of the Great Laibon. He lived at the dawn 
+of the white man's entry into central Africa, at a time when the Maasai were perhaps at the peak of their 
+formidable strength. But Mbatian was tormented by terrible visions. He called the Maasai elders together 
+and said to them, 'I am about to die. I see a large black rhino cutting a line across the land. There 
+are pink men on his back. I see the end of my children and of the land. Do not move from your land, for 
+if you do you will die of a terrible unknown disease, your cattle will perish, you will fight with a 
+powerful enemy and you will be beaten.' [PARAGRAPH:1] In 1890 Mbatian, the Maasai Oloiboni (the ritual 
+expert) had died leaving his succession in dispute between his two sons - Senteu and Olonana. The Great 
+Laibon was succeeded by his son, Lenana, who promised his people that by giving some of their best land 
+to the white man, they would appease the invaders and avoid further tragedy. He was wrong.[PARAGRAPH:1]If 
+this brief history conveys an impression of a sweeping migration, coming like a storm, wild and full 
+of quick destruction and plunder, it has misled. The Maasai's progress was a drift rather than a drive. 
+They trod softly rather than thundered. But the demands of their cattle were paramount and all who resisted 
+perished. The destruction of their enemies was total; their progress like the flow of molten rock from 
+an ancient volcano: slow, deadly, irresistible. They pushed all before them until the Maasai territory 
+stretched from the Indian Ocean to the great lakes, from the snows of Kilimanjaro to the edges of the 
+Sudanese wastelands.  (picture: Maasai warrior used to represent Mbatian)</German>
+		<Italian>[H1]Mbatian[\H1][NEWLINE][BOLD]Great Laibon of the Maasai[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 
+1820 - 1890[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]According to Maasai oral tradition, 
+the C19 was a period when two charismatic Prophets, Supeet and Mbatian, had a dominant influence and 
+they were largely responsible to unifying Maasai moran against powerful enemies. This suggests that the 
+policy of unification sought to build up altruism and group indulgence as amanyata virtue that overrode 
+family feuds and clan hostilities in the interests of Maasai dominance throughout the region. [PARAGRAPH:1]His 
+reputation as a medicine man and prophet earned him the title of the Great Laibon. He lived at the dawn 
+of the white man's entry into central Africa, at a time when the Maasai were perhaps at the peak of their 
+formidable strength. But Mbatian was tormented by terrible visions. He called the Maasai elders together 
+and said to them, 'I am about to die. I see a large black rhino cutting a line across the land. There 
+are pink men on his back. I see the end of my children and of the land. Do not move from your land, for 
+if you do you will die of a terrible unknown disease, your cattle will perish, you will fight with a 
+powerful enemy and you will be beaten.' [PARAGRAPH:1] In 1890 Mbatian, the Maasai Oloiboni (the ritual 
+expert) had died leaving his succession in dispute between his two sons - Senteu and Olonana. The Great 
+Laibon was succeeded by his son, Lenana, who promised his people that by giving some of their best land 
+to the white man, they would appease the invaders and avoid further tragedy. He was wrong.[PARAGRAPH:1]If 
+this brief history conveys an impression of a sweeping migration, coming like a storm, wild and full 
+of quick destruction and plunder, it has misled. The Maasai's progress was a drift rather than a drive. 
+They trod softly rather than thundered. But the demands of their cattle were paramount and all who resisted 
+perished. The destruction of their enemies was total; their progress like the flow of molten rock from 
+an ancient volcano: slow, deadly, irresistible. They pushed all before them until the Maasai territory 
+stretched from the Indian Ocean to the great lakes, from the snows of Kilimanjaro to the edges of the 
+Sudanese wastelands.  (picture: Maasai warrior used to represent Mbatian)</Italian>
+		<Spanish>[H1]Mbatian[\H1][NEWLINE][BOLD]Great Laibon of the Maasai[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 
+1820 - 1890[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]According to Maasai oral tradition, 
+the C19 was a period when two charismatic Prophets, Supeet and Mbatian, had a dominant influence and 
+they were largely responsible to unifying Maasai moran against powerful enemies. This suggests that the 
+policy of unification sought to build up altruism and group indulgence as amanyata virtue that overrode 
+family feuds and clan hostilities in the interests of Maasai dominance throughout the region. [PARAGRAPH:1]His 
+reputation as a medicine man and prophet earned him the title of the Great Laibon. He lived at the dawn 
+of the white man's entry into central Africa, at a time when the Maasai were perhaps at the peak of their 
+formidable strength. But Mbatian was tormented by terrible visions. He called the Maasai elders together 
+and said to them, 'I am about to die. I see a large black rhino cutting a line across the land. There 
+are pink men on his back. I see the end of my children and of the land. Do not move from your land, for 
+if you do you will die of a terrible unknown disease, your cattle will perish, you will fight with a 
+powerful enemy and you will be beaten.' [PARAGRAPH:1] In 1890 Mbatian, the Maasai Oloiboni (the ritual 
+expert) had died leaving his succession in dispute between his two sons - Senteu and Olonana. The Great 
+Laibon was succeeded by his son, Lenana, who promised his people that by giving some of their best land 
+to the white man, they would appease the invaders and avoid further tragedy. He was wrong.[PARAGRAPH:1]If 
+this brief history conveys an impression of a sweeping migration, coming like a storm, wild and full 
+of quick destruction and plunder, it has misled. The Maasai's progress was a drift rather than a drive. 
+They trod softly rather than thundered. But the demands of their cattle were paramount and all who resisted 
+perished. The destruction of their enemies was total; their progress like the flow of molten rock from 
+an ancient volcano: slow, deadly, irresistible. They pushed all before them until the Maasai territory 
+stretched from the Indian Ocean to the great lakes, from the snows of Kilimanjaro to the edges of the 
+Sudanese wastelands.  (picture: Maasai warrior used to represent Mbatian)</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_MBATIAN_1</Tag>
+		<English>Greetings to you, [CT_NAME]. I am pleased to meet you, but do remember that friendship likes distance.</English>
+		<French>Greetings to you, [CT_NAME]. I am pleased to meet you, but do remember that friendship likes distance.</French>
+		<German>Greetings to you, [CT_NAME]. I am pleased to meet you, but do remember that friendship likes distance.</German>
+		<Italian>Greetings to you, [CT_NAME]. I am pleased to meet you, but do remember that friendship likes distance.</Italian>
+		<Spanish>Greetings to you, [CT_NAME]. I am pleased to meet you, but do remember that friendship likes distance.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MAASAI_DESC</Tag>
+		<English>Maasai Empire</English>
+		<French>
+			<Text>Maasai Empire</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Maasai Empire</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Maasai Empire</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Maasai Empire</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MAASAI_SHORT_DESC</Tag>
+		<English>Maasai</English>
+		<French>
+			<Text>Maasai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Maasai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Maasai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Maasai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MAASAI_PEDIA</Tag>
+		<English>[TAB]The Maasai or Masai, an indigenous African tribe of semi-nomadic people located primarily 
+in Kenya and northern Tanzania, are probably one of the most familiar tribes of East Africa. Despite 
+the growth of modern civilization, the Maasai have largely managed to maintain their traditional ways, 
+although this becomes more challenging each year.[PARAGRAPH:2]The Maasai are part of the Nilotic family 
+of African tribal groups, and probably migrated from the Nile valley in Sudan to central and south-western 
+Kenya and northern Tanzania sometime after 1500 AD, bringing their domesticated cattle with them. They 
+are linguistically and well as physically related to the Samburu, Turkana and Kalenjin, among others.[PARAGRAPH:2]After 
+migrating South from the Nile Region of North Africa, in the fifteenth century the Maasai established 
+themselves in the East of Africa by the mid seventeenth century. Along the way they conquered such groups 
+as the Chaga, Sirikwa, Galla, Iltatua, Ndorobo and Kikuyu.[PARAGRAPH:2]Despite their reputation as fierce 
+warriors, Maasai culture revolves around their cattle. One of their spiritual beliefs is that their rain 
+god Ngai gave all cattle to the Maasai people, and therefore anyone else who possesses cattle must have 
+stolen them from the Maasai. This has led to some fatal altercations with other tribes of the regions 
+over the centuries when the Maasai attempt to reclaim their "property". The huts of the Maasai are built 
+from dried cattle dung, and certain sacred rituals involve the drinking of cow blood.[PARAGRAPH:2]Legend 
+has it that long ago the Maasai were divided into two groups during a season of drought. Before this 
+time they lived as one group in a crater-like region surrounded by steep escarpments. They spoke one 
+language called olmaa and had no subdivisions as they do today. However, when no rains fell they decided 
+they had to move into the hills where the land was vast and fertile. When a bridge had been built and 
+the families with their cattle began to ascend the bridge suddenly broke. Those who were crossing fell 
+back into the crater where many more awaited. However, half of the people had already reached the top. 
+These people at the top became ilmeek or non-Maasai. Those in the crater remained Maasai.[PARAGRAPH:2]The 
+ability to graze their cattle over large territories has diminished considerably in recent years, due 
+to increased urbanisation and the declaration of the Maasai Mara and Serengeti game reserves, which was 
+all formerly Maasai grazing land.[PARAGRAPH:2]A dispute between two brothers, one a religious leader 
+and the other a secular chief in the mid nineteenth century, caused a rift among the people. A civil 
+war entailed as British colonists began to take an interest in Maasai territory siding with the religious 
+leader. Along with disease and famine, the people were weakened. The British displaced the Maasai to 
+reservations where terrain was less than adequate for sustenance.[PARAGRAPH:2]Although their number slowly 
+grows each year, the Maasai don't command the authority and presence they once did in Africa. After independence, 
+some Maasai were able to return to their family homeland. By this time many Maasai had become more settled. 
+Some started growing crops or held jobs requiring them to stay.[PARAGRAPH2]There are numerous traditions 
+and ceremonies performed by Maasai men. Perhaps best known is the warrior "jumping" dance, where young 
+Maasai morani (warrior-youth) leap into the air from a standing position, in order to demonstrate their 
+strength and agility. Until recent times, in order to earn the right to have a wife, a Maasai moran was 
+required to have killed a lion. Officially this practice has stopped, although there is evidence that 
+it continues in the more remote regions of Kenya. Also in earlier times a group of young boys were required 
+to build a new village and live in it for a lengthy period (often years) as part of the passage to manhood. 
+This practice is dying out due to lack of land.</English>
+		<French>[TAB]The Maasai or Masai, an indigenous African tribe of semi-nomadic people located primarily 
+in Kenya and northern Tanzania, are probably one of the most familiar tribes of East Africa. Despite 
+the growth of modern civilization, the Maasai have largely managed to maintain their traditional ways, 
+although this becomes more challenging each year.[PARAGRAPH:2]The Maasai are part of the Nilotic family 
+of African tribal groups, and probably migrated from the Nile valley in Sudan to central and south-western 
+Kenya and northern Tanzania sometime after 1500 AD, bringing their domesticated cattle with them. They 
+are linguistically and well as physically related to the Samburu, Turkana and Kalenjin, among others.[PARAGRAPH:2]After 
+migrating South from the Nile Region of North Africa, in the fifteenth century the Maasai established 
+themselves in the East of Africa by the mid seventeenth century. Along the way they conquered such groups 
+as the Chaga, Sirikwa, Galla, Iltatua, Ndorobo and Kikuyu.[PARAGRAPH:2]Despite their reputation as fierce 
+warriors, Maasai culture revolves around their cattle. One of their spiritual beliefs is that their rain 
+god Ngai gave all cattle to the Maasai people, and therefore anyone else who possesses cattle must have 
+stolen them from the Maasai. This has led to some fatal altercations with other tribes of the regions 
+over the centuries when the Maasai attempt to reclaim their "property". The huts of the Maasai are built 
+from dried cattle dung, and certain sacred rituals involve the drinking of cow blood.[PARAGRAPH:2]Legend 
+has it that long ago the Maasai were divided into two groups during a season of drought. Before this 
+time they lived as one group in a crater-like region surrounded by steep escarpments. They spoke one 
+language called olmaa and had no subdivisions as they do today. However, when no rains fell they decided 
+they had to move into the hills where the land was vast and fertile. When a bridge had been built and 
+the families with their cattle began to ascend the bridge suddenly broke. Those who were crossing fell 
+back into the crater where many more awaited. However, half of the people had already reached the top. 
+These people at the top became ilmeek or non-Maasai. Those in the crater remained Maasai.[PARAGRAPH:2]The 
+ability to graze their cattle over large territories has diminished considerably in recent years, due 
+to increased urbanisation and the declaration of the Maasai Mara and Serengeti game reserves, which was 
+all formerly Maasai grazing land.[PARAGRAPH:2]A dispute between two brothers, one a religious leader 
+and the other a secular chief in the mid nineteenth century, caused a rift among the people. A civil 
+war entailed as British colonists began to take an interest in Maasai territory siding with the religious 
+leader. Along with disease and famine, the people were weakened. The British displaced the Maasai to 
+reservations where terrain was less than adequate for sustenance.[PARAGRAPH:2]Although their number slowly 
+grows each year, the Maasai don't command the authority and presence they once did in Africa. After independence, 
+some Maasai were able to return to their family homeland. By this time many Maasai had become more settled. 
+Some started growing crops or held jobs requiring them to stay.[PARAGRAPH2]There are numerous traditions 
+and ceremonies performed by Maasai men. Perhaps best known is the warrior "jumping" dance, where young 
+Maasai morani (warrior-youth) leap into the air from a standing position, in order to demonstrate their 
+strength and agility. Until recent times, in order to earn the right to have a wife, a Maasai moran was 
+required to have killed a lion. Officially this practice has stopped, although there is evidence that 
+it continues in the more remote regions of Kenya. Also in earlier times a group of young boys were required 
+to build a new village and live in it for a lengthy period (often years) as part of the passage to manhood. 
+This practice is dying out due to lack of land.</French>
+		<German>[TAB]The Maasai or Masai, an indigenous African tribe of semi-nomadic people located primarily 
+in Kenya and northern Tanzania, are probably one of the most familiar tribes of East Africa. Despite 
+the growth of modern civilization, the Maasai have largely managed to maintain their traditional ways, 
+although this becomes more challenging each year.[PARAGRAPH:2]The Maasai are part of the Nilotic family 
+of African tribal groups, and probably migrated from the Nile valley in Sudan to central and south-western 
+Kenya and northern Tanzania sometime after 1500 AD, bringing their domesticated cattle with them. They 
+are linguistically and well as physically related to the Samburu, Turkana and Kalenjin, among others.[PARAGRAPH:2]After 
+migrating South from the Nile Region of North Africa, in the fifteenth century the Maasai established 
+themselves in the East of Africa by the mid seventeenth century. Along the way they conquered such groups 
+as the Chaga, Sirikwa, Galla, Iltatua, Ndorobo and Kikuyu.[PARAGRAPH:2]Despite their reputation as fierce 
+warriors, Maasai culture revolves around their cattle. One of their spiritual beliefs is that their rain 
+god Ngai gave all cattle to the Maasai people, and therefore anyone else who possesses cattle must have 
+stolen them from the Maasai. This has led to some fatal altercations with other tribes of the regions 
+over the centuries when the Maasai attempt to reclaim their "property". The huts of the Maasai are built 
+from dried cattle dung, and certain sacred rituals involve the drinking of cow blood.[PARAGRAPH:2]Legend 
+has it that long ago the Maasai were divided into two groups during a season of drought. Before this 
+time they lived as one group in a crater-like region surrounded by steep escarpments. They spoke one 
+language called olmaa and had no subdivisions as they do today. However, when no rains fell they decided 
+they had to move into the hills where the land was vast and fertile. When a bridge had been built and 
+the families with their cattle began to ascend the bridge suddenly broke. Those who were crossing fell 
+back into the crater where many more awaited. However, half of the people had already reached the top. 
+These people at the top became ilmeek or non-Maasai. Those in the crater remained Maasai.[PARAGRAPH:2]The 
+ability to graze their cattle over large territories has diminished considerably in recent years, due 
+to increased urbanisation and the declaration of the Maasai Mara and Serengeti game reserves, which was 
+all formerly Maasai grazing land.[PARAGRAPH:2]A dispute between two brothers, one a religious leader 
+and the other a secular chief in the mid nineteenth century, caused a rift among the people. A civil 
+war entailed as British colonists began to take an interest in Maasai territory siding with the religious 
+leader. Along with disease and famine, the people were weakened. The British displaced the Maasai to 
+reservations where terrain was less than adequate for sustenance.[PARAGRAPH:2]Although their number slowly 
+grows each year, the Maasai don't command the authority and presence they once did in Africa. After independence, 
+some Maasai were able to return to their family homeland. By this time many Maasai had become more settled. 
+Some started growing crops or held jobs requiring them to stay.[PARAGRAPH2]There are numerous traditions 
+and ceremonies performed by Maasai men. Perhaps best known is the warrior "jumping" dance, where young 
+Maasai morani (warrior-youth) leap into the air from a standing position, in order to demonstrate their 
+strength and agility. Until recent times, in order to earn the right to have a wife, a Maasai moran was 
+required to have killed a lion. Officially this practice has stopped, although there is evidence that 
+it continues in the more remote regions of Kenya. Also in earlier times a group of young boys were required 
+to build a new village and live in it for a lengthy period (often years) as part of the passage to manhood. 
+This practice is dying out due to lack of land.</German>
+		<Italian>[TAB]The Maasai or Masai, an indigenous African tribe of semi-nomadic people located primarily 
+in Kenya and northern Tanzania, are probably one of the most familiar tribes of East Africa. Despite 
+the growth of modern civilization, the Maasai have largely managed to maintain their traditional ways, 
+although this becomes more challenging each year.[PARAGRAPH:2]The Maasai are part of the Nilotic family 
+of African tribal groups, and probably migrated from the Nile valley in Sudan to central and south-western 
+Kenya and northern Tanzania sometime after 1500 AD, bringing their domesticated cattle with them. They 
+are linguistically and well as physically related to the Samburu, Turkana and Kalenjin, among others.[PARAGRAPH:2]After 
+migrating South from the Nile Region of North Africa, in the fifteenth century the Maasai established 
+themselves in the East of Africa by the mid seventeenth century. Along the way they conquered such groups 
+as the Chaga, Sirikwa, Galla, Iltatua, Ndorobo and Kikuyu.[PARAGRAPH:2]Despite their reputation as fierce 
+warriors, Maasai culture revolves around their cattle. One of their spiritual beliefs is that their rain 
+god Ngai gave all cattle to the Maasai people, and therefore anyone else who possesses cattle must have 
+stolen them from the Maasai. This has led to some fatal altercations with other tribes of the regions 
+over the centuries when the Maasai attempt to reclaim their "property". The huts of the Maasai are built 
+from dried cattle dung, and certain sacred rituals involve the drinking of cow blood.[PARAGRAPH:2]Legend 
+has it that long ago the Maasai were divided into two groups during a season of drought. Before this 
+time they lived as one group in a crater-like region surrounded by steep escarpments. They spoke one 
+language called olmaa and had no subdivisions as they do today. However, when no rains fell they decided 
+they had to move into the hills where the land was vast and fertile. When a bridge had been built and 
+the families with their cattle began to ascend the bridge suddenly broke. Those who were crossing fell 
+back into the crater where many more awaited. However, half of the people had already reached the top. 
+These people at the top became ilmeek or non-Maasai. Those in the crater remained Maasai.[PARAGRAPH:2]The 
+ability to graze their cattle over large territories has diminished considerably in recent years, due 
+to increased urbanisation and the declaration of the Maasai Mara and Serengeti game reserves, which was 
+all formerly Maasai grazing land.[PARAGRAPH:2]A dispute between two brothers, one a religious leader 
+and the other a secular chief in the mid nineteenth century, caused a rift among the people. A civil 
+war entailed as British colonists began to take an interest in Maasai territory siding with the religious 
+leader. Along with disease and famine, the people were weakened. The British displaced the Maasai to 
+reservations where terrain was less than adequate for sustenance.[PARAGRAPH:2]Although their number slowly 
+grows each year, the Maasai don't command the authority and presence they once did in Africa. After independence, 
+some Maasai were able to return to their family homeland. By this time many Maasai had become more settled. 
+Some started growing crops or held jobs requiring them to stay.[PARAGRAPH2]There are numerous traditions 
+and ceremonies performed by Maasai men. Perhaps best known is the warrior "jumping" dance, where young 
+Maasai morani (warrior-youth) leap into the air from a standing position, in order to demonstrate their 
+strength and agility. Until recent times, in order to earn the right to have a wife, a Maasai moran was 
+required to have killed a lion. Officially this practice has stopped, although there is evidence that 
+it continues in the more remote regions of Kenya. Also in earlier times a group of young boys were required 
+to build a new village and live in it for a lengthy period (often years) as part of the passage to manhood. 
+This practice is dying out due to lack of land.</Italian>
+		<Spanish>[TAB]The Maasai or Masai, an indigenous African tribe of semi-nomadic people located primarily 
+in Kenya and northern Tanzania, are probably one of the most familiar tribes of East Africa. Despite 
+the growth of modern civilization, the Maasai have largely managed to maintain their traditional ways, 
+although this becomes more challenging each year.[PARAGRAPH:2]The Maasai are part of the Nilotic family 
+of African tribal groups, and probably migrated from the Nile valley in Sudan to central and south-western 
+Kenya and northern Tanzania sometime after 1500 AD, bringing their domesticated cattle with them. They 
+are linguistically and well as physically related to the Samburu, Turkana and Kalenjin, among others.[PARAGRAPH:2]After 
+migrating South from the Nile Region of North Africa, in the fifteenth century the Maasai established 
+themselves in the East of Africa by the mid seventeenth century. Along the way they conquered such groups 
+as the Chaga, Sirikwa, Galla, Iltatua, Ndorobo and Kikuyu.[PARAGRAPH:2]Despite their reputation as fierce 
+warriors, Maasai culture revolves around their cattle. One of their spiritual beliefs is that their rain 
+god Ngai gave all cattle to the Maasai people, and therefore anyone else who possesses cattle must have 
+stolen them from the Maasai. This has led to some fatal altercations with other tribes of the regions 
+over the centuries when the Maasai attempt to reclaim their "property". The huts of the Maasai are built 
+from dried cattle dung, and certain sacred rituals involve the drinking of cow blood.[PARAGRAPH:2]Legend 
+has it that long ago the Maasai were divided into two groups during a season of drought. Before this 
+time they lived as one group in a crater-like region surrounded by steep escarpments. They spoke one 
+language called olmaa and had no subdivisions as they do today. However, when no rains fell they decided 
+they had to move into the hills where the land was vast and fertile. When a bridge had been built and 
+the families with their cattle began to ascend the bridge suddenly broke. Those who were crossing fell 
+back into the crater where many more awaited. However, half of the people had already reached the top. 
+These people at the top became ilmeek or non-Maasai. Those in the crater remained Maasai.[PARAGRAPH:2]The 
+ability to graze their cattle over large territories has diminished considerably in recent years, due 
+to increased urbanisation and the declaration of the Maasai Mara and Serengeti game reserves, which was 
+all formerly Maasai grazing land.[PARAGRAPH:2]A dispute between two brothers, one a religious leader 
+and the other a secular chief in the mid nineteenth century, caused a rift among the people. A civil 
+war entailed as British colonists began to take an interest in Maasai territory siding with the religious 
+leader. Along with disease and famine, the people were weakened. The British displaced the Maasai to 
+reservations where terrain was less than adequate for sustenance.[PARAGRAPH:2]Although their number slowly 
+grows each year, the Maasai don't command the authority and presence they once did in Africa. After independence, 
+some Maasai were able to return to their family homeland. By this time many Maasai had become more settled. 
+Some started growing crops or held jobs requiring them to stay.[PARAGRAPH2]There are numerous traditions 
+and ceremonies performed by Maasai men. Perhaps best known is the warrior "jumping" dance, where young 
+Maasai morani (warrior-youth) leap into the air from a standing position, in order to demonstrate their 
+strength and agility. Until recent times, in order to earn the right to have a wife, a Maasai moran was 
+required to have killed a lion. Officially this practice has stopped, although there is evidence that 
+it continues in the more remote regions of Kenya. Also in earlier times a group of young boys were required 
+to build a new village and live in it for a lengthy period (often years) as part of the passage to manhood. 
+This practice is dying out due to lack of land.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MAASAI_ADJECTIVE</Tag>
+		<English>Maasai</English>
+		<French>
+			<Text>Maasai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Maasai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Maasai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Maasai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KISONGO</Tag>
+		<English>Kisongo</English>
+		<French>
+			<Text>Kisongo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kisongo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kisongo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kisongo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KAJAIDO</Tag>
+		<English>Kajaido</English>
+		<French>
+			<Text>Kajaido</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kajaido</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kajaido</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kajaido</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NAROK</Tag>
+		<English>Narok</English>
+		<French>
+			<Text>Narok</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Narok</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Narok</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Narok</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ARUSHA</Tag>
+		<English>Arusha</English>
+		<French>
+			<Text>Arusha</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Arusha</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Arusha</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Arusha</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MARALAL</Tag>
+		<English>Maralal</English>
+		<French>
+			<Text>Maralal</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Maralal</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Maralal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Maralal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KITUI</Tag>
+		<English>Kitui</English>
+		<French>
+			<Text>Kitui</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kitui</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kitui</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kitui</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VOI</Tag>
+		<English>Voi</English>
+		<French>
+			<Text>Voi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Voi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Voi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Voi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KAPENGURIA</Tag>
+		<English>Kapenguria</English>
+		<French>
+			<Text>Kapenguria</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kapenguria</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kapenguria</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kapenguria</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NANYUKI</Tag>
+		<English>Nanyuki</English>
+		<French>
+			<Text>Nanyuki</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Nanyuki</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Nanyuki</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Nanyuki</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KWALE</Tag>
+		<English>Kwale</English>
+		<French>
+			<Text>Kwale</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kwale</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kwale</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kwale</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KABARNET</Tag>
+		<English>Kabarnet</English>
+		<French>
+			<Text>Kabarnet</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kabarnet</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kabarnet</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kabarnet</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KILIFI</Tag>
+		<English>Kilifi</English>
+		<French>
+			<Text>Kilifi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kilifi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kilifi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kilifi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_HOMA_BAY</Tag>
+		<English>Homa Bay</English>
+		<French>
+			<Text>Homa Bay</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Homa Bay</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Homa Bay</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Homa Bay</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_EMBU</Tag>
+		<English>Embu</English>
+		<French>
+			<Text>Embu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Embu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Embu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Embu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MOSHI</Tag>
+		<English>Moshi</English>
+		<French>
+			<Text>Moshi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Moshi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Moshi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Moshi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LOITOKTOK</Tag>
+		<English>Loitoktok</English>
+		<French>
+			<Text>Loitoktok</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Loitoktok</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Loitoktok</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Loitoktok</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NGONG</Tag>
+		<English>Ngong</English>
+		<French>
+			<Text>Ngong</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ngong</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ngong</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngong</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MAGADI</Tag>
+		<English>Magadi</English>
+		<French>
+			<Text>Magadi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Magadi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Magadi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Magadi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_OLULUNGA</Tag>
+		<English>Olulung'a</English>
+		<French>
+			<Text>Olulung'a</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Olulung'a</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Olulung'a</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Olulung'a</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MAU</Tag>
+		<English>Mau</English>
+		<French>
+			<Text>Mau</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mau</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Mau</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mau</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LORROKI</Tag>
+		<English>Lorroki</English>
+		<French>
+			<Text>Lorroki</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Lorroki</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Lorroki</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Lorroki</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KIRISIA</Tag>
+		<English>Kirisia</English>
+		<French>
+			<Text>Kirisia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kirisia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kirisia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kirisia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_WAMBA</Tag>
+		<English>Wamba</English>
+		<French>
+			<Text>Wamba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Wamba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Wamba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Wamba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BARAGOI</Tag>
+		<English>Baragoi</English>
+		<French>
+			<Text>Baragoi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Baragoi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Baragoi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Baragoi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_WASO</Tag>
+		<English>Waso</English>
+		<French>
+			<Text>Waso</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Waso</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Waso</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Waso</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NGORONGORO</Tag>
+		<English>Ngorongoro</English>
+		<French>
+			<Text>Ngorongoro</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ngorongoro</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ngorongoro</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngorongoro</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MONDULI</Tag>
+		<English>Monduli</English>
+		<French>
+			<Text>Monduli</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Monduli</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Monduli</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Monduli</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LAIKIPIA</Tag>
+		<English>Laikipia</English>
+		<French>
+			<Text>Laikipia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Laikipia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Laikipia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Laikipia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_WEST_POKOT</Tag>
+		<English>West Pokot</English>
+		<French>
+			<Text>West Pokot</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>West Pokot</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>West Pokot</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>West Pokot</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BARINGO</Tag>
+		<English>Baringo</English>
+		<French>
+			<Text>Baringo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Baringo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Baringo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Baringo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TAITA</Tag>
+		<English>Taita</English>
+		<French>
+			<Text>Taita</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Taita</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Taita</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Taita</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MALAMBO</Tag>
+		<English>Malambo</English>
+		<French>
+			<Text>Malambo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Malambo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Malambo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Malambo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NAMANGA</Tag>
+		<English>Namanga</English>
+		<French>
+			<Text>Namanga</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Namanga</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Namanga</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Namanga</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+</Civ4GameText>

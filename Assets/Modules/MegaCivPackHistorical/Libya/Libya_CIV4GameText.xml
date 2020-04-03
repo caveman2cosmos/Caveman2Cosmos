@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Soren Johnson (Firaxis Games) -->
+	<!-- Sid Meier's Civilization 4 -->
+	<!-- Copyright Firaxis Games 2005 -->
+	<!-- -->
+	<!---->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_LIBYA_DESC</Tag>
+		<English>Libyan Empire</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_LIBYA_SHORT_DESC</Tag>
+		<English>Libya</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_LIBYA_ADJECTIVE</Tag>
+		<English>Libyan</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_LIBYA_PEDIA</Tag>
+		<English>[BOLD]Strategy:[\BOLD]Libya is a dangerous civ to face in the early game militarily, since 
+it has great offensive capabilities; it also boasts clean and healthy cities. Shoshenq is Aggressive, 
+which, combined with the Meshwesh Warrior - an excellent field unit - makes the Libyans unstoppable in 
+open battles. Shoshenq is also Expansive, which, combined with the Olive Grove, makes Libyan cities the 
+hygenic envy of the world early on. Certainly, with their clean cities and powerful field armies, the 
+Libyans are not a military might to be toyed with in the early game![PARAGRAPH:1][NEWLINE][NEWLINE][BOLD]Background:[\BOLD][PARAGRAPH:1]Compared 
+with the History of Egypt, historians know little about the history of Libya, as there are few surviving 
+written records. Archaeological evidence indicates that from at least the eighth millennium BC. Libya's 
+coastal plain shared in a Neolithic culture, skilled in the domestication of cattle and cultivation of 
+crops, that was common to the whole Mediterranean littoral. To the south, in what is now the Sahara Desert, 
+nomadic hunters and herders roamed a far, well-watered savanna that abounded in game and provided pastures 
+for their stock. Their culture flourished until the region began to desiccate after 2000 BC. Scattering 
+before the encroaching desert and invading horsemen, the savanna people migrated into the Sudan or were 
+absorbed by the Berbers.[PARAGRAPH:2]The origin of the Berbers is a partial mystery, the investigation 
+of which has produced an abundance of educated speculation but no solution. Archaeological and linguistic 
+evidence strongly suggests southwestern Asia as the point from which the ancestors of the Berbers may 
+have begun their migration into North Africa early in the third millennium BC. Over the succeeding centuries 
+they extended their range from Egypt to the Niger Basin. Caucasians of predominantly Mediterranean stock, 
+the Berbers present a broad range of physical types and speak a variety of mutually (un)intelligible 
+Berber dialects that belong to the Berber family of the Afro-Asiatic language family. They rarely developed 
+a sense of a full Berber nationhood (as we understand it today). They have historically identified themselves 
+in terms of their tribes, clans, or kingdoms. Collectively, Berbers referred to themselves simply as 
+imazighen, to which has been attributed the meaning "free men".[PARAGRAPH:2]Inscriptions found in Egypt 
+dating from the Old Kingdom (ca. 2700–2200 BC) are the earliest known recorded testimony of the Berber 
+migration and also the earliest written documentation of Libyan history. At least as early as this period, 
+troublesome Berber tribes, one of which was identified in Egyptian records as the Levu (or "Libyans"), 
+were raiding eastward as far as the Nile Delta and attempting to settle there. During the Middle Kingdom 
+(ca. 2200-1700 BC) the Egyptian pharaohs succeeded in imposing their overlordship on these eastern Berbers 
+and extracted tribute from them. Many Berbers served in the army of the pharaohs, and some rose to positions 
+of importance in the Egyptian state. One such Berber officer seized control of Egypt in about 950 BC 
+and, as Shishonk I, ruled as pharaoh. His successors of the twentysecond and twenty-third dynasties—the 
+so-called Libyan dynasties (ca. 945–730 BC)—are also believed to have been Berbers.[PARAGRAPH:2]After 
+the Egyptians, Greeks, Romans, and Byzantines mentioned various other tribes in Libya. Later tribal names 
+differ from the Egyptian ones but, probably, some tribes were named in the Egyptian sources and the later 
+ones, as well. The Meshwesh-tribe represents this assumption. Scholars believe it would be the same tribe 
+called Mazyes by Hektaios and Maxyes by Herodotus, while it was called "Mazaces" and "Mazax" in Latin 
+sources. All those names are similar to the name used by the Berbers for themselves, Imazighen.[PARAGRAPH:2]Late 
+period sources give more detailed descriptions of Libya and its inhabitants. The ancient historian Herodotus 
+describes Libya and the Libyans in his fourth book, known as The Libyan Book. Pliny the Elder, Diodorus 
+Siculus, and Procopius also contributed to what is now primary source material on ancient Libya and the 
+Libyans.[PARAGRAPH:2]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SHOSHENQ</Tag>
+		<English>Shoshenq</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SHOSHENQ_PEDIA</Tag>
+		<English>[H1]Shoshenq I[\H1][NEWLINE][BOLD]Libyan Pharaoh of Egypt[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]? 
+- 922 BC[NEWLINE]Shoshenq came from a line of princes or sheikhs of Libyan tribal descent whose title 
+was “great chief of the Meshwesh” and who appear to have settled in Bubastis in the eastern Nile River 
+delta. He was a general under Psusennes II, the last king of the 21st dynasty (1075–c. 950 BCE), and 
+probably ascended the throne without a struggle, making Bubastis his residence and marrying his son Osorkon 
+to a daughter of Psusennes II. As king, Shoshenq chose his eldest son, Osorkon I, as his successor and 
+consolidated his authority over Egypt through marriage alliances and appointments. He assigned his second 
+son, Iuput , the prominent position of High Priest of Amun at Thebes as well as the title of Governor 
+of Upper Egypt and Commander of the Army to consolidate his authority over the Thebaid. Finally, Shoshenq 
+I designated his third son, Nimlot, as the "Leader of the Army" at Herakleopolis in Middle Egypt.[PARAGRAPH:2]He 
+pursued an aggressive foreign policy in the adjacent territories of the Middle East, towards the end 
+of his reign. This is attested, in part, by the discovery of a statue base bearing his name from the 
+Lebanese city of Byblos, part of a monumental stela from Megiddo bearing his name, and a list of cities 
+in the region comprising Syria, Philistia, Phoenicia, the Negev and the Kingdom of Israel, among various 
+topographical lists inscribed on the walls of temples of Amun at al-Hibah and Karnak. Because of this, 
+Sheshonq is oftentimes associated with the Biblical Shishak, who invaded Judah during the fifth year 
+of the reign of king Rehoboam, taking with him most of the treasures of the temple created by Solomon. 
+While the names are similar, the Canaan campaigns of the historical Shoshenq I are difficult to correlate 
+with the outline of events in the Book of Kings and Chronicles. As there were multiple "Shoshenqs," it 
+is possible that a subsequent Egyptian ruler matches the times and activity of the biblical "Shishaq." 
+Unfortunately there is no mention of either an attack nor tribute from Jerusalem, which has led some 
+to suggest that Shoshenq was not the Biblical Shishak. The fragment of a stela bearing his cartouche 
+from Megiddo has been interpreted as a monument Shoshenq erected there to commemorate his victory.[PARAGRAPH:2]He 
+was succeeded by his son Osorkon I after a reign of 21 Years. According to the British Egyptologist Aidan 
+Dodson, no trace has yet been found of the tomb of Shoshenq I; the sole funerary object linked to Shoshenq 
+I is a canopic chest of unknown provenance. This may indicate his tomb was looted in antiquity, but this 
+hypothesis is unproven. Egyptologists differ over the location of Sheshonq I's burial and speculate that 
+he may have been buried somewhere in Tanis—perhaps in one of the Anonymous royal tombs here—or in Bubastis. 
+It is also possible that he is buried in another city in the Egyptian delta, such as Memphis. [PARAGRAPH:2]In 
+later times, Shoshenq became an important and pivotal figure not to the Egyptians, but to the Berbers, 
+who regard him as their first important historical personage. Shoshenq, after all, was almost certainly 
+of Libyan Berber ancestry. Thus, this is why the modern-day Berber calendar (distinct from the Georgian 
+calendar) begins to compute its years from 950 BCE, the approximate date of Shoshenq's ascension to the 
+throne of Egypt, thus becoming the first Libyan pharaoh. With the passage of time, what could seem a 
+bizarre innovation has been adopted with conviction by many supporters of the Berber culture and is now 
+a part of the cultural heritage of this people, fully integrated in the system of traditional customs 
+related the North-African calendar.		[PARAGRAPH:2]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_KADDAFI</Tag>
+		<English>Kaddafi</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_KADDAFI_PEDIA</Tag>
+		<English>[H1]Mu’ammar al-Kaddafi[\H1][NEWLINE][BOLD]Libyan revolutionary and politician[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD]1 September 1969 – 23 August 2011[NEWLINE]		The son of an impoverished Bedouin goat herder, Gaddafi 
+became involved in politics while at school in Sabha, subsequently enrolling in the Royal Military Academy, 
+Benghazi. Founding a revolutionary cell within the military, in 1969 they seized power from the absolute 
+monarchy of King Idris in a bloodless coup. Becoming Chairman of the governing Revolutionary Command 
+Council (RCC), he abolished the monarchy and proclaimed the Republic. Ruling by decree, he implemented 
+measures to remove what he viewed as foreign imperialist influence from Libya, and strengthened ties 
+to Arab nationalist governments. Intent on pushing Libya towards "Islamic socialism", he introduced sharia 
+as the basis for the legal system and nationalized the oil industry, using the increased revenues to 
+bolster the military, implement social programs and fund revolutionary militants across the world. In 
+1973 he initiated a "Popular Revolution" with the formation of General People's Committees (GPCs), purported 
+to be a system of direct democracy, but retained personal control over major decisions. He outlined his 
+Third International Theory that year, publishing these ideas in The Green Book.		In 1977, he dissolved 
+the Republic and created the Jamahiriya, a "state of the masses" part-governed by GPCs. Officially adopting 
+a symbolic role in governance, he retained power as military commander-in-chief and head of the Revolutionary 
+Committees responsible for policing and suppressing opponents. Overseeing unsuccessful border conflicts 
+with Egypt and Chad, Gaddafi's support for foreign militants and alleged responsibility for the Lockerbie 
+bombing led to Libya's label of "international pariah". A particularly hostile relationship developed 
+with the United States and United Kingdom, resulting in the 1986 U.S. bombing of Libya and United Nations-imposed 
+economic sanctions. Rejecting his earlier ideological commitments, from 1999 Gaddafi encouraged economic 
+privatization and sought rapprochement with Western nations, also embracing Pan-Africanism and helping 
+to establish the African Union. Amid the Arab Spring, in 2011 an anti-Gaddafist uprising led by the National 
+Transitional Council (NTC) broke out, resulting in civil war. NATO intervened militarily on the side 
+of the NTC, bringing about the government's downfall. Retreating to Sirte, Gaddafi was captured and killed 
+by NTC militants.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SHOSHENQ</Tag>
+		<English>I am a god among mortals, having defeated many enemies with my mighty armies. Should I count you among those enemies, [CT_NAME], or perhaps you have come to pay tribute?</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_SHOSHENQ</Tag>
+		<English>I refuse to listen to your mad ramblings, [CT_NAME]. You shall deceive me no longer, fool!</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_SHOSHENQ</Tag>
+		<English>No! Not while I still have the upper hand!</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_SHOSHENQ</Tag>
+		<English>Welcome, mighty leader of [CT_CIV_SHORT]. I am eager to hear of your newest conquests and exploits over lesser states.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_SHOSHENQ</Tag>
+		<English>The other day I comissioned a stone relief depicting me smiting your skull. Perhaps we should try the real thing?</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_SHOSHENQ</Tag>
+		<English>I once was an impoverished [OUR_CIV_ADJ] chieftain, so I know when I must be humble. [CT_NAME], please bestow some generosity upon us.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_SHOSHENQ</Tag>
+		<English>Think about it, [CT_NAME]: [OUR_NAME] and [CT_NAME], allies forever! And allies share their gifts with one another, do they not?</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_SHOSHENQ</Tag>
+		<English>Imagine it, depicted on a stone relief: the cities of [CT_CIV_SHORT] being raided and razed by the glorious armies of [OUR_NAME]. Or perhaps would you prefer it like this: [CT_NAME] and [CT_CIV_ADJ]'s envoys paying a little tribute to [OUR_NAME]?</English>
+	</TEXT>
+</Civ4GameText>

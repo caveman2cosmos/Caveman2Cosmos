@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- ReModified by the StrategyOnly -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_OMAN_DESC</Tag>
+		<English>Empire of Oman</English>
+		<French>Empire of Oman</French>
+		<German>Empire of Oman</German>
+		<Italian>Empire of Oman</Italian>
+		<Spanish>Empire of Oman</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_OMAN_SHORT_DESC</Tag>
+		<English>Oman</English>
+		<French>Oman</French>
+		<German>Oman</German>
+		<Italian>Oman</Italian>
+		<Spanish>Oman</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_OMAN_PEDIA</Tag>
+		<English>[TAB]Oman, officially the Sultanate of Oman, is an Arab country in the southeastern coast 
+of the Arabian Peninsula. Holding a strategically important position at the mouth of the Persian Gulf, 
+the nation is bordered by the United Arab Emirates to the northwest, Saudi Arabia to the west, and Yemen 
+to the southwest, and shares marine borders with Iran and Pakistan. The coast is formed by the Arabian 
+Sea on the southeast and the Gulf of Oman on the northeast. The Madha and Musandam exclaves are surrounded 
+by the UAE on their land borders, with the Strait of Hormuz and Gulf of Oman forming Musandam's coastal 
+boundaries. From the late 17th century, the Omani Sultanate was a powerful empire, vying with Portugal 
+and Britain for influence in the Persian Gulf and Indian Ocean. At its peak in the 19th century, Omani 
+influence or control extended across the Strait of Hormuz to Iran and modern-day Pakistan, and as far 
+south as Zanzibar (today part of Tanzania).[7] As its power declined in the 20th century, the sultanate 
+came under the influence of the United Kingdom. Historically, Muscat was the principal trading port of 
+the Persian Gulf region. Muscat was also among the most important trading ports of the Indian Ocean. 
+Oman's official religion is Ibadi Islam.</English>
+		<French>[TAB]Oman, officially the Sultanate of Oman, is an Arab country in the southeastern coast of 
+the Arabian Peninsula. Holding a strategically important position at the mouth of the Persian Gulf, the 
+nation is bordered by the United Arab Emirates to the northwest, Saudi Arabia to the west, and Yemen 
+to the southwest, and shares marine borders with Iran and Pakistan. The coast is formed by the Arabian 
+Sea on the southeast and the Gulf of Oman on the northeast. The Madha and Musandam exclaves are surrounded 
+by the UAE on their land borders, with the Strait of Hormuz and Gulf of Oman forming Musandam's coastal 
+boundaries. From the late 17th century, the Omani Sultanate was a powerful empire, vying with Portugal 
+and Britain for influence in the Persian Gulf and Indian Ocean. At its peak in the 19th century, Omani 
+influence or control extended across the Strait of Hormuz to Iran and modern-day Pakistan, and as far 
+south as Zanzibar (today part of Tanzania).[7] As its power declined in the 20th century, the sultanate 
+came under the influence of the United Kingdom. Historically, Muscat was the principal trading port of 
+the Persian Gulf region. Muscat was also among the most important trading ports of the Indian Ocean. 
+Oman's official religion is Ibadi Islam.</French>
+		<German>[TAB]Oman, officially the Sultanate of Oman, is an Arab country in the southeastern coast of 
+the Arabian Peninsula. Holding a strategically important position at the mouth of the Persian Gulf, the 
+nation is bordered by the United Arab Emirates to the northwest, Saudi Arabia to the west, and Yemen 
+to the southwest, and shares marine borders with Iran and Pakistan. The coast is formed by the Arabian 
+Sea on the southeast and the Gulf of Oman on the northeast. The Madha and Musandam exclaves are surrounded 
+by the UAE on their land borders, with the Strait of Hormuz and Gulf of Oman forming Musandam's coastal 
+boundaries. From the late 17th century, the Omani Sultanate was a powerful empire, vying with Portugal 
+and Britain for influence in the Persian Gulf and Indian Ocean. At its peak in the 19th century, Omani 
+influence or control extended across the Strait of Hormuz to Iran and modern-day Pakistan, and as far 
+south as Zanzibar (today part of Tanzania).[7] As its power declined in the 20th century, the sultanate 
+came under the influence of the United Kingdom. Historically, Muscat was the principal trading port of 
+the Persian Gulf region. Muscat was also among the most important trading ports of the Indian Ocean. 
+Oman's official religion is Ibadi Islam.</German>
+		<Italian>[TAB]Oman, officially the Sultanate of Oman, is an Arab country in the southeastern coast 
+of the Arabian Peninsula. Holding a strategically important position at the mouth of the Persian Gulf, 
+the nation is bordered by the United Arab Emirates to the northwest, Saudi Arabia to the west, and Yemen 
+to the southwest, and shares marine borders with Iran and Pakistan. The coast is formed by the Arabian 
+Sea on the southeast and the Gulf of Oman on the northeast. The Madha and Musandam exclaves are surrounded 
+by the UAE on their land borders, with the Strait of Hormuz and Gulf of Oman forming Musandam's coastal 
+boundaries. From the late 17th century, the Omani Sultanate was a powerful empire, vying with Portugal 
+and Britain for influence in the Persian Gulf and Indian Ocean. At its peak in the 19th century, Omani 
+influence or control extended across the Strait of Hormuz to Iran and modern-day Pakistan, and as far 
+south as Zanzibar (today part of Tanzania).[7] As its power declined in the 20th century, the sultanate 
+came under the influence of the United Kingdom. Historically, Muscat was the principal trading port of 
+the Persian Gulf region. Muscat was also among the most important trading ports of the Indian Ocean. 
+Oman's official religion is Ibadi Islam.</Italian>
+		<Spanish>[TAB]Oman, officially the Sultanate of Oman, is an Arab country in the southeastern coast 
+of the Arabian Peninsula. Holding a strategically important position at the mouth of the Persian Gulf, 
+the nation is bordered by the United Arab Emirates to the northwest, Saudi Arabia to the west, and Yemen 
+to the southwest, and shares marine borders with Iran and Pakistan. The coast is formed by the Arabian 
+Sea on the southeast and the Gulf of Oman on the northeast. The Madha and Musandam exclaves are surrounded 
+by the UAE on their land borders, with the Strait of Hormuz and Gulf of Oman forming Musandam's coastal 
+boundaries. From the late 17th century, the Omani Sultanate was a powerful empire, vying with Portugal 
+and Britain for influence in the Persian Gulf and Indian Ocean. At its peak in the 19th century, Omani 
+influence or control extended across the Strait of Hormuz to Iran and modern-day Pakistan, and as far 
+south as Zanzibar (today part of Tanzania).[7] As its power declined in the 20th century, the sultanate 
+came under the influence of the United Kingdom. Historically, Muscat was the principal trading port of 
+the Persian Gulf region. Muscat was also among the most important trading ports of the Indian Ocean. 
+Oman's official religion is Ibadi Islam.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_OMAN_ADJECTIVE</Tag>
+		<English>Omani</English>
+		<French>Omani</French>
+		<German>Omani</German>
+		<Italian>Omani</Italian>
+		<Spanish>Omani</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_QABOOS</Tag>
+		<English>Sultan Qaboos</English>
+		<French>Sultan Qaboos</French>
+		<German>Sultan Qaboos</German>
+		<Italian>Sultan Qaboos</Italian>
+		<Spanish>Sultan Qaboos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_QABOOS_PEDIA</Tag>
+		<English>[H1]Sultan Qaboos bin Said al Said [\H1][NEWLINE][BOLD]Sultan of Oman[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] born 18 November 1940[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Qaboos bin Said 
+Al Said is the Sultan of Oman and its dependencies. He rose to power after overthrowing his father, Said 
+bin Taimur, in a palace coup in 1970. He is the 14th-generation descendant of the founder of the Al Bu 
+Sa'idi dynasty. After deposing his father in 1970, Sultan Qaboos opened up the country, embarked on economic 
+reforms, and followed a policy of modernisation marked by increased spending on health, education and 
+welfare. In 1981 Oman became a founding member of the six-nation Gulf Cooperation Council. Political 
+reforms were eventually introduced. Historically, voters had been chosen from among tribal leaders, intellectuals, 
+and businessmen. In 1997 Sultan Qaboos decreed that women could vote for, and stand for election to, 
+the Majlis al-Shura, the Consultative Assembly of Oman. Two women were duly elected to the body.</English>
+		<French>[H1]Sultan Qaboos bin Said al Said [\H1][NEWLINE][BOLD]Sultan of Oman[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] born 18 November 1940[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Qaboos bin Said 
+Al Said is the Sultan of Oman and its dependencies. He rose to power after overthrowing his father, Said 
+bin Taimur, in a palace coup in 1970. He is the 14th-generation descendant of the founder of the Al Bu 
+Sa'idi dynasty. After deposing his father in 1970, Sultan Qaboos opened up the country, embarked on economic 
+reforms, and followed a policy of modernisation marked by increased spending on health, education and 
+welfare. In 1981 Oman became a founding member of the six-nation Gulf Cooperation Council. Political 
+reforms were eventually introduced. Historically, voters had been chosen from among tribal leaders, intellectuals, 
+and businessmen. In 1997 Sultan Qaboos decreed that women could vote for, and stand for election to, 
+the Majlis al-Shura, the Consultative Assembly of Oman. Two women were duly elected to the body.</French>
+		<German>[H1]Sultan Qaboos bin Said al Said [\H1][NEWLINE][BOLD]Sultan of Oman[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] born 18 November 1940[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Qaboos bin Said 
+Al Said is the Sultan of Oman and its dependencies. He rose to power after overthrowing his father, Said 
+bin Taimur, in a palace coup in 1970. He is the 14th-generation descendant of the founder of the Al Bu 
+Sa'idi dynasty. After deposing his father in 1970, Sultan Qaboos opened up the country, embarked on economic 
+reforms, and followed a policy of modernisation marked by increased spending on health, education and 
+welfare. In 1981 Oman became a founding member of the six-nation Gulf Cooperation Council. Political 
+reforms were eventually introduced. Historically, voters had been chosen from among tribal leaders, intellectuals, 
+and businessmen. In 1997 Sultan Qaboos decreed that women could vote for, and stand for election to, 
+the Majlis al-Shura, the Consultative Assembly of Oman. Two women were duly elected to the body.</German>
+		<Italian>[H1]Sultan Qaboos bin Said al Said [\H1][NEWLINE][BOLD]Sultan of Oman[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] born 18 November 1940[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Qaboos bin Said 
+Al Said is the Sultan of Oman and its dependencies. He rose to power after overthrowing his father, Said 
+bin Taimur, in a palace coup in 1970. He is the 14th-generation descendant of the founder of the Al Bu 
+Sa'idi dynasty. After deposing his father in 1970, Sultan Qaboos opened up the country, embarked on economic 
+reforms, and followed a policy of modernisation marked by increased spending on health, education and 
+welfare. In 1981 Oman became a founding member of the six-nation Gulf Cooperation Council. Political 
+reforms were eventually introduced. Historically, voters had been chosen from among tribal leaders, intellectuals, 
+and businessmen. In 1997 Sultan Qaboos decreed that women could vote for, and stand for election to, 
+the Majlis al-Shura, the Consultative Assembly of Oman. Two women were duly elected to the body.</Italian>
+		<Spanish>[H1]Sultan Qaboos bin Said al Said [\H1][NEWLINE][BOLD]Sultan of Oman[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] born 18 November 1940[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Qaboos bin Said 
+Al Said is the Sultan of Oman and its dependencies. He rose to power after overthrowing his father, Said 
+bin Taimur, in a palace coup in 1970. He is the 14th-generation descendant of the founder of the Al Bu 
+Sa'idi dynasty. After deposing his father in 1970, Sultan Qaboos opened up the country, embarked on economic 
+reforms, and followed a policy of modernisation marked by increased spending on health, education and 
+welfare. In 1981 Oman became a founding member of the six-nation Gulf Cooperation Council. Political 
+reforms were eventually introduced. Historically, voters had been chosen from among tribal leaders, intellectuals, 
+and businessmen. In 1997 Sultan Qaboos decreed that women could vote for, and stand for election to, 
+the Majlis al-Shura, the Consultative Assembly of Oman. Two women were duly elected to the body.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_QABOOS_1</Tag>
+		<English>Greetings, [CT_NAME]. I am [OUR_NAME] of the [OUR_EMPIRE]. Love truth even if it harms you, and hate lies even if they serve you. These are words of wisdom to live by.</English>
+		<French>Greetings, [CT_NAME]. I am [OUR_NAME] of the [OUR_EMPIRE]. Love truth even if it harms you, and hate lies even if they serve you. These are words of wisdom to live by.</French>
+		<German>Greetings, [CT_NAME]. I am [OUR_NAME] of the [OUR_EMPIRE]. Love truth even if it harms you, and hate lies even if they serve you. These are words of wisdom to live by.</German>
+		<Italian>Greetings, [CT_NAME]. I am [OUR_NAME] of the [OUR_EMPIRE]. Love truth even if it harms you, and hate lies even if they serve you. These are words of wisdom to live by.</Italian>
+		<Spanish>Greetings, [CT_NAME]. I am [OUR_NAME] of the [OUR_EMPIRE]. Love truth even if it harms you, and hate lies even if they serve you. These are words of wisdom to live by.</Spanish>
+	</TEXT>
+</Civ4GameText>

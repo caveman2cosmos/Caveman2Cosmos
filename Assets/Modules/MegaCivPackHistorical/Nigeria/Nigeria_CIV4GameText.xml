@@ -1,0 +1,1148 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- Modified by the Civ Gold Team -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NIGERIA_DESC</Tag>
+		<English>Nigerian Empire</English>
+		<French>Nigerian Empire</French>
+		<German>Nigerian Empire</German>
+		<Italian>Nigerian Empire</Italian>
+		<Spanish>Nigerian Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NIGERIA_ADJECTIVE</Tag>
+		<English>Nigeria</English>
+		<French>Nigeria</French>
+		<German>Nigeria</German>
+		<Italian>Nigeria</Italian>
+		<Spanish>Nigeria</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NIGERIA_SHORT_DESC</Tag>
+		<English>Nigerian</English>
+		<French>Nigerian</French>
+		<German>Nigerian</German>
+		<Italian>Nigerian</Italian>
+		<Spanish>Nigerian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NIGERIA_PEDIA</Tag>
+		<English>[TAB]Nigeria, officially named the Federal Republic of Nigeria, is a federal constitutional 
+republic comprising thirty-six states and one Federal Capital Territory. The country is located in West 
+Africa and shares land borders with the Republic of Benin in the west, Chad and Cameroon in the east, 
+and Niger in the north. Its coast lies on the Gulf of Guinea, part of the Atlantic Ocean, in the south. 
+The capital city is Abuja.[PARAGRAPH:2]The people of Nigeria have an extensive history, and archaeological 
+evidence shows that human habitation of the area dates back to at least 9000 BC. The Benue-Cross River 
+area is thought to be the original homeland of the Bantu migrants who spread across most of central and 
+southern Africa in waves between the 1st millennium BC and the 2nd millennium AD.[PARAGRAPH:2]Nigeria 
+is the most populous country in Africa and the eighth most populous country in the world with a population 
+of over 140 million. The country is listed among the "Next Eleven" economies.</English>
+		<French>[TAB]Nigeria, officially named the Federal Republic of Nigeria, is a federal constitutional 
+republic comprising thirty-six states and one Federal Capital Territory. The country is located in West 
+Africa and shares land borders with the Republic of Benin in the west, Chad and Cameroon in the east, 
+and Niger in the north. Its coast lies on the Gulf of Guinea, part of the Atlantic Ocean, in the south. 
+The capital city is Abuja.[PARAGRAPH:2]The people of Nigeria have an extensive history, and archaeological 
+evidence shows that human habitation of the area dates back to at least 9000 BC. The Benue-Cross River 
+area is thought to be the original homeland of the Bantu migrants who spread across most of central and 
+southern Africa in waves between the 1st millennium BC and the 2nd millennium AD.[PARAGRAPH:2]Nigeria 
+is the most populous country in Africa and the eighth most populous country in the world with a population 
+of over 140 million. The country is listed among the "Next Eleven" economies.</French>
+		<German>[TAB]Nigeria, officially named the Federal Republic of Nigeria, is a federal constitutional 
+republic comprising thirty-six states and one Federal Capital Territory. The country is located in West 
+Africa and shares land borders with the Republic of Benin in the west, Chad and Cameroon in the east, 
+and Niger in the north. Its coast lies on the Gulf of Guinea, part of the Atlantic Ocean, in the south. 
+The capital city is Abuja.[PARAGRAPH:2]The people of Nigeria have an extensive history, and archaeological 
+evidence shows that human habitation of the area dates back to at least 9000 BC. The Benue-Cross River 
+area is thought to be the original homeland of the Bantu migrants who spread across most of central and 
+southern Africa in waves between the 1st millennium BC and the 2nd millennium AD.[PARAGRAPH:2]Nigeria 
+is the most populous country in Africa and the eighth most populous country in the world with a population 
+of over 140 million. The country is listed among the "Next Eleven" economies.</German>
+		<Italian>[TAB]Nigeria, officially named the Federal Republic of Nigeria, is a federal constitutional 
+republic comprising thirty-six states and one Federal Capital Territory. The country is located in West 
+Africa and shares land borders with the Republic of Benin in the west, Chad and Cameroon in the east, 
+and Niger in the north. Its coast lies on the Gulf of Guinea, part of the Atlantic Ocean, in the south. 
+The capital city is Abuja.[PARAGRAPH:2]The people of Nigeria have an extensive history, and archaeological 
+evidence shows that human habitation of the area dates back to at least 9000 BC. The Benue-Cross River 
+area is thought to be the original homeland of the Bantu migrants who spread across most of central and 
+southern Africa in waves between the 1st millennium BC and the 2nd millennium AD.[PARAGRAPH:2]Nigeria 
+is the most populous country in Africa and the eighth most populous country in the world with a population 
+of over 140 million. The country is listed among the "Next Eleven" economies.</Italian>
+		<Spanish>[TAB]Nigeria, officially named the Federal Republic of Nigeria, is a federal constitutional 
+republic comprising thirty-six states and one Federal Capital Territory. The country is located in West 
+Africa and shares land borders with the Republic of Benin in the west, Chad and Cameroon in the east, 
+and Niger in the north. Its coast lies on the Gulf of Guinea, part of the Atlantic Ocean, in the south. 
+The capital city is Abuja.[PARAGRAPH:2]The people of Nigeria have an extensive history, and archaeological 
+evidence shows that human habitation of the area dates back to at least 9000 BC. The Benue-Cross River 
+area is thought to be the original homeland of the Bantu migrants who spread across most of central and 
+southern Africa in waves between the 1st millennium BC and the 2nd millennium AD.[PARAGRAPH:2]Nigeria 
+is the most populous country in Africa and the eighth most populous country in the world with a population 
+of over 140 million. The country is listed among the "Next Eleven" economies.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_OBASANJO</Tag>
+		<English>Obasanjo</English>
+		<French>
+			<Text>Obasanjo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Obasanjo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Obasanjo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Obasanjo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_OBASANJO_PEDIA</Tag>
+		<English>[H1]Obasanjo[\H1][NEWLINE][BOLD]12th President of Nigeria[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 
+1937 - [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]General (rtd.) Chief Olusegun Aremu 
+Okikiola Matthew Obasanjo,(born circa March 5, 1937) is a retired Nigerian Army General and former President 
+of Nigeria. A Christian of Yoruba descent, Obasanjo was a career soldier before serving twice as his 
+nation's head of state, once as a military ruler and again as elected President. The military regimes 
+of Murtala Muhammad and Obasanjo benefited from a tremendous influx of oil revenue that increased 350 
+percent between 1973 and 1974, when oil prices skyrocketed, to 1979, when the military stepped down. 
+Increased revenues permitted massive spending; this spending, however, was poorly planned and concentrated 
+in urban areas. The oil boom was marred by a minor recession in 1978-79, but revenues rebounded until 
+mid-1981. The increase in revenues made possible a rapid rise in income, especially for the urban middle 
+class. There was a corresponding inflation, particularly in the price of food, that promoted both industrialisation 
+and the expansion of agricultural production. As a result of the shift to food crops, the traditional 
+export earners - peanuts, cotton, cocoa, and palm products - declined in significance and then ceased 
+to be important at all. Nigeria's exports became dominated by oil.[PARAGRAPH:1]During the dictatorship 
+of Sani Abacha (1993 - 1998), Obasanjo spoke out against the human rights abuses of the regime, and was 
+imprisoned with the claim of planning a coup. He was released only after Abacha's sudden death on 8 June 
+1998. It was after his release from prison that Obasanjo announced that he was a born-again Christian. 
+In the 1999 elections, the first in sixteen years, he decided to run for the presidency as the candidate 
+of the People's Democratic Party. Obasanjo won with 62.6% of the vote, sweeping the strongly Christian 
+Southeast and the predominantly Muslim north, but decisively lost his home region, the Southwest, to 
+his fellow-Yoruba and Christian, Olu Falae, the only other candidate. It is thought that lingering resentment 
+among his fellow-Yorubas about his previous military administration of 1976 to 1979, after which he handed 
+power over to a government dominated by northerners rather than by Yorubas, contributed to his poor showing 
+among his own people. May 29, the day Obasanjo took office as the first elected and civilian head of 
+state in Nigeria after 16 years of military rule, is now commemorated as Democracy Day, a public holiday 
+in Nigeria.[PARAGRAPH:1]Obasanjo was re-elected in 2003 in a tumultuous election that had violent ethnic 
+and religious overtones, his main opponent (fellow former military ruler General Muhammadu Buhari) being 
+a Muslim who drew his support mainly from the north. Capturing 61.8% of the vote, Obasanjo defeated Buhari 
+by more than 11 million votes. In 2005 the international community gave Nigeria's government its first 
+pass mark for its anti-corruption efforts. However, a growing number of critics within Nigeria have accused 
+Obasanjo's government of selectively targeting his anti-corruption drive against political opponents 
+and ethnic militants, ignoring growing concerns about wide-scale corruption within his own inner political 
+circle.</English>
+		<French>[H1]Obasanjo[\H1][NEWLINE][BOLD]12th President of Nigeria[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 
+1937 - [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]General (rtd.) Chief Olusegun Aremu 
+Okikiola Matthew Obasanjo,(born circa March 5, 1937) is a retired Nigerian Army General and former President 
+of Nigeria. A Christian of Yoruba descent, Obasanjo was a career soldier before serving twice as his 
+nation's head of state, once as a military ruler and again as elected President. The military regimes 
+of Murtala Muhammad and Obasanjo benefited from a tremendous influx of oil revenue that increased 350 
+percent between 1973 and 1974, when oil prices skyrocketed, to 1979, when the military stepped down. 
+Increased revenues permitted massive spending; this spending, however, was poorly planned and concentrated 
+in urban areas. The oil boom was marred by a minor recession in 1978-79, but revenues rebounded until 
+mid-1981. The increase in revenues made possible a rapid rise in income, especially for the urban middle 
+class. There was a corresponding inflation, particularly in the price of food, that promoted both industrialisation 
+and the expansion of agricultural production. As a result of the shift to food crops, the traditional 
+export earners - peanuts, cotton, cocoa, and palm products - declined in significance and then ceased 
+to be important at all. Nigeria's exports became dominated by oil.[PARAGRAPH:1]During the dictatorship 
+of Sani Abacha (1993 - 1998), Obasanjo spoke out against the human rights abuses of the regime, and was 
+imprisoned with the claim of planning a coup. He was released only after Abacha's sudden death on 8 June 
+1998. It was after his release from prison that Obasanjo announced that he was a born-again Christian. 
+In the 1999 elections, the first in sixteen years, he decided to run for the presidency as the candidate 
+of the People's Democratic Party. Obasanjo won with 62.6% of the vote, sweeping the strongly Christian 
+Southeast and the predominantly Muslim north, but decisively lost his home region, the Southwest, to 
+his fellow-Yoruba and Christian, Olu Falae, the only other candidate. It is thought that lingering resentment 
+among his fellow-Yorubas about his previous military administration of 1976 to 1979, after which he handed 
+power over to a government dominated by northerners rather than by Yorubas, contributed to his poor showing 
+among his own people. May 29, the day Obasanjo took office as the first elected and civilian head of 
+state in Nigeria after 16 years of military rule, is now commemorated as Democracy Day, a public holiday 
+in Nigeria.[PARAGRAPH:1]Obasanjo was re-elected in 2003 in a tumultuous election that had violent ethnic 
+and religious overtones, his main opponent (fellow former military ruler General Muhammadu Buhari) being 
+a Muslim who drew his support mainly from the north. Capturing 61.8% of the vote, Obasanjo defeated Buhari 
+by more than 11 million votes. In 2005 the international community gave Nigeria's government its first 
+pass mark for its anti-corruption efforts. However, a growing number of critics within Nigeria have accused 
+Obasanjo's government of selectively targeting his anti-corruption drive against political opponents 
+and ethnic militants, ignoring growing concerns about wide-scale corruption within his own inner political 
+circle.</French>
+		<German>[H1]Obasanjo[\H1][NEWLINE][BOLD]12th President of Nigeria[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 
+1937 - [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]General (rtd.) Chief Olusegun Aremu 
+Okikiola Matthew Obasanjo,(born circa March 5, 1937) is a retired Nigerian Army General and former President 
+of Nigeria. A Christian of Yoruba descent, Obasanjo was a career soldier before serving twice as his 
+nation's head of state, once as a military ruler and again as elected President. The military regimes 
+of Murtala Muhammad and Obasanjo benefited from a tremendous influx of oil revenue that increased 350 
+percent between 1973 and 1974, when oil prices skyrocketed, to 1979, when the military stepped down. 
+Increased revenues permitted massive spending; this spending, however, was poorly planned and concentrated 
+in urban areas. The oil boom was marred by a minor recession in 1978-79, but revenues rebounded until 
+mid-1981. The increase in revenues made possible a rapid rise in income, especially for the urban middle 
+class. There was a corresponding inflation, particularly in the price of food, that promoted both industrialisation 
+and the expansion of agricultural production. As a result of the shift to food crops, the traditional 
+export earners - peanuts, cotton, cocoa, and palm products - declined in significance and then ceased 
+to be important at all. Nigeria's exports became dominated by oil.[PARAGRAPH:1]During the dictatorship 
+of Sani Abacha (1993 - 1998), Obasanjo spoke out against the human rights abuses of the regime, and was 
+imprisoned with the claim of planning a coup. He was released only after Abacha's sudden death on 8 June 
+1998. It was after his release from prison that Obasanjo announced that he was a born-again Christian. 
+In the 1999 elections, the first in sixteen years, he decided to run for the presidency as the candidate 
+of the People's Democratic Party. Obasanjo won with 62.6% of the vote, sweeping the strongly Christian 
+Southeast and the predominantly Muslim north, but decisively lost his home region, the Southwest, to 
+his fellow-Yoruba and Christian, Olu Falae, the only other candidate. It is thought that lingering resentment 
+among his fellow-Yorubas about his previous military administration of 1976 to 1979, after which he handed 
+power over to a government dominated by northerners rather than by Yorubas, contributed to his poor showing 
+among his own people. May 29, the day Obasanjo took office as the first elected and civilian head of 
+state in Nigeria after 16 years of military rule, is now commemorated as Democracy Day, a public holiday 
+in Nigeria.[PARAGRAPH:1]Obasanjo was re-elected in 2003 in a tumultuous election that had violent ethnic 
+and religious overtones, his main opponent (fellow former military ruler General Muhammadu Buhari) being 
+a Muslim who drew his support mainly from the north. Capturing 61.8% of the vote, Obasanjo defeated Buhari 
+by more than 11 million votes. In 2005 the international community gave Nigeria's government its first 
+pass mark for its anti-corruption efforts. However, a growing number of critics within Nigeria have accused 
+Obasanjo's government of selectively targeting his anti-corruption drive against political opponents 
+and ethnic militants, ignoring growing concerns about wide-scale corruption within his own inner political 
+circle.</German>
+		<Italian>[H1]Obasanjo[\H1][NEWLINE][BOLD]12th President of Nigeria[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 
+1937 - [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]General (rtd.) Chief Olusegun Aremu 
+Okikiola Matthew Obasanjo,(born circa March 5, 1937) is a retired Nigerian Army General and former President 
+of Nigeria. A Christian of Yoruba descent, Obasanjo was a career soldier before serving twice as his 
+nation's head of state, once as a military ruler and again as elected President. The military regimes 
+of Murtala Muhammad and Obasanjo benefited from a tremendous influx of oil revenue that increased 350 
+percent between 1973 and 1974, when oil prices skyrocketed, to 1979, when the military stepped down. 
+Increased revenues permitted massive spending; this spending, however, was poorly planned and concentrated 
+in urban areas. The oil boom was marred by a minor recession in 1978-79, but revenues rebounded until 
+mid-1981. The increase in revenues made possible a rapid rise in income, especially for the urban middle 
+class. There was a corresponding inflation, particularly in the price of food, that promoted both industrialisation 
+and the expansion of agricultural production. As a result of the shift to food crops, the traditional 
+export earners - peanuts, cotton, cocoa, and palm products - declined in significance and then ceased 
+to be important at all. Nigeria's exports became dominated by oil.[PARAGRAPH:1]During the dictatorship 
+of Sani Abacha (1993 - 1998), Obasanjo spoke out against the human rights abuses of the regime, and was 
+imprisoned with the claim of planning a coup. He was released only after Abacha's sudden death on 8 June 
+1998. It was after his release from prison that Obasanjo announced that he was a born-again Christian. 
+In the 1999 elections, the first in sixteen years, he decided to run for the presidency as the candidate 
+of the People's Democratic Party. Obasanjo won with 62.6% of the vote, sweeping the strongly Christian 
+Southeast and the predominantly Muslim north, but decisively lost his home region, the Southwest, to 
+his fellow-Yoruba and Christian, Olu Falae, the only other candidate. It is thought that lingering resentment 
+among his fellow-Yorubas about his previous military administration of 1976 to 1979, after which he handed 
+power over to a government dominated by northerners rather than by Yorubas, contributed to his poor showing 
+among his own people. May 29, the day Obasanjo took office as the first elected and civilian head of 
+state in Nigeria after 16 years of military rule, is now commemorated as Democracy Day, a public holiday 
+in Nigeria.[PARAGRAPH:1]Obasanjo was re-elected in 2003 in a tumultuous election that had violent ethnic 
+and religious overtones, his main opponent (fellow former military ruler General Muhammadu Buhari) being 
+a Muslim who drew his support mainly from the north. Capturing 61.8% of the vote, Obasanjo defeated Buhari 
+by more than 11 million votes. In 2005 the international community gave Nigeria's government its first 
+pass mark for its anti-corruption efforts. However, a growing number of critics within Nigeria have accused 
+Obasanjo's government of selectively targeting his anti-corruption drive against political opponents 
+and ethnic militants, ignoring growing concerns about wide-scale corruption within his own inner political 
+circle.</Italian>
+		<Spanish>[H1]Obasanjo[\H1][NEWLINE][BOLD]12th President of Nigeria[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 
+1937 - [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]General (rtd.) Chief Olusegun Aremu 
+Okikiola Matthew Obasanjo,(born circa March 5, 1937) is a retired Nigerian Army General and former President 
+of Nigeria. A Christian of Yoruba descent, Obasanjo was a career soldier before serving twice as his 
+nation's head of state, once as a military ruler and again as elected President. The military regimes 
+of Murtala Muhammad and Obasanjo benefited from a tremendous influx of oil revenue that increased 350 
+percent between 1973 and 1974, when oil prices skyrocketed, to 1979, when the military stepped down. 
+Increased revenues permitted massive spending; this spending, however, was poorly planned and concentrated 
+in urban areas. The oil boom was marred by a minor recession in 1978-79, but revenues rebounded until 
+mid-1981. The increase in revenues made possible a rapid rise in income, especially for the urban middle 
+class. There was a corresponding inflation, particularly in the price of food, that promoted both industrialisation 
+and the expansion of agricultural production. As a result of the shift to food crops, the traditional 
+export earners - peanuts, cotton, cocoa, and palm products - declined in significance and then ceased 
+to be important at all. Nigeria's exports became dominated by oil.[PARAGRAPH:1]During the dictatorship 
+of Sani Abacha (1993 - 1998), Obasanjo spoke out against the human rights abuses of the regime, and was 
+imprisoned with the claim of planning a coup. He was released only after Abacha's sudden death on 8 June 
+1998. It was after his release from prison that Obasanjo announced that he was a born-again Christian. 
+In the 1999 elections, the first in sixteen years, he decided to run for the presidency as the candidate 
+of the People's Democratic Party. Obasanjo won with 62.6% of the vote, sweeping the strongly Christian 
+Southeast and the predominantly Muslim north, but decisively lost his home region, the Southwest, to 
+his fellow-Yoruba and Christian, Olu Falae, the only other candidate. It is thought that lingering resentment 
+among his fellow-Yorubas about his previous military administration of 1976 to 1979, after which he handed 
+power over to a government dominated by northerners rather than by Yorubas, contributed to his poor showing 
+among his own people. May 29, the day Obasanjo took office as the first elected and civilian head of 
+state in Nigeria after 16 years of military rule, is now commemorated as Democracy Day, a public holiday 
+in Nigeria.[PARAGRAPH:1]Obasanjo was re-elected in 2003 in a tumultuous election that had violent ethnic 
+and religious overtones, his main opponent (fellow former military ruler General Muhammadu Buhari) being 
+a Muslim who drew his support mainly from the north. Capturing 61.8% of the vote, Obasanjo defeated Buhari 
+by more than 11 million votes. In 2005 the international community gave Nigeria's government its first 
+pass mark for its anti-corruption efforts. However, a growing number of critics within Nigeria have accused 
+Obasanjo's government of selectively targeting his anti-corruption drive against political opponents 
+and ethnic militants, ignoring growing concerns about wide-scale corruption within his own inner political 
+circle.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_OBASANJO_1</Tag>
+		<English>I've brought my country of Nigeria out of the dumps and onto the world stage - and as easy as I've done that, I can take yours off the world stage. Is that a bet you're willing to take?</English>
+		<French>I've brought my country of Nigeria out of the dumps and onto the world stage - and as easy as I've done that, I can take yours off the world stage. Is that a bet you're willing to take?</French>
+		<German>I've brought my country of Nigeria out of the dumps and onto the world stage - and as easy as I've done that, I can take yours off the world stage. Is that a bet you're willing to take?</German>
+		<Italian>I've brought my country of Nigeria out of the dumps and onto the world stage - and as easy as I've done that, I can take yours off the world stage. Is that a bet you're willing to take?</Italian>
+		<Spanish>I've brought my country of Nigeria out of the dumps and onto the world stage - and as easy as I've done that, I can take yours off the world stage. Is that a bet you're willing to take?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ABUJA</Tag>
+		<English>Abuja</English>
+		<French>
+			<Text>Abuja</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Abuja</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Abuja</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Abuja</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LAGOS</Tag>
+		<English>Lagos</English>
+		<French>
+			<Text>Lagos</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Lagos</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Lagos</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Lagos</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KANO</Tag>
+		<English>Kano</English>
+		<French>
+			<Text>Kano</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kano</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kano</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kano</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_IBADAN</Tag>
+		<English>Ibadan</English>
+		<French>
+			<Text>Ibadan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ibadan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ibadan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ibadan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KADUNA</Tag>
+		<English>Kaduna</English>
+		<French>
+			<Text>Kaduna</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kaduna</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kaduna</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kaduna</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BENIN_CITY</Tag>
+		<English>Benin City</English>
+		<French>
+			<Text>Benin City</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Benin City</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Benin City</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Benin City</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PORT_HARCOURT</Tag>
+		<English>Port Harcourt</English>
+		<French>
+			<Text>Port Harcourt</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Port Harcourt</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Port Harcourt</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Port Harcourt</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MAIDUGURI</Tag>
+		<English>Maiduguri</English>
+		<French>
+			<Text>Maiduguri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Maiduguri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Maiduguri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Maiduguri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ZARIA</Tag>
+		<English>Zaria</English>
+		<French>
+			<Text>Zaria</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Zaria</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Zaria</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Zaria</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ILORIN</Tag>
+		<English>Ilorin</English>
+		<French>
+			<Text>Ilorin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ilorin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ilorin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ilorin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_JOS</Tag>
+		<English>Jos</English>
+		<French>
+			<Text>Jos</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Jos</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Jos</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Jos</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ABA</Tag>
+		<English>Aba</English>
+		<French>
+			<Text>Aba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Aba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Aba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Aba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_OGBOMOSO</Tag>
+		<English>Ogbomoso</English>
+		<French>
+			<Text>Ogbomoso</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ogbomoso</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ogbomoso</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ogbomoso</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ENUGU</Tag>
+		<English>Enugu</English>
+		<French>
+			<Text>Enugu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Enugu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Enugu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Enugu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_OYO</Tag>
+		<English>Oyo</English>
+		<French>
+			<Text>Oyo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Oyo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Oyo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Oyo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_WARRI</Tag>
+		<English>Warri</English>
+		<French>
+			<Text>Warri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Warri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Warri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Warri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ABEOKUTA</Tag>
+		<English>Abeokuta</English>
+		<French>
+			<Text>Abeokuta</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Abeokuta</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Abeokuta</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Abeokuta</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_OKENE</Tag>
+		<English>Okene</English>
+		<French>
+			<Text>Okene</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Okene</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Okene</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Okene</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CALABAR</Tag>
+		<English>Calabar</English>
+		<French>
+			<Text>Calabar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Calabar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Calabar</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Calabar</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KATSINA</Tag>
+		<English>Katsina</English>
+		<French>
+			<Text>Katsina</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Katsina</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Katsina</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Katsina</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_OSHOGBO</Tag>
+		<English>Oshogbo</English>
+		<French>
+			<Text>Oshogbo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Oshogbo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Oshogbo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Oshogbo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_AKURE</Tag>
+		<English>Akure</English>
+		<French>
+			<Text>Akure</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Akure</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Akure</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Akure</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BAUCHI</Tag>
+		<English>Bauchi</English>
+		<French>
+			<Text>Bauchi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Bauchi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Bauchi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Bauchi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MINNA</Tag>
+		<English>Minna</English>
+		<French>
+			<Text>Minna</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Minna</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Minna</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Minna</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_IFE</Tag>
+		<English>Ife</English>
+		<French>
+			<Text>Ife</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ife</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ife</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ife</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_IKORODU</Tag>
+		<English>Ikorodu</English>
+		<French>
+			<Text>Ikorodu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ikorodu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ikorodu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ikorodu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ISEYIN</Tag>
+		<English>Iseyin</English>
+		<French>
+			<Text>Iseyin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Iseyin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Iseyin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Iseyin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GOMBE</Tag>
+		<English>Gombe</English>
+		<French>
+			<Text>Gombe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Gombe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Gombe</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Gombe</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_EFFON_ALAIYE</Tag>
+		<English>Effon Alaiye</English>
+		<French>
+			<Text>Effon Alaiye</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Effon Alaiye</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Effon Alaiye</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Effon Alaiye</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_OWO</Tag>
+		<English>Owo</English>
+		<French>
+			<Text>Owo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Owo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Owo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Owo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ADO_EKITI</Tag>
+		<English>Ado Ekiti</English>
+		<French>
+			<Text>Ado Ekiti</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ado Ekiti</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ado Ekiti</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ado Ekiti</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MAKURDI</Tag>
+		<English>Makurdi</English>
+		<French>
+			<Text>Makurdi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Makurdi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Makurdi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Makurdi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_UMUAHIA</Tag>
+		<English>Umuahia</English>
+		<French>
+			<Text>Umuahia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Umuahia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Umuahia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Umuahia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ONDO</Tag>
+		<English>Ondo</English>
+		<French>
+			<Text>Ondo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ondo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ondo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ondo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_EDE</Tag>
+		<English>Ede</English>
+		<French>
+			<Text>Ede</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ede</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ede</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ede</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DAMATURU</Tag>
+		<English>Damaturu</English>
+		<French>
+			<Text>Damaturu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Damaturu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Damaturu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Damaturu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+</Civ4GameText>

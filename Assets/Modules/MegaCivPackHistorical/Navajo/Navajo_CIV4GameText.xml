@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- ReModified by the StrategyOnly -->
+<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NAVAJO_DESC</Tag>
+		<English>Navajo Empire</English>
+		<French>Empire navajo</French>
+		<German>Navajo Empire</German>
+		<Italian>Impero Navajo</Italian>
+		<Spanish>Navajo Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NAVAJO_SHORT_DESC</Tag>
+		<English>Navajo</English>
+		<French>Navajo</French>
+		<German>Navajo</German>
+		<Italian>Navajo</Italian>
+		<Spanish>Navajo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NAVAJO_ADJECTIVE</Tag>
+		<English>Navajo</English>
+		<French>Navajo</French>
+		<German>Navajo</German>
+		<Italian>Navajo</Italian>
+		<Spanish>Navajo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NAVAJO_PEDIA</Tag>
+		<English>[TAB]The Navajo or Diné of the Southwestern United States are the largest Native American tribe of North America. In the 2000 U.S. census, 298,197 people claimed to be fully or partly of Navajo ancestry. The Navajo Nation constitutes an independent governmental body which manages the Navajo Indian reservation in the Four Corners area of the United States. The traditional Navajo language is still largely spoken throughout the region, although most Navajo also speak English fluently as well. Navajo refer to themselves in their native language as Diné, which is translated as "the People" in English.[PARAGRAPH:2]The Navajo/Diné are the largest Indian tribe in America today. They speak dialects of the language family referred to as Athabaskan. In addition to Utah, Colorado, New Mexico, and Arizona, Athabaskan speakers are also found living in Alaska, through Southern Athabaskan speakers, known today as Apache.[PARAGRAPH:2]This was once a single ethnic group that probably came from near the Great Slave Lake, in the modern Northwest Territories of Canada, having crossed the Bering land bridge thousands of years previously. In present-day Canada, an aboriginal people known as Dene still live in an area centered around Great Slave Lake and with communities in the far north of adjacent provinces.[PARAGRAPH:2]Despite the time elapsed, these people reportedly can still understand the language of their long-lost cousins, the Navajo. Archaeological and historical evidence suggests that the Navajo ancestors entered the Southwest after 1000 AD, with substantial population increases occurring in the 13th century. Navajo oral traditions are said to retain references of this migration.[PARAGRAPH:2]Navajo oral history seems to indicate a long relationship with Pueblo people and a willingness to adapt ideas into their own culture. Trade between the long-established Pueblo peoples and the Athabaskans was important to both groups. The Spanish records say by the mid 16th century, the Pueblos exchanged maize and woven cotton goods for bison meat, hides and material for stone tools from Athabaskans who either traveled to them or lived around them. In the 18th century the Spanish report that the Navajo had large numbers of livestock and large areas of crops. The Navajo probably adapted many Pueblo ideas, into their own very different culture.[PARAGRAPH:2]Starting in the spring of 1864, around 9,000 Navajo men, women and children were forced on The Long Walk of over 300 miles (480 km) to Fort Sumner, New Mexico. This was the largest reservation attempted by the U.S. government. It was a failure for a combination of reasons. It was designed to supply water, wood, supplies, and livestock for 4,000–5,000 people, it had one kind of crop failure after another, other tribes and civilians were able to raid the Navajo, and a small group of Mescalero Apaches had been moved there. In 1868 a treaty was negotiated that allowed the surviving Navajos to return to a reservation that was a portion of their former range.</English>
+		<French>[TAB]The Navajo or Diné of the Southwestern United States are the largest Native American tribe of North America. In the 2000 U.S. census, 298,197 people claimed to be fully or partly of Navajo ancestry. The Navajo Nation constitutes an independent governmental body which manages the Navajo Indian reservation in the Four Corners area of the United States. The traditional Navajo language is still largely spoken throughout the region, although most Navajo also speak English fluently as well. Navajo refer to themselves in their native language as Diné, which is translated as "the People" in English.[PARAGRAPH:2]The Navajo/Diné are the largest Indian tribe in America today. They speak dialects of the language family referred to as Athabaskan. In addition to Utah, Colorado, New Mexico, and Arizona, Athabaskan speakers are also found living in Alaska, through Southern Athabaskan speakers, known today as Apache.[PARAGRAPH:2]This was once a single ethnic group that probably came from near the Great Slave Lake, in the modern Northwest Territories of Canada, having crossed the Bering land bridge thousands of years previously. In present-day Canada, an aboriginal people known as Dene still live in an area centered around Great Slave Lake and with communities in the far north of adjacent provinces.[PARAGRAPH:2]Despite the time elapsed, these people reportedly can still understand the language of their long-lost cousins, the Navajo. Archaeological and historical evidence suggests that the Navajo ancestors entered the Southwest after 1000 AD, with substantial population increases occurring in the 13th century. Navajo oral traditions are said to retain references of this migration.[PARAGRAPH:2]Navajo oral history seems to indicate a long relationship with Pueblo people and a willingness to adapt ideas into their own culture. Trade between the long-established Pueblo peoples and the Athabaskans was important to both groups. The Spanish records say by the mid 16th century, the Pueblos exchanged maize and woven cotton goods for bison meat, hides and material for stone tools from Athabaskans who either traveled to them or lived around them. In the 18th century the Spanish report that the Navajo had large numbers of livestock and large areas of crops. The Navajo probably adapted many Pueblo ideas, into their own very different culture.[PARAGRAPH:2]Starting in the spring of 1864, around 9,000 Navajo men, women and children were forced on The Long Walk of over 300 miles (480 km) to Fort Sumner, New Mexico. This was the largest reservation attempted by the U.S. government. It was a failure for a combination of reasons. It was designed to supply water, wood, supplies, and livestock for 4,000–5,000 people, it had one kind of crop failure after another, other tribes and civilians were able to raid the Navajo, and a small group of Mescalero Apaches had been moved there. In 1868 a treaty was negotiated that allowed the surviving Navajos to return to a reservation that was a portion of their former range.</French>
+		<German>[TAB]The Navajo or Diné of the Southwestern United States are the largest Native American tribe of North America. In the 2000 U.S. census, 298,197 people claimed to be fully or partly of Navajo ancestry. The Navajo Nation constitutes an independent governmental body which manages the Navajo Indian reservation in the Four Corners area of the United States. The traditional Navajo language is still largely spoken throughout the region, although most Navajo also speak English fluently as well. Navajo refer to themselves in their native language as Diné, which is translated as "the People" in English.[PARAGRAPH:2]The Navajo/Diné are the largest Indian tribe in America today. They speak dialects of the language family referred to as Athabaskan. In addition to Utah, Colorado, New Mexico, and Arizona, Athabaskan speakers are also found living in Alaska, through Southern Athabaskan speakers, known today as Apache.[PARAGRAPH:2]This was once a single ethnic group that probably came from near the Great Slave Lake, in the modern Northwest Territories of Canada, having crossed the Bering land bridge thousands of years previously. In present-day Canada, an aboriginal people known as Dene still live in an area centered around Great Slave Lake and with communities in the far north of adjacent provinces.[PARAGRAPH:2]Despite the time elapsed, these people reportedly can still understand the language of their long-lost cousins, the Navajo. Archaeological and historical evidence suggests that the Navajo ancestors entered the Southwest after 1000 AD, with substantial population increases occurring in the 13th century. Navajo oral traditions are said to retain references of this migration.[PARAGRAPH:2]Navajo oral history seems to indicate a long relationship with Pueblo people and a willingness to adapt ideas into their own culture. Trade between the long-established Pueblo peoples and the Athabaskans was important to both groups. The Spanish records say by the mid 16th century, the Pueblos exchanged maize and woven cotton goods for bison meat, hides and material for stone tools from Athabaskans who either traveled to them or lived around them. In the 18th century the Spanish report that the Navajo had large numbers of livestock and large areas of crops. The Navajo probably adapted many Pueblo ideas, into their own very different culture.[PARAGRAPH:2]Starting in the spring of 1864, around 9,000 Navajo men, women and children were forced on The Long Walk of over 300 miles (480 km) to Fort Sumner, New Mexico. This was the largest reservation attempted by the U.S. government. It was a failure for a combination of reasons. It was designed to supply water, wood, supplies, and livestock for 4,000–5,000 people, it had one kind of crop failure after another, other tribes and civilians were able to raid the Navajo, and a small group of Mescalero Apaches had been moved there. In 1868 a treaty was negotiated that allowed the surviving Navajos to return to a reservation that was a portion of their former range.</German>
+		<Italian>[TAB]The Navajo or Diné of the Southwestern United States are the largest Native American tribe of North America. In the 2000 U.S. census, 298,197 people claimed to be fully or partly of Navajo ancestry. The Navajo Nation constitutes an independent governmental body which manages the Navajo Indian reservation in the Four Corners area of the United States. The traditional Navajo language is still largely spoken throughout the region, although most Navajo also speak English fluently as well. Navajo refer to themselves in their native language as Diné, which is translated as "the People" in English.[PARAGRAPH:2]The Navajo/Diné are the largest Indian tribe in America today. They speak dialects of the language family referred to as Athabaskan. In addition to Utah, Colorado, New Mexico, and Arizona, Athabaskan speakers are also found living in Alaska, through Southern Athabaskan speakers, known today as Apache.[PARAGRAPH:2]This was once a single ethnic group that probably came from near the Great Slave Lake, in the modern Northwest Territories of Canada, having crossed the Bering land bridge thousands of years previously. In present-day Canada, an aboriginal people known as Dene still live in an area centered around Great Slave Lake and with communities in the far north of adjacent provinces.[PARAGRAPH:2]Despite the time elapsed, these people reportedly can still understand the language of their long-lost cousins, the Navajo. Archaeological and historical evidence suggests that the Navajo ancestors entered the Southwest after 1000 AD, with substantial population increases occurring in the 13th century. Navajo oral traditions are said to retain references of this migration.[PARAGRAPH:2]Navajo oral history seems to indicate a long relationship with Pueblo people and a willingness to adapt ideas into their own culture. Trade between the long-established Pueblo peoples and the Athabaskans was important to both groups. The Spanish records say by the mid 16th century, the Pueblos exchanged maize and woven cotton goods for bison meat, hides and material for stone tools from Athabaskans who either traveled to them or lived around them. In the 18th century the Spanish report that the Navajo had large numbers of livestock and large areas of crops. The Navajo probably adapted many Pueblo ideas, into their own very different culture.[PARAGRAPH:2]Starting in the spring of 1864, around 9,000 Navajo men, women and children were forced on The Long Walk of over 300 miles (480 km) to Fort Sumner, New Mexico. This was the largest reservation attempted by the U.S. government. It was a failure for a combination of reasons. It was designed to supply water, wood, supplies, and livestock for 4,000–5,000 people, it had one kind of crop failure after another, other tribes and civilians were able to raid the Navajo, and a small group of Mescalero Apaches had been moved there. In 1868 a treaty was negotiated that allowed the surviving Navajos to return to a reservation that was a portion of their former range.</Italian>
+		<Spanish>[TAB]The Navajo or Diné of the Southwestern United States are the largest Native American tribe of North America. In the 2000 U.S. census, 298,197 people claimed to be fully or partly of Navajo ancestry. The Navajo Nation constitutes an independent governmental body which manages the Navajo Indian reservation in the Four Corners area of the United States. The traditional Navajo language is still largely spoken throughout the region, although most Navajo also speak English fluently as well. Navajo refer to themselves in their native language as Diné, which is translated as "the People" in English.[PARAGRAPH:2]The Navajo/Diné are the largest Indian tribe in America today. They speak dialects of the language family referred to as Athabaskan. In addition to Utah, Colorado, New Mexico, and Arizona, Athabaskan speakers are also found living in Alaska, through Southern Athabaskan speakers, known today as Apache.[PARAGRAPH:2]This was once a single ethnic group that probably came from near the Great Slave Lake, in the modern Northwest Territories of Canada, having crossed the Bering land bridge thousands of years previously. In present-day Canada, an aboriginal people known as Dene still live in an area centered around Great Slave Lake and with communities in the far north of adjacent provinces.[PARAGRAPH:2]Despite the time elapsed, these people reportedly can still understand the language of their long-lost cousins, the Navajo. Archaeological and historical evidence suggests that the Navajo ancestors entered the Southwest after 1000 AD, with substantial population increases occurring in the 13th century. Navajo oral traditions are said to retain references of this migration.[PARAGRAPH:2]Navajo oral history seems to indicate a long relationship with Pueblo people and a willingness to adapt ideas into their own culture. Trade between the long-established Pueblo peoples and the Athabaskans was important to both groups. The Spanish records say by the mid 16th century, the Pueblos exchanged maize and woven cotton goods for bison meat, hides and material for stone tools from Athabaskans who either traveled to them or lived around them. In the 18th century the Spanish report that the Navajo had large numbers of livestock and large areas of crops. The Navajo probably adapted many Pueblo ideas, into their own very different culture.[PARAGRAPH:2]Starting in the spring of 1864, around 9,000 Navajo men, women and children were forced on The Long Walk of over 300 miles (480 km) to Fort Sumner, New Mexico. This was the largest reservation attempted by the U.S. government. It was a failure for a combination of reasons. It was designed to supply water, wood, supplies, and livestock for 4,000–5,000 people, it had one kind of crop failure after another, other tribes and civilians were able to raid the Navajo, and a small group of Mescalero Apaches had been moved there. In 1868 a treaty was negotiated that allowed the surviving Navajos to return to a reservation that was a portion of their former range.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_NARBONA</Tag>
+		<English>Narbona</English>
+		<French>
+			<Text>Narbona</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Narbona</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Narbona</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Narbona</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_NARBONA_PEDIA</Tag>
+		<English>[H1]Narbona[\H1][NEWLINE][BOLD]Navajo Chieftan[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.1766 - August 31, 1849 AD[NEWLINE] [PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]Narbona was one of the wealthiest Navajo of his time due to the amount of sheep and horses his outfit, or extended family group, owned. He was not a "chief" of all of the Navajo, the independent minded Navajo having no central authority, but he was very influential due to his status in the tribe, gained from both his wealth, high personal reputation and age at the time he negotiated with the Americans.[PARAGRAPH:1]Narbona had become one of the most prominent leaders in the aftermath of the massacre of 24 Navajo leaders in March 1822 at Jemez Pueblo who had been travelling under flag of truce to a peace conference with the new Mexican government. In February 1829 he lead the Navajo in battle against a Mexican expedition into the Chuska Mountains led by Captain Blas de Hinojos and defeated it utterly. The site of the battle, Copper Pass (Beesh Lichii'I Bigiizh), is now known as Narbona Pass.[PARAGRAPH:1]In 1849, Narbona had ridden with several hundred of his warriors to meet with a delegation led by Col. John M. Washington to discuss terms for peace between the Navajo and the "New Men", Americans who had driven the Mexicans from what is now the Southwestern United States. The US party was composed of both US Regulars and local New Mexican auxiliaries.[PARAGRAPH:1]After several misunderstandings, translators managed to work out an acceptable list of terms for peace between the two parties. As the peace council broke up, Sadoval, a young Navajo warrior of some distinction, began riding his horse to and fro, exhorting the 200-300 Navajo warriors in attendance to break the new treaty immediately, starting with the massacre of Col. Washington's command. At this point, a New Mexican officer claimed that he noticed a horse that belonged to him being ridden by one of the Navajo warriors. Navajos were great raiders of livestock, so it is entirely possible that this horse did indeed belong to the Americans. Washington, put in the position of backing one of his troopers, demanded that the horse be immediately turned over. The Navajo refused, and the horse and its rider departed.[PARAGRAPH:1]Washington commanded his troops to unlimber their cannon and prepare to fire if the Navajo refused to return the, now absent, property the Americans were claiming was stolen. The Navajo again denied his request, and the cannon as well as some rifles were fired.[PARAGRAPH:1]Narbona was mortally wounded in the fusillade. As a final indignity, according to eyewitnesses, he was also scalped by one of the New Mexico militiamen. He was buried by his sons in the traditional Navajo fashion, bound in a "death knotted" blanket and cast into a crevice. Two of his finest horses were slaughtered to ensure he would not walk to the afterlife.[PARAGRAPH:1]</English>
+		<French>[H1]Narbona[\H1][NEWLINE][BOLD]Navajo Chieftan[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.1766 - August 31, 1849 AD[NEWLINE] [PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]Narbona was one of the wealthiest Navajo of his time due to the amount of sheep and horses his outfit, or extended family group, owned. He was not a "chief" of all of the Navajo, the independent minded Navajo having no central authority, but he was very influential due to his status in the tribe, gained from both his wealth, high personal reputation and age at the time he negotiated with the Americans.[PARAGRAPH:1]Narbona had become one of the most prominent leaders in the aftermath of the massacre of 24 Navajo leaders in March 1822 at Jemez Pueblo who had been travelling under flag of truce to a peace conference with the new Mexican government. In February 1829 he lead the Navajo in battle against a Mexican expedition into the Chuska Mountains led by Captain Blas de Hinojos and defeated it utterly. The site of the battle, Copper Pass (Beesh Lichii'I Bigiizh), is now known as Narbona Pass.[PARAGRAPH:1]In 1849, Narbona had ridden with several hundred of his warriors to meet with a delegation led by Col. John M. Washington to discuss terms for peace between the Navajo and the "New Men", Americans who had driven the Mexicans from what is now the Southwestern United States. The US party was composed of both US Regulars and local New Mexican auxiliaries.[PARAGRAPH:1]After several misunderstandings, translators managed to work out an acceptable list of terms for peace between the two parties. As the peace council broke up, Sadoval, a young Navajo warrior of some distinction, began riding his horse to and fro, exhorting the 200-300 Navajo warriors in attendance to break the new treaty immediately, starting with the massacre of Col. Washington's command. At this point, a New Mexican officer claimed that he noticed a horse that belonged to him being ridden by one of the Navajo warriors. Navajos were great raiders of livestock, so it is entirely possible that this horse did indeed belong to the Americans. Washington, put in the position of backing one of his troopers, demanded that the horse be immediately turned over. The Navajo refused, and the horse and its rider departed.[PARAGRAPH:1]Washington commanded his troops to unlimber their cannon and prepare to fire if the Navajo refused to return the, now absent, property the Americans were claiming was stolen. The Navajo again denied his request, and the cannon as well as some rifles were fired.[PARAGRAPH:1]Narbona was mortally wounded in the fusillade. As a final indignity, according to eyewitnesses, he was also scalped by one of the New Mexico militiamen. He was buried by his sons in the traditional Navajo fashion, bound in a "death knotted" blanket and cast into a crevice. Two of his finest horses were slaughtered to ensure he would not walk to the afterlife.[PARAGRAPH:1]</French>
+		<German>[H1]Narbona[\H1][NEWLINE][BOLD]Navajo Chieftan[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.1766 - August 31, 1849 AD[NEWLINE] [PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]Narbona was one of the wealthiest Navajo of his time due to the amount of sheep and horses his outfit, or extended family group, owned. He was not a "chief" of all of the Navajo, the independent minded Navajo having no central authority, but he was very influential due to his status in the tribe, gained from both his wealth, high personal reputation and age at the time he negotiated with the Americans.[PARAGRAPH:1]Narbona had become one of the most prominent leaders in the aftermath of the massacre of 24 Navajo leaders in March 1822 at Jemez Pueblo who had been travelling under flag of truce to a peace conference with the new Mexican government. In February 1829 he lead the Navajo in battle against a Mexican expedition into the Chuska Mountains led by Captain Blas de Hinojos and defeated it utterly. The site of the battle, Copper Pass (Beesh Lichii'I Bigiizh), is now known as Narbona Pass.[PARAGRAPH:1]In 1849, Narbona had ridden with several hundred of his warriors to meet with a delegation led by Col. John M. Washington to discuss terms for peace between the Navajo and the "New Men", Americans who had driven the Mexicans from what is now the Southwestern United States. The US party was composed of both US Regulars and local New Mexican auxiliaries.[PARAGRAPH:1]After several misunderstandings, translators managed to work out an acceptable list of terms for peace between the two parties. As the peace council broke up, Sadoval, a young Navajo warrior of some distinction, began riding his horse to and fro, exhorting the 200-300 Navajo warriors in attendance to break the new treaty immediately, starting with the massacre of Col. Washington's command. At this point, a New Mexican officer claimed that he noticed a horse that belonged to him being ridden by one of the Navajo warriors. Navajos were great raiders of livestock, so it is entirely possible that this horse did indeed belong to the Americans. Washington, put in the position of backing one of his troopers, demanded that the horse be immediately turned over. The Navajo refused, and the horse and its rider departed.[PARAGRAPH:1]Washington commanded his troops to unlimber their cannon and prepare to fire if the Navajo refused to return the, now absent, property the Americans were claiming was stolen. The Navajo again denied his request, and the cannon as well as some rifles were fired.[PARAGRAPH:1]Narbona was mortally wounded in the fusillade. As a final indignity, according to eyewitnesses, he was also scalped by one of the New Mexico militiamen. He was buried by his sons in the traditional Navajo fashion, bound in a "death knotted" blanket and cast into a crevice. Two of his finest horses were slaughtered to ensure he would not walk to the afterlife.[PARAGRAPH:1]</German>
+		<Italian>[H1]Narbona[\H1][NEWLINE][BOLD]Navajo Chieftan[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.1766 - August 31, 1849 AD[NEWLINE] [PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]Narbona was one of the wealthiest Navajo of his time due to the amount of sheep and horses his outfit, or extended family group, owned. He was not a "chief" of all of the Navajo, the independent minded Navajo having no central authority, but he was very influential due to his status in the tribe, gained from both his wealth, high personal reputation and age at the time he negotiated with the Americans.[PARAGRAPH:1]Narbona had become one of the most prominent leaders in the aftermath of the massacre of 24 Navajo leaders in March 1822 at Jemez Pueblo who had been travelling under flag of truce to a peace conference with the new Mexican government. In February 1829 he lead the Navajo in battle against a Mexican expedition into the Chuska Mountains led by Captain Blas de Hinojos and defeated it utterly. The site of the battle, Copper Pass (Beesh Lichii'I Bigiizh), is now known as Narbona Pass.[PARAGRAPH:1]In 1849, Narbona had ridden with several hundred of his warriors to meet with a delegation led by Col. John M. Washington to discuss terms for peace between the Navajo and the "New Men", Americans who had driven the Mexicans from what is now the Southwestern United States. The US party was composed of both US Regulars and local New Mexican auxiliaries.[PARAGRAPH:1]After several misunderstandings, translators managed to work out an acceptable list of terms for peace between the two parties. As the peace council broke up, Sadoval, a young Navajo warrior of some distinction, began riding his horse to and fro, exhorting the 200-300 Navajo warriors in attendance to break the new treaty immediately, starting with the massacre of Col. Washington's command. At this point, a New Mexican officer claimed that he noticed a horse that belonged to him being ridden by one of the Navajo warriors. Navajos were great raiders of livestock, so it is entirely possible that this horse did indeed belong to the Americans. Washington, put in the position of backing one of his troopers, demanded that the horse be immediately turned over. The Navajo refused, and the horse and its rider departed.[PARAGRAPH:1]Washington commanded his troops to unlimber their cannon and prepare to fire if the Navajo refused to return the, now absent, property the Americans were claiming was stolen. The Navajo again denied his request, and the cannon as well as some rifles were fired.[PARAGRAPH:1]Narbona was mortally wounded in the fusillade. As a final indignity, according to eyewitnesses, he was also scalped by one of the New Mexico militiamen. He was buried by his sons in the traditional Navajo fashion, bound in a "death knotted" blanket and cast into a crevice. Two of his finest horses were slaughtered to ensure he would not walk to the afterlife.[PARAGRAPH:1]</Italian>
+		<Spanish>[H1]Narbona[\H1][NEWLINE][BOLD]Navajo Chieftan[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.1766 - August 31, 1849 AD[NEWLINE] [PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]Narbona was one of the wealthiest Navajo of his time due to the amount of sheep and horses his outfit, or extended family group, owned. He was not a "chief" of all of the Navajo, the independent minded Navajo having no central authority, but he was very influential due to his status in the tribe, gained from both his wealth, high personal reputation and age at the time he negotiated with the Americans.[PARAGRAPH:1]Narbona had become one of the most prominent leaders in the aftermath of the massacre of 24 Navajo leaders in March 1822 at Jemez Pueblo who had been travelling under flag of truce to a peace conference with the new Mexican government. In February 1829 he lead the Navajo in battle against a Mexican expedition into the Chuska Mountains led by Captain Blas de Hinojos and defeated it utterly. The site of the battle, Copper Pass (Beesh Lichii'I Bigiizh), is now known as Narbona Pass.[PARAGRAPH:1]In 1849, Narbona had ridden with several hundred of his warriors to meet with a delegation led by Col. John M. Washington to discuss terms for peace between the Navajo and the "New Men", Americans who had driven the Mexicans from what is now the Southwestern United States. The US party was composed of both US Regulars and local New Mexican auxiliaries.[PARAGRAPH:1]After several misunderstandings, translators managed to work out an acceptable list of terms for peace between the two parties. As the peace council broke up, Sadoval, a young Navajo warrior of some distinction, began riding his horse to and fro, exhorting the 200-300 Navajo warriors in attendance to break the new treaty immediately, starting with the massacre of Col. Washington's command. At this point, a New Mexican officer claimed that he noticed a horse that belonged to him being ridden by one of the Navajo warriors. Navajos were great raiders of livestock, so it is entirely possible that this horse did indeed belong to the Americans. Washington, put in the position of backing one of his troopers, demanded that the horse be immediately turned over. The Navajo refused, and the horse and its rider departed.[PARAGRAPH:1]Washington commanded his troops to unlimber their cannon and prepare to fire if the Navajo refused to return the, now absent, property the Americans were claiming was stolen. The Navajo again denied his request, and the cannon as well as some rifles were fired.[PARAGRAPH:1]Narbona was mortally wounded in the fusillade. As a final indignity, according to eyewitnesses, he was also scalped by one of the New Mexico militiamen. He was buried by his sons in the traditional Navajo fashion, bound in a "death knotted" blanket and cast into a crevice. Two of his finest horses were slaughtered to ensure he would not walk to the afterlife.[PARAGRAPH:1]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_NARBONA_1</Tag>
+		<English>Ya'at'eeh shiyaazh, [CT_NAME]. Walk on a rainbow trail; walk on a trail of song, and all about you will be beauty. There is a way out of every dark mist, over a rainbow trail. Why do you walk the trail that leads to our land?</English>
+		<French>Ya'at'eeh shiyaazh, [CT_NAME]. Walk on a rainbow trail; walk on a trail of song, and all about you will be beauty. There is a way out of every dark mist, over a rainbow trail. Why do you walk the trail that leads to our land?</French>
+		<German>Ya'at'eeh shiyaazh, [CT_NAME]. Walk on a rainbow trail; walk on a trail of song, and all about you will be beauty. There is a way out of every dark mist, over a rainbow trail. Why do you walk the trail that leads to our land?</German>
+		<Italian>Ya'at'eeh shiyaazh, [CT_NAME]. Walk on a rainbow trail; walk on a trail of song, and all about you will be beauty. There is a way out of every dark mist, over a rainbow trail. Why do you walk the trail that leads to our land?</Italian>
+		<Spanish>Ya'at'eeh shiyaazh, [CT_NAME]. Walk on a rainbow trail; walk on a trail of song, and all about you will be beauty. There is a way out of every dark mist, over a rainbow trail. Why do you walk the trail that leads to our land?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NAVAJO</Tag>
+		<English>Navajo</English>
+		<French>
+			<Text>Navajo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Navajo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Navajo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Navajo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_HOPI</Tag>
+		<English>Navajo</English>
+		<French>
+			<Text>Hopi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Hopi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Hopi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Hopi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TAOS</Tag>
+		<English>Taos</English>
+		<French>
+			<Text>Taos</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Taos</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Taos</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Taos</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_COYOTERO</Tag>
+		<English>Coyotero</English>
+		<French>
+			<Text>Coyotero</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Coyotero</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Coyotero</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Coyotero</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_WAICURI</Tag>
+		<English>Waicuri</English>
+		<French>
+			<Text>Waicuri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Waicuri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Waicuri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Waicuri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_HAVASUPAI</Tag>
+		<English>Havasupai</English>
+		<French>
+			<Text>Havasupai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Havasupai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Havasupai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Havasupai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NAMBE</Tag>
+		<English>Nambe</English>
+		<French>
+			<Text>Nambe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Nambe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Nambe</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Nambe</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TOBOSO</Tag>
+		<English>Toboso</English>
+		<French>Toboso</French>
+		<German>Toboso</German>
+		<Italian>Toboso</Italian>
+		<Spanish>Toboso</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PUEBLO</Tag>
+		<English>Pueblo</English>
+		<French>Pueblo</French>
+		<German>Pueblo</German>
+		<Italian>Pueblo</Italian>
+		<Spanish>Pueblo</Spanish>
+	</TEXT>
+</Civ4GameText>

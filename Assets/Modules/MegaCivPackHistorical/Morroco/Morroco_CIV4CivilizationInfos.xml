@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<Civ4CivilizationInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4CivilizationsSchema.xml">
+	<CivilizationInfos>
+		<CivilizationInfo>
+			<Type>CIVILIZATION_MORROCO</Type>
+			<Description>TXT_KEY_CIV_MORROCO_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_MORROCO_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_MORROCO_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_MORROCO_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_MORROCO</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_MORROCO</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_CRESCENT</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_MIDDLE_EAST</UnitArtStyleType>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>TXT_KEY_CITY_NAME_RABAT</City>
+				<City>TXT_KEY_CITY_NAME_CASABLANCA</City>
+				<City>TXT_KEY_CITY_NAME_MARRAKECH</City>
+				<City>TXT_KEY_CITY_NAME_SETTAT</City>
+				<City>TXT_KEY_CITY_NAME_SAFI</City>
+				<City>TXT_KEY_CITY_NAME_FEZ</City>
+				<City>TXT_KEY_CITY_NAME_KENITRA</City>
+				<City>TXT_KEY_CITY_NAME_GUELMIM</City>
+				<City>TXT_KEY_CITY_NAME_LAAYOUNE</City>
+				<City>TXT_KEY_CITY_NAME_MELNES</City>
+				<City>TXT_KEY_CITY_NAME_OUJDA</City>
+				<City>TXT_KEY_CITY_NAME_DAKHLA</City>
+				<City>TXT_KEY_CITY_NAME_AGADIR</City>
+				<City>TXT_KEY_CITY_NAME_BENIMELLAL</City>
+				<City>TXT_KEY_CITY_NAME_TANGIER</City>
+				<City>TXT_KEY_CITY_NAME_ALHOCEIMA</City>
+				<City>Sale</City>
+				<City>Ouarzazate</City>
+				<City>Tetouan</City>
+				<City>Essaouira</City>
+				<City>Taroudannt</City>
+				<City>Mohammedia</City>
+				<City>El Aaiun</City>
+				<City>Beni Mellal</City>
+				<City>El Jadida</City>
+				<City>Ksar el Kebir</City>
+				<City>Taza</City>
+				<City>Fquih ben Salah</City>
+				<City>Khouribga</City>
+				<City>Nador</City>
+				<City>Settat</City>
+				<City>Berrechid</City>
+				<City>Larache</City>
+				<City>Khemisset</City>
+				<City>Guelmim</City>
+				<City>Dakhla</City>
+				<City>Chefchaouen</City>
+				<City>Ben Guerir</City>
+				<City>El Kelaa des Sraghna</City>
+				<City>Erfoud</City>
+				<City>Taliouine</City>
+				<City>Assaisse</City>
+				<City>Tassawant</City>
+				<City>Ouriz</City>
+				<City>Asdif Iznagh</City>
+			</Cities>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
+			<InitialCivics>
+				<CivicType>CIVIC_ANARCHISM</CivicType>
+				<CivicType>CIVIC_OBEDIENCE</CivicType>
+				<CivicType>CIVIC_STRONGMAN</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
+				<CivicType>CIVIC_MILITIA</CivicType>
+				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SURVIVAL</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
+				<CivicType>CIVIC_UNORGANIZED</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_IDRIS</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<DerivativeCiv>CIVILIZATION_ARABIA</DerivativeCiv>
+			<CivilizationSelectionSound>AS3D_ARABIA_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_ARABIA_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+	</CivilizationInfos>
+</Civ4CivilizationInfos>

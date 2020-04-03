@@ -1,0 +1,1823 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- ReModified by the StrategyOnly -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_IRELAND_DESC</Tag>
+		<English>Irish Empire</English>
+		<French>
+			<Text>Empire irelandais</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Irish Empire</Text>
+			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Plural>0:0:0</Plural>
+		</German>
+		<Italian>
+			<Text>Irish Empire</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Irish Empire</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_IRELAND_SHORT_DESC</Tag>
+		<English>Ireland</English>
+		<French>
+			<Text>Ireland</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ireland</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ireland</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ireland</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_IRELAND_PEDIA</Tag>
+		<English>[TAB]Ireland was mostly ice-covered and joined by land to Britain and Europe during the last 
+ice age. It has been inhabited for about 9,000 years. Stone age inhabitants arrived sometime after 8000 
+BC, with the culture progressing from Mesolithic to high Neolithic over the course of three or four millennia. 
+The Bronze Age, which began around 2500 BC, saw the production of elaborate gold and bronze ornaments 
+and weapons. The Iron Age in Ireland is associated with people now known as Celts. They are traditionally 
+thought to have colonised Ireland in a series of waves between the 8th and 1st centuries BC, with the 
+Gael, the last wave of Celts, conquering the island and dividing it into five or more kingdoms. Many 
+scholars, however, now favour a view that emphasises cultural diffusion from overseas over significant 
+colonisation.The Romans referred to Ireland as Hibernia. Ptolemy in AD 100 records Ireland's geography 
+and tribes. Native accounts are confined to Irish poetry, myth, and archaeology. The exact relationship 
+between Rome and the tribes of Hibernia is unclear; the only references are a few Roman writings.[PARAGRAPH:2]Tradition 
+maintains that in AD 432, St. Patrick arrived on the island and, in the years that followed, worked to 
+convert the Irish to Christianity. The druid tradition collapsed in the face of the spread of the new 
+faith. Irish Christian scholars excelled in the study of Latin learning and Christian theology in the 
+monasteries that flourished, preserving Latin learning during the Early Middle Ages. The arts of manuscript 
+illumination, metalworking, and sculpture flourished and produced such treasures as the Book of Kells, 
+ornate jewellery, and the many carved stone crosses that dot the island. This era was interrupted in 
+the 9th century by 200 years of intermittent warfare with waves of Viking raiders who plundered monasteries 
+and towns. Eventually they settled in Ireland and established many towns, including the modern day cities 
+of Dublin, Cork, Limerick and Waterford.[PARAGRAPH:2]In 1172, King Henry II of England gained Irish lands 
+by the granting of the 1155 Bull Laudibiliter to him by then English Pope Adrian IV, and from the 13th 
+century, English law began to be introduced. English rule was largely limited to the area around Dublin, 
+known as the Pale, and Waterford, but this began to expand in the 16th century with the final collapse 
+of the Gaelic social and political superstructure at the end of the 17th century, as a result of the 
+Tudor re-conquest of Ireland and English and Scottish Protestant colonisation in the Plantations of Ireland, 
+which established English control over the whole island. After the Irish Rebellion of 1641, Irish Catholics 
+were barred from voting or attending the Irish Parliament. The new English Protestant ruling class was 
+known as the Protestant Ascendancy.[PARAGRAPH:2]In 1800 the Irish Parliament passed the Act of Union 
+which, in 1801, merged the Kingdom of Ireland and the Kingdom of Great Britain to create the United Kingdom 
+of Great Britain and Ireland. The whole island of Ireland would remain within the United Kingdom, ruled 
+directly by the UK Parliament in London. The 19th century saw the Great Famine of the 1840s in which 
+at least 1 million Irish people died and over a million were forced to emigrate.[PARAGRAPH:2]The late 
+19th and early 20th century saw a vigorous but unsuccessful campaign for Irish home rule, followed by 
+the eclipse of moderate nationalism by militant separatism. In 1922, following the Anglo-Irish War, twenty-six 
+counties of Ireland seceded from the United Kingdom as the Irish Free State. The remaining six, in the 
+north-east, remained within the Union as Northern Ireland. Secession for the rest of Ireland led directly 
+to the Civil War, as militant nationalists split into two factions and turned against one another.[PARAGRAPH:2]The 
+Anglo-Irish Treaty was narrowly ratified by the Dáil in December 1921 but was rejected by a large minority, 
+resulting in the Irish Civil War which lasted until 1923. In 1922, in the middle of this civil war, the 
+Irish Free State came into being. For its first years the new state was governed by the victors of the 
+Civil War. However in the 1930s Fianna Fáil, the party of the opponents of the treaty, were elected into 
+government. The party introduced a new constitution in 1937 which renamed the state to simply "Éire or 
+in the English language, Ireland" (preface to the Constitution).[PARAGRAPH:2]The state was neutral during 
+World War II but offered some assistance to the Allies. In 1949 the state declared itself to be a republic 
+and that henceforth it should be described as the Republic of Ireland. The state was plagued by poverty 
+and emigration until the mid-1970's. The 1990's saw the beginning of unprecedented economic success, 
+in a phenomenon known as the "Celtic Tiger". By the early 2000's, it had become one of the richest countries 
+(in terms of GDP per capita) in the European Union, moving from being a net recipient to a net contributor 
+and from a population with net emigration to one with net immigration.</English>
+		<French>[TAB]Ireland was mostly ice-covered and joined by land to Britain and Europe during the last 
+ice age. It has been inhabited for about 9,000 years. Stone age inhabitants arrived sometime after 8000 
+BC, with the culture progressing from Mesolithic to high Neolithic over the course of three or four millennia. 
+The Bronze Age, which began around 2500 BC, saw the production of elaborate gold and bronze ornaments 
+and weapons. The Iron Age in Ireland is associated with people now known as Celts. They are traditionally 
+thought to have colonised Ireland in a series of waves between the 8th and 1st centuries BC, with the 
+Gael, the last wave of Celts, conquering the island and dividing it into five or more kingdoms. Many 
+scholars, however, now favour a view that emphasises cultural diffusion from overseas over significant 
+colonisation.The Romans referred to Ireland as Hibernia. Ptolemy in AD 100 records Ireland's geography 
+and tribes. Native accounts are confined to Irish poetry, myth, and archaeology. The exact relationship 
+between Rome and the tribes of Hibernia is unclear; the only references are a few Roman writings.[PARAGRAPH:2]Tradition 
+maintains that in AD 432, St. Patrick arrived on the island and, in the years that followed, worked to 
+convert the Irish to Christianity. The druid tradition collapsed in the face of the spread of the new 
+faith. Irish Christian scholars excelled in the study of Latin learning and Christian theology in the 
+monasteries that flourished, preserving Latin learning during the Early Middle Ages. The arts of manuscript 
+illumination, metalworking, and sculpture flourished and produced such treasures as the Book of Kells, 
+ornate jewellery, and the many carved stone crosses that dot the island. This era was interrupted in 
+the 9th century by 200 years of intermittent warfare with waves of Viking raiders who plundered monasteries 
+and towns. Eventually they settled in Ireland and established many towns, including the modern day cities 
+of Dublin, Cork, Limerick and Waterford.[PARAGRAPH:2]In 1172, King Henry II of England gained Irish lands 
+by the granting of the 1155 Bull Laudibiliter to him by then English Pope Adrian IV, and from the 13th 
+century, English law began to be introduced. English rule was largely limited to the area around Dublin, 
+known as the Pale, and Waterford, but this began to expand in the 16th century with the final collapse 
+of the Gaelic social and political superstructure at the end of the 17th century, as a result of the 
+Tudor re-conquest of Ireland and English and Scottish Protestant colonisation in the Plantations of Ireland, 
+which established English control over the whole island. After the Irish Rebellion of 1641, Irish Catholics 
+were barred from voting or attending the Irish Parliament. The new English Protestant ruling class was 
+known as the Protestant Ascendancy.[PARAGRAPH:2]In 1800 the Irish Parliament passed the Act of Union 
+which, in 1801, merged the Kingdom of Ireland and the Kingdom of Great Britain to create the United Kingdom 
+of Great Britain and Ireland. The whole island of Ireland would remain within the United Kingdom, ruled 
+directly by the UK Parliament in London. The 19th century saw the Great Famine of the 1840s in which 
+at least 1 million Irish people died and over a million were forced to emigrate.[PARAGRAPH:2]The late 
+19th and early 20th century saw a vigorous but unsuccessful campaign for Irish home rule, followed by 
+the eclipse of moderate nationalism by militant separatism. In 1922, following the Anglo-Irish War, twenty-six 
+counties of Ireland seceded from the United Kingdom as the Irish Free State. The remaining six, in the 
+north-east, remained within the Union as Northern Ireland. Secession for the rest of Ireland led directly 
+to the Civil War, as militant nationalists split into two factions and turned against one another.[PARAGRAPH:2]The 
+Anglo-Irish Treaty was narrowly ratified by the Dáil in December 1921 but was rejected by a large minority, 
+resulting in the Irish Civil War which lasted until 1923. In 1922, in the middle of this civil war, the 
+Irish Free State came into being. For its first years the new state was governed by the victors of the 
+Civil War. However in the 1930s Fianna Fáil, the party of the opponents of the treaty, were elected into 
+government. The party introduced a new constitution in 1937 which renamed the state to simply "Éire or 
+in the English language, Ireland" (preface to the Constitution).[PARAGRAPH:2]The state was neutral during 
+World War II but offered some assistance to the Allies. In 1949 the state declared itself to be a republic 
+and that henceforth it should be described as the Republic of Ireland. The state was plagued by poverty 
+and emigration until the mid-1970's. The 1990's saw the beginning of unprecedented economic success, 
+in a phenomenon known as the "Celtic Tiger". By the early 2000's, it had become one of the richest countries 
+(in terms of GDP per capita) in the European Union, moving from being a net recipient to a net contributor 
+and from a population with net emigration to one with net immigration.</French>
+		<German>[TAB]Ireland was mostly ice-covered and joined by land to Britain and Europe during the last 
+ice age. It has been inhabited for about 9,000 years. Stone age inhabitants arrived sometime after 8000 
+BC, with the culture progressing from Mesolithic to high Neolithic over the course of three or four millennia. 
+The Bronze Age, which began around 2500 BC, saw the production of elaborate gold and bronze ornaments 
+and weapons. The Iron Age in Ireland is associated with people now known as Celts. They are traditionally 
+thought to have colonised Ireland in a series of waves between the 8th and 1st centuries BC, with the 
+Gael, the last wave of Celts, conquering the island and dividing it into five or more kingdoms. Many 
+scholars, however, now favour a view that emphasises cultural diffusion from overseas over significant 
+colonisation.The Romans referred to Ireland as Hibernia. Ptolemy in AD 100 records Ireland's geography 
+and tribes. Native accounts are confined to Irish poetry, myth, and archaeology. The exact relationship 
+between Rome and the tribes of Hibernia is unclear; the only references are a few Roman writings.[PARAGRAPH:2]Tradition 
+maintains that in AD 432, St. Patrick arrived on the island and, in the years that followed, worked to 
+convert the Irish to Christianity. The druid tradition collapsed in the face of the spread of the new 
+faith. Irish Christian scholars excelled in the study of Latin learning and Christian theology in the 
+monasteries that flourished, preserving Latin learning during the Early Middle Ages. The arts of manuscript 
+illumination, metalworking, and sculpture flourished and produced such treasures as the Book of Kells, 
+ornate jewellery, and the many carved stone crosses that dot the island. This era was interrupted in 
+the 9th century by 200 years of intermittent warfare with waves of Viking raiders who plundered monasteries 
+and towns. Eventually they settled in Ireland and established many towns, including the modern day cities 
+of Dublin, Cork, Limerick and Waterford.[PARAGRAPH:2]In 1172, King Henry II of England gained Irish lands 
+by the granting of the 1155 Bull Laudibiliter to him by then English Pope Adrian IV, and from the 13th 
+century, English law began to be introduced. English rule was largely limited to the area around Dublin, 
+known as the Pale, and Waterford, but this began to expand in the 16th century with the final collapse 
+of the Gaelic social and political superstructure at the end of the 17th century, as a result of the 
+Tudor re-conquest of Ireland and English and Scottish Protestant colonisation in the Plantations of Ireland, 
+which established English control over the whole island. After the Irish Rebellion of 1641, Irish Catholics 
+were barred from voting or attending the Irish Parliament. The new English Protestant ruling class was 
+known as the Protestant Ascendancy.[PARAGRAPH:2]In 1800 the Irish Parliament passed the Act of Union 
+which, in 1801, merged the Kingdom of Ireland and the Kingdom of Great Britain to create the United Kingdom 
+of Great Britain and Ireland. The whole island of Ireland would remain within the United Kingdom, ruled 
+directly by the UK Parliament in London. The 19th century saw the Great Famine of the 1840s in which 
+at least 1 million Irish people died and over a million were forced to emigrate.[PARAGRAPH:2]The late 
+19th and early 20th century saw a vigorous but unsuccessful campaign for Irish home rule, followed by 
+the eclipse of moderate nationalism by militant separatism. In 1922, following the Anglo-Irish War, twenty-six 
+counties of Ireland seceded from the United Kingdom as the Irish Free State. The remaining six, in the 
+north-east, remained within the Union as Northern Ireland. Secession for the rest of Ireland led directly 
+to the Civil War, as militant nationalists split into two factions and turned against one another.[PARAGRAPH:2]The 
+Anglo-Irish Treaty was narrowly ratified by the Dáil in December 1921 but was rejected by a large minority, 
+resulting in the Irish Civil War which lasted until 1923. In 1922, in the middle of this civil war, the 
+Irish Free State came into being. For its first years the new state was governed by the victors of the 
+Civil War. However in the 1930s Fianna Fáil, the party of the opponents of the treaty, were elected into 
+government. The party introduced a new constitution in 1937 which renamed the state to simply "Éire or 
+in the English language, Ireland" (preface to the Constitution).[PARAGRAPH:2]The state was neutral during 
+World War II but offered some assistance to the Allies. In 1949 the state declared itself to be a republic 
+and that henceforth it should be described as the Republic of Ireland. The state was plagued by poverty 
+and emigration until the mid-1970's. The 1990's saw the beginning of unprecedented economic success, 
+in a phenomenon known as the "Celtic Tiger". By the early 2000's, it had become one of the richest countries 
+(in terms of GDP per capita) in the European Union, moving from being a net recipient to a net contributor 
+and from a population with net emigration to one with net immigration.</German>
+		<Italian>[TAB]Ireland was mostly ice-covered and joined by land to Britain and Europe during the last 
+ice age. It has been inhabited for about 9,000 years. Stone age inhabitants arrived sometime after 8000 
+BC, with the culture progressing from Mesolithic to high Neolithic over the course of three or four millennia. 
+The Bronze Age, which began around 2500 BC, saw the production of elaborate gold and bronze ornaments 
+and weapons. The Iron Age in Ireland is associated with people now known as Celts. They are traditionally 
+thought to have colonised Ireland in a series of waves between the 8th and 1st centuries BC, with the 
+Gael, the last wave of Celts, conquering the island and dividing it into five or more kingdoms. Many 
+scholars, however, now favour a view that emphasises cultural diffusion from overseas over significant 
+colonisation.The Romans referred to Ireland as Hibernia. Ptolemy in AD 100 records Ireland's geography 
+and tribes. Native accounts are confined to Irish poetry, myth, and archaeology. The exact relationship 
+between Rome and the tribes of Hibernia is unclear; the only references are a few Roman writings.[PARAGRAPH:2]Tradition 
+maintains that in AD 432, St. Patrick arrived on the island and, in the years that followed, worked to 
+convert the Irish to Christianity. The druid tradition collapsed in the face of the spread of the new 
+faith. Irish Christian scholars excelled in the study of Latin learning and Christian theology in the 
+monasteries that flourished, preserving Latin learning during the Early Middle Ages. The arts of manuscript 
+illumination, metalworking, and sculpture flourished and produced such treasures as the Book of Kells, 
+ornate jewellery, and the many carved stone crosses that dot the island. This era was interrupted in 
+the 9th century by 200 years of intermittent warfare with waves of Viking raiders who plundered monasteries 
+and towns. Eventually they settled in Ireland and established many towns, including the modern day cities 
+of Dublin, Cork, Limerick and Waterford.[PARAGRAPH:2]In 1172, King Henry II of England gained Irish lands 
+by the granting of the 1155 Bull Laudibiliter to him by then English Pope Adrian IV, and from the 13th 
+century, English law began to be introduced. English rule was largely limited to the area around Dublin, 
+known as the Pale, and Waterford, but this began to expand in the 16th century with the final collapse 
+of the Gaelic social and political superstructure at the end of the 17th century, as a result of the 
+Tudor re-conquest of Ireland and English and Scottish Protestant colonisation in the Plantations of Ireland, 
+which established English control over the whole island. After the Irish Rebellion of 1641, Irish Catholics 
+were barred from voting or attending the Irish Parliament. The new English Protestant ruling class was 
+known as the Protestant Ascendancy.[PARAGRAPH:2]In 1800 the Irish Parliament passed the Act of Union 
+which, in 1801, merged the Kingdom of Ireland and the Kingdom of Great Britain to create the United Kingdom 
+of Great Britain and Ireland. The whole island of Ireland would remain within the United Kingdom, ruled 
+directly by the UK Parliament in London. The 19th century saw the Great Famine of the 1840s in which 
+at least 1 million Irish people died and over a million were forced to emigrate.[PARAGRAPH:2]The late 
+19th and early 20th century saw a vigorous but unsuccessful campaign for Irish home rule, followed by 
+the eclipse of moderate nationalism by militant separatism. In 1922, following the Anglo-Irish War, twenty-six 
+counties of Ireland seceded from the United Kingdom as the Irish Free State. The remaining six, in the 
+north-east, remained within the Union as Northern Ireland. Secession for the rest of Ireland led directly 
+to the Civil War, as militant nationalists split into two factions and turned against one another.[PARAGRAPH:2]The 
+Anglo-Irish Treaty was narrowly ratified by the Dáil in December 1921 but was rejected by a large minority, 
+resulting in the Irish Civil War which lasted until 1923. In 1922, in the middle of this civil war, the 
+Irish Free State came into being. For its first years the new state was governed by the victors of the 
+Civil War. However in the 1930s Fianna Fáil, the party of the opponents of the treaty, were elected into 
+government. The party introduced a new constitution in 1937 which renamed the state to simply "Éire or 
+in the English language, Ireland" (preface to the Constitution).[PARAGRAPH:2]The state was neutral during 
+World War II but offered some assistance to the Allies. In 1949 the state declared itself to be a republic 
+and that henceforth it should be described as the Republic of Ireland. The state was plagued by poverty 
+and emigration until the mid-1970's. The 1990's saw the beginning of unprecedented economic success, 
+in a phenomenon known as the "Celtic Tiger". By the early 2000's, it had become one of the richest countries 
+(in terms of GDP per capita) in the European Union, moving from being a net recipient to a net contributor 
+and from a population with net emigration to one with net immigration.</Italian>
+		<Spanish>[TAB]Ireland was mostly ice-covered and joined by land to Britain and Europe during the last 
+ice age. It has been inhabited for about 9,000 years. Stone age inhabitants arrived sometime after 8000 
+BC, with the culture progressing from Mesolithic to high Neolithic over the course of three or four millennia. 
+The Bronze Age, which began around 2500 BC, saw the production of elaborate gold and bronze ornaments 
+and weapons. The Iron Age in Ireland is associated with people now known as Celts. They are traditionally 
+thought to have colonised Ireland in a series of waves between the 8th and 1st centuries BC, with the 
+Gael, the last wave of Celts, conquering the island and dividing it into five or more kingdoms. Many 
+scholars, however, now favour a view that emphasises cultural diffusion from overseas over significant 
+colonisation.The Romans referred to Ireland as Hibernia. Ptolemy in AD 100 records Ireland's geography 
+and tribes. Native accounts are confined to Irish poetry, myth, and archaeology. The exact relationship 
+between Rome and the tribes of Hibernia is unclear; the only references are a few Roman writings.[PARAGRAPH:2]Tradition 
+maintains that in AD 432, St. Patrick arrived on the island and, in the years that followed, worked to 
+convert the Irish to Christianity. The druid tradition collapsed in the face of the spread of the new 
+faith. Irish Christian scholars excelled in the study of Latin learning and Christian theology in the 
+monasteries that flourished, preserving Latin learning during the Early Middle Ages. The arts of manuscript 
+illumination, metalworking, and sculpture flourished and produced such treasures as the Book of Kells, 
+ornate jewellery, and the many carved stone crosses that dot the island. This era was interrupted in 
+the 9th century by 200 years of intermittent warfare with waves of Viking raiders who plundered monasteries 
+and towns. Eventually they settled in Ireland and established many towns, including the modern day cities 
+of Dublin, Cork, Limerick and Waterford.[PARAGRAPH:2]In 1172, King Henry II of England gained Irish lands 
+by the granting of the 1155 Bull Laudibiliter to him by then English Pope Adrian IV, and from the 13th 
+century, English law began to be introduced. English rule was largely limited to the area around Dublin, 
+known as the Pale, and Waterford, but this began to expand in the 16th century with the final collapse 
+of the Gaelic social and political superstructure at the end of the 17th century, as a result of the 
+Tudor re-conquest of Ireland and English and Scottish Protestant colonisation in the Plantations of Ireland, 
+which established English control over the whole island. After the Irish Rebellion of 1641, Irish Catholics 
+were barred from voting or attending the Irish Parliament. The new English Protestant ruling class was 
+known as the Protestant Ascendancy.[PARAGRAPH:2]In 1800 the Irish Parliament passed the Act of Union 
+which, in 1801, merged the Kingdom of Ireland and the Kingdom of Great Britain to create the United Kingdom 
+of Great Britain and Ireland. The whole island of Ireland would remain within the United Kingdom, ruled 
+directly by the UK Parliament in London. The 19th century saw the Great Famine of the 1840s in which 
+at least 1 million Irish people died and over a million were forced to emigrate.[PARAGRAPH:2]The late 
+19th and early 20th century saw a vigorous but unsuccessful campaign for Irish home rule, followed by 
+the eclipse of moderate nationalism by militant separatism. In 1922, following the Anglo-Irish War, twenty-six 
+counties of Ireland seceded from the United Kingdom as the Irish Free State. The remaining six, in the 
+north-east, remained within the Union as Northern Ireland. Secession for the rest of Ireland led directly 
+to the Civil War, as militant nationalists split into two factions and turned against one another.[PARAGRAPH:2]The 
+Anglo-Irish Treaty was narrowly ratified by the Dáil in December 1921 but was rejected by a large minority, 
+resulting in the Irish Civil War which lasted until 1923. In 1922, in the middle of this civil war, the 
+Irish Free State came into being. For its first years the new state was governed by the victors of the 
+Civil War. However in the 1930s Fianna Fáil, the party of the opponents of the treaty, were elected into 
+government. The party introduced a new constitution in 1937 which renamed the state to simply "Éire or 
+in the English language, Ireland" (preface to the Constitution).[PARAGRAPH:2]The state was neutral during 
+World War II but offered some assistance to the Allies. In 1949 the state declared itself to be a republic 
+and that henceforth it should be described as the Republic of Ireland. The state was plagued by poverty 
+and emigration until the mid-1970's. The 1990's saw the beginning of unprecedented economic success, 
+in a phenomenon known as the "Celtic Tiger". By the early 2000's, it had become one of the richest countries 
+(in terms of GDP per capita) in the European Union, moving from being a net recipient to a net contributor 
+and from a population with net emigration to one with net immigration.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_IRELAND_ADJECTIVE</Tag>
+		<English>Irish</English>
+		<French>
+			<Text>Irish</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Irish</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Irish</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Irish</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_CONN</Tag>
+		<English>Conn Cetchathach</English>
+		<French>
+			<Text>Conn Cetchathach</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Conn Cetchathach</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Conn Cetchathach</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Conn Cetchathach</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_CONN_PEDIA</Tag>
+		<English>[H1]Conn Cetchathach[\H1][BOLD]High King of Ireland[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.110 
+- 157 AD[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Conn Cetchathach (or Cead-Cathach) 
+was the son of Fedhlimidh Rachtmar, the High King of Ireland and Ughna, daughter of the King of Lochlin 
+(Denmark). Conn is also known as Conn of the 100 Battles or the 100 Treaties. His grandfather was Tuathal 
+Teachtmar, the Irish High King who made Connacht the Supreme province of the five in Ireland at the time. 
+[PARAGRAPH:1]Conn's name is unusual and according to legend, portions were given late in life or after 
+his death. Conn Cead-Cathach means Conn (speed, virtue, champion), Cead (one hundred) and Cathach (of 
+Battles). Conn also had an older meaning that is referred to as dog, or a warrior with the fighting qualities 
+of a dog.[PARAGRAPH:1]Little is known of Conn's youth and he did not succeed his father in rule. Between 
+Fedhlimidh and Conn ruled Cathair Mor. Cathair was defeated in a great battle by Conn in Meath. He then 
+took the reigns as Ard-Righ or High King. During Conn's lifetime he certainly lived up to his name, fighting 
+numerous battles most of which were against Mogh Nuadat of Munster.[PARAGRAPH:1]The Ithians and Eberians 
+alternately ruled the province of Munster in an arrangement that worked peacefully until the Earnaan 
+arrived. The Earnaan had been forced out of Ulster and applied for land in Munster to King Duach who 
+gracefully assented. But the Earnaan did not repay their host's kindness and instead, took control of 
+the province. The Eberians revolted and attempted to regain their territory. Conn, the High King, sent 
+aid to the Earnaan but even with his help they lost the battle.[PARAGRAPH:1]</English>
+		<French>[H1]Conn Cetchathach[\H1][BOLD]High King of Ireland[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.110 
+- 157 AD[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Conn Cetchathach (or Cead-Cathach) 
+was the son of Fedhlimidh Rachtmar, the High King of Ireland and Ughna, daughter of the King of Lochlin 
+(Denmark). Conn is also known as Conn of the 100 Battles or the 100 Treaties. His grandfather was Tuathal 
+Teachtmar, the Irish High King who made Connacht the Supreme province of the five in Ireland at the time. 
+[PARAGRAPH:1]Conn's name is unusual and according to legend, portions were given late in life or after 
+his death. Conn Cead-Cathach means Conn (speed, virtue, champion), Cead (one hundred) and Cathach (of 
+Battles). Conn also had an older meaning that is referred to as dog, or a warrior with the fighting qualities 
+of a dog.[PARAGRAPH:1]Little is known of Conn's youth and he did not succeed his father in rule. Between 
+Fedhlimidh and Conn ruled Cathair Mor. Cathair was defeated in a great battle by Conn in Meath. He then 
+took the reigns as Ard-Righ or High King. During Conn's lifetime he certainly lived up to his name, fighting 
+numerous battles most of which were against Mogh Nuadat of Munster.[PARAGRAPH:1]The Ithians and Eberians 
+alternately ruled the province of Munster in an arrangement that worked peacefully until the Earnaan 
+arrived. The Earnaan had been forced out of Ulster and applied for land in Munster to King Duach who 
+gracefully assented. But the Earnaan did not repay their host's kindness and instead, took control of 
+the province. The Eberians revolted and attempted to regain their territory. Conn, the High King, sent 
+aid to the Earnaan but even with his help they lost the battle.[PARAGRAPH:1]</French>
+		<German>[H1]Conn Cetchathach[\H1][BOLD]High King of Ireland[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.110 
+- 157 AD[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Conn Cetchathach (or Cead-Cathach) 
+was the son of Fedhlimidh Rachtmar, the High King of Ireland and Ughna, daughter of the King of Lochlin 
+(Denmark). Conn is also known as Conn of the 100 Battles or the 100 Treaties. His grandfather was Tuathal 
+Teachtmar, the Irish High King who made Connacht the Supreme province of the five in Ireland at the time. 
+[PARAGRAPH:1]Conn's name is unusual and according to legend, portions were given late in life or after 
+his death. Conn Cead-Cathach means Conn (speed, virtue, champion), Cead (one hundred) and Cathach (of 
+Battles). Conn also had an older meaning that is referred to as dog, or a warrior with the fighting qualities 
+of a dog.[PARAGRAPH:1]Little is known of Conn's youth and he did not succeed his father in rule. Between 
+Fedhlimidh and Conn ruled Cathair Mor. Cathair was defeated in a great battle by Conn in Meath. He then 
+took the reigns as Ard-Righ or High King. During Conn's lifetime he certainly lived up to his name, fighting 
+numerous battles most of which were against Mogh Nuadat of Munster.[PARAGRAPH:1]The Ithians and Eberians 
+alternately ruled the province of Munster in an arrangement that worked peacefully until the Earnaan 
+arrived. The Earnaan had been forced out of Ulster and applied for land in Munster to King Duach who 
+gracefully assented. But the Earnaan did not repay their host's kindness and instead, took control of 
+the province. The Eberians revolted and attempted to regain their territory. Conn, the High King, sent 
+aid to the Earnaan but even with his help they lost the battle.[PARAGRAPH:1]</German>
+		<Italian>[H1]Conn Cetchathach[\H1][BOLD]High King of Ireland[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.110 
+- 157 AD[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Conn Cetchathach (or Cead-Cathach) 
+was the son of Fedhlimidh Rachtmar, the High King of Ireland and Ughna, daughter of the King of Lochlin 
+(Denmark). Conn is also known as Conn of the 100 Battles or the 100 Treaties. His grandfather was Tuathal 
+Teachtmar, the Irish High King who made Connacht the Supreme province of the five in Ireland at the time. 
+[PARAGRAPH:1]Conn's name is unusual and according to legend, portions were given late in life or after 
+his death. Conn Cead-Cathach means Conn (speed, virtue, champion), Cead (one hundred) and Cathach (of 
+Battles). Conn also had an older meaning that is referred to as dog, or a warrior with the fighting qualities 
+of a dog.[PARAGRAPH:1]Little is known of Conn's youth and he did not succeed his father in rule. Between 
+Fedhlimidh and Conn ruled Cathair Mor. Cathair was defeated in a great battle by Conn in Meath. He then 
+took the reigns as Ard-Righ or High King. During Conn's lifetime he certainly lived up to his name, fighting 
+numerous battles most of which were against Mogh Nuadat of Munster.[PARAGRAPH:1]The Ithians and Eberians 
+alternately ruled the province of Munster in an arrangement that worked peacefully until the Earnaan 
+arrived. The Earnaan had been forced out of Ulster and applied for land in Munster to King Duach who 
+gracefully assented. But the Earnaan did not repay their host's kindness and instead, took control of 
+the province. The Eberians revolted and attempted to regain their territory. Conn, the High King, sent 
+aid to the Earnaan but even with his help they lost the battle.[PARAGRAPH:1]</Italian>
+		<Spanish>[H1]Conn Cetchathach[\H1][BOLD]High King of Ireland[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.110 
+- 157 AD[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Conn Cetchathach (or Cead-Cathach) 
+was the son of Fedhlimidh Rachtmar, the High King of Ireland and Ughna, daughter of the King of Lochlin 
+(Denmark). Conn is also known as Conn of the 100 Battles or the 100 Treaties. His grandfather was Tuathal 
+Teachtmar, the Irish High King who made Connacht the Supreme province of the five in Ireland at the time. 
+[PARAGRAPH:1]Conn's name is unusual and according to legend, portions were given late in life or after 
+his death. Conn Cead-Cathach means Conn (speed, virtue, champion), Cead (one hundred) and Cathach (of 
+Battles). Conn also had an older meaning that is referred to as dog, or a warrior with the fighting qualities 
+of a dog.[PARAGRAPH:1]Little is known of Conn's youth and he did not succeed his father in rule. Between 
+Fedhlimidh and Conn ruled Cathair Mor. Cathair was defeated in a great battle by Conn in Meath. He then 
+took the reigns as Ard-Righ or High King. During Conn's lifetime he certainly lived up to his name, fighting 
+numerous battles most of which were against Mogh Nuadat of Munster.[PARAGRAPH:1]The Ithians and Eberians 
+alternately ruled the province of Munster in an arrangement that worked peacefully until the Earnaan 
+arrived. The Earnaan had been forced out of Ulster and applied for land in Munster to King Duach who 
+gracefully assented. But the Earnaan did not repay their host's kindness and instead, took control of 
+the province. The Eberians revolted and attempted to regain their territory. Conn, the High King, sent 
+aid to the Earnaan but even with his help they lost the battle.[PARAGRAPH:1]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_COLLINS</Tag>
+		<English>Collins</English>
+		<French>
+			<Text>Collins</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Collins</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Collins</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Collins</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_COLLINS_PEDIA</Tag>
+		<English>[H1]Michael Collins[\H1][NEWLINE][BOLD]Irish revolutionary leader[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1890 - 1922 AD[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Michael John ("Mick") 
+Collins was an Irish revolutionary leader, Minister for Finance in the First DÃƒÂ¡il of 1919, Director 
+of Intelligence for the IRA, and member of the Irish delegation during the Anglo-Irish Treaty negotiations, 
+both as Chairman of the Provisional Government and Commander-in-Chief of the National Army. In April 
+1922, a group of 200 anti-Treaty IRA men occupied the Four Courts in Dublin in defiance of the Provisional 
+government. Collins, who wanted to avoid civil war at all costs, did not attack them until June 1922, 
+needing to know the result of the general election which proved favourable to his party. British pressure 
+also forced his hand. On 22 June 1922, Sir Henry Wilson, a retired British Army field marshal now serving 
+as Military Advisor to the Craig Administration, was shot dead by two IRA men in Belgravia, London. At 
+the time, it was presumed that the anti-Treaty faction of the IRA were responsible and Winston Churchill 
+told Collins that unless he moved against the Four Courts garrison, he (Churchill) would use British 
+troops to do so.[PARAGRAPH:1]In fact, it has since been proved that Collins himself ordered the killing 
+of Wilson in reprisal for failing to prevent the attacks on Roman Catholics in Northern Ireland. Joe 
+Dolan - a member of Collins' "Squad" or assassination unit in the War of Independence and in 1922 a captain 
+in the National Army - revealed this in the 1950s, along with the revelation that Collins had ordered 
+him to try to rescue the two gunmen before they were executed. In any event, this forced Collins to take 
+action against the Four Courts men and the final provocation came when they kidnapped J.J. O'Connell, 
+a provisional government general. After a final attempt to persuade the men to leave, Collins borrowed 
+two 18 pounder artillery pieces from the British and bombarded the Four Courts until its garrison surrendered.[PARAGRAPH:1]He 
+was shot and killed in August 1922, during the Irish Civil War. Although most Irish political parties 
+recognise his contribution to the foundation of the modern Irish state, members and supporters of the 
+Fine Gael political party hold his memory in particular esteem, regarding him as their movement's founding 
+father (even though his link to them was through their precursor Cumann na nGaedhael, a name adopted 
+in 1923 by the pro-Treaty wing of Sinn Fein).</English>
+		<French>[H1]Michael Collins[\H1][BOLD]Irish revolutionary leader[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 
+1890 - 1922 AD[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Michael John ("Mick") Collins 
+was an Irish revolutionary leader, Minister for Finance in the First DÃƒÂ¡il of 1919, Director of Intelligence 
+for the IRA, and member of the Irish delegation during the Anglo-Irish Treaty negotiations, both as Chairman 
+of the Provisional Government and Commander-in-Chief of the National Army. In April 1922, a group of 
+200 anti-Treaty IRA men occupied the Four Courts in Dublin in defiance of the Provisional government. 
+Collins, who wanted to avoid civil war at all costs, did not attack them until June 1922, needing to 
+know the result of the general election which proved favourable to his party. British pressure also forced 
+his hand. On 22 June 1922, Sir Henry Wilson, a retired British Army field marshal now serving as Military 
+Advisor to the Craig Administration, was shot dead by two IRA men in Belgravia, London. At the time, 
+it was presumed that the anti-Treaty faction of the IRA were responsible and Winston Churchill told Collins 
+that unless he moved against the Four Courts garrison, he (Churchill) would use British troops to do 
+so.[PARAGRAPH:1]In fact, it has since been proved that Collins himself ordered the killing of Wilson 
+in reprisal for failing to prevent the attacks on Roman Catholics in Northern Ireland. Joe Dolan - a 
+member of Collins' "Squad" or assassination unit in the War of Independence and in 1922 a captain in 
+the National Army - revealed this in the 1950s, along with the revelation that Collins had ordered him 
+to try to rescue the two gunmen before they were executed. In any event, this forced Collins to take 
+action against the Four Courts men and the final provocation came when they kidnapped J.J. O'Connell, 
+a provisional government general. After a final attempt to persuade the men to leave, Collins borrowed 
+two 18 pounder artillery pieces from the British and bombarded the Four Courts until its garrison surrendered.[PARAGRAPH:1]He 
+was shot and killed in August 1922, during the Irish Civil War. Although most Irish political parties 
+recognise his contribution to the foundation of the modern Irish state, members and supporters of the 
+Fine Gael political party hold his memory in particular esteem, regarding him as their movement's founding 
+father (even though his link to them was through their precursor Cumann na nGaedhael, a name adopted 
+in 1923 by the pro-Treaty wing of Sinn Fein).</French>
+		<German>[H1]Michael Collins[\H1][NEWLINE][BOLD]Irish revolutionary leader[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1890 - 1922 AD[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Michael John ("Mick") 
+Collins was an Irish revolutionary leader, Minister for Finance in the First DÃƒÂ¡il of 1919, Director 
+of Intelligence for the IRA, and member of the Irish delegation during the Anglo-Irish Treaty negotiations, 
+both as Chairman of the Provisional Government and Commander-in-Chief of the National Army. In April 
+1922, a group of 200 anti-Treaty IRA men occupied the Four Courts in Dublin in defiance of the Provisional 
+government. Collins, who wanted to avoid civil war at all costs, did not attack them until June 1922, 
+needing to know the result of the general election which proved favourable to his party. British pressure 
+also forced his hand. On 22 June 1922, Sir Henry Wilson, a retired British Army field marshal now serving 
+as Military Advisor to the Craig Administration, was shot dead by two IRA men in Belgravia, London. At 
+the time, it was presumed that the anti-Treaty faction of the IRA were responsible and Winston Churchill 
+told Collins that unless he moved against the Four Courts garrison, he (Churchill) would use British 
+troops to do so.[PARAGRAPH:1]In fact, it has since been proved that Collins himself ordered the killing 
+of Wilson in reprisal for failing to prevent the attacks on Roman Catholics in Northern Ireland. Joe 
+Dolan - a member of Collins' "Squad" or assassination unit in the War of Independence and in 1922 a captain 
+in the National Army - revealed this in the 1950s, along with the revelation that Collins had ordered 
+him to try to rescue the two gunmen before they were executed. In any event, this forced Collins to take 
+action against the Four Courts men and the final provocation came when they kidnapped J.J. O'Connell, 
+a provisional government general. After a final attempt to persuade the men to leave, Collins borrowed 
+two 18 pounder artillery pieces from the British and bombarded the Four Courts until its garrison surrendered.[PARAGRAPH:1]He 
+was shot and killed in August 1922, during the Irish Civil War. Although most Irish political parties 
+recognise his contribution to the foundation of the modern Irish state, members and supporters of the 
+Fine Gael political party hold his memory in particular esteem, regarding him as their movement's founding 
+father (even though his link to them was through their precursor Cumann na nGaedhael, a name adopted 
+in 1923 by the pro-Treaty wing of Sinn Fein).</German>
+		<Italian>[H1]Michael Collins[\H1][NEWLINE][BOLD]Irish revolutionary leader[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1890 - 1922 AD[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Michael John ("Mick") 
+Collins was an Irish revolutionary leader, Minister for Finance in the First DÃƒÂ¡il of 1919, Director 
+of Intelligence for the IRA, and member of the Irish delegation during the Anglo-Irish Treaty negotiations, 
+both as Chairman of the Provisional Government and Commander-in-Chief of the National Army. In April 
+1922, a group of 200 anti-Treaty IRA men occupied the Four Courts in Dublin in defiance of the Provisional 
+government. Collins, who wanted to avoid civil war at all costs, did not attack them until June 1922, 
+needing to know the result of the general election which proved favourable to his party. British pressure 
+also forced his hand. On 22 June 1922, Sir Henry Wilson, a retired British Army field marshal now serving 
+as Military Advisor to the Craig Administration, was shot dead by two IRA men in Belgravia, London. At 
+the time, it was presumed that the anti-Treaty faction of the IRA were responsible and Winston Churchill 
+told Collins that unless he moved against the Four Courts garrison, he (Churchill) would use British 
+troops to do so.[PARAGRAPH:1]In fact, it has since been proved that Collins himself ordered the killing 
+of Wilson in reprisal for failing to prevent the attacks on Roman Catholics in Northern Ireland. Joe 
+Dolan - a member of Collins' "Squad" or assassination unit in the War of Independence and in 1922 a captain 
+in the National Army - revealed this in the 1950s, along with the revelation that Collins had ordered 
+him to try to rescue the two gunmen before they were executed. In any event, this forced Collins to take 
+action against the Four Courts men and the final provocation came when they kidnapped J.J. O'Connell, 
+a provisional government general. After a final attempt to persuade the men to leave, Collins borrowed 
+two 18 pounder artillery pieces from the British and bombarded the Four Courts until its garrison surrendered.[PARAGRAPH:1]He 
+was shot and killed in August 1922, during the Irish Civil War. Although most Irish political parties 
+recognise his contribution to the foundation of the modern Irish state, members and supporters of the 
+Fine Gael political party hold his memory in particular esteem, regarding him as their movement's founding 
+father (even though his link to them was through their precursor Cumann na nGaedhael, a name adopted 
+in 1923 by the pro-Treaty wing of Sinn Fein).</Italian>
+		<Spanish>[H1]Michael Collins[\H1][NEWLINE][BOLD]Irish revolutionary leader[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1890 - 1922 AD[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Michael John ("Mick") 
+Collins was an Irish revolutionary leader, Minister for Finance in the First DÃƒÂ¡il of 1919, Director 
+of Intelligence for the IRA, and member of the Irish delegation during the Anglo-Irish Treaty negotiations, 
+both as Chairman of the Provisional Government and Commander-in-Chief of the National Army. In April 
+1922, a group of 200 anti-Treaty IRA men occupied the Four Courts in Dublin in defiance of the Provisional 
+government. Collins, who wanted to avoid civil war at all costs, did not attack them until June 1922, 
+needing to know the result of the general election which proved favourable to his party. British pressure 
+also forced his hand. On 22 June 1922, Sir Henry Wilson, a retired British Army field marshal now serving 
+as Military Advisor to the Craig Administration, was shot dead by two IRA men in Belgravia, London. At 
+the time, it was presumed that the anti-Treaty faction of the IRA were responsible and Winston Churchill 
+told Collins that unless he moved against the Four Courts garrison, he (Churchill) would use British 
+troops to do so.[PARAGRAPH:1]In fact, it has since been proved that Collins himself ordered the killing 
+of Wilson in reprisal for failing to prevent the attacks on Roman Catholics in Northern Ireland. Joe 
+Dolan - a member of Collins' "Squad" or assassination unit in the War of Independence and in 1922 a captain 
+in the National Army - revealed this in the 1950s, along with the revelation that Collins had ordered 
+him to try to rescue the two gunmen before they were executed. In any event, this forced Collins to take 
+action against the Four Courts men and the final provocation came when they kidnapped J.J. O'Connell, 
+a provisional government general. After a final attempt to persuade the men to leave, Collins borrowed 
+two 18 pounder artillery pieces from the British and bombarded the Four Courts until its garrison surrendered.[PARAGRAPH:1]He 
+was shot and killed in August 1922, during the Irish Civil War. Although most Irish political parties 
+recognise his contribution to the foundation of the modern Irish state, members and supporters of the 
+Fine Gael political party hold his memory in particular esteem, regarding him as their movement's founding 
+father (even though his link to them was through their precursor Cumann na nGaedhael, a name adopted 
+in 1923 by the pro-Treaty wing of Sinn Fein).</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_COLLINS_1</Tag>
+		<English>Greetings, [CT_NAME]! I am [OUR_NAME] of the [OUR_CIV_ADJ]. We will not become sitting targets, but become flying columns if you threaten us.</English>
+		<French>Greetings, [CT_NAME]! I am [OUR_NAME] of the [OUR_CIV_ADJ]. We will not become sitting targets, but become flying columns if you threaten us.</French>
+		<German>Greetings, [CT_NAME]! I am [OUR_NAME] of the [OUR_CIV_ADJ]. We will not become sitting targets, but become flying columns if you threaten us.</German>
+		<Italian>Greetings, [CT_NAME]! I am [OUR_NAME] of the [OUR_CIV_ADJ]. We will not become sitting targets, but become flying columns if you threaten us.</Italian>
+		<Spanish>Greetings, [CT_NAME]! I am [OUR_NAME] of the [OUR_CIV_ADJ]. We will not become sitting targets, but become flying columns if you threaten us.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DUBLIN</Tag>
+		<English>Dublin</English>
+		<French>
+			<Text>Dublin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Dublin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Dublin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Dublin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CORCAIGH</Tag>
+		<English>Corcaigh</English>
+		<French>
+			<Text>Corcaigh</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Corcaigh</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Corcaigh</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Corcaigh</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BELFAST</Tag>
+		<English>Belfast</English>
+		<French>
+			<Text>Belfast</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Belfast</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Belfast</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Belfast</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_AN_GHAILLIMH</Tag>
+		<English>An Ghaillimh</English>
+		<French>
+			<Text>An Ghaillimh</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>An Ghaillimh</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>An Ghaillimh</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>An Ghaillimh</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TALLAGHT</Tag>
+		<English>Tallaght</English>
+		<French>
+			<Text>Tallaght</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tallaght</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tallaght</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tallaght</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LUIMNEACH</Tag>
+		<English>Luimneach</English>
+		<French>
+			<Text>Luimneach</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Luimneach</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Luimneach</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Luimneach</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DERRY</Tag>
+		<English>Derry</English>
+		<French>
+			<Text>Derry</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Derry</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Derry</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Derry</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LISBURN</Tag>
+		<English>Lisburn</English>
+		<French>
+			<Text>Lisburn</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Lisburn</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Lisburn</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Lisburn</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BLANCHARDSTOWN</Tag>
+		<English>Blanchardstown</English>
+		<French>
+			<Text>Blanchardstown</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Blanchardstown</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Blanchardstown</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Blanchardstown</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PORT_LAIRGE</Tag>
+		<English>Port Lairge</English>
+		<French>
+			<Text>Port Lairge</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Port Lairge</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Port Lairge</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Port Lairge</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CLONDALKIN</Tag>
+		<English>Clondalkin</English>
+		<French>
+			<Text>Clondalkin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Clondalkin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Clondalkin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Clondalkin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LUCAN</Tag>
+		<English>Lucan</English>
+		<French>
+			<Text>Lucan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Lucan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Lucan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Lucan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BRI_CHUALANN</Tag>
+		<English>Bri Chualann</English>
+		<French>
+			<Text>Bri Chualann</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Bri Chualann</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Bri Chualann</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Bri Chualann</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DROICHEAD_ATHA</Tag>
+		<English>Droichead Atha</English>
+		<French>
+			<Text>Droichead Atha</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Droichead Atha</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Droichead Atha</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Droichead Atha</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NEWTONABBEY</Tag>
+		<English>Newtonabbey</English>
+		<French>
+			<Text>Newtonabbey</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Newtonabbey</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Newtonabbey</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Newtonabbey</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DUN_DEALGAN</Tag>
+		<English>Dun Dealgan</English>
+		<French>
+			<Text>Dun Dealgan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Dun Dealgan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Dun Dealgan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Dun Dealgan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CILL_CHOINNIGH</Tag>
+		<English>Cill Choinnigh</English>
+		<French>
+			<Text>Cill Choinnigh</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Cill Choinnigh</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Cill Choinnigh</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Cill Choinnigh</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TRAIGHLI</Tag>
+		<English>Traighli</English>
+		<French>
+			<Text>Traighli</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Traighli</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Traighli</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Traighli</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BANGOR</Tag>
+		<English>Bangor</English>
+		<French>
+			<Text>Bangor</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Bangor</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Bangor</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Bangor</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LOCH_GARMAN</Tag>
+		<English>Loch Garman</English>
+		<French>
+			<Text>Loch Garman</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Loch Garman</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Loch Garman</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Loch Garman</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SLIGEACH</Tag>
+		<English>Sligeach</English>
+		<French>
+			<Text>Sligeach</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sligeach</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sligeach</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sligeach</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_AN_UAIMH</Tag>
+		<English>An Uaimh</English>
+		<French>
+			<Text>An Uaimh</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>An Uaimh</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>An Uaimh</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>An Uaimh</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CRAIGAVON</Tag>
+		<English>Craigavon</English>
+		<French>
+			<Text>Craigavon</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Craigavon</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Craigavon</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Craigavon</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_INIS</Tag>
+		<English>Inis</English>
+		<French>
+			<Text>Inis</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Inis</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Inis</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Inis</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CASTLEREAGH</Tag>
+		<English>Castlereagh</English>
+		<French>
+			<Text>Castlereagh</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Castlereagh</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Castlereagh</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Castlereagh</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MULLINGAR</Tag>
+		<English>Mullingar</English>
+		<French>
+			<Text>Mullingar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mullingar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Mullingar</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mullingar</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LETTERKENNY</Tag>
+		<English>Letterkenny</English>
+		<French>
+			<Text>Letterkenny</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Letterkenny</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Letterkenny</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Letterkenny</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DROICHEAD_NUA</Tag>
+		<English>Droichead Nua</English>
+		<French>
+			<Text>Droichead Nua</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Droichead Nua</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Droichead Nua</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Droichead Nua</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CLUAIN_MEALA</Tag>
+		<English>Cluain Meala</English>
+		<French>
+			<Text>Cluain Meala</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Cluain Meala</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Cluain Meala</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Cluain Meala</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CEATHARLACH</Tag>
+		<English>Ceatharlach</English>
+		<French>
+			<Text>Ceatharlach</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ceatharlach</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ceatharlach</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ceatharlach</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ATH_LUGAIN</Tag>
+		<English>Ath Luain</English>
+		<French>
+			<Text>Ath Luain</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ath Luain</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ath Luain</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ath Luain</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BALBRIGGAN</Tag>
+		<English>Balbriggan</English>
+		<French>
+			<Text>Balbriggan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Balbriggan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Balbriggan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Balbriggan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GREYSTONES</Tag>
+		<English>Greystones</English>
+		<French>
+			<Text>Greystones</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Greystones</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Greystones</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Greystones</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NAAS</Tag>
+		<English>Naas</English>
+		<French>
+			<Text>Naas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Naas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Naas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Naas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_AN_TULACH_MHOR</Tag>
+		<English>An Tulach Mhor</English>
+		<French>
+			<Text>An Tulach Mhor</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>An Tulach Mhor</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>An Tulach Mhor</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>An Tulach Mhor</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MALAHIDE</Tag>
+		<English>Malahide</English>
+		<French>
+			<Text>Malahide</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Malahide</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Malahide</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Malahide</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PORTLAOIGHISE</Tag>
+		<English>Portlaoighise</English>
+		<French>
+			<Text>Portlaoighise</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Portlaoighise</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Portlaoighise</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Portlaoighise</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DUN_LAOGHAIRE</Tag>
+		<English>Dun Laoghaire</English>
+		<French>
+			<Text>Dun Laoghaire</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Dun Laoghaire</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Dun Laoghaire</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Dun Laoghaire</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BALLYCUMMIN</Tag>
+		<English>Ballycummin</English>
+		<French>
+			<Text>Ballycummin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ballycummin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ballycummin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ballycummin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_STILLORGAN</Tag>
+		<English>Stillorgan</English>
+		<French>
+			<Text>Stillorgan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Stillorgan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Stillorgan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Stillorgan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TEMPLEOGUE</Tag>
+		<English>Templeogue</English>
+		<French>
+			<Text>Templeogue</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Templeogue</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Templeogue</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Templeogue</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NEWRY</Tag>
+		<English>Newry</English>
+		<French>
+			<Text>Newry</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Newry</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Newry</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Newry</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BALLYMENA</Tag>
+		<English>Ballymena</English>
+		<French>
+			<Text>Ballymena</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ballymena</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ballymena</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ballymena</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_COLERAINE</Tag>
+		<English>Coleraine</English>
+		<French>
+			<Text>Coleraine</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Coleraine</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Coleraine</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Coleraine</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PORTADOWN</Tag>
+		<English>Portadown</English>
+		<French>
+			<Text>Portadown</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Portadown</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Portadown</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Portadown</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CARRICKFERGUS</Tag>
+		<English>Carrickfergus</English>
+		<French>
+			<Text>Carrickfergus</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Carrickfergus</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Carrickfergus</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Carrickfergus</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_OMAGH</Tag>
+		<English>Omagh</English>
+		<French>
+			<Text>Omagh</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Omagh</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Omagh</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Omagh</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ANTRIM</Tag>
+		<English>Antrim</English>
+		<French>
+			<Text>Antrim</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Antrim</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Antrim</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Antrim</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NEWTOWNARDS</Tag>
+		<English>Newtownards</English>
+		<French>
+			<Text>Newtownards</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Newtownards</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Newtownards</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Newtownards</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LARNE</Tag>
+		<English>Larne</English>
+		<French>
+			<Text>Larne</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Larne</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Larne</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Larne</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LURGAN</Tag>
+		<English>Lurgan</English>
+		<French>
+			<Text>Lurgan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Lurgan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Lurgan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Lurgan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+</Civ4GameText>

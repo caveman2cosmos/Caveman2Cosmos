@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- re-Modified by Strategyonly -->
+<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KIOWA_DESC</Tag>
+		<English>Kiowa Empire</English>
+		<French>Kiowa Empire</French>
+		<German>Kiowa Empire</German>
+		<Italian>Kiowa Empire</Italian>
+		<Spanish>Kiowa Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KIOWA_SHORT_DESC</Tag>
+		<English>Kiowa</English>
+		<French>Kiowa</French>
+		<German>Kiowa</German>
+		<Italian>Kiowa</Italian>
+		<Spanish>Kiowa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KIOWA_ADJECTIVE</Tag>
+		<English>Kiowa</English>
+		<French>Kiowa</French>
+		<German>Kiowa</German>
+		<Italian>Kiowa</Italian>
+		<Spanish>Kiowa</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KIOWA_PEDIA</Tag>
+		<English>[TAB]The Kiowas are a tribe of Native Americans. They migrated from western Montana southward into the Rocky Mountains in Colorado in the 17th and 18th centuries, and finally into the Southern Plains by the early 19th century. In 1867, the Kiowa moved to a reservation in southwestern Oklahoma. Today they are federally recognized as Kiowa Tribe of Oklahoma with headquarters in Carnegie, Oklahoma. The Kiowa language is still spoken today and is part of the Tanoan language family. As of 2011, there are 12,000 members. Typical of all plains Indian peoples the Kiowa were a warrior people that fought frequently with enemies both neighboring and far beyond their territory. The Kiowa were notable even among plains Indians for their long distance raids, including raids far south into Mexico and north onto the northern plains. Almost all warfare took place while mounted on horses after the introduction of horses into Kiowa society</English>
+		<French>[TAB]The Kiowas are a tribe of Native Americans. They migrated from western Montana southward into the Rocky Mountains in Colorado in the 17th and 18th centuries, and finally into the Southern Plains by the early 19th century. In 1867, the Kiowa moved to a reservation in southwestern Oklahoma. Today they are federally recognized as Kiowa Tribe of Oklahoma with headquarters in Carnegie, Oklahoma. The Kiowa language is still spoken today and is part of the Tanoan language family. As of 2011, there are 12,000 members. Typical of all plains Indian peoples the Kiowa were a warrior people that fought frequently with enemies both neighboring and far beyond their territory. The Kiowa were notable even among plains Indians for their long distance raids, including raids far south into Mexico and north onto the northern plains. Almost all warfare took place while mounted on horses after the introduction of horses into Kiowa society</French>
+		<German>[TAB]The Kiowas are a tribe of Native Americans. They migrated from western Montana southward into the Rocky Mountains in Colorado in the 17th and 18th centuries, and finally into the Southern Plains by the early 19th century. In 1867, the Kiowa moved to a reservation in southwestern Oklahoma. Today they are federally recognized as Kiowa Tribe of Oklahoma with headquarters in Carnegie, Oklahoma. The Kiowa language is still spoken today and is part of the Tanoan language family. As of 2011, there are 12,000 members. Typical of all plains Indian peoples the Kiowa were a warrior people that fought frequently with enemies both neighboring and far beyond their territory. The Kiowa were notable even among plains Indians for their long distance raids, including raids far south into Mexico and north onto the northern plains. Almost all warfare took place while mounted on horses after the introduction of horses into Kiowa society</German>
+		<Italian>[TAB]The Kiowas are a tribe of Native Americans. They migrated from western Montana southward into the Rocky Mountains in Colorado in the 17th and 18th centuries, and finally into the Southern Plains by the early 19th century. In 1867, the Kiowa moved to a reservation in southwestern Oklahoma. Today they are federally recognized as Kiowa Tribe of Oklahoma with headquarters in Carnegie, Oklahoma. The Kiowa language is still spoken today and is part of the Tanoan language family. As of 2011, there are 12,000 members. Typical of all plains Indian peoples the Kiowa were a warrior people that fought frequently with enemies both neighboring and far beyond their territory. The Kiowa were notable even among plains Indians for their long distance raids, including raids far south into Mexico and north onto the northern plains. Almost all warfare took place while mounted on horses after the introduction of horses into Kiowa society</Italian>
+		<Spanish>[TAB]The Kiowas are a tribe of Native Americans. They migrated from western Montana southward into the Rocky Mountains in Colorado in the 17th and 18th centuries, and finally into the Southern Plains by the early 19th century. In 1867, the Kiowa moved to a reservation in southwestern Oklahoma. Today they are federally recognized as Kiowa Tribe of Oklahoma with headquarters in Carnegie, Oklahoma. The Kiowa language is still spoken today and is part of the Tanoan language family. As of 2011, there are 12,000 members. Typical of all plains Indian peoples the Kiowa were a warrior people that fought frequently with enemies both neighboring and far beyond their territory. The Kiowa were notable even among plains Indians for their long distance raids, including raids far south into Mexico and north onto the northern plains. Almost all warfare took place while mounted on horses after the introduction of horses into Kiowa society</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SATANTA</Tag>
+		<English>Satanta</English>
+		<French>Satanta</French>
+		<German>Satanta</German>
+		<Italian>Satanta</Italian>
+		<Spanish>Satanta</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SATANTA_PEDIA</Tag>
+		<English>[H1]Satanta [\H1][NEWLINE][BOLD]Warchief of Kiowa[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] ca. 1820 - October 11, 1878[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Satanta was a Kiowa war chief. He was a member of the Kiowa tribe, born around 1820, during the height of the power of the Plains Tribes, probably along the Canadian River in the traditional winter camp grounds of his people. He was also known as Settainte (White Bear). One of the best known, and last, of the Kiowa War Chiefs, he developed a reputation as an outstanding warrior and in his twenties was made a sub-chief of his tribe, under Dohäsan, as Chief. He fought with him at the First Battle of Adobe Walls, and earned enduring fame for his use of an army bugle to confuse the troops in battle. Satanta was born the son of Chief Red Tipi and a Spanish captive and spent his youth south of the Arkansas River enjoying the peaceful alliance between the Kiowa and Comanche tribes.</English>
+		<French>[H1]Satanta [\H1][NEWLINE][BOLD]Warchief of Kiowa[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] ca. 1820 - October 11, 1878[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Satanta was a Kiowa war chief. He was a member of the Kiowa tribe, born around 1820, during the height of the power of the Plains Tribes, probably along the Canadian River in the traditional winter camp grounds of his people. He was also known as Settainte (White Bear). One of the best known, and last, of the Kiowa War Chiefs, he developed a reputation as an outstanding warrior and in his twenties was made a sub-chief of his tribe, under Dohäsan, as Chief. He fought with him at the First Battle of Adobe Walls, and earned enduring fame for his use of an army bugle to confuse the troops in battle. Satanta was born the son of Chief Red Tipi and a Spanish captive and spent his youth south of the Arkansas River enjoying the peaceful alliance between the Kiowa and Comanche tribes.</French>
+		<German>[H1]Satanta [\H1][NEWLINE][BOLD]Warchief of Kiowa[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] ca. 1820 - October 11, 1878[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Satanta was a Kiowa war chief. He was a member of the Kiowa tribe, born around 1820, during the height of the power of the Plains Tribes, probably along the Canadian River in the traditional winter camp grounds of his people. He was also known as Settainte (White Bear). One of the best known, and last, of the Kiowa War Chiefs, he developed a reputation as an outstanding warrior and in his twenties was made a sub-chief of his tribe, under Dohäsan, as Chief. He fought with him at the First Battle of Adobe Walls, and earned enduring fame for his use of an army bugle to confuse the troops in battle. Satanta was born the son of Chief Red Tipi and a Spanish captive and spent his youth south of the Arkansas River enjoying the peaceful alliance between the Kiowa and Comanche tribes.</German>
+		<Italian>[H1]Satanta [\H1][NEWLINE][BOLD]Warchief of Kiowa[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] ca. 1820 - October 11, 1878[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Satanta was a Kiowa war chief. He was a member of the Kiowa tribe, born around 1820, during the height of the power of the Plains Tribes, probably along the Canadian River in the traditional winter camp grounds of his people. He was also known as Settainte (White Bear). One of the best known, and last, of the Kiowa War Chiefs, he developed a reputation as an outstanding warrior and in his twenties was made a sub-chief of his tribe, under Dohäsan, as Chief. He fought with him at the First Battle of Adobe Walls, and earned enduring fame for his use of an army bugle to confuse the troops in battle. Satanta was born the son of Chief Red Tipi and a Spanish captive and spent his youth south of the Arkansas River enjoying the peaceful alliance between the Kiowa and Comanche tribes.</Italian>
+		<Spanish>[H1]Satanta [\H1][NEWLINE][BOLD]Warchief of Kiowa[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] ca. 1820 - October 11, 1878[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Satanta was a Kiowa war chief. He was a member of the Kiowa tribe, born around 1820, during the height of the power of the Plains Tribes, probably along the Canadian River in the traditional winter camp grounds of his people. He was also known as Settainte (White Bear). One of the best known, and last, of the Kiowa War Chiefs, he developed a reputation as an outstanding warrior and in his twenties was made a sub-chief of his tribe, under Dohäsan, as Chief. He fought with him at the First Battle of Adobe Walls, and earned enduring fame for his use of an army bugle to confuse the troops in battle. Satanta was born the son of Chief Red Tipi and a Spanish captive and spent his youth south of the Arkansas River enjoying the peaceful alliance between the Kiowa and Comanche tribes.</Spanish>
+	</TEXT>
+</Civ4GameText>

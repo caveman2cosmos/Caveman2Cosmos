@@ -1,0 +1,1448 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- Modified by the Civ Gold Team -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_LITHUANIA_DESC</Tag>
+		<English>Republic of Lithuania</English>
+		<French>Republic of Lithuania</French>
+		<German>Republic of Lithuania</German>
+		<Italian>Republic of Lithuania</Italian>
+		<Spanish>Republic of Lithuania</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_LITHUANIA_SHORT_DESC</Tag>
+		<English>Lithuania</English>
+		<French>Lithuania</French>
+		<German>Lithuania</German>
+		<Italian>Lithuania</Italian>
+		<Spanish>Lithuania</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_LITHUANIA_PEDIA</Tag>
+		<English>[TAB]First mentioned in a medieval German manuscript, the Quedlinburg Chronicle, on February 
+14, 1009, Lithuania entered into the annals of European history. The official coronation of Mindaugas 
+as King of Lithuania, on July 6, 1253, marked its recognition by Christendom, and the birth of the Lithuanian 
+State. Heretofore, warring Dukes made unity difficult, but they were finally able to come together and 
+become unified enough to support his reign. Later during the early period of the Gediminids (Lithuanian 
+Gediminaiciai),(1316-1430, the State grew into the multi-ethnic Grand Duchy of Lithuania, which also 
+incorporated the territories of present day Belarus, Poland, Ukraine, and parts of Russia. Lithuanian 
+rulers officially accepted Christianity in 1385, as a result of Poland offering Jogaila, the crown of 
+Poland. By the 15th century, the Grand Duchy of Lithuania stretched across Eastern Europe, from the Baltic, 
+to the Black Sea.[PARAGRAPH:2]When Grand Duke Jogaila was crowned King of Poland on February 2, 1386, 
+Lithuania and Poland were joined into a personal union, as both countries were ruled by the same Jagiellon 
+dynasty, Lithuanian Jogailaiciai. In 1401, the formal union was dissolved on diputes over legal terminology, 
+and Vytautas, the cousin of Jogaila became the Grand Duke of Lithuania. Circa 1429 Vytautas had been 
+granted a crown from Sigismund, Holy Roman Emperor, but Polish magnates prevented the crown get to Vytautas. 
+He died waiting for the second crown sent by Sigismund, Holy Roman Emperor. In 1447, the personal union 
+was renewed. In 1569, Poland and Lithuania formally were united into a single State called the Polish-Lithuanian 
+Commonwealth. Lithuania retained most of its symbols of Statehood. In 1795, the Commonwealth was dissolved 
+by the third Partition of Poland, which forfeited its lands to Russia, Prussia and Austria, under duress. 
+Over ninety percent of Lithuania was incorporated into the Russian Empire and, the remainder into Prussia.[PARAGRAPH:2]In 
+1940, at the beginning of World War II, the Soviet Union occupied and annexed Lithuania in accordance 
+with the Molotov-Ribbentrop Pact. Fifty years of communist rule ended with the advent of perestroika 
+and glasnost. By the time Lithuania, led by Sajudis, an anti-communist and anti-Soviet independence movement, 
+proclaimed its renewed independence on March 11, 1990. Lithuania was the first Soviet republic to do 
+so, though Soviet forces unsuccessfully tried until August 1991 to suppress this secession, including 
+an attack at Vilnius TV Tower on the night of January 13, 1991 that resulted in the death of 13 Lithuanian 
+civilians. The last Russian troops left Lithuania on August 31, 1993.</English>
+		<French>[TAB]First mentioned in a medieval German manuscript, the Quedlinburg Chronicle, on February 
+14, 1009, Lithuania entered into the annals of European history. The official coronation of Mindaugas 
+as King of Lithuania, on July 6, 1253, marked its recognition by Christendom, and the birth of the Lithuanian 
+State. Heretofore, warring Dukes made unity difficult, but they were finally able to come together and 
+become unified enough to support his reign. Later during the early period of the Gediminids (Lithuanian 
+Gediminaiciai),(1316-1430, the State grew into the multi-ethnic Grand Duchy of Lithuania, which also 
+incorporated the territories of present day Belarus, Poland, Ukraine, and parts of Russia. Lithuanian 
+rulers officially accepted Christianity in 1385, as a result of Poland offering Jogaila, the crown of 
+Poland. By the 15th century, the Grand Duchy of Lithuania stretched across Eastern Europe, from the Baltic, 
+to the Black Sea.[PARAGRAPH:2]When Grand Duke Jogaila was crowned King of Poland on February 2, 1386, 
+Lithuania and Poland were joined into a personal union, as both countries were ruled by the same Jagiellon 
+dynasty, Lithuanian Jogailaiciai. In 1401, the formal union was dissolved on diputes over legal terminology, 
+and Vytautas, the cousin of Jogaila became the Grand Duke of Lithuania. Circa 1429 Vytautas had been 
+granted a crown from Sigismund, Holy Roman Emperor, but Polish magnates prevented the crown get to Vytautas. 
+He died waiting for the second crown sent by Sigismund, Holy Roman Emperor. In 1447, the personal union 
+was renewed. In 1569, Poland and Lithuania formally were united into a single State called the Polish-Lithuanian 
+Commonwealth. Lithuania retained most of its symbols of Statehood. In 1795, the Commonwealth was dissolved 
+by the third Partition of Poland, which forfeited its lands to Russia, Prussia and Austria, under duress. 
+Over ninety percent of Lithuania was incorporated into the Russian Empire and, the remainder into Prussia.[PARAGRAPH:2]In 
+1940, at the beginning of World War II, the Soviet Union occupied and annexed Lithuania in accordance 
+with the Molotov-Ribbentrop Pact. Fifty years of communist rule ended with the advent of perestroika 
+and glasnost. By the time Lithuania, led by Sajudis, an anti-communist and anti-Soviet independence movement, 
+proclaimed its renewed independence on March 11, 1990. Lithuania was the first Soviet republic to do 
+so, though Soviet forces unsuccessfully tried until August 1991 to suppress this secession, including 
+an attack at Vilnius TV Tower on the night of January 13, 1991 that resulted in the death of 13 Lithuanian 
+civilians. The last Russian troops left Lithuania on August 31, 1993.</French>
+		<German>[TAB]First mentioned in a medieval German manuscript, the Quedlinburg Chronicle, on February 
+14, 1009, Lithuania entered into the annals of European history. The official coronation of Mindaugas 
+as King of Lithuania, on July 6, 1253, marked its recognition by Christendom, and the birth of the Lithuanian 
+State. Heretofore, warring Dukes made unity difficult, but they were finally able to come together and 
+become unified enough to support his reign. Later during the early period of the Gediminids (Lithuanian 
+Gediminaiciai),(1316-1430, the State grew into the multi-ethnic Grand Duchy of Lithuania, which also 
+incorporated the territories of present day Belarus, Poland, Ukraine, and parts of Russia. Lithuanian 
+rulers officially accepted Christianity in 1385, as a result of Poland offering Jogaila, the crown of 
+Poland. By the 15th century, the Grand Duchy of Lithuania stretched across Eastern Europe, from the Baltic, 
+to the Black Sea.[PARAGRAPH:2]When Grand Duke Jogaila was crowned King of Poland on February 2, 1386, 
+Lithuania and Poland were joined into a personal union, as both countries were ruled by the same Jagiellon 
+dynasty, Lithuanian Jogailaiciai. In 1401, the formal union was dissolved on diputes over legal terminology, 
+and Vytautas, the cousin of Jogaila became the Grand Duke of Lithuania. Circa 1429 Vytautas had been 
+granted a crown from Sigismund, Holy Roman Emperor, but Polish magnates prevented the crown get to Vytautas. 
+He died waiting for the second crown sent by Sigismund, Holy Roman Emperor. In 1447, the personal union 
+was renewed. In 1569, Poland and Lithuania formally were united into a single State called the Polish-Lithuanian 
+Commonwealth. Lithuania retained most of its symbols of Statehood. In 1795, the Commonwealth was dissolved 
+by the third Partition of Poland, which forfeited its lands to Russia, Prussia and Austria, under duress. 
+Over ninety percent of Lithuania was incorporated into the Russian Empire and, the remainder into Prussia.[PARAGRAPH:2]In 
+1940, at the beginning of World War II, the Soviet Union occupied and annexed Lithuania in accordance 
+with the Molotov-Ribbentrop Pact. Fifty years of communist rule ended with the advent of perestroika 
+and glasnost. By the time Lithuania, led by Sajudis, an anti-communist and anti-Soviet independence movement, 
+proclaimed its renewed independence on March 11, 1990. Lithuania was the first Soviet republic to do 
+so, though Soviet forces unsuccessfully tried until August 1991 to suppress this secession, including 
+an attack at Vilnius TV Tower on the night of January 13, 1991 that resulted in the death of 13 Lithuanian 
+civilians. The last Russian troops left Lithuania on August 31, 1993.</German>
+		<Italian>[TAB]First mentioned in a medieval German manuscript, the Quedlinburg Chronicle, on February 
+14, 1009, Lithuania entered into the annals of European history. The official coronation of Mindaugas 
+as King of Lithuania, on July 6, 1253, marked its recognition by Christendom, and the birth of the Lithuanian 
+State. Heretofore, warring Dukes made unity difficult, but they were finally able to come together and 
+become unified enough to support his reign. Later during the early period of the Gediminids (Lithuanian 
+Gediminaiciai),(1316-1430, the State grew into the multi-ethnic Grand Duchy of Lithuania, which also 
+incorporated the territories of present day Belarus, Poland, Ukraine, and parts of Russia. Lithuanian 
+rulers officially accepted Christianity in 1385, as a result of Poland offering Jogaila, the crown of 
+Poland. By the 15th century, the Grand Duchy of Lithuania stretched across Eastern Europe, from the Baltic, 
+to the Black Sea.[PARAGRAPH:2]When Grand Duke Jogaila was crowned King of Poland on February 2, 1386, 
+Lithuania and Poland were joined into a personal union, as both countries were ruled by the same Jagiellon 
+dynasty, Lithuanian Jogailaiciai. In 1401, the formal union was dissolved on diputes over legal terminology, 
+and Vytautas, the cousin of Jogaila became the Grand Duke of Lithuania. Circa 1429 Vytautas had been 
+granted a crown from Sigismund, Holy Roman Emperor, but Polish magnates prevented the crown get to Vytautas. 
+He died waiting for the second crown sent by Sigismund, Holy Roman Emperor. In 1447, the personal union 
+was renewed. In 1569, Poland and Lithuania formally were united into a single State called the Polish-Lithuanian 
+Commonwealth. Lithuania retained most of its symbols of Statehood. In 1795, the Commonwealth was dissolved 
+by the third Partition of Poland, which forfeited its lands to Russia, Prussia and Austria, under duress. 
+Over ninety percent of Lithuania was incorporated into the Russian Empire and, the remainder into Prussia.[PARAGRAPH:2]In 
+1940, at the beginning of World War II, the Soviet Union occupied and annexed Lithuania in accordance 
+with the Molotov-Ribbentrop Pact. Fifty years of communist rule ended with the advent of perestroika 
+and glasnost. By the time Lithuania, led by Sajudis, an anti-communist and anti-Soviet independence movement, 
+proclaimed its renewed independence on March 11, 1990. Lithuania was the first Soviet republic to do 
+so, though Soviet forces unsuccessfully tried until August 1991 to suppress this secession, including 
+an attack at Vilnius TV Tower on the night of January 13, 1991 that resulted in the death of 13 Lithuanian 
+civilians. The last Russian troops left Lithuania on August 31, 1993.</Italian>
+		<Spanish>[TAB]First mentioned in a medieval German manuscript, the Quedlinburg Chronicle, on February 
+14, 1009, Lithuania entered into the annals of European history. The official coronation of Mindaugas 
+as King of Lithuania, on July 6, 1253, marked its recognition by Christendom, and the birth of the Lithuanian 
+State. Heretofore, warring Dukes made unity difficult, but they were finally able to come together and 
+become unified enough to support his reign. Later during the early period of the Gediminids (Lithuanian 
+Gediminaiciai),(1316-1430, the State grew into the multi-ethnic Grand Duchy of Lithuania, which also 
+incorporated the territories of present day Belarus, Poland, Ukraine, and parts of Russia. Lithuanian 
+rulers officially accepted Christianity in 1385, as a result of Poland offering Jogaila, the crown of 
+Poland. By the 15th century, the Grand Duchy of Lithuania stretched across Eastern Europe, from the Baltic, 
+to the Black Sea.[PARAGRAPH:2]When Grand Duke Jogaila was crowned King of Poland on February 2, 1386, 
+Lithuania and Poland were joined into a personal union, as both countries were ruled by the same Jagiellon 
+dynasty, Lithuanian Jogailaiciai. In 1401, the formal union was dissolved on diputes over legal terminology, 
+and Vytautas, the cousin of Jogaila became the Grand Duke of Lithuania. Circa 1429 Vytautas had been 
+granted a crown from Sigismund, Holy Roman Emperor, but Polish magnates prevented the crown get to Vytautas. 
+He died waiting for the second crown sent by Sigismund, Holy Roman Emperor. In 1447, the personal union 
+was renewed. In 1569, Poland and Lithuania formally were united into a single State called the Polish-Lithuanian 
+Commonwealth. Lithuania retained most of its symbols of Statehood. In 1795, the Commonwealth was dissolved 
+by the third Partition of Poland, which forfeited its lands to Russia, Prussia and Austria, under duress. 
+Over ninety percent of Lithuania was incorporated into the Russian Empire and, the remainder into Prussia.[PARAGRAPH:2]In 
+1940, at the beginning of World War II, the Soviet Union occupied and annexed Lithuania in accordance 
+with the Molotov-Ribbentrop Pact. Fifty years of communist rule ended with the advent of perestroika 
+and glasnost. By the time Lithuania, led by Sajudis, an anti-communist and anti-Soviet independence movement, 
+proclaimed its renewed independence on March 11, 1990. Lithuania was the first Soviet republic to do 
+so, though Soviet forces unsuccessfully tried until August 1991 to suppress this secession, including 
+an attack at Vilnius TV Tower on the night of January 13, 1991 that resulted in the death of 13 Lithuanian 
+civilians. The last Russian troops left Lithuania on August 31, 1993.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_LITHUANIA_ADJECTIVE</Tag>
+		<English>Lithuanian</English>
+		<French>Lithuanian</French>
+		<German>Lithuanian</German>
+		<Italian>Lithuanian</Italian>
+		<Spanish>Lithuanian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_MINDAUGAS</Tag>
+		<English>Mindaugas</English>
+		<French>Mindaugas</French>
+		<German>Mindaugas</German>
+		<Italian>Mindaugas</Italian>
+		<Spanish>Mindaugas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_MINDAUGAS_PEDIA</Tag>
+		<English>[H1]Mindaugas[\H1][NEWLINE][BOLD]King of Lithuania[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.1203 
+- 1263[NEWLINE][NEWLINE][TAB]A man of strong character amongst five established grand dukes, Mindaugas 
+was able to win personal power in Lithuania and turned his sight to the Ruthenian lands, where he conquered 
+vast areas. On July 6, 1253 Mindaugas was crowned King of Lithuania. There are only a few probable locations 
+for his coronation: Vilnius, legendary Voruta (Mindaugas stayed here during the civil war in 1251, but 
+its location is still unknown) or Trakai (Old Trakai). It is only known that Mindaugas and his wife Morta 
+were crowned by the order of Pope Innocent IV, and that for this occasion a Catholic church was built.[PARAGRAPH:1]On 
+September 12th of 1263, Mindaugas was killed (with his 2 younger sons) by his nephews Treniota and Daumantas 
+(the latter was duke of Nalia). Under the usurper Treniota, a person of strong pagan beliefs, the country 
+relapsed into paganism until the re-conversion in 1386 by Grand Duke Jogaila.[PARAGRAPH:1]Only with Gediminas, 
+Grand Duke from 1316, did Lithuania's revival as a European power began. While most of the Lithuanian 
+Grand Dukes from Jogaila onward reigned also as Kings of Poland, their titles remained separate, and 
+Mindaugas was the only King of Lithuania, recognized as such by Western European rulers.</English>
+		<French>[H1]Mindaugas[\H1][NEWLINE][BOLD]King of Lithuania[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.1203 
+- 1263[NEWLINE][NEWLINE][TAB]A man of strong character amongst five established grand dukes, Mindaugas 
+was able to win personal power in Lithuania and turned his sight to the Ruthenian lands, where he conquered 
+vast areas. On July 6, 1253 Mindaugas was crowned King of Lithuania. There are only a few probable locations 
+for his coronation: Vilnius, legendary Voruta (Mindaugas stayed here during the civil war in 1251, but 
+its location is still unknown) or Trakai (Old Trakai). It is only known that Mindaugas and his wife Morta 
+were crowned by the order of Pope Innocent IV, and that for this occasion a Catholic church was built.[PARAGRAPH:1]On 
+September 12th of 1263, Mindaugas was killed (with his 2 younger sons) by his nephews Treniota and Daumantas 
+(the latter was duke of Nalia). Under the usurper Treniota, a person of strong pagan beliefs, the country 
+relapsed into paganism until the re-conversion in 1386 by Grand Duke Jogaila.[PARAGRAPH:1]Only with Gediminas, 
+Grand Duke from 1316, did Lithuania's revival as a European power began. While most of the Lithuanian 
+Grand Dukes from Jogaila onward reigned also as Kings of Poland, their titles remained separate, and 
+Mindaugas was the only King of Lithuania, recognized as such by Western European rulers.</French>
+		<German>[H1]Mindaugas[\H1][NEWLINE][BOLD]King of Lithuania[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.1203 
+- 1263[NEWLINE][NEWLINE][TAB]A man of strong character amongst five established grand dukes, Mindaugas 
+was able to win personal power in Lithuania and turned his sight to the Ruthenian lands, where he conquered 
+vast areas. On July 6, 1253 Mindaugas was crowned King of Lithuania. There are only a few probable locations 
+for his coronation: Vilnius, legendary Voruta (Mindaugas stayed here during the civil war in 1251, but 
+its location is still unknown) or Trakai (Old Trakai). It is only known that Mindaugas and his wife Morta 
+were crowned by the order of Pope Innocent IV, and that for this occasion a Catholic church was built.[PARAGRAPH:1]On 
+September 12th of 1263, Mindaugas was killed (with his 2 younger sons) by his nephews Treniota and Daumantas 
+(the latter was duke of Nalia). Under the usurper Treniota, a person of strong pagan beliefs, the country 
+relapsed into paganism until the re-conversion in 1386 by Grand Duke Jogaila.[PARAGRAPH:1]Only with Gediminas, 
+Grand Duke from 1316, did Lithuania's revival as a European power began. While most of the Lithuanian 
+Grand Dukes from Jogaila onward reigned also as Kings of Poland, their titles remained separate, and 
+Mindaugas was the only King of Lithuania, recognized as such by Western European rulers.</German>
+		<Italian>[H1]Mindaugas[\H1][NEWLINE][BOLD]King of Lithuania[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.1203 
+- 1263[NEWLINE][NEWLINE][TAB]A man of strong character amongst five established grand dukes, Mindaugas 
+was able to win personal power in Lithuania and turned his sight to the Ruthenian lands, where he conquered 
+vast areas. On July 6, 1253 Mindaugas was crowned King of Lithuania. There are only a few probable locations 
+for his coronation: Vilnius, legendary Voruta (Mindaugas stayed here during the civil war in 1251, but 
+its location is still unknown) or Trakai (Old Trakai). It is only known that Mindaugas and his wife Morta 
+were crowned by the order of Pope Innocent IV, and that for this occasion a Catholic church was built.[PARAGRAPH:1]On 
+September 12th of 1263, Mindaugas was killed (with his 2 younger sons) by his nephews Treniota and Daumantas 
+(the latter was duke of Nalia). Under the usurper Treniota, a person of strong pagan beliefs, the country 
+relapsed into paganism until the re-conversion in 1386 by Grand Duke Jogaila.[PARAGRAPH:1]Only with Gediminas, 
+Grand Duke from 1316, did Lithuania's revival as a European power began. While most of the Lithuanian 
+Grand Dukes from Jogaila onward reigned also as Kings of Poland, their titles remained separate, and 
+Mindaugas was the only King of Lithuania, recognized as such by Western European rulers.</Italian>
+		<Spanish>[H1]Mindaugas[\H1][NEWLINE][BOLD]King of Lithuania[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.1203 
+- 1263[NEWLINE][NEWLINE][TAB]A man of strong character amongst five established grand dukes, Mindaugas 
+was able to win personal power in Lithuania and turned his sight to the Ruthenian lands, where he conquered 
+vast areas. On July 6, 1253 Mindaugas was crowned King of Lithuania. There are only a few probable locations 
+for his coronation: Vilnius, legendary Voruta (Mindaugas stayed here during the civil war in 1251, but 
+its location is still unknown) or Trakai (Old Trakai). It is only known that Mindaugas and his wife Morta 
+were crowned by the order of Pope Innocent IV, and that for this occasion a Catholic church was built.[PARAGRAPH:1]On 
+September 12th of 1263, Mindaugas was killed (with his 2 younger sons) by his nephews Treniota and Daumantas 
+(the latter was duke of Nalia). Under the usurper Treniota, a person of strong pagan beliefs, the country 
+relapsed into paganism until the re-conversion in 1386 by Grand Duke Jogaila.[PARAGRAPH:1]Only with Gediminas, 
+Grand Duke from 1316, did Lithuania's revival as a European power began. While most of the Lithuanian 
+Grand Dukes from Jogaila onward reigned also as Kings of Poland, their titles remained separate, and 
+Mindaugas was the only King of Lithuania, recognized as such by Western European rulers.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_MINDAUGAS_1</Tag>
+		<English>I, [OUR_NAME], offer the [CT_EMPIRE] friendship. A person who gives is a person who has. Will you receive this gift, [CT_NAME]?</English>
+		<French>I, [OUR_NAME], offer the [CT_EMPIRE] friendship. A person who gives is a person who has. Will you receive this gift, [CT_NAME]?</French>
+		<German>I, [OUR_NAME], offer the [CT_EMPIRE] friendship. A person who gives is a person who has. Will you receive this gift, [CT_NAME]?</German>
+		<Italian>I, [OUR_NAME], offer the [CT_EMPIRE] friendship. A person who gives is a person who has. Will you receive this gift, [CT_NAME]?</Italian>
+		<Spanish>I, [OUR_NAME], offer the [CT_EMPIRE] friendship. A person who gives is a person who has. Will you receive this gift, [CT_NAME]?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VORUTA</Tag>
+		<English>Voruta</English>
+		<French>
+			<Text>Voruta</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Voruta</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Voruta</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Voruta</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VILNIUS</Tag>
+		<English>Vilnius</English>
+		<French>
+			<Text>Vilnius</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Vilnius</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Vilnius</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Vilnius</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KLAIPEDA</Tag>
+		<English>Klaipeda</English>
+		<French>
+			<Text>Klaipeda</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Klaipeda</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Klaipeda</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Klaipeda</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KAUNAS</Tag>
+		<English>Kaunas</English>
+		<French>
+			<Text>Kaunas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kaunas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kaunas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kaunas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MARIJAMOPOLE</Tag>
+		<English>Marijamopole</English>
+		<French>
+			<Text>Marijamopole</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Marijamopole</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Marijamopole</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Marijamopole</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TAURAGE</Tag>
+		<English>Taurage</English>
+		<French>
+			<Text>Taurage</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Taurage</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Taurage</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Taurage</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_UTENA</Tag>
+		<English>Utena</English>
+		<French>
+			<Text>Utena</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Utena</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Utena</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Utena</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PANEVEZYS</Tag>
+		<English>Panevezys</English>
+		<French>
+			<Text>Panevezys</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Panevezys</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Panevezys</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Panevezys</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SIAULIAI</Tag>
+		<English>Siauliai</English>
+		<French>
+			<Text>Siauliai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Siauliai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Siauliai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Siauliai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BUTINGE</Tag>
+		<English>Butinge</English>
+		<French>
+			<Text>Butinge</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Butinge</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Butinge</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Butinge</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MEMEL</Tag>
+		<English>Memel</English>
+		<French>
+			<Text>Memel</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Memel</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Memel</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Memel</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NAUJOJI_AKMENE</Tag>
+		<English>Naujoji Akmene</English>
+		<French>
+			<Text>Naujoji Akmene</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Naujoji Akmene</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Naujoji Akmene</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Naujoji Akmene</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ALYTUS</Tag>
+		<English>Alytus</English>
+		<French>
+			<Text>Alytus</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Alytus</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Alytus</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Alytus</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ANYKSCIAI</Tag>
+		<English>Anyksciai</English>
+		<French>
+			<Text>Anyksciai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Anyksciai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Anyksciai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Anyksciai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BIRSTONAS</Tag>
+		<English>Birstonas</English>
+		<French>
+			<Text>Birstonas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Birstonas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Birstonas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Birstonas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BIRZAI</Tag>
+		<English>Birzai</English>
+		<French>
+			<Text>Birzai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Birzai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Birzai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Birzai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DRUSKININKAI</Tag>
+		<English>Druskininkai</English>
+		<French>
+			<Text>Druskininkai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Druskininkai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Druskininkai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Druskininkai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ELEKTRENAI</Tag>
+		<English>Elektrenai</English>
+		<French>
+			<Text>Elektrenai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Elektrenai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Elektrenai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Elektrenai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_IGNALINA</Tag>
+		<English>Ignalina</English>
+		<French>
+			<Text>Ignalina</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ignalina</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ignalina</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ignalina</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_JONAVA</Tag>
+		<English>Jonava</English>
+		<French>
+			<Text>Jonava</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Jonava</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Jonava</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Jonava</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_JONISKIS</Tag>
+		<English>Joniskis</English>
+		<French>
+			<Text>Joniskis</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Joniskis</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Joniskis</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Joniskis</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_JURBARKAS</Tag>
+		<English>Jurbarkas</English>
+		<French>
+			<Text>Jurbarkas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Jurbarkas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Jurbarkas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Jurbarkas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KAISIADORYS</Tag>
+		<English>Kaisiadorys</English>
+		<French>
+			<Text>Kaisiadorys</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kaisiadorys</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kaisiadorys</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kaisiadorys</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KALVARIJA</Tag>
+		<English>Kalvarija</English>
+		<French>
+			<Text>Kalvarija</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kalvarija</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kalvarija</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kalvarija</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KAZLU_RUDA</Tag>
+		<English>Kazlu Ruda</English>
+		<French>
+			<Text>Kazlu Ruda</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kazlu Ruda</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kazlu Ruda</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kazlu Ruda</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KEDAINIAI</Tag>
+		<English>Kedainiai</English>
+		<French>
+			<Text>Kedainiai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kedainiai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kedainiai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kedainiai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KELME</Tag>
+		<English>Kelme</English>
+		<French>
+			<Text>Kelme</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kelme</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kelme</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kelme</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GARGZDAI</Tag>
+		<English>Gargzdai</English>
+		<French>
+			<Text>Gargzdai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Gargzdai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Gargzdai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Gargzdai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KRETINGA</Tag>
+		<English>Kretinga</English>
+		<French>
+			<Text>Kretinga</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kretinga</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kretinga</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kretinga</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KUPISKIS</Tag>
+		<English>Kupiskis</English>
+		<French>
+			<Text>Kupiskis</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kupiskis</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kupiskis</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kupiskis</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LAZDIJAI</Tag>
+		<English>Lazdijai</English>
+		<French>
+			<Text>Lazdijai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Lazdijai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Lazdijai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Lazdijai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MAZEIKIAI</Tag>
+		<English>Mazeikiai</English>
+		<French>
+			<Text>Mazeikiai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mazeikiai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Mazeikiai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mazeikiai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MOLETAI</Tag>
+		<English>Moletai</English>
+		<French>
+			<Text>Moletai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Moletai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Moletai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Moletai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PAGEGIAI</Tag>
+		<English>Pagegiai</English>
+		<French>
+			<Text>Pagegiai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Pagegiai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Pagegiai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Pagegiai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PAKRUOJIS</Tag>
+		<English>Pakruojis</English>
+		<French>
+			<Text>Pakruojis</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Pakruojis</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Pakruojis</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Pakruojis</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PASVALYS</Tag>
+		<English>Pasvalys</English>
+		<French>
+			<Text>Pasvalys</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Pasvalys</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Pasvalys</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Pasvalys</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PLUNGE</Tag>
+		<English>Plunge</English>
+		<French>
+			<Text>Plunge</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Plunge</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Plunge</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Plunge</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_RADVILISKIS</Tag>
+		<English>Radviliskis</English>
+		<French>
+			<Text>Radviliskis</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Radviliskis</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Radviliskis</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Radviliskis</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_RASEINIAI</Tag>
+		<English>Raseiniai</English>
+		<French>
+			<Text>Raseiniai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Raseiniai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Raseiniai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Raseiniai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_RIETAVAS</Tag>
+		<English>Rietavas</English>
+		<French>
+			<Text>Rietavas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Rietavas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Rietavas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Rietavas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ROKISKIS</Tag>
+		<English>Rokiskis</English>
+		<French>
+			<Text>Rokiskis</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Rokiskis</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Rokiskis</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Rokiskis</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SKUODAS</Tag>
+		<English>Skuodas</English>
+		<French>
+			<Text>Skuodas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Skuodas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Skuodas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Skuodas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAKIAI</Tag>
+		<English>Sakiai</English>
+		<French>
+			<Text>Sakiai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sakiai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sakiai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sakiai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SALCININKAI</Tag>
+		<English>Salcininkai</English>
+		<French>
+			<Text>Salcininkai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Salcininkai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Salcininkai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Salcininkai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SILALE</Tag>
+		<English>Silale</English>
+		<French>
+			<Text>Silale</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Silale</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Silale</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Silale</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SILUTE</Tag>
+		<English>Silute</English>
+		<French>
+			<Text>Silute</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Silute</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Silute</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Silute</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SIRVINTOS</Tag>
+		<English>Sirvintos</English>
+		<French>
+			<Text>Sirvintos</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sirvintos</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sirvintos</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sirvintos</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SVENCIONYS</Tag>
+		<English>Svencionys</English>
+		<French>
+			<Text>Svencionys</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Svencionys</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Svencionys</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Svencionys</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TELSIAI</Tag>
+		<English>Telsiai</English>
+		<French>
+			<Text>Telsiai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Telsiai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Telsiai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Telsiai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TRAKAI</Tag>
+		<English>Trakai</English>
+		<French>
+			<Text>Trakai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Trakai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Trakai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Trakai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+</Civ4GameText>

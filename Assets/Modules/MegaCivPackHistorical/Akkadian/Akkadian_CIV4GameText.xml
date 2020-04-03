@@ -1,0 +1,207 @@
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_AKKADIAN_DESC</Tag>
+		<English>Akkadian Empire</English>
+		<French>Akkadian Empire</French>
+		<German>Akkadian Empire</German>
+		<Italian>Akkadian Empire</Italian>
+		<Spanish>Akkadian Empire</Spanish>
+	</TEXT>	
+	<TEXT>
+		<Tag>TXT_KEY_CIV_AKKADIAN_SHORT_DESC</Tag>
+		<English>Akkad</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_AKKADIAN_ADJECTIVE</Tag>
+		<English>Akkadian</English>
+		<French>Akkadian</French>
+		<German>Akkadian</German>
+		<Italian>Akkadian</Italian>
+		<Spanish>Akkadian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SARGON</Tag>
+		<English>Sargon</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_NARAMSIN</Tag>
+		<English>Naram-Sin</English>
+	</TEXT>
+<!--
+	Note from Jecrell:
+	The following text references use several kinds
+	of custom tags for special text effects. Here's
+	a few of them.
+	[H1]Text[\H1] - Header
+	[BOLD]Text[\BOLD] - Makes text bold
+	[NEWLINE] - Makes a new line (Emulates Enter Key)
+	[TAB] - Creates indentation (Emulates Tab key)
+	[PARAGRAPH:2] - Creates a paragraph and indents it.
+-->
+	<TEXT>
+		<Tag>TXT_KEY_CIV_AKKADIAN_PEDIA</Tag>
+		<English>[TAB]The rise of the Akkadian Empire marked the first time in history that the entire region of Mesopotamia was united under one ruler, the king of Agade (Akkad). The conquests of these kings of Akkad marked a break with the previous Sumerian Early Dynastic period; however, the culture of the region under the Akkadian rulers did not differ much from that of their Sumerian predecessors. The main difference was that of the language of the ruling authority: the Akkadians replaced the Sumerian language with their Semitic language. Indeed, because the two civilizations were in very close contact for centuries and their languages borrowed many words from each other, it is difficult to distinguish the two during their coexistence in the Early Dynastic period, before the Akkadians consolidated their power over Sumer.[PARAGRAPH:2]Sargon, the first ruler of the dynasty of Agade, came to power in 2334 BC and expanded his rule over the cities of Mesopotamia, conquering the Sumerians. The Akkadians also campaigned quite far to the east and west - by their own accounts, all the way to the Mediterranean. These large military conquests marked a shift from the parochial ruling style of the Sumerians.[PARAGRAPH:2]Many remarkable artifacts have been recovered from the Akkadian empire, including a 160 kilogram piece of a solid copper statue of a male figure and a life-size copper head, likely a representation of the king Naram-Sin. Both pieces show naturalism and fine workmanship. The most famous Akkadian artifact is Naram-Sin's Victory Stele, recording his victory over the Lullubi tribe in western Iran.[PARAGRAPH:2]The Akkadian Empire began to collapse under pressure from neighboring tribes during the reign of Shar-kali-sharri (r.2217-2193). According to the Sumerian King List, the empire deteriorated into a state of anarchy after his reign:[NEWLINE][NEWLINE][TAB][TAB]"Who was king? Was Nanum king? Was Imi king? Was Elulu king? The four of[NEWLINE][TAB][TAB]them were kings and reigned three years."[PARAGRAPH:2]The last kings of Agade were Dudu and Shu-durul. By the time of their reigns, the city states to the south, including Lagash, had gained their independence, and the empire had been reduced to the region just around Agade.</English>
+		<French>in French</French>
+		<German>in German</German>
+		<Italian>in Italian</Italian>
+		<Spanish>in Spanish</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SARGON_PEDIA</Tag>
+		<English>[H1]Sargon[\H1][NEWLINE][BOLD]King of the Akkadian Empire[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]c.2300 - c.2279 BC[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Sharrum-kin (r.2334-2279), known from the Bible as Sargon, was the first ruler of the dynasty of Agade. In Akkadian, his name means the true or legitimate king, which probably means he was a usurper. According to legend, he was placed in a reed basket sealed with bitumen as a baby and sent down the Euphrates, just like the story of Moses from the Old Testament. He was rescued and raised by a date farmer and eventually became the king of Agade by winning the love of the goddess Ishtar.[PARAGRAPH:2]Inscriptions record how Sargon conquered the cities of Uruk, Ur, Umma and Lagash in southern Mesopotamia, expanding his kingdom to the Persian Gulf. He appears to have taken control of western Syria and the Mediterranean coast in the west. He also made contact with distant lands, including the Indus, Oman and Bahrain.</English>
+		<French>in French</French>
+		<German>in German</German>
+		<Italian>in Italian</Italian>
+		<Spanish>in Spanish</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_NARAMSIN_PEDIA</Tag>
+		<English>[H1]Naram-Sin[\H1][NEWLINE][BOLD]King of the Akkadian Empire[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]? - c.2218 BC[NEWLINE][PARAGRAPH:2][BOLD]Background: [\BOLD][NEWLINE][TAB]Naram-Sin (r.2254 - 2218), the grandson of Sargon, ruled over the Akkadian Empire for 37 years. His reign marked the peak of the empire's power. Like the other Akkadian kings, Naram-Sin fought wars to maintain and expand the influence of Agade. He was also probably the first Mesopotamian king to not just claim to rule as an agent of the gods, but declare himself a god (the suffix "sin" in his name is Akkadian for "god").[PARAGRAPH:2]Naram-Sin ruled over a vast empire, and he set up many inscriptions and monuments throughout it documenting his military escapades. Some of the most significant and most beautiful Akkadian artifacts come from his reign, including his Victory Stele commemorating his victory over the Lullubi tribe of western Iran.</English>
+	</TEXT>
+<!--
+	Note from Jecrell:
+	The following lines are represent text used
+	in your leader's diplomacy routine. Here's a few
+	special tags used in diplomacy.
+	[OUR_NAME] - Your leader's name.
+	[OUR_EMPIRE] - Your leader's empire.
+	[OUR_CIV_SHORT] - Your leader's civ's short name.
+	[OUR_CIV_ADJ] - Your leader's civ's adjective.
+	[CT_NAME] - The player's name
+	[CT_EMPIRE] - The player's empire.
+	[CT_CIV_SHORT] - The player's empire's short name.
+	[CT_CIV_ADJ] - The player's empire's adjective.
+-->		
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SARGON_1</Tag>
+		<English>Greetings! I am [OUR_NAME], the true king of Akkad. No, really, I mean it. Did somebody tell you something else? True king, seriously.</English>
+		<French>Salutations ! Je suis [OUR_NAME], je r&#232;gne sur l'[OUR_EMPIRE]. Je souhaite que nos deux grands peuples puissent vivre en paix.</French>
+		<German>Seid gegr&#252;&#223;t! Ich bin [OUR_NAME], Staatsoberhaupt des [OUR_EMPIRE:3]es. Ich hoffe, unsere gro&#223;artigen V&#246;lker werden in Frieden zusammenleben.</German>
+		<Italian>Saluti! Io sono [OUR_NAME] dell'[OUR_EMPIRE]. Spero che i nostri due grandi popoli possano vivere in pace.</Italian>
+		<Spanish>Saludos. &#161;Soy [OUR_NAME], del [OUR_EMPIRE]! Espero que nuestros dos grandes pueblos puedan vivir en paz.</Spanish>
+	</TEXT>	
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_SARGON_1</Tag>
+		<English>You wish to speak? I will listen to you when you are dead, [CT_NAME]!</English>
+		<French>Vos bavardages incessants ne nous amusent pas, [CT_NAME] !</French>
+		<German>Euer bedeutungsloses Geschwafel am&#252;siert uns ganz und gar nicht, [CT_NAME]!</German>
+		<Italian>I tuoi balbettii senza senso non sono affatto divertenti, [CT_NAME]!</Italian>
+		<Spanish>&#161;No nos hace gracia vuestra ch&#225;chara absurda, [CT_NAME]!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_SARGON_1</Tag>
+		<English>Coward! There will be peace only when your hapless empire is overrun by mighty Akkad!</English>
+		<French>La guerre est tr&#232;s d&#233;plaisante, mais parfois n&#233;cessaire. Il appara&#238;t que nous sommes dans cette situation, aussi devons-nous rejeter votre requ&#234;te. Cette entrevue est termin&#233;e.</French>
+		<German>Kriege sind eine h&#246;chst unangenehme Sache, manchmal aber auch unumg&#228;nglich. Und wie ich h&#246;re, ist das in diesem Fall so, deshalb muss ich Euer Anliegen zur&#252;ckweisen. Diese Unterhaltung ist beendet!</German>
+		<Italian>La guerra non &#232; per niente piacevole, ma a volte &#232; necessaria. Questa &#232; una di quelle volte, perci&#242; dobbiamo respingere le tue suppliche. L'udienza termina qui.</Italian>
+		<Spanish>La guerra es harto desagradable, pero a veces resulta necesaria. Nos informan de que &#233;sta es una de esas veces, as&#237; que debemos rechazar vuestras s&#250;plicas. La audiencia ha terminado.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_SARGON_1</Tag>
+		<English>My dear friend, [CT_NAME], to what do I owe this visit? Shall we go to battle together and feast upon the flesh of our enemies? Or we could have a cup of tea, if you'd rather.</English>
+		<French>Je vous souhaite la bienvenue ! Venez, allons d&#233;truire nos ennemis du haut de nos chars et laissons cinquante mille cadavres sur le champ de bataille pour le festin des corbeaux !</French>
+		<German>Willkommen! Lasst uns unsere Streitwagen anspannen und unsere Feinde vernichten! M&#246;gen die Gefallenen auf dem Schlachtfeld ein Festmahl f&#252;r die Geier sein!</German>
+		<Italian>Salve, ti do il benvenuto! Montiamo sulle bighe e distruggiamo i nemici, lasceremo sul campo di battaglia solamente i cadaveri perch&#233; se ne sfamino i corvi!</Italian>
+		<Spanish>&#161;Os saludamos, camarada! Venga, montemos en los carros, destruyamos a nuestros enemigos y dejemos cincuenta mil cad&#225;veres pudri&#233;ndose en el campo de batalla como pasto para los cuervos.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_SARGON_1</Tag>
+		<English>Oh, how wonderf - oh, excuse me, [CT_NAME]. I saw your ugly head and for a moment I thought my soldiers were carrying it in on a pole.</English>
+		<French>Bonjour, [CT_NAME]. A quoi devons-nous cette interruption inattendue ?</French>
+		<German>Guten Tag, [CT_NAME]. Was beschert mir diese unerwartete St&#246;rung?</German>
+		<Italian>Buongiorno a te, [CT_NAME]. A cosa dobbiamo questa interruzione inaspettata?</Italian>
+		<Spanish>Buenos d&#237;as teng&#225;is, [CT_NAME]. &#191;A qu&#233; debemos esta interrupci&#243;n tan inesperada?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_SARGON_1</Tag>
+		<English>Poor, sweet, innocent [OUR_CIV_SHORT] needs your help, [CT_NAME].</English>
+		<French>Les [CT_CIV_ADJ] sont dans le besoin, [CT_NAME]. J'esp&#232;re que vous ne les d&#233;cevrez pas.</French>
+		<German>Das [CT_CIV_ADJ:3] Volk befindet sich in einer &#252;blen Notlage, [CT_NAME]! Entt&#228;uscht uns nicht!</German>
+		<Italian>Il popolo [CT_CIV_ADJ:1] vive nell'indigenza, [CT_NAME]. Non deluderci.</Italian>
+		<Spanish>El pueblo [CT_CIV_ADJ:1] tiene una gran necesidad, [CT_NAME]. No nos decepcion&#233;is.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_SARGON_1</Tag>
+		<English>We have needs, [CT_NAME]. Please comply.</English>
+		<French>Nous avons des besoins, [CT_NAME]. Veuillez les satisfaire.</French>
+		<German>Auch wir haben Bed&#252;rfnisse, [CT_NAME]! Und es ist an Euch, sie zu befriedigen!</German>
+		<Italian>Abbiamo delle necessit&#224;, [CT_NAME]. Ti preghiamo di accettarle.</Italian>
+		<Spanish>Tenemos necesidades, [CT_NAME]. Satisfacedlas, por favor.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_SARGON</Tag>
+		<English>We all have to make sacrifices. By 'we all,' I mean specifically you.</English>
+		<French>Donnez aux [CT_CIV_SHORT] ce qui leur revient, [CT_NAME] ! Nous ne vous le demanderons pas deux fois.</French>
+		<German>Gebt [CT_CIV_SHORT], was ihm zusteht, [CT_NAME]! Wir werden Euch kein zweites Mal darum bitten!</German>
+		<Italian>Dona ci&#242; che ti richiede [CT_CIV_SHORT:2], [CT_NAME]! Non te lo chiederemo una seconda volta!</Italian>
+		<Spanish>&#161;Dadle a [CT_CIV_SHORT] lo que le corresponde, [CT_NAME]! No os lo pediremos otra vez.</Spanish>
+	</TEXT>		
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_AGADE</Tag>
+		<English>Agade</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SIMURRUM</Tag>
+		<English>Simurrum</English>
+	</TEXT>
+	<TEXT>	
+		<Tag>TXT_KEY_CITY_NAME_DER</Tag>
+		<English>Der</English>
+	</TEXT>
+	<TEXT>	
+		<Tag>TXT_KEY_CITY_NAME_URUA</Tag>
+		<English>Urua</English>
+	</TEXT>
+	<TEXT>	
+		<Tag>TXT_KEY_CITY_NAME_MARI</Tag>
+		<English>Mari</English>
+	</TEXT>
+	<TEXT>	
+		<Tag>TXT_KEY_CITY_NAME_HAHHUM</Tag>
+		<English>Hahhum</English>
+	</TEXT>
+	<TEXT>	
+		<Tag>TXT_KEY_CITY_NAME_TUTTUL</Tag>
+		<English>Tuttul</English>
+	</TEXT>
+	<TEXT>	
+		<Tag>TXT_KEY_CITY_NAME_EBLA</Tag>
+		<English>Ebla</English>
+	</TEXT>
+	<TEXT>	
+		<Tag>TXT_KEY_CITY_NAME_YARMUTI</Tag>
+		<English>Yarmuti</English>
+	</TEXT>
+	<TEXT>	
+		<Tag>TXT_KEY_CITY_NAME_PURUSKHANDA</Tag>
+		<English>Puruskhanda</English>
+	</TEXT>
+	<TEXT>	
+		<Tag>TXT_KEY_CITY_NAME_MARHASHI</Tag>
+		<English>Marhashi</English>
+	</TEXT>
+	<TEXT>	
+		<Tag>TXT_KEY_CITY_NAME_ANSHAN</Tag>
+		<English>Anshan</English>
+	</TEXT>
+	<TEXT>	
+		<Tag>TXT_KEY_CITY_NAME_MAGAN</Tag>
+		<English>Magan</English>
+	</TEXT>
+	<TEXT>	
+		<Tag>TXT_KEY_CITY_NAME_DILMUN</Tag>
+		<English>Dilmun</English>
+	</TEXT>
+	<TEXT>	
+		<Tag>TXT_KEY_CITY_NAME_ZAHARA</Tag>
+		<English>Zahara</English>
+	</TEXT>
+	<TEXT>	
+		<Tag>TXT_KEY_CITY_NAME_SUBARTU</Tag>
+		<English>Subartu</English>
+	</TEXT>	
+	<TEXT>	
+		<Tag>TXT_KEY_CITY_NAME_ARMANUM</Tag>
+		<English>Armanum</English>
+	</TEXT>
+</Civ4GameText>

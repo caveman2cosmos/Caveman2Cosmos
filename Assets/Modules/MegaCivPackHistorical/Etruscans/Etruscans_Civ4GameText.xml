@@ -1,0 +1,1007 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- Copyright Firaxis Games 2005 -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ETRUSCANS_DESC</Tag>
+		<English>Etruscan Empire</English>
+		<French>Etruscan Empire</French>
+		<German>Etruscan Empire</German>
+		<Italian>Etruscan Empire</Italian>
+		<Spanish>Etruscan Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ETRUSCANS_SHORT_DESC</Tag>
+		<English>Etruscans</English>
+		<French>Etruscans</French>
+		<German>Etruscans</German>
+		<Italian>Etruscans</Italian>
+		<Spanish>Etruscans</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ETRUSCANS_ADJECTIVE</Tag>
+		<English>Etruscan</English>
+		<French>Etruscan</French>
+		<German>Etruscan</German>
+		<Italian>Etruscan</Italian>
+		<Spanish>Etruscan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ETRUSCANS_PEDIA</Tag>
+		<English>[TAB]Long before the days of Rome's greatness, Italy was the home of a people far advanced 
+in civilization - the Etruscans, or Tyrrhenians. These people rose to prosperity and power, then almost 
+vanished from recorded history, leaving unsolved many questions about their origin and culture.[PARAGRAPH:2]Scholars 
+think that the Etruscans were a seafaring people from Asia Minor. As early as 1000 BC they were living 
+in Italy in an area that was roughly equivalent to modern Tuscany, from the Tiber River north almost 
+to the Arno River. Later their rule embraced a large part of western Italy, including Rome. When the 
+Tarquin Dynasty was expelled from Rome about 500 BC, Lars Porsena, king of Etruria and Clusium, sought 
+to reestablish his influence over Rome.[PARAGRAPH:2]The Etruscans already controlled the commerce of 
+the Tyrrhenian Sea on their western border. After losing control of Rome, they strengthened their naval 
+power through an alliance with Carthage against Greece. In 474 BCtheir fleet was destroyed by the Greeks 
+of Syracuse. From that time their power rapidly declined. The Gauls overran the country from the north, 
+and the Etruscans' strong southern fortress of Veii fell to Rome after a ten-year seige (396 BC). The 
+Etruscans were absorbed by the Romans, who adopted many of their advanced arts, their customs, and their 
+institutions.[PARAGRAPH:2]Because little Etruscan literature remains and the language of inscriptions 
+on their monuments has been only partially deciphered, scholars have gained most of their knowledge of 
+the Etruscans from studying the remains of their city walls, houses, monuments, and tombs. Weapons and 
+other implements, exquisite jewelry, coins, statues of stone, bronze, and terra-cotta, and black pottery 
+(called bucchero) have been found. Grecian and Oriental influences are seen in this art.</English>
+		<French>[TAB]Long before the days of Rome's greatness, Italy was the home of a people far advanced 
+in civilization - the Etruscans, or Tyrrhenians. These people rose to prosperity and power, then almost 
+vanished from recorded history, leaving unsolved many questions about their origin and culture.[PARAGRAPH:2]Scholars 
+think that the Etruscans were a seafaring people from Asia Minor. As early as 1000 BC they were living 
+in Italy in an area that was roughly equivalent to modern Tuscany, from the Tiber River north almost 
+to the Arno River. Later their rule embraced a large part of western Italy, including Rome. When the 
+Tarquin Dynasty was expelled from Rome about 500 BC, Lars Porsena, king of Etruria and Clusium, sought 
+to reestablish his influence over Rome.[PARAGRAPH:2]The Etruscans already controlled the commerce of 
+the Tyrrhenian Sea on their western border. After losing control of Rome, they strengthened their naval 
+power through an alliance with Carthage against Greece. In 474 BCtheir fleet was destroyed by the Greeks 
+of Syracuse. From that time their power rapidly declined. The Gauls overran the country from the north, 
+and the Etruscans' strong southern fortress of Veii fell to Rome after a ten-year seige (396 BC). The 
+Etruscans were absorbed by the Romans, who adopted many of their advanced arts, their customs, and their 
+institutions.[PARAGRAPH:2]Because little Etruscan literature remains and the language of inscriptions 
+on their monuments has been only partially deciphered, scholars have gained most of their knowledge of 
+the Etruscans from studying the remains of their city walls, houses, monuments, and tombs. Weapons and 
+other implements, exquisite jewelry, coins, statues of stone, bronze, and terra-cotta, and black pottery 
+(called bucchero) have been found. Grecian and Oriental influences are seen in this art.</French>
+		<German>[TAB]Long before the days of Rome's greatness, Italy was the home of a people far advanced 
+in civilization - the Etruscans, or Tyrrhenians. These people rose to prosperity and power, then almost 
+vanished from recorded history, leaving unsolved many questions about their origin and culture.[PARAGRAPH:2]Scholars 
+think that the Etruscans were a seafaring people from Asia Minor. As early as 1000 BC they were living 
+in Italy in an area that was roughly equivalent to modern Tuscany, from the Tiber River north almost 
+to the Arno River. Later their rule embraced a large part of western Italy, including Rome. When the 
+Tarquin Dynasty was expelled from Rome about 500 BC, Lars Porsena, king of Etruria and Clusium, sought 
+to reestablish his influence over Rome.[PARAGRAPH:2]The Etruscans already controlled the commerce of 
+the Tyrrhenian Sea on their western border. After losing control of Rome, they strengthened their naval 
+power through an alliance with Carthage against Greece. In 474 BCtheir fleet was destroyed by the Greeks 
+of Syracuse. From that time their power rapidly declined. The Gauls overran the country from the north, 
+and the Etruscans' strong southern fortress of Veii fell to Rome after a ten-year seige (396 BC). The 
+Etruscans were absorbed by the Romans, who adopted many of their advanced arts, their customs, and their 
+institutions.[PARAGRAPH:2]Because little Etruscan literature remains and the language of inscriptions 
+on their monuments has been only partially deciphered, scholars have gained most of their knowledge of 
+the Etruscans from studying the remains of their city walls, houses, monuments, and tombs. Weapons and 
+other implements, exquisite jewelry, coins, statues of stone, bronze, and terra-cotta, and black pottery 
+(called bucchero) have been found. Grecian and Oriental influences are seen in this art.</German>
+		<Italian>[TAB]Long before the days of Rome's greatness, Italy was the home of a people far advanced 
+in civilization - the Etruscans, or Tyrrhenians. These people rose to prosperity and power, then almost 
+vanished from recorded history, leaving unsolved many questions about their origin and culture.[PARAGRAPH:2]Scholars 
+think that the Etruscans were a seafaring people from Asia Minor. As early as 1000 BC they were living 
+in Italy in an area that was roughly equivalent to modern Tuscany, from the Tiber River north almost 
+to the Arno River. Later their rule embraced a large part of western Italy, including Rome. When the 
+Tarquin Dynasty was expelled from Rome about 500 BC, Lars Porsena, king of Etruria and Clusium, sought 
+to reestablish his influence over Rome.[PARAGRAPH:2]The Etruscans already controlled the commerce of 
+the Tyrrhenian Sea on their western border. After losing control of Rome, they strengthened their naval 
+power through an alliance with Carthage against Greece. In 474 BCtheir fleet was destroyed by the Greeks 
+of Syracuse. From that time their power rapidly declined. The Gauls overran the country from the north, 
+and the Etruscans' strong southern fortress of Veii fell to Rome after a ten-year seige (396 BC). The 
+Etruscans were absorbed by the Romans, who adopted many of their advanced arts, their customs, and their 
+institutions.[PARAGRAPH:2]Because little Etruscan literature remains and the language of inscriptions 
+on their monuments has been only partially deciphered, scholars have gained most of their knowledge of 
+the Etruscans from studying the remains of their city walls, houses, monuments, and tombs. Weapons and 
+other implements, exquisite jewelry, coins, statues of stone, bronze, and terra-cotta, and black pottery 
+(called bucchero) have been found. Grecian and Oriental influences are seen in this art.</Italian>
+		<Spanish>[TAB]Long before the days of Rome's greatness, Italy was the home of a people far advanced 
+in civilization - the Etruscans, or Tyrrhenians. These people rose to prosperity and power, then almost 
+vanished from recorded history, leaving unsolved many questions about their origin and culture.[PARAGRAPH:2]Scholars 
+think that the Etruscans were a seafaring people from Asia Minor. As early as 1000 BC they were living 
+in Italy in an area that was roughly equivalent to modern Tuscany, from the Tiber River north almost 
+to the Arno River. Later their rule embraced a large part of western Italy, including Rome. When the 
+Tarquin Dynasty was expelled from Rome about 500 BC, Lars Porsena, king of Etruria and Clusium, sought 
+to reestablish his influence over Rome.[PARAGRAPH:2]The Etruscans already controlled the commerce of 
+the Tyrrhenian Sea on their western border. After losing control of Rome, they strengthened their naval 
+power through an alliance with Carthage against Greece. In 474 BCtheir fleet was destroyed by the Greeks 
+of Syracuse. From that time their power rapidly declined. The Gauls overran the country from the north, 
+and the Etruscans' strong southern fortress of Veii fell to Rome after a ten-year seige (396 BC). The 
+Etruscans were absorbed by the Romans, who adopted many of their advanced arts, their customs, and their 
+institutions.[PARAGRAPH:2]Because little Etruscan literature remains and the language of inscriptions 
+on their monuments has been only partially deciphered, scholars have gained most of their knowledge of 
+the Etruscans from studying the remains of their city walls, houses, monuments, and tombs. Weapons and 
+other implements, exquisite jewelry, coins, statues of stone, bronze, and terra-cotta, and black pottery 
+(called bucchero) have been found. Grecian and Oriental influences are seen in this art.</Spanish>
+	</TEXT>
+	<!-- Civ4GameText_Civilopedia_CivLeaders -->
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_LARS_PORSENA</Tag>
+		<English>Lars Porsena</English>
+		<French>Lars Porsena</French>
+		<German>Lars Porsena</German>
+		<Italian>Lars Porsena</Italian>
+		<Spanish>Lars Porsena</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_LARS_PORSENA_1</Tag>
+		<English>By the Nine Gods, I swear that the great house of Tarquin shall suffer wrong no more! Greetings, [CT_NAME], I am [OUR_NAME] of the [OUR_EMPIRE].</English>
+		<French>By the Nine Gods, I swear that the great house of Tarquin shall suffer wrong no more! Greetings, [CT_NAME], I am [OUR_NAME] of the [OUR_EMPIRE].</French>
+		<German>By the Nine Gods, I swear that the great house of Tarquin shall suffer wrong no more! Greetings, [CT_NAME], I am [OUR_NAME] of the [OUR_EMPIRE].</German>
+		<Italian>By the Nine Gods, I swear that the great house of Tarquin shall suffer wrong no more! Greetings, [CT_NAME], I am [OUR_NAME] of the [OUR_EMPIRE].</Italian>
+		<Spanish>By the Nine Gods, I swear that the great house of Tarquin shall suffer wrong no more! Greetings, [CT_NAME], I am [OUR_NAME] of the [OUR_EMPIRE].</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_LARS_PORSENA_PEDIA</Tag>
+		<English>[H1]Lars Porsena[\H1][NEWLINE][BOLD]King of Etruscan Empire[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 
+c.500 BC [NEWLINE][PARAGRAPH:2][BOLD]Background: [\BOLD][PARAGRAPH:1]Lars Porsena (sometimes spelled 
+Lars Porsenna) was an Etruscan king known for his war against the city of Rome. He ruled over the city 
+of Clusium, sometimes referred to as Clevsin. There are no established dates for his rule, but Roman 
+sources often place it at around 500 BC.[PARAGRAPH:1]Lars Porsena came into conflict with Rome after 
+the revolution which overthrew, in 510 BC, Lucius Tarquinius Superbus, the last King of Rome. The deposed 
+monarch, whose family was of Etruscan origin, appealed to Lars Porsena for assistance in suppressing 
+the new Roman Republic, and Lars Porsena agreed to help.[PARAGRAPH:1]At this point, however, there is 
+divergence in the histories. According to most mainstream Roman accounts, including those of Livy, Lars 
+Porsena arrived at Rome, but was sufficiently impressed by Roman bravery (see Mucius, Horatius) in defending 
+the city that he chose to make peace. Other accounts, however, suggest that Lars Porsena actually succeeded 
+in capturing the city, and that the Etruscans were only driven out some time afterwards. None of the 
+accounts suggest that Lucius Tarquinius Superbus was returned to the throne, however, perhaps indicating 
+that if Lars Porsena did indeed capture Rome, he did so with the intent of controlling it himself, not 
+restoring the former dynasty.[PARAGRAPH:1]According to most accounts, Lars Porsena was buried in an elaborate 
+tomb in (or under) the city he ruled. Porsena's tomb is described as having a 15 m high rectangular base 
+with sides 90 m long. It was adorned by pyramids and massive bells.[PARAGRAPH:1]Lars Porsena's tomb, 
+together with the rest of the city of Clusium, was razed to the ground in 89 BC by the Roman general 
+Cornelius Sulla.[PARAGRAPH:1]</English>
+		<French>[H1]Lars Porsena[\H1][NEWLINE][BOLD]King of Etruscan Empire[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 
+c.500 BC [NEWLINE][PARAGRAPH:2][BOLD]Background: [\BOLD][PARAGRAPH:1]Lars Porsena (sometimes spelled 
+Lars Porsenna) was an Etruscan king known for his war against the city of Rome. He ruled over the city 
+of Clusium, sometimes referred to as Clevsin. There are no established dates for his rule, but Roman 
+sources often place it at around 500 BC.[PARAGRAPH:1]Lars Porsena came into conflict with Rome after 
+the revolution which overthrew, in 510 BC, Lucius Tarquinius Superbus, the last King of Rome. The deposed 
+monarch, whose family was of Etruscan origin, appealed to Lars Porsena for assistance in suppressing 
+the new Roman Republic, and Lars Porsena agreed to help.[PARAGRAPH:1]At this point, however, there is 
+divergence in the histories. According to most mainstream Roman accounts, including those of Livy, Lars 
+Porsena arrived at Rome, but was sufficiently impressed by Roman bravery (see Mucius, Horatius) in defending 
+the city that he chose to make peace. Other accounts, however, suggest that Lars Porsena actually succeeded 
+in capturing the city, and that the Etruscans were only driven out some time afterwards. None of the 
+accounts suggest that Lucius Tarquinius Superbus was returned to the throne, however, perhaps indicating 
+that if Lars Porsena did indeed capture Rome, he did so with the intent of controlling it himself, not 
+restoring the former dynasty.[PARAGRAPH:1]According to most accounts, Lars Porsena was buried in an elaborate 
+tomb in (or under) the city he ruled. Porsena's tomb is described as having a 15 m high rectangular base 
+with sides 90 m long. It was adorned by pyramids and massive bells.[PARAGRAPH:1]Lars Porsena's tomb, 
+together with the rest of the city of Clusium, was razed to the ground in 89 BC by the Roman general 
+Cornelius Sulla.[PARAGRAPH:1]</French>
+		<German>[H1]Lars Porsena[\H1][NEWLINE][BOLD]King of Etruscan Empire[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 
+c.500 BC [NEWLINE][PARAGRAPH:2][BOLD]Background: [\BOLD][PARAGRAPH:1]Lars Porsena (sometimes spelled 
+Lars Porsenna) was an Etruscan king known for his war against the city of Rome. He ruled over the city 
+of Clusium, sometimes referred to as Clevsin. There are no established dates for his rule, but Roman 
+sources often place it at around 500 BC.[PARAGRAPH:1]Lars Porsena came into conflict with Rome after 
+the revolution which overthrew, in 510 BC, Lucius Tarquinius Superbus, the last King of Rome. The deposed 
+monarch, whose family was of Etruscan origin, appealed to Lars Porsena for assistance in suppressing 
+the new Roman Republic, and Lars Porsena agreed to help.[PARAGRAPH:1]At this point, however, there is 
+divergence in the histories. According to most mainstream Roman accounts, including those of Livy, Lars 
+Porsena arrived at Rome, but was sufficiently impressed by Roman bravery (see Mucius, Horatius) in defending 
+the city that he chose to make peace. Other accounts, however, suggest that Lars Porsena actually succeeded 
+in capturing the city, and that the Etruscans were only driven out some time afterwards. None of the 
+accounts suggest that Lucius Tarquinius Superbus was returned to the throne, however, perhaps indicating 
+that if Lars Porsena did indeed capture Rome, he did so with the intent of controlling it himself, not 
+restoring the former dynasty.[PARAGRAPH:1]According to most accounts, Lars Porsena was buried in an elaborate 
+tomb in (or under) the city he ruled. Porsena's tomb is described as having a 15 m high rectangular base 
+with sides 90 m long. It was adorned by pyramids and massive bells.[PARAGRAPH:1]Lars Porsena's tomb, 
+together with the rest of the city of Clusium, was razed to the ground in 89 BC by the Roman general 
+Cornelius Sulla.[PARAGRAPH:1]</German>
+		<Italian>[H1]Lars Porsena[\H1][NEWLINE][BOLD]King of Etruscan Empire[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 
+c.500 BC [NEWLINE][PARAGRAPH:2][BOLD]Background: [\BOLD][PARAGRAPH:1]Lars Porsena (sometimes spelled 
+Lars Porsenna) was an Etruscan king known for his war against the city of Rome. He ruled over the city 
+of Clusium, sometimes referred to as Clevsin. There are no established dates for his rule, but Roman 
+sources often place it at around 500 BC.[PARAGRAPH:1]Lars Porsena came into conflict with Rome after 
+the revolution which overthrew, in 510 BC, Lucius Tarquinius Superbus, the last King of Rome. The deposed 
+monarch, whose family was of Etruscan origin, appealed to Lars Porsena for assistance in suppressing 
+the new Roman Republic, and Lars Porsena agreed to help.[PARAGRAPH:1]At this point, however, there is 
+divergence in the histories. According to most mainstream Roman accounts, including those of Livy, Lars 
+Porsena arrived at Rome, but was sufficiently impressed by Roman bravery (see Mucius, Horatius) in defending 
+the city that he chose to make peace. Other accounts, however, suggest that Lars Porsena actually succeeded 
+in capturing the city, and that the Etruscans were only driven out some time afterwards. None of the 
+accounts suggest that Lucius Tarquinius Superbus was returned to the throne, however, perhaps indicating 
+that if Lars Porsena did indeed capture Rome, he did so with the intent of controlling it himself, not 
+restoring the former dynasty.[PARAGRAPH:1]According to most accounts, Lars Porsena was buried in an elaborate 
+tomb in (or under) the city he ruled. Porsena's tomb is described as having a 15 m high rectangular base 
+with sides 90 m long. It was adorned by pyramids and massive bells.[PARAGRAPH:1]Lars Porsena's tomb, 
+together with the rest of the city of Clusium, was razed to the ground in 89 BC by the Roman general 
+Cornelius Sulla.[PARAGRAPH:1]</Italian>
+		<Spanish>[H1]Lars Porsena[\H1][NEWLINE][BOLD]King of Etruscan Empire[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 
+c.500 BC [NEWLINE][PARAGRAPH:2][BOLD]Background: [\BOLD][PARAGRAPH:1]Lars Porsena (sometimes spelled 
+Lars Porsenna) was an Etruscan king known for his war against the city of Rome. He ruled over the city 
+of Clusium, sometimes referred to as Clevsin. There are no established dates for his rule, but Roman 
+sources often place it at around 500 BC.[PARAGRAPH:1]Lars Porsena came into conflict with Rome after 
+the revolution which overthrew, in 510 BC, Lucius Tarquinius Superbus, the last King of Rome. The deposed 
+monarch, whose family was of Etruscan origin, appealed to Lars Porsena for assistance in suppressing 
+the new Roman Republic, and Lars Porsena agreed to help.[PARAGRAPH:1]At this point, however, there is 
+divergence in the histories. According to most mainstream Roman accounts, including those of Livy, Lars 
+Porsena arrived at Rome, but was sufficiently impressed by Roman bravery (see Mucius, Horatius) in defending 
+the city that he chose to make peace. Other accounts, however, suggest that Lars Porsena actually succeeded 
+in capturing the city, and that the Etruscans were only driven out some time afterwards. None of the 
+accounts suggest that Lucius Tarquinius Superbus was returned to the throne, however, perhaps indicating 
+that if Lars Porsena did indeed capture Rome, he did so with the intent of controlling it himself, not 
+restoring the former dynasty.[PARAGRAPH:1]According to most accounts, Lars Porsena was buried in an elaborate 
+tomb in (or under) the city he ruled. Porsena's tomb is described as having a 15 m high rectangular base 
+with sides 90 m long. It was adorned by pyramids and massive bells.[PARAGRAPH:1]Lars Porsena's tomb, 
+together with the rest of the city of Clusium, was razed to the ground in 89 BC by the Roman general 
+Cornelius Sulla.[PARAGRAPH:1]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TARQUINII</Tag>
+		<English>Tarquinii</English>
+		<French>
+			<Text>Tarquinii</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tarquinii</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tarquinii</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tarquinii</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CISRA</Tag>
+		<English>Cisra</English>
+		<French>
+			<Text>Cisra</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Cisra</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Cisra</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Cisra</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VELCH</Tag>
+		<English>Velch</English>
+		<French>
+			<Text>Velch</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Velch</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Velch</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Velch</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VETLUNA</Tag>
+		<English>Vetluna</English>
+		<French>
+			<Text>Vetluna</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Vetluna</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Vetluna</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Vetluna</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_FUFLUNA</Tag>
+		<English>Fufluna</English>
+		<French>
+			<Text>Fufluna</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Fufluna</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Fufluna</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Fufluna</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ARRETIUM</Tag>
+		<English>Arretium</English>
+		<French>
+			<Text>Arretium</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Arretium</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Arretium</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Arretium</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CURTUN</Tag>
+		<English>Curtun</English>
+		<French>
+			<Text>Curtun</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Curtun</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Curtun</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Curtun</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CLEVSIN</Tag>
+		<English>Clevsin</English>
+		<French>
+			<Text>Clevsin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Clevsin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Clevsin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Clevsin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PERUSNA</Tag>
+		<English>Perusna</English>
+		<French>
+			<Text>Perusna</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Perusna</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Perusna</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Perusna</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VELZNA</Tag>
+		<English>Velzna</English>
+		<French>
+			<Text>Velzna</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Velzna</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Velzna</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Velzna</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VEII</Tag>
+		<English>Veii</English>
+		<French>
+			<Text>Veii</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Veii</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Veii</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Veii</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CAPEVA</Tag>
+		<English>Capeva</English>
+		<French>
+			<Text>Capeva</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Capeva</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Capeva</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Capeva</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GRAVISCA</Tag>
+		<English>Gravisca</English>
+		<French>
+			<Text>Gravisca</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Gravisca</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Gravisca</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Gravisca</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CASA</Tag>
+		<English>Casa</English>
+		<French>
+			<Text>Casa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Casa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Casa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Casa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TELAMUN</Tag>
+		<English>Telamun</English>
+		<French>
+			<Text>Telamun</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Telamun</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Telamun</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Telamun</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VOLATERRAE</Tag>
+		<English>Volaterrae</English>
+		<French>
+			<Text>Volaterrae</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Volaterrae</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Volaterrae</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Volaterrae</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_FELSINA</Tag>
+		<English>Felsina</English>
+		<French>
+			<Text>Felsina</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Felsina</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Felsina</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Felsina</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ALALIA</Tag>
+		<English>Alalia</English>
+		<French>
+			<Text>Alalia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Alalia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Alalia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Alalia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MANTUA</Tag>
+		<English>Mantua</English>
+		<French>
+			<Text>Mantua</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mantua</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Mantua</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mantua</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ADRIA</Tag>
+		<English>Adria</English>
+		<French>
+			<Text>Adria</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Adria</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Adria</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Adria</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SPINA</Tag>
+		<English>Spina</English>
+		<French>
+			<Text>Spina</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Spina</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Spina</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Spina</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_RUMA</Tag>
+		<English>Ruma</English>
+		<French>
+			<Text>Ruma</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ruma</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ruma</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ruma</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SATURNIA</Tag>
+		<English>Saturnia</English>
+		<French>
+			<Text>Saturnia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Saturnia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Saturnia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Saturnia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_RUSELLAE</Tag>
+		<English>Rusellae</English>
+		<French>
+			<Text>Rusellae</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Rusellae</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Rusellae</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Rusellae</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BISENZIO</Tag>
+		<English>Bisenzio</English>
+		<French>
+			<Text>Bisenzio</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Bisenzio</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Bisenzio</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Bisenzio</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SUTRI</Tag>
+		<English>Sutri</English>
+		<French>
+			<Text>Sutri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sutri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sutri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sutri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NEPI</Tag>
+		<English>Nepi</English>
+		<French>
+			<Text>Nepi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Nepi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Nepi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Nepi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_FALERII</Tag>
+		<English>Falerii</English>
+		<French>
+			<Text>Falerii</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Falerii</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Falerii</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Falerii</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_FELSINA</Tag>
+		<English>Felsina</English>
+		<French>
+			<Text>Felsina</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Felsina</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Felsina</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Felsina</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MEDIOLANO</Tag>
+		<English>Mediolano</English>
+		<French>
+			<Text>Mediolano</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mediolano</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Mediolano</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mediolano</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ACHRA</Tag>
+		<English>Achra</English>
+		<French>
+			<Text>Achra</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Achra</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Achra</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Achra</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ATINA</Tag>
+		<English>Atina</English>
+		<French>
+			<Text>Atina</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Atina</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Atina</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Atina</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+</Civ4GameText>

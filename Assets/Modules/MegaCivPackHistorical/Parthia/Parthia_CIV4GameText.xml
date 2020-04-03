@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- ReModified by the StrategyOnly -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_PARTHIA_DESC</Tag>
+		<English>Parthian Empire</English>
+		<French>Parthian Empire</French>
+		<German>Parthian Empire</German>
+		<Italian>Parthian Empire</Italian>
+		<Spanish>Parthian Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_PARTHIA_SHORT_DESC</Tag>
+		<English>Parthia</English>
+		<French>Parthia</French>
+		<German>Parthia</German>
+		<Italian>Parthia</Italian>
+		<Spanish>Parthia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_PARTHIA_PEDIA</Tag>
+		<English>[TAB]The Parthian Empire, also known as the Arsacid Empire, was a major Iranian political 
+and cultural power in ancient Iran.  Its latter name comes from Arsaces I of Parthia who, as leader of 
+the Parni tribe, founded it in the mid-3rd century BC when he conquered the region of Parthia in Iran's 
+northeast, then a satrapy (province) in rebellion against the Seleucid Empire. Mithridates I of Parthia 
+(r. c. 171-138 BC) greatly expanded the empire by seizing Media and Mesopotamia from the Seleucids. At 
+its height, the Parthian Empire stretched from the northern reaches of the Euphrates, in what is now 
+central-eastern Turkey, to eastern Iran. The empire, located on the Silk Road trade route between the 
+Roman Empire in the Mediterranean Basin and the Han Empire of China, became a center of trade and commerce.</English>
+		<French>[TAB]The Parthian Empire, also known as the Arsacid Empire, was a major Iranian political and 
+cultural power in ancient Iran.  Its latter name comes from Arsaces I of Parthia who, as leader of the 
+Parni tribe, founded it in the mid-3rd century BC when he conquered the region of Parthia in Iran's northeast, 
+then a satrapy (province) in rebellion against the Seleucid Empire. Mithridates I of Parthia (r. c. 171-138 
+BC) greatly expanded the empire by seizing Media and Mesopotamia from the Seleucids. At its height, the 
+Parthian Empire stretched from the northern reaches of the Euphrates, in what is now central-eastern 
+Turkey, to eastern Iran. The empire, located on the Silk Road trade route between the Roman Empire in 
+the Mediterranean Basin and the Han Empire of China, became a center of trade and commerce.</French>
+		<German>[TAB]The Parthian Empire, also known as the Arsacid Empire, was a major Iranian political and 
+cultural power in ancient Iran.  Its latter name comes from Arsaces I of Parthia who, as leader of the 
+Parni tribe, founded it in the mid-3rd century BC when he conquered the region of Parthia in Iran's northeast, 
+then a satrapy (province) in rebellion against the Seleucid Empire. Mithridates I of Parthia (r. c. 171-138 
+BC) greatly expanded the empire by seizing Media and Mesopotamia from the Seleucids. At its height, the 
+Parthian Empire stretched from the northern reaches of the Euphrates, in what is now central-eastern 
+Turkey, to eastern Iran. The empire, located on the Silk Road trade route between the Roman Empire in 
+the Mediterranean Basin and the Han Empire of China, became a center of trade and commerce.</German>
+		<Italian>[TAB]The Parthian Empire, also known as the Arsacid Empire, was a major Iranian political 
+and cultural power in ancient Iran.  Its latter name comes from Arsaces I of Parthia who, as leader of 
+the Parni tribe, founded it in the mid-3rd century BC when he conquered the region of Parthia in Iran's 
+northeast, then a satrapy (province) in rebellion against the Seleucid Empire. Mithridates I of Parthia 
+(r. c. 171-138 BC) greatly expanded the empire by seizing Media and Mesopotamia from the Seleucids. At 
+its height, the Parthian Empire stretched from the northern reaches of the Euphrates, in what is now 
+central-eastern Turkey, to eastern Iran. The empire, located on the Silk Road trade route between the 
+Roman Empire in the Mediterranean Basin and the Han Empire of China, became a center of trade and commerce.</Italian>
+		<Spanish>[TAB]The Parthian Empire, also known as the Arsacid Empire, was a major Iranian political 
+and cultural power in ancient Iran.  Its latter name comes from Arsaces I of Parthia who, as leader of 
+the Parni tribe, founded it in the mid-3rd century BC when he conquered the region of Parthia in Iran's 
+northeast, then a satrapy (province) in rebellion against the Seleucid Empire. Mithridates I of Parthia 
+(r. c. 171-138 BC) greatly expanded the empire by seizing Media and Mesopotamia from the Seleucids. At 
+its height, the Parthian Empire stretched from the northern reaches of the Euphrates, in what is now 
+central-eastern Turkey, to eastern Iran. The empire, located on the Silk Road trade route between the 
+Roman Empire in the Mediterranean Basin and the Han Empire of China, became a center of trade and commerce.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_PARTHIA_ADJECTIVE</Tag>
+		<English>Parthian</English>
+		<French>Parthian</French>
+		<German>Parthian</German>
+		<Italian>Parthian</Italian>
+		<Spanish>Parthian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_ARSACES</Tag>
+		<English>Arsaces</English>
+		<French>Arsaces</French>
+		<German>Arsaces</German>
+		<Italian>Arsaces</Italian>
+		<Spanish>Arsaces</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_ARSACES_PEDIA</Tag>
+		<English>[H1]Arsaces I of Parthia [\H1][NEWLINE][BOLD]King of Parthia[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 3th Century BC[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Arsaces I was the founder of the Arsacid dynasty, and after whom all 30+ monarchs of the Arsacid empire officially named themselves. A celebrated descent from antiquity (the Bagratid "line") begins with Arsaces. Arsaces or Ashk has also given name to the city of Ashkabad.</English>
+		<French>[H1]Arsaces I of Parthia [\H1][NEWLINE][BOLD]King of Parthia[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 3th Century BC[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Arsaces I was the founder of the Arsacid dynasty, and after whom all 30+ monarchs of the Arsacid empire officially named themselves. A celebrated descent from antiquity (the Bagratid "line") begins with Arsaces. Arsaces or Ashk has also given name to the city of Ashkabad.</French>
+		<German>[H1]Arsaces I of Parthia [\H1][NEWLINE][BOLD]King of Parthia[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 3th Century BC[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Arsaces I was the founder of the Arsacid dynasty, and after whom all 30+ monarchs of the Arsacid empire officially named themselves. A celebrated descent from antiquity (the Bagratid "line") begins with Arsaces. Arsaces or Ashk has also given name to the city of Ashkabad.</German>
+		<Italian>[H1]Arsaces I of Parthia [\H1][NEWLINE][BOLD]King of Parthia[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 3th Century BC[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Arsaces I was the founder of the Arsacid dynasty, and after whom all 30+ monarchs of the Arsacid empire officially named themselves. A celebrated descent from antiquity (the Bagratid "line") begins with Arsaces. Arsaces or Ashk has also given name to the city of Ashkabad.</Italian>
+		<Spanish>[H1]Arsaces I of Parthia [\H1][NEWLINE][BOLD]King of Parthia[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 3th Century BC[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Arsaces I was the founder of the Arsacid dynasty, and after whom all 30+ monarchs of the Arsacid empire officially named themselves. A celebrated descent from antiquity (the Bagratid "line") begins with Arsaces. Arsaces or Ashk has also given name to the city of Ashkabad.</Spanish>
+	</TEXT>
+</Civ4GameText>

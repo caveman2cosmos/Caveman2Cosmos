@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- Modified by the Civ Gold Team -->
+	<!-- -->
+<Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Xml\Schema\Caveman2Cosmos.xsd">
+	<LeaderheadArtInfos>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_BABUR</Type>
+			<Button>Modules/Custom_Civilizations/Mughals/leaders/Babur_small.dds</Button>
+			<NIF>Modules/Custom_Civilizations/Mughals/leaders/Babur.dds</NIF>
+			<KFM/>
+			<NoShaderNIF/>
+			<BackgroundKFM/>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_AKBAR</Type>
+			<Button>Modules/Custom_Civilizations/Mughals/leaders/Akbar_small.dds</Button>
+			<NIF>Modules/Custom_Civilizations/Mughals/leaders/Akbar.dds</NIF>
+			<KFM/>
+			<NoShaderNIF/>
+			<BackgroundKFM/>
+		</LeaderheadArtInfo>
+	</LeaderheadArtInfos>
+</Civ4ArtDefines>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- ReModified by the StrategyOnly -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_IRAQ_DESC</Tag>
+		<English>Iraqi Empire</English>
+		<French>Iraqi Empire</French>
+		<German>Iraqi Empire</German>
+		<Italian>Iraqi Empire</Italian>
+		<Spanish>Iraqi Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_IRAQ_SHORT_DESC</Tag>
+		<English>Iraq</English>
+		<French>Iraq</French>
+		<German>Iraq</German>
+		<Italian>Iraq</Italian>
+		<Spanish>Iraq</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_IRAQ_PEDIA</Tag>
+		<English>[TAB]Iraq, officially the Republic of Iraq, is a country in Western Asia. The country borders 
+Turkey to the north, Iran to the east, Kuwait to the southeast, Saudi Arabia to the south, Jordan to 
+the southwest, and Syria to the west. The southern part of Iraq is within the Arabian Peninsula. The 
+capital, Baghdad, is in the center of the country and its largest city. The largest ethnic groups in 
+Iraq are Arabs and Kurds. Other ethnic groups include Assyrians, Turkmen, Shabakis, Armenians, Mandeans, 
+Circassians and Kawliya. Around 95% of the country's 36 million citizens are Shia or Sunni Muslims, with 
+Christianity, Yarsan, Yezidism and Mandeanism also present. Iraq has a narrow section of coastline measuring 
+58 km (36 mi) on the northern Persian Gulf and its territory encompasses the Mesopotamian Alluvial Plain, 
+the northwestern end of the Zagros mountain range, and the eastern part of the Syrian Desert. Two major 
+rivers, the Tigris and Euphrates, run south through the center of Iraq and flow into the Shatt al-Arab 
+near the Persian Gulf. These rivers provide Iraq with significant amounts of fertile land.</English>
+		<French>[TAB]Iraq, officially the Republic of Iraq, is a country in Western Asia. The country borders 
+Turkey to the north, Iran to the east, Kuwait to the southeast, Saudi Arabia to the south, Jordan to 
+the southwest, and Syria to the west. The southern part of Iraq is within the Arabian Peninsula. The 
+capital, Baghdad, is in the center of the country and its largest city. The largest ethnic groups in 
+Iraq are Arabs and Kurds. Other ethnic groups include Assyrians, Turkmen, Shabakis, Armenians, Mandeans, 
+Circassians and Kawliya. Around 95% of the country's 36 million citizens are Shia or Sunni Muslims, with 
+Christianity, Yarsan, Yezidism and Mandeanism also present. Iraq has a narrow section of coastline measuring 
+58 km (36 mi) on the northern Persian Gulf and its territory encompasses the Mesopotamian Alluvial Plain, 
+the northwestern end of the Zagros mountain range, and the eastern part of the Syrian Desert. Two major 
+rivers, the Tigris and Euphrates, run south through the center of Iraq and flow into the Shatt al-Arab 
+near the Persian Gulf. These rivers provide Iraq with significant amounts of fertile land.</French>
+		<German>[TAB]Iraq, officially the Republic of Iraq, is a country in Western Asia. The country borders 
+Turkey to the north, Iran to the east, Kuwait to the southeast, Saudi Arabia to the south, Jordan to 
+the southwest, and Syria to the west. The southern part of Iraq is within the Arabian Peninsula. The 
+capital, Baghdad, is in the center of the country and its largest city. The largest ethnic groups in 
+Iraq are Arabs and Kurds. Other ethnic groups include Assyrians, Turkmen, Shabakis, Armenians, Mandeans, 
+Circassians and Kawliya. Around 95% of the country's 36 million citizens are Shia or Sunni Muslims, with 
+Christianity, Yarsan, Yezidism and Mandeanism also present. Iraq has a narrow section of coastline measuring 
+58 km (36 mi) on the northern Persian Gulf and its territory encompasses the Mesopotamian Alluvial Plain, 
+the northwestern end of the Zagros mountain range, and the eastern part of the Syrian Desert. Two major 
+rivers, the Tigris and Euphrates, run south through the center of Iraq and flow into the Shatt al-Arab 
+near the Persian Gulf. These rivers provide Iraq with significant amounts of fertile land.</German>
+		<Italian>[TAB]Iraq, officially the Republic of Iraq, is a country in Western Asia. The country borders 
+Turkey to the north, Iran to the east, Kuwait to the southeast, Saudi Arabia to the south, Jordan to 
+the southwest, and Syria to the west. The southern part of Iraq is within the Arabian Peninsula. The 
+capital, Baghdad, is in the center of the country and its largest city. The largest ethnic groups in 
+Iraq are Arabs and Kurds. Other ethnic groups include Assyrians, Turkmen, Shabakis, Armenians, Mandeans, 
+Circassians and Kawliya. Around 95% of the country's 36 million citizens are Shia or Sunni Muslims, with 
+Christianity, Yarsan, Yezidism and Mandeanism also present. Iraq has a narrow section of coastline measuring 
+58 km (36 mi) on the northern Persian Gulf and its territory encompasses the Mesopotamian Alluvial Plain, 
+the northwestern end of the Zagros mountain range, and the eastern part of the Syrian Desert. Two major 
+rivers, the Tigris and Euphrates, run south through the center of Iraq and flow into the Shatt al-Arab 
+near the Persian Gulf. These rivers provide Iraq with significant amounts of fertile land.</Italian>
+		<Spanish>[TAB]Iraq, officially the Republic of Iraq, is a country in Western Asia. The country borders 
+Turkey to the north, Iran to the east, Kuwait to the southeast, Saudi Arabia to the south, Jordan to 
+the southwest, and Syria to the west. The southern part of Iraq is within the Arabian Peninsula. The 
+capital, Baghdad, is in the center of the country and its largest city. The largest ethnic groups in 
+Iraq are Arabs and Kurds. Other ethnic groups include Assyrians, Turkmen, Shabakis, Armenians, Mandeans, 
+Circassians and Kawliya. Around 95% of the country's 36 million citizens are Shia or Sunni Muslims, with 
+Christianity, Yarsan, Yezidism and Mandeanism also present. Iraq has a narrow section of coastline measuring 
+58 km (36 mi) on the northern Persian Gulf and its territory encompasses the Mesopotamian Alluvial Plain, 
+the northwestern end of the Zagros mountain range, and the eastern part of the Syrian Desert. Two major 
+rivers, the Tigris and Euphrates, run south through the center of Iraq and flow into the Shatt al-Arab 
+near the Persian Gulf. These rivers provide Iraq with significant amounts of fertile land.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_IRAQ_ADJECTIVE</Tag>
+		<English>Iraqi</English>
+		<French>Iraqi</French>
+		<German>Iraqi</German>
+		<Italian>Iraqi</Italian>
+		<Spanish>Iraqi</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SADDAM</Tag>
+		<English>Saddam Hussein</English>
+		<French>Saddam Hussein</French>
+		<German>Saddam Hussein</German>
+		<Italian>Saddam Hussein</Italian>
+		<Spanish>Saddam Hussein</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SADDAM_PEDIA</Tag>
+		<English>[H1]Saddam Hussein [\H1][NEWLINE][BOLD]President of Iraq[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 
+28 April 1937 - 30 December 2006[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Saddam Hussein 
+Abd al-Majid al-Tikriti was the fifth President of Iraq, serving in this capacity from 16 July 1979 until 
+9 April 2003.[5][6] A leading member of the revolutionary Arab Socialist Ba'ath Party, and later, the 
+Baghdad-based Ba'ath Party and its regional organization Ba'ath Party - Iraq Region-which espoused ba'athism, 
+a mix of Arab nationalism and Arab socialism-Saddam played a key role in the 1968 coup (later referred 
+to as the 17 July Revolution) that brought the party to power in Iraq. As vice president under the ailing 
+General Ahmed Hassan al-Bakr, and at a time when many groups were considered capable of overthrowing 
+the government, Saddam created security forces through which he tightly controlled conflict between the 
+government and the armed forces. In the early 1970s, Saddam nationalized oil and other industries. The 
+state-owned banks were put under his control, leaving the system eventually insolvent mostly due to the 
+Iran-Iraq War, the Gulf War, and UN sanctions. Through the 1970s, Saddam cemented his authority over 
+the apparatuses of government as oil money helped Iraq's economy to grow at a rapid pace. Positions of 
+power in the country were mostly filled with Sunnis, a minority that made up only a fifth of the population.</English>
+		<French>[H1]Saddam Hussein [\H1][NEWLINE][BOLD]President of Iraq[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 
+28 April 1937 - 30 December 2006[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Saddam Hussein 
+Abd al-Majid al-Tikriti was the fifth President of Iraq, serving in this capacity from 16 July 1979 until 
+9 April 2003.[5][6] A leading member of the revolutionary Arab Socialist Ba'ath Party, and later, the 
+Baghdad-based Ba'ath Party and its regional organization Ba'ath Party - Iraq Region-which espoused ba'athism, 
+a mix of Arab nationalism and Arab socialism-Saddam played a key role in the 1968 coup (later referred 
+to as the 17 July Revolution) that brought the party to power in Iraq. As vice president under the ailing 
+General Ahmed Hassan al-Bakr, and at a time when many groups were considered capable of overthrowing 
+the government, Saddam created security forces through which he tightly controlled conflict between the 
+government and the armed forces. In the early 1970s, Saddam nationalized oil and other industries. The 
+state-owned banks were put under his control, leaving the system eventually insolvent mostly due to the 
+Iran-Iraq War, the Gulf War, and UN sanctions. Through the 1970s, Saddam cemented his authority over 
+the apparatuses of government as oil money helped Iraq's economy to grow at a rapid pace. Positions of 
+power in the country were mostly filled with Sunnis, a minority that made up only a fifth of the population.</French>
+		<German>[H1]Saddam Hussein [\H1][NEWLINE][BOLD]President of Iraq[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 
+28 April 1937 - 30 December 2006[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Saddam Hussein 
+Abd al-Majid al-Tikriti was the fifth President of Iraq, serving in this capacity from 16 July 1979 until 
+9 April 2003.[5][6] A leading member of the revolutionary Arab Socialist Ba'ath Party, and later, the 
+Baghdad-based Ba'ath Party and its regional organization Ba'ath Party - Iraq Region-which espoused ba'athism, 
+a mix of Arab nationalism and Arab socialism-Saddam played a key role in the 1968 coup (later referred 
+to as the 17 July Revolution) that brought the party to power in Iraq. As vice president under the ailing 
+General Ahmed Hassan al-Bakr, and at a time when many groups were considered capable of overthrowing 
+the government, Saddam created security forces through which he tightly controlled conflict between the 
+government and the armed forces. In the early 1970s, Saddam nationalized oil and other industries. The 
+state-owned banks were put under his control, leaving the system eventually insolvent mostly due to the 
+Iran-Iraq War, the Gulf War, and UN sanctions. Through the 1970s, Saddam cemented his authority over 
+the apparatuses of government as oil money helped Iraq's economy to grow at a rapid pace. Positions of 
+power in the country were mostly filled with Sunnis, a minority that made up only a fifth of the population.</German>
+		<Italian>[H1]Saddam Hussein [\H1][NEWLINE][BOLD]President of Iraq[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 
+28 April 1937 - 30 December 2006[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Saddam Hussein 
+Abd al-Majid al-Tikriti was the fifth President of Iraq, serving in this capacity from 16 July 1979 until 
+9 April 2003.[5][6] A leading member of the revolutionary Arab Socialist Ba'ath Party, and later, the 
+Baghdad-based Ba'ath Party and its regional organization Ba'ath Party - Iraq Region-which espoused ba'athism, 
+a mix of Arab nationalism and Arab socialism-Saddam played a key role in the 1968 coup (later referred 
+to as the 17 July Revolution) that brought the party to power in Iraq. As vice president under the ailing 
+General Ahmed Hassan al-Bakr, and at a time when many groups were considered capable of overthrowing 
+the government, Saddam created security forces through which he tightly controlled conflict between the 
+government and the armed forces. In the early 1970s, Saddam nationalized oil and other industries. The 
+state-owned banks were put under his control, leaving the system eventually insolvent mostly due to the 
+Iran-Iraq War, the Gulf War, and UN sanctions. Through the 1970s, Saddam cemented his authority over 
+the apparatuses of government as oil money helped Iraq's economy to grow at a rapid pace. Positions of 
+power in the country were mostly filled with Sunnis, a minority that made up only a fifth of the population.</Italian>
+		<Spanish>[H1]Saddam Hussein [\H1][NEWLINE][BOLD]President of Iraq[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 
+28 April 1937 - 30 December 2006[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Saddam Hussein 
+Abd al-Majid al-Tikriti was the fifth President of Iraq, serving in this capacity from 16 July 1979 until 
+9 April 2003.[5][6] A leading member of the revolutionary Arab Socialist Ba'ath Party, and later, the 
+Baghdad-based Ba'ath Party and its regional organization Ba'ath Party - Iraq Region-which espoused ba'athism, 
+a mix of Arab nationalism and Arab socialism-Saddam played a key role in the 1968 coup (later referred 
+to as the 17 July Revolution) that brought the party to power in Iraq. As vice president under the ailing 
+General Ahmed Hassan al-Bakr, and at a time when many groups were considered capable of overthrowing 
+the government, Saddam created security forces through which he tightly controlled conflict between the 
+government and the armed forces. In the early 1970s, Saddam nationalized oil and other industries. The 
+state-owned banks were put under his control, leaving the system eventually insolvent mostly due to the 
+Iran-Iraq War, the Gulf War, and UN sanctions. Through the 1970s, Saddam cemented his authority over 
+the apparatuses of government as oil money helped Iraq's economy to grow at a rapid pace. Positions of 
+power in the country were mostly filled with Sunnis, a minority that made up only a fifth of the population.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SADDAM_1</Tag>
+		<English>Greetings, [CT_NAME]. I am [OUR_NAME] of the [OUR_EMPIRE]. Love truth even if it harms you, and hate lies even if they serve you. These are words of wisdom to live by.</English>
+		<French>Greetings, [CT_NAME]. I am [OUR_NAME] of the [OUR_EMPIRE]. Love truth even if it harms you, and hate lies even if they serve you. These are words of wisdom to live by.</French>
+		<German>Greetings, [CT_NAME]. I am [OUR_NAME] of the [OUR_EMPIRE]. Love truth even if it harms you, and hate lies even if they serve you. These are words of wisdom to live by.</German>
+		<Italian>Greetings, [CT_NAME]. I am [OUR_NAME] of the [OUR_EMPIRE]. Love truth even if it harms you, and hate lies even if they serve you. These are words of wisdom to live by.</Italian>
+		<Spanish>Greetings, [CT_NAME]. I am [OUR_NAME] of the [OUR_EMPIRE]. Love truth even if it harms you, and hate lies even if they serve you. These are words of wisdom to live by.</Spanish>
+	</TEXT>
+</Civ4GameText>

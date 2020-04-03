@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- re-Modified by Strategyonly -->
+<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MANCHURIA_DESC</Tag>
+		<English>Manchuria</English>
+		<French>Manchuria</French>
+		<German>Manchuria</German>
+		<Italian>Manchuria</Italian>
+		<Spanish>Manchuria</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MANCHURIA_SHORT_DESC</Tag>
+		<English>Manchuria</English>
+		<French>Manchuria</French>
+		<German>Manchuria</German>
+		<Italian>Manchuria</Italian>
+		<Spanish>Manchuria</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MANCHURIA_ADJECTIVE</Tag>
+		<English>Manchuria</English>
+		<French>Manchuria</French>
+		<German>Manchuria</German>
+		<Italian>Manchuria</Italian>
+		<Spanish>Manchuria</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MANCHURIA_PEDIA</Tag>
+		<English>[TAB]Manchuria was the homeland of several nomadic tribes, including the Manchu, Ulchs and Hezhen. Various ethnic groups and their respective kingdoms, including the Sushen, Donghu, Xianbei, Wuhuan, Mohe, Khitan and Jurchens have risen to power in Manchuria. At various times in this time period, Han Dynasty, Cao Wei Dynasty, Western Jin Dynasty, Tang Dynasty and some other minor kingdoms of China established control in parts of Manchuria and in some cases tributary relations with peoples in the area.[PARAGRAPH:2]"Manchuria" is a translation of the Japanese word Manshu, which dates from the 19th century. The name Manju was invented and given to the Jurchen people by Nurhaci, however, the name "Manchuria" was never used by the Manchus or the Qing dynasty itself to refer to their homeland. A Japanese, Takahashi Kageyasu invented the name Manchuria in 1809 in the Nippon Henkai Ryakuzu, from where Westerners adopted the name. Manchuria was converted into three provinces by the late Qing government. Since then, the "Three Northeast Provinces" was officially used by the Qing government in China to refer to this region, and the post of Viceroy of Three Northeast Provinces was established to take charge of these provinces. After the 1911 revolution, which resulted in the collapse of the Manchu-established Qing Dynasty, the name of the region where the Manchus originated was known as the Northeast in official documents in the newly founded Republic of China, in addition to the "Three Northeast Provinces".</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_NURHACHI</Tag>
+		<English>Nurhachi</English>
+		<French>Nurhachi</French>
+		<German>Nurhachi</German>
+		<Italian>Nurhachi</Italian>
+		<Spanish>Nurhachi</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_NURHACHI_PEDIA</Tag>
+		<English>[H1]Nurhachi[\H1][NEWLINE][BOLD]Xiongnu King[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.21 February 1559 – 30 September 1626[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Taizu of Qing - Aisin-Gioro Nurhaci, he declared himself the Khan and founded the Jin Dynasty, often called Later Jin. Nurhaci is the founder and captain of Eight-Banner soldiers.  Nurhaci was born in 1559. Being a member of the Gioro clan of the Suksuhu River tribe, Nurhaci also claimed descent from Möngke Temür, a Mongol-Jurchen headman who lived some two centuries earlier. According to Chinese sources, the young man grew up as a soldier in the household of Ming Dynasty General Li Chengliang in Fushun, where he learned Chinese. He named his clan Aisin Gioro around 1612, when he formally ascended the throne as Khan of Later Jin[PARAGRAPH:1]Nurhaci was part of the Aisin Gioro clan, and reigned from 1616 to his death in September 1626.[PARAGRAPH:1]Nurhaci reorganized and united various Jurchen tribes (the later "Manchu"), consolidated the Eight Banners military system, and eventually launched an assault on the Ming Dynasty and Korea's Joseon Dynasty. His conquest of China's northeastern Liaoning province laid the groundwork for the conquest of the rest of China by his descendants, who would go on to found the Qing Dynasty in 1644. He is also generally credited with the creation of a written script for the Manchu language.[PARAGRAPH:1]In 1626 he was defeated by Ming forces and died of battle wounds.[PARAGRAPH:1]</English>
+		<French>[H1]Nurhachi[\H1][NEWLINE][BOLD]Xiongnu King[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.21 February 1559 – 30 September 1626[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Taizu of Qing - Aisin-Gioro Nurhaci, he declared himself the Khan and founded the Jin Dynasty, often called Later Jin. Nurhaci is the founder and captain of Eight-Banner soldiers.  Nurhaci was born in 1559. Being a member of the Gioro clan of the Suksuhu River tribe, Nurhaci also claimed descent from Möngke Temür, a Mongol-Jurchen headman who lived some two centuries earlier. According to Chinese sources, the young man grew up as a soldier in the household of Ming Dynasty General Li Chengliang in Fushun, where he learned Chinese. He named his clan Aisin Gioro around 1612, when he formally ascended the throne as Khan of Later Jin[PARAGRAPH:1]Nurhaci was part of the Aisin Gioro clan, and reigned from 1616 to his death in September 1626.[PARAGRAPH:1]Nurhaci reorganized and united various Jurchen tribes (the later "Manchu"), consolidated the Eight Banners military system, and eventually launched an assault on the Ming Dynasty and Korea's Joseon Dynasty. His conquest of China's northeastern Liaoning province laid the groundwork for the conquest of the rest of China by his descendants, who would go on to found the Qing Dynasty in 1644. He is also generally credited with the creation of a written script for the Manchu language.[PARAGRAPH:1]In 1626 he was defeated by Ming forces and died of battle wounds.[PARAGRAPH:1]</French>
+		<German>[H1]Nurhachi[\H1][NEWLINE][BOLD]Xiongnu King[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.21 February 1559 – 30 September 1626[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Taizu of Qing - Aisin-Gioro Nurhaci, he declared himself the Khan and founded the Jin Dynasty, often called Later Jin. Nurhaci is the founder and captain of Eight-Banner soldiers.  Nurhaci was born in 1559. Being a member of the Gioro clan of the Suksuhu River tribe, Nurhaci also claimed descent from Möngke Temür, a Mongol-Jurchen headman who lived some two centuries earlier. According to Chinese sources, the young man grew up as a soldier in the household of Ming Dynasty General Li Chengliang in Fushun, where he learned Chinese. He named his clan Aisin Gioro around 1612, when he formally ascended the throne as Khan of Later Jin[PARAGRAPH:1]Nurhaci was part of the Aisin Gioro clan, and reigned from 1616 to his death in September 1626.[PARAGRAPH:1]Nurhaci reorganized and united various Jurchen tribes (the later "Manchu"), consolidated the Eight Banners military system, and eventually launched an assault on the Ming Dynasty and Korea's Joseon Dynasty. His conquest of China's northeastern Liaoning province laid the groundwork for the conquest of the rest of China by his descendants, who would go on to found the Qing Dynasty in 1644. He is also generally credited with the creation of a written script for the Manchu language.[PARAGRAPH:1]In 1626 he was defeated by Ming forces and died of battle wounds.[PARAGRAPH:1]</German>
+		<Italian>[H1]Nurhachi[\H1][NEWLINE][BOLD]Xiongnu King[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.21 February 1559 – 30 September 1626[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Taizu of Qing - Aisin-Gioro Nurhaci, he declared himself the Khan and founded the Jin Dynasty, often called Later Jin. Nurhaci is the founder and captain of Eight-Banner soldiers.  Nurhaci was born in 1559. Being a member of the Gioro clan of the Suksuhu River tribe, Nurhaci also claimed descent from Möngke Temür, a Mongol-Jurchen headman who lived some two centuries earlier. According to Chinese sources, the young man grew up as a soldier in the household of Ming Dynasty General Li Chengliang in Fushun, where he learned Chinese. He named his clan Aisin Gioro around 1612, when he formally ascended the throne as Khan of Later Jin[PARAGRAPH:1]Nurhaci was part of the Aisin Gioro clan, and reigned from 1616 to his death in September 1626.[PARAGRAPH:1]Nurhaci reorganized and united various Jurchen tribes (the later "Manchu"), consolidated the Eight Banners military system, and eventually launched an assault on the Ming Dynasty and Korea's Joseon Dynasty. His conquest of China's northeastern Liaoning province laid the groundwork for the conquest of the rest of China by his descendants, who would go on to found the Qing Dynasty in 1644. He is also generally credited with the creation of a written script for the Manchu language.[PARAGRAPH:1]In 1626 he was defeated by Ming forces and died of battle wounds.[PARAGRAPH:1]</Italian>
+		<Spanish>[H1]Nurhachi[\H1][NEWLINE][BOLD]Xiongnu King[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.21 February 1559 – 30 September 1626[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Taizu of Qing - Aisin-Gioro Nurhaci, he declared himself the Khan and founded the Jin Dynasty, often called Later Jin. Nurhaci is the founder and captain of Eight-Banner soldiers.  Nurhaci was born in 1559. Being a member of the Gioro clan of the Suksuhu River tribe, Nurhaci also claimed descent from Möngke Temür, a Mongol-Jurchen headman who lived some two centuries earlier. According to Chinese sources, the young man grew up as a soldier in the household of Ming Dynasty General Li Chengliang in Fushun, where he learned Chinese. He named his clan Aisin Gioro around 1612, when he formally ascended the throne as Khan of Later Jin[PARAGRAPH:1]Nurhaci was part of the Aisin Gioro clan, and reigned from 1616 to his death in September 1626.[PARAGRAPH:1]Nurhaci reorganized and united various Jurchen tribes (the later "Manchu"), consolidated the Eight Banners military system, and eventually launched an assault on the Ming Dynasty and Korea's Joseon Dynasty. His conquest of China's northeastern Liaoning province laid the groundwork for the conquest of the rest of China by his descendants, who would go on to found the Qing Dynasty in 1644. He is also generally credited with the creation of a written script for the Manchu language.[PARAGRAPH:1]In 1626 he was defeated by Ming forces and died of battle wounds.[PARAGRAPH:1]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_NURHACHI_1</Tag>
+		<English>Greetings, [CT_NAME]! Demand my saddle - I'll give it to you, demand my horse - I'll give it to you, demand my tent - I'll give it to you. But do not demand a single piece of my homeland.</English>
+		<French>Greetings, [CT_NAME]! Demand my saddle - I'll give it to you, demand my horse - I'll give it to you, demand my tent - I'll give it to you. But do not demand a single piece of my homeland.</French>
+		<German>Greetings, [CT_NAME]! Demand my saddle - I'll give it to you, demand my horse - I'll give it to you, demand my tent - I'll give it to you. But do not demand a single piece of my homeland.</German>
+		<Italian>Saluti, [CT_NAME]! Chiedimi la mia sella e io te la darò; chiedimi il mio cavallo e io te lo darò; chiedimi la mia tenda e io te la darò. Ma non chiedermi un singolo pezzo della mia terra natale.</Italian>
+		<Spanish>Greetings, [CT_NAME]! Demand my saddle - I'll give it to you, demand my horse - I'll give it to you, demand my tent - I'll give it to you. But do not demand a single piece of my homeland.</Spanish>
+	</TEXT>
+</Civ4GameText>

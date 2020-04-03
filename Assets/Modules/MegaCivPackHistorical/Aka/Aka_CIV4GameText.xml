@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- ReModified by the StrategyOnly -->
+<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_AKA_DESC</Tag>
+		<English>Aka Empire</English>
+		<French>Aka Empire</French>
+		<German>Aka Empire</German>
+		<Italian>Aka Empire</Italian>
+		<Spanish>Aka Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_AKA_SHORT_DESC</Tag>
+		<English>Aka</English>
+		<French>Aka</French>
+		<German>Aka</German>
+		<Italian>Aka</Italian>
+		<Spanish>Aka</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_AKA_ADJECTIVE</Tag>
+		<English>Aka</English>
+		<French>Aka</French>
+		<German>Aka</German>
+		<Italian>Aka</Italian>
+		<Spanish>Aka</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_AKA_PEDIA</Tag>
+		<English>[TAB]The Aka or Bayaka are a nomadic Mbenga pygmy people. They live in southwestern Central African Republic and the Brazzaville region of the Republic of the Congo. An ecologically diverse people, they occupy 11
+		different ecological zones of the Western Congo Basin. They are related to the Baka people of Cameroon, Gabon, northern Congo, and southwestern Central African Republic.
+Unlike the Mbuti pygmies of the eastern Congo (who speak only the language of the tribes with whom they are affiliated), the Aka speak their own language along with whichever of the approximately 15 Bantu peoples they are
+ affiliated.
+In 2003, the oral traditions of the Aka were proclaimed one of the Masterpieces of the Oral and Intangible Heritage of Humanity by UNESCO. They were featured in the July 1995 National Geographic article "Ndoki: the Last Place on
+ Earth".</English>
+		<French>[TAB]The Aka or Bayaka are a nomadic Mbenga pygmy people. They live in southwestern Central African Republic and the Brazzaville region of the Republic of the Congo. An ecologically diverse people, they occupy 11
+		different ecological zones of the Western Congo Basin. They are related to the Baka people of Cameroon, Gabon, northern Congo, and southwestern Central African Republic.
+Unlike the Mbuti pygmies of the eastern Congo (who speak only the language of the tribes with whom they are affiliated), the Aka speak their own language along with whichever of the approximately 15 Bantu peoples they are
+ affiliated.
+In 2003, the oral traditions of the Aka were proclaimed one of the Masterpieces of the Oral and Intangible Heritage of Humanity by UNESCO. They were featured in the July 1995 National Geographic article "Ndoki: the Last Place on
+ Earth".</French>
+		<German>[TAB]The Aka or Bayaka are a nomadic Mbenga pygmy people. They live in southwestern Central African Republic and the Brazzaville region of the Republic of the Congo. An ecologically diverse people, they occupy 11
+		different ecological zones of the Western Congo Basin. They are related to the Baka people of Cameroon, Gabon, northern Congo, and southwestern Central African Republic.
+Unlike the Mbuti pygmies of the eastern Congo (who speak only the language of the tribes with whom they are affiliated), the Aka speak their own language along with whichever of the approximately 15 Bantu peoples they are
+ affiliated.
+In 2003, the oral traditions of the Aka were proclaimed one of the Masterpieces of the Oral and Intangible Heritage of Humanity by UNESCO. They were featured in the July 1995 National Geographic article "Ndoki: the Last Place on
+ Earth".</German>
+		<Italian>[TAB]The Aka or Bayaka are a nomadic Mbenga pygmy people. They live in southwestern Central African Republic and the Brazzaville region of the Republic of the Congo. An ecologically diverse people, they occupy 11
+		different ecological zones of the Western Congo Basin. They are related to the Baka people of Cameroon, Gabon, northern Congo, and southwestern Central African Republic.
+Unlike the Mbuti pygmies of the eastern Congo (who speak only the language of the tribes with whom they are affiliated), the Aka speak their own language along with whichever of the approximately 15 Bantu peoples they are
+ affiliated.
+In 2003, the oral traditions of the Aka were proclaimed one of the Masterpieces of the Oral and Intangible Heritage of Humanity by UNESCO. They were featured in the July 1995 National Geographic article "Ndoki: the Last Place on
+ Earth".</Italian>
+		<Spanish>[TAB]The Aka or Bayaka are a nomadic Mbenga pygmy people. They live in southwestern Central African Republic and the Brazzaville region of the Republic of the Congo. An ecologically diverse people, they occupy 11
+		different ecological zones of the Western Congo Basin. They are related to the Baka people of Cameroon, Gabon, northern Congo, and southwestern Central African Republic.
+Unlike the Mbuti pygmies of the eastern Congo (who speak only the language of the tribes with whom they are affiliated), the Aka speak their own language along with whichever of the approximately 15 Bantu peoples they are
+ affiliated.
+In 2003, the oral traditions of the Aka were proclaimed one of the Masterpieces of the Oral and Intangible Heritage of Humanity by UNESCO. They were featured in the July 1995 National Geographic article "Ndoki: the Last Place on
+ Earth".</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_AKA</Tag>
+		<English>Aka Chief</English>
+		<French>Aka Chief</French>
+		<German>Aka Chief</German>
+		<Italian>Aka Chief</Italian>
+		<Spanish>Aka Chief</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_AKA_PEDIA</Tag>
+		<English>A chief of the Aka people</English>
+		<French>A chief of the Aka people</French>
+		<German>A chief of the Aka people</German>
+		<Italian>A chief of the Aka people</Italian>
+		<Spanish>A chief of the Aka people</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_Aka_1</Tag>
+		<English>Greetings, [CT_NAME]. Welcome to my humble house. I hope our peoples can work together to make this world a better place.</English>
+		<French>Greetings, [CT_NAME]. Welcome to my humble house. I hope our peoples can work together to make this world a better place.</French>
+		<German>Greetings, [CT_NAME]. Welcome to my humble house. I hope our peoples can work together to make this world a better place.</German>
+		<Italian>Greetings, [CT_NAME]. Welcome to my humble house. I hope our peoples can work together to make this world a better place.</Italian>
+		<Spanish>Greetings, [CT_NAME]. Welcome to my humble house. I hope our peoples can work together to make this world a better place.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_Impfondo</Tag>
+		<English>Impfondo</English>
+		<French>
+			<Text>Impfondo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Impfondo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Impfondo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Impfondo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_Betoukoumba</Tag>
+		<English>Betoukoumba</English>
+		<French>
+			<Text>Betoukoumba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Betoukoumba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Betoukoumba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Betoukoumba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_Epena</Tag>
+		<English>Epena</English>
+		<French>
+			<Text>Epena</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Epena</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Epena</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Epena</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_Dongou</Tag>
+		<English>Dongou</English>
+		<French>
+			<Text>Dongou</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Dongou</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Dongou</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Dongou</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_Betou</Tag>
+		<English>Atsuta</English>
+		<French>
+			<Text>Betou</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Betou</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Betou</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Betou</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_Nola</Tag>
+		<English>Nola</English>
+		<French>
+			<Text>Nola</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Nola</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Nola</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Nola</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_Bambio</Tag>
+		<English>Bambio</English>
+		<French>
+			<Text>Bambio</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Bambio</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Bambio</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Bambio</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_Mbaiki</Tag>
+		<English>Mbaiki</English>
+		<French>
+			<Text>Mbaiki</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mbaiki</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Mbaiki</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mbaiki</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_Mongoumba</Tag>
+		<English>Mongoumba</English>
+		<French>
+			<Text>Mongoumba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mongoumba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Mongoumba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mongoumba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_Boda</Tag>
+		<English>Boda</English>
+		<French>
+			<Text>Boda</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Boda</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Boda</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Boda</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+</Civ4GameText>

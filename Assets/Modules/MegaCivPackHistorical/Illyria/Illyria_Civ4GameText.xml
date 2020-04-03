@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- Copyright Firaxis Games 2005 -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ILLYRIA_DESC</Tag>
+		<English>Illyrian Empire</English>
+		<French>Illyrian Empire</French>
+		<German>Illyrian Empire</German>
+		<Italian>Illyrian Empire</Italian>
+		<Spanish>Illyrian Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ILLYRIA_SHORT_DESC</Tag>
+		<English>Illyria</English>
+		<French>Illyria</French>
+		<German>Illyria</German>
+		<Italian>Illyria</Italian>
+		<Spanish>Illyria</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ILLYRIA_ADJECTIVE</Tag>
+		<English>Illyrian</English>
+		<French>Illyrian</French>
+		<German>Illyrian</German>
+		<Italian>Illyrian</Italian>
+		<Spanish>Illyrian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_TEUTA</Tag>
+		<English>Teuta</English>
+		<French>Teuta</French>
+		<German>Teuta</German>
+		<Italian>Teuta</Italian>
+		<Spanish>Teuta</Spanish>
+	</TEXT>
+	<!-- Cities in Illyrian -->
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ILLYRIA_1</Tag>
+		<English>Skodra</English>
+		<French>Skodra</French>
+		<German>Skodra</German>
+		<Italian>Skodra</Italian>
+		<Spanish>Skodra</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ILLYRIA_2</Tag>
+		<English>Dyrrahu</English>
+		<French>Dyrrahu</French>
+		<German>Dyrrahu</German>
+		<Italian>Dyrrahu</Italian>
+		<Spanish>Dyrrahu</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ILLYRIA_3</Tag>
+		<English>Lissus</English>
+		<French>Lissus</French>
+		<German>Lissus</German>
+		<Italian>Lissus</Italian>
+		<Spanish>Lissus</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ILLYRIA_4</Tag>
+		<English>Albanopoli</English>
+		<French>Albanopoli</French>
+		<German>Albanopoli</German>
+		<Italian>Albanopoli</Italian>
+		<Spanish>Albanopoli</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ILLYRIA_5</Tag>
+		<English>Valona</English>
+		<French>Valona</French>
+		<German>Valona</German>
+		<Italian>Valona</Italian>
+		<Spanish>Valona</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ILLYRIA_6</Tag>
+		<English>Damastion</English>
+		<French>Damastion</French>
+		<German>Damastion</German>
+		<Italian>Damastion</Italian>
+		<Spanish>Damastion</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ILLYRIA_7</Tag>
+		<English>Olcini</English>
+		<French>Olcini</French>
+		<German>Olcini</German>
+		<Italian>Olcini</Italian>
+		<Spanish>Olcini</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ILLYRIA_8</Tag>
+		<English>Dodona</English>
+		<French>Dodona</French>
+		<German>Dodona</German>
+		<Italian>Dodona</Italian>
+		<Spanish>Dodona</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ILLYRIA_9</Tag>
+		<English>Skupi</English>
+		<French>Skupi</French>
+		<German>Skupi</German>
+		<Italian>Skupi</Italian>
+		<Spanish>Skupi</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ILLYRIA_10</Tag>
+		<English>Antivar</English>
+		<French>Antivar</French>
+		<German>Antivar</German>
+		<Italian>Antivar</Italian>
+		<Spanish>Antivar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ILLYRIA_11</Tag>
+		<English>Antiparta</English>
+		<French>Antiparta</French>
+		<German>Antiparta</German>
+		<Italian>Antiparta</Italian>
+		<Spanish>Antiparta</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ILLYRIA_12</Tag>
+		<English>Mathi</English>
+		<French>Mathi</French>
+		<German>Mathi</German>
+		<Italian>Mathi</Italian>
+		<Spanish>Mathi</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ILLYRIA_13</Tag>
+		<English>Rhizon</English>
+		<French>Rhizon</French>
+		<German>Rhizon</German>
+		<Italian>Rhizon</Italian>
+		<Spanish>Rhizon</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ILLYRIA_14</Tag>
+		<English>Buthrint</English>
+		<French>Buthrint</French>
+		<German>Buthrint</German>
+		<Italian>Buthrint</Italian>
+		<Spanish>Buthrint</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ILLYRIA_15</Tag>
+		<English>Enkelana</English>
+		<French>Enkelana</French>
+		<German>Enkelana</German>
+		<Italian>Enkelana</Italian>
+		<Spanish>Enkelana</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ILLYRIA_16</Tag>
+		<English>Ulpiana</English>
+		<French>Ulpiana</French>
+		<German>Ulpiana</German>
+		<Italian>Ulpiana</Italian>
+		<Spanish>Ulpiana</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ILLYRIA_17</Tag>
+		<English>Delmin</English>
+		<French>Delmin</French>
+		<German>Delmin</German>
+		<Italian>Delmin</Italian>
+		<Spanish>Delmin</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ILLYRIA_18</Tag>
+		<English>Salona</English>
+		<French>Salona</French>
+		<German>Salona</German>
+		<Italian>Salona</Italian>
+		<Spanish>Salona</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ILLYRIA_19</Tag>
+		<English>Narona</English>
+		<French>Narona</French>
+		<German>Narona</German>
+		<Italian>Narona</Italian>
+		<Spanish>Narona</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ILLYRIA_20</Tag>
+		<English>Epidau</English>
+		<French>Epidau</French>
+		<German>Epidau</German>
+		<Italian>Epidau</Italian>
+		<Spanish>Epidau</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ILLYRIA_21</Tag>
+		<English>Manastir</English>
+		<French>Manastir</French>
+		<German>Manastir</German>
+		<Italian>Manastir</Italian>
+		<Spanish>Manastir</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ILLYRIA_22</Tag>
+		<English>Uskana</English>
+		<French>Uskana</French>
+		<German>Uskana</German>
+		<Italian>Uskana</Italian>
+		<Spanish>Uskana</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ILLYRIA_23</Tag>
+		<English>Basania</English>
+		<French>Basania</French>
+		<German>Basania</German>
+		<Italian>Basania</Italian>
+		<Spanish>Basania</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ILLYRIA_24</Tag>
+		<English>Traguriu</English>
+		<French>Traguriu</French>
+		<German>Traguriu</German>
+		<Italian>Traguriu</Italian>
+		<Spanish>Traguriu</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ILLYRIA_25</Tag>
+		<English>Eordaei</English>
+		<French>Eordaei</French>
+		<German>Eordaei</German>
+		<Italian>Eordaei</Italian>
+		<Spanish>Eordaei</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ILLYRIA_26</Tag>
+		<English>Amantia</English>
+		<French>Amantia</French>
+		<German>Amantia</German>
+		<Italian>Amantia</Italian>
+		<Spanish>Amantia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ILLYRIA_27</Tag>
+		<English>Lychnidis</English>
+		<French>Lychnidis</French>
+		<German>Lychnidis</German>
+		<Italian>Lychnidis</Italian>
+		<Spanish>Lychnidis</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ILLYRIA_28</Tag>
+		<English>Styberra</English>
+		<French>Styberra</French>
+		<German>Styberra</German>
+		<Italian>Styberra</Italian>
+		<Spanish>Styberra</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ILLYRIA_29</Tag>
+		<English>Oeneu</English>
+		<French>Oeneu</French>
+		<German>Oeneu</German>
+		<Italian>Oeneu</Italian>
+		<Spanish>Oeneu</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ILLYRIA_30</Tag>
+		<English>Draudaku</English>
+		<French>Draudaku</French>
+		<German>Draudaku</German>
+		<Italian>Draudaku</Italian>
+		<Spanish>Draudaku</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ILLYRIA_31</Tag>
+		<English>Meteon</English>
+		<French>Meteon</French>
+		<German>Meteon</German>
+		<Italian>Meteon</Italian>
+		<Spanish>Meteon</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ILLYRIA_32</Tag>
+		<English>Siscia</English>
+		<French>Siscia</French>
+		<German>Siscia</German>
+		<Italian>Siscia</Italian>
+		<Spanish>Siscia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ILLYRIA_33</Tag>
+		<English>Metulum</English>
+		<French>Metulum</French>
+		<German>Metulum</German>
+		<Italian>Metulum</Italian>
+		<Spanish>Metulum</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ILLYRIA_34</Tag>
+		<English>Dociea</English>
+		<French>Dociea</French>
+		<German>Dociea</German>
+		<Italian>Dociea</Italian>
+		<Spanish>Dociea</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ILLYRIA_35</Tag>
+		<English>Skardona</English>
+		<French>Skardona</French>
+		<German>Skardona</German>
+		<Italian>Skardona</Italian>
+		<Spanish>Skardona</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ILLYRIA_36</Tag>
+		<English>Blandona</English>
+		<French>Blandona</French>
+		<German>Blandona</German>
+		<Italian>Blandona</Italian>
+		<Spanish>Blandona</Spanish>
+	</TEXT>
+	<!-- Civ4GameText_Civilopedia_CivLeaders -->
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ILLYRIA_PEDIA</Tag>
+		<English>[TAB]Illyrian culture is believed to have evolved from the Stone Age and to have manifested 
+itself in the territory of [LINK=CIVILIZATION_ALBANIA]Albania[\LINK] toward the beginning of the Bronze 
+Age, about 2000 BC. The Illyrians were not a uniform body of people but a conglomeration of many tribes 
+that inhabited the western part of the Balkans, from what is now Slovenia in the northwest to and including 
+the region of Epirus, which extends about halfway down the mainland of modern Greece.  At various times, 
+groups of Illyrians migrated over land and sea into Italy.[PARAGRAPH:2] In general, Illyrians in the 
+highlands of Albania were more isolated than those in the lowlands, and their culture evolved more slowly--a 
+distinction that persisted throughout Albania's history.  The name Albania is derived from the name of 
+an Illyrian tribe called the Arben, or Arbneshë, and later Albani, that lived near Durrës. The Illyrians 
+carried on commerce and warfare with their neighbors. The ancient Macedonians probably had some Illyrian 
+roots, but their ruling class adopted Greek cultural characteristics. The Illyrians also mingled with 
+the Thracians, another ancient people with adjoining lands on the east. In the south and along the Adriatic 
+Sea coast, the Illyrians were heavily influenced by the Greeks, who founded trading colonies there. The 
+present-day city of Durrës evolved from a Greek colony known as Epidamnos, which was founded at the end 
+of the seventh century B.C. Another famous Greek colony, Apollonia, arose between Durrës and the port 
+city of Vlorë.[PARAGRAPH:2] The Illyrians produced and traded cattle, horses, agricultural goods, and 
+wares fashioned from locally mined copper and iron. Feuds and warfare were constant facts of life for 
+the Illyrian tribes, and Illyrian pirates plagued shipping on the Adriatic Sea. Councils of elders chose 
+the chieftains who headed each of the numerous Illyrian tribes. From time to time, local chieftains extended 
+their rule over other tribes and formed short-lived kingdoms. During the fifth century B.C., a well-developed 
+Illyrian population center existed as far north as the upper Sava River valley in what is now Slovenia. 
+Illyrian friezes discovered near the present-day Slovenian city of Ljubljana depict ritual sacrifices, 
+feasts, battles, sporting events, and other activities.[PARAGRAPH:2] The Illyrian kingdom of Bardhyllus 
+became a formidable local power in the fourth century B.C. In 358 B.C., however, Macedonia's Philip II, 
+father of Alexander the Great, defeated the Illyrians and assumed control of their territory as far as 
+Lake Ohrid. Alexander himself routed the forces of the Illyrian chieftain Clitus in 335 B.C., and Illyrian 
+tribal leaders and soldiers accompanied Alexander on his conquest of Persia. After Alexander's death 
+in 323 B.C., independent Illyrian kingdoms again arose. In 312 B.C., King Glaucius expelled the Greeks 
+from Durrës. By the end of the third century, an Illyrian kingdom based near what is now the Albanian 
+city of Shkodër controlled parts of northern Albania, Montenegro, and Hercegovina. Under Queen Teuta, 
+Illyrians attacked Roman merchant vessels plying the Adriatic Sea and gave Rome an excuse to invade the 
+Balkans.[PARAGRAPH:2] In the Illyrian Wars of 229 and 219 B.C., Rome overran the Illyrian settlements 
+in the Neretva River valley. The Romans made new gains in 168 B.C., and Roman forces captured Illyria's 
+King Gentius at Shkodër, which they called Scodra, and brought him to Rome in 165 B.C. A century later, 
+Julius Caesar and his rival Pompey fought their decisive battle near Durrës (Dyrrachium). Rome finally 
+subjugated recalcitrant Illyrian tribes in the western Balkans dwing the region of Emperor Tiberius in 
+A.D. 9. The Romans divided the lands that make up present-day Albania among the provinces of Macedonia, 
+Dalmatia, and Epirus.[PARAGRAPH:2] For about four centuries, Roman rule brought the Illyrian-populated 
+lands economic and cultural advancement and ended most of the enervating clashes among local tribes. 
+The Illyrian mountain clansmen retained local authority but pledged allegiance to the emperor and acknowledged 
+the authority of his envoys. During a yearly holiday honoring the Caesars, the Illyrian mountaineers 
+swore loyalty to the emperor and reaffirmed their political rights. A form of this tradition, known as 
+the kuvend, has survived to the present day in northern Albania.[PARAGRAPH:2] The Romans established 
+numerous military camps and colonies and latinized the coastal cities. They also oversaw the construction 
+of aqueducts and roads, including the Via Egnatia, a famous military highway and trade route that led 
+from Durrës through the Shkumbin River valley to Macedonia and Byzantium (later Constantinople). Copper, 
+asphalt, and silver were extracted from the mountains. The main exports were wine, cheese, oil, and fish 
+from Lake Scutari (Shkodra) and Lake Ohrid. Imports included tools, metalware, luxury goods, and other 
+manufactured articles. Apollonia became a cultural center, and Julius Caesar himself sent his nephew, 
+later the Emperor Augustus, to study there.[PARAGRAPH:2] Illyrians distinguished themselves as warriors 
+in the Roman legions and made up a significant portion of the Praetorian Guard. Several of the Roman 
+emperors were of Illyrian origin, including Diocletian (284-305), who saved the empire from disintegration 
+by introducing institutional reforms, and Constantine the Great (324-37)--who accepted Christianity and 
+transferred the empire's capital from Rome to Byzantium, which he called Constantinople. Emperor Justinian 
+(527-65)--who codified Roman law, built the most famous Byzantine church, the Hagia Sofia, and reextended 
+the empire's control over lost territories- -was probably also an Illyrian.[PARAGRAPH:2] Christianity 
+came to the Illyrian-populated lands in the first century A.D. Saint Paul wrote that he preached in the 
+Roman province of Illyricum, and legend holds that he visited Durrës. When the Roman Empire was divided 
+into eastern and western halves in A.D. 395, the lands that now make up Albania were administered by 
+the Eastern Empire but were ecclesiastically dependent on Rome. In A.D. 732, however, a Byzantine emperor, 
+Leo the Isaurian, subordinated the area to the patriarchate of Constantinople. For centuries thereafter, 
+the Albanian lands became an arena for the ecclesiastical struggle between Rome and Constantinople. Most 
+Albanians living in the mountainous north became Roman Catholic, while in the southern and central regions, 
+the majority became Orthodox.</English>
+		<French>[TAB]Illyrian culture is believed to have evolved from the Stone Age and to have manifested 
+itself in the territory of [LINK=CIVILIZATION_ALBANIA]Albania[\LINK] toward the beginning of the Bronze 
+Age, about 2000 BC. The Illyrians were not a uniform body of people but a conglomeration of many tribes 
+that inhabited the western part of the Balkans, from what is now Slovenia in the northwest to and including 
+the region of Epirus, which extends about halfway down the mainland of modern Greece.  At various times, 
+groups of Illyrians migrated over land and sea into Italy.[PARAGRAPH:2] In general, Illyrians in the 
+highlands of Albania were more isolated than those in the lowlands, and their culture evolved more slowly--a 
+distinction that persisted throughout Albania's history.  The name Albania is derived from the name of 
+an Illyrian tribe called the Arben, or Arbneshë, and later Albani, that lived near Durrës. The Illyrians 
+carried on commerce and warfare with their neighbors. The ancient Macedonians probably had some Illyrian 
+roots, but their ruling class adopted Greek cultural characteristics. The Illyrians also mingled with 
+the Thracians, another ancient people with adjoining lands on the east. In the south and along the Adriatic 
+Sea coast, the Illyrians were heavily influenced by the Greeks, who founded trading colonies there. The 
+present-day city of Durrës evolved from a Greek colony known as Epidamnos, which was founded at the end 
+of the seventh century B.C. Another famous Greek colony, Apollonia, arose between Durrës and the port 
+city of Vlorë.[PARAGRAPH:2] The Illyrians produced and traded cattle, horses, agricultural goods, and 
+wares fashioned from locally mined copper and iron. Feuds and warfare were constant facts of life for 
+the Illyrian tribes, and Illyrian pirates plagued shipping on the Adriatic Sea. Councils of elders chose 
+the chieftains who headed each of the numerous Illyrian tribes. From time to time, local chieftains extended 
+their rule over other tribes and formed short-lived kingdoms. During the fifth century B.C., a well-developed 
+Illyrian population center existed as far north as the upper Sava River valley in what is now Slovenia. 
+Illyrian friezes discovered near the present-day Slovenian city of Ljubljana depict ritual sacrifices, 
+feasts, battles, sporting events, and other activities.[PARAGRAPH:2] The Illyrian kingdom of Bardhyllus 
+became a formidable local power in the fourth century B.C. In 358 B.C., however, Macedonia's Philip II, 
+father of Alexander the Great, defeated the Illyrians and assumed control of their territory as far as 
+Lake Ohrid. Alexander himself routed the forces of the Illyrian chieftain Clitus in 335 B.C., and Illyrian 
+tribal leaders and soldiers accompanied Alexander on his conquest of Persia. After Alexander's death 
+in 323 B.C., independent Illyrian kingdoms again arose. In 312 B.C., King Glaucius expelled the Greeks 
+from Durrës. By the end of the third century, an Illyrian kingdom based near what is now the Albanian 
+city of Shkodër controlled parts of northern Albania, Montenegro, and Hercegovina. Under Queen Teuta, 
+Illyrians attacked Roman merchant vessels plying the Adriatic Sea and gave Rome an excuse to invade the 
+Balkans.[PARAGRAPH:2] In the Illyrian Wars of 229 and 219 B.C., Rome overran the Illyrian settlements 
+in the Neretva River valley. The Romans made new gains in 168 B.C., and Roman forces captured Illyria's 
+King Gentius at Shkodër, which they called Scodra, and brought him to Rome in 165 B.C. A century later, 
+Julius Caesar and his rival Pompey fought their decisive battle near Durrës (Dyrrachium). Rome finally 
+subjugated recalcitrant Illyrian tribes in the western Balkans dwing the region of Emperor Tiberius in 
+A.D. 9. The Romans divided the lands that make up present-day Albania among the provinces of Macedonia, 
+Dalmatia, and Epirus.[PARAGRAPH:2] For about four centuries, Roman rule brought the Illyrian-populated 
+lands economic and cultural advancement and ended most of the enervating clashes among local tribes. 
+The Illyrian mountain clansmen retained local authority but pledged allegiance to the emperor and acknowledged 
+the authority of his envoys. During a yearly holiday honoring the Caesars, the Illyrian mountaineers 
+swore loyalty to the emperor and reaffirmed their political rights. A form of this tradition, known as 
+the kuvend, has survived to the present day in northern Albania.[PARAGRAPH:2] The Romans established 
+numerous military camps and colonies and latinized the coastal cities. They also oversaw the construction 
+of aqueducts and roads, including the Via Egnatia, a famous military highway and trade route that led 
+from Durrës through the Shkumbin River valley to Macedonia and Byzantium (later Constantinople). Copper, 
+asphalt, and silver were extracted from the mountains. The main exports were wine, cheese, oil, and fish 
+from Lake Scutari (Shkodra) and Lake Ohrid. Imports included tools, metalware, luxury goods, and other 
+manufactured articles. Apollonia became a cultural center, and Julius Caesar himself sent his nephew, 
+later the Emperor Augustus, to study there.[PARAGRAPH:2] Illyrians distinguished themselves as warriors 
+in the Roman legions and made up a significant portion of the Praetorian Guard. Several of the Roman 
+emperors were of Illyrian origin, including Diocletian (284-305), who saved the empire from disintegration 
+by introducing institutional reforms, and Constantine the Great (324-37)--who accepted Christianity and 
+transferred the empire's capital from Rome to Byzantium, which he called Constantinople. Emperor Justinian 
+(527-65)--who codified Roman law, built the most famous Byzantine church, the Hagia Sofia, and reextended 
+the empire's control over lost territories- -was probably also an Illyrian.[PARAGRAPH:2] Christianity 
+came to the Illyrian-populated lands in the first century A.D. Saint Paul wrote that he preached in the 
+Roman province of Illyricum, and legend holds that he visited Durrës. When the Roman Empire was divided 
+into eastern and western halves in A.D. 395, the lands that now make up Albania were administered by 
+the Eastern Empire but were ecclesiastically dependent on Rome. In A.D. 732, however, a Byzantine emperor, 
+Leo the Isaurian, subordinated the area to the patriarchate of Constantinople. For centuries thereafter, 
+the Albanian lands became an arena for the ecclesiastical struggle between Rome and Constantinople. Most 
+Albanians living in the mountainous north became Roman Catholic, while in the southern and central regions, 
+the majority became Orthodox.</French>
+		<German>[TAB]Illyrian culture is believed to have evolved from the Stone Age and to have manifested 
+itself in the territory of [LINK=CIVILIZATION_ALBANIA]Albania[\LINK] toward the beginning of the Bronze 
+Age, about 2000 BC. The Illyrians were not a uniform body of people but a conglomeration of many tribes 
+that inhabited the western part of the Balkans, from what is now Slovenia in the northwest to and including 
+the region of Epirus, which extends about halfway down the mainland of modern Greece.  At various times, 
+groups of Illyrians migrated over land and sea into Italy.[PARAGRAPH:2] In general, Illyrians in the 
+highlands of Albania were more isolated than those in the lowlands, and their culture evolved more slowly--a 
+distinction that persisted throughout Albania's history.  The name Albania is derived from the name of 
+an Illyrian tribe called the Arben, or Arbneshë, and later Albani, that lived near Durrës. The Illyrians 
+carried on commerce and warfare with their neighbors. The ancient Macedonians probably had some Illyrian 
+roots, but their ruling class adopted Greek cultural characteristics. The Illyrians also mingled with 
+the Thracians, another ancient people with adjoining lands on the east. In the south and along the Adriatic 
+Sea coast, the Illyrians were heavily influenced by the Greeks, who founded trading colonies there. The 
+present-day city of Durrës evolved from a Greek colony known as Epidamnos, which was founded at the end 
+of the seventh century B.C. Another famous Greek colony, Apollonia, arose between Durrës and the port 
+city of Vlorë.[PARAGRAPH:2] The Illyrians produced and traded cattle, horses, agricultural goods, and 
+wares fashioned from locally mined copper and iron. Feuds and warfare were constant facts of life for 
+the Illyrian tribes, and Illyrian pirates plagued shipping on the Adriatic Sea. Councils of elders chose 
+the chieftains who headed each of the numerous Illyrian tribes. From time to time, local chieftains extended 
+their rule over other tribes and formed short-lived kingdoms. During the fifth century B.C., a well-developed 
+Illyrian population center existed as far north as the upper Sava River valley in what is now Slovenia. 
+Illyrian friezes discovered near the present-day Slovenian city of Ljubljana depict ritual sacrifices, 
+feasts, battles, sporting events, and other activities.[PARAGRAPH:2] The Illyrian kingdom of Bardhyllus 
+became a formidable local power in the fourth century B.C. In 358 B.C., however, Macedonia's Philip II, 
+father of Alexander the Great, defeated the Illyrians and assumed control of their territory as far as 
+Lake Ohrid. Alexander himself routed the forces of the Illyrian chieftain Clitus in 335 B.C., and Illyrian 
+tribal leaders and soldiers accompanied Alexander on his conquest of Persia. After Alexander's death 
+in 323 B.C., independent Illyrian kingdoms again arose. In 312 B.C., King Glaucius expelled the Greeks 
+from Durrës. By the end of the third century, an Illyrian kingdom based near what is now the Albanian 
+city of Shkodër controlled parts of northern Albania, Montenegro, and Hercegovina. Under Queen Teuta, 
+Illyrians attacked Roman merchant vessels plying the Adriatic Sea and gave Rome an excuse to invade the 
+Balkans.[PARAGRAPH:2] In the Illyrian Wars of 229 and 219 B.C., Rome overran the Illyrian settlements 
+in the Neretva River valley. The Romans made new gains in 168 B.C., and Roman forces captured Illyria's 
+King Gentius at Shkodër, which they called Scodra, and brought him to Rome in 165 B.C. A century later, 
+Julius Caesar and his rival Pompey fought their decisive battle near Durrës (Dyrrachium). Rome finally 
+subjugated recalcitrant Illyrian tribes in the western Balkans dwing the region of Emperor Tiberius in 
+A.D. 9. The Romans divided the lands that make up present-day Albania among the provinces of Macedonia, 
+Dalmatia, and Epirus.[PARAGRAPH:2] For about four centuries, Roman rule brought the Illyrian-populated 
+lands economic and cultural advancement and ended most of the enervating clashes among local tribes. 
+The Illyrian mountain clansmen retained local authority but pledged allegiance to the emperor and acknowledged 
+the authority of his envoys. During a yearly holiday honoring the Caesars, the Illyrian mountaineers 
+swore loyalty to the emperor and reaffirmed their political rights. A form of this tradition, known as 
+the kuvend, has survived to the present day in northern Albania.[PARAGRAPH:2] The Romans established 
+numerous military camps and colonies and latinized the coastal cities. They also oversaw the construction 
+of aqueducts and roads, including the Via Egnatia, a famous military highway and trade route that led 
+from Durrës through the Shkumbin River valley to Macedonia and Byzantium (later Constantinople). Copper, 
+asphalt, and silver were extracted from the mountains. The main exports were wine, cheese, oil, and fish 
+from Lake Scutari (Shkodra) and Lake Ohrid. Imports included tools, metalware, luxury goods, and other 
+manufactured articles. Apollonia became a cultural center, and Julius Caesar himself sent his nephew, 
+later the Emperor Augustus, to study there.[PARAGRAPH:2] Illyrians distinguished themselves as warriors 
+in the Roman legions and made up a significant portion of the Praetorian Guard. Several of the Roman 
+emperors were of Illyrian origin, including Diocletian (284-305), who saved the empire from disintegration 
+by introducing institutional reforms, and Constantine the Great (324-37)--who accepted Christianity and 
+transferred the empire's capital from Rome to Byzantium, which he called Constantinople. Emperor Justinian 
+(527-65)--who codified Roman law, built the most famous Byzantine church, the Hagia Sofia, and reextended 
+the empire's control over lost territories- -was probably also an Illyrian.[PARAGRAPH:2] Christianity 
+came to the Illyrian-populated lands in the first century A.D. Saint Paul wrote that he preached in the 
+Roman province of Illyricum, and legend holds that he visited Durrës. When the Roman Empire was divided 
+into eastern and western halves in A.D. 395, the lands that now make up Albania were administered by 
+the Eastern Empire but were ecclesiastically dependent on Rome. In A.D. 732, however, a Byzantine emperor, 
+Leo the Isaurian, subordinated the area to the patriarchate of Constantinople. For centuries thereafter, 
+the Albanian lands became an arena for the ecclesiastical struggle between Rome and Constantinople. Most 
+Albanians living in the mountainous north became Roman Catholic, while in the southern and central regions, 
+the majority became Orthodox.</German>
+		<Italian>[TAB]Illyrian culture is believed to have evolved from the Stone Age and to have manifested 
+itself in the territory of [LINK=CIVILIZATION_ALBANIA]Albania[\LINK] toward the beginning of the Bronze 
+Age, about 2000 BC. The Illyrians were not a uniform body of people but a conglomeration of many tribes 
+that inhabited the western part of the Balkans, from what is now Slovenia in the northwest to and including 
+the region of Epirus, which extends about halfway down the mainland of modern Greece.  At various times, 
+groups of Illyrians migrated over land and sea into Italy.[PARAGRAPH:2] In general, Illyrians in the 
+highlands of Albania were more isolated than those in the lowlands, and their culture evolved more slowly--a 
+distinction that persisted throughout Albania's history.  The name Albania is derived from the name of 
+an Illyrian tribe called the Arben, or Arbneshë, and later Albani, that lived near Durrës. The Illyrians 
+carried on commerce and warfare with their neighbors. The ancient Macedonians probably had some Illyrian 
+roots, but their ruling class adopted Greek cultural characteristics. The Illyrians also mingled with 
+the Thracians, another ancient people with adjoining lands on the east. In the south and along the Adriatic 
+Sea coast, the Illyrians were heavily influenced by the Greeks, who founded trading colonies there. The 
+present-day city of Durrës evolved from a Greek colony known as Epidamnos, which was founded at the end 
+of the seventh century B.C. Another famous Greek colony, Apollonia, arose between Durrës and the port 
+city of Vlorë.[PARAGRAPH:2] The Illyrians produced and traded cattle, horses, agricultural goods, and 
+wares fashioned from locally mined copper and iron. Feuds and warfare were constant facts of life for 
+the Illyrian tribes, and Illyrian pirates plagued shipping on the Adriatic Sea. Councils of elders chose 
+the chieftains who headed each of the numerous Illyrian tribes. From time to time, local chieftains extended 
+their rule over other tribes and formed short-lived kingdoms. During the fifth century B.C., a well-developed 
+Illyrian population center existed as far north as the upper Sava River valley in what is now Slovenia. 
+Illyrian friezes discovered near the present-day Slovenian city of Ljubljana depict ritual sacrifices, 
+feasts, battles, sporting events, and other activities.[PARAGRAPH:2] The Illyrian kingdom of Bardhyllus 
+became a formidable local power in the fourth century B.C. In 358 B.C., however, Macedonia's Philip II, 
+father of Alexander the Great, defeated the Illyrians and assumed control of their territory as far as 
+Lake Ohrid. Alexander himself routed the forces of the Illyrian chieftain Clitus in 335 B.C., and Illyrian 
+tribal leaders and soldiers accompanied Alexander on his conquest of Persia. After Alexander's death 
+in 323 B.C., independent Illyrian kingdoms again arose. In 312 B.C., King Glaucius expelled the Greeks 
+from Durrës. By the end of the third century, an Illyrian kingdom based near what is now the Albanian 
+city of Shkodër controlled parts of northern Albania, Montenegro, and Hercegovina. Under Queen Teuta, 
+Illyrians attacked Roman merchant vessels plying the Adriatic Sea and gave Rome an excuse to invade the 
+Balkans.[PARAGRAPH:2] In the Illyrian Wars of 229 and 219 B.C., Rome overran the Illyrian settlements 
+in the Neretva River valley. The Romans made new gains in 168 B.C., and Roman forces captured Illyria's 
+King Gentius at Shkodër, which they called Scodra, and brought him to Rome in 165 B.C. A century later, 
+Julius Caesar and his rival Pompey fought their decisive battle near Durrës (Dyrrachium). Rome finally 
+subjugated recalcitrant Illyrian tribes in the western Balkans dwing the region of Emperor Tiberius in 
+A.D. 9. The Romans divided the lands that make up present-day Albania among the provinces of Macedonia, 
+Dalmatia, and Epirus.[PARAGRAPH:2] For about four centuries, Roman rule brought the Illyrian-populated 
+lands economic and cultural advancement and ended most of the enervating clashes among local tribes. 
+The Illyrian mountain clansmen retained local authority but pledged allegiance to the emperor and acknowledged 
+the authority of his envoys. During a yearly holiday honoring the Caesars, the Illyrian mountaineers 
+swore loyalty to the emperor and reaffirmed their political rights. A form of this tradition, known as 
+the kuvend, has survived to the present day in northern Albania.[PARAGRAPH:2] The Romans established 
+numerous military camps and colonies and latinized the coastal cities. They also oversaw the construction 
+of aqueducts and roads, including the Via Egnatia, a famous military highway and trade route that led 
+from Durrës through the Shkumbin River valley to Macedonia and Byzantium (later Constantinople). Copper, 
+asphalt, and silver were extracted from the mountains. The main exports were wine, cheese, oil, and fish 
+from Lake Scutari (Shkodra) and Lake Ohrid. Imports included tools, metalware, luxury goods, and other 
+manufactured articles. Apollonia became a cultural center, and Julius Caesar himself sent his nephew, 
+later the Emperor Augustus, to study there.[PARAGRAPH:2] Illyrians distinguished themselves as warriors 
+in the Roman legions and made up a significant portion of the Praetorian Guard. Several of the Roman 
+emperors were of Illyrian origin, including Diocletian (284-305), who saved the empire from disintegration 
+by introducing institutional reforms, and Constantine the Great (324-37)--who accepted Christianity and 
+transferred the empire's capital from Rome to Byzantium, which he called Constantinople. Emperor Justinian 
+(527-65)--who codified Roman law, built the most famous Byzantine church, the Hagia Sofia, and reextended 
+the empire's control over lost territories- -was probably also an Illyrian.[PARAGRAPH:2] Christianity 
+came to the Illyrian-populated lands in the first century A.D. Saint Paul wrote that he preached in the 
+Roman province of Illyricum, and legend holds that he visited Durrës. When the Roman Empire was divided 
+into eastern and western halves in A.D. 395, the lands that now make up Albania were administered by 
+the Eastern Empire but were ecclesiastically dependent on Rome. In A.D. 732, however, a Byzantine emperor, 
+Leo the Isaurian, subordinated the area to the patriarchate of Constantinople. For centuries thereafter, 
+the Albanian lands became an arena for the ecclesiastical struggle between Rome and Constantinople. Most 
+Albanians living in the mountainous north became Roman Catholic, while in the southern and central regions, 
+the majority became Orthodox.</Italian>
+		<Spanish>[TAB]Illyrian culture is believed to have evolved from the Stone Age and to have manifested 
+itself in the territory of [LINK=CIVILIZATION_ALBANIA]Albania[\LINK] toward the beginning of the Bronze 
+Age, about 2000 BC. The Illyrians were not a uniform body of people but a conglomeration of many tribes 
+that inhabited the western part of the Balkans, from what is now Slovenia in the northwest to and including 
+the region of Epirus, which extends about halfway down the mainland of modern Greece.  At various times, 
+groups of Illyrians migrated over land and sea into Italy.[PARAGRAPH:2] In general, Illyrians in the 
+highlands of Albania were more isolated than those in the lowlands, and their culture evolved more slowly--a 
+distinction that persisted throughout Albania's history.  The name Albania is derived from the name of 
+an Illyrian tribe called the Arben, or Arbneshë, and later Albani, that lived near Durrës. The Illyrians 
+carried on commerce and warfare with their neighbors. The ancient Macedonians probably had some Illyrian 
+roots, but their ruling class adopted Greek cultural characteristics. The Illyrians also mingled with 
+the Thracians, another ancient people with adjoining lands on the east. In the south and along the Adriatic 
+Sea coast, the Illyrians were heavily influenced by the Greeks, who founded trading colonies there. The 
+present-day city of Durrës evolved from a Greek colony known as Epidamnos, which was founded at the end 
+of the seventh century B.C. Another famous Greek colony, Apollonia, arose between Durrës and the port 
+city of Vlorë.[PARAGRAPH:2] The Illyrians produced and traded cattle, horses, agricultural goods, and 
+wares fashioned from locally mined copper and iron. Feuds and warfare were constant facts of life for 
+the Illyrian tribes, and Illyrian pirates plagued shipping on the Adriatic Sea. Councils of elders chose 
+the chieftains who headed each of the numerous Illyrian tribes. From time to time, local chieftains extended 
+their rule over other tribes and formed short-lived kingdoms. During the fifth century B.C., a well-developed 
+Illyrian population center existed as far north as the upper Sava River valley in what is now Slovenia. 
+Illyrian friezes discovered near the present-day Slovenian city of Ljubljana depict ritual sacrifices, 
+feasts, battles, sporting events, and other activities.[PARAGRAPH:2] The Illyrian kingdom of Bardhyllus 
+became a formidable local power in the fourth century B.C. In 358 B.C., however, Macedonia's Philip II, 
+father of Alexander the Great, defeated the Illyrians and assumed control of their territory as far as 
+Lake Ohrid. Alexander himself routed the forces of the Illyrian chieftain Clitus in 335 B.C., and Illyrian 
+tribal leaders and soldiers accompanied Alexander on his conquest of Persia. After Alexander's death 
+in 323 B.C., independent Illyrian kingdoms again arose. In 312 B.C., King Glaucius expelled the Greeks 
+from Durrës. By the end of the third century, an Illyrian kingdom based near what is now the Albanian 
+city of Shkodër controlled parts of northern Albania, Montenegro, and Hercegovina. Under Queen Teuta, 
+Illyrians attacked Roman merchant vessels plying the Adriatic Sea and gave Rome an excuse to invade the 
+Balkans.[PARAGRAPH:2] In the Illyrian Wars of 229 and 219 B.C., Rome overran the Illyrian settlements 
+in the Neretva River valley. The Romans made new gains in 168 B.C., and Roman forces captured Illyria's 
+King Gentius at Shkodër, which they called Scodra, and brought him to Rome in 165 B.C. A century later, 
+Julius Caesar and his rival Pompey fought their decisive battle near Durrës (Dyrrachium). Rome finally 
+subjugated recalcitrant Illyrian tribes in the western Balkans dwing the region of Emperor Tiberius in 
+A.D. 9. The Romans divided the lands that make up present-day Albania among the provinces of Macedonia, 
+Dalmatia, and Epirus.[PARAGRAPH:2] For about four centuries, Roman rule brought the Illyrian-populated 
+lands economic and cultural advancement and ended most of the enervating clashes among local tribes. 
+The Illyrian mountain clansmen retained local authority but pledged allegiance to the emperor and acknowledged 
+the authority of his envoys. During a yearly holiday honoring the Caesars, the Illyrian mountaineers 
+swore loyalty to the emperor and reaffirmed their political rights. A form of this tradition, known as 
+the kuvend, has survived to the present day in northern Albania.[PARAGRAPH:2] The Romans established 
+numerous military camps and colonies and latinized the coastal cities. They also oversaw the construction 
+of aqueducts and roads, including the Via Egnatia, a famous military highway and trade route that led 
+from Durrës through the Shkumbin River valley to Macedonia and Byzantium (later Constantinople). Copper, 
+asphalt, and silver were extracted from the mountains. The main exports were wine, cheese, oil, and fish 
+from Lake Scutari (Shkodra) and Lake Ohrid. Imports included tools, metalware, luxury goods, and other 
+manufactured articles. Apollonia became a cultural center, and Julius Caesar himself sent his nephew, 
+later the Emperor Augustus, to study there.[PARAGRAPH:2] Illyrians distinguished themselves as warriors 
+in the Roman legions and made up a significant portion of the Praetorian Guard. Several of the Roman 
+emperors were of Illyrian origin, including Diocletian (284-305), who saved the empire from disintegration 
+by introducing institutional reforms, and Constantine the Great (324-37)--who accepted Christianity and 
+transferred the empire's capital from Rome to Byzantium, which he called Constantinople. Emperor Justinian 
+(527-65)--who codified Roman law, built the most famous Byzantine church, the Hagia Sofia, and reextended 
+the empire's control over lost territories- -was probably also an Illyrian.[PARAGRAPH:2] Christianity 
+came to the Illyrian-populated lands in the first century A.D. Saint Paul wrote that he preached in the 
+Roman province of Illyricum, and legend holds that he visited Durrës. When the Roman Empire was divided 
+into eastern and western halves in A.D. 395, the lands that now make up Albania were administered by 
+the Eastern Empire but were ecclesiastically dependent on Rome. In A.D. 732, however, a Byzantine emperor, 
+Leo the Isaurian, subordinated the area to the patriarchate of Constantinople. For centuries thereafter, 
+the Albanian lands became an arena for the ecclesiastical struggle between Rome and Constantinople. Most 
+Albanians living in the mountainous north became Roman Catholic, while in the southern and central regions, 
+the majority became Orthodox.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_TEUTA_PEDIA</Tag>
+		<English>[H1]Teuta [\H1][NEWLINE][BOLD]Illyrian Queen [\BOLD][NEWLINE][BOLD]Reigned: [\BOLD] BC 231 
+- 228 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]In 231 BC Teuta's husband, King Agron, 
+died from heavy alcohol consumption after feasting as a result of a victorious battle.  After the death 
+of Agron (250 BC?-231 BC) who established a kingdom of Illyria, extending from Dalmatia on the north 
+to the Aous (Vjosa river) River on the south with Shkodër as its capital, his widow, Teuta, acted as 
+regent for her young stepson Pinnes. Teuta's first decision was to drive the Greek colonies off the Albanian 
+coast. Attempting this, she found Durrës too well fortified but Finiq farther south surrendered. While 
+her Illyrian ships were off the coast of Sarandë they intercepted and plundered some merchant vessels 
+of Rome. Encouraged by this success, Teuta's pirates extended their operations southward in the Ionian 
+Sea, westward along the coast of Italy, and were soon feared as the terror of the Adriatic.[PARAGRAPH:2] 
+The Roman Senate sent two ambassadors to the pirate lair at Shkodër to require reparations and demand 
+an end to the piratical expeditions. Apparently she told the ambassadors that according to the law of 
+the Illyrians, piracy was a lawful trade and that her government had no right to interfere with this 
+as a private enterprise. One of the envoys is repored to have replied that in that case Rome would make 
+it her business to introduce better law among the Illyrians. At any rate, one of the ambassadors addressed 
+the queen so disrespectfully that her attendants killed him as he embarked for Rome.[PARAGRAPH:2] This 
+was too much for Rome to endure. In 229 BC, Rome declared war on Illyria and for the first time armies 
+crossed the Adriatic to Illyria (the Balkan Peninsula in modern usage). The Roman fleet of 200 ships 
+went first to Corcyra. Teuta's governor, Demetrius had little alternative but to surrender, and the Romans 
+awarded him a considerable part of Teuta's holdings (228 BC). The Roman army then landed farther north 
+at Apollonia. The combined army and navy proceeded northward together, subduing one town after another 
+and besieging Shkodra, the capital. Teuta finally surrendered in 227 BC, having to accept an ignominious 
+peace. The Romans allowed her to continue her reign but restricted her to a narrow region around Shkodra, 
+deprived her of all her other holdings, and forbade her to sail an armed ship below Lissus (Lezhë) just 
+south of the capital. They also required her to pay an annual tribute and to acknowledge the final authority 
+of Rome. Thus the damage was done. Thanks to Queen Teuta the expanding empire of Rome had learned the 
+military route to the Balkan peninsula.</English>
+		<French>[H1]Teuta [\H1][NEWLINE][BOLD]Illyrian Queen [\BOLD][NEWLINE][BOLD]Reigned: [\BOLD] BC 231 
+- 228 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]In 231 BC Teuta's husband, King Agron, 
+died from heavy alcohol consumption after feasting as a result of a victorious battle.  After the death 
+of Agron (250 BC?-231 BC) who established a kingdom of Illyria, extending from Dalmatia on the north 
+to the Aous (Vjosa river) River on the south with Shkodër as its capital, his widow, Teuta, acted as 
+regent for her young stepson Pinnes. Teuta's first decision was to drive the Greek colonies off the Albanian 
+coast. Attempting this, she found Durrës too well fortified but Finiq farther south surrendered. While 
+her Illyrian ships were off the coast of Sarandë they intercepted and plundered some merchant vessels 
+of Rome. Encouraged by this success, Teuta's pirates extended their operations southward in the Ionian 
+Sea, westward along the coast of Italy, and were soon feared as the terror of the Adriatic.[PARAGRAPH:2] 
+The Roman Senate sent two ambassadors to the pirate lair at Shkodër to require reparations and demand 
+an end to the piratical expeditions. Apparently she told the ambassadors that according to the law of 
+the Illyrians, piracy was a lawful trade and that her government had no right to interfere with this 
+as a private enterprise. One of the envoys is repored to have replied that in that case Rome would make 
+it her business to introduce better law among the Illyrians. At any rate, one of the ambassadors addressed 
+the queen so disrespectfully that her attendants killed him as he embarked for Rome.[PARAGRAPH:2] This 
+was too much for Rome to endure. In 229 BC, Rome declared war on Illyria and for the first time armies 
+crossed the Adriatic to Illyria (the Balkan Peninsula in modern usage). The Roman fleet of 200 ships 
+went first to Corcyra. Teuta's governor, Demetrius had little alternative but to surrender, and the Romans 
+awarded him a considerable part of Teuta's holdings (228 BC). The Roman army then landed farther north 
+at Apollonia. The combined army and navy proceeded northward together, subduing one town after another 
+and besieging Shkodra, the capital. Teuta finally surrendered in 227 BC, having to accept an ignominious 
+peace. The Romans allowed her to continue her reign but restricted her to a narrow region around Shkodra, 
+deprived her of all her other holdings, and forbade her to sail an armed ship below Lissus (Lezhë) just 
+south of the capital. They also required her to pay an annual tribute and to acknowledge the final authority 
+of Rome. Thus the damage was done. Thanks to Queen Teuta the expanding empire of Rome had learned the 
+military route to the Balkan peninsula.</French>
+		<German>[H1]Teuta [\H1][NEWLINE][BOLD]Illyrian Queen [\BOLD][NEWLINE][BOLD]Reigned: [\BOLD] BC 231 
+- 228 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]In 231 BC Teuta's husband, King Agron, 
+died from heavy alcohol consumption after feasting as a result of a victorious battle.  After the death 
+of Agron (250 BC?-231 BC) who established a kingdom of Illyria, extending from Dalmatia on the north 
+to the Aous (Vjosa river) River on the south with Shkodër as its capital, his widow, Teuta, acted as 
+regent for her young stepson Pinnes. Teuta's first decision was to drive the Greek colonies off the Albanian 
+coast. Attempting this, she found Durrës too well fortified but Finiq farther south surrendered. While 
+her Illyrian ships were off the coast of Sarandë they intercepted and plundered some merchant vessels 
+of Rome. Encouraged by this success, Teuta's pirates extended their operations southward in the Ionian 
+Sea, westward along the coast of Italy, and were soon feared as the terror of the Adriatic.[PARAGRAPH:2] 
+The Roman Senate sent two ambassadors to the pirate lair at Shkodër to require reparations and demand 
+an end to the piratical expeditions. Apparently she told the ambassadors that according to the law of 
+the Illyrians, piracy was a lawful trade and that her government had no right to interfere with this 
+as a private enterprise. One of the envoys is repored to have replied that in that case Rome would make 
+it her business to introduce better law among the Illyrians. At any rate, one of the ambassadors addressed 
+the queen so disrespectfully that her attendants killed him as he embarked for Rome.[PARAGRAPH:2] This 
+was too much for Rome to endure. In 229 BC, Rome declared war on Illyria and for the first time armies 
+crossed the Adriatic to Illyria (the Balkan Peninsula in modern usage). The Roman fleet of 200 ships 
+went first to Corcyra. Teuta's governor, Demetrius had little alternative but to surrender, and the Romans 
+awarded him a considerable part of Teuta's holdings (228 BC). The Roman army then landed farther north 
+at Apollonia. The combined army and navy proceeded northward together, subduing one town after another 
+and besieging Shkodra, the capital. Teuta finally surrendered in 227 BC, having to accept an ignominious 
+peace. The Romans allowed her to continue her reign but restricted her to a narrow region around Shkodra, 
+deprived her of all her other holdings, and forbade her to sail an armed ship below Lissus (Lezhë) just 
+south of the capital. They also required her to pay an annual tribute and to acknowledge the final authority 
+of Rome. Thus the damage was done. Thanks to Queen Teuta the expanding empire of Rome had learned the 
+military route to the Balkan peninsula.</German>
+		<Italian>[H1]Teuta [\H1][NEWLINE][BOLD]Illyrian Queen [\BOLD][NEWLINE][BOLD]Reigned: [\BOLD] BC 231 
+- 228 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]In 231 BC Teuta's husband, King Agron, 
+died from heavy alcohol consumption after feasting as a result of a victorious battle.  After the death 
+of Agron (250 BC?-231 BC) who established a kingdom of Illyria, extending from Dalmatia on the north 
+to the Aous (Vjosa river) River on the south with Shkodër as its capital, his widow, Teuta, acted as 
+regent for her young stepson Pinnes. Teuta's first decision was to drive the Greek colonies off the Albanian 
+coast. Attempting this, she found Durrës too well fortified but Finiq farther south surrendered. While 
+her Illyrian ships were off the coast of Sarandë they intercepted and plundered some merchant vessels 
+of Rome. Encouraged by this success, Teuta's pirates extended their operations southward in the Ionian 
+Sea, westward along the coast of Italy, and were soon feared as the terror of the Adriatic.[PARAGRAPH:2] 
+The Roman Senate sent two ambassadors to the pirate lair at Shkodër to require reparations and demand 
+an end to the piratical expeditions. Apparently she told the ambassadors that according to the law of 
+the Illyrians, piracy was a lawful trade and that her government had no right to interfere with this 
+as a private enterprise. One of the envoys is repored to have replied that in that case Rome would make 
+it her business to introduce better law among the Illyrians. At any rate, one of the ambassadors addressed 
+the queen so disrespectfully that her attendants killed him as he embarked for Rome.[PARAGRAPH:2] This 
+was too much for Rome to endure. In 229 BC, Rome declared war on Illyria and for the first time armies 
+crossed the Adriatic to Illyria (the Balkan Peninsula in modern usage). The Roman fleet of 200 ships 
+went first to Corcyra. Teuta's governor, Demetrius had little alternative but to surrender, and the Romans 
+awarded him a considerable part of Teuta's holdings (228 BC). The Roman army then landed farther north 
+at Apollonia. The combined army and navy proceeded northward together, subduing one town after another 
+and besieging Shkodra, the capital. Teuta finally surrendered in 227 BC, having to accept an ignominious 
+peace. The Romans allowed her to continue her reign but restricted her to a narrow region around Shkodra, 
+deprived her of all her other holdings, and forbade her to sail an armed ship below Lissus (Lezhë) just 
+south of the capital. They also required her to pay an annual tribute and to acknowledge the final authority 
+of Rome. Thus the damage was done. Thanks to Queen Teuta the expanding empire of Rome had learned the 
+military route to the Balkan peninsula.</Italian>
+		<Spanish>[H1]Teuta [\H1][NEWLINE][BOLD]Illyrian Queen [\BOLD][NEWLINE][BOLD]Reigned: [\BOLD] BC 231 
+- 228 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]In 231 BC Teuta's husband, King Agron, 
+died from heavy alcohol consumption after feasting as a result of a victorious battle.  After the death 
+of Agron (250 BC?-231 BC) who established a kingdom of Illyria, extending from Dalmatia on the north 
+to the Aous (Vjosa river) River on the south with Shkodër as its capital, his widow, Teuta, acted as 
+regent for her young stepson Pinnes. Teuta's first decision was to drive the Greek colonies off the Albanian 
+coast. Attempting this, she found Durrës too well fortified but Finiq farther south surrendered. While 
+her Illyrian ships were off the coast of Sarandë they intercepted and plundered some merchant vessels 
+of Rome. Encouraged by this success, Teuta's pirates extended their operations southward in the Ionian 
+Sea, westward along the coast of Italy, and were soon feared as the terror of the Adriatic.[PARAGRAPH:2] 
+The Roman Senate sent two ambassadors to the pirate lair at Shkodër to require reparations and demand 
+an end to the piratical expeditions. Apparently she told the ambassadors that according to the law of 
+the Illyrians, piracy was a lawful trade and that her government had no right to interfere with this 
+as a private enterprise. One of the envoys is repored to have replied that in that case Rome would make 
+it her business to introduce better law among the Illyrians. At any rate, one of the ambassadors addressed 
+the queen so disrespectfully that her attendants killed him as he embarked for Rome.[PARAGRAPH:2] This 
+was too much for Rome to endure. In 229 BC, Rome declared war on Illyria and for the first time armies 
+crossed the Adriatic to Illyria (the Balkan Peninsula in modern usage). The Roman fleet of 200 ships 
+went first to Corcyra. Teuta's governor, Demetrius had little alternative but to surrender, and the Romans 
+awarded him a considerable part of Teuta's holdings (228 BC). The Roman army then landed farther north 
+at Apollonia. The combined army and navy proceeded northward together, subduing one town after another 
+and besieging Shkodra, the capital. Teuta finally surrendered in 227 BC, having to accept an ignominious 
+peace. The Romans allowed her to continue her reign but restricted her to a narrow region around Shkodra, 
+deprived her of all her other holdings, and forbade her to sail an armed ship below Lissus (Lezhë) just 
+south of the capital. They also required her to pay an annual tribute and to acknowledge the final authority 
+of Rome. Thus the damage was done. Thanks to Queen Teuta the expanding empire of Rome had learned the 
+military route to the Balkan peninsula.</Spanish>
+	</TEXT>
+</Civ4GameText>

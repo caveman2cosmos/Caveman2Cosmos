@@ -1,0 +1,1153 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- Modified by the Civ Gold Team -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_JOMON_DESC</Tag>
+		<English>Jomon Empire</English>
+		<French>Jomon Empire</French>
+		<German>Jomon Empire</German>
+		<Italian>Jomon Empire</Italian>
+		<Spanish>Jomon Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_JOMON_ADJECTIVE</Tag>
+		<English>Jomon</English>
+		<French>Jomon</French>
+		<German>Jomon</German>
+		<Italian>Jomon</Italian>
+		<Spanish>Jomon</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_JOMON_SHORT_DESC</Tag>
+		<English>Jomon</English>
+		<French>Jomon</French>
+		<German>Jomon</German>
+		<Italian>Jomon</Italian>
+		<Spanish>Jomon</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_JOMON_PEDIA</Tag>
+		<English>[TAB]More stable living patterns gave rise by around 14,000 BCE to a Mesolithic or, as some 
+scholars argue, Neolithic culture, but with some characteristics of both. Possibly distant ancestors 
+of the Ainu aboriginal people of modern Japan, members of the heterogeneous Jomon culture (c. 14,000-300 
+BCE) left the clearest archaeological record. They were related to the nearby Jeulmun culture of Korea.[PARAGRAPH:2]The 
+Jomon era pottery was called Jomon doki. Jomon means patterns of rope, and most earthware resembled designs 
+made by rope. First they wet the soil and made a rope out of it (wring it into a rope). Then they gave 
+it the desired shape with their hands. Mostly they ate or stored their food in the pots they made.The 
+Jomon people were also making clay figures and vessels decorated with patterns of a growing sophistication 
+made by impressing the wet clay with braided or unbraided cord and sticks.[PARAGRAPH:2]The manufacturing 
+of pottery typically implies some form of sedentary life due to the fact that pottery is highly breakable 
+and thus generally useless to hunter-gatherers who are constantly on the move. Therefore, the Jomon people 
+were probably some of the earliest sedentary or at least semi-sedentary people in the world. They used 
+chipped stone tools, ground stone tools, traps, and bows, and were probably semi-sedentary hunters-gatherers 
+and skillful coastal and deep-water fishermen. They practiced a rudimentary form of agriculture and lived 
+in caves and later in groups of either shallow pit dwellings or above-ground houses, leaving rich middens 
+for modern archaeological study. Because of this, the earliest forms of farming are sometimes attributed 
+to Japan (Ingpen and Wilkinson) in 10,000 BCE, two thousand years before their widespread appearance 
+in the Middle East. However, some archaeological evidence also suggests early experiments with agriculture 
+in the hills and valleys of the Fertile Crescent in modern Syria, Jordan, Turkey and Iraq around 11,000 
+BCE.[PARAGRAPH:2]This semi-sedentary culture led to important population increases, so that the Jomon 
+exhibit some of the highest densities known for foraging populations. Genetic mapping studies by Cavalli-Sforza 
+have shown a pattern of genetic expansion from the area of the Sea of Japan towards the rest of eastern 
+Asia. This appears as the third most important genetic movement in Eastern Asia (after the "Great expansion" 
+from the African continent, and a second expansion from the area of Northern Siberia), which suggests 
+geographical expansion during the early Jomon period. These studies also suggest that the Jomon demographic 
+expansion may have reached America along a path following the Pacific coast.</English>
+		<French>[TAB]More stable living patterns gave rise by around 14,000 BCE to a Mesolithic or, as some 
+scholars argue, Neolithic culture, but with some characteristics of both. Possibly distant ancestors 
+of the Ainu aboriginal people of modern Japan, members of the heterogeneous Jomon culture (c. 14,000-300 
+BCE) left the clearest archaeological record. They were related to the nearby Jeulmun culture of Korea.[PARAGRAPH:2]The 
+Jomon era pottery was called Jomon doki. Jomon means patterns of rope, and most earthware resembled designs 
+made by rope. First they wet the soil and made a rope out of it (wring it into a rope). Then they gave 
+it the desired shape with their hands. Mostly they ate or stored their food in the pots they made.The 
+Jomon people were also making clay figures and vessels decorated with patterns of a growing sophistication 
+made by impressing the wet clay with braided or unbraided cord and sticks.[PARAGRAPH:2]The manufacturing 
+of pottery typically implies some form of sedentary life due to the fact that pottery is highly breakable 
+and thus generally useless to hunter-gatherers who are constantly on the move. Therefore, the Jomon people 
+were probably some of the earliest sedentary or at least semi-sedentary people in the world. They used 
+chipped stone tools, ground stone tools, traps, and bows, and were probably semi-sedentary hunters-gatherers 
+and skillful coastal and deep-water fishermen. They practiced a rudimentary form of agriculture and lived 
+in caves and later in groups of either shallow pit dwellings or above-ground houses, leaving rich middens 
+for modern archaeological study. Because of this, the earliest forms of farming are sometimes attributed 
+to Japan (Ingpen and Wilkinson) in 10,000 BCE, two thousand years before their widespread appearance 
+in the Middle East. However, some archaeological evidence also suggests early experiments with agriculture 
+in the hills and valleys of the Fertile Crescent in modern Syria, Jordan, Turkey and Iraq around 11,000 
+BCE.[PARAGRAPH:2]This semi-sedentary culture led to important population increases, so that the Jomon 
+exhibit some of the highest densities known for foraging populations. Genetic mapping studies by Cavalli-Sforza 
+have shown a pattern of genetic expansion from the area of the Sea of Japan towards the rest of eastern 
+Asia. This appears as the third most important genetic movement in Eastern Asia (after the "Great expansion" 
+from the African continent, and a second expansion from the area of Northern Siberia), which suggests 
+geographical expansion during the early Jomon period. These studies also suggest that the Jomon demographic 
+expansion may have reached America along a path following the Pacific coast.</French>
+		<German>[TAB]More stable living patterns gave rise by around 14,000 BCE to a Mesolithic or, as some 
+scholars argue, Neolithic culture, but with some characteristics of both. Possibly distant ancestors 
+of the Ainu aboriginal people of modern Japan, members of the heterogeneous Jomon culture (c. 14,000-300 
+BCE) left the clearest archaeological record. They were related to the nearby Jeulmun culture of Korea.[PARAGRAPH:2]The 
+Jomon era pottery was called Jomon doki. Jomon means patterns of rope, and most earthware resembled designs 
+made by rope. First they wet the soil and made a rope out of it (wring it into a rope). Then they gave 
+it the desired shape with their hands. Mostly they ate or stored their food in the pots they made.The 
+Jomon people were also making clay figures and vessels decorated with patterns of a growing sophistication 
+made by impressing the wet clay with braided or unbraided cord and sticks.[PARAGRAPH:2]The manufacturing 
+of pottery typically implies some form of sedentary life due to the fact that pottery is highly breakable 
+and thus generally useless to hunter-gatherers who are constantly on the move. Therefore, the Jomon people 
+were probably some of the earliest sedentary or at least semi-sedentary people in the world. They used 
+chipped stone tools, ground stone tools, traps, and bows, and were probably semi-sedentary hunters-gatherers 
+and skillful coastal and deep-water fishermen. They practiced a rudimentary form of agriculture and lived 
+in caves and later in groups of either shallow pit dwellings or above-ground houses, leaving rich middens 
+for modern archaeological study. Because of this, the earliest forms of farming are sometimes attributed 
+to Japan (Ingpen and Wilkinson) in 10,000 BCE, two thousand years before their widespread appearance 
+in the Middle East. However, some archaeological evidence also suggests early experiments with agriculture 
+in the hills and valleys of the Fertile Crescent in modern Syria, Jordan, Turkey and Iraq around 11,000 
+BCE.[PARAGRAPH:2]This semi-sedentary culture led to important population increases, so that the Jomon 
+exhibit some of the highest densities known for foraging populations. Genetic mapping studies by Cavalli-Sforza 
+have shown a pattern of genetic expansion from the area of the Sea of Japan towards the rest of eastern 
+Asia. This appears as the third most important genetic movement in Eastern Asia (after the "Great expansion" 
+from the African continent, and a second expansion from the area of Northern Siberia), which suggests 
+geographical expansion during the early Jomon period. These studies also suggest that the Jomon demographic 
+expansion may have reached America along a path following the Pacific coast.</German>
+		<Italian>[TAB]More stable living patterns gave rise by around 14,000 BCE to a Mesolithic or, as some 
+scholars argue, Neolithic culture, but with some characteristics of both. Possibly distant ancestors 
+of the Ainu aboriginal people of modern Japan, members of the heterogeneous Jomon culture (c. 14,000-300 
+BCE) left the clearest archaeological record. They were related to the nearby Jeulmun culture of Korea.[PARAGRAPH:2]The 
+Jomon era pottery was called Jomon doki. Jomon means patterns of rope, and most earthware resembled designs 
+made by rope. First they wet the soil and made a rope out of it (wring it into a rope). Then they gave 
+it the desired shape with their hands. Mostly they ate or stored their food in the pots they made.The 
+Jomon people were also making clay figures and vessels decorated with patterns of a growing sophistication 
+made by impressing the wet clay with braided or unbraided cord and sticks.[PARAGRAPH:2]The manufacturing 
+of pottery typically implies some form of sedentary life due to the fact that pottery is highly breakable 
+and thus generally useless to hunter-gatherers who are constantly on the move. Therefore, the Jomon people 
+were probably some of the earliest sedentary or at least semi-sedentary people in the world. They used 
+chipped stone tools, ground stone tools, traps, and bows, and were probably semi-sedentary hunters-gatherers 
+and skillful coastal and deep-water fishermen. They practiced a rudimentary form of agriculture and lived 
+in caves and later in groups of either shallow pit dwellings or above-ground houses, leaving rich middens 
+for modern archaeological study. Because of this, the earliest forms of farming are sometimes attributed 
+to Japan (Ingpen and Wilkinson) in 10,000 BCE, two thousand years before their widespread appearance 
+in the Middle East. However, some archaeological evidence also suggests early experiments with agriculture 
+in the hills and valleys of the Fertile Crescent in modern Syria, Jordan, Turkey and Iraq around 11,000 
+BCE.[PARAGRAPH:2]This semi-sedentary culture led to important population increases, so that the Jomon 
+exhibit some of the highest densities known for foraging populations. Genetic mapping studies by Cavalli-Sforza 
+have shown a pattern of genetic expansion from the area of the Sea of Japan towards the rest of eastern 
+Asia. This appears as the third most important genetic movement in Eastern Asia (after the "Great expansion" 
+from the African continent, and a second expansion from the area of Northern Siberia), which suggests 
+geographical expansion during the early Jomon period. These studies also suggest that the Jomon demographic 
+expansion may have reached America along a path following the Pacific coast.</Italian>
+		<Spanish>[TAB]More stable living patterns gave rise by around 14,000 BCE to a Mesolithic or, as some 
+scholars argue, Neolithic culture, but with some characteristics of both. Possibly distant ancestors 
+of the Ainu aboriginal people of modern Japan, members of the heterogeneous Jomon culture (c. 14,000-300 
+BCE) left the clearest archaeological record. They were related to the nearby Jeulmun culture of Korea.[PARAGRAPH:2]The 
+Jomon era pottery was called Jomon doki. Jomon means patterns of rope, and most earthware resembled designs 
+made by rope. First they wet the soil and made a rope out of it (wring it into a rope). Then they gave 
+it the desired shape with their hands. Mostly they ate or stored their food in the pots they made.The 
+Jomon people were also making clay figures and vessels decorated with patterns of a growing sophistication 
+made by impressing the wet clay with braided or unbraided cord and sticks.[PARAGRAPH:2]The manufacturing 
+of pottery typically implies some form of sedentary life due to the fact that pottery is highly breakable 
+and thus generally useless to hunter-gatherers who are constantly on the move. Therefore, the Jomon people 
+were probably some of the earliest sedentary or at least semi-sedentary people in the world. They used 
+chipped stone tools, ground stone tools, traps, and bows, and were probably semi-sedentary hunters-gatherers 
+and skillful coastal and deep-water fishermen. They practiced a rudimentary form of agriculture and lived 
+in caves and later in groups of either shallow pit dwellings or above-ground houses, leaving rich middens 
+for modern archaeological study. Because of this, the earliest forms of farming are sometimes attributed 
+to Japan (Ingpen and Wilkinson) in 10,000 BCE, two thousand years before their widespread appearance 
+in the Middle East. However, some archaeological evidence also suggests early experiments with agriculture 
+in the hills and valleys of the Fertile Crescent in modern Syria, Jordan, Turkey and Iraq around 11,000 
+BCE.[PARAGRAPH:2]This semi-sedentary culture led to important population increases, so that the Jomon 
+exhibit some of the highest densities known for foraging populations. Genetic mapping studies by Cavalli-Sforza 
+have shown a pattern of genetic expansion from the area of the Sea of Japan towards the rest of eastern 
+Asia. This appears as the third most important genetic movement in Eastern Asia (after the "Great expansion" 
+from the African continent, and a second expansion from the area of Northern Siberia), which suggests 
+geographical expansion during the early Jomon period. These studies also suggest that the Jomon demographic 
+expansion may have reached America along a path following the Pacific coast.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_JIMMU</Tag>
+		<English>Jimmu</English>
+		<French>
+			<Text>Jimmu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Jimmu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Jimmu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Jimmu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_JIMMU_PEDIA</Tag>
+		<English>[H1]Emperor Jimmu[\H1][NEWLINE][BOLD]Mythical founder of Japan[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 711 BC - 585 BC[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Emperor Jimmu also 
+known as: Kamuyamato Iwarebiko; given name: Wakamikenu no Mikoto or Sano no Mikoto, born according to 
+the legendary account in the Kojiki on January 1, 711 BC, and died, again according to legend, on March 
+11, 585 BC (both dates according to the lunisolar traditional Japanese calendar), was the mythical founder 
+of Japan and is the first emperor named in the traditional lists of emperors. The Imperial house of Japan 
+traditionally based its claim to the throne on its descent from Jimmu.[PARAGRAPH:1]No firm dates can 
+be assigned to this emperor's life or reign. Jimmu is regarded by historians as a "legendary emperor" 
+because of the paucity of information about him, which does not necessarily imply that no such person 
+ever existed. Rather, scholars can only lament that, at this time, there is insufficient material available 
+for further verification and study.[PARAGRAPH:1]According to Shinto belief, Jimmu is regarded as a direct 
+descendant of the sun goddess, Amaterasu. Amaterasu had a son called Ame no Oshihomimi no Mikoto and 
+through him a grandson named Ninigi-no-Mikoto. She sent her grandson to the Japanese islands where he 
+eventually married Konohana-Sakuya-hime. Among their three sons was Hikohohodemi no Mikoto, also called 
+Yamasachi-hiko, who married Toyotama-hime. She was the daughter of Ryujin, the Japanese sea god. They 
+had a single son called Hikonagisa Takeugaya Fukiaezu no Mikoto. The boy was abandoned by his parents 
+at birth and consequently raised by Tamayori-hime, his mother's younger sister. They eventually married 
+and had a total of four sons. The last of them became Emperor Jimmu.</English>
+		<French>[H1]Emperor Jimmu[\H1][NEWLINE][BOLD]Mythical founder of Japan[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 711 BC - 585 BC[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Emperor Jimmu also 
+known as: Kamuyamato Iwarebiko; given name: Wakamikenu no Mikoto or Sano no Mikoto, born according to 
+the legendary account in the Kojiki on January 1, 711 BC, and died, again according to legend, on March 
+11, 585 BC (both dates according to the lunisolar traditional Japanese calendar), was the mythical founder 
+of Japan and is the first emperor named in the traditional lists of emperors. The Imperial house of Japan 
+traditionally based its claim to the throne on its descent from Jimmu.[PARAGRAPH:1]No firm dates can 
+be assigned to this emperor's life or reign. Jimmu is regarded by historians as a "legendary emperor" 
+because of the paucity of information about him, which does not necessarily imply that no such person 
+ever existed. Rather, scholars can only lament that, at this time, there is insufficient material available 
+for further verification and study.[PARAGRAPH:1]According to Shinto belief, Jimmu is regarded as a direct 
+descendant of the sun goddess, Amaterasu. Amaterasu had a son called Ame no Oshihomimi no Mikoto and 
+through him a grandson named Ninigi-no-Mikoto. She sent her grandson to the Japanese islands where he 
+eventually married Konohana-Sakuya-hime. Among their three sons was Hikohohodemi no Mikoto, also called 
+Yamasachi-hiko, who married Toyotama-hime. She was the daughter of Ryujin, the Japanese sea god. They 
+had a single son called Hikonagisa Takeugaya Fukiaezu no Mikoto. The boy was abandoned by his parents 
+at birth and consequently raised by Tamayori-hime, his mother's younger sister. They eventually married 
+and had a total of four sons. The last of them became Emperor Jimmu.</French>
+		<German>[H1]Emperor Jimmu[\H1][NEWLINE][BOLD]Mythical founder of Japan[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 711 BC - 585 BC[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Emperor Jimmu also 
+known as: Kamuyamato Iwarebiko; given name: Wakamikenu no Mikoto or Sano no Mikoto, born according to 
+the legendary account in the Kojiki on January 1, 711 BC, and died, again according to legend, on March 
+11, 585 BC (both dates according to the lunisolar traditional Japanese calendar), was the mythical founder 
+of Japan and is the first emperor named in the traditional lists of emperors. The Imperial house of Japan 
+traditionally based its claim to the throne on its descent from Jimmu.[PARAGRAPH:1]No firm dates can 
+be assigned to this emperor's life or reign. Jimmu is regarded by historians as a "legendary emperor" 
+because of the paucity of information about him, which does not necessarily imply that no such person 
+ever existed. Rather, scholars can only lament that, at this time, there is insufficient material available 
+for further verification and study.[PARAGRAPH:1]According to Shinto belief, Jimmu is regarded as a direct 
+descendant of the sun goddess, Amaterasu. Amaterasu had a son called Ame no Oshihomimi no Mikoto and 
+through him a grandson named Ninigi-no-Mikoto. She sent her grandson to the Japanese islands where he 
+eventually married Konohana-Sakuya-hime. Among their three sons was Hikohohodemi no Mikoto, also called 
+Yamasachi-hiko, who married Toyotama-hime. She was the daughter of Ryujin, the Japanese sea god. They 
+had a single son called Hikonagisa Takeugaya Fukiaezu no Mikoto. The boy was abandoned by his parents 
+at birth and consequently raised by Tamayori-hime, his mother's younger sister. They eventually married 
+and had a total of four sons. The last of them became Emperor Jimmu.</German>
+		<Italian>[H1]Emperor Jimmu[\H1][NEWLINE][BOLD]Mythical founder of Japan[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 711 BC - 585 BC[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Emperor Jimmu also 
+known as: Kamuyamato Iwarebiko; given name: Wakamikenu no Mikoto or Sano no Mikoto, born according to 
+the legendary account in the Kojiki on January 1, 711 BC, and died, again according to legend, on March 
+11, 585 BC (both dates according to the lunisolar traditional Japanese calendar), was the mythical founder 
+of Japan and is the first emperor named in the traditional lists of emperors. The Imperial house of Japan 
+traditionally based its claim to the throne on its descent from Jimmu.[PARAGRAPH:1]No firm dates can 
+be assigned to this emperor's life or reign. Jimmu is regarded by historians as a "legendary emperor" 
+because of the paucity of information about him, which does not necessarily imply that no such person 
+ever existed. Rather, scholars can only lament that, at this time, there is insufficient material available 
+for further verification and study.[PARAGRAPH:1]According to Shinto belief, Jimmu is regarded as a direct 
+descendant of the sun goddess, Amaterasu. Amaterasu had a son called Ame no Oshihomimi no Mikoto and 
+through him a grandson named Ninigi-no-Mikoto. She sent her grandson to the Japanese islands where he 
+eventually married Konohana-Sakuya-hime. Among their three sons was Hikohohodemi no Mikoto, also called 
+Yamasachi-hiko, who married Toyotama-hime. She was the daughter of Ryujin, the Japanese sea god. They 
+had a single son called Hikonagisa Takeugaya Fukiaezu no Mikoto. The boy was abandoned by his parents 
+at birth and consequently raised by Tamayori-hime, his mother's younger sister. They eventually married 
+and had a total of four sons. The last of them became Emperor Jimmu.</Italian>
+		<Spanish>[H1]Emperor Jimmu[\H1][NEWLINE][BOLD]Mythical founder of Japan[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 711 BC - 585 BC[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Emperor Jimmu also 
+known as: Kamuyamato Iwarebiko; given name: Wakamikenu no Mikoto or Sano no Mikoto, born according to 
+the legendary account in the Kojiki on January 1, 711 BC, and died, again according to legend, on March 
+11, 585 BC (both dates according to the lunisolar traditional Japanese calendar), was the mythical founder 
+of Japan and is the first emperor named in the traditional lists of emperors. The Imperial house of Japan 
+traditionally based its claim to the throne on its descent from Jimmu.[PARAGRAPH:1]No firm dates can 
+be assigned to this emperor's life or reign. Jimmu is regarded by historians as a "legendary emperor" 
+because of the paucity of information about him, which does not necessarily imply that no such person 
+ever existed. Rather, scholars can only lament that, at this time, there is insufficient material available 
+for further verification and study.[PARAGRAPH:1]According to Shinto belief, Jimmu is regarded as a direct 
+descendant of the sun goddess, Amaterasu. Amaterasu had a son called Ame no Oshihomimi no Mikoto and 
+through him a grandson named Ninigi-no-Mikoto. She sent her grandson to the Japanese islands where he 
+eventually married Konohana-Sakuya-hime. Among their three sons was Hikohohodemi no Mikoto, also called 
+Yamasachi-hiko, who married Toyotama-hime. She was the daughter of Ryujin, the Japanese sea god. They 
+had a single son called Hikonagisa Takeugaya Fukiaezu no Mikoto. The boy was abandoned by his parents 
+at birth and consequently raised by Tamayori-hime, his mother's younger sister. They eventually married 
+and had a total of four sons. The last of them became Emperor Jimmu.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_JIMMU_1</Tag>
+		<English>Surely the sun goddess, Amaterasu, has smiled upon you, [CT_NAME] - for she have led you to me!</English>
+		<French>Surely the sun goddess, Amaterasu, has smiled upon you, [CT_NAME] - for she have led you to me!</French>
+		<German>Surely the sun goddess, Amaterasu, has smiled upon you, [CT_NAME] - for she have led you to me!</German>
+		<Italian>Surely the sun goddess, Amaterasu, has smiled upon you, [CT_NAME] - for she have led you to me!</Italian>
+		<Spanish>Surely the sun goddess, Amaterasu, has smiled upon you, [CT_NAME] - for she have led you to me!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SANNAI_MARUYAMA</Tag>
+		<English>Sannai Maruyama</English>
+		<French>
+			<Text>Sannai Maruyama</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sannai Maruyama</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sannai Maruyama</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sannai Maruyama</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ODAI_YAMAMOTO</Tag>
+		<English>Odai Yamamoto</English>
+		<French>
+			<Text>Odai Yamamoto</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Odai Yamamoto</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Odai Yamamoto</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Odai Yamamoto</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KAMINO</Tag>
+		<English>Kamino</English>
+		<French>
+			<Text>Kamino</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kamino</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kamino</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kamino</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MAEDA_KOCHI</Tag>
+		<English>Maeda Kochi</English>
+		<French>
+			<Text>Maeda Kochi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Maeda Kochi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Maeda Kochi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Maeda Kochi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ONDASHI</Tag>
+		<English>Ondashi</English>
+		<French>
+			<Text>Ondashi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ondashi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ondashi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ondashi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TORIHAMA</Tag>
+		<English>Torihama</English>
+		<French>
+			<Text>Torihama</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Torihama</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Torihama</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Torihama</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_FUKAMI_SUWAYAMA</Tag>
+		<English>Fukami Suwayama</English>
+		<French>
+			<Text>Fukami Suwayama</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Fukami Suwayama</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Fukami Suwayama</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Fukami Suwayama</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_FUKUI</Tag>
+		<English>Fukui</English>
+		<French>
+			<Text>Fukui</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Fukui</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Fukui</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Fukui</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_AWAZU</Tag>
+		<English>Awazu</English>
+		<French>
+			<Text>Awazu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Awazu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Awazu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Awazu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ASAHIGAOKA</Tag>
+		<English>Asashigoka</English>
+		<French>
+			<Text>Asashigoka</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Asashigoka</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Asashigoka</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Asashigoka</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NAKAZATO</Tag>
+		<English>Nakazato</English>
+		<French>
+			<Text>Nakazato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Nakazato</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Nakazato</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Nakazato</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_HAMANASUNO</Tag>
+		<English>Hamanasuno</English>
+		<French>
+			<Text>Hamanasuno</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Hamanasuno</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Hamanasuno</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Hamanasuno</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MUROYA</Tag>
+		<English>Muroya</English>
+		<French>
+			<Text>Muroya</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Muroya</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Muroya</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Muroya</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SEMPUKUJI</Tag>
+		<English>Sempukuji</English>
+		<French>
+			<Text>Sempukuji</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sempukuji</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sempukuji</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sempukuji</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_HIGASHI_ROKUGO</Tag>
+		<English>Higashi Rokugo</English>
+		<French>
+			<Text>Higashi Rokugo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Higashi Rokugo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Higashi Rokugo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Higashi Rokugo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_USHIRONO</Tag>
+		<English>Ushirono</English>
+		<French>
+			<Text>Ushirono</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ushirono</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ushirono</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ushirono</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ORNI_MACHI</Tag>
+		<English>Orni Machi</English>
+		<French>
+			<Text>Orni Machi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Orni Machi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Orni Machi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Orni Machi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_IRUGI_JINJA</Tag>
+		<English>Irugi Jinja</English>
+		<French>
+			<Text>Irugi Jinja</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Irugi Jinja</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Irugi Jinja</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Irugi Jinja</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_OHMORI</Tag>
+		<English>Ohmori</English>
+		<French>
+			<Text>Ohmori</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ohmori</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ohmori</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ohmori</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KARINBA</Tag>
+		<English>Karinba</English>
+		<French>
+			<Text>Karinba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Karinba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Karinba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Karinba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KAMEGAOKA_MURA</Tag>
+		<English>Kamegaoka Mura</English>
+		<French>
+			<Text>Kamegaoka Mura</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kamegaoka Mura</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kamegaoka Mura</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kamegaoka Mura</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KOMAKINO</Tag>
+		<English>Komakino</English>
+		<French>
+			<Text>Komakino</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Komakino</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Komakino</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Komakino</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_IKENAI</Tag>
+		<English>Ikenai</English>
+		<French>
+			<Text>Ikenai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ikenai</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ikenai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ikenai</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KAZUNO</Tag>
+		<English>Kazuno</English>
+		<French>
+			<Text>Kazuno</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kazuno</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kazuno</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kazuno</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_OOHASAMA</Tag>
+		<English>Oohasama</English>
+		<French>
+			<Text>Oohasama</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Oohasama</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Oohasama</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Oohasama</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GETO_ONSEN</Tag>
+		<English>Geto Onsen</English>
+		<French>
+			<Text>Geto Onsen</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Geto Onsen</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Geto Onsen</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Geto Onsen</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NISHINOME</Tag>
+		<English>Nishinome</English>
+		<French>
+			<Text>Nishinome</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Nishinome</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Nishinome</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Nishinome</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KABUKURI</Tag>
+		<English>Kabukuri</English>
+		<French>
+			<Text>Kabukuri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kabukuri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kabukuri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kabukuri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_AIZUWAKAMATSU</Tag>
+		<English>Aizuwakamatsu</English>
+		<French>
+			<Text>Aizuwakamatsu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Aizuwakamatsu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Aizuwakamatsu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Aizuwakamatsu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_FUKUMANJI</Tag>
+		<English>Fukumanji</English>
+		<French>
+			<Text>Fukumanji</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Fukumanji</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Fukumanji</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Fukumanji</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_OHTSUKUMI</Tag>
+		<English>Ohtsukumi</English>
+		<French>
+			<Text>Ohtsukumi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ohtsukumi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ohtsukumi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ohtsukumi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_IWADE</Tag>
+		<English>Iwade</English>
+		<French>
+			<Text>Iwade</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Iwade</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Iwade</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Iwade</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KOZANJI</Tag>
+		<English>Kozanji</English>
+		<French>
+			<Text>Kozanji</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kozanji</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kozanji</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kozanji</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_HIGASHI_HARIMA</Tag>
+		<English>Higashi Harima</English>
+		<French>
+			<Text>Higashi Harima</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Higashi Harima</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Higashi Harima</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Higashi Harima</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KANNABEKOGEN</Tag>
+		<English>Kanna Bekogen</English>
+		<French>
+			<Text>Kanna Bekogen</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kanna Bekogen</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kanna Bekogen</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kanna Bekogen</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_HYUGA</Tag>
+		<English>Hyuga</English>
+		<French>
+			<Text>Hyuga</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Hyuga</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Hyuga</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Hyuga</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+</Civ4GameText>

@@ -1,0 +1,1174 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- ReModified by the StrategyOnly -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MALAYSIA_DESC</Tag>
+		<English>Malaysia</English>
+		<French>Malaysia</French>
+		<German>Malaysia</German>
+		<Italian>Malaysia</Italian>
+		<Spanish>Malaysia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MALAYSIA_SHORT_DESC</Tag>
+		<English>Malaysia</English>
+		<French>Malaysia</French>
+		<German>Malaysia</German>
+		<Italian>Malaysia</Italian>
+		<Spanish>Malaysia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MALAYSIA_ADJECTIVE</Tag>
+		<English>Malaysian</English>
+		<French>Malaysian</French>
+		<German>Malaysian</German>
+		<Italian>Malaysian</Italian>
+		<Spanish>Malaysian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MALAYSIA_PEDIA</Tag>
+		<English>[TAB]Archaeological remains have been found throughout peninsular Malaysia, Sabah and Sarawak. 
+The Semang have a deep ancestry within the Malay Peninsula, dating to the initial settlement from Africa 
+over 50,000 years ago. The Senoi appear to be a composite group, with approximately half of the maternal 
+lineages tracing back to the ancestors of the Semang and about half to Indochina. This is in agreement 
+with the suggestion that they represent the descendants of early Austronesian speaking agriculturalists, 
+who brought both their language and their technology to the southern part of the peninsula approximately 
+5,000 years ago and coalesced with the indigenous population.[PARAGRAPH:2]The Buddhist kingdom of Ligor 
+took control of Kedah shortly after, and its King Chandrabhanu used it as a base to attack Sri Lanka 
+in the 11th century, an event noted in a stone inscription in Nagapattinum in Tamil Nadu and in the Sri 
+Lankan chronicles, Mahavamsa. During the first millennium, the people of the Malay Peninsula adopted 
+Hinduism and Buddhism and the use of the Sanskrit language until they eventually converted to Islam.[PARAGRAPH:2]In 
+the early-15th century, the Malacca Sultanate was established under a dynasty founded by Parameswara 
+, a prince from Palembang within the Srivijayan empire. Conquest forced him and many others to flee Palembang. 
+Parameswara in particular sailed to Temasek to escape persecution and came under the protection of Temagi, 
+a Malay chief from Patani who was appointed by the King of Siam as Regent of Temasek.[PARAGRAPH:2]Modern 
+Malaysia is a country that consists of thirteen states and three federal territories in Southeast Asia. 
+The capital city is Kuala Lumpur, while Putrajaya is the seat of the federal government. The population 
+stands at over 27 million.The country is separated into two regions  Peninsular Malaysia and Malaysian 
+Borneo  by the South China Sea. Malaysia borders Thailand, Indonesia, Singapore, Brunei and the Philippines. 
+The country is located near the equator and experiences a tropical climate. Malaysia's head of state 
+is the Yang di-Pertuan Agong and the government is headed by a Prime Minister. The government is closely 
+modeled after the Westminster parliamentary system.[PARAGRAPH:2]Malaysia as a unified state did not exist 
+until 1963. Previously, a set of colonies were established by the United Kingdom from the late-18th century, 
+and the western half of modern Malaysia was composed of several separate kingdoms. This group of colonies 
+was known as British Malaya until its dissolution in 1946, when it was reorganized as the Malayan Union. 
+Due to widespread opposition, it was reorganized again as the Federation of Malaya in 1948 and later 
+gained independence on 31 August 1957. At one time, it was the largest producer of tin, rubber and palm 
+oil in the world. Manufacturing has a large influence in the country's economy. Malaysia has a biodiverse 
+range of flora and fauna, and is also considered one of the 18 megadiverse countries.[PARAGRAPH:2]Malaysia 
+is a founding member of the Association of Southeast Asian Nations and participates in many international 
+organisations such as the United Nations. As a former British colony, it is also a member of the Commonwealth 
+of Nations.</English>
+		<French>[TAB]Archaeological remains have been found throughout peninsular Malaysia, Sabah and Sarawak. 
+The Semang have a deep ancestry within the Malay Peninsula, dating to the initial settlement from Africa 
+over 50,000 years ago. The Senoi appear to be a composite group, with approximately half of the maternal 
+lineages tracing back to the ancestors of the Semang and about half to Indochina. This is in agreement 
+with the suggestion that they represent the descendants of early Austronesian speaking agriculturalists, 
+who brought both their language and their technology to the southern part of the peninsula approximately 
+5,000 years ago and coalesced with the indigenous population.[PARAGRAPH:2]The Buddhist kingdom of Ligor 
+took control of Kedah shortly after, and its King Chandrabhanu used it as a base to attack Sri Lanka 
+in the 11th century, an event noted in a stone inscription in Nagapattinum in Tamil Nadu and in the Sri 
+Lankan chronicles, Mahavamsa. During the first millennium, the people of the Malay Peninsula adopted 
+Hinduism and Buddhism and the use of the Sanskrit language until they eventually converted to Islam.[PARAGRAPH:2]In 
+the early-15th century, the Malacca Sultanate was established under a dynasty founded by Parameswara 
+, a prince from Palembang within the Srivijayan empire. Conquest forced him and many others to flee Palembang. 
+Parameswara in particular sailed to Temasek to escape persecution and came under the protection of Temagi, 
+a Malay chief from Patani who was appointed by the King of Siam as Regent of Temasek.[PARAGRAPH:2]Modern 
+Malaysia is a country that consists of thirteen states and three federal territories in Southeast Asia. 
+The capital city is Kuala Lumpur, while Putrajaya is the seat of the federal government. The population 
+stands at over 27 million.The country is separated into two regions  Peninsular Malaysia and Malaysian 
+Borneo  by the South China Sea. Malaysia borders Thailand, Indonesia, Singapore, Brunei and the Philippines. 
+The country is located near the equator and experiences a tropical climate. Malaysia's head of state 
+is the Yang di-Pertuan Agong and the government is headed by a Prime Minister. The government is closely 
+modeled after the Westminster parliamentary system.[PARAGRAPH:2]Malaysia as a unified state did not exist 
+until 1963. Previously, a set of colonies were established by the United Kingdom from the late-18th century, 
+and the western half of modern Malaysia was composed of several separate kingdoms. This group of colonies 
+was known as British Malaya until its dissolution in 1946, when it was reorganized as the Malayan Union. 
+Due to widespread opposition, it was reorganized again as the Federation of Malaya in 1948 and later 
+gained independence on 31 August 1957. At one time, it was the largest producer of tin, rubber and palm 
+oil in the world. Manufacturing has a large influence in the country's economy. Malaysia has a biodiverse 
+range of flora and fauna, and is also considered one of the 18 megadiverse countries.[PARAGRAPH:2]Malaysia 
+is a founding member of the Association of Southeast Asian Nations and participates in many international 
+organisations such as the United Nations. As a former British colony, it is also a member of the Commonwealth 
+of Nations.</French>
+		<German>[TAB]Archaeological remains have been found throughout peninsular Malaysia, Sabah and Sarawak. 
+The Semang have a deep ancestry within the Malay Peninsula, dating to the initial settlement from Africa 
+over 50,000 years ago. The Senoi appear to be a composite group, with approximately half of the maternal 
+lineages tracing back to the ancestors of the Semang and about half to Indochina. This is in agreement 
+with the suggestion that they represent the descendants of early Austronesian speaking agriculturalists, 
+who brought both their language and their technology to the southern part of the peninsula approximately 
+5,000 years ago and coalesced with the indigenous population.[PARAGRAPH:2]The Buddhist kingdom of Ligor 
+took control of Kedah shortly after, and its King Chandrabhanu used it as a base to attack Sri Lanka 
+in the 11th century, an event noted in a stone inscription in Nagapattinum in Tamil Nadu and in the Sri 
+Lankan chronicles, Mahavamsa. During the first millennium, the people of the Malay Peninsula adopted 
+Hinduism and Buddhism and the use of the Sanskrit language until they eventually converted to Islam.[PARAGRAPH:2]In 
+the early-15th century, the Malacca Sultanate was established under a dynasty founded by Parameswara 
+, a prince from Palembang within the Srivijayan empire. Conquest forced him and many others to flee Palembang. 
+Parameswara in particular sailed to Temasek to escape persecution and came under the protection of Temagi, 
+a Malay chief from Patani who was appointed by the King of Siam as Regent of Temasek.[PARAGRAPH:2]Modern 
+Malaysia is a country that consists of thirteen states and three federal territories in Southeast Asia. 
+The capital city is Kuala Lumpur, while Putrajaya is the seat of the federal government. The population 
+stands at over 27 million.The country is separated into two regions  Peninsular Malaysia and Malaysian 
+Borneo  by the South China Sea. Malaysia borders Thailand, Indonesia, Singapore, Brunei and the Philippines. 
+The country is located near the equator and experiences a tropical climate. Malaysia's head of state 
+is the Yang di-Pertuan Agong and the government is headed by a Prime Minister. The government is closely 
+modeled after the Westminster parliamentary system.[PARAGRAPH:2]Malaysia as a unified state did not exist 
+until 1963. Previously, a set of colonies were established by the United Kingdom from the late-18th century, 
+and the western half of modern Malaysia was composed of several separate kingdoms. This group of colonies 
+was known as British Malaya until its dissolution in 1946, when it was reorganized as the Malayan Union. 
+Due to widespread opposition, it was reorganized again as the Federation of Malaya in 1948 and later 
+gained independence on 31 August 1957. At one time, it was the largest producer of tin, rubber and palm 
+oil in the world. Manufacturing has a large influence in the country's economy. Malaysia has a biodiverse 
+range of flora and fauna, and is also considered one of the 18 megadiverse countries.[PARAGRAPH:2]Malaysia 
+is a founding member of the Association of Southeast Asian Nations and participates in many international 
+organisations such as the United Nations. As a former British colony, it is also a member of the Commonwealth 
+of Nations.</German>
+		<Italian>[TAB]Archaeological remains have been found throughout peninsular Malaysia, Sabah and Sarawak. 
+The Semang have a deep ancestry within the Malay Peninsula, dating to the initial settlement from Africa 
+over 50,000 years ago. The Senoi appear to be a composite group, with approximately half of the maternal 
+lineages tracing back to the ancestors of the Semang and about half to Indochina. This is in agreement 
+with the suggestion that they represent the descendants of early Austronesian speaking agriculturalists, 
+who brought both their language and their technology to the southern part of the peninsula approximately 
+5,000 years ago and coalesced with the indigenous population.[PARAGRAPH:2]The Buddhist kingdom of Ligor 
+took control of Kedah shortly after, and its King Chandrabhanu used it as a base to attack Sri Lanka 
+in the 11th century, an event noted in a stone inscription in Nagapattinum in Tamil Nadu and in the Sri 
+Lankan chronicles, Mahavamsa. During the first millennium, the people of the Malay Peninsula adopted 
+Hinduism and Buddhism and the use of the Sanskrit language until they eventually converted to Islam.[PARAGRAPH:2]In 
+the early-15th century, the Malacca Sultanate was established under a dynasty founded by Parameswara 
+, a prince from Palembang within the Srivijayan empire. Conquest forced him and many others to flee Palembang. 
+Parameswara in particular sailed to Temasek to escape persecution and came under the protection of Temagi, 
+a Malay chief from Patani who was appointed by the King of Siam as Regent of Temasek.[PARAGRAPH:2]Modern 
+Malaysia is a country that consists of thirteen states and three federal territories in Southeast Asia. 
+The capital city is Kuala Lumpur, while Putrajaya is the seat of the federal government. The population 
+stands at over 27 million.The country is separated into two regions  Peninsular Malaysia and Malaysian 
+Borneo  by the South China Sea. Malaysia borders Thailand, Indonesia, Singapore, Brunei and the Philippines. 
+The country is located near the equator and experiences a tropical climate. Malaysia's head of state 
+is the Yang di-Pertuan Agong and the government is headed by a Prime Minister. The government is closely 
+modeled after the Westminster parliamentary system.[PARAGRAPH:2]Malaysia as a unified state did not exist 
+until 1963. Previously, a set of colonies were established by the United Kingdom from the late-18th century, 
+and the western half of modern Malaysia was composed of several separate kingdoms. This group of colonies 
+was known as British Malaya until its dissolution in 1946, when it was reorganized as the Malayan Union. 
+Due to widespread opposition, it was reorganized again as the Federation of Malaya in 1948 and later 
+gained independence on 31 August 1957. At one time, it was the largest producer of tin, rubber and palm 
+oil in the world. Manufacturing has a large influence in the country's economy. Malaysia has a biodiverse 
+range of flora and fauna, and is also considered one of the 18 megadiverse countries.[PARAGRAPH:2]Malaysia 
+is a founding member of the Association of Southeast Asian Nations and participates in many international 
+organisations such as the United Nations. As a former British colony, it is also a member of the Commonwealth 
+of Nations.</Italian>
+		<Spanish>[TAB]Archaeological remains have been found throughout peninsular Malaysia, Sabah and Sarawak. 
+The Semang have a deep ancestry within the Malay Peninsula, dating to the initial settlement from Africa 
+over 50,000 years ago. The Senoi appear to be a composite group, with approximately half of the maternal 
+lineages tracing back to the ancestors of the Semang and about half to Indochina. This is in agreement 
+with the suggestion that they represent the descendants of early Austronesian speaking agriculturalists, 
+who brought both their language and their technology to the southern part of the peninsula approximately 
+5,000 years ago and coalesced with the indigenous population.[PARAGRAPH:2]The Buddhist kingdom of Ligor 
+took control of Kedah shortly after, and its King Chandrabhanu used it as a base to attack Sri Lanka 
+in the 11th century, an event noted in a stone inscription in Nagapattinum in Tamil Nadu and in the Sri 
+Lankan chronicles, Mahavamsa. During the first millennium, the people of the Malay Peninsula adopted 
+Hinduism and Buddhism and the use of the Sanskrit language until they eventually converted to Islam.[PARAGRAPH:2]In 
+the early-15th century, the Malacca Sultanate was established under a dynasty founded by Parameswara 
+, a prince from Palembang within the Srivijayan empire. Conquest forced him and many others to flee Palembang. 
+Parameswara in particular sailed to Temasek to escape persecution and came under the protection of Temagi, 
+a Malay chief from Patani who was appointed by the King of Siam as Regent of Temasek.[PARAGRAPH:2]Modern 
+Malaysia is a country that consists of thirteen states and three federal territories in Southeast Asia. 
+The capital city is Kuala Lumpur, while Putrajaya is the seat of the federal government. The population 
+stands at over 27 million.The country is separated into two regions  Peninsular Malaysia and Malaysian 
+Borneo  by the South China Sea. Malaysia borders Thailand, Indonesia, Singapore, Brunei and the Philippines. 
+The country is located near the equator and experiences a tropical climate. Malaysia's head of state 
+is the Yang di-Pertuan Agong and the government is headed by a Prime Minister. The government is closely 
+modeled after the Westminster parliamentary system.[PARAGRAPH:2]Malaysia as a unified state did not exist 
+until 1963. Previously, a set of colonies were established by the United Kingdom from the late-18th century, 
+and the western half of modern Malaysia was composed of several separate kingdoms. This group of colonies 
+was known as British Malaya until its dissolution in 1946, when it was reorganized as the Malayan Union. 
+Due to widespread opposition, it was reorganized again as the Federation of Malaya in 1948 and later 
+gained independence on 31 August 1957. At one time, it was the largest producer of tin, rubber and palm 
+oil in the world. Manufacturing has a large influence in the country's economy. Malaysia has a biodiverse 
+range of flora and fauna, and is also considered one of the 18 megadiverse countries.[PARAGRAPH:2]Malaysia 
+is a founding member of the Association of Southeast Asian Nations and participates in many international 
+organisations such as the United Nations. As a former British colony, it is also a member of the Commonwealth 
+of Nations.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_MAHATHIR</Tag>
+		<English>Mahathir</English>
+		<French>
+			<Text>Mahathir</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mahathir</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Mahathir</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mahathir</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_MAHATHIR_PEDIA</Tag>
+		<English>[H1]Mahathir bin Mohamad[\H1][NEWLINE][BOLD]Prime Minister of Malaysia[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1925 - [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Tun Dr. Mahathir bin Mohamad 
+was the fourth Prime Minister of Malaysia. He held the post for 22 years from 1981 to 2003, making him 
+Malaysia's longest-serving Prime Minister, and one of the longest-serving leaders in Asia. During his 
+term in office, he was credited for engineering Malaysia's rapid modernization and promoting non-individualistic 
+"Asian values". Mahathir is also known for his criticisms of western and developed countries. During 
+his administration, he was considered as one of Asia's most influential leaders. Mahathir is also noted 
+in the Western world as an outspoken critic of Western civilization.[PARAGRAPH:1]In 1983 and 1991, he 
+took on the federal and state monarchies, removing the royal veto and royal immunity from prosecution.Prior 
+to this amendment of the law, royal assent was required in order for any bill to pass into law. During 
+the Asian financial crisis of 1997, IMF had prescribed a recovery package for Malaysia, but Mahathir 
+defied international pressure, his then Deputy Anwar Ibrahim, and conventional wisdom in rejecting the 
+package. Though economic prosperity has been mixed since then, Mahathir argued that Malaysia's recovery 
+was relatively faster and better, as compared to many other Asian countries affected. After the financial 
+crisis, the IMF and World Bank acknowledged that Mahathir's approach had worked.[PARAGRAPH:1]For his 
+efforts to promote the economic development of the country, Mahathir has been granted the soubriquet 
+of Bapa Ketuanan Melayu (Father of Malay Supremacy). Since his resignation, there are signs that his 
+influence is on the wane, notably the cancellation of a Mahathir-approved double tracking rail project 
+on grounds of cost.[PARAGRAPH:1]Mahathir's official residence, Sri Perdana, where he resided from 23 
+August 1983 to 18 October 1999, was turned into a museum (Galeria Sri Perdana). In keeping with the principle 
+of heritage conservation, the original design and layout of the Sri Perdana has been preserved.</English>
+		<French>[H1]Mahathir bin Mohamad[\H1][NEWLINE][BOLD]Prime Minister of Malaysia[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1925 - [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Tun Dr. Mahathir bin Mohamad 
+was the fourth Prime Minister of Malaysia. He held the post for 22 years from 1981 to 2003, making him 
+Malaysia's longest-serving Prime Minister, and one of the longest-serving leaders in Asia. During his 
+term in office, he was credited for engineering Malaysia's rapid modernization and promoting non-individualistic 
+"Asian values". Mahathir is also known for his criticisms of western and developed countries. During 
+his administration, he was considered as one of Asia's most influential leaders. Mahathir is also noted 
+in the Western world as an outspoken critic of Western civilization.[PARAGRAPH:1]In 1983 and 1991, he 
+took on the federal and state monarchies, removing the royal veto and royal immunity from prosecution.Prior 
+to this amendment of the law, royal assent was required in order for any bill to pass into law. During 
+the Asian financial crisis of 1997, IMF had prescribed a recovery package for Malaysia, but Mahathir 
+defied international pressure, his then Deputy Anwar Ibrahim, and conventional wisdom in rejecting the 
+package. Though economic prosperity has been mixed since then, Mahathir argued that Malaysia's recovery 
+was relatively faster and better, as compared to many other Asian countries affected. After the financial 
+crisis, the IMF and World Bank acknowledged that Mahathir's approach had worked.[PARAGRAPH:1]For his 
+efforts to promote the economic development of the country, Mahathir has been granted the soubriquet 
+of Bapa Ketuanan Melayu (Father of Malay Supremacy). Since his resignation, there are signs that his 
+influence is on the wane, notably the cancellation of a Mahathir-approved double tracking rail project 
+on grounds of cost.[PARAGRAPH:1]Mahathir's official residence, Sri Perdana, where he resided from 23 
+August 1983 to 18 October 1999, was turned into a museum (Galeria Sri Perdana). In keeping with the principle 
+of heritage conservation, the original design and layout of the Sri Perdana has been preserved.</French>
+		<German>[H1]Mahathir bin Mohamad[\H1][NEWLINE][BOLD]Prime Minister of Malaysia[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1925 - [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Tun Dr. Mahathir bin Mohamad 
+was the fourth Prime Minister of Malaysia. He held the post for 22 years from 1981 to 2003, making him 
+Malaysia's longest-serving Prime Minister, and one of the longest-serving leaders in Asia. During his 
+term in office, he was credited for engineering Malaysia's rapid modernization and promoting non-individualistic 
+"Asian values". Mahathir is also known for his criticisms of western and developed countries. During 
+his administration, he was considered as one of Asia's most influential leaders. Mahathir is also noted 
+in the Western world as an outspoken critic of Western civilization.[PARAGRAPH:1]In 1983 and 1991, he 
+took on the federal and state monarchies, removing the royal veto and royal immunity from prosecution.Prior 
+to this amendment of the law, royal assent was required in order for any bill to pass into law. During 
+the Asian financial crisis of 1997, IMF had prescribed a recovery package for Malaysia, but Mahathir 
+defied international pressure, his then Deputy Anwar Ibrahim, and conventional wisdom in rejecting the 
+package. Though economic prosperity has been mixed since then, Mahathir argued that Malaysia's recovery 
+was relatively faster and better, as compared to many other Asian countries affected. After the financial 
+crisis, the IMF and World Bank acknowledged that Mahathir's approach had worked.[PARAGRAPH:1]For his 
+efforts to promote the economic development of the country, Mahathir has been granted the soubriquet 
+of Bapa Ketuanan Melayu (Father of Malay Supremacy). Since his resignation, there are signs that his 
+influence is on the wane, notably the cancellation of a Mahathir-approved double tracking rail project 
+on grounds of cost.[PARAGRAPH:1]Mahathir's official residence, Sri Perdana, where he resided from 23 
+August 1983 to 18 October 1999, was turned into a museum (Galeria Sri Perdana). In keeping with the principle 
+of heritage conservation, the original design and layout of the Sri Perdana has been preserved.</German>
+		<Italian>[H1]Mahathir bin Mohamad[\H1][NEWLINE][BOLD]Prime Minister of Malaysia[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1925 - [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Tun Dr. Mahathir bin Mohamad 
+was the fourth Prime Minister of Malaysia. He held the post for 22 years from 1981 to 2003, making him 
+Malaysia's longest-serving Prime Minister, and one of the longest-serving leaders in Asia. During his 
+term in office, he was credited for engineering Malaysia's rapid modernization and promoting non-individualistic 
+"Asian values". Mahathir is also known for his criticisms of western and developed countries. During 
+his administration, he was considered as one of Asia's most influential leaders. Mahathir is also noted 
+in the Western world as an outspoken critic of Western civilization.[PARAGRAPH:1]In 1983 and 1991, he 
+took on the federal and state monarchies, removing the royal veto and royal immunity from prosecution.Prior 
+to this amendment of the law, royal assent was required in order for any bill to pass into law. During 
+the Asian financial crisis of 1997, IMF had prescribed a recovery package for Malaysia, but Mahathir 
+defied international pressure, his then Deputy Anwar Ibrahim, and conventional wisdom in rejecting the 
+package. Though economic prosperity has been mixed since then, Mahathir argued that Malaysia's recovery 
+was relatively faster and better, as compared to many other Asian countries affected. After the financial 
+crisis, the IMF and World Bank acknowledged that Mahathir's approach had worked.[PARAGRAPH:1]For his 
+efforts to promote the economic development of the country, Mahathir has been granted the soubriquet 
+of Bapa Ketuanan Melayu (Father of Malay Supremacy). Since his resignation, there are signs that his 
+influence is on the wane, notably the cancellation of a Mahathir-approved double tracking rail project 
+on grounds of cost.[PARAGRAPH:1]Mahathir's official residence, Sri Perdana, where he resided from 23 
+August 1983 to 18 October 1999, was turned into a museum (Galeria Sri Perdana). In keeping with the principle 
+of heritage conservation, the original design and layout of the Sri Perdana has been preserved.</Italian>
+		<Spanish>[H1]Mahathir bin Mohamad[\H1][NEWLINE][BOLD]Prime Minister of Malaysia[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1925 - [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Tun Dr. Mahathir bin Mohamad 
+was the fourth Prime Minister of Malaysia. He held the post for 22 years from 1981 to 2003, making him 
+Malaysia's longest-serving Prime Minister, and one of the longest-serving leaders in Asia. During his 
+term in office, he was credited for engineering Malaysia's rapid modernization and promoting non-individualistic 
+"Asian values". Mahathir is also known for his criticisms of western and developed countries. During 
+his administration, he was considered as one of Asia's most influential leaders. Mahathir is also noted 
+in the Western world as an outspoken critic of Western civilization.[PARAGRAPH:1]In 1983 and 1991, he 
+took on the federal and state monarchies, removing the royal veto and royal immunity from prosecution.Prior 
+to this amendment of the law, royal assent was required in order for any bill to pass into law. During 
+the Asian financial crisis of 1997, IMF had prescribed a recovery package for Malaysia, but Mahathir 
+defied international pressure, his then Deputy Anwar Ibrahim, and conventional wisdom in rejecting the 
+package. Though economic prosperity has been mixed since then, Mahathir argued that Malaysia's recovery 
+was relatively faster and better, as compared to many other Asian countries affected. After the financial 
+crisis, the IMF and World Bank acknowledged that Mahathir's approach had worked.[PARAGRAPH:1]For his 
+efforts to promote the economic development of the country, Mahathir has been granted the soubriquet 
+of Bapa Ketuanan Melayu (Father of Malay Supremacy). Since his resignation, there are signs that his 
+influence is on the wane, notably the cancellation of a Mahathir-approved double tracking rail project 
+on grounds of cost.[PARAGRAPH:1]Mahathir's official residence, Sri Perdana, where he resided from 23 
+August 1983 to 18 October 1999, was turned into a museum (Galeria Sri Perdana). In keeping with the principle 
+of heritage conservation, the original design and layout of the Sri Perdana has been preserved.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_MAHATHIR_1</Tag>
+		<English>I will keep an eye on you, [CT_NAME]. The people of the [OUR_EMPIRE] have learned that foreigners have no good intentions.</English>
+		<French>I will keep an eye on you, [CT_NAME]. The people of the [OUR_EMPIRE] have learned that foreigners have no good intentions.</French>
+		<German>I will keep an eye on you, [CT_NAME]. The people of the [OUR_EMPIRE] have learned that foreigners have no good intentions.</German>
+		<Italian>I will keep an eye on you, [CT_NAME]. The people of the [OUR_EMPIRE] have learned that foreigners have no good intentions.</Italian>
+		<Spanish>I will keep an eye on you, [CT_NAME]. The people of the [OUR_EMPIRE] have learned that foreigners have no good intentions.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KUALA_LUMPUR</Tag>
+		<English>Kuala Lumpur</English>
+		<French>
+			<Text>Kuala Lumpur</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kuala Lumpur</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kuala Lumpur</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kuala Lumpur</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PUTRAJAYA</Tag>
+		<English>Putrajaya</English>
+		<French>
+			<Text>Putrajaya</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Putrajaya</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Putrajaya</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Putrajaya</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KELANG</Tag>
+		<English>Kelang</English>
+		<French>
+			<Text>Kelang</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kelang</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kelang</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kelang</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_JOHOR_BAHARU</Tag>
+		<English>Johor Baharu</English>
+		<French>
+			<Text>Johor Baharu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Johor Baharu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Johor Baharu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Johor Baharu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_IPOH</Tag>
+		<English>Ipoh</English>
+		<French>
+			<Text>Ipoh</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ipoh</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ipoh</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ipoh</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PETALING_JAYA</Tag>
+		<English>Petaling Jaya</English>
+		<French>
+			<Text>Petaling Jaya</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Petaling Jaya</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Petaling Jaya</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Petaling Jaya</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KUCHING</Tag>
+		<English>Kuching</English>
+		<French>
+			<Text>Kuching</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kuching</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kuching</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kuching</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SUBANG_JAYA</Tag>
+		<English>Subang Jaya</English>
+		<French>
+			<Text>Subang Jaya</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Subang Jaya</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Subang Jaya</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Subang Jaya</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_AMPANG</Tag>
+		<English>Ampang</English>
+		<French>
+			<Text>Ampang</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ampang</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ampang</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ampang</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SHAH_ALAM</Tag>
+		<English>Shah Alam</English>
+		<French>
+			<Text>Shah Alam</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Shah Alam</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Shah Alam</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Shah Alam</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KOTA_KINABALU</Tag>
+		<English>Kota Kinabalu</English>
+		<French>
+			<Text>Kota Kinabalu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kota Kinabalu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kota Kinabalu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kota Kinabalu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SEREMBAN</Tag>
+		<English>Seremban</English>
+		<French>
+			<Text>Seremban</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Seremban</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Seremban</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Seremban</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KUANTAN</Tag>
+		<English>Kuantan</English>
+		<French>
+			<Text>Kuantan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kuantan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kuantan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kuantan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SANDAKAN</Tag>
+		<English>Sandakan</English>
+		<French>
+			<Text>Sandakan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sandakan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sandakan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sandakan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KUALA_TERANGGANU</Tag>
+		<English>Kuala Terangganu</English>
+		<French>
+			<Text>Kuala Terangganu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kuala Terangganu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kuala Terangganu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kuala Terangganu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KOTA_BAHARU</Tag>
+		<English>Kota Baharu</English>
+		<French>
+			<Text>Kota Baharu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kota Baharu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kota Baharu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kota Baharu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TAWAU</Tag>
+		<English>Tawau</English>
+		<French>
+			<Text>Tawau</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tawau</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tawau</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tawau</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KAJANG</Tag>
+		<English>Kajang</English>
+		<French>
+			<Text>Kajang</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kajang</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kajang</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kajang</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TAIPING</Tag>
+		<English>Taiping</English>
+		<French>
+			<Text>Taiping</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Taiping</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Taiping</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Taiping</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SELAYANG_BARU</Tag>
+		<English>Selayang Baru</English>
+		<French>
+			<Text>Selayang Baru</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Selayang Baru</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Selayang Baru</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Selayang Baru</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ALOR_SETAR</Tag>
+		<English>Alor Setar</English>
+		<French>
+			<Text>Alor Setar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Alor Setar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Alor Setar</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Alor Setar</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PINANG</Tag>
+		<English>Pinang</English>
+		<French>
+			<Text>Pinang</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Pinang</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Pinang</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Pinang</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BATU</Tag>
+		<English>Batu</English>
+		<French>
+			<Text>Batu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Batu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Batu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Batu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SUNGAI_PETANI</Tag>
+		<English>Sungai Petani</English>
+		<French>
+			<Text>Sungai Petani</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sungai Petani</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sungai Petani</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sungai Petani</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MIRI</Tag>
+		<English>Miri</English>
+		<French>
+			<Text>Miri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Miri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Miri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Miri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SIBU</Tag>
+		<English>Sibu</English>
+		<French>
+			<Text>Sibu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sibu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sibu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sibu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BUKIT_MERTAJAM</Tag>
+		<English>Bukit Mertajam</English>
+		<French>
+			<Text>Bukit Mertajam</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Bukit Mertajam</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Bukit Mertajam</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Bukit Mertajam</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MELAKA</Tag>
+		<English>Melaka</English>
+		<French>
+			<Text>Melaka</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Melaka</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Melaka</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Melaka</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KELUANG</Tag>
+		<English>Keluang</English>
+		<French>
+			<Text>Keluang</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Keluang</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Keluang</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Keluang</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ULU_KELANG</Tag>
+		<English>Ulu Kelang</English>
+		<French>
+			<Text>Ulu Kelang</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ulu Kelang</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ulu Kelang</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ulu Kelang</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BATU_PAHAT</Tag>
+		<English>Batu Pahat</English>
+		<French>
+			<Text>Batu Pahat</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Batu Pahat</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Batu Pahat</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Batu Pahat</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KULIM</Tag>
+		<English>Kulim</English>
+		<French>
+			<Text>Kulim</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kulim</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kulim</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kulim</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SUNGAI_ARA</Tag>
+		<English>Sungai Ara</English>
+		<French>
+			<Text>Sungai Ara</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sungai Ara</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sungai Ara</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sungai Ara</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BINTULU</Tag>
+		<English>Bintulu</English>
+		<French>
+			<Text>Bintulu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Bintulu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Bintulu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Bintulu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MUAR</Tag>
+		<English>Muar</English>
+		<French>
+			<Text>Muar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Muar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Muar</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Muar</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+</Civ4GameText>

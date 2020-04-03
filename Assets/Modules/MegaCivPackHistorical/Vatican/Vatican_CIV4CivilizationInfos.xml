@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- ReModified by the StrategyOnly -->
+<!-- -->
+<!-- Civilization Infos -->
+<Civ4CivilizationInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4CivilizationsSchema.xml">
+	<CivilizationInfos>
+		<CivilizationInfo>
+			<Type>CIVILIZATION_VATICAN</Type>
+			<Description>TXT_KEY_CIV_VATICAN_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_VATICAN_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_VATICAN_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_VATICAN_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_VATICAN</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_VATICAN</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_EUROPE</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_EUROPEAN</UnitArtStyleType>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>Vatican City</City>
+				<City>Roma</City>
+				<City>Jerusalem</City>
+				<City>Avignon</City>
+				<City>San Pietro</City>
+				<City>Belvedere</City>
+				<City>Corinth</City>
+				<City>Antioch</City>
+				<City>Alexandria</City>
+				<City>Constatinopole</City>
+				<City>Assisi</City>
+				<City>Capella Sisitina</City>
+				<City>Pio</City>
+				<City>Santa Maria</City>
+				<City>La Salette</City>
+				<City>Montserrat</City>
+				<City>San Giovanni</City>
+				<City>Sinai</City>
+				<City>Guadelupe</City>
+				<City>Lourdes</City>
+				<City>Posta</City>
+				<City>Fatima</City>
+				<City>Padova</City>
+				<City>Ravenna</City>
+				<City>Emaus</City>
+				<City>Mount of Olives</City>
+				<City>Cana</City>
+				<City>Loreto</City>
+				<City>Monastero</City>
+				<City>Bethlehem</City>
+				<City>Jasna Gora</City>
+				<City>Nazareth</City>
+				<City>Acre</City>
+				<City>Capernaum</City>
+				<City>Ostra Brama</City>
+				<City>Negev</City>
+				<City>Arimathea</City>
+				<City>Golgotha</City>
+				<City>Myra</City>
+				<City>Mount Tabor</City>
+				<City>Hauran</City>
+				<City>Ave Maria</City>
+				<City>Perga</City>
+				<City>Via Dolorosa</City>
+				<City>Mount of Beatitudes</City>
+			</Cities>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
+			<InitialCivics>
+				<CivicType>CIVIC_ANARCHISM</CivicType>
+				<CivicType>CIVIC_OBEDIENCE</CivicType>
+				<CivicType>CIVIC_STRONGMAN</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
+				<CivicType>CIVIC_MILITIA</CivicType>
+				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SURVIVAL</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
+				<CivicType>CIVIC_UNORGANIZED</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_POPEFRANCIS</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_POPEALEXANDER</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<DerivativeCiv>NONE</DerivativeCiv>
+			<CivilizationSelectionSound>AS3D_ROME_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_ROME_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+	</CivilizationInfos>
+</Civ4CivilizationInfos>

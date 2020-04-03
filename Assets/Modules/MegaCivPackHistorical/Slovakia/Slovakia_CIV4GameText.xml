@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jesse Smith (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- ReModified by the StrategyOnly -->
+<!-- -->
+<!-- Game Text Infos -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SLOVAKIA_DESC</Tag>
+		<English>Slovak Empire</English>
+		<French>Empire slovaque</French>
+		<German>Slovakische Reich</German>
+		<Italian>Impero slovacco</Italian>
+		<Spanish>Slovenská øíše</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SLOVAKIA_SHORT_DESC</Tag>
+		<English>Slovakia</English>
+		<French>Slovaque</French>
+		<German>Slowakei</German>
+		<Italian>Slovacchia</Italian>
+		<Spanish>Slovakia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SLOVAKIA_ADJECTIVE</Tag>
+		<English>Slovak</English>
+		<French>Slovaque</French>
+		<German>Slowak</German>
+		<Italian>Slovacchia</Italian>
+		<Spanish>Slovensko</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_STEFANIK</Tag>
+		<English>Stefanik</English>
+		<French>Stefanik</French>
+		<German>Stefanik</German>
+		<Italian>Stefanik</Italian>
+		<Spanish>Štefánik</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_STUR</Tag>
+		<English>Stur</English>
+		<French>Stur</French>
+		<German>Stur</German>
+		<Italian>Stur</Italian>
+		<Spanish>Štúr</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SLOVAKIA_PEDIA</Tag>
+		<English>[TAB] Territory of todays Slovakia was colonized in 6-th century by Slavonians. Avar´s danger ignited Sámo Empire rice. In year 791 was Avars defeated by Charles Great and here born Moravia and Nitra princedom. Later: Grat Moravia. After empire doom control area Hungary's Arpadians, Since the 12-th century was here Hungarian Kingdom. Tatarians fight here in 1241-1242 years and later colonized area germanians. To the end 13-th century was here rule of might oligarcha Matus Cak Trenciansky, master of Vah and Tatra mouintains. At the turn of 15 and 16 century ruled in area two weak Jagelonians: Vladislav II. A Ludvik II. After Ludvik death gets rule of Ferdinand I. of Habsburgs. In 1783 year is Hungary capital Budin again. After born national revival in co-operation with Czech national unions (Anton Bernolak). Franz Joseph I. refuse Slovakia question. After 1863 year is born Matice slovenska. Prague is center of slavic inteligenc (spolek Detvan, Hlasist...). Filosofist T. G. Masaryk influence. In start of 20-th century is situation of slovak peoples unmaintainable: Extreme hungarization. Czech and Slovak alliance idea carried under the direction T. G. Masaryk and Milana Rastislava Stefanika in 1918 year. - 1938: Munich diktat. In start next year shoot up Hitlers pressure to prime minister autonomous rule of Jozef Tiso, to proclaim autonomy (which breaks engagement between czechs and slovaks and allow occupation of Bohemia and Moravia). 3.14.1939 was born Slovak republic with president J. Tiso. Dissatisfy with Nazi regime lead to Slovak national uprising (29. august 1944). Part of partysans strike in rusian army and bring back with Red army. To the 1-th may 1945 is full slovakia area free, in Kosice city is session of temporary Slovak rule. 1960 coalition czechs a nd slovaks to the CSSR. 1989 CSFR. 1992 fission ÈSFR to the two autonomy states.</English>
+		<French>[TAB] Texts will be added with next version. </French>
+		<German>[TAB] Texts will be added with next version. </German>
+		<Italian>[TAB] Texts will be added with next version. </Italian>
+		<Spanish>[TAB] Území dnešního Slovenska osídlili v 6. století Slované. Sousedství nomádských Avarù podnítilo vznik Sámovy øíše. V roce 791 Karel Veliký Avary porazil a na území vniklo knížectví Moravské a Nitranské, spojující se pozdìji do celku Velká Morava. Po zániku øíše okolo roku 907 (bitva u Bratislavy) zaèali území osidlovat Maïarští Arpádovci.. Na poèátku 12. století knížectví skonèilo a zformovaly se budoucí hranice Uherského království. Tatarský vpád v letech 1241 až 1242 zpùsobil, že mnohé oblasti Slovenska zpustly, musely tedy být znovu kolonizovány, a to Nìmci. Dùležitou úlohu na území hrála mìsta: Banská Štiavnica, Banská Bystrica a Kremnica. Koncem 13. století tu byla vláda mocného oligarchy Matúše Èáka Trenèianského, pána Váhu a Tater. Na pøelomu 15. a 16. století vládli území dva slabí Jagelonci: Vladislav II. A Ludvík II. Na zaèátku 16. století opìt následovaly sociální otøesy - mohutné povstáni Juraja Dóži - obì byla krvavì potlaèena. Po smrti krále Ludvíka Jagellonského v bitvì u Moháèe 	nastupuje na území Slovenska a Zadunajská vláda Ferdinanda I. Habsburského. Ve zbytku státu se vytváøí Budínský pašalík a v Sedmihradsku vládne Ján Zápolský. Bratislava se roku 1536 stává hlavním mìstem Uher, je také korunovaèním mìstem, kde je v dómu Sv. Martina korunováno 11 králù (vèetnì Marie Terezie) a 8 královen - manželek. V období stavovských povstání nejvíce trpí území Slovenska. Roku 1783 se hlavním mìstem Uher stává opìt Budín. Koncem století kodifikace slovenštiny, zaèátky národního obrození v úzkém kontaktu s èeským národním hnutím (Anton Bernolák). Druhá generace obrozencù Kollár, Šafaøík - koncepce slovanské jednoty (poèátek 19 století) je vystøídána tøetí, tzv. štúrovskou generací. Sílící maïarizace. Kodifikace slovenského jazyka v jeho souèasné podobì (1843). V roce 1848 úèast Štúra, Hurbana a Hodži na Všeslovanském sjezdu v Praze. Slováci pøímají koncepci austroslavizmu, organizují ve Vídni Slovenskou národní radu, s podporou èeských a chorvatských vlastencù organizují tøi vojenské dobrovolné výpravy proti maïarským košutovským silám, upírajícím nemaïarským národùm Uherska veškerá práva. Po porážce revoluce nový panovník František Josef I. odmítá jakákoliv øešení slovenské otázky. Po roce 1863 krátké období pozdvižení: Matice slovenská, tøi slovenská gymnázia. Zoufalé hospodáøské pomìry na venkovì ústí v masovou emigraci do USA - tady Slováci tvoøili na konci století druhou nejvìtší imigrantskou komunitu. Orientace Slovákù na spolupráci s Rumuny, Srby a Rusíny. Praha jako centrum slovenské inteligence (spolek Detvan, Hlasisté, èasopis Prúdy). Vliv filosofie T. G. Masaryka. Zaèátkem 20. století neudržitelná situace: nejvyšší stupeò maïarizace, v školách od 1. tøídy maïarština, maïarské mše. Roku 1907 tragédie v obci Èernová u Ružomberku – žandáøi 15 lidí zabili, 60 zranili, když lidé nedovolili maïarskému faráøi, aby vysvìtil jejich novì postavený kostel. Od roku 1908 Luhaèovické porady èeské a slovenské reprezentace. Idea spojení Èechù a Slovákù se naplòuje pod vedením T. G. Masaryka a Milana Rastislava Štefánika v roce 1918.		1938 – Mnichovská Dohoda – autonomní Slovensko pøichází Vídeòskou arbitráží o 1/5 rozlohy – ztráta Košic. Poèátkem následujícího roku roste tlak Hitlera na premiéra autonomní vlády Jozefa Tisa, aby vyhlásil samostatnost (která zlikviduje spojenecké závazky ÈRS a umožní obsazení Èech a Moravy). 14. bøezna 1939 vyhlašuje Slovenský snìm samostatnost pod oficiálnim názvem Slovenská republika. Prezidentem sa stává J. Tiso. Nedemokratický klerofašistický stát je nucen odstoupit další území Maïarsku, vzdává se své suverenity podpisem tzv. Ochranné dohody s Nìmeckem. Relativnì stabilní situace a toliko okrajové zapojení do války proti Polsku (jen osvobození obcí odstoupených ve Vídeòské arbitráži a vymìnìných za Tìšínsko v roce 1920) a Rusku, pøináší hospodáøskou konjunkturu a relativní bohatství lidí, neexistuje nezamìstnanost, oficiálni kultura a katolická církev se tìší velké podpoøe. Daní jsou protižidovské zákony, neexistence obèanských práv, totalitní režim. Nespokojenost s fašistickým režimem a válkou proti Sov. Svazu ústí do Slovenského Národního Povstání - SNP (29. srpen 1944). Jeho pøedèasné vypuknutí kvùli prozrazení, špatná organizace i vedení, nasazení elitních nìmeckých jednotek, ale také slabé ideologické zdùvodnìní zpùsobí, že skonèí už 27. øíjna obsazením Banské Bystrice. Èást partyzánù pøechází pøes frontu. Výsledkem je pøihlášení se Slovenska k ÈSR, ale do federalizovaného státu i když s vysokou mírou autonomie. Do 1. kvìtna 1945 je celé území Slovenska osvobozeno, v Košicích zasedá doèasná vláda ÈSR. Od roku 1949 kolektivizace, nástup prezidenta Novotného, od 1960 Èeskoslovenská socialistická republika, souèasnì dochází ke zrušení slovenské vlády nazývané Sbor povìøencù. 1966 zvolení Alexandra Dubèeka za 1. tajemníka KSS. Od 1. ledna 1969 jsou vytvoøeny dvì samostatné národní republiky: Èeská a Slovenská. V roce 1989 po zásahu 17. listopadu na Národní tøídì vznik VPN (Veøejnost proti násilí) Série demonstrací na nám. SNP v Bratislavì na podporu studentù, VPN, OF, disidentu, vystoupení V Havla, A. Dubèeka a Karla Kryla. Moderátoøi Milan Kòažko a Ján Budaj. Koncem roku V. Havel prezidentem a pøedsedou Národního shromáždìní A. Dubèek. Zaèátkem nového roku zmìna názvu rebubliky na Èeská a slovenská federativní republika. Patová situace v rokováních o dalším uspoøádaní èesko-slovenských vztahù konèí vypsáním pøedèasných voleb (1992). Na Slovensku vítìzí HZDS (V. Meèiar) a v Èechách ODS. Už v létì 1992 bylo dohodnuto definitivním rozdìlení ÈSFR na dva samostatné státy.
+	1. ledna 1993 – Slovenský parlament pøíjímá deklaraci o svrchovanosti Slovenské republiky. </Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_STEFANIK_PEDIA</Tag>
+		<English>[H1]Milan Rastislav Stefanik [\H1][NEWLINE][BOLD]Slovak politician and diplomat[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1880 - 1919 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Milan Rastislav Stephanik (born July 21 1880 in Koshiariska - died May 4, 1919 in Ivanka pri Dunaji) was a Slovak politician, diplomat, and astronomer. During World War I, he was General of the French army, at the same time the Czechoslovak Minister of War, one of the leading members of the Czechoslovak National Council (i.e. resistance government), and he contributed decisively to the cause of Czechoslovak sovereignty. (The status of Czech- and Slovak-populated territories, among others, was in question until shortly before the disintegration of Austria-Hungary in 1918.)
+Štefánik's personal motto was: To Believe, To Love and To Work (Veri, milova, pracova).
+Studies
+He was born in Košariská (near Myjava in Slovakia, at that time part of Austria-Hungary) on July 21, 1880. He had 12 brothers and sisters (2 of which died early). His father was a local Lutheran priest. As a strong Slovak patriot, he had troubles at Hungarian schools (Slovak ones were prohibited) and had to change the high school several times (Bratislava, Sopron, Szarvas).
+In 1898, he started to study construction engineering in Prague. In 1900 he switched to the Charles University where he was going to lectures of astronomy, physics, optics, mathematics and philosophy. He was also in Zürich for a short time within his studies. The Prague years had a great impact on Štefánik, because he met many important personalities there: the lectures of philosophy were taught by Tomáš Masaryk (the future first president of Czechoslovakia), who inspired Štefánik with the idea of cooperation of the Czechs and the Slovaks. Furthermore, Štefánik very actively participated in the work of the Slovak student association Detvan (and within Detvan of the so-called Hlasists group). His studies were largely financed by the Czech associations Èeskoslovanská jednota (Czechoslavic Unity), Radhoš etc. - he himself could not afford them. In Prague, he wrote political and artistic texts, in which he tried to inform the Czechs on the disastrous situation of the Slovaks at that time. He graduated in 1904 with a doctor’s degree in philosophy and with thorough knowledge of astronomy (he finished his studies with a thesis in astronomy). </English>
+		<French>[H1]Milan Rastislav Stefanik [\H1][NEWLINE][BOLD]Slovak politician and diplomat[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1880 - 1919 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Texts will be added with next version.</French>
+		<German>[H1]Milan Rastislav Stefanik [\H1][NEWLINE][BOLD]Slovak politician and diplomat[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1880 - 1919 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Texts will be added with next version.</German>
+		<Italian>[H1]Milan Rastislav Stefanik [\H1][NEWLINE][BOLD]Slovak politician and diplomat[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1880 - 1919 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Texts will be added with next version.</Italian>
+		<Spanish>[H1]Milan Rastislav Stefanik [\H1][NEWLINE][BOLD] Slovenský politik a diplomat [\BOLD][NEWLINE][BOLD]Narozen: [\BOLD] 1880 - 1919 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Narodil se 21.èervence 1880 v Košiariskách u Nitry. R. 1898 díky stipendiu od „Èeskoslovenské jednoty“ zaèal studovat na Èeské technice v Praze, pak pøešel na filozofickou univerzitu a posléze se zamìøil na astronomii. R. 1903 zveøejnil v Èase „Èeskoslovenský národní program“ s tezí, že èeský a slovenský národ tvoøí spoleènì vyšší národní jednotu. V té dobì pro pražské tramvaje vymyslel zpùsob automatického pøehazování výhybek, brousil a prodával optické èoèky, vynalezl patentní šle a navrhl i letadlo. Navštívil hvìzdárnu v Palermu a v listopadu 1904 promoval na doktora. Stal se zamìstnancem anglické observatoøe a pøednášel v Oxfordu. Roku 1912 se stává francouzským obèanem a r.1914 je jmenován rytíøem Èestné legie. Je dvakrát operován na žaludeèní vøedy a nejménì jedenkrát za rok podstupuje hospitalizaci v nemocnici. Na zaèátku  1.svìtové války se jako francouzský obèan pøihlásil do armády, ta jej kvùli jeho zdravotnímu stavu odmítla. Zkusil to tedy u letectva. Než jej francouzská vláda v záøí 1915 poslala do Srbska, mìl za sebou 32 bojových letù. 7.záøí 1915 se setkal s dobrovolníky roty Nazdar, s nimiž poèaly francouzské legie. Na balkánské frontì podnikl 12 letù, po jejím zhroucení se dostal do Itálie. V té dobì se v Paøíži setkává s pány Masarykem a Benešem a sjednává jim pøijetí u francouzského ministerského pøedsedy Brianda. Lidí, jako byli Masaryk s Benešem, se pohybovaly kolem dohodových štábù houfy. Až schùzka sjednaná Štefánikem znamenala poèátek vìcí èeskoslovenských jako státních. Memoranda, jimiž TGM obdaøoval dohodové vlády, by zùstala nepovšimnuta, nebýt Štefánika a bojových úspìchù Legionáøù. V tom a jen v tom je zaèátek èeskoslovenského státu. Štefánik uzavøel s generálem Grazianim dohodu o zøízení èeskoslovenské armády (legií) v Itálii, jednal ve Washingtonu, v èervnu 1918 byl jmenován brigádním generálem a pak navštívil naši armádu na Sibiøi. Legionáøùm m.j. øekl: "Bolševizmus je popieranie demokratizmu. Bolševizmus krièí a reve; demokracia myslí, pouèuje a presvedèuje." Na Sibiøi nechal Štefánik zatknout bolševické agitátory v Legiích, a poslal je do Èeskoslovenska pøed soud. K soudu ale nikdy nedošlo. 4.kvìtna 1919 odlétá Štefánik dvouplošníkem Caproni z Udine do vlasti. Lidé èekající na bratislavském letišti slyšeli støelbu a vidìli padající letadlo - tak zemøel generál Štefánik. </Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_STUR_PEDIA</Tag>
+		<English>[H1]Ludovit Stur [\H1][NEWLINE][BOLD]Leader of the Slovak national revival[\BOLD] Ludovit Stur (October 29, 1815 – January 12, 1856), known in his era as Ludevit Velislav Stur, was the leader of the Slovak national revival in the 19th century, the author of the Slovak language standard eventually leading to the contemporary Slovak literary language. Stur was an organizer of the Slovak volunteer campaigns during the 1848 Revolution in the Kingdom of Hungary, and a member of the Diet of the Kingdom of Hungary, as well as a politician, Slovak poet, journalist, publisher, teacher, philosopher and linguist. </English>
+		<French>[H1]Ludovit Stur [\H1][NEWLINE][BOLD]Leader of the Slovak national revival[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1815 - 1856 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Texts will be added with next version.</French>
+		<German>[H1]Ludovit Stur [\H1][NEWLINE][BOLD]Leader of the Slovak national revival[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1815 - 1856 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Texts will be added with next version.</German>
+		<Italian>[H1]Ludovit Stur [\H1][NEWLINE][BOLD]Leader of the Slovak national revival[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1815 - 1856 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Texts will be added with next version.</Italian>
+		<Spanish>[H1]Ludovít Štúr [\H1][NEWLINE][BOLD]Vùdce slovenského národního obrození [\BOLD][NEWLINE][BOLD]Narozen: [\BOLD] 1815 - 1856 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]narodil se v Zay-Uhrovci (dnes Uhrovec), studoval v Rábu (dnešní Györ) a pozdìji na evangelickém lyceu v Bratislavì. Stal se èlenem Spoleènosti èesko-slovenské, pozdìji byl zvolen jejím tajemníkem. Pøednášel dìjiny Slovanù a jejich literatury, vedl památnou slavnost na Dìvínì, pod jeho vedením vzrùstá poèet èlenù Spoleènosti èesko-slovenské, která byla ovšem po studentských nepokojích v roce 1837 zakázána. L. Štúr založil Ústav øeèi a literatury èeskoslovanské, v rámci kterého pokraèovala aktivita Spoleènosti. V roce 1838 odešel z Bratislavy na vysokoškolské studium do Halle, cestou se ale zdržel v Praze v kruhu èeských vlastencù. Do Bratislavy se vracel v roce 1840 pøes Prahu a Hradec Králové, kde pøespával v rodinì vydavatele Jana Pospíšila. Brzy poté napsal Starý a nový vìk Slovákù (knižnì vyšel až v r.1935) V roce 1842 byl iniciátorem rekurzu na panovnický dvùr ve Vídni, aby vláda zastavila národnostní perzekuce ze strany Maïarù. Vyslovil se za nevyhnutelnost pøijmout nový spisovný jazyk, který by sjednotil všechny Slováky - tzv. "Deò vzkriesenia slovenèiny". Na faøe v Hlbokom se ¼. Štúr, J. M. Hurban a M. M. Hodža dohodli na nutnosti nové kodifikace spisovné slovenèiny na bázi støedoslovenského náøeèí. 22 studentù uspoøádalo protestní odchod z Bratislavy, když byl Štúr zbaven funkce zástupce prof. Palkovièe (13 z nich se zapisuje na lyceum v Levoèi) V roce 1844 píše Štúr „Náreèie slovenské, alebo potreba písania v tomto náreèí“ (spis vyšel v roku 1846) - zúèastnil se zakládajícího shromáždìní celonárodního spolku Tatrín. V roce 1845 vyšlo první èíslo Štúrových Slovenských Národních novin (vycházely do 9. èervna 1848). Zúèastnil se 4. zasedání Tatrína v Èachticích a ucházel se o poslanecký mandát za svobodné královské mìsto Zvolen. Dvaatøicetiletý Štúr se skuteènì stal poslancem uherského snìmu. Mìl zde pouze pìt proslovù. Poté odcestoval do Prahy, setkal se s lidmi ze spolku Slávie - ze Štúrovy iniciativy byla v Praze založena Slovanská Lipa, spolek na podporu vzájemné soudržnosti Slovanù. Po návratu na Slovensko byl jedním z navrhovatelù žádosti slovenského národa, znìní Žádostí pøeèetl J. Francisci. To mìlo za dùsledek vydání zatykaèe na Štúra, Hurbana a Hodžu. Štúr se stáhl do Prahy, kde se zúèastnil Slovanského sjezdu a pak odcestoval do Záhøebu, když Slovanský sjezd v Praze pøerušily boje. Ze Záhøebu odjel do Vídnì, aby se zúèastnil a pøíprav na ozbrojené povstání - ve Vídni je vytvoøená Slovenská národní rada, tvoøená L. Štúrem, J. M. Hurbanem, M. M. Hodžou, B. Bloudkem, F. Zachem, B. Janeèkem, B. Nosákem a D. Bórikem - SNR na Myjavì vypovìdìla poslušnost maïarské vládì a vyzvala slovenský národ k ozbrojenému povstání. Následovala Štúrova výzva k národu: Èo kazí Slovákov. Pak se Štúr sa stahuje k rodièùm do Uhrovce, v roce 1850 bezvýslednì podává žádost o vydání národních novin a s deputací usiluje o povolení spolku Tatrín. V roce 1851 umírá ¼udovítùv bratr Karel. Aby se postaral o jeho sedm dìtí, stìhuje se ¼udovít k jeho rodinì do Modré. Jeho svobodu omezuje policejní dozor. 27. èervence umírá otec Samuel Štúr, matka se stìhuje do Trenèína. Roku 1852 v Modré dokonèuje Štúr dílo O národných piesòach a povestiach plemien slovanských. V padesátém tøetím roce umírá Adéla Ostrolúcká ve Vídni a následnì v Trenèínì i jeho matka Anna Štúrová. Štúr vydává sbírku básní Spevy a piesne, vystupuje jako øeèník pøi odhalení pomníku Jána Hollého na Dobrej Vode, na památku slovenského barda složil báseò. Tajnì navštívil srbského knížete Michala Obrenovièe na jeho statcích v Ivanke pri Dunaji. V roce 1855 se nešastnì postøelil na honu za Modrou, v posledních chvílích jeho života pøi nìm stál pøedevším pøítel Ján Kalinèiak, který v tom èase pùsobil v Modré. </Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_STUR_1</Tag>
+		<English>Dobrý den [CT_NAME]! I'm [OUR_NAME] of the mighty [OUR_EMPIRE]. Would you drink borovicka with us?</English>
+		<French>Dobry den [CT_NAME]! I'm [OUR_NAME] of the mighty [OUR_EMPIRE]. Would you drink borovicka with us?</French>
+		<German>Dobry den [CT_NAME]! I'm [OUR_NAME] of the mighty [OUR_EMPIRE]. Would you drink borovicka with us?</German>
+		<Italian>Dobry den [CT_NAME]! I'm [OUR_NAME] of the mighty [OUR_EMPIRE]. Would you drink borovicka with us?</Italian>
+		<Spanish>Dobrý den [CT_NAME]! Já jsem [OUR_NAME] mocný vládaø [OUR_EMPIRE]. Dáš si se mnou trochu borovièky?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_STEFANIK_1</Tag>
+		<English>Dobrý den [CT_NAME]! I'm [OUR_NAME] of the mighty [OUR_EMPIRE]. Would you drink borovicka with us?</English>
+		<French>Dobry den [CT_NAME]! I'm [OUR_NAME] of the mighty [OUR_EMPIRE]. Would you drink borovicka with us?</French>
+		<German>Dobry den [CT_NAME]! I'm [OUR_NAME] of the mighty [OUR_EMPIRE]. Would you drink borovicka with us?</German>
+		<Italian>Dobry den [CT_NAME]! I'm [OUR_NAME] of the mighty [OUR_EMPIRE]. Would you drink borovicka with us?</Italian>
+		<Spanish>Dobrý den [CT_NAME]! Já jsem [OUR_NAME] mocný vládaø [OUR_EMPIRE]. Dáš si se mnou trochu borovièky?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_STUR_1</Tag>
+		<English>I'm too busy to speak with you, [CT_NAME]! Go away...</English>
+		<French>I'm too busy to speak with you, [CT_NAME]! Go away...</French>
+		<German>I'm too busy to speak with you, [CT_NAME]! Go away...</German>
+		<Italian>I'm too busy to speak with you, [CT_NAME]! Go away...</Italian>
+		<Spanish>Jsem pøíliš zaneprázdnìn, než abych s tebou ztrácel èas, [CT_NAME]! Bìž pryè...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_STEFANIK_1</Tag>
+		<English>I'm too busy to speak with you, [CT_NAME]! Go away...</English>
+		<French>I'm too busy to speak with you, [CT_NAME]! Go away...</French>
+		<German>I'm too busy to speak with you, [CT_NAME]! Go away...</German>
+		<Italian>I'm too busy to speak with you, [CT_NAME]! Go away...</Italian>
+		<Spanish>Jsem pøíliš zaneprázdnìn, než abych s tebou ztrácel èas, [CT_NAME]! Bìž pryè...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_STUR_1</Tag>
+		<English>As long as there is God, I shall never run from battle. Fight or perish [CT_NAME]!</English>
+		<French>As long as there is God, I shall never run from battle. Fight or perish [CT_NAME]!</French>
+		<German>As long as there is God, I shall never run from battle. Fight or perish [CT_NAME]!</German>
+		<Italian>As long as there is God, I shall never run from battle. Fight or perish [CT_NAME]!</Italian>
+		<Spanish>Jako že je bùh nade mnou, z boje utíkat nebudu. Bojuj nebo zhyò [CT_NAME]!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_STEFANIK_1</Tag>
+		<English>As long as there is God, I shall never run from battle. Fight or perish [CT_NAME]!</English>
+		<French>As long as there is God, I shall never run from battle. Fight or perish [CT_NAME]!</French>
+		<German>As long as there is God, I shall never run from battle. Fight or perish [CT_NAME]!</German>
+		<Italian>As long as there is God, I shall never run from battle. Fight or perish [CT_NAME]!</Italian>
+		<Spanish>Jako že je bùh nade mnou, z boje utíkat nebudu. Bojuj nebo zhyò [CT_NAME]!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_STUR_1</Tag>
+		<English>Greetings, my friend [CT_NAME]. What may I do for you?</English>
+		<French>Greetings, my friend [CT_NAME]. What may I do for you?</French>
+		<German>Greetings, my friend [CT_NAME]. What may I do for you?</German>
+		<Italian>Greetings, my friend [CT_NAME]. What may I do for you?</Italian>
+		<Spanish>Vítej, mùj pøíteli [CT_NAME]. Co pro tebe mohu udìlat?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_STEFANIK_1</Tag>
+		<English>Greetings, my friend [CT_NAME]. What may I do for you?</English>
+		<French>Greetings, my friend [CT_NAME]. What may I do for you?</French>
+		<German>Greetings, my friend [CT_NAME]. What may I do for you?</German>
+		<Italian>Greetings, my friend [CT_NAME]. What may I do for you?</Italian>
+		<Spanish>Vítej, mùj pøíteli [CT_NAME]. Co pro tebe mohu udìlat?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_STUR_1</Tag>
+		<English>My people would kill you because of your behavior, [CT_NAME], but I have pity on you.</English>
+		<French>My people would kill you because of your behavior, [CT_NAME], but I have pity on you.</French>
+		<German>My people would kill you because of your behavior, [CT_NAME], but I have pity on you.</German>
+		<Italian>My people would kill you because of your behavior, [CT_NAME], but I have pity on you.</Italian>
+		<Spanish>Mùj lid by tì pro tvé chování ukamenoval, [CT_NAME], ale já s tebou budu mít slitování.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_STEFANIK_1</Tag>
+		<English>My people would kill you because of your behavior, [CT_NAME], but I have pity on you.</English>
+		<French>My people would kill you because of your behavior, [CT_NAME], but I have pity on you.</French>
+		<German>My people would kill you because of your behavior, [CT_NAME], but I have pity on you.</German>
+		<Italian>My people would kill you because of your behavior, [CT_NAME], but I have pity on you.</Italian>
+		<Spanish>Mùj lid by tì pro tvé chování ukamenoval, [CT_NAME], ale já s tebou budu mít slitování.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_STUR_1</Tag>
+		<English>There is misery in our lands. Help us, great [CT_NAME], please...</English>
+		<French>There is misery in our lands. Help us, great [CT_NAME], please...</French>
+		<German>There is misery in our lands. Help us, great [CT_NAME], please...</German>
+		<Italian>There is misery in our lands. Help us, great [CT_NAME], please...</Italian>
+		<Spanish>Nìjak se nám v poslední dobì nedaøí. Pomoz nám [CT_NAME], prosím...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_STEFANIK_1</Tag>
+		<English>Our state is in difficulties. Help us, great [CT_NAME], please...</English>
+		<French>Our state is in difficulties. Help us, great [CT_NAME], please...</French>
+		<German>Our state is in difficulties. Help us, great [CT_NAME], please...</German>
+		<Italian>Our state is in difficulties. Help us, great [CT_NAME], please...</Italian>
+		<Spanish>Dostali jsme se do neèekaných potíží. Pomoz nám [CT_NAME], prosím...</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_STUR_1</Tag>
+		<English>As you know our armies are unbeatable. I request a small donation from you [CT_NAME].</English>
+		<French>As you know our armies are unbeatable. I request a small donation from you [CT_NAME].</French>
+		<German>As you know our armies are unbeatable. I request a small donation from you [CT_NAME].</German>
+		<Italian>As you know our armies are unbeatable. I request a small donation from you [CT_NAME].</Italian>
+		<Spanish>Naše armády jsou, jak jistì víte, neporazitelné. Žádáme od vás dar na usmíøení [CT_NAME].</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_STEFANIK_1</Tag>
+		<English>As you know our armies are unbeatable. I request a small donation from you [CT_NAME].</English>
+		<French>As you know our armies are unbeatable. I request a small donation from you [CT_NAME].</French>
+		<German>As you know our armies are unbeatable. I request a small donation from you [CT_NAME].</German>
+		<Italian>As you know our armies are unbeatable. I request a small donation from you [CT_NAME].</Italian>
+		<Spanish>Naše armády jsou, jak jistì víte, neporazitelné. Žádáme od vás dar na usmíøení [CT_NAME].</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_STUR_1</Tag>
+		<English>Your small country is too weak... Give us what is ours, [CT_NAME]!</English>
+		<French>Your small country is too weak... Give us what is ours, [CT_NAME]!</French>
+		<German>Your small country is too weak... Give us what is ours, [CT_NAME]!</German>
+		<Italian>Your small country is too weak... Give us what is ours, [CT_NAME]!</Italian>
+		<Spanish>Vaše malá zemì je pøíliš unavená... Dejte nám, co je naše, [CT_NAME]!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_STEFANIK_1</Tag>
+		<English>Your small country is too weak... Give us what is ours, [CT_NAME]!</English>
+		<French>Your small country is too weak... Give us what is ours, [CT_NAME]!</French>
+		<German>Your small country is too weak... Give us what is ours, [CT_NAME]!</German>
+		<Italian>Your small country is too weak... Give us what is ours, [CT_NAME]!</Italian>
+		<Spanish>Vaše malá zemì je pøíliš unavená... Dejte nám, co je naše, [CT_NAME]!</Spanish>
+	</TEXT>
+</Civ4GameText>

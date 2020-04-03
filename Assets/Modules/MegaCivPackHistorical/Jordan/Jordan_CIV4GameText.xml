@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- ReModified by the StrategyOnly -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_JORDAN_DESC</Tag>
+		<English>Kingdom of Jordan</English>
+		<French>Kingdom of Jordan</French>
+		<German>Kingdom of Jordan</German>
+		<Italian>Kingdom of Jordan</Italian>
+		<Spanish>Kingdom of Jordan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_JORDAN_SHORT_DESC</Tag>
+		<English>Jordan</English>
+		<French>Jordan</French>
+		<German>Jordan</German>
+		<Italian>Jordan</Italian>
+		<Spanish>Jordan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_JORDAN_PEDIA</Tag>
+		<English>[TAB]Jordan, officially the Hashemite Kingdom of Jordan (Arabic: al-Mamlakah al-Urduniyah 
+al-Hashimiyah), is an Arab kingdom in the Middle East, on the East Bank of the Jordan River. Jordan is 
+bordered by Saudi Arabia to the south and east, Iraq to the north-east, Syria to the north, and Israel 
+and Palestine to the west. After the post-World War I division of West Asia by Britain and France, the 
+Emirate of Transjordan was officially recognized by the Council of the League of Nations in 1922. In 
+1946, Jordan became an independent sovereign state officially known as the Hashemite Kingdom of Transjordan. 
+After capturing the West Bank during the 1948 Arab-Israeli War, Abdullah I took the title King of Jordan. 
+The name of the state was changed to The Hashemite Kingdom of Jordan on 1 December 1948.</English>
+		<French>[TAB]Jordan, officially the Hashemite Kingdom of Jordan (Arabic: al-Mamlakah al-Urduniyah al-Hashimiyah), 
+is an Arab kingdom in the Middle East, on the East Bank of the Jordan River. Jordan is bordered by Saudi 
+Arabia to the south and east, Iraq to the north-east, Syria to the north, and Israel and Palestine to 
+the west. After the post-World War I division of West Asia by Britain and France, the Emirate of Transjordan 
+was officially recognized by the Council of the League of Nations in 1922. In 1946, Jordan became an 
+independent sovereign state officially known as the Hashemite Kingdom of Transjordan. After capturing 
+the West Bank during the 1948 Arab-Israeli War, Abdullah I took the title King of Jordan. The name of 
+the state was changed to The Hashemite Kingdom of Jordan on 1 December 1948.</French>
+		<German>[TAB]Jordan, officially the Hashemite Kingdom of Jordan (Arabic: al-Mamlakah al-Urduniyah al-Hashimiyah), 
+is an Arab kingdom in the Middle East, on the East Bank of the Jordan River. Jordan is bordered by Saudi 
+Arabia to the south and east, Iraq to the north-east, Syria to the north, and Israel and Palestine to 
+the west. After the post-World War I division of West Asia by Britain and France, the Emirate of Transjordan 
+was officially recognized by the Council of the League of Nations in 1922. In 1946, Jordan became an 
+independent sovereign state officially known as the Hashemite Kingdom of Transjordan. After capturing 
+the West Bank during the 1948 Arab-Israeli War, Abdullah I took the title King of Jordan. The name of 
+the state was changed to The Hashemite Kingdom of Jordan on 1 December 1948.</German>
+		<Italian>[TAB]Jordan, officially the Hashemite Kingdom of Jordan (Arabic: al-Mamlakah al-Urduniyah 
+al-Hashimiyah), is an Arab kingdom in the Middle East, on the East Bank of the Jordan River. Jordan is 
+bordered by Saudi Arabia to the south and east, Iraq to the north-east, Syria to the north, and Israel 
+and Palestine to the west. After the post-World War I division of West Asia by Britain and France, the 
+Emirate of Transjordan was officially recognized by the Council of the League of Nations in 1922. In 
+1946, Jordan became an independent sovereign state officially known as the Hashemite Kingdom of Transjordan. 
+After capturing the West Bank during the 1948 Arab-Israeli War, Abdullah I took the title King of Jordan. 
+The name of the state was changed to The Hashemite Kingdom of Jordan on 1 December 1948.</Italian>
+		<Spanish>[TAB]Jordan, officially the Hashemite Kingdom of Jordan (Arabic: al-Mamlakah al-Urduniyah 
+al-Hashimiyah), is an Arab kingdom in the Middle East, on the East Bank of the Jordan River. Jordan is 
+bordered by Saudi Arabia to the south and east, Iraq to the north-east, Syria to the north, and Israel 
+and Palestine to the west. After the post-World War I division of West Asia by Britain and France, the 
+Emirate of Transjordan was officially recognized by the Council of the League of Nations in 1922. In 
+1946, Jordan became an independent sovereign state officially known as the Hashemite Kingdom of Transjordan. 
+After capturing the West Bank during the 1948 Arab-Israeli War, Abdullah I took the title King of Jordan. 
+The name of the state was changed to The Hashemite Kingdom of Jordan on 1 December 1948.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_JORDAN_ADJECTIVE</Tag>
+		<English>Jordanian</English>
+		<French>Jordanian</French>
+		<German>Jordanian</German>
+		<Italian>Jordanian</Italian>
+		<Spanish>Jordanian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_ABDULLAH</Tag>
+		<English>Abdullah II of Jordan</English>
+		<French>Abdullah II of Jordan</French>
+		<German>Abdullah II of Jordan</German>
+		<Italian>Abdullah II of Jordan</Italian>
+		<Spanish>Abdullah II of Jordan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_ABDULLAH_PEDIA</Tag>
+		<English>[H1]Abdullah II of Jordan [\H1][NEWLINE][BOLD]President of Paraguay[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] xxx1111xx[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Abdullah II ibn al-Hussein 
+is the King of Jordan after he ascended the throne on 7 February 1999 upon the death of his father King 
+Hussein. He is a member of the Hashemite family which has ruled Jordan since 1946 and claims to be descendant 
+of the Islamic prophet Muhammad. Abdullah, was born to Hussein from his second wife, the ethnically British 
+Princess Muna al-Hussein. He was named as crown prince shortly after his birth. The King Hussein transferred 
+the title to his own brother, Hassan, in 1965, only to return it to Abdullah in 1999. He is married to 
+Queen Rania who is of Palestinian origin. In 1993, he assumed command of Jordan's special forces and 
+became a Major General in May 1998.</English>
+		<French>[H1]Abdullah II of Jordan [\H1][NEWLINE][BOLD]President of Paraguay[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] xxx1111xx[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Abdullah II ibn al-Hussein 
+is the King of Jordan after he ascended the throne on 7 February 1999 upon the death of his father King 
+Hussein. He is a member of the Hashemite family which has ruled Jordan since 1946 and claims to be descendant 
+of the Islamic prophet Muhammad. Abdullah, was born to Hussein from his second wife, the ethnically British 
+Princess Muna al-Hussein. He was named as crown prince shortly after his birth. The King Hussein transferred 
+the title to his own brother, Hassan, in 1965, only to return it to Abdullah in 1999. He is married to 
+Queen Rania who is of Palestinian origin. In 1993, he assumed command of Jordan's special forces and 
+became a Major General in May 1998.</French>
+		<German>[H1]Abdullah II of Jordan [\H1][NEWLINE][BOLD]President of Paraguay[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] xxx1111xx[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Abdullah II ibn al-Hussein 
+is the King of Jordan after he ascended the throne on 7 February 1999 upon the death of his father King 
+Hussein. He is a member of the Hashemite family which has ruled Jordan since 1946 and claims to be descendant 
+of the Islamic prophet Muhammad. Abdullah, was born to Hussein from his second wife, the ethnically British 
+Princess Muna al-Hussein. He was named as crown prince shortly after his birth. The King Hussein transferred 
+the title to his own brother, Hassan, in 1965, only to return it to Abdullah in 1999. He is married to 
+Queen Rania who is of Palestinian origin. In 1993, he assumed command of Jordan's special forces and 
+became a Major General in May 1998.</German>
+		<Italian>[H1]Abdullah II of Jordan [\H1][NEWLINE][BOLD]President of Paraguay[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] xxx1111xx[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Abdullah II ibn al-Hussein 
+is the King of Jordan after he ascended the throne on 7 February 1999 upon the death of his father King 
+Hussein. He is a member of the Hashemite family which has ruled Jordan since 1946 and claims to be descendant 
+of the Islamic prophet Muhammad. Abdullah, was born to Hussein from his second wife, the ethnically British 
+Princess Muna al-Hussein. He was named as crown prince shortly after his birth. The King Hussein transferred 
+the title to his own brother, Hassan, in 1965, only to return it to Abdullah in 1999. He is married to 
+Queen Rania who is of Palestinian origin. In 1993, he assumed command of Jordan's special forces and 
+became a Major General in May 1998.</Italian>
+		<Spanish>[H1]Abdullah II of Jordan [\H1][NEWLINE][BOLD]President of Paraguay[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] xxx1111xx[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Abdullah II ibn al-Hussein 
+is the King of Jordan after he ascended the throne on 7 February 1999 upon the death of his father King 
+Hussein. He is a member of the Hashemite family which has ruled Jordan since 1946 and claims to be descendant 
+of the Islamic prophet Muhammad. Abdullah, was born to Hussein from his second wife, the ethnically British 
+Princess Muna al-Hussein. He was named as crown prince shortly after his birth. The King Hussein transferred 
+the title to his own brother, Hassan, in 1965, only to return it to Abdullah in 1999. He is married to 
+Queen Rania who is of Palestinian origin. In 1993, he assumed command of Jordan's special forces and 
+became a Major General in May 1998.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ABDULLAH_1</Tag>
+		<English>Greetings, [CT_NAME]. I am [OUR_NAME] of the [OUR_EMPIRE]. Love truth even if it harms you, and hate lies even if they serve you. These are words of wisdom to live by.</English>
+		<French>Greetings, [CT_NAME]. I am [OUR_NAME] of the [OUR_EMPIRE]. Love truth even if it harms you, and hate lies even if they serve you. These are words of wisdom to live by.</French>
+		<German>Greetings, [CT_NAME]. I am [OUR_NAME] of the [OUR_EMPIRE]. Love truth even if it harms you, and hate lies even if they serve you. These are words of wisdom to live by.</German>
+		<Italian>Greetings, [CT_NAME]. I am [OUR_NAME] of the [OUR_EMPIRE]. Love truth even if it harms you, and hate lies even if they serve you. These are words of wisdom to live by.</Italian>
+		<Spanish>Greetings, [CT_NAME]. I am [OUR_NAME] of the [OUR_EMPIRE]. Love truth even if it harms you, and hate lies even if they serve you. These are words of wisdom to live by.</Spanish>
+	</TEXT>
+</Civ4GameText>

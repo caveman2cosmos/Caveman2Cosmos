@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- Modified by the Civ Gold Team -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KHAZARS_DESC</Tag>
+		<English>Khazar Khaganate</English>
+		<French>Khazar Khaganate</French>
+		<German>Khazar Khaganate</German>
+		<Italian>Khazar Khaganate</Italian>
+		<Spanish>Khazar Khaganate</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KHAZARS_SHORT_DESC</Tag>
+		<English>Khazars</English>
+		<French>Khazars</French>
+		<German>Khazars</German>
+		<Italian>Khazars</Italian>
+		<Spanish>Khazars</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KHAZARS_ADJECTIVE</Tag>
+		<English>Khazarian</English>
+		<French>Khazarian</French>
+		<German>Khazarian</German>
+		<Italian>Khazarian</Italian>
+		<Spanish>Khazarian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KHAZARS_PEDIA</Tag>
+		<English>[TAB]The Khazars were a semi-nomadic Turkic people who created what for its duration was the 
+most powerful polity to emerge from the breakup of the western Turkish steppe empire, known as the Khazar 
+Khanate or Khazaria. Astride a major artery of commerce between northern Europe and southwestern Asia, 
+Khazaria became one of the foremost trading emporia of the medieval world, commanding the western marches 
+of the Silk Road and played a key commercial role as a crossroad between China, the Middle East, and 
+Kievan Rus'. For some three centuries (c. 650–965) the Khazars dominated the vast area extending from 
+the Volga-Don steppes to the eastern Crimea and the northern Caucasus. Khazaria long served as a buffer 
+state between the Byzantine empire and both the nomads of the northern steppes and the Umayyad empire, 
+after serving as Byzantium's proxy against the Sasanian Persian empire. The alliance was dropped around 
+900. Byzantium began to encourage the Alans to attack Khazaria and weaken its hold on Crimea and the 
+Caucasus, while seeking to obtain an entente with the rising Rus' power to the north, which it aspired 
+to convert to Christianity. Between 965 and 969, the Kievan Rus ruler Sviatoslav I of Kiev conquered 
+the capital Atil and destroyed the Khazar state. Beginning in the 8th century, Khazar royalty and notable 
+segments of the aristocracy converted to Judaism; the populace appears to have been multi-confessional—a 
+mosaic of pagan, Tengrist, Jewish, Christian and Muslim worshippers—and polyethnic. Khazar origins for, 
+or suggestions Khazars were absorbed by many peoples, have been made regarding the Slavic Judaising Subbotniks, 
+the Bukharan Jews, the Muslim Kumyks, Kazakhs, Nogais,[citation needed] the Cossacks of the Don region, 
+the Turkic-speaking Krymchaks and the and their Crimean neighbours the Karaites to the Moldavian Csángós, 
+the Mountain Jews and others. A modern theory, that the core of Ashkenazi Jewry emerged from a hypothetical 
+Khazarian Jewish diaspora, is now viewed with scepticism by most scholars, but occasionally supported 
+by others. This Khazarian hypothesis is sometimes associated with antisemitism and anti-Zionism.</English>
+		<French>[TAB]The Khazars were a semi-nomadic Turkic people who created what for its duration was the 
+most powerful polity to emerge from the breakup of the western Turkish steppe empire, known as the Khazar 
+Khanate or Khazaria. Astride a major artery of commerce between northern Europe and southwestern Asia, 
+Khazaria became one of the foremost trading emporia of the medieval world, commanding the western marches 
+of the Silk Road and played a key commercial role as a crossroad between China, the Middle East, and 
+Kievan Rus'. For some three centuries (c. 650–965) the Khazars dominated the vast area extending from 
+the Volga-Don steppes to the eastern Crimea and the northern Caucasus. Khazaria long served as a buffer 
+state between the Byzantine empire and both the nomads of the northern steppes and the Umayyad empire, 
+after serving as Byzantium's proxy against the Sasanian Persian empire. The alliance was dropped around 
+900. Byzantium began to encourage the Alans to attack Khazaria and weaken its hold on Crimea and the 
+Caucasus, while seeking to obtain an entente with the rising Rus' power to the north, which it aspired 
+to convert to Christianity. Between 965 and 969, the Kievan Rus ruler Sviatoslav I of Kiev conquered 
+the capital Atil and destroyed the Khazar state. Beginning in the 8th century, Khazar royalty and notable 
+segments of the aristocracy converted to Judaism; the populace appears to have been multi-confessional—a 
+mosaic of pagan, Tengrist, Jewish, Christian and Muslim worshippers—and polyethnic. Khazar origins for, 
+or suggestions Khazars were absorbed by many peoples, have been made regarding the Slavic Judaising Subbotniks, 
+the Bukharan Jews, the Muslim Kumyks, Kazakhs, Nogais,[citation needed] the Cossacks of the Don region, 
+the Turkic-speaking Krymchaks and the and their Crimean neighbours the Karaites to the Moldavian Csángós, 
+the Mountain Jews and others. A modern theory, that the core of Ashkenazi Jewry emerged from a hypothetical 
+Khazarian Jewish diaspora, is now viewed with scepticism by most scholars, but occasionally supported 
+by others. This Khazarian hypothesis is sometimes associated with antisemitism and anti-Zionism.</French>
+		<German>[TAB]The Khazars were a semi-nomadic Turkic people who created what for its duration was the 
+most powerful polity to emerge from the breakup of the western Turkish steppe empire, known as the Khazar 
+Khanate or Khazaria. Astride a major artery of commerce between northern Europe and southwestern Asia, 
+Khazaria became one of the foremost trading emporia of the medieval world, commanding the western marches 
+of the Silk Road and played a key commercial role as a crossroad between China, the Middle East, and 
+Kievan Rus'. For some three centuries (c. 650–965) the Khazars dominated the vast area extending from 
+the Volga-Don steppes to the eastern Crimea and the northern Caucasus. Khazaria long served as a buffer 
+state between the Byzantine empire and both the nomads of the northern steppes and the Umayyad empire, 
+after serving as Byzantium's proxy against the Sasanian Persian empire. The alliance was dropped around 
+900. Byzantium began to encourage the Alans to attack Khazaria and weaken its hold on Crimea and the 
+Caucasus, while seeking to obtain an entente with the rising Rus' power to the north, which it aspired 
+to convert to Christianity. Between 965 and 969, the Kievan Rus ruler Sviatoslav I of Kiev conquered 
+the capital Atil and destroyed the Khazar state. Beginning in the 8th century, Khazar royalty and notable 
+segments of the aristocracy converted to Judaism; the populace appears to have been multi-confessional—a 
+mosaic of pagan, Tengrist, Jewish, Christian and Muslim worshippers—and polyethnic. Khazar origins for, 
+or suggestions Khazars were absorbed by many peoples, have been made regarding the Slavic Judaising Subbotniks, 
+the Bukharan Jews, the Muslim Kumyks, Kazakhs, Nogais,[citation needed] the Cossacks of the Don region, 
+the Turkic-speaking Krymchaks and the and their Crimean neighbours the Karaites to the Moldavian Csángós, 
+the Mountain Jews and others. A modern theory, that the core of Ashkenazi Jewry emerged from a hypothetical 
+Khazarian Jewish diaspora, is now viewed with scepticism by most scholars, but occasionally supported 
+by others. This Khazarian hypothesis is sometimes associated with antisemitism and anti-Zionism.</German>
+		<Italian>[TAB]The Khazars were a semi-nomadic Turkic people who created what for its duration was the 
+most powerful polity to emerge from the breakup of the western Turkish steppe empire, known as the Khazar 
+Khanate or Khazaria. Astride a major artery of commerce between northern Europe and southwestern Asia, 
+Khazaria became one of the foremost trading emporia of the medieval world, commanding the western marches 
+of the Silk Road and played a key commercial role as a crossroad between China, the Middle East, and 
+Kievan Rus'. For some three centuries (c. 650–965) the Khazars dominated the vast area extending from 
+the Volga-Don steppes to the eastern Crimea and the northern Caucasus. Khazaria long served as a buffer 
+state between the Byzantine empire and both the nomads of the northern steppes and the Umayyad empire, 
+after serving as Byzantium's proxy against the Sasanian Persian empire. The alliance was dropped around 
+900. Byzantium began to encourage the Alans to attack Khazaria and weaken its hold on Crimea and the 
+Caucasus, while seeking to obtain an entente with the rising Rus' power to the north, which it aspired 
+to convert to Christianity. Between 965 and 969, the Kievan Rus ruler Sviatoslav I of Kiev conquered 
+the capital Atil and destroyed the Khazar state. Beginning in the 8th century, Khazar royalty and notable 
+segments of the aristocracy converted to Judaism; the populace appears to have been multi-confessional—a 
+mosaic of pagan, Tengrist, Jewish, Christian and Muslim worshippers—and polyethnic. Khazar origins for, 
+or suggestions Khazars were absorbed by many peoples, have been made regarding the Slavic Judaising Subbotniks, 
+the Bukharan Jews, the Muslim Kumyks, Kazakhs, Nogais,[citation needed] the Cossacks of the Don region, 
+the Turkic-speaking Krymchaks and the and their Crimean neighbours the Karaites to the Moldavian Csángós, 
+the Mountain Jews and others. A modern theory, that the core of Ashkenazi Jewry emerged from a hypothetical 
+Khazarian Jewish diaspora, is now viewed with scepticism by most scholars, but occasionally supported 
+by others. This Khazarian hypothesis is sometimes associated with antisemitism and anti-Zionism.</Italian>
+		<Spanish>[TAB]The Khazars were a semi-nomadic Turkic people who created what for its duration was the 
+most powerful polity to emerge from the breakup of the western Turkish steppe empire, known as the Khazar 
+Khanate or Khazaria. Astride a major artery of commerce between northern Europe and southwestern Asia, 
+Khazaria became one of the foremost trading emporia of the medieval world, commanding the western marches 
+of the Silk Road and played a key commercial role as a crossroad between China, the Middle East, and 
+Kievan Rus'. For some three centuries (c. 650–965) the Khazars dominated the vast area extending from 
+the Volga-Don steppes to the eastern Crimea and the northern Caucasus. Khazaria long served as a buffer 
+state between the Byzantine empire and both the nomads of the northern steppes and the Umayyad empire, 
+after serving as Byzantium's proxy against the Sasanian Persian empire. The alliance was dropped around 
+900. Byzantium began to encourage the Alans to attack Khazaria and weaken its hold on Crimea and the 
+Caucasus, while seeking to obtain an entente with the rising Rus' power to the north, which it aspired 
+to convert to Christianity. Between 965 and 969, the Kievan Rus ruler Sviatoslav I of Kiev conquered 
+the capital Atil and destroyed the Khazar state. Beginning in the 8th century, Khazar royalty and notable 
+segments of the aristocracy converted to Judaism; the populace appears to have been multi-confessional—a 
+mosaic of pagan, Tengrist, Jewish, Christian and Muslim worshippers—and polyethnic. Khazar origins for, 
+or suggestions Khazars were absorbed by many peoples, have been made regarding the Slavic Judaising Subbotniks, 
+the Bukharan Jews, the Muslim Kumyks, Kazakhs, Nogais,[citation needed] the Cossacks of the Don region, 
+the Turkic-speaking Krymchaks and the and their Crimean neighbours the Karaites to the Moldavian Csángós, 
+the Mountain Jews and others. A modern theory, that the core of Ashkenazi Jewry emerged from a hypothetical 
+Khazarian Jewish diaspora, is now viewed with scepticism by most scholars, but occasionally supported 
+by others. This Khazarian hypothesis is sometimes associated with antisemitism and anti-Zionism.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_BULAN</Tag>
+		<English>Bulan</English>
+		<French>Bulan</French>
+		<German>Bulan</German>
+		<Italian>Bulan</Italian>
+		<Spanish>Bulan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_BULAN_PEDIA</Tag>
+		<English>[H1]Bulan [\H1][NEWLINE][BOLD]Khazar Khagan[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] mid 700s[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Bulan 
+was a Khazar king who led the conversion of the Khazars to Judaism. His name means "elk" in Old Turkic. 
+In modern Turkish, it means The one who finds (Bul + an). The date of his reign is unknown, as the date 
+of the conversion is hotly disputed, though it is certain that Bulan reigned some time between the mid-700s 
+and the mid-800s. Nor is it settled whether Bulan was the Bek or the Khagan of the Khazars. D. M. Dunlop 
+was certain that Bulan was a Khagan; however, more recent works, such as The Jews of Khazaria by Kevin 
+Brook, assume that he was the Bek due to references to him leading military campaigns. Khazar tradition 
+held that before his own conversion, Bulan was religiously unaffiliated. In his quest to discover which 
+of the three Abrahamic religions would shape his own religious beliefs, he invited representatives from 
+each to explain their fundamental tenets. In the end, he chose Judaism. In the Khazar Correspondence, 
+King Joseph traces his lineage back to Bulan. He refers to the reforming Khazar ruler Obadiah as being 
+one of "the sons of the sons of Bulan". While Brook assumes this makes Obadiah Bulan's grandson, the 
+Hebrew phrase is less definitive and may allude to a more remote descent. The royal descendants of Bulan 
+are referred to by Khazar researchers as Bulanids, though their self-designation is unknown. The name 
+Sabriel is given in the Schechter Letter (roughly contemporaneous with King Joseph's letter) for the 
+Khazar king who led the conversion to Judaism. The Schechter Letter also gives Sabriel at least a partial 
+Jewish/Israelite ancestry. Sabriel is described as having waged successful campaigns in the Caucasus 
+and Iranian Azerbaijan, possibly as part of the Khazar-Arab wars. His wife, Serakh, is described as a 
+Jew and as encouraging him to study and adopt Judaism. The Schechter Letter is silent on the issue of 
+whether Sabriel was Bulan; the name Bulan does not appear in that document. Khazar scholars sometimes 
+refer to the king who led the Khazar conversion to Judaism as "Bulan Sabriel", though it is conceivable 
+that they may have been different people. In The History of the Jewish Khazars, for instance, D. M. Dunlop 
+examined (and ultimately rejected) the theory of other scholars that Sabriel referred to Obadiah.</English>
+		<French>[H1]Bulan [\H1][NEWLINE][BOLD]Khazar Khagan[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] mid 700s[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Bulan 
+was a Khazar king who led the conversion of the Khazars to Judaism. His name means "elk" in Old Turkic. 
+In modern Turkish, it means The one who finds (Bul + an). The date of his reign is unknown, as the date 
+of the conversion is hotly disputed, though it is certain that Bulan reigned some time between the mid-700s 
+and the mid-800s. Nor is it settled whether Bulan was the Bek or the Khagan of the Khazars. D. M. Dunlop 
+was certain that Bulan was a Khagan; however, more recent works, such as The Jews of Khazaria by Kevin 
+Brook, assume that he was the Bek due to references to him leading military campaigns. Khazar tradition 
+held that before his own conversion, Bulan was religiously unaffiliated. In his quest to discover which 
+of the three Abrahamic religions would shape his own religious beliefs, he invited representatives from 
+each to explain their fundamental tenets. In the end, he chose Judaism. In the Khazar Correspondence, 
+King Joseph traces his lineage back to Bulan. He refers to the reforming Khazar ruler Obadiah as being 
+one of "the sons of the sons of Bulan". While Brook assumes this makes Obadiah Bulan's grandson, the 
+Hebrew phrase is less definitive and may allude to a more remote descent. The royal descendants of Bulan 
+are referred to by Khazar researchers as Bulanids, though their self-designation is unknown. The name 
+Sabriel is given in the Schechter Letter (roughly contemporaneous with King Joseph's letter) for the 
+Khazar king who led the conversion to Judaism. The Schechter Letter also gives Sabriel at least a partial 
+Jewish/Israelite ancestry. Sabriel is described as having waged successful campaigns in the Caucasus 
+and Iranian Azerbaijan, possibly as part of the Khazar-Arab wars. His wife, Serakh, is described as a 
+Jew and as encouraging him to study and adopt Judaism. The Schechter Letter is silent on the issue of 
+whether Sabriel was Bulan; the name Bulan does not appear in that document. Khazar scholars sometimes 
+refer to the king who led the Khazar conversion to Judaism as "Bulan Sabriel", though it is conceivable 
+that they may have been different people. In The History of the Jewish Khazars, for instance, D. M. Dunlop 
+examined (and ultimately rejected) the theory of other scholars that Sabriel referred to Obadiah.</French>
+		<German>[H1]Bulan [\H1][NEWLINE][BOLD]Khazar Khagan[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] mid 700s[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Bulan 
+was a Khazar king who led the conversion of the Khazars to Judaism. His name means "elk" in Old Turkic. 
+In modern Turkish, it means The one who finds (Bul + an). The date of his reign is unknown, as the date 
+of the conversion is hotly disputed, though it is certain that Bulan reigned some time between the mid-700s 
+and the mid-800s. Nor is it settled whether Bulan was the Bek or the Khagan of the Khazars. D. M. Dunlop 
+was certain that Bulan was a Khagan; however, more recent works, such as The Jews of Khazaria by Kevin 
+Brook, assume that he was the Bek due to references to him leading military campaigns. Khazar tradition 
+held that before his own conversion, Bulan was religiously unaffiliated. In his quest to discover which 
+of the three Abrahamic religions would shape his own religious beliefs, he invited representatives from 
+each to explain their fundamental tenets. In the end, he chose Judaism. In the Khazar Correspondence, 
+King Joseph traces his lineage back to Bulan. He refers to the reforming Khazar ruler Obadiah as being 
+one of "the sons of the sons of Bulan". While Brook assumes this makes Obadiah Bulan's grandson, the 
+Hebrew phrase is less definitive and may allude to a more remote descent. The royal descendants of Bulan 
+are referred to by Khazar researchers as Bulanids, though their self-designation is unknown. The name 
+Sabriel is given in the Schechter Letter (roughly contemporaneous with King Joseph's letter) for the 
+Khazar king who led the conversion to Judaism. The Schechter Letter also gives Sabriel at least a partial 
+Jewish/Israelite ancestry. Sabriel is described as having waged successful campaigns in the Caucasus 
+and Iranian Azerbaijan, possibly as part of the Khazar-Arab wars. His wife, Serakh, is described as a 
+Jew and as encouraging him to study and adopt Judaism. The Schechter Letter is silent on the issue of 
+whether Sabriel was Bulan; the name Bulan does not appear in that document. Khazar scholars sometimes 
+refer to the king who led the Khazar conversion to Judaism as "Bulan Sabriel", though it is conceivable 
+that they may have been different people. In The History of the Jewish Khazars, for instance, D. M. Dunlop 
+examined (and ultimately rejected) the theory of other scholars that Sabriel referred to Obadiah.</German>
+		<Italian>[H1]Bulan [\H1][NEWLINE][BOLD]Khazar Khagan[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] mid 700s[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Bulan 
+was a Khazar king who led the conversion of the Khazars to Judaism. His name means "elk" in Old Turkic. 
+In modern Turkish, it means The one who finds (Bul + an). The date of his reign is unknown, as the date 
+of the conversion is hotly disputed, though it is certain that Bulan reigned some time between the mid-700s 
+and the mid-800s. Nor is it settled whether Bulan was the Bek or the Khagan of the Khazars. D. M. Dunlop 
+was certain that Bulan was a Khagan; however, more recent works, such as The Jews of Khazaria by Kevin 
+Brook, assume that he was the Bek due to references to him leading military campaigns. Khazar tradition 
+held that before his own conversion, Bulan was religiously unaffiliated. In his quest to discover which 
+of the three Abrahamic religions would shape his own religious beliefs, he invited representatives from 
+each to explain their fundamental tenets. In the end, he chose Judaism. In the Khazar Correspondence, 
+King Joseph traces his lineage back to Bulan. He refers to the reforming Khazar ruler Obadiah as being 
+one of "the sons of the sons of Bulan". While Brook assumes this makes Obadiah Bulan's grandson, the 
+Hebrew phrase is less definitive and may allude to a more remote descent. The royal descendants of Bulan 
+are referred to by Khazar researchers as Bulanids, though their self-designation is unknown. The name 
+Sabriel is given in the Schechter Letter (roughly contemporaneous with King Joseph's letter) for the 
+Khazar king who led the conversion to Judaism. The Schechter Letter also gives Sabriel at least a partial 
+Jewish/Israelite ancestry. Sabriel is described as having waged successful campaigns in the Caucasus 
+and Iranian Azerbaijan, possibly as part of the Khazar-Arab wars. His wife, Serakh, is described as a 
+Jew and as encouraging him to study and adopt Judaism. The Schechter Letter is silent on the issue of 
+whether Sabriel was Bulan; the name Bulan does not appear in that document. Khazar scholars sometimes 
+refer to the king who led the Khazar conversion to Judaism as "Bulan Sabriel", though it is conceivable 
+that they may have been different people. In The History of the Jewish Khazars, for instance, D. M. Dunlop 
+examined (and ultimately rejected) the theory of other scholars that Sabriel referred to Obadiah.</Italian>
+		<Spanish>[H1]Bulan [\H1][NEWLINE][BOLD]Khazar Khagan[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] mid 700s[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Bulan 
+was a Khazar king who led the conversion of the Khazars to Judaism. His name means "elk" in Old Turkic. 
+In modern Turkish, it means The one who finds (Bul + an). The date of his reign is unknown, as the date 
+of the conversion is hotly disputed, though it is certain that Bulan reigned some time between the mid-700s 
+and the mid-800s. Nor is it settled whether Bulan was the Bek or the Khagan of the Khazars. D. M. Dunlop 
+was certain that Bulan was a Khagan; however, more recent works, such as The Jews of Khazaria by Kevin 
+Brook, assume that he was the Bek due to references to him leading military campaigns. Khazar tradition 
+held that before his own conversion, Bulan was religiously unaffiliated. In his quest to discover which 
+of the three Abrahamic religions would shape his own religious beliefs, he invited representatives from 
+each to explain their fundamental tenets. In the end, he chose Judaism. In the Khazar Correspondence, 
+King Joseph traces his lineage back to Bulan. He refers to the reforming Khazar ruler Obadiah as being 
+one of "the sons of the sons of Bulan". While Brook assumes this makes Obadiah Bulan's grandson, the 
+Hebrew phrase is less definitive and may allude to a more remote descent. The royal descendants of Bulan 
+are referred to by Khazar researchers as Bulanids, though their self-designation is unknown. The name 
+Sabriel is given in the Schechter Letter (roughly contemporaneous with King Joseph's letter) for the 
+Khazar king who led the conversion to Judaism. The Schechter Letter also gives Sabriel at least a partial 
+Jewish/Israelite ancestry. Sabriel is described as having waged successful campaigns in the Caucasus 
+and Iranian Azerbaijan, possibly as part of the Khazar-Arab wars. His wife, Serakh, is described as a 
+Jew and as encouraging him to study and adopt Judaism. The Schechter Letter is silent on the issue of 
+whether Sabriel was Bulan; the name Bulan does not appear in that document. Khazar scholars sometimes 
+refer to the king who led the Khazar conversion to Judaism as "Bulan Sabriel", though it is conceivable 
+that they may have been different people. In The History of the Jewish Khazars, for instance, D. M. Dunlop 
+examined (and ultimately rejected) the theory of other scholars that Sabriel referred to Obadiah.</Spanish>
+	</TEXT>
+</Civ4GameText>

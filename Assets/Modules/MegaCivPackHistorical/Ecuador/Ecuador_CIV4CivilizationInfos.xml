@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- re-Modified by Strategyonly -->
+<!-- -->
+<Civ4CivilizationInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4CivilizationsSchema.xml">
+	<CivilizationInfos>
+		<CivilizationInfo>
+			<Type>CIVILIZATION_ECUADOR</Type>
+			<Description>TXT_KEY_CIV_ECUADOR_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_ECUADOR_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_ECUADOR_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_ECUADOR_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_ECUADOR</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_ECUADOR</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_IBERIA</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_SOUTH_AMERICA</UnitArtStyleType>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>Quito</City>
+				<City>Guayaquil</City>
+				<City>Cuenca</City>
+				<City>Santo Domingo</City>
+				<City>Machala</City>
+				<City>Duran</City>
+				<City>Manta</City>
+				<City>Portoviejo</City>
+				<City>Loja</City>
+				<City>Ambato</City>
+				<City>Ibarra</City>
+				<City>Milagro</City>
+				<City>Nueva Loja</City>
+				<City>Pinas</City>
+				<City>Arajuno</City>
+				<City>Pintag</City>
+				<City>La Libertad</City>
+				<City>Babahoyo</City>
+				<City>Guaranda</City>
+				<City>Quevedo</City>
+				<City>Esmeraldas</City>
+				<City>Salinas</City>
+				<City>Domingo</City>
+				<City>Shell Mera</City>
+				<City>Tulcan</City>
+				<City>Riobamba</City>
+				<City>Bahia de Caraquez</City>
+				<City>Pinas</City>
+				<City>Biblian</City>
+				<City>Gualaceo</City>
+				<City>Naranjal</City>
+				<City>Balao</City>
+				<City>Santa Rosa</City>
+				<City>Portovelo</City>
+				<City>Zaruma</City>
+				<City>El Cambio</City>
+				<City>La Asuncion</City>
+				<City>Giron</City>
+				<City>Balsas</City>
+				<City>El Guabo</City>
+				<City>Chilla</City>
+				<City>Santa Isabel</City>
+				<City>Cumbe</City>
+				<City>Yantzaza</City>
+				<City>Zamora</City>
+			</Cities>
+			
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
+			<InitialCivics>
+				<CivicType>CIVIC_ANARCHISM</CivicType>
+				<CivicType>CIVIC_OBEDIENCE</CivicType>
+				<CivicType>CIVIC_STRONGMAN</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
+				<CivicType>CIVIC_MILITIA</CivicType>
+				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SURVIVAL</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
+				<CivicType>CIVIC_UNORGANIZED</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_FLORES</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<DerivativeCiv>NONE</DerivativeCiv>
+			<CivilizationSelectionSound>AS3D_SPAIN_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_SPAIN_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+	</CivilizationInfos>
+</Civ4CivilizationInfos>

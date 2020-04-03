@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- re-Modified by strategyonly -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ULM_DESC</Tag>
+		<English>Ulmian Empire</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ULM_SHORT_DESC</Tag>
+		<English>Ulm</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ULM_ADJECTIVE</Tag>
+		<English>Ulmian</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ULM_PEDIA</Tag>
+		<English>[TAB]https://forum.paradoxplaza.com/forum/index.php?threads/glory-for-ulm-a-flagland-aar.513240/
+		The Free Imperial City of Ulm was a Free Imperial City of the Holy Roman Empire. Ulm is mentioned as a demesne in 854, and under the Carolingian dynasty it was the scene of several assemblies. It became a town in 1027, and was soon the principal place in the Duchy of Swabia. Although burned down by Henry the Lion, the town soon recovered, becoming a Free Imperial City in 1155. Towards the close of the Middle Ages it played a leading part several times at the head of Swabian Leagues of the 14th century and 15th century. Its trade and commerce prospered, peaking in the 15th century, ruling over a district about 300 square miles. It became a Free Imperial City with extensive territorial authority, and having a population of about 60,000. It became Protestant in 1530 and declined after the French Wars of Religion of the 16th century and 17th century. In 1802 it lost its Imperial immediacy and passed to Electorate of Bavaria, being ceded to Kingdom of Württemberg in 1810. In October 1805 General Karl Mack von Leiberich and his 23,000 Austrian troops capitulated to Napoleon here. Ulm is remarkable in the history of German literature as the spot where the Meistersingers lingered longest, orally preserving the traditional folklore of their craft.</English>
+	</TEXT>
+<!-- Leaders -->
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SVIP</Tag>
+		<English>Svip</English>
+		<French>Svip</French>
+		<German>Svip</German>
+		<Italian>Svip</Italian>
+		<Spanish>Svip</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SVIP_PEDIA</Tag>
+		<English>[H1]Svip[\H1][NEWLINE][BOLD]King of the Ulmians[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] ? [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]https://forum.paradoxplaza.com/forum/index.php?threads/glory-for-ulm-a-flagland-aar.513240/</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SVIP_1</Tag>
+		<English>You are in front of [OUR_NAME] of the mighty [OUR_EMPIRE]. Our friends feast between the countless treasures that comes from the outer sea ... if you are not among the, well, after killing 10 millions in the work fields, my lands are more than tristhy for new workes.</English>
+	</TEXT>
+</Civ4GameText>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- ReModified by the StrategyOnly -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CALIFORNIA_DESC</Tag>
+		<English>Californian Empire</English>
+		<French>Californian Empire</French>
+		<German>Californian Empire</German>
+		<Italian>Californian Empire</Italian>
+		<Spanish>Californian Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CALIFORNIA_SHORT_DESC</Tag>
+		<English>California</English>
+		<French>
+			<Text>California</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>
+			<Text>California</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>California</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>California</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CALIFORNIA_ADJECTIVE</Tag>
+		<English>Californian</English>
+		<French>
+			<Text>Californian</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>
+			<Text>Californian</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Californian</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Californian</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CALIFORNIA_PEDIA</Tag>
+		<English>[TAB]California is a state located on the West Coast of the United States. It is the most 
+populous U.S. state,[4] with 38 million people, one in eight of the people who live in the U.S, and the 
+third largest state by area (after Alaska and Texas). California is bordered by Oregon to the north, 
+Nevada to the east, Arizona to the southeast, and the Mexican state of Baja California to the south. 
+It contains the nation's second most populous census statistical area (Greater Los Angeles Area) and 
+the fifth most populous (San Francisco Bay Area), and eight of the nation's 50 most populated cities 
+(Los Angeles, San Diego, San Jose, San Francisco, Fresno, Sacramento, Long Beach, and Oakland). Sacramento 
+has been state capital since 1854.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SCHWARZENEGGER</Tag>
+		<English>Arnold Schwarzenegger</English>
+		<French>
+			<Text>Arnold Schwarzenegger</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Arnold Schwarzenegger</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Arnold Schwarzenegger</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Arnold Schwarzenegger</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SCHWARZENEGGER_PEDIA</Tag>
+		<English>[H1]Arnold Schwarzenegger [\H1][NEWLINE][BOLD]Premier of California[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] born July 30, 1947[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Arnold Alois Schwarzenegger is an Austrian-born American actor, model, producer, director, activist, businessman, investor, writer, philanthropist, former professional bodybuilder, and politician. Schwarzenegger served two terms as the 38th Governor of California from 2003 until 2011.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SCHWARZENEGGER_1</Tag>
+		<English>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. We offer you the friendship of the glorious nation of [OUR_CIV_SHORT]!</English>
+	</TEXT>
+</Civ4GameText>

@@ -1,0 +1,1855 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- ReModified by the StrategyOnly -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CANADA_DESC</Tag>
+		<English>Canadian Empire</English>
+		<French>
+			<Text>Empire canadien</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Canadian Empire</Text>
+			<Gender>Neuter:Neuter:Neuter</Gender>
+			<Plural>0:0:0</Plural>
+		</German>
+		<Italian>
+			<Text>Impero Canadese</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Imperio Canadese</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CANADA_SHORT_DESC</Tag>
+		<English>Canada</English>
+		<French>
+			<Text>Canada</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>
+			<Text>Kanada</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Canada</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Canada</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CANADA_PEDIA</Tag>
+		<English>[TAB]Prior to the arrival of Europeans in Canada, the area was inhabited by various peoples 
+who came from Asia via the Bering Strait more than 10,000 years ago. The Vikings landed in Canada c.a.d. 
+1000. Their arrival is described in Icelandic sagas and confirmed by archaeological discoveries in Newfoundland. 
+John Cabot, sailing under English auspices, touched the east coast in 1497. In 1534, the Frenchman Jacques 
+Cartier planted a cross on the Gaspe Peninsula. These and many other voyages to the Canadian coast were 
+in search of a northwest passage to Asia. Subsequently, French-English rivalry dominated Canadian history 
+until 1763.[PARAGRAPH:2]The movement for federation of all the Canadian provinces was given impetus in 
+the 1860s by a need for common defense, the desire for some central authority to press railroad construction, 
+and the necessity for a solution to the problem posed by Canada West and Canada East, where the British 
+majority and French minority were in conflict. When the Maritime Provinces, which sought union among 
+themselves, met at the Charlottetown Conference of 1864, delegates from the other provinces of Canada 
+attended. Two more conferences were held - the Quebec Conference later in 1864 and the London Conference 
+in 1866 in England - before the British North America Act in 1867 made federation a fact. (In 1982 this 
+act was renamed the Constitution Act, 1867.)[PARAGRAPH:2]With W. L. Mackenzie King as prime minister, 
+Canada played a vital role on the Allied side in World War II. Despite economic strain Canada emerged 
+from the war with enhanced prestige and took an active role in the United Nations. Canada joined the 
+North Atlantic Treaty Organization in 1949. Following the war, uranium, iron, and petroleum resources 
+were exploited; uses of atomic energy were developed; and hydroelectric and thermal plants were built 
+to produce electricity for new and expanded industries. Since World War II the development of Canada's 
+manufacturing, mining, and service sectors has led to the creation of an affluent society. Services now 
+account for 66% of the GDP, while industry accounts for 31%. Tourism and financial services represent 
+some of Canada's most important industries within the service sector. However, manufacturing is Canada's 
+single most important economic activity. The leading products are transportation equipment, pulp and 
+paper, processed foods, chemicals, primary and fabricated metals, petroleum, electrical and electronic 
+products, wood products, printed materials, machinery, clothing, and nonmetallic minerals. Industries 
+are centered in Ontario, Quebec, and, to a lesser extent, British Columbia and Alberta. Canada's industries 
+depend on the country's rich energy resources, which include hydroelectric power, petroleum, natural 
+gas, coal, and uranium.[PARAGRAPH:2]About 40% of the Canadian population are of British descent, while 
+27% are of French origin. Another 20% are of other European background, about 10% are of E or SE Asian 
+origin, and some 3% are of aboriginal or Metis (mixed aboriginal and European) background. In the late 
+1990s, Canada had the highest immigration rate of any country in the world, with more than half the total 
+coming from Asia. Over 75% of the total population live in cities. Canada has complete religious liberty, 
+though its growing multiculturalism has at times caused tensions among ethnic and religious groups. About 
+45% of the people are Roman Catholics, while some 40% are Protestant (the largest groups being the United 
+Church of Canada, Anglicans, and Presbyterians). English and French are the official languages, and federal 
+documents are published in both languages. In 1991, about 61% of Canadians cited English as their mother 
+tongue, while 24% cited French.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_MACDONALD</Tag>
+		<English>MacDonald</English>
+		<French>
+			<Text>MacDonald</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>MacDonald</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>MacDonald</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>MacDonald</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_MACDONALD_PEDIA</Tag>
+		<English>[H1]Sir John A. MacDonald [\H1][NEWLINE][BOLD]Prime Minister of Canada[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1815 - 1891[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]The Right Honourable Sir 
+John Alexander MacDonald was the first Prime Minister of Canada from July 1, 1867 to November 5, 1873 
+and October 17, 1878 to June 6, 1891. BY 1864 he was the leader of arguably the largest British colony 
+in the surrounding area and had the power to help enact agreements to confederate the British colonies. 
+This would be done in an attempt to provide stability to the colonies, which were experiencing frequent 
+government changes, to provide the basis for expansion into the West, and to create a unified country 
+in order to guard against attacks from the Americans to the south.[PARAGRAPH:1]To prevent the frequent 
+changes of government in the Province of Canada, George Brown, the leader of the Reformers (the forerunners 
+to the Liberal Party of Canada) and an extremely vocal opponent of Macdonald's Conservatives, joined 
+with Macdonald in 1864 to form the "Great Coalition." This was an important step towards Confederation. 
+Macdonald then spent 1864 to 1867 organizing the legislation needed to confederate the colonies into 
+the country of Canada. In September 1864, he led the Canadian delegation at the Charlottetown Conference 
+in Charlottetown,Prince Edward Island, to present his idea to the Maritime colonies, who were discussing 
+a union of their own. In October 1864 delegates for confederation met in Quebec City, Quebec for the 
+Quebec Conference where the Seventy-Two Resolutions were created -- the plan for confederation. By 1866, 
+New Brunswick, Nova Scotia, and the Province of Canada had agreed to confederation. Newfoundland and 
+Prince Edward Island were opposed. In the final conference of confederation held in 1866 in London, England 
+the agreement to confederate was completed.[PARAGRAPH:1] As Prime Minister, Macdonald's vision was to 
+enlarge the country and unify it. Accordingly, under his rule Canada bought Rupert's Land and the North-Western 
+Territory from the Hudson's Bay Company for £300,000 (about $11,500,000). This land became the Northwest 
+Territories. In 1870 Parliament passed the Manitoba Act, creating the province of Manitoba out of a portion 
+of the Northwest Territories in response to the Red River Rebellion led by Louis Riel.[PARAGRAPH:1] His 
+career spanned 19 years, making Sir John A. Macdonald the second longest serving Prime Minister of Canada. 
+He died while still Prime Minister, winning praise for having helped forge a nation of sprawling geographic 
+size, with two diverse European colonial origins, and a multiplicity of cultural backgrounds and political 
+views. Grieving Canadians turned out in the thousands to pay their respects while he lay in state in 
+the Parliament Buildings in Ottawa and they lined the tracks to watch the train that returned his body 
+to Kingston, Ontario where he was buried in the Cataraqui Cemetery.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_MACDONALD_1</Tag>
+		<English>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. We offer you the friendship of the glorious nation of [OUR_CIV_SHORT]!</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_PEARSON</Tag>
+		<English>Pearson</English>
+		<French>
+			<Text>Pearson</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Pearson</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Pearson</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Pearson</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_PEARSON_PEDIA</Tag>
+		<English>[H1]Lester B. Pearson[\H1][NEWLINE][BOLD]Prime Minister of Canada[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1897 - 1972[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]The Right Honourable Lester 
+Bowles "Mike" Pearson was a Canadian statesman, diplomat and politician who was made a Nobel Laureate 
+in 1957 and served as the fourteenth Prime Minister of Canada from April 22, 1963, to April 20, 1968.[PARAGRAPH:1]During 
+his time as Prime Minister, Pearson's minority government introduced universal health care, student loans, 
+bilingualism, the Canada Pension Plan, and Canada's flag. Combined with his groundbreaking work at the 
+United Nations, and in international diplomacy, Pearson can safely be regarded as one of the most influential 
+Canadians of the twentieth century.[PARAGRAPH:1]After teaching university, he embarked on a career in 
+the Department of External Affairs. He had a distinguished career as a diplomat, including playing an 
+important part in founding both the United Nations and NATO. During World War II, he once served as a 
+courier with the codename "Mike". He was appointed Secretary of State for External Affairs in the government 
+of Liberal Prime Minister Louis St. Laurent in 1948. Pearson won a seat in the Canadian House of Commons, 
+for the federal riding of Algoma East shortly afterward. In 1957, he was awarded the Nobel Peace Prize 
+for his role in defusing the Suez Crisis through the United Nations. The selection committee claimed 
+that Pearson had "saved the world". The United Nations Peacekeeping Force was Pearson's creation, and 
+he is considered the father of the modern concept of peacekeeping.[PARAGRAPH:1]Pearson led the Liberals 
+to a minority government in the 1963 general election, and became prime minister. He had campaigned during 
+the election promising "60 Days of Decision" and support for the Bomarc missile program.[PARAGRAPH:1]Pearson 
+never had a majority in the Canadian House of Commons, but he introduced important social programs (including 
+universal health care, the Canada Pension Plan, and Canada Student Loans), and the Maple Leaf Flag. Pearson's 
+government instituted much of the modern welfare state in Canada, due in part to support for his minority 
+government in the House of Commons from the New Democratic Party, led by Tommy Douglas. His actions included 
+instituting the 40-hour work week, 2 weeks vacation time, and a new minimum wage.[PARAGRAPH:1]It should 
+be noted that such policies did not prevent a strong economy. Pearson signed the Canada-United States 
+Automotive Agreement (or Auto Pact) in January of 1965, and unemployment fell to its lowest rate in over 
+a decade.[PARAGRAPH:1]Pearson also started a number of Royal Commissions, including one on the status 
+of women and another on bilingualism. They instituted changes that helped create legal equality for women, 
+and brought official bilingualism into being. After Pearson, French was made an official language, and 
+the Canadian government would provide services in both. Pearson himself had hoped that he would be the 
+last unilingual Prime Minister of Canada, and indeed fluency in both English and French became an unofficial 
+requirement for Prime Ministeral candidates after Pearson left office.[PARAGRAPH:1]Pearson was also remarkable 
+for instituting the world's first race-free immigration system, throwing out previous ones that had discriminated 
+against certain people, such as Jews and the Chinese. His points-based system encouraged immigration 
+to Canada, and a similar system is still in place today. Pearson also oversaw Canada's centennial celebrations 
+in 1967 before retiring. The Canadian news agency, Canadian Press, named him "Newsmaker of the Year" 
+that year, citing his leadership during the centennial celebrations, which brought the Centennial Flame 
+on Parliament Hill.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_PEARSON_1</Tag>
+		<English>It has too often been too easy for rulers and governments to incite man to war, [CT_NAME]. Let us direct the [CT_CIV_ADJ] and [OUR_CIV_ADJ]  people toward a life of peace together.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_TRUDEAU</Tag>
+		<English>Trudeau</English>
+		<French>
+			<Text>Trudeau</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Trudeau</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Trudeau</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Trudeau</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_TRUDEAU_PEDIA</Tag>
+		<English>[H1]Pierre Elliot Trudeau [\H1][NEWLINE][BOLD]Prime Minister of Canada[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1919 - 2000[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Trudeau was a charismatic 
+figure who dominated the Canadian political scene, arousing passionate reactions. "He haunts us still," 
+one biography begins. Admirers praise the force of Trudeau's intellect. They salute his political acumen 
+in preserving national unity and bringing into force the Charter of Rights and Freedoms. Detractors fault 
+Trudeau for arrogance, deplore economic policies that increased the national debt, and criticize him 
+for increasing a sense of political alienation in western provinces. Nevertheless, few would dispute 
+the assertion that Trudeau was a towering figure who helped redefine Canada.[PARAGRAPH:1]Trudeau led 
+Canada through some of its most tumultuous times and was often the centre of controversy. Known for his 
+flamboyance, he sometimes wore sandals in the House of Commons; dated celebrities; occasionally used 
+obscenities to insult his opponents and on May 7, 1977, did a pirouette behind the back of Queen Elizabeth 
+II. He was also known as an author, political activist, and professor from early in his adult life. As 
+prime minister, he patriated the Canadian Constitution from the British Parliament to Canada and incorporated 
+in it the Charter of Rights and Freedoms.[PARAGRAPH:1]Born in Montreal, Trudeau earned a law degree at 
+the Universite de Montreal in 1943, followed by a master's in political economy at Harvard. During his 
+attendance at the Universite de Montreal,Trudeau was conscripted into the army, and joined the Canadian 
+Officers Training Corps under the wartime National Resources Mobilization Act of 1940. Trudeau served 
+with other conscripts in the home guard, since it was only later, starting in 1944, that limited numbers 
+of conscripts were sent overseas, with the vast majority of those sent overseas being volunteers. He 
+said he was willing to become involved in the war, but he believed that to do so would be to turn his 
+back on a Quebec population he considered to have been betrayed by the Mackenzie King government. In 
+a 1942 Outremont by-election, he campaigned for the Quebec anti-conscription candidate Jean Drapeau (see 
+Conscription Crisis of 1944), and was eventually expelled from the Officers' Training Corps for lack 
+of discipline. After the war, he attended the Institut d'etudes politiques de Paris in Paris in 1946-47, 
+and spent the following year at the London School of Economics.[PARAGRAPH:1]As prime minister, Trudeau 
+espoused participatory democracy as a means of making Canada a "Just Society". His desire for greater 
+citizen involvement in government appears to have been frustrated by lack of support within his party, 
+and he later opposed greater involvement for citizens in representative democracy. He vigorously defended 
+the newly implemented universal health care and regional development programs as means of making society 
+more just. In foreign affairs, Trudeau was not always in line with the Americans. He made Canada the 
+first western power to establish diplomatic relations with the People's Republic of China, and went on 
+a state visit to Beijing. He was known to be a friend of Fidel Castro.[PARAGRAPH:1]In retirement, Trudeau 
+rarely gave speeches or spoke to the press. However, his interventions into public debate had a significant 
+impact when they occurred. Trudeau wrote and spoke out against both the Meech Lake Accord and Charlottetown 
+Accord proposals to amend the Canadian constitution, arguing that they would weaken federalism and the 
+Charter of Rights if implemented. His opposition was a critical factor leading to the defeat of the two 
+proposals. He also spoke out against Jacques Parizeau and the Parti Quebecois with less effect. In his 
+final years, Trudeau commanded respect in English Canada, but was regarded with suspicion in Quebec due 
+to his role in the 1982 constitutional deal which was seen to have excluded the province. Trudeau also 
+remained active in international affairs, visiting foreign leaders and participating in international 
+associations such as the Club of Rome.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_TRUDEAU_1</Tag>
+		<English>Good day and bonjour, to you [CT_NAME]. The [OUR_CIV_ADJ] people wish for peace, but insist that masters in our own house we must be.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_CANADA_ADJECTIVE</Tag>
+		<English>Canadian</English>
+		<French>
+			<Text>Canadien</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>
+			<Text>Canadian</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Canadese</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Canadese</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_OTTAWA</Tag>
+		<English>Ottawa</English>
+		<French>
+			<Text>Ottawa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ottawa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ottawa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ottawa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TORONTO</Tag>
+		<English>Toronto</English>
+		<French>
+			<Text>Toronto</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Toronto</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Toronto</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Toronto</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MONTREAL</Tag>
+		<English>Montreal</English>
+		<French>
+			<Text>Montreal</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Montreal</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Montreal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Montreal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VANCOUVER</Tag>
+		<English>Vancouver</English>
+		<French>
+			<Text>Vancouver</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Vancouver</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Vancouver</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Vancouver</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CALGARY</Tag>
+		<English>Calgary</English>
+		<French>
+			<Text>Calgary</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Calgary</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Calgary</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Calgary</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_EDMONTON</Tag>
+		<English>Edmonton</English>
+		<French>
+			<Text>Edmonton</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Edmonton</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Edmonton</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Edmonton</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_QUEBEC</Tag>
+		<English>Quebec</English>
+		<French>
+			<Text>Quebec</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Quebec</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Quebec</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Quebec</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_WINNIPEG</Tag>
+		<English>Winnipeg</English>
+		<French>
+			<Text>Winnipeg</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Winnipeg</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Winnipeg</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Winnipeg</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_HALIFAX</Tag>
+		<English>Halifax</English>
+		<French>
+			<Text>Halifax</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Halifax</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Halifax</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Halifax</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VICTORIA</Tag>
+		<English>Victoria</English>
+		<French>
+			<Text>Victoria</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Victoria</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Victoria</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Victoria</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_REGINA</Tag>
+		<English>Regina</English>
+		<French>
+			<Text>Regina</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Regina</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Regina</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Regina</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_HAMILTON</Tag>
+		<English>Hamilton</English>
+		<French>
+			<Text>Hamilton</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Hamilton</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Hamilton</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Hamilton</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ST_JOHNS</Tag>
+		<English>St. John's</English>
+		<French>
+			<Text>St. John's</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>St. John's</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>St. John's</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>St. John's</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SASKATOON</Tag>
+		<English>Saskatoon</English>
+		<French>
+			<Text>Saskatoon</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Saskatoon</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Saskatoon</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Saskatoon</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MISSISSAUGA</Tag>
+		<English>Mississauga</English>
+		<French>
+			<Text>Mississauga</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mississauga</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Mississauga</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mississauga</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LONDON_MIDDLESEX</Tag>
+		<English>London</English>
+		<French>
+			<Text>London</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>London</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>London</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>London</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_FREDRICTON</Tag>
+		<English>Fredericton</English>
+		<French>
+			<Text>Fredericton</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Fredericton</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Fredericton</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Fredericton</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_WINDSOR</Tag>
+		<English>Windsor</English>
+		<French>
+			<Text>Windsor</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Windsor</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Windsor</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Windsor</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LAVAL</Tag>
+		<English>Laval</English>
+		<French>
+			<Text>Laval</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Laval</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Laval</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Laval</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KITCHENER</Tag>
+		<English>Kitchener</English>
+		<French>
+			<Text>Kitchener</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kitchener</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kitchener</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kitchener</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CHARLOTTETOWN</Tag>
+		<English>Charlottetown</English>
+		<French>
+			<Text>Charlottetown</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Charlottetown</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Charlottetown</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Charlottetown</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ST_CATHERINES</Tag>
+		<English>St. Catherines</English>
+		<French>
+			<Text>St. Catherines</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>St. Catherines</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>St. Catherines</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>St. Catherines</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SHERBROOKE</Tag>
+		<English>Sherbrooke</English>
+		<French>
+			<Text>Sherbrooke</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sherbrooke</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sherbrooke</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sherbrooke</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAINT_JOHN</Tag>
+		<English>Saint John</English>
+		<French>
+			<Text>Saint John</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Saint John</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Saint John</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Saint John</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_OSHAWA</Tag>
+		<English>Oshawa</English>
+		<French>
+			<Text>Oshawa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Oshawa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Oshawa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Oshawa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KELOWNA</Tag>
+		<English>Kelowna</English>
+		<French>
+			<Text>Kelowna</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kelowna</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kelowna</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kelowna</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SUDBURY</Tag>
+		<English>Sudbury</English>
+		<French>
+			<Text>Sudbury</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sudbury</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sudbury</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sudbury</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MONCTON</Tag>
+		<English>Moncton</English>
+		<French>
+			<Text>Moncton</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Moncton</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Moncton</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Moncton</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KINGSTON</Tag>
+		<English>Kingston</English>
+		<French>
+			<Text>Kingston</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kingston</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kingston</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kingston</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TROIS_RIVIERES</Tag>
+		<English>Trois-Rivieres</English>
+		<French>
+			<Text>Trois-Rivieres</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Trois-Rivieres</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Trois-Rivieres</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Trois-Rivieres</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CAPE_BRETON</Tag>
+		<English>Cape Breton</English>
+		<French>
+			<Text>Cape Breton</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Cape Breton</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Cape Breton</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Cape Breton</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAULT_STE_MARIE</Tag>
+		<English>Sault Ste. Marie</English>
+		<French>
+			<Text>Sault Ste-Marie</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sault Ste. Marie</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sault Ste. Marie</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sault Ste. Marie</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAGUENAY</Tag>
+		<English>Saguenay</English>
+		<French>
+			<Text>Saguenay</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Saguenay</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Saguenay</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Saguenay</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BRANDON</Tag>
+		<English>Brandon</English>
+		<French>
+			<Text>Brandon</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Brandon</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Brandon</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Brandon</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_RED_DEER</Tag>
+		<English>Red Deer</English>
+		<French>
+			<Text>Red Deer</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Red Deer</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Red Deer</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Red Deer</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_THUNDER_BAY</Tag>
+		<English>Thunder Bay</English>
+		<French>
+			<Text>Thunder Bay</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Thunder Bay</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Thunder Bay</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Thunder Bay</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_RICHMOND</Tag>
+		<English>Richmond</English>
+		<French>
+			<Text>Richmond</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Richmond</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Richmond</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Richmond</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_WHITEHORSE</Tag>
+		<English>Whitehorse</English>
+		<French>
+			<Text>Whitehorse</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Whitehorse</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Whitehorse</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Whitehorse</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_YELLOWKNIFE</Tag>
+		<English>Yellowknife</English>
+		<French>
+			<Text>Yellowknife</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Yellowknife</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Yellowknife</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Yellowknife</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_IQALUIT</Tag>
+		<English>Iqaluit</English>
+		<French>
+			<Text>Iqaluit</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Iqaluit</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Iqaluit</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Iqaluit</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BARRIE</Tag>
+		<English>Barrie</English>
+		<French>
+			<Text>Barrie</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Barrie</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Barrie</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Barrie</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ABBOTSFORD</Tag>
+		<English>Abbotsford</English>
+		<French>
+			<Text>Abbotsford</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Abbotsford</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Abbotsford</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Abbotsford</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GUELPH</Tag>
+		<English>Guelph</English>
+		<French>
+			<Text>Guelph</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Guelph</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Guelph</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Guelph</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CHATHAM</Tag>
+		<English>Chatham</English>
+		<French>
+			<Text>Chatham</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Chatham</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Chatham</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Chatham</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PETERBOROUGH</Tag>
+		<English>Peterborough</English>
+		<French>
+			<Text>Peterborough</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Peterborough</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Peterborough</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Peterborough</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SARNIA</Tag>
+		<English>Sarnia</English>
+		<French>
+			<Text>Sarnia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sarnia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sarnia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sarnia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BRAMPTON</Tag>
+		<English>Brampton</English>
+		<French>
+			<Text>Brampton</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Brampton</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Brampton</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Brampton</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KAMLOOPS</Tag>
+		<English>Kamloops</English>
+		<French>
+			<Text>Kamloops</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kamloops</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kamloops</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kamloops</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BRANTFORD</Tag>
+		<English>Brantford</English>
+		<French>
+			<Text>Brantford</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Brantford</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Brantford</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Brantford</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NANAIMO</Tag>
+		<English>Nanaimo</English>
+		<French>
+			<Text>Nanaimo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Nanaimo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Nanaimo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Nanaimo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BELLEVILLE</Tag>
+		<English>Belleville</English>
+		<French>
+			<Text>Belleville</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Belleville</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Belleville</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Belleville</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PRINCE_GEORGE</Tag>
+		<English>Prince George</English>
+		<French>
+			<Text>Prince George</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Prince George</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Prince George</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Prince George</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GANDER</Tag>
+		<English>Gander</English>
+		<French>
+			<Text>Gander</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Gander</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Gander</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Gander</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DRUMMONDVILLE</Tag>
+		<English>Drummondville</English>
+		<French>
+			<Text>Drummondville</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Drummondville</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Drummondville</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Drummondville</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KAWARTHAS</Tag>
+		<English>Kawarthas</English>
+		<French>
+			<Text>Kawarthas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kawarthas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kawarthas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kawarthas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LETHBRIDGE</Tag>
+		<English>Lethbridge</English>
+		<French>
+			<Text>Lethbridge</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Lethbridge</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Lethbridge</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Lethbridge</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PRINCE_ALBERT</Tag>
+		<English>Prince Albert</English>
+		<French>
+			<Text>Prince Albert</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Prince Albert</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Prince Albert</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Prince Albert</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NORTH_BAY</Tag>
+		<English>North Bay</English>
+		<French>
+			<Text>North Bay</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>North Bay</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>North Bay</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>North Bay</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MEDICINE_HAT</Tag>
+		<English>Medicine Hat</English>
+		<French>
+			<Text>Medicine Hat</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Medicine Hat</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Medicine Hat</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Medicine Hat</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_FORT_SMITH</Tag>
+		<English>Fort Smith</English>
+		<French>
+			<Text>Fort Smith</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Fort Smith</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Fort Smith</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Fort Smith</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MOOSE_JAW</Tag>
+		<English>Moose Jaw</English>
+		<French>
+			<Text>Moose Jaw</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Moose Jaw</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Moose Jaw</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Moose Jaw</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LLOYDMINSTER</Tag>
+		<English>Lloydminster</English>
+		<French>
+			<Text>Lloydminster</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Lloydminster</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Lloydminster</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Lloydminster</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_HAVILAND_BAY</Tag>
+		<English>Haviland Bay</English>
+		<French>
+			<Text>Haviland Bay</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Haviland Bay</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Haviland Bay</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Haviland Bay</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BATTLEFORDS</Tag>
+		<English>The Battlefords</English>
+		<French>
+			<Text>The Battlefords</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>The Battlefords</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>The Battlefords</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>The Battlefords</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+</Civ4GameText>

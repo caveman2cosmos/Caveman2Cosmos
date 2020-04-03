@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- ReModified by the StrategyOnly -->
+<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_COMANCHE</Tag>
+		<English>Comanche</English>
+		<French>Comanche</French>
+		<German>Comanche</German>
+		<Italian>Comanche</Italian>
+		<Spanish>Comanche</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_COMANCHE_DESC</Tag>
+		<English>Comanche</English>
+		<French>Comanche</French>
+		<German>Comanche</German>
+		<Italian>Comanche</Italian>
+		<Spanish>Comanche</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_COMANCHE_SHORT_DESC</Tag>
+		<English>Comanche</English>
+		<French>Comanche</French>
+		<German>Comanche</German>
+		<Italian>Comanche</Italian>
+		<Spanish>Comanche</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_COMANCHE_ADJECTIVE</Tag>
+		<English>Comanche</English>
+		<French>Comanche</French>
+		<German>Comanche</German>
+		<Italian>Comanche</Italian>
+		<Spanish>Comanche</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_COMANCHE_PEDIA</Tag>
+		<English>[TAB]The Comanche's are a Plains Indian tribe whose historic territory, known as Comancheria, consisted of present day eastern New Mexico, southeastern Colorado, southwestern Kansas, western Oklahoma, and most of northwest Texas. The Comanche people are federally recognized as the Comanche Nation, headquartered in Lawton, Oklahoma.[PARAGRAPH:2]Post-contact, the Comanches were hunter-gatherers with a horse culture. There may have been as many as 45,000 Comanches in the late 18th century. They were the dominant tribe on the Southern Plains and often took captives from weaker tribes during warfare, selling them as slaves to the Spanish and later Mexican settlers.
+Today, the Comanche Nation has 15,191 members, with approximately 7,763 members residing in tribal jurisdictional area around the Lawton, Fort Sill, and surrounding areas of southwest Oklahoma.
+The Comanche language is a Numic language of the Uto-Aztecan family, sometimes classified as a Shoshone dialect. About 1% of Comanches speak their language today.</English>
+		<French>[TAB]The Comanche's are a Plains Indian tribe whose historic territory, known as Comancheria, consisted of present day eastern New Mexico, southeastern Colorado, southwestern Kansas, western Oklahoma, and most of northwest Texas. The Comanche people are federally recognized as the Comanche Nation, headquartered in Lawton, Oklahoma.[PARAGRAPH:2]Post-contact, the Comanches were hunter-gatherers with a horse culture. There may have been as many as 45,000 Comanches in the late 18th century. They were the dominant tribe on the Southern Plains and often took captives from weaker tribes during warfare, selling them as slaves to the Spanish and later Mexican settlers.
+Today, the Comanche Nation has 15,191 members, with approximately 7,763 members residing in tribal jurisdictional area around the Lawton, Fort Sill, and surrounding areas of southwest Oklahoma.
+The Comanche language is a Numic language of the Uto-Aztecan family, sometimes classified as a Shoshone dialect. About 1% of Comanches speak their language today.</French>
+		<German>[TAB]The Comanche's are a Plains Indian tribe whose historic territory, known as Comancheria, consisted of present day eastern New Mexico, southeastern Colorado, southwestern Kansas, western Oklahoma, and most of northwest Texas. The Comanche people are federally recognized as the Comanche Nation, headquartered in Lawton, Oklahoma.[PARAGRAPH:2]Post-contact, the Comanches were hunter-gatherers with a horse culture. There may have been as many as 45,000 Comanches in the late 18th century. They were the dominant tribe on the Southern Plains and often took captives from weaker tribes during warfare, selling them as slaves to the Spanish and later Mexican settlers.
+Today, the Comanche Nation has 15,191 members, with approximately 7,763 members residing in tribal jurisdictional area around the Lawton, Fort Sill, and surrounding areas of southwest Oklahoma.
+The Comanche language is a Numic language of the Uto-Aztecan family, sometimes classified as a Shoshone dialect. About 1% of Comanches speak their language today.</German>
+		<Italian>[TAB]The Comanche's are a Plains Indian tribe whose historic territory, known as Comancheria, consisted of present day eastern New Mexico, southeastern Colorado, southwestern Kansas, western Oklahoma, and most of northwest Texas. The Comanche people are federally recognized as the Comanche Nation, headquartered in Lawton, Oklahoma.[PARAGRAPH:2]Post-contact, the Comanches were hunter-gatherers with a horse culture. There may have been as many as 45,000 Comanches in the late 18th century. They were the dominant tribe on the Southern Plains and often took captives from weaker tribes during warfare, selling them as slaves to the Spanish and later Mexican settlers.
+Today, the Comanche Nation has 15,191 members, with approximately 7,763 members residing in tribal jurisdictional area around the Lawton, Fort Sill, and surrounding areas of southwest Oklahoma.
+The Comanche language is a Numic language of the Uto-Aztecan family, sometimes classified as a Shoshone dialect. About 1% of Comanches speak their language today.</Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_NOCONA</Tag>
+		<English>Peta Nocona</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_NOCONA_PEDIA</Tag>
+		<English>Peta Nocona was chief of the Comanche band Noconi who lived between 1820 to 1864?ish.  He led his tribe during the extensive Indian Wars in Texas from the 1830s to 1860. He was the son of the Comanche chief Iron Jacket and father of chief Quanah Parker. His band Noconis, or Wanderers, or travellers were named after him. Nocona, Texas is named after the Noconi leader.  
+While Peta Nocona's death is a matter of dispute, the destruction of his band, the Noconis is not. In early 1860 Peta Nocona led the Comanches in a raid through Parker County, Texas, which ironically was named in honor of his wife's family. After the raid he returned with his band to what he believed was a safe retreat under the sandstone bluffs of Pease River near where Mule Creek flowed into the stream. The site was long a favorite of the Comanche, providing both cover from the fierce blue northers that hit the plains, and ample forage for their ponies, with buffalo hunting easy from the nearby herds. But the raids of the Comanche had brought pressure in Austin to protect the settlers, and Texas Governor Sam Houston had commissioned Ranger Captain Lawrence Sullivan Ross to organize a company of 40 Rangers and 20 militia to put a stop to the Indian raids. The company of 60 was based at Fort Belknap, in Parker County.
+
+Despite Sul Ross's claim that Nocona was killed at Pease River, his son insisted he was not present, and died several years later. This claim is supported by Texas historian John Henry Brown. Brown had already disputed the identity of the person killed at Mule Creek, before Quanah came onto the reservation, stating he was told the name of the man killed at Pease River was Mo-he-ew, not Peta Nocona. Quanah then wrote an affidavit disputing his father's death: "while I was too young to remember the chief it is likely that Brown was correct".</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_NOCONA_1</Tag>
+		<English>Hello. I am [OUR_NAME], chief and protector of the [OUR_CIV_ADJ] people. I consider you a friend. It is in your best interest that I never change that opinion.</English>
+		<French>Bonjour. Je suis [OUR_NAME], chef et protecteur des [OUR_CIV_ADJ:3]. Je vous considère comme mon ami. Il va de votre intérêt que je ne change jamais d'opinion.</French>
+		<German>Hallo. Ich bin [OUR_NAME], Oberhaupt und Beschützer des [OUR_CIV_ADJ:2] Volkes. Ich betrachte Euch als Freund. Ich hoffe für Euch, dass ich diese Meinung nie ändere.</German>
+		<Italian>Salve. Mi chiamo [OUR_NAME], capo e protettore del popolo [OUR_CIV_ADJ]. Ti considero un amico. È nel tuo migliore interesse che io non cambi mai idea.</Italian>
+		<Spanish>Hola. Soy [OUR_NAME], jefe y protector del pueblo [OUR_CIV_ADJ:1]. Os considero mis amigos. Y más os vale que nunca cambie de opinión.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_NOCONA_1</Tag>
+		<English>You want to talk? It is a little too late for that.</English>
+		<French>Vous voulez parler ? C'est un peu tard pour ça.</French>
+		<German>Ihr wollt reden? Dafür ist es etwas zu spät.</German>
+		<Italian>Vuoi parlare? È un po' troppo tardi per farlo.</Italian>
+		<Spanish>¿Ahora queréis hablar? Es un poco tarde para eso.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_NOCONA_1</Tag>
+		<English>Peace? Never!</English>
+		<French>La paix ? Jamais !</French>
+		<German>Frieden? Niemals!</German>
+		<Italian>Pace? Mai!</Italian>
+		<Spanish>¿Paz? ¡Jamás!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_NOCONA_1</Tag>
+		<English>It is good to hear from the [CT_EMPIRE]. To what do I owe this honor?</English>
+		<French>Quel plaisir d'avoir de vos nouvelles ! Que me vaut cet honneur ? </French>
+		<German>Es ist gut, etwas vom [CT_EMPIRE:3] zu hören. Womit haben wir diese Ehre verdient?</German>
+		<Italian>È bello avere notizie da [CT_EMPIRE]. A cosa debbo quest'onore?</Italian>
+		<Spanish>Es un placer oír al [CT_EMPIRE]. ¿A qué debo este honor?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_NOCONA_1</Tag>
+		<English>You have started down a path that will lead to your destruction. Feel free to try to explain yourself.</English>
+		<French>Vous vous êtes engagé sur la voie qui menera à votre destruction. J'attends vos explications.  </French>
+		<German>Ihr habt begonnen, einen Pfad zu beschreiten, der zu Eurer Vernichtung führen wird. Wollt Ihr Euch möglicherweise rechtfertigen?</German>
+		<Italian>Ti sei avviato lungo un cammino che porterà alla tua distruzione. Prova pure a cercare di spiegarti.</Italian>
+		<Spanish>Habéis hollado una senda que os llevará a la destrucción. Intentad explicaros como queráis.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_NOCONA_1</Tag>
+		<English>My people are in need, can the [CT_EMPIRE] help?</English>
+		<French>Ma personnes est dans le besoin, l'[CT_EMPIRE] peut-il nous aider ?</French>
+		<German>Mein Stamm ist in Not, kann uns das [CT_EMPIRE:2] helfen?</German>
+		<Italian>La mia tribù ha bisogno di aiuto, potete aiutarci?</Italian>
+		<Spanish>Mi puebla está necesitada. ¿Podrá ayudarnos el [CT_EMPIRE]?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_NOCONA_1</Tag>
+		<English>I come in peace to ask for assistance. What do you say?</English>
+		<French>Je suis venu en paix vous demander de l'aide. Qu'avez-vous à répondre ?</French>
+		<German>Ich komme in Frieden und bitte um Unterstützung. Wie lautet Eure Antwort?</German>
+		<Italian>Vengo in pace alla ricerca di aiuto. Cosa mi rispondi?</Italian>
+		<Spanish>Vengo en son de paz a pedir ayuda. ¿Qué me decís?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_NOCONA_1</Tag>
+		<English>I hold the fate of the [CT_EMPIRE] in my hand. Give me what I demand.</English>
+		<French>Je tiens le destin de l'[CT_EMPIRE] dans ma main. Donnez-moi ce que j'exige.</French>
+		<German>Ich halte das Schicksal vom [CT_EMPIRE:3] in meinen Händen. Gebt mir, was ich verlange.</German>
+		<Italian>Ho nelle mani il destino di [CT_EMPIRE]. Dammi ciò che chiedo.</Italian>
+		<Spanish>Tengo el destino del [CT_EMPIRE] en mis manos. Dadme lo que os exijo.</Spanish>
+	</TEXT>
+</Civ4GameText>

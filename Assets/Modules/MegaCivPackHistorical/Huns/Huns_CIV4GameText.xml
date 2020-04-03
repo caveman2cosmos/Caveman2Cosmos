@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_ATTILA</Tag>
+		<English>
+			<Text>Attila</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</English>
+		<French>
+			<Text>Attila</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Attila</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Attila</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Attila</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_ATTILA_PEDIA</Tag>
+		<English>[H1]Attila[\H1][NEWLINE][BOLD]Emperor of the Huns[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]c.406-453[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Attila, also known as Attila the Hun, was Emperor of the Huns from 434 until his death in 453. He was leader of the Hunnic Empire which stretched from Germany to the Ural River and from the River Danube to the Baltic Sea. During his rule, he was one of the most fearsome of the Western and Eastern Roman Empires' enemies: he invaded the Balkans twice and marched through Gaul (modern France) as far as Orleans before being defeated at the Battle of Chalons. He refrained from attacking either Constantinople or Rome. His story, that the Sword of Attila had come to his hand by miraculous means, was reported by the Roman Priscus.[PARAGRAPH:1]In much of Western Europe, he is remembered as the epitome of cruelty and rapacity. In contrast, some histories and chronicles describe him as a great and noble king, and he plays major roles in three Norse sagas.[PARAGRAPH:1]In 450 Attila had proclaimed his intent to attack the powerful Visigoth kingdom of Toulouse, making an alliance with Emperor Valentinian III in order to do so. He had previously been on good terms with the Western Roman Empire and its de facto ruler Flavius Aëtius. Aëtius had spent a brief exile among the Huns in 433, and the troops Attila provided against the Goths and Bagaudae had helped earn him the largely honorary title of magister militum in the west. The gifts and diplomatic efforts of Geiseric, who opposed and feared the Visigoths, may also have influenced Attila's plans.[PARAGRAPH:1]Attila returned in 452 to claim his marriage to Honoria anew, invading and ravaging Italy along the way. The city of Venice was founded as a result of these attacks when the residents fled to small islands in the Venetian Lagoon. His army sacked numerous cities and razed Aquileia completely, leaving no trace of it behind. Legend has it he built a castle on top of a hill north of Aquileia to watch the city burn, thus founding the town of Udine, where the castle can still be found. Aëtius, who lacked the strength to offer battle, managed to harass and slow Attila's advance with only a shadow force. Attila finally halted at the River Po. By this point disease may have broken out in Attila's camp, thus helping to stop his invasion.[PARAGRAPH:1]Attila's many children and relatives are known by name and some even by deeds, but soon valid genealogical sources all but dry up and there seems to be no verifiable way to trace Attila's descendants. This hasn't stopped many genealogists from attempting to reconstruct a valid line of descent for various medieval rulers. One of the most credible claims has been that of the khans of Bulgaria (see Nominalia of the Bulgarian khans). A popular, but ultimately unconfirmed attempt tries to relate Attila to Charlemagne.</English>
+		<French>[H1]Attila[\H1][NEWLINE][BOLD]Emperor of the Huns[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]c.406-453[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Attila, also known as Attila the Hun, was Emperor of the Huns from 434 until his death in 453. He was leader of the Hunnic Empire which stretched from Germany to the Ural River and from the River Danube to the Baltic Sea. During his rule, he was one of the most fearsome of the Western and Eastern Roman Empires' enemies: he invaded the Balkans twice and marched through Gaul (modern France) as far as Orleans before being defeated at the Battle of Chalons. He refrained from attacking either Constantinople or Rome. His story, that the Sword of Attila had come to his hand by miraculous means, was reported by the Roman Priscus.[PARAGRAPH:1]In much of Western Europe, he is remembered as the epitome of cruelty and rapacity. In contrast, some histories and chronicles describe him as a great and noble king, and he plays major roles in three Norse sagas.[PARAGRAPH:1]In 450 Attila had proclaimed his intent to attack the powerful Visigoth kingdom of Toulouse, making an alliance with Emperor Valentinian III in order to do so. He had previously been on good terms with the Western Roman Empire and its de facto ruler Flavius Aëtius. Aëtius had spent a brief exile among the Huns in 433, and the troops Attila provided against the Goths and Bagaudae had helped earn him the largely honorary title of magister militum in the west. The gifts and diplomatic efforts of Geiseric, who opposed and feared the Visigoths, may also have influenced Attila's plans.[PARAGRAPH:1]Attila returned in 452 to claim his marriage to Honoria anew, invading and ravaging Italy along the way. The city of Venice was founded as a result of these attacks when the residents fled to small islands in the Venetian Lagoon. His army sacked numerous cities and razed Aquileia completely, leaving no trace of it behind. Legend has it he built a castle on top of a hill north of Aquileia to watch the city burn, thus founding the town of Udine, where the castle can still be found. Aëtius, who lacked the strength to offer battle, managed to harass and slow Attila's advance with only a shadow force. Attila finally halted at the River Po. By this point disease may have broken out in Attila's camp, thus helping to stop his invasion.[PARAGRAPH:1]Attila's many children and relatives are known by name and some even by deeds, but soon valid genealogical sources all but dry up and there seems to be no verifiable way to trace Attila's descendants. This hasn't stopped many genealogists from attempting to reconstruct a valid line of descent for various medieval rulers. One of the most credible claims has been that of the khans of Bulgaria (see Nominalia of the Bulgarian khans). A popular, but ultimately unconfirmed attempt tries to relate Attila to Charlemagne.</French>
+		<German>[H1]Attila[\H1][NEWLINE][BOLD]Emperor of the Huns[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]c.406-453[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Attila, also known as Attila the Hun, was Emperor of the Huns from 434 until his death in 453. He was leader of the Hunnic Empire which stretched from Germany to the Ural River and from the River Danube to the Baltic Sea. During his rule, he was one of the most fearsome of the Western and Eastern Roman Empires' enemies: he invaded the Balkans twice and marched through Gaul (modern France) as far as Orleans before being defeated at the Battle of Chalons. He refrained from attacking either Constantinople or Rome. His story, that the Sword of Attila had come to his hand by miraculous means, was reported by the Roman Priscus.[PARAGRAPH:1]In much of Western Europe, he is remembered as the epitome of cruelty and rapacity. In contrast, some histories and chronicles describe him as a great and noble king, and he plays major roles in three Norse sagas.[PARAGRAPH:1]In 450 Attila had proclaimed his intent to attack the powerful Visigoth kingdom of Toulouse, making an alliance with Emperor Valentinian III in order to do so. He had previously been on good terms with the Western Roman Empire and its de facto ruler Flavius Aëtius. Aëtius had spent a brief exile among the Huns in 433, and the troops Attila provided against the Goths and Bagaudae had helped earn him the largely honorary title of magister militum in the west. The gifts and diplomatic efforts of Geiseric, who opposed and feared the Visigoths, may also have influenced Attila's plans.[PARAGRAPH:1]Attila returned in 452 to claim his marriage to Honoria anew, invading and ravaging Italy along the way. The city of Venice was founded as a result of these attacks when the residents fled to small islands in the Venetian Lagoon. His army sacked numerous cities and razed Aquileia completely, leaving no trace of it behind. Legend has it he built a castle on top of a hill north of Aquileia to watch the city burn, thus founding the town of Udine, where the castle can still be found. Aëtius, who lacked the strength to offer battle, managed to harass and slow Attila's advance with only a shadow force. Attila finally halted at the River Po. By this point disease may have broken out in Attila's camp, thus helping to stop his invasion.[PARAGRAPH:1]Attila's many children and relatives are known by name and some even by deeds, but soon valid genealogical sources all but dry up and there seems to be no verifiable way to trace Attila's descendants. This hasn't stopped many genealogists from attempting to reconstruct a valid line of descent for various medieval rulers. One of the most credible claims has been that of the khans of Bulgaria (see Nominalia of the Bulgarian khans). A popular, but ultimately unconfirmed attempt tries to relate Attila to Charlemagne.</German>
+		<Italian>[H1]Attila[\H1][NEWLINE][BOLD]Emperor of the Huns[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]c.406-453[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Attila, also known as Attila the Hun, was Emperor of the Huns from 434 until his death in 453. He was leader of the Hunnic Empire which stretched from Germany to the Ural River and from the River Danube to the Baltic Sea. During his rule, he was one of the most fearsome of the Western and Eastern Roman Empires' enemies: he invaded the Balkans twice and marched through Gaul (modern France) as far as Orleans before being defeated at the Battle of Chalons. He refrained from attacking either Constantinople or Rome. His story, that the Sword of Attila had come to his hand by miraculous means, was reported by the Roman Priscus.[PARAGRAPH:1]In much of Western Europe, he is remembered as the epitome of cruelty and rapacity. In contrast, some histories and chronicles describe him as a great and noble king, and he plays major roles in three Norse sagas.[PARAGRAPH:1]In 450 Attila had proclaimed his intent to attack the powerful Visigoth kingdom of Toulouse, making an alliance with Emperor Valentinian III in order to do so. He had previously been on good terms with the Western Roman Empire and its de facto ruler Flavius Aëtius. Aëtius had spent a brief exile among the Huns in 433, and the troops Attila provided against the Goths and Bagaudae had helped earn him the largely honorary title of magister militum in the west. The gifts and diplomatic efforts of Geiseric, who opposed and feared the Visigoths, may also have influenced Attila's plans.[PARAGRAPH:1]Attila returned in 452 to claim his marriage to Honoria anew, invading and ravaging Italy along the way. The city of Venice was founded as a result of these attacks when the residents fled to small islands in the Venetian Lagoon. His army sacked numerous cities and razed Aquileia completely, leaving no trace of it behind. Legend has it he built a castle on top of a hill north of Aquileia to watch the city burn, thus founding the town of Udine, where the castle can still be found. Aëtius, who lacked the strength to offer battle, managed to harass and slow Attila's advance with only a shadow force. Attila finally halted at the River Po. By this point disease may have broken out in Attila's camp, thus helping to stop his invasion.[PARAGRAPH:1]Attila's many children and relatives are known by name and some even by deeds, but soon valid genealogical sources all but dry up and there seems to be no verifiable way to trace Attila's descendants. This hasn't stopped many genealogists from attempting to reconstruct a valid line of descent for various medieval rulers. One of the most credible claims has been that of the khans of Bulgaria (see Nominalia of the Bulgarian khans). A popular, but ultimately unconfirmed attempt tries to relate Attila to Charlemagne.</Italian>
+		<Spanish>[H1]Attila[\H1][NEWLINE][BOLD]Emperor of the Huns[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]c.406-453[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Attila, also known as Attila the Hun, was Emperor of the Huns from 434 until his death in 453. He was leader of the Hunnic Empire which stretched from Germany to the Ural River and from the River Danube to the Baltic Sea. During his rule, he was one of the most fearsome of the Western and Eastern Roman Empires' enemies: he invaded the Balkans twice and marched through Gaul (modern France) as far as Orleans before being defeated at the Battle of Chalons. He refrained from attacking either Constantinople or Rome. His story, that the Sword of Attila had come to his hand by miraculous means, was reported by the Roman Priscus.[PARAGRAPH:1]In much of Western Europe, he is remembered as the epitome of cruelty and rapacity. In contrast, some histories and chronicles describe him as a great and noble king, and he plays major roles in three Norse sagas.[PARAGRAPH:1]In 450 Attila had proclaimed his intent to attack the powerful Visigoth kingdom of Toulouse, making an alliance with Emperor Valentinian III in order to do so. He had previously been on good terms with the Western Roman Empire and its de facto ruler Flavius Aëtius. Aëtius had spent a brief exile among the Huns in 433, and the troops Attila provided against the Goths and Bagaudae had helped earn him the largely honorary title of magister militum in the west. The gifts and diplomatic efforts of Geiseric, who opposed and feared the Visigoths, may also have influenced Attila's plans.[PARAGRAPH:1]Attila returned in 452 to claim his marriage to Honoria anew, invading and ravaging Italy along the way. The city of Venice was founded as a result of these attacks when the residents fled to small islands in the Venetian Lagoon. His army sacked numerous cities and razed Aquileia completely, leaving no trace of it behind. Legend has it he built a castle on top of a hill north of Aquileia to watch the city burn, thus founding the town of Udine, where the castle can still be found. Aëtius, who lacked the strength to offer battle, managed to harass and slow Attila's advance with only a shadow force. Attila finally halted at the River Po. By this point disease may have broken out in Attila's camp, thus helping to stop his invasion.[PARAGRAPH:1]Attila's many children and relatives are known by name and some even by deeds, but soon valid genealogical sources all but dry up and there seems to be no verifiable way to trace Attila's descendants. This hasn't stopped many genealogists from attempting to reconstruct a valid line of descent for various medieval rulers. One of the most credible claims has been that of the khans of Bulgaria (see Nominalia of the Bulgarian khans). A popular, but ultimately unconfirmed attempt tries to relate Attila to Charlemagne.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ATTILA_1</Tag>
+		<English>Greetings! The [OUR_CIV_SHORT] are pleased to leave you in peace. But keep in mind, [CT_NAME], that a hungry bear does not dance.</English>
+		<French>Greetings! The [OUR_CIV_SHORT] are pleased to leave you in peace. But keep in mind, [CT_NAME], that a hungry bear does not dance.</French>
+		<German>Greetings! The [OUR_CIV_SHORT] are pleased to leave you in peace. But keep in mind, [CT_NAME], that a hungry bear does not dance.</German>
+		<Italian>Greetings! The [OUR_CIV_SHORT] are pleased to leave you in peace. But keep in mind, [CT_NAME], that a hungry bear does not dance.</Italian>
+		<Spanish>Greetings! The [OUR_CIV_SHORT] are pleased to leave you in peace. But keep in mind, [CT_NAME], that a hungry bear does not dance.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SZEGED</Tag>
+		<English>Szeged</English>
+		<French>Szeged</French>
+		<German>Szeged</German>
+		<Italian>Szeged</Italian>
+		<Spanish>Szeged</Spanish>
+		<Hungarian>Szeged</Hungarian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GREAT_BULGAR</Tag>
+		<English>Great Bulgar</English>
+		<French>Grand Bulgar</French>
+		<German>Gross Bulgar</German>
+		<Italian>Great Bulgar</Italian>
+		<Spanish>Great Bulgar</Spanish>
+		<Hungarian>Nagy Bulgar</Hungarian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PLISKA</Tag>
+		<English>Pliska</English>
+		<French>Pliska</French>
+		<German>Pliska</German>
+		<Italian>Pliska</Italian>
+		<Spanish>Pliska</Spanish>
+		<Hungarian>Pliska</Hungarian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KUTMICHEVITSA</Tag>
+		<English>Kutmichevitsa</English>
+		<French>Kutmichevitsa</French>
+		<German>Kutmichevitsa</German>
+		<Italian>Kutmichevitsa</Italian>
+		<Spanish>Kutmichevitsa</Spanish>
+		<Hungarian>Kutmichevitsa</Hungarian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VELIKI_PRESLAV</Tag>
+		<English>Veliki Preslav</English>
+		<French>Veliki Preslav</French>
+		<German>Veliki Preslav</German>
+		<Italian>Veliki Preslav</Italian>
+		<Spanish>Veliki Preslav</Spanish>
+		<Hungarian>Veliki Preslav</Hungarian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MADARA</Tag>
+		<English>Madara</English>
+		<French>Madara</French>
+		<German>Madara</German>
+		<Italian>Madara</Italian>
+		<Spanish>Madara</Spanish>
+		<Hungarian>Madara</Hungarian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SOFIA</Tag>
+		<English>Sofia</English>
+		<French>Sofia</French>
+		<German>Sofia</German>
+		<Italian>Sofia</Italian>
+		<Spanish>Sofia</Spanish>
+		<Hungarian>Sofia</Hungarian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PLOVDIV</Tag>
+		<English>Plovdiv</English>
+		<French>Plovdiv</French>
+		<German>Plovdiv</German>
+		<Italian>Plovdiv</Italian>
+		<Spanish>Plovdiv</Spanish>
+		<Hungarian>Plovdiv</Hungarian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VARNA</Tag>
+		<English>Varna</English>
+		<French>Varna</French>
+		<German>Varna</German>
+		<Italian>Varna</Italian>
+		<Spanish>Varna</Spanish>
+		<Hungarian>Varna</Hungarian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_RUSE</Tag>
+		<English>Ruse</English>
+		<French>Ruse</French>
+		<German>Ruse</German>
+		<Italian>Ruse</Italian>
+		<Spanish>Ruse</Spanish>
+		<Hungarian>Ruse</Hungarian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_STARA_ZAGORA</Tag>
+		<English>Stara Zagora</English>
+		<French>Stara Zagora</French>
+		<German>Stara Zagora</German>
+		<Italian>Stara Zagora</Italian>
+		<Spanish>Stara Zagora</Spanish>
+		<Hungarian>Stara Zagora</Hungarian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PLEVEN</Tag>
+		<English>Pleven</English>
+		<French>Pleven</French>
+		<German>Pleven</German>
+		<Italian>Pleven</Italian>
+		<Spanish>Pleven</Spanish>
+		<Hungarian>Pleven</Hungarian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SLIVEN</Tag>
+		<English>Sliven</English>
+		<French>Sliven</French>
+		<German>Sliven</German>
+		<Italian>Sliven</Italian>
+		<Spanish>Sliven</Spanish>
+		<Hungarian>Sliven</Hungarian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DOBRICH</Tag>
+		<English>Dobrich</English>
+		<French>Dobrich</French>
+		<German>Dobrich</German>
+		<Italian>Dobrich</Italian>
+		<Spanish>Dobrich</Spanish>
+		<Hungarian>Dobrich</Hungarian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BOURGAS</Tag>
+		<English>Bourgas</English>
+		<French>Bourgas</French>
+		<German>Bourgas</German>
+		<Italian>Bourgas</Italian>
+		<Spanish>Bourgas</Spanish>
+		<Hungarian>Bourgas</Hungarian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SHUMEN</Tag>
+		<English>Shumen</English>
+		<French>Shumen</French>
+		<German>Shumen</German>
+		<Italian>Shumen</Italian>
+		<Spanish>Shumen</Spanish>
+		<Hungarian>Shumen</Hungarian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VRACA</Tag>
+		<English>Vraca</English>
+		<French>Vraca</French>
+		<German>Vraca</German>
+		<Italian>Vraca</Italian>
+		<Spanish>Vraca</Spanish>
+		<Hungarian>Vraca</Hungarian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VIDIN</Tag>
+		<English>Vidin</English>
+		<French>Vidin</French>
+		<German>Vidin</German>
+		<Italian>Vidin</Italian>
+		<Spanish>Vidin</Spanish>
+		<Hungarian>Zalaegerszeg</Hungarian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KAZANLAK</Tag>
+		<English>Kazanlak</English>
+		<French>Kazanlak</French>
+		<German>Kazanlak</German>
+		<Italian>Kazanlak</Italian>
+		<Spanish>Kazanlak</Spanish>
+		<Hungarian>Kazanlak</Hungarian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GABROVO</Tag>
+		<English>Gabrovo</English>
+		<French>Gabrovo</French>
+		<German>Gabrovo</German>
+		<Italian>Gabrovo</Italian>
+		<Spanish>Gabrovo</Spanish>
+		<Hungarian>Gabrovo</Hungarian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VELIKO_TARNOVO</Tag>
+		<English>Veliko Tarnovo</English>
+		<French>Veliko Tarnovo</French>
+		<German>Veliko Tarnovo</German>
+		<Italian>Veliko Tarnovo</Italian>
+		<Spanish>Veliko Tarnovo</Spanish>
+		<Hungarian>Veliko Tarnovo</Hungarian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HUNS_PEDIA</Tag>
+		<English>[TAB]The Hunnic Empire stretched from the steppes of Central Asia into modern Germany, and from the Black Sea to the Baltic Sea.[PARAGRAPH:2]The Huns were an early confederation of Central Asian equestrian nomads or semi-nomads, with a Turkic core of aristocracy. Some of these Eurasian tribes moved into Europe in the 4th and 5th centuries, most famously under Attila the Hun. Huns remaining in Asia are recorded by neighboring peoples to the south, east, and west as having occupied Central Asia roughly from the 4th century to the 6th century, with some surviving in the Caucasus until the early 8th century.[PARAGRAPH:2]Modern genetic and ethnogenesis scholarship contrasts with traditional theories based on Chinese records, archaeology, linguistics and other indirect evidence. These older theories contain various elements: that the name "Hun" first described a nomadic ruling group of warriors whose ethnic origins were in Central Asia, and was most likely in present day Mongolia; that possibly they were related to, or part of, the Xiongnu; that the Xiongnu were defeated by the Chinese Han Empire; and that this is why they left Mongolia and moved west, eventually invading Europe 200 years later. Indirect evidence includes the transmission of grip laths for composite bows from Central Asia to the west. This narrative is ingrained in western (and eastern) historiography, but the evidence is often indirect or ambiguous. The Huns left practically no written records. There is no record of what happened between the time they left China and arrived in Europe 150 years later. The last mention of the northern Xiongnu was their defeat by the Chinese in 151 at the lake of Barkol, after which they fled to the western steppe at Kangju, Chinese records between the 3rd and 4th century suggest that a small tribe called Yueban, remnants of northern Xiongnu, was distributed about the steppe of Kazakhstan. One recent line of reasoning favors a political and cultural link between the Huns and the Xiongnu. The Central Asian sources of the 4th century translate "Huns" as "Xiongnu", and "Xiongnu" as "Huns"; also, Xiongnu and Hunnic cauldrons are virtually identical, and were buried on the same spots (river banks) in Hungary and in the Ordos.[PARAGRAPH:2]There is a theory, the turkic theory, that claims that the Huns may be of Turkic (or pre-Proto-Turkic) origin. This school of thought emerged when Joseph de Guignes in the 18th century identified the Huns with the Xiongnu or (H)siung-nu. It is supported by O. Maenchen-Helfen on the basis of his linguistic studies. English scholar Peter Heather called the Huns "the first group of Turkic, as opposed to Iranian, nomads to have intruded into Europe". Turkish researcher Kemal Cemal bolsters this assertion by showing similarities in words and names in Turkic and Hunnic languages, and similarities in systems of governance of Hunnic and Turkic tribes. Hungarian historian Gyula Nemeth also supports this view. Uyghur historian Turghun Almas has suggested a link between the Huns and the Uyghurs, a Turkic speaking people who reside in Xinjiang, China.[PARAGRAPH:2]However, the Huns appeared in Europe in the 4th century, apparently from Central Asia. They first appeared north of the Black Sea, forcing a large number of Goths to seek refuge in the Roman Empire; later, the Huns appeared west of the Carpathians in Pannonia, probably sometime between 400 and 410, perhaps triggering the massive migration of Germanic tribes westward across the Rhine in December 406.[PARAGRAPH:2]The establishment of the 5th century Hunnic Empire marks a historically early instance of horseback migration. Under the leadership of Attila the Hun, the Huns achieved hegemony over several rivals by using the composite bow, their highly maneuverable hit-and-run tactics with their horsemanship, and a well-organized system of taxation. Supplementing their wealth by plundering wealthy Roman cities to the south, the Huns maintained the loyalties of a number of tributary tribes.[PARAGRAPH:2]Attila's Huns incorporated groups of unrelated tributary peoples. In Europe, Alans, Gepids, Scirii, Rugians, Sarmatians and Gothic tribes all united under the Hun by Ardaric's coalition at the Battle of Nedao in 454, at modern day Nedava.[PARAGRAPH:2]Many nations have tried to assert themselves as ethnic or cultural successors to the Huns. For instance, the Nominalia of the Bulgarian khans may indicate that they believed themselves to have been descended from Attila. The Bulgars certainly were part of the Hun tribal alliance for some time, and some have hypothesized that the Chuvash language (which is believed to have descended from the Bulgar language) is the closest surviving relative of the Hunnic language. The Magyars (Hungarians) also have laid claims to Hunnic heritage. Because the Huns who invaded Europe represented a loose coalition of various peoples, it is possible that Magyars were part of it. Until the early 20th century, many Hungarian historians believed that the Székely people were the descendants of the Huns. In 2005, a group of about 2,500 Hungarians petitioned the government for recognition of minority status as direct descendants of Attila. The bid failed, but gained some publicity for the group, which formed in the early 1990s and appears to represent a special Hun(garian)-centric brand of mysticism. The self-proclaimed Huns are not known to possess any distinctly Hunnic culture or language beyond what would be available from historical and modern-mystical Hungarian sources.[PARAGRAPH:2]While it is clear that the Huns left descendants all over Eastern Europe, the disintegration of the Hun Empire meant they never regained their lost glory. One reason was that the Huns never fully established the mechanisms of a state, such as bureaucracy and taxes, unlike the Magyars or Golden Horde. Once disorganized, the Huns were absorbed by more organized polities.</English>
+		<French>[TAB]The Hunnic Empire stretched from the steppes of Central Asia into modern Germany, and from the Black Sea to the Baltic Sea.[PARAGRAPH:2]The Huns were an early confederation of Central Asian equestrian nomads or semi-nomads, with a Turkic core of aristocracy. Some of these Eurasian tribes moved into Europe in the 4th and 5th centuries, most famously under Attila the Hun. Huns remaining in Asia are recorded by neighboring peoples to the south, east, and west as having occupied Central Asia roughly from the 4th century to the 6th century, with some surviving in the Caucasus until the early 8th century.[PARAGRAPH:2]Modern genetic and ethnogenesis scholarship contrasts with traditional theories based on Chinese records, archaeology, linguistics and other indirect evidence. These older theories contain various elements: that the name "Hun" first described a nomadic ruling group of warriors whose ethnic origins were in Central Asia, and was most likely in present day Mongolia; that possibly they were related to, or part of, the Xiongnu; that the Xiongnu were defeated by the Chinese Han Empire; and that this is why they left Mongolia and moved west, eventually invading Europe 200 years later. Indirect evidence includes the transmission of grip laths for composite bows from Central Asia to the west. This narrative is ingrained in western (and eastern) historiography, but the evidence is often indirect or ambiguous. The Huns left practically no written records. There is no record of what happened between the time they left China and arrived in Europe 150 years later. The last mention of the northern Xiongnu was their defeat by the Chinese in 151 at the lake of Barkol, after which they fled to the western steppe at Kangju, Chinese records between the 3rd and 4th century suggest that a small tribe called Yueban, remnants of northern Xiongnu, was distributed about the steppe of Kazakhstan. One recent line of reasoning favors a political and cultural link between the Huns and the Xiongnu. The Central Asian sources of the 4th century translate "Huns" as "Xiongnu", and "Xiongnu" as "Huns"; also, Xiongnu and Hunnic cauldrons are virtually identical, and were buried on the same spots (river banks) in Hungary and in the Ordos.[PARAGRAPH:2]There is a theory, the turkic theory, that claims that the Huns may be of Turkic (or pre-Proto-Turkic) origin. This school of thought emerged when Joseph de Guignes in the 18th century identified the Huns with the Xiongnu or (H)siung-nu. It is supported by O. Maenchen-Helfen on the basis of his linguistic studies. English scholar Peter Heather called the Huns "the first group of Turkic, as opposed to Iranian, nomads to have intruded into Europe". Turkish researcher Kemal Cemal bolsters this assertion by showing similarities in words and names in Turkic and Hunnic languages, and similarities in systems of governance of Hunnic and Turkic tribes. Hungarian historian Gyula Nemeth also supports this view. Uyghur historian Turghun Almas has suggested a link between the Huns and the Uyghurs, a Turkic speaking people who reside in Xinjiang, China.[PARAGRAPH:2]However, the Huns appeared in Europe in the 4th century, apparently from Central Asia. They first appeared north of the Black Sea, forcing a large number of Goths to seek refuge in the Roman Empire; later, the Huns appeared west of the Carpathians in Pannonia, probably sometime between 400 and 410, perhaps triggering the massive migration of Germanic tribes westward across the Rhine in December 406.[PARAGRAPH:2]The establishment of the 5th century Hunnic Empire marks a historically early instance of horseback migration. Under the leadership of Attila the Hun, the Huns achieved hegemony over several rivals by using the composite bow, their highly maneuverable hit-and-run tactics with their horsemanship, and a well-organized system of taxation. Supplementing their wealth by plundering wealthy Roman cities to the south, the Huns maintained the loyalties of a number of tributary tribes.[PARAGRAPH:2]Attila's Huns incorporated groups of unrelated tributary peoples. In Europe, Alans, Gepids, Scirii, Rugians, Sarmatians and Gothic tribes all united under the Hun by Ardaric's coalition at the Battle of Nedao in 454, at modern day Nedava.[PARAGRAPH:2]Many nations have tried to assert themselves as ethnic or cultural successors to the Huns. For instance, the Nominalia of the Bulgarian khans may indicate that they believed themselves to have been descended from Attila. The Bulgars certainly were part of the Hun tribal alliance for some time, and some have hypothesized that the Chuvash language (which is believed to have descended from the Bulgar language) is the closest surviving relative of the Hunnic language. The Magyars (Hungarians) also have laid claims to Hunnic heritage. Because the Huns who invaded Europe represented a loose coalition of various peoples, it is possible that Magyars were part of it. Until the early 20th century, many Hungarian historians believed that the Székely people were the descendants of the Huns. In 2005, a group of about 2,500 Hungarians petitioned the government for recognition of minority status as direct descendants of Attila. The bid failed, but gained some publicity for the group, which formed in the early 1990s and appears to represent a special Hun(garian)-centric brand of mysticism. The self-proclaimed Huns are not known to possess any distinctly Hunnic culture or language beyond what would be available from historical and modern-mystical Hungarian sources.[PARAGRAPH:2]While it is clear that the Huns left descendants all over Eastern Europe, the disintegration of the Hun Empire meant they never regained their lost glory. One reason was that the Huns never fully established the mechanisms of a state, such as bureaucracy and taxes, unlike the Magyars or Golden Horde. Once disorganized, the Huns were absorbed by more organized polities.</French>
+		<German>[TAB]The Hunnic Empire stretched from the steppes of Central Asia into modern Germany, and from the Black Sea to the Baltic Sea.[PARAGRAPH:2]The Huns were an early confederation of Central Asian equestrian nomads or semi-nomads, with a Turkic core of aristocracy. Some of these Eurasian tribes moved into Europe in the 4th and 5th centuries, most famously under Attila the Hun. Huns remaining in Asia are recorded by neighboring peoples to the south, east, and west as having occupied Central Asia roughly from the 4th century to the 6th century, with some surviving in the Caucasus until the early 8th century.[PARAGRAPH:2]Modern genetic and ethnogenesis scholarship contrasts with traditional theories based on Chinese records, archaeology, linguistics and other indirect evidence. These older theories contain various elements: that the name "Hun" first described a nomadic ruling group of warriors whose ethnic origins were in Central Asia, and was most likely in present day Mongolia; that possibly they were related to, or part of, the Xiongnu; that the Xiongnu were defeated by the Chinese Han Empire; and that this is why they left Mongolia and moved west, eventually invading Europe 200 years later. Indirect evidence includes the transmission of grip laths for composite bows from Central Asia to the west. This narrative is ingrained in western (and eastern) historiography, but the evidence is often indirect or ambiguous. The Huns left practically no written records. There is no record of what happened between the time they left China and arrived in Europe 150 years later. The last mention of the northern Xiongnu was their defeat by the Chinese in 151 at the lake of Barkol, after which they fled to the western steppe at Kangju, Chinese records between the 3rd and 4th century suggest that a small tribe called Yueban, remnants of northern Xiongnu, was distributed about the steppe of Kazakhstan. One recent line of reasoning favors a political and cultural link between the Huns and the Xiongnu. The Central Asian sources of the 4th century translate "Huns" as "Xiongnu", and "Xiongnu" as "Huns"; also, Xiongnu and Hunnic cauldrons are virtually identical, and were buried on the same spots (river banks) in Hungary and in the Ordos.[PARAGRAPH:2]There is a theory, the turkic theory, that claims that the Huns may be of Turkic (or pre-Proto-Turkic) origin. This school of thought emerged when Joseph de Guignes in the 18th century identified the Huns with the Xiongnu or (H)siung-nu. It is supported by O. Maenchen-Helfen on the basis of his linguistic studies. English scholar Peter Heather called the Huns "the first group of Turkic, as opposed to Iranian, nomads to have intruded into Europe". Turkish researcher Kemal Cemal bolsters this assertion by showing similarities in words and names in Turkic and Hunnic languages, and similarities in systems of governance of Hunnic and Turkic tribes. Hungarian historian Gyula Nemeth also supports this view. Uyghur historian Turghun Almas has suggested a link between the Huns and the Uyghurs, a Turkic speaking people who reside in Xinjiang, China.[PARAGRAPH:2]However, the Huns appeared in Europe in the 4th century, apparently from Central Asia. They first appeared north of the Black Sea, forcing a large number of Goths to seek refuge in the Roman Empire; later, the Huns appeared west of the Carpathians in Pannonia, probably sometime between 400 and 410, perhaps triggering the massive migration of Germanic tribes westward across the Rhine in December 406.[PARAGRAPH:2]The establishment of the 5th century Hunnic Empire marks a historically early instance of horseback migration. Under the leadership of Attila the Hun, the Huns achieved hegemony over several rivals by using the composite bow, their highly maneuverable hit-and-run tactics with their horsemanship, and a well-organized system of taxation. Supplementing their wealth by plundering wealthy Roman cities to the south, the Huns maintained the loyalties of a number of tributary tribes.[PARAGRAPH:2]Attila's Huns incorporated groups of unrelated tributary peoples. In Europe, Alans, Gepids, Scirii, Rugians, Sarmatians and Gothic tribes all united under the Hun by Ardaric's coalition at the Battle of Nedao in 454, at modern day Nedava.[PARAGRAPH:2]Many nations have tried to assert themselves as ethnic or cultural successors to the Huns. For instance, the Nominalia of the Bulgarian khans may indicate that they believed themselves to have been descended from Attila. The Bulgars certainly were part of the Hun tribal alliance for some time, and some have hypothesized that the Chuvash language (which is believed to have descended from the Bulgar language) is the closest surviving relative of the Hunnic language. The Magyars (Hungarians) also have laid claims to Hunnic heritage. Because the Huns who invaded Europe represented a loose coalition of various peoples, it is possible that Magyars were part of it. Until the early 20th century, many Hungarian historians believed that the Székely people were the descendants of the Huns. In 2005, a group of about 2,500 Hungarians petitioned the government for recognition of minority status as direct descendants of Attila. The bid failed, but gained some publicity for the group, which formed in the early 1990s and appears to represent a special Hun(garian)-centric brand of mysticism. The self-proclaimed Huns are not known to possess any distinctly Hunnic culture or language beyond what would be available from historical and modern-mystical Hungarian sources.[PARAGRAPH:2]While it is clear that the Huns left descendants all over Eastern Europe, the disintegration of the Hun Empire meant they never regained their lost glory. One reason was that the Huns never fully established the mechanisms of a state, such as bureaucracy and taxes, unlike the Magyars or Golden Horde. Once disorganized, the Huns were absorbed by more organized polities.</German>
+		<Italian>[TAB]The Hunnic Empire stretched from the steppes of Central Asia into modern Germany, and from the Black Sea to the Baltic Sea.[PARAGRAPH:2]The Huns were an early confederation of Central Asian equestrian nomads or semi-nomads, with a Turkic core of aristocracy. Some of these Eurasian tribes moved into Europe in the 4th and 5th centuries, most famously under Attila the Hun. Huns remaining in Asia are recorded by neighboring peoples to the south, east, and west as having occupied Central Asia roughly from the 4th century to the 6th century, with some surviving in the Caucasus until the early 8th century.[PARAGRAPH:2]Modern genetic and ethnogenesis scholarship contrasts with traditional theories based on Chinese records, archaeology, linguistics and other indirect evidence. These older theories contain various elements: that the name "Hun" first described a nomadic ruling group of warriors whose ethnic origins were in Central Asia, and was most likely in present day Mongolia; that possibly they were related to, or part of, the Xiongnu; that the Xiongnu were defeated by the Chinese Han Empire; and that this is why they left Mongolia and moved west, eventually invading Europe 200 years later. Indirect evidence includes the transmission of grip laths for composite bows from Central Asia to the west. This narrative is ingrained in western (and eastern) historiography, but the evidence is often indirect or ambiguous. The Huns left practically no written records. There is no record of what happened between the time they left China and arrived in Europe 150 years later. The last mention of the northern Xiongnu was their defeat by the Chinese in 151 at the lake of Barkol, after which they fled to the western steppe at Kangju, Chinese records between the 3rd and 4th century suggest that a small tribe called Yueban, remnants of northern Xiongnu, was distributed about the steppe of Kazakhstan. One recent line of reasoning favors a political and cultural link between the Huns and the Xiongnu. The Central Asian sources of the 4th century translate "Huns" as "Xiongnu", and "Xiongnu" as "Huns"; also, Xiongnu and Hunnic cauldrons are virtually identical, and were buried on the same spots (river banks) in Hungary and in the Ordos.[PARAGRAPH:2]There is a theory, the turkic theory, that claims that the Huns may be of Turkic (or pre-Proto-Turkic) origin. This school of thought emerged when Joseph de Guignes in the 18th century identified the Huns with the Xiongnu or (H)siung-nu. It is supported by O. Maenchen-Helfen on the basis of his linguistic studies. English scholar Peter Heather called the Huns "the first group of Turkic, as opposed to Iranian, nomads to have intruded into Europe". Turkish researcher Kemal Cemal bolsters this assertion by showing similarities in words and names in Turkic and Hunnic languages, and similarities in systems of governance of Hunnic and Turkic tribes. Hungarian historian Gyula Nemeth also supports this view. Uyghur historian Turghun Almas has suggested a link between the Huns and the Uyghurs, a Turkic speaking people who reside in Xinjiang, China.[PARAGRAPH:2]However, the Huns appeared in Europe in the 4th century, apparently from Central Asia. They first appeared north of the Black Sea, forcing a large number of Goths to seek refuge in the Roman Empire; later, the Huns appeared west of the Carpathians in Pannonia, probably sometime between 400 and 410, perhaps triggering the massive migration of Germanic tribes westward across the Rhine in December 406.[PARAGRAPH:2]The establishment of the 5th century Hunnic Empire marks a historically early instance of horseback migration. Under the leadership of Attila the Hun, the Huns achieved hegemony over several rivals by using the composite bow, their highly maneuverable hit-and-run tactics with their horsemanship, and a well-organized system of taxation. Supplementing their wealth by plundering wealthy Roman cities to the south, the Huns maintained the loyalties of a number of tributary tribes.[PARAGRAPH:2]Attila's Huns incorporated groups of unrelated tributary peoples. In Europe, Alans, Gepids, Scirii, Rugians, Sarmatians and Gothic tribes all united under the Hun by Ardaric's coalition at the Battle of Nedao in 454, at modern day Nedava.[PARAGRAPH:2]Many nations have tried to assert themselves as ethnic or cultural successors to the Huns. For instance, the Nominalia of the Bulgarian khans may indicate that they believed themselves to have been descended from Attila. The Bulgars certainly were part of the Hun tribal alliance for some time, and some have hypothesized that the Chuvash language (which is believed to have descended from the Bulgar language) is the closest surviving relative of the Hunnic language. The Magyars (Hungarians) also have laid claims to Hunnic heritage. Because the Huns who invaded Europe represented a loose coalition of various peoples, it is possible that Magyars were part of it. Until the early 20th century, many Hungarian historians believed that the Székely people were the descendants of the Huns. In 2005, a group of about 2,500 Hungarians petitioned the government for recognition of minority status as direct descendants of Attila. The bid failed, but gained some publicity for the group, which formed in the early 1990s and appears to represent a special Hun(garian)-centric brand of mysticism. The self-proclaimed Huns are not known to possess any distinctly Hunnic culture or language beyond what would be available from historical and modern-mystical Hungarian sources.[PARAGRAPH:2]While it is clear that the Huns left descendants all over Eastern Europe, the disintegration of the Hun Empire meant they never regained their lost glory. One reason was that the Huns never fully established the mechanisms of a state, such as bureaucracy and taxes, unlike the Magyars or Golden Horde. Once disorganized, the Huns were absorbed by more organized polities.</Italian>
+		<Spanish>[TAB]The Hunnic Empire stretched from the steppes of Central Asia into modern Germany, and from the Black Sea to the Baltic Sea.[PARAGRAPH:2]The Huns were an early confederation of Central Asian equestrian nomads or semi-nomads, with a Turkic core of aristocracy. Some of these Eurasian tribes moved into Europe in the 4th and 5th centuries, most famously under Attila the Hun. Huns remaining in Asia are recorded by neighboring peoples to the south, east, and west as having occupied Central Asia roughly from the 4th century to the 6th century, with some surviving in the Caucasus until the early 8th century.[PARAGRAPH:2]Modern genetic and ethnogenesis scholarship contrasts with traditional theories based on Chinese records, archaeology, linguistics and other indirect evidence. These older theories contain various elements: that the name "Hun" first described a nomadic ruling group of warriors whose ethnic origins were in Central Asia, and was most likely in present day Mongolia; that possibly they were related to, or part of, the Xiongnu; that the Xiongnu were defeated by the Chinese Han Empire; and that this is why they left Mongolia and moved west, eventually invading Europe 200 years later. Indirect evidence includes the transmission of grip laths for composite bows from Central Asia to the west. This narrative is ingrained in western (and eastern) historiography, but the evidence is often indirect or ambiguous. The Huns left practically no written records. There is no record of what happened between the time they left China and arrived in Europe 150 years later. The last mention of the northern Xiongnu was their defeat by the Chinese in 151 at the lake of Barkol, after which they fled to the western steppe at Kangju, Chinese records between the 3rd and 4th century suggest that a small tribe called Yueban, remnants of northern Xiongnu, was distributed about the steppe of Kazakhstan. One recent line of reasoning favors a political and cultural link between the Huns and the Xiongnu. The Central Asian sources of the 4th century translate "Huns" as "Xiongnu", and "Xiongnu" as "Huns"; also, Xiongnu and Hunnic cauldrons are virtually identical, and were buried on the same spots (river banks) in Hungary and in the Ordos.[PARAGRAPH:2]There is a theory, the turkic theory, that claims that the Huns may be of Turkic (or pre-Proto-Turkic) origin. This school of thought emerged when Joseph de Guignes in the 18th century identified the Huns with the Xiongnu or (H)siung-nu. It is supported by O. Maenchen-Helfen on the basis of his linguistic studies. English scholar Peter Heather called the Huns "the first group of Turkic, as opposed to Iranian, nomads to have intruded into Europe". Turkish researcher Kemal Cemal bolsters this assertion by showing similarities in words and names in Turkic and Hunnic languages, and similarities in systems of governance of Hunnic and Turkic tribes. Hungarian historian Gyula Nemeth also supports this view. Uyghur historian Turghun Almas has suggested a link between the Huns and the Uyghurs, a Turkic speaking people who reside in Xinjiang, China.[PARAGRAPH:2]However, the Huns appeared in Europe in the 4th century, apparently from Central Asia. They first appeared north of the Black Sea, forcing a large number of Goths to seek refuge in the Roman Empire; later, the Huns appeared west of the Carpathians in Pannonia, probably sometime between 400 and 410, perhaps triggering the massive migration of Germanic tribes westward across the Rhine in December 406.[PARAGRAPH:2]The establishment of the 5th century Hunnic Empire marks a historically early instance of horseback migration. Under the leadership of Attila the Hun, the Huns achieved hegemony over several rivals by using the composite bow, their highly maneuverable hit-and-run tactics with their horsemanship, and a well-organized system of taxation. Supplementing their wealth by plundering wealthy Roman cities to the south, the Huns maintained the loyalties of a number of tributary tribes.[PARAGRAPH:2]Attila's Huns incorporated groups of unrelated tributary peoples. In Europe, Alans, Gepids, Scirii, Rugians, Sarmatians and Gothic tribes all united under the Hun by Ardaric's coalition at the Battle of Nedao in 454, at modern day Nedava.[PARAGRAPH:2]Many nations have tried to assert themselves as ethnic or cultural successors to the Huns. For instance, the Nominalia of the Bulgarian khans may indicate that they believed themselves to have been descended from Attila. The Bulgars certainly were part of the Hun tribal alliance for some time, and some have hypothesized that the Chuvash language (which is believed to have descended from the Bulgar language) is the closest surviving relative of the Hunnic language. The Magyars (Hungarians) also have laid claims to Hunnic heritage. Because the Huns who invaded Europe represented a loose coalition of various peoples, it is possible that Magyars were part of it. Until the early 20th century, many Hungarian historians believed that the Székely people were the descendants of the Huns. In 2005, a group of about 2,500 Hungarians petitioned the government for recognition of minority status as direct descendants of Attila. The bid failed, but gained some publicity for the group, which formed in the early 1990s and appears to represent a special Hun(garian)-centric brand of mysticism. The self-proclaimed Huns are not known to possess any distinctly Hunnic culture or language beyond what would be available from historical and modern-mystical Hungarian sources.[PARAGRAPH:2]While it is clear that the Huns left descendants all over Eastern Europe, the disintegration of the Hun Empire meant they never regained their lost glory. One reason was that the Huns never fully established the mechanisms of a state, such as bureaucracy and taxes, unlike the Magyars or Golden Horde. Once disorganized, the Huns were absorbed by more organized polities.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HUNS_DESC</Tag>
+		<English>Hunnic Empire</English>
+		<French>Empire des Huns</French>
+		<German>Hunnisches Reich</German>
+		<Italian>Impero Unno</Italian>
+		<Spanish>Hunnic Empire</Spanish>
+		<Hungarian>Hun birodalom</Hungarian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HUNS_SHORT_DESC</Tag>
+		<English>Hunnia</English>
+		<French>Huns</French>
+		<German>Hunnien</German>
+		<Italian>Unnia</Italian>
+		<Spanish>Hunnia</Spanish>
+		<Hungarian>Hunnia</Hungarian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HUNS_ADJECTIVE</Tag>
+		<English>Hunnic</English>
+		<French>Huns</French>
+		<German>Hunnic</German>
+		<Italian>
+			<Text>Unno:Unna:Unni:Unne</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Italian>
+		<Spanish>Hunnic</Spanish>
+		<Hungarian>Hun</Hungarian>
+	</TEXT>
+</Civ4GameText>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- ReModified by the StrategyOnly -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BASQUES_DESC</Tag>
+		<English>Empire of Basques</English>
+		<French>Empire of Basques</French>
+		<German>Empire of Basques</German>
+		<Italian>Empire of Basques</Italian>
+		<Spanish>Empire of Basques</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BASQUES_SHORT_DESC</Tag>
+		<English>Basques</English>
+		<French>Basques</French>
+		<German>Basques</German>
+		<Italian>Basques</Italian>
+		<Spanish>Basques</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BASQUES_ADJECTIVE</Tag>
+		<English>Basquesois</English>
+		<French>Basquesois</French>
+		<German>Basquesois</German>
+		<Italian>Basquesois</Italian>
+		<Spanish>Basquesois</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BASQUES_PEDIA</Tag>
+		<English>[TAB]The Basque Country (Basque: Euskal Herria) is the name given to the home of the Basque 
+people in the western Pyrenees that spans the border between France and Spain on the Atlantic coast. 
+It is the oldest documented Basque name for the area they inhabit, dating to the 16th century and thus 
+predates the emergence of Basque nationalism by at least two centuries. It comprises the Autonomous Communities 
+of the Basque Country and Navarre in Spain and the Northern Basque Country in France. Even though they 
+are not necessarily synonyms, the concept of a single culturally Basque area spanning various regions 
+and countries has been closely associated with the politics of Basque nationalism. The region is home 
+to the Basque people (Basque: Euskaldunak), their language (Basque: Euskara), culture and traditions. 
+The area is neither linguistically nor culturally homogeneous, and certain areas have a majority of people 
+who do not consider themselves Basque, such as the south of Navarre where in 1996 the census reported 
+that 71% of inhabitants did not identify themselves as Basque - although fewer people in the same area 
+(53%) opposed measures to support the Basque language.</English>
+		<French>[TAB]The Basque Country (Basque: Euskal Herria) is the name given to the home of the Basque 
+people in the western Pyrenees that spans the border between France and Spain on the Atlantic coast. 
+It is the oldest documented Basque name for the area they inhabit, dating to the 16th century and thus 
+predates the emergence of Basque nationalism by at least two centuries. It comprises the Autonomous Communities 
+of the Basque Country and Navarre in Spain and the Northern Basque Country in France. Even though they 
+are not necessarily synonyms, the concept of a single culturally Basque area spanning various regions 
+and countries has been closely associated with the politics of Basque nationalism. The region is home 
+to the Basque people (Basque: Euskaldunak), their language (Basque: Euskara), culture and traditions. 
+The area is neither linguistically nor culturally homogeneous, and certain areas have a majority of people 
+who do not consider themselves Basque, such as the south of Navarre where in 1996 the census reported 
+that 71% of inhabitants did not identify themselves as Basque - although fewer people in the same area 
+(53%) opposed measures to support the Basque language.</French>
+		<German>[TAB]The Basque Country (Basque: Euskal Herria) is the name given to the home of the Basque 
+people in the western Pyrenees that spans the border between France and Spain on the Atlantic coast. 
+It is the oldest documented Basque name for the area they inhabit, dating to the 16th century and thus 
+predates the emergence of Basque nationalism by at least two centuries. It comprises the Autonomous Communities 
+of the Basque Country and Navarre in Spain and the Northern Basque Country in France. Even though they 
+are not necessarily synonyms, the concept of a single culturally Basque area spanning various regions 
+and countries has been closely associated with the politics of Basque nationalism. The region is home 
+to the Basque people (Basque: Euskaldunak), their language (Basque: Euskara), culture and traditions. 
+The area is neither linguistically nor culturally homogeneous, and certain areas have a majority of people 
+who do not consider themselves Basque, such as the south of Navarre where in 1996 the census reported 
+that 71% of inhabitants did not identify themselves as Basque - although fewer people in the same area 
+(53%) opposed measures to support the Basque language.</German>
+		<Italian>[TAB]The Basque Country (Basque: Euskal Herria) is the name given to the home of the Basque 
+people in the western Pyrenees that spans the border between France and Spain on the Atlantic coast. 
+It is the oldest documented Basque name for the area they inhabit, dating to the 16th century and thus 
+predates the emergence of Basque nationalism by at least two centuries. It comprises the Autonomous Communities 
+of the Basque Country and Navarre in Spain and the Northern Basque Country in France. Even though they 
+are not necessarily synonyms, the concept of a single culturally Basque area spanning various regions 
+and countries has been closely associated with the politics of Basque nationalism. The region is home 
+to the Basque people (Basque: Euskaldunak), their language (Basque: Euskara), culture and traditions. 
+The area is neither linguistically nor culturally homogeneous, and certain areas have a majority of people 
+who do not consider themselves Basque, such as the south of Navarre where in 1996 the census reported 
+that 71% of inhabitants did not identify themselves as Basque - although fewer people in the same area 
+(53%) opposed measures to support the Basque language.</Italian>
+		<Spanish>[TAB]The Basque Country (Basque: Euskal Herria) is the name given to the home of the Basque 
+people in the western Pyrenees that spans the border between France and Spain on the Atlantic coast. 
+It is the oldest documented Basque name for the area they inhabit, dating to the 16th century and thus 
+predates the emergence of Basque nationalism by at least two centuries. It comprises the Autonomous Communities 
+of the Basque Country and Navarre in Spain and the Northern Basque Country in France. Even though they 
+are not necessarily synonyms, the concept of a single culturally Basque area spanning various regions 
+and countries has been closely associated with the politics of Basque nationalism. The region is home 
+to the Basque people (Basque: Euskaldunak), their language (Basque: Euskara), culture and traditions. 
+The area is neither linguistically nor culturally homogeneous, and certain areas have a majority of people 
+who do not consider themselves Basque, such as the south of Navarre where in 1996 the census reported 
+that 71% of inhabitants did not identify themselves as Basque - although fewer people in the same area 
+(53%) opposed measures to support the Basque language.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SANCHOIII</Tag>
+		<English>Sancho III</English>
+		<French>Sancho III</French>
+		<German>Sancho III</German>
+		<Italian>Sancho III</Italian>
+		<Spanish>Sancho III</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SANCHOIII_PEDIA</Tag>
+		<English>[H1]Sancho III of Navarre [\H1][NEWLINE][BOLD]President of Paraguay[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 992 - 18 October 1035[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Sancho III Garcés, 
+called the Great, succeeded as a minor to the Kingdom of Navarre in 1004, and through conquest and political 
+maneuvering increased his power, until at the time of his death in 1035 he controlled the majority of 
+Christian Iberia, bearing the title of rex Hispaniarum. Having gone further than any of his predecessors 
+in uniting the divided kingdoms of Iberia, his life's work was undone when he divided his domains shortly 
+before his death to provide for each of his sons. The Kingdom of Navarre existed for almost six centuries 
+after his death, but was never as powerful again.</English>
+		<French>[H1]Sancho III of Navarre [\H1][NEWLINE][BOLD]President of Paraguay[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 992 - 18 October 1035[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Sancho III Garcés, 
+called the Great, succeeded as a minor to the Kingdom of Navarre in 1004, and through conquest and political 
+maneuvering increased his power, until at the time of his death in 1035 he controlled the majority of 
+Christian Iberia, bearing the title of rex Hispaniarum. Having gone further than any of his predecessors 
+in uniting the divided kingdoms of Iberia, his life's work was undone when he divided his domains shortly 
+before his death to provide for each of his sons. The Kingdom of Navarre existed for almost six centuries 
+after his death, but was never as powerful again.</French>
+		<German>[H1]Sancho III of Navarre [\H1][NEWLINE][BOLD]President of Paraguay[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 992 - 18 October 1035[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Sancho III Garcés, 
+called the Great, succeeded as a minor to the Kingdom of Navarre in 1004, and through conquest and political 
+maneuvering increased his power, until at the time of his death in 1035 he controlled the majority of 
+Christian Iberia, bearing the title of rex Hispaniarum. Having gone further than any of his predecessors 
+in uniting the divided kingdoms of Iberia, his life's work was undone when he divided his domains shortly 
+before his death to provide for each of his sons. The Kingdom of Navarre existed for almost six centuries 
+after his death, but was never as powerful again.</German>
+		<Italian>[H1]Sancho III of Navarre [\H1][NEWLINE][BOLD]President of Paraguay[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 992 - 18 October 1035[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Sancho III Garcés, 
+called the Great, succeeded as a minor to the Kingdom of Navarre in 1004, and through conquest and political 
+maneuvering increased his power, until at the time of his death in 1035 he controlled the majority of 
+Christian Iberia, bearing the title of rex Hispaniarum. Having gone further than any of his predecessors 
+in uniting the divided kingdoms of Iberia, his life's work was undone when he divided his domains shortly 
+before his death to provide for each of his sons. The Kingdom of Navarre existed for almost six centuries 
+after his death, but was never as powerful again.</Italian>
+		<Spanish>[H1]Sancho III of Navarre [\H1][NEWLINE][BOLD]President of Paraguay[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 992 - 18 October 1035[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Sancho III Garcés, 
+called the Great, succeeded as a minor to the Kingdom of Navarre in 1004, and through conquest and political 
+maneuvering increased his power, until at the time of his death in 1035 he controlled the majority of 
+Christian Iberia, bearing the title of rex Hispaniarum. Having gone further than any of his predecessors 
+in uniting the divided kingdoms of Iberia, his life's work was undone when he divided his domains shortly 
+before his death to provide for each of his sons. The Kingdom of Navarre existed for almost six centuries 
+after his death, but was never as powerful again.</Spanish>
+	</TEXT>
+</Civ4GameText>

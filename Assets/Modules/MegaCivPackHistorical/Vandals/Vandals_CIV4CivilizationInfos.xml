@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- Modified by strategyonly -->
+<!-- -->
+<Civ4CivilizationInfos xmlns= "x-schema:../../../XML/Schema/C2C_CIV4CivilizationsSchema.xml">
+	<CivilizationInfos>
+		<CivilizationInfo>
+			<Type>CIVILIZATION_VANDAL</Type>
+			<Description>TXT_KEY_CIV_VANDAL_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_VANDAL_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_VANDAL_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_VANDAL_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_HORO</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_VANDAL</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_EUROPE</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_GERMAN</UnitArtStyleType>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>Hippo Regius</City>
+				<City>Carthage</City>
+				<City>Saldae</City>
+				<City>Theveste</City>
+				<City>Thapsus</City>
+				<City>Hunerikopolis</City>
+				<City>Tacape</City>
+				<City>Caesariensis</City>
+				<City>Utica</City>
+				<City>Oea</City>
+				<City>Sabratha</City>
+				<City>Panormus</City>
+				<City>Zama Regia</City>
+				<City>Syracuse</City>
+				<City>Sitifis</City>
+				<City>Capsa</City>
+				<City>Vescera</City>
+				<City>Gemellensis</City>
+				<City>Mesarfelta</City>
+				<City>Caralis</City>
+				<City>Leptis Magna</City>
+				<City>Ad Majores</City>
+				<City>Tubunae</City>
+				<City>Zama Minor</City>
+				<City>Lambaesis</City>
+				<City>Ad Decimum</City>
+				<City>Tricamarum</City>
+				<City>Tripolis</City>
+				<City>Zmerten</City>
+				<City>Beni Zelten</City>
+				<City>Douz</City>
+				<City>Bazma</City>
+				<City>Chemlali</City>
+				<City>In Amenas</City>
+				<City>Illizi</City>
+				<City>Tassill</City>
+				<City>Salah</City>
+				<City>Atteuf</City>
+				<City>Blidet</City>
+				<City>Gadamis</City>
+				<City>Amguel</City>
+				<City>Mareth</City>
+				<City>El Menia</City>
+				<City>Guer</City>
+				<City>Zeraoua</City>
+			</Cities>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
+			<InitialCivics>
+				<CivicType>CIVIC_ANARCHISM</CivicType>
+				<CivicType>CIVIC_OBEDIENCE</CivicType>
+				<CivicType>CIVIC_STRONGMAN</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
+				<CivicType>CIVIC_MILITIA</CivicType>
+				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SURVIVAL</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
+				<CivicType>CIVIC_UNORGANIZED</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_GENSERIC</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<DerivativeCiv>CIVILIZATION_GERMANY</DerivativeCiv>
+			<CivilizationSelectionSound>AS3D_GERMANY_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_GERMANY_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+	</CivilizationInfos>
+</Civ4CivilizationInfos>

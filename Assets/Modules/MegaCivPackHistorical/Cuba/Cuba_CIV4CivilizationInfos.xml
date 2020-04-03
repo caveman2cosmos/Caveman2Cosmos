@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- ReModified by the StrategyOnly -->
+<!-- -->
+<!-- Civilization Infos -->
+<Civ4CivilizationInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4CivilizationsSchema.xml">
+	<CivilizationInfos>
+		<CivilizationInfo>
+			<Type>CIVILIZATION_CUBA</Type>
+			<Description>TXT_KEY_CIV_CUBA_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_CUBA_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_CUBA_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_CUBA_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_CUBA</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_CUBA</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_EUROPE</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_MESO_AMERICA</UnitArtStyleType>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>Havana</City>
+				<City>Santiago</City>
+				<City>Pinar del Rio</City>
+				<City>Matanzas</City>
+				<City>Guantanamo</City>
+				<City>Santa Clara</City>
+				<City>Cienfuegos</City>
+				<City>Camaguey</City>
+				<City>Holguin</City>
+				<City>Manzanillo</City>
+				<City>Las Tunas</City>
+				<City>Bayamo</City>
+				<City>Nuevitas</City>
+				<City>Cardenas</City>
+				<City>Palma Soriano</City>
+				<City>Mariel</City>
+				<City>Artemisa</City>
+				<City>Baracoa</City>
+				<City>Varadero</City>
+				<City>Trinidad</City>
+				<City>Guines</City>
+				<City>Colon</City>
+				<City>Nueva Gerona</City>
+				<City>Sancti Spiritus</City>
+				<City>Ciego de Avila</City>
+				<City>Las Palmas</City>
+				<City>Playa Giron</City>
+				<City>La Mosa</City>
+				<City>Guanabacoa</City>
+				<City>Marianao</City>
+				<City>Punta Brava</City>
+				<City>Almendares</City>
+				<City>Cobre</City>
+				<City>Vedado</City>
+				<City>Cayo Largo</City>
+				<City>Caridad</City>
+				<City>Caimito</City>
+				<City>Miramar</City>
+				<City>Gaunabo</City>
+				<City>Pascua</City>
+				<City>Bauta</City>
+				<City>Cayo Coco</City>
+				<City>Villa Clara</City>
+				<City>San Bernardo</City>
+				<City>Bauta</City>				
+			</Cities>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
+			<InitialCivics>
+				<CivicType>CIVIC_ANARCHISM</CivicType>
+				<CivicType>CIVIC_OBEDIENCE</CivicType>
+				<CivicType>CIVIC_STRONGMAN</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
+				<CivicType>CIVIC_MILITIA</CivicType>
+				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SURVIVAL</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
+				<CivicType>CIVIC_UNORGANIZED</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_CUBA_MARTI</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_CUBA_CASTRO</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<DerivativeCiv>CIVILIZATION_UNITED_STATES</DerivativeCiv>
+			<CivilizationSelectionSound>AS3D_SPAIN_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_SPAIN_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+	</CivilizationInfos>
+</Civ4CivilizationInfos>

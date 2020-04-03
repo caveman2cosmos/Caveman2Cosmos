@@ -1,0 +1,999 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- Modified by the Civ Gold Team -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KANEMBORNU_DESC</Tag>
+		<English>Kanem-Bornu Empire</English>
+		<French>Kanem-Bornu Empire</French>
+		<German>Kanem-Bornu Empire</German>
+		<Italian>Kanem-Bornu Empire</Italian>
+		<Spanish>Kanem-Bornu Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KANEMBORNU_SHORT_DESC</Tag>
+		<English>Kanem-Bornu</English>
+		<French>Kanem-Bornu</French>
+		<German>Kanem-Bornu</German>
+		<Italian>Kanem-Bornu</Italian>
+		<Spanish>Kanem-Bornu</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KANEMBORNU_ADJECTIVE</Tag>
+		<English>Kanem-Bornu</English>
+		<French>Kanem-Bornu</French>
+		<German>Kanem-Bornu</German>
+		<Italian>Kanem-Bornu</Italian>
+		<Spanish>Kanem-Bornu</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_KANEMBORNU_PEDIA</Tag>
+		<English>[TAB]The Kanem-Bornu Empire existed in modern Chad and Nigeria. It was known to the Arab geographers 
+as the Kanem Empire from the 9th century AD onward and lasted, in some form, until 1893. At its height 
+it encompassed an area covering not only much of Chad, but also parts of modern southern Libya, eastern 
+Niger, northeastern Nigeria and northern Cameroon. The Kanem Empire originated at an unknown period to 
+the northeast of Lake Chad. It was located at the southern end of the trans-Saharan trade route between 
+Tripoli and the region of Lake Chad. Besides its urban elite it included a confederation of nomadic peoples.[PARAGRAPH:2]The 
+major factor that influenced the history of the state of Kanem was the early penetration of Islam. North 
+African traders, Berbers and Arabs, brought the new religion. Towards 1068, Hummay, a member of the Sayfawa 
+establishment, who was already a Muslim, discarded the last Duguwa king Selma from power and thus established 
+the new dynasty of the Sayfuwa. Islam offered the Sayfawa rulers the advantage of new ideas from Arabia 
+and the Mediterranean world, as well as literacy in administration. But many people resisted the new 
+religion favouring traditional beliefs and practices. When Hummay had assumed power on the basis of his 
+strong Islamic following, for example, it is believed that the Duguwa/Zaghawa began some kind of internal 
+opposition. This pattern of conflict and compromise with Islam occurs repeatedly in Chadian history.[PARAGRAPH:2]Kanem-Bornu 
+peaked during the reign of the outstanding statesman Mai Idris Aluma (c. 1571-1603). Aluma is remembered 
+for his military skills, administrative reforms, and Islamic piety. His main adversaries were the Hausa 
+to the west, the Tuareg and Toubou to the north, and the Bulala to the east. One epic poem extols his 
+victories in 330 wars and more than 1,000 battles. His innovations included the employment of fixed military 
+camps (with walls); permanent sieges and "scorched earth" tactics, where soldiers burned everything in 
+their path; armored horses and riders; and the use of Berber camelry, Kotoko boatmen, and iron-helmeted 
+musketeers trained by Turkish military advisers.[PARAGRAPH:2]Aluma introduced a number of legal and administrative 
+reforms based on his religious beliefs and Islamic law (sharia). He sponsored the construction of numerous 
+mosques and made a pilgrimage to Mecca, where he arranged for the establishment of a hostel to be used 
+by pilgrims from his empire. As with other dynamic politicians, Aluma's reformist goals led him to seek 
+loyal and competent advisers and allies, and he frequently relied on slaves who had been educated in 
+noble homes. Aluma regularly sought advice from a council composed of heads of the most important clans. 
+He required major political figures to live at the court, and he reinforced political alliances through 
+appropriate marriages (Aluma himself was the son of a Kanuri father and a Bulala mother).[PARAGRAPH:2]Although 
+the dynasty ended, the kingdom of Kanem-Bornu survived. But Umar, who eschewed the title mai for the 
+simpler designation shehu (from the Arabic shaykh), could not match his father's vitality and gradually 
+allowed the kingdom to be ruled by advisers (wazirs). Bornu began to decline, as a result of administrative 
+disorganization, regional particularism, and attacks by the militant Ouaddai Empire to the east. The 
+decline continued under Umar's sons, and in 1893 Rabih az-Zubayr, leading an invading army from eastern 
+Sudan, conquered Bornu.</English>
+		<French>[TAB]The Kanem-Bornu Empire existed in modern Chad and Nigeria. It was known to the Arab geographers 
+as the Kanem Empire from the 9th century AD onward and lasted, in some form, until 1893. At its height 
+it encompassed an area covering not only much of Chad, but also parts of modern southern Libya, eastern 
+Niger, northeastern Nigeria and northern Cameroon. The Kanem Empire originated at an unknown period to 
+the northeast of Lake Chad. It was located at the southern end of the trans-Saharan trade route between 
+Tripoli and the region of Lake Chad. Besides its urban elite it included a confederation of nomadic peoples.[PARAGRAPH:2]The 
+major factor that influenced the history of the state of Kanem was the early penetration of Islam. North 
+African traders, Berbers and Arabs, brought the new religion. Towards 1068, Hummay, a member of the Sayfawa 
+establishment, who was already a Muslim, discarded the last Duguwa king Selma from power and thus established 
+the new dynasty of the Sayfuwa. Islam offered the Sayfawa rulers the advantage of new ideas from Arabia 
+and the Mediterranean world, as well as literacy in administration. But many people resisted the new 
+religion favouring traditional beliefs and practices. When Hummay had assumed power on the basis of his 
+strong Islamic following, for example, it is believed that the Duguwa/Zaghawa began some kind of internal 
+opposition. This pattern of conflict and compromise with Islam occurs repeatedly in Chadian history.[PARAGRAPH:2]Kanem-Bornu 
+peaked during the reign of the outstanding statesman Mai Idris Aluma (c. 1571-1603). Aluma is remembered 
+for his military skills, administrative reforms, and Islamic piety. His main adversaries were the Hausa 
+to the west, the Tuareg and Toubou to the north, and the Bulala to the east. One epic poem extols his 
+victories in 330 wars and more than 1,000 battles. His innovations included the employment of fixed military 
+camps (with walls); permanent sieges and "scorched earth" tactics, where soldiers burned everything in 
+their path; armored horses and riders; and the use of Berber camelry, Kotoko boatmen, and iron-helmeted 
+musketeers trained by Turkish military advisers.[PARAGRAPH:2]Aluma introduced a number of legal and administrative 
+reforms based on his religious beliefs and Islamic law (sharia). He sponsored the construction of numerous 
+mosques and made a pilgrimage to Mecca, where he arranged for the establishment of a hostel to be used 
+by pilgrims from his empire. As with other dynamic politicians, Aluma's reformist goals led him to seek 
+loyal and competent advisers and allies, and he frequently relied on slaves who had been educated in 
+noble homes. Aluma regularly sought advice from a council composed of heads of the most important clans. 
+He required major political figures to live at the court, and he reinforced political alliances through 
+appropriate marriages (Aluma himself was the son of a Kanuri father and a Bulala mother).[PARAGRAPH:2]Although 
+the dynasty ended, the kingdom of Kanem-Bornu survived. But Umar, who eschewed the title mai for the 
+simpler designation shehu (from the Arabic shaykh), could not match his father's vitality and gradually 
+allowed the kingdom to be ruled by advisers (wazirs). Bornu began to decline, as a result of administrative 
+disorganization, regional particularism, and attacks by the militant Ouaddai Empire to the east. The 
+decline continued under Umar's sons, and in 1893 Rabih az-Zubayr, leading an invading army from eastern 
+Sudan, conquered Bornu.</French>
+		<German>[TAB]The Kanem-Bornu Empire existed in modern Chad and Nigeria. It was known to the Arab geographers 
+as the Kanem Empire from the 9th century AD onward and lasted, in some form, until 1893. At its height 
+it encompassed an area covering not only much of Chad, but also parts of modern southern Libya, eastern 
+Niger, northeastern Nigeria and northern Cameroon. The Kanem Empire originated at an unknown period to 
+the northeast of Lake Chad. It was located at the southern end of the trans-Saharan trade route between 
+Tripoli and the region of Lake Chad. Besides its urban elite it included a confederation of nomadic peoples.[PARAGRAPH:2]The 
+major factor that influenced the history of the state of Kanem was the early penetration of Islam. North 
+African traders, Berbers and Arabs, brought the new religion. Towards 1068, Hummay, a member of the Sayfawa 
+establishment, who was already a Muslim, discarded the last Duguwa king Selma from power and thus established 
+the new dynasty of the Sayfuwa. Islam offered the Sayfawa rulers the advantage of new ideas from Arabia 
+and the Mediterranean world, as well as literacy in administration. But many people resisted the new 
+religion favouring traditional beliefs and practices. When Hummay had assumed power on the basis of his 
+strong Islamic following, for example, it is believed that the Duguwa/Zaghawa began some kind of internal 
+opposition. This pattern of conflict and compromise with Islam occurs repeatedly in Chadian history.[PARAGRAPH:2]Kanem-Bornu 
+peaked during the reign of the outstanding statesman Mai Idris Aluma (c. 1571-1603). Aluma is remembered 
+for his military skills, administrative reforms, and Islamic piety. His main adversaries were the Hausa 
+to the west, the Tuareg and Toubou to the north, and the Bulala to the east. One epic poem extols his 
+victories in 330 wars and more than 1,000 battles. His innovations included the employment of fixed military 
+camps (with walls); permanent sieges and "scorched earth" tactics, where soldiers burned everything in 
+their path; armored horses and riders; and the use of Berber camelry, Kotoko boatmen, and iron-helmeted 
+musketeers trained by Turkish military advisers.[PARAGRAPH:2]Aluma introduced a number of legal and administrative 
+reforms based on his religious beliefs and Islamic law (sharia). He sponsored the construction of numerous 
+mosques and made a pilgrimage to Mecca, where he arranged for the establishment of a hostel to be used 
+by pilgrims from his empire. As with other dynamic politicians, Aluma's reformist goals led him to seek 
+loyal and competent advisers and allies, and he frequently relied on slaves who had been educated in 
+noble homes. Aluma regularly sought advice from a council composed of heads of the most important clans. 
+He required major political figures to live at the court, and he reinforced political alliances through 
+appropriate marriages (Aluma himself was the son of a Kanuri father and a Bulala mother).[PARAGRAPH:2]Although 
+the dynasty ended, the kingdom of Kanem-Bornu survived. But Umar, who eschewed the title mai for the 
+simpler designation shehu (from the Arabic shaykh), could not match his father's vitality and gradually 
+allowed the kingdom to be ruled by advisers (wazirs). Bornu began to decline, as a result of administrative 
+disorganization, regional particularism, and attacks by the militant Ouaddai Empire to the east. The 
+decline continued under Umar's sons, and in 1893 Rabih az-Zubayr, leading an invading army from eastern 
+Sudan, conquered Bornu.</German>
+		<Italian>[TAB]The Kanem-Bornu Empire existed in modern Chad and Nigeria. It was known to the Arab geographers 
+as the Kanem Empire from the 9th century AD onward and lasted, in some form, until 1893. At its height 
+it encompassed an area covering not only much of Chad, but also parts of modern southern Libya, eastern 
+Niger, northeastern Nigeria and northern Cameroon. The Kanem Empire originated at an unknown period to 
+the northeast of Lake Chad. It was located at the southern end of the trans-Saharan trade route between 
+Tripoli and the region of Lake Chad. Besides its urban elite it included a confederation of nomadic peoples.[PARAGRAPH:2]The 
+major factor that influenced the history of the state of Kanem was the early penetration of Islam. North 
+African traders, Berbers and Arabs, brought the new religion. Towards 1068, Hummay, a member of the Sayfawa 
+establishment, who was already a Muslim, discarded the last Duguwa king Selma from power and thus established 
+the new dynasty of the Sayfuwa. Islam offered the Sayfawa rulers the advantage of new ideas from Arabia 
+and the Mediterranean world, as well as literacy in administration. But many people resisted the new 
+religion favouring traditional beliefs and practices. When Hummay had assumed power on the basis of his 
+strong Islamic following, for example, it is believed that the Duguwa/Zaghawa began some kind of internal 
+opposition. This pattern of conflict and compromise with Islam occurs repeatedly in Chadian history.[PARAGRAPH:2]Kanem-Bornu 
+peaked during the reign of the outstanding statesman Mai Idris Aluma (c. 1571-1603). Aluma is remembered 
+for his military skills, administrative reforms, and Islamic piety. His main adversaries were the Hausa 
+to the west, the Tuareg and Toubou to the north, and the Bulala to the east. One epic poem extols his 
+victories in 330 wars and more than 1,000 battles. His innovations included the employment of fixed military 
+camps (with walls); permanent sieges and "scorched earth" tactics, where soldiers burned everything in 
+their path; armored horses and riders; and the use of Berber camelry, Kotoko boatmen, and iron-helmeted 
+musketeers trained by Turkish military advisers.[PARAGRAPH:2]Aluma introduced a number of legal and administrative 
+reforms based on his religious beliefs and Islamic law (sharia). He sponsored the construction of numerous 
+mosques and made a pilgrimage to Mecca, where he arranged for the establishment of a hostel to be used 
+by pilgrims from his empire. As with other dynamic politicians, Aluma's reformist goals led him to seek 
+loyal and competent advisers and allies, and he frequently relied on slaves who had been educated in 
+noble homes. Aluma regularly sought advice from a council composed of heads of the most important clans. 
+He required major political figures to live at the court, and he reinforced political alliances through 
+appropriate marriages (Aluma himself was the son of a Kanuri father and a Bulala mother).[PARAGRAPH:2]Although 
+the dynasty ended, the kingdom of Kanem-Bornu survived. But Umar, who eschewed the title mai for the 
+simpler designation shehu (from the Arabic shaykh), could not match his father's vitality and gradually 
+allowed the kingdom to be ruled by advisers (wazirs). Bornu began to decline, as a result of administrative 
+disorganization, regional particularism, and attacks by the militant Ouaddai Empire to the east. The 
+decline continued under Umar's sons, and in 1893 Rabih az-Zubayr, leading an invading army from eastern 
+Sudan, conquered Bornu.</Italian>
+		<Spanish>[TAB]The Kanem-Bornu Empire existed in modern Chad and Nigeria. It was known to the Arab geographers 
+as the Kanem Empire from the 9th century AD onward and lasted, in some form, until 1893. At its height 
+it encompassed an area covering not only much of Chad, but also parts of modern southern Libya, eastern 
+Niger, northeastern Nigeria and northern Cameroon. The Kanem Empire originated at an unknown period to 
+the northeast of Lake Chad. It was located at the southern end of the trans-Saharan trade route between 
+Tripoli and the region of Lake Chad. Besides its urban elite it included a confederation of nomadic peoples.[PARAGRAPH:2]The 
+major factor that influenced the history of the state of Kanem was the early penetration of Islam. North 
+African traders, Berbers and Arabs, brought the new religion. Towards 1068, Hummay, a member of the Sayfawa 
+establishment, who was already a Muslim, discarded the last Duguwa king Selma from power and thus established 
+the new dynasty of the Sayfuwa. Islam offered the Sayfawa rulers the advantage of new ideas from Arabia 
+and the Mediterranean world, as well as literacy in administration. But many people resisted the new 
+religion favouring traditional beliefs and practices. When Hummay had assumed power on the basis of his 
+strong Islamic following, for example, it is believed that the Duguwa/Zaghawa began some kind of internal 
+opposition. This pattern of conflict and compromise with Islam occurs repeatedly in Chadian history.[PARAGRAPH:2]Kanem-Bornu 
+peaked during the reign of the outstanding statesman Mai Idris Aluma (c. 1571-1603). Aluma is remembered 
+for his military skills, administrative reforms, and Islamic piety. His main adversaries were the Hausa 
+to the west, the Tuareg and Toubou to the north, and the Bulala to the east. One epic poem extols his 
+victories in 330 wars and more than 1,000 battles. His innovations included the employment of fixed military 
+camps (with walls); permanent sieges and "scorched earth" tactics, where soldiers burned everything in 
+their path; armored horses and riders; and the use of Berber camelry, Kotoko boatmen, and iron-helmeted 
+musketeers trained by Turkish military advisers.[PARAGRAPH:2]Aluma introduced a number of legal and administrative 
+reforms based on his religious beliefs and Islamic law (sharia). He sponsored the construction of numerous 
+mosques and made a pilgrimage to Mecca, where he arranged for the establishment of a hostel to be used 
+by pilgrims from his empire. As with other dynamic politicians, Aluma's reformist goals led him to seek 
+loyal and competent advisers and allies, and he frequently relied on slaves who had been educated in 
+noble homes. Aluma regularly sought advice from a council composed of heads of the most important clans. 
+He required major political figures to live at the court, and he reinforced political alliances through 
+appropriate marriages (Aluma himself was the son of a Kanuri father and a Bulala mother).[PARAGRAPH:2]Although 
+the dynasty ended, the kingdom of Kanem-Bornu survived. But Umar, who eschewed the title mai for the 
+simpler designation shehu (from the Arabic shaykh), could not match his father's vitality and gradually 
+allowed the kingdom to be ruled by advisers (wazirs). Bornu began to decline, as a result of administrative 
+disorganization, regional particularism, and attacks by the militant Ouaddai Empire to the east. The 
+decline continued under Umar's sons, and in 1893 Rabih az-Zubayr, leading an invading army from eastern 
+Sudan, conquered Bornu.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_ALOOMA</Tag>
+		<English>Alooma</English>
+		<French>
+			<Text>Alooma</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Alooma</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Alooma</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Alooma</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_ALOOMA_PEDIA</Tag>
+		<English>[H1]Alooma[\H1][NEWLINE][BOLD]Mai of the Kanem-Bornu Empire[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]1571 
+- 1603[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Idris Alooma was mai (king) of the 
+Kanem-Bornu Empire, located mainly in Chad and Nigeria. An outstanding statesman, under his rule (1571-1603) 
+Kanem-Bornu touched the zenith of its power. Idris is remembered for his military skills, administrative 
+reforms, and Islamic piety. His feats are mainly known through his chronicler Ahmad bin Fartuwa.[PARAGRAPH:1]His 
+main adversaries were the Hausa to the west, the Tuareg and Toubou to the north, and the Bulala to the 
+east. One epic poem extols his victories in 330 wars and more than 1,000 battles. His innovations included 
+the employment of fixed military camps (with walls); permanent sieges and "scorched earth" tactics, where 
+soldiers burned everything in their path; armored horses and riders; and the use of Berber camelry, Kotoko 
+boatmen, and iron-helmeted musketeers trained by Turkish military advisers. His active diplomacy featured 
+relations with Tripoli, Egypt, and the Ottoman Empire, which sent a 200-member ambassadorial party across 
+the desert to Alooma's court at Ngazargamu. Alooma also signed what was probably the first written treaty 
+or cease-fire in Chadian history.[PARAGRAPH:1]Alooma introduced a number of legal and administrative 
+reforms based on his religious beliefs and Islamic law (sharia). He sponsored the construction of numerous 
+mosques and made a pilgrimage to Mecca, where he arranged for the establishment of a hostel to be used 
+by pilgrims from his empire. As with other dynamic politicians, Alooma's reformist goals led him to seek 
+loyal and competent advisers and allies, and he frequently relied on slaves who had been educated in 
+noble homes. Alooma regularly sought advice from a council composed of heads of the most important clans. 
+He required major political figures to live at the court, and he reinforced political alliances through 
+appropriate marriages (Alooma himself was the son of a Kanuri father and a Bulala mother).[PARAGRAPH:1]Kanem-Bornu 
+under Alooma was strong and wealthy. Government revenue came from tribute (or booty, if the recalcitrant 
+people had to be conquered), sales of slaves, and duties on and participation in trans-Saharan trade. 
+Unlike West Africa, the Chadian region did not have gold. Still, it was central to one of the most convenient 
+trans-Saharan routes. Between Lake Chad and Fezzan lay a sequence of well-spaced wells and oases, and 
+from Fezzan there were easy connections to North Africa and the Mediterranean Sea. Many products were 
+sent north, including natron (sodium carbonate), cotton, kola nuts, ivory, ostrich feathers, perfume, 
+wax, and hides, but the most important of all were slaves. Imports included salt, horses, silks, glass, 
+muskets, and copper.[PARAGRAPH:1]Alooma took a keen interest in trade and other economic matters. He 
+is credited with having the roads cleared, designing better boats for Lake Chad, introducing standard 
+units of measure for grain, and moving farmers into new lands. In addition, he improved the ease and 
+security of transit through the empire with the goal of making it so safe that "a lone woman clad in 
+gold might walk with none to fear but God.</English>
+		<French>[H1]Alooma[\H1][NEWLINE][BOLD]Mai of the Kanem-Bornu Empire[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]1571 
+- 1603[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Idris Alooma was mai (king) of the 
+Kanem-Bornu Empire, located mainly in Chad and Nigeria. An outstanding statesman, under his rule (1571-1603) 
+Kanem-Bornu touched the zenith of its power. Idris is remembered for his military skills, administrative 
+reforms, and Islamic piety. His feats are mainly known through his chronicler Ahmad bin Fartuwa.[PARAGRAPH:1]His 
+main adversaries were the Hausa to the west, the Tuareg and Toubou to the north, and the Bulala to the 
+east. One epic poem extols his victories in 330 wars and more than 1,000 battles. His innovations included 
+the employment of fixed military camps (with walls); permanent sieges and "scorched earth" tactics, where 
+soldiers burned everything in their path; armored horses and riders; and the use of Berber camelry, Kotoko 
+boatmen, and iron-helmeted musketeers trained by Turkish military advisers. His active diplomacy featured 
+relations with Tripoli, Egypt, and the Ottoman Empire, which sent a 200-member ambassadorial party across 
+the desert to Alooma's court at Ngazargamu. Alooma also signed what was probably the first written treaty 
+or cease-fire in Chadian history.[PARAGRAPH:1]Alooma introduced a number of legal and administrative 
+reforms based on his religious beliefs and Islamic law (sharia). He sponsored the construction of numerous 
+mosques and made a pilgrimage to Mecca, where he arranged for the establishment of a hostel to be used 
+by pilgrims from his empire. As with other dynamic politicians, Alooma's reformist goals led him to seek 
+loyal and competent advisers and allies, and he frequently relied on slaves who had been educated in 
+noble homes. Alooma regularly sought advice from a council composed of heads of the most important clans. 
+He required major political figures to live at the court, and he reinforced political alliances through 
+appropriate marriages (Alooma himself was the son of a Kanuri father and a Bulala mother).[PARAGRAPH:1]Kanem-Bornu 
+under Alooma was strong and wealthy. Government revenue came from tribute (or booty, if the recalcitrant 
+people had to be conquered), sales of slaves, and duties on and participation in trans-Saharan trade. 
+Unlike West Africa, the Chadian region did not have gold. Still, it was central to one of the most convenient 
+trans-Saharan routes. Between Lake Chad and Fezzan lay a sequence of well-spaced wells and oases, and 
+from Fezzan there were easy connections to North Africa and the Mediterranean Sea. Many products were 
+sent north, including natron (sodium carbonate), cotton, kola nuts, ivory, ostrich feathers, perfume, 
+wax, and hides, but the most important of all were slaves. Imports included salt, horses, silks, glass, 
+muskets, and copper.[PARAGRAPH:1]Alooma took a keen interest in trade and other economic matters. He 
+is credited with having the roads cleared, designing better boats for Lake Chad, introducing standard 
+units of measure for grain, and moving farmers into new lands. In addition, he improved the ease and 
+security of transit through the empire with the goal of making it so safe that "a lone woman clad in 
+gold might walk with none to fear but God.</French>
+		<German>[H1]Alooma[\H1][NEWLINE][BOLD]Mai of the Kanem-Bornu Empire[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]1571 
+- 1603[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Idris Alooma was mai (king) of the 
+Kanem-Bornu Empire, located mainly in Chad and Nigeria. An outstanding statesman, under his rule (1571-1603) 
+Kanem-Bornu touched the zenith of its power. Idris is remembered for his military skills, administrative 
+reforms, and Islamic piety. His feats are mainly known through his chronicler Ahmad bin Fartuwa.[PARAGRAPH:1]His 
+main adversaries were the Hausa to the west, the Tuareg and Toubou to the north, and the Bulala to the 
+east. One epic poem extols his victories in 330 wars and more than 1,000 battles. His innovations included 
+the employment of fixed military camps (with walls); permanent sieges and "scorched earth" tactics, where 
+soldiers burned everything in their path; armored horses and riders; and the use of Berber camelry, Kotoko 
+boatmen, and iron-helmeted musketeers trained by Turkish military advisers. His active diplomacy featured 
+relations with Tripoli, Egypt, and the Ottoman Empire, which sent a 200-member ambassadorial party across 
+the desert to Alooma's court at Ngazargamu. Alooma also signed what was probably the first written treaty 
+or cease-fire in Chadian history.[PARAGRAPH:1]Alooma introduced a number of legal and administrative 
+reforms based on his religious beliefs and Islamic law (sharia). He sponsored the construction of numerous 
+mosques and made a pilgrimage to Mecca, where he arranged for the establishment of a hostel to be used 
+by pilgrims from his empire. As with other dynamic politicians, Alooma's reformist goals led him to seek 
+loyal and competent advisers and allies, and he frequently relied on slaves who had been educated in 
+noble homes. Alooma regularly sought advice from a council composed of heads of the most important clans. 
+He required major political figures to live at the court, and he reinforced political alliances through 
+appropriate marriages (Alooma himself was the son of a Kanuri father and a Bulala mother).[PARAGRAPH:1]Kanem-Bornu 
+under Alooma was strong and wealthy. Government revenue came from tribute (or booty, if the recalcitrant 
+people had to be conquered), sales of slaves, and duties on and participation in trans-Saharan trade. 
+Unlike West Africa, the Chadian region did not have gold. Still, it was central to one of the most convenient 
+trans-Saharan routes. Between Lake Chad and Fezzan lay a sequence of well-spaced wells and oases, and 
+from Fezzan there were easy connections to North Africa and the Mediterranean Sea. Many products were 
+sent north, including natron (sodium carbonate), cotton, kola nuts, ivory, ostrich feathers, perfume, 
+wax, and hides, but the most important of all were slaves. Imports included salt, horses, silks, glass, 
+muskets, and copper.[PARAGRAPH:1]Alooma took a keen interest in trade and other economic matters. He 
+is credited with having the roads cleared, designing better boats for Lake Chad, introducing standard 
+units of measure for grain, and moving farmers into new lands. In addition, he improved the ease and 
+security of transit through the empire with the goal of making it so safe that "a lone woman clad in 
+gold might walk with none to fear but God.</German>
+		<Italian>[H1]Alooma[\H1][NEWLINE][BOLD]Mai of the Kanem-Bornu Empire[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]1571 
+- 1603[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Idris Alooma was mai (king) of the 
+Kanem-Bornu Empire, located mainly in Chad and Nigeria. An outstanding statesman, under his rule (1571-1603) 
+Kanem-Bornu touched the zenith of its power. Idris is remembered for his military skills, administrative 
+reforms, and Islamic piety. His feats are mainly known through his chronicler Ahmad bin Fartuwa.[PARAGRAPH:1]His 
+main adversaries were the Hausa to the west, the Tuareg and Toubou to the north, and the Bulala to the 
+east. One epic poem extols his victories in 330 wars and more than 1,000 battles. His innovations included 
+the employment of fixed military camps (with walls); permanent sieges and "scorched earth" tactics, where 
+soldiers burned everything in their path; armored horses and riders; and the use of Berber camelry, Kotoko 
+boatmen, and iron-helmeted musketeers trained by Turkish military advisers. His active diplomacy featured 
+relations with Tripoli, Egypt, and the Ottoman Empire, which sent a 200-member ambassadorial party across 
+the desert to Alooma's court at Ngazargamu. Alooma also signed what was probably the first written treaty 
+or cease-fire in Chadian history.[PARAGRAPH:1]Alooma introduced a number of legal and administrative 
+reforms based on his religious beliefs and Islamic law (sharia). He sponsored the construction of numerous 
+mosques and made a pilgrimage to Mecca, where he arranged for the establishment of a hostel to be used 
+by pilgrims from his empire. As with other dynamic politicians, Alooma's reformist goals led him to seek 
+loyal and competent advisers and allies, and he frequently relied on slaves who had been educated in 
+noble homes. Alooma regularly sought advice from a council composed of heads of the most important clans. 
+He required major political figures to live at the court, and he reinforced political alliances through 
+appropriate marriages (Alooma himself was the son of a Kanuri father and a Bulala mother).[PARAGRAPH:1]Kanem-Bornu 
+under Alooma was strong and wealthy. Government revenue came from tribute (or booty, if the recalcitrant 
+people had to be conquered), sales of slaves, and duties on and participation in trans-Saharan trade. 
+Unlike West Africa, the Chadian region did not have gold. Still, it was central to one of the most convenient 
+trans-Saharan routes. Between Lake Chad and Fezzan lay a sequence of well-spaced wells and oases, and 
+from Fezzan there were easy connections to North Africa and the Mediterranean Sea. Many products were 
+sent north, including natron (sodium carbonate), cotton, kola nuts, ivory, ostrich feathers, perfume, 
+wax, and hides, but the most important of all were slaves. Imports included salt, horses, silks, glass, 
+muskets, and copper.[PARAGRAPH:1]Alooma took a keen interest in trade and other economic matters. He 
+is credited with having the roads cleared, designing better boats for Lake Chad, introducing standard 
+units of measure for grain, and moving farmers into new lands. In addition, he improved the ease and 
+security of transit through the empire with the goal of making it so safe that "a lone woman clad in 
+gold might walk with none to fear but God.</Italian>
+		<Spanish>[H1]Alooma[\H1][NEWLINE][BOLD]Mai of the Kanem-Bornu Empire[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]1571 
+- 1603[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Idris Alooma was mai (king) of the 
+Kanem-Bornu Empire, located mainly in Chad and Nigeria. An outstanding statesman, under his rule (1571-1603) 
+Kanem-Bornu touched the zenith of its power. Idris is remembered for his military skills, administrative 
+reforms, and Islamic piety. His feats are mainly known through his chronicler Ahmad bin Fartuwa.[PARAGRAPH:1]His 
+main adversaries were the Hausa to the west, the Tuareg and Toubou to the north, and the Bulala to the 
+east. One epic poem extols his victories in 330 wars and more than 1,000 battles. His innovations included 
+the employment of fixed military camps (with walls); permanent sieges and "scorched earth" tactics, where 
+soldiers burned everything in their path; armored horses and riders; and the use of Berber camelry, Kotoko 
+boatmen, and iron-helmeted musketeers trained by Turkish military advisers. His active diplomacy featured 
+relations with Tripoli, Egypt, and the Ottoman Empire, which sent a 200-member ambassadorial party across 
+the desert to Alooma's court at Ngazargamu. Alooma also signed what was probably the first written treaty 
+or cease-fire in Chadian history.[PARAGRAPH:1]Alooma introduced a number of legal and administrative 
+reforms based on his religious beliefs and Islamic law (sharia). He sponsored the construction of numerous 
+mosques and made a pilgrimage to Mecca, where he arranged for the establishment of a hostel to be used 
+by pilgrims from his empire. As with other dynamic politicians, Alooma's reformist goals led him to seek 
+loyal and competent advisers and allies, and he frequently relied on slaves who had been educated in 
+noble homes. Alooma regularly sought advice from a council composed of heads of the most important clans. 
+He required major political figures to live at the court, and he reinforced political alliances through 
+appropriate marriages (Alooma himself was the son of a Kanuri father and a Bulala mother).[PARAGRAPH:1]Kanem-Bornu 
+under Alooma was strong and wealthy. Government revenue came from tribute (or booty, if the recalcitrant 
+people had to be conquered), sales of slaves, and duties on and participation in trans-Saharan trade. 
+Unlike West Africa, the Chadian region did not have gold. Still, it was central to one of the most convenient 
+trans-Saharan routes. Between Lake Chad and Fezzan lay a sequence of well-spaced wells and oases, and 
+from Fezzan there were easy connections to North Africa and the Mediterranean Sea. Many products were 
+sent north, including natron (sodium carbonate), cotton, kola nuts, ivory, ostrich feathers, perfume, 
+wax, and hides, but the most important of all were slaves. Imports included salt, horses, silks, glass, 
+muskets, and copper.[PARAGRAPH:1]Alooma took a keen interest in trade and other economic matters. He 
+is credited with having the roads cleared, designing better boats for Lake Chad, introducing standard 
+units of measure for grain, and moving farmers into new lands. In addition, he improved the ease and 
+security of transit through the empire with the goal of making it so safe that "a lone woman clad in 
+gold might walk with none to fear but God.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ALOOMA_1</Tag>
+		<English>The mighty [OUR_EMPIRE] greets you. We value our safety so that a lone woman clad in gold might walk with none to fear but God.</English>
+		<French>The mighty [OUR_EMPIRE] greets you. We value our safety so that a lone woman clad in gold might walk with none to fear but God.</French>
+		<German>The mighty [OUR_EMPIRE] greets you. We value our safety so that a lone woman clad in gold might walk with none to fear but God.</German>
+		<Italian>The mighty [OUR_EMPIRE] greets you. We value our safety so that a lone woman clad in gold might walk with none to fear but God.</Italian>
+		<Spanish>The mighty [OUR_EMPIRE] greets you. We value our safety so that a lone woman clad in gold might walk with none to fear but God.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NJIMI</Tag>
+		<English>Njimi</English>
+		<French>
+			<Text>Njimi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Njimi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Njimi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Njimi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KANO</Tag>
+		<English>Kano</English>
+		<French>
+			<Text>Kano</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kano</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kano</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kano</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NGAZARGAMU</Tag>
+		<English>Ngazargamu</English>
+		<French>
+			<Text>Ngazargamu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ngazargamu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ngazargamu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngazargamu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NDJAMENA</Tag>
+		<English>Ndjamena</English>
+		<French>
+			<Text>Ndjamena</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ndjamena</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ndjamena</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ndjamena</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_YAOUNDE</Tag>
+		<English>Yaounde</English>
+		<French>
+			<Text>Yaounde</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Yaounde</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Yaounde</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Yaounde</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DOUALA</Tag>
+		<English>Douala</English>
+		<French>
+			<Text>Douala</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Douala</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Douala</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Douala</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NIAMEY</Tag>
+		<English>Niamey</English>
+		<French>
+			<Text>Niamey</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Niamey</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Niamey</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Niamey</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MANAN</Tag>
+		<English>Manan</English>
+		<French>
+			<Text>Manan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Manan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Manan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Manan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MAIDUGURI</Tag>
+		<English>Maiduguri</English>
+		<French>
+			<Text>Maiduguri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Maiduguri</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Maiduguri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Maiduguri</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ABECHE</Tag>
+		<English>Abeche</English>
+		<French>
+			<Text>Abeche</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Abeche</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Abeche</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Abeche</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GAROUA</Tag>
+		<English>Garoua</English>
+		<French>
+			<Text>Garoua</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Garoua</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Garoua</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Garoua</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BAMENDA</Tag>
+		<English>Bamenda</English>
+		<French>
+			<Text>Bamenda</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Bamenda</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Bamenda</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Bamenda</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MAROUA</Tag>
+		<English>Maroua</English>
+		<French>
+			<Text>Maroua</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Maroua</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Maroua</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Maroua</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BAFOUSSAM</Tag>
+		<English>Bafoussam</English>
+		<French>
+			<Text>Bafoussam</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Bafoussam</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Bafoussam</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Bafoussam</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ZONDER</Tag>
+		<English>Zonder</English>
+		<French>
+			<Text>Zonder</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Zonder</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Zonder</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Zonder</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MARADI</Tag>
+		<English>Maradi</English>
+		<French>
+			<Text>Maradi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Maradi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Maradi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Maradi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MONDOU</Tag>
+		<English>Mondou</English>
+		<French>
+			<Text>Mondou</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mondou</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Mondou</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mondou</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SARH</Tag>
+		<English>Sarh</English>
+		<French>
+			<Text>Sarh</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sarh</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sarh</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sarh</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NGAOUNDERE</Tag>
+		<English>Ngaoundere</English>
+		<French>
+			<Text>Ngaoundere</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ngaoundere</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ngaoundere</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ngaoundere</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BERTOUA</Tag>
+		<English>Bertoua</English>
+		<French>
+			<Text>Bertoua</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Bertoua</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Bertoua</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Bertoua</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LOUM</Tag>
+		<English>Loum</English>
+		<French>
+			<Text>Loum</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Loum</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Loum</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Loum</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KUMBA</Tag>
+		<English>Kumba</English>
+		<French>
+			<Text>Kumba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kumba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kumba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kumba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_EDEA</Tag>
+		<English>Edea</English>
+		<French>
+			<Text>Edea</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Edea</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Edea</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Edea</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BAMA</Tag>
+		<English>Bama</English>
+		<French>
+			<Text>Bama</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Bama</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Bama</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Bama</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SEBHA</Tag>
+		<English>Sebha</English>
+		<French>
+			<Text>Sebha</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sebha</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sebha</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sebha</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+</Civ4GameText>

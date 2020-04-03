@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<Civ4CivilizationInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4CivilizationsSchema.xml">
+	<CivilizationInfos>
+		<CivilizationInfo>
+			<Type>CIVILIZATION_PARAGUAY</Type>
+			<Description>TXT_KEY_CIV_PARAGUAY_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_PARAGUAY_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_PARAGUAY_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_PARAGUAY_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_PARAGUAY</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_PARAGUAY</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_IBERIA</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_SOUTH_AMERICA</UnitArtStyleType>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>Asuncion</City>
+				<City>Ciudad del Este</City>
+				<City>San Lorenzo</City>
+				<City>Luque</City>
+				<City>Capiata</City>
+				<City>Lambare</City>
+				<City>Fernando de la Mora</City>
+				<City>Limpio</City>
+				<City>Nemby</City>
+				<City>Encarnacion</City>
+				<City>Mariano Roque Alonso</City>
+				<City>Pedro Juan Caballero</City>
+				<City>Villa Elisa</City>
+				<City>Caaguazu</City>
+				<City>Coronel Oviedo</City>
+				<City>Hernandarias</City>
+				<City>Presidente Franco</City>
+				<City>Itaugua</City>
+				<City>Concepcion</City>
+				<City>Villarrica</City>
+				<City>San Antonio</City>
+				<City>Pilar</City>
+				<City>Caacupe</City>
+				<City>Ita</City>
+				<City>Mariscal Estigarribia</City>
+				<City>Villa Hayes</City>
+				<City>Minga Guazu</City>
+				<City>San Ignacio</City>
+				<City>San Estanislao</City>
+				<City>Ayolas</City>
+				<City>Villeta</City>
+				<City>Aregua</City>
+				<City>Loma Plata</City>
+				<City>Filadelfia</City>
+				<City>Chaco</City>
+				<City>Neuland</City>
+				<City>Tinfunque</City>
+				<City>Esteban</City>
+				<City>Aregua</City>
+				<City>Caraguatay</City>
+				<City>Benjamin Aceval</City>
+				<City>Villa Hayes</City>
+				<City>Aquino</City>
+				<City>San Estanislao</City>
+				<City>Atyra</City>
+			</Cities>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
+			<InitialCivics>
+				<CivicType>CIVIC_ANARCHISM</CivicType>
+				<CivicType>CIVIC_OBEDIENCE</CivicType>
+				<CivicType>CIVIC_STRONGMAN</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
+				<CivicType>CIVIC_MILITIA</CivicType>
+				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SURVIVAL</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
+				<CivicType>CIVIC_UNORGANIZED</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_SOLANO</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<DerivativeCiv>NONE</DerivativeCiv>
+			<CivilizationSelectionSound>AS3D_SPAIN_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_SPAIN_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+	</CivilizationInfos>
+</Civ4CivilizationInfos>

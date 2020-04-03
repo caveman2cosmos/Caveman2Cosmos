@@ -1,0 +1,1324 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- ReModified by StrategyOnly -->
+<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MEXICO_DESC</Tag>
+		<English>Mexican Empire</English>
+		<French>Empire mexicain</French>
+		<German>Mexican Empire</German>
+		<Italian>Impero Messicano</Italian>
+		<Spanish>Mexican Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MEXICO_SHORT_DESC</Tag>
+		<English>Mexico</English>
+		<French>Mexico</French>
+		<German>Mexico</German>
+		<Italian>Messico</Italian>
+		<Spanish>Mexico</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MEXICO_ADJECTIVE</Tag>
+		<English>Mexican</English>
+		<French>Mexicain</French>
+		<German>Mexican</German>
+		<Italian>
+			<Text>Messicano:Messicana:Messicani:Messicane</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Italian>
+		<Spanish>Mexican</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MEXICO_PEDIA</Tag>
+		<English>[TAB]Highly developed cultures, including those of the Olmecs, Mayas, Toltecs, and Aztecs, existed long before the Spanish conquest. Hernando Cortes conquered Mexico during the period 1519-21 and founded a Spanish colony that lasted nearly 300 years.[PARAGRAPH:2]Independence from Spain was proclaimed by Father Miguel Hidalgo on September 16, 1810. Father Hidalgo's declaration of national independence, known in Mexico as the "Grito de Dolores", launched a decade long struggle for independence from Spain. Prominent figures in Mexico's war for independence were Father Jose Maria Morelos; Gen. Augustin de Iturbide, who defeated the Spaniards and ruled as Mexican emperor from 1822-23; and Gen. Antonio Lopez de Santa Ana, who went on to dominate Mexican politics from 1833 to 1855. An 1821 treaty recognized Mexican independence from Spain and called for a constitutional monarchy. The planned monarchy failed; a republic was proclaimed in December 1822 and established in 1824.[PARAGRAPH:2]Throughout the rest of the 19th century, Mexico's government and economy were shaped by contentious debates among liberals and conservatives, republicans and monarchists, federalists and those who favored centralized government. During the two presidential terms of Benito Juarez (1858-71), Mexico experimented with modern democratic and economic reforms. President Juarez' terms of office, and Mexico's early experience with democracy, were interrupted by the Habsburg monarchy's rule of Mexico (1864-67), and was followed by the authoritarian government of Gen. Porfirio Diaz, who was president during most of the period between 1877 and 1911.[PARAGRAPH:2]Mexico's severe social and economic problems erupted in a revolution that lasted from 1910-20 and gave rise to the 1917 constitution. Prominent leaders in this period (some of whom were rivals for power) were Francisco Madero, Venustiano Carranza, Pancho Villa, Alvaro Obregon, Victoriano Huerta, and Emiliano Zapata. The Institutional Revolutionary Party (PRI), formed in 1929 under a different name, emerged from the chaos of revolution as a vehicle for keeping political competition among a coalition of interests in peaceful channels. For 71 years, Mexico's national government was controlled by the PRI, which won every presidential race and most gubernatorial races until the July 2000 presidential election of Vicente Fox Quesada of the National Action Party (PAN).</English>
+		<French>[TAB]Highly developed cultures, including those of the Olmecs, Mayas, Toltecs, and Aztecs, existed long before the Spanish conquest. Hernando Cortes conquered Mexico during the period 1519-21 and founded a Spanish colony that lasted nearly 300 years.[PARAGRAPH:2]Independence from Spain was proclaimed by Father Miguel Hidalgo on September 16, 1810. Father Hidalgo's declaration of national independence, known in Mexico as the "Grito de Dolores", launched a decade long struggle for independence from Spain. Prominent figures in Mexico's war for independence were Father Jose Maria Morelos; Gen. Augustin de Iturbide, who defeated the Spaniards and ruled as Mexican emperor from 1822-23; and Gen. Antonio Lopez de Santa Ana, who went on to dominate Mexican politics from 1833 to 1855. An 1821 treaty recognized Mexican independence from Spain and called for a constitutional monarchy. The planned monarchy failed; a republic was proclaimed in December 1822 and established in 1824.[PARAGRAPH:2]Throughout the rest of the 19th century, Mexico's government and economy were shaped by contentious debates among liberals and conservatives, republicans and monarchists, federalists and those who favored centralized government. During the two presidential terms of Benito Juarez (1858-71), Mexico experimented with modern democratic and economic reforms. President Juarez' terms of office, and Mexico's early experience with democracy, were interrupted by the Habsburg monarchy's rule of Mexico (1864-67), and was followed by the authoritarian government of Gen. Porfirio Diaz, who was president during most of the period between 1877 and 1911.[PARAGRAPH:2]Mexico's severe social and economic problems erupted in a revolution that lasted from 1910-20 and gave rise to the 1917 constitution. Prominent leaders in this period (some of whom were rivals for power) were Francisco Madero, Venustiano Carranza, Pancho Villa, Alvaro Obregon, Victoriano Huerta, and Emiliano Zapata. The Institutional Revolutionary Party (PRI), formed in 1929 under a different name, emerged from the chaos of revolution as a vehicle for keeping political competition among a coalition of interests in peaceful channels. For 71 years, Mexico's national government was controlled by the PRI, which won every presidential race and most gubernatorial races until the July 2000 presidential election of Vicente Fox Quesada of the National Action Party (PAN).</French>
+		<German>[TAB]Highly developed cultures, including those of the Olmecs, Mayas, Toltecs, and Aztecs, existed long before the Spanish conquest. Hernando Cortes conquered Mexico during the period 1519-21 and founded a Spanish colony that lasted nearly 300 years.[PARAGRAPH:2]Independence from Spain was proclaimed by Father Miguel Hidalgo on September 16, 1810. Father Hidalgo's declaration of national independence, known in Mexico as the "Grito de Dolores", launched a decade long struggle for independence from Spain. Prominent figures in Mexico's war for independence were Father Jose Maria Morelos; Gen. Augustin de Iturbide, who defeated the Spaniards and ruled as Mexican emperor from 1822-23; and Gen. Antonio Lopez de Santa Ana, who went on to dominate Mexican politics from 1833 to 1855. An 1821 treaty recognized Mexican independence from Spain and called for a constitutional monarchy. The planned monarchy failed; a republic was proclaimed in December 1822 and established in 1824.[PARAGRAPH:2]Throughout the rest of the 19th century, Mexico's government and economy were shaped by contentious debates among liberals and conservatives, republicans and monarchists, federalists and those who favored centralized government. During the two presidential terms of Benito Juarez (1858-71), Mexico experimented with modern democratic and economic reforms. President Juarez' terms of office, and Mexico's early experience with democracy, were interrupted by the Habsburg monarchy's rule of Mexico (1864-67), and was followed by the authoritarian government of Gen. Porfirio Diaz, who was president during most of the period between 1877 and 1911.[PARAGRAPH:2]Mexico's severe social and economic problems erupted in a revolution that lasted from 1910-20 and gave rise to the 1917 constitution. Prominent leaders in this period (some of whom were rivals for power) were Francisco Madero, Venustiano Carranza, Pancho Villa, Alvaro Obregon, Victoriano Huerta, and Emiliano Zapata. The Institutional Revolutionary Party (PRI), formed in 1929 under a different name, emerged from the chaos of revolution as a vehicle for keeping political competition among a coalition of interests in peaceful channels. For 71 years, Mexico's national government was controlled by the PRI, which won every presidential race and most gubernatorial races until the July 2000 presidential election of Vicente Fox Quesada of the National Action Party (PAN).</German>
+		<Italian>[TAB]Highly developed cultures, including those of the Olmecs, Mayas, Toltecs, and Aztecs, existed long before the Spanish conquest. Hernando Cortes conquered Mexico during the period 1519-21 and founded a Spanish colony that lasted nearly 300 years.[PARAGRAPH:2]Independence from Spain was proclaimed by Father Miguel Hidalgo on September 16, 1810. Father Hidalgo's declaration of national independence, known in Mexico as the "Grito de Dolores", launched a decade long struggle for independence from Spain. Prominent figures in Mexico's war for independence were Father Jose Maria Morelos; Gen. Augustin de Iturbide, who defeated the Spaniards and ruled as Mexican emperor from 1822-23; and Gen. Antonio Lopez de Santa Ana, who went on to dominate Mexican politics from 1833 to 1855. An 1821 treaty recognized Mexican independence from Spain and called for a constitutional monarchy. The planned monarchy failed; a republic was proclaimed in December 1822 and established in 1824.[PARAGRAPH:2]Throughout the rest of the 19th century, Mexico's government and economy were shaped by contentious debates among liberals and conservatives, republicans and monarchists, federalists and those who favored centralized government. During the two presidential terms of Benito Juarez (1858-71), Mexico experimented with modern democratic and economic reforms. President Juarez' terms of office, and Mexico's early experience with democracy, were interrupted by the Habsburg monarchy's rule of Mexico (1864-67), and was followed by the authoritarian government of Gen. Porfirio Diaz, who was president during most of the period between 1877 and 1911.[PARAGRAPH:2]Mexico's severe social and economic problems erupted in a revolution that lasted from 1910-20 and gave rise to the 1917 constitution. Prominent leaders in this period (some of whom were rivals for power) were Francisco Madero, Venustiano Carranza, Pancho Villa, Alvaro Obregon, Victoriano Huerta, and Emiliano Zapata. The Institutional Revolutionary Party (PRI), formed in 1929 under a different name, emerged from the chaos of revolution as a vehicle for keeping political competition among a coalition of interests in peaceful channels. For 71 years, Mexico's national government was controlled by the PRI, which won every presidential race and most gubernatorial races until the July 2000 presidential election of Vicente Fox Quesada of the National Action Party (PAN).</Italian>
+		<Spanish>[TAB]Highly developed cultures, including those of the Olmecs, Mayas, Toltecs, and Aztecs, existed long before the Spanish conquest. Hernando Cortes conquered Mexico during the period 1519-21 and founded a Spanish colony that lasted nearly 300 years.[PARAGRAPH:2]Independence from Spain was proclaimed by Father Miguel Hidalgo on September 16, 1810. Father Hidalgo's declaration of national independence, known in Mexico as the "Grito de Dolores", launched a decade long struggle for independence from Spain. Prominent figures in Mexico's war for independence were Father Jose Maria Morelos; Gen. Augustin de Iturbide, who defeated the Spaniards and ruled as Mexican emperor from 1822-23; and Gen. Antonio Lopez de Santa Ana, who went on to dominate Mexican politics from 1833 to 1855. An 1821 treaty recognized Mexican independence from Spain and called for a constitutional monarchy. The planned monarchy failed; a republic was proclaimed in December 1822 and established in 1824.[PARAGRAPH:2]Throughout the rest of the 19th century, Mexico's government and economy were shaped by contentious debates among liberals and conservatives, republicans and monarchists, federalists and those who favored centralized government. During the two presidential terms of Benito Juarez (1858-71), Mexico experimented with modern democratic and economic reforms. President Juarez' terms of office, and Mexico's early experience with democracy, were interrupted by the Habsburg monarchy's rule of Mexico (1864-67), and was followed by the authoritarian government of Gen. Porfirio Diaz, who was president during most of the period between 1877 and 1911.[PARAGRAPH:2]Mexico's severe social and economic problems erupted in a revolution that lasted from 1910-20 and gave rise to the 1917 constitution. Prominent leaders in this period (some of whom were rivals for power) were Francisco Madero, Venustiano Carranza, Pancho Villa, Alvaro Obregon, Victoriano Huerta, and Emiliano Zapata. The Institutional Revolutionary Party (PRI), formed in 1929 under a different name, emerged from the chaos of revolution as a vehicle for keeping political competition among a coalition of interests in peaceful channels. For 71 years, Mexico's national government was controlled by the PRI, which won every presidential race and most gubernatorial races until the July 2000 presidential election of Vicente Fox Quesada of the National Action Party (PAN).</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_HIDALGO</Tag>
+		<English>Hidalgo</English>
+		<French>Hidalgo</French>
+		<German>Hidalgo</German>
+		<Italian>Hidalgo</Italian>
+		<Spanish>Hidalgo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_HIDALGO_1</Tag>
+		<English>May the blessings of Heaven be upon you, [CT_NAME]. I am [OUR_NAME] of the [OUR_CIV_SHORT]. Mexicanos, Viva Mexico!</English>
+		<French>May the blessings of Heaven be upon you, [CT_NAME]. I am [OUR_NAME] of the [OUR_CIV_SHORT]. Mexicanos, Viva Mexico!</French>
+		<German>May the blessings of Heaven be upon you, [CT_NAME]. I am [OUR_NAME] of the [OUR_CIV_SHORT]. Mexicanos, Viva Mexico!</German>
+		<Italian>Possano le benedizioni del cielo ricoprirti, [CT_NAME]. Io sono [OUR_NAME] di [OUR_CIV_SHORT]. Mexicanos, Viva Mexico!</Italian>
+		<Spanish>May the blessings of Heaven be upon you, [CT_NAME]. I am [OUR_NAME] of the [OUR_CIV_SHORT]. Mexicanos, Viva Mexico!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_HIDALGO_PEDIA</Tag>
+		<English>[H1]Miguel Hidalgo y Costilla[\H1][NEWLINE][BOLD]Revolutionary, Priest[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] May 8, 1753 - July 30, 1811 AD [NEWLINE] [PARAGRAPH:2][BOLD]Background:[\BOLD] [PARAGRAPH:1]Miguel Hidalgo y Costilla (1753-1811), a Mexican revolutionary priest, is considered the foremost patriot of Mexican independence. He led a revolt against Spanish rule that inaugurated a series of military and political episodes culminating in the achievement of Mexican independence in 1821.[PARAGRAPH:1]Miguel Hidalgo was born a Creole on May 8, 1753. His father was the administrator of a hacienda in the Bajío (in the present state of Guanajuato). Miguel was trained briefly in a Jesuit school before the order was expelled from the empire in 1767. Later that year he matriculated in the diocesan College of San Nicolás in Valladolid (now Morelia). Hidalgo was intellectually oriented and chose to remain part of the academic community long after he had earned degrees in theology and had been ordained. By 1776 he was a member of the San Nicolás faculty and remained in Valladolid until 1792 as an academician, an exponent of the Enlightenment, and a Don Juan. In 1790 he became rector of the college, but his advanced ideas and mismanagement of funds soon led to his ouster.[PARAGRAPH:1]From 1792 until 1810 Hidalgo served as parish priest in a succession of curacies. While in San Felipe (1793-1803), he made his house a salon and promoted French theatrical works (which he translated), orchestral music, dances, and literary discussions. The Inquisition investigated his activities (1800-1801) but did not press charges. On his arrival in Dolores near Guanajuato in 1803, Hidalgo turned to more socioeconomic interests. These he expressed through his development of local craft industries (ceramics, tanning, sericulture) for the benefit of the Indian and caste population.[PARAGRAPH:1]With the Napoleonic invasion of Spain in 1808, Mexico's own crisis began. Hidalgo's search for intellectual companionship had brought him into contact with prominent Creoles throughout the Bajío, Michoacán, and adjacent areas. When the Creoles in Querétaro organized a plot to expel the dominant peninsular Spaniards and to substitute themselves in power, Hidalgo joined. Articulate, well informed, and charismatic, he soon emerged as the uprising's leader, with Ignacio Allende, a militia captain, as second in command.[PARAGRAPH:1]Exposed in early September 1810, the conspirators were forced to revolt prematurely. In a dramatic episode, Hidalgo put the plan into effect on September 16 by delivering an impassioned speech, the Grito de Dolores, to his parishioners. Avoiding abstractions like "independence," which were meaningless to the untutored villagers, he couched his revolutionary appeals in traditional protest language: the Catholic religion and the exiled king, Ferdinand VII, were extolled, and "death to bad government," represented by the peninsular Spaniards, was urged. The native patroness, the Virgin of Guadalupe, was added to the slogans, and her image became the banner of the revolt.[PARAGRAPH:1]Hidalgo permitted Indians and castes to join his holy war of redemption in such numbers that the original white Creole motives of the insurrection were obscured. The jacquerie swept through the Bajío, burning and looting, until it engulfed the mining center of Guanajuato on September 28. The massacre of the Spanish defenders of the fortress granary and the subsequent sack of the city set the tone for the Hidalgo revolt. Hidalgo took Valladolid in mid-October and then marched on Mexico City. His horde numbered some 80,000 as it approached the viceregal capital.[PARAGRAPH:1]Meanwhile, the royalist government in Mexico City, under the leadership of Viceroy Francisco Venegas, had prepared defenses as much psychological as military. An intensive propaganda campaign had advertised the destructive horrors of the social revolution and revealed its threat to vested Creole interests. Hidalgo won a Pyrrhic victory on October 30 at Monte de las Cruces on the divide between Toluca and the capital but found the sedentary Indians and castes of the Valley of Mexico as much opposed to the Bajío intruders as were the Creoles and Spaniards. Threatened from the north by an army under the royalist general Félix Calleja, Hidalgo withdrew to Guadalajara to recoup without attacking Mexico City.[PARAGRAPH:1]From his new base, Hidalgo made rudimentary efforts to establish a separatist government and to ameliorate the economic plight of the lower sectors of society (abolition of slavery and tribute were confirmed, and lands were ordered restored to Indian communities). Hidalgo, a strong egoist, however, assumed grandiose airs and exacerbated a growing schism with Allende's Creole faction. In January 1811 Calleja threatened Guadalajara, and Hidalgo advanced east to meet him at the bridge of Calderón with nearly 100,000 men. Calleja's disciplined army of 7,000 men defeated Hidalgo's horde on January 17, and Hidalgo fled north.[PARAGRAPH:1]Suspended from command by the Allende party, Hidalgo was only a figurehead during the retreat. Allende's attempt in March to reach the United States was thwarted at Baján north of Saltillo, and the major leaders of the rebellion were captured. Hidalgo and his companions were removed to Chihuahua for trial and the inevitable executions. Aware that his enterprise had been a catastrophe, Hidalgo repented and apparently signed a public retraction. He was shot on July 30, 1811, and his body decapitated.[PARAGRAPH:1]After Hidalgo's death his cause languished in spite of the efforts of José María Morelos, for the Creole majority remained opposed. In 1821 Agustín de Iturbide engineered a conservative independence and established a short-lived empire. After the republican overthrown of Iturbide, Hidalgo emerged as a patriotic hero. Modern Mexico venerates him as the Padre de la Patria, and the anniversary of his Grito is celebrated on September 16 as Mexico's independence day.[PARAGRAPH:1]</English>
+		<French>[H1]Miguel Hidalgo y Costilla[\H1][NEWLINE][BOLD]Revolutionary, Priest[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] May 8, 1753 - July 30, 1811 AD [NEWLINE] [PARAGRAPH:2][BOLD]Background:[\BOLD] [PARAGRAPH:1]Miguel Hidalgo y Costilla (1753-1811), a Mexican revolutionary priest, is considered the foremost patriot of Mexican independence. He led a revolt against Spanish rule that inaugurated a series of military and political episodes culminating in the achievement of Mexican independence in 1821.[PARAGRAPH:1]Miguel Hidalgo was born a Creole on May 8, 1753. His father was the administrator of a hacienda in the Bajío (in the present state of Guanajuato). Miguel was trained briefly in a Jesuit school before the order was expelled from the empire in 1767. Later that year he matriculated in the diocesan College of San Nicolás in Valladolid (now Morelia). Hidalgo was intellectually oriented and chose to remain part of the academic community long after he had earned degrees in theology and had been ordained. By 1776 he was a member of the San Nicolás faculty and remained in Valladolid until 1792 as an academician, an exponent of the Enlightenment, and a Don Juan. In 1790 he became rector of the college, but his advanced ideas and mismanagement of funds soon led to his ouster.[PARAGRAPH:1]From 1792 until 1810 Hidalgo served as parish priest in a succession of curacies. While in San Felipe (1793-1803), he made his house a salon and promoted French theatrical works (which he translated), orchestral music, dances, and literary discussions. The Inquisition investigated his activities (1800-1801) but did not press charges. On his arrival in Dolores near Guanajuato in 1803, Hidalgo turned to more socioeconomic interests. These he expressed through his development of local craft industries (ceramics, tanning, sericulture) for the benefit of the Indian and caste population.[PARAGRAPH:1]With the Napoleonic invasion of Spain in 1808, Mexico's own crisis began. Hidalgo's search for intellectual companionship had brought him into contact with prominent Creoles throughout the Bajío, Michoacán, and adjacent areas. When the Creoles in Querétaro organized a plot to expel the dominant peninsular Spaniards and to substitute themselves in power, Hidalgo joined. Articulate, well informed, and charismatic, he soon emerged as the uprising's leader, with Ignacio Allende, a militia captain, as second in command.[PARAGRAPH:1]Exposed in early September 1810, the conspirators were forced to revolt prematurely. In a dramatic episode, Hidalgo put the plan into effect on September 16 by delivering an impassioned speech, the Grito de Dolores, to his parishioners. Avoiding abstractions like "independence," which were meaningless to the untutored villagers, he couched his revolutionary appeals in traditional protest language: the Catholic religion and the exiled king, Ferdinand VII, were extolled, and "death to bad government," represented by the peninsular Spaniards, was urged. The native patroness, the Virgin of Guadalupe, was added to the slogans, and her image became the banner of the revolt.[PARAGRAPH:1]Hidalgo permitted Indians and castes to join his holy war of redemption in such numbers that the original white Creole motives of the insurrection were obscured. The jacquerie swept through the Bajío, burning and looting, until it engulfed the mining center of Guanajuato on September 28. The massacre of the Spanish defenders of the fortress granary and the subsequent sack of the city set the tone for the Hidalgo revolt. Hidalgo took Valladolid in mid-October and then marched on Mexico City. His horde numbered some 80,000 as it approached the viceregal capital.[PARAGRAPH:1]Meanwhile, the royalist government in Mexico City, under the leadership of Viceroy Francisco Venegas, had prepared defenses as much psychological as military. An intensive propaganda campaign had advertised the destructive horrors of the social revolution and revealed its threat to vested Creole interests. Hidalgo won a Pyrrhic victory on October 30 at Monte de las Cruces on the divide between Toluca and the capital but found the sedentary Indians and castes of the Valley of Mexico as much opposed to the Bajío intruders as were the Creoles and Spaniards. Threatened from the north by an army under the royalist general Félix Calleja, Hidalgo withdrew to Guadalajara to recoup without attacking Mexico City.[PARAGRAPH:1]From his new base, Hidalgo made rudimentary efforts to establish a separatist government and to ameliorate the economic plight of the lower sectors of society (abolition of slavery and tribute were confirmed, and lands were ordered restored to Indian communities). Hidalgo, a strong egoist, however, assumed grandiose airs and exacerbated a growing schism with Allende's Creole faction. In January 1811 Calleja threatened Guadalajara, and Hidalgo advanced east to meet him at the bridge of Calderón with nearly 100,000 men. Calleja's disciplined army of 7,000 men defeated Hidalgo's horde on January 17, and Hidalgo fled north.[PARAGRAPH:1]Suspended from command by the Allende party, Hidalgo was only a figurehead during the retreat. Allende's attempt in March to reach the United States was thwarted at Baján north of Saltillo, and the major leaders of the rebellion were captured. Hidalgo and his companions were removed to Chihuahua for trial and the inevitable executions. Aware that his enterprise had been a catastrophe, Hidalgo repented and apparently signed a public retraction. He was shot on July 30, 1811, and his body decapitated.[PARAGRAPH:1]After Hidalgo's death his cause languished in spite of the efforts of José María Morelos, for the Creole majority remained opposed. In 1821 Agustín de Iturbide engineered a conservative independence and established a short-lived empire. After the republican overthrown of Iturbide, Hidalgo emerged as a patriotic hero. Modern Mexico venerates him as the Padre de la Patria, and the anniversary of his Grito is celebrated on September 16 as Mexico's independence day.[PARAGRAPH:1]</French>
+		<German>[H1]Miguel Hidalgo y Costilla[\H1][NEWLINE][BOLD]Revolutionary, Priest[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] May 8, 1753 - July 30, 1811 AD [NEWLINE] [PARAGRAPH:2][BOLD]Background:[\BOLD] [PARAGRAPH:1]Miguel Hidalgo y Costilla (1753-1811), a Mexican revolutionary priest, is considered the foremost patriot of Mexican independence. He led a revolt against Spanish rule that inaugurated a series of military and political episodes culminating in the achievement of Mexican independence in 1821.[PARAGRAPH:1]Miguel Hidalgo was born a Creole on May 8, 1753. His father was the administrator of a hacienda in the Bajío (in the present state of Guanajuato). Miguel was trained briefly in a Jesuit school before the order was expelled from the empire in 1767. Later that year he matriculated in the diocesan College of San Nicolás in Valladolid (now Morelia). Hidalgo was intellectually oriented and chose to remain part of the academic community long after he had earned degrees in theology and had been ordained. By 1776 he was a member of the San Nicolás faculty and remained in Valladolid until 1792 as an academician, an exponent of the Enlightenment, and a Don Juan. In 1790 he became rector of the college, but his advanced ideas and mismanagement of funds soon led to his ouster.[PARAGRAPH:1]From 1792 until 1810 Hidalgo served as parish priest in a succession of curacies. While in San Felipe (1793-1803), he made his house a salon and promoted French theatrical works (which he translated), orchestral music, dances, and literary discussions. The Inquisition investigated his activities (1800-1801) but did not press charges. On his arrival in Dolores near Guanajuato in 1803, Hidalgo turned to more socioeconomic interests. These he expressed through his development of local craft industries (ceramics, tanning, sericulture) for the benefit of the Indian and caste population.[PARAGRAPH:1]With the Napoleonic invasion of Spain in 1808, Mexico's own crisis began. Hidalgo's search for intellectual companionship had brought him into contact with prominent Creoles throughout the Bajío, Michoacán, and adjacent areas. When the Creoles in Querétaro organized a plot to expel the dominant peninsular Spaniards and to substitute themselves in power, Hidalgo joined. Articulate, well informed, and charismatic, he soon emerged as the uprising's leader, with Ignacio Allende, a militia captain, as second in command.[PARAGRAPH:1]Exposed in early September 1810, the conspirators were forced to revolt prematurely. In a dramatic episode, Hidalgo put the plan into effect on September 16 by delivering an impassioned speech, the Grito de Dolores, to his parishioners. Avoiding abstractions like "independence," which were meaningless to the untutored villagers, he couched his revolutionary appeals in traditional protest language: the Catholic religion and the exiled king, Ferdinand VII, were extolled, and "death to bad government," represented by the peninsular Spaniards, was urged. The native patroness, the Virgin of Guadalupe, was added to the slogans, and her image became the banner of the revolt.[PARAGRAPH:1]Hidalgo permitted Indians and castes to join his holy war of redemption in such numbers that the original white Creole motives of the insurrection were obscured. The jacquerie swept through the Bajío, burning and looting, until it engulfed the mining center of Guanajuato on September 28. The massacre of the Spanish defenders of the fortress granary and the subsequent sack of the city set the tone for the Hidalgo revolt. Hidalgo took Valladolid in mid-October and then marched on Mexico City. His horde numbered some 80,000 as it approached the viceregal capital.[PARAGRAPH:1]Meanwhile, the royalist government in Mexico City, under the leadership of Viceroy Francisco Venegas, had prepared defenses as much psychological as military. An intensive propaganda campaign had advertised the destructive horrors of the social revolution and revealed its threat to vested Creole interests. Hidalgo won a Pyrrhic victory on October 30 at Monte de las Cruces on the divide between Toluca and the capital but found the sedentary Indians and castes of the Valley of Mexico as much opposed to the Bajío intruders as were the Creoles and Spaniards. Threatened from the north by an army under the royalist general Félix Calleja, Hidalgo withdrew to Guadalajara to recoup without attacking Mexico City.[PARAGRAPH:1]From his new base, Hidalgo made rudimentary efforts to establish a separatist government and to ameliorate the economic plight of the lower sectors of society (abolition of slavery and tribute were confirmed, and lands were ordered restored to Indian communities). Hidalgo, a strong egoist, however, assumed grandiose airs and exacerbated a growing schism with Allende's Creole faction. In January 1811 Calleja threatened Guadalajara, and Hidalgo advanced east to meet him at the bridge of Calderón with nearly 100,000 men. Calleja's disciplined army of 7,000 men defeated Hidalgo's horde on January 17, and Hidalgo fled north.[PARAGRAPH:1]Suspended from command by the Allende party, Hidalgo was only a figurehead during the retreat. Allende's attempt in March to reach the United States was thwarted at Baján north of Saltillo, and the major leaders of the rebellion were captured. Hidalgo and his companions were removed to Chihuahua for trial and the inevitable executions. Aware that his enterprise had been a catastrophe, Hidalgo repented and apparently signed a public retraction. He was shot on July 30, 1811, and his body decapitated.[PARAGRAPH:1]After Hidalgo's death his cause languished in spite of the efforts of José María Morelos, for the Creole majority remained opposed. In 1821 Agustín de Iturbide engineered a conservative independence and established a short-lived empire. After the republican overthrown of Iturbide, Hidalgo emerged as a patriotic hero. Modern Mexico venerates him as the Padre de la Patria, and the anniversary of his Grito is celebrated on September 16 as Mexico's independence day.[PARAGRAPH:1]</German>
+		<Italian>[H1]Miguel Hidalgo y Costilla[\H1][NEWLINE][BOLD]Revolutionary, Priest[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] May 8, 1753 - July 30, 1811 AD [NEWLINE] [PARAGRAPH:2][BOLD]Background:[\BOLD] [PARAGRAPH:1]Miguel Hidalgo y Costilla (1753-1811), a Mexican revolutionary priest, is considered the foremost patriot of Mexican independence. He led a revolt against Spanish rule that inaugurated a series of military and political episodes culminating in the achievement of Mexican independence in 1821.[PARAGRAPH:1]Miguel Hidalgo was born a Creole on May 8, 1753. His father was the administrator of a hacienda in the Bajío (in the present state of Guanajuato). Miguel was trained briefly in a Jesuit school before the order was expelled from the empire in 1767. Later that year he matriculated in the diocesan College of San Nicolás in Valladolid (now Morelia). Hidalgo was intellectually oriented and chose to remain part of the academic community long after he had earned degrees in theology and had been ordained. By 1776 he was a member of the San Nicolás faculty and remained in Valladolid until 1792 as an academician, an exponent of the Enlightenment, and a Don Juan. In 1790 he became rector of the college, but his advanced ideas and mismanagement of funds soon led to his ouster.[PARAGRAPH:1]From 1792 until 1810 Hidalgo served as parish priest in a succession of curacies. While in San Felipe (1793-1803), he made his house a salon and promoted French theatrical works (which he translated), orchestral music, dances, and literary discussions. The Inquisition investigated his activities (1800-1801) but did not press charges. On his arrival in Dolores near Guanajuato in 1803, Hidalgo turned to more socioeconomic interests. These he expressed through his development of local craft industries (ceramics, tanning, sericulture) for the benefit of the Indian and caste population.[PARAGRAPH:1]With the Napoleonic invasion of Spain in 1808, Mexico's own crisis began. Hidalgo's search for intellectual companionship had brought him into contact with prominent Creoles throughout the Bajío, Michoacán, and adjacent areas. When the Creoles in Querétaro organized a plot to expel the dominant peninsular Spaniards and to substitute themselves in power, Hidalgo joined. Articulate, well informed, and charismatic, he soon emerged as the uprising's leader, with Ignacio Allende, a militia captain, as second in command.[PARAGRAPH:1]Exposed in early September 1810, the conspirators were forced to revolt prematurely. In a dramatic episode, Hidalgo put the plan into effect on September 16 by delivering an impassioned speech, the Grito de Dolores, to his parishioners. Avoiding abstractions like "independence," which were meaningless to the untutored villagers, he couched his revolutionary appeals in traditional protest language: the Catholic religion and the exiled king, Ferdinand VII, were extolled, and "death to bad government," represented by the peninsular Spaniards, was urged. The native patroness, the Virgin of Guadalupe, was added to the slogans, and her image became the banner of the revolt.[PARAGRAPH:1]Hidalgo permitted Indians and castes to join his holy war of redemption in such numbers that the original white Creole motives of the insurrection were obscured. The jacquerie swept through the Bajío, burning and looting, until it engulfed the mining center of Guanajuato on September 28. The massacre of the Spanish defenders of the fortress granary and the subsequent sack of the city set the tone for the Hidalgo revolt. Hidalgo took Valladolid in mid-October and then marched on Mexico City. His horde numbered some 80,000 as it approached the viceregal capital.[PARAGRAPH:1]Meanwhile, the royalist government in Mexico City, under the leadership of Viceroy Francisco Venegas, had prepared defenses as much psychological as military. An intensive propaganda campaign had advertised the destructive horrors of the social revolution and revealed its threat to vested Creole interests. Hidalgo won a Pyrrhic victory on October 30 at Monte de las Cruces on the divide between Toluca and the capital but found the sedentary Indians and castes of the Valley of Mexico as much opposed to the Bajío intruders as were the Creoles and Spaniards. Threatened from the north by an army under the royalist general Félix Calleja, Hidalgo withdrew to Guadalajara to recoup without attacking Mexico City.[PARAGRAPH:1]From his new base, Hidalgo made rudimentary efforts to establish a separatist government and to ameliorate the economic plight of the lower sectors of society (abolition of slavery and tribute were confirmed, and lands were ordered restored to Indian communities). Hidalgo, a strong egoist, however, assumed grandiose airs and exacerbated a growing schism with Allende's Creole faction. In January 1811 Calleja threatened Guadalajara, and Hidalgo advanced east to meet him at the bridge of Calderón with nearly 100,000 men. Calleja's disciplined army of 7,000 men defeated Hidalgo's horde on January 17, and Hidalgo fled north.[PARAGRAPH:1]Suspended from command by the Allende party, Hidalgo was only a figurehead during the retreat. Allende's attempt in March to reach the United States was thwarted at Baján north of Saltillo, and the major leaders of the rebellion were captured. Hidalgo and his companions were removed to Chihuahua for trial and the inevitable executions. Aware that his enterprise had been a catastrophe, Hidalgo repented and apparently signed a public retraction. He was shot on July 30, 1811, and his body decapitated.[PARAGRAPH:1]After Hidalgo's death his cause languished in spite of the efforts of José María Morelos, for the Creole majority remained opposed. In 1821 Agustín de Iturbide engineered a conservative independence and established a short-lived empire. After the republican overthrown of Iturbide, Hidalgo emerged as a patriotic hero. Modern Mexico venerates him as the Padre de la Patria, and the anniversary of his Grito is celebrated on September 16 as Mexico's independence day.[PARAGRAPH:1]</Italian>
+		<Spanish>[H1]Miguel Hidalgo y Costilla[\H1][NEWLINE][BOLD]Revolutionary, Priest[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] May 8, 1753 - July 30, 1811 AD [NEWLINE] [PARAGRAPH:2][BOLD]Background:[\BOLD] [PARAGRAPH:1]Miguel Hidalgo y Costilla (1753-1811), a Mexican revolutionary priest, is considered the foremost patriot of Mexican independence. He led a revolt against Spanish rule that inaugurated a series of military and political episodes culminating in the achievement of Mexican independence in 1821.[PARAGRAPH:1]Miguel Hidalgo was born a Creole on May 8, 1753. His father was the administrator of a hacienda in the Bajío (in the present state of Guanajuato). Miguel was trained briefly in a Jesuit school before the order was expelled from the empire in 1767. Later that year he matriculated in the diocesan College of San Nicolás in Valladolid (now Morelia). Hidalgo was intellectually oriented and chose to remain part of the academic community long after he had earned degrees in theology and had been ordained. By 1776 he was a member of the San Nicolás faculty and remained in Valladolid until 1792 as an academician, an exponent of the Enlightenment, and a Don Juan. In 1790 he became rector of the college, but his advanced ideas and mismanagement of funds soon led to his ouster.[PARAGRAPH:1]From 1792 until 1810 Hidalgo served as parish priest in a succession of curacies. While in San Felipe (1793-1803), he made his house a salon and promoted French theatrical works (which he translated), orchestral music, dances, and literary discussions. The Inquisition investigated his activities (1800-1801) but did not press charges. On his arrival in Dolores near Guanajuato in 1803, Hidalgo turned to more socioeconomic interests. These he expressed through his development of local craft industries (ceramics, tanning, sericulture) for the benefit of the Indian and caste population.[PARAGRAPH:1]With the Napoleonic invasion of Spain in 1808, Mexico's own crisis began. Hidalgo's search for intellectual companionship had brought him into contact with prominent Creoles throughout the Bajío, Michoacán, and adjacent areas. When the Creoles in Querétaro organized a plot to expel the dominant peninsular Spaniards and to substitute themselves in power, Hidalgo joined. Articulate, well informed, and charismatic, he soon emerged as the uprising's leader, with Ignacio Allende, a militia captain, as second in command.[PARAGRAPH:1]Exposed in early September 1810, the conspirators were forced to revolt prematurely. In a dramatic episode, Hidalgo put the plan into effect on September 16 by delivering an impassioned speech, the Grito de Dolores, to his parishioners. Avoiding abstractions like "independence," which were meaningless to the untutored villagers, he couched his revolutionary appeals in traditional protest language: the Catholic religion and the exiled king, Ferdinand VII, were extolled, and "death to bad government," represented by the peninsular Spaniards, was urged. The native patroness, the Virgin of Guadalupe, was added to the slogans, and her image became the banner of the revolt.[PARAGRAPH:1]Hidalgo permitted Indians and castes to join his holy war of redemption in such numbers that the original white Creole motives of the insurrection were obscured. The jacquerie swept through the Bajío, burning and looting, until it engulfed the mining center of Guanajuato on September 28. The massacre of the Spanish defenders of the fortress granary and the subsequent sack of the city set the tone for the Hidalgo revolt. Hidalgo took Valladolid in mid-October and then marched on Mexico City. His horde numbered some 80,000 as it approached the viceregal capital.[PARAGRAPH:1]Meanwhile, the royalist government in Mexico City, under the leadership of Viceroy Francisco Venegas, had prepared defenses as much psychological as military. An intensive propaganda campaign had advertised the destructive horrors of the social revolution and revealed its threat to vested Creole interests. Hidalgo won a Pyrrhic victory on October 30 at Monte de las Cruces on the divide between Toluca and the capital but found the sedentary Indians and castes of the Valley of Mexico as much opposed to the Bajío intruders as were the Creoles and Spaniards. Threatened from the north by an army under the royalist general Félix Calleja, Hidalgo withdrew to Guadalajara to recoup without attacking Mexico City.[PARAGRAPH:1]From his new base, Hidalgo made rudimentary efforts to establish a separatist government and to ameliorate the economic plight of the lower sectors of society (abolition of slavery and tribute were confirmed, and lands were ordered restored to Indian communities). Hidalgo, a strong egoist, however, assumed grandiose airs and exacerbated a growing schism with Allende's Creole faction. In January 1811 Calleja threatened Guadalajara, and Hidalgo advanced east to meet him at the bridge of Calderón with nearly 100,000 men. Calleja's disciplined army of 7,000 men defeated Hidalgo's horde on January 17, and Hidalgo fled north.[PARAGRAPH:1]Suspended from command by the Allende party, Hidalgo was only a figurehead during the retreat. Allende's attempt in March to reach the United States was thwarted at Baján north of Saltillo, and the major leaders of the rebellion were captured. Hidalgo and his companions were removed to Chihuahua for trial and the inevitable executions. Aware that his enterprise had been a catastrophe, Hidalgo repented and apparently signed a public retraction. He was shot on July 30, 1811, and his body decapitated.[PARAGRAPH:1]After Hidalgo's death his cause languished in spite of the efforts of José María Morelos, for the Creole majority remained opposed. In 1821 Agustín de Iturbide engineered a conservative independence and established a short-lived empire. After the republican overthrown of Iturbide, Hidalgo emerged as a patriotic hero. Modern Mexico venerates him as the Padre de la Patria, and the anniversary of his Grito is celebrated on September 16 as Mexico's independence day.[PARAGRAPH:1]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_JUAREZ</Tag>
+		<English>Juárez</English>
+		<French>Juárez</French>
+		<German>Juárez</German>
+		<Italian>Juárez</Italian>
+		<Spanish>Juárez</Spanish>
+		<Hungarian>Juárez</Hungarian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_JUAREZ_PEDIA</Tag>
+		<English>[H1]Benito Juárez[\H1][NEWLINE][BOLD]Five Times President of Mexico[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]21/3/1806 - 18/7/1872[PARAGRAPH:2:1][BOLD]Background:[\BOLD][NEWLINE][TAB]Benito Pablo Juárez García was a Zapotec Amerindian who served five terms as president of Mexico, he was the first Mexican leader who did not have a military background, and also the first full-blooded indigenous national ever to serve as President of Mexico and to lead a country in the Western Hemisphere.[PARAGRAPH:1] Juárez was born of Indian parents, both of whom died when he was three years old. When he was 12 he left the uncle who was caring for him and joined his sister in the city of Oaxaca, where he began his formal education. He originally studied for the priesthood, but in 1829 he entered the Oaxaca Institute of Arts and Sciences to study law and science. In 1831 he received his law degree and also won his first public office, a seat on the municipal council. Impeccably honest, he never used public office for personal gain, and his modest way of life reflected his simple tastes even after his marriage in 1843 to Margarita Maza, an Oaxaca girl 17 years younger than he. Politics soon became his life’s work: he was a member of both the state and national legislatures, he became a judge in 1841, and he served as governor of his state, a post that brought him into national prominence. During these years in politics Juárez began to formulate liberal solutions for his country’s many problems. The road to economic health, he concluded, lay in substituting capitalism for the stifling economic monopoly held by the Roman Catholic Church and the landed aristocracy. He also believed that political stability could be achieved only through the adoption of a constitutional form of government based on a federal system.[PARAGRAPH:1] But the return of the conservatives to power in the elections of 1853 doomed imminent reform in Mexico. Many prominent liberals were exiled, including Juárez. From December 1853 until June 1855 he lived in New Orleans in the United States in semi poverty, occupying himself by exchanging ideas with other Mexicans and laying plans to return home. The opportunity to put his ideas into action finally came in 1855 when the liberals took control of the national government, and Juárez left the United States to join the new administration of Juan Álvarez as minister of justice and public instruction.[PARAGRAPH:1] The liberals carried out three major reforms, all supported by Juárez. As minister of justice he was responsible for the law bearing his name that abolished special courts for the clergy and military, for he felt that juridical equality would help promote social equality. In June 1856 the government published the Ley Lerdo ("Lerdo Law," named after the minister of finance). Although it forced the church to sell its property, it contained no threat of confiscation. By breaking up large landed estates, the government hoped that many Mexicans would be able to acquire property and thus create the middle class that it believed was essential for a strong and stable Mexico. The climax of the reform was the liberal constitution promulgated in February 1857. In the same year, Ignacio Comonfort was elected president, and the new Congress chose Juárez to preside over the Supreme Court and therefore, according to the constitution, also to serve as the effective vice president of Mexico. The court position was critical in determining his future career, for when the conservatives revolted and ousted Comonfort in January 1858, Juárez had a legal claim to the presidency. Lacking troops to control the area around Mexico City, however, he retired to the eastern port city of Veracruz. At Veracruz Juárez faced serious difficulties, for he had to create a government and hold it together through quarrels, betrayals, and defeat; to enforce and implement the constitution; to maintain armies in the field and defeat the conservative forces. But he was an extraordinarily tenacious and self-sufficient man, able to concentrate his energy and interest, and he proved himself the master of his government. Because the clergy was supporting the conservatives against the legal government, Juárez enacted several laws to curb ecclesiastical power. He nationalized all church property, exempting only those buildings actually used for worship and instruction. To weaken clerical influence still further, he also nationalized the cemeteries and put birth registrations and marriages under the civil authority. Finally, the government separated church and state and guaranteed religious liberty to all citizens. [PARAGRAPH:1] By late 1860 the conservatives were faltering, and in January 1861 Juárez was able to return to Mexico City and was constitutionally elected president. He was, however, faced with many serious problems: the opposition’s forces still remained intact, the new Congress distrusted its president, and the treasury was virtually empty. As a solution to this latter problem Juárez decided in July 1861 to suspend payment on all foreign debts for two years. To safeguard their investments, England, Spain, and France decided to intervene, and by January 1862 the three countries had landed troops at Veracruz. But when Britain and Spain realized that Napoleon III intended to conquer Mexico and control it through a puppet, Archduke Maximilian of Austria, they withdrew their forces. Despite a major defeat at Puebla on May 5, 1862, reinforcements enabled the French to occupy Mexico City in June 1863, and Maximilian soon followed to take control of the government. Forced to leave the capital again, Juárez kept himself and his government alive by a long series of retreats that ended only at El Paso del Norte (later named Ciudad Juárez) at the Mexican-U.S. border. Early in 1867, as a result of continued Mexican resistance, increased U.S. pressure, and criticism at home, Napoleon decided to withdraw his troops. Soon afterward, Mexican forces captured Maximilian and executed him.[PARAGRAPH:1] Juárez then made the greatest mistake of his political career. In August 1867, shortly after his return to Mexico City, he issued a call for national elections and for a referendum on whether Congress should make five amendments to the constitution. Public opinion did not object to the president’s running for re-election, but the constitutional changes aroused immediate and violent reaction in many quarters, including those sympathetic to Juárez. His proposed changes came under fire because amendments enacted by Congress alone were unconstitutional, and the changes would strengthen the executive power. Juárez was re-elected, but the controversy had created such a crisis of confidence that the administration did not even bother to count the votes on the amendments. Despite illness and personal loss—in October 1870 Juárez suffered a stroke and three months later his wife died—he decided to run again in 1871. After a bitter campaign he was re-elected, but many of his countrymen, refusing to accept the result as final, took up arms against him. Juárez spent the last few months of his life trying to restore peace. He died of a heart attack in 1872.[PARAGRAPH:1] March 21 is a day set to commemorate Juarez. This date has become a national holiday in Mexico, which has continued to grow in acceptance within the Mexican Culture.</English>
+		<French>[H1]Benito Juárez[\H1][NEWLINE][BOLD]Five Times President of Mexico[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]21/3/1806 - 18/7/1872[PARAGRAPH:2:1][BOLD]Background:[\BOLD][NEWLINE][TAB]Benito Pablo Juárez García was a Zapotec Amerindian who served five terms as president of Mexico, he was the first Mexican leader who did not have a military background, and also the first full-blooded indigenous national ever to serve as President of Mexico and to lead a country in the Western Hemisphere.[PARAGRAPH:1] Juárez was born of Indian parents, both of whom died when he was three years old. When he was 12 he left the uncle who was caring for him and joined his sister in the city of Oaxaca, where he began his formal education. He originally studied for the priesthood, but in 1829 he entered the Oaxaca Institute of Arts and Sciences to study law and science. In 1831 he received his law degree and also won his first public office, a seat on the municipal council. Impeccably honest, he never used public office for personal gain, and his modest way of life reflected his simple tastes even after his marriage in 1843 to Margarita Maza, an Oaxaca girl 17 years younger than he. Politics soon became his life’s work: he was a member of both the state and national legislatures, he became a judge in 1841, and he served as governor of his state, a post that brought him into national prominence. During these years in politics Juárez began to formulate liberal solutions for his country’s many problems. The road to economic health, he concluded, lay in substituting capitalism for the stifling economic monopoly held by the Roman Catholic Church and the landed aristocracy. He also believed that political stability could be achieved only through the adoption of a constitutional form of government based on a federal system.[PARAGRAPH:1] But the return of the conservatives to power in the elections of 1853 doomed imminent reform in Mexico. Many prominent liberals were exiled, including Juárez. From December 1853 until June 1855 he lived in New Orleans in the United States in semi poverty, occupying himself by exchanging ideas with other Mexicans and laying plans to return home. The opportunity to put his ideas into action finally came in 1855 when the liberals took control of the national government, and Juárez left the United States to join the new administration of Juan Álvarez as minister of justice and public instruction.[PARAGRAPH:1] The liberals carried out three major reforms, all supported by Juárez. As minister of justice he was responsible for the law bearing his name that abolished special courts for the clergy and military, for he felt that juridical equality would help promote social equality. In June 1856 the government published the Ley Lerdo ("Lerdo Law," named after the minister of finance). Although it forced the church to sell its property, it contained no threat of confiscation. By breaking up large landed estates, the government hoped that many Mexicans would be able to acquire property and thus create the middle class that it believed was essential for a strong and stable Mexico. The climax of the reform was the liberal constitution promulgated in February 1857. In the same year, Ignacio Comonfort was elected president, and the new Congress chose Juárez to preside over the Supreme Court and therefore, according to the constitution, also to serve as the effective vice president of Mexico. The court position was critical in determining his future career, for when the conservatives revolted and ousted Comonfort in January 1858, Juárez had a legal claim to the presidency. Lacking troops to control the area around Mexico City, however, he retired to the eastern port city of Veracruz. At Veracruz Juárez faced serious difficulties, for he had to create a government and hold it together through quarrels, betrayals, and defeat; to enforce and implement the constitution; to maintain armies in the field and defeat the conservative forces. But he was an extraordinarily tenacious and self-sufficient man, able to concentrate his energy and interest, and he proved himself the master of his government. Because the clergy was supporting the conservatives against the legal government, Juárez enacted several laws to curb ecclesiastical power. He nationalized all church property, exempting only those buildings actually used for worship and instruction. To weaken clerical influence still further, he also nationalized the cemeteries and put birth registrations and marriages under the civil authority. Finally, the government separated church and state and guaranteed religious liberty to all citizens. [PARAGRAPH:1] By late 1860 the conservatives were faltering, and in January 1861 Juárez was able to return to Mexico City and was constitutionally elected president. He was, however, faced with many serious problems: the opposition’s forces still remained intact, the new Congress distrusted its president, and the treasury was virtually empty. As a solution to this latter problem Juárez decided in July 1861 to suspend payment on all foreign debts for two years. To safeguard their investments, England, Spain, and France decided to intervene, and by January 1862 the three countries had landed troops at Veracruz. But when Britain and Spain realized that Napoleon III intended to conquer Mexico and control it through a puppet, Archduke Maximilian of Austria, they withdrew their forces. Despite a major defeat at Puebla on May 5, 1862, reinforcements enabled the French to occupy Mexico City in June 1863, and Maximilian soon followed to take control of the government. Forced to leave the capital again, Juárez kept himself and his government alive by a long series of retreats that ended only at El Paso del Norte (later named Ciudad Juárez) at the Mexican-U.S. border. Early in 1867, as a result of continued Mexican resistance, increased U.S. pressure, and criticism at home, Napoleon decided to withdraw his troops. Soon afterward, Mexican forces captured Maximilian and executed him.[PARAGRAPH:1] Juárez then made the greatest mistake of his political career. In August 1867, shortly after his return to Mexico City, he issued a call for national elections and for a referendum on whether Congress should make five amendments to the constitution. Public opinion did not object to the president’s running for re-election, but the constitutional changes aroused immediate and violent reaction in many quarters, including those sympathetic to Juárez. His proposed changes came under fire because amendments enacted by Congress alone were unconstitutional, and the changes would strengthen the executive power. Juárez was re-elected, but the controversy had created such a crisis of confidence that the administration did not even bother to count the votes on the amendments. Despite illness and personal loss—in October 1870 Juárez suffered a stroke and three months later his wife died—he decided to run again in 1871. After a bitter campaign he was re-elected, but many of his countrymen, refusing to accept the result as final, took up arms against him. Juárez spent the last few months of his life trying to restore peace. He died of a heart attack in 1872.[PARAGRAPH:1] March 21 is a day set to commemorate Juarez. This date has become a national holiday in Mexico, which has continued to grow in acceptance within the Mexican Culture.</French>
+		<German>[H1]Benito Juárez[\H1][NEWLINE][BOLD]Five Times President of Mexico[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]21/3/1806 - 18/7/1872[PARAGRAPH:2:1][BOLD]Background:[\BOLD][NEWLINE][TAB]Benito Pablo Juárez García was a Zapotec Amerindian who served five terms as president of Mexico, he was the first Mexican leader who did not have a military background, and also the first full-blooded indigenous national ever to serve as President of Mexico and to lead a country in the Western Hemisphere.[PARAGRAPH:1] Juárez was born of Indian parents, both of whom died when he was three years old. When he was 12 he left the uncle who was caring for him and joined his sister in the city of Oaxaca, where he began his formal education. He originally studied for the priesthood, but in 1829 he entered the Oaxaca Institute of Arts and Sciences to study law and science. In 1831 he received his law degree and also won his first public office, a seat on the municipal council. Impeccably honest, he never used public office for personal gain, and his modest way of life reflected his simple tastes even after his marriage in 1843 to Margarita Maza, an Oaxaca girl 17 years younger than he. Politics soon became his life’s work: he was a member of both the state and national legislatures, he became a judge in 1841, and he served as governor of his state, a post that brought him into national prominence. During these years in politics Juárez began to formulate liberal solutions for his country’s many problems. The road to economic health, he concluded, lay in substituting capitalism for the stifling economic monopoly held by the Roman Catholic Church and the landed aristocracy. He also believed that political stability could be achieved only through the adoption of a constitutional form of government based on a federal system.[PARAGRAPH:1] But the return of the conservatives to power in the elections of 1853 doomed imminent reform in Mexico. Many prominent liberals were exiled, including Juárez. From December 1853 until June 1855 he lived in New Orleans in the United States in semi poverty, occupying himself by exchanging ideas with other Mexicans and laying plans to return home. The opportunity to put his ideas into action finally came in 1855 when the liberals took control of the national government, and Juárez left the United States to join the new administration of Juan Álvarez as minister of justice and public instruction.[PARAGRAPH:1] The liberals carried out three major reforms, all supported by Juárez. As minister of justice he was responsible for the law bearing his name that abolished special courts for the clergy and military, for he felt that juridical equality would help promote social equality. In June 1856 the government published the Ley Lerdo ("Lerdo Law," named after the minister of finance). Although it forced the church to sell its property, it contained no threat of confiscation. By breaking up large landed estates, the government hoped that many Mexicans would be able to acquire property and thus create the middle class that it believed was essential for a strong and stable Mexico. The climax of the reform was the liberal constitution promulgated in February 1857. In the same year, Ignacio Comonfort was elected president, and the new Congress chose Juárez to preside over the Supreme Court and therefore, according to the constitution, also to serve as the effective vice president of Mexico. The court position was critical in determining his future career, for when the conservatives revolted and ousted Comonfort in January 1858, Juárez had a legal claim to the presidency. Lacking troops to control the area around Mexico City, however, he retired to the eastern port city of Veracruz. At Veracruz Juárez faced serious difficulties, for he had to create a government and hold it together through quarrels, betrayals, and defeat; to enforce and implement the constitution; to maintain armies in the field and defeat the conservative forces. But he was an extraordinarily tenacious and self-sufficient man, able to concentrate his energy and interest, and he proved himself the master of his government. Because the clergy was supporting the conservatives against the legal government, Juárez enacted several laws to curb ecclesiastical power. He nationalized all church property, exempting only those buildings actually used for worship and instruction. To weaken clerical influence still further, he also nationalized the cemeteries and put birth registrations and marriages under the civil authority. Finally, the government separated church and state and guaranteed religious liberty to all citizens. [PARAGRAPH:1] By late 1860 the conservatives were faltering, and in January 1861 Juárez was able to return to Mexico City and was constitutionally elected president. He was, however, faced with many serious problems: the opposition’s forces still remained intact, the new Congress distrusted its president, and the treasury was virtually empty. As a solution to this latter problem Juárez decided in July 1861 to suspend payment on all foreign debts for two years. To safeguard their investments, England, Spain, and France decided to intervene, and by January 1862 the three countries had landed troops at Veracruz. But when Britain and Spain realized that Napoleon III intended to conquer Mexico and control it through a puppet, Archduke Maximilian of Austria, they withdrew their forces. Despite a major defeat at Puebla on May 5, 1862, reinforcements enabled the French to occupy Mexico City in June 1863, and Maximilian soon followed to take control of the government. Forced to leave the capital again, Juárez kept himself and his government alive by a long series of retreats that ended only at El Paso del Norte (later named Ciudad Juárez) at the Mexican-U.S. border. Early in 1867, as a result of continued Mexican resistance, increased U.S. pressure, and criticism at home, Napoleon decided to withdraw his troops. Soon afterward, Mexican forces captured Maximilian and executed him.[PARAGRAPH:1] Juárez then made the greatest mistake of his political career. In August 1867, shortly after his return to Mexico City, he issued a call for national elections and for a referendum on whether Congress should make five amendments to the constitution. Public opinion did not object to the president’s running for re-election, but the constitutional changes aroused immediate and violent reaction in many quarters, including those sympathetic to Juárez. His proposed changes came under fire because amendments enacted by Congress alone were unconstitutional, and the changes would strengthen the executive power. Juárez was re-elected, but the controversy had created such a crisis of confidence that the administration did not even bother to count the votes on the amendments. Despite illness and personal loss—in October 1870 Juárez suffered a stroke and three months later his wife died—he decided to run again in 1871. After a bitter campaign he was re-elected, but many of his countrymen, refusing to accept the result as final, took up arms against him. Juárez spent the last few months of his life trying to restore peace. He died of a heart attack in 1872.[PARAGRAPH:1] March 21 is a day set to commemorate Juarez. This date has become a national holiday in Mexico, which has continued to grow in acceptance within the Mexican Culture.</German>
+		<Italian>[H1]Benito Juárez[\H1][NEWLINE][BOLD]Five Times President of Mexico[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]21/3/1806 - 18/7/1872[PARAGRAPH:2:1][BOLD]Background:[\BOLD][NEWLINE][TAB]Benito Pablo Juárez García was a Zapotec Amerindian who served five terms as president of Mexico, he was the first Mexican leader who did not have a military background, and also the first full-blooded indigenous national ever to serve as President of Mexico and to lead a country in the Western Hemisphere.[PARAGRAPH:1] Juárez was born of Indian parents, both of whom died when he was three years old. When he was 12 he left the uncle who was caring for him and joined his sister in the city of Oaxaca, where he began his formal education. He originally studied for the priesthood, but in 1829 he entered the Oaxaca Institute of Arts and Sciences to study law and science. In 1831 he received his law degree and also won his first public office, a seat on the municipal council. Impeccably honest, he never used public office for personal gain, and his modest way of life reflected his simple tastes even after his marriage in 1843 to Margarita Maza, an Oaxaca girl 17 years younger than he. Politics soon became his life’s work: he was a member of both the state and national legislatures, he became a judge in 1841, and he served as governor of his state, a post that brought him into national prominence. During these years in politics Juárez began to formulate liberal solutions for his country’s many problems. The road to economic health, he concluded, lay in substituting capitalism for the stifling economic monopoly held by the Roman Catholic Church and the landed aristocracy. He also believed that political stability could be achieved only through the adoption of a constitutional form of government based on a federal system.[PARAGRAPH:1] But the return of the conservatives to power in the elections of 1853 doomed imminent reform in Mexico. Many prominent liberals were exiled, including Juárez. From December 1853 until June 1855 he lived in New Orleans in the United States in semi poverty, occupying himself by exchanging ideas with other Mexicans and laying plans to return home. The opportunity to put his ideas into action finally came in 1855 when the liberals took control of the national government, and Juárez left the United States to join the new administration of Juan Álvarez as minister of justice and public instruction.[PARAGRAPH:1] The liberals carried out three major reforms, all supported by Juárez. As minister of justice he was responsible for the law bearing his name that abolished special courts for the clergy and military, for he felt that juridical equality would help promote social equality. In June 1856 the government published the Ley Lerdo ("Lerdo Law," named after the minister of finance). Although it forced the church to sell its property, it contained no threat of confiscation. By breaking up large landed estates, the government hoped that many Mexicans would be able to acquire property and thus create the middle class that it believed was essential for a strong and stable Mexico. The climax of the reform was the liberal constitution promulgated in February 1857. In the same year, Ignacio Comonfort was elected president, and the new Congress chose Juárez to preside over the Supreme Court and therefore, according to the constitution, also to serve as the effective vice president of Mexico. The court position was critical in determining his future career, for when the conservatives revolted and ousted Comonfort in January 1858, Juárez had a legal claim to the presidency. Lacking troops to control the area around Mexico City, however, he retired to the eastern port city of Veracruz. At Veracruz Juárez faced serious difficulties, for he had to create a government and hold it together through quarrels, betrayals, and defeat; to enforce and implement the constitution; to maintain armies in the field and defeat the conservative forces. But he was an extraordinarily tenacious and self-sufficient man, able to concentrate his energy and interest, and he proved himself the master of his government. Because the clergy was supporting the conservatives against the legal government, Juárez enacted several laws to curb ecclesiastical power. He nationalized all church property, exempting only those buildings actually used for worship and instruction. To weaken clerical influence still further, he also nationalized the cemeteries and put birth registrations and marriages under the civil authority. Finally, the government separated church and state and guaranteed religious liberty to all citizens. [PARAGRAPH:1] By late 1860 the conservatives were faltering, and in January 1861 Juárez was able to return to Mexico City and was constitutionally elected president. He was, however, faced with many serious problems: the opposition’s forces still remained intact, the new Congress distrusted its president, and the treasury was virtually empty. As a solution to this latter problem Juárez decided in July 1861 to suspend payment on all foreign debts for two years. To safeguard their investments, England, Spain, and France decided to intervene, and by January 1862 the three countries had landed troops at Veracruz. But when Britain and Spain realized that Napoleon III intended to conquer Mexico and control it through a puppet, Archduke Maximilian of Austria, they withdrew their forces. Despite a major defeat at Puebla on May 5, 1862, reinforcements enabled the French to occupy Mexico City in June 1863, and Maximilian soon followed to take control of the government. Forced to leave the capital again, Juárez kept himself and his government alive by a long series of retreats that ended only at El Paso del Norte (later named Ciudad Juárez) at the Mexican-U.S. border. Early in 1867, as a result of continued Mexican resistance, increased U.S. pressure, and criticism at home, Napoleon decided to withdraw his troops. Soon afterward, Mexican forces captured Maximilian and executed him.[PARAGRAPH:1] Juárez then made the greatest mistake of his political career. In August 1867, shortly after his return to Mexico City, he issued a call for national elections and for a referendum on whether Congress should make five amendments to the constitution. Public opinion did not object to the president’s running for re-election, but the constitutional changes aroused immediate and violent reaction in many quarters, including those sympathetic to Juárez. His proposed changes came under fire because amendments enacted by Congress alone were unconstitutional, and the changes would strengthen the executive power. Juárez was re-elected, but the controversy had created such a crisis of confidence that the administration did not even bother to count the votes on the amendments. Despite illness and personal loss—in October 1870 Juárez suffered a stroke and three months later his wife died—he decided to run again in 1871. After a bitter campaign he was re-elected, but many of his countrymen, refusing to accept the result as final, took up arms against him. Juárez spent the last few months of his life trying to restore peace. He died of a heart attack in 1872.[PARAGRAPH:1] March 21 is a day set to commemorate Juarez. This date has become a national holiday in Mexico, which has continued to grow in acceptance within the Mexican Culture.</Italian>
+		<Spanish>[H1]Benito Juárez[\H1][NEWLINE][BOLD]Five Times President of Mexico[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]21/3/1806 - 18/7/1872[PARAGRAPH:2:1][BOLD]Background:[\BOLD][NEWLINE][TAB]Benito Pablo Juárez García was a Zapotec Amerindian who served five terms as president of Mexico, he was the first Mexican leader who did not have a military background, and also the first full-blooded indigenous national ever to serve as President of Mexico and to lead a country in the Western Hemisphere.[PARAGRAPH:1] Juárez was born of Indian parents, both of whom died when he was three years old. When he was 12 he left the uncle who was caring for him and joined his sister in the city of Oaxaca, where he began his formal education. He originally studied for the priesthood, but in 1829 he entered the Oaxaca Institute of Arts and Sciences to study law and science. In 1831 he received his law degree and also won his first public office, a seat on the municipal council. Impeccably honest, he never used public office for personal gain, and his modest way of life reflected his simple tastes even after his marriage in 1843 to Margarita Maza, an Oaxaca girl 17 years younger than he. Politics soon became his life’s work: he was a member of both the state and national legislatures, he became a judge in 1841, and he served as governor of his state, a post that brought him into national prominence. During these years in politics Juárez began to formulate liberal solutions for his country’s many problems. The road to economic health, he concluded, lay in substituting capitalism for the stifling economic monopoly held by the Roman Catholic Church and the landed aristocracy. He also believed that political stability could be achieved only through the adoption of a constitutional form of government based on a federal system.[PARAGRAPH:1] But the return of the conservatives to power in the elections of 1853 doomed imminent reform in Mexico. Many prominent liberals were exiled, including Juárez. From December 1853 until June 1855 he lived in New Orleans in the United States in semi poverty, occupying himself by exchanging ideas with other Mexicans and laying plans to return home. The opportunity to put his ideas into action finally came in 1855 when the liberals took control of the national government, and Juárez left the United States to join the new administration of Juan Álvarez as minister of justice and public instruction.[PARAGRAPH:1] The liberals carried out three major reforms, all supported by Juárez. As minister of justice he was responsible for the law bearing his name that abolished special courts for the clergy and military, for he felt that juridical equality would help promote social equality. In June 1856 the government published the Ley Lerdo ("Lerdo Law," named after the minister of finance). Although it forced the church to sell its property, it contained no threat of confiscation. By breaking up large landed estates, the government hoped that many Mexicans would be able to acquire property and thus create the middle class that it believed was essential for a strong and stable Mexico. The climax of the reform was the liberal constitution promulgated in February 1857. In the same year, Ignacio Comonfort was elected president, and the new Congress chose Juárez to preside over the Supreme Court and therefore, according to the constitution, also to serve as the effective vice president of Mexico. The court position was critical in determining his future career, for when the conservatives revolted and ousted Comonfort in January 1858, Juárez had a legal claim to the presidency. Lacking troops to control the area around Mexico City, however, he retired to the eastern port city of Veracruz. At Veracruz Juárez faced serious difficulties, for he had to create a government and hold it together through quarrels, betrayals, and defeat; to enforce and implement the constitution; to maintain armies in the field and defeat the conservative forces. But he was an extraordinarily tenacious and self-sufficient man, able to concentrate his energy and interest, and he proved himself the master of his government. Because the clergy was supporting the conservatives against the legal government, Juárez enacted several laws to curb ecclesiastical power. He nationalized all church property, exempting only those buildings actually used for worship and instruction. To weaken clerical influence still further, he also nationalized the cemeteries and put birth registrations and marriages under the civil authority. Finally, the government separated church and state and guaranteed religious liberty to all citizens. [PARAGRAPH:1] By late 1860 the conservatives were faltering, and in January 1861 Juárez was able to return to Mexico City and was constitutionally elected president. He was, however, faced with many serious problems: the opposition’s forces still remained intact, the new Congress distrusted its president, and the treasury was virtually empty. As a solution to this latter problem Juárez decided in July 1861 to suspend payment on all foreign debts for two years. To safeguard their investments, England, Spain, and France decided to intervene, and by January 1862 the three countries had landed troops at Veracruz. But when Britain and Spain realized that Napoleon III intended to conquer Mexico and control it through a puppet, Archduke Maximilian of Austria, they withdrew their forces. Despite a major defeat at Puebla on May 5, 1862, reinforcements enabled the French to occupy Mexico City in June 1863, and Maximilian soon followed to take control of the government. Forced to leave the capital again, Juárez kept himself and his government alive by a long series of retreats that ended only at El Paso del Norte (later named Ciudad Juárez) at the Mexican-U.S. border. Early in 1867, as a result of continued Mexican resistance, increased U.S. pressure, and criticism at home, Napoleon decided to withdraw his troops. Soon afterward, Mexican forces captured Maximilian and executed him.[PARAGRAPH:1] Juárez then made the greatest mistake of his political career. In August 1867, shortly after his return to Mexico City, he issued a call for national elections and for a referendum on whether Congress should make five amendments to the constitution. Public opinion did not object to the president’s running for re-election, but the constitutional changes aroused immediate and violent reaction in many quarters, including those sympathetic to Juárez. His proposed changes came under fire because amendments enacted by Congress alone were unconstitutional, and the changes would strengthen the executive power. Juárez was re-elected, but the controversy had created such a crisis of confidence that the administration did not even bother to count the votes on the amendments. Despite illness and personal loss—in October 1870 Juárez suffered a stroke and three months later his wife died—he decided to run again in 1871. After a bitter campaign he was re-elected, but many of his countrymen, refusing to accept the result as final, took up arms against him. Juárez spent the last few months of his life trying to restore peace. He died of a heart attack in 1872.[PARAGRAPH:1] March 21 is a day set to commemorate Juarez. This date has become a national holiday in Mexico, which has continued to grow in acceptance within the Mexican Culture.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_JUAREZ_1</Tag>
+		<English>Greetings, [CT_NAME]. My name is [OUR_NAME], and I am the president of [OUR_CIV_SHORT]. My motto is: when there is respect, there is peace!</English>
+		<French>Salutations, [CT_NAME] ! Je suis [OUR_NAME]. C'est un honneur de vous rencontrer.</French>
+		<German>Seid gegr??t, [CT_NAME]. Mein Name ist [OUR_NAME]. Es ist mir eine Ehre, Eure Bekanntschaft zu machen.</German>
+		<Italian>Saluti, [CT_NAME]. Sono [OUR_NAME] e io sono il presidente di [OUR_CIV_SHORT]. Il mio motto è: dove c'è rispetto, c'è pace.</Italian>
+		<Spanish>Saludos, [CT_NAME]. Soy [OUR_NAME]. Es todo un honor conoceros.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_JUAREZ_1</Tag>
+		<English>Get out of my office!</English>
+		<French>Allez vous faire voir !</French>
+		<German>Fahrt zur H?lle!</German>
+		<Italian>Sparisci.</Italian>
+		<Spanish>Pod?is iros al cuerno.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_JUAREZ_1</Tag>
+		<English>The government of the [OUR_EMPIRE] will fulfill its duty to defend its independence, to repel foreign aggression, and accept the struggle to which it has been provoked!</English>
+		<French>Comme un ami m'a dit un jour, "Aucune condition ne saurait ?tre accept?e, hormis une capitulation imm?diate et inconditionnelle." Dommage, n'est-ce pas ?</French>
+		<German>Wie ein Freund von mir zu sagen pflegte: 'Ich akzeptiere nur die sofortige und bedingungslose Kapitulation'. ?u?erst treffend, nicht wahr?</German>
+		<Italian>Il governo dell'[OUR_EMPIRE] compirà il proprio dovere di difendere la propria indipendenza, respingere l'aggressione straniera e accettare le difficoltà che essa ha proovcato!</Italian>
+		<Spanish>Como un amigo m?o dijo una vez: "Ninguna condici?n es aceptable, salvo una rendici?n incondicional e inmediata". Es una l?stima, ¿no cre?is?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_JUAREZ_1</Tag>
+		<English>Greetings, [CT_NAME]! It is so great to be at peace with you glorious nation!</English>
+		<French>Salutations, [CT_NAME] ! Asseyez-vous et bavardons un instant.</French>
+		<German>Seid gegr??t, [CT_NAME]. Nehmt Platz und lasst uns ein wenig plaudern.</German>
+		<Italian>Salve, [CT_NAME]. Siediti e parliamo per un po'.</Italian>
+		<Spanish>Saludos, [CT_NAME]. Sentaos y charlemos un rato.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_JUAREZ_1</Tag>
+		<English>Oh, you again... What are you going to complain about?</English>
+		<French>Que me vaut l'honneur peu enviable de votre pr?sence ?</French>
+		<German>Was verschafft mir die zweifelhafte Ehre Eures Besuchs?</German>
+		<Italian>E a cosa devo il dubbio onore della tua presenza?</Italian>
+		<Spanish>¿Y a qu? debemos el dudoso honor de vuestra compa??a?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_JUAREZ_1</Tag>
+		<English>Can you spare this for the people of the [OUR_EMPIRE]?</English>
+		<French>Pourriez-vous donner ceci ? un bon ami, [CT_NAME] ?</French>
+		<German>Ihr werdet einem treuen Freund diese kleine Bitte doch nicht abschlagen, [CT_NAME]?</German>
+		<Italian>Avresti un po' di questi in nome della nostra amicizia, [CT_NAME]?</Italian>
+		<Spanish>¿Podr?ais darles esto a unos buenos amigos, [CT_NAME]?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_JUAREZ_1</Tag>
+		<English>Please support [OUR_CIV_SHORT] and it's people. We depend on your help!</English>
+		<French>Partager, c'est le d?but de l'amiti?, [CT_NAME].</French>
+		<German>Helfen hei?t br?derlich teilen, [CT_NAME].</German>
+		<Italian>Se ci tieni a me, condividi, [CT_NAME].</Italian>
+		<Spanish>Compartir es de generosos, [CT_NAME].</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_JUAREZ_1</Tag>
+		<English>[OUR_CIV_SHORT] needs this and demands your assistance!</English>
+		<French>R?pondez ? nos exigences ou vous subirez la foudre de notre "terrible et rapide ?p?e".</French>
+		<German>Schlagt ein, wenn Ihr kein zweites Gettysburg erleben wollt!</German>
+		<Italian>[OUR_CIV_SHORT] ha bisogno di questo e richied immediatamente la tua assistenza!</Italian>
+		<Spanish>Dadnos esto o sentir?is la c?lera de nuestra "terrible y veloz espada".</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SANTA_ANNA</Tag>
+		<English>Santa Anna</English>
+		<French>Santa Anna</French>
+		<German>Santa Anna</German>
+		<Italian>Santa Anna</Italian>
+		<Spanish>Santa Anna</Spanish>
+		<Hungarian>Santa Anna</Hungarian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SANTA_ANNA_PEDIA</Tag>
+		<English>[H1]Antonio de Padua María Severino López de Santa Anna y Pérez de Lebrón [\H1][NEWLINE][BOLD]President of Mexico (11 times)[\BOLD][NEWLINE][BOLD]Lived:[\BOLD]21 February 1794 - 21 June 1876[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]Santa Anna was a Mexican political leader, general and President who greatly influenced early Mexican and Spanish politics and government. He first fought against the independence from Spain, and then supported it. He rose to the ranks of general and president at various times over a turbulent 40-year career. He was President of Mexico on seven non-consecutive occasions over a period of 22 years.[PARAGRAPH:1] Santa Anna's normal loyalty would be to ally with the wealthy and privileged, but his immediate concern was to be on the winning side in any battle. Switching allegiance never troubled him. Santa Anna declared himself retired, "unless my country needs me". He decided he was needed when Anastasio Bustamante led a coup, overthrowing and killing President Vicente Guerrero. Santa Anna was elected president in 1833. Gómez Farías did many reforms, introducing antimilitary and anticlergical reforms. He reduced the size of the army and worked hard to root out corruption in the military. He also changed some rules reflecting the power of the Church. Clergymen would be allowed to preach only for religious matters. He altered the education as a fully secular system. The mandatory tax for the support of the Church was abolished. These drastic reforms angered many of the powerful among the military, wealthy landowners, and the Catholic Church. When there was rebellion and violence against the reform that Farias had made, Santa Anna changed his side, again. Santa Anna reversed his support for the liberals and joined the conservatives, dismissed Farías, declared the Constitution suspended, disbanded the Congress, and worked to concentrate power in the central government. This was applauded by some conservatives, but met with considerable disapproval from other sectors. He established a Catholic, centralist dictatorship and replaced the Constitution of 1824(the one that Farias established), with a new document, called “The Seven Laws.” - the Constitution of 1836. The regime was a centralized dictatorship led by the military. Several states went into open rebellion: Coahuila y Tejas, San Luis Potosí, Querétaro, Durango, Guanajuato, Michoacán, Yucatán, Jalisco, Nuevo León, Tamaulipas and Zacatecas. Several of these states formed their own governments, the Republic of the Rio Grande, the Republic of Yucatan, and the Republic of Texas. Only the Texans defeated Santa Anna and retained their independence. They and their allies from the United States declared independence from Mexico. Their fierce resistance was possibly fueled by reprisals Santa Anna committed against his defeated enemies. The Zacatecan militia, the largest and best supplied of the Mexican states, led by Francisco Garcia, was well armed with .753 caliber British 'Brown Bess' muskets and Baker .61 rifles. After two hours of combat, on 12 May 1835, the Santa Anna's "Army of Operations" defeated the Zacatecan militia and took almost 3,000 prisoners. Santa Anna allowed his army to ransack Zacatecas for forty-eight hours. After defeating Zacatecas, he planned to move on to Coahuila y Tejas.</English>
+		<French>[H1]Antonio de Padua María Severino López de Santa Anna y Pérez de Lebrón [\H1][NEWLINE][BOLD]President of Mexico (11 times)[\BOLD][NEWLINE][BOLD]Lived:[\BOLD]21 February 1794 - 21 June 1876[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]Santa Anna was a Mexican political leader, general and President who greatly influenced early Mexican and Spanish politics and government. He first fought against the independence from Spain, and then supported it. He rose to the ranks of general and president at various times over a turbulent 40-year career. He was President of Mexico on seven non-consecutive occasions over a period of 22 years.[PARAGRAPH:1] Santa Anna's normal loyalty would be to ally with the wealthy and privileged, but his immediate concern was to be on the winning side in any battle. Switching allegiance never troubled him. Santa Anna declared himself retired, "unless my country needs me". He decided he was needed when Anastasio Bustamante led a coup, overthrowing and killing President Vicente Guerrero. Santa Anna was elected president in 1833. Gómez Farías did many reforms, introducing antimilitary and anticlergical reforms. He reduced the size of the army and worked hard to root out corruption in the military. He also changed some rules reflecting the power of the Church. Clergymen would be allowed to preach only for religious matters. He altered the education as a fully secular system. The mandatory tax for the support of the Church was abolished. These drastic reforms angered many of the powerful among the military, wealthy landowners, and the Catholic Church. When there was rebellion and violence against the reform that Farias had made, Santa Anna changed his side, again. Santa Anna reversed his support for the liberals and joined the conservatives, dismissed Farías, declared the Constitution suspended, disbanded the Congress, and worked to concentrate power in the central government. This was applauded by some conservatives, but met with considerable disapproval from other sectors. He established a Catholic, centralist dictatorship and replaced the Constitution of 1824(the one that Farias established), with a new document, called “The Seven Laws.” - the Constitution of 1836. The regime was a centralized dictatorship led by the military. Several states went into open rebellion: Coahuila y Tejas, San Luis Potosí, Querétaro, Durango, Guanajuato, Michoacán, Yucatán, Jalisco, Nuevo León, Tamaulipas and Zacatecas. Several of these states formed their own governments, the Republic of the Rio Grande, the Republic of Yucatan, and the Republic of Texas. Only the Texans defeated Santa Anna and retained their independence. They and their allies from the United States declared independence from Mexico. Their fierce resistance was possibly fueled by reprisals Santa Anna committed against his defeated enemies. The Zacatecan militia, the largest and best supplied of the Mexican states, led by Francisco Garcia, was well armed with .753 caliber British 'Brown Bess' muskets and Baker .61 rifles. After two hours of combat, on 12 May 1835, the Santa Anna's "Army of Operations" defeated the Zacatecan militia and took almost 3,000 prisoners. Santa Anna allowed his army to ransack Zacatecas for forty-eight hours. After defeating Zacatecas, he planned to move on to Coahuila y Tejas.</French>
+		<German>[H1]Antonio de Padua María Severino López de Santa Anna y Pérez de Lebrón [\H1][NEWLINE][BOLD]President of Mexico (11 times)[\BOLD][NEWLINE][BOLD]Lived:[\BOLD]21 February 1794 - 21 June 1876[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]Santa Anna was a Mexican political leader, general and President who greatly influenced early Mexican and Spanish politics and government. He first fought against the independence from Spain, and then supported it. He rose to the ranks of general and president at various times over a turbulent 40-year career. He was President of Mexico on seven non-consecutive occasions over a period of 22 years.[PARAGRAPH:1] Santa Anna's normal loyalty would be to ally with the wealthy and privileged, but his immediate concern was to be on the winning side in any battle. Switching allegiance never troubled him. Santa Anna declared himself retired, "unless my country needs me". He decided he was needed when Anastasio Bustamante led a coup, overthrowing and killing President Vicente Guerrero. Santa Anna was elected president in 1833. Gómez Farías did many reforms, introducing antimilitary and anticlergical reforms. He reduced the size of the army and worked hard to root out corruption in the military. He also changed some rules reflecting the power of the Church. Clergymen would be allowed to preach only for religious matters. He altered the education as a fully secular system. The mandatory tax for the support of the Church was abolished. These drastic reforms angered many of the powerful among the military, wealthy landowners, and the Catholic Church. When there was rebellion and violence against the reform that Farias had made, Santa Anna changed his side, again. Santa Anna reversed his support for the liberals and joined the conservatives, dismissed Farías, declared the Constitution suspended, disbanded the Congress, and worked to concentrate power in the central government. This was applauded by some conservatives, but met with considerable disapproval from other sectors. He established a Catholic, centralist dictatorship and replaced the Constitution of 1824(the one that Farias established), with a new document, called “The Seven Laws.” - the Constitution of 1836. The regime was a centralized dictatorship led by the military. Several states went into open rebellion: Coahuila y Tejas, San Luis Potosí, Querétaro, Durango, Guanajuato, Michoacán, Yucatán, Jalisco, Nuevo León, Tamaulipas and Zacatecas. Several of these states formed their own governments, the Republic of the Rio Grande, the Republic of Yucatan, and the Republic of Texas. Only the Texans defeated Santa Anna and retained their independence. They and their allies from the United States declared independence from Mexico. Their fierce resistance was possibly fueled by reprisals Santa Anna committed against his defeated enemies. The Zacatecan militia, the largest and best supplied of the Mexican states, led by Francisco Garcia, was well armed with .753 caliber British 'Brown Bess' muskets and Baker .61 rifles. After two hours of combat, on 12 May 1835, the Santa Anna's "Army of Operations" defeated the Zacatecan militia and took almost 3,000 prisoners. Santa Anna allowed his army to ransack Zacatecas for forty-eight hours. After defeating Zacatecas, he planned to move on to Coahuila y Tejas.</German>
+		<Italian>[H1]Antonio de Padua María Severino López de Santa Anna y Pérez de Lebrón [\H1][NEWLINE][BOLD]President of Mexico (11 times)[\BOLD][NEWLINE][BOLD]Lived:[\BOLD]21 February 1794 - 21 June 1876[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]Santa Anna was a Mexican political leader, general and President who greatly influenced early Mexican and Spanish politics and government. He first fought against the independence from Spain, and then supported it. He rose to the ranks of general and president at various times over a turbulent 40-year career. He was President of Mexico on seven non-consecutive occasions over a period of 22 years.[PARAGRAPH:1] Santa Anna's normal loyalty would be to ally with the wealthy and privileged, but his immediate concern was to be on the winning side in any battle. Switching allegiance never troubled him. Santa Anna declared himself retired, "unless my country needs me". He decided he was needed when Anastasio Bustamante led a coup, overthrowing and killing President Vicente Guerrero. Santa Anna was elected president in 1833. Gómez Farías did many reforms, introducing antimilitary and anticlergical reforms. He reduced the size of the army and worked hard to root out corruption in the military. He also changed some rules reflecting the power of the Church. Clergymen would be allowed to preach only for religious matters. He altered the education as a fully secular system. The mandatory tax for the support of the Church was abolished. These drastic reforms angered many of the powerful among the military, wealthy landowners, and the Catholic Church. When there was rebellion and violence against the reform that Farias had made, Santa Anna changed his side, again. Santa Anna reversed his support for the liberals and joined the conservatives, dismissed Farías, declared the Constitution suspended, disbanded the Congress, and worked to concentrate power in the central government. This was applauded by some conservatives, but met with considerable disapproval from other sectors. He established a Catholic, centralist dictatorship and replaced the Constitution of 1824(the one that Farias established), with a new document, called “The Seven Laws.” - the Constitution of 1836. The regime was a centralized dictatorship led by the military. Several states went into open rebellion: Coahuila y Tejas, San Luis Potosí, Querétaro, Durango, Guanajuato, Michoacán, Yucatán, Jalisco, Nuevo León, Tamaulipas and Zacatecas. Several of these states formed their own governments, the Republic of the Rio Grande, the Republic of Yucatan, and the Republic of Texas. Only the Texans defeated Santa Anna and retained their independence. They and their allies from the United States declared independence from Mexico. Their fierce resistance was possibly fueled by reprisals Santa Anna committed against his defeated enemies. The Zacatecan militia, the largest and best supplied of the Mexican states, led by Francisco Garcia, was well armed with .753 caliber British 'Brown Bess' muskets and Baker .61 rifles. After two hours of combat, on 12 May 1835, the Santa Anna's "Army of Operations" defeated the Zacatecan militia and took almost 3,000 prisoners. Santa Anna allowed his army to ransack Zacatecas for forty-eight hours. After defeating Zacatecas, he planned to move on to Coahuila y Tejas.</Italian>
+		<Spanish>[H1]Antonio de Padua María Severino López de Santa Anna y Pérez de Lebrón [\H1][NEWLINE][BOLD]President of Mexico (11 times)[\BOLD][NEWLINE][BOLD]Lived:[\BOLD]21 February 1794 - 21 June 1876[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]Santa Anna was a Mexican political leader, general and President who greatly influenced early Mexican and Spanish politics and government. He first fought against the independence from Spain, and then supported it. He rose to the ranks of general and president at various times over a turbulent 40-year career. He was President of Mexico on seven non-consecutive occasions over a period of 22 years.[PARAGRAPH:1] Santa Anna's normal loyalty would be to ally with the wealthy and privileged, but his immediate concern was to be on the winning side in any battle. Switching allegiance never troubled him. Santa Anna declared himself retired, "unless my country needs me". He decided he was needed when Anastasio Bustamante led a coup, overthrowing and killing President Vicente Guerrero. Santa Anna was elected president in 1833. Gómez Farías did many reforms, introducing antimilitary and anticlergical reforms. He reduced the size of the army and worked hard to root out corruption in the military. He also changed some rules reflecting the power of the Church. Clergymen would be allowed to preach only for religious matters. He altered the education as a fully secular system. The mandatory tax for the support of the Church was abolished. These drastic reforms angered many of the powerful among the military, wealthy landowners, and the Catholic Church. When there was rebellion and violence against the reform that Farias had made, Santa Anna changed his side, again. Santa Anna reversed his support for the liberals and joined the conservatives, dismissed Farías, declared the Constitution suspended, disbanded the Congress, and worked to concentrate power in the central government. This was applauded by some conservatives, but met with considerable disapproval from other sectors. He established a Catholic, centralist dictatorship and replaced the Constitution of 1824(the one that Farias established), with a new document, called “The Seven Laws.” - the Constitution of 1836. The regime was a centralized dictatorship led by the military. Several states went into open rebellion: Coahuila y Tejas, San Luis Potosí, Querétaro, Durango, Guanajuato, Michoacán, Yucatán, Jalisco, Nuevo León, Tamaulipas and Zacatecas. Several of these states formed their own governments, the Republic of the Rio Grande, the Republic of Yucatan, and the Republic of Texas. Only the Texans defeated Santa Anna and retained their independence. They and their allies from the United States declared independence from Mexico. Their fierce resistance was possibly fueled by reprisals Santa Anna committed against his defeated enemies. The Zacatecan militia, the largest and best supplied of the Mexican states, led by Francisco Garcia, was well armed with .753 caliber British 'Brown Bess' muskets and Baker .61 rifles. After two hours of combat, on 12 May 1835, the Santa Anna's "Army of Operations" defeated the Zacatecan militia and took almost 3,000 prisoners. Santa Anna allowed his army to ransack Zacatecas for forty-eight hours. After defeating Zacatecas, he planned to move on to Coahuila y Tejas.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SANTA_ANNA_1</Tag>
+		<English>Hello, [CT_NAME]. I am General Santa Ana, Savior of Mexico!  What have you come to offer me in tribute?</English>
+		<French>Hello, [CT_NAME]. I am General Santa Ana, Savior of Mexico!  What have you come to offer me in tribute?</French>
+		<German>Hello, [CT_NAME]. I am General Santa Ana, Savior of Mexico!  What have you come to offer me in tribute?</German>
+		<Italian>Salve, [CT_NAME]. Io sono il Generale Santa Anna, Salvatore del Messico! Cos'hai da offrirmi come tributo?</Italian>
+		<Spanish>Hello, [CT_NAME]. I am General Santa Ana, Savior of Mexico!  What have you come to offer me in tribute?</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MEXICO_CITY</Tag>
+		<English>Mexico City</English>
+		<French>
+			<Text>Mexico City</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mexico City</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Città del Messico</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mexico City</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PUEBLA</Tag>
+		<English>Puebla</English>
+		<French>
+			<Text>Puebla</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Puebla</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Puebla</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Puebla</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NUEVO_LEON</Tag>
+		<English>Nuevo Leon</English>
+		<French>
+			<Text>Nuevo Leon</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Nuevo Leon</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Nuevo Leon</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Nuevo Leon</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ACAPULCO</Tag>
+		<English>Acapulco</English>
+		<French>
+			<Text>Acapulco</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Acapulco</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Acapulco</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Acapulco</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GUADALAJARA</Tag>
+		<English>Guadalajara</English>
+		<French>
+			<Text>Guadalajara</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Guadalajara</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Guadalajara</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Guadalajara</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MONTERREY</Tag>
+		<English>Monterrey</English>
+		<French>
+			<Text>Monterrey</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Monterrey</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Monterrey</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Monterrey</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MERIDA</Tag>
+		<English>Merida</English>
+		<French>
+			<Text>Merida</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Merida</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Merida</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Merida</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CHIHUAHUA</Tag>
+		<English>Chihuahua</English>
+		<French>
+			<Text>Chihuahua</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Chihuahua</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Chihuahua</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Chihuahua</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_HERMOSILLO</Tag>
+		<English>Hermosillo</English>
+		<French>
+			<Text>Hermosillo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Hermosillo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Hermosillo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Hermosillo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TIJUANA</Tag>
+		<English>Tijuana</English>
+		<French>
+			<Text>Tijuana</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tijuana</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tijuana</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tijuana</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TOLUCA</Tag>
+		<English>Toluca</English>
+		<French>
+			<Text>Toluca</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Toluca</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Toluca</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Toluca</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_QUERETARO</Tag>
+		<English>Queretaro</English>
+		<French>
+			<Text>Queretaro</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Queretaro</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Queretaro</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Queretaro</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MORELIA</Tag>
+		<English>Morelia</English>
+		<French>
+			<Text>Morelia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Morelia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Morelia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Morelia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VERACRUZ</Tag>
+		<English>Veracruz</English>
+		<French>
+			<Text>Veracruz</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Veracruz</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Veracruz</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Veracruz</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_AGUASCALIENTES</Tag>
+		<English>Aguascalientes</English>
+		<French>
+			<Text>Aguascalientes</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Aguascalientes</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Aguascalientes</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Aguascalientes</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAN_LUIS_POTOSI</Tag>
+		<English>San Luis Potosi</English>
+		<French>
+			<Text>San Luis Potosi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>San Luis Potosi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>San Luis Potosi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>San Luis Potosi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TAMPICO</Tag>
+		<English>Tampico</English>
+		<French>
+			<Text>Tampico</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tampico</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tampico</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tampico</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TUXTLA_GUTIERREZ</Tag>
+		<English>Tuxtla Gutierrez</English>
+		<French>
+			<Text>Tuxtla Gutierrez</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tuxtla Gutierrez</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tuxtla Gutierrez</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tuxtla Gutierrez</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VILLAHERMOSA</Tag>
+		<English>Villahermosa</English>
+		<French>
+			<Text>Villahermosa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Villahermosa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Villahermosa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Villahermosa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DURANGO</Tag>
+		<English>Durango</English>
+		<French>
+			<Text>Durango</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Durango</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Durango</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Durango</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TORREON</Tag>
+		<English>Torreon</English>
+		<French>
+			<Text>Torreon</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Torreon</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Torreon</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Torreon</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CULIACAN</Tag>
+		<English>Culiacan</English>
+		<French>
+			<Text>Culiacan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Culiacan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Culiacan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Culiacan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CANCUN</Tag>
+		<English>Cancun</English>
+		<French>
+			<Text>Cancun</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Cancun</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Cancun</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Cancun</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MATAMOROS</Tag>
+		<English>Matamoros</English>
+		<French>
+			<Text>Matamoros</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Matamoros</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Matamoros</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Matamoros</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LA_PAZ</Tag>
+		<English>La Paz</English>
+		<French>
+			<Text>La Paz</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>La Paz</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>La Paz</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>La Paz</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MEXICALI</Tag>
+		<English>Mexicali</English>
+		<French>
+			<Text>Mexicali</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mexicali</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Mexicali</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mexicali</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NOGALES</Tag>
+		<English>Nogales</English>
+		<French>
+			<Text>Nogales</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Nogales</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Nogales</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Nogales</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CAMPECHE</Tag>
+		<English>Campeche</English>
+		<French>
+			<Text>Campeche</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Campeche</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Campeche</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Campeche</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LEON</Tag>
+		<English>Leon</English>
+		<French>
+			<Text>Leon</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Leon</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Leon</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Leon</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MONCLOVA</Tag>
+		<English>Monclova</English>
+		<French>
+			<Text>Monclova</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Monclova</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Monclova</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Monclova</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LOS_MOCHIS</Tag>
+		<English>Los Mochis</English>
+		<French>
+			<Text>Los Mochis</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Los Mochis</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Los Mochis</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Los Mochis</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_COLIMA</Tag>
+		<English>Colima</English>
+		<French>
+			<Text>Colima</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Colima</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Colima</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Colima</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_REYNOSA</Tag>
+		<English>Reynosa</English>
+		<French>
+			<Text>Reynosa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Reynosa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Reynosa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Reynosa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PIEDRAS_NEGRAS</Tag>
+		<English>Piedras Negras</English>
+		<French>
+			<Text>Piedras Negras</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Piedras Negras</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Piedras Negras</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Piedras Negras</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PUERTO_VALLARTA</Tag>
+		<English>Puerto Vallarta</English>
+		<French>
+			<Text>Puerto Vallarta</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Puerto Vallarta</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Puerto Vallarta</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Puerto Vallarta</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CHETUMAL</Tag>
+		<English>Chetumal</English>
+		<French>
+			<Text>Chetumal</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Chetumal</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Chetumal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Chetumal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CIUDAD_JUAREZ</Tag>
+		<English>Ciudad Juarez</English>
+		<French>
+			<Text>Ciudad Juarez</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ciudad Juarez</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ciudad Juarez</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ciudad Juarez</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ZACATECAS</Tag>
+		<English>Zacatecas</English>
+		<French>
+			<Text>Zacatecas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Zacatecas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Zacatecas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Zacatecas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PALENQUE</Tag>
+		<English>Palenque</English>
+		<French>
+			<Text>Palenque</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Palenque</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Palenque</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Palenque</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SANTA_ROSALIA</Tag>
+		<English>Santa Rosalia</English>
+		<French>
+			<Text>Santa Rosalia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Santa Rosalia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Santa Rosalia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Santa Rosalia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ALAMOS</Tag>
+		<English>Alamos</English>
+		<French>
+			<Text>Alamos</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Alamos</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Alamos</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Alamos</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CREEL</Tag>
+		<English>Creel</English>
+		<French>
+			<Text>Creel</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Creel</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Creel</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Creel</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MANZANILLO</Tag>
+		<English>Manzanillo</English>
+		<French>
+			<Text>Manzanillo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Manzanillo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Manzanillo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Manzanillo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ROSARITO</Tag>
+		<English>Rosarito</English>
+		<French>
+			<Text>Rosarito</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Rosarito</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Rosarito</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Rosarito</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ENSENADA</Tag>
+		<English>Ensenada</English>
+		<French>
+			<Text>Ensenada</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ensenada</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ensenada</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ensenada</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAN_FELIPE</Tag>
+		<English>San Felipe</English>
+		<French>
+			<Text>San Felipe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>San Felipe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>San Felipe</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>San Felipe</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAN_IGNACIO</Tag>
+		<English>San Ignacio</English>
+		<French>
+			<Text>San Ignacio</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>San Ignacio</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>San Ignacio</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>San Ignacio</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CABO_SAN_LUCAS</Tag>
+		<English>Cabo San Lucas</English>
+		<French>
+			<Text>Cabo San Lucas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Cabo San Lucas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Cabo San Lucas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Cabo San Lucas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+</Civ4GameText>

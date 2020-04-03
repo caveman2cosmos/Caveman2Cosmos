@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- re-Modified by strategyonly -->
+<!-- Civilization Infos -->
+<!-- -->
+<Civ4CivilizationInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4CivilizationsSchema.xml">
+	<CivilizationInfos>
+		<CivilizationInfo>
+			<Type>CIVILIZATION_VIETNAM</Type>
+			<Description>TXT_KEY_CIV_VIETNAM_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_VIETNAM_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_VIETNAM_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_VIETNAM_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_VIETNAM</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_VIETNAM</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_ASIA</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_KHMER</UnitArtStyleType>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>TXT_KEY_CITY_NAME_HANOI</City>
+				<City>TXT_KEY_CITY_NAME_SAIGON</City>
+				<City>TXT_KEY_CITY_NAME_HUE</City>
+				<City>TXT_KEY_CITY_NAME_HAIPHONG</City>
+				<City>TXT_KEY_CITY_NAME_DANANG</City>
+				<City>TXT_KEY_CITY_NAME_CANTHO</City>
+				<City>TXT_KEY_CITY_NAME_NHA_TRANG</City>
+				<City>TXT_KEY_CITY_NAME_QUI_NHON</City>
+				<City>TXT_KEY_CITY_NAME_VINH</City>
+				<City>TXT_KEY_CITY_NAME_LONG_XUYEN</City>
+				<City>TXT_KEY_CITY_NAME_NAM_DINH</City>
+				<City>TXT_KEY_CITY_NAME_HALONG</City>
+				<City>TXT_KEY_CITY_NAME_DALAT</City>
+				<City>TXT_KEY_CITY_NAME_TRANH_HOA</City>
+				<City>TXT_KEY_CITY_NAME_VIET_TRI</City>
+				<City>TXT_KEY_CITY_NAME_MYTHO</City>
+				<City>TXT_KEY_CITY_NAME_BEN_TRE</City>
+				<City>TXT_KEY_CITY_NAME_BAC_NINH</City>
+				<City>TXT_KEY_CITY_NAME_SAPA</City>
+				<City>TXT_KEY_CITY_NAME_BIEN_HOA</City>
+				<City>TXT_KEY_CITY_NAME_VINH_LONG</City>
+				<City>TXT_KEY_CITY_NAME_THAI_NGUYEN</City>
+				<City>TXT_KEY_CITY_NAME_RACH_GIA</City>
+				<City>TXT_KEY_CITY_NAME_SOC_TRANG</City>
+				<City>TXT_KEY_CITY_NAME_BAC_LIEU</City>
+				<City>Lang Son</City>
+				<City>Quang Ngai</City>
+				<City>Trug Binh</City>
+				<City>Cam Ranh</City>
+				<City>Bac Giang</City>
+				<City>Vinh Yen</City>
+				<City>Ba Ria</City>
+				<City>Hoi An</City>
+				<City>Hung Yen</City>
+				<City>Phu Ly</City>
+				<City>Tam Ky</City>
+				<City>Ha Tinh</City>
+				<City>Tuyen Quang</City>
+				<City>Mong Cai</City>
+				<City>Son La</City>
+				<City>Phan Rang</City>
+				<City>Yen Bai</City>
+				<City>Lao Cai</City>
+				<City>Dong Ha</City>
+				<City>Hoa Binh</City>
+			</Cities>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_ASIAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
+			<InitialCivics>
+				<CivicType>CIVIC_ANARCHISM</CivicType>
+				<CivicType>CIVIC_OBEDIENCE</CivicType>
+				<CivicType>CIVIC_STRONGMAN</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
+				<CivicType>CIVIC_MILITIA</CivicType>
+				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SURVIVAL</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
+				<CivicType>CIVIC_UNORGANIZED</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_HO_CHI_MINH</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_TRUNG</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<DerivativeCiv>NONE</DerivativeCiv>
+			<CivilizationSelectionSound>AS3D_JAPAN_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_JAPAN_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+	</CivilizationInfos>
+</Civ4CivilizationInfos>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- re-Modified by strategyonly -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SENEGAL_DESC</Tag>
+		<English>Senegal Empire</English> 
+		<French>Senegal Empire</French>
+		<German>Reich von Senegal</German>
+		<Italian>Senegal Empire</Italian>
+		<Spanish>Imperio de Senegal</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SENEGAL_SHORT_DESC</Tag>
+		<English>Senegal</English>
+		<French>Senegal</French>
+		<German>Senegal</German>
+		<Italian>Senegal</Italian>
+		<Spanish>Senegal</Spanish>
+	</TEXT>
+	<TEXT><Tag>TXT_KEY_CIV_SENEGAL_PEDIA</Tag>
+		<English>[TAB]Senegal is a country in West Africa. It is the westernmost country in the mainland of the Old World or Eurafrasia[7] and owes its name to the Sénégal River that borders it to the east and north. Senegal covers a land area of almost 197,000 square kilometres (76,000 sq mi), and has an estimated population of about 13 million. The climate is tropical with two seasons: the dry season and the rainy season.</English>
+		<French>[TAB]Senegal is a country in West Africa. It is the westernmost country in the mainland of the Old World or Eurafrasia[7] and owes its name to the Sénégal River that borders it to the east and north. Senegal covers a land area of almost 197,000 square kilometres (76,000 sq mi), and has an estimated population of about 13 million. The climate is tropical with two seasons: the dry season and the rainy season.</French>
+		<German>[TAB]TSenegal is a country in West Africa. It is the westernmost country in the mainland of the Old World or Eurafrasia[7] and owes its name to the Sénégal River that borders it to the east and north. Senegal covers a land area of almost 197,000 square kilometres (76,000 sq mi), and has an estimated population of about 13 million. The climate is tropical with two seasons: the dry season and the rainy season.</German>
+		<Italian>[TAB]Senegal is a country in West Africa. It is the westernmost country in the mainland of the Old World or Eurafrasia[7] and owes its name to the Sénégal River that borders it to the east and north. Senegal covers a land area of almost 197,000 square kilometres (76,000 sq mi), and has an estimated population of about 13 million. The climate is tropical with two seasons: the dry season and the rainy season.</Italian>
+		<Spanish>[TAB]Senegal is a country in West Africa. It is the westernmost country in the mainland of the Old World or Eurafrasia[7] and owes its name to the Sénégal River that borders it to the east and north. Senegal covers a land area of almost 197,000 square kilometres (76,000 sq mi), and has an estimated population of about 13 million. The climate is tropical with two seasons: the dry season and the rainy season.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_SENEGAL_ADJECTIVE</Tag>
+		<English>Senegales</English>
+		<French>Senegales</French>
+		<German>Senegales</German>
+		<Italian>Senegales</Italian>
+		<Spanish>Senegales</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SENGHOR</Tag>
+		<English>Leopold Senghor</English>
+		<French>Leopold Senghor</French>
+		<German>Leopold Senghor</German>
+		<Italian>Leopold Senghor</Italian>
+		<Spanish>Leopold Senghor</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SENGHOR_PEDIA</Tag>
+		<English>[H1]Leopold Senghor[\H1][NEWLINE][BOLD]First President of Senegal[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]9 October 1906 - 20 December 2001[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Léopold Sédar Senghor was a Senegalese poet, politician, and cultural theorist who for two decades served as the first president of Senegal (1960–1980). Senghor was the first African elected as a member of the Académie française. Before independence, he founded the political party called the Senegalese Democratic Bloc. He is regarded by many as one of the most important African intellectuals of the 20th century.</English>
+		<French>[H1]Leopold Senghor[\H1][NEWLINE][BOLD]First President of Senegal[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]9 October 1906 - 20 December 2001[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Léopold Sédar Senghor was a Senegalese poet, politician, and cultural theorist who for two decades served as the first president of Senegal (1960–1980). Senghor was the first African elected as a member of the Académie française. Before independence, he founded the political party called the Senegalese Democratic Bloc. He is regarded by many as one of the most important African intellectuals of the 20th century.</French>
+		<German>[H1]Leopold Senghor[\H1][NEWLINE][BOLD]First President of Senegal[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]9 October 1906 - 20 December 2001[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Léopold Sédar Senghor was a Senegalese poet, politician, and cultural theorist who for two decades served as the first president of Senegal (1960–1980). Senghor was the first African elected as a member of the Académie française. Before independence, he founded the political party called the Senegalese Democratic Bloc. He is regarded by many as one of the most important African intellectuals of the 20th century.</German>
+		<Italian>[H1]Leopold Senghor[\H1][NEWLINE][BOLD]First President of Senegal[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]9 October 1906 - 20 December 2001[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Léopold Sédar Senghor was a Senegalese poet, politician, and cultural theorist who for two decades served as the first president of Senegal (1960–1980). Senghor was the first African elected as a member of the Académie française. Before independence, he founded the political party called the Senegalese Democratic Bloc. He is regarded by many as one of the most important African intellectuals of the 20th century.</Italian>
+		<Spanish>[H1]Leopold Senghor[\H1][NEWLINE][BOLD]First President of Senegal[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]9 October 1906 - 20 December 2001[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Léopold Sédar Senghor was a Senegalese poet, politician, and cultural theorist who for two decades served as the first president of Senegal (1960–1980). Senghor was the first African elected as a member of the Académie française. Before independence, he founded the political party called the Senegalese Democratic Bloc. He is regarded by many as one of the most important African intellectuals of the 20th century.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SENGHOR_1</Tag>
+		<English>I am [OUR_NAME] of the great [OUR_EMPIRE]. We will wary of you like a rotting tooth, and chewing slowly in the meantime.</English>
+		<French>I am [OUR_NAME] of the great [OUR_EMPIRE]. We will wary of you like a rotting tooth, and chewing slowly in the meantime.</French>
+		<German>I am [OUR_NAME] of the great [OUR_EMPIRE]. We will wary of you like a rotting tooth, and chewing slowly in the meantime.</German>
+		<Italian>I am [OUR_NAME] of the great [OUR_EMPIRE]. We will wary of you like a rotting tooth, and chewing slowly in the meantime.</Italian>
+		<Spanish>Soy [OUR_NAME] del gran [OUR_EMPIRE]. Si no estas entre nuestros amigos te daremos mas problemas que un diente podrido, y te haremos masticar lentamente.</Spanish>
+	</TEXT>
+</Civ4GameText>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- Modified by the Civ Gold Team -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HONDURAS_DESC</Tag>
+		<English>Republic of Honduras</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HONDURAS_SHORT_DESC</Tag>
+		<English>Honduras</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HONDURAS_PEDIA</Tag>
+		<English>Honduras Spanish: República de Honduras,  is a republic in Central America. It was formerly known as Spanish Honduras to differentiate it from British Honduras (now Belize).[4]  The country is bordered to the west by Guatemala, to the southwest by El Salvador, to the southeast by Nicaragua, to the south by the Pacific Ocean at the Gulf of Fonseca, and to the north by the Gulf of Honduras, a large inlet of the Caribbean Sea.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HONDURAS_ADJECTIVE</Tag>
+		<English>Honduran</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_LMM</Tag>
+		<English>Manuel Zelaya</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_LMM_PEDIA</Tag>
+		<English>José Manuel Zelaya Rosales (born September 20, 1952) is a Honduran  politician. He was President 
+of Honduras from January 27, 2006 until June 28, 2009. First son of a wealthy businessman, he inherited 
+his father's nickname "Mel", and, before entering politics, was involved in his family's ranch, logging 
+and timber businesses. Elected as a conservative, Zelaya shifted dramatically to the political left during 
+his presidency, forging an alliance with the Hugo Chávez linked ALBA.[2]  On June 28, 2009, in the 2009 
+Honduran constitutional crisis[3], he was arrested by the military, acting on an arrest order issued 
+by the Honduran Supreme Court, but they secreted him to Costa Rica, in an event that has been condemned 
+as a coup d'état.[4]  On September 21, 2009 he returned to Honduras clandestinely and resurfaced in the 
+Brazilian embassy in Tegucigalpa.[5]  In 2010 he left Honduras for exile in the Dominican Republic.[6]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_LMM_1</Tag>
+		<English>Greetings, [CT_NAME]. I, [OUR_NAME], Represent the People of Honduras, and we hope we can profit from this meeting.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TEGUCIGALPA</Tag>
+		<English>Tegucigalpa</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SANPEDROSULA</Tag>
+		<English>San Pedro Sula</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TRUJILLO</Tag>
+		<English>Trujillo</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MOSQUITIA</Tag>
+		<English>Mosquitia</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PUERTOLEMPIRA</Tag>
+		<English>Puerto Lempira</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LEIMUS</Tag>
+		<English>Leimus</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ELTIGRE</Tag>
+		<English>Eltigre</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_COPANRUINAS</Tag>
+		<English>Tegucigalpa</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_COMAYAGUA</Tag>
+		<English>Comayagua</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAVA</Tag>
+		<English>Sava</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PALACIOS</Tag>
+		<English>Palacios</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SANLORENZO</Tag>
+		<English>San Lorenzo</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DANLI</Tag>
+		<English>Danli</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TELA</Tag>
+		<English>Tela</English>
+	</TEXT>
+</Civ4GameText>

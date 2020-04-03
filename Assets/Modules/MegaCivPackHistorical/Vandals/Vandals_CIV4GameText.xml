@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Soren Johnson (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!--
+-->	
+<!-- Game Text Objects -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_VANDAL_DESC</Tag>
+		<English>Vandal Empire</English>
+	</TEXT>	
+	<TEXT>
+		<Tag>TXT_KEY_CIV_VANDAL_SHORT_DESC</Tag>
+		<English>Vandals</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_VANDAL_ADJECTIVE</Tag>
+		<English>Vandal</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_GENSERIC</Tag>
+		<English>Genseric</English>
+	</TEXT>
+
+<!--
+	
+-->
+	<TEXT>
+		<Tag>TXT_KEY_CIV_VANDAL_PEDIA</Tag>
+		<English>[BOLD]Strategy:[\BOLD]The Vandals are a early offensive powerhouse with strengths in all aspects of the military. Their UU, the Raider, is great at attacking cities. Their UB, the Naval Base, helps build a powerful navy. This, combined with their the traits of their leader, Genseric, Aggressive and Charismatic, make them a formidable force to face early on indeed.[PARAGRAPH:1][NEWLINE][NEWLINE][BOLD]Background:[\BOLD][PARAGRAPH:1]Vandals were a Germanic people who came into contact with the Roman empire during Emperor Marcus Aurelius' Marcomannic wars (166-80). By the 3rd century, in common with many German tribes, they had adopted the military instrument of the western steppe peoples, lance-armed cavalry. Divided into two groups, the Asdings and Silings, they were usually mentioned together with the Alans. In the 290s, they were living on the Hungarian Plain and in alliance with the Gepids against the Gothic Tervingi. Like the Goths, whom they seem to have resembled, they were driven westward by the Hunnic attacks of the 370s, and played a role both as enemies and soldiers of the empire. Stilicho, the Roman magister militum (C-in-C) in the 390s, was half-Vandal. He was the most successful opponent of the Gothic attacks on Italy, neutralizing Alaric and defeating and killing Radagaisus (406). The western Emperor Honorius feared his ambition and had him captured and executed (408).[PARAGRAPH:2]At the end of 406, the Vandals and Alans, in conjunction with the confederated Suevi, crossed the river Rhine at Mainz, and swarmed into a Gaul largely abandoned by the imperial government. They devastated the country for three years before crossing into Spain. Here they settled, mostly in the south and west, for a generation. The Siling group was dispersed by Visigoths in alliance with the Romans c.416-18, and this may have persuaded the Asdings to transfer to Africa in 429. Their king, Gaiseric, proved himself an able conqueror and great strategist. He soon seized Mauretania and Numidia (by 435), capturing Carthage in 439. He took full advantage of the city's position and resources. First, he put pressure on the Roman government to recognize his title in return for assuring the North African grain supply upon which the Italian cities depended. Secondly, he constructed fleets which enabled him to carve out a sphere of influence in the western Mediterranean. The Balearic Islands, Sicily, Corsica, and Sardinia fell under Vandal control. Extensive naval raiding against imperial territories included a sack of Rome (455). Byzantine attempts to reconquer Africa in the 460s were beaten off, and in 474, a treaty with the eastern Emperor Zeno reaffirmed Vandal legitimacy. Gaiseric established a dynasty which lasted as long as their rule in Africa.[PARAGRAPH:2]Although a very mixed group ethnically, being composed of the Asdings and remaining Silings, Alans, Goths, Suevi, and some Hispano-Romans, the Vandals formed a narrow social ?lite. They were divided from the local population by their adherence to the Arian form of Christianity, and by their military status. Gaiseric provided public lands, known as the sortes Vandalorum to support the warrior caste. They could fight in alliance with the local Mauri tribes, who provided light cavalry and infantry, but these had drifted out of allegiance by the early 5th century because of Vandal military decline. Reliance upon a small group of lance-armed cavalry, however socially ?lite and well equipped, was to prove inadequate in the face of more flexible forces. In 533, as the first stage of Justinian's plan to reconquer the western empire, the Byzantine general Belisarius invaded Africa with an expeditionary force. A fleet of 92 swift two-decker craft kept the Vandal fleet at bay. He had just 10, 000 infantry and 5, 000 cavalry (although these included his 1, 000-strong bodyguard troops and Hunnic mounted archers). Against them the Vandal King Gelimer could probably only muster comparable numbers, all cavalry. Belisarius landed five days' ride from Carthage and advanced upon the city. He did not expect Gelimer's rapid response and was surprised in line of march at Ad Decimum (the tenth milestone from Carthage). Initial Vandal success was halted by the death of the king's brother Ammatas, and resulted in them being driven off. Gelimer then withdrew, allowing the Romans to occupy Carthage, which he blockaded. The decisive encounter took place when Belisarius emerged from the city, leading only his cavalry to attack the Vandal camp at Tricamerum, 18 miles (29 km) away. Gelimer instructed his men to charge, sword in hand for close combat, but their attack was impeded by a stream. The trained Byzantine troops responded better to the situation, fought back skilfully, and once again killed the Vandal general, Tzanon. Procopius, the Byzantine historian, records the losses as 50 for his own side and 800 of the enemy. This was the end for the Vandal army in Africa. They were organized into five regiments, the Vandali Justiniani, each 400 strong, and shipped off to fight on the Persian frontier.[PARAGRAPH:2]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_GENSERIC_PEDIA</Tag>
+		<English>[H1]Genseric[\H1][NEWLINE][BOLD]King of the Vandals and Alans[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]c. 389 - Jan 25, 477 AD[NEWLINE]When Gaiseric, the son of King Godegiselus and a slave, succeeded his half brother Gunderic in 428, the Vandals were settled in southern Spain. However, the struggle for power among rivals in the Roman government, as in many other cases, provided new opportunities for the barbarians. The Roman governor of North Africa, Boniface, was under attack by forces of Emperor Valentinian III, and as Boniface's defeat seemed imminent, he was accused, perhaps unjustly, of calling in the Vandals in 429 to counter the Romans.[PARAGRAPH:2]Gaiseric proved to be one of the most formidable of the barbarian leaders, skillful in both war and diplomacy. A contemporary account describes him of medium height, slightly lame, sparing of speech, but with a deep mind. As soon as he entered Africa, he turned his forces against the Romans, sacking and burning large sections of their territory. His hostility toward the Roman state was heightened by his adherence to the condemned heresy of the Arians. He tried to eradicate much of the orthodox Catholic influence from North Africa.[PARAGRAPH:2]The conquest of Africa proceeded rapidly. In 430 Boniface was defeated, and in 431 Gaiseric took the city of St. Augustine, Hippo. In 435 the Romans were forced to make a treaty with Gaiseric which granted him much of eastern North Africa. This peace did not last, and in 439 he seized Carthage, the principal city of Roman Africa. In 442, he was recognized as king by the Roman emperor, Valentinian III. By gaining control of North Africa, Gaiseric had gained control of the major granary of Rome. Furthermore, the Vandals now took to the sea and disrupted the commerce of the Mediterranean as far east as Greece. This type of activity culminated in the capture and sack of Rome in June 455.[PARAGRAPH:2]Gaiseric was by now firmly established in North Africa, and a new treaty in 442 extended his area of control. He used his diplomatic skills to keep his enemies off guard. When enmity between the Goths and Vandals increased, he urged Attila to attack the Goths. Gaiseric's son married Eudocia, daughter of Valentinian III, who had been captured in Rome.[PARAGRAPH:2]Meanwhile the rulers of the Eastern Empire were determined to recover North Africa. In 460 Emperor Majorian failed to conquer Gaiseric and was forced into a new treaty in 462. In 468 a massive new expedition was launched. Poorly led and outmaneuvered militarily and diplomatically, it was disastrously defeated. Gaiseric concluded peace with the East Romans in 468 and with the West Romans in 471. With these treaties he secured the Vandalic kingdom. After his death in 477 the kingdom was continued under his descendants until it was conquered by Belisarius in 533-534.[PARAGRAPH:2]</English>
+	</TEXT>
+<!--
+	
+-->		
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_GENSERIC</Tag>
+		<English>I am [OUR_NAME] of the [OUR_CIV_ADJ] people. We come in peace, unless if you happen to possess large, wealthy, and prosperous cities vulnerable to raiders and pillagers.</English>
+	</TEXT>	
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_GENSERIC</Tag>
+		<English>Do you seriously want me to kill you?</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_GENSERIC</Tag>
+		<English>We must first loot and pillage the richest settlements of [CT_EMPIRE] before there can be any peace!</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_GENSERIC</Tag>
+		<English>Hello, ally [CT_NAME]! Let us share the plunder we have gained from raiding our enemies.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_GENSERIC</Tag>
+		<English>Have you come to grovel at my feet and beg for mercy?</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_GENSERIC</Tag>
+		<English>Usually we steal what we want, but out of respect for the great [CT_EMPIRE], we ask with politeness and modesty.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_GENSERIC</Tag>
+		<English>I like shiny things. How about you? I like it more when you give them to me.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_GENSERIC</Tag>
+		<English>Now we could raid and pillage your cities for what we want... or we can ask nicely. See, I'm new to this diplomacy thing, but it seems pretty straightforward, doesn't it?</English>
+	</TEXT>	
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_VANDAL_RAIDER_STRATEGY</Tag>
+		<English>This Vandal replacement for the [COLOR_UNIT_TEXT]Swordsman[COLOR_REVERT] has a withdrawal chance, thus allowing the Vandals to preserve some of their numbers better.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_VANDAL_RAIDER_PEDIA</Tag>
+		<English>[TAB]In modern usage, a "vandal" is someone who engages in senseless destruction. This usage is a result of inflated perceptions of the Vandals' sack of Rome under King Genseric in 455. The Vandals may not have been any more destructive than other invaders of ancient times, but writers who idealized Rome often blamed them for its destruction.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_VANDAL_NAVAL_BASE_PEDIA</Tag>
+		<English>[TAB]After their conquest of North Africa, the Vandals used their newly conquered port cities to launch attacks on Roman sites across the Meditterannean. Thus, despite their modern-day reputation as land-based, pillage-happy raiders, the Vandals managed to become a sizeable naval power in the region.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILDING_VANDAL_NAVAL_BASE_STRATEGY</Tag>
+		<English>[TAB]This Vandal replacement for the [COLOR_BUILDING_TEXT]Harbor[COLOR_REVERT] gives free experience points to naval units. Use it to build a powerful navy.</English>
+	</TEXT>													
+</Civ4GameText>

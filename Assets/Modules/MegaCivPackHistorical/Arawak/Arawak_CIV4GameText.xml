@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- re-Modified by strategyonly -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_CACIQUE</Tag>
+		<English>Orocobix</English>
+		<French>Orocobix</French>
+		<German>Orocobix</German>
+		<Italian>Orocobix</Italian>
+		<Spanish>Orocobix</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_CACIQUE_PEDIA</Tag>
+		<English>[H1]Agueybana[\H1][NEWLINE][BOLD]Cacique of the Arawaks[\BOLD][PARAGRAPH:2:1][BOLD]Background:[\BOLD][NEWLINE][TAB]The 
+name "Agueybana," literally meaning "Great Sun" in the Taino language, refers to two brothers, both natives 
+of the island today known as Puerto Rico. Agueybana I, born between 1460 and 1480, was leader of the 
+Taino, a branch of the Arawaks. In 1508, the first Spanish explorers arrived to colonize the island. 
+Agueybana and the Europeans soon negotiated a mutually beneficial agreement. In return for protection 
+from the other tribes of the region, Agueybana's tribe would labor for the Spaniards, mining the island's 
+rich gold resources. [PARAGRAPH:1]The equitable terms of the deal would not last for long. The lust for 
+gold drove the Spaniards to require more and more from their volunteer labor force and before long, it 
+became apparent that Agueybana had negotiated his people into slavery. Unfortunately, he was unable to 
+rectify his error. Whether through overwork, old age or illness (European disease had begun to ravage 
+the island), Agueybana passed away in 1510. [PARAGRAPH:1]Over the following year, Agueybana's brother 
+took up the mantle of leadership, as well as his brother's name, becoming Agueybana II. Through covert 
+planning, Agueybana II organized a rebellion against the island's governor, Juan Ponce de Leon (the conquistador 
+known for his misguided foray in search of the Fountain of Youth). With the element of surprise on their 
+side, Agueybana's warriors were initially successful, yet their victory would be fleeting. Between the 
+rapidly increasing numbers of Spaniards arriving on the island and the storm of new diseases battering 
+the Arawak population, the natives of Puerto Rico were nearly obliterated over the next thirty years. 
+Agueybana II himself died in the rebellion he worked to foment, passing away in 1511.</English>
+		<French>Cacique</French>
+		<German>Cacique</German>
+		<Italian>Cacique</Italian>
+		<Spanish>Cacique</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_AGUEYBANA</Tag>
+		<English>Agueybana</English>
+		<French>Agueybana</French>
+		<German>Agueybana</German>
+		<Italian>Agueybana</Italian>
+		<Spanish>Agueybana</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_AGUEYBANA_PEDIA</Tag>
+		<English>[H1]Cacique[\H1][NEWLINE][BOLD]Chief of a Arawak Tribe[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]1400ish 
+- 1510[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]is a title derived from the Taíno for 
+the pre-Colombian chiefs or leaders of tribes in the Bahamas, Greater Antilles, and the northern Lesser 
+Antilles. Subsequent to encounters with the Taíno upon their arrival in the New World, the Spanish used 
+the word as a title for the leaders of the other indigenous tribes they encountered in the Western Hemisphere 
+territories they occupied. In Spanish language, the term has come to mean a local political boss who 
+exercises significant power.[PARAGRAPH:1]The term is also used in the Portuguese language to describe 
+the leaders of indigenous communities in Brazil. It is also frequently used in Portugal to describe how 
+certain influential and well known students use their powerful social character to influence student 
+body elections in the student movement in Portugal's major universities. In Spain and in Brazil the word 
+is most commonly used in the third sense, meaning "a person in a village or region who exercises excessive 
+influence in political matters."[PARAGRAPH:1]Cacique comes from the Taíno word kassiquan, meaning "to 
+keep house."In the Taíno culture, the cacique rank was apparently established through democratic means. 
+His importance in the tribe was determined by the size of his tribe rather than his warlord skills, since 
+the Taínos were mostly a pacifist culture. They also enjoyed several privileges for their standing: they 
+lived in a larger rectangular hut in the center of the village and had a special sitting place for the 
+areytos (ceremonial dances) and the ceremonial ball game.</English>
+		<French>Cacique</French>
+		<German>Cacique</German>
+		<Italian>Cacique</Italian>
+		<Spanish>Cacique</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ARAWAK_DESC</Tag>
+		<English>Arawak Empire</English>
+		<French>Arawak Empire</French>
+		<German>Arawak Empire</German>
+		<Italian>Arawak Empire</Italian>
+		<Spanish>Imperio Arahuaco</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ARAWAK_SHORT_DESC</Tag>
+		<English>Arawak</English>
+		<French>Arawak</French>
+		<German>Arawak</German>
+		<Italian>Arawak</Italian>
+		<Spanish>Arahuaco</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ARAWAK_PEDIA</Tag>
+		<English>[TAB]The Arawaks were one of the most prominent societies of the Caribbean at the time of 
+the New World's discovery and were the first natives encountered by Columbus. Originating in South America 
+(where there remain a few scattered settlements of Arawak to this day), the Arawaks migrated to the Caribbean 
+islands, where they established settlements from the Lesser Antilles to Cuba. They are thought to have 
+arrived in the Caribbean around 500 BC, but in large part were obliterated from the Lesser Antilles by 
+their sworn foes the Carib, who also hailed from northern South America and for whom the Caribbean Sea 
+was named. [PARAGRAPH:2]The Arawak migration across the vast Caribbean was possible thanks in large part 
+to their expert abilities as navigators. Arawak boat-builders were capable of creating massive canoes, 
+the largest of which could carry roughly 150 souls. These served the Arawaks well in their primary activity 
+- trade. Arawak canoes could often be found cruising between islands, heavy with trade goods, including 
+gold, wood carvings, trained parrots and other luxuries, along with basic food stuffs, pottery, or fishing 
+nets. [PARAGRAPH:2]Our earliest records of Arawak society come from Columbus himself. Upon setting down 
+at Hispanola, Columbus was impressed by the gentle nature of the Arawaks, who seemed more awed than threatened 
+by his sailors. When Columbus' ship, the Santa Maria, ran aground of the coast of the island, a cacique 
+(Arawak leader) named Guacanagari sheltered Columbus and his men, giving them gifts of gold and other 
+fineries. [PARAGRAPH:2]The ease of Arawak life would not long survive the arrival of the Europeans: in 
+fact, a convergence of events nearly wiped them from the Caribbean. After seeing that there was gold 
+to be had in this new land, the Spaniards began employing the docile natives as slave labor. At the same 
+time, the Carib began a renewed effort to remove the Arawaks from their homes in the southern Caribbean. 
+And all the while, European diseases began to creep through the population. Between these three factors, 
+the Arawak population was nearly obliterated within a decade. [PARAGRAPH:2]As the first people to meet 
+westerners, the Arawaks left an indelible mark on the European conquerors. The hammock was among the 
+innovations first presented to western society by the Arawaks and the space-saving resting place would 
+become an important part of naval fleets until the twentieth century. As well, the cooking method known 
+as barbecuing, where pieces of meat are left to simmer over low heat for hours on end, was first performed 
+before western eyes by the Arawaks.</English>
+		<French>[TAB]The Arawaks were one of the most prominent societies of the Caribbean at the time of the 
+New World's discovery and were the first natives encountered by Columbus. Originating in South America 
+(where there remain a few scattered settlements of Arawak to this day), the Arawaks migrated to the Caribbean 
+islands, where they established settlements from the Lesser Antilles to Cuba. They are thought to have 
+arrived in the Caribbean around 500 BC, but in large part were obliterated from the Lesser Antilles by 
+their sworn foes the Carib, who also hailed from northern South America and for whom the Caribbean Sea 
+was named. [PARAGRAPH:2]The Arawak migration across the vast Caribbean was possible thanks in large part 
+to their expert abilities as navigators. Arawak boat-builders were capable of creating massive canoes, 
+the largest of which could carry roughly 150 souls. These served the Arawaks well in their primary activity 
+- trade. Arawak canoes could often be found cruising between islands, heavy with trade goods, including 
+gold, wood carvings, trained parrots and other luxuries, along with basic food stuffs, pottery, or fishing 
+nets. [PARAGRAPH:2]Our earliest records of Arawak society come from Columbus himself. Upon setting down 
+at Hispanola, Columbus was impressed by the gentle nature of the Arawaks, who seemed more awed than threatened 
+by his sailors. When Columbus' ship, the Santa Maria, ran aground of the coast of the island, a cacique 
+(Arawak leader) named Guacanagari sheltered Columbus and his men, giving them gifts of gold and other 
+fineries. [PARAGRAPH:2]The ease of Arawak life would not long survive the arrival of the Europeans: in 
+fact, a convergence of events nearly wiped them from the Caribbean. After seeing that there was gold 
+to be had in this new land, the Spaniards began employing the docile natives as slave labor. At the same 
+time, the Carib began a renewed effort to remove the Arawaks from their homes in the southern Caribbean. 
+And all the while, European diseases began to creep through the population. Between these three factors, 
+the Arawak population was nearly obliterated within a decade. [PARAGRAPH:2]As the first people to meet 
+westerners, the Arawaks left an indelible mark on the European conquerors. The hammock was among the 
+innovations first presented to western society by the Arawaks and the space-saving resting place would 
+become an important part of naval fleets until the twentieth century. As well, the cooking method known 
+as barbecuing, where pieces of meat are left to simmer over low heat for hours on end, was first performed 
+before western eyes by the Arawaks.</French>
+		<German>[TAB]The Arawaks were one of the most prominent societies of the Caribbean at the time of the 
+New World's discovery and were the first natives encountered by Columbus. Originating in South America 
+(where there remain a few scattered settlements of Arawak to this day), the Arawaks migrated to the Caribbean 
+islands, where they established settlements from the Lesser Antilles to Cuba. They are thought to have 
+arrived in the Caribbean around 500 BC, but in large part were obliterated from the Lesser Antilles by 
+their sworn foes the Carib, who also hailed from northern South America and for whom the Caribbean Sea 
+was named. [PARAGRAPH:2]The Arawak migration across the vast Caribbean was possible thanks in large part 
+to their expert abilities as navigators. Arawak boat-builders were capable of creating massive canoes, 
+the largest of which could carry roughly 150 souls. These served the Arawaks well in their primary activity 
+- trade. Arawak canoes could often be found cruising between islands, heavy with trade goods, including 
+gold, wood carvings, trained parrots and other luxuries, along with basic food stuffs, pottery, or fishing 
+nets. [PARAGRAPH:2]Our earliest records of Arawak society come from Columbus himself. Upon setting down 
+at Hispanola, Columbus was impressed by the gentle nature of the Arawaks, who seemed more awed than threatened 
+by his sailors. When Columbus' ship, the Santa Maria, ran aground of the coast of the island, a cacique 
+(Arawak leader) named Guacanagari sheltered Columbus and his men, giving them gifts of gold and other 
+fineries. [PARAGRAPH:2]The ease of Arawak life would not long survive the arrival of the Europeans: in 
+fact, a convergence of events nearly wiped them from the Caribbean. After seeing that there was gold 
+to be had in this new land, the Spaniards began employing the docile natives as slave labor. At the same 
+time, the Carib began a renewed effort to remove the Arawaks from their homes in the southern Caribbean. 
+And all the while, European diseases began to creep through the population. Between these three factors, 
+the Arawak population was nearly obliterated within a decade. [PARAGRAPH:2]As the first people to meet 
+westerners, the Arawaks left an indelible mark on the European conquerors. The hammock was among the 
+innovations first presented to western society by the Arawaks and the space-saving resting place would 
+become an important part of naval fleets until the twentieth century. As well, the cooking method known 
+as barbecuing, where pieces of meat are left to simmer over low heat for hours on end, was first performed 
+before western eyes by the Arawaks.</German>
+		<Italian>[TAB]The Arawaks were one of the most prominent societies of the Caribbean at the time of 
+the New World's discovery and were the first natives encountered by Columbus. Originating in South America 
+(where there remain a few scattered settlements of Arawak to this day), the Arawaks migrated to the Caribbean 
+islands, where they established settlements from the Lesser Antilles to Cuba. They are thought to have 
+arrived in the Caribbean around 500 BC, but in large part were obliterated from the Lesser Antilles by 
+their sworn foes the Carib, who also hailed from northern South America and for whom the Caribbean Sea 
+was named. [PARAGRAPH:2]The Arawak migration across the vast Caribbean was possible thanks in large part 
+to their expert abilities as navigators. Arawak boat-builders were capable of creating massive canoes, 
+the largest of which could carry roughly 150 souls. These served the Arawaks well in their primary activity 
+- trade. Arawak canoes could often be found cruising between islands, heavy with trade goods, including 
+gold, wood carvings, trained parrots and other luxuries, along with basic food stuffs, pottery, or fishing 
+nets. [PARAGRAPH:2]Our earliest records of Arawak society come from Columbus himself. Upon setting down 
+at Hispanola, Columbus was impressed by the gentle nature of the Arawaks, who seemed more awed than threatened 
+by his sailors. When Columbus' ship, the Santa Maria, ran aground of the coast of the island, a cacique 
+(Arawak leader) named Guacanagari sheltered Columbus and his men, giving them gifts of gold and other 
+fineries. [PARAGRAPH:2]The ease of Arawak life would not long survive the arrival of the Europeans: in 
+fact, a convergence of events nearly wiped them from the Caribbean. After seeing that there was gold 
+to be had in this new land, the Spaniards began employing the docile natives as slave labor. At the same 
+time, the Carib began a renewed effort to remove the Arawaks from their homes in the southern Caribbean. 
+And all the while, European diseases began to creep through the population. Between these three factors, 
+the Arawak population was nearly obliterated within a decade. [PARAGRAPH:2]As the first people to meet 
+westerners, the Arawaks left an indelible mark on the European conquerors. The hammock was among the 
+innovations first presented to western society by the Arawaks and the space-saving resting place would 
+become an important part of naval fleets until the twentieth century. As well, the cooking method known 
+as barbecuing, where pieces of meat are left to simmer over low heat for hours on end, was first performed 
+before western eyes by the Arawaks.</Italian>
+		<Spanish>Arahuaco o arawak es el nombre genérico dado a varios pueblos indígenas que se encontraban 
+asentados en las Antillas y la región circuncaribe a la llegada de los españoles en el siglo XV. El nombre 
+también se ha aplicado posteriormente a numerosas etnias que hablan o hablaban lenguas de la familia 
+arawak y que tradicionalmente habitaban una extensa zona comprendida entre la actual Florida y las Antillas, 
+Venezuela, el oeste de Perú, el sur de Brasil e incluso Bolivia y Paraguay. De hecho esta familia de 
+lenguas es una de las más extendida de América del sur. El término arahuaco no debe confundirse con arawaco 
+usado para designar a grupos étnicos de Colombia de la familia chibcha, ni tampoco todos los pueblos 
+cuya lengua es considerada arawacana son de hecho arahuacos.Incluían a los taínos, que ocupaban las Antillas 
+Mayores y Bahamas, los nepoyas y suppoyos de Trinidad y los iñeris que habitaban las Antillas Menores 
+antes de la llegada de los caribe, que vivían en la costa este de América del Sur, hasta lo que es actualmente 
+Brasil. El extremo sur de la difusión arahuaca se encontró en territorios del extremo norte de Argentina 
+a donde antes del siglo XIV había llegado la parcialidad arahuaca conocida como chané, en el siglo XX 
+todavía había grupos arawak en el NE. de Boliva y E. de Paraguay.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ARAWAK_ADJECTIVE</Tag>
+		<English>Arawak</English>
+		<French>Arawak</French>
+		<German>Arawak</German>
+		<Italian>Arawak</Italian>
+		<Spanish>Arahuaco</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_CACIQUE_1</Tag>
+		<English>Welcome...I'm [OUR_NAME] of the powerful [OUR_EMPIRE]. You must know that no wish is impossible for my friends ... and know also that my sharks find tastefull the flavour of my enemies . Tell me , are we friends , or you want to swim?.</English>
+		<French>What a surprise...I'm [OUR_NAME] of the powerful [OUR_EMPIRE]. You must know that no wish is impossible for my friends ... and know also that my sharks find tastefull the flavour of my enemies . Tell me , are we friends , or you want to swim?.</French>
+		<German>What a surprise...I'm [OUR_NAME] of the powerful [OUR_EMPIRE]. You must know that no wish is impossible for my friends ... and know also that my sharks find tastefull the flavour of my enemies . Tell me , are we friends , or you want to swim?.</German>
+		<Italian>What a surprise...I'm [OUR_NAME] of the powerful [OUR_EMPIRE]. You must know that no wish is impossible for my friends ... and know also that my sharks find tastefull the flavour of my enemies . Tell me , are we friends , or you want to swim?.</Italian>
+		<Spanish>Vaya sorpresa... Soy [OUR_NAME] del poderoso Imperio Arawaco. Debes saber que ningun deseo es imposible para mis amigos ... y tambien que mis tiburones encuentran delicioso el sabor de mis enemigos. Dime, somos amigos o quieres nadar un poco?</Spanish>
+	</TEXT>
+</Civ4GameText>

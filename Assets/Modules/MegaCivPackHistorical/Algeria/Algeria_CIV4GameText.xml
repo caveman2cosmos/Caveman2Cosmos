@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- ReModified by the StrategyOnly -->
+<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ALGERIA_DESC</Tag>
+		<English>Republic of Algeria</English>
+		<French>Republic of Algeria</French>
+		<German>Republic of Algeria</German>
+		<Italian>Republic of Algeria</Italian>
+		<Spanish>Republic of Algeria</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ALGERIA_SHORT_DESC</Tag>
+		<English>Algeria</English>
+		<French>Algeria</French>
+		<German>Algeria</German>
+		<Italian>Algeria</Italian>
+		<Spanish>Algeria</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ALGERIA_PEDIA</Tag>
+		<English>[TAB]Algeria is an Arab country in North Africa on the Mediterranean coast. Its capital and most populous city is Algiers. With a total area of 2,381,741 square kilometres (919,595 sq mi), 90% of which is desert, Algeria is the tenth-largest country in the world, and the largest in Arab world and Africa (following the partition of Sudan) and on the Mediterranean.[10] The country is bordered in the northeast by Tunisia, in the east by Libya, in the west by Morocco, in the southwest by Western Sahara, Mauritania, and Mali, in the southeast by Niger, and in the north by the Mediterranean Sea.</English>
+		<French>[TAB]Algeria is an Arab country in North Africa on the Mediterranean coast. Its capital and most populous city is Algiers. With a total area of 2,381,741 square kilometres (919,595 sq mi), 90% of which is desert, Algeria is the tenth-largest country in the world, and the largest in Arab world and Africa (following the partition of Sudan) and on the Mediterranean.[10] The country is bordered in the northeast by Tunisia, in the east by Libya, in the west by Morocco, in the southwest by Western Sahara, Mauritania, and Mali, in the southeast by Niger, and in the north by the Mediterranean Sea.</French>
+		<German>[TAB]Algeria is an Arab country in North Africa on the Mediterranean coast. Its capital and most populous city is Algiers. With a total area of 2,381,741 square kilometres (919,595 sq mi), 90% of which is desert, Algeria is the tenth-largest country in the world, and the largest in Arab world and Africa (following the partition of Sudan) and on the Mediterranean.[10] The country is bordered in the northeast by Tunisia, in the east by Libya, in the west by Morocco, in the southwest by Western Sahara, Mauritania, and Mali, in the southeast by Niger, and in the north by the Mediterranean Sea.</German>
+		<Italian>[TAB]Algeria is an Arab country in North Africa on the Mediterranean coast. Its capital and most populous city is Algiers. With a total area of 2,381,741 square kilometres (919,595 sq mi), 90% of which is desert, Algeria is the tenth-largest country in the world, and the largest in Arab world and Africa (following the partition of Sudan) and on the Mediterranean.[10] The country is bordered in the northeast by Tunisia, in the east by Libya, in the west by Morocco, in the southwest by Western Sahara, Mauritania, and Mali, in the southeast by Niger, and in the north by the Mediterranean Sea.</Italian>
+		<Spanish>[TAB]Algeria is an Arab country in North Africa on the Mediterranean coast. Its capital and most populous city is Algiers. With a total area of 2,381,741 square kilometres (919,595 sq mi), 90% of which is desert, Algeria is the tenth-largest country in the world, and the largest in Arab world and Africa (following the partition of Sudan) and on the Mediterranean.[10] The country is bordered in the northeast by Tunisia, in the east by Libya, in the west by Morocco, in the southwest by Western Sahara, Mauritania, and Mali, in the southeast by Niger, and in the north by the Mediterranean Sea.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ALGERIA_ADJECTIVE</Tag>
+		<English>Algerian</English>
+		<French>Algerian</French>
+		<German>Algerian</German>
+		<Italian>Algerian</Italian>
+		<Spanish>Algerian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_BENDJEDID</Tag>
+		<English>Chadli Bendjedid</English>
+		<French>Chadli Bendjedid</French>
+		<German>Chadli Bendjedid</German>
+		<Italian>Chadli Bendjedid</Italian>
+		<Spanish>Chadli Bendjedid</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_BENDJEDID_PEDIA</Tag>
+		<English>[H1]Chadli Bendjedid[\H1][NEWLINE][BOLD]President of Algeria[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 14 April 1929 - 6 October 2012[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]was the third President of Algeria; his presidential term of office ran from 9 February 1979 to 11 January 1992.</English>
+		<French>[H1]Chadli Bendjedid[\H1][NEWLINE][BOLD]President of Algeria[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 14 April 1929 - 6 October 2012[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]was the third President of Algeria; his presidential term of office ran from 9 February 1979 to 11 January 1992.</French>
+		<German>[H1]Chadli Bendjedid[\H1][NEWLINE][BOLD]President of Algeria[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 14 April 1929 - 6 October 2012[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]was the third President of Algeria; his presidential term of office ran from 9 February 1979 to 11 January 1992.</German>
+		<Italian>[H1]Chadli Bendjedid[\H1][NEWLINE][BOLD]President of Algeria[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 14 April 1929 - 6 October 2012[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]was the third President of Algeria; his presidential term of office ran from 9 February 1979 to 11 January 1992.</Italian>
+		<Spanish>[H1]Chadli Bendjedid[\H1][NEWLINE][BOLD]President of Algeria[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 14 April 1929 - 6 October 2012[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]was the third President of Algeria; his presidential term of office ran from 9 February 1979 to 11 January 1992.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_BENDJEDID_1</Tag>
+		<English>Greetings, [CT_NAME]. I am [OUR_NAME] of the [OUR_EMPIRE]. Love truth even if it harms you, and hate lies even if they serve you. These are words of wisdom to live by.</English>
+		<French>Greetings, [CT_NAME]. I am [OUR_NAME] of the [OUR_EMPIRE]. Love truth even if it harms you, and hate lies even if they serve you. These are words of wisdom to live by.</French>
+		<German>Greetings, [CT_NAME]. I am [OUR_NAME] of the [OUR_EMPIRE]. Love truth even if it harms you, and hate lies even if they serve you. These are words of wisdom to live by.</German>
+		<Italian>Greetings, [CT_NAME]. I am [OUR_NAME] of the [OUR_EMPIRE]. Love truth even if it harms you, and hate lies even if they serve you. These are words of wisdom to live by.</Italian>
+		<Spanish>Greetings, [CT_NAME]. I am [OUR_NAME] of the [OUR_EMPIRE]. Love truth even if it harms you, and hate lies even if they serve you. These are words of wisdom to live by.</Spanish>
+	</TEXT>
+</Civ4GameText>

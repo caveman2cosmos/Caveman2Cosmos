@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- ReModified by the StrategyOnly -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MORROCO_DESC</Tag>
+		<English>Kingdom of Morroco</English>
+		<French>Kingdom of Morroco</French>
+		<German>Kingdom of Morroco</German>
+		<Italian>Kingdom of Morroco</Italian>
+		<Spanish>Kingdom of Morroco</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MORROCO_SHORT_DESC</Tag>
+		<English>Morroco</English>
+		<French>Morroco</French>
+		<German>Morroco</German>
+		<Italian>Morroco</Italian>
+		<Spanish>Morroco</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MORROCO_PEDIA</Tag>
+		<English>[TAB]The word 'maghreb' is an Arabic term literally meaning "place of setting (of the sun)", 
+and hence "West." It derives from the root ghuroob, meaning "to set" or "to be hidden". Maghrebis are 
+of mixed origins. They are mainly of Berber and/or Arab origins; the resulting mix is sometimes (particularly 
+in Mauritania) termed Moorish. The Trans-Saharan trade brought in numerous West Africans, whose average 
+contribution to the population increases as one goes south. In the northern coastal towns, conversely, 
+several waves of European immigrants have influenced the population - notably Moriscos, Spanish Muslims 
+who fled the Reconquista, Turks who came over with the Ottoman Empire, and French, Italians, Spanish, 
+and others captured by the corsairs. Jewish communities have historically been present in the older cities, 
+and have contributed to the wider gene pool through conversion. In Algeria especially, a large European 
+minority, the "pied noirs", immigrated under French colonial rule; the overwhelming majority of these, 
+however, left immediately following independence.[PARAGRAPH:2]From the end of the Ice Age, when the Sahara 
+Desert dried up, contact between the Maghreb and sub-Saharan Africa was extremely limited by the difficulty 
+in crossing the desert. This remained the case until after the time of the Arab expansion and the spread 
+of Islam; even then, trans-Saharan trade was restricted to costly (but often profitable) caravan expeditions, 
+trading such goods as salt, gold, ivory, and slaves.[PARAGRAPH:2]Originally, the Maghreb was inhabited 
+by "Caucasoid" Cro-Magnoids (Iberomaurusians) in the north and by "Black" peoples in the Sahara. Later, 
+about 8000 BC, there came from the east "Caucasoid" speakers of northern Afro-Asiatic languages such 
+as Berber at least since the Capsian culture. Many ports along the Maghreb coast were occupied by Phoenicians, 
+particularly Carthaginians; with the defeat of Carthage, many of these ports naturally passed to Rome, 
+and ultimately it took control of the entire Maghreb north of the Atlas Mountains, apart from some of 
+the most mountainous regions like the Moroccan Rif.[PARAGRAPH:2]The Arabs reached the Maghreb in early 
+Umayyad times, but their control over it was quite weak, and various Islamic "heresies" such as the Ibadis 
+and the Shia, adopted by some Berbers, quickly threw off Caliphal control in the name of their interpretations 
+of Islam. The Arabic language became widespread only later, as a result of the invasion of the Banu Hilal 
+(unleashed, ironically, by the Berber Fatimids in punishment for their Zirid clients' defection) in the 
+1100's. Throughout this period, the Maghreb fluctuated between occasional unity (as under the Almohads, 
+and briefly under the Hafsids) and more commonly division into three states roughly corresponding to 
+modern Morocco, western Algeria, and eastern Algeria and Tunisia.[PARAGRAPH:2]After the Middle Ages, 
+the area east of Morocco was loosely under the control of the Ottoman Empire. After the 19th century, 
+it was colonized by France, Spain and later Italy. Today over two and a half million Maghrebins live 
+in France, especially from Algeria, as well as many more French of Maghrebin origin.</English>
+		<French>[TAB]The word 'maghreb' is an Arabic term literally meaning "place of setting (of the sun)", 
+and hence "West." It derives from the root ghuroob, meaning "to set" or "to be hidden". Maghrebis are 
+of mixed origins. They are mainly of Berber and/or Arab origins; the resulting mix is sometimes (particularly 
+in Mauritania) termed Moorish. The Trans-Saharan trade brought in numerous West Africans, whose average 
+contribution to the population increases as one goes south. In the northern coastal towns, conversely, 
+several waves of European immigrants have influenced the population - notably Moriscos, Spanish Muslims 
+who fled the Reconquista, Turks who came over with the Ottoman Empire, and French, Italians, Spanish, 
+and others captured by the corsairs. Jewish communities have historically been present in the older cities, 
+and have contributed to the wider gene pool through conversion. In Algeria especially, a large European 
+minority, the "pied noirs", immigrated under French colonial rule; the overwhelming majority of these, 
+however, left immediately following independence.[PARAGRAPH:2]From the end of the Ice Age, when the Sahara 
+Desert dried up, contact between the Maghreb and sub-Saharan Africa was extremely limited by the difficulty 
+in crossing the desert. This remained the case until after the time of the Arab expansion and the spread 
+of Islam; even then, trans-Saharan trade was restricted to costly (but often profitable) caravan expeditions, 
+trading such goods as salt, gold, ivory, and slaves.[PARAGRAPH:2]Originally, the Maghreb was inhabited 
+by "Caucasoid" Cro-Magnoids (Iberomaurusians) in the north and by "Black" peoples in the Sahara. Later, 
+about 8000 BC, there came from the east "Caucasoid" speakers of northern Afro-Asiatic languages such 
+as Berber at least since the Capsian culture. Many ports along the Maghreb coast were occupied by Phoenicians, 
+particularly Carthaginians; with the defeat of Carthage, many of these ports naturally passed to Rome, 
+and ultimately it took control of the entire Maghreb north of the Atlas Mountains, apart from some of 
+the most mountainous regions like the Moroccan Rif.[PARAGRAPH:2]The Arabs reached the Maghreb in early 
+Umayyad times, but their control over it was quite weak, and various Islamic "heresies" such as the Ibadis 
+and the Shia, adopted by some Berbers, quickly threw off Caliphal control in the name of their interpretations 
+of Islam. The Arabic language became widespread only later, as a result of the invasion of the Banu Hilal 
+(unleashed, ironically, by the Berber Fatimids in punishment for their Zirid clients' defection) in the 
+1100's. Throughout this period, the Maghreb fluctuated between occasional unity (as under the Almohads, 
+and briefly under the Hafsids) and more commonly division into three states roughly corresponding to 
+modern Morocco, western Algeria, and eastern Algeria and Tunisia.[PARAGRAPH:2]After the Middle Ages, 
+the area east of Morocco was loosely under the control of the Ottoman Empire. After the 19th century, 
+it was colonized by France, Spain and later Italy. Today over two and a half million Maghrebins live 
+in France, especially from Algeria, as well as many more French of Maghrebin origin.</French>
+		<German>[TAB]The word 'maghreb' is an Arabic term literally meaning "place of setting (of the sun)", 
+and hence "West." It derives from the root ghuroob, meaning "to set" or "to be hidden". Maghrebis are 
+of mixed origins. They are mainly of Berber and/or Arab origins; the resulting mix is sometimes (particularly 
+in Mauritania) termed Moorish. The Trans-Saharan trade brought in numerous West Africans, whose average 
+contribution to the population increases as one goes south. In the northern coastal towns, conversely, 
+several waves of European immigrants have influenced the population - notably Moriscos, Spanish Muslims 
+who fled the Reconquista, Turks who came over with the Ottoman Empire, and French, Italians, Spanish, 
+and others captured by the corsairs. Jewish communities have historically been present in the older cities, 
+and have contributed to the wider gene pool through conversion. In Algeria especially, a large European 
+minority, the "pied noirs", immigrated under French colonial rule; the overwhelming majority of these, 
+however, left immediately following independence.[PARAGRAPH:2]From the end of the Ice Age, when the Sahara 
+Desert dried up, contact between the Maghreb and sub-Saharan Africa was extremely limited by the difficulty 
+in crossing the desert. This remained the case until after the time of the Arab expansion and the spread 
+of Islam; even then, trans-Saharan trade was restricted to costly (but often profitable) caravan expeditions, 
+trading such goods as salt, gold, ivory, and slaves.[PARAGRAPH:2]Originally, the Maghreb was inhabited 
+by "Caucasoid" Cro-Magnoids (Iberomaurusians) in the north and by "Black" peoples in the Sahara. Later, 
+about 8000 BC, there came from the east "Caucasoid" speakers of northern Afro-Asiatic languages such 
+as Berber at least since the Capsian culture. Many ports along the Maghreb coast were occupied by Phoenicians, 
+particularly Carthaginians; with the defeat of Carthage, many of these ports naturally passed to Rome, 
+and ultimately it took control of the entire Maghreb north of the Atlas Mountains, apart from some of 
+the most mountainous regions like the Moroccan Rif.[PARAGRAPH:2]The Arabs reached the Maghreb in early 
+Umayyad times, but their control over it was quite weak, and various Islamic "heresies" such as the Ibadis 
+and the Shia, adopted by some Berbers, quickly threw off Caliphal control in the name of their interpretations 
+of Islam. The Arabic language became widespread only later, as a result of the invasion of the Banu Hilal 
+(unleashed, ironically, by the Berber Fatimids in punishment for their Zirid clients' defection) in the 
+1100's. Throughout this period, the Maghreb fluctuated between occasional unity (as under the Almohads, 
+and briefly under the Hafsids) and more commonly division into three states roughly corresponding to 
+modern Morocco, western Algeria, and eastern Algeria and Tunisia.[PARAGRAPH:2]After the Middle Ages, 
+the area east of Morocco was loosely under the control of the Ottoman Empire. After the 19th century, 
+it was colonized by France, Spain and later Italy. Today over two and a half million Maghrebins live 
+in France, especially from Algeria, as well as many more French of Maghrebin origin.</German>
+		<Italian>[TAB]The word 'maghreb' is an Arabic term literally meaning "place of setting (of the sun)", 
+and hence "West." It derives from the root ghuroob, meaning "to set" or "to be hidden". Maghrebis are 
+of mixed origins. They are mainly of Berber and/or Arab origins; the resulting mix is sometimes (particularly 
+in Mauritania) termed Moorish. The Trans-Saharan trade brought in numerous West Africans, whose average 
+contribution to the population increases as one goes south. In the northern coastal towns, conversely, 
+several waves of European immigrants have influenced the population - notably Moriscos, Spanish Muslims 
+who fled the Reconquista, Turks who came over with the Ottoman Empire, and French, Italians, Spanish, 
+and others captured by the corsairs. Jewish communities have historically been present in the older cities, 
+and have contributed to the wider gene pool through conversion. In Algeria especially, a large European 
+minority, the "pied noirs", immigrated under French colonial rule; the overwhelming majority of these, 
+however, left immediately following independence.[PARAGRAPH:2]From the end of the Ice Age, when the Sahara 
+Desert dried up, contact between the Maghreb and sub-Saharan Africa was extremely limited by the difficulty 
+in crossing the desert. This remained the case until after the time of the Arab expansion and the spread 
+of Islam; even then, trans-Saharan trade was restricted to costly (but often profitable) caravan expeditions, 
+trading such goods as salt, gold, ivory, and slaves.[PARAGRAPH:2]Originally, the Maghreb was inhabited 
+by "Caucasoid" Cro-Magnoids (Iberomaurusians) in the north and by "Black" peoples in the Sahara. Later, 
+about 8000 BC, there came from the east "Caucasoid" speakers of northern Afro-Asiatic languages such 
+as Berber at least since the Capsian culture. Many ports along the Maghreb coast were occupied by Phoenicians, 
+particularly Carthaginians; with the defeat of Carthage, many of these ports naturally passed to Rome, 
+and ultimately it took control of the entire Maghreb north of the Atlas Mountains, apart from some of 
+the most mountainous regions like the Moroccan Rif.[PARAGRAPH:2]The Arabs reached the Maghreb in early 
+Umayyad times, but their control over it was quite weak, and various Islamic "heresies" such as the Ibadis 
+and the Shia, adopted by some Berbers, quickly threw off Caliphal control in the name of their interpretations 
+of Islam. The Arabic language became widespread only later, as a result of the invasion of the Banu Hilal 
+(unleashed, ironically, by the Berber Fatimids in punishment for their Zirid clients' defection) in the 
+1100's. Throughout this period, the Maghreb fluctuated between occasional unity (as under the Almohads, 
+and briefly under the Hafsids) and more commonly division into three states roughly corresponding to 
+modern Morocco, western Algeria, and eastern Algeria and Tunisia.[PARAGRAPH:2]After the Middle Ages, 
+the area east of Morocco was loosely under the control of the Ottoman Empire. After the 19th century, 
+it was colonized by France, Spain and later Italy. Today over two and a half million Maghrebins live 
+in France, especially from Algeria, as well as many more French of Maghrebin origin.</Italian>
+		<Spanish>[TAB]The word 'maghreb' is an Arabic term literally meaning "place of setting (of the sun)", 
+and hence "West." It derives from the root ghuroob, meaning "to set" or "to be hidden". Maghrebis are 
+of mixed origins. They are mainly of Berber and/or Arab origins; the resulting mix is sometimes (particularly 
+in Mauritania) termed Moorish. The Trans-Saharan trade brought in numerous West Africans, whose average 
+contribution to the population increases as one goes south. In the northern coastal towns, conversely, 
+several waves of European immigrants have influenced the population - notably Moriscos, Spanish Muslims 
+who fled the Reconquista, Turks who came over with the Ottoman Empire, and French, Italians, Spanish, 
+and others captured by the corsairs. Jewish communities have historically been present in the older cities, 
+and have contributed to the wider gene pool through conversion. In Algeria especially, a large European 
+minority, the "pied noirs", immigrated under French colonial rule; the overwhelming majority of these, 
+however, left immediately following independence.[PARAGRAPH:2]From the end of the Ice Age, when the Sahara 
+Desert dried up, contact between the Maghreb and sub-Saharan Africa was extremely limited by the difficulty 
+in crossing the desert. This remained the case until after the time of the Arab expansion and the spread 
+of Islam; even then, trans-Saharan trade was restricted to costly (but often profitable) caravan expeditions, 
+trading such goods as salt, gold, ivory, and slaves.[PARAGRAPH:2]Originally, the Maghreb was inhabited 
+by "Caucasoid" Cro-Magnoids (Iberomaurusians) in the north and by "Black" peoples in the Sahara. Later, 
+about 8000 BC, there came from the east "Caucasoid" speakers of northern Afro-Asiatic languages such 
+as Berber at least since the Capsian culture. Many ports along the Maghreb coast were occupied by Phoenicians, 
+particularly Carthaginians; with the defeat of Carthage, many of these ports naturally passed to Rome, 
+and ultimately it took control of the entire Maghreb north of the Atlas Mountains, apart from some of 
+the most mountainous regions like the Moroccan Rif.[PARAGRAPH:2]The Arabs reached the Maghreb in early 
+Umayyad times, but their control over it was quite weak, and various Islamic "heresies" such as the Ibadis 
+and the Shia, adopted by some Berbers, quickly threw off Caliphal control in the name of their interpretations 
+of Islam. The Arabic language became widespread only later, as a result of the invasion of the Banu Hilal 
+(unleashed, ironically, by the Berber Fatimids in punishment for their Zirid clients' defection) in the 
+1100's. Throughout this period, the Maghreb fluctuated between occasional unity (as under the Almohads, 
+and briefly under the Hafsids) and more commonly division into three states roughly corresponding to 
+modern Morocco, western Algeria, and eastern Algeria and Tunisia.[PARAGRAPH:2]After the Middle Ages, 
+the area east of Morocco was loosely under the control of the Ottoman Empire. After the 19th century, 
+it was colonized by France, Spain and later Italy. Today over two and a half million Maghrebins live 
+in France, especially from Algeria, as well as many more French of Maghrebin origin.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_MORROCO_ADJECTIVE</Tag>
+		<English>Morrocan</English>
+		<French>Morrocan</French>
+		<German>Morrocan</German>
+		<Italian>Morrocan</Italian>
+		<Spanish>Morrocan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_IDRIS</Tag>
+		<English>Idris II</English>
+		<French>Idris II</French>
+		<German>Idris II</German>
+		<Italian>Idris II</Italian>
+		<Spanish>Idris II</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_IDRIS_PEDIA</Tag>
+		<English>[H1]Idris II[\H1][NEWLINE][BOLD]Sultan of Morocco[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.791 
+- 828 AD[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]Idris II was the son of Idris I, the 
+founder of the Idrisid dynasty in North Africa. He was born in Volubilis (Morocco) two months after the 
+death of his father. Idris II was the great great grandchild of Hassan, son of Ali the cousin of the 
+prophet Muhammad.[PARAGRAPH:1]The death of Idris I, and the resulting destabilisation of the fledgling 
+Idrisid dynasty state, delighted the Caliph in Baghdad. However, two months later, a concubine of Idris 
+I gave birth to Idris II, who became a quick prodigy.[PARAGRAPH:1]In reference to Idris II, the historian 
+Rom Landau, says: "In the lore of the Moroccans, Idris II was a being of almost magical attributes. An 
+exceptional young man he certainly must have been. At many points we are reminded of one of the greatest 
+sages of Islam, Ibn Sina or Avicenna. At the age of four little Idris apparently could read, at five 
+write, at eight he knew the Koran by heart, and by then is said to have mastered the wisdom of all the 
+outstanding savants. He was of real physical strength as well, and when he became officially sovereign 
+in 805 at the age of thirteen, he had already accomplished feats of endurance that men twice his age 
+could not emulate. His profound Islamic faith enhanced all these advantages and increased the veneration 
+accorded him."[PARAGRAPH:1]Twenty years after his father had done so, Idris II refounded the city Fez 
+on the left bank of the river Fez, opposite to where his father had founded it on the right bank. From 
+there on, Idris II began to unify Maghreb under Islam, establishing its firm allegiance to the belief. 
+After spending 19 years pursuing such purposes, this prodigy died at 35 in 828. For twelve hundred years 
+afterwards, the tradition of monarchy, established by Idris I and II, were continued.[PARAGRAPH:1]</English>
+		<French>[H1]Idris II[\H1][NEWLINE][BOLD]Sultan of Morocco[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.791 
+- 828 AD[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]Idris II was the son of Idris I, the 
+founder of the Idrisid dynasty in North Africa. He was born in Volubilis (Morocco) two months after the 
+death of his father. Idris II was the great great grandchild of Hassan, son of Ali the cousin of the 
+prophet Muhammad.[PARAGRAPH:1]The death of Idris I, and the resulting destabilisation of the fledgling 
+Idrisid dynasty state, delighted the Caliph in Baghdad. However, two months later, a concubine of Idris 
+I gave birth to Idris II, who became a quick prodigy.[PARAGRAPH:1]In reference to Idris II, the historian 
+Rom Landau, says: "In the lore of the Moroccans, Idris II was a being of almost magical attributes. An 
+exceptional young man he certainly must have been. At many points we are reminded of one of the greatest 
+sages of Islam, Ibn Sina or Avicenna. At the age of four little Idris apparently could read, at five 
+write, at eight he knew the Koran by heart, and by then is said to have mastered the wisdom of all the 
+outstanding savants. He was of real physical strength as well, and when he became officially sovereign 
+in 805 at the age of thirteen, he had already accomplished feats of endurance that men twice his age 
+could not emulate. His profound Islamic faith enhanced all these advantages and increased the veneration 
+accorded him."[PARAGRAPH:1]Twenty years after his father had done so, Idris II refounded the city Fez 
+on the left bank of the river Fez, opposite to where his father had founded it on the right bank. From 
+there on, Idris II began to unify Maghreb under Islam, establishing its firm allegiance to the belief. 
+After spending 19 years pursuing such purposes, this prodigy died at 35 in 828. For twelve hundred years 
+afterwards, the tradition of monarchy, established by Idris I and II, were continued.[PARAGRAPH:1]</French>
+		<German>[H1]Idris II[\H1][NEWLINE][BOLD]Sultan of Morocco[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.791 
+- 828 AD[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]Idris II was the son of Idris I, the 
+founder of the Idrisid dynasty in North Africa. He was born in Volubilis (Morocco) two months after the 
+death of his father. Idris II was the great great grandchild of Hassan, son of Ali the cousin of the 
+prophet Muhammad.[PARAGRAPH:1]The death of Idris I, and the resulting destabilisation of the fledgling 
+Idrisid dynasty state, delighted the Caliph in Baghdad. However, two months later, a concubine of Idris 
+I gave birth to Idris II, who became a quick prodigy.[PARAGRAPH:1]In reference to Idris II, the historian 
+Rom Landau, says: "In the lore of the Moroccans, Idris II was a being of almost magical attributes. An 
+exceptional young man he certainly must have been. At many points we are reminded of one of the greatest 
+sages of Islam, Ibn Sina or Avicenna. At the age of four little Idris apparently could read, at five 
+write, at eight he knew the Koran by heart, and by then is said to have mastered the wisdom of all the 
+outstanding savants. He was of real physical strength as well, and when he became officially sovereign 
+in 805 at the age of thirteen, he had already accomplished feats of endurance that men twice his age 
+could not emulate. His profound Islamic faith enhanced all these advantages and increased the veneration 
+accorded him."[PARAGRAPH:1]Twenty years after his father had done so, Idris II refounded the city Fez 
+on the left bank of the river Fez, opposite to where his father had founded it on the right bank. From 
+there on, Idris II began to unify Maghreb under Islam, establishing its firm allegiance to the belief. 
+After spending 19 years pursuing such purposes, this prodigy died at 35 in 828. For twelve hundred years 
+afterwards, the tradition of monarchy, established by Idris I and II, were continued.[PARAGRAPH:1]</German>
+		<Italian>[H1]Idris II[\H1][NEWLINE][BOLD]Sultan of Morocco[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.791 
+- 828 AD[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]Idris II was the son of Idris I, the 
+founder of the Idrisid dynasty in North Africa. He was born in Volubilis (Morocco) two months after the 
+death of his father. Idris II was the great great grandchild of Hassan, son of Ali the cousin of the 
+prophet Muhammad.[PARAGRAPH:1]The death of Idris I, and the resulting destabilisation of the fledgling 
+Idrisid dynasty state, delighted the Caliph in Baghdad. However, two months later, a concubine of Idris 
+I gave birth to Idris II, who became a quick prodigy.[PARAGRAPH:1]In reference to Idris II, the historian 
+Rom Landau, says: "In the lore of the Moroccans, Idris II was a being of almost magical attributes. An 
+exceptional young man he certainly must have been. At many points we are reminded of one of the greatest 
+sages of Islam, Ibn Sina or Avicenna. At the age of four little Idris apparently could read, at five 
+write, at eight he knew the Koran by heart, and by then is said to have mastered the wisdom of all the 
+outstanding savants. He was of real physical strength as well, and when he became officially sovereign 
+in 805 at the age of thirteen, he had already accomplished feats of endurance that men twice his age 
+could not emulate. His profound Islamic faith enhanced all these advantages and increased the veneration 
+accorded him."[PARAGRAPH:1]Twenty years after his father had done so, Idris II refounded the city Fez 
+on the left bank of the river Fez, opposite to where his father had founded it on the right bank. From 
+there on, Idris II began to unify Maghreb under Islam, establishing its firm allegiance to the belief. 
+After spending 19 years pursuing such purposes, this prodigy died at 35 in 828. For twelve hundred years 
+afterwards, the tradition of monarchy, established by Idris I and II, were continued.[PARAGRAPH:1]</Italian>
+		<Spanish>[H1]Idris II[\H1][NEWLINE][BOLD]Sultan of Morocco[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.791 
+- 828 AD[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]Idris II was the son of Idris I, the 
+founder of the Idrisid dynasty in North Africa. He was born in Volubilis (Morocco) two months after the 
+death of his father. Idris II was the great great grandchild of Hassan, son of Ali the cousin of the 
+prophet Muhammad.[PARAGRAPH:1]The death of Idris I, and the resulting destabilisation of the fledgling 
+Idrisid dynasty state, delighted the Caliph in Baghdad. However, two months later, a concubine of Idris 
+I gave birth to Idris II, who became a quick prodigy.[PARAGRAPH:1]In reference to Idris II, the historian 
+Rom Landau, says: "In the lore of the Moroccans, Idris II was a being of almost magical attributes. An 
+exceptional young man he certainly must have been. At many points we are reminded of one of the greatest 
+sages of Islam, Ibn Sina or Avicenna. At the age of four little Idris apparently could read, at five 
+write, at eight he knew the Koran by heart, and by then is said to have mastered the wisdom of all the 
+outstanding savants. He was of real physical strength as well, and when he became officially sovereign 
+in 805 at the age of thirteen, he had already accomplished feats of endurance that men twice his age 
+could not emulate. His profound Islamic faith enhanced all these advantages and increased the veneration 
+accorded him."[PARAGRAPH:1]Twenty years after his father had done so, Idris II refounded the city Fez 
+on the left bank of the river Fez, opposite to where his father had founded it on the right bank. From 
+there on, Idris II began to unify Maghreb under Islam, establishing its firm allegiance to the belief. 
+After spending 19 years pursuing such purposes, this prodigy died at 35 in 828. For twelve hundred years 
+afterwards, the tradition of monarchy, established by Idris I and II, were continued.[PARAGRAPH:1]</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_IDRIS_1</Tag>
+		<English>Greetings, [CT_NAME]. I am [OUR_NAME] of the [OUR_EMPIRE]. Love truth even if it harms you, and hate lies even if they serve you. These are words of wisdom to live by.</English>
+		<French>Greetings, [CT_NAME]. I am [OUR_NAME] of the [OUR_EMPIRE]. Love truth even if it harms you, and hate lies even if they serve you. These are words of wisdom to live by.</French>
+		<German>Greetings, [CT_NAME]. I am [OUR_NAME] of the [OUR_EMPIRE]. Love truth even if it harms you, and hate lies even if they serve you. These are words of wisdom to live by.</German>
+		<Italian>Greetings, [CT_NAME]. I am [OUR_NAME] of the [OUR_EMPIRE]. Love truth even if it harms you, and hate lies even if they serve you. These are words of wisdom to live by.</Italian>
+		<Spanish>Greetings, [CT_NAME]. I am [OUR_NAME] of the [OUR_EMPIRE]. Love truth even if it harms you, and hate lies even if they serve you. These are words of wisdom to live by.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_RABAT</Tag>
+		<English>Rabat</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CASABLANCA</Tag>
+		<English>Casablanca</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MARRAKECH</Tag>
+		<English>Marrakech</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SETTAT</Tag>
+		<English>Settat</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAFI</Tag>
+		<English>Safi</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_FEZ</Tag>
+		<English>Fez</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KENITRA</Tag>
+		<English>Kenitra</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GUELMIM</Tag>
+		<English>Guelmim</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LAAYOUNE</Tag>
+		<English>Laayoune</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MELNES</Tag>
+		<English>Melnes</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_OUJDA</Tag>
+		<English>Oujda</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DAKHLA</Tag>
+		<English>Dakhla</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_AGADIR</Tag>
+		<English>Agadir</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BENIMELLAL</Tag>
+		<English>Beni Mellal</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TANGIER</Tag>
+		<English>Tangier</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ALHOCEIMA</Tag>
+		<English>Al Hoceima</English>
+	</TEXT>
+</Civ4GameText>

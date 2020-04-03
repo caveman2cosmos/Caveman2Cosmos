@@ -1,0 +1,890 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- ReModified by the StrategyOnly -->
+<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_POLAND_DESC</Tag>
+		<English>Polish Empire</English>
+		<French>Empire polonais</French>
+		<German>Polish Empire</German>
+		<Italian>Impero Polacco</Italian>
+		<Spanish>Polish Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_POLAND_SHORT_DESC</Tag>
+		<English>Poland</English>
+		<French>Pologne</French>
+		<German>Poland</German>
+		<Italian>Polonia</Italian>
+		<Spanish>Poland</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_POLAND_PEDIA</Tag>
+		<English>[TAB]The nation that is now known as Poles was originally a group of Slavic tribes with territories situated approximately within the current borders of the modern country. These factions were in the 10th century unified under the leadership of Mieszko I of Piast dynasty. Mieszko converted the Poles in 966 to Christianity in order to compete better with the crusading Germans. This date is being recognized as the year in which the country came to existence. Since the formation of the state, Poland, due to its unfortunate central position, was forced to combat its neighbours. The first major battle recorded was that of Cedynia in 972, the aggressor being the margrave of Brandenburg, ended in an outstanding victory of the young Polish army. 12th and 13th centuries saw Poland divided into a throng of small principalities, which were later united under Wladyslaw I. He and his son {Casimir}, the only one who deserved to be called {the Great} in Polish historiography, initiated important administrative, judicial, and legislative reforms and founded the first Polish university (Europe's 37th). Next dynasty to rule Poland were the Jagiellons - grand dukes of Lithuania, which remained in personal union with Poland till 18th century. The rule of this dynasty, brought Poland to great heights of power and cultural magnificence. This was also the age of great battles with the 'eternal Polish foe' - Teutonic knights. The most important of them being the battle of Gra 1410, which ended with decisive Polish victory. In this period Polish nobility begun to consolidates its rights and privileges and a parliamentary body - Sejm - emerged. In the mid XVI century Poland united with Lithuania and was officially termed Commonwealth. This was the peak of renowned Polish tolerance, which displayed in the fact that Poland remained the only country at that time where no witch-hunts took place. With the death of Sigmund II, ended the Jagiellon dynasty and began the queerest period of Polish history. Poland was strong, rich and its boundaries stretched from Baltic to the Black Sea. Yet, the weird political system led to a quick decline. [PARAGRAPH:2]The power was vested in the hands of an elected king, who was chosen by the bicameral parliament. A distinguished Polish invention was Liberum Veto, which made it possible for any MP to prevent the passage of legislation. Those two specific principles led to enormous corruption, anarchy and consolidation of power in the hands of practically autonomous magnates. 17th and 18th century saw the decline of Poland thorn by endless wars with Sweden, Russia, and the Ukrainian Cossacks. Still, in this whole mess some bright points shone splendid mainly due to specific Polish cavalry unit - {the Hussars}. This light cavalry kindled terror among its foes with their high-speed charge and queer garment of leopard hides, light armour and lofty wings attached to arms or saddle (need for speed). Thanks to this unit were John Casimir and John Sobieski able to wage victorious battles with the Ottomans, the grandest of which was the battle of Vienna (mid. 17th c.), which halted a serious threat to Christendom in central Europe. From 1697 the Electors of Saxony took the title of king and partition between Russia, Austria, and Prussia followed in 1772. Despite this hopeless situation Sejm, supported by Stanis³aw II Augustus, Polish king and a lover of Catherine the Great issued a Constitution on May 3, 1791 - second one in the world. This act and a brief revolutionary war for recovery (1794) led by Kosciusko were followed by further partitions (1793, 1795-97), which finally led to complete disappearance of Poland from the European map. [PARAGRAPH:2]After the Vienna Congress Kingdom of Poland was created with its own administration but a Russian Tsar as king. Bloody uprisings, which took place in 1830, 1846-9, and 1863 were suppressed but this did not prevent the rise of democratic parties, which demanded independence and were ready to seize the power after WWI, when Poland finally, after 123 years, regained freedom. War against Russia (1920-1) with the famous battle of Warsaw, was followed by the dictatorship of Marshal Pilsudski. Poland by the terms of Versailles Treaty had access to the port of Danzig via a Polish Corridor, which became a [casus belli] for Hitler to attack Poland and start WWII. After the war Poland was drawn into the Soviet sphere of interests. Political opposition was neutralized, and in 1952 a Soviet-style constitution was adopted. Waves of workers' strikes in 1956 and 1970 led to the rigidification of communism and only after Karol Wojtyla became the first Polish pope in 1979 was the regime eased. Governmental crisis, which followed the imposition of Martial Law by PM Jaruzelski, led to legalization of 'Solidarity' (Poland's first free labour union and active opposition) and Round Table talks with all groups. Multi-party parliament was established and Lech Walesa was elected president. Since then democratisation of Poland continues despite constant economical problems. A few years ago Poland joined NATO and is now in the European Union.</English>
+		<French>[TAB]The nation that is now known as Poles was originally a group of Slavic tribes with territories situated approximately within the current borders of the modern country. These factions were in the 10th century unified under the leadership of Mieszko I of Piast dynasty. Mieszko converted the Poles in 966 to Christianity in order to compete better with the crusading Germans. This date is being recognized as the year in which the country came to existence. Since the formation of the state, Poland, due to its unfortunate central position, was forced to combat its neighbours. The first major battle recorded was that of Cedynia in 972, the aggressor being the margrave of Brandenburg, ended in an outstanding victory of the young Polish army. 12th and 13th centuries saw Poland divided into a throng of small principalities, which were later united under Wladyslaw I. He and his son {Casimir}, the only one who deserved to be called {the Great} in Polish historiography, initiated important administrative, judicial, and legislative reforms and founded the first Polish university (Europe's 37th). Next dynasty to rule Poland were the Jagiellons - grand dukes of Lithuania, which remained in personal union with Poland till 18th century. The rule of this dynasty, brought Poland to great heights of power and cultural magnificence. This was also the age of great battles with the 'eternal Polish foe' - Teutonic knights. The most important of them being the battle of Gra 1410, which ended with decisive Polish victory. In this period Polish nobility begun to consolidates its rights and privileges and a parliamentary body - Sejm - emerged. In the mid XVI century Poland united with Lithuania and was officially termed Commonwealth. This was the peak of renowned Polish tolerance, which displayed in the fact that Poland remained the only country at that time where no witch-hunts took place. With the death of Sigmund II, ended the Jagiellon dynasty and began the queerest period of Polish history. Poland was strong, rich and its boundaries stretched from Baltic to the Black Sea. Yet, the weird political system led to a quick decline. [PARAGRAPH:2]The power was vested in the hands of an elected king, who was chosen by the bicameral parliament. A distinguished Polish invention was Liberum Veto, which made it possible for any MP to prevent the passage of legislation. Those two specific principles led to enormous corruption, anarchy and consolidation of power in the hands of practically autonomous magnates. 17th and 18th century saw the decline of Poland thorn by endless wars with Sweden, Russia, and the Ukrainian Cossacks. Still, in this whole mess some bright points shone splendid mainly due to specific Polish cavalry unit - {the Hussars}. This light cavalry kindled terror among its foes with their high-speed charge and queer garment of leopard hides, light armour and lofty wings attached to arms or saddle (need for speed). Thanks to this unit were John Casimir and John Sobieski able to wage victorious battles with the Ottomans, the grandest of which was the battle of Vienna (mid. 17th c.), which halted a serious threat to Christendom in central Europe. From 1697 the Electors of Saxony took the title of king and partition between Russia, Austria, and Prussia followed in 1772. Despite this hopeless situation Sejm, supported by Stanis³aw II Augustus, Polish king and a lover of Catherine the Great issued a Constitution on May 3, 1791 - second one in the world. This act and a brief revolutionary war for recovery (1794) led by Kosciusko were followed by further partitions (1793, 1795-97), which finally led to complete disappearance of Poland from the European map. [PARAGRAPH:2]After the Vienna Congress Kingdom of Poland was created with its own administration but a Russian Tsar as king. Bloody uprisings, which took place in 1830, 1846-9, and 1863 were suppressed but this did not prevent the rise of democratic parties, which demanded independence and were ready to seize the power after WWI, when Poland finally, after 123 years, regained freedom. War against Russia (1920-1) with the famous battle of Warsaw, was followed by the dictatorship of Marshal Pilsudski. Poland by the terms of Versailles Treaty had access to the port of Danzig via a Polish Corridor, which became a [casus belli] for Hitler to attack Poland and start WWII. After the war Poland was drawn into the Soviet sphere of interests. Political opposition was neutralized, and in 1952 a Soviet-style constitution was adopted. Waves of workers' strikes in 1956 and 1970 led to the rigidification of communism and only after Karol Wojtyla became the first Polish pope in 1979 was the regime eased. Governmental crisis, which followed the imposition of Martial Law by PM Jaruzelski, led to legalization of 'Solidarity' (Poland's first free labour union and active opposition) and Round Table talks with all groups. Multi-party parliament was established and Lech Walesa was elected president. Since then democratisation of Poland continues despite constant economical problems. A few years ago Poland joined NATO and is now in the European Union.</French>
+		<German>[TAB]The nation that is now known as Poles was originally a group of Slavic tribes with territories situated approximately within the current borders of the modern country. These factions were in the 10th century unified under the leadership of Mieszko I of Piast dynasty. Mieszko converted the Poles in 966 to Christianity in order to compete better with the crusading Germans. This date is being recognized as the year in which the country came to existence. Since the formation of the state, Poland, due to its unfortunate central position, was forced to combat its neighbours. The first major battle recorded was that of Cedynia in 972, the aggressor being the margrave of Brandenburg, ended in an outstanding victory of the young Polish army. 12th and 13th centuries saw Poland divided into a throng of small principalities, which were later united under Wladyslaw I. He and his son {Casimir}, the only one who deserved to be called {the Great} in Polish historiography, initiated important administrative, judicial, and legislative reforms and founded the first Polish university (Europe's 37th). Next dynasty to rule Poland were the Jagiellons - grand dukes of Lithuania, which remained in personal union with Poland till 18th century. The rule of this dynasty, brought Poland to great heights of power and cultural magnificence. This was also the age of great battles with the 'eternal Polish foe' - Teutonic knights. The most important of them being the battle of Gra 1410, which ended with decisive Polish victory. In this period Polish nobility begun to consolidates its rights and privileges and a parliamentary body - Sejm - emerged. In the mid XVI century Poland united with Lithuania and was officially termed Commonwealth. This was the peak of renowned Polish tolerance, which displayed in the fact that Poland remained the only country at that time where no witch-hunts took place. With the death of Sigmund II, ended the Jagiellon dynasty and began the queerest period of Polish history. Poland was strong, rich and its boundaries stretched from Baltic to the Black Sea. Yet, the weird political system led to a quick decline. [PARAGRAPH:2]The power was vested in the hands of an elected king, who was chosen by the bicameral parliament. A distinguished Polish invention was Liberum Veto, which made it possible for any MP to prevent the passage of legislation. Those two specific principles led to enormous corruption, anarchy and consolidation of power in the hands of practically autonomous magnates. 17th and 18th century saw the decline of Poland thorn by endless wars with Sweden, Russia, and the Ukrainian Cossacks. Still, in this whole mess some bright points shone splendid mainly due to specific Polish cavalry unit - {the Hussars}. This light cavalry kindled terror among its foes with their high-speed charge and queer garment of leopard hides, light armour and lofty wings attached to arms or saddle (need for speed). Thanks to this unit were John Casimir and John Sobieski able to wage victorious battles with the Ottomans, the grandest of which was the battle of Vienna (mid. 17th c.), which halted a serious threat to Christendom in central Europe. From 1697 the Electors of Saxony took the title of king and partition between Russia, Austria, and Prussia followed in 1772. Despite this hopeless situation Sejm, supported by Stanis³aw II Augustus, Polish king and a lover of Catherine the Great issued a Constitution on May 3, 1791 - second one in the world. This act and a brief revolutionary war for recovery (1794) led by Kosciusko were followed by further partitions (1793, 1795-97), which finally led to complete disappearance of Poland from the European map. [PARAGRAPH:2]After the Vienna Congress Kingdom of Poland was created with its own administration but a Russian Tsar as king. Bloody uprisings, which took place in 1830, 1846-9, and 1863 were suppressed but this did not prevent the rise of democratic parties, which demanded independence and were ready to seize the power after WWI, when Poland finally, after 123 years, regained freedom. War against Russia (1920-1) with the famous battle of Warsaw, was followed by the dictatorship of Marshal Pilsudski. Poland by the terms of Versailles Treaty had access to the port of Danzig via a Polish Corridor, which became a [casus belli] for Hitler to attack Poland and start WWII. After the war Poland was drawn into the Soviet sphere of interests. Political opposition was neutralized, and in 1952 a Soviet-style constitution was adopted. Waves of workers' strikes in 1956 and 1970 led to the rigidification of communism and only after Karol Wojtyla became the first Polish pope in 1979 was the regime eased. Governmental crisis, which followed the imposition of Martial Law by PM Jaruzelski, led to legalization of 'Solidarity' (Poland's first free labour union and active opposition) and Round Table talks with all groups. Multi-party parliament was established and Lech Walesa was elected president. Since then democratisation of Poland continues despite constant economical problems. A few years ago Poland joined NATO and is now in the European Union.</German>
+		<Italian>[TAB]The nation that is now known as Poles was originally a group of Slavic tribes with territories situated approximately within the current borders of the modern country. These factions were in the 10th century unified under the leadership of Mieszko I of Piast dynasty. Mieszko converted the Poles in 966 to Christianity in order to compete better with the crusading Germans. This date is being recognized as the year in which the country came to existence. Since the formation of the state, Poland, due to its unfortunate central position, was forced to combat its neighbours. The first major battle recorded was that of Cedynia in 972, the aggressor being the margrave of Brandenburg, ended in an outstanding victory of the young Polish army. 12th and 13th centuries saw Poland divided into a throng of small principalities, which were later united under Wladyslaw I. He and his son {Casimir}, the only one who deserved to be called {the Great} in Polish historiography, initiated important administrative, judicial, and legislative reforms and founded the first Polish university (Europe's 37th). Next dynasty to rule Poland were the Jagiellons - grand dukes of Lithuania, which remained in personal union with Poland till 18th century. The rule of this dynasty, brought Poland to great heights of power and cultural magnificence. This was also the age of great battles with the 'eternal Polish foe' - Teutonic knights. The most important of them being the battle of Gra 1410, which ended with decisive Polish victory. In this period Polish nobility begun to consolidates its rights and privileges and a parliamentary body - Sejm - emerged. In the mid XVI century Poland united with Lithuania and was officially termed Commonwealth. This was the peak of renowned Polish tolerance, which displayed in the fact that Poland remained the only country at that time where no witch-hunts took place. With the death of Sigmund II, ended the Jagiellon dynasty and began the queerest period of Polish history. Poland was strong, rich and its boundaries stretched from Baltic to the Black Sea. Yet, the weird political system led to a quick decline. [PARAGRAPH:2]The power was vested in the hands of an elected king, who was chosen by the bicameral parliament. A distinguished Polish invention was Liberum Veto, which made it possible for any MP to prevent the passage of legislation. Those two specific principles led to enormous corruption, anarchy and consolidation of power in the hands of practically autonomous magnates. 17th and 18th century saw the decline of Poland thorn by endless wars with Sweden, Russia, and the Ukrainian Cossacks. Still, in this whole mess some bright points shone splendid mainly due to specific Polish cavalry unit - {the Hussars}. This light cavalry kindled terror among its foes with their high-speed charge and queer garment of leopard hides, light armour and lofty wings attached to arms or saddle (need for speed). Thanks to this unit were John Casimir and John Sobieski able to wage victorious battles with the Ottomans, the grandest of which was the battle of Vienna (mid. 17th c.), which halted a serious threat to Christendom in central Europe. From 1697 the Electors of Saxony took the title of king and partition between Russia, Austria, and Prussia followed in 1772. Despite this hopeless situation Sejm, supported by Stanis³aw II Augustus, Polish king and a lover of Catherine the Great issued a Constitution on May 3, 1791 - second one in the world. This act and a brief revolutionary war for recovery (1794) led by Kosciusko were followed by further partitions (1793, 1795-97), which finally led to complete disappearance of Poland from the European map. [PARAGRAPH:2]After the Vienna Congress Kingdom of Poland was created with its own administration but a Russian Tsar as king. Bloody uprisings, which took place in 1830, 1846-9, and 1863 were suppressed but this did not prevent the rise of democratic parties, which demanded independence and were ready to seize the power after WWI, when Poland finally, after 123 years, regained freedom. War against Russia (1920-1) with the famous battle of Warsaw, was followed by the dictatorship of Marshal Pilsudski. Poland by the terms of Versailles Treaty had access to the port of Danzig via a Polish Corridor, which became a [casus belli] for Hitler to attack Poland and start WWII. After the war Poland was drawn into the Soviet sphere of interests. Political opposition was neutralized, and in 1952 a Soviet-style constitution was adopted. Waves of workers' strikes in 1956 and 1970 led to the rigidification of communism and only after Karol Wojtyla became the first Polish pope in 1979 was the regime eased. Governmental crisis, which followed the imposition of Martial Law by PM Jaruzelski, led to legalization of 'Solidarity' (Poland's first free labour union and active opposition) and Round Table talks with all groups. Multi-party parliament was established and Lech Walesa was elected president. Since then democratisation of Poland continues despite constant economical problems. A few years ago Poland joined NATO and is now in the European Union.</Italian>
+		<Spanish>[TAB]The nation that is now known as Poles was originally a group of Slavic tribes with territories situated approximately within the current borders of the modern country. These factions were in the 10th century unified under the leadership of Mieszko I of Piast dynasty. Mieszko converted the Poles in 966 to Christianity in order to compete better with the crusading Germans. This date is being recognized as the year in which the country came to existence. Since the formation of the state, Poland, due to its unfortunate central position, was forced to combat its neighbours. The first major battle recorded was that of Cedynia in 972, the aggressor being the margrave of Brandenburg, ended in an outstanding victory of the young Polish army. 12th and 13th centuries saw Poland divided into a throng of small principalities, which were later united under Wladyslaw I. He and his son {Casimir}, the only one who deserved to be called {the Great} in Polish historiography, initiated important administrative, judicial, and legislative reforms and founded the first Polish university (Europe's 37th). Next dynasty to rule Poland were the Jagiellons - grand dukes of Lithuania, which remained in personal union with Poland till 18th century. The rule of this dynasty, brought Poland to great heights of power and cultural magnificence. This was also the age of great battles with the 'eternal Polish foe' - Teutonic knights. The most important of them being the battle of Gra 1410, which ended with decisive Polish victory. In this period Polish nobility begun to consolidates its rights and privileges and a parliamentary body - Sejm - emerged. In the mid XVI century Poland united with Lithuania and was officially termed Commonwealth. This was the peak of renowned Polish tolerance, which displayed in the fact that Poland remained the only country at that time where no witch-hunts took place. With the death of Sigmund II, ended the Jagiellon dynasty and began the queerest period of Polish history. Poland was strong, rich and its boundaries stretched from Baltic to the Black Sea. Yet, the weird political system led to a quick decline. [PARAGRAPH:2]The power was vested in the hands of an elected king, who was chosen by the bicameral parliament. A distinguished Polish invention was Liberum Veto, which made it possible for any MP to prevent the passage of legislation. Those two specific principles led to enormous corruption, anarchy and consolidation of power in the hands of practically autonomous magnates. 17th and 18th century saw the decline of Poland thorn by endless wars with Sweden, Russia, and the Ukrainian Cossacks. Still, in this whole mess some bright points shone splendid mainly due to specific Polish cavalry unit - {the Hussars}. This light cavalry kindled terror among its foes with their high-speed charge and queer garment of leopard hides, light armour and lofty wings attached to arms or saddle (need for speed). Thanks to this unit were John Casimir and John Sobieski able to wage victorious battles with the Ottomans, the grandest of which was the battle of Vienna (mid. 17th c.), which halted a serious threat to Christendom in central Europe. From 1697 the Electors of Saxony took the title of king and partition between Russia, Austria, and Prussia followed in 1772. Despite this hopeless situation Sejm, supported by Stanis³aw II Augustus, Polish king and a lover of Catherine the Great issued a Constitution on May 3, 1791 - second one in the world. This act and a brief revolutionary war for recovery (1794) led by Kosciusko were followed by further partitions (1793, 1795-97), which finally led to complete disappearance of Poland from the European map. [PARAGRAPH:2]After the Vienna Congress Kingdom of Poland was created with its own administration but a Russian Tsar as king. Bloody uprisings, which took place in 1830, 1846-9, and 1863 were suppressed but this did not prevent the rise of democratic parties, which demanded independence and were ready to seize the power after WWI, when Poland finally, after 123 years, regained freedom. War against Russia (1920-1) with the famous battle of Warsaw, was followed by the dictatorship of Marshal Pilsudski. Poland by the terms of Versailles Treaty had access to the port of Danzig via a Polish Corridor, which became a [casus belli] for Hitler to attack Poland and start WWII. After the war Poland was drawn into the Soviet sphere of interests. Political opposition was neutralized, and in 1952 a Soviet-style constitution was adopted. Waves of workers' strikes in 1956 and 1970 led to the rigidification of communism and only after Karol Wojtyla became the first Polish pope in 1979 was the regime eased. Governmental crisis, which followed the imposition of Martial Law by PM Jaruzelski, led to legalization of 'Solidarity' (Poland's first free labour union and active opposition) and Round Table talks with all groups. Multi-party parliament was established and Lech Walesa was elected president. Since then democratisation of Poland continues despite constant economical problems. A few years ago Poland joined NATO and is now in the European Union.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_POLAND_ADJECTIVE</Tag>
+		<English>Polish</English>
+		<French>Polonais</French>
+		<German>Polish</German>
+		<Italian>
+			<Text>Polacco:Polacca:Polacchi:Polacche</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Italian>
+		<Spanish>Polish</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_CASIMIR</Tag>
+		<English>Casimir</English>
+		<French>Casimir</French>
+		<German>Casimir</German>
+		<Italian>Casimiro</Italian>
+		<Spanish>Casimir</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_CASIMIR_PEDIA</Tag>
+		<English>[H1]Casimir III the Great [\H1][NEWLINE][BOLD]King of Poland [\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1310 - 1370[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Last of the Piast Dynasty, king of Poland from 1333, the son of Wladyslaw I the Short (Wladyslaw I Lokietek). [PARAGRAPH:1]Casimir is the only Polish king who did receive and maintain the title of the great in Polish history (Boleslaw I Chrobry was once also called the great, but not today), and the title is well deserved. When he received the crown, his hold on it was in danger, as even his neighbours did not recognise his title and instead called him "king of Krakow. The economy was ruined, and country was depopulated and tired with wars. At the time of his death, it had doubled in land area (mostly through joining lands in today's Ukraine, then Duchy of Halicz), grew prosperous, wealthy and had great prospects to the future. Although he is depicted as a peaceful king in children books, he in fact waged many victorious wars and was preparing other ones just before he died. [PARAGRAPH:1]He built many new castles, reformed the Polish army, as well as Polish civil and criminal laws. At the Sejm in Wislica, March 11, 1347, he introduced salutary legal reforms in the jurisprudence of his country. He sanctioned a code of laws for Great and Little Poland, which gained for him the title of "the Polish Justinian". He founded the University of Krakow although his death stalled the development of the university (and that's why today it is called Jagiellonian instead of Casimirian).He organised a meeting of kings in Krakow in 1364 which showed the wealth of Polish kingdom. [PARAGRAPH:1]Casimir was sonless. Apparently he deemed his own descendants either unsuitable to inherit or too young. Thus, and in order to provide a clear line of succession instead of problems of uncertainty, he arranged his sister Elisabeth, Dowager Queen of Hungary, and her son Louis king of Hungary to be his successors in Poland. Louis was proclaimed king in Casimir's death 1370, and Elisabeth held much of the practical power until her death in 1380.</English>
+		<French>[H1]Casimir III the Great [\H1][NEWLINE][BOLD]King of Poland [\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1310 - 1370[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Last of the Piast Dynasty, king of Poland from 1333, the son of Wladyslaw I the Short (Wladyslaw I Lokietek). [PARAGRAPH:1]Casimir is the only Polish king who did receive and maintain the title of the great in Polish history (Boleslaw I Chrobry was once also called the great, but not today), and the title is well deserved. When he received the crown, his hold on it was in danger, as even his neighbours did not recognise his title and instead called him "king of Krakow. The economy was ruined, and country was depopulated and tired with wars. At the time of his death, it had doubled in land area (mostly through joining lands in today's Ukraine, then Duchy of Halicz), grew prosperous, wealthy and had great prospects to the future. Although he is depicted as a peaceful king in children books, he in fact waged many victorious wars and was preparing other ones just before he died. [PARAGRAPH:1]He built many new castles, reformed the Polish army, as well as Polish civil and criminal laws. At the Sejm in Wislica, March 11, 1347, he introduced salutary legal reforms in the jurisprudence of his country. He sanctioned a code of laws for Great and Little Poland, which gained for him the title of "the Polish Justinian". He founded the University of Krakow although his death stalled the development of the university (and that's why today it is called Jagiellonian instead of Casimirian).He organised a meeting of kings in Krakow in 1364 which showed the wealth of Polish kingdom. [PARAGRAPH:1]Casimir was sonless. Apparently he deemed his own descendants either unsuitable to inherit or too young. Thus, and in order to provide a clear line of succession instead of problems of uncertainty, he arranged his sister Elisabeth, Dowager Queen of Hungary, and her son Louis king of Hungary to be his successors in Poland. Louis was proclaimed king in Casimir's death 1370, and Elisabeth held much of the practical power until her death in 1380.</French>
+		<German>[H1]Casimir III the Great [\H1][NEWLINE][BOLD]King of Poland [\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1310 - 1370[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Last of the Piast Dynasty, king of Poland from 1333, the son of Wladyslaw I the Short (Wladyslaw I Lokietek). [PARAGRAPH:1]Casimir is the only Polish king who did receive and maintain the title of the great in Polish history (Boleslaw I Chrobry was once also called the great, but not today), and the title is well deserved. When he received the crown, his hold on it was in danger, as even his neighbours did not recognise his title and instead called him "king of Krakow. The economy was ruined, and country was depopulated and tired with wars. At the time of his death, it had doubled in land area (mostly through joining lands in today's Ukraine, then Duchy of Halicz), grew prosperous, wealthy and had great prospects to the future. Although he is depicted as a peaceful king in children books, he in fact waged many victorious wars and was preparing other ones just before he died. [PARAGRAPH:1]He built many new castles, reformed the Polish army, as well as Polish civil and criminal laws. At the Sejm in Wislica, March 11, 1347, he introduced salutary legal reforms in the jurisprudence of his country. He sanctioned a code of laws for Great and Little Poland, which gained for him the title of "the Polish Justinian". He founded the University of Krakow although his death stalled the development of the university (and that's why today it is called Jagiellonian instead of Casimirian).He organised a meeting of kings in Krakow in 1364 which showed the wealth of Polish kingdom. [PARAGRAPH:1]Casimir was sonless. Apparently he deemed his own descendants either unsuitable to inherit or too young. Thus, and in order to provide a clear line of succession instead of problems of uncertainty, he arranged his sister Elisabeth, Dowager Queen of Hungary, and her son Louis king of Hungary to be his successors in Poland. Louis was proclaimed king in Casimir's death 1370, and Elisabeth held much of the practical power until her death in 1380.</German>
+		<Italian>[H1]Casimir III the Great [\H1][NEWLINE][BOLD]King of Poland [\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1310 - 1370[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Last of the Piast Dynasty, king of Poland from 1333, the son of Wladyslaw I the Short (Wladyslaw I Lokietek). [PARAGRAPH:1]Casimir is the only Polish king who did receive and maintain the title of the great in Polish history (Boleslaw I Chrobry was once also called the great, but not today), and the title is well deserved. When he received the crown, his hold on it was in danger, as even his neighbours did not recognise his title and instead called him "king of Krakow. The economy was ruined, and country was depopulated and tired with wars. At the time of his death, it had doubled in land area (mostly through joining lands in today's Ukraine, then Duchy of Halicz), grew prosperous, wealthy and had great prospects to the future. Although he is depicted as a peaceful king in children books, he in fact waged many victorious wars and was preparing other ones just before he died. [PARAGRAPH:1]He built many new castles, reformed the Polish army, as well as Polish civil and criminal laws. At the Sejm in Wislica, March 11, 1347, he introduced salutary legal reforms in the jurisprudence of his country. He sanctioned a code of laws for Great and Little Poland, which gained for him the title of "the Polish Justinian". He founded the University of Krakow although his death stalled the development of the university (and that's why today it is called Jagiellonian instead of Casimirian).He organised a meeting of kings in Krakow in 1364 which showed the wealth of Polish kingdom. [PARAGRAPH:1]Casimir was sonless. Apparently he deemed his own descendants either unsuitable to inherit or too young. Thus, and in order to provide a clear line of succession instead of problems of uncertainty, he arranged his sister Elisabeth, Dowager Queen of Hungary, and her son Louis king of Hungary to be his successors in Poland. Louis was proclaimed king in Casimir's death 1370, and Elisabeth held much of the practical power until her death in 1380.</Italian>
+		<Spanish>[H1]Casimir III the Great [\H1][NEWLINE][BOLD]King of Poland [\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1310 - 1370[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Last of the Piast Dynasty, king of Poland from 1333, the son of Wladyslaw I the Short (Wladyslaw I Lokietek). [PARAGRAPH:1]Casimir is the only Polish king who did receive and maintain the title of the great in Polish history (Boleslaw I Chrobry was once also called the great, but not today), and the title is well deserved. When he received the crown, his hold on it was in danger, as even his neighbours did not recognise his title and instead called him "king of Krakow. The economy was ruined, and country was depopulated and tired with wars. At the time of his death, it had doubled in land area (mostly through joining lands in today's Ukraine, then Duchy of Halicz), grew prosperous, wealthy and had great prospects to the future. Although he is depicted as a peaceful king in children books, he in fact waged many victorious wars and was preparing other ones just before he died. [PARAGRAPH:1]He built many new castles, reformed the Polish army, as well as Polish civil and criminal laws. At the Sejm in Wislica, March 11, 1347, he introduced salutary legal reforms in the jurisprudence of his country. He sanctioned a code of laws for Great and Little Poland, which gained for him the title of "the Polish Justinian". He founded the University of Krakow although his death stalled the development of the university (and that's why today it is called Jagiellonian instead of Casimirian).He organised a meeting of kings in Krakow in 1364 which showed the wealth of Polish kingdom. [PARAGRAPH:1]Casimir was sonless. Apparently he deemed his own descendants either unsuitable to inherit or too young. Thus, and in order to provide a clear line of succession instead of problems of uncertainty, he arranged his sister Elisabeth, Dowager Queen of Hungary, and her son Louis king of Hungary to be his successors in Poland. Louis was proclaimed king in Casimir's death 1370, and Elisabeth held much of the practical power until her death in 1380.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_CASIMIR_1</Tag>
+		<English>Best wishes to you, [CT_NAME] of the [CT_EMPIRE]. Fate throws fortune, but not everyone catches.</English>
+		<French>Best wishes to you, [CT_NAME] of the [CT_EMPIRE]. Fate throws fortune, but not everyone catches.</French>
+		<German>Best wishes to you, [CT_NAME] of the [CT_EMPIRE]. Fate throws fortune, but not everyone catches.</German>
+		<Italian>Tanti saluti a te, [CT_NAME] di [CT_EMPIRE]. Il fato lancia la fortuna, ma non tutti sono in grado di afferrarla.</Italian>
+		<Spanish>Best wishes to you, [CT_NAME] of the [CT_EMPIRE]. Fate throws fortune, but not everyone catches.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_SAMPLE_LEADER_1</Tag>
+		<English>Your Refuse to talk response</English>
+		<French>Your Refuse to talk response</French>
+		<German>Your Refuse to talk response</German>
+		<Italian>Il tuo rifiuto alla diplomazia</Italian>
+		<Spanish>Your Refuse to talk response</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_SAMPLE_LEADER_1</Tag>
+		<English>Your refuse to peace talks response</English>
+		<French>Your refuse to peace talks response</French>
+		<German>Your refuse to peace talks response</German>
+		<Italian>Il tuo rifiuto alle richieste di pace</Italian>
+		<Spanish>Your refuse to peace talks response</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_SAMPLE_LEADER_1</Tag>
+		<English>Your Friendly Hello Response</English>
+		<French>Your Friendly Hello Response</French>
+		<German>Your Friendly Hello Response</German>
+		<Italian>La tua risposta amichevole al primo contatto</Italian>
+		<Spanish>Your Friendly Hello Response</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_SAMPLE_LEADER_1</Tag>
+		<English>Your Unfriendly Hello Response</English>
+		<French>Your Unfriendly Hello Response</French>
+		<German>Your Unfriendly Hello Response</German>
+		<Italian>La tua risposta non amichevole al primo contatto</Italian>
+		<Spanish>Your Unfriendly Hello Response</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_SAMPLE_LEADER_1</Tag>
+		<English>Your Demands to another civ when you are weaker then they are</English>
+		<French>Your Demands to another civ when you are weaker then they are</French>
+		<German>Your Demands to another civ when you are weaker then they are</German>
+		<Italian>Le tue richieste ad un'altra civiltà quando tu sei più debole</Italian>
+		<Spanish>Your Demands to another civ when you are weaker then they are</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_SAMPLE_LEADER_1</Tag>
+		<English>Your Demands to another civ when you are Equal to power as they are</English>
+		<French>Your Demands to another civ when you are Equal to power as they are</French>
+		<German>Your Demands to another civ when you are Equal to power as they are</German>
+		<Italian>Le tue richieste ad un'altra civiltà quando hai la loro stessa forza</Italian>
+		<Spanish>Your Demands to another civ when you are Equal to power as they are</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_SAMPLE_LEADER_1</Tag>
+		<English>Your Demands to another civ when you are stronger then they are</English>
+		<French>Your Demands to another civ when you are stronger then they are</French>
+		<German>Your Demands to another civ when you are stronger then they are</German>
+		<Italian>Le tue richieste ad un'altra civiltà quando tu sei più forte</Italian>
+		<Spanish>Your Demands to another civ when you are stronger then they are</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SOBIESKI</Tag>
+		<English>Sobieski</English>
+		<French>Sobieski</French>
+		<German>Sobieski</German>
+		<Italian>Sobieski</Italian>
+		<Spanish>Sobieski</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SOBIESKI_PEDIA</Tag>
+		<English>[H1]John III Sobieski [\H1][NEWLINE][BOLD]King of Poland, Ruler of the Commonwealth [\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1629 - 1696[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Jan (John) Sobieski was born 1629 at Olesko, Poland, to Jakub (James) Sobieski (1580-1646), Voivod of the Ruthenian Voivodship and Castellan of Krakow and Zofia Teofillia (Danilowicz), granddaughter of Hetman Stanislaw Zebewski. He had won fame as an outstanding military commander in wars against the Ottomans, Tatars, Muscovites, Cossacks and Swedes. [PARAGRAPH:1]In 1665 he became Great Marshal of the Crown, and in 1666 Field Crown Hetman. In 1668 he was appointed by King Jan II Kazimierz the Great Crown Hetman and Commander-in-Chief of the Polish Army. After a distinguished military career, and following the death of Jan II Kazimierz's successor, Michal Korybut Wisniowiecki, Sobieski was on May 21, 1674, elected by the szlachta (nobility) to be King of the Polish-Lithuanian Commonwealth, and was crowned February 2, 1676. [PARAGRAPH:1] Jan Sobieski's military prowess, demonstrated in war against the Ottoman Empire, contributed to his election as King of Poland. One of his ambitions was to unify Christian Europe in a crusade to drive the Turks out of Europe. He made alliance with the Holy Roman Emperor and joined the Holy League initiated by Pope Innocent XI to preserve Christendom. [PARAGRAPH:1]Sobieski planned to occupy Prussia with Swedish cooperation and French support. This undertaking was doomed because of war with Turkey and the opposition of the Commonwealth's magnates. [PARAGRAPH:1]Sobieski's greatest success came September 12, 1683, with his victory at the Battle of Vienna, in command of Polish, Austrian and German troops, against the Turks under Kara Mustafa. The Pope and other foreign dignitaries hailed Sobieski as the "Savior of Vienna and Western European civilization." In a letter to his wife he wrote, "All the common people kissed my hands, my feet, my clothes; others only touched me, saying: 'Ah, let us kiss so valiant a hand!'" [PARAGRAPH:1]Upon reaching Vienna, he joined up with the Austrians and Germans. Sobieski planned to attack on the 13th of September, but he had noticed that the Turkish resistance was weak and ordered full attack on September 12, 1683. At 4:00 a.m. Sobieski's army of about 81,000 men attacked a Turkish army that numbered about 130,000. Sobieski charged with husaria forward and soon after the Turkish battle line was broken as the Turks scattered in confusion. At 5:30 p.m., Sobieski entered the deserted tent of Kara Mustafa and the battle of Vienna was over. [PARAGRAPH:1]King Jan III Sobieski, nicknamed by the Turks the "Lion of Lechistan", and the last great king of Poland, died in Wilan, Poland on June 17, 1696. His wife, Maria Kasimira, died in 1716 in Blois, France and her body was returned to Poland. They are interred together in Wawel Castle, Krakow, Poland.</English>
+		<French>[H1]John III Sobieski [\H1][NEWLINE][BOLD]King of Poland, Ruler of the Commonwealth [\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1629 - 1696[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Jan (John) Sobieski was born 1629 at Olesko, Poland, to Jakub (James) Sobieski (1580-1646), Voivod of the Ruthenian Voivodship and Castellan of Krakow and Zofia Teofillia (Danilowicz), granddaughter of Hetman Stanislaw Zebewski. He had won fame as an outstanding military commander in wars against the Ottomans, Tatars, Muscovites, Cossacks and Swedes. [PARAGRAPH:1]In 1665 he became Great Marshal of the Crown, and in 1666 Field Crown Hetman. In 1668 he was appointed by King Jan II Kazimierz the Great Crown Hetman and Commander-in-Chief of the Polish Army. After a distinguished military career, and following the death of Jan II Kazimierz's successor, Michal Korybut Wisniowiecki, Sobieski was on May 21, 1674, elected by the szlachta (nobility) to be King of the Polish-Lithuanian Commonwealth, and was crowned February 2, 1676. [PARAGRAPH:1] Jan Sobieski's military prowess, demonstrated in war against the Ottoman Empire, contributed to his election as King of Poland. One of his ambitions was to unify Christian Europe in a crusade to drive the Turks out of Europe. He made alliance with the Holy Roman Emperor and joined the Holy League initiated by Pope Innocent XI to preserve Christendom. [PARAGRAPH:1]Sobieski planned to occupy Prussia with Swedish cooperation and French support. This undertaking was doomed because of war with Turkey and the opposition of the Commonwealth's magnates. [PARAGRAPH:1]Sobieski's greatest success came September 12, 1683, with his victory at the Battle of Vienna, in command of Polish, Austrian and German troops, against the Turks under Kara Mustafa. The Pope and other foreign dignitaries hailed Sobieski as the "Savior of Vienna and Western European civilization." In a letter to his wife he wrote, "All the common people kissed my hands, my feet, my clothes; others only touched me, saying: 'Ah, let us kiss so valiant a hand!'" [PARAGRAPH:1]Upon reaching Vienna, he joined up with the Austrians and Germans. Sobieski planned to attack on the 13th of September, but he had noticed that the Turkish resistance was weak and ordered full attack on September 12, 1683. At 4:00 a.m. Sobieski's army of about 81,000 men attacked a Turkish army that numbered about 130,000. Sobieski charged with husaria forward and soon after the Turkish battle line was broken as the Turks scattered in confusion. At 5:30 p.m., Sobieski entered the deserted tent of Kara Mustafa and the battle of Vienna was over. [PARAGRAPH:1]King Jan III Sobieski, nicknamed by the Turks the "Lion of Lechistan", and the last great king of Poland, died in Wilan, Poland on June 17, 1696. His wife, Maria Kasimira, died in 1716 in Blois, France and her body was returned to Poland. They are interred together in Wawel Castle, Krakow, Poland.</French>
+		<German>[H1]John III Sobieski [\H1][NEWLINE][BOLD]King of Poland, Ruler of the Commonwealth [\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1629 - 1696[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Jan (John) Sobieski was born 1629 at Olesko, Poland, to Jakub (James) Sobieski (1580-1646), Voivod of the Ruthenian Voivodship and Castellan of Krakow and Zofia Teofillia (Danilowicz), granddaughter of Hetman Stanislaw Zebewski. He had won fame as an outstanding military commander in wars against the Ottomans, Tatars, Muscovites, Cossacks and Swedes. [PARAGRAPH:1]In 1665 he became Great Marshal of the Crown, and in 1666 Field Crown Hetman. In 1668 he was appointed by King Jan II Kazimierz the Great Crown Hetman and Commander-in-Chief of the Polish Army. After a distinguished military career, and following the death of Jan II Kazimierz's successor, Michal Korybut Wisniowiecki, Sobieski was on May 21, 1674, elected by the szlachta (nobility) to be King of the Polish-Lithuanian Commonwealth, and was crowned February 2, 1676. [PARAGRAPH:1] Jan Sobieski's military prowess, demonstrated in war against the Ottoman Empire, contributed to his election as King of Poland. One of his ambitions was to unify Christian Europe in a crusade to drive the Turks out of Europe. He made alliance with the Holy Roman Emperor and joined the Holy League initiated by Pope Innocent XI to preserve Christendom. [PARAGRAPH:1]Sobieski planned to occupy Prussia with Swedish cooperation and French support. This undertaking was doomed because of war with Turkey and the opposition of the Commonwealth's magnates. [PARAGRAPH:1]Sobieski's greatest success came September 12, 1683, with his victory at the Battle of Vienna, in command of Polish, Austrian and German troops, against the Turks under Kara Mustafa. The Pope and other foreign dignitaries hailed Sobieski as the "Savior of Vienna and Western European civilization." In a letter to his wife he wrote, "All the common people kissed my hands, my feet, my clothes; others only touched me, saying: 'Ah, let us kiss so valiant a hand!'" [PARAGRAPH:1]Upon reaching Vienna, he joined up with the Austrians and Germans. Sobieski planned to attack on the 13th of September, but he had noticed that the Turkish resistance was weak and ordered full attack on September 12, 1683. At 4:00 a.m. Sobieski's army of about 81,000 men attacked a Turkish army that numbered about 130,000. Sobieski charged with husaria forward and soon after the Turkish battle line was broken as the Turks scattered in confusion. At 5:30 p.m., Sobieski entered the deserted tent of Kara Mustafa and the battle of Vienna was over. [PARAGRAPH:1]King Jan III Sobieski, nicknamed by the Turks the "Lion of Lechistan", and the last great king of Poland, died in Wilan, Poland on June 17, 1696. His wife, Maria Kasimira, died in 1716 in Blois, France and her body was returned to Poland. They are interred together in Wawel Castle, Krakow, Poland.</German>
+		<Italian>[H1]John III Sobieski [\H1][NEWLINE][BOLD]King of Poland, Ruler of the Commonwealth [\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1629 - 1696[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Jan (John) Sobieski was born 1629 at Olesko, Poland, to Jakub (James) Sobieski (1580-1646), Voivod of the Ruthenian Voivodship and Castellan of Krakow and Zofia Teofillia (Danilowicz), granddaughter of Hetman Stanislaw Zebewski. He had won fame as an outstanding military commander in wars against the Ottomans, Tatars, Muscovites, Cossacks and Swedes. [PARAGRAPH:1]In 1665 he became Great Marshal of the Crown, and in 1666 Field Crown Hetman. In 1668 he was appointed by King Jan II Kazimierz the Great Crown Hetman and Commander-in-Chief of the Polish Army. After a distinguished military career, and following the death of Jan II Kazimierz's successor, Michal Korybut Wisniowiecki, Sobieski was on May 21, 1674, elected by the szlachta (nobility) to be King of the Polish-Lithuanian Commonwealth, and was crowned February 2, 1676. [PARAGRAPH:1] Jan Sobieski's military prowess, demonstrated in war against the Ottoman Empire, contributed to his election as King of Poland. One of his ambitions was to unify Christian Europe in a crusade to drive the Turks out of Europe. He made alliance with the Holy Roman Emperor and joined the Holy League initiated by Pope Innocent XI to preserve Christendom. [PARAGRAPH:1]Sobieski planned to occupy Prussia with Swedish cooperation and French support. This undertaking was doomed because of war with Turkey and the opposition of the Commonwealth's magnates. [PARAGRAPH:1]Sobieski's greatest success came September 12, 1683, with his victory at the Battle of Vienna, in command of Polish, Austrian and German troops, against the Turks under Kara Mustafa. The Pope and other foreign dignitaries hailed Sobieski as the "Savior of Vienna and Western European civilization." In a letter to his wife he wrote, "All the common people kissed my hands, my feet, my clothes; others only touched me, saying: 'Ah, let us kiss so valiant a hand!'" [PARAGRAPH:1]Upon reaching Vienna, he joined up with the Austrians and Germans. Sobieski planned to attack on the 13th of September, but he had noticed that the Turkish resistance was weak and ordered full attack on September 12, 1683. At 4:00 a.m. Sobieski's army of about 81,000 men attacked a Turkish army that numbered about 130,000. Sobieski charged with husaria forward and soon after the Turkish battle line was broken as the Turks scattered in confusion. At 5:30 p.m., Sobieski entered the deserted tent of Kara Mustafa and the battle of Vienna was over. [PARAGRAPH:1]King Jan III Sobieski, nicknamed by the Turks the "Lion of Lechistan", and the last great king of Poland, died in Wilan, Poland on June 17, 1696. His wife, Maria Kasimira, died in 1716 in Blois, France and her body was returned to Poland. They are interred together in Wawel Castle, Krakow, Poland.</Italian>
+		<Spanish>[H1]John III Sobieski [\H1][NEWLINE][BOLD]King of Poland, Ruler of the Commonwealth [\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1629 - 1696[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Jan (John) Sobieski was born 1629 at Olesko, Poland, to Jakub (James) Sobieski (1580-1646), Voivod of the Ruthenian Voivodship and Castellan of Krakow and Zofia Teofillia (Danilowicz), granddaughter of Hetman Stanislaw Zebewski. He had won fame as an outstanding military commander in wars against the Ottomans, Tatars, Muscovites, Cossacks and Swedes. [PARAGRAPH:1]In 1665 he became Great Marshal of the Crown, and in 1666 Field Crown Hetman. In 1668 he was appointed by King Jan II Kazimierz the Great Crown Hetman and Commander-in-Chief of the Polish Army. After a distinguished military career, and following the death of Jan II Kazimierz's successor, Michal Korybut Wisniowiecki, Sobieski was on May 21, 1674, elected by the szlachta (nobility) to be King of the Polish-Lithuanian Commonwealth, and was crowned February 2, 1676. [PARAGRAPH:1] Jan Sobieski's military prowess, demonstrated in war against the Ottoman Empire, contributed to his election as King of Poland. One of his ambitions was to unify Christian Europe in a crusade to drive the Turks out of Europe. He made alliance with the Holy Roman Emperor and joined the Holy League initiated by Pope Innocent XI to preserve Christendom. [PARAGRAPH:1]Sobieski planned to occupy Prussia with Swedish cooperation and French support. This undertaking was doomed because of war with Turkey and the opposition of the Commonwealth's magnates. [PARAGRAPH:1]Sobieski's greatest success came September 12, 1683, with his victory at the Battle of Vienna, in command of Polish, Austrian and German troops, against the Turks under Kara Mustafa. The Pope and other foreign dignitaries hailed Sobieski as the "Savior of Vienna and Western European civilization." In a letter to his wife he wrote, "All the common people kissed my hands, my feet, my clothes; others only touched me, saying: 'Ah, let us kiss so valiant a hand!'" [PARAGRAPH:1]Upon reaching Vienna, he joined up with the Austrians and Germans. Sobieski planned to attack on the 13th of September, but he had noticed that the Turkish resistance was weak and ordered full attack on September 12, 1683. At 4:00 a.m. Sobieski's army of about 81,000 men attacked a Turkish army that numbered about 130,000. Sobieski charged with husaria forward and soon after the Turkish battle line was broken as the Turks scattered in confusion. At 5:30 p.m., Sobieski entered the deserted tent of Kara Mustafa and the battle of Vienna was over. [PARAGRAPH:1]King Jan III Sobieski, nicknamed by the Turks the "Lion of Lechistan", and the last great king of Poland, died in Wilan, Poland on June 17, 1696. His wife, Maria Kasimira, died in 1716 in Blois, France and her body was returned to Poland. They are interred together in Wawel Castle, Krakow, Poland.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SOBIESKI_1</Tag>
+		<English>Ah, it is [CT_NAME] of the [CT_EMPIRE]! It is true that talk of the wolf makes the wolf appear!</English>
+		<French>Ah, it is [CT_NAME] of the [CT_EMPIRE]! It is true that talk of the wolf makes the wolf appear!</French>
+		<German>Ah, it is [CT_NAME] of the [CT_EMPIRE]! It is true that talk of the wolf makes the wolf appear!</German>
+		<Italian>Ah, è [CT_NAME] di [CT_EMPIRE]! E' proprio vero che parlando del lupo, alla fine il lupo appare!</Italian>
+		<Spanish>Ah, it is [CT_NAME] of the [CT_EMPIRE]! It is true that talk of the wolf makes the wolf appear!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_SAMPLE_LEADER_1</Tag>
+		<English>Your Refuse to talk response</English>
+		<French>Your Refuse to talk response</French>
+		<German>Your Refuse to talk response</German>
+		<Italian>Il tuo rifiuto alla diplomazia</Italian>
+		<Spanish>Your Refuse to talk response</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_SAMPLE_LEADER_1</Tag>
+		<English>Your refuse to peace talks response</English>
+		<French>Your refuse to peace talks response</French>
+		<German>Your refuse to peace talks response</German>
+		<Italian>Il tuo rifiuto alle richieste di pace</Italian>
+		<Spanish>Your refuse to peace talks response</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_SAMPLE_LEADER_1</Tag>
+		<English>Your Friendly Hello Response</English>
+		<French>Your Friendly Hello Response</French>
+		<German>Your Friendly Hello Response</German>
+		<Italian>La tua risposta amichevole al primo contatto</Italian>
+		<Spanish>Your Friendly Hello Response</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_SAMPLE_LEADER_1</Tag>
+		<English>Your Unfriendly Hello Response</English>
+		<French>Your Unfriendly Hello Response</French>
+		<German>Your Unfriendly Hello Response</German>
+		<Italian>La tua risposta non amichevole al primo contatto</Italian>
+		<Spanish>Your Unfriendly Hello Response</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_SAMPLE_LEADER_1</Tag>
+		<English>Your Demands to another civ when you are weaker then they are</English>
+		<French>Your Demands to another civ when you are weaker then they are</French>
+		<German>Your Demands to another civ when you are weaker then they are</German>
+		<Italian>Le tue richieste ad un'altra civiltà quando tu sei più debole</Italian>
+		<Spanish>Your Demands to another civ when you are weaker then they are</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_SAMPLE_LEADER_1</Tag>
+		<English>Your Demands to another civ when you are Equal to power as they are</English>
+		<French>Your Demands to another civ when you are Equal to power as they are</French>
+		<German>Your Demands to another civ when you are Equal to power as they are</German>
+		<Italian>Le tue richieste ad un'altra civiltà quando hai la loro stessa forza</Italian>
+		<Spanish>Your Demands to another civ when you are Equal to power as they are</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_SAMPLE_LEADER_1</Tag>
+		<English>Your Demands to another civ when you are stronger then they are</English>
+		<French>Your Demands to another civ when you are stronger then they are</French>
+		<German>Your Demands to another civ when you are stronger then they are</German>
+		<Italian>Le tue richieste ad un'altra civiltà quando tu sei più forte</Italian>
+		<Spanish>Your Demands to another civ when you are stronger then they are</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_WALESA</Tag>
+		<English>Walesa</English>
+		<French>
+			<Text>Walesa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Walesa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Walesa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Walesa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_WALESA_PEDIA</Tag>
+		<English>[H1]Lech Walesa[\H1][NEWLINE][BOLD]President of the Republic of Poland[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1943 -[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Lech Walesa was born on September 29, 1943 in Popowo, Poland. After graduating from vocational school, he worked as a car mechanic at a machine center from 1961 to 1965. He served in the army for two years, rose to the rank of corporal, and in 1967 was employed in the Gdansk shipyards as an electrician. In 1969 he married Danuta Golos and they have eight children.[PARAGRAPH:1]During the clash in December 1970 between the workers and the government, he was one of the leaders of the shipyard workers and was briefly detained. In 1976, however, as a result of his activities as a shop steward, he was fired and had to earn his living by taking temporary jobs.[PARAGRAPH:1]In 1978 with other activists he began to organise free non-communist trade unions and took part in many actions on the sea coast. He was kept under surveillance by the state security service and frequently detained.[PARAGRAPH:1]In August 1980 he led the Gdansk shipyard strike which gave rise to a wave of strikes over much of the country with Walesa seen as the leader. The primary demands were for workers' rights. The authorities were forced to capitulate and to negotiate with Walesa the Gdansk Agreement of August 31, 1980, which gave the workers the right to strike and to organise their own independent union.[PARAGRAPH:1]The Catholic Church supported the movement, and in January 1981 Walesa was cordially received by Pope John Paul II in the Vatican. Walesa himself has always regarded his Catholicism as a source of strength and inspiration. In the years 1980-81 Walesa travelled to Italy, Japan, Sweden, France and Switzerland as guest of the International Labour Organisation. In September 1981 he was elected Solidarity Chairman at the First National Solidarity Congress in Gdansk.[PARAGRAPH:1]The country's brief enjoyment of relative freedom ended in December 1981, when General Jaruzelski, fearing Soviet armed intervention among other considerations, imposed martial law, "suspended" Solidarity, arrested many of its leaders, and interned Walesa in a country house in a remote spot.[PARAGRAPH:1]In November 1982 Walesa was released and reinstated at the Gdansk shipyards. Although kept under surveillance, he managed to maintain lively contact with Solidarity leaders in the underground. While martial law was lifted in July 1983, many of the restrictions were continued in civil code. In October 1983 the announcement of Walesa's Nobel prize raised the spirits of the underground movement, but the award was attacked by the government press.[PARAGRAPH:1]The Jaruzelski regime became even more unpopular as economic conditions worsened, and it was finally forced to negotiate with Walesa and his Solidarity colleagues. The result was the holding of parliamentary elections which, although limited, led to the establishment of a non-communist government. Under Mikhail Gorbachev the Soviet Union was no longer prepared to use military force to keep communist parties in satellite states in power.[PARAGRAPH:1]Walesa, now head of the revived Solidarity labour union, began a series of meetings with world leaders.[PARAGRAPH:1]In April 1990 at Solidarity's second national congress, Walesa was elected chairman with 77.5% of the votes. In December 1990 in a general ballot he was elected President of the Republic of Poland. He served until defeated in the election of November 1995.[PARAGRAPH:1]Walesa has been granted many honorary degrees from universities, including Harvard University and the University of Paris. Other honors include the Medal of Freedom (Philadelphia, U.S.A.); the Award of Free World (Norway); and the European Award of Human Rights.</English>
+		<French>[H1]Lech Walesa[\H1][NEWLINE][BOLD]President of the Republic of Poland[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1943 -[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Lech Walesa was born on September 29, 1943 in Popowo, Poland. After graduating from vocational school, he worked as a car mechanic at a machine center from 1961 to 1965. He served in the army for two years, rose to the rank of corporal, and in 1967 was employed in the Gdansk shipyards as an electrician. In 1969 he married Danuta Golos and they have eight children.[PARAGRAPH:1]During the clash in December 1970 between the workers and the government, he was one of the leaders of the shipyard workers and was briefly detained. In 1976, however, as a result of his activities as a shop steward, he was fired and had to earn his living by taking temporary jobs.[PARAGRAPH:1]In 1978 with other activists he began to organise free non-communist trade unions and took part in many actions on the sea coast. He was kept under surveillance by the state security service and frequently detained.[PARAGRAPH:1]In August 1980 he led the Gdansk shipyard strike which gave rise to a wave of strikes over much of the country with Walesa seen as the leader. The primary demands were for workers' rights. The authorities were forced to capitulate and to negotiate with Walesa the Gdansk Agreement of August 31, 1980, which gave the workers the right to strike and to organise their own independent union.[PARAGRAPH:1]The Catholic Church supported the movement, and in January 1981 Walesa was cordially received by Pope John Paul II in the Vatican. Walesa himself has always regarded his Catholicism as a source of strength and inspiration. In the years 1980-81 Walesa travelled to Italy, Japan, Sweden, France and Switzerland as guest of the International Labour Organisation. In September 1981 he was elected Solidarity Chairman at the First National Solidarity Congress in Gdansk.[PARAGRAPH:1]The country's brief enjoyment of relative freedom ended in December 1981, when General Jaruzelski, fearing Soviet armed intervention among other considerations, imposed martial law, "suspended" Solidarity, arrested many of its leaders, and interned Walesa in a country house in a remote spot.[PARAGRAPH:1]In November 1982 Walesa was released and reinstated at the Gdansk shipyards. Although kept under surveillance, he managed to maintain lively contact with Solidarity leaders in the underground. While martial law was lifted in July 1983, many of the restrictions were continued in civil code. In October 1983 the announcement of Walesa's Nobel prize raised the spirits of the underground movement, but the award was attacked by the government press.[PARAGRAPH:1]The Jaruzelski regime became even more unpopular as economic conditions worsened, and it was finally forced to negotiate with Walesa and his Solidarity colleagues. The result was the holding of parliamentary elections which, although limited, led to the establishment of a non-communist government. Under Mikhail Gorbachev the Soviet Union was no longer prepared to use military force to keep communist parties in satellite states in power.[PARAGRAPH:1]Walesa, now head of the revived Solidarity labour union, began a series of meetings with world leaders.[PARAGRAPH:1]In April 1990 at Solidarity's second national congress, Walesa was elected chairman with 77.5% of the votes. In December 1990 in a general ballot he was elected President of the Republic of Poland. He served until defeated in the election of November 1995.[PARAGRAPH:1]Walesa has been granted many honorary degrees from universities, including Harvard University and the University of Paris. Other honors include the Medal of Freedom (Philadelphia, U.S.A.); the Award of Free World (Norway); and the European Award of Human Rights.</French>
+		<German>[H1]Lech Walesa[\H1][NEWLINE][BOLD]President of the Republic of Poland[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1943 -[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Lech Walesa was born on September 29, 1943 in Popowo, Poland. After graduating from vocational school, he worked as a car mechanic at a machine center from 1961 to 1965. He served in the army for two years, rose to the rank of corporal, and in 1967 was employed in the Gdansk shipyards as an electrician. In 1969 he married Danuta Golos and they have eight children.[PARAGRAPH:1]During the clash in December 1970 between the workers and the government, he was one of the leaders of the shipyard workers and was briefly detained. In 1976, however, as a result of his activities as a shop steward, he was fired and had to earn his living by taking temporary jobs.[PARAGRAPH:1]In 1978 with other activists he began to organise free non-communist trade unions and took part in many actions on the sea coast. He was kept under surveillance by the state security service and frequently detained.[PARAGRAPH:1]In August 1980 he led the Gdansk shipyard strike which gave rise to a wave of strikes over much of the country with Walesa seen as the leader. The primary demands were for workers' rights. The authorities were forced to capitulate and to negotiate with Walesa the Gdansk Agreement of August 31, 1980, which gave the workers the right to strike and to organise their own independent union.[PARAGRAPH:1]The Catholic Church supported the movement, and in January 1981 Walesa was cordially received by Pope John Paul II in the Vatican. Walesa himself has always regarded his Catholicism as a source of strength and inspiration. In the years 1980-81 Walesa travelled to Italy, Japan, Sweden, France and Switzerland as guest of the International Labour Organisation. In September 1981 he was elected Solidarity Chairman at the First National Solidarity Congress in Gdansk.[PARAGRAPH:1]The country's brief enjoyment of relative freedom ended in December 1981, when General Jaruzelski, fearing Soviet armed intervention among other considerations, imposed martial law, "suspended" Solidarity, arrested many of its leaders, and interned Walesa in a country house in a remote spot.[PARAGRAPH:1]In November 1982 Walesa was released and reinstated at the Gdansk shipyards. Although kept under surveillance, he managed to maintain lively contact with Solidarity leaders in the underground. While martial law was lifted in July 1983, many of the restrictions were continued in civil code. In October 1983 the announcement of Walesa's Nobel prize raised the spirits of the underground movement, but the award was attacked by the government press.[PARAGRAPH:1]The Jaruzelski regime became even more unpopular as economic conditions worsened, and it was finally forced to negotiate with Walesa and his Solidarity colleagues. The result was the holding of parliamentary elections which, although limited, led to the establishment of a non-communist government. Under Mikhail Gorbachev the Soviet Union was no longer prepared to use military force to keep communist parties in satellite states in power.[PARAGRAPH:1]Walesa, now head of the revived Solidarity labour union, began a series of meetings with world leaders.[PARAGRAPH:1]In April 1990 at Solidarity's second national congress, Walesa was elected chairman with 77.5% of the votes. In December 1990 in a general ballot he was elected President of the Republic of Poland. He served until defeated in the election of November 1995.[PARAGRAPH:1]Walesa has been granted many honorary degrees from universities, including Harvard University and the University of Paris. Other honors include the Medal of Freedom (Philadelphia, U.S.A.); the Award of Free World (Norway); and the European Award of Human Rights.</German>
+		<Italian>[H1]Lech Walesa[\H1][NEWLINE][BOLD]President of the Republic of Poland[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1943 -[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Lech Walesa was born on September 29, 1943 in Popowo, Poland. After graduating from vocational school, he worked as a car mechanic at a machine center from 1961 to 1965. He served in the army for two years, rose to the rank of corporal, and in 1967 was employed in the Gdansk shipyards as an electrician. In 1969 he married Danuta Golos and they have eight children.[PARAGRAPH:1]During the clash in December 1970 between the workers and the government, he was one of the leaders of the shipyard workers and was briefly detained. In 1976, however, as a result of his activities as a shop steward, he was fired and had to earn his living by taking temporary jobs.[PARAGRAPH:1]In 1978 with other activists he began to organise free non-communist trade unions and took part in many actions on the sea coast. He was kept under surveillance by the state security service and frequently detained.[PARAGRAPH:1]In August 1980 he led the Gdansk shipyard strike which gave rise to a wave of strikes over much of the country with Walesa seen as the leader. The primary demands were for workers' rights. The authorities were forced to capitulate and to negotiate with Walesa the Gdansk Agreement of August 31, 1980, which gave the workers the right to strike and to organise their own independent union.[PARAGRAPH:1]The Catholic Church supported the movement, and in January 1981 Walesa was cordially received by Pope John Paul II in the Vatican. Walesa himself has always regarded his Catholicism as a source of strength and inspiration. In the years 1980-81 Walesa travelled to Italy, Japan, Sweden, France and Switzerland as guest of the International Labour Organisation. In September 1981 he was elected Solidarity Chairman at the First National Solidarity Congress in Gdansk.[PARAGRAPH:1]The country's brief enjoyment of relative freedom ended in December 1981, when General Jaruzelski, fearing Soviet armed intervention among other considerations, imposed martial law, "suspended" Solidarity, arrested many of its leaders, and interned Walesa in a country house in a remote spot.[PARAGRAPH:1]In November 1982 Walesa was released and reinstated at the Gdansk shipyards. Although kept under surveillance, he managed to maintain lively contact with Solidarity leaders in the underground. While martial law was lifted in July 1983, many of the restrictions were continued in civil code. In October 1983 the announcement of Walesa's Nobel prize raised the spirits of the underground movement, but the award was attacked by the government press.[PARAGRAPH:1]The Jaruzelski regime became even more unpopular as economic conditions worsened, and it was finally forced to negotiate with Walesa and his Solidarity colleagues. The result was the holding of parliamentary elections which, although limited, led to the establishment of a non-communist government. Under Mikhail Gorbachev the Soviet Union was no longer prepared to use military force to keep communist parties in satellite states in power.[PARAGRAPH:1]Walesa, now head of the revived Solidarity labour union, began a series of meetings with world leaders.[PARAGRAPH:1]In April 1990 at Solidarity's second national congress, Walesa was elected chairman with 77.5% of the votes. In December 1990 in a general ballot he was elected President of the Republic of Poland. He served until defeated in the election of November 1995.[PARAGRAPH:1]Walesa has been granted many honorary degrees from universities, including Harvard University and the University of Paris. Other honors include the Medal of Freedom (Philadelphia, U.S.A.); the Award of Free World (Norway); and the European Award of Human Rights.</Italian>
+		<Spanish>[H1]Lech Walesa[\H1][NEWLINE][BOLD]President of the Republic of Poland[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1943 -[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Lech Walesa was born on September 29, 1943 in Popowo, Poland. After graduating from vocational school, he worked as a car mechanic at a machine center from 1961 to 1965. He served in the army for two years, rose to the rank of corporal, and in 1967 was employed in the Gdansk shipyards as an electrician. In 1969 he married Danuta Golos and they have eight children.[PARAGRAPH:1]During the clash in December 1970 between the workers and the government, he was one of the leaders of the shipyard workers and was briefly detained. In 1976, however, as a result of his activities as a shop steward, he was fired and had to earn his living by taking temporary jobs.[PARAGRAPH:1]In 1978 with other activists he began to organise free non-communist trade unions and took part in many actions on the sea coast. He was kept under surveillance by the state security service and frequently detained.[PARAGRAPH:1]In August 1980 he led the Gdansk shipyard strike which gave rise to a wave of strikes over much of the country with Walesa seen as the leader. The primary demands were for workers' rights. The authorities were forced to capitulate and to negotiate with Walesa the Gdansk Agreement of August 31, 1980, which gave the workers the right to strike and to organise their own independent union.[PARAGRAPH:1]The Catholic Church supported the movement, and in January 1981 Walesa was cordially received by Pope John Paul II in the Vatican. Walesa himself has always regarded his Catholicism as a source of strength and inspiration. In the years 1980-81 Walesa travelled to Italy, Japan, Sweden, France and Switzerland as guest of the International Labour Organisation. In September 1981 he was elected Solidarity Chairman at the First National Solidarity Congress in Gdansk.[PARAGRAPH:1]The country's brief enjoyment of relative freedom ended in December 1981, when General Jaruzelski, fearing Soviet armed intervention among other considerations, imposed martial law, "suspended" Solidarity, arrested many of its leaders, and interned Walesa in a country house in a remote spot.[PARAGRAPH:1]In November 1982 Walesa was released and reinstated at the Gdansk shipyards. Although kept under surveillance, he managed to maintain lively contact with Solidarity leaders in the underground. While martial law was lifted in July 1983, many of the restrictions were continued in civil code. In October 1983 the announcement of Walesa's Nobel prize raised the spirits of the underground movement, but the award was attacked by the government press.[PARAGRAPH:1]The Jaruzelski regime became even more unpopular as economic conditions worsened, and it was finally forced to negotiate with Walesa and his Solidarity colleagues. The result was the holding of parliamentary elections which, although limited, led to the establishment of a non-communist government. Under Mikhail Gorbachev the Soviet Union was no longer prepared to use military force to keep communist parties in satellite states in power.[PARAGRAPH:1]Walesa, now head of the revived Solidarity labour union, began a series of meetings with world leaders.[PARAGRAPH:1]In April 1990 at Solidarity's second national congress, Walesa was elected chairman with 77.5% of the votes. In December 1990 in a general ballot he was elected President of the Republic of Poland. He served until defeated in the election of November 1995.[PARAGRAPH:1]Walesa has been granted many honorary degrees from universities, including Harvard University and the University of Paris. Other honors include the Medal of Freedom (Philadelphia, U.S.A.); the Award of Free World (Norway); and the European Award of Human Rights.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_WALESA_1</Tag>
+		<English>Welcome, [CT_NAME]! Liberty is not only a right, but also our common responsibility and duty.</English>
+		<French>Welcome, [CT_NAME]! Liberty is not only a right, but also our common responsibility and duty.</French>
+		<German>Welcome, [CT_NAME]! Liberty is not only a right, but also our common responsibility and duty.</German>
+		<Italian>Benvenuto, [CT_NAME]! La libertà non è solo un diritto, ma anche una responabilità comune e un dovere.</Italian>
+		<Spanish>Welcome, [CT_NAME]! Liberty is not only a right, but also our common responsibility and duty.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KRAKOW</Tag>
+		<English>Krakow</English>
+		<French>
+			<Text>Krakow</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Krakow</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Cracovia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Krakow</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_WARSZAWA</Tag>
+		<English>Warszawa</English>
+		<French>
+			<Text>Warszawa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Warszawa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Varsavia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Warszawa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_POZNAN</Tag>
+		<English>Poznan</English>
+		<French>
+			<Text>Poznan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Poznan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Poznan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Poznan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GDANSK</Tag>
+		<English>Gdansk</English>
+		<French>
+			<Text>Gdansk</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Gdansk</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Gdansk</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Gdansk</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LEGNICA</Tag>
+		<English>Legnica</English>
+		<French>
+			<Text>Legnica</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Legnica</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Legnica</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Legnica</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PLOCK</Tag>
+		<English>Plock</English>
+		<French>
+			<Text>Plock</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Plock</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Plock</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Plock</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_WROCLAW</Tag>
+		<English>Wroclaw</English>
+		<French>
+			<Text>Wroclaw</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Wroclaw</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Wroclaw</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Wroclaw</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SANDOMIERZ</Tag>
+		<English>Sandomierz</English>
+		<French>
+			<Text>Sandomierz</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sandomierz</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sandomierz</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sandomierz</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LUBLIN</Tag>
+		<English>Lublin</English>
+		<French>
+			<Text>Lublin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Lublin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Lublino</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Lublin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GNIEZNO</Tag>
+		<English>Gniezno</English>
+		<French>
+			<Text>Gniezno</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Gniezno</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Gniezno</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Gniezno</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TORUN</Tag>
+		<English>Torun</English>
+		<French>
+			<Text>Torun</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Torun</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Torun</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Torun</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_OPOLE</Tag>
+		<English>Opole</English>
+		<French>
+			<Text>Opole</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Opole</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Opole</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Opole</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KOLOBRZEG</Tag>
+		<English>Kolobrzeg</English>
+		<French>
+			<Text>Kolobrzeg</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kolobrzeg</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kolobrzeg</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kolobrzeg</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_OLSZTYN</Tag>
+		<English>Olsztyn</English>
+		<French>
+			<Text>Olsztyn</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Olsztyn</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Olsztyn</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Olsztyn</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KOSZALIN</Tag>
+		<English>Koszalin</English>
+		<French>
+			<Text>Koszalin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Koszalin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Koszalin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Koszalin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SZCZECIN</Tag>
+		<English>Szczecin</English>
+		<French>
+			<Text>Szczecin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Szczecin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Szczecin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Szczecin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KATOWICE</Tag>
+		<English>Katowice</English>
+		<French>
+			<Text>Katowice</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Katowice</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Katowice</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Katowice</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SKIERNIEWICE</Tag>
+		<English>Skierniewice</English>
+		<French>
+			<Text>Skierniewice</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Skierniewice</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Skierniewice</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Skierniewice</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PIOTRKOW</Tag>
+		<English>Piotrkow</English>
+		<French>
+			<Text>Piotrkow</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Piotrkow</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Piotrkow</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Piotrkow</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PRZEMYSL</Tag>
+		<English>Przemysl</English>
+		<French>
+			<Text>Przemysl</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Przemysl</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Przemysl</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Przemysl</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_RADOM</Tag>
+		<English>Radom</English>
+		<French>
+			<Text>Radom</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Radom</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Radom</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Radom</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KROSNO</Tag>
+		<English>Krosno</English>
+		<French>
+			<Text>Krosno</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Krosno</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Krosno</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Krosno</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ZAMOSC</Tag>
+		<English>Zamosc</English>
+		<French>
+			<Text>Zamosc</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Zamosc</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Zamosc</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Zamosc</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CZERSK</Tag>
+		<English>Czersk</English>
+		<French>
+			<Text>Czersk</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Czersk</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Czersk</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Czersk</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KIELCE</Tag>
+		<English>Kielce</English>
+		<French>
+			<Text>Kielce</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kielce</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kielce</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kielce</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LODZ</Tag>
+		<English>Lodz</English>
+		<French>
+			<Text>Lodz</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Lodz</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Lodz</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Lodz</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CZESTOCHOWA</Tag>
+		<English>Czestochowa</English>
+		<French>
+			<Text>Czestochowa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Czestochowa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Czestochowa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Czestochowa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+</Civ4GameText>

@@ -1,0 +1,1186 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- Modified by the Civ Gold Team -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BANGLADESH_DESC</Tag>
+		<English>The People's Republic of Bangladesh</English>
+		<French>The People's Republic of Bangladesh</French>
+		<German>The People's Republic of Bangladesh</German>
+		<Italian>The People's Republic of Bangladesh</Italian>
+		<Spanish>The People's Republic of Bangladesh</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BANGLADESH_SHORT_DESC</Tag>
+		<English>Bangladesh</English>
+		<French>Bangladesh</French>
+		<German>Bangladesh</German>
+		<Italian>Bangladesh</Italian>
+		<Spanish>Bangladesh</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BANGLADESH_PEDIA</Tag>
+		<English>[TAB]The borders of present-day Bangladesh were established with the partition of Bengal and 
+India in 1947, when the region became the eastern wing of the newly formed Pakistan. However, it was 
+separated from the western wing by 1,600 kilometres (1,000 mi) across India. Political and linguistic 
+discrimination as well as economic neglect led to popular agitations against West Pakistan, which led 
+to the war for independence in 1971 and the establishment of Bangladesh. After independence the new state 
+endured famines, natural disasters and widespread poverty, as well as political turmoil and military 
+coups. The restoration of democracy in 1991 has been followed by relative calm and economic progress.[PARAGRAPH:2]Bangladesh 
+is the seventh most populous country in the world and is among the most densely populated countries in 
+the world with a high poverty rate. However, per-capita GDP has more than doubled since 1975, and the 
+poverty rate has fallen by 20% since the early 1990s. The country is listed among the "Next Eleven" economies. 
+Dhaka and other urban centers have been the driving force behind this growth.[PARAGRAPH:2]Remnants of 
+civilization in the greater Bengal region date back four thousand years, when the region was settled 
+by Dravidian, Tibeto-Burman, and Austro-Asiatic peoples. The exact origin of the word "Bangla" or "Bengal" 
+is unknown, though it is believed to be derived from Bang, the Dravidian-speaking tribe that settled 
+in the area around the year 1000 BC.[PARAGRAPH:2]The kingdom of Gangaridai was formed from at least the 
+seventh century BC, which later united with Bihar under the Magadha, Nanda, Mauryan and Sunga Empires. 
+Bengal was later part of the Gupta Empire and Harsha Empire from the third to the sixth centuries CE. 
+Following its collapse, a dynamic Bengali named Shashanka founded an impressive yet short-lived kingdom. 
+Shashanka is considered the first independent king in the history of Bangladesh. After a period of anarchy, 
+the Buddhist Pala dynasty ruled the region for four hundred years, followed by a shorter reign of the 
+Hindu Sena dynasty. Islam was introduced to Bengal in the twelfth century by Arab Muslim merchants and 
+Sufi missionaries, and subsequent Muslim conquests helped spread Islam throughout the region. Bakhtiar 
+Khilji, a Turkic general, defeated Lakshman Sen of the Sena dynasty and conquered large parts of Bengal 
+in the year 1204. The region was ruled by dynasties of Sultans and land lords Bhuiyan for the next few 
+hundred years. By the 16th century, the Mughal Empire controlled Bengal, and Dhaka became an important 
+provincial centre of Mughal administration.[PARAGRAPH:2]European traders arrived late in the 15th century, 
+and their influence grew until the British East India Company gained control of Bengal following the 
+Battle of Plassey in 1757. The bloody rebellion of 1857, known as the Sepoy Mutiny, resulted in transfer 
+of authority to the crown, with a British viceroy running the administration. During colonial rule, famine 
+racked the Indian subcontinent many times, including the Great Bengal famine of 1943 that claimed 3 million 
+lives.[PARAGRAPH:2]In January 11, 2007, following widespread violence, a caretaker government was appointed 
+to administer the next general election. The country had suffered from extensive corruption, disorder 
+and political violence. The new caretaker government has made it a priority to root out corruption from 
+all levels of government. To this end, many notable politicians and officials, along with large numbers 
+of lesser officials and party members, have been arrested on corruption charges. The caretaker government 
+held a fair and free election on December 29, 2008. Awami League's Sheikh Hasina won the elections with 
+a landslide victory and took oath of Prime Minister on 6 Jan 2009.</English>
+		<French>[TAB]The borders of present-day Bangladesh were established with the partition of Bengal and 
+India in 1947, when the region became the eastern wing of the newly formed Pakistan. However, it was 
+separated from the western wing by 1,600 kilometres (1,000 mi) across India. Political and linguistic 
+discrimination as well as economic neglect led to popular agitations against West Pakistan, which led 
+to the war for independence in 1971 and the establishment of Bangladesh. After independence the new state 
+endured famines, natural disasters and widespread poverty, as well as political turmoil and military 
+coups. The restoration of democracy in 1991 has been followed by relative calm and economic progress.[PARAGRAPH:2]Bangladesh 
+is the seventh most populous country in the world and is among the most densely populated countries in 
+the world with a high poverty rate. However, per-capita GDP has more than doubled since 1975, and the 
+poverty rate has fallen by 20% since the early 1990s. The country is listed among the "Next Eleven" economies. 
+Dhaka and other urban centers have been the driving force behind this growth.[PARAGRAPH:2]Remnants of 
+civilization in the greater Bengal region date back four thousand years, when the region was settled 
+by Dravidian, Tibeto-Burman, and Austro-Asiatic peoples. The exact origin of the word "Bangla" or "Bengal" 
+is unknown, though it is believed to be derived from Bang, the Dravidian-speaking tribe that settled 
+in the area around the year 1000 BC.[PARAGRAPH:2]The kingdom of Gangaridai was formed from at least the 
+seventh century BC, which later united with Bihar under the Magadha, Nanda, Mauryan and Sunga Empires. 
+Bengal was later part of the Gupta Empire and Harsha Empire from the third to the sixth centuries CE. 
+Following its collapse, a dynamic Bengali named Shashanka founded an impressive yet short-lived kingdom. 
+Shashanka is considered the first independent king in the history of Bangladesh. After a period of anarchy, 
+the Buddhist Pala dynasty ruled the region for four hundred years, followed by a shorter reign of the 
+Hindu Sena dynasty. Islam was introduced to Bengal in the twelfth century by Arab Muslim merchants and 
+Sufi missionaries, and subsequent Muslim conquests helped spread Islam throughout the region. Bakhtiar 
+Khilji, a Turkic general, defeated Lakshman Sen of the Sena dynasty and conquered large parts of Bengal 
+in the year 1204. The region was ruled by dynasties of Sultans and land lords Bhuiyan for the next few 
+hundred years. By the 16th century, the Mughal Empire controlled Bengal, and Dhaka became an important 
+provincial centre of Mughal administration.[PARAGRAPH:2]European traders arrived late in the 15th century, 
+and their influence grew until the British East India Company gained control of Bengal following the 
+Battle of Plassey in 1757. The bloody rebellion of 1857, known as the Sepoy Mutiny, resulted in transfer 
+of authority to the crown, with a British viceroy running the administration. During colonial rule, famine 
+racked the Indian subcontinent many times, including the Great Bengal famine of 1943 that claimed 3 million 
+lives.[PARAGRAPH:2]In January 11, 2007, following widespread violence, a caretaker government was appointed 
+to administer the next general election. The country had suffered from extensive corruption, disorder 
+and political violence. The new caretaker government has made it a priority to root out corruption from 
+all levels of government. To this end, many notable politicians and officials, along with large numbers 
+of lesser officials and party members, have been arrested on corruption charges. The caretaker government 
+held a fair and free election on December 29, 2008. Awami League's Sheikh Hasina won the elections with 
+a landslide victory and took oath of Prime Minister on 6 Jan 2009.</French>
+		<German>[TAB]The borders of present-day Bangladesh were established with the partition of Bengal and 
+India in 1947, when the region became the eastern wing of the newly formed Pakistan. However, it was 
+separated from the western wing by 1,600 kilometres (1,000 mi) across India. Political and linguistic 
+discrimination as well as economic neglect led to popular agitations against West Pakistan, which led 
+to the war for independence in 1971 and the establishment of Bangladesh. After independence the new state 
+endured famines, natural disasters and widespread poverty, as well as political turmoil and military 
+coups. The restoration of democracy in 1991 has been followed by relative calm and economic progress.[PARAGRAPH:2]Bangladesh 
+is the seventh most populous country in the world and is among the most densely populated countries in 
+the world with a high poverty rate. However, per-capita GDP has more than doubled since 1975, and the 
+poverty rate has fallen by 20% since the early 1990s. The country is listed among the "Next Eleven" economies. 
+Dhaka and other urban centers have been the driving force behind this growth.[PARAGRAPH:2]Remnants of 
+civilization in the greater Bengal region date back four thousand years, when the region was settled 
+by Dravidian, Tibeto-Burman, and Austro-Asiatic peoples. The exact origin of the word "Bangla" or "Bengal" 
+is unknown, though it is believed to be derived from Bang, the Dravidian-speaking tribe that settled 
+in the area around the year 1000 BC.[PARAGRAPH:2]The kingdom of Gangaridai was formed from at least the 
+seventh century BC, which later united with Bihar under the Magadha, Nanda, Mauryan and Sunga Empires. 
+Bengal was later part of the Gupta Empire and Harsha Empire from the third to the sixth centuries CE. 
+Following its collapse, a dynamic Bengali named Shashanka founded an impressive yet short-lived kingdom. 
+Shashanka is considered the first independent king in the history of Bangladesh. After a period of anarchy, 
+the Buddhist Pala dynasty ruled the region for four hundred years, followed by a shorter reign of the 
+Hindu Sena dynasty. Islam was introduced to Bengal in the twelfth century by Arab Muslim merchants and 
+Sufi missionaries, and subsequent Muslim conquests helped spread Islam throughout the region. Bakhtiar 
+Khilji, a Turkic general, defeated Lakshman Sen of the Sena dynasty and conquered large parts of Bengal 
+in the year 1204. The region was ruled by dynasties of Sultans and land lords Bhuiyan for the next few 
+hundred years. By the 16th century, the Mughal Empire controlled Bengal, and Dhaka became an important 
+provincial centre of Mughal administration.[PARAGRAPH:2]European traders arrived late in the 15th century, 
+and their influence grew until the British East India Company gained control of Bengal following the 
+Battle of Plassey in 1757. The bloody rebellion of 1857, known as the Sepoy Mutiny, resulted in transfer 
+of authority to the crown, with a British viceroy running the administration. During colonial rule, famine 
+racked the Indian subcontinent many times, including the Great Bengal famine of 1943 that claimed 3 million 
+lives.[PARAGRAPH:2]In January 11, 2007, following widespread violence, a caretaker government was appointed 
+to administer the next general election. The country had suffered from extensive corruption, disorder 
+and political violence. The new caretaker government has made it a priority to root out corruption from 
+all levels of government. To this end, many notable politicians and officials, along with large numbers 
+of lesser officials and party members, have been arrested on corruption charges. The caretaker government 
+held a fair and free election on December 29, 2008. Awami League's Sheikh Hasina won the elections with 
+a landslide victory and took oath of Prime Minister on 6 Jan 2009.</German>
+		<Italian>[TAB]The borders of present-day Bangladesh were established with the partition of Bengal and 
+India in 1947, when the region became the eastern wing of the newly formed Pakistan. However, it was 
+separated from the western wing by 1,600 kilometres (1,000 mi) across India. Political and linguistic 
+discrimination as well as economic neglect led to popular agitations against West Pakistan, which led 
+to the war for independence in 1971 and the establishment of Bangladesh. After independence the new state 
+endured famines, natural disasters and widespread poverty, as well as political turmoil and military 
+coups. The restoration of democracy in 1991 has been followed by relative calm and economic progress.[PARAGRAPH:2]Bangladesh 
+is the seventh most populous country in the world and is among the most densely populated countries in 
+the world with a high poverty rate. However, per-capita GDP has more than doubled since 1975, and the 
+poverty rate has fallen by 20% since the early 1990s. The country is listed among the "Next Eleven" economies. 
+Dhaka and other urban centers have been the driving force behind this growth.[PARAGRAPH:2]Remnants of 
+civilization in the greater Bengal region date back four thousand years, when the region was settled 
+by Dravidian, Tibeto-Burman, and Austro-Asiatic peoples. The exact origin of the word "Bangla" or "Bengal" 
+is unknown, though it is believed to be derived from Bang, the Dravidian-speaking tribe that settled 
+in the area around the year 1000 BC.[PARAGRAPH:2]The kingdom of Gangaridai was formed from at least the 
+seventh century BC, which later united with Bihar under the Magadha, Nanda, Mauryan and Sunga Empires. 
+Bengal was later part of the Gupta Empire and Harsha Empire from the third to the sixth centuries CE. 
+Following its collapse, a dynamic Bengali named Shashanka founded an impressive yet short-lived kingdom. 
+Shashanka is considered the first independent king in the history of Bangladesh. After a period of anarchy, 
+the Buddhist Pala dynasty ruled the region for four hundred years, followed by a shorter reign of the 
+Hindu Sena dynasty. Islam was introduced to Bengal in the twelfth century by Arab Muslim merchants and 
+Sufi missionaries, and subsequent Muslim conquests helped spread Islam throughout the region. Bakhtiar 
+Khilji, a Turkic general, defeated Lakshman Sen of the Sena dynasty and conquered large parts of Bengal 
+in the year 1204. The region was ruled by dynasties of Sultans and land lords Bhuiyan for the next few 
+hundred years. By the 16th century, the Mughal Empire controlled Bengal, and Dhaka became an important 
+provincial centre of Mughal administration.[PARAGRAPH:2]European traders arrived late in the 15th century, 
+and their influence grew until the British East India Company gained control of Bengal following the 
+Battle of Plassey in 1757. The bloody rebellion of 1857, known as the Sepoy Mutiny, resulted in transfer 
+of authority to the crown, with a British viceroy running the administration. During colonial rule, famine 
+racked the Indian subcontinent many times, including the Great Bengal famine of 1943 that claimed 3 million 
+lives.[PARAGRAPH:2]In January 11, 2007, following widespread violence, a caretaker government was appointed 
+to administer the next general election. The country had suffered from extensive corruption, disorder 
+and political violence. The new caretaker government has made it a priority to root out corruption from 
+all levels of government. To this end, many notable politicians and officials, along with large numbers 
+of lesser officials and party members, have been arrested on corruption charges. The caretaker government 
+held a fair and free election on December 29, 2008. Awami League's Sheikh Hasina won the elections with 
+a landslide victory and took oath of Prime Minister on 6 Jan 2009.</Italian>
+		<Spanish>[TAB]The borders of present-day Bangladesh were established with the partition of Bengal and 
+India in 1947, when the region became the eastern wing of the newly formed Pakistan. However, it was 
+separated from the western wing by 1,600 kilometres (1,000 mi) across India. Political and linguistic 
+discrimination as well as economic neglect led to popular agitations against West Pakistan, which led 
+to the war for independence in 1971 and the establishment of Bangladesh. After independence the new state 
+endured famines, natural disasters and widespread poverty, as well as political turmoil and military 
+coups. The restoration of democracy in 1991 has been followed by relative calm and economic progress.[PARAGRAPH:2]Bangladesh 
+is the seventh most populous country in the world and is among the most densely populated countries in 
+the world with a high poverty rate. However, per-capita GDP has more than doubled since 1975, and the 
+poverty rate has fallen by 20% since the early 1990s. The country is listed among the "Next Eleven" economies. 
+Dhaka and other urban centers have been the driving force behind this growth.[PARAGRAPH:2]Remnants of 
+civilization in the greater Bengal region date back four thousand years, when the region was settled 
+by Dravidian, Tibeto-Burman, and Austro-Asiatic peoples. The exact origin of the word "Bangla" or "Bengal" 
+is unknown, though it is believed to be derived from Bang, the Dravidian-speaking tribe that settled 
+in the area around the year 1000 BC.[PARAGRAPH:2]The kingdom of Gangaridai was formed from at least the 
+seventh century BC, which later united with Bihar under the Magadha, Nanda, Mauryan and Sunga Empires. 
+Bengal was later part of the Gupta Empire and Harsha Empire from the third to the sixth centuries CE. 
+Following its collapse, a dynamic Bengali named Shashanka founded an impressive yet short-lived kingdom. 
+Shashanka is considered the first independent king in the history of Bangladesh. After a period of anarchy, 
+the Buddhist Pala dynasty ruled the region for four hundred years, followed by a shorter reign of the 
+Hindu Sena dynasty. Islam was introduced to Bengal in the twelfth century by Arab Muslim merchants and 
+Sufi missionaries, and subsequent Muslim conquests helped spread Islam throughout the region. Bakhtiar 
+Khilji, a Turkic general, defeated Lakshman Sen of the Sena dynasty and conquered large parts of Bengal 
+in the year 1204. The region was ruled by dynasties of Sultans and land lords Bhuiyan for the next few 
+hundred years. By the 16th century, the Mughal Empire controlled Bengal, and Dhaka became an important 
+provincial centre of Mughal administration.[PARAGRAPH:2]European traders arrived late in the 15th century, 
+and their influence grew until the British East India Company gained control of Bengal following the 
+Battle of Plassey in 1757. The bloody rebellion of 1857, known as the Sepoy Mutiny, resulted in transfer 
+of authority to the crown, with a British viceroy running the administration. During colonial rule, famine 
+racked the Indian subcontinent many times, including the Great Bengal famine of 1943 that claimed 3 million 
+lives.[PARAGRAPH:2]In January 11, 2007, following widespread violence, a caretaker government was appointed 
+to administer the next general election. The country had suffered from extensive corruption, disorder 
+and political violence. The new caretaker government has made it a priority to root out corruption from 
+all levels of government. To this end, many notable politicians and officials, along with large numbers 
+of lesser officials and party members, have been arrested on corruption charges. The caretaker government 
+held a fair and free election on December 29, 2008. Awami League's Sheikh Hasina won the elections with 
+a landslide victory and took oath of Prime Minister on 6 Jan 2009.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BANGLADESH_ADJECTIVE</Tag>
+		<English>Bangladeshi</English>
+		<French>Bangladeshi</French>
+		<German>Bangladeshi</German>
+		<Italian>Bangladeshi</Italian>
+		<Spanish>Bangladeshi</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_HASINA</Tag>
+		<English>Hasina</English>
+		<French>Hasina</French>
+		<German>Hasina</German>
+		<Italian>Hasina</Italian>
+		<Spanish>Hasina</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_HASINA_PEDIA</Tag>
+		<English>[H1]Sheikh Hasina Wazed[\H1][NEWLINE][BOLD]Prime Minister of Bangladesh[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD]1947 - [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Sheikh Hasina Wazed is a Bangladeshi 
+politician and current Prime Minister of Bangladesh. She has been the President of the Awami League, 
+a major political party, since 1981. She is the eldest of five children of Sheikh Mujibur Rahman, the 
+founding father (and first president) of Bangladesh and wife of an internationally reputed nuclear scientist, 
+M. A. Wazed Miah. Sheikh Hasina's party defeated the BNP-led Four-Party Alliance in the 2008 parliamentary 
+elections, thus assuring her of the post of prime minister. Sheikh Hasina has once before held the office, 
+from 1996 to 2001.[PARAGRAPH:1]While living in self-exile in India, Sheikh Hasina was elected the president 
+of Bangladesh Awami League in 1981. After she returned to the country, the president Ziaur Rahman was 
+assassinated in yet another coup in May, 1981. The following year, General Hossain Mohammad Ershad captured 
+power through a bloodless coup and declared martial law. In 1983, Hasina formed the 15-party alliance 
+to launch a movement to oust him from power. She was in and out of prison throughout the 1980s. Her party, 
+along with the Bangladesh Nationalist Party, led by Rahman's widow Khaleda Zia, was instrumental in the 
+movement against the military rule. In 1984, Hasina was put under house arrest in February and then again 
+in November. In March 1985, she was put under house arrest for three months.[PARAGRAPH:1]In 1990, Hasina's 
+8 party alliance was instrumental along with another BNP-led alliance in finally removing the Ershad 
+regime. Under the leadership of Sheikh Hasina, Awami League formed an alliance with Ershad's Jayiya Party 
+in 2006[PARAGRAPH:1]On July 16, 2007 Hasina was arrested by state police at her home and taken before 
+a local court in Dhaka. She was accused of extortion and denied bail on the same day, and was held in 
+a building converted into a jail on the premises of the National Parliament. According to the Awami League, 
+the arrest was politically motivated. On June 11, 2008 Hasina was released on parole for medical reasons 
+and the next day she flew to the United States to be treated for hearing impairment, eye problems and 
+high blood pressure. Prof. Syed Modasser Ali, her personal physician, threatened to sue the caretaker 
+government over negligence regarding Hasina's treatment during her detention.[PARAGRAPH:1]In November 
+6, 2008 Hasina returned to Bangladesh to lead her party in general elections scheduled for December 29, 
+2008. On December 11, 2008 Sheikh Hasina announced her party's election manifesto during a news conference.In 
+her election manifesto she vowed to build a "Digital Bangladesh" by 2021. Sheikh Hasina's Awami league 
+won the elections on 29 December 2008 with an overwhelming majority.[PARAGRAPH:1]Sheikh Hasina's party 
+defeated Begum Khaleda Zia's BNP in the 2008 Parliamentary Elections. Her party achieved a landslide 
+victory reminiscent to the 1971 elections of Pakistan. Under her leadership, the party has achieved a 
+supermajority in parliament, controlling 230 seats out of 299. She was sworn into office as the Prime 
+Minister for the second time on 6 January, 2009. The Prime Minister is the most powerful executive position 
+in Bangladesh, although technically of lower seniority when compared to the office of President. Begum 
+Zia, however, rejected the results of the election, sarcastically thanking the Chief Election Commissioner 
+"for stage-managing the parliamentary election" in a statement. But, according to the views expressed 
+by foreign and local election observers, the general election was free, fair and credible.</English>
+		<French>[H1]Sheikh Hasina Wazed[\H1][NEWLINE][BOLD]Prime Minister of Bangladesh[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD]1947 - [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Sheikh Hasina Wazed is a Bangladeshi 
+politician and current Prime Minister of Bangladesh. She has been the President of the Awami League, 
+a major political party, since 1981. She is the eldest of five children of Sheikh Mujibur Rahman, the 
+founding father (and first president) of Bangladesh and wife of an internationally reputed nuclear scientist, 
+M. A. Wazed Miah. Sheikh Hasina's party defeated the BNP-led Four-Party Alliance in the 2008 parliamentary 
+elections, thus assuring her of the post of prime minister. Sheikh Hasina has once before held the office, 
+from 1996 to 2001.[PARAGRAPH:1]While living in self-exile in India, Sheikh Hasina was elected the president 
+of Bangladesh Awami League in 1981. After she returned to the country, the president Ziaur Rahman was 
+assassinated in yet another coup in May, 1981. The following year, General Hossain Mohammad Ershad captured 
+power through a bloodless coup and declared martial law. In 1983, Hasina formed the 15-party alliance 
+to launch a movement to oust him from power. She was in and out of prison throughout the 1980s. Her party, 
+along with the Bangladesh Nationalist Party, led by Rahman's widow Khaleda Zia, was instrumental in the 
+movement against the military rule. In 1984, Hasina was put under house arrest in February and then again 
+in November. In March 1985, she was put under house arrest for three months.[PARAGRAPH:1]In 1990, Hasina's 
+8 party alliance was instrumental along with another BNP-led alliance in finally removing the Ershad 
+regime. Under the leadership of Sheikh Hasina, Awami League formed an alliance with Ershad's Jayiya Party 
+in 2006[PARAGRAPH:1]On July 16, 2007 Hasina was arrested by state police at her home and taken before 
+a local court in Dhaka. She was accused of extortion and denied bail on the same day, and was held in 
+a building converted into a jail on the premises of the National Parliament. According to the Awami League, 
+the arrest was politically motivated. On June 11, 2008 Hasina was released on parole for medical reasons 
+and the next day she flew to the United States to be treated for hearing impairment, eye problems and 
+high blood pressure. Prof. Syed Modasser Ali, her personal physician, threatened to sue the caretaker 
+government over negligence regarding Hasina's treatment during her detention.[PARAGRAPH:1]In November 
+6, 2008 Hasina returned to Bangladesh to lead her party in general elections scheduled for December 29, 
+2008. On December 11, 2008 Sheikh Hasina announced her party's election manifesto during a news conference.In 
+her election manifesto she vowed to build a "Digital Bangladesh" by 2021. Sheikh Hasina's Awami league 
+won the elections on 29 December 2008 with an overwhelming majority.[PARAGRAPH:1]Sheikh Hasina's party 
+defeated Begum Khaleda Zia's BNP in the 2008 Parliamentary Elections. Her party achieved a landslide 
+victory reminiscent to the 1971 elections of Pakistan. Under her leadership, the party has achieved a 
+supermajority in parliament, controlling 230 seats out of 299. She was sworn into office as the Prime 
+Minister for the second time on 6 January, 2009. The Prime Minister is the most powerful executive position 
+in Bangladesh, although technically of lower seniority when compared to the office of President. Begum 
+Zia, however, rejected the results of the election, sarcastically thanking the Chief Election Commissioner 
+"for stage-managing the parliamentary election" in a statement. But, according to the views expressed 
+by foreign and local election observers, the general election was free, fair and credible.</French>
+		<German>[H1]Sheikh Hasina Wazed[\H1][NEWLINE][BOLD]Prime Minister of Bangladesh[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD]1947 - [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Sheikh Hasina Wazed is a Bangladeshi 
+politician and current Prime Minister of Bangladesh. She has been the President of the Awami League, 
+a major political party, since 1981. She is the eldest of five children of Sheikh Mujibur Rahman, the 
+founding father (and first president) of Bangladesh and wife of an internationally reputed nuclear scientist, 
+M. A. Wazed Miah. Sheikh Hasina's party defeated the BNP-led Four-Party Alliance in the 2008 parliamentary 
+elections, thus assuring her of the post of prime minister. Sheikh Hasina has once before held the office, 
+from 1996 to 2001.[PARAGRAPH:1]While living in self-exile in India, Sheikh Hasina was elected the president 
+of Bangladesh Awami League in 1981. After she returned to the country, the president Ziaur Rahman was 
+assassinated in yet another coup in May, 1981. The following year, General Hossain Mohammad Ershad captured 
+power through a bloodless coup and declared martial law. In 1983, Hasina formed the 15-party alliance 
+to launch a movement to oust him from power. She was in and out of prison throughout the 1980s. Her party, 
+along with the Bangladesh Nationalist Party, led by Rahman's widow Khaleda Zia, was instrumental in the 
+movement against the military rule. In 1984, Hasina was put under house arrest in February and then again 
+in November. In March 1985, she was put under house arrest for three months.[PARAGRAPH:1]In 1990, Hasina's 
+8 party alliance was instrumental along with another BNP-led alliance in finally removing the Ershad 
+regime. Under the leadership of Sheikh Hasina, Awami League formed an alliance with Ershad's Jayiya Party 
+in 2006[PARAGRAPH:1]On July 16, 2007 Hasina was arrested by state police at her home and taken before 
+a local court in Dhaka. She was accused of extortion and denied bail on the same day, and was held in 
+a building converted into a jail on the premises of the National Parliament. According to the Awami League, 
+the arrest was politically motivated. On June 11, 2008 Hasina was released on parole for medical reasons 
+and the next day she flew to the United States to be treated for hearing impairment, eye problems and 
+high blood pressure. Prof. Syed Modasser Ali, her personal physician, threatened to sue the caretaker 
+government over negligence regarding Hasina's treatment during her detention.[PARAGRAPH:1]In November 
+6, 2008 Hasina returned to Bangladesh to lead her party in general elections scheduled for December 29, 
+2008. On December 11, 2008 Sheikh Hasina announced her party's election manifesto during a news conference.In 
+her election manifesto she vowed to build a "Digital Bangladesh" by 2021. Sheikh Hasina's Awami league 
+won the elections on 29 December 2008 with an overwhelming majority.[PARAGRAPH:1]Sheikh Hasina's party 
+defeated Begum Khaleda Zia's BNP in the 2008 Parliamentary Elections. Her party achieved a landslide 
+victory reminiscent to the 1971 elections of Pakistan. Under her leadership, the party has achieved a 
+supermajority in parliament, controlling 230 seats out of 299. She was sworn into office as the Prime 
+Minister for the second time on 6 January, 2009. The Prime Minister is the most powerful executive position 
+in Bangladesh, although technically of lower seniority when compared to the office of President. Begum 
+Zia, however, rejected the results of the election, sarcastically thanking the Chief Election Commissioner 
+"for stage-managing the parliamentary election" in a statement. But, according to the views expressed 
+by foreign and local election observers, the general election was free, fair and credible.</German>
+		<Italian>[H1]Sheikh Hasina Wazed[\H1][NEWLINE][BOLD]Prime Minister of Bangladesh[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD]1947 - [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Sheikh Hasina Wazed is a Bangladeshi 
+politician and current Prime Minister of Bangladesh. She has been the President of the Awami League, 
+a major political party, since 1981. She is the eldest of five children of Sheikh Mujibur Rahman, the 
+founding father (and first president) of Bangladesh and wife of an internationally reputed nuclear scientist, 
+M. A. Wazed Miah. Sheikh Hasina's party defeated the BNP-led Four-Party Alliance in the 2008 parliamentary 
+elections, thus assuring her of the post of prime minister. Sheikh Hasina has once before held the office, 
+from 1996 to 2001.[PARAGRAPH:1]While living in self-exile in India, Sheikh Hasina was elected the president 
+of Bangladesh Awami League in 1981. After she returned to the country, the president Ziaur Rahman was 
+assassinated in yet another coup in May, 1981. The following year, General Hossain Mohammad Ershad captured 
+power through a bloodless coup and declared martial law. In 1983, Hasina formed the 15-party alliance 
+to launch a movement to oust him from power. She was in and out of prison throughout the 1980s. Her party, 
+along with the Bangladesh Nationalist Party, led by Rahman's widow Khaleda Zia, was instrumental in the 
+movement against the military rule. In 1984, Hasina was put under house arrest in February and then again 
+in November. In March 1985, she was put under house arrest for three months.[PARAGRAPH:1]In 1990, Hasina's 
+8 party alliance was instrumental along with another BNP-led alliance in finally removing the Ershad 
+regime. Under the leadership of Sheikh Hasina, Awami League formed an alliance with Ershad's Jayiya Party 
+in 2006[PARAGRAPH:1]On July 16, 2007 Hasina was arrested by state police at her home and taken before 
+a local court in Dhaka. She was accused of extortion and denied bail on the same day, and was held in 
+a building converted into a jail on the premises of the National Parliament. According to the Awami League, 
+the arrest was politically motivated. On June 11, 2008 Hasina was released on parole for medical reasons 
+and the next day she flew to the United States to be treated for hearing impairment, eye problems and 
+high blood pressure. Prof. Syed Modasser Ali, her personal physician, threatened to sue the caretaker 
+government over negligence regarding Hasina's treatment during her detention.[PARAGRAPH:1]In November 
+6, 2008 Hasina returned to Bangladesh to lead her party in general elections scheduled for December 29, 
+2008. On December 11, 2008 Sheikh Hasina announced her party's election manifesto during a news conference.In 
+her election manifesto she vowed to build a "Digital Bangladesh" by 2021. Sheikh Hasina's Awami league 
+won the elections on 29 December 2008 with an overwhelming majority.[PARAGRAPH:1]Sheikh Hasina's party 
+defeated Begum Khaleda Zia's BNP in the 2008 Parliamentary Elections. Her party achieved a landslide 
+victory reminiscent to the 1971 elections of Pakistan. Under her leadership, the party has achieved a 
+supermajority in parliament, controlling 230 seats out of 299. She was sworn into office as the Prime 
+Minister for the second time on 6 January, 2009. The Prime Minister is the most powerful executive position 
+in Bangladesh, although technically of lower seniority when compared to the office of President. Begum 
+Zia, however, rejected the results of the election, sarcastically thanking the Chief Election Commissioner 
+"for stage-managing the parliamentary election" in a statement. But, according to the views expressed 
+by foreign and local election observers, the general election was free, fair and credible.</Italian>
+		<Spanish>[H1]Sheikh Hasina Wazed[\H1][NEWLINE][BOLD]Prime Minister of Bangladesh[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD]1947 - [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Sheikh Hasina Wazed is a Bangladeshi 
+politician and current Prime Minister of Bangladesh. She has been the President of the Awami League, 
+a major political party, since 1981. She is the eldest of five children of Sheikh Mujibur Rahman, the 
+founding father (and first president) of Bangladesh and wife of an internationally reputed nuclear scientist, 
+M. A. Wazed Miah. Sheikh Hasina's party defeated the BNP-led Four-Party Alliance in the 2008 parliamentary 
+elections, thus assuring her of the post of prime minister. Sheikh Hasina has once before held the office, 
+from 1996 to 2001.[PARAGRAPH:1]While living in self-exile in India, Sheikh Hasina was elected the president 
+of Bangladesh Awami League in 1981. After she returned to the country, the president Ziaur Rahman was 
+assassinated in yet another coup in May, 1981. The following year, General Hossain Mohammad Ershad captured 
+power through a bloodless coup and declared martial law. In 1983, Hasina formed the 15-party alliance 
+to launch a movement to oust him from power. She was in and out of prison throughout the 1980s. Her party, 
+along with the Bangladesh Nationalist Party, led by Rahman's widow Khaleda Zia, was instrumental in the 
+movement against the military rule. In 1984, Hasina was put under house arrest in February and then again 
+in November. In March 1985, she was put under house arrest for three months.[PARAGRAPH:1]In 1990, Hasina's 
+8 party alliance was instrumental along with another BNP-led alliance in finally removing the Ershad 
+regime. Under the leadership of Sheikh Hasina, Awami League formed an alliance with Ershad's Jayiya Party 
+in 2006[PARAGRAPH:1]On July 16, 2007 Hasina was arrested by state police at her home and taken before 
+a local court in Dhaka. She was accused of extortion and denied bail on the same day, and was held in 
+a building converted into a jail on the premises of the National Parliament. According to the Awami League, 
+the arrest was politically motivated. On June 11, 2008 Hasina was released on parole for medical reasons 
+and the next day she flew to the United States to be treated for hearing impairment, eye problems and 
+high blood pressure. Prof. Syed Modasser Ali, her personal physician, threatened to sue the caretaker 
+government over negligence regarding Hasina's treatment during her detention.[PARAGRAPH:1]In November 
+6, 2008 Hasina returned to Bangladesh to lead her party in general elections scheduled for December 29, 
+2008. On December 11, 2008 Sheikh Hasina announced her party's election manifesto during a news conference.In 
+her election manifesto she vowed to build a "Digital Bangladesh" by 2021. Sheikh Hasina's Awami league 
+won the elections on 29 December 2008 with an overwhelming majority.[PARAGRAPH:1]Sheikh Hasina's party 
+defeated Begum Khaleda Zia's BNP in the 2008 Parliamentary Elections. Her party achieved a landslide 
+victory reminiscent to the 1971 elections of Pakistan. Under her leadership, the party has achieved a 
+supermajority in parliament, controlling 230 seats out of 299. She was sworn into office as the Prime 
+Minister for the second time on 6 January, 2009. The Prime Minister is the most powerful executive position 
+in Bangladesh, although technically of lower seniority when compared to the office of President. Begum 
+Zia, however, rejected the results of the election, sarcastically thanking the Chief Election Commissioner 
+"for stage-managing the parliamentary election" in a statement. But, according to the views expressed 
+by foreign and local election observers, the general election was free, fair and credible.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_HASINA_1</Tag>
+		<English>Greetings, [CT_NAME]! I am [OUR_NAME] of the [OUR_EMPIRE]. Let us join forces to lead our countries to the cherished goals!</English>
+		<French>Greetings, [CT_NAME]! I am [OUR_NAME] of the [OUR_EMPIRE]. Let us join forces to lead our countries to the cherished goals!</French>
+		<German>Greetings, [CT_NAME]! I am [OUR_NAME] of the [OUR_EMPIRE]. Let us join forces to lead our countries to the cherished goals!</German>
+		<Italian>Greetings, [CT_NAME]! I am [OUR_NAME] of the [OUR_EMPIRE]. Let us join forces to lead our countries to the cherished goals!</Italian>
+		<Spanish>Greetings, [CT_NAME]! I am [OUR_NAME] of the [OUR_EMPIRE]. Let us join forces to lead our countries to the cherished goals!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DHAKA</Tag>
+		<English>Dhaka</English>
+		<French>
+			<Text>Dhaka</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Dhaka</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Dhaka</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Dhaka</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CHITTAGONG</Tag>
+		<English>Chittagong</English>
+		<French>
+			<Text>Chittagong</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Chittagong</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Chittagong</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Chittagong</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KHULNA</Tag>
+		<English>Khulna</English>
+		<French>
+			<Text>Khulna</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Khulna</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Khulna</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Khulna</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NARAYANGANJ</Tag>
+		<English>Narayanganj</English>
+		<French>
+			<Text>Narayanganj</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Narayanganj</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Narayanganj</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Narayanganj</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GAZIPUR</Tag>
+		<English>Gazipur</English>
+		<French>
+			<Text>Gazipur</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Gazipur</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Gazipur</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Gazipur</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_RAJSHAHI</Tag>
+		<English>Rajshahi</English>
+		<French>
+			<Text>Rajshahi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Rajshahi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Rajshahi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Rajshahi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NASIRABAD</Tag>
+		<English>Nasirabad</English>
+		<French>
+			<Text>Nasirabad</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Nasirabad</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Nasirabad</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Nasirabad</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SYLHET</Tag>
+		<English>Sylhet</English>
+		<French>
+			<Text>Sylhet</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sylhet</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sylhet</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sylhet</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_COMILLA</Tag>
+		<English>Comilla</English>
+		<French>
+			<Text>Comilla</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Comilla</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Comilla</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Comilla</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_RANGPUR</Tag>
+		<English>Rangpur</English>
+		<French>
+			<Text>Rangpur</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Rangpur</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Rangpur</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Rangpur</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BARISAL</Tag>
+		<English>Barisal</English>
+		<French>
+			<Text>Barisal</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Barisal</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Barisal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Barisal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_JESSORE</Tag>
+		<English>Jessore</English>
+		<French>
+			<Text>Jessore</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Jessore</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Jessore</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Jessore</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BOGRA</Tag>
+		<English>Bogra</English>
+		<French>
+			<Text>Bogra</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Bogra</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Bogra</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Bogra</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DINAJPUR</Tag>
+		<English>Dinajpur</English>
+		<French>
+			<Text>Dinajpur</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Dinajpur</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Dinajpur</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Dinajpur</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PABNA</Tag>
+		<English>Pabna</English>
+		<French>
+			<Text>Pabna</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Pabna</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Pabna</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Pabna</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NAWABGANJ</Tag>
+		<English>Nawabganj</English>
+		<French>
+			<Text>Nawabganj</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Nawabganj</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Nawabganj</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Nawabganj</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BRAHMANBARIA</Tag>
+		<English>Brahmanbaria</English>
+		<French>
+			<Text>Brahmanbaria</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Brahmanbaria</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Brahmanbaria</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Brahmanbaria</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TANGAIL</Tag>
+		<English>Tangail</English>
+		<French>
+			<Text>Tangail</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tangail</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tangail</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tangail</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SIRAJGANJ</Tag>
+		<English>Sirajganj</English>
+		<French>
+			<Text>Sirajganj</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sirajganj</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sirajganj</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sirajganj</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NARSINGDI</Tag>
+		<English>Narsingdi</English>
+		<French>
+			<Text>Narsingdi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Narsingdi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Narsingdi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Narsingdi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NAOGAON</Tag>
+		<English>Naogaon</English>
+		<French>
+			<Text>Naogaon</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Naogaon</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Naogaon</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Naogaon</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAIDPUR</Tag>
+		<English>Saidpur</English>
+		<French>
+			<Text>Saidpur</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Saidpur</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Saidpur</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Saidpur</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CHUADANGA</Tag>
+		<English>Chuadanga</English>
+		<French>
+			<Text>Chuadanga</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Chuadanga</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Chuadanga</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Chuadanga</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NOAKHAIL</Tag>
+		<English>Noakhail</English>
+		<French>
+			<Text>Noakhail</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Noakhail</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Noakhail</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Noakhail</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CHANDPUR</Tag>
+		<English>Chandpur</English>
+		<French>
+			<Text>Chandpur</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Chandpur</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Chandpur</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Chandpur</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CHOWMOHONI</Tag>
+		<English>Chowmohoni</English>
+		<French>
+			<Text>Chowmohoni</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Chowmohoni</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Chowmohoni</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Chowmohoni</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_FARDIPUR</Tag>
+		<English>Fardipur</English>
+		<French>
+			<Text>Fardipur</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Fardipur</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Fardipur</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Fardipur</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GHORASHAL</Tag>
+		<English>Ghorashal</English>
+		<French>
+			<Text>Ghorashal</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ghorashal</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ghorashal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ghorashal</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KUSHTIA</Tag>
+		<English>Kushtia</English>
+		<French>
+			<Text>Kushtia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kushtia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kushtia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kushtia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_COXS_BAZAR</Tag>
+		<English>Cox's Bazar</English>
+		<French>
+			<Text>Cox's Bazar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Cox's Bazar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Cox's Bazar</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Cox's Bazar</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ISHURDI</Tag>
+		<English>Ishurdi</English>
+		<French>
+			<Text>Ishurdi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ishurdi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ishurdi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ishurdi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SATKHIRA</Tag>
+		<English>Satkhira</English>
+		<French>
+			<Text>Satkhira</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Satkhira</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Satkhira</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Satkhira</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+</Civ4GameText>

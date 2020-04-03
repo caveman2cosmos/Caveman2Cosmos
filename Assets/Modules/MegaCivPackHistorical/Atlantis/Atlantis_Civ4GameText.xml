@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- Modified by the Civ Gold Team -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ATLANTIS_PEDIA</Tag>
+		<English>[H1]Atlantis[\H1][NEWLINE][TAB]Sometime presumably before 100,000 BC, Atlantis was simply 
+another civilization in the world and the Atlanteans were a normal race like any other. One fateful day, 
+a huge comet passed over the Earth. A single piece broke off and fell upon the landmass that was inhabited 
+by the Atlanteans. To their astonishment, they managed to discover the great properties possessed by 
+the comet fragment. Soon, they would use the fragment, which they called the Heart of Atlantis, as their 
+source into becoming a more advanced civilization than any other before in history. But instead of using 
+their new found technological powers for good, they exercised it to dominate other lands, establishing 
+colonies all over the ancient world and subjugating the people there. They created a fearsome armada 
+of flying machines called Ketaks and artificially-intelligent Leviathans that waged war with unmatched 
+strength. However, their hubris would become their undoing when an accidental discharge caused a Great 
+Flood that threatened to wipe out Atlantis as a whole. The crystal that had fueled their technology and 
+gifted them with extended longevity, would save a part of the city, though it would be buried beneath 
+the waters and deep into the Earth. Humbled by the result of their arrogance, the elder leaders of Atlantis, 
+in particular its King Kashekim Nedakh, decided to keep the crystal secret, even from its people, forever 
+so as not to repeat their actions. Kashekim went further by ordering all of Atlantis' history to be destroyed 
+and hid the crystal deep within the city through the throne room. Overtime, their past glory had been 
+all but forgotten. According to Plato, Atlantis is located somewhere beyond "the pillars of Heracles." 
+The exact position has been debated by scholars for centuries with no theory being any better than the 
+other. Many have even reasoned that it may not be in the Atlantic Ocean as has generally been believed.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ATLANTIS_DESC</Tag>
+		<English>Atlantis Empire</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ATLANTIS_SHORT_DESC</Tag>
+		<English>Atlantis</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ATLANTIS_ADJECTIVE</Tag>
+		<English>Atlantan</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_NEDAKH_PEDIA</Tag>
+		<English>[H1]King Nedakh[\H1][NEWLINE][TAB]Kashekim Nedakh is the king and ruler of Atlantis at the 
+height of its power. In his arrogance, he uses the Heart of Atlantis as a weapon and begins a campaign 
+that sees him conquer and colonize other lands and cultures. This would end up bring about his downfall 
+as his pride is carried over into his army, which results in the accidental weapons discharge that creates 
+the Great Flood that sinks the city. Additionally, his wife is chosen by the crystal in an act to save 
+the central city from being destroyed outright. However, she remains bonded to the crystal for so long 
+that she is lost to it permanently, leaving their daughter Kidagakash without a mother. As if understanding 
+of the situation, Kashekim looks directly at the crystal while it acts to save the central city, and 
+is permanently blinded because of this.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_NEDAKH</Tag>
+		<English>King Nedakh</English>
+	</TEXT>
+</Civ4GameText>

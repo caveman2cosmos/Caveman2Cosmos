@@ -1,0 +1,18 @@
+<Civ4ColorVals xmlns="x-schema:../../../XML/Schema/C2C_CIV4InterfaceSchema.xml">
+	<ColorVals>
+		<ColorVal>
+			<Type>COLOR_PLAYER_DARKBROWN</Type>
+			<fRed>0.36</fRed>
+			<fGreen>0.20</fGreen>
+			<fBlue>0.09</fBlue>
+			<fAlpha>1.00</fAlpha>
+		</ColorVal>
+		<ColorVal>
+			<Type>COLOR_PLAYER_DARKBROWN_TEXT</Type>
+			<fRed>0.36</fRed>
+			<fGreen>0.20</fGreen>
+			<fBlue>0.09</fBlue>
+			<fAlpha>1.00</fAlpha>
+		</ColorVal>
+	</ColorVals>
+</Civ4ColorVals>

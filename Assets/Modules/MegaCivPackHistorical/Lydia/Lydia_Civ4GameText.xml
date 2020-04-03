@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- Modified by the Civ Gold Team -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_LYDIA_DESC</Tag>
+		<English>Lydian Empire</English>
+		<French>Lydian Empire</French>
+		<German>Lydian Empire</German>
+		<Italian>Lydian Empire</Italian>
+		<Spanish>Lydian Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_LYDIA_SHORT_DESC</Tag>
+		<English>Lydia</English>
+		<French>Lydia</French>
+		<German>Lydia</German>
+		<Italian>Lydia</Italian>
+		<Spanish>Lydia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_LYDIA_ADJECTIVE</Tag>
+		<English>Lydian</English>
+		<French>Lydian</French>
+		<German>Lydian</German>
+		<Italian>Lydian</Italian>
+		<Spanish>Lydian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_LYDIA_PEDIA</Tag>
+		<English>[TAB]Lydia was an Iron Age kingdom of western Asia Minor located generally east of ancient Ionia in the modern western Turkish provinces of Usak, Manisa and inland Izmir. Its population spoke an Anatolian language known as Lydian. At its greatest extent, the Kingdom of Lydia covered all of western Anatolia. Lydia (known as Sparda by the Achaemenids) was a satrapy (province) of the Achaemenid Persian Empire, with Sardis[1] as its capital. Tabalus, appointed by Cyrus the Great, was the first satrap (governor).</English>
+		<French>[TAB]Lydia was an Iron Age kingdom of western Asia Minor located generally east of ancient Ionia in the modern western Turkish provinces of Usak, Manisa and inland Izmir. Its population spoke an Anatolian language known as Lydian. At its greatest extent, the Kingdom of Lydia covered all of western Anatolia. Lydia (known as Sparda by the Achaemenids) was a satrapy (province) of the Achaemenid Persian Empire, with Sardis[1] as its capital. Tabalus, appointed by Cyrus the Great, was the first satrap (governor).</French>
+		<German>[TAB]Lydia was an Iron Age kingdom of western Asia Minor located generally east of ancient Ionia in the modern western Turkish provinces of Usak, Manisa and inland Izmir. Its population spoke an Anatolian language known as Lydian. At its greatest extent, the Kingdom of Lydia covered all of western Anatolia. Lydia (known as Sparda by the Achaemenids) was a satrapy (province) of the Achaemenid Persian Empire, with Sardis[1] as its capital. Tabalus, appointed by Cyrus the Great, was the first satrap (governor).</German>
+		<Italian>[TAB]Lydia was an Iron Age kingdom of western Asia Minor located generally east of ancient Ionia in the modern western Turkish provinces of Usak, Manisa and inland Izmir. Its population spoke an Anatolian language known as Lydian. At its greatest extent, the Kingdom of Lydia covered all of western Anatolia. Lydia (known as Sparda by the Achaemenids) was a satrapy (province) of the Achaemenid Persian Empire, with Sardis[1] as its capital. Tabalus, appointed by Cyrus the Great, was the first satrap (governor).</Italian>
+		<Spanish>[TAB]Lydia was an Iron Age kingdom of western Asia Minor located generally east of ancient Ionia in the modern western Turkish provinces of Usak, Manisa and inland Izmir. Its population spoke an Anatolian language known as Lydian. At its greatest extent, the Kingdom of Lydia covered all of western Anatolia. Lydia (known as Sparda by the Achaemenids) was a satrapy (province) of the Achaemenid Persian Empire, with Sardis[1] as its capital. Tabalus, appointed by Cyrus the Great, was the first satrap (governor).</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_GYGES</Tag>
+		<English>Gyges</English>
+		<French>Gyges</French>
+		<German>Gyges</German>
+		<Italian>Gyges</Italian>
+		<Spanish>Gyges</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_GYGES_PEDIA</Tag>
+		<English>[H1]Gyges[\H1][NEWLINE][BOLD]King of Lydia[\BOLD][NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]was 
+the founder of the third or Mermnad dynasty of Lydian kings and reigned from 716 BC to 678 BC. He was 
+succeeded by his son Ardys II. Once established on the throne, Gyges devoted himself to consolidating 
+his kingdom and making it a military power, although exactly how far the Lydian kingdom extended under 
+his reign is difficult to ascertain. Many Bible scholars believe that Gyges of Lydia was the Biblical 
+figure of Gog, ruler of Magog, who is mentioned in the Book of Ezekiel and the Book of Revelation.[PARAGRAPH:1]</English>
+		<French>[H1]Gyges[\H1][NEWLINE][BOLD]King of Lydia[\BOLD][NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]was 
+the founder of the third or Mermnad dynasty of Lydian kings and reigned from 716 BC to 678 BC. He was 
+succeeded by his son Ardys II. Once established on the throne, Gyges devoted himself to consolidating 
+his kingdom and making it a military power, although exactly how far the Lydian kingdom extended under 
+his reign is difficult to ascertain. Many Bible scholars believe that Gyges of Lydia was the Biblical 
+figure of Gog, ruler of Magog, who is mentioned in the Book of Ezekiel and the Book of Revelation.[PARAGRAPH:1]</French>
+		<German>[H1]Gyges[\H1][NEWLINE][BOLD]King of Lydia[\BOLD][NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]was 
+the founder of the third or Mermnad dynasty of Lydian kings and reigned from 716 BC to 678 BC. He was 
+succeeded by his son Ardys II. Once established on the throne, Gyges devoted himself to consolidating 
+his kingdom and making it a military power, although exactly how far the Lydian kingdom extended under 
+his reign is difficult to ascertain. Many Bible scholars believe that Gyges of Lydia was the Biblical 
+figure of Gog, ruler of Magog, who is mentioned in the Book of Ezekiel and the Book of Revelation.[PARAGRAPH:1]</German>
+		<Italian>[H1]Gyges[\H1][NEWLINE][BOLD]King of Lydia[\BOLD][NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]was 
+the founder of the third or Mermnad dynasty of Lydian kings and reigned from 716 BC to 678 BC. He was 
+succeeded by his son Ardys II. Once established on the throne, Gyges devoted himself to consolidating 
+his kingdom and making it a military power, although exactly how far the Lydian kingdom extended under 
+his reign is difficult to ascertain. Many Bible scholars believe that Gyges of Lydia was the Biblical 
+figure of Gog, ruler of Magog, who is mentioned in the Book of Ezekiel and the Book of Revelation.[PARAGRAPH:1]</Italian>
+		<Spanish>[H1]Gyges[\H1][NEWLINE][BOLD]King of Lydia[\BOLD][NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]was 
+the founder of the third or Mermnad dynasty of Lydian kings and reigned from 716 BC to 678 BC. He was 
+succeeded by his son Ardys II. Once established on the throne, Gyges devoted himself to consolidating 
+his kingdom and making it a military power, although exactly how far the Lydian kingdom extended under 
+his reign is difficult to ascertain. Many Bible scholars believe that Gyges of Lydia was the Biblical 
+figure of Gog, ruler of Magog, who is mentioned in the Book of Ezekiel and the Book of Revelation.[PARAGRAPH:1]</Spanish>
+	</TEXT>
+</Civ4GameText>

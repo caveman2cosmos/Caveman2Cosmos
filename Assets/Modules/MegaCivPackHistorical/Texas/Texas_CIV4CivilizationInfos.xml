@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- ReModified by the StrategyOnly -->
+<!-- Civilization Infos -->
+<!-- -->
+<Civ4CivilizationInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4CivilizationsSchema.xml">
+	<CivilizationInfos>
+ 	    <CivilizationInfo>
+			<Type>CIVILIZATION_TEXAS</Type>
+			<Description>TXT_KEY_CIV_TEXAS_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_TEXAS_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_TEXAS_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_TEXAS_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_TEXAS</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_TEXAS</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_ANGLO_AMERICA</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_AMERICAN</UnitArtStyleType>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>Austin</City>
+				<City>Houston</City>
+				<City>San Antonio</City>
+				<City>Dallas</City>
+				<City>Fort Worth</City>
+				<City>El Paso</City>
+				<City>Galveston</City>
+				<City>Corpus Christi</City>
+				<City>Plano</City>
+				<City>Laredo</City>
+				<City>Lubbock</City>
+				<City>Garland</City>
+				<City>Arlen</City>
+				<City>Irving</City>
+				<City>Amarillo</City>
+				<City>Grand Prairie</City>
+				<City>Brownsville</City>
+				<City>Pasadena</City>
+				<City>McKinney</City>
+				<City>Mesquite</City>
+				<City>Killeen</City>
+				<City>Frisco</City>
+				<City>McAllen</City>
+				<City>Waco</City>
+				<City>Carrollton</City>
+				<City>Midland</City>
+				<City>Denton</City>
+				<City>Abilene</City>
+				<City>Beaumont</City>
+				<City>Odessa</City>
+				<City>Round Rock</City>
+				<City>The Woodlands</City>
+				<City>Wichita Falls</City>
+				<City>Richardson</City>
+				<City>Lewisville</City>
+				<City>Tyler</City>
+				<City>Pearland</City>
+				<City>College Station</City>
+				<City>San Angelo</City>
+				<City>Allen</City>
+				<City>League City</City>
+				<City>Sugar Land</City>
+				<City>Longview</City>
+				<City>Mission</City>
+				<City>Edinburg</City>
+				<City>Bryan</City>
+			</Cities>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
+			<InitialCivics>
+				<CivicType>CIVIC_ANARCHISM</CivicType>
+				<CivicType>CIVIC_OBEDIENCE</CivicType>
+				<CivicType>CIVIC_STRONGMAN</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
+				<CivicType>CIVIC_MILITIA</CivicType>
+				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SURVIVAL</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
+				<CivicType>CIVIC_UNORGANIZED</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_AUSTIN</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<DerivativeCiv>CIVILIZATION_UNITED_STATES</DerivativeCiv>
+			<CivilizationSelectionSound>AS3D_AMERICA_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_AMERICA_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+	</CivilizationInfos>
+</Civ4CivilizationInfos>

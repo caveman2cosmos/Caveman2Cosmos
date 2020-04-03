@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- Re_Modified by Strategyonly -->
+<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ANGOLA_DESC</Tag>
+		<English>Angolan Empire</English>
+		<French>Angolan Empire</French>
+		<German>Angolan Empire</German>
+		<Italian>Angolan Empire</Italian>
+		<Spanish>Angolan Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ANGOLA_SHORT_DESC</Tag>
+		<English>Angola</English>
+		<French>Angola</French>
+		<German>Angola</German>
+		<Italian>Angola</Italian>
+		<Spanish>Angola</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ANGOLA_PEDIA</Tag>
+		<English>[TAB]Angola, officially the Republic of Angola, is a country in Southern Africa. It is the seventh largest country in Africa, and is bordered by Namibia on the south, the Democratic Republic of the Congo on the north, and Zambia on the east; its west coast is on the Atlantic Ocean and Luanda is its capital city. The exclave province of Cabinda has borders with the Republic of the Congo and the Democratic Republic of the Congo.</English>
+		<French>[TAB]Angola, officially the Republic of Angola, is a country in Southern Africa. It is the seventh largest country in Africa, and is bordered by Namibia on the south, the Democratic Republic of the Congo on the north, and Zambia on the east; its west coast is on the Atlantic Ocean and Luanda is its capital city. The exclave province of Cabinda has borders with the Republic of the Congo and the Democratic Republic of the Congo</French>
+		<German>[TAB]Angola, officially the Republic of Angola, is a country in Southern Africa. It is the seventh largest country in Africa, and is bordered by Namibia on the south, the Democratic Republic of the Congo on the north, and Zambia on the east; its west coast is on the Atlantic Ocean and Luanda is its capital city. The exclave province of Cabinda has borders with the Republic of the Congo and the Democratic Republic of the Congo</German>
+		<Italian>[TAB]Angola, officially the Republic of Angola, is a country in Southern Africa. It is the seventh largest country in Africa, and is bordered by Namibia on the south, the Democratic Republic of the Congo on the north, and Zambia on the east; its west coast is on the Atlantic Ocean and Luanda is its capital city. The exclave province of Cabinda has borders with the Republic of the Congo and the Democratic Republic of the Congo</Italian>
+		<Spanish>[TAB]Angola, officially the Republic of Angola, is a country in Southern Africa. It is the seventh largest country in Africa, and is bordered by Namibia on the south, the Democratic Republic of the Congo on the north, and Zambia on the east; its west coast is on the Atlantic Ocean and Luanda is its capital city. The exclave province of Cabinda has borders with the Republic of the Congo and the Democratic Republic of the Congo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ANGOLA_ADJECTIVE</Tag>
+		<English>Angolan</English>
+		<French>Angolan</French>
+		<German>Angolan</German>
+		<Italian>Angolan</Italian>
+		<Spanish>Angolan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_KAPOVA</Tag>
+		<English>Mbandu Kapova I</English>
+		<French>Mbandu Kapova I</French>
+		<German>Mbandu Kapova I</German>
+		<Italian>Mbandu Kapova I</Italian>
+		<Spanish>Mbandu Kapova I</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_KAPOVA_PEDIA</Tag>
+		<English>[H1]Mwene Mbandu Kapova I[\H1][NEWLINE][BOLD]King of Mbundaland[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1800s - 1914[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]King Mwene Mbandu I Lyondthzi Kapova was the 21st monarch of Mbundaland in the southeast of present-day Angola before the Portuguese colonization of the Mbunda territory at the beginning of the 20th Century. He became a key monarch resisting against Portuguese occupation of Moxico, which resulted in large-scale abductions by the Portuguese of many of those resisting their occupation.[1] He took over the reins of the Mbunda Kingdom from his nephew King Mwene Katavola II Musangu.</English>
+		<French>[H1]Mwene Mbandu Kapova I[\H1][NEWLINE][BOLD]King of Mbundaland[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1800s - 1914[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]King Mwene Mbandu I Lyondthzi Kapova was the 21st monarch of Mbundaland in the southeast of present-day Angola before the Portuguese colonization of the Mbunda territory at the beginning of the 20th Century. He became a key monarch resisting against Portuguese occupation of Moxico, which resulted in large-scale abductions by the Portuguese of many of those resisting their occupation.[1] He took over the reins of the Mbunda Kingdom from his nephew King Mwene Katavola II Musangu.</French>
+		<German>[H1]Mwene Mbandu Kapova I[\H1][NEWLINE][BOLD]King of Mbundaland[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1800s - 1914[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]King Mwene Mbandu I Lyondthzi Kapova was the 21st monarch of Mbundaland in the southeast of present-day Angola before the Portuguese colonization of the Mbunda territory at the beginning of the 20th Century. He became a key monarch resisting against Portuguese occupation of Moxico, which resulted in large-scale abductions by the Portuguese of many of those resisting their occupation.[1] He took over the reins of the Mbunda Kingdom from his nephew King Mwene Katavola II Musangu.</German>
+		<Italian>[H1]Mwene Mbandu Kapova I[\H1][NEWLINE][BOLD]King of Mbundaland[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1800s - 1914[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]King Mwene Mbandu I Lyondthzi Kapova was the 21st monarch of Mbundaland in the southeast of present-day Angola before the Portuguese colonization of the Mbunda territory at the beginning of the 20th Century. He became a key monarch resisting against Portuguese occupation of Moxico, which resulted in large-scale abductions by the Portuguese of many of those resisting their occupation.[1] He took over the reins of the Mbunda Kingdom from his nephew King Mwene Katavola II Musangu.</Italian>
+		<Spanish>[H1]Mwene Mbandu Kapova I[\H1][NEWLINE][BOLD]King of Mbundaland[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1800s - 1914[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]King Mwene Mbandu I Lyondthzi Kapova was the 21st monarch of Mbundaland in the southeast of present-day Angola before the Portuguese colonization of the Mbunda territory at the beginning of the 20th Century. He became a key monarch resisting against Portuguese occupation of Moxico, which resulted in large-scale abductions by the Portuguese of many of those resisting their occupation.[1] He took over the reins of the Mbunda Kingdom from his nephew King Mwene Katavola II Musangu.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_KAPOVA_1</Tag>
+		<English>I am a warrior, [CT_NAME]. I understand the value of peace and cooperation. But if provoked, I will lead the  [OUR_EMPIRE] from conquest to conquest, leaving fire in my wake.</English>
+		<French>I am a warrior, [CT_NAME]. I understand the value of peace and cooperation. But if provoked, I will lead the  [OUR_EMPIRE] from conquest to conquest, leaving fire in my wake.</French>
+		<German>I am a warrior, [CT_NAME]. I understand the value of peace and cooperation. But if provoked, I will lead the  [OUR_EMPIRE] from conquest to conquest, leaving fire in my wake.</German>
+		<Italian>Io sono un guerriero, [CT_NAME]. Capisco il velore della pace e della cooperazione. ma se vengo provocato condurrò l'[OUR_EMPIRE] di conquista in conquista, lasciando solo fuoco sulla mia strada.</Italian>
+		<Spanish>I am a warrior, [CT_NAME]. I understand the value of peace and cooperation. But if provoked, I will lead the  [OUR_EMPIRE] from conquest to conquest, leaving fire in my wake.</Spanish>
+	</TEXT>
+</Civ4GameText>

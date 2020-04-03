@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- re-Modified by strategyonly -->
+	<!-- -->
+<Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Xml\Schema\Caveman2Cosmos.xsd">
+	<LeaderheadArtInfos>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_GOYATHLAY</Type>
+			<Button>Modules/Custom_Civilizations/Apache/Leaders/goyathlay_small.dds</Button>
+			<NIF>Modules/Custom_Civilizations/Apache/Leaders/goyathlay.dds</NIF>
+			<KFM/>
+			<NoShaderNIF/>
+			<BackgroundKFM/>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_COCHISE</Type>
+			<Button>Modules/Custom_Civilizations/Apache/Leaders/Cochise_small.dds</Button>
+			<NIF>Modules/Custom_Civilizations/Apache/Leaders/Cochise.dds</NIF>
+			<KFM/>
+			<NoShaderNIF/>
+			<BackgroundKFM/>
+		</LeaderheadArtInfo>
+	</LeaderheadArtInfos>
+</Civ4ArtDefines>

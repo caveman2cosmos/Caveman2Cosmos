@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- ReModified by the StrategyOnly -->
+<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TEXAS_DESC</Tag>
+		<English>Texas Empire</English>
+		<French>Texas Empire</French>
+		<German>Texas Empire</German>
+		<Italian>Texas Empire</Italian>
+		<Spanish>Texas Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TEXAS_SHORT_DESC</Tag>
+		<English>Texas</English>
+		<French>
+			<Text>Texas</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>
+			<Text>Texas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Texas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Texas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TEXAS_ADJECTIVE</Tag>
+		<English>Texan</English>
+		<French>
+			<Text>Texan</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</French>
+		<German>
+			<Text>Texan</Text>
+			<Gender>Neuter</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Texan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Texan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_TEXAS_PEDIA</Tag>
+		<English>[TAB]Texas is the second most populous (after California) and the second largest of the 50 U.S. states (after Alaska) in the United States of America. Geographically located in the south central part of the country, Texas shares an international border with the Mexican states of Chihuahua, Coahuila, Nuevo León, and Tamaulipas to the south and borders the U.S. states of New Mexico to the west, Oklahoma to the north, Arkansas to the northeast, and Louisiana to the east. Texas has an area of 268,820 square miles (696,200 km2) and a growing population of over 26.9 million residents (July 2014).</English>
+		<French>[TAB]Texas is the second most populous (after California) and the second largest of the 50 U.S. states (after Alaska) in the United States of America. Geographically located in the south central part of the country, Texas shares an international border with the Mexican states of Chihuahua, Coahuila, Nuevo León, and Tamaulipas to the south and borders the U.S. states of New Mexico to the west, Oklahoma to the north, Arkansas to the northeast, and Louisiana to the east. Texas has an area of 268,820 square miles (696,200 km2) and a growing population of over 26.9 million residents (July 2014).</French>
+		<German>[TAB]Texas is the second most populous (after California) and the second largest of the 50 U.S. states (after Alaska) in the United States of America. Geographically located in the south central part of the country, Texas shares an international border with the Mexican states of Chihuahua, Coahuila, Nuevo León, and Tamaulipas to the south and borders the U.S. states of New Mexico to the west, Oklahoma to the north, Arkansas to the northeast, and Louisiana to the east. Texas has an area of 268,820 square miles (696,200 km2) and a growing population of over 26.9 million residents (July 2014).</German>
+		<Italian>[TAB]Texas is the second most populous (after California) and the second largest of the 50 U.S. states (after Alaska) in the United States of America. Geographically located in the south central part of the country, Texas shares an international border with the Mexican states of Chihuahua, Coahuila, Nuevo León, and Tamaulipas to the south and borders the U.S. states of New Mexico to the west, Oklahoma to the north, Arkansas to the northeast, and Louisiana to the east. Texas has an area of 268,820 square miles (696,200 km2) and a growing population of over 26.9 million residents (July 2014).</Italian>
+		<Spanish>[TAB]Texas is the second most populous (after California) and the second largest of the 50 U.S. states (after Alaska) in the United States of America. Geographically located in the south central part of the country, Texas shares an international border with the Mexican states of Chihuahua, Coahuila, Nuevo León, and Tamaulipas to the south and borders the U.S. states of New Mexico to the west, Oklahoma to the north, Arkansas to the northeast, and Louisiana to the east. Texas has an area of 268,820 square miles (696,200 km2) and a growing population of over 26.9 million residents (July 2014).</Spanish>
+		<Russian>[TAB]Texas is the second most populous (after California) and the second largest of the 50 U.S. states (after Alaska) in the United States of America. Geographically located in the south central part of the country, Texas shares an international border with the Mexican states of Chihuahua, Coahuila, Nuevo León, and Tamaulipas to the south and borders the U.S. states of New Mexico to the west, Oklahoma to the north, Arkansas to the northeast, and Louisiana to the east. Texas has an area of 268,820 square miles (696,200 km2) and a growing population of over 26.9 million residents (July 2014).</Russian>
+		
+		<Chinese>[TAB]Texas is the second most populous (after California) and the second largest of the 50 U.S. states (after Alaska) in the United States of America. Geographically located in the south central part of the country, Texas shares an international border with the Mexican states of Chihuahua, Coahuila, Nuevo León, and Tamaulipas to the south and borders the U.S. states of New Mexico to the west, Oklahoma to the north, Arkansas to the northeast, and Louisiana to the east. Texas has an area of 268,820 square miles (696,200 km2) and a growing population of over 26.9 million residents (July 2014).</Chinese>
+	</TEXT>
+    <TEXT>
+		<Tag>TXT_KEY_LEADER_AUSTIN</Tag>
+		<English>Stephen F. Austin</English>
+		<French>
+			<Text>Stephen F. Austin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Stephen F. Austin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Stephen F. Austin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Stephen F. Austin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_AUSTIN_PEDIA</Tag>
+		<English>[H1]Stephen Fuller Austin [\H1][NEWLINE][BOLD]Premier of Texas[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] November 3, 1793 - December 27, 1836[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Stephen Fuller Austin was an American empresario born in Virginia and raised in southeastern Missouri. Known as the Father of Texas, he led the second, and ultimately successful, colonization of the region by bringing 300 families from the United States to the region in 1825. In addition, he worked with the Mexican government to support immigration from the United States.</English>
+		<French>[H1]Stephen Fuller Austin [\H1][NEWLINE][BOLD]Premier of Texas[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] November 3, 1793 - December 27, 1836[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Stephen Fuller Austin was an American empresario born in Virginia and raised in southeastern Missouri. Known as the Father of Texas, he led the second, and ultimately successful, colonization of the region by bringing 300 families from the United States to the region in 1825. In addition, he worked with the Mexican government to support immigration from the United States.</French>
+		<German>[H1]Stephen Fuller Austin [\H1][NEWLINE][BOLD]Premier of Texas[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] November 3, 1793 - December 27, 1836[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Stephen Fuller Austin was an American empresario born in Virginia and raised in southeastern Missouri. Known as the Father of Texas, he led the second, and ultimately successful, colonization of the region by bringing 300 families from the United States to the region in 1825. In addition, he worked with the Mexican government to support immigration from the United States.</German>
+		<Italian>[H1]Stephen Fuller Austin [\H1][NEWLINE][BOLD]Premier of Texas[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] November 3, 1793 - December 27, 1836[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Stephen Fuller Austin was an American empresario born in Virginia and raised in southeastern Missouri. Known as the Father of Texas, he led the second, and ultimately successful, colonization of the region by bringing 300 families from the United States to the region in 1825. In addition, he worked with the Mexican government to support immigration from the United States.</Italian>
+		<Spanish>[H1]Stephen Fuller Austin [\H1][NEWLINE][BOLD]Premier of Texas[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] November 3, 1793 - December 27, 1836[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Stephen Fuller Austin was an American empresario born in Virginia and raised in southeastern Missouri. Known as the Father of Texas, he led the second, and ultimately successful, colonization of the region by bringing 300 families from the United States to the region in 1825. In addition, he worked with the Mexican government to support immigration from the United States.</Spanish>
+		<Russian>[H1]Stephen Fuller Austin [\H1][NEWLINE][BOLD]Premier of Texas[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] November 3, 1793 - December 27, 1836[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Stephen Fuller Austin was an American empresario born in Virginia and raised in southeastern Missouri. Known as the Father of Texas, he led the second, and ultimately successful, colonization of the region by bringing 300 families from the United States to the region in 1825. In addition, he worked with the Mexican government to support immigration from the United States.</Russian>
+		
+		<Chinese>[H1]Stephen Fuller Austin [\H1][NEWLINE][BOLD]Premier of Texas[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] November 3, 1793 - December 27, 1836[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Stephen Fuller Austin was an American empresario born in Virginia and raised in southeastern Missouri. Known as the Father of Texas, he led the second, and ultimately successful, colonization of the region by bringing 300 families from the United States to the region in 1825. In addition, he worked with the Mexican government to support immigration from the United States.</Chinese>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_AUSTIN_1</Tag>
+		<English>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. We offer you the friendship of the glorious nation of [OUR_CIV_SHORT]!</English>
+		<French>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. We offer you the friendship of the glorious nation of [OUR_CIV_SHORT]!</French>
+		<German>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. We offer you the friendship of the glorious nation of [OUR_CIV_SHORT]!</German>
+		<Italian>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. We offer you the friendship of the glorious nation of [OUR_CIV_SHORT]!</Italian>
+		<Spanish>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. We offer you the friendship of the glorious nation of [OUR_CIV_SHORT]!</Spanish>
+		<Russian>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. We offer you the friendship of the glorious nation of [OUR_CIV_SHORT]!</Russian>
+		
+		<Chinese>Greetings! I am [OUR_NAME] of the [OUR_EMPIRE]. We offer you the friendship of the glorious nation of [OUR_CIV_SHORT]!</Chinese>
+	</TEXT>
+
+</Civ4GameText>

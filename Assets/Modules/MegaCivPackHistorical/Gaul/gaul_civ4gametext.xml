@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- Modified by the Civ Gold Team -->
+<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GAUL_DESC</Tag>
+		<English>Gallic Empire</English>
+		<French>Gallic Empire</French>
+		<German>Gallic Empire</German>
+		<Italian>Gallic Empire</Italian>
+		<Spanish>Gallic Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GAUL_SHORT_DESC</Tag>
+		<English>Gaul</English>
+		<French>Gaul</French>
+		<German>Gaul</German>
+		<Italian>Gaul</Italian>
+		<Spanish>Gaul</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GAUL_ADJECTIVE</Tag>
+		<English>Gallic</English>
+		<French>Gallic</French>
+		<German>Gallic</German>
+		<Italian>Gallic</Italian>
+		<Spanish>Gallic</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_GAUL_PEDIA</Tag>
+		<English>[TAB]Was a region of Western Europe during the Iron Age that was inhabited by Celtic tribes, encompassing present day France, Luxembourg, Belgium, most of Switzerland, parts of Northern Italy, as well as the parts of the Netherlands and Germany on the west bank of the Rhine. It covered an area of 190,800 mi² or 494,169 km².[1] According to the testimony of Julius Caesar, Gaul was divided into three parts: Gallia Celtica, Belgica and Aquitania. Archaeologically, the Gauls were bearers of the La Tène culture, which extended across all of Gaul, as well as east to Rhaetia, Noricum, Pannonia and southwestern Germania during the 5th to 1st centuries BC.[citation needed] During the 2nd and 1st centuries BC, Gaul fell under Roman rule: Gallia Cisalpina was conquered in 203 BC and Gallia Narbonensis in 123 BC. Gaul was invaded by the Cimbri and the Teutons after 120 BC, who were in turn defeated by the Romans by 103 BC. Julius Caesar finally subdued the remaining parts of Gaul in his campaigns of 58 to 51 BC.</English>
+		<French>[TAB]Was a region of Western Europe during the Iron Age that was inhabited by Celtic tribes, encompassing present day France, Luxembourg, Belgium, most of Switzerland, parts of Northern Italy, as well as the parts of the Netherlands and Germany on the west bank of the Rhine. It covered an area of 190,800 mi² or 494,169 km².[1] According to the testimony of Julius Caesar, Gaul was divided into three parts: Gallia Celtica, Belgica and Aquitania. Archaeologically, the Gauls were bearers of the La Tène culture, which extended across all of Gaul, as well as east to Rhaetia, Noricum, Pannonia and southwestern Germania during the 5th to 1st centuries BC.[citation needed] During the 2nd and 1st centuries BC, Gaul fell under Roman rule: Gallia Cisalpina was conquered in 203 BC and Gallia Narbonensis in 123 BC. Gaul was invaded by the Cimbri and the Teutons after 120 BC, who were in turn defeated by the Romans by 103 BC. Julius Caesar finally subdued the remaining parts of Gaul in his campaigns of 58 to 51 BC.</French>
+		<German>[TAB]Was a region of Western Europe during the Iron Age that was inhabited by Celtic tribes, encompassing present day France, Luxembourg, Belgium, most of Switzerland, parts of Northern Italy, as well as the parts of the Netherlands and Germany on the west bank of the Rhine. It covered an area of 190,800 mi² or 494,169 km².[1] According to the testimony of Julius Caesar, Gaul was divided into three parts: Gallia Celtica, Belgica and Aquitania. Archaeologically, the Gauls were bearers of the La Tène culture, which extended across all of Gaul, as well as east to Rhaetia, Noricum, Pannonia and southwestern Germania during the 5th to 1st centuries BC.[citation needed] During the 2nd and 1st centuries BC, Gaul fell under Roman rule: Gallia Cisalpina was conquered in 203 BC and Gallia Narbonensis in 123 BC. Gaul was invaded by the Cimbri and the Teutons after 120 BC, who were in turn defeated by the Romans by 103 BC. Julius Caesar finally subdued the remaining parts of Gaul in his campaigns of 58 to 51 BC.</German>
+		<Italian>[TAB]Was a region of Western Europe during the Iron Age that was inhabited by Celtic tribes, encompassing present day France, Luxembourg, Belgium, most of Switzerland, parts of Northern Italy, as well as the parts of the Netherlands and Germany on the west bank of the Rhine. It covered an area of 190,800 mi² or 494,169 km².[1] According to the testimony of Julius Caesar, Gaul was divided into three parts: Gallia Celtica, Belgica and Aquitania. Archaeologically, the Gauls were bearers of the La Tène culture, which extended across all of Gaul, as well as east to Rhaetia, Noricum, Pannonia and southwestern Germania during the 5th to 1st centuries BC.[citation needed] During the 2nd and 1st centuries BC, Gaul fell under Roman rule: Gallia Cisalpina was conquered in 203 BC and Gallia Narbonensis in 123 BC. Gaul was invaded by the Cimbri and the Teutons after 120 BC, who were in turn defeated by the Romans by 103 BC. Julius Caesar finally subdued the remaining parts of Gaul in his campaigns of 58 to 51 BC.</Italian>
+		<Spanish>[TAB]Was a region of Western Europe during the Iron Age that was inhabited by Celtic tribes, encompassing present day France, Luxembourg, Belgium, most of Switzerland, parts of Northern Italy, as well as the parts of the Netherlands and Germany on the west bank of the Rhine. It covered an area of 190,800 mi² or 494,169 km².[1] According to the testimony of Julius Caesar, Gaul was divided into three parts: Gallia Celtica, Belgica and Aquitania. Archaeologically, the Gauls were bearers of the La Tène culture, which extended across all of Gaul, as well as east to Rhaetia, Noricum, Pannonia and southwestern Germania during the 5th to 1st centuries BC.[citation needed] During the 2nd and 1st centuries BC, Gaul fell under Roman rule: Gallia Cisalpina was conquered in 203 BC and Gallia Narbonensis in 123 BC. Gaul was invaded by the Cimbri and the Teutons after 120 BC, who were in turn defeated by the Romans by 103 BC. Julius Caesar finally subdued the remaining parts of Gaul in his campaigns of 58 to 51 BC.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_VERCINGETORIX</Tag>
+		<English>Vercingetorix</English>
+		<French>Vercingetorix</French>
+		<German>Vercingetorix</German>
+		<Italian>Vercingetorix</Italian>
+		<Spanish>Vercingetorix</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_VERCINGETORIX_PEDIA</Tag>
+		<English>[H1]Vercingetorix[\H1][NEWLINE][BOLD]Chieftain of the Arverni[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.82-46 BC[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]He united the Gauls in a revolt against Roman forces during the last phase of Julius Caesar's Gallic Wars.[PARAGRAPH:1]</English>
+		<French>[H1]Vercingetorix[\H1][NEWLINE][BOLD]Chieftain of the Arverni[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.82-46 BC[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]He united the Gauls in a revolt against Roman forces during the last phase of Julius Caesar's Gallic Wars.[PARAGRAPH:1]</French>
+		<German>[H1]Vercingetorix[\H1][NEWLINE][BOLD]Chieftain of the Arverni[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.82-46 BC[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]He united the Gauls in a revolt against Roman forces during the last phase of Julius Caesar's Gallic Wars.[PARAGRAPH:1]</German>
+		<Italian>[H1]Vercingetorix[\H1][NEWLINE][BOLD]Chieftain of the Arverni[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.82-46 BC[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]He united the Gauls in a revolt against Roman forces during the last phase of Julius Caesar's Gallic Wars.[PARAGRAPH:1]</Italian>
+		<Spanish>[H1]Vercingetorix[\H1][NEWLINE][BOLD]Chieftain of the Arverni[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.82-46 BC[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][PARAGRAPH:1]He united the Gauls in a revolt against Roman forces during the last phase of Julius Caesar's Gallic Wars.[PARAGRAPH:1]</Spanish>
+	</TEXT>
+</Civ4GameText>

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Bart Muzzin (Firaxis Games) -->
+	<!-- Sid Meier's Civilization 4 -->
+	<!-- Copyright Firaxis Games 2005 -->
+	<!-- Re_Modified by Strategyonly -->
+	<!-- -->
+<Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Xml\Schema\Caveman2Cosmos.xsd">
+	<LeaderheadArtInfos>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_MOBUTU</Type>
+			<Button>Modules/Custom_civilizations/Congo/leaders/Mobutu_small.dds</Button>
+			<NIF>Modules/Custom_civilizations/Congo/leaders/Mobutu.dds</NIF>
+			<KFM/>
+			<NoShaderNIF/>
+			<BackgroundKFM/>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_NIMI</Type>
+			<Button>Modules/Custom_Civilizations/Congo/leaders/Nimi_small.dds</Button>
+			<NIF>Modules/Custom_Civilizations/Congo/leaders/Nimi.dds</NIF>
+			<KFM/>
+			<NoShaderNIF/>
+			<BackgroundKFM/>
+		</LeaderheadArtInfo>
+	</LeaderheadArtInfos>
+</Civ4ArtDefines>

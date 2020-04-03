@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jesse Smith (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Game Text Infos -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ANASAZI_DESC</Tag>
+		<English>Anasazi Empire</English>
+		<French>Empire Anasazi</French>
+		<German>Anasazi Empire</German>
+		<Italian>Anasazi Empire</Italian>
+		<Spanish>Anasazi Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ANASAZI_SHORT_DESC</Tag>
+		<English>Anasazi</English>
+		<French>Anasazi</French>
+		<German>Anasazi</German>
+		<Italian>Anasazi</Italian>
+		<Spanish>Anasazi</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ANASAZI_ADJECTIVE</Tag>
+		<English>Anasazi</English>
+		<French>Anasazi</French>
+		<German>Anasazi</German>
+		<Italian>Anasazi</Italian>
+		<Spanish>Anasazi</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ANASAZI_PEDIA</Tag>
+		<English>The term Anasazi is a Navajo word which roughly translates as "enemy ancestor" or the ancestors of our enemies. My understanding of the history of this region begins with the archaic indians who were nomadic hunter-gatherers (over 2000 years ago). The archaic indians gradually transformed into the basket maker culture which utilized pit houses in the 300-700 AD time frame. The Anasazi culture of cliff houses, kivas, and great cities (e.g. Chaco Canyon) flourished from about 700 AD until 1300 AD, at which time the culture seems to have abruptly disappeared. Current theories suggest that the Anasazi culture gradually migrated from their 4 corners strongholds to the Rio Grande valley and the Hopi mesas where they became today's pueblo and Hopi indians. The Navajo are believed to be recent immigrants from the north (based on linguistic similarities to the Athabascan Indians in Canada), having arrived around 1400 AD (after the Anasazi disappearance). An interesting fictional account (based on archeological evidence coupled with modern pueblo traditions) of life in Frijoles Canyon (now Bandelier National Monument) after Navajo arrival in the region is given in Adolf Bandelier's book, "The Delight Makers".
+
+Ancient Pueblo peoples or Ancestral Pueblo peoples were an ancient Native American culture centered on the present-day Four Corners area of the United States, comprising southern Utah, northeastern Arizona, northern New Mexico, and southwestern Colorado. They lived in a range of structures, including pit houses, pueblos, and cliff dwellings designed so that they could lift entry ladders during enemy attacks, which provided security. Archaeologists referred to one of these cultural groups as the Anasazi, although the term is not preferred by contemporary Pueblo peoples.
+
+The word Anaasází is Navajo for "Ancient Ones" or "Ancient Enemy". Archaeologists still debate when this distinct culture emerged. The current consensus, based on terminology defined by the Pecos Classification, suggests their emergence around the 12th century BCE, during the archaeologically designated Early Basketmaker II Era. Beginning with the earliest explorations and excavations, researchers wrote that the Ancient Puebloans are ancestors of contemporary Pueblo peoples</English>
+		<French>Anasazi</French>
+		<German>Anasazi</German>
+		<Italian>Anasazi</Italian>
+		<Spanish>Anasazi</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PUEBLO</Tag>
+		<English>Pueblo</English>
+		<French>Pueblo</French>
+		<German>Pueblo</German>
+		<Italian>Pueblo</Italian>
+		<Spanish>Pueblo</Spanish>
+	</TEXT>
+	<!-- KOCHININAKO -->
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_KOCHININAKO</Tag>
+		<English>Kochininako</English>
+		<French>Kochininako</French>
+		<German>Kochininako</German>
+		<Italian>Kochininako</Italian>
+		<Spanish>Kochininako</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_KOCHININAKO_PEDIA</Tag>
+		<English>[H1]Kochininako[\H1][NEWLINE][BOLD]Anasazi Heroine[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]Unknown[NEWLINE][PARAGRAPH:2]Needs to be written.</English>
+		<French>Kochininako</French>
+		<German>Kochininako</German>
+		<Italian>Kochininako</Italian>
+		<Spanish>Kochininako</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_KOCHININAKO_1</Tag>
+		<English>Strangers, you have come to the lands of the [OUR_CIV_ADJ:1]. I, [OUR_NAME], greet you. Should we prepare for feast or for siege?</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_KOCHININAKO_1</Tag>
+		<English>If I am to hear gobbling, I would rather hear it from my turkeys.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_KOCHININAKO_1</Tag>
+		<English>Too much blood has been shed, [CT_NAME]. I yearn for peace but I know there will be none so long as [CT_CIV_SHORT] remains.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_KOCHININAKO_1</Tag>
+		<English>The night is still, Kokepelli's flute sings and the Kachinas dance. Join us, [CT_NAME].</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_KOCHININAKO_1</Tag>
+		<English>[CT_NAME]. Your lies grow longer and clumsier. Perhaps you will trip on them and fall from the mesa.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_KOCHININAKO_1</Tag>
+		<English>Tlaloc has been unkind this season; he is keeping the Corn Maidens' gift from us. The [OUR_CIV_ADJ:1] humbly seek your aid.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_KOCHININAKO_1</Tag>
+		<English>These cliffs are marked with the print of many hands; so that the spirits may know who has honoured them, who has left an offering. What will [CT_CIV_SHORT] offer, [CT_NAME]?</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_KOCHININAKO_1</Tag>
+		<English>The greed of [CT_CIV_EMPIRE] sets tangles and knots in the great web. Spider Grandmother grows angry. Give her this and open your eyes and minds to her wisdom.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_POPAY</Tag>
+		<English>Po'pay</English>
+		<French>Po'pay</French>
+		<German>Po'pay</German>
+		<Italian>Po'pay</Italian>
+		<Spanish>Po'pay</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_POPAY_PEDIA</Tag>
+		<English>[H1]Po'pay[\H1][NEWLINE][BOLD]Tewa Religious and Military Leader[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]c.1630 - c.1688 CE[NEWLINE][PARAGRAPH:2]Needs to be written.</English>
+		<French>Po'pay</French>
+		<German>Po'pay</German>
+		<Italian>Po'pay</Italian>
+		<Spanish>Po'pay</Spanish>
+	</TEXT>
+	<!-- DIPLOMACY TEXT -->
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_POPAY_1</Tag>
+		<English>Um-pi-tuh. I am [OUR_NAME] of the [OUR_CIV_ADJ:1]. We are a peaceful people, [CT_NAME], allow us to remain that way.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_REFUSE_TO_TALK_LEADER_POPAY_1</Tag>
+		<English>I see your actions and have no need to hear your words.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_NO_PEACE_LEADER_POPAY_1</Tag>
+		<English>You, [CT_NAME], are made of rotten wood. There will be no remaining trace of you or the [CT_CIV_ADJ:1] in these lands.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_POPAY_1</Tag>
+		<English>[CT_NAME], come! Share in the dance, the feast, and the words of the prophet. Be welcome!</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_POPAY_1</Tag>
+		<English>Another day, another knot unravelled. The time draws near, [CT_NAME], and your time runs out.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_POPAY_1</Tag>
+		<English>The [CT_CIV_ADJ:1] impose their will on the [OUR_CIV_ADJ:1]. Grant us this so you do not impose indignity as well.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_POPAY_1</Tag>
+		<English>We [OUR_CIV_ADJ:1] wish to retain our way of life, our independence, peace and prosperity. These are the reparations you must make.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_POPAY_1</Tag>
+		<English>Coyotes are lurking in the shadows beyond your fires, [CT_NAME]. You'd best give them what they want before they grow too brave.</English>
+		<French></French>
+		<German></German>
+		<Italian></Italian>
+		<Spanish></Spanish>
+	</TEXT>
+</Civ4GameText>

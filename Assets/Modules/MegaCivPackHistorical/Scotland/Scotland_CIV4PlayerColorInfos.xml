@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- Modified by the Civ Gold Team -->
+<!-- -->
+<Civ4PlayerColorInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4InterfaceSchema.xml">
+	<PlayerColorInfos>
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_SCOTTISH_LAPIS</Type>
+			<ColorTypePrimary>COLOR_SCOTTISH_LAPIS</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_SCOTTISH_SILVER</ColorTypeSecondary>
+			<TextColorType>COLOR_SCOTTISH_LAPIS</TextColorType>
+		</PlayerColorInfo>
+	</PlayerColorInfos>
+</Civ4PlayerColorInfos>

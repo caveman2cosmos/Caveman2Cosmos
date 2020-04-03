@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- Modified by the Civ Gold Team -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NEWZEALAND_DESC</Tag>
+		<English>New Zealand Empire</English>
+		<French>New Zealand Empire</French>
+		<German>New Zealand Empire</German>
+		<Italian>New Zealand Empire</Italian>
+		<Spanish>New Zealand Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NEWZEALAND_SHORT_DESC</Tag>
+		<English>New Zealand</English>
+		<French>New Zealand</French>
+		<German>New Zealand</German>
+		<Italian>New Zealand</Italian>
+		<Spanish>New Zealand</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NEWZEALAND_ADJECTIVE</Tag>
+		<English>New Zealand</English>
+		<French>New Zealand</French>
+		<German>New Zealand</German>
+		<Italian>New Zealand</Italian>
+		<Spanish>New Zealand</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_NEWZEALAND_PEDIA</Tag>
+		<English>[TAB]New Zealand is a country in the south-western Pacific Ocean comprising two large islands 
+(the North Island and the South Island) and numerous smaller islands, most notably Stewart Island/Rakiura 
+and the Chatham Islands. The indigenous Maori named New Zealand Aotearoa, which is usually translated 
+into English as The Land of the Long White Cloud. The Realm of New Zealand also includes the Cook Islands 
+and Niue, which are self-governing but in free association; Tokelau; and the Ross Dependency (New Zealand's 
+territorial claim in Antarctica).[PARAGRAPH:2]New Zealand is notable for its geographic isolation, being 
+separated from Australia to the northwest by the Tasman Sea, approximately 2000 kilometres (1250 miles) 
+across. Its closest neighbours to the north are New Caledonia, Fiji and Tonga.[PARAGRAPH:2]The population 
+is mostly of European descent, with the indigenous Maori being the largest minority. Asians and non-Maori 
+Polynesians are also significant minorities, especially in the cities. Elizabeth II, as the Queen of 
+New Zealand, is the Head of State and, in her absence, is represented by a non-partisan Governor-General. 
+The Queen 'reigns but does not rule.' She has no real political influence, and her position is largely 
+symbolic.[2] Political power is held by the democratically-elected Parliament of New Zealand under the 
+leadership of the Prime Minister, who is the Head of Government.</English>
+		<French>[TAB]New Zealand is a country in the south-western Pacific Ocean comprising two large islands 
+(the North Island and the South Island) and numerous smaller islands, most notably Stewart Island/Rakiura 
+and the Chatham Islands. The indigenous Maori named New Zealand Aotearoa, which is usually translated 
+into English as The Land of the Long White Cloud. The Realm of New Zealand also includes the Cook Islands 
+and Niue, which are self-governing but in free association; Tokelau; and the Ross Dependency (New Zealand's 
+territorial claim in Antarctica).[PARAGRAPH:2]New Zealand is notable for its geographic isolation, being 
+separated from Australia to the northwest by the Tasman Sea, approximately 2000 kilometres (1250 miles) 
+across. Its closest neighbours to the north are New Caledonia, Fiji and Tonga.[PARAGRAPH:2]The population 
+is mostly of European descent, with the indigenous Maori being the largest minority. Asians and non-Maori 
+Polynesians are also significant minorities, especially in the cities. Elizabeth II, as the Queen of 
+New Zealand, is the Head of State and, in her absence, is represented by a non-partisan Governor-General. 
+The Queen 'reigns but does not rule.' She has no real political influence, and her position is largely 
+symbolic.[2] Political power is held by the democratically-elected Parliament of New Zealand under the 
+leadership of the Prime Minister, who is the Head of Government.</French>
+		<German>[TAB]New Zealand is a country in the south-western Pacific Ocean comprising two large islands 
+(the North Island and the South Island) and numerous smaller islands, most notably Stewart Island/Rakiura 
+and the Chatham Islands. The indigenous Maori named New Zealand Aotearoa, which is usually translated 
+into English as The Land of the Long White Cloud. The Realm of New Zealand also includes the Cook Islands 
+and Niue, which are self-governing but in free association; Tokelau; and the Ross Dependency (New Zealand's 
+territorial claim in Antarctica).[PARAGRAPH:2]New Zealand is notable for its geographic isolation, being 
+separated from Australia to the northwest by the Tasman Sea, approximately 2000 kilometres (1250 miles) 
+across. Its closest neighbours to the north are New Caledonia, Fiji and Tonga.[PARAGRAPH:2]The population 
+is mostly of European descent, with the indigenous Maori being the largest minority. Asians and non-Maori 
+Polynesians are also significant minorities, especially in the cities. Elizabeth II, as the Queen of 
+New Zealand, is the Head of State and, in her absence, is represented by a non-partisan Governor-General. 
+The Queen 'reigns but does not rule.' She has no real political influence, and her position is largely 
+symbolic.[2] Political power is held by the democratically-elected Parliament of New Zealand under the 
+leadership of the Prime Minister, who is the Head of Government.</German>
+		<Italian>[TAB]New Zealand is a country in the south-western Pacific Ocean comprising two large islands 
+(the North Island and the South Island) and numerous smaller islands, most notably Stewart Island/Rakiura 
+and the Chatham Islands. The indigenous Maori named New Zealand Aotearoa, which is usually translated 
+into English as The Land of the Long White Cloud. The Realm of New Zealand also includes the Cook Islands 
+and Niue, which are self-governing but in free association; Tokelau; and the Ross Dependency (New Zealand's 
+territorial claim in Antarctica).[PARAGRAPH:2]New Zealand is notable for its geographic isolation, being 
+separated from Australia to the northwest by the Tasman Sea, approximately 2000 kilometres (1250 miles) 
+across. Its closest neighbours to the north are New Caledonia, Fiji and Tonga.[PARAGRAPH:2]The population 
+is mostly of European descent, with the indigenous Maori being the largest minority. Asians and non-Maori 
+Polynesians are also significant minorities, especially in the cities. Elizabeth II, as the Queen of 
+New Zealand, is the Head of State and, in her absence, is represented by a non-partisan Governor-General. 
+The Queen 'reigns but does not rule.' She has no real political influence, and her position is largely 
+symbolic.[2] Political power is held by the democratically-elected Parliament of New Zealand under the 
+leadership of the Prime Minister, who is the Head of Government.</Italian>
+		<Spanish>[TAB]New Zealand is a country in the south-western Pacific Ocean comprising two large islands 
+(the North Island and the South Island) and numerous smaller islands, most notably Stewart Island/Rakiura 
+and the Chatham Islands. The indigenous Maori named New Zealand Aotearoa, which is usually translated 
+into English as The Land of the Long White Cloud. The Realm of New Zealand also includes the Cook Islands 
+and Niue, which are self-governing but in free association; Tokelau; and the Ross Dependency (New Zealand's 
+territorial claim in Antarctica).[PARAGRAPH:2]New Zealand is notable for its geographic isolation, being 
+separated from Australia to the northwest by the Tasman Sea, approximately 2000 kilometres (1250 miles) 
+across. Its closest neighbours to the north are New Caledonia, Fiji and Tonga.[PARAGRAPH:2]The population 
+is mostly of European descent, with the indigenous Maori being the largest minority. Asians and non-Maori 
+Polynesians are also significant minorities, especially in the cities. Elizabeth II, as the Queen of 
+New Zealand, is the Head of State and, in her absence, is represented by a non-partisan Governor-General. 
+The Queen 'reigns but does not rule.' She has no real political influence, and her position is largely 
+symbolic.[2] Political power is held by the democratically-elected Parliament of New Zealand under the 
+leadership of the Prime Minister, who is the Head of Government.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_CLARK</Tag>
+		<English>Clark</English>
+		<French>Clark</French>
+		<German>Clark</German>
+		<Italian>Clark</Italian>
+		<Spanish>Clark</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_CLARK_PEDIA</Tag>
+		<English>[H1]Helen Clark[\H1][NEWLINE][BOLD]Prime Minister of New Zealand[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1950 - [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Clark grew up as the eldest 
+of four daughters of a Waikato farming family. Her mother, Margaret, worked as a primary-school teacher 
+and her father, George, was a farmer who supported the National Party at the 1981 election. Clark studied 
+at Te Pahu Primary School, at Epsom Girls' Grammar School in Auckland and at the University of Auckland, 
+where she majored in politics and graduated with a MA (Honours) in 1974. Her thesis research focused 
+on rural political behaviour and representation.[PARAGRAPH:1]When the New Zealand Labour Party came into 
+office as part of a coalition following the 1999 election, Clark became the second female Prime Minister 
+of New Zealand and the first to have won office at an election. (The previous Prime Minister, Jenny Shipley 
+took office as the result of a mid-term party leadership challenge.) During her term in office, a number 
+of prominent offices have been held by females - such as the Queen, Governor-General, Speaker of the 
+House of Representatives and Chief Justice.[PARAGRAPH:1]Clark has held the positions of Prime Minister 
+and of Minister for Arts, Culture and Heritage from 1999 until the present. She also has ministerial 
+responsibility for the New Zealand Security Intelligence Service and for Ministerial Services.[PARAGRAPH:1]Clark's 
+government has brought in significant changes to the welfare system, such as child tax credits in the 
+Working for Families package. Her government has also changed industrial-relations law and raised the 
+minimum wage six times in as many years. Changes have also occurred in tertiary-education financing, 
+with the abolition of interest on student-loans — firstly for those currently studying, then extended 
+to all borrowers living in New Zealand. Other changes introduced during Clark's term in office include 
+legal provision for civil unions, the introduction of 14 weeks' paid parental leave, and the Property 
+(Relationships) Act.[PARAGRAPH:1]Even though some commentators saw stable government within the relatively 
+new MMP electoral system as unlikely, Clark's supporters credit her with maintaining two terms of stable 
+MMP government, as well as being able to form the current government given the close election result. 
+In 2005, Forbes ranked Clark as number 24 of "The 100 Most Powerful Women" in the world.</English>
+		<French>[H1]Helen Clark[\H1][NEWLINE][BOLD]Prime Minister of New Zealand[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1950 - [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Clark grew up as the eldest 
+of four daughters of a Waikato farming family. Her mother, Margaret, worked as a primary-school teacher 
+and her father, George, was a farmer who supported the National Party at the 1981 election. Clark studied 
+at Te Pahu Primary School, at Epsom Girls' Grammar School in Auckland and at the University of Auckland, 
+where she majored in politics and graduated with a MA (Honours) in 1974. Her thesis research focused 
+on rural political behaviour and representation.[PARAGRAPH:1]When the New Zealand Labour Party came into 
+office as part of a coalition following the 1999 election, Clark became the second female Prime Minister 
+of New Zealand and the first to have won office at an election. (The previous Prime Minister, Jenny Shipley 
+took office as the result of a mid-term party leadership challenge.) During her term in office, a number 
+of prominent offices have been held by females - such as the Queen, Governor-General, Speaker of the 
+House of Representatives and Chief Justice.[PARAGRAPH:1]Clark has held the positions of Prime Minister 
+and of Minister for Arts, Culture and Heritage from 1999 until the present. She also has ministerial 
+responsibility for the New Zealand Security Intelligence Service and for Ministerial Services.[PARAGRAPH:1]Clark's 
+government has brought in significant changes to the welfare system, such as child tax credits in the 
+Working for Families package. Her government has also changed industrial-relations law and raised the 
+minimum wage six times in as many years. Changes have also occurred in tertiary-education financing, 
+with the abolition of interest on student-loans — firstly for those currently studying, then extended 
+to all borrowers living in New Zealand. Other changes introduced during Clark's term in office include 
+legal provision for civil unions, the introduction of 14 weeks' paid parental leave, and the Property 
+(Relationships) Act.[PARAGRAPH:1]Even though some commentators saw stable government within the relatively 
+new MMP electoral system as unlikely, Clark's supporters credit her with maintaining two terms of stable 
+MMP government, as well as being able to form the current government given the close election result. 
+In 2005, Forbes ranked Clark as number 24 of "The 100 Most Powerful Women" in the world.</French>
+		<German>[H1]Helen Clark[\H1][NEWLINE][BOLD]Prime Minister of New Zealand[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1950 - [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Clark grew up as the eldest 
+of four daughters of a Waikato farming family. Her mother, Margaret, worked as a primary-school teacher 
+and her father, George, was a farmer who supported the National Party at the 1981 election. Clark studied 
+at Te Pahu Primary School, at Epsom Girls' Grammar School in Auckland and at the University of Auckland, 
+where she majored in politics and graduated with a MA (Honours) in 1974. Her thesis research focused 
+on rural political behaviour and representation.[PARAGRAPH:1]When the New Zealand Labour Party came into 
+office as part of a coalition following the 1999 election, Clark became the second female Prime Minister 
+of New Zealand and the first to have won office at an election. (The previous Prime Minister, Jenny Shipley 
+took office as the result of a mid-term party leadership challenge.) During her term in office, a number 
+of prominent offices have been held by females - such as the Queen, Governor-General, Speaker of the 
+House of Representatives and Chief Justice.[PARAGRAPH:1]Clark has held the positions of Prime Minister 
+and of Minister for Arts, Culture and Heritage from 1999 until the present. She also has ministerial 
+responsibility for the New Zealand Security Intelligence Service and for Ministerial Services.[PARAGRAPH:1]Clark's 
+government has brought in significant changes to the welfare system, such as child tax credits in the 
+Working for Families package. Her government has also changed industrial-relations law and raised the 
+minimum wage six times in as many years. Changes have also occurred in tertiary-education financing, 
+with the abolition of interest on student-loans — firstly for those currently studying, then extended 
+to all borrowers living in New Zealand. Other changes introduced during Clark's term in office include 
+legal provision for civil unions, the introduction of 14 weeks' paid parental leave, and the Property 
+(Relationships) Act.[PARAGRAPH:1]Even though some commentators saw stable government within the relatively 
+new MMP electoral system as unlikely, Clark's supporters credit her with maintaining two terms of stable 
+MMP government, as well as being able to form the current government given the close election result. 
+In 2005, Forbes ranked Clark as number 24 of "The 100 Most Powerful Women" in the world.</German>
+		<Italian>[H1]Helen Clark[\H1][NEWLINE][BOLD]Prime Minister of New Zealand[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1950 - [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Clark grew up as the eldest 
+of four daughters of a Waikato farming family. Her mother, Margaret, worked as a primary-school teacher 
+and her father, George, was a farmer who supported the National Party at the 1981 election. Clark studied 
+at Te Pahu Primary School, at Epsom Girls' Grammar School in Auckland and at the University of Auckland, 
+where she majored in politics and graduated with a MA (Honours) in 1974. Her thesis research focused 
+on rural political behaviour and representation.[PARAGRAPH:1]When the New Zealand Labour Party came into 
+office as part of a coalition following the 1999 election, Clark became the second female Prime Minister 
+of New Zealand and the first to have won office at an election. (The previous Prime Minister, Jenny Shipley 
+took office as the result of a mid-term party leadership challenge.) During her term in office, a number 
+of prominent offices have been held by females - such as the Queen, Governor-General, Speaker of the 
+House of Representatives and Chief Justice.[PARAGRAPH:1]Clark has held the positions of Prime Minister 
+and of Minister for Arts, Culture and Heritage from 1999 until the present. She also has ministerial 
+responsibility for the New Zealand Security Intelligence Service and for Ministerial Services.[PARAGRAPH:1]Clark's 
+government has brought in significant changes to the welfare system, such as child tax credits in the 
+Working for Families package. Her government has also changed industrial-relations law and raised the 
+minimum wage six times in as many years. Changes have also occurred in tertiary-education financing, 
+with the abolition of interest on student-loans — firstly for those currently studying, then extended 
+to all borrowers living in New Zealand. Other changes introduced during Clark's term in office include 
+legal provision for civil unions, the introduction of 14 weeks' paid parental leave, and the Property 
+(Relationships) Act.[PARAGRAPH:1]Even though some commentators saw stable government within the relatively 
+new MMP electoral system as unlikely, Clark's supporters credit her with maintaining two terms of stable 
+MMP government, as well as being able to form the current government given the close election result. 
+In 2005, Forbes ranked Clark as number 24 of "The 100 Most Powerful Women" in the world.</Italian>
+		<Spanish>[H1]Helen Clark[\H1][NEWLINE][BOLD]Prime Minister of New Zealand[\BOLD][NEWLINE][BOLD]Lived: 
+[\BOLD] 1950 - [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Clark grew up as the eldest 
+of four daughters of a Waikato farming family. Her mother, Margaret, worked as a primary-school teacher 
+and her father, George, was a farmer who supported the National Party at the 1981 election. Clark studied 
+at Te Pahu Primary School, at Epsom Girls' Grammar School in Auckland and at the University of Auckland, 
+where she majored in politics and graduated with a MA (Honours) in 1974. Her thesis research focused 
+on rural political behaviour and representation.[PARAGRAPH:1]When the New Zealand Labour Party came into 
+office as part of a coalition following the 1999 election, Clark became the second female Prime Minister 
+of New Zealand and the first to have won office at an election. (The previous Prime Minister, Jenny Shipley 
+took office as the result of a mid-term party leadership challenge.) During her term in office, a number 
+of prominent offices have been held by females - such as the Queen, Governor-General, Speaker of the 
+House of Representatives and Chief Justice.[PARAGRAPH:1]Clark has held the positions of Prime Minister 
+and of Minister for Arts, Culture and Heritage from 1999 until the present. She also has ministerial 
+responsibility for the New Zealand Security Intelligence Service and for Ministerial Services.[PARAGRAPH:1]Clark's 
+government has brought in significant changes to the welfare system, such as child tax credits in the 
+Working for Families package. Her government has also changed industrial-relations law and raised the 
+minimum wage six times in as many years. Changes have also occurred in tertiary-education financing, 
+with the abolition of interest on student-loans — firstly for those currently studying, then extended 
+to all borrowers living in New Zealand. Other changes introduced during Clark's term in office include 
+legal provision for civil unions, the introduction of 14 weeks' paid parental leave, and the Property 
+(Relationships) Act.[PARAGRAPH:1]Even though some commentators saw stable government within the relatively 
+new MMP electoral system as unlikely, Clark's supporters credit her with maintaining two terms of stable 
+MMP government, as well as being able to form the current government given the close election result. 
+In 2005, Forbes ranked Clark as number 24 of "The 100 Most Powerful Women" in the world.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_CLARK_1</Tag>
+		<English>Welcome to [OUR_CIV_SHORT], [CT_NAME]. We prefer our champions to be humble and modest.</English>
+		<French>Welcome to [OUR_CIV_SHORT], [CT_NAME]. We prefer our champions to be humble and modest.</French>
+		<German>Welcome to [OUR_CIV_SHORT], [CT_NAME]. We prefer our champions to be humble and modest.</German>
+		<Italian>Welcome to [OUR_CIV_SHORT], [CT_NAME]. We prefer our champions to be humble and modest.</Italian>
+		<Spanish>Welcome to [OUR_CIV_SHORT], [CT_NAME]. We prefer our champions to be humble and modest.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_WELLINGTON</Tag>
+		<English>Wellington</English>
+		<French>
+			<Text>Wellington</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Wellington</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Wellington</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Wellington</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_AUCKLAND</Tag>
+		<English>Auckland</English>
+		<French>
+			<Text>Auckland</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Auckland</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Auckland</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Auckland</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CHRISTCHURCH</Tag>
+		<English>Christchurch</English>
+		<French>
+			<Text>Christchurch</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Christchurch</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Christchurch</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Christchurch</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_HAMILTON</Tag>
+		<English>Hamilton</English>
+		<French>
+			<Text>Hamilton</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Hamilton</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Hamilton</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Hamilton</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DUNEDIN</Tag>
+		<English>Dunedin</English>
+		<French>
+			<Text>Dunedin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Dunedin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Dunedin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Dunedin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TAURANGA</Tag>
+		<English>Tauranga</English>
+		<French>
+			<Text>Tauranga</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tauranga</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tauranga</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tauranga</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PALMERSTON_NORTH</Tag>
+		<English>Palmerston North</English>
+		<French>
+			<Text>Palmerston North</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Palmerston North</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Palmerston North</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Palmerston North</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_HASTINGS</Tag>
+		<English>Hastings</English>
+		<French>
+			<Text>Hastings</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Hastings</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Hastings</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Hastings</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NELSON</Tag>
+		<English>Nelson</English>
+		<French>
+			<Text>Nelson</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Nelson</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Nelson</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Nelson</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NAPIER</Tag>
+		<English>Napier</English>
+		<French>
+			<Text>Napier</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Napier</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Napier</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Napier</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ROTORUA</Tag>
+		<English>Rotorua</English>
+		<French>
+			<Text>Rotorua</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Rotorua</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Rotorua</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Rotorua</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NEW_PLYMOUTH</Tag>
+		<English>New Plymouth</English>
+		<French>
+			<Text>New Plymouth</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>New Plymouth</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>New Plymouth</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>New Plymouth</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_WHANGAREI</Tag>
+		<English>Whangarei</English>
+		<French>
+			<Text>Whangarei</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Whangarei</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Whangarei</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Whangarei</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_INVERCARGILL</Tag>
+		<English>Invercargill</English>
+		<French>
+			<Text>Invercargill</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Invercargill</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Invercargill</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Invercargill</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_WANGANUI</Tag>
+		<English>Wanganui</English>
+		<French>
+			<Text>Wanganui</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Wanganui</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Wanganui</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Wanganui</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GISBORNE</Tag>
+		<English>Gisborne</English>
+		<French>
+			<Text>Gisborne</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Gisborne</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Gisborne</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Gisborne</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BLENHEIM</Tag>
+		<English>Blenheim</English>
+		<French>
+			<Text>Blenheim</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Blenheim</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Blenheim</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Blenheim</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TIMARU</Tag>
+		<English>Timaru</English>
+		<French>
+			<Text>Timaru</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Timaru</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Timaru</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Timaru</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PUKEKOHE</Tag>
+		<English>Pukekohe</English>
+		<French>
+			<Text>Pukekohe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Pukekohe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Pukekohe</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Pukekohe</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TAUPO</Tag>
+		<English>Taupo</English>
+		<French>
+			<Text>Taupo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Taupo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Taupo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Taupo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MASTERTON</Tag>
+		<English>Masterton</English>
+		<French>
+			<Text>Masterton</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Masterton</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Masterton</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Masterton</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LEVIN</Tag>
+		<English>Levin</English>
+		<French>
+			<Text>Levin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Levin</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Levin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Levin</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_WHAKATANE</Tag>
+		<English>Whakatane</English>
+		<French>
+			<Text>Whakatane</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Whakatane</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Whakatane</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Whakatane</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ASHBURTON</Tag>
+		<English>Ashburton</English>
+		<French>
+			<Text>Ashburton</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ashburton</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ashburton</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ashburton</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_QUEENSTOWN</Tag>
+		<English>Queenstown</English>
+		<French>
+			<Text>Queenstown</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Queenstown</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Queenstown</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Queenstown</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+</Civ4GameText>

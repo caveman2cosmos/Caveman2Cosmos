@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- Modified by strategyonly -->
+	<!-- -->
+	<!-- Color Vals -->
+<Civ4ColorVals xmlns="x-schema:../../../XML/Schema/C2C_CIV4InterfaceSchema.xml">
+	<ColorVals>
+		<ColorVal>
+			<Type>COLOR_X_DIMGRAY</Type>
+			<fRed>0.41</fRed>
+			<fGreen>0.41</fGreen>
+			<fBlue>0.41</fBlue>
+			<fAlpha>1.00</fAlpha>
+		</ColorVal>
+		<ColorVal>
+			<Type>COLOR_X_DARKKHAKI</Type>
+			<fRed>0.74</fRed>
+			<fGreen>0.71</fGreen>
+			<fBlue>0.42</fBlue>
+			<fAlpha>1.00</fAlpha>
+		</ColorVal>
+	</ColorVals>
+</Civ4ColorVals>

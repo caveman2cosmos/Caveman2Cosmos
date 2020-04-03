@@ -1,0 +1,2448 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- Modified by the Civ Gold Team -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HUNGARY_DESC</Tag>
+		<English>Hungarian Empire</English>
+		<French>Hungarian Empire</French>
+		<German>Hungarian Empire</German>
+		<Italian>Hungarian Empire</Italian>
+		<Spanish>Hungarian Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HUNGARY_SHORT_DESC</Tag>
+		<English>Hungary</English>
+		<French>Hungary</French>
+		<German>Hungary</German>
+		<Italian>Hungary</Italian>
+		<Spanish>Hungary</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HUNGARY_PEDIA</Tag>
+		<English>[TAB]In the time of the Roman Empire, the Romans called the region Pannonia (west from the 
+Danube river). After Rome fell the Migration Period brought on many invaders. First came the Huns, who 
+built up a powerful empire under Attila. The name "Hungary" may be influenced by the name of the Hun 
+people, although it probably comes from the name of a later, 7th century state called Onogur (or possibly 
+from the name of the city Ungvar, which was possibly the first major city the magyars occupied). After 
+the Hunnish rule faded, Germanic tribes Lombards and Gepids ruled in Pannonia for about 100 years, during 
+which the Slavic tribes also began migrating south. In the 560s, these were supplanted by the Avars who 
+would maintain their supremacy of the land for over two centuries. The Franks under Charlemagne from 
+the west and the Bulgars from the southeast finally managed to overthrow the Avars in the early 9th century. 
+Soon after, the Franks retreated, and the Slavonic kingdom of Great Moravia and the Balaton Principality 
+controlled much of Pannonia until the end of the century. Finally, the Magyars migrated to Hungary in 
+the late 9th century.[PARAGRAPH:2]Tradition holds that the Country of the Magyars (Hungary) was founded 
+by Arpad, who led the Magyars into the Pannonian plains after 895. The Kingdom of Hungary was established 
+in 1000 by King St. Stephen I. Initially the history of Hungary was developed in a triangle with that 
+of Poland and Bohemia, with the many liaisons with Popes and Emperors of the Holy Roman Empire. Hungary 
+was partially demolished with a great loss of life in 1241-1242 by Mongol (Tartar) armies of Batu Khan.[PARAGRAPH:2]Gradually 
+Hungary under the rule of the dynasty of the Arpads turned into an independent kingdom which formed a 
+distinct Central European culture with ties to greater West European civilisation. Ruled by the Angevins 
+since 1308, the Kingdom of Hungary briefly extended its control over Wallachia and Moldavia. The non-dynastic 
+king Matthias Corvinus, son of John Hunyadi, ruled the Kingdom of Hungary from 1458 to 1490. He strengthened 
+Hungary and its government. Under his rule, Hungary (notably the northern parts, some of which are in 
+Slovakia today) became an important artistic and cultural centre of Europe during the Renaissance. Hungarian 
+culture influenced others, for example the Polish-Lithuanian Commonwealth. Together with Polish and Czech 
+lands, Hungary formed the Visegrad group of countries. Today an alliance of the same name exists again 
+with the Czech Republic, Slovakia and Poland.[PARAGRAPH:2]Hungarian independence ended with the Ottoman 
+conquest at the beginning of the 16th century; the parts of Hungary that were not conquered by the Ottomans 
+were annexed by Austria (the rulers of which were Hungarian kings at the same time) in the West, and 
+became the independent Principality of Transylvania in the East, where thus Hungarian statedom was preserved. 
+After 150 years, Austria and her Christian allies retook also the territory of today's Hungary by the 
+end of the 17th century from the Islamic Ottoman Empire.[PARAGRAPH:2]After the final retreat of the Turks, 
+struggle began between the Hungarian nation and the Habsburg kings for the protection of noblemen's rights 
+(thus guarding the autonomy of Hungary). The fight against Austrian absolutism resulted in the unsuccessful 
+popular freedom fight led by a Transylvanian nobleman, Ferenc II Rakoczi, between 1704 and 1711. The 
+revolution and war of 1848-1849 eliminated serfdom and secured civil rights. The Austrians were finally 
+able to prevail only with Russian help.[PARAGRAPH:2]Thanks to the victories against Austria by the French-Italian 
+coalition (the Battle of Solferino, 1859) and Prussia (Battle of Koniggratz, 1866), Hungary would eventually, 
+in 1867, manage to become an autonomous part of the Austro-Hungarian Empire. Having achieved this, the 
+Hungarian government took an effort to nationally unify the kingdom by Magyarisation of the various other 
+nationalities. This lasted until the end of World War I, when the Austro-Hungarian empire collapsed. 
+On November 16, 1918, an independent Hungarian Republic was proclaimed.[PARAGRAPH:2]In March 1919 the 
+communists took power, and in April, Bela Kun proclaimed the Hungarian Soviet Republic. This government, 
+like its predecessor, proved to be short lived; after some initial military successes against the Czechoslovak 
+army, the Romanians attacked to prevent a campaign in Transylvania. By August more than half of present-day 
+Hungary, including Budapest, was placed under Romanian occupation, which lasted until November. Rightist 
+military forces, led by the former Austro-Hungarian Admiral Miklos Horthy, entered Budapest in the wake 
+of the Romanian army's departure and filled the vacuum of state power. In January 1920, elections were 
+held for a unicameral assembly, and Admiral Horthy was subsequently elected Regent, thereby formally 
+restoring Hungary to a kingdom, although there were no more Kings of Hungary, despite attempts by the 
+former Habsburg king to return to power. Horthy continued to rule with autocratic powers until 1944.[PARAGRAPH:2]In 
+June 1920, the Treaty of Trianon was signed, fixing Hungary's borders. Compared with the pre-war Kingdom, 
+the size and population of this new Hungary were reduced by about two-thirds; about one-third of the 
+Magyar population became minorities in the neighbouring countries. Therefore, Hungarian politics and 
+culture of the interwar period were saturated with irredentism and revisionism (the restoration of 19th 
+century "greater Hungary" by whatever means necessary).[PARAGRAPH:2]Horthy made an alliance with Nazi 
+Germany in the 1930s, in the hope of revising the territorial losses that had followed World War I. The 
+alliance did lead to some territories being given to Hungary in the two Vienna Awards. Hungary then assisted 
+the German occupation of the Kingdom of Yugoslavia, occupying the Banat right afterwards, and finally 
+entered World War II in 1941, fighting primarily against the Soviet Union. In October 1944, Hitler replaced 
+Horthy with the Hungarian Nazi collaborator Ferenc Szalasi and his Arrow Cross Party in order to avert 
+Hungary's defection to the Allied side, which were constantly threatened since the Allied invasion of 
+Italy.[PARAGRAPH:2]Hungary passed a series of anti-Semitic laws throughot the 1920s and thirties, and 
+some massacres of Jews by Hungarian forces took place in the early part of the Second World War, but 
+Hungary initially resisted large scale deportation of its Jewish population. Ultimately, however, during 
+the German occupation, the Arrow Cross Party and government authorities participated fully in the Holocaust: 
+in May and June of 1944, Hungarian police deported nearly 440,000 Jews in more than 145 trains, mostly 
+to Auschwitz [1]. Ultimately, over 533,000 Jews in Hungary were killed during the Holocaust, as well 
+as several tens of thousands of Roma.[PARAGRAPH:2]Following the fall of Nazi Germany, Hungary became 
+part of the Soviet area of influence and was appropriated into a communist state following a short period 
+of democracy in 1946-1947. After 1948 Communist leader Matyas Rakosi established a Stalinist rule in 
+the country, which was barely bearable for the war-torn country. This led to the 1956 Hungarian Revolution 
+and an announced withdrawal from the Warsaw Pact which were met with a massive military intervention 
+by the Soviet Union. From the 1960s on to the late 1980s Hungary enjoyed a distinguished status of "the 
+happiest barrack" within the Eastern bloc, under the rule of late controversial communist leader Janos 
+Kadar, who exercised autocratic rule during this period. In the late 1980s, Hungary led the movement 
+to dissolve the Warsaw Pact and shifted toward multiparty democracy and a market-oriented economy. Following 
+the collapse of the Soviet Union in 1991, Hungary developed closer ties with Western Europe, joined NATO 
+in 1999 and the European Union on May 1, 2004.</English>
+		<French>[TAB]In the time of the Roman Empire, the Romans called the region Pannonia (west from the 
+Danube river). After Rome fell the Migration Period brought on many invaders. First came the Huns, who 
+built up a powerful empire under Attila. The name "Hungary" may be influenced by the name of the Hun 
+people, although it probably comes from the name of a later, 7th century state called Onogur (or possibly 
+from the name of the city Ungvar, which was possibly the first major city the magyars occupied). After 
+the Hunnish rule faded, Germanic tribes Lombards and Gepids ruled in Pannonia for about 100 years, during 
+which the Slavic tribes also began migrating south. In the 560s, these were supplanted by the Avars who 
+would maintain their supremacy of the land for over two centuries. The Franks under Charlemagne from 
+the west and the Bulgars from the southeast finally managed to overthrow the Avars in the early 9th century. 
+Soon after, the Franks retreated, and the Slavonic kingdom of Great Moravia and the Balaton Principality 
+controlled much of Pannonia until the end of the century. Finally, the Magyars migrated to Hungary in 
+the late 9th century.[PARAGRAPH:2]Tradition holds that the Country of the Magyars (Hungary) was founded 
+by Arpad, who led the Magyars into the Pannonian plains after 895. The Kingdom of Hungary was established 
+in 1000 by King St. Stephen I. Initially the history of Hungary was developed in a triangle with that 
+of Poland and Bohemia, with the many liaisons with Popes and Emperors of the Holy Roman Empire. Hungary 
+was partially demolished with a great loss of life in 1241-1242 by Mongol (Tartar) armies of Batu Khan.[PARAGRAPH:2]Gradually 
+Hungary under the rule of the dynasty of the Arpads turned into an independent kingdom which formed a 
+distinct Central European culture with ties to greater West European civilisation. Ruled by the Angevins 
+since 1308, the Kingdom of Hungary briefly extended its control over Wallachia and Moldavia. The non-dynastic 
+king Matthias Corvinus, son of John Hunyadi, ruled the Kingdom of Hungary from 1458 to 1490. He strengthened 
+Hungary and its government. Under his rule, Hungary (notably the northern parts, some of which are in 
+Slovakia today) became an important artistic and cultural centre of Europe during the Renaissance. Hungarian 
+culture influenced others, for example the Polish-Lithuanian Commonwealth. Together with Polish and Czech 
+lands, Hungary formed the Visegrad group of countries. Today an alliance of the same name exists again 
+with the Czech Republic, Slovakia and Poland.[PARAGRAPH:2]Hungarian independence ended with the Ottoman 
+conquest at the beginning of the 16th century; the parts of Hungary that were not conquered by the Ottomans 
+were annexed by Austria (the rulers of which were Hungarian kings at the same time) in the West, and 
+became the independent Principality of Transylvania in the East, where thus Hungarian statedom was preserved. 
+After 150 years, Austria and her Christian allies retook also the territory of today's Hungary by the 
+end of the 17th century from the Islamic Ottoman Empire.[PARAGRAPH:2]After the final retreat of the Turks, 
+struggle began between the Hungarian nation and the Habsburg kings for the protection of noblemen's rights 
+(thus guarding the autonomy of Hungary). The fight against Austrian absolutism resulted in the unsuccessful 
+popular freedom fight led by a Transylvanian nobleman, Ferenc II Rakoczi, between 1704 and 1711. The 
+revolution and war of 1848-1849 eliminated serfdom and secured civil rights. The Austrians were finally 
+able to prevail only with Russian help.[PARAGRAPH:2]Thanks to the victories against Austria by the French-Italian 
+coalition (the Battle of Solferino, 1859) and Prussia (Battle of Koniggratz, 1866), Hungary would eventually, 
+in 1867, manage to become an autonomous part of the Austro-Hungarian Empire. Having achieved this, the 
+Hungarian government took an effort to nationally unify the kingdom by Magyarisation of the various other 
+nationalities. This lasted until the end of World War I, when the Austro-Hungarian empire collapsed. 
+On November 16, 1918, an independent Hungarian Republic was proclaimed.[PARAGRAPH:2]In March 1919 the 
+communists took power, and in April, Bela Kun proclaimed the Hungarian Soviet Republic. This government, 
+like its predecessor, proved to be short lived; after some initial military successes against the Czechoslovak 
+army, the Romanians attacked to prevent a campaign in Transylvania. By August more than half of present-day 
+Hungary, including Budapest, was placed under Romanian occupation, which lasted until November. Rightist 
+military forces, led by the former Austro-Hungarian Admiral Miklos Horthy, entered Budapest in the wake 
+of the Romanian army's departure and filled the vacuum of state power. In January 1920, elections were 
+held for a unicameral assembly, and Admiral Horthy was subsequently elected Regent, thereby formally 
+restoring Hungary to a kingdom, although there were no more Kings of Hungary, despite attempts by the 
+former Habsburg king to return to power. Horthy continued to rule with autocratic powers until 1944.[PARAGRAPH:2]In 
+June 1920, the Treaty of Trianon was signed, fixing Hungary's borders. Compared with the pre-war Kingdom, 
+the size and population of this new Hungary were reduced by about two-thirds; about one-third of the 
+Magyar population became minorities in the neighbouring countries. Therefore, Hungarian politics and 
+culture of the interwar period were saturated with irredentism and revisionism (the restoration of 19th 
+century "greater Hungary" by whatever means necessary).[PARAGRAPH:2]Horthy made an alliance with Nazi 
+Germany in the 1930s, in the hope of revising the territorial losses that had followed World War I. The 
+alliance did lead to some territories being given to Hungary in the two Vienna Awards. Hungary then assisted 
+the German occupation of the Kingdom of Yugoslavia, occupying the Banat right afterwards, and finally 
+entered World War II in 1941, fighting primarily against the Soviet Union. In October 1944, Hitler replaced 
+Horthy with the Hungarian Nazi collaborator Ferenc Szalasi and his Arrow Cross Party in order to avert 
+Hungary's defection to the Allied side, which were constantly threatened since the Allied invasion of 
+Italy.[PARAGRAPH:2]Hungary passed a series of anti-Semitic laws throughot the 1920s and thirties, and 
+some massacres of Jews by Hungarian forces took place in the early part of the Second World War, but 
+Hungary initially resisted large scale deportation of its Jewish population. Ultimately, however, during 
+the German occupation, the Arrow Cross Party and government authorities participated fully in the Holocaust: 
+in May and June of 1944, Hungarian police deported nearly 440,000 Jews in more than 145 trains, mostly 
+to Auschwitz [1]. Ultimately, over 533,000 Jews in Hungary were killed during the Holocaust, as well 
+as several tens of thousands of Roma.[PARAGRAPH:2]Following the fall of Nazi Germany, Hungary became 
+part of the Soviet area of influence and was appropriated into a communist state following a short period 
+of democracy in 1946-1947. After 1948 Communist leader Matyas Rakosi established a Stalinist rule in 
+the country, which was barely bearable for the war-torn country. This led to the 1956 Hungarian Revolution 
+and an announced withdrawal from the Warsaw Pact which were met with a massive military intervention 
+by the Soviet Union. From the 1960s on to the late 1980s Hungary enjoyed a distinguished status of "the 
+happiest barrack" within the Eastern bloc, under the rule of late controversial communist leader Janos 
+Kadar, who exercised autocratic rule during this period. In the late 1980s, Hungary led the movement 
+to dissolve the Warsaw Pact and shifted toward multiparty democracy and a market-oriented economy. Following 
+the collapse of the Soviet Union in 1991, Hungary developed closer ties with Western Europe, joined NATO 
+in 1999 and the European Union on May 1, 2004.</French>
+		<German>[TAB]In the time of the Roman Empire, the Romans called the region Pannonia (west from the 
+Danube river). After Rome fell the Migration Period brought on many invaders. First came the Huns, who 
+built up a powerful empire under Attila. The name "Hungary" may be influenced by the name of the Hun 
+people, although it probably comes from the name of a later, 7th century state called Onogur (or possibly 
+from the name of the city Ungvar, which was possibly the first major city the magyars occupied). After 
+the Hunnish rule faded, Germanic tribes Lombards and Gepids ruled in Pannonia for about 100 years, during 
+which the Slavic tribes also began migrating south. In the 560s, these were supplanted by the Avars who 
+would maintain their supremacy of the land for over two centuries. The Franks under Charlemagne from 
+the west and the Bulgars from the southeast finally managed to overthrow the Avars in the early 9th century. 
+Soon after, the Franks retreated, and the Slavonic kingdom of Great Moravia and the Balaton Principality 
+controlled much of Pannonia until the end of the century. Finally, the Magyars migrated to Hungary in 
+the late 9th century.[PARAGRAPH:2]Tradition holds that the Country of the Magyars (Hungary) was founded 
+by Arpad, who led the Magyars into the Pannonian plains after 895. The Kingdom of Hungary was established 
+in 1000 by King St. Stephen I. Initially the history of Hungary was developed in a triangle with that 
+of Poland and Bohemia, with the many liaisons with Popes and Emperors of the Holy Roman Empire. Hungary 
+was partially demolished with a great loss of life in 1241-1242 by Mongol (Tartar) armies of Batu Khan.[PARAGRAPH:2]Gradually 
+Hungary under the rule of the dynasty of the Arpads turned into an independent kingdom which formed a 
+distinct Central European culture with ties to greater West European civilisation. Ruled by the Angevins 
+since 1308, the Kingdom of Hungary briefly extended its control over Wallachia and Moldavia. The non-dynastic 
+king Matthias Corvinus, son of John Hunyadi, ruled the Kingdom of Hungary from 1458 to 1490. He strengthened 
+Hungary and its government. Under his rule, Hungary (notably the northern parts, some of which are in 
+Slovakia today) became an important artistic and cultural centre of Europe during the Renaissance. Hungarian 
+culture influenced others, for example the Polish-Lithuanian Commonwealth. Together with Polish and Czech 
+lands, Hungary formed the Visegrad group of countries. Today an alliance of the same name exists again 
+with the Czech Republic, Slovakia and Poland.[PARAGRAPH:2]Hungarian independence ended with the Ottoman 
+conquest at the beginning of the 16th century; the parts of Hungary that were not conquered by the Ottomans 
+were annexed by Austria (the rulers of which were Hungarian kings at the same time) in the West, and 
+became the independent Principality of Transylvania in the East, where thus Hungarian statedom was preserved. 
+After 150 years, Austria and her Christian allies retook also the territory of today's Hungary by the 
+end of the 17th century from the Islamic Ottoman Empire.[PARAGRAPH:2]After the final retreat of the Turks, 
+struggle began between the Hungarian nation and the Habsburg kings for the protection of noblemen's rights 
+(thus guarding the autonomy of Hungary). The fight against Austrian absolutism resulted in the unsuccessful 
+popular freedom fight led by a Transylvanian nobleman, Ferenc II Rakoczi, between 1704 and 1711. The 
+revolution and war of 1848-1849 eliminated serfdom and secured civil rights. The Austrians were finally 
+able to prevail only with Russian help.[PARAGRAPH:2]Thanks to the victories against Austria by the French-Italian 
+coalition (the Battle of Solferino, 1859) and Prussia (Battle of Koniggratz, 1866), Hungary would eventually, 
+in 1867, manage to become an autonomous part of the Austro-Hungarian Empire. Having achieved this, the 
+Hungarian government took an effort to nationally unify the kingdom by Magyarisation of the various other 
+nationalities. This lasted until the end of World War I, when the Austro-Hungarian empire collapsed. 
+On November 16, 1918, an independent Hungarian Republic was proclaimed.[PARAGRAPH:2]In March 1919 the 
+communists took power, and in April, Bela Kun proclaimed the Hungarian Soviet Republic. This government, 
+like its predecessor, proved to be short lived; after some initial military successes against the Czechoslovak 
+army, the Romanians attacked to prevent a campaign in Transylvania. By August more than half of present-day 
+Hungary, including Budapest, was placed under Romanian occupation, which lasted until November. Rightist 
+military forces, led by the former Austro-Hungarian Admiral Miklos Horthy, entered Budapest in the wake 
+of the Romanian army's departure and filled the vacuum of state power. In January 1920, elections were 
+held for a unicameral assembly, and Admiral Horthy was subsequently elected Regent, thereby formally 
+restoring Hungary to a kingdom, although there were no more Kings of Hungary, despite attempts by the 
+former Habsburg king to return to power. Horthy continued to rule with autocratic powers until 1944.[PARAGRAPH:2]In 
+June 1920, the Treaty of Trianon was signed, fixing Hungary's borders. Compared with the pre-war Kingdom, 
+the size and population of this new Hungary were reduced by about two-thirds; about one-third of the 
+Magyar population became minorities in the neighbouring countries. Therefore, Hungarian politics and 
+culture of the interwar period were saturated with irredentism and revisionism (the restoration of 19th 
+century "greater Hungary" by whatever means necessary).[PARAGRAPH:2]Horthy made an alliance with Nazi 
+Germany in the 1930s, in the hope of revising the territorial losses that had followed World War I. The 
+alliance did lead to some territories being given to Hungary in the two Vienna Awards. Hungary then assisted 
+the German occupation of the Kingdom of Yugoslavia, occupying the Banat right afterwards, and finally 
+entered World War II in 1941, fighting primarily against the Soviet Union. In October 1944, Hitler replaced 
+Horthy with the Hungarian Nazi collaborator Ferenc Szalasi and his Arrow Cross Party in order to avert 
+Hungary's defection to the Allied side, which were constantly threatened since the Allied invasion of 
+Italy.[PARAGRAPH:2]Hungary passed a series of anti-Semitic laws throughot the 1920s and thirties, and 
+some massacres of Jews by Hungarian forces took place in the early part of the Second World War, but 
+Hungary initially resisted large scale deportation of its Jewish population. Ultimately, however, during 
+the German occupation, the Arrow Cross Party and government authorities participated fully in the Holocaust: 
+in May and June of 1944, Hungarian police deported nearly 440,000 Jews in more than 145 trains, mostly 
+to Auschwitz [1]. Ultimately, over 533,000 Jews in Hungary were killed during the Holocaust, as well 
+as several tens of thousands of Roma.[PARAGRAPH:2]Following the fall of Nazi Germany, Hungary became 
+part of the Soviet area of influence and was appropriated into a communist state following a short period 
+of democracy in 1946-1947. After 1948 Communist leader Matyas Rakosi established a Stalinist rule in 
+the country, which was barely bearable for the war-torn country. This led to the 1956 Hungarian Revolution 
+and an announced withdrawal from the Warsaw Pact which were met with a massive military intervention 
+by the Soviet Union. From the 1960s on to the late 1980s Hungary enjoyed a distinguished status of "the 
+happiest barrack" within the Eastern bloc, under the rule of late controversial communist leader Janos 
+Kadar, who exercised autocratic rule during this period. In the late 1980s, Hungary led the movement 
+to dissolve the Warsaw Pact and shifted toward multiparty democracy and a market-oriented economy. Following 
+the collapse of the Soviet Union in 1991, Hungary developed closer ties with Western Europe, joined NATO 
+in 1999 and the European Union on May 1, 2004.</German>
+		<Italian>[TAB]In the time of the Roman Empire, the Romans called the region Pannonia (west from the 
+Danube river). After Rome fell the Migration Period brought on many invaders. First came the Huns, who 
+built up a powerful empire under Attila. The name "Hungary" may be influenced by the name of the Hun 
+people, although it probably comes from the name of a later, 7th century state called Onogur (or possibly 
+from the name of the city Ungvar, which was possibly the first major city the magyars occupied). After 
+the Hunnish rule faded, Germanic tribes Lombards and Gepids ruled in Pannonia for about 100 years, during 
+which the Slavic tribes also began migrating south. In the 560s, these were supplanted by the Avars who 
+would maintain their supremacy of the land for over two centuries. The Franks under Charlemagne from 
+the west and the Bulgars from the southeast finally managed to overthrow the Avars in the early 9th century. 
+Soon after, the Franks retreated, and the Slavonic kingdom of Great Moravia and the Balaton Principality 
+controlled much of Pannonia until the end of the century. Finally, the Magyars migrated to Hungary in 
+the late 9th century.[PARAGRAPH:2]Tradition holds that the Country of the Magyars (Hungary) was founded 
+by Arpad, who led the Magyars into the Pannonian plains after 895. The Kingdom of Hungary was established 
+in 1000 by King St. Stephen I. Initially the history of Hungary was developed in a triangle with that 
+of Poland and Bohemia, with the many liaisons with Popes and Emperors of the Holy Roman Empire. Hungary 
+was partially demolished with a great loss of life in 1241-1242 by Mongol (Tartar) armies of Batu Khan.[PARAGRAPH:2]Gradually 
+Hungary under the rule of the dynasty of the Arpads turned into an independent kingdom which formed a 
+distinct Central European culture with ties to greater West European civilisation. Ruled by the Angevins 
+since 1308, the Kingdom of Hungary briefly extended its control over Wallachia and Moldavia. The non-dynastic 
+king Matthias Corvinus, son of John Hunyadi, ruled the Kingdom of Hungary from 1458 to 1490. He strengthened 
+Hungary and its government. Under his rule, Hungary (notably the northern parts, some of which are in 
+Slovakia today) became an important artistic and cultural centre of Europe during the Renaissance. Hungarian 
+culture influenced others, for example the Polish-Lithuanian Commonwealth. Together with Polish and Czech 
+lands, Hungary formed the Visegrad group of countries. Today an alliance of the same name exists again 
+with the Czech Republic, Slovakia and Poland.[PARAGRAPH:2]Hungarian independence ended with the Ottoman 
+conquest at the beginning of the 16th century; the parts of Hungary that were not conquered by the Ottomans 
+were annexed by Austria (the rulers of which were Hungarian kings at the same time) in the West, and 
+became the independent Principality of Transylvania in the East, where thus Hungarian statedom was preserved. 
+After 150 years, Austria and her Christian allies retook also the territory of today's Hungary by the 
+end of the 17th century from the Islamic Ottoman Empire.[PARAGRAPH:2]After the final retreat of the Turks, 
+struggle began between the Hungarian nation and the Habsburg kings for the protection of noblemen's rights 
+(thus guarding the autonomy of Hungary). The fight against Austrian absolutism resulted in the unsuccessful 
+popular freedom fight led by a Transylvanian nobleman, Ferenc II Rakoczi, between 1704 and 1711. The 
+revolution and war of 1848-1849 eliminated serfdom and secured civil rights. The Austrians were finally 
+able to prevail only with Russian help.[PARAGRAPH:2]Thanks to the victories against Austria by the French-Italian 
+coalition (the Battle of Solferino, 1859) and Prussia (Battle of Koniggratz, 1866), Hungary would eventually, 
+in 1867, manage to become an autonomous part of the Austro-Hungarian Empire. Having achieved this, the 
+Hungarian government took an effort to nationally unify the kingdom by Magyarisation of the various other 
+nationalities. This lasted until the end of World War I, when the Austro-Hungarian empire collapsed. 
+On November 16, 1918, an independent Hungarian Republic was proclaimed.[PARAGRAPH:2]In March 1919 the 
+communists took power, and in April, Bela Kun proclaimed the Hungarian Soviet Republic. This government, 
+like its predecessor, proved to be short lived; after some initial military successes against the Czechoslovak 
+army, the Romanians attacked to prevent a campaign in Transylvania. By August more than half of present-day 
+Hungary, including Budapest, was placed under Romanian occupation, which lasted until November. Rightist 
+military forces, led by the former Austro-Hungarian Admiral Miklos Horthy, entered Budapest in the wake 
+of the Romanian army's departure and filled the vacuum of state power. In January 1920, elections were 
+held for a unicameral assembly, and Admiral Horthy was subsequently elected Regent, thereby formally 
+restoring Hungary to a kingdom, although there were no more Kings of Hungary, despite attempts by the 
+former Habsburg king to return to power. Horthy continued to rule with autocratic powers until 1944.[PARAGRAPH:2]In 
+June 1920, the Treaty of Trianon was signed, fixing Hungary's borders. Compared with the pre-war Kingdom, 
+the size and population of this new Hungary were reduced by about two-thirds; about one-third of the 
+Magyar population became minorities in the neighbouring countries. Therefore, Hungarian politics and 
+culture of the interwar period were saturated with irredentism and revisionism (the restoration of 19th 
+century "greater Hungary" by whatever means necessary).[PARAGRAPH:2]Horthy made an alliance with Nazi 
+Germany in the 1930s, in the hope of revising the territorial losses that had followed World War I. The 
+alliance did lead to some territories being given to Hungary in the two Vienna Awards. Hungary then assisted 
+the German occupation of the Kingdom of Yugoslavia, occupying the Banat right afterwards, and finally 
+entered World War II in 1941, fighting primarily against the Soviet Union. In October 1944, Hitler replaced 
+Horthy with the Hungarian Nazi collaborator Ferenc Szalasi and his Arrow Cross Party in order to avert 
+Hungary's defection to the Allied side, which were constantly threatened since the Allied invasion of 
+Italy.[PARAGRAPH:2]Hungary passed a series of anti-Semitic laws throughot the 1920s and thirties, and 
+some massacres of Jews by Hungarian forces took place in the early part of the Second World War, but 
+Hungary initially resisted large scale deportation of its Jewish population. Ultimately, however, during 
+the German occupation, the Arrow Cross Party and government authorities participated fully in the Holocaust: 
+in May and June of 1944, Hungarian police deported nearly 440,000 Jews in more than 145 trains, mostly 
+to Auschwitz [1]. Ultimately, over 533,000 Jews in Hungary were killed during the Holocaust, as well 
+as several tens of thousands of Roma.[PARAGRAPH:2]Following the fall of Nazi Germany, Hungary became 
+part of the Soviet area of influence and was appropriated into a communist state following a short period 
+of democracy in 1946-1947. After 1948 Communist leader Matyas Rakosi established a Stalinist rule in 
+the country, which was barely bearable for the war-torn country. This led to the 1956 Hungarian Revolution 
+and an announced withdrawal from the Warsaw Pact which were met with a massive military intervention 
+by the Soviet Union. From the 1960s on to the late 1980s Hungary enjoyed a distinguished status of "the 
+happiest barrack" within the Eastern bloc, under the rule of late controversial communist leader Janos 
+Kadar, who exercised autocratic rule during this period. In the late 1980s, Hungary led the movement 
+to dissolve the Warsaw Pact and shifted toward multiparty democracy and a market-oriented economy. Following 
+the collapse of the Soviet Union in 1991, Hungary developed closer ties with Western Europe, joined NATO 
+in 1999 and the European Union on May 1, 2004.</Italian>
+		<Spanish>[TAB]In the time of the Roman Empire, the Romans called the region Pannonia (west from the 
+Danube river). After Rome fell the Migration Period brought on many invaders. First came the Huns, who 
+built up a powerful empire under Attila. The name "Hungary" may be influenced by the name of the Hun 
+people, although it probably comes from the name of a later, 7th century state called Onogur (or possibly 
+from the name of the city Ungvar, which was possibly the first major city the magyars occupied). After 
+the Hunnish rule faded, Germanic tribes Lombards and Gepids ruled in Pannonia for about 100 years, during 
+which the Slavic tribes also began migrating south. In the 560s, these were supplanted by the Avars who 
+would maintain their supremacy of the land for over two centuries. The Franks under Charlemagne from 
+the west and the Bulgars from the southeast finally managed to overthrow the Avars in the early 9th century. 
+Soon after, the Franks retreated, and the Slavonic kingdom of Great Moravia and the Balaton Principality 
+controlled much of Pannonia until the end of the century. Finally, the Magyars migrated to Hungary in 
+the late 9th century.[PARAGRAPH:2]Tradition holds that the Country of the Magyars (Hungary) was founded 
+by Arpad, who led the Magyars into the Pannonian plains after 895. The Kingdom of Hungary was established 
+in 1000 by King St. Stephen I. Initially the history of Hungary was developed in a triangle with that 
+of Poland and Bohemia, with the many liaisons with Popes and Emperors of the Holy Roman Empire. Hungary 
+was partially demolished with a great loss of life in 1241-1242 by Mongol (Tartar) armies of Batu Khan.[PARAGRAPH:2]Gradually 
+Hungary under the rule of the dynasty of the Arpads turned into an independent kingdom which formed a 
+distinct Central European culture with ties to greater West European civilisation. Ruled by the Angevins 
+since 1308, the Kingdom of Hungary briefly extended its control over Wallachia and Moldavia. The non-dynastic 
+king Matthias Corvinus, son of John Hunyadi, ruled the Kingdom of Hungary from 1458 to 1490. He strengthened 
+Hungary and its government. Under his rule, Hungary (notably the northern parts, some of which are in 
+Slovakia today) became an important artistic and cultural centre of Europe during the Renaissance. Hungarian 
+culture influenced others, for example the Polish-Lithuanian Commonwealth. Together with Polish and Czech 
+lands, Hungary formed the Visegrad group of countries. Today an alliance of the same name exists again 
+with the Czech Republic, Slovakia and Poland.[PARAGRAPH:2]Hungarian independence ended with the Ottoman 
+conquest at the beginning of the 16th century; the parts of Hungary that were not conquered by the Ottomans 
+were annexed by Austria (the rulers of which were Hungarian kings at the same time) in the West, and 
+became the independent Principality of Transylvania in the East, where thus Hungarian statedom was preserved. 
+After 150 years, Austria and her Christian allies retook also the territory of today's Hungary by the 
+end of the 17th century from the Islamic Ottoman Empire.[PARAGRAPH:2]After the final retreat of the Turks, 
+struggle began between the Hungarian nation and the Habsburg kings for the protection of noblemen's rights 
+(thus guarding the autonomy of Hungary). The fight against Austrian absolutism resulted in the unsuccessful 
+popular freedom fight led by a Transylvanian nobleman, Ferenc II Rakoczi, between 1704 and 1711. The 
+revolution and war of 1848-1849 eliminated serfdom and secured civil rights. The Austrians were finally 
+able to prevail only with Russian help.[PARAGRAPH:2]Thanks to the victories against Austria by the French-Italian 
+coalition (the Battle of Solferino, 1859) and Prussia (Battle of Koniggratz, 1866), Hungary would eventually, 
+in 1867, manage to become an autonomous part of the Austro-Hungarian Empire. Having achieved this, the 
+Hungarian government took an effort to nationally unify the kingdom by Magyarisation of the various other 
+nationalities. This lasted until the end of World War I, when the Austro-Hungarian empire collapsed. 
+On November 16, 1918, an independent Hungarian Republic was proclaimed.[PARAGRAPH:2]In March 1919 the 
+communists took power, and in April, Bela Kun proclaimed the Hungarian Soviet Republic. This government, 
+like its predecessor, proved to be short lived; after some initial military successes against the Czechoslovak 
+army, the Romanians attacked to prevent a campaign in Transylvania. By August more than half of present-day 
+Hungary, including Budapest, was placed under Romanian occupation, which lasted until November. Rightist 
+military forces, led by the former Austro-Hungarian Admiral Miklos Horthy, entered Budapest in the wake 
+of the Romanian army's departure and filled the vacuum of state power. In January 1920, elections were 
+held for a unicameral assembly, and Admiral Horthy was subsequently elected Regent, thereby formally 
+restoring Hungary to a kingdom, although there were no more Kings of Hungary, despite attempts by the 
+former Habsburg king to return to power. Horthy continued to rule with autocratic powers until 1944.[PARAGRAPH:2]In 
+June 1920, the Treaty of Trianon was signed, fixing Hungary's borders. Compared with the pre-war Kingdom, 
+the size and population of this new Hungary were reduced by about two-thirds; about one-third of the 
+Magyar population became minorities in the neighbouring countries. Therefore, Hungarian politics and 
+culture of the interwar period were saturated with irredentism and revisionism (the restoration of 19th 
+century "greater Hungary" by whatever means necessary).[PARAGRAPH:2]Horthy made an alliance with Nazi 
+Germany in the 1930s, in the hope of revising the territorial losses that had followed World War I. The 
+alliance did lead to some territories being given to Hungary in the two Vienna Awards. Hungary then assisted 
+the German occupation of the Kingdom of Yugoslavia, occupying the Banat right afterwards, and finally 
+entered World War II in 1941, fighting primarily against the Soviet Union. In October 1944, Hitler replaced 
+Horthy with the Hungarian Nazi collaborator Ferenc Szalasi and his Arrow Cross Party in order to avert 
+Hungary's defection to the Allied side, which were constantly threatened since the Allied invasion of 
+Italy.[PARAGRAPH:2]Hungary passed a series of anti-Semitic laws throughot the 1920s and thirties, and 
+some massacres of Jews by Hungarian forces took place in the early part of the Second World War, but 
+Hungary initially resisted large scale deportation of its Jewish population. Ultimately, however, during 
+the German occupation, the Arrow Cross Party and government authorities participated fully in the Holocaust: 
+in May and June of 1944, Hungarian police deported nearly 440,000 Jews in more than 145 trains, mostly 
+to Auschwitz [1]. Ultimately, over 533,000 Jews in Hungary were killed during the Holocaust, as well 
+as several tens of thousands of Roma.[PARAGRAPH:2]Following the fall of Nazi Germany, Hungary became 
+part of the Soviet area of influence and was appropriated into a communist state following a short period 
+of democracy in 1946-1947. After 1948 Communist leader Matyas Rakosi established a Stalinist rule in 
+the country, which was barely bearable for the war-torn country. This led to the 1956 Hungarian Revolution 
+and an announced withdrawal from the Warsaw Pact which were met with a massive military intervention 
+by the Soviet Union. From the 1960s on to the late 1980s Hungary enjoyed a distinguished status of "the 
+happiest barrack" within the Eastern bloc, under the rule of late controversial communist leader Janos 
+Kadar, who exercised autocratic rule during this period. In the late 1980s, Hungary led the movement 
+to dissolve the Warsaw Pact and shifted toward multiparty democracy and a market-oriented economy. Following 
+the collapse of the Soviet Union in 1991, Hungary developed closer ties with Western Europe, joined NATO 
+in 1999 and the European Union on May 1, 2004.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_HUNGARY_ADJECTIVE</Tag>
+		<English>Hungarian</English>
+		<French>Hungarian</French>
+		<German>Hungarian</German>
+		<Italian>Hungarian</Italian>
+		<Spanish>Hungarian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_ARPAD</Tag>
+		<English>Arpad</English>
+		<French>Arpad</French>
+		<German>Arpad</German>
+		<Italian>Arpad</Italian>
+		<Spanish>Arpad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_ARPAD_PEDIA</Tag>
+		<English>[H1]Arpad[\H1][NEWLINE][BOLD]Chieftain of the Magyar[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]c.850 
+- 907 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Arpad was the first ruler of Hungary. 
+He was the probable leader of the Magyar tribe, and the founder of the Arpad dynasty. Arpad was the son 
+of almos.[PARAGRAPH:1]According to medieval chronicles, seven proto-Magyar tribes elected him as the 
+leader of one of those tribes their common leader in Etelkoz around 890. He is said to have been the 
+leader ("prince" - fejedelem) of the proto-Magyars for 20 years and to have died in 907. The Byzantine 
+De administrando imperio says around 950: Prior to this Arpad, the Magyars did never have another ruling 
+prince ('archont') and since then up to today the ruling prince of Hungary has been from that family. 
+Other sources however imply that there was a second ruling prince called Kursan, who was either at the 
+same "level" with Arpad, or a kind of "vice-prince". Based on Arabic sources, Arpad's title seems to 
+have been kende, although some scholars consider Kende to be the name of a person.[PARAGRAPH:1]After 
+several looting raids in Europe (from the 860s onwards), the proto-Magyars in Etelkoz under Arpad, pushed 
+by the Pechenegs from the East, decided to definitively pass the Carpathian Mountains. In 896 they occupied 
+the Upper Tisza river, from there they undertook numerous looting raids in central and western Europe, 
+and in 900/901 they moved to Pannonia. The proto-Magyars entering the Pannonian fields in 896 represented 
+about 200,000 - 250,000 people.[PARAGRAPH:1]According to legends, Arpad is also said to have been holding 
+the first "parliamentary" session with 40 other "nobles" on horseback before 900 AD.</English>
+		<French>[H1]Arpad[\H1][NEWLINE][BOLD]Chieftain of the Magyar[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]c.850 
+- 907 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Arpad was the first ruler of Hungary. 
+He was the probable leader of the Magyar tribe, and the founder of the Arpad dynasty. Arpad was the son 
+of almos.[PARAGRAPH:1]According to medieval chronicles, seven proto-Magyar tribes elected him as the 
+leader of one of those tribes their common leader in Etelkoz around 890. He is said to have been the 
+leader ("prince" - fejedelem) of the proto-Magyars for 20 years and to have died in 907. The Byzantine 
+De administrando imperio says around 950: Prior to this Arpad, the Magyars did never have another ruling 
+prince ('archont') and since then up to today the ruling prince of Hungary has been from that family. 
+Other sources however imply that there was a second ruling prince called Kursan, who was either at the 
+same "level" with Arpad, or a kind of "vice-prince". Based on Arabic sources, Arpad's title seems to 
+have been kende, although some scholars consider Kende to be the name of a person.[PARAGRAPH:1]After 
+several looting raids in Europe (from the 860s onwards), the proto-Magyars in Etelkoz under Arpad, pushed 
+by the Pechenegs from the East, decided to definitively pass the Carpathian Mountains. In 896 they occupied 
+the Upper Tisza river, from there they undertook numerous looting raids in central and western Europe, 
+and in 900/901 they moved to Pannonia. The proto-Magyars entering the Pannonian fields in 896 represented 
+about 200,000 - 250,000 people.[PARAGRAPH:1]According to legends, Arpad is also said to have been holding 
+the first "parliamentary" session with 40 other "nobles" on horseback before 900 AD.</French>
+		<German>[H1]Arpad[\H1][NEWLINE][BOLD]Chieftain of the Magyar[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]c.850 
+- 907 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Arpad was the first ruler of Hungary. 
+He was the probable leader of the Magyar tribe, and the founder of the Arpad dynasty. Arpad was the son 
+of almos.[PARAGRAPH:1]According to medieval chronicles, seven proto-Magyar tribes elected him as the 
+leader of one of those tribes their common leader in Etelkoz around 890. He is said to have been the 
+leader ("prince" - fejedelem) of the proto-Magyars for 20 years and to have died in 907. The Byzantine 
+De administrando imperio says around 950: Prior to this Arpad, the Magyars did never have another ruling 
+prince ('archont') and since then up to today the ruling prince of Hungary has been from that family. 
+Other sources however imply that there was a second ruling prince called Kursan, who was either at the 
+same "level" with Arpad, or a kind of "vice-prince". Based on Arabic sources, Arpad's title seems to 
+have been kende, although some scholars consider Kende to be the name of a person.[PARAGRAPH:1]After 
+several looting raids in Europe (from the 860s onwards), the proto-Magyars in Etelkoz under Arpad, pushed 
+by the Pechenegs from the East, decided to definitively pass the Carpathian Mountains. In 896 they occupied 
+the Upper Tisza river, from there they undertook numerous looting raids in central and western Europe, 
+and in 900/901 they moved to Pannonia. The proto-Magyars entering the Pannonian fields in 896 represented 
+about 200,000 - 250,000 people.[PARAGRAPH:1]According to legends, Arpad is also said to have been holding 
+the first "parliamentary" session with 40 other "nobles" on horseback before 900 AD.</German>
+		<Italian>[H1]Arpad[\H1][NEWLINE][BOLD]Chieftain of the Magyar[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]c.850 
+- 907 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Arpad was the first ruler of Hungary. 
+He was the probable leader of the Magyar tribe, and the founder of the Arpad dynasty. Arpad was the son 
+of almos.[PARAGRAPH:1]According to medieval chronicles, seven proto-Magyar tribes elected him as the 
+leader of one of those tribes their common leader in Etelkoz around 890. He is said to have been the 
+leader ("prince" - fejedelem) of the proto-Magyars for 20 years and to have died in 907. The Byzantine 
+De administrando imperio says around 950: Prior to this Arpad, the Magyars did never have another ruling 
+prince ('archont') and since then up to today the ruling prince of Hungary has been from that family. 
+Other sources however imply that there was a second ruling prince called Kursan, who was either at the 
+same "level" with Arpad, or a kind of "vice-prince". Based on Arabic sources, Arpad's title seems to 
+have been kende, although some scholars consider Kende to be the name of a person.[PARAGRAPH:1]After 
+several looting raids in Europe (from the 860s onwards), the proto-Magyars in Etelkoz under Arpad, pushed 
+by the Pechenegs from the East, decided to definitively pass the Carpathian Mountains. In 896 they occupied 
+the Upper Tisza river, from there they undertook numerous looting raids in central and western Europe, 
+and in 900/901 they moved to Pannonia. The proto-Magyars entering the Pannonian fields in 896 represented 
+about 200,000 - 250,000 people.[PARAGRAPH:1]According to legends, Arpad is also said to have been holding 
+the first "parliamentary" session with 40 other "nobles" on horseback before 900 AD.</Italian>
+		<Spanish>[H1]Arpad[\H1][NEWLINE][BOLD]Chieftain of the Magyar[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]c.850 
+- 907 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Arpad was the first ruler of Hungary. 
+He was the probable leader of the Magyar tribe, and the founder of the Arpad dynasty. Arpad was the son 
+of almos.[PARAGRAPH:1]According to medieval chronicles, seven proto-Magyar tribes elected him as the 
+leader of one of those tribes their common leader in Etelkoz around 890. He is said to have been the 
+leader ("prince" - fejedelem) of the proto-Magyars for 20 years and to have died in 907. The Byzantine 
+De administrando imperio says around 950: Prior to this Arpad, the Magyars did never have another ruling 
+prince ('archont') and since then up to today the ruling prince of Hungary has been from that family. 
+Other sources however imply that there was a second ruling prince called Kursan, who was either at the 
+same "level" with Arpad, or a kind of "vice-prince". Based on Arabic sources, Arpad's title seems to 
+have been kende, although some scholars consider Kende to be the name of a person.[PARAGRAPH:1]After 
+several looting raids in Europe (from the 860s onwards), the proto-Magyars in Etelkoz under Arpad, pushed 
+by the Pechenegs from the East, decided to definitively pass the Carpathian Mountains. In 896 they occupied 
+the Upper Tisza river, from there they undertook numerous looting raids in central and western Europe, 
+and in 900/901 they moved to Pannonia. The proto-Magyars entering the Pannonian fields in 896 represented 
+about 200,000 - 250,000 people.[PARAGRAPH:1]According to legends, Arpad is also said to have been holding 
+the first "parliamentary" session with 40 other "nobles" on horseback before 900 AD.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ARPAD_1</Tag>
+		<English>Welcome to my lands, [CT_NAME]. The [OUR_EMPIRE] advises that you only stretch as far as your blanket reaches.</English>
+		<French>Welcome to my lands, [CT_NAME]. The [OUR_EMPIRE] advises that you only stretch as far as your blanket reaches.</French>
+		<German>Welcome to my lands, [CT_NAME]. The [OUR_EMPIRE] advises that you only stretch as far as your blanket reaches.</German>
+		<Italian>Welcome to my lands, [CT_NAME]. The [OUR_EMPIRE] advises that you only stretch as far as your blanket reaches.</Italian>
+		<Spanish>Welcome to my lands, [CT_NAME]. The [OUR_EMPIRE] advises that you only stretch as far as your blanket reaches.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_HUNGARY_KOSSUTH</Tag>
+		<English>Lajos Kossuth</English>
+		<French>Lajos Kossuth</French>
+		<German>Lajos Kossuth</German>
+		<Italian>Lajos Kossuth</Italian>
+		<Spanish>Lajos Kossuth</Spanish>
+		<Hungarian>Kossuth Lajos</Hungarian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_HUNGARY_KOSSUTH_PEDIA</Tag>
+		<English>[H1]Lajos Kossuth[\H1][NEWLINE][BOLD]Regent of Hungary[\BOLD][NEWLINE]Kossuth was born at 
+Monok, a small town in the county of Zemplen, the eldest of four children. His father belonged to minor 
+nobility, had a small estate, and was an advocate by profession. His mother raised the family as strict 
+Lutherans. Kossuth completed his education at the Calvinist college of S&#225;rospatak and the University 
+of Pest-Buda (now Budapest). Aged nineteen, he entered his father's legal practice. He was popular locally, 
+and, having been appointed steward to the countess Szapary, a widow with large estates, he became her 
+voting representative in the county assembly and settled in Pest. He was subsequently dismissed on the 
+grounds of using estate funds to pay a gambling debt.[PARAGRAPH:2]Shortly after his dismissal by Countess 
+Szapary, Kossuth was appointed as deputy to Count Hunyady at the National Diet. The Diet met during 18251827 
+and 18321836 in Pressburg, then capital of Hungary. Only the upper aristocracy could vote, however, 
+and Kossuth took little part in the debates. At the time, a struggle to reassert a Hungarian national 
+identity was beginning to emerge under able leaders  most notably Wessel&#233;nyi and the Sz&#233;chenyis. 
+In part, this was also a struggle for reform against the stagnant Austrian government. Kossuth's duties 
+to Count Hunyady included reporting on Diet proceedings in writing, as the Austrian government, fearing 
+popular dissent, had banned published reports. The high quality of Kossuth's letters led to their being 
+circulated in manuscript among other Liberal magnates. Readership demands turned his output into the 
+editing of an organized parliamentary gazette; spreading his name and influence further. Orders from 
+the Official Censor halted circulation by lithograph printing. Distribution in manuscript by post was 
+forbidden by the government, although circulation by hand continued.[PARAGRAPH:2]In 1836 the Diet was 
+dissolved. Kossuth continued to report (in letter form), covering the debates of the county assemblies. 
+This new-found publicity gave the assemblies national political prominence. Previously they had had little 
+idea of each others' proceedings. His skilful embellishment of the speeches from the Liberals and Reformers 
+further enhanced the impact of his newsletters. The government in vain attempted to suppress the letters, 
+and other means having failed, he was in May 1837, with Wessel&#233;nyi and several others, arrested 
+on a charge of high treason. After spending a year in prison at Buda awaiting trial, he was condemned 
+to four more years' imprisonment. His strict confinement damaged his health, but he was allowed to read. 
+He greatly increased his political knowledge, and also acquired, from the study of the Bible and Shakespeare, 
+a thorough knowledge of English.[PARAGRAPH:2]The arrests had caused great indignation. The Diet, which 
+reconvened in 1839, demanded the release of the prisoners, and refused to pass any government measures. 
+Metternich long remained obdurate, but the danger of war in 1840 obliged him to give way. Wessel&#233;nyi 
+had been broken by his imprisonment, but Kossuth, partly supported by the frequent visits of Teresa Meszleny, 
+emerged from prison unbroken. Immediately after his release Kossuth and Meszleny were married, and she 
+remained a firm supporter of his politics. The Roman Catholic priests refused to bless the marriage as 
+Kossuth would not convert to Meszleny's religion. Resultingly, Kossuth became a firm defender of mixed 
+marriages.[PARAGRAPH:2]Kossuth had now become a national icon. He regained full health in January 1841 
+and was appointed editor of Pesti H&#237;rlap, a new Liberal party newspaper. Notably, the government 
+agreed to grant a licence. The paper achieved unprecedented success; soon reaching the then immense circulation 
+of 7000 copies. A competing pro-government paper, Vil&#225;g, started up but it only served to increase 
+Kossuth's visibility and add to the general political fervour.[PARAGRAPH:2]Sz&#233;chenyi, the great 
+reformer, publicly warned Kossuth that his appeals to the passions of the people would lead the nation 
+to revolution. Kossuth, undaunted, did not stop at the publicly reasoned reforms demanded by all Liberals: 
+the abolition of entail, the abolition of feudal burdens and taxation of the nobles. He went on to broach 
+the possibility of separating from Austria. By combining this nationalism with an insistence on the superiority 
+of the Magyars to the Slavonic inhabitants of Hungary, he sowed the seeds of both the collapse of Hungary 
+in 1849 and his own political demise.[PARAGRAPH:2]In 1844, Kossuth was dismissed from Pesti H&#237;rlap 
+after a dispute with the proprietor over salary. It is believed that the dispute was rooted in government 
+intrigue. Kossuth was unable to obtain permission to start his own newspaper. In a personal interview 
+Metternich offered to take him into the government service. Kossuth refused, and spent the next three 
+years without a regular position. He continued to agitate on behalf of both political and commercial 
+independence for Hungary. He adopted the economic principles of List, and was the founder of a "V&#233;degylet" 
+society  whose members consumed only Hungarian produce. He also argued for the creation of a Hungarian 
+port at Fiume.[PARAGRAPH:2]In autumn 1847, Kossuth was able to take his final key step. Due to the support 
+of Lajos Batthy&#225;ny during a keenly fought campaign, he was elected to the new Diet as member for 
+Pest. He proclaimed: "Now that I am a deputy, I will cease to be an agitator." He immediately became 
+chief leader of the Extreme Liberals. Ferenc De&#225;k was absent. Batthy&#225;ny, Istv&#225;n Sz&#233;chenyi, 
+Szemere and J&#243;zsef E&#246;tv&#246;s, his political rivals, felt that his personal ambition and egoism 
+led him to assume the chief place, and to use his parliamentary position to establish himself as leader 
+of the nation; but before his eloquence and energy all apprehensions were useless. His eloquence was 
+of that nature, in its impassioned appeals to the strongest emotions, that it required for its full effect 
+the highest themes and the most dramatic situations. In a time of rest, though he could never have been 
+obscure, he would never have attained the highest power. It was therefore a necessity of his nature, 
+perhaps unconsciously, always to drive things to a crisis.[PARAGRAPH:2]The crisis came, and he used it 
+to the full. On March 3, 1848, shortly after the news of the revolution in Paris had arrived, in a speech 
+of surpassing power he demanded parliamentary government for Hungary and constitutional government for 
+the rest of Austria. He appealed to the hope of the Habsburgs, "our beloved Archduke Franz Joseph" (then 
+17 years old), to perpetuate the ancient glory of the dynasty by meeting half-way the aspirations of 
+a free people. He at once became the leader of the European revolution; his speech was read aloud in 
+the streets of Vienna to the mob by which Metternich was overthrown (March 13), and when a deputation 
+from the Diet visited Vienna to receive the assent of Emperor Ferdinand to their petition it was Kossuth 
+who received the chief ovation. Batthy&#225;ny, who formed the first responsible government, appointed 
+Kossuth the Minister of Finance.[PARAGRAPH:2]With amazing energy he began developing the internal resources 
+of the country: re-establishing a separate Hungarian coinage, and using every means to increase national 
+self-consciousness Characteristically, the new Hungarian bank notes had Kossuth's name as the most prominent 
+inscription; making reference to "Kossuth Notes" a future byword. A new paper was started, to which was 
+given the name of Kossuth H&#237;rlapja, so that from the first it was Kossuth rather than the Palatine 
+or the president of the ministry whose name was in the minds of the people associated with the new government. 
+Much more was this the case when, in the summer, the dangers from the Croats, Serbs and the reaction 
+at Vienna increased. In a great speech July 11 he asked that the nation should arm in self-defence, and 
+demanded 200,000 men; amid a scene of wild enthusiasm this was granted by acclamation. When Jellachich 
+was marching on Pest he went from town to town rousing the people to the defence of the country, and 
+the popular force of the Honv&#233;d was his creation. When Batthy&#225;ny resigned he was appointed 
+with Szemere to carry on the government provisionally, and at the end of September he was made President 
+of the Committee of National Defence.[PARAGRAPH:2]From this time he was a virtual dictator. The direction 
+of the whole government was in his hands. Without military experience, he had to control and direct the 
+movements of armies; he was unable to keep control over the generals or to establish that military co-operation 
+so essential to success. Art&#250;r G&#246;rgey in particular, whose great abilities Kossuth was the 
+first to recognize, refused obedience; the two men were very different personalities. Twice Kossuth deposed 
+him from the command; twice he had to restore him. It would have been well if Kossuth had had something 
+more of G&#246;rgey's calculated ruthlessness, for, as has been truly said, the revolutionary power he 
+had seized could only be held by revolutionary means; but he was by nature soft-hearted and always merciful; 
+though often audacious, he lacked decision in dealing with men. It has been said that he showed a want 
+of personal courage; this is not improbable, the excess of feeling which made him so great an orator 
+could hardly be combined with the coolness in danger required of a soldier; but no one was able, as he 
+was, to infuse courage into others.[PARAGRAPH:2]During all the terrible winter which followed, his energy 
+and spirit never failed him. It was he who overcame the reluctance of the army to march to the relief 
+of Vienna; after the defeat of Schwechat, at which he was present, he sent Bern to carry on the war in 
+Transylvania. At the end of the year, when the Austrians were approaching Pest, he asked for the mediation 
+of Mr Stiles, the American envoy. Windisch-Gr&#228;tz, however, refused all terms, and the Diet and government 
+fled to Debrecen, Kossuth taking with him the Crown of St Stephen, the sacred emblem of the Hungarian 
+nation. In November 1848, Emperor Ferdinand abdicated in favour of Franz Joseph. The new Emperor revoked 
+all the concessions granted in March and outlawed Kossuth and his colleagues. In April 1849, when the 
+Hungarians had won many successes, after sounding the army, he issued the celebrated declaration of Hungarian 
+independence, in which he declared that "the house of Habsburg-Lorraine, perjured in the sight of God 
+and man, had forfeited the Hungarian throne." It was a step characteristic of his love for extreme and 
+dramatic action, but it added to the dissensions between him and those who wished only for autonomy under 
+the old dynasty, and his enemies did not scruple to accuse him of aiming for Kingship. For the time the 
+future form of government was left undecided, but Kossuth was appointed Regent. The hopes of ultimate 
+success were frustrated by the intervention of Russia; all appeals to the western powers were vain, and 
+on August 11 Kossuth abdicated in favor of G&#246;rgey, on the ground that in the last extremity the 
+general alone could save the nation. G&#246;rgey capitulated at Vil&#225;gos to the Russians, who handed 
+over the army to the Austrians. G&#246;rgey was spared  at the insistence of the Russians. Reprisals 
+were taken on the rest of the Hungarian army. Kossuth steadfastly maintained until his death that G&#246;rgey 
+alone was responsible for the humiliation.[PARAGRAPH:2]Kossuth's career was at an end. A solitary fugitive, 
+he crossed the Turkish frontier. He was hospitably received by the Turkish authorities, who, supported 
+by the British, refused, notwithstanding the threats of the allied emperors, to surrender him and other 
+fugitives to Austria. In January 1849 he was removed from Vidin, where he had been kept under house arrest, 
+to Shumla, and thence to Katahia in Asia Minor. Here he was joined by his children, who had been confined 
+at Pozsony/Pressburg (Bratislava); his wife (a price had been set on her head) had joined him earlier, 
+having escaped in disguise.[PARAGRAPH:2]In September 1851 he was allowed to leave Turkey on an American 
+man-of-war. He first landed at Marseille, where he received an enthusiastic welcome from the people, 
+but the Prince-President Louis Napoleon refused to allow him to cross France. On October 23 he landed 
+at Southampton and spent three weeks in England, where he was generally feted. Addresses were presented 
+to him at Southampton, Birmingham and other towns; he was officially entertained by the Lord Mayor of 
+London; at each place he spoke eloquently in English for the Hungarian cause. The agitation had no immediate 
+effect, but the indignation which he aroused against Russian policy had much to do with the strong anti-Russian 
+feeling which made the Crimean War possible.[PARAGRAPH:2]From England he went to the United States of 
+America: there his reception was equally enthusiastic, if less dignified. Gradually, his autocratic style 
+and uncompromising outlook destroyed any real influence among the expatriate community. Other Hungarian 
+exiles protested against his appearing to claim to be the only national hero of the revolution. Count 
+Casimir Batthy&#225;ny attacked him in The Times, and Szemere, who had been prime minister under him, 
+published a bitter criticism of his acts and character, accusing him of arrogance, cowardice and duplicity. 
+He soon returned to England, where he lived for eight years in close connection with Mazzini, by whom, 
+with some misgiving, he was persuaded to join the Revolutionary Committee. Quarrels of a kind only too 
+common among exiles followed. Hungarians were especially offended by his continuing use of the title 
+of Regent. He watched with anxiety every opportunity of once more freeing his country from Austria. An 
+attempt to organize a Hungarian legion during the Crimean War was stopped; but in 1859 he entered into 
+negotiations with Napoleon III, left England for Italy, and began the organization of a Hungarian legion, 
+which was to make a descent on the coast of Dalmatia. The Peace of Villafranca made this impossible.[PARAGRAPH:2]From 
+then on, Kossuth remained in Italy. He refused to follow the other Hungarian patriots, who, under the 
+lead of De&#225;k, negotiated the 1867 Compromise (Ausgleich), and the ensuing amnesty. It is doubted 
+whether Emperor Franz Joseph would have allowed the amnesty to extend to Kossuth. Publicly, Kossuth remained 
+unreconciled to the house of Habsburg, and committed to a fully independent state. Though elected to 
+the Diet of 1867, he never took his seat. He continued to remain a widely popular figure, but did not 
+allow his name to be associated with dissent or any political cause. A law of 1879, which deprived of 
+citizenship all Hungarians who had voluntarily been absent ten years, was a bitter blow to him. He displayed 
+no interest in benefitting from a further amnesty in 1880.[PARAGRAPH:2]In 1890, a delegation of hungarian 
+pilgrims in Turin recorded a short patriotic speech delivered by the elderly Lajos Kossuth. The original 
+recording on two wax cylinders for the Edison phonograph survives to this day, although barely audible 
+due to excess playback and unsuccessful early restoration attempts. Lajos Kossuth is the earliest born 
+person in the world who has his voice preserved.[PARAGRAPH:2]He died in Turin on the 20th of March 1894; 
+his body was taken to Budapest, where he was buried amid the mourning of the whole nation, M&#243;r J&#243;kai 
+delivering the funeral oration. A bronze statue was erected, by public subscription, in the Kerepesi 
+Cemetery. Many regard Kossuth as Hungary's purest patriot and greatest orator.</English>
+		<French>[H1]Lajos Kossuth[\H1][NEWLINE][BOLD]Regent of Hungary[\BOLD][NEWLINE]Kossuth was born at Monok, 
+a small town in the county of Zemplen, the eldest of four children. His father belonged to minor nobility, 
+had a small estate, and was an advocate by profession. His mother raised the family as strict Lutherans. 
+Kossuth completed his education at the Calvinist college of S&#225;rospatak and the University of Pest-Buda 
+(now Budapest). Aged nineteen, he entered his father's legal practice. He was popular locally, and, having 
+been appointed steward to the countess Szapary, a widow with large estates, he became her voting representative 
+in the county assembly and settled in Pest. He was subsequently dismissed on the grounds of using estate 
+funds to pay a gambling debt.[PARAGRAPH:2]Shortly after his dismissal by Countess Szapary, Kossuth was 
+appointed as deputy to Count Hunyady at the National Diet. The Diet met during 18251827 and 18321836 
+in Pressburg, then capital of Hungary. Only the upper aristocracy could vote, however, and Kossuth took 
+little part in the debates. At the time, a struggle to reassert a Hungarian national identity was beginning 
+to emerge under able leaders  most notably Wessel&#233;nyi and the Sz&#233;chenyis. In part, this was 
+also a struggle for reform against the stagnant Austrian government. Kossuth's duties to Count Hunyady 
+included reporting on Diet proceedings in writing, as the Austrian government, fearing popular dissent, 
+had banned published reports. The high quality of Kossuth's letters led to their being circulated in 
+manuscript among other Liberal magnates. Readership demands turned his output into the editing of an 
+organized parliamentary gazette; spreading his name and influence further. Orders from the Official Censor 
+halted circulation by lithograph printing. Distribution in manuscript by post was forbidden by the government, 
+although circulation by hand continued.[PARAGRAPH:2]In 1836 the Diet was dissolved. Kossuth continued 
+to report (in letter form), covering the debates of the county assemblies. This new-found publicity gave 
+the assemblies national political prominence. Previously they had had little idea of each others' proceedings. 
+His skilful embellishment of the speeches from the Liberals and Reformers further enhanced the impact 
+of his newsletters. The government in vain attempted to suppress the letters, and other means having 
+failed, he was in May 1837, with Wessel&#233;nyi and several others, arrested on a charge of high treason. 
+After spending a year in prison at Buda awaiting trial, he was condemned to four more years' imprisonment. 
+His strict confinement damaged his health, but he was allowed to read. He greatly increased his political 
+knowledge, and also acquired, from the study of the Bible and Shakespeare, a thorough knowledge of English.[PARAGRAPH:2]The 
+arrests had caused great indignation. The Diet, which reconvened in 1839, demanded the release of the 
+prisoners, and refused to pass any government measures. Metternich long remained obdurate, but the danger 
+of war in 1840 obliged him to give way. Wessel&#233;nyi had been broken by his imprisonment, but Kossuth, 
+partly supported by the frequent visits of Teresa Meszleny, emerged from prison unbroken. Immediately 
+after his release Kossuth and Meszleny were married, and she remained a firm supporter of his politics. 
+The Roman Catholic priests refused to bless the marriage as Kossuth would not convert to Meszleny's religion. 
+Resultingly, Kossuth became a firm defender of mixed marriages.[PARAGRAPH:2]Kossuth had now become a 
+national icon. He regained full health in January 1841 and was appointed editor of Pesti H&#237;rlap, 
+a new Liberal party newspaper. Notably, the government agreed to grant a licence. The paper achieved 
+unprecedented success; soon reaching the then immense circulation of 7000 copies. A competing pro-government 
+paper, Vil&#225;g, started up but it only served to increase Kossuth's visibility and add to the general 
+political fervour.[PARAGRAPH:2]Sz&#233;chenyi, the great reformer, publicly warned Kossuth that his appeals 
+to the passions of the people would lead the nation to revolution. Kossuth, undaunted, did not stop at 
+the publicly reasoned reforms demanded by all Liberals: the abolition of entail, the abolition of feudal 
+burdens and taxation of the nobles. He went on to broach the possibility of separating from Austria. 
+By combining this nationalism with an insistence on the superiority of the Magyars to the Slavonic inhabitants 
+of Hungary, he sowed the seeds of both the collapse of Hungary in 1849 and his own political demise.[PARAGRAPH:2]In 
+1844, Kossuth was dismissed from Pesti H&#237;rlap after a dispute with the proprietor over salary. It 
+is believed that the dispute was rooted in government intrigue. Kossuth was unable to obtain permission 
+to start his own newspaper. In a personal interview Metternich offered to take him into the government 
+service. Kossuth refused, and spent the next three years without a regular position. He continued to 
+agitate on behalf of both political and commercial independence for Hungary. He adopted the economic 
+principles of List, and was the founder of a "V&#233;degylet" society  whose members consumed only Hungarian 
+produce. He also argued for the creation of a Hungarian port at Fiume.[PARAGRAPH:2]In autumn 1847, Kossuth 
+was able to take his final key step. Due to the support of Lajos Batthy&#225;ny during a keenly fought 
+campaign, he was elected to the new Diet as member for Pest. He proclaimed: "Now that I am a deputy, 
+I will cease to be an agitator." He immediately became chief leader of the Extreme Liberals. Ferenc De&#225;k 
+was absent. Batthy&#225;ny, Istv&#225;n Sz&#233;chenyi, Szemere and J&#243;zsef E&#246;tv&#246;s, his 
+political rivals, felt that his personal ambition and egoism led him to assume the chief place, and to 
+use his parliamentary position to establish himself as leader of the nation; but before his eloquence 
+and energy all apprehensions were useless. His eloquence was of that nature, in its impassioned appeals 
+to the strongest emotions, that it required for its full effect the highest themes and the most dramatic 
+situations. In a time of rest, though he could never have been obscure, he would never have attained 
+the highest power. It was therefore a necessity of his nature, perhaps unconsciously, always to drive 
+things to a crisis.[PARAGRAPH:2]The crisis came, and he used it to the full. On March 3, 1848, shortly 
+after the news of the revolution in Paris had arrived, in a speech of surpassing power he demanded parliamentary 
+government for Hungary and constitutional government for the rest of Austria. He appealed to the hope 
+of the Habsburgs, "our beloved Archduke Franz Joseph" (then 17 years old), to perpetuate the ancient 
+glory of the dynasty by meeting half-way the aspirations of a free people. He at once became the leader 
+of the European revolution; his speech was read aloud in the streets of Vienna to the mob by which Metternich 
+was overthrown (March 13), and when a deputation from the Diet visited Vienna to receive the assent of 
+Emperor Ferdinand to their petition it was Kossuth who received the chief ovation. Batthy&#225;ny, who 
+formed the first responsible government, appointed Kossuth the Minister of Finance.[PARAGRAPH:2]With 
+amazing energy he began developing the internal resources of the country: re-establishing a separate 
+Hungarian coinage, and using every means to increase national self-consciousness Characteristically, 
+the new Hungarian bank notes had Kossuth's name as the most prominent inscription; making reference to 
+"Kossuth Notes" a future byword. A new paper was started, to which was given the name of Kossuth H&#237;rlapja, 
+so that from the first it was Kossuth rather than the Palatine or the president of the ministry whose 
+name was in the minds of the people associated with the new government. Much more was this the case when, 
+in the summer, the dangers from the Croats, Serbs and the reaction at Vienna increased. In a great speech 
+July 11 he asked that the nation should arm in self-defence, and demanded 200,000 men; amid a scene of 
+wild enthusiasm this was granted by acclamation. When Jellachich was marching on Pest he went from town 
+to town rousing the people to the defence of the country, and the popular force of the Honv&#233;d was 
+his creation. When Batthy&#225;ny resigned he was appointed with Szemere to carry on the government provisionally, 
+and at the end of September he was made President of the Committee of National Defence.[PARAGRAPH:2]From 
+this time he was a virtual dictator. The direction of the whole government was in his hands. Without 
+military experience, he had to control and direct the movements of armies; he was unable to keep control 
+over the generals or to establish that military co-operation so essential to success. Art&#250;r G&#246;rgey 
+in particular, whose great abilities Kossuth was the first to recognize, refused obedience; the two men 
+were very different personalities. Twice Kossuth deposed him from the command; twice he had to restore 
+him. It would have been well if Kossuth had had something more of G&#246;rgey's calculated ruthlessness, 
+for, as has been truly said, the revolutionary power he had seized could only be held by revolutionary 
+means; but he was by nature soft-hearted and always merciful; though often audacious, he lacked decision 
+in dealing with men. It has been said that he showed a want of personal courage; this is not improbable, 
+the excess of feeling which made him so great an orator could hardly be combined with the coolness in 
+danger required of a soldier; but no one was able, as he was, to infuse courage into others.[PARAGRAPH:2]During 
+all the terrible winter which followed, his energy and spirit never failed him. It was he who overcame 
+the reluctance of the army to march to the relief of Vienna; after the defeat of Schwechat, at which 
+he was present, he sent Bern to carry on the war in Transylvania. At the end of the year, when the Austrians 
+were approaching Pest, he asked for the mediation of Mr Stiles, the American envoy. Windisch-Gr&#228;tz, 
+however, refused all terms, and the Diet and government fled to Debrecen, Kossuth taking with him the 
+Crown of St Stephen, the sacred emblem of the Hungarian nation. In November 1848, Emperor Ferdinand abdicated 
+in favour of Franz Joseph. The new Emperor revoked all the concessions granted in March and outlawed 
+Kossuth and his colleagues. In April 1849, when the Hungarians had won many successes, after sounding 
+the army, he issued the celebrated declaration of Hungarian independence, in which he declared that "the 
+house of Habsburg-Lorraine, perjured in the sight of God and man, had forfeited the Hungarian throne." 
+It was a step characteristic of his love for extreme and dramatic action, but it added to the dissensions 
+between him and those who wished only for autonomy under the old dynasty, and his enemies did not scruple 
+to accuse him of aiming for Kingship. For the time the future form of government was left undecided, 
+but Kossuth was appointed Regent. The hopes of ultimate success were frustrated by the intervention of 
+Russia; all appeals to the western powers were vain, and on August 11 Kossuth abdicated in favor of G&#246;rgey, 
+on the ground that in the last extremity the general alone could save the nation. G&#246;rgey capitulated 
+at Vil&#225;gos to the Russians, who handed over the army to the Austrians. G&#246;rgey was spared  
+at the insistence of the Russians. Reprisals were taken on the rest of the Hungarian army. Kossuth steadfastly 
+maintained until his death that G&#246;rgey alone was responsible for the humiliation.[PARAGRAPH:2]Kossuth's 
+career was at an end. A solitary fugitive, he crossed the Turkish frontier. He was hospitably received 
+by the Turkish authorities, who, supported by the British, refused, notwithstanding the threats of the 
+allied emperors, to surrender him and other fugitives to Austria. In January 1849 he was removed from 
+Vidin, where he had been kept under house arrest, to Shumla, and thence to Katahia in Asia Minor. Here 
+he was joined by his children, who had been confined at Pozsony/Pressburg (Bratislava); his wife (a price 
+had been set on her head) had joined him earlier, having escaped in disguise.[PARAGRAPH:2]In September 
+1851 he was allowed to leave Turkey on an American man-of-war. He first landed at Marseille, where he 
+received an enthusiastic welcome from the people, but the Prince-President Louis Napoleon refused to 
+allow him to cross France. On October 23 he landed at Southampton and spent three weeks in England, where 
+he was generally feted. Addresses were presented to him at Southampton, Birmingham and other towns; he 
+was officially entertained by the Lord Mayor of London; at each place he spoke eloquently in English 
+for the Hungarian cause. The agitation had no immediate effect, but the indignation which he aroused 
+against Russian policy had much to do with the strong anti-Russian feeling which made the Crimean War 
+possible.[PARAGRAPH:2]From England he went to the United States of America: there his reception was equally 
+enthusiastic, if less dignified. Gradually, his autocratic style and uncompromising outlook destroyed 
+any real influence among the expatriate community. Other Hungarian exiles protested against his appearing 
+to claim to be the only national hero of the revolution. Count Casimir Batthy&#225;ny attacked him in 
+The Times, and Szemere, who had been prime minister under him, published a bitter criticism of his acts 
+and character, accusing him of arrogance, cowardice and duplicity. He soon returned to England, where 
+he lived for eight years in close connection with Mazzini, by whom, with some misgiving, he was persuaded 
+to join the Revolutionary Committee. Quarrels of a kind only too common among exiles followed. Hungarians 
+were especially offended by his continuing use of the title of Regent. He watched with anxiety every 
+opportunity of once more freeing his country from Austria. An attempt to organize a Hungarian legion 
+during the Crimean War was stopped; but in 1859 he entered into negotiations with Napoleon III, left 
+England for Italy, and began the organization of a Hungarian legion, which was to make a descent on the 
+coast of Dalmatia. The Peace of Villafranca made this impossible.[PARAGRAPH:2]From then on, Kossuth remained 
+in Italy. He refused to follow the other Hungarian patriots, who, under the lead of De&#225;k, negotiated 
+the 1867 Compromise (Ausgleich), and the ensuing amnesty. It is doubted whether Emperor Franz Joseph 
+would have allowed the amnesty to extend to Kossuth. Publicly, Kossuth remained unreconciled to the house 
+of Habsburg, and committed to a fully independent state. Though elected to the Diet of 1867, he never 
+took his seat. He continued to remain a widely popular figure, but did not allow his name to be associated 
+with dissent or any political cause. A law of 1879, which deprived of citizenship all Hungarians who 
+had voluntarily been absent ten years, was a bitter blow to him. He displayed no interest in benefitting 
+from a further amnesty in 1880.[PARAGRAPH:2]In 1890, a delegation of hungarian pilgrims in Turin recorded 
+a short patriotic speech delivered by the elderly Lajos Kossuth. The original recording on two wax cylinders 
+for the Edison phonograph survives to this day, although barely audible due to excess playback and unsuccessful 
+early restoration attempts. Lajos Kossuth is the earliest born person in the world who has his voice 
+preserved.[PARAGRAPH:2]He died in Turin on the 20th of March 1894; his body was taken to Budapest, where 
+he was buried amid the mourning of the whole nation, M&#243;r J&#243;kai delivering the funeral oration. 
+A bronze statue was erected, by public subscription, in the Kerepesi Cemetery. Many regard Kossuth as 
+Hungary's purest patriot and greatest orator.</French>
+		<German>[H1]Lajos Kossuth[\H1][NEWLINE][BOLD]Regent von Ungarn[\BOLD][NEWLINE][BOLD]Lebte:[\BOLD] 19. 
+September 1802 - 20. M&#228;rz 1894[NEWLINE][PARAGRAPH:2][BOLD]Hintergrund:[\BOLD][NEWLINE][TAB]Lajos 
+Kossuth (19.09.1802 in Monok, gest. 20.03.1894 in Turin) war Politiker und ein bedeutender ungarischer 
+Freiheitsk&#228;mpfer, der sich bis zu seinem Tod f&#252;r die Unabh&#228;ngigkeit Ungarns von der Donaumonarchie 
+&#214;sterreich (ab 1867 &#214;sterreich-Ungarn) einsetzte. Seit 1825 war Kossuth, beruflich Rechtsanwalt, 
+mehrere Jahre ungarischer Landtagsabgeordneter des nationalliberalen Fl&#252;gels (1825 bis 1827; 1832 
+bis 1836; 1847/1848). Nach seinem zweiten Landtagsmandat wurde er 1837 verhaftet und wegen Hochverrat 
+zu Festungshaft verurteilt. Der Grund daf&#252;r war die Ver&#246;ffentlichung seiner Beobachtungen zur 
+politischen Situation. Nach seiner Haft gab Kossuth die nationalliberale Zeitung Pesti H&#237;rlap heraus, 
+deren Chefredakteur er war. Zu Beginn der M&#228;rzrevolution 1848 im Kaiserreich &#214;sterreich forderte 
+er in einer am 3. M&#228;rz 1848 verfassten Rede die konstitutionelle Umwandlung der Monarchie sowie 
+Verfassungen f&#252;r die &#246;sterreichischen L&#228;nder. Im Verlauf der Revolution radikalisierte 
+er seine Vorstellungen bis hin zur Forderung nach Unabh&#228;ngigkeit Ungarns. 1848 war er in der ersten 
+eigenst&#228;ndigen ungarischen Regierung unter dem liberalen Ministerpr&#228;sident Lajos Batthy&#225;ny 
+Finanzminister und Vorsitzender des Verteidigungsausschusses. Als pr&#228;gende Kraft dieser Regierung 
+setzte er Reformen wie beispielsweise die Bauernbefreiung um. Er baute ein ungarisches Freiwilligenheer 
+(Honv&#233;d) gegen die Aufst&#228;nde der nichtmagyarischen Volksgruppen auf, das vor allem die Kroaten 
+unter der F&#252;hrung von Josip Ban Jelacic in Schach halten sollte, die ihre eigene Unabh&#228;ngigkeit 
+in der ungarischen Reichsh&#228;lfte verfolgten. Nach dem R&#252;cktritt des &#246;sterreichischen Kaisers 
+Ferdinand I. als Folge der revolution&#228;ren Ereignisse in &#214;sterreich seit M&#228;rz 1848 verweigerte 
+Ungarn dessen Nachfolger Franz Joseph I. im Dezember 1848 die ungarische K&#246;nigskrone. Als der Kaiser 
+am 7. M&#228;rz 1849 eine Verfassung oktroyieren wollte, kam es zum ungarischen Unabh&#228;ngigkeitsaufstand 
+gegen &#214;sterreich, bis Kossuth am 14. April 1849 die Unabh&#228;ngigkeit Ungarns ausrief. Kossuth 
+wurde zum ungarischen Reichsverweser gew&#228;hlt und hatte als solcher diktatorische Vollmachten. Die 
+ungarische Revolutionsarmee, die durch Freischaren und polnische Emigranten verst&#228;rkt wurde, konnte 
+die einmarschierte &#246;sterreichische Armee zun&#228;chst zur&#252;ckdr&#228;ngen. Schlie&#223;lich 
+gelang es &#214;sterreich nur mit Beistand von Russland, den ungarischen Freiheitskampf zu ersticken. 
+Nach der Niederschlagung der ungarischen Revolution wurden 13 Gener&#228;le und Offiziere in Arad sowie 
+der ehemalige Ministerpr&#228;sident Batthy&#225;nyi am 6. Oktober 1849, dem ersten Jahrestag der zweiten 
+Wiener Revolution, in Pest hingerichtet. Lajos Kossuth konnte ins Exil fliehen und ging zun&#228;chst 
+ins Osmanische Reich. Nach mehreren Stationen seines Exils trat er in London den Freimaurern bei. Sp&#228;ter 
+folgte er  Giuseppe Mazzini nach Italien, wo er seinen Kampf f&#252;r (nicht nur) Ungarns Unabh&#228;ngigkeit 
+fortsetzte. Unter anderem stellte er dabei auch eine ungarische Legion auf, die unter Giuseppe Garibaldi 
+in den oberitalienischen Unabh&#228;ngigkeitsk&#228;mpfen des Risorgimento gegen &#214;sterreich zu Felde 
+zog. 1867 wurde Lajos Kossuth im Rahmen des &#246;sterreichisch-ungarischen Ausgleichs amnestiert. Als 
+Gegner dieses Ausgleichs verblieb Kossuth aber im italienischen Exil. Ohne sein Ziel zu Lebzeiten erreicht 
+zu haben, starb er am 20. M&#228;rz 1894 im Alter von 91 Jahren in Turin. Kossuth erfuhr nach seinem 
+Tod sp&#228;te Rehabilitation durch &#214;sterreich. Kaiser Franz Joseph I. lie&#223; den Leichnam feierlich 
+nach Budapest &#252;berf&#252;hren, wo er unter Anteilnahme einer gro&#223;en Menschenmenge beigesetzt wurde.</German>
+		<Italian>[H1]Lajos Kossuth[\H1][NEWLINE][BOLD]Reggente d'Ungheria[\BOLD][NEWLINE][BOLD]Nato il:[\BOLD] 
+19 settembre 1802;[BOLD] morto il:[\BOLD] 20 marzo 1894[NEWLINE][PARAGRAPH:2:1][BOLD]Storia:[\BOLD][NEWLINE][TAB]Kossuth 
+nacque a Monok, un piccolo paese nella contea di Zemplen, primo di quattro figli. Suo padre era membro 
+della bassa nobilt&#224;, possedeva una piccola propriet&#224; e di professione era avvocato. Sua madre 
+educ&#242; i figli secondo un rigida disciplina luterana. Kossuth complet&#242; la sua educazione al 
+collegio calvinista di S&#225;rospatak e all'Universit&#224; di Pest-Buda (oggi Budapest). All'et&#224; 
+di diciannove anni entr&#242; come praticante nello studio legale di suo padre. Kossuth era un personaggio 
+popolare a livello locale, ed essendo stato assegnato come assistente alla contessa Szap&#225;ry, una 
+vedova con grandi proprieta terriere, divenne suo rappresentante nell'assemblea di contea e si stabil&#236; 
+a Pest. Successivamente fu licenziato per aver utilizzato i fondi della propriet&#224; per pagare debiti 
+di gioco.[PARAGRAPH:2]Poco dopo il suo licenziamento da parte della contessa Szap&#225;ry, Kossuth fu 
+eletto deputato per la contea di Hunyady alla Dieta Nazionale. Le Dieta, nel 1825-1827 e nel 1832-1836, 
+si tenne a Presburgo (oggi Bratislava), all'epoca capitale d'Ungheria. Ad ogni modo solo l'alta aristocrazia 
+poteva votare per cui Kossuth ebbe soltanto un piccolo ruolo durante i dibattiti. In quel periodo inizi&#242; 
+a prendere vita una battaglia volta a riaffermare l'identit&#224; nazionale ungherese ad opera di alcuni 
+validi leader - sopprattutto Wessel&#233;nyi e Sz&#233;chenyi. In parte, questa era anche una battaglia 
+per le riforme contro la stagnazione del governo centrale austriaco. I doveri di Kossuth verso la contea 
+di Hunyady includevano anche la redazione scritta di rapporti periodici riguardanti il procedere dei 
+lavori alla Dieta, ma il governo austriaco, temendo il dissenso popolare, imped&#236; la pubblicazione 
+a stampa di quei rapporti. Lo stile colto delle lettere di Kossuth fece s&#236;, per&#242;, che queste 
+venissero fatte circolare sotto forma di manoscritti fra gli altri nobili liberali. Costoro gli chiesero 
+di pubblicare la sua produzione letteraria sotto forma di una gazzetta parlamentare; il che gli forn&#236; 
+ancora pi&#249; notoriet&#224; ed influenza politica. Gli ordini dell'Ufficiale Censore bloccarono la 
+circolazione delle stampe litografate cos&#236; come la spedizione via posta del manoscritto, tuttavia 
+alcune copie continuarono a circolare clandestinamente.[PARAGRAPH:2]Nel 1836 la Dieta fu sciolta. Kossuth 
+continu&#242; a riportare (in forma scritta) i testi dei dibattiti delle assemblee di contea. Grazie 
+a ci&#242; le assemblee ottennero una pubblicit&#224; inedita e rilevanza politica a livello nazionale. 
+Prima di allora ognuna di esse aveva solo una vaga idea di come lavorassero le altre. L'abilit&#224; 
+di Kossuth nell'abbellire i discorsi dei liberali e dei riformatori aumentarono ancor di pi&#249; l'impatto 
+di queste lettere; il governo invano cerc&#242; di farle sparire, ed, avendo fallito, nel maggio del 
+1837 dispose l'arresto di Kossuth, assieme a Wessel&#233;nyi ed alcuni altri, con l'accusa di alto tradimento. 
+Dopo aver atteso per un anno in carcere a Buda il processo, Kossuth fu infine condannato ad altri quattro 
+anni di prigione. Il duro isolamento a cui fu sottoposto minarono la sua salute, anche se gli fu permesso 
+di leggere. Grazie ai suoi studi, miglior&#242; la sua cultura politica, ed acquis&#236;, grazie allo 
+studio della Bibbia e di Shakespeare, una profonda conoscenza dell'inglese.[PARAGRAPH:2]Quegli arresti 
+avevano causato grande indignazione: la Dieta, che fu riconvocata nel 1839, chiese il rilascio dei prigionieri, 
+e rifiut&#242; di approvare ogni delibera del governo. Metternich, a lungo inflessibile, a causa delle 
+difficolt&#224; della guerra, nel 1840 si convinse a dare ascolto alle proteste. Wessel&#233;nyi usc&#236; 
+dal carcere completamente distrutto ma Kossuth, in parte confortato dalle frequenti visite di Teresa 
+Meszleny, non perse le sue energie. Immediatamente dopo il rilascio, Kossuth e Meszleny si sposarono, 
+e lei rimase sempre un valido supporto alla sua politica. Il clero della Chiesa Romana Cattolica rifiut&#242; 
+di benedire il matrimonio poich&#233; Kossuth si rifiut&#242; di convertirsi alla religione di Meszleny 
+(come detto, era luterano). Come risultato, Kossuth divenne un fermo sostenitore dei matrimoni misti.[PARAGRAPH:2]Kossuth 
+ora era diventato un'icona nazionale. Si ristabil&#236; completamente dal carcere nel gennaio del 1841 
+e fu assunto come editore del "Pesti H&#237;rlap", un nuovo giornale del partito liberale; sorprendentemte 
+il governo gli concesse una licenza. Il giornale ebbe un successo senza precedenti; raggiunse immediatamente 
+la ragguardevole quota (per allora) di 7000 copie. Un giornale filogovernativo, il "Vil&#225;g", fu fondato 
+nello stesso periodo ma ci&#242; serv&#236; solo ad incrementare la popolarit&#224; di Kossuth e del 
+suo fervore politico.[PARAGRAPH:2]Sz&#233;chenyi, il grande riformatore, avvert&#236; pubblicamente Kossuth 
+che il suo appellarsi alle passioni del popolo avrebbe portato la nazione verso la rivoluzione. Kossuth, 
+imperterrito, non si ferm&#242; dal sostenere pubblicamente le ragioni delle riforme chieste da tutti 
+i liberali: l'abolizione dell'inalienabilita delle eredita nobiliari e dei privilegi feudali e la tassazione 
+dei nobili. Egli fu sul punto di prendere in considerazione la possibilit&#224; di separazione dell'Ungheria 
+dall'Austria. Combinando questo suo nazionalismo con l'insistenza ad affermare la superiorit&#224; dei 
+magiari sugli slavi che abitavano l'Ungheria, egli piant&#242; i semi sia del collasso dell'Ungheria 
+nel 1849 sia della propria dipartita politica.[PARAGRAPH:2]Nel 1844 Kossuth fu licenziato dal Pesti H&#237;rlap 
+dopo una discussione col proprietario sul suo salario. Si crede per&#242; che il litigio sia stato fomentato 
+da intrighi governativi, tant'&#232; che a Kossuth non fu in seguito concessa la licenza per fondare 
+un suo giornale. In un colloquio personale, Metternich gli offr&#236; un incarico governativo, ma Kossuth 
+rifiut&#242;; a causa di ci&#242; rimase per tre anni senza lavoro. Egli continu&#242; comunque nella 
+sua attivit&#224; di agitatore nel nome dell'indipendenza politica e commerciale dell'Ungheria. Adott&#242; 
+i principi economici teorizzati dal tedesco Friedrich List, e fondo la societ&#242; "V&#233;degylet", 
+i cui membri consumavano solo prodotti ungheresi. Cerc&#242; anche di organizzare la creazione di un 
+porto ungherese a Fiume.[PARAGRAPH:2]Nell'autunnno del 1847, Kossuth ebbe la possibilit&#224; di mettere 
+in pratica le sue idee. Grazie al supporto di Lajos Batthy&#225;ny, nel corso di una campagna combattuta 
+aspramente, fu eletto alla nuova Dieta come rappresentante di Pest. Egli dichiaro: &#171;ora che sono 
+un deputato, smettero di essere un agitatore&#187;. Immediatamente divenne il capo degli estremisti liberali, 
+non essendo presente alla Dieta in quel periodo Ferenc De&#225;k. Batthy&#225;ny, Sz&#233;chenyi, Szemere 
+and E&#246;tv&#246;s, i suoi rivali politici, si resero conto che le sue personali ambizioni ed il suo 
+egoismo lo avevano portato in una posizione di preminenza, e che avrebbe usato questa posizione per assumere 
+il controllo della nazione; ma davanti alla sua eloquenza e alla sua energia tutte le opposizioni erano 
+inutili. Kossuth, con la sua tecnica oratoria, al fine di ottenere un risultato migliore, faceva ricorso, 
+nel suo appellarsi alle emozioni pi&#249; intense, a temi di elevato spessore etico e ad immagini dall'effetto 
+drammatico. Ciononostante egli non amb&#236; mai e non ottenne mai il potere assoluto. Una caratteristica 
+della sua natura, invece, forse inconscia, era quella di condurre tutto verso la crisi.[PARAGRAPH:2]La 
+crisi arriv&#242;, e lui la sfrutt&#242; al massimo. Il 3 marzo 1848, appena giunta la notizia della 
+sommossa a Parigi, chiese con forza un governo parlamentare per l'Ungheria ed un governo costituzionale 
+per il resto dell'Austria. Egli confidava nel fatto che gli Asburgo, nella persona del "nostro amato 
+arciduca Francesco Giuseppe" (allora diciassettenne), accettassero di perpetuare l'antica gloria della 
+dinastia venendo incontro almeno in parte alle aspirazioni di un popolo alla libert&#224;. Egli divenne 
+in quel momento il leader della rivoluzione in tutta Europa; le sue parole furono lette ad alta voce 
+nelle strade di Vienna da una folla inferocita che chiese ed ottenne il rovesciamento di Metternich (13 
+marzo), e quando una delegazione della Dieta giunse a Vienna per ricevere l'assenso dell'imperatore Ferdinando 
+alle loro petizioni, le ovazioni pi&#249; calorose furono per Kossuth. Batthy&#225;ny, che form&#242; 
+il primo governo parlamentare, nomin&#242; Kossuth Ministro dell'economia.[PARAGRAPH:2]Con incredibile 
+energia egli inizi&#242; la sua opera di sfruttamento delle risorse interne del paese: reistitu&#236; 
+una moneta nazionale all'Ungheria, ed us&#242; ogni mezzo per promuovere il sentimento nazionale di appartenenza. 
+Come caratteristica, le nuove banconote ungheresi avevano il nome di Kossuth come iscrizione pi&#249; 
+in evidenza e venivano chiamate "le banconote di Kossuth", espressione che in futuro sarebbe diventata 
+un proverbio. Usc&#236; alle stampe un nuovo giornale, a cui fu dato il nome di Kossuth H&#237;rlapja, 
+cosicch&#233; fu quello di Kossuth piuttosto che quello del Funzionario Imperiale o del Presidente dei 
+Ministri il primo nome associato dal popolo al nuovo governo. Molto pi&#249; importante fu la circostanza 
+in cui, in estate, le minacce da parte dei croati e dei serbi nonch&#233; la reazione di Vienna aumentarono. 
+In un grande discorso l'11 luglio, egli incit&#242; la nazione ad armarsi per la propria difesa e chiese 
+l'arruolamento di 200.000 uomini; tra scene di grande entusiasmo, la richiesta di Kossuth fu approvata 
+per acclamazione. Quando il croato Josip Jelacic marci&#242; su Pest egli and&#242; di paese in paese 
+per aizzare il popolo alla difesa del suolo patrio; fu cos&#236; che venne creata l'armata popolare "Honv&#233;d". 
+Quando Batthy&#225;ny si dimise, Kossuth ebbe in concomitanza con Szemere l'incarico di guidare provvisoriamente 
+il governo, e alla fine di Settembre fu nominato Presidente del Comitato per la Difesa Nazionale. [PARAGRAPH:2]Da 
+questo momento egli divenne virtualmente un dittatore. La direzione dell'intero governo fin&#236; nelle 
+sue mani. Senza esperienza militare, egli dovette controllare e dirigere i movimenti delle armate; non 
+riusc&#236; infatti a mantenere sotto controllo i generali o a comprendere che la cooperazione militare 
+&#232; essenziale per il successo. Art&#250;r G&#246;rgey in particolare, le cui grandi abilit&#224; 
+Kossuth fu il primo ad individuare, rifiut&#242; di obbedire; i due uomini avevano personalit&#224; molto 
+diverse. Due volte Kossuth lo sollev&#242; dal comando; due volte dovette reinsediarlo. Forse sarebbe 
+stato un bene se Kossuth avesse avuto un pizzico della spietatezza calcolata di G&#246;rgey, giacch&#233;, 
+come si vide in effetti, il potere rivoluzionario che egli aveva ottenuto sarebbe potuto essere mantenuto 
+solo con metodi rivoluzionari; ma Kossuth era per natura di cuore teneto e clemente in ogni occasione; 
+sebbene spesso dimostrasse audacia, gli manc&#242; la determinatezza nel mettersi d'accordo coi suoi 
+uomini. E' stato detto che egli si dimostr&#242; privo di coraggio personale; questo non &#232; improbabile, 
+l'eccesso di focosit&#224; che fece di lui un cos&#236; grande oratore difficilmente potrebbe combinarsi 
+col sangue freddo richiesto da un soldato in caso di pericolo; tuttavia nessuno fu capace quanto lui 
+di infondere coraggio negli altri.[PARAGRAPH:2]Durante il terribile inverno che segu&#236;, la sua energia 
+ed il suo spirito non si raffreddarono mai. Fu lui che vinse la riluttanza dell'esercito a marciare alla 
+volta di Vienna; dopo la sconfitta di Schwechat (alle porte di Vienna), alla quale lui fu presente, invi&#242; 
+Bern come supporto nella guerra in Transilvania. Alla fine dell'anno, quando gli Austriaci stavano raggiungendo 
+Pest, chiese la mediazione dell'inviato americano Stiles. Ciononostante il generale austriaco Windisch-Gr&#228;tz 
+rifiut&#242; ogni trattativa, costringendo la Dieta ed il governo a fuggire a Debrecen; Kossuth port&#242; 
+con s&#233; la corona di Santo Stefano, il sacro emblema della nazione ungherese. Nel novembre del 1848, 
+l'Imperatore Ferdinando abdic&#242; in favore di Francesco Giuseppe. Il nuovo Imperatore revoc&#242; 
+tutte le concessioni fatte a marzo e dichiar&#242; fuorilegge Kossuth e i suoi colleghi. In aprile, dopo 
+che gli ungheresi ottennero alcuni successi militari grazie ad un esercito tornato in forze, Kossuth 
+proclam&#242; l'indipendenza ungherese con una dichiarazione ufficiale in cui veniva affermato che "la 
+Casa degli Asburgo-Lorena, spergiura al cospetto di Dio e dell'Uomo, ha perso il trono ungherese." Questo 
+fu un passo che evidenzia la sua predilezione per le azioni estreme e drammatiche, ma questa volta si 
+crearono anche dei dissensi fra lui e coloro che desideravano soltanto un'autonomia di fatto sotto la 
+vecchia dinastia; i suoi nemici, poi, non si lasciarono scappare l'occasione di accusarlo di mirare alla 
+corona ungherese. Al momento, la futura forma di governo non era ancora stata decisa, anche se Kossuth 
+fu dichiarato Reggente. Le speranze di successo vennero per&#242; frustrate dall'intervento della Russia; 
+tutti gli appelli alle potenze occidentali furono vani, e l'11 agosto Kossuth abdic&#242; in favore di 
+G&#246;rgey, sulla base del fatto che in quella situazione estrema solo un generale avrebbe potuto salvare 
+la nazione. G&#246;rgey a Vil&#225;gos si arrese ai russi, i quali consegnarono il suo esercito agli 
+austriaci. G&#246;rgey fu risparmiato, grazie alle insistenze dei russi, ma il resto dell'esercito ungherese 
+fu fatto oggetto di pesanti rappresaglie. Kossuth con fermezza sostenne fino alla sua morte che G&#246;rgey 
+fu il solo responsabile per quella umiliazione.[PARAGRAPH:2]La carriera di Kossuth era al termine. Ritrovatosi 
+ad essere un fuggiasco solitario, attravers&#242; la frontiera turca e ricevette ospitalit&#224; dalle 
+autorit&#224; locali, le quali, supportate dall'Inghilterra e malgrado gli accordi con gli imperatori 
+alleati, rifiutarono di consegnare lui e gli altri fuggiaschi all'Austria. Nel gennaio del 1849 fu trasferito 
+da Vidin (nell'odierna Bulgaria nord-occidentale), dove lui era stato tenuto agli arresti domiciliari, 
+a Shumla, e quindi a Katahia in Asia minore. Qui si ricongiunse coi figli, che erano stati confinati 
+a Presburgo (Bratislava); sua moglie (che aveva una taglia sulla testa) lo aveva raggiunto poco prima, 
+essendo scappata grazie ad un travestimento.[PARAGRAPH:2]Nel settembre del 1851 gli fu permesso di lasciare 
+la Turchia a bordo di un vascello militare americano. Egli dapprima approd&#242; a Marsiglia, dove ricevette 
+un'accoglienza entusiastica dalla gente, ma dove il Principe-Presidente Luigi Napoleone Bonaparte rifiut&#242; 
+di accordargli il permesso di attraversare la Francia. Il 23 ottobre approd&#242; a Southampton e trascorse 
+tre settimane in Inghilterra, dove fu ancora una volta acclamato. Gli fu concesso di tenere dei discorsi 
+a Southampton, Birmingham ed in altre citta; fu ufficialmente ospite del sindaco di Londra e in ogni 
+occasione fece valere la sua eloquenza in inglese parlando della causa ungherese. Gli effetti di quanto 
+disse non furono immediati, ma l'indignazione che lui riusc&#236; a far esplodere contro la politica 
+russa ha molti legami con i forti sentimenti anti-russi che furono alla base della guerra di Crimea.[PARAGRAPH:2]Dall'Inghilterra 
+si trasfer&#236; negli Stati Uniti d'America: l&#236; l'accoglienza fu ugualmente entusiastica, anche 
+se meno "dignitosa". Gradualmente, il suo stile autocratico e alieno a compromessi distrusse ogni reale 
+influenza all'interno della comunit&#224; di espatriati. Gli altri esuli ungheresi protestavano contro 
+la sua apparente pretesa di essere l'unico eroe della rivoluzione. Il conte Kasimir Batthy&#225;ny lo 
+attacc&#242; sul Times, e Szemere, che era stato primo ministro sotto la sua reggenza, pubblic&#242; 
+un articolo in cui critic&#242; aspramente le sue azioni e il suo carattere, accusandolo di arroganza, 
+codardia e ambivalenza. Kossuth ritorn&#242; presto in Inghilterra, dove visse per otto anni in stretti 
+rapporti con Mazzini, da cui, nonostante alcuni timori, fu persuaso ad unirsi al comitato rivoluzionario. 
+Continuarono per&#242; le frizioni fra lui e gli altri esuli ungheresi, offesi in particolar modo dal 
+suo continuare ad utilizzare il titolo di Reggente. Kossuth teneva d'occhio con ansiet&#224; ogni opportunit&#224; 
+di liberare una volta per tutte il suo paese dall'Austria. Un tentativo di organizzare una legione ungherese 
+durante la guerra di Crimea fu interrotto, ma nel 1859 riusc&#236; ad aprire dei negoziati con Napoleone 
+III; lasci&#242; l'Inghilterra per l'Italia ed inizi&#242; ad organizzare un'altra legione ungherese, 
+con la quale intendeva scendere lungo le coste della Dalmazia. La pace di Villafranca rese tutto questo 
+impossibile.[PARAGRAPH:2]Nonostante questo episodio, Kossuth rimase in Italia. Rifiut&#242; di seguire 
+gli altri patrioti ungheresi, che, grazie alle trattative di Ferenc De&#225;k, negoziarono il "Compromesso" 
+del 1867 (Ausgleich/Kiegyez&#233;s) ed ottennero l'amnistia. E' in dubbio se l'Imperatore Francesco Giuseppe 
+avrebbe acconsentito ad estendere l'amnistia a Kossuth. Ufficialmente, Kossuth non si riconcili&#242; 
+mai con la casa d'Asburgo, e si adoper&#242; sempre per uno stato completamente independente. Sebbene 
+eletto alla Dieta del 1867, egli non si insedi&#242; mai. Continu&#242; a rimanere una figura molto popolare, 
+ma il suo nome non fu pi&#249; associato ad alcuna manifestazione di dissenso di qualsiasi natura politica. 
+Una legge del 1879, che privava della cittadinanza tutti gli ungheresi che si erano volontariamente assentati 
+dal paese per pi&#249; di dieci anni, fu per lui un boccone amaro. Egli non mostr&#242; interesse a beneficiare 
+di un'ulteriore amnistia nel 1880.[PARAGRAPH:2]Nel 1890, una delegazione di pellegrini ungheresi a Torino 
+registrarono un piccolo messaggio patriottico dell'ormai anziano Lajos Kossuth. La registrazione originale 
+effettuata con il fonografo di Edison esiste ancora al giorno d'oggi, sebbene scarsamente udibile a causa 
+degli eccessivi ascolti effettuati e dei falliti tentativi di restaurazione. Lajos Kossuth e la pi&#249; 
+antica persona al mondo che abbia la sua voce ancora registrata e conservata.[PARAGRAPH:2]Mor&#236; a 
+Torino il 20 Marzo 1894; il suo corpo &#232; stato portato a Budapest, dove fu stato seppellito mentre 
+nell'intera nazione fu dichiarato il lutto nazionale. M&#243;r J&#243;kai tenne il discorso funebre. 
+Grazie ad una sottoscrizione pubblica, fu eretta una statua di bronzo nel cimetero di Kerepesi. Molti 
+ricordano Kossuth come uno dei pi&#249; puri patrioti d'Ungheria nonch&#233; il pi&#249; grande fra gli 
+oratori.</Italian>
+		<Spanish>[H1]Lajos Kossuth[\H1][NEWLINE][BOLD]Regent of Hungary[\BOLD][NEWLINE]Kossuth was born at 
+Monok, a small town in the county of Zemplen, the eldest of four children. His father belonged to minor 
+nobility, had a small estate, and was an advocate by profession. His mother raised the family as strict 
+Lutherans. Kossuth completed his education at the Calvinist college of S&#225;rospatak and the University 
+of Pest-Buda (now Budapest). Aged nineteen, he entered his father's legal practice. He was popular locally, 
+and, having been appointed steward to the countess Szapary, a widow with large estates, he became her 
+voting representative in the county assembly and settled in Pest. He was subsequently dismissed on the 
+grounds of using estate funds to pay a gambling debt.[PARAGRAPH:2]Shortly after his dismissal by Countess 
+Szapary, Kossuth was appointed as deputy to Count Hunyady at the National Diet. The Diet met during 18251827 
+and 18321836 in Pressburg, then capital of Hungary. Only the upper aristocracy could vote, however, 
+and Kossuth took little part in the debates. At the time, a struggle to reassert a Hungarian national 
+identity was beginning to emerge under able leaders  most notably Wessel&#233;nyi and the Sz&#233;chenyis. 
+In part, this was also a struggle for reform against the stagnant Austrian government. Kossuth's duties 
+to Count Hunyady included reporting on Diet proceedings in writing, as the Austrian government, fearing 
+popular dissent, had banned published reports. The high quality of Kossuth's letters led to their being 
+circulated in manuscript among other Liberal magnates. Readership demands turned his output into the 
+editing of an organized parliamentary gazette; spreading his name and influence further. Orders from 
+the Official Censor halted circulation by lithograph printing. Distribution in manuscript by post was 
+forbidden by the government, although circulation by hand continued.[PARAGRAPH:2]In 1836 the Diet was 
+dissolved. Kossuth continued to report (in letter form), covering the debates of the county assemblies. 
+This new-found publicity gave the assemblies national political prominence. Previously they had had little 
+idea of each others' proceedings. His skilful embellishment of the speeches from the Liberals and Reformers 
+further enhanced the impact of his newsletters. The government in vain attempted to suppress the letters, 
+and other means having failed, he was in May 1837, with Wessel&#233;nyi and several others, arrested 
+on a charge of high treason. After spending a year in prison at Buda awaiting trial, he was condemned 
+to four more years' imprisonment. His strict confinement damaged his health, but he was allowed to read. 
+He greatly increased his political knowledge, and also acquired, from the study of the Bible and Shakespeare, 
+a thorough knowledge of English.[PARAGRAPH:2]The arrests had caused great indignation. The Diet, which 
+reconvened in 1839, demanded the release of the prisoners, and refused to pass any government measures. 
+Metternich long remained obdurate, but the danger of war in 1840 obliged him to give way. Wessel&#233;nyi 
+had been broken by his imprisonment, but Kossuth, partly supported by the frequent visits of Teresa Meszleny, 
+emerged from prison unbroken. Immediately after his release Kossuth and Meszleny were married, and she 
+remained a firm supporter of his politics. The Roman Catholic priests refused to bless the marriage as 
+Kossuth would not convert to Meszleny's religion. Resultingly, Kossuth became a firm defender of mixed 
+marriages.[PARAGRAPH:2]Kossuth had now become a national icon. He regained full health in January 1841 
+and was appointed editor of Pesti H&#237;rlap, a new Liberal party newspaper. Notably, the government 
+agreed to grant a licence. The paper achieved unprecedented success; soon reaching the then immense circulation 
+of 7000 copies. A competing pro-government paper, Vil&#225;g, started up but it only served to increase 
+Kossuth's visibility and add to the general political fervour.[PARAGRAPH:2]Sz&#233;chenyi, the great 
+reformer, publicly warned Kossuth that his appeals to the passions of the people would lead the nation 
+to revolution. Kossuth, undaunted, did not stop at the publicly reasoned reforms demanded by all Liberals: 
+the abolition of entail, the abolition of feudal burdens and taxation of the nobles. He went on to broach 
+the possibility of separating from Austria. By combining this nationalism with an insistence on the superiority 
+of the Magyars to the Slavonic inhabitants of Hungary, he sowed the seeds of both the collapse of Hungary 
+in 1849 and his own political demise.[PARAGRAPH:2]In 1844, Kossuth was dismissed from Pesti H&#237;rlap 
+after a dispute with the proprietor over salary. It is believed that the dispute was rooted in government 
+intrigue. Kossuth was unable to obtain permission to start his own newspaper. In a personal interview 
+Metternich offered to take him into the government service. Kossuth refused, and spent the next three 
+years without a regular position. He continued to agitate on behalf of both political and commercial 
+independence for Hungary. He adopted the economic principles of List, and was the founder of a "V&#233;degylet" 
+society  whose members consumed only Hungarian produce. He also argued for the creation of a Hungarian 
+port at Fiume.[PARAGRAPH:2]In autumn 1847, Kossuth was able to take his final key step. Due to the support 
+of Lajos Batthy&#225;ny during a keenly fought campaign, he was elected to the new Diet as member for 
+Pest. He proclaimed: "Now that I am a deputy, I will cease to be an agitator." He immediately became 
+chief leader of the Extreme Liberals. Ferenc De&#225;k was absent. Batthy&#225;ny, Istv&#225;n Sz&#233;chenyi, 
+Szemere and J&#243;zsef E&#246;tv&#246;s, his political rivals, felt that his personal ambition and egoism 
+led him to assume the chief place, and to use his parliamentary position to establish himself as leader 
+of the nation; but before his eloquence and energy all apprehensions were useless. His eloquence was 
+of that nature, in its impassioned appeals to the strongest emotions, that it required for its full effect 
+the highest themes and the most dramatic situations. In a time of rest, though he could never have been 
+obscure, he would never have attained the highest power. It was therefore a necessity of his nature, 
+perhaps unconsciously, always to drive things to a crisis.[PARAGRAPH:2]The crisis came, and he used it 
+to the full. On March 3, 1848, shortly after the news of the revolution in Paris had arrived, in a speech 
+of surpassing power he demanded parliamentary government for Hungary and constitutional government for 
+the rest of Austria. He appealed to the hope of the Habsburgs, "our beloved Archduke Franz Joseph" (then 
+17 years old), to perpetuate the ancient glory of the dynasty by meeting half-way the aspirations of 
+a free people. He at once became the leader of the European revolution; his speech was read aloud in 
+the streets of Vienna to the mob by which Metternich was overthrown (March 13), and when a deputation 
+from the Diet visited Vienna to receive the assent of Emperor Ferdinand to their petition it was Kossuth 
+who received the chief ovation. Batthy&#225;ny, who formed the first responsible government, appointed 
+Kossuth the Minister of Finance.[PARAGRAPH:2]With amazing energy he began developing the internal resources 
+of the country: re-establishing a separate Hungarian coinage, and using every means to increase national 
+self-consciousness Characteristically, the new Hungarian bank notes had Kossuth's name as the most prominent 
+inscription; making reference to "Kossuth Notes" a future byword. A new paper was started, to which was 
+given the name of Kossuth H&#237;rlapja, so that from the first it was Kossuth rather than the Palatine 
+or the president of the ministry whose name was in the minds of the people associated with the new government. 
+Much more was this the case when, in the summer, the dangers from the Croats, Serbs and the reaction 
+at Vienna increased. In a great speech July 11 he asked that the nation should arm in self-defence, and 
+demanded 200,000 men; amid a scene of wild enthusiasm this was granted by acclamation. When Jellachich 
+was marching on Pest he went from town to town rousing the people to the defence of the country, and 
+the popular force of the Honv&#233;d was his creation. When Batthy&#225;ny resigned he was appointed 
+with Szemere to carry on the government provisionally, and at the end of September he was made President 
+of the Committee of National Defence.[PARAGRAPH:2]From this time he was a virtual dictator. The direction 
+of the whole government was in his hands. Without military experience, he had to control and direct the 
+movements of armies; he was unable to keep control over the generals or to establish that military co-operation 
+so essential to success. Art&#250;r G&#246;rgey in particular, whose great abilities Kossuth was the 
+first to recognize, refused obedience; the two men were very different personalities. Twice Kossuth deposed 
+him from the command; twice he had to restore him. It would have been well if Kossuth had had something 
+more of G&#246;rgey's calculated ruthlessness, for, as has been truly said, the revolutionary power he 
+had seized could only be held by revolutionary means; but he was by nature soft-hearted and always merciful; 
+though often audacious, he lacked decision in dealing with men. It has been said that he showed a want 
+of personal courage; this is not improbable, the excess of feeling which made him so great an orator 
+could hardly be combined with the coolness in danger required of a soldier; but no one was able, as he 
+was, to infuse courage into others.[PARAGRAPH:2]During all the terrible winter which followed, his energy 
+and spirit never failed him. It was he who overcame the reluctance of the army to march to the relief 
+of Vienna; after the defeat of Schwechat, at which he was present, he sent Bern to carry on the war in 
+Transylvania. At the end of the year, when the Austrians were approaching Pest, he asked for the mediation 
+of Mr Stiles, the American envoy. Windisch-Gr&#228;tz, however, refused all terms, and the Diet and government 
+fled to Debrecen, Kossuth taking with him the Crown of St Stephen, the sacred emblem of the Hungarian 
+nation. In November 1848, Emperor Ferdinand abdicated in favour of Franz Joseph. The new Emperor revoked 
+all the concessions granted in March and outlawed Kossuth and his colleagues. In April 1849, when the 
+Hungarians had won many successes, after sounding the army, he issued the celebrated declaration of Hungarian 
+independence, in which he declared that "the house of Habsburg-Lorraine, perjured in the sight of God 
+and man, had forfeited the Hungarian throne." It was a step characteristic of his love for extreme and 
+dramatic action, but it added to the dissensions between him and those who wished only for autonomy under 
+the old dynasty, and his enemies did not scruple to accuse him of aiming for Kingship. For the time the 
+future form of government was left undecided, but Kossuth was appointed Regent. The hopes of ultimate 
+success were frustrated by the intervention of Russia; all appeals to the western powers were vain, and 
+on August 11 Kossuth abdicated in favor of G&#246;rgey, on the ground that in the last extremity the 
+general alone could save the nation. G&#246;rgey capitulated at Vil&#225;gos to the Russians, who handed 
+over the army to the Austrians. G&#246;rgey was spared  at the insistence of the Russians. Reprisals 
+were taken on the rest of the Hungarian army. Kossuth steadfastly maintained until his death that G&#246;rgey 
+alone was responsible for the humiliation.[PARAGRAPH:2]Kossuth's career was at an end. A solitary fugitive, 
+he crossed the Turkish frontier. He was hospitably received by the Turkish authorities, who, supported 
+by the British, refused, notwithstanding the threats of the allied emperors, to surrender him and other 
+fugitives to Austria. In January 1849 he was removed from Vidin, where he had been kept under house arrest, 
+to Shumla, and thence to Katahia in Asia Minor. Here he was joined by his children, who had been confined 
+at Pozsony/Pressburg (Bratislava); his wife (a price had been set on her head) had joined him earlier, 
+having escaped in disguise.[PARAGRAPH:2]In September 1851 he was allowed to leave Turkey on an American 
+man-of-war. He first landed at Marseille, where he received an enthusiastic welcome from the people, 
+but the Prince-President Louis Napoleon refused to allow him to cross France. On October 23 he landed 
+at Southampton and spent three weeks in England, where he was generally feted. Addresses were presented 
+to him at Southampton, Birmingham and other towns; he was officially entertained by the Lord Mayor of 
+London; at each place he spoke eloquently in English for the Hungarian cause. The agitation had no immediate 
+effect, but the indignation which he aroused against Russian policy had much to do with the strong anti-Russian 
+feeling which made the Crimean War possible.[PARAGRAPH:2]From England he went to the United States of 
+America: there his reception was equally enthusiastic, if less dignified. Gradually, his autocratic style 
+and uncompromising outlook destroyed any real influence among the expatriate community. Other Hungarian 
+exiles protested against his appearing to claim to be the only national hero of the revolution. Count 
+Casimir Batthy&#225;ny attacked him in The Times, and Szemere, who had been prime minister under him, 
+published a bitter criticism of his acts and character, accusing him of arrogance, cowardice and duplicity. 
+He soon returned to England, where he lived for eight years in close connection with Mazzini, by whom, 
+with some misgiving, he was persuaded to join the Revolutionary Committee. Quarrels of a kind only too 
+common among exiles followed. Hungarians were especially offended by his continuing use of the title 
+of Regent. He watched with anxiety every opportunity of once more freeing his country from Austria. An 
+attempt to organize a Hungarian legion during the Crimean War was stopped; but in 1859 he entered into 
+negotiations with Napoleon III, left England for Italy, and began the organization of a Hungarian legion, 
+which was to make a descent on the coast of Dalmatia. The Peace of Villafranca made this impossible.[PARAGRAPH:2]From 
+then on, Kossuth remained in Italy. He refused to follow the other Hungarian patriots, who, under the 
+lead of De&#225;k, negotiated the 1867 Compromise (Ausgleich), and the ensuing amnesty. It is doubted 
+whether Emperor Franz Joseph would have allowed the amnesty to extend to Kossuth. Publicly, Kossuth remained 
+unreconciled to the house of Habsburg, and committed to a fully independent state. Though elected to 
+the Diet of 1867, he never took his seat. He continued to remain a widely popular figure, but did not 
+allow his name to be associated with dissent or any political cause. A law of 1879, which deprived of 
+citizenship all Hungarians who had voluntarily been absent ten years, was a bitter blow to him. He displayed 
+no interest in benefitting from a further amnesty in 1880.[PARAGRAPH:2]In 1890, a delegation of hungarian 
+pilgrims in Turin recorded a short patriotic speech delivered by the elderly Lajos Kossuth. The original 
+recording on two wax cylinders for the Edison phonograph survives to this day, although barely audible 
+due to excess playback and unsuccessful early restoration attempts. Lajos Kossuth is the earliest born 
+person in the world who has his voice preserved.[PARAGRAPH:2]He died in Turin on the 20th of March 1894; 
+his body was taken to Budapest, where he was buried amid the mourning of the whole nation, M&#243;r J&#243;kai 
+delivering the funeral oration. A bronze statue was erected, by public subscription, in the Kerepesi 
+Cemetery. Many regard Kossuth as Hungary's purest patriot and greatest orator.</Spanish>
+		<Hungarian>[H1]Kossuth Lajos[\H1][NEWLINE][BOLD]Magyarorsz&#225;g korm&#225;nyz&#243;ja[\BOLD][NEWLINE]Kossuth 
+Monokon, egy kis zempl&#233;ni k&#246;zs&#233;gben sz&#252;letett, egy n&#233;gy gyermekes csal&#225;d 
+legid&#245;sebb gyermekek&#233;nt. Az apja k&#246;znemes volt, a foglalkoz&#225;sa uradalmi &#252;gy&#233;sz. 
+&#201;desanyja szigor&#250; luther&#225;nus nevel&#233;sben r&#233;szes&#237;tette gyermekeit. Tanulm&#225;nyait 
+a s&#225;rospataki reform&#225;tus gimn&#225;ziumban &#233;s a pest-budai egyetemen v&#233;gezte. 1830-ban 
+kapcsol&#243;dott be a politikai &#233;letbe a reformellenz&#233;k tagjak&#233;nt. &#205;g&#233;retesen 
+indul&#243; megyei karrierj&#233;nek azt&#225;n egy sikkaszt&#225;si v&#225;d vetett v&#233;get. 1832 
+v&#233;g&#233;n ker&#252;lt a pozsonyi orsz&#225;ggy&#251;l&#233;sre, mint t&#225;vollev&#245; f&#245;rendek 
+k&#233;pvisel&#245;je. Itt szerkesztette az Orsz&#225;ggy&#251;l&#233;si Tud&#243;s&#237;t&#225;sokat 
+(183236).[PARAGRAPH:2]1841. janu&#225;rban lett a Pesti H&#237;rlap f&#245;szerkeszt&#245;je, majd 1844-ben 
+&#246;nk&#233;nt elhagyta a lapot. Ugyanis Landererrel - a Pesti H&#237;rlap kiad&#243; tulajdonos&#225;val 
+- &#246;sszet&#251;z&#233;sbe keveredett. Kossuth a megemelked&#245; el&#245;fizet&#245;kre h&#237;vatkozva 
+- 60-r&#243;l 2000-re n&#245;tt a p&#233;ld&#225;nysz&#225;m - b&#233;remel&#233;st k&#233;rt, k&#252;l&#246;nben 
+felmond. Landerer nem adta meg a k&#233;rt b&#233;rt, &#237;gy Kossuth felmondott. Kossuth ezut&#225;n 
+az &#245; kezdem&#233;nyez&#233;s&#233;re alakult V&#233;degylet foly&#243;irat&#225;ba, a Hetilapba 
+&#237;rta cikkeit.[PARAGRAPH:2]A V&#233;degylet megalap&#237;t&#225;s&#225;t el&#245;sz&#246;r megyei 
+szinten - Toln&#225;ban - a Perczel fiv&#233;rek kezdem&#233;nyezt&#233;k. A tagok arra k&#246;telezt&#233;k 
+magukat, hogy 6 &#233;vig csak hazai fogyaszt&#225;si cikkeket v&#225;s&#225;rolnak. A V&#233;degylet 
+1844. okt&#243;ber 6-ai pozsonyi alakul&#243; gy&#251;l&#233;s&#233;n elfogadott alapszab&#225;lyai szerint 
+a k&#252;lf&#246;ldi &#225;rut ki kell szor&#237;tani a hazai piacr&#243;l, amelyet a honi ipar sz&#225;m&#225;ra 
+kell biztos&#237;tani. A V&#233;degylet tagjai becs&#252;letsz&#243;ra megfogadt&#225;k, hogy t&#237;z 
+&#233;vig csak magyarorsz&#225;gi &#225;rut v&#225;s&#225;rolnak: csak magyar mesteremberekn&#233;l dolgoztatnak 
+&#233;s olyan iparcikkb&#245;l nem vesznek k&#252;lf&#246;ldit, amelyb&#245;l belf&#246;ldit is lehet 
+kapni. Az eln&#246;k Batthy&#225;ny K&#225;zm&#233;r, az aleln&#246;k Teleki L&#225;szl&#243;, az igazgat&#243; 
+Kossuth Lajos lett. A V&#233;degylet a hazai ipart a bels&#245; fogyaszt&#225;s, a tudatos v&#225;s&#225;rl&#225;s 
+&#250;tj&#225;n pr&#243;b&#225;lta meg fejleszteni. A V&#233;degylet a korszak egyik legnagyobb botr&#225;ny&#225;val 
+omlott &#246;ssze. Kider&#252;lt ugyanis, hogy a V&#233;degylet kit&#251;z&#245;it B&#233;csben k&#233;sz&#237;tett&#233;k. 
+M&#233;g a botr&#225;ny kirobban&#225;sa el&#245;tt 1846. augusztus 20-&#225;n Kossuth b&#246;lcsen lemondott 
+igazgat&#243;i tiszt&#233;r&#245;l: a t&#225;rsas&#225;g ett&#245;l kezdve csak n&#233;vleg m&#251;k&#246;d&#246;tt. 
+Az 1847 &#245;sz&#233;n megny&#237;l&#243; orsz&#225;ggy&#251;l&#233;sre k&#246;vet&#233;v&#233; v&#225;lasztott&#225;k.[PARAGRAPH:2]Az 
+1848. febru&#225;ri francia forradalom h&#237;r&#233;re m&#225;rcius 3-&#225;n az ellenz&#233;k programj&#225;nak 
+s&#252;rg&#245;s t&#246;rv&#233;nybe iktat&#225;s&#225;t k&#246;vetelte. D&#246;nt&#245; szerepe volt 
+abban, hogy az orsz&#225;ggy&#251;l&#233;s megszavazta a forradalmi &#225;talakul&#225;s eredm&#233;nyeit 
+r&#246;gz&#237;t&#245; t&#246;rv&#233;nyeket &#233;s a forradalom er&#245;ire t&#225;maszkodva kik&#233;nyszer&#237;tette 
+B&#233;cs hozz&#225;j&#225;rul&#225;s&#225;t. A Batthy&#225;ny-korm&#225;nyban p&#233;nz&#252;gyminiszter 
+lett. 1848 tavasz&#225;n &#233;s nyar&#225;n a forradalom tov&#225;bbfejleszt&#233;s&#233;nek elker&#252;l&#233;s&#233;re 
+t&#246;rekv&#245; korm&#225;ny &#225;ll&#225;spontj&#225;t k&#233;pviselte ugyan, de mind szorosabb kapcsolatba 
+l&#233;pett a forradalmi t&#246;megek k&#246;vetel&#233;seinek legink&#225;bb hangot ad&#243; radik&#225;lisokkal. 
+J&#250;lius 11-i besz&#233;d&#233;vel el&#233;rte a haza v&#233;delm&#233;re sz&#252;ks&#233;gesnek tartott 
+200 ezer &#250;jonc &#233;s 42 milli&#243; Ft megaj&#225;nl&#225;s&#225;t. Szeptember 6-&#225;n elrendelte 
+az els&#245; magyar bankjegyek kibocs&#225;t&#225;s&#225;t a v&#233;delmi sz&#252;ks&#233;gletek fedez&#233;s&#233;re. 
+Szeptember 15-&#233;n javaslat&#225;ra v&#225;lasztotta meg az orsz&#225;ggy&#251;l&#233;s a v&#233;delem 
+megszervez&#233;s&#233;re az Orsz&#225;gos Honv&#233;delmi Bizottm&#225;nyt. Szeptember v&#233;g&#233;n 
+nagy siker&#251; toborz&#243; k&#246;r&#250;ton sz&#243;l&#237;totta fel az Alf&#246;ld n&#233;p&#233;t 
+a haza &#233;s a jobb&#225;gy felszabad&#237;t&#243; forradalom v&#233;delm&#233;re.[PARAGRAPH:2]A Batthy&#225;ny-korm&#225;ny 
+lemond&#225;s&#225;val a v&#233;grehajt&#243; hatalom gyakorl&#225;sa a Honv&#233;delmi Bizottm&#225;nyra 
+sz&#225;llt, amely Kossuthot v&#225;lasztotta eln&#246;k&#233;v&#233;. A szabads&#225;gharc tov&#225;bbi 
+menet&#233;ben &#243;ri&#225;si feladatokat oldott meg mind a hadsereg megszervez&#233;se, mind a nemzeti 
+ellen&#225;ll&#225;s &#233;s forradalmi helyt&#225;ll&#225;s gazdas&#225;gi, t&#225;rsadalmi &#233;s 
+politikai felt&#233;teleinek megteremt&#233;s&#233;ben. D&#246;nt&#245; r&#233;sze volt abban, hogy az 
+arisztokrat&#225;k &#225;rul&#225;sa &#233;s az 1848 v&#233;g&#233;n, illetve 1849 elej&#233;n a liber&#225;lis 
+nemess&#233;g soraiban is elharap&#243;dz&#243; megalkuv&#225;s, amelyet a B&#233;kep&#225;rt k&#233;pviselt, 
+nem tudott &#250;rr&#225; lenni a forradalmi er&#245;k&#246;n. Kezdem&#233;nyez&#233;s&#233;re mondta 
+ki Debrecenben az orsz&#225;ggy&#251;l&#233;s 1849. &#225;prilis 14-&#233;n a F&#252;ggetlens&#233;gi 
+Nyilatkozatban a Habsburg-h&#225;z tr&#243;nfoszt&#225;s&#225;t. Kossuthot ugyanakkor ideiglenes &#225;llamf&#245;v&#233;, 
+korm&#225;nyz&#243;-eln&#246;kk&#233; v&#225;lasztott&#225;k. A szabads&#225;gharc v&#233;gs&#245; szakasz&#225;ban 
+felismerte, hogy &#250;j int&#233;zked&#233;sek lenn&#233;nek sz&#252;ks&#233;gesek a magyarorsz&#225;gi 
+nem magyar n&#233;pek nemzeti jogainak biztos&#237;t&#225;s&#225;ra. V&#233;g&#252;l is nem tudott &#250;rr&#225; 
+lenni az ingadoz&#225;son, amely a c&#225;ri beavatkoz&#225;s &#233;s a hadihelyzet roml&#225;sa ut&#225;n 
+a vezet&#245; r&#233;teget mindjobban hatalm&#225;ba ker&#237;tette. Haditudom&#225;nyokban val&#243; 
+k&#233;pzetlens&#233;ge k&#246;vetkezt&#233;ben nem ismerte fel a helyzet s&#250;lyoss&#225;g&#225;t. 
+1849. augusztus 11-&#233;n k&#233;nytelen volt &#225;tadni a hatalmat G&#246;rgeynek, aki r&#246;viddel 
+ezut&#225;n  mivel a nagyobb &#225;ldozattal j&#225;r&#243; tov&#225;bbi harc &#233;rtelmetlenn&#233; 
+v&#225;lt  letette a fegyvert.[PARAGRAPH:2]Ezut&#225;n t&#246;bb ezer t&#225;rs&#225;val &#233;s az 
+&#225;llamkincst&#225;rral t&#246;r&#246;k f&#246;ldre menek&#252;lt. Mag&#225;val vitte a koron&#225;t 
+is, melyet Orsov&#225;n&#225;l el&#225;sott. N&#233;h&#225;ny h&#243;napot a mai Bulg&#225;ria ter&#252;let&#233;n 
+(Vidinben &#233;s Suml&#225;ban) t&#246;lt&#246;tt, majd sz&#251;kebb k&#246;rnyezet&#233;vel egy&#252;tt 
+a kis-&#225;zsiai Kitahi&#225;ba intern&#225;lt&#225;k. Itt k&#233;sz&#237;tette el a Magyarorsz&#225;g 
+bels&#245; berendezked&#233;s&#233;nek f&#246;deralisztikus &#225;tszervez&#233;s&#233;re, a nemzetis&#233;gek 
+&#246;nkorm&#225;nyzat&#225;nak messzemen&#245; biztos&#237;t&#225;s&#225;ra ir&#225;nyul&#243; kiutahiai 
+alkotm&#225;nytervet (1851). 1851-ben Angli&#225;ba utazott, ahol a t&#246;megek nagy &#252;nnepl&#233;sben 
+r&#233;szes&#237;tett&#233;k, ak&#225;rcsak 185152-i amerikai &#250;tj&#225;n is. 1852 nyar&#225;n visszat&#233;rt 
+Angli&#225;ba &#233;s csal&#225;dostul Londonban telepedett le. Kapcsolatot tartott fenn a francia, olasz, 
+orosz, n&#233;met &#233;s lengyel  jobb&#225;ra kispolg&#225;ri  emigr&#225;ns k&#246;r&#246;kkel, 
+mindenekel&#245;tt Giuseppe Mazzinival, akinek Kossuthra gyakorolt hat&#225;sa megmutatkozott az 50-es 
+&#233;vek eleji, kell&#245;en meg nem alapozott felkel&#233;si k&#237;s&#233;rletek szervez&#233;s&#233;ben. 
+A k&#246;vetkez&#245; &#233;vekben Kossuth arra sz&#225;m&#237;tott, hogy a nagyhatalmak k&#246;z&#246;tti 
+konfliktus teszi lehet&#245;v&#233; Magyarorsz&#225;g felszabad&#237;t&#225;s&#225;t; ez&#233;rt &#246;sszek&#246;ttet&#233;sbe 
+l&#233;pett III. Nap&#243;leonnal. Mikor az 1859-i osztr&#225;kolaszfrancia h&#225;bor&#250; el&#245;k&#233;sz&#237;t&#233;se 
+idej&#233;n III. Nap&#243;leon &#233;s Camillo Cavour sz&#225;rdpiemonti minisztereln&#246;k kil&#225;t&#225;sba 
+helyezt&#233;k Magyarorsz&#225;g felszabad&#237;t&#225;s&#225;nak el&#245;seg&#237;t&#233;s&#233;t, Kossuth 
+Lajos megalap&#237;totta a Magyar Nemzeti Igazgat&#243;s&#225;got Teleki L&#225;szl&#243;val &#233;s 
+Klapka Gy&#246;rggyel &#233;s megind&#237;totta a Magyar L&#233;gi&#243; szervez&#233;s&#233;t. Miut&#225;n 
+III. Nap&#243;leon f&#233;nyes solferin&#243;i gy&#245;zelme ut&#225;n v&#225;ratlanul b&#233;k&#233;t 
+k&#246;t&#246;tt Ausztri&#225;val, mind egy&#233;rtelm&#251;bben a f&#252;ggetlens&#233;g&#252;k&#233;rt 
+k&#252;zd&#245; elnyomott n&#233;pek mozgalm&#225;val k&#237;v&#225;nta &#246;sszekapcsolni Magyarorsz&#225;g 
+felszabad&#237;t&#225;s&#225;t.[PARAGRAPH:2]1894 m&#225;rcius&#225;ban halt meg hossz&#250; betegesked&#233;s 
+ut&#225;n.</Hungarian>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_MATTHIAS</Tag>
+		<English>Matthias</English>
+		<French>Matthias</French>
+		<German>Matthias</German>
+		<Italian>Mattia</Italian>
+		<Spanish>Matías</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_MATTHIAS_PEDIA</Tag>
+		<English>[H1]Matthias Corvinus[\H1][NEWLINE][BOLD]King of Hungary[\BOLD][NEWLINE][BOLD]Lived:[\BOLD] 
+February 23, 1443 - April 6, 1490[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Matthias 
+Corvinus was born in Klausenburg, Transylvania, and was the second son of John Hunyadi. After the death 
+of Mathias's father, there was a struggle between Hungary's various barons and its Habsburg King.  The 
+gentry and the people of Pest finally came out in support of Matthias as king, while most barons also 
+agreed to support him. [PARAGRAPH: 1] On January 20, 1458, Matthias was elected king by the Diet.  At 
+this time, he was the hostage of the king of Bohemia who released under the condition of marrying his 
+daughter.  Matthias was finally crowned after several wars with Bohemia and the new Emperor Frederick 
+III gave him the Holy Crown.  Only the age of 15, Matthias began his reign by building public health, 
+education, and a new legal system.  Matthias was also a fan of art and culture, as many artists were 
+present in his court. [PARAGRAPH: 1] Matthias gained independence by dividing the barons and raising 
+a large royal army.  At this time, Hungary reached its greatest territorial extent of the era.  Matthias 
+was victorious in several campaigns against the Ottoman Empire by raising the Kingdom of Hungary to be 
+a world power.  After that, Matthias was intent in conquering large parts of the Holy Roman Empire.  
+By the end of his reign, he was in control of places such as Moravia, Silesia, Lusatia, half of Austria, 
+and Vienna. [PARAGRAPH: 1] Although Vlad III Dracula, Prince of Wallachia, had many successes against 
+the Ottoman Empire, Matthias imprisoned him after a disagreement between the two rulers.  Hungary decided 
+to help Dracula in his fight of the threatening Ottomans, but he was assassinated.  This was a major 
+blow to the position of Hungary.  In 1467, a conflict arose between Matthias and the Moldavian Prince 
+Stephen III, after he became worn out by Hungary's policies and their presence at Kilia.  A revenge lead 
+by Stephen leads to the defeat of Matthias at the Battle of Baia.  Matthias died in 1490 in Vienna, Austria, 
+and his empire collapsed after his death because of the fact that his son was not accepted as king.</English>
+		<French>[H1]Matthias Corvin[\H1][NEWLINE][BOLD]Roi de Hongrie[\BOLD][NEWLINE][BOLD]Dates :[\BOLD] 23 
+Février 1443 - 6 Avril 1490[NEWLINE][PARAGRAPH:2][BOLD]Biographie :[\BOLD][NEWLINE][TAB]Matthias Ier 
+est né en Klausenburg, Transylvanie, qui était le deuxième fils de Jean Hunyadi. Après la mort du père 
+de Mathias, il y avait une lutte entre les différents barons de la Hongrie et de ses Habsbourg Roi. La 
+noblesse et le peuple de Pest enfin venue à l'appui de Matthias comme roi, tandis que la plupart des 
+barons également accepté de le soutenir. [PARAGRAPH: 1] Le 20 janvier 1458, Matthias a été élu roi par 
+la Diète. À ce moment, il était l'otage du roi de Boehme qui relâché à la condition de marier sa fille. 
+Matthias a finalement été couronné après plusieurs guerres avec la Bohême et le nouvel empereur Frédéric 
+III lui a donné la Sainte Couronne. Seul l'âge de 15, Matthias a commencé son règne par la construction 
+de santé publique, d'éducation, et d'un nouveau système juridique. Matthias a également été un fan de 
+l'art et la culture, comme de nombreux artistes étaient présents dans sa cour. [PARAGRAPH: 1] Matthias 
+accédé à l'indépendance en divisant les barons et d'élever une grande armée royale. À cette époque, la 
+Hongrie a atteint sa plus grande étendue territoriale de l'époque. Matthias a été victorieuse dans plusieurs 
+campagnes contre l'Empire ottoman en élevant le royaume de la Hongrie d'être une puissance mondiale. 
+Après cela, Matthias était résolu à conquérir une grande partie du Saint Empire romain germanique. À 
+la fin de son règne, il était dans le contrôle des lieux tels que la Moravie, Silésie, Lusace, la moitié 
+de l'Autriche, et à Vienne. [PARAGRAPH: 1] Bien que Vlad III Dracula, le Prince de la Valachie, de nombreux 
+succès contre l'Empire ottoman, Matthias lui emprisonné après un désaccord entre les deux dirigeants. 
+La Hongrie a décidé d'aider Dracula dans son combat de la menace Ottomans, mais a été assassiné. Ce fut 
+un grand coup porté à la position de la Hongrie. En 1467, un conflit a éclaté entre Matthias et le Prince 
+moldave Étienne III, après avoir usé il est devenu par la Hongrie de la politique et de leur présence 
+à Kilia. Une vengeance dirigé par Stephen conduit à la défaite de Matthias à la bataille de Baia. Matthias 
+est mort en 1490 à Vienne, Autriche, et son empire s'est effondré après sa mort en raison du fait que 
+son fils n'a pas été accepté comme roi.</French>
+		<German>[H1]Matthias Corvinus[\H1][NEWLINE][BOLD]K&#246;nig von Ungarn[\BOLD][NEWLINE][BOLD]Lebte:[\BOLD] 
+23. Februar 1443 - 6. April 1490[NEWLINE][PARAGRAPH:2][BOLD]Hintergrund:[\BOLD][NEWLINE][TAB]Matthias 
+Corvinus war geboren im Klausenburg, Siebenbürgen, war der zweite Sohn von John Hunyadi. Nach dem Tod 
+von Mathias Vater, es war ein Kampf zwischen den verschiedenen Barone Ungarn und seine Habsburger König. 
+Die Leute und die Menschen der Pest schließlich in Unterstützung von Matthias als König, während die 
+meisten Barone sich ferner darin einig, ihn zu unterstützen. [PARAGRAPH: 1] Am 20. Januar 1458, Matthias 
+König gewählt wurde durch die Diät. Zu dieser Zeit war er der Geisel des Königs von Böhme, die unter 
+der Bedingung der Heirat seiner Tochter. Matthias gekrönt wurde schließlich nach mehreren Kriegen mit 
+Böhmen und der neue Kaiser Friedrich III gab ihm die Heilige Krone. Erst im Alter von 15, Matthias begann 
+seine Herrschaft durch den Aufbau der öffentlichen Gesundheit, Bildung, und eine neue Rechtsordnung. 
+Matthias war auch ein Fan von Kunst und Kultur, wie viele Künstler waren anwesend in seinem Gericht. 
+[PARAGRAPH: 1] Matthias Unabhängigkeit, indem man die Freiherren und damit eine große königliche Armee. 
+Zu diesem Zeitpunkt, Ungarn erreichte seine größte territoriale Ausmaß der Ära. Matthias siegte in mehreren 
+Kampagnen gegen das Osmanische Reich durch die Anhebung des Königreichs Ungarn zu einer Welt. Danach, 
+Matthias wurde in der Absicht erobert große Teile des Heiligen Römischen Reiches. Nach dem Ende seiner 
+Regierungszeit, er war bei der Kontrolle von Orten wie Mähren, Schlesien, der Lausitz, die Hälfte von 
+Österreich, und Wien. [PARAGRAPH: 1] Obwohl Vlad III Dracula, Fürst der Walachei, hatte viele Erfolge 
+gegen das Osmanische Reich, Matthias inhaftierten ihn nach einem Streit zwischen den beiden Herrscher. 
+Ungarn beschlossen zu helfen Dracula in seinem Kampf der Osmanen bedroht, sondern ermordet wurde. Dies 
+war ein wichtiger Schlag gegen die Position der Ungarn. In 1467, entstand ein Konflikt zwischen Matthias 
+und der moldauischen Prinzen Stefan, nachdem er getragen von Ungarn die Politik und ihre Präsenz an Kilia. 
+Eine Rache der Leitung von Stephen führt zur Niederlage von Matthias in der Schlacht von Baia. Matthias 
+starb 1490 in Wien, Österreich, und sein Imperium nach seinem Tod aufgrund der Tatsache, dass sein Sohn 
+nicht als König.</German>
+		<Italian>[H1]Mattia Corvino[\H1][NEWLINE][BOLD]Re di Ungheria[\BOLD][NEWLINE][BOLD]Vita:[\BOLD] 23 
+Febbraio 1443 - 6 Aprile 1490[NEWLINE][PARAGRAPH:2][BOLD]Informazioni:[\BOLD][NEWLINE][TAB]Matthias Corvinus 
+è nato a Klausenburg, Transilvania, che era il secondo figlio di Giovanni Hunyadi. Dopo la morte del 
+padre di Mathias, c'è stata una lotta tra i vari baroni Ungheria e la sua Asburgo re. Signori e la gente 
+di Pest, infine, è uscito a sostegno di Mattia come re, mentre la maggior parte dei baroni anche concordato 
+di sostenere lui. [PARAGRAPH: 1] Il 20 gennaio 1458, è stato eletto re Matthias dalla dieta. In questo 
+momento, è stato l'ostaggio del re di Boehme, che rilasciato sotto la condizione di sposarsi con la figlia. 
+Matthias è stato finalmente coronato dopo diverse guerre con la Boemia e il nuovo imperatore Federico 
+III diede la Santa Corona. Solo l'età di 15, Matthias ha iniziato il suo regno con la costruzione di 
+sanità pubblica, l'istruzione, e di un nuovo sistema giuridico. Matthias è stato anche un appassionato 
+di arte e di cultura, come molti artisti erano presenti nella sua corte. [PARAGRAPH: 1] Matthias ottenuto 
+l'indipendenza dividendo il baroni e di elevare un grande esercito reale. In questo momento, l'Ungheria 
+ha raggiunto la sua massima estensione territoriale dell'epoca. Matthias è stato vittorioso in numerose 
+campagne contro l'impero ottomano innalzando il Regno di Ungheria di essere una potenza mondiale. Dopo 
+di che, Matthias era intenti a conquistare gran parte del Sacro Romano Impero. Entro la fine del suo 
+regno, è stato in controllo di luoghi come Moravia, Slesia, Lusazia, la metà di Austria, e Vienna. [PARAGRAPH: 
+1] Sebbene Vlad III Dracula, principe di Valacchia, ha avuto molti successi contro l'Impero ottomano, 
+Matthias imprigionato lui dopo un disaccordo tra i due governanti. L'Ungheria ha deciso di aiutare Dracula 
+nella sua lotta contro la minaccia del ottomani, ma è stato assassinato. Questo è stato un grande colpo 
+per la posizione di Ungheria. Nel 1467, una sorta di conflitto tra la Moldavia e Matthias principe Stefano 
+III, dopo che è divenuto consumato da Ungheria politiche e la loro presenza a Kilia. Una vendetta piombo 
+da Stephen porta alla sconfitta di Mattia nella battaglia di Baia. Matthias morto nel 1490 a Vienna, 
+Austria, e il suo impero è crollato dopo la sua morte a causa del fatto che suo figlio non è stato accettato 
+come re.</Italian>
+		<Spanish>[H1]Matías Corvino[\H1][NEWLINE][BOLD]Rey de Hungría[\BOLD][NEWLINE][BOLD]Vivi&#243;:[\BOLD] 
+23 de Febrero de 1443 - 6 de Abril de 1490[NEWLINE][PARAGRAPH:2][BOLD]Historia:[\BOLD][NEWLINE][TAB]Matthias 
+Corvinus nació en Klausenburg, Transilvania, que fue el segundo hijo de Juan Hunyadi. Después de la muerte 
+del padre de Matías, hubo una lucha entre los diferentes barones de Hungría y su Habsburg Rey. La aristocracia 
+y el pueblo de las plagas y finalmente salió en apoyo de Matthias como rey, mientras que la mayoría de 
+los barones también estuvo de acuerdo en apoyo de él. [PARAGRAPH: 1] El 20 de Enero, 1458, Matías fue 
+elegido rey por la Dieta. En este momento, él era el rehén del rey de Boehme que liberados con la condición 
+de casarse con su hija. Matthias finalmente fue coronado después de varias guerras con Bohemia y el nuevo 
+emperador Federico III le dio la Santa Corona. Sólo la edad de 15, Matthias comenzó su reinado mediante 
+la construcción de la salud pública, la educación, y un nuevo sistema jurídico. Matthias también es un 
+ventilador del arte y la cultura, como muchos artistas estuvieron presentes en su corte. [PARAGRAPH: 
+1] Matthias accedió a la independencia dividiendo la recaudación de los barones y un gran ejército real. 
+En este momento, Hungría alcanzó su máxima extensión territorial de la época. Matthias fue victorioso 
+en varias campañas contra el Imperio Otomano por elevar el Reino de Hungría a ser una potencia mundial. 
+Después de eso, Matthias intención era conquistar gran parte del Sacro Imperio Romano. Al final de su 
+reinado, fue en el control de lugares como Moravia, Silesia, Lusacia, la mitad de Austria, y Viena. [PARAGRAPH: 
+1] Aunque Vlad III Drácula, príncipe de Valaquia, había muchos éxitos contra el Imperio Otomano, Matthias 
+lo encarcelaron después de un desacuerdo entre los dos gobernantes. Hungría decidió ayudar a Drácula 
+en su lucha de la amenazando otomanos, pero fue asesinado. Esto fue un gran golpe a la posición de Hungría. 
+En 1467, surge un conflicto entre Matthias y el moldavo Stephen Prince III, después de que él se convirtió 
+en llevarse a cabo por las políticas de Hungría y su presencia en Kilia. A la venganza conducir por Stephen 
+conduce a la derrota de Matthias en la Batalla de Baia. Matthias murió en 1490 en Viena, Austria, y su 
+imperio se derrumbó después de su muerte por el hecho de que su hijo no fue aceptado como rey.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_MATTHIAS_1</Tag>
+		<English>Welcome to this beautiful land, [CT_NAME].  I hope that you bring peace with you, for he who greets with a stick, will be answered with a club.</English>
+		<French>Bienvenue dans ce beau pays, [CT_NAME]. J'espère que vous apporter la paix avec vous, car celui qui accueille avec un bâton, et il sera répondu dans un club.</French>
+		<German>Willkommen auf dieser schönen Landschaft, [CT_NAME]. Ich hoffe, dass Sie, die Frieden mit Ihnen, für die er begrüßt, die mit einem Stock, wird beantwortet mit einem Verein.</German>
+		<Italian>Benvenuti in questa bella terra, [CT_NAME]. Spero che lei portare la pace con voi, per lui che saluta con un bastone, verrà risposto con un club.</Italian>
+		<Spanish>Bienvenidos a esta hermosa tierra, [CT_NAME]. Espero que lograr la paz con usted, por el que saluda con un palo, será respondido con un club.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BUDAPEST</Tag>
+		<English>Budapest</English>
+		<French>
+			<Text>Budapest</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Budapest</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Budapest</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Budapest</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ESZTERGOM</Tag>
+		<English>Esztergom</English>
+		<French>
+			<Text>Esztergom</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Esztergom</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Esztergom</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Esztergom</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SZEKESFEHERVAR</Tag>
+		<English>Szekesfehervar</English>
+		<French>
+			<Text>Szekesfehervar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Szekesfehervar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Szekesfehervar</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Szekesfehervar</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DEBRECEN</Tag>
+		<English>Debrecen</English>
+		<French>
+			<Text>Debrecen</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Debrecen</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Debrecen</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Debrecen</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MISKOLC</Tag>
+		<English>Miskolc</English>
+		<French>
+			<Text>Miskolc</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Miskolc</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Miskolc</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Miskolc</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SZEGED</Tag>
+		<English>Szeged</English>
+		<French>
+			<Text>Szeged</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Szeged</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Szeged</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Szeged</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PECS</Tag>
+		<English>Pecs</English>
+		<French>
+			<Text>Pecs</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Pecs</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Pecs</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Pecs</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GYOR</Tag>
+		<English>Gyor</English>
+		<French>
+			<Text>Gyor</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Gyor</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Gyor</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Gyor</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NYIREGYHAZA</Tag>
+		<English>Nyiregyhaza</English>
+		<French>
+			<Text>Nyiregyhaza</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Nyiregyhaza</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Nyiregyhaza</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Nyiregyhaza</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KECSKEMET</Tag>
+		<English>Kecskemet</English>
+		<French>
+			<Text>Kecskemet</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kecskemet</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kecskemet</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kecskemet</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SZOMBATHELY</Tag>
+		<English>Szombathely</English>
+		<French>
+			<Text>Szombathely</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Szombathely</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Szombathely</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Szombathely</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SZOLNOK</Tag>
+		<English>Szolnok</English>
+		<French>
+			<Text>Szolnok</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Szolnok</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Szolnok</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Szolnok</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TATABANYA</Tag>
+		<English>Tatabanya</English>
+		<French>
+			<Text>Tatabanya</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Tatabanya</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Tatabanya</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Tatabanya</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KAPOSVAR</Tag>
+		<English>Kaposvar</English>
+		<French>
+			<Text>Kaposvar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kaposvar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kaposvar</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kaposvar</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BEKESCSABA</Tag>
+		<English>Bekescsaba</English>
+		<French>
+			<Text>Bekescsaba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Bekescsaba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Bekescsaba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Bekescsaba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VESZPREM</Tag>
+		<English>Veszprem</English>
+		<French>
+			<Text>Veszprem</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Veszprem</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Veszprem</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Veszprem</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ZALAEGERSZEG</Tag>
+		<English>Zalaegerszeg</English>
+		<French>
+			<Text>Zalaegerszeg</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Zalaegerszeg</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Zalaegerszeg</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Zalaegerszeg</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ERD</Tag>
+		<English>Erd</English>
+		<French>
+			<Text>Erd</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Erd</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Erd</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Erd</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_EGER</Tag>
+		<English>Eger</English>
+		<French>
+			<Text>Eger</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Eger</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Eger</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Eger</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SOPRON</Tag>
+		<English>Sopron</English>
+		<French>
+			<Text>Sopron</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Sopron</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Sopron</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Sopron</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DUNAUJVAROS</Tag>
+		<English>Dunaujvaros</English>
+		<French>
+			<Text>Dunaujvaros</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Dunaujvaros</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Dunaujvaros</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Dunaujvaros</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NAGYKANIZSA</Tag>
+		<English>Nagykanizsa</English>
+		<French>
+			<Text>Nagykanizsa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Nagykanizsa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Nagykanizsa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Nagykanizsa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_HODMEZOVASARHELY</Tag>
+		<English>Hodmezovasarhely</English>
+		<French>
+			<Text>Hodmezovasarhely</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Hodmezovasarhely</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Hodmezovasarhely</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Hodmezovasarhely</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SALGOTARJAN</Tag>
+		<English>Salgotarjan</English>
+		<French>
+			<Text>Salgotarjan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Salgotarjan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Salgotarjan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Salgotarjan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BAJA</Tag>
+		<English>Baja</English>
+		<French>
+			<Text>Baja</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Baja</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Baja</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Baja</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CEGLED</Tag>
+		<English>Cegled</English>
+		<French>
+			<Text>Cegled</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Cegled</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Cegled</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Cegled</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_OZD</Tag>
+		<English>Ozd</English>
+		<French>
+			<Text>Ozd</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ozd</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ozd</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ozd</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SZEKSZARD</Tag>
+		<English>Szekszard</English>
+		<French>
+			<Text>Szekszard</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Szekszard</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Szekszard</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Szekszard</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VAC</Tag>
+		<English>Vac</English>
+		<French>
+			<Text>Vac</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Vac</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Vac</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Vac</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PAPA</Tag>
+		<English>Papa</English>
+		<French>
+			<Text>Papa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Papa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Papa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Papa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GYONGYOS</Tag>
+		<English>Gyongyos</English>
+		<French>
+			<Text>Gyongyos</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Gyongyos</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Gyongyos</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Gyongyos</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GYULA</Tag>
+		<English>Gyula</English>
+		<French>
+			<Text>Gyula</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Gyula</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Gyula</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Gyula</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KISFUNFELEGYHAZA</Tag>
+		<English>Kiskunfelegyhaza</English>
+		<French>
+			<Text>Kiskunfelegyhaza</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kiskunfelegyhaza</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kiskunfelegyhaza</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kiskunfelegyhaza</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_HAJDUBOSZORMENY</Tag>
+		<English>Hajduboszormeny</English>
+		<French>
+			<Text>Hajduboszormeny</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Hajduboszormeny</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Hajduboszormeny</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Hajduboszormeny</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KAZINCBARCIKA</Tag>
+		<English>Kazincbarcika</English>
+		<French>
+			<Text>Kazincbarcika</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kazincbarcika</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kazincbarcika</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kazincbarcika</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GODOLLO</Tag>
+		<English>Godollo</English>
+		<French>
+			<Text>Godollo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Godollo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Godollo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Godollo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_AJKA</Tag>
+		<English>Ajka</English>
+		<French>
+			<Text>Ajka</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ajka</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ajka</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ajka</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_OROSHAZA</Tag>
+		<English>Oroshaza</English>
+		<French>
+			<Text>Oroshaza</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Oroshaza</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Oroshaza</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Oroshaza</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SZENTES</Tag>
+		<English>Szentes</English>
+		<French>
+			<Text>Szentes</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Szentes</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Szentes</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Szentes</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MOSONMAGYAROVAR</Tag>
+		<English>Mosonmagyarovar</English>
+		<French>
+			<Text>Mosonmagyarovar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mosonmagyarovar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Mosonmagyarovar</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mosonmagyarovar</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DUNAKESZI</Tag>
+		<English>Dunakeszi</English>
+		<French>
+			<Text>Dunakeszi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Dunakeszi</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Dunakeszi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Dunakeszi</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KISKUNHALAS</Tag>
+		<English>Kiskunhalas</English>
+		<French>
+			<Text>Kiskunhalas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Kiskunhalas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Kiskunhalas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Kiskunhalas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+</Civ4GameText>

@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- Modified by the Civ Gold Team -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BULGARIA_DESC</Tag>
+		<English>Bulgarian Empire</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BULGARIA_SHORT_DESC</Tag>
+		<English>Bulgaria</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BULGARIA_ADJECTIVE</Tag>
+		<English>Bulgarian</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_BULGARIA_PEDIA</Tag>
+		<English>[TAB]The Kingdom of Bulgaria is located in the southeast of the European continent, and occupies 
+most of the Balkan Peninsula. Bulgaria is bordered on the west by Serbia, in the south by Greece, and 
+in the north by Romania.  The Balkan Peninsula that the Bulgarians inhabited was occupied by various 
+other civilizations, including the Thracians, Slavs, Romans, and Muslims, and Bulgaria is now associated 
+with having a very rich, eclectic culture as a result. [PARAGRAPH:2]Bulgaria emerged and received official 
+recognition following two victories over the cosmopolitan Byzantine empire in 681 A.D. The new Bulgarian 
+state united Proto-Bulgarians, Slavs and the native population, which consisted mainly of Thracians. 
+Its borders in the centuries that followed varied between the Black Sea, the Aegean and the Adriatic 
+Sea. Included into its border for a long time were the central and northeastern parts of the Balkan Peninsula 
+where traces of human life have been found from the end of the early paleolithic period, dating 200,000 
+years. A centre of civilization, considered to be the earliest in Europe and comparable to ancient Egypt 
+and Mesopotamia, has been found in this region and mainly in the plains to the north and south of the 
+Balkan Range during archaeological excavations. It has been established that the people who lived in 
+the farming communities of the Early and New Stone Age were familiar with metal casting and applied it 
+independently of other early civilizations.[PARAGRAPH:2] The relations between Bulgaria and Byzantium 
+from the foundation of the Bulgarian state in 681 to the end of the fourteenth century when Bulgaria 
+was conquered by the Ottomans, had two major features. The Bulgarian rulers, on the one hand, aspired 
+to conquer Constantinople and inherit the empire. On the other hand, the Byzantines regarded the Bulgarian 
+state as temporarily holding imperial territory and tried by various means - wars, political dealing 
+and manoeuvering, religion and culture, to subjugate it. Byzantium eventually succeeded in conquering 
+the Bulgarian state and kept it for more than a century and a half - from 1018 to 1187. For this reason 
+the history of Mediaeval Bulgaria is divided into three periods: the First Bulgarian Kingdom, Byzantine 
+domination and the Second Bulgarian Kingdom.[PARAGRAPH:3] tbc</English>
+	</TEXT>
+	<!-- Bulgarian Leaders -->
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_ASPARUH</Tag>
+		<English>Khan Asparuh</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_ASPARUH_PEDIA</Tag>
+		<English>[H1]Asparuh [\H1][NEWLINE][BOLD]Khan of Bulgaria [\BOLD][NEWLINE][BOLD]Lived: [\BOLD] ??? - 701[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Khan Asparuh is the fifth child of khan Kubrat. Guided by his people to the south, after passing the river he have done an alliance with the 'League of the seven slav clans'. In 681, after a few victories over the byzantine emperor, a covenant of peace has been concluded and begins to pay taxes to Bulgaria. The historians say that this is the beginning of the new country.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_ASPARUH</Tag>
+		<English>Welcome to my lands, [CT_NAME]. The [OUR_EMPIRE] advises that you only stretch as far as your blanket reaches.</English>
+		<French>Welcome to my lands, [CT_NAME]. The [OUR_EMPIRE] advises that you only stretch as far as your blanket reaches.</French>
+		<German>Welcome to my lands, [CT_NAME]. The [OUR_EMPIRE] advises that you only stretch as far as your blanket reaches.</German>
+		<Italian>Welcome to my lands, [CT_NAME]. The [OUR_EMPIRE] advises that you only stretch as far as your blanket reaches.</Italian>
+		<Spanish>Welcome to my lands, [CT_NAME]. The [OUR_EMPIRE] advises that you only stretch as far as your blanket reaches.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PLISKA</Tag>
+		<English>Pliska</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PRESLAV</Tag>
+		<English>Preslav</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SOFIA</Tag>
+		<English>Sofia</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PLOVDIV</Tag>
+		<English>Plovdiv</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VARNA</Tag>
+		<English>Varna</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BURGAS</Tag>
+		<English>Burgas</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_RUSE</Tag>
+		<English>Ruse</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DOBRICH</Tag>
+		<English>Dobrich</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GABROVO</Tag>
+		<English>Gabrovo</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_HASKOVO</Tag>
+		<English>Haskovo</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KURDZHALI</Tag>
+		<English>Kurdzhali</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KYUSTENDIL</Tag>
+		<English>Kyustendil</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LOVECH</Tag>
+		<English>Lovech</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MONTANA</Tag>
+		<English>Montana</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PAZARDJIK</Tag>
+		<English>Pazardjik</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PERNIK</Tag>
+		<English>Pernik</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PLEVEN</Tag>
+		<English>Pleven</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_RAZGRAD</Tag>
+		<English>Razgrad</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SHUMEN</Tag>
+		<English>Shumen</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SILISTRA</Tag>
+		<English>Silistra</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SLIVEN</Tag>
+		<English>Sliven</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SMOLYAN</Tag>
+		<English>Smolyan</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_STARA_ZAGORA</Tag>
+		<English>Stara Zagora</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TURGOVISHTE</Tag>
+		<English>Turgovishte</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VELIKO_TURNOVO</Tag>
+		<English>Veliko Turnovo</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VIDIN</Tag>
+		<English>Vidin</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VRATZA</Tag>
+		<English>Vratza</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_YAMBOL</Tag>
+		<English>Yambol</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KAZANLUK</Tag>
+		<English>Kazanluk</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KARNOBAT</Tag>
+		<English>Karnobat</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NESSEBUR</Tag>
+		<English>Nessebur</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ELHOVO</Tag>
+		<English>Elhovo</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LOM</Tag>
+		<English>Lom</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BYALA</Tag>
+		<English>Byala</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KAVARNA</Tag>
+		<English>Kavarna</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NOVI_PAZAR</Tag>
+		<English>Novi Pazar</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CHIRPAN</Tag>
+		<English>Chirpan</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_IHTIMAN</Tag>
+		<English>Ihtiman</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SEVLIEVO</Tag>
+		<English>Sevlievo</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SVILENGRAD</Tag>
+		<English>Svilengrad</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_RADNEVO</Tag>
+		<English>Radnevo</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TUTRAKAN</Tag>
+		<English>Tutrakan</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DUPNICA</Tag>
+		<English>Dupnica</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_RAZLOG</Tag>
+		<English>Razlog</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PROVADIA</Tag>
+		<English>Provadia</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BALCHIK</Tag>
+		<English>Balchik</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TROYAN</Tag>
+		<English>Troyan</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SVISHTOV</Tag>
+		<English>Svishtov</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KOZLODUI</Tag>
+		<English>Kozlodui</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DEVNYA</Tag>
+		<English>Devnya</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ELIN_PELIN</Tag>
+		<English>Elin Pelin</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KARLOVO</Tag>
+		<English>Karlovo</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KALOFER</Tag>
+		<English>Kalofer</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAMOKOV</Tag>
+		<English>Samokov</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_HARMANLI</Tag>
+		<English>Harmanli</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KUBRAT</Tag>
+		<English>Kubrat</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SANDANSKI</Tag>
+		<English>Sandanski</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MEZDRA</Tag>
+		<English>Mezdra</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NIKOPOL</Tag>
+		<English>Nikopol</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_AYTOS</Tag>
+		<English>Aytos</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_RADOMIR</Tag>
+		<English>Radomir</English>
+	</TEXT>
+</Civ4GameText>

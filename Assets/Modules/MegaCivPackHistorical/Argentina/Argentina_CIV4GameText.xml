@@ -1,0 +1,1237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- ReModified by the StrategyOnly -->
+<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ARGENTINA_DESC</Tag>
+		<English>Argentinian Empire</English>
+		<French>Argentinian Empire</French>
+		<German>Argentinian Empire</German>
+		<Italian>Argentinian Empire</Italian>
+		<Spanish>Argentinian Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ARGENTINA_SHORT_DESC</Tag>
+		<English>Argentina</English>
+		<French>Argentina</French>
+		<German>Argentina</German>
+		<Italian>Argentina</Italian>
+		<Spanish>Argentina</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ARGENTINA_PEDIA</Tag>
+		<English>[TAB]The first signs of human presence in Argentina are located in the Patagonia (Piedra Museo, Santa Cruz), and date from 11,000 BC. Around 1 AD, several corn-based civilizations developed in the western and northwestern Andean region (Ansilta, Condorhuasi, Cienaga, Aguada, Santa Maria, Huarpes, Diaguitas, Sanavirones, among others); some of them were conquered by the Quechuas and integrated into the Inca Empire as a region called Tucma or Tucumán. In the northestern area, the Guaraní developed a culture based on yuca and sweet potato. The central and southern areas (Pampas and Patagonia) were dominated by nomadic cultures, unified in the 17th century by the Mapuches, and never conquered by the Europeans.[PARAGRAPH:2]Europeans arrived in 1502. Spain established a permanent colony on the site of Buenos Aires in 1580, and the Viceroyalty of the Río de la Plata in 1776. In 1806 and 1807 the British Empire invaded the Viceroyalty, but the creole population managed to repel the invasions. On May 25, 1810, after the confirmation of the rumors about the overthrow of King Ferdinand VII by Napoleon, the most prominent citizens of Buenos Aires took advantage of the situation and created the First Government Junta. Independence from Spain was declared on July 9, 1816. Centralist and federationist groups were in conflict until national unity was established and the constitution promulgated in 1853.[PARAGRAPH:2]From 1880 to 1930, Argentina enjoyed increasing prosperity and prominence. Conservative forces dominated Argentine politics until 1916, when their traditional rivals, the Radicals, won control of the government. The military forced Hipólito Yrigoyen from power in 1930, leading to another decade of Conservative rule. Political change led to the presidency of Juan Perón in 1946, who tried to empower the working class and greatly expanded the number of unionized workers. The Revolución Libertadora of 1955 deposed him.[PARAGRAPH:2]From the 1950s to 1970s, military and civilian administrations traded power. The armed forces took power through a junta in charge of the self-appointed National Reorganization Process until 1983. The armed forces repressed opposition using harsh illegal measures (the "Dirty War"). Democracy was restored in 1983. Raúl Alfonsín's Radical government took steps to account for the "disappeared", established civilian control of the armed forces, and consolidated democratic institutions. the country started implementing new policies based on re-industrialization, import substitution, increased exports, and consistent fiscal surplus in 2002.</English>
+		<French>[TAB]The first signs of human presence in Argentina are located in the Patagonia (Piedra Museo, Santa Cruz), and date from 11,000 BC. Around 1 AD, several corn-based civilizations developed in the western and northwestern Andean region (Ansilta, Condorhuasi, Cienaga, Aguada, Santa Maria, Huarpes, Diaguitas, Sanavirones, among others); some of them were conquered by the Quechuas and integrated into the Inca Empire as a region called Tucma or Tucumán. In the northestern area, the Guaraní developed a culture based on yuca and sweet potato. The central and southern areas (Pampas and Patagonia) were dominated by nomadic cultures, unified in the 17th century by the Mapuches, and never conquered by the Europeans.[PARAGRAPH:2]Europeans arrived in 1502. Spain established a permanent colony on the site of Buenos Aires in 1580, and the Viceroyalty of the Río de la Plata in 1776. In 1806 and 1807 the British Empire invaded the Viceroyalty, but the creole population managed to repel the invasions. On May 25, 1810, after the confirmation of the rumors about the overthrow of King Ferdinand VII by Napoleon, the most prominent citizens of Buenos Aires took advantage of the situation and created the First Government Junta. Independence from Spain was declared on July 9, 1816. Centralist and federationist groups were in conflict until national unity was established and the constitution promulgated in 1853.[PARAGRAPH:2]From 1880 to 1930, Argentina enjoyed increasing prosperity and prominence. Conservative forces dominated Argentine politics until 1916, when their traditional rivals, the Radicals, won control of the government. The military forced Hipólito Yrigoyen from power in 1930, leading to another decade of Conservative rule. Political change led to the presidency of Juan Perón in 1946, who tried to empower the working class and greatly expanded the number of unionized workers. The Revolución Libertadora of 1955 deposed him.[PARAGRAPH:2]From the 1950s to 1970s, military and civilian administrations traded power. The armed forces took power through a junta in charge of the self-appointed National Reorganization Process until 1983. The armed forces repressed opposition using harsh illegal measures (the "Dirty War"). Democracy was restored in 1983. Raúl Alfonsín's Radical government took steps to account for the "disappeared", established civilian control of the armed forces, and consolidated democratic institutions. the country started implementing new policies based on re-industrialization, import substitution, increased exports, and consistent fiscal surplus in 2002.</French>
+		<German>[TAB]The first signs of human presence in Argentina are located in the Patagonia (Piedra Museo, Santa Cruz), and date from 11,000 BC. Around 1 AD, several corn-based civilizations developed in the western and northwestern Andean region (Ansilta, Condorhuasi, Cienaga, Aguada, Santa Maria, Huarpes, Diaguitas, Sanavirones, among others); some of them were conquered by the Quechuas and integrated into the Inca Empire as a region called Tucma or Tucumán. In the northestern area, the Guaraní developed a culture based on yuca and sweet potato. The central and southern areas (Pampas and Patagonia) were dominated by nomadic cultures, unified in the 17th century by the Mapuches, and never conquered by the Europeans.[PARAGRAPH:2]Europeans arrived in 1502. Spain established a permanent colony on the site of Buenos Aires in 1580, and the Viceroyalty of the Río de la Plata in 1776. In 1806 and 1807 the British Empire invaded the Viceroyalty, but the creole population managed to repel the invasions. On May 25, 1810, after the confirmation of the rumors about the overthrow of King Ferdinand VII by Napoleon, the most prominent citizens of Buenos Aires took advantage of the situation and created the First Government Junta. Independence from Spain was declared on July 9, 1816. Centralist and federationist groups were in conflict until national unity was established and the constitution promulgated in 1853.[PARAGRAPH:2]From 1880 to 1930, Argentina enjoyed increasing prosperity and prominence. Conservative forces dominated Argentine politics until 1916, when their traditional rivals, the Radicals, won control of the government. The military forced Hipólito Yrigoyen from power in 1930, leading to another decade of Conservative rule. Political change led to the presidency of Juan Perón in 1946, who tried to empower the working class and greatly expanded the number of unionized workers. The Revolución Libertadora of 1955 deposed him.[PARAGRAPH:2]From the 1950s to 1970s, military and civilian administrations traded power. The armed forces took power through a junta in charge of the self-appointed National Reorganization Process until 1983. The armed forces repressed opposition using harsh illegal measures (the "Dirty War"). Democracy was restored in 1983. Raúl Alfonsín's Radical government took steps to account for the "disappeared", established civilian control of the armed forces, and consolidated democratic institutions. the country started implementing new policies based on re-industrialization, import substitution, increased exports, and consistent fiscal surplus in 2002.</German>
+		<Italian>[TAB]The first signs of human presence in Argentina are located in the Patagonia (Piedra Museo, Santa Cruz), and date from 11,000 BC. Around 1 AD, several corn-based civilizations developed in the western and northwestern Andean region (Ansilta, Condorhuasi, Cienaga, Aguada, Santa Maria, Huarpes, Diaguitas, Sanavirones, among others); some of them were conquered by the Quechuas and integrated into the Inca Empire as a region called Tucma or Tucumán. In the northestern area, the Guaraní developed a culture based on yuca and sweet potato. The central and southern areas (Pampas and Patagonia) were dominated by nomadic cultures, unified in the 17th century by the Mapuches, and never conquered by the Europeans.[PARAGRAPH:2]Europeans arrived in 1502. Spain established a permanent colony on the site of Buenos Aires in 1580, and the Viceroyalty of the Río de la Plata in 1776. In 1806 and 1807 the British Empire invaded the Viceroyalty, but the creole population managed to repel the invasions. On May 25, 1810, after the confirmation of the rumors about the overthrow of King Ferdinand VII by Napoleon, the most prominent citizens of Buenos Aires took advantage of the situation and created the First Government Junta. Independence from Spain was declared on July 9, 1816. Centralist and federationist groups were in conflict until national unity was established and the constitution promulgated in 1853.[PARAGRAPH:2]From 1880 to 1930, Argentina enjoyed increasing prosperity and prominence. Conservative forces dominated Argentine politics until 1916, when their traditional rivals, the Radicals, won control of the government. The military forced Hipólito Yrigoyen from power in 1930, leading to another decade of Conservative rule. Political change led to the presidency of Juan Perón in 1946, who tried to empower the working class and greatly expanded the number of unionized workers. The Revolución Libertadora of 1955 deposed him.[PARAGRAPH:2]From the 1950s to 1970s, military and civilian administrations traded power. The armed forces took power through a junta in charge of the self-appointed National Reorganization Process until 1983. The armed forces repressed opposition using harsh illegal measures (the "Dirty War"). Democracy was restored in 1983. Raúl Alfonsín's Radical government took steps to account for the "disappeared", established civilian control of the armed forces, and consolidated democratic institutions. the country started implementing new policies based on re-industrialization, import substitution, increased exports, and consistent fiscal surplus in 2002.</Italian>
+		<Spanish>[TAB]The first signs of human presence in Argentina are located in the Patagonia (Piedra Museo, Santa Cruz), and date from 11,000 BC. Around 1 AD, several corn-based civilizations developed in the western and northwestern Andean region (Ansilta, Condorhuasi, Cienaga, Aguada, Santa Maria, Huarpes, Diaguitas, Sanavirones, among others); some of them were conquered by the Quechuas and integrated into the Inca Empire as a region called Tucma or Tucumán. In the northestern area, the Guaraní developed a culture based on yuca and sweet potato. The central and southern areas (Pampas and Patagonia) were dominated by nomadic cultures, unified in the 17th century by the Mapuches, and never conquered by the Europeans.[PARAGRAPH:2]Europeans arrived in 1502. Spain established a permanent colony on the site of Buenos Aires in 1580, and the Viceroyalty of the Río de la Plata in 1776. In 1806 and 1807 the British Empire invaded the Viceroyalty, but the creole population managed to repel the invasions. On May 25, 1810, after the confirmation of the rumors about the overthrow of King Ferdinand VII by Napoleon, the most prominent citizens of Buenos Aires took advantage of the situation and created the First Government Junta. Independence from Spain was declared on July 9, 1816. Centralist and federationist groups were in conflict until national unity was established and the constitution promulgated in 1853.[PARAGRAPH:2]From 1880 to 1930, Argentina enjoyed increasing prosperity and prominence. Conservative forces dominated Argentine politics until 1916, when their traditional rivals, the Radicals, won control of the government. The military forced Hipólito Yrigoyen from power in 1930, leading to another decade of Conservative rule. Political change led to the presidency of Juan Perón in 1946, who tried to empower the working class and greatly expanded the number of unionized workers. The Revolución Libertadora of 1955 deposed him.[PARAGRAPH:2]From the 1950s to 1970s, military and civilian administrations traded power. The armed forces took power through a junta in charge of the self-appointed National Reorganization Process until 1983. The armed forces repressed opposition using harsh illegal measures (the "Dirty War"). Democracy was restored in 1983. Raúl Alfonsín's Radical government took steps to account for the "disappeared", established civilian control of the armed forces, and consolidated democratic institutions. the country started implementing new policies based on re-industrialization, import substitution, increased exports, and consistent fiscal surplus in 2002.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_ARGENTINA_ADJECTIVE</Tag>
+		<English>Argentinian</English>
+		<French>Argentinian</French>
+		<German>Argentinian</German>
+		<Italian>Argentinian</Italian>
+		<Spanish>Argentinian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_PERON</Tag>
+		<English>Peron</English>
+		<French>Peron</French>
+		<German>Peron</German>
+		<Italian>Peron</Italian>
+		<Spanish>Peron</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_PERON_PEDIA</Tag>
+		<English>[H1]Juan Peron[\H1][NEWLINE][BOLD]President of Argentina[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1895 - 1974[NEWLINE][PARAGRAPH:1][BOLD]Background:[\BOLD][NEWLINE][TAB]Juan Domingo Peron was an Argentine soldier and politician, elected three times as President of Argentina from 1946 to 1955 and from 1973 to 1974. Peron and his wife Eva were popular among a portion of the Argentine people, particularly because of their efforts to eliminate poverty and to dignify labour. He started the political movement known as Peronism, still popular in Argentina to this day, which professes to be a third way in between capitalism and socialism.[PARAGRAPH:1]In May 1943, as a colonel, he was a significant figure in the military coup by the GOU (United Officers' Group), a secret society, against the conservative civilian government of Ramón Castillo. Initially secretary to Secretary of War General Edelmiro Farrell, under the administration of General Pedro Ramirez, he later became the head of the then-insignificant Department of Labor. Peron's growing power and influence during the military government came from his alliance with a sector of the Argentine labor unions. [PARAGRAPH:1]The popular support gained Peron the presidency in 1946. Peron pursued social policies aimed at empowering the working class. He greatly expanded the number of unionized workers, and helped establish the powerful General Confederation of Labour (CGT), created in 1930. He called this the "third position", between capitalism and communism. Perón also pushed hard to industrialize the country; in 1947 he announced the first five-year plan to boost newly nationalized industries. His ideology would be dubbed Peronism and became a central influence in Argentine political parties.[PARAGRAPH:1]The improvement of the laborers' situation created, in the middle and high classes, a strong feeling against the new industrial workers coming from the rural areas who were treated formerly as servants. In the 1940s the middle and high class students were the first group to oppose Peronist workers, using the slogan: "peon-footwear [=espadrilles] dictatorship, NO!" ("No a la dictadura de las alpargatas"). Another famous painting revealing the strong oposition between peronists and anti-peronist appeared at the high class districts in the 1950s saying, "Long live cancer!" (Viva el cáncer!), when Eva Peron was dying because of the cancer. [PARAGRAPH:1]In contrast to his alleged right-wing tendencies, he resisted the entreaties of the military in 1943 to crack down on homosexuality. Instead he ordered the police and judiciary to let up on their gay-baiting. In addition, Perón promoted the tango, legalized prostitution, granted women's suffrage, recognized divorce, and suppressed former discrimination between first-born and later children.[PARAGRAPH:1]After a military coup, Peron went into exile in Paraguay. Later he lived in Panama, where he met nightclub bolero singer Maria Estela Martinez. Eventually settling in Madrid, Spain, he married Maria Estela Martinez, better known as Isabel, in 1961. Peronism was banned and Peronists were persecuted. Peron's third presidency was marked by an escalating conflict between his left and his right-wing supporters. This turmoil was fueled primarily by Peron's growing ties with former rival Ricardo Balbin, the conservative leader of the Radical Party (UCR); whom the Raul Alfonsin led opposition considered a right-wing radical.</English>
+		<French>[H1]Juan Peron[\H1][NEWLINE][BOLD]President of Argentina[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1895 - 1974[NEWLINE][PARAGRAPH:1][BOLD]Background:[\BOLD][NEWLINE][TAB]Juan Domingo Peron was an Argentine soldier and politician, elected three times as President of Argentina from 1946 to 1955 and from 1973 to 1974. Peron and his wife Eva were popular among a portion of the Argentine people, particularly because of their efforts to eliminate poverty and to dignify labour. He started the political movement known as Peronism, still popular in Argentina to this day, which professes to be a third way in between capitalism and socialism.[PARAGRAPH:1]In May 1943, as a colonel, he was a significant figure in the military coup by the GOU (United Officers' Group), a secret society, against the conservative civilian government of Ramón Castillo. Initially secretary to Secretary of War General Edelmiro Farrell, under the administration of General Pedro Ramirez, he later became the head of the then-insignificant Department of Labor. Peron's growing power and influence during the military government came from his alliance with a sector of the Argentine labor unions. [PARAGRAPH:1]The popular support gained Peron the presidency in 1946. Peron pursued social policies aimed at empowering the working class. He greatly expanded the number of unionized workers, and helped establish the powerful General Confederation of Labour (CGT), created in 1930. He called this the "third position", between capitalism and communism. Perón also pushed hard to industrialize the country; in 1947 he announced the first five-year plan to boost newly nationalized industries. His ideology would be dubbed Peronism and became a central influence in Argentine political parties.[PARAGRAPH:1]The improvement of the laborers' situation created, in the middle and high classes, a strong feeling against the new industrial workers coming from the rural areas who were treated formerly as servants. In the 1940s the middle and high class students were the first group to oppose Peronist workers, using the slogan: "peon-footwear [=espadrilles] dictatorship, NO!" ("No a la dictadura de las alpargatas"). Another famous painting revealing the strong oposition between peronists and anti-peronist appeared at the high class districts in the 1950s saying, "Long live cancer!" (Viva el cáncer!), when Eva Peron was dying because of the cancer. [PARAGRAPH:1]In contrast to his alleged right-wing tendencies, he resisted the entreaties of the military in 1943 to crack down on homosexuality. Instead he ordered the police and judiciary to let up on their gay-baiting. In addition, Perón promoted the tango, legalized prostitution, granted women's suffrage, recognized divorce, and suppressed former discrimination between first-born and later children.[PARAGRAPH:1]After a military coup, Peron went into exile in Paraguay. Later he lived in Panama, where he met nightclub bolero singer Maria Estela Martinez. Eventually settling in Madrid, Spain, he married Maria Estela Martinez, better known as Isabel, in 1961. Peronism was banned and Peronists were persecuted. Peron's third presidency was marked by an escalating conflict between his left and his right-wing supporters. This turmoil was fueled primarily by Peron's growing ties with former rival Ricardo Balbin, the conservative leader of the Radical Party (UCR); whom the Raul Alfonsin led opposition considered a right-wing radical.</French>
+		<German>[H1]Juan Peron[\H1][NEWLINE][BOLD]President of Argentina[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1895 - 1974[NEWLINE][PARAGRAPH:1][BOLD]Background:[\BOLD][NEWLINE][TAB]Juan Domingo Peron was an Argentine soldier and politician, elected three times as President of Argentina from 1946 to 1955 and from 1973 to 1974. Peron and his wife Eva were popular among a portion of the Argentine people, particularly because of their efforts to eliminate poverty and to dignify labour. He started the political movement known as Peronism, still popular in Argentina to this day, which professes to be a third way in between capitalism and socialism.[PARAGRAPH:1]In May 1943, as a colonel, he was a significant figure in the military coup by the GOU (United Officers' Group), a secret society, against the conservative civilian government of Ramón Castillo. Initially secretary to Secretary of War General Edelmiro Farrell, under the administration of General Pedro Ramirez, he later became the head of the then-insignificant Department of Labor. Peron's growing power and influence during the military government came from his alliance with a sector of the Argentine labor unions. [PARAGRAPH:1]The popular support gained Peron the presidency in 1946. Peron pursued social policies aimed at empowering the working class. He greatly expanded the number of unionized workers, and helped establish the powerful General Confederation of Labour (CGT), created in 1930. He called this the "third position", between capitalism and communism. Perón also pushed hard to industrialize the country; in 1947 he announced the first five-year plan to boost newly nationalized industries. His ideology would be dubbed Peronism and became a central influence in Argentine political parties.[PARAGRAPH:1]The improvement of the laborers' situation created, in the middle and high classes, a strong feeling against the new industrial workers coming from the rural areas who were treated formerly as servants. In the 1940s the middle and high class students were the first group to oppose Peronist workers, using the slogan: "peon-footwear [=espadrilles] dictatorship, NO!" ("No a la dictadura de las alpargatas"). Another famous painting revealing the strong oposition between peronists and anti-peronist appeared at the high class districts in the 1950s saying, "Long live cancer!" (Viva el cáncer!), when Eva Peron was dying because of the cancer. [PARAGRAPH:1]In contrast to his alleged right-wing tendencies, he resisted the entreaties of the military in 1943 to crack down on homosexuality. Instead he ordered the police and judiciary to let up on their gay-baiting. In addition, Perón promoted the tango, legalized prostitution, granted women's suffrage, recognized divorce, and suppressed former discrimination between first-born and later children.[PARAGRAPH:1]After a military coup, Peron went into exile in Paraguay. Later he lived in Panama, where he met nightclub bolero singer Maria Estela Martinez. Eventually settling in Madrid, Spain, he married Maria Estela Martinez, better known as Isabel, in 1961. Peronism was banned and Peronists were persecuted. Peron's third presidency was marked by an escalating conflict between his left and his right-wing supporters. This turmoil was fueled primarily by Peron's growing ties with former rival Ricardo Balbin, the conservative leader of the Radical Party (UCR); whom the Raul Alfonsin led opposition considered a right-wing radical.</German>
+		<Italian>[H1]Juan Peron[\H1][NEWLINE][BOLD]President of Argentina[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1895 - 1974[NEWLINE][PARAGRAPH:1][BOLD]Background:[\BOLD][NEWLINE][TAB]Juan Domingo Peron was an Argentine soldier and politician, elected three times as President of Argentina from 1946 to 1955 and from 1973 to 1974. Peron and his wife Eva were popular among a portion of the Argentine people, particularly because of their efforts to eliminate poverty and to dignify labour. He started the political movement known as Peronism, still popular in Argentina to this day, which professes to be a third way in between capitalism and socialism.[PARAGRAPH:1]In May 1943, as a colonel, he was a significant figure in the military coup by the GOU (United Officers' Group), a secret society, against the conservative civilian government of Ramón Castillo. Initially secretary to Secretary of War General Edelmiro Farrell, under the administration of General Pedro Ramirez, he later became the head of the then-insignificant Department of Labor. Peron's growing power and influence during the military government came from his alliance with a sector of the Argentine labor unions. [PARAGRAPH:1]The popular support gained Peron the presidency in 1946. Peron pursued social policies aimed at empowering the working class. He greatly expanded the number of unionized workers, and helped establish the powerful General Confederation of Labour (CGT), created in 1930. He called this the "third position", between capitalism and communism. Perón also pushed hard to industrialize the country; in 1947 he announced the first five-year plan to boost newly nationalized industries. His ideology would be dubbed Peronism and became a central influence in Argentine political parties.[PARAGRAPH:1]The improvement of the laborers' situation created, in the middle and high classes, a strong feeling against the new industrial workers coming from the rural areas who were treated formerly as servants. In the 1940s the middle and high class students were the first group to oppose Peronist workers, using the slogan: "peon-footwear [=espadrilles] dictatorship, NO!" ("No a la dictadura de las alpargatas"). Another famous painting revealing the strong oposition between peronists and anti-peronist appeared at the high class districts in the 1950s saying, "Long live cancer!" (Viva el cáncer!), when Eva Peron was dying because of the cancer. [PARAGRAPH:1]In contrast to his alleged right-wing tendencies, he resisted the entreaties of the military in 1943 to crack down on homosexuality. Instead he ordered the police and judiciary to let up on their gay-baiting. In addition, Perón promoted the tango, legalized prostitution, granted women's suffrage, recognized divorce, and suppressed former discrimination between first-born and later children.[PARAGRAPH:1]After a military coup, Peron went into exile in Paraguay. Later he lived in Panama, where he met nightclub bolero singer Maria Estela Martinez. Eventually settling in Madrid, Spain, he married Maria Estela Martinez, better known as Isabel, in 1961. Peronism was banned and Peronists were persecuted. Peron's third presidency was marked by an escalating conflict between his left and his right-wing supporters. This turmoil was fueled primarily by Peron's growing ties with former rival Ricardo Balbin, the conservative leader of the Radical Party (UCR); whom the Raul Alfonsin led opposition considered a right-wing radical.</Italian>
+		<Spanish>[H1]Juan Peron[\H1][NEWLINE][BOLD]President of Argentina[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] 1895 - 1974[NEWLINE][PARAGRAPH:1][BOLD]Background:[\BOLD][NEWLINE][TAB]Juan Domingo Peron was an Argentine soldier and politician, elected three times as President of Argentina from 1946 to 1955 and from 1973 to 1974. Peron and his wife Eva were popular among a portion of the Argentine people, particularly because of their efforts to eliminate poverty and to dignify labour. He started the political movement known as Peronism, still popular in Argentina to this day, which professes to be a third way in between capitalism and socialism.[PARAGRAPH:1]In May 1943, as a colonel, he was a significant figure in the military coup by the GOU (United Officers' Group), a secret society, against the conservative civilian government of Ramón Castillo. Initially secretary to Secretary of War General Edelmiro Farrell, under the administration of General Pedro Ramirez, he later became the head of the then-insignificant Department of Labor. Peron's growing power and influence during the military government came from his alliance with a sector of the Argentine labor unions. [PARAGRAPH:1]The popular support gained Peron the presidency in 1946. Peron pursued social policies aimed at empowering the working class. He greatly expanded the number of unionized workers, and helped establish the powerful General Confederation of Labour (CGT), created in 1930. He called this the "third position", between capitalism and communism. Perón also pushed hard to industrialize the country; in 1947 he announced the first five-year plan to boost newly nationalized industries. His ideology would be dubbed Peronism and became a central influence in Argentine political parties.[PARAGRAPH:1]The improvement of the laborers' situation created, in the middle and high classes, a strong feeling against the new industrial workers coming from the rural areas who were treated formerly as servants. In the 1940s the middle and high class students were the first group to oppose Peronist workers, using the slogan: "peon-footwear [=espadrilles] dictatorship, NO!" ("No a la dictadura de las alpargatas"). Another famous painting revealing the strong oposition between peronists and anti-peronist appeared at the high class districts in the 1950s saying, "Long live cancer!" (Viva el cáncer!), when Eva Peron was dying because of the cancer. [PARAGRAPH:1]In contrast to his alleged right-wing tendencies, he resisted the entreaties of the military in 1943 to crack down on homosexuality. Instead he ordered the police and judiciary to let up on their gay-baiting. In addition, Perón promoted the tango, legalized prostitution, granted women's suffrage, recognized divorce, and suppressed former discrimination between first-born and later children.[PARAGRAPH:1]After a military coup, Peron went into exile in Paraguay. Later he lived in Panama, where he met nightclub bolero singer Maria Estela Martinez. Eventually settling in Madrid, Spain, he married Maria Estela Martinez, better known as Isabel, in 1961. Peronism was banned and Peronists were persecuted. Peron's third presidency was marked by an escalating conflict between his left and his right-wing supporters. This turmoil was fueled primarily by Peron's growing ties with former rival Ricardo Balbin, the conservative leader of the Radical Party (UCR); whom the Raul Alfonsin led opposition considered a right-wing radical.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_PERON_1</Tag>
+		<English>Greetings to you, [CT_NAME]. A word of advice - if you have a tail of straw, then keep it away from the fire.</English>
+		<French>Greetings to you, [CT_NAME]. A word of advice - if you have a tail of straw, then keep it away from the fire.</French>
+		<German>Greetings to you, [CT_NAME]. A word of advice - if you have a tail of straw, then keep it away from the fire.</German>
+		<Italian>Greetings to you, [CT_NAME]. A word of advice - if you have a tail of straw, then keep it away from the fire.</Italian>
+		<Spanish>Greetings to you, [CT_NAME]. A word of advice - if you have a tail of straw, then keep it away from the fire.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SAN_MARTIN</Tag>
+		<English>San Martin</English>
+		<French>San Martin</French>
+		<German>San Martin</German>
+		<Italian>San Martin</Italian>
+		<Spanish>San Martin</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SAN_MARTIN_PEDIA</Tag>
+		<English>[H1]Jose de San Martin[\H1][NEWLINE][BOLD]Liberator of Chile, 1st President of Peru[\BOLD][NEWLINE][BOLD]Lived: [\BOLD]1778 - 1850[PARAGRAPH:2:1][BOLD]Background:[\BOLD][NEWLINE][TAB]Groomed from a young age for the life of a soldier, Jose de San Martin would grow to lead the Peruvian and Chilean people to independence from Spain. [PARAGRAPH:1]Born in Argentina, but raised in Spain, by the age of 11, Jose de San Martin was already a member of the Spanish armed forces. In the Peninsular War between Spain and France in 1808, San Martin began as an aide to the Spanish leadership; by war's end he had attained the rank of Lieutenant Colonel. [PARAGRAPH:1]In the midst of the war, the Spanish king abdicated from power to be replaced by an appointment of the opposing French. The citizens of Argentina, upon hearing of the Spanish government's state of disarray, decided that there would be no better time to declare independence. When news of the Argentine revolution reached him, San Martin elected to support the rebels' cause, leaving Spain for the New World. Upon his arrival, he was immediately recruited by the rebel forces to begin mustering and training an elite regiment. His regiment, known as the Mounted Grenadiers, became some of the finest troops South America had to offer. [PARAGRAPH:1]Once his troops were ready, the normally reserved drillmaster suggested a daring move - marching an army from Argentina to Chile through the peaks of the Andes. His plan was regarded as madness by many, but San Martin managed to muster more than enough brave souls to join him in the endeavor. Dividing his forces into six columns for easier travel through the difficult terrain, San Martin planned for each column to arrive within two days of one another, a highly unlikely prospect given the extreme terrain and great danger that lay ahead. [PARAGRAPH:1]But on February 12, nearly all four thousand troops stepped out from the shadows of the Andes onto the plains of Chacabuco, prepared to face the numerically superior Spanish forces. Despite having just traversed some of the most inhospitable terrain on earth, San Martin's "Army of the Andes," soundly defeated the Royalists. They then marched on the Chilean capital of Santiago, taking the city with little fuss. Despite what many thought to be a crushing loss on the field of Tacla roughly a month later, Chile was to remain in the hands of San Martin and his revolutionary followers. [PARAGRAPH:1]The citizens of Chile attempted to appoint San Martin governor of their colony, but he refused. He had his sights set on the bastion of Spanish power in South America - Lima, Peru. San Martin took his forces north, offering the Spanish forces in Lima the opportunity to surrender and set up a new constitutional government. Their refusal sealed their fate - in 1821, San Martin marched into Lima, taking the city for the rebels. He was soon proclaimed the first President of Peru. [PARAGRAPH:1]Small pockets of Spanish forces remained scattered throughout the Peruvian countryside and in order to ensure their removal, San Martin requested a conference with Simon Bolivar, the Liberator of the north whose military zone of influence overlapped that of San Martin. [PARAGRAPH:1]The two met in the city of Guayaquil, Ecuador in 1822. What they discussed is unknown, but the result is - on that day San Martin stepped down from his position, leaving the fate of South America in the hands of Bolivar. San Martin had previously displayed a wavering of passion for his cause, but it took the words of Bolivar to force a decision. Upon stepping down, San Martin settled with his wife and children on a farm in Argentina for two years before migrating to Europe, where he spent the remainder of his days moving from country to country in order to escape the numerous revolutions sweeping the continent at the time. He died in France in 1850.</English>
+		<French>[H1]José de San Martín[\H1][NEWLINE][BOLD]Libérateur du Chili, premier président du Pérou[\BOLD][NEWLINE][BOLD]Dates : [\BOLD]1778 - 1850[PARAGRAPH:2:1][BOLD]Biographie :[\BOLD][NEWLINE][TAB]Formé dès son plus jeune âge à une carrière militaire, José de San Martín allait devenir l'homme qui mènerait les peuples chilien et péruvien à s'affranchir de l'Espagne.[PARAGRAPH:1]Né en Argentine, mais élevé en Espagne, José entre à onze ans dans les forces espagnoles armées. San Martín entame la guerre qui oppose l'Espagne à la France en 1808 en tant qu'aide de camp du pouvoir espagnol ; quand elle prend fin, il a atteint le grade de lieutenant-colonel.[PARAGRAPH:1]Alors que la guerre fait rage, le roi espagnol abdique pour être remplacé par un homme à la solde de l'ennemi français. Clairvoyants, les citoyens argentins profitent bien vite de la confusion qui règne dans le gouvernement espagnol pour déclarer leur indépendance. Apprenant cette nouvelle, San Martín se range à la cause des rebelles, quittant l'Espagne pour le Nouveau monde. Dès son arrivée, il est immédiatement recruté par les forces rebelles pour commencer à former et entraîner un régiment d'élite. Son régiment, connu sous le nom de Grenadiers à cheval, devient l'une des meilleures troupes d'Amérique du Sud.[PARAGRAPH:1]Ses hommes prêts, le sergent, sortant de sa réserve habituelle, suggère un plan audacieux : envoyer une armée argentine au Chili en lui faisant traverser les pics des Andes. Son plan est considéré comme de folie pure par de nombreux hommes, mais San Martín parvient à rassembler un grand nombre d'âmes courageuses pour le rejoindre dans son entreprise. Divisant ses forces en six colonnes pour faciliter leur traversée, San Martín escompte voir arriver chaque colonne à deux jours d'intervalle, perspective très peu réaliste si l'on considère le terrain très escarpé et le grand danger qui les attendait.[PARAGRAPH:1]Mais le 12 février, la quasi-totalité des quatre mille troupes émerge des ombres des Andes pour déboucher sur les plaines du Chacabuco, prêtes à affronter les troupes espagnoles supérieures en nombre. Bien qu'ayant traversé l'un des terrains les plus inhospitaliers au monde, "l'Armée des Andes" de San Martín inflige une cuisante défaite aux royalistes. Ils marchent ensuite sur la capitale chilienne, Santiago, prenant la ville sans trop de peine. Malgré ce que certains considèrent comme une défaite écrasante sur le champ de bataille de Tacla un mois plus tard, le Chili reste bien entre les mains de San Martín et de ses adeptes révolutionnaires. [PARAGRAPH:1]Les citoyens du Chili essayent de nommer San Martín gouverneur de leur colonie, mais ce dernier refuse. Il vise le siège du pouvoir espagnol en Amérique du Sud : Lima, au Pérou. San Martín mène ses troupes vers le nord, offrant aux forces espagnoles présentes à Lima l'opportunité de se rendre et d'établir un nouveau gouvernement constitutionnel. Leur refus signe leur perte, et en 1821, San Martín marche sur Lima, offrant la ville aux rebelles. Il est bientôt proclamé président du Pérou. [PARAGRAPH:1]Pour chasser le reste des troupes espagnoles éparpillées à travers la campagne péruvienne, San Martín demande à discuter avec Simon Bolivar, le Libérateur du nord, dont la zone d'influence militaire dépasse de loin celle de San Martín. [PARAGRAPH:1]Les deux hommes se rencontrent dans la ville de Guayaquil, en Equateur, en 1822. Nul ne sait ce qui se dit au cours de cette entrevue, mais le jour suivant, San Martín se retire, laissant ainsi la destinée de l'Amérique du Sud aux mains de Bolivar. San Martín avait déjà perdu une partie de l'intérêt qu'il portait à sa cause, mais il aura fallu les mots de Bolivar pour forcer sa décision. Retiré du pouvoir, San Martín part s'installer avec femme et enfants dans une ferme argentine pendant deux ans avant d'émigrer en Europe, où il passera le reste de ses jours à émigrer de pays en pays afin d'échapper aux nombreuses révolutions qui balayaient le continent à cette époque. Il meurt en France en 1850.</French>
+		<German>[H1]José de San Martín[\H1][NEWLINE][BOLD]Befreier von Chile, 1. Präsident von Peru[\BOLD][NEWLINE][BOLD]Lebte: [\BOLD]1778 - 1850[PARAGRAPH:2:1][BOLD]Hintergrund:[\BOLD][NEWLINE][TAB]José de San Martín war schon in jungen Jahren auf das Leben als Soldat ausgerichtet; er wuchs heran, um das Volk von Peru und Chile in die Unabhängigkeit von Spanien zu führen. [PARAGRAPH:1]José de San Martín wurde in Argentinien geboren, wuchs in Spanien auf und war im Alter von 11 Jahren bereits Mitglied der spanischen Armee. Während des Krieges auf der iberischen Halbinsel 1808 zwischen Spanien und Frankreich begann San Martín als Berater der spanischen Führung, und bis zum Ende des Krieges hatte er den Rang eines Oberstleutnants inne. [PARAGRAPH:1]Im Verlauf des Krieges musste der spanische König abdanken und wurde durch einen Vertreter der gegnerischen Franzosen ersetzt. Als die Bürger Argentiniens von dem ungeordneten Zustand der spanischen Regierung erfuhren, beschlossen sie, dass es keinen besseren Moment geben konnte, die Unabhängigkeit zu erklären. Als ihn die Nachricht von der argentinischen Revolution erreichte, entschloss sich San Martín, die Sache der Rebellen zu unterstützen, und so brach er von Spanien in die Neue Welt auf. Bei seiner Ankunft wurde er sofort von den Rebellionskräften rekrutiert, um die Musterung und Ausbildung eines Eliteregiments zu beginnen. Sein Regiment, die berittenen Grenadiere, wurde zu einer der stärksten Einheiten, die Südamerika zu bieten hatte. [PARAGRAPH:1]Als seine Truppen bereit waren, unternahm der normalerweise zurückhaltende Ausbilder einen gewagten Schritt - er marschierte mit einer Armee von Argentinien über die Gipfel der Anden nach Chile. Sein Plan wurde von vielen als närrisch verurteilt, doch San Martín schaffte es, mehr als genug tapfere Seelen anzuwerben, die sich seiner Unternehmung anschlossen. Er teilte seine Truppen in sechs Kolonnen auf, um das schwierige Terrain leichter durchwandern zu können. San Martín plante, dass jede Kolonne jeweils zwei Tagen nach der vorherigen ankommen sollte, eine ziemlich unwahrscheinliche Angelegenheit angesichts des extremen Terrains und der Gefahren, die vorauslagen. [PARAGRAPH:1]Doch am 12. Februar traten nahezu alle seine viertausend Mann aus dem Schatten der Anden in die Ebene von Chacabuco - bereit, sich der zahlenmäßig überlegenen spanischen Streitmacht zu stellen. Obwohl sie gerade eine der unwirtlichsten Gegenden der Erde durchquert hatte, besiegte San Martíns "Anden-Armee" die Royalisten eindeutig. Dann marschierte sie in die chilenische Hauptstadt Santiago, die sie ohne Probleme einnahm. Trotz der von vielen als vernichtend angesehenen Niederlage von Tacla etwa einen Monat später blieb Chile in den Händen San Martíns und seiner Revolutionsanhänger. [PARAGRAPH:1]Die Bürger Chiles wollten San Martín zum Gouverneur ihrer Kolonie ernennen, doch er lehnte ab. Er hatte die Bastion der spanischen Macht in Südamerika im Visier - Lima, die Hauptstadt Perus. San Martín führte seine Streitkräfte nordwärts und bot den spanischen Kräften in Lima an, sich zu ergeben und eine neue konstitutionelle Regierung einzurichten. Ihre Weigerung besiegelte ihr Schicksal; 1821 marschierte San Martín in Lima ein und die Rebellen besetzten die Stadt. Er wurde bald darauf zum ersten Präsidenten von Peru ernannt. [PARAGRAPH:1]Kleinere Scharen spanischer Truppen verblieben über das peruanische Land verteilt, und um sie zu beseitigen, erbat San Martín eine Konferenz mit Simón Bolívar, dem Befreier des Nordens, dessen militärischer Einflussbereich mit dem San Martíns überlappte. [PARAGRAPH:1]Die beiden trafen sich 1822 in der Stadt Guayaquil in Ecuador. Worüber sie sprachen ist nicht bekannt, sehr wohl jedoch das Ergebnis der Unterredung - an diesem Tag trat San Martín von seiner Position zurück und legte das Schicksal Südamerikas in die Hände Bolívars. San Martín hatte zuvor nur zögernd Begeisterung für seine Sache gezeigt, doch die Worte Bolívars erzwangen die Entscheidung. Nach seinem Rücktritt lebte San Martín zwei Jahre lang mit Frau und Kindern auf einer Finca in Argentinien, ehe er nach Europa auswanderte, wo er den Rest seiner Tage damit verbrachte, von Land zu Land zu reisen, um den zahlreichen Revolutionen zu entgehen, die den Kontinent zu dieser Zeit überschwemmten. Er starb 1850 in Frankreich.</German>
+		<Italian>[H1]Jose de San Martin[\H1][NEWLINE][BOLD]Liberatore del Cile, primo presidente del Perù[\BOLD][NEWLINE][BOLD]Vita: [\BOLD]1778 - 1850[PARAGRAPH:2:1][BOLD]Informazioni:[\BOLD][NEWLINE][TAB]Avviato fin dalla tenera età alla vita militare, Jose de San Martin sarebbe cresciuto per guidare i popoli peruviano e cileno all'indipendenza dalla Spagna. [PARAGRAPH:1]Nato in Argentina, ma cresciuto in Spagna, all'età di 11 anni Jose de San Martin era già un membro delle forze armate spagnole. Nella guerra d'indipendenza spagnola con la Francia nel 1808, San Martin divenne aiutante del comando spagnolo; alla fine della guerra aveva ottenuto il grado di tenente colonnello. [PARAGRAPH:1]Nel bel mezzo della guerra, il re spagnolo abdicò per essere sostituito da un uomo nominato dai francesi. I cittadini argentini, venendo a conoscenza dello stato di confusione del governo spagnolo, decisero che non ci sarebbe stato momento migliore per dichiarare l'indipendenza. Quando udì la notizia della rivoluzione argentina, San Martin decise di sostenere la causa dei ribelli, lasciando la Spagna per il Nuovo Mondo. Al suo arrivo venne immediatamente reclutato dalle forze ribelli per cominciare a raccogliere e addestrare un reggimento d'elite. Il suo reggimento, conosciuto come i granatieri a cavallo, divenne quanto di meglio il Sudamerica avesse da offrire. [PARAGRAPH:1]Quando le sue truppe furono pronte l'addestratore, normalmente cauto e riservato, suggerì una mossa coraggiosa: portare un esercito dall'Argentina al Cile attraverso le Ande. Il suo piano venne considerato da molti una pazzia, ma San Martin riuscì a raccogliere abbastanza uomini coraggiosi. Dividendo le sue forze in sei colonne per facilitare l'attraversamento del difficile terreno, San Martin pianificò l'arrivo di ogni colonna a due giorni di distanza l'una dall'altra: una previsione piuttosto improbabile, viste le condizioni del territorio e il grande pericolo che le aspettava. [PARAGRAPH:1]Ma il 12 febbraio quasi tutti i 4.000 i soldati sbucarono dalle Ande sulle pianure di Chacabuco, preparati ad affrontare le forze spagnole, numericamente superiori. Nonostante avesse appena attraversato alcuni dei territori più inospitali della Terra, "l'Esercito delle Ande" di San Martin inflisse una sonora sconfitta ai realisti. Poi marciò sulla capitale cilena di Santiago, conquistandola con minimo sforzo. Nonostante quella che da molti viene vista con una sonora sconfitta sui campi di Tacla, circa un mese più tardi, il Cile rimase nelle mani di San Martin e dei suoi seguaci rivoluzionari. [PARAGRAPH:1]I cittadini del Cile cercarono di nominare San Martin governatore della loro colonia, ma lui rifiutò. Aveva messo gli occhi sul bastione del potere spagnolo in Sudamerica: Lima, in Perù. San Martin portò a nord le proprie forze, offrendo a quelle spagnole a Lima l'opportunità di arrendersi e instaurare un nuovo governo costituzionale. Il loro rifiuto ne sigla la condanna: nel 1821 San Martin entrò a Lima, conquistando la città per i ribelli. Ben presto venne proclamato primo presidente del Perù. [PARAGRAPH:1]In tutto il territorio peruviano rimasero piccole sacche di forze spagnole e, per assicurarne l'eliminazione, San Martin richiese un incontro con Simon Bolivar, Liberatore del nord, la cui zona di influenza militare si sovrapponeva alla sua. [PARAGRAPH:1]I due si incontrarono nel 1822 nella città di Guayaquil, in Ecuador. Non si sa di cosa parlarono ma il risultato fu che quel giorno San Martin diede le dimissioni dalla sua carica, lasciando il destino del Sudamerica nelle mani di Bolivar. San Martin aveva già mostrato segni di esitazione nei confronti della sua causa, ma ci vollero le parole di Bolivar per fargli prendere una decisione. Dopo le dimissioni, San Martin si sistemò con la moglie e i figli in una fattoria in Argentina per due anni. Dopodiché emigrò in Europa, dove passò il resto dei propri giorni spostandosi di paese in paese, cercando di sfuggire alle numerose rivoluzioni che in quel periodo travolsero il continente. Morì in Francia nel 1850.</Italian>
+		<Spanish>[H1]José de San Martín[\H1][NEWLINE][BOLD]Libertador de Chile y primer presidente de Perú[\BOLD][NEWLINE][BOLD]Vivió: [\BOLD]1778 - 1850[PARAGRAPH:2:1][BOLD]Historia:[\BOLD][NEWLINE][TAB]Preparado desde muy temprana edad para la vida militar, José de San Martín crecería para llevar al pueblo peruano y al chileno a su independencia de España. [PARAGRAPH:1]Argentino de nacimiento, aunque criado en España, a los 11 años José de San Martín ya era miembro de las fuerzas armadas españolas. En la Guerra de Independencia entre España y Francia iniciada en 1808, San Martín empezó como ayudante de la oficialía y, para el final de la misma, ya había alcanzado el rango de teniente coronel. [PARAGRAPH:1]A mitad de la guerra, el rey español abdicó para ser sustituido por el monarca designado por el enemigo francés. Los ciudadanos de Argentina, tras oír hablar del convulso estado del gobierno español, decidieron que era la mejor ocasión para declarar la independencia. Cuando llegaron hasta él las noticias de la revolución argentina, San Martín optó por apoyar la causa de los rebeldes, y viajó de España al Nuevo Mundo. Nada más llegar, se unió a las fuerzas rebeldes para empezar a reclutar y entrenar a un regimiento de élite. Este cuerpo, conocido como el Regimiento de Granaderos a Caballo, se convirtió en una de las mejores tropas de Sudamérica del momento. [PARAGRAPH:1]Cuando por fin lo tuvo listo, el instructor, normalmente tan comedido, sugirió una maniobra osada: llevar un ejército de Argentina a Chile por la cordillera de los Andes. Muchos consideraron que aquel plan era una locura, pero San Martín consiguió reunir a más que suficientes hombres valientes para que lo acompañaran en la empresa. San Martín dividió sus fuerzas en seis columnas, para que viajaran más fácilmente por el abrupto terreno, y planeó que cada una llegara con un margen de dos días respecto a la anterior; una expectativa muy poco probable, dado el difícil terreno y los grandes peligros que tenían por delante. [PARAGRAPH:1]Pero el 12 de febrero, casi cuatro mil soldados salieron de las sombras de los Andes y llegaron a las llanuras de Chacabuco, listos para enfrentarse a unas fuerzas españolas numéricamente superiores. Pese a haber franqueado uno de los terrenos más inhóspitos del planeta, el "ejército de los Andes" de San Martín derrotó estrepitosamente a los monárquicos. A continuación, marcharon sobre Santiago, la capital de Chile, y tomaron la ciudad sin muchos problemas. Pese a lo que muchos consideraron que fue una derrota aplastante en Talca apenas un mes después, Chile seguiría en manos de San Martín y de sus camaradas revolucionarios. [PARAGRAPH:1]Los chilenos intentaron nombrar a San Martín gobernador de su colonia, pero éste se negó. Tenía la vista en puesta en el bastión del poder español en Sudamérica: Lima, Perú. San Martín llevó a sus fuerzas al norte, ofreció a las fuerzas españolas de Lima la oportunidad de rendirse y estableció un nuevo gobierno constitucional. La negativa de éstas selló su destino. En 1821, San Martín marchó sobre Lima y tomó la ciudad para los rebeldes. Muy pronto sería proclamado presidente de Perú. [PARAGRAPH:1]Pequeños reductos de resistencia española permanecían diseminados por las tierras peruanas y, para asegurarse de acabar con ellos, San Martín solicitó una entrevista con Simón Bolívar, el Libertador del norte, cuya zona de influencia militar se solapaba con la de San Martín. [PARAGRAPH:1]Los dos se reunieron en la ciudad de Guayaquil, Ecuador en 1822. No se sabe a ciencia cierta de qué hablaron, pero el resultado fue que aquel mismo día San Martín renunció a su cargo y dejó el destino de Sudamérica en manos de Bolívar. San Martín había mostrado previamente una pasión inquebrantable por su causa, pero las palabras de Bolívar lo obligaron a tomar una decisión. Tras su renuncia, San Martín se estableció con su mujer e hijos en una granja en Argentina antes de emigrar a Europa, donde pasó el resto de sus días yendo de un país a otro para escapar de las numerosas revoluciones que barrieron el continente por aquella época. Murió en Francia en 1850.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SAN_MARTIN_1</Tag>
+		<English>My best friend, [CT_NAME] of the [CT_EMPIRE], is he who rights my wrongs or reproaches my mistakes.</English>
+		<French>My best friend, [CT_NAME] of the [CT_EMPIRE], is he who rights my wrongs or reproaches my mistakes.</French>
+		<German>My best friend, [CT_NAME] of the [CT_EMPIRE], is he who rights my wrongs or reproaches my mistakes.</German>
+		<Italian>My best friend, [CT_NAME] of the [CT_EMPIRE], is he who rights my wrongs or reproaches my mistakes.</Italian>
+		<Spanish>My best friend, [CT_NAME] of the [CT_EMPIRE], is he who rights my wrongs or reproaches my mistakes.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BUENOS_AIRES</Tag>
+		<English>Buenos Aires</English>
+		<French>
+			<Text>Buenos Aires</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Buenos Aires</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Buenos Aires</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Buenos Aires</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SALTA</Tag>
+		<English>Salta</English>
+		<French>
+			<Text>Salta</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Salta</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Salta</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Salta</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ROSEO</Tag>
+		<English>Roseo</English>
+		<French>
+			<Text>Roseo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Roseo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Roseo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Roseo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_COBA</Tag>
+		<English>Coba</English>
+		<French>
+			<Text>Coba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Coba</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Coba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Coba</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MENDOZA</Tag>
+		<English>Mendoza</English>
+		<French>
+			<Text>Mendoza</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mendoza</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Mendoza</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mendoza</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PARANI</Tag>
+		<English>Parani</English>
+		<French>
+			<Text>Parani</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Parani</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Parani</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Parani</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SANTA_FE</Tag>
+		<English>Santa Fe</English>
+		<French>
+			<Text>Santa Fe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Santa Fe</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Santa Fe</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Santa Fe</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SANTIAGO_DEL_ESTERO</Tag>
+		<English>Santiago del Estero</English>
+		<French>
+			<Text>Santiago del Estero</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Santiago del Estero</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Santiago del Estero</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Santiago del Estero</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_JUJUY</Tag>
+		<English>Jujuy</English>
+		<French>
+			<Text>Jujuy</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Jujuy</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Jujuy</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Jujuy</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CORRIENTES</Tag>
+		<English>Corrientes</English>
+		<French>
+			<Text>Corrientes</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Corrientes</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Corrientes</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Corrientes</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LA_PLATA</Tag>
+		<English>La Plata</English>
+		<French>
+			<Text>La Plata</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>La Plata</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>La Plata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>La Plata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MAR_DEL_PLATA</Tag>
+		<English>Mar del Plata</English>
+		<French>
+			<Text>Mar del Plata</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Mar del Plata</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Mar del Plata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Mar del Plata</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SANTA_ROSA</Tag>
+		<English>Santa Rosa</English>
+		<French>
+			<Text>Santa Rosa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Santa Rosa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Santa Rosa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Santa Rosa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAN_LUIS</Tag>
+		<English>San Luis</English>
+		<French>
+			<Text>San Luis</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>San Luis</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>San Luis</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>San Luis</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LA_RIOJA</Tag>
+		<English>La Rioja</English>
+		<French>
+			<Text>La Rioja</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>La Rioja</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>La Rioja</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>La Rioja</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CATAMARCA</Tag>
+		<English>Catamarca</English>
+		<French>
+			<Text>Catamarca</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Catamarca</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Catamarca</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Catamarca</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_FORMOSA</Tag>
+		<English>Formosa</English>
+		<French>
+			<Text>Formosa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Formosa</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Formosa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Formosa</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_RESISTENCIA</Tag>
+		<English>Resistencia</English>
+		<French>
+			<Text>Resistencia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Resistencia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Resistencia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Resistencia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAN_JUAN</Tag>
+		<English>San Juan</English>
+		<French>
+			<Text>San Juan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>San Juan</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>San Juan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>San Juan</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_POSADAS</Tag>
+		<English>Posadas</English>
+		<French>
+			<Text>Posadas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Posadas</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Posadas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Posadas</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VIEDMA</Tag>
+		<English>Viedma</English>
+		<French>
+			<Text>Viedma</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Viedma</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Viedma</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Viedma</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_RAWSON</Tag>
+		<English>Rawson</English>
+		<French>
+			<Text>Rawson</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Rawson</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Rawson</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Rawson</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_COMODORO_RIVADAVIA</Tag>
+		<English>Comodoro Rivadavia</English>
+		<French>
+			<Text>Comodoro Rivadavia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Comodoro Rivadavia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Comodoro Rivadavia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Comodoro Rivadavia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VENADO_TUERTO</Tag>
+		<English>Venado Tuerto</English>
+		<French>
+			<Text>Venado Tuerto</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Venado Tuerto</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Venado Tuerto</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Venado Tuerto</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_RAFAELA</Tag>
+		<English>Rafaela</English>
+		<French>
+			<Text>Rafaela</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Rafaela</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Rafaela</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Rafaela</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_RIO_GALLEGOS</Tag>
+		<English>Rio Gallegos</English>
+		<French>
+			<Text>Rio Gallegos</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Rio Gallegos</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Rio Gallegos</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Rio Gallegos</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_RIO_GRANDE</Tag>
+		<English>Rio Grande</English>
+		<French>
+			<Text>Rio Grande</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Rio Grande</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Rio Grande</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Rio Grande</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_USHUAIA</Tag>
+		<English>Ushuaia</English>
+		<French>
+			<Text>Ushuaia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Ushuaia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Ushuaia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Ushuaia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TRELEW</Tag>
+		<English>Trelew</English>
+		<French>
+			<Text>Trelew</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Trelew</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Trelew</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Trelew</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PUERTO_MADRYN</Tag>
+		<English>Puerto Madryn</English>
+		<French>
+			<Text>Puerto Madryn</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Puerto Madryn</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Puerto Madryn</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Puerto Madryn</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAN_NICOLE</Tag>
+		<English>San Nicole</English>
+		<French>
+			<Text>San Nicole</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>San Nicole</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>San Nicole</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>San Nicole</Text>
+			<Gender>Female</Gender>3
+			<Plural>0</Plural></Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PILAR</Tag>
+		<English>Pilar</English>
+		<French>
+			<Text>Pilar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Pilar</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Pilar</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Pilar</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GUALEGUAYCHU</Tag>
+		<English>GualeguayChu</English>
+		<French>
+			<Text>GualeguayChu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>GualeguayChu</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>GualeguayChu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>GualeguayChu</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NEUQUE</Tag>
+		<English>Neuque</English>
+		<French>
+			<Text>Neuque</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Neuque</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Neuque</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Neuque</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CONCEPCIZ_EL_BERMEJO</Tag>
+		<English>Concepciz el Bermejo</English>
+		<French>
+			<Text>Concepciz el Bermejo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Concepciz el Bermejo</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Concepciz el Bermejo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Concepciz el Bermejo</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PUERTO_EGMONT</Tag>
+		<English>Puerto Egmont</English>
+		<French>
+			<Text>Puerto Egmont</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Puerto Egmont</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Puerto Egmont</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Puerto Egmont</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAN_FERNANDO_DEL_VALLE</Tag>
+		<English>San Fernando del Valle</English>
+		<French>
+			<Text>San Fernando del Valle</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>San Fernando del Valle</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>San Fernando del Valle</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>San Fernando del Valle</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CHUQUISACA</Tag>
+		<English>Chuquisaca</English>
+		<French>
+			<Text>Chuquisaca</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Chuquisaca</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Chuquisaca</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Chuquisaca</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_HUAQUI</Tag>
+		<English>Huaqui</English>
+		<French>
+			<Text>Huaqui</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Huaqui</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Huaqui</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Huaqui</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAN_MIGUEL_DE_TUCUMAN</Tag>
+		<English>San Miguel de Tucuman</English>
+		<French>
+			<Text>San Miguel de Tucuman</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>San Miguel de Tucuman</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>San Miguel de Tucuman</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>San Miguel de Tucuman</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_RIO_CUARTO</Tag>
+		<English>Rio Cuarto</English>
+		<French>
+			<Text>Rio Cuarto</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Rio Cuarto</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Rio Cuarto</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Rio Cuarto</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BAHIA_BLANCA</Tag>
+		<English>Bahia Blanca</English>
+		<French>
+			<Text>Bahia Blanca</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Bahia Blanca</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Bahia Blanca</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Bahia Blanca</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAN_CARLOS_DE_BARILOCHE</Tag>
+		<English>San Carlos de Bariloche</English>
+		<French>
+			<Text>San Carlos de Bariloche</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>San Carlos de Bariloche</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>San Carlos de Bariloche</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>San Carlos de Bariloche</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PUERTO_SANTA_CRUZ</Tag>
+		<English>Puerto Santa Cruz</English>
+		<French>
+			<Text>Puerto Santa Cruz</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Puerto Santa Cruz</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Puerto Santa Cruz</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Puerto Santa Cruz</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MISIONES</Tag>
+		<English>Misiones</English>
+		<French>
+			<Text>Misiones</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Misiones</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Misiones</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Misiones</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BEUGUEN</Tag>
+		<English>Beuguen</English>
+		<French>
+			<Text>Beuguen</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Beuguen</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Beuguen</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Beuguen</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_RIO_NEGRO</Tag>
+		<English>Rio Negro</English>
+		<French>
+			<Text>Rio Negro</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Rio Negro</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Rio Negro</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Rio Negro</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CONCORDIA</Tag>
+		<English>Concordia</English>
+		<French>
+			<Text>Concordia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</French>
+		<German>
+			<Text>Concordia</Text>
+			<Gender>Male</Gender>
+			<Plural>0</Plural>
+		</German>
+		<Italian>
+			<Text>Concordia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Italian>
+		<Spanish>
+			<Text>Concordia</Text>
+			<Gender>Female</Gender>
+			<Plural>0</Plural>
+		</Spanish>
+	</TEXT>
+</Civ4GameText>

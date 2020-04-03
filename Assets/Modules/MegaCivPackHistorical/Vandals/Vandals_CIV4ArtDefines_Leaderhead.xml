@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- Modified by strategyonly -->
+<!-- -->
+<Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\..\Xml\Schema\Caveman2Cosmos.xsd">
+	<LeaderheadArtInfos>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_GENSERIC</Type>
+			<Button>Modules/Custom_Civilizations/Vandals/leaders/genseric_small.dds</Button>
+			<NIF>Modules/Custom_Civilizations/Vandals/leaders/genseric.dds</NIF>
+			<KFM></KFM>
+			<NoShaderNIF></NoShaderNIF>
+			<BackgroundKFM></BackgroundKFM>
+		</LeaderheadArtInfo>
+	</LeaderheadArtInfos>
+</Civ4ArtDefines>

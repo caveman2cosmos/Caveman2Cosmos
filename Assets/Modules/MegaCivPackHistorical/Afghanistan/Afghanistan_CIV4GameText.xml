@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- -->
+	<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_AFGHANISTAN_DESC</Tag>
+		<English>Islamic Republic Of Afghanistan</English>
+		<French>Islamic Republic Of Afghanistan</French>
+		<German>Islamic Republic Of Afghanistan</German>
+		<Italian>Islamic Republic Of Afghanistan</Italian>
+		<Spanish>Islamic Republic Of Afghanistan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_AFGHANISTAN_SHORT_DESC</Tag>
+		<English>Afghanistan</English>
+		<French>Afghanistan</French>
+		<German>Afghanistan</German>
+		<Italian>Afghanistan</Italian>
+		<Spanish>Afganistán</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_AFGHANISTAN_ADJECTIVE</Tag>
+		<English>Afghan</English>
+		<French>Afghan</French>
+		<German>Afghan</German>
+		<Italian>Afghan</Italian>
+		<Spanish>Afghan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_AFGHANISTAN_PEDIA</Tag>
+		<English>[TAB]Afghanistan (meaning land of the Afghans) has a very long history, it has been an ancient 
+focal point of the Silk Road and migration. It is an important geostrategic location, connecting East 
+and West Asia or the Middle East. The land has been a target of various invaders, as well as a source 
+from which local powers invaded neighboring regions to form their own empires.[PARAGRAPH:1]In the Middle 
+Ages, up to the nineteenth century, Afghanistan was part of a larger region known as Greater Khorasan. 
+It was during this period of time when Islam was introduced and spread in the area. The region of Afghanistan 
+became the center of various important empires, including that of the Shahis, Samanids (875–999), Ghaznavids 
+(977–1187), Seljukids (1037–1194), Ghurids (1149–1212), Mongol Empire, Ilkhanate (1225–1335), and Timurids 
+(1370–1506). Among them, the periods of the Ghaznavids and Timurids are considered as some of the most 
+brilliant eras of the region's history.[PARAGRAPH:1]However, a true Afghan Empire was to wait for several 
+centuries. In 1738, Nadir Shah and his army, conquered the region of Kandahar; in the same year he occupied 
+Ghazni, Kabul and Lahore. On June 19, 1747, Nadir Shah was assassinated. Following his death, one of 
+Nadir's military commanders and personal bodyguard, Ahmad Shah Abdali, called for a loya jirga (a "grand 
+assembly"). The Afghans gathered at Kandahar and chose Ahmad Shah as their new leader, coronating him 
+King in October 1747. After the inauguration, Ahmad Shah changed his title or clans' name to “Durrani”, 
+which derives from the Persian word Durr, meaning “Pearl”. The Durrani Empire is often considered the 
+origin of the state of Afghanistan and Ahmad Shah Durrani is credited with establishing the modern nation 
+state of Afghanistan. However, shortly after Ahmad Shah's death, the Durrani capital was shifted from 
+Kandahar to Kabul and most of its territories ceded to neighboring empires.[PARAGRAPH:1]During the nineteenth 
+century, following the Anglo-Afghan wars (fought 1839–42, 1878–80, and lastly in 1919) and the ascension 
+of the Barakzai dynasty, Afghanistan saw much of its territory and autonomy ceded to the United Kingdom. 
+The UK exercised a great deal of influence. During the period of British intervention in Afghanistan, 
+ethnic Pashtun territories were divided by the Durand Line. This would lead to strained relations between 
+Afghanistan and British India – and later the new state of Pakistan – over what came to be known as the 
+Pashtunistan debate.[PARAGRAPH:1]It was not until King Amanullah Khan acceded to the throne in 1919 that 
+Afghanistan re-gained complete independence over its foreign affairs. King Amanullah moved to end his 
+country's traditional isolation during his reign. He established diplomatic relations with most major 
+countries and attempted to modernize Afghanistan. His reforms quickly alienated many tribal and religious 
+leaders. Faced with overwhelming armed opposition, Amanullah was forced to abdicate in January 1929 after 
+Kabul fell to rebel forces. This led to a few decades of turmoil in Afghanistan, in which many reforms 
+were repealed. Afghanistan remained a monarchy until 1973, when Mohammed Daoud Khan launched a bloodless 
+coup and proclaimed a republic. Following the death of a prominent member of the opposition PDPA party 
+5 years later, the PDPA began a new rebellion, which resulted in the death of Daoud. The PDPA created 
+the Democratic Republic of Afghanistan, which soon was invaded by the Soviet Union in 1979. Many Afghans 
+joined Mujahideen groups funded by the United States and bitterly fought the Soviet Union, which withdrew 
+10 years later. However, fighting continued among the victorious Mujahideen factions, which gave rise 
+to a state of warlordism. It was at this time that a group known as the Taliban (meaning "students") 
+developed as a politico-religious force, eventually seizing Kabul in 1996 and establishing the Islamic 
+Emirate of Afghanistan.{PARAGRAPH:1]Following the September 11th attacks, the United States deployed 
+soldiers to Afghanistan in reaction to the Taliban's refusal to cooperate in the search for the perpatrators. 
+The United States and its NATO allies soon overthrew the Taliban government, setting up a new, more democratic 
+government. However, even as the country continues to rebuild and recover, it is still struggling against 
+poverty, poor infrastructure, occasionally violent political jockeying and a strong Taliban insurgency.</English>
+		<Spanish>Afganistán (que significa tierra de los afganos) tiene una historia muy larga, ha sido un 
+punto focal de la antigua Ruta de la Seda y la migración. Se trata de una posición geoestratégica importante, 
+que conecta Oriente y Occidente de Asia o el Oriente Medio. La tierra ha sido blanco de varios invasores, 
+así como una fuente de la que los poderes locales invadieron las regiones vecinas para formar sus propios 
+imperios. [PARAGRAPH:1] En la Edad Media hasta el siglo XIX, Afganistán fue parte de un región conocida 
+como el Gran Jorasán. Fue durante este período de tiempo cuando el Islam se introdujo y se extendió en 
+la zona. La región de Afganistán se convirtió en el centro de varios imperios importantes, incluida la 
+de la Shahis, samaníes (875-999), gaznávidas (977-1187), Seljukids (1037-1194), Imperio Gurida (1149-1212), 
+Imperio Mongol, Iljanato (1225-1335), y Timuridos (1370-1506). Entre ellos, los períodos de los gaznávidas 
+y Timuridos se consideran algunas de las épocas más brillantes de la historia de la región. [PARAGRAPH:1] 
+Sin embargo, un verdadero imperio afgano era esperar durante varios siglos. En 1738, Nadir Shah y su 
+ejército, conquistaron la región de Kandahar, en el mismo año ocupó de Ghazni, Kabul y Lahore. El 19 
+de junio de 1747, fue asesinado Nadir Shah. Después de su muerte, uno de los comandantes militares de 
+Nadir y guardaespaldas personal, Ahmad Shah Abdali, convocó a una Loya Jirga (un "gran asamblea"). Los 
+afganos se reunieron en Kandahar, Ahmad Shah y eligió como su nuevo líder, coronating rey en octubre 
+de 1747. Después de la inauguración, Ahmad Shah cambió su título o el nombre de los clanes "para" Durrani 
+", que se deriva de la palabra persa Durr, que significa" perla ". El Imperio Durrani a menudo se considera 
+el origen de la situación de Afganistán y de Ahmad Shah Durrani, se acredita con el establecimiento del 
+moderno Estado-nación de Afganistán. Sin embargo, después de poco tiempo después de la muerte de Ahmad 
+Shah, la capital Durrani fue desplazado de Kandahar a Kabul, y la mayoría de los territorios cedidos 
+a los imperios vecinos. [PARAGRAPH:1] Durante el siglo XIX, a raíz de las guerras anglo-afgana (1839-42 
+luchó, 1878-80, y por último en 1919) y la ascensión de la dinastía Barakzai, Afganistán vio gran parte 
+de su territorio y la autonomía cedida al Reino Unido. El Reino Unido ejerce una gran influencia. Durante 
+el período de la intervención británica en Afganistán, los territorios étnicos pastunes fueron divididas 
+por la Línea Durand. Esto llevaría a que las tensas relaciones entre Afganistán y la India británica 
+- y más tarde el nuevo estado de Pakistán - más de lo que llegó a ser conocido como el debate Pathanistán. 
+[PARAGRAPH:1] No fue hasta que el rey Amanullah Khan accedió al trono en 1919 que Re Afganistán obtuvo 
+la independencia completa sobre sus asuntos exteriores. Rey Amanullah trasladó a terminar con el aislamiento 
+tradicional de su país durante su reinado. Estableció relaciones diplomáticas con los países más grandes 
+e intentaron modernizar el Afganistán. Sus reformas rápidamente el alejamiento de muchos líderes tribales 
+y religiosos. Frente a la oposición armada abrumadora, Amanullah fue obligado a abdicar en enero de 1929, 
+después de Kabul, cayeron ante las fuerzas rebeldes. Esto llevó a unas cuantas décadas de agitación en 
+el Afganistán, en el que se derogaron muchas reformas. Afganistán sigue siendo una monarquía hasta 1973, 
+cuando Mohammed Daoud Khan puso en marcha un golpe de estado y proclamó la república. Tras la muerte 
+de un miembro prominente del partido de la oposición de la PDPA 5 años más tarde, la PDPA comenzó una 
+nueva rebelión, que resultó en la muerte de Daud. La PDPA creó la República Democrática de Afganistán, 
+que pronto fue invadido por la Unión Soviética en 1979. Muchos afganos se unió a los Mujahideen grupos 
+financiados por los Estados Unidos y encarnizada de la Unión Soviética, que se retiró 10 años después. 
+Sin embargo, continuaron los combates entre las facciones victoriosas Mujahideen, que dio lugar a un 
+estado de señores de la guerra. Fue en este momento en que un grupo conocido como los talibanes (que 
+significa "estudiantes") desarrollado como una fuerza político-religiosa, finalmente apoderarse de Kabul 
+en 1996 y se establece el Emirato Islámico de Afganistán. [PARAGRAPH:1] Después de los atentados 11 de 
+septiembre, de los Estados Unidos los soldados desplegados en Afganistán, en reacción a la negativa de 
+los talibanes a que cooperen en la búsqueda de la perpatrators. Los Estados Unidos y sus aliados de la 
+OTAN pronto derrocó al gobierno talibán, la creación de un nuevo gobierno más democrático. Sin embargo, 
+pese a que el país sigue a la reconstrucción y recuperación, se sigue luchando contra la pobreza, la 
+mala infraestructura, las maniobras políticas a veces violenta y la insurgencia talibán fuerte.</Spanish>
+	</TEXT>
+	<!-- City List -->
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KABUL</Tag>
+		<English>Kabul</English>
+		<Spanish>Kabul</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KANDAHAR</Tag>
+		<English>Kandahar</English>
+		<Spanish>Kandahar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_HERAT</Tag>
+		<English>Herat</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MAZARI_SHARIF</Tag>
+		<English>Mazar-e Sharif</English>
+		<Spanish>Mazar-e Sharif</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KUNDUZ</Tag>
+		<English>Kunduz</English>
+		<Spanish>Kunduz</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GHAZNI</Tag>
+		<English>Ghazni</English>
+		<Spanish>Ghazni</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_JALALABAD</Tag>
+		<English>Jalalabad</English>
+		<Spanish>Jalalabad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_LASHKAR_GAH</Tag>
+		<English>Lashkar Gah</English>
+		<Spanish>Lashkar Gah</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TALUQAN</Tag>
+		<English>Taluqan</English>
+		<Spanish>Taluqan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PULI_KHUMRI</Tag>
+		<English>Puli Khumri</English>
+		<Spanish>Puli Khumri</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KHOST</Tag>
+		<English>Khost</English>
+		<Spanish>Khost</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CHARIKAR</Tag>
+		<English>Charikar</English>
+		<Spanish>Charikar</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SHEBERGHAN</Tag>
+		<English>Sheberghan</English>
+		<Spanish>Shebergan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SARI_PUL</Tag>
+		<English>Sari Pul</English>
+		<Spanish>Sari Pul</Spanish>
+	</TEXT>
+	<!-- Leaders -->
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_AMANULLAH</Tag>
+		<English>Amanullah</English>
+		<Spanish>Amanullah</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_AMANULLAH_PEDIA</Tag>
+		<English>[H1]Amanullah Khan[\H1][NEWLINE][BOLD]King of Afghanistan[\BOLD][NEWLINE][BOLD]Led Afghanistan 
+to Independence [\BOLD][NEWLINE][BOLD]Lived:[\BOLD] June 1, 1892 - April 25, 1960 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Amanullah 
+Khan was the ruler of the Emirate of Afghanistan from 1919 to 1929, first as Amir and after 1926 as Shah. 
+He led Afghanistan to independence over its foreign affairs from the United Kingdom, and his rule was 
+marked by dramatic political and social change. Amanullah Khan was the third son of the Amir Habibullah 
+Khan. Amanullah was already installed as the governor of Kabul and was in control of the army and the 
+treasury, and gained the allegiance of most of the tribal leaders.[PARAGRAPH:1]Russia had recently undergone 
+its Communist revolution, leading to strained relations between the country and the United Kingdom. Amanullah 
+Khan recognized the opportunity to use the situation to gain Afghanistan's independence over its foreign 
+affairs. He led a surprise attack against the British in India on May 3, 1919, beginning the third Anglo-Afghan 
+war. After initial successes, the war quickly became a stalemate as the United Kingdom was still dealing 
+with the costs of World War I. An armistice was reached in 1921, and Afghanistan became an independent 
+nation.[PARAGRAPH:1]Amanullah enjoyed quite a bit of early popularity within Afghanistan and he used 
+his influence to modernize the country. Amanullah created new cosmopolitan schools for both boys and 
+girls in the region and overturned centuries-old traditions such a strict dress codes for women. He increased 
+trade with Europe and Asia. He also advanced a modernist constitution that incorporated equal rights 
+and individual freedoms with the guidance of his father-in-law and Foreign Minister Mahmud Tarzi. His 
+wife, Queen Soraya Tarzi played a huge role in regard to his policy towards women. Unfortunately, this 
+rapid modernization created a backlash and a reactionary uprising known as the Khost rebellion was suppressed 
+in 1924. He also met with many Bahá'ís in India and Europe where he brought back books that are still 
+to be found in the Kabul Library. This association later served as one of the accusations when he was 
+overthrown.[PARAGRAPH:1]At the time, Afghanistan's foreign policy was primarily concerned with the rivalry 
+between the Soviet Union and the United Kingdom. Each attempted to gain the favor of Afghanistan and 
+foil attempts by the other power to gain influence in the region. This effect was inconsistent, but generally 
+favorable for Afghanistan; Amanullah was even able to establish a limited Afghan Air Force consisting 
+of donated Soviet planes. After Amanullah travelled to Europe in late 1927, opposition to his rule increased. 
+An uprising in Jalalabad culminated in a march to the capital, and much of the army deserted rather than 
+resist. Habibullah Kalakani became the next king of Afghanistan. However, his rule was short lived and 
+was soon replaced by Nadir Khan. In early 1929, Amanullah abdicated and went into temporary exile in 
+India. Amanullah Khan attempted to return to Afghanistan, however he had little support from the people. 
+From India, the ex-king traveled to Europe and settled in Italy, and later in Switzerland. Meanwhile, 
+Nadir Khan made sure his return to Afghanistan was impossible by engaging in a propaganda war. Nadir 
+Khan accused Amanullah Khan of kufr with his pro western policies. Amanullah Khan died in Zurich, Switzerland, 
+in 1960. Very few of his many reforms were continued once he was no longer in power.</English>
+		<Spanish>[H1]Amanullah Khan[\H1][NEWLINE][BOLD]Rey de Afganistán[\BOLD][NEWLINE][BOLD]Llevó Afganistán 
+a Indepedencia[\BOLD][NEWLINE][BOLD]Vivió:[\BOLD]junio 1ro, 1892 - abril 25, 1960 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Amanullah 
+Khan era el gobernante del Emirato de Afganistán desde 1919 hasta 1929, primero como emir y después de 
+1926 como Shah. Llevó a Afganistán a lo largo de su independencia de Asuntos Exteriores del Reino Unido, 
+y su gobierno se caracterizó por el cambio político y social dramática. Amanullah Khan era el tercer 
+hijo de la Habibullah Amir Khan. Amanullah ya estaba instalado como gobernador de Kabul y tenía el control 
+del ejército y de la tesorería, y se ganó la lealtad de la mayoría de los líderes tribales. [PARAGRAPH:1] 
+Rusia ha sido objeto recientemente de su revolución comunista, que conduce a las tensas relaciones entre 
+la país y el Reino Unido. Amanullah Khan reconoció la oportunidad de utilizar la situación para obtener 
+la independencia de Afganistán sobre sus asuntos exteriores. Dirigió un ataque sorpresa contra los ingleses 
+en la India el 3 de mayo de 1919, a partir de la tercera guerra anglo-afgana. Después de los éxitos iniciales, 
+la guerra se convirtió rápidamente en un punto muerto en el Reino Unido se sigue ocupándose de los costes 
+de la I Guerra Mundial se llegó a un armisticio en 1921, y Afganistán se convirtió en una nación independiente. 
+[PARAGRAPH:1] Amanullah disfrutado de un poco de popularidad inicial en el Afganistán y usó su influencia 
+para modernizar el país. Amanullah creado nuevas escuelas cosmopolita para los niños y las niñas en la 
+región y volcó tradiciones centenarias tan estrictos códigos de vestimenta para las mujeres. El aumento 
+del comercio con Europa y Asia. También adelantó una constitución moderna que incorpora la igualdad de 
+derechos y las libertades individuales con la orientación de su padre en la ley y el ministro de Relaciones 
+Exteriores, Mahmud Tarzi. Su esposa, la reina Soraya Tarzi desempeñado un papel enorme en lo que respecta 
+a su política hacia las mujeres. Lamentablemente, esta modernización rápida creado una reacción y un 
+levantamiento reaccionario conocido como la rebelión de Khost, fue suprimida en 1924. También se reunió 
+con muchos bahaíes en la India y Europa, donde se trajo los libros que todavía se encuentran en la Biblioteca 
+de Kabul. Esta asociación más tarde sirvió como una de las acusaciones cuando fue depuesto. [PARAGRAPH:1] 
+En el momento, la política exterior de Afganistán se refería principalmente a la rivalidad entre la Unión 
+Soviética y el Reino Unido. Cada intento de ganar el favor de Afganistán y los intentos de papel de aluminio 
+por la otra potencia para ganar influencia en la región. Este efecto fue inconsistente, pero en general 
+favorable para el Afganistán; Amanullah siquiera fue capaz de establecer un número limitado de Afganistán 
+de la Fuerza Aérea compuesta por aviones de guerra soviéticos donados. Después de Amanullah viajó a Europa 
+a finales de 1927, la oposición a su gobierno aumentó. Un levantamiento en Jalalabad, culminó en una 
+marcha a la capital, y gran parte del ejército desertaron en vez de resistir. Habibullah Kalakani se 
+convirtió en el próximo rey de Afganistán. Sin embargo, su gobierno fue breve y pronto fue sustituido 
+por Nadir Khan. En comienzos de 1929, Amanullah abdicó y se exilió temporalmente en la India. Amanullah 
+Khan trataron de regresar a Afganistán, sin embargo, había poco apoyo de la gente. Desde la India, el 
+ex rey viajó a Europa y se instaló en Italia, y más tarde en Suiza. Mientras tanto, Nadir Khan, se aseguró 
+su regreso a Afganistán era imposible por participar en una guerra de propaganda. Nadir Khan acusó Amanullah 
+Khan de incredulidad con su política pro occidental. Amanullah Khan murió en Zurich, Suiza, en 1960. 
+Muy pocas de sus muchas reformas continuaron una vez que ya no estaba en el poder.</Spanish>
+	</TEXT>
+</Civ4GameText>

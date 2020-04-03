@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- Modified by the Civ Gold Team -->
+<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_COLOMBIA_DESC</Tag>
+		<English>Colombian Empire</English>
+		<French>Colombian Empire</French>
+		<German>Colombian Empire</German>
+		<Italian>Colombian Empire</Italian>
+		<Spanish>Colombian Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_COLOMBIA_SHORT_DESC</Tag>
+		<English>Colombia</English>
+		<French>Colombia</French>
+		<German>Colombia</German>
+		<Italian>Colombia</Italian>
+		<Spanish>Colombia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_COLOMBIA_ADJECTIVE</Tag>
+		<English>Colombian</English>
+		<French>Colombian</French>
+		<German>Colombian</German>
+		<Italian>Colombian</Italian>
+		<Spanish>Colombian</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_COLOMBIA_PEDIA</Tag>
+		<English>[TAB]Republic of Colombia is a country situated in the northwest of South America, bordered to the northwest by Panama; to the east by Venezuela and Brazil; to the south by Ecuador and Peru; and it shares maritime limits with Costa Rica, Nicaragua, Honduras, Jamaica, Dominican Republic and Haiti.It is a unitary, constitutional republic comprising thirty-two departments.</English>
+		<French>[TAB]Republic of Colombia is a country situated in the northwest of South America, bordered to the northwest by Panama; to the east by Venezuela and Brazil; to the south by Ecuador and Peru; and it shares maritime limits with Costa Rica, Nicaragua, Honduras, Jamaica, Dominican Republic and Haiti.It is a unitary, constitutional republic comprising thirty-two departments.</French>
+		<German>[TAB]Republic of Colombia is a country situated in the northwest of South America, bordered to the northwest by Panama; to the east by Venezuela and Brazil; to the south by Ecuador and Peru; and it shares maritime limits with Costa Rica, Nicaragua, Honduras, Jamaica, Dominican Republic and Haiti.It is a unitary, constitutional republic comprising thirty-two departments.</German>
+		<Italian>[TAB]Republic of Colombia is a country situated in the northwest of South America, bordered to the northwest by Panama; to the east by Venezuela and Brazil; to the south by Ecuador and Peru; and it shares maritime limits with Costa Rica, Nicaragua, Honduras, Jamaica, Dominican Republic and Haiti.It is a unitary, constitutional republic comprising thirty-two departments.</Italian>
+		<Spanish>[TAB]Republic of Colombia is a country situated in the northwest of South America, bordered to the northwest by Panama; to the east by Venezuela and Brazil; to the south by Ecuador and Peru; and it shares maritime limits with Costa Rica, Nicaragua, Honduras, Jamaica, Dominican Republic and Haiti.It is a unitary, constitutional republic comprising thirty-two departments.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SANTOS</Tag>
+		<English>Santos</English>
+		<French>Santos</French>
+		<German>Santos</German>
+		<Italian>Santos</Italian>
+		<Spanish>Santos</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SANTOS_PEDIA</Tag>
+		<English>[H1]Juan Manuel Santos [\H1][NEWLINE][BOLD]President of Colombia[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] born 10 August 1951[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Juan Manuel Santos Calderón is the 32nd and current President of Colombia, in office since 2010. He was Minister of Defence from 2006 to 2009. An economist by profession and a journalist by trade, Santos is a member of the wealthy and influential Santos family, who from 1913 to 2007 were the majority shareholders of the El Tiempo newspaper until its sale in 2007 to Planeta DeAgostini. Shortly after graduating from the University of Kansas, he joined the National Federation of Coffee Growers of Colombia as an economic advisor and delegate to the International Coffee Organization in London, where he also attended the London School of Economics and Political Science. In 1981, he was appointed deputy director of El Tiempo, becoming its director two years later. In 1991, he was appointed by President César Gaviria Trujillo as Colombia's first Minister of Foreign Trade. Santos worked in expanding international trade with Colombia, and worked in creating various agencies for this purpose including: Proexport, Bancoldex, and Fiducoldex. In 2000, he was appointed by President Andrés Pastrana Arango as the 64th Minister of Finance and Public Credit.</English>
+		<French>[H1]Juan Manuel Santos [\H1][NEWLINE][BOLD]President of Colombia[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] born 10 August 1951[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Juan Manuel Santos Calderón is the 32nd and current President of Colombia, in office since 2010. He was Minister of Defence from 2006 to 2009. An economist by profession and a journalist by trade, Santos is a member of the wealthy and influential Santos family, who from 1913 to 2007 were the majority shareholders of the El Tiempo newspaper until its sale in 2007 to Planeta DeAgostini. Shortly after graduating from the University of Kansas, he joined the National Federation of Coffee Growers of Colombia as an economic advisor and delegate to the International Coffee Organization in London, where he also attended the London School of Economics and Political Science. In 1981, he was appointed deputy director of El Tiempo, becoming its director two years later. In 1991, he was appointed by President César Gaviria Trujillo as Colombia's first Minister of Foreign Trade. Santos worked in expanding international trade with Colombia, and worked in creating various agencies for this purpose including: Proexport, Bancoldex, and Fiducoldex. In 2000, he was appointed by President Andrés Pastrana Arango as the 64th Minister of Finance and Public Credit.</French>
+		<German>[H1]Juan Manuel Santos [\H1][NEWLINE][BOLD]President of Colombia[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] born 10 August 1951[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Juan Manuel Santos Calderón is the 32nd and current President of Colombia, in office since 2010. He was Minister of Defence from 2006 to 2009. An economist by profession and a journalist by trade, Santos is a member of the wealthy and influential Santos family, who from 1913 to 2007 were the majority shareholders of the El Tiempo newspaper until its sale in 2007 to Planeta DeAgostini. Shortly after graduating from the University of Kansas, he joined the National Federation of Coffee Growers of Colombia as an economic advisor and delegate to the International Coffee Organization in London, where he also attended the London School of Economics and Political Science. In 1981, he was appointed deputy director of El Tiempo, becoming its director two years later. In 1991, he was appointed by President César Gaviria Trujillo as Colombia's first Minister of Foreign Trade. Santos worked in expanding international trade with Colombia, and worked in creating various agencies for this purpose including: Proexport, Bancoldex, and Fiducoldex. In 2000, he was appointed by President Andrés Pastrana Arango as the 64th Minister of Finance and Public Credit.</German>
+		<Italian>[H1]Juan Manuel Santos [\H1][NEWLINE][BOLD]President of Colombia[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] born 10 August 1951[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Juan Manuel Santos Calderón is the 32nd and current President of Colombia, in office since 2010. He was Minister of Defence from 2006 to 2009. An economist by profession and a journalist by trade, Santos is a member of the wealthy and influential Santos family, who from 1913 to 2007 were the majority shareholders of the El Tiempo newspaper until its sale in 2007 to Planeta DeAgostini. Shortly after graduating from the University of Kansas, he joined the National Federation of Coffee Growers of Colombia as an economic advisor and delegate to the International Coffee Organization in London, where he also attended the London School of Economics and Political Science. In 1981, he was appointed deputy director of El Tiempo, becoming its director two years later. In 1991, he was appointed by President César Gaviria Trujillo as Colombia's first Minister of Foreign Trade. Santos worked in expanding international trade with Colombia, and worked in creating various agencies for this purpose including: Proexport, Bancoldex, and Fiducoldex. In 2000, he was appointed by President Andrés Pastrana Arango as the 64th Minister of Finance and Public Credit.</Italian>
+		<Spanish>[H1]Juan Manuel Santos [\H1][NEWLINE][BOLD]President of Colombia[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] born 10 August 1951[NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Juan Manuel Santos Calderón is the 32nd and current President of Colombia, in office since 2010. He was Minister of Defence from 2006 to 2009. An economist by profession and a journalist by trade, Santos is a member of the wealthy and influential Santos family, who from 1913 to 2007 were the majority shareholders of the El Tiempo newspaper until its sale in 2007 to Planeta DeAgostini. Shortly after graduating from the University of Kansas, he joined the National Federation of Coffee Growers of Colombia as an economic advisor and delegate to the International Coffee Organization in London, where he also attended the London School of Economics and Political Science. In 1981, he was appointed deputy director of El Tiempo, becoming its director two years later. In 1991, he was appointed by President César Gaviria Trujillo as Colombia's first Minister of Foreign Trade. Santos worked in expanding international trade with Colombia, and worked in creating various agencies for this purpose including: Proexport, Bancoldex, and Fiducoldex. In 2000, he was appointed by President Andrés Pastrana Arango as the 64th Minister of Finance and Public Credit.</Spanish>
+	</TEXT>
+</Civ4GameText>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- re-Modified by Strategyonly -->
+	<!-- -->
+	<!-- Player Color -->
+<Civ4PlayerColorInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4InterfaceSchema.xml">
+	<PlayerColorInfos>
+		<PlayerColorInfo>
+			<Type>PLAYERCOLOR_CHEROKEE</Type>
+			<ColorTypePrimary>COLOR_CULTURE_STORED</ColorTypePrimary>
+			<ColorTypeSecondary>PLAYERCOLOR_WHITE</ColorTypeSecondary>
+			<TextColorType>COLOR_CULTURE_STORED</TextColorType>
+		</PlayerColorInfo>
+	</PlayerColorInfos>
+</Civ4PlayerColorInfos>

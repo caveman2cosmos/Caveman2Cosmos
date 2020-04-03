@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+	<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+	<!-- Modified by the Civ Gold Team -->
+	<!-- -->
+<Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\Xml\Schema\Caveman2Cosmos.xsd">
+	<LeaderheadArtInfos>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_MACDONALD</Type>
+			<Button>Modules/Custom_Civilizations/Canada/leaders/Macdonald_small.dds</Button>
+			<NIF>Modules/Custom_Civilizations/Canada/leaders/Macdonald.dds</NIF>
+			<KFM/>
+			<NoShaderNIF/>
+			<BackgroundKFM/>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_PEARSON</Type>
+			<Button>Modules/Custom_Civilizations/Canada/leaders/Pearson_small.dds</Button>
+			<NIF>Modules/Custom_Civilizations/Canada/leaders/Pearson.dds</NIF>
+			<KFM/>
+			<NoShaderNIF/>
+			<BackgroundKFM/>
+		</LeaderheadArtInfo>
+		<LeaderheadArtInfo>
+			<Type>ART_DEF_LEADER_TRUDEAU</Type>
+			<Button>Modules/Custom_Civilizations/Canada/leaders/Trudeau_small.dds</Button>
+			<NIF>Modules/Custom_Civilizations/Canada/leaders/Trudeau.dds</NIF>
+			<KFM/>
+			<NoShaderNIF/>
+			<BackgroundKFM/>
+		</LeaderheadArtInfo>
+	</LeaderheadArtInfos>
+</Civ4ArtDefines>

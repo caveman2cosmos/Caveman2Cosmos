@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<Civ4CivilizationInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4CivilizationsSchema.xml">
+	<CivilizationInfos>
+		<CivilizationInfo>
+			<Type>CIVILIZATION_PIRATES</Type>
+			<Description>TXT_KEY_CIV_PIRATES_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_PIRATES_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_PIRATES_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_PIRATES_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_PIRATES</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_PIRATES</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_EUROPE</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_ENGLAND</UnitArtStyleType>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>Port Royal</City>
+				<City>Barataria</City>
+				<City>La Vega</City>
+				<City>Bragman's Bluff</City>
+				<City>Skeleton Island</City>
+				<City>Libertatia</City>
+				<City>Devil's Den</City>
+				<City>Roche's Rest</City>
+				<City>Duffer's Drift</City>
+				<City>Buccaneer's Bay</City>
+				<City>Tortuga</City>
+				<City>Booty Bay</City>
+				<City>Hispaniola</City>
+				<City>Antigua</City>
+				<City>Cartagena</City>
+				<City>Porto Bello</City>
+				<City>Cape Verde</City>
+				<City>Saint Kitts</City>
+				<City>Petit Goave</City>
+				<City>Leogane</City>
+				<City>Port-de-Paix</City>
+				<City>Piet Hein</City>
+				<City>Long Island</City>
+				<City>East Cay</City>
+				<City>Prickly Pear Cays</City>
+				<City>Sombrero</City>
+				<City>West Cay</City>
+				<City>Abaco</City>
+				<City>Andros</City>
+				<City>Eleuthera</City>
+				<City>Abaco</City>
+				<City>Exuma</City>
+				<City>Inagua</City>
+				<City>Mayaguana</City>
+				<City>Jamaica</City>
+				<City>Lime Cay</City>
+				<City>Morant Cays</City>
+				<City>Pedro Cays</City>
+				<City>Cajene</City>
+				<City>Puerto Loco</City>
+				<City>Basse Terre</City>
+				<City>Rosseu</City>
+				<City>Le Lamentin</City>
+				<City>Saint Lucia</City>
+			</Cities>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
+			<InitialCivics>
+				<CivicType>CIVIC_ANARCHISM</CivicType>
+				<CivicType>CIVIC_OBEDIENCE</CivicType>
+				<CivicType>CIVIC_STRONGMAN</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
+				<CivicType>CIVIC_MILITIA</CivicType>
+				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SURVIVAL</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
+				<CivicType>CIVIC_UNORGANIZED</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_HENRY_MORGAN</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_BARBANEGRA</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_BARBARROJA</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<DerivativeCiv>NONE</DerivativeCiv>
+			<CivilizationSelectionSound>AS3D_ENGLAND_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_ENGLAND_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+	</CivilizationInfos>
+</Civ4CivilizationInfos>

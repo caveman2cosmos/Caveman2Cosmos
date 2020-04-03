@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- Modified by strategyonly -->
+<!-- -->
+<!-- Civilization Infos -->
+<Civ4CivilizationInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4CivilizationsSchema.xml">
+	<CivilizationInfos>
+		<CivilizationInfo>
+			<Type>CIVILIZATION_SYRIA</Type>
+			<Description>TXT_KEY_CIV_SYRIA_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_SYRIA_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_SYRIA_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_SYRIA_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_SYRIA</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_SYRIA</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_CRESCENT</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_MIDDLE_EAST</UnitArtStyleType>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>Damascus</City>
+				<City>Aleppo</City>
+				<City>Daraa</City>
+				<City>Deir ez-Zor</City>
+				<City>Hama</City>
+				<City>Al-Hasakah</City>
+				<City>Homs</City>
+				<City>Idlib</City>
+				<City>Latakia</City>
+				<City>Quneitra</City>
+				<City>Ar-Raqqah</City>
+				<City>As-Suwayda</City>
+				<City>Tartus</City>
+				<City>Abu Kamal</City>
+				<City>Afrin</City>
+				<City>Arihah</City>
+				<City>Atarib</City>
+				<City>Ayn al-Arab</City>
+				<City>Azaz</City>
+				<City>Al-Bab</City>
+				<City>Baniyas</City>
+				<City>Darayya</City>
+				<City>Dayr Hafir</City>
+				<City>Douma</City>
+				<City>Duraykish</City>
+				<City>Fiq</City>
+				<City>Al-Haffah</City>
+				<City>Harem</City>
+				<City>Izra</City>
+				<City>Jableh</City>
+				<City>Jarabulus</City>
+				<City>Jisr al-Shughur</City>
+				<City>Maarat al-Numaan</City>
+				<City>Al-Malikiyah</City>
+				<City>Manbij</City>
+				<City>Masyaf</City>
+				<City>Mayadin</City>
+				<City>Mhardeh</City>
+				<City>Al-Mukharram</City>
+				<City>An-Nabk</City>
+				<City>Qamishli</City>
+				<City>Qardaha</City>
+				<City>Al-Safira</City>
+				<City>Al-Qusayr</City>
+				<City>Qatana</City>
+			</Cities>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
+			<InitialCivics>
+				<CivicType>CIVIC_ANARCHISM</CivicType>
+				<CivicType>CIVIC_OBEDIENCE</CivicType>
+				<CivicType>CIVIC_STRONGMAN</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
+				<CivicType>CIVIC_MILITIA</CivicType>
+				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SURVIVAL</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
+				<CivicType>CIVIC_UNORGANIZED</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_ASSAD</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<DerivativeCiv>CIVILIZATION_ARABIA</DerivativeCiv>
+			<CivilizationSelectionSound>AS3D_ARABIA_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_ARABIA_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+	</CivilizationInfos>
+</Civ4CivilizationInfos>

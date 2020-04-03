@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Sid Meier's Civilization 4 Beyond the Sword -->
+<!-- ReModified by the StrategyOnly -->
+<!-- -->
+<Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
+	<TEXT>
+		<Tag>TXT_KEY_CIV_UZBEK_DESC</Tag>
+		<English>Uzbek Empire</English>
+		<French>Empire ouzbek</French>
+		<German>Uzbek Empire</German>
+		<Italian>Impero Uzbeko</Italian>
+		<Spanish>Uzbek Empire</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_UZBEK_SHORT_DESC</Tag>
+		<English>Uzbekistan</English>
+		<French>Ouzbekistan</French>
+		<German>Uzbekistan</German>
+		<Italian>Uzbekistan</Italian>
+		<Spanish>Uzbekistan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_UZBEK_ADJECTIVE</Tag>
+		<English>Uzbek</English>
+		<French>Ouzbek</French>
+		<German>Uzbek</German>
+		<Italian>
+			<Text>Uzbeko:Uzbeka:Uzbeki:Uzbeke</Text>
+			<Gender>Male:Female:Male:Female</Gender>
+			<Plural>0:0:1:1</Plural>
+		</Italian>
+		<Spanish>Uzbek</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CIV_UZBEK_PEDIA</Tag>
+		<English>[TAB]The first people known to have occupied Central Asia were Iranian nomads who arrived from the northern grasslands of what is now Uzbekistan sometime in the first millennium B.C. These nomads, who spoke Iranian dialects, settled in Central Asia and began to build an extensive irrigation system along the rivers of the region. At this time, cities such as Bukhoro (Bukhara) and Samarqand (Samarkand) began to appear as centers of government and culture. By the fifth century B.C., the Bactrian, Soghdian, and Tokharian states dominated the region. As China began to develop its silk trade with the West, Iranian cities took advantage of this commerce by becoming centers of trade. Using an extensive network of cities and settlements in the province of Mawarannahr (a name given the region after the Arab conquest) in Uzbekistan 
+and farther east in what is today China's Xinjiang Uygur Auton-omous Region, the Soghdian intermediaries became the wealthiest of these Iranian merchants. Because of this trade on what became known as the Silk Route, Bukhoro and Samarqand eventually became extremely wealthy cities, and at times Mawarannahr was one of the most influential and powerful Persian provinces of antiquity.[PARAGRAPH:2]The Mongol conquest under Genghis Khan during the 13th century, would bring about a dramatic change to the region. The brutal conquest and widespread genocide characteristic of the Mongols almost entirely exterminated the indigenous Indo-Iranian (Scythian) people of the region. Their culture and heritage being superseded by that of 
+the Mongolian-Turkic peoples who settled the region thereafter.[PARAGRAPH:2]Following the death of Chinggis Khan in 1227, his empire was divided among his 4 sons and his family members. Despite the potential for serious fragmentation, Mongol law of the Mongol Empire maintained orderly succession for several more generations, and control of most of Mawarannahr stayed in the hands of direct descendants of Chaghatai, the second son of Chinggis. Orderly succession, prosperity, and internal peace prevailed in the Chaghatai lands, and the Mongol Empire as a whole remained strong and united.[PARAGRAPH:2]In the early fourteenth century, however, as the empire began to break up into its constituent parts, the Chaghatai territory also was disrupted as the princes of various tribal groups competed for influence. One tribal chieftain, Timur (Tamerlane), emerged from these struggles in the 1380s as the dominant force in Mawarannahr. Although he was not a descendant of Chinggis, Timur became the de facto ruler of Mawarannahr and proceeded to conquer all of western Central Asia, Iran, Asia Minor, and the southern steppe region north of the Aral Sea. He also invaded Russia before dying during an invasion of China in 1405.[PARAGRAPH:2]Most of Uzbekistan’s population today belong to the Uzbek ethnic group and speak the Uzbek language, one of the family of Turkic languages. Uzbekistan was incorporated into the Russian Empire in the 19th century and in 1924 became a constituent republic of the Soviet Union, known as the Uzbek Soviet Socialist Republic (Uzbek SSR). It has been an independent republic since December 1991.[PARAGRAPH:2]Uzbekistan's economy relies 
+mainly on commodity production, including cotton, gold, uranium, and natural gas. Despite the declared objective of transition to a market economy, Uzbekistan continues to maintain rigid economic controls, which often repel foreign investors. The policy of gradual, strictly controlled transition has nevertheless produced beneficial results in the form of economic recovery after 1995. Uzbekistan's domestic policies of human rights and individual freedoms are often criticized by international organizations.</English>
+		<French>[TAB]The first people known to have occupied Central Asia were Iranian nomads who arrived from the northern grasslands of what is now Uzbekistan sometime in the first millennium B.C. These nomads, who spoke Iranian dialects, settled in Central Asia and began to build an extensive irrigation system along the rivers of the region. At this time, cities such as Bukhoro (Bukhara) and Samarqand (Samarkand) began to appear as centers of government and culture. By the fifth century B.C., the Bactrian, Soghdian, and Tokharian states dominated the region. As China began to develop its silk trade with the West, Iranian cities took advantage of this commerce by becoming centers of trade. Using an extensive network of cities and settlements in the province of Mawarannahr (a name given the region after the Arab conquest) in Uzbekistan 
+and farther east in what is today China's Xinjiang Uygur Auton-omous Region, the Soghdian intermediaries became the wealthiest of these Iranian merchants. Because of this trade on what became known as the Silk Route, Bukhoro and Samarqand eventually became extremely wealthy cities, and at times Mawarannahr was one of the most influential and powerful Persian provinces of antiquity.[PARAGRAPH:2]The Mongol conquest under Genghis Khan during the 13th century, would bring about a dramatic change to the region. The brutal conquest and widespread genocide characteristic of the Mongols almost entirely exterminated the indigenous Indo-Iranian (Scythian) people of the region. Their culture and heritage being superseded by that of 
+the Mongolian-Turkic peoples who settled the region thereafter.[PARAGRAPH:2]Following the death of Chinggis Khan in 1227, his empire was divided among his 4 sons and his family members. Despite the potential for serious fragmentation, Mongol law of the Mongol Empire maintained orderly succession for several more generations, and control of most of Mawarannahr stayed in the hands of direct descendants of Chaghatai, the second son of Chinggis. Orderly succession, prosperity, and internal peace prevailed in the Chaghatai lands, and the Mongol Empire as a whole remained strong and united.[PARAGRAPH:2]In the early fourteenth century, however, as the empire began to break up into its constituent parts, the Chaghatai territory also was disrupted as the princes of various tribal groups competed for influence. One tribal chieftain, Timur (Tamerlane), emerged from these struggles in the 1380s as the dominant force in Mawarannahr. Although he was not a descendant of Chinggis, Timur became the de facto ruler of Mawarannahr and proceeded to conquer all of western Central Asia, Iran, Asia Minor, and the southern steppe region north of the Aral Sea. He also invaded Russia before dying during an invasion of China in 1405.[PARAGRAPH:2]Most of Uzbekistan’s population today belong to the Uzbek ethnic group and speak the Uzbek language, one of the family of Turkic languages. Uzbekistan was incorporated into the Russian Empire in the 19th century and in 1924 became a constituent republic of the Soviet Union, known as the Uzbek Soviet Socialist Republic (Uzbek SSR). It has been an independent republic since December 1991.[PARAGRAPH:2]Uzbekistan's economy relies 
+mainly on commodity production, including cotton, gold, uranium, and natural gas. Despite the declared objective of transition to a market economy, Uzbekistan continues to maintain rigid economic controls, which often repel foreign investors. The policy of gradual, strictly controlled transition has nevertheless produced beneficial results in the form of economic recovery after 1995. Uzbekistan's domestic policies of human rights and individual freedoms are often criticized by international organizations.</French>
+		<German>[TAB]The first people known to have occupied Central Asia were Iranian nomads who arrived from the northern grasslands of what is now Uzbekistan sometime in the first millennium B.C. These nomads, who spoke Iranian dialects, settled in Central Asia and began to build an extensive irrigation system along the rivers of the region. At this time, cities such as Bukhoro (Bukhara) and Samarqand (Samarkand) began to appear as centers of government and culture. By the fifth century B.C., the Bactrian, Soghdian, and Tokharian states dominated the region. As China began to develop its silk trade with the West, Iranian cities took advantage of this commerce by becoming centers of trade. Using an extensive network of cities and settlements in the province of Mawarannahr (a name given the region after the Arab conquest) in Uzbekistan 
+and farther east in what is today China's Xinjiang Uygur Auton-omous Region, the Soghdian intermediaries became the wealthiest of these Iranian merchants. Because of this trade on what became known as the Silk Route, Bukhoro and Samarqand eventually became extremely wealthy cities, and at times Mawarannahr was one of the most influential and powerful Persian provinces of antiquity.[PARAGRAPH:2]The Mongol conquest under Genghis Khan during the 13th century, would bring about a dramatic change to the region. The brutal conquest and widespread genocide characteristic of the Mongols almost entirely exterminated the indigenous Indo-Iranian (Scythian) people of the region. Their culture and heritage being superseded by that of 
+the Mongolian-Turkic peoples who settled the region thereafter.[PARAGRAPH:2]Following the death of Chinggis Khan in 1227, his empire was divided among his 4 sons and his family members. Despite the potential for serious fragmentation, Mongol law of the Mongol Empire maintained orderly succession for several more generations, and control of most of Mawarannahr stayed in the hands of direct descendants of Chaghatai, the second son of Chinggis. Orderly succession, prosperity, and internal peace prevailed in the Chaghatai lands, and the Mongol Empire as a whole remained strong and united.[PARAGRAPH:2]In the early fourteenth century, however, as the empire began to break up into its constituent parts, the Chaghatai territory also was disrupted as the princes of various tribal groups competed for influence. One tribal chieftain, Timur (Tamerlane), emerged from these struggles in the 1380s as the dominant force in Mawarannahr. Although he was not a descendant of Chinggis, Timur became the de facto ruler of Mawarannahr and proceeded to conquer all of western Central Asia, Iran, Asia Minor, and the southern steppe region north of the Aral Sea. He also invaded Russia before dying during an invasion of China in 1405.[PARAGRAPH:2]Most of Uzbekistan’s population today belong to the Uzbek ethnic group and speak the Uzbek language, one of the family of Turkic languages. Uzbekistan was incorporated into the Russian Empire in the 19th century and in 1924 became a constituent republic of the Soviet Union, known as the Uzbek Soviet Socialist Republic (Uzbek SSR). It has been an independent republic since December 1991.[PARAGRAPH:2]Uzbekistan's economy relies 
+mainly on commodity production, including cotton, gold, uranium, and natural gas. Despite the declared objective of transition to a market economy, Uzbekistan continues to maintain rigid economic controls, which often repel foreign investors. The policy of gradual, strictly controlled transition has nevertheless produced beneficial results in the form of economic recovery after 1995. Uzbekistan's domestic policies of human rights and individual freedoms are often criticized by international organizations.</German>
+		<Italian>[TAB]The first people known to have occupied Central Asia were Iranian nomads who arrived from the northern grasslands of what is now Uzbekistan sometime in the first millennium B.C. These nomads, who spoke Iranian dialects, settled in Central Asia and began to build an extensive irrigation system along the rivers of the region. At this time, cities such as Bukhoro (Bukhara) and Samarqand (Samarkand) began to appear as centers of government and culture. By the fifth century B.C., the Bactrian, Soghdian, and Tokharian states dominated the region. As China began to develop its silk trade with the West, Iranian cities took advantage of this commerce by becoming centers of trade. Using an extensive network of cities and settlements in the province of Mawarannahr (a name given the region after the Arab conquest) in Uzbekistan 
+and farther east in what is today China's Xinjiang Uygur Auton-omous Region, the Soghdian intermediaries became the wealthiest of these Iranian merchants. Because of this trade on what became known as the Silk Route, Bukhoro and Samarqand eventually became extremely wealthy cities, and at times Mawarannahr was one of the most influential and powerful Persian provinces of antiquity.[PARAGRAPH:2]The Mongol conquest under Genghis Khan during the 13th century, would bring about a dramatic change to the region. The brutal conquest and widespread genocide characteristic of the Mongols almost entirely exterminated the indigenous Indo-Iranian (Scythian) people of the region. Their culture and heritage being superseded by that of 
+the Mongolian-Turkic peoples who settled the region thereafter.[PARAGRAPH:2]Following the death of Chinggis Khan in 1227, his empire was divided among his 4 sons and his family members. Despite the potential for serious fragmentation, Mongol law of the Mongol Empire maintained orderly succession for several more generations, and control of most of Mawarannahr stayed in the hands of direct descendants of Chaghatai, the second son of Chinggis. Orderly succession, prosperity, and internal peace prevailed in the Chaghatai lands, and the Mongol Empire as a whole remained strong and united.[PARAGRAPH:2]In the early fourteenth century, however, as the empire began to break up into its constituent parts, the Chaghatai territory also was disrupted as the princes of various tribal groups competed for influence. One tribal chieftain, Timur (Tamerlane), emerged from these struggles in the 1380s as the dominant force in Mawarannahr. Although he was not a descendant of Chinggis, Timur became the de facto ruler of Mawarannahr and proceeded to conquer all of western Central Asia, Iran, Asia Minor, and the southern steppe region north of the Aral Sea. He also invaded Russia before dying during an invasion of China in 1405.[PARAGRAPH:2]Most of Uzbekistan’s population today belong to the Uzbek ethnic group and speak the Uzbek language, one of the family of Turkic languages. Uzbekistan was incorporated into the Russian Empire in the 19th century and in 1924 became a constituent republic of the Soviet Union, known as the Uzbek Soviet Socialist Republic (Uzbek SSR). It has been an independent republic since December 1991.[PARAGRAPH:2]Uzbekistan's economy relies 
+mainly on commodity production, including cotton, gold, uranium, and natural gas. Despite the declared objective of transition to a market economy, Uzbekistan continues to maintain rigid economic controls, which often repel foreign investors. The policy of gradual, strictly controlled transition has nevertheless produced beneficial results in the form of economic recovery after 1995. Uzbekistan's domestic policies of human rights and individual freedoms are often criticized by international organizations.</Italian>
+		<Spanish>[TAB]The first people known to have occupied Central Asia were Iranian nomads who arrived from the northern grasslands of what is now Uzbekistan sometime in the first millennium B.C. These nomads, who spoke Iranian dialects, settled in Central Asia and began to build an extensive irrigation system along the rivers of the region. At this time, cities such as Bukhoro (Bukhara) and Samarqand (Samarkand) began to appear as centers of government and culture. By the fifth century B.C., the Bactrian, Soghdian, and Tokharian states dominated the region. As China began to develop its silk trade with the West, Iranian cities took advantage of this commerce by becoming centers of trade. Using an extensive network of cities and settlements in the province of Mawarannahr (a name given the region after the Arab conquest) in Uzbekistan 
+and farther east in what is today China's Xinjiang Uygur Auton-omous Region, the Soghdian intermediaries became the wealthiest of these Iranian merchants. Because of this trade on what became known as the Silk Route, Bukhoro and Samarqand eventually became extremely wealthy cities, and at times Mawarannahr was one of the most influential and powerful Persian provinces of antiquity.[PARAGRAPH:2]The Mongol conquest under Genghis Khan during the 13th century, would bring about a dramatic change to the region. The brutal conquest and widespread genocide characteristic of the Mongols almost entirely exterminated the indigenous Indo-Iranian (Scythian) people of the region. Their culture and heritage being superseded by that of 
+the Mongolian-Turkic peoples who settled the region thereafter.[PARAGRAPH:2]Following the death of Chinggis Khan in 1227, his empire was divided among his 4 sons and his family members. Despite the potential for serious fragmentation, Mongol law of the Mongol Empire maintained orderly succession for several more generations, and control of most of Mawarannahr stayed in the hands of direct descendants of Chaghatai, the second son of Chinggis. Orderly succession, prosperity, and internal peace prevailed in the Chaghatai lands, and the Mongol Empire as a whole remained strong and united.[PARAGRAPH:2]In the early fourteenth century, however, as the empire began to break up into its constituent parts, the Chaghatai territory also was disrupted as the princes of various tribal groups competed for influence. One tribal chieftain, Timur (Tamerlane), emerged from these struggles in the 1380s as the dominant force in Mawarannahr. Although he was not a descendant of Chinggis, Timur became the de facto ruler of Mawarannahr and proceeded to conquer all of western Central Asia, Iran, Asia Minor, and the southern steppe region north of the Aral Sea. He also invaded Russia before dying during an invasion of China in 1405.[PARAGRAPH:2]Most of Uzbekistan’s population today belong to the Uzbek ethnic group and speak the Uzbek language, one of the family of Turkic languages. Uzbekistan was incorporated into the Russian Empire in the 19th century and in 1924 became a constituent republic of the Soviet Union, known as the Uzbek Soviet Socialist Republic (Uzbek SSR). It has been an independent republic since December 1991.[PARAGRAPH:2]Uzbekistan's economy relies 
+mainly on commodity production, including cotton, gold, uranium, and natural gas. Despite the declared objective of transition to a market economy, Uzbekistan continues to maintain rigid economic controls, which often repel foreign investors. The policy of gradual, strictly controlled transition has nevertheless produced beneficial results in the form of economic recovery after 1995. Uzbekistan's domestic policies of human rights and individual freedoms are often criticized by international organizations.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SHAYBANI</Tag>
+		<English>Shaybani</English>
+		<French>Shaybani</French>
+		<German>Shaybani</German>
+		<Italian>Shaybani</Italian>
+		<Spanish>Shaybani</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_LEADER_SHAYBANI_PEDIA</Tag>
+		<English>[H1]Shaybani Khan[\H1][NEWLINE][BOLD]Khan of the Uzbeks[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.1451 - 1510 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Abu 'I-Fath Muhammad, known in later centuries as Shaybani Khan, was a khan of the Uzbeks (1500-10) who continued consolidating various Uzbek tribes and laid foundations for their ascendance in Transoxiana. He was a descendant of Genghis Khan through his grandson Shayban and considered the Timurids as usurpers of the Genghisid heritage in Central Asia. His native Turkic name was Shabaq (wormwood, whence Shaibak, thence Shaybani--a pseudo-authentication of the Turkic name into a more prestigious Arabic tribal name of Shayban.[PARAGRAPH:1] Continuing the policies of his grandfather, Abu'l-Khayr Khan, Shaybani ousted the Timurids from their capital Samarkand by 1500. He fought successful campaigns against the Timurid leader Babur, founder of the Mughal Empire. In 1505 he recaptured Samarkand and in 1507 also took Herat, the southern capital of the Timurids. Shaybani conquered Bukhara in 1506 and established the short-lived Shaybanid Empire. In 1508-09, he carried out many raids northward, pillaging the land of the Kazakh Khanate. However he suffered a major defeat from Kazakhs under Kasim Khan in 1510.[PARAGRAPH:1] Shah Ismail I from the Safavid dynasty of Persia was alarmed by Shaybani's success and moved against the Uzbeks. In the Battle of Marv (1510), Muhammad Shaybani was defeated and killed when trying to escape. Ismail had Muhammad Shaybani's body parts sent to various areas of the empire for display and had his skull coated in gold and made into a jewelled drinking goblet which was drunk from when entertaining.[PARAGRAPH:1] At the time of Shaybani's death, the Uzbeks controlled all of Transoxiana, that is, the area between the Syr Darya and Amu Darya rivers. After capturing Samarkand from Babur, Shaybani married Babur's sister, Khanzada Begum. Babur's liberty to leave Samarkand was made contingent upon his assent to this alliance. After Shaybani's death, Ismail I gave liberty to Khanzada Begum with her son and, at Babur's request, sent them to his court. For this reason Shaybani was succeeded not by a son but by an uncle, a cousin and a brother whose descendants would rule Bukhara until 1598 and Khwarizm (later named Khiva) until 1687.</English>
+		<French>[H1]Shaybani Khan[\H1][NEWLINE][BOLD]Khan of the Uzbeks[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.1451 - 1510 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Abu 'I-Fath Muhammad, known in later centuries as Shaybani Khan, was a khan of the Uzbeks (1500-10) who continued consolidating various Uzbek tribes and laid foundations for their ascendance in Transoxiana. He was a descendant of Genghis Khan through his grandson Shayban and considered the Timurids as usurpers of the Genghisid heritage in Central Asia. His native Turkic name was Shabaq (wormwood, whence Shaibak, thence Shaybani--a pseudo-authentication of the Turkic name into a more prestigious Arabic tribal name of Shayban.[PARAGRAPH:1] Continuing the policies of his grandfather, Abu'l-Khayr Khan, Shaybani ousted the Timurids from their capital Samarkand by 1500. He fought successful campaigns against the Timurid leader Babur, founder of the Mughal Empire. In 1505 he recaptured Samarkand and in 1507 also took Herat, the southern capital of the Timurids. Shaybani conquered Bukhara in 1506 and established the short-lived Shaybanid Empire. In 1508-09, he carried out many raids northward, pillaging the land of the Kazakh Khanate. However he suffered a major defeat from Kazakhs under Kasim Khan in 1510.[PARAGRAPH:1] Shah Ismail I from the Safavid dynasty of Persia was alarmed by Shaybani's success and moved against the Uzbeks. In the Battle of Marv (1510), Muhammad Shaybani was defeated and killed when trying to escape. Ismail had Muhammad Shaybani's body parts sent to various areas of the empire for display and had his skull coated in gold and made into a jewelled drinking goblet which was drunk from when entertaining.[PARAGRAPH:1] At the time of Shaybani's death, the Uzbeks controlled all of Transoxiana, that is, the area between the Syr Darya and Amu Darya rivers. After capturing Samarkand from Babur, Shaybani married Babur's sister, Khanzada Begum. Babur's liberty to leave Samarkand was made contingent upon his assent to this alliance. After Shaybani's death, Ismail I gave liberty to Khanzada Begum with her son and, at Babur's request, sent them to his court. For this reason Shaybani was succeeded not by a son but by an uncle, a cousin and a brother whose descendants would rule Bukhara until 1598 and Khwarizm (later named Khiva) until 1687.</French>
+		<German>[H1]Shaybani Khan[\H1][NEWLINE][BOLD]Khan of the Uzbeks[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.1451 - 1510 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Abu 'I-Fath Muhammad, known in later centuries as Shaybani Khan, was a khan of the Uzbeks (1500-10) who continued consolidating various Uzbek tribes and laid foundations for their ascendance in Transoxiana. He was a descendant of Genghis Khan through his grandson Shayban and considered the Timurids as usurpers of the Genghisid heritage in Central Asia. His native Turkic name was Shabaq (wormwood, whence Shaibak, thence Shaybani--a pseudo-authentication of the Turkic name into a more prestigious Arabic tribal name of Shayban.[PARAGRAPH:1] Continuing the policies of his grandfather, Abu'l-Khayr Khan, Shaybani ousted the Timurids from their capital Samarkand by 1500. He fought successful campaigns against the Timurid leader Babur, founder of the Mughal Empire. In 1505 he recaptured Samarkand and in 1507 also took Herat, the southern capital of the Timurids. Shaybani conquered Bukhara in 1506 and established the short-lived Shaybanid Empire. In 1508-09, he carried out many raids northward, pillaging the land of the Kazakh Khanate. However he suffered a major defeat from Kazakhs under Kasim Khan in 1510.[PARAGRAPH:1] Shah Ismail I from the Safavid dynasty of Persia was alarmed by Shaybani's success and moved against the Uzbeks. In the Battle of Marv (1510), Muhammad Shaybani was defeated and killed when trying to escape. Ismail had Muhammad Shaybani's body parts sent to various areas of the empire for display and had his skull coated in gold and made into a jewelled drinking goblet which was drunk from when entertaining.[PARAGRAPH:1] At the time of Shaybani's death, the Uzbeks controlled all of Transoxiana, that is, the area between the Syr Darya and Amu Darya rivers. After capturing Samarkand from Babur, Shaybani married Babur's sister, Khanzada Begum. Babur's liberty to leave Samarkand was made contingent upon his assent to this alliance. After Shaybani's death, Ismail I gave liberty to Khanzada Begum with her son and, at Babur's request, sent them to his court. For this reason Shaybani was succeeded not by a son but by an uncle, a cousin and a brother whose descendants would rule Bukhara until 1598 and Khwarizm (later named Khiva) until 1687.</German>
+		<Italian>[H1]Shaybani Khan[\H1][NEWLINE][BOLD]Khan of the Uzbeks[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.1451 - 1510 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Abu 'I-Fath Muhammad, known in later centuries as Shaybani Khan, was a khan of the Uzbeks (1500-10) who continued consolidating various Uzbek tribes and laid foundations for their ascendance in Transoxiana. He was a descendant of Genghis Khan through his grandson Shayban and considered the Timurids as usurpers of the Genghisid heritage in Central Asia. His native Turkic name was Shabaq (wormwood, whence Shaibak, thence Shaybani--a pseudo-authentication of the Turkic name into a more prestigious Arabic tribal name of Shayban.[PARAGRAPH:1] Continuing the policies of his grandfather, Abu'l-Khayr Khan, Shaybani ousted the Timurids from their capital Samarkand by 1500. He fought successful campaigns against the Timurid leader Babur, founder of the Mughal Empire. In 1505 he recaptured Samarkand and in 1507 also took Herat, the southern capital of the Timurids. Shaybani conquered Bukhara in 1506 and established the short-lived Shaybanid Empire. In 1508-09, he carried out many raids northward, pillaging the land of the Kazakh Khanate. However he suffered a major defeat from Kazakhs under Kasim Khan in 1510.[PARAGRAPH:1] Shah Ismail I from the Safavid dynasty of Persia was alarmed by Shaybani's success and moved against the Uzbeks. In the Battle of Marv (1510), Muhammad Shaybani was defeated and killed when trying to escape. Ismail had Muhammad Shaybani's body parts sent to various areas of the empire for display and had his skull coated in gold and made into a jewelled drinking goblet which was drunk from when entertaining.[PARAGRAPH:1] At the time of Shaybani's death, the Uzbeks controlled all of Transoxiana, that is, the area between the Syr Darya and Amu Darya rivers. After capturing Samarkand from Babur, Shaybani married Babur's sister, Khanzada Begum. Babur's liberty to leave Samarkand was made contingent upon his assent to this alliance. After Shaybani's death, Ismail I gave liberty to Khanzada Begum with her son and, at Babur's request, sent them to his court. For this reason Shaybani was succeeded not by a son but by an uncle, a cousin and a brother whose descendants would rule Bukhara until 1598 and Khwarizm (later named Khiva) until 1687.</Italian>
+		<Spanish>[H1]Shaybani Khan[\H1][NEWLINE][BOLD]Khan of the Uzbeks[\BOLD][NEWLINE][BOLD]Lived: [\BOLD] c.1451 - 1510 [NEWLINE][PARAGRAPH:2][BOLD]Background:[\BOLD][NEWLINE][TAB]Abu 'I-Fath Muhammad, known in later centuries as Shaybani Khan, was a khan of the Uzbeks (1500-10) who continued consolidating various Uzbek tribes and laid foundations for their ascendance in Transoxiana. He was a descendant of Genghis Khan through his grandson Shayban and considered the Timurids as usurpers of the Genghisid heritage in Central Asia. His native Turkic name was Shabaq (wormwood, whence Shaibak, thence Shaybani--a pseudo-authentication of the Turkic name into a more prestigious Arabic tribal name of Shayban.[PARAGRAPH:1] Continuing the policies of his grandfather, Abu'l-Khayr Khan, Shaybani ousted the Timurids from their capital Samarkand by 1500. He fought successful campaigns against the Timurid leader Babur, founder of the Mughal Empire. In 1505 he recaptured Samarkand and in 1507 also took Herat, the southern capital of the Timurids. Shaybani conquered Bukhara in 1506 and established the short-lived Shaybanid Empire. In 1508-09, he carried out many raids northward, pillaging the land of the Kazakh Khanate. However he suffered a major defeat from Kazakhs under Kasim Khan in 1510.[PARAGRAPH:1] Shah Ismail I from the Safavid dynasty of Persia was alarmed by Shaybani's success and moved against the Uzbeks. In the Battle of Marv (1510), Muhammad Shaybani was defeated and killed when trying to escape. Ismail had Muhammad Shaybani's body parts sent to various areas of the empire for display and had his skull coated in gold and made into a jewelled drinking goblet which was drunk from when entertaining.[PARAGRAPH:1] At the time of Shaybani's death, the Uzbeks controlled all of Transoxiana, that is, the area between the Syr Darya and Amu Darya rivers. After capturing Samarkand from Babur, Shaybani married Babur's sister, Khanzada Begum. Babur's liberty to leave Samarkand was made contingent upon his assent to this alliance. After Shaybani's death, Ismail I gave liberty to Khanzada Begum with her son and, at Babur's request, sent them to his court. For this reason Shaybani was succeeded not by a son but by an uncle, a cousin and a brother whose descendants would rule Bukhara until 1598 and Khwarizm (later named Khiva) until 1687.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SHAYBANI_1</Tag>
+		<English>Yaxshimisiz! I am the leader and unifier of the [OUR_CIV_SHORT] people, [OUR_NAME]! Behold the might and beauty of my kingdom!</English>
+		<French>Yaxshimisiz! I am the leader and unifier of the [OUR_CIV_SHORT] people, [OUR_NAME]! Behold the might and beauty of my kingdom!</French>
+		<German>Yaxshimisiz! I am the leader and unifier of the [OUR_CIV_SHORT] people, [OUR_NAME]! Behold the might and beauty of my kingdom!</German>
+		<Italian>Yaxshimisiz! Io sono il leader e unificatore del popolo [OUR_CIV_SHORT], [OUR_NAME]! Ammira la bellezza e la potenza del mio regno!</Italian>
+		<Spanish>Yaxshimisiz! I am the leader and unifier of the [OUR_CIV_SHORT] people, [OUR_NAME]! Behold the might and beauty of my kingdom!</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TASHKENT</Tag>
+		<English>Tashkent</English>
+		<French>Tashkent</French>
+		<German>Tashkent</German>
+		<Italian>Tashkent</Italian>
+		<Spanish>Tashkent</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BUKHARA</Tag>
+		<English>Bukhara</English>
+		<French>Bukhara</French>
+		<German>Bukhara</German>
+		<Italian>Bukhara</Italian>
+		<Spanish>Bukhara</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAMARQAND</Tag>
+		<English>Samarqand</English>
+		<French>Samarqand</French>
+		<German>Samarqand</German>
+		<Italian>Samarqand</Italian>
+		<Spanish>Samarqand</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NAVOI</Tag>
+		<English>Navoi</English>
+		<French>Navoi</French>
+		<German>Navoi</German>
+		<Italian>Navoi</Italian>
+		<Spanish>Navoi</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ANDIJON</Tag>
+		<English>Andijon</English>
+		<French>Andijon</French>
+		<German>Andijon</German>
+		<Italian>Andijon</Italian>
+		<Spanish>Andijon</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KHIVA</Tag>
+		<English>Khiva</English>
+		<French>Khiva</French>
+		<German>Khiva</German>
+		<Italian>Khiva</Italian>
+		<Spanish>Khiva</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_FERGANA</Tag>
+		<English>Fergana</English>
+		<French>Fergana</French>
+		<German>Fergana</German>
+		<Italian>Fergana</Italian>
+		<Spanish>Fergana</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KOKAND</Tag>
+		<English>Kokand</English>
+		<French>Kokand</French>
+		<German>Kokand</German>
+		<Italian>Kokand</Italian>
+		<Spanish>Kokand</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_URGANCH</Tag>
+		<English>Urganch</English>
+		<French>Urganch</French>
+		<German>Urganch</German>
+		<Italian>Urganch</Italian>
+		<Spanish>Urganch</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NUKUS</Tag>
+		<English>Nukus</English>
+		<French>Nukus</French>
+		<German>Nukus</German>
+		<Italian>Nukus</Italian>
+		<Spanish>Nukus</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_NAMANGAN</Tag>
+		<English>Namangan</English>
+		<French>Namangan</French>
+		<German>Namangan</German>
+		<Italian>Namangan</Italian>
+		<Spanish>Namangan</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_QARSHI</Tag>
+		<English>Qarshi</English>
+		<French>Qarshi</French>
+		<German>Qarshi</German>
+		<Italian>Qarshi</Italian>
+		<Spanish>Qarshi</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TERMEZ</Tag>
+		<English>Termez</English>
+		<French>Termez</French>
+		<German>Termez</German>
+		<Italian>Termez</Italian>
+		<Spanish>Termez</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BEKABAD</Tag>
+		<English>Bekabad</English>
+		<French>Bekabad</French>
+		<German>Bekabad</German>
+		<Italian>Bekabad</Italian>
+		<Spanish>Bekabad</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_JIZZAKH</Tag>
+		<English>Jizzakh</English>
+		<French>Jizzakh</French>
+		<German>Jizzakh</German>
+		<Italian>Jizzakh</Italian>
+		<Spanish>Jizzakh</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GULISTON</Tag>
+		<English>Guliston</English>
+		<French>Guliston</French>
+		<German>Guliston</German>
+		<Italian>Guliston</Italian>
+		<Spanish>Guliston</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ZARAFSHON</Tag>
+		<English>Zarafshon</English>
+		<French>Zarafshon</French>
+		<German>Zarafshon</German>
+		<Italian>Zarafshon</Italian>
+		<Spanish>Zarafshon</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_QUQON</Tag>
+		<English>Quqon</English>
+		<French>Quqon</French>
+		<German>Quqon</German>
+		<Italian>Quqon</Italian>
+		<Spanish>Quqon</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CHIRCHIQ</Tag>
+		<English>Chirchiq</English>
+		<French>Chirchiq</French>
+		<German>Chirchiq</German>
+		<Italian>Chirchiq</Italian>
+		<Spanish>Chirchiq</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_UCHQUDUQ</Tag>
+		<English>Uchquduq</English>
+		<French>Uchquduq</French>
+		<German>Uchquduq</German>
+		<Italian>Uchquduq</Italian>
+		<Spanish>Uchquduq</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KATTAQORGON</Tag>
+		<English>Kattaqorgon</English>
+		<French>Kattaqorgon</French>
+		<German>Kattaqorgon</German>
+		<Italian>Kattaqorgon</Italian>
+		<Spanish>Kattaqorgon</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_OLMALIQ</Tag>
+		<English>Olmaliq</English>
+		<French>Olmaliq</French>
+		<German>Olmaliq</German>
+		<Italian>Olmaliq</Italian>
+		<Spanish>Olmaliq</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_QORAKOL</Tag>
+		<English>Qorakol</English>
+		<French>Qorakol</French>
+		<German>Qorakol</German>
+		<Italian>Qorakol</Italian>
+		<Spanish>Qorakol</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SIRDARYO</Tag>
+		<English>Sirdaryo</English>
+		<French>Sirdaryo</French>
+		<German>Sirdaryo</German>
+		<Italian>Sirdaryo</Italian>
+		<Spanish>Sirdaryo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_AK-DARYA</Tag>
+		<English>Ak-Darya</English>
+		<French>Ak-Darya</French>
+		<German>Ak-Darya</German>
+		<Italian>Ak-Darya</Italian>
+		<Spanish>Ak-Darya</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KOSONSOY</Tag>
+		<English>Kosonsoy</English>
+		<French>Kosonsoy</French>
+		<German>Kosonsoy</German>
+		<Italian>Kosonsoy</Italian>
+		<Spanish>Kosonsoy</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_QORASUV</Tag>
+		<English>Qorasuv</English>
+		<French>Qorasuv</French>
+		<German>Qorasuv</German>
+		<Italian>Qorasuv</Italian>
+		<Spanish>Qorasuv</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_URGUT</Tag>
+		<English>Urgut</English>
+		<French>Urgut</French>
+		<German>Urgut</German>
+		<Italian>Urgut</Italian>
+		<Spanish>Urgut</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VOBKENT</Tag>
+		<English>Vobkent</English>
+		<French>Vobkent</French>
+		<German>Vobkent</German>
+		<Italian>Vobkent</Italian>
+		<Spanish>Vobkent</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_YANGIOBOD</Tag>
+		<English>Yangiobod</English>
+		<French>Yangiobod</French>
+		<German>Yangiobod</German>
+		<Italian>Yangiobod</Italian>
+		<Spanish>Yangiobod</Spanish>
+	</TEXT>
+</Civ4GameText>

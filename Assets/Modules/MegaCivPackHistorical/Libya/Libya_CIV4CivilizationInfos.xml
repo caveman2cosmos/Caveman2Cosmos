@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<Civ4CivilizationInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4CivilizationsSchema.xml">
+	<CivilizationInfos>
+		<CivilizationInfo>
+			<Type>CIVILIZATION_LIBYA</Type>
+			<Description>TXT_KEY_CIV_LIBYA_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_LIBYA_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_LIBYA_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_LIBYA_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_THOTH</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_LIBYA</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_EGYPT</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_EGYPT</UnitArtStyleType>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>Djanet</City>
+				<City>Kyrene</City>
+				<City>Siwa Oasis</City>
+				<City>Marsa Susa</City>
+				<City>Men-nefer</City>
+				<City>Henen-nesu</City>
+				<City>Waset</City>
+				<City>Taucheira</City>
+				<City>Kharga Oasis</City>
+				<City>Farafra Oasis</City>
+				<City>Benghazi</City>
+				<City>Garama</City>
+				<City>Khnum</City>
+				<City>Faiyum</City>
+				<City>Sais</City>
+				<City>Per-Bast</City>
+				<City>Taremu</City>
+				<City>Dakhla Oasis</City>
+				<City>Barca</City>
+				<City>Tripoli</City>
+				<City>Phthia</City>
+				<City>Paliurus</City>
+				<City>Awjila</City>
+				<City>Bahariya Oasis</City>
+				<City>Karnak</City>
+				<City>Antipyrgus</City>
+				<City>Ptolemais</City>
+				<City>Gonia</City>
+				<City>Petras Maior</City>
+				<City>Sallum</City>
+				<City>Zallah</City>
+				<City>Tayu-djayet</City>
+				<City>Zygra</City>
+				<City>Qara Oasis</City>
+				<City>Paraetonium</City>
+				<City>Sabratha</City>
+				<City>Menelaus Portus</City>
+				<City>Apis</City>
+				<City>Thubactis</City>
+				<City>Ajdabiya</City>
+				<City>Sabha</City>
+				<City>Awvbari</City>
+				<City>Gadamis</City>
+				<City>El Menia</City>
+			</Cities>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
+			<InitialCivics>
+				<CivicType>CIVIC_ANARCHISM</CivicType>
+				<CivicType>CIVIC_OBEDIENCE</CivicType>
+				<CivicType>CIVIC_STRONGMAN</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
+				<CivicType>CIVIC_MILITIA</CivicType>
+				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SURVIVAL</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
+				<CivicType>CIVIC_UNORGANIZED</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_SHOSHENQ</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_KADDAFI</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<DerivativeCiv>CIVILIZATION_EGYPT</DerivativeCiv>
+			<CivilizationSelectionSound>AS3D_EGYPT_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_EGYPT_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+	</CivilizationInfos>
+</Civ4CivilizationInfos>

@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- ReModified by the StrategyOnly -->
+<!-- -->
+<!-- Civilization Infos -->
+<Civ4CivilizationInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4CivilizationsSchema.xml">
+	<CivilizationInfos>
+		<CivilizationInfo>
+			<Type>CIVILIZATION_APACHE</Type>
+			<Description>TXT_KEY_CIV_APACHE_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_APACHE_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_APACHE_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_APACHE_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_APACHE</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_APACHE</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_NATIVE_AMERICA</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_NATIVE_AMERICA</UnitArtStyleType>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>Silver City</City>
+				<City>Wolf Mountain</City>
+				<City>Benson</City>
+				<City>Tucson</City>
+				<City>Dragoon Mountains</City>
+				<City>Aspen Mountain</City>
+				<City>Mogollon Mountains</City>
+				<City>Whitewater Baldy</City>
+				<City>Middle Fork Hot Springs</City>
+				<City>Jordan Hot Springs</City>
+				<City>Red Hill</City>
+				<City>Gila</City>
+				<City>Black Mountain</City>
+				<City>Zuni</City>
+				<City>TXT_KEY_CITY_NAME_TIIS_TSEBA</City>
+				<City>TXT_KEY_CITY_NAME_BIGAGOTEEL</City>
+				<City>TXT_KEY_CITY_NAME_TEEHACH</City>
+				<City>TXT_KEY_CITY_NAME_TICHIOG</City>
+				<City>TXT_KEY_CITY_NAME_KIIS_CHIINTIIDN</City>
+				<City>TXT_KEY_CITY_NAME_TS_TSSKIDN</City>
+				<City>TXT_KEY_CITY_NAME_DZI_LIKESILAN</City>
+				<City>TXT_KEY_CITY_NAME_TSEBAINASTI</City>
+				<City>TXT_KEY_CITY_NAME_HAKIY</City>
+				<City>TXT_KEY_CITY_NAME_TS_LTAH</City>
+				<City>TXT_KEY_CITY_NAME_NALEEI_DANAKAIY</City>
+				<City>TXT_KEY_CITY_NAME_T_YADNLIN</City>
+				<City>TXT_KEY_CITY_NAME_NAGONLTIN</City>
+				<City>TXT_KEY_CITY_NAME_CHICHIIL_DA_KIZH</City>
+				<City>TXT_KEY_CITY_NAME_IZEE_DIGHIN</City>
+				<City>TXT_KEY_CITY_NAME_TS_DADLIT_AS</City>
+				<City>TXT_KEY_CITY_NAME_T_EDN</City>
+				<City>TXT_KEY_CITY_NAME_TSE_NANESNASDZ</City>
+				<City>TXT_KEY_CITY_NAME_TS_YA_KIH_NASTL</City>
+				<City>TXT_KEY_CITY_NAME_IYAH_HAJIN</City>
+				<City>TXT_KEY_CITY_NAME_T_NADIDOH</City>
+				<City>TXT_KEY_CITY_NAME_MA_BIJAA_DASLAA</City>
+				<City>TXT_KEY_CITY_NAME_TSE_DASN</City>
+				<City>TXT_KEY_CITY_NAME_DIB_TUD</City>
+				<City>TXT_KEY_CITY_NAME_TSE_YE_GOCHA</City>
+				<City>Yavapai Tribe</City>
+				<City>Oodham Tribe</City>
+				<City>Mohave Tribe</City>
+				<City>Cocopah Tribe</City>
+				<City>Halchidhoma Tribe</City>
+				<City>Yuma Tribe</City>
+				<City>Jocome Tribe</City>
+				<City>Zuni Tribe</City>
+				<City>Maricopa Tribe</City>
+				<City>Jano Tribe</City>
+				<City>Havusapai Tribe</City>
+				<City>Paiute Tribe</City>
+				<City>Kaibab Tribe</City>
+				<City>Taagi</City>
+				<City>Tohono Tribe</City>
+				<City>Delihii</City>
+				<City>Hithish</City>
+				<City>Uto</City>
+				<City>Yai</City>
+				<City>Deeya</City>
+			</Cities>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
+			
+			<InitialCivics>
+				<CivicType>CIVIC_ANARCHISM</CivicType>
+				<CivicType>CIVIC_OBEDIENCE</CivicType>
+				<CivicType>CIVIC_STRONGMAN</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
+				<CivicType>CIVIC_MILITIA</CivicType>
+				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SURVIVAL</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
+				<CivicType>CIVIC_UNORGANIZED</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_COCHISE</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_GOYATHLAY</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<DerivativeCiv>CIVILIZATION_UNITED_STATES</DerivativeCiv>
+			<CivilizationSelectionSound>AS3D_NATIVE_AMERICA_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_NATIVE_AMERICA_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+	</CivilizationInfos>
+</Civ4CivilizationInfos>

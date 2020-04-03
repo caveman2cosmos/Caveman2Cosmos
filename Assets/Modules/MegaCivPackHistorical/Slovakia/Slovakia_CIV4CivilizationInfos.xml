@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- ReModified by the StrategyOnly -->
+<!-- -->
+<!-- Civilization Infos -->
+<Civ4CivilizationInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4CivilizationsSchema.xml">
+	<CivilizationInfos>
+		<CivilizationInfo>
+			<Type>CIVILIZATION_SLOVAKIA</Type>
+			<Description>TXT_KEY_CIV_SLOVAKIA_DESC</Description>
+			<ShortDescription>TXT_KEY_CIV_SLOVAKIA_SHORT_DESC</ShortDescription>
+			<Adjective>TXT_KEY_CIV_SLOVAKIA_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_CIV_SLOVAKIA_PEDIA</Civilopedia>
+			<DefaultPlayerColor>PLAYERCOLOR_SLOVAK</DefaultPlayerColor>
+			<ArtDefineTag>ART_DEF_CIVILIZATION_SLOVAKIA</ArtDefineTag>
+			<ArtStyleType>ARTSTYLE_EUROPE</ArtStyleType>
+			<UnitArtStyleType>UNIT_ARTSTYLE_RUSSIA</UnitArtStyleType>
+			<bPlayable>1</bPlayable>
+			<bAIPlayable>1</bAIPlayable>
+			<Cities>
+				<City>Bratislava</City>
+				<City>Kosice</City>
+				<City>Banska Stiavnica</City>
+				<City>Zvolen</City>
+				<City>Banska Bystrica</City>
+				<City>Trnava</City>
+				<City>Kremnica</City>
+				<City>Liptovsky Mikulas</City>
+				<City>Poprad</City>
+				<City>Ruzomberok</City>
+				<City>Banska Stiavnica</City>
+				<City>Sturovo</City>
+				<City>Trencin</City>
+				<City>Nitra</City>
+				<City>Presov</City>
+				<City>Zilina</City>
+				<City>Brezno</City>
+				<City>Povazska Bystrica</City>
+				<City>Detva</City>
+				<City>Sala</City>
+				<City>Cadca</City>
+				<City>Martin</City>
+				<City>Lucenec</City>
+				<City>Levice</City>
+				<City>Krompachy</City>
+				<City>Lucenec</City>
+				<City>Bardejov</City>
+				<City>Svidnik</City>
+				<City>Hlohovec</City>
+				<City>Humenne</City>
+				<City>Donovaly</City>
+				<City>Vrutky</City>
+				<City>Rajec</City>
+				<City>Puchov</City>
+				<City>Dubnica</City>
+				<City>Piestany</City>
+				<City>Jablonov</City>
+				<City>Dobsina</City>
+				<City>Gelnica</City>
+				<City>Drienov</City>
+				<City>Mokrance</City>
+				<City>Tisovec</City>
+				<City>Zakovce</City>
+				<City>Krompachy</City>
+				<City>Zechna</City>
+			</Cities>
+			<FreeBuildings>
+				<FreeBuilding>
+					<BuildingType>BUILDING_PALACE</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+				<FreeBuilding>
+					<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
+					<bFreeBuilding>1</bFreeBuilding>
+				</FreeBuilding>
+			</FreeBuildings>
+			<InitialCivics>
+				<CivicType>CIVIC_ANARCHISM</CivicType>
+				<CivicType>CIVIC_OBEDIENCE</CivicType>
+				<CivicType>CIVIC_STRONGMAN</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
+				<CivicType>CIVIC_MILITIA</CivicType>
+				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_SURVIVAL</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
+				<CivicType>CIVIC_UNORGANIZED</CivicType>
+			</InitialCivics>
+			<Leaders>
+				<Leader>
+					<LeaderName>LEADER_STEFANIK</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+				<Leader>
+					<LeaderName>LEADER_STUR</LeaderName>
+					<bLeaderAvailability>1</bLeaderAvailability>
+				</Leader>
+			</Leaders>
+			<DerivativeCiv>NONE</DerivativeCiv>
+			<CivilizationSelectionSound>AS3D_RUSSIA_SELECT</CivilizationSelectionSound>
+			<CivilizationActionSound>AS3D_RUSSIA_ORDER</CivilizationActionSound>
+		</CivilizationInfo>
+	</CivilizationInfos>
+</Civ4CivilizationInfos>
