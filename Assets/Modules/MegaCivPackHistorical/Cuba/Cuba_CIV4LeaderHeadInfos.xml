@@ -1052,7 +1052,7 @@
 					<MemoryType>MEMORY_DENIED_STOP_TRADING</MemoryType>
 					<iMemoryAttitudePercent>-100</iMemoryAttitudePercent>
 				</MemoryAttitudePercent>
-				<MemoryAttitudePercent>SHAKA
+				<MemoryAttitudePercent>
 					<MemoryType>MEMORY_STOPPED_TRADING</MemoryType>
 					<iMemoryAttitudePercent>-100</iMemoryAttitudePercent>
 				</MemoryAttitudePercent>
