@@ -1141,43 +1141,6 @@
 			<Button>Art/Interface/Buttons/Promotions/taoism_promo.dds</Button>
 		</PromotionInfo>
 		<PromotionInfo>
-			<Type>PROMOTION_MARTIAL_ARTS</Type>
-			<Description>TXT_KEY_PROMOTION_MARTIAL_ARTS</Description>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_MEDITATION</TechPrereq>
-			<StateReligionPrereq>RELIGION_TAOISM</StateReligionPrereq>
-			<NotOnDomainTypes>
-				<DomainType>DOMAIN_SEA</DomainType>
-			</NotOnDomainTypes>
-			<UnitCombatMods>
-				<UnitCombatMod>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<iUnitCombatMod>15</iUnitCombatMod>
-				</UnitCombatMod>
-				<UnitCombatMod>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<iUnitCombatMod>5</iUnitCombatMod>
-				</UnitCombatMod>
-			</UnitCombatMods>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CIVILIAN</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
-			<Button>,Art/Interface/Buttons/Promotions/Hero1.dds,Art/Interface/Buttons/RoM_Promotion_Atlas2.dds,1,7</Button>
-			<iCaptureProbabilityModifierChange>10</iCaptureProbabilityModifierChange>
-			<iCaptureResistanceModifierChange>10</iCaptureResistanceModifierChange>
-		</PromotionInfo>
-		<PromotionInfo>
 			<Type>PROMOTION_HOLY_TRINITY</Type>
 			<Description>TXT_KEY_PROMOTION_HOLY_TRINITY</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
@@ -21612,7 +21575,6 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_MARTIAL_ARTS</Type>
-			<bForceOverwrite>1</bForceOverwrite>
 			<Description>TXT_KEY_PROMOTION_MARTIAL_ARTS1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_MEDITATION</TechPrereq>
