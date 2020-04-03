@@ -460,7 +460,7 @@
 				<NoWarAttitudeProb>
 					<AttitudeType>ATTITUDE_CAUTIOUS</AttitudeType>
 					<iNoWarProb>70</iNoWarProb>
-				</NoWarAttitudeProb>DIVINE
+				</NoWarAttitudeProb>
 				<NoWarAttitudeProb>
 					<AttitudeType>ATTITUDE_PLEASED</AttitudeType>
 					<iNoWarProb>100</iNoWarProb>
