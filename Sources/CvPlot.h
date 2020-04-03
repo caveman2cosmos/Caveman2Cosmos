@@ -565,7 +565,7 @@ protected:
 		public bst::iterator_facade<adjacent_iterator_base<Value_>, Value_*, bst::forward_traversal_tag, Value_*>
 	{
 		adjacent_iterator_base() : m_centerX(-1), m_centerY(-1), m_curr(nullptr), m_idx(0) {}
-		explicit adjacent_iterator_base(int centerX, int centerY) : m_centerX(centerX), m_centerY(centerY), m_curr(nullptr), m_idx(-1)
+		explicit adjacent_iterator_base(int centerX, int centerY) : m_centerX(centerX), m_centerY(centerY), m_curr(nullptr), m_idx(0)
 		{
 			increment();
 		}
@@ -574,11 +574,12 @@ protected:
 		friend class bst::iterator_core_access;
 		void increment()
 		{
-			do
+			m_curr = nullptr;
+			while (m_curr == nullptr && m_idx < NUM_DIRECTION_TYPES)
 			{
-				++m_idx;
 				m_curr = plotDirection(m_centerX, m_centerY, ((DirectionTypes)m_idx));
-			} while (m_curr == nullptr && m_idx < NUM_DIRECTION_TYPES);
+				++m_idx;
+			}
 		}
 		bool equal(adjacent_iterator_base const& other) const
 		{
