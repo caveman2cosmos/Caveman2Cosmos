@@ -1289,6 +1289,7 @@ public:
 	//
 	struct fn {
 		DECLARE_MAP_FUNCTOR(CvPlot, bool, isWater);
+		DECLARE_MAP_FUNCTOR(CvPlot, const CvCity, getWorkingCityOverride);
 	}; 
 };
 

@@ -20486,63 +20486,53 @@ bool CvUnitAI::AI_goToTargetBarbCity(int iMaxPathTurns)
 	return false;
 }
 
-bool CvUnitAI::AI_pillageAroundCity(CvCity* pTargetCity, int iBonusValueThreshold, int iMaxPathTurns )
+bool CvUnitAI::AI_pillageAroundCity(CvCity* pTargetCity, int iBonusValueThreshold, int iMaxPathTurns)
 {
 	PROFILE_FUNC();
 
-	CvPlot* pLoopPlot;
-	CvPlot* pBestPlot;
-	CvPlot* pBestPillagePlot;
-	CvPlot* endTurnPlot = NULL;
 	int iPathTurns;
-	int iValue;
-	int iBestValue;
 
-	iBestValue = 0;
-	pBestPlot = NULL;
-	pBestPillagePlot = NULL;
+	int iBestValue = 0;
+	CvPlot* endTurnPlot = NULL;
+	CvPlot* pBestPlot = NULL;
+	CvPlot* pBestPillagePlot = NULL;
 
-	for( int iI = 0; iI < NUM_CITY_PLOTS; iI++ )
+	foreach_(CvPlot* pLoopPlot, pTargetCity->plots())
 	{
-		pLoopPlot = pTargetCity->getCityIndexPlot(iI);
-
-		if (pLoopPlot != NULL)
+		if (AI_plotValid(pLoopPlot) && !(pLoopPlot->isNPC()))
 		{
-			if (AI_plotValid(pLoopPlot) && !(pLoopPlot->isNPC()))
+			if (potentialWarAction(pLoopPlot) && (pLoopPlot->getTeam() == pTargetCity->getTeam()))
 			{
-				if (potentialWarAction(pLoopPlot) && (pLoopPlot->getTeam() == pTargetCity->getTeam()))
+				if (getGroup()->canPillage(pLoopPlot))
 				{
-					if (getGroup()->canPillage(pLoopPlot))
+					if (!(pLoopPlot->isVisibleEnemyUnit(this)))
 					{
-						if (!(pLoopPlot->isVisibleEnemyUnit(this)))
+						if (GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_PILLAGE, getGroup()) == 0)
 						{
-							if (GET_PLAYER(getOwner()).AI_plotTargetMissionAIs(pLoopPlot, MISSIONAI_PILLAGE, getGroup()) == 0)
+							if (generatePath(pLoopPlot, 0, true, &iPathTurns, iMaxPathTurns))
 							{
-								if (generatePath(pLoopPlot, 0, true, &iPathTurns, iMaxPathTurns))
+								int iValue = AI_pillageValue(pLoopPlot, iBonusValueThreshold);
+
+								iValue *= 1000 + 30*(pLoopPlot->defenseModifier(getTeam(),false));
+
+								iValue /= (iPathTurns + 1);
+
+								// if not at war with this plot owner, then devalue plot if we already inside this owner's borders
+								// (because declaring war will pop us some unknown distance away)
+								if (!isEnemy(pLoopPlot->getTeam()) && plot()->getTeam() == pLoopPlot->getTeam())
 								{
-									iValue = AI_pillageValue(pLoopPlot, iBonusValueThreshold);
+									iValue /= 10;
+								}
 
-									iValue *= 1000 + 30*(pLoopPlot->defenseModifier(getTeam(),false));
+								if (iValue > iBestValue)
+								{
+									endTurnPlot = getPathEndTurnPlot();
 
-									iValue /= (iPathTurns + 1);
-
-									// if not at war with this plot owner, then devalue plot if we already inside this owner's borders
-									// (because declaring war will pop us some unknown distance away)
-									if (!isEnemy(pLoopPlot->getTeam()) && plot()->getTeam() == pLoopPlot->getTeam())
+									if ( !exposedToDanger(endTurnPlot, 60) )
 									{
-										iValue /= 10;
-									}
-
-									if (iValue > iBestValue)
-									{
-										endTurnPlot = getPathEndTurnPlot();
-
-										if ( !exposedToDanger(endTurnPlot, 60) )
-										{
-											iBestValue = iValue;
-											pBestPlot = endTurnPlot;
-											pBestPillagePlot = pLoopPlot;
-										}
+										iBestValue = iValue;
+										pBestPlot = endTurnPlot;
+										pBestPillagePlot = pLoopPlot;
 									}
 								}
 							}

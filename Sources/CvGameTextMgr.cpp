@@ -33641,11 +33641,10 @@ void CvGameTextMgr::setFoodHelp(CvWStringBuffer &szBuffer, CvCity& city)
 	CvYieldInfo& info = GC.getYieldInfo(YIELD_FOOD);
 	bool bNeedSubtotal = false;
 	int iBaseRate = 0;
-	int i;
 
 	// Worked Tiles
 	int iTileFood = 0;
-	for (i = 0; i < NUM_CITY_PLOTS; i++)
+	for (int i = 0; i < NUM_CITY_PLOTS; i++)
 	{
 		if (city.isWorkingPlot(i))
 		{

@@ -1003,7 +1003,6 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 			m_abCachedBestSeeInvisibleUnitSea[iI] = false;
 		}
 
-		FAssertMsg((0 < NUM_CITY_PLOTS), "NUM_CITY_PLOTS is not greater than zero but an array is being allocated in CvCity::reset");
 		m_pabWorkingPlot = new bool[NUM_CITY_PLOTS];
 		for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
 		{
@@ -1264,14 +1263,9 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 		}
 	}
 
-	for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
+	foreach_(CvPlot* pLoopPlot, plots() | filtered(CvPlot::fn::getWorkingCityOverride() == this))
 	{
-		CvPlot* pLoopPlot = getCityIndexPlot(iI);
-
-		if (pLoopPlot != NULL && pLoopPlot->getWorkingCityOverride() == this)
-		{
-			pLoopPlot->setWorkingCityOverride(NULL);
-		}
+		pLoopPlot->setWorkingCityOverride(NULL);
 	}
 
 	setCultureLevel(NO_CULTURELEVEL, false);
