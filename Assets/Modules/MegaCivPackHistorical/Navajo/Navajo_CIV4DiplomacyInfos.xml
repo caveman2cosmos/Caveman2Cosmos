@@ -3,7 +3,7 @@
 <!-- Copyright Firaxis Games 2005 -->
 <!-- -->
 <!-- Diplomacy Infos -->
-<Civ4DiplomacyInfos xmlns="x-schema:Navajo_CIV4GameInfoSchema.xml">
+<Civ4DiplomacyInfos xmlns="x-schema:../Schema/C2C_CIV4GameInfoSchema.xml">
 	<DiplomacyInfos>
 		<DiplomacyInfo>
 			<Type>AI_DIPLOCOMMENT_FIRST_CONTACT</Type>
