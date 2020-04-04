@@ -2,7 +2,6 @@
 <Civ4BuildingInfos xmlns="x-schema:../Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<!-- National Aircraft Museum -->
 			<Type>BUILDING_AIRCRAFT_MUSEUM</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -11,15 +10,12 @@
 			<Description>TXT_KEY_BUILDING_AIRCRAFT_MUSEUM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_AIRCRAFT_MUSEUM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_AIRCRAFT_MUSEUM_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_FLIGHT</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<Bonus>BONUS_AIRCRAFT</Bonus>
-			<!-- Cost -->
 			<iCost>1900</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Local -->
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -32,7 +28,6 @@
 					<iAmountPerTurn>10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Synergy -->
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_THERMODYNAMICS</PrereqTech>
@@ -179,15 +174,12 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_AIRCRAFT_MUSEUM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Anima Gaming League -->
 			<Type>BUILDING_ANIMA_GAMING_LEAGUE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -196,7 +188,6 @@
 			<Description>TXT_KEY_BUILDING_ANIMA_GAMING_LEAGUE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMA_GAMING_LEAGUE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANIMA_GAMING_LEAGUE_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_ARTIFICIAL_LIFE</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -204,23 +195,19 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMA_STUDIO</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Cost -->
 			<iCost>11810</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Global -->
 			<GlobalCommerceModifiers>
 				<iCommerce>4</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</GlobalCommerceModifiers>
 			<iGlobalHappiness>4</iGlobalHappiness>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMA_GAMING_LEAGUE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- National Archives -->
 			<Type>BUILDING_ARCHIVES</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -229,7 +216,6 @@
 			<Description>TXT_KEY_BUILDING_ARCHIVES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ARCHIVES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ARCHIVES_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqAmountBuildings>
@@ -241,11 +227,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Cost -->
 			<iCost>450</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<!-- Local -->
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 				<iCommerce>10</iCommerce>
@@ -269,10 +253,8 @@
 					<iAmountPerTurn>10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<Flavors>
 				<Flavor>
@@ -287,7 +269,6 @@
 			<MovieDefineTag>ART_DEF_MOVIE_ARCHIVES</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Aerial Basket Ropeways -->
 			<Type>BUILDING_BASKETROPEWAYS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -296,7 +277,6 @@
 			<Description>TXT_KEY_BUILDING_BASKETROPEWAYS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BASKETROPEWAYS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BASKETROPEWAYS_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_ARITHMETIC</PrereqTech>
 			<Bonus>BONUS_BASKETS</Bonus>
 			<PrereqBonuses>
@@ -319,22 +299,16 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_MACHINERY</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>148</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Local -->
 			<YieldChanges>
 				<iYield>3</iYield>
 				<iYield>4</iYield>
 			</YieldChanges>
-			<!-- Units -->
 			<iMilitaryProductionModifier>15</iMilitaryProductionModifier>
-			<!-- Global -->
 			<iWorkerSpeedModifier>25</iWorkerSpeedModifier>
-			<!-- Misc -->
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
@@ -353,7 +327,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_BASKETROPEWAYS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Bureau of Farm Management -->
 			<Type>BUILDING_BFM</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -362,7 +335,6 @@
 			<Description>TXT_KEY_BUILDING_BFM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BFM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BFM_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_CHEMISTRY</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqOrBuildings>
@@ -375,12 +347,10 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
-			<!-- Cost -->
 			<iCost>990</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>AS2D_BUILD_PRESS_AGENCY</ConstructSound>
-			<!-- Local -->
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
@@ -390,10 +360,8 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<!-- Global -->
 			<iGlobalHealth>1</iGlobalHealth>
 			<FreeBuilding>BUILDING_WAREHOUSE</FreeBuilding>
-			<!-- Misc -->
 			<iAsset>20</iAsset>
 			<iPower>10</iPower>
 			<Flavors>
@@ -412,7 +380,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Botanical Gardens -->
 			<Type>BUILDING_BOTANICAL_GARDENS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -421,7 +388,6 @@
 			<Description>TXT_KEY_BUILDING_BOTANICAL_GARDENS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BOTANICAL_GARDENS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BOTANICAL_GARDENS_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_BOTANY</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqAmountBuildings>
@@ -430,12 +396,10 @@
 					<iNumBuildingNeeded>5</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<!-- Cost -->
 			<iCost>1070</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_PARK</ConstructSound>
-			<!-- Local -->
 			<iAreaHappiness>1</iAreaHappiness>
 			<iHappiness>1</iHappiness>
 			<iHealth>2</iHealth>
@@ -450,7 +414,6 @@
 					<iAmountPerTurn>-5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Misc -->
 			<iAsset>6</iAsset>
 			<iPower>3</iPower>
 			<Flavors>
@@ -472,7 +435,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_BOTANICAL_GARDENS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Bull Leaping -->
 			<Type>BUILDING_BULL_LEAPING</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -481,7 +443,6 @@
 			<Description>TXT_KEY_BUILDING_BULL_LEAPING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_BULL_LEAPING_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_BULL_LEAPING_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_PREHISTORIC_DANCE</PrereqTech>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
@@ -513,9 +474,7 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_COMBAT_SPORTS</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>60</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<BonusProductionModifiers>
@@ -530,7 +489,6 @@
 			</BonusProductionModifiers>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ConstructSound>AS2D_BUILD_WALLS</ConstructSound>
-			<!-- Local -->
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
 			<ObsoleteSafeCommerceChanges>
@@ -538,7 +496,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</ObsoleteSafeCommerceChanges>
-			<!-- Units -->
 			<DomainFreeExperiences>
 				<DomainFreeExperience>
 					<DomainType>DOMAIN_LAND</DomainType>
@@ -547,7 +504,6 @@
 			</DomainFreeExperiences>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<iAsset>1</iAsset>
 			<iPower>2</iPower>
 			<bNeverCapture>1</bNeverCapture>
@@ -555,7 +511,6 @@
 			<MovieDefineTag>ART_DEF_MOVIE_BULL_LEAPING</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Capital Administration -->
 			<Type>BUILDING_CAPITAL_ADMINISTRATION</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -564,19 +519,16 @@
 			<Description>TXT_KEY_BUILDING_CAPITAL_ADMINISTRATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CAPITAL_ADMINISTRATION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CITYBUILDINGS_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_SOCIAL_CONTRACT</PrereqTech>
 			<iPrereqPopulation>30</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
 			<PrereqCultureLevel>CULTURELEVEL_INFLUENTIAL</PrereqCultureLevel>
-			<!-- Cost -->
 			<iCost>950</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_COURTHOUSE</ConstructSound>
-			<!-- Local -->
 			<iMaintenanceModifier>50</iMaintenanceModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -586,7 +538,6 @@
 			<iRevIdxLocal>-20</iRevIdxLocal>
 			<iFreeSpecialist>6</iFreeSpecialist>
 			<iWorkableRadius>3</iWorkableRadius>
-			<!-- Misc -->
 			<iAsset>4</iAsset>
 			<iPower>5</iPower>
 			<Flavors>
@@ -615,7 +566,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Captured Fire -->
 			<Type>BUILDING_CAPTURED_FIRE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -624,19 +574,15 @@
 			<Description>TXT_KEY_BUILDING_CAPTURED_FIRE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CAPTURED_FIRE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CAPTURED_FIRE_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_CONTROLLED_FIRE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GATHERER_STICK</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_FIRE_MAKING</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>40</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>AS2D_BUILD_TOTEM</ConstructSound>
-			<!-- Local -->
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -644,7 +590,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>5</iCommerce>
 			</CommerceChanges>
-			<!-- Global -->
 			<bGoldenAge>1</bGoldenAge>
 			<GlobalBuildingProductionModifiers>
 				<BuildingProductionModifier>
@@ -652,13 +597,11 @@
 					<iProductionModifier>100</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_CAPTURED_FIRE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Centers for Disease Control -->
 			<Type>BUILDING_CENTERS_FOR_DISEASE_CONTROL</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -667,7 +610,6 @@
 			<Description>TXT_KEY_BUILDING_CENTERS_FOR_DISEASE_CONTROL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CENTERS_FOR_DISEASE_CONTROL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CENTERS_FOR_DISEASE_CONTROL_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_MODERN_HEALTH_CARE</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqAmountBuildings>
@@ -683,11 +625,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LABORATORY</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Cost -->
 			<iCost>2560</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<!-- Local -->
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_SCIENTIST</SpecialistType>
@@ -701,13 +641,10 @@
 					<iAmountPerTurn>-25</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Global -->
 			<iGlobalHealth>2</iGlobalHealth>
 			<iGlobalHappiness>1</iGlobalHappiness>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<iAsset>8</iAsset>
 			<Flavors>
 				<Flavor>
@@ -721,7 +658,6 @@
 			<MovieDefineTag>ART_DEF_MOVIE_CDC</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Central Bank -->
 			<Type>BUILDING_CENTRAL_BANK</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -730,7 +666,6 @@
 			<Description>TXT_KEY_BUILDING_CENTRAL_BANK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CENTRAL_BANK_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CENTRAL_BANK_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_MERCANTILISM</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqAmountBuildings>
@@ -769,12 +704,10 @@
 				</PrereqCivic>
 			</PrereqOrCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
-			<!-- Cost -->
 			<iCost>910</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_BANK</ConstructSound>
-			<!-- Local -->
 			<CommerceModifiers>
 				<iCommerce>25</iCommerce>
 			</CommerceModifiers>
@@ -784,10 +717,8 @@
 			<CommerceChangeDoubleTimes>
 				<iCommerce>200</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<iAsset>5</iAsset>
 			<Flavors>
 				<Flavor>
@@ -801,7 +732,6 @@
 			<MovieDefineTag>ART_DEF_MOVIE_CENTRAL_BANK</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Chief's Funeral Pyre -->
 			<Type>BUILDING_CHIEFS_PYRE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -810,7 +740,6 @@
 			<Description>TXT_KEY_BUILDING_CHIEFS_PYRE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CHIEFS_PYRE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CHIEFS_PYRE_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_CHIEFDOM</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FUNERAL_PYRE</BuildingType>
@@ -823,13 +752,10 @@
 				</PrereqCivic>
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_MONARCHY</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>160</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<!-- Local -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -853,7 +779,6 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<bNeverCapture>1</bNeverCapture>
 			<bCenterInCity>1</bCenterInCity>
@@ -862,7 +787,6 @@
 			<MovieDefineTag>ART_DEF_MOVIE_CHIEFS_PYRE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Computer Center -->
 			<Type>BUILDING_COMPUTER_CENTER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -871,13 +795,11 @@
 			<Description>TXT_KEY_BUILDING_COMPUTER_CENTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COMPUTER_CENTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_COMPUTER_CENTER_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_ADVANCED_COMPUTERS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Cost -->
 			<iCost>7950</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<BonusProductionModifiers>
@@ -892,7 +814,6 @@
 			</BonusProductionModifiers>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_COMPUTER_NETWORK</ConstructSound>
-			<!-- Local -->
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>25</iCommerce>
@@ -904,9 +825,7 @@
 					<iAmountPerTurn>15</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Global -->
 			<iFreeTechs>1</iFreeTechs>
-			<!-- Units -->
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_ASSAULT_MECH</UnitCombatType>
@@ -919,7 +838,6 @@
 					<iHeal>4</iHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
-			<!-- Misc -->
 			<iAsset>6</iAsset>
 			<Flavors>
 				<Flavor>
@@ -932,7 +850,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_COMPUTER_CENTER</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Cosmonaut Training Center -->
 			<Type>BUILDING_COSMONAUT_TRAINING_CENTRE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -941,34 +858,28 @@
 			<Description>TXT_KEY_BUILDING_COSMONAUT_TRAINING_CENTRE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COSMONAUT_TRAINING_CENTRE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_COSMONAUT_TRAINING_CENTRE_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_ASTRO_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<bPrereqPower>1</bPrereqPower>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LABORATORY</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Cost -->
 			<iCost>3080</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<!-- Local -->
 			<iHealth>5</iHealth>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>17</iCommerce>
 			</CommerceModifiers>
 			<iSpaceProductionModifier>15</iSpaceProductionModifier>
-			<!-- Units -->
 			<iMilitaryProductionModifier>50</iMilitaryProductionModifier>
-			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_COSMONAUT_TRAINING_CENTRE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_COSMONAUT_TRAINING_CENTRE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- National Courier System -->
 			<Type>BUILDING_COURIER_SYSTEM</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -977,7 +888,6 @@
 			<Description>TXT_KEY_BUILDING_COURIER_SYSTEM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COURIER_SYSTEM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_COURIER_SYSTEM_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_MAIL</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqBonuses>
@@ -986,9 +896,7 @@
 				<Bonus>BONUS_SCROLLS</Bonus>
 				<Bonus>BONUS_TABLETS</Bonus>
 			</PrereqBonuses>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_COMBUSTION</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>432</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<BonusProductionModifiers>
@@ -998,7 +906,6 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<!-- Local -->
 			<ObsoleteSafeCommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -1009,15 +916,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Global -->
 			<iAllCityDefense>10</iAllCityDefense>
 			<iAnarchyModifier>-25</iAnarchyModifier>
 			<iGreatGeneralRateModifier>10</iGreatGeneralRateModifier>
 			<iGlobalGreatPeopleRateModifier>5</iGlobalGreatPeopleRateModifier>
-			<!-- Misc -->
 			<iAsset>5</iAsset>
 			<iPower>10</iPower>
 			<Flavors>
@@ -1031,7 +935,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_COURIER_SYSTEM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- National Cybersecurity Center -->
 			<Type>BUILDING_CYBERSECURITY_CENTER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -1040,37 +943,29 @@
 			<Description>TXT_KEY_BUILDING_CYBERSECURITY_CENTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CYBERSECURITY_CENTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CYBERSECURITY_CENTER_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_CYBERWARFARE</PrereqTech>
 			<Bonus>BONUS_COMPUTERS</Bonus>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Cost -->
 			<iCost>4010</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<!-- Local -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>10</iGreatPeopleRateChange>
-			<!-- Security -->
 			<iEspionageDefense>15</iEspionageDefense>
-			<!-- Global -->
 			<FreeBuilding>BUILDING_CYBERSECURITY_OFFICE</FreeBuilding>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_CYBERSECURITY_CENTER</ArtDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Deep Space Research Institute -->
 			<Type>BUILDING_DEEP_SPACE_RESEARCH</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<SpecialBuildingType>SPECIALBUILDING_DEEP_SPACE_RESEARCH</SpecialBuildingType>
@@ -1080,19 +975,16 @@
 			<Description>TXT_KEY_BUILDING_DEEP_SPACE_RESEARCH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DEEP_SPACE_RESEARCH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DEEP_SPACE_RESEARCH_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_ASTRONAUTICS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 				<BuildingType>BUILDING_LABORATORY</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Cost -->
 			<iCost>2950</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_DEEP_SPACE_RESEARCH</ConstructSound>
-			<!-- Local -->
 			<CommerceChanges>
 				<iCommerce>-20</iCommerce>
 				<iCommerce>10</iCommerce>
@@ -1111,7 +1003,6 @@
 					<iAmountPerTurn>6</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Misc -->
 			<iAsset>6</iAsset>
 			<Flavors>
 				<Flavor>
@@ -1124,9 +1015,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_DEEP_SPACE_RESEARCH</ArtDefineTag>
 		</BuildingInfo>
-		<!--↓ Departments ↓-->
 		<BuildingInfo>
-			<!-- Department of Education -->
 			<Type>BUILDING_DEPARTMENT_EDUCATION</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -1135,18 +1024,15 @@
 			<Description>TXT_KEY_BUILDING_DEPARTMENT_EDUCATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DEPARTMENT_EDUCATION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DEPARTMENT_EDUCATION_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_COMPULSORY_EDUCATION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Cost -->
 			<iCost>1740</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_SCHOOL</ConstructSound>
-			<!-- Local -->
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
@@ -1163,9 +1049,7 @@
 					<iAmountPerTurn>15</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Global -->
 			<FreeBuilding>BUILDING_ELEMENTARY_SCHOOL</FreeBuilding>
-			<!-- Misc -->
 			<iAsset>3</iAsset>
 			<Flavors>
 				<Flavor>
@@ -1184,7 +1068,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Department of Energy -->
 			<Type>BUILDING_DEPARTMENT_ENERGY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -1193,7 +1076,6 @@
 			<Description>TXT_KEY_BUILDING_DEPARTMENT_ENERGY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DEPARTMENT_ENERGY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DEPARTMENT_ENERGY_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_ELECTRICITY</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqInCityBuildings>
@@ -1209,11 +1091,9 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
-			<!-- Cost -->
 			<iCost>1540</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Local -->
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
@@ -1223,15 +1103,12 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<!-- Global -->
 			<FreeBuilding>BUILDING_POWER_LINES</FreeBuilding>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_DEPARTMENT_ENERGY</ArtDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Department of Foreign Policy -->
 			<Type>BUILDING_DEPARTMENT_FOREIGN</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -1240,14 +1117,11 @@
 			<Description>TXT_KEY_BUILDING_DEPARTMENT_FOREIGN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DEPARTMENT_FOREIGN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DEPARTMENT_FOREIGN_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_FOREIGN_POLICY</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<!-- Cost -->
 			<iCost>1660</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<!-- Local -->
 			<iHappiness>1</iHappiness>
 			<iTradeRoutes>2</iTradeRoutes>
 			<CommerceChanges>
@@ -1264,11 +1138,8 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Global -->
 			<FreeBuilding>BUILDING_DEPARTMENT_FOREIGN_EFFECT</FreeBuilding>
-			<!-- Security -->
 			<iEspionageDefense>15</iEspionageDefense>
-			<!-- Units -->
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
 					<UnitCombatType>UNITCOMBAT_SPY</UnitCombatType>
@@ -1279,13 +1150,11 @@
 					<iExperience>2</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_DEPARTMENT_FOREIGN_WONDER</ArtDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Department of Motor Vehicles -->
 			<Type>BUILDING_DEPARTMENT_VEHICLES</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -1294,7 +1163,6 @@
 			<Description>TXT_KEY_BUILDING_DEPARTMENT_VEHICLES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DEPARTMENT_VEHICLES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DEPARTMENT_VEHICLES_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
@@ -1305,13 +1173,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_TELEPORTATION</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>1660</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Local -->
 			<iHappiness>-1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
@@ -1323,7 +1188,6 @@
 					<iAmountPerTurn>4</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Units -->
 			<FreePromotion>PROMOTION_URBAN_TACTICS1</FreePromotion>
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
@@ -1343,13 +1207,11 @@
 					<iProductionModifier>25</iProductionModifier>
 				</UnitProductionModifier>
 			</UnitProductionModifiers>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_DEPARTMENT_VEHICLES</ArtDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Department of Water -->
 			<Type>BUILDING_DEPARTMENT_WATER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -1358,7 +1220,6 @@
 			<Description>TXT_KEY_BUILDING_DEPARTMENT_WATER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DEPARTMENT_WATER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DEPARTMENT_WATER_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_PLUMBING</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqOrBuildings>
@@ -1371,7 +1232,6 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
-			<!-- Cost -->
 			<iCost>368</iCost>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
@@ -1381,7 +1241,6 @@
 			</BonusProductionModifiers>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<!-- Local -->
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>4</iYield>
@@ -1395,16 +1254,12 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<!-- Global -->
 			<FreeBuilding>BUILDING_WATER_PIPES</FreeBuilding>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_DEPARTMENT_WATER</ArtDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
-		<!--↑ Departments ↑-->
 		<BuildingInfo>
-			<!-- District Courthouse -->
 			<Type>BUILDING_DISTRICT_COURTHOUSE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -1413,7 +1268,6 @@
 			<Description>TXT_KEY_BUILDING_DISTRICT_COURTHOUSE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DISTRICT_COURTHOUSE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DISTRICT_COURTHOUSE_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_JURISPRUDENCE</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqAmountBuildings>
@@ -1425,12 +1279,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Cost -->
 			<iCost>880</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_COURTHOUSE</ConstructSound>
-			<!-- Local -->
 			<iMaintenanceModifier>-30</iMaintenanceModifier>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
@@ -1451,7 +1303,6 @@
 					<iAmountPerTurn>-10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Misc -->
 			<iAsset>4</iAsset>
 			<Flavors>
 				<Flavor>
@@ -1469,7 +1320,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Dutch Dike -->
 			<Type>BUILDING_DUTCH_DIKE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -1478,7 +1328,6 @@
 			<Description>TXT_KEY_BUILDING_DUTCH_DIKE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DUTCH_DIKE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DUTCH_DIKE_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_STEAM_POWER</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<bWater>1</bWater>
@@ -1488,12 +1337,10 @@
 				<Bonus>BONUS_BRICKS</Bonus>
 				<Bonus>BONUS_CEMENT</Bonus>
 			</PrereqBonuses>
-			<!-- Cost -->
 			<iCost>1260</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_AQUEDUCT</ConstructSound>
-			<!-- Local -->
 			<RiverPlotYieldChanges>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
@@ -1504,10 +1351,8 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
 			<Flavors>
@@ -1522,7 +1367,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_DUTCH_DIKE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Electronic Gaming League -->
 			<Type>BUILDING_ELECTRONIC_GAMING_LEAGUE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -1531,7 +1375,6 @@
 			<Description>TXT_KEY_BUILDING_ELECTRONIC_GAMING_LEAGUE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ELECTRONIC_GAMING_LEAGUE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ELECTRONIC_GAMING_LEAGUE_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_COMPUTER_NETWORKS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -1542,23 +1385,19 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Cost -->
 			<iCost>2950</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Global -->
 			<iGlobalHappiness>1</iGlobalHappiness>
 			<GlobalCommerceModifiers>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</GlobalCommerceModifiers>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_ELECTRONIC_GAMING_LEAGUE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Maximum Security Prison -->
 			<Type>BUILDING_FEDERAL_PRISON</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -1567,26 +1406,22 @@
 			<Description>TXT_KEY_BUILDING_FEDERAL_PRISON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FEDERAL_PRISON_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_FEDERAL_PRISON_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_CONSTITUTION</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqBonuses>
 				<Bonus>BONUS_BRICKS</Bonus>
 				<Bonus>BONUS_CEMENT</Bonus>
 			</PrereqBonuses>
-			<!-- Obsolescence -->
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingType>BUILDING_SAFETY_ORBITAL_PRISON</BuildingType>
 					<bReplace>1</bReplace>
 				</ReplaceBuilding>
 			</ReplaceBuildings>
-			<!-- Cost -->
 			<iCost>1070</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ConstructSound>AS2D_BUILD_MAX_PRISON</ConstructSound>
-			<!-- Local -->
 			<iHappiness>-3</iHappiness>
 			<CommerceChanges>
 				<iCommerce>-100</iCommerce>
@@ -1610,10 +1445,7 @@
 					<iAmountPerTurn>-50</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Global -->
-			<iGlobalHappiness>1</iGlobalHappiness>
 			<FreeBuilding>BUILDING_GOOD_FEDERAL_PRISON</FreeBuilding>
-			<!-- Misc -->
 			<iAsset>4</iAsset>
 			<iPower>6</iPower>
 			<Flavors>
@@ -1632,7 +1464,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Fertility Festival -->
 			<Type>BUILDING_FERTILITYFESTIVAL</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -1641,7 +1472,6 @@
 			<Description>TXT_KEY_BUILDING_FERTILITYFESTIVAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FERTILITYFESTIVAL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_FERTILITYFESTIVAL_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_CELEBRATION</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_FUR</Bonus>
@@ -1656,24 +1486,18 @@
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_WOMENS_SUFFRAGE</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>172</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Local -->
 			<iHappiness>1</iHappiness>
 			<iAreaHappiness>1</iAreaHappiness>
-			<!-- Global -->
 			<FreeBuilding>BUILDING_FERTILITYFESTIVAL_EFFECT</FreeBuilding>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_FERTILITYFESTIVAL</ArtDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Flak Tower -->
 			<Type>BUILDING_FLAK_TOWER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -1682,7 +1506,6 @@
 			<Description>TXT_KEY_BUILDING_FLAK_TOWER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FLAK_TOWER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_FLAK_TOWER_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_AUTOMATIC_WEAPONS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_FLIGHT</PrereqTech>
@@ -1693,16 +1516,12 @@
 				<Bonus>BONUS_STEEL_WARES</Bonus>
 				<Bonus>BONUS_TITANIUM_WARES</Bonus>
 			</PrereqBonuses>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SUPERSONIC_FLIGHT</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>1980</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ConstructSound>AS2D_BUILD_FLAK_TOWER</ConstructSound>
-			<!-- Global -->
 			<iAirModifier>-90</iAirModifier>
-			<!-- Misc -->
 			<iAsset>8</iAsset>
 			<iPower>5</iPower>
 			<Flavors>
@@ -1716,7 +1535,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_FLAK_TOWER</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Foundling Hospital -->
 			<Type>BUILDING_FOUNDLING_HOSPITAL</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -1725,7 +1543,6 @@
 			<Description>TXT_KEY_BUILDING_FOUNDLING_HOSPITAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_FOUNDLING_HOSPITAL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_FOUNDLING_HOSPITAL_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_ANCIENT_MEDICINE</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Bonus>BONUS_BRICKS</Bonus>
@@ -1736,13 +1553,10 @@
 				</PrereqCivic>
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_MEDICINE</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>486</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<!-- Local -->
 			<CommerceChanges>
 				<iCommerce>-1</iCommerce>
 			</CommerceChanges>
@@ -1768,7 +1582,6 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Misc -->
 			<iAsset>8</iAsset>
 			<Flavors>
 				<Flavor>
@@ -1782,7 +1595,6 @@
 			<MovieDefineTag>ART_DEF_MOVIE_FOUNDLING_HOSPITAL</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Garbage Collection Agency -->
 			<Type>BUILDING_GCA</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -1791,7 +1603,6 @@
 			<Description>TXT_KEY_BUILDING_GCA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GCA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GCA_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_MOTORIZED_TRANSPORTATION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_AUTOMOBILES</Bonus>
@@ -1799,18 +1610,14 @@
 				<Bonus>BONUS_PETROLEUM_PRODUCTS</Bonus>
 				<Bonus>BONUS_BIOFUEL</Bonus>
 			</PrereqBonuses>
-			<!-- Cost -->
 			<iCost>1660</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>AS2D_BUILD_GARBAGE_DUMP</ConstructSound>
-			<!-- Local -->
 			<CommerceChanges>
 				<iCommerce>-15</iCommerce>
 			</CommerceChanges>
-			<!-- Global -->
 			<iGlobalHealth>1</iGlobalHealth>
-			<!-- Synergy -->
 			<TechHealthChanges>
 				<TechHealthChange>
 					<PrereqTech>TECH_RAILROAD</PrereqTech>
@@ -1833,7 +1640,6 @@
 					<iHealth>1</iHealth>
 				</TechHealthChange>
 			</TechHealthChanges>
-			<!-- Misc -->
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<Flavors>
@@ -1847,7 +1653,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Grand Central Station -->
 			<Type>BUILDING_GRANDCENTRAL_STATION</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -1856,20 +1661,16 @@
 			<Description>TXT_KEY_BUILDING_GRANDCENTRAL_STATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GRANDCENTRAL_STATION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GRANDCENTRAL_STATION_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_RAILROAD</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_COAL</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_STEEL_WARES</Bonus>
 			</PrereqBonuses>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_MAGNETIC_LEVITATION</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>1310</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Local -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -1883,16 +1684,13 @@
 				</PropertySource>
 			</PropertyManipulators>
 			<FreeAreaBuilding>BUILDING_RAILROAD_STATION</FreeAreaBuilding>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GRANDCENTRAL_STATION</ArtDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Great Bonfire -->
 			<Type>BUILDING_GREAT_BONFIRE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -1901,27 +1699,21 @@
 			<Description>TXT_KEY_BUILDING_GREAT_BONFIRE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GREAT_BONFIRE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GREAT_BONFIRE_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_FIRE_MAKING</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BONFIRE</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_FIREFIGHTING</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>112</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<!-- Local -->
 			<iHappiness>2</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
 			</CommerceChanges>
-			<!-- Global -->
 			<FreeBuilding>BUILDING_BONFIRE</FreeBuilding>
-			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<bNeverCapture>1</bNeverCapture>
 			<bCenterInCity>1</bCenterInCity>
@@ -1931,7 +1723,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Forbidden Palace -->
 			<Type>BUILDING_GREAT_PALACE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -1940,7 +1731,6 @@
 			<Description>TXT_KEY_BUILDING_GREAT_PALACE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GREAT_PALACE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GREAT_PALACE_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_CITY_PLANNING</PrereqTech>
 			<iCitiesPrereq>8</iCitiesPrereq>
 			<PrereqAmountBuildings>
@@ -1952,11 +1742,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Cost -->
 			<iCost>468</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Local -->
 			<bGovernmentCenter>1</bGovernmentCenter>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -1968,10 +1756,8 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<iAsset>8</iAsset>
 			<Flavors>
 				<Flavor>
@@ -1996,9 +1782,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GREAT_PALACE</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_FORBIDDEN_PALACE</MovieDefineTag>
 		</BuildingInfo>
-		<!--↓ Guilds ↓-->
 		<BuildingInfo>
-			<!-- Apothecary Guild -->
 			<Type>BUILDING_GUILD_APOTHECARY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -2007,7 +1791,6 @@
 			<Description>TXT_KEY_BUILDING_GUILD_APOTHECARY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GUILDS_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_ALCHEMY</PrereqTech>
@@ -2029,13 +1812,10 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_MODERN_HEALTH_CARE</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>664</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<!-- Local -->
 			<iMaintenanceModifier>5</iMaintenanceModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2049,10 +1829,8 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_APOTHECARY_SHOP</BuildingType>
@@ -2065,12 +1843,10 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_APOTHECARY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Artist Guild -->
 			<Type>BUILDING_GUILD_ARTIST</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -2079,7 +1855,6 @@
 			<Description>TXT_KEY_BUILDING_GUILD_ARTIST</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GUILDS_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_FREE_ARTISTRY</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_GUILDS</PrereqTech>
@@ -2094,13 +1869,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ARTIST_COLONY</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_MASS_MEDIA</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>850</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<!-- Local -->
 			<iMaintenanceModifier>5</iMaintenanceModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2114,10 +1886,8 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_ARTIST_COLONY</BuildingType>
@@ -2125,12 +1895,10 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_ARTIST</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Baker Guild -->
 			<Type>BUILDING_GUILD_BAKER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -2139,7 +1907,6 @@
 			<Description>TXT_KEY_BUILDING_GUILD_BAKER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GUILDS_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_AGRICULTURAL_TOOLS</PrereqTech>
@@ -2154,13 +1921,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BAKERY</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>664</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<!-- Local -->
 			<iMaintenanceModifier>5</iMaintenanceModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2174,10 +1938,8 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_BAKERY</BuildingType>
@@ -2185,12 +1947,10 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_BAKER</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Blacksmith Guild -->
 			<Type>BUILDING_GUILD_BLACKSMITH</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -2199,7 +1959,6 @@
 			<Description>TXT_KEY_BUILDING_GUILD_BLACKSMITH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GUILDS_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_SMITHING</PrereqTech>
@@ -2221,13 +1980,10 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>664</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<!-- Local -->
 			<iMaintenanceModifier>5</iMaintenanceModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2241,10 +1997,8 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_FORGE</BuildingType>
@@ -2257,12 +2011,10 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_BLACKSMITH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Butcher Guild -->
 			<Type>BUILDING_GUILD_BUTCHER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -2271,7 +2023,6 @@
 			<Description>TXT_KEY_BUILDING_GUILD_BUTCHER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GUILDS_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqAmountBuildings>
@@ -2290,13 +2041,10 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>664</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<!-- Local -->
 			<iMaintenanceModifier>5</iMaintenanceModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2310,10 +2058,8 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_BUTCHERY</BuildingType>
@@ -2326,12 +2072,10 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_BUTCHER</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Carpenter Guild -->
 			<Type>BUILDING_GUILD_CARPENTER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -2340,7 +2084,6 @@
 			<Description>TXT_KEY_BUILDING_GUILD_CARPENTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GUILDS_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_SURVEYING</PrereqTech>
@@ -2355,13 +2098,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_CARPENTERS_WORKSHOP</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>664</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<!-- Local -->
 			<iMaintenanceModifier>5</iMaintenanceModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2375,7 +2115,6 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_CARPENTERS_WORKSHOP</BuildingType>
@@ -2383,15 +2122,12 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_CARPENTER</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Printers Guild -->
 			<Type>BUILDING_GUILD_CLERKS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -2400,7 +2136,6 @@
 			<Description>TXT_KEY_BUILDING_GUILD_CLERKS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GUILDS_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_PAPER</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_GUILDS</PrereqTech>
@@ -2422,13 +2157,10 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>688</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Local -->
 			<iMaintenanceModifier>5</iMaintenanceModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2442,7 +2174,6 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_PAPER_MAKER</BuildingType>
@@ -2455,15 +2186,12 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_CLERKS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Artisans Guild -->
 			<Type>BUILDING_GUILD_CRAFTS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -2472,7 +2200,6 @@
 			<Description>TXT_KEY_BUILDING_GUILD_CRAFTS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GUILDS_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_INVENTION</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_GUILDS</PrereqTech>
@@ -2494,13 +2221,10 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_APPLIED_ECONOMICS</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>688</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Local -->
 			<iMaintenanceModifier>5</iMaintenanceModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2514,7 +2238,6 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_CRAFT_HUT</BuildingType>
@@ -2527,15 +2250,12 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_CRAFTS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Drapers Guild -->
 			<Type>BUILDING_GUILD_DRAPERS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -2544,7 +2264,6 @@
 			<Description>TXT_KEY_BUILDING_GUILD_DRAPERS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GUILDS_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_HERALDRY</PrereqTech>
@@ -2570,13 +2289,10 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>664</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Local -->
 			<iMaintenanceModifier>5</iMaintenanceModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2590,7 +2306,6 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_SEAMSTRESS_HUT</BuildingType>
@@ -2608,15 +2323,12 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_DRAPERS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Hostler Guild -->
 			<Type>BUILDING_GUILD_EQUESTRIAN</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -2625,7 +2337,6 @@
 			<Description>TXT_KEY_BUILDING_GUILD_EQUESTRIAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GUILDS_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_ARMORED_CAVALRY</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_GUILDS</PrereqTech>
@@ -2647,13 +2358,10 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>712</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<!-- Local -->
 			<iMaintenanceModifier>5</iMaintenanceModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2667,7 +2375,6 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_KNIGHT_STABLE</BuildingType>
@@ -2680,15 +2387,12 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_GREAT_GENERAL</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_EQUESTRIAN</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Fishmonger Guild -->
 			<Type>BUILDING_GUILD_FISHMONGER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -2697,7 +2401,6 @@
 			<Description>TXT_KEY_BUILDING_GUILD_FISHMONGER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GUILDS_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_RUDDER</PrereqTech>
@@ -2712,13 +2415,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FISHMONGER</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>664</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<!-- Local -->
 			<iMaintenanceModifier>5</iMaintenanceModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2732,7 +2432,6 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_FISHMONGER</BuildingType>
@@ -2740,15 +2439,12 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_FISHMONGER</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Glassblowers Guild -->
 			<Type>BUILDING_GUILD_GLASSBLOWERS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -2757,7 +2453,6 @@
 			<Description>TXT_KEY_BUILDING_GUILD_GLASSBLOWERS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GUILDS_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_STAINED_GLASS</PrereqTech>
@@ -2772,13 +2467,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_GLASSSMITH</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>664</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Local -->
 			<iMaintenanceModifier>5</iMaintenanceModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2792,7 +2484,6 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_GLASSSMITH</BuildingType>
@@ -2800,15 +2491,12 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_GLASSBLOWERS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Goldsmith Guild -->
 			<Type>BUILDING_GUILD_GOLDSMITH</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -2817,7 +2505,6 @@
 			<Description>TXT_KEY_BUILDING_GUILD_GOLDSMITH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GUILDS_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_BANKING</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_GUILDS</PrereqTech>
@@ -2832,13 +2519,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_JEWELER</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>736</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Local -->
 			<iMaintenanceModifier>5</iMaintenanceModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2852,7 +2536,6 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_JEWELER</BuildingType>
@@ -2860,15 +2543,12 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_GOLDSMITH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Grocers Guild -->
 			<Type>BUILDING_GUILD_GROCERS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -2877,7 +2557,6 @@
 			<Description>TXT_KEY_BUILDING_GUILD_GROCERS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GUILDS_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_AGRICULTURAL_TOOLS</PrereqTech>
@@ -2899,13 +2578,10 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>664 </iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<!-- Local -->
 			<iMaintenanceModifier>5</iMaintenanceModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2919,7 +2595,6 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_GROCER</BuildingType>
@@ -2932,15 +2607,12 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_GROCERS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Woodcutter Guild -->
 			<Type>BUILDING_GUILD_LUMBER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -2949,7 +2621,6 @@
 			<Description>TXT_KEY_BUILDING_GUILD_LUMBER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GUILDS_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_SURVEYING</PrereqTech>
@@ -2964,13 +2635,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LUMBER_CAMP</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>664</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<!-- Local -->
 			<iMaintenanceModifier>5</iMaintenanceModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -2984,7 +2652,6 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_LUMBER_CAMP</BuildingType>
@@ -2992,15 +2659,12 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_LUMBER</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Masons Guild -->
 			<Type>BUILDING_GUILD_MASON</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -3009,7 +2673,6 @@
 			<Description>TXT_KEY_BUILDING_GUILD_MASON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GUILDS_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_ARCHITECTURE</PrereqTech>
@@ -3031,13 +2694,10 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>664</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<!-- Local -->
 			<iMaintenanceModifier>5</iMaintenanceModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3051,7 +2711,6 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_BRICK_MASON</BuildingType>
@@ -3064,15 +2723,12 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_MASON</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Merchants Guild -->
 			<Type>BUILDING_GUILD_MERCERS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -3081,7 +2737,6 @@
 			<Description>TXT_KEY_BUILDING_GUILD_MERCERS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GUILDS_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_USURY</PrereqTech>
@@ -3103,13 +2758,10 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_APPLIED_ECONOMICS</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>664</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Local -->
 			<iMaintenanceModifier>5</iMaintenanceModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3123,7 +2775,6 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_BAZAAR</BuildingType>
@@ -3136,15 +2787,12 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_MERCERS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Potters Guild -->
 			<Type>BUILDING_GUILD_POTTERS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -3153,7 +2801,6 @@
 			<Description>TXT_KEY_BUILDING_GUILD_POTTERS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GUILDS_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_STAINED_GLASS</PrereqTech>
@@ -3168,13 +2815,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>664</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Local -->
 			<iMaintenanceModifier>5</iMaintenanceModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3188,7 +2832,6 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_POTTERS_WORKSHOP</BuildingType>
@@ -3196,15 +2839,12 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_POTTERS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Servants Guild -->
 			<Type>BUILDING_GUILD_SERVANTS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -3213,7 +2853,6 @@
 			<Description>TXT_KEY_BUILDING_GUILD_SERVANTS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GUILDS_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
@@ -3229,13 +2868,10 @@
 				<BuildingType>BUILDING_SERVANTS_QUARTERS</BuildingType>
 				<BuildingType>BUILDING_VIKING_TRADING_POST</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_LABOR_UNIONS</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>664</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Local -->
 			<iMaintenanceModifier>5</iMaintenanceModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3249,7 +2885,6 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_SERVANTS_QUARTERS</BuildingType>
@@ -3257,15 +2892,12 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_SERVANTS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Tailor Guild -->
 			<Type>BUILDING_GUILD_TAILOR</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -3274,7 +2906,6 @@
 			<Description>TXT_KEY_BUILDING_GUILD_TAILOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GUILDS_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_HERALDRY</PrereqTech>
@@ -3289,13 +2920,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_TAILOR_SHOP</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>664</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Local -->
 			<iMaintenanceModifier>5</iMaintenanceModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3309,7 +2937,6 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_TAILOR_SHOP</BuildingType>
@@ -3317,15 +2944,12 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_TAILOR</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Victuallers Guild -->
 			<Type>BUILDING_GUILD_VICTUALLERS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -3334,7 +2958,6 @@
 			<Description>TXT_KEY_BUILDING_GUILD_VICTUALLERS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GUILDS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GUILDS_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_AGRICULTURAL_TOOLS</PrereqTech>
@@ -3356,13 +2979,10 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_GLOBALIZATION</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>664</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Local -->
 			<iMaintenanceModifier>5</iMaintenanceModifier>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -3376,7 +2996,6 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Global -->
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
 					<BuildingType>BUILDING_PUB</BuildingType>
@@ -3389,16 +3008,12 @@
 					<iExtraCommerce>5</iExtraCommerce>
 				</BuildingExtraCommerce>
 			</GlobalBuildingExtraCommerces>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_GUILD_VICTUALLERS</ArtDefineTag>
 		</BuildingInfo>
-		<!--↑ Guilds ↑-->
 		<BuildingInfo>
-			<!-- Heroic Epic -->
 			<Type>BUILDING_HEROIC_EPIC</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -3407,9 +3022,7 @@
 			<Description>TXT_KEY_BUILDING_HEROIC_EPIC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HEROIC_EPIC_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HEROIC_EPIC_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_LITERATURE</PrereqTech>
-			<!-- Cost -->
 			<iCost>450</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<BonusProductionModifiers>
@@ -3419,7 +3032,6 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<!-- Local -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -3430,11 +3042,9 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<!-- Units -->
 			<iMilitaryProductionModifier>100</iMilitaryProductionModifier>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<iAsset>8</iAsset>
 			<iPower>8</iPower>
 			<Flavors>
@@ -3448,7 +3058,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HEROIC_EPIC</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Great Holmegaard Hunt -->
 			<Type>BUILDING_HHUNTINGBOW</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -3457,7 +3066,6 @@
 			<Description>TXT_KEY_BUILDING_HHUNTINGBOW</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HHUNTINGBOW_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HHUNTINGBOW_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_ARCHERY</PrereqTech>
 			<Bonus>BONUS_BONE</Bonus>
 			<PrereqBonuses>
@@ -3478,19 +3086,14 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_RIFLING</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>236</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Local -->
 			<YieldChanges>
 				<iYield>4</iYield>
 			</YieldChanges>
-			<!-- Units -->
 			<FreePromotion>PROMOTION_HUNTER2</FreePromotion>
-			<!-- Misc -->
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
@@ -3501,7 +3104,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HHUNTINGBOW</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Holographic Gaming League -->
 			<Type>BUILDING_HOLOGRAPHIC_GAMING_LEAGUE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -3510,7 +3112,6 @@
 			<Description>TXT_KEY_BUILDING_HOLOGRAPHIC_GAMING_LEAGUE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOLOGRAPHIC_GAMING_LEAGUE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HOLOGRAPHIC_GAMING_LEAGUE_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_HOLOGRAPHICS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -3528,23 +3129,19 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
-			<!-- Cost -->
 			<iCost>7050</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Global -->
 			<iGlobalHappiness>2</iGlobalHappiness>
 			<GlobalCommerceModifiers>
 				<iCommerce>2</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</GlobalCommerceModifiers>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_HOLOGRAPHIC_GAMING_LEAGUE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Homeland Security Agency -->
 			<Type>BUILDING_HOMELAND_SECURITY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -3553,7 +3150,6 @@
 			<Description>TXT_KEY_BUILDING_HOMELAND_SECURITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOMELAND_SECURITY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HOMELAND_SECURITY_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_FASCISM</PrereqTech>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
@@ -3564,12 +3160,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Cost -->
 			<iCost>1980</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<!-- Local -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -3582,14 +3176,12 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>50</iCommerce>
 			</CommerceModifiers>
-			<!-- Global -->
 			<GlobalCommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>15</iCommerce>
 			</GlobalCommerceModifiers>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<UnitCombatFreeExperiences>
@@ -3598,7 +3190,6 @@
 					<iExperience>4</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<!-- Misc -->
 			<iAsset>5</iAsset>
 			<Flavors>
 				<Flavor>
@@ -3613,7 +3204,6 @@
 			<MovieDefineTag>ART_DEF_MOVIE_HOMELAND_SECURITY</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- House of Parliament -->
 			<Type>BUILDING_HOUSE_OF_PARLIMENT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -3622,7 +3212,6 @@
 			<Description>TXT_KEY_BUILDING_HOUSE_OF_PARLIMENT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HOUSE_OF_PARLIMENT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HOUSE_OF_PARLIMENT_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_POLITICAL_PHILOSOPHY</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_FURNITURE</Bonus>
@@ -3649,21 +3238,17 @@
 				</PrereqCivic>
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
-			<!-- Cost -->
 			<iCost>850</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_COURTHOUSE</ConstructSound>
-			<!-- Local -->
 			<bGovernmentCenter>1</bGovernmentCenter>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>6</iCommerce>
 			</CommerceChanges>
-			<!-- Global -->
 			<iGreatPeopleRateModifier>25</iGreatPeopleRateModifier>
-			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<iPower>5</iPower>
 			<Flavors>
@@ -3678,7 +3263,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HOUSE_OF_PARLIMENT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Ironworks -->
 			<Type>BUILDING_IRON_WORKS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -3687,7 +3271,6 @@
 			<Description>TXT_KEY_BUILDING_IRON_WORKS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_IRON_WORKS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_IRON_WORKS_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_STEEL</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqOrBuildings>
@@ -3700,12 +3283,10 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
-			<!-- Cost -->
 			<iCost>1480</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_IRONWORKS</ConstructSound>
-			<!-- Local -->
 			<iHealth>-2</iHealth>
 			<FreeBonus>BONUS_STEEL_INGOTS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
@@ -3728,7 +3309,6 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Synergy -->
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_COAL</BonusType>
@@ -3745,10 +3325,8 @@
 					</YieldModifiers>
 				</BonusYieldModifier>
 			</BonusYieldModifiers>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<iAsset>8</iAsset>
 			<iPower>4</iPower>
 			<Flavors>
@@ -3763,7 +3341,6 @@
 			<MovieDefineTag>ART_DEF_MOVIE_IRON_WORKS</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Labor Union -->
 			<Type>BUILDING_LABOR_UNION</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -3772,18 +3349,14 @@
 			<Description>TXT_KEY_BUILDING_LABOR_UNION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LABOR_UNION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_LABOR_UNION_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_LABOR_UNIONS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<!-- Cost -->
 			<iCost>1540</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>AS2D_BUILD_COURTHOUSE</ConstructSound>
-			<!-- Local -->
 			<iAreaHealth>1</iAreaHealth>
 			<iAreaHappiness>1</iAreaHappiness>
-			<!-- Misc -->
 			<iAsset>5</iAsset>
 			<Flavors>
 				<Flavor>
@@ -3801,7 +3374,6 @@
 			<MovieDefineTag>ART_DEF_MOVIE_LABOR_UNION</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Log Roller System -->
 			<Type>BUILDING_LOGROLLERS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -3810,7 +3382,6 @@
 			<Description>TXT_KEY_BUILDING_LOGROLLERS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LOGROLLERS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_LOGROLLERS_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_MEGALITH_CONSTRUCTION</PrereqTech>
 			<Bonus>BONUS_ROPE</Bonus>
 			<PrereqBonuses>
@@ -3827,22 +3398,16 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_ENGINEERING</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>208</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Local -->
 			<YieldChanges>
 				<iYield>2</iYield>
 				<iYield>5</iYield>
 			</YieldChanges>
-			<!-- Global -->
 			<iWorkerSpeedModifier>25</iWorkerSpeedModifier>
-			<!-- Units -->
 			<iMilitaryProductionModifier>15</iMilitaryProductionModifier>
-			<!-- Misc -->
 			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
@@ -3862,7 +3427,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_LOGROLLERS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Manhattan Project -->
 			<Type>BUILDING_MANHATTAN</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -3871,7 +3435,6 @@
 			<Description>TXT_KEY_BUILDING_MANHATTAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MANHATTAN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MANHATTAN_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_FISSION</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqBonuses>
@@ -3891,12 +3454,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Cost -->
 			<iCost>2160</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_PLANTNUCLEAR</ConstructSound>
-			<!-- Local -->
 			<iHealth>-1</iHealth>
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -3908,10 +3469,8 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<!-- Global -->
 			<bAllowsNukes>1</bAllowsNukes>
 			<bDCMNukesOkay>1</bDCMNukesOkay>
-			<!-- Misc -->
 			<iAsset>6</iAsset>
 			<Flavors>
 				<Flavor>
@@ -3926,7 +3485,6 @@
 			<MovieDefineTag>ART_DEF_MOVIE_MANHATTAN_PROJECT</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Microlith Workshop -->
 			<Type>BUILDING_MICROLITH_WORKSHOP</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -3935,7 +3493,6 @@
 			<Description>TXT_KEY_BUILDING_MICROLITH_WORKSHOP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MICROLITH_WORKSHOP_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MICROLITH_WORKSHOP_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_MICROLITH</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_SHELTER_BUILDING</PrereqTech>
@@ -3950,16 +3507,12 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_IRON_WORKING</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>100</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<!-- Units -->
 			<iMilitaryProductionModifier>25</iMilitaryProductionModifier>
-			<!-- Misc -->
 			<iAsset>2</iAsset>
 			<iPower>6</iPower>
 			<Flavors>
@@ -3977,7 +3530,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MICROLITH_WEAPONS_FACTORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Mind Storage -->
 			<Type>BUILDING_MIND_STORAGE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -3986,27 +3538,22 @@
 			<Description>TXT_KEY_BUILDING_MIND_STORAGE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MIND_STORAGE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MIND_STORAGE_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_MIND_UPLOADING</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Cost -->
 			<iCost>11310</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>AS2D_BUILD_MIND_STORAGE</ConstructSound>
-			<!-- Units -->
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_TECH</UnitCombatType>
 					<iHeal>5</iHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
-			<!-- Global -->
 			<iGlobalPopulationChange>1</iGlobalPopulationChange>
-			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<Flavors>
 				<Flavor>
@@ -4021,7 +3568,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MIND_STORAGE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Modern Art Theatre -->
 			<Type>BUILDING_MODERN_ART_THEATRE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -4030,7 +3576,6 @@
 			<Description>TXT_KEY_BUILDING_MODERN_ART_THEATRE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MODERN_ART_THEATRE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MODERN_ART_THEATRE_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_REALISM</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqAmountBuildings>
@@ -4043,12 +3588,10 @@
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<!-- Cost -->
 			<iCost>1540</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ConstructSound>AS2D_BUILD_THEATRE</ConstructSound>
-			<!-- Local -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -4072,10 +3615,8 @@
 					<iAmountPerTurn>3</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<iAsset>8</iAsset>
 			<Flavors>
 				<Flavor>
@@ -4088,7 +3629,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MODERN_ART_THEATRE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Movie Studio -->
 			<Type>BUILDING_MOVIE_STUDIO</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -4097,14 +3637,11 @@
 			<Description>TXT_KEY_BUILDING_MOVIE_STUDIO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MOVIE_STUDIO_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MOVIE_STUDIO_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_MOTION_PICTURES</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
-			<!-- Cost -->
 			<iCost>1660</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Local -->
 			<CommerceChanges>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
@@ -4125,18 +3662,14 @@
 					<iFreeSpecialistCount>1</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
-			<!-- Global -->
 			<iGlobalHappiness>1</iGlobalHappiness>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_MOVIE_STUDIO</ArtDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- National Medical Database -->
 			<Type>BUILDING_MEDICAL_DATABASE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -4145,7 +3678,6 @@
 			<Description>TXT_KEY_BUILDING_MEDICAL_DATABASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MEDICAL_DATABASE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MEDICAL_DATABASE_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_KNOWLEDGE_MANAGEMENT</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -4153,11 +3685,9 @@
 				<BuildingType>BUILDING_HOSPITAL</BuildingType>
 				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Cost -->
 			<iCost>4010</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Local -->
 			<iHealth>5</iHealth>
 			<CommerceChanges>
 				<iCommerce>-50</iCommerce>
@@ -4169,18 +3699,14 @@
 					<iAmountPerTurn>-100</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
-			<!-- Global -->
 			<FreeBuilding>BUILDING_MEDICAL_DATABASE_GOOD</FreeBuilding>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_MEDICAL_DATABASE</ArtDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- National Aerospace Agency -->
 			<Type>BUILDING_NASA</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -4188,7 +3714,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NASA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NASA_PEDIA</Civilopedia>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_ADVANCED_ROCKETRY</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<Bonus>BONUS_ROCKET_FUEL</Bonus>
@@ -4201,7 +3726,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MILITARY_AIRBASE</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Cost -->
 			<iCost>2690</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<BonusProductionModifiers>
@@ -4211,12 +3735,10 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<!-- Local -->
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 			</CommerceChanges>
 			<iAirlift>1</iAirlift>
-			<!-- Units -->
 			<DomainFreeExperiences>
 				<DomainFreeExperience>
 					<DomainType>DOMAIN_AIR</DomainType>
@@ -4237,7 +3759,6 @@
 			</HealUnitCombatTypes>
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<iAsset>8</iAsset>
 			<iPower>8</iPower>
 			<Flavors>
@@ -4253,7 +3774,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- National Academic Database -->
 			<Type>BUILDING_NATIONAL_ACADEMIC_DATABASE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -4262,7 +3782,6 @@
 			<Description>TXT_KEY_BUILDING_NATIONAL_ACADEMIC_DATABASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_ACADEMIC_DATABASE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_ACADEMIC_DATABASE_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_CLOUD_COMPUTING</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -4271,27 +3790,22 @@
 				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
 				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Cost -->
 			<iCost>4010</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<!-- Local -->
 			<CommerceChanges>
 				<iCommerce>-20</iCommerce>
 			</CommerceChanges>
-			<!-- Global -->
 			<GlobalCommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 			</GlobalCommerceModifiers>
 			<FreeBuilding>BUILDING_EFFECT_NATIONAL_ACADEMY_DATABASE</FreeBuilding>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_ACADEMIC_DATABASE</ArtDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- National Aquarium -->
 			<Type>BUILDING_NATIONAL_AQUA</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -4300,7 +3814,6 @@
 			<Description>TXT_KEY_BUILDING_NATIONAL_AQUA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_AQUA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_AQUA_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_MARINE_BIOLOGY</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqAmountBuildings>
@@ -4309,11 +3822,9 @@
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<!-- Cost -->
 			<iCost>1260</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<!-- Local -->
 			<iHappiness>3</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -4333,12 +3844,9 @@
 					<iAmountPerTurn>15</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Global -->
 			<FreeBuilding>BUILDING_AQUARIUM</FreeBuilding>
-			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<bCenterInCity>1</bCenterInCity>
 			<bNeverCapture>1</bNeverCapture>
@@ -4348,7 +3856,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- National Epic -->
 			<Type>BUILDING_NATIONAL_EPIC</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -4357,12 +3864,10 @@
 			<Description>TXT_KEY_BUILDING_NATIONAL_EPIC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_EPIC_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_EPIC_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_LITERATURE</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LIBRARY</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Cost -->
 			<iCost>450</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<BonusProductionModifiers>
@@ -4372,7 +3877,6 @@
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<!-- Local -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -4390,11 +3894,9 @@
 					<iAmountPerTurn>4</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<iGreatPeopleRateModifier>100</iGreatPeopleRateModifier>
-			<!-- Misc -->
 			<iAsset>8</iAsset>
 			<Flavors>
 				<Flavor>
@@ -4406,9 +3908,7 @@
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_EPIC</ArtDefineTag>
 		</BuildingInfo>
-		<!--↓ National Breeders ↓-->
 		<BuildingInfo>
-			<!-- National Camel Breeder -->
 			<Type>BUILDING_CAMEL_NATIONAL</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -4417,7 +3917,6 @@
 			<Description>TXT_KEY_BUILDING_CAMEL_NATIONAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CAMEL_NATIONAL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CAMEL_NATIONAL_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_CAMELID_DOMESTICATION</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_CAMEL</Bonus>
@@ -4428,20 +3927,16 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>184</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
-			<!-- Local -->
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<!-- Misc -->
 			<iAsset>4</iAsset>
 			<iPower>1</iPower>
 			<Flavors>
@@ -4455,7 +3950,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- National Elephant Breeder -->
 			<Type>BUILDING_ELEPHANT_NATIONAL</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -4464,7 +3958,6 @@
 			<Description>TXT_KEY_BUILDING_ELEPHANT_NATIONAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ELEPHANT_NATIONAL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ELEPHANT_NATIONAL_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_ELEPHANT_DOMESTICATION</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_ELEPHANTS</Bonus>
@@ -4475,14 +3968,11 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>184</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
-			<!-- Local -->
 			<iHappiness>1</iHappiness>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -4493,7 +3983,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<!-- Misc -->
 			<iAsset>4</iAsset>
 			<iPower>6</iPower>
 			<Flavors>
@@ -4507,7 +3996,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- National Horse Breeder -->
 			<Type>BUILDING_HORSE_NATIONAL</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -4516,7 +4004,6 @@
 			<Description>TXT_KEY_BUILDING_HORSE_NATIONAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HORSE_NATIONAL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HORSE_NATIONAL_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_EQUINE_DOMESTICATION</PrereqTech>
 			<PrereqBonuses>
 				<Bonus>BONUS_HORSE</Bonus>
@@ -4527,14 +4014,11 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_VERTICAL_FLIGHT</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>184</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
-			<!-- Local -->
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>1</iYield>
@@ -4544,7 +4028,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<!-- Misc -->
 			<iAsset>4</iAsset>
 			<iPower>6</iPower>
 			<Flavors>
@@ -4557,9 +4040,7 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HORSE_NATIONAL</ArtDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
-		<!--↑ National Breeders ↑-->
 		<BuildingInfo>
-			<!-- National Fire Service -->
 			<Type>BUILDING_NATIONAL_FIRE_SERVICE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -4568,15 +4049,12 @@
 			<Description>TXT_KEY_BUILDING_NATIONAL_FIRE_SERVICE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_FIRE_SERVICE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_FIRE_SERVICE_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_FIREFIGHTING</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<!-- Cost -->
 			<iCost>1420</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>AS2D_BUILD_FIRE_BRIGADES</ConstructSound>
-			<!-- Local -->
 			<iHealth>1</iHealth>
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
@@ -4588,7 +4066,6 @@
 					<iPropertyValue>-25</iPropertyValue>
 				</Property>
 			</Properties>
-			<!-- Global -->
 			<iGlobalHealth>1</iGlobalHealth>
 			<PropertiesAllCities>
 				<Property>
@@ -4596,7 +4073,6 @@
 					<iPropertyValue>-5</iPropertyValue>
 				</Property>
 			</PropertiesAllCities>
-			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<iPower>2</iPower>
 			<Flavors>
@@ -4610,7 +4086,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- National Legal Database -->
 			<Type>BUILDING_NATIONAL_LEGAL_DATABASE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -4619,7 +4094,6 @@
 			<Description>TXT_KEY_BUILDING_NATIONAL_LEGAL_DATABASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_LEGAL_DATABASE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_LEGAL_DATABASE_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_CLOUD_COMPUTING</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -4628,29 +4102,18 @@
 				<BuildingType>BUILDING_COMPUTER_NETWORK</BuildingType>
 				<BuildingType>BUILDING_POLICE_PRECINCT</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Cost -->
 			<iCost>4010</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Local -->
 			<CommerceChanges>
 				<iCommerce>-20</iCommerce>
 			</CommerceChanges>
-			<!-- Global -->
-			<GlobalCommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>5</iCommerce>
-			</GlobalCommerceModifiers>
 			<FreeBuilding>BUILDING_SAFETY_NAT_LEGAL_DATABASE</FreeBuilding>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_LEGAL_DATABASE</ArtDefineTag>
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- National Library Service -->
 			<Type>BUILDING_NATIONAL_LIBRARY_SERVICE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -4659,7 +4122,6 @@
 			<Description>TXT_KEY_BUILDING_NATIONAL_LIBRARY_SERVICE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_LIBRARY_SERVICE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_LIBRARY_SERVICE_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_LIBERALISM</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqBonuses>
@@ -4687,11 +4149,9 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
-			<!-- Cost -->
 			<iCost>1030</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<!-- Local -->
 			<CommerceChanges>
 				<iCommerce>-20</iCommerce>
 				<iCommerce>5</iCommerce>
@@ -4703,12 +4163,9 @@
 					<iAmountPerTurn>15</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Global -->
 			<FreeBuilding>BUILDING_LIBRARY</FreeBuilding>
-			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<Flavors>
 				<Flavor>
@@ -4724,7 +4181,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- National Mint -->
 			<Type>BUILDING_NATIONAL_MINT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -4734,7 +4190,6 @@
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_MINT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_MINT_STRATEGY</Strategy>
 			<Help>TXT_KEY_BUILDING_NATIONAL_MINT_HELP</Help>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_BANKING</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqAmountBuildings>
@@ -4758,12 +4213,10 @@
 				</PrereqCivic>
 			</PrereqOrCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
-			<!-- Cost -->
 			<iCost>736</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_BANK</ConstructSound>
-			<!-- Local -->
 			<iMaintenanceModifier>10</iMaintenanceModifier>
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
@@ -4775,7 +4228,6 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Synergy -->
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_GOLD_WARES</BonusType>
@@ -4808,7 +4260,6 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
-			<!-- Misc -->
 			<iAsset>8</iAsset>
 			<iPower>2</iPower>
 			<Flavors>
@@ -4821,7 +4272,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_MINT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- National Park -->
 			<Type>BUILDING_NATIONAL_PARK</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -4830,13 +4280,10 @@
 			<Description>TXT_KEY_BUILDING_NATIONAL_PARK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_PARK_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_PARK_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_WILDLIFE_CONSERVATION</PrereqTech>
-			<!-- Cost -->
 			<iCost>1360</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<!-- Local -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -4865,10 +4312,8 @@
 					<iAmountPerTurn>-100</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<iAsset>7</iAsset>
 			<Flavors>
 				<Flavor>
@@ -4881,7 +4326,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_PARK</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- National Science Foundation -->
 			<Type>BUILDING_NATIONAL_SCIENCE_FOUNDATION</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -4890,17 +4334,14 @@
 			<Description>TXT_KEY_BUILDING_NATIONAL_SCIENCE_FOUNDATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_SCIENCE_FOUNDATION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_SCIENCE_FOUNDATION_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_SCIENTIFIC_METHOD</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Cost -->
 			<iCost>950</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<!-- Local -->
 			<CommerceChanges>
 				<iCommerce>-25</iCommerce>
 			</CommerceChanges>
@@ -4914,18 +4355,13 @@
 					<iSpecialistCount>3</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Global -->
 			<iFreeTechs>1</iFreeTechs>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SCIENCE_FOUNDATION</ArtDefineTag>
 		</BuildingInfo>
-		<!-- National Smelters now *not* near a City Smelter -->
 		<BuildingInfo>
-			<!-- National Aluminum Smelter -->
 			<Type>BUILDING_NATIONAL_SMELTER_ALUMINUM</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -4934,7 +4370,6 @@
 			<Description>TXT_KEY_BUILDING_NATIONAL_SMELTER_ALUMINUM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_SMELTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_SMELTER_ALUMINUM_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
 			<ConstructCondition>
 				<Or>
@@ -4955,11 +4390,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<!-- Cost -->
 			<iCost>1900</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Local -->
 			<iHealth>-1</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -4983,7 +4416,6 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Misc -->
 			<iAsset>6</iAsset>
 			<iPower>1</iPower>
 			<bNeverCapture>1</bNeverCapture>
@@ -4991,7 +4423,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SMELTER_ALUMINUM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- National Copper Smelter -->
 			<Type>BUILDING_NATIONAL_SMELTER_COPPER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -5000,7 +4431,6 @@
 			<Description>TXT_KEY_BUILDING_NATIONAL_SMELTER_COPPER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_SMELTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_SMELTER_COPPER_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_COPPER_WORKING</PrereqTech>
 			<ConstructCondition>
 				<Or>
@@ -5021,11 +4451,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<!-- Cost -->
 			<iCost>292</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Local -->
 			<iHealth>-1</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -5049,12 +4477,10 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SMELTER_COPPER</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- National Gold Smelter -->
 			<Type>BUILDING_NATIONAL_SMELTER_GOLD</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -5063,7 +4489,6 @@
 			<Description>TXT_KEY_BUILDING_NATIONAL_SMELTER_GOLD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_SMELTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_SMELTER_GOLD_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_METAL_CASTING</PrereqTech>
 			<ConstructCondition>
 				<Or>
@@ -5084,11 +4509,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<!-- Cost -->
 			<iCost>306</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Local -->
 			<iHealth>-1</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -5112,12 +4535,10 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SMELTER_GOLD</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- National Iron Smelter -->
 			<Type>BUILDING_NATIONAL_SMELTER_IRON</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -5126,7 +4547,6 @@
 			<Description>TXT_KEY_BUILDING_NATIONAL_SMELTER_IRON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_SMELTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_SMELTER_IRON_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 			<ConstructCondition>
 				<Or>
@@ -5147,11 +4567,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<!-- Cost -->
 			<iCost>432</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Local -->
 			<iHealth>-1</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -5175,12 +4593,10 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SMELTER_IRON</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- National Lead Smelter -->
 			<Type>BUILDING_NATIONAL_SMELTER_LEAD</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -5189,7 +4605,6 @@
 			<Description>TXT_KEY_BUILDING_NATIONAL_SMELTER_LEAD</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_SMELTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_SMELTER_LEAD_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_LEAD_WORKING</PrereqTech>
 			<ConstructCondition>
 				<Or>
@@ -5210,11 +4625,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<!-- Cost -->
 			<iCost>292</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Local -->
 			<iHealth>-1</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -5238,12 +4651,10 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SMELTER_LEAD</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- National Platinum Smelter -->
 			<Type>BUILDING_NATIONAL_SMELTER_PLATINUM</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -5252,7 +4663,6 @@
 			<Description>TXT_KEY_BUILDING_NATIONAL_SMELTER_PLATINUM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_SMELTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_SMELTER_PLATINUM_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 			<ConstructCondition>
 				<Or>
@@ -5273,11 +4683,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<!-- Cost -->
 			<iCost>432</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Local -->
 			<iHealth>-1</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -5301,12 +4709,10 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SMELTER_PLATINUM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- National Silver Smelter -->
 			<Type>BUILDING_NATIONAL_SMELTER_SILVER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -5315,7 +4721,6 @@
 			<Description>TXT_KEY_BUILDING_NATIONAL_SMELTER_SILVER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_SMELTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_SMELTER_SILVER_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_METAL_CASTING</PrereqTech>
 			<ConstructCondition>
 				<Or>
@@ -5336,11 +4741,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<!-- Cost -->
 			<iCost>306</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Local -->
 			<iHealth>-1</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -5364,12 +4767,10 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SMELTER_SILVER</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- National Tin Smelter -->
 			<Type>BUILDING_NATIONAL_SMELTER_TIN</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -5378,7 +4779,6 @@
 			<Description>TXT_KEY_BUILDING_NATIONAL_SMELTER_TIN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_SMELTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_SMELTER_TIN_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_BRONZE_WORKING</PrereqTech>
 			<ConstructCondition>
 				<Or>
@@ -5399,11 +4799,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<!-- Cost -->
 			<iCost>368</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Local -->
 			<iHealth>-1</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -5427,12 +4825,10 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SMELTER_TIN</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- National Titanium Smelter -->
 			<Type>BUILDING_NATIONAL_SMELTER_TITANIUM</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -5441,7 +4837,6 @@
 			<Description>TXT_KEY_BUILDING_NATIONAL_SMELTER_TITANIUM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_SMELTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_SMELTER_TITANIUM_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_ADVANCED_METALLURGY</PrereqTech>
 			<ConstructCondition>
 				<Or>
@@ -5462,11 +4857,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<!-- Cost -->
 			<iCost>1980</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Local -->
 			<iHealth>-1</iHealth>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -5490,13 +4883,10 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_SMELTER_TITANIUM</ArtDefineTag>
 		</BuildingInfo>
-		<!--↑ National Smelters ↑-->
 		<BuildingInfo>
-			<!-- National Sports League -->
 			<Type>BUILDING_NATIONAL_SPORTS_LEAGUE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -5505,7 +4895,6 @@
 			<Description>TXT_KEY_BUILDING_NATIONAL_SPORTS_LEAGUE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_SPORTS_LEAGUE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_SPORTS_LEAGUE_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_MODERN_SPORTS</PrereqTech>
 			<ObsoleteTech>TECH_BINARY_PSYCHOKINESIS</ObsoleteTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
@@ -5513,12 +4902,10 @@
 				<BuildingType>BUILDING_MAJOR_LEAGUE_STADIUM</BuildingType>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Cost -->
 			<iCost>2460</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ConstructSound>AS2D_BUILD_ARENA</ConstructSound>
-			<!-- Local -->
 			<iHappiness>5</iHappiness>
 			<CommerceChanges>
 				<iCommerce>15</iCommerce>
@@ -5531,10 +4918,8 @@
 					<iFreeSpecialistCount>1</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<iAsset>5</iAsset>
 			<iPower>10</iPower>
 			<bNeverCapture>1</bNeverCapture>
@@ -5543,7 +4928,6 @@
 			<MovieDefineTag>ART_DEF_MOVIE_NATIONAL_SPORTS_LEAGUE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- National TV-Station -->
 			<Type>BUILDING_NATIONAL_TV_STATION</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -5552,7 +4936,6 @@
 			<Description>TXT_KEY_BUILDING_NATIONAL_TV_STATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_TV_STATION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_TV_STATION_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_TELEVISION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -5574,12 +4957,10 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
-			<!-- Cost -->
 			<iCost>2260</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ConstructSound>AS2D_BUILD_BROADCASTTOWER</ConstructSound>
-			<!-- Local -->
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -5591,7 +4972,6 @@
 					<iFreeSpecialistCount>1</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
-			<!-- Synergy -->
 			<BonusCommerceModifiers>
 				<BonusCommerceModifier>
 					<BonusType>BONUS_HIT_MOVIES</BonusType>
@@ -5600,9 +4980,7 @@
 					</CommerceModifiers>
 				</BonusCommerceModifier>
 			</BonusCommerceModifiers>
-			<!-- Global -->
 			<iGlobalGreatPeopleRateModifier>10</iGlobalGreatPeopleRateModifier>
-			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<iPower>10</iPower>
 			<Flavors>
@@ -5620,7 +4998,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TVSTATION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Noblegarden -->
 			<Type>BUILDING_NOBLEGARDEN</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -5679,7 +5056,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NOBLEGARDEN</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- National Weather Service -->
 			<Type>BUILDING_NATIONAL_WEATHER_SERVICE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -5688,7 +5064,6 @@
 			<Description>TXT_KEY_BUILDING_NATIONAL_WEATHER_SERVICE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_WEATHER_SERVICE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_WEATHER_SERVICE_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_RADIO</PrereqTech>
 			<TechTypes>
 				<PrereqTech>TECH_METEOROLOGY</PrereqTech>
@@ -5712,14 +5087,11 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_WEATHER_CONTROL</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>1740</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_INTELLIGENCE_AGENCY</ConstructSound>
-			<!-- Local -->
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>7</iCommerce>
@@ -5736,10 +5108,8 @@
 					<iFreeSpecialistCount>2</iFreeSpecialistCount>
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<iAsset>8</iAsset>
 			<iPower>10</iPower>
 			<Flavors>
@@ -5753,7 +5123,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_NATIONAL_WEATHER_SERVICE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- National Zoo -->
 			<Type>BUILDING_NATIONAL_ZOO</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -5762,7 +5131,6 @@
 			<Description>TXT_KEY_BUILDING_NATIONAL_ZOO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATIONAL_ZOO_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATIONAL_ZOO_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_ZOOLOGY</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqAmountBuildings>
@@ -5771,11 +5139,9 @@
 					<iNumBuildingNeeded>3</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
-			<!-- Cost -->
 			<iCost>1070</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<!-- Local -->
 			<iHappiness>3</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -5795,12 +5161,9 @@
 					<iAmountPerTurn>15</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Global -->
 			<FreeBuilding>BUILDING_ZOO</FreeBuilding>
-			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<bCenterInCity>1</bCenterInCity>
 			<bNeverCapture>1</bNeverCapture>
@@ -5810,7 +5173,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Online University -->
 			<Type>BUILDING_ONLINE_UNIVERSITY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -5819,7 +5181,6 @@
 			<Description>TXT_KEY_BUILDING_ONLINE_UNIVERSITY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ONLINE_UNIVERSITY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ONLINE_UNIVERSITY_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_VIRTUAL_SOCIETY</PrereqTech>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
@@ -5832,11 +5193,9 @@
 				</PrereqCivic>
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
-			<!-- Cost -->
 			<iCost>4810</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<!-- Local -->
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
 				<iCommerce>25</iCommerce>
@@ -5849,18 +5208,15 @@
 					<iAmountPerTurn>22</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Global -->
 			<GlobalCommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>2</iCommerce>
 				<iCommerce>1</iCommerce>
 			</GlobalCommerceModifiers>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_ONLINE_UNIVERSITY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Orbital Prison -->
 			<Type>BUILDING_ORBITAL_PRISON</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -5869,7 +5225,6 @@
 			<Description>TXT_KEY_BUILDING_ORBITAL_PRISON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ORBITAL_PRISON_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ORBITAL_PRISON_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_ADVANCED_ENVIRONMENTAL_SYSTEMS</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -5880,29 +5235,18 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MILITARY_SPACEPORT</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Cost -->
 			<iCost>6490</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Local -->
 			<CommerceChanges>
 				<iCommerce>-1000</iCommerce>
 			</CommerceChanges>
-			<!-- Global -->
-			<iGlobalHappiness>1</iGlobalHappiness>
-			<GlobalCommerceModifiers>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>50</iCommerce>
-			</GlobalCommerceModifiers>
 			<FreeBuilding>BUILDING_SAFETY_ORBITAL_PRISON</FreeBuilding>
-			<!-- Misc -->
+			<iAIWeight>10</iAIWeight>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_ORBITAL_PRISON</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Palace -->
 			<Type>BUILDING_PALACE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<iExtraPlayerInstances>1</iExtraPlayerInstances>
@@ -5913,11 +5257,9 @@
 			<Description>TXT_KEY_BUILDING_PALACE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PALACE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PALACE_STRATEGY</Strategy>
-			<!-- Cost -->
 			<iCost>200</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Local -->
 			<bCapital>1</bCapital>
 			<bGovernmentCenter>1</bGovernmentCenter>
 			<iMaintenanceModifier>-25</iMaintenanceModifier>
@@ -5940,16 +5282,13 @@
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Global -->
 			<iNationalCaptureResistanceModifier>30</iNationalCaptureResistanceModifier>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<bNukeImmune>1</bNukeImmune>
 			<fVisibilityPriority>10000</fVisibilityPriority>
 			<ArtDefineTag>ART_DEF_BUILDING_PALACE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Police Academy -->
 			<Type>BUILDING_POLICE_ACADEMY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -5958,7 +5297,6 @@
 			<Description>TXT_KEY_BUILDING_POLICE_ACADEMY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_POLICE_ACADEMY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_POLICE_ACADEMY_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_CRIMINOLOGY</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<PrereqInCityBuildings>
@@ -5974,12 +5312,10 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
-			<!-- Cost -->
 			<iCost>1600</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ConstructSound>AS2D_BUILD_POLICE_STATION</ConstructSound>
-			<!-- Local -->
 			<iWarWearinessModifier>-50</iWarWearinessModifier>
 			<CommerceChanges>
 				<iCommerce>-25</iCommerce>
@@ -6006,7 +5342,6 @@
 					<iAmountPerTurn>-24</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Units -->
 			<UnitProductionModifiers>
 				<UnitProductionModifier>
 					<UnitType>UNIT_RIOTPOLICE</UnitType>
@@ -6017,11 +5352,8 @@
 					<iProductionModifier>10</iProductionModifier>
 				</UnitProductionModifier>
 			</UnitProductionModifiers>
-			<!-- Security -->
 			<iEspionageDefense>25</iEspionageDefense>
-			<!-- Global -->
 			<FreeBuilding>BUILDING_GOOD_POLICE_ACADEMY</FreeBuilding>
-			<!-- Misc -->
 			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
@@ -6040,7 +5372,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Propaganda Net -->
 			<Type>BUILDING_PROPAGANDA_NET</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -6049,7 +5380,6 @@
 			<Description>TXT_KEY_BUILDING_PROPAGANDA_NET</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PROPAGANDA_NET_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PROPAGANDA_NET_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_PROPAGANDA</PrereqTech>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
@@ -6068,12 +5398,10 @@
 				</PrereqCivic>
 			</PrereqAndCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
-			<!-- Cost -->
 			<iCost>1900</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ConstructSound>AS2D_BUILD_STONEHENGE</ConstructSound>
-			<!-- Local -->
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -6085,11 +5413,9 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>100</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<!-- Units -->
 			<iMilitaryProductionModifier>25</iMilitaryProductionModifier>
 			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
-			<!-- Global -->
 			<bTeamShare>1</bTeamShare>
 			<GlobalCommerceModifiers>
 				<iCommerce>0</iCommerce>
@@ -6099,7 +5425,6 @@
 			</GlobalCommerceModifiers>
 			<iGlobalWarWearinessModifier>-20</iGlobalWarWearinessModifier>
 			<iGreatGeneralRateModifier>20</iGreatGeneralRateModifier>
-			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<Flavors>
 				<Flavor>
@@ -6114,7 +5439,6 @@
 			<MovieDefineTag>ART_DEF_MOVIE_PROPAGANDA</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Radio Telescope -->
 			<Type>BUILDING_RADIO_TELESCOPE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -6123,7 +5447,6 @@
 			<Description>TXT_KEY_BUILDING_RADIO_TELESCOPE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RADIO_TELESCOPE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_RADIO_TELESCOPE_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_RADIO_ASTRONOMY</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Bonus>BONUS_ALUMINUM_WARES</Bonus>
@@ -6140,12 +5463,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_UNIVERSITY</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Cost -->
 			<iCost>2560</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_OBSERVATORY</ConstructSound>
-			<!-- Local -->
 			<CommerceChanges>
 				<iCommerce>-20</iCommerce>
 				<iCommerce>5</iCommerce>
@@ -6164,10 +5485,8 @@
 					<iAmountPerTurn>6</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<iAsset>8</iAsset>
 			<Flavors>
 				<Flavor>
@@ -6180,7 +5499,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_RADIOTELESCOPE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- National Railroad Museum -->
 			<Type>BUILDING_RAILROAD_MUSEUM</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -6189,17 +5507,14 @@
 			<Description>TXT_KEY_BUILDING_RAILROAD_MUSEUM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RAILROAD_MUSEUM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_RAILROAD_MUSEUM_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_RAILROAD</PrereqTech>
 			<iPrereqPopulation>25</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_MUSEUM</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Cost -->
 			<iCost>1310</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
-			<!-- Local -->
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 				<iCommerce>1</iCommerce>
@@ -6212,7 +5527,6 @@
 					<iAmountPerTurn>8</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Synergy -->
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_STEAM_POWER</PrereqTech>
@@ -6243,15 +5557,12 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_RAILROAD_MUSEUM</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Red Cross -->
 			<Type>BUILDING_RED_CROSS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -6260,7 +5571,6 @@
 			<Description>TXT_KEY_BUILDING_RED_CROSS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RED_CROSS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_RED_CROSS_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_MEDICINE</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqAmountBuildings>
@@ -6272,11 +5582,9 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_HOSPITAL</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Cost -->
 			<iCost>1540</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<!-- Local -->
 			<CommerceChanges>
 				<iCommerce>-25</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -6294,7 +5602,6 @@
 					<iAmountPerTurn>-100</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<FreePromotion>PROMOTION_FIRST_AID_PEOPLE1</FreePromotion>
@@ -6304,7 +5611,6 @@
 					<iHeal>10</iHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
-			<!-- Misc -->
 			<iAsset>8</iAsset>
 			<iPower>4</iPower>
 			<bNukeImmune>1</bNukeImmune>
@@ -6313,7 +5619,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_RED_CROSS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Research Hospital -->
 			<Type>BUILDING_RESEARCH_HOSPITAL</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -6322,7 +5627,6 @@
 			<Description>TXT_KEY_BUILDING_RESEARCH_HOSPITAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RESEARCH_HOSPITAL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_RESEARCH_HOSPITAL_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_SMART_DRUGS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -6331,12 +5635,10 @@
 				<BuildingType>BUILDING_HOSPITAL</BuildingType>
 				<BuildingType>BUILDING_LABORATORY</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Cost -->
 			<iCost>8290</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>AS2D_BUILD_HOSPITAL</ConstructSound>
-			<!-- Local -->
 			<iHealth>5</iHealth>
 			<CommerceChanges>
 				<iCommerce>-50</iCommerce>
@@ -6351,14 +5653,12 @@
 					<iAmountPerTurn>-100</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Units -->
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
 					<iHeal>2</iHeal>
 				</HealUnitCombatType>
 			</HealUnitCombatTypes>
-			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<Flavors>
 				<Flavor>
@@ -6372,7 +5672,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Research Institute -->
 			<Type>BUILDING_RUSSIAN_RESEARCH_INSTITUTE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -6381,18 +5680,15 @@
 			<Description>TXT_KEY_BUILDING_RUSSIAN_RESEARCH_INSTITUTE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RUSSIAN_RESEARCH_INSTITUTE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_RUSSIAN_RESEARCH_INSTITUTE_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_SUPERCONDUCTORS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LABORATORY</BuildingType>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Cost -->
 			<iCost>3690</iCost>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_LABORATORY</ConstructSound>
-			<!-- Local -->
 			<iHealth>-1</iHealth>
 			<CommerceChanges>
 				<iCommerce>-40</iCommerce>
@@ -6432,10 +5728,8 @@
 					<iAmountPerTurn>20</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<iAsset>8</iAsset>
 			<Flavors>
 				<Flavor>
@@ -6449,7 +5743,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_RUSSIAN_RESEARCH_INSTITUTE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Secret Army Base -->
 			<Type>BUILDING_SECRET_ARMY_BASE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -6458,14 +5751,11 @@
 			<Description>TXT_KEY_BUILDING_SECRET_ARMY_BASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SECRET_ARMY_BASE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SECRET_ARMY_BASE_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_BIOLOGICAL_WARFARE</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<!-- Cost -->
 			<iCost>2360</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<!-- Local -->
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -6491,10 +5781,8 @@
 					<iAmountPerTurn>10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Units -->
 			<iExperience>2</iExperience>
 			<iMilitaryProductionModifier>100</iMilitaryProductionModifier>
-			<!-- Misc -->
 			<iAsset>5</iAsset>
 			<Flavors>
 				<Flavor>
@@ -6512,7 +5800,6 @@
 			<MovieDefineTag>ART_DEF_MOVIE_SECRET_ARMY_BASE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Space Laboratory -->
 			<Type>BUILDING_SPACE_LABORATORY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -6522,7 +5809,6 @@
 			<Description>TXT_KEY_BUILDING_SPACE_LABORATORY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SPACE_LABORATORY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SPACE_LABORATORY_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_SPACE_STATIONS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqOrBuildings>
@@ -6539,12 +5825,10 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
-			<!-- Cost -->
 			<iCost>3370</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ConstructSound>AS2D_BUILD_SPACEWAY</ConstructSound>
-			<!-- Local -->
 			<CommerceChanges>
 				<iCommerce>-9</iCommerce>
 				<iCommerce>10</iCommerce>
@@ -6567,9 +5851,7 @@
 					<iAmountPerTurn>4</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Global -->
 			<iGlobalSpaceProductionModifier>20</iGlobalSpaceProductionModifier>
-			<!-- Misc -->
 			<iAsset>6</iAsset>
 			<Flavors>
 				<Flavor>
@@ -6583,7 +5865,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_SPACE_LABORATORY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Statue of Champion -->
 			<Type>BUILDING_STATUE_OF_CHAMPION</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -6592,7 +5873,6 @@
 			<Description>TXT_KEY_BUILDING_STATUE_OF_CHAMPION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_STATUE_OF_CHAMPION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_STATUE_OF_CHAMPION_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_COMBAT_SPORTS</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<Bonus>BONUS_SCULPTURES</Bonus>
@@ -6622,7 +5902,6 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
-			<!-- Cost -->
 			<iCost>468</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<BonusProductionModifiers>
@@ -6633,7 +5912,6 @@
 			</BonusProductionModifiers>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ConstructSound>AS2D_BUILD_OBELISK</ConstructSound>
-			<!-- Local -->
 			<iHappiness>4</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -6651,10 +5929,8 @@
 				<iCommerce>2</iCommerce>
 			</CommerceModifiers>
 			<iWarWearinessModifier>-50</iWarWearinessModifier>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
@@ -6668,7 +5944,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_KINGS_SAGA</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Strategic Grain Reserve -->
 			<Type>BUILDING_STRATEGIC_GRAIN_RESERVE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -6677,7 +5952,6 @@
 			<Description>TXT_KEY_BUILDING_STRATEGIC_GRAIN_RESERVE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_STRATEGIC_GRAIN_RESERVE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_STRATEGIC_GRAIN_RESERVE_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_POTTERY</PrereqTech>
 			<bRiver>1</bRiver>
 			<PrereqOrBuildings>
@@ -6690,12 +5964,10 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
-			<!-- Cost -->
 			<iCost>250</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
-			<!-- Local -->
 			<iHealth>1</iHealth>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -6708,7 +5980,6 @@
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
 			<iFoodKept>20</iFoodKept>
-			<!-- Synergy -->
 			<BonusHealthChanges>
 				<BonusHealthChange>
 					<BonusType>BONUS_CORN</BonusType>
@@ -6723,14 +5994,11 @@
 					<iHealthChange>1</iHealthChange>
 				</BonusHealthChange>
 			</BonusHealthChanges>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_GREAT_ENGINEER</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
-			<!-- Global -->
 			<bTeamShare>1</bTeamShare>
 			<iGlobalHealth>1</iGlobalHealth>
 			<FreeBuilding>BUILDING_GRANARY</FreeBuilding>
-			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<Flavors>
 				<Flavor>
@@ -6745,7 +6013,6 @@
 			<MovieDefineTag>ART_DEF_MOVIE_STRATEGIC_GRAIN_RESERVE</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Supercollider -->
 			<Type>BUILDING_SUPERCOLLIDER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -6754,7 +6021,6 @@
 			<Description>TXT_KEY_BUILDING_SUPERCOLLIDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SUPERCOLLIDER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SUPERCOLLIDER_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_SUPERCONDUCTORS</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<bPrereqPower>1</bPrereqPower>
@@ -6767,12 +6033,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_LABORATORY</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Cost -->
 			<iCost>3690</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<ConstructSound>AS2D_BUILD_OBSERVATORY</ConstructSound>
-			<!-- Local -->
 			<CommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>25</iCommerce>
@@ -6784,10 +6048,8 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<iSpaceProductionModifier>10</iSpaceProductionModifier>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<iAsset>6</iAsset>
 			<Flavors>
 				<Flavor>
@@ -6801,7 +6063,6 @@
 			<MovieDefineTag>ART_DEF_MOVIE_SUPERCOLLIDER</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Supreme Court -->
 			<Type>BUILDING_SUPREME_COURT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -6810,7 +6071,6 @@
 			<Description>TXT_KEY_BUILDING_SUPREME_COURT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SUPREME_COURT_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SUPREME_COURT_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_JURISPRUDENCE</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqAmountBuildings>
@@ -6822,12 +6082,10 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_DISTRICT_COURTHOUSE</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Cost -->
 			<iCost>880</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_COURTHOUSE</ConstructSound>
-			<!-- Local -->
 			<iMaintenanceModifier>-20</iMaintenanceModifier>
 			<CommerceChanges>
 				<iCommerce>-10</iCommerce>
@@ -6848,10 +6106,8 @@
 					<iAmountPerTurn>-10</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Global -->
 			<iAnarchyModifier>-25</iAnarchyModifier>
 			<FreeBuilding>BUILDING_LOCAL_COURTHOUSE</FreeBuilding>
-			<!-- Misc -->
 			<iAsset>4</iAsset>
 			<Flavors>
 				<Flavor>
@@ -6870,7 +6126,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Temple of Isis -->
 			<Type>BUILDING_TEMPLE_OF_ISIS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -6879,7 +6134,6 @@
 			<Description>TXT_KEY_BUILDING_TEMPLE_OF_ISIS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_ISIS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TEMPLE_OF_ISIS_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_PRIESTHOOD</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<PrereqBonuses>
@@ -6897,7 +6151,6 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<!-- Cost -->
 			<iCost>320</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<BonusProductionModifiers>
@@ -6908,7 +6161,6 @@
 			</BonusProductionModifiers>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ConstructSound>AS2D_BUILD_BUDDHIST</ConstructSound>
-			<!-- Local -->
 			<iStateReligionHappiness>3</iStateReligionHappiness>
 			<iAreaHealth>1</iAreaHealth>
 			<CommerceChanges>
@@ -6932,14 +6184,12 @@
 					<iSpecialistCount>2</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<!-- Global -->
 			<ReligionChanges>
 				<ReligionChange>
 					<ReligionType>RELIGION_KEMETISM</ReligionType>
 					<iReligionChange>3</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
-			<!-- Misc -->
 			<iAsset>6</iAsset>
 			<Flavors>
 				<Flavor>
@@ -6952,7 +6202,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_EGYPTIAN_MYTH_ISIS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Temple of Osiris -->
 			<Type>BUILDING_TEMPLE_OF_OSIRIS</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -6961,7 +6210,6 @@
 			<Description>TXT_KEY_BUILDING_TEMPLE_OF_OSIRIS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_OSIRIS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TEMPLE_OF_OSIRIS_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_WRITING</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<PrereqBonuses>
@@ -6979,7 +6227,6 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<!-- Cost -->
 			<iCost>352</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<BonusProductionModifiers>
@@ -6990,7 +6237,6 @@
 			</BonusProductionModifiers>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ConstructSound>AS2D_BUILD_BUDDHIST</ConstructSound>
-			<!-- Local -->
 			<iStateReligionHappiness>3</iStateReligionHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7008,7 +6254,6 @@
 					<iSpecialistCount>2</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<!-- Synergy -->
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_WHEAT</BonusType>
@@ -7017,7 +6262,6 @@
 					</YieldModifiers>
 				</BonusYieldModifier>
 			</BonusYieldModifiers>
-			<!-- Global -->
 			<GlobalCommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -7029,7 +6273,6 @@
 					<iReligionChange>3</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
-			<!-- Misc -->
 			<iAsset>6</iAsset>
 			<Flavors>
 				<Flavor>
@@ -7042,7 +6285,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_EGYPTIAN_MYTH_OSIRIS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Temple of Set -->
 			<Type>BUILDING_TEMPLE_OF_SET</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -7051,7 +6293,6 @@
 			<Description>TXT_KEY_BUILDING_TEMPLE_OF_SET</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_SET_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TEMPLE_OF_SET_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_MILITARY_TRAINING</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<PrereqBonuses>
@@ -7069,7 +6310,6 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<!-- Cost -->
 			<iCost>432</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<BonusProductionModifiers>
@@ -7080,7 +6320,6 @@
 			</BonusProductionModifiers>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ConstructSound>AS2D_UNIT_BUILD_RA_MISSIONARY</ConstructSound>
-			<!-- Global -->
 			<iStateReligionHappiness>3</iStateReligionHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7098,9 +6337,7 @@
 					<iSpecialistCount>2</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<!-- Units -->
 			<iMilitaryProductionModifier>25</iMilitaryProductionModifier>
-			<!-- Global -->
 			<GlobalCommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -7113,7 +6350,6 @@
 					<iReligionChange>3</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
-			<!-- Misc -->
 			<iAsset>6</iAsset>
 			<Flavors>
 				<Flavor>
@@ -7126,7 +6362,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_EGYPTIAN_MYTH_SET</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Royal Tomb -->
 			<Type>BUILDING_TOMB</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -7134,7 +6369,6 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_TOMB</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TOMB_PEDIA</Civilopedia>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_CALENDAR</PrereqTech>
 			<PrereqOrCivics>
 				<PrereqCivic>
@@ -7159,7 +6393,6 @@
 				</PrereqCivic>
 			</PrereqOrCivics>
 			<bRequiresActiveCivics>1</bRequiresActiveCivics>
-			<!-- Cost -->
 			<iCost>468</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<BonusProductionModifiers>
@@ -7170,7 +6403,6 @@
 			</BonusProductionModifiers>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
-			<!-- Local -->
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>2</iCommerce>
@@ -7190,7 +6422,6 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<!-- Synergy -->
 			<BuildingHappinessChanges>
 				<BuildingHappinessChange>
 					<BuildingType>BUILDING_PALACE</BuildingType>
@@ -7205,10 +6436,8 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BuildingHappinessChange>
 			</BuildingHappinessChanges>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>3</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<iAsset>8</iAsset>
 			<Flavors>
 				<Flavor>
@@ -7226,7 +6455,6 @@
 			<MovieDefineTag>ART_DEF_MOVIE_TOMB</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Toxic Waste Dump -->
 			<Type>BUILDING_TOXIC_WASTE_DUMP</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -7235,15 +6463,12 @@
 			<Description>TXT_KEY_BUILDING_TOXIC_WASTE_DUMP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TOXIC_WASTE_DUMP_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TOXIC_WASTE_DUMP_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_NUCLEAR_POWER</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
-			<!-- Cost -->
 			<iCost>2560</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<ConstructSound>AS2D_BUILD_PLANTNUCLEAR</ConstructSound>
-			<!-- Local -->
 			<CommerceChanges>
 				<iCommerce>-15</iCommerce>
 			</CommerceChanges>
@@ -7260,7 +6485,6 @@
 					<iAmountPerTurn>50</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Misc -->
 			<iGlobalHappiness>-1</iGlobalHappiness>
 			<iAsset>5</iAsset>
 			<iPower>5</iPower>
@@ -7279,7 +6503,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TOXIC_WASTE_DUMP</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Travel Agency -->
 			<Type>BUILDING_TRAVEL_AGENCY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -7288,30 +6511,24 @@
 			<Description>TXT_KEY_BUILDING_TRAVEL_AGENCY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRAVEL_AGENCY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TRAVEL_AGENCY_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_TOURISM</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_OFFICES</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Obsolescence -->
 			<ObsoleteTech>TECH_SPACE_TOURISM</ObsoleteTech>
-			<!-- Cost -->
 			<iCost>2560</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_EARLY_AIRPORT</ConstructSound>
-			<!-- Local -->
 			<CommerceChanges>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
 			<CommerceChangeDoubleTimes>
 				<iCommerce>100</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Global -->
 			<GlobalCommerceModifiers>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -7399,7 +6616,6 @@
 					<iProductionModifier>15</iProductionModifier>
 				</BuildingProductionModifier>
 			</GlobalBuildingProductionModifiers>
-			<!-- Misc -->
 			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
@@ -7412,7 +6628,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TRAVEL_AGENCY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Treasury -->
 			<Type>BUILDING_TREASURY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -7421,18 +6636,15 @@
 			<Description>TXT_KEY_BUILDING_TREASURY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TREASURY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TREASURY_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_MONARCHY</PrereqTech>
 			<iCitiesPrereq>4</iCitiesPrereq>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Cost -->
 			<iCost>400</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_MARKETPLACE</ConstructSound>
-			<!-- Local -->
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -7440,11 +6652,9 @@
 					<iAmountPerTurn>5</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
-			<!-- Global -->
 			<GlobalCommerceModifiers>
 				<iCommerce>2</iCommerce>
 			</GlobalCommerceModifiers>
-			<!-- Misc -->
 			<iAsset>3</iAsset>
 			<Flavors>
 				<Flavor>
@@ -7458,7 +6668,6 @@
 			<MovieDefineTag>ART_DEF_MOVIE_TREASURY</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Triumph Column -->
 			<Type>BUILDING_TRIUMPH_COLUMN</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -7466,10 +6675,8 @@
 			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_TRIUMPH_COLUMN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRIUMPH_COLUMN_PEDIA</Civilopedia>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_MILITARY_TRAINING</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>
-			<!-- Cost -->
 			<iCost>432</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<BonusProductionModifiers>
@@ -7484,7 +6691,6 @@
 			</BonusProductionModifiers>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ConstructSound>AS2D_BUILD_OBELISK</ConstructSound>
-			<!-- Local -->
 			<iHappiness>1</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7496,13 +6702,10 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>1000</iCommerce>
 			</CommerceChangeDoubleTimes>
-			<!-- Units -->
 			<iMilitaryProductionModifier>15</iMilitaryProductionModifier>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
-			<!-- Global -->
 			<iGreatGeneralRateModifier>10</iGreatGeneralRateModifier>
-			<!-- Misc -->
 			<iAsset>2</iAsset>
 			<Flavors>
 				<Flavor>
@@ -7516,7 +6719,6 @@
 			<MovieDefineTag>ART_DEF_MOVIE_COLUMN</MovieDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- UN Mission -->
 			<Type>BUILDING_UN_MISSION</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<VictoryPrereq>VICTORY_DIPLOMATIC</VictoryPrereq>
@@ -7526,7 +6728,6 @@
 			<Description>TXT_KEY_BUILDING_UN_MISSION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_UN_MISSION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_UN_MISSION_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<iTeamsPrereq>3</iTeamsPrereq>
 			<PrereqTech>TECH_MASS_MEDIA</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
@@ -7540,16 +6741,12 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
-			<!-- Cost -->
 			<iCost>2360</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_MILITARY</Advisor>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
-			<!-- Global -->
 			<bForceTeamVoteEligible>1</bForceTeamVoteEligible>
-			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<iPower>5</iPower>
 			<bNeverCapture>1</bNeverCapture>
@@ -7558,7 +6755,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_UN_MISSION</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- World Bank -->
 			<Type>BUILDING_WORLD_BANK</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -7568,13 +6764,11 @@
 			<Description>TXT_KEY_BUILDING_WORLD_BANK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WORLD_BANK_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_WORLD_BANK_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_GLOBALIZATION</PrereqTech>
 			<iPrereqPopulation>13</iPrereqPopulation>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_BANK</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Cost -->
 			<iCost>2360</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<BonusProductionModifiers>
@@ -7585,21 +6779,17 @@
 			</BonusProductionModifiers>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ConstructSound>AS2D_BUILD_BANK</ConstructSound>
-			<!-- Local -->
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_MERCHANT</SpecialistType>
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<!-- Global -->
 			<GlobalCommerceModifiers>
 				<iCommerce>5</iCommerce>
 			</GlobalCommerceModifiers>
-			<!-- Units -->
 			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
-			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<Flavors>
 				<Flavor>
@@ -7612,7 +6802,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_WORLD_BANK</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Hieracosphinx Breeder -->
 			<Type>BUILDING_HIERACOSPHINX_BREEDER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -7621,7 +6810,6 @@
 			<Description>TXT_KEY_BUILDING_HIERACOSPHINX_BREEDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MYTHICAL_BREEDER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MYTHICAL_BREEDER_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_MYTHOLOCIAL_BEASTIARY</PrereqTech>
 			<iPrereqPopulation>23</iPrereqPopulation>
 			<Bonus>BONUS_ORGANIC_COMPUTERS</Bonus>
@@ -7655,11 +6843,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<!-- Cost -->
 			<iCost>12310</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<!-- Local -->
 			<iHappiness>4</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7668,13 +6854,11 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_HIERACOSPHINX</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_HIERACOSPHINX_BREEDER</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Jackalope Breeder -->
 			<Type>BUILDING_JACKALOPE_BREEDER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -7683,7 +6867,6 @@
 			<Description>TXT_KEY_BUILDING_JACKALOPE_BREEDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MYTHICAL_BREEDER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MYTHICAL_BREEDER_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_MYTHOLOCIAL_BEASTIARY</PrereqTech>
 			<iPrereqPopulation>23</iPrereqPopulation>
 			<Bonus>BONUS_ORGANIC_COMPUTERS</Bonus>
@@ -7716,11 +6899,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<!-- Cost -->
 			<iCost>12310</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<!-- Local -->
 			<iHappiness>4</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7729,13 +6910,11 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_JACKALOPE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_JACKALOPE_BREEDER</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Pegasus Breeder -->
 			<Type>BUILDING_PEGASUS_BREEDER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -7744,7 +6923,6 @@
 			<Description>TXT_KEY_BUILDING_PEGASUS_BREEDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MYTHICAL_BREEDER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MYTHICAL_BREEDER_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_MYTHOLOCIAL_BEASTIARY</PrereqTech>
 			<iPrereqPopulation>23</iPrereqPopulation>
 			<Bonus>BONUS_ORGANIC_COMPUTERS</Bonus>
@@ -7777,11 +6955,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<!-- Cost -->
 			<iCost>12310</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<!-- Local -->
 			<iHappiness>4</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7790,13 +6966,11 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_PEGASUS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PEGASUS_BREEDER</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Phoenix Breeder -->
 			<Type>BUILDING_PHOENIX_BREEDER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -7805,7 +6979,6 @@
 			<Description>TXT_KEY_BUILDING_PHOENIX_BREEDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MYTHICAL_BREEDER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MYTHICAL_BREEDER_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_MYTHOLOCIAL_BEASTIARY</PrereqTech>
 			<iPrereqPopulation>23</iPrereqPopulation>
 			<Bonus>BONUS_ORGANIC_COMPUTERS</Bonus>
@@ -7838,11 +7011,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<!-- Cost -->
 			<iCost>12310</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<!-- Local -->
 			<iHappiness>4</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7851,13 +7022,11 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_PHOENIX</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_PHOENIX_BREEDER</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Qilin Breeder -->
 			<Type>BUILDING_QILIN_BREEDER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -7866,7 +7035,6 @@
 			<Description>TXT_KEY_BUILDING_QILIN_BREEDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MYTHICAL_BREEDER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MYTHICAL_BREEDER_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_MYTHOLOCIAL_BEASTIARY</PrereqTech>
 			<iPrereqPopulation>23</iPrereqPopulation>
 			<Bonus>BONUS_ORGANIC_COMPUTERS</Bonus>
@@ -7899,11 +7067,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<!-- Cost -->
 			<iCost>12310</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<!-- Local -->
 			<iHappiness>4</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7912,13 +7078,11 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_QILIN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_QILIN_BREEDER</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Quetzalcoatl Breeder -->
 			<Type>BUILDING_QUETZALCOATL_BREEDER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -7927,7 +7091,6 @@
 			<Description>TXT_KEY_BUILDING_QUETZALCOATL_BREEDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MYTHICAL_BREEDER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MYTHICAL_BREEDER_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_MYTHOLOCIAL_BEASTIARY</PrereqTech>
 			<iPrereqPopulation>23</iPrereqPopulation>
 			<Bonus>BONUS_ORGANIC_COMPUTERS</Bonus>
@@ -7960,11 +7123,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<!-- Cost -->
 			<iCost>12310</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<!-- Local -->
 			<iHappiness>4</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -7973,13 +7134,11 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_QUETZALCOATL</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_QUETZALCOATL_BREEDER</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Rainbow Serpent Breeder -->
 			<Type>BUILDING_RAINBOW_SERPENT_BREEDER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -7988,7 +7147,6 @@
 			<Description>TXT_KEY_BUILDING_RAINBOW_SERPENT_BREEDER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MYTHICAL_BREEDER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MYTHICAL_BREEDER_STRATEGY</Strategy>
-			<!-- Prerequisites -->
 			<PrereqTech>TECH_MYTHOLOCIAL_BEASTIARY</PrereqTech>
 			<iPrereqPopulation>23</iPrereqPopulation>
 			<Bonus>BONUS_ORGANIC_COMPUTERS</Bonus>
@@ -8021,11 +7179,9 @@
 					<bPrereqNot>1</bPrereqNot>
 				</PrereqNotBuilding>
 			</PrereqNotBuildings>
-			<!-- Cost -->
 			<iCost>12310</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<!-- Local -->
 			<iHappiness>4</iHappiness>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -8034,13 +7190,11 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_RAINBOW_SERPENT</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<!-- Misc -->
 			<iAsset>10</iAsset>
 			<bNeverCapture>1</bNeverCapture>
 			<ArtDefineTag>ART_DEF_BUILDING_RAINBOW_SERPENT_BREEDER</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Spy Training Facility -->
 			<Type>BUILDING_SPY_TRAINING_FACILITY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<NotGameOption>GAMEOPTION_NO_ESPIONAGE</NotGameOption>
@@ -8048,23 +7202,19 @@
 			<Civilopedia>TXT_KEY_BUILDING_SPY_TRAINING_FACILITY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SPY_TRAINING_FACILITY_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_SPY_TRAINING_FACILITY</ArtDefineTag>
-			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_POLITICAL_PHILOSOPHY</PrereqTech>
-			<!-- Construction -->
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iCost>850</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<!-- Main -->
 			<CommerceChanges>
 				<iCommerce>-2</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
 				<iCommerce>1</iCommerce>
 			</CommerceChanges>
-			<!-- Power -->
 			<iEspionageDefense>10</iEspionageDefense>
 			<UnitCombatFreeExperiences>
 				<UnitCombatFreeExperience>
@@ -8080,7 +7230,6 @@
 					<iExperience>1</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<!-- Specialist -->
 			<GreatPeopleUnitType>UNIT_GREAT_SPY</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<SpecialistCounts>
@@ -8089,7 +7238,6 @@
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<!-- Other -->
 			<iAsset>8</iAsset>
 			<iPower>8</iPower>
 			<Flavors>
@@ -8102,7 +7250,6 @@
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Heavy Water Production Plant -->
 			<Type>BUILDING_HEAVY_WATER_PRODUCTION_PLANT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Description>TXT_KEY_BUILDING_HEAVY_WATER_PRODUCTION_PLANT</Description>
@@ -8112,7 +7259,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_HEAVY_WATER_PRODUCTION_PLANT</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_OIL_REFINERY</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8123,9 +7269,7 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Construction cost -->
 			<iCost>2060</iCost>
-			<!-- Main effects -->
 			<iHealth>-1</iHealth>
 			<CommerceChanges>
 				<iCommerce>3</iCommerce>
@@ -8133,9 +7277,7 @@
 			</CommerceChanges>
 			<FreeBonus>BONUS_HEAVY_WATER</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<!-- Defense effects -->
 			<iDCMAirbombMission>3</iDCMAirbombMission>
-			<!-- Other -->
 			<iAsset>6</iAsset>
 			<iPower>30</iPower>
 			<Flavors>
@@ -8156,7 +7298,6 @@
 			<iAIWeight>1</iAIWeight>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Garden City -->
 			<Type>BUILDING_GARDEN_CITY</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<MapCategoryTypes>
@@ -8184,7 +7325,6 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>10</iCommerce>
 			</CommerceChanges>
-			<!-- Misc. Effects -->
 			<iHappiness>4</iHappiness>
 			<iHealth>10</iHealth>
 			<GreatPeopleUnitType>UNIT_DOCTOR</GreatPeopleUnitType>
@@ -8193,7 +7333,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GARDEN_CITY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<!-- Fusion Power Plant -->
 			<Type>BUILDING_FUSION_PLANT</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<SpecialBuildingType>SPECIALBUILDING_FUSION_PLANT</SpecialBuildingType>
@@ -8204,7 +7343,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_FUSION_PLANT</ArtDefineTag>
 			<ConstructSound>AS2D_BUILD_PLANTNUCLEAR</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
-			<!-- Prerequisites -->
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -8214,19 +7352,14 @@
 				<BuildingType>BUILDING_LABORATORY</BuildingType>
 				<BuildingType>BUILDING_POWER_LINES</BuildingType>
 			</PrereqInCityBuildings>
-			<!-- Construction cost -->
 			<iCost>6490</iCost>
-			<!-- Main effects -->
 			<CommerceChanges>
 				<iCommerce>-1000</iCommerce>
 			</CommerceChanges>
-			<!-- Defense effects -->
 			<iDCMAirbombMission>3</iDCMAirbombMission>
-			<!-- Misc. Effects -->
 			<bPower>1</bPower>
 			<iNumPopulationEmployed>1</iNumPopulationEmployed>
 			<FreeAreaBuilding>BUILDING_GOOD_FUSION</FreeAreaBuilding>
-			<!-- Other -->
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_PRODUCTION</FlavorType>

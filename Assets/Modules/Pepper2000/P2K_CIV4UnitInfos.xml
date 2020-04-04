@@ -238,14 +238,76 @@
 				</Action>
 			</Actions>
 		</UnitInfo>
-		<!-- Lunar launch mission for Lunar Rover-->
+		<!-- Lunar Rover-->
 		<UnitInfo>
 			<Type>UNIT_LUNAR_ROVER</Type>
-			<Help>TXT_KEY_UNIT_SPACEUNIT_HOVER</Help>
+			<Combat>UNITCOMBAT_RECON</Combat>
+			<SubCombatTypes>
+				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
+				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_VEHICULAR</SubCombatType>
+				<SubCombatType>UNITCOMBAT_MOTILITY_DRIVING</SubCombatType>
+				<SubCombatType>UNITCOMBAT_QUALITY_MEDIOCRE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
+				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
+				<SubCombatType>UNITCOMBAT_HEALS_AS_MECHANICAL</SubCombatType>
+			</SubCombatTypes>
+			<Domain>DOMAIN_LAND</Domain>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
+			<DefaultUnitAI>UNITAI_EXPLORE</DefaultUnitAI>
+			<Description>TXT_KEY_UNIT_LUNAR_ROVER</Description>
+			<Civilopedia>TXT_KEY_UNIT_LUNAR_ROVER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_LUNAR_ROVER_STRATEGY</Strategy>
+			<Help>TXT_KEY_UNIT_SPACEUNIT_HOVER</Help>
+			<Advisor>ADVISOR_MILITARY</Advisor>
+			<bOnlyDefensive>1</bOnlyDefensive>
+			<bPillage>1</bPillage>
+			<bNoDefensiveBonus>1</bNoDefensiveBonus>
+			<bMechanized>1</bMechanized>
+			<UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
+					<UnitAIType>UNITAI_PILLAGE</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</UnitAIs>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_NASA</BuildingType>
+			</PrereqAndBuildings>
+			<PrereqTech>TECH_LUNAR_EXPLORATION</PrereqTech>
+			<BonusType>BONUS_AUTOMOBILES</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_ROCKET_FUEL</BonusType>
+			</PrereqBonuses>
+			<iCost>1200</iCost>
+			<iMoves>1</iMoves>
+			<iCombat>30</iCombat>
+			<iXPValueAttack>4</iXPValueAttack>
+			<iXPValueDefense>4</iXPValueDefense>
+			<iWithdrawalProb>20</iWithdrawalProb>
+			<iExtraCost>10</iExtraCost>
+			<iAsset>5</iAsset>
+			<iPower>30</iPower>
+			<UnitMeshGroups>
+				<iGroupSize>1</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>1</iMeleeWaveSize>
+				<iRangedWaveSize>1</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_LUNAR_ROVER</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_EXPLORE_MOON</MissionType>
@@ -406,7 +468,7 @@
 									gc = CyGlobalContext()
 									if not gc.getPlayer(unit.getOwner()).canFound(plot.getX(),plot.getY()):
 										return False
-									valid_terrain_strings = ['SPACE']
+									valid_terrain_strings = ['CISLUNAR_SPACE']
 									valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -742,7 +804,7 @@
 				</Action>
 			</Actions>
 		</UnitInfo>
-			<UnitInfo>
+		<UnitInfo>
 			<Type>UNIT_WORLDSHIP</Type>
 			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
@@ -945,7 +1007,7 @@
 				</Action>
 			</Actions>
 		</UnitInfo>
-			<UnitInfo>
+		<UnitInfo>
 			<Type>UNIT_WORLDSHIP3</Type>
 			<Capture>UNIT_CAPTIVE_CIVILIAN</Capture>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
@@ -4341,11 +4403,11 @@
 			</MapCategoryTypes>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
 			<TerrainImpassableTypes>
-				<TerrainType>TERRAIN_SPACE</TerrainType>
+				<TerrainType>TERRAIN_CISLUNAR_SPACE</TerrainType>
 			</TerrainImpassableTypes>
 			<TerrainPassableTechs>
 				<TerrainPassableTech>
-					<TerrainType>TERRAIN_SPACE</TerrainType>
+					<TerrainType>TERRAIN_CISLUNAR_SPACE</TerrainType>
 					<PassableTech>TECH_ION_PROPULSION</PassableTech>
 				</TerrainPassableTech>
 			</TerrainPassableTechs>
@@ -4416,7 +4478,7 @@
 								import random
 								def isPossible(unit,plot):
 									gc = CyGlobalContext()
-									valid_terrain_strings = ['SPACE']
+									valid_terrain_strings = ['CISLUNAR_SPACE']
 									valid_terrains = [gc.getInfoTypeForString('TERRAIN_'+t) for t in valid_terrain_strings]
 									return plot.getTerrainType() in valid_terrains
 								def doOutcome(unit,plot,eDefPlayer, eDefUnitType):
@@ -4479,7 +4541,7 @@
 			</MapCategoryTypes>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
 			<TerrainImpassableTypes>
-			<TerrainType>TERRAIN_SPACE</TerrainType>
+			<TerrainType>TERRAIN_CISLUNAR_SPACE</TerrainType>
 			</TerrainImpassableTypes>
 			<UnitUpgrades>
 				<UnitType>UNIT_HEAVY_ROCKET</UnitType>

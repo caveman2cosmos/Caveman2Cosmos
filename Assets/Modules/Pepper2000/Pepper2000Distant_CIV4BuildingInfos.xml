@@ -10,7 +10,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_UNOBSERVABLE_UNIVERSE_COLONY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_HORIZON_BREAKING</PrereqTech>
-			<iCost>-1</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_DISTANT</MapCategoryType>

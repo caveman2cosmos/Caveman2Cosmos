@@ -3018,7 +3018,7 @@ class BonusPlacer:
 		MAP.recalculateAreas()
 		iWorldSize = mc.iWorldSize
 		BonusBonus = mc.BonusBonus
-		self.aBonusList = aList = []
+		self.aBonusList = bonusList = []
 		# Create and shuffle the bonus list.
 		n = 0
 		pOrderDict = {}
@@ -3053,35 +3053,31 @@ class BonusPlacer:
 						iNumPossible += 1
 				fDensityCount = 10.0 * iNumPossible / (iTilesPer * (iWorldSize + 7))
 			iBonusCount = int(BonusBonus * (fBaseCount + fDensityCount))
-			print "%s - Base Count = %.2f - Density Count = %.2f - Multiplier: %.1f\n\tSum = %d" % (CvBonusInfo.getType(), fBaseCount, fDensityCount, BonusBonus, iBonusCount)
+			print "%s - Base Count = %.2f - Density Count = %.2f - Multiplier: %.2f\n\tSum = %d" % (CvBonusInfo.getType(), fBaseCount, fDensityCount, BonusBonus, iBonusCount)
 			if iBonusCount < 1:
 				iBonusCount = 1
 			bonus.desiredBonusCount = iBonusCount
 
-			aList.append(bonus)
+			bonusList.append(bonus)
 			# Check which placement orders are used.
 			if iPlaceOrder in pOrderDict:
-				indexList = pOrderDict[iPlaceOrder]
-				indexList.append(iBonus)
+				pOrderDict[iPlaceOrder].append(iBonus)
 			else:
-				indexList = [iBonus]
-			pOrderDict[iPlaceOrder] = indexList
-		temp = sorted(pOrderDict.keys())
-		pOrderList = []
-		for i in temp:
-			pOrderList.append((i, pOrderDict[i]))
-		shuffle(aList)
+				pOrderDict[iPlaceOrder] = [iBonus]
+
+		shuffle(bonusList)
 		self.iNumBonuses = iNumBonuses = iNumBonusInfos - n
-		self.AssignBonusAreas(iNumBonuses, aList)
+		self.AssignBonusAreas(iNumBonuses, bonusList)
 		bonusDictLoc = self.bonusDict
 		# Shuffle the list of map indices.
 		shuffle(plotIndexList)
 		startAtIndex = 0
-		for i in xrange(len(pOrderList)):
+
+		pOrderList = sorted(pOrderDict.items())
+		for iOrder, aList in pOrderList:
 			placementList = []
-			for indeXML in pOrderList[i][1]:
-				i = bonusDictLoc[indeXML]
-				for n in xrange(aList[i].desiredBonusCount):
+			for indeXML in aList:
+				for n in xrange(bonusList[bonusDictLoc[indeXML]].desiredBonusCount):
 					placementList.append(indeXML)
 			if len(placementList) > 0:
 				shuffle(placementList)
@@ -3089,21 +3085,20 @@ class BonusPlacer:
 					startAtIndex = self.AddBonusType(indeXML, plotIndexList, startAtIndex, iWorldSize)
 		# Now check to see that all resources have been placed at least once while ignoring area rules.
 		for i in xrange(iNumBonuses):
-			bonus = aList[i]
+			bonus = bonusList[i]
 			if bonus.currentBonusCount == 0 and bonus.desiredBonusCount > 0:
 				startAtIndex = self.AddEmergencyBonus(bonus, False, plotIndexList, startAtIndex)
 		#now check again to see that all resources have been placed at least once,
 		#this time ignoring area rules and also class spacing
 		for i in xrange(iNumBonuses):
-			bonus = aList[i]
+			bonus = bonusList[i]
 			if bonus.currentBonusCount == 0 and bonus.desiredBonusCount > 0:
 				startAtIndex = self.AddEmergencyBonus(bonus, True, plotIndexList, startAtIndex)
 		#now report resources that simply could not be placed
-		for i in xrange(len(pOrderList)):
-			for indeXML in pOrderList[i][1]:
+		for iOrder, aList in pOrderList:
+			for indeXML in aList:
 				CvBonusInfo = GC.getBonusInfo(indeXML)
-				i = bonusDictLoc[indeXML]
-				bonus = aList[i]
+				bonus = bonusList[bonusDictLoc[indeXML]]
 				print "%d - Placed %d, desired %d for %s" %(CvBonusInfo.getPlacementOrder(), bonus.currentBonusCount, bonus.desiredBonusCount, CvBonusInfo.getType())
 
 
@@ -3328,20 +3323,13 @@ class BonusPlacer:
 			return False
 
 		iTemp = bonusInfo.getMinAreaSize()
-		if iTemp > 1:
-			if plot.area().getNumTiles() < iTemp:
+		if iTemp > 0:
+			iTemp + 2*mc.iWorldSize
+			if iTemp > 1 and plot.area().getNumTiles() < iTemp:
 				return False
 
 		if not bIgnoreArea and bonusInfo.isOneArea():
-			areaID = plot.getArea()
-			areaFound = False
-			i = self.bonusDict[indeXML]
-			areaList = self.aBonusList[i].areaList
-			for n in xrange(len(areaList)):
-				if areaList[n] == areaID:
-					areaFound = True
-					break
-			if not areaFound:
+			if plot.getArea() not in self.aBonusList[self.bonusDict[indeXML]].areaList:
 				return False
 
 		if not plot.isPotentialCityWork():
@@ -3354,15 +3342,12 @@ class BonusPlacer:
 		GC = CyGlobalContext()
 		areaID = area.getID()
 		uniqueBonusCount = 0
-		for i in xrange(len(self.aBonusList)):
-			areaList = self.aBonusList[i].areaList
-			bonusInfo = GC.getBonusInfo(self.aBonusList[i].indeXML)
-			if not bonusInfo.isOneArea():
+		for bonus in self.aBonusList:
+
+			if not GC.getBonusInfo(bonus.indeXML).isOneArea():
 				continue
-			for n in xrange(len(areaList)):
-				if areaList[n] == areaID:
-					uniqueBonusCount += 1
-					break
+			if areaID in bonus.areaList:
+				uniqueBonusCount += 1
 		return uniqueBonusCount
 
 
@@ -3377,20 +3362,18 @@ class BonusPlacer:
 		classInfo = GC.getBonusClassInfo(eClass)
 		if classInfo == None:
 			return 0
-		iRange = int(classInfo.getUniqueRange() - (round(mc.BonusBonus) - 1))
-		if iRange < 0:
-			iRange = 0
-		for i in xrange(len(self.aBonusList)):
-			areaList = self.aBonusList[i].areaList
-			bonusInfo = GC.getBonusInfo(self.aBonusList[i].indeXML)
+		iRange = classInfo.getUniqueRange()
+		if iRange < 1:
+			return 0
+		for bonus in self.aBonusList:
+			bonusInfo = GC.getBonusInfo(bonus.indeXML)
 			if not bonusInfo.isOneArea():
 				continue
 			if bonusInfo.getBonusClassType() != eClass:
 				continue
-			for n in xrange(len(areaList)):
-				if areaList[n] == areaID:
-					uniqueBonusCount += 1
-					break
+			if areaID in bonus.areaList:
+				uniqueBonusCount += 1
+				break
 		# Same class types tend to really crowd out any bonus types that are placed later.
 		# A single cow can block 5 * 5 squares of pig territory for example.
 		# Probably shouldn't place them on the same area at all, but sometimes it might be necessary.
@@ -3398,18 +3381,17 @@ class BonusPlacer:
 
 
 	def CalculateAreaSuitability(self, area, indeXML):
-		GC = CyGlobalContext()
-		MAP = GC.getMap()
-		areaID = area.getID()
+		MAP = CyGlobalContext().getMap()
 		uniqueTypesInArea    = self.GetUniqueBonusTypeCountInArea(area)
 		sameClassTypesInArea = self.GetSameClassTypeCountInArea(area, indeXML)
 		#Get the raw number of suitable tiles
+		areaID = area.getID()
 		iPossible = 0
 		for i in xrange(mc.iArea):
 			plot = MAP.plotByIndex(i)
-			if plot.getArea() == areaID:
-				if self.PlotCanHaveBonus(plot, indeXML, True):
-					iPossible += 1
+			if plot.getArea() == areaID and self.PlotCanHaveBonus(plot, indeXML, True):
+				iPossible += 1
+
 		iPossible /= uniqueTypesInArea + sameClassTypesInArea + 1
 		suitability = 1.0*iPossible / area.getNumTiles()
 		return suitability, iPossible

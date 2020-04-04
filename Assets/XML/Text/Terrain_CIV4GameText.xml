@@ -946,28 +946,6 @@
 		<German>Tropenmeer</German>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_SPACE</Tag>
-		<English>Space</English>
-		<French>
-			<Text>Espace</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>Weltraum</German>
-		<Italian>Spazio</Italian>
-		<Spanish>
-			<Text>Espacio</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</Spanish>
-		<Polish>Kosmos</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TERRAIN_SPACE_PEDIA</Tag>
-		<English>Outer space, or simply just space, is the void that exists between celestial bodies, including the Earth. It is not completely empty, but consists of a hard vacuum containing a low density of particles, predominantly a plasma of hydrogen and helium as well as electromagnetic radiation, magnetic fields, neutrinos, dust and cosmic rays. The baseline temperature, as set by the background radiation from the Big Bang, is 2.7 kelvin.</English>
-		<German>Als Weltraum wird der Bereich zwischen verschiedenen Himmelskörpern bezeichnet. Hier herrscht ein fast vollständiges Vakuum, das nur Gase, Staub und Elementarteilchen enthält. Da die Atmosphären von Sternen und Planeten keine feste Grenze haben, ist der Übergang zum Weltraum fließend. Viele Raumfahrtbehörden haben den Beginn des Weltraums per Definition auf 100 km Höhe über dem Meeresspiegel festgelegt.</German>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_TERRAIN_TAIGA</Tag>
 		<English>Taiga</English>
 		<French>Taïga</French>

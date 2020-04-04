@@ -938,7 +938,7 @@
 			<TextureBlend15>29,0</TextureBlend15>
 		</TerrainArtInfo>
 		<TerrainArtInfo>
-			<Type>ART_DEF_TERRAIN_SPACE</Type>
+			<Type>ART_DEF_TERRAIN_CISLUNAR_SPACE</Type>
 			<Path>Art/Terrain/Textures/SpaceBLEND.dds</Path>
 			<Grid>Art/Terrain/Textures/SpaceBLEND.dds</Grid>
 			<Detail>Art/Terrain/Textures/SpaceDetail.dds</Detail>

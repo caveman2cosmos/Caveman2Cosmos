@@ -625,6 +625,11 @@ Base XP gained when defending
 			<bWorkerTrade>1</bWorkerTrade>
 			<UnitUpgrades>
 				<UnitType>UNIT_WORKANIMAL</UnitType>
+				<UnitType>UNIT_WORKBUFFALO</UnitType>
+				<UnitType>UNIT_WORKELEPHANT</UnitType>
+				<UnitType>UNIT_WORKMULE</UnitType>
+				<UnitType>UNIT_WORKLLAMA</UnitType>
+				<UnitType>UNIT_WORKCAMEL</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
@@ -931,11 +936,7 @@ Base XP gained when defending
 			<bFood>1</bFood>
 			<bWorkerTrade>1</bWorkerTrade>
 			<UnitUpgrades>
-				<UnitType>UNIT_WORKBUFFALO</UnitType>
-				<UnitType>UNIT_WORKELEPHANT</UnitType>
-				<UnitType>UNIT_WORKMULE</UnitType>
-				<UnitType>UNIT_WORKLLAMA</UnitType>
-				<UnitType>UNIT_WORKCAMEL</UnitType>
+				<UnitType>UNIT_WORKER_INDUSTRIAL</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
@@ -5185,74 +5186,6 @@ Base XP gained when defending
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-		</UnitInfo>
-		<UnitInfo>
-			<Type>UNIT_LUNAR_ROVER</Type>
-			<Combat>UNITCOMBAT_RECON</Combat>
-			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_VEHICULAR</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MOTILITY_DRIVING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_MEDIOCRE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_AS_MECHANICAL</SubCombatType>
-			</SubCombatTypes>
-			<Domain>DOMAIN_LAND</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<DefaultUnitAI>UNITAI_EXPLORE</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_LUNAR_ROVER</Description>
-			<Civilopedia>TXT_KEY_UNIT_LUNAR_ROVER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_LUNAR_ROVER_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
-			<bPillage>1</bPillage>
-			<bNoDefensiveBonus>1</bNoDefensiveBonus>
-			<bMechanized>1</bMechanized>
-			<UnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-				<UnitAI>
-					<UnitAIType>UNITAI_PILLAGE</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
-			<PrereqAndBuildings>
-				<BuildingType>BUILDING_NASA</BuildingType>
-			</PrereqAndBuildings>
-			<PrereqTech>TECH_LUNAR_EXPLORATION</PrereqTech>
-			<BonusType>BONUS_AUTOMOBILES</BonusType>
-			<PrereqBonuses>
-				<BonusType>BONUS_ROCKET_FUEL</BonusType>
-			</PrereqBonuses>
-			<iCost>1200</iCost>
-			<iMoves>1</iMoves>
-			<iCombat>30</iCombat>
-			<iXPValueAttack>4</iXPValueAttack>
-			<iXPValueDefense>4</iXPValueDefense>
-			<iWithdrawalProb>20</iWithdrawalProb>
-			<iExtraCost>10</iExtraCost>
-			<iAsset>5</iAsset>
-			<iPower>30</iPower>
-			<UnitMeshGroups>
-				<iGroupSize>1</iGroupSize>
-				<fMaxSpeed>1.75</fMaxSpeed>
-				<fPadTime>1</fPadTime>
-				<iMeleeWaveSize>1</iMeleeWaveSize>
-				<iRangedWaveSize>1</iRangedWaveSize>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_LUNAR_ROVER</EarlyArtDefineTag>
-				</UnitMeshGroup>
-			</UnitMeshGroups>
-			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_CHASER</Type>
@@ -57449,7 +57382,6 @@ Base XP gained when defending
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
-			<bPrereqBonuses>1</bPrereqBonuses>
 			<bMechanized>1</bMechanized>
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<PrereqTech>TECH_FISHING</PrereqTech>

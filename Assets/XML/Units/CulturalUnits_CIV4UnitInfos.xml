@@ -46812,7 +46812,6 @@
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
-			<bPrereqBonuses>1</bPrereqBonuses>
 			<bMechanized>1</bMechanized>
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<UnitUpgrades>

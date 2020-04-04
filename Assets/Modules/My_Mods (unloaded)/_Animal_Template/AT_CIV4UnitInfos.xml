@@ -126,11 +126,6 @@
 			<Capture>UNIT_SUBDUED_CROW</Capture>
 			<Combat>UNITCOMBAT_SUBDUED</Combat>
 			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_ANIMAL_BIRD</SubCombatType>
-				<SubCombatType>UNITCOMBAT_BIRD_CORVID</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_PECK</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_SCRATCH</SubCombatType>
-				<SubCombatType>UNITCOMBAT_ANIMAL_COMBAT_WARNING</SubCombatType>
 				<SubCombatType>UNITCOMBAT_MOTILITY_FOOT</SubCombatType>
 				<SubCombatType>UNITCOMBAT_QUALITY_INCAPABLE</SubCombatType>
 				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
@@ -153,9 +148,6 @@
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
 				<BuildingType>BUILDING_BIRD_CAGE</BuildingType>
-				<BuildingType>BUILDING_CROW_MYTH</BuildingType>
-				<BuildingType>BUILDING_CROW_STORY</BuildingType>
-				<BuildingType>BUILDING_CROW_STORIES</BuildingType>
 				<BuildingType>BUILDING_BIRD_MYTH</BuildingType>
 				<BuildingType>BUILDING_BIRD_STORY</BuildingType>
 				<BuildingType>BUILDING_BIRD_STORIES</BuildingType>
@@ -163,9 +155,13 @@
 				<BuildingType>BUILDING_SCAVENGER_MYTH</BuildingType>
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
+				<BuildingType>BUILDING_CROW_MYTH</BuildingType>
+				<BuildingType>BUILDING_CROW_STORY</BuildingType>
+				<BuildingType>BUILDING_CROW_STORIES</BuildingType>
 			</Buildings>
 			<iCost>-1</iCost>
 			<iMoves>1</iMoves>
+			<bNoRevealMap>1</bNoRevealMap>
 			<iAsset>1</iAsset>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>

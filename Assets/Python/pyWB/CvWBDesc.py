@@ -4,7 +4,7 @@ import CvUtil
 from array import *
 
 GC = CyGlobalContext()
-version = 11
+version = 12
 
 ############
 # parser functions for WB desc

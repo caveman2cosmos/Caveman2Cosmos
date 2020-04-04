@@ -55,7 +55,6 @@ class CvAnimationCategoryInfo;
 class CvEntityEventInfo;
 class CvEffectInfo;
 class CvAttachableInfo;
-class CvCameraInfo;
 class CvUnitFormationInfo;
 class CvLandscapeInfo;
 class CvTerrainInfo;
@@ -125,7 +124,6 @@ class CvVoteSourceInfo;
 class CvMainMenuInfo;
 class CvPropertyInfo;
 class CvOutcomeInfo;
-class CvCivNameInfo;
 class CvUnitCombatInfo;
 //TB Promotion Line Mod begin
 class CvPromotionLineInfo;
@@ -176,22 +174,21 @@ public:
 	void uninit();
 	void clearTypesMap();
 
-	CvDiplomacyScreen* getDiplomacyScreen() const;
-	CMPDiplomacyScreen* getMPDiplomacyScreen() const;
+	CvDiplomacyScreen* getDiplomacyScreen() const 		{ return m_diplomacyScreen; }
+	CMPDiplomacyScreen* getMPDiplomacyScreen() const 	{ return m_mpDiplomacyScreen; }
 
-	FMPIManager*& getFMPMgrPtr();
-	CvPortal& getPortal();
-	CvSetupData& getSetupData();
-	CvInitCore& getInitCore();
-	CvInitCore& getLoadedInitCore();
-	CvInitCore& getIniInitCore();
-	CvMessageCodeTranslator& getMessageCodes();
-	CvStatsReporter& getStatsReporter();
-	CvStatsReporter* getStatsReporterPtr() const;
-	CvInterface& getInterface();
-	CvInterface* getInterfacePtr() const;
-	int getMaxCivPlayers() const;
-	int getMaxPCPlayers() const;
+	FMPIManager*& getFMPMgrPtr()	 					{ return m_pFMPMgr; }
+	CvPortal& getPortal() const 						{ return *m_portal; }
+	CvSetupData& getSetupData() const 					{ return *m_setupData; }
+	CvInitCore& getInitCore() const 					{ return *m_initCore; }
+	CvInitCore& getLoadedInitCore() const 				{ return *m_loadedInitCore; }
+	CvInitCore& getIniInitCore() const 					{ return *m_iniInitCore; }
+	CvMessageCodeTranslator& getMessageCodes() const 	{ return *m_messageCodes; }
+	CvStatsReporter& getStatsReporter() const 			{ return *m_statsReporter; }
+	CvStatsReporter* getStatsReporterPtr() const 		{ return m_statsReporter; }
+	CvInterface& getInterface() const 					{ return *m_interface; }
+	CvInterface* getInterfacePtr() const 				{ return m_interface; }
+	
 
 /*********************************/
 /***** Parallel Maps - Begin *****/
@@ -210,8 +207,6 @@ public:
 	bool getReprocessGreatWallDynamically() const;
 	int getNumMapInfos() const;
 	int getNumMapSwitchInfos() const;
-	std::vector<CvMapInfo*>& getMapInfos();
-	std::vector<CvMapSwitchInfo*>& getMapSwitchInfos();
 	CvMapInfo& getMapInfo(const MapTypes eMap) const;
 	CvMapSwitchInfo& getMapSwitchInfo(const MapSwitchTypes eMapSwitch) const;
 
@@ -228,34 +223,34 @@ public:
 /*******************************/
 /***** Parallel Maps - End *****/
 /*******************************/
-	inline CvGameAI& getGame() const { return *m_game; }
+	inline CvGameAI& getGame() const 			{ return *m_game; }
 	CvGameAI* getGamePointer();
-	CvRandom& getASyncRand();
-	CMessageQueue& getMessageQueue();
-	CMessageQueue& getHotMessageQueue();
-	CMessageControl& getMessageControl();
-	CvDropMgr& getDropMgr();
-	FAStar& getPathFinder();
-	FAStar& getInterfacePathFinder();
-	FAStar& getStepFinder();
-	FAStar& getRouteFinder();
-	FAStar& getBorderFinder();
-	FAStar& getAreaFinder();
-	FAStar& getPlotGroupFinder();
-	NiPoint3& getPt3Origin();
+	CvRandom& getASyncRand() const 				{ return *m_asyncRand; }
+	CMessageQueue& getMessageQueue() const 		{ return *m_messageQueue; }
+	CMessageQueue& getHotMessageQueue() const 	{ return *m_hotJoinMsgQueue; }
+	CMessageControl& getMessageControl() const 	{ return *m_messageControl; }
+	CvDropMgr& getDropMgr() const 				{ return *m_dropMgr; }
+	FAStar& getPathFinder() const 				{ return *m_pathFinder; }
+	FAStar& getInterfacePathFinder() const 		{ return *m_interfacePathFinder; }
+	FAStar& getStepFinder() const 				{ return *m_stepFinder; }
+	FAStar& getRouteFinder() const 				{ return *m_routeFinder; }
+	FAStar& getBorderFinder() const 			{ return *m_borderFinder; }
+	FAStar& getAreaFinder() const 				{ return *m_areaFinder; }
+	FAStar& getPlotGroupFinder() const 			{ return *m_plotGroupFinder; }
+	NiPoint3& getPt3Origin()	 				{ return m_pt3Origin; }
 
 	std::vector<CvInterfaceModeInfo*>& getInterfaceModeInfos();
 	CvInterfaceModeInfo& getInterfaceModeInfo(InterfaceModeTypes e);
 
-	NiPoint3& getPt3CameraDir();
+	NiPoint3& getPt3CameraDir()		 			{ return m_pt3CameraDir; }
 
-	bool& getLogging();
-	bool& getRandLogging();
-	bool& getSynchLogging();
-	bool& overwriteLogs();
+	bool& getLogging() 							{ return m_bLogging; }
+	bool& getRandLogging() 						{ return m_bRandLogging; }
+	bool& getSynchLogging() 					{ return m_bSynchLogging; }
+	bool& overwriteLogs() 						{ return m_bOverwriteLogs; }
 
-	inline bool	getIsInPedia() const { return m_bIsInPedia; }
-	inline void	setIsInPedia(bool bNewValue) { m_bIsInPedia = bNewValue; }
+	inline bool	getIsInPedia() const 			{ return m_bIsInPedia; }
+	inline void	setIsInPedia(bool bNewValue) 	{ m_bIsInPedia = bNewValue; }
 
 	int* getPlotDirectionX() const;
 	int* getPlotDirectionY() const;
@@ -338,36 +333,27 @@ public:
 	void resolveDelayedResolution();
 
 	int getNumWorldInfos() const;
-	std::vector<CvWorldInfo*>& getWorldInfos();
 	CvWorldInfo& getWorldInfo(WorldSizeTypes e) const;
-	CvInfoReplacements<CvWorldInfo>* getWorldInfoReplacements();
 
 	int getNumClimateInfos() const;
-	std::vector<CvClimateInfo*>& getClimateInfos();
 	CvClimateInfo& getClimateInfo(ClimateTypes e) const;
 
 	int getNumSeaLevelInfos() const;
-	std::vector<CvSeaLevelInfo*>& getSeaLevelInfos();
 	CvSeaLevelInfo& getSeaLevelInfo(SeaLevelTypes e) const;
 
 	int getNumColorInfos() const;
-	std::vector<CvColorInfo*>& getColorInfos();
 	CvColorInfo& getColorInfo(ColorTypes e) const;
 
 	int getNumPlayerColorInfos() const;
-	std::vector<CvPlayerColorInfo*>& getPlayerColorInfos();
 	CvPlayerColorInfo& getPlayerColorInfo(PlayerColorTypes e) const;
 
 	int getNumAdvisorInfos() const;
-	std::vector<CvAdvisorInfo*>& getAdvisorInfos();
 	CvAdvisorInfo& getAdvisorInfo(AdvisorTypes e) const;
 
 	int getNumHints() const;
-	std::vector<CvInfoBase*>& getHints();
 	CvInfoBase& getHints(int i) const;
 
 	int getNumMainMenus() const;
-	std::vector<CvMainMenuInfo*>& getMainMenus();
 	CvMainMenuInfo& getMainMenus(int i) const;
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 10/30/07                            MRGENIE          */
@@ -383,7 +369,6 @@ public:
 	int getTotalNumModules() const;
 	void setTotalNumModules();
 	int getNumModLoadControlInfos() const;
-	std::vector<CvModLoadControlInfo*>& getModLoadControlInfos();
 	CvModLoadControlInfo& getModLoadControlInfos(int i) const;
 /************************************************************************************************/
 /* MODULAR_LOADING_CONTROL                 END                                                  */
@@ -401,156 +386,110 @@ public:
 /************************************************************************************************/
 
 	int getNumRouteModelInfos() const;
-	std::vector<CvRouteModelInfo*>& getRouteModelInfos();
 	CvRouteModelInfo& getRouteModelInfo(int i) const;
 
 	int getNumRiverModelInfos() const;
-	std::vector<CvRiverModelInfo*>& getRiverModelInfos();
 	CvRiverModelInfo& getRiverModelInfo(int i) const;
 
 	int getNumWaterPlaneInfos() const;
-	std::vector<CvWaterPlaneInfo*>& getWaterPlaneInfos();
 	CvWaterPlaneInfo& getWaterPlaneInfo(int i) const;
 
 	int getNumTerrainPlaneInfos() const;
-	std::vector<CvTerrainPlaneInfo*>& getTerrainPlaneInfos();
 	CvTerrainPlaneInfo& getTerrainPlaneInfo(int i) const;
 
 	int getNumCameraOverlayInfos() const;
-	std::vector<CvCameraOverlayInfo*>& getCameraOverlayInfos();
 	CvCameraOverlayInfo& getCameraOverlayInfo(int i) const;
 
 	int getNumAnimationPathInfos() const;
-	std::vector<CvAnimationPathInfo*>& getAnimationPathInfos();
 	CvAnimationPathInfo& getAnimationPathInfo(AnimationPathTypes e) const;
 
 	int getNumAnimationCategoryInfos() const;
-	std::vector<CvAnimationCategoryInfo*>& getAnimationCategoryInfos();
 	CvAnimationCategoryInfo& getAnimationCategoryInfo(AnimationCategoryTypes e) const;
 
 	int getNumEntityEventInfos() const;
-	std::vector<CvEntityEventInfo*>& getEntityEventInfos();
 	CvEntityEventInfo& getEntityEventInfo(EntityEventTypes e) const;
 
 	int getNumEffectInfos() const;
-	std::vector<CvEffectInfo*>& getEffectInfos();
 	CvEffectInfo& getEffectInfo(int i) const;
 
 	int getNumAttachableInfos() const;
-	std::vector<CvAttachableInfo*>& getAttachableInfos();
 	CvAttachableInfo& getAttachableInfo(int i) const;
 
-	int getNumCameraInfos() const;
-	std::vector<CvCameraInfo*>& getCameraInfos();
-	CvCameraInfo& getCameraInfo(CameraAnimationTypes eCameraAnimationNum) const;
-
 	int getNumUnitFormationInfos() const;
-	std::vector<CvUnitFormationInfo*>& getUnitFormationInfos();
 	CvUnitFormationInfo& getUnitFormationInfo(int i) const;
 
 	int getNumLandscapeInfos() const;
-	std::vector<CvLandscapeInfo*>& getLandscapeInfos();
 	CvLandscapeInfo& getLandscapeInfo(int iIndex) const;
 	int getActiveLandscapeID() const;
 	void setActiveLandscapeID(int iLandscapeID);
 
 	int getNumTerrainInfos() const;
-	std::vector<CvTerrainInfo*>& getTerrainInfos();
 	CvTerrainInfo& getTerrainInfo(TerrainTypes eTerrainNum) const;
-	CvInfoReplacements<CvTerrainInfo>* getTerrainInfoReplacements();
 
 	int getNumBonusClassInfos() const;
-	std::vector<CvBonusClassInfo*>& getBonusClassInfos();
 	CvBonusClassInfo& getBonusClassInfo(BonusClassTypes eBonusNum) const;
-	CvInfoReplacements<CvBonusClassInfo>* getBonusClassInfoReplacements();
 
 	int getNumBonusInfos() const;
 	std::vector<CvBonusInfo*>& getBonusInfos();
 	CvBonusInfo& getBonusInfo(BonusTypes eBonusNum) const;
-	CvInfoReplacements<CvBonusInfo>* getBonusInfoReplacements();
 
 	int getNumFeatureInfos() const;
-	std::vector<CvFeatureInfo*>& getFeatureInfos();
 	CvFeatureInfo& getFeatureInfo(FeatureTypes eFeatureNum) const;
-	CvInfoReplacements<CvFeatureInfo>* getFeatureInfoReplacements();
 
 	int& getNumPlayableCivilizationInfos();
 	int& getNumAIPlayableCivilizationInfos();
 	int getNumCivilizationInfos() const;
-	std::vector<CvCivilizationInfo*>& getCivilizationInfos();
 	CvCivilizationInfo& getCivilizationInfo(CivilizationTypes eCivilizationNum) const;
-	CvInfoReplacements<CvCivilizationInfo>* getCivilizationInfoReplacements();
 
 	int getNumLeaderHeadInfos() const;
-	std::vector<CvLeaderHeadInfo*>& getLeaderHeadInfos();
 	CvLeaderHeadInfo& getLeaderHeadInfo(LeaderHeadTypes eLeaderHeadNum) const;
-	CvInfoReplacements<CvLeaderHeadInfo>* getLeaderHeadInfoReplacements();
 
 	int getNumTraitInfos() const;
-	std::vector<CvTraitInfo*>& getTraitInfos();
 	CvTraitInfo& getTraitInfo(TraitTypes eTraitNum) const;
-	CvInfoReplacements<CvTraitInfo>* getTraitInfoReplacements();
 
 	int getNumCursorInfos() const;
-	std::vector<CvCursorInfo*>& getCursorInfos();
 	CvCursorInfo& getCursorInfo(CursorTypes eCursorNum) const;
 
 	int getNumThroneRoomCameras() const;
-	std::vector<CvThroneRoomCamera*>& getThroneRoomCameras();
 	CvThroneRoomCamera& getThroneRoomCamera(int iIndex) const;
 
 	int getNumThroneRoomInfos() const;
-	std::vector<CvThroneRoomInfo*>& getThroneRoomInfos();
 	CvThroneRoomInfo& getThroneRoomInfo(int iIndex) const;
 
 	int getNumThroneRoomStyleInfos() const;
-	std::vector<CvThroneRoomStyleInfo*>& getThroneRoomStyleInfos();
 	CvThroneRoomStyleInfo& getThroneRoomStyleInfo(int iIndex) const;
 
 	int getNumSlideShowInfos() const;
-	std::vector<CvSlideShowInfo*>& getSlideShowInfos();
 	CvSlideShowInfo& getSlideShowInfo(int iIndex) const;
 
 	int getNumSlideShowRandomInfos() const;
-	std::vector<CvSlideShowRandomInfo*>& getSlideShowRandomInfos();
 	CvSlideShowRandomInfo& getSlideShowRandomInfo(int iIndex) const;
 
 	int getNumWorldPickerInfos() const;
-	std::vector<CvWorldPickerInfo*>& getWorldPickerInfos();
 	CvWorldPickerInfo& getWorldPickerInfo(int iIndex) const;
 
 	int getNumSpaceShipInfos() const;
-	std::vector<CvSpaceShipInfo*>& getSpaceShipInfos();
 	CvSpaceShipInfo& getSpaceShipInfo(int iIndex) const;
 
 	int getNumUnitInfos() const;
-	std::vector<CvUnitInfo*>& getUnitInfos();
 	CvUnitInfo& getUnitInfo(UnitTypes eUnitNum) const;
-	CvInfoReplacements<CvUnitInfo>* getUnitInfoReplacements();
 
 	int getNumSpawnInfos() const;
-	std::vector<CvSpawnInfo*>& getSpawnInfos();
 	CvSpawnInfo& getSpawnInfo(SpawnTypes eSpawnNum) const;
-	CvInfoReplacements<CvSpawnInfo>* getSpawnInfoReplacements();
 
 	int getNumSpecialUnitInfos() const;
-	std::vector<CvSpecialUnitInfo*>& getSpecialUnitInfos();
 	CvSpecialUnitInfo& getSpecialUnitInfo(SpecialUnitTypes eSpecialUnitNum) const;
 
 	int getNumConceptInfos() const;
-	std::vector<CvInfoBase*>& getConceptInfos();
 	CvInfoBase& getConceptInfo(ConceptTypes e) const;
 
 	int getNumNewConceptInfos() const;
-	std::vector<CvInfoBase*>& getNewConceptInfos();
 	CvInfoBase& getNewConceptInfo(NewConceptTypes e) const;
 
 	int getNumPropertyInfos() const;
-	std::vector<CvPropertyInfo*>& getPropertyInfos();
 	CvPropertyInfo& getPropertyInfo(PropertyTypes ePropertyNum) const;
 
 	int getNumOutcomeInfos() const;
-	std::vector<CvOutcomeInfo*>& getOutcomeInfos();
 	CvOutcomeInfo& getOutcomeInfo(OutcomeTypes eOutcomeNum) const;
 
 	int getPEAK_EXTRA_DEFENSE() const;
@@ -616,59 +555,45 @@ public:
 	float getSAD_FACTOR_4() const;
 
 	int getNumCityTabInfos() const;
-	std::vector<CvInfoBase*>& getCityTabInfos();
 	CvInfoBase& getCityTabInfo(CityTabTypes e) const;
 
 	int getNumCalendarInfos() const;
-	std::vector<CvInfoBase*>& getCalendarInfos();
 	CvInfoBase& getCalendarInfo(CalendarTypes e) const;
 
 	int getNumSeasonInfos() const;
-	std::vector<CvInfoBase*>& getSeasonInfos();
 	CvInfoBase& getSeasonInfo(SeasonTypes e) const;
 
 	int getNumMonthInfos() const;
-	std::vector<CvInfoBase*>& getMonthInfos();
 	CvInfoBase& getMonthInfo(MonthTypes e) const;
 
 	int getNumDenialInfos() const;
-	std::vector<CvInfoBase*>& getDenialInfos();
 	CvInfoBase& getDenialInfo(DenialTypes e) const;
 
 	int getNumInvisibleInfos() const;
-	std::vector<CvInvisibleInfo*>& getInvisibleInfos();
 	CvInvisibleInfo& getInvisibleInfo(InvisibleTypes e) const;
 
 	int getNumVoteSourceInfos() const;
-	std::vector<CvVoteSourceInfo*>& getVoteSourceInfos();
 	CvVoteSourceInfo& getVoteSourceInfo(VoteSourceTypes e) const;
 
 	int getNumUnitCombatInfos() const;
-	std::vector<CvUnitCombatInfo*>& getUnitCombatInfos();
 	CvUnitCombatInfo& getUnitCombatInfo(UnitCombatTypes e) const;
 
-	std::vector<CvInfoBase*>& getDomainInfos();
 	CvInfoBase& getDomainInfo(DomainTypes e) const;
 
 	//TB Promotion Line Mod begin
 	int getNumPromotionLineInfos() const;
-	std::vector<CvPromotionLineInfo*>& getPromotionLineInfos();
 	CvPromotionLineInfo& getPromotionLineInfo(PromotionLineTypes e) const;
 	//TB Promotion Line Mod end
 
 	int getNumMapCategoryInfos() const;
-	std::vector<CvMapCategoryInfo*>& getMapCategoryInfos();
 	CvMapCategoryInfo& getMapCategoryInfo(MapCategoryTypes e) const;
 
 	int getNumIdeaClassInfos() const;
-	std::vector<CvIdeaClassInfo*>& getIdeaClassInfos();
 	CvIdeaClassInfo& getIdeaClassInfo(IdeaClassTypes e) const;
 
 	int getNumIdeaInfos() const;
-	std::vector<CvIdeaInfo*>& getIdeaInfos();
 	CvIdeaInfo& getIdeaInfo(IdeaTypes e) const;
 
-	std::vector<CvInfoBase*>& getUnitAIInfos();
 	CvInfoBase& getUnitAIInfo(UnitAITypes eUnitAINum) const;
 
 	//	Koshling - added internal registration of supported UnitAI types, not reliant
@@ -689,201 +614,136 @@ public:
 	void registerPropertyPropagators();
 	void registerMissions();
 
-	std::vector<CvInfoBase*>& getAttitudeInfos();
 	CvInfoBase& getAttitudeInfo(AttitudeTypes eAttitudeNum) const;
 
-	std::vector<CvInfoBase*>& getMemoryInfos();
 	CvInfoBase& getMemoryInfo(MemoryTypes eMemoryNum) const;
 
 	int getNumGameOptionInfos() const;
-	std::vector<CvGameOptionInfo*>& getGameOptionInfos();
 	CvGameOptionInfo& getGameOptionInfo(GameOptionTypes eGameOptionNum) const;
 
 	int getNumMPOptionInfos() const;
-	std::vector<CvMPOptionInfo*>& getMPOptionInfos();
 	CvMPOptionInfo& getMPOptionInfo(MultiplayerOptionTypes eMPOptionNum) const;
 
 	int getNumForceControlInfos() const;
-	std::vector<CvForceControlInfo*>& getForceControlInfos();
 	CvForceControlInfo& getForceControlInfo(ForceControlTypes eForceControlNum) const;
 
-	std::vector<CvPlayerOptionInfo*>& getPlayerOptionInfos();
 	CvPlayerOptionInfo& getPlayerOptionInfo(PlayerOptionTypes ePlayerOptionNum) const;
 
-	std::vector<CvGraphicOptionInfo*>& getGraphicOptionInfos();
 	CvGraphicOptionInfo& getGraphicOptionInfo(GraphicOptionTypes eGraphicOptionNum) const;
 
-	std::vector<CvYieldInfo*>& getYieldInfos();
 	CvYieldInfo& getYieldInfo(YieldTypes eYieldNum) const;
 
-	std::vector<CvCommerceInfo*>& getCommerceInfos();
 	CvCommerceInfo& getCommerceInfo(CommerceTypes eCommerceNum) const;
 
 	int getNumRouteInfos() const;
-	std::vector<CvRouteInfo*>& getRouteInfos();
 	CvRouteInfo& getRouteInfo(RouteTypes eRouteNum) const;
-	CvInfoReplacements<CvRouteInfo>* getRouteInfoReplacements();
 
 	int getNumImprovementInfos() const;
-	std::vector<CvImprovementInfo*>& getImprovementInfos();
 	CvImprovementInfo& getImprovementInfo(ImprovementTypes eImprovementNum) const;
-	CvInfoReplacements<CvImprovementInfo>* getImprovementInfoReplacements();
 
 	int getNumGoodyInfos() const;
-	std::vector<CvGoodyInfo*>& getGoodyInfos();
 	CvGoodyInfo& getGoodyInfo(GoodyTypes eGoodyNum) const;
 
 	int getNumBuildInfos() const;
-	std::vector<CvBuildInfo*>& getBuildInfos();
 	CvBuildInfo& getBuildInfo(BuildTypes eBuildNum) const;
-	CvInfoReplacements<CvBuildInfo>* getBuildInfoReplacements();
 
 	int getNumHandicapInfos() const;
-	std::vector<CvHandicapInfo*>& getHandicapInfos();
 	CvHandicapInfo& getHandicapInfo(HandicapTypes eHandicapNum) const;
-	CvInfoReplacements<CvHandicapInfo>* getHandicapInfoReplacements();
 
 	int getNumGameSpeedInfos() const;
-	std::vector<CvGameSpeedInfo*>& getGameSpeedInfos();
 	CvGameSpeedInfo& getGameSpeedInfo(GameSpeedTypes eGameSpeedNum) const;
-	CvInfoReplacements<CvGameSpeedInfo>* getGameSpeedInfoReplacements();
 
 	int getNumTurnTimerInfos() const;
-	std::vector<CvTurnTimerInfo*>& getTurnTimerInfos();
 	CvTurnTimerInfo& getTurnTimerInfo(TurnTimerTypes eTurnTimerNum) const;
 
 	int getNumProcessInfos() const;
-	std::vector<CvProcessInfo*>& getProcessInfos();
 	CvProcessInfo& getProcessInfo(ProcessTypes e) const;
-	CvInfoReplacements<CvProcessInfo>* getProcessInfoReplacements();
 
 	int getNumVoteInfos() const;
-	std::vector<CvVoteInfo*>& getVoteInfos();
 	CvVoteInfo& getVoteInfo(VoteTypes e) const;
 
 	int getNumProjectInfos() const;
-	std::vector<CvProjectInfo*>& getProjectInfos();
 	CvProjectInfo& getProjectInfo(ProjectTypes e) const;
-	CvInfoReplacements<CvProjectInfo>* getProjectInfoReplacements();
 
 	int getNumBuildingInfos() const;
-	std::vector<CvBuildingInfo*>& getBuildingInfos();
 	CvBuildingInfo& getBuildingInfo(BuildingTypes eBuildingNum) const;
-	CvInfoReplacements<CvBuildingInfo>* getBuildingInfoReplacements();
 
 	int getNumSpecialBuildingInfos() const;
-	std::vector<CvSpecialBuildingInfo*>& getSpecialBuildingInfos();
 	CvSpecialBuildingInfo& getSpecialBuildingInfo(SpecialBuildingTypes eSpecialBuildingNum) const;
-	CvInfoReplacements<CvSpecialBuildingInfo>* getSpecialBuildingInfoReplacements();
 
 	int getNumActionInfos() const;
-	std::vector<CvActionInfo*>& getActionInfos();
 	CvActionInfo& getActionInfo(int i) const;
 
 	int getNumMissionInfos() const;
-	std::vector<CvMissionInfo*>& getMissionInfos();
 	CvMissionInfo& getMissionInfo(MissionTypes eMissionNum) const;
 
-	std::vector<CvControlInfo*>& getControlInfos();
 	CvControlInfo& getControlInfo(ControlTypes eControlNum) const;
 
-	std::vector<CvCommandInfo*>& getCommandInfos();
 	CvCommandInfo& getCommandInfo(CommandTypes eCommandNum) const;
 
 	int getNumAutomateInfos() const;
-	std::vector<CvAutomateInfo*>& getAutomateInfos();
 	CvAutomateInfo& getAutomateInfo(int iAutomateNum) const;
 
 	int getNumPromotionInfos() const;
-	std::vector<CvPromotionInfo*>& getPromotionInfos();
 	CvPromotionInfo& getPromotionInfo(PromotionTypes ePromotionNum) const;
-	CvInfoReplacements<CvPromotionInfo>* getPromotionInfoReplacements();
 	typedef bst::function<bool(const CvPromotionInfo*, PromotionTypes)> PromotionPredicateFn;
 	PromotionTypes findPromotion(PromotionPredicateFn predicateFn) const;
 
 	int getNumTechInfos() const;
-	std::vector<CvTechInfo*>& getTechInfos();
 	CvTechInfo& getTechInfo(TechTypes eTechNum) const;
-	CvInfoReplacements<CvTechInfo>* getTechInfoReplacements();
 
 	int getNumReligionInfos() const;
-	std::vector<CvReligionInfo*>& getReligionInfos();
 	CvReligionInfo& getReligionInfo(ReligionTypes eReligionNum) const;
-	CvInfoReplacements<CvReligionInfo>* getReligionInfoReplacements();
 
 	int getNumCorporationInfos() const;
-	std::vector<CvCorporationInfo*>& getCorporationInfos();
 	CvCorporationInfo& getCorporationInfo(CorporationTypes eCorporationNum) const;
-	CvInfoReplacements<CvCorporationInfo>* getCorporationInfoReplacements();
 
 	int getNumSpecialistInfos() const;
-	std::vector<CvSpecialistInfo*>& getSpecialistInfos();
 	CvSpecialistInfo& getSpecialistInfo(SpecialistTypes eSpecialistNum) const;
-	CvInfoReplacements<CvSpecialistInfo>* getSpecialistInfoReplacements();
 
 	int getNumCivicOptionInfos() const;
-	std::vector<CvCivicOptionInfo*>& getCivicOptionInfos();
 	CvCivicOptionInfo& getCivicOptionInfo(CivicOptionTypes eCivicOptionNum) const;
 
 	int getNumCivicInfos() const;
-	std::vector<CvCivicInfo*>& getCivicInfos();
 	CvCivicInfo& getCivicInfo(CivicTypes eCivicNum) const;
-	CvInfoReplacements<CvCivicInfo>* getCivicInfoReplacements();
 
 	int getNumDiplomacyInfos() const;
-	std::vector<CvDiplomacyInfo*>& getDiplomacyInfos();
 	CvDiplomacyInfo& getDiplomacyInfo(int iDiplomacyNum) const;
 
 	int getNumEraInfos() const;
-	std::vector<CvEraInfo*>& getEraInfos();
 	CvEraInfo& getEraInfo(EraTypes eEraNum) const;
-	CvInfoReplacements<CvEraInfo>* getEraInfoReplacements();
 
 	int getNumHurryInfos() const;
-	std::vector<CvHurryInfo*>& getHurryInfos();
 	CvHurryInfo& getHurryInfo(HurryTypes eHurryNum) const;
 
 	int getNumEmphasizeInfos() const;
-	std::vector<CvEmphasizeInfo*>& getEmphasizeInfos();
 	CvEmphasizeInfo& getEmphasizeInfo(EmphasizeTypes eEmphasizeNum) const;
 
 	int getNumUpkeepInfos() const;
-	std::vector<CvUpkeepInfo*>& getUpkeepInfos();
 	CvUpkeepInfo& getUpkeepInfo(UpkeepTypes eUpkeepNum) const;
 
 	int getNumCultureLevelInfos() const;
-	std::vector<CvCultureLevelInfo*>& getCultureLevelInfos();
 	CvCultureLevelInfo& getCultureLevelInfo(CultureLevelTypes eCultureLevelNum) const;
-	CvInfoReplacements<CvCultureLevelInfo>* getCultureLevelInfoReplacements();
 
 	int getNumVictoryInfos() const;
-	std::vector<CvVictoryInfo*>& getVictoryInfos();
 	CvVictoryInfo& getVictoryInfo(VictoryTypes eVictoryNum) const;
 
 	int getNumQuestInfos() const;
-	std::vector<CvQuestInfo*>& getQuestInfos();
 	CvQuestInfo& getQuestInfo(int iIndex) const;
 
 	int getNumTutorialInfos() const;
-	std::vector<CvTutorialInfo*>& getTutorialInfos();
 	CvTutorialInfo& getTutorialInfo(int i) const;
 
 	int getNumEventTriggerInfos() const;
-	std::vector<CvEventTriggerInfo*>& getEventTriggerInfos();
 	CvEventTriggerInfo& getEventTriggerInfo(EventTriggerTypes eEventTrigger) const;
-	CvInfoReplacements<CvEventTriggerInfo>* getEventTriggerInfoReplacements();
 
 	int getNumEventInfos() const;
-	std::vector<CvEventInfo*>& getEventInfos();
 	CvEventInfo& getEventInfo(EventTypes eEvent) const;
-	CvInfoReplacements<CvEventInfo>* getEventInfoReplacements();
 
 	int getNumEspionageMissionInfos() const;
-	std::vector<CvEspionageMissionInfo*>& getEspionageMissionInfos();
 	CvEspionageMissionInfo& getEspionageMissionInfo(EspionageMissionTypes eEspionageMissionNum) const;
 
 	int getNumUnitArtStyleTypeInfos() const;
-	std::vector<CvUnitArtStyleTypeInfo*>& getUnitArtStyleTypeInfos();
 	CvUnitArtStyleTypeInfo& getUnitArtStyleTypeInfo(UnitArtStyleTypes eUnitArtStyleTypeNum) const;
 
 	//
@@ -947,6 +807,8 @@ public:
 
 	FVariableSystem* getDefinesVarSystem() const;
 	void cacheGlobals();
+
+	inline int getDefineINT(GlobalDefineINT var) const	{ return m_GlobalDefinesINT[var]; }
 
 	// ***** EXPOSED TO PYTHON *****
 /************************************************************************************************/
@@ -1122,33 +984,32 @@ public:
 /************************************************************************************************/
 /* MODULES                                 END                                                  */
 /************************************************************************************************/
-	int getMAX_CIV_PLAYERS() const;
-	int getMAX_PC_PLAYERS() const;
-	int getMAX_PLAYERS() const;
-	int getMAX_PC_TEAMS() const;
-	int getMAX_TEAMS() const;
-	int getBARBARIAN_PLAYER() const;
-	int getBARBARIAN_TEAM() const;
-	int getNEANDERTHAL_PLAYER() const;
-	int getNEANDERTHAL_TEAM() const;
-	int getBEAST_PLAYER() const;
-	int getBEAST_TEAM() const;
-	int getPREDATOR_PLAYER() const;
-	int getPREDATOR_TEAM() const;
-	int getPREY_PLAYER() const;
-	int getPREY_TEAM() const;
-	int getINSECT_PLAYER() const;
-	int getINSECT_TEAM() const;
-	int getNPC4_PLAYER() const;
-	int getNPC4_TEAM() const;
-	int getNPC3_PLAYER() const;
-	int getNPC3_TEAM() const;
-	int getNPC2_PLAYER() const;
-	int getNPC2_TEAM() const;
-	int getNPC1_PLAYER() const;
-	int getNPC1_TEAM() const;
-	int getNPC0_PLAYER() const;
-	int getNPC0_TEAM() const;
+	int getMAX_PC_PLAYERS() const		{ return MAX_PC_PLAYERS; }
+	int getMAX_PLAYERS() const			{ return MAX_PLAYERS; }
+	int getMAX_PC_TEAMS() const			{ return MAX_PC_TEAMS; }
+	int getMAX_TEAMS() const			{ return MAX_TEAMS; }
+	int getBARBARIAN_PLAYER() const		{ return BARBARIAN_PLAYER; }
+	int getBARBARIAN_TEAM() const		{ return BARBARIAN_TEAM; }
+	int getNEANDERTHAL_PLAYER() const	{ return NEANDERTHAL_PLAYER; }
+	int getNEANDERTHAL_TEAM() const		{ return NEANDERTHAL_TEAM; }
+	int getBEAST_PLAYER() const			{ return BEAST_PLAYER; }
+	int getBEAST_TEAM() const			{ return BEAST_TEAM; }
+	int getPREDATOR_PLAYER() const		{ return PREDATOR_PLAYER; }
+	int getPREDATOR_TEAM() const		{ return PREDATOR_TEAM; }
+	int getPREY_PLAYER() const			{ return PREY_PLAYER; }
+	int getPREY_TEAM() const			{ return PREY_TEAM; }
+	int getINSECT_PLAYER() const		{ return INSECT_PLAYER; }
+	int getINSECT_TEAM() const			{ return INSECT_TEAM; }
+	int getNPC4_PLAYER() const			{ return NPC4_PLAYER; }
+	int getNPC4_TEAM() const			{ return NPC4_TEAM; }
+	int getNPC3_PLAYER() const			{ return NPC3_PLAYER; }
+	int getNPC3_TEAM() const			{ return NPC3_TEAM; }
+	int getNPC2_PLAYER() const			{ return NPC2_PLAYER; }
+	int getNPC2_TEAM() const			{ return NPC2_TEAM; }
+	int getNPC1_PLAYER() const			{ return NPC1_PLAYER; }
+	int getNPC1_TEAM() const			{ return NPC1_TEAM; }
+	int getNPC0_PLAYER() const			{ return NPC0_PLAYER; }
+	int getNPC0_TEAM() const			{ return NPC0_TEAM; }
 
 	// ***** END EXPOSED TO PYTHON *****
 
@@ -1379,6 +1240,7 @@ protected:
 	typedef std::map<int*,std::pair<CvString,CvString> > DelayedResolutionMap;
 	DelayedResolutionMap m_delayedResolutionMap;
 
+	std::vector<int> m_GlobalDefinesINT;
 
 	std::vector<CvColorInfo*> m_paColorInfo;
 	std::vector<CvPlayerColorInfo*> m_paPlayerColorInfo;
@@ -1520,7 +1382,6 @@ protected:
 	std::vector<CvUnitFormationInfo*> m_paUnitFormationInfo;
 	std::vector<CvEffectInfo*> m_paEffectInfo;
 	std::vector<CvAttachableInfo*> m_paAttachableInfo;
-	std::vector<CvCameraInfo*> m_paCameraInfo;
 	std::vector<CvQuestInfo*> m_paQuestInfo;
 	std::vector<CvTutorialInfo*> m_paTutorialInfo;
 	std::vector<CvEventTriggerInfo*> m_paEventTriggerInfo;
@@ -1531,7 +1392,6 @@ protected:
 	std::vector<CvUnitArtStyleTypeInfo*> m_paUnitArtStyleTypeInfo;
 	std::vector<CvPropertyInfo*> m_paPropertyInfo;
 	std::vector<CvOutcomeInfo*> m_paOutcomeInfo;
-	std::vector<CvCivNameInfo*> m_paCivNameInfo;
 
 /*********************************/
 /***** Parallel Maps - Begin *****/
@@ -2002,10 +1862,13 @@ public:
 		PROXY_TRACK("getInterfacePtr");
 		return gGlobals->getInterfacePtr();
 	}
+	// This determines how many starting civs can be chosen in the custom game staging room screen.
+	// Currently it allows you to add more civs than there are civ slots.
+	// If this is reduced to the correct number, the city bar and city graphics for the neanderthal NPC will never be updated as the exe doesn't understand that their cities exist.
 	DllExport int getMaxCivPlayers() const
 	{
 		PROXY_TRACK("getMaxCivPlayers");
-		return gGlobals->getMaxCivPlayers();
+		return MAX_PLAYERS-1;
 	}
 	DllExport CvMapExternal& getMap()
 	{
@@ -2744,7 +2607,7 @@ public:
 	DllExport int getMAX_CIV_PLAYERS()
 	{
 		PROXY_TRACK("getMAX_CIV_PLAYERS");
-		return gGlobals->getMAX_CIV_PLAYERS();
+		return MAX_PC_PLAYERS;
 	}
 	// ***** END EXPOSED TO PYTHON *****
 

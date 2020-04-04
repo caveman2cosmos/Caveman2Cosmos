@@ -73578,9 +73578,6 @@
 				<Bonus>BONUS_MARBLE</Bonus>
 				<Bonus>BONUS_STONE</Bonus>
 			</PrereqBonuses>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_HUMAN_SACRIFICE</BuildingType>
-			</PrereqInCityBuildings>
 			<iCost>160</iCost>
 			<iHappiness>1</iHappiness>
 			<ObsoleteSafeCommerceChanges>
@@ -95707,30 +95704,33 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HUMAN_SACRIFICE_ALTAR</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_HUMAN_SACRIFICE_ALTAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HUMAN_SACRIFICE_ALTAR_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HUMAN_SACRIFICE_ALTAR_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_SACRIFICE_ALTAR</ArtDefineTag>
+			<ConstructSound>AS2D_BUILD_CEREMONIAL_ALTAR</ConstructSound>
 			<PrereqTech>TECH_SACRIFICE_CULT</PrereqTech>
-			<iHurryAngerModifier>-50</iHurryAngerModifier>
-			<bNeverCapture>1</bNeverCapture>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_HUMAN_SACRIFICE</BuildingType>
+			</PrereqInCityBuildings>
+			<ReplaceBuildings>
+				<ReplaceBuilding>
+					<BuildingType>BUILDING_SACRIFICIAL_ALTAR</BuildingType>
+					<bReplace>1</bReplace>
+				</ReplaceBuilding>
+			</ReplaceBuildings>
 			<iCost>139</iCost>
-			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<iConquestProb>0</iConquestProb>
+			<iHurryAngerModifier>-50</iHurryAngerModifier>
 			<iHappiness>1</iHappiness>
-			<iAsset>4</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<SpecialistCounts>
 				<SpecialistCount>
 					<SpecialistType>SPECIALIST_PRIEST</SpecialistType>
 					<iSpecialistCount>1</iSpecialistCount>
 				</SpecialistCount>
 			</SpecialistCounts>
-			<ConstructSound>AS2D_BUILD_CEREMONIAL_ALTAR</ConstructSound>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
 					<BonusType>BONUS_HEMP</BonusType>
@@ -95741,21 +95741,15 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
-			<PrereqInCityBuildings>
-				<BuildingType>BUILDING_HUMAN_SACRIFICE</BuildingType>
-			</PrereqInCityBuildings>
+			<iAsset>4</iAsset>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_SACRIFICIAL_ALTAR</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<bNeverCapture>1</bNeverCapture>
+			<ArtDefineTag>ART_DEF_BUILDING_HUMAN_SACRIFICE_ALTAR</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_AD_AGENCY</Type>
