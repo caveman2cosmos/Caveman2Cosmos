@@ -1200,7 +1200,6 @@
 		</BuildInfo>
 		<BuildInfo>
 			<Type>BUILD_FACTORY_SLAVE</Type>
-			<bForceOverwrite>1</bForceOverwrite>
 			<Description>TXT_KEY_BUILD_FACTORY_SLAVE</Description>
 			<PrereqTech>TECH_ASSEMBLY_LINE</PrereqTech>
 			<iTime>1000</iTime>
