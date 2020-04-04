@@ -1512,7 +1512,6 @@
 		<!-- Manufacturing Complex -->
 		<BuildInfo>
 			<Type>BUILD_MANUFACTURING_COMPLEX</Type>
-			<bForceOverwrite>1</bForceOverwrite>
 			<Description>TXT_KEY_BUILD_INDUSTRIAL_COMPLEX</Description>
 			<PrereqTech>TECH_MANUFACTURING</PrereqTech>
 			<iTime>1800</iTime>
@@ -1779,7 +1778,6 @@
 		<!-- Factory -->
 		<BuildInfo>
 			<Type>BUILD_FACTORY</Type>
-			<bForceOverwrite>1</bForceOverwrite>
 			<Description>TXT_KEY_BUILD_FACTORY</Description>
 			<PrereqTech>TECH_ASSEMBLY_LINE</PrereqTech>
 			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
@@ -2047,7 +2045,6 @@
 		<!-- Factory -->
 		<BuildInfo>
 			<Type>BUILD_FACTORY_COLD_CLIMATE</Type>
-			<bForceOverwrite>1</bForceOverwrite>
 			<Description>TXT_KEY_BUILD_FACTORY_COLD</Description>
 			<PrereqTech>TECH_REFRIGERATION</PrereqTech>
 			<ObsoleteTech>TECH_MANUFACTURING</ObsoleteTech>
