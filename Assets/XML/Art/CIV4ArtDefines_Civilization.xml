@@ -271,5 +271,11 @@
 			<Path>Art/Interface/TeamColor/FlagDECAL_Zulu.dds</Path>
 			<bWhiteFlag>1</bWhiteFlag>
 		</CivilizationArtInfo>
+		<CivilizationArtInfo>
+			<Type>ART_DEF_CIVILIZATION_POLYNESIA</Type>
+			<Button>art/Custom_Civilizations/Polynesia/Polynesia.dds</Button>
+			<Path>art/Custom_Civilizations/Polynesia/FlagDECAL_Polynesia.dds</Path>
+			<bWhiteFlag>0</bWhiteFlag>
+		</CivilizationArtInfo>
 	</CivilizationArtInfos>
 </Civ4ArtDefines>

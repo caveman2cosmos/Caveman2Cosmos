@@ -2745,19 +2745,13 @@
 		<Polish>[OUR_CIV_SHORT] wita Cię, [CT_NAME]. Może trochę sałatki? Sam ją zrobiłem.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_KANGXI_1</Tag>
-		<English>Greetings,[CT_NAME]. Allow me to keep the [CT_EMPIRE] within my sights. It is easy to dodge a spear that comes in front of you but hard to keep harms away from an arrow shot from behind.</English>
-		<French>Salutations,[CT_NAME]. permettez-moi de garder l'[CT_EMPIRE] dans mon champ de vision. Il est facile d'esquiver une lance arrivant droit sur vous, mais difficile de ne pas être blassé par une flêche tiré dans le dos.</French>
-		<German>Grüße,[CT_NAME]. Erlaube mir, das [CT_EMPIRE] im Auge zu behalten. Es ist leicht, einen Speer abzuwehren, der von vorne kommt, aber schwer, einen Pfeil von hinten abzuwehren.</German>
-		<Spanish>Saludos, [CT_NAME]. Permíteme mantener al [CT_EMPIRE] en mi campo de visión. Es fácil esquivar una lanza que te llega por delante, pero más dificil es evitar el daño de un flechazo por la espalda.</Spanish>
-		<Polish>Pozdrowienia,[CT_NAME]. Pozwól mi utrzymać [CT_EMPIRE] na oku. Łatwo jest rzucić włócznią przed siebie ale ciężko zauważyć strzałe lecącą za Tobą.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_KEKKONEN_1</Tag>
-		<English>Welcome, [CT_NAME] of the [CT_EMPIRE]. An argument rips, but peace builds. Let us build it together.</English>
-		<German>Willkommen, [CT_NAME] vom [CT_EMPIRE]. Eine Diskussion kann verletzten, aber der Friede baut auf. Lass ihn uns zusammen aufbauen.</German>
-		<Spanish>Bienvenido, [CT_NAME] del [CT_EMPIRE]. El confrontamiento desgasta, pero la paz construye. Permítenos construirla juntos.</Spanish>
-		<Polish>Witam, [CT_NAME] z [CT_EMPIRE]. Kłótnie niszczą, pokój buduje. Zbudujmy go razem.</Polish>
+		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_KAMEHAMEHA_1</Tag>
+		<English>Hello! Ask me what is the greatest thing in the world, I will reply: It is people, it is people, it is people!</English>
+		<French>Hello! Me demande quelle est la plus grande chose dans le monde, je répondrai: C'est gens, les gens, les gens!</French>
+		<German>Hallo! Frag mich bitte, was ist die größte Sache in der Welt, werde ich antworten: Es sind die Menschen, sind es die Menschen, sind es die Menschen!</German>
+		<Italian>Saluti! Chiedimi qual è la cosa più grande del mondo, io risponderò: è la gente, è la gente, è la gente!</Italian>
+		<Spanish>¡Hola! Me pregunta qué es lo más grande en el mundo, voy a responder: Es la gente, es la gente, es la gente</Spanish>
+		<Polish>Witam! Spytaj się mnie co jest najważniejszą rzeczą na świecie, a ja odpowiem: To ludzie!, To ludzie!, To ludzie!</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_KUBLAI_KHAN_1</Tag>

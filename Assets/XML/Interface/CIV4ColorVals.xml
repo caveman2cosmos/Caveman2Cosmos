@@ -1,9 +1,5 @@
 <?xml version="1.0"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Color Vals -->
+<!-- Be careful of changing their orders, some code reference them by index number -->
 <Civ4ColorVals xmlns="x-schema:../Schema/C2C_CIV4InterfaceSchema.xml">
 	<ColorVals>
 		<ColorVal>
@@ -2149,8 +2145,6 @@
 			<fBlue>1.00</fBlue>
 			<fAlpha>1.00</fAlpha>
 		</ColorVal>
-<!-- ###  END  ####################################################### -->
-<!-- ## AMRA - START ## -->
 		<ColorVal>
 			<Type>COLOR_LIGHT_GRAY</Type>
 			<fRed>0.85</fRed>
@@ -2440,15 +2434,6 @@
 			<fGreen>0.50</fGreen>
 			<fBlue>0.50</fBlue>
 			<fAlpha>1.00</fAlpha>
-		</ColorVal>
-<!-- ## AMRA - FINISH ## -->
-		<ColorVal>
-		<!-- Is this white? -->
-		<Type>COLOR_PLAYER_NEAR_WHITE</Type>
-		<fRed>0.10</fRed>
-		<fGreen>0.10</fGreen>
-		<fBlue>0.10</fBlue>
-		<fAlpha>1.00</fAlpha>
 		</ColorVal>
 	</ColorVals>
 </Civ4ColorVals>

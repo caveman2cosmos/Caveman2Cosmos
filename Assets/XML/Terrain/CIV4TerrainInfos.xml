@@ -5493,7 +5493,6 @@
 			<iCultureDistance>20</iCultureDistance>
 			<iMovement>1</iMovement>
 			<Button>Art/Interface/Buttons/WorldBuilder/Space.dds</Button>
-			<bGraphicalOnly>1</bGraphicalOnly>
 		</TerrainInfo>
 	</TerrainInfos>
 </Civ4TerrainInfos>

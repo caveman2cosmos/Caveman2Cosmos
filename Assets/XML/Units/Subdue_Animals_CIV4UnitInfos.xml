@@ -2143,7 +2143,6 @@
 					</ActionOutcomes>
 				</Action>
 			</Actions>
-			<bForceOverwrite>1</bForceOverwrite>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_SUBDUED_CAVE_LION</Type>
