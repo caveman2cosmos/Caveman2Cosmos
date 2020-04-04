@@ -4,6 +4,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_LUNAR_OUTPOST</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_LUNAR_OUTPOST</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNAR_OUTPOST_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_LUNAR_OUTPOST_STRATEGY</Strategy>
@@ -14,7 +15,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LUNAR_BASES</PrereqTech>
-			<iCost>-1</iCost>
 			<CommerceChanges>
 				<iCommerce>-100</iCommerce>
 				<iCommerce>25</iCommerce>
@@ -25,6 +25,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_URBAN_MOON</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_URBAN_MOON</Description>
 			<Civilopedia>TXT_KEY_BUILDING_URBAN_MOON_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_URBAN_MOON_STRATEGY</Strategy>
@@ -57,6 +58,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_MOON_TERRA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_MOON_TERRA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MOON_TERRA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MOON_TERRA_STRATEGY</Strategy>
@@ -110,7 +112,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MOON_TERRA_EFFECT</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_LUNAR_TERRAFORMING</PrereqTech>
-			<iCost>-1</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
@@ -139,6 +140,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_LUNA_RING</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_LUNA_RING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LUNA_RING_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_LUNA_RING_STRATEGY</Strategy>
@@ -176,7 +178,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LUNAR_MEGASTRUCTURES</PrereqTech>
-			<iCost>-1</iCost>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>20</iYield>
@@ -324,6 +325,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_MITHRIL_FOUNDRY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_MITHRIL_FOUNDRY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MITHRIL_FOUNDRY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MITHRIL_FOUNDRY_STRATEGY</Strategy>
@@ -393,7 +395,6 @@
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<FreeBonus>BONUS_MOON_ROCKS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iCost>-1</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iConquestProb>100</iConquestProb>
 			<iHealth>3</iHealth>
@@ -1909,7 +1910,6 @@
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<FreeBonus>BONUS_CHEMICALS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iCost>-1</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
@@ -1932,7 +1932,6 @@
 				<MapCategoryType>MAPCATEGORY_LUNAR</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
-			<iCost>-1</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
@@ -1957,7 +1956,6 @@
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<FreeBonus>BONUS_FERTILIZERS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iCost>-1</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>
@@ -1982,7 +1980,6 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<bPower>1</bPower>
-			<iCost>-1</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<iAdvancedStartCostIncrease>-1</iAdvancedStartCostIncrease>
 			<iConquestProb>70</iConquestProb>

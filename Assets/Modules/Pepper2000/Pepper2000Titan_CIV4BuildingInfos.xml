@@ -10,7 +10,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TITAN_BASE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ABYSS_COLONIZATION</PrereqTech>
-			<iCost>-1</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_TITANIC</MapCategoryType>
@@ -296,6 +295,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_TERRAFORMED_TITAN</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_TERRAFORMED_TITAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TERRAFORMED_TITAN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TERRAFORMED_TITAN_STRATEGY</Strategy>
@@ -335,6 +335,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_COMPUTRONIUM_TITAN</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_COMPUTRONIUM_TITAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_COMPUTRONIUM_TITAN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_COMPUTRONIUM_TITAN_STRATEGY</Strategy>

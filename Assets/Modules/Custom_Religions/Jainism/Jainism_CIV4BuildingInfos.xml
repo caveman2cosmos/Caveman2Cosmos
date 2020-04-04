@@ -16,6 +16,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_JAIN_CATHEDRAL</ArtDefineTag>
 			<ReligionType>RELIGION_JAINISM</ReligionType>
 			<PrereqReligion>RELIGION_JAINISM</PrereqReligion>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>280</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -95,6 +98,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_JAIN_MONASTERY</ArtDefineTag>
 			<ReligionType>RELIGION_JAINISM</ReligionType>
 			<PrereqReligion>RELIGION_JAINISM</PrereqReligion>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_FURNITURE</Bonus>
@@ -157,6 +163,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_JAIN_TEMPLE</ArtDefineTag>
 			<ReligionType>RELIGION_JAINISM</ReligionType>
 			<PrereqReligion>RELIGION_JAINISM</PrereqReligion>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
@@ -216,10 +225,12 @@
 			<HolyCity>RELIGION_JAINISM</HolyCity>
 			<ReligionType>RELIGION_JAINISM</ReligionType>
 			<GlobalReligionCommerce>RELIGION_JAINISM</GlobalReligionCommerce>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
-			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>8</iAsset>

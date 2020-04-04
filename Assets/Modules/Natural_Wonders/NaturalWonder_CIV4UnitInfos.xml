@@ -1,10 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- ReModified by StrategyOnly -->
-	<!-- -->
-	<!-- Unit Infos -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4UnitInfos xmlns="x-schema:../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
@@ -21,7 +15,7 @@
 			</Builds>
 		</UnitInfo>
 		<UnitInfo>
-			<Type>UNIT_CLASSIC_WORKBOAT</Type>
+			<Type>UNIT_WORKBOAT_CLASSIC</Type>
 			<Builds>
 				<Build>
 					<BuildType>BUILD_BEACON_GREAT_BARRIER_REEF</BuildType>
@@ -34,7 +28,7 @@
 			</Builds>
 		</UnitInfo>
 		<UnitInfo>
-			<Type>UNIT_MIDDLE_WORKBOAT</Type>
+			<Type>UNIT_WORKBOAT_MIDDLE</Type>
 			<Builds>
 				<Build>
 					<BuildType>BUILD_BEACON_GREAT_BARRIER_REEF</BuildType>
@@ -47,7 +41,7 @@
 			</Builds>
 		</UnitInfo>
 		<UnitInfo>
-			<Type>UNIT_MODERN_WORKBOAT</Type>
+			<Type>UNIT_WORKBOAT_MODERN</Type>
 			<Builds>
 				<Build>
 					<BuildType>BUILD_BEACON_GREAT_BARRIER_REEF</BuildType>

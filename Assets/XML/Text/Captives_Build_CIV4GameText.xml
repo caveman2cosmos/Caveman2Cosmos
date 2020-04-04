@@ -366,9 +366,9 @@
 		<Polish>Zbuduj [LINK=IMPROVEMENT_PLANTATION]Plantacj[\LINK] (Prace Przym.)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_PLANT_BAMBOO_GROVE_SLAVE</Tag>
-		<English>Plant [LINK=IMPROVEMENT_PLANT_BAMBOO_GROVE]Bamboo Grove[\LINK] (Forced)</English>
-		<French>[LINK=IMPROVEMENT_PLANT_BAMBOO_GROVE]Planter une Bambouseraie[\LINK] (Forcé)</French>
+		<Tag>TXT_KEY_BUILD_PLANT_BAMBOO_SLAVE</Tag>
+		<English>Plant [LINK=IMPROVEMENT_PLANT_BAMBOO]Bamboo[\LINK] (Forced)</English>
+		<French>[LINK=IMPROVEMENT_PLANT_BAMBOO]Planter une Bambouseraie[\LINK] (Forcé)</French>
 		<German>Zwangsarbeit - Plant Bamboo Grove</German>
 		<Italian>Crea un bosco di bambù (Schiavo)</Italian>
 		<Spanish>Plant Bamboo Grove (Forzado)</Spanish>
@@ -665,41 +665,5 @@
 		<Italian>Costruisci una [LINK=IMPROVEMENT_WORKSHOP]bottega[\LINK] (Schiavo)</Italian>
 		<Spanish>Construir un [LINK=IMPROVEMENT_WORKSHOP]taller[\LINK] (Forzado)</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_WORKSHOP]Warsztat[\LINK] (Prace Przym.)</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ROUTE_HIGHWAY_SLAVE</Tag>
-		<English>Highway (Forced)</English>
-		<French>Autoroute (Forcé)</French>
-		<German>Zwangsarbeit - Schnellstraße</German>
-		<Italian>Autostrada (Schiavo)</Italian>
-		<Spanish>Highway (Forzado)</Spanish>
-		<Polish>Autostrada (Prace Przym.)</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ROUTE_MAGLEV_SLAVE</Tag>
-		<English>Maglev (Forced)</English>
-		<French>Tube Maglev (Forcé)</French>
-		<German>Zwangsarbeit - Magnetbahn</German>
-		<Italian>Linea Maglev (Schiavo)</Italian>
-		<Spanish>Maglev (Forzado)</Spanish>
-		<Polish>Maglev (Prace Przym.)</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ROUTE_PAVED_ROAD_SLAVE</Tag>
-		<English>Paved Road (Forced)</English>
-		<French>Route pavée (Forcé)</French>
-		<German>Zwangsarbeit - Gepflasterte Straße</German>
-		<Italian>Strada pavimentata (Schiavo)</Italian>
-		<Spanish>Paved Road (Forzado)</Spanish>
-		<Polish>Kamienna Droga (Prace Przym.)</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_ROUTE_TRACK_SLAVE</Tag>
-		<English>Mud Path (Forced)</English>
-		<French>Chemin de terre (Forcé)</French>
-		<German>Zwangsarbeit - Karrenweg</German>
-		<Italian>Strada in fango (Schiavo)</Italian>
-		<Spanish>Cart Path (Forzado)</Spanish>
-		<Polish>BBotnisty Dukt (Prace Przym.)</Polish>
 	</TEXT>
 </Civ4GameText>

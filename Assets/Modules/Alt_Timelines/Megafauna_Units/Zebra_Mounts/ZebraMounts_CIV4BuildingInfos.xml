@@ -1,6 +1,4 @@
 <?xml version="1.0"?>
-<!-- Modified by Strategyonly -->
-<!-- ###################################################################################### -->
 <Civ4BuildingInfos xmlns="x-schema:../../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
@@ -21,7 +19,6 @@
 			</MapCategoryTypes>
      		<FreeBonus>BONUS_CARCASS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iCost>-1</iCost>
 			<iAsset>3</iAsset>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -38,6 +35,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_ZEBRA_TRAINER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ZEBRA_TRAINER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ZEBRA_TRAINER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ZEBRA_TRAINER_STRATEGY</Strategy>
@@ -141,7 +139,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
-			<iCost>-1</iCost>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>2</iAsset>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
@@ -166,7 +163,6 @@
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
-			<iCost>-1</iCost>
 			<iConquestProb>25</iConquestProb>
 			<iAsset>2</iAsset>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>

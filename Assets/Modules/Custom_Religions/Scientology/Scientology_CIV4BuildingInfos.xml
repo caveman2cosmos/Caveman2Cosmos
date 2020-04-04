@@ -14,6 +14,9 @@
 			<Strategy>TXT_KEY_BUILDING_SCIENTOLOGY_CATHEDRAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SCIENTOLOGY_CATHEDRAL</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_SCIENTOLOGY</ReligionType>
 			<PrereqReligion>RELIGION_SCIENTOLOGY</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
@@ -95,6 +98,9 @@
 			<Strategy>TXT_KEY_BUILDING_SCIENTOLOGY_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SCIENTOLOGY_MONASTERY</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_SCIENTOLOGY</ReligionType>
 			<PrereqReligion>RELIGION_SCIENTOLOGY</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
@@ -149,13 +155,15 @@
 			<Strategy>TXT_KEY_BUILDING_SCIENTOLOGY_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SCIENTOLOGY_SHRINE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<MovieDefineTag>ART_DEF_MOVIE_SCIENTOLOGY</MovieDefineTag>
 			<HolyCity>RELIGION_SCIENTOLOGY</HolyCity>
 			<ReligionType>RELIGION_SCIENTOLOGY</ReligionType>
 			<GlobalReligionCommerce>RELIGION_SCIENTOLOGY</GlobalReligionCommerce>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<bNukeImmune>1</bNukeImmune>
-			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>8</iAsset>
@@ -197,6 +205,9 @@
 			<Strategy>TXT_KEY_BUILDING_SCIENTOLOGY_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SCIENTOLOGY_TEMPLE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_SCIENTOLOGY</ReligionType>
 			<PrereqReligion>RELIGION_SCIENTOLOGY</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>

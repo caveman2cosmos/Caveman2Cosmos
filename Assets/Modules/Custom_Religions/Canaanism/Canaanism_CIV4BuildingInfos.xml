@@ -16,6 +16,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CANAANISM_TEMPLE</ArtDefineTag>
 			<ReligionType>RELIGION_CANAANISM</ReligionType>
 			<PrereqReligion>RELIGION_CANAANISM</PrereqReligion>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -64,6 +67,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CANAANISM_CATHEDRAL</ArtDefineTag>
 			<ReligionType>RELIGION_CANAANISM</ReligionType>
 			<PrereqReligion>RELIGION_CANAANISM</PrereqReligion>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>280</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -136,6 +142,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_CANAANISM_MONASTERY</ArtDefineTag>
 			<ReligionType>RELIGION_CANAANISM</ReligionType>
 			<PrereqReligion>RELIGION_CANAANISM</PrereqReligion>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>216</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -186,10 +195,12 @@
 			<HolyCity>RELIGION_CANAANISM</HolyCity>
 			<ReligionType>RELIGION_CANAANISM</ReligionType>
 			<GlobalReligionCommerce>RELIGION_CANAANISM</GlobalReligionCommerce>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
-			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>8</iAsset>

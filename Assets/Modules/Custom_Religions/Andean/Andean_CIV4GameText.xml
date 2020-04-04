@@ -125,7 +125,7 @@ meaning 'Golden Courtyard'), originally named Inti Kancha (' Temple of the Sun')
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MACHU_PICCHU_HELP</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Places [COLOR_BUILDING_TEXT]Machu Picchu[COLOR_REVERT] on Peak in City Radius. +1[ICON_FOOD], +2[ICON_PRODUCTION], +1[ICON_COMMERCE] from all Owned Peaks. +1[ICON_COMMERCE] from Peaks in City Radius</English>
+		<English>[ICON_BULLET]Places [COLOR_BUILDING_TEXT]Machu Picchu[COLOR_REVERT] on Peak in City Radius. +1[ICON_FOOD], +2[ICON_PRODUCTION], +1[ICON_COMMERCE] from all Owned Peaks. +1[ICON_COMMERCE] from Peaks in City Radius</English>
 		<French>[ICON_BULLET]Place le [COLOR_BUILDING_TEXT]Machu Picchu[COLOR_REVERT] sur un Pic de la ville[NEWLINE][ICON_BULLET]+1[ICON_FOOD], +2[ICON_PRODUCTION], +1[ICON_COMMERCE] pour tous les Pics possédés[NEWLINE][ICON_BULLET]+1[ICON_COMMERCE] des Pics dans le périmètre de la ville</French>
 		<Polish>[ICON_BULLET]Umieszcza [COLOR_BUILDING_TEXT]Machu Picchu[COLOR_REVERT] na Szczycie w okolicach miasta [NEWLINE][ICON_BULLET]+1[ICON_FOOD], +2[ICON_PRODUCTION], +1[ICON_COMMERCE] z każdego szczytu [NEWLINE][ICON_BULLET]+1[ICON_COMMERCE] z każdego okolicznego szczytu</Polish>
 	</TEXT>
@@ -205,7 +205,7 @@ meaning 'Golden Courtyard'), originally named Inti Kancha (' Temple of the Sun')
 		<Tag>TXT_KEY_UNITCOMBAT_RELIGION_ANDEANISM</Tag>
 		<English>Religion(Andeanism)</English>
 		<French>
-			<Text>Religion(Andeanisme)</Text>
+			<Text>(Religion) Andéanisme</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>

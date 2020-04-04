@@ -8,7 +8,9 @@
 			<Strategy>TXT_KEY_BUILDING_DUCK_FLOCKS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FLOCKS_OF_DUCK</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
@@ -50,7 +52,6 @@
 			<YieldChanges>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<iCost>-1</iCost>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_PEACOCK_FLOCKS</Type>
@@ -59,7 +60,9 @@
 			<Strategy>TXT_KEY_BUILDING_PEACOCK_FLOCKS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FLOCKS_OF_PEACOCK</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
@@ -101,7 +104,6 @@
 			<YieldChanges>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<iCost>-1</iCost>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_TURKEY_FLOCKS</Type>
@@ -110,7 +112,9 @@
 			<Strategy>TXT_KEY_BUILDING_TURKEY_FLOCKS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FLOCKS_OF_TURKEY</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<PrereqTech>TECH_POULTRY_DOMESTICATION</PrereqTech>
@@ -152,7 +156,6 @@
 			<YieldChanges>
 				<iYield>1</iYield>
 			</YieldChanges>
-			<iCost>-1</iCost>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

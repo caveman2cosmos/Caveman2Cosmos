@@ -259,7 +259,7 @@ class CvEventManager:
 				self.mapImpType = {
 					"IMPROVEMENT_GROW_FOREST"	: GC.getInfoTypeForString('IMPROVEMENT_GROW_FOREST'),
 					"IMPROVEMENT_YOUNG_FOREST"	: GC.getInfoTypeForString('IMPROVEMENT_YOUNG_FOREST'),
-					"IMPROVEMENT_PLANT_BAMBOO_GROVE"	: GC.getInfoTypeForString('IMPROVEMENT_PLANT_BAMBOO_GROVE'),
+					"IMPROVEMENT_PLANT_BAMBOO"	: GC.getInfoTypeForString('IMPROVEMENT_PLANT_BAMBOO'),
 					"IMPROVEMENT_PLANT_SAVANNA"	: GC.getInfoTypeForString('IMPROVEMENT_PLANT_SAVANNA'),
 					"IMPROVEMENT_FARM"			: GC.getInfoTypeForString('IMPROVEMENT_FARM')
 				}
@@ -903,13 +903,13 @@ class CvEventManager:
 			if not GAME.getSorenRandNum(10, "Gods"):
 
 				if not SDTK.sdObjectExists('Promo', CyUnitW):
-					CyUnitW.setDamage(0, False)
+					CyUnitW.setDamage(0, -1)
 					SDTK.sdObjectInit('Promo', CyUnitW, {'HealTurn' : GAME.getGameTurn()})
 				else:
 					iHealTurn = SDTK.sdObjectGetVal('Promo', CyUnitW, 'HealTurn')
 					iTurn = GAME.getGameTurn()
 					if iHealTurn is None or iTurn > iHealTurn:
-						CyUnitW.setDamage(0, False)
+						CyUnitW.setDamage(0, -1)
 						SDTK.sdObjectSetVal('Promo', CyUnitW, 'HealTurn', iTurn)
 
 		# Respawn promo
@@ -933,8 +933,8 @@ class CvEventManager:
 				iX = CyUnitL.getX()
 				iY = CyUnitL.getY()
 			CyUnit = CyPlayerL.initUnit(iUnit, iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_NORTH)
-			CyUnit.convert(CyUnitL)
-			CyUnit.setDamage(GAME.getSorenRandNum(40, "Damage") + 20, False)
+			CyUnit.convert(CyUnitL, True)
+			CyUnit.setDamage(GAME.getSorenRandNum(40, "Damage") + 20, -1)
 
 			CyUnit.finishMoves()
 
@@ -1073,7 +1073,7 @@ class CvEventManager:
 				iX = CyPlotW.getX()
 				iY = CyPlotW.getY()
 				CyUnitL.setXY(iX, iY, False, True, True)
-				CyUnitL.setDamage(100000, False)
+				CyUnitL.setDamage(100000, -1)
 
 				CyPlotL = CyUnitL.plot()
 				if not CyPlotL.isVisibleEnemyUnit(iPlayerW):
@@ -1128,7 +1128,7 @@ class CvEventManager:
 					if CyUnitL.isNPC(): continue
 					iChance = GAME.getSorenRandNum(5, "Jaguar")
 					if not iChance:
-						CyUnitW.setDamage(0, False)
+						CyUnitW.setDamage(0, -1)
 
 
 	def onCombatLogCalc(self, argsList):
@@ -1224,7 +1224,7 @@ class CvEventManager:
 			CyPlot.setImprovementType(-1)
 			CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_FOREST_YOUNG'), 0)
 
-		elif iImprovement == mapImpType['IMPROVEMENT_PLANT_BAMBOO_GROVE']:
+		elif iImprovement == mapImpType['IMPROVEMENT_PLANT_BAMBOO']:
 			CyPlot = GC.getMap().plot(iX, iY)
 			CyPlot.setImprovementType(-1)
 			CyPlot.setFeatureType(GC.getInfoTypeForString('FEATURE_BAMBOO'), 0)

@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- -->
-<!-- Promotion Infos -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4PromotionInfos xmlns="x-schema:../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<PromotionInfos>
 		<PromotionInfo>

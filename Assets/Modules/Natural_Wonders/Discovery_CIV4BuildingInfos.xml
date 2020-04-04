@@ -1,10 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- ReModified by StrategyOnly -->
-<!-- -->
-<!-- Building Infos -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4BuildingInfos xmlns="x-schema:../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
@@ -14,7 +8,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FIRST_TO_DISCOVER_AUYANTEPUI</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -35,7 +31,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FIRST_TO_DISCOVER_GREAT_BARRIER_REEF</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -56,7 +54,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FIRST_TO_DISCOVER_MT_SINAI</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -77,7 +77,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FIRST_TO_DISCOVER_MT_EVEREST</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -99,7 +101,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FIRST_TO_DISCOVER_MT_FUJI</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -120,7 +124,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FIRST_TO_DISCOVER_BAIKAL</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -141,7 +147,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FIRST_TO_DISCOVER_BARRINGER_CRATER</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -162,7 +170,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FIRST_TO_DISCOVER_BASALT_ORGAN</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -183,7 +193,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FIRST_TO_DISCOVER_DEVILS_TABLE</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -204,7 +216,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FIRST_TO_DISCOVER_SOPKA</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -225,7 +239,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FIRST_TO_DISCOVER_KRAKATOA</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
@@ -247,7 +263,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FIRST_TO_DISCOVER_NGORONGORO_CRATER</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -268,7 +286,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FIRST_TO_DISCOVER_NUKUORO</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -289,7 +309,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FIRST_TO_DISCOVER_PAMUKKALE</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -310,7 +332,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FIRST_TO_DISCOVER_PRAVCICKA_BRANA</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -331,7 +355,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FIRST_TO_DISCOVER_SHARK_BAY</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -352,7 +378,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FIRST_TO_DISCOVER_SUGARLOAF</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -373,7 +401,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FIRST_TO_DISCOVER_ULURU</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -394,7 +424,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FIRST_TO_DISCOVER_VICTORIA_FALLS</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -415,7 +447,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FIRST_TO_DISCOVER_KILIMANJARO</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -436,7 +470,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FIRST_TO_DISCOVER_DEAD_SEA</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -456,7 +492,9 @@
 			<Civilopedia>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<ArtDefineTag>ART_DEF_BUILDING_DISCOVERY_AUYANTEPUI</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -470,7 +508,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DISCOVERY_GREAT_BARRIER_REEF</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -484,7 +524,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DISCOVERY_MT_SINAI</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -498,7 +540,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DISCOVERY_MT_EVEREST</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -512,7 +556,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DISCOVERY_MT_FUJI</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -526,7 +572,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DISCOVERY_BAIKAL</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -540,7 +588,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DISCOVERY_BARRINGER_CRATER</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -554,7 +604,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DISCOVERY_BASALT_ORGAN</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -568,7 +620,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DISCOVERY_DEVILS_TABLE</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -582,7 +636,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DISCOVERY_SOPKA</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -596,7 +652,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DISCOVERY_KRAKATOA</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -610,7 +668,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DISCOVERY_NGORONGORO_CRATER</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -624,7 +684,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DISCOVERY_NUKUORO</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -638,7 +700,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DISCOVERY_PAMUKKALE</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -652,7 +716,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DISCOVERY_PRAVCICKA_BRANA</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -666,7 +732,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DISCOVERY_SHARK_BAY</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -680,7 +748,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DISCOVERY_SUGARLOAF</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -694,7 +764,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DISCOVERY_ULURU</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -708,7 +780,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DISCOVERY_VICTORIA_FALLS</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -722,7 +796,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DISCOVERY_KILIMANJARO</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -736,7 +812,9 @@
 			<Strategy>TXT_KEY_BUILDING_DISCOVERY_NATURAL_WONDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DISCOVERY_DEAD_SEA</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<CommerceChanges>
 				<iCommerce>0</iCommerce>
 				<iCommerce>0</iCommerce>
@@ -750,26 +828,25 @@
 			<Strategy>TXT_KEY_BUILDING_MOVIE_AUYANTEPUI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ANIMATION_STUDIO</ArtDefineTag>
-			<fVisibilityPriority>1</fVisibilityPriority>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
+			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ANIMATION</PrereqTech>
 			<bForceNoPrereqScaling>1</bForceNoPrereqScaling>
 			<PrereqAmountBuildings>
-                <PrereqBuilding>
-																				<BuildingType>BUILDING_NATURAL_WONDER_AUYANTEPUI</BuildingType>
-                    <iNumBuildingNeeded>1</iNumBuildingNeeded>
-                </PrereqBuilding>
-            </PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_NATURAL_WONDER_AUYANTEPUI</BuildingType>
+					<iNumBuildingNeeded>1</iNumBuildingNeeded>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_ANIMATION_STUDIO</BuildingType>
 			</PrereqInCityBuildings>
 			<FreeBonus>BONUS_HIT_ANIMATED_MOVIE</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
 			<iAsset>18</iAsset>
-			<iCost>-1</iCost>
-            <bAutoBuild>1</bAutoBuild>
+			<bAutoBuild>1</bAutoBuild>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

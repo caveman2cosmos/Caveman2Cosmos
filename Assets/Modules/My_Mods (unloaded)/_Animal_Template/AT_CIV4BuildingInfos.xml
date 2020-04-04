@@ -10,7 +10,9 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CROW_MYTH</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<FreeBuilding>BUILDING_CROW_MYTH_EFFECT</FreeBuilding>
@@ -55,8 +57,10 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CROW_MYTH</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<bNeverCapture>1</bNeverCapture>
-			<iCost>-1</iCost>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CROW_STORY</Type>
@@ -65,8 +69,10 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CROW_STORY</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<iCost>-1</iCost>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -102,8 +108,10 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CROW_STORIES</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<iCost>-1</iCost>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
@@ -140,8 +148,10 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_STORIES_EFFECT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CROW_STORIES</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ObsoleteTech>TECH_EDUCATION</ObsoleteTech>
-			<iCost>-1</iCost>
 			<iAsset>2</iAsset>
 			<iPower>2</iPower>
 			<fVisibilityPriority>1.0</fVisibilityPriority>

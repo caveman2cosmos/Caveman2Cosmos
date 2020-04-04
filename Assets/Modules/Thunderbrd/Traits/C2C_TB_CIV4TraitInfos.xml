@@ -10934,7 +10934,7 @@
 			</FreePromotionUnitCombatTypes>
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CARRION</BuildingType>
+					<BuildingType>BUILDING_GATHERER_CARRION</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -12518,7 +12518,7 @@
 			</FreePromotionUnitCombatTypes>
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CARRION</BuildingType>
+					<BuildingType>BUILDING_GATHERER_CARRION</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -13798,7 +13798,7 @@
 			</FreePromotionUnitCombatTypes>
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CARRION</BuildingType>
+					<BuildingType>BUILDING_GATHERER_CARRION</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -14824,7 +14824,7 @@
 			</FreePromotionUnitCombatTypes>
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_CARRION</BuildingType>
+					<BuildingType>BUILDING_GATHERER_CARRION</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -16318,10 +16318,12 @@
 					<BuildType>BUILD_SOLAR_PANELS</BuildType>
 					<iBuildWorkerSpeedModifier>100</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
+				<!-- Modularize
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_COLONY_SOLAR_ARRAY</BuildType>
 					<iBuildWorkerSpeedModifier>100</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
+				-->
 			</BuildWorkerSpeedModifierTypes>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
@@ -17333,10 +17335,12 @@
 					<BuildType>BUILD_SOLAR_PANELS</BuildType>
 					<iBuildWorkerSpeedModifier>100</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
+				<!-- Modularize
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_COLONY_SOLAR_ARRAY</BuildType>
 					<iBuildWorkerSpeedModifier>100</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
+				-->
 			</BuildWorkerSpeedModifierTypes>
 			<SpecialistYieldChanges>
 				<SpecialistYieldChange>
@@ -21912,11 +21916,11 @@
 			<iRevIdxHolyCityBad>-5</iRevIdxHolyCityBad>
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_OBELISK</BuildingType>
+					<BuildingType>BUILDING_MONUMENT</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_EGYPTIAN_OBELISK</BuildingType>
+					<BuildingType>BUILDING_OBELISK</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -21924,7 +21928,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ABYSSINIA_STELE</BuildingType>
+					<BuildingType>BUILDING_STELE</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -22002,11 +22006,11 @@
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_OBELISK</BuildingType>
+					<BuildingType>BUILDING_MONUMENT</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_EGYPTIAN_OBELISK</BuildingType>
+					<BuildingType>BUILDING_OBELISK</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -22014,7 +22018,7 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_ABYSSINIA_STELE</BuildingType>
+					<BuildingType>BUILDING_STELE</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -22173,11 +22177,11 @@
 			<iRevIdxHolyCityBad>-5</iRevIdxHolyCityBad>
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_OBELISK</BuildingType>
+					<BuildingType>BUILDING_MONUMENT</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_EGYPTIAN_OBELISK</BuildingType>
+					<BuildingType>BUILDING_OBELISK</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -22185,7 +22189,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ABYSSINIA_STELE</BuildingType>
+					<BuildingType>BUILDING_STELE</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -22263,11 +22267,11 @@
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_OBELISK</BuildingType>
+					<BuildingType>BUILDING_MONUMENT</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_EGYPTIAN_OBELISK</BuildingType>
+					<BuildingType>BUILDING_OBELISK</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -22275,7 +22279,7 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_ABYSSINIA_STELE</BuildingType>
+					<BuildingType>BUILDING_STELE</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -22434,11 +22438,11 @@
 			<iRevIdxHolyCityBad>-5</iRevIdxHolyCityBad>
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_OBELISK</BuildingType>
+					<BuildingType>BUILDING_MONUMENT</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_EGYPTIAN_OBELISK</BuildingType>
+					<BuildingType>BUILDING_OBELISK</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -22446,7 +22450,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ABYSSINIA_STELE</BuildingType>
+					<BuildingType>BUILDING_STELE</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -22524,11 +22528,11 @@
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_OBELISK</BuildingType>
+					<BuildingType>BUILDING_MONUMENT</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_EGYPTIAN_OBELISK</BuildingType>
+					<BuildingType>BUILDING_OBELISK</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -22536,7 +22540,7 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_ABYSSINIA_STELE</BuildingType>
+					<BuildingType>BUILDING_STELE</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -22695,11 +22699,11 @@
 			<iRevIdxHolyCityBad>-5</iRevIdxHolyCityBad>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_OBELISK</BuildingType>
+					<BuildingType>BUILDING_MONUMENT</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_EGYPTIAN_OBELISK</BuildingType>
+					<BuildingType>BUILDING_OBELISK</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -22707,7 +22711,7 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_ABYSSINIA_STELE</BuildingType>
+					<BuildingType>BUILDING_STELE</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -22866,11 +22870,11 @@
 			<iRevIdxHolyCityBad>5</iRevIdxHolyCityBad>
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_OBELISK</BuildingType>
+					<BuildingType>BUILDING_MONUMENT</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_EGYPTIAN_OBELISK</BuildingType>
+					<BuildingType>BUILDING_OBELISK</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -22878,7 +22882,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ABYSSINIA_STELE</BuildingType>
+					<BuildingType>BUILDING_STELE</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -22956,11 +22960,11 @@
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_OBELISK</BuildingType>
+					<BuildingType>BUILDING_MONUMENT</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_EGYPTIAN_OBELISK</BuildingType>
+					<BuildingType>BUILDING_OBELISK</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -22968,7 +22972,7 @@
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_ABYSSINIA_STELE</BuildingType>
+					<BuildingType>BUILDING_STELE</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -23127,11 +23131,11 @@
 			<iRevIdxHolyCityBad>5</iRevIdxHolyCityBad>
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_OBELISK</BuildingType>
+					<BuildingType>BUILDING_MONUMENT</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_EGYPTIAN_OBELISK</BuildingType>
+					<BuildingType>BUILDING_OBELISK</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -23139,7 +23143,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ABYSSINIA_STELE</BuildingType>
+					<BuildingType>BUILDING_STELE</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -23217,11 +23221,11 @@
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_OBELISK</BuildingType>
+					<BuildingType>BUILDING_MONUMENT</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_EGYPTIAN_OBELISK</BuildingType>
+					<BuildingType>BUILDING_OBELISK</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -23229,7 +23233,7 @@
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_ABYSSINIA_STELE</BuildingType>
+					<BuildingType>BUILDING_STELE</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -23388,11 +23392,11 @@
 			<iRevIdxHolyCityBad>5</iRevIdxHolyCityBad>
 			<BuildingProductionModifierTypes>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_OBELISK</BuildingType>
+					<BuildingType>BUILDING_MONUMENT</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_EGYPTIAN_OBELISK</BuildingType>
+					<BuildingType>BUILDING_OBELISK</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -23400,7 +23404,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ABYSSINIA_STELE</BuildingType>
+					<BuildingType>BUILDING_STELE</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -23478,11 +23482,11 @@
 			</BuildingProductionModifierTypes>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_OBELISK</BuildingType>
+					<BuildingType>BUILDING_MONUMENT</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_EGYPTIAN_OBELISK</BuildingType>
+					<BuildingType>BUILDING_OBELISK</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -23490,7 +23494,7 @@
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_ABYSSINIA_STELE</BuildingType>
+					<BuildingType>BUILDING_STELE</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -23649,11 +23653,11 @@
 			<iRevIdxHolyCityBad>5</iRevIdxHolyCityBad>
 			<BuildingHappinessModifierTypes>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_OBELISK</BuildingType>
+					<BuildingType>BUILDING_MONUMENT</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_EGYPTIAN_OBELISK</BuildingType>
+					<BuildingType>BUILDING_OBELISK</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -23661,7 +23665,7 @@
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_ABYSSINIA_STELE</BuildingType>
+					<BuildingType>BUILDING_STELE</BuildingType>
 					<iBuildingHappinessModifier>-1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -28948,6 +28952,7 @@
 						<iYield>1</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
+				<!-- Modularize
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_COLONY_SOLAR_ARRAY</ImprovementType>
 					<YieldChanges>
@@ -28988,6 +28993,7 @@
 						<iYield>1</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
+				-->
 			</ImprovementYieldChanges>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
@@ -29018,6 +29024,7 @@
 					<ImprovementType>IMPROVEMENT_SUBURBS</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
+				<!-- Modularize
 				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_SMALL</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
@@ -29034,6 +29041,7 @@
 					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_HUGE</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
+				-->
 			</ImprovementUpgradeModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
@@ -29104,6 +29112,7 @@
 					<BuildType>BUILD_SUBMERGED_TOWN</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
+				<!-- Modularize
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_COLONY_SOLAR_ARRAY</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
@@ -29124,6 +29133,7 @@
 					<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
+				-->
 			</BuildWorkerSpeedModifierTypes>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -29834,6 +29844,7 @@
 						<iYield>1</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
+				<!-- Modularize
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_COLONY_SOLAR_ARRAY</ImprovementType>
 					<YieldChanges>
@@ -29874,8 +29885,10 @@
 						<iYield>1</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
+				-->
 			</ImprovementYieldChanges>
 			<ImprovementUpgradeModifierTypes>
+			<!-- Modularize
 				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_SMALL</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
@@ -29892,12 +29905,14 @@
 					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_HUGE</ImprovementType>
 					<iImprovementUpgradeModifier>100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
+				-->
 			</ImprovementUpgradeModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_SUBMERGED_TOWN</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
+				<!-- Modularize
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_COLONY_SOLAR_ARRAY</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
@@ -29918,6 +29933,7 @@
 					<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
+				-->
 			</BuildWorkerSpeedModifierTypes>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -30222,6 +30238,7 @@
 						<iYield>-1</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
+				<!-- Modularize
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_COLONY_SOLAR_ARRAY</ImprovementType>
 					<YieldChanges>
@@ -30262,6 +30279,7 @@
 						<iYield>-1</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
+				-->
 			</ImprovementYieldChanges>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
@@ -30292,6 +30310,7 @@
 					<ImprovementType>IMPROVEMENT_SUBURBS</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
+				<!-- Modularize
 				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_SMALL</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
@@ -30308,6 +30327,7 @@
 					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_HUGE</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
+				-->
 			</ImprovementUpgradeModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
@@ -30378,6 +30398,7 @@
 					<BuildType>BUILD_SUBMERGED_TOWN</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
+				<!-- Modularize
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_COLONY_SOLAR_ARRAY</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
@@ -30398,6 +30419,7 @@
 					<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
+				-->
 			</BuildWorkerSpeedModifierTypes>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -31083,6 +31105,7 @@
 						<iYield>-1</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
+				<!-- Modularize
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_COLONY_SOLAR_ARRAY</ImprovementType>
 					<YieldChanges>
@@ -31123,8 +31146,10 @@
 						<iYield>-1</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
+				-->
 			</ImprovementYieldChanges>
 			<ImprovementUpgradeModifierTypes>
+				<!-- Modularize
 				<ImprovementUpgradeModifierType>
 					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_SMALL</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
@@ -31141,12 +31166,14 @@
 					<ImprovementType>IMPROVEMENT_COLONY_HABITAT_HUGE</ImprovementType>
 					<iImprovementUpgradeModifier>-100</iImprovementUpgradeModifier>
 				</ImprovementUpgradeModifierType>
+				-->
 			</ImprovementUpgradeModifierTypes>
 			<BuildWorkerSpeedModifierTypes>
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_SUBMERGED_TOWN</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
+				<!-- Modularize
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_COLONY_SOLAR_ARRAY</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
@@ -31167,6 +31194,7 @@
 					<BuildType>BUILD_COLONY_HABITAT_HUGE</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
+				-->
 			</BuildWorkerSpeedModifierTypes>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -31425,6 +31453,7 @@
 						<iYield>0</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
+				<!-- Modularize
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_COLONY_HYDROPONICS</ImprovementType>
 					<YieldChanges>
@@ -31433,6 +31462,7 @@
 						<iYield>0</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
+				-->
 			</ImprovementYieldChanges>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
@@ -31537,6 +31567,7 @@
 					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
+				<!-- Modularize
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
@@ -31557,6 +31588,7 @@
 					<BuildType>BUILD_COLONY_HYDROPONICS</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
+				-->
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_VERTICAL_FARM</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
@@ -31990,6 +32022,7 @@
 						<iYield>0</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
+				<!-- Modularize
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_COLONY_HYDROPONICS</ImprovementType>
 					<YieldChanges>
@@ -31998,6 +32031,7 @@
 						<iYield>0</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
+				-->
 			</ImprovementYieldChanges>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
@@ -32102,6 +32136,7 @@
 					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
+				<!-- Modularize
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
@@ -32122,6 +32157,7 @@
 					<BuildType>BUILD_COLONY_HYDROPONICS</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
+				-->
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_VERTICAL_FARM</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
@@ -32489,6 +32525,7 @@
 						<iYield>0</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
+				<!-- Modularize
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_COLONY_HYDROPONICS</ImprovementType>
 					<YieldChanges>
@@ -32497,6 +32534,7 @@
 						<iYield>0</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
+				-->
 			</ImprovementYieldChanges>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
@@ -32601,6 +32639,7 @@
 					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
+				<!-- Modularize
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
@@ -32621,6 +32660,7 @@
 					<BuildType>BUILD_COLONY_HYDROPONICS</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
+				-->
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_VERTICAL_FARM</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
@@ -32937,6 +32977,7 @@
 						<iYield>0</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
+				<!-- Modularize
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_COLONY_HYDROPONICS</ImprovementType>
 					<YieldChanges>
@@ -32945,6 +32986,7 @@
 						<iYield>0</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
+				-->
 			</ImprovementYieldChanges>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
@@ -33049,6 +33091,7 @@
 					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
+				<!-- Modularize
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
@@ -33069,6 +33112,7 @@
 					<BuildType>BUILD_COLONY_HYDROPONICS</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
+				-->
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_VERTICAL_FARM</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
@@ -33397,6 +33441,7 @@
 						<iYield>0</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
+				<!-- Modularize
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_COLONY_HYDROPONICS</ImprovementType>
 					<YieldChanges>
@@ -33405,6 +33450,7 @@
 						<iYield>0</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
+				-->
 			</ImprovementYieldChanges>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
@@ -33509,6 +33555,7 @@
 					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
+				<!-- Modularize
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
@@ -33529,6 +33576,7 @@
 					<BuildType>BUILD_COLONY_HYDROPONICS</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
+				-->
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_VERTICAL_FARM</BuildType>
 					<iBuildWorkerSpeedModifier>-50</iBuildWorkerSpeedModifier>
@@ -33936,6 +33984,7 @@
 						<iYield>0</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
+				<!-- Modularize
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_COLONY_HYDROPONICS</ImprovementType>
 					<YieldChanges>
@@ -33944,6 +33993,7 @@
 						<iYield>0</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
+				-->
 			</ImprovementYieldChanges>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
@@ -34048,6 +34098,7 @@
 					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
+				<!-- Modularize
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
@@ -34068,6 +34119,7 @@
 					<BuildType>BUILD_COLONY_HYDROPONICS</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
+				-->
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_VERTICAL_FARM</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
@@ -34404,6 +34456,7 @@
 						<iYield>0</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
+				<!-- Modularize
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_COLONY_HYDROPONICS</ImprovementType>
 					<YieldChanges>
@@ -34412,6 +34465,7 @@
 						<iYield>0</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
+				-->
 			</ImprovementYieldChanges>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
@@ -34516,6 +34570,7 @@
 					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
+				<!-- Modularize
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
@@ -34536,6 +34591,7 @@
 					<BuildType>BUILD_COLONY_HYDROPONICS</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
+				-->
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_VERTICAL_FARM</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
@@ -34829,6 +34885,7 @@
 						<iYield>0</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
+				<!-- Modularize
 				<ImprovementYieldChange>
 					<ImprovementType>IMPROVEMENT_COLONY_HYDROPONICS</ImprovementType>
 					<YieldChanges>
@@ -34837,6 +34894,7 @@
 						<iYield>0</iYield>
 					</YieldChanges>
 				</ImprovementYieldChange>
+				-->
 			</ImprovementYieldChanges>
 			<ImprovementUpgradeModifierTypes>
 				<ImprovementUpgradeModifierType>
@@ -34941,6 +34999,7 @@
 					<BuildType>BUILD_MUSHROOM_GATHERER</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
+				<!-- Modularize
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
@@ -34961,6 +35020,7 @@
 					<BuildType>BUILD_COLONY_HYDROPONICS</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
+				-->
 				<BuildWorkerSpeedModifierType>
 					<BuildType>BUILD_VERTICAL_FARM</BuildType>
 					<iBuildWorkerSpeedModifier>-25</iBuildWorkerSpeedModifier>
@@ -35157,7 +35217,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_EGYPTIAN_OBELISK</BuildingType>
+					<BuildingType>BUILDING_OBELISK</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -35325,7 +35385,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ARTIST_GUILD</BuildingType>
+					<BuildingType>BUILDING_ARTIST_COLONY</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -35619,7 +35679,7 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_ARTIST_GUILD</BuildingType>
+					<BuildingType>BUILDING_ARTIST_COLONY</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -36261,7 +36321,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_EGYPTIAN_OBELISK</BuildingType>
+					<BuildingType>BUILDING_OBELISK</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -36839,7 +36899,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ARTIST_GUILD</BuildingType>
+					<BuildingType>BUILDING_ARTIST_COLONY</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -36981,7 +37041,7 @@
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
-					<BuildingType>BUILDING_ARTIST_GUILD</BuildingType>
+					<BuildingType>BUILDING_ARTIST_COLONY</BuildingType>
 					<iBuildingHappinessModifier>1</iBuildingHappinessModifier>
 				</BuildingHappinessModifierType>
 				<BuildingHappinessModifierType>
@@ -37615,7 +37675,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_EGYPTIAN_OBELISK</BuildingType>
+					<BuildingType>BUILDING_OBELISK</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -37783,7 +37843,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ARTIST_GUILD</BuildingType>
+					<BuildingType>BUILDING_ARTIST_COLONY</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -38466,7 +38526,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_EGYPTIAN_OBELISK</BuildingType>
+					<BuildingType>BUILDING_OBELISK</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -38961,7 +39021,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_ARTIST_GUILD</BuildingType>
+					<BuildingType>BUILDING_ARTIST_COLONY</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -39592,11 +39652,11 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_JEWELLERY</BuildingType>
+					<BuildingType>BUILDING_JEWELER</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_AMBER_GATHERER</BuildingType>
+					<BuildingType>BUILDING_GATHERER_AMBER</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -39604,7 +39664,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_JADE_GATHERER</BuildingType>
+					<BuildingType>BUILDING_GATHERER_JADE</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -40349,11 +40409,11 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_JEWELLERY</BuildingType>
+					<BuildingType>BUILDING_JEWELER</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_AMBER_GATHERER</BuildingType>
+					<BuildingType>BUILDING_GATHERER_AMBER</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -40361,7 +40421,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_JADE_GATHERER</BuildingType>
+					<BuildingType>BUILDING_GATHERER_JADE</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -41360,11 +41420,11 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_JEWELLERY</BuildingType>
+					<BuildingType>BUILDING_JEWELER</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_AMBER_GATHERER</BuildingType>
+					<BuildingType>BUILDING_GATHERER_AMBER</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -41372,7 +41432,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_JADE_GATHERER</BuildingType>
+					<BuildingType>BUILDING_GATHERER_JADE</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -42112,11 +42172,11 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_JEWELLERY</BuildingType>
+					<BuildingType>BUILDING_JEWELER</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_AMBER_GATHERER</BuildingType>
+					<BuildingType>BUILDING_GATHERER_AMBER</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -42124,7 +42184,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_JADE_GATHERER</BuildingType>
+					<BuildingType>BUILDING_GATHERER_JADE</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -69084,7 +69144,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_LICHEN_GATHERER</BuildingType>
+					<BuildingType>BUILDING_GATHERER_LICHEN</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -69765,7 +69825,7 @@
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_LICHEN_GATHERER</BuildingType>
+					<BuildingType>BUILDING_GATHERER_LICHEN</BuildingType>
 					<iBuildingProductionModifier>25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -70751,7 +70811,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_LICHEN_GATHERER</BuildingType>
+					<BuildingType>BUILDING_GATHERER_LICHEN</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -71467,7 +71527,7 @@
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
-					<BuildingType>BUILDING_LICHEN_GATHERER</BuildingType>
+					<BuildingType>BUILDING_GATHERER_LICHEN</BuildingType>
 					<iBuildingProductionModifier>-25</iBuildingProductionModifier>
 				</BuildingProductionModifierType>
 				<BuildingProductionModifierType>
@@ -72481,7 +72541,7 @@
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PLANT_BAMBOO_GROVE</BuildType>
+					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
 					<iBuildWorkerSpeedModifier>50</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -72788,7 +72848,7 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PLANT_BAMBOO_GROVE</BuildType>
+					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -73096,7 +73156,7 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PLANT_BAMBOO_GROVE</BuildType>
+					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
@@ -73322,7 +73382,7 @@
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>
-					<BuildType>BUILD_PLANT_BAMBOO_GROVE</BuildType>
+					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
 					<iBuildWorkerSpeedModifier>25</iBuildWorkerSpeedModifier>
 				</BuildWorkerSpeedModifierType>
 				<BuildWorkerSpeedModifierType>

@@ -19,7 +19,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DISABLES</Tag>
 		<English>[ICON_BULLET]Removes access to [LINK=%s1_BonusNameType]%s2_BonusName[\LINK][COLOR_REVERT] (%F3_BonusIcon) from the city.</English>
-		<French>[ICON_BULLET]Interdir l'accès au bonus [LINK=%s1_BonusNameType]%s2_BonusName[\LINK][COLOR_REVERT] (%F3_BonusIcon) de la ville.</French>
+		<French>[ICON_BULLET]Interdit l'accès au bonus [LINK=%s1_BonusNameType]%s2_BonusName[\LINK][COLOR_REVERT] (%F3_BonusIcon) de la ville.</French>
 		<German>[ICON_BULLET]Entfernt den Bonus [LINK=%s1_BonusNameType]%s2_BonusName[\LINK][COLOR_REVERT] (%F3_BonusIcon) aus der Stadt.</German>
 		<Italian>[ICON_BULLET]Elimina l'accesso a [LINK=%s1_BonusNameType]%s2_BonusName[\LINK][COLOR_REVERT] (%F3_BonusIcon) dalla città.</Italian>
 		<Spanish>[ICON_BULLET]Elimina el acceso [NUM1:al:a la:a los:a las] [LINK=%s1_BonusNameType]%s2_BonusName[\LINK][COLOR_REVERT] (%F3_BonusIcon) de la ciudad.</Spanish>
@@ -39,14 +39,6 @@
 		<German>[ICON_BULLET]Freies Gebäude [COLOR_BUILDING_TEXT][LINK=%s2_NameType]%s1_Name[\LINK][COLOR_REVERT] in jeder Stadt</German>
 		<Italian>[ICON_BULLET][COLOR_BUILDING_TEXT][LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT] [NUM1:gratuito:gratuita:gratuiti:gratuite] in ogni città</Italian>
 		<Spanish>[ICON_BULLET][NUM1:Un:Una:Unos:Unas] [COLOR_BUILDING_TEXT][LINK=%s1_NameType]%s2:1_Name[\LINK][COLOR_REVERT] gratis en todas las ciudades.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FREE_PROMOTION</Tag>
-		<English>[ICON_BULLET]Free [COLOR_HIGHLIGHT_TEXT][LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT] Promotion for Units Built in this City</English>
-		<French>[ICON_BULLET]Promotion gratuite [COLOR_HIGHLIGHT_TEXT]([LINK=%s1_NameType]%s2_Name[\LINK])[COLOR_REVERT] pour les unités construites dans cette ville</French>
-		<German>[ICON_BULLET]Freie Beförderung zu [COLOR_HIGHLIGHT_TEXT][LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT] für die in dieser Stadt errichteten Einheiten</German>
-		<Italian>[ICON_BULLET]Promozione [COLOR_HIGHLIGHT_TEXT][LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT] gratuita per le unità costruite in questa città.</Italian>
-		<Spanish>[ICON_BULLET]Da gratis el ascenso de [COLOR_HIGHLIGHT_TEXT][LINK=%s1_NameType]%s2_Name[\LINK][COLOR_REVERT] a las unidades construidas en esta ciudad</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FREE_SPECIALIST</Tag>
@@ -186,11 +178,6 @@
 		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs arquebusiers pour partager vos aventures!</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_GOODY_ASSAULT_MECH</Tag>
-		<English>[SPACE]You've found an abandoned Mech left behind by an intrepid, and probably now dead, private explorer!</English>
-		<French>[SPACE]Vous avez trouvé un Mech abandonnés laissés par un explorateur intrépide privé, et probablement mort aujourd'hui!</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_GOODY_AXEMAN</Tag>
 		<English>[SPACE]The tribe has agreed to send one of its axemen along with you!</English>
 		<French>[SPACE]Les villageois ont accepté de vous confier un de leurs guerriers avec hache pour partager vos aventures!</French>
@@ -315,18 +302,18 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PLACED_BONUS</Tag>
-		<English>The fruits of the land are revealed!  You have successfully placed or discovered a new source of %s1_BonusName.</English>
-		<French>Les fruits de la terre se dévoilent! Vous avez réussi à placer ou à découvrir une nouvelle source de %s1_BonusName.</French>
+		<English>The fruits of the land are revealed! You have successfully placed or discovered a new source of %s1_BonusName.</English>
+		<French>Les fruits de la terre se dévoilent! Vous avez réussi à placer ou à découvrir une nouvelle source de [COLOR_HIGHLIGHT_TEXT]%s1_BonusName[COLOR_REVERT].</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PLACED_BONUS_FAIL</Tag>
-		<English>The land refuses to give up its secrets!  You have failed to place or discover a resource.</English>
+		<English>The land refuses to give up its secrets! You have failed to place or discover a resource.</English>
 		<French>La terre refuse de livrer ses secrets! Vous n'avez pas réussi à placer ou à découvrir une ressource.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PLAYER_ADOPTED_CIVIC</Tag>
 		<English>%s1_PlyrName has adopted the %s2_CvcOptionName civic [COLOR_HIGHLIGHT_TEXT]%s3_CvcName[COLOR_REVERT]!</English>
-		<French>%s1_PlyrName a adopté: %s2_CvcOptionName - [COLOR_HIGHLIGHT_TEXT]%s3_CvcName[COLOR_REVERT]!</French>
+		<French>%s1_PlyrName a adopté la doctrine (%s2_CvcOptionName) : [COLOR_HIGHLIGHT_TEXT]%s3_CvcName[COLOR_REVERT] !</French>
 		<German>%s1_PlyrName hat angenommen: %s2_CvcOptionName - [COLOR_HIGHLIGHT_TEXT]%s3_CvcName[COLOR_REVERT]!</German>
 		<Italian>%s1_PlyrName ha adottato: %s2_CvcOptionName - [COLOR_HIGHLIGHT_TEXT]%s3_CvcName[COLOR_REVERT]!</Italian>
 		<Spanish>%s1_PlyrName ha adoptado: %s2_CvcOptionName - [COLOR_HIGHLIGHT_TEXT]%s3_CvcName[COLOR_REVERT]!</Spanish>
@@ -334,7 +321,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_MISC_PLAYER_CONVERT_RELIGION</Tag>
 		<English>%s1_PlyrName has converted to [COLOR_HIGHLIGHT_TEXT]%s2_RelName[COLOR_REVERT]!</English>
-		<French>%s1_PlyrName se convertit à la religion: [COLOR_HIGHLIGHT_TEXT]%s2_RelName[COLOR_REVERT]!</French>
+		<French>%s1_PlyrName se convertit à la religion : [COLOR_HIGHLIGHT_TEXT]%s2_RelName[COLOR_REVERT] !</French>
 		<German>%s1_PlyrName konvertiert zur Religion [COLOR_HIGHLIGHT_TEXT]%s2_RelName[COLOR_REVERT]!</German>
 		<Italian>%s1_PlyrName si converte alla religione [COLOR_HIGHLIGHT_TEXT]%s2:2_RelName[COLOR_REVERT]!</Italian>
 		<Spanish>%s1_PlyrName se ha convertido al [COLOR_HIGHLIGHT_TEXT]%s2_RelName[COLOR_REVERT]!</Spanish>
@@ -346,6 +333,22 @@
 		<German>[SPACE]Ihr habt %d1_Num [ICON_RESEARCH] für die Erforschung [NUM2:des:der:des:der:der:der] %s2:2_TECH hinzugewonnen.</German>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MISC_WONDER_COMPLETED</Tag>
+		<English>%s1_PlyrName has completed %s2_WndrName!</English>
+		<French>%s1_PlyrName a construit la merveille : [COLOR_HIGHLIGHT_TEXT]%s2_WndrName[COLOR_REVERT] !</French>
+		<German>%s1_PlyrName hat das Wunder %s2_WndrName fertig gestellt!</German>
+		<Italian>%s1_PlyrName ha completato [NUM2:il:la] %s2_WndrName!</Italian>
+		<Spanish>%s1_PlyrName ha terminado %s2_WndrName.</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_WONDER_COMPLETED_UNKNOWN</Tag>
+		<English>%s1_WndrName has been built in a far away land!</English>
+		<French>[COLOR_GREY]Cette merveille ([COLOR_REVERT][COLOR_HIGHLIGHT_TEXT]%s1_WndrName[COLOR_REVERT])[COLOR_GREY] a été construite dans un pays lointain ![COLOR_REVERT]</French>
+		<German>Das Wunder %s1_WndrName wurde in einem fernen Land errichtet!</German>
+		<Italian>[NUM1:Il:La] %s1_WndrName è [NUM1:stato costruito:stata costruita] in una terra lontana!</Italian>
+		<Spanish>Han construido %s1_WndrName en una tierra muy lejana.</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MISC_YOUR_CRIMINAL_CAUGHT</Tag>
 		<English>Your %s1_UnitName was thwarted and is now on the run from the law!</English>
 		<French>Votre %s1_UnitName a été contrecarré et est maintenant en fuite pour échapper aux autorités!</French>
@@ -353,7 +356,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_TECH_YIELD</Tag>
 		<English>%s1: %D2%F3 (with [LINK=%s4_BonusType]%s5_Bonus[\LINK])</English>
-		<French>%s1:  %D2%F3 (avec [LINK=%s4_BonusType]%s5_Bonus[\LINK])</French>
+		<French>%s1 : %D2%F3 (avec [LINK=%s4_BonusType]%s5_Bonus[\LINK])</French>
 		<German>%s1: %D2%F3 (mit [LINK=%s4_BonusType]%s5_Bonus[\LINK])</German>
 		<Italian>%s1: %D2%F3 (con [LINK=%s4_BonusType]%s5_Bonus[\LINK])</Italian>
 		<Spanish>%s1: %D2 %F3 (con [LINK=%s4_BonusType]%s5_Bonus[\LINK])</Spanish>
@@ -524,32 +527,6 @@
 		<Spanish>[ICON_BULLET]%D1_Change%% a la probabilidad de retirarse</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_REPLACED_BY_BUILDING</Tag>
-		<English>Replaced by [LINK=%s1_default_buildingType]%s2_default_building[\LINK]</English>
-		<French>Remplacé par [LINK=%s1_default_buildingType]%s2_default_building[\LINK]</French>
-		<German>ersetzt durch [LINK=%s1_default_buildingType]%s2_default_building[\LINK]</German>
-		<Italian>Sostituita dall'edificià [LINK=%s1_default_buildingType]%s2_default_building[\LINK]</Italian>
-		<Spanish>Sustituido por [LINK=%s1_default_buildingType]%s2_default_building[\LINK]</Spanish>
-		<Polish>Zastąpione przez: [LINK=%s1_default_buildingType]%s2_default_building[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REPLACED_BY_UNIT</Tag>
-		<English>Replaced by [LINK=%s1_default_unitType]%s2_default_unit[\LINK]</English>
-		<French>Remplacé par [LINK=%s1_default_unitType]%s2_default_unit[\LINK]</French>
-		<German>ersetzt durch [LINK=%s1_default_unitType]%s2_default_unit[\LINK]</German>
-		<Spanish>Sustituida por [LINK=%s1_default_unitType]%s2_default_unit[\LINK]</Spanish>
-		<Italian>Sostituita dall'unità [LINK=%s1_default_unitType]%s2_default_unit[\LINK]</Italian>
-		<Polish>Zastąpione przez [LINK=%s1_default_unitType]%s2_default_unit[\LINK]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_REPLACES_UNIT</Tag>
-		<English>Replaces [LINK=%s1_default_unitType]%s2_default_unit[\LINK]</English>
-		<French>Remplace : [LINK=%s1_default_unitType]%s2_default_unit[\LINK]</French>
-		<German>Ersetzt [LINK=%s1_default_unitType]%s2_default_unit[\LINK]</German>
-		<Italian>Sostituisce l'unità [LINK=%s1_default_unitType]%s2_default_unit[\LINK]</Italian>
-		<Spanish>Reemplaza a la unidad de [LINK=%s1_default_unitType]%s2_default_unit[\LINK]</Spanish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_REQUIRES_PREREQUISITE_RELIGION</Tag>
 		<English>[ICON_BULLET]This building requires %F1_RelIcon in the city.</English>
 		<French>[ICON_BULLET]Ce Bâtiment requiert %F1_RelIcon dans la Ville.</French>
@@ -562,8 +539,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_REQUIRES_TECH</Tag>
 		<English>[COLOR_WARNING_TEXT]Requires [COLOR_TECH_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT][COLOR_REVERT]</English>
-		<French>[COLOR_WARNING_TEXT]Requiert [COLOR_TECH_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT][COLOR_REVERT]
-</French>
+		<French>[COLOR_WARNING_TEXT]Requiert [COLOR_TECH_TEXT][LINK=%s1_TechType]%s2_TechName[\LINK][COLOR_REVERT][COLOR_REVERT]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_REQUIRES_TECH_ANYONE</Tag>
@@ -602,7 +578,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRADE_ADOPT_CIVIC</Tag>
 		<English>Would adopt the %s1_CvcOptionName civic [COLOR_HIGHLIGHT_TEXT]%s2_CvcName[COLOR_REVERT].</English>
-		<French>Adoptera %s1_CvcOptionName - [COLOR_HIGHLIGHT_TEXT]%s2_CvcName[COLOR_REVERT].</French>
+		<French>Adoptera la doctrine (%s1_CvcOptionName) : [COLOR_HIGHLIGHT_TEXT]%s2_CvcName[COLOR_REVERT].</French>
 		<German>Würde annehmen %s1_CvcOptionName - [COLOR_HIGHLIGHT_TEXT]%s2_CvcName[COLOR_REVERT].</German>
 		<Italian>Adotterà %s1_CvcOptionName - [COLOR_HIGHLIGHT_TEXT]%s2_CvcName[COLOR_REVERT].</Italian>
 		<Spanish>Adoptará %s1_CvcOptionName - [COLOR_HIGHLIGHT_TEXT]%s2_CvcName[COLOR_REVERT].</Spanish>
@@ -610,26 +586,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRADE_CONVERT_RELIGION</Tag>
 		<English>Would convert to [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT].</English>
-		<French>Se convertira à la religion: [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT].</French>
+		<French>Se convertira à la religion : [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT].</French>
 		<German>Wird zur Religion [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT] konvertieren.</German>
 		<Italian>Si convertirà alla religione [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT].</Italian>
 		<Spanish>Se convertirá al [COLOR_HIGHLIGHT_TEXT]%s1_Religion[COLOR_REVERT].</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIQUE_BUILDING</Tag>
-		<English>Unique Building for [LINK=%s1_civType]%s2_civDesc[\LINK]</English>
-		<French>Bâtiment unique pour [LINK=%s1_civType]%s2_civDesc[\LINK]</French>
-		<German>Einzigartiges Gebäude für: [LINK=%s1_civType]%s2_civDesc[\LINK]</German>
-		<Italian>Edificio unico [LINK=%s1_civType]%s2_civDesc[\LINK]</Italian>
-		<Spanish>Edificio exclusivo del [LINK=%s1_civType]%s2_civDesc[\LINK]</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIQUE_UNIT</Tag>
-		<English>Unique Unit for [LINK=%s1_civType]%s2_civ[\LINK]</English>
-		<French>Unité unique pour : [LINK=%s1_civType]%s2_civ[\LINK]</French>
-		<German>Spezialeinheit der Zivilisation [LINK=%s1_civType]%s2_civ[\LINK]</German>
-		<Italian>Unità unica per la civiltà [LINK=%s1_civType]%s2_civ[\LINK]</Italian>
-		<Spanish>Unidad exclusiva de [LINK=%s1_civType]%s2_civ[\LINK]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ATTACK_MOD_VS_CLASS</Tag>

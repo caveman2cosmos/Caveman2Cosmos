@@ -4463,7 +4463,7 @@ def canTriggerSyntheticFuels(argsList):
   kTriggeredData = argsList[0]
   pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
 
-  iEthanol = GC.getInfoTypeForString("BUILDING_CORPORATION_3")
+  iEthanol = GC.getInfoTypeForString("BUILDING_CORPORATION_3_HQ")
   if pPlayer.getBuildingCountWithUpgrades(iEthanol) > 0:
     return False
   bOil = GC.getInfoTypeForString("BONUS_OIL")
@@ -7746,20 +7746,22 @@ def doMinorFire(argsList):
 	iBurnBuilding = -1
 	iHighFlamm = 0
 	for j in xrange(GC.getNumBuildingInfos()):
-		if CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1: continue
+		if CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1 or isLimitedWonder(j):
+			continue
 		CvBuilding = GC.getBuildingInfo(j)
-		if CvBuilding.getProductionCost() > 0 and not isLimitedWonder(j) and not CvBuilding.isAutoBuild():
+		if CvBuilding.getProductionCost() < 1 or CvBuilding.isNukeImmune() or CvBuilding.isAutoBuild():
+			continue
 
-			for k in xrange(GC.getNumBuildingInfos()):
-				if CyCity.getNumRealBuilding(k) > 0 and CvBuilding.isReplaceBuilding(k):
-					break
-			else:
-				randNum = GAME.getSorenRandNum(iFlammRand, "Buildings destroyed by fire.")
-				iFlamm = CvBuilding.getProperties().getValueByProperty(GC.getInfoTypeForString("PROPERTY_FLAMMABILITY"))
-				iFlammScore = iFlamm + randNum
-				if iFlammScore > iHighFlamm:
-					iHighFlamm = iFlammScore
-					iBurnBuilding = j
+		for k in xrange(GC.getNumBuildingInfos()):
+			if CyCity.getNumRealBuilding(k) > 0 and CvBuilding.isReplaceBuilding(k):
+				break
+		else:
+			randNum = GAME.getSorenRandNum(iFlammRand, "Buildings destroyed by fire.")
+			iFlamm = CvBuilding.getProperties().getValueByProperty(GC.getInfoTypeForString("PROPERTY_FLAMMABILITY"))
+			iFlammScore = iFlamm + randNum
+			if iFlammScore > iHighFlamm:
+				iHighFlamm = iFlammScore
+				iBurnBuilding = j
 
 	if iBurnBuilding != -1:
 		szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", (GC.getBuildingInfo(iBurnBuilding).getTextKey(), ))
@@ -7786,20 +7788,22 @@ def doMajorFire(argsList):
 		if currFlamm <= iFlammEnd:
 			break
 		for j in xrange(GC.getNumBuildingInfos()):
-			if CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1: continue
+			if CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1 or isLimitedWonder(j):
+				continue
 			CvBuilding = GC.getBuildingInfo(j)
-			if CvBuilding.getProductionCost() > 0 and not CvBuilding.isAutoBuild() and not isLimitedWonder(j):
+			if CvBuilding.getProductionCost() < 1 or CvBuilding.isNukeImmune() or CvBuilding.isAutoBuild():
+				continue
 
-				for k in xrange(GC.getNumBuildingInfos()):
-					if CyCity.getNumRealBuilding(k) > 0 and CvBuilding.isReplaceBuilding(k):
-						break
-				else:
-					randNum = GAME.getSorenRandNum(iFlammRand, "Buildings destroyed by fire.")
-					iFlamm = CvBuilding.getProperties().getValueByProperty(GC.getInfoTypeForString("PROPERTY_FLAMMABILITY"))
-					iFlammScore = iFlamm + randNum
-					if iFlammScore > iHighFlamm:
-						iHighFlamm = iFlammScore
-						iBurnBuilding = j
+			for k in xrange(GC.getNumBuildingInfos()):
+				if CyCity.getNumRealBuilding(k) > 0 and CvBuilding.isReplaceBuilding(k):
+					break
+			else:
+				randNum = GAME.getSorenRandNum(iFlammRand, "Buildings destroyed by fire.")
+				iFlamm = CvBuilding.getProperties().getValueByProperty(GC.getInfoTypeForString("PROPERTY_FLAMMABILITY"))
+				iFlammScore = iFlamm + randNum
+				if iFlammScore > iHighFlamm:
+					iHighFlamm = iFlammScore
+					iBurnBuilding = j
 		if iBurnBuilding != -1:
 			szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", (GC.getBuildingInfo(iBurnBuilding).getTextKey(), ))
 			CyInterface().addMessage(kTriggeredData.ePlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, GC.getBuildingInfo(iBurnBuilding).getButton(), GC.getInfoTypeForString("COLOR_RED"), CyCity.getX(), CyCity.getY(), True, True)
@@ -7836,20 +7840,22 @@ def doCatastrophicFire(argsList):
 		iHighFlamm = 0
 
 		for j in xrange(GC.getNumBuildingInfos()):
-			if CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1: continue
+			if CyTeam.isObsoleteBuilding(j) or CyCity.getNumRealBuilding(j) < 1 or isLimitedWonder(j):
+				continue
 			CvBuilding = GC.getBuildingInfo(j)
-			if CvBuilding.getProductionCost() > 0 and not isLimitedWonder(j) and not CvBuilding.isAutoBuild():
+			if CvBuilding.getProductionCost() < 1 or CvBuilding.isNukeImmune() or CvBuilding.isAutoBuild():
+				continue
 
-				for k in xrange(GC.getNumBuildingInfos()):
-					if CyCity.getNumRealBuilding(k) > 0 and CvBuilding.isReplaceBuilding(k):
-						break
-				else:
-					randNum = GAME.getSorenRandNum(iFlammRand, "Buildings destroyed by fire.")
-					iFlamm = CvBuilding.getProperties().getValueByProperty(iProp)
-					iFlammScore = iFlamm + randNum
-					if iFlammScore > iHighFlamm:
-						iHighFlamm = iFlammScore
-						iBurnBuilding = j
+			for k in xrange(GC.getNumBuildingInfos()):
+				if CyCity.getNumRealBuilding(k) > 0 and CvBuilding.isReplaceBuilding(k):
+					break
+			else:
+				randNum = GAME.getSorenRandNum(iFlammRand, "Buildings destroyed by fire.")
+				iFlamm = CvBuilding.getProperties().getValueByProperty(iProp)
+				iFlammScore = iFlamm + randNum
+				if iFlammScore > iHighFlamm:
+					iHighFlamm = iFlammScore
+					iBurnBuilding = j
 		if iBurnBuilding != -1:
 			szBuffer = TRNSLTR.getText("TXT_KEY_EVENT_CITY_IMPROVEMENT_DESTROYED", (GC.getBuildingInfo(iBurnBuilding).getTextKey(),))
 			CyInterface().addMessage(kTriggeredData.ePlayer, False, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_BOMBARDED", InterfaceMessageTypes.MESSAGE_TYPE_INFO, GC.getBuildingInfo(iBurnBuilding).getButton(), GC.getInfoTypeForString("COLOR_RED"), CyCity.getX(), CyCity.getY(), True, True)
@@ -7857,28 +7863,13 @@ def doCatastrophicFire(argsList):
 
 
 def getHelpMinorFire(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-
-  szHelp = TRNSLTR.getText("TXT_KEY_EVENT_FIRE_MINOR_1_HELP",())
-
-  return szHelp
+  return TRNSLTR.getText("TXT_KEY_EVENT_FIRE_MINOR_1_HELP",())
 
 def getHelpMajorFire(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-
-  szHelp = TRNSLTR.getText("TXT_KEY_EVENT_FIRE_MAJOR_1_HELP",())
-
-  return szHelp
+  return TRNSLTR.getText("TXT_KEY_EVENT_FIRE_MAJOR_1_HELP",())
 
 def getHelpCatastrophicFire(argsList):
-  iEvent = argsList[0]
-  kTriggeredData = argsList[1]
-
-  szHelp = TRNSLTR.getText("TXT_KEY_EVENT_FIRE_CATASTROPHIC_1_HELP",())
-
-  return szHelp
+  return TRNSLTR.getText("TXT_KEY_EVENT_FIRE_CATASTROPHIC_1_HELP",())
 
 def canTriggerBlarneyVisit(argsList):
 	if not GAME.getGameTurn() % 50:
@@ -8501,40 +8492,34 @@ def doRemoveWVCannibalism(argsList):
 				CyAudioGame().Play2DSound("AS2D_DISCOVERBONUS")
 
 def doRemoveWVHumanSacrifice(argsList):
-	pUnit = argsList[0]
+	CyUnit = argsList[0]
 
-	if pUnit == None:
+	if CyUnit == None:
 		return # False call
 
-	pPlayer = GC.getPlayer( pUnit.getOwner( ) )
-	iPlayer = pPlayer.getID( )
-	civ = GC.getCivilizationInfo(pPlayer.getCivilizationType())
-
-	if not pPlayer.isAlive():
-		return
-
 	iWVSacrifice = GC.getInfoTypeForString("BUILDING_WV_HUMAN_SACRIFICE")
-	iAltar = GC.getInfoTypeForString("BUILDING_HUMAN_SACRIFICE_ALTAR")
 	if iWVSacrifice > -1:
-		(loopCity, iter) = pPlayer.firstCity(False)
-		while(loopCity):
-			# Remove the main slavery building
-			if loopCity.getNumActiveBuilding(iWVSacrifice) > 0:
+		iAltar = GC.getInfoTypeForString("BUILDING_HUMAN_SACRIFICE_ALTAR")
+		iToken = GC.getInfoTypeForString("BUILDING_HUMAN_SACRIFICE")
+		CyPlayer = GC.getPlayer(CyUnit.getOwner())
 
-				loopCity.setNumRealBuilding(iWVSacrifice, 0)
+		CyCity, i = CyPlayer.firstCity(False)
+		while CyCity:
+			# Remove the main worldview building
+			if CyCity.getNumActiveBuilding(iWVSacrifice) > 0:
+				CyCity.setNumRealBuilding(iWVSacrifice, 0)
 				CyAudioGame().Play2DSound("AS2D_DISCOVERBONUS")
 
-				CyInterface().addMessage(iPlayer,False,25,TRNSLTR.getText("TXT_KEY_MSG_NO_HUMAN_SACRIFICE",(loopCity.getName(),)),"AS2D_BUILD_BANK",InterfaceMessageTypes.MESSAGE_TYPE_INFO,pUnit.getButton(),ColorTypes(8),loopCity.getX(),loopCity.getY(),True,True)
-				#~ break
-			# Sell the Alter if one exists
-			if loopCity.getNumActiveBuilding(iAltar) > 0:
+				CyInterface().addMessage(CyPlayer.getID(),False,25,TRNSLTR.getText("TXT_KEY_MSG_NO_HUMAN_SACRIFICE",(CyCity.getName(),)),"AS2D_BUILD_BANK",InterfaceMessageTypes.MESSAGE_TYPE_INFO,pUnit.getButton(),ColorTypes(8),CyCity.getX(),CyCity.getY(),True,True)
 
-				loopCity.setNumRealBuilding(iAltar, 0)
-				CyAudioGame().Play2DSound("AS2D_DISCOVERBONUS")
+			# Remove the worldview token building
+			CyCity.setNumRealBuilding(iToken, 0)
 
-				CyInterface().addMessage(iPlayer,False,25,TRNSLTR.getText("TXT_KEY_MSG_ALTAR_SOLD",(loopCity.getName(),)),"AS2D_BUILD_BANK",InterfaceMessageTypes.MESSAGE_TYPE_INFO,pUnit.getButton(),ColorTypes(8),loopCity.getX(),loopCity.getY(),True,True)
+			# Remove the human sacrifice altar
+			if CyCity.getNumActiveBuilding(iAltar) > 0:
+				CyCity.setNumRealBuilding(iAltar, 0)
 
-			(loopCity, iter) = pPlayer.nextCity(iter, False)
+			CyCity, i = CyPlayer.nextCity(i, False)
 
 def getNumNonSpecialistSlaves(argsList):
 	# Returns the number of non specialist slave specialists more than the number of specialist slave specialists
@@ -8840,9 +8825,9 @@ def doSacrificeCaptive(argsList):
 		return # bad call
 
 	if  pCity.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_SACRIFICIAL_ALTAR")) > 0:
-		iGoldenAgeLength = iGoldenAgeLength + 2
+		iGoldenAgeLength += 1
 	elif pCity.getNumActiveBuilding(GC.getInfoTypeForString("BUILDING_HUMAN_SACRIFICE_ALTAR")) > 0:
-		iGoldenAgeLength = iGoldenAgeLength + 1
+		iGoldenAgeLength += 2
 
 	iDruid = GC.getInfoTypeForString("RELIGION_DRUIDIC_TRADITIONS")
 	iMeasoamerican = GC.getInfoTypeForString("RELIGION_NAGHUALISM")
@@ -8917,8 +8902,8 @@ def canBuildHorseBonusAndPasture(argsList):
 	# Check if Feature or Terrain makes invalid.
 	if pPlot.getFeatureType() in (GC.getInfoTypeForString("FEATURE_SWAMP"), GC.getInfoTypeForString("FEATURE_PEAT_BOG")): return 0
 	if pPlot.getTerrainType() in (
-		GC.getInfoTypeForString("TERRAIN_SALT_FLATS"),	GC.getInfoTypeForString("TERRAIN_DUNES"),		GC.getInfoTypeForString("TERRAIN_DESERT"),
-		GC.getInfoTypeForString("TERRAIN_TAIGA"),		GC.getInfoTypeForString("TERRAIN_ICE"),			GC.getInfoTypeForString("TERRAIN_TUNDRA"),
+		GC.getInfoTypeForString("TERRAIN_SALT_FLATS"),	GC.getInfoTypeForString("TERRAIN_DUNES"),	GC.getInfoTypeForString("TERRAIN_DESERT"),
+		GC.getInfoTypeForString("TERRAIN_TAIGA"),		GC.getInfoTypeForString("TERRAIN_ICE"),		GC.getInfoTypeForString("TERRAIN_TUNDRA"),
 		GC.getInfoTypeForString("TERRAIN_PERMAFROST"),	GC.getInfoTypeForString("TERRAIN_JAGGED"),	GC.getInfoTypeForString("TERRAIN_BADLAND"),
 		GC.getInfoTypeForString("TERRAIN_BARREN"), 		GC.getInfoTypeForString("TERRAIN_MARSH")
 		): return 0
@@ -9350,24 +9335,3 @@ def applyCivilWar(argsList):
 def canDoBestHunters1(argsList):
 	if GAME.isOption(GameOptionTypes.GAMEOPTION_WITHOUT_WARNING): return True
 	return False
-
-################ BOUNTIFUL ANIMALS ################
-
-# def canApplyBountifulAnimals(argsList):
-	# kTriggeredData = argsList[0]
-	# pPlayer = GC.getPlayer(kTriggeredData.ePlayer)
-	# pCity = player.getCity(kTriggeredData.iCityId)
-
-	# aHerdBuildings = [ GC.getInfoTypeForString("BUILDING_DEER_HERD"),
-						# GC.getInfoTypeForString(""),
-						# ]
-	# for i in aHerdBuildings:
-		# if (pCity.isHasBuilding(i)):
-			# return True
-			# break
-
-
-
-#	newUnit1 = pPlayer.initUnit(GC.getInfoTypeForString('UNIT_ASSASSIN'), pCity.getX(),pCity.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_SOUTH)
-
-	# return False

@@ -212,50 +212,6 @@ public:
 
 	void chooseProduction(UnitTypes eTrainUnit = NO_UNIT, BuildingTypes eConstructBuilding = NO_BUILDING, ProjectTypes eCreateProject = NO_PROJECT, bool bFinish = false, bool bFront = false); // Exposed to Python
 
-	// Base iterator type for iterating over city plots, returning valid ones only
-	template < class Value_ >
-	struct city_plot_iterator_base :
-		public bst::iterator_facade<city_plot_iterator_base<Value_>, Value_*, bst::forward_traversal_tag, Value_*>
-	{
-		city_plot_iterator_base() : m_centerX(-1), m_centerY(-1), m_curr(nullptr), m_idx(0) {}
-		explicit city_plot_iterator_base(int centerX, int centerY) : m_centerX(centerX), m_centerY(centerY), m_curr(nullptr), m_idx(-1)
-		{
-			increment();
-		}
-
-	private:
-		friend class bst::iterator_core_access;
-		void increment()
-		{
-			do
-			{
-				++m_idx;
-				m_curr = plotCity(m_centerX, m_centerY, m_idx);
-			} while (m_curr == nullptr && m_idx < NUM_CITY_PLOTS);
-		}
-		bool equal(city_plot_iterator_base const& other) const
-		{
-			return (this->m_centerX == other.m_centerX
-				&& this->m_centerY == other.m_centerY
-				&& this->m_idx == other.m_idx)
-				|| (this->m_curr == nullptr && other.m_curr == nullptr);
-		}
-
-		Value_* dereference() const { return m_curr; }
-
-		int m_centerX;
-		int m_centerY;
-		Value_* m_curr;
-		int m_idx;
-	};
-	typedef city_plot_iterator_base<CvPlot> city_plot_iterator;
-
-	city_plot_iterator beginPlots() const { return city_plot_iterator(getX(), getY()); }
-	city_plot_iterator endPlots() const { return city_plot_iterator(); }
-
-	typedef bst::iterator_range<city_plot_iterator> city_plot_range;
-	city_plot_range plots() const { return city_plot_range(beginPlots(), endPlots()); }
-
 	int getCityPlotIndex(const CvPlot* pPlot) const; // Exposed to Python
 	// Prefer to use plots() range instead of this for loops, searching etc.
 	CvPlot* getCityIndexPlot(int iIndex) const; // Exposed to Python
@@ -280,7 +236,6 @@ public:
 	bool isWorldWondersMaxed() const; // Exposed to Python
 	bool isTeamWondersMaxed() const; // Exposed to Python
 	bool isNationalWondersMaxed() const; // Exposed to Python
-	bool isBuildingsMaxed() const; // Exposed to Python
 	int getMaxNumWorldWonders() const; // Exposed to Python
 	int getMaxNumTeamWonders() const; // Exposed to Python
 	int getMaxNumNationalWonders() const; // Exposed to Python
@@ -1843,16 +1798,8 @@ protected:
 	int m_iBonusGoodHealth;
 	int m_iBonusBadHealth;
 	int m_iHurryAngerTimer;
-/************************************************************************************************/
-/* REVOLUTION_MOD                         04/28/08                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	int m_iRevRequestAngerTimer;
 	int m_iRevSuccessTimer;
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
 	int m_iConscriptAngerTimer;
 	int m_iDefyResolutionAngerTimer;
 	int m_iHappinessTimer;
@@ -2141,8 +2088,8 @@ protected:
 	bool* m_pabHasReligion;
 	bool* m_pabHasCorporation;
 
-	int		m_deferringBonusProcessingCount;
-	int*	m_paiStartDeferredSectionNumBonuses;
+	int	m_deferringBonusProcessingCount;
+	int* m_paiStartDeferredSectionNumBonuses;
 
 	CvProperties m_Properties;
 	CvBuildingList m_BuildingList;

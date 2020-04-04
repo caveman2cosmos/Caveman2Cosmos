@@ -1,23 +1,17 @@
 <?xml version="1.0"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- ReModified by StrategyOnly -->
-<!-- -->
-<!-- Leader Infos and AI Settings -->
 <Civ4LeaderHeadInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4CivilizationsSchema.xml">
 	<LeaderHeadInfos>
 		<LeaderHeadInfo>
 			<Type>LEADER_HTN</Type>
-				<Description>TXT_KEY_LEADER_HTN</Description>
-				<Civilopedia>TXT_KEY_LEADER_HTN_PEDIA</Civilopedia>
-				<ArtDefineTag>ART_DEF_LEADER_HTN</ArtDefineTag>
-				<iWonderConstructRand>20</iWonderConstructRand>
-				<iBaseAttitude>1</iBaseAttitude>
-				<iBasePeaceWeight>2</iBasePeaceWeight>
-				<iPeaceWeightRand>3</iPeaceWeightRand>
-				<iWarmongerRespect>2</iWarmongerRespect>
-				<iEspionageWeight>100</iEspionageWeight>
+			<Description>TXT_KEY_LEADER_HTN</Description>
+			<Civilopedia>TXT_KEY_LEADER_HTN_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_LEADER_HTN</ArtDefineTag>
+			<iWonderConstructRand>20</iWonderConstructRand>
+			<iBaseAttitude>1</iBaseAttitude>
+			<iBasePeaceWeight>2</iBasePeaceWeight>
+			<iPeaceWeightRand>3</iPeaceWeightRand>
+			<iWarmongerRespect>2</iWarmongerRespect>
+			<iEspionageWeight>100</iEspionageWeight>
 			<iRefuseToTalkWarThreshold>10</iRefuseToTalkWarThreshold>
 			<iNoTechTradeThreshold>5</iNoTechTradeThreshold>
 			<iTechTradeKnownPercent>50</iTechTradeKnownPercent>

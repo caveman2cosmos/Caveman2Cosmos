@@ -1,10 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jon Shafer (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- ReModified by StrategyOnly -->
-<!-- -->
-<!-- Promotion Infos -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4PromotionInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<PromotionInfos>
 		<PromotionInfo>
@@ -1058,10 +1052,10 @@
 					<FeatureType>FEATURE_FOREST</FeatureType>
 					<iFeatureDefense>-25</iFeatureDefense>
 				</FeatureDefense>
-                <FeatureDefense>
-                    <FeatureType>FEATURE_BAMBOO</FeatureType>
-                    <iFeatureDefense>-25</iFeatureDefense>
-                </FeatureDefense>
+				<FeatureDefense>
+					<FeatureType>FEATURE_BAMBOO</FeatureType>
+					<iFeatureDefense>-25</iFeatureDefense>
+				</FeatureDefense>
 				<FeatureDefense>
 					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureDefense>-25</iFeatureDefense>
@@ -1145,43 +1139,6 @@
 				</UnitCombat>
 			</UnitCombats>
 			<Button>Art/Interface/Buttons/Promotions/taoism_promo.dds</Button>
-		</PromotionInfo>
-		<PromotionInfo>
-			<Type>PROMOTION_MARTIAL_ARTS</Type>
-			<Description>TXT_KEY_PROMOTION_MARTIAL_ARTS</Description>
-			<Sound>AS2D_IF_LEVELUP</Sound>
-			<TechPrereq>TECH_MEDITATION</TechPrereq>
-			<StateReligionPrereq>RELIGION_TAOISM</StateReligionPrereq>
-			<NotOnDomainTypes>
-				<DomainType>DOMAIN_SEA</DomainType>
-			</NotOnDomainTypes>
-			<UnitCombatMods>
-				<UnitCombatMod>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<iUnitCombatMod>15</iUnitCombatMod>
-				</UnitCombatMod>
-				<UnitCombatMod>
-					<UnitCombatType>UNITCOMBAT_ARCHER</UnitCombatType>
-					<iUnitCombatMod>5</iUnitCombatMod>
-				</UnitCombatMod>
-			</UnitCombatMods>
-			<UnitCombats>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_MELEE</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-				<UnitCombat>
-					<UnitCombatType>UNITCOMBAT_CIVILIAN</UnitCombatType>
-					<bUnitCombat>1</bUnitCombat>
-				</UnitCombat>
-			</UnitCombats>
-			<Button>,Art/Interface/Buttons/Promotions/Hero1.dds,Art/Interface/Buttons/RoM_Promotion_Atlas2.dds,1,7</Button>
-			<iCaptureProbabilityModifierChange>10</iCaptureProbabilityModifierChange>
-			<iCaptureResistanceModifierChange>10</iCaptureResistanceModifierChange>
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_HOLY_TRINITY</Type>
@@ -2364,7 +2321,7 @@
 			<Description>TXT_KEY_PROMOTION_COMBAT6</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereqOr1>PROMOTION_COMBAT5</PromotionPrereqOr1>
-			<!--TB SubCombat Mod begin  TB Override Mod begin-->
+			<!--TB SubCombat Mod begin TB Override Mod begin-->
 			<PromotionLine>PROMOTIONLINE_COMBAT</PromotionLine>
 			<iLinePriority>6</iLinePriority>
 			<!--TB Mod End -->
@@ -10477,10 +10434,10 @@
 					<FeatureType>FEATURE_FOREST</FeatureType>
 					<iFeatureDefense>25</iFeatureDefense>
 				</FeatureDefense>
-                <FeatureDefense>
-                    <FeatureType>FEATURE_BAMBOO</FeatureType>
-                    <iFeatureDefense>25</iFeatureDefense>
-                </FeatureDefense>
+				<FeatureDefense>
+					<FeatureType>FEATURE_BAMBOO</FeatureType>
+					<iFeatureDefense>25</iFeatureDefense>
+				</FeatureDefense>
 				<FeatureDefense>
 					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureDefense>25</iFeatureDefense>
@@ -10601,10 +10558,10 @@
 					<FeatureType>FEATURE_FOREST</FeatureType>
 					<iFeatureDefense>50</iFeatureDefense>
 				</FeatureDefense>
-                <FeatureDefense>
-                    <FeatureType>FEATURE_BAMBOO</FeatureType>
-                    <iFeatureDefense>50</iFeatureDefense>
-                </FeatureDefense>
+				<FeatureDefense>
+					<FeatureType>FEATURE_BAMBOO</FeatureType>
+					<iFeatureDefense>50</iFeatureDefense>
+				</FeatureDefense>
 				<FeatureDefense>
 					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureDefense>50</iFeatureDefense>
@@ -11818,8 +11775,6 @@
 					<iTerrainDefense>10</iTerrainDefense>
 				</TerrainDefense>
 			</TerrainDefenses>
-			<TerrainDoubleMoves>
-			</TerrainDoubleMoves>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
@@ -11890,10 +11845,6 @@
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<iAirRangeChange>2</iAirRangeChange>
-			<TerrainDefenses>
-			</TerrainDefenses>
-			<TerrainDoubleMoves>
-			</TerrainDoubleMoves>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_EARLY_FIGHTERS</UnitCombatType>
@@ -11954,8 +11905,6 @@
 					<iTerrainDefense>10</iTerrainDefense>
 				</TerrainDefense>
 			</TerrainDefenses>
-			<TerrainDoubleMoves>
-			</TerrainDoubleMoves>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_WOODEN_SHIPS</UnitCombatType>
@@ -12168,10 +12117,10 @@
 					<FeatureType>FEATURE_FOREST</FeatureType>
 					<iFeatureAttack>15</iFeatureAttack>
 				</FeatureAttack>
-                <FeatureAttack>
-                    <FeatureType>FEATURE_BAMBOO</FeatureType>
-                    <iFeatureAttack>15</iFeatureAttack>
-                </FeatureAttack>
+				<FeatureAttack>
+					<FeatureType>FEATURE_BAMBOO</FeatureType>
+					<iFeatureAttack>15</iFeatureAttack>
+				</FeatureAttack>
 				<FeatureAttack>
 					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureAttack>15</iFeatureAttack>
@@ -12194,10 +12143,10 @@
 					<FeatureType>FEATURE_FOREST</FeatureType>
 					<iFeatureDefense>15</iFeatureDefense>
 				</FeatureDefense>
-                <FeatureDefense>
-                    <FeatureType>FEATURE_BAMBOO</FeatureType>
-                    <iFeatureDefense>15</iFeatureDefense>
-                </FeatureDefense>
+				<FeatureDefense>
+					<FeatureType>FEATURE_BAMBOO</FeatureType>
+					<iFeatureDefense>15</iFeatureDefense>
+				</FeatureDefense>
 				<FeatureDefense>
 					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureDefense>15</iFeatureDefense>
@@ -13346,10 +13295,10 @@
 					<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
 					<iFeatureDefense>-1</iFeatureDefense>
 				</FeatureDefense>
-                <FeatureDefense>
-                    <FeatureType>FEATURE_BAMBOO</FeatureType>
-                    <iFeatureDefense>-1</iFeatureDefense>
-                </FeatureDefense>
+				<FeatureDefense>
+					<FeatureType>FEATURE_BAMBOO</FeatureType>
+					<iFeatureDefense>-1</iFeatureDefense>
+				</FeatureDefense>
 				<FeatureDefense>
 					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureDefense>-1</iFeatureDefense>
@@ -13412,10 +13361,10 @@
 					<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
 					<iFeatureDefense>-2</iFeatureDefense>
 				</FeatureDefense>
-                <FeatureDefense>
-                    <FeatureType>FEATURE_BAMBOO</FeatureType>
-                    <iFeatureDefense>-2</iFeatureDefense>
-                </FeatureDefense>
+				<FeatureDefense>
+					<FeatureType>FEATURE_BAMBOO</FeatureType>
+					<iFeatureDefense>-2</iFeatureDefense>
+				</FeatureDefense>
 				<FeatureDefense>
 					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureDefense>-2</iFeatureDefense>
@@ -13478,10 +13427,10 @@
 					<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
 					<iFeatureDefense>-3</iFeatureDefense>
 				</FeatureDefense>
-                <FeatureDefense>
-                    <FeatureType>FEATURE_BAMBOO</FeatureType>
-                    <iFeatureDefense>-3</iFeatureDefense>
-                </FeatureDefense>
+				<FeatureDefense>
+					<FeatureType>FEATURE_BAMBOO</FeatureType>
+					<iFeatureDefense>-3</iFeatureDefense>
+				</FeatureDefense>
 				<FeatureDefense>
 					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureDefense>-3</iFeatureDefense>
@@ -14042,80 +13991,80 @@
 			<Button>Art/Interface/Buttons/Promotions/seahunter4.dds</Button>
 		</PromotionInfo>
 <!-- CIV4PromotionInfos.xml BEGIN MILITIA PROMOTIONS CODE -->
- 		 <PromotionInfo>
-            <Type>PROMOTION_BUSHMAN</Type>
-            <Description>TXT_KEY_PROMOTION_BUSHMAN</Description>
-            <Sound>AS2D_IF_LEVELUP</Sound>
+		<PromotionInfo>
+			<Type>PROMOTION_BUSHMAN</Type>
+			<Description>TXT_KEY_PROMOTION_BUSHMAN</Description>
+			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_NOMADISM</TechPrereq>
-            <TerrainAttacks>
-                <TerrainAttack>
-                    <TerrainType>TERRAIN_BARREN</TerrainType>
-                    <iTerrainAttack>10</iTerrainAttack>
-                </TerrainAttack>
-                <TerrainAttack>
-                    <TerrainType>TERRAIN_ROCKY</TerrainType>
-                    <iTerrainAttack>10</iTerrainAttack>
-                </TerrainAttack>
-                <TerrainAttack>
-                    <TerrainType>TERRAIN_BADLAND</TerrainType>
-                    <iTerrainAttack>10</iTerrainAttack>
-                </TerrainAttack>
-                <TerrainAttack>
-                    <TerrainType>TERRAIN_JAGGED</TerrainType>
-                    <iTerrainAttack>10</iTerrainAttack>
-                </TerrainAttack>
-                <TerrainAttack>
-                    <TerrainType>TERRAIN_SCRUB</TerrainType>
-                    <iTerrainAttack>10</iTerrainAttack>
-                </TerrainAttack>
-                <TerrainAttack>
-                    <TerrainType>TERRAIN_SALT_FLATS</TerrainType>
-                    <iTerrainAttack>10</iTerrainAttack>
-                </TerrainAttack>
-                <TerrainAttack>
-                    <TerrainType>TERRAIN_MARSH</TerrainType>
-                    <iTerrainAttack>10</iTerrainAttack>
-                </TerrainAttack>
-            </TerrainAttacks>
-            <TerrainDefenses>
-                <TerrainDefense>
-                    <TerrainType>TERRAIN_BARREN</TerrainType>
-                    <iTerrainDefense>10</iTerrainDefense>
-                </TerrainDefense>
-                <TerrainDefense>
-                    <TerrainType>TERRAIN_ROCKY</TerrainType>
-                    <iTerrainDefense>10</iTerrainDefense>
-                </TerrainDefense>
-                <TerrainDefense>
-                    <TerrainType>TERRAIN_BADLAND</TerrainType>
-                    <iTerrainDefense>10</iTerrainDefense>
-                </TerrainDefense>
-                <TerrainDefense>
-                    <TerrainType>TERRAIN_JAGGED</TerrainType>
-                    <iTerrainDefense>10</iTerrainDefense>
-                </TerrainDefense>
-                <TerrainDefense>
-                    <TerrainType>TERRAIN_SCRUB</TerrainType>
-                    <iTerrainDefense>10</iTerrainDefense>
-                </TerrainDefense>
-                <TerrainDefense>
-                    <TerrainType>TERRAIN_SALT_FLATS</TerrainType>
-                    <iTerrainDefense>10</iTerrainDefense>
-                </TerrainDefense>
-                <TerrainDefense>
-                    <TerrainType>TERRAIN_MARSH</TerrainType>
-                    <iTerrainDefense>10</iTerrainDefense>
-                </TerrainDefense>
-            </TerrainDefenses>
-            <Button>Art/Interface/Buttons/Promotions/Markofthescorpion.dds</Button>
-    	</PromotionInfo>
-    	<PromotionInfo>
-            <Type>PROMOTION_CLIFF_WALKER</Type>
-            <Description>TXT_KEY_PROMOTION_CLIFF_WALKER</Description>
-            <Sound>AS2D_IF_LEVELUP</Sound>
+			<TerrainAttacks>
+				<TerrainAttack>
+					<TerrainType>TERRAIN_BARREN</TerrainType>
+					<iTerrainAttack>10</iTerrainAttack>
+				</TerrainAttack>
+				<TerrainAttack>
+					<TerrainType>TERRAIN_ROCKY</TerrainType>
+					<iTerrainAttack>10</iTerrainAttack>
+				</TerrainAttack>
+				<TerrainAttack>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
+					<iTerrainAttack>10</iTerrainAttack>
+				</TerrainAttack>
+				<TerrainAttack>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
+					<iTerrainAttack>10</iTerrainAttack>
+				</TerrainAttack>
+				<TerrainAttack>
+					<TerrainType>TERRAIN_SCRUB</TerrainType>
+					<iTerrainAttack>10</iTerrainAttack>
+				</TerrainAttack>
+				<TerrainAttack>
+					<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
+					<iTerrainAttack>10</iTerrainAttack>
+				</TerrainAttack>
+				<TerrainAttack>
+					<TerrainType>TERRAIN_MARSH</TerrainType>
+					<iTerrainAttack>10</iTerrainAttack>
+				</TerrainAttack>
+			</TerrainAttacks>
+			<TerrainDefenses>
+				<TerrainDefense>
+					<TerrainType>TERRAIN_BARREN</TerrainType>
+					<iTerrainDefense>10</iTerrainDefense>
+				</TerrainDefense>
+				<TerrainDefense>
+					<TerrainType>TERRAIN_ROCKY</TerrainType>
+					<iTerrainDefense>10</iTerrainDefense>
+				</TerrainDefense>
+				<TerrainDefense>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
+					<iTerrainDefense>10</iTerrainDefense>
+				</TerrainDefense>
+				<TerrainDefense>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
+					<iTerrainDefense>10</iTerrainDefense>
+				</TerrainDefense>
+				<TerrainDefense>
+					<TerrainType>TERRAIN_SCRUB</TerrainType>
+					<iTerrainDefense>10</iTerrainDefense>
+				</TerrainDefense>
+				<TerrainDefense>
+					<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
+					<iTerrainDefense>10</iTerrainDefense>
+				</TerrainDefense>
+				<TerrainDefense>
+					<TerrainType>TERRAIN_MARSH</TerrainType>
+					<iTerrainDefense>10</iTerrainDefense>
+				</TerrainDefense>
+			</TerrainDefenses>
+			<Button>Art/Interface/Buttons/Promotions/Markofthescorpion.dds</Button>
+		</PromotionInfo>
+		<PromotionInfo>
+			<Type>PROMOTION_CLIFF_WALKER</Type>
+			<Description>TXT_KEY_PROMOTION_CLIFF_WALKER</Description>
+			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_NOMADISM</TechPrereq>
-            <iHillsAttack>10</iHillsAttack>
-            <iHillsDefense>10</iHillsDefense>
+			<iHillsAttack>10</iHillsAttack>
+			<iHillsDefense>10</iHillsDefense>
 			<TerrainAttacks>
 				<TerrainAttack>
 					<TerrainType>TERRAIN_PEAK</TerrainType>
@@ -14129,25 +14078,25 @@
 				</TerrainDefense>
 			</TerrainDefenses>
 			<Button>Art/Interface/Buttons/Promotions/himalayas.dds</Button>
-        </PromotionInfo>
-        <PromotionInfo>
-            <Type>PROMOTION_GREEN_WARDEN</Type>
-            <Description>TXT_KEY_PROMOTION_GREEN_WARDEN</Description>
-            <Sound>AS2D_IF_LEVELUP</Sound>
+		</PromotionInfo>
+		<PromotionInfo>
+			<Type>PROMOTION_GREEN_WARDEN</Type>
+			<Description>TXT_KEY_PROMOTION_GREEN_WARDEN</Description>
+			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_NOMADISM</TechPrereq>
-            <FeatureAttacks>
-                <FeatureAttack>
-                    <FeatureType>FEATURE_JUNGLE</FeatureType>
-                    <iFeatureAttack>10</iFeatureAttack>
-                </FeatureAttack>
-                <FeatureAttack>
-                    <FeatureType>FEATURE_FOREST</FeatureType>
-                    <iFeatureAttack>10</iFeatureAttack>
-                </FeatureAttack>
-                <FeatureAttack>
-                    <FeatureType>FEATURE_BAMBOO</FeatureType>
-                    <iFeatureAttack>10</iFeatureAttack>
-                </FeatureAttack>
+			<FeatureAttacks>
+				<FeatureAttack>
+					<FeatureType>FEATURE_JUNGLE</FeatureType>
+					<iFeatureAttack>10</iFeatureAttack>
+				</FeatureAttack>
+				<FeatureAttack>
+					<FeatureType>FEATURE_FOREST</FeatureType>
+					<iFeatureAttack>10</iFeatureAttack>
+				</FeatureAttack>
+				<FeatureAttack>
+					<FeatureType>FEATURE_BAMBOO</FeatureType>
+					<iFeatureAttack>10</iFeatureAttack>
+				</FeatureAttack>
 				<FeatureAttack>
 					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureAttack>10</iFeatureAttack>
@@ -14160,20 +14109,20 @@
 					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureAttack>10</iFeatureAttack>
 				</FeatureAttack>
-            </FeatureAttacks>
-            <FeatureDefenses>
-                <FeatureDefense>
-                    <FeatureType>FEATURE_JUNGLE</FeatureType>
-                    <iFeatureDefense>10</iFeatureDefense>
-                </FeatureDefense>
-                <FeatureDefense>
-                    <FeatureType>FEATURE_FOREST</FeatureType>
-                    <iFeatureDefense>10</iFeatureDefense>
-                </FeatureDefense>
-                <FeatureDefense>
-                    <FeatureType>FEATURE_BAMBOO</FeatureType>
-                    <iFeatureDefense>10</iFeatureDefense>
-                </FeatureDefense>
+			</FeatureAttacks>
+			<FeatureDefenses>
+				<FeatureDefense>
+					<FeatureType>FEATURE_JUNGLE</FeatureType>
+					<iFeatureDefense>10</iFeatureDefense>
+				</FeatureDefense>
+				<FeatureDefense>
+					<FeatureType>FEATURE_FOREST</FeatureType>
+					<iFeatureDefense>10</iFeatureDefense>
+				</FeatureDefense>
+				<FeatureDefense>
+					<FeatureType>FEATURE_BAMBOO</FeatureType>
+					<iFeatureDefense>10</iFeatureDefense>
+				</FeatureDefense>
 				<FeatureDefense>
 					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureDefense>10</iFeatureDefense>
@@ -14186,79 +14135,79 @@
 					<FeatureType>FEATURE_FOREST_ANCIENT</FeatureType>
 					<iFeatureDefense>10</iFeatureDefense>
 				</FeatureDefense>
-            </FeatureDefenses>
-            <Button>Art/Interface/Buttons/Promotions/shamrock.dds</Button>
-        </PromotionInfo>
-		 <PromotionInfo>
-            <Type>PROMOTION_SAND_DEVIL</Type>
-            <Description>TXT_KEY_PROMOTION_SAND_DEVIL</Description>
-            <Sound>AS2D_IF_LEVELUP</Sound>
+			</FeatureDefenses>
+			<Button>Art/Interface/Buttons/Promotions/shamrock.dds</Button>
+		</PromotionInfo>
+		<PromotionInfo>
+			<Type>PROMOTION_SAND_DEVIL</Type>
+			<Description>TXT_KEY_PROMOTION_SAND_DEVIL</Description>
+			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_NOMADISM</TechPrereq>
-            <TerrainAttacks>
-                <TerrainAttack>
-                    <TerrainType>TERRAIN_DESERT</TerrainType>
-                    <iTerrainAttack>10</iTerrainAttack>
-                </TerrainAttack>
-                <TerrainAttack>
-                    <TerrainType>TERRAIN_DUNES</TerrainType>
-                    <iTerrainAttack>10</iTerrainAttack>
-                </TerrainAttack>
-            </TerrainAttacks>
-            <TerrainDefenses>
-                <TerrainDefense>
-                    <TerrainType>TERRAIN_DESERT</TerrainType>
-                    <iTerrainDefense>10</iTerrainDefense>
-                </TerrainDefense>
-                <TerrainDefense>
-                    <TerrainType>TERRAIN_DUNES</TerrainType>
-                    <iTerrainDefense>10</iTerrainDefense>
-                </TerrainDefense>
-            </TerrainDefenses>
-            <Button>Art/Interface/Buttons/Promotions/Markofthescorpion.dds</Button>
-    	</PromotionInfo>
-		 <PromotionInfo>
-            <Type>PROMOTION_WINTERBORN</Type>
-            <Description>TXT_KEY_PROMOTION_WINTERBORN</Description>
-            <Sound>AS2D_IF_LEVELUP</Sound>
+			<TerrainAttacks>
+				<TerrainAttack>
+					<TerrainType>TERRAIN_DESERT</TerrainType>
+					<iTerrainAttack>10</iTerrainAttack>
+				</TerrainAttack>
+				<TerrainAttack>
+					<TerrainType>TERRAIN_DUNES</TerrainType>
+					<iTerrainAttack>10</iTerrainAttack>
+				</TerrainAttack>
+			</TerrainAttacks>
+			<TerrainDefenses>
+				<TerrainDefense>
+					<TerrainType>TERRAIN_DESERT</TerrainType>
+					<iTerrainDefense>10</iTerrainDefense>
+				</TerrainDefense>
+				<TerrainDefense>
+					<TerrainType>TERRAIN_DUNES</TerrainType>
+					<iTerrainDefense>10</iTerrainDefense>
+				</TerrainDefense>
+			</TerrainDefenses>
+			<Button>Art/Interface/Buttons/Promotions/Markofthescorpion.dds</Button>
+		</PromotionInfo>
+		<PromotionInfo>
+			<Type>PROMOTION_WINTERBORN</Type>
+			<Description>TXT_KEY_PROMOTION_WINTERBORN</Description>
+			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_NOMADISM</TechPrereq>
-            <TerrainAttacks>
-                <TerrainAttack>
-                    <TerrainType>TERRAIN_TAIGA</TerrainType>
-                    <iTerrainAttack>10</iTerrainAttack>
-                </TerrainAttack>
-                <TerrainAttack>
-                    <TerrainType>TERRAIN_TUNDRA</TerrainType>
-                    <iTerrainAttack>10</iTerrainAttack>
-                </TerrainAttack>
-                <TerrainAttack>
-                    <TerrainType>TERRAIN_PERMAFROST</TerrainType>
-                    <iTerrainAttack>10</iTerrainAttack>
-                </TerrainAttack>
-                <TerrainAttack>
-                    <TerrainType>TERRAIN_ICE</TerrainType>
-                    <iTerrainAttack>10</iTerrainAttack>
-                </TerrainAttack>
-            </TerrainAttacks>
-            <TerrainDefenses>
-                <TerrainDefense>
-                    <TerrainType>TERRAIN_TAIGA</TerrainType>
-                    <iTerrainDefense>10</iTerrainDefense>
-                </TerrainDefense>
-                <TerrainDefense>
-                    <TerrainType>TERRAIN_TUNDRA</TerrainType>
-                    <iTerrainDefense>10</iTerrainDefense>
-                </TerrainDefense>
-                <TerrainDefense>
-                    <TerrainType>TERRAIN_PERMAFROST</TerrainType>
-                    <iTerrainDefense>10</iTerrainDefense>
-                </TerrainDefense>
-                <TerrainDefense>
-                    <TerrainType>TERRAIN_ICE</TerrainType>
-                    <iTerrainDefense>10</iTerrainDefense>
-                </TerrainDefense>
-            </TerrainDefenses>
-            <Button>Art/Interface/Buttons/Promotions/Markofthescorpion.dds</Button>
-    	</PromotionInfo>
+			<TerrainAttacks>
+				<TerrainAttack>
+					<TerrainType>TERRAIN_TAIGA</TerrainType>
+					<iTerrainAttack>10</iTerrainAttack>
+				</TerrainAttack>
+				<TerrainAttack>
+					<TerrainType>TERRAIN_TUNDRA</TerrainType>
+					<iTerrainAttack>10</iTerrainAttack>
+				</TerrainAttack>
+				<TerrainAttack>
+					<TerrainType>TERRAIN_PERMAFROST</TerrainType>
+					<iTerrainAttack>10</iTerrainAttack>
+				</TerrainAttack>
+				<TerrainAttack>
+					<TerrainType>TERRAIN_ICE</TerrainType>
+					<iTerrainAttack>10</iTerrainAttack>
+				</TerrainAttack>
+			</TerrainAttacks>
+			<TerrainDefenses>
+				<TerrainDefense>
+					<TerrainType>TERRAIN_TAIGA</TerrainType>
+					<iTerrainDefense>10</iTerrainDefense>
+				</TerrainDefense>
+				<TerrainDefense>
+					<TerrainType>TERRAIN_TUNDRA</TerrainType>
+					<iTerrainDefense>10</iTerrainDefense>
+				</TerrainDefense>
+				<TerrainDefense>
+					<TerrainType>TERRAIN_PERMAFROST</TerrainType>
+					<iTerrainDefense>10</iTerrainDefense>
+				</TerrainDefense>
+				<TerrainDefense>
+					<TerrainType>TERRAIN_ICE</TerrainType>
+					<iTerrainDefense>10</iTerrainDefense>
+				</TerrainDefense>
+			</TerrainDefenses>
+			<Button>Art/Interface/Buttons/Promotions/Markofthescorpion.dds</Button>
+		</PromotionInfo>
 <!-- END MILITIA PROMOTIONS CODE -->
 		<PromotionInfo>
 			<Type>PROMOTION_AQUARIUS</Type>
@@ -15012,10 +14961,10 @@
 					<FeatureType>FEATURE_FOREST</FeatureType>
 					<iFeatureDefense>20</iFeatureDefense>
 				</FeatureDefense>
-                <FeatureDefense>
-                    <FeatureType>FEATURE_BAMBOO</FeatureType>
-                    <iFeatureDefense>20</iFeatureDefense>
-                </FeatureDefense>
+				<FeatureDefense>
+					<FeatureType>FEATURE_BAMBOO</FeatureType>
+					<iFeatureDefense>20</iFeatureDefense>
+				</FeatureDefense>
 				<FeatureDefense>
 					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureDefense>20</iFeatureDefense>
@@ -15112,10 +15061,10 @@
 					<FeatureType>FEATURE_FOREST</FeatureType>
 					<iFeatureDefense>30</iFeatureDefense>
 				</FeatureDefense>
-                <FeatureDefense>
-                    <FeatureType>FEATURE_BAMBOO</FeatureType>
-                    <iFeatureDefense>30</iFeatureDefense>
-                </FeatureDefense>
+				<FeatureDefense>
+					<FeatureType>FEATURE_BAMBOO</FeatureType>
+					<iFeatureDefense>30</iFeatureDefense>
+				</FeatureDefense>
 				<FeatureDefense>
 					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureDefense>30</iFeatureDefense>
@@ -16147,10 +16096,10 @@
 					<FeatureType>FEATURE_FOREST</FeatureType>
 					<iFeatureAttack>15</iFeatureAttack>
 				</FeatureAttack>
-                <FeatureAttack>
-                    <FeatureType>FEATURE_BAMBOO</FeatureType>
-                    <iFeatureAttack>15</iFeatureAttack>
-                </FeatureAttack>
+				<FeatureAttack>
+					<FeatureType>FEATURE_BAMBOO</FeatureType>
+					<iFeatureAttack>15</iFeatureAttack>
+				</FeatureAttack>
 				<FeatureAttack>
 					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureAttack>15</iFeatureAttack>
@@ -16185,10 +16134,10 @@
 					<FeatureType>FEATURE_FOREST</FeatureType>
 					<iFeatureAttack>15</iFeatureAttack>
 				</FeatureAttack>
-                <FeatureAttack>
-                    <FeatureType>FEATURE_BAMBOO</FeatureType>
-                    <iFeatureAttack>15</iFeatureAttack>
-                </FeatureAttack>
+				<FeatureAttack>
+					<FeatureType>FEATURE_BAMBOO</FeatureType>
+					<iFeatureAttack>15</iFeatureAttack>
+				</FeatureAttack>
 				<FeatureAttack>
 					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureAttack>15</iFeatureAttack>
@@ -16224,10 +16173,10 @@
 					<FeatureType>FEATURE_FOREST</FeatureType>
 					<iFeatureAttack>15</iFeatureAttack>
 				</FeatureAttack>
-                <FeatureAttack>
-                    <FeatureType>FEATURE_BAMBOO</FeatureType>
-                    <iFeatureAttack>15</iFeatureAttack>
-                </FeatureAttack>
+				<FeatureAttack>
+					<FeatureType>FEATURE_BAMBOO</FeatureType>
+					<iFeatureAttack>15</iFeatureAttack>
+				</FeatureAttack>
 				<FeatureAttack>
 					<FeatureType>FEATURE_FOREST_YOUNG</FeatureType>
 					<iFeatureAttack>15</iFeatureAttack>
@@ -21618,15 +21567,12 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_MARTIAL_ARTS</Type>
-			<bForceOverwrite>1</bForceOverwrite>
 			<Description>TXT_KEY_PROMOTION_MARTIAL_ARTS1</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<TechPrereq>TECH_MEDITATION</TechPrereq>
 			<StateReligionPrereq>RELIGION_TAOISM</StateReligionPrereq>
 			<PromotionLine>PROMOTIONLINE_MARTIAL_ARTS</PromotionLine>
 			<iLinePriority>1</iLinePriority>
-			<TerrainDefenses>
-			</TerrainDefenses>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_SEA</DomainType>
 			</NotOnDomainTypes>
@@ -21644,8 +21590,6 @@
 					<iUnitCombatMod>25</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<TerrainDoubleMoves>
-			</TerrainDoubleMoves>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
@@ -21667,8 +21611,6 @@
 			<PromotionLine>PROMOTIONLINE_MARTIAL_ARTS</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iFirstStrikesChange>1</iFirstStrikesChange>
-			<TerrainDefenses>
-			</TerrainDefenses>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_SEA</DomainType>
 			</NotOnDomainTypes>
@@ -21686,8 +21628,6 @@
 					<iUnitCombatMod>25</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<TerrainDoubleMoves>
-			</TerrainDoubleMoves>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
@@ -21712,8 +21652,6 @@
 			<PromotionLine>PROMOTIONLINE_MARTIAL_ARTS</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iFirstStrikesChange>2</iFirstStrikesChange>
-			<TerrainDefenses>
-			</TerrainDefenses>
 			<NotOnDomainTypes>
 				<DomainType>DOMAIN_SEA</DomainType>
 			</NotOnDomainTypes>
@@ -21731,8 +21669,6 @@
 					<iUnitCombatMod>50</iUnitCombatMod>
 				</UnitCombatMod>
 			</UnitCombatMods>
-			<TerrainDoubleMoves>
-			</TerrainDoubleMoves>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_RECON</UnitCombatType>
@@ -22152,8 +22088,6 @@
 			<PromotionPrereq>PROMOTION_SLAVE_MASTER2</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_SLAVE_MASTER</PromotionLine>
 			<iLinePriority>3</iLinePriority>
-			<UnitCombatMods>
-			</UnitCombatMods>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
@@ -22170,8 +22104,6 @@
 			<PromotionPrereq>PROMOTION_SLAVE_MASTER3</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_SLAVE_MASTER</PromotionLine>
 			<iLinePriority>4</iLinePriority>
-			<UnitCombatMods>
-			</UnitCombatMods>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
@@ -22188,8 +22120,6 @@
 			<PromotionPrereq>PROMOTION_SLAVE_MASTER4</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_SLAVE_MASTER</PromotionLine>
 			<iLinePriority>5</iLinePriority>
-			<UnitCombatMods>
-			</UnitCombatMods>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
@@ -22260,8 +22190,6 @@
 			<PromotionLine>PROMOTIONLINE_UNQUESTIONING_OBEDIENCE</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<iCombatPercent>1</iCombatPercent>
-			<UnitCombatMods>
-			</UnitCombatMods>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
@@ -22279,8 +22207,6 @@
 			<PromotionLine>PROMOTIONLINE_UNQUESTIONING_OBEDIENCE</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iCombatPercent>1</iCombatPercent>
-			<UnitCombatMods>
-			</UnitCombatMods>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
@@ -22298,8 +22224,6 @@
 			<PromotionLine>PROMOTIONLINE_UNQUESTIONING_OBEDIENCE</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<iCombatPercent>1</iCombatPercent>
-			<UnitCombatMods>
-			</UnitCombatMods>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
@@ -22317,8 +22241,6 @@
 			<PromotionLine>PROMOTIONLINE_UNQUESTIONING_OBEDIENCE</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<iCombatPercent>1</iCombatPercent>
-			<UnitCombatMods>
-			</UnitCombatMods>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
@@ -22336,8 +22258,6 @@
 			<PromotionLine>PROMOTIONLINE_UNQUESTIONING_OBEDIENCE</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<iCombatPercent>1</iCombatPercent>
-			<UnitCombatMods>
-			</UnitCombatMods>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMMANDER</UnitCombatType>
@@ -22534,8 +22454,6 @@
 			<PromotionPrereq>PROMOTION_BARK</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_HERDING</PromotionLine>
 			<iLinePriority>1</iLinePriority>
-			<UnitCombatMods>
-			</UnitCombatMods>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_CANINE</UnitCombatType>
@@ -22552,8 +22470,6 @@
 			<PromotionPrereq>PROMOTION_HERDING1</PromotionPrereq>
 			<PromotionLine>PROMOTIONLINE_HERDING</PromotionLine>
 			<iLinePriority>2</iLinePriority>
-			<UnitCombatMods>
-			</UnitCombatMods>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_CANINE</UnitCombatType>
@@ -22571,8 +22487,6 @@
 			<PromotionLine>PROMOTIONLINE_PREDATORIAL_BLOODLUST</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<iCombatPercent>25</iCombatPercent>
-			<UnitCombatMods>
-			</UnitCombatMods>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_FELINE</UnitCombatType>
@@ -22589,8 +22503,6 @@
 			<PromotionLine>PROMOTIONLINE_PREDATORIAL_BLOODLUST</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<iCombatPercent>15</iCombatPercent>
-			<UnitCombatMods>
-			</UnitCombatMods>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_FELINE</UnitCombatType>
@@ -22620,8 +22532,6 @@
 			<Description>TXT_KEY_PROMOTION_HARAKIRI</Description>
 			<Sound>AS2D_IF_LEVELUP</Sound>
 			<PromotionPrereq>PROMOTION_BUSHIDO1</PromotionPrereq>
-			<UnitCombatMods>
-			</UnitCombatMods>
 			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_COMBATANT</UnitCombatType>
@@ -24362,20 +24272,20 @@
 			</AIWeightbyUnitCombatTypes>
 			<Button>Art/Buttons/Promotions/Corruption1Promotion.dds</Button>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>2</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>2</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>2</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>2</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -24396,20 +24306,20 @@
 			</AIWeightbyUnitCombatTypes>
 			<Button>Art/Buttons/Promotions/Corruption2Promotion.dds</Button>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>4</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>4</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>4</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>4</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -24430,20 +24340,20 @@
 			</AIWeightbyUnitCombatTypes>
 			<Button>Art/Buttons/Promotions/Corruption3Promotion.dds</Button>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>6</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>6</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>6</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>6</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -24464,20 +24374,20 @@
 			</AIWeightbyUnitCombatTypes>
 			<Button>Art/Buttons/Promotions/Corruption4Promotion.dds</Button>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>8</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>8</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>8</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>8</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -24498,20 +24408,20 @@
 			</AIWeightbyUnitCombatTypes>
 			<Button>Art/Buttons/Promotions/Corruption5Promotion.dds</Button>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>10</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>10</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>10</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>10</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -24532,20 +24442,20 @@
 			</AIWeightbyUnitCombatTypes>
 			<Button>Art/Buttons/Promotions/Corruption6Promotion.dds</Button>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>12</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>12</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>12</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>12</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -24566,20 +24476,20 @@
 			</AIWeightbyUnitCombatTypes>
 			<Button>Art/Buttons/Promotions/Corruption7Promotion.dds</Button>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>14</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>14</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>14</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>14</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -24600,20 +24510,20 @@
 			</AIWeightbyUnitCombatTypes>
 			<Button>Art/Buttons/Promotions/Corruption8Promotion.dds</Button>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>16</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>16</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>16</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>16</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -24634,20 +24544,20 @@
 			</AIWeightbyUnitCombatTypes>
 			<Button>Art/Buttons/Promotions/Corruption9Promotion.dds</Button>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>18</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>18</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>18</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>18</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -24668,20 +24578,20 @@
 			</AIWeightbyUnitCombatTypes>
 			<Button>Art/Buttons/Promotions/Corruption10Promotion.dds</Button>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>20</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>20</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>20</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>20</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -25058,20 +24968,20 @@
 				</AIWeightbyUnitCombatType>
 			</AIWeightbyUnitCombatTypes>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-2</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-1</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-2</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-1</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -25090,20 +25000,20 @@
 				</AIWeightbyUnitCombatType>
 			</AIWeightbyUnitCombatTypes>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-4</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-2</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-4</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-2</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -25122,20 +25032,20 @@
 				</AIWeightbyUnitCombatType>
 			</AIWeightbyUnitCombatTypes>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-6</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-3</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-6</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-3</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -25154,20 +25064,20 @@
 				</AIWeightbyUnitCombatType>
 			</AIWeightbyUnitCombatTypes>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-8</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-4</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-8</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-4</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -25186,20 +25096,20 @@
 				</AIWeightbyUnitCombatType>
 			</AIWeightbyUnitCombatTypes>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-10</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-5</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-10</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-5</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -25218,20 +25128,20 @@
 				</AIWeightbyUnitCombatType>
 			</AIWeightbyUnitCombatTypes>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-12</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-6</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-12</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-6</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -25250,20 +25160,20 @@
 				</AIWeightbyUnitCombatType>
 			</AIWeightbyUnitCombatTypes>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-14</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-7</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-14</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-7</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -25282,20 +25192,20 @@
 				</AIWeightbyUnitCombatType>
 			</AIWeightbyUnitCombatTypes>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-16</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-8</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-16</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-8</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -25314,20 +25224,20 @@
 				</AIWeightbyUnitCombatType>
 			</AIWeightbyUnitCombatTypes>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-18</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-9</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-18</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-9</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -25346,20 +25256,20 @@
 				</AIWeightbyUnitCombatType>
 			</AIWeightbyUnitCombatTypes>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-20</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-10</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-20</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-10</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 		</PromotionInfo>
 		<PromotionInfo>
@@ -26442,7 +26352,7 @@
 		</PromotionInfo>
 		<PromotionInfo>
 			<Type>PROMOTION_CULTURE_NEANDERTHAL</Type>
-			<Description>TXT_KEY_PROMOTION_CULTURE_SOUTH_AMERICAN</Description>
+			<Description>TXT_KEY_PROMOTION_CULTURE_NEANDERTHAL</Description>
 			<TechPrereq>TECH_DUMMY</TechPrereq>
 			<UnitCombats>
 				<UnitCombat>
@@ -26488,7 +26398,7 @@
 			</UnitCombats>
 			<Button>art/Embassy/art/culturesamerican.dds</Button>
 		</PromotionInfo>
-<!--   Terrain Dammage Promotions -->
+<!-- Terrain Dammage Promotions -->
 		<PromotionInfo>
 			<Type>PROMOTION_ANIMAL_DESERT</Type>
 			<Description>TXT_KEY_PROMOTION_ANIMAL_DESERT_DESC</Description>
@@ -28732,20 +28642,20 @@
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_SCHEMES</PromotionLine>
 			<iLinePriority>1</iLinePriority>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>1</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>1</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>1</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<Button>Art/Buttons/Promotions/Schemes1Buildup.dds</Button>
 		</PromotionInfo>
@@ -28757,20 +28667,20 @@
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_SCHEMES</PromotionLine>
 			<iLinePriority>2</iLinePriority>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>2</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>2</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>2</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>2</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<Button>,Art/Buttons/Promotions/Schemes2Buildup.dds</Button>
 		</PromotionInfo>
@@ -28782,20 +28692,20 @@
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_SCHEMES</PromotionLine>
 			<iLinePriority>3</iLinePriority>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>3</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>3</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>3</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>3</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<Button>,Art/Buttons/Promotions/Schemes3Buildup.dds</Button>
 		</PromotionInfo>
@@ -28807,20 +28717,20 @@
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_SCHEMES</PromotionLine>
 			<iLinePriority>4</iLinePriority>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>4</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>4</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>4</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>4</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<Button>,Art/Buttons/Promotions/Schemes4Buildup.dds</Button>
 		</PromotionInfo>
@@ -28832,20 +28742,20 @@
 			<PromotionLine>PROMOTIONLINE_BUILD_UP_SCHEMES</PromotionLine>
 			<iLinePriority>5</iLinePriority>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>5</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_CRIME</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>5</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>5</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_CRIME</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>5</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<Button>,Art/Buttons/Promotions/Schemes5Buildup.dds</Button>
 		</PromotionInfo>
@@ -29944,20 +29854,20 @@
 			</UnitCombats>
 			<iSameTileHealChange>8</iSameTileHealChange>
 			<PropertyManipulators>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-4</iAmountPerTurn>
-			  </PropertySource>
-			  <PropertySource>
-			    <PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
-			    <PropertyType>PROPERTY_DISEASE</PropertyType>
-				<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
-				<RelationType>RELATION_SAME_PLOT</RelationType>
-			    <iAmountPerTurn>-2</iAmountPerTurn>
-			  </PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_CITY</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-4</iAmountPerTurn>
+				</PropertySource>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_DISEASE</PropertyType>
+					<GameObjectType>GAMEOBJECT_PLOT</GameObjectType>
+					<RelationType>RELATION_SAME_PLOT</RelationType>
+					<iAmountPerTurn>-2</iAmountPerTurn>
+				</PropertySource>
 			</PropertyManipulators>
 			<Button>Art/Buttons/Promotions/WayOfTheLeechPromotion.dds</Button>
 		</PromotionInfo>
@@ -30085,7 +29995,7 @@
 					<iFeatureDefense>-15</iFeatureDefense>
 				</FeatureDefense>
 			</FeatureDefenses>
-        	<UnitCombats>
+			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_TRADE</UnitCombatType>
 					<bUnitCombat>1</bUnitCombat>
@@ -30104,7 +30014,7 @@
 			<iLinePriority>2</iLinePriority>
 			<iCombatPercent>5</iCombatPercent>
 			<iDefenseCombatModifierChange>5</iDefenseCombatModifierChange>
-        		<UnitCombats>
+			<UnitCombats>
 				<UnitCombat>
 					<UnitCombatType>UNITCOMBAT_TRADE</UnitCombatType>
 					<bUnitCombat>1</bUnitCombat>
@@ -30505,8 +30415,7 @@
 			<iVisibilityChange>1</iVisibilityChange>
 			<iInterceptChange>5</iInterceptChange>
 			<Button>,Art/Interface/Buttons/Promotions/Security5BuildUp.dds</Button>
-		</PromotionInfo>
--->
+		</PromotionInfo> -->
 		<PromotionInfo>
 			<Type>PROMOTION_FA_MEN_SI_INSPIRED</Type>
 			<Description>TXT_KEY_PROMOTION_FA_MEN_SI_INSPIRED</Description>

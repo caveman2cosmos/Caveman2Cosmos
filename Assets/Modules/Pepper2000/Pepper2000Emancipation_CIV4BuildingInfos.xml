@@ -4,6 +4,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_EMANCIPATION_PROCLAMATION</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_EMANCIPATION_PROCLAMATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EMANCIPATION_PROCLAMATION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_EMANCIPATION_PROCLAMATION_STRATEGY</Strategy>
@@ -32,7 +33,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_EMANCIPATION</PrereqTech>
-			<iCost>-1</iCost>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_WV_SLAVERY</Type>

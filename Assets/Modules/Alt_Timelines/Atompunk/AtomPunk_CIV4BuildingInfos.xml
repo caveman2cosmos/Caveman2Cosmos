@@ -498,7 +498,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Bonus>BONUS_ATOMPUNK</Bonus>
-			<iCost>-1</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iHealth>-3</iHealth>
@@ -645,6 +644,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_NUCLEAR_POWERCOMPLEX</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_NUCLEAR_POWERCOMPLEX</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NUCLEAR_POWERCOMPLEX_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NUCLEAR_POWERCOMPLEX_STRATEGY</Strategy>
@@ -847,6 +847,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_VENTURE_INDUSTRIES</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_VENTURE_INDUSTRIES</Description>
 			<Civilopedia>TXT_KEY_BUILDING_VENTURE_INDUSTRIES_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_VENTURE_INDUSTRIES_STRATEGY</Strategy>
@@ -928,7 +929,6 @@
 			</MapCategoryTypes>
 			<Bonus>BONUS_ATOMPUNK</Bonus>
 			<bPower>1</bPower>
-			<iCost>-1</iCost>
 			<iHurryCostModifier>100</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>0</iConquestProb>

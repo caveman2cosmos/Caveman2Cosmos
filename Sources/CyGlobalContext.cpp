@@ -226,7 +226,6 @@ CvYieldInfo* CyGlobalContext::getYieldInfo(int i) const
 
 CvCommerceInfo* CyGlobalContext::getCommerceInfo(int i) const
 {
-	if (GC.getCommerceInfos().size() == 0) return NULL;
 	return (i>=0 && i<NUM_COMMERCE_TYPES) ? &GC.getCommerceInfo((CommerceTypes) i) : NULL;
 }
 

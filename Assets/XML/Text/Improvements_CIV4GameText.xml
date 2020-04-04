@@ -357,11 +357,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_COTTAGE</Tag>
 		<English>Cottage</English>
-		<French>
-			<Text>Cottage</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Cottage</French>
 		<German>Gehöft</German>
 		<Italian>
 			<Text>Villetta:Villette</Text>
@@ -576,11 +572,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_FORT</Tag>
 		<English>Fort</English>
-		<French>
-			<Text>Fort</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
 		<German>
 			<Text>Festung</Text>
 			<Gender>Male</Gender>
@@ -630,7 +621,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_FORTIFY_TO_UPGRADE</Tag>
 		<English>[ICON_BULLET]A unit must guard it to upgrade</English>
-		<French>[ICON_BULLET]Une unité doit renforcer pour mettre à niveau</French>
+		<French>[ICON_BULLET]Une unité doit la garder pour qu'elle évolue</French>
 		<German>[ICON_BULLET]Eine Unit muss stärken, um ein Upgrade</German>
 		<Italian>[ICON_BULLET]Una unità deve fortificare l'aggiornamento</Italian>
 		<Spanish>[ICON_BULLET]Se debe fortificar una unidad aquí para mejorar</Spanish>
@@ -643,11 +634,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_FOSSIL_DIG_SITE</Tag>
 		<English>Fossil Dig Site</English>
-		<French>
-			<Text>Site de Fossiles Archéologiques</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Site de Fossiles Archéologiques</French>
 		<German>Fossile Ausgrabungsstätte</German>
 		<Italian>Scavo archeologico: fossili</Italian>
 		<Spanish>
@@ -703,11 +690,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_GEOGLYPH</Tag>
 		<English>Geoglyph</English>
-		<French>
-			<Text>Géoglyphe</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Géoglyphe</French>
 		<German>
 			<Text>Geoglyph</Text>
 			<Gender>Male</Gender>
@@ -749,11 +732,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_GOODY_HUT</Tag>
 		<English>Tribal Village</English>
-		<French>
-			<Text>Village tribal</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Village tribal</French>
 		<German>
 			<Text>Eingeborenendorf</Text>
 			<Gender>Neuter</Gender>
@@ -866,11 +845,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_HAMLET</Tag>
 		<English>Hamlet</English>
-		<French>
-			<Text>Hameau</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Hameau</French>
 		<German>
 			<Text>Weiler</Text>
 			<Gender>Male</Gender>
@@ -916,11 +891,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_HUNTING_CAMP</Tag>
 		<English>Hunting Camp</English>
-		<French>
-			<Text>Camp de Chasse</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Camp de Chasse</French>
 		<German>Jagdlager</German>
 		<Italian>
 			<Text>Caccia Campo:Caccia Campi</Text>
@@ -976,11 +947,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_HYDROCARBON_WELL</Tag>
 		<English>Hydrocarbon Well</English>
-		<French>
-			<Text>Hydrocarbure Puits</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Puits d'Hydrocarbures</French>
 		<German>Bohrturm</German>
 		<Italian>
 			<Text>Idrocarburo Pozzo:Idrocarburo Pozzi</Text>
@@ -1100,11 +1067,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LAND_WORKED</Tag>
 		<English>Land Worked</English>
-		<French>
-			<Text>En travaux</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Terre aménagée</French>
 		<German>Genutztes Land</German>
 		<Italian>
 			<Text>Terreno bonificato:Terreni bonificati</Text>
@@ -1126,11 +1089,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_CORAL</Tag>
 		<English>Lighthouse (Coral)</English>
-		<French>
-			<Text>Phare (Corail)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Phare (Corail)</French>
 		<German>Ein Leuchtturm</German>
 		<Italian>Un Faro</Italian>
 		<Spanish>
@@ -1149,11 +1108,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LIGHTHOUSE_REEF</Tag>
 		<English>Lighthouse (Reef)</English>
-		<French>
-			<Text>Phare (Récif)</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Phare (Récif)</French>
 		<German>Ein Leuchtturm</German>
 		<Italian>Un Faro</Italian>
 		<Spanish>
@@ -1280,11 +1235,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_MOAI</Tag>
 		<English>Moai</English>
-		<French>
-			<Text>Moai</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Statue Moai</French>
 		<Spanish>
 			<Text>Estatuas moái</Text>
 			<Gender>Female</Gender>
@@ -1478,11 +1429,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_PASTURE</Tag>
 		<English>Pasture</English>
-		<French>
-			<Text>Pâturage</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Pâturage</French>
 		<German>Gehege</German>
 		<Italian>
 			<Text>Pascolo:Pascoli</Text>
@@ -1504,11 +1451,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_PEAT_CUTTER</Tag>
 		<English>Peat Cutter</English>
-		<French>
-			<Text>Récolteur de Tourbe</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Récolteur de Tourbe</French>
 		<Spanish>
 			<Text>Recolector de turba</Text>
 			<Gender>Male</Gender>
@@ -1711,11 +1654,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SCAVENGING_CAMP</Tag>
 		<English>Scavenging Camp</English>
-		<French>
-			<Text>Camp de Récupérateurs</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Camp de Récupérateurs</French>
 		<German>Lager der Aasverwerter</German>
 		<Italian>Campo degli spazzini</Italian>
 		<Spanish>
@@ -1736,11 +1675,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SEA_MILL</Tag>
 		<English>Sea Mill</English>
-		<French>
-			<Text>Moulin à eau</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Moulin à eau</French>
 		<Spanish>
 			<Text>Molino marino</Text>
 			<Gender>Male</Gender>
@@ -1751,11 +1686,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SEED_CAMP</Tag>
 		<English>Seed Camp</English>
-		<French>
-			<Text>Dépot de Semences</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Dépot de graines</French>
 		<German>
 			<Text>Körnersammler</Text>
 			<Gender>Male</Gender>
@@ -1778,7 +1709,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_SEE_FROM</Tag>
 		<English>[ICON_BULLET]%D1_Change Visibility Height</English>
-		<French>[ICON_BULLET]%D1_Change Hauteur de Visibilité</French>
+		<French>[ICON_BULLET]%D1_Change en Hauteur de Visibilité</French>
 		<Italian>[ICON_BULLET]%D1_Change visibilità Altezza</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change a la altura de la visibilidad</Spanish>
 		<Polish>[ICON_BULLET]%D1_Change Wysokość widzenia.</Polish>
@@ -1867,11 +1798,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_STONE_TOOLS_WORKSHOP</Tag>
 		<English>Stone Tools Workshop</English>
-		<French>
-			<Text>Atelier d'Outils de pierre</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Atelier d'Outils de pierre</French>
 		<German>Steinwerkstatt</German>
 		<Italian>Raccoglitore di pietre</Italian>
 		<Spanish>
@@ -1961,11 +1888,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_TAR_GATHERER</Tag>
 		<English>Tar Gatherer</English>
-		<French>
-			<Text>Récolteur de goudron</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Récolteur de goudron</French>
 		<Spanish>
 			<Text>Recolector de alquitrán</Text>
 			<Gender>Male</Gender>
@@ -1980,11 +1903,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_THATCH_CUTTER</Tag>
 		<English>Thatch Cutter</English>
-		<French>
-			<Text>Récolteur de Chaume</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Récolteur de Chaume</French>
 		<Spanish>
 			<Text>Recolector de paja</Text>
 			<Gender>Male</Gender>
@@ -2137,11 +2056,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_VILLAGE</Tag>
 		<English>Village</English>
-		<French>
-			<Text>Village[SPACE]</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
 		<German>
 			<Text>Dorf</Text>
 			<Gender>Male</Gender>
@@ -2176,11 +2090,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_WATERMILL</Tag>
 		<English>Watermill</English>
-		<French>
-			<Text>Moulin à eau[SPACE]</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Moulin à eau</French>
 		<German>Wassermühle</German>
 		<Italian>
 			<Text>Mulino ad acqua:Mulini ad acqua</Text>
@@ -2202,11 +2112,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_WATER_WORKED</Tag>
 		<English>Water Worked</English>
-		<French>
-			<Text>En travaux</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Irrigué</French>
 		<German>Genutztes Gewässer</German>
 		<Italian>
 			<Text>Irrigazione:Irrigazioni</Text>
@@ -2305,11 +2211,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_WINDMILL</Tag>
 		<English>Windmill</English>
-		<French>
-			<Text>Moulin à vent[SPACE]</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Moulin à vent</French>
 		<German>Windmühle</German>
 		<Italian>
 			<Text>Mulino a vento:Mulini a vento</Text>
@@ -2384,11 +2286,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_WOOD_GATHERER</Tag>
 		<English>Wood Gatherer</English>
-		<French>
-			<Text>Récolteur de bois</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Récolteur de bois</French>
 		<German>Lager der Holzsammler</German>
 		<Italian>Raccoglitore di legno</Italian>
 		<Spanish>
@@ -2401,11 +2299,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_WORKSHOP</Tag>
 		<English>Workshop</English>
-		<French>
-			<Text>Atelier[SPACE]</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</French>
+		<French>Atelier</French>
 		<German>
 			<Text>Werkstatt</Text>
 			<Gender>Male</Gender>
@@ -2437,13 +2331,5 @@
 		<French>Ziggourat</French>
 		<German>Zikkurat</German>
 		<Spanish>Zigurat</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_IMPROVMENT_BUILD_TIME</Tag>
-		<English>[ICON_BULLET]%d1_Time Build Time</English>
-		<French>[ICON_BULLET]%d1_Time Temps de construction</French>
-		<German>[ICON_BULLET]%d1_Time Bauzeit</German>
-		<Spanish>[ICON_BULLET]Turnos de construcción: %d1_Time</Spanish>
-		<Polish>[ICON_BULLET]Czas Budowy: %d1_Time</Polish>
 	</TEXT>
 </Civ4GameText>

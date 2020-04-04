@@ -19,6 +19,9 @@
 			<ConstructSound>AS2D_BUILD_ANDEAN</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_ANDEANISM</PrereqReligion>
 			<ReligionType>RELIGION_ANDEANISM</ReligionType>
 			<PrereqInCityBuildings>
@@ -117,6 +120,9 @@
 			<ConstructSound>AS2D_BUILD_ANDEAN</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_FURNITURE</Bonus>
@@ -182,6 +188,9 @@
 			<ConstructSound>AS2D_BUILD_ANDEAN</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqReligion>RELIGION_ANDEANISM</PrereqReligion>
 			<ReligionType>RELIGION_ANDEANISM</ReligionType>
 			<!-- Construction cost -->
@@ -251,10 +260,12 @@
 			<ConstructSound>AS2D_BUILD_ANDEAN</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_ANDEANISM</ReligionType>
 			<HolyCity>RELIGION_ANDEANISM</HolyCity>
 			<!-- Construction cost -->
-			<iCost>-1</iCost>
 			<!-- Special Yield and Commerce modifiers -->
 			<ObsoleteSafeCommerceChanges>
 				<iCommerce>2</iCommerce>
@@ -304,6 +315,9 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DORADO</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DORADO</MovieDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_ANDEANISM</ReligionType>
 			<StateReligion>RELIGION_ANDEANISM</StateReligion>
 			<bStateReligion>1</bStateReligion>
@@ -387,6 +401,9 @@
 			<MovieDefineTag>ART_DEF_MOVIE_MACHU_PICCHU</MovieDefineTag>
 			<ReligionType>RELIGION_ANDEANISM</ReligionType>
 			<StateReligion>RELIGION_ANDEANISM</StateReligion>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_ANDEANISM</PrereqReligion>
 			<PrereqTech>TECH_MOUNTAINEERING</PrereqTech>

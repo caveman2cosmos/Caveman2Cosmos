@@ -14,6 +14,9 @@
 			<Strategy>TXT_KEY_BUILDING_OBATALA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OBATALA</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_YORUBA</ReligionType>
 			<StateReligion>RELIGION_YORUBA</StateReligion>
 			<bStateReligion>1</bStateReligion>
@@ -78,6 +81,9 @@
 			<Strategy>TXT_KEY_BUILDING_OGGUN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OGGUN</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_YORUBA</ReligionType>
 			<StateReligion>RELIGION_YORUBA</StateReligion>
 			<bStateReligion>1</bStateReligion>
@@ -142,6 +148,9 @@
 			<Strategy>TXT_KEY_BUILDING_OLOFIN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OLOFIN</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_YORUBA</ReligionType>
 			<PrereqReligion>RELIGION_YORUBA</PrereqReligion>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
@@ -189,6 +198,9 @@
 			<Strategy>TXT_KEY_BUILDING_OLOKUN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OLOKUN</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_YORUBA</ReligionType>
 			<StateReligion>RELIGION_YORUBA</StateReligion>
 			<bStateReligion>1</bStateReligion>
@@ -285,6 +297,9 @@
 			<Strategy>TXT_KEY_BUILDING_OSHOSI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OSHOSI</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_YORUBA</ReligionType>
 			<StateReligion>RELIGION_YORUBA</StateReligion>
 			<bStateReligion>1</bStateReligion>
@@ -356,6 +371,9 @@
 			<Strategy>TXT_KEY_BUILDING_YORUBA_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OLODUMARE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<MovieDefineTag>ART_DEF_MOVIE_OLODUMARE</MovieDefineTag>
 			<HolyCity>RELIGION_YORUBA</HolyCity>
 			<ReligionType>RELIGION_YORUBA</ReligionType>
@@ -363,7 +381,6 @@
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
-			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>8</iAsset>

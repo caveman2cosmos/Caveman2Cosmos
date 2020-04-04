@@ -2021,8 +2021,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CISLUNARSETTLER_HOVER</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Can build cities in Cislunar Space</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Peut construire les Villes de l'espace cislunaire</French>
+		<English>[ICON_BULLET]Can build cities in Cislunar Space</English>
+		<French>[ICON_BULLET]Peut construire les Villes de l'espace cislunaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CISLUNAR_INFANTRY</Tag>
@@ -2245,8 +2245,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEAVY_ROCKET_HOVER</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]While this unit can be built on Earth, it is useful only outside of Earth.[NEWLINE]Upgrade to a space settler on Space Station Lv. 3</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Bien que cette unité puisse être construite sur Terre, elle n'est utile qu'en dehors de la Terre.[NEWLINE]Améliore les colons spatiaqux sur la Station spatiale de Niv. 3
+		<English>[ICON_BULLET]While this unit can be built on Earth, it is useful only outside of Earth.[NEWLINE]Upgrade to a space settler on Space Station Lv. 3</English>
+		<French>[ICON_BULLET]Bien que cette unité puisse être construite sur Terre, elle n'est utile qu'en dehors de la Terre.[NEWLINE]Améliore les colons spatiaqux sur la Station spatiale de Niv. 3
 </French>
 	</TEXT>
 	<TEXT>
@@ -2281,8 +2281,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HYPERSHIP_HOVER</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Can build cities in extragalactic space, Distant Cosmos and Hyperspace. Upon settling transforms terrain into Hyperspace</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Peut construire les Villes dans l'espace extragalactique, le Cosmos lointain et l'Hyperespace. Lors de la colonisation, le terrain se transforme en hyperespace</French>
+		<English>[ICON_BULLET]Can build cities in extragalactic space, Distant Cosmos and Hyperspace. Upon settling transforms terrain into Hyperspace</English>
+		<French>[ICON_BULLET]Peut construire les Villes dans l'espace extragalactique, le Cosmos lointain et l'Hyperespace. Lors de la colonisation, le terrain se transforme en hyperespace</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HYPERSPACE_DEFENDER</Tag>
@@ -2531,8 +2531,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNARSETTLER_HOVER</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Can build cities on the Moon</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Peut construire les Villes sur la Lune</French>
+		<English>[ICON_BULLET]Can build cities on the Moon</English>
+		<French>[ICON_BULLET]Peut construire les Villes sur la Lune</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNAR_BULLDOZER</Tag>
@@ -2696,8 +2696,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ONEILLSETTLER_HOVER</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Can build cities in the solar system</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Peut construire les Villes dans le système solaire</French>
+		<English>[ICON_BULLET]Can build cities in the solar system</English>
+		<French>[ICON_BULLET]Peut construire les Villes dans le système solaire</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_OORT_CLOUD_REWARD</Tag>
@@ -2736,8 +2736,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PLANETARYSETTLER_HOVER</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Can build cities on Mars and Venus</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Peut construire les Villes sur Mars et Vénus</French>
+		<English>[ICON_BULLET]Can build cities on Mars and Venus</English>
+		<French>[ICON_BULLET]Peut construire les Villes sur Mars et Vénus</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PLANETARY_INFANTRY</Tag>
@@ -2896,8 +2896,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPACEUNIT_HOVER</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]While this unit can be built on Earth, it is useful only outside of Earth.</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Bien que cette unité puisse être construite sur Terre, elle n'est utile qu'en dehors de la Terre.</French>
+		<English>[ICON_BULLET]While this unit can be built on Earth, it is useful only outside of Earth.</English>
+		<French>[ICON_BULLET]Bien que cette unité puisse être construite sur Terre, elle n'est utile qu'en dehors de la Terre.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPACE_SHUTTLE</Tag>
@@ -3144,8 +3144,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WORLDSHIP2_HOVER</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Can build cities in the Orion Arm and Milky Way</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Peut construire les Villes dans le bras d'Orion et la Voie lactée</French>
+		<English>[ICON_BULLET]Can build cities in the Orion Arm and Milky Way</English>
+		<French>[ICON_BULLET]Peut construire les Villes dans le bras d'Orion et la Voie lactée</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WORLDSHIP3</Tag>
@@ -3154,8 +3154,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WORLDSHIP3_HOVER</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Can build cities in the Milky Way and Universe</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Peut construire les Villes dans la Voie lactée, et tout l'Univers</French>
+		<English>[ICON_BULLET]Can build cities in the Milky Way and Universe</English>
+		<French>[ICON_BULLET]Peut construire les Villes dans la Voie lactée, et tout l'Univers</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WORLDSHIP4</Tag>
@@ -3164,8 +3164,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WORLDSHIP4_HOVER</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Can build cities in the Universe and beyond</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Peut construire les Villes dans l'Univers, et plus loin</French>
+		<English>[ICON_BULLET]Can build cities in the Universe and beyond</English>
+		<French>[ICON_BULLET]Peut construire les Villes dans l'Univers, et plus loin</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WORLDSHIP_DEFENDER</Tag>
@@ -3184,7 +3184,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WORLDSHIP_HOVER</Tag>
-		<English>[ICON_BULLET][COLOR_YELLOW]HELP: [COLOR_REVERT]Can build cities in the Oort Cloud and Transtellar space</English>
-		<French>[ICON_BULLET][COLOR_YELLOW]Aide : [COLOR_REVERT]Peut construire les Villes dans le nuage d'Oort, et l'espace transtellaire</French>
+		<English>[ICON_BULLET]Can build cities in the Oort Cloud and Transtellar space</English>
+		<French>[ICON_BULLET]Peut construire les Villes dans le nuage d'Oort, et l'espace transtellaire</French>
 	</TEXT>
 </Civ4GameText>

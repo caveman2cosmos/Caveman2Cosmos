@@ -1,6 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
 	<TEXT>
+		<Tag>TXT_KEY_PROMOHELP_CHANGE_NOT_SPECIAL_CARGO</Tag>
+		<English>[ICON_BULLET]Does not allow transport of %s1 Units</English>
+		<French>[ICON_BULLET]Ne permet pas le transport de %s1 Unités</French>
+		<Polish>[ICON_BULLET]Nie pozwala na transport %s1</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PROMOHELP_CHANGE_SPECIAL_UNIT</Tag>
+		<English>[ICON_BULLET]Changes the Unit's Special type to %s1</English>
+		<French>[ICON_BULLET]Change le type spécial de l'unité en %s1</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOHELP_INVISIBILITY_NEGATES_VEIL</Tag>
 		<English>[ICON_BULLET]Negates %F1_Invisible Veil</English>
 		<French>[ICON_BULLET]Invisibilité (%F1_Invisible): Désactivé.</French>
@@ -428,12 +439,12 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_LIE_IN_WAIT</Tag>
 		<English>Build Up (Lie in Wait) Promotionline</English>
-		<French>Spécialisation Retranchement (Intrigue)</French>		
+		<French>Spécialisation Retranchement (Intrigue)</French>
 		<German>(Training) Auflauern</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_LIE_IN_WAIT_HELP</Tag>
-		<English>Each round spent building up Lie in Wait, the unit gains +5% [COLOR_HIGHLIGHT_TEXT]Stealth Combat Modifier[COLOR_REVERT] up to a maximum bonus of +25%, AND +1 [COLOR_HIGHLIGHT_TEXT]Stealth Strikes[COLOR_REVERT] on the first and fifth rounds of building up up to a maximum of +2, provided each promotion level is qualified for by the unit.  Unit also gains Stealth Defense and will thus surprise defend against enemy units attempting to move into the tile.  Once the unit has revealed itself, it stays revealed and is no longer engaging in stealth combat thereafter for the remainder of the round.</English>
+		<English>Each round spent building up Lie in Wait, the unit gains +5% [COLOR_HIGHLIGHT_TEXT]Stealth Combat Modifier[COLOR_REVERT] up to a maximum bonus of +25%, AND +1 [COLOR_HIGHLIGHT_TEXT]Stealth Strikes[COLOR_REVERT] on the first and fifth rounds of building up up to a maximum of +2, provided each promotion level is qualified for by the unit. Unit also gains Stealth Defense and will thus surprise defend against enemy units attempting to move into the tile. Once the unit has revealed itself, it stays revealed and is no longer engaging in stealth combat thereafter for the remainder of the round.</English>
 		<French>Chaque tour dépensé pour en se retrancher en Intrigue, l'unité gagne + 5% [COLOR_HIGHLIGHT_TEXT] Modificateur de combat furtif [COLOR_REVERT] jusqu'à un bonus maximum de + 25%, ET +1 [COLOR_HIGHLIGHT_TEXT] Frappes furtives [COLOR_REVERT] les premier et cinquième tours de construction jusqu'à un maximum de +2, à condition que chaque niveau de promotion soit qualifié par l'unité. L'unité gagne également la défense furtive et surprendra ainsi la défense contre les unités ennemies qui tentent de se déplacer dans la tuile. Une fois que l'unité s'est révélée, elle reste révélée et n'entreprend plus de combat furtif par la suite pour le reste du round.</French>
 		<German>Durch Training in Auflauern erhöht sich jede Runde der [COLOR_HIGHLIGHT_TEXT]Tarnmodifikator[COLOR_REVERT] der Einheit um 5% (maximal 25%). Außerdem erhält sie einen zusätzlichen Tarnangriff in der ersten und fünften Runde und kann sich außerdem gegen Tarnangriffe verteidigen. Wenn die Einheit sich gezeigt hat, bleibt sie sichtbar und hat für den Rest der Runde keine Tarnvorteile mehr.</German>
 	</TEXT>
@@ -455,7 +466,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_BUILD_UP_OBSERVATION_HELP</Tag>
-		<English>On the first rounds spent building up Observation, the unit gains 1 intensity of [COLOR_HIGHLIGHT_TEXT]Camouflage Visibility[COLOR_REVERT].  On the third and fifth rounds, the unit gains 1 additional [COLOR_HIGHLIGHT_TEXT]Camouflage Visibility Range[COLOR_REVERT], provided each promotion level is qualified for by the unit.</English>
+		<English>On the first rounds spent building up Observation, the unit gains 1 intensity of [COLOR_HIGHLIGHT_TEXT]Camouflage Visibility[COLOR_REVERT]. On the third and fifth rounds, the unit gains 1 additional [COLOR_HIGHLIGHT_TEXT]Camouflage Visibility Range[COLOR_REVERT], provided each promotion level is qualified for by the unit.</English>
 		<French>Lors du premier Round de développement de la spécialisation Observation, l'unité gagne 1 en intensité de [COLOR_HIGHLIGHT_TEXT]Détection du Camouflage[COLOR_REVERT]. Pour le troisième et le cinquième Round, elle gagne 1 en [COLOR_HIGHLIGHT_TEXT]Portée de détection ud Camouflage[COLOR_REVERT], et ce reçu pour chaque niveau de promotion obtenu par l'unité.</French>
 	</TEXT>
 	<TEXT>
@@ -759,7 +770,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_DECOYS</Tag>
 		<English>Decoys Promotionline</English>
-		<French>Spécialisation Leurre</French>		
+		<French>Spécialisation Leurre</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_DEFENSIVE_PROTOCOLS</Tag>
@@ -872,7 +883,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_EQUIPMENT_MELEE_WEAPONS</Tag>
-		<English>Melee  Promotion Line</English>
+		<English>Melee Promotion Line</English>
 		<French>Armes de Corps Corps</French>
 		<German>Melee Weapons Promotion Line</German>
 		<Italian>Armi da corpo a corpo</Italian>
@@ -2219,6 +2230,7 @@
 		<Tag>TXT_KEY_PROMOTION_ADDS_CANNOT_CAPTURE</Tag>
 		<English>[ICON_BULLET]Gives cause for unit to be unable to capture enemy Cities or Units</English>
 		<French>[ICON_BULLET]Rend l'unité incapable de capturer les villes ou unités ennemies</French>
+		<German>[ICON_BULLET]Unfähigkeit zur Einnahme von Städten und Einheiten hinzugefügt</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ADDS_COLD_IMMUNITY_TEXT</Tag>
@@ -2569,8 +2581,8 @@
 		</Spanish>
 		<Polish>Desant</Polish>
 	</TEXT>
-  <TEXT>
-  	<Tag>TXT_KEY_PROMOTION_ANIMAL_HUNTER</Tag>
+	<TEXT>
+ 	<Tag>TXT_KEY_PROMOTION_ANIMAL_HUNTER</Tag>
 		<English>Animal Hunter</English>
 		<French>Chasseur d'Animaux</French>
 		<German>Animal Jaeger</German>
@@ -2628,7 +2640,7 @@
 		<Tag>TXT_KEY_PROMOTION_ANTITANK_DEFENSE2</Tag>
 		<English>Antitank Defense II</English>
 		<French>Défense Anti-char II</French>
-		<German>Panzerverteidigung  II</German>
+		<German>Panzerverteidigung II</German>
 		<Italian>Difesa anticarro II</Italian>
 		<Spanish>Defensa antitanque II</Spanish>
 		<Polish>Obrona Przeciwczołgowa II</Polish>
@@ -2637,7 +2649,7 @@
 		<Tag>TXT_KEY_PROMOTION_ANTITANK_DEFENSE3</Tag>
 		<English>Antitank Defense III</English>
 		<French>Défense Anti-char III</French>
-		<German>Panzerverteidigung  III</German>
+		<German>Panzerverteidigung III</German>
 		<Italian>Difesa anticarro III</Italian>
 		<Spanish>Defensa antitanque III</Spanish>
 		<Polish>Obrona Przeciwczołgowa III</Polish>
@@ -4039,7 +4051,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_BOUNTY_HUNTER_HELP</Tag>
-		<English>Makes the unit capable of transporting captives.  In general this is beneficial to transport them quickly, hidden, or navally.  Warning: Only one type of Special Unit Category can be loaded on any given unit and this promotion will replace other types of Special Units that can be loaded onto this unit as a result.  In otherwords, it will dedicate this unit to ONLY being able to carry captives.  Will also give some added carry space for this purpose.  This is not to be envisioned in the same way that you might envision carrying units on a ship normally... it's instead a matter of being a 'chain gang' leader and commander.  Also be warned that loaded captives will reduce the combat, withdrawal and pursuit effectiveness of the units transporting them.  Each adds an increasing penalty so the more loaded, the more burdened and penalized the transporting unit becomes.  This is because captives will generally attempt to free themselves during conflict which distracts their captors.</English>
+		<English>Makes the unit capable of transporting captives. In general this is beneficial to transport them quickly, hidden, or navally. Warning: Only one type of Special Unit Category can be loaded on any given unit and this promotion will replace other types of Special Units that can be loaded onto this unit as a result. In otherwords, it will dedicate this unit to ONLY being able to carry captives. Will also give some added carry space for this purpose. This is not to be envisioned in the same way that you might envision carrying units on a ship normally... it's instead a matter of being a 'chain gang' leader and commander. Also be warned that loaded captives will reduce the combat, withdrawal and pursuit effectiveness of the units transporting them. Each adds an increasing penalty so the more loaded, the more burdened and penalized the transporting unit becomes. This is because captives will generally attempt to free themselves during conflict which distracts their captors.</English>
 		<French>Permet à cette unité de transporter des prisonniers. En général, il est intéressant de pouvoir les transporter rapidement, caché. Attention: un seul type d'unité spéciale peut être chargé, et la promotion remplacera la possibilité de transporter d'autres unités spéciales. En d'autres mot, cette unité ne pourra transporter que des prisonniers, et bénéficiera d'une capacité de soute légèrement plus grande. L'unité qui transporte les prisonniers perd automatiquement en puissance au combat, et probabilité de fuite ou retraite, avec cumul de malus en fonction du nombre d'unités transportées.</French>
 	</TEXT>
 	<TEXT>
@@ -6692,6 +6704,10 @@
 		<French>Moyen-Orient</French>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_CULTURE_NEANDERTHAL</Tag>
+		<English>Neanderthal</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURE_NORTH_AMERICAN</Tag>
 		<English>North American</English>
 		<French>Nord-américain</French>
@@ -8988,14 +9004,6 @@
 		<Polish>Dodatkowy Zbiornik Paliwa</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_FUSION_CANNON</Tag>
-		<English>Fusion MegaCannon</English>
-		<French>MégaCanon à Fusion</French>
-		<Italian>Megacannone a fusione</Italian>
-		<Spanish>Megacañón a fusión</Spanish>
-		<Polish>Mega Działo Fuzyjne</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_FUSION_POWER_SOURCE</Tag>
 		<English>Fusion Power Source</English>
 		<French>Moteur à Fusion</French>
@@ -9343,7 +9351,7 @@
 			<Text>Gardien Tribal</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
-		</French>		
+		</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_GUARDIAN_TRIBAL_HELP</Tag>
@@ -10061,7 +10069,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HN_CAPTIVE_HELP</Tag>
-		<English>Automatically assigned to captives and workers when Hidden Nationality units capture them.  Will automatically be removed as soon as the unit moves into your own territory.</English>
+		<English>Automatically assigned to captives and workers when Hidden Nationality units capture them. Will automatically be removed as soon as the unit moves into your own territory.</English>
 		<French>Assigné automatiquement aux prisonniers et ouvriers lorsque des unités avec nationalité cachée les capture. sera supprimé automatiquement dès que l'unité entrera dans son territoire.</French>
 	</TEXT>
 	<TEXT>
@@ -10076,7 +10084,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_HN_WAR_PRIZE_HELP</Tag>
-		<English>Automatically assigned to units that can be converted to military use for your nation when captured by a unit with Hidden Nationality.  Can be very valuable to have these units that maintain Hidden Nationality themselves, however, the promotion will vanish if you ever move a unit with this promotion into your own territory.</English>
+		<English>Automatically assigned to units that can be converted to military use for your nation when captured by a unit with Hidden Nationality. Can be very valuable to have these units that maintain Hidden Nationality themselves, however, the promotion will vanish if you ever move a unit with this promotion into your own territory.</English>
 		<French>Assigné automatiquement aux unités qui peuvent être converties en unités militaire, lorsque capturées par une unité avec la nationalité cachée. Cela peut être très intéressant pour ces unités de garder elles-mêmes la nationalité cachée. Par contre, la promotion sera supprimée automatiquement dès que l'unité entrera dans son territoire.</French>
 	</TEXT>
 	<TEXT>
@@ -10651,7 +10659,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INITIATIVE1</Tag>
 		<English>Initiative I</English>
-		<French>Initiative I</French>
 		<Italian>Iniziativa I</Italian>
 		<Spanish>Iniciativa I</Spanish>
 		<Polish>Inicjatywa I</Polish>
@@ -10659,7 +10666,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INITIATIVE2</Tag>
 		<English>Initiative II</English>
-		<French>Initiative II</French>
 		<Italian>Iniziativa II</Italian>
 		<Spanish>Iniciativa II</Spanish>
 		<Polish>Inicjatywa II</Polish>
@@ -10667,7 +10673,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INITIATIVE3</Tag>
 		<English>Initiative III</English>
-		<French>Initiative III</French>
 		<Italian>Iniziativa III</Italian>
 		<Spanish>Iniciativa III</Spanish>
 		<Polish>Inicjatywa III</Polish>
@@ -10675,7 +10680,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_INITIATIVE4</Tag>
 		<English>Initiative IV</English>
-		<French>Initiative IV</French>
 		<Italian>Iniziativa IV</Italian>
 		<Spanish>Iniciativa IV</Spanish>
 		<Polish>Inicjatywa IV</Polish>
@@ -10995,6 +10999,11 @@
 		<Polish>Broń z żelaza</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PROMOTION_IVORY_WEAPONS</Tag>
+		<English>Ivory Weapons</English>
+		<French>Armes d'Ivoire</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_JADED_DECADENCE</Tag>
 		<English>Quality Down(Jaded Decadence)</English>
 		<French>
@@ -11034,7 +11043,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_KANAI</Tag>
 		<English>Kanai</English>
-		<French>Kanaï</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_KEEN_EARS1</Tag>
@@ -12843,12 +12851,6 @@
 		<Polish>Środki Nie-Śmiercionośne V</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_NOT_SPECIAL_CARGO_CHANGE_TEXT</Tag>
-		<English>[ICON_BULLET]Does not allow transport of %s1_Change Units</English>
-		<French>[ICON_BULLET]Ne permet pas le transport de %s1_Change Unités</French>
-		<Polish>[ICON_BULLET]Nie pozwala na transport %s1_Change</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_NO_DEFENSIVE_BONUS_CHANGE_NEGATIVE_TEXT</Tag>
 		<English>[ICON_BULLET]Removes %D1_Reasons Cause(s) to be unable to benefit from Defense Combat bonuses.</English>
 		<French>[ICON_BULLET]Enlève les %D1_Reasons raisons(s) pour ne pas pouvoir bénéficier des bonus de combat de défense.</French>
@@ -14027,6 +14029,7 @@
 		<Tag>TXT_KEY_PROMOTION_PURSUIT_TEXT</Tag>
 		<English>[ICON_BULLET]Pursuit Chance: %D1_Change%%</English>
 		<French>[ICON_BULLET]%D1_Change%% Chances de poursuite</French>
+		<German>[ICON_BULLET]Verfolgungsjagd: %d1_Amount%%</German>
 		<Italian>[ICON_BULLET]%D1_Change%% di probabilità di inseguimento</Italian>
 		<Spanish>[ICON_BULLET]%D1_Change%% probabilidad de Pursuitón</Spanish>
 		<Polish>[ICON_BULLET]%D1_Change%% Szansy na Pościg</Polish>
@@ -14732,6 +14735,7 @@
 		<Tag>TXT_KEY_PROMOTION_REMOVES_CANNOT_CAPTURE</Tag>
 		<English>[ICON_BULLET]Removes a cause for unit to be unable to capture enemy Cities or Units</English>
 		<French>[ICON_BULLET]Enlève l'incapacité de l'unité de capturer les villes ou unités ennemies</French>
+		<German>[ICON_BULLET]Unfähigkeit zur Einnahme von Städten und Einheiten entfernt</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_REMOVES_COLD_IMMUNITY_TEXT</Tag>
@@ -15083,9 +15087,9 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_RETINUE_APPRENTICE_HELP</Tag>
-		<English>[ICON_BULLET]30% survival chance upon losing a battle.  [ICON_BULLET]Plunders 4% of Enemy [ICON_ESPIONAGE] Reserves on Combat Victory.</English>
-		<French>[ICON_BULLET]30% probabilité de survie après la défaite.  [ICON_BULLET]Pille 4% des points d'[ICON_ESPIONAGE] en cas de Victoire.</French>
-		<Italian>[ICON_BULLET]30% di chance di sopravvivenza quando perde una battaglia.  [ICON_BULLET]Saccheggia 4% delle riserve nemiche di [ICON_ESPIONAGE] dalle vittorie in combattimento.</Italian>
+		<English>[ICON_BULLET]30% survival chance upon losing a battle. [ICON_BULLET]Plunders 4% of Enemy [ICON_ESPIONAGE] Reserves on Combat Victory.</English>
+		<French>[ICON_BULLET]30% probabilité de survie après la défaite. [ICON_BULLET]Pille 4% des points d'[ICON_ESPIONAGE] en cas de Victoire.</French>
+		<Italian>[ICON_BULLET]30% di chance di sopravvivenza quando perde una battaglia. [ICON_BULLET]Saccheggia 4% delle riserve nemiche di [ICON_ESPIONAGE] dalle vittorie in combattimento.</Italian>
 		<Spanish>[ICON_BULLET]Probabilidad del 30% de sobrevivir tras una derrota[ICON_BULLET]Saquea un 4% de las reservas de [ICON_ESPIONAGE] enemigas en caso de victoria</Spanish>
 		<Polish>[ICON_BULLET]30% na przetrwanie przegranej bitwy. [ICON_BULLET]Po zwycięstwie grabi 4% wrogich zapasów [ICON_ESPIONAGE]</Polish>
 	</TEXT>
@@ -16807,11 +16811,6 @@
 		<English>[ICON_BULLET]Outfits unit to transport %s1_Change Units [COLOR_WARNING_TEXT](And then allows NO OTHER type!)[COLOR_REVERT]</English>
 		<French>[ICON_BULLET]Equipe l'unité pour transporter %s1_Change Unités</French>
 		<Polish>[ICON_BULLET]Przygotowuje jednostkę do transportu innych jednostek %s1_Change</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_PROMOTION_SPECIAL_UNIT_TEXT</Tag>
-		<English>[ICON_BULLET]Changes the Unit's Special type to %s1_SpecialUnitType</English>
-		<French>[ICON_BULLET]Change le type spécial de l'unité en %s1_SpecialUnitType</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SPEED</Tag>
@@ -19026,24 +19025,28 @@
 		<Tag>TXT_KEY_PROMOTION_UNIT_COMBAT_MOD_PER_SIZE_LESS</Tag>
 		<English>[ICON_BULLET]%d1_Amount%% VS Each Size Rank Smaller</English>
 		<French>[ICON_BULLET]Modif. de Combat contre des unités plus petites: %D1_Amount%% par rang inférieur</French>
+		<German>[ICON_BULLET]%d1_Amount%% gegen kleinere Einheiten (pro Stufe Größenunterschied)</German>
 		<Polish>[ICON_BULLET]Modyfiakator Walki vs Mniejszych Rozmiarów jednostki: %d1_Amount%% za różnicę w rozmiarze</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_UNIT_COMBAT_MOD_PER_SIZE_MORE</Tag>
 		<English>[ICON_BULLET]%d1_Amount%% VS Each Size Rank Larger</English>
 		<French>[ICON_BULLET]Modif. de Combat contre des unités plus grandes: %D1_Amount%% par rang supérieur</French>
+		<German>[ICON_BULLET]%d1_Amount%% gegen größere Einheiten (pro Stufe Größenunterschied)</German>
 		<Polish>[ICON_BULLET]Modyfiakator Walki vs Większych Rozmiarów jednostki: %d1_Amount%% za różnicę w rozmiarze</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_UNIT_COMBAT_MOD_PER_VOLUME_LESS</Tag>
 		<English>[ICON_BULLET]%d1_Amount%% VS Each Group Rank Smaller</English>
 		<French>[ICON_BULLET]Modif. de Combat contre des groupes plus petits: %D1_Amount%% par Nb d'unités en moins</French>
+		<German>[ICON_BULLET]%d1_Amount%% gegen kleinere Gruppen (pro Stufe Größenunterschied)</German>
 		<Polish>[ICON_BULLET]Modyfiakator Walki vs Mniejsze Grupy jednostek: %d1_Amount%% za różnicę w rozmiarze</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_UNIT_COMBAT_MOD_PER_VOLUME_MORE</Tag>
 		<English>[ICON_BULLET]%d1_Amount%% VS Each Group Rank Larger</English>
 		<French>[ICON_BULLET]Modif. de Combat contre des groupes plus grands: %D1_Amount%% par Nb d'unités suppl.</French>
+		<German>[ICON_BULLET]%d1_Amount%% gegen größere Gruppen (pro Stufe Größenunterschied)</German>
 		<Polish>[ICON_BULLET]Modyfiakator Walki vs Większych Grupy jednostek: %d1_Amount%% za różnicę w rozmiarze</Polish>
 	</TEXT>
 	<TEXT>
@@ -19437,52 +19440,52 @@
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_CENTAUR</Tag>
 		<English>Way of the Centaur</English>
-		<French>Voie du Centaure</French>		
+		<French>Voie du Centaure</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_FEATHER</Tag>
 		<English>Way of the Feather</English>
-		<French>Voie de la plume</French>		
+		<French>Voie de la plume</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_FIST</Tag>
 		<English>Way of the Fist</English>
-		<French>Voie du Poing</French>				
+		<French>Voie du Poing</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_LEECH</Tag>
 		<English>Way of the Leech</English>
-		<French>Voie de la Goule</French>		
+		<French>Voie de la Goule</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_SHADOWS</Tag>
 		<English>Way of the Shadows</English>
-		<French>Voie des Ombres</French>		
+		<French>Voie des Ombres</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_WARRIOR</Tag>
 		<English>Way of the Warrior</English>
-		<French>Voie du Guerrier</French>		
+		<French>Voie du Guerrier</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_WAVES</Tag>
 		<English>Way of the Waves</English>
-		<French>Voie des Vagues</French>		
+		<French>Voie des Vagues</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_WILD</Tag>
 		<English>Way of the Wild</English>
-		<French>Voie de la Nature</French>				
+		<French>Voie de la Nature</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_WIND</Tag>
 		<English>Way of the Wind</English>
-		<French>Voie du Vent</French>		
+		<French>Voie du Vent</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WAY_OF_THE_WOLF</Tag>
 		<English>Way of the Wolf</English>
-		<French>Voie du Loup</French>		
+		<French>Voie du Loup</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_WEAKEN_PER_TURN_NEGATIVE_TEXT</Tag>

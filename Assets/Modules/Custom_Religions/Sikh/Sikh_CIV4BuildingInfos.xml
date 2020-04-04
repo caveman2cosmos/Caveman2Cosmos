@@ -14,6 +14,9 @@
 			<Strategy>TXT_KEY_BUILDING_SIKH_CATHEDRAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SIKH_CATHEDRAL</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_SIKHISM</ReligionType>
 			<PrereqReligion>RELIGION_SIKHISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
@@ -104,6 +107,9 @@
 			<Strategy>TXT_KEY_BUILDING_SIKH_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SIKH_TEMPLE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_SIKHISM</ReligionType>
 			<PrereqReligion>RELIGION_SIKHISM</PrereqReligion>
 			<Bonus>BONUS_BRICKS</Bonus>
@@ -178,6 +184,9 @@
 			<Strategy>TXT_KEY_BUILDING_SIKH_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SIKH_SHRINE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<MovieDefineTag>ART_DEF_MOVIE_SHRINE_SIKH</MovieDefineTag>
 			<HolyCity>RELIGION_SIKHISM</HolyCity>
 			<ReligionType>RELIGION_SIKHISM</ReligionType>
@@ -185,7 +194,6 @@
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
-			<iCost>-1</iCost>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>8</iAsset>
 			<fVisibilityPriority>1</fVisibilityPriority>

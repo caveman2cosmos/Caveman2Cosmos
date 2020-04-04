@@ -496,9 +496,9 @@ public:
 	void reset(int iID = 0, UnitTypes eUnit = NO_UNIT, PlayerTypes eOwner = NO_PLAYER, bool bConstructorCall = false, bool bIdentityChange = false);
 	void setupGraphical();
 
-	void convert(CvUnit* pUnit); // Exposed to Python
+	void convert(CvUnit* pUnit, const bool bKillOriginal=true); // Exposed to Python
 	void kill(bool bDelay, PlayerTypes ePlayer = NO_PLAYER, bool bMessaged = false); // Exposed to Python
-	void killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged = false); //	Used internally
+	void killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged = false); // Used internally
 
 	DllExport void NotifyEntity(MissionTypes eMission);
 
@@ -1803,15 +1803,6 @@ public:
 	bool isRbombardable(int iMinStack);
 	int getRbombardSeigeCount(CvPlot* pPlot);
 	// RevolutionDCM - end
-// Dale - ARB: Archer Bombard START
-	bool canArcherBombard() const;
-	// fromPlot - units own plot() isn't valid in some cases (when its out of viewport or using dummy entities)
-	bool canArcherBombardAt(const CvPlot* fromPlot, int iX, int iY) const;
-	bool archerBombard(int iX, int iY, bool supportAttack = false);
-// Dale - ARB: Archer Bombard END
-// Dale - SA: Stack Attack START
-//	void updateStackCombat(bool bQuick = false);
-// Dale - SA: Stack Attack END
 // Dale - SA: Opp Fire START
 	void doOpportunityFire();
 // Dale - SA: Opp Fire END

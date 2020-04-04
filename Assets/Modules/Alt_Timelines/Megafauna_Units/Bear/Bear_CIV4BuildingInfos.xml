@@ -16,7 +16,7 @@
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			<iCost>624</iCost>
-			<iConquestProb>0</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
 			<YieldChanges>
@@ -150,9 +150,11 @@
 			<Strategy>TXT_KEY_BUILDING_BEAR_TRAINER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BEAR_TRAINER_EFFECT</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<bNeverCapture>1</bNeverCapture>
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
-			<iCost>-1</iCost>
 			<iAsset>2</iAsset>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
 			<Flavors>
@@ -179,7 +181,6 @@
 			</TechTypes>
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
 			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
-			<iCost>-1</iCost>
 			<iConquestProb>25</iConquestProb>
 			<iAsset>2</iAsset>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>

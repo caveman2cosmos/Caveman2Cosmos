@@ -15,6 +15,11 @@
 		<Spanish>Estrategia:[NEWLINE]</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PEDIA_AND_BUILD_TIME</Tag>
+		<English>and build time is</English>
+		<French>et le temps de construction est :\n</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PEDIA_ATTITUDE</Tag>
 		<English>Attitude: [BOLD]%d1%[\BOLD] (Base) + [BOLD]%d2%[\BOLD] (Warmonger Respect)[NEWLINE]</English>
 		<French>Attitude: [BOLD]%d1%[\BOLD] (Base) + [BOLD]%d2%[\BOLD] (Respect du Seigneur de Guerre)[NEWLINE]</French>
@@ -31,7 +36,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_BONUS_APPEARANCE</Tag>
 		<English>Reveal</English>
-		<French>Révèle</French>
+		<French>Révélé par :</French>
 		<German>enthüllt</German>
 		<Italian>Rivela</Italian>
 		<Spanish>Revela</Spanish>
@@ -39,7 +44,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_BONUS_APPEARANCE_AND_TRADE</Tag>
 		<English>Reveal/Enable</English>
-		<French>Révèle/Active</French>
+		<French>Révélé et utilisable dès :</French>
 		<German>enthüllt/verfügbar</German>
 		<Spanish>Revelado y activado</Spanish>
 		<Polish>Odkryte i Włączone</Polish>
@@ -82,7 +87,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_BONUS_TRADE</Tag>
 		<English>Enable</English>
-		<French>Actif</French>
+		<French>Utilisable dès</French>
 		<German>verfügbar</German>
 		<Italian>Abilita</Italian>
 		<Spanish>Permite</Spanish>
@@ -98,13 +103,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_BUILD</Tag>
 		<English>Build:</English>
-		<French>Construit :</French>
+		<French>Est construit par :</French>
 		<German>gebaut durch</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_BUILDING_BONUS_PROD1</Tag>
 		<English>Build</English>
-		<French>Construit</French>
+		<French>Construit :</French>
 		<Spanish>Se construye un</Spanish>
 		<Polish>Budowa</Polish>
 	</TEXT>
@@ -121,6 +126,16 @@
 		<French>Requis dans le voisinage</French>
 		<Spanish>Requerido en el radio de la ciudad</Spanish>
 		<Polish>Wymagane w pobliżu</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_BUILD_TIME</Tag>
+		<English>Build time is</English>
+		<French>Le temps de construction est :\n</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CAPABLE_UNITS</Tag>
+		<English>Capable Units:</English>
+		<French>Unités compétentes:</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_AFFLICTION_PROMOTION</Tag>
@@ -242,7 +257,7 @@
 		<English>Chronology</English>
 		<French>Chronologie</French>
 		<German>Chronologisch</German>
-	</TEXT>	
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_CIV</Tag>
 		<English>Civilizations</English>
@@ -583,13 +598,13 @@
 		<English>Religious</English>
 		<French>Religieux</French>
 		<German>Religion</German>
-	</TEXT>	
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_RESOURCES</Tag>
 		<English>Resources</English>
 		<French>Ressources</French>
 		<German>Ressourcen</German>
-	</TEXT>	
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_CATEGORY_ROUTES</Tag>
 		<English>Routes</English>
@@ -760,6 +775,21 @@
 		<German>Arbeitsaufträge</German>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CONSTRUCT</Tag>
+		<English>Construct:</English>
+		<French>Construit :</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_CONSUMES_WORKER</Tag>
+		<English>Consumes the worker.</English>
+		<French>Détruit l'Ouvrier.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_COSTS</Tag>
+		<English>Costs</English>
+		<French>Coûte</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PEDIA_DOGPILE</Tag>
 		<English>Dogpile War: [BOLD]%d1[\BOLD]</English>
 		<French>Gestion de Guerre: [BOLD]%d1[\BOLD]</French>
@@ -775,6 +805,16 @@
 		<Italian>Forme di governo e Religioni preferite</Italian>
 		<Spanish>Principio y religión favoritos</Spanish>
 		<Polish>Ulubione doktryny i religie</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_FROM_GAME_SPEED</Tag>
+		<English> from game speed)</English>
+		<French> de la vitesse du jeu)</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_FROM_STARING_ERA</Tag>
+		<English> from staring era)</English>
+		<French> de l'ère)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_FULL_WAR</Tag>
@@ -878,6 +918,16 @@
 		<German>ersetzt durch</German>
 		<Spanish>Reemplazado por</Spanish>
 		<Polish>Zastąpione przez</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_REPLACEMENT_FOR</Tag>
+		<English>Replacement for:</English>
+		<French>Remplacement de :</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_REQUIRES</Tag>
+		<English>Requires:</English>
+		<French>Requiert :</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_RESOURCE_SOURCE</Tag>
@@ -989,6 +1039,21 @@
 		<French>Changement Technologique</French>
 		<Spanish>Cambios por tecnología</Spanish>
 		<Polish>Zmiana technologii</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_TECH_REQUIRED</Tag>
+		<English>Tech Required:</English>
+		<French>Tech Requise :</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PEDIA_TECH_WORKER_SPEED</Tag>
+		<English>% Worker Speed</English>
+		<French>% Vitesse des Ouvriers</French>
+	</TEXT>
+<TEXT>
+		<Tag>TXT_KEY_PEDIA_TURNS_FEATURE_BUILD_TIME</Tag>
+		<English> turns + feature build time)</English>
+		<French> tours + temps de constr. de l'aménagement)</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PEDIA_UNIT_CAN_BE_CAPTURED</Tag>

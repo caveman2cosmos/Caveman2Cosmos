@@ -1902,7 +1902,6 @@ public:
 	bool isIgnoreTerrainCost() const;			// Exposed to Python
 	bool isNukeImmune() const;					// Exposed to Python
 	bool isPrereqBonuses() const;				// Exposed to Python
-	bool isPrereqReligion() const;				// Exposed to Python
 	bool isMechUnit() const;					// Exposed to Python
 	bool isRenderBelowWater() const;			// Exposed to Python
 	bool isRenderAlways() const;				// Exposed to Python
@@ -2578,7 +2577,6 @@ protected:
 	bool m_bIgnoreTerrainCost;
 	bool m_bNukeImmune;
 	bool m_bPrereqBonuses;
-	bool m_bPrereqReligion;
 	bool m_bMechanized;
 	bool m_bRenderBelowWater;
 	bool m_bRenderAlways;
@@ -3629,7 +3627,6 @@ public:
 	bool isBuildingOnlyHealthy() const;			// Exposed to Python
 	bool isNeverCapture() const;				// Exposed to Python
 	bool isNukeImmune() const;					// Exposed to Python
-	bool isPrereqReligion() const;				// Exposed to Python
 	bool isCenterInCity() const;				// Exposed to Python
 	bool isStateReligion() const;				// Exposed to Python
 	bool isAllowsNukes() const;					// Exposed to Python
@@ -3783,6 +3780,7 @@ public:
 	bool isPrereqNotBuilding(int i) const;
 	int  getBuildingProductionModifier(int i) const;
 	int  getGlobalBuildingProductionModifier(int i) const;
+	int  getGlobalBuildingCostModifier(int i) const;
 
 	int  getBonusDefenseChanges(int i) const;
 
@@ -4068,6 +4066,7 @@ protected:
 	bool* m_pbPrereqOrFeature;
 	int* m_piBuildingProductionModifier;
 	int* m_piGlobalBuildingProductionModifier;
+	int* m_piGlobalBuildingCostModifier;
 	int* m_piBonusDefenseChanges;
 	bool* m_pbPrereqNotBuilding;
 	bool* m_pbReplaceBuilding;
@@ -4083,9 +4082,6 @@ protected:
 	int** m_ppaiBonusCommercePercentChanges;
 	int** m_ppaiVicinityBonusYieldChanges;
 public:
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
 
 	bool readPass2(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvBuildingInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
@@ -4159,16 +4155,8 @@ protected:
 	int m_iSpecialBuildingType;
 	int m_iAdvisorType;
 
-/********************************************************************************/
-/**		REVDCM									2/16/10				phungus420	*/
-/**																				*/
-/**		CanConstruct															*/
-/********************************************************************************/
 	int m_iPrereqGameOption;
 	int m_iNotGameOption;
-/********************************************************************************/
-/**		REVDCM									END								*/
-/********************************************************************************/
 
 	int m_iHolyCity;
 	int m_iReligionType;
@@ -4207,18 +4195,11 @@ protected:
 	int m_iAllCityDefenseModifier;
 	int m_iEspionageDefenseModifier;
 
-/********************************************************************************/
-/**		REVDCM									4/09/10				phungus420	*/
-/**																				*/
-/**		Building Effects														*/
-/********************************************************************************/
 	int m_iUnitUpgradePriceModifier;
 	int m_iRevIdxLocal;
 	int m_iRevIdxNational;
 	int m_iRevIdxDistanceModifier;
-/********************************************************************************/
-/**		REVDCM									END								*/
-/********************************************************************************/
+
 	int m_iMissionType;
 	int m_iVoteSourceType;
 	int m_iDCMAirbombMission;
@@ -4250,7 +4231,6 @@ protected:
 	bool m_bBuildingOnlyHealthy;
 	bool m_bNeverCapture;
 	bool m_bNukeImmune;
-	bool m_bPrereqReligion;
 	bool m_bCenterInCity;
 	bool m_bStateReligion;
 	bool m_bAllowsNukes;
@@ -4454,27 +4434,6 @@ protected:
 	int m_iMaxPlayerInstances;
 
 	bool m_bValid;
-};
-
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//
-//  class : CvRiverInfo
-//
-//  DESC:
-//
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvRiverInfo :
-	public CvInfoBase
-{
-	//---------------------------PUBLIC INTERFACE---------------------------------
-public:
-
-	CvRiverInfo();
-	virtual ~CvRiverInfo();
-
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
-protected:
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -9261,31 +9220,6 @@ private:
 	CvString m_szPath;
 	float m_fUpdateRate;
 };
-
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-//
-//  class : CvCameraInfo
-//
-//
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-class CvCameraInfo :
-	public CvInfoBase
-{
-public:
-
-	CvCameraInfo() {}
-	virtual ~CvCameraInfo() {}
-
-	const TCHAR* getPath() const { return m_szPath; }
-	void setPath(const TCHAR* szVal) { m_szPath = szVal; }
-
-	bool read(CvXMLLoadUtility* pXML);
-	void copyNonDefaults(CvCameraInfo* pClassInfo, CvXMLLoadUtility* pXML);
-
-private:
-	CvString m_szPath;
-};
-
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //

@@ -211,7 +211,7 @@
 		<Tag>TXT_KEY_UNITCOMBAT_RELIGION_ASATRU</Tag>
 		<English>Religion(Asatru)</English>
 		<French>
-			<Text>Religion(Asatru)</Text>
+			<Text>(Religion) Asatru</Text>
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
@@ -221,14 +221,6 @@
 			<Plural>0:1</Plural>
 		</Spanish>
 		<Polish>Religia (Asatru)</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_ASATRU_LOKI_PEDIA</Tag>
-		<English>TBD</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_UNIT_ASATRU_LOKI_STRATEGY</Tag>
-		<English>TBD</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ASATRU_MISSIONARY</Tag>

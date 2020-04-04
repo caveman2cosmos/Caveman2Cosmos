@@ -364,7 +364,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_GEOTHERMAL_FACTORY</Tag>
 		<English>Build [LINK=IMPROVEMENT_GEOTHERMAL_FACTORY]Geothermal Factory[\LINK]</English>
-		<French>Construire une [LINK=IMPROVEMENT_GEOTHERMAL_FACTORY]Centrale  Géothermique[\LINK]</French>
+		<French>Construire une [LINK=IMPROVEMENT_GEOTHERMAL_FACTORY]Centrale Géothermique[\LINK]</French>
 		<German>Errichte eine [LINK=IMPROVEMENT_GEOTHERMAL_FACTORY]Geothermalfabrik[\LINK]</German>
 		<Italian>Costruisci un [LINK=IMPROVEMENT_GEOTHERMAL_FACTORY]Impianto geotermico[\LINK]</Italian>
 		<Spanish>Construir una [LINK=IMPROVEMENT_GEOTHERMAL_FACTORY]Planta geotérmica[\LINK]</Spanish>
@@ -382,7 +382,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_GRAPE_PICKING_CAMP</Tag>
 		<English>Build [LINK=IMPROVEMENT_GRAPE_PICKING_CAMP]Grape Picking Camp[\LINK]</English>
-		<French>Construire un  [LINK=IMPROVEMENT_GRAPE_PICKING_CAMP]Camp de vendanges[\LINK]</French>
+		<French>Construire un [LINK=IMPROVEMENT_GRAPE_PICKING_CAMP]Camp de vendanges[\LINK]</French>
 		<German>[LINK=IMPROVEMENT_GRAPE_GATHERING_CAMP]Trauben lesen[\LINK]</German>
 	</TEXT>
 	<TEXT>
@@ -708,9 +708,9 @@
 		<French>Construire une [LINK=IMPROVEMENT_PLANTATION]Plantation[\LINK]</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_PLANT_BAMBOO_GROVE</Tag>
-		<English>[LINK=IMPROVEMENT_PLANT_BAMBOO_GROVE]Plant Bamboo Grove[\LINK]</English>
-		<French>[LINK=IMPROVEMENT_PLANT_BAMBOO_GROVE]Planter une Bambouseraie[\LINK]</French>
+		<Tag>TXT_KEY_BUILD_PLANT_BAMBOO</Tag>
+		<English>[LINK=IMPROVEMENT_PLANT_BAMBOO]Plant Bamboo[\LINK]</English>
+		<French>[LINK=IMPROVEMENT_PLANT_BAMBOO]Planter une Bambouseraie[\LINK]</French>
 		<Italian>Crea un bosco di bambù</Italian>
 		<Spanish>Plantar un Bosque de bambú</Spanish>
 		<Polish>Zbuduj Gaj Bambusowy</Polish>
@@ -736,7 +736,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_PLANT_PICKING_CAMP</Tag>
 		<English>Build [LINK=IMPROVEMENT_PLANT_PICKING_CAMP]Plant Picking Camp[\LINK]</English>
-		<French>Construire un  [LINK=IMPROVEMENT_PLANT_PICKING_CAMP]Camp de Cueillette[\LINK]</French>
+		<French>Construire un [LINK=IMPROVEMENT_PLANT_PICKING_CAMP]Camp de Cueillette[\LINK]</French>
 		<German>[LINK=IMPROVEMENT_PLANT_PICKING_CAMP]Nützliche Pflanzen pflücken[\LINK]</German>
 	</TEXT>
 	<TEXT>
@@ -844,7 +844,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SEED_CAMP</Tag>
 		<English>[LINK=IMPROVEMENT_SEED_CAMP]Gather Seeds[\LINK]</English>
-		<French>[LINK=IMPROVEMENT_SEED_CAMP]Récolter les céréales[\LINK]</French>
+		<French>[LINK=IMPROVEMENT_SEED_CAMP]Récolter les Graines[\LINK]</French>
 		<German>[LINK=IMPROVEMENT_SEED_CAMP]Körner sammeln[\LINK]</German>
 		<Spanish>[LINK=IMPROVEMENT_SEED_CAMP]Recolectar cereales[\LINK]</Spanish>
 		<Polish>[LINK=IMPROVEMENT_SEED_CAMP]Zbieraj Plony[\LINK]</Polish>
@@ -852,7 +852,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_SEED_CAMP_KILL</Tag>
 		<English>[LINK=IMPROVEMENT_SEED_CAMP]Gather Seeds[\LINK] (Consumed)</English>
-		<French>[LINK=IMPROVEMENT_SEED_CAMP]Récolter les céréales[\LINK] (Détruit)</French>
+		<French>[LINK=IMPROVEMENT_SEED_CAMP]Récolter les Graines[\LINK] (Détruit)</French>
 		<German>[LINK=IMPROVEMENT_SEED_CAMP]Körner sammeln[\LINK] (Consumed)</German>
 		<Spanish>[LINK=IMPROVEMENT_SEED_CAMP]Recolectar cereales[\LINK] (Consumed)</Spanish>
 		<Polish>[LINK=IMPROVEMENT_SEED_CAMP]Zbieraj Plony[\LINK] (Consumed)</Polish>

@@ -990,7 +990,7 @@ Current techs which are not in this file:-
 			<Sound>AS2D_TECH_COOKING</Sound>
 			<SoundMP>AS2D_TECH_COOKING</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Button_CookedFood.dds</Button>
-		</TechInfo>		
+		</TechInfo>
 		<TechInfo>
 			<Type>TECH_PREHISTORIC_DANCE</Type>
 			<Description>TXT_KEY_TECH_PREHISTORIC_DANCE</Description>
@@ -1522,7 +1522,7 @@ Current techs which are not in this file:-
 			<Sound>AS2D_DRYING</Sound>
 			<SoundMP>AS2D_DRYING</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/drying.dds</Button>
-		</TechInfo>		
+		</TechInfo>
 		<TechInfo>
 			<Type>TECH_GAMES</Type>
 			<Description>TXT_KEY_TECH_GAMES</Description>
@@ -1764,7 +1764,7 @@ Current techs which are not in this file:-
 			<Sound>AS2D_TECH_TRACKING</Sound>
 			<SoundMP>AS2D_TECH_MP_HUNTING</SoundMP>
 			<Button>,Art/Interface/Buttons/TechTree/Hunting.dds,Art/Interface/Buttons/TechTree_Atlas.dds,7,4</Button>
-		</TechInfo>		
+		</TechInfo>
 		<TechInfo>
 			<Type>TECH_PETROGLYPHS</Type>
 			<Description>TXT_KEY_TECH_PETROGLYPHS</Description>
@@ -1997,7 +1997,7 @@ Current techs which are not in this file:-
 			<Sound>AS2D_TECH_NATUROPATHY</Sound>
 			<SoundMP>AS2D_TECH_NATUROPATHY</SoundMP>
 			<Button>,Art/Interface/Buttons/TechTree/naturopath.dds,Art/Interface/Buttons/RoM_Techtree_Atlas.dds,7,12</Button>
-		</TechInfo>		
+		</TechInfo>
 		<TechInfo>
 			<Type>TECH_THEFT</Type>
 			<Description>TXT_KEY_TECH_THEFT</Description>
@@ -2360,7 +2360,7 @@ Current techs which are not in this file:-
 			<Sound>AS2D_TECH_TATTOOS</Sound>
 			<SoundMP>AS2D_TECH_TATTOOS</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/tattoos.dds</Button>
-		</TechInfo>		
+		</TechInfo>
 		<TechInfo>
 			<Type>TECH_CEREMONIAL_BURIAL</Type>
 			<Description>TXT_KEY_TECH_CEREMONIAL_BURIAL</Description>
@@ -2587,7 +2587,7 @@ Current techs which are not in this file:-
 		<TechInfo>
 			<Type>TECH_STONE_BUILDING</Type>
 			<Description>TXT_KEY_TECH_STONE_BUILDING</Description>
-			<Civilopedia>TXT_KEY_TECH_CAVE_DWELLING_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_TECH_STONE_BUILDING_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_TECH_STONE_BUILDING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iAIWeight>10</iAIWeight>
@@ -2622,7 +2622,7 @@ Current techs which are not in this file:-
 			<Sound>AS2D_TECH_STONE_BUILDING</Sound>
 			<SoundMP>AS2D_TECH_STONE_BUILDING</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Button_HutBuilding.dds</Button>
-		</TechInfo>		
+		</TechInfo>
 		<TechInfo>
 			<Type>TECH_BARTER</Type>
 			<Description>TXT_KEY_TECH_BARTER</Description>
@@ -2988,7 +2988,7 @@ Current techs which are not in this file:-
 			<Sound>AS2D_TECH_HUNTING</Sound>
 			<SoundMP>AS2D_TECH_HUNTING</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/huntingtactics.dds</Button>
-		</TechInfo>		
+		</TechInfo>
 		<TechInfo>
 			<Type>TECH_ANIMISM</Type>
 			<Description>TXT_KEY_TECH_ANIMISM</Description>
@@ -3162,7 +3162,7 @@ Current techs which are not in this file:-
 			<Sound>AS2D_TECH_NOCTURNALISM</Sound>
 			<SoundMP>AS2D_TECH_NOCTURNALISM</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Button_Nocturnalism.dds</Button>
-		</TechInfo>		
+		</TechInfo>
 <!--	(014, 17) TECH_SHAMANISM	-->
 <!--	(014, 19) TECH_DRUIDIC_TRADITIONS		-->
 		<TechInfo>
@@ -3329,7 +3329,7 @@ Current techs which are not in this file:-
 			<Sound>AS2D_TECH_SLAVERY</Sound>
 			<SoundMP>AS2D_TECH_SLAVERY</SoundMP>
 			<Button>,Art/Interface/Buttons/TechTree/slave.dds,Art/Interface/Buttons/RoM_Techtree_Atlas.dds,3,16</Button>
-		</TechInfo>		
+		</TechInfo>
 		<TechInfo>
 			<Type>TECH_CELEBRATION</Type>
 			<Description>TXT_KEY_TECH_CELEBRATION</Description>
@@ -3811,7 +3811,7 @@ Current techs which are not in this file:-
 			<Type>TECH_IDEOGRAMS</Type>
 			<Description>TXT_KEY_TECH_IDEOGRAMS</Description>
 			<Civilopedia>TXT_KEY_TECH_IDEOGRAMS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_WRITING_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_TECH_IDEOGRAMS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>84</iCost>
 			<Era>C2C_ERA_ANCIENT</Era>
@@ -4222,7 +4222,7 @@ Current techs which are not in this file:-
 			<Type>TECH_FUNGICULTURE</Type>
 			<Description>TXT_KEY_TECH_FUNGICULTURE</Description>
 			<Civilopedia>TXT_KEY_TECH_FUNGICULTURE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_AGRICULTURE_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_TECH_FUNGICULTURE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
 			<iCost>110</iCost>
 			<Era>C2C_ERA_ANCIENT</Era>
@@ -5897,7 +5897,7 @@ Current techs which are not in this file:-
 			<Type>TECH_DIVINATION</Type>
 			<Description>TXT_KEY_TECH_DIVINATION</Description>
 			<Civilopedia>TXT_KEY_TECH_DIVINATION_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_PRIESTHOOD_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_TECH_DIVINATION_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<iCost>213</iCost>
 			<Era>C2C_ERA_ANCIENT</Era>
@@ -7040,7 +7040,7 @@ Current techs which are not in this file:-
 			<Type>TECH_HINDUISM</Type>
 			<Description>TXT_KEY_TECH_HINDUISM</Description>
 			<Civilopedia>TXT_KEY_TECH_HINDUISM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_HINDUISM_QUOTE</Strategy>
+			<Strategy>TXT_KEY_TECH_HINDUISM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<iCost>348</iCost>
 			<bGlobal>1</bGlobal>
@@ -8510,7 +8510,7 @@ Current techs which are not in this file:-
 			<Type>TECH_CALLIGRAPHY</Type>
 			<Description>TXT_KEY_TECH_CALLIGRAPHY</Description>
 			<Civilopedia>TXT_KEY_TECH_CALLIGRAPHY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_WRITING_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_TECH_CALLIGRAPHY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>614</iCost>
 			<Era>C2C_ERA_CLASSICAL</Era>
@@ -8898,7 +8898,7 @@ Current techs which are not in this file:-
 			</OrPreReqs>
 			<PrereqBuildings>
 				<PrereqBuilding>
-					<BuildingType>BUILDING_LAVA_ROCK_QUARRY</BuildingType>
+					<BuildingType>BUILDING_GATHERER_LAVA_ROCK</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqBuildings>
@@ -10076,7 +10076,7 @@ Current techs which are not in this file:-
 			<Type>TECH_RUDDER</Type>
 			<Description>TXT_KEY_TECH_RUDDER</Description>
 			<Civilopedia>TXT_KEY_TECH_RUDDER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_SHIP_BUILDING_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_TECH_RUDDER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>1230</iCost>
@@ -13259,7 +13259,7 @@ Current techs which are not in this file:-
 			<Type>TECH_CALCULUS</Type>
 			<Description>TXT_KEY_TECH_CALCULUS</Description>
 			<Civilopedia>TXT_KEY_TECH_CALCULUS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_ALGEBRA_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_TECH_CALCULUS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>3274</iCost>
 			<Era>C2C_ERA_RENAISSANCE</Era>
@@ -15119,7 +15119,7 @@ Current techs which are not in this file:-
 			<Type>TECH_NITROGLYCERIN</Type>
 			<Description>TXT_KEY_TECH_NITROGLYCERIN</Description>
 			<Civilopedia>TXT_KEY_TECH_NITROGLYCERIN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_EXPLOSIVES_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_TECH_NITROGLYCERIN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>6351</iCost>
@@ -15993,7 +15993,7 @@ Current techs which are not in this file:-
 			<Type>TECH_IMPERIALISM</Type>
 			<Description>TXT_KEY_TECH_IMPERIALISM</Description>
 			<Civilopedia>TXT_KEY_TECH_IMPERIALISM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_GRAND_WAR_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_TECH_IMPERIALISM_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iAITradeModifier>10</iAITradeModifier>
 			<iCost>7008</iCost>
@@ -16028,7 +16028,7 @@ Current techs which are not in this file:-
 			<Type>TECH_WOMENS_SUFFRAGE</Type>
 			<Description>TXT_KEY_TECH_WOMENS_SUFFRAGE</Description>
 			<Civilopedia>TXT_KEY_TECH_WOMENS_SUFFRAGE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_LABOR_UNIONS_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_TECH_WOMENS_SUFFRAGE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<iCost>7008</iCost>
 			<Era>C2C_ERA_INDUSTRIAL</Era>
@@ -22151,7 +22151,7 @@ Current techs which are not in this file:-
 			<Type>TECH_3D_PRINTING</Type>
 			<Description>TXT_KEY_TECH_3D_PRINTING</Description>
 			<Civilopedia>TXT_KEY_TECH_3D_PRINTING_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_TECH_3D_MODELLING_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_TECH_3D_PRINTING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<iCost>22847</iCost>
 			<Era>C2C_ERA_INFORMATION</Era>
@@ -36942,11 +36942,8 @@ Current techs which are not in this file:-
 			<Type>TECH_DUMMY</Type>
 			<Description>TXT_KEY_TECH_DUMMY</Description>
 			<Civilopedia>TXT_KEY_TECH_DUMMY_PEDIA</Civilopedia>
-			<iCost>-1</iCost>
 			<Era>C2C_ERA_PREHISTORIC</Era>
 			<bDisable>1</bDisable>
-			<Sound>AS2D_TECH_GENERIC</Sound>
-			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>,Art/Interface/Buttons/Process/Blank.dds,Art/Interface/Buttons/Beyond_the_Sword_Atlas.dds,8,5</Button>
 		</TechInfo>
 	</TechInfos>

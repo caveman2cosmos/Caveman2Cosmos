@@ -5,7 +5,6 @@ Base XP gained when attacking
 Base XP gained when defending
 	<iXPValueDefense>int</iXPValueDefense>
 -->
-<!-- Unit Infos -->
 <Civ4UnitInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
@@ -16,6 +15,9 @@ Base XP gained when defending
 			<Civilopedia>TXT_KEY_UNIT_BAND_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_BAND_STRATEGY</Strategy>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Combat>UNITCOMBAT_SETTLER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -623,6 +625,11 @@ Base XP gained when defending
 			<bWorkerTrade>1</bWorkerTrade>
 			<UnitUpgrades>
 				<UnitType>UNIT_WORKANIMAL</UnitType>
+				<UnitType>UNIT_WORKBUFFALO</UnitType>
+				<UnitType>UNIT_WORKELEPHANT</UnitType>
+				<UnitType>UNIT_WORKMULE</UnitType>
+				<UnitType>UNIT_WORKLLAMA</UnitType>
+				<UnitType>UNIT_WORKCAMEL</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
@@ -929,11 +936,7 @@ Base XP gained when defending
 			<bFood>1</bFood>
 			<bWorkerTrade>1</bWorkerTrade>
 			<UnitUpgrades>
-				<UnitType>UNIT_WORKBUFFALO</UnitType>
-				<UnitType>UNIT_WORKELEPHANT</UnitType>
-				<UnitType>UNIT_WORKMULE</UnitType>
-				<UnitType>UNIT_WORKLLAMA</UnitType>
-				<UnitType>UNIT_WORKCAMEL</UnitType>
+				<UnitType>UNIT_WORKER_INDUSTRIAL</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
@@ -3115,7 +3118,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_BAMBOO_GROVE</BuildType>
+					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3495,7 +3498,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_BAMBOO_GROVE</BuildType>
+					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3882,7 +3885,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_BAMBOO_GROVE</BuildType>
+					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3982,7 +3985,7 @@ Base XP gained when defending
 					<BuildType>BUILD_VACTRAIN</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
-                <Build>
+				<Build>
 					<BuildType>BUILD_GRAVITY_TRAIN</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -4274,7 +4277,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_BAMBOO_GROVE</BuildType>
+					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -4374,7 +4377,7 @@ Base XP gained when defending
 					<BuildType>BUILD_VACTRAIN</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
-                <Build>
+				<Build>
 					<BuildType>BUILD_GRAVITY_TRAIN</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -5185,74 +5188,6 @@ Base XP gained when defending
 			</FreePromotions>
 		</UnitInfo>
 		<UnitInfo>
-			<Type>UNIT_LUNAR_ROVER</Type>
-			<Combat>UNITCOMBAT_RECON</Combat>
-			<SubCombatTypes>
-				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SPECIES_HUMAN</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_METHOD_HAND_TO_HAND_ONLY</SubCombatType>
-				<SubCombatType>UNITCOMBAT_WEAPON_STYLE_H2H_VEHICULAR</SubCombatType>
-				<SubCombatType>UNITCOMBAT_MOTILITY_DRIVING</SubCombatType>
-				<SubCombatType>UNITCOMBAT_QUALITY_MEDIOCRE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_GROUP_SOLO</SubCombatType>
-				<SubCombatType>UNITCOMBAT_SIZE_LARGE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
-				<SubCombatType>UNITCOMBAT_HEALS_AS_MECHANICAL</SubCombatType>
-			</SubCombatTypes>
-			<Domain>DOMAIN_LAND</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<DefaultUnitAI>UNITAI_EXPLORE</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_LUNAR_ROVER</Description>
-			<Civilopedia>TXT_KEY_UNIT_LUNAR_ROVER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_LUNAR_ROVER_STRATEGY</Strategy>
-			<Advisor>ADVISOR_MILITARY</Advisor>
-			<bOnlyDefensive>1</bOnlyDefensive>
-			<bPillage>1</bPillage>
-			<bNoDefensiveBonus>1</bNoDefensiveBonus>
-			<bMechanized>1</bMechanized>
-			<UnitAIs>
-				<UnitAI>
-					<UnitAIType>UNITAI_EXPLORE</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-				<UnitAI>
-					<UnitAIType>UNITAI_PILLAGE</UnitAIType>
-					<bUnitAI>1</bUnitAI>
-				</UnitAI>
-			</UnitAIs>
-			<PrereqAndBuildings>
-				<BuildingType>BUILDING_NASA</BuildingType>
-			</PrereqAndBuildings>
-			<PrereqTech>TECH_LUNAR_EXPLORATION</PrereqTech>
-			<BonusType>BONUS_AUTOMOBILES</BonusType>
-			<PrereqBonuses>
-				<BonusType>BONUS_ROCKET_FUEL</BonusType>
-			</PrereqBonuses>
-			<iCost>1200</iCost>
-			<iMoves>1</iMoves>
-			<iCombat>30</iCombat>
-			<iXPValueAttack>4</iXPValueAttack>
-			<iXPValueDefense>4</iXPValueDefense>
-			<iWithdrawalProb>20</iWithdrawalProb>
-			<iExtraCost>10</iExtraCost>
-			<iAsset>5</iAsset>
-			<iPower>30</iPower>
-			<UnitMeshGroups>
-				<iGroupSize>1</iGroupSize>
-				<fMaxSpeed>1.75</fMaxSpeed>
-				<fPadTime>1</fPadTime>
-				<iMeleeWaveSize>1</iMeleeWaveSize>
-				<iRangedWaveSize>1</iRangedWaveSize>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_LUNAR_ROVER</EarlyArtDefineTag>
-				</UnitMeshGroup>
-			</UnitMeshGroups>
-			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
-		</UnitInfo>
-		<UnitInfo>
 			<Type>UNIT_CHASER</Type>
 			<iMaxPlayerInstances>5</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_HUNTER</Combat>
@@ -5299,7 +5234,7 @@ Base XP gained when defending
 				<UnitType>UNIT_TRACKER</UnitType>
 				<UnitType>UNIT_NEANDERTHAL_CHASER</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_TRAILS</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_TRACKING</ForceObsoleteTech>
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
 			</SupersedingUnits>
@@ -5387,12 +5322,12 @@ Base XP gained when defending
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<PrereqTech>TECH_TRAILS</PrereqTech>
+			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<UnitUpgrades>
 				<UnitType>UNIT_HUNTER</UnitType>
 				<UnitType>UNIT_NEANDERTHAL_TRACKER</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_TRACKING</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_HUNTING</ForceObsoleteTech>
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_GATHERER</UnitType>
 			</SupersedingUnits>
@@ -5480,7 +5415,7 @@ Base XP gained when defending
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</NotUnitAIs>
-			<PrereqTech>TECH_TRACKING</PrereqTech>
+			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<iCost>63</iCost>
 			<iMoves>2</iMoves>
 			<UnitUpgrades>
@@ -8375,7 +8310,7 @@ Base XP gained when defending
 			</MapCategoryTypes>
 			<PrereqTech>TECH_SHARPENING</PrereqTech>
 			<UnitUpgrades>
-				<UnitType>UNIT_STONE_AGE_AXEMAN</UnitType>
+				<UnitType>UNIT_STONE_AXEMAN</UnitType>
 				<UnitType>UNIT_STONE_MACEMAN</UnitType>
 				<UnitType>UNIT_NEANDERTHAL_WARRIOR</UnitType>
 			</UnitUpgrades>
@@ -8804,7 +8739,7 @@ Base XP gained when defending
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Type>UNIT_STONE_AGE_AXEMAN</Type>
+			<Type>UNIT_STONE_AXEMAN</Type>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -8822,9 +8757,9 @@ Base XP gained when defending
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
-			<Description>TXT_KEY_UNIT_STONE_AGE_AXEMAN</Description>
-			<Civilopedia>TXT_KEY_UNIT_STONE_AGE_AXEMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_STONE_AGE_AXEMAN_STRATEGY</Strategy>
+			<Description>TXT_KEY_UNIT_STONE_AXEMAN</Description>
+			<Civilopedia>TXT_KEY_UNIT_STONE_AXEMAN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_STONE_AXEMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
 			<UnitAIs>
@@ -8901,7 +8836,7 @@ Base XP gained when defending
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>2</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_AXEMAN</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AXEMAN</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
@@ -9749,7 +9684,7 @@ Base XP gained when defending
 			<bMilitarySupport>1</bMilitarySupport>
 			<bPillage>1</bPillage>
 			<UnitUpgrades>
-				<UnitType>UNIT_STONE_AGE_SPEARMAN</UnitType>
+				<UnitType>UNIT_STONE_SPEARMAN</UnitType>
 				<UnitType>UNIT_NEANDERTHAL_WOODEN_SPEARMAN</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
@@ -9813,7 +9748,7 @@ Base XP gained when defending
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Type>UNIT_STONE_AGE_SPEARMAN</Type>
+			<Type>UNIT_STONE_SPEARMAN</Type>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -9835,9 +9770,9 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_COUNTER</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_STONE_AGE_SPEARMAN</Description>
-			<Civilopedia>TXT_KEY_UNIT_STONE_AGE_SPEARMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_STONE_AGE_SPEARMAN_STRATEGY</Strategy>
+			<Description>TXT_KEY_UNIT_STONE_SPEARMAN</Description>
+			<Civilopedia>TXT_KEY_UNIT_STONE_SPEARMAN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_STONE_SPEARMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitaryHappiness>1</bMilitaryHappiness>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -9907,7 +9842,7 @@ Base XP gained when defending
 				<iRangedWaveSize>0</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>2</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_STONE_AGE_SPEARMAN</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_STONE_SPEARMAN</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
@@ -27526,14 +27461,14 @@ Base XP gained when defending
 			<DefaultUnitAI>UNITAI_WORKER_SEA</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_WORKBOAT</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKBOAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKBOAT_ANCIENT_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_UNIT_WORKBOAT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMechanized>1</bMechanized>
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<UnitUpgrades>
-				<UnitType>UNIT_CLASSIC_WORKBOAT</UnitType>
+				<UnitType>UNIT_WORKBOAT_CLASSIC</UnitType>
 			</UnitUpgrades>
 			<SupersedingUnits>
 				<UnitType>UNIT_NEANDERTHAL_WORKBOAT</UnitType>
@@ -27633,8 +27568,8 @@ Base XP gained when defending
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Type>UNIT_CLASSIC_WORKBOAT</Type>
-			<Capture>UNIT_CLASSIC_WORKBOAT</Capture>
+			<Type>UNIT_WORKBOAT_CLASSIC</Type>
+			<Capture>UNIT_WORKBOAT_CLASSIC</Capture>
 			<Combat>UNITCOMBAT_SEA_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -27651,16 +27586,16 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_WORKER_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_CLASSIC_WORKBOAT</Description>
+			<Description>TXT_KEY_UNIT_WORKBOAT_CLASSIC</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKBOAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_CLASSIC_WORKBOAT_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_UNIT_WORKBOAT_CLASSIC_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMechanized>1</bMechanized>
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<UnitUpgrades>
-				<UnitType>UNIT_MIDDLE_WORKBOAT</UnitType>
+				<UnitType>UNIT_WORKBOAT_MIDDLE</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
@@ -27780,14 +27715,14 @@ Base XP gained when defending
 				<iRangedWaveSize>1</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_WORKBOAT_SEDENTARY</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_WORKBOAT_CLASSIC</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Type>UNIT_MIDDLE_WORKBOAT</Type>
-			<Capture>UNIT_MIDDLE_WORKBOAT</Capture>
+			<Type>UNIT_WORKBOAT_MIDDLE</Type>
+			<Capture>UNIT_WORKBOAT_MIDDLE</Capture>
 			<Combat>UNITCOMBAT_SEA_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -27804,16 +27739,16 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_WORKER_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_MIDDLE_WORKBOAT</Description>
+			<Description>TXT_KEY_UNIT_WORKBOAT_MIDDLE</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKBOAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MIDDLE_WORKBOAT_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_UNIT_WORKBOAT_MIDDLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMechanized>1</bMechanized>
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<UnitUpgrades>
-				<UnitType>UNIT_MODERN_WORKBOAT</UnitType>
+				<UnitType>UNIT_WORKBOAT_MODERN</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
@@ -27933,14 +27868,14 @@ Base XP gained when defending
 				<iRangedWaveSize>1</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_MIDDLE_WORKBOAT</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_WORKBOAT_MIDDLE</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Type>UNIT_MODERN_WORKBOAT</Type>
-			<Capture>UNIT_MODERN_WORKBOAT</Capture>
+			<Type>UNIT_WORKBOAT_MODERN</Type>
+			<Capture>UNIT_WORKBOAT_MODERN</Capture>
 			<Combat>UNITCOMBAT_SEA_WORKER</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -27957,9 +27892,9 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_WORKER_SEA</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_MODERN_WORKBOAT</Description>
+			<Description>TXT_KEY_UNIT_WORKBOAT_MODERN</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKBOAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_MODERN_WORKBOAT_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_UNIT_WORKBOAT_MODERN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -31624,7 +31559,7 @@ Base XP gained when defending
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<bMilitaryTrade>1</bMilitaryTrade>
 			<UnitUpgrades>
-				<UnitType>UNIT_AEGIS</UnitType>
+				<UnitType>UNIT_AEGIS_CRUISER</UnitType>
 			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
@@ -31693,7 +31628,7 @@ Base XP gained when defending
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Type>UNIT_AEGIS</Type>
+			<Type>UNIT_AEGIS_CRUISER</Type>
 			<Combat>UNITCOMBAT_NUCLEAR_SHIPS</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CRUISER</SubCombatType>
@@ -31722,9 +31657,9 @@ Base XP gained when defending
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_RESERVE_SEA</DefaultUnitAI>
 			<SeeInvisible>INVISIBLE_SUBMARINE</SeeInvisible>
-			<Description>TXT_KEY_UNIT_AEGIS</Description>
-			<Civilopedia>TXT_KEY_UNIT_AEGIS_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_AEGIS_STRATEGY</Strategy>
+			<Description>TXT_KEY_UNIT_AEGIS_CRUISER</Description>
+			<Civilopedia>TXT_KEY_UNIT_AEGIS_CRUISER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_AEGIS_CRUISER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
@@ -31814,7 +31749,7 @@ Base XP gained when defending
 				<iRangedWaveSize>1</iRangedWaveSize>
 				<UnitMeshGroup>
 					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_AEGIS</EarlyArtDefineTag>
+					<EarlyArtDefineTag>ART_DEF_UNIT_AEGIS_CRUISER</EarlyArtDefineTag>
 				</UnitMeshGroup>
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_MACHINE</FormationType>
@@ -42708,7 +42643,7 @@ Base XP gained when defending
 			</PrereqAndBuildings>
 			<UnitUpgrades>
 				<UnitType>UNIT_WARDOG</UnitType>
-				<UnitType>UNIT_NEANDERTHAL_TRAINEDDOG</UnitType>
+				<UnitType>UNIT_NEANDERTHAL_TRAINED_DOG</UnitType>
 			</UnitUpgrades>
 			<iCost>46</iCost>
 			<iMoves>2</iMoves>
@@ -42744,7 +42679,7 @@ Base XP gained when defending
 			</UnitMeshGroups>
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 			<SupersedingUnits>
-				<UnitType>UNIT_NEANDERTHAL_TRAINEDDOG</UnitType>
+				<UnitType>UNIT_NEANDERTHAL_TRAINED_DOG</UnitType>
 			</SupersedingUnits>
 		</UnitInfo>
 		<UnitInfo>
@@ -45738,7 +45673,7 @@ Base XP gained when defending
 				<And>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_SUPERSTRONG_ALLOY_WARES</ID>
+						<ID>BONUS_SUPERSTRONG_ALLOYS</ID>
 					</Has>
 					<Has>
 						<GOMType>GOM_BONUS</GOMType>
@@ -51607,7 +51542,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_BAMBOO_GROVE</BuildType>
+					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -51756,7 +51691,7 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_PLANT_BAMBOO_GROVE</BuildType>
+					<BuildType>BUILD_PLANT_BAMBOO</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -53993,7 +53928,7 @@ Base XP gained when defending
 			<DefaultUnitAI>UNITAI_SCIENTIST</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SCIENTIST</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_GREAT_PEOPLE_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_SCIENTIST_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_UNIT_GREAT_SCIENTIST_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
 			<bGoldenAge>1</bGoldenAge>
 			<UnitAIs>
@@ -56498,7 +56433,7 @@ Base XP gained when defending
 			</HealUnitCombatTypes>
 			<iExtraCost>1</iExtraCost>
 			<iAsset>2</iAsset>
-			<iPower>1</iPower>
+			<iPower>2</iPower>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -56762,7 +56697,7 @@ Base XP gained when defending
 			</PropertyManipulators>
 		</UnitInfo>
 		<UnitInfo>
-			<Type>UNIT_NEANDERTHAL_TRAINEDDOG</Type>
+			<Type>UNIT_NEANDERTHAL_TRAINED_DOG</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
@@ -56771,7 +56706,7 @@ Base XP gained when defending
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_TRAINEDDOG</Description>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_TRAINED_DOG</Description>
 			<Civilopedia>TXT_KEY_UNIT_WARDOG_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_TRAINEDDOG_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
@@ -56824,9 +56759,7 @@ Base XP gained when defending
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
 			<bPassage>1</bPassage>
 			<PrereqTech>TECH_CANINE_DOMESTICATION</PrereqTech>
-			<PrereqBonuses>
-				<BonusType>BONUS_DOG</BonusType>
-			</PrereqBonuses>
+			<BonusType>BONUS_DOG</BonusType>
 			<PrereqAndBuildings>
 				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
@@ -57146,7 +57079,7 @@ Base XP gained when defending
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iAsset>1</iAsset>
-			<iPower>3</iPower>
+			<iPower>4</iPower>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
 				<fMaxSpeed>2.25</fMaxSpeed>
@@ -57259,7 +57192,7 @@ Base XP gained when defending
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>2</iCargo>
 			<iAsset>3</iAsset>
-			<iPower>2</iPower>
+			<iPower>3</iPower>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
 				<fMaxSpeed>2.25</fMaxSpeed>
@@ -57308,6 +57241,21 @@ Base XP gained when defending
 				<SubCombatType>UNITCOMBAT_HEALS_AS_NAVAL</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_SEA</Domain>
+			<TerrainImpassableTypes>
+				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_OCEAN</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_TRENCH</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+				<TerrainType>TERRAIN_LAKE</TerrainType>
+			</TerrainImpassableTypes>
 			<DefaultUnitAI>UNITAI_ASSAULT_SEA</DefaultUnitAI>
 			<UnitAIs>
 				<UnitAI>
@@ -57352,21 +57300,6 @@ Base XP gained when defending
 			<iCost>100</iCost>
 			<iMinAreaSize>5</iMinAreaSize>
 			<iMoves>1</iMoves>
-			<TerrainImpassableTypes>
-				<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
-				<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
-				<TerrainType>TERRAIN_SEA</TerrainType>
-				<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
-				<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
-				<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
-				<TerrainType>TERRAIN_OCEAN</TerrainType>
-				<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
-				<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
-				<TerrainType>TERRAIN_TRENCH</TerrainType>
-				<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
-				<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
-				<TerrainType>TERRAIN_LAKE</TerrainType>
-			</TerrainImpassableTypes>
 			<iCombat>2</iCombat>
 			<iXPValueAttack>1</iXPValueAttack>
 			<iXPValueDefense>3</iXPValueDefense>
@@ -57380,7 +57313,7 @@ Base XP gained when defending
 			<DomainCargo>DOMAIN_LAND</DomainCargo>
 			<iCargo>1</iCargo>
 			<iAsset>2</iAsset>
-			<iPower>1</iPower>
+			<iPower>2</iPower>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
 				<fMaxSpeed>2.25</fMaxSpeed>
@@ -57405,9 +57338,9 @@ Base XP gained when defending
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<Description>TXT_KEY_UNIT_NEANDERTHAL_WORK_BOAT</Description>
+			<Description>TXT_KEY_UNIT_NEANDERTHAL_WORKBOAT</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKBOAT_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKBOAT_ANCIENT_STRATEGY</Strategy>
+			<Strategy>TXT_KEY_UNIT_WORKBOAT_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<Combat>UNITCOMBAT_SEA_WORKER</Combat>
 			<SubCombatTypes>
@@ -57449,7 +57382,6 @@ Base XP gained when defending
 			<bMilitarySupport>1</bMilitarySupport>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
-			<bPrereqBonuses>1</bPrereqBonuses>
 			<bMechanized>1</bMechanized>
 			<bRenderBelowWater>1</bRenderBelowWater>
 			<PrereqTech>TECH_FISHING</PrereqTech>
@@ -57458,7 +57390,7 @@ Base XP gained when defending
 				<BuildingType>BUILDING_CULTURE_LOCAL_NEANDERTHAL</BuildingType>
 			</PrereqAndBuildings>
 			<UnitUpgrades>
-				<UnitType>UNIT_CLASSIC_WORKBOAT</UnitType>
+				<UnitType>UNIT_WORKBOAT_CLASSIC</UnitType>
 			</UnitUpgrades>
 			<ForceObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ForceObsoleteTech>
 			<iCost>96</iCost>
@@ -57701,8 +57633,8 @@ Base XP gained when defending
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bPillage>1</bPillage>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
-			<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 			<TechTypes>
+				<PrereqTech>TECH_ANIMAL_RIDING</PrereqTech>
 				<PrereqTech>TECH_ELEPHANT_DOMESTICATION</PrereqTech>
 			</TechTypes>
 			<BonusType>BONUS_ELEPHANTS</BonusType>
@@ -57874,8 +57806,8 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_STONE_AGE_SPEARMAN</Description>
-			<Civilopedia>TXT_KEY_UNIT_STONE_AGE_SPEARMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_STONE_AGE_SPEARMAN_STRATEGY</Strategy>
+			<Civilopedia>TXT_KEY_UNIT_STONE_SPEARMAN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_STONE_SPEARMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
@@ -57954,7 +57886,7 @@ Base XP gained when defending
 			</BonusProductionModifiers>
 			<iConscription>2</iConscription>
 			<iAsset>1</iAsset>
-			<iPower>3</iPower>
+			<iPower>5</iPower>
 			<UnitMeshGroups>
 				<iGroupSize>3</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -58053,7 +57985,7 @@ Base XP gained when defending
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iAsset>2</iAsset>
-			<iPower>6</iPower>
+			<iPower>4</iPower>
 			<UnitMeshGroups>
 				<iGroupSize>3</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -58282,8 +58214,8 @@ Base XP gained when defending
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<Description>TXT_KEY_UNIT_NEANDERTHAL_STONE_AGE_AXEMAN</Description>
-			<Civilopedia>TXT_KEY_UNIT_STONE_AGE_AXEMAN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_STONE_AGE_AXEMAN_STRATEGY</Strategy>
+			<Civilopedia>TXT_KEY_UNIT_STONE_AXEMAN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_STONE_AXEMAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<Combat>UNITCOMBAT_MELEE</Combat>
 			<SubCombatTypes>
@@ -58466,7 +58398,7 @@ Base XP gained when defending
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
 			<iAsset>1</iAsset>
-			<iPower>4</iPower>
+			<iPower>6</iPower>
 			<UnitMeshGroups>
 				<iGroupSize>3</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -58761,7 +58693,7 @@ Base XP gained when defending
 			<UnitUpgrades>
 				<UnitType>UNIT_NEANDERTHAL_HUNTER</UnitType>
 			</UnitUpgrades>
-			<ForceObsoleteTech>TECH_TRACKING</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_HUNTING</ForceObsoleteTech>
 			<iCost>77</iCost>
 			<iMoves>2</iMoves>
 			<iCombat>4</iCombat>
@@ -59057,7 +58989,7 @@ Base XP gained when defending
 			<iXPValueDefense>2</iXPValueDefense>
 			<iExtraCost>1</iExtraCost>
 			<iAsset>2</iAsset>
-			<iPower>3</iPower>
+			<iPower>2</iPower>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -64078,17 +64010,14 @@ Base XP gained when defending
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MATCHLOCK</PrereqTech>
 			<BonusType>BONUS_SULPHUR</BonusType>
+			<PrereqBonuses>
+				<BonusType>BONUS_CAMEL</BonusType>
+			</PrereqBonuses>
 			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_CAMEL</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-				</And>
+				<Has>
+					<GOMType>GOM_BONUS</GOMType>
+					<ID>BONUS_FIREARMS</ID>
+				</Has>
 			</TrainCondition>
 			<iCost>380</iCost>
 			<iMoves>2</iMoves>
@@ -64226,20 +64155,15 @@ Base XP gained when defending
 				<BuildingType>BUILDING_CAMEL_TRAINER</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_MILITARY_TRADITION</PrereqTech>
+			<BonusType>BONUS_FIREARMS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_CAMEL</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
+				<Has>
+					<GOMType>GOM_BONUS</GOMType>
+					<ID>BONUS_AMMUNITION</ID>
+				</Has>
 			</TrainCondition>
 			<iCost>525</iCost>
 			<iMoves>2</iMoves>
@@ -64373,20 +64297,15 @@ Base XP gained when defending
 				<BuildingType>BUILDING_CAMEL_TRAINER</BuildingType>
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_TRENCH_WARFARE</PrereqTech>
+			<BonusType>BONUS_FIREARMS</BonusType>
 			<PrereqBonuses>
 				<BonusType>BONUS_CAMEL</BonusType>
 			</PrereqBonuses>
 			<TrainCondition>
-				<And>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_FIREARMS</ID>
-					</Has>
-					<Has>
-						<GOMType>GOM_BONUS</GOMType>
-						<ID>BONUS_AMMUNITION</ID>
-					</Has>
-				</And>
+				<Has>
+					<GOMType>GOM_BONUS</GOMType>
+					<ID>BONUS_AMMUNITION</ID>
+				</Has>
 			</TrainCondition>
 			<iCost>900</iCost>
 			<iMoves>2</iMoves>
@@ -64728,6 +64647,12 @@ Base XP gained when defending
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_STORY_TELLER</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_UNIT_STORY_TELLER</Description>
+			<Civilopedia>TXT_KEY_UNIT_STORY_TELLER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_STORY_TELLER_STRATEGY</Strategy>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Capture>UNIT_STORY_TELLER</Capture>
 			<Combat>UNITCOMBAT_ENTERTAINER</Combat>
@@ -64741,24 +64666,22 @@ Base XP gained when defending
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_PROPERTY_CONTROL</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_STORY_TELLER</Description>
-			<Civilopedia>TXT_KEY_UNIT_STORY_TELLER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_STORY_TELLER_STRATEGY</Strategy>
-			<Advisor>ADVISOR_CULTURE</Advisor>
-			<bRivalTerritory>1</bRivalTerritory>
-			<UnitUpgrades>
-				<UnitType>UNIT_BARD</UnitType>
-			</UnitUpgrades>
 			<UnitAIs>
 				<UnitAI>
 					<UnitAIType>UNITAI_PROPERTY_CONTROL</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
+			<bRivalTerritory>1</bRivalTerritory>
+			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
+			<UnitUpgrades>
+				<UnitType>UNIT_BARD</UnitType>
+			</UnitUpgrades>
+			<iCost>12</iCost>
+			<iExtraCost>1</iExtraCost>
+			<Advisor>ADVISOR_CULTURE</Advisor>
+			<iMoves>2</iMoves>
 			<Buildings>
 				<BuildingType>BUILDING_RAIN_DANCE</BuildingType>
 				<BuildingType>BUILDING_WAR_DANCE</BuildingType>
@@ -64768,27 +64691,6 @@ Base XP gained when defending
 				<BuildingType>BUILDING_FERTILTY_DANCE</BuildingType>
 				<BuildingType>BUILDING_BLOOD_DANCE</BuildingType>
 			</Buildings>
-			<PrereqTech>TECH_ORAL_TRADITION</PrereqTech>
-			<iCost>12</iCost>
-			<iMoves>2</iMoves>
-			<!--
-iTradeMultiplier>3</iTradeMultiplier>
-			<iGreatWorkCulture>7</iGreatWorkCulture
-			-->
-			<iExtraCost>1</iExtraCost>
-			<iAsset>1</iAsset>
-			<UnitMeshGroups>
-				<iGroupSize>1</iGroupSize>
-				<fMaxSpeed>1.75</fMaxSpeed>
-				<fPadTime>1</fPadTime>
-				<iMeleeWaveSize>1</iMeleeWaveSize>
-				<iRangedWaveSize>0</iRangedWaveSize>
-				<UnitMeshGroup>
-					<iRequired>1</iRequired>
-					<EarlyArtDefineTag>ART_DEF_UNIT_STORY_TELLER</EarlyArtDefineTag>
-				</UnitMeshGroup>
-			</UnitMeshGroups>
-			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 			<Actions>
 				<Action>
 					<MissionType>MISSION_ENTERTAIN_CITY</MissionType>
@@ -64838,6 +64740,19 @@ iTradeMultiplier>3</iTradeMultiplier>
 					<iAmountPerTurn>1</iAmountPerTurn>
 				</PropertySource>
 			</PropertyManipulators>
+			<iAsset>1</iAsset>
+			<UnitMeshGroups>
+				<iGroupSize>1</iGroupSize>
+				<fMaxSpeed>1.75</fMaxSpeed>
+				<fPadTime>1</fPadTime>
+				<iMeleeWaveSize>1</iMeleeWaveSize>
+				<iRangedWaveSize>0</iRangedWaveSize>
+				<UnitMeshGroup>
+					<iRequired>1</iRequired>
+					<EarlyArtDefineTag>ART_DEF_UNIT_STORY_TELLER</EarlyArtDefineTag>
+				</UnitMeshGroup>
+			</UnitMeshGroups>
+			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_BARD</Type>
@@ -65924,26 +65839,26 @@ iTradeMultiplier>3</iTradeMultiplier>
 			<bMilitaryProduction>1</bMilitaryProduction>
 			<bMilitarySupport>1</bMilitarySupport>
 			<bNoBadGoodies>1</bNoBadGoodies>
-			<PrereqTech>TECH_TRAILS</PrereqTech>
+			<PrereqTech>TECH_TRACKING</PrereqTech>
 			<UnitUpgrades>
 				<UnitType>UNIT_MASTER_HUNTER</UnitType>
 			</UnitUpgrades>
 			<iCost>-1</iCost>
 			<iMoves>3</iMoves>
 			<iCombat>4</iCombat>
-			<iXPValueAttack>8</iXPValueAttack>
-			<iXPValueDefense>4</iXPValueDefense>
+			<iXPValueAttack>1</iXPValueAttack>
+			<iXPValueDefense>2</iXPValueDefense>
 			<iCityAttack>-75</iCityAttack>
 			<iPursuit>30</iPursuit>
 			<iAnimalCombat>200</iAnimalCombat>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
+			<iAsset>2</iAsset>
+			<iPower>2</iPower>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -65966,7 +65881,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
 			</FreePromotions>
-			<ForceObsoleteTech>TECH_TRACKING</ForceObsoleteTech>
+			<ForceObsoleteTech>TECH_HUNTING</ForceObsoleteTech>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_MASTER_HUNTER</Type>
@@ -66019,26 +65934,26 @@ iTradeMultiplier>3</iTradeMultiplier>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
 			</UnitAIs>
-			<PrereqTech>TECH_TRACKING</PrereqTech>
+			<PrereqTech>TECH_HUNTING</PrereqTech>
 			<iCost>-1</iCost>
 			<iMoves>3</iMoves>
 			<UnitUpgrades>
 				<UnitType>UNIT_MASTER_RANGER</UnitType>
 			</UnitUpgrades>
 			<iCombat>5</iCombat>
-			<iXPValueAttack>8</iXPValueAttack>
-			<iXPValueDefense>4</iXPValueDefense>
+			<iXPValueAttack>1</iXPValueAttack>
+			<iXPValueDefense>2</iXPValueDefense>
 			<iCityAttack>-75</iCityAttack>
 			<iPursuit>40</iPursuit>
 			<iAnimalCombat>200</iAnimalCombat>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
+			<iAsset>3</iAsset>
+			<iPower>5</iPower>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -66128,19 +66043,19 @@ iTradeMultiplier>3</iTradeMultiplier>
 			<iCost>-1</iCost>
 			<iMoves>3</iMoves>
 			<iCombat>6</iCombat>
-			<iXPValueAttack>8</iXPValueAttack>
-			<iXPValueDefense>4</iXPValueDefense>
+			<iXPValueAttack>1</iXPValueAttack>
+			<iXPValueDefense>2</iXPValueDefense>
 			<iPursuit>60</iPursuit>
 			<iCityAttack>-75</iCityAttack>
 			<iAnimalCombat>325</iAnimalCombat>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
+			<iAsset>4</iAsset>
+			<iPower>8</iPower>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -66233,19 +66148,19 @@ iTradeMultiplier>3</iTradeMultiplier>
 			<iCost>-1</iCost>
 			<iMoves>3</iMoves>
 			<iCombat>8</iCombat>
-			<iXPValueAttack>8</iXPValueAttack>
-			<iXPValueDefense>4</iXPValueDefense>
+			<iXPValueAttack>1</iXPValueAttack>
+			<iXPValueDefense>2</iXPValueDefense>
 			<iPursuit>80</iPursuit>
 			<iCityAttack>-75</iCityAttack>
 			<iAnimalCombat>325</iAnimalCombat>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
+			<iAsset>6</iAsset>
+			<iPower>11</iPower>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -66342,19 +66257,19 @@ iTradeMultiplier>3</iTradeMultiplier>
 			<iCost>-1</iCost>
 			<iMoves>3</iMoves>
 			<iCombat>11</iCombat>
-			<iXPValueAttack>8</iXPValueAttack>
-			<iXPValueDefense>4</iXPValueDefense>
+			<iXPValueAttack>1</iXPValueAttack>
+			<iXPValueDefense>2</iXPValueDefense>
 			<iPursuit>60</iPursuit>
 			<iCityAttack>-75</iCityAttack>
 			<iAnimalCombat>325</iAnimalCombat>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
+			<iAsset>8</iAsset>
+			<iPower>16</iPower>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -66447,19 +66362,19 @@ iTradeMultiplier>3</iTradeMultiplier>
 			<iCost>-1</iCost>
 			<iMoves>4</iMoves>
 			<iCombat>16</iCombat>
-			<iXPValueAttack>8</iXPValueAttack>
-			<iXPValueDefense>4</iXPValueDefense>
+			<iXPValueAttack>1</iXPValueAttack>
+			<iXPValueDefense>2</iXPValueDefense>
 			<iPursuit>40</iPursuit>
 			<iCityAttack>-75</iCityAttack>
 			<iAnimalCombat>325</iAnimalCombat>
-			<iAsset>2</iAsset>
-			<iPower>2</iPower>
 			<UnitCombatTargets>
 				<UnitCombatTarget>
 					<UnitCombatTargetType>UNITCOMBAT_ANIMAL</UnitCombatTargetType>
 					<bUnitCombatTarget>1</bUnitCombatTarget>
 				</UnitCombatTarget>
 			</UnitCombatTargets>
+			<iAsset>10</iAsset>
+			<iPower>24</iPower>
 			<UnitMeshGroups>
 				<iGroupSize>2</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -66514,6 +66429,9 @@ iTradeMultiplier>3</iTradeMultiplier>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CAPTIVE_MILITARY</Description>
 			<Civilopedia>TXT_KEY_UNIT_CAPTIVE_MILITARY_PEDIA</Civilopedia>
@@ -66714,7 +66632,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_PRODUCTION</BuildingType>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_COMMERCE</BuildingType>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_SANITATION</BuildingType>
-				<BuildingType>BUILDING_SLAVE_COMPOUND_CRIME_PREVENTION</BuildingType>				
+				<BuildingType>BUILDING_SLAVE_COMPOUND_CRIME_PREVENTION</BuildingType>
 				<BuildingType>BUILDING_WV_CANNIBALISM</BuildingType>
 				<BuildingType>BUILDING_WV_HUMAN_SACRIFICE</BuildingType>
 			</Buildings>
@@ -67121,7 +67039,6 @@ iTradeMultiplier>3</iTradeMultiplier>
 						<Outcome>
 							<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY</OutcomeType>
 							<iChance>100</iChance>
-							<PythonCallback/>
 							<PlotCondition>
 								<Is>TAG_OWNED</Is>
 							</PlotCondition>
@@ -67138,13 +67055,11 @@ iTradeMultiplier>3</iTradeMultiplier>
 										<Constant>2</Constant>
 									</Adapt>
 								</iYield>
-								<iYield>0</iYield>
 							</Yields>
 						</Outcome>
 						<Outcome>
 							<OutcomeType>OUTCOME_HUMAN_BUTCHERED_CITY_BEST</OutcomeType>
 							<iChance>100</iChance>
-							<PythonCallback/>
 							<PlotCondition>
 								<Is>TAG_OWNED</Is>
 							</PlotCondition>
@@ -67161,7 +67076,6 @@ iTradeMultiplier>3</iTradeMultiplier>
 										<Constant>4</Constant>
 									</Adapt>
 								</iYield>
-								<iYield>0</iYield>
 							</Yields>
 						</Outcome>
 					</ActionOutcomes>
@@ -67368,6 +67282,9 @@ iTradeMultiplier>3</iTradeMultiplier>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_SUBDUED_ANIMAL</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CAPTIVE_CIVILIAN</Description>
 			<Civilopedia>TXT_KEY_UNIT_CAPTIVE_CIVILIAN_PEDIA</Civilopedia>
@@ -67514,7 +67431,6 @@ iTradeMultiplier>3</iTradeMultiplier>
 										<Constant>10</Constant>
 									</Adapt>
 								</iYield>
-								<iYield>0</iYield>
 							</Yields>
 						</Outcome>
 						<Outcome>
@@ -67536,7 +67452,6 @@ iTradeMultiplier>3</iTradeMultiplier>
 										<Constant>15</Constant>
 									</Adapt>
 								</iYield>
-								<iYield>0</iYield>
 							</Yields>
 						</Outcome>
 					</ActionOutcomes>
@@ -67623,6 +67538,9 @@ iTradeMultiplier>3</iTradeMultiplier>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CAPTIVE_NEANDERTHAL</Description>
 			<Civilopedia>TXT_KEY_UNIT_CAPTIVE_MILITARY_PEDIA</Civilopedia>
@@ -67743,7 +67661,7 @@ iTradeMultiplier>3</iTradeMultiplier>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_PRODUCTION</BuildingType>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_COMMERCE</BuildingType>
 				<BuildingType>BUILDING_SLAVE_COMPOUND_SANITATION</BuildingType>
-				<BuildingType>BUILDING_SLAVE_COMPOUND_CRIME_PREVENTION</BuildingType>	
+				<BuildingType>BUILDING_SLAVE_COMPOUND_CRIME_PREVENTION</BuildingType>
 				<BuildingType>BUILDING_WV_CANNIBALISM</BuildingType>
 				<BuildingType>BUILDING_WV_HUMAN_SACRIFICE</BuildingType>
 			</Buildings>
@@ -67932,7 +67850,6 @@ iTradeMultiplier>3</iTradeMultiplier>
 										<Constant>2</Constant>
 									</Adapt>
 								</iYield>
-								<iYield>0</iYield>
 							</Yields>
 						</Outcome>
 						<Outcome>
@@ -67951,7 +67868,6 @@ iTradeMultiplier>3</iTradeMultiplier>
 										<Constant>4</Constant>
 									</Adapt>
 								</iYield>
-								<iYield>0</iYield>
 							</Yields>
 						</Outcome>
 					</ActionOutcomes>
@@ -67972,6 +67888,9 @@ iTradeMultiplier>3</iTradeMultiplier>
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_FREED_SLAVE</Description>
 			<Civilopedia>TXT_KEY_UNIT_FREED_SLAVE_PEDIA</Civilopedia>

@@ -15,6 +15,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_BAHAI_CATHEDRAL</ArtDefineTag>
 			<ReligionType>RELIGION_BAHAI</ReligionType>
 			<PrereqReligion>RELIGION_BAHAI</PrereqReligion>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>280</iCost>
 			<iStateReligionHappiness>2</iStateReligionHappiness>
@@ -90,6 +93,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_BAHAI_MONASTERY</ArtDefineTag>
 			<ReligionType>RELIGION_BAHAI</ReligionType>
 			<PrereqReligion>RELIGION_BAHAI</PrereqReligion>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqBonuses>
 				<Bonus>BONUS_BOOKS</Bonus>
 				<Bonus>BONUS_PAPER</Bonus>
@@ -163,10 +169,12 @@
 			<HolyCity>RELIGION_BAHAI</HolyCity>
 			<ReligionType>RELIGION_BAHAI</ReligionType>
 			<GlobalReligionCommerce>RELIGION_BAHAI</GlobalReligionCommerce>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
-			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>8</iAsset>
@@ -221,6 +229,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_BAHAI_TEMPLE</ArtDefineTag>
 			<ReligionType>RELIGION_BAHAI</ReligionType>
 			<PrereqReligion>RELIGION_BAHAI</PrereqReligion>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_BOOKS</Bonus>

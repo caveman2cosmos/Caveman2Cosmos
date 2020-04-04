@@ -1,9 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Building Infos -->
 <Civ4BuildingInfos xmlns="x-schema:../../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
@@ -33,7 +28,6 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
-			<iCost>-1</iCost>
 			<iAsset>3</iAsset>
 			<iConquestProb>75</iConquestProb>
 			<YieldChanges>
@@ -52,6 +46,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_MAMMOTH_TRAINER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_MAMMOTH_TRAINER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MAMMOTH_TRAINER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MAMMOTH_TRAINER_STRATEGY</Strategy>
@@ -187,8 +182,7 @@
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MAMMOTH_TRAINER_EFFECT</ArtDefineTag>
 			<ObsoleteTech>TECH_ARMORED_VEHICLES</ObsoleteTech>
-			<iCost>-1</iCost>
-			<iConquestProb>100</iConquestProb>
+			<bNeverCapture>1</bNeverCapture>
 			<iAsset>2</iAsset>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>

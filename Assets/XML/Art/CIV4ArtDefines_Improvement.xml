@@ -1,10 +1,4 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- ReModified by Strategyonly -->
-	<!-- -->
-	<!-- Improvement art path information -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Schema\Caveman2Cosmos.xsd">
 	<ImprovementArtInfos>
 		<ImprovementArtInfo>
@@ -559,7 +553,7 @@
 			<Button>Art/Interface/Buttons/builds/Tower.dds</Button>
 		</ImprovementArtInfo>
 		<ImprovementArtInfo>
-			<Type>ART_DEF_IMPROVEMENT_PLANT_BAMBOO_GROVE</Type>
+			<Type>ART_DEF_IMPROVEMENT_PLANT_BAMBOO</Type>
 			<bExtraAnimations>0</bExtraAnimations>
 			<fScale>1</fScale>
 			<fInterfaceScale>1.0</fInterfaceScale>

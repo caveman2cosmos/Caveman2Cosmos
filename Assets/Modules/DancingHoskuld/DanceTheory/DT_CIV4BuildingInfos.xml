@@ -10,7 +10,9 @@
 			<Strategy>TXT_KEY_BUILDING_DANCE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BIRD_DANCE</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<iAsset>1</iAsset>
 			<iPower>1</iPower>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
@@ -65,7 +67,9 @@
 			<Strategy>TXT_KEY_BUILDING_DANCE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_FOX_DANCE</ArtDefineTag>
-			<iCost>-1</iCost>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<iAsset>1</iAsset>
 			<iPower>1</iPower>
 			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>

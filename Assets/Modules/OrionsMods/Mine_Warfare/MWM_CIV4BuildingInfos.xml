@@ -4,6 +4,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_ADVANCED_MINE_TECHNOLOGY_CENTER</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_ADVANCED_MINE_TECHNOLOGY_CENTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ADVANCED_MINE_TECHNOLOGY_CENTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ADVANCED_MINE_TECHNOLOGY_CENTER_STRATEGY</Strategy>
@@ -11,9 +12,11 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ADVANCED_MINE_TECHNOLOGY_CENTER</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_ADVANCED_MINE_TECHNOLOGY_CENTER</MovieDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqTech>TECH_MILITARY_SCIENCE</PrereqTech>
 			<!--iCost>4080</iCost-->
-			<iCost>-1</iCost>
 			<iConquestProb>66</iConquestProb>
 			<iHappiness>-1</iHappiness>
 			<iAsset>6</iAsset>

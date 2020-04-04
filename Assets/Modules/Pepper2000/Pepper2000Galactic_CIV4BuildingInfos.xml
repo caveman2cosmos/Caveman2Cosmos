@@ -10,7 +10,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_TRANSTELLAR_COLONY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERSTELLAR_TRAVEL</PrereqTech>
-			<iCost>-1</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_INTERSTELLAR</MapCategoryType>
@@ -1278,6 +1277,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_RAK_MESBA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_RAK_MESBA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_RAK_MESBA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_RAK_MESBA_STRATEGY</Strategy>
@@ -1310,6 +1310,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_GODWHEEL</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_GODWHEEL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GODWHEEL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GODWHEEL_STRATEGY</Strategy>
@@ -1346,6 +1347,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_PROJECT_ICARUS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_PROJECT_ICARUS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PROJECT_ICARUS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PROJECT_ICARUS_STRATEGY</Strategy>
@@ -1383,6 +1385,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_PROJECT_PERSEPHONE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_PROJECT_PERSEPHONE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PROJECT_PERSEPHONE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PROJECT_PERSEPHONE_STRATEGY</Strategy>
@@ -1426,6 +1429,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_STARDATE_CALENDAR</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_STARDATE_CALENDAR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_STARDATE_CALENDAR_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_STARDATE_CALENDAR_STRATEGY</Strategy>
@@ -1463,7 +1467,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_INTERSTELLAR_COLONY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_INTERSTELLAR_TRAVEL</PrereqTech>
-			<iCost>-1</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
@@ -1490,7 +1493,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_MILKY_WAY_COLONY</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ADVANCED_SEEDSHIPS</PrereqTech>
-			<iCost>-1</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
@@ -6687,6 +6689,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_MILKY_WAY_CLUSTER_BRAIN</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_MILKY_WAY_CLUSTER_BRAIN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MILKY_WAY_CLUSTER_BRAIN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MILKY_WAY_CLUSTER_BRAIN_STRATEGY</Strategy>
@@ -6726,6 +6729,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_ARGUS_ARRAY</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ARGUS_ARRAY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ARGUS_ARRAY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ARGUS_ARRAY_STRATEGY</Strategy>
@@ -6770,6 +6774,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_GALACTIC_CORE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_GALACTIC_CORE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GALACTIC_CORE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GALACTIC_CORE_STRATEGY</Strategy>
@@ -6777,7 +6782,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_GALACTIC_CORE</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_ANTIMATTER_ROCKETS</PrereqTech>
-			<iCost>-1</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_PLASMA</MapCategoryType>
@@ -6801,6 +6805,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_EARTH_BACKUP</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_EARTH_BACKUP</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EARTH_BACKUP_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_EARTH_BACKUP_STRATEGY</Strategy>
@@ -6846,6 +6851,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_WORMHOLE_NETWORK</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_WORMHOLE_NETWORK</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WORMHOLE_NETWORK_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_WORMHOLE_NETWORK_STRATEGY</Strategy>
@@ -6871,6 +6877,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_GALACTIC_NEWS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_GALACTIC_NEWS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GALACTIC_NEWS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GALACTIC_NEWS_STRATEGY</Strategy>
@@ -6910,6 +6917,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_ARTIFICIAL_CONSTELLATION</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ARTIFICIAL_CONSTELLATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ARTIFICIAL_CONSTELLATION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ARTIFICIAL_CONSTELLATION_STRATEGY</Strategy>
@@ -6947,6 +6955,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_EARTH_20</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_EARTH_20</Description>
 			<Civilopedia>TXT_KEY_BUILDING_EARTH_20_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_EARTH_20_STRATEGY</Strategy>
@@ -6978,6 +6987,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_ANDROMEDA</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ANDROMEDA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANDROMEDA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ANDROMEDA_STRATEGY</Strategy>
@@ -6985,7 +6995,6 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ANDROMEDA</ArtDefineTag>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<PrereqTech>TECH_FOLDING_SPACE</PrereqTech>
-			<iCost>-1</iCost>
 			<iHurryCostModifier>10000</iHurryCostModifier>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_MILKY_WAY</MapCategoryType>
@@ -7008,6 +7017,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_GALACTIC_CORE_BASE</Type>
 			<iMaxPlayerInstances>1</iMaxPlayerInstances>
+			<bNeverCapture>1</bNeverCapture>
 			<Description>TXT_KEY_BUILDING_GALACTIC_CORE_BASE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GALACTIC_CORE_BASE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GALACTIC_CORE_BASE_STRATEGY</Strategy>
@@ -7038,6 +7048,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_GALACTIC_CORE_DYSON_SPHERE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_GALACTIC_CORE_DYSON_SPHERE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GALACTIC_CORE_DYSON_SPHERE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GALACTIC_CORE_DYSON_SPHERE_STRATEGY</Strategy>
@@ -7081,6 +7092,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_TRANTOR</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_TRANTOR</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TRANTOR_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TRANTOR_STRATEGY</Strategy>
@@ -7124,6 +7136,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_ONYX</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ONYX</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ONYX_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ONYX_STRATEGY</Strategy>
@@ -7147,6 +7160,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_PROTOS_MANDATE</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_PROTOS_MANDATE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PROTOS_MANDATE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PROTOS_MANDATE_STRATEGY</Strategy>
@@ -7178,6 +7192,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_CENTERPOINT_STATION</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_CENTERPOINT_STATION</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CENTERPOINT_STATION_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CENTERPOINT_STATION_STRATEGY</Strategy>
@@ -7206,6 +7221,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_INTERSTELLAR_OLYMPICS</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_INTERSTELLAR_OLYMPICS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_INTERSTELLAR_OLYMPICS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_INTERSTELLAR_OLYMPICS_STRATEGY</Strategy>
@@ -7244,6 +7260,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_GLIESE_667CC</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_GLIESE_667CC</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GLIESE_667CC_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GLIESE_667CC_STRATEGY</Strategy>
@@ -7296,6 +7313,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_GLIESE_581D</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_GLIESE_581D</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GLIESE_581D_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GLIESE_581D_STRATEGY</Strategy>
@@ -7346,6 +7364,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_PROXIMA_CENTAURI</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_PROXIMA_CENTAURI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PROXIMA_CENTAURI_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PROXIMA_CENTAURI_STRATEGY</Strategy>
@@ -7402,6 +7421,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_WOLF_1061C</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_WOLF_1061C</Description>
 			<Civilopedia>TXT_KEY_BUILDING_WOLF_1061C_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_WOLF_1061C_STRATEGY</Strategy>
@@ -7459,6 +7479,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_HD_85512B</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_HD_85512B</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HD_85512B_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HD_85512B_STRATEGY</Strategy>
@@ -7506,6 +7527,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_GLIESE_163C</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_GLIESE_163C</Description>
 			<Civilopedia>TXT_KEY_BUILDING_GLIESE_163C_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_GLIESE_163C_STRATEGY</Strategy>
@@ -7567,6 +7589,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_KEPLER_186F</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_KEPLER_186F</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KEPLER_186F_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_KEPLER_186F_STRATEGY</Strategy>
@@ -7615,6 +7638,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_KEPLER_22B</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_KEPLER_22B</Description>
 			<Civilopedia>TXT_KEY_BUILDING_KEPLER_22B_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_KEPLER_22B_STRATEGY</Strategy>
@@ -7662,6 +7686,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_PERSEUS_ARM</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_PERSEUS_ARM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_PERSEUS_ARM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_PERSEUS_ARM_STRATEGY</Strategy>
@@ -7712,6 +7737,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_NORMA_AND_OUTER_ARM</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_NORMA_AND_OUTER_ARM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NORMA_AND_OUTER_ARM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NORMA_AND_OUTER_ARM_STRATEGY</Strategy>
@@ -7766,6 +7792,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_SCUTUM_CRUX_ARM</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_SCUTUM_CRUX_ARM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_SCUTUM_CRUX_ARM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_SCUTUM_CRUX_ARM_STRATEGY</Strategy>
@@ -7818,6 +7845,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_CARINA_SAGITTARIUS_ARM</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_CARINA_SAGITTARIUS_ARM</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CARINA_SAGITTARIUS_ARM_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CARINA_SAGITTARIUS_ARM_STRATEGY</Strategy>
@@ -7867,6 +7895,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_HYADES_STAR_CLUSTER</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_HYADES_STAR_CLUSTER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HYADES_STAR_CLUSTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HYADES_STAR_CLUSTER_STRATEGY</Strategy>
@@ -7915,6 +7944,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_NGC_6811</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_NGC_6811</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NGC_6811_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NGC_6811_STRATEGY</Strategy>
@@ -7959,6 +7989,7 @@
 		<BuildingInfo>
 			<Type>BUILDING_CYGNUS_X1</Type>
 			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_CYGNUS_X1</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CYGNUS_X1_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CYGNUS_X1_STRATEGY</Strategy>

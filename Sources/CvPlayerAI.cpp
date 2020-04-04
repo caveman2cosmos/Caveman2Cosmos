@@ -2244,40 +2244,6 @@ bool CvPlayerAI::AI_acceptUnit(const CvUnit* pUnit) const
 }
 
 
-bool CvPlayerAI::AI_captureUnit(UnitTypes eUnit, CvPlot* pPlot) const
-{
-	FAssert(!isHuman());
-/************************************************************************************************/
-/* Afforess					  Start		 07/15/10											   */
-/*																							  */
-/* AI Always capture too																		*/
-/************************************************************************************************/
-	return true;
-/************************************************************************************************/
-/* Afforess						 END															*/
-/************************************************************************************************/
-#if 0
-	CvCity* pNearestCity;
-	if (pPlot->getTeam() == getTeam())
-	{
-		return true;
-	}
-
-	pNearestCity = GC.getMap().findCity(pPlot->getX(), pPlot->getY(), NO_PLAYER, getTeam());
-
-	if (pNearestCity != NULL)
-	{
-		if (plotDistance(pPlot->getX(), pPlot->getY(), pNearestCity->getX(), pNearestCity->getY()) <= 4)
-		{
-			return true;
-		}
-	}
-
-	return false;
-#endif
-}
-
-
 DomainTypes CvPlayerAI::AI_unitAIDomainType(UnitAITypes eUnitAI) const
 {
 	switch (eUnitAI)
@@ -4992,30 +4958,10 @@ bool CvPlayerAI::AI_isFinancialTrouble() const
 {
 	PROFILE_FUNC();
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					  06/12/09								jdog5000	  */
-/*																							  */
-/* Barbarian AI																				 */
-/************************************************************************************************/
-	if( isNPC() )
+	if (!isNPC() && AI_costAsPercentIncome() < AI_safeCostAsPercentIncome())
 	{
-		return false;
+		return true;
 	}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD					   END												  */
-/************************************************************************************************/
-
-	//if (getCommercePercent(COMMERCE_GOLD) > 50)
-	{
-		int iFundedPercent = AI_costAsPercentIncome();
-		int iSafePercent = AI_safeCostAsPercentIncome();
-
-		if (iFundedPercent < iSafePercent)
-		{
-			return true;
-		}
-	}
-
 	return false;
 }
 

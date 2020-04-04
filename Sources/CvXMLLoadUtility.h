@@ -805,9 +805,6 @@ private:
 /************************************************************************************************/
 /* SORT_ALPHABET                           END                                                  */
 /************************************************************************************************/
-	// take a character string of hex values and return their unsigned int value
-	void MakeMaskFromString(unsigned int *puiMask, char* szMask);
-
 	// find the tag name in the xml file and set the string parameter and num val parameter based on it's value
 	void SetGlobalStringArray(CvString** ppszString, wchar_t* szTagName, int* iNumVals, bool bUseEnum=false);
 	void SetDiplomacyCommentTypes(CvString** ppszString, int* iNumVals);	// sets diplomacy comments

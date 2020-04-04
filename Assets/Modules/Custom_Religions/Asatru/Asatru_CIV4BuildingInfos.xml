@@ -16,6 +16,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ASATRU_CATHEDRAL</ArtDefineTag>
 			<ReligionType>RELIGION_ASATRU</ReligionType>
 			<PrereqReligion>RELIGION_ASATRU</PrereqReligion>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>280</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -106,6 +109,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ASATRU_MONASTERY</ArtDefineTag>
 			<ReligionType>RELIGION_ASATRU</ReligionType>
 			<PrereqReligion>RELIGION_ASATRU</PrereqReligion>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Bonus>BONUS_FURNITURE</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_BRICKS</Bonus>
@@ -179,10 +185,12 @@
 			<HolyCity>RELIGION_ASATRU</HolyCity>
 			<ReligionType>RELIGION_ASATRU</ReligionType>
 			<GlobalReligionCommerce>RELIGION_ASATRU</GlobalReligionCommerce>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
-			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>8</iAsset>
@@ -238,6 +246,9 @@
 			<ArtDefineTag>ART_DEF_BUILDING_ASATRU_TEMPLE</ArtDefineTag>
 			<ReligionType>RELIGION_ASATRU</ReligionType>
 			<PrereqReligion>RELIGION_ASATRU</PrereqReligion>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<PrereqBonuses>
 				<Bonus>BONUS_BRICKS</Bonus>
 				<Bonus>BONUS_PRIME_TIMBER</Bonus>
@@ -305,6 +316,9 @@
 			<MovieDefineTag>ART_DEF_MOVIE_FREYA</MovieDefineTag>
 			<ReligionType>RELIGION_ASATRU</ReligionType>
 			<StateReligion>RELIGION_ASATRU</StateReligion>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_ASATRU</PrereqReligion>
 			<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
@@ -316,7 +330,7 @@
 			<iCost>1296</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<iConquestProb>0</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 			<HealUnitCombatTypes>
 				<HealUnitCombatType>
 					<UnitCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</UnitCombatType>
@@ -373,6 +387,9 @@
 			<MovieDefineTag>ART_DEF_MOVIE_HEIMDALL</MovieDefineTag>
 			<ReligionType>RELIGION_ASATRU</ReligionType>
 			<StateReligion>RELIGION_ASATRU</StateReligion>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_ASATRU</PrereqReligion>
 			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
@@ -385,7 +402,7 @@
 			<iCost>1296</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<iConquestProb>0</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iDefense>100</iDefense>
 			<iAllCityDefense>20</iAllCityDefense>
@@ -436,6 +453,9 @@
 			<MovieDefineTag>ART_DEF_MOVIE_LOKI</MovieDefineTag>
 			<ReligionType>RELIGION_ASATRU</ReligionType>
 			<StateReligion>RELIGION_ASATRU</StateReligion>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_ASATRU</PrereqReligion>
 			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
@@ -449,7 +469,7 @@
 			<iCost>1296</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<iConquestProb>0</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 			<iStateReligionHappiness>1</iStateReligionHappiness>
 			<iAsset>2</iAsset>
 			<fVisibilityPriority>100.0</fVisibilityPriority>
@@ -498,6 +518,9 @@
 			<StateReligion>RELIGION_ASATRU</StateReligion>
 			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_ASATRU</PrereqReligion>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
 			<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
 			<PrereqBonuses>
@@ -551,6 +574,9 @@
 			<MovieDefineTag>ART_DEF_MOVIE_THOR</MovieDefineTag>
 			<ReligionType>RELIGION_ASATRU</ReligionType>
 			<StateReligion>RELIGION_ASATRU</StateReligion>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_ASATRU</PrereqReligion>
 			<ObsoleteTech>TECH_HUMANISM</ObsoleteTech>
@@ -559,7 +585,7 @@
 			<iCost>1296</iCost>
 			<iHurryCostModifier>50</iHurryCostModifier>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<iConquestProb>0</iConquestProb>
+			<iConquestProb>100</iConquestProb>
 			<iWarWearinessModifier>-50</iWarWearinessModifier>
 			<iGlobalWarWearinessModifier>-20</iGlobalWarWearinessModifier>
 			<iEnemyWarWearinessModifier>10</iEnemyWarWearinessModifier>

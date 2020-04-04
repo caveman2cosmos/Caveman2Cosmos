@@ -241,7 +241,7 @@ void CvMap::reset(CvMapInitData* pInitInfo)
 /*********************************/
 	//Koshling - why do we ignore the map size in MapInfos if there is only 1???  Changed that for now
 	//if (GC.getNumMapInfos() > 1)
-	if (GC.multiMapsEnabled() && GC.getMapInfos().size() > 0)
+	if (GC.multiMapsEnabled() /*&& GC.getMapInfos().size() > 0*/)
 	{
 		if (GC.getMapInfo(getType()).getGridWidth() > 0 && GC.getMapInfo(getType()).getGridHeight() > 0)
 		{

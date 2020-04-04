@@ -2,7 +2,7 @@
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../../../Xml/Schema/Civ4Gametext.xsd">
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_BEN_GURION_1</Tag>
-		<English>We require some help, [CT_NAME].  Why not give it to those who will do the same to you?</English>
+		<English>We require some help, [CT_NAME]. Why not give it to those who will do the same to you?</English>
 		<French>Nous avons besoin de l'aide, [CT_NAME]. Pourquoi pas le donner à ceux qui fera la même chose à toi?</French>
 		<German>Wir benötigen etwas Hilfe, [CT_NAME]. Warum nicht es zu denen geben, die das selbe dich antun?</German>
 		<Italian>Richiediamo un certo aiuto, [CT_NAME]. Perchè non darlo a colui che farebbe lo stesso per te?</Italian>
@@ -42,7 +42,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_STRONGER_SOLOMON_1</Tag>
-		<English>Getting a good name is better than any precious ointment.  Providing for others will get you that name, [CT_NAME].</English>
+		<English>Getting a good name is better than any precious ointment. Providing for others will get you that name, [CT_NAME].</English>
 		<French>Obtenir un bon nom est meilleur que n'importe quel onguent précieux. Prévoir d'autres vous obtiendra que nom, [CT_NAME].</French>
 		<German>Einen guten Namen zu erhalten ist besser als jede kostbare Salbe. Das Zur Verfügung stellen für andere erhält dich daß Name, [CT_NAME].</German>
 		<Italian>Ottenere un buon nome è migliore di tutto l'unguento prezioso. Provvedendo ad altri li otterrà che nome, [CT_NAME].</Italian>
@@ -66,7 +66,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_WEAKER_SOLOMON_1</Tag>
-		<English>We two are better because when we fall, the other will lift the other up.  Lifting is helping.</English>
+		<English>We two are better because when we fall, the other will lift the other up. Lifting is helping.</English>
 		<French>Nous deux sommes meilleurs parce que quand nous tombons, l'autre soulèvera l'autre vers le haut. Le levage aide.</French>
 		<German>Wir zwei sind besser, weil, wenn wir fallen, das andere das andere anhebt. Das Anheben hilft.</German>
 		<Italian>Due siamo migliori perché quando cadiamo, l'altro alzerà l'altro in su. Il sollevamento sta aiutando.</Italian>
@@ -82,7 +82,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_DAVID_1</Tag>
-		<English>Greetings.  I am [OUR_NAME], and I welcome you, with a hand on the heart, to the the land of [OUR_CIV_SHORT].</English>
+		<English>Greetings. I am [OUR_NAME], and I welcome you, with a hand on the heart, to the the land of [OUR_CIV_SHORT].</English>
 		<French>Salutations. Je suis [OUR_NAME], et je te souhaite la bienvenue, avec une main sur le coeur, l'à la terre de [OUR_CIV_SHORT].</French>
 		<German>Grüße. Ich bin [OUR_NAME], und ich begrüße dich, mit einer Hand auf dem Herzen, zum Land von [OUR_CIV_SHORT].</German>
 		<Italian>Saluti. Sono [OUR_NAME] e ti accolgo favorevolmente, con una mano sul cuore, alla terra di [OUR_CIV_SHORT].</Italian>
@@ -90,7 +90,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_SOLOMON_1</Tag>
-		<English>Greetings, [CT_NAME].  Be good, and we shall be good.  But remember, there is always a time to love, and a time to hate; a time of war, and a time of peace.</English>
+		<English>Greetings, [CT_NAME]. Be good, and we shall be good. But remember, there is always a time to love, and a time to hate; a time of war, and a time of peace.</English>
 		<French>Salutations, [CT_NAME]. Être bon, et nous serons bons. Mais se rappeler, il y a toujours un temps d'aimer, et un temps de détester ; un moment de guerre, et un moment de paix.</French>
 		<German>Grüße, [CT_NAME]. Gut sein und wir sind gut. Aber sich erinnern, gibt es immer eine Zeit zu lieben und eine Zeit zu hassen; eine Zeit des Krieges und eine Zeit des Friedens.</German>
 		<Italian>Saluti, [CT_NAME]. Sii buono e noi saremo buoni. Ma ricordati, c'è sempre un momento per amare e un momento per odiare; un momento per la guerra e un momento per la pace.</Italian>
@@ -98,7 +98,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_GREETINGS_ATT_FR_LEADER_BEN_GURION_1</Tag>
-		<English>I am glad to see you.  What does the [CT_EMPIRE] want?</English>
+		<English>I am glad to see you. What does the [CT_EMPIRE] want?</English>
 		<French>Je suis heureux de vous voir. Ce que [CT_EMPIRE] veut?</French>
 		<German>Ich bin froh, dich zu sehen. Was [CT_EMPIRE] wünscht?</German>
 		<Italian>Sono felice di vederti. Che cosa desidera [CT_EMPIRE]?</Italian>
@@ -130,7 +130,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_DAVID_1</Tag>
-		<English>What do you need?  After all, his blood is in your head, [CT_NAME]</English>
+		<English>What do you need? After all, his blood is in your head, [CT_NAME]</English>
 		<French>De quoi avez-vous besoin? Après tout, son sang est dans votre tête, [CT_NAME]</French>
 		<German>Was benötigst du? Schließlich ist sein Blut in deinem Kopf, [CT_NAME]</German>
 		<Italian>Di che cosa avete bisogno? Dopo tutto, la sua anima è in vostra testa, [CT_NAME]</Italian>
@@ -138,7 +138,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_GREETINGS_ATT_FUR_LEADER_SOLOMON_1</Tag>
-		<English>You dug the pit that is your wickedness.  One day, you shall fall into it.</English>
+		<English>You dug the pit that is your wickedness. One day, you shall fall into it.</English>
 		<French>Vous avez creusé le puits qui est votre méchanceté. Un jour, vous tomberez dans lui.</French>
 		<German>Du grubst die Grube, die deine Gemeinheit ist. Ein Tag, fällst du in sie.</German>
 		<Italian>Avete scavato il pozzo che è il vostro wickedness. Un giorno, cadrete in esso.</Italian>
@@ -146,7 +146,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_NO_PEACE_LEADER_BEN_GURION_1</Tag>
-		<English>Why should I make peace with you, [CT_NAME]?  There is simply no need.</English>
+		<English>Why should I make peace with you, [CT_NAME]? There is simply no need.</English>
 		<French>Pourquoi est-ce que je devrais faire la paix avec toi, [CT_NAME]? Il n'y a simplement aucun besoin.</French>
 		<German>Warum sollte ich Frieden mit dir bilden, [CT_NAME]? Es gibt einfach keine Notwendigkeit.</German>
 		<Italian>Perchè dovrei fare pace con te, [CT_NAME]? Non ci è semplicemente bisogno.</Italian>
