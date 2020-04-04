@@ -2435,12 +2435,5 @@
 			<fBlue>0.50</fBlue>
 			<fAlpha>1.00</fAlpha>
 		</ColorVal>
-		<ColorVal>
-			<Type>COLOR_PLAYER_NEAR_WHITE</Type>
-			<fRed>0.90</fRed>
-			<fGreen>0.90</fGreen>
-			<fBlue>0.90</fBlue>
-			<fAlpha>1.00</fAlpha>
-		</ColorVal>
 	</ColorVals>
 </Civ4ColorVals>
