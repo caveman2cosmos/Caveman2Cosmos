@@ -2,7 +2,7 @@
 <!-- Sid Meier's Civilization 4 Beyond the Sword -->
 <!-- Modified by the Civ Gold Team -->
 <!-- -->
-<Civ4ColorVals xmlns="x-schema:../../../XML/Schema/C2C_CIV4CivilizationsSchema.xml">
+<Civ4ColorVals xmlns="x-schema:../../../XML/Schema/C2C_CIV4InterfaceSchema.xml">
 	<ColorVals>
 		<ColorVal>
 			<Type>COLOR_X_SWEDISH_CHEESE</Type>
