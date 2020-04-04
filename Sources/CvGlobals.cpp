@@ -95,8 +95,7 @@ ProxyTracker::ProxyTracker(const CvGlobals* proxy, const char* name)
 {
 	inDLL++;
 	fnName = name;
-
-	proxy->CheckProxy(name);
+	FAssertMsg(gGlobals != NULL, "Method called prior to global instantiation");
 }
 
 ProxyTracker::~ProxyTracker()
@@ -105,20 +104,6 @@ ProxyTracker::~ProxyTracker()
 	fnName = NULL;
 }
 #endif
-
-void CvGlobals::CheckProxy(const char* fnName) const
-{
-	//OutputDebugString(fnName);
-	//OutputDebugString("\n");
-
-	if ( gGlobals == NULL )
-	{
-		OutputDebugString("Method called prior to global instantiation\n");
-
-		::MessageBoxA(NULL,"Method called prior to global instantiation",":CvGameCore",MB_OK);
-		//throw new <exception>;
-	}
-}
 
 //
 // CONSTRUCTOR

@@ -1776,11 +1776,8 @@ class CvGlobals
 //	friend class CvDLLUtilityIFace;
 	friend class CvXMLLoadUtility;
 	friend class ProxyTracker;
-protected:
-	void CheckProxy(const char* fnName) const;
 
 public:
-
 	// singleton accessor
 	DllExport inline static CvGlobals& getInstance();
 
