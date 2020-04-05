@@ -230,7 +230,7 @@ class CvDiplomacy:
 		elif szType == "AI_DIPLOCOMMENT_RESEARCH":
 			CyPlayer = GC.getPlayer(self.diploScreen.getWhoTradingWith())
 			for i in range(GC.getNumTechInfos()):
-				if CyPlayer.canResearch(i, False):
+				if CyPlayer.canResearch(i):
 					self.addUserComment("USER_DIPLOCOMMENT_RESEARCH_TECH", i, -1, GC.getTechInfo(i).getTextKey())
 
 			self.addUserComment("USER_DIPLOCOMMENT_SOMETHING_ELSE")

@@ -2461,7 +2461,7 @@ def canApplyClassicLiteratureDone2(argsList):
   iEraAncient = GC.getInfoTypeForString("C2C_ERA_ANCIENT")
 
   for iTech in xrange(GC.getNumTechInfos()):
-    if GC.getTechInfo(iTech).getEra() == iEraAncient and player.canResearch(iTech, False):
+    if GC.getTechInfo(iTech).getEra() == iEraAncient and player.canResearch(iTech):
       return True
 
   return False
@@ -2475,7 +2475,7 @@ def applyClassicLiteratureDone2(argsList):
 
   listTechs = []
   for iTech in xrange(GC.getNumTechInfos()):
-    if GC.getTechInfo(iTech).getEra() == iEraAncient and player.canResearch(iTech, False):
+    if GC.getTechInfo(iTech).getEra() == iEraAncient and player.canResearch(iTech):
       listTechs.append(iTech)
 
   if len(listTechs) > 0:

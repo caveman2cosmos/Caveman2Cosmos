@@ -4452,18 +4452,10 @@ void CvPlayer::doTurn()
 
 	doEspionagePoints();
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      05/08/09                                jdog5000      */
-/*                                                                                              */
-/* City AI                                                                                      */
-/************************************************************************************************/
-    // New function to handle wonder construction in a centralized manner
 #if 0 // AI_doCentralizedProduction is unfinished, no point calling it. [11/12/2019 billw]
+    // New function to handle wonder construction in a centralized manner
 	GET_PLAYER(getID()).AI_doCentralizedProduction();
 #endif
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
 	doCheckForTaxationAnger();
 
@@ -6279,17 +6271,10 @@ bool CvPlayer::canTradeWith(PlayerTypes eWhoTo) const
 bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial) const
 {
 	CvCity *pOurCapitalCity;
-/************************************************************************************************/
-/* Afforess	                  Start		 07/29/10                                               */
-/*                                                                                              */
-/* Advanced Diplomacy                                                                           */
-/************************************************************************************************/
-    CvCity* pTheirCapitalCity;
-    CvCity* pTradingCity;
-    CvUnit* pUnitTraded;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
+	CvCity* pTheirCapitalCity;
+	CvCity* pTradingCity;
+	CvUnit* pUnitTraded;
 
 	//	KOSHLING - do denial check at the end because it's expensive and 95% of the time we detrmien the trade is
 	//	not possible before having to make the denail check that way
@@ -6298,56 +6283,29 @@ bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial
 	switch (item.m_eItemType)
 	{
 	case TRADE_TECHNOLOGIES:
-		if (!(GC.getGame().isOption(GAMEOPTION_NO_TECH_TRADING)))
-		{
-			if (GC.getTechInfo((TechTypes)(item.m_iData)).isTrade())
-			{
-				if (GET_TEAM(getTeam()).isHasTech((TechTypes)(item.m_iData)) && !(GET_TEAM(getTeam()).isNoTradeTech((TechTypes)(item.m_iData))))
-				{
-					if (!GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).isHasTech((TechTypes)(item.m_iData)))
-					{
-						//if (GET_PLAYER(eWhoTo).isHuman() || (GET_PLAYER(eWhoTo).getCurrentResearch() != item.m_iData))
-						{
-							if (GET_TEAM(getTeam()).isTechTrading() && GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).isTechTrading())
-							{
-								FAssertMsg(item.m_iData >= 0, "item.m_iData is expected to be non-negative (invalid Index)");
+		FAssertMsg(item.m_iData >= 0, "item.m_iData is expected to be non-negative (invalid Index)");
 
-								if (GET_PLAYER(eWhoTo).canResearch(((TechTypes)item.m_iData), true))
-								{
-									bResult = true;
-								}
-							}
-						}
-					}
-				}
-			}
+		if (!GC.getGame().isOption(GAMEOPTION_NO_TECH_TRADING) && GC.getTechInfo((TechTypes)item.m_iData).isTrade()
+		&& GET_TEAM(getTeam()).isHasTech((TechTypes)item.m_iData) && !GET_TEAM(getTeam()).isNoTradeTech((TechTypes)item.m_iData)
+		&& !GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).isHasTech((TechTypes)item.m_iData)
+		&& GET_TEAM(getTeam()).isTechTrading() && GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).isTechTrading()
+		&& GET_PLAYER(eWhoTo).canResearch((TechTypes)item.m_iData))
+		{
+			bResult = true;
 		}
 		break;
 
 	case TRADE_RESOURCES:
 		FAssertMsg(item.m_iData > -1, "iData is expected to be non-negative");
 
-		if (canTradeNetworkWith(eWhoTo))
+		if (GC.getDefineINT("CAN_TRADE_RESOURCES") > 0 && canTradeNetworkWith(eWhoTo)
+		&& !GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).isBonusObsolete((BonusTypes)item.m_iData)
+		&& !GET_TEAM(getTeam()).isBonusObsolete((BonusTypes)item.m_iData))
 		{
-			if (!GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).isBonusObsolete((BonusTypes) item.m_iData) && !GET_TEAM(getTeam()).isBonusObsolete((BonusTypes) item.m_iData))
+			bool bCanTradeAll = (isHuman() || getTeam() == GET_PLAYER(eWhoTo).getTeam() || GET_TEAM(getTeam()).isVassal(GET_PLAYER(eWhoTo).getTeam()));
+			if (getNumTradeableBonuses((BonusTypes) item.m_iData) > (bCanTradeAll ? 0 : 1))
 			{
-				bool bCanTradeAll = (isHuman() || getTeam() == GET_PLAYER(eWhoTo).getTeam() || GET_TEAM(getTeam()).isVassal(GET_PLAYER(eWhoTo).getTeam()));
-				if (getNumTradeableBonuses((BonusTypes) item.m_iData) > (bCanTradeAll ? 0 : 1))
-				{
-/************************************************************************************************/
-/* Afforess	                  Start		 05/15/10                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-					if (GC.getDefineINT("CAN_TRADE_RESOURCES") > 0)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-					// if (GET_PLAYER(eWhoTo).getNumAvailableBonuses(eBonus) == 0)
-					{
-						bResult = true;
-					}
-				}
+				bResult = true;
 			}
 		}
 		break;
@@ -6360,39 +6318,23 @@ bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial
 			{
 				bResult = true;
 			}
-			else
+			else if (GC.getDefineINT("CAN_TRADE_CITIES") > 0 && 0 == GC.getGame().getMaxCityElimination()
+			&& !GET_TEAM(getTeam()).isAVassal() && !GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).isVassal(getTeam()))
 			{
-				if (0 == GC.getGame().getMaxCityElimination())
+				pOurCapitalCity = getCapitalCity();
+				if (pOurCapitalCity != NULL && pOurCapitalCity->getID() != item.m_iData)
 				{
-					if (!GET_TEAM(getTeam()).isAVassal() && !GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).isVassal(getTeam()))
-					{
-						pOurCapitalCity = getCapitalCity();
-						if (pOurCapitalCity != NULL)
-						{
-							if (pOurCapitalCity->getID() != item.m_iData)
-							{
-							/************************************************************************************************/
-							/* Afforess	                  Start		 05/15/10                                                */
-							/*                                                                                              */
-							/*                                                                                              */
-							/************************************************************************************************/
-							if (GC.getDefineINT("CAN_TRADE_CITIES") > 0)
-							/************************************************************************************************/
-							/* Afforess	                     END                                                            */
-							/************************************************************************************************/
-								bResult = true;
-							}
-						}
-					}
+					bResult = true;
 				}
 			}
 		}
 		break;
 
-    case TRADE_WORKER:
-        {
-            pUnitTraded = getUnit(item.m_iData);
-            pTheirCapitalCity = GET_PLAYER(eWhoTo).getCapitalCity();
+	case TRADE_WORKER:
+		{
+			pUnitTraded = getUnit(item.m_iData);
+			pTheirCapitalCity = GET_PLAYER(eWhoTo).getCapitalCity();
+
 			if (pUnitTraded != NULL && pTheirCapitalCity != NULL
 			&& GC.getGame().isOption(GAMEOPTION_ADVANCED_DIPLOMACY)
 			&& GC.getDefineINT("CAN_TRADE_WORKERS") > 0
@@ -7668,25 +7610,25 @@ void CvPlayer::receiveGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit)
 
 		for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 		{
-			if (GC.getTechInfo((TechTypes) iI).isGoodyTech())
+			if (GC.getTechInfo((TechTypes)iI).isGoodyTech() && canResearch((TechTypes)iI))
 			{
-				if (canResearch((TechTypes)iI))
-				{
-					int iValue = (1 + GC.getGame().getSorenRandNum(10000, "Goody Tech"));
+				const int iValue = (1 + GC.getGame().getSorenRandNum(10000, "Goody Tech"));
 
-					if (iValue > iBestValue)
-					{
-						iBestValue = iValue;
-						eBestTech = ((TechTypes)iI);
-					}
+				if (iValue > iBestValue)
+				{
+					iBestValue = iValue;
+					eBestTech = (TechTypes) iI;
 				}
 			}
 		}
-
 		FAssertMsg(eBestTech != NO_TECH, "BestTech is not assigned a valid value");
 
 		GET_TEAM(getTeam()).setHasTech(eBestTech, true, getID(), true, true);
-		GET_TEAM(getTeam()).setNoTradeTech(eBestTech, true);
+
+		if (GC.getGame().isOption(GAMEOPTION_NO_TECH_BROKERING))
+		{
+			GET_TEAM(getTeam()).setNoTradeTech(eBestTech, true);
+		}
 	}
 
 	if (GC.getGoodyInfo(eGoody).getGoodyUnit() != NO_UNIT)
@@ -10082,18 +10024,12 @@ bool CvPlayer::canEverResearch(TechTypes eTech) const
 	{
 		return false;
 	}
-/************************************************************************************************/
-/* Afforess	                  Start		 04/01/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	if (!GC.getGame().canEverResearch(eTech))
 	{
 		return false;
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 	//TB Degug Note:
 	//Since the setting of which tech to research only considers canEverResearch
 	//due to the need to be able to set a tech that can't CURRENTLY be researched due to tech prereqs for the sake of beelining,
@@ -10104,19 +10040,12 @@ bool CvPlayer::canEverResearch(TechTypes eTech) const
 	{
 		return false;
 	}
-	//endnote
-/************************************************************************************************/
-/* Afforess	                  Start		 04/01/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+	// ! TB
+
 	if (!hasValidBuildings(eTech))
 	{
 		return false;
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	if (GC.getTechInfo(eTech).isGlobal() && GC.getGame().countKnownTechNumTeams(eTech) > 0)
 	{
@@ -10134,33 +10063,12 @@ bool CvPlayer::canEverResearch(TechTypes eTech) const
 			}
 		}
 	}
-
-	if(GC.getUSE_CANNOT_RESEARCH_CALLBACK())
-	{
-		if (Cy::call<bool>(PYGameModule, "cannotResearch", Cy::Args() << getID() << eTech << false))
-		{
-			return false;
-		}
-	}
-
 	return true;
 }
 
 
-bool CvPlayer::canResearch(TechTypes eTech, bool bTrade) const
+bool CvPlayer::canResearch(TechTypes eTech) const
 {
-	bool bFoundPossible;
-	bool bFoundValid;
-	int iI;
-
-	if(GC.getUSE_CAN_RESEARCH_CALLBACK())
-	{
-		if (Cy::call<bool>(PYGameModule, "canResearch", Cy::Args() << getID() << eTech << bTrade))
-		{
-			return true;
-		}
-	}
-
 	if (!isResearch() && getAdvancedStartPoints() < 0)
 	{
 		return false;
@@ -10171,52 +10079,38 @@ bool CvPlayer::canResearch(TechTypes eTech, bool bTrade) const
 		return false;
 	}
 
-	bFoundPossible = false;
-	bFoundValid = false;
-
-	for (iI = 0; iI < GC.getNUM_OR_TECH_PREREQS(); iI++)
-	{
-		TechTypes ePrereq = (TechTypes)GC.getTechInfo(eTech).getPrereqOrTechs(iI);
-		if (ePrereq != NO_TECH)
-		{
-			bFoundPossible = true;
-
-			if (GET_TEAM(getTeam()).isHasTech(ePrereq))
-			{
-				if (!bTrade || GC.getGame().isOption(GAMEOPTION_NO_TECH_BROKERING) || !GET_TEAM(getTeam()).isNoTradeTech(ePrereq))
-				{
-					bFoundValid = true;
-					break;
-				}
-			}
-		}
-	}
-
-	if (bFoundPossible && !bFoundValid)
-	{
-		return false;
-	}
-
-	for (iI = 0; iI < GC.getNUM_AND_TECH_PREREQS(); iI++)
-	{
-		TechTypes ePrereq = (TechTypes)GC.getTechInfo(eTech).getPrereqAndTechs(iI);
-		if (ePrereq != NO_TECH && canEverResearch(ePrereq))
-		{
-			if (!GET_TEAM(getTeam()).isHasTech(ePrereq))
-			{
-				return false;
-			}
-
-			if (bTrade && !GC.getGame().isOption(GAMEOPTION_NO_TECH_BROKERING) && GET_TEAM(getTeam()).isNoTradeTech(ePrereq))
-			{
-				return false;
-			}
-		}
-	}
-
 	if (!canEverResearch(eTech))
 	{
 		return false;
+	}
+
+	bool bOk = true;
+	for (int iI = 0; iI < GC.getNUM_OR_TECH_PREREQS(); iI++)
+	{
+		const TechTypes ePrereq = (TechTypes)GC.getTechInfo(eTech).getPrereqOrTechs(iI);
+		if (ePrereq != NO_TECH)
+		{
+			bOk = false;
+
+			if (GET_TEAM(getTeam()).isHasTech(ePrereq))
+			{
+				bOk = true;
+				break;
+			}
+		}
+	}
+	if (!bOk)
+	{
+		return false;
+	}
+
+	for (int iI = 0; iI < GC.getNUM_AND_TECH_PREREQS(); iI++)
+	{
+		const TechTypes ePrereq = (TechTypes)GC.getTechInfo(eTech).getPrereqAndTechs(iI);
+		if (ePrereq != NO_TECH && canEverResearch(ePrereq) && !GET_TEAM(getTeam()).isHasTech(ePrereq))
+		{
+			return false;
+		}
 	}
 	return true;
 }
@@ -15218,20 +15112,11 @@ PlayerTypes CvPlayer::getParent() const
 
 void CvPlayer::setParent(PlayerTypes eParent)
 {
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      09/03/09                       poyuzhe & jdog5000     */
-/*                                                                                              */
-/* Efficiency                                                                                   */
-/************************************************************************************************/
-	// From Sanguo Mod Performance, ie the CAR Mod
 	// Attitude cache
 	if (m_eParent != eParent)
 	{
 		GET_PLAYER(getID()).AI_invalidateAttitudeCache(eParent);
 	}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 	m_eParent = eParent;
 }
 
@@ -15255,83 +15140,56 @@ void CvPlayer::updateTeamType()
 void CvPlayer::setTeam(TeamTypes eTeam)
 {
 	FAssert(eTeam != NO_TEAM);
-	FAssert(getTeam() != NO_TEAM);
-/************************************************************************************************/
-/* Afforess	                  Start		 07/19/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	TeamTypes eOldTeam = getTeam();
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-	GET_TEAM(getTeam()).changeNumMembers(-1);
+
+	FAssert(eOldTeam != NO_TEAM);
+
 	if (isAlive())
 	{
-		GET_TEAM(getTeam()).changeAliveCount(-1);
+		GET_TEAM(eOldTeam).changeAliveCount(-1);
 	}
 	if (isEverAlive())
 	{
-		GET_TEAM(getTeam()).changeEverAliveCount(-1);
+		GET_TEAM(eOldTeam).changeEverAliveCount(-1);
 	}
-	GET_TEAM(getTeam()).changeNumCities(-(getNumCities()));
-	GET_TEAM(getTeam()).changeTotalPopulation(-(getTotalPopulation()));
-	GET_TEAM(getTeam()).changeTotalLand(-(getTotalLand()));
+	GET_TEAM(eOldTeam).changeNumMembers(-1);
+	GET_TEAM(eOldTeam).changeNumCities(-(getNumCities()));
+	GET_TEAM(eOldTeam).changeTotalPopulation(-(getTotalPopulation()));
+	GET_TEAM(eOldTeam).changeTotalLand(-(getTotalLand()));
 
 	GC.getInitCore().setTeam(getID(), eTeam);
 
-	GET_TEAM(getTeam()).changeNumMembers(1);
 	if (isAlive())
 	{
-		GET_TEAM(getTeam()).changeAliveCount(1);
+		GET_TEAM(eTeam).changeAliveCount(1);
 	}
 	if (isEverAlive())
 	{
-		GET_TEAM(getTeam()).changeEverAliveCount(1);
+		GET_TEAM(eTeam).changeEverAliveCount(1);
 	}
-	GET_TEAM(getTeam()).changeNumCities(getNumCities());
-	GET_TEAM(getTeam()).changeTotalPopulation(getTotalPopulation());
-	GET_TEAM(getTeam()).changeTotalLand(getTotalLand());
-/************************************************************************************************/
-/* Afforess	                  Start		 07/19/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	bool bAddedMembers = GET_TEAM(eOldTeam).getNumMembers() < GET_TEAM(getTeam()).getNumMembers();
-	CvEventReporter::getInstance().addTeam(eOldTeam, getTeam(), bAddedMembers);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      09/03/09                       poyuzhe & jdog5000     */
-/*                                                                                              */
-/* Efficiency                                                                                   */
-/************************************************************************************************/
-	// From Sanguo Mod Performance, ie the CAR Mod
+	GET_TEAM(eTeam).changeNumMembers(1);
+	GET_TEAM(eTeam).changeNumCities(getNumCities());
+	GET_TEAM(eTeam).changeTotalPopulation(getTotalPopulation());
+	GET_TEAM(eTeam).changeTotalLand(getTotalLand());
+
+	CvEventReporter::getInstance().changeTeam(eOldTeam, eTeam);
+
 	// Attitude cache
 	if (GC.getGame().isFinalInitialized())
 	{
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
-			if( GET_PLAYER((PlayerTypes)iI).isAlive() )
+			if (GET_PLAYER((PlayerTypes)iI).isAlive())
 			{
 				GET_PLAYER(getID()).AI_invalidateAttitudeCache((PlayerTypes)iI);
 				GET_PLAYER((PlayerTypes)iI).AI_invalidateAttitudeCache(getID());
 			}
 		}
 	}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 }
 
 
-/************************************************************************************************/
-/* REVOLUTIONDCM_MOD                         02/04/08                            Glider1        */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-// RevolutionDCM start - new diplomacy option
 void CvPlayer::setDoNotBotherStatus(PlayerTypes playerID)
 {
 	m_bDoNotBotherStatus = playerID;
@@ -15341,10 +15199,6 @@ bool CvPlayer::isDoNotBotherStatus(PlayerTypes playerID) const
 {
 	return m_bDoNotBotherStatus == playerID;
 }
-// RevolutionDCM end
-/************************************************************************************************/
-/* REVOLUTIONDCM_MOD                         END                                 Glider1        */
-/************************************************************************************************/
 
 
 PlayerColorTypes CvPlayer::getPlayerColor() const
@@ -19271,28 +19125,22 @@ int CvPlayer::getEspionageMissionCostModifier(EspionageMissionTypes eMission, Pl
 			iModifier /= 100;
 		}
 
+		// City has Your State Religion
 		ReligionTypes eReligion = getStateReligion();
-		if (NO_RELIGION != eReligion)
+		if (NO_RELIGION != eReligion && pCity->isHasReligion(eReligion))
 		{
 			long long iReligionModifier = 0;
 
-			// City has Your State Religion
-			if (pCity->isHasReligion(eReligion))
+			if (GET_PLAYER(eTargetPlayer).getStateReligion() != eReligion)
 			{
-				if (GET_PLAYER(eTargetPlayer).getStateReligion() != eReligion)
-				{
-					iReligionModifier += GC.getDefineINT("ESPIONAGE_CITY_RELIGION_STATE_MOD");
-				}
-
-				if (hasHolyCity(eReligion))
-				{
-					iReligionModifier += GC.getDefineINT("ESPIONAGE_CITY_HOLY_CITY_MOD");
-				}
+				iReligionModifier += GC.getDefineINT("ESPIONAGE_CITY_RELIGION_STATE_MOD");
 			}
-
+			if (hasHolyCity(eReligion))
+			{
+				iReligionModifier += GC.getDefineINT("ESPIONAGE_CITY_HOLY_CITY_MOD");
+			}
 			iModifier *= 100 + iReligionModifier;
 			iModifier /= 100;
-
 		}
 
 		// City's culture affects cost
@@ -19332,10 +19180,7 @@ int CvPlayer::getEspionageMissionCostModifier(EspionageMissionTypes eMission, Pl
 	// Spy presence mission cost alteration
 	if (NULL != pSpyUnit)
 	{
-        //TSHEEP - add in discount promotions
-        //iModifier *= 100 - (pSpyUnit->getFortifyTurns() * GC.getDefineINT("ESPIONAGE_EACH_TURN_UNIT_COST_DECREASE"));
-        iModifier *= 100 - (std::min(5,(pSpyUnit->getFortifyTurns() + (pSpyUnit->getUpgradeDiscount()/10))) * GC.getDefineINT("ESPIONAGE_EACH_TURN_UNIT_COST_DECREASE"));
-        //TSHEEP End
+        iModifier *= 100 - std::min(5, pSpyUnit->getFortifyTurns() + pSpyUnit->getUpgradeDiscount() / 10) * GC.getDefineINT("ESPIONAGE_EACH_TURN_UNIT_COST_DECREASE");
 		iModifier /= 100;
 	}
 
@@ -19359,11 +19204,6 @@ int CvPlayer::getEspionageMissionCostModifier(EspionageMissionTypes eMission, Pl
 		iModifier /= 100;
 	}
 
-/************************************************************************************************/
-/* Afforess	                  Start		 6/27/09                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
     if (pCity != NULL)
 	{
 		if (pCity == GET_PLAYER(eTargetPlayer).getCapitalCity() && GET_TEAM(getTeam()).isHasEmbassy(GET_PLAYER(eTargetPlayer).getTeam()))
@@ -19387,43 +19227,248 @@ int CvPlayer::getEspionageMissionCostModifier(EspionageMissionTypes eMission, Pl
 	return (int)iModifier;
 }
 
+
 bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, CvPlot* pPlot, int iExtraData, CvUnit* pSpyUnit, bool bCaught)
 {
-	TCHAR szSound[1024] = "AS2D_DEAL_CANCELLED";
-
 	if (!canDoEspionageMission(eMission, eTargetPlayer, pPlot, iExtraData, pSpyUnit))
 	{
 		return false;
 	}
+	TCHAR szSound[1024] = "AS2D_DEAL_CANCELLED";
 
-	TeamTypes eTargetTeam = NO_TEAM;
-	if (NO_PLAYER != eTargetPlayer)
-	{
-		eTargetTeam = GET_PLAYER(eTargetPlayer).getTeam();
-	}
+	const TeamTypes eTargetTeam = NO_PLAYER != eTargetPlayer ? GET_PLAYER(eTargetPlayer).getTeam() : NO_TEAM;
 
-	CvEspionageMissionInfo& kMission = GC.getEspionageMissionInfo(eMission);
+	const CvEspionageMissionInfo& kMission = GC.getEspionageMissionInfo(eMission);
 
 	bool bSomethingHappened = false;
 	bool bShowExplosion = false;
 	CvWString szBuffer;
-	int iMissionCost = getEspionageMissionCost(eMission, eTargetPlayer, pPlot, iExtraData, pSpyUnit);
+	const int iMissionCost = getEspionageMissionCost(eMission, eTargetPlayer, pPlot, iExtraData, pSpyUnit);
 
+	CvCity* pCity;
 
-	//////////////////////////////
-	// Destroy Improvement
-
-	if (kMission.isDestroyImprovement())
+	if (NULL != pPlot)
 	{
-		if (NULL != pPlot)
+		pCity = pPlot->getPlotCity();
+
+		if (NULL != pCity)
 		{
-			// Blow it up
-			//TSHEEP - Add nearby city to plot destruction message (if any)
+			// Destroy Building
+			if (kMission.getDestroyBuildingCostFactor() > 0)
+			{
+				pCity->setNumRealBuilding((BuildingTypes)iExtraData, pCity->getNumRealBuilding((BuildingTypes)iExtraData) - 1);
+				bSomethingHappened = true;
+				bShowExplosion = true;
+				szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_SOMETHING_DESTROYED_IN",
+					GC.getBuildingInfo((BuildingTypes)iExtraData).getDescription(), pCity->getNameKey()).GetCString();
+			}
+			// Destroy Project
+			if (kMission.getDestroyProjectCostFactor() > 0)
+			{
+				GET_TEAM(eTargetTeam).changeProjectCount((ProjectTypes)iExtraData, -1);
+				bSomethingHappened = true;
+				bShowExplosion = true;
+				szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_SOMETHING_DESTROYED_IN",
+					GC.getProjectInfo((ProjectTypes)iExtraData).getDescription(), pCity->getNameKey()).GetCString();
+			}
+			// Destroy Production
+			if (kMission.getDestroyProductionCostFactor() > 0)
+			{
+				pCity->setProduction(0);
+				bSomethingHappened = true;
+				bShowExplosion = true;
+				szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_PRODUCTION_DESTROYED_IN", pCity->getProductionName(), pCity->getNameKey());
+			}
+			// Assassinate (Specialist)
+			if (pSpyUnit != NULL && kMission.getDestroyUnitCostFactor() > 0 && pSpyUnit->canAssassin(pPlot, false) && iExtraData >= 7)
+			{
+				pCity->changeFreeSpecialistCount((SpecialistTypes)iExtraData, -1);
+				bSomethingHappened = true;
+				szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_SOMETHING_ASSASSINATED",
+					GC.getSpecialistInfo((SpecialistTypes)iExtraData).getDescription(), pCity->getNameKey()).GetCString();
+			}
+			// Buy City
+			if (kMission.getBuyCityCostFactor() > 0)
+			{
+				GET_PLAYER(pCity->getOwner()).AI_changeMemoryCount(getID(), MEMORY_EVENT_BAD_TO_US, std::max(4, pCity->getPopulation()));
+
+				for (int iI = 0; iI < MAX_PLAYERS; iI++)
+				{
+					if(GET_PLAYER((PlayerTypes)iI).isAlive()
+					&& GET_PLAYER((PlayerTypes)iI).AI_getAttitude(pCity->getOwner()) >= ATTITUDE_PLEASED)
+					{
+						GET_PLAYER((PlayerTypes)iI).AI_changeMemoryCount(getID(), MEMORY_EVENT_BAD_TO_US, std::max(2, pCity->getPopulation() / 3));
+					}
+				}
+				if (GET_PLAYER(pCity->getOwner()).AI_getMemoryCount(getID(), MEMORY_EVENT_BAD_TO_US) > 15)
+				{
+					GET_TEAM(pCity->getTeam()).declareWar(getTeam(), true, WARPLAN_TOTAL);
+				}
+				strcpy(szSound, "AS2D_REVOLTSTART");
+				acquireCity(pCity, false, true, true);
+				bSomethingHappened = true;
+				szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_CITY_BOUGHT", pCity->getNameKey()).GetCString();
+			}
+			// Insert Culture into City
+			if (kMission.getCityInsertCultureCostFactor() > 0)
+			{
+				szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_CITY_CULTURE_INSERTED", pCity->getNameKey()).GetCString();
+
+				const int iCultureAmount = std::max(1, kMission.getCityInsertCultureAmountFactor() * pCity->countTotalCultureTimes100() / 10000);
+
+				int iPlotCulture = pCity->plot()->countTotalCulture();
+				int iPlotCultureAmount;
+
+				if (iPlotCulture > MAX_INT / 10000)
+				{
+					iPlotCulture /= 100;
+					iPlotCultureAmount = kMission.getCityInsertCultureAmountFactor() * iPlotCulture;
+				}
+				else
+				{
+					iPlotCultureAmount = kMission.getCityInsertCultureAmountFactor() * iPlotCulture * 100;
+					iPlotCultureAmount /= 10000;
+				}
+				iPlotCultureAmount = std::max(1, iPlotCultureAmount);
+
+				const int iNumTurnsApplied = (GC.getDefineINT("GREAT_WORKS_CULTURE_TURNS") * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getUnitGreatWorkPercent()) / 100;
+
+				if (iNumTurnsApplied > 0)
+				{
+					for (int i = 0; i < iNumTurnsApplied; ++i)
+					{
+						pCity->changeCulture(getID(), iCultureAmount / iNumTurnsApplied, true, true);
+						pCity->plot()->changeCulture(getID(), iPlotCultureAmount / iNumTurnsApplied, true);
+					}
+					pCity->changeCulture(getID(), iCultureAmount % iNumTurnsApplied, false, true);
+					pCity->plot()->changeCulture(getID(), iPlotCultureAmount % iNumTurnsApplied, true);
+				}
+				bSomethingHappened = true;
+			}
+			// Poison City's Water Supply
+			if (kMission.getCityPoisonWaterCounter() > 0)
+			{
+				int iTurns = kMission.getCityPoisonWaterCounter() * (100 + (pSpyUnit != NULL ? pSpyUnit->getExtraFriendlyHeal() : 0)) / 100;
+					iTurns *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
+					iTurns /= 100;
+				pCity->changeEspionageHealthCounter(iTurns);
+				bShowExplosion = true;
+				bSomethingHappened = true;
+				szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_CITY_POISONED", pCity->getNameKey()).GetCString();
+			}
+			// Make city Unhappy
+			if (kMission.getCityUnhappinessCounter() > 0)
+			{
+				int iTurns = kMission.getCityUnhappinessCounter() * (100 + (pSpyUnit != NULL ? pSpyUnit->getExtraEnemyHeal() : 0)) / 100;
+					iTurns *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
+					iTurns /= 100;
+				pCity->changeEspionageHappinessCounter(iTurns);
+				bShowExplosion = true;
+				bSomethingHappened = true;
+				strcpy(szSound, "AS2D_REVOLTSTART");
+				szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_CITY_UNHAPPY", pCity->getNameKey()).GetCString();
+			}
+			// Make city Revolt
+			if (kMission.getCityRevoltCounter() > 0)
+			{
+				int iTurns = kMission.getCityRevoltCounter() * (100 + (pSpyUnit != NULL ? pSpyUnit->getExtraNeutralHeal() :0)) / 100;
+					iTurns *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
+					iTurns /= 100;
+				pCity->changeCultureUpdateTimer(iTurns);
+				pCity->changeOccupationTimer(iTurns);
+				bSomethingHappened = true;
+				bShowExplosion = true;
+				strcpy(szSound, "AS2D_REVOLTSTART");
+				szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_CITY_REVOLT", pCity->getNameKey()).GetCString();
+
+				if (gUnitLogLevel >= 2)
+				{
+					logBBAI("      Spy for player %d (%S) causes revolt in %S, owned by %S (%d)", getID(), getCivilizationDescription(0), pCity->getName().GetCString(), GET_PLAYER(pCity->getOwner()).getCivilizationDescription(0), pCity->getOwner() );
+				}
+			}
+			// Incite City Revolution
+			if (kMission.isRevolt())
+			{
+				pCity->changeRevolutionIndex(1000 + GC.getGame().getSorenRandNum(1000, "City Revolt"));
+				pCity->changeOccupationTimer(kMission.getCityRevoltCounter());
+				bSomethingHappened = true;
+				strcpy(szSound, "AS2D_REVOLTSTART");
+				szBuffer = bCaught ?
+					gDLL->getText("TXT_KEY_ESPIONAGE_INCITE_REVOLUTION_CAUGHT", pCity->getNameKey(), getCivilizationDescription()).GetCString()
+					:
+					gDLL->getText("TXT_KEY_ESPIONAGE_INCITE_REVOLUTION", pCity->getNameKey()).GetCString();
+			}
+			// Disable Power
+			if (kMission.isDisablePower())
+			{
+				pCity->changeDisabledPowerTimer(6*GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent()/100);
+				bSomethingHappened = true;
+				strcpy(szSound, "AS2D_BUILD_PLANTNUCLEAR");
+				szBuffer = bCaught ?
+					gDLL->getText("TXT_KEY_ESPIONAGE_POWER_CUT_CAUGHT", pCity->getNameKey(), getCivilizationDescription()).GetCString()
+					:
+					gDLL->getText("TXT_KEY_ESPIONAGE_POWER_CUT", pCity->getNameKey()).GetCString();
+			}
+			// Cause War Weariness
+			if (kMission.getWarWearinessCounter() > 0)
+			{
+				int iAmount = kMission.getWarWearinessCounter();
+				iAmount *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
+				iAmount /= 100;
+				pCity->changeWarWearinessTimer(iAmount);
+				bSomethingHappened = true;
+				strcpy(szSound, "AS2D_STRIKE");
+				szBuffer = bCaught ?
+					gDLL->getText("TXT_KEY_ESPIONAGE_WAR_WEARINESS_CAUGHT", pCity->getNameKey(), getCivilizationAdjectiveKey()).GetCString()
+					:
+					gDLL->getText("TXT_KEY_ESPIONAGE_WAR_WEARINESS", pCity->getNameKey()).GetCString();
+			}
+			// Sabatoge Research
+			if (kMission.getSabatogeResearchCostFactor() > 0)
+			{
+				GET_TEAM(pCity->getTeam()).setResearchProgress(GET_PLAYER(pCity->getOwner()).getCurrentResearch(), 0, pCity->getOwner());
+				bSomethingHappened = true;
+				szBuffer = bCaught ?
+					gDLL->getText("TXT_KEY_ESPIONAGE_RESEARCH_SABATAGED_CAUGHT", GC.getTechInfo(GET_PLAYER(pCity->getOwner()).getCurrentResearch()).getDescription(), getCivilizationAdjectiveKey()).GetCString()
+					:
+					gDLL->getText("TXT_KEY_ESPIONAGE_RESEARCH_SABATAGED", GC.getTechInfo(GET_PLAYER(pCity->getOwner()).getCurrentResearch()).getDescription());
+			}
+			// Remove Religion
+			if (kMission.getRemoveReligionsCostFactor() > 0)
+			{
+				pCity->setHasReligion((ReligionTypes)iExtraData, false, false, false);
+				strcpy(szSound, GC.getReligionInfo((ReligionTypes)iExtraData).getSound());
+				bSomethingHappened = true;
+				szBuffer = bCaught ?
+					gDLL->getText("TXT_KEY_ESPIONAGE_RELIGION_REMOVED_CAUGHT", pCity->getNameKey(), getCivilizationAdjectiveKey(), GC.getReligionInfo((ReligionTypes)iExtraData).getTextKeyWide()).GetCString()
+					:
+					gDLL->getText("TXT_KEY_ESPIONAGE_RELIGION_REMOVED", pCity->getNameKey(), GC.getReligionInfo((ReligionTypes)iExtraData).getTextKeyWide());
+			}
+			// Remove Corporation
+			if (kMission.getRemoveCorporationsCostFactor() > 0)
+			{
+				CorporationTypes eCorporation = (CorporationTypes)iExtraData;
+
+				if (NO_CORPORATION != eCorporation && pCity->isActiveCorporation(eCorporation)&& GC.getGame().getHeadquarters(eCorporation) != pCity)
+				{
+					pCity->setHasCorporation(eCorporation, false, false, false);
+					strcpy(szSound, GC.getCorporationInfo(eCorporation).getSound());
+					bSomethingHappened = true;
+					szBuffer = bCaught ?
+						gDLL->getText("TXT_KEY_ESPIONAGE_CORPORATION_REMOVED_CAUGHT", pCity->getNameKey(), getCivilizationAdjectiveKey(), GC.getCorporationInfo(eCorporation).getTextKeyWide()).GetCString()
+						:
+						gDLL->getText("TXT_KEY_ESPIONAGE_CORPORATION_REMOVED", pCity->getNameKey(), GC.getCorporationInfo(eCorporation).getTextKeyWide());
+				}
+			}
+		}
+		// Destroy Improvement
+		if (kMission.isDestroyImprovement())
+		{
 			CvCity* pNearCity = GC.getMap().findCity(pPlot->getX(), pPlot->getY(), eTargetPlayer, GET_PLAYER(eTargetPlayer).getTeam(), true, false);
 			if (pNearCity != NULL)
 			{
-			if (pPlot->getImprovementType() != NO_IMPROVEMENT)
-			{
+				if (pPlot->getImprovementType() != NO_IMPROVEMENT)
+				{
 					szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_SOMETHING_DESTROYED_NEAR_CITY", GC.getImprovementInfo(pPlot->getImprovementType()).getDescription(), pNearCity->getNameKey()).GetCString();
 					pPlot->setImprovementType((ImprovementTypes)(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage()));
 					bSomethingHappened = true;
@@ -19435,9 +19480,7 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 					bSomethingHappened = true;
 				}
 			}
-		    else if (pPlot->getImprovementType() != NO_IMPROVEMENT)
-			//if (pPlot->getImprovementType() != NO_IMPROVEMENT)
-			//TSHEEP End
+			else if (pPlot->getImprovementType() != NO_IMPROVEMENT)
 			{
 				szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_SOMETHING_DESTROYED", GC.getImprovementInfo(pPlot->getImprovementType()).getDescription()).GetCString();
 				pPlot->setImprovementType((ImprovementTypes)(GC.getImprovementInfo(pPlot->getImprovementType()).getImprovementPillage()));
@@ -19449,145 +19492,22 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 				pPlot->setRouteType(NO_ROUTE, true);
 				bSomethingHappened = true;
 			}
-			//TSHEEP Add Radiation Effect
-			if(pSpyUnit != NULL && pSpyUnit->isAmphib())
+
+			if (pSpyUnit != NULL && pSpyUnit->isAmphib())
 			{
+				//TSHEEP Radiation Effect
 				pPlot->setFeatureType((FeatureTypes)(GC.getDefineINT("NUKE_FEATURE")));
 				szBuffer.append(NEWLINE);
 				szBuffer.append(gDLL->getText("TXT_KEY_ESPIONAGE_USED_RADIATION").GetCString());
 			}
-			//TSHEEP End
-
 			if (bSomethingHappened)
 			{
 				bShowExplosion = true;
 			}
 		}
-	}
-
-	//////////////////////////////
-	// Destroy Building
-
-	if (kMission.getDestroyBuildingCostFactor() > 0)
-	{
-		BuildingTypes eTargetBuilding = (BuildingTypes)iExtraData;
-
-		if (NULL != pPlot)
-		{
-			CvCity* pCity = pPlot->getPlotCity();
-
-			if (NULL != pCity)
-			{
-				szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_SOMETHING_DESTROYED_IN", GC.getBuildingInfo(eTargetBuilding).getDescription(), pCity->getNameKey()).GetCString();
-				//TSHEEP - This part of the fix may not actually be necessary
-				//During the test game though it appeared that the AIs had somehow managed to accrue more than one instance of the same building, although it did not display as such.
-				pCity->setNumRealBuilding(eTargetBuilding, pCity->getNumRealBuilding(eTargetBuilding) - 1);
-				//pCity->setNumRealBuilding(eTargetBuilding, 0);//Setting the number of buildings to 0 guarantees a successful destruction, only drawback would be mods that use multiple instances of buildings, base game does not appear to.
-				//TSHEEP - End
-
-
-				bSomethingHappened = true;
-				bShowExplosion = true;
-			}
-		}
-	}
-
-	//////////////////////////////
-	// Destroy Project
-
-	if (kMission.getDestroyProjectCostFactor() > 0)
-	{
-		ProjectTypes eTargetProject = (ProjectTypes)iExtraData;
-
-		if (NULL != pPlot)
-		{
-			CvCity* pCity = pPlot->getPlotCity();
-
-			if (NULL != pCity)
-			{
-				szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_SOMETHING_DESTROYED_IN", GC.getProjectInfo(eTargetProject).getDescription(), pCity->getNameKey()).GetCString();
-				GET_TEAM(eTargetTeam).changeProjectCount(eTargetProject, -1);
-
-				bSomethingHappened = true;
-				bShowExplosion = true;
-			}
-		}
-	}
-
-	//////////////////////////////
-	// Destroy Production
-
-	if (kMission.getDestroyProductionCostFactor() > 0)
-	{
-		if (NULL != pPlot)
-		{
-			CvCity* pCity = pPlot->getPlotCity();
-
-			if (NULL != pCity)
-			{
-				szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_PRODUCTION_DESTROYED_IN", pCity->getProductionName(), pCity->getNameKey());
-				pCity->setProduction(0);
-
-				bSomethingHappened = true;
-				bShowExplosion = true;
-			}
-		}
-	}
-/************************************************************************************************/
-/* SUPER_SPIES                             RevolutionDCM                                                 */
-/************************************************************************************************/
-	//////////////////////////////
-	// RevolutionDCM start
-	// Assassinate(Destroy Unit)
-
-	if (kMission.getDestroyUnitCostFactor() > 0)
-	{
-
-		if (pSpyUnit != NULL && pSpyUnit->canAssassin(pPlot, false))
-		{
-			SpecialistTypes theGreatSpecialistTarget = (SpecialistTypes)iExtraData;
-			if (theGreatSpecialistTarget >= 7)
-			{
-				//Assassinate
-				CvCity* pCity = pPlot->getPlotCity();
-				if (NULL != pCity)
-				{
-					pCity->changeFreeSpecialistCount(theGreatSpecialistTarget, -1);
-					szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_SOMETHING_ASSASSINATED", GC.getSpecialistInfo(theGreatSpecialistTarget).getDescription(), pCity->getNameKey()).GetCString();
-					bSomethingHappened = true;
-				}
-			}
-		}
-	}
-/* Original code
-	if (kMission.getDestroyUnitCostFactor() > 0)
-	{
-		if (NO_PLAYER != eTargetPlayer)
-		{
-			int iTargetUnitID = iExtraData;
-
-			CvUnit* pUnit = GET_PLAYER(eTargetPlayer).getUnit(iTargetUnitID);
-
-			if (NULL != pUnit)
-			{
-				FAssert(pUnit->plot() == pPlot);
-				szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_SOMETHING_DESTROYED", pUnit->getNameKey()).GetCString();
-				pUnit->kill(false, getID());
-
-				bSomethingHappened = true;
-				bShowExplosion = true;
-			}
-		}
-	}
-*/
-
-	//////////////////////////////
-	// RevolutionDCM start
-	// (Bribe)Buy Unit
-
-	if (kMission.getBuyUnitCostFactor() > 0)
-	{
-		if(pSpyUnit != NULL && pSpyUnit->canBribe(pPlot, false))
+		// Bribe (Buy Unit)
+		if (NO_PLAYER != eTargetPlayer && pSpyUnit != NULL
+		&& kMission.getBuyUnitCostFactor() > 0 && pSpyUnit->canBribe(pPlot, false))
 		{
 			CvUnit* pTargetUnit;
 			if (pPlot->plotCheck(PUF_isOtherTeam, getID(), -1, NULL, NO_PLAYER, NO_TEAM, PUF_isVisible, getID()))
@@ -19602,614 +19522,114 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 					}
 				}
 			}
-
-			if (NO_PLAYER != eTargetPlayer)
+			if (NULL != pTargetUnit && pTargetUnit->getTeam() == eTargetTeam)
 			{
-				if (NULL != pTargetUnit)
-				{
-					if (pTargetUnit->getTeam() == eTargetTeam)
-					{
-						FAssert(pTargetUnit->plot() == pPlot);
-						CvCity* pNearCity = GC.getMap().findCity(pPlot->getX(), pPlot->getY(), eTargetPlayer, GET_PLAYER(eTargetPlayer).getTeam(), true, false);
-						if (pNearCity != NULL)
-							szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_SOMETHING_BRIBED_NEAR_CITY", pTargetUnit->getNameKey(), pNearCity->getNameKey()).GetCString();
-						else
-							szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_SOMETHING_BRIBED", pTargetUnit->getNameKey()).GetCString();
-
-						int iX = pTargetUnit->getX();
-						int iY = pTargetUnit->getY();
-						pTargetUnit->kill(false, getID());
-						CvUnit* acquiredWorker = initUnit(pTargetUnit->getUnitType(), iX, iY, UNITAI_WORKER, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
-						CvCity* pCapital = this->getCapitalCity();
-						if (NULL != pCapital)
-						{
-							iX = pCapital->getX();
-							iY = pCapital->getY();
-							//GC.getGame().logOOSSpecial(11, acquiredWorker->getID(), iX, iY);
-							acquiredWorker->setXY(iX, iY, false, false, false);
-							acquiredWorker->finishMoves();
-						}
-						bSomethingHappened = true;
-					}
-				}
-			}
-		}
-/* Original code
-		if (NO_PLAYER != eTargetPlayer)
-		{
-			int iTargetUnitID = iExtraData;
-
-			CvUnit* pUnit = GET_PLAYER(eTargetPlayer).getUnit(iTargetUnitID);
-
-			if (NULL != pUnit)
-			{
-				FAssert(pUnit->plot() == pPlot);
-
-				szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_UNIT_BOUGHT", pUnit->getNameKey()).GetCString();
-
-				UnitTypes eUnitType = pUnit->getUnitType();
-				int iX = pUnit->getX();
-				int iY = pUnit->getY();
-				pUnit->kill(false, getID());
-				initUnit(eUnitType, iX, iY, NO_UNITAI);
-
-				bSomethingHappened = true;
-			}
-}*/
-		}
-	// RevolutionDCM end
-/************************************************************************************************/
-/* SUPER_SPIES                             END                                                  */
-/************************************************************************************************/
-
-	//////////////////////////////
-	// Buy City
-
-	if (kMission.getBuyCityCostFactor() > 0)
-	{
-		if (NULL != pPlot)
-		{
-			CvCity* pCity = pPlot->getPlotCity();
-
-			if (NULL != pCity)
-			{
-/************************************************************************************************/
-/* Afforess	                  Start		 07/25/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-				GET_PLAYER(pCity->getOwner()).AI_changeMemoryCount(getID(), MEMORY_EVENT_BAD_TO_US, std::max(4, pCity->getPopulation()));
-				for (int iI = 0; iI < MAX_PLAYERS; iI++)
-				{
-					if (GET_PLAYER((PlayerTypes)iI).isAlive())
-					{
-						if ( GET_PLAYER((PlayerTypes)iI).AI_getAttitude(pCity->getOwner()) >= ATTITUDE_PLEASED)
-						{
-							GET_PLAYER((PlayerTypes)iI).AI_changeMemoryCount(getID(), MEMORY_EVENT_BAD_TO_US, std::max(2, pCity->getPopulation() / 3));
-						}
-					}
-				}
-
-				if (GET_PLAYER(pCity->getOwner()).AI_getMemoryCount(getID(), MEMORY_EVENT_BAD_TO_US) > 15)
-				{
-					GET_TEAM(pCity->getTeam()).declareWar(getTeam(), true, WARPLAN_TOTAL);
-				}
-
-				strcpy(szSound, "AS2D_REVOLTSTART");
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-				szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_CITY_BOUGHT", pCity->getNameKey()).GetCString();
-				acquireCity(pCity, false, true, true);
-
-				bSomethingHappened = true;
-			}
-		}
-	}
-
-	//////////////////////////////
-	// Insert Culture into City
-
-	if (kMission.getCityInsertCultureCostFactor() > 0)
-	{
-		if (NULL != pPlot)
-		{
-			CvCity* pCity = pPlot->getPlotCity();
-
-			if (NULL != pCity)
-			{
-				szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_CITY_CULTURE_INSERTED", pCity->getNameKey()).GetCString();
-
-				int iCultureAmount = kMission.getCityInsertCultureAmountFactor() * pCity->countTotalCultureTimes100();
-				iCultureAmount /= 10000;
-				iCultureAmount = std::max(1, iCultureAmount);
-
-/************************************************************************************************/
-/* Afforess	                  Start		 06/29/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-				int iPlotCulture = pCity->plot()->countTotalCulture();
-				int iPlotCultureAmount;
-
-				if ( iPlotCulture > MAX_INT/10000 )
-				{
-					iPlotCulture /= 100;
-					iPlotCultureAmount = kMission.getCityInsertCultureAmountFactor() * iPlotCulture;
-				}
+				FAssert(pTargetUnit->plot() == pPlot);
+				CvCity* pNearCity = GC.getMap().findCity(pPlot->getX(), pPlot->getY(), eTargetPlayer, GET_PLAYER(eTargetPlayer).getTeam(), true, false);
+				if (pNearCity != NULL)
+					szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_SOMETHING_BRIBED_NEAR_CITY", pTargetUnit->getNameKey(), pNearCity->getNameKey()).GetCString();
 				else
+					szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_SOMETHING_BRIBED", pTargetUnit->getNameKey()).GetCString();
+
+				int iX = pTargetUnit->getX();
+				int iY = pTargetUnit->getY();
+				pTargetUnit->kill(false, getID());
+				CvUnit* acquiredWorker = initUnit(pTargetUnit->getUnitType(), iX, iY, UNITAI_WORKER, NO_DIRECTION, GC.getGame().getSorenRandNum(10000, "AI Unit Birthmark"));
+				CvCity* pCapital = this->getCapitalCity();
+				if (NULL != pCapital)
 				{
-					iPlotCultureAmount = kMission.getCityInsertCultureAmountFactor() * iPlotCulture * 100;
-					iPlotCultureAmount /= 10000;
+					iX = pCapital->getX();
+					iY = pCapital->getY();
+					//GC.getGame().logOOSSpecial(11, acquiredWorker->getID(), iX, iY);
+					acquiredWorker->setXY(iX, iY, false, false, false);
+					acquiredWorker->finishMoves();
 				}
-				iPlotCultureAmount = std::max(1, iPlotCultureAmount);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-
-				int iNumTurnsApplied = (GC.getDefineINT("GREAT_WORKS_CULTURE_TURNS") * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getUnitGreatWorkPercent()) / 100;
-
-				for (int i = 0; i < iNumTurnsApplied; ++i)
-				{
-					pCity->changeCulture(getID(), iCultureAmount / iNumTurnsApplied, true, true);
-/************************************************************************************************/
-/* Afforess	                  Start		 06/29/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-					pCity->plot()->changeCulture(getID(), iPlotCultureAmount / iNumTurnsApplied, true);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-				}
-
-				if (iNumTurnsApplied > 0)
-				{
-					pCity->changeCulture(getID(), iCultureAmount % iNumTurnsApplied, false, true);
-/************************************************************************************************/
-/* Afforess	                  Start		 06/29/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-					pCity->plot()->changeCulture(getID(), iPlotCultureAmount % iNumTurnsApplied, true);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-				}
-
-				bSomethingHappened = true;
-			}
-
-		}
-	}
-
-	//////////////////////////////
-	// Poison City's Water Supply
-
-	if (kMission.getCityPoisonWaterCounter() > 0)
-	{
-		if (NULL != pPlot)
-		{
-			CvCity* pCity = pPlot->getPlotCity();
-
-			if (NULL != pCity)
-			{
-				szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_CITY_POISONED", pCity->getNameKey()).GetCString();
-/************************************************************************************************/
-/* Afforess	                  Start		 06/29/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-				int iTurns = (kMission.getCityPoisonWaterCounter() * (100 + (pSpyUnit != NULL ? pSpyUnit->getExtraFriendlyHeal() : 0)))/100;
-				if (GC.getGame().isOption(GAMEOPTION_ADVANCED_ESPIONAGE))
-				{
-					iTurns *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
-					iTurns /= 100;
-				}
-
-				pCity->changeEspionageHealthCounter(iTurns);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-
-				bShowExplosion = true;
 				bSomethingHappened = true;
 			}
 		}
 	}
-
-	//////////////////////////////
-	// Make city Unhappy
-
-	if (kMission.getCityUnhappinessCounter() > 0)
-	{
-		if (NULL != pPlot)
-		{
-			CvCity* pCity = pPlot->getPlotCity();
-
-			if (NULL != pCity)
-			{
-				szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_CITY_UNHAPPY", pCity->getNameKey()).GetCString();
-/************************************************************************************************/
-/* Afforess	                  Start		 06/29/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-				int iTurns = (kMission.getCityUnhappinessCounter() * (100 + (pSpyUnit != NULL ? pSpyUnit->getExtraEnemyHeal() : 0)))/100;
-				if (GC.getGame().isOption(GAMEOPTION_ADVANCED_ESPIONAGE))
-				{
-					iTurns *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
-					iTurns /= 100;
-				}
-
-				pCity->changeEspionageHappinessCounter(iTurns);
-
-				strcpy(szSound, "AS2D_REVOLTSTART");
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-
-				bShowExplosion = true;
-				bSomethingHappened = true;
-			}
-		}
-	}
-
-	//////////////////////////////
-	// Make city Revolt
-
-	if (kMission.getCityRevoltCounter() > 0)
-	{
-		if (NULL != pPlot)
-		{
-			CvCity* pCity = pPlot->getPlotCity();
-
-			if (NULL != pCity)
-			{
-				szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_CITY_REVOLT", pCity->getNameKey()).GetCString();
-/************************************************************************************************/
-/* Afforess	                  Start		 06/29/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-				int iTurns = (kMission.getCityRevoltCounter() * (100 + (pSpyUnit != NULL ? pSpyUnit->getExtraNeutralHeal() :0)))/100;
-				if (GC.getGame().isOption(GAMEOPTION_ADVANCED_ESPIONAGE))
-				{
-					iTurns *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
-					iTurns /= 100;
-				}
-
-				pCity->changeCultureUpdateTimer(iTurns);
-				pCity->changeOccupationTimer(iTurns);
-
-				strcpy(szSound, "AS2D_REVOLTSTART");
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-				bSomethingHappened = true;
-				bShowExplosion = true;
-
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      01/12/10                                jdog5000      */
-/*                                                                                              */
-/* AI logging                                                                                   */
-/************************************************************************************************/
-				if( gUnitLogLevel >= 2 )
-				{
-					logBBAI("      Spy for player %d (%S) causes revolt in %S, owned by %S (%d)", getID(), getCivilizationDescription(0), pCity->getName().GetCString(), GET_PLAYER(pCity->getOwner()).getCivilizationDescription(0), pCity->getOwner() );
-				}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
-			}
-		}
-	}
-
-	//////////////////////////////
 	// Steal Treasury
-
-	if (kMission.getStealTreasuryTypes() > 0)
+	if (NO_PLAYER != eTargetPlayer && kMission.getStealTreasuryTypes() > 0)
 	{
-		if (NO_PLAYER != eTargetPlayer)
+		int iNumTotalGold = std::min(GC.getGREATER_COMMERCE_SWITCH_POINT()/100, GET_PLAYER(eTargetPlayer).getEffectiveGold());
+
+		iNumTotalGold *= kMission.getStealTreasuryTypes();
+		iNumTotalGold /= 100;
+		iNumTotalGold *= kMission.getStealTreasuryTypes();
+		iNumTotalGold /= 100;
+
+		if (NULL != pCity)
 		{
-			int iMaxGold = GC.getGREATER_COMMERCE_SWITCH_POINT()/100;
-			int iGold = std::min(iMaxGold, GET_PLAYER(eTargetPlayer).getEffectiveGold());
-			int iNumPreTotalGold = (iGold * kMission.getStealTreasuryTypes()) / 100;
-			int iNumTotalGold = (iNumPreTotalGold * kMission.getStealTreasuryTypes()) / 100;
-
-			if (NULL != pPlot)
-			{
-				CvCity* pCity = pPlot->getPlotCity();
-
-				if (NULL != pCity)
-				{
-					iNumTotalGold *= pCity->getPopulation();
-					iNumTotalGold /= std::max(1, GET_PLAYER(eTargetPlayer).getTotalPopulation());
-				}
-			}
-/************************************************************************************************/
-/* Afforess	                  Start		 06/29/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-			iNumTotalGold *= std::max(0, calculateInflationRate() + 100);
-			iNumTotalGold /= 100;
-
-			strcpy(szSound, "AS2D_WONDERGOLD");
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-			szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_STEAL_TREASURY").GetCString();
-			changeGold(iNumTotalGold);
-			if (NO_PLAYER != eTargetPlayer)
-			{
-				GET_PLAYER(eTargetPlayer).changeGold(-iNumTotalGold);
-			}
-
-			bSomethingHappened = true;
+			iNumTotalGold *= pCity->getPopulation();
+			iNumTotalGold /= std::max(1, GET_PLAYER(eTargetPlayer).getTotalPopulation());
 		}
-	}
+		iNumTotalGold *= std::max(0, calculateInflationRate() + 100);
+		iNumTotalGold /= 100;
 
-	//////////////////////////////
-	// Buy (Steal) Tech
+		strcpy(szSound, "AS2D_WONDERGOLD");
+		szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_STEAL_TREASURY").GetCString();
 
-	if (kMission.getBuyTechCostFactor() > 0)
-	{
-		int iTech = iExtraData;
-
-		szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_TECH_BOUGHT", GC.getTechInfo((TechTypes) iTech).getDescription()).GetCString();
-		GET_TEAM(getTeam()).setHasTech((TechTypes) iTech, true, getID(), false, true);
-		GET_TEAM(getTeam()).setNoTradeTech((TechTypes)iTech, true);
-
+		changeGold(iNumTotalGold);
+		GET_PLAYER(eTargetPlayer).changeGold(-iNumTotalGold);
 		bSomethingHappened = true;
 	}
+	// Buy (Steal) Tech
+	if (kMission.getBuyTechCostFactor() > 0)
+	{
+		GET_TEAM(getTeam()).setHasTech((TechTypes) iExtraData, true, getID(), false, true);
 
-	//////////////////////////////
+		if (GC.getGame().isOption(GAMEOPTION_NO_TECH_BROKERING))
+		{
+			GET_TEAM(getTeam()).setNoTradeTech((TechTypes) iExtraData, true);
+		}
+		bSomethingHappened = true;
+		szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_TECH_BOUGHT", GC.getTechInfo((TechTypes) iExtraData).getDescription()).GetCString();
+	}
 	// Switch Civic
-
-	if (kMission.getSwitchCivicCostFactor() > 0)
+	if (NO_PLAYER != eTargetPlayer && kMission.getSwitchCivicCostFactor() > 0)
 	{
-		if (NO_PLAYER != eTargetPlayer)
-		{
-			int iCivic = iExtraData;
-
-			szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_SWITCH_CIVIC", GC.getCivicInfo((CivicTypes) iCivic).getDescription()).GetCString();
-			GET_PLAYER(eTargetPlayer).setCivics((CivicOptionTypes) GC.getCivicInfo((CivicTypes) iCivic).getCivicOptionType(), (CivicTypes) iCivic);
-			GET_PLAYER(eTargetPlayer).setRevolutionTimer(std::max(1, ((100 + GET_PLAYER(eTargetPlayer).getAnarchyModifier()) * GC.getDefineINT("MIN_REVOLUTION_TURNS")) / 100));
-			bSomethingHappened = true;
-		}
+		GET_PLAYER(eTargetPlayer).setCivics((CivicOptionTypes) GC.getCivicInfo((CivicTypes)iExtraData).getCivicOptionType(), (CivicTypes)iExtraData);
+		GET_PLAYER(eTargetPlayer).setRevolutionTimer(std::max(1, ((100 + GET_PLAYER(eTargetPlayer).getAnarchyModifier()) * GC.getDefineINT("MIN_REVOLUTION_TURNS")) / 100));
+		bSomethingHappened = true;
+		szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_SWITCH_CIVIC", GC.getCivicInfo((CivicTypes)iExtraData).getDescription()).GetCString();
 	}
-
-	//////////////////////////////
 	// Switch Religion
-
-	if (kMission.getSwitchReligionCostFactor() > 0)
+	if (NO_PLAYER != eTargetPlayer && kMission.getSwitchReligionCostFactor() > 0)
 	{
-		if (NO_PLAYER != eTargetPlayer)
-		{
-			int iReligion = iExtraData;
+		strcpy(szSound, GC.getReligionInfo((ReligionTypes)iExtraData).getSound());
+		szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_SWITCH_RELIGION", GC.getReligionInfo((ReligionTypes)iExtraData).getDescription()).GetCString();
 
-			strcpy(szSound, GC.getReligionInfo((ReligionTypes) iReligion).getSound());
-
-			szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_SWITCH_RELIGION", GC.getReligionInfo((ReligionTypes) iReligion).getDescription()).GetCString();
-			GET_PLAYER(eTargetPlayer).setLastStateReligion((ReligionTypes) iReligion);
-			GET_PLAYER(eTargetPlayer).setConversionTimer(std::max(1, ((100 + GET_PLAYER(eTargetPlayer).getAnarchyModifier()) * GC.getDefineINT("MIN_CONVERSION_TURNS")) / 100));
-			bSomethingHappened = true;
-		}
+		GET_PLAYER(eTargetPlayer).setLastStateReligion((ReligionTypes)iExtraData);
+		GET_PLAYER(eTargetPlayer).setConversionTimer(std::max(1, ((100 + GET_PLAYER(eTargetPlayer).getAnarchyModifier()) * GC.getDefineINT("MIN_CONVERSION_TURNS")) / 100));
+		bSomethingHappened = true;
 	}
-
-	//////////////////////////////
 	// Player Anarchy
-
-	if (kMission.getPlayerAnarchyCounter() > 0)
+	if (NO_PLAYER != eTargetPlayer && kMission.getPlayerAnarchyCounter() > 0)
 	{
-		if (NO_PLAYER != eTargetPlayer)
-		{
-			int iTurns = (kMission.getPlayerAnarchyCounter() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getAnarchyPercent()) / 100;
-/************************************************************************************************/
-/* Afforess	                  Start		 06/29/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-
-			strcpy(szSound, "AS2D_REVOLTSTART");
-			if (bCaught)
-				szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_PLAYER_ANARCHY_CAUGHT", getCivilizationAdjectiveKey()).GetCString();
-			else
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-			szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_PLAYER_ANARCHY").GetCString();
-			GET_PLAYER(eTargetPlayer).changeAnarchyTurns(iTurns);
-
-			bSomethingHappened = true;
-		}
+		GET_PLAYER(eTargetPlayer).changeAnarchyTurns(kMission.getPlayerAnarchyCounter() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getAnarchyPercent() / 100);
+		bSomethingHappened = true;
+		strcpy(szSound, "AS2D_REVOLTSTART");
+		szBuffer = bCaught ?
+			gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_PLAYER_ANARCHY_CAUGHT", getCivilizationAdjectiveKey()).GetCString()
+			:
+			gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_PLAYER_ANARCHY").GetCString();
 	}
-
-	//////////////////////////////
 	// Counterespionage
-
 	if (kMission.getCounterespionageNumTurns() > 0 && kMission.getCounterespionageMod() > 0)
 	{
 		szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_TARGET_COUNTERESPIONAGE").GetCString();
 
 		if (NO_TEAM != eTargetTeam)
 		{
-			int iTurns = (kMission.getCounterespionageNumTurns() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getResearchPercent()) / 100;
+			const int iTurns = kMission.getCounterespionageNumTurns() * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getResearchPercent() / 100;
 			GET_TEAM(getTeam()).changeCounterespionageTurnsLeftAgainstTeam(eTargetTeam, iTurns);
-			//TSHEEP Add Intercept to counter espionage mod
 			GET_TEAM(getTeam()).changeCounterespionageModAgainstTeam(eTargetTeam, (kMission.getCounterespionageMod() + (5 * (pSpyUnit != NULL ? pSpyUnit->currInterceptionProbability() : 0))));
-			//GET_TEAM(getTeam()).changeCounterespionageModAgainstTeam(eTargetTeam, kMission.getCounterespionageMod());
-			//TSHEEP End
-
 			bSomethingHappened = true;
-
 		}
 	}
-/************************************************************************************************/
-/* Afforess	                  Start		 06/29/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	//////////////////////////////
 	// Nuclear Bomb
-	bool bNuked = false;
-	if (kMission.isNuke())
-	{
-		if (NULL != pPlot)
-		{
-			if (NULL != pSpyUnit)
-			{
-				if (pSpyUnit->spyNuke(pPlot->getX(), pPlot->getY(), bCaught))
-				{
-					bNuked = true;
-				}
-			}
-		}
-	}
-	//////////////////////////////
-	// Incite City Revolution
-	if (kMission.isRevolt())
-	{
-		if (NULL != pPlot)
-		{
-			CvCity* pCity = pPlot->getPlotCity();
-
-			if (NULL != pCity)
-			{
-				pCity->changeRevolutionIndex(1000 + GC.getGame().getSorenRandNum(1000, "City Revolt"));
-				pCity->changeOccupationTimer(kMission.getCityRevoltCounter());
-				bSomethingHappened = true;
-
-				strcpy(szSound, "AS2D_REVOLTSTART");
-
-				if (bCaught)
-					szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_INCITE_REVOLUTION_CAUGHT", pCity->getNameKey(), getCivilizationDescription()).GetCString();
-				else
-					szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_INCITE_REVOLUTION", pCity->getNameKey()).GetCString();
-			}
-		}
-	}
-	//////////////////////////////
-	// Disable Power
-	if (kMission.isDisablePower())
-	{
-		if (NULL != pPlot)
-		{
-			CvCity* pCity = pPlot->getPlotCity();
-
-			if (NULL != pCity)
-			{
-				int iTurns = 6;
-				iTurns *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
-				iTurns /= 100;
-				pCity->changeDisabledPowerTimer(iTurns);
-				bSomethingHappened = true;
-
-				strcpy(szSound, "AS2D_BUILD_PLANTNUCLEAR");
-
-				if (bCaught)
-					szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_POWER_CUT_CAUGHT", pCity->getNameKey(), getCivilizationDescription()).GetCString();
-				else
-					szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_POWER_CUT", pCity->getNameKey()).GetCString();
-			}
-		}
-	}
-	//////////////////////////////
-	// Cause War Weariness
-	if (kMission.getWarWearinessCounter() > 0)
-	{
-		if (NULL != pPlot)
-		{
-			CvCity* pCity = pPlot->getPlotCity();
-
-			if (NULL != pCity)
-			{
-				int iAmount = kMission.getWarWearinessCounter();
-				iAmount *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getTrainPercent();
-				iAmount /= 100;
-				pCity->changeWarWearinessTimer(iAmount);
-				bSomethingHappened = true;
-
-				strcpy(szSound, "AS2D_STRIKE");
-
-				if (bCaught)
-					szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_WAR_WEARINESS_CAUGHT", pCity->getNameKey(), getCivilizationAdjectiveKey()).GetCString();
-				else
-					szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_WAR_WEARINESS", pCity->getNameKey()).GetCString();
-			}
-		}
-	}
-	//////////////////////////////
-	// Sabatoge Research
-	if (kMission.getSabatogeResearchCostFactor() > 0)
-	{
-		if (NULL != pPlot)
-		{
-			CvCity* pCity = pPlot->getPlotCity();
-
-			if (NULL != pCity)
-			{
-				GET_TEAM(pCity->getTeam()).setResearchProgress(GET_PLAYER(pCity->getOwner()).getCurrentResearch(), 0, pCity->getOwner());
-				bSomethingHappened = true;
-				if (bCaught)
-					szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_RESEARCH_SABATAGED_CAUGHT", GC.getTechInfo(GET_PLAYER(pCity->getOwner()).getCurrentResearch()).getDescription(), getCivilizationAdjectiveKey()).GetCString();
-				else
-					szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_RESEARCH_SABATAGED", GC.getTechInfo(GET_PLAYER(pCity->getOwner()).getCurrentResearch()).getDescription());
-			}
-		}
-	}
-	//////////////////////////////
-	// Remove Religion
-	if (kMission.getRemoveReligionsCostFactor() > 0)
-	{
-		if (NULL != pPlot)
-		{
-			ReligionTypes eTargetReligion = (ReligionTypes)iExtraData;
-			CvCity* pCity = pPlot->getPlotCity();
-
-			if (NULL != pCity)
-			{
-				pCity->setHasReligion(eTargetReligion, false, false, false);
-				strcpy(szSound, GC.getReligionInfo(eTargetReligion).getSound());
-				bSomethingHappened = true;
-				if (bCaught)
-					szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_RELIGION_REMOVED_CAUGHT", pCity->getNameKey(), getCivilizationAdjectiveKey(), GC.getReligionInfo(eTargetReligion).getTextKeyWide()).GetCString();
-				else
-					szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_RELIGION_REMOVED", pCity->getNameKey(), GC.getReligionInfo(eTargetReligion).getTextKeyWide());
-			}
-		}
-	}
-	//////////////////////////////
-	// Remove Corporation
-	if (kMission.getRemoveCorporationsCostFactor() > 0)
-	{
-		if (NULL != pPlot)
-		{
-			CvCity* pCity = pPlot->getPlotCity();
-			if (NULL != pCity)
-			{
-				CorporationTypes eCorporation = (CorporationTypes)iExtraData;
-
-				if (NO_CORPORATION != eCorporation)
-				{
-					if (pCity->isActiveCorporation(eCorporation)&& GC.getGame().getHeadquarters(eCorporation) != pCity)
-					{
-						pCity->setHasCorporation(eCorporation, false, false, false);
-						strcpy(szSound, GC.getCorporationInfo(eCorporation).getSound());
-						bSomethingHappened = true;
-						if (bCaught)
-							szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_CORPORATION_REMOVED_CAUGHT", pCity->getNameKey(), getCivilizationAdjectiveKey(), GC.getCorporationInfo(eCorporation).getTextKeyWide()).GetCString();
-						else
-							szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_CORPORATION_REMOVED", pCity->getNameKey(), GC.getCorporationInfo(eCorporation).getTextKeyWide());
-					}
-				}
-			}
-		}
-	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+	const bool bNuked = NULL != pPlot && NULL != pSpyUnit
+		&& kMission.isNuke() && pSpyUnit->spyNuke(pPlot->getX(), pPlot->getY(), bCaught) ? true : false;
 
 	int iHave = 0;
 	if (NO_TEAM != eTargetTeam)
@@ -20222,17 +19642,11 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 		}
 	}
 
-	if (bShowExplosion)
+	if (pPlot && bShowExplosion && pPlot->isVisible(GC.getGame().getActiveTeam(), false))
 	{
-		if (pPlot)
-		{
-			if (pPlot->isVisible(GC.getGame().getActiveTeam(), false))
-			{
-				EffectTypes eEffect = GC.getEntityEventInfo(GC.getMissionInfo(MISSION_BOMBARD).getEntityEvent()).getEffectType();
-				gDLL->getEngineIFace()->TriggerEffect(eEffect, pPlot->getPoint(), (float)(GC.getASyncRand().get(360)));
-				gDLL->getInterfaceIFace()->playGeneralSound("AS3D_UN_CITY_EXPLOSION", pPlot->getPoint());
-			}
-		}
+		EffectTypes eEffect = GC.getEntityEventInfo(GC.getMissionInfo(MISSION_BOMBARD).getEntityEvent()).getEffectType();
+		gDLL->getEngineIFace()->TriggerEffect(eEffect, pPlot->getPoint(), (float)(GC.getASyncRand().get(360)));
+		gDLL->getInterfaceIFace()->playGeneralSound("AS3D_UN_CITY_EXPLOSION", pPlot->getPoint());
 	}
 
 	if (bSomethingHappened)
@@ -20246,10 +19660,9 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 			iX = pPlot->getX();
 			iY = pPlot->getY();
 		}
-
 		AddDLLMessage(getID(), true, GC.getEVENT_MESSAGE_TIME(), gDLL->getText("TXT_KEY_ESPIONAGE_MISSION_PERFORMED"), "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, ARTFILEMGR.getInterfaceArtInfo("ESPIONAGE_BUTTON")->getPath(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), iX, iY, true, true);
 	}
-	else if ((getID() == GC.getGame().getActivePlayer()) && !bNuked)
+	else if (getID() == GC.getGame().getActivePlayer() && !bNuked)
 	{
 		CvPopupInfo* pInfo = new CvPopupInfo(BUTTONPOPUP_TEXT);
 		if (iHave < iMissionCost)
@@ -20260,7 +19673,6 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 		{
 			pInfo->setText(gDLL->getText("TXT_KEY_ESPIONAGE_CANNOT_DO_MISSION"));
 		}
-
 		addPopup(pInfo);
 	}
 
@@ -20277,23 +19689,9 @@ bool CvPlayer::doEspionageMission(EspionageMissionTypes eMission, PlayerTypes eT
 		if (NO_PLAYER != eTargetPlayer)
 		{
 			MEMORY_TRACK_EXEMPT();
-
-/************************************************************************************************/
-/* Afforess	                  Start		 07/28/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/*
-			AddDLLMessage(eTargetPlayer, true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_DEAL_CANCELLED", MESSAGE_TYPE_INFO, ARTFILEMGR.getInterfaceArtInfo("ESPIONAGE_BUTTON")->getPath(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), iX, iY, true, true);
-*/
 			AddDLLMessage(eTargetPlayer, true, GC.getEVENT_MESSAGE_TIME(), szBuffer, szSound, MESSAGE_TYPE_INFO, ARTFILEMGR.getInterfaceArtInfo("ESPIONAGE_BUTTON")->getPath(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), iX, iY, true, true);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-
 		}
 	}
-
 	return bSomethingHappened || bNuked;
 }
 
@@ -21583,7 +20981,7 @@ int CvPlayer::getAdvancedStartTechCost(TechTypes eTech, bool bAdd) const
 
 	if (bAdd)
 	{
-		if (!canResearch(eTech, false))
+		if (!canResearch(eTech))
 		{
 			return -1;
 		}
@@ -27293,11 +26691,7 @@ bool CvPlayer::splitEmpire(int iAreaId)
 	return true;
 }
 
-/************************************************************************************************/
-/* REVOLUTION_MOD                         11/15/08                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 // Add ePlayer's cities, units, techs, etc to this player
 bool CvPlayer::assimilatePlayer(PlayerTypes ePlayer)
 {
@@ -27400,9 +26794,7 @@ bool CvPlayer::assimilatePlayer(PlayerTypes ePlayer)
 
 	return true;
 }
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+
 
 bool CvPlayer::isValidTriggerReligion(const CvEventTriggerInfo& kTrigger, CvCity* pCity, ReligionTypes eReligion) const
 {
@@ -27456,7 +26848,6 @@ bool CvPlayer::isValidTriggerReligion(const CvEventTriggerInfo& kTrigger, CvCity
 			}
 		}
 	}
-
 	return true;
 }
 

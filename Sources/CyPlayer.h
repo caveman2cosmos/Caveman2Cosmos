@@ -3,8 +3,8 @@
 #ifndef CyPlayer_h
 #define CyPlayer_h
 //
-// Python wrapper class for CvPlayer 
-// 
+// Python wrapper class for CvPlayer
+//
 
 //#include "CvEnums.h"
 //#include "CvStructs.h"
@@ -20,42 +20,25 @@ class CyPlayer
 {
 public:
 	CyPlayer();
-	explicit CyPlayer(CvPlayer* pPlayer);		// Call from C++
+	explicit CyPlayer(CvPlayer* pPlayer); // Call from C++
 
-	CvPlayer* getPlayer() { return m_pPlayer;	}	// Call from C++
+	CvPlayer* getPlayer() { return m_pPlayer; } // Call from C++
 	bool isNone() { return (m_pPlayer==NULL); }
 
-/************************************************************************************************/
-/* CHANGE_PLAYER                         08/27/08                                 jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	void changeLeader( int /*LeaderHeadTypes*/ eNewLeader );
 	void changeCiv( int /*CivilizationTypes*/ eNewCiv );
 	void setIsHuman( bool bNewValue );
-/************************************************************************************************/
-/* CHANGE_PLAYER                           END                                                  */
-/************************************************************************************************/
-/************************************************************************************************/
-/* REVOLUTION_MOD                         06/11/08                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	void setIsRebel( bool bNewValue );
-	bool isRebel( );
+	bool isRebel();
+
 	int getStabilityIndex( );
 	void setStabilityIndex( int iNewValue );
 	void changeStabilityIndex( int iChange );
 	int getStabilityIndexAverage( );
 	void setStabilityIndexAverage( int iNewValue );
 	void updateStabilityIndexAverage( );
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
 
-// RevolutionDCM start - new diplomacy option
 	bool isDoNotBotherStatus(int /*PlayerTypes*/ playerID);
-// RevolutionDCM end
 
 	int startingPlotRange();
 	bool startingPlotWithinRange(CyPlot *pPlot, int /*PlayerTypes*/ ePlayer, int iRange, int iPass);
@@ -74,42 +57,19 @@ public:
 	void killUnits();
 	bool hasTrait(int /*TraitTypes*/ iIndex);
 	bool isHuman();
-
-/************************************************************************************************/
-/* REVOLUTION_MOD                                                                 lemmy101      */
-/*                                                                                jdog5000      */
-/*                                                                                              */
-/************************************************************************************************/
 	bool isHumanDisabled();
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
-
 	bool isBarbarian();
 	bool isNPC();
 	bool isHominid();
 	std::wstring getName();
-/************************************************************************************************/
-/* REVOLUTION_MOD                         01/01/08                                jdog5000      */
-/*                                                                                              */
-/* For dynamic civ names                                                                        */
-/************************************************************************************************/
+
 	void setName(std::wstring szNewValue);
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+
 	std::wstring getNameForm(int iForm);
 	std::wstring getNameKey();
 	std::wstring getCivilizationDescription(int iForm);
-/************************************************************************************************/
-/* REVOLUTION_MOD                         01/01/08                                jdog5000      */
-/*                                                                                              */
-/* For dynamic civ names                                                                        */
-/************************************************************************************************/
+
 	void setCivName(std::wstring szNewDesc, std::wstring szNewShort, std::wstring szNewAdj);
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
 
 	std::wstring getCivilizationDescriptionKey();
 	std::wstring getCivilizationShortDescription(int iForm);
@@ -125,7 +85,7 @@ public:
 	std::wstring getBestAttackUnitKey();
 	int /*ArtStyleTypes*/ getArtStyleType();
 	std::string getUnitButton(int eUnit);
-	
+
 	int findBestFoundValue();
 
 	int countReligionSpreadUnits(CyArea* pArea, int /*ReligionTypes*/ eReligion);
@@ -161,7 +121,7 @@ public:
 	void killAllDeals();
 	bool isTurnActive( void );
 
-	void findNewCapital();	
+	void findNewCapital();
 	int getNumGovernmentCenters();
 	bool canRaze(CyCity* pCity);
 	void raze(CyCity* pCity);
@@ -206,16 +166,10 @@ public:
 	int calculatePreInflatedCosts();
 	int calculateInflationRate();
 	int calculateInflatedCosts();
-/************************************************************************************************/
-/* REVOLUTION_MOD                         02/04/09                                jdog5000      */
-/*                                                                                              */
-/* For rebels and BarbarianCiv                                                                  */
-/************************************************************************************************/
+
 	int getFreeUnitCountdown();
 	void setFreeUnitCountdown( int iValue );
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+
 	int calculateGoldRate();
 	int calculateTotalCommerce();
 	int calculateResearchRate(int /*TechTypes*/ eTech);
@@ -223,7 +177,7 @@ public:
 	int calculateBaseNetResearch();
 	bool isResearch();
 	bool canEverResearch(int /*TechTypes*/ eTech);
-	bool canResearch(int /*TechTypes*/ eTech, bool bTrade);
+	bool canResearch(int /*TechTypes*/ eTech);
 	int /* TechTypes */ getCurrentResearch();
 	bool isCurrentResearchRepeat();
 	bool isNoResearchAvailable();
@@ -240,17 +194,9 @@ public:
 	bool canConvert(int /*ReligionTypes*/ iIndex);
 	void convert(int /*ReligionTypes*/ iIndex);
 	bool hasHolyCity(int /*ReligionTypes*/ eReligion);
-/************************************************************************************************/
-/* REVDCM                                 04/29/10                                phungus420    */
-/*                                                                                              */
-/* Player Functions                                                                             */
-/************************************************************************************************/
 	bool hasAnyHolyCity();
 	bool hasStateReligionHolyCity();
 	bool hasStateReligionShrine();
-/************************************************************************************************/
-/* REVDCM                                  END                                                  */
-/************************************************************************************************/
 	int countHolyCities();
 
 	void foundReligion(int /*ReligionTypes*/ eReligion, int /*ReligionTypes*/ iSlotReligion, bool bAward);
@@ -285,8 +231,8 @@ public:
 	void setGold(int iNewValue);
 	void changeGold(int iChange);
 	int getGoldPerTurn();
-																																				// Exposed to Python
-	void setGreaterGold(int iNewValue);																													// Exposed to Python
+
+	void setGreaterGold(int iNewValue);
 	void changeGreaterGold(int iChange);
 
 	int getAdvancedStartPoints();
@@ -314,9 +260,9 @@ public:
 	int getGoldenAgeTurns();
 	int getGoldenAgeLength();
 	bool isGoldenAge();
-	void changeGoldenAgeTurns(int iChange);	
+	void changeGoldenAgeTurns(int iChange);
 	int getNumUnitGoldenAges();
-	void changeNumUnitGoldenAges(int iChange);	
+	void changeNumUnitGoldenAges(int iChange);
 	int getAnarchyTurns();
 	bool isAnarchy();
 	void changeAnarchyTurns(int iChange);
@@ -345,20 +291,9 @@ public:
 	int getMilitaryProductionModifier();
 	int getSpaceProductionModifier();
 	int getCityDefenseModifier();
-/************************************************************************************************/
-/* LoR                                        11/03/10                          phungus420      */
-/*                                                                                              */
-/* Colonists                                                                                    */
-/************************************************************************************************/
+
 	int getBestUnitType(int /*UnitAITypes*/ eUnitAI) const;
-/************************************************************************************************/
-/* LoR                            END                                                           */
-/************************************************************************************************/
-/************************************************************************************************/
-/* REVDCM                                 09/02/10                                phungus420    */
-/*                                                                                              */
-/* Player Functions                                                                             */
-/************************************************************************************************/
+
 	bool isNonStateReligionCommerce() const;
 	bool isUpgradeAnywhere() const;
 	int getRevIdxLocal();
@@ -372,9 +307,7 @@ public:
 	bool isInquisitionConditions();
 	int getUnitUpgradePriceModifier();
 	bool canFoundReligion();
-/************************************************************************************************/
-/* REVDCM                                  END                                                  */
-/************************************************************************************************/
+
 	int getNumNukeUnits();
 	int getNumOutsideUnits();
 	int getBaseFreeUnits();
@@ -408,9 +341,8 @@ public:
 	int getLevelExperienceModifier() const;
 
 	int getExtraHealth();
-// BUG - start
 	void changeExtraHealth(int iChange);
-// BUG - end
+
 	int getBuildingGoodHealth();
 	int getBuildingBadHealth();
 
@@ -430,16 +362,8 @@ public:
 	int getTradeRoutes();
 	int getConversionTimer();
 	int getRevolutionTimer();
-/************************************************************************************************/
-/* REVOLUTION_MOD                         01/01/08                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	void setRevolutionTimer(int newTime);
 	void changeRevolutionTimer(int addTime);
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
 
 	bool isStateReligion();
 	bool isNoNonStateReligionSpread();
@@ -461,9 +385,8 @@ public:
 	int getUnitPower();
 	int getPopScore();
 	int getLandScore();
-//Sevo Begin--VCM
+
 	int getSevoWondersScore(int mode);
-//Sevo End VCM
 	int getWondersScore();
 	int getTechScore();
 	int getTotalTimePlayed();
@@ -472,25 +395,17 @@ public:
 	bool isEverAlive();
 	bool isExtendedGame();
 	bool isFoundedFirstCity();
-/************************************************************************************************/
-/* REVOLUTION_MOD                         01/01/08                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	void setFoundedFirstCity(bool bNewValue);																		// Exposed to Python
-	void setAlive(bool bNewValue);																			// Exposed to Python
-	void setNewPlayerAlive(bool bNewValue);																			// Exposed to Python
-	void changeTechScore(int iChange);																		// Exposed to Python
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
-	
+
+	void setFoundedFirstCity(bool bNewValue);
+	void setAlive(bool bNewValue);
+	void setNewPlayerAlive(bool bNewValue);
+	void changeTechScore(int iChange);
+
 	bool isStrike();
 
-	// < M.A.D. Nukes Start >
 	bool isMADNukesEnabled() const;
 	void setMADNukesEnabled(bool bNewValue);
-	// < M.A.D. Nukes End   >
+
 	int getID();
 	int /* HandicapTypes */ getHandicapType();
 	int /* CivilizationTypes */ getCivilizationType();
@@ -504,7 +419,7 @@ public:
 	void setLastStateReligion(int /*ReligionTypes*/ iNewReligion);
 
 	int getTeam();
-	
+
 	int /*PlayerColorTypes*/ getPlayerColor();
 	int getPlayerTextColorR();
 	int getPlayerTextColorG();
@@ -530,11 +445,11 @@ public:
 	int getGoldPerTurnByPlayer(int /*PlayerTypes*/ eIndex);
 	void setGoldPerTurnByPlayer(int /*PlayerTypes*/ eIndex, int iValue);
 
-	bool isFeatAccomplished(int /*FeatTypes*/ eIndex);	
+	bool isFeatAccomplished(int /*FeatTypes*/ eIndex);
 	void setFeatAccomplished(int /*FeatTypes*/ eIndex, bool bNewValue);
-	bool isOption(int /*PlayerOptionTypes*/ eIndex);	
+	bool isOption(int /*PlayerOptionTypes*/ eIndex);
 	void setOption(int /*PlayerOptionTypes*/ eIndex, bool bNewValue);
-	bool isLoyalMember(int /*VoteSourceTypes*/ eIndex);	
+	bool isLoyalMember(int /*VoteSourceTypes*/ eIndex);
 	void setLoyalMember(int /*VoteSourceTypes*/ eIndex, bool bNewValue);
 	int getVotes(int /*VoteTypes*/ eVote, int /*VoteSourceTypes*/ eVoteSource);
 	bool isFullMember(int /*VoteSourceTypes*/ eVoteSource) const;
@@ -599,17 +514,17 @@ public:
 	void addCityName(std::wstring szName);
 	int getNumCityNames();
 	std::wstring getCityName(int iIndex);
-	python::tuple firstCity(bool bRev);	// returns tuple of (CyCity, iterOut)
-	python::tuple nextCity(int iterIn, bool bRev);		// returns tuple of (CyCity, iterOut)
+	python::tuple firstCity(bool bRev); // returns tuple of (CyCity, iterOut)
+	python::tuple nextCity(int iterIn, bool bRev); // returns tuple of (CyCity, iterOut)
 	CyCity* nthCity(int n, bool bRev); // shortcut for firstCity + nextCity + nextCity ...
 	int getNumCities();
 	CyCity* getCity(int iID);
-	python::tuple firstUnit(bool bRev);	// returns tuple of (CyUnit, iterOut)
-	python::tuple nextUnit(int iterIn, bool bRev);		// returns tuple of (CyUnit, iterOut)
+	python::tuple firstUnit(bool bRev); // returns tuple of (CyUnit, iterOut)
+	python::tuple nextUnit(int iterIn, bool bRev); // returns tuple of (CyUnit, iterOut)
 	int getNumUnits();
 	CyUnit* getUnit(int iID);
-	python::tuple firstSelectionGroup(bool bRev);	// returns tuple of (CySelectionGroup, iterOut)
-	python::tuple nextSelectionGroup(int iterIn, bool bRev);	// returns tuple of (CySelectionGroup, iterOut)
+	python::tuple firstSelectionGroup(bool bRev); // returns tuple of (CySelectionGroup, iterOut)
+	python::tuple nextSelectionGroup(int iterIn, bool bRev); // returns tuple of (CySelectionGroup, iterOut)
 	int getNumSelectionGroups();
 	CySelectionGroup* getSelectionGroup(int iID);
 
@@ -617,7 +532,8 @@ public:
 	const EventTriggeredData* getEventOccured(int /*EventTypes*/ eEvent) const;
 	void resetEventOccured(/*EventTypes*/ int eEvent);
 	EventTriggeredData* getEventTriggered(int iID) const;
-	EventTriggeredData* initTriggeredData(int /*EventTriggerTypes*/ eEventTrigger, bool bFire, int iCityId, int iPlotX, int iPlotY, int /*PlayerTypes*/ eOtherPlayer, int iOtherPlayerCityId, int /*ReligionTypes*/ eReligion, int /*CorporationTypes*/ eCorporation, int iUnitId, int /*BuildingTypes*/ eBuilding);
+	EventTriggeredData* initTriggeredData(int eEventTrigger, bool bFire, int iCityId, int iPlotX, int iPlotY, int eOtherPlayer, int iOtherPlayerCityId, int eReligion, int eCorporation, int iUnitId, int eBuilding);
+
 	int getEventTriggerWeight(int /*EventTriggerTypes*/ eTrigger);
 
 	void AI_updateFoundValues(bool bStartingLoc);
@@ -638,9 +554,8 @@ public:
 	void AI_changeMemoryCount(int /*PlayerTypes*/ eIndex1, int /*MemoryTypes*/ eIndex2, int iChange);
 	int AI_getExtraGoldTarget() const;
 	void AI_setExtraGoldTarget(int iNewValue);
-// BUG - Refuses to Talk - start
+
 	bool AI_isWillingToTalk(int /*PlayerTypes*/ ePlayer);
-// BUG - Refuses to Talk - end
 
 	int getScoreHistory(int iTurn) const;
 	int getEconomyHistory(int iTurn) const;
@@ -649,16 +564,8 @@ public:
 	int getPowerHistory(int iTurn) const;
 	int getCultureHistory(int iTurn) const;
 	int getEspionageHistory(int iTurn) const;
-/****************************************************************************************/
-/* REVOLUTIONDCM				28/05/09						Glider1                 */
-/**																						*/
-/**																						*/
-/****************************************************************************************/
-	// RevolutionDCM - revolution stability data
+
 	int getRevolutionStabilityHistory(int iTurn) const;
-/****************************************************************************************/
-/* REVOLUTIONDCM				END      						Glider1                 */
-/****************************************************************************************/
 
 	std::string getScriptData() const;
 	void setScriptData(std::string szNewValue);
@@ -669,59 +576,41 @@ public:
 	bool splitEmpire(int iAreaId);
 	bool canSplitEmpire() const;
 	bool canSplitArea(int iAreaId) const;
-/************************************************************************************************/
-/* REVOLUTION_MOD                         11/15/08                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	bool assimilatePlayer( int iPlayer );
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
-
 
 	bool canHaveTradeRoutesWith(int iPlayer);
 
 	void forcePeace(int iPlayer);
 
-// BUG - Reminder Mod - start
 	void addReminder(int iGameTurn, std::wstring szMessage) const;
-// BUG - Reminder Mod - start
-/************************************************************************************************/
-/* Afforess	                  Start		 04/15/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	int getDarkAgeTurns();
 	int getDarkAgeLength();
 	bool isDarkAge();
 	void changeDarkAgeTurns(int iChange);
 	bool isDarkAgeCapable();
 	int getDarkAgePointsFinal();
-	
+
 	bool canHaveSlaves();
 	bool hasValidBuildings(int /*TechTypes*/ iTech);
-	
+
 	int getBonusCommerceModifier(int /*BonusType*/ i, int /*CommerceType*/ j) const;
-	
+
 	void setShowLandmarks(bool bNewVal);
 	bool isShowLandmarks() const;
 	int getBuildingCountWithUpgrades(int /*BuildingTypes*/ iBuilding) const;
 	void setColor(int /*PlayerColorTypes*/ iColor);
 	void setHandicap(int iNewVal);
-	
-	bool isModderOption(int /*ModderOptionTypes*/ eIndex);	
-	int getModderOption(int /*ModderOptionTypes*/ eIndex);	
+
+	bool isModderOption(int /*ModderOptionTypes*/ eIndex);
+	int getModderOption(int /*ModderOptionTypes*/ eIndex);
 	void setModderOption(int /*ModderOptionTypes*/ eIndex, int iNewValue);
-	
+
 	void doRevolution(boost::python::list& /*CivicTypes**/ paeNewCivics, bool bForce);
-	
+
 	bool isAutomatedCanBuild(int /*BuildTypes*/ eIndex);
 	void setAutomatedCanBuild(int /*BuildTypes*/ eIndex, bool bNewValue);
 	void setTeam(int /*TeamTypes*/ eIndex);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	int getCulture() const;
 	void setCulture(int iNewValue);
@@ -797,8 +686,6 @@ public:
 	void changeTraitExtraCityDefense(int iChange);
 	void setHasTrait(int /*TraitTypes*/ eIndex, bool bNewValue);
 	bool canLearnTrait(int /*TraitTypes*/ eIndex);
-
-
 
 	// AIAndy: Build Lists
 	int getBLNumLists();
