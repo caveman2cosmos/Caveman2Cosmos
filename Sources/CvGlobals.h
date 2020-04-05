@@ -176,7 +176,6 @@ public:
 
 	CvDiplomacyScreen* getDiplomacyScreen() const 		{ return m_diplomacyScreen; }
 	CMPDiplomacyScreen* getMPDiplomacyScreen() const 	{ return m_mpDiplomacyScreen; }
-
 	FMPIManager*& getFMPMgrPtr()	 					{ return m_pFMPMgr; }
 	CvPortal& getPortal() const 						{ return *m_portal; }
 	CvSetupData& getSetupData() const 					{ return *m_setupData; }
@@ -185,10 +184,7 @@ public:
 	CvInitCore& getIniInitCore() const 					{ return *m_iniInitCore; }
 	CvMessageCodeTranslator& getMessageCodes() const 	{ return *m_messageCodes; }
 	CvStatsReporter& getStatsReporter() const 			{ return *m_statsReporter; }
-	CvStatsReporter* getStatsReporterPtr() const 		{ return m_statsReporter; }
-	CvInterface& getInterface() const 					{ return *m_interface; }
-	CvInterface* getInterfacePtr() const 				{ return m_interface; }
-	
+	CvInterface& getInterface() const 					{ return *m_interface; }	
 
 /*********************************/
 /***** Parallel Maps - Begin *****/
@@ -224,7 +220,6 @@ public:
 /***** Parallel Maps - End *****/
 /*******************************/
 	inline CvGameAI& getGame() const 			{ return *m_game; }
-	CvGameAI* getGamePointer();
 	CvRandom& getASyncRand() const 				{ return *m_asyncRand; }
 	CMessageQueue& getMessageQueue() const 		{ return *m_messageQueue; }
 	CMessageQueue& getHotMessageQueue() const 	{ return *m_hotJoinMsgQueue; }
@@ -1015,10 +1010,8 @@ public:
 
 	////////////// END DEFINES //////////////////
 
-#ifdef _USRDLL
-	CvDLLUtilityIFaceBase* getDLLIFace() { return g_DLL; }		// inlined for perf reasons, do not use outside of dll
-#endif
-	CvDLLUtilityIFaceBase* getDLLIFaceNonInl();
+	inline CvDLLUtilityIFaceBase* getDLLIFace() { return g_DLL; }
+
 	void setDLLProfiler(FProfiler* prof);
 	FProfiler* getDLLProfiler() const;
 	void enableDLLProfiler(bool bEnable);
@@ -1860,7 +1853,7 @@ public:
 	DllExport CvInterface* getInterfacePtr()
 	{
 		PROXY_TRACK("getInterfacePtr");
-		return gGlobals->getInterfacePtr();
+		return &gGlobals->getInterface();
 	}
 	// This determines how many starting civs can be chosen in the custom game staging room screen.
 	// Currently it allows you to add more civs than there are civ slots.
@@ -1883,7 +1876,7 @@ public:
 	DllExport CvGameAI* getGamePointer()
 	{
 		PROXY_TRACK("getGamePointer");
-		return gGlobals->getGamePointer();
+		return &gGlobals->getGame();
 	}
 	DllExport CvRandom& getASyncRand()
 	{
@@ -2639,7 +2632,7 @@ public:
 	DllExport CvDLLUtilityIFaceBase* getDLLIFaceNonInl()
 	{
 		//PROXY_TRACK("getDLLIFaceNonInl");
-		return gGlobals->getDLLIFaceNonInl();
+		return gGlobals->getDLLIFace();
 	}
 	DllExport void setDLLProfiler(FProfiler* prof)
 	{

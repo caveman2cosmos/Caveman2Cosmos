@@ -4517,8 +4517,6 @@ inline CvMap& cvInternalGlobals::getMap() const
 	return *m_maps[GC.getGame().getCurrentMap()];
 }
 
-CvGameAI* cvInternalGlobals::getGamePointer() { return m_game; }
-
 bool cvInternalGlobals::IsGraphicsInitialized() const { return m_bGraphicsInitialized; }
 void cvInternalGlobals::SetGraphicsInitialized(bool bVal) { m_bGraphicsInitialized = bVal; }
 void cvInternalGlobals::setInterface(CvInterface* pVal) { m_interface = pVal; }
@@ -4539,7 +4537,6 @@ void cvInternalGlobals::setRouteFinder(FAStar* pVal) { m_routeFinder = pVal; }
 void cvInternalGlobals::setBorderFinder(FAStar* pVal) { m_borderFinder = pVal; }
 void cvInternalGlobals::setAreaFinder(FAStar* pVal) { m_areaFinder = pVal; }
 void cvInternalGlobals::setPlotGroupFinder(FAStar* pVal) { m_plotGroupFinder = pVal; }
-CvDLLUtilityIFaceBase* cvInternalGlobals::getDLLIFaceNonInl() { return g_DLL; }
 
 // BUG - BUG Info - start
 static bool bBugInitCalled = false;
