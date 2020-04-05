@@ -261,7 +261,7 @@ void CvGame::updateColoredPlots()
 									ImprovementTypes ePlotImprovement = pLoopPlot->getImprovementType();
 									RouteTypes ePlotRoute = pLoopPlot->getRouteType();
 
-									if (ePlotImprovement == GC.getDefineINT("RUINS_IMPROVEMENT"))
+									if (ePlotImprovement == CvImprovementInfo::getImprovementRuins())
 									{
 										ePlotImprovement = NO_IMPROVEMENT;
 									}

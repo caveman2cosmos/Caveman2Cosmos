@@ -1174,7 +1174,7 @@ class CvWorldBuilderScreen:
 		iCount = 0
 		GC.getPlayer(self.m_iCurrentPlayer).clearResearchQueue()
 		for i in xrange(GC.getNumTechInfos()):
-			if GC.getPlayer(self.m_iCurrentPlayer).canResearch(i, False):
+			if GC.getPlayer(self.m_iCurrentPlayer).canResearch(i):
 				iCount += 1
 				if iCount == int(argsList[0]):
 					GC.getPlayer(self.m_iCurrentPlayer).pushResearch(i, True)
@@ -3235,7 +3235,7 @@ class CvWorldBuilderScreen:
 		iCurrentTech = 0
 		iCount = 0
 		for i in xrange(GC.getNumTechInfos()):
-			if pPlayer.canResearch(i, False):
+			if pPlayer.canResearch(i):
 				iCount += 1
 				strTest = strTest + (GC.getTechInfo(i).getDescription(),)
 				if pPlayer.getCurrentResearch() == i:

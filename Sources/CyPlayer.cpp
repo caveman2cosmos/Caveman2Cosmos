@@ -728,9 +728,9 @@ bool CyPlayer::canEverResearch(int /*TechTypes*/ eTech)
 	return m_pPlayer ? m_pPlayer->canEverResearch((TechTypes)eTech) : false;
 }
 
-bool CyPlayer::canResearch(int /*TechTypes*/ eTech, bool bTrade)
+bool CyPlayer::canResearch(int /*TechTypes*/ eTech)
 {
-	return m_pPlayer ? m_pPlayer->canResearch((TechTypes)eTech, bTrade) : false;
+	return m_pPlayer ? m_pPlayer->canResearch((TechTypes)eTech) : false;
 }
 
 int /* TechTypes */ CyPlayer::getCurrentResearch()

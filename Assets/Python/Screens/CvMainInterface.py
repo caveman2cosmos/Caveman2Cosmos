@@ -2105,7 +2105,7 @@ class CvMainInterface:
 				xStart = xywh[0] + 8
 				aMap = self.aRel2TechMap
 				for i in xrange(iTechInfos):
-					if CyPlayer.canResearch(i, False):
+					if CyPlayer.canResearch(i):
 						szName = "WID|TECH|Selection" + str(i)
 						if i in aMap:
 							if not bCanFoundReligion or GAME.countKnownTechNumTeams(i):
