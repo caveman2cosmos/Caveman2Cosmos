@@ -242,6 +242,7 @@ cvInternalGlobals::cvInternalGlobals()
 #define ADD_INT_TO_CONSTRUCTOR(dataType, VAR) \
 	, m_##VAR(0)
 	DO_FOR_EACH_INT_GLOBAL_DEFINE(ADD_INT_TO_CONSTRUCTOR)
+	DO_FOR_EACH_ENUM_GLOBAL_DEFINE(ADD_INT_TO_CONSTRUCTOR)
 	DO_FOR_EACH_FLOAT_GLOBAL_DEFINE(ADD_INT_TO_CONSTRUCTOR)
 
 #define ADD_BOOL_TO_CONSTRUCTOR(dataType, VAR) \
@@ -2655,6 +2656,13 @@ FVariableSystem* cvInternalGlobals::getDefinesVarSystem() const
 	return m_VarSystem;
 }
 
+void cvInternalGlobals::cacheEnumGlobals()
+{
+#define CACHE_ENUM_GLOBAL_DEFINE(dataType, VAR) \
+	m_##VAR = getDefineINT(#VAR);
+	DO_FOR_EACH_ENUM_GLOBAL_DEFINE(CACHE_ENUM_GLOBAL_DEFINE)
+}
+
 void cvInternalGlobals::cacheGlobals()
 {
 	OutputDebugString("Caching Globals: Start");
@@ -2780,6 +2788,7 @@ void cvInternalGlobals::setDefineINT( const char * szName, int iValue, bool bUpd
 			CvMessageControl::getInstance().sendGlobalDefineUpdate(szName, iValue, -1.0f, "");
 		else
 			GC.getDefinesVarSystem()->SetValue( szName, iValue );
+		cacheEnumGlobals();
 		cacheGlobals();
 	}
 }
@@ -2792,6 +2801,7 @@ void cvInternalGlobals::setDefineFLOAT( const char * szName, float fValue, bool 
 			CvMessageControl::getInstance().sendGlobalDefineUpdate(szName, -1, fValue, "");
 		else
 			GC.getDefinesVarSystem()->SetValue( szName, fValue );
+		cacheEnumGlobals();
 		cacheGlobals();
 	}
 }
@@ -2804,6 +2814,7 @@ void cvInternalGlobals::setDefineSTRING( const char * szName, const char * szVal
 			CvMessageControl::getInstance().sendGlobalDefineUpdate(szName, -1, -1.0f, szValue);
 		else
 			GC.getDefinesVarSystem()->SetValue( szName, szValue );
+		cacheEnumGlobals();
 		cacheGlobals(); // TO DO : we should not cache all globals at each single set
 	}
 }

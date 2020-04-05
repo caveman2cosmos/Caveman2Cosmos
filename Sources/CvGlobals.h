@@ -507,6 +507,7 @@ public:
 #define DECLARE_GET_METHOD(dataType, VAR) \
 	dataType get##VAR() const { return m_##VAR; }
 	DO_FOR_EACH_INT_GLOBAL_DEFINE(DECLARE_GET_METHOD)
+	DO_FOR_EACH_ENUM_GLOBAL_DEFINE(DECLARE_GET_METHOD)
 	DO_FOR_EACH_FLOAT_GLOBAL_DEFINE(DECLARE_GET_METHOD)
 
 #define DECLARE_BOOL_GET_METHOD(dataType, VAR) \
@@ -765,6 +766,7 @@ public:
 	//
 
 	FVariableSystem* getDefinesVarSystem() const;
+	void cacheEnumGlobals();
 	void cacheGlobals();
 
 	// ***** EXPOSED TO PYTHON *****
@@ -799,7 +801,7 @@ public:
 
 	float getPLOT_SIZE() const;
 
-  int getMAX_PC_PLAYERS() const		{ return MAX_PC_PLAYERS; }
+	int getMAX_PC_PLAYERS() const		{ return MAX_PC_PLAYERS; }
 	int getMAX_PLAYERS() const			{ return MAX_PLAYERS; }
 	int getMAX_PC_TEAMS() const			{ return MAX_PC_TEAMS; }
 	int getMAX_TEAMS() const			{ return MAX_TEAMS; }

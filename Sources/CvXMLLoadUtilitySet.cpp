@@ -394,10 +394,6 @@ bool CvXMLLoadUtility::SetPostGlobalsGlobalDefines()
 		idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("CAPITAL_BUILDING", idx);
 
-		SetGlobalDefine("DEFAULT_SPECIALIST", szVal);
-		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("DEFAULT_SPECIALIST", idx);
-
 		SetGlobalDefine("INITIAL_CITY_ROUTE_TYPE", szVal);
 		idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("INITIAL_CITY_ROUTE_TYPE", idx);
@@ -521,6 +517,13 @@ bool CvXMLLoadUtility::SetPostGlobalsGlobalDefines()
 		SetGlobalDefine("NPC0_LEADER", szVal);
 		idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("NPC0_LEADER", idx);
+
+	#define SET_ENUM_GLOBAL_DEFINE(dataType, VAR) \
+		SetGlobalDefine(#VAR, szVal); \
+		GC.getDefinesVarSystem()->SetValue(#VAR, GetInfoClass(szVal));
+		DO_FOR_EACH_ENUM_GLOBAL_DEFINE(SET_ENUM_GLOBAL_DEFINE)
+
+		GC.cacheEnumGlobals();
 
 		gDLL->ChangeINIKeyValue("CONFIG", "HideMinSpecWarning ", "1");
 		gDLL->ChangeINIKeyValue("GAME", "ModularLoading  ", "0");
