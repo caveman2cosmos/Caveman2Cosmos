@@ -509,13 +509,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=0,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=0,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=0,y=19
@@ -722,13 +724,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=0,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=0,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=0,y=57
@@ -967,13 +971,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=0,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=0,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=0,y=104
@@ -1072,13 +1078,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=0,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=0,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=0,y=123
@@ -1268,13 +1276,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=1,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=1,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=1,y=19
@@ -1490,13 +1500,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=1,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=1,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=1,y=57
@@ -1735,13 +1747,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=1,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=1,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=1,y=104
@@ -1848,13 +1862,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=1,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=1,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=1,y=123
@@ -2046,13 +2062,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=2,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=2,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=2,y=19
@@ -2254,13 +2272,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=2,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=2,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=2,y=57
@@ -2497,13 +2517,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=2,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=2,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=2,y=104
@@ -2610,13 +2632,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=2,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=2,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=2,y=123
@@ -2806,13 +2830,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=3,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=3,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=3,y=19
@@ -3009,13 +3035,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=3,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=3,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=3,y=57
@@ -3253,13 +3281,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=3,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=3,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=3,y=104
@@ -3375,13 +3405,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=3,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=3,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=3,y=123
@@ -3571,13 +3603,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=4,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=4,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=4,y=19
@@ -3775,13 +3809,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=4,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=4,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=4,y=57
@@ -4018,13 +4054,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=4,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=4,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=4,y=104
@@ -4139,13 +4177,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=4,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=4,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=4,y=123
@@ -4334,13 +4374,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=5,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=5,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=5,y=19
@@ -4542,13 +4584,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=5,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=5,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=5,y=57
@@ -4786,13 +4830,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=5,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=5,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=5,y=104
@@ -4905,13 +4951,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=5,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=5,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=5,y=123
@@ -5103,13 +5151,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=6,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=6,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=6,y=19
@@ -5311,13 +5361,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=6,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=6,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=6,y=57
@@ -5554,13 +5606,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=6,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=6,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=6,y=104
@@ -5667,13 +5721,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=6,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=6,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=6,y=123
@@ -5863,13 +5919,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=7,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=7,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=7,y=19
@@ -6071,13 +6129,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=7,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=7,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=7,y=57
@@ -6317,13 +6377,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=7,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=7,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=7,y=104
@@ -6432,13 +6494,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=7,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=7,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=7,y=123
@@ -6628,13 +6692,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=8,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=8,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=8,y=19
@@ -6842,13 +6908,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=8,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=8,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=8,y=57
@@ -7084,13 +7152,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=8,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=8,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=8,y=104
@@ -7192,13 +7262,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=8,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=8,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=8,y=123
@@ -7387,13 +7459,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=9,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=9,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=9,y=19
@@ -7607,13 +7681,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=9,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=9,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=9,y=57
@@ -7852,13 +7928,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=9,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=9,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=9,y=104
@@ -7956,13 +8034,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=9,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=9,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=9,y=123
@@ -8151,14 +8231,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=10,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=10,y=18
-	FeatureType=FEATURE_CAVES, FeatureVariety=0
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=10,y=19
@@ -8371,13 +8452,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=10,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=10,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=10,y=57
@@ -8617,13 +8700,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=10,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=10,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=10,y=104
@@ -8721,13 +8806,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=10,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=10,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=10,y=123
@@ -8917,13 +9004,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=11,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=11,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=11,y=19
@@ -9135,13 +9224,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=11,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=11,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=11,y=57
@@ -9377,13 +9468,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=11,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=11,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=11,y=104
@@ -9479,13 +9572,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=11,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=11,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=11,y=123
@@ -9676,13 +9771,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=12,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=12,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=12,y=19
@@ -9912,13 +10009,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=12,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=12,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=12,y=57
@@ -10155,13 +10254,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=12,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=12,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=12,y=104
@@ -10258,13 +10359,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=12,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=12,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=12,y=123
@@ -10455,13 +10558,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=13,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=13,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=13,y=19
@@ -10674,13 +10779,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=13,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=13,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=13,y=57
@@ -10917,13 +11024,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=13,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=13,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=13,y=104
@@ -11021,13 +11130,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=13,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=13,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=13,y=123
@@ -11218,13 +11329,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=14,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=14,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=14,y=19
@@ -11434,13 +11547,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=14,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=14,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=14,y=57
@@ -11679,13 +11794,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=14,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=14,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=14,y=104
@@ -11785,13 +11902,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=14,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=14,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=14,y=123
@@ -11982,13 +12101,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=15,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=15,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=15,y=19
@@ -12189,13 +12310,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=15,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=15,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=15,y=57
@@ -12431,13 +12554,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=15,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=15,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=15,y=104
@@ -12539,13 +12664,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=15,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=15,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=15,y=123
@@ -12736,13 +12863,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=16,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=16,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=16,y=19
@@ -12945,13 +13074,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=16,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=16,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=16,y=57
@@ -13191,13 +13322,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=16,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=16,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=16,y=104
@@ -13303,13 +13436,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=16,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=16,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=16,y=123
@@ -13499,13 +13634,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=17,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=17,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=17,y=19
@@ -13720,13 +13857,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=17,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=17,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=17,y=57
@@ -13964,13 +14103,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=17,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=17,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=17,y=104
@@ -14072,13 +14213,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=17,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=17,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=17,y=123
@@ -14270,13 +14413,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=18,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=18,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=18,y=19
@@ -14478,13 +14623,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=18,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=18,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=18,y=57
@@ -14722,13 +14869,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=18,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=18,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=18,y=104
@@ -14830,13 +14979,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=18,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=18,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=18,y=123
@@ -15025,13 +15176,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=19,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=19,y=19
@@ -15234,13 +15387,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=19,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=19,y=57
@@ -15479,13 +15634,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=19,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=19,y=104
@@ -15592,13 +15749,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=19,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=19,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=19,y=123
@@ -15787,13 +15946,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=20,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=20,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=20,y=19
@@ -16003,13 +16164,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=20,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=20,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=20,y=57
@@ -16246,13 +16409,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=20,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=20,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=20,y=104
@@ -16353,13 +16518,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=20,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=20,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=20,y=123
@@ -16548,13 +16715,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=21,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=21,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=21,y=19
@@ -16767,13 +16936,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=21,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=21,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=21,y=57
@@ -17011,13 +17182,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=21,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=21,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=21,y=104
@@ -17124,13 +17297,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=21,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=21,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=21,y=123
@@ -17321,13 +17496,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=22,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=22,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=22,y=19
@@ -17545,13 +17722,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=22,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=22,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=22,y=57
@@ -17789,13 +17968,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=22,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=22,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=22,y=104
@@ -17898,13 +18079,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=22,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=22,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=22,y=123
@@ -18094,13 +18277,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=23,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=23,y=19
@@ -18316,13 +18501,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=23,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=23,y=57
@@ -18560,13 +18747,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=23,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=23,y=104
@@ -18672,13 +18861,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=23,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=23,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=23,y=123
@@ -18868,13 +19059,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=24,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=24,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=24,y=19
@@ -19103,13 +19296,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=24,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=24,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=24,y=57
@@ -19345,13 +19540,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=24,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=24,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=24,y=104
@@ -19450,13 +19647,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=24,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=24,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=24,y=123
@@ -19646,13 +19845,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=25,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=25,y=19
@@ -19870,13 +20071,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=25,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=25,y=57
@@ -20118,13 +20321,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=25,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=25,y=104
@@ -20219,13 +20424,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=25,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=25,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=25,y=123
@@ -20415,13 +20622,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=26,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=26,y=19
@@ -20633,13 +20842,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=26,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=26,y=57
@@ -20879,13 +21090,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=26,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=26,y=104
@@ -20985,13 +21198,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=26,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=26,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=26,y=123
@@ -21184,13 +21399,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=27,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=27,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=27,y=19
@@ -21404,13 +21621,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=27,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=27,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=27,y=57
@@ -21648,13 +21867,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=27,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=27,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=27,y=104
@@ -21753,13 +21974,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=27,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=27,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=27,y=123
@@ -21948,13 +22171,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=28,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=28,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=28,y=19
@@ -22158,13 +22383,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=28,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=28,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=28,y=57
@@ -22401,13 +22628,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=28,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=28,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=28,y=104
@@ -22510,13 +22739,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=28,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=28,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=28,y=123
@@ -22706,13 +22937,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=29,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=29,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=29,y=19
@@ -22923,13 +23156,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=29,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=29,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=29,y=57
@@ -23169,13 +23404,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=29,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=29,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=29,y=104
@@ -23289,13 +23526,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=29,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=29,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=29,y=123
@@ -23485,13 +23724,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=30,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=30,y=19
@@ -23714,13 +23955,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=30,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=30,y=57
@@ -23958,13 +24201,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=30,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=30,y=104
@@ -24065,13 +24310,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=30,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=30,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=30,y=123
@@ -24261,13 +24508,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=31,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=31,y=19
@@ -24485,13 +24734,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=31,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=31,y=57
@@ -24729,13 +24980,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=31,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=31,y=104
@@ -24835,13 +25088,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=31,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=31,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=31,y=123
@@ -25032,13 +25287,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=32,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=32,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=32,y=19
@@ -25245,13 +25502,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=32,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=32,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=32,y=57
@@ -25490,13 +25749,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=32,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=32,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=32,y=104
@@ -25596,13 +25857,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=32,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=32,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=32,y=123
@@ -25793,13 +26056,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=33,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=33,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=33,y=19
@@ -26005,13 +26270,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=33,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=33,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=33,y=57
@@ -26248,13 +26515,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=33,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=33,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=33,y=104
@@ -26357,13 +26626,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=33,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=33,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=33,y=123
@@ -26553,13 +26824,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=34,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=34,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=34,y=19
@@ -26760,13 +27033,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=34,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=34,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=34,y=57
@@ -27005,13 +27280,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=34,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=34,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=34,y=104
@@ -27108,13 +27385,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=34,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=34,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=34,y=123
@@ -27303,13 +27582,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=35,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=35,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=35,y=19
@@ -27521,13 +27802,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=35,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=35,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=35,y=57
@@ -27764,13 +28047,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=35,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=35,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=35,y=104
@@ -27869,13 +28154,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=35,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=35,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=35,y=123
@@ -28068,13 +28355,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=36,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=36,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=36,y=19
@@ -28281,13 +28570,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=36,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=36,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=36,y=57
@@ -28527,13 +28818,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=36,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=36,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=36,y=104
@@ -28628,13 +28921,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=36,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=36,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=36,y=123
@@ -28824,13 +29119,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=37,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=37,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=37,y=19
@@ -29041,13 +29338,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=37,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=37,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=37,y=57
@@ -29284,13 +29583,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=37,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=37,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=37,y=104
@@ -29386,13 +29687,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=37,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=37,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=37,y=123
@@ -29582,13 +29885,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=38,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=38,y=19
@@ -29803,13 +30108,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=38,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=38,y=57
@@ -30047,13 +30354,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=38,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=38,y=104
@@ -30150,13 +30459,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=38,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=38,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=38,y=123
@@ -30345,13 +30656,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=39,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=39,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=39,y=19
@@ -30558,13 +30871,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=39,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=39,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=39,y=57
@@ -30801,13 +31116,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=39,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=39,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=39,y=104
@@ -30915,13 +31232,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=39,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=39,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=39,y=123
@@ -31112,13 +31431,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=40,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=40,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=40,y=19
@@ -31331,13 +31652,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=40,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=40,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=40,y=57
@@ -31574,13 +31897,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=40,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=40,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=40,y=104
@@ -31680,13 +32005,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=40,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=40,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=40,y=123
@@ -31876,13 +32203,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=41,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=41,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=41,y=19
@@ -32090,13 +32419,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=41,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=41,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=41,y=57
@@ -32337,13 +32668,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=41,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=41,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=41,y=104
@@ -32444,13 +32777,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=41,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=41,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=41,y=123
@@ -32639,13 +32974,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=42,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=42,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=42,y=19
@@ -32869,13 +33206,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=42,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=42,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=42,y=57
@@ -33114,13 +33453,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=42,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=42,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=42,y=104
@@ -33224,13 +33565,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=42,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=42,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=42,y=123
@@ -33421,13 +33764,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=43,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=43,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=43,y=19
@@ -33644,13 +33989,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=43,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=43,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=43,y=57
@@ -33886,13 +34233,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=43,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=43,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=43,y=104
@@ -33998,13 +34347,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=43,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=43,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=43,y=123
@@ -34193,13 +34544,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=44,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=44,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=44,y=19
@@ -34426,13 +34779,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=44,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=44,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=44,y=57
@@ -34670,13 +35025,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=44,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=44,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=44,y=104
@@ -34781,13 +35138,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=44,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=44,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=44,y=123
@@ -34977,13 +35336,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=45,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=45,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=45,y=19
@@ -35208,13 +35569,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=45,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=45,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=45,y=57
@@ -35452,13 +35815,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=45,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=45,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=45,y=104
@@ -35575,13 +35940,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=45,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=45,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=45,y=123
@@ -35771,13 +36138,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=46,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=46,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=46,y=19
@@ -35999,13 +36368,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=46,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=46,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=46,y=57
@@ -36245,13 +36616,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=46,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=46,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=46,y=104
@@ -36363,13 +36736,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=46,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=46,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=46,y=123
@@ -36559,13 +36934,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=47,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=47,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=47,y=19
@@ -36797,13 +37174,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=47,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=47,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=47,y=57
@@ -37041,13 +37420,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=47,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=47,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=47,y=104
@@ -37154,13 +37535,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=47,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=47,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=47,y=123
@@ -37351,13 +37734,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=48,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=48,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=48,y=19
@@ -37587,13 +37972,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=48,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=48,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=48,y=57
@@ -37832,13 +38219,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=48,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=48,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=48,y=104
@@ -37938,13 +38327,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=48,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=48,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=48,y=123
@@ -38134,13 +38525,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=49,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=49,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=49,y=19
@@ -38381,13 +38774,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=49,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=49,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=49,y=57
@@ -38625,13 +39020,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=49,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=49,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=49,y=104
@@ -38735,13 +39132,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=49,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=49,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=49,y=123
@@ -38932,13 +39331,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=50,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=50,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=50,y=19
@@ -39157,13 +39558,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=50,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=50,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=50,y=57
@@ -39400,13 +39803,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=50,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=50,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=50,y=104
@@ -39517,13 +39922,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=50,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=50,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=50,y=123
@@ -39714,13 +40121,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=51,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=51,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=51,y=19
@@ -39937,13 +40346,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=51,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=51,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=51,y=57
@@ -40181,13 +40592,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=51,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=51,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=51,y=104
@@ -40299,13 +40712,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=51,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=51,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=51,y=123
@@ -40497,13 +40912,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=52,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=52,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=52,y=19
@@ -40706,13 +41123,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=52,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=52,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=52,y=57
@@ -40947,13 +41366,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=52,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=52,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=52,y=104
@@ -41049,13 +41470,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=52,y=121
-	TerrainType=TERRAIN_ICE
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=52,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=52,y=123
@@ -41244,13 +41667,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=53,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=53,y=19
@@ -41450,13 +41875,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=53,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=53,y=57
@@ -41694,13 +42121,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=53,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=53,y=104
@@ -41798,13 +42227,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=53,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=53,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=53,y=123
@@ -41995,13 +42426,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=54,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=54,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=54,y=19
@@ -42200,13 +42633,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=54,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=54,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=54,y=57
@@ -42444,13 +42879,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=54,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=54,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=54,y=104
@@ -42542,13 +42979,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=54,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=54,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=54,y=123
@@ -42737,13 +43176,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=55,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=55,y=19
@@ -42943,13 +43384,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=55,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=55,y=57
@@ -43188,13 +43631,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=55,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=55,y=104
@@ -43287,13 +43732,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=55,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=55,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=55,y=123
@@ -43483,13 +43930,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=56,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=56,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=56,y=19
@@ -43686,13 +44135,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=56,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=56,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=56,y=57
@@ -43928,13 +44379,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=56,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=56,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=56,y=104
@@ -44033,13 +44486,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=56,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=56,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=56,y=123
@@ -44229,13 +44684,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=57,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=57,y=19
@@ -44432,13 +44889,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=57,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=57,y=57
@@ -44675,13 +45134,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=57,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=57,y=104
@@ -44781,13 +45242,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=57,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=57,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=57,y=123
@@ -44978,13 +45441,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=58,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=58,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=58,y=19
@@ -45197,13 +45662,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=58,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=58,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=58,y=57
@@ -45439,13 +45906,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=58,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=58,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=58,y=104
@@ -45539,13 +46008,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=58,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=58,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=58,y=123
@@ -45734,13 +46205,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=59,y=17
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=59,y=18
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=59,y=19
@@ -45945,13 +46418,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=59,y=55
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=59,y=56
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=59,y=57
@@ -46188,13 +46663,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=59,y=102
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=59,y=103
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=59,y=104
@@ -46287,13 +46764,15 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=59,y=121
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=59,y=122
-	TerrainType=TERRAIN_ROCKY
-	PlotType=0
+	FeatureType=FEATURE_ICE, FeatureVariety=0
+	TerrainType=TERRAIN_OCEAN_POLAR
+	PlotType=3
 EndPlot
 BeginPlot
 	x=59,y=123
