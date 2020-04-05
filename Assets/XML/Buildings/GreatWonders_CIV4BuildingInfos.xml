@@ -8828,7 +8828,7 @@
 			</CommerceChanges>
 			<GlobalBuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingType>BUILDING_HINDU_TEMPLE</BuildingType>
+					<BuildingType>BUILDING_BUDDHIST_TEMPLE</BuildingType>
 					<CommerceType>COMMERCE_CULTURE</CommerceType>
 					<iExtraCommerce>6</iExtraCommerce>
 				</BuildingExtraCommerce>
