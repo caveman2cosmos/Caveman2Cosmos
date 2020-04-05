@@ -1224,11 +1224,6 @@ public:
 	CLLNode<CvWString>* nextCityNameNode(CLLNode<CvWString>* pNode) const;
 	CLLNode<CvWString>* headCityNameNode() const;
 
-	int getNumMembers() const;
-	void updateMembers();
-	void addMembers();
-	void initMembers(const int iIndex);
-
 	// plot groups iteration
 	DECLARE_INDEX_ITERATOR(const CvPlayer, CvPlotGroup, plot_group_iterator, firstPlotGroup, nextPlotGroup);
 	plot_group_iterator beginPlotGroups() const { return plot_group_iterator(this); }
@@ -2247,6 +2242,7 @@ protected:
 	bool* m_pabResearchingTech;
 	bool* m_pabLoyalMember;
 
+
 	std::vector<EventTriggerTypes> m_triggersFired;
 
 	CivicTypes* m_paeCivics;
@@ -2255,15 +2251,19 @@ protected:
 	int** m_ppaaiImprovementYieldChange;
 	int** m_ppaaiSpecialistExtraCommerce;
 
+	CLinkList<int> m_groupCycle;
+
 	CLinkList<TechTypes> m_researchQueue;
 
 	CLinkList<CvWString> m_cityNames;
 
-	std::vector<CLinkList<int>*>						  m_groupCycles;
-	std::vector<FFreeListTrashArray<CvPlotGroup>*>		  m_plotGroups;
-	std::vector<FFreeListTrashArray<CvCityAI>*>			  m_cities;
-	std::vector<FFreeListTrashArray<CvUnitAI>*>			  m_units;
-	std::vector<FFreeListTrashArray<CvSelectionGroupAI>*> m_selectionGroups;
+	FFreeListTrashArray<CvPlotGroup> m_plotGroups;
+
+	FFreeListTrashArray<CvCityAI> m_cities;
+
+	FFreeListTrashArray<CvUnitAI> m_units;
+
+	FFreeListTrashArray<CvSelectionGroupAI> m_selectionGroups;
 
 	FFreeListTrashArray<EventTriggeredData> m_eventsTriggered;
 	CvEventMap m_mapEventsOccured;

@@ -12,18 +12,6 @@ CyPlayer::CyPlayer(CvPlayer* pPlayer) : m_pPlayer(pPlayer)
 {
 }
 
-void CyPlayer::updateMembers()
-{
-	if (m_pPlayer)
-		m_pPlayer->updateMembers();
-}
-
-void CyPlayer::initMembers(const int iIndex)
-{
-	if (m_pPlayer)
-		m_pPlayer->initMembers(iIndex);
-}
-
 /************************************************************************************************/
 /* CHANGE_PLAYER                         08/27/08                                 jdog5000      */
 /*                                                                                              */

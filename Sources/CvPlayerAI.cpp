@@ -1661,12 +1661,12 @@ void CvPlayerAI::AI_unitUpdate()
 	}
 
 	//	Should have the same set of groups as is represented by m_selectionGroups
-	//	as (indirectly via their head units) by m_groupCycles.  These have been seen to
+	//	as (indirectly via their head units) by m_groupCycle.  These have been seen to
 	//	get out of step, which results in a WFoC so if they contain differing member
 	//	counts go through and fix it!
 	//	Note - this is fixing a symptom rather than a cause which is distasteful, but as
 	//	yet the cause remains elusive
-	if ( m_groupCycles[MAP_INDEX]->getLength() != m_selectionGroups[MAP_INDEX]->getCount() - (m_pTempUnit == NULL ? 0 : 1) )
+	if ( m_groupCycle.getLength() != m_selectionGroups.getCount() - (m_pTempUnit == NULL ? 0 : 1) )
 	{
 		if ( m_pTempUnit != NULL )
 		{
@@ -1684,7 +1684,7 @@ void CvPlayerAI::AI_unitUpdate()
 				pLoopSelectionGroup->plot() == NULL ? -1 : pLoopSelectionGroup->plot()->getY()).c_str());
 		}
 
-		FAssert(m_selectionGroups[MAP_INDEX]->getCount() > m_groupCycles[MAP_INDEX]->getLength());	//	Other way round not seen - not handled currently
+		FAssert(m_selectionGroups.getCount() > m_groupCycle.getLength());	//	Other way round not seen - not handled currently
 
 		OutputDebugString("Selection groups:\n");
 		foreach_ (CvSelectionGroup* pLoopSelectionGroup, groups())
