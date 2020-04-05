@@ -6279,17 +6279,10 @@ bool CvPlayer::canTradeWith(PlayerTypes eWhoTo) const
 bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial) const
 {
 	CvCity *pOurCapitalCity;
-/************************************************************************************************/
-/* Afforess	                  Start		 07/29/10                                               */
-/*                                                                                              */
-/* Advanced Diplomacy                                                                           */
-/************************************************************************************************/
-    CvCity* pTheirCapitalCity;
-    CvCity* pTradingCity;
-    CvUnit* pUnitTraded;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
+	CvCity* pTheirCapitalCity;
+	CvCity* pTradingCity;
+	CvUnit* pUnitTraded;
 
 	//	KOSHLING - do denial check at the end because it's expensive and 95% of the time we detrmien the trade is
 	//	not possible before having to make the denail check that way
@@ -6298,56 +6291,29 @@ bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial
 	switch (item.m_eItemType)
 	{
 	case TRADE_TECHNOLOGIES:
-		if (!(GC.getGame().isOption(GAMEOPTION_NO_TECH_TRADING)))
-		{
-			if (GC.getTechInfo((TechTypes)(item.m_iData)).isTrade())
-			{
-				if (GET_TEAM(getTeam()).isHasTech((TechTypes)(item.m_iData)) && !(GET_TEAM(getTeam()).isNoTradeTech((TechTypes)(item.m_iData))))
-				{
-					if (!GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).isHasTech((TechTypes)(item.m_iData)))
-					{
-						//if (GET_PLAYER(eWhoTo).isHuman() || (GET_PLAYER(eWhoTo).getCurrentResearch() != item.m_iData))
-						{
-							if (GET_TEAM(getTeam()).isTechTrading() && GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).isTechTrading())
-							{
-								FAssertMsg(item.m_iData >= 0, "item.m_iData is expected to be non-negative (invalid Index)");
+		FAssertMsg(item.m_iData >= 0, "item.m_iData is expected to be non-negative (invalid Index)");
 
-								if (GET_PLAYER(eWhoTo).canResearch(((TechTypes)item.m_iData), true))
-								{
-									bResult = true;
-								}
-							}
-						}
-					}
-				}
-			}
+		if (!GC.getGame().isOption(GAMEOPTION_NO_TECH_TRADING) && GC.getTechInfo((TechTypes)item.m_iData).isTrade()
+		&& GET_TEAM(getTeam()).isHasTech((TechTypes)item.m_iData) && !GET_TEAM(getTeam()).isNoTradeTech((TechTypes)item.m_iData)
+		&& !GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).isHasTech((TechTypes)item.m_iData)
+		&& GET_TEAM(getTeam()).isTechTrading() && GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).isTechTrading()
+		&& GET_PLAYER(eWhoTo).canResearch((TechTypes)item.m_iData, true))
+		{
+			bResult = true;
 		}
 		break;
 
 	case TRADE_RESOURCES:
 		FAssertMsg(item.m_iData > -1, "iData is expected to be non-negative");
 
-		if (canTradeNetworkWith(eWhoTo))
+		if (GC.getDefineINT("CAN_TRADE_RESOURCES") > 0 && canTradeNetworkWith(eWhoTo)
+		&& !GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).isBonusObsolete((BonusTypes)item.m_iData)
+		&& !GET_TEAM(getTeam()).isBonusObsolete((BonusTypes)item.m_iData))
 		{
-			if (!GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).isBonusObsolete((BonusTypes) item.m_iData) && !GET_TEAM(getTeam()).isBonusObsolete((BonusTypes) item.m_iData))
+			bool bCanTradeAll = (isHuman() || getTeam() == GET_PLAYER(eWhoTo).getTeam() || GET_TEAM(getTeam()).isVassal(GET_PLAYER(eWhoTo).getTeam()));
+			if (getNumTradeableBonuses((BonusTypes) item.m_iData) > (bCanTradeAll ? 0 : 1))
 			{
-				bool bCanTradeAll = (isHuman() || getTeam() == GET_PLAYER(eWhoTo).getTeam() || GET_TEAM(getTeam()).isVassal(GET_PLAYER(eWhoTo).getTeam()));
-				if (getNumTradeableBonuses((BonusTypes) item.m_iData) > (bCanTradeAll ? 0 : 1))
-				{
-/************************************************************************************************/
-/* Afforess	                  Start		 05/15/10                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-					if (GC.getDefineINT("CAN_TRADE_RESOURCES") > 0)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-					// if (GET_PLAYER(eWhoTo).getNumAvailableBonuses(eBonus) == 0)
-					{
-						bResult = true;
-					}
-				}
+				bResult = true;
 			}
 		}
 		break;
@@ -6360,39 +6326,23 @@ bool CvPlayer::canTradeItem(PlayerTypes eWhoTo, TradeData item, bool bTestDenial
 			{
 				bResult = true;
 			}
-			else
+			else if (GC.getDefineINT("CAN_TRADE_CITIES") > 0 && 0 == GC.getGame().getMaxCityElimination()
+			&& !GET_TEAM(getTeam()).isAVassal() && !GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).isVassal(getTeam()))
 			{
-				if (0 == GC.getGame().getMaxCityElimination())
+				pOurCapitalCity = getCapitalCity();
+				if (pOurCapitalCity != NULL && pOurCapitalCity->getID() != item.m_iData)
 				{
-					if (!GET_TEAM(getTeam()).isAVassal() && !GET_TEAM(GET_PLAYER(eWhoTo).getTeam()).isVassal(getTeam()))
-					{
-						pOurCapitalCity = getCapitalCity();
-						if (pOurCapitalCity != NULL)
-						{
-							if (pOurCapitalCity->getID() != item.m_iData)
-							{
-							/************************************************************************************************/
-							/* Afforess	                  Start		 05/15/10                                                */
-							/*                                                                                              */
-							/*                                                                                              */
-							/************************************************************************************************/
-							if (GC.getDefineINT("CAN_TRADE_CITIES") > 0)
-							/************************************************************************************************/
-							/* Afforess	                     END                                                            */
-							/************************************************************************************************/
-								bResult = true;
-							}
-						}
-					}
+					bResult = true;
 				}
 			}
 		}
 		break;
 
-    case TRADE_WORKER:
-        {
-            pUnitTraded = getUnit(item.m_iData);
-            pTheirCapitalCity = GET_PLAYER(eWhoTo).getCapitalCity();
+	case TRADE_WORKER:
+		{
+			pUnitTraded = getUnit(item.m_iData);
+			pTheirCapitalCity = GET_PLAYER(eWhoTo).getCapitalCity();
+
 			if (pUnitTraded != NULL && pTheirCapitalCity != NULL
 			&& GC.getGame().isOption(GAMEOPTION_ADVANCED_DIPLOMACY)
 			&& GC.getDefineINT("CAN_TRADE_WORKERS") > 0
@@ -10082,18 +10032,12 @@ bool CvPlayer::canEverResearch(TechTypes eTech) const
 	{
 		return false;
 	}
-/************************************************************************************************/
-/* Afforess	                  Start		 04/01/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	if (!GC.getGame().canEverResearch(eTech))
 	{
 		return false;
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 	//TB Degug Note:
 	//Since the setting of which tech to research only considers canEverResearch
 	//due to the need to be able to set a tech that can't CURRENTLY be researched due to tech prereqs for the sake of beelining,
@@ -10104,19 +10048,12 @@ bool CvPlayer::canEverResearch(TechTypes eTech) const
 	{
 		return false;
 	}
-	//endnote
-/************************************************************************************************/
-/* Afforess	                  Start		 04/01/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+	// ! TB
+
 	if (!hasValidBuildings(eTech))
 	{
 		return false;
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	if (GC.getTechInfo(eTech).isGlobal() && GC.getGame().countKnownTechNumTeams(eTech) > 0)
 	{
@@ -10134,33 +10071,12 @@ bool CvPlayer::canEverResearch(TechTypes eTech) const
 			}
 		}
 	}
-
-	if(GC.getUSE_CANNOT_RESEARCH_CALLBACK())
-	{
-		if (Cy::call<bool>(PYGameModule, "cannotResearch", Cy::Args() << getID() << eTech << false))
-		{
-			return false;
-		}
-	}
-
 	return true;
 }
 
 
 bool CvPlayer::canResearch(TechTypes eTech, bool bTrade) const
 {
-	bool bFoundPossible;
-	bool bFoundValid;
-	int iI;
-
-	if(GC.getUSE_CAN_RESEARCH_CALLBACK())
-	{
-		if (Cy::call<bool>(PYGameModule, "canResearch", Cy::Args() << getID() << eTech << bTrade))
-		{
-			return true;
-		}
-	}
-
 	if (!isResearch() && getAdvancedStartPoints() < 0)
 	{
 		return false;
@@ -10171,33 +10087,29 @@ bool CvPlayer::canResearch(TechTypes eTech, bool bTrade) const
 		return false;
 	}
 
-	bFoundPossible = false;
-	bFoundValid = false;
-
-	for (iI = 0; iI < GC.getNUM_OR_TECH_PREREQS(); iI++)
+	bool bOk = true;
+	for (int iI = 0; iI < GC.getNUM_OR_TECH_PREREQS(); iI++)
 	{
-		TechTypes ePrereq = (TechTypes)GC.getTechInfo(eTech).getPrereqOrTechs(iI);
+		const TechTypes ePrereq = (TechTypes)GC.getTechInfo(eTech).getPrereqOrTechs(iI);
 		if (ePrereq != NO_TECH)
 		{
-			bFoundPossible = true;
+			bOk = false;
 
-			if (GET_TEAM(getTeam()).isHasTech(ePrereq))
+			if (!GET_TEAM(getTeam()).isHasTech(ePrereq)
+			|| bTrade && !GC.getGame().isOption(GAMEOPTION_NO_TECH_BROKERING) && GET_TEAM(getTeam()).isNoTradeTech(ePrereq))
 			{
-				if (!bTrade || GC.getGame().isOption(GAMEOPTION_NO_TECH_BROKERING) || !GET_TEAM(getTeam()).isNoTradeTech(ePrereq))
-				{
-					bFoundValid = true;
-					break;
-				}
+				continue;
 			}
+			bOk = true;
+			break;
 		}
 	}
-
-	if (bFoundPossible && !bFoundValid)
+	if (!bOk)
 	{
 		return false;
 	}
 
-	for (iI = 0; iI < GC.getNUM_AND_TECH_PREREQS(); iI++)
+	for (int iI = 0; iI < GC.getNUM_AND_TECH_PREREQS(); iI++)
 	{
 		TechTypes ePrereq = (TechTypes)GC.getTechInfo(eTech).getPrereqAndTechs(iI);
 		if (ePrereq != NO_TECH && canEverResearch(ePrereq))
@@ -15218,20 +15130,11 @@ PlayerTypes CvPlayer::getParent() const
 
 void CvPlayer::setParent(PlayerTypes eParent)
 {
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      09/03/09                       poyuzhe & jdog5000     */
-/*                                                                                              */
-/* Efficiency                                                                                   */
-/************************************************************************************************/
-	// From Sanguo Mod Performance, ie the CAR Mod
 	// Attitude cache
 	if (m_eParent != eParent)
 	{
 		GET_PLAYER(getID()).AI_invalidateAttitudeCache(eParent);
 	}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 	m_eParent = eParent;
 }
 
@@ -15255,83 +15158,56 @@ void CvPlayer::updateTeamType()
 void CvPlayer::setTeam(TeamTypes eTeam)
 {
 	FAssert(eTeam != NO_TEAM);
-	FAssert(getTeam() != NO_TEAM);
-/************************************************************************************************/
-/* Afforess	                  Start		 07/19/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	TeamTypes eOldTeam = getTeam();
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-	GET_TEAM(getTeam()).changeNumMembers(-1);
+
+	FAssert(eOldTeam != NO_TEAM);
+
 	if (isAlive())
 	{
-		GET_TEAM(getTeam()).changeAliveCount(-1);
+		GET_TEAM(eOldTeam).changeAliveCount(-1);
 	}
 	if (isEverAlive())
 	{
-		GET_TEAM(getTeam()).changeEverAliveCount(-1);
+		GET_TEAM(eOldTeam).changeEverAliveCount(-1);
 	}
-	GET_TEAM(getTeam()).changeNumCities(-(getNumCities()));
-	GET_TEAM(getTeam()).changeTotalPopulation(-(getTotalPopulation()));
-	GET_TEAM(getTeam()).changeTotalLand(-(getTotalLand()));
+	GET_TEAM(eOldTeam).changeNumMembers(-1);
+	GET_TEAM(eOldTeam).changeNumCities(-(getNumCities()));
+	GET_TEAM(eOldTeam).changeTotalPopulation(-(getTotalPopulation()));
+	GET_TEAM(eOldTeam).changeTotalLand(-(getTotalLand()));
 
 	GC.getInitCore().setTeam(getID(), eTeam);
 
-	GET_TEAM(getTeam()).changeNumMembers(1);
 	if (isAlive())
 	{
-		GET_TEAM(getTeam()).changeAliveCount(1);
+		GET_TEAM(eTeam).changeAliveCount(1);
 	}
 	if (isEverAlive())
 	{
-		GET_TEAM(getTeam()).changeEverAliveCount(1);
+		GET_TEAM(eTeam).changeEverAliveCount(1);
 	}
-	GET_TEAM(getTeam()).changeNumCities(getNumCities());
-	GET_TEAM(getTeam()).changeTotalPopulation(getTotalPopulation());
-	GET_TEAM(getTeam()).changeTotalLand(getTotalLand());
-/************************************************************************************************/
-/* Afforess	                  Start		 07/19/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	bool bAddedMembers = GET_TEAM(eOldTeam).getNumMembers() < GET_TEAM(getTeam()).getNumMembers();
-	CvEventReporter::getInstance().addTeam(eOldTeam, getTeam(), bAddedMembers);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      09/03/09                       poyuzhe & jdog5000     */
-/*                                                                                              */
-/* Efficiency                                                                                   */
-/************************************************************************************************/
-	// From Sanguo Mod Performance, ie the CAR Mod
+	GET_TEAM(eTeam).changeNumMembers(1);
+	GET_TEAM(eTeam).changeNumCities(getNumCities());
+	GET_TEAM(eTeam).changeTotalPopulation(getTotalPopulation());
+	GET_TEAM(eTeam).changeTotalLand(getTotalLand());
+
+	CvEventReporter::getInstance().changeTeam(eOldTeam, eTeam);
+
 	// Attitude cache
 	if (GC.getGame().isFinalInitialized())
 	{
 		for (int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
-			if( GET_PLAYER((PlayerTypes)iI).isAlive() )
+			if (GET_PLAYER((PlayerTypes)iI).isAlive())
 			{
 				GET_PLAYER(getID()).AI_invalidateAttitudeCache((PlayerTypes)iI);
 				GET_PLAYER((PlayerTypes)iI).AI_invalidateAttitudeCache(getID());
 			}
 		}
 	}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 }
 
 
-/************************************************************************************************/
-/* REVOLUTIONDCM_MOD                         02/04/08                            Glider1        */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-// RevolutionDCM start - new diplomacy option
 void CvPlayer::setDoNotBotherStatus(PlayerTypes playerID)
 {
 	m_bDoNotBotherStatus = playerID;
@@ -15341,10 +15217,6 @@ bool CvPlayer::isDoNotBotherStatus(PlayerTypes playerID) const
 {
 	return m_bDoNotBotherStatus == playerID;
 }
-// RevolutionDCM end
-/************************************************************************************************/
-/* REVOLUTIONDCM_MOD                         END                                 Glider1        */
-/************************************************************************************************/
 
 
 PlayerColorTypes CvPlayer::getPlayerColor() const
@@ -27293,11 +27165,7 @@ bool CvPlayer::splitEmpire(int iAreaId)
 	return true;
 }
 
-/************************************************************************************************/
-/* REVOLUTION_MOD                         11/15/08                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 // Add ePlayer's cities, units, techs, etc to this player
 bool CvPlayer::assimilatePlayer(PlayerTypes ePlayer)
 {
@@ -27400,9 +27268,7 @@ bool CvPlayer::assimilatePlayer(PlayerTypes ePlayer)
 
 	return true;
 }
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+
 
 bool CvPlayer::isValidTriggerReligion(const CvEventTriggerInfo& kTrigger, CvCity* pCity, ReligionTypes eReligion) const
 {
@@ -27456,7 +27322,6 @@ bool CvPlayer::isValidTriggerReligion(const CvEventTriggerInfo& kTrigger, CvCity
 			}
 		}
 	}
-
 	return true;
 }
 
