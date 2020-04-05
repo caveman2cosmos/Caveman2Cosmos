@@ -6484,7 +6484,7 @@
 		<Tag>TXT_KEY_PROMOTION_COST_MODIFIER_TEXT</Tag>
 		<English>[ICON_BULLET]Unit Support Cost: %D1_Change%</English>
 		<French>[ICON_BULLET]%D1_Change% Modif. du coût d'entretien</French>
-		<German>[ICON_BULLET]Unterhaltskosten: %D1_Change%</German>
+		<German>[ICON_BULLET]laufende Kosten: %D1_Change%</German>
 		<Polish>[ICON_BULLET]%D1_Change% Modyfikator Kosztów Utrzymania</Polish>
 	</TEXT>
 	<TEXT>
@@ -6687,21 +6687,25 @@
 		<Tag>TXT_KEY_PROMOTION_CULTURE_AFRICAN</Tag>
 		<English>African</English>
 		<French>Africain</French>
+		<German>Afrika</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURE_ASIAN</Tag>
 		<English>Asian</English>
 		<French>Asiatique</French>
+		<German>Asien</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURE_EUROPEAN</Tag>
 		<English>European</English>
 		<French>Européen</French>
+		<German>Europa</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURE_MIDDLE_EASTERN</Tag>
 		<English>Middle Eastern</English>
 		<French>Moyen-Orient</French>
+		<German>Naher Osten</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURE_NEANDERTHAL</Tag>
@@ -6711,11 +6715,13 @@
 		<Tag>TXT_KEY_PROMOTION_CULTURE_NORTH_AMERICAN</Tag>
 		<English>North American</English>
 		<French>Nord-américain</French>
+		<German>Nordamerika</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURE_OCEANIAN</Tag>
 		<English>Oceanian</English>
 		<French>Océanique</French>
+		<German>Ozeanien</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CULTURE_PILLAGE_TEXT</Tag>
@@ -6728,6 +6734,7 @@
 		<Tag>TXT_KEY_PROMOTION_CULTURE_SOUTH_AMERICAN</Tag>
 		<English>South American</English>
 		<French>Sud-américain</French>
+		<German>Südamerika</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_CURE_AFFLICTION_TEXT</Tag>
@@ -9352,11 +9359,13 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Stammeswächter</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_GUARDIAN_TRIBAL_HELP</Tag>
 		<English>A Tribal Guardian will appear when a city is founded by this unit.[NEWLINE]It will inherit the XP of this unit.</English>
 		<French>Un Gardien Tribal apparaîtra lorsqu'une ville est fondée.[NEWLINE]Il hérite de l'expérience de cette unité.</French>
+		<German>In einer von dieser Einheit gegründeten Stadt wird automatisch ein Stammeswächter stationiert, der ihre bis dahin gesammelten EP übernimmt.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_GUERILLA1</Tag>

@@ -2632,6 +2632,11 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_BAND</Tag>
 		<English>Band of Australopithecus</English>
 		<French>Bande d'Australopithèques</French>
+		<German>
+			<Text>Australopithecus-Horde:Australopithecus-Horde:Australopithecus-Horde:Australopithecus-Horde:Australopithecus-Horden:Australopithecus-Horden:Australopithecus-Horden:Australopithecus-Horden</Text>
+			<Gender>female:female:female:female:female:female:female:female</Gender>
+			<Plural>0:0:0:0:1:1:1:1</Plural>
+		</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BANDEIRANTE_PEDIA</Tag>
@@ -2719,7 +2724,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_BAND_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Band[COLOR_REVERT] settles your first city.</English>
 		<French>Ce [COLOR_UNIT_TEXT]Groupe[COLOR_REVERT] d'humains va établir votre première ville.</French>
-		<German>Die [COLOR_UNIT_TEXT]Homo-sapiens-Horde[COLOR_REVERT] gründet die erste Stadt Eurer Zivilisation und sollte vorher gut vor Angriffen geschützt werden.</German>
+		<German>Die [COLOR_UNIT_TEXT]Australopithecus-Horde[COLOR_REVERT] gründet die erste Stadt Eurer Zivilisation und sollte vorher gut vor Angriffen geschützt werden.</German>
 		<Spanish>Este [COLOR_UNIT_TEXT]Grupo de Homo sapiens[COLOR_REVERT] establecerá tu primera ciudad.</Spanish>
 		<Polish>Zakłada pierwsze miasto.</Polish>
 	</TEXT>
@@ -5561,21 +5566,21 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_COST_MODIFIER</Tag>
 		<English>[ICON_BULLET]Unit Support Cost: %D1_Amount%.</English>
 		<French>[ICON_BULLET]Le coût d'entretien de cette unité est modifié de %D1_Amount%.</French>
-		<German>[ICON_BULLET]Unterhaltskosten: %D1_Amount%</German>
+		<German>[ICON_BULLET]laufende Kosten: %D1_Amount%</German>
 		<Polish>[ICON_BULLET]Koszt Wsparcia dla tej jednostki modyfikowany przez: %D1_Amount%.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COST_MODIFIER_TOTAL_MODIFIER</Tag>
 		<English>[ICON_BULLET]Unit Support Cost: %D1_Amount%</English>
 		<French>[ICON_BULLET]Modif. du coût d'entretien: Coût modifié de %D1_Amount%</French>
-		<German>[ICON_BULLET]Unterhaltskosten: %D1_Amount%</German>
+		<German>[ICON_BULLET]laufende Kosten: %D1_Amount%</German>
 		<Polish>[ICON_BULLET]Modyfikator Kosztu Wsparcia: Koszt Wsparcia Jednostki modyfikowany przez %D1_Amount%</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COST_MODIFIER_TOTAL_SHORT</Tag>
 		<English>[ICON_BULLET]Unit Support Cost: %d1_Amount%</English>
 		<French>[ICON_BULLET]Modif. du coût d'entretien: %d1_Amount%</French>
-		<German>[ICON_BULLET]Unterhaltskosten: %d1_Amount%</German>
+		<German>[ICON_BULLET]laufende Kosten: %d1_Amount%</German>
 		<Polish>[ICON_BULLET]Modyfikator Kosztu Wsparcia: %d1_Amount%</Polish>
 	</TEXT>
 	<TEXT>

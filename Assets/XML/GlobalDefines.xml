@@ -107,10 +107,6 @@
 		<DefineTextVal>IMPROVEMENT_WATER_WORKED</DefineTextVal>
 	</Define>
 	<Define>
-		<DefineName>RUINS_IMPROVEMENT</DefineName>
-		<DefineTextVal>IMPROVEMENT_CITY_RUINS</DefineTextVal>
-	</Define>
-	<Define>
 		<DefineName>NUKE_FEATURE</DefineName>
 		<DefineTextVal>FEATURE_FALLOUT</DefineTextVal>
 	</Define>

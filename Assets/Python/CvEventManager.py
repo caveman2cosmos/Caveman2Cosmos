@@ -933,7 +933,7 @@ class CvEventManager:
 				iX = CyUnitL.getX()
 				iY = CyUnitL.getY()
 			CyUnit = CyPlayerL.initUnit(iUnit, iX, iY, UnitAITypes.NO_UNITAI, DirectionTypes.DIRECTION_NORTH)
-			CyUnit.convert(CyUnitL)
+			CyUnit.convert(CyUnitL, True)
 			CyUnit.setDamage(GAME.getSorenRandNum(40, "Damage") + 20, -1)
 
 			CyUnit.finishMoves()

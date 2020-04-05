@@ -14,10 +14,10 @@ CyUnit::CyUnit(CvUnit* pUnit) : m_pUnit(pUnit)
 
 }
 
-void CyUnit::convert(CyUnit* pUnit)
+void CyUnit::convert(CyUnit* pUnit, const bool bKillOriginal)
 {
 	if (m_pUnit)
-		m_pUnit->convert(pUnit->getUnit());
+		m_pUnit->convert(pUnit->getUnit(), bKillOriginal);
 }
 
 void CyUnit::kill(bool bDelay, int /*PlayerTypes*/ ePlayer)

@@ -236,7 +236,7 @@ class MoreCiv4lertsEvent(AbstractMoreCiv4lertsEvent):
 			for CyPlayerX in TradeUtil.getTechTradePartners(CyPlayer):
 				techsToTrade = set()
 				for iTech in range(iTotalTechs):
-					if bCheck1 and CyPlayer.canResearch(iTech, True):
+					if bCheck1 and CyPlayer.canResearch(iTech):
 						researchTechs.add(iTech)
 					tradeData.iData = iTech
 					if CyPlayerX.canTradeItem(iPlayer, tradeData, False):

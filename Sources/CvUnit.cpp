@@ -1023,19 +1023,22 @@ void CvUnit::setupGraphical()
 }
 
 
-void CvUnit::convert(CvUnit* pUnit)
+// Toffer - 04.04.20
+// bKillOriginal is only used by worldbuilder at this time, when duplicating unit and changing unit owner.
+// Reason is that delayed death does not happen before exiting worldbuilder, and
+// it's messy to have a bunch of units on the map marked for death with no idea which ones that are marked.
+// Also reduce the amount of code needed to process to duplicate a unit, as it doesn't have to call convert twice when keeping the original.
+void CvUnit::convert(CvUnit* pUnit, const bool bKillOriginal)
 {
 	PROFILE_FUNC();
 
-	CvPlot* pPlot = plot();
-
-	pUnit->setFortifyTurns(0);
+	setFortifyTurns(0);
 
 	if (GC.getGame().isOption(GAMEOPTION_SIZE_MATTERS))
 	{
 		int iTotalGroupOffset = 0;
 		int iTotalQualityOffset = 0;
-		bool bSet = false;
+
 		for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 		{
 			if (pUnit->isHasPromotion((PromotionTypes)iI) && GC.getPromotionInfo((PromotionTypes)iI).getGroupChange() != 0)
@@ -1046,21 +1049,21 @@ void CvUnit::convert(CvUnit* pUnit)
 			{
 				iTotalQualityOffset += GC.getPromotionInfo((PromotionTypes)iI).getQualityChange();
 			}
-			else
+			else //see note below on this situation with true for bDying
 			{
-				setHasPromotion(((PromotionTypes)iI), (pUnit->isHasPromotion((PromotionTypes)iI) || m_pUnitInfo->getFreePromotions(iI)), pUnit->isPromotionFree((PromotionTypes)iI), true);//see note below on this situation with true for bDying
+				setHasPromotion(((PromotionTypes)iI), (pUnit->isHasPromotion((PromotionTypes)iI) || m_pUnitInfo->getFreePromotions(iI)), pUnit->isPromotionFree((PromotionTypes)iI), true);
 			}
 		}
 		checkPromotionObsoletion();
 		checkFreetoCombatClass();
 
-		bool bNormalizedGroup = CvUnit::normalizeUnitPromotions(this, iTotalGroupOffset,
+		const bool bNormalizedGroup = CvUnit::normalizeUnitPromotions(this, iTotalGroupOffset,
 			bst::bind(&CvUnit::isGroupUpgradePromotion, this, _2),
 			bst::bind(&CvUnit::isGroupDowngradePromotion, this, _2)
 		);
 		FAssertMsg(bNormalizedGroup, "Could not apply required number of group promotions on converted unit");
 
-		bool bNormalizedQuality = CvUnit::normalizeUnitPromotions(this, iTotalQualityOffset,
+		const bool bNormalizedQuality = CvUnit::normalizeUnitPromotions(this, iTotalQualityOffset,
 			bst::bind(&CvUnit::isQualityUpgradePromotion, this, _2),
 			bst::bind(&CvUnit::isQualityDowngradePromotion, this, _2)
 		);
@@ -1068,18 +1071,17 @@ void CvUnit::convert(CvUnit* pUnit)
 
 		checkFreetoCombatClass();
 	}
-
 	else
 	{
 		for (int iI = 0; iI < GC.getNumPromotionInfos(); iI++)
 		{
-			setHasPromotion(((PromotionTypes)iI), (pUnit->isHasPromotion((PromotionTypes)iI) || m_pUnitInfo->getFreePromotions(iI)), pUnit->isPromotionFree((PromotionTypes)iI), true);//bDying is set to true to temporarily avoid obsoletion checks until AFTER all promos are assigned as sometimes promos would be lost because prereqs simply weren't assigned yet due to the order in which they were established.
+			// TB - bDying is set to true to temporarily avoid obsoletion checks until AFTER all promos are assigned
+			// as sometimes promos would be lost because prereqs simply weren't assigned yet due to the order in which they were established.
+			setHasPromotion(((PromotionTypes)iI), (pUnit->isHasPromotion((PromotionTypes)iI) || m_pUnitInfo->getFreePromotions(iI)), pUnit->isPromotionFree((PromotionTypes)iI), true);
 		}
 		checkPromotionObsoletion();
 		checkFreetoCombatClass();
 	}
-
-
 	doSetFreePromotions(true);
 	//TB Combat Mod end
 
@@ -1087,16 +1089,14 @@ void CvUnit::convert(CvUnit* pUnit)
 	{
 		setCityOfOrigin(pUnit->getCityOfOrigin());
 	}
-
 	setGameTurnCreated(pUnit->getGameTurnCreated());
 
-	int iCurrentHPCap = pUnit->maxHitPoints()-1;
-	int iDamage = std::min(iCurrentHPCap, pUnit->getDamage());
-	int iColdDamage = std::min(iCurrentHPCap, pUnit->getColdDamage());
-	setDamage(iDamage);
+	const int iCurrentHPCap = pUnit->maxHitPoints()-1;
+	setDamage(std::min(iCurrentHPCap, pUnit->getDamage()));
 	//TB Combat Mod next line
-	setColdDamage(iColdDamage);
+	setColdDamage(std::min(iCurrentHPCap, pUnit->getColdDamage()));
 	setMoves(pUnit->getMoves());
+	setImmobileTimer(pUnit->getImmobileTimer());
 
 	m_eOriginalOwner = pUnit->getOriginalOwner();
 	m_eNewDomainCargo = pUnit->getDomainCargo();
@@ -1109,39 +1109,21 @@ void CvUnit::convert(CvUnit* pUnit)
 	setAutoPromoting(pUnit->isAutoPromoting());
 	setAutoUpgrading(pUnit->isAutoUpgrading());
 	m_eCurrentBuildUpType = NO_PROMOTIONLINE;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 	setLevel(pUnit->getLevel());
-	int iOldModifier = std::max(1, 100 + GET_PLAYER(pUnit->getOwner()).getLevelExperienceModifier());
-	int iOurModifier = std::max(1, 100 + GET_PLAYER(getOwner()).getLevelExperienceModifier());
+	const int iOldModifier = std::max(1, 100 + GET_PLAYER(pUnit->getOwner()).getLevelExperienceModifier());
+	const int iOurModifier = std::max(1, 100 + GET_PLAYER(getOwner()).getLevelExperienceModifier());
 	setExperience(std::max(0, (pUnit->getExperience() * iOurModifier) / iOldModifier));
 
 	setName(pUnit->getNameNoDesc());
-// BUG - Unit Name - start
+
 	if (pUnit->isDescInName() && getBugOptionBOOL("MiscHover__UpdateUnitNameOnUpgrade", true, "BUG_UPDATE_UNIT_NAME_ON_UPGRADE"))
 	{
-/************************************************************************************************/
-/* Afforess	                  Start		 08/24/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/*
-		CvWString szUnitType(pUnit->m_pUnitInfo->getDescription());
-
-		m_szName.replace(m_szName.find(szUnitType), szUnitType.length(), m_pUnitInfo->getDescription());
-*/
 		CvWString szUnitType(pUnit->getDescription());
 
 		m_szName.replace(m_szName.find(szUnitType), szUnitType.length(), getDescription());
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-
-		//szUnitType.Format(L"%s", pUnit->m_pUnitInfo->getDescription());
-
 	}
-// BUG - Unit Name - end
+
 	if (pUnit->getLeaderUnitType() != NO_UNIT)
 	{
 		setLeaderUnitType(pUnit->getLeaderUnitType());
@@ -1179,35 +1161,34 @@ void CvUnit::convert(CvUnit* pUnit)
 				aCargoUnits[i]->jumpToNearestValidPlot();
 			}
 		}
+		else if (cargoSpaceAvailable(aCargoUnits[i]->getSpecialUnitType(), aCargoUnits[i]->getDomainType()) > 0)
+		{
+			aCargoUnits[i]->setTransportUnit(NULL);
+			aCargoUnits[i]->setTransportUnit(this);
+		}
 		else
 		{
-			if (cargoSpaceAvailable(aCargoUnits[i]->getSpecialUnitType(), aCargoUnits[i]->getDomainType()) > 0)
-			{
-				aCargoUnits[i]->setTransportUnit(NULL);
-				aCargoUnits[i]->setTransportUnit(this);
-			}
-			else
-			{
-				aCargoUnits[i]->setTransportUnit(NULL);
-				aCargoUnits[i]->jumpToNearestValidPlot();
-			}
+			aCargoUnits[i]->setTransportUnit(NULL);
+			aCargoUnits[i]->jumpToNearestValidPlot();
 		}
 	}
 	validateCargoUnits();
 
-	pUnit->getGroup()->AI_setMissionAI(MISSIONAI_DELIBERATE_KILL, NULL, NULL);
-	pUnit->kill(true, NO_PLAYER, true);
+	if (bKillOriginal)
+	{
+		pUnit->getGroup()->AI_setMissionAI(MISSIONAI_DELIBERATE_KILL, NULL, NULL);
+		pUnit->kill(true, NO_PLAYER, true);
+	}
 }
 
 
 void CvUnit::kill(bool bDelay, PlayerTypes ePlayer, bool bMessaged)
 {
 	//	If it's already dead (but delayed death in process) don't try to re-kill it
-	if ( m_bDeathDelay )
+	if (m_bDeathDelay)
 	{
 		return;
 	}
-
 	killUnconditional(bDelay, ePlayer, bMessaged);
 }
 
@@ -12554,10 +12535,7 @@ bool CvUnit::awardSpyExperience(TeamTypes eTargetTeam, int iModifier)
 }
 //TSHEEP End
 
-/************************************************************************************************/
-/* RevolutionDCM                               04/19/09                           Glider1       */
-/************************************************************************************************/
-//RevolutionDCM - Super Spies
+
 bool CvUnit::canAssassin(const CvPlot* pPlot, bool bTestVisible) const
 {
 	if (isDelayedDeath())
@@ -12681,10 +12659,7 @@ bool CvUnit::canBribe(const CvPlot* pPlot, bool bTestVisible) const
 
 	return true;
 }
-// RevolutionDCM end
-/************************************************************************************************/
-/* RevolutionDCM                               END                               Glider1       */
-/************************************************************************************************/
+
 
 bool CvUnit::espionage(EspionageMissionTypes eMission, int iData)
 {
@@ -12721,21 +12696,13 @@ bool CvUnit::espionage(EspionageMissionTypes eMission, int iData)
 			return false;
 		}
 
-/************************************************************************************************/
-/* Afforess	                  Start		 01/31/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 		bool bCaught = testSpyIntercepted(eTargetPlayer, GC.getDefineINT("ESPIONAGE_SPY_MISSION_ESCAPE_MOD"));
 
 		if (GET_PLAYER(getOwner()).doEspionageMission(eMission, eTargetPlayer, plot(), iData, this, (bCaught && !isAlwaysHeal())))
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 		{
 			//	If it died in the mission (e.g. - nuke and blew itself up) then nothing else
 			//	needs doing
-			if ( !isDelayedDeath() )
+			if (!isDelayedDeath())
 			{
 				if (plot()->isActiveVisible(false))
 				{
@@ -12748,47 +12715,35 @@ bool CvUnit::espionage(EspionageMissionTypes eMission, int iData)
 					setMadeAttack(true);
 					finishMoves();
 
-					CvCity* pCapital = GET_PLAYER(getOwner()).getCapitalCity();
-	/************************************************************************************************/
-	/* Afforess	                  Start		 07/12/10                                               */
-	/*                                                                                              */
-	/*Spy actions that aren't in a city don't cause the spy to be sent back                         */
-	/************************************************************************************************/
-					if (GC.getGame().isOption(GAMEOPTION_ADVANCED_ESPIONAGE))
+					// Afforess 07/12/10
+					// Spy actions that aren't in a city don't cause the spy to be sent back
+					if (plot()->isCity())
 					{
-						if (!plot()->isCity())
+						const CvCity* pCapital = GET_PLAYER(getOwner()).getCapitalCity();
+
+						if (NULL != pCapital)
 						{
-							pCapital = NULL;
+							if (!pCapital->isInViewport())
+							{
+								GC.getCurrentViewport()->bringIntoView(pCapital->getX(), pCapital->getY(), NULL, true, true);
+							}
+							//GC.getGame().logOOSSpecial(20, getID(), pCapital->getX(), pCapital->getY());
+							setXY(pCapital->getX(), pCapital->getY(), false, false, false);
+
+							MEMORY_TRACK_EXEMPT();
+
+							CvWString szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_SPY_SUCCESS", getNameKey(), pCapital->getNameKey());
+							AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO,
+								getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), pCapital->getX(), pCapital->getY(), true, true);
 						}
-					}
-	/************************************************************************************************/
-	/* Afforess	                     END                                                            */
-	/************************************************************************************************/
-					if (NULL != pCapital)
-					{
-						if ( !pCapital->isInViewport() )
-						{
-							GC.getCurrentViewport()->bringIntoView(pCapital->getX(), pCapital->getY(), NULL, true, true);
-						}
-
-						//GC.getGame().logOOSSpecial(20, getID(), pCapital->getX(), pCapital->getY());
-						setXY(pCapital->getX(), pCapital->getY(), false, false, false);
-
-						MEMORY_TRACK_EXEMPT();
-
-						CvWString szBuffer = gDLL->getText("TXT_KEY_ESPIONAGE_SPY_SUCCESS", getNameKey(), pCapital->getNameKey());
-						AddDLLMessage(getOwner(), true, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_POSITIVE_DINK", MESSAGE_TYPE_INFO, getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), pCapital->getX(), pCapital->getY(), true, true);
 					}
 					//TSHEEP Give spies xp for successful missions
 					awardSpyExperience(GET_PLAYER(eTargetPlayer).getTeam(),GC.getEspionageMissionInfo(eMission).getDifficultyMod());
-					//TSHEEP end
 				}
 			}
-
 			return true;
 		}
 	}
-
 	return false;
 }
 
@@ -13368,18 +13323,11 @@ int CvUnit::canLead(const CvPlot* pPlot, int iUnitId) const
 	{
 		return 0;
 	}
-/************************************************************************************************/
-/* Afforess	                  Start		 05/21/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	if (isCommander())
 	{
 		return 0;
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	if (isTrap())
 	{
@@ -16340,24 +16288,14 @@ int CvUnit::fortifyRepelModifier() const
 
 int CvUnit::experienceNeeded() const
 {
-
 	int iExperienceNeeded = calculateExperience(getLevel(), getOwner());
 
-/************************************************************************************************/
-/* Afforess	                  Start		 04/2/10                       Coded By: KillMePlease   */
-/*                                                                                              */
-/* Great Commanders                                                                             */
-/************************************************************************************************/
-	//adjust level thresholds to a world size.
 	if (isCommander())
 	{
-//		iExperienceNeeded *= GC.getWorldInfo(GC.getMap().getWorldSize()).getCommandersLevelThresholdsPercent() / 100;
 		iExperienceNeeded *= 3;
 		iExperienceNeeded /= 2;
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 	if (GC.getGame().isOption(GAMEOPTION_MORE_XP_TO_LEVEL))
 	{
 		iExperienceNeeded *= GC.getDefineINT("MORE_XP_TO_LEVEL_MODIFIER");
@@ -21818,14 +21756,12 @@ void CvUnit::startDelayedDeath()
 // Returns true if killed...
 bool CvUnit::doDelayedDeath()
 {
-	//	Koshling - added 'isDead' check to clean up units with 100% damage that have somehow
-	//	been left behind
+	// Koshling - added 'isDead' check to clean up units with 100% damage that have somehow been left behind
 	if ((m_bDeathDelay || isDead()) && !isFighting())
 	{
 		killUnconditional(false, NO_PLAYER, true);
 		return true;
 	}
-
 	return false;
 }
 

@@ -596,11 +596,9 @@ class CvWorldBuilderScreen:
 					elif strName == "UnitEditOwner":
 						pUnit = self.m_pActivePlot.getUnit(self.m_iCurrentUnit)
 						pNewUnit = GC.getPlayer(i).initUnit(pUnit.getUnitType(), pUnit.getX(), pUnit.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
-						pNewUnit.convert(pUnit)
-						pNewUnit.setBaseCombatStr(pUnit.baseCombatStr())
-						pNewUnit.changeCargoSpace(pUnit.cargoSpace() - pNewUnit.cargoSpace())
-						pNewUnit.setImmobileTimer(pUnit.getImmobileTimer())
-						pUnit.kill(False, -1)
+						# Don't kill unit in convert() because it does it with delayed death which makes it impossible to get rid of the old unit before exiting WB.
+						pNewUnit.convert(pUnit, False) # False here means keep original unit.
+						pUnit.kill(False, -1) # Now kill it without delayed death (False).
 						self.setUnitEditInfo(True)
 					elif strName == "CityEditOwner":
 						GC.getPlayer(i).acquireCity(self.m_pActivePlot.getPlotCity(), False, False)
@@ -1099,14 +1097,10 @@ class CvWorldBuilderScreen:
 
 	def handleUnitEditDuplicateCB(self, argsList):
 		pUnit = self.m_pActivePlot.getUnit(self.m_iCurrentUnit)
-		for i in xrange(2):
-			pNewUnit = GC.getPlayer(self.m_iCurrentPlayer).initUnit(pUnit.getUnitType(), pUnit.getX(), pUnit.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
-			pNewUnit.convert(pUnit)
-			pNewUnit.setBaseCombatStr(pUnit.baseCombatStr())
-			pNewUnit.changeCargoSpace(pUnit.cargoSpace() - pNewUnit.cargoSpace())
-			pNewUnit.setImmobileTimer(pUnit.getImmobileTimer())
-			pNewUnit.setScriptData(pUnit.getScriptData())
-		pUnit.kill(False, -1)
+		pNewUnit = GC.getPlayer(self.m_iCurrentPlayer).initUnit(pUnit.getUnitType(), pUnit.getX(), pUnit.getY(), UnitAITypes.NO_UNITAI, DirectionTypes.NO_DIRECTION)
+		pNewUnit.convert(pUnit, False)
+		pNewUnit.setFortifyTurns(pUnit.getFortifyTurns())
+		pNewUnit.setScriptData(pUnit.getScriptData())
 		self.setUnitEditInfo(True)
 		return 1
 
@@ -1180,7 +1174,7 @@ class CvWorldBuilderScreen:
 		iCount = 0
 		GC.getPlayer(self.m_iCurrentPlayer).clearResearchQueue()
 		for i in xrange(GC.getNumTechInfos()):
-			if GC.getPlayer(self.m_iCurrentPlayer).canResearch(i, False):
+			if GC.getPlayer(self.m_iCurrentPlayer).canResearch(i):
 				iCount += 1
 				if iCount == int(argsList[0]):
 					GC.getPlayer(self.m_iCurrentPlayer).pushResearch(i, True)
@@ -3241,7 +3235,7 @@ class CvWorldBuilderScreen:
 		iCurrentTech = 0
 		iCount = 0
 		for i in xrange(GC.getNumTechInfos()):
-			if pPlayer.canResearch(i, False):
+			if pPlayer.canResearch(i):
 				iCount += 1
 				strTest = strTest + (GC.getTechInfo(i).getDescription(),)
 				if pPlayer.getCurrentResearch() == i:
