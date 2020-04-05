@@ -4872,7 +4872,7 @@
 		<Tag>TXT_KEY_BUG_OPT_MISCHOVER__BUILDINGSAVEDMAINTENANCE_HOVER</Tag>
 		<English>When checked, displays the buildings that will affect maintenance costs ([ICON_BADGOLD]) and by how much.</English>
 		<French>Lorsque activé, Affiche les bâtiments qui modifient les Coûts d'entretien ([ICON_BADGOLD]) et de combien dans les circonstances actuelles.</French>
-		<German>Zeigt die Gebäude an, die Einfluss auf die Unterhaltskosten ([ICON_BADGOLD]) haben und welchen genau</German>
+		<German>Zeigt die Gebäude an, die Einfluss auf die laufenden Kosten ([ICON_BADGOLD]) haben und welchen genau</German>
 		<Italian>Quando è selezionato, vengono visualizzati gli edifici che influenzano il mantenimento ([ICON_BADGOLD]) e l'ammontare con cui lo fanno.</Italian>
 		<Spanish>Cuando se activa, muestra los edificios que afectan a los costes de mantenimiento ([ICON_BADGOLD]) y en cuánto.</Spanish>
 	</TEXT>
@@ -4880,7 +4880,7 @@
 		<Tag>TXT_KEY_BUG_OPT_MISCHOVER__BUILDINGSAVEDMAINTENANCE_TEXT</Tag>
 		<English>Maintenance</English>
 		<French>Entretien</French>
-		<German>Unterhaltskosten</German>
+		<German>Laufende Kosten</German>
 		<Italian>Mantenimento</Italian>
 		<Spanish>Mantenimiento</Spanish>
 	</TEXT>

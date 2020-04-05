@@ -733,6 +733,57 @@ void CvPlot::doTurn()
 		setOwner(NO_PLAYER, false, false);
 	}
 
+/*	doImprovementSpawn();
+
+void CvPlot::doImprovementSpawn()
+{
+	if (getImprovementType() != NO_IMPROVEMENT)
+	{
+		if (getOwner() == NO_PLAYER)
+		{
+			changeImprovementDecay(-1);
+			if (getImprovementDecay() == 0)
+			{
+				if (GC.getImprovementInfo(getImprovementType()).getImprovementPillage() != NO_IMPROVEMENT)
+				{
+					int iTimer = 10;
+					changeImprovementDecay(iTimer);
+					setImprovementType((ImprovementTypes)GC.getImprovementInfo(getImprovementType()).getImprovementPillage());
+				}
+				else if (getImprovementType() != CvImprovementInfo::getImprovementRuins())
+				{
+					int iTimer = 10;
+					changeImprovementDecay(iTimer);
+					setImprovementType(CvImprovementInfo::getImprovementRuins());
+				}
+				else
+				{
+					setImprovementType(NO_IMPROVEMENT);
+				}
+			}
+			return;
+		}
+	}
+	if (getOwner() != NO_PLAYER)
+	{
+		int iBestValue = 0;
+		ImprovementTypes eBestImprovement = NO_IMPROVEMENT;
+		for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
+		{
+			int iValue = GET_PLAYER(getOwner()).getImprovementValue();
+			if (iValue > iBestValue)
+			{
+				iBestValue = iValue;
+				eBestImprovement = (ImprovementTypes)iI;
+			}
+		}
+		if (eBestImprovement != NO_IMPROVEMENT)
+		{
+/************************************************************************************************/
+/* Afforess	                     END                                                            */
+/************************************************************************************************/
+
+	// XXX
 #ifdef _DEBUG
 	{
 		foreach_ (CvUnit* unit, units())

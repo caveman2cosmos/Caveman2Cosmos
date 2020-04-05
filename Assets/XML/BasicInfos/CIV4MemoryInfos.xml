@@ -4,38 +4,6 @@
 <Civ4MemoryInfos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Schema\Caveman2Cosmos.xsd">
 	<MemoryInfos>
 		<MemoryInfo>
-			<Type>MEMORY_ACCEPTED_CIVIC</Type>
-			<Description>TXT_KEY_MEMORY_ACCEPTED_CIVIC</Description>
-		</MemoryInfo>
-		<MemoryInfo>
-			<Type>MEMORY_ACCEPT_DEMAND</Type>
-			<Description>TXT_KEY_MEMORY_ACCEPT_DEMAND</Description>
-		</MemoryInfo>
-		<MemoryInfo>
-			<Type>MEMORY_ACCEPTED_JOIN_WAR</Type>
-			<Description>TXT_KEY_MEMORY_ACCEPTED_JOIN_WAR</Description>
-		</MemoryInfo>
-		<MemoryInfo>
-			<Type>MEMORY_ACCEPTED_RELIGION</Type>
-			<Description>TXT_KEY_MEMORY_ACCEPTED_RELIGION</Description>
-		</MemoryInfo>
-		<MemoryInfo>
-			<Type>MEMORY_ACCEPTED_STOP_TRADING</Type>
-			<Description>TXT_KEY_MEMORY_ACCEPTED_STOP_TRADING</Description>
-		</MemoryInfo>
-		<MemoryInfo>
-			<Type>MEMORY_BACKSTAB</Type>
-			<Description>TXT_KEY_MEMORY_BACKSTAB</Description>
-		</MemoryInfo>
-		<MemoryInfo>
-			<Type>MEMORY_BACKSTAB_FRIEND</Type>
-			<Description>TXT_KEY_MEMORY_BACKSTAB_FRIEND</Description>
-		</MemoryInfo>
-		<MemoryInfo>
-			<Type>MEMORY_CANCELLED_OPEN_BORDERS</Type>
-			<Description>TXT_KEY_MEMORY_CANCELLED_OPEN_BORDERS</Description>
-		</MemoryInfo>
-		<MemoryInfo>
 			<Type>MEMORY_DECLARED_WAR</Type>
 			<Description>TXT_KEY_MEMORY_DECLARED_WAR</Description>
 		</MemoryInfo>
@@ -44,72 +12,16 @@
 			<Description>TXT_KEY_MEMORY_DECLARED_WAR_ON_FRIEND</Description>
 		</MemoryInfo>
 		<MemoryInfo>
-			<Type>MEMORY_DENIED_CIVIC</Type>
-			<Description>TXT_KEY_MEMORY_DENIED_CIVIC</Description>
-		</MemoryInfo>
-		<MemoryInfo>
-			<Type>MEMORY_DENIED_JOIN_WAR</Type>
-			<Description>TXT_KEY_MEMORY_DENIED_JOIN_WAR</Description>
-		</MemoryInfo>
-		<MemoryInfo>
-			<Type>MEMORY_DENIED_RELIGION</Type>
-			<Description>TXT_KEY_MEMORY_DENIED_RELIGION</Description>
-		</MemoryInfo>
-		<MemoryInfo>
-			<Type>MEMORY_DENIED_STOP_TRADING</Type>
-			<Description>TXT_KEY_MEMORY_DENIED_STOP_TRADING</Description>
-		</MemoryInfo>
-		<MemoryInfo>
-			<Type>MEMORY_ENSLAVED_CITIZENS</Type>
-			<Description>TXT_KEY_MEMORY_ENSLAVED_CITIZENS</Description>
-		</MemoryInfo>
-		<MemoryInfo>
-			<Type>MEMORY_EVENT_BAD_TO_US</Type>
-			<Description>TXT_KEY_MEMORY_EVENT_BAD_TO_US</Description>
-		</MemoryInfo>
-		<MemoryInfo>
-			<Type>MEMORY_EVENT_GOOD_TO_US</Type>
-			<Description>TXT_KEY_MEMORY_EVENT_GOOD_TO_US</Description>
-		</MemoryInfo>
-		<MemoryInfo>
-			<Type>MEMORY_GIVE_HELP</Type>
-			<Description>TXT_KEY_MEMORY_GIVE_HELP</Description>
-		</MemoryInfo>
-		<MemoryInfo>
-			<Type>MEMORY_HIRED_TRADE_EMBARGO</Type>
-			<Description>TXT_KEY_MEMORY_HIRED_TRADE_EMBARGO</Description>
-		</MemoryInfo>
-		<MemoryInfo>
 			<Type>MEMORY_HIRED_WAR_ALLY</Type>
 			<Description>TXT_KEY_MEMORY_HIRED_WAR_ALLY</Description>
 		</MemoryInfo>
 		<MemoryInfo>
-			<Type>MEMORY_INQUISITION</Type>
-			<Description>TXT_KEY_MEMORY_INQUISITION</Description>
-		</MemoryInfo>
-		<MemoryInfo>
-			<Type>MEMORY_LIBERATED_CITIES</Type>
-			<Description>TXT_KEY_MEMORY_LIBERATED_CITIES</Description>
-		</MemoryInfo>
-		<MemoryInfo>
-			<Type>MEMORY_MADE_DEMAND</Type>
-			<Description>TXT_KEY_MEMORY_MADE_DEMAND</Description>
-		</MemoryInfo>
-		<MemoryInfo>
-			<Type>MEMORY_MADE_DEMAND_RECENT</Type>
-			<Description>TXT_KEY_MEMORY_MADE_DEMAND_RECENT</Description>
-		</MemoryInfo>
-		<MemoryInfo>
-			<Type>MEMORY_MADE_PEACE</Type>
-			<Description>TXT_KEY_MEMORY_MADE_PEACE</Description>
+			<Type>MEMORY_NUKED_US</Type>
+			<Description>TXT_KEY_MEMORY_NUKED_US</Description>
 		</MemoryInfo>
 		<MemoryInfo>
 			<Type>MEMORY_NUKED_FRIEND</Type>
 			<Description>TXT_KEY_MEMORY_NUKED_FRIEND</Description>
-		</MemoryInfo>
-		<MemoryInfo>
-			<Type>MEMORY_NUKED_US</Type>
-			<Description>TXT_KEY_MEMORY_NUKED_US</Description>
 		</MemoryInfo>
 		<MemoryInfo>
 			<Type>MEMORY_RAZED_CITY</Type>
@@ -120,32 +32,56 @@
 			<Description>TXT_KEY_MEMORY_RAZED_HOLY_CITY</Description>
 		</MemoryInfo>
 		<MemoryInfo>
-			<Type>MEMORY_RECALLED_AMBASSADOR</Type>
-			<Description>TXT_KEY_MEMORY_RECALLED_AMBASSADOR</Description>
+			<Type>MEMORY_SPY_CAUGHT</Type>
+			<Description>TXT_KEY_MEMORY_SPY_CAUGHT</Description>
 		</MemoryInfo>
 		<MemoryInfo>
-			<Type>MEMORY_RECEIVED_TECH_FROM_ANY</Type>
-			<Description>TXT_KEY_MEMORY_RECEIVED_TECH_FROM_ANY</Description>
+			<Type>MEMORY_GIVE_HELP</Type>
+			<Description>TXT_KEY_MEMORY_GIVE_HELP</Description>
 		</MemoryInfo>
 		<MemoryInfo>
 			<Type>MEMORY_REFUSED_HELP</Type>
 			<Description>TXT_KEY_MEMORY_REFUSED_HELP</Description>
 		</MemoryInfo>
 		<MemoryInfo>
+			<Type>MEMORY_ACCEPT_DEMAND</Type>
+			<Description>TXT_KEY_MEMORY_ACCEPT_DEMAND</Description>
+		</MemoryInfo>
+		<MemoryInfo>
 			<Type>MEMORY_REJECTED_DEMAND</Type>
 			<Description>TXT_KEY_MEMORY_REJECTED_DEMAND</Description>
 		</MemoryInfo>
 		<MemoryInfo>
-			<Type>MEMORY_SACKED_CITY</Type>
-			<Description>TXT_KEY_MEMORY_SACKED_CITY</Description>
+			<Type>MEMORY_ACCEPTED_RELIGION</Type>
+			<Description>TXT_KEY_MEMORY_ACCEPTED_RELIGION</Description>
 		</MemoryInfo>
 		<MemoryInfo>
-			<Type>MEMORY_SACKED_HOLY_CITY</Type>
-			<Description>TXT_KEY_MEMORY_SACKED_HOLY_CITY</Description>
+			<Type>MEMORY_DENIED_RELIGION</Type>
+			<Description>TXT_KEY_MEMORY_DENIED_RELIGION</Description>
 		</MemoryInfo>
 		<MemoryInfo>
-			<Type>MEMORY_SPY_CAUGHT</Type>
-			<Description>TXT_KEY_MEMORY_SPY_CAUGHT</Description>
+			<Type>MEMORY_ACCEPTED_CIVIC</Type>
+			<Description>TXT_KEY_MEMORY_ACCEPTED_CIVIC</Description>
+		</MemoryInfo>
+		<MemoryInfo>
+			<Type>MEMORY_DENIED_CIVIC</Type>
+			<Description>TXT_KEY_MEMORY_DENIED_CIVIC</Description>
+		</MemoryInfo>
+		<MemoryInfo>
+			<Type>MEMORY_ACCEPTED_JOIN_WAR</Type>
+			<Description>TXT_KEY_MEMORY_ACCEPTED_JOIN_WAR</Description>
+		</MemoryInfo>
+		<MemoryInfo>
+			<Type>MEMORY_DENIED_JOIN_WAR</Type>
+			<Description>TXT_KEY_MEMORY_DENIED_JOIN_WAR</Description>
+		</MemoryInfo>
+		<MemoryInfo>
+			<Type>MEMORY_ACCEPTED_STOP_TRADING</Type>
+			<Description>TXT_KEY_MEMORY_ACCEPTED_STOP_TRADING</Description>
+		</MemoryInfo>
+		<MemoryInfo>
+			<Type>MEMORY_DENIED_STOP_TRADING</Type>
+			<Description>TXT_KEY_MEMORY_DENIED_STOP_TRADING</Description>
 		</MemoryInfo>
 		<MemoryInfo>
 			<Type>MEMORY_STOPPED_TRADING</Type>
@@ -156,8 +92,28 @@
 			<Description>TXT_KEY_MEMORY_STOPPED_TRADING_RECENT</Description>
 		</MemoryInfo>
 		<MemoryInfo>
+			<Type>MEMORY_HIRED_TRADE_EMBARGO</Type>
+			<Description>TXT_KEY_MEMORY_HIRED_TRADE_EMBARGO</Description>
+		</MemoryInfo>
+		<MemoryInfo>
+			<Type>MEMORY_MADE_DEMAND</Type>
+			<Description>TXT_KEY_MEMORY_MADE_DEMAND</Description>
+		</MemoryInfo>
+		<MemoryInfo>
+			<Type>MEMORY_MADE_DEMAND_RECENT</Type>
+			<Description>TXT_KEY_MEMORY_MADE_DEMAND_RECENT</Description>
+		</MemoryInfo>
+		<MemoryInfo>
+			<Type>MEMORY_CANCELLED_OPEN_BORDERS</Type>
+			<Description>TXT_KEY_MEMORY_CANCELLED_OPEN_BORDERS</Description>
+		</MemoryInfo>
+		<MemoryInfo>
 			<Type>MEMORY_TRADED_TECH_TO_US</Type>
 			<Description>TXT_KEY_MEMORY_TRADED_TECH_TO_US</Description>
+		</MemoryInfo>
+		<MemoryInfo>
+			<Type>MEMORY_RECEIVED_TECH_FROM_ANY</Type>
+			<Description>TXT_KEY_MEMORY_RECEIVED_TECH_FROM_ANY</Description>
 		</MemoryInfo>
 		<MemoryInfo>
 			<Type>MEMORY_VOTED_AGAINST_US</Type>
@@ -168,8 +124,52 @@
 			<Description>TXT_KEY_MEMORY_VOTED_FOR_US</Description>
 		</MemoryInfo>
 		<MemoryInfo>
+			<Type>MEMORY_EVENT_GOOD_TO_US</Type>
+			<Description>TXT_KEY_MEMORY_EVENT_GOOD_TO_US</Description>
+		</MemoryInfo>
+		<MemoryInfo>
+			<Type>MEMORY_EVENT_BAD_TO_US</Type>
+			<Description>TXT_KEY_MEMORY_EVENT_BAD_TO_US</Description>
+		</MemoryInfo>
+		<MemoryInfo>
+			<Type>MEMORY_LIBERATED_CITIES</Type>
+			<Description>TXT_KEY_MEMORY_LIBERATED_CITIES</Description>
+		</MemoryInfo>
+		<MemoryInfo>
+			<Type>MEMORY_INQUISITION</Type>
+			<Description>TXT_KEY_MEMORY_INQUISITION</Description>
+		</MemoryInfo>
+		<MemoryInfo>
+			<Type>MEMORY_RECALLED_AMBASSADOR</Type>
+			<Description>TXT_KEY_MEMORY_RECALLED_AMBASSADOR</Description>
+		</MemoryInfo>
+		<MemoryInfo>
 			<Type>MEMORY_WARMONGER</Type>
 			<Description>TXT_KEY_MEMORY_WARMONGER</Description>
+		</MemoryInfo>
+		<MemoryInfo>
+			<Type>MEMORY_MADE_PEACE</Type>
+			<Description>TXT_KEY_MEMORY_MADE_PEACE</Description>
+		</MemoryInfo>
+		<MemoryInfo>
+			<Type>MEMORY_SACKED_CITY</Type>
+			<Description>TXT_KEY_MEMORY_SACKED_CITY</Description>
+		</MemoryInfo>
+		<MemoryInfo>
+			<Type>MEMORY_SACKED_HOLY_CITY</Type>
+			<Description>TXT_KEY_MEMORY_SACKED_HOLY_CITY</Description>
+		</MemoryInfo>
+		<MemoryInfo>
+			<Type>MEMORY_ENSLAVED_CITIZENS</Type>
+			<Description>TXT_KEY_MEMORY_ENSLAVED_CITIZENS</Description>
+		</MemoryInfo>
+		<MemoryInfo>
+			<Type>MEMORY_BACKSTAB</Type>
+			<Description>TXT_KEY_MEMORY_BACKSTAB</Description>
+		</MemoryInfo>
+		<MemoryInfo>
+			<Type>MEMORY_BACKSTAB_FRIEND</Type>
+			<Description>TXT_KEY_MEMORY_BACKSTAB_FRIEND</Description>
 		</MemoryInfo>
 	</MemoryInfos>
 </Civ4MemoryInfos>
