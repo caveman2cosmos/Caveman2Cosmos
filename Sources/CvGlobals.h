@@ -202,7 +202,7 @@ public:
 	CvMapExternal& getMapExternal();
 
 	bool bugInitCalled() const;
-	void enableMultiMaps(const bool enable);
+	void enableMultiMaps(bool enable);
 	bool multiMapsEnabled() const;
 	bool viewportsEnabled() const;
 	bool getReprocessGreatWallDynamically() const;
@@ -213,7 +213,7 @@ public:
 
 	void switchMap(MapTypes eMap);
 	CvMap& getMapByIndex(MapTypes eIndex);
-	const int getNumMaps() const;
+	int getNumMaps() const;
 	void updateMaps();
 	const std::vector<CvMap*>& getMaps() const;
 	void initializeMap(MapTypes eMap);

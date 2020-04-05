@@ -54,11 +54,6 @@ bool CyGlobalContext::multiMapsEnabled() const
 	return GC.multiMapsEnabled();
 }
 
-bool CyGlobalContext::multiMapsEnabled() const
-{
-	return GC.multiMapsEnabled();
-}
-
 void CyGlobalContext::switchMap(int iMap)
 {
 	GC.switchMap((MapTypes)iMap);
