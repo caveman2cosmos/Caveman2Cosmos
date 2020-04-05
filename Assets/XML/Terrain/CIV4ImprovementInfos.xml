@@ -22,7 +22,6 @@
 			<iAdvancedStartCost>5</iAdvancedStartCost>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
 			<bFreshWaterMakesValid>1</bFreshWaterMakesValid>
-			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<iUpgradeTime>5</iUpgradeTime>
 			<iPillageGold>5</iPillageGold>
 			<TerrainMakesValids>
@@ -8357,7 +8356,6 @@
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_AGRICULTURE</PrereqTech>
 			<bFreshWaterMakesValid>1</bFreshWaterMakesValid>
-			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bRequiresIrrigation>1</bRequiresIrrigation>
 			<bCarriesIrrigation>1</bCarriesIrrigation>
 			<bUseLSystem>1</bUseLSystem>
@@ -8645,7 +8643,6 @@
 			<bActsAsCity>0</bActsAsCity>
 			<PrereqTech>TECH_VERTICAL_FARMING</PrereqTech>
 			<bFreshWaterMakesValid>1</bFreshWaterMakesValid>
-			<bRequiresFlatlands>1</bRequiresFlatlands>
 			<bCarriesIrrigation>1</bCarriesIrrigation>
 			<bUseLSystem>1</bUseLSystem>
 			<iAdvancedStartCost>60</iAdvancedStartCost>
