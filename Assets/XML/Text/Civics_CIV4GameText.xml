@@ -2158,6 +2158,7 @@
 		<Tag>TXT_KEY_CIVIC_HOME_AREA_MAINT</Tag>
 		<English>[ICON_BULLET]No Maintenance Costs for All Cities on Home Continent</English>
 		<French>[ICON_BULLET]Pas de coût d'entretien pour toutes les Villes sur le continent d'origine</French>
+		<German>[ICON_BULLET]keine laufenden Kosten für Städte auf dem Heimatkontinent</German>
 		<Italian>[ICON_BULLET]Nessun costo di mantenimento per tutte le città sul continente natale</Italian>
 		<Spanish>[ICON_BULLET]Sin coste de mantenimiento en todas las ciudades situadas en el continente natal</Spanish>
 		<Polish>[ICON_BULLET]Brak kosztów utrzymania dla miast na rdzennym kontynencie</Polish>
@@ -2166,6 +2167,7 @@
 		<Tag>TXT_KEY_CIVIC_HOME_AREA_MAINT_MOD</Tag>
 		<English>[ICON_BULLET]%D1_Mod%% Maintenance Costs for All Cities on Home Continent</English>
 		<French>[ICON_BULLET]%D1_Mod%% de coût d'entretien pour toutes les Villes sur le continent d'origine</French>
+		<German>[ICON_BULLET]%D1_Mod%% laufende Kosten für Städte auf dem Heimatkontinent</German>
 		<Italian>[ICON_BULLET]%D1_Mod%% costi di mantenimento per tutte le città sul continente natale</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%% al coste de mantenimiento en todas las ciudades situadas en el continente natal</Spanish>
 		<Polish>[ICON_BULLET]%D1_Mod%% do kosztów utrzymania dla miast na rdzennym kontynencie</Polish>
