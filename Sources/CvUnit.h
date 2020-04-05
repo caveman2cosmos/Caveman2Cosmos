@@ -496,9 +496,9 @@ public:
 	void reset(int iID = 0, UnitTypes eUnit = NO_UNIT, PlayerTypes eOwner = NO_PLAYER, bool bConstructorCall = false, bool bIdentityChange = false);
 	void setupGraphical();
 
-	void convert(CvUnit* pUnit); // Exposed to Python
+	void convert(CvUnit* pUnit, const bool bKillOriginal=true); // Exposed to Python
 	void kill(bool bDelay, PlayerTypes ePlayer = NO_PLAYER, bool bMessaged = false); // Exposed to Python
-	void killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged = false); //	Used internally
+	void killUnconditional(bool bDelay, PlayerTypes ePlayer, bool bMessaged = false); // Used internally
 
 	DllExport void NotifyEntity(MissionTypes eMission);
 

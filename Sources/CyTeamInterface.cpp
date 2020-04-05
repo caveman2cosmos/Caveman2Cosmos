@@ -9,19 +9,13 @@ void CyTeamPythonInterface()
 	OutputDebugString("Python Extension Module - CyTeamPythonInterface\n");
 
 	python::class_<CyTeam>("CyTeam")
+
 		.def("isNone", &CyTeam::isNone, "bool () - is this instance valid?")
 
-/************************************************************************************************/
-/* REVOLUTION_MOD                         01/01/08                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 		.def("isRebelAgainst", &CyTeam::isRebelAgainst, "bool ( int iTeam )" )
 		.def("setRebelAgainst", &CyTeam::setRebelAgainst, "void ( int iTeam, bool bNewValue )" )
 		.def("countRebelAgainst", &CyTeam::countRebelAgainst, "int ( )" )
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+
 		.def("addTeam", &CyTeam::addTeam, "void (int /*TeamTypes*/ eTeam)")
 
 		.def("canChangeWarPeace", &CyTeam::canChangeWarPeace, "bool (int /*TeamTypes*/ eTeam)")
@@ -37,9 +31,8 @@ void CyTeamPythonInterface()
 		.def("getPower", &CyTeam::getPower, "int (bool bIncludeVassals)")
 		.def("getDefensivePower", &CyTeam::getDefensivePower, "int ()")
 		.def("getNumNukeUnits", &CyTeam::getNumNukeUnits, "int ()")
-//Sevo Begin--VCM
+
 		.def("getTotalVictoryScore", &CyTeam::getTotalVictoryScore, "int ()")
-//Sevo End VCM
 
 		.def("getAtWarCount", &CyTeam::getAtWarCount, "int (bool bIgnoreMinors)")
 		.def("getWarPlanCount", &CyTeam::getWarPlanCount, "int (int /*WarPlanTypes*/ eWarPlan, bool bIgnoreMinors)")
@@ -78,15 +71,8 @@ void CyTeamPythonInterface()
 		.def("isNPC", &CyTeam::isNPC, "bool () - is NPC team?")
 		.def("isHominid", &CyTeam::isNPC, "bool () - is Hominid team?")
 		.def("isMinorCiv", &CyTeam::isMinorCiv)
-		/********************************************************************************/
-		/*		REVOLUTION_MOD							10/23/08			jdog5000	*/
-		/*																				*/
-		/*		For minor civs															*/
-		/********************************************************************************/
 		.def("setIsMinorCiv", &CyTeam::setIsMinorCiv, "void( bool bNewValue, bool bDoBarbCivCheck )")
-		/********************************************************************************/
-		/*		REVOLUTION_MOD							END								*/
-		/********************************************************************************/	
+
 		.def("getLeaderID", &CyTeam::getLeaderID, "int (PlayerTypes) ()")
 		.def("getSecretaryID", &CyTeam::getSecretaryID, "int (PlayerTypes) ()")
 		.def("getHandicapType", &CyTeam::getHandicapType, "int (HandicapTypes) ()")
@@ -213,16 +199,8 @@ void CyTeamPythonInterface()
 		.def("getImprovementYieldChange", &CyTeam::getImprovementYieldChange,	"int (int /*ImprovementTypes*/ eIndex1, int /*YieldTypes*/ eIndex2)")
 		.def("changeImprovementYieldChange", &CyTeam::changeImprovementYieldChange, "void (int /*ImprovementTypes*/ eIndex1, int /*YieldTypes*/ eIndex2, iChange)")
 
-/************************************************************************************************/
-/* Afforess	                  Start		 03/10/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 		.def("getBuildingYieldChange", &CyTeam::getBuildingYieldChange,	"int (int /*BuildingTypes*/ eIndex1, int /*YieldTypes*/ eIndex2)")
 		.def("isHasEmbassy", &CyTeam::isHasEmbassy, "bool (TeamTypes)")
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 		.def("getVictoryCountdown", &CyTeam::getVictoryCountdown, "int (int /*VictoryTypes*/)")
 		.def("getVictoryDelay", &CyTeam::getVictoryDelay, "int (int /*VictoryTypes*/)")
@@ -243,18 +221,10 @@ void CyTeamPythonInterface()
 		.def("changeCounterespionageModAgainstTeam", &CyTeam::changeCounterespionageModAgainstTeam, "void (TeamTypes eIndex, int iChange)")
 		.def("AI_shareWar", &CyTeam::AI_shareWar, "bool (TeamTypes)")
 		.def("AI_setWarPlan", &CyTeam::AI_setWarPlan, "void (int /*TeamTypes*/ eIndex, int /*WarPlanTypes*/ eNewValue)")
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      01/12/09                                jdog5000      */
-/*                                                                                              */
-/* Player Interface                                                                             */
-/************************************************************************************************/
 		.def("AI_getWarPlan", &CyTeam::AI_getWarPlan, "int (int /*TeamTypes*/ eIndex)")
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 		.def("AI_getAtWarCounter", &CyTeam::AI_getAtWarCounter, "int (TeamTypes)")
 		.def("AI_getAtPeaceCounter", &CyTeam::AI_getAtPeaceCounter, "int (TeamTypes)")
 		.def("AI_getWarSuccess", &CyTeam::AI_getWarSuccess, "int (TeamTypes)")
 		.def("getWinForLosingResearchModifier", &CyTeam::getWinForLosingResearchModifier, "void")
-		;
+	;
 }

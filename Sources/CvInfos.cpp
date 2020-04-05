@@ -16128,6 +16128,7 @@ void CvImprovementBonusInfo::getCheckSum(unsigned int &iSum)
 //======================================================================================================
 
 ImprovementTypes CvImprovementInfo::m_ImprovementCity = NO_IMPROVEMENT;
+ImprovementTypes CvImprovementInfo::m_ImprovementRuins = NO_IMPROVEMENT;
 
 //------------------------------------------------------------------------------------------------------
 //
@@ -17467,6 +17468,16 @@ ImprovementTypes CvImprovementInfo::getImprovementCity()
 void CvImprovementInfo::setImprovementCity(ImprovementTypes eIndex)
 {
 	m_ImprovementCity = eIndex;
+}
+
+ImprovementTypes CvImprovementInfo::getImprovementRuins()
+{
+	return m_ImprovementRuins;
+}
+
+void CvImprovementInfo::setImprovementRuins(ImprovementTypes eIndex)
+{
+	m_ImprovementRuins = eIndex;
 }
 
 //======================================================================================================

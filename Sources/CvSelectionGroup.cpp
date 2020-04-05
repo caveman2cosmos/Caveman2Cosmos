@@ -4483,16 +4483,16 @@ bool CvSelectionGroup::groupBuild(BuildTypes eBuild)
 
 	const CvPlot* pPlot = plot();
 
-	ImprovementTypes eImprovement = (ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement();
+	const ImprovementTypes eImprovement = (ImprovementTypes)GC.getBuildInfo(eBuild).getImprovement();
 	if (eImprovement != NO_IMPROVEMENT)
 	{
 		if (AI_isControlled())
 		{
 			if (GET_PLAYER(getOwner()).isOption(PLAYEROPTION_SAFE_AUTOMATION))
 			{
-				if ((pPlot->getImprovementType() != NO_IMPROVEMENT) && (pPlot->getImprovementType() != (ImprovementTypes)(GC.getDefineINT("RUINS_IMPROVEMENT"))))
+				if ((pPlot->getImprovementType() != NO_IMPROVEMENT) && (pPlot->getImprovementType() != CvImprovementInfo::getImprovementRuins()))
 				{
-					BonusTypes eBonus = (BonusTypes)pPlot->getNonObsoleteBonusType(GET_PLAYER(getOwner()).getTeam());
+					const BonusTypes eBonus = (BonusTypes)pPlot->getNonObsoleteBonusType(GET_PLAYER(getOwner()).getTeam());
 					if ((eBonus == NO_BONUS) || !GC.getImprovementInfo(eImprovement).isImprovementBonusTrade(eBonus))
 					{
 						if (GC.getImprovementInfo(eImprovement).getImprovementPillage() != NO_IMPROVEMENT)
@@ -4521,8 +4521,8 @@ bool CvSelectionGroup::groupBuild(BuildTypes eBuild)
 	bool bCheckChop = false;
 	bool bStopOtherWorkers = false;
 
-	FeatureTypes eFeature = pPlot->getFeatureType();
-	CvBuildInfo& kBuildInfo = GC.getBuildInfo(eBuild);
+	const FeatureTypes eFeature = pPlot->getFeatureType();
+	const CvBuildInfo& kBuildInfo = GC.getBuildInfo(eBuild);
 	if (eFeature != NO_FEATURE && isHuman() && kBuildInfo.isFeatureRemove(eFeature) && kBuildInfo.getFeatureProduction(eFeature) != 0)
 	{
 		if (kBuildInfo.getImprovement() == NO_IMPROVEMENT)

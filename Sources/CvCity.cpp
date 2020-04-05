@@ -1365,7 +1365,7 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 
 	const bool bCapital = isCapital();
 
-	pPlot->setImprovementType((ImprovementTypes)GC.getRUINS_IMPROVEMENT());
+	pPlot->setImprovementType(CvImprovementInfo::getImprovementRuins());
 
 	CvPlayer& kOwner = GET_PLAYER(eOwner);
 
@@ -9379,12 +9379,14 @@ namespace {
  */
 void CvCity::calculateFeatureHealthPercentChange(int& iGood, int& iBad, CvPlot* pIgnorePlot) const
 {
-	foreach_ (const CvPlot* loopPlot, plots())
+	for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
 	{
-		if (loopPlot == pIgnorePlot || !loopPlot->isVisible(getTeam(), true))
+		CvPlot* pLoopPlot = getCityIndexPlot(iI);
+
+		if (pLoopPlot == NULL && pLoopPlot == pIgnorePlot || !pLoopPlot->isVisible(getTeam(), true))
 			continue;
 
-		const FeatureTypes eFeature = loopPlot->getFeatureType();
+		const FeatureTypes eFeature = pLoopPlot->getFeatureType();
 
 		if (eFeature != NO_FEATURE)
 		{
@@ -9392,7 +9394,7 @@ void CvCity::calculateFeatureHealthPercentChange(int& iGood, int& iBad, CvPlot* 
 
 			if (iHealth != 0)
 			{
-				if (algo::any_of(loopPlot->units(), bst::bind(isBuildingFeatureRemove, _1, eFeature)))
+				if (algo::any_of(pLoopPlot->units(), bst::bind(isBuildingFeatureRemove, _1, eFeature)))
 				{
 					if (iHealth > 0)
 					{

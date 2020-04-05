@@ -5548,6 +5548,9 @@ public:
 	static ImprovementTypes getImprovementCity();
 	static void setImprovementCity(ImprovementTypes eIndex);
 
+	static ImprovementTypes getImprovementRuins();
+	static void setImprovementRuins(ImprovementTypes eIndex);
+
 	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 
 protected:
@@ -5634,6 +5637,7 @@ protected:
 	int m_eHighestCostBuild;
 	int m_iHighestCost;
 	static ImprovementTypes m_ImprovementCity;
+	static ImprovementTypes m_ImprovementRuins;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

@@ -8135,7 +8135,7 @@ int CvCityAI::AI_totalBestBuildValue(CvArea* pArea)
 			{
 				if (pLoopPlot->area() == pArea)
 				{
-					if (pLoopPlot->getImprovementType() == NO_IMPROVEMENT || !(GET_PLAYER(getOwner()).isOption(PLAYEROPTION_SAFE_AUTOMATION) && pLoopPlot->getImprovementType() != GC.getDefineINT("RUINS_IMPROVEMENT")))
+					if (pLoopPlot->getImprovementType() == NO_IMPROVEMENT || !(GET_PLAYER(getOwner()).isOption(PLAYEROPTION_SAFE_AUTOMATION) && pLoopPlot->getImprovementType() != CvImprovementInfo::getImprovementRuins()))
 					{
 						iTotalValue += AI_getBestBuildValue(iI);
 					}

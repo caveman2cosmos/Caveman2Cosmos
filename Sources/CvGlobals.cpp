@@ -95,8 +95,7 @@ ProxyTracker::ProxyTracker(const CvGlobals* proxy, const char* name)
 {
 	inDLL++;
 	fnName = name;
-
-	proxy->CheckProxy(name);
+	FAssertMsg(gGlobals != NULL, "Method called prior to global instantiation");
 }
 
 ProxyTracker::~ProxyTracker()
@@ -105,20 +104,6 @@ ProxyTracker::~ProxyTracker()
 	fnName = NULL;
 }
 #endif
-
-void CvGlobals::CheckProxy(const char* fnName) const
-{
-	//OutputDebugString(fnName);
-	//OutputDebugString("\n");
-
-	if ( gGlobals == NULL )
-	{
-		OutputDebugString("Method called prior to global instantiation\n");
-
-		::MessageBoxA(NULL,"Method called prior to global instantiation",":CvGameCore",MB_OK);
-		//throw new <exception>;
-	}
-}
 
 //
 // CONSTRUCTOR
@@ -636,137 +621,6 @@ void cvInternalGlobals::clearTypesMap()
 	}
 }
 
-
-CvDiplomacyScreen* cvInternalGlobals::getDiplomacyScreen() const
-{
-	return m_diplomacyScreen;
-}
-
-CMPDiplomacyScreen* cvInternalGlobals::getMPDiplomacyScreen() const
-{
-	return m_mpDiplomacyScreen;
-}
-
-CvMessageCodeTranslator& cvInternalGlobals::getMessageCodes()
-{
-	return *m_messageCodes;
-}
-
-FMPIManager*& cvInternalGlobals::getFMPMgrPtr()
-{
-	return m_pFMPMgr;
-}
-
-CvPortal& cvInternalGlobals::getPortal()
-{
-	return *m_portal;
-}
-
-CvSetupData& cvInternalGlobals::getSetupData()
-{
-	return *m_setupData;
-}
-
-CvInitCore& cvInternalGlobals::getInitCore()
-{
-	return *m_initCore;
-}
-
-CvInitCore& cvInternalGlobals::getLoadedInitCore()
-{
-	return *m_loadedInitCore;
-}
-
-CvInitCore& cvInternalGlobals::getIniInitCore()
-{
-	return *m_iniInitCore;
-}
-
-CvStatsReporter& cvInternalGlobals::getStatsReporter()
-{
-	return *m_statsReporter;
-}
-
-CvStatsReporter* cvInternalGlobals::getStatsReporterPtr() const
-{
-	return m_statsReporter;
-}
-
-CvInterface& cvInternalGlobals::getInterface()
-{
-	return *m_interface;
-}
-
-CvInterface* cvInternalGlobals::getInterfacePtr() const
-{
-	return m_interface;
-}
-
-CvRandom& cvInternalGlobals::getASyncRand()
-{
-	return *m_asyncRand;
-}
-
-CMessageQueue& cvInternalGlobals::getMessageQueue()
-{
-	return *m_messageQueue;
-}
-
-CMessageQueue& cvInternalGlobals::getHotMessageQueue()
-{
-	return *m_hotJoinMsgQueue;
-}
-
-CMessageControl& cvInternalGlobals::getMessageControl()
-{
-	return *m_messageControl;
-}
-
-CvDropMgr& cvInternalGlobals::getDropMgr()
-{
-	return *m_dropMgr;
-}
-
-FAStar& cvInternalGlobals::getPathFinder()
-{
-	return *m_pathFinder;
-}
-
-FAStar& cvInternalGlobals::getInterfacePathFinder()
-{
-	return *m_interfacePathFinder;
-}
-
-FAStar& cvInternalGlobals::getStepFinder()
-{
-	return *m_stepFinder;
-}
-
-FAStar& cvInternalGlobals::getRouteFinder()
-{
-	return *m_routeFinder;
-}
-
-FAStar& cvInternalGlobals::getBorderFinder()
-{
-	return *m_borderFinder;
-}
-
-FAStar& cvInternalGlobals::getAreaFinder()
-{
-	return *m_areaFinder;
-}
-
-FAStar& cvInternalGlobals::getPlotGroupFinder()
-{
-	return *m_plotGroupFinder;
-}
-
-NiPoint3& cvInternalGlobals::getPt3Origin()
-{
-	return m_pt3Origin;
-}
-
 std::vector<CvInterfaceModeInfo*>& cvInternalGlobals::getInterfaceModeInfos()		// For Moose - XML Load Util and CvInfos
 {
 	return m_paInterfaceModeInfo;
@@ -776,31 +630,6 @@ CvInterfaceModeInfo& cvInternalGlobals::getInterfaceModeInfo(InterfaceModeTypes 
 {
 	FAssertMsg(e >= 0 && e < NUM_INTERFACEMODE_TYPES, "InterfaceModeInfo index out of bounds");
 	return *(m_paInterfaceModeInfo[e]);
-}
-
-NiPoint3& cvInternalGlobals::getPt3CameraDir()
-{
-	return m_pt3CameraDir;
-}
-
-bool& cvInternalGlobals::getLogging()
-{
-	return m_bLogging;
-}
-
-bool& cvInternalGlobals::getRandLogging()
-{
-	return m_bRandLogging;
-}
-
-bool& cvInternalGlobals::getSynchLogging()
-{
-	return m_bSynchLogging;
-}
-
-bool& cvInternalGlobals::overwriteLogs()
-{
-	return m_bOverwriteLogs;
 }
 
 int* cvInternalGlobals::getPlotDirectionX() const

@@ -2973,6 +2973,7 @@
 		<Tag>TXT_KEY_CONNECTED_CITY_MAINT</Tag>
 		<English>[ICON_BULLET]No Maintenance Costs for Cities Connected to Capital</English>
 		<French>[ICON_BULLET]Pas de coût d'entretien pour les Villes connectées à la Capitale</French>
+		<German>[ICON_BULLET]keine laufenden Kosten für Städte, die mit der Hauptstadt verbunden sind</German>
 		<Italian>[ICON_BULLET]Nessun costo di mantenimento per le città collegate alla Capitale</Italian>
 		<Spanish>[ICON_BULLET]Sin coste de mantenimiento en las ciudades comunicadas con la capital</Spanish>
 		<Polish>[ICON_BULLET]Brak kosztów utrzymania za miasta połączone ze stolicą</Polish>
@@ -2981,6 +2982,7 @@
 		<Tag>TXT_KEY_CONNECTED_CITY_MAINT_MOD</Tag>
 		<English>[ICON_BULLET]%D1_Mod%% Maintenance Costs for Cities Connected to Capital</English>
 		<French>[ICON_BULLET]%D1_Mod%% de coûts d'entretien pour les Villes connectées à la Capitale</French>
+		<German>[ICON_BULLET]%D1_Mod%% laufende Kosten für Städte, die mit der Hauptstadt verbunden sind</German>
 		<Italian>[ICON_BULLET]%D1_Mod%% costi di mantenimento per le città collegate alla Capitale</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%% al coste de mantenimiento en las ciudades comunicadas con la capital</Spanish>
 		<Polish>[ICON_BULLET]%D1_Mod%% do kosztów utrzymania miast połączonych ze stolicą</Polish>
@@ -2997,6 +2999,7 @@
 		<Tag>TXT_KEY_CONTINENTAL_CITY_MAINT</Tag>
 		<English>[ICON_BULLET]No Maintenance Costs for All Cities on Continent</English>
 		<French>[ICON_BULLET]Pas de coût d'entretien pour toutes les Villes du Continent</French>
+		<German>[ICON_BULLET]keine laufenden Kosten für Kontinentalstädte</German>		
 		<Italian>[ICON_BULLET]Nessun costo di mantenimento per tutte le città su questo continente</Italian>
 		<Spanish>[ICON_BULLET]Sin coste de mantenimiento en todas las ciudades de este continente</Spanish>
 		<Polish>[ICON_BULLET]Brak kosztów utrzymania wszystkich miast na kontynencie</Polish>
@@ -3005,6 +3008,7 @@
 		<Tag>TXT_KEY_CONTINENTAL_CITY_MAINT_MOD</Tag>
 		<English>[ICON_BULLET]%D1_Mod%% Maintenance Costs for All Cities on Continent</English>
 		<French>[ICON_BULLET]%D1_Mod%% de coûts d'entretien pour toutes les Villes du Continent</French>
+		<German>[ICON_BULLET]%D1_Mod%% laufende Kosten für Kontinentalstädte</German>				
 		<Italian>[ICON_BULLET]%D1_Mod%% costi di mantenimento per tutte le città su questo continente</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%% al coste de mantenimiento en todas las ciudades de este continente</Spanish>
 		<Polish>[ICON_BULLET]%D1_Mod%% do kosztów utrzymania miast na kontynencie</Polish>
@@ -3935,6 +3939,18 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>[ICON_BULLET]%d1%% Przychód z zagranicznych szlaków handlowych</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_FOREST_FIRE_CITY_VICINITY</Tag>
+		<English>There's been a forest fire close to %s.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FOREST_FIRE_REMOTE</Tag>
+		<English>There's been reports about a forest fire in the remote countryside.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_FOREST_FIRE_UNIT_LOST</Tag>
+		<English>%s perished in the fire!</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_FOUNDED_RELIGION</Tag>
 		<English>You have founded a new religion! What do you wish to call it?</English>
 		<French>Vous avez fondé une nouvelle religion! Quel nom voulez-vous lui donner?</French>
@@ -4722,7 +4738,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_INCREASE_LOCAL_REBELS</Tag>
 		<English>[NEWLINE][ICON_BULLET]Increases local rebelliousness</English>
 		<French>[NEWLINE][ICON_BULLET]Augmente la rebellion locale</French>
-		<German>[NEWLINE][ICON_BULLET]Erhöht lokale Aufsässigkeit</German>
+		<German>[NEWLINE][ICON_BULLET]erhöht lokale Aufsässigkeit</German>
 		<Italian>[NEWLINE][ICON_BULLET]Aumenta il sentimento rivoluzionario locale</Italian>
 		<Spanish>[NEWLINE][ICON_BULLET]Aumenta la rebeldía local</Spanish>
 		<Polish>[NEWLINE][ICON_BULLET]Wzmaga lokalną buntowniczość</Polish>
@@ -4731,7 +4747,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_INCREASE_NATIONAL_REBELS</Tag>
 		<English>[NEWLINE][ICON_BULLET]Increases national rebelliousness</English>
 		<French>[NEWLINE][ICON_BULLET]Augmente la rebellion nationale</French>
-		<German>[NEWLINE][ICON_BULLET]Erhöht nationale Aufsässigkeit</German>
+		<German>[NEWLINE][ICON_BULLET]erhöht nationale Aufsässigkeit</German>
 		<Italian>[NEWLINE][ICON_BULLET]Aumenta il sentimento rivoluzionario nazionale</Italian>
 		<Spanish>[NEWLINE][ICON_BULLET]Aumenta la rebeldía nacional</Spanish>
 		<Polish>[NEWLINE][ICON_BULLET]Wzmaga narodową buntowniczość</Polish>
@@ -11305,6 +11321,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_OVERSEAS_CITY_MAINT</Tag>
 		<English>[ICON_BULLET]No Maintenance Costs for Overseas Cities</English>
 		<French>[ICON_BULLET]Pas de coût d'entretien pour les Villes d'outre-mer</French>
+		<German>[ICON_BULLET]keine laufenden Kosten für Überseestädte</German>		
 		<Italian>[ICON_BULLET]Nessun costo di mantenimento per le città oltremare</Italian>
 		<Spanish>[ICON_BULLET]Sin coste de mantenimiento en las ciudades de ultramar</Spanish>
 		<Polish>[ICON_BULLET]Brak kosztów utrzymania za miasta zaoceaniczne</Polish>
@@ -11313,6 +11330,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_OVERSEAS_CITY_MAINT_MOD</Tag>
 		<English>[ICON_BULLET]%D1_Mod%% Maintenance Costs for Overseas Cities</English>
 		<French>[ICON_BULLET]%D1_Mod%% de coûts d'entretien pour les Villes d'outre-mer</French>
+		<German>[ICON_BULLET]%D1_Mod%% laufende Kosten für Überseestädte</German>	
 		<Italian>[ICON_BULLET]%D1_Mod%% costi di mantenimento per le città oltremare</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%% al coste de mantenimiento en las ciudades de ultramar</Spanish>
 		<Polish>[ICON_BULLET]%D1_Mod%% do kosztów utrzymania miast zaoceanicznych</Polish>
@@ -15636,7 +15654,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Tag>TXT_KEY_TECH_CORPORATION_MAINTENANCE</Tag>
 		<English>[ICON_BULLET]%d1%% Corporation Maintenance</English>
 		<French>[ICON_BULLET]%d1%% de coût d'entretien des Corporations</French>
-		<German>[ICON_BULLET]%d1%% Unterhaltskosten für Kapitalgesellschaften</German>
+		<German>[ICON_BULLET]%d1%% laufende Kosten für Kapitalgesellschaften</German>
 		<Italian>[ICON_BULLET]%d1%% di mantenimento della corporazione.</Italian>
 		<Spanish>[ICON_BULLET]%d1%% al mantenimiento de corporaciones</Spanish>
 		<Polish>[ICON_BULLET]%d1%% Utrzymanie Korporacji</Polish>

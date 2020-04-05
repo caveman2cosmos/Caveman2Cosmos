@@ -1121,7 +1121,6 @@ void CvTeam::doTurn()
 		{
 			setNoTradeTech(((TechTypes)iI), false);
 		}
-
 	}
 
 	doWarWeariness();

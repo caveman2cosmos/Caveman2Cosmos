@@ -382,10 +382,6 @@ bool CvXMLLoadUtility::SetPostGlobalsGlobalDefines()
 		idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("WATER_IMPROVEMENT", idx);
 
-		SetGlobalDefine("RUINS_IMPROVEMENT", szVal);
-		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("RUINS_IMPROVEMENT", idx);
-
 		SetGlobalDefine("NUKE_FEATURE", szVal);
 		idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("NUKE_FEATURE", idx);
