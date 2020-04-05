@@ -772,7 +772,10 @@ bool CvDeal::startTrade(TradeData trade, PlayerTypes eFromPlayer, PlayerTypes eT
 		case TRADE_TECHNOLOGIES:
 		{
 			GET_TEAM(GET_PLAYER(eToPlayer).getTeam()).setHasTech(((TechTypes)trade.m_iData), true, eToPlayer, true, true);
-			GET_TEAM(GET_PLAYER(eToPlayer).getTeam()).setNoTradeTech(((TechTypes)trade.m_iData), true);
+			if (GC.getGame().isOption(GAMEOPTION_NO_TECH_BROKERING))
+			{
+				GET_TEAM(GET_PLAYER(eToPlayer).getTeam()).setNoTradeTech(((TechTypes)trade.m_iData), true);
+			}
 
 			if (gTeamLogLevel >= 2)
 			{

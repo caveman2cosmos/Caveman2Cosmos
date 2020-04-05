@@ -1052,26 +1052,22 @@ void CvTeam::doTurn()
 	MEMORY_TRACE_FUNCTION();
 	PROFILE("CvTeam::doTurn()")
 
-	int iCount;
-	int iPossibleCount;
-	int iI, iJ;
-
 	FAssertMsg(isAlive(), "isAlive is expected to be true");
 
 	AI_doTurnPre();
 
-	//Keep this valid for barbs only for now.  We may need new rules here for aliens and such but for animals, there's really no need to do anything for them regarding technology unless we want to represent evolution somehow... lol.
-	//Neanderthals?  Should they be able to increase in tech?  If so, this should be isHominid() rather than isBarbarian().
+	// TB - Keep this valid for barbs only for now.
+	// We may need new rules here for aliens and such, but there's really no need to do anything for animals regarding technology unless we want to represent evolution somehow... lol.
+	// Toffer - Neanderthals get thechs without this, so isHominid() is not necessary. May be a bug that they do, but they do.
 	if (isBarbarian())
 	{
-		for (iI = 0; iI < GC.getNumTechInfos(); iI++)
+		for (int iI = 0; iI < GC.getNumTechInfos(); iI++)
 		{
 			if (!isHasTech((TechTypes)iI))
 			{
-				iCount = 0;
-				iPossibleCount = 0;
-
-				for (iJ = 0; iJ < MAX_PC_TEAMS; iJ++)
+				int iPossibleCount = 0;
+				int iCount = 0;
+				for (int iJ = 0; iJ < MAX_PC_TEAMS; iJ++)
 				{
 					if (GET_TEAM((TeamTypes)iJ).isAlive())
 					{
@@ -1079,11 +1075,9 @@ void CvTeam::doTurn()
 						{
 							iCount++;
 						}
-
 						iPossibleCount++;
 					}
 				}
-
 				if (iCount > 0)
 				{
 					FAssertMsg(iPossibleCount > 0, "iPossibleCount is expected to be greater than 0");
@@ -1094,7 +1088,7 @@ void CvTeam::doTurn()
 		}
 	}
 
-	for (iI = 0; iI < MAX_TEAMS; iI++)
+	for (int iI = 0; iI < MAX_TEAMS; iI++)
 	{
 		if (GET_TEAM((TeamTypes)iI).isAlive())
 		{
@@ -1114,15 +1108,6 @@ void CvTeam::doTurn()
 			}
 		}
 	}
-
-	if (!GC.getGame().isOption(GAMEOPTION_NO_TECH_BROKERING))
-	{
-		for (iI = 0; iI < GC.getNumTechInfos(); iI++)
-		{
-			setNoTradeTech(((TechTypes)iI), false);
-		}
-	}
-
 	doWarWeariness();
 
 	testCircumnavigated();
@@ -5265,11 +5250,6 @@ void CvTeam::setResearchProgress(TechTypes eIndex, int iNewValue, PlayerTypes eP
 			setHasTech(eIndex, true, ePlayer, true, true);
 			iOverflow = GET_PLAYER(ePlayer).doMultipleResearch(iOverflow);
 			GET_PLAYER(ePlayer).changeOverflowResearch(iOverflow);
-
-			if (!GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS) && !GC.getGame().isOption(GAMEOPTION_NO_TECH_BROKERING))
-			{
-				setNoTradeTech(eIndex, true);
-			}
 		}
 	}
 }

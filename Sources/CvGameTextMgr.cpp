@@ -37048,23 +37048,18 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 			}
 
 			ReligionTypes eReligion = kPlayer.getStateReligion();
-			if (NO_RELIGION != eReligion)
+			if (NO_RELIGION != eReligion && pCity->isHasReligion(eReligion))
 			{
 				iTempModifier = 0;
 
-				if (pCity->isHasReligion(eReligion))
+				if (GET_PLAYER(eTargetPlayer).getStateReligion() != eReligion)
 				{
-					if (GET_PLAYER(eTargetPlayer).getStateReligion() != eReligion)
-					{
-						iTempModifier += GC.getDefineINT("ESPIONAGE_CITY_RELIGION_STATE_MOD");
-					}
-
-					if (kPlayer.hasHolyCity(eReligion))
-					{
-						iTempModifier += GC.getDefineINT("ESPIONAGE_CITY_HOLY_CITY_MOD");
-					}
+					iTempModifier += GC.getDefineINT("ESPIONAGE_CITY_RELIGION_STATE_MOD");
 				}
-
+				if (kPlayer.hasHolyCity(eReligion))
+				{
+					iTempModifier += GC.getDefineINT("ESPIONAGE_CITY_HOLY_CITY_MOD");
+				}
 				if (0 != iTempModifier)
 				{
 					szBuffer.append(NEWLINE);
@@ -37075,7 +37070,9 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 			}
 
 			// City's culture affects cost
-			iTempModifier = - (pCity->getCultureTimes100(kPlayer.getID()) * GC.getDefineINT("ESPIONAGE_CULTURE_MULTIPLIER_MOD")) / std::max(1, pCity->getCultureTimes100(eTargetPlayer) + pCity->getCultureTimes100(kPlayer.getID()));
+			iTempModifier = -pCity->getCultureTimes100(kPlayer.getID()) * GC.getDefineINT("ESPIONAGE_CULTURE_MULTIPLIER_MOD")
+				/ std::max(1, pCity->getCultureTimes100(eTargetPlayer) + pCity->getCultureTimes100(kPlayer.getID()));
+
 			if (0 != iTempModifier)
 			{
 				szBuffer.append(NEWLINE);
@@ -37129,7 +37126,7 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 		// Spy presence mission cost alteration
 		if (NULL != pSpyUnit)
 		{
-			iTempModifier = -(std::min(5,(pSpyUnit->getFortifyTurns() + (pSpyUnit->getUpgradeDiscount()/10))) * GC.getDefineINT("ESPIONAGE_EACH_TURN_UNIT_COST_DECREASE"));
+			iTempModifier = -std::min(5, pSpyUnit->getFortifyTurns() + pSpyUnit->getUpgradeDiscount() / 10) * GC.getDefineINT("ESPIONAGE_EACH_TURN_UNIT_COST_DECREASE");
 			if (0 != iTempModifier)
 			{
 				szBuffer.append(NEWLINE);
@@ -37140,7 +37137,12 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 		}
 
 		// My points VS. Your points to mod cost
-		iTempModifier = ::getEspionageModifier(kPlayer.getTeam(), GET_PLAYER(eTargetPlayer).getTeam()) - 100;
+		iTempModifier = GC.getDefineINT("ESPIONAGE_SPENDING_MULTIPLIER")
+			* (GET_TEAM(GET_PLAYER(eTargetPlayer).getTeam()).getEspionagePointsEver() * 2 + GET_TEAM(kPlayer.getTeam()).getEspionagePointsEver())
+			/ std::max(
+			1, GET_TEAM(GET_PLAYER(eTargetPlayer).getTeam()).getEspionagePointsEver() + 2 * GET_TEAM(kPlayer.getTeam()).getEspionagePointsEver()
+			) - 100;
+
 		if (0 != iTempModifier)
 		{
 			szBuffer.append(SEPARATOR);
@@ -37169,21 +37171,31 @@ void CvGameTextMgr::setEspionageCostHelp(CvWStringBuffer &szBuffer, EspionageMis
 		{
 			if (pCity == GET_PLAYER(pCity->getOwner()).getCapitalCity() && kTargetTeam.isHasEmbassy(kPlayer.getTeam()))
 			{
-				szBuffer.append(SEPARATOR);
-				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_ESPIONAGE_EMBASSY_MOD", -GC.getDefineINT("EMBASSY_ESPIONAGE_MISSION_COST_MODIFIER")));
-				iModifier *= 100 - 25;
-				iModifier /= 100;
+				iTempModifier = -GC.getDefineINT("EMBASSY_ESPIONAGE_MISSION_COST_MODIFIER");
+				if (0 != iTempModifier)
+				{
+					szBuffer.append(SEPARATOR);
+					szBuffer.append(NEWLINE);
+					szBuffer.append(gDLL->getText("TXT_KEY_ESPIONAGE_EMBASSY_MOD", iTempModifier));
+					iModifier *= 100 + iTempModifier;
+					iModifier /= 100;
+				}
 			}
 			if (kTargetTeam.isFreeTradeAgreement(kPlayer.getTeam()))
 			{
-				szBuffer.append(SEPARATOR);
-				szBuffer.append(NEWLINE);
-				szBuffer.append(gDLL->getText("TXT_KEY_FREE_TRADE_AGREEMENT_MOD", -GC.getDefineINT("FREE_TRADE_AGREEMENT_ESPIONAGE_MISSION_COST_MODIFIER")));
-				iModifier *= 100 - GC.getDefineINT("FREE_TRADE_AGREEMENT_ESPIONAGE_MISSION_COST_MODIFIER");
-				iModifier /= 100;
+				iTempModifier = -GC.getDefineINT("FREE_TRADE_AGREEMENT_ESPIONAGE_MISSION_COST_MODIFIER");
+				if (0 != iTempModifier)
+				{
+					szBuffer.append(SEPARATOR);
+					szBuffer.append(NEWLINE);
+					szBuffer.append(gDLL->getText("TXT_KEY_FREE_TRADE_AGREEMENT_MOD", iTempModifier));
+					iModifier *= 100 + iTempModifier;
+					iModifier /= 100;
+				}
 			}
 		}
+		// Toffer - Should add some text for this last part too I guess...
+		iModifier += GC.getESPIONAGE_MISSION_COST_END_TOTAL_PERCENT_ADJUSTMENT();
 
 		FAssert(iModifier == kPlayer.getEspionageMissionCostModifier(eMission, eTargetPlayer, pPlot, iExtraData, pSpyUnit));
 
