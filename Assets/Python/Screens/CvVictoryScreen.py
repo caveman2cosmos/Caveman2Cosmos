@@ -797,7 +797,7 @@ class CvVictoryScreen:
 									iSSColor = self.COLOR_GREEN
 								elif bOwnProject >= CvProjectInfo.getVictoryMinThreshold(iLoopVC):
 									iSSColor = self.COLOR_YELLOW
-								elif CyTeamBest.isHasTech(iReqTech) and (CyTeam.isHasTech(iReqTech) or CyPlayer.canResearch(iReqTech, False)):
+								elif CyTeamBest.isHasTech(iReqTech) and (CyTeam.isHasTech(iReqTech) or CyPlayer.canResearch(iReqTech)):
 									iSSColor = GC.getInfoTypeForString("COLOR_PLAYER_ORANGE")
 
 								if iSSColor > 0:
