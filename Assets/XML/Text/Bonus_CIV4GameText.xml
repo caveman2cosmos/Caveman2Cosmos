@@ -4604,6 +4604,7 @@
 		<Tag>TXT_KEY_BONUS_MERINA</Tag>
 		<English>Merina</English>
 		<Italian>Merina</Italian>
+		<Polish>Merina</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_METALLIC_HYDROGEN</Tag>
@@ -5782,7 +5783,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_POCKET_UNIVERSE_PEDIA</Tag>
-		<English>In narrative, pocket universes are fictional naturally or artificially-created universes that exist within the bounds of another universe. The term pocket universe is derived from its illustration in the actual universe where it is usually portrayed as an orb which would fit in a pocket.</English>
+		<English>A pocket universe is a naturally or artificially-created universe, that exist within the bounds of another universe. The term is derived from its illustration in the actual universe, where it is usually portrayed as an orb which would fit in a pocket. In the inflationary theory, the concept defines a realm, like the one that contains the observable universe, as only one of many inflationary zones.</English>
+		<Italian>Un universo tascabile è un universo creato naturalmente o artificialmente, che esiste all'interno dei limiti di un altro universo. Il termine deriva dalla sua illustrazione nell'universo reale, dove di solito è rappresentato come un globo di grandezza tascabile. Nella teoria inflazionistica, il concetto definisce la realtà, come quella che contiene l'universo osservabile, come una di numerose zone inflazionistiche.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_POISON</Tag>

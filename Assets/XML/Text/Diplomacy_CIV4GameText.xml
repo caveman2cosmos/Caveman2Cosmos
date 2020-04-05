@@ -1577,7 +1577,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>AI_DIPLO_DEMAND_TRIBUTE_POWER_EQUAL_BISMARCK_1</Tag>
-		<English>"Blackmail" is such an ugly word, [CT_NAME]. I prefer to call it, "extortion."</English>
+		<English>"Blackmail" is such an ugly word, [CT_NAME]. I prefer to call it "extortion."</English>
 		<French>J'ai horreur du mot "chantage", [CT_NAME]. Je préfère employer le terme "extorsion."</French>
 		<German>"Erpressung" ist doch so ein hässliches Wort, [CT_NAME]! Ich bevorzuge den Ausdruck "Einschüchterung".</German>
 		<Italian>"Ricatto" è una brutta parola, [CT_NAME]. Preferisco chiamarla "estorsione".</Italian>
@@ -1598,7 +1598,7 @@
 		<English>Would you care to take part in our share-the-wealth program, [CT_NAME]?</English>
 		<French>Voulez-vous participer à notre programme de partage des richesses, [CT_NAME]?</French>
 		<German>Wollt Ihr nicht auch an unserem Teilt-den-Reichtum-Programm teilnehmen, [CT_NAME]?</German>
-		<Italian>Vorresti prendere parte al nostro progetto per la condivisione della ricchezza, [CT_NAME]?</Italian>
+		<Italian>Vorresti prendere parte al nostro progetto di condivisione della ricchezza, [CT_NAME]?</Italian>
 		<Polish>[CT_NAME], czy chcesz wziąć udział w naszym czynie społecznym, pod hasłem: "Podziel się swym bogactwem"?</Polish>
 		<Spanish>¿Os gustaría tomar parte en nuestro programa de reparto de riqueza, [CT_NAME]?</Spanish>
 	</TEXT>
@@ -1607,7 +1607,7 @@
 		<English>My dear [CT_NAME], [OUR_CIV_SHORT] can make life very difficult indeed for [CT_CIV_SHORT]. Give us what we want or suffer the consequences.</English>
 		<French>Les [CT_CIV_SHORT] peuvent faire de la vie des [CT_CIV_SHORT] un véritable enfer, [CT_NAME]. Donnez-nous ce que nous voulons pour éviter de fâcheuses conséquences.</French>
 		<German>[CT_NAME], das [OUR_EMPIRE:2] könnte Euer Leben sehr viel schwerer machen. Bitte lasst es nicht unnötig darauf ankommen.!</German>
-		<Italian>[CT_NAME], [CT_CIV_SHORT:2] può rendere la vita molto difficile al[CT_CIV_SHORT:2]. Dacci ciò che vogliamo o preparati ad affrontare le conseguenze.</Italian>
+		<Italian>Mio caro [CT_NAME], [CT_CIV_SHORT:2] può rendere la vita molto difficile al [CT_CIV_SHORT:2]. Dacci ciò che vogliamo o preparati ad affrontare le conseguenze.</Italian>
 		<Polish>Mój drogi [CT_NAME], [OUR_EMPIRE] może znacznie utrufnić życie ludowi [CT_CIV_ADJ]. Daj mi czego chcę albo pożałujesz.</Polish>
 		<Spanish>[CT_NAME] de nuestros amores, [OUR_CIV_SHORT] puede llegarle a hacer la vida harto difícil a [CT_CIV_SHORT]. Dadnos lo que queremos o ateneos a las consecuencias.</Spanish>
 	</TEXT>
@@ -2745,12 +2745,6 @@
 		<Spanish>Os doy la bienvenida a [OUR_CIV_SHORT], [CT_NAME]. ¿Os apetece un poco de emperador? Lo he cocinado yo mismo.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_KANGXI_1</Tag>
-		<English>Greetings,[CT_NAME]. Allow me to keep the [CT_EMPIRE] within my sights. It is easy to dodge a spear that comes in front of you but hard to keep harms away from an arrow shot from behind.</English>
-		<French>Salutations,[CT_NAME]. permettez-moi de garder l'[CT_EMPIRE] dans mon champ de vision. Il est facile d'esquiver une lance arrivant droit sur vous, mais difficile de ne pas être blassé par une flêche tiré dans le dos.</French>
-		<German>Grüße,[CT_NAME]. Erlaube mir, das [CT_EMPIRE] im Auge zu behalten. Es ist leicht, einen Speer abzuwehren, der von vorne kommt, aber schwer, einen Pfeil von hinten abzuwehren.</German>
-		<Polish>Pozdrowienia,[CT_NAME]. Pozwól mi utrzymać [CT_EMPIRE] na oku. Łatwo jest rzucić włócznią przed siebie ale ciężko zauważyć strzałe lecącą za Tobą.</Polish>
-		<Spanish>Saludos, [CT_NAME]. Permíteme mantener al [CT_EMPIRE] en mi campo de visión. Es fácil esquivar una lanza que te llega por delante, pero más dificil es evitar el daño de un flechazo por la espalda.</Spanish>
 		<Tag>AI_DIPLO_FIRST_CONTACT_LEADER_KAMEHAMEHA_1</Tag>
 		<English>Hello! Ask me what is the greatest thing in the world, I will reply: It is people, it is people, it is people!</English>
 		<French>Hello! Me demande quelle est la plus grande chose dans le monde, je répondrai: C'est gens, les gens, les gens!</French>
