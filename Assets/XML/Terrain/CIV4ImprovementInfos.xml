@@ -119,7 +119,6 @@
 			</BonusTypeStructs>
 			<ImprovementUpgrade>IMPROVEMENT_FARM</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes>
-				<ImprovementType>IMPROVEMENT_COTTAGE</ImprovementType>
 				<ImprovementType>IMPROVEMENT_THATCH_CUTTER</ImprovementType>
 				<ImprovementType>IMPROVEMENT_JUNGLE_CAMP</ImprovementType>
 				<ImprovementType>IMPROVEMENT_WETLANDS_CAMP</ImprovementType>
@@ -348,9 +347,6 @@
 				</BonusTypeStruct>
 			</BonusTypeStructs>
 			<ImprovementUpgrade>IMPROVEMENT_HYDROCARBON_WELL</ImprovementUpgrade>
-			<AlternativeImprovementUpgradeTypes>
-				<ImprovementType>IMPROVEMENT_WORKSHOP</ImprovementType>
-			</AlternativeImprovementUpgradeTypes>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_SHIP_BUILDING</PrereqTech>
@@ -6907,8 +6903,6 @@
 			<ImprovementUpgrade>IMPROVEMENT_ORCHARD</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes>
 				<ImprovementType>IMPROVEMENT_LUMBERJACK</ImprovementType>
-				<ImprovementType>IMPROVEMENT_COTTAGE</ImprovementType>
-				<ImprovementType>IMPROVEMENT_WINERY</ImprovementType>
 			</AlternativeImprovementUpgradeTypes>
 			<TechYieldChanges>
 				<TechYieldChange>
@@ -7172,7 +7166,6 @@
 			<ImprovementUpgrade>IMPROVEMENT_PLANTATION</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes>
 				<ImprovementType>IMPROVEMENT_LUMBERJACK</ImprovementType>
-				<ImprovementType>IMPROVEMENT_COTTAGE</ImprovementType>
 			</AlternativeImprovementUpgradeTypes>
 			<TechYieldChanges>
 				<TechYieldChange>
@@ -10681,8 +10674,6 @@
 			<ImprovementUpgrade>IMPROVEMENT_MINE</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes>
 				<ImprovementType>IMPROVEMENT_EARLY_QUARRY</ImprovementType>
-				<ImprovementType>IMPROVEMENT_QUARRY</ImprovementType>
-				<ImprovementType>IMPROVEMENT_WOOD_GATHERER</ImprovementType>
 			</AlternativeImprovementUpgradeTypes>
 			<TechYieldChanges>
 				<TechYieldChange>
