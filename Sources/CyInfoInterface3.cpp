@@ -35,7 +35,7 @@ void CyInfoPythonInterface3()
 		.def("getBuildModifier", &CvTerrainInfo::getBuildModifier, "int ()")
 		.def("getDefenseModifier", &CvTerrainInfo::getDefenseModifier, "int ()")
 
-		.def("isWater", &CvTerrainInfo::isWater, "bool ()")
+		.def("isWaterTerrain", &CvTerrainInfo::isWaterTerrain, "bool ()")
 		.def("isImpassable", &CvTerrainInfo::isImpassable, "bool ()")
 		.def("isFound", &CvTerrainInfo::isFound, "bool ()")
 		.def("isFoundCoast", &CvTerrainInfo::isFoundCoast, "bool ()")
