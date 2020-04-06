@@ -12390,58 +12390,41 @@ void CvGameTextMgr::parseLeaderTraits(CvWStringBuffer &szHelpString, LeaderHeadT
 {
 	PROFILE_FUNC();
 
-	CvWString szTempBuffer;	// Formatting
-	int iI;
 
 	//	Build help string
 	if (eLeader != NO_LEADER)
 	{
 		if (!bDawnOfMan && !bCivilopediaText)
 		{
+			CvWString szTempBuffer;
 			szTempBuffer.Format( SETCOLR L"%s" ENDCOLR , TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), GC.getLeaderHeadInfo(eLeader).getDescription());
 			szHelpString.append(szTempBuffer);
 		}
 
-		FAssertMsg((GC.getNumTraitInfos() > 0),
-			"GC.getNumTraitInfos() is less than or equal to zero but is expected to be larger than zero in CvSimpleCivPicker::setLeaderText");
+		FAssertMsg((GC.getNumTraitInfos() > 0), "GC.getNumTraitInfos() is less than or equal to zero but is expected to be larger than zero in CvSimpleCivPicker::setLeaderText");
 
 		bool bFirst = true;
 
-		for (iI = 0; iI < GC.getNumTraitInfos(); ++iI)
+		for (int iI = 0; iI < GC.getNumTraitInfos(); ++iI)
 		{
 			TraitTypes eTrait = ((TraitTypes)iI);
-			if (GC.getLeaderHeadInfo(eLeader).hasTrait(eTrait) &&
-				!(GC.getGame().isOption(GAMEOPTION_NO_NEGATIVE_TRAITS) && GC.getTraitInfo(eTrait).isNegativeTrait()) &&
-				!(GC.getGame().isOption(GAMEOPTION_START_NO_POSITIVE_TRAITS) && !GC.getTraitInfo(eTrait).isNegativeTrait()) &&
-				((GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS) && GC.getTraitInfo(eTrait).getLinePriority() != 0) ||
-				(!GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS) && GC.getTraitInfo(eTrait).getLinePriority() == 0)))
+			if (GC.getLeaderHeadInfo(eLeader).hasTrait(eTrait) && GC.getTraitInfo(eTrait).isValidTrait(true))
 			{
-				if (!(GC.getGame().isOption(GAMEOPTION_START_NO_POSITIVE_TRAITS) && GC.getGame().isOption(GAMEOPTION_LEADERHEAD_LEVELUPS)))
+				if (bDawnOfMan)
 				{
-					if (!bFirst)
-					{
-						if (bDawnOfMan)
-						{
-							szHelpString.append(L", ");
-						}
-					}
-					else
-					{
-						bFirst = false;
-					}
-					parseTraits(szHelpString, ((TraitTypes)iI), eCivilization, bDawnOfMan);
+					if (!bFirst) szHelpString.append(L", ");
+					else bFirst = false;
 				}
+				parseTraits(szHelpString, ((TraitTypes)iI), eCivilization, bDawnOfMan);
 			}
 		}
 	}
-	else
+	else //	Random leader
 	{
-		//	Random leader
+		CvWString szTempBuffer;
 		szTempBuffer.Format( SETCOLR L"%s" ENDCOLR , TEXT_COLOR("COLOR_HIGHLIGHT_TEXT"), gDLL->getText("TXT_KEY_TRAIT_PLAYER_UNKNOWN").c_str());
 		szHelpString.append(szTempBuffer);
 	}
-
-//	return szHelpString;
 }
 
 //
