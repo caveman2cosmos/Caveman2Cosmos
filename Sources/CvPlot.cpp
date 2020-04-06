@@ -2822,11 +2822,6 @@ bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, 
 	}
 	const CvImprovementInfo& pInfo = GC.getImprovementInfo(eImprovement);
 
-	if (pInfo.isWater() != isWater())
-	{
-		return false;
-	}
-
 	// Meant for pseudo improvements that won't ever be on the map, like bonus placement improvements.
 	// Toffer - Shouldn't this be part of buildInfo?
 	// I'm thinking bonus placement builds should not be linked to an improvement at all.
@@ -2860,13 +2855,24 @@ bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, 
 	{
 		return false;
 	}
-	/*----------------------------*\
-	| Special peak and bonus rules |
-	\*----------------------------*/
+	/*-----------------------*\
+	| Special plot type rules |
+	\*-----------------------*/
 	bValid = false;
-	if (isPeak2(true))
+	if (isWater())
 	{
-		if (!pInfo.isRequiresPeak()) // Only requirement that invalidate both ways.
+		if (!pInfo.isWaterImprovement())
+		{
+			return false;
+		}
+	}
+	else if (pInfo.isWaterImprovement())
+	{
+		return false;
+	}
+	else if (isPeak2(true))
+	{
+		if (!pInfo.isPeakImprovement()) // Only requirement that invalidate both ways.
 		{
 			return false;
 		}
@@ -2875,12 +2881,13 @@ bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, 
 			bValid = true;
 		}
 	}
-	else if (pInfo.isRequiresPeak())
+	else if (pInfo.isPeakImprovement())
 	{
 		return false;
 	}
-
-	// Special makeValid rule for bonuses; bonuses overides most rules.
+	/*-------------------------------------------------------*\
+	| Special makeValid rule for bonuses; bonus access is key |
+	\*-------------------------------------------------------*/
 	if (getBonusType(eTeam) != NO_BONUS && pInfo.isImprovementBonusMakesValid(getBonusType(eTeam)))
 	{
 		return true;
@@ -2903,9 +2910,9 @@ bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, 
 	{
 		return false;
 	}
-	/*----------------*\
-	| Main validartors |
-	\*----------------*/
+	/*---------------*\
+	| Main validators |
+	\*---------------*/
 	// Special desert validator
 	bool bIgnoreNatureYields = false;
 	if (pInfo.isRequiresIrrigation() && getTerrainType() == GC.getInfoTypeForString("TERRAIN_DESERT")
@@ -2934,9 +2941,9 @@ bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, 
 			bValid = true;
 		}
 	}
-	/*-------------------*\
-	| Final invalidartors |
-	\*-------------------*/
+	/*------------------*\
+	| Final invalidators |
+	\*------------------*/
 	if (!bValid)
 	{
 		return false;
@@ -7642,7 +7649,7 @@ void CvPlot::setPlotType(PlotTypes eNewValue, bool bRecalculate, bool bRebuildGr
 
 		updateSeeFromSight(true, true);
 
-		if ((getTerrainType() == NO_TERRAIN) || (GC.getTerrainInfo(getTerrainType()).isWater() != isWater()))
+		if (getTerrainType() == NO_TERRAIN || GC.getTerrainInfo(getTerrainType()).isWaterTerrain() != isWater())
 		{
 			if (isWater())
 			{
@@ -7960,9 +7967,9 @@ void CvPlot::setTerrainType(TerrainTypes eNewValue, bool bRecalculate, bool bReb
 			}
 		}
 
-		if (GC.getTerrainInfo(getTerrainType()).isWater() != isWater())
+		if (GC.getTerrainInfo(getTerrainType()).isWaterTerrain() != isWater())
 		{
-			setPlotType(((GC.getTerrainInfo(getTerrainType()).isWater()) ? PLOT_OCEAN : PLOT_LAND), bRecalculate, bRebuildGraphics);
+			setPlotType(isWater() ? PLOT_LAND : PLOT_OCEAN, bRecalculate, bRebuildGraphics);
 		}
 	}
 }
