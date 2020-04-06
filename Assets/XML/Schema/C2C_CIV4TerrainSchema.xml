@@ -636,10 +636,11 @@
 	<ElementType name="bRiverSideMakesValid" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNoFreshWater" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bRequiresRiverSide" content="textOnly" dt:type="boolean"/>
-	<ElementType name="bRequiresPeak" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bRequiresIrrigation" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bCarriesIrrigation" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bRequiresFeature" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bPeakImprovement" content="textOnly" dt:type="boolean"/>
+	<ElementType name="bWaterImprovement" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bGoody" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bPermanent" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iGoodyRange" content="textOnly" dt:type="int"/>
@@ -724,11 +725,11 @@
 		<element type="bNoFreshWater" minOccurs="0"/>
 		<element type="bRequiresFlatlands" minOccurs="0"/>
 		<element type="bRequiresRiverSide" minOccurs="0"/>
-		<element type="bRequiresPeak" minOccurs="0"/>
 		<element type="bRequiresIrrigation" minOccurs="0"/>
 		<element type="bCarriesIrrigation" minOccurs="0"/>
 		<element type="bRequiresFeature" minOccurs="0"/>
-		<element type="bWater" minOccurs="0"/>
+		<element type="bPeakImprovement" minOccurs="0"/>
+		<element type="bWaterImprovement" minOccurs="0"/>
 		<element type="bGoody" minOccurs="0"/>
 		<element type="bPermanent" minOccurs="0"/>
 		<element type="bUseLSystem" minOccurs="0"/>

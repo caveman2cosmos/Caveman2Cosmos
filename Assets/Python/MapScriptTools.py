@@ -930,12 +930,10 @@ def getTerrainPercentage( eTerrain, bPercent=True ):
 		if plot.isWater(): cntWater += 1
 		if ter == eTerrain: cntTer += 1
 	if bPercent:
-		if GC.getTerrainInfo(eTerrain).isWater():
+		if GC.getTerrainInfo(eTerrain).isWaterTerrain():
 			return round(cntTer * 100.0 / cntWater, 2)
-		else:
-			return round(cntTer * 100.0 / (MAP.numPlots() - cntWater), 2)
-	else:
-		return cntTer
+		return round(cntTer * 100.0 / (MAP.numPlots() - cntWater), 2)
+	return cntTer
 
 
 ################################################################################
@@ -1567,13 +1565,13 @@ class MapPrettifier:
 			return
 		# read parameter
 		eTerrain, chPercent = targetTerTuple
-		bWater = GC.getTerrainInfo(eTerrain).isWater()
+		bWater = GC.getTerrainInfo(eTerrain).isWaterTerrain()
 		srcTer = []
 		chTer = []
 		for i in range( len(sourceTerTuples) ):
 			srcTerrain, srcChance = sourceTerTuples[i]
 			# we don't change plots
-			if GC.getTerrainInfo(srcTerrain).isWater() == bWater:
+			if GC.getTerrainInfo(srcTerrain).isWaterTerrain() == bWater:
 				srcTer.append( srcTerrain )
 				chTer.append( srcChance )
 		# check seed terrain

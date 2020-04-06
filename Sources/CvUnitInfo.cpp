@@ -4309,9 +4309,6 @@ bool CvUnitInfo::read(CvXMLLoadUtility* pXML)
 	// EXTRA HOVER TEXT
 	pXML->GetOptionalChildXmlValByName(m_szExtraHoverTextKey, L"ExtraHoverText");
 
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"Capture");
-	m_aszExtraXMLforPass3.push_back(szTextVal);
-
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"Combat");
 	m_iUnitCombatType = pXML->GetInfoClass(szTextVal);
 
@@ -6446,12 +6443,14 @@ void CvUnitInfo::copyNonDefaults(CvUnitInfo* pClassInfo, CvXMLLoadUtility* pXML)
 
 bool CvUnitInfo::readPass2(CvXMLLoadUtility* pXML)
 {
-	CvString szTextVal;
-
 	if (!CvHotkeyInfo::read(pXML))
 	{
 		return false;
 	}
+	CvString szTextVal;
+	pXML->GetOptionalChildXmlValByName(szTextVal, L"Capture");
+	m_iUnitCaptureType = pXML->GetInfoClass(szTextVal);
+
 	pXML->SetVariableListTagPair(&m_piFlankingStrikeUnit, L"FlankingStrikes", GC.getNumUnitInfos(), -1);
 	pXML->SetVariableListTagPair(&m_piUnitAttackModifier, L"UnitAttackMods", GC.getNumUnitInfos());
 	pXML->SetVariableListTagPair(&m_piUnitDefenseModifier, L"UnitDefenseMods", GC.getNumUnitInfos());
@@ -6488,6 +6487,10 @@ void CvUnitInfo::copyNonDefaultsReadPass2(CvUnitInfo* pClassInfo, CvXMLLoadUtili
 			m_piUnitDefenseModifier[i] = pClassInfo->getUnitDefenseModifier(i);
 		}
 	}
+	if (bOver || m_iUnitCaptureType == -1 && pClassInfo->getUnitCaptureType() != -1)
+	{
+		m_iUnitCaptureType = pClassInfo->getUnitCaptureType();
+	}
 }
 
 bool CvUnitInfo::readPass3()
@@ -6510,15 +6513,6 @@ bool CvUnitInfo::readPass3()
 		m_aszCivilizationNamesforPass3.clear();
 		m_aszCivilizationNamesValueforPass3.clear();
 	}
-	if (m_aszExtraXMLforPass3.size() < 1)
-	{
-		FAssert(false);
-		return false;
-	}
-	m_iUnitCaptureType = GC.getInfoTypeForString(m_aszExtraXMLforPass3[0]);
-
-	m_aszExtraXMLforPass3.clear();
-
 	return true;
 }
 
