@@ -585,7 +585,7 @@
 			<Type>BUILD_STONE_TOOLS_WORKSHOP</Type>
 			<Description>TXT_KEY_BUILD_STONE_TOOLS_WORKSHOP</Description>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-			<ObsoleteTech>TECH_EXPLOSIVES</ObsoleteTech>
+			<ObsoleteTech>TECH_MINING</ObsoleteTech>
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
@@ -2314,7 +2314,7 @@
 			<Type>BUILD_WORKSHOP</Type>
 			<Description>TXT_KEY_BUILD_WORKSHOP</Description>
 			<PrereqTech>TECH_MACHINERY</PrereqTech>
-			<ObsoleteTech>TECH_ASSEMBLY_LINE</ObsoleteTech>
+			<ObsoleteTech>TECH_REFRIGERATION</ObsoleteTech>
 			<iTime>600</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
@@ -2820,7 +2820,7 @@
 			<Type>BUILD_SALT_GATHERER</Type>
 			<Description>TXT_KEY_BUILD_SALT_GATHERER</Description>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-			<ObsoleteTech>TECH_EXPLOSIVES</ObsoleteTech>
+			<ObsoleteTech>TECH_MASONRY</ObsoleteTech>
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
