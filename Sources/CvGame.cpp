@@ -1682,78 +1682,59 @@ void CvGame::normalizeRemoveBadFeatures()
 
 void CvGame::normalizeRemoveBadTerrain()
 {
-	CvPlot* pStartingPlot;
-	CvPlot* pLoopPlot;
-	int iI, iK;
-	int iX, iY;
-
-	int iTargetFood;
-	int iTargetTotal;
-	int iPlotFood;
-	int iPlotProduction;
-
 	const int iCityRange = CITY_PLOTS_RADIUS;
-	const int iExtraRange = 1;
-	const int iMaxRange = iCityRange + iExtraRange;
+	const int iMaxRange = iCityRange + 1;
 
-	for (iI = 0; iI < MAX_PC_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		if (!GET_PLAYER((PlayerTypes)iI).isAlive())
+			continue;
+
+		const CvPlot* pStartingPlot = GET_PLAYER((PlayerTypes)iI).getStartingPlot();
+		if (pStartingPlot == NULL)
+			continue;
+
+		for (int iX = -iMaxRange; iX <= iMaxRange; iX++)
 		{
-			pStartingPlot = GET_PLAYER((PlayerTypes)iI).getStartingPlot();
-
-			if (pStartingPlot != NULL)
+			for (int iY = -iMaxRange; iY <= iMaxRange; iY++)
 			{
-				for (iX = -iMaxRange; iX <= iMaxRange; iX++)
-				{
-					for (iY = -iMaxRange; iY <= iMaxRange; iY++)
-					{
-						pLoopPlot = plotXY(pStartingPlot->getX(), pStartingPlot->getY(), iX, iY);
-						if (pLoopPlot != NULL)
-						{
-							const int iDistance = plotDistance(pStartingPlot->getX(), pStartingPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
-							if (iDistance <= iMaxRange)
-							{
-								if (!(pLoopPlot->isWater()) && ((iDistance <= iCityRange) || (pLoopPlot->isCoastalLand()) || (0 == getSorenRandNum(1 + iDistance - iCityRange, "Map Upgrade Terrain Food"))))
-								{
-									iPlotFood = GC.getTerrainInfo(pLoopPlot->getTerrainType()).getYield(YIELD_FOOD);
-									iPlotProduction = GC.getTerrainInfo(pLoopPlot->getTerrainType()).getYield(YIELD_PRODUCTION);
-									if ((iPlotFood + iPlotProduction) <= 1)
-									{
-										iTargetFood = 1;
-										iTargetTotal = 1;
-										if (pLoopPlot->getBonusType(GET_PLAYER((PlayerTypes)iI).getTeam()) != NO_BONUS)
-										{
-											iTargetFood = 1;
-											iTargetTotal = 2;
-										}
-										else if ((iPlotFood == 1) || (iDistance <= iCityRange))
-										{
-											iTargetFood = 1 + getSorenRandNum(2, "Map Upgrade Terrain Food");
-											iTargetTotal = 2;
-										}
-										else
-										{
-											iTargetFood = pLoopPlot->isCoastalLand() ? 2 : 1;
-											iTargetTotal = 2;
-										}
+				CvPlot* pLoopPlot = plotXY(pStartingPlot->getX(), pStartingPlot->getY(), iX, iY);
 
-										for (iK = 0; iK < GC.getNumTerrainInfos(); iK++)
-										{
-											if (!(GC.getTerrainInfo((TerrainTypes)iK).isWater()))
-											{
-												if ((GC.getTerrainInfo((TerrainTypes)iK).getYield(YIELD_FOOD) >= iTargetFood) &&
-													(GC.getTerrainInfo((TerrainTypes)iK).getYield(YIELD_FOOD) + GC.getTerrainInfo((TerrainTypes)iK).getYield(YIELD_PRODUCTION)) == iTargetTotal)
-												{
-													if ((pLoopPlot->getFeatureType() == NO_FEATURE) || GC.getFeatureInfo(pLoopPlot->getFeatureType()).isTerrain(iK))
-													{
-														pLoopPlot->setTerrainType((TerrainTypes)iK);
-													}
-												}
-											}
-										}
-									}
-								}
+				if (pLoopPlot == NULL)
+					continue;
+
+				const int iDistance = plotDistance(pStartingPlot->getX(), pStartingPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
+
+				if (iDistance <= iMaxRange && !pLoopPlot->isWater()
+				&& (iDistance <= iCityRange || pLoopPlot->isCoastalLand() || 0 == getSorenRandNum(1 + iDistance - iCityRange, "Map Upgrade Terrain Food")))
+				{
+					const int iPlotFood = GC.getTerrainInfo(pLoopPlot->getTerrainType()).getYield(YIELD_FOOD);
+
+					if (iPlotFood + GC.getTerrainInfo(pLoopPlot->getTerrainType()).getYield(YIELD_PRODUCTION) <= 1)
+					{
+						int iTargetFood;
+
+						if (pLoopPlot->getBonusType(GET_PLAYER((PlayerTypes)iI).getTeam()) != NO_BONUS)
+						{
+							iTargetFood = 1;
+						}
+						else if (iPlotFood == 1 || iDistance <= iCityRange)
+						{
+							iTargetFood = 1 + getSorenRandNum(2, "Map Upgrade Terrain Food");
+						}
+						else
+						{
+							iTargetFood = pLoopPlot->isCoastalLand() ? 2 : 1;
+						}
+
+						for (int iK = 0; iK < GC.getNumTerrainInfos(); iK++)
+						{
+							if (!GC.getTerrainInfo((TerrainTypes)iK).isWaterTerrain()
+							&& GC.getTerrainInfo((TerrainTypes)iK).getYield(YIELD_FOOD) >= iTargetFood
+							&& GC.getTerrainInfo((TerrainTypes)iK).getYield(YIELD_FOOD) + GC.getTerrainInfo((TerrainTypes)iK).getYield(YIELD_PRODUCTION) == 2
+							&& (pLoopPlot->getFeatureType() == NO_FEATURE || GC.getFeatureInfo(pLoopPlot->getFeatureType()).isTerrain(iK)))
+							{
+								pLoopPlot->setTerrainType((TerrainTypes)iK);
 							}
 						}
 					}
@@ -1762,6 +1743,7 @@ void CvGame::normalizeRemoveBadTerrain()
 		}
 	}
 }
+
 
 void CvGame::normalizeAddFoodBonuses()
 {
@@ -1933,7 +1915,7 @@ void CvGame::normalizeAddGoodTerrain()
 										{
 											for (iK = 0; iK < GC.getNumTerrainInfos(); iK++)
 											{
-												if (!(GC.getTerrainInfo((TerrainTypes)iK).isWater()))
+												if (!(GC.getTerrainInfo((TerrainTypes)iK).isWaterTerrain()))
 												{
 													if (GC.getTerrainInfo((TerrainTypes)iK).getYield(YIELD_FOOD) >= GC.getFOOD_CONSUMPTION_PER_POPULATION())
 													{
