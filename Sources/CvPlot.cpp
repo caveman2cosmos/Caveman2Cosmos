@@ -1921,32 +1921,20 @@ bool CvPlot::canHavePotentialIrrigation() const
 
 bool CvPlot::isIrrigationAvailable(bool bIgnoreSelf) const
 {
-	CvPlot* pAdjacentPlot;
-	int iI;
-
-	if (!bIgnoreSelf && isIrrigated())
+	if (!bIgnoreSelf && isIrrigated() || isFreshWater())
 	{
 		return true;
 	}
 
-	if (isFreshWater())
+	for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
 	{
-		return true;
-	}
+		const CvPlot* pAdjacentPlot = plotDirection(getX(), getY(), ((DirectionTypes)iI));
 
-	for (iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
-	{
-		pAdjacentPlot = plotDirection(getX(), getY(), ((DirectionTypes)iI));
-
-		if (pAdjacentPlot != NULL)
+		if (pAdjacentPlot != NULL && pAdjacentPlot->isIrrigated())
 		{
-			if (pAdjacentPlot->isIrrigated())
-			{
-				return true;
-			}
+			return true;
 		}
 	}
-
 	return false;
 }
 
@@ -2813,63 +2801,91 @@ bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, 
 {
 	FAssertMsg(eImprovement != NO_IMPROVEMENT, "Improvement is not assigned a valid value");
 	FAssertMsg(getTerrainType() != NO_TERRAIN, "TerrainType is not assigned a valid value");
-
+	/*----------------------*\
+	| Universal Invalidators |
+	\*----------------------*/
 	if (isCity())
 	{
 		return false;
 	}
 
-	if (GC.getImprovementInfo(eImprovement).isNotOnAnyBonus() && getBonusType() != NO_BONUS)
-	{
-		return false;
-	}
-	// Don't upgrade if old imp is specialized for the plot bonus and the upgrade isn't.
-	if (getBonusType() != NO_BONUS  && bUpgradeCheck && getImprovementType() != NO_IMPROVEMENT
-	&& GC.getImprovementInfo(getImprovementType()).isImprovementBonusMakesValid(getBonusType())
-	&& !GC.getImprovementInfo(eImprovement).isImprovementBonusMakesValid(getBonusType()))
-	{
-		return false;
-	}
-
-	if (GC.getImprovementInfo(eImprovement).isWater() != isWater())
-	{
-		return false;
-	}
 	// Overide old?
 	if (!bOver && eImprovement != NO_IMPROVEMENT && getImprovementType() == eImprovement)
 	{
 		return false;
 	}
+
 	// Feature forbids
 	if (getFeatureType() != NO_FEATURE && GC.getFeatureInfo(getFeatureType()).isNoImprovement())
 	{
 		return false;
 	}
-	// Irrigation req
-	if (!bPotential && (getTeam() == NO_TEAM || !GET_TEAM(getTeam()).isIgnoreIrrigation())
-	&& GC.getImprovementInfo(eImprovement).isRequiresIrrigation() && !isIrrigationAvailable())
+	const CvImprovementInfo& pInfo = GC.getImprovementInfo(eImprovement);
+
+	if (pInfo.isWater() != isWater())
 	{
 		return false;
 	}
 
-	bool bValid = false;
+	// Toffer - Subject to removal?
+	// No improvements would ever use this condition afaics.
+	if (pInfo.isNotOnAnyBonus() && getBonusType() != NO_BONUS)
+	{
+		return false;
+	}
+	// ! Toffer
 
+	// Special upgrade rule
+	if (bUpgradeCheck && getImprovementType() != NO_IMPROVEMENT && getBonusType() != NO_BONUS
+	&& GC.getImprovementInfo(getImprovementType()).isImprovementBonusMakesValid(getBonusType())
+	&& !pInfo.isImprovementBonusMakesValid(getBonusType()))
+	{
+		// Upgrading would remove access to bonus, bad upgrade.
+		return false;
+	}
+
+	// Map Category
+	int iCount = pInfo.getNumMapCategoryTypes();
+	bool bValid = iCount < 1;
+
+	for (int iI = 0; iI < iCount; iI++)
+	{
+		if (isMapCategoryType((MapCategoryTypes)pInfo.getMapCategoryType(iI)))
+		{
+			bValid = true;
+			break;
+		}
+	}
+	if (!bValid)
+	{
+		return false;
+	}
+	/*----------------------------*\
+	| Special peak and bonus rules |
+	\*----------------------------*/
+	bValid = false;
 	if (isPeak2(true))
 	{
-		if (!GC.getImprovementInfo(eImprovement).isPeakMakesValid())
+		if (pInfo.isRequiresPeak() && getBonusType(eTeam) != NO_BONUS
+		&& pInfo.isImprovementBonusMakesValid(getBonusType(eTeam)))
 		{
-			return false;
+			return true; // Special bonus rule for peak plots.
 		}
-		bValid = true;
+		if (pInfo.isPeakMakesValid())
+		{
+			bValid = true;
+		}
 	}
-	else if (getBonusType(eTeam) != NO_BONUS
-	&& GC.getImprovementInfo(eImprovement).isImprovementBonusMakesValid(getBonusType(eTeam))
-	&& !GC.getImprovementInfo(eImprovement).isRequiresPeak())
+	else if (pInfo.isRequiresPeak())
 	{
-		return true;
+		return false;
+	}
+	else if (getBonusType(eTeam) != NO_BONUS && pInfo.isImprovementBonusMakesValid(getBonusType(eTeam)))
+	{
+		return true; // Special bonus rule for non-peak plots.
 	}
 
-	if (getBonusType(eTeam) != NO_BONUS && GC.getImprovementInfo(eImprovement).isImprovementObsoleteBonusMakesValid(getBonusType(eTeam)))
+	if (getBonusType(eTeam) != NO_BONUS && pInfo.isImprovementObsoleteBonusMakesValid(getBonusType(eTeam)))
 	{
 		if (GET_TEAM(eTeam).isHasTech((TechTypes)GC.getBonusInfo(getBonusType(eTeam)).getTechObsolete()))
 		{
@@ -2877,79 +2893,76 @@ bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, 
 		}
 		return false;
 	}
-
-	if (GC.getImprovementInfo(eImprovement).isNoFreshWater() && isFreshWater())
+	/*--------------------*\
+	| General invalidators |
+	\*--------------------*/
+	// Irrigation req
+	if (!bPotential && (getTeam() == NO_TEAM || !GET_TEAM(getTeam()).isIgnoreIrrigation())
+	&& pInfo.isRequiresIrrigation() && !isIrrigationAvailable())
 	{
 		return false;
 	}
-
-	if (GC.getImprovementInfo(eImprovement).isRequiresFlatlands() && !isFlatlands())
+	// Freshwater req
+	if (pInfo.isNoFreshWater() && isFreshWater())
 	{
 		return false;
 	}
-
-	if (GC.getImprovementInfo(eImprovement).isCanMoveSeaUnits() && !isCoastalLand())
+	// Flatland req
+	if (pInfo.isRequiresFlatlands() && !isFlatlands())
 	{
 		return false;
 	}
-
-	if (GC.getImprovementInfo(eImprovement).isRequiresFeature() && (getFeatureType() == NO_FEATURE))
+	// Any feature req
+	if (pInfo.isRequiresFeature() && getFeatureType() == NO_FEATURE)
 	{
 		return false;
 	}
-
-	if (GC.getImprovementInfo(eImprovement).isHillsMakesValid() && isHills())
+	// Special canal condition
+	if (pInfo.isCanMoveSeaUnits() && !isCoastalLand())
 	{
-		bValid = true;
+		return false;
 	}
-
-	if (GC.getImprovementInfo(eImprovement).isFreshWaterMakesValid() && isFreshWater())
-	{
-		bValid = true;
-	}
-
-	if (GC.getImprovementInfo(eImprovement).isRiverSideMakesValid() && isRiverSide())
-	{
-		bValid = true;
-	}
-
-	if (GC.getImprovementInfo(eImprovement).getTerrainMakesValid(getTerrainType()))
-	{
-		bValid = true;
-	}
-
-	if ((getFeatureType() != NO_FEATURE) && GC.getImprovementInfo(eImprovement).getFeatureMakesValid(getFeatureType()))
-	{
-		bValid = true;
-	}
-
-	//Desert has negative defense
+	/*----------------*\
+	| Main validartors |
+	\*----------------*/
+	// Special desert validator
 	bool bIgnoreNatureYields = false;
-	if (GC.getTerrainInfo(getTerrainType()).getDefenseModifier() < 0 && GC.getImprovementInfo(eImprovement).isRequiresIrrigation()
+	if (pInfo.isRequiresIrrigation() && getTerrainType() == GC.getInfoTypeForString("TERRAIN_DESERT")
 	&& (eTeam != NO_TEAM && GET_TEAM(eTeam).isCanFarmDesert() || getTeam() != NO_TEAM && GET_TEAM(getTeam()).isCanFarmDesert()))
 	{
 		bValid = true;
 		bIgnoreNatureYields = true; // This is a min yield override for desert
 	}
-
+	// General validators
+	else if (getFeatureType() != NO_FEATURE
+	&& pInfo.getFeatureMakesValid(getFeatureType())
+	|| pInfo.isHillsMakesValid() && isHills()
+	|| pInfo.isFreshWaterMakesValid() && isFreshWater()
+	|| pInfo.isRiverSideMakesValid() && isRiverSide()
+	|| pInfo.getTerrainMakesValid(getTerrainType()))
+	{
+		bValid = true;
+	}
+	/*-------------------*\
+	| Final invalidartors |
+	\*-------------------*/
 	if (!bValid)
 	{
 		return false;
 	}
-
 	// Minimum yield
 	if (!bIgnoreNatureYields)
 	{
 		for (int iI = 0; iI < NUM_YIELD_TYPES; ++iI)
 		{
-			if (calculateNatureYield(((YieldTypes)iI), eTeam) < GC.getImprovementInfo(eImprovement).getPrereqNatureYield(iI))
+			if (calculateNatureYield(((YieldTypes)iI), eTeam) < pInfo.getPrereqNatureYield(iI))
 			{
 				return false;
 			}
 		}
 	}
 	// Riverside
-	if (GC.getImprovementInfo(eImprovement).isRequiresRiverSide())
+	if (pInfo.isRequiresRiverSide())
 	{
 		bValid = false;
 		for (int iI = 0; iI < NUM_CARDINALDIRECTION_TYPES; ++iI)
@@ -3126,7 +3139,7 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 	//	Tech requirements are not checked here - they are checked in CvPlayer::canBuild() which will also be called
 	//	when necessary (which is why the enabling tech is not checked here)
 
-	if(bIncludePythonOverrides && GC.getUSE_CAN_BUILD_CALLBACK(eBuild))
+	if(bIncludePythonOverrides && GC.getUSE_CAN_BUILD_CALLBACK())
 	{
 		long lResult = canBuildFromPython(eBuild, ePlayer);
 
@@ -3261,21 +3274,6 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 	if (eImprovement != NO_IMPROVEMENT)
 	{
 		if (!canHaveImprovement(eImprovement, GET_PLAYER(ePlayer).getTeam(), bTestVisible))
-		{
-			return false;
-		}
-
-		int iCount = GC.getImprovementInfo(eImprovement).getNumMapCategoryTypes();
-		bool bFound = (iCount < 1);
-		for (int iI = 0; iI < iCount; iI++)
-		{
-			if (isMapCategoryType((MapCategoryTypes)GC.getImprovementInfo(eImprovement).getMapCategoryType(iI)))
-			{
-				bFound = true;
-				break;
-			}
-		}
-		if (!bFound)
 		{
 			return false;
 		}
@@ -7073,18 +7071,15 @@ bool CvPlot::isIrrigated() const
 
 void CvPlot::setIrrigated(bool bNewValue)
 {
-	CvPlot* pLoopPlot;
-	int iDX, iDY;
-
 	if (isIrrigated() != bNewValue)
 	{
 		m_bIrrigated = bNewValue;
-
-		for (iDX = -1; iDX <= 1; iDX++)
+		CvPlot* pLoopPlot;
+		for (int iDX = -1; iDX <= 1; iDX++)
 		{
-			for (iDY = -1; iDY <= 1; iDY++)
+			for (int iDY = -1; iDY <= 1; iDY++)
 			{
-				pLoopPlot	= plotXY(getX(), getY(), iDX, iDY);
+				pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
 
 				if (pLoopPlot != NULL)
 				{
@@ -7101,23 +7096,11 @@ void CvPlot::updateIrrigated()
 {
 	PROFILE("CvPlot::updateIrrigated()");
 
-	CvPlot* pLoopPlot;
-	FAStar* pIrrigatedFinder;
-	bool bFoundFreshWater;
-	bool bIrrigated;
-	int iI;
-
-	if (area() == NULL)
+	if (area() == NULL || !GC.getGame().isFinalInitialized())
 	{
 		return;
 	}
-
-	if (!(GC.getGame().isFinalInitialized()))
-	{
-		return;
-	}
-
-	pIrrigatedFinder = gDLL->getFAStarIFace()->create();
+	FAStar* pIrrigatedFinder = gDLL->getFAStarIFace()->create();
 
 	if (isIrrigated())
 	{
@@ -7125,19 +7108,19 @@ void CvPlot::updateIrrigated()
 		{
 			setIrrigated(false);
 
-			for (iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+			for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
 			{
-				pLoopPlot = plotDirection(getX(), getY(), ((DirectionTypes)iI));
+				const CvPlot* pLoopPlot = plotDirection(getX(), getY(), ((DirectionTypes)iI));
 
 				if (pLoopPlot != NULL)
 				{
-					bFoundFreshWater = false;
+					bool bFoundFreshWater = false;
 					gDLL->getFAStarIFace()->Initialize(pIrrigatedFinder, GC.getMap().getGridWidth(), GC.getMap().getGridHeight(), GC.getMap().isWrapX(), GC.getMap().isWrapY(), NULL, NULL, NULL, potentialIrrigation, NULL, checkFreshWater, &bFoundFreshWater);
 					gDLL->getFAStarIFace()->GeneratePath(pIrrigatedFinder, pLoopPlot->getX(), pLoopPlot->getY(), -1, -1);
 
 					if (!bFoundFreshWater)
 					{
-						bIrrigated = false;
+						bool bIrrigated = false;
 						gDLL->getFAStarIFace()->Initialize(pIrrigatedFinder, GC.getMap().getGridWidth(), GC.getMap().getGridHeight(), GC.getMap().isWrapX(), GC.getMap().isWrapY(), NULL, NULL, NULL, potentialIrrigation, NULL, changeIrrigated, &bIrrigated);
 						gDLL->getFAStarIFace()->GeneratePath(pIrrigatedFinder, pLoopPlot->getX(), pLoopPlot->getY(), -1, -1);
 					}
@@ -7145,16 +7128,12 @@ void CvPlot::updateIrrigated()
 			}
 		}
 	}
-	else
+	else if (isPotentialIrrigation() && isIrrigationAvailable(true))
 	{
-		if (isPotentialIrrigation() && isIrrigationAvailable(true))
-		{
-			bIrrigated = true;
-			gDLL->getFAStarIFace()->Initialize(pIrrigatedFinder, GC.getMap().getGridWidth(), GC.getMap().getGridHeight(), GC.getMap().isWrapX(), GC.getMap().isWrapY(), NULL, NULL, NULL, potentialIrrigation, NULL, changeIrrigated, &bIrrigated);
-			gDLL->getFAStarIFace()->GeneratePath(pIrrigatedFinder, getX(), getY(), -1, -1);
-		}
+		bool bIrrigated = true;
+		gDLL->getFAStarIFace()->Initialize(pIrrigatedFinder, GC.getMap().getGridWidth(), GC.getMap().getGridHeight(), GC.getMap().isWrapX(), GC.getMap().isWrapY(), NULL, NULL, NULL, potentialIrrigation, NULL, changeIrrigated, &bIrrigated);
+		gDLL->getFAStarIFace()->GeneratePath(pIrrigatedFinder, getX(), getY(), -1, -1);
 	}
-
 	gDLL->getFAStarIFace()->destroy(pIrrigatedFinder);
 }
 
@@ -9071,11 +9050,7 @@ int CvPlot::calculateTotalBestNatureYield(TeamTypes eTeam) const
 	return (calculateBestNatureYield(YIELD_FOOD, eTeam) + calculateBestNatureYield(YIELD_PRODUCTION, eTeam) + calculateBestNatureYield(YIELD_COMMERCE, eTeam));
 }
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      10/06/09                                jdog5000      */
-/*                                                                                              */
-/* City AI                                                                                      */
-/************************************************************************************************/
+
 int CvPlot::calculateImprovementYieldChange(ImprovementTypes eImprovement, YieldTypes eYield, PlayerTypes ePlayer, bool bOptimal, bool bBestRoute) const
 {
 	PROFILE_FUNC();
@@ -9084,20 +9059,6 @@ int CvPlot::calculateImprovementYieldChange(ImprovementTypes eImprovement, Yield
 	int iBestYield;
 	int iYield;
 	int iI;
-
-/************************************************************************************************/
-/* Afforess	                  Start		 06/24/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	//TB note: currently returns nothing but false so is wasted evaluation
-	//if (isOvergrown())
-	//{
-	//	return 0;
-	//}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	iYield = GC.getImprovementInfo(eImprovement).getYieldChange(eYield);
 
@@ -9170,25 +9131,12 @@ int CvPlot::calculateImprovementYieldChange(ImprovementTypes eImprovement, Yield
 		}
 	}
 
-/*************************************************************************************************/
-/* UNOFFICIAL_PATCH                       06/02/10                     Afforess & jdog5000       */
-/*                                                                                               */
-/* Bugfix                                                                                        */
-/*************************************************************************************************/
-/* original bts code
-	return iYield;
-*/
 	// Improvement cannot actually produce negative yield
 	int iCurrYield = calculateNatureYield(eYield, (ePlayer == NO_PLAYER) ? NO_TEAM : GET_PLAYER(ePlayer).getTeam(), bOptimal);
 
 	return std::max( -iCurrYield, iYield );
-/*************************************************************************************************/
-/* UNOFFICIAL_PATCH                         END                                                  */
-/*************************************************************************************************/
 }
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+
 
 int CvPlot::calculateYield(YieldTypes eYield, bool bDisplay) const
 {
