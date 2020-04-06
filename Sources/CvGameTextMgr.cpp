@@ -8324,13 +8324,11 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 {
 	PROFILE_FUNC();
 
-
 	if (GC.getDefineINT("TEST_GAMEFONTS"))
 	{
 		createTestFontString(szString);
 		return;
 	}
-
 	CvWString szTempBuffer;
 	ImprovementTypes eImprovement;
 	BonusTypes eBonus;
@@ -9467,32 +9465,29 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 			if (pPlot->isPeak())
 			{
 				szString.append(gDLL->getText("TXT_KEY_PLOT_PEAK"));
+				szString.append(L"/");
 			}
-			else
+			else if (pPlot->isWater())
 			{
-				if (pPlot->isWater())
-				{
-					szTempBuffer.Format(SETCOLR, TEXT_COLOR("COLOR_WATER_TEXT"));
-					szString.append(szTempBuffer);
-				}
+				szTempBuffer.Format(SETCOLR, TEXT_COLOR("COLOR_WATER_TEXT"));
+				szString.append(szTempBuffer);
+			}
+			else if (pPlot->isHills())
+			{
+				szString.append(gDLL->getText("TXT_KEY_PLOT_HILLS"));
+			}
 
-				if (pPlot->isHills())
-				{
-					szString.append(gDLL->getText("TXT_KEY_PLOT_HILLS"));
-				}
+			if (pPlot->getFeatureType() != NO_FEATURE)
+			{
+				szTempBuffer.Format(L"%s/", GC.getFeatureInfo(pPlot->getFeatureType()).getDescription());
+				szString.append(szTempBuffer);
+			}
 
-				if (pPlot->getFeatureType() != NO_FEATURE)
-				{
-					szTempBuffer.Format(L"%s/", GC.getFeatureInfo(pPlot->getFeatureType()).getDescription());
-					szString.append(szTempBuffer);
-				}
+			szString.append(GC.getTerrainInfo(pPlot->getTerrainType()).getDescription());
 
-				szString.append(GC.getTerrainInfo(pPlot->getTerrainType()).getDescription());
-
-				if (pPlot->isWater())
-				{
-					szString.append(ENDCOLR);
-				}
+			if (pPlot->isWater())
+			{
+				szString.append(ENDCOLR);
 			}
 		}
 
@@ -9616,43 +9611,38 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 
 				for (int iJ = 0; iJ < GC.getNumImprovementInfos(); iJ++)
 				{
-					for (int iI = 0; iI < GC.getNumBuildInfos(); ++iI)
-					{
-						if (GC.getBuildInfo((BuildTypes) iI).getImprovement() == (ImprovementTypes)iJ)
-						{
-							const CvImprovementInfo& improvement = GC.getImprovementInfo((ImprovementTypes)iJ);
+					const CvImprovementInfo& improvement = GC.getImprovementInfo((ImprovementTypes)iJ);
 
-							if (improvement.isImprovementBonusTrade(eBonus)
-							&& pPlot->canHaveImprovement((ImprovementTypes)iJ, GC.getGame().getActiveTeam(), true))
+					if (improvement.isImprovementBonusTrade(eBonus) && pPlot->canHaveImprovement((ImprovementTypes)iJ, GC.getGame().getActiveTeam(), true))
+					{
+						for (int iI = 0; iI < GC.getNumBuildInfos(); ++iI)
+						{
+							if (GC.getBuildInfo((BuildTypes) iI).getImprovement() == (ImprovementTypes)iJ)
 							{
 								const TechTypes eObsoleteTech = (TechTypes)GC.getBuildInfo((BuildTypes) iI).getObsoleteTech();
 
-								if (eObsoleteTech != NO_TECH
-								&& GET_TEAM(GC.getGame().getActiveTeam()).isHasTech(eObsoleteTech)
-								&& GC.getTechInfo(eObsoleteTech).getGridX() > iMostRecentX)
+								if (eObsoleteTech != NO_TECH && GET_TEAM(GC.getGame().getActiveTeam()).isHasTech(eObsoleteTech))
 								{
-									iMostRecentX = GC.getTechInfo(eObsoleteTech).getGridX();
-									eMostRecentObsoletingTech = eObsoleteTech;
+									if (GC.getTechInfo(eObsoleteTech).getGridX() > iMostRecentX)
+									{
+										iMostRecentX = GC.getTechInfo(eObsoleteTech).getGridX();
+										eMostRecentObsoletingTech = eObsoleteTech;
+									}
+									continue;
 								}
-								else
-								{
-									const TechTypes eTechPrereq = (TechTypes)GC.getBuildInfo((BuildTypes) iI).getTechPrereq();
+								const TechTypes eTechPrereq = (TechTypes)GC.getBuildInfo((BuildTypes) iI).getTechPrereq();
 
-									if (eTechPrereq == NO_TECH || GET_TEAM(GC.getGame().getActiveTeam()).isHasTech(eTechPrereq))
+								if (eTechPrereq == NO_TECH || GET_TEAM(GC.getGame().getActiveTeam()).isHasTech(eTechPrereq))
+								{
+									if (!bKnowsValid)
 									{
 										szString.append(gDLL->getText("TXT_KEY_PLOT_REQUIRES", improvement.getTextKeyWide()));
 										bKnowsValid = true;
 									}
-									else if (GET_PLAYER(GC.getGame().getActivePlayer()).canEverResearch(eTechPrereq)
-									&& iClosestX < GC.getTechInfo(eTechPrereq).getGridX())
+									else
 									{
-										iClosestX = GC.getTechInfo(eTechPrereq).getGridX();
-										eClosestUnlockingTech = eTechPrereq;
+										szString.append(gDLL->getText("TXT_KEY_PLOT_REQUIRES_OR", improvement.getTextKeyWide()));
 									}
-								}
-
-								if (bKnowsValid)
-								{
 									for (int iK = 0; iK < NUM_YIELD_TYPES; iK++)
 									{
 										const int iYieldChange = improvement.getImprovementBonusYield(eBonus, iK) + improvement.getYieldChange(iK);
@@ -9669,12 +9659,13 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 									}
 									break;
 								}
+								if (GET_PLAYER(GC.getGame().getActivePlayer()).canEverResearch(eTechPrereq) && iClosestX > GC.getTechInfo(eTechPrereq).getGridX())
+								{
+									iClosestX = GC.getTechInfo(eTechPrereq).getGridX();
+									eClosestUnlockingTech = eTechPrereq;
+								}
 							}
 						}
-					}
-					if (bKnowsValid)
-					{
-						break;
 					}
 				}
 				if (!bKnowsValid)
