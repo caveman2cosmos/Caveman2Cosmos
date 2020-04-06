@@ -2827,13 +2827,13 @@ bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, 
 		return false;
 	}
 
-	// Toffer - Subject to removal?
-	// No improvements would ever use this condition afaics.
+	// Meant for pseudo improvements that won't ever be on the map, like bonus placement improvements.
+	// Toffer - Shouldn't this be part of buildInfo?
+	// I'm thinking bonus placement builds should not be linked to an improvement at all.
 	if (pInfo.isNotOnAnyBonus() && getBonusType() != NO_BONUS)
 	{
 		return false;
 	}
-	// ! Toffer
 
 	// Special upgrade rule
 	if (bUpgradeCheck && getImprovementType() != NO_IMPROVEMENT && getBonusType() != NO_BONUS
@@ -2866,10 +2866,9 @@ bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, 
 	bValid = false;
 	if (isPeak2(true))
 	{
-		if (pInfo.isRequiresPeak() && getBonusType(eTeam) != NO_BONUS
-		&& pInfo.isImprovementBonusMakesValid(getBonusType(eTeam)))
+		if (!pInfo.isRequiresPeak()) // Only requirement that invalidate both ways.
 		{
-			return true; // Special bonus rule for peak plots.
+			return false;
 		}
 		if (pInfo.isPeakMakesValid())
 		{
@@ -2880,18 +2879,11 @@ bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, 
 	{
 		return false;
 	}
-	else if (getBonusType(eTeam) != NO_BONUS && pInfo.isImprovementBonusMakesValid(getBonusType(eTeam)))
-	{
-		return true; // Special bonus rule for non-peak plots.
-	}
 
-	if (getBonusType(eTeam) != NO_BONUS && pInfo.isImprovementObsoleteBonusMakesValid(getBonusType(eTeam)))
+	// Special makeValid rule for bonuses; bonuses overides most rules.
+	if (getBonusType(eTeam) != NO_BONUS && pInfo.isImprovementBonusMakesValid(getBonusType(eTeam)))
 	{
-		if (GET_TEAM(eTeam).isHasTech((TechTypes)GC.getBonusInfo(getBonusType(eTeam)).getTechObsolete()))
-		{
-			return true;
-		}
-		return false;
+		return true;
 	}
 	/*--------------------*\
 	| General invalidators |
@@ -2902,23 +2894,12 @@ bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, 
 	{
 		return false;
 	}
-	// Freshwater req
-	if (pInfo.isNoFreshWater() && isFreshWater())
-	{
-		return false;
-	}
-	// Flatland req
-	if (pInfo.isRequiresFlatlands() && !isFlatlands())
-	{
-		return false;
-	}
-	// Any feature req
-	if (pInfo.isRequiresFeature() && getFeatureType() == NO_FEATURE)
-	{
-		return false;
-	}
+
+	if(pInfo.isNoFreshWater() && isFreshWater()
+	|| pInfo.isRequiresFlatlands() && !isFlatlands()
+	|| pInfo.isRequiresFeature() && getFeatureType() == NO_FEATURE
 	// Special canal condition
-	if (pInfo.isCanMoveSeaUnits() && !isCoastalLand())
+	|| pInfo.isCanMoveSeaUnits() && !isCoastalLand())
 	{
 		return false;
 	}
@@ -2933,15 +2914,25 @@ bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, 
 		bValid = true;
 		bIgnoreNatureYields = true; // This is a min yield override for desert
 	}
-	// General validators
-	else if (getFeatureType() != NO_FEATURE
-	&& pInfo.getFeatureMakesValid(getFeatureType())
-	|| pInfo.isHillsMakesValid() && isHills()
-	|| pInfo.isFreshWaterMakesValid() && isFreshWater()
-	|| pInfo.isRiverSideMakesValid() && isRiverSide()
-	|| pInfo.getTerrainMakesValid(getTerrainType()))
+	else if (!bValid)
 	{
-		bValid = true;
+		// General validators
+		if(pInfo.getTerrainMakesValid(getTerrainType())
+		|| pInfo.isHillsMakesValid() && isHills()
+		|| pInfo.isFreshWaterMakesValid() && isFreshWater()
+		|| pInfo.isRiverSideMakesValid() && isRiverSide())
+		{
+			bValid = true;
+		}
+		else if (getFeatureType() != NO_FEATURE && pInfo.getFeatureMakesValid(getFeatureType()))
+		{
+			bValid = true;
+		}
+		else if (getBonusType(eTeam) != NO_BONUS && pInfo.isImprovementObsoleteBonusMakesValid(getBonusType(eTeam))
+		&& GET_TEAM(eTeam).isHasTech((TechTypes)GC.getBonusInfo(getBonusType(eTeam)).getTechObsolete()))
+		{
+			bValid = true;
+		}
 	}
 	/*-------------------*\
 	| Final invalidartors |
