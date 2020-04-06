@@ -12214,18 +12214,11 @@
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
-			<bPeakMakesValid>1</bPeakMakesValid>
 			<bRequiresPeak>1</bRequiresPeak>
 			<PrereqTech>TECH_MINING</PrereqTech>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
 			<iUpgradeTime>10</iUpgradeTime>
 			<iPillageGold>20</iPillageGold>
-			<TerrainMakesValids>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_PEAK</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-			</TerrainMakesValids>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
 					<BonusType>BONUS_GOLD_ORE</BonusType>
@@ -12488,12 +12481,6 @@
 			<iAirBombDefense>25</iAirBombDefense>
 			<iPillageGold>10</iPillageGold>
 			<iHealthPercent>-100</iHealthPercent>
-			<TerrainMakesValids>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_PEAK</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-			</TerrainMakesValids>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
 					<BonusType>BONUS_AMBER</BonusType>
@@ -12902,12 +12889,6 @@
 			<bRequiresPeak>1</bRequiresPeak>
 			<iAdvancedStartCost>50</iAdvancedStartCost>
 			<bOutsideBorders>1</bOutsideBorders>
-			<TerrainMakesValids>
-				<TerrainMakesValid>
-					<TerrainType>TERRAIN_PEAK</TerrainType>
-					<bMakesValid>1</bMakesValid>
-				</TerrainMakesValid>
-			</TerrainMakesValids>
 		</ImprovementInfo>
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_CITY</Type>
