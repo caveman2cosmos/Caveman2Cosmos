@@ -465,15 +465,6 @@
 		<Polish>Obóz Zbieracz Padliny (Prace Przym.)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILD_SEED_CAMP_KILL_SLAVE</Tag>
-		<English>[LINK=IMPROVEMENT_SEED_CAMP]Gather Seeds[\LINK] (Forced/Consumed)</English>
-		<French>[LINK=IMPROVEMENT_SEED_CAMP]Récolter les céréales[\LINK] (Forcé/Détruit)</French>
-		<German>Zwangsarbeit - [LINK=IMPROVEMENT_SEED_CAMP]Körner sammeln[\LINK]</German>
-		<Italian>Costruisci un raccoglitore di cereali (Schiavo)</Italian>
-		<Spanish>Recolectar Granos (Forzado)</Spanish>
-		<Polish>Zbieraj Ziarna (Prace Przym.)</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILD_SEED_CAMP_SLAVE</Tag>
 		<English>[LINK=IMPROVEMENT_SEED_CAMP]Gather Seeds[\LINK] (Forced)</English>
 		<French>[LINK=IMPROVEMENT_SEED_CAMP]Récolter les céréales[\LINK] (Forcé)</French>
