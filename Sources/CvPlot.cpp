@@ -4046,7 +4046,6 @@ int CvPlot::getCultureRangeForts(PlayerTypes ePlayer) const
 	{
 		return 0;
 	}
-
 	return m_aiCultureRangeForts[ePlayer];
 }
 
@@ -4054,7 +4053,7 @@ void CvPlot::setCultureRangeForts(PlayerTypes ePlayer, int iNewValue)
 {
 	if (getCultureRangeForts(ePlayer) != iNewValue)
 	{
-		if(NULL == m_aiCultureRangeForts)
+		if (NULL == m_aiCultureRangeForts)
 		{
 			m_aiCultureRangeForts = new short[MAX_PLAYERS];
 			for (int iI = 0; iI < MAX_PLAYERS; ++iI)
@@ -4062,10 +4061,9 @@ void CvPlot::setCultureRangeForts(PlayerTypes ePlayer, int iNewValue)
 				m_aiCultureRangeForts[iI] = 0;
 			}
 		}
-
 		m_aiCultureRangeForts[ePlayer] = iNewValue;
 
-		if(getCulture(ePlayer) == 0)
+		if (getCulture(ePlayer) == 0)
 		{
 			changeCulture(ePlayer, 1, false);
 		}
@@ -4076,7 +4074,7 @@ void CvPlot::changeCultureRangeForts(PlayerTypes ePlayer, int iChange)
 {
 	if (0 != iChange)
 	{
-		setCultureRangeForts(ePlayer, (getCultureRangeForts(ePlayer) + iChange));
+		setCultureRangeForts(ePlayer, getCultureRangeForts(ePlayer) + iChange);
 	}
 }
 
@@ -4088,40 +4086,32 @@ bool CvPlot::isWithinFortCultureRange(PlayerTypes ePlayer) const
 
 void CvPlot::changeCultureRangeFortsWithinRange(PlayerTypes ePlayer, int iChange, int iRange, bool bUpdate)
 {
-	CvPlot* pLoopPlot;
-	int iDX, iDY;
-	int iCultureDistance;
-
-	if ((0 != iChange) && (iRange >= 0))
+	if (0 == iChange || iRange < 0)
 	{
-		for (iDX = -iRange; iDX <= iRange; iDX++)
+		return;
+	}
+	for (int iDX = -iRange; iDX <= iRange; iDX++)
+	{
+		for (int iDY = -iRange; iDY <= iRange; iDY++)
 		{
-			for (iDY = -iRange; iDY <= iRange; iDY++)
+			const int iCultureDistance = plotDistance(0, 0, iDX, iDY);
+
+			if (iCultureDistance <= iRange)
 			{
-				iCultureDistance = plotDistance(0, 0, iDX, iDY);
+				CvPlot* pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
 
-				if(iCultureDistance <= iRange)
+				if (pLoopPlot != NULL)
 				{
-					pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
+					pLoopPlot->changeCultureRangeCities(ePlayer, iCultureDistance, iChange, false, false);
 
-					if (pLoopPlot != NULL)
+					// Make sure that if a plot is newly in range it gets at least 1 culture
+					if (iChange > 0 && pLoopPlot->getCulture(ePlayer) == 0)
 					{
-						pLoopPlot->changeCultureRangeCities(ePlayer, iCultureDistance, iChange, false, false);
-
-						//	Super Forts adaptation to C2C - make sure that if a plot is newly
-						//	in range it gets at least 1 culture
-						if ( iChange > 0 )
-						{
-							if(pLoopPlot->getCulture(ePlayer) == 0)
-							{
-								pLoopPlot->changeCulture(ePlayer, 1, false);
-							}
-						}
-
-						if(bUpdate)
-						{
-							pLoopPlot->updateCulture(true,true);
-						}
+						pLoopPlot->changeCulture(ePlayer, 1, false);
+					}
+					if (bUpdate)
+					{
+						pLoopPlot->updateCulture(true,true);
 					}
 				}
 			}
@@ -4131,53 +4121,80 @@ void CvPlot::changeCultureRangeFortsWithinRange(PlayerTypes ePlayer, int iChange
 
 void CvPlot::doImprovementCulture()
 {
-	CvPlot* pLoopPlot;
-	int iDX, iDY;
-	int iCultureDistance, iCulture, iCultureRange;
-	ImprovementTypes eImprovement;
-	PlayerTypes ePlayer;
-
-	eImprovement = getImprovementType();
-	if (eImprovement != NO_IMPROVEMENT)
+	if (getImprovementType() == NO_IMPROVEMENT)
 	{
-		ePlayer = getOwner();
-		if(ePlayer != NO_PLAYER)
+		return;
+	}
+	const CvImprovementInfo& improvement = GC.getImprovementInfo(getImprovementType());
+	const PlayerTypes eOwner = getOwner();
+	if (eOwner != NO_PLAYER)
+	{
+		const int iCulture = improvement.getCulture();
+		if (iCulture > 0)
 		{
-			iCulture = GC.getImprovementInfo(eImprovement).getCulture();
-			if(iCulture > 0)
+			const int iCultureRange = improvement.getCultureRange();
+
+			if (iCultureRange > 0)
 			{
-				iCultureRange = GC.getImprovementInfo(eImprovement).getCultureRange();
-
-				if(iCultureRange > 0)
+				for (int iDX = -iCultureRange; iDX <= iCultureRange; iDX++)
 				{
-					for (iDX = -iCultureRange; iDX <= iCultureRange; iDX++)
+					for (int iDY = -iCultureRange; iDY <= iCultureRange; iDY++)
 					{
-						for (iDY = -iCultureRange; iDY <= iCultureRange; iDY++)
+						const int iDistance = plotDistance(0, 0, iDX, iDY);
+
+						if (iDistance <= iCultureRange)
 						{
-							iCultureDistance = plotDistance(0, 0, iDX, iDY);
+							CvPlot* pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
 
-							if(iCultureDistance <= iCultureRange)
+							if (pLoopPlot != NULL)
 							{
-								pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
-
-								if (pLoopPlot != NULL)
-								{
-									int iChange = ((iCultureRange - ((iCultureDistance == 0) ? 1 : iCultureDistance))*iCulture) + iCulture;
-									pLoopPlot->changeCulture(ePlayer,iChange,false);
-								}
+								pLoopPlot->changeCulture(eOwner, iCulture + iCulture*(iCultureRange - iDistance), false);
 							}
 						}
 					}
 				}
-				else
+			}
+			else
+			{
+				changeCulture(eOwner, iCulture, false);
+			}
+		}
+	}
+
+	if (improvement.isActsAsCity() && getOwnershipDuration() > GC.getDefineINT("SUPER_FORTS_DURATION_BEFORE_REVOLT"))
+	{
+		// Check for a fort culture flip
+		const PlayerTypes eCulturalOwner = calculateCulturalOwner();
+		if (eCulturalOwner != NO_PLAYER && eCulturalOwner != eOwner && GET_PLAYER(eCulturalOwner).getTeam() != getTeam())
+		{
+			CLLNode<IDInfo>* pUnitNode = headUnitNode();
+			bool bDefenderFound = false;
+			while (pUnitNode != NULL)
+			{
+				const CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
+
+				if (pLoopUnit->getOwner() == eOwner && pLoopUnit->canDefend(this))
 				{
-					changeCulture(ePlayer,iCulture,false);
+					bDefenderFound = true;
+					break;
 				}
+				pUnitNode = nextUnitNode(pUnitNode);
+			}
+			if (!bDefenderFound)
+			{
+				CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_REVOLTED_JOINED", improvement.getText(), GET_PLAYER(eCulturalOwner).getCivilizationDescriptionKey());
+				AddDLLMessage(eOwner, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CULTUREFLIP", MESSAGE_TYPE_INFO,
+					improvement.getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX(), getY(), true, true);
+
+				AddDLLMessage(eCulturalOwner, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CULTUREFLIP", MESSAGE_TYPE_INFO,
+					improvement.getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX(), getY(), true, true);
+
+				setOwner(eCulturalOwner, true, true);
 			}
 		}
 	}
 }
-// Super Forts end
+
 
 // Super Forts begin *canal* *choke*
 int CvPlot::countRegionPlots(const CvPlot* pInvalidPlot) const
@@ -12303,169 +12320,101 @@ void CvPlot::doCulture()
 {
 	PROFILE("CvPlot::doCulture()")
 
-	CLLNode<IDInfo>* pUnitNode;
-	CvCity* pCity;
-	CvUnit* pLoopUnit;
-	CvWString szBuffer;
-	PlayerTypes eCulturalOwner;
-	int iCityStrength;
-
-	// Super Forts begin *culture*
 	doImprovementCulture();
 
-	ImprovementTypes eImprovement = getImprovementType();
-	if(eImprovement != NO_IMPROVEMENT)
-	{
-		// Check for a fort culture flip
-		if(GC.getImprovementInfo(eImprovement).isActsAsCity() && (getOwnershipDuration() > GC.getDefineINT("SUPER_FORTS_DURATION_BEFORE_REVOLT")))
-		{
-			eCulturalOwner = calculateCulturalOwner();
-			if(eCulturalOwner != NO_PLAYER)
-			{
-				if(GET_PLAYER(eCulturalOwner).getTeam() != getTeam())
-				{
-					bool bDefenderFound = false;
-					CLinkList<IDInfo> oldUnits;
-					pUnitNode = headUnitNode();
-
-					while (pUnitNode != NULL)
-					{
-						oldUnits.insertAtEnd(pUnitNode->m_data);
-						pUnitNode = nextUnitNode(pUnitNode);
-					}
-
-					pUnitNode = oldUnits.head();
-
-					while (pUnitNode != NULL)
-					{
-						pLoopUnit = ::getUnit(pUnitNode->m_data);
-						pUnitNode = nextUnitNode(pUnitNode);
-						if(pLoopUnit->canDefend(this))
-						{
-							if(pLoopUnit->getOwner() == getOwner())
-							{
-								bDefenderFound = true;
-								break;
-							}
-						}
-					}
-					if(!bDefenderFound)
-					{
-						szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_REVOLTED_JOINED", GC.getImprovementInfo(getImprovementType()).getText(), GET_PLAYER(eCulturalOwner).getCivilizationDescriptionKey());
-						AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CULTUREFLIP", MESSAGE_TYPE_INFO, GC.getImprovementInfo(getImprovementType()).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX(), getY(), true, true);
-						AddDLLMessage(eCulturalOwner, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CULTUREFLIP", MESSAGE_TYPE_INFO, GC.getImprovementInfo(getImprovementType()).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX(), getY(), true, true);
-						setOwner(eCulturalOwner,true,true);
-					}
-				}
-			}
-		}
-	}
-	// Super Forts end
-
-	pCity = getPlotCity();
+	CvCity* pCity = getPlotCity();
 
 	if (pCity != NULL)
 	{
-		eCulturalOwner = calculateCulturalOwner();
+		const PlayerTypes eCulturalOwner = calculateCulturalOwner();
 
-		if (eCulturalOwner != NO_PLAYER)
+		if (eCulturalOwner != NO_PLAYER && GET_PLAYER(eCulturalOwner).getTeam() != getTeam() && !pCity->isOccupation()
+		&& GC.getGame().getSorenRandNum(100, "Revolt #1") < pCity->getRevoltTestProbability())
 		{
-			if (GET_PLAYER(eCulturalOwner).getTeam() != getTeam())
+			int iOriginal = 0; // Dummy variable
+			const int iCityStrength = pCity->cultureStrength(eCulturalOwner, iOriginal);
+
+			if ((GC.getGame().getSorenRandNum(100, "Revolt #2") < iCityStrength) || pCity->isNPC())
 			{
-				if (!(pCity->isOccupation()))
+				CLinkList<IDInfo> oldUnits;
+
+				CLLNode<IDInfo>* pUnitNode = headUnitNode();
+
+				while (pUnitNode != NULL)
 				{
-					if (GC.getGame().getSorenRandNum(100, "Revolt #1") < pCity->getRevoltTestProbability())
+					oldUnits.insertAtEnd(pUnitNode->m_data);
+					pUnitNode = nextUnitNode(pUnitNode);
+				}
+
+				pUnitNode = oldUnits.head();
+
+				while (pUnitNode != NULL)
+				{
+					CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
+
+					if (pLoopUnit)
 					{
-						int iOriginal = 0;
-						iCityStrength = pCity->cultureStrength(eCulturalOwner, iOriginal);
-
-						if ((GC.getGame().getSorenRandNum(100, "Revolt #2") < iCityStrength) || pCity->isNPC())
+						if (pLoopUnit->isNPC())
 						{
-							CLinkList<IDInfo> oldUnits;
-
-							pUnitNode = headUnitNode();
-
-							while (pUnitNode != NULL)
-							{
-								oldUnits.insertAtEnd(pUnitNode->m_data);
-								pUnitNode = nextUnitNode(pUnitNode);
-							}
-
-							pUnitNode = oldUnits.head();
-
-							while (pUnitNode != NULL)
-							{
-								pLoopUnit = ::getUnit(pUnitNode->m_data);
-								pUnitNode = nextUnitNode(pUnitNode);
-
-								if (pLoopUnit)
-								{
-									if (pLoopUnit->isNPC())
-									{
-										pLoopUnit->kill(false, eCulturalOwner);
-									}
-									else if (pLoopUnit->canDefend())
-									{
-										pLoopUnit->changeDamage((pLoopUnit->currHitPoints() / 2), eCulturalOwner);
-									}
-								}
-
-							}
-
-							// Disable classic city flip by culture when Revolution is running
-							if (pCity->isNPC() || (!GC.getGame().isOption(GAMEOPTION_NO_CITY_FLIPPING)
-								&& (GC.getGame().isOption(GAMEOPTION_FLIPPING_AFTER_CONQUEST) || !pCity->isEverOwned(eCulturalOwner))
-								&& pCity->getNumRevolts(eCulturalOwner) >= GC.getDefineINT("NUM_WARNING_REVOLTS")))
-							{
-								if (GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE))
-								{
-									pCity->kill(true);
-								}
-								else
-								{
-									setOwner(eCulturalOwner, true, true); // Will invalidate pCity pointer.
-								}
-								pCity = NULL;
-							}
-							else
-							{
-								pCity->changeNumRevolts(eCulturalOwner, 1);
-								pCity->changeOccupationTimer(GC.getDefineINT("BASE_REVOLT_OCCUPATION_TURNS") + ((iCityStrength * GC.getDefineINT("REVOLT_OCCUPATION_TURNS_PERCENT")) / 100));
-
-								// XXX announce for all seen cities?
-								MEMORY_TRACK_EXEMPT();
-
-								if (isInViewport())
-								{
-									szBuffer = gDLL->getText("TXT_KEY_MISC_REVOLT_IN_CITY", GET_PLAYER(eCulturalOwner).getCivilizationAdjective(), pCity->getNameKey());
-									AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITY_REVOLT", MESSAGE_TYPE_MINOR_EVENT, ARTFILEMGR.getInterfaceArtInfo("INTERFACE_RESISTANCE")->getPath(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getViewportX(),getViewportY(), true, true);
-									AddDLLMessage(eCulturalOwner, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITY_REVOLT", MESSAGE_TYPE_MINOR_EVENT, ARTFILEMGR.getInterfaceArtInfo("INTERFACE_RESISTANCE")->getPath(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getViewportX(),getViewportY(), true, true);
-								}
-							}
+							pLoopUnit->kill(false, eCulturalOwner);
 						}
+						else if (pLoopUnit->canDefend())
+						{
+							pLoopUnit->changeDamage((pLoopUnit->currHitPoints() / 2), eCulturalOwner);
+						}
+					}
+					pUnitNode = nextUnitNode(pUnitNode);
+				}
+
+				if (pCity->isNPC()
+				|| (!GC.getGame().isOption(GAMEOPTION_NO_CITY_FLIPPING)
+					&& (GC.getGame().isOption(GAMEOPTION_FLIPPING_AFTER_CONQUEST) || !pCity->isEverOwned(eCulturalOwner))
+					&& pCity->getNumRevolts(eCulturalOwner) >= GC.getDefineINT("NUM_WARNING_REVOLTS")))
+				{
+					if (GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE))
+					{
+						pCity->kill(true);
+					}
+					else
+					{
+						setOwner(eCulturalOwner, true, true); // Will invalidate pCity pointer.
+					}
+					pCity = NULL;
+				}
+				else
+				{
+					pCity->changeNumRevolts(eCulturalOwner, 1);
+					pCity->changeOccupationTimer(GC.getDefineINT("BASE_REVOLT_OCCUPATION_TURNS") + ((iCityStrength * GC.getDefineINT("REVOLT_OCCUPATION_TURNS_PERCENT")) / 100));
+
+					// XXX announce for all seen cities?
+					MEMORY_TRACK_EXEMPT();
+
+					if (isInViewport())
+					{
+						CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_REVOLT_IN_CITY", GET_PLAYER(eCulturalOwner).getCivilizationAdjective(), pCity->getNameKey());
+						AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITY_REVOLT", MESSAGE_TYPE_MINOR_EVENT,
+							ARTFILEMGR.getInterfaceArtInfo("INTERFACE_RESISTANCE")->getPath(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getViewportX(),getViewportY(), true, true);
+
+						AddDLLMessage(eCulturalOwner, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITY_REVOLT", MESSAGE_TYPE_MINOR_EVENT,
+							ARTFILEMGR.getInterfaceArtInfo("INTERFACE_RESISTANCE")->getPath(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getViewportX(),getViewportY(), true, true);
 					}
 				}
 			}
 		}
 	}
 
-
 	//Decay if you've lost any source of culture on the plot
-	if (getOwner() != NO_PLAYER)
+	if (getOwner() != NO_PLAYER && !isWithinCultureRange(getOwner()) && !isWithinOccupationRange(getOwner()))
 	{
-		if (!isWithinCultureRange(getOwner()) && !isWithinOccupationRange(getOwner()))
+		int iCultureBase = getCulture(getOwner());
+		if (iCultureBase > 0)
 		{
-			int iCultureBase = getCulture(getOwner());
-			if (iCultureBase >0)
-			{
-				iCultureBase /= 2;
-				iCultureBase -= 10;
-				iCultureBase = std::max(iCultureBase, 0);
-				setCulture(getOwner(), iCultureBase, true, true);
-			}
+			iCultureBase /= 2;
+			iCultureBase -= 10;
+			iCultureBase = std::max(iCultureBase, 0);
+			setCulture(getOwner(), iCultureBase, true, true);
 		}
 	}
-
 	updateCulture(true, true);
 }
 
