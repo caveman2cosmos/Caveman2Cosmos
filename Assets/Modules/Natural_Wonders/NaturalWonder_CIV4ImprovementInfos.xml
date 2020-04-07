@@ -9,7 +9,7 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_BEACON</ArtDefineTag>
 			<PrereqTech>TECH_SAILING</PrereqTech>
 			<bActsAsCity>0</bActsAsCity>
-			<bWater>1</bWater>
+			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iUpgradeTime>5</iUpgradeTime>
 			<iAirBombDefense>5</iAirBombDefense>
@@ -81,7 +81,7 @@
 				<iYield>1</iYield>
 				<iYield>3</iYield>
 			</YieldChanges>
-			<bWater>1</bWater>
+			<bWaterImprovement>1</bWaterImprovement>
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iAirBombDefense>5</iAirBombDefense>
 			<iPillageGold>5</iPillageGold>

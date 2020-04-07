@@ -384,7 +384,7 @@ EndPlayer
 BeginMap
 	grid width=124
 	grid height=200
-	top latitude=90
+	top latitude=85
 	bottom latitude=-14
 	wrap X=1
 	wrap Y=0

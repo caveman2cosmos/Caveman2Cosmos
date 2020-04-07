@@ -359,7 +359,7 @@ void CvGame::init(HandicapTypes eHandicap)
 		}
 	}
 
-	setStartYear(GC.getDefineINT(START_YEAR));
+	setStartYear(GC.getSTART_YEAR());
 	m_iDateTurn = -500;
 
 	for (int iI = 0; iI < GC.getNumSpecialUnitInfos(); iI++)
@@ -1682,78 +1682,59 @@ void CvGame::normalizeRemoveBadFeatures()
 
 void CvGame::normalizeRemoveBadTerrain()
 {
-	CvPlot* pStartingPlot;
-	CvPlot* pLoopPlot;
-	int iI, iK;
-	int iX, iY;
-
-	int iTargetFood;
-	int iTargetTotal;
-	int iPlotFood;
-	int iPlotProduction;
-
 	const int iCityRange = CITY_PLOTS_RADIUS;
-	const int iExtraRange = 1;
-	const int iMaxRange = iCityRange + iExtraRange;
+	const int iMaxRange = iCityRange + 1;
 
-	for (iI = 0; iI < MAX_PC_PLAYERS; iI++)
+	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		if (!GET_PLAYER((PlayerTypes)iI).isAlive())
+			continue;
+
+		const CvPlot* pStartingPlot = GET_PLAYER((PlayerTypes)iI).getStartingPlot();
+		if (pStartingPlot == NULL)
+			continue;
+
+		for (int iX = -iMaxRange; iX <= iMaxRange; iX++)
 		{
-			pStartingPlot = GET_PLAYER((PlayerTypes)iI).getStartingPlot();
-
-			if (pStartingPlot != NULL)
+			for (int iY = -iMaxRange; iY <= iMaxRange; iY++)
 			{
-				for (iX = -iMaxRange; iX <= iMaxRange; iX++)
-				{
-					for (iY = -iMaxRange; iY <= iMaxRange; iY++)
-					{
-						pLoopPlot = plotXY(pStartingPlot->getX(), pStartingPlot->getY(), iX, iY);
-						if (pLoopPlot != NULL)
-						{
-							const int iDistance = plotDistance(pStartingPlot->getX(), pStartingPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
-							if (iDistance <= iMaxRange)
-							{
-								if (!(pLoopPlot->isWater()) && ((iDistance <= iCityRange) || (pLoopPlot->isCoastalLand()) || (0 == getSorenRandNum(1 + iDistance - iCityRange, "Map Upgrade Terrain Food"))))
-								{
-									iPlotFood = GC.getTerrainInfo(pLoopPlot->getTerrainType()).getYield(YIELD_FOOD);
-									iPlotProduction = GC.getTerrainInfo(pLoopPlot->getTerrainType()).getYield(YIELD_PRODUCTION);
-									if ((iPlotFood + iPlotProduction) <= 1)
-									{
-										iTargetFood = 1;
-										iTargetTotal = 1;
-										if (pLoopPlot->getBonusType(GET_PLAYER((PlayerTypes)iI).getTeam()) != NO_BONUS)
-										{
-											iTargetFood = 1;
-											iTargetTotal = 2;
-										}
-										else if ((iPlotFood == 1) || (iDistance <= iCityRange))
-										{
-											iTargetFood = 1 + getSorenRandNum(2, "Map Upgrade Terrain Food");
-											iTargetTotal = 2;
-										}
-										else
-										{
-											iTargetFood = pLoopPlot->isCoastalLand() ? 2 : 1;
-											iTargetTotal = 2;
-										}
+				CvPlot* pLoopPlot = plotXY(pStartingPlot->getX(), pStartingPlot->getY(), iX, iY);
 
-										for (iK = 0; iK < GC.getNumTerrainInfos(); iK++)
-										{
-											if (!(GC.getTerrainInfo((TerrainTypes)iK).isWater()))
-											{
-												if ((GC.getTerrainInfo((TerrainTypes)iK).getYield(YIELD_FOOD) >= iTargetFood) &&
-													(GC.getTerrainInfo((TerrainTypes)iK).getYield(YIELD_FOOD) + GC.getTerrainInfo((TerrainTypes)iK).getYield(YIELD_PRODUCTION)) == iTargetTotal)
-												{
-													if ((pLoopPlot->getFeatureType() == NO_FEATURE) || GC.getFeatureInfo(pLoopPlot->getFeatureType()).isTerrain(iK))
-													{
-														pLoopPlot->setTerrainType((TerrainTypes)iK);
-													}
-												}
-											}
-										}
-									}
-								}
+				if (pLoopPlot == NULL)
+					continue;
+
+				const int iDistance = plotDistance(pStartingPlot->getX(), pStartingPlot->getY(), pLoopPlot->getX(), pLoopPlot->getY());
+
+				if (iDistance <= iMaxRange && !pLoopPlot->isWater()
+				&& (iDistance <= iCityRange || pLoopPlot->isCoastalLand() || 0 == getSorenRandNum(1 + iDistance - iCityRange, "Map Upgrade Terrain Food")))
+				{
+					const int iPlotFood = GC.getTerrainInfo(pLoopPlot->getTerrainType()).getYield(YIELD_FOOD);
+
+					if (iPlotFood + GC.getTerrainInfo(pLoopPlot->getTerrainType()).getYield(YIELD_PRODUCTION) <= 1)
+					{
+						int iTargetFood;
+
+						if (pLoopPlot->getBonusType(GET_PLAYER((PlayerTypes)iI).getTeam()) != NO_BONUS)
+						{
+							iTargetFood = 1;
+						}
+						else if (iPlotFood == 1 || iDistance <= iCityRange)
+						{
+							iTargetFood = 1 + getSorenRandNum(2, "Map Upgrade Terrain Food");
+						}
+						else
+						{
+							iTargetFood = pLoopPlot->isCoastalLand() ? 2 : 1;
+						}
+
+						for (int iK = 0; iK < GC.getNumTerrainInfos(); iK++)
+						{
+							if (!GC.getTerrainInfo((TerrainTypes)iK).isWaterTerrain()
+							&& GC.getTerrainInfo((TerrainTypes)iK).getYield(YIELD_FOOD) >= iTargetFood
+							&& GC.getTerrainInfo((TerrainTypes)iK).getYield(YIELD_FOOD) + GC.getTerrainInfo((TerrainTypes)iK).getYield(YIELD_PRODUCTION) == 2
+							&& (pLoopPlot->getFeatureType() == NO_FEATURE || GC.getFeatureInfo(pLoopPlot->getFeatureType()).isTerrain(iK)))
+							{
+								pLoopPlot->setTerrainType((TerrainTypes)iK);
 							}
 						}
 					}
@@ -1762,6 +1743,7 @@ void CvGame::normalizeRemoveBadTerrain()
 		}
 	}
 }
+
 
 void CvGame::normalizeAddFoodBonuses()
 {
@@ -1933,7 +1915,7 @@ void CvGame::normalizeAddGoodTerrain()
 										{
 											for (iK = 0; iK < GC.getNumTerrainInfos(); iK++)
 											{
-												if (!(GC.getTerrainInfo((TerrainTypes)iK).isWater()))
+												if (!(GC.getTerrainInfo((TerrainTypes)iK).isWaterTerrain()))
 												{
 													if (GC.getTerrainInfo((TerrainTypes)iK).getYield(YIELD_FOOD) >= GC.getFOOD_CONSUMPTION_PER_POPULATION())
 													{
@@ -2920,7 +2902,7 @@ void CvGame::selectGroup(CvUnit* pUnit, bool bShift, bool bCtrl, bool bAlt) cons
 			{
 				if (pLoopUnit->canMove())
 				{
-					if (!isMPOption(MPOPTION_SIMULTANEOUS_TURNS) || getTurnSlice() - pLoopUnit->getLastMoveTurn() > GC.getDefineINT(MIN_TIMER_UNIT_DOUBLE_MOVES))
+					if (!isMPOption(MPOPTION_SIMULTANEOUS_TURNS) || getTurnSlice() - pLoopUnit->getLastMoveTurn() > GC.getMIN_TIMER_UNIT_DOUBLE_MOVES())
 					{
 						if (bAlt || (pLoopUnit->getUnitType() == pUnit->getUnitType()))
 						{
@@ -3150,7 +3132,7 @@ bool CvGame::isTeamVoteEligible(TeamTypes eTeam, VoteSourceTypes eVoteSource) co
 		}
 	}
 
-	int iExtraEligible = GC.getDefineINT(TEAM_VOTE_MIN_CANDIDATES) - iCount;
+	int iExtraEligible = GC.getTEAM_VOTE_MIN_CANDIDATES() - iCount;
 	if (iExtraEligible <= 0)
 	{
 		return false;
@@ -3592,7 +3574,7 @@ int CvGame::calculateReligionPercent(ReligionTypes eReligion) const
 
 int CvGame::goldenAgeLength() const
 {
-	int iLength = GC.getDefineINT(GOLDEN_AGE_LENGTH);
+	int iLength = GC.getGOLDEN_AGE_LENGTH();
 
 	iLength *= GC.getGameSpeedInfo(getGameSpeedType()).getGoldenAgePercent();
 	iLength /= 100;
@@ -4598,7 +4580,7 @@ bool CvGame::circumnavigationAvailable() const
 		return false;
 	}
 
-	if (GC.getDefineINT(CIRCUMNAVIGATE_FREE_MOVES) == 0)
+	if (GC.getCIRCUMNAVIGATE_FREE_MOVES() == 0)
 	{
 		return false;
 	}
@@ -6129,7 +6111,7 @@ void CvGame::setHolyCity(ReligionTypes eIndex, const CvCity* pNewValue, bool bAn
 
 		if (pOldValue != NULL)
 		{
-			pOldValue->changeReligionInfluence(eIndex, -(GC.getDefineINT(HOLY_CITY_INFLUENCE)));
+			pOldValue->changeReligionInfluence(eIndex, -(GC.getHOLY_CITY_INFLUENCE()));
 
 			pOldValue->updateReligionCommerce();
 
@@ -6141,7 +6123,7 @@ void CvGame::setHolyCity(ReligionTypes eIndex, const CvCity* pNewValue, bool bAn
 			pHolyCity = getHolyCity(eIndex);
 
 			pHolyCity->setHasReligion(eIndex, true, bAnnounce, true);
-			pHolyCity->changeReligionInfluence(eIndex, GC.getDefineINT(HOLY_CITY_INFLUENCE));
+			pHolyCity->changeReligionInfluence(eIndex, GC.getHOLY_CITY_INFLUENCE());
 
 			pHolyCity->updateReligionCommerce();
 
@@ -6163,12 +6145,12 @@ void CvGame::setHolyCity(ReligionTypes eIndex, const CvCity* pNewValue, bool bAn
 							if (pHolyCity->isRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false))
 							{
 								szBuffer = gDLL->getText("TXT_KEY_MISC_REL_FOUNDED", GC.getReligionInfo(eIndex).getTextKeyWide(), pHolyCity->getNameKey());
-								AddDLLMessage(((PlayerTypes)iI), false, GC.getDefineINT(EVENT_MESSAGE_TIME_LONG), szBuffer, GC.getReligionInfo(eIndex).getSound(), MESSAGE_TYPE_MAJOR_EVENT, GC.getReligionInfo(eIndex).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"), pHolyCity->getX(), pHolyCity->getY());
+								AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME_LONG(), szBuffer, GC.getReligionInfo(eIndex).getSound(), MESSAGE_TYPE_MAJOR_EVENT, GC.getReligionInfo(eIndex).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"), pHolyCity->getX(), pHolyCity->getY());
 							}
 							else
 							{
 								szBuffer = gDLL->getText("TXT_KEY_MISC_REL_FOUNDED_UNKNOWN", GC.getReligionInfo(eIndex).getTextKeyWide());
-								AddDLLMessage(((PlayerTypes)iI), false, GC.getDefineINT(EVENT_MESSAGE_TIME_LONG), szBuffer, GC.getReligionInfo(eIndex).getSound(), MESSAGE_TYPE_MAJOR_EVENT, GC.getReligionInfo(eIndex).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+								AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME_LONG(), szBuffer, GC.getReligionInfo(eIndex).getSound(), MESSAGE_TYPE_MAJOR_EVENT, GC.getReligionInfo(eIndex).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
 							}
 						}
 					}
@@ -6284,12 +6266,12 @@ void CvGame::setHeadquarters(CorporationTypes eIndex, CvCity* pNewValue, bool bA
 
 							if (pHeadquarters->isRevealed(GET_PLAYER((PlayerTypes)iI).getTeam(), false))
 							{
-								AddDLLMessage(((PlayerTypes)iI), false, GC.getDefineINT(EVENT_MESSAGE_TIME_LONG), szBuffer, GC.getCorporationInfo(eIndex).getSound(), MESSAGE_TYPE_MAJOR_EVENT, GC.getCorporationInfo(eIndex).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"), pHeadquarters->getX(), pHeadquarters->getY());
+								AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME_LONG(), szBuffer, GC.getCorporationInfo(eIndex).getSound(), MESSAGE_TYPE_MAJOR_EVENT, GC.getCorporationInfo(eIndex).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"), pHeadquarters->getX(), pHeadquarters->getY());
 							}
 							else
 							{
 								CvWString szBuffer2 = gDLL->getText("TXT_KEY_MISC_CORPORATION_FOUNDED_UNKNOWN", GC.getCorporationInfo(eIndex).getTextKeyWide());
-								AddDLLMessage(((PlayerTypes)iI), false, GC.getDefineINT(EVENT_MESSAGE_TIME_LONG), szBuffer2, GC.getCorporationInfo(eIndex).getSound(), MESSAGE_TYPE_MAJOR_EVENT, GC.getCorporationInfo(eIndex).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
+								AddDLLMessage(((PlayerTypes)iI), false, GC.getEVENT_MESSAGE_TIME_LONG(), szBuffer2, GC.getCorporationInfo(eIndex).getSound(), MESSAGE_TYPE_MAJOR_EVENT, GC.getCorporationInfo(eIndex).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_HIGHLIGHT_TEXT"));
 							}
 						}
 					}
@@ -7739,7 +7721,7 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 
 			if (pLoopPlot->area()->getCitiesPerPlayer(ePlayer) < iTargetCities)
 			{
-				int iValue = GET_PLAYER(ePlayer).AI_foundValue(pLoopPlot->getX(), pLoopPlot->getY(), GC.getDefineINT(MIN_BARBARIAN_CITY_STARTING_DISTANCE));
+				int iValue = GET_PLAYER(ePlayer).AI_foundValue(pLoopPlot->getX(), pLoopPlot->getY(), GC.getMIN_BARBARIAN_CITY_STARTING_DISTANCE());
 				iValue *= 100 + getSorenRandNum(50, "Variance");
 				iValue /= 100;
 
@@ -7890,7 +7872,7 @@ void CvGame::createBarbarianUnits()
 		// Spawn barbarians
 		for (int iI = 0; iI < iNeededBarbs; iI++)
 		{
-			const CvPlot* pPlot = GC.getMap().syncRandPlot((RANDPLOT_NOT_VISIBLE_TO_CIV | RANDPLOT_ADJACENT_LAND | RANDPLOT_PASSIBLE), pLoopArea->getID(), GC.getDefineINT(MIN_BARBARIAN_STARTING_DISTANCE));
+			const CvPlot* pPlot = GC.getMap().syncRandPlot((RANDPLOT_NOT_VISIBLE_TO_CIV | RANDPLOT_ADJACENT_LAND | RANDPLOT_PASSIBLE), pLoopArea->getID(), GC.getMIN_BARBARIAN_STARTING_DISTANCE());
 
 			if (pPlot == NULL)
 				continue;
@@ -9541,7 +9523,7 @@ void CvGame::read(FDataStreamBase* pStream)
 		addReplayMessage(REPLAY_MESSAGE_MAJOR_EVENT, getActivePlayer(), gDLL->getText("TXT_KEY_MISC_RELOAD", m_iNumSessions));
 	}
 
-	if (isOption(GAMEOPTION_NEW_RANDOM_SEED) && !GC.getDefineINT(DISABLE_RAND_SEED_ON_LOAD))
+	if (isOption(GAMEOPTION_NEW_RANDOM_SEED) && !GC.getDISABLE_RAND_SEED_ON_LOAD())
 	{
 		if (!isNetworkMultiPlayer())
 		{

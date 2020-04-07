@@ -12272,6 +12272,14 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>[SPACE](Lub %s1_ImpName)</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_PLOT_REQUIRES</Tag>
+		<English>, Requires: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</English>
+		<French>, Requiert : [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</French>
+		<German>, erfordert: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</German>
+		<Italian>, Richiede: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</Italian>
+		<Spanish>, requiere: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PLOT_REQUIRES_OR</Tag>
 		<English>, or [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</English>
 		<French>, ou [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</French>
