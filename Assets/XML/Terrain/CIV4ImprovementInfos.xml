@@ -12877,9 +12877,15 @@
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SEASONAL_CAMP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WOODEN_WATCHTOWER</ArtDefineTag>
 			<PrereqTech>TECH_GATHERING</PrereqTech>
+			<YieldChanges>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>1</iYieldChange>
+			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
 			<bOutsideBorders>1</bOutsideBorders>
 			<bHillsMakesValid>1</bHillsMakesValid>
+			<bPeakMakesValid>1</bPeakMakesValid>
 			<iUpgradeTime>10</iUpgradeTime>
 			<ImprovementUpgrade>IMPROVEMENT_COTTAGE</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes>

@@ -4357,21 +4357,17 @@ void CvPlayer::doTurn()
 	FAssertMsg(!hasBusyUnit() || GC.getGame().isMPOption(MPOPTION_SIMULTANEOUS_TURNS)  || GC.getGame().isSimultaneousTeamTurns(), "End of turn with busy units in a sequential-turn game");
 
 	CvEventReporter::getInstance().beginPlayerTurn( GC.getGame().getGameTurn(),  getID());
-// < M.A.D. Nukes Start >
-	if(isEnabledMAD())
+
+	if (isEnabledMAD())
 	{
 		for(int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
-			if(getMADTrigger(iI))
+			if (getMADTrigger(iI) && !atWar(getTeam(), GET_PLAYER((PlayerTypes)iI).getTeam()))
 			{
-				if(!atWar(getTeam(), GET_PLAYER((PlayerTypes)iI).getTeam()))
-				{
-					setMADTrigger(iI, false);
-				}
+				setMADTrigger(iI, false);
 			}
 		}
 	}
-	// < M.A.D. Nukes End   >
 
 	setBuildingListInvalid();
 
@@ -4384,13 +4380,9 @@ void CvPlayer::doTurn()
 
 	if (!isNPC())
 	{
-		if (canLeaderPromote())
+		while (canLeaderPromote())
 		{
-			do
-			{
-				doPromoteLeader();
-			}
-			while (canLeaderPromote());
+			doPromoteLeader();
 		}
 	}
 
@@ -4410,18 +4402,13 @@ void CvPlayer::doTurn()
 		changeConversionTimer(-1);
 	}
 
-/************************************************************************************************/
-/* REVOLUTION_MOD                         02/04/09                                jdog5000      */
-/*                                                                                              */
-/* For rebels and BarbarianCiv                                                                  */
-/************************************************************************************************/
+	// jdog5000 02/04/09
+	// For rebels and BarbarianCiv
 	if( getFreeUnitCountdown() > 0 )
 	{
 		setFreeUnitCountdown(getFreeUnitCountdown() - 1);
 	}
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+	// ! jdog5000
 
 	CvUnit* pLoopUnit;
 
@@ -4477,10 +4464,7 @@ void CvPlayer::doTurn()
 
 	}
 
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-	// Dale - SA: Opp Fire START
+	// Johny Smith 04/19/09
 	if (GC.isDCM_OPP_FIRE())
 	{
 		for (pLoopUnit = firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = nextUnit(&iLoop))
@@ -4488,8 +4472,6 @@ void CvPlayer::doTurn()
 			pLoopUnit->doOpportunityFire();
 		}
 	}
-	// Dale - SA: Opp Fire END
-	// Dale - SA: Active Defense START
 	if (GC.isDCM_ACTIVE_DEFENSE())
 	{
 		for (pLoopUnit = firstUnit(&iLoop); pLoopUnit != NULL; pLoopUnit = nextUnit(&iLoop))
@@ -4497,11 +4479,8 @@ void CvPlayer::doTurn()
 			pLoopUnit->doActiveDefense();
 		}
 	}
+	// ! Johny Smith
 
-	// Dale - SA: Active Defense END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
 	if (getGoldenAgeTurns() > 0)
 	{
 		changeGoldenAgeTurns(-1);
@@ -4509,7 +4488,7 @@ void CvPlayer::doTurn()
 
 	if (getAnarchyTurns() > 0)
 	{
-		m_iNumAnarchyTurns++;	//	Increment stat counter for turns we have spent in anarchy
+		m_iNumAnarchyTurns++; // Increment stat counter for turns we have spent in anarchy
 		changeAnarchyTurns(-1);
 	}
 
@@ -4527,42 +4506,22 @@ void CvPlayer::doTurn()
 	updatePowerHistory(GC.getGame().getGameTurn(), getPower());
 	updateCultureHistory(GC.getGame().getGameTurn(), processedNationalCulture());
 	updateEspionageHistory(GC.getGame().getGameTurn(), GET_TEAM(getTeam()).getEspionagePointsEver());
-
-/************************************************************************************************/
-/* REVOLUTIONDCM_MOD                         02/04/08                            Glider1        */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	//RevolutionDCM - revolution stability history
 	updateRevolutionStabilityHistory(GC.getGame().getGameTurn(), getStabilityIndexAverage());
-/************************************************************************************************/
-/* REVOLUTIONDCM_MOD                         END                                 Glider1        */
-/************************************************************************************************/
 
-	expireMessages();  // turn log
+	expireMessages(); // turn log
 
 	gDLL->getInterfaceIFace()->setDirty(CityInfo_DIRTY_BIT, true);
 
 	AI_doTurnPost();
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      07/08/09                                jdog5000      */
-/*                                                                                              */
-/* Debug                                                                                        */
-/************************************************************************************************/
-    if( GC.getGame().isDebugMode() )
+    if (GC.getGame().isDebugMode())
 	{
 		GC.getGame().updateColoredPlots();
 	}
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
-
-	if ( gPlayerLogLevel >= 1 )
+	if (gPlayerLogLevel >= 1)
 	{
 		dumpStats();
 	}
-
 	CvEventReporter::getInstance().endPlayerTurn( GC.getGame().getGameTurn(),  getID());
 }
 
@@ -30520,106 +30479,108 @@ void CvPlayer::recalculateResourceConsumption(BonusTypes eBonus)
 {
 	PROFILE_FUNC()
 
-	int iLoop;
-	CvCity* pLoopCity;
-	int iConsumption = 0;
-	int iI, iJ;
-	int iTempValue;
-	int iTradingPartnerCount;
-
 	if (!hasBonus(eBonus))
 	{
 		m_paiResourceConsumption[eBonus] = 0;
 		return;
 	}
+	int iConsumption = 0;
 
+	CvCity* pLoopCity;
+	int iLoop;
 	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
 	{
-		int aiBaseCommerceRate[NUM_COMMERCE_TYPES];
-		for (iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
-		{
-			aiBaseCommerceRate[iI] = pLoopCity->getBaseCommerceRate((CommerceTypes)iI);
-		}
-
 		//See if we are constructing something that uses the resource
 		if (pLoopCity->getProductionBuilding() != NO_BUILDING)
 		{
-			CvBuildingInfo& kBuilding = GC.getBuildingInfo(pLoopCity->getProductionBuilding());
+			const CvBuildingInfo& kBuilding = GC.getBuildingInfo(pLoopCity->getProductionBuilding());
 
-			if ((kBuilding.getPrereqAndBonus() == eBonus) || (kBuilding.getPrereqVicinityBonus() == eBonus))
-				iConsumption += kBuilding.getProductionCost();
-
-			for (iI = 0; iI < kBuilding.getNumPrereqOrBonuses(); iI++)
+			if (kBuilding.getPrereqAndBonus() == eBonus || kBuilding.getPrereqVicinityBonus() == eBonus)
 			{
-				if ((kBuilding.getPrereqOrBonuses(iI) == eBonus) || (kBuilding.getPrereqOrVicinityBonuses(iI) == eBonus))
+				iConsumption += pLoopCity->getYieldRate(YIELD_PRODUCTION);
+			}
+			else
+			{
+				for (int iI = 0; iI < kBuilding.getNumPrereqOrBonuses(); iI++)
 				{
-					iConsumption += kBuilding.getProductionCost();
+					if ((kBuilding.getPrereqOrBonuses(iI) == eBonus) || (kBuilding.getPrereqOrVicinityBonuses(iI) == eBonus))
+					{
+						iConsumption += pLoopCity->getYieldRate(YIELD_PRODUCTION);
+						break;
+					}
 				}
 			}
 
 			if (kBuilding.getBonusProductionModifier(eBonus) != 0)
 			{
-				iTempValue = kBuilding.getBonusProductionModifier(eBonus);
-				iTempValue *= kBuilding.getProductionCost();
-				iTempValue /= 100;
-				iConsumption += iTempValue;
+				iConsumption += pLoopCity->getModifiedBaseYieldRate(YIELD_PRODUCTION) * kBuilding.getBonusProductionModifier(eBonus) / 100;
 			}
 		}
 		else if (pLoopCity->getProductionUnit() != NO_UNIT)
 		{
 			CvUnitInfo& kUnit = GC.getUnitInfo(pLoopCity->getProductionUnit());
 
-			if ((kUnit.getPrereqAndBonus() == eBonus) || (kUnit.getPrereqVicinityBonus() == eBonus))
-				iConsumption += kUnit.getProductionCost();
-
-			for (iI = 0; iI < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); iI++)
+			if (kUnit.getPrereqAndBonus() == eBonus || kUnit.getPrereqVicinityBonus() == eBonus)
 			{
-				if ((kUnit.getPrereqOrBonuses(iI) == eBonus) || (kUnit.getPrereqOrVicinityBonuses(iI) == eBonus))
+				iConsumption += pLoopCity->getYieldRate(YIELD_PRODUCTION);
+			}
+			else
+			{
+				for (int iI = 0; iI < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); iI++)
 				{
-					iConsumption += kUnit.getProductionCost();
+					if ((kUnit.getPrereqOrBonuses(iI) == eBonus) || (kUnit.getPrereqOrVicinityBonuses(iI) == eBonus))
+					{
+						iConsumption += pLoopCity->getYieldRate(YIELD_PRODUCTION);
+						break;
+					}
 				}
 			}
 
 			if (kUnit.getBonusProductionModifier(eBonus) != 0)
 			{
-				iTempValue = kUnit.getBonusProductionModifier(eBonus);
-				iTempValue *= kUnit.getProductionCost();
-				iTempValue /= 100;
-				iConsumption += iTempValue;
+				iConsumption += pLoopCity->getModifiedBaseYieldRate(YIELD_PRODUCTION) * kUnit.getBonusProductionModifier(eBonus) / 100;
 			}
 		}
 		else if (pLoopCity->getProductionProject() != NO_PROJECT)
 		{
-			iTempValue = GC.getProjectInfo(pLoopCity->getProductionProject()).getBonusProductionModifier(eBonus);
-			iTempValue *= GC.getProjectInfo(pLoopCity->getProductionProject()).getProductionCost();
-			iTempValue /= 100;
-			iConsumption += iTempValue;
+			const int iMod = GC.getProjectInfo(pLoopCity->getProductionProject()).getBonusProductionModifier(eBonus);
+			if (iMod != 0)
+			{
+				iConsumption += pLoopCity->getModifiedBaseYieldRate(YIELD_PRODUCTION) * iMod / 100;
+			}
 		}
 
-		//loop through all possible buildings and check if they generating us income or defense because of this bonus
-		for (iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+		int aiBaseCommerceRate[NUM_COMMERCE_TYPES];
+		for (int iI = 0; iI < NUM_COMMERCE_TYPES; iI++)
 		{
-			iTempValue = 0;
+			aiBaseCommerceRate[iI] = pLoopCity->getBaseCommerceRate((CommerceTypes)iI);
+		}
+		//loop through all possible buildings and check if they generating us income or defense because of this bonus
+		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+		{
 			const BuildingTypes eLoopBuilding = static_cast<BuildingTypes>(iI);
 			if (pLoopCity->getNumRealBuilding(eLoopBuilding) > 0)
 			{
-				CvBuildingInfo& kLoopBuilding = GC.getBuildingInfo(eLoopBuilding);
+				int iTempValue = 0;
+
+				const CvBuildingInfo& kLoopBuilding = GC.getBuildingInfo(eLoopBuilding);
 				iTempValue += kLoopBuilding.getBonusHappinessChanges(eBonus) * 12;
 				iTempValue += kLoopBuilding.getBonusHealthChanges(eBonus) * 8;
 				iTempValue += kLoopBuilding.getBonusDefenseChanges(eBonus);
-				for (iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
+
+				for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 				{
 					iTempValue += kLoopBuilding.getBonusYieldChanges(eBonus, iJ) * 3;
 					iTempValue += kLoopBuilding.getBonusYieldModifier(eBonus, iJ) * pLoopCity->getModifiedBaseYieldRate((YieldTypes)iJ) / 33;
 				}
-				for (iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
+				for (int iJ = 0; iJ < NUM_COMMERCE_TYPES; iJ++)
 				{
-					iTempValue += kLoopBuilding.getBonusCommerceModifier(eBonus, iJ) * aiBaseCommerceRate[iJ] / 33;
+					iTempValue += aiBaseCommerceRate[iJ] * kLoopBuilding.getBonusCommerceModifier(eBonus, iJ) / 33;
 				}
 				iTempValue *= pLoopCity->getNumRealBuilding(eLoopBuilding);
 
+				iConsumption += iTempValue;
 			}
-			iConsumption += iTempValue;
 		}
 
 		//if we are selling this resource, count the other players use too
@@ -30628,25 +30589,26 @@ void CvPlayer::recalculateResourceConsumption(BonusTypes eBonus)
 		//the best approx. Then, we divide by total trading partners to get an average.
 		if (getBonusExport(eBonus) > 0)
 		{
-			iTempValue = 0;
-			iTradingPartnerCount = 0;
-			for (iI = 0; iI < MAX_PLAYERS; iI++)
+			// Toffer - This would be greatly simplified with volumetric resources in place.
+			// We could simply count the number of self produced resources traded away or othervise consumed and given them a value of 1000 each or something.
+			int iTempValue = 0;
+			int iTradingPartnerCount = 0;
+			for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 			{
-				if (GET_PLAYER((PlayerTypes)iI).isAlive())
+				if (GET_PLAYER((PlayerTypes)iI).isAlive()
+				&& GET_TEAM(getTeam()).isHasMet(GET_PLAYER((PlayerTypes)iI).getTeam())
+				&& GET_PLAYER((PlayerTypes)iI).getBonusImport(eBonus) > 0)
 				{
-					if (GET_TEAM(getTeam()).isHasMet(GET_PLAYER((PlayerTypes)iI).getTeam()))
-					{
-						if (GET_PLAYER((PlayerTypes)iI).getBonusImport(eBonus) > 0)
-						{
-							iTempValue += GET_PLAYER((PlayerTypes)iI).getResourceConsumption(eBonus);
-							iTradingPartnerCount++;
-						}
-					}
+					iTempValue += GET_PLAYER((PlayerTypes)iI).getResourceConsumption(eBonus);
+					iTradingPartnerCount++;
 				}
 			}
-			iTempValue /= std::max(1, iTradingPartnerCount);
-			iTempValue *= getBonusExport(eBonus);
-			iConsumption += iTempValue;
+			if (iTradingPartnerCount > 0)
+			{
+				iTempValue /= iTradingPartnerCount;
+				iTempValue *= getBonusExport(eBonus);
+				iConsumption += iTempValue;
+			}
 		}
 	}
 	m_paiResourceConsumption[eBonus] = iConsumption;
