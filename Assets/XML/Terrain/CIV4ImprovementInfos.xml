@@ -12876,7 +12876,7 @@
 			<Description>TXT_KEY_IMPROVEMENT_SEASONAL_CAMP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SEASONAL_CAMP_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_WOODEN_WATCHTOWER</ArtDefineTag>
-			<PrereqTech>TECH_GATHERING</PrereqTech>
+			<PrereqTech>TECH_NOMADISM</PrereqTech>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
@@ -12886,12 +12886,12 @@
 			<bOutsideBorders>1</bOutsideBorders>
 			<bHillsMakesValid>1</bHillsMakesValid>
 			<bPeakMakesValid>1</bPeakMakesValid>
+			<iDefenseModifier>5</iDefenseModifier>
 			<iUpgradeTime>10</iUpgradeTime>
-			<ImprovementUpgrade>IMPROVEMENT_COTTAGE</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_PLANT_GATHERING_CAMP</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes>
 				<ImprovementType>IMPROVEMENT_SCAVENGING_CAMP</ImprovementType>
 				<ImprovementType>IMPROVEMENT_FRUIT_GATHERING_CAMP</ImprovementType>
-				<ImprovementType>IMPROVEMENT_PLANT_GATHERING_CAMP</ImprovementType>
 				<ImprovementType>IMPROVEMENT_SEED_CAMP</ImprovementType>
 				<ImprovementType>IMPROVEMENT_MUSHROOM_GATHERER</ImprovementType>
 				<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
@@ -12900,6 +12900,7 @@
 				<ImprovementType>IMPROVEMENT_STONE_TOOLS_WORKSHOP</ImprovementType>
 				<ImprovementType>IMPROVEMENT_SALT_GATHERER</ImprovementType>
 				<ImprovementType>IMPROVEMENT_TAR_GATHERER</ImprovementType>
+				<ImprovementType>IMPROVEMENT_COTTAGE</ImprovementType>
 			</AlternativeImprovementUpgradeTypes>
 			<TerrainMakesValids>
 				<TerrainMakesValid>
