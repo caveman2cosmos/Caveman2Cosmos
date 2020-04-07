@@ -816,45 +816,45 @@ void CvPlot::doImprovement()
 	// Discover bonus
 	if (getBonusType() == NO_BONUS)
 	{
+		int iGameSpeedFactor = -1;
 		for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
 		{
-			if (GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getBonusInfo((BonusTypes) iI).getTechReveal())))
+			int iOdds = pInfo.getImprovementBonusDiscoverRand(iI);
+			if (iOdds < 1
+			|| !GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBonusInfo((BonusTypes) iI).getTechReveal())
+			|| !canHaveBonus((BonusTypes)iI))
 			{
-				if (!canHaveBonus((BonusTypes)iI))
+				continue;
+			}
+			if (iGameSpeedFactor == -1)
+			{
+				iGameSpeedFactor = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
+			}
+			iOdds *= iGameSpeedFactor;
+			iOdds /= 100;
+
+			if (iOdds < 2 || GC.getGame().getSorenRandNum(iOdds, "Bonus Discovery") == 0)
+			{
+				setBonusType((BonusTypes)iI);
+
+				CvCity* pCity = GC.getMap().findCity(getX(), getY(), getOwner(), NO_TEAM, false);
+
+				if (pCity != NULL && isInViewport())
 				{
-					continue;
+					MEMORY_TRACK_EXEMPT();
+
+					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE", GC.getBonusInfo((BonusTypes) iI).getTextKeyWide(), pCity->getNameKey());
+					AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_DISCOVERBONUS", MESSAGE_TYPE_MINOR_EVENT,
+						GC.getBonusInfo((BonusTypes) iI).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), getViewportX(), getViewportY(), true, true);
 				}
-				int iOdds = pInfo.getImprovementBonusDiscoverRand(iI);
-
-				if (iOdds > 0)
-				{
-					iOdds *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
-					iOdds /= 100;
-
-					if( GC.getGame().getSorenRandNum(iOdds, "Bonus Discovery") == 0)
-					{
-						setBonusType((BonusTypes)iI);
-
-						CvCity* pCity = GC.getMap().findCity(getX(), getY(), getOwner(), NO_TEAM, false);
-
-						if (pCity != NULL && isInViewport())
-						{
-							MEMORY_TRACK_EXEMPT();
-
-							CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE", GC.getBonusInfo((BonusTypes) iI).getTextKeyWide(), pCity->getNameKey());
-							AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_DISCOVERBONUS", MESSAGE_TYPE_MINOR_EVENT, GC.getBonusInfo((BonusTypes) iI).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), getViewportX(), getViewportY(), true, true);
-						}
-						break;
-					}
-				}
+				break;
 			}
 		}
 	}
 	// Deplete Bonus
 	else if (GC.getGame().isModderGameOption(MODDERGAMEOPTION_RESOURCE_DEPLETION))
 	{
-		BonusTypes eBonus = getNonObsoleteBonusType(getTeam());
-		PlayerTypes ePlayer = getOwner();
+		const BonusTypes eBonus = getNonObsoleteBonusType(getTeam());
 
 		// We know it's owned by a player because this function is only called if it is.
 		if (eBonus == NO_BONUS || !pInfo.isImprovementBonusTrade(eBonus) || !GET_TEAM(getTeam()).isHasTech((TechTypes)(GC.getBonusInfo(eBonus).getTechCityTrade())))
@@ -862,39 +862,43 @@ void CvPlot::doImprovement()
 			return;
 		}
 
-		int iBonusOdds = pInfo.getImprovementBonusDepletionRand(eBonus);
-		iBonusOdds *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
-		iBonusOdds /= 100;
-
-		iBonusOdds *= 12 * ((int)GC.getMap().getWorldSize() + 1);
-		iBonusOdds /= GC.getMap().getNumBonuses(eBonus);
-
-		if (GET_PLAYER(ePlayer).getResourceConsumption(eBonus) > 0)
+		int iOdds = pInfo.getImprovementBonusDepletionRand(eBonus);
+		if (iOdds < 0)
 		{
-			iBonusOdds *= (100 * GET_PLAYER(ePlayer).getNumCities());
-			iBonusOdds /= GET_PLAYER(ePlayer).getResourceConsumption(eBonus);
-		}
+			// Gamespeed scaling with built in *100 by omitting the /100 that usually follow GS scaling
+			iOdds *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
+			// Bonus density normalization
+			iOdds *= 4 * ((int)GC.getMap().getWorldSize() + 1);
+			iOdds /= GC.getMap().getNumBonuses(eBonus);
 
-		if (iBonusOdds > 0 && GC.getGame().getSorenRandNum(iBonusOdds, "Bonus Depletion") == 0)
-		{
+			// This routine is only called for owned plots.
+			const PlayerTypes ePlayer = getOwner();
+			// No need to check if NO_PLAYER
+			if (GET_PLAYER(ePlayer).getResourceConsumption(eBonus) > 0)
 			{
-				MEMORY_TRACK_EXEMPT();
-
-				CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_RESOURCE_DEPLETED", GC.getBonusInfo(eBonus).getTextKeyWide(), pInfo.getDescription());
-				AddDLLMessage(ePlayer, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, GC.getBonusInfo(eBonus).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX(), getY(), true, true);
+				iOdds /= GET_PLAYER(ePlayer).getResourceConsumption(eBonus);
 			}
-			GC.getGame().logMsg("Resource Depleted! Resource was %d, The odds were 1 in %d", eBonus, iBonusOdds);
-
-			setBonusType(NO_BONUS);
-
-			CvCity* pCity = GC.getMap().findCity(getX(), getY(), ePlayer, NO_TEAM, false);
-
-			if (pCity != NULL) { pCity->AI_setAssignWorkDirty(true); }
-
-			if (!canHaveImprovement(eType, getTeam()))
+			if (iOdds < 2 || GC.getGame().getSorenRandNum(iOdds, "Bonus Depletion") == 0)
 			{
-				setImprovementType(NO_IMPROVEMENT);
-				return;
+				{
+					MEMORY_TRACK_EXEMPT();
+
+					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_RESOURCE_DEPLETED", GC.getBonusInfo(eBonus).getTextKeyWide(), pInfo.getDescription());
+					AddDLLMessage(ePlayer, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT,
+						GC.getBonusInfo(eBonus).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX(), getY(), true, true);
+				}
+				GC.getGame().logMsg("Resource Depleted! Resource was %d, The odds were 1 in %d", eBonus, iOdds);
+
+				setBonusType(NO_BONUS);
+
+				CvCity* pCity = GC.getMap().findCity(getX(), getY(), ePlayer, NO_TEAM, false);
+
+				if (pCity != NULL) pCity->AI_setAssignWorkDirty(true);
+
+				if (!canHaveImprovement(eType, getTeam()))
+				{
+					setImprovementType(NO_IMPROVEMENT);
+				}
 			}
 		}
 	}

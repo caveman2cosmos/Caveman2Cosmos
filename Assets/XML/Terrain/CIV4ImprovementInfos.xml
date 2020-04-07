@@ -12215,7 +12215,6 @@
 					<BonusType>BONUS_GOLD_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -12227,7 +12226,6 @@
 					<BonusType>BONUS_SILVER_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -12239,7 +12237,6 @@
 					<BonusType>BONUS_COPPER_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -12251,7 +12248,6 @@
 					<BonusType>BONUS_TIN_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -12263,7 +12259,6 @@
 					<BonusType>BONUS_LEAD_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -12275,7 +12270,6 @@
 					<BonusType>BONUS_PLATINUM_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -12287,7 +12281,6 @@
 					<BonusType>BONUS_IRON_ORE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -12299,7 +12292,6 @@
 					<BonusType>BONUS_SULPHUR</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -12311,7 +12303,6 @@
 					<BonusType>BONUS_AMBER</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -12323,7 +12314,6 @@
 					<BonusType>BONUS_STONE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -12334,7 +12324,6 @@
 					<BonusType>BONUS_OBSIDIAN</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -12345,7 +12334,6 @@
 					<BonusType>BONUS_MARBLE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -12356,7 +12344,6 @@
 					<BonusType>BONUS_FINE_CLAY</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -12367,7 +12354,6 @@
 					<BonusType>BONUS_TURQUOISE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -12379,7 +12365,6 @@
 					<BonusType>BONUS_JADE</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -12391,7 +12376,6 @@
 					<BonusType>BONUS_DIAMOND</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -12403,7 +12387,6 @@
 					<BonusType>BONUS_RUBIES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -12415,7 +12398,6 @@
 					<BonusType>BONUS_SAPPHIRES</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -12424,10 +12406,9 @@
 					</YieldChanges>
 				</BonusTypeStruct>
 				<BonusTypeStruct>
-					<BonusType>BONUS_MANGANESE</BonusType>
+					<BonusType>BONUS_COAL</BonusType>
 					<bBonusMakesValid>1</bBonusMakesValid>
 					<bBonusTrade>1</bBonusTrade>
-					<iDiscoverRand>10000</iDiscoverRand>
 					<iDepletionRand>1000</iDepletionRand>
 					<YieldChanges>
 						<iYieldChange>0</iYieldChange>
@@ -12888,6 +12869,494 @@
 			<ArtDefineTag>ART_DEF_IMPROVEMENT_CITY_RUINS</ArtDefineTag>
 			<PrereqTech>TECH_DUMMY</PrereqTech>
 			<bGraphicalOnly>1</bGraphicalOnly>
+		</ImprovementInfo>
+		<!-- Seasonal Camp -->
+		<ImprovementInfo>
+			<Type>IMPROVEMENT_SEASONAL_CAMP</Type>
+			<Description>TXT_KEY_IMPROVEMENT_SEASONAL_CAMP</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_SEASONAL_CAMP_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_WOODEN_WATCHTOWER</ArtDefineTag>
+			<PrereqTech>TECH_GATHERING</PrereqTech>
+			<YieldChanges>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>1</iYieldChange>
+			</YieldChanges>
+			<bActsAsCity>0</bActsAsCity>
+			<bOutsideBorders>1</bOutsideBorders>
+			<bHillsMakesValid>1</bHillsMakesValid>
+			<bPeakMakesValid>1</bPeakMakesValid>
+			<iUpgradeTime>10</iUpgradeTime>
+			<ImprovementUpgrade>IMPROVEMENT_COTTAGE</ImprovementUpgrade>
+			<AlternativeImprovementUpgradeTypes>
+				<ImprovementType>IMPROVEMENT_SCAVENGING_CAMP</ImprovementType>
+				<ImprovementType>IMPROVEMENT_FRUIT_GATHERING_CAMP</ImprovementType>
+				<ImprovementType>IMPROVEMENT_PLANT_GATHERING_CAMP</ImprovementType>
+				<ImprovementType>IMPROVEMENT_SEED_CAMP</ImprovementType>
+				<ImprovementType>IMPROVEMENT_MUSHROOM_GATHERER</ImprovementType>
+				<ImprovementType>IMPROVEMENT_GRAPE_GATHERING_CAMP</ImprovementType>
+				<ImprovementType>IMPROVEMENT_SILK_FARM</ImprovementType>
+				<ImprovementType>IMPROVEMENT_WOOD_GATHERER</ImprovementType>
+				<ImprovementType>IMPROVEMENT_STONE_TOOLS_WORKSHOP</ImprovementType>
+				<ImprovementType>IMPROVEMENT_SALT_GATHERER</ImprovementType>
+				<ImprovementType>IMPROVEMENT_TAR_GATHERER</ImprovementType>
+			</AlternativeImprovementUpgradeTypes>
+			<TerrainMakesValids>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_BARREN</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_DESERT</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_DUNES</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_ICE</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_LUSH</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_MARSH</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_MUDDY</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_PERMAFROST</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_PLAINS</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_ROCKY</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_BADLAND</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_SALT_FLATS</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_SCRUB</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_TAIGA</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_TUNDRA</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+			</TerrainMakesValids>
+			<BonusTypeStructs>
+				<BonusTypeStruct>
+					<BonusType>BONUS_BARLEY</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_CORN</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_MELONS</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_POTATOES</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_PUMPKIN</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_RICE</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_SQUASH</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_WHEAT</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_ALMONDS</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_APPLE</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_BANANA</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_COCONUT</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_DATES</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_FIG</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_GUAVAS</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_LEMONS</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_MANGO</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_PAPAYA</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_PISTACHIO</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_POMEGRANATE</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_OLIVES</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_RESIN</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_RUBBER</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_SPICES</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_HEMP</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_COCA</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_COCOA</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_COFFEE</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_COTTON</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_FLAX</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_HENNA</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_INCENSE</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_INDIGO</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_KAVA</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_PAPYRUS</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_PEYOTE</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_PRICKLY_PEAR</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_OPIUM</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_SUGAR</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_TEA</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_TOBACCO</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_VANILLA</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_GRAPES</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_MUSHROOMS</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_PRIME_TIMBER</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_CAMEL</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_COW</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_DONKEY</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_HORSE</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_LLAMA</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_PIG</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_SHEEP</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_BEAVERS</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_BISON</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_DEER</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_ELEPHANTS</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_GUINEA_PIGS</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_KANGAROO</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_MAMMOTH</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_PARROTS</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_POULTRY</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_RABBIT</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_SEA_LION_AND_SEAL</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_WALRUS</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_SILK</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_AMBER</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_BAUXITE_ORE</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_COAL</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_COPPER_ORE</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_DIAMOND</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_GEODE</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_GOLD_ORE</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_IRON_ORE</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_LEAD_ORE</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_MANGANESE</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_PLATINUM_ORE</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_RUBIES</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_SAPPHIRES</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_SILVER_ORE</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_SULPHUR</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_TIN_ORE</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_TITANIUM_ORE</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_URANIUM</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_FINE_CLAY</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_JADE</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_MARBLE</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_NATRON</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_OBSIDIAN</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_SALT</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_STONE</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_TURQUOISE</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_FOSSIL_BEDS</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_NATURAL_GAS</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_OIL</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_GEOTHERMAL_ENERGY</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_ANCIENT_RELICS</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+			</BonusTypeStructs>
 		</ImprovementInfo>
 	</ImprovementInfos>
 </Civ4ImprovementInfos>
