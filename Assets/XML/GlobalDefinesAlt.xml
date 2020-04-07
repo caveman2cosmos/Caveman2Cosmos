@@ -580,4 +580,8 @@
 		<DefineName>MIN_POP_CONSIDER_INQUISITORS</DefineName>
 		<iDefineIntVal>7</iDefineIntVal>
 	</Define>
+	<Define>
+		<DefineName>NEW_MINOR_CIV_GOLDEN_AGE_TURNS</DefineName>
+		<iDefineIntVal>1</iDefineIntVal>
+	</Define>
 </Civ4Defines>

@@ -1752,21 +1752,27 @@ void CyPlayer::setFoundedFirstCity(bool bNewValue)
 {
 	if( m_pPlayer ) 
 		m_pPlayer->setFoundedFirstCity(bNewValue);
-	return;
 }
 
 void CyPlayer::setAlive(bool bNewValue)
 {
 	if( m_pPlayer ) 
 		m_pPlayer->setAlive(bNewValue);
-	return;
 }
 
 void CyPlayer::setNewPlayerAlive(bool bNewValue)
 {
 	if( m_pPlayer ) 
 		m_pPlayer->setNewPlayerAlive(bNewValue);
-	return;
+}
+
+void CyPlayer::setNewMinorCivPlayerAlive(bool bNewValue)
+{
+	if (m_pPlayer)
+	{
+		m_pPlayer->setNewPlayerAlive(bNewValue);
+		m_pPlayer->changeGoldenAgeTurns(GC.getNEW_MINOR_CIV_GOLDEN_AGE_TURNS());
+	}
 }
 
 void CyPlayer::changeTechScore(int iChange)

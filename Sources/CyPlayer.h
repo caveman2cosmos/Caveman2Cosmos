@@ -6,9 +6,6 @@
 // Python wrapper class for CvPlayer
 //
 
-//#include "CvEnums.h"
-//#include "CvStructs.h"
-
 class CyUnit;
 class CvPlayer;
 class CvProperties;
@@ -399,6 +396,7 @@ public:
 	void setFoundedFirstCity(bool bNewValue);
 	void setAlive(bool bNewValue);
 	void setNewPlayerAlive(bool bNewValue);
+	void setNewMinorCivPlayerAlive(bool bNewValue);
 	void changeTechScore(int iChange);
 
 	bool isStrike();
