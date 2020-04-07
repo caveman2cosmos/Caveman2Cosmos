@@ -712,16 +712,19 @@ void CvPlot::doTurn()
 		}
 	}
 
-	// Super Forts begin *bombard*
+	// Super Forts *bombard*
 	if (!isBombarded() && getDefenseDamage() > 0)
 	{
 		changeDefenseDamage(-(GC.getDefineINT("CITY_DEFENSE_DAMAGE_HEAL_RATE")));
 	}
 	setBombarded(false);
-	// Super Forts end
+	// ! Super Forts
 
+	if (GC.isDCM_BATTLE_EFFECTS() && getBattleCountdown() > 0)
+	{
+		changeBattleCountdown(-1);
+	}
 	doFeature();
-
 	doCulture();
 
 	verifyUnitValidPlot();
@@ -732,58 +735,6 @@ void CvPlot::doTurn()
 	{
 		setOwner(NO_PLAYER, false, false);
 	}
-
-/*	doImprovementSpawn();
-
-void CvPlot::doImprovementSpawn()
-{
-	if (getImprovementType() != NO_IMPROVEMENT)
-	{
-		if (getOwner() == NO_PLAYER)
-		{
-			changeImprovementDecay(-1);
-			if (getImprovementDecay() == 0)
-			{
-				if (GC.getImprovementInfo(getImprovementType()).getImprovementPillage() != NO_IMPROVEMENT)
-				{
-					int iTimer = 10;
-					changeImprovementDecay(iTimer);
-					setImprovementType((ImprovementTypes)GC.getImprovementInfo(getImprovementType()).getImprovementPillage());
-				}
-				else if (getImprovementType() != CvImprovementInfo::getImprovementRuins())
-				{
-					int iTimer = 10;
-					changeImprovementDecay(iTimer);
-					setImprovementType(CvImprovementInfo::getImprovementRuins());
-				}
-				else
-				{
-					setImprovementType(NO_IMPROVEMENT);
-				}
-			}
-			return;
-		}
-	}
-	if (getOwner() != NO_PLAYER)
-	{
-		int iBestValue = 0;
-		ImprovementTypes eBestImprovement = NO_IMPROVEMENT;
-		for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
-		{
-			int iValue = GET_PLAYER(getOwner()).getImprovementValue();
-			if (iValue > iBestValue)
-			{
-				iBestValue = iValue;
-				eBestImprovement = (ImprovementTypes)iI;
-			}
-		}
-		if (eBestImprovement != NO_IMPROVEMENT)
-		{
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-
-	// XXX
 #ifdef _DEBUG
 	{
 		foreach_ (CvUnit* unit, units())
@@ -4095,7 +4046,6 @@ int CvPlot::getCultureRangeForts(PlayerTypes ePlayer) const
 	{
 		return 0;
 	}
-
 	return m_aiCultureRangeForts[ePlayer];
 }
 
@@ -4103,7 +4053,7 @@ void CvPlot::setCultureRangeForts(PlayerTypes ePlayer, int iNewValue)
 {
 	if (getCultureRangeForts(ePlayer) != iNewValue)
 	{
-		if(NULL == m_aiCultureRangeForts)
+		if (NULL == m_aiCultureRangeForts)
 		{
 			m_aiCultureRangeForts = new short[MAX_PLAYERS];
 			for (int iI = 0; iI < MAX_PLAYERS; ++iI)
@@ -4111,10 +4061,9 @@ void CvPlot::setCultureRangeForts(PlayerTypes ePlayer, int iNewValue)
 				m_aiCultureRangeForts[iI] = 0;
 			}
 		}
-
 		m_aiCultureRangeForts[ePlayer] = iNewValue;
 
-		if(getCulture(ePlayer) == 0)
+		if (getCulture(ePlayer) == 0)
 		{
 			changeCulture(ePlayer, 1, false);
 		}
@@ -4125,7 +4074,7 @@ void CvPlot::changeCultureRangeForts(PlayerTypes ePlayer, int iChange)
 {
 	if (0 != iChange)
 	{
-		setCultureRangeForts(ePlayer, (getCultureRangeForts(ePlayer) + iChange));
+		setCultureRangeForts(ePlayer, getCultureRangeForts(ePlayer) + iChange);
 	}
 }
 
@@ -4137,40 +4086,32 @@ bool CvPlot::isWithinFortCultureRange(PlayerTypes ePlayer) const
 
 void CvPlot::changeCultureRangeFortsWithinRange(PlayerTypes ePlayer, int iChange, int iRange, bool bUpdate)
 {
-	CvPlot* pLoopPlot;
-	int iDX, iDY;
-	int iCultureDistance;
-
-	if ((0 != iChange) && (iRange >= 0))
+	if (0 == iChange || iRange < 0)
 	{
-		for (iDX = -iRange; iDX <= iRange; iDX++)
+		return;
+	}
+	for (int iDX = -iRange; iDX <= iRange; iDX++)
+	{
+		for (int iDY = -iRange; iDY <= iRange; iDY++)
 		{
-			for (iDY = -iRange; iDY <= iRange; iDY++)
+			const int iCultureDistance = plotDistance(0, 0, iDX, iDY);
+
+			if (iCultureDistance <= iRange)
 			{
-				iCultureDistance = plotDistance(0, 0, iDX, iDY);
+				CvPlot* pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
 
-				if(iCultureDistance <= iRange)
+				if (pLoopPlot != NULL)
 				{
-					pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
+					pLoopPlot->changeCultureRangeCities(ePlayer, iCultureDistance, iChange, false, false);
 
-					if (pLoopPlot != NULL)
+					// Make sure that if a plot is newly in range it gets at least 1 culture
+					if (iChange > 0 && pLoopPlot->getCulture(ePlayer) == 0)
 					{
-						pLoopPlot->changeCultureRangeCities(ePlayer, iCultureDistance, iChange, false, false);
-
-						//	Super Forts adaptation to C2C - make sure that if a plot is newly
-						//	in range it gets at least 1 culture
-						if ( iChange > 0 )
-						{
-							if(pLoopPlot->getCulture(ePlayer) == 0)
-							{
-								pLoopPlot->changeCulture(ePlayer, 1, false);
-							}
-						}
-
-						if(bUpdate)
-						{
-							pLoopPlot->updateCulture(true,true);
-						}
+						pLoopPlot->changeCulture(ePlayer, 1, false);
+					}
+					if (bUpdate)
+					{
+						pLoopPlot->updateCulture(true,true);
 					}
 				}
 			}
@@ -4180,53 +4121,80 @@ void CvPlot::changeCultureRangeFortsWithinRange(PlayerTypes ePlayer, int iChange
 
 void CvPlot::doImprovementCulture()
 {
-	CvPlot* pLoopPlot;
-	int iDX, iDY;
-	int iCultureDistance, iCulture, iCultureRange;
-	ImprovementTypes eImprovement;
-	PlayerTypes ePlayer;
-
-	eImprovement = getImprovementType();
-	if (eImprovement != NO_IMPROVEMENT)
+	if (getImprovementType() == NO_IMPROVEMENT)
 	{
-		ePlayer = getOwner();
-		if(ePlayer != NO_PLAYER)
+		return;
+	}
+	const CvImprovementInfo& improvement = GC.getImprovementInfo(getImprovementType());
+	const PlayerTypes eOwner = getOwner();
+	if (eOwner != NO_PLAYER)
+	{
+		const int iCulture = improvement.getCulture();
+		if (iCulture > 0)
 		{
-			iCulture = GC.getImprovementInfo(eImprovement).getCulture();
-			if(iCulture > 0)
+			const int iCultureRange = improvement.getCultureRange();
+
+			if (iCultureRange > 0)
 			{
-				iCultureRange = GC.getImprovementInfo(eImprovement).getCultureRange();
-
-				if(iCultureRange > 0)
+				for (int iDX = -iCultureRange; iDX <= iCultureRange; iDX++)
 				{
-					for (iDX = -iCultureRange; iDX <= iCultureRange; iDX++)
+					for (int iDY = -iCultureRange; iDY <= iCultureRange; iDY++)
 					{
-						for (iDY = -iCultureRange; iDY <= iCultureRange; iDY++)
+						const int iDistance = plotDistance(0, 0, iDX, iDY);
+
+						if (iDistance <= iCultureRange)
 						{
-							iCultureDistance = plotDistance(0, 0, iDX, iDY);
+							CvPlot* pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
 
-							if(iCultureDistance <= iCultureRange)
+							if (pLoopPlot != NULL)
 							{
-								pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
-
-								if (pLoopPlot != NULL)
-								{
-									int iChange = ((iCultureRange - ((iCultureDistance == 0) ? 1 : iCultureDistance))*iCulture) + iCulture;
-									pLoopPlot->changeCulture(ePlayer,iChange,false);
-								}
+								pLoopPlot->changeCulture(eOwner, iCulture + iCulture*(iCultureRange - iDistance), false);
 							}
 						}
 					}
 				}
-				else
+			}
+			else
+			{
+				changeCulture(eOwner, iCulture, false);
+			}
+		}
+	}
+
+	if (improvement.isActsAsCity() && getOwnershipDuration() > GC.getDefineINT("SUPER_FORTS_DURATION_BEFORE_REVOLT"))
+	{
+		// Check for a fort culture flip
+		const PlayerTypes eCulturalOwner = calculateCulturalOwner();
+		if (eCulturalOwner != NO_PLAYER && eCulturalOwner != eOwner && GET_PLAYER(eCulturalOwner).getTeam() != getTeam())
+		{
+			CLLNode<IDInfo>* pUnitNode = headUnitNode();
+			bool bDefenderFound = false;
+			while (pUnitNode != NULL)
+			{
+				const CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
+
+				if (pLoopUnit->getOwner() == eOwner && pLoopUnit->canDefend(this))
 				{
-					changeCulture(ePlayer,iCulture,false);
+					bDefenderFound = true;
+					break;
 				}
+				pUnitNode = nextUnitNode(pUnitNode);
+			}
+			if (!bDefenderFound)
+			{
+				CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_REVOLTED_JOINED", improvement.getText(), GET_PLAYER(eCulturalOwner).getCivilizationDescriptionKey());
+				AddDLLMessage(eOwner, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CULTUREFLIP", MESSAGE_TYPE_INFO,
+					improvement.getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX(), getY(), true, true);
+
+				AddDLLMessage(eCulturalOwner, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CULTUREFLIP", MESSAGE_TYPE_INFO,
+					improvement.getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX(), getY(), true, true);
+
+				setOwner(eCulturalOwner, true, true);
 			}
 		}
 	}
 }
-// Super Forts end
+
 
 // Super Forts begin *canal* *choke*
 int CvPlot::countRegionPlots(const CvPlot* pInvalidPlot) const
@@ -12236,8 +12204,7 @@ void CvPlot::deleteSymbol(int iID)
 
 void CvPlot::deleteAllSymbols()
 {
-	int i;
-	for(i=0;i<getNumSymbols();i++)
+	for (int i = 0; i < getNumSymbols(); i++)
 	{
 		// ?? Need gDLL->getSymbolIFace()->Hide(pLoopSymbol, true);
 		gDLL->getSymbolIFace()->destroy(m_symbols[i]);
@@ -12262,336 +12229,192 @@ void CvPlot::doFeature()
 {
 	PROFILE("CvPlot::doFeature()")
 
-	CvCity* pCity;
-	CvPlot* pLoopPlot;
-	CvWString szBuffer;
-	int iProbability;
-	int iI, iJ;
-/************************************************************************************************/
-/* Afforess	                  Start		 2/9/10                                         */
-/*   Feature Sound Effect                                                                       */
-/*  (Default Sound Effect is Forest Growth if no XML value is set)                              */
-/************************************************************************************************/
-	TCHAR szSound[1024] = "AS2D_FEATUREGROWTH";
-/************************************************************************************************/
-/* Afforess	                     END                                                        */
-/************************************************************************************************/
-
-/************************************************************************************************/
-/* DCM	                  Start		 05/31/10                        Johnny Smith               */
-/*                                                                   Afforess                   */
-/* Battle Effects                                                                               */
-/************************************************************************************************/
-	// Dale - BE: Battle Effect START
-	if (GC.isDCM_BATTLE_EFFECTS())
-	{
-		if(getBattleCountdown() > 0)
-		{
-			changeBattleCountdown(-1);
-		}
-	}
-	// Dale - BE: Battle Effect END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
 	if (getFeatureType() != NO_FEATURE)
 	{
-		iProbability = GC.getFeatureInfo(getFeatureType()).getDisappearanceProbability();
-
-		if (iProbability > 0)
+		if(GC.getFeatureInfo(getFeatureType()).getDisappearanceProbability() > 0
+		&& GC.getFeatureInfo(getFeatureType()).getDisappearanceProbability() > GC.getGame().getSorenRandNum(
+			10000 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getVictoryDelayPercent() / 100, "Feature Disappearance"))
 		{
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                       03/04/10                                jdog5000      */
-/*                                                                                              */
-/* Gamespeed scaling                                                                            */
-/************************************************************************************************/
-/* original bts code
-			if (GC.getGame().getSorenRandNum(10000, "Feature Disappearance") < iProbability)
-*/
-			int iOdds = (10000*GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getVictoryDelayPercent())/100;
-			if (GC.getGame().getSorenRandNum(iOdds, "Feature Disappearance") < iProbability)
-/************************************************************************************************/
-/* UNOFFICIAL_PATCH                        END                                                  */
-/************************************************************************************************/
-			{
-				setFeatureType(NO_FEATURE);
-			}
+			setFeatureType(NO_FEATURE);
 		}
+		return;
 	}
-	else
+
+	const int iStorm = GC.getInfoTypeForString("FEATURE_STORM", true);
+	const bool bNoStorms = GC.getGame().isModderGameOption(MODDERGAMEOPTION_NO_STORMS);
+
+	for (int iI = 0; iI < GC.getNumFeatureInfos(); ++iI)
 	{
-/************************************************************************************************/
-/* Afforess	                  Start		 05/21/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-		int iStorm = GC.getInfoTypeForString("FEATURE_STORM", true);
-		bool bNoStorms = GC.getGame().isModderGameOption(MODDERGAMEOPTION_NO_STORMS);
-
-		for (iI = 0; iI < GC.getNumFeatureInfos(); ++iI)
+		if (iStorm == iI && bNoStorms)
 		{
-			CvFeatureInfo& kFeature = GC.getFeatureInfo((FeatureTypes)iI);
-			if ((kFeature.getGrowthProbability() > 0 && !isUnit()) || kFeature.getSpreadProbability() > 0)
+			continue;
+		}
+		const CvFeatureInfo& kFeature = GC.getFeatureInfo((FeatureTypes)iI);
+
+		if ((kFeature.getGrowthProbability() > 0 && !isUnit() || kFeature.getSpreadProbability() > 0)
+		&& (getImprovementType() == NO_IMPROVEMENT || kFeature.isCanGrowAnywhere() && !isBeingWorked() && !isWater())
+		&& (getBonusType() == NO_BONUS || GC.getBonusInfo(getBonusType()).isFeature(iI) || kFeature.getSpreadProbability() > 0)
+		&& canHaveFeature((FeatureTypes)iI, kFeature.getSpreadProbability() > 0))
+		{
+			int iProbability = kFeature.isCanGrowAnywhere() ? kFeature.getGrowthProbability() : 0;
+
+			for (int iJ = 0; iJ < NUM_CARDINALDIRECTION_TYPES; iJ++)
 			{
-				if (getImprovementType() == NO_IMPROVEMENT || (kFeature.isCanGrowAnywhere() && !isBeingWorked() && !isWater()))
+				const CvPlot* pLoopPlot = plotCardinalDirection(getX(), getY(), (CardinalDirectionTypes)iJ);
+
+				if (pLoopPlot != NULL && pLoopPlot->getFeatureType() == (FeatureTypes)iI)
 				{
-					if (!((iStorm == iI) && bNoStorms))
+					if (pLoopPlot->getImprovementType() == NO_IMPROVEMENT)
 					{
-						if (canHaveFeature((FeatureTypes)iI, kFeature.getSpreadProbability() > 0))
-						{
-							if ((getBonusType() == NO_BONUS) || (GC.getBonusInfo(getBonusType()).isFeature(iI)) || kFeature.getSpreadProbability() > 0)
-							{
-								iProbability = kFeature.isCanGrowAnywhere() ? kFeature.getGrowthProbability() : 0;
-
-								for (iJ = 0; iJ < NUM_CARDINALDIRECTION_TYPES; iJ++)
-								{
-									pLoopPlot = plotCardinalDirection(getX(), getY(), ((CardinalDirectionTypes)iJ));
-
-									if (pLoopPlot != NULL)
-									{
-										if (pLoopPlot->getFeatureType() == ((FeatureTypes)iI))
-										{
-											if (pLoopPlot->getImprovementType() == NO_IMPROVEMENT)
-											{
-												iProbability += kFeature.getGrowthProbability();
-											}
-											else
-											{
-												iProbability += GC.getImprovementInfo(pLoopPlot->getImprovementType()).getFeatureGrowthProbability();
-											}
-											iProbability += kFeature.getSpreadProbability();
-										}
-									}
-								}
-
-								iProbability *= std::max(0, (GC.getFEATURE_GROWTH_MODIFIER() + 100));
-								iProbability /= 100;
-
-								if (isRoute())
-								{
-									iProbability *= std::max(0, (GC.getROUTE_FEATURE_GROWTH_MODIFIER() + 100));
-									iProbability /= 100;
-								}
-
-								if (iProbability > 0)
-								{
-									int iOdds = (10000*GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getVictoryDelayPercent())/100;
-									if (GC.getGame().getSorenRandNum(iOdds, "Feature Growth") < iProbability)
-									{
-										setFeatureType((FeatureTypes)iI);
-										strcpy(szSound, kFeature.getGrowthSound());
-										pCity = GC.getMap().findCity(getX(), getY(), getOwner(), NO_TEAM, false);
-										//if (GC.getGame().getElapsedGameTurns() > 1)
-										//{
-											/*if (kFeature.isCanGrowAnywhere() && getImprovementType() != NO_IMPROVEMENT && !isWater())
-											{
-												setOvergrown(true);
-												if (pCity != NULL)
-												{
-													szBuffer = gDLL->getText("TXT_KEY_MISC_FEATURE_OVERGROWN_NEAR_CITY", kFeature.getTextKeyWide(), GC.getImprovementInfo(getImprovementType()).getTextKeyWide(), pCity->getNameKey());
-													AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, szSound, MESSAGE_TYPE_INFO, kFeature.getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX(), getY(), true, true);
-												}
-											}*/
-										//}
-
-										if (pCity != NULL && isInViewport())
-										{
-											MEMORY_TRACK_EXEMPT();
-
-											// Tell the owner of this city.
-											if (iI == iStorm)
-											{
-												szBuffer = gDLL->getText("TXT_KEY_MISC_STORM_GROWN_NEAR_CITY", pCity->getNameKey());
-											}
-											else
-											{
-												szBuffer = gDLL->getText("TXT_KEY_MISC_FEATURE_GROWN_NEAR_CITY", kFeature.getTextKeyWide(), pCity->getNameKey());
-											}
-
-											AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, szSound, MESSAGE_TYPE_INFO, kFeature.getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), getViewportX(),getViewportY(), true, true);
-										}
-										break;
-									}
-								}
-							}
-						}
+						iProbability += kFeature.getGrowthProbability();
 					}
+					else
+					{
+						iProbability += GC.getImprovementInfo(pLoopPlot->getImprovementType()).getFeatureGrowthProbability();
+					}
+					iProbability += kFeature.getSpreadProbability();
 				}
+			}
+			iProbability *= std::max(0, (GC.getFEATURE_GROWTH_MODIFIER() + 100));
+			iProbability /= 100;
+
+			if (isRoute())
+			{
+				iProbability *= std::max(0, (GC.getROUTE_FEATURE_GROWTH_MODIFIER() + 100));
+				iProbability /= 100;
+			}
+
+			if(iProbability > 0
+			&& iProbability > GC.getGame().getSorenRandNum(
+				10000 * GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getVictoryDelayPercent() / 100, "Feature Growth"))
+			{
+				setFeatureType((FeatureTypes)iI);
+				// Afforess 2/9/10 - Feature Sound Effect
+				// Default Sound Effect is Forest Growth if no XML value is set
+				TCHAR szSound[1024] = "AS2D_FEATUREGROWTH";
+				strcpy(szSound, kFeature.getGrowthSound());
+				// ! Afforess
+
+				const CvCity* pCity = GC.getMap().findCity(getX(), getY(), getOwner(), NO_TEAM, false);
+
+				if (pCity != NULL && isInViewport())
+				{
+					MEMORY_TRACK_EXEMPT();
+					// Tell the owner of this city.
+					const CvWString szBuffer = iI == iStorm ?
+						gDLL->getText("TXT_KEY_MISC_STORM_GROWN_NEAR_CITY", pCity->getNameKey())
+						:
+						gDLL->getText("TXT_KEY_MISC_FEATURE_GROWN_NEAR_CITY", kFeature.getTextKeyWide(), pCity->getNameKey());
+
+					AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, szSound, MESSAGE_TYPE_INFO,
+						kFeature.getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), getViewportX(),getViewportY(), true, true);
+				}
+				break;
 			}
 		}
 	}
 }
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 
 void CvPlot::doCulture()
 {
 	PROFILE("CvPlot::doCulture()")
 
-	CLLNode<IDInfo>* pUnitNode;
-	CvCity* pCity;
-	CvUnit* pLoopUnit;
-	CvWString szBuffer;
-	PlayerTypes eCulturalOwner;
-	int iCityStrength;
-
-	// Super Forts begin *culture*
 	doImprovementCulture();
 
-	ImprovementTypes eImprovement = getImprovementType();
-	if(eImprovement != NO_IMPROVEMENT)
-	{
-		// Check for a fort culture flip
-		if(GC.getImprovementInfo(eImprovement).isActsAsCity() && (getOwnershipDuration() > GC.getDefineINT("SUPER_FORTS_DURATION_BEFORE_REVOLT")))
-		{
-			eCulturalOwner = calculateCulturalOwner();
-			if(eCulturalOwner != NO_PLAYER)
-			{
-				if(GET_PLAYER(eCulturalOwner).getTeam() != getTeam())
-				{
-					bool bDefenderFound = false;
-					CLinkList<IDInfo> oldUnits;
-					pUnitNode = headUnitNode();
-
-					while (pUnitNode != NULL)
-					{
-						oldUnits.insertAtEnd(pUnitNode->m_data);
-						pUnitNode = nextUnitNode(pUnitNode);
-					}
-
-					pUnitNode = oldUnits.head();
-
-					while (pUnitNode != NULL)
-					{
-						pLoopUnit = ::getUnit(pUnitNode->m_data);
-						pUnitNode = nextUnitNode(pUnitNode);
-						if(pLoopUnit->canDefend(this))
-						{
-							if(pLoopUnit->getOwner() == getOwner())
-							{
-								bDefenderFound = true;
-								break;
-							}
-						}
-					}
-					if(!bDefenderFound)
-					{
-						szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_REVOLTED_JOINED", GC.getImprovementInfo(getImprovementType()).getText(), GET_PLAYER(eCulturalOwner).getCivilizationDescriptionKey());
-						AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CULTUREFLIP", MESSAGE_TYPE_INFO, GC.getImprovementInfo(getImprovementType()).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX(), getY(), true, true);
-						AddDLLMessage(eCulturalOwner, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CULTUREFLIP", MESSAGE_TYPE_INFO, GC.getImprovementInfo(getImprovementType()).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX(), getY(), true, true);
-						setOwner(eCulturalOwner,true,true);
-					}
-				}
-			}
-		}
-	}
-	// Super Forts end
-
-	pCity = getPlotCity();
+	CvCity* pCity = getPlotCity();
 
 	if (pCity != NULL)
 	{
-		eCulturalOwner = calculateCulturalOwner();
+		const PlayerTypes eCulturalOwner = calculateCulturalOwner();
 
-		if (eCulturalOwner != NO_PLAYER)
+		if (eCulturalOwner != NO_PLAYER && GET_PLAYER(eCulturalOwner).getTeam() != getTeam() && !pCity->isOccupation()
+		&& GC.getGame().getSorenRandNum(100, "Revolt #1") < pCity->getRevoltTestProbability())
 		{
-			if (GET_PLAYER(eCulturalOwner).getTeam() != getTeam())
+			int iOriginal = 0; // Dummy variable
+			const int iCityStrength = pCity->cultureStrength(eCulturalOwner, iOriginal);
+
+			if ((GC.getGame().getSorenRandNum(100, "Revolt #2") < iCityStrength) || pCity->isNPC())
 			{
-				if (!(pCity->isOccupation()))
+				CLinkList<IDInfo> oldUnits;
+
+				CLLNode<IDInfo>* pUnitNode = headUnitNode();
+
+				while (pUnitNode != NULL)
 				{
-					if (GC.getGame().getSorenRandNum(100, "Revolt #1") < pCity->getRevoltTestProbability())
+					oldUnits.insertAtEnd(pUnitNode->m_data);
+					pUnitNode = nextUnitNode(pUnitNode);
+				}
+
+				pUnitNode = oldUnits.head();
+
+				while (pUnitNode != NULL)
+				{
+					CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
+
+					if (pLoopUnit)
 					{
-						int iOriginal = 0;
-						iCityStrength = pCity->cultureStrength(eCulturalOwner, iOriginal);
-
-						if ((GC.getGame().getSorenRandNum(100, "Revolt #2") < iCityStrength) || pCity->isNPC())
+						if (pLoopUnit->isNPC())
 						{
-							CLinkList<IDInfo> oldUnits;
-
-							pUnitNode = headUnitNode();
-
-							while (pUnitNode != NULL)
-							{
-								oldUnits.insertAtEnd(pUnitNode->m_data);
-								pUnitNode = nextUnitNode(pUnitNode);
-							}
-
-							pUnitNode = oldUnits.head();
-
-							while (pUnitNode != NULL)
-							{
-								pLoopUnit = ::getUnit(pUnitNode->m_data);
-								pUnitNode = nextUnitNode(pUnitNode);
-
-								if (pLoopUnit)
-								{
-									if (pLoopUnit->isNPC())
-									{
-										pLoopUnit->kill(false, eCulturalOwner);
-									}
-									else if (pLoopUnit->canDefend())
-									{
-										pLoopUnit->changeDamage((pLoopUnit->currHitPoints() / 2), eCulturalOwner);
-									}
-								}
-
-							}
-
-							// Disable classic city flip by culture when Revolution is running
-							if (pCity->isNPC() || (!GC.getGame().isOption(GAMEOPTION_NO_CITY_FLIPPING)
-								&& (GC.getGame().isOption(GAMEOPTION_FLIPPING_AFTER_CONQUEST) || !pCity->isEverOwned(eCulturalOwner))
-								&& pCity->getNumRevolts(eCulturalOwner) >= GC.getDefineINT("NUM_WARNING_REVOLTS")))
-							{
-								if (GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE))
-								{
-									pCity->kill(true);
-								}
-								else
-								{
-									setOwner(eCulturalOwner, true, true); // Will invalidate pCity pointer.
-								}
-								pCity = NULL;
-							}
-							else
-							{
-								pCity->changeNumRevolts(eCulturalOwner, 1);
-								pCity->changeOccupationTimer(GC.getDefineINT("BASE_REVOLT_OCCUPATION_TURNS") + ((iCityStrength * GC.getDefineINT("REVOLT_OCCUPATION_TURNS_PERCENT")) / 100));
-
-								// XXX announce for all seen cities?
-								MEMORY_TRACK_EXEMPT();
-
-								if (isInViewport())
-								{
-									szBuffer = gDLL->getText("TXT_KEY_MISC_REVOLT_IN_CITY", GET_PLAYER(eCulturalOwner).getCivilizationAdjective(), pCity->getNameKey());
-									AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITY_REVOLT", MESSAGE_TYPE_MINOR_EVENT, ARTFILEMGR.getInterfaceArtInfo("INTERFACE_RESISTANCE")->getPath(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getViewportX(),getViewportY(), true, true);
-									AddDLLMessage(eCulturalOwner, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITY_REVOLT", MESSAGE_TYPE_MINOR_EVENT, ARTFILEMGR.getInterfaceArtInfo("INTERFACE_RESISTANCE")->getPath(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getViewportX(),getViewportY(), true, true);
-								}
-							}
+							pLoopUnit->kill(false, eCulturalOwner);
 						}
+						else if (pLoopUnit->canDefend())
+						{
+							pLoopUnit->changeDamage((pLoopUnit->currHitPoints() / 2), eCulturalOwner);
+						}
+					}
+					pUnitNode = nextUnitNode(pUnitNode);
+				}
+
+				if (pCity->isNPC()
+				|| (!GC.getGame().isOption(GAMEOPTION_NO_CITY_FLIPPING)
+					&& (GC.getGame().isOption(GAMEOPTION_FLIPPING_AFTER_CONQUEST) || !pCity->isEverOwned(eCulturalOwner))
+					&& pCity->getNumRevolts(eCulturalOwner) >= GC.getDefineINT("NUM_WARNING_REVOLTS")))
+				{
+					if (GC.getGame().isOption(GAMEOPTION_ONE_CITY_CHALLENGE))
+					{
+						pCity->kill(true);
+					}
+					else
+					{
+						setOwner(eCulturalOwner, true, true); // Will invalidate pCity pointer.
+					}
+					pCity = NULL;
+				}
+				else
+				{
+					pCity->changeNumRevolts(eCulturalOwner, 1);
+					pCity->changeOccupationTimer(GC.getDefineINT("BASE_REVOLT_OCCUPATION_TURNS") + ((iCityStrength * GC.getDefineINT("REVOLT_OCCUPATION_TURNS_PERCENT")) / 100));
+
+					// XXX announce for all seen cities?
+					MEMORY_TRACK_EXEMPT();
+
+					if (isInViewport())
+					{
+						CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_REVOLT_IN_CITY", GET_PLAYER(eCulturalOwner).getCivilizationAdjective(), pCity->getNameKey());
+						AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITY_REVOLT", MESSAGE_TYPE_MINOR_EVENT,
+							ARTFILEMGR.getInterfaceArtInfo("INTERFACE_RESISTANCE")->getPath(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getViewportX(),getViewportY(), true, true);
+
+						AddDLLMessage(eCulturalOwner, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CITY_REVOLT", MESSAGE_TYPE_MINOR_EVENT,
+							ARTFILEMGR.getInterfaceArtInfo("INTERFACE_RESISTANCE")->getPath(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getViewportX(),getViewportY(), true, true);
 					}
 				}
 			}
 		}
 	}
 
-
 	//Decay if you've lost any source of culture on the plot
-	if (getOwner() != NO_PLAYER)
+	if (getOwner() != NO_PLAYER && !isWithinCultureRange(getOwner()) && !isWithinOccupationRange(getOwner()))
 	{
-		if (!isWithinCultureRange(getOwner()) && !isWithinOccupationRange(getOwner()))
+		int iCultureBase = getCulture(getOwner());
+		if (iCultureBase > 0)
 		{
-			int iCultureBase = getCulture(getOwner());
-			if (iCultureBase >0)
-			{
-				iCultureBase /= 2;
-				iCultureBase -= 10;
-				iCultureBase = std::max(iCultureBase, 0);
-				setCulture(getOwner(), iCultureBase, true, true);
-			}
+			iCultureBase /= 2;
+			iCultureBase -= 10;
+			iCultureBase = std::max(iCultureBase, 0);
+			setCulture(getOwner(), iCultureBase, true, true);
 		}
 	}
-
 	updateCulture(true, true);
 }
 

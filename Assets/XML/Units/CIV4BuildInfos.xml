@@ -10629,7 +10629,7 @@
 		<BuildInfo>
 			<Type>BUILD_SEASONAL_CAMP_KILL</Type>
 			<Description>TXT_KEY_BUILD_SEASONAL_CAMP_KILL</Description>
-			<PrereqTech>TECH_GATHERING</PrereqTech>
+			<PrereqTech>TECH_NOMADISM</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>100</iTime>
 			<iCost>1</iCost>
