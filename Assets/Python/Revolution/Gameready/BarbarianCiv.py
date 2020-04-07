@@ -216,7 +216,7 @@ class BarbarianCiv:
 
 		CyTeam = GC.getTeam(CyPlayer.getTeam())
 
-		CyPlayer.setNewPlayerAlive(True)
+		CyPlayer.setNewMinorCivPlayerAlive(True)
 
 		civName = CyPlayer.getCivilizationDescription(0)
 		print "[INFO] %s has emerged in %s" %(civName, szCityName)
