@@ -1223,4 +1223,12 @@
 		<Spanish>Plantar un Bosque</Spanish>
 		<Polish>Posadź las</Polish>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SEASONAL_CAMP_KILL</Tag>
+		<English>Build [LINK=IMPROVEMENT_SEASONAL_CAMP]Seasonal Camp (Consumed)[\LINK]</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BUILD_SEASONAL_CAMP</Tag>
+		<English>Build [LINK=IMPROVEMENT_SEASONAL_CAMP]Seasonal Camp[\LINK]</English>
+	</TEXT>
 </Civ4GameText>

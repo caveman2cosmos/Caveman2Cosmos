@@ -494,6 +494,10 @@
 			<bWorkerTrade>1</bWorkerTrade>
 			<Builds>
 				<Build>
+					<BuildType>BUILD_SEASONAL_CAMP</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_TRAIL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>

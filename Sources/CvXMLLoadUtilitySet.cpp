@@ -382,10 +382,6 @@ bool CvXMLLoadUtility::SetPostGlobalsGlobalDefines()
 		idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("WATER_IMPROVEMENT", idx);
 
-		SetGlobalDefine("RUINS_IMPROVEMENT", szVal);
-		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("RUINS_IMPROVEMENT", idx);
-
 		SetGlobalDefine("NUKE_FEATURE", szVal);
 		idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("NUKE_FEATURE", idx);
@@ -397,10 +393,6 @@ bool CvXMLLoadUtility::SetPostGlobalsGlobalDefines()
 		SetGlobalDefine("CAPITAL_BUILDING", szVal);
 		idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("CAPITAL_BUILDING", idx);
-
-		SetGlobalDefine("DEFAULT_SPECIALIST", szVal);
-		idx = GetInfoClass(szVal);
-		GC.getDefinesVarSystem()->SetValue("DEFAULT_SPECIALIST", idx);
 
 		SetGlobalDefine("INITIAL_CITY_ROUTE_TYPE", szVal);
 		idx = GetInfoClass(szVal);
@@ -525,6 +517,13 @@ bool CvXMLLoadUtility::SetPostGlobalsGlobalDefines()
 		SetGlobalDefine("NPC0_LEADER", szVal);
 		idx = GetInfoClass(szVal);
 		GC.getDefinesVarSystem()->SetValue("NPC0_LEADER", idx);
+
+	#define SET_ENUM_GLOBAL_DEFINE(dataType, VAR) \
+		SetGlobalDefine(#VAR, szVal); \
+		GC.getDefinesVarSystem()->SetValue(#VAR, GetInfoClass(szVal));
+		DO_FOR_EACH_ENUM_GLOBAL_DEFINE(SET_ENUM_GLOBAL_DEFINE)
+
+		GC.cacheEnumGlobals();
 
 		gDLL->ChangeINIKeyValue("CONFIG", "HideMinSpecWarning ", "1");
 		gDLL->ChangeINIKeyValue("GAME", "ModularLoading  ", "0");
@@ -1172,9 +1171,9 @@ bool CvXMLLoadUtility::LoadPreMenuGlobals()
 
 	// Add TGA space fillers
 	CvReligionInfo* pReligionBogus = new CvReligionInfo();
-	aReligionInfos.insert(aReligionInfos.end(), GC.getTGA_RELIGIONS() - aReligionInfos.size(), pReligionBogus);
+	aReligionInfos.insert(aReligionInfos.end(), GC.getGAMEFONT_TGA_RELIGIONS() - aReligionInfos.size(), pReligionBogus);
 	CvCorporationInfo* pCorporationBogus = new CvCorporationInfo();
-	aCorporationInfos.insert(aCorporationInfos.end(), GC.getTGA_CORPORATIONS() - aCorporationInfos.size(), pCorporationBogus);
+	aCorporationInfos.insert(aCorporationInfos.end(), GC.getGAMEFONT_TGA_CORPORATIONS() - aCorporationInfos.size(), pCorporationBogus);
 
 	OutputDebugString("Load globals complete\n");
 	UpdateProgressCB("GlobalOther");
@@ -4703,7 +4702,7 @@ void CvXMLLoadUtility::RemoveTGAFiller()
 {
 	std::vector<CvReligionInfo*>& aInfos1 = GC.m_paReligionInfo;
 	std::vector<CvCorporationInfo*>& aInfos2 = GC.m_paCorporationInfo;
-	if (aInfos1.size() && aInfos1.size() == GC.getTGA_RELIGIONS())
+	if (aInfos1.size() && aInfos1.size() == GC.getGAMEFONT_TGA_RELIGIONS())
 	{
 		std::sort(aInfos1.begin(), aInfos1.end(), cmpReligionTGA);
 		if (aInfos1.front()->getTGAIndex() == -1)
@@ -4714,7 +4713,7 @@ void CvXMLLoadUtility::RemoveTGAFiller()
 			aInfos1.erase(aInfos1.begin(), it);
 		}
 	}
-	if (aInfos2.size() && aInfos2.size() == GC.getTGA_CORPORATIONS())
+	if (aInfos2.size() && aInfos2.size() == GC.getGAMEFONT_TGA_CORPORATIONS())
 	{
 		std::sort(aInfos2.begin(), aInfos2.end(), cmpCorporationTGA);
 		if (aInfos2.front()->getTGAIndex() == -1)

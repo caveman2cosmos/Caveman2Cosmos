@@ -261,7 +261,7 @@ void CvGame::updateColoredPlots()
 									ImprovementTypes ePlotImprovement = pLoopPlot->getImprovementType();
 									RouteTypes ePlotRoute = pLoopPlot->getRouteType();
 
-									if (ePlotImprovement == GC.getDefineINT("RUINS_IMPROVEMENT"))
+									if (ePlotImprovement == CvImprovementInfo::getImprovementRuins())
 									{
 										ePlotImprovement = NO_IMPROVEMENT;
 									}
@@ -2917,22 +2917,18 @@ CivilopediaWidgetShowTypes CvGame::getWidgetShow(BonusTypes eBonus) const
 	CivilopediaWidgetShowTypes eType = CIVILOPEDIA_WIDGET_SHOW_LAND;
 	for (int i = 0; i < GC.getNumTerrainInfos(); i++)
 	{
-		if (GC.getTerrainInfo((TerrainTypes) i).isWater())
+		if (GC.getTerrainInfo((TerrainTypes) i).isWaterTerrain() && GC.getBonusInfo(eBonus).isTerrain(i))
 		{
-			if (GC.getBonusInfo(eBonus).isTerrain(i))
-			{
-				eType = CIVILOPEDIA_WIDGET_SHOW_WATER;
-			}
+			eType = CIVILOPEDIA_WIDGET_SHOW_WATER;
 		}
 	}
-
 	return eType;
 }
 
 CivilopediaWidgetShowTypes CvGame::getWidgetShow(ImprovementTypes eImprovement) const
 {
 	CivilopediaWidgetShowTypes eType = CIVILOPEDIA_WIDGET_SHOW_LAND;
-	if (GC.getImprovementInfo(eImprovement).isWater())
+	if (GC.getImprovementInfo(eImprovement).isWaterImprovement())
 	{
 		eType = CIVILOPEDIA_WIDGET_SHOW_WATER;
 	}

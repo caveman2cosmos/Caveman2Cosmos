@@ -161,18 +161,6 @@ class CvGameUtils:
 		eControl = argsList[0]
 		return False
 
-	def canResearch(self, argsList):
-		ePlayer = argsList[0]
-		eTech = argsList[1]
-		bTrade = argsList[2]
-		return False
-
-	def cannotResearch(self, argsList):
-		ePlayer = argsList[0]
-		eTech = argsList[1]
-		bTrade = argsList[2]
-		return False
-
 	def canDoCivic(self, argsList):
 		ePlayer = argsList[0]
 		eCivic = argsList[1]

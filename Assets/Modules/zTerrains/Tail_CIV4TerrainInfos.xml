@@ -6,7 +6,7 @@
 			<Description>TXT_KEY_TERRAIN_INFECTED_WATER</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_INFECTED_WATER_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_INFECTED_WATER</ArtDefineTag>
-			<bWater>1</bWater>
+			<bWaterTerrain>1</bWaterTerrain>
 			<iMovement>6</iMovement>
 			<Yields>
 				<iYield>-5</iYield>
@@ -147,7 +147,7 @@
 			<Description>TXT_KEY_TERRAIN_PLAGUED_WATER</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_PLAGUED_WATER_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_PLAGUED_WATER</ArtDefineTag>
-			<bWater>1</bWater>
+			<bWaterTerrain>1</bWaterTerrain>
 			<iMovement>20</iMovement>
 			<Yields>
 				<iYield>-10</iYield>
@@ -288,7 +288,7 @@
 			<Description>TXT_KEY_TERRAIN_PEAK</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_PEAK_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_PEAK</ArtDefineTag>
-			<bWater>1</bWater>
+			<bWaterTerrain>1</bWaterTerrain>
 			<iBuildModifier>75</iBuildModifier>
 			<iCultureDistance>3</iCultureDistance>
 			<iMovement>2</iMovement>
@@ -425,7 +425,7 @@
 			<Description>TXT_KEY_TERRAIN_HILL</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_HILL_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_HILL</ArtDefineTag>
-			<bWater>1</bWater>
+			<bWaterTerrain>1</bWaterTerrain>
 			<iBuildModifier>25</iBuildModifier>
 			<iCultureDistance>1</iCultureDistance>
 			<iMovement>1</iMovement>

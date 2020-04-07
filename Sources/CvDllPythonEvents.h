@@ -119,7 +119,7 @@ public:
 	void reportGoldenAge(PlayerTypes ePlayer);
 	void reportEndGoldenAge(PlayerTypes ePlayer);
 	void reportChangeWar(bool bWar, TeamTypes eTeam, TeamTypes eOtherTeam);
-	void reportChat(CvWString szString);				
+	void reportChat(CvWString szString);
 	void reportVictory(TeamTypes eNewWinner, VictoryTypes eNewVictory);
 
 	void reportVassalState(TeamTypes eMaster, TeamTypes eVassal, bool bVassal);
@@ -127,19 +127,10 @@ public:
 	void reportSetPlayerAlive(PlayerTypes ePlayerID, bool bNewValue);
 	void reportPlayerChangeStateReligion(PlayerTypes ePlayerID, ReligionTypes eNewReligion, ReligionTypes eOldReligion);
 	void reportPlayerGoldTrade(PlayerTypes eFromPlayer, PlayerTypes eToPlayer, int iAmount);
-	
-// BUG - Revolution Event - start
 	void reportPlayerRevolution(PlayerTypes ePlayerID, int iAnarchyLength, CivicTypes* paeOldCivics, CivicTypes* paeNewCivics);
-// BUG - Revolution Event - end
-/************************************************************************************************/
-/* Afforess	                  Start		 07/19/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	void reportAddTeam(TeamTypes eIndex0, TeamTypes eIndex1, bool bAdded);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
+	void reportChangeTeam(TeamTypes eOld, TeamTypes eNew);
+
 	void preSave();
 };
 

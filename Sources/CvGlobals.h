@@ -154,6 +154,7 @@ class CvMapSwitchInfo;
 /*******************************/
 
 #include "CvInfoReplacements.h"
+#include "GlobalDefines.h"
 #include <stack>
 
 extern CvDLLUtilityIFaceBase* g_DLL;
@@ -492,9 +493,6 @@ public:
 	int getNumOutcomeInfos() const;
 	CvOutcomeInfo& getOutcomeInfo(OutcomeTypes eOutcomeNum) const;
 
-	int getPEAK_EXTRA_DEFENSE() const;
-	int getPEAK_EXTRA_MOVEMENT() const;
-
 	int iStuckUnitID;
 	int iStuckUnitCount;
 
@@ -506,53 +504,15 @@ public:
 
 	void updateReplacements();
 
-	int getSCORE_FREE_PERCENT() const;
-	int getSCORE_POPULATION_FACTOR() const;
-	int getSCORE_LAND_FACTOR() const;
-	int getSCORE_TECH_FACTOR() const;
-	int getSCORE_WONDER_FACTOR() const;
+#define DECLARE_GET_METHOD(dataType, VAR) \
+	dataType get##VAR() const { return m_##VAR; }
+	DO_FOR_EACH_INT_GLOBAL_DEFINE(DECLARE_GET_METHOD)
+	DO_FOR_EACH_ENUM_GLOBAL_DEFINE(DECLARE_GET_METHOD)
+	DO_FOR_EACH_FLOAT_GLOBAL_DEFINE(DECLARE_GET_METHOD)
 
-	int getUSE_CAN_CREATE_PROJECT_CALLBACK() const;
-	int getUSE_CANNOT_CREATE_PROJECT_CALLBACK() const;
-	int getUSE_CAN_DO_MELTDOWN_CALLBACK() const;
-	int getUSE_CAN_MAINTAIN_PROCESS_CALLBACK() const;
-	int getUSE_CANNOT_MAINTAIN_PROCESS_CALLBACK() const;
-	int getUSE_CAN_DO_GROWTH_CALLBACK() const;
-	int getUSE_CAN_DO_CULTURE_CALLBACK() const;
-	int getUSE_CAN_DO_PLOT_CULTURE_CALLBACK() const;
-	int getUSE_CAN_DO_PRODUCTION_CALLBACK() const;
-	int getUSE_CAN_DO_RELIGION_CALLBACK() const;
-	int getUSE_CAN_DO_GREATPEOPLE_CALLBACK() const;
-	int getUSE_CAN_RAZE_CITY_CALLBACK() const;
-	int getUSE_CAN_DO_GOLD_CALLBACK() const;
-	int getUSE_CAN_DO_RESEARCH_CALLBACK() const;
-	int getUSE_UPGRADE_UNIT_PRICE_CALLBACK() const;
-	int getUSE_AI_UPDATE_UNIT_CALLBACK() const;
-	int getUSE_AI_CHOOSE_PRODUCTION_CALLBACK() const;
-	int getUSE_EXTRA_PLAYER_COSTS_CALLBACK() const;
-	int getUSE_AI_DO_DIPLO_CALLBACK() const;
-	int getUSE_AI_BESTTECH_CALLBACK() const;
-	int getUSE_CAN_DO_COMBAT_CALLBACK() const;
-	int getUSE_AI_CAN_DO_WARPLANS_CALLBACK() const;
-	int getLAND_UNITS_CAN_ATTACK_WATER_CITIES() const;
-	int getBASE_UNIT_UPGRADE_COST() const;
-	int getUPGRADE_ROUND_LIMIT() const;
-	int getCITY_BARBARIAN_DEFENSE_MODIFIER() const;
-	int getUNIT_VISIBILITY_RANGE() const;
-	int getMAX_UNIT_VISIBILITY_RANGE() const;
-	int getGREATER_COMMERCE_SWITCH_POINT() const;
-	int getWORKER_TRADE_VALUE_PERCENT_ADJUSTMENT() const;
-	int getTRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT() const;
-	int getINFILTRATE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT() const;
-	int getESPIONAGE_MISSION_COST_END_TOTAL_PERCENT_ADJUSTMENT() const;
-	int getWATER_POTENTIAL_CITY_WORK_FOR_AREA() const;
-	int getSAD_MAX_MODIFIER() const;
-	int getUPSCALED_RESEARCH_COST_MODIFIER() const;
-	int getENABLE_DYNAMIC_UNIT_ENTITIES() const;
-	float getSAD_FACTOR_1() const;
-	float getSAD_FACTOR_2() const;
-	float getSAD_FACTOR_3() const;
-	float getSAD_FACTOR_4() const;
+#define DECLARE_BOOL_GET_METHOD(dataType, VAR) \
+	dataType is##VAR() const { return m_##VAR; }
+	DO_FOR_EACH_BOOL_GLOBAL_DEFINE(DECLARE_BOOL_GET_METHOD)
 
 	int getNumCityTabInfos() const;
 	CvInfoBase& getCityTabInfo(CityTabTypes e) const;
@@ -806,9 +766,8 @@ public:
 	//
 
 	FVariableSystem* getDefinesVarSystem() const;
+	void cacheEnumGlobals();
 	void cacheGlobals();
-
-	inline int getDefineINT(GlobalDefineINT var) const	{ return m_GlobalDefinesINT[var]; }
 
 	// ***** EXPOSED TO PYTHON *****
 /************************************************************************************************/
@@ -821,58 +780,6 @@ public:
 /* MOD_COMPONENT_CONTROL                   END                                                  */
 /************************************************************************************************/
 
-/************************************************************************************************/
-/* Mod Globals    Start                          09/13/10                           phungus420  */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	bool isDCM_BATTLE_EFFECTS() const;
-	int getBATTLE_EFFECT_LESS_FOOD() const;
-	int getBATTLE_EFFECT_LESS_PRODUCTION() const;
-	int getBATTLE_EFFECT_LESS_COMMERCE() const;
-	int getBATTLE_EFFECTS_MINIMUM_TURN_INCREMENTS() const;
-	int getMAX_BATTLE_TURNS() const;
-
-	bool isDCM_AIR_BOMBING() const;
-	bool isDCM_RANGE_BOMBARD() const;
-	int getDCM_RB_CITY_INACCURACY() const;
-	int getDCM_RB_CITYBOMBARD_CHANCE() const;
-	bool isDCM_ATTACK_SUPPORT() const;
-	bool isDCM_OPP_FIRE() const;
-	bool isDCM_ACTIVE_DEFENSE() const;
-	bool isDCM_FIGHTER_ENGAGE() const;
-
-	bool isDYNAMIC_CIV_NAMES() const;
-
-	bool isLIMITED_RELIGIONS_EXCEPTIONS() const;
-	bool isOC_RESPAWN_HOLY_CITIES() const;
-
-	bool isIDW_ENABLED() const;
-	float getIDW_BASE_COMBAT_INFLUENCE() const;
-	float getIDW_NO_CITY_DEFENDER_MULTIPLIER() const;
-	float getIDW_FORT_CAPTURE_MULTIPLIER() const;
-	float getIDW_EXPERIENCE_FACTOR() const;
-	float getIDW_WARLORD_MULTIPLIER() const;
-	int getIDW_INFLUENCE_RADIUS() const;
-	float getIDW_PLOT_DISTANCE_FACTOR() const;
-	float getIDW_WINNER_PLOT_MULTIPLIER() const;
-	float getIDW_LOSER_PLOT_MULTIPLIER() const;
-	bool isIDW_EMERGENCY_DRAFT_ENABLED() const;
-	int getIDW_EMERGENCY_DRAFT_MIN_POPULATION() const;
-	float getIDW_EMERGENCY_DRAFT_STRENGTH() const;
-	float getIDW_EMERGENCY_DRAFT_ANGER_MULTIPLIER() const;
-	bool isIDW_NO_BARBARIAN_INFLUENCE() const;
-	bool isIDW_NO_NAVAL_INFLUENCE() const;
-	bool isIDW_PILLAGE_INFLUENCE_ENABLED() const;
-	float getIDW_BASE_PILLAGE_INFLUENCE() const;
-	float getIDW_CITY_TILE_MULTIPLIER() const;
-
-	bool isSS_ENABLED() const;
-	bool isSS_BRIBE() const;
-	bool isSS_ASSASSINATE() const;
-/************************************************************************************************/
-/* Mod Globals                        END                                           phungus420  */
-/************************************************************************************************/
 	void setGraphicalDetailPagingEnabled(bool bEnabled);
 	bool getGraphicalDetailPagingEnabled() const;
 	int getGraphicalDetailPageInRange();
@@ -892,98 +799,8 @@ public:
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
 
-	int getMOVE_DENOMINATOR() const;
-	int getNUM_UNIT_PREREQ_OR_BONUSES() const;
-	int getNUM_BUILDING_PREREQ_OR_BONUSES() const;
-	int getFOOD_CONSUMPTION_PER_POPULATION() const;
-	int getMAX_HIT_POINTS() const;
-	int getPATH_DAMAGE_WEIGHT() const;
-	int getHILLS_EXTRA_DEFENSE() const;
-	int getRIVER_ATTACK_MODIFIER() const;
-	int getAMPHIB_ATTACK_MODIFIER() const;
-	int getHILLS_EXTRA_MOVEMENT() const;
-	int getRIVER_EXTRA_MOVEMENT() const;
-	int getMAX_PLOT_LIST_ROWS() const;
-	int getUNIT_MULTISELECT_MAX() const;
-	int getPERCENT_ANGER_DIVISOR() const;
-	int getEVENT_MESSAGE_TIME() const;
-	int getROUTE_FEATURE_GROWTH_MODIFIER() const;
-	int getFEATURE_GROWTH_MODIFIER() const;
-	int getMIN_CITY_RANGE() const;
-	int getCITY_MAX_NUM_BUILDINGS() const;
-	int getNUM_UNIT_AND_TECH_PREREQS() const;
-	int getNUM_AND_TECH_PREREQS() const;
-	int getNUM_OR_TECH_PREREQS() const;
-	int getLAKE_MAX_AREA_SIZE() const;
-	int getNUM_ROUTE_PREREQ_OR_BONUSES() const;
-	int getNUM_BUILDING_AND_TECH_PREREQS() const;
-	int getMIN_WATER_SIZE_FOR_OCEAN() const;
-	int getFORTIFY_MODIFIER_PER_TURN() const;
-	int getESTABLISH_MODIFIER_PER_TURN() const;
-	int getESCAPE_MODIFIER_PER_TURN() const;
-	int getMAX_CITY_DEFENSE_DAMAGE() const;
-	int getNUM_CORPORATION_PREREQ_BONUSES() const;
-	int getPEAK_SEE_THROUGH_CHANGE() const;
-	int getHILLS_SEE_THROUGH_CHANGE() const;
-	int getSEAWATER_SEE_FROM_CHANGE() const;
-	int getPEAK_SEE_FROM_CHANGE() const;
-	int getHILLS_SEE_FROM_CHANGE() const;
-	int getUSE_SPIES_NO_ENTER_BORDERS() const;
-
-	float getCAMERA_MIN_YAW() const;
-	float getCAMERA_MAX_YAW() const;
-	float getCAMERA_FAR_CLIP_Z_HEIGHT() const;
-	float getCAMERA_MAX_TRAVEL_DISTANCE() const;
-	float getCAMERA_START_DISTANCE() const;
-	float getAIR_BOMB_HEIGHT() const;
 	float getPLOT_SIZE() const;
-	float getCAMERA_SPECIAL_PITCH() const;
-	float getCAMERA_MAX_TURN_OFFSET() const;
-	float getCAMERA_MIN_DISTANCE() const;
-	float getCAMERA_UPPER_PITCH() const;
-	float getCAMERA_LOWER_PITCH() const;
-	float getFIELD_OF_VIEW() const;
-	float getSHADOW_SCALE() const;
-	float getUNIT_MULTISELECT_DISTANCE() const;
 
-	int getUSE_CANNOT_FOUND_CITY_CALLBACK() const;
-	int getUSE_CAN_FOUND_CITIES_ON_WATER_CALLBACK() const;
-	int getUSE_IS_PLAYER_RESEARCH_CALLBACK() const;
-	int getUSE_CAN_RESEARCH_CALLBACK() const;
-	int getUSE_CANNOT_DO_CIVIC_CALLBACK() const;
-	int getUSE_CAN_DO_CIVIC_CALLBACK() const;
-	int getUSE_CANNOT_CONSTRUCT_CALLBACK() const;
-	int getUSE_CAN_CONSTRUCT_CALLBACK() const;
-	int getUSE_CAN_DECLARE_WAR_CALLBACK() const;
-	int getUSE_CANNOT_RESEARCH_CALLBACK() const;
-	int getUSE_GET_UNIT_COST_MOD_CALLBACK() const;
-	int getUSE_GET_BUILDING_COST_MOD_CALLBACK() const;
-	int getUSE_GET_CITY_FOUND_VALUE_CALLBACK() const;
-	int getUSE_CANNOT_HANDLE_ACTION_CALLBACK() const;
-	int getUSE_CAN_TRAIN_CALLBACK() const;
-	int getUSE_CANNOT_TRAIN_CALLBACK() const;
-	int getUSE_CAN_BUILD_CALLBACK() const;
-	int getUSE_CAN_TRAIN_CALLBACK(UnitTypes eUnit) const;
-	int getUSE_CANNOT_TRAIN_CALLBACK(UnitTypes eUnit) const;
-	int getUSE_CAN_BUILD_CALLBACK(BuildTypes eBuild) const;
-	int getUSE_UNIT_CANNOT_MOVE_INTO_CALLBACK() const;
-	int getUSE_USE_CANNOT_SPREAD_RELIGION_CALLBACK() const;
-	int getUSE_FINISH_TEXT_CALLBACK() const;
-	int getUSE_ON_UNIT_SET_XY_CALLBACK() const;
-	int getUSE_ON_UNIT_SELECTED_CALLBACK() const;
-	int getUSE_ON_UPDATE_CALLBACK() const;
-	int getUSE_ON_UNIT_CREATED_CALLBACK() const;
-	int getUSE_ON_UNIT_LOST_CALLBACK() const;
-/************************************************************************************************/
-/* MODULES                                 11/13/07                            MRGENIE          */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	int getTGA_RELIGIONS() const;								// GAMEFONT
-	int getTGA_CORPORATIONS() const;
-/************************************************************************************************/
-/* MODULES                                 END                                                  */
-/************************************************************************************************/
 	int getMAX_PC_PLAYERS() const		{ return MAX_PC_PLAYERS; }
 	int getMAX_PLAYERS() const			{ return MAX_PLAYERS; }
 	int getMAX_PC_TEAMS() const			{ return MAX_PC_TEAMS; }
@@ -1240,8 +1057,6 @@ protected:
 	typedef std::map<int*,std::pair<CvString,CvString> > DelayedResolutionMap;
 	DelayedResolutionMap m_delayedResolutionMap;
 
-	std::vector<int> m_GlobalDefinesINT;
-
 	std::vector<CvColorInfo*> m_paColorInfo;
 	std::vector<CvPlayerColorInfo*> m_paPlayerColorInfo;
 	std::vector<CvAdvisorInfo*> m_paAdvisorInfo;
@@ -1450,201 +1265,15 @@ protected:
 
 	FVariableSystem* m_VarSystem;
 
-/************************************************************************************************/
-/* Mod Globals    Start                          09/13/10                           phungus420  */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	bool m_bDCM_BATTLE_EFFECTS;
-	int m_iBATTLE_EFFECT_LESS_FOOD;
-	int m_iBATTLE_EFFECT_LESS_PRODUCTION;
-	int m_iBATTLE_EFFECT_LESS_COMMERCE;
-	int m_iBATTLE_EFFECTS_MINIMUM_TURN_INCREMENTS;
-	int m_iMAX_BATTLE_TURNS;
+#define DECLARE_MEMBER_VAR(dataType, VAR) \
+	dataType m_##VAR;
+	DO_FOR_EACH_GLOBAL_DEFINE(DECLARE_MEMBER_VAR)
 
-	bool m_bDCM_AIR_BOMBING;
-	bool m_bDCM_RANGE_BOMBARD;
-	int m_iDCM_RB_CITY_INACCURACY;
-	int m_iDCM_RB_CITYBOMBARD_CHANCE;
-	bool m_bDCM_ATTACK_SUPPORT;
-	bool m_bDCM_OPP_FIRE;
-	bool m_bDCM_ACTIVE_DEFENSE;
-	bool m_bDCM_FIGHTER_ENGAGE;
-
-	bool m_bDYNAMIC_CIV_NAMES;
-
-	bool m_bLIMITED_RELIGIONS_EXCEPTIONS;
-	bool m_bOC_RESPAWN_HOLY_CITIES;
-
-	bool m_bIDW_ENABLED;
-	float m_fIDW_BASE_COMBAT_INFLUENCE;
-	float m_fIDW_NO_CITY_DEFENDER_MULTIPLIER;
-	float m_fIDW_FORT_CAPTURE_MULTIPLIER;
-	float m_fIDW_EXPERIENCE_FACTOR;
-	float m_fIDW_WARLORD_MULTIPLIER;
-	int m_iIDW_INFLUENCE_RADIUS;
-	float m_fIDW_PLOT_DISTANCE_FACTOR;
-	float m_fIDW_WINNER_PLOT_MULTIPLIER;
-	float m_fIDW_LOSER_PLOT_MULTIPLIER;
-	bool m_bIDW_EMERGENCY_DRAFT_ENABLED;
-	int m_iIDW_EMERGENCY_DRAFT_MIN_POPULATION;
-	float m_fIDW_EMERGENCY_DRAFT_STRENGTH;
-	float m_fIDW_EMERGENCY_DRAFT_ANGER_MULTIPLIER;
-	bool m_bIDW_NO_BARBARIAN_INFLUENCE;
-	bool m_bIDW_NO_NAVAL_INFLUENCE;
-	bool m_bIDW_PILLAGE_INFLUENCE_ENABLED;
-	float m_fIDW_BASE_PILLAGE_INFLUENCE;
-	float m_fIDW_CITY_TILE_MULTIPLIER;
-
-	bool m_bSS_ENABLED;
-	bool m_bSS_BRIBE;
-	bool m_bSS_ASSASSINATE;
-/************************************************************************************************/
-/* Mod Globals                        END                                           phungus420  */
-/************************************************************************************************/
-	int m_iMOVE_DENOMINATOR;
-	int m_iNUM_UNIT_PREREQ_OR_BONUSES;
-	int m_iNUM_BUILDING_PREREQ_OR_BONUSES;
-	int m_iFOOD_CONSUMPTION_PER_POPULATION;
-	int m_iMAX_HIT_POINTS;
-	int m_iPATH_DAMAGE_WEIGHT;
-	int m_iHILLS_EXTRA_DEFENSE;
-	int m_iPEAK_EXTRA_DEFENSE;
-	int m_iPEAK_EXTRA_MOVEMENT;
 	bool m_bXMLLogging;
 	bool m_bLoadedPlayerOptions;
 
-	int m_iSCORE_FREE_PERCENT;
-	int m_iSCORE_POPULATION_FACTOR;
-	int m_iSCORE_LAND_FACTOR;
-	int m_iSCORE_TECH_FACTOR;
-	int m_iSCORE_WONDER_FACTOR;
-
-	int m_iUSE_CAN_CREATE_PROJECT_CALLBACK;
-	int m_iUSE_CANNOT_CREATE_PROJECT_CALLBACK;
-	int m_iUSE_CAN_DO_MELTDOWN_CALLBACK;
-	int m_iUSE_CAN_MAINTAIN_PROCESS_CALLBACK;
-	int m_iUSE_CANNOT_MAINTAIN_PROCESS_CALLBACK;
-	int m_iUSE_CAN_DO_GROWTH_CALLBACK;
-	int m_iUSE_CAN_DO_CULTURE_CALLBACK;
-	int m_iUSE_CAN_DO_PLOT_CULTURE_CALLBACK;
-	int m_iUSE_CAN_DO_PRODUCTION_CALLBACK;
-	int m_iUSE_CAN_DO_RELIGION_CALLBACK;
-	int m_iUSE_CAN_DO_GREATPEOPLE_CALLBACK;
-	int m_iUSE_CAN_RAZE_CITY_CALLBACK;
-	int m_iUSE_CAN_DO_GOLD_CALLBACK;
-	int m_iUSE_CAN_DO_RESEARCH_CALLBACK;
-	int m_iUSE_UPGRADE_UNIT_PRICE_CALLBACK;
-	int m_iUSE_AI_UPDATE_UNIT_CALLBACK;
-	int m_iUSE_AI_CHOOSE_PRODUCTION_CALLBACK;
-	int m_iUSE_EXTRA_PLAYER_COSTS_CALLBACK;
-	int m_iUSE_AI_DO_DIPLO_CALLBACK;
-	int m_iUSE_AI_BESTTECH_CALLBACK;
-	int m_iUSE_CAN_DO_COMBAT_CALLBACK;
-	int m_iUSE_AI_CAN_DO_WARPLANS_CALLBACK;
-
-	int m_iRIVER_ATTACK_MODIFIER;
-	int m_iAMPHIB_ATTACK_MODIFIER;
-	int m_iHILLS_EXTRA_MOVEMENT;
-	int m_iRIVER_EXTRA_MOVEMENT;
-	int m_iMAX_PLOT_LIST_ROWS;
-	int m_iUNIT_MULTISELECT_MAX;
-	int m_iPERCENT_ANGER_DIVISOR;
-	int m_iEVENT_MESSAGE_TIME;
-	int m_iROUTE_FEATURE_GROWTH_MODIFIER;
-	int m_iFEATURE_GROWTH_MODIFIER;
-	int m_iMIN_CITY_RANGE;
-	int m_iCITY_MAX_NUM_BUILDINGS;
-	int m_iNUM_UNIT_AND_TECH_PREREQS;
-	int m_iNUM_AND_TECH_PREREQS;
-	int m_iNUM_OR_TECH_PREREQS;
-	int m_iLAKE_MAX_AREA_SIZE;
-	int m_iNUM_ROUTE_PREREQ_OR_BONUSES;
-	int m_iNUM_BUILDING_AND_TECH_PREREQS;
-	int m_iMIN_WATER_SIZE_FOR_OCEAN;
-	int m_iFORTIFY_MODIFIER_PER_TURN;
-	int m_iESTABLISH_MODIFIER_PER_TURN;
-	int m_iESCAPE_MODIFIER_PER_TURN;
-	int m_iMAX_CITY_DEFENSE_DAMAGE;
-	int m_iNUM_CORPORATION_PREREQ_BONUSES;
-	int m_iPEAK_SEE_THROUGH_CHANGE;
-	int m_iHILLS_SEE_THROUGH_CHANGE;
-	int m_iSEAWATER_SEE_FROM_CHANGE;
-	int m_iPEAK_SEE_FROM_CHANGE;
-	int m_iHILLS_SEE_FROM_CHANGE;
-	int m_iUSE_SPIES_NO_ENTER_BORDERS;
-
-	float m_fCAMERA_MIN_YAW;
-	float m_fCAMERA_MAX_YAW;
-	float m_fCAMERA_FAR_CLIP_Z_HEIGHT;
-	float m_fCAMERA_MAX_TRAVEL_DISTANCE;
-	float m_fCAMERA_START_DISTANCE;
-	float m_fAIR_BOMB_HEIGHT;
 	float m_fPLOT_SIZE;
-	float m_fCAMERA_SPECIAL_PITCH;
-	float m_fCAMERA_MAX_TURN_OFFSET;
-	float m_fCAMERA_MIN_DISTANCE;
-	float m_fCAMERA_UPPER_PITCH;
-	float m_fCAMERA_LOWER_PITCH;
-	float m_fFIELD_OF_VIEW;
-	float m_fSHADOW_SCALE;
-	float m_fUNIT_MULTISELECT_DISTANCE;
-	float m_fSAD_FACTOR_1;
-	float m_fSAD_FACTOR_2;
-	float m_fSAD_FACTOR_3;
-	float m_fSAD_FACTOR_4;
 
-	int m_iUSE_CANNOT_FOUND_CITY_CALLBACK;
-	int m_iUSE_CAN_FOUND_CITIES_ON_WATER_CALLBACK;
-	int m_iUSE_IS_PLAYER_RESEARCH_CALLBACK;
-	int m_iUSE_CAN_RESEARCH_CALLBACK;
-	int m_iUSE_CANNOT_DO_CIVIC_CALLBACK;
-	int m_iUSE_CAN_DO_CIVIC_CALLBACK;
-	int m_iUSE_CANNOT_CONSTRUCT_CALLBACK;
-	int m_iUSE_CAN_CONSTRUCT_CALLBACK;
-	int m_iUSE_CAN_DECLARE_WAR_CALLBACK;
-	int m_iUSE_CANNOT_RESEARCH_CALLBACK;
-	int m_iUSE_GET_UNIT_COST_MOD_CALLBACK;
-	int m_iUSE_GET_BUILDING_COST_MOD_CALLBACK;
-	int m_iUSE_GET_CITY_FOUND_VALUE_CALLBACK;
-	int m_iUSE_CANNOT_HANDLE_ACTION_CALLBACK;
-	int m_iUSE_CAN_BUILD_CALLBACK;
-	int m_iUSE_CANNOT_TRAIN_CALLBACK;
-	int m_iUSE_CAN_TRAIN_CALLBACK;
-	int m_iUSE_UNIT_CANNOT_MOVE_INTO_CALLBACK;
-	int m_iUSE_USE_CANNOT_SPREAD_RELIGION_CALLBACK;
-	int m_iUSE_FINISH_TEXT_CALLBACK;
-	int m_iUSE_ON_UNIT_SET_XY_CALLBACK;
-	int m_iUSE_ON_UNIT_SELECTED_CALLBACK;
-	int m_iUSE_ON_UPDATE_CALLBACK;
-	int m_iUSE_ON_UNIT_CREATED_CALLBACK;
-	int m_iUSE_ON_UNIT_LOST_CALLBACK;
-	int m_iLAND_UNITS_CAN_ATTACK_WATER_CITIES;
-	int m_iBASE_UNIT_UPGRADE_COST;
-	int m_iUPGRADE_ROUND_LIMIT;
-	int m_iCITY_BARBARIAN_DEFENSE_MODIFIER;
-	int m_iUNIT_VISIBILITY_RANGE;
-	int m_iMAX_UNIT_VISIBILITY_RANGE;
-	int m_iGREATER_COMMERCE_SWITCH_POINT;
-	int m_iWORKER_TRADE_VALUE_PERCENT_ADJUSTMENT;
-	int m_iTRADE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT;
-	int m_iINFILTRATE_MISSION_END_TOTAL_PERCENT_ADJUSTMENT;
-	int m_iESPIONAGE_MISSION_COST_END_TOTAL_PERCENT_ADJUSTMENT;
-	int m_iWATER_POTENTIAL_CITY_WORK_FOR_AREA;
-	int m_iSAD_MAX_MODIFIER;
-	int m_iUPSCALED_RESEARCH_COST_MODIFIER;
-	int m_iENABLE_DYNAMIC_UNIT_ENTITIES;
-/************************************************************************************************/
-/* MODULES                                 11/13/07                            MRGENIE          */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	int m_iTGA_RELIGIONS;
-	int m_iTGA_CORPORATIONS;
-
-/************************************************************************************************/
-/* MODULES                                 END                                                  */
-/************************************************************************************************/
 	bool m_bMultimapsEnabled;
 	bool m_bViewportsEnabled;
 	int	m_iViewportFocusBorder;
@@ -1668,61 +1297,19 @@ public:
 public:
 	bool getBBAI_AIR_COMBAT() const;
 	bool getBBAI_HUMAN_VASSAL_WAR_BUILD() const;
-	int getBBAI_DEFENSIVE_PACT_BEHAVIOR() const;
 	bool getBBAI_HUMAN_AS_VASSAL_OPTION() const;
 
 protected:
 	bool m_bBBAI_AIR_COMBAT;
 	bool m_bBBAI_HUMAN_VASSAL_WAR_BUILD;
-	int m_iBBAI_DEFENSIVE_PACT_BEHAVIOR;
 	bool m_bBBAI_HUMAN_AS_VASSAL_OPTION;
-
-// BBAI AI Variables
-public:
-	int getWAR_SUCCESS_CITY_CAPTURING() const;
-	int getBBAI_ATTACK_CITY_STACK_RATIO() const;
-	int getBBAI_SKIP_BOMBARD_BEST_ATTACK_ODDS() const;
-	int getBBAI_SKIP_BOMBARD_BASE_STACK_RATIO() const;
-	int getBBAI_SKIP_BOMBARD_MIN_STACK_RATIO() const;
-
-protected:
-	int m_iWAR_SUCCESS_CITY_CAPTURING;
-	int m_iBBAI_ATTACK_CITY_STACK_RATIO;
-	int m_iBBAI_SKIP_BOMBARD_BEST_ATTACK_ODDS;
-	int m_iBBAI_SKIP_BOMBARD_BASE_STACK_RATIO;
-	int m_iBBAI_SKIP_BOMBARD_MIN_STACK_RATIO;
 
 // Tech Diffusion
 public:
 	bool getTECH_DIFFUSION_ENABLE() const;
-	int getTECH_DIFFUSION_KNOWN_TEAM_MODIFIER() const;
-	int getTECH_DIFFUSION_WELFARE_THRESHOLD() const;
-	int getTECH_DIFFUSION_WELFARE_MODIFIER() const;
-	int getTECH_COST_FIRST_KNOWN_PREREQ_MODIFIER() const;
-	int getTECH_COST_KNOWN_PREREQ_MODIFIER() const;
-	int getTECH_COST_MODIFIER() const;
-	int getUNIT_PRODUCTION_PERCENT_SM() const;
-	int getUNIT_PRODUCTION_PERCENT() const;
-	int getBUILDING_PRODUCTION_PERCENT() const;
 
 protected:
 	bool m_bTECH_DIFFUSION_ENABLE;
-	int m_iTECH_DIFFUSION_KNOWN_TEAM_MODIFIER;
-	int m_iTECH_DIFFUSION_WELFARE_THRESHOLD;
-	int m_iTECH_DIFFUSION_WELFARE_MODIFIER;
-	int m_iTECH_COST_FIRST_KNOWN_PREREQ_MODIFIER;
-	int m_iTECH_COST_KNOWN_PREREQ_MODIFIER;
-	int m_iTECH_COST_MODIFIER;
-	int m_iUNIT_PRODUCTION_PERCENT_SM;
-	int m_iUNIT_PRODUCTION_PERCENT;
-	int m_iBUILDING_PRODUCTION_PERCENT;
-
-public:
-	int getCOMBAT_DIE_SIDES() const;
-	int getCOMBAT_DAMAGE() const;
-protected:
-	int m_iCOMBAT_DIE_SIDES;
-	int m_iCOMBAT_DAMAGE;
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD                       END                                                  */
 /************************************************************************************************/
@@ -1773,23 +1360,14 @@ public:
 //	by the core engine to establish memory allocators)
 class CvGlobals
 {
-//	friend class CvDLLUtilityIFace;
 	friend class CvXMLLoadUtility;
 	friend class ProxyTracker;
-protected:
-	void CheckProxy(const char* fnName) const;
 
 public:
-
-	// singleton accessor
 	DllExport inline static CvGlobals& getInstance();
 
-	CvGlobals()
-	{
-	}
-	virtual ~CvGlobals()
-	{
-	}
+	CvGlobals() {}
+	virtual ~CvGlobals() {}
 
 	DllExport void init()
 	{
@@ -1801,7 +1379,6 @@ public:
 		PROXY_TRACK("uninit");
 		gGlobals->uninit();
 	}
-
 	DllExport CvDiplomacyScreen* getDiplomacyScreen()
 	{
 		PROXY_TRACK("getDiplomacyScreen");
@@ -1955,7 +1532,6 @@ public:
 		PROXY_TRACK("getInterfaceModeInfo");
 		return gGlobals->getInterfaceModeInfo(e);
 	}
-
 	DllExport bool& getLogging()
 	{
 		PROXY_TRACK("getLogging");
@@ -1976,7 +1552,6 @@ public:
 		PROXY_TRACK("overwriteLogs");
 		return gGlobals->overwriteLogs();
 	}
-
 	DllExport int* getPlotDirectionX()
 	{
 		PROXY_TRACK("getPlotDirectionX");
@@ -2116,7 +1691,6 @@ public:
 		PROXY_TRACK("getTerrainPlaneInfo");
 		return gGlobals->getTerrainPlaneInfo(i);
 	}
-
 	DllExport int getNumCameraOverlayInfos()
 	{
 		PROXY_TRACK("getNumCameraOverlayInfos");
@@ -2483,12 +2057,10 @@ public:
 		PROXY_TRACK("getFootstepAudioTags");
 		return gGlobals->getFootstepAudioTags(i);
 	}
-
 	//
 	///////////////// BEGIN global defines
 	// THESE ARE READ-ONLY
 	//
-
 	DllExport FVariableSystem* getDefinesVarSystem()
 	{
 		PROXY_TRACK("getDefinesVarSystem");
@@ -2635,7 +2207,6 @@ public:
 			delete gGlobals;
 		}
 	}
-
 	DllExport CvDLLUtilityIFaceBase* getDLLIFaceNonInl()
 	{
 		//PROXY_TRACK("getDLLIFaceNonInl");
@@ -2791,11 +2362,9 @@ public:
 		PROXY_TRACK("writeEventTriggerInfoArray");
 		gGlobals->writeEventTriggerInfoArray(pStream);
 	}
-
 	//
 	// additional accessors for initting globals
 	//
-
 	DllExport void setInterface(CvInterface* pVal)
 	{
 		PROXY_TRACK("setInterface");
