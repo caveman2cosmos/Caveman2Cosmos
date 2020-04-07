@@ -12035,69 +12035,36 @@ void CvPlot::doCulture()
 	PROFILE("CvPlot::doCulture()")
 
 	CLLNode<IDInfo>* pUnitNode;
-	CvCity* pCity;
 	CvUnit* pLoopUnit;
 	CvWString szBuffer;
-	PlayerTypes eCulturalOwner;
-	int iCityStrength;
 
 	// Super Forts begin *culture*
 	doImprovementCulture();
 
-	ImprovementTypes eImprovement = getImprovementType();
-	if(eImprovement != NO_IMPROVEMENT)
+	const ImprovementTypes eImprovement = getImprovementType();
+	if (eImprovement != NO_IMPROVEMENT)
 	{
 		// Check for a fort culture flip
-		if(GC.getImprovementInfo(eImprovement).isActsAsCity() && (getOwnershipDuration() > GC.getDefineINT("SUPER_FORTS_DURATION_BEFORE_REVOLT")))
+		if (GC.getImprovementInfo(eImprovement).isActsAsCity() && (getOwnershipDuration() > GC.getDefineINT("SUPER_FORTS_DURATION_BEFORE_REVOLT")))
 		{
-			eCulturalOwner = calculateCulturalOwner();
-			if(eCulturalOwner != NO_PLAYER)
+			const PlayerTypes eCulturalOwner = calculateCulturalOwner();
+			if (eCulturalOwner != NO_PLAYER && GET_PLAYER(eCulturalOwner).getTeam() != getTeam())
+			&& !algo::any_of(units(), CvUnit::fn::getOwner() == getOwner() && CvUnit::fn::canDefend(this));
 			{
-				if(GET_PLAYER(eCulturalOwner).getTeam() != getTeam())
-				{
-					bool bDefenderFound = false;
-					CLinkList<IDInfo> oldUnits;
-					pUnitNode = headUnitNode();
-
-					while (pUnitNode != NULL)
-					{
-						oldUnits.insertAtEnd(pUnitNode->m_data);
-						pUnitNode = nextUnitNode(pUnitNode);
-					}
-
-					pUnitNode = oldUnits.head();
-
-					while (pUnitNode != NULL)
-					{
-						pLoopUnit = ::getUnit(pUnitNode->m_data);
-						pUnitNode = nextUnitNode(pUnitNode);
-						if(pLoopUnit->canDefend(this))
-						{
-							if(pLoopUnit->getOwner() == getOwner())
-							{
-								bDefenderFound = true;
-								break;
-							}
-						}
-					}
-					if(!bDefenderFound)
-					{
-						szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_REVOLTED_JOINED", GC.getImprovementInfo(getImprovementType()).getText(), GET_PLAYER(eCulturalOwner).getCivilizationDescriptionKey());
-						AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CULTUREFLIP", MESSAGE_TYPE_INFO, GC.getImprovementInfo(getImprovementType()).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX(), getY(), true, true);
-						AddDLLMessage(eCulturalOwner, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CULTUREFLIP", MESSAGE_TYPE_INFO, GC.getImprovementInfo(getImprovementType()).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX(), getY(), true, true);
-						setOwner(eCulturalOwner,true,true);
-					}
-				}
+				szBuffer = gDLL->getText("TXT_KEY_MISC_CITY_REVOLTED_JOINED", GC.getImprovementInfo(getImprovementType()).getText(), GET_PLAYER(eCulturalOwner).getCivilizationDescriptionKey());
+				AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CULTUREFLIP", MESSAGE_TYPE_INFO, GC.getImprovementInfo(getImprovementType()).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX(), getY(), true, true);
+				AddDLLMessage(eCulturalOwner, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_CULTUREFLIP", MESSAGE_TYPE_INFO, GC.getImprovementInfo(getImprovementType()).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_GREEN"), getX(), getY(), true, true);
+				setOwner(eCulturalOwner,true,true);
 			}
 		}
 	}
 	// Super Forts end
 
-	pCity = getPlotCity();
+	CvCity* pCity = getPlotCity();
 
 	if (pCity != NULL)
 	{
-		eCulturalOwner = calculateCulturalOwner();
+		const PlayerTypes eCulturalOwner = calculateCulturalOwner();
 
 		if (eCulturalOwner != NO_PLAYER)
 		{
@@ -12108,39 +12075,20 @@ void CvPlot::doCulture()
 					if (GC.getGame().getSorenRandNum(100, "Revolt #1") < pCity->getRevoltTestProbability())
 					{
 						int iOriginal = 0;
-						iCityStrength = pCity->cultureStrength(eCulturalOwner, iOriginal);
+						const int iCityStrength = pCity->cultureStrength(eCulturalOwner, iOriginal);
 
 						if ((GC.getGame().getSorenRandNum(100, "Revolt #2") < iCityStrength) || pCity->isNPC())
 						{
-							CLinkList<IDInfo> oldUnits;
-
-							pUnitNode = headUnitNode();
-
-							while (pUnitNode != NULL)
+							foreach_(CvUnit* pLoopUnit, units())
 							{
-								oldUnits.insertAtEnd(pUnitNode->m_data);
-								pUnitNode = nextUnitNode(pUnitNode);
-							}
-
-							pUnitNode = oldUnits.head();
-
-							while (pUnitNode != NULL)
-							{
-								pLoopUnit = ::getUnit(pUnitNode->m_data);
-								pUnitNode = nextUnitNode(pUnitNode);
-
-								if (pLoopUnit)
+								if (pLoopUnit->isNPC())
 								{
-									if (pLoopUnit->isNPC())
-									{
-										pLoopUnit->kill(false, eCulturalOwner);
-									}
-									else if (pLoopUnit->canDefend())
-									{
-										pLoopUnit->changeDamage((pLoopUnit->currHitPoints() / 2), eCulturalOwner);
-									}
+									pLoopUnit->kill(false, eCulturalOwner);
 								}
-
+								else if (pLoopUnit->canDefend())
+								{
+									pLoopUnit->changeDamage((pLoopUnit->currHitPoints() / 2), eCulturalOwner);
+								}
 							}
 
 							// Disable classic city flip by culture when Revolution is running
@@ -12179,7 +12127,6 @@ void CvPlot::doCulture()
 			}
 		}
 	}
-
 
 	//Decay if you've lost any source of culture on the plot
 	if (getOwner() != NO_PLAYER)
