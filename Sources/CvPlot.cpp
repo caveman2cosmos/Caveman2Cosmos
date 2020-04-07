@@ -833,7 +833,7 @@ void CvPlot::doImprovement()
 			iOdds *= iGameSpeedFactor;
 			iOdds /= 100;
 
-			if (iOdds > 0 && GC.getGame().getSorenRandNum(iOdds, "Bonus Discovery") == 0)
+			if (iOdds < 2 || GC.getGame().getSorenRandNum(iOdds, "Bonus Discovery") == 0)
 			{
 				setBonusType((BonusTypes)iI);
 
@@ -844,7 +844,8 @@ void CvPlot::doImprovement()
 					MEMORY_TRACK_EXEMPT();
 
 					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE", GC.getBonusInfo((BonusTypes) iI).getTextKeyWide(), pCity->getNameKey());
-					AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_DISCOVERBONUS", MESSAGE_TYPE_MINOR_EVENT, GC.getBonusInfo((BonusTypes) iI).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), getViewportX(), getViewportY(), true, true);
+					AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_DISCOVERBONUS", MESSAGE_TYPE_MINOR_EVENT,
+						GC.getBonusInfo((BonusTypes) iI).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), getViewportX(), getViewportY(), true, true);
 				}
 				break;
 			}
@@ -861,31 +862,32 @@ void CvPlot::doImprovement()
 			return;
 		}
 
-		int iBonusOdds = pInfo.getImprovementBonusDepletionRand(eBonus);
-		if (iBonusOdds < 0)
+		int iOdds = pInfo.getImprovementBonusDepletionRand(eBonus);
+		if (iOdds < 0)
 		{
 			// Gamespeed scaling with built in *100 by omitting the /100 that usually follow GS scaling
-			iBonusOdds *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
+			iOdds *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
 			// Bonus density normalization
-			iBonusOdds *= 4 * ((int)GC.getMap().getWorldSize() + 1);
-			iBonusOdds /= GC.getMap().getNumBonuses(eBonus);
+			iOdds *= 4 * ((int)GC.getMap().getWorldSize() + 1);
+			iOdds /= GC.getMap().getNumBonuses(eBonus);
 
 			// This routine is only called for owned plots.
 			const PlayerTypes ePlayer = getOwner();
 			// No need to check if NO_PLAYER
 			if (GET_PLAYER(ePlayer).getResourceConsumption(eBonus) > 0)
 			{
-				iBonusOdds /= GET_PLAYER(ePlayer).getResourceConsumption(eBonus);
+				iOdds /= GET_PLAYER(ePlayer).getResourceConsumption(eBonus);
 			}
-			if (iBonusOdds < 2 || GC.getGame().getSorenRandNum(iBonusOdds, "Bonus Depletion") == 0)
+			if (iOdds < 2 || GC.getGame().getSorenRandNum(iOdds, "Bonus Depletion") == 0)
 			{
 				{
 					MEMORY_TRACK_EXEMPT();
 
 					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_RESOURCE_DEPLETED", GC.getBonusInfo(eBonus).getTextKeyWide(), pInfo.getDescription());
-					AddDLLMessage(ePlayer, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT, GC.getBonusInfo(eBonus).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX(), getY(), true, true);
+					AddDLLMessage(ePlayer, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT,
+						GC.getBonusInfo(eBonus).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX(), getY(), true, true);
 				}
-				GC.getGame().logMsg("Resource Depleted! Resource was %d, The odds were 1 in %d", eBonus, iBonusOdds);
+				GC.getGame().logMsg("Resource Depleted! Resource was %d, The odds were 1 in %d", eBonus, iOdds);
 
 				setBonusType(NO_BONUS);
 
