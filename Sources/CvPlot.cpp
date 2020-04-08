@@ -880,7 +880,7 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 			if (GC.getImprovementInfo(eUpgradeX).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold())
 			{
 				iHash *= -2;
-				iHash += (int)eUpgradeX;
+				iHash += eUpgradeX;
 			}
 		}
 	}
