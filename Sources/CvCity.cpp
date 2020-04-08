@@ -15966,7 +15966,7 @@ void CvCity::setWorkingPlot(int iIndex, bool bNewValue)
 		{
 			CvPlot* pPlot = getCityIndexPlot(iIndex);
 			FAssertMsg(pPlot != NULL, CvString::format("pPlot was null for iIndex %d", iIndex).c_str());
-			if (pPlot)
+			if (pPlot && isHuman())
 			{
 				pPlot->setImprovementUpgradeCache(-1);
 			}

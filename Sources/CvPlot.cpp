@@ -894,7 +894,10 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 		return;
 	}
 	if (iHash == m_iImprovementUpgradeHash)
+	{
+		setImprovementUpgradeCache(GET_TEAM(eTeam).getLastRoundOfValidImprovementCacheUpdate());
 		return;
+	}
 	else m_iImprovementUpgradeHash = iHash;
 
 	if (getUpgradeProgressHundredths() < iTime)
@@ -15086,6 +15089,11 @@ bool CvPlot::isImprovementUpgradable() const
 void CvPlot::setImprovementUpgradeCache(const int iNewValue)
 {
 	m_iCurrentRoundofUpgradeCache = iNewValue;
+
+	if (iNewValue == -1)
+	{
+		m_iImprovementUpgradeHash = 0;
+	}
 }
 
 int CvPlot::getInjuredUnitCombatsUnsupportedByHealer(PlayerTypes ePlayer, UnitCombatTypes eUnitCombat, DomainTypes eDomain) const
