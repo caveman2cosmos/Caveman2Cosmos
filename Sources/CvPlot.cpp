@@ -880,7 +880,7 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 			if (GC.getImprovementInfo(eUpgradeX).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold())
 			{
 				iHash *= -2;
-				iHash += eUpgradeX;
+				iHash += (int)eUpgradeX;
 			}
 		}
 	}
@@ -898,7 +898,7 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 		setImprovementUpgradeCache(GET_TEAM(eTeam).getLastRoundOfValidImprovementCacheUpdate());
 		return;
 	}
-	else m_iImprovementUpgradeHash = iHash;
+	m_iImprovementUpgradeHash = iHash;
 
 	if (getUpgradeProgressHundredths() < iTime)
 	{
