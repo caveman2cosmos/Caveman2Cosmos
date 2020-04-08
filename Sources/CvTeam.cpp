@@ -6373,7 +6373,6 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 	for (iI = 0; iI < GC.getNumRouteInfos(); iI++)
 	{
 		changeRouteChange(((RouteTypes)iI), (GC.getRouteInfo((RouteTypes) iI).getTechMovementChange(eTech) * iChange));
-		setLastRoundOfValidImprovementCacheUpdate();
 	}
 
 	for (iI = 0; iI < NUM_DOMAIN_TYPES; iI++)
@@ -6512,6 +6511,18 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 						GET_PLAYER((PlayerTypes)iJ).processNewRoutes();
 					}
 				}
+			}
+			break;
+		}
+	}
+	if (getLastRoundOfValidImprovementCacheUpdate() != GC.getGame().getGameTurn())
+	{
+		for (iI = 0; iI < GC.getNumImprovementInfos(); iI++)
+		{
+			if (GC.getImprovementInfo((ImprovementTypes) iI).getPrereqTech() == eTech)
+			{
+				setLastRoundOfValidImprovementCacheUpdate();
+				break;
 			}
 		}
 	}

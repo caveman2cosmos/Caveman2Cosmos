@@ -3517,7 +3517,7 @@
 				<iYieldChange>2</iYieldChange>
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
-			<PrereqTech>TECH_POTTERY</PrereqTech>
+			<PrereqTech>TECH_CARPENTRY</PrereqTech>
 			<bFreshWaterMakesValid>1</bFreshWaterMakesValid>
 			<bUseLSystem>1</bUseLSystem>
 			<iAdvancedStartCost>24</iAdvancedStartCost>
@@ -3588,7 +3588,7 @@
 				<iYieldChange>5</iYieldChange>
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
-			<PrereqTech>TECH_CITY_PLANNING</PrereqTech>
+			<PrereqTech>TECH_MASONRY</PrereqTech>
 			<bFreshWaterMakesValid>1</bFreshWaterMakesValid>
 			<bUseLSystem>1</bUseLSystem>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -3653,7 +3653,7 @@
 				<iYieldChange>7</iYieldChange>
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
-			<PrereqTech>TECH_CIVIL_SERVICE</PrereqTech>
+			<PrereqTech>TECH_CITY_PLANNING</PrereqTech>
 			<iHealthPercent>-50</iHealthPercent>
 			<bFreshWaterMakesValid>1</bFreshWaterMakesValid>
 			<bUseLSystem>1</bUseLSystem>
@@ -3801,7 +3801,7 @@
 				<iYieldChange>9</iYieldChange>
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
-			<PrereqTech>TECH_SOCIAL_CONTRACT</PrereqTech>
+			<PrereqTech>TECH_GUILDS</PrereqTech>
 			<iHealthPercent>-100</iHealthPercent>
 			<bUseLSystem>1</bUseLSystem>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -3949,7 +3949,7 @@
 				<iYieldChange>11</iYieldChange>
 			</YieldChanges>
 			<bActsAsCity>0</bActsAsCity>
-			<PrereqTech>TECH_MASS_TRANSIT</PrereqTech>
+			<PrereqTech>TECH_GAS_LIGHTING</PrereqTech>
 			<iHealthPercent>-100</iHealthPercent>
 			<bUseLSystem>1</bUseLSystem>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>

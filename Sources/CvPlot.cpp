@@ -80,15 +80,9 @@ CvPlot::CvPlot()
 	m_apaiCultureRangeCities = NULL;
 	m_apaiInvisibleVisibilityCount = NULL;
 	//m_apaiCachedHighestTeamInvisibilityIntensity = NULL;
-/************************************************************************************************/
-/* Afforess	                  Start		 02/15/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	m_aiOccupationCultureRangeCities = NULL;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 	m_aiMountainLeaderCount = NULL;	//	Koshling - mountain mod efficiency
 	m_pFeatureSymbol = NULL;
 	m_pPlotBuilder = NULL;
@@ -98,9 +92,9 @@ CvPlot::CvPlot()
 	m_pFlagSymbolOffset = NULL;
 	m_pCenterUnit = NULL;
 	m_bInhibitCenterUnitCalculation = false;
-	m_bIgnoringImprovementUpgrade = false;
-	m_iCanHaveImprovementAsUpgradeCache = -1;
-	m_iCurrentRoundofUpgradeCache = 0;
+	m_bImprovementUpgradable = true;
+	m_iImprovementUpgradeHash = 0;
+	m_iCurrentRoundofUpgradeCache = -1;
 	m_iImprovementCurrentValue = 0;
 
 	m_szScriptData = NULL;
@@ -267,20 +261,14 @@ void CvPlot::reset(int iX, int iY, bool bConstructorCall)
 
 	m_bStartingPlot = false;
 	m_bHills = false;
-/************************************************************************************************/
-/* Afforess	                  Start		 02/15/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	m_bDepletedMine = false; // deleteMe
 	m_eClaimingOwner = NO_PLAYER;
 	m_bCounted = false;
 	m_eLandmarkType = NO_LANDMARK;
 	m_szLandmarkMessage = "";
 	m_szLandmarkName = "";
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 	m_bNOfRiver = false;
 	m_bWOfRiver = false;
 	m_bIrrigated = false;
@@ -750,13 +738,6 @@ void CvPlot::doImprovement()
 	const ImprovementTypes eType = getImprovementType();
 	CvImprovementInfo& pInfo = GC.getImprovementInfo(eType);
 
-	if (isBeingWorked() || pInfo.isUpgradeRequiresFortify())
-	{
-		if (!isPlotIgnoringImprovementUpgrade() && doImprovementUpgrade(eType))
-		{ // We won't do bonus discovery/depletion if it just upgraded into a new improvement.
-			return;
-		}
-	}
 	// Discover bonus
 	if (getBonusType() == NO_BONUS)
 	{
@@ -781,7 +762,7 @@ void CvPlot::doImprovement()
 			{
 				setBonusType((BonusTypes)iI);
 
-				CvCity* pCity = GC.getMap().findCity(getX(), getY(), getOwner(), NO_TEAM, false);
+				const CvCity* pCity = GC.getMap().findCity(getX(), getY(), getOwner(), NO_TEAM, false);
 
 				if (pCity != NULL && isInViewport())
 				{
@@ -846,67 +827,157 @@ void CvPlot::doImprovement()
 			}
 		}
 	}
+	// Upgrade?
+	if (isImprovementUpgradable() && (isBeingWorked() || pInfo.isUpgradeRequiresFortify()))
+	{
+		doImprovementUpgrade(eType);
+	}
 }
 
 
-bool CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
+void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 {
-	const ImprovementTypes eUpdrade = GET_TEAM(getTeam()).getImprovementUpgrade(eType);
+	const TeamTypes eTeam = GET_PLAYER(getOwner()).getTeam();
 
-	// No Upgrade,
-	if (eUpdrade == NO_IMPROVEMENT
-	// or gold deficient
-	|| GC.getImprovementInfo(eUpdrade).getHighestCost() > GET_PLAYER(getOwner()).getEffectiveGold())
+	// Has the situation changed?
+	if (GET_TEAM(eTeam).getLastRoundOfValidImprovementCacheUpdate() == m_iCurrentRoundofUpgradeCache)
 	{
-		return false;
+		return; // Nope
 	}
-	// Tech Requirement
-	if (GC.getImprovementInfo(eUpdrade).getPrereqTech() != NO_TECH
-	&& !GET_TEAM(getTeam()).isHasTech((TechTypes) GC.getImprovementInfo(eUpdrade).getPrereqTech()))
+	// Is it upgradable?
+	const ImprovementTypes eMainUpgrade = GET_TEAM(eTeam).getImprovementUpgrade(eType);
+	if (eMainUpgrade == NO_IMPROVEMENT)
 	{
-		return false;
+		m_bImprovementUpgradable = false;
+		return;
 	}
-
-	if (GC.getImprovementInfo(eType).isUpgradeRequiresFortify())
+	const int iTime = 100*GC.getGame().getImprovementUpgradeTime(eType);
+	if (iTime < 1)
 	{
-		CLinkList<IDInfo> oldUnits;
-		CLLNode<IDInfo>* pUnitNode = headUnitNode();
+		m_bImprovementUpgradable = false;
+		return;
+	}
+	// Evaluate potential upgrades
+	ImprovementTypes eUpgrade = NO_IMPROVEMENT;
+	int iHash = 512; // Super simple hash, but should be adequate for this purpose.
 
-		while (pUnitNode != NULL)
+	if (canHaveImprovement(eMainUpgrade, eTeam, false, true, true))
+	{
+		if (GC.getImprovementInfo(eMainUpgrade).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold())
 		{
-			oldUnits.insertAtEnd(pUnitNode->m_data);
-			pUnitNode = nextUnitNode(pUnitNode);
+			iHash *= -2;
+			iHash += eMainUpgrade;
 		}
-		pUnitNode = oldUnits.head();
+		eUpgrade = eMainUpgrade;
+	}
+	for (int iI = 0; iI < GC.getImprovementInfo(getImprovementType()).getNumAlternativeImprovementUpgradeTypes(); ++iI)
+	{
+		const ImprovementTypes eUpgradeX = (ImprovementTypes)GC.getImprovementInfo(getImprovementType()).getAlternativeImprovementUpgradeType(iI);
 
-		while (pUnitNode != NULL)
+		if (canHaveImprovement(eUpgradeX, eTeam, false, true, true))
 		{
-			const CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-
-			if (pLoopUnit->getFortifyTurns() > 0 && pLoopUnit->getTeam() == getTeam() && pLoopUnit->canDefend())
+			eUpgrade = eUpgradeX;
+			if (GC.getImprovementInfo(eUpgradeX).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold())
 			{
-				// Defender Found
-				changeUpgradeProgressHundredths(GET_PLAYER(getOwner()).getImprovementUpgradeRateTimes100(eType));
-
-				if (getUpgradeProgressHundredths() >= 100*GC.getGame().getImprovementUpgradeTime(eType))
-				{
-					setImprovementUpgrade();
-				}
-				break;
+				iHash *= -2;
+				iHash += eUpgradeX;
 			}
-			pUnitNode = nextUnitNode(pUnitNode);
 		}
 	}
-	else if (isBeingWorked())
+	if (iHash == 512)
 	{
-		changeUpgradeProgressHundredths(GET_PLAYER(getOwner()).getImprovementUpgradeRateTimes100(eType));
+		// Lack of money change every turn
+		if (eUpgrade == NO_IMPROVEMENT)
+		{ // This however warrant a freeze to this check.
+			setImprovementUpgradeCache(GET_TEAM(eTeam).getLastRoundOfValidImprovementCacheUpdate());
+		}
+		return;
+	}
+	if (iHash == m_iImprovementUpgradeHash)
+		return;
+	else m_iImprovementUpgradeHash = iHash;
 
-		if (getUpgradeProgressHundredths() >= 100*GC.getGame().getImprovementUpgradeTime(eType))
+	if (getUpgradeProgressHundredths() < iTime)
+	{
+		// Advance upgrade progress
+		if (GC.getImprovementInfo(eType).isUpgradeRequiresFortify())
 		{
-			setImprovementUpgrade();
+			CLLNode<IDInfo>* pUnitNode = headUnitNode();
+
+			while (pUnitNode != NULL)
+			{
+				const CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
+
+				if (pLoopUnit->getFortifyTurns() > 0 && pLoopUnit->getTeam() == eTeam && pLoopUnit->canDefend())
+				{
+					changeUpgradeProgressHundredths(GET_PLAYER(getOwner()).getImprovementUpgradeRateTimes100(eType));
+					break;
+				}
+				pUnitNode = nextUnitNode(pUnitNode);
+			}
+		}
+		else
+		{
+			changeUpgradeProgressHundredths(GET_PLAYER(getOwner()).getImprovementUpgradeRateTimes100(eType));
 		}
 	}
-	return eType != getImprovementType();
+	if (getUpgradeProgressHundredths() >= iTime)
+	{
+		// In case no upgrade happens, no point rechecking later unless the situation change.
+		setImprovementUpgradeCache(GET_TEAM(eTeam).getLastRoundOfValidImprovementCacheUpdate());
+
+		if (eUpgrade == eMainUpgrade) // Only one potential upgrade for this plot.
+		{
+			setImprovementType(eUpgrade);
+		}
+		else if (GET_PLAYER(getOwner()).isHuman()) //send popup if player is human
+		{
+			GET_PLAYER(getOwner()).upgradePlotPopup(getImprovementType(), getX(), getY());
+		}
+		else // AI choice evaluation
+		{
+			// Toffer - I applied the pre-existing AI_getImprovementValue which wasn't used for anything else.
+			// TODO - Simplify AI_getImprovementValue to fit the need of improvement upgrading.
+			ImprovementTypes eBestUpgrade = NO_IMPROVEMENT;
+
+			CvCity* pCity = GC.getMap().findCity(getX(), getY(), getOwner(), NO_TEAM, false);
+			int iFoodMultiplier = 0;
+			int iProductionMultiplier = 0;
+			int iCommerceMultiplier = 0;
+			int iDesiredFoodChange = 0;
+			pCity->AI_getYieldMultipliers(iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange);
+
+			int iBestValue = pCity->AI_getImprovementValue(this, eType, iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange, true);
+
+			if (GC.getImprovementInfo(eMainUpgrade).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold() && canHaveImprovement(eMainUpgrade, eTeam, false, true, true))
+			{
+				int iValue = pCity->AI_getImprovementValue(this, eMainUpgrade, iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange);
+				if (iValue > iBestValue)
+				{
+					eBestUpgrade = eMainUpgrade;
+					iBestValue = iValue;
+				}
+			}
+			for (int iI = 0; iI < GC.getImprovementInfo(getImprovementType()).getNumAlternativeImprovementUpgradeTypes(); ++iI)
+			{
+				const ImprovementTypes eUpgradeX = (ImprovementTypes)GC.getImprovementInfo(getImprovementType()).getAlternativeImprovementUpgradeType(iI);
+
+				if (GC.getImprovementInfo(eUpgradeX).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold() && canHaveImprovement(eUpgradeX, eTeam, false, true, true))
+				{
+					int iValue = pCity->AI_getImprovementValue(this, eUpgradeX, iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange);
+					if (iValue > iBestValue)
+					{
+						eBestUpgrade = eUpgradeX;
+						iBestValue = iValue;
+					}
+				}
+			}
+			if (eBestUpgrade != NO_IMPROVEMENT)
+			{
+				setImprovementType(eBestUpgrade);
+			}
+		}
+	}
 }
 
 
@@ -2607,7 +2678,6 @@ bool CvPlot::canHaveBonus(BonusTypes eBonus, bool bIgnoreLatitude) const
 
 bool CvPlot::canBuildImprovement(ImprovementTypes eImprovement, TeamTypes eTeam) const
 {
-	bool bReturn = false;
 	for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
 	{
 		if ((ImprovementTypes)GC.getBuildInfo((BuildTypes)iI).getImprovement() == eImprovement)
@@ -2615,47 +2685,10 @@ bool CvPlot::canBuildImprovement(ImprovementTypes eImprovement, TeamTypes eTeam)
 			BuildTypes eBuild = ((BuildTypes)iI);
 			if (GET_TEAM(eTeam).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getTechPrereq()))
 			{
-				bReturn = true;
-				break;
+				return true;
 			}
 		}
 	}
-	return bReturn;
-}
-
-bool CvPlot::canHaveImprovementAsUpgrade(ImprovementTypes eImprovement, TeamTypes eTeam, bool bPotential, bool bOver) const
-{
-	if (eTeam == NO_TEAM)
-	{
-		return false;
-	}
-
-	if (m_iCurrentRoundofUpgradeCache > -1)
-	{
-		if (GET_TEAM(eTeam).getLastRoundOfValidImprovementCacheUpdate() > m_iCurrentRoundofUpgradeCache)
-		{
-			m_iCurrentRoundofUpgradeCache = GC.getGame().getGameTurn();
-		}
-		else
-		{
-			return (m_iCurrentRoundofUpgradeCache == 1);
-		}
-	}
-
-	bool bCanHave = canHaveImprovement(eImprovement, eTeam, bPotential, bOver, true);
-
-	if (bCanHave && !canBuildImprovement(eImprovement, eTeam))
-	{
-		bCanHave = false;
-	}
-
-	if (bCanHave)
-	{
-		m_iCurrentRoundofUpgradeCache = 1;
-		return true;
-	}
-
-	m_iCurrentRoundofUpgradeCache = 0;
 	return false;
 }
 
@@ -2687,6 +2720,10 @@ bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, 
 	}
 	const CvImprovementInfo& pInfo = GC.getImprovementInfo(eImprovement);
 
+	if (!bPotential && eTeam != NO_TEAM && !GET_TEAM(eTeam).isHasTech((TechTypes)pInfo.getPrereqTech()))
+	{
+		return false;
+	}
 	// Meant for pseudo improvements that won't ever be on the map, like bonus placement improvements.
 	// Toffer - Shouldn't this be part of buildInfo?
 	// I'm thinking bonus placement builds should not be linked to an improvement at all.
@@ -3384,11 +3421,9 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 
 int CvPlot::getBuildTime(BuildTypes eBuild) const
 {
-	int iTime;
-
 	FAssertMsg(getTerrainType() != NO_TERRAIN, "TerrainType is not assigned a valid value");
 	CvBuildInfo& kBuild = GC.getBuildInfo(eBuild);
-	iTime = kBuild.getTime();
+	int iTime = kBuild.getTime();
 
 	if (getFeatureType() != NO_FEATURE)
 	{
@@ -3403,11 +3438,6 @@ int CvPlot::getBuildTime(BuildTypes eBuild) const
 		}
 	}
 
-/************************************************************************************************/
-/* Afforess	                  Start		 07/18/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	if (isPeak2(true))
 	{
 		iTime *= std::max(0, (GC.getDefineINT("PEAK_BUILD_TIME_MODIFIER") + 100));
@@ -3434,9 +3464,6 @@ int CvPlot::getBuildTime(BuildTypes eBuild) const
 		}
 	}
 
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	iTime *= std::max(0, (GC.getTerrainInfo(getTerrainType()).getBuildModifier() + 100));
 	iTime /= 100;
 
@@ -3569,18 +3596,10 @@ int CvPlot::getFeatureProduction(BuildTypes eBuild, TeamTypes eTeam, CvCity** pp
 		iProduction /= 100;
 	}
 
-/************************************************************************************************/
-/* Afforess	                  Start		 05/25/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	if (!GET_TEAM(eTeam).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getFeatureTech(getFeatureType())))
 	{
 		return 0;
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	return std::max(0, iProduction);
 }
@@ -6467,12 +6486,6 @@ void CvPlot::changeImprovementDuration(int iChange)
 }
 
 
-int CvPlot::getUpgradeProgressHundredths() const
-{
-	return m_iUpgradeProgress;
-}
-
-
 int CvPlot::getUpgradeTimeLeft(ImprovementTypes eImprovement, PlayerTypes ePlayer) const
 {
 	const int iUpgradeLeftTimes100 = (100*GC.getGame().getImprovementUpgradeTime(eImprovement) - ((getImprovementType() == eImprovement) ? getUpgradeProgressHundredths() : 0));
@@ -6500,23 +6513,20 @@ int CvPlot::getUpgradeTimeLeft(ImprovementTypes eImprovement, PlayerTypes ePlaye
 }
 
 
+int CvPlot::getUpgradeProgressHundredths() const
+{
+	return m_iUpgradeProgress;
+}
+
 void CvPlot::setUpgradeProgressHundredths(int iNewValue)
 {
 	m_iUpgradeProgress = iNewValue;
 	FAssert(getUpgradeProgressHundredths() >= 0);
 }
 
-
 void CvPlot::changeUpgradeProgressHundredths(int iChange)
 {
-	int iMax = (MAX_INT/2);
-	int iToNormalSet = getUpgradeProgressHundredths() + iChange;
-	int iSet = std::min(iMax, iToNormalSet);
-	if (iSet == iMax)
-	{
-		setPlotIgnoringImprovementUpgrade(false);
-	}
-	setUpgradeProgressHundredths(iSet);
+	setUpgradeProgressHundredths(std::min(MAX_INT/2, getUpgradeProgressHundredths() + iChange));
 }
 
 
@@ -7099,28 +7109,6 @@ void CvPlot::setOwner(PlayerTypes eNewValue, bool bCheckUnits, bool bUpdatePlotG
 					pLoopUnit->getGroup()->setActivityType(ACTIVITY_AWAKE);
 				}
 			}
-#ifdef OLD_VERSION_PRE_SUPER_FORTS
-/************************************************************************************************/
-/* Afforess	                  Start		 02/15/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-			/* if the plot contains fort, its influence (actsAsCity) must be transferred to the new owner */
-			if (isActsAsCity())
-			{
-				if (getOwner() != NO_PLAYER)
-				{
-					changeActsAsCity(getOwner(), -1);
-				}
-				if (eNewValue != NO_PLAYER)
-				{
-					changeActsAsCity(eNewValue, 1);
-				}
-			}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-#endif
 
 			m_eOwner = eNewValue;
 
@@ -7739,6 +7727,10 @@ void CvPlot::setFeatureType(FeatureTypes eNewValue, int iVariety, bool bImprovem
 			updateSeeFromSight(false, true);
 		}
 
+		if (eOldFeature != eNewValue)
+		{
+			setImprovementUpgradeCache(-1);
+		}
 		if (eOldFeature != NO_FEATURE)
 		{
 			m_movementCharacteristicsHash ^= GC.getFeatureInfo(eOldFeature).getZobristValue();
@@ -7890,6 +7882,8 @@ void CvPlot::setBonusType(BonusTypes eNewValue)
 {
 	if (getBonusType() != eNewValue)
 	{
+		setImprovementUpgradeCache(-1);
+
 		if (getBonusType() != NO_BONUS)
 		{
 			if (area())
@@ -8007,162 +8001,130 @@ ImprovementTypes CvPlot::getImprovementType() const
 }
 
 
-void CvPlot::setImprovementType(ImprovementTypes eNewValue)
+void CvPlot::setImprovementType(ImprovementTypes eNewImprovement)
 {
-	int iI;
 	ImprovementTypes eOldImprovement = getImprovementType();
-	bool bUpgrade = false;
 
-	if (getImprovementType() != eNewValue)
+	if (eOldImprovement != eNewImprovement)
 	{
-		if (getImprovementType() != NO_IMPROVEMENT && eNewValue != NO_IMPROVEMENT)
+		if (eOldImprovement != NO_IMPROVEMENT && eNewImprovement != NO_IMPROVEMENT)
 		{
-			//Charge for Upgrade but be careful not to charge for a downgrade.
-			if ((ImprovementTypes)GC.getImprovementInfo(getImprovementType()).getImprovementUpgrade() == eNewValue)
+			//Charge for Upgrade but be careful not to charge for a downgrade (pillage).
+			if ((ImprovementTypes)GC.getImprovementInfo(eOldImprovement).getImprovementUpgrade() == eNewImprovement)
 			{
-				bUpgrade = true;
+				GET_PLAYER(getOwner()).changeGold(-GC.getImprovementInfo(eNewImprovement).getHighestCost());
 			}
-			if (!bUpgrade && GC.getImprovementInfo(getImprovementType()).getNumAlternativeImprovementUpgradeTypes() > 0)
+			else
 			{
-				for (iI = 0; iI < GC.getImprovementInfo(getImprovementType()).getNumAlternativeImprovementUpgradeTypes(); iI++)
+				for (int iI = 0; iI < GC.getImprovementInfo(eOldImprovement).getNumAlternativeImprovementUpgradeTypes(); iI++)
 				{
-					if ((ImprovementTypes)GC.getImprovementInfo(getImprovementType()).getAlternativeImprovementUpgradeType(iI) == eNewValue)
+					if ((ImprovementTypes)GC.getImprovementInfo(eOldImprovement).getAlternativeImprovementUpgradeType(iI) == eNewImprovement)
 					{
-						bUpgrade = true;
+						GET_PLAYER(getOwner()).changeGold(-GC.getImprovementInfo(eNewImprovement).getHighestCost());
+						break;
 					}
 				}
 			}
-			if (bUpgrade)
-			{
-				GET_PLAYER(getOwner()).changeGold(-GC.getImprovementInfo(eNewValue).getHighestCost());
-			}
-
+		}
+		if (eOldImprovement != NO_IMPROVEMENT)
+		{
 			if (area())
 			{
-				area()->changeNumImprovements(getImprovementType(), -1);
+				area()->changeNumImprovements(eOldImprovement, -1);
 			}
 			if (isOwned())
 			{
-				GET_PLAYER(getOwner()).changeImprovementCount(getImprovementType(), -1);
-				// Super Forts begin *culture* - adapted to C2C
-				if (GC.getImprovementInfo(getImprovementType()).getCulture() > 0)
+				GET_PLAYER(getOwner()).changeImprovementCount(eOldImprovement, -1);
+				// Super Forts *culture*
+				if (GC.getImprovementInfo(eOldImprovement).getCulture() > 0)
 				{
-					changeCultureRangeFortsWithinRange(getOwner(), -1, GC.getImprovementInfo(getImprovementType()).getCultureRange(), true);
+					changeCultureRangeFortsWithinRange(getOwner(), -1, GC.getImprovementInfo(eOldImprovement).getCultureRange(), true);
 				}
-				// Super Forts end
 			}
 		}
-		if (eNewValue != NO_IMPROVEMENT)
+		if (eNewImprovement != NO_IMPROVEMENT)
 		{
-			for (iI = 0; iI < GC.getImprovementInfo(eNewValue).getNumFeatureChangeTypes(); iI++)
+			for (int iI = 0; iI < GC.getImprovementInfo(eNewImprovement).getNumFeatureChangeTypes(); iI++)
 			{
-				FeatureTypes eAddingFeature = (FeatureTypes)GC.getImprovementInfo(eNewValue).getFeatureChangeType(iI);
+				FeatureTypes eAddingFeature = (FeatureTypes)GC.getImprovementInfo(eNewImprovement).getFeatureChangeType(iI);
 				if (canHaveFeature(eAddingFeature, true))
 				{
-						setFeatureType(eAddingFeature, -1, true);
-						break;
+					setFeatureType(eAddingFeature, -1, true);
+					break;
 				}
 			}
-			if (GC.getImprovementInfo(eNewValue).getBonusChange() != NO_BONUS)
+			if (GC.getImprovementInfo(eNewImprovement).getBonusChange() != NO_BONUS)
 			{
-				BonusTypes eAddingBonus = (BonusTypes)GC.getImprovementInfo(eNewValue).getBonusChange();
+				BonusTypes eAddingBonus = (BonusTypes)GC.getImprovementInfo(eNewImprovement).getBonusChange();
 				if (canHaveBonus(eAddingBonus, false))
 				{
 					setBonusType(eAddingBonus);
 				}
 			}
 		}
-
-		// Super Forts begin *vision*
 		updateSight(false, true);
-		// Super Forts end
-#ifdef OLD_VERSION_PRE_SUPER_FORTS
-		bool oldActAsCity = (eOldImprovement != NO_IMPROVEMENT) && GC.getImprovementInfo(eOldImprovement).isActsAsCity();
-		bool newActAsCity = (eNewValue != NO_IMPROVEMENT) && GC.getImprovementInfo(eNewValue).isActsAsCity();
 
+		if (eNewImprovement != NO_IMPROVEMENT && GC.getImprovementInfo(eNewImprovement).isChangeRemove())
+		{
+			eNewImprovement = NO_IMPROVEMENT;
+		}
 		if (isOwned())
-		{
-			/* fort removed, pillaged, destroyed */
-			if (oldActAsCity && !newActAsCity)
-			{
-				changeActsAsCity(getOwner(), -1);
-			}
-
-			/* fort created */
-			if (!oldActAsCity && newActAsCity)
-			{
-				changeActsAsCity(getOwner(), 1);
-			}
-		}
-#endif
-		if (eNewValue != NO_IMPROVEMENT && GC.getImprovementInfo(eNewValue).isChangeRemove())
-		{
-			eNewValue = NO_IMPROVEMENT;
-		}
-		if ( isOwned() )
 		{
 			GET_PLAYER(getOwner()).startDeferredPlotGroupBonusCalculation();
 			updatePlotGroupBonus(false);
 		}
-		m_eImprovementType = eNewValue;
-		if ( isOwned() )
+		m_eImprovementType = eNewImprovement;
+		if (isOwned())
 		{
 			updatePlotGroupBonus(true);
 			GET_PLAYER(getOwner()).endDeferredPlotGroupBonusCalculation();
 		}
 
-		if (getImprovementType() == NO_IMPROVEMENT)
+		if (eNewImprovement == NO_IMPROVEMENT)
 		{
 			setImprovementDuration(0);
 		}
-
+		m_bImprovementUpgradable = true;
 		setUpgradeProgressHundredths(0);
-		setPlotIgnoringImprovementUpgrade(false);
+		setImprovementUpgradeCache(-1);
 
-		for (iI = 0; iI < MAX_TEAMS; ++iI)
+		for (int iI = 0; iI < MAX_TEAMS; ++iI)
 		{
-			if (GET_TEAM((TeamTypes)iI).isAlive())
+			if (GET_TEAM((TeamTypes)iI).isAlive() && isVisible((TeamTypes)iI, false))
 			{
-				if (isVisible((TeamTypes)iI, false))
-				{
-					setRevealedImprovementType((TeamTypes)iI, getImprovementType());
-				}
+				setRevealedImprovementType((TeamTypes)iI, eNewImprovement);
 			}
 		}
 
-		if (getImprovementType() != NO_IMPROVEMENT)
+		if (eNewImprovement != NO_IMPROVEMENT)
 		{
 			if (area())
 			{
-				area()->changeNumImprovements(getImprovementType(), 1);
+				area()->changeNumImprovements(eNewImprovement, 1);
 			}
 			if (isOwned())
 			{
-				GET_PLAYER(getOwner()).changeImprovementCount(getImprovementType(), 1);
-				// Super Forts begin *culture* - adapted to C2C
-				if (GC.getImprovementInfo(getImprovementType()).getCulture() > 0)
+				GET_PLAYER(getOwner()).changeImprovementCount(eNewImprovement, 1);
+				// Super Forts *culture*
+				if (GC.getImprovementInfo(eNewImprovement).getCulture() > 0)
 				{
-					changeCultureRangeFortsWithinRange(getOwner(), 1, GC.getImprovementInfo(getImprovementType()).getCultureRange(), true);
+					changeCultureRangeFortsWithinRange(getOwner(), 1, GC.getImprovementInfo(eNewImprovement).getCultureRange(), true);
 				}
-				// Super Forts end
 			}
 		}
-		// Super Forts begin *vision*
 		updateSight(true, true);
-		// Super Forts end
 
-		if ( (getImprovementType() == NO_IMPROVEMENT) != (eOldImprovement == NO_IMPROVEMENT) &&
-			 getBonusType() != NO_BONUS)
+		if (getBonusType() != NO_BONUS && (eNewImprovement == NO_IMPROVEMENT) != (eOldImprovement == NO_IMPROVEMENT))
 		{
-			//	Newly added or removed improvement on a bonus - add/remove Zobrist contributuns
-			//	for all local plot groups
+			// Newly added or removed improvement on a bonus
+			// Add/remove Zobrist contributuns for all local plot groups
 			ToggleInPlotGroupsZobristContributors();
 		}
 
 		updateIrrigated();
 		updateYield();
 
-		for (iI = 0; iI < NUM_CITY_PLOTS; ++iI)
+		for (int iI = 0; iI < NUM_CITY_PLOTS; ++iI)
 		{
 			CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
 
@@ -8173,15 +8135,7 @@ void CvPlot::setImprovementType(ImprovementTypes eNewValue)
 				if (pLoopCity != NULL)
 				{
 					pLoopCity->updateFeatureHappiness();
-/************************************************************************************************/
-/* JOOYO_ADDON, Added by Jooyo, 06/19/09                                                        */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 					pLoopCity->updateImprovementHealth();
-/************************************************************************************************/
-/* JOOYO_ADDON                          END                                                     */
-/************************************************************************************************/
 
 					//	Changed improvement status might change city best build opinions
 					pLoopCity->AI_markBestBuildValuesStale();
@@ -8190,7 +8144,7 @@ void CvPlot::setImprovementType(ImprovementTypes eNewValue)
 		}
 
 		// Building or removing a fort will now force a plotgroup update to verify resource connections.
-		if ( (NO_IMPROVEMENT != getImprovementType() && GC.getImprovementInfo(getImprovementType()).isUniversalTradeBonusProvider()) !=
+		if ( (NO_IMPROVEMENT != eNewImprovement && GC.getImprovementInfo(eNewImprovement).isUniversalTradeBonusProvider()) !=
 			 (NO_IMPROVEMENT != eOldImprovement && GC.getImprovementInfo(eOldImprovement).isUniversalTradeBonusProvider()) )
 		{
 			updatePlotGroup();
@@ -8206,12 +8160,12 @@ void CvPlot::setImprovementType(ImprovementTypes eNewValue)
 			setLayoutDirty(true);
 		}
 
-		if (getImprovementType() != NO_IMPROVEMENT)
+		if (eNewImprovement != NO_IMPROVEMENT)
 		{
-			CvEventReporter::getInstance().improvementBuilt(getImprovementType(), getX(), getY());
+			CvEventReporter::getInstance().improvementBuilt(eNewImprovement, getX(), getY());
 		}
 
-		if (getImprovementType() == NO_IMPROVEMENT)
+		if (eNewImprovement == NO_IMPROVEMENT)
 		{
 			CvEventReporter::getInstance().improvementDestroyed(eOldImprovement, getOwner(), getX(), getY());
 		}
@@ -8219,15 +8173,12 @@ void CvPlot::setImprovementType(ImprovementTypes eNewValue)
 		CvCity* pWorkingCity = getWorkingCity();
 		if (NULL != pWorkingCity)
 		{
-			if ((NO_IMPROVEMENT != eNewValue && pWorkingCity->getImprovementFreeSpecialists(eNewValue) > 0)	||
-				(NO_IMPROVEMENT != eOldImprovement && pWorkingCity->getImprovementFreeSpecialists(eOldImprovement) > 0))
+			if(NO_IMPROVEMENT != eNewImprovement && pWorkingCity->getImprovementFreeSpecialists(eNewImprovement) > 0
+			|| NO_IMPROVEMENT != eOldImprovement && pWorkingCity->getImprovementFreeSpecialists(eOldImprovement) > 0)
 			{
-
 				pWorkingCity->AI_setAssignWorkDirty(true);
-
 			}
 		}
-
 		setImprovementCurrentValue();
 		gDLL->getInterfaceIFace()->setDirty(CitizenButtons_DIRTY_BIT, true);
 	}
@@ -12280,11 +12231,6 @@ void CvPlot::read(FDataStreamBase* pStream)
 	m_bStartingPlot = bVal;
 	WRAPPER_READ_DECORATED(wrapper, "CvPlot", &bVal, "m_bHills");
 	m_bHills = bVal;
-/************************************************************************************************/
-/* Afforess	Mountains Start		 08/03/09                                           		 */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 
 	WRAPPER_READ(wrapper, "CvPlot", &m_bDepletedMine); // deleteMe
 	WRAPPER_READ_STRING(wrapper, "CvPlot", m_szLandmarkMessage);
@@ -12302,9 +12248,7 @@ void CvPlot::read(FDataStreamBase* pStream)
 	}
 
 	WRAPPER_READ(wrapper, "CvPlot", &m_zobristContribution);
-/************************************************************************************************/
-/* Afforess	Mountains End       END        		                                             */
-/************************************************************************************************/
+
 	WRAPPER_READ_DECORATED(wrapper, "CvPlot", &bVal, "m_bNOfRiver");
 	m_bNOfRiver = bVal;
 	WRAPPER_READ_DECORATED(wrapper, "CvPlot", &bVal, "m_bWOfRiver");
@@ -12682,8 +12626,8 @@ void CvPlot::read(FDataStreamBase* pStream)
 	m_units.Read(pStream);
 
 	m_Properties.readWrapper(pStream);
-	WRAPPER_READ(wrapper, "CvPlot", &m_bIgnoringImprovementUpgrade);
-	WRAPPER_READ(wrapper, "CvPlot", &m_iCanHaveImprovementAsUpgradeCache);
+	WRAPPER_READ(wrapper, "CvPlot", &m_bImprovementUpgradable);
+	WRAPPER_READ(wrapper, "CvPlot", &m_iImprovementUpgradeHash);
 	WRAPPER_READ(wrapper, "CvPlot", &m_iCurrentRoundofUpgradeCache);
 	WRAPPER_READ(wrapper, "CvPlot", &m_iImprovementCurrentValue);
 
@@ -12786,17 +12730,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 	uint uiFlag=0;
 	WRAPPER_WRITE(wrapper, "CvPlot", uiFlag);		// flag for expansion
 
-/************************************************************************************************/
-/* DCM	                  Start		 05/31/10                        Johnny Smith               */
-/*                                                                   Afforess                   */
-/* Battle Effects                                                                               */
-/************************************************************************************************/
-	// Dale - BE: Battle Effect START
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iBattleCountdown);
-	// Dale - BE: Battle Effect END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iX);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iY);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iArea);
@@ -12824,11 +12758,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 
 	WRAPPER_WRITE(wrapper, "CvPlot", m_bStartingPlot);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_bHills);
-/************************************************************************************************/
-/* Afforess	Mountains Start		 08/03/09                                           		 */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	WRAPPER_WRITE(wrapper, "CvPlot", m_bDepletedMine); // deleteMe
 	WRAPPER_WRITE_STRING(wrapper, "CvPlot", m_szLandmarkMessage);
 	WRAPPER_WRITE_STRING(wrapper, "CvPlot", m_szLandmarkName);
@@ -12846,9 +12776,7 @@ void CvPlot::write(FDataStreamBase* pStream)
 	}
 
 	WRAPPER_WRITE(wrapper, "CvPlot", m_zobristContribution);
-/************************************************************************************************/
-/* Afforess	Mountains End       END        		                                             */
-/************************************************************************************************/
+
 	WRAPPER_WRITE(wrapper, "CvPlot", m_bNOfRiver);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_bWOfRiver);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_bIrrigated);
@@ -13121,8 +13049,8 @@ void CvPlot::write(FDataStreamBase* pStream)
 	m_units.Write(pStream);
 
 	m_Properties.writeWrapper(pStream);
-	WRAPPER_WRITE(wrapper, "CvPlot", m_bIgnoringImprovementUpgrade);
-	WRAPPER_WRITE(wrapper, "CvPlot", m_iCanHaveImprovementAsUpgradeCache);
+	WRAPPER_WRITE(wrapper, "CvPlot", m_bImprovementUpgradable);
+	WRAPPER_WRITE(wrapper, "CvPlot", m_iImprovementUpgradeHash);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iCurrentRoundofUpgradeCache);
 	WRAPPER_WRITE(wrapper, "CvPlot", m_iImprovementCurrentValue);
 
@@ -14418,38 +14346,12 @@ void CvPlot::setClaimingOwner(PlayerTypes eNewValue)
 	m_eClaimingOwner = eNewValue;
 }
 
-#ifdef OLD_VERSION_PRE_SUPER_FORTS
-void CvPlot::changeActsAsCity(PlayerTypes ePlayer, int iChange)
-{
-	CvPlot* pAdjacentPlot;
-	int iI;
-
-	for (iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
-	{
-		pAdjacentPlot = plotDirection(getX(), getY(), ((DirectionTypes)iI));
-
-		if (pAdjacentPlot != NULL)
-		{
-			if (iChange > 0)
-			{
-				pAdjacentPlot->changeCulture(ePlayer, iChange, false);
-			}
-			pAdjacentPlot->changeCultureRangeCities(ePlayer, 1, iChange, false, false);
-		}
-	}
-
-	if (iChange > 0)
-	{
-		changeCulture(ePlayer, iChange, false);
-	}
-	changeCultureRangeCities(ePlayer, 1, iChange, false, false);
-}
-#endif
 
 bool CvPlot::isActsAsCity() const
 {
 	return (getImprovementType() != NO_IMPROVEMENT) && GC.getImprovementInfo(getImprovementType()).isActsAsCity();
 }
+
 
 bool CvPlot::changeBuildProgress(BuildTypes eBuild, int iChange, PlayerTypes ePlayer)
 {
@@ -15176,150 +15078,14 @@ void CvPlot::enableCenterUnitRecalc(bool bEnable)
 	}
 }
 
-bool CvPlot::isPlotIgnoringImprovementUpgrade() const
+bool CvPlot::isImprovementUpgradable() const
 {
-	return m_bIgnoringImprovementUpgrade;
+	return m_bImprovementUpgradable;
 }
 
-void CvPlot::setPlotIgnoringImprovementUpgrade(bool bNewValue)
+void CvPlot::setImprovementUpgradeCache(const int iNewValue)
 {
-	m_bIgnoringImprovementUpgrade = bNewValue;
-}
-
-void CvPlot::setImprovementUpgrade()
-{
-	TeamTypes eTeam = GET_PLAYER(getOwner()).getTeam();
-	ImprovementTypes ePrimaryUpgrade = GET_TEAM(getTeam()).getImprovementUpgrade(getImprovementType());
-	ImprovementTypes eUpgrade = NO_IMPROVEMENT;
-	//canHaveImprovement can be dramatically improved for processing
-	if (canHaveImprovementAsUpgrade(ePrimaryUpgrade, eTeam, false, false))
-	{
-		if (GC.getImprovementInfo(ePrimaryUpgrade).getHighestCost() < GET_PLAYER(getOwner()).getEffectiveGold())
-		{
-			eUpgrade = ePrimaryUpgrade;
-		}
-	}
-	else if (GC.getImprovementInfo(getImprovementType()).getNumAlternativeImprovementUpgradeTypes() > 0)
-	{
-		for (int iI = 0; iI < GC.getImprovementInfo(getImprovementType()).getNumAlternativeImprovementUpgradeTypes(); ++iI)
-		{
-			ImprovementTypes ePotentialUpgrade = (ImprovementTypes)GC.getImprovementInfo(getImprovementType()).getAlternativeImprovementUpgradeType(iI);
-
-			if (canHaveImprovementAsUpgrade(ePotentialUpgrade, eTeam, false, false)
-			&& GC.getImprovementInfo(ePotentialUpgrade).getHighestCost() < GET_PLAYER(getOwner()).getEffectiveGold())
-			{
-				eUpgrade = ePotentialUpgrade;
-				break;
-			}
-		}
-	}
-
-	if (eUpgrade == NO_IMPROVEMENT)
-	{
-		setPlotIgnoringImprovementUpgrade(true);
-		return;
-	}
-
-	BuildTypes eBestBuild = NO_BUILD;
-	int iBestProduction = 0;
-	int iProduction = 0;
-	CvCity* pCity = NULL;
-	CvWString szBuffer;
-	if (getFeatureType() != NO_FEATURE)
-	{
-		FAssertMsg(eTeam != NO_TEAM, "eTeam should be valid");
-
-		for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
-		{
-			if ((ImprovementTypes)GC.getBuildInfo((BuildTypes)iI).getImprovement() == eUpgrade)
-			{
-				BuildTypes eBuild = ((BuildTypes)iI);
-				if (GET_TEAM(eTeam).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getTechPrereq()))
-				{
-					if (GC.getBuildInfo(eBuild).isFeatureRemove(getFeatureType()))
-					{
-						iProduction = getFeatureProduction(eBuild, eTeam, &pCity);
-						if (iProduction >= iBestProduction && iProduction != -1)
-						{
-							iBestProduction = iProduction;
-							eBestBuild = eBuild;
-						}
-
-					}
-					else
-					{
-						iBestProduction = -1;
-						eBestBuild = eBuild;
-					}
-				}
-				else
-				{
-					return;
-				}
-			}
-		}
-		if (iBestProduction == -1)
-		{
-			if (GC.getImprovementInfo(eUpgrade).getHighestCost() < GET_PLAYER(getOwner()).getEffectiveGold())
-			{
-				setImprovementType(eUpgrade);
-			}
-			else
-			{
-				return;
-			}
-		}
-		else
-		{
-			if (GET_PLAYER(getOwner()).isHuman())
-			{
-				GET_PLAYER(getOwner()).upgradePlotPopup(getImprovementType(), getX(), getY());
-				//send popup if player is human
-			}
-			else if (GC.getImprovementInfo(eUpgrade).getHighestCost() < GET_PLAYER(getOwner()).getEffectiveGold())
-			{
-				if (pCity != NULL)
-				{
-					pCity->changeFeatureProduction(iBestProduction);
-				}
-
-				MEMORY_TRACK_EXEMPT();
-
-				if ( isInViewport() && pCity != NULL)
-				{
-					szBuffer = gDLL->getText("TXT_KEY_MISC_CLEARING_FEATURE_BONUS", GC.getFeatureInfo(getFeatureType()).getTextKeyWide(), iBestProduction, pCity->getNameKey());
-					AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer,  ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), MESSAGE_TYPE_INFO, GC.getFeatureInfo(getFeatureType()).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), getViewportX(),getViewportY(), true, true);
-				}
-
-				// Python Event
-				CvEventReporter::getInstance().plotFeatureRemoved(this, getFeatureType(), pCity);
-
-				setFeatureType(NO_FEATURE);
-
-				if ( pCity != NULL )
-				{
-					pCity->clearCultureDistanceCache();
-				}
-
-				setImprovementType(eUpgrade);
-			}
-			else
-			{
-				return;
-			}
-		}
-	}
-	else if (eUpgrade != NO_IMPROVEMENT)
-	{
-		if (GC.getImprovementInfo(eUpgrade).getHighestCost() < GET_PLAYER(getOwner()).getEffectiveGold())
-		{
-			setImprovementType(eUpgrade);
-		}
-		else
-		{
-			return;
-		}
-	}
+	m_iCurrentRoundofUpgradeCache = iNewValue;
 }
 
 int CvPlot::getInjuredUnitCombatsUnsupportedByHealer(PlayerTypes ePlayer, UnitCombatTypes eUnitCombat, DomainTypes eDomain) const

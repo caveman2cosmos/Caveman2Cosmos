@@ -15968,7 +15968,7 @@ void CvCity::setWorkingPlot(int iIndex, bool bNewValue)
 			FAssertMsg(pPlot != NULL, CvString::format("pPlot was null for iIndex %d", iIndex).c_str());
 			if (pPlot)
 			{
-				pPlot->setPlotIgnoringImprovementUpgrade(false);
+				pPlot->setImprovementUpgradeCache(-1);
 			}
 		}
 	}

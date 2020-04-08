@@ -1998,7 +1998,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_NO</Tag>
-		<English>No Upgrade (Will not continue to attempt to upgrade.)</English>
+		<English>No Upgrade</English>
 		<French>Pas d'amélioration possible (pas de tentative d'amélioration)</French>
 		<Polish>Nie ulepszaj (system nie będzie pytał się o to ponownie)</Polish>
 	</TEXT>
