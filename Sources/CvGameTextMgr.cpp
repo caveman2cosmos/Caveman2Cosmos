@@ -9716,51 +9716,45 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 				}
 			}
 
-			if (pPlot->getTeam() != NO_TEAM && GET_TEAM(pPlot->getTeam()).getImprovementUpgrade(eImprovement) != NO_IMPROVEMENT)
+			if (pPlot->isImprovementUpgradable())
 			{
-				if (pPlot->getUpgradeProgressHundredths() > 0 || pPlot->isBeingWorked() && !impInfo.isUpgradeRequiresFortify())
+				if (pPlot->getTeam() != NO_TEAM && GET_TEAM(pPlot->getTeam()).getImprovementUpgrade(eImprovement) != NO_IMPROVEMENT)
 				{
-					if (pPlot->isImprovementUpgradable())
+					if (pPlot->getUpgradeProgressHundredths() >= 100*GC.getGame().getImprovementUpgradeTime(eImprovement))
 					{
-						szString.append(gDLL->getText("TXT_KEY_PLOT_IMP_UPGRADE", pPlot->getUpgradeTimeLeft(eImprovement, eRevealOwner),
-							GC.getImprovementInfo((ImprovementTypes)impInfo.getImprovementUpgrade()).getTextKeyWide()));
-
+						szString.append(gDLL->getText("TXT_KEY_IMPROVEMENT_UPGRADE_FROZEN"));
+					}
+					else
+					{
+						if (pPlot->getUpgradeProgressHundredths() > 0 || pPlot->isBeingWorked() && !impInfo.isUpgradeRequiresFortify())
+						{
+							szString.append(gDLL->getText("TXT_KEY_PLOT_IMP_UPGRADE", pPlot->getUpgradeTimeLeft(eImprovement, eRevealOwner),
+								GC.getImprovementInfo((ImprovementTypes)impInfo.getImprovementUpgrade()).getTextKeyWide()));
+						}
+						else if (impInfo.isUpgradeRequiresFortify())
+						{
+							szString.append(gDLL->getText("TXT_KEY_PLOT_FORTIFY_TO_UPGRADE",
+								GC.getImprovementInfo((ImprovementTypes)impInfo.getImprovementUpgrade()).getTextKeyWide()));
+						}
+						else
+						{
+							szString.append(gDLL->getText("TXT_KEY_PLOT_WORK_TO_UPGRADE",
+								GC.getImprovementInfo((ImprovementTypes)impInfo.getImprovementUpgrade()).getTextKeyWide()));
+						}
 						for (int iI = 0; iI < impInfo.getNumAlternativeImprovementUpgradeTypes(); iI++)
 						{
 							szString.append(gDLL->getText("TXT_KEY_PLOT_IMP_ALTERNATIVE_UPGRADE",
 								GC.getImprovementInfo((ImprovementTypes)impInfo.getAlternativeImprovementUpgradeType(iI)).getTextKeyWide()));
 						}
 					}
-					else
-					{
-						szString.append(gDLL->getText("TXT_KEY_IMPROVEMENT_UPGRADE_FROZEN"));
-					}
 				}
 				else
 				{
-					if (impInfo.isUpgradeRequiresFortify())
+					const TechTypes ePrereqTech = (TechTypes)GC.getImprovementInfo((ImprovementTypes)impInfo.getImprovementUpgrade()).getPrereqTech();
+					if (ePrereqTech != NO_TECH)
 					{
-						szString.append(gDLL->getText("TXT_KEY_PLOT_FORTIFY_TO_UPGRADE",
-							GC.getImprovementInfo((ImprovementTypes)impInfo.getImprovementUpgrade()).getTextKeyWide()));
+						szString.append(gDLL->getText("TXT_KEY_PLOT_TECH_TO_UPGRADE", GC.getTechInfo(ePrereqTech).getTextKeyWide()));
 					}
-					else
-					{
-						szString.append(gDLL->getText("TXT_KEY_PLOT_WORK_TO_UPGRADE",
-							GC.getImprovementInfo((ImprovementTypes)impInfo.getImprovementUpgrade()).getTextKeyWide()));
-					}
-					for (int iI = 0; iI < impInfo.getNumAlternativeImprovementUpgradeTypes(); iI++)
-					{
-						szString.append(gDLL->getText("TXT_KEY_PLOT_IMP_ALTERNATIVE_UPGRADE",
-							GC.getImprovementInfo((ImprovementTypes)impInfo.getAlternativeImprovementUpgradeType(iI)).getTextKeyWide()));
-					}
-				}
-			}
-			else if (pPlot->getTeam() != NO_TEAM && (impInfo.getImprovementUpgrade() != GET_TEAM(pPlot->getTeam()).getImprovementUpgrade(eImprovement)))
-			{
-				const TechTypes ePrereqTech = (TechTypes)GC.getImprovementInfo((ImprovementTypes)impInfo.getImprovementUpgrade()).getPrereqTech();
-				if (ePrereqTech != NO_TECH)
-				{
-					szString.append(gDLL->getText("TXT_KEY_PLOT_TECH_TO_UPGRADE", GC.getTechInfo(ePrereqTech).getTextKeyWide()));
 				}
 			}
 		}

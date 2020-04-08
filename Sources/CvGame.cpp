@@ -3607,7 +3607,7 @@ int CvGame::getImprovementUpgradeTime(ImprovementTypes eImprovement) const
 	iTime *= GC.getEraInfo(getCurrentEra()).getImprovementPercent();
 	iTime /= 100;
 
-	return iTime;
+	return std::max(1, iTime);
 }
 
 

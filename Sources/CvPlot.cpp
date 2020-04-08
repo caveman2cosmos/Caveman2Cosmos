@@ -92,7 +92,7 @@ CvPlot::CvPlot()
 	m_pFlagSymbolOffset = NULL;
 	m_pCenterUnit = NULL;
 	m_bInhibitCenterUnitCalculation = false;
-	m_bImprovementUpgradable = true;
+	m_bImprovementUpgradable = false;
 	m_iImprovementUpgradeHash = 0;
 	m_iCurrentRoundofUpgradeCache = -1;
 	m_iImprovementCurrentValue = 0;
@@ -844,22 +844,10 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 	{
 		return; // Nope
 	}
-	// Is it upgradable?
-	const ImprovementTypes eMainUpgrade = GET_TEAM(eTeam).getImprovementUpgrade(eType);
-	if (eMainUpgrade == NO_IMPROVEMENT)
-	{
-		m_bImprovementUpgradable = false;
-		return;
-	}
-	const int iTime = 100*GC.getGame().getImprovementUpgradeTime(eType);
-	if (iTime < 1)
-	{
-		m_bImprovementUpgradable = false;
-		return;
-	}
 	// Evaluate potential upgrades
 	ImprovementTypes eUpgrade = NO_IMPROVEMENT;
 	int iHash = 512; // Super simple hash, but should be adequate for this purpose.
+	const ImprovementTypes eMainUpgrade = (ImprovementTypes)GC.getImprovementInfo(eType).getImprovementUpgrade();
 
 	if (canHaveImprovement(eMainUpgrade, eTeam, false, true, true))
 	{
@@ -893,12 +881,7 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 		}
 		return;
 	}
-	if (iHash == m_iImprovementUpgradeHash)
-	{
-		setImprovementUpgradeCache(GET_TEAM(eTeam).getLastRoundOfValidImprovementCacheUpdate());
-		return;
-	}
-	m_iImprovementUpgradeHash = iHash;
+	const int iTime = 100*GC.getGame().getImprovementUpgradeTime(eType);
 
 	if (getUpgradeProgressHundredths() < iTime)
 	{
@@ -926,8 +909,15 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 	}
 	if (getUpgradeProgressHundredths() >= iTime)
 	{
-		// In case no upgrade happens, no point rechecking later unless the situation change.
 		setImprovementUpgradeCache(GET_TEAM(eTeam).getLastRoundOfValidImprovementCacheUpdate());
+
+		if (iHash == m_iImprovementUpgradeHash)
+		{ // Same selection as last time.
+			return;
+		}
+		m_iImprovementUpgradeHash = iHash;
+
+		// In case no upgrade happens, no point rechecking later unless the situation change.
 
 		if (eUpgrade == eMainUpgrade) // Only one potential upgrade for this plot.
 		{
@@ -8064,6 +8054,16 @@ void CvPlot::setImprovementType(ImprovementTypes eNewImprovement)
 					setBonusType(eAddingBonus);
 				}
 			}
+			if (GC.getImprovementInfo(eNewImprovement).getImprovementUpgrade() != NO_IMPROVEMENT && GC.getGame().getImprovementUpgradeTime(eNewImprovement) > 0)
+			{
+				m_bImprovementUpgradable = true;
+				setUpgradeProgressHundredths(0);
+				setImprovementUpgradeCache(-1);
+			}
+		}
+		else
+		{
+			m_bImprovementUpgradable = false;
 		}
 		updateSight(false, true);
 
@@ -8087,9 +8087,6 @@ void CvPlot::setImprovementType(ImprovementTypes eNewImprovement)
 		{
 			setImprovementDuration(0);
 		}
-		m_bImprovementUpgradable = true;
-		setUpgradeProgressHundredths(0);
-		setImprovementUpgradeCache(-1);
 
 		for (int iI = 0; iI < MAX_TEAMS; ++iI)
 		{
