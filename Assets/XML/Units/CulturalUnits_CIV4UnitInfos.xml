@@ -14866,10 +14866,6 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SEASONAL_CAMP_PEAK</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
 					<BuildType>BUILD_TRAIL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -17241,10 +17237,6 @@
 			<Builds>
 				<Build>
 					<BuildType>BUILD_SEASONAL_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SEASONAL_CAMP_PEAK</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -22473,10 +22465,6 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SEASONAL_CAMP_PEAK</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
 					<BuildType>BUILD_TRAIL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -24477,10 +24465,6 @@
 			<Builds>
 				<Build>
 					<BuildType>BUILD_SEASONAL_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SEASONAL_CAMP_PEAK</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -35600,10 +35584,6 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SEASONAL_CAMP_PEAK</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
 					<BuildType>BUILD_FOREST_PRESERVE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -41596,10 +41576,6 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SEASONAL_CAMP_PEAK</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
 					<BuildType>BUILD_TRAIL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -42059,10 +42035,6 @@
 			<Builds>
 				<Build>
 					<BuildType>BUILD_SEASONAL_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SEASONAL_CAMP_PEAK</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -42540,10 +42512,6 @@
 			<Builds>
 				<Build>
 					<BuildType>BUILD_SEASONAL_CAMP</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_SEASONAL_CAMP_PEAK</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>

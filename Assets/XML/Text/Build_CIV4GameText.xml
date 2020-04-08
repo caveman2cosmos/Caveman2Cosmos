@@ -1231,8 +1231,4 @@
 		<Tag>TXT_KEY_BUILD_SEASONAL_CAMP</Tag>
 		<English>Build [LINK=IMPROVEMENT_SEASONAL_CAMP]Seasonal Camp[\LINK]</English>
 	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILD_SEASONAL_CAMP_PEAK</Tag>
-		<English>Build [LINK=IMPROVEMENT_SEASONAL_CAMP]Seasonal Camp (Peak)[\LINK]</English>
-	</TEXT>
 </Civ4GameText>

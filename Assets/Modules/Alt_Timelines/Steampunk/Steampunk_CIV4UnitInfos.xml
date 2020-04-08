@@ -498,10 +498,6 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_SEASONAL_CAMP_PEAK</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
 					<BuildType>BUILD_TRAIL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
