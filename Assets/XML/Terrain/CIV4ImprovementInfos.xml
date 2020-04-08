@@ -12886,6 +12886,7 @@
 			<bOutsideBorders>1</bOutsideBorders>
 			<bHillsMakesValid>1</bHillsMakesValid>
 			<bPeakMakesValid>1</bPeakMakesValid>
+			<iCulture>1</iCulture>
 			<iDefenseModifier>5</iDefenseModifier>
 			<iUpgradeTime>10</iUpgradeTime>
 			<ImprovementUpgrade>IMPROVEMENT_PLANT_GATHERING_CAMP</ImprovementUpgrade>

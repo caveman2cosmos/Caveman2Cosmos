@@ -3,10 +3,8 @@
 #ifndef CvPlot_h__
 #define CvPlot_h__
 
-
 // CvPlot.h
 
-//#include "CvStructs.h"
 #include "LinkedList.h"
 #include <bitset>
 #include <vector>
@@ -1185,7 +1183,20 @@ public:
 	// Algorithm/range helpers
 	//
 	struct fn {
+		DECLARE_MAP_FUNCTOR(CvPlot, FeatureTypes, getFeatureType);
+		DECLARE_MAP_FUNCTOR(CvPlot, TeamTypes, getTeam);
+		DECLARE_MAP_FUNCTOR(CvPlot, PlayerTypes, getOwner);
+		DECLARE_MAP_FUNCTOR(CvPlot, bool, isOwned);
+		DECLARE_MAP_FUNCTOR(CvPlot, bool, isImpassable);
+		DECLARE_MAP_FUNCTOR(CvPlot, bool, isIrrigated);
 		DECLARE_MAP_FUNCTOR(CvPlot, bool, isWater);
+		DECLARE_MAP_FUNCTOR(CvPlot, int, getArea);
+		DECLARE_MAP_FUNCTOR(CvPlot, const CvArea*, area);
+
+		DECLARE_MAP_FUNCTOR_2(CvPlot, bool, isRevealed, TeamTypes, bool);
+		DECLARE_MAP_FUNCTOR_2(CvPlot, bool, isVisible, TeamTypes, bool);
+
+		DECLARE_MAP_FUNCTOR_2(CvPlot, bool, isPlotGroupConnectedBonus, PlayerTypes, BonusTypes);
 	};
 };
 
