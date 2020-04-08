@@ -917,8 +917,6 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 		}
 		m_iImprovementUpgradeHash = iHash;
 
-		// In case no upgrade happens, no point rechecking later unless the situation change.
-
 		if (eUpgrade == eMainUpgrade) // Only one potential upgrade for this plot.
 		{
 			setImprovementType(eUpgrade);
