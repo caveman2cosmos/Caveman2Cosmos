@@ -1771,7 +1771,8 @@ void CyPlayer::setNewMinorCivPlayerAlive(bool bNewValue)
 	if (m_pPlayer)
 	{
 		m_pPlayer->setNewPlayerAlive(bNewValue);
-		m_pPlayer->changeGoldenAgeTurns(GC.getEMERGING_MINOR_CIV_GOLDEN_AGE_TURNS());
+		const int iGoldenAgeTurns = GC.getEMERGING_MINOR_CIV_GOLDEN_AGE_TURNS() * GC.getGameSpeedInfo(getGameSpeedType()).getGoldenAgePercent() / 100;
+		m_pPlayer->changeGoldenAgeTurns(iGoldenAgeTurns > 1 ? iGoldenAgeTurns : 1);
 	}
 }
 
