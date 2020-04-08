@@ -12650,6 +12650,7 @@
 						<iYieldChange>4</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
+				<BonusTypeStruct>
 					<BonusType>BONUS_MANGANESE</BonusType>
 					<bBonusTrade>1</bBonusTrade>
 					<iDiscoverRand>5000</iDiscoverRand>
