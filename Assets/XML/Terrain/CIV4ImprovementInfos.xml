@@ -12885,7 +12885,6 @@
 			<bActsAsCity>0</bActsAsCity>
 			<bOutsideBorders>1</bOutsideBorders>
 			<bHillsMakesValid>1</bHillsMakesValid>
-			<bPeakMakesValid>1</bPeakMakesValid>
 			<iCulture>1</iCulture>
 			<iDefenseModifier>5</iDefenseModifier>
 			<iUpgradeTime>10</iUpgradeTime>
@@ -13356,6 +13355,128 @@
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_ANCIENT_RELICS</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+			</BonusTypeStructs>
+		</ImprovementInfo>
+		<!-- Seasonal Camp (Peak) -->
+		<ImprovementInfo>
+			<Type>IMPROVEMENT_SEASONAL_CAMP_PEAK</Type>
+			<Description>TXT_KEY_IMPROVEMENT_SEASONAL_CAMP_PEAK</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_SEASONAL_CAMP_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_WOODEN_WATCHTOWER</ArtDefineTag>
+			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
+			<YieldChanges>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>1</iYieldChange>
+			</YieldChanges>
+			<bActsAsCity>0</bActsAsCity>
+			<bOutsideBorders>1</bOutsideBorders>
+			<bPeakMakesValid>1</bPeakMakesValid>
+			<bPeakImprovement>1</bPeakImprovement>
+			<iCulture>1</iCulture>
+			<iDefenseModifier>5</iDefenseModifier>
+			<iUpgradeTime>10</iUpgradeTime>
+			<ImprovementUpgrade>IMPROVEMENT_EARLY_MOUNTAIN_MINE</ImprovementUpgrade>
+			<AlternativeImprovementUpgradeTypes>
+				<ImprovementType>IMPROVEMENT_MOUNTAIN_MINE</ImprovementType>
+			</AlternativeImprovementUpgradeTypes>
+			<BonusTypeStructs>
+				<BonusTypeStruct>
+					<BonusType>BONUS_AMBER</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_BAUXITE_ORE</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_COAL</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_COPPER_ORE</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_GEODE</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_GOLD_ORE</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_IRON_ORE</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_SILVER_ORE</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_URANIUM</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_SULPHUR</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_LEAD_ORE</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_RUBIES</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_SAPPHIRES</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_DIAMOND</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_PLATINUM_ORE</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_TIN_ORE</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_TITANIUM_ORE</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_JADE</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_MARBLE</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_STONE</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_OBSIDIAN</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_TURQUOISE</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_FINE_CLAY</BonusType>
+					<iDiscoverRand>2500</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_MANGANESE</BonusType>
 					<iDiscoverRand>2500</iDiscoverRand>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
