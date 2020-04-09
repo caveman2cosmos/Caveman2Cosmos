@@ -8379,10 +8379,7 @@ ImprovementTypes CvTeam::finalImprovementUpgrade(ImprovementTypes eImprovement) 
 	{
 		return finalImprovementUpgrade(getImprovementUpgrade(eImprovement));
 	}
-	else
-	{
-		return eImprovement;
-	}
+	return eImprovement;
 }
 
 bool CvTeam::isFreeTradeAgreement(TeamTypes eIndex) const

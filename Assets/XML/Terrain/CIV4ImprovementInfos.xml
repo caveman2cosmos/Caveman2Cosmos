@@ -12834,7 +12834,7 @@
 			<iCulture>1</iCulture>
 			<iDefenseModifier>5</iDefenseModifier>
 			<iUpgradeTime>2</iUpgradeTime>
-			<ImprovementUpgrade>IMPROVEMENT_PLANT_GATHERING_CAMP</ImprovementUpgrade>
+			<ImprovementUpgrade>IMPROVEMENT_COTTAGE</ImprovementUpgrade>
 			<AlternativeImprovementUpgradeTypes>
 				<ImprovementType>IMPROVEMENT_SCAVENGING_CAMP</ImprovementType>
 				<ImprovementType>IMPROVEMENT_FRUIT_GATHERING_CAMP</ImprovementType>
@@ -12846,7 +12846,7 @@
 				<ImprovementType>IMPROVEMENT_STONE_TOOLS_WORKSHOP</ImprovementType>
 				<ImprovementType>IMPROVEMENT_SALT_GATHERER</ImprovementType>
 				<ImprovementType>IMPROVEMENT_TAR_GATHERER</ImprovementType>
-				<ImprovementType>IMPROVEMENT_COTTAGE</ImprovementType>
+				<ImprovementType>IMPROVEMENT_PLANT_GATHERING_CAMP</ImprovementType>
 			</AlternativeImprovementUpgradeTypes>
 			<TerrainMakesValids>
 				<TerrainMakesValid>

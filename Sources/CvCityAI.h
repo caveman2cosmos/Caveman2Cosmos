@@ -193,7 +193,6 @@ public:
 	int AI_countWorkedPoorTiles();
 	int AI_getTargetSize();
 	void AI_getYieldMultipliers();
-	int AI_getImprovementValue();
 
 	BuildTypes AI_getBestBuild(int iIndex);
 	int AI_countBestBuilds(CvArea* pArea);
@@ -340,7 +339,7 @@ protected:
 
 	void AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peBestBuild, int iFoodPriority, int iProductionPriority, int iCommercePriority, bool bChop, int iHappyAdjust, int iHealthAdjust, int iFoodChange);
 
-	int AI_getImprovementValue( CvPlot* pPlot, ImprovementTypes eImprovement, int iFoodPriority, int iProductionPriority, int iCommercePriority, int iFoodChange, bool bOriginal = false );
+	int AI_getImprovementValue(CvPlot* pPlot, ImprovementTypes eImprovement, int iFoodPriority, int iProductionPriority, int iCommercePriority, int iFoodChange);
 	void AI_getYieldMultipliers( int &iFoodMultiplier, int &iProductionMultiplier, int &iCommerceMultiplier, int &iDesiredFoodChange );
 
 	int tradeRouteValue(CvBuildingInfo& kBuilding, YieldTypes eYield, bool bForeignTrade) const;

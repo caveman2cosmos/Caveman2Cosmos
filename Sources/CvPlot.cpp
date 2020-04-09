@@ -931,8 +931,7 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 		}
 		else // AI choice evaluation
 		{
-			// Toffer - I applied the pre-existing AI_getImprovementValue which wasn't used for anything else.
-			// TODO - Simplify AI_getImprovementValue to fit the need of improvement upgrading.
+			// Toffer - Improve AI_getImprovementValue ** TODO **
 			ImprovementTypes eBestUpgrade = NO_IMPROVEMENT;
 
 			CvCity* pCity = GC.getMap().findCity(getX(), getY(), getOwner(), NO_TEAM, false);
@@ -942,7 +941,7 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 			int iDesiredFoodChange = 0;
 			pCity->AI_getYieldMultipliers(iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange);
 
-			int iBestValue = pCity->AI_getImprovementValue(this, eType, iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange, true);
+			int iBestValue = pCity->AI_getImprovementValue(this, eType, iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange);
 
 			if (GC.getImprovementInfo(eMainUpgrade).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold() && canHaveImprovement(eMainUpgrade, eTeam, false, true, true))
 			{
@@ -7841,17 +7840,13 @@ void CvPlot::resetFeatureModel()
 
 BonusTypes CvPlot::getBonusType(TeamTypes eTeam) const
 {
-	if (eTeam != NO_TEAM)
+	if (eTeam != NO_TEAM && m_eBonusType != NO_BONUS)
 	{
-		if (m_eBonusType != NO_BONUS)
+		if (!GET_TEAM(eTeam).isHasTech((TechTypes)GC.getBonusInfo((BonusTypes)m_eBonusType).getTechReveal()) && !GET_TEAM(eTeam).isForceRevealedBonus((BonusTypes)m_eBonusType))
 		{
-			if (!GET_TEAM(eTeam).isHasTech((TechTypes)(GC.getBonusInfo((BonusTypes)m_eBonusType).getTechReveal())) && !GET_TEAM(eTeam).isForceRevealedBonus((BonusTypes)m_eBonusType))
-			{
-				return NO_BONUS;
-			}
+			return NO_BONUS;
 		}
 	}
-
 	return (BonusTypes)m_eBonusType;
 }
 
@@ -7860,16 +7855,11 @@ BonusTypes CvPlot::getNonObsoleteBonusType(TeamTypes eTeam) const
 {
 	FAssert(eTeam != NO_TEAM);
 
-	BonusTypes eBonus = getBonusType(eTeam);
-	if (eBonus != NO_BONUS)
+	if (m_eBonusType != NO_BONUS && GET_TEAM(eTeam).isBonusObsolete((BonusTypes)m_eBonusType))
 	{
-		if (GET_TEAM(eTeam).isBonusObsolete(eBonus))
-		{
-			return NO_BONUS;
-		}
+		return NO_BONUS;
 	}
-
-	return eBonus;
+	return (BonusTypes)m_eBonusType;
 }
 
 

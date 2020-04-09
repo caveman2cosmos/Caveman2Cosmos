@@ -8873,35 +8873,21 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 				szString.append(szTempBuffer);
 			}
 
-			szTempBuffer.Format(L"\nActual Build Values: ");
-			szString.append(szTempBuffer);
-
+			bool bFirst = true;
 			for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
 			{
-				if( pPlot->canHaveImprovement((ImprovementTypes)iI, pWorkingCity->getTeam()) && GET_PLAYER(pWorkingCity->getOwner()).canBuild(pPlot, (ImprovementTypes)iI, false, false))
+				if (pPlot->canHaveImprovement((ImprovementTypes)iI, pWorkingCity->getTeam(), false, true, true))
 				{
-					int iOtherBuildValue = pWorkingCity->AI_getImprovementValue( pPlot, (ImprovementTypes)iI, iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange);
-					int iOldValue = pWorkingCity->AI_getImprovementValue( pPlot, (ImprovementTypes)iI, iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange, true);
-
-					szTempBuffer.Format(L"\n   %s : %d  (old %d)", GC.getImprovementInfo((ImprovementTypes)iI).getDescription(), iOtherBuildValue, iOldValue );
+					if (bFirst)
+					{
+						szString.append(CvWString::format(L"\nAI improvement upgrade values:\n"));
+						bFirst = false;
+					}
+					szTempBuffer.Format(L"  * %s : %d\n", GC.getImprovementInfo((ImprovementTypes)iI).getDescription(),
+						pWorkingCity->AI_getImprovementValue(pPlot, (ImprovementTypes)iI, iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange));
 					szString.append(szTempBuffer);
 				}
 			}
-
-			szTempBuffer.Format(L"\nStandard Build Values: ");
-			szString.append(szTempBuffer);
-
-			for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
-			{
-				int iOtherBuildValue = pWorkingCity->AI_getImprovementValue( pPlot, (ImprovementTypes)iI, 100, 100, 100, 0);
-				if( iOtherBuildValue > 0 )
-				{
-					szTempBuffer.Format(L"\n   %s : %d", GC.getImprovementInfo((ImprovementTypes)iI).getDescription(), iOtherBuildValue);
-					szString.append(szTempBuffer);
-				}
-			}
-
-			szString.append(NEWLINE);
 		}
 
 		{
