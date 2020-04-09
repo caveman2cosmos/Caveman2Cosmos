@@ -8058,11 +8058,10 @@ void CvPlot::setImprovementType(ImprovementTypes eNewImprovement)
 				setUpgradeProgressHundredths(0);
 				setImprovementUpgradeCache(-1);
 			}
+			else m_bImprovementUpgradable = false;
 		}
-		else
-		{
-			m_bImprovementUpgradable = false;
-		}
+		else m_bImprovementUpgradable = false;
+
 		updateSight(false, true);
 
 		if (eNewImprovement != NO_IMPROVEMENT && GC.getImprovementInfo(eNewImprovement).isChangeRemove())
