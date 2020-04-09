@@ -758,10 +758,9 @@ void CvPlot::doImprovement()
 			}
 			iOdds *= iGameSpeedFactor;
 			iOdds /= 100;
-
 			// Bonus density normalization
-			iOdds *= 1 + map.getNumBonuses((BonusTypes) iI);
-			iOdds /= 3 *(map.getWorldSize() + 1);
+			iOdds *= 7 * (map.getNumBonuses((BonusTypes) iI) + 2);
+			iOdds /= 2 * (map.getWorldSize() + 9);
 
 			if (iOdds < 2 || GC.getGame().getSorenRandNum(iOdds, "Bonus Discovery") == 0)
 			{
@@ -798,8 +797,8 @@ void CvPlot::doImprovement()
 			iOdds *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
 			iOdds /= 100;
 			// Bonus density normalization.
-			iOdds *= 3 *(GC.getMap().getWorldSize() + 1);
-			iOdds /= 1 + GC.getMap().getNumBonuses(eBonus);
+			iOdds *= 2 * (GC.getMap().getWorldSize() + 9);
+			iOdds /= 7 * (GC.getMap().getNumBonuses(eBonus) + 2);
 
 			// This routine is only called for owned plots, no need to check if NO_PLAYER.
 			const int iValue = GET_PLAYER(getOwner()).getResourceConsumption(eBonus);
