@@ -12821,7 +12821,7 @@
 			<Type>IMPROVEMENT_SEASONAL_CAMP</Type>
 			<Description>TXT_KEY_IMPROVEMENT_SEASONAL_CAMP</Description>
 			<Civilopedia>TXT_KEY_IMPROVEMENT_SEASONAL_CAMP_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_IMPROVEMENT_WOODEN_WATCHTOWER</ArtDefineTag>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_SEASONAL_CAMP</ArtDefineTag>
 			<PrereqTech>TECH_NOMADISM</PrereqTech>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
