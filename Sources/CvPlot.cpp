@@ -736,18 +736,19 @@ void CvPlot::doImprovement()
 	PROFILE_FUNC();
 
 	const ImprovementTypes eType = getImprovementType();
-	CvImprovementInfo& pInfo = GC.getImprovementInfo(eType);
+	const CvImprovementInfo& pInfo = GC.getImprovementInfo(eType);
 
 	// Discover bonus
 	if (getBonusType() == NO_BONUS)
 	{
+		const CvMap& map = GC.getMap();
 		int iGameSpeedFactor = -1;
 		for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
 		{
 			int iOdds = pInfo.getImprovementBonusDiscoverRand(iI);
 			if (iOdds < 1
-			|| !GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBonusInfo((BonusTypes) iI).getTechReveal())
-			|| !canHaveBonus((BonusTypes)iI))
+			|| !GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBonusInfo((BonusTypes)iI).getTechReveal())
+			|| !canHaveBonus((BonusTypes) iI))
 			{
 				continue;
 			}
@@ -758,19 +759,23 @@ void CvPlot::doImprovement()
 			iOdds *= iGameSpeedFactor;
 			iOdds /= 100;
 
+			// Bonus density normalization
+			iOdds *= 1 + map.getNumBonuses((BonusTypes) iI);
+			iOdds /= 3 *(map.getWorldSize() + 1);
+
 			if (iOdds < 2 || GC.getGame().getSorenRandNum(iOdds, "Bonus Discovery") == 0)
 			{
-				setBonusType((BonusTypes)iI);
+				setBonusType((BonusTypes) iI);
 
-				const CvCity* pCity = GC.getMap().findCity(getX(), getY(), getOwner(), NO_TEAM, false);
+				const CvCity* pCity = map.findCity(getX(), getY(), getOwner(), NO_TEAM, false);
 
 				if (pCity != NULL && isInViewport())
 				{
 					MEMORY_TRACK_EXEMPT();
 
-					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE", GC.getBonusInfo((BonusTypes) iI).getTextKeyWide(), pCity->getNameKey());
+					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE", GC.getBonusInfo((BonusTypes)iI).getTextKeyWide(), pCity->getNameKey());
 					AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_DISCOVERBONUS", MESSAGE_TYPE_MINOR_EVENT,
-						GC.getBonusInfo((BonusTypes) iI).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), getViewportX(), getViewportY(), true, true);
+						GC.getBonusInfo((BonusTypes)iI).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), getViewportX(), getViewportY(), true, true);
 				}
 				break;
 			}
@@ -790,18 +795,18 @@ void CvPlot::doImprovement()
 		int iOdds = pInfo.getImprovementBonusDepletionRand(eBonus);
 		if (iOdds < 0)
 		{
-			// Gamespeed scaling with built in *100 by omitting the /100 that usually follow GS scaling
 			iOdds *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
-			// Bonus density normalization
-			iOdds *= 4 * ((int)GC.getMap().getWorldSize() + 1);
-			iOdds /= GC.getMap().getNumBonuses(eBonus);
+			iOdds /= 100;
+			// Bonus density normalization.
+			iOdds *= 3 *(GC.getMap().getWorldSize() + 1);
+			iOdds /= 1 + GC.getMap().getNumBonuses(eBonus);
 
-			// This routine is only called for owned plots.
-			const PlayerTypes ePlayer = getOwner();
-			// No need to check if NO_PLAYER
-			if (GET_PLAYER(ePlayer).getResourceConsumption(eBonus) > 0)
+			// This routine is only called for owned plots, no need to check if NO_PLAYER.
+			const int iValue = GET_PLAYER(getOwner()).getResourceConsumption(eBonus);
+			if (iValue > 0)
 			{
-				iOdds /= GET_PLAYER(ePlayer).getResourceConsumption(eBonus);
+				iOdds *= 100;
+				iOdds /= iValue;
 			}
 			if (iOdds < 2 || GC.getGame().getSorenRandNum(iOdds, "Bonus Depletion") == 0)
 			{
@@ -809,14 +814,14 @@ void CvPlot::doImprovement()
 					MEMORY_TRACK_EXEMPT();
 
 					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_RESOURCE_DEPLETED", GC.getBonusInfo(eBonus).getTextKeyWide(), pInfo.getDescription());
-					AddDLLMessage(ePlayer, false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT,
+					AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, NULL, MESSAGE_TYPE_MINOR_EVENT,
 						GC.getBonusInfo(eBonus).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), getX(), getY(), true, true);
 				}
 				GC.getGame().logMsg("Resource Depleted! Resource was %d, The odds were 1 in %d", eBonus, iOdds);
 
 				setBonusType(NO_BONUS);
 
-				CvCity* pCity = GC.getMap().findCity(getX(), getY(), ePlayer, NO_TEAM, false);
+				CvCity* pCity = GC.getMap().findCity(getX(), getY(), getOwner(), NO_TEAM, false);
 
 				if (pCity != NULL) pCity->AI_setAssignWorkDirty(true);
 
