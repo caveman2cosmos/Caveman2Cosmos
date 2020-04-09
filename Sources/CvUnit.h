@@ -3308,7 +3308,6 @@ public:
 		DECLARE_MAP_FUNCTOR_1(CvUnit, int, upgradePrice, UnitTypes);
 		DECLARE_MAP_FUNCTOR_2(CvUnit, bool, canUpgrade, UnitTypes, bool);
 
-		DECLARE_MAP_FUNCTOR(CvUnit, int, getFortifyTurns);
 		DECLARE_MAP_FUNCTOR(CvUnit, int, visibilityRange);
 		DECLARE_MAP_FUNCTOR(CvUnit, int, collateralDamage);
 		DECLARE_MAP_FUNCTOR(CvUnit, int, getBombardRate);
