@@ -8738,7 +8738,8 @@ namespace {
 	};
 };
 
-
+//
+// Only used for improvement upgrading.
 int CvCityAI::AI_getImprovementValue(CvPlot* pPlot, ImprovementTypes eImprovement, int iFoodPriority, int iProductionPriority, int iCommercePriority, int iFoodChange)
 {
 	FAssert(eImprovement != NO_IMPROVEMENT);
@@ -8768,27 +8769,42 @@ int CvCityAI::AI_getImprovementValue(CvPlot* pPlot, ImprovementTypes eImprovemen
 			return 0; //Always prefer improvements which connect bonuses.
 		}
 	}
-	if (improvement.isCarriesIrrigation()) iValue += 100;
-	if (improvement.isZOCSource()) iValue += 200;
+	if (improvement.isCarriesIrrigation()) iValue += 200;
 
-	iValue += 3 * improvement.getAirBombDefense();
-	iValue += 10 * improvement.getCulture();
+	const int iCultureRange = improvement.getCultureRange() + 1;
+	iValue += 4 * improvement.getCulture() * iCultureRange * iCultureRange;
+
+	int iMilitaryValue = 3 * improvement.getAirBombDefense();
+
+	if (improvement.isZOCSource()) iMilitaryValue += 200;
+
+	iMilitaryValue += 2*(5*improvement.getVisibilityChange() + 2*improvement.getSeeFrom());
 
 	const int iDefense = improvement.getDefenseModifier();
 	if (iDefense < 0)
 	{
-		iValue -= iDefense*iDefense;
+		iMilitaryValue -= iDefense*iDefense;
 	}
 	else if (iDefense > 0)
 	{
-		iValue += iDefense*iDefense;
+		iMilitaryValue += iDefense*iDefense;
 	}
+	if (improvement.isActsAsCity())
+	{
+		iMilitaryValue *= (2 + iCultureRange);
+	}
+	else if (improvement.isUpgradeRequiresFortify())
+	{
+		iMilitaryValue *= 5;
+		iMilitaryValue /= 3;
+	}
+	iValue += iMilitaryValue;
 
 	ImprovementTypes eFinalUpgrade = finalImprovementUpgrade(eImprovement);
 	FAssert(eFinalUpgrade != NO_IMPROVEMENT);
 
 	int yields[NUM_YIELD_TYPES];
-
+	iValue *= 2;
 	for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 	{
 		yields[iJ] =
@@ -8799,6 +8815,7 @@ int CvCityAI::AI_getImprovementValue(CvPlot* pPlot, ImprovementTypes eImprovemen
 	iValue += yields[YIELD_FOOD] * iFoodPriority;
 	iValue += yields[YIELD_PRODUCTION] * iProductionPriority;
 	iValue += yields[YIELD_COMMERCE] * iCommercePriority;
+	iValue /= 10;
 
 	if (yields[YIELD_FOOD]*3/5 > (yields[YIELD_PRODUCTION] + yields[YIELD_COMMERCE]) / 2)
 	{

@@ -49,19 +49,9 @@ CvPlot::CvPlot()
 	}
 
 	m_aiYield = new short[NUM_YIELD_TYPES];
-#ifdef UNUSED_SUPER_FORTS_METHODS
-	m_aiCultureRangeForts = NULL; // Super Forts *culture*
-#endif
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      08/21/09                                jdog5000      */
-/*                                                                                              */
-/* Efficiency                                                                                   */
-/************************************************************************************************/
+
 	// Plot danger cache
 	m_abIsTeamBorderCache = new bool[MAX_TEAMS];
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
 	m_aiFoundValue = NULL;
 	m_aiPlayerCityRadiusCount = NULL;
@@ -174,9 +164,7 @@ void CvPlot::uninit()
 	std::vector<std::pair<PlayerTypes,int> >().swap(m_aiCulture);
 
 	SAFE_DELETE_ARRAY(m_aiFoundValue);
-#ifdef UNUSED_SUPER_FORTS_METHODS
-	SAFE_DELETE_ARRAY(m_aiCultureRangeForts); // Super Forts *culture*
-#endif
+
 	SAFE_DELETE_ARRAY(m_aiPlayerCityRadiusCount);
 	SAFE_DELETE_ARRAY(m_aiPlotGroup);
 
@@ -935,6 +923,8 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 			ImprovementTypes eBestUpgrade = NO_IMPROVEMENT;
 
 			CvCity* pCity = GC.getMap().findCity(getX(), getY(), getOwner(), NO_TEAM, false);
+			if (pCity == NULL) return;
+
 			int iFoodMultiplier = 0;
 			int iProductionMultiplier = 0;
 			int iCommerceMultiplier = 0;
@@ -3200,22 +3190,6 @@ bool CvPlot::canBuild(BuildTypes eBuild, PlayerTypes ePlayer, bool bTestVisible,
 				return false;
 			}
 
-			//	Koshling - unable to merge this check because backward compatbilioty with existing
-			//	save states requires the use of a unified cities-and-forts cultural range structure
-			//	(which we already had in a slightly more limitted manner, courtesy of AND).  Since I also
-			//	canno se how getCultureRangeForts() could ever be > 1 anyway (for forts defined with iCultureRange of 1
-			//	at least) I cannot really see what this limitation was achieving.
-			//	THIS MAY NEED TWEAKING
-			// Super Forts begin *AI_worker* - prevent forts from being built over when outside culture range
-			//if (GC.getImprovementInfo(getImprovementType()).isActsAsCity())
-			//{
-			//	if (!isWithinCultureRange(ePlayer) && !(getCultureRangeForts(ePlayer) > 1))
-			//	{
-			//		return false;
-			//	}
-			//}
-			// Super Forts end
-
 			if (getImprovementType() == eImprovement)
 			{
 				return false;
@@ -3940,53 +3914,8 @@ void CvPlot::changeDefenseDamage(int iChange)
 		}
 	}
 }
-// Super Forts end
 
-// Super Forts begin *culture*
-#ifdef UNUSED_SUPER_FORTS_METHODS
-int CvPlot::getCultureRangeForts(PlayerTypes ePlayer) const
-{
-	if (NULL == m_aiCultureRangeForts)
-	{
-		return 0;
-	}
-	return m_aiCultureRangeForts[ePlayer];
-}
-
-void CvPlot::setCultureRangeForts(PlayerTypes ePlayer, int iNewValue)
-{
-	if (getCultureRangeForts(ePlayer) != iNewValue)
-	{
-		if (NULL == m_aiCultureRangeForts)
-		{
-			m_aiCultureRangeForts = new short[MAX_PLAYERS];
-			for (int iI = 0; iI < MAX_PLAYERS; ++iI)
-			{
-				m_aiCultureRangeForts[iI] = 0;
-			}
-		}
-		m_aiCultureRangeForts[ePlayer] = iNewValue;
-
-		if (getCulture(ePlayer) == 0)
-		{
-			changeCulture(ePlayer, 1, false);
-		}
-	}
-}
-
-void CvPlot::changeCultureRangeForts(PlayerTypes ePlayer, int iChange)
-{
-	if (0 != iChange)
-	{
-		setCultureRangeForts(ePlayer, getCultureRangeForts(ePlayer) + iChange);
-	}
-}
-
-bool CvPlot::isWithinFortCultureRange(PlayerTypes ePlayer) const
-{
-	return (getCultureRangeForts(ePlayer) > 0);
-}
-#endif
+// Super Forts *culture*
 
 void CvPlot::changeCultureRangeFortsWithinRange(PlayerTypes ePlayer, int iChange, int iRange, bool bUpdate)
 {
@@ -10067,18 +9996,14 @@ PlayerTypes CvPlot::getRevealedOwner(TeamTypes eTeam, bool bDebug) const
 	{
 		return getOwner();
 	}
-	else
+	FAssertMsg(eTeam >= 0, "eTeam is expected to be non-negative (invalid Index)");
+	FAssertMsg(eTeam < MAX_TEAMS, "eTeam is expected to be within maximum bounds (invalid Index)");
+
+	if (NULL == m_aiRevealedOwner)
 	{
-		FAssertMsg(eTeam >= 0, "eTeam is expected to be non-negative (invalid Index)");
-		FAssertMsg(eTeam < MAX_TEAMS, "eTeam is expected to be within maximum bounds (invalid Index)");
-
-		if (NULL == m_aiRevealedOwner)
-		{
-			return NO_PLAYER;
-		}
-
-		return (PlayerTypes)m_aiRevealedOwner[eTeam];
+		return NO_PLAYER;
 	}
+	return (PlayerTypes)m_aiRevealedOwner[eTeam];
 }
 
 
@@ -11320,7 +11245,6 @@ void CvPlot::setCenterUnit(CvUnit* pNewValue)
 
 int CvPlot::getCultureRangeCities(PlayerTypes eOwnerIndex, int iRangeIndex) const
 {
-//	FAssert(eOwnerIndex >= 0);
 	FAssert(eOwnerIndex < MAX_PLAYERS);
 	FAssert(iRangeIndex >= 0);
 	FAssert(iRangeIndex < GC.getNumCultureLevelInfos());
@@ -11329,23 +11253,14 @@ int CvPlot::getCultureRangeCities(PlayerTypes eOwnerIndex, int iRangeIndex) cons
 	{
 		return 0;
 	}
-/************************************************************************************************/
-/* Afforess	                  Start		 02/27/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	else if (eOwnerIndex == NO_PLAYER)
 	{
 		return 0;
 	}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	else if (NULL == m_apaiCultureRangeCities[eOwnerIndex])
 	{
 		return 0;
 	}
-
 	return m_apaiCultureRangeCities[eOwnerIndex][iRangeIndex];
 }
 
@@ -11355,15 +11270,8 @@ bool CvPlot::isCultureRangeCity(PlayerTypes eOwnerIndex, int iRangeIndex) const
 	return (getCultureRangeCities(eOwnerIndex, iRangeIndex) > 0);
 }
 
-/************************************************************************************************/
-/* Afforess	                  Start		 02/15/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 void CvPlot::changeCultureRangeCities(PlayerTypes eOwnerIndex, int iRangeIndex, int iChange, bool bUpdatePlotGroups, bool bUpdateCulture)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 {
 	bool bOldCultureRangeCities;
 
@@ -12308,19 +12216,6 @@ void CvPlot::read(FDataStreamBase* pStream)
 	//	and adding cultures is rare
 	std::vector<std::pair<PlayerTypes,int> >(m_aiCulture).swap(m_aiCulture);
 
-	// Super Forts begin *culture*
-#ifdef UNUSED_SUPER_FORTS_METHODS
-	SAFE_DELETE_ARRAY(m_aiCultureRangeForts);
-	char cCultureRangeFortValuesPresent = (char)-1;
-	WRAPPER_READ(wrapper, "CvPlot", &cCultureRangeFortValuesPresent);
-	if ( cCultureRangeFortValuesPresent != (char)-1 )
-	{
-		short* m_aiCultureRangeForts = new short[cCultureRangeFortValuesPresent];
-		WRAPPER_READ_ARRAY(wrapper, "CvPlot", cCultureRangeFortValuesPresent, m_aiCultureRangeForts);
-	}
-#endif
-	// Super Forts end
-
 	SAFE_DELETE_ARRAY(m_aiFoundValue);
 	char cFoundValuesPresent = (char)-1;
 	WRAPPER_READ(wrapper, "CvPlot", &cFoundValuesPresent);
@@ -12816,20 +12711,6 @@ void CvPlot::write(FDataStreamBase* pStream)
 		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)MAX_PLAYERS, "cConditional");
 		WRAPPER_WRITE_ARRAY_DECORATED(wrapper, "CvPlot", MAX_PLAYERS, buffer, "m_aiCulture");
 	}
-
-	// Super Forts begin *culture*
-#ifdef UNUSED_SUPER_FORTS_METHODS
-	if (NULL == m_aiCultureRangeForts)
-	{
-		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)0, "cCultureRangeFortValuesPresent");
-	}
-	else
-	{
-		WRAPPER_WRITE_DECORATED(wrapper, "CvPlot", (char)MAX_PLAYERS, "cCultureRangeFortValuesPresent");
-		WRAPPER_WRITE_ARRAY(wrapper, "CvPlot", MAX_PLAYERS, m_aiCultureRangeForts);
-	}
-#endif
-	// Super Forts end
 
 	if (NULL == m_aiFoundValue)
 	{
