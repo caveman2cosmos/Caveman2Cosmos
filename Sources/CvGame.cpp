@@ -3599,14 +3599,15 @@ int CvGame::victoryDelay(VictoryTypes eVictory) const
 int CvGame::getImprovementUpgradeTime(ImprovementTypes eImprovement) const
 {
 	int iTime = GC.getImprovementInfo(eImprovement).getUpgradeTime();
+	if (iTime < 1) return 0;
 
 	iTime *= GC.getGameSpeedInfo(getGameSpeedType()).getImprovementPercent();
 	iTime /= 100;
 
-	iTime *= GC.getEraInfo(getStartEra()).getImprovementPercent();
+	iTime *= GC.getEraInfo(getCurrentEra()).getImprovementPercent();
 	iTime /= 100;
 
-	return iTime;
+	return std::max(1, iTime);
 }
 
 
