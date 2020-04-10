@@ -17585,7 +17585,6 @@ m_pbTerrain(NULL),
 m_pbFeature(NULL),
 m_pbFeatureTerrain(NULL)
 ,m_bPeaks(false)
-,m_bCurrency(false)
 ,m_PropertyManipulators()
 ,m_tradeProvidingImprovements(NULL)
 {
@@ -17879,11 +17878,6 @@ bool CvBonusInfo::isPeaks() const
 {
 	return m_bPeaks;
 }
-bool CvBonusInfo::isCurrency() const
-{
-	return m_bCurrency;
-}
-
 
 void CvBonusInfo::getCheckSum(unsigned int &iSum)
 {
@@ -17928,7 +17922,6 @@ void CvBonusInfo::getCheckSum(unsigned int &iSum)
 	CheckSumC(iSum, m_aiMapCategoryTypes);
 
 	CheckSum(iSum, m_bPeaks);
-	CheckSum(iSum, m_bCurrency);
 
 	int iNumElements = m_aAfflictionCommunicabilityTypes.size();
 	for (int i = 0; i < iNumElements; ++i)
@@ -18009,7 +18002,6 @@ bool CvBonusInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bNoRiverSide, L"bNoRiverSide");
 	pXML->GetOptionalChildXmlValByName(&m_bNormalize, L"bNormalize");
 	pXML->GetOptionalChildXmlValByName(&m_bPeaks, L"bPeaks");
-	pXML->GetOptionalChildXmlValByName(&m_bCurrency, L"bCurrency");
 
 	pXML->SetVariableListTagPair(&m_pbTerrain, L"TerrainBooleans", GC.getNumTerrainInfos());
 	pXML->SetVariableListTagPair(&m_pbFeature, L"FeatureBooleans", GC.getNumFeatureInfos());
@@ -18145,7 +18137,6 @@ void CvBonusInfo::copyNonDefaults(CvBonusInfo* pClassInfo, CvXMLLoadUtility* pXM
 	}
 
 	if (isPeaks() == bDefault) m_bPeaks = pClassInfo->isPeaks();
-	if (isCurrency() == bDefault) m_bCurrency = pClassInfo->isCurrency();
 
 	m_PropertyManipulators.copyNonDefaults(pClassInfo->getPropertyManipulators(), pXML);
 }

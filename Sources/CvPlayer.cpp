@@ -9037,14 +9037,16 @@ bool CvPlayer::canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestEra, b
 {
 	PROFILE_FUNC();
 
+	if (pPlot != NULL && !pPlot->canBuild(eBuild, getID(), bTestVisible, bIncludePythonOverrides))
+	{
+		return false;
+	}
+
 	CvBuildInfo& kBuild = GC.getBuildInfo(eBuild);
 
-	if (pPlot != NULL)
+	if (kBuild.getObsoleteTech() != NO_TECH && GET_TEAM(getTeam()).isHasTech((TechTypes)kBuild.getObsoleteTech()))
 	{
-		if (!(pPlot->canBuild(eBuild, getID(), bTestVisible, bIncludePythonOverrides)))
-		{
-			return false;
-		}
+		return false;
 	}
 
 	bool bTerrainTechQualified = false;
@@ -9052,40 +9054,22 @@ bool CvPlayer::canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestEra, b
 	{
 		for (int iI = 0; iI < kBuild.getNumTerrainStructs(); iI++)
 		{
-			if (kBuild.getTerrainStruct(iI).eTerrain == pPlot->getTerrainType())
+			if(kBuild.getTerrainStruct(iI).eTerrain == pPlot->getTerrainType()
+			&& kBuild.getTerrainStruct(iI).ePrereqTech != NO_TECH)
 			{
-				if (kBuild.getTerrainStruct(iI).ePrereqTech != NO_TECH)
+				bTerrainTechQualified = true;
+				if (!GET_TEAM(getTeam()).isHasTech(kBuild.getTerrainStruct(iI).ePrereqTech)
+				&& (!bTestEra && !bTestVisible || getCurrentEra()+1 < GC.getTechInfo(kBuild.getTerrainStruct(iI).ePrereqTech).getEra()))
 				{
-					bTerrainTechQualified = true;
-					if (!GET_TEAM(getTeam()).isHasTech(kBuild.getTerrainStruct(iI).ePrereqTech))
-					{
-						if ((!bTestEra && !bTestVisible) || ((getCurrentEra() + 1) < GC.getTechInfo(kBuild.getTerrainStruct(iI).ePrereqTech).getEra()))
-						{
-							return false;
-						}
-					}
+					return false;
 				}
 			}
 		}
 	}
-
-	if (kBuild.getTechPrereq() != NO_TECH && !bTerrainTechQualified)
+	if (!bTerrainTechQualified && kBuild.getTechPrereq() != NO_TECH && !GET_TEAM(getTeam()).isHasTech((TechTypes)kBuild.getTechPrereq())
+	&& (!bTestEra && !bTestVisible || getCurrentEra()+1 < GC.getTechInfo((TechTypes)kBuild.getTechPrereq()).getEra()))
 	{
-		if (!(GET_TEAM(getTeam()).isHasTech((TechTypes)kBuild.getTechPrereq())))
-		{
-			if ((!bTestEra && !bTestVisible) || ((getCurrentEra() + 1) < GC.getTechInfo((TechTypes) kBuild.getTechPrereq()).getEra()))
-			{
-				return false;
-			}
-		}
-	}
-
-	if (kBuild.getObsoleteTech() != NO_TECH)
-	{
-		if (GET_TEAM(getTeam()).isHasTech((TechTypes)kBuild.getObsoleteTech()))
-		{
-			return false;
-		}
+		return false;
 	}
 
 	if (kBuild.isDisabled())
@@ -9096,28 +9080,16 @@ bool CvPlayer::canBuild(const CvPlot* pPlot, BuildTypes eBuild, bool bTestEra, b
 	if (kBuild.getImprovement() != NO_IMPROVEMENT)
 	{
 		ImprovementTypes eImprovement = (ImprovementTypes)kBuild.getImprovement();
-		if (GC.getImprovementInfo(eImprovement).getPrereqTech() != NO_TECH)
+
+		if (GC.getImprovementInfo(eImprovement).isNational() && getImprovementCount(eImprovement) > 0)
 		{
-			if (!GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getImprovementInfo(eImprovement).getPrereqTech()))
-			{
-				return false;
-			}
-		}
-		if (GC.getImprovementInfo(eImprovement).isNational())
-		{
-			if (getImprovementCount(eImprovement) > 0)
-			{
-				return false;
-			}
-		}
-		if (GC.getImprovementInfo(eImprovement).isGlobal())
-		{
-			if (GC.getGame().getImprovementCount(eImprovement) > 0)
-			{
-				return false;
-			}
+			return false;
 		}
 
+		if (GC.getImprovementInfo(eImprovement).isGlobal() && GC.getGame().getImprovementCount(eImprovement) > 0)
+		{
+			return false;
+		}
 	}
 
 	if (!bTestVisible)
@@ -9269,16 +9241,7 @@ RouteTypes CvPlayer::getBestRouteInternal(CvPlot* pPlot, bool bConnect, CvUnit* 
 
 int CvPlayer::getImprovementUpgradeRateTimes100(ImprovementTypes eImprovement) const
 {
-	int iRate;
-	int iRateModifier = getImprovementUpgradeRateModifierSpecific(eImprovement);
-	iRateModifier += getImprovementUpgradeRateModifier();
-
-	iRate = 100;
-
-	iRate *= std::max(0, (iRateModifier + 100));
-	iRate /= 100;
-
-	return std::max(1,iRate);
+	return std::max(1, 100 + getImprovementUpgradeRateModifier() + getImprovementUpgradeRateModifierSpecific(eImprovement));
 }
 
 
@@ -11262,12 +11225,11 @@ void CvPlayer::changeTotalLandScored(int iChange)
 
 int CvPlayer::getEffectiveGold() const
 {
-	int iEffectiveGold = m_iGold;
 	if (m_iGreaterGold >= 1)
 	{
-		iEffectiveGold = GC.getGREATER_COMMERCE_SWITCH_POINT();
+		return GC.getGREATER_COMMERCE_SWITCH_POINT();
 	}
-	return iEffectiveGold;
+	return m_iGold;
 }
 
 
@@ -34617,99 +34579,11 @@ void CvPlayer::upgradePlotPopup(ImprovementTypes eImprovement, int iX, int iY)
 
 void CvPlayer::upgradePlot(int iX, int iY, ImprovementTypes eImprovement, bool bConfirm)
 {
-	TeamTypes eTeam = getTeam();
 	CvPlot* pPlot = GC.getMap().plot(iX, iY);
-	BuildTypes eBestBuild = NO_BUILD;
-	int iBestProduction = 0;
-	int iProduction = 0;
-	CvCity* pCity = NULL;
-	CvWString szBuffer;
-	if (eTeam != NO_TEAM && pPlot != NULL)
+
+	if (pPlot != NULL && bConfirm)
 	{
-		if (!bConfirm)
-		{
-			pPlot->setPlotIgnoringImprovementUpgrade(true);
-			if (GC.getGame().getActivePlayer() == getID())
-			{
-				setFocusPlots(-1, -1);
-				gDLL->getInterfaceIFace()->releaseLockedCamera();
-			}
-			return;
-		}
-		else
-		{
-			if (pPlot->getFeatureType() != NO_FEATURE)
-			{
-				FAssertMsg(eTeam != NO_TEAM, "eTeam should be valid");
-
-				for (int iI = 0; iI < GC.getNumBuildInfos(); iI++)
-				{
-					if ((ImprovementTypes)GC.getBuildInfo((BuildTypes)iI).getImprovement() == eImprovement)
-					{
-						BuildTypes eBuild = ((BuildTypes)iI);
-						if (GET_TEAM(eTeam).isHasTech((TechTypes)GC.getBuildInfo(eBuild).getTechPrereq()))
-						{
-							if (GC.getBuildInfo(eBuild).isFeatureRemove(pPlot->getFeatureType()))
-							{
-								iProduction = pPlot->getFeatureProduction(eBuild, eTeam, &pCity);
-								if (iProduction > iBestProduction && iProduction != -1)
-								{
-									iBestProduction = iProduction;
-									eBestBuild = eBuild;
-								}
-
-							}
-							else
-							{
-								iBestProduction = -1;
-								eBestBuild = eBuild;
-							}
-						}
-					}
-				}
-				if (iBestProduction == -1)
-				{
-					pPlot->setImprovementType(eImprovement);
-					if (GC.getGame().getActivePlayer() == getID())
-					{
-						setFocusPlots(-1, -1);
-						gDLL->getInterfaceIFace()->releaseLockedCamera();
-					}
-					return;
-				}
-
-				if (pCity != NULL)
-				{
-					pCity->changeFeatureProduction(iBestProduction);
-				}
-
-				MEMORY_TRACK_EXEMPT();
-
-				if ( pPlot->isInViewport() && pCity != NULL)
-				{
-					szBuffer = gDLL->getText("TXT_KEY_MISC_CLEARING_FEATURE_BONUS", GC.getFeatureInfo(pPlot->getFeatureType()).getTextKeyWide(), iBestProduction, pCity->getNameKey());
-					AddDLLMessage(pCity->getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer,  ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), MESSAGE_TYPE_INFO, GC.getFeatureInfo(pPlot->getFeatureType()).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), pPlot->getViewportX(),pPlot->getViewportY(), true, true);
-				}
-
-				// Python Event
-				CvEventReporter::getInstance().plotFeatureRemoved(pPlot, pPlot->getFeatureType(), pCity);
-
-				pPlot->setFeatureType(NO_FEATURE);
-
-				if ( pCity != NULL )
-				{
-					pCity->clearCultureDistanceCache();
-				}
-
-				pPlot->setImprovementType(eImprovement);
-				if (GC.getGame().getActivePlayer() == getID())
-				{
-					setFocusPlots(-1, -1);
-					gDLL->getInterfaceIFace()->releaseLockedCamera();
-				}
-				return;
-			}
-		}
+		pPlot->setImprovementType(eImprovement);
 	}
 	if (GC.getGame().getActivePlayer() == getID())
 	{

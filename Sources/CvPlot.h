@@ -263,7 +263,6 @@ public:
 
 	bool canBuildImprovement(ImprovementTypes eImprovement, TeamTypes eTeam) const;
 	bool canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam = NO_TEAM, bool bPotential = false, bool bOver = true, bool bUpgradeCheck = false) const; // Exposed to Python
-	bool canHaveImprovementAsUpgrade(ImprovementTypes eImprovement, TeamTypes eTeam = NO_TEAM, bool bPotential = false, bool bOver = true) const;
 
 	bool canBuild(BuildTypes eBuild, PlayerTypes ePlayer = NO_PLAYER, bool bTestVisible = false, bool bIncludePythonOverrides = true) const; // Exposed to Python
 	static bool hasCachedCanBuildEntry(int iX, int iY, BuildTypes eBuild, PlayerTypes ePlayer, struct canBuildCacheEntry*& entry);
@@ -356,9 +355,7 @@ public:
 	void changeOccupationCultureRangeCities(PlayerTypes eOwnerIndex,int iChange);
 	PlayerTypes getClaimingOwner() const;
 	void setClaimingOwner(PlayerTypes eNewValue);
-#ifdef OLD_VERSION_PRE_SUPER_FORTS
-	void changeActsAsCity(PlayerTypes ePlayer, int iChange);
-#endif
+
 	bool isActsAsCity() const;
 	bool isCanMoveLandUnits() const;
 	bool isCanMoveSeaUnits() const;
@@ -977,7 +974,7 @@ protected:
 	short m_iMinOriginalStartDist;
 	short m_iReconCount;
 	short m_iRiverCrossingCount;
-	mutable int m_iCanHaveImprovementAsUpgradeCache;
+	mutable int m_iImprovementUpgradeHash;
 	mutable int m_iCurrentRoundofUpgradeCache;
 	int m_iImprovementCurrentValue;
 
@@ -1088,7 +1085,7 @@ protected:
 	void doCulture();
 
 	void processArea(CvArea* pArea, int iChange);
-	bool doImprovementUpgrade(const ImprovementTypes eType);
+	void doImprovementUpgrade(const ImprovementTypes eType);
 
 	ColorTypes plotMinimapColor();
 
@@ -1144,9 +1141,8 @@ public:
 	//TB Combat Mod AI
 	int getNumAfflictedUnits(PlayerTypes eOwner, PromotionLineTypes eAfflictionLine) const;
 
-	bool isPlotIgnoringImprovementUpgrade() const;
-	void setPlotIgnoringImprovementUpgrade(bool bNewValue);
-	void setImprovementUpgrade();
+	bool isImprovementUpgradable() const;
+	void setImprovementUpgradeCache(const int iNewValue);
 
 	int getInjuredUnitCombatsUnsupportedByHealer(PlayerTypes ePlayer, UnitCombatTypes eUnitCombat, DomainTypes eDomain = NO_DOMAIN) const;
 	int getUnitCombatsUnsupportedByHealer(PlayerTypes ePlayer, UnitCombatTypes eUnitCombat, DomainTypes eDomain = NO_DOMAIN) const;
@@ -1172,7 +1168,7 @@ private:
 
 protected:
 	bool m_bInhibitCenterUnitCalculation;
-	bool m_bIgnoringImprovementUpgrade;
+	bool m_bImprovementUpgradable;
 
 	ECvPlotGraphics::type m_requiredVisibleGraphics;
 	ECvPlotGraphics::type m_visibleGraphics;

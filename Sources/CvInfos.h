@@ -5718,7 +5718,6 @@ public:
 
 	// Afforess	Mountains 08/03/09
 	bool isPeaks() const; // Exposed to Python
-	bool isCurrency() const;
 
 	bool isFlatlands() const; // Exposed to Python
 	bool isNoRiverSide() const; // Exposed to Python
@@ -5790,16 +5789,7 @@ protected:
 
 	bool m_bOneArea;
 	bool m_bHills;
-/************************************************************************************************/
-/* Afforess	Mountains Start		 08/03/09										   		 */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 	bool m_bPeaks;
-	bool m_bCurrency;
-/************************************************************************************************/
-/* Afforess	Mountains End	   END															 */
-/************************************************************************************************/
 	bool m_bFlatlands;
 	bool m_bNoRiverSide;
 	bool m_bNormalize;
