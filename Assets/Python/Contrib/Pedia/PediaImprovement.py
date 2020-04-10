@@ -308,10 +308,10 @@ class PediaImprovement:
 
 		# bNotOnAnyBonus is not exposed to python.
 
-		if CvTheImproveInfo.isWater():
+		if CvTheImproveInfo.isWaterImprovement():
 			aList0.append([PF + "CONCEPT_NEW" + str(GC.getInfoTypeForString("CONCEPT_WATER_TERRAINS")), "Art/Interface/Buttons/BaseTerrain/Ocean.dds"])
 
-		if CvTheImproveInfo.isRequiresPeak():
+		if CvTheImproveInfo.isPeakImprovement():
 			aList0.append([PF + "TERRAIN" + str(nTerrains - 2) + "|" + str(n), GC.getTerrainInfo(nTerrains - 2).getButton()])
 			n += 1
 		elif not CvTheImproveInfo.isPeakMakesValid():
