@@ -3940,7 +3940,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FOREST_FIRE_CITY_VICINITY</Tag>
-		<English>There's been a forest fire close to %s.</English>
+		<English>There's been a forest fire close to %s1.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FOREST_FIRE_REMOTE</Tag>
