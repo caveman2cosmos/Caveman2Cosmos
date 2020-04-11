@@ -23,7 +23,7 @@ public:
 	bool isNone() { return (m_pPlayer==NULL); }
 
 	void updateMembers();
-	void initMembers(const int iIndex);
+	void initMembers(int iIndex);
 
 	void changeLeader( int /*LeaderHeadTypes*/ eNewLeader );
 	void changeCiv( int /*CivilizationTypes*/ eNewCiv );
