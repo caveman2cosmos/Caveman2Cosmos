@@ -1776,6 +1776,8 @@ public:
 	int getMaxGlobalInstances() const; // Exposed to Python
 	int getMaxPlayerInstances() const; // Exposed to Python
 	bool isUnlimitedException() const; // Exposed to Python
+	bool isCivilizationUnit(const PlayerTypes ePlayer=NO_PLAYER) const;
+
 	int getInstanceCostModifier() const; // Exposed to Python
 	int getAIWeight() const; // Exposed to Python
 	int getProductionCost() const; // Exposed to Python
@@ -4579,9 +4581,13 @@ public:
 	void setCivilizationInitialCivics(int iCivicOption, int iCivic);
 
 	DllExport bool isLeaders(int i) const; // Exposed to Python
-	bool isCivilizationFreeBuilding(int i) const; // Exposed to Python
+
 	bool isCivilizationFreeTechs(int i) const; // Exposed to Python
 	bool isCivilizationDisableTechs(int i) const; // Exposed to Python
+
+	int getNumCivilizationBuildings() const;
+	int getCivilizationBuilding(int i) const;
+	bool isCivilizationBuilding(int i) const; // Exposed to Python
 
 	std::string getCityNames(int i) const; // Exposed to Python
 
@@ -4614,42 +4620,39 @@ protected:
 
 	int m_iDefaultPlayerColor;
 	int m_iArtStyleType;
-	// FlavorUnits by Impaler[WrG]
-	int m_iUnitArtStyleType;
-
+	int m_iUnitArtStyleType; // FlavorUnits by Impaler[WrG]
 	int m_iNumCityNames;
 	int m_iNumLeaders;
 	int m_iSelectionSoundScriptId;
 	int m_iActionSoundScriptId;
 	int m_iDerivativeCiv;
+	// TB Tags
+	int m_iSpawnRateModifier;
+	int m_iSpawnRateNPCPeaceModifier;
 
+	bool m_bStronglyRestricted;
+	// ! TB Tags
 	bool m_bAIPlayable;
 	bool m_bPlayable;
 
 	CvString m_szArtDefineTag;
 	CvWString m_szShortDescriptionKey;
 	CvWString m_szAdjectiveKey;
-	// Arrays
 
 	int* m_piCivilizationFreeUnits;
 	int* m_piCivilizationInitialCivics;
 
 	bool* m_pbLeaders;
-	bool* m_pbCivilizationFreeBuilding;
 	bool* m_pbCivilizationFreeTechs;
 	bool* m_pbCivilizationDisableTechs;
 
 	CvString* m_paszCityNames;
 
+	std::vector<int> m_aiCivilizationBuildings;
+
 	mutable std::vector<CvWString> m_aszShortDescription;
 	mutable std::vector<CvWString> m_aszAdjective;
 
-	//TB Tags
-	//int
-	int m_iSpawnRateModifier;
-	int m_iSpawnRateNPCPeaceModifier;
-	//bool
-	bool m_bStronglyRestricted;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
