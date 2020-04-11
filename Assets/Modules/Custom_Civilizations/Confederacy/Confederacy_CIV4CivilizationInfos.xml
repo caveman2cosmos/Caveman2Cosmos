@@ -67,14 +67,8 @@
 				<City>TXT_KEY_CITY_NAME_TAMPA</City>
 			</Cities>
 			<FreeBuildings>
-				<FreeBuilding>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bFreeBuilding>1</bFreeBuilding>
-				</FreeBuilding>
-				<FreeBuilding>
-					<BuildingType>BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</BuildingType>
-					<bFreeBuilding>1</bFreeBuilding>
-				</FreeBuilding>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+				<BuildingType>BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>

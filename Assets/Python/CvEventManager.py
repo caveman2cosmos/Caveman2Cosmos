@@ -671,7 +671,7 @@ class CvEventManager:
 				iCulture = -1
 				civInfo = GC.getCivilizationInfo(CyPlayer.getCivilizationType())
 				for iPromo, _, native in self.aCultureList:
-					if civInfo.isCivilizationFreeBuilding(native):
+					if civInfo.isCivilizationBuilding(native):
 						iCulture = iPromo
 						break
 				CyUnit, i = CyPlayer.firstUnit(False)

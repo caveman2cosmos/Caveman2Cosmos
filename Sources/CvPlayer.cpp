@@ -7155,14 +7155,9 @@ void CvPlayer::findNewCapital()
 	}
 	if (pBestCity != NULL)
 	{
-		const CvCivilizationInfo& civInfo = GC.getCivilizationInfo(getCivilizationType());
-
-		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+		for (int iI = 0; iI < GC.getCivilizationInfo(getCivilizationType()).getNumCivilizationBuildings(); iI++)
 		{
-			if (civInfo.isCivilizationFreeBuilding(iI))
-			{
-				pBestCity->setNumRealBuilding((BuildingTypes)iI, 1);
-			}
+			pBestCity->setNumRealBuilding((BuildingTypes)GC.getCivilizationInfo(getCivilizationType()).getCivilizationBuilding(iI), 1);
 		}
 	}
 }
@@ -13424,26 +13419,16 @@ void CvPlayer::setCapitalCity(CvCity* pNewCapitalCity)
 		{
 			m_iCapitalCityID = pNewCapitalCity->getID();
 
-			const CvCivilizationInfo& civInfo = GC.getCivilizationInfo(getCivilizationType());
-
-			for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+			for (int iI = 0; iI < GC.getCivilizationInfo(getCivilizationType()).getNumCivilizationBuildings(); iI++)
 			{
-				if (civInfo.isCivilizationFreeBuilding(iI))
+				if (pOldCapitalCity != NULL)
 				{
-					const BuildingTypes eBuilding = static_cast<BuildingTypes>(iI);
-
-					if (pOldCapitalCity != NULL)
-					{
-						pOldCapitalCity->setNumRealBuilding(eBuilding, 0);
-					}
-					pNewCapitalCity->setNumRealBuilding(eBuilding, 1);
+					pOldCapitalCity->setNumRealBuilding((BuildingTypes)GC.getCivilizationInfo(getCivilizationType()).getCivilizationBuilding(iI), 0);
 				}
+				pNewCapitalCity->setNumRealBuilding((BuildingTypes)GC.getCivilizationInfo(getCivilizationType()).getCivilizationBuilding(iI), 1);
 			}
 		}
-		else
-		{
-			m_iCapitalCityID = FFreeList::INVALID_INDEX;
-		}
+		else  m_iCapitalCityID = FFreeList::INVALID_INDEX;
 
 		//ls612: Embassy Visibility Fix (by Damgo)
 		for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
@@ -13476,16 +13461,13 @@ void CvPlayer::setCapitalCity(CvCity* pNewCapitalCity)
 		//DPII < Maintenance Modifier >
 		if (pNewCapitalCity != NULL)
 		{
-			if (pOldCapitalCity != NULL)
+			if (pOldCapitalCity == NULL)
 			{
-	            if ((pOldCapitalCity->area()) != (pNewCapitalCity->area()))
-	            {
-	                pNewCapitalCity->area()->setHomeArea(getID(), pOldCapitalCity->area());
-	            }
+				pNewCapitalCity->area()->setHomeArea(getID(), NULL);
 			}
-			else
+			else if (pOldCapitalCity->area() != pNewCapitalCity->area())
 			{
-	            pNewCapitalCity->area()->setHomeArea(getID(), NULL);
+				pNewCapitalCity->area()->setHomeArea(getID(), pOldCapitalCity->area());
 			}
 		}
 		//DPII < Maintenance Modifier >
@@ -13499,7 +13481,6 @@ void CvPlayer::setCapitalCity(CvCity* pNewCapitalCity)
 				pOldCapitalCity->setCommerceModifierDirty((CommerceTypes)iI);
 			}
 			pOldCapitalCity->updateCommerce();
-
 			pOldCapitalCity->setInfoDirty(true);
 		}
 		if (pNewCapitalCity != NULL)
@@ -13509,7 +13490,6 @@ void CvPlayer::setCapitalCity(CvCity* pNewCapitalCity)
 				pNewCapitalCity->setCommerceModifierDirty((CommerceTypes)iI);
 			}
 			pNewCapitalCity->updateCommerce();
-
 			pNewCapitalCity->setInfoDirty(true);
 		}
 	}
