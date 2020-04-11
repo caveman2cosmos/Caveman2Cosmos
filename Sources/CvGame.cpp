@@ -6452,7 +6452,6 @@ void CvGame::doTurn()
 	{
 		createBarbarianCities(true);
 	}
-
 	createBarbarianUnits();
 
 	if (getElapsedGameTurns() > GC.getGameSpeedInfo(getGameSpeedType()).getGameTurnInfo(getStartEra()).iNumGameTurnsPerIncrement/80)
@@ -7761,26 +7760,14 @@ void CvGame::createBarbarianCities(bool bNeanderthal)
 }
 
 namespace {
-	bool isHeroUnit(const CvUnitInfo& unitInfo)
-	{
-		return unitInfo.hasUnitCombat((UnitCombatTypes)GC.getInfoTypeForString("UNITCOMBAT_HERO"))
-			|| unitInfo.getMaxGlobalInstances() > 0
-			|| unitInfo.getMaxPlayerInstances() > 0;
-	}
-
 	bool isValidBarbarianSpawnUnit(const CvArea* area, const CvUnitInfo& unitInfo, const UnitTypes unitType)
 	{
-		return unitInfo.getCombat() > 0
-			&& !unitInfo.isOnlyDefensive()
+		return unitInfo.getCombat() > 0 && !unitInfo.isOnlyDefensive()
 			// Make sure its the correct unit type for the area type (land or water)
-			&& ((area->isWater() && unitInfo.getDomainType() == DOMAIN_SEA) || (!area->isWater() && unitInfo.getDomainType() == DOMAIN_LAND))
-			&& GET_PLAYER(BARBARIAN_PLAYER).canTrain(unitType)
-			// Either has no pre-requisites, or they are met
-			&& (unitInfo.getPrereqAndBonus() == NO_BONUS || GET_TEAM(BARBARIAN_TEAM).isHasTech((TechTypes)GC.getBonusInfo((BonusTypes)unitInfo.getPrereqAndBonus()).getTechCityTrade()))
-			// Another attempt to deny the spawning of barb heroes.
-			&& !isHeroUnit(unitInfo)
-			&& GET_TEAM(BARBARIAN_TEAM).isUnitPrereqOrBonusesMet(unitInfo)
-			;
+			&& (area->isWater() && unitInfo.getDomainType() == DOMAIN_SEA || !area->isWater() && unitInfo.getDomainType() == DOMAIN_LAND)
+			// This invalidates any units with world bonus req, like cultures, due to the "true" argument.
+			&& GET_TEAM(BARBARIAN_TEAM).isUnitBonusEnabledByTech(unitInfo, true)
+			&& GET_PLAYER(BARBARIAN_PLAYER).canTrain(unitType, false, false, false, true); // Invalidates World Units for NPC;
 	}
 
 	bool barbarianCityShouldSpawnWorker(CvGame* game, CvCity* city)
@@ -7790,7 +7777,6 @@ namespace {
 			&& city->AI_getWorkersNeeded() > 0
 			&& (7 * city->getPopulation()) > game->getSorenRandNum(100, "Barb - workers");
 	}
-
 
 	int countPlayerShipsInArea(CvArea* area)
 	{
@@ -7840,7 +7826,6 @@ namespace {
 		{
 			iNeededBarbs = 0;
 		}
-
 		return iNeededBarbs;
 	}
 }
@@ -7854,12 +7839,7 @@ void CvGame::createBarbarianUnits()
 		return;
 	}
 
-	if (GC.getEraInfo(getCurrentEra()).isNoBarbUnits())
-	{
-		return;
-	}
-
-	if (isOption(GAMEOPTION_NO_BARBARIANS))
+	if (isOption(GAMEOPTION_NO_BARBARIANS) || GC.getEraInfo(getCurrentEra()).isNoBarbUnits())
 	{
 		return;
 	}
@@ -7868,7 +7848,7 @@ void CvGame::createBarbarianUnits()
 	{
 		UnitAITypes eBarbUnitAI = pLoopArea->isWater()? UNITAI_ATTACK_SEA : UNITAI_ATTACK;
 
-		int iNeededBarbs = getNeededBarbsInArea(this, pLoopArea);
+		const int iNeededBarbs = getNeededBarbsInArea(this, pLoopArea);
 
 		// Spawn barbarians
 		for (int iI = 0; iI < iNeededBarbs; iI++)
@@ -12781,15 +12761,10 @@ bool CvGame::canEverSpread(CorporationTypes eCorporation) const
 namespace {
 	bool validBarbarianShipUnit(const CvUnitInfo& unitInfo, const UnitTypes unitType)
 	{
-		return unitInfo.getCombat() > 0
-			&& !unitInfo.isOnlyDefensive()
+		return unitInfo.getCombat() > 0 && !unitInfo.isOnlyDefensive()
 			&& unitInfo.getDomainType() == DOMAIN_LAND
-			&& GET_PLAYER(BARBARIAN_PLAYER).canTrain(unitType)
-			&& (
-				unitInfo.getPrereqAndBonus() == NO_BONUS
-				|| GET_TEAM(BARBARIAN_TEAM).isHasTech((TechTypes)GC.getBonusInfo((BonusTypes)unitInfo.getPrereqAndBonus()).getTechCityTrade())
-				)
-			&& GET_TEAM(BARBARIAN_TEAM).isUnitPrereqOrBonusesMet(unitInfo);
+			&& GET_TEAM(BARBARIAN_TEAM).isUnitBonusEnabledByTech(unitInfo, true)
+			&& GET_PLAYER(BARBARIAN_PLAYER).canTrain(unitType, false, false, false, true);
 	}
 }
 

@@ -2180,34 +2180,24 @@ bool CvPlayer::addStartUnitAI(const UnitAITypes eUnitAI, const int iCount)
 
 	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
-		const CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes) iI);
-
 		if (eUnitAI != UNITAI_SETTLE && isLimitedUnit((UnitTypes) iI))
 		{
 			continue;
 		}
-		if (kUnit.getPrereqAndBonus() != NO_BONUS)
+		const CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes) iI);
+
+		if (!GET_TEAM(getTeam()).isUnitBonusEnabledByTech(kUnit, true))
 		{
 			continue;
 		}
-		bool bValid = true;
-		for (int iJ = 0; iJ < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); iJ++)
-		{
-			if (kUnit.getPrereqOrBonuses(iJ) != NO_BONUS)
-			{
-				bValid = false;
-				break;
-			}
-		}
-		if (!bValid) continue;
-
 		// Only Wrub of the Neanderthal can start with strongly restricted units.
-		for (int iJ = 0; iJ < GC.getUnitInfo((UnitTypes) iI).getNumEnabledCivilizationTypes(); iJ++)
+		bool bValid = true;
+		for (int iJ = 0; iJ < kUnit.getNumEnabledCivilizationTypes(); iJ++)
 		{
 			bValid = false;
 			if (getCivilizationType() == (CivilizationTypes) GC.getInfoTypeForString("CIVILIZATION_NEANDERTHAL"))
 			{
-				if ((CivilizationTypes)GC.getInfoTypeForString("CIVILIZATION_NPC_NEANDERTHAL") == GC.getUnitInfo((UnitTypes) iI).getEnabledCivilizationType(iJ).eCivilization)
+				if ((CivilizationTypes)GC.getInfoTypeForString("CIVILIZATION_NPC_NEANDERTHAL") == kUnit.getEnabledCivilizationType(iJ).eCivilization)
 				{
 					bValid = true;
 					break;
@@ -2240,7 +2230,6 @@ bool CvPlayer::addStartUnitAI(const UnitAITypes eUnitAI, const int iCount)
 	}
 	return false;
 }
-
 
 UnitTypes CvPlayer::getBestUnitType(UnitAITypes eUnitAI) const
 {
@@ -7938,7 +7927,7 @@ bool CvPlayer::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool
 		return false;
 	}
 
-	if (!GET_TEAM(getTeam()).isHasTech((TechTypes)(kUnit.getPrereqAndTech())))
+	if (!GET_TEAM(getTeam()).isHasTech((TechTypes)kUnit.getPrereqAndTech()))
 	{
 		return false;
 	}
@@ -7948,14 +7937,14 @@ bool CvPlayer::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool
 		return false;
 	}
 
-	if (kUnit.getForceObsoleteTech() != NO_TECH && GET_TEAM(getTeam()).isHasTech((TechTypes)(kUnit.getForceObsoleteTech())))
+	if (kUnit.getForceObsoleteTech() != NO_TECH && GET_TEAM(getTeam()).isHasTech((TechTypes)kUnit.getForceObsoleteTech()))
 	{
 		return false;
 	}
 
 	for (int iI = 0; iI < GC.getNUM_UNIT_AND_TECH_PREREQS(); iI++)
 	{
-		if (kUnit.getPrereqAndTechs(iI) != NO_TECH && !GET_TEAM(getTeam()).isHasTech((TechTypes)(kUnit.getPrereqAndTechs(iI))))
+		if (kUnit.getPrereqAndTechs(iI) != NO_TECH && !GET_TEAM(getTeam()).isHasTech((TechTypes)kUnit.getPrereqAndTechs(iI)))
 		{
 			return false;
 		}
@@ -8000,9 +7989,9 @@ bool CvPlayer::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool
 	{
 		if (!bPropertySpawn)
 		{
-			if (GC.getGame().isUnitMaxedOut(eUnit, (GET_TEAM(getTeam()).getUnitMaking(eUnit) + ((bContinue) ? -1 : 0)))
-			|| GET_TEAM(getTeam()).isUnitMaxedOut(eUnit, (GET_TEAM(getTeam()).getUnitMaking(eUnit) + ((bContinue) ? -1 : 0)))
-			|| isUnitMaxedOut(eUnit, (getUnitMaking(eUnit) + ((bContinue) ? -1 : 0))))
+			if (GC.getGame().isUnitMaxedOut(eUnit, GET_TEAM(getTeam()).getUnitMaking(eUnit) + (bContinue ? -1 : 0))
+			|| GET_TEAM(getTeam()).isUnitMaxedOut(eUnit, GET_TEAM(getTeam()).getUnitMaking(eUnit) + (bContinue ? -1 : 0))
+			|| isUnitMaxedOut(eUnit, getUnitMaking(eUnit) + (bContinue ? -1 : 0)))
 			{
 				return false;
 			}
