@@ -74,6 +74,7 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>

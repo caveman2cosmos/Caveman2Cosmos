@@ -1776,6 +1776,8 @@ public:
 	int getMaxGlobalInstances() const; // Exposed to Python
 	int getMaxPlayerInstances() const; // Exposed to Python
 	bool isUnlimitedException() const; // Exposed to Python
+	bool isCivilizationUnit(const PlayerTypes ePlayer=NO_PLAYER) const;
+
 	int getInstanceCostModifier() const; // Exposed to Python
 	int getAIWeight() const; // Exposed to Python
 	int getProductionCost() const; // Exposed to Python

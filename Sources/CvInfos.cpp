@@ -12963,13 +12963,13 @@ bool CvCivilizationInfo::isLeaders(int i) const
 	return m_pbLeaders ? m_pbLeaders[i] : false;
 }
 
-int CvCivilizationInfo::getCivilizationBuilding(int i) const
-{
-	return m_aiCivilizationBuildings[i];
-}
 int CvCivilizationInfo::getNumCivilizationBuildings() const
 {
 	return (int)m_aiCivilizationBuildings.size();
+}
+int CvCivilizationInfo::getCivilizationBuilding(int i) const
+{
+	return m_aiCivilizationBuildings[i];
 }
 bool CvCivilizationInfo::isCivilizationBuilding(int i) const
 {

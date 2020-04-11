@@ -69,6 +69,9 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_NEANDERTHAL</BuildingType>
+				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>

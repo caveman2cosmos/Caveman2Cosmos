@@ -2190,22 +2190,11 @@ bool CvPlayer::addStartUnitAI(const UnitAITypes eUnitAI, const int iCount)
 		{
 			continue;
 		}
-		// Only Wrub of the Neanderthal can start with strongly restricted units.
-		bool bValid = true;
-		for (int iJ = 0; iJ < kUnit.getNumEnabledCivilizationTypes(); iJ++)
+		if (!kUnit.isCivilizationUnit(getID()))
 		{
-			bValid = false;
-			if (getCivilizationType() == (CivilizationTypes) GC.getInfoTypeForString("CIVILIZATION_NEANDERTHAL"))
-			{
-				if ((CivilizationTypes)GC.getInfoTypeForString("CIVILIZATION_NPC_NEANDERTHAL") == kUnit.getEnabledCivilizationType(iJ).eCivilization)
-				{
-					bValid = true;
-					break;
-				}
-			}
-			else break;
+			continue; // is a Civ unit, but not for this player.
 		}
-		if (bValid && canTrain((UnitTypes) iI, false, false, false, true))
+		if (canTrain((UnitTypes) iI, false, false, false, true))
 		{
 			int iValue = AI_unitValue((UnitTypes) iI, eUnitAI, NULL);
 			if (iValue > 0 && kUnit.getDefaultUnitAIType() != eUnitAI)
