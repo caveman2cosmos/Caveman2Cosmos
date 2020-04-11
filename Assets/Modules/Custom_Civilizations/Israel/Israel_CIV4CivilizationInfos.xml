@@ -72,14 +72,8 @@
 				<City>TXT_KEY_CITY_NAME_ZORAN</City>
 			</Cities>
 			<FreeBuildings>
-				<FreeBuilding>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bFreeBuilding>1</bFreeBuilding>
-				</FreeBuilding>
-				<FreeBuilding>
-					<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
-					<bFreeBuilding>1</bFreeBuilding>
-				</FreeBuilding>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+				<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>

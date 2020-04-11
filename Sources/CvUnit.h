@@ -3314,6 +3314,7 @@ public:
 		DECLARE_MAP_FUNCTOR(CvUnit, int, getDamage);
 		DECLARE_MAP_FUNCTOR(CvUnit, int, getID);
 		DECLARE_MAP_FUNCTOR(CvUnit, TeamTypes, getTeam);
+		DECLARE_MAP_FUNCTOR(CvUnit, PlayerTypes, getOwner);
 		DECLARE_MAP_FUNCTOR(CvUnit, UnitTypes, getUnitType);
 		DECLARE_MAP_FUNCTOR(CvUnit, UnitCombatTypes, getUnitCombatType);
 		DECLARE_MAP_FUNCTOR(CvUnit, UnitAITypes, AI_getUnitAIType);

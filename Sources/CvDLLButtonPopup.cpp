@@ -747,12 +747,6 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 			}
 		}
 		break;
-
-/************************************************************************************************/
-/* Afforess	                  Start		 09/18/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	case BUTTONPOPUP_INVASION:
 		break;
 	case BUTTONPOPUP_SELECT_UNIT:
@@ -830,9 +824,6 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 			CvMessageControl::getInstance().sendImprovementUpgrade(NO_IMPROVEMENT, info.getData2(), info.getData3(), false);
 		}
 		break;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	case BUTTONPOPUP_GOTO_CITY:
 		break;
@@ -3412,22 +3403,20 @@ bool CvDLLButtonPopup::launchConfirmSplitUnitPopup(CvPopup* pPopup, CvPopupInfo 
 
 bool CvDLLButtonPopup::launchImprovementUpgradeOptionsPopup(CvPopup* pPopup, CvPopupInfo &info)
 {
-	ImprovementTypes eCurrentImprovement = (ImprovementTypes)info.getData1();
-	int iX = info.getData2();
-	int iY = info.getData3();
-	PlayerTypes ePlayer = GC.getGame().getActivePlayer();
-	TeamTypes eTeam = GET_PLAYER(ePlayer).getTeam();
-	if (ePlayer == NO_PLAYER)
+	if (GC.getGame().getActivePlayer() == NO_PLAYER)
 	{
 		return false;
 	}
+	int iX = info.getData2();
+	int iY = info.getData3();
 
 	CvPlot* pPlot = GC.getMap().plot(iX, iY);
-	GET_PLAYER(ePlayer).setFocusPlots(iX,iY);
 	if (pPlot == NULL)
 	{
 		return false;
 	}
+	GET_PLAYER(GC.getGame().getActivePlayer()).setFocusPlots(iX, iY);
+
 	if (GC.getGame().getActivePlayer() == pPlot->getOwner())
 	{
 		gDLL->getInterfaceIFace()->lookAt(pPlot->getPoint(), CAMERALOOKAT_IMMEDIATE);
@@ -3435,37 +3424,40 @@ bool CvDLLButtonPopup::launchImprovementUpgradeOptionsPopup(CvPopup* pPopup, CvP
 		gDLL->getEngineIFace()->TriggerEffect(eEffect, pPlot->getPoint(), (float)(GC.getASyncRand().get(360)));
 		gDLL->getInterfaceIFace()->playGeneralSound("AS2D_UNIT_BUILD_WORKER", pPlot->getPoint());
 	}
-	FeatureTypes eFeature = pPlot->getFeatureType();
+	const int iCurrentImprovement = info.getData1();
+	const CvImprovementInfo& kImprovement = GC.getImprovementInfo((ImprovementTypes)iCurrentImprovement);
+	const TeamTypes eTeam = GET_PLAYER(GC.getGame().getActivePlayer()).getTeam();
 
 	gDLL->getInterfaceIFace()->popupSetBodyString(pPopup, gDLL->getText("TXT_KEY_IMPROVEMENT_UPGRADE_OPTIONS"));
 
 	for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
 	{
-		CvImprovementInfo& kImprovement = GC.getImprovementInfo((ImprovementTypes)iI);
-		ImprovementTypes eImprovement = ((ImprovementTypes)iI);
-		if (eImprovement != eCurrentImprovement && (GC.getImprovementInfo(eImprovement).getHighestCost() < GET_PLAYER(pPlot->getOwner()).getEffectiveGold()))
+		if (iI == iCurrentImprovement) continue;
+
+		const ImprovementTypes eImprovement = (ImprovementTypes)iI;
+		const CvImprovementInfo& kImprovementX = GC.getImprovementInfo(eImprovement);
+
+		if (kImprovementX.getHighestCost() <= GET_PLAYER(pPlot->getOwner()).getEffectiveGold())
 		{
-			if ((ImprovementTypes)GC.getImprovementInfo(eCurrentImprovement).getImprovementUpgrade() == eImprovement
-				&& pPlot->canHaveImprovementAsUpgrade(eImprovement, eTeam, false, false))
+			if ((ImprovementTypes)kImprovement.getImprovementUpgrade() == eImprovement)
 			{
-				gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, kImprovement.getDescription(), kImprovement.getButton(), iI, WIDGET_HELP_IMPROVEMENT_ACTUAL, iI, (int)eFeature, true);
-			}
-			if (GC.getImprovementInfo(eCurrentImprovement).getNumAlternativeImprovementUpgradeTypes() > 0)
-			{
-				for (int iJ = 0; iJ < GC.getImprovementInfo(eCurrentImprovement).getNumAlternativeImprovementUpgradeTypes(); iJ++)
+				if (pPlot->canHaveImprovement(eImprovement, eTeam, false, true, true))
 				{
-					if ((ImprovementTypes)GC.getImprovementInfo(eCurrentImprovement).getAlternativeImprovementUpgradeType(iJ) == eImprovement
-						&& pPlot->canHaveImprovementAsUpgrade(eImprovement, eTeam, false, false))
-					{
-						gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, kImprovement.getDescription(), kImprovement.getButton(), iI, WIDGET_HELP_IMPROVEMENT_ACTUAL, iI,(int)eFeature, true);
-					}
+					gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, kImprovementX.getDescription(), kImprovementX.getButton(), iI, WIDGET_HELP_IMPROVEMENT_ACTUAL, iI, 0, true);
+				}
+				continue;
+			}
+			for (int iJ = 0; iJ < kImprovement.getNumAlternativeImprovementUpgradeTypes(); iJ++)
+			{
+				if ((ImprovementTypes)kImprovement.getAlternativeImprovementUpgradeType(iJ) == eImprovement
+				&& pPlot->canHaveImprovement(eImprovement, eTeam, false, true, true))
+				{
+					gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, kImprovementX.getDescription(), kImprovementX.getButton(), iI, WIDGET_HELP_IMPROVEMENT_ACTUAL, iI, 0, true);
 				}
 			}
 		}
 	}
 	gDLL->getInterfaceIFace()->popupAddGenericButton(pPopup, gDLL->getText("TXT_KEY_IMPROVEMENT_UPGRADE_NO"), NULL, GC.getNumImprovementInfos(), WIDGET_GENERAL);
-
-
 	gDLL->getInterfaceIFace()->popupLaunch(pPopup, false);
 
 	return true;

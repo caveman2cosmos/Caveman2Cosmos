@@ -65,14 +65,8 @@
 				<City>TXT_KEY_CITY_NAME_RAKAIA</City>
 			</Cities>
 			<FreeBuildings>
-				<FreeBuilding>
-					<BuildingType>BUILDING_PALACE</BuildingType>
-					<bFreeBuilding>1</bFreeBuilding>
-				</FreeBuilding>
-				<FreeBuilding>
-					<BuildingType>BUILDING_CULTURE_NATIVE_OCEANIAN</BuildingType>
-					<bFreeBuilding>1</bFreeBuilding>
-				</FreeBuilding>
+				<BuildingType>BUILDING_PALACE</BuildingType>
+				<BuildingType>BUILDING_CULTURE_NATIVE_OCEANIAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>

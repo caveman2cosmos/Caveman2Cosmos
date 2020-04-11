@@ -60462,6 +60462,12 @@
 				<BuildingType>BUILDING_FACTORY</BuildingType>
 				<BuildingType>BUILDING_POWER_LINES</BuildingType>
 			</PrereqInCityBuildings>
+			<ReplaceBuildings>
+				<ReplaceBuilding>
+					<BuildingType>BUILDING_FAST_BREEDER_REACTOR</BuildingType>
+					<bReplace>1</bReplace>
+				</ReplaceBuilding>
+			</ReplaceBuildings>
 			<iCost>1280</iCost>
 			<YieldChanges>
 				<iYield>0</iYield>
@@ -95832,6 +95838,46 @@
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
 				</PrereqBuilding>
 			</PrereqAmountBuildings>
+			<iPrereqPopulation>6</iPrereqPopulation>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_FAST_BREEDER_REACTOR</Type>
+			<Description>TXT_KEY_BUILDING_FAST_BREEDER_REACTOR</Description>
+			<Civilopedia>TXT_KEY_BUILDING_FAST_BREEDER_REACTOR_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_FAST_BREEDER_REACTOR_STRATEGY</Strategy>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ArtDefineTag>ART_DEF_BUILDING_FAST_BREEDER_REACTOR</ArtDefineTag>
+			<ObsoleteTech>TECH_FUSION</ObsoleteTech>
+			<PrereqTech>TECH_SUPERCONDUCTORS</PrereqTech>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Bonus>BONUS_URANIUM</Bonus>
+			<PrereqBonuses>
+				<Bonus>BONUS_HEAVY_WATER</Bonus>
+			</PrereqBonuses>
+			<bRiver>1</bRiver>
+			<bPower>1</bPower>
+			<iCost>1845</iCost>
+			<iHurryCostModifier>100</iHurryCostModifier>
+			<iHealth>-1</iHealth>
+			<fVisibilityPriority>1.0</fVisibilityPriority>
+			<CommerceChanges>
+				<iCommerce>-50</iCommerce>
+			</CommerceChanges>
+			<YieldModifiers>
+				<iYield>0</iYield>
+				<iYield>20</iYield>
+			</YieldModifiers>
+			<SpecialistCounts>
+				<SpecialistCount>
+					<SpecialistType>SPECIALIST_ENGINEER</SpecialistType>
+					<iSpecialistCount>1</iSpecialistCount>
+				</SpecialistCount>
+			</SpecialistCounts>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_FACTORY</BuildingType>
+			</PrereqInCityBuildings>
 			<iPrereqPopulation>6</iPrereqPopulation>
 		</BuildingInfo>
 	</BuildingInfos>
