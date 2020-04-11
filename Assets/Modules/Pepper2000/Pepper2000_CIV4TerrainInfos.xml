@@ -224,7 +224,7 @@
 			<Description>TXT_KEY_TERRAIN_LAVA_OCEAN</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_LAVA_OCEAN_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_LAVA_OCEAN</ArtDefineTag>
-			<bWater>1</bWater>
+			<bWaterTerrain>1</bWaterTerrain>
 			<iCultureDistance>2</iCultureDistance>
 			<iMovement>1</iMovement>
 			<Button>Art/Interface/Buttons/WorldBuilder/lava_ocean.dds</Button>
@@ -239,7 +239,7 @@
 			<Description>TXT_KEY_TERRAIN_METHANE_OCEAN</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_METHANE_OCEAN_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_METHANE_OCEAN</ArtDefineTag>
-			<bWater>1</bWater>
+			<bWaterTerrain>1</bWaterTerrain>
 			<iCultureDistance>2</iCultureDistance>
 			<iMovement>1</iMovement>
 			<Button>Art/Interface/Buttons/WorldBuilder/methane_ocean.dds</Button>
@@ -253,7 +253,7 @@
 			<Description>TXT_KEY_TERRAIN_SUBSURFACE_OCEAN</Description>
 			<Civilopedia>TXT_KEY_TERRAIN_SUBSURFACE_OCEAN_PEDIA</Civilopedia>
 			<ArtDefineTag>ART_DEF_TERRAIN_SUBSURFACE_OCEAN</ArtDefineTag>
-			<bWater>1</bWater>
+			<bWaterTerrain>1</bWaterTerrain>
 			<iCultureDistance>2</iCultureDistance>
 			<iMovement>1</iMovement>
 			<Button>Art/Interface/Buttons/WorldBuilder/ocean.dds</Button>

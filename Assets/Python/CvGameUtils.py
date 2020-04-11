@@ -125,14 +125,16 @@ class CvGameUtils:
 	def canBuild(self, argsList):
 		iX, iY, iBuild, iPlayer = argsList
 
-		aList = GC.getBuildInfo(iBuild).getType().split("_")
 		# Bonus placing builds
-		if aList[1] == "BONUS":
-			iBonus = GC.getInfoTypeForString("BONUS_" + aList[2])
+		CyPlot = GC.getMap().plot(iX, iY)
+		if CyPlot and CyPlot.getBonusType(-1) < 0:
+			szType = GC.getBuildInfo(iBuild).getType()
+			if szType[:12] == "BUILD_BONUS_":
+				iBonus = GC.getInfoTypeForString(szType[6:])
 
-			if GC.getPlayer(iPlayer).getNumAvailableBonuses(iBonus):
-				return 1
-			return 0
+				if iBonus > -1 and GC.getPlayer(iPlayer).getNumAvailableBonuses(iBonus):
+					return 1
+				return 0
 
 		return -1	# Returning 0 means "No", 1 or greater means "Yes", and negative numbers means "continue this evaluation on the dll side".
 
