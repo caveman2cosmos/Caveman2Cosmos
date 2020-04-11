@@ -11900,7 +11900,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_PLE_FILTER_CANMOVE_ON</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Toggle Movement Filter[COLOR_REVERT][NEWLINE]Show units that can move</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Filtre 'Mouvement'[[COLOR_REVERT][NEWLINE]Affiche les unités qui peuvent se déplacer</French>
+		<French>[COLOR_HIGHLIGHT_TEXT]Filtre 'Mouvement'[COLOR_REVERT][NEWLINE]Affiche les unités qui peuvent se déplacer</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Filter "Bewegung" deaktivieren[COLOR_REVERT][NEWLINE]Einheiten einblenden, die bewegt werden können</German>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Cambia il filtro sul movimento[COLOR_REVERT][NEWLINE]Mostra le Unità che possono muoversi</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Desactivar filtrado por movimiento[COLOR_REVERT][NEWLINE]Muestra las unidades que se pueden mover</Spanish>
