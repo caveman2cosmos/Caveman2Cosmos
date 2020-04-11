@@ -48,7 +48,7 @@ void CyInfoPythonInterface2()
 		.def("getCivilizationInitialCivics", &CvCivilizationInfo::getCivilizationInitialCivics, "int (int i)")
 
 		.def("isLeaders", &CvCivilizationInfo::isLeaders, "bool (int i)")
-		.def("isCivilizationFreeBuilding", &CvCivilizationInfo::isCivilizationFreeBuilding, "bool (int i)")
+		.def("isCivilizationBuilding", &CvCivilizationInfo::isCivilizationBuilding, "bool (int i)")
 		.def("isCivilizationFreeTechs", &CvCivilizationInfo::isCivilizationFreeTechs, "bool (int i)")
 		.def("isCivilizationDisableTechs", &CvCivilizationInfo::isCivilizationDisableTechs, "bool (int i)")
 

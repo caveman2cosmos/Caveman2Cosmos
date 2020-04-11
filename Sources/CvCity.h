@@ -1629,19 +1629,10 @@ public:
 	virtual int AI_projectValue(ProjectTypes eProject) = 0;
 	virtual int AI_neededSeaWorkers() = 0;
 	virtual bool AI_isDefended(int iExtra = 0, bool bAllowAnyDefenders = true) = 0;
-/********************************************************************************/
-/**		BETTER_BTS_AI_MOD							9/19/08		jdog5000		*/
-/**																				*/
-/**		Air AI																	*/
-/********************************************************************************/
-/* original BTS code
-	virtual bool AI_isAirDefended(int iExtra = 0) = 0;
-*/
+
 	virtual bool AI_isAirDefended(bool bCountLand = 0, int iExtra = 0) = 0;
 	virtual bool AI_isAdequateHappinessMilitary(int iExtra = 0) = 0;
-/********************************************************************************/
-/**		BETTER_BTS_AI_MOD						END								*/
-/********************************************************************************/
+
 	virtual bool AI_isDanger() const = 0;
 	virtual int evaluateDanger() = 0;
 	virtual int AI_neededDefenders() = 0;
@@ -1660,18 +1651,11 @@ public:
 	virtual int AI_getBestBuildValue(int iIndex) = 0;
 	virtual void AI_markBestBuildValuesStale() = 0;
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      06/25/09                                jdog5000      */
-/*                                                                                              */
-/* Debug                                                                                        */
-/************************************************************************************************/
 	virtual int AI_getTargetSize() = 0;
 	virtual int AI_getGoodTileCount() = 0;
-	virtual int AI_getImprovementValue( CvPlot* pPlot, ImprovementTypes eImprovement, int iFoodPriority, int iProductionPriority, int iCommercePriority, int iFoodChange, bool bOriginal = false ) = 0;
+	virtual int AI_getImprovementValue(CvPlot* pPlot, ImprovementTypes eImprovement, int iFoodPriority, int iProductionPriority, int iCommercePriority, int iFoodChange) = 0;
 	virtual void AI_getYieldMultipliers( int &iFoodMultiplier, int &iProductionMultiplier, int &iCommerceMultiplier, int &iDesiredFoodChange ) = 0;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+
 	virtual int AI_totalBestBuildValue(CvArea* pArea) = 0;
 	virtual int AI_countBestBuilds(CvArea* pArea) = 0; // Exposed to Python
 	virtual BuildTypes AI_getBestBuild(int iIndex) = 0;
@@ -1690,13 +1674,10 @@ public:
 	virtual int AI_getWorkersHave() = 0;
 	virtual int AI_getWorkersNeeded() = 0;
 	virtual void AI_changeWorkersHave(int iChange) = 0;
-/********************************************************************************/
-/* 	Worker Counting						03.08.2010				Fuyu			*/
-/********************************************************************************/
+
+	// Fuyu - Worker Counting - 03.08.2010
 	virtual int AI_workingCityPlotTargetMissionAIs(PlayerTypes ePlayer, MissionAITypes eMissionAI, UnitAITypes eUnitAI = NO_UNITAI, bool bSameAreaOnly = false) const = 0;
-/********************************************************************************/
-/* 	Worker Counting 											END 			*/
-/********************************************************************************/
+
 	virtual int AI_getBuildPriority() const = 0;
 
 	bool hasShrine(ReligionTypes eReligion) const;

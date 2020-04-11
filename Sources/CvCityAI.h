@@ -113,14 +113,7 @@ public:
 	void AI_chooseProduction();
 
 	UnitTypes AI_bestUnit(int& iBestValue, int iNumSelectableTypes = -1, UnitAITypes* pSelectableTypes = NULL, bool bAsync = false, UnitAITypes* peBestUnitAI = NULL, bool bNoRand = false, bool bNoWeighting = false, CvUnitSelectionCriteria* criteria = NULL);
-/********************************************************************************/
-/* 	City Defenders						24.07.2010				Fuyu			*/
-/********************************************************************************/
-//Fuyu bIgnoreNotUnitAIs
 	UnitTypes AI_bestUnitAI(UnitAITypes eUnitAI, int& iBestValue, bool bAsync = false, bool bNoRand = false, CvUnitSelectionCriteria* criteria = NULL);
-/********************************************************************************/
-/* 	City Defenders												END 			*/
-/********************************************************************************/
 
 	BuildingTypes AI_bestBuildingThreshold(int iFocusFlags = 0, int iMaxTurns = MAX_INT, int iMinThreshold = 0, bool bAsync = false, AdvisorTypes eIgnoreAdvisor = NO_ADVISOR, bool bMaximizeFlaggedValue = false, PropertyTypes eProperty = NO_PROPERTY);
 	std::vector<ScoredBuilding> AI_bestBuildingsThreshold(int iFocusFlags = 0, int iMaxTurns = MAX_INT, int iMinThreshold = 0, bool bAsync = false, AdvisorTypes eIgnoreAdvisor = NO_ADVISOR, bool bMaximizeFlaggedValue = false, PropertyTypes eProperty = NO_PROPERTY);
@@ -147,18 +140,7 @@ public:
 	int AI_neededSeaWorkers();
 
 	bool AI_isDefended(int iExtra = 0, bool bAllowAnyDefenders = true);
-/********************************************************************************/
-/* 	BETTER_BTS_AI_MOD							9/19/08		jdog5000		    */
-/* 																			    */
-/* 	Air AI																	    */
-/********************************************************************************/
-/* original BTS code
-	bool AI_isAirDefended(int iExtra = 0);
-*/
 	bool AI_isAirDefended(bool bCountLand = false, int iExtra = 0);
-/********************************************************************************/
-/* 	BETTER_BTS_AI_MOD						END								    */
-/********************************************************************************/
 	bool AI_isDanger() const;
 	int evaluateDanger();
 
@@ -206,75 +188,47 @@ public:
 	int AI_totalBestBuildValue(CvArea* pArea);
 
 	int AI_clearFeatureValue(int iIndex);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      07/25/09                                jdog5000      */
-/*                                                                                              */
-/* Debug                                                                                        */
-/************************************************************************************************/
+
 	int AI_getGoodTileCount();
 	int AI_countWorkedPoorTiles();
 	int AI_getTargetSize();
 	void AI_getYieldMultipliers();
-	int AI_getImprovementValue();
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+
 	BuildTypes AI_getBestBuild(int iIndex);
 	int AI_countBestBuilds(CvArea* pArea);
 	void AI_updateBestBuild();
 
 	virtual int AI_cityValue() const;
-	
+
 	int AI_calculateWaterWorldPercent();
-	
+
 	int AI_getCityImportance(bool bEconomy, bool bMilitary);
-	
+
 	int AI_yieldMultiplier(YieldTypes eYield);
 	void AI_updateSpecialYieldMultiplier();
 	int AI_specialYieldMultiplier(YieldTypes eYield);
-	
+
 	int AI_countNumBonuses(BonusTypes eBonus, bool bIncludeOurs, bool bIncludeNeutral, int iOtherCultureThreshold, bool bLand = true, bool bWater = true);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      11/14/09                                jdog5000      */
-/*                                                                                              */
-/* City AI                                                                                      */
-/************************************************************************************************/
 	int AI_countNumImprovableBonuses( bool bIncludeNeutral, TechTypes eExtraTech = NO_TECH, bool bLand = true, bool bWater = false );
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
 	int AI_playerCloseness(PlayerTypes eIndex, int iMaxDistance);
 	int AI_cityThreat(TeamTypes eTargetTeam = NO_TEAM, int* piThreatModifier = NULL);
-	
+
 	int AI_getWorkersHave();
 	int AI_getWorkersNeeded();
 	void AI_changeWorkersHave(int iChange);
-/********************************************************************************/
-/* 	Worker Counting						03.08.2010				Fuyu			*/
-/********************************************************************************/
+
+	// Fuyu - Worker Counting 03.08.2010
 	int AI_workingCityPlotTargetMissionAIs(PlayerTypes ePlayer, MissionAITypes eMissionAI, UnitAITypes eUnitAI = NO_UNITAI, bool bSameAreaOnly = false) const;
-/********************************************************************************/
-/* 	Worker Counting 											END 			*/
-/********************************************************************************/
+	// ! Fuyu
+
 	BuildingTypes AI_bestAdvancedStartBuilding(int iPass);
-	
+
 	void read(FDataStreamBase* pStream);
 	void write(FDataStreamBase* pStream);
-/************************************************************************************************/
-/* Afforess	                  Start		 01/26/10                                               */
-/*                                                                                              */
-/* Inquisitions                                                                                 */
-/************************************************************************************************/
+
 	bool AI_trainInquisitor();
-/************************************************************************************************/
-/* Inquisitions	                 END                                                            */
-/************************************************************************************************/
-/************************************************************************************************/
-/* Afforess	                  Start		 10/31/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	int AI_getEmphasizeAvoidAngryCitizensCount();
 	bool AI_isEmphasizeAvoidAngryCitizens();
 	int AI_getEmphasizeAvoidUnhealthyCitizensCount();
@@ -288,24 +242,14 @@ public:
 	int AI_getNavalMilitaryProductionRateRank() const;
 	bool AI_isNavalMilitaryProductionCity() const;
 	void AI_setNavalMilitaryProductionCity(bool bNewVal);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	int AI_getBuildPriority() const;
 
 protected:
-/************************************************************************************************/
-/* Afforess	                  Start		 10/31/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	int m_iEmphasizeAvoidAngryCitizensCount;
 	int m_iEmphasizeAvoidUnhealthyCitizensCount;
 	bool m_bMilitaryProductionCity;
 	bool m_bNavalMilitaryProductionCity;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 	int m_iEmphasizeAvoidGrowthCount;
 	int m_iEmphasizeGreatPeopleCount;
@@ -329,19 +273,19 @@ protected:
 
 	bool* m_pbEmphasize;
 	bool* m_pbEmphasizeSpecialist;
-	
+
 	int* m_aiSpecialYieldMultiplier;
-	
+
 	int m_iCachePlayerClosenessTurn;
 	int m_iCachePlayerClosenessDistance;
 	int* m_aiPlayerCloseness;
-	
+
 	int m_iNeededFloatingDefenders;
 	int m_iNeededFloatingDefendersCacheTurn;
-	
+
 	int m_iWorkersNeeded;
 	int m_iWorkersHave;
-	
+
 	int	m_iBuildPriority;
 	int	m_iTempBuildPriority;
 	bool m_bRequestedUnit;
@@ -357,20 +301,8 @@ protected:
 	bool AI_doPanic();
 	int AI_calculateCulturePressure(bool bGreatWork = false);
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      01/09/10                                jdog5000      */
-/*                                                                                              */
-/* City AI                                                                                      */
-/************************************************************************************************/
-/********************************************************************************/
-/* 	City Defenders						24.07.2010				Fuyu			*/
-/********************************************************************************/
-//Fuyu bIgnoreNotUnitAIs
 	bool AI_chooseUnit(const char* reason, UnitAITypes eUnitAI /*= NO_UNITAI*/, int iOdds = -1, int iUnitStrength = -1, int iPriorityOverride = -1, CvUnitSelectionCriteria* criteria = NULL);
 	bool AI_chooseUnitImmediate(const char* reason, UnitAITypes eUnitAI, CvUnitSelectionCriteria* criteria = NULL, UnitTypes eUnitType = NO_UNIT);
-/********************************************************************************/
-/* 	City Defenders												END 			*/
-/********************************************************************************/
 	bool AI_chooseUnit(UnitTypes eUnit, UnitAITypes eUnitAI);
 	bool AI_chooseDefender(const char* reason);
 	bool AI_chooseLeastRepresentedUnit(const char* reason, UnitTypeWeightArray &allowedTypes, int iOdds = -1);
@@ -379,9 +311,7 @@ protected:
 	bool AI_chooseHealerUnit(int iMinNeeded = 3);
 	bool AI_chooseProject();
 	bool AI_chooseProcess(CommerceTypes eCommerceType = NO_COMMERCE, int* commerceWeights = NULL);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+
 	int	getPlayerDangerPercentage(PlayerTypes ePlayer, int& iModifier) const;
 
 	bool AI_bestSpreadUnit(bool bMissionary, bool bExecutive, int iBaseChance, UnitTypes* eBestSpreadUnit, int* iBestSpreadUnitValue);
@@ -408,31 +338,25 @@ protected:
 	int AI_buildUnitProb();
 
 	void AI_bestPlotBuild(CvPlot* pPlot, int* piBestValue, BuildTypes* peBestBuild, int iFoodPriority, int iProductionPriority, int iCommercePriority, bool bChop, int iHappyAdjust, int iHealthAdjust, int iFoodChange);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      06/25/09                                jdog5000      */
-/*                                                                                              */
-/* Debug                                                                                        */
-/************************************************************************************************/
-	int AI_getImprovementValue( CvPlot* pPlot, ImprovementTypes eImprovement, int iFoodPriority, int iProductionPriority, int iCommercePriority, int iFoodChange, bool bOriginal = false );
+
+	int AI_getImprovementValue(CvPlot* pPlot, ImprovementTypes eImprovement, int iFoodPriority, int iProductionPriority, int iCommercePriority, int iFoodChange);
 	void AI_getYieldMultipliers( int &iFoodMultiplier, int &iProductionMultiplier, int &iCommerceMultiplier, int &iDesiredFoodChange );
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+
 	int tradeRouteValue(CvBuildingInfo& kBuilding, YieldTypes eYield, bool bForeignTrade) const;
 
 
 	void AI_buildGovernorChooseProduction();
-	
+
 	int AI_getYieldMagicValue(const int* piYieldsTimes100, bool bHealthy);
 	int AI_getPlotMagicValue(CvPlot* pPlot, bool bHealthy, bool bWorkerOptimization = false);
 	int AI_countGoodTiles(bool bHealthy, bool bUnworkedOnly, int iThreshold = 50, bool bWorkerOptimization = false);
 	int AI_countGoodSpecialists(bool bHealthy);
 	int AI_calculateTargetCulturePerTurn();
-	
+
 	void AI_stealPlots();
-	
+
 	int AI_buildingSpecialYieldChangeValue(BuildingTypes kBuilding, YieldTypes eYield);
-	
+
 	void AI_cachePlayerCloseness(int iMaxDistance);
 	void AI_updateWorkersNeededHere();
 

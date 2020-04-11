@@ -23,39 +23,10 @@ public:
 	CvGameObjectTeam* getGameObject() {return &m_GameObject;};
 protected:
 	CvGameObjectTeam m_GameObject;
-
-public:
-/************************************************************************************************/
-/* REVOLUTION_MOD                         01/01/08                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	bool isRebel() const;
-	bool isSingleCityTeam() const;
-	bool isRebelAgainst( TeamTypes eTeam ) const;
-	void setRebelAgainst( TeamTypes eTeam, bool bNewValue );
-	int countRebelAgainst( ) const;
-	int getNumMilitaryUnits( ) const;
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
-
-protected:
-
 	void uninit();
 
 public:
-
-/********************************************************************************/
-/*		BETTER_BTS_AI_MOD						12/30/08		jdog5000		*/
-/*																				*/
-/*		     																	*/
-/********************************************************************************/
-	void resetPlotAndCityData( );
-/********************************************************************************/
-/*		BETTER_BTS_AI_MOD						END								*/
-/********************************************************************************/
-
+	void resetPlotAndCityData();
 	void addTeam(TeamTypes eTeam); // Exposed to Python
 	void shareItems(TeamTypes eTeam);
 	void shareCounters(TeamTypes eTeam);
@@ -70,16 +41,10 @@ public:
 
 	bool canChangeWarPeace(TeamTypes eTeam, bool bAllowVassal = false) const; // Exposed to Python
 	DllExport bool canDeclareWar(TeamTypes eTeam) const; // Exposed to Python
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      01/16/10                                jdog5000      */
-/*                                                                                              */
-/* War Strategy AI                                                                              */
-/************************************************************************************************/
+
 	bool canEventuallyDeclareWar(TeamTypes eTeam) const;
 	void declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan, bool bCancelPacts = true); // Exposed to Python
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+
 	void makePeace(TeamTypes eTeam, bool bBumpUnits = true); // Exposed to Python
 	bool canContact(TeamTypes eTeam) const; // Exposed to Python
 	void meet(TeamTypes eTeam, bool bNewDiplo); // Exposed to Python
@@ -93,28 +58,19 @@ public:
 	int getEnemyPower() const;
 	int getNumNukeUnits() const; // Exposed to Python
 
-	bool isUnitPrereqOrBonusesMet(const CvUnitInfo& unit) const;
+	bool isUnitBonusEnabledByTech(const CvUnitInfo& unit, const bool bNoWorldBonuses=false) const;
 
-//Sevo Begin--VCM
 	int getTotalVictoryScore() const; // Exposed to Python
-//Sevo End VCM
 
 	int getVotes(VoteTypes eVote, VoteSourceTypes eVoteSource) const;
 	bool isVotingMember(VoteSourceTypes eVoteSource) const;
 	bool isFullMember(VoteSourceTypes eVoteSource) const;
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      01/10/09                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	int getCurrentMasterPower( bool bIncludeVassals ) const;
+	int getCurrentMasterPower(bool bIncludeVassals) const;
 	bool isMasterPlanningLandWar(const CvArea* pArea) const;
 	bool isMasterPlanningSeaWar(const CvArea* pArea)const;
 	int getAtWarCount(bool bIgnoreMinors, bool bIgnoreVassals = false) const; // Exposed to Python
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+
 	int getWarPlanCount(WarPlanTypes eWarPlan, bool bIgnoreMinors) const; // Exposed to Python
 	int getAnyWarPlanCount(bool bIgnoreMinors) const; // Exposed to Python
 	int getChosenWarCount(bool bIgnoreMinors) const; // Exposed to Python
@@ -140,18 +96,11 @@ public:
 	int countTotalPopulationByArea(const CvArea* pArea) const; // Exposed to Python
 	int countPowerByArea(const CvArea* pArea) const; // Exposed to Python
 	int countEnemyPowerByArea(const CvArea* pArea) const; // Exposed to Python
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      05/19/10                                jdog5000      */
-/*                                                                                              */
-/* War strategy AI                                                                              */
-/************************************************************************************************/
+
 	int countEnemyPopulationByArea(const CvArea* pArea) const;
 	int countNumAIUnitsByArea(const CvArea* pArea, UnitAITypes eUnitAI) const; // Exposed to Python
 	int countEnemyDangerByArea(const CvArea* pArea, TeamTypes eEnemyTeam = NO_TEAM) const; // Exposed to Python
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
-	// K-Mod
+
 	int getTypicalUnitValue(UnitAITypes eUnitAI) const;
 
 	int getResearchCost(TechTypes eTech) const; // Exposed to Python
@@ -167,16 +116,15 @@ public:
 	bool isNPC() const; // Exposed to Python
 	bool isHominid() const; // Exposed to Python
 	bool isMinorCiv() const; // Exposed to Python
-/************************************************************************************************/
-/* REVOLUTION_MOD                         10/22/08                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	void setIsMinorCiv( bool bNewValue, bool bDoBarbCivCheck ); // Exposed to Python
+	bool isSingleCityTeam() const;
+	bool isRebel() const;
+	bool isRebelAgainst(TeamTypes eTeam) const;
+	void setRebelAgainst(TeamTypes eTeam, bool bNewValue);
+	int countRebelAgainst() const;
+	void setIsMinorCiv(bool bNewValue, bool bDoBarbCivCheck); // Exposed to Python
 	void declareWarAsMinor();
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+
+	int getNumMilitaryUnits() const;
 
 	PlayerTypes getLeaderID() const; // Exposed to Python
 	PlayerTypes getSecretaryID() const; // Exposed to Python
@@ -393,7 +341,7 @@ public:
 	void changeExtraMoves(DomainTypes eIndex, int iChange); // Exposed to Python
 
 	bool isHasMet(TeamTypes eIndex) const; // Exposed to Python
-	void setHasMet( TeamTypes eIndex, bool bNewValue);
+	void setHasMet(TeamTypes eIndex, bool bNewValue);
 	void makeHasMet(TeamTypes eIndex, bool bNewDiplo);
 
 	DllExport bool isAtWar(TeamTypes eIndex) const; // Exposed to Python
@@ -455,15 +403,7 @@ public:
 	int changeResearchProgressPercent(TechTypes eIndex, int iPercent, PlayerTypes ePlayer);
 
 	int getTechCount(TechTypes eIndex) const; // Exposed to Python
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      07/27/09                                jdog5000      */
-/*                                                                                              */
-/* General AI                                                                                   */
-/************************************************************************************************/
 	int getBestKnownTechScorePercent() const;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
 	int getTerrainTradeCount(TerrainTypes eIndex) const;
 	bool isTerrainTrade(TerrainTypes eIndex) const; // Exposed to Python
@@ -566,20 +506,13 @@ public:
 
 	int getLastRoundOfValidImprovementCacheUpdate() const;
 	void setLastRoundOfValidImprovementCacheUpdate();
-
-/********************************************************************************/
-/**		REVOLUTION_MOD							6/9/08				jdog5000	*/
-/**																				*/
-/**		 																		*/
-/********************************************************************************/
-	//virtual int AI_getBarbarianCivWarVal( TeamTypes eTeam, int iMaxDistance = 10 ) const = 0;
-/********************************************************************************/
-/**		REVOLUTION_MOD							END								*/
-/********************************************************************************/
-
 	int getWinForLosingResearchModifier() const;
 
 protected:
+	TeamTypes m_eID;
+
+	bool m_bMapCentering;
+	bool m_bCapitulated;
 
 	int m_iNumMembers;
 	int m_iAliveCount;
@@ -592,11 +525,6 @@ protected:
 	int m_iMapTradingCount;
 	int m_iTechTradingCount;
 	int m_iGoldTradingCount;
-/************************************************************************************************/
-/* Afforess	                  Start		 03/8/10                                                */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	int m_iCanPassPeaksCount;
 	int m_iMoveFastPeaksCount;
 	int m_iCanFoundOnPeaksCount;
@@ -610,21 +538,6 @@ protected:
 	int m_iCorporationRevenueModifier;
 	int m_iCorporationMaintenanceModifier;
 	int m_iLastRoundOfValidImprovementCacheUpdate;
-
-	bool* m_abEmbassy;
-	bool* m_abLimitedBorders;
-	bool* m_abFreeTrade;
-	int* m_paiUnitStrengthChange;
-
-	int** m_ppiBuildingCommerceChange;
-	int** m_ppiBuildingYieldChange;
-	int** m_ppiBuildingSpecialistChange;
-	int** m_ppiBuildingCommerceModifier;
-	int** m_ppiBuildingYieldModifier;
-	int* m_paiFreeSpecialistCount;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 	int m_iOpenBordersTradingCount;
 	int m_iDefensivePactTradingCount;
 	int m_iPermanentAllianceTradingCount;
@@ -639,18 +552,9 @@ protected:
 	int m_iRiverTradeCount;
 	int m_iEspionagePointsEver;
 
-	bool m_bMapCentering;
-	bool m_bCapitulated;
-
-	TeamTypes m_eID;
-
-	int* m_aiStolenVisibilityTimer;
-	int* m_aiWarWearinessTimes100;
-	int* m_aiTechShareCount;
-	int* m_aiCommerceFlexibleCount;
-	int* m_aiExtraMoves;
-	int* m_aiForceTeamVoteEligibilityCount;
-
+	bool* m_abEmbassy;
+	bool* m_abLimitedBorders;
+	bool* m_abFreeTrade;
 	bool* m_abAtWar;
 	bool* m_abHasMet;
 	bool* m_abPermanentWarPeace;
@@ -659,20 +563,28 @@ protected:
 	bool* m_abForcePeace;
 	bool* m_abVassal;
 	bool* m_abCanLaunch;
-
-/************************************************************************************************/
-/* REVOLUTION_MOD                         01/01/08                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 	bool* m_abIsRebelAgainst;
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+	bool* m_pabHasTech;
+	bool* m_pabNoTradeTech;
+
+	int** m_ppiBuildingCommerceChange;
+	int** m_ppiBuildingYieldChange;
+	int** m_ppiBuildingSpecialistChange;
+	int** m_ppiBuildingCommerceModifier;
+	int** m_ppiBuildingYieldModifier;
+	int** m_ppaaiImprovementYieldChange;
+
+	int* m_paiFreeSpecialistCount;
+	int* m_paiUnitStrengthChange;
+	int* m_aiStolenVisibilityTimer;
+	int* m_aiWarWearinessTimes100;
+	int* m_aiTechShareCount;
+	int* m_aiCommerceFlexibleCount;
+	int* m_aiExtraMoves;
+	int* m_aiForceTeamVoteEligibilityCount;
 	int* m_paiRouteChange;
 	int* m_paiProjectCount;
 	int* m_paiProjectDefaultArtTypes;
-	std::vector<int> *m_pavProjectArtTypes;
 	int* m_paiProjectMaking;
 	int* m_paiBuildingCount;
 	int* m_paiUnitCount;
@@ -681,30 +593,21 @@ protected:
 	int* m_paiTechCount;
 	int* m_paiTerrainTradeCount;
 	int* m_aiVictoryCountdown;
-
 	int* m_paiTechExtraBuildingHappiness;
 	int* m_paiTechExtraBuildingHealth;
-
 	int* m_aiEspionagePointsAgainstTeam;
 	int* m_aiCounterespionageTurnsLeftAgainstTeam;
 	int* m_aiCounterespionageModAgainstTeam;
 
-	bool* m_pabHasTech;
-	bool* m_pabNoTradeTech;
-
-	int** m_ppaaiImprovementYieldChange;
+	std::vector<int> *m_pavProjectArtTypes;
 
 	std::vector<BonusTypes> m_aeRevealedBonuses;
 
 	void doWarWeariness();
-
 	void updateTechShare(TechTypes eTech);
 	void updateTechShare();
-
 	void testCircumnavigated();
-
 	void processTech(TechTypes eTech, int iChange, bool bAnnounce = false);
-
 	void cancelDefensivePacts();
 	void announceTechToPlayers(TechTypes eIndex, bool bPartial = false);
 
