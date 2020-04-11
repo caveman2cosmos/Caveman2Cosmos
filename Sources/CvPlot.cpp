@@ -6293,7 +6293,7 @@ CvArea* CvPlot::secondWaterArea() const
 {
 	FAssert(!isWater());
 
-	const int iWaterArea = waterArea()->getID();
+	const int iWaterArea = waterArea() != NULL ? waterArea()->getID() : FFreeList::INVALID_INDEX;
 	int iBestValue = 0;
 	CvArea* pBestArea = NULL;
 
