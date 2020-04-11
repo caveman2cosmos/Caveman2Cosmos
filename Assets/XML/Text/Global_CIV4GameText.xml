@@ -9004,7 +9004,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_MISC_TRAIT_CYCLING_HELP</Tag>
 		<English>Hold down shift and mouseover again to open up the next trait's full display.</English>
 		<French>Maintenez la touche MAJ enfoncée et placer la souris pour afficher l'ensemble des informations concernant le prochain trait.</French>
-		<German>Drücken Sie [UMSCHALT] beim Aufrufen dieser Daten, um ausführliche Informationen über die nächste Eigenschaft dieses Oberhaupts zu erhalten.</German>
+		<German>Drücken Sie [SHIFT] beim Aufrufen dieser Daten, um ausführliche Informationen über die nächste Eigenschaft dieses Oberhaupts zu erhalten.</German>
 		<Italian>Tieni premuto SHIFT e sposta sopra il cursore del mouse per vedere le caratteristiche approfondite del prossimo tratto.</Italian>
 		<Polish>Przytrzymaj wciśnięty SHIFT i najedź myszką by otworzyć pełne okno następnej cechy.</Polish>
 	</TEXT>
@@ -12786,7 +12786,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_RELIGION_FOUNDER_RECEIVES</Tag>
 		<English>[ICON_BULLET]Founder Receives a %s1_UnitName</English>
 		<French>[ICON_BULLET]Le fondateur reçoit [NUM1:un:une:des:des] %s1_UnitName</French>
-		<German>[[ICON_BULLET]Entdecker erhält [NUM1:einen:eine:ein:einige:einige:einige] [COLOR_UNIT_TEXT]%s1:4_UnitName[COLOR_REVERT]</German>
+		<German>[ICON_BULLET]Entdecker erhält [NUM1:einen:eine:ein:einige:einige:einige] [COLOR_UNIT_TEXT]%s1:4_UnitName[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Il fondatore riceve [NUM1:un:una:dei:delle] %s1_UnitName</Italian>
 		<Spanish>[ICON_BULLET]El fundador recibe [NUM1:un:una:unos:unas] %s1_UnitName</Spanish>
 		<Polish>[ICON_BULLET]Założyciel otrzymuje %s1_UnitName</Polish>

@@ -9112,7 +9112,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_FUSION_NOVA_PEDIA</Tag>
 		<English>Directly related to it's cousin the Tactical Fusi, the Fusion Nova (a.k.a. The Island Sinker) uses fusion implosions to destroy areas of target rich environments. Unlike the Tactical Fusi, this weapon has a larger implosion radius, sinking any city and its improvements or surrounding guardian units. Due to the intensity of this weapon, the number able to be made is much smaller than that of the Tactical Fusi.</English>
-		<German>[TAB}Genau wie die taktische Fusionsbombe nutzt die Nova-Fusionsbombe (auch Inselversenker genannt) Fusionsimplosionen, um Bereiche voller potenzieller Ziele zu vernichten. Als Weiterentwicklung der taktischen Fusionsbombe hat sie allerdings einen größeren Implosionsradius, der es ihr ermöglicht, eine Stadt samt all ihrer Geländemodernisierungen und aller Einheiten im Umfeld komplett im Meer zu versenken. Da diese Waffe so unglaublich verheerend ist, können nur sehr wenige Nova-Fusionsbomben zur gleichen Zeit unterhalten werden.</German>
+		<German>[TAB]Genau wie die taktische Fusionsbombe nutzt die Nova-Fusionsbombe (auch Inselversenker genannt) Fusionsimplosionen, um Bereiche voller potenzieller Ziele zu vernichten. Als Weiterentwicklung der taktischen Fusionsbombe hat sie allerdings einen größeren Implosionsradius, der es ihr ermöglicht, eine Stadt samt all ihrer Geländemodernisierungen und aller Einheiten im Umfeld komplett im Meer zu versenken. Da diese Waffe so unglaublich verheerend ist, können nur sehr wenige Nova-Fusionsbomben zur gleichen Zeit unterhalten werden.</German>
 		<Italian>Direttamente imparentata con la bomba a fusione tattica, la bomba a fusione Nova (a.k.a. Affondatrice di isole) usa le implosioni a fusione per distruggere aree con ricchi miglioramenti. A differenza della bomba a fusione tattica, quest'arma ha un raggio di implosione più ampio, affondano in acqua ogni città, relativi miglioramenti e le unità difensive. A causa della potenza di quest'arma, ne possono essere costruite un numero minore rispetto alla bomba a fusione tattica.</Italian>
 	</TEXT>
 	<TEXT>
@@ -17404,7 +17404,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MOUNTIE_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]The Royal Canadian Mounted Police[COLOR_REVERT] replaces [COLOR_UNIT_TEXT]Cavalry.[COLOR_REVERT]This is a flavour unit with no changes in ability.</English>
-		<French>[COLOR_UNIT_TEXTLa Police Montée Royale Canadienne[COLOR_REVERT] remplace la [COLOR_UNIT_TEXT]Cavalerie.[COLOR_REVERT].</French>
+		<French>[COLOR_UNIT_TEXT]La Police Montée Royale Canadienne[COLOR_REVERT] remplace la [COLOR_UNIT_TEXT]Cavalerie.[COLOR_REVERT].</French>
 		<Spanish>El [COLOR_UNIT_TEXT]Policía montado canadiense[COLOR_REVERT] (Royal Canadian Mounted Police, RCMP) sustituye a la [COLOR_UNIT_TEXT]Caballería.[COLOR_REVERT] Es una unidad de facción sin cambios en las habilidades.</Spanish>
 		<Polish>[COLOR_UNIT_TEXT]Mountie[COLOR_REVERT] to kanadyjski odpowiednik [COLOR_UNIT_TEXT]Kawalerii[COLOR_REVERT].</Polish>
 	</TEXT>
@@ -19175,7 +19175,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_P51_MUSTANG_STRATEGY</Tag>
 		<English>Fighter units can attack enemy air units and can scout terrain. The P51 is very useful for intercepting enemy aircraft.</English>
 		<French>Les Chasseurs à Hélices peuvent attaquer les unités aériennes ennemies et repérer le terrain. Le P51 est très utile pour intercepter des avions ennemis.</French>
-		<Polish>[TABMyśiwce mogą atakować inne jednostki powietrzne i dokonywać zwiadu.</Polish>
+		<Polish>[TAB]Myśiwce mogą atakować inne jednostki powietrzne i dokonywać zwiadu.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_PAAKA</Tag>
@@ -27806,7 +27806,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_V1_PEDIA</Tag>
 		<English>The Fieseler Fi 103, better known as V-1 was the first guided missile used in war and the forerunner of today's cruise missile. The V-1 was developed by the German Luftwaffe during the Second World War. Between June 1944 and March 29, 1945, it was fired at targets in southeastern England and Belgium e.g. London and Antwerp. V-1s were launched from "ski" launch sites along the French (Pas-de-Calais) and Dutch coasts until the sites were overrun by Allied forces. The underground V-1 storage depots at Saint-Leu-d'Esserent, Nucourt and Rilly-la-Montagne, as well as the launch sites, were bombed during Operation Crossbow.</English>
-		<Polish>[KARTA] Fieseler Fi 103, lepiej znany jako V-1 był pierwszy pocisk, używane w czasie wojny i poprzednik dzisiejszej cruisemissile. V-1 został opracowany przez Luftwaffe podczas II wojny światowej. Od czerwca 1944 r. i 29 marca 1945 rokuzostał zwolniony na cele w południowo-wschodniej Anglii i Belgii np. Londyn i Antwerpii. V-1S rozpoczęto od miejscarozpoczęcia "narciarska" wzdłuż wybrzeży holenderski i francuski (Pas-de-Calais) do strony zostały opanowane przezaliantów. Podziemnych magazynów V-1 w Saint-Leu-d'Esserent, Nucourt i Rilly-la-Montagne, jak również uruchomieniestrony, zostały zbombardowane podczas operacji kusza.</Polish>
+		<Polish>Fieseler Fi 103, lepiej znany jako V-1 był pierwszy pocisk, używane w czasie wojny i poprzednik dzisiejszej cruisemissile. V-1 został opracowany przez Luftwaffe podczas II wojny światowej. Od czerwca 1944 r. i 29 marca 1945 rokuzostał zwolniony na cele w południowo-wschodniej Anglii i Belgii np. Londyn i Antwerpii. V-1S rozpoczęto od miejscarozpoczęcia "narciarska" wzdłuż wybrzeży holenderski i francuski (Pas-de-Calais) do strony zostały opanowane przezaliantów. Podziemnych magazynów V-1 w Saint-Leu-d'Esserent, Nucourt i Rilly-la-Montagne, jak również uruchomieniestrony, zostały zbombardowane podczas operacji kusza.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_V1_STRATEGY</Tag>
@@ -28133,7 +28133,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Tag>TXT_KEY_UNIT_WALKER_STRATEGY</Tag>
 		<English>Early droid. Cheap and fast late game unit.</English>
 		<French>Droïde primaire. Unité de fin de partie bon marché et rapide.</French>
-		<Polish>[KARTA] Artyleria Walker jest jednostka artylerii pasuje do walki w erze Transhuman. Za pomocą potężnychelektromagnetyczne serwa przenieść na każdy teren i jego obrzędy posiadają więcej zakres i ognia niż inne jednostki.</Polish>
+		<Polish>Artyleria Walker jest jednostka artylerii pasuje do walki w erze Transhuman. Za pomocą potężnychelektromagnetyczne serwa przenieść na każdy teren i jego obrzędy posiadają więcej zakres i ognia niż inne jednostki.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WALLABY_HUNTERS</Tag>
@@ -28262,7 +28262,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARBOT_INFANTRY_PEDIA</Tag>
 		<English>Finally we can put boots on the ground without needing to stuff them with soldiers. No more body bags means never having to say you're sorry for starting a war! Despite their inoffensive, frail - almost skeletal - appearance, these units have the firepower to do the job - and they're never afraid to use it...</English>
-		<Polish>[KARTA] Wreszcie możemy umieścić buty na ziemi bez konieczności ich rzeczy z żołnierzami. Nie więcej workach ciałaoznacza, nigdy nie konieczności powiedzieć, że jesteś zmartwiony pod kątem rozpoczęcie wojny! Pomimo ich nieszkodliwe,słabych - prawie szkieletowych - wygląd jednostki te mają ognia do pracy - i nigdy nie boją się go używać...</Polish>
+		<Polish>Wreszcie możemy umieścić buty na ziemi bez konieczności ich rzeczy z żołnierzami. Nie więcej workach ciałaoznacza, nigdy nie konieczności powiedzieć, że jesteś zmartwiony pod kątem rozpoczęcie wojny! Pomimo ich nieszkodliwe,słabych - prawie szkieletowych - wygląd jednostki te mają ognia do pracy - i nigdy nie boją się go używać...</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WARBOT_INFANTRY_STRATEGY</Tag>
