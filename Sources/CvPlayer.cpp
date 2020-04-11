@@ -2180,42 +2180,21 @@ bool CvPlayer::addStartUnitAI(const UnitAITypes eUnitAI, const int iCount)
 
 	for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 	{
-		const CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes) iI);
-
 		if (eUnitAI != UNITAI_SETTLE && isLimitedUnit((UnitTypes) iI))
 		{
 			continue;
 		}
-		if (kUnit.getPrereqAndBonus() != NO_BONUS)
+		const CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes) iI);
+
+		if (!GET_TEAM(getTeam()).isUnitBonusEnabledByTech(kUnit, true))
 		{
 			continue;
 		}
-		bool bValid = true;
-		for (int iJ = 0; iJ < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); iJ++)
+		if (!kUnit.isCivilizationUnit(getID()))
 		{
-			if (kUnit.getPrereqOrBonuses(iJ) != NO_BONUS)
-			{
-				bValid = false;
-				break;
-			}
+			continue; // is a Civ unit, but not for this player.
 		}
-		if (!bValid) continue;
-
-		// Only Wrub of the Neanderthal can start with strongly restricted units.
-		for (int iJ = 0; iJ < GC.getUnitInfo((UnitTypes) iI).getNumEnabledCivilizationTypes(); iJ++)
-		{
-			bValid = false;
-			if (getCivilizationType() == (CivilizationTypes) GC.getInfoTypeForString("CIVILIZATION_NEANDERTHAL"))
-			{
-				if ((CivilizationTypes)GC.getInfoTypeForString("CIVILIZATION_NPC_NEANDERTHAL") == GC.getUnitInfo((UnitTypes) iI).getEnabledCivilizationType(iJ).eCivilization)
-				{
-					bValid = true;
-					break;
-				}
-			}
-			else break;
-		}
-		if (bValid && canTrain((UnitTypes) iI, false, false, false, true))
+		if (canTrain((UnitTypes) iI, false, false, false, true))
 		{
 			int iValue = AI_unitValue((UnitTypes) iI, eUnitAI, NULL);
 			if (iValue > 0 && kUnit.getDefaultUnitAIType() != eUnitAI)
@@ -2240,7 +2219,6 @@ bool CvPlayer::addStartUnitAI(const UnitAITypes eUnitAI, const int iCount)
 	}
 	return false;
 }
-
 
 UnitTypes CvPlayer::getBestUnitType(UnitAITypes eUnitAI) const
 {
@@ -7166,14 +7144,9 @@ void CvPlayer::findNewCapital()
 	}
 	if (pBestCity != NULL)
 	{
-		const CvCivilizationInfo& civInfo = GC.getCivilizationInfo(getCivilizationType());
-
-		for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+		for (int iI = 0; iI < GC.getCivilizationInfo(getCivilizationType()).getNumCivilizationBuildings(); iI++)
 		{
-			if (civInfo.isCivilizationFreeBuilding(iI))
-			{
-				pBestCity->setNumRealBuilding((BuildingTypes)iI, 1);
-			}
+			pBestCity->setNumRealBuilding((BuildingTypes)GC.getCivilizationInfo(getCivilizationType()).getCivilizationBuilding(iI), 1);
 		}
 	}
 }
@@ -7938,7 +7911,7 @@ bool CvPlayer::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool
 		return false;
 	}
 
-	if (!GET_TEAM(getTeam()).isHasTech((TechTypes)(kUnit.getPrereqAndTech())))
+	if (!GET_TEAM(getTeam()).isHasTech((TechTypes)kUnit.getPrereqAndTech()))
 	{
 		return false;
 	}
@@ -7948,14 +7921,14 @@ bool CvPlayer::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool
 		return false;
 	}
 
-	if (kUnit.getForceObsoleteTech() != NO_TECH && GET_TEAM(getTeam()).isHasTech((TechTypes)(kUnit.getForceObsoleteTech())))
+	if (kUnit.getForceObsoleteTech() != NO_TECH && GET_TEAM(getTeam()).isHasTech((TechTypes)kUnit.getForceObsoleteTech()))
 	{
 		return false;
 	}
 
 	for (int iI = 0; iI < GC.getNUM_UNIT_AND_TECH_PREREQS(); iI++)
 	{
-		if (kUnit.getPrereqAndTechs(iI) != NO_TECH && !GET_TEAM(getTeam()).isHasTech((TechTypes)(kUnit.getPrereqAndTechs(iI))))
+		if (kUnit.getPrereqAndTechs(iI) != NO_TECH && !GET_TEAM(getTeam()).isHasTech((TechTypes)kUnit.getPrereqAndTechs(iI)))
 		{
 			return false;
 		}
@@ -8000,9 +7973,9 @@ bool CvPlayer::canTrain(UnitTypes eUnit, bool bContinue, bool bTestVisible, bool
 	{
 		if (!bPropertySpawn)
 		{
-			if (GC.getGame().isUnitMaxedOut(eUnit, (GET_TEAM(getTeam()).getUnitMaking(eUnit) + ((bContinue) ? -1 : 0)))
-			|| GET_TEAM(getTeam()).isUnitMaxedOut(eUnit, (GET_TEAM(getTeam()).getUnitMaking(eUnit) + ((bContinue) ? -1 : 0)))
-			|| isUnitMaxedOut(eUnit, (getUnitMaking(eUnit) + ((bContinue) ? -1 : 0))))
+			if (GC.getGame().isUnitMaxedOut(eUnit, GET_TEAM(getTeam()).getUnitMaking(eUnit) + (bContinue ? -1 : 0))
+			|| GET_TEAM(getTeam()).isUnitMaxedOut(eUnit, GET_TEAM(getTeam()).getUnitMaking(eUnit) + (bContinue ? -1 : 0))
+			|| isUnitMaxedOut(eUnit, getUnitMaking(eUnit) + (bContinue ? -1 : 0)))
 			{
 				return false;
 			}
@@ -13435,26 +13408,16 @@ void CvPlayer::setCapitalCity(CvCity* pNewCapitalCity)
 		{
 			m_iCapitalCityID = pNewCapitalCity->getID();
 
-			const CvCivilizationInfo& civInfo = GC.getCivilizationInfo(getCivilizationType());
-
-			for (int iI = 0; iI < GC.getNumBuildingInfos(); iI++)
+			for (int iI = 0; iI < GC.getCivilizationInfo(getCivilizationType()).getNumCivilizationBuildings(); iI++)
 			{
-				if (civInfo.isCivilizationFreeBuilding(iI))
+				if (pOldCapitalCity != NULL)
 				{
-					const BuildingTypes eBuilding = static_cast<BuildingTypes>(iI);
-
-					if (pOldCapitalCity != NULL)
-					{
-						pOldCapitalCity->setNumRealBuilding(eBuilding, 0);
-					}
-					pNewCapitalCity->setNumRealBuilding(eBuilding, 1);
+					pOldCapitalCity->setNumRealBuilding((BuildingTypes)GC.getCivilizationInfo(getCivilizationType()).getCivilizationBuilding(iI), 0);
 				}
+				pNewCapitalCity->setNumRealBuilding((BuildingTypes)GC.getCivilizationInfo(getCivilizationType()).getCivilizationBuilding(iI), 1);
 			}
 		}
-		else
-		{
-			m_iCapitalCityID = FFreeList::INVALID_INDEX;
-		}
+		else  m_iCapitalCityID = FFreeList::INVALID_INDEX;
 
 		//ls612: Embassy Visibility Fix (by Damgo)
 		for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
@@ -13487,16 +13450,13 @@ void CvPlayer::setCapitalCity(CvCity* pNewCapitalCity)
 		//DPII < Maintenance Modifier >
 		if (pNewCapitalCity != NULL)
 		{
-			if (pOldCapitalCity != NULL)
+			if (pOldCapitalCity == NULL)
 			{
-	            if ((pOldCapitalCity->area()) != (pNewCapitalCity->area()))
-	            {
-	                pNewCapitalCity->area()->setHomeArea(getID(), pOldCapitalCity->area());
-	            }
+				pNewCapitalCity->area()->setHomeArea(getID(), NULL);
 			}
-			else
+			else if (pOldCapitalCity->area() != pNewCapitalCity->area())
 			{
-	            pNewCapitalCity->area()->setHomeArea(getID(), NULL);
+				pNewCapitalCity->area()->setHomeArea(getID(), pOldCapitalCity->area());
 			}
 		}
 		//DPII < Maintenance Modifier >
@@ -13510,7 +13470,6 @@ void CvPlayer::setCapitalCity(CvCity* pNewCapitalCity)
 				pOldCapitalCity->setCommerceModifierDirty((CommerceTypes)iI);
 			}
 			pOldCapitalCity->updateCommerce();
-
 			pOldCapitalCity->setInfoDirty(true);
 		}
 		if (pNewCapitalCity != NULL)
@@ -13520,7 +13479,6 @@ void CvPlayer::setCapitalCity(CvCity* pNewCapitalCity)
 				pNewCapitalCity->setCommerceModifierDirty((CommerceTypes)iI);
 			}
 			pNewCapitalCity->updateCommerce();
-
 			pNewCapitalCity->setInfoDirty(true);
 		}
 	}

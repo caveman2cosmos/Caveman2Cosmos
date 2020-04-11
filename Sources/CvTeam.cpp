@@ -2178,23 +2178,32 @@ int CvTeam::getNumNukeUnits() const
 	return iCount;
 }
 
-bool CvTeam::isUnitPrereqOrBonusesMet(const CvUnitInfo& unit) const
+// Toffer - Used by barbarian unit spawning "CvGame::createBarbarianUnits()",
+//		and for the new game starting units "CvPlayer::addStartUnitAI(...)".
+// Barbs don't need the bonus req for units, but they must have the tech that enables it.
+bool CvTeam::isUnitBonusEnabledByTech(const CvUnitInfo& unit, const bool bNoWorldBonuses) const
 {
+	if (unit.getPrereqAndBonus() != NO_BONUS)
+	{
+		if (!isHasTech((TechTypes)GC.getBonusInfo((BonusTypes)unit.getPrereqAndBonus()).getTechCityTrade())
+		|| bNoWorldBonuses // Toffer - TODO - Add maxGlobalInstances tag to CvBonusInfo.
+		&& GC.getBonusInfo((BonusTypes)unit.getPrereqAndBonus()).getBonusClassType() == GC.getInfoTypeForString("BONUSCLASS_CULTURE"))
+		{
+			return false;
+		}
+	}
 	bool bMet = true;
 	for (int iI = 0; iI < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); ++iI)
 	{
 		if (NO_BONUS != unit.getPrereqOrBonuses(iI))
 		{
-			TechTypes eTech = (TechTypes)GC.getBonusInfo((BonusTypes)unit.getPrereqOrBonuses(iI)).getTechCityTrade();
-			if (NO_TECH != eTech)
+			if (isHasTech((TechTypes)GC.getBonusInfo((BonusTypes)unit.getPrereqOrBonuses(iI)).getTechCityTrade())
+			&& (!bNoWorldBonuses || GC.getBonusInfo((BonusTypes)unit.getPrereqOrBonuses(iI)).getBonusClassType() != GC.getInfoTypeForString("BONUSCLASS_CULTURE")))
 			{
-				if (isHasTech(eTech))
-				{
-					bMet = true;
-					break;
-				}
-				bMet = false;
+				bMet = true;
+				break;
 			}
+			bMet = false;
 		}
 	}
 	return bMet;

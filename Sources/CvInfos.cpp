@@ -12801,7 +12801,6 @@ m_bAIPlayable(false),
 m_piCivilizationFreeUnits(NULL),
 m_piCivilizationInitialCivics(NULL),
 m_pbLeaders(NULL),
-m_pbCivilizationFreeBuilding(NULL),
 m_pbCivilizationFreeTechs(NULL),
 m_pbCivilizationDisableTechs(NULL),
 m_paszCityNames(NULL),
@@ -12823,7 +12822,6 @@ CvCivilizationInfo::~CvCivilizationInfo()
 	SAFE_DELETE_ARRAY(m_piCivilizationFreeUnits);
 	SAFE_DELETE_ARRAY(m_piCivilizationInitialCivics);
 	SAFE_DELETE_ARRAY(m_pbLeaders);
-	SAFE_DELETE_ARRAY(m_pbCivilizationFreeBuilding);
 	SAFE_DELETE_ARRAY(m_pbCivilizationFreeTechs);
 	SAFE_DELETE_ARRAY(m_pbCivilizationDisableTechs);
 	SAFE_DELETE_ARRAY(m_paszCityNames);
@@ -12965,11 +12963,21 @@ bool CvCivilizationInfo::isLeaders(int i) const
 	return m_pbLeaders ? m_pbLeaders[i] : false;
 }
 
-bool CvCivilizationInfo::isCivilizationFreeBuilding(int i) const
+int CvCivilizationInfo::getNumCivilizationBuildings() const
 {
-	FAssertMsg(i < GC.getNumBuildingInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
-	return m_pbCivilizationFreeBuilding ? m_pbCivilizationFreeBuilding[i] : false;
+	return (int)m_aiCivilizationBuildings.size();
+}
+int CvCivilizationInfo::getCivilizationBuilding(int i) const
+{
+	return m_aiCivilizationBuildings[i];
+}
+bool CvCivilizationInfo::isCivilizationBuilding(int i) const
+{
+	if (find(m_aiCivilizationBuildings.begin(), m_aiCivilizationBuildings.end(), i) == m_aiCivilizationBuildings.end())
+	{
+		return false;
+	}
+	return true;
 }
 
 bool CvCivilizationInfo::isCivilizationFreeTechs(int i) const
@@ -13056,19 +13064,19 @@ void CvCivilizationInfo::getCheckSum(unsigned int& iSum)
 	CheckSum(iSum, m_iDerivativeCiv);
 	CheckSum(iSum, m_bAIPlayable);
 	CheckSum(iSum, m_bPlayable);
-
+	// TB Tags
+	CheckSum(iSum, m_iSpawnRateModifier);
+	CheckSum(iSum, m_iSpawnRateNPCPeaceModifier);
+	CheckSum(iSum, m_bStronglyRestricted);
+	// ! TB Tags
 	// Arrays
 	CheckSumI(iSum, GC.getNumUnitInfos(), m_piCivilizationFreeUnits);
 	CheckSumI(iSum, GC.getNumCivicOptionInfos(), m_piCivilizationInitialCivics);
 	CheckSumI(iSum, GC.getNumLeaderHeadInfos(), m_pbLeaders);
-	CheckSumI(iSum, GC.getNumBuildingInfos(), m_pbCivilizationFreeBuilding);
 	CheckSumI(iSum, GC.getNumTechInfos(), m_pbCivilizationFreeTechs);
 	CheckSumI(iSum, GC.getNumTechInfos(), m_pbCivilizationDisableTechs);
-
-	//TB Tags
-	CheckSum(iSum, m_iSpawnRateModifier);
-	CheckSum(iSum, m_iSpawnRateNPCPeaceModifier);
-	CheckSum(iSum, m_bStronglyRestricted);
+	// Vectors
+	CheckSumC(iSum, m_aiCivilizationBuildings);
 }
 
 bool CvCivilizationInfo::read(CvXMLLoadUtility* pXML)
@@ -13116,8 +13124,9 @@ bool CvCivilizationInfo::read(CvXMLLoadUtility* pXML)
 		pXML->MoveToXmlParent();
 	}
 
+	pXML->SetOptionalIntVector(&m_aiCivilizationBuildings, L"FreeBuildings");
+
 	pXML->SetVariableListTagPair(&m_piCivilizationFreeUnits, L"FreeUnits", GC.getNumUnitInfos());
-	pXML->SetVariableListTagPair(&m_pbCivilizationFreeBuilding, L"FreeBuildings",  GC.getNumBuildingInfos());
 	pXML->SetVariableListTagPair(&m_pbCivilizationFreeTechs, L"FreeTechs", GC.getNumTechInfos());
 	pXML->SetVariableListTagPair(&m_pbCivilizationDisableTechs, L"DisableTechs", GC.getNumTechInfos());
 
@@ -13262,17 +13271,7 @@ void CvCivilizationInfo::copyNonDefaults(CvCivilizationInfo* pClassInfo, CvXMLLo
 		m_iActionSoundScriptId = (pClassInfo->getActionSoundScriptId());
 	}
 
-	for ( int i = 0; i < GC.getNumBuildingInfos(); i++)
-	{
-		if ( isCivilizationFreeBuilding(i) == bDefault && pClassInfo->isCivilizationFreeBuilding(i) != bDefault)
-		{
-			if ( NULL == m_pbCivilizationFreeBuilding )
-			{
-				CvXMLLoadUtility::InitList(&m_pbCivilizationFreeBuilding,GC.getNumBuildingInfos(),bDefault);
-			}
-			m_pbCivilizationFreeBuilding[i] = pClassInfo->isCivilizationFreeBuilding(i);
-		}
-	}
+	CvXMLLoadUtility::CopyNonDefaultsFromIntVector(m_aiCivilizationBuildings, pClassInfo->m_aiCivilizationBuildings);
 
 	for ( int i = 0; i < GC.getNumUnitInfos(); i++)
 	{

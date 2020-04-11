@@ -8741,23 +8741,25 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 
 		if (bDebug && pWorkingCity == NULL && pPlot->getOwner() != NO_PLAYER)
 		{
+			const int iCulture = GC.getInfoTypeForString("BONUSCLASS_CULTURE");
+			const int iProduce = GC.getInfoTypeForString("BONUSCLASS_MANUFACTURED");
 			bool bFirst = true;
 			for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
 			{
-				if (pPlot->isPlotGroupConnectedBonus(pPlot->getOwner(), ((BonusTypes)iI)))
+				if (pPlot->isPlotGroupConnectedBonus(pPlot->getOwner(), ((BonusTypes)iI))
+				&& GC.getBonusInfo((BonusTypes)iI).getBonusClassType() != iCulture
+				&& GC.getBonusInfo((BonusTypes)iI).getBonusClassType() != iProduce)
 				{
 					if (bFirst)
 					{
 						szString.append(CvWString::format(L"\nAI Bonus Value: %s=%d",
-							GC.getBonusInfo((BonusTypes)iI).getDescription(),
-							GET_PLAYER(pPlot->getOwner()).AI_bonusVal((BonusTypes)iI)));
+							GC.getBonusInfo((BonusTypes)iI).getDescription(), GET_PLAYER(pPlot->getOwner()).AI_bonusVal((BonusTypes)iI)));
 						bFirst = false;
 					}
 					else
 					{
 						szString.append(CvWString::format(L", %s=%d",
-							GC.getBonusInfo((BonusTypes)iI).getDescription(),
-							GET_PLAYER(pPlot->getOwner()).AI_bonusVal((BonusTypes)iI)));
+							GC.getBonusInfo((BonusTypes)iI).getDescription(), GET_PLAYER(pPlot->getOwner()).AI_bonusVal((BonusTypes)iI)));
 					}
 				}
 			}
@@ -9236,46 +9238,44 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 						setYieldValueString(szString, iValue, /*bActive*/ bUsingSpecialist);
 					}
 				}
+				int iFood = GET_PLAYER(pCity->getOwner()).AI_averageYieldMultiplier(YIELD_FOOD);
+				int iHammer = GET_PLAYER(pCity->getOwner()).AI_averageYieldMultiplier(YIELD_PRODUCTION);
+				int iCommerce = GET_PLAYER(pCity->getOwner()).AI_averageYieldMultiplier(YIELD_COMMERCE);
+
+				szString.append(CvWString::format(L"\nPlayer avg:	   (f%d, h%d, c%d)", iFood, iHammer, iCommerce));
+
+				iFood = pCity->AI_yieldMultiplier(YIELD_FOOD);
+				iHammer = pCity->AI_yieldMultiplier(YIELD_PRODUCTION);
+				iCommerce = pCity->AI_yieldMultiplier(YIELD_COMMERCE);
+
+				szString.append(CvWString::format(L"\nCity yield mults: (f%d, h%d, c%d)", iFood, iHammer, iCommerce));
+
+				iFood = pCityAI->AI_specialYieldMultiplier(YIELD_FOOD);
+				iHammer = pCityAI->AI_specialYieldMultiplier(YIELD_PRODUCTION);
+				iCommerce = pCityAI->AI_specialYieldMultiplier(YIELD_COMMERCE);
+
+				szString.append(CvWString::format(L"\nCity spec mults:  (f%d, h%d, c%d)", iFood, iHammer, iCommerce));
+
+				szString.append(CvWString::format(L"\nExchange"));
+				for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
 				{
-					int iFood = GET_PLAYER(pCity->getOwner()).AI_averageYieldMultiplier(YIELD_FOOD);
-					int iHammer = GET_PLAYER(pCity->getOwner()).AI_averageYieldMultiplier(YIELD_PRODUCTION);
-					int iCommerce = GET_PLAYER(pCity->getOwner()).AI_averageYieldMultiplier(YIELD_COMMERCE);
+					iCommerce = GET_PLAYER(pCity->getOwner()).AI_averageCommerceExchange((CommerceTypes)iI);
+					szTempBuffer.Format(L", %d%c", iCommerce, GC.getCommerceInfo((CommerceTypes) iI).getChar());
+					szString.append(szTempBuffer);
+				}
 
-					szString.append(CvWString::format(L"\nPlayer avg:	   (f%d, h%d, c%d)", iFood, iHammer, iCommerce));
+				szString.append(CvWString::format(L"\nAvg mults"));
+				for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
+				{
+					iCommerce = GET_PLAYER(pCity->getOwner()).AI_averageCommerceMultiplier((CommerceTypes)iI);
+					szTempBuffer.Format(L", %d%c", iCommerce, GC.getCommerceInfo((CommerceTypes) iI).getChar());
+					szString.append(szTempBuffer);
+				}
 
-					iFood = pCity->AI_yieldMultiplier(YIELD_FOOD);
-					iHammer = pCity->AI_yieldMultiplier(YIELD_PRODUCTION);
-					iCommerce = pCity->AI_yieldMultiplier(YIELD_COMMERCE);
-
-					szString.append(CvWString::format(L"\nCity yield mults: (f%d, h%d, c%d)", iFood, iHammer, iCommerce));
-
-					iFood = pCityAI->AI_specialYieldMultiplier(YIELD_FOOD);
-					iHammer = pCityAI->AI_specialYieldMultiplier(YIELD_PRODUCTION);
-					iCommerce = pCityAI->AI_specialYieldMultiplier(YIELD_COMMERCE);
-
-					szString.append(CvWString::format(L"\nCity spec mults:  (f%d, h%d, c%d)", iFood, iHammer, iCommerce));
-
-					szString.append(CvWString::format(L"\nExchange"));
-					for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
-					{
-						iCommerce = GET_PLAYER(pCity->getOwner()).AI_averageCommerceExchange((CommerceTypes)iI);
-						szTempBuffer.Format(L", %d%c", iCommerce, GC.getCommerceInfo((CommerceTypes) iI).getChar());
-						szString.append(szTempBuffer);
-					}
-
-					szString.append(CvWString::format(L"\nAvg mults"));
-					for (int iI = 0; iI < NUM_COMMERCE_TYPES; ++iI)
-					{
-						iCommerce = GET_PLAYER(pCity->getOwner()).AI_averageCommerceMultiplier((CommerceTypes)iI);
-						szTempBuffer.Format(L", %d%c", iCommerce, GC.getCommerceInfo((CommerceTypes) iI).getChar());
-						szString.append(szTempBuffer);
-					}
-
-					if (GET_PLAYER(pCity->getOwner()).AI_isFinancialTrouble())
-					{
-						szTempBuffer.Format(L"$$$!!!");
-						szString.append(szTempBuffer);
-					}
+				if (GET_PLAYER(pCity->getOwner()).AI_isFinancialTrouble())
+				{
+					szTempBuffer.Format(L"$$$!!!");
+					szString.append(szTempBuffer);
 				}
 			}
 			else
