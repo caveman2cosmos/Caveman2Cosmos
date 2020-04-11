@@ -241,6 +241,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_BOTTLENECK</Tag>
 		<English>Bottleneck Promotionline</English>
 		<French>Spécialisation Goulot</French>
+		<German>Flaschenhals</German>
 		<Polish>Linia Promocji: Wąskie gardło</Polish>
 	</TEXT>
 	<TEXT>
@@ -580,6 +581,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_BULLY</Tag>
 		<English>Bully Promotionline</English>
 		<French>Spécialisation Brute</French>
+		<German>Einschüchtern</German>
 		<Polish>Linia Promocji: Tyran</Polish>
 	</TEXT>
 	<TEXT>
@@ -684,6 +686,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_COMBAT</Tag>
 		<English>Combat Promotion Line</English>
 		<French>Spécialisation Combat</French>
+		<German>Kampferfahrung</German>
 		<Italian>Combattimento</Italian>
 		<Polish>Linia Promocji: Walka</Polish>
 	</TEXT>
@@ -805,6 +808,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_DIVINE_MIGHT</Tag>
 		<English>Divine Might Promotionline</English>
 		<French>Spécialisation Puissance Divine</French>
+		<German>Göttliche Macht</German>
 		<Polish>Linia Promocji: Boska Moca</Polish>
 	</TEXT>
 	<TEXT>
@@ -840,6 +844,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_ELITE_MIGHT</Tag>
 		<English>Elite Might Promotionline</English>
 		<French>Spécialisation Unité d'Elite</French>
+		<German>Elitäre Stärke</German>
 		<Polish>Linia Promocji: Elitarna Moc</Polish>
 	</TEXT>
 	<TEXT>
@@ -871,6 +876,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_EPIC_MIGHT</Tag>
 		<English>Epic Might Promotionline</English>
 		<French>Spécialisation Force Epique</French>
+		<German>Monumentale Stärke</German>
 		<Polish>Linia Promocji: Epicka Moc</Polish>
 	</TEXT>
 	<TEXT>
@@ -909,6 +915,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_EXCEPTIONAL_MIGHT</Tag>
 		<English>Exceptional Might Promotionline</English>
 		<French>Spécialisation Force Exceptionelle</French>
+		<German>Außergewöhnliche Stärke</German>
 		<Polish>Linia Promocji: Wyjątkowa Moc</Polish>
 	</TEXT>
 	<TEXT>
@@ -1033,6 +1040,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_GARRISON</Tag>
 		<English>Garrison Promotion Line</English>
 		<French>Spécialisation Garnison</French>
+		<German>Stadtverteidigung</German>
 		<Italian>Guarnigione</Italian>
 		<Polish>Linia Promocji: Garnizon Miejski</Polish>
 	</TEXT>
@@ -1300,6 +1308,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_LOW_PROFILE</Tag>
 		<English>Low Profile Promotion Line</English>
 		<French>Spécialisation Profil bas</French>
+		<German>Unauffällig</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_MAMMOTH_HUNTER</Tag>
@@ -1360,6 +1369,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_MIGHT</Tag>
 		<English>Might Promotionline</English>
 		<French>Spécialisation Puissance</French>
+		<German>Stärke</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_MORALE</Tag>
@@ -1449,6 +1459,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_PARAMEDIC</Tag>
 		<English>Paramedic Promotion Line</English>
 		<French>Spécialisation Paramedical</French>
+		<German>Sanitäter</German>
 		<Italian>Paramedico</Italian>
 		<Spanish>Paramedica</Spanish>
 		<Polish>Linia Promocji: Sanitariusz</Polish>
@@ -1738,6 +1749,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_SELF_HEAL</Tag>
 		<English>Self Heal Promotionline</English>
 		<French>Spécialisation Guérison Auto.</French>
+		<German>Selbstheilung</German>
 		<Polish>Linia Promocji: Samoleczenie</Polish>
 	</TEXT>
 	<TEXT>
@@ -1860,6 +1872,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_SPOT</Tag>
 		<English>Spot Promotion Line</English>
 		<French>Spécialisation Point de vue</French>
+		<German>Sicht</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTIONLINE_STALL</Tag>
@@ -1872,6 +1885,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_STANDARD_MIGHT</Tag>
 		<English>Standard Might Promotionline</English>
 		<French>Spécialisation Force Standard</French>
+		<German>Standardstärke</German>
 		<Polish>Linia Promocji: Standardowa Moc</Polish>
 	</TEXT>
 	<TEXT>
@@ -1897,6 +1911,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_STING</Tag>
 		<English>Sting Promotionline</English>
 		<French>Spécialisation Dard</French>
+		<German>Stachel</German>
 		<Polish>Linia Promocji: Żądło</Polish>
 	</TEXT>
 	<TEXT>
@@ -1918,6 +1933,7 @@
 		<Tag>TXT_KEY_PROMOTIONLINE_SUPERIOR_MIGHT</Tag>
 		<English>Superior Might Promotionline</English>
 		<French>Spécialisation Puissance Supérieure</French>
+		<German>Überlegene Stärke</German>
 		<Polish>Linia Promocji: Super Moc</Polish>
 	</TEXT>
 	<TEXT>
@@ -3942,11 +3958,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Bottleneck I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Flaschenhals I</German>
 		<Italian>
 			<Text>Bottleneck I</Text>
 			<Gender>Male</Gender>
@@ -3967,11 +3979,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Bottleneck II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Flaschenhals II</German>
 		<Italian>
 			<Text>Bottleneck II</Text>
 			<Gender>Male</Gender>
@@ -3992,11 +4000,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Bottleneck III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Flaschenhals III</German>
 		<Italian>
 			<Text>Bottleneck III</Text>
 			<Gender>Male</Gender>
@@ -4017,11 +4021,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Bottleneck IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Flaschenhals IV</German>
 		<Italian>
 			<Text>Bottleneck IV</Text>
 			<Gender>Male</Gender>
@@ -4975,11 +4975,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Bully I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Einschüchtern I</German>
 		<Italian>
 			<Text>Bully I</Text>
 			<Gender>Male</Gender>
@@ -5000,11 +4996,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Bully II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Einschüchtern II</German>
 		<Italian>
 			<Text>Bully II</Text>
 			<Gender>Male</Gender>
@@ -5025,11 +5017,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Bully III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Einschüchtern III</German>
 		<Italian>
 			<Text>Bully III</Text>
 			<Gender>Male</Gender>
@@ -5050,11 +5038,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Bully IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Einschüchtern IV</German>
 		<Italian>
 			<Text>Bully IV</Text>
 			<Gender>Male</Gender>
@@ -5695,11 +5679,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>City Garrison IV</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Stadtverteidigung IV</German>
 		<Italian>
 			<Text>Guarnigione IV</Text>
 			<Gender>Male</Gender>
@@ -7362,54 +7342,63 @@
 		<Tag>TXT_KEY_PROMOTION_DIVINE_MIGHT1</Tag>
 		<English>Divine Might I</English>
 		<French>Puissance Divine I</French>
+		<German>Göttliche Macht I</German>
 		<Polish>Boska Moca I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DIVINE_MIGHT2</Tag>
 		<English>Divine Might II</English>
 		<French>Puissance Divine II</French>
+		<German>Göttliche Macht II</German>
 		<Polish>Boska Moca II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DIVINE_MIGHT3</Tag>
 		<English>Divine Might III</English>
 		<French>Puissance Divine III</French>
+		<German>Göttliche Macht III</German>
 		<Polish>Boska Moca III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DIVINE_MIGHT4</Tag>
 		<English>Divine Might IV</English>
 		<French>Puissance Divine IV</French>
+		<German>Göttliche Macht IV</German>
 		<Polish>Boska Moca IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DIVINE_MIGHT5</Tag>
 		<English>Divine Might V</English>
 		<French>Puissance Divine V</French>
+		<German>Göttliche Macht V</German>
 		<Polish>Boska Moca V</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DIVINE_MIGHT6</Tag>
 		<English>Divine Might VI</English>
 		<French>Puissance Divine VI</French>
+		<German>Göttliche Macht VI</German>
 		<Polish>Boska Moca VI</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DIVINE_MIGHT7</Tag>
 		<English>Divine Might VII</English>
 		<French>Puissance Divine VII</French>
+		<German>Göttliche Macht VII</German>
 		<Polish>Boska Moca VII</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DIVINE_MIGHT8</Tag>
 		<English>Divine Might VIII</English>
 		<French>Puissance Divine VIII</French>
+		<German>Göttliche Macht VIII</German>
 		<Polish>Boska Moca VIII</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_DIVINE_MIGHT9</Tag>
 		<English>Divine Might IX</English>
 		<French>Puissance Divine IX</French>
+		<German>Göttliche Macht IX</German>
 		<Polish>Boska Moca IX</Polish>
 	</TEXT>
 	<TEXT>
@@ -7701,42 +7690,49 @@
 		<Tag>TXT_KEY_PROMOTION_ELITE_MIGHT1</Tag>
 		<English>Elite Might I</English>
 		<French>Unité d'Elite I</French>
+		<German>Elitäre Stärke I</German>
 		<Polish>Elitarna Moc I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ELITE_MIGHT2</Tag>
 		<English>Elite Might II</English>
 		<French>Unité d'Elite II</French>
+		<German>Elitäre Stärke II</German>
 		<Polish>Elitarna Moc II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ELITE_MIGHT3</Tag>
 		<English>Elite Might III</English>
 		<French>Unité d'Elite III</French>
+		<German>Elitäre Stärke III</German>
 		<Polish>Elitarna Moc III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ELITE_MIGHT4</Tag>
 		<English>Elite Might IV</English>
 		<French>Unité d'Elite IV</French>
+		<German>Elitäre Stärke IV</German>
 		<Polish>Elitarna Moc IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ELITE_MIGHT5</Tag>
 		<English>Elite Might V</English>
 		<French>Unité d'Elite V</French>
+		<German>Elitäre Stärke V</German>
 		<Polish>Elitarna Moc V</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ELITE_MIGHT6</Tag>
 		<English>Elite Might VI</English>
 		<French>Unité d'Elite VI</French>
+		<German>Elitäre Stärke VI</German>
 		<Polish>Elitarna Moc VI</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_ELITE_MIGHT7</Tag>
 		<English>Elite Might VII</English>
 		<French>Unité d'Elite VII</French>
+		<German>Elitäre Stärke VII</German>
 		<Polish>Elitarna Moc VII</Polish>
 	</TEXT>
 	<TEXT>
@@ -7901,48 +7897,56 @@
 		<Tag>TXT_KEY_PROMOTION_EPIC_MIGHT1</Tag>
 		<English>Epic Might I</English>
 		<French>Force Epique I</French>
+		<German>Monumentale Stärke I</German>
 		<Polish>Epicka Moc I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_EPIC_MIGHT2</Tag>
 		<English>Epic Might II</English>
 		<French>Force Epique II</French>
+		<German>Monumentale Stärke II</German>
 		<Polish>Epicka Moc II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_EPIC_MIGHT3</Tag>
 		<English>Epic Might III</English>
 		<French>Force Epique III</French>
+		<German>Monumentale Stärke III</German>
 		<Polish>Epicka Moc III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_EPIC_MIGHT4</Tag>
 		<English>Epic Might IV</English>
 		<French>Force Epique IV</French>
+		<German>Monumentale Stärke IV</German>
 		<Polish>Epicka Moc IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_EPIC_MIGHT5</Tag>
 		<English>Epic Might V</English>
 		<French>Force Epique V</French>
+		<German>Monumentale Stärke V</German>
 		<Polish>Epicka Moc V</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_EPIC_MIGHT6</Tag>
 		<English>Epic Might VI</English>
 		<French>Force Epique VI</French>
+		<German>Monumentale Stärke VI</German>
 		<Polish>Epicka Moc VI</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_EPIC_MIGHT7</Tag>
 		<English>Epic Might VII</English>
 		<French>Force Epique VII</French>
+		<German>Monumentale Stärke VII</German>
 		<Polish>Epicka Moc VII</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_EPIC_MIGHT8</Tag>
 		<English>Epic Might VIII</English>
 		<French>Force Epique VIII</French>
+		<German>Monumentale Stärke VIII</German>
 		<Polish>Epicka Moc VIII</Polish>
 	</TEXT>
 	<TEXT>
@@ -8033,36 +8037,42 @@
 		<Tag>TXT_KEY_PROMOTION_EXCEPTIONAL_MIGHT1</Tag>
 		<English>Exceptional Might I</English>
 		<French>Force Exceptionelle I</French>
+		<German>Außergewöhnliche Stärke I</German>
 		<Polish>Wyjątkowa Moc I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_EXCEPTIONAL_MIGHT2</Tag>
 		<English>Exceptional Might II</English>
 		<French>Force Exceptionelle II</French>
+		<German>Außergewöhnliche Stärke II</German>
 		<Polish>Wyjątkowa Moc II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_EXCEPTIONAL_MIGHT3</Tag>
 		<English>Exceptional Might III</English>
 		<French>Force Exceptionelle III</French>
+		<German>Außergewöhnliche Stärke III</German>
 		<Polish>Wyjątkowa Moc III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_EXCEPTIONAL_MIGHT4</Tag>
 		<English>Exceptional Might IV</English>
 		<French>Force Exceptionelle IV</French>
+		<German>Außergewöhnliche Stärke IV</German>
 		<Polish>Wyjątkowa Moc IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_EXCEPTIONAL_MIGHT5</Tag>
 		<English>Exceptional Might V</English>
 		<French>Force Exceptionelle V</French>
+		<German>Außergewöhnliche Stärke V</German>
 		<Polish>Wyjątkowa Moc V</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_EXCEPTIONAL_MIGHT6</Tag>
 		<English>Exceptional Might VI</English>
 		<French>Force Exceptionelle VI</French>
+		<German>Außergewöhnliche Stärke VI</German>
 		<Polish>Wyjątkowa Moc VI</Polish>
 	</TEXT>
 	<TEXT>
@@ -9043,11 +9053,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Stadtverteidigung I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Stadtverteidigung I</German>
 		<Italian>
 			<Text>Guarnigione I</Text>
 			<Gender>Female</Gender>
@@ -9068,11 +9074,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Stadtverteidigung II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Stadtverteidigung II</German>
 		<Italian>
 			<Text>Guarnigione II</Text>
 			<Gender>Female</Gender>
@@ -9093,11 +9095,7 @@
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Stadtverteidigung III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Stadtverteidigung III</German>
 		<Italian>
 			<Text>Guarnigione III</Text>
 			<Gender>Female</Gender>
@@ -11312,6 +11310,7 @@
 		<Tag>TXT_KEY_PROMOTION_LEVEL_PREREQ_TEXT</Tag>
 		<English>[ICON_BULLET]Level Prerequisite: %d1_Change</English>
 		<French>[ICON_BULLET]Niveau pré-requis: %d1_Change</French>
+		<German>[ICON_BULLET]Erforderliche Stufe: %d1_Change</German>
 		<Polish>[ICON_BULLET]Wymagany poziom: %d1_Change</Polish>
 	</TEXT>
 	<TEXT>
@@ -11606,16 +11605,19 @@
 		<Tag>TXT_KEY_PROMOTION_LOW_PROFILE1</Tag>
 		<English>Low Profile I</English>
 		<French>Profil bas I</French>
+		<German>Unauffällig I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_LOW_PROFILE2</Tag>
 		<English>Low Profile II</English>
 		<French>Profil bas II</French>
+		<German>Unauffällig II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_LOW_PROFILE3</Tag>
 		<English>Low Profile III</English>
 		<French>Profil bas III</French>
+		<German>Unauffällig III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_LOYALTY</Tag>
@@ -12385,66 +12387,79 @@
 		<Tag>TXT_KEY_PROMOTION_MIGHT1</Tag>
 		<English>Might I</English>
 		<French>Puissance I</French>
+		<German>Stärke I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MIGHT10</Tag>
 		<English>Might X</English>
 		<French>Puissance X</French>
+		<German>Stärke X</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MIGHT11</Tag>
 		<English>Might XI</English>
 		<French>Puissance XI</French>
+		<German>Stärke XI</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MIGHT12</Tag>
 		<English>Might XII</English>
 		<French>Puissance XII</French>
+		<German>Stärke XII</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MIGHT13</Tag>
 		<English>Might XIII</English>
 		<French>Puissance XIII</French>
+		<German>Stärke XIII</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MIGHT2</Tag>
 		<English>Might II</English>
 		<French>Puissance II</French>
+		<German>Stärke II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MIGHT3</Tag>
 		<English>Might III</English>
 		<French>Puissance III</French>
+		<German>Stärke III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MIGHT4</Tag>
 		<English>Might IV</English>
 		<French>Puissance IV</French>
+		<German>Stärke IV</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MIGHT5</Tag>
 		<English>Might V</English>
 		<French>Puissance V</French>
+		<German>Stärke V</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MIGHT6</Tag>
 		<English>Might VI</English>
 		<French>Puissance VI</French>
+		<German>Stärke VI</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MIGHT7</Tag>
 		<English>Might VII</English>
 		<French>Puissance VII</French>
+		<German>Stärke VII</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MIGHT8</Tag>
 		<English>Might VIII</English>
 		<French>Puissance VIII</French>
+		<German>Stärke VIII</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MIGHT9</Tag>
 		<English>Might IX</English>
 		<French>Puissance IX</French>
+		<German>Stärke IX</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_MOBILITY</Tag>
@@ -13099,7 +13114,7 @@
 		<Tag>TXT_KEY_PROMOTION_OUTCOME_TEXT</Tag>
 		<English>[ICON_BULLET]%D1_Mod%% to [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</English>
 		<French>[ICON_BULLET]%D1_Mod%% à [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</French>
-		<German>[ICON_BULLET]%D1_Mod%% auf [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</German>
+		<German>[ICON_BULLET][LINK=%s2_AgainstType]%s3_AgainstName[\LINK]: %D1_Mod%%</German>
 		<Italian>[ICON_BULLET]%D1_Mod%% a [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</Italian>
 		<Spanish>[ICON_BULLET]%D1_Mod%% a [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</Spanish>
 		<Polish>[ICON_BULLET]%D1_Mod%% do [LINK=%s2_AgainstType]%s3_AgainstName[\LINK]</Polish>
@@ -13285,11 +13300,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Paramedic I</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Sanitäter I</German>
 		<Italian>
 			<Text>Paramedico I</Text>
 			<Gender>Male</Gender>
@@ -13310,11 +13321,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Paramedic II</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Sanitäter II</German>
 		<Italian>
 			<Text>Paramedico II</Text>
 			<Gender>Male</Gender>
@@ -13335,11 +13342,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
-		<German>
-			<Text>Paramedic III</Text>
-			<Gender>Male</Gender>
-			<Plural>0</Plural>
-		</German>
+		<German>Sanitäter III</German>
 		<Italian>
 			<Text>Paramedico III</Text>
 			<Gender>Male</Gender>
@@ -15968,30 +15971,35 @@
 		<Tag>TXT_KEY_PROMOTION_SELF_HEAL1</Tag>
 		<English>Self Heal I</English>
 		<French>Guérison Auto. I</French>
+		<German>Selbstheilung I</German>
 		<Polish>Samoleczenie I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SELF_HEAL2</Tag>
 		<English>Self Heal II</English>
 		<French>Guérison Auto. II</French>
+		<German>Selbstheilung II</German>
 		<Polish>Samoleczenie II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SELF_HEAL3</Tag>
 		<English>Self Heal III</English>
 		<French>Guérison Auto. III</French>
+		<German>Selbstheilung III</German>
 		<Polish>Samoleczenie III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SELF_HEAL4</Tag>
 		<English>Self Heal IV</English>
 		<French>Guérison Auto. IV</French>
+		<German>Selbstheilung IV</German>
 		<Polish>Samoleczenie IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SELF_HEAL5</Tag>
 		<English>Self Heal V</English>
 		<French>Guérison Auto. V</French>
+		<German>Selbstheilung V</German>
 		<Polish>Samoleczenie V</Polish>
 	</TEXT>
 	<TEXT>
@@ -17109,16 +17117,19 @@
 		<Tag>TXT_KEY_PROMOTION_SPOT1</Tag>
 		<English>Spot I</English>
 		<French>Emplacement I</French>
+		<German>Sicht I</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SPOT2</Tag>
 		<English>Spot II</English>
 		<French>Emplacement II</French>
+		<German>Sicht II</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SPOT3</Tag>
 		<English>Spot III</English>
 		<French>Emplacement III</French>
+		<German>Sicht III</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SPY_SUCCESS_TEXT</Tag>
@@ -17383,6 +17394,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Standardstärke I</German>
 		<Polish>Standardowa Siła I</Polish>
 	</TEXT>
 	<TEXT>
@@ -17393,6 +17405,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Standardstärke II</German>
 		<Polish>Standardowa Siła II</Polish>
 	</TEXT>
 	<TEXT>
@@ -17403,6 +17416,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Standardstärke III</German>
 		<Polish>Standardowa Siła III</Polish>
 	</TEXT>
 	<TEXT>
@@ -17413,6 +17427,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Standardstärke IV</German>
 		<Polish>Standardowa Siła IV</Polish>
 	</TEXT>
 	<TEXT>
@@ -17520,6 +17535,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Stachel I</German>
 		<Polish>Żądło I</Polish>
 	</TEXT>
 	<TEXT>
@@ -17530,6 +17546,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Stachel II</German>
 		<Polish>Żądło II</Polish>
 	</TEXT>
 	<TEXT>
@@ -17540,6 +17557,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Stachel III</German>
 		<Polish>Żądło III</Polish>
 	</TEXT>
 	<TEXT>
@@ -17550,6 +17568,7 @@
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
+		<German>Stachel IV</German>
 		<Polish>Żądło IV</Polish>
 	</TEXT>
 	<TEXT>
@@ -17692,6 +17711,7 @@
 		<Tag>TXT_KEY_PROMOTION_STRENGTHEN_TEXT</Tag>
 		<English>[ICON_BULLET]Strengthen: %D1_Change Strength</English>
 		<French>[ICON_BULLET]Puissance: %D1_Change Force</French>
+		<German>[ICON_BULLET]Stärkung: %D1_Change Stärke</German>
 		<Italian>[ICON_BULLET]Rafforzamento: %D1_Change di forza</Italian>
 		<Polish>[ICON_BULLET]Wzmocnienie: %D1_Change Siły</Polish>
 	</TEXT>
@@ -17727,30 +17747,35 @@
 		<Tag>TXT_KEY_PROMOTION_SUPERIOR_MIGHT1</Tag>
 		<English>Superior Might I</English>
 		<French>Puissance Supérieure I</French>
+		<German>Überlegene Stärke I</German>
 		<Polish>Ponadprzeciętna Siła I</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SUPERIOR_MIGHT2</Tag>
 		<English>Superior Might II</English>
 		<French>Puissance Supérieure II</French>
+		<German>Überlegene Stärke II</German>
 		<Polish>Ponadprzeciętna Siła II</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SUPERIOR_MIGHT3</Tag>
 		<English>Superior Might III</English>
 		<French>Puissance Supérieure III</French>
+		<German>Überlegene Stärke III</German>
 		<Polish>Ponadprzeciętna Siła III</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SUPERIOR_MIGHT4</Tag>
 		<English>Superior Might IV</English>
 		<French>Puissance Supérieure IV</French>
+		<German>Überlegene Stärke IV</German>
 		<Polish>Ponadprzeciętna Siła IV</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PROMOTION_SUPERIOR_MIGHT5</Tag>
 		<English>Superior Might V</English>
 		<French>Puissance Supérieure V</French>
+		<German>Überlegene Stärke V</German>
 		<Polish>Ponadprzeciętna Siła V</Polish>
 	</TEXT>
 	<TEXT>
@@ -19514,6 +19539,7 @@
 		<Tag>TXT_KEY_PROMOTION_WEAKEN_TEXT</Tag>
 		<English>[ICON_BULLET]Weaken: %D1_Change Strength</English>
 		<French>[ICON_BULLET]Faiblesse: %D1_Change de puissance</French>
+		<German>[ICON_BULLET]Schwächung: %D1_Change Stärke</German>
 		<Italian>[ICON_BULLET]Indebolimento: %D1_Change di forza</Italian>
 		<Polish>[ICON_BULLET]Osłabienie: %D1_Change Siły</Polish>
 	</TEXT>
