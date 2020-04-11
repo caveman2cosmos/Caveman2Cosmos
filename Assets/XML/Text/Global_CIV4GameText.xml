@@ -11139,7 +11139,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_OUTCOME_HUNTING_KILL</Tag>
 		<English>Hunting Kill</English>
 		<French>Tuer la proie</French>
-		<German>Tier wird erlegt</German>
+		<German>Jagdbeute erlegen</German>
 		<Italian>Uccisione di caccia</Italian>
 		<Spanish>Presa de caza</Spanish>
 		<Polish>Zabij</Polish>
@@ -11250,7 +11250,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_OUTCOME_SUBDUE</Tag>
 		<English>Subdue Animal</English>
 		<French>Apprivoiser l'Animal</French>
-		<German>Tier wird eingefangen</German>
+		<German>Tier einfangen</German>
 		<Italian>Addomestica l'animale</Italian>
 		<Spanish>Domar animal</Spanish>
 		<Polish>Oswój</Polish>
