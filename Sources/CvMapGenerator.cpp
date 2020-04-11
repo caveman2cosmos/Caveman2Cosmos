@@ -30,7 +30,7 @@ CvMapGenerator::~CvMapGenerator()
 }
 
 namespace {
-	const CvString getMapScript(const bool bUseDefaultMapScript)
+	const CvString getMapScript(bool bUseDefaultMapScript)
 	{
 		return bUseDefaultMapScript ? gDLL->getPythonIFace()->getMapScriptModule() : GC.getMapInfo(GC.getGame().getCurrentMap()).getMapScript();
 	}
