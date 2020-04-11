@@ -1553,7 +1553,6 @@
 					<bFeatureTerrain>1</bFeatureTerrain>
 				</FeatureTerrainBoolean>
 			</FeatureTerrainBooleans>
-			<bCurrency>1</bCurrency>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_HEMP</Type>
@@ -1835,7 +1834,6 @@
 					<bFeatureTerrain>1</bFeatureTerrain>
 				</FeatureTerrainBoolean>
 			</FeatureTerrainBooleans>
-			<bCurrency>1</bCurrency>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_COTTON</Type>
@@ -2144,7 +2142,6 @@
 					<bFeatureTerrain>1</bFeatureTerrain>
 				</FeatureTerrainBoolean>
 			</FeatureTerrainBooleans>
-			<bCurrency>1</bCurrency>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_INDIGO</Type>
@@ -2616,7 +2613,6 @@
 					<bFeatureTerrain>1</bFeatureTerrain>
 				</FeatureTerrainBoolean>
 			</FeatureTerrainBooleans>
-			<bCurrency>1</bCurrency>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_TEA</Type>
@@ -3840,7 +3836,6 @@
 					<bFeatureTerrain>1</bFeatureTerrain>
 				</FeatureTerrainBoolean>
 			</FeatureTerrainBooleans>
-			<bCurrency>1</bCurrency>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_GUINEA_PIGS</Type>
@@ -4923,7 +4918,6 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
-			<bCurrency>1</bCurrency>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SHRIMP</Type>
@@ -5137,7 +5131,6 @@
 				</FeatureTerrainBoolean>
 			</FeatureTerrainBooleans>
 			<bUseLSystem>1</bUseLSystem>
-			<bCurrency>1</bCurrency>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_AMBER</Type>
@@ -6145,7 +6138,6 @@
 				</FeatureTerrainBoolean>
 			</FeatureTerrainBooleans>
 			<bPeaks>1</bPeaks>
-			<bCurrency>1</bCurrency>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_DIAMOND</Type>
@@ -6783,7 +6775,6 @@
 				</FeatureTerrainBoolean>
 			</FeatureTerrainBooleans>
 			<bPeaks>1</bPeaks>
-			<bCurrency>1</bCurrency>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_IRON_ORE</Type>
@@ -7034,7 +7025,6 @@
 				</FeatureTerrainBoolean>
 			</FeatureTerrainBooleans>
 			<bPeaks>1</bPeaks>
-			<bCurrency>1</bCurrency>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_LEAD_ORE</Type>
@@ -7286,7 +7276,6 @@
 				</FeatureTerrainBoolean>
 			</FeatureTerrainBooleans>
 			<bPeaks>1</bPeaks>
-			<bCurrency>1</bCurrency>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_MANGANESE</Type>
@@ -8542,7 +8531,6 @@
 				</FeatureTerrainBoolean>
 			</FeatureTerrainBooleans>
 			<bPeaks>1</bPeaks>
-			<bCurrency>1</bCurrency>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SULPHUR</Type>
@@ -10133,7 +10121,6 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
 			</TerrainBooleans>
-			<bCurrency>1</bCurrency>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_OBSIDIAN</Type>
@@ -10324,7 +10311,6 @@
 				</FeatureTerrainBoolean>
 			</FeatureTerrainBooleans>
 			<bPeaks>1</bPeaks>
-			<bCurrency>1</bCurrency>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_SALT</Type>
@@ -10473,7 +10459,6 @@
 					<bFeatureTerrain>1</bFeatureTerrain>
 				</FeatureTerrainBoolean>
 			</FeatureTerrainBooleans>
-			<bCurrency>1</bCurrency>
 		</BonusInfo>
 		<BonusInfo>
 			<Type>BONUS_STONE</Type>

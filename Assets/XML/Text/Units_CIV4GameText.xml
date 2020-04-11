@@ -2630,13 +2630,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BAND</Tag>
-		<English>Band of Australopithecus</English>
-		<French>Bande d'Australopithèques</French>
-		<German>
-			<Text>Australopithecus-Horde:Australopithecus-Horde:Australopithecus-Horde:Australopithecus-Horde:Australopithecus-Horden:Australopithecus-Horden:Australopithecus-Horden:Australopithecus-Horden</Text>
-			<Gender>female:female:female:female:female:female:female:female</Gender>
-			<Plural>0:0:0:0:1:1:1:1</Plural>
-		</German>
+		<English>Ancestral Band</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_BANDEIRANTE_PEDIA</Tag>

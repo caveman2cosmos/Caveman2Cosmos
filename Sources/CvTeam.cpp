@@ -2178,23 +2178,32 @@ int CvTeam::getNumNukeUnits() const
 	return iCount;
 }
 
-bool CvTeam::isUnitPrereqOrBonusesMet(const CvUnitInfo& unit) const
+// Toffer - Used by barbarian unit spawning "CvGame::createBarbarianUnits()",
+//		and for the new game starting units "CvPlayer::addStartUnitAI(...)".
+// Barbs don't need the bonus req for units, but they must have the tech that enables it.
+bool CvTeam::isUnitBonusEnabledByTech(const CvUnitInfo& unit, const bool bNoWorldBonuses) const
 {
+	if (unit.getPrereqAndBonus() != NO_BONUS)
+	{
+		if (!isHasTech((TechTypes)GC.getBonusInfo((BonusTypes)unit.getPrereqAndBonus()).getTechCityTrade())
+		|| bNoWorldBonuses // Toffer - TODO - Add maxGlobalInstances tag to CvBonusInfo.
+		&& GC.getBonusInfo((BonusTypes)unit.getPrereqAndBonus()).getBonusClassType() == GC.getInfoTypeForString("BONUSCLASS_CULTURE"))
+		{
+			return false;
+		}
+	}
 	bool bMet = true;
 	for (int iI = 0; iI < GC.getNUM_UNIT_PREREQ_OR_BONUSES(); ++iI)
 	{
 		if (NO_BONUS != unit.getPrereqOrBonuses(iI))
 		{
-			TechTypes eTech = (TechTypes)GC.getBonusInfo((BonusTypes)unit.getPrereqOrBonuses(iI)).getTechCityTrade();
-			if (NO_TECH != eTech)
+			if (isHasTech((TechTypes)GC.getBonusInfo((BonusTypes)unit.getPrereqOrBonuses(iI)).getTechCityTrade())
+			&& (!bNoWorldBonuses || GC.getBonusInfo((BonusTypes)unit.getPrereqOrBonuses(iI)).getBonusClassType() != GC.getInfoTypeForString("BONUSCLASS_CULTURE")))
 			{
-				if (isHasTech(eTech))
-				{
-					bMet = true;
-					break;
-				}
-				bMet = false;
+				bMet = true;
+				break;
 			}
+			bMet = false;
 		}
 	}
 	return bMet;
@@ -6373,7 +6382,6 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 	for (iI = 0; iI < GC.getNumRouteInfos(); iI++)
 	{
 		changeRouteChange(((RouteTypes)iI), (GC.getRouteInfo((RouteTypes) iI).getTechMovementChange(eTech) * iChange));
-		setLastRoundOfValidImprovementCacheUpdate();
 	}
 
 	for (iI = 0; iI < NUM_DOMAIN_TYPES; iI++)
@@ -6512,6 +6520,18 @@ void CvTeam::processTech(TechTypes eTech, int iChange, bool bAnnounce)
 						GET_PLAYER((PlayerTypes)iJ).processNewRoutes();
 					}
 				}
+			}
+			break;
+		}
+	}
+	if (getLastRoundOfValidImprovementCacheUpdate() != GC.getGame().getGameTurn())
+	{
+		for (iI = 0; iI < GC.getNumImprovementInfos(); iI++)
+		{
+			if (GC.getImprovementInfo((ImprovementTypes) iI).getPrereqTech() == eTech)
+			{
+				setLastRoundOfValidImprovementCacheUpdate();
+				break;
 			}
 		}
 	}
@@ -8352,19 +8372,14 @@ bool CvTeam::isAnyVassal() const
 
 ImprovementTypes CvTeam::getImprovementUpgrade(ImprovementTypes eImprovement) const
 {
-	if (GC.getImprovementInfo(eImprovement).getImprovementUpgrade() == NO_IMPROVEMENT)
+	const ImprovementTypes eUpgrade = (ImprovementTypes)GC.getImprovementInfo(eImprovement).getImprovementUpgrade();
+
+	if (eUpgrade != NO_IMPROVEMENT && GC.getImprovementInfo(eUpgrade).getPrereqTech() != NO_TECH
+	&& !isHasTech((TechTypes)GC.getImprovementInfo(eUpgrade).getPrereqTech()))
 	{
 		return NO_IMPROVEMENT;
 	}
-	if (GC.getImprovementInfo((ImprovementTypes)GC.getImprovementInfo(eImprovement).getImprovementUpgrade()).getPrereqTech() != NO_TECH)
-	{
-		if (!isHasTech((TechTypes)GC.getImprovementInfo((ImprovementTypes)GC.getImprovementInfo(eImprovement).getImprovementUpgrade()).getPrereqTech()))
-		{
-			return NO_IMPROVEMENT;
-		}
-	}
-
-	return (ImprovementTypes)GC.getImprovementInfo(eImprovement).getImprovementUpgrade();
+	return eUpgrade;
 }
 
 ImprovementTypes CvTeam::finalImprovementUpgrade(ImprovementTypes eImprovement) const
@@ -8373,10 +8388,7 @@ ImprovementTypes CvTeam::finalImprovementUpgrade(ImprovementTypes eImprovement) 
 	{
 		return finalImprovementUpgrade(getImprovementUpgrade(eImprovement));
 	}
-	else
-	{
-		return eImprovement;
-	}
+	return eImprovement;
 }
 
 bool CvTeam::isFreeTradeAgreement(TeamTypes eIndex) const

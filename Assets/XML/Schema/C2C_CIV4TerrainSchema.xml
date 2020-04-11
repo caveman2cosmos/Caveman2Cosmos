@@ -424,7 +424,6 @@
 	<ElementType name="bArea" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bHills" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bPeaks" content="textOnly" dt:type="boolean"/>
-	<ElementType name="bCurrency" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bFlatlands" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNoRiverSide" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNormalize" content="textOnly" dt:type="boolean"/>
@@ -483,7 +482,6 @@
 		<element type="bArea" minOccurs="0"/>
 		<element type="bHills" minOccurs="0"/>
 		<element type="bPeaks" minOccurs="0"/>
-		<element type="bCurrency" minOccurs="0"/>
 		<element type="bFlatlands" minOccurs="0"/>
 		<element type="bNoRiverSide" minOccurs="0"/>
 		<element type="bNormalize" minOccurs="0"/>
