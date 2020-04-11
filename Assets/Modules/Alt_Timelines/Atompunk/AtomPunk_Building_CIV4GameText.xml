@@ -31,22 +31,6 @@
 		<French>Construisez un [COLOR_BUILDING_TEXT]Réacteur nucléaire propre[COLOR_REVERT] pour améliorer la production de votre ville.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FAST_BREEDER_REACTOR</Tag>
-		<English>Fast Breeder Reactor</English>
-		<French>Réacteur à neutrons rapides</French>
-		<Polish>Reaktor FBR</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FAST_BREEDER_REACTOR_PEDIA</Tag>
-		<English>All current fast neutron reactor designs use liquid metal as the primary coolant, to transfer heat from the core to steam used to power the electricity generating turbines. FBRs have been built cooled by liquid metals other than sodium—some early FBRs used mercury, other experimental reactors have used a sodium-potassium alloy called NaK. Both have the advantage that they are liquids at room temperature, which is convenient for experimental rigs but less important for pilot or full scale power stations. Lead and lead-bismuth alloy have also been used.</English>
-		<Polish>FBR (Fast Breeder Reactor) - typ reaktora prędkiego powielającego, chłodzonego sodem, zdolny generować w stanie generować więcej materiału rozszczepialnego niż zużywa. Reaktor FBR wykorzystuje neutrony prędkie do przemiany uranu-238 w pluton-239, który jest paliwem jądrowym. Pierwszy przemysłowy tego typu reaktor (BN-350) działał w Szewczenku.</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BUILDING_FAST_BREEDER_REACTOR_STRATEGY</Tag>
-		<English>Build a Fast Breeder Reactor to increase your cities Production.</English>
-		<French>Construisez un [COLOR_BUILDING_TEXT]réacteur à neutrons rapides[COLOR_REVERT] pour améliorer la production de votre ville.</French>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GOOD_ATOM</Tag>
 		<English>Power (Nuclear)</English>
 		<French>Energie (Nucléaire)</French>

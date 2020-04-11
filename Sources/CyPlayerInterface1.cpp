@@ -9,34 +9,17 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 	OutputDebugString("Python Extension Module - CyPlayerPythonInterface1\n");
 
 	// set the docstring of the current module scope 
-	python::scope().attr("__doc__") = "Civilization IV Player Class"; 
+	python::scope().attr("__doc__") = "Civilization IV Player Class";
 	x
 		.def("isNone", &CyPlayer::isNone, "checks for a null player")
-/********************************************************************************/
-/* 	CHANGE_PLAYER							08/27/08			jdog5000	*/
-/* 																			*/
-/* 	 																		*/
-/********************************************************************************/
+
 		.def( "changeLeader", &CyPlayer::changeLeader, "void ( int /*LeaderHeadTypes*/ eNewLeader ) - change leader of player")
 		.def( "changeCiv", &CyPlayer::changeCiv, "void ( int /*CivilizationTypes*/ eNewCiv ) - change civilization of player" )
 		.def( "setIsHuman", &CyPlayer::setIsHuman, "void ( bool bNewValue ) - set whether player is human" )
-/********************************************************************************/
-/* 	CHANGE_PLAYER							END								*/
-/********************************************************************************/
-/************************************************************************************************/
-/* REVOLUTION_MOD                         01/01/08                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 		.def( "setIsRebel", &CyPlayer::setIsRebel, "void ( bool bNewValue ) - set whether the player is considered a rebel" )
 		.def( "isRebel", &CyPlayer::isRebel, "bool ( ) - true if player is a rebel" )
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
 
-// RevolutionDCM start - new diplomacy option
 		.def("isDoNotBotherStatus", &CyPlayer::isDoNotBotherStatus, "bool (int /*PlayerTypes*/ playerID ) - set if player instructed not to contact playerID" )
-// RevolutionDCM end
 
 		.def("startingPlotRange", &CyPlayer::startingPlotRange, "int ()")
 		.def("startingPlotWithinRange", &CyPlayer::startingPlotWithinRange, "bool (CyPlot *pPlot, int /*PlayerTypes*/ ePlayer, int iRange, int iPass)")
@@ -55,43 +38,17 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("killUnits", &CyPlayer::killUnits, "void ()")
 		.def("hasTrait", &CyPlayer::hasTrait, "bool hasTrait(int /*TraitTypes*/ iIndex) - returns True if player is the Trait Type.")
 		.def("isHuman", &CyPlayer::isHuman, "bool ()")
-
-/************************************************************************************************/
-/* REVOLUTION_MOD                                                                 lemmy101      */
-/*                                                                                jdog5000      */
-/*                                                                                              */
-/************************************************************************************************/
 		.def("isHumanDisabled", &CyPlayer::isHumanDisabled, "bool ()")
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
-
 		.def("isBarbarian", &CyPlayer::isBarbarian, "bool () - returns True if player is a Barbarian")
 		.def("isNPC", &CyPlayer::isNPC, "bool () - returns True if player is an NPC")
 		.def("isHominid", &CyPlayer::isHominid, "bool () - returns True if player is a Hominid")
 		.def("getName", &CyPlayer::getName, "str ()")
-/************************************************************************************************/
-/* REVOLUTION_MOD                         01/01/08                                jdog5000      */
-/*                                                                                              */
-/* For dynamic civ names                                                                        */
-/************************************************************************************************/
-		.def("setName", &CyPlayer::setName, "void(std::wstring szNewValue)" )																														// Exposed to Python
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+
+		.def("setName", &CyPlayer::setName, "void(std::wstring szNewValue)" ) // Exposed to Python
 		.def("getNameForm", &CyPlayer::getNameForm, "str ()")
 		.def("getNameKey", &CyPlayer::getNameKey, "str ()")
 		.def("getCivilizationDescription", &CyPlayer::getCivilizationDescription, "str() - returns the Civilization Description String")
-/************************************************************************************************/
-/* REVOLUTION_MOD                         01/01/08                                jdog5000      */
-/*                                                                                              */
-/* For dynamic civ names                                                                        */
-/************************************************************************************************/
-		.def("setCivName", &CyPlayer::setCivName, "void(std::wstring szNewDesc, std::wstring szNewShort, std::wstring szNewAdj)" )																														// Exposed to Python
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
-
+		.def("setCivName", &CyPlayer::setCivName, "void(std::wstring szNewDesc, std::wstring szNewShort, std::wstring szNewAdj)" ) // Exposed to Python
 		.def("getCivilizationShortDescription", &CyPlayer::getCivilizationShortDescription, "str() - returns the short Civilization Description")
 		.def("getCivilizationDescriptionKey", &CyPlayer::getCivilizationDescriptionKey, "str() - returns the Civilization Description String")
 		.def("getCivilizationShortDescriptionKey", &CyPlayer::getCivilizationShortDescriptionKey, "str() - returns the short Civilization Description")
@@ -177,16 +134,10 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("calculatePreInflatedCosts", &CyPlayer::calculatePreInflatedCosts, "int ()")
 		.def("calculateInflationRate", &CyPlayer::calculateInflationRate, "int ()")
 		.def("calculateInflatedCosts", &CyPlayer::calculateInflatedCosts, "int ()")
-/************************************************************************************************/
-/* REVOLUTION_MOD                         02/04/09                                jdog5000      */
-/*                                                                                              */
-/* For rebels and BarbarianCiv                                                                  */
-/************************************************************************************************/
+
 		.def("getFreeUnitCountdown", &CyPlayer::getFreeUnitCountdown, "int ()")
 		.def("setFreeUnitCountdown", &CyPlayer::setFreeUnitCountdown, "void ( int iValue )")
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+
 		.def("calculateGoldRate", &CyPlayer::calculateGoldRate, "int ()")
 		.def("calculateTotalCommerce", &CyPlayer::calculateTotalCommerce, "int ()")
 		.def("calculateResearchRate", &CyPlayer::calculateResearchRate, "int (int /*TechTypes*/ eTech)")
@@ -194,7 +145,7 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("calculateResearchModifier", &CyPlayer::calculateResearchModifier, "int (int /*TechTypes*/ eTech)")
 		.def("isResearch", &CyPlayer::isResearch, "bool ()")
 		.def("canEverResearch", &CyPlayer::canEverResearch, "bool (int /*TechTypes*/ iIndex)")
-		.def("canResearch", &CyPlayer::canResearch, "bool (int /*TechTypes*/ iIndex, bool bTrade)")
+		.def("canResearch", &CyPlayer::canResearch, "bool (int /*TechTypes*/ iIndex)")
 		.def("getCurrentResearch", &CyPlayer::getCurrentResearch, "int ()")
 		.def("isCurrentResearchRepeat", &CyPlayer::isCurrentResearchRepeat, "bool ()")
 		.def("isNoResearchAvailable", &CyPlayer::isNoResearchAvailable, "bool ()")
@@ -211,19 +162,11 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("canConvert", &CyPlayer::canConvert, "bool (int /*ReligionTypes*/ iIndex)")
 		.def("convert", &CyPlayer::convert, "void (int /*ReligionTypes*/ iIndex)")
 		.def("hasHolyCity", &CyPlayer::hasHolyCity, "bool (int (ReligionTypes) eReligion)")
-/************************************************************************************************/
-/* REVDCM                                 04/29/10                                phungus420    */
-/*                                                                                              */
-/* Player Functions                                                                             */
-/************************************************************************************************/
+
 		.def("hasAnyHolyCity", &CyPlayer::hasAnyHolyCity, "bool ()")
 		.def("hasStateReligionHolyCity", &CyPlayer::hasStateReligionHolyCity, "bool ()")
 		.def("hasStateReligionShrine", &CyPlayer::hasStateReligionShrine, "bool ()")
-/************************************************************************************************/
-/* REVDCM                                  END                                                  */
-/************************************************************************************************/
 		.def("countHolyCities", &CyPlayer::countHolyCities, "int () - Counts the # of holy cities this player has")
-
 		.def("foundReligion", &CyPlayer::foundReligion, "void (int /*ReligionTypes*/ eReligion, int /*ReligionTypes*/ iSlotReligion, bool)")
 
 		.def("hasHeadquarters", &CyPlayer::hasHeadquarters, "bool (int (CorporationTypes) eCorporation)")
@@ -258,7 +201,5 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 		.def("changeGold", &CyPlayer::changeGold, "void (int iChange)")
 		.def("changeGreaterGold", &CyPlayer::changeGreaterGold, "void (int iChange)")
 		.def("getGoldPerTurn", &CyPlayer::getGoldPerTurn, "int ()")
-
-		
-		;
+	;
 }

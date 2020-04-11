@@ -2917,22 +2917,18 @@ CivilopediaWidgetShowTypes CvGame::getWidgetShow(BonusTypes eBonus) const
 	CivilopediaWidgetShowTypes eType = CIVILOPEDIA_WIDGET_SHOW_LAND;
 	for (int i = 0; i < GC.getNumTerrainInfos(); i++)
 	{
-		if (GC.getTerrainInfo((TerrainTypes) i).isWater())
+		if (GC.getTerrainInfo((TerrainTypes) i).isWaterTerrain() && GC.getBonusInfo(eBonus).isTerrain(i))
 		{
-			if (GC.getBonusInfo(eBonus).isTerrain(i))
-			{
-				eType = CIVILOPEDIA_WIDGET_SHOW_WATER;
-			}
+			eType = CIVILOPEDIA_WIDGET_SHOW_WATER;
 		}
 	}
-
 	return eType;
 }
 
 CivilopediaWidgetShowTypes CvGame::getWidgetShow(ImprovementTypes eImprovement) const
 {
 	CivilopediaWidgetShowTypes eType = CIVILOPEDIA_WIDGET_SHOW_LAND;
-	if (GC.getImprovementInfo(eImprovement).isWater())
+	if (GC.getImprovementInfo(eImprovement).isWaterImprovement())
 	{
 		eType = CIVILOPEDIA_WIDGET_SHOW_WATER;
 	}
@@ -3235,9 +3231,14 @@ void CvGame::handleCityScreenPlotPicked(CvCity* pCity, CvPlot* pPlot, bool bAlt,
 	if (pCity != NULL && pPlot != NULL)
 	{
 		int iIndex = pCity->getCityPlotIndex(pPlot);
-		if ((pPlot->getOwner() == getActivePlayer()) && (pCity->getOwner() == getActivePlayer()) && (iIndex != -1))
+		if (pPlot->getOwner() == getActivePlayer() && pCity->getOwner() == getActivePlayer() && iIndex != -1)
 		{
 			CvMessageControl::getInstance().sendDoTask(pCity->getID(), TASK_CHANGE_WORKING_PLOT, iIndex, -1, false, bAlt, bShift, bCtrl);
+
+			if (!pCity->isWorkingPlot(iIndex))
+			{
+				pPlot->setImprovementUpgradeCache(-1);
+			}
 		}
 		else if (GC.getDefineINT("CITY_SCREEN_CLICK_WILL_EXIT"))
 		{

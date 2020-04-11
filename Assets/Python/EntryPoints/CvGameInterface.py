@@ -87,12 +87,6 @@ def cannotSelectionListGameNetMessage(argsList):
 def cannotDoControl(argsList):
 	return GameUtils.cannotDoControl(argsList)
 
-def canResearch(argsList):
-	return GameUtils.canResearch(argsList)
-
-def cannotResearch(argsList):
-	return GameUtils.cannotResearch(argsList)
-
 def canDoCivic(argsList):
 	return GameUtils.canDoCivic(argsList)
 

@@ -3940,7 +3940,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FOREST_FIRE_CITY_VICINITY</Tag>
-		<English>There's been a forest fire close to %s.</English>
+		<English>There's been a forest fire close to %s1.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FOREST_FIRE_REMOTE</Tag>
@@ -12270,6 +12270,14 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<French>[SPACE](Ou %s1_ImpName)</French>
 		<German>[SPACE]oder %s1_ImpName</German>
 		<Polish>[SPACE](Lub %s1_ImpName)</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_PLOT_REQUIRES</Tag>
+		<English>, Requires: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</English>
+		<French>, Requiert : [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</French>
+		<German>, erfordert: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</German>
+		<Italian>, Richiede: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</Italian>
+		<Spanish>, requiere: [COLOR_WARNING_TEXT]%s1_Name[COLOR_REVERT]</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_PLOT_REQUIRES_OR</Tag>

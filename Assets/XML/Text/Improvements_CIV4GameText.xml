@@ -1992,13 +1992,12 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_FROZEN</Tag>
-		<English>[COLOR_HIGHLIGHT_TEXT]Improvement denied upgrade. May attempt again by setting it unworked, then worked again.[COLOR_REVERT]</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Un Aménagement n'a pu être amélioré. Il est possible de tenter à nouveau en répétant l'opération.[COLOR_REVERT]</French>
-		<Polish>[COLOR_HIGHLIGHT_TEXT]Infrastruktura terenu wymaga ulepszenia.[COLOR_REVERT]</Polish>
+		<English>[COLOR_HIGHLIGHT_TEXT] Improvement denied upgrade.[NEWLINE]May attempt again by setting it unworked, then worked again.[COLOR_REVERT]</English>
+		<French>[COLOR_HIGHLIGHT_TEXT] Un Aménagement n'a pu être amélioré.[NEWLINE]Il est possible de tenter à nouveau en répétant l'opération.[COLOR_REVERT]</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_UPGRADE_NO</Tag>
-		<English>No Upgrade (Will not continue to attempt to upgrade.)</English>
+		<English>Bother me another time!</English>
 		<French>Pas d'amélioration possible (pas de tentative d'amélioration)</French>
 		<Polish>Nie ulepszaj (system nie będzie pytał się o to ponownie)</Polish>
 	</TEXT>
@@ -2331,5 +2330,14 @@
 		<French>Ziggourat</French>
 		<German>Zikkurat</German>
 		<Spanish>Zigurat</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SEASONAL_CAMP</Tag>
+		<English>Seasonal Camp</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_IMPROVEMENT_SEASONAL_CAMP_PEDIA</Tag>
+		<English>Seasonal Camp is place, where scouts, explorers and prospectors work hard to find new animals, plants and minerals.
+Eventually they move away and let citizens work here.</English>
 	</TEXT>
 </Civ4GameText>

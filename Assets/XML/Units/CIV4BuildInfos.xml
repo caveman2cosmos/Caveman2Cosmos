@@ -585,7 +585,7 @@
 			<Type>BUILD_STONE_TOOLS_WORKSHOP</Type>
 			<Description>TXT_KEY_BUILD_STONE_TOOLS_WORKSHOP</Description>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-			<ObsoleteTech>TECH_EXPLOSIVES</ObsoleteTech>
+			<ObsoleteTech>TECH_MINING</ObsoleteTech>
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
@@ -2314,7 +2314,7 @@
 			<Type>BUILD_WORKSHOP</Type>
 			<Description>TXT_KEY_BUILD_WORKSHOP</Description>
 			<PrereqTech>TECH_MACHINERY</PrereqTech>
-			<ObsoleteTech>TECH_ASSEMBLY_LINE</ObsoleteTech>
+			<ObsoleteTech>TECH_REFRIGERATION</ObsoleteTech>
 			<iTime>600</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
@@ -2820,7 +2820,7 @@
 			<Type>BUILD_SALT_GATHERER</Type>
 			<Description>TXT_KEY_BUILD_SALT_GATHERER</Description>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
-			<ObsoleteTech>TECH_EXPLOSIVES</ObsoleteTech>
+			<ObsoleteTech>TECH_MASONRY</ObsoleteTech>
 			<iTime>200</iTime>
 			<iCost>0</iCost>
 			<bKill>0</bKill>
@@ -10625,6 +10625,33 @@
 			<HotKey>KB_R</HotKey>
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>art/interface/buttons/improvements/gravity_train.dds</Button>
+		</BuildInfo>
+		<BuildInfo>
+			<Type>BUILD_SEASONAL_CAMP_KILL</Type>
+			<Description>TXT_KEY_BUILD_SEASONAL_CAMP_KILL</Description>
+			<PrereqTech>TECH_NOMADISM</PrereqTech>
+			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
+			<iTime>100</iTime>
+			<iCost>1</iCost>
+			<bKill>1</bKill>
+			<ImprovementType>IMPROVEMENT_SEASONAL_CAMP</ImprovementType>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<HotKey>KB_C</HotKey>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<Button>,Art/Interface/Buttons/Builds/BuildCamp.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,1,7</Button>
+		</BuildInfo>
+		<BuildInfo>
+			<Type>BUILD_SEASONAL_CAMP</Type>
+			<Description>TXT_KEY_BUILD_SEASONAL_CAMP</Description>
+			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
+			<iTime>100</iTime>
+			<iCost>1</iCost>
+			<bKill>0</bKill>
+			<ImprovementType>IMPROVEMENT_SEASONAL_CAMP</ImprovementType>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<HotKey>KB_C</HotKey>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<Button>,Art/Interface/Buttons/Builds/BuildCamp.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,1,7</Button>
 		</BuildInfo>
 	</BuildInfos>
 </Civ4BuildInfos>
