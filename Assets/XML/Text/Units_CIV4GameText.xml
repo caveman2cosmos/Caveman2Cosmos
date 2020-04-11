@@ -21901,7 +21901,7 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ROME_PRAETORIAN_STRATEGY</Tag>
 		<English>[COLOR_UNIT_TEXT]Praetorians[COLOR_REVERT] are Italian culture unit. They are powerful melee combat units, similar to [COLOR_UNIT_TEXT]Light Swordsman[COLOR_REVERT] but with substantial strength boost and variety of unique traits.</English>
-		<French>Les[ COLOR_UNIT_TEXT]Prétoriens[COLOR_REVERT] sont l'unité culturelle italienne. Puissantes unités de mêlée, similaires aux [COLOR_UNIT_TEXT]Spadassin léger[COLOR_REVERT] mais avec un boost de force substantiel et une variété de traits uniques.</French>
+		<French>Les[COLOR_UNIT_TEXT]Prétoriens[COLOR_REVERT] sont l'unité culturelle italienne. Puissantes unités de mêlée, similaires aux [COLOR_UNIT_TEXT]Spadassin léger[COLOR_REVERT] mais avec un boost de force substantiel et une variété de traits uniques.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ROMULUS</Tag>
