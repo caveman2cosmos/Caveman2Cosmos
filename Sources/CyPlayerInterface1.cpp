@@ -13,6 +13,9 @@ void CyPlayerPythonInterface1(python::class_<CyPlayer>& x)
 	x
 		.def("isNone", &CyPlayer::isNone, "checks for a null player")
 
+		.def("updateMembers", &CyPlayer::updateMembers, "void ()")
+		.def("initMembers", &CyPlayer::initMembers, "void (int iIndex)")
+
 		.def( "changeLeader", &CyPlayer::changeLeader, "void ( int /*LeaderHeadTypes*/ eNewLeader ) - change leader of player")
 		.def( "changeCiv", &CyPlayer::changeCiv, "void ( int /*CivilizationTypes*/ eNewCiv ) - change civilization of player" )
 		.def( "setIsHuman", &CyPlayer::setIsHuman, "void ( bool bNewValue ) - set whether player is human" )

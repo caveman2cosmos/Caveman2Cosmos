@@ -197,4 +197,7 @@
 // AlbertS2: Save file format version, can be use to make a new dll incompatible with older saves
 #define SAVE_FORMAT_VERSION	(2)
 
+//#define MAP_INDEX MAP_INITIAL
+#define MAP_INDEX GC.getGame().getCurrentMap()
+
 #endif	// CVDEFINES_H

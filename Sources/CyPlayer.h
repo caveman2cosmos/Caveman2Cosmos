@@ -6,9 +6,6 @@
 // Python wrapper class for CvPlayer
 //
 
-//#include "CvEnums.h"
-//#include "CvStructs.h"
-
 class CyUnit;
 class CvPlayer;
 class CvProperties;
@@ -24,6 +21,9 @@ public:
 
 	CvPlayer* getPlayer() { return m_pPlayer; } // Call from C++
 	bool isNone() { return (m_pPlayer==NULL); }
+
+	void updateMembers();
+	void initMembers(const int iIndex);
 
 	void changeLeader( int /*LeaderHeadTypes*/ eNewLeader );
 	void changeCiv( int /*CivilizationTypes*/ eNewCiv );
