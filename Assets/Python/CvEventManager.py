@@ -1182,11 +1182,11 @@ class CvEventManager:
 		# Worker placed bonus
 		szType = GC.getImprovementInfo(iImprovement).getType()
 		if szType[:18] == "IMPROVEMENT_BONUS_":
+			CyPlot = GC.getMap().plot(iX, iY)
 			if CyPlot.getBonusType(-1) > -1:
 				return # Bonus was discovered while the farmer was working.
 			iBonus = GC.getInfoTypeForString(szType[12:])
 			if iBonus > -1:
-				CyPlot = GC.getMap().plot(iX, iY)
 				CyPlot.setImprovementType(-1)
 				CyPlot.setBonusType(iBonus)
 			return
