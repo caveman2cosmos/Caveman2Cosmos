@@ -19317,7 +19317,7 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_HUMPBACK_MYTH</ArtDefineTag>
-			<PrereqTech>TECH_MYSTICISM</PrereqTech>
+			<PrereqTech>TECH_SAILING</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -23240,7 +23240,7 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ORCA_MYTH</ArtDefineTag>
-			<PrereqTech>TECH_MYSTICISM</PrereqTech>
+			<PrereqTech>TECH_SAILING</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
@@ -23405,7 +23405,7 @@
 			<Strategy>TXT_KEY_BUILDING_ANIMAL_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MINKIE_WHALE_MYTH</ArtDefineTag>
-			<PrereqTech>TECH_MYSTICISM</PrereqTech>
+			<PrereqTech>TECH_SAILING</PrereqTech>
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
