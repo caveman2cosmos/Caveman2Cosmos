@@ -15,7 +15,6 @@ void CyMapPythonInterface()
 /***** Parallel Maps - Begin *****/
 /*********************************/
 		.def("getType", &CyMap::getType, "int ()")
-		.def("setType", &CyMap::setType, "void (MapTypes eNewType)")
 
 		.def("viewportsEnabled", &CyMap::viewportsEnabled, "bool ()")
 		.def("getViewportWidth", &CyMap::getViewportWidth, "int ()")

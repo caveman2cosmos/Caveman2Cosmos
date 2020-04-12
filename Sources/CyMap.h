@@ -3,7 +3,6 @@
 #ifndef CyMap_h
 #define CyMap_h
 
-//#include "CvEnums.h"
 //
 // Python wrapper class for CvMap 
 // SINGLETON
@@ -27,7 +26,6 @@ public:
 /***** Parallel Maps - Begin *****/
 /*********************************/
 	int getType();
-	void setType(int iNewType);
 	CyMap& operator = (CvMap& kMap);
 
 	bool viewportsEnabled();

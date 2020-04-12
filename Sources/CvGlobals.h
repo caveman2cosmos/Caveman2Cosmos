@@ -216,7 +216,6 @@ public:
 	CvMap& getMapByIndex(MapTypes eIndex);
 	int getNumMaps() const { return m_maps.size(); }
 	void updateMaps();
-	const std::vector<CvMap*>& getMaps() const;
 	void initializeMap(MapTypes eMap);
 	bool mapInitialized(MapTypes eMap) const;
 	void clearSigns();

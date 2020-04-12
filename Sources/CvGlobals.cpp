@@ -751,19 +751,11 @@ CvMapSwitchInfo& cvInternalGlobals::getMapSwitchInfo(const MapSwitchTypes eMapSw
 
 void cvInternalGlobals::updateMaps()
 {
-	CvMap* pMap = NULL;
-	int i;
-	
-	for (i = 1; i < GC.getNumMapInfos(); i++)
+	for (int i = 1; i < GC.getNumMapInfos(); i++)
 	{
-		m_maps.push_back(pMap);
+		m_maps.push_back(NULL);
 	}
 	FAssert(m_maps.size() == GC.getNumMapInfos());
-}
-
-const std::vector<CvMap*>& cvInternalGlobals::getMaps() const
-{
-	return m_maps;
 }
 
 void cvInternalGlobals::setResourceLayer(bool bOn)
@@ -2669,7 +2661,7 @@ void cvInternalGlobals::cacheEnumGlobals()
 
 void cvInternalGlobals::cacheGlobals()
 {
-	OutputDebugString("Caching Globals: Start");
+	OutputDebugString("Caching Globals: Start/n");
 
 	strcpy(gVersionString, getDefineSTRING("C2C_VERSION"));
 
@@ -2701,7 +2693,6 @@ void cvInternalGlobals::cacheGlobals()
 
 	m_bXMLLogging = getDefineINT("XML_LOGGING_ENABLED");
 	
-	m_bMultimapsEnabled = (getDefineINT("ENABLE_MULTIMAPS") != 0);
 	m_bViewportsEnabled = (getDefineINT("ENABLE_VIEWPORTS") != 0);
 	m_iViewportFocusBorder = GC.getDefineINT("VIEWPORT_FOCUS_BORDER");
 	m_iViewportSizeX = GC.getDefineINT("VIEWPORT_SIZE_X");
@@ -2713,7 +2704,7 @@ void cvInternalGlobals::cacheGlobals()
 		m_szAlternateProfilSampleName = "";
 	}
 
-	OutputDebugString("Caching Globals: End");
+	OutputDebugString("Caching Globals: End/n");
 }
 
 /************************************************************************************************/

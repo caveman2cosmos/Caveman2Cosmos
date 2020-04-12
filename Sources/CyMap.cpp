@@ -23,12 +23,6 @@ int CyMap::getType()
 	return m_pMap ? m_pMap->getType() : NO_MAP;
 }
 
-void CyMap::setType(int iNewType)
-{
-	if (m_pMap)
-		m_pMap->setType((MapTypes)iNewType);
-}
-
 CyMap& CyMap::operator=(CvMap& kMap)
 {
 	m_pMap = &kMap;

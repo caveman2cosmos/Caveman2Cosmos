@@ -62,7 +62,6 @@ public:
 /***** Parallel Maps - Begin *****/
 /*********************************/
 	virtual MapTypes getType() const = 0;
-	virtual void setType(MapTypes eNewType) = 0;
 
 	virtual void beforeSwitch() = 0;
 	virtual void afterSwitch() = 0;
