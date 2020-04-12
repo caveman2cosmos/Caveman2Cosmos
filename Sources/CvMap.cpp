@@ -22,7 +22,7 @@
 /***** Parallel Maps - End *****/
 /*******************************/
 
-#define forEachPlot(map, func) \
+#define FOR_EACH_PLOT(map, func) \
 	for (int iI = 0; iI < map->numPlots(); iI++) \
 		map->plotByIndex(iI)->func;
 
@@ -330,7 +330,7 @@ void CvMap::setupGraphical()
 
 void CvMap::erasePlots()
 {
-	forEachPlot(this, CvPlot::erase());
+	FOR_EACH_PLOT(this, CvPlot::erase())
 }
 
 
@@ -338,7 +338,7 @@ void CvMap::setRevealedPlots(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly)
 {
 	PROFILE_FUNC();
 
-	forEachPlot(this, CvPlot::setRevealed(eTeam, bNewValue, bTerrainOnly, NO_TEAM, false));
+	FOR_EACH_PLOT(this, CvPlot::setRevealed(eTeam, bNewValue, bTerrainOnly, NO_TEAM, false))
 
 	GC.getGame().updatePlotGroups();
 }
@@ -364,7 +364,7 @@ void CvMap::setAllPlotTypes(PlotTypes ePlotType)
 {
 	//float startTime = (float) timeGetTime();
 
-	forEachPlot(this, CvPlot::setPlotType(ePlotType, false, false));
+	FOR_EACH_PLOT(this, CvPlot::setPlotType(ePlotType, false, false))
 
 	recalculateAreas();
 
@@ -385,7 +385,7 @@ void CvMap::doTurn()
 	MEMORY_TRACE_FUNCTION();
 	PROFILE("CvMap::doTurn()")
 
-	forEachPlot(this, CvPlot::doTurn());
+	FOR_EACH_PLOT(this, CvPlot::doTurn())
 }
 
 
@@ -415,19 +415,19 @@ void CvMap::updateFog()
 {
 	PROFILE_FUNC();
 
-	forEachPlot(this, CvPlot::updateFog());
+	FOR_EACH_PLOT(this, CvPlot::updateFog())
 }
 
 
 void CvMap::updateVisibility()
 {
-	forEachPlot(this, CvPlot::updateVisibility());
+	FOR_EACH_PLOT(this, CvPlot::updateVisibility())
 }
 
 
 void CvMap::updateSymbolVisibility()
 {
-	forEachPlot(this, CvPlot::updateSymbolVisibility());
+	FOR_EACH_PLOT(this, CvPlot::updateSymbolVisibility())
 }
 
 
@@ -437,7 +437,7 @@ void CvMap::updateSymbols()
 
 	//	Ignore this while we are demand-creating symbols to minimize memory usage - REMOVED FOR NOW FOR VIEWPORTS
 	
-	forEachPlot(this, CvPlot::updateSymbols());
+	FOR_EACH_PLOT(this, CvPlot::updateSymbols())
 }
 
 
@@ -445,13 +445,13 @@ void CvMap::updateMinimapColor()
 {
 	PROFILE_FUNC();
 
-	forEachPlot(this, CvPlot::updateMinimapColor());
+	FOR_EACH_PLOT(this, CvPlot::updateMinimapColor())
 }
 
 
 void CvMap::updateSight(bool bIncrement, bool bUpdatePlotGroups)
 {
-	forEachPlot(this, CvPlot::updateSight(bIncrement, false));
+	FOR_EACH_PLOT(this, CvPlot::updateSight(bIncrement, false))
 
 	if (bUpdatePlotGroups)
 	{
@@ -462,19 +462,19 @@ void CvMap::updateSight(bool bIncrement, bool bUpdatePlotGroups)
 
 void CvMap::updateIrrigated()
 {
-	forEachPlot(this, CvPlot::updateIrrigated());
+	FOR_EACH_PLOT(this, CvPlot::updateIrrigated())
 }
 
 
 void CvMap::updateCenterUnit()
 {
-	forEachPlot(this, CvPlot::updateCenterUnit());
+	FOR_EACH_PLOT(this, CvPlot::updateCenterUnit())
 }
 
 
 void CvMap::updateWorkingCity()
 {
-	forEachPlot(this, CvPlot::updateWorkingCity());
+	FOR_EACH_PLOT(this, CvPlot::updateWorkingCity())
 }
 
 
@@ -525,13 +525,13 @@ void CvMap::updateMinOriginalStartDist(CvArea* pArea)
 
 void CvMap::updateYield()
 {
-	forEachPlot(this, CvPlot::updateYield());
+	FOR_EACH_PLOT(this, CvPlot::updateYield())
 }
 
 
 void CvMap::verifyUnitValidPlot()
 {
-	forEachPlot(this, CvPlot::verifyUnitValidPlot());
+	FOR_EACH_PLOT(this, CvPlot::verifyUnitValidPlot())
 }
 
 
@@ -1070,7 +1070,7 @@ void CvMap::recalculateAreas()
 {
 	PROFILE("CvMap::recalculateAreas");
 
-	forEachPlot(this, CvPlot::setArea(FFreeList::INVALID_INDEX));
+	FOR_EACH_PLOT(this, CvPlot::setArea(FFreeList::INVALID_INDEX))
 
 	m_areas.removeAll();
 
@@ -1222,7 +1222,7 @@ void CvMap::read(FDataStreamBase* pStream)
 	{
 		m_pMapPlots = new CvPlot[numPlots()];
 
-		forEachPlot(this, CvPlot::read(pStream));
+		FOR_EACH_PLOT(this, CvPlot::read(pStream))
 	}
 
 	WRAPPER_SKIP_ELEMENT(wrapper, "CvPlot", &g_plotTypeZobristHashes, SAVE_VALUE_TYPE_INT_ARRAY);
@@ -1266,7 +1266,7 @@ void CvMap::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvMap" ,REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiNumBonus);
 	WRAPPER_WRITE_CLASS_ARRAY(wrapper, "CvMap" ,REMAPPED_CLASS_TYPE_BONUSES, GC.getNumBonusInfos(), m_paiNumBonusOnLand);
 
-	forEachPlot(this, CvPlot::write(pStream));
+	FOR_EACH_PLOT(this, CvPlot::write(pStream))
 
 	// call the read of the free list CvArea class allocations
 	WriteStreamableFFreeListTrashArray(m_areas, pStream);
@@ -1328,7 +1328,7 @@ void CvMap::beforeSwitch()
 	
 	GC.clearSigns();
 
-	forEachPlot(this, CvPlot::destroyGraphics());
+	FOR_EACH_PLOT(this, CvPlot::destroyGraphics())
 }
 
 void CvMap::afterSwitch()
