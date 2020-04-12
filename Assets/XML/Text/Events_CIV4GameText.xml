@@ -3238,11 +3238,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_CURE_FOR_CANCER_HELP_1</Tag>
-		<English>(Applied to every Hospital in the Empire.)[PARAGRAPH][ICON_BULLET]Receive [COLOR_POSITIVE_TEXT]%D1[COLOR_REVERT] attitude from all leaders</English>
-		<French>(appliqué à chaque hôpital dans l'empire.)[PARAGRAPH][ICON_BULLET]Recevez [COLOR_POSITIVE_TEXT]%D1[COLOR_REVERT] attitude envers vous de la part de tous les Leaders</French>
-		<German>(Angewendet auf jedes Krankenhaus im Reich.)[PARAGRAPH][ICON_BULLET]Empfangen Sie [COLOR_POSITIVE_TEXT]%D1[COLOR_REVERT] Einstellung von allen Führern</German>
-		<Italian>(applicato ad ogni ospedale nell'impero.)[PARAGRAPH][ICON_BULLET]Ricevi [COLOR_POSITIVE_TEXT]%D1[COLOR_REVERT] atteggiamento da tutti i leader</Italian>
-		<Spanish>(se aplica a cada Hospital en el imperio)[PARAGRAPH][ICON_BULLET]Recibes [COLOR_POSITIVE_TEXT]%D1[COLOR_REVERT] de actitud de todos los líderes</Spanish>
+		<English>(Applied to every Hospital in the Empire.)[PARAGRAPH:2][ICON_BULLET]Receive [COLOR_POSITIVE_TEXT]%D1[COLOR_REVERT] attitude from all leaders</English>
+		<French>(appliqué à chaque hôpital dans l'empire.)[PARAGRAPH:2][ICON_BULLET]Recevez [COLOR_POSITIVE_TEXT]%D1[COLOR_REVERT] attitude envers vous de la part de tous les Leaders</French>
+		<German>(Angewendet auf jedes Krankenhaus im Reich.)[PARAGRAPH:2][ICON_BULLET]Empfangen Sie [COLOR_POSITIVE_TEXT]%D1[COLOR_REVERT] Einstellung von allen Führern</German>
+		<Italian>(applicato ad ogni ospedale nell'impero.)[PARAGRAPH:2][ICON_BULLET]Ricevi [COLOR_POSITIVE_TEXT]%D1[COLOR_REVERT] atteggiamento da tutti i leader</Italian>
+		<Spanish>(se aplica a cada Hospital en el imperio)[PARAGRAPH:2][ICON_BULLET]Recibes [COLOR_POSITIVE_TEXT]%D1[COLOR_REVERT] de actitud de todos los líderes</Spanish>
 		<Polish>(Dla każdego Szpitala w Imperium.)[NEWLINE][ICON_BULLET]Otrzymujemy [COLOR_POSITIVE_TEXT]%D1[COLOR_REVERT] nastawienia od wszystkich przywódców</Polish>
 	</TEXT>
 	<TEXT>
@@ -4901,7 +4901,7 @@
 		<English>[ICON_BULLET]A dangerous number of barbarian [COLOR_UNIT_TEXT]Maceman[COLOR_REVERT] units have spawned near our border.</English>
 		<French>[ICON_BULLET]Un nombre important de[COLOR_UNIT_TEXT]Soldats avec masse[COLOR_REVERT] barbares est apparu près de notre frontière.</French>
 		<German>[ICON_BULLET]Eine gefährliche Anzahl von barbarischen [COLOR_UNIT_TEXT]Streitkolbenträgern[COLOR_REVERT] ist an unserer Grenze aufgetaucht.</German>
-		<Italian>[ICON_BULLET]Ai nostri confini c'è un pericoloso numero di [COLOR_UNIT_TEXT]]guerrieri con mazza[COLOR_REVERT] barbari.</Italian>
+		<Italian>[ICON_BULLET]Ai nostri confini c'è un pericoloso numero di [COLOR_UNIT_TEXT]guerrieri con mazza[COLOR_REVERT] barbari.</Italian>
 		<Spanish>[ICON_BULLET]Un importante número de [COLOR_UNIT_TEXT]Soldados con maza[COLOR_REVERT] bárbaros aparecerá cerca de nuestra frontera</Spanish>
 		<Polish>[ICON_BULLET]Zatrważająca horda barbarzyńskich [COLOR_UNIT_TEXT]Knechtów[COLOR_REVERT] pojawiła się znienacka u naszych granic.</Polish>
 	</TEXT>
@@ -6544,7 +6544,7 @@
 		<English>[ICON_BULLET]A dangerous number of barbarian [COLOR_UNIT_TEXT]Infantry[COLOR_REVERT] units have spawned near our border.</English>
 		<French>[ICON_BULLET]Un nombre important d'[COLOR_UNIT_TEXT]Infanteries[COLOR_REVERT] barbares est apparu près de notre frontière.</French>
 		<German>[ICON_BULLET]Eine gefährliche Anzahl von barbarischen [COLOR_UNIT_TEXT]Infanterieeinheiten[COLOR_REVERT] ist an unserer Grenze aufgetaucht.</German>
-		<Italian>[ICON_BULLET]Ai nostri confini c'è un pericoloso numero di [COLOR_UNIT_TEXT]]fanterie[COLOR_REVERT] barbare.</Italian>
+		<Italian>[ICON_BULLET]Ai nostri confini c'è un pericoloso numero di [COLOR_UNIT_TEXT]fanterie[COLOR_REVERT] barbare.</Italian>
 		<Spanish>[ICON_BULLET]Un importante número de soldados de [COLOR_UNIT_TEXT]Infantería[COLOR_REVERT] bárbaros aparecerá cerca de nuestra frontera</Spanish>
 		<Polish>[ICON_BULLET]Zatrważająca horda barbarzyńskiej [COLOR_UNIT_TEXT]Piechoty[COLOR_REVERT] pojawiła się znienacka u naszych granic.</Polish>
 	</TEXT>
