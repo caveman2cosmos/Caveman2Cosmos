@@ -347,10 +347,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILD_FRUIT_PICKING_CAMP</Tag>
 		<English>Build [LINK=IMPROVEMENT_FRUIT_PICKING_CAMP]Fruit Picking Camp[\LINK]</English>
-		<French>Mettre en place une [LINK=IMPROVEMENT_FRUIT_PICKING_CAMP]]pépinière d'Arbres[\LINK]</French>
+		<French>Mettre en place une [LINK=IMPROVEMENT_FRUIT_PICKING_CAMP]pépinière d'Arbres[\LINK]</French>
 		<German>[LINK=IMPROVEMENT_FRUIT_PICKING_CAMP]Früchte pflücken[\LINK]</German>
-		<Italian>Costruisci un [LINK=IMPROVEMENT_FRUIT_PICKING_CAMP]]Vivaio di alberi[\LINK]</Italian>
-		<Spanish>Crear una [LINK=IMPROVEMENT_FRUIT_PICKING_CAMP]]Zona de reforestación[\LINK]</Spanish>
+		<Italian>Costruisci un [LINK=IMPROVEMENT_FRUIT_PICKING_CAMP]Vivaio di alberi[\LINK]</Italian>
+		<Spanish>Crear una [LINK=IMPROVEMENT_FRUIT_PICKING_CAMP]Zona de reforestación[\LINK]</Spanish>
 		<Polish>Zbuduj [LINK=IMPROVEMENT_FRUIT_PICKING_CAMP]Zbieracz owocow[\LINK]</Polish>
 	</TEXT>
 	<TEXT>
