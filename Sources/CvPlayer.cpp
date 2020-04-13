@@ -3083,7 +3083,7 @@ void CvPlayer::acquireCity(CvCity* pOldCity, bool bConquest, bool bTrade, bool b
 			pNewCity->changeOccupationTimer(iOccupationTime);
 		}
 
-		GC.getMap().verifyUnitValidPlot();
+		GC.getMap().callForeachPlot(CvPlot::verifyUnitValidPlot);
 	}
 
 	if (iOccupationRange > 0)
@@ -27392,7 +27392,7 @@ bool CvPlayer::assimilatePlayer(PlayerTypes ePlayer)
 	}
 
 	GC.getGame().updatePlotGroups();
-	GC.getMap().verifyUnitValidPlot();
+	GC.getMap().callForeachPlot(CvPlot::verifyUnitValidPlot);
 
 	GET_TEAM(getTeam()).AI_updateWorstEnemy();
 	GET_TEAM(getTeam()).AI_updateAreaStragies();

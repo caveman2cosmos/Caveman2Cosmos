@@ -208,9 +208,9 @@ void CvViewport::setupGraphical()
 
 void CvViewport::reset(CvMapInitData* pInitData)
 {
-	OutputDebugString("Reseting Viewport: Start");
+	OutputDebugString("Reseting Viewport: Start/n");
 	m_pMap->reset(pInitData);
-	OutputDebugString("Reseting Viewport: End");
+	OutputDebugString("Reseting Viewport: End/n");
 }
 
 /*********************************/
@@ -479,11 +479,6 @@ void CvViewport::setActionState(ViewportDeferredActionState newState, bool bProc
 /***** Parallel Maps - End *****/
 /*******************************/
 	
-void CvViewport::erasePlots()
-{
-	m_pMap->erasePlots();
-}
-
 void CvViewport::setRevealedPlots(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly)
 {
 	m_pMap->setRevealedPlots(eTeam, bNewValue, bTerrainOnly);
@@ -492,6 +487,11 @@ void CvViewport::setRevealedPlots(TeamTypes eTeam, bool bNewValue, bool bTerrain
 void CvViewport::setAllPlotTypes(PlotTypes ePlotType)
 {
 	m_pMap->setAllPlotTypes(ePlotType);
+}
+
+void CvViewport::callForeachPlot(bst::function<void(CvPlot*)> func)
+{
+	m_pMap->callForeachPlot(func);
 }
 
 void CvViewport::doTurn()
@@ -504,64 +504,9 @@ void CvViewport::updateFlagSymbols()
 	m_pMap->updateFlagSymbols();
 }
 
-void CvViewport::updateFog()
-{
-	m_pMap->updateFog();
-}
-
-void CvViewport::updateVisibility()
-{
-	m_pMap->updateVisibility();
-}
-
-void CvViewport::updateSymbolVisibility()
-{
-	m_pMap->updateSymbolVisibility();
-}
-
-void CvViewport::updateSymbols()
-{
-	m_pMap->updateSymbols();
-}
-
-void CvViewport::updateMinimapColor()
-{
-	m_pMap->updateMinimapColor();
-}
-
-void CvViewport::updateSight(bool bIncrement, bool bUpdatePlotGroups)
-{
-	m_pMap->updateSight(bIncrement, bUpdatePlotGroups);
-}
-
-void CvViewport::updateIrrigated()
-{
-	m_pMap->updateIrrigated();
-}
-
-void CvViewport::updateCenterUnit()
-{
-	m_pMap->updateCenterUnit();
-}
-
-void CvViewport::updateWorkingCity()
-{
-	m_pMap->updateWorkingCity();
-}
-
 void CvViewport::updateMinOriginalStartDist(CvArea* pArea)
 {
 	m_pMap->updateMinOriginalStartDist(pArea);
-}
-
-void CvViewport::updateYield()
-{
-	m_pMap->updateYield();
-}
-
-void CvViewport::verifyUnitValidPlot()
-{
-	m_pMap->verifyUnitValidPlot();
 }
 
 CvPlot* CvViewport::syncRandPlot(int iFlags, int iArea, int iMinUnitDistance, int iTimeout)

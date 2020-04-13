@@ -98,27 +98,16 @@ public:
 
 	inline ViewportMode getState() const { return m_mode; }
 	
-	virtual void erasePlots();																			// Exposed to Python
 	virtual void setRevealedPlots(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly = false);		// Exposed to Python
 	virtual void setAllPlotTypes(PlotTypes ePlotType);												// Exposed to Python
+
+	virtual void callForeachPlot(bst::function<void(CvPlot*)> func);
 
 	virtual void doTurn();																			
 
 	virtual void updateFlagSymbols();
 
-	virtual void updateFog();
-	virtual void updateVisibility();																// Exposed to Python
-	virtual void updateSymbolVisibility();
-	virtual void updateSymbols();
-	virtual void updateMinimapColor();															// Exposed to Python
-	virtual void updateSight(bool bIncrement, bool bUpdatePlotGroups = true);
-	virtual void updateIrrigated();
-	virtual void updateCenterUnit();
-	virtual void updateWorkingCity();
 	virtual void updateMinOriginalStartDist(CvArea* pArea);										// Exposed to Python
-	virtual void updateYield();
-
-	virtual void verifyUnitValidPlot();
 
 	virtual CvPlot* syncRandPlot(int iFlags = 0, int iArea = -1, int iMinUnitDistance = -1, int iTimeout = 100);// Exposed to Python 
 

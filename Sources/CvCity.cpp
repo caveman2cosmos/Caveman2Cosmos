@@ -349,7 +349,7 @@ void CvCity::init(int iID, PlayerTypes eOwner, int iX, int iY, bool bBumpUnits, 
 
 	GET_PLAYER(getOwner()).setMaintenanceDirty(true);
 
-	GC.getMap().updateWorkingCity();
+	GC.getMap().callForeachPlot(CvPlot::updateWorkingCity);
 
 	GC.getGame().AI_makeAssignWorkDirty();
 
@@ -1409,7 +1409,7 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 
 	kOwner.setMaintenanceDirty(true);
 
-	GC.getMap().updateWorkingCity();
+	GC.getMap().callForeachPlot(CvPlot::updateWorkingCity);
 
 	GC.getGame().AI_makeAssignWorkDirty();
 
@@ -7997,7 +7997,7 @@ void CvCity::setGameTurnFounded(int iNewValue)
 		m_iGameTurnFounded = iNewValue;
 		FAssert(getGameTurnFounded() >= 0);
 
-		GC.getMap().updateWorkingCity();
+		GC.getMap().callForeachPlot(CvPlot::updateWorkingCity);
 	}
 }
 

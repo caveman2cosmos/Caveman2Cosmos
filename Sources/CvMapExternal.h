@@ -43,7 +43,6 @@ public:
 	DllExport void updateFlagSymbols();
 
 	DllExport void updateFog();
-	void updateVisibility();																// Exposed to Python
 	DllExport void updateSymbolVisibility();
 	DllExport void updateMinimapColor();															// Exposed to Python
 	DllExport void updateCenterUnit();

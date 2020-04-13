@@ -55,12 +55,10 @@ public:
 /* REVOLUTION_MOD                          END                                                  */
 /************************************************************************************************/
 
-	void erasePlots();
 	void setRevealedPlots(int /*TeamTypes*/ eTeam, bool bNewValue, bool bTerrainOnly);
 	void resetRevealedPlots(int /*TeamTypes*/ eTeam);
 	void setAllPlotTypes(int /*PlotTypes*/ ePlotType);
 
-	void updateVisibility();
 	CyPlot* syncRandPlot(int iFlags, int iArea, int iMinUnitDistance, int iTimeout);
 
 	CyCity* findCity(int iX, int iY, int /*PlayerTypes*/ eOwner, int /*TeamTypes*/ eTeam, bool bSameArea, bool bCoastalOnly, int /*TeamTypes*/ eTeamAtWarWith, int /*DirectionTypes*/ eDirection, CyCity* pSkipCity);
@@ -113,7 +111,6 @@ public:
 	int calculatePathDistance(CyPlot* pSource, CyPlot* pDest);
 	void rebuild(int iGridW, int iGridH, int iTopLatitude, int iBottomLatitude, bool bWrapX, bool bWrapY, WorldSizeTypes eWorldSize, ClimateTypes eClimate, SeaLevelTypes eSeaLevel, int iNumCustomMapOptions, CustomMapOptionTypes * aeCustomMapOptions);
 	void regenerateGameElements();
-	void updateFog();
 	void updateMinimapColor();
 	void updateMinOriginalStartDist(CyArea* pArea);
 

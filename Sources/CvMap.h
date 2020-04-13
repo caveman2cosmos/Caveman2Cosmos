@@ -97,29 +97,19 @@ public:
 /***** Parallel Maps - End *****/
 /*******************************/
 
-	void erasePlots();																			// Exposed to Python
 	void setRevealedPlots(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly = false);		// Exposed to Python
 	void resetRevealedPlots(TeamTypes eTeam);
 	void setAllPlotTypes(PlotTypes ePlotType);												// Exposed to Python
+
+	void callForeachPlot(bst::function<void(CvPlot*)> func);
 
 	void doTurn();																			
 
 	void updateFlagSymbolsInternal(bool bForce);
 	void updateFlagSymbols();
 
-	void updateFog();
-	void updateVisibility();																// Exposed to Python
-	void updateSymbolVisibility();
-	void updateSymbols();
-	void updateMinimapColor();															// Exposed to Python
 	void updateSight(bool bIncrement, bool bUpdatePlotGroups = true);
-	void updateIrrigated();
-	void updateCenterUnit();
-	void updateWorkingCity();
 	void updateMinOriginalStartDist(CvArea* pArea);										// Exposed to Python
-	void updateYield();
-
-	void verifyUnitValidPlot();
 
 	void combinePlotGroups(PlayerTypes ePlayer, CvPlotGroup* pPlotGroup1, CvPlotGroup* pPlotGroup2, bool bRecalculateBonuses);	
 

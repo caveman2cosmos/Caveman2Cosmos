@@ -70,27 +70,16 @@ public:
 /***** Parallel Maps - End *****/
 /*******************************/
 
-	virtual void erasePlots() = 0;																			// Exposed to Python
 	virtual void setRevealedPlots(TeamTypes eTeam, bool bNewValue, bool bTerrainOnly = false) = 0;		// Exposed to Python
 	virtual void setAllPlotTypes(PlotTypes ePlotType) = 0;												// Exposed to Python
+
+	virtual void callForeachPlot(bst::function<void(CvPlot*)> func) = 0;
 
 	virtual void doTurn() = 0;																			
 
 	virtual void updateFlagSymbols() = 0;
 
-	virtual void updateFog() = 0;
-	virtual void updateVisibility() = 0;																// Exposed to Python
-	virtual void updateSymbolVisibility() = 0;
-	virtual void updateSymbols() = 0;
-	virtual void updateMinimapColor() = 0;															// Exposed to Python
-	virtual void updateSight(bool bIncrement, bool bUpdatePlotGroups = true) = 0;
-	virtual void updateIrrigated() = 0;
-	virtual void updateCenterUnit() = 0;
-	virtual void updateWorkingCity() = 0;
 	virtual void updateMinOriginalStartDist(CvArea* pArea) = 0;										// Exposed to Python
-	virtual void updateYield() = 0;
-
-	virtual void verifyUnitValidPlot() = 0;
 
 	virtual CvPlot* syncRandPlot(int iFlags = 0, int iArea = -1, int iMinUnitDistance = -1, int iTimeout = 100) = 0;// Exposed to Python 
 

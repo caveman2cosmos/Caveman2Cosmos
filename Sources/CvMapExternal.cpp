@@ -66,7 +66,7 @@ void CvMapExternal::setupGraphical()
 
 void CvMapExternal::erasePlots()
 {
-	m_proxiedMap->erasePlots();
+	m_proxiedMap->callForeachPlot(CvPlot::erase);
 }
 
 
@@ -78,31 +78,25 @@ void CvMapExternal::updateFlagSymbols()
 
 void CvMapExternal::updateFog()
 {
-	m_proxiedMap->updateFog();
-}
-
-
-void CvMapExternal::updateVisibility()
-{
-	m_proxiedMap->updateVisibility();
+	m_proxiedMap->callForeachPlot(CvPlot::updateFog);
 }
 
 
 void CvMapExternal::updateSymbolVisibility()
 {
-	m_proxiedMap->updateSymbolVisibility();
+	m_proxiedMap->callForeachPlot(CvPlot::updateSymbolVisibility);
 }
 
 
 void CvMapExternal::updateMinimapColor()
 {
-	m_proxiedMap->updateMinimapColor();
+	m_proxiedMap->callForeachPlot(CvPlot::updateMinimapColor);
 }
 
 
 void CvMapExternal::updateCenterUnit()
 {
-	m_proxiedMap->updateCenterUnit();
+	m_proxiedMap->callForeachPlot(CvPlot::updateCenterUnit);
 }
 
 CvCity* CvMapExternal::_findCity(int iX, int iY, PlayerTypes eOwner, TeamTypes eTeam, bool bSameArea, bool bCoastalOnly, TeamTypes eTeamAtWarWith, DirectionTypes eDirection, CvCity* pSkipCity)

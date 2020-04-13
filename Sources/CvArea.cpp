@@ -333,14 +333,14 @@ void CvArea::changeNumTiles(int iChange)
 	{
 		const bool bWasLake = isLake();
 
-		m_iNumTiles = (m_iNumTiles + iChange);
+		m_iNumTiles += iChange;
 		FAssert(getNumTiles() >= 0);
 
 		// cppcheck-suppress knownConditionTrueFalse
 		if (bWasLake != isLake())
 		{
-			GC.getMap().updateIrrigated();
-			GC.getMap().updateYield();
+			GC.getMap().callForeachPlot(CvPlot::updateIrrigated);
+			GC.getMap().callForeachPlot(CvPlot::updateYield);
 		}
 	}
 }
@@ -890,7 +890,7 @@ void CvArea::changeBorderObstacleCount(TeamTypes eIndex, int iChange)
 
 	if (iChange > 0 && m_aiBorderObstacleCount[eIndex] == iChange)
 	{
-		GC.getMap().verifyUnitValidPlot();
+		GC.getMap().callForeachPlot(CvPlot::verifyUnitValidPlot);
 	}
 }
 

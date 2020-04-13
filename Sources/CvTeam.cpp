@@ -1469,7 +1469,7 @@ void CvTeam::declareWar(TeamTypes eTeam, bool bNewDiplo, WarPlanTypes eWarPlan, 
 
 		if (bInFull)
 		{
-			GC.getMap().verifyUnitValidPlot();
+			GC.getMap().callForeachPlot(CvPlot::verifyUnitValidPlot);
 		}
 
 		//isolated NPC war declarations as it happens now on each load process at a point when such validation cannot take place in the environment that isn't fully initialized yet.
@@ -1809,7 +1809,7 @@ void CvTeam::makePeace(TeamTypes eTeam, bool bBumpUnits)
 
 		if (bBumpUnits)
 		{
-			GC.getMap().verifyUnitValidPlot();
+			GC.getMap().callForeachPlot(CvPlot::verifyUnitValidPlot);
 		}
 
 		GC.getGame().AI_makeAssignWorkDirty();
@@ -3589,12 +3589,12 @@ void CvTeam::changeExtraWaterSeeFromCount(int iChange)
 {
 	if (iChange != 0)
 	{
-		GC.getMap().updateSight(false);
+		GC.getMap().updateSight(false, false);
 
-		m_iExtraWaterSeeFromCount = (m_iExtraWaterSeeFromCount + iChange);
+		m_iExtraWaterSeeFromCount += iChange;
 		FAssert(getExtraWaterSeeFromCount() >= 0);
 
-		GC.getMap().updateSight(true);
+		GC.getMap().updateSight(true, false);
 	}
 }
 
@@ -3784,10 +3784,10 @@ void CvTeam::changeIrrigationCount(int iChange)
 {
 	if (iChange != 0)
 	{
-		m_iIrrigationCount = (m_iIrrigationCount + iChange);
+		m_iIrrigationCount += iChange;
 		FAssert(getIrrigationCount() >= 0);
 
-		GC.getMap().updateIrrigated();
+		GC.getMap().callForeachPlot(CvPlot::updateIrrigated);
 	}
 }
 
@@ -4315,21 +4315,18 @@ bool CvTeam::isOpenBorders(TeamTypes eIndex) const
 
 void CvTeam::setOpenBorders(TeamTypes eIndex, bool bNewValue)
 {
-	bool bOldFreeTrade;
-	int iI;
-
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
 
 	if (isOpenBorders(eIndex) != bNewValue)
 	{
-		bOldFreeTrade = isFreeTrade(eIndex);
+		const bool bOldFreeTrade = isFreeTrade(eIndex);
 
 		m_abOpenBorders[eIndex] = bNewValue;
 
 		AI_setOpenBordersCounter(eIndex, 0);
 
-		GC.getMap().verifyUnitValidPlot();
+		GC.getMap().callForeachPlot(CvPlot::verifyUnitValidPlot);
 
 		if ((getID() == GC.getGame().getActiveTeam()) || (eIndex == GC.getGame().getActiveTeam()))
 		{
@@ -4338,7 +4335,7 @@ void CvTeam::setOpenBorders(TeamTypes eIndex, bool bNewValue)
 
 		if (bOldFreeTrade != isFreeTrade(eIndex))
 		{
-			for (iI = 0; iI < MAX_PLAYERS; iI++)
+			for (int iI = 0; iI < MAX_PLAYERS; iI++)
 			{
 				if (GET_PLAYER((PlayerTypes)iI).isAlive())
 				{
@@ -8257,19 +8254,16 @@ void CvTeam::changeBuildingYieldModifier(BuildingTypes eIndex1, YieldTypes eInde
 
 void CvTeam::setLimitedBorders(TeamTypes eIndex, bool bNewValue)
 {
-	bool bOldFreeTrade;
-	int iI;
-
 	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index)");
 	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index)");
 
 	if (isLimitedBorders(eIndex) != bNewValue)
 	{
-		bOldFreeTrade = isFreeTrade(eIndex);
+		const bool bOldFreeTrade = isFreeTrade(eIndex);
 
 		m_abLimitedBorders[eIndex] = bNewValue;
 
-		GC.getMap().verifyUnitValidPlot();
+		GC.getMap().callForeachPlot(CvPlot::verifyUnitValidPlot);
 
 		if ((getID() == GC.getGame().getActiveTeam()) || (eIndex == GC.getGame().getActiveTeam()))
 		{
@@ -8278,7 +8272,7 @@ void CvTeam::setLimitedBorders(TeamTypes eIndex, bool bNewValue)
 
 		if (bOldFreeTrade != isFreeTrade(eIndex))
 		{
-			for (iI = 0; iI < MAX_PLAYERS; iI++)
+			for (int iI = 0; iI < MAX_PLAYERS; iI++)
 			{
 				if (GET_PLAYER((PlayerTypes)iI).isAlive())
 				{

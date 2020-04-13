@@ -604,7 +604,7 @@ void CvGame::regenerateMap()
 
 	gDLL->getEngineIFace()->clearSigns();
 
-	GC.getMap().erasePlots();
+	GC.getMap().callForeachPlot(CvPlot::erase);
 
 	m_iChokePointCalculationVersion = 0;
 
@@ -4976,10 +4976,10 @@ void CvGame::toggleDebugMode()
 	gDLL->getEngineIFace()->RebuildAllPlots();
 
 	GC.getMap().setupGraphical();
-	GC.getMap().updateVisibility();
-	GC.getMap().updateSymbols();
+	GC.getMap().callForeachPlot(CvPlot::updateVisibility);
+	GC.getMap().callForeachPlot(CvPlot::updateSymbols);
 	GC.getMap().updateFlagSymbols();
-	GC.getMap().updateMinimapColor();
+	GC.getMap().callForeachPlot(CvPlot::updateMinimapColor);
 
 	gDLL->getInterfaceIFace()->setDirty(GameData_DIRTY_BIT, true);
 	gDLL->getInterfaceIFace()->setDirty(Score_DIRTY_BIT, true);
@@ -5083,7 +5083,7 @@ void CvGame::setFinalInitialized(bool bNewValue)
 		{
 			updatePlotGroups();
 
-			GC.getMap().updateIrrigated();
+			GC.getMap().callForeachPlot(CvPlot::updateIrrigated);
 
 			for (int iI = 0; iI < MAX_TEAMS; iI++)
 			{
@@ -5199,10 +5199,10 @@ void CvGame::setActivePlayer(PlayerTypes eNewValue, bool bForceHotSeat)
 
 		if (GC.IsGraphicsInitialized())
 		{
-			GC.getMap().updateFog();
-			GC.getMap().updateVisibility();
-			GC.getMap().updateSymbols();
-			GC.getMap().updateMinimapColor();
+			GC.getMap().callForeachPlot(CvPlot::updateFog);
+			GC.getMap().callForeachPlot(CvPlot::updateVisibility);
+			GC.getMap().callForeachPlot(CvPlot::updateSymbols);
+			GC.getMap().callForeachPlot(CvPlot::updateMinimapColor);
 
 			updateUnitEnemyGlow();
 
@@ -12978,11 +12978,10 @@ void CvGame::recalculateModifiers()
 		const CvPlayer& kLoopPlayer = GET_PLAYER((PlayerTypes)iPlayer);
 		if (kLoopPlayer.isAlive())
 		{
-			for (CvPlayer::city_iterator cityItr = kLoopPlayer.beginCities(); cityItr != kLoopPlayer.endCities(); ++cityItr)
+			foreach_(CvCity* city, kLoopPlayer.cities())
 			{
-				CvCity* pLoopCity = *cityItr;
-				pLoopCity->doVicinityBonus();
-				pLoopCity->checkBuildings(true, true, true, true, true, false);
+				city->doVicinityBonus();
+				city->checkBuildings(true, true, true, true, true, false);
 			}
 		}
 	}
@@ -12992,8 +12991,8 @@ void CvGame::recalculateModifiers()
 	gDLL->getEngineIFace()->RebuildAllPlots();
 
 	GC.getMap().setupGraphical();
-	GC.getMap().updateVisibility();
-	GC.getMap().updateFog();
+	GC.getMap().callForeachPlot(CvPlot::updateVisibility);
+	GC.getMap().callForeachPlot(CvPlot::updateFog);
 
 	Cy::call_optional(PYCivModule, "recalculateModifiers");
 

@@ -89,12 +89,6 @@ void CyMap::bringIntoView(int iX, int iY, bool bLookAt, bool bForceCenter, bool 
 /***** Parallel Maps - End *****/
 /*******************************/
 
-void CyMap::erasePlots()
-{
-	if (m_pMap)
-		m_pMap->erasePlots();
-}
-
 void CyMap::setRevealedPlots(int /*TeamTypes*/ eTeam, bool bNewValue, bool bTerrainOnly)
 {
 	if (m_pMap)
@@ -113,23 +107,10 @@ void CyMap::setAllPlotTypes(int /*PlotTypes*/ ePlotType)
 		m_pMap->setAllPlotTypes((PlotTypes) ePlotType);
 }
 
-/************************************************************************************************/
-/* REVOLUTION_MOD                         02/29/08                                jdog5000      */
-/*                                                                                              */
-/* Used by Barbarian civ                                                                        */
-/************************************************************************************************/
 void CyMap::verifyUnitValidPlot()
 {
-	if( m_pMap )
-		m_pMap->verifyUnitValidPlot();
-}
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
-void CyMap::updateVisibility()
-{
 	if (m_pMap)
-		m_pMap->updateVisibility();
+		m_pMap->callForeachPlot(CvPlot::verifyUnitValidPlot);
 }
 
 CyPlot* CyMap::syncRandPlot(int iFlags, int iArea, int iMinUnitDistance, int iTimeout)
@@ -377,28 +358,16 @@ void CyMap::regenerateGameElements()
 	}
 }
 
-void CyMap::updateFog()
-{
-	if (m_pMap)
-	{
-		m_pMap->updateFog();
-	}
-}
-
 void CyMap::updateMinimapColor()
 {
 	if (m_pMap)
-	{
-		m_pMap->updateMinimapColor();
-	}
+		m_pMap->callForeachPlot(CvPlot::updateMinimapColor);
 }
 
 void CyMap::updateMinOriginalStartDist(CyArea* pArea)
 {
 	if (m_pMap)
-	{
 		m_pMap->updateMinOriginalStartDist(pArea->getArea());
-	}
 }
 
 
