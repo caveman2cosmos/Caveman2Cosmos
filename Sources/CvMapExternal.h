@@ -47,30 +47,23 @@ public:
 	DllExport void updateSymbolVisibility();
 	DllExport void updateMinimapColor();															// Exposed to Python
 	DllExport void updateCenterUnit();
-	DllExport CvCity* _findCity(int iX, int iY, PlayerTypes eOwner = NO_PLAYER, TeamTypes eTeam = NO_TEAM, bool bSameArea = true, bool bCoastalOnly = false, TeamTypes eTeamAtWarWith = NO_TEAM, DirectionTypes eDirection = NO_DIRECTION, CvCity* pSkipCity = NULL);
-	CvCity* findCity(int iX, int iY, PlayerTypes eOwner = NO_PLAYER, TeamTypes eTeam = NO_TEAM, bool bSameArea = true, bool bCoastalOnly = false, TeamTypes eTeamAtWarWith = NO_TEAM, DirectionTypes eDirection = NO_DIRECTION, const CvCity* pSkipCity = NULL) const;	// Exposed to Python
+	DllExport CvCity* findCity(int iX, int iY, PlayerTypes eOwner = NO_PLAYER, TeamTypes eTeam = NO_TEAM, bool bSameArea = true, bool bCoastalOnly = false, TeamTypes eTeamAtWarWith = NO_TEAM, DirectionTypes eDirection = NO_DIRECTION, CvCity* pSkipCity = NULL);
 	CvSelectionGroup* findSelectionGroup(int iX, int iY, PlayerTypes eOwner = NO_PLAYER, bool bReadyToSelect = false, bool bWorkers = false) const;				// Exposed to Python
 	DllExport bool isPlot(int iX, int iY) const;																		// Exposed to Python
 	DllExport int numPlots() const; 																								// Exposed to Python
 	int plotNum(int iX, int iY) const;																		// Exposed to Python
 	int pointXToPlotX(float fX) const;
-	DllExport float _plotXToPointX(int iX);
-	float plotXToPointX(int iX) const;
+	DllExport float plotXToPointX(int iX);
 	int pointYToPlotY(float fY) const;
-	DllExport float _plotYToPointY(int iY);
-	float plotYToPointY(int iY) const;
+	DllExport float plotYToPointY(int iY);
 	DllExport int getGridWidth() const;																		// Exposed to Python
 	DllExport int getGridHeight() const;																	// Exposed to Python
 	int getLandPlots() const;																					// Exposed to Python
 	int getOwnedPlots() const;																				// Exposed to Python
-	DllExport bool _isWrapX();
-	bool isWrapX() const;																							// Exposed to Python
-	DllExport bool _isWrapY();
-	bool isWrapY() const;																							// Exposed to Python
-	DllExport bool _isWrap();
-	bool isWrap() const;
-	DllExport WorldSizeTypes _getWorldSize();
-	WorldSizeTypes getWorldSize() const;															// Exposed to Python
+	DllExport bool isWrapX();
+	DllExport bool isWrapY();
+	DllExport bool isWrap();
+	DllExport WorldSizeTypes getWorldSize();
 	ClimateTypes getClimate() const;																	// Exposed to Python
 	SeaLevelTypes getSeaLevel() const;																// Exposed to Python
 
@@ -78,8 +71,7 @@ public:
 	CustomMapOptionTypes getCustomMapOption(int iOption) const;				// Exposed to Python
 	DllExport CvPlot* plotByIndex(int iIndex) const;											// Exposed to Python
 	DllExport CvPlot* plot(int iX, int iY) const;													// Exposed to Python
-	DllExport CvPlot* _pointToPlot(float fX, float fY);
-	CvPlot* pointToPlot(float fX, float fY) const;
+	DllExport CvPlot* pointToPlot(float fX, float fY);
 	int getNumAreas() const;														// Exposed to Python
 	int getNumLandAreas()const;
 	// Serialization:
