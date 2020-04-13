@@ -156,7 +156,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ADAPTED_HUMAN</Tag>
-		<English>Adapted Humans</English>
+		<English>Interstellar Adapted Humans</English>
 		<French>Adapted Humans</French>
 	</TEXT>
 	<TEXT>
@@ -380,7 +380,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_AGRODOME</Tag>
-		<English>Agrodome</English>
+		<English>Venus Agrodome</English>
 		<French>Agrodome</French>
 	</TEXT>
 	<TEXT>
@@ -1107,7 +1107,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASCENDED_GALAXY</Tag>
-		<English>Ascended Galaxy</English>
+		<English>Intergalactic Ascended Galaxy</English>
 		<French>Ascended Galaxy</French>
 	</TEXT>
 	<TEXT>
@@ -1135,7 +1135,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ASCENDED_STAR_SYSTEM</Tag>
-		<English>Ascended Star System</English>
+		<English>Interstellar Ascended Star System</English>
 		<French>Ascended Star System</French>
 	</TEXT>
 	<TEXT>
@@ -1975,7 +1975,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BLACK_HOLE_ERA_SURVIVAL_PLAN</Tag>
-		<English>Black Hole Era Survival Plan (Intergalactic)</English>
+		<English>Intergalactic Black Hole Era Survival Plan</English>
 		<French>Black Hole Era Survival Plan (Intergalactic)</French>
 	</TEXT>
 	<TEXT>
@@ -2605,7 +2605,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CERES_TRADING_POST</Tag>
-		<English>Ceres Trading Post</English>
+		<English>Asteroid Ceres Trading Post</English>
 		<French>Ceres Trading Post</French>
 	</TEXT>
 	<TEXT>
@@ -3290,7 +3290,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_CISLUNAR_VR</Tag>
-		<English>Simulated World (Cislunar)</English>
+		<English>Cislunar Simulated World</English>
 		<French>Simulated World (Cislunaire)</French>
 	</TEXT>
 	<TEXT>
@@ -3878,7 +3878,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_COSMIC_BANISHMENT</Tag>
-		<English>Cosmic Banishment (Interstellar)</English>
+		<English>Interstellar Cosmic Banishment</English>
 		<French>Cosmic Banishment (Interstellar)</French>
 	</TEXT>
 	<TEXT>
@@ -4256,7 +4256,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DARK_ERA_SURVIVAL_PLAN</Tag>
-		<English>Dark Era Survival Plan (Distant)</English>
+		<English>Distant Dark Era Survival Plan</English>
 		<French>Dark Era Survival Plan (Distant)</French>
 	</TEXT>
 	<TEXT>
@@ -4718,7 +4718,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DEGENERATE_ERA_SURVIVAL_PLAN</Tag>
-		<English>Degenerate Era Survival Plan (Interstellar)</English>
+		<English>Interstellar Degenerate Era Survival Plan</English>
 		<French>Degenerate Era Survival Plan (Interstellar)</French>
 	</TEXT>
 	<TEXT>
@@ -5073,7 +5073,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_DYSON_HARROP_SATELLITE</Tag>
-		<English>Dyson-Harrop Satellite (Cislunar)</English>
+		<English>Cislunar Dyson-Harrop Satellite</English>
 		<French>Dyson-Harrop Satellite (Cislunaire)</French>
 	</TEXT>
 	<TEXT>
@@ -6291,7 +6291,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_FUSION_CANDLE</Tag>
-		<English>Fusion Candle</English>
+		<English>Jovian Fusion Candle</English>
 		<French>Fusion Candle</French>
 	</TEXT>
 	<TEXT>
@@ -6375,7 +6375,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALACTIC_AC</Tag>
-		<English>Galactic AC</English>
+		<English>Interstellar Galactic AC</English>
 		<French>Galactic AC</French>
 	</TEXT>
 	<TEXT>
@@ -6403,7 +6403,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALACTIC_COLONY</Tag>
-		<English>Galactic Colony</English>
+		<English>Intergalactic Galactic Colony</English>
 		<French>Colonie de Galactic</French>
 	</TEXT>
 	<TEXT>
@@ -6501,7 +6501,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALACTIC_GROUP_COLONY</Tag>
-		<English>Galactic Group Colony</English>
+		<English>Intergalactic Galactic Group Colony</English>
 		<French>Colonie de Galactic Group</French>
 	</TEXT>
 	<TEXT>
@@ -6557,7 +6557,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_GALACTIC_SUPERCLUSTER_COLONY</Tag>
-		<English>Supercluster Colony</English>
+		<English>Intergalactic Supercluster Colony</English>
 		<French>Colonie de Supercluster</French>
 	</TEXT>
 	<TEXT>
@@ -7299,7 +7299,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_HILLS_CLOUD_COLONY</Tag>
-		<English>Hills Cloud Colony</English>
+		<English>Oort Cloud Hills Colony</English>
 		<French>Colonie de Hills Cloud</French>
 	</TEXT>
 	<TEXT>
@@ -8111,7 +8111,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INSTANT_TELEPORTATION_PORTAL</Tag>
-		<English>Instant Teleportation Portal</English>
+		<English>Intergalactic Instant Teleportation Portal</English>
 		<French>Instant Teleportation Portal</French>
 	</TEXT>
 	<TEXT>
@@ -9021,7 +9021,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_INTER_ASTEROID_CITY</Tag>
-		<English>Inter-Asteroid City</English>
+		<English>Asteroid Cluster City</English>
 		<French>Ville Inter-Astéroïde</French>
 	</TEXT>
 	<TEXT>
@@ -9175,7 +9175,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_JOVIAN_TROJAN_MINING</Tag>
-		<English>Jovian Trojan Mine</English>
+		<English>Deep Space Jovian Trojan Mine</English>
 		<French>Jovian Troyen Mine</French>
 	</TEXT>
 	<TEXT>
@@ -9413,7 +9413,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_KUIPER_BELT_INTERSTELLAR_SUPPLY</Tag>
-		<English>Interstellar Supply Base</English>
+		<English>Kuiper Belt Interstellar Supply Base</English>
 		<French>Interstellar Supply Base</French>
 	</TEXT>
 	<TEXT>
@@ -11290,7 +11290,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MARTIAN_SIMULATED_WORLD</Tag>
-		<English>Simulated World (Mars)</English>
+		<English>Martian Simulated World</English>
 		<French>Simulated World (Mars)</French>
 	</TEXT>
 	<TEXT>
@@ -11924,7 +11924,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_MICROVAC</Tag>
-		<English>Microvac</English>
+		<English>Deep Space Microvac</English>
 		<French>Microvac</French>
 	</TEXT>
 	<TEXT>
@@ -12707,7 +12707,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_NEW_BIG_BANG</Tag>
-		<English>New Big Bang (Hyperspace)</English>
+		<English>Hyperspace New Big Bang</English>
 		<French>New Big Bang (Hyperspace)</French>
 	</TEXT>
 	<TEXT>
@@ -13113,7 +13113,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_OORT_CLOUD_MINE</Tag>
-		<English>Comet Disassembly</English>
+		<English>Oort Cloud Comet Disassembly</English>
 		<French>Comet Disassembly</French>
 	</TEXT>
 	<TEXT>
@@ -13295,7 +13295,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORBITAL_VR</Tag>
-		<English>Simulated World (Deep Space)</English>
+		<English>Deep Space Simulated World</English>
 		<French>Simulated World (Espace lointain)</French>
 	</TEXT>
 	<TEXT>
@@ -14891,7 +14891,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_RING_OF_SATURN_HOTEL</Tag>
-		<English>Ring of Saturn Hotel</English>
+		<English>Saturn Ring Hotel</English>
 		<French>Ring of Saturn Hotel</French>
 	</TEXT>
 	<TEXT>
@@ -15577,7 +15577,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SLOW_INTERSTELLAR_VESSEL</Tag>
-		<English>Enzmann Starship</English>
+		<English>Kuiper Belt Enzmann Starship</English>
 		<French>Enzmann Starship</French>
 	</TEXT>
 	<TEXT>
@@ -15717,7 +15717,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SOLAR_ARRAY_INNER</Tag>
-		<English>Solar Array (Inner Solar System)</English>
+		<English>Deep Space Solar Array (Inner Solar System)</English>
 		<French>Panneaux Solaires (Système solaire intérieur)</French>
 	</TEXT>
 	<TEXT>
@@ -15731,7 +15731,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SOLAR_ARRAY_OUTER</Tag>
-		<English>Solar Array (Outer Solar System)</English>
+		<English>Deep Space Solar Array (Outer Solar System)</English>
 		<French>Panneaux Solaires (Outer Solar System)</French>
 	</TEXT>
 	<TEXT>
@@ -15745,7 +15745,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SOLAR_ARRAY_TRANSNEPTUNIAN</Tag>
-		<English>Solar Array (Transneptunian)</English>
+		<English>Deep Space Solar Array (Transneptunian)</English>
 		<French>Panneaux Solaires (Transneptunian)</French>
 	</TEXT>
 	<TEXT>
@@ -15829,7 +15829,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SOLAR_IMPORTER_EXPORTER</Tag>
-		<English>Solar Importer/Exporter</English>
+		<English>Deep Space Solar Importer/Exporter</English>
 		<French>Importateur/Exportateur Solaire</French>
 	</TEXT>
 	<TEXT>
@@ -16585,7 +16585,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SUN_SCOOP</Tag>
-		<English>Sun Scoop</English>
+		<English>Deep Space Sun Scoop</English>
 		<French>Sun Scoop</French>
 	</TEXT>
 	<TEXT>
@@ -16595,7 +16595,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SUN_SCOOP_POWER_PLANT</Tag>
-		<English>Sun Scoop Power Plant</English>
+		<English>Deep Space Sun Scoop Power Plant</English>
 		<French>Centrale de Prélèvement du Soleil</French>
 	</TEXT>
 	<TEXT>
@@ -17145,7 +17145,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_TERRAFORMED_ROGUE_PLANET</Tag>
-		<English>Terraformed Rogue Planet</English>
+		<English>Rogue Planet City</English>
 		<French>Terraformed Rogue Planet</French>
 	</TEXT>
 	<TEXT>
@@ -18223,7 +18223,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_UNIVERSAL_AC</Tag>
-		<English>Universal AC</English>
+		<English>Intergalactic Universal AC</English>
 		<French>Universal AC</French>
 	</TEXT>
 	<TEXT>
