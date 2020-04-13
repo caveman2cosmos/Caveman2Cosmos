@@ -2030,6 +2030,7 @@ protected:
 	int m_iAnimalIgnoresBordersCount;
 	int m_iOnslaughtCount;
 	int m_iExtraFortitude;
+#ifdef STRENGTH_IN_NUMBERS
 	int m_iExtraFrontSupportPercent;
 	int m_iExtraShortRangeSupportPercent;
 	int m_iExtraMediumRangeSupportPercent;
@@ -2038,6 +2039,7 @@ protected:
 	int m_iSupportCount;
 	int m_iAttackFromPlotX;
 	int m_iAttackFromPlotY;
+#endif // STRENGTH_IN_NUMBERS
 	int m_iExtraSelfHealModifier;
 	int m_iExtraNumHealSupport;
 	int m_iHealSupportUsed;
@@ -2071,6 +2073,7 @@ protected:
 	bool m_bHasAnyInvisibility;
 	bool m_bHasAnyInvisibilityAbility;
 	bool m_bRevealed;
+#ifdef STRENGTH_IN_NUMBERS
 	IDInfo afIUnit;
 	IDInfo afIIUnit;
 	IDInfo asrIUnit;
@@ -2091,6 +2094,7 @@ protected:
 	IDInfo dlrIIUnit;
 	IDInfo dflIUnit;
 	IDInfo dflIIUnit;
+#endif // STRENGTH_IN_NUMBERS
 	int m_iExtraDodgeModifier;
 	int m_iExtraPrecisionModifier;
 	int m_iExtraPowerShots;
