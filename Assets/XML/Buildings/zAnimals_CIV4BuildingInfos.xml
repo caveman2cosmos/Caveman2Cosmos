@@ -16220,29 +16220,16 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HAWKING</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_HAWKING</Description>
 			<Civilopedia>TXT_KEY_BUILDING_HAWKING_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_HAWKING_STRATEGY</Strategy>
 			<Advisor>ADVISOR_GROWTH</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_HAWKING_HUT</ArtDefineTag>
-			<ObsoleteTech>TECH_TELEGRAPH</ObsoleteTech>
-			<PrereqTech>TECH_FALCONRY</PrereqTech>
-			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
-			<MapCategoryTypes>
-				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
-			</MapCategoryTypes>
-			<iAsset>4</iAsset>
-			<iPower>2</iPower>
-			<YieldChanges>
-				<iYield>1</iYield>
-			</YieldChanges>
-			<CommerceChanges>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>0</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
 			<ConstructSound>AS2D_BUILD_GRANARY</ConstructSound>
+			<FreeStartEra>C2C_ERA_CLASSICAL</FreeStartEra>
+			<PrereqTech>TECH_FALCONRY</PrereqTech>
 			<PrereqOrBuildings>
 				<PrereqOrBuilding>
 					<BuildingType>BUILDING_MASTER_HUNTER</BuildingType>
@@ -16253,22 +16240,28 @@
 					<bPrereqBuilding>1</bPrereqBuilding>
 				</PrereqOrBuilding>
 			</PrereqOrBuildings>
-			<ReplaceBuildings>
-				<ReplaceBuilding>
-					<BuildingType>BUILDING_FALCONRY_SCHOOL</BuildingType>
-					<bReplace>1</bReplace>
-				</ReplaceBuilding>
-			</ReplaceBuildings>
+			<ObsoleteTech>TECH_TELEGRAPH</ObsoleteTech>
+			<YieldChanges>
+				<iYield>1</iYield>
+			</YieldChanges>
+			<CommerceChanges>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>0</iCommerce>
+				<iCommerce>2</iCommerce>
+			</CommerceChanges>
+			<iAsset>1</iAsset>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_ESPIONAGE</FlavorType>
-					<iFlavor>5</iFlavor>
+					<iFlavor>1</iFlavor>
 				</Flavor>
 				<Flavor>
 					<FlavorType>FLAVOR_GROWTH</FlavorType>
-					<iFlavor>5</iFlavor>
+					<iFlavor>1</iFlavor>
 				</Flavor>
 			</Flavors>
+			<ArtDefineTag>ART_DEF_BUILDING_HAWKING_HUT</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_HORSE_HERD</Type>
