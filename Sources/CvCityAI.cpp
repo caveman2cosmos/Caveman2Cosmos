@@ -13680,37 +13680,29 @@ void CvCityAI::AI_stealPlots()
 {
 	PROFILE_FUNC();
 
-	int iImportance = AI_getCityImportance(true, false);
+	const int iImportance = AI_getCityImportance(true, false);
 
-	for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
+	foreach_(CvPlot* pLoopPlot, plots())
 	{
-		CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
-
-		if (pLoopPlot != NULL)
+		if (iImportance > 0 && pLoopPlot->getOwner() == getOwner())
 		{
-			if (iImportance > 0)
+			CvCityAI* pWorkingCity = static_cast<CvCityAI*>(pLoopPlot->getWorkingCity());
+			if ((pWorkingCity != this) && (pWorkingCity != NULL))
 			{
-				if (pLoopPlot->getOwner() == getOwner())
+				FAssert(pWorkingCity->getOwner() == getOwner());
+				const int iOtherImportance = pWorkingCity->AI_getCityImportance(true, false);
+				if (iImportance > iOtherImportance)
 				{
-					CvCityAI* pWorkingCity = static_cast<CvCityAI*>(pLoopPlot->getWorkingCity());
-					if ((pWorkingCity != this) && (pWorkingCity != NULL))
-					{
-						FAssert(pWorkingCity->getOwner() == getOwner());
-						int iOtherImportance = pWorkingCity->AI_getCityImportance(true, false);
-						if (iImportance > iOtherImportance)
-						{
-							pLoopPlot->setWorkingCityOverride(this);
-						}
-					}
+					pLoopPlot->setWorkingCityOverride(this);
 				}
 			}
+		}
 
-			if (pLoopPlot->getWorkingCityOverride() == this)
+		if (pLoopPlot->getWorkingCityOverride() == this)
+		{
+			if (pLoopPlot->getOwner() != getOwner())
 			{
-				if (pLoopPlot->getOwner() != getOwner())
-				{
-					pLoopPlot->setWorkingCityOverride(NULL);
-				}
+				pLoopPlot->setWorkingCityOverride(NULL);
 			}
 		}
 	}
@@ -13949,41 +13941,36 @@ int CvCityAI::AI_countNumBonuses(BonusTypes eBonus, bool bIncludeOurs, bool bInc
 int CvCityAI::AI_countNumImprovableBonuses( bool bIncludeNeutral, TechTypes eExtraTech, bool bLand, bool bWater )
 {
 	int iCount = 0;
-	for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
+	foreach_(const CvPlot* pLoopPlot, plots())
 	{
-		CvPlot* pLoopPlot = plotCity(getX(), getY(), iI);
-
-		if (pLoopPlot != NULL)
+		if ((bLand && pLoopPlot->area() == area()) || (bWater && pLoopPlot->isWater()))
 		{
-			if ((bLand && pLoopPlot->area() == area()) || (bWater && pLoopPlot->isWater()))
+			const BonusTypes eLoopBonus = pLoopPlot->getBonusType(getTeam());
+			if (eLoopBonus != NO_BONUS)
 			{
-				BonusTypes eLoopBonus = pLoopPlot->getBonusType(getTeam());
-				if (eLoopBonus != NO_BONUS)
+				if ( ((pLoopPlot->getOwner() == getOwner()) && (pLoopPlot->getWorkingCity() == this)) || (bIncludeNeutral && (!pLoopPlot->isOwned())))
 				{
-					if ( ((pLoopPlot->getOwner() == getOwner()) && (pLoopPlot->getWorkingCity() == this)) || (bIncludeNeutral && (!pLoopPlot->isOwned())))
-					{
-						const std::vector<std::pair<ImprovementTypes,BuildTypes> >* improvements = GC.getBonusInfo(eLoopBonus).getTradeProvidingImprovements();
+					const std::vector<std::pair<ImprovementTypes,BuildTypes> >* improvements = GC.getBonusInfo(eLoopBonus).getTradeProvidingImprovements();
 
-						for(std::vector<std::pair<ImprovementTypes,BuildTypes> >::const_iterator itr = improvements->begin(); itr != improvements->end(); ++itr)
+					for(std::vector<std::pair<ImprovementTypes,BuildTypes> >::const_iterator itr = improvements->begin(); itr != improvements->end(); ++itr)
+					{
+						if ( GET_PLAYER(getOwner()).canBuild(pLoopPlot, itr->second) )
 						{
-							if ( GET_PLAYER(getOwner()).canBuild(pLoopPlot, itr->second) )
+							iCount++;
+							break;
+						}
+						else if( (eExtraTech != NO_TECH) )
+						{
+							const CvBuildInfo& kBuild = GC.getBuildInfo(itr->second);
+
+							//	Koshling - not checking if eExtraTech obsoletes the build since we ARE checking is ENABLES it, and it
+							//	makes no sense for the same tech to boh enable and obsolete a build.  However, we DO need to check that
+							//	we do not ALREADY have an obsoleting tech
+							if (kBuild.getTechPrereq() == eExtraTech &&
+								(kBuild.getObsoleteTech() == NO_TECH || !GET_TEAM(getTeam()).isHasTech((TechTypes)kBuild.getObsoleteTech())))
 							{
 								iCount++;
 								break;
-							}
-							else if( (eExtraTech != NO_TECH) )
-							{
-								CvBuildInfo& kBuild = GC.getBuildInfo(itr->second);
-
-								//	Koshling - not checking if eExtraTech obsoletes the build since we ARE checking is ENABLES it, and it
-								//	makes no sense for the same tech to boh enable and obsolete a build.  However, we DO need to check that
-								//	we do not ALREADY have an obsoleting tech
-								if (kBuild.getTechPrereq() == eExtraTech &&
-									(kBuild.getObsoleteTech() == NO_TECH || !GET_TEAM(getTeam()).isHasTech((TechTypes)kBuild.getObsoleteTech())))
-								{
-									iCount++;
-									break;
-								}
 							}
 						}
 					}

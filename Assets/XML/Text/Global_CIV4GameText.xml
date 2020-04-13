@@ -6330,14 +6330,14 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ATTACKER_PURSUED_SUSTAIN</Tag>
 		<English>A %s1_EnCivName %s2_EnUName attempted to hit and run but has been entrapped into combat with our %s3_UnitName and forced to fight for its life.</English>
-		<French>[NUM2:Un:Une:Des:Des] %s2_EnUName %s1_EnCivName [NUM2:a:a:ont:ont] tenté une attaque éclair, mais [NUM1:il a:elle a:ils ont:elles ont] été attrap[NUM1:é:ée:és:ées] par [NUM3:votre:votre:vos:vos] %s3_UnitName qui [NUM2:l':l':les:les ][NUM3:a:a:ont:ont] forcé à combattre.</French>
+		<French>[NUM2:Un:Une:Des:Des] %s2_EnUName %s1_EnCivName [NUM2:a:a:ont:ont] tenté une attaque éclair, mais [NUM1:il a:elle a:ils ont:elles ont] été attrap[NUM1:é:ée:és:ées] par [NUM3:votre:votre:vos:vos] %s3_UnitName qui [NUM2:l':l':les:les][NUM3:a:a:ont:ont] forcé à combattre.</French>
 		<Italian>L'unità s1_EnCivName %s2_EnUName è riuscita a causare dei danni, ma è stata accerchiata dalla nostra unità s3_UnitName e costretta a combattere per la propria vita.</Italian>
 		<Polish>Jednostka %s2_EnUName %s1_EnCivName próbowała uciec z pola walki lecz nasza jednostka: %s3_UnitName dogoniła ją i zmusiła do walki o życie.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_ATTACKER_PURSUED_SUSTAIN_HIDDEN</Tag>
 		<English>A %s1_EnUName attempted to hit and run but has been entrapped into combat with our %s2_UnitName and forced to fight for its life.</English>
-		<French>[NUM1:Un:Une:Des:Des] %s1_EnUName [NUM1:a:a:ont:ont] tenté une attaque éclair, mais [NUM1:il a:elle a:ils ont:elles ont] été attrap[NUM1:é:ée:és:ées] par [NUM2:votre:votre:vos:vos] %s2_UnitName qui [NUM1:l':l':les:les ][NUM2:a:a:ont:ont] forcé à combattre.</French>
+		<French>[NUM1:Un:Une:Des:Des] %s1_EnUName [NUM1:a:a:ont:ont] tenté une attaque éclair, mais [NUM1:il a:elle a:ils ont:elles ont] été attrap[NUM1:é:ée:és:ées] par [NUM2:votre:votre:vos:vos] %s2_UnitName qui [NUM1:l':l':les:les][NUM2:a:a:ont:ont] forcé à combattre.</French>
 		<Italian>L'unità %s1_EnUName è riuscita a causare dei danni, ma è stata accerchiata dalla nostra unità s2_UnitName e costretta a combattere per la propria vita.</Italian>
 		<Polish>Jednostka %s2_EnUName %s1_EnCivName próbowała uciec z pola walki lecz nasza jednostka: %s3_UnitName dogoniła ją i zmusiła do walki o życie.</Polish>
 	</TEXT>
@@ -6930,28 +6930,28 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_DEFENDER_KNOCKEDBACK</Tag>
 		<English>The %s1_Enemy %s2_EnUName forced our %s3_UnitName to pull back.</English>
-		<French>[NUM2:Un:Une:Des:Des] %s2_EnUName %s1_Enemy [NUM2:a:a:ont:ont] réussi à créer une brèche dans les positions défensives de [NUM1:notre:notre:nos:nos] %s3_UnitName, [NUM1:l':l':les:les ]obligeant à battre en retraite à découvert.</French>
+		<French>[NUM2:Un:Une:Des:Des] %s2_EnUName %s1_Enemy [NUM2:a:a:ont:ont] réussi à créer une brèche dans les positions défensives de [NUM1:notre:notre:nos:nos] %s3_UnitName, [NUM1:l':l':les:les]obligeant à battre en retraite à découvert.</French>
 		<Italian>Una terribile unità %s1_Enemy di %s2_EnUName ha lanciato un inferno di fuoco nelle posizioni difensive della nostra unità %s3_UnitName, costringendoci alla ritirata.</Italian>
 		<Polish>Przerażająca jednostka: %s2_EnUName %s1_Enemy zmusiła naszą jednostkę: %s3_UnitName do ucieczki i walki w otwartym polu.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_DEFENDER_KNOCKEDBACK_HIDDEN</Tag>
 		<English>The %s1_Enemy forced our %s2_UnitName to pull back.</English>
-		<French>[NUM2:Un:Une:Des:Des]%s1_Enemy [NUM2:a:a:ont:ont] réussi à créer une brèche dans les positions défensives de [NUM1:notre:notre:nos:nos] %s3_UnitName, [NUM1:l':l':les:les ]obligeant à battre en retraite à découvert.</French>
+		<French>[NUM2:Un:Une:Des:Des]%s1_Enemy [NUM2:a:a:ont:ont] réussi à créer une brèche dans les positions défensives de [NUM1:notre:notre:nos:nos] %s3_UnitName, [NUM1:l':l':les:les]obligeant à battre en retraite à découvert.</French>
 		<Italian>Una terribile unità %s1_Enemy di ha lanciato un inferno di fuoco nelle posizioni difensive della nostra unità %s3_UnitName, costringendoci alla ritirata.</Italian>
 		<Polish>Przerażająca jednostka: %s2_EnUName %s1_Enemy zmusiła naszą jednostkę: %s3_UnitName do ucieczki i walki w otwartym polu.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_DEFENDER_KNOCKEDBACK_HUMAN</Tag>
 		<English>Our %s1_UnitName forced the %s2_Enemy %s3_EnUName to retreat.</English>
-		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:a:a:ont:ont] mené un assaut écrasant contre [NUM3:un:une:des:des] %s3_EnUName %s2_Enemy, [NUM3:l':l':les:les ]obligeant à quitter leurs retranchements.</French>
+		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:a:a:ont:ont] mené un assaut écrasant contre [NUM3:un:une:des:des] %s3_EnUName %s2_Enemy, [NUM3:l':l':les:les]obligeant à quitter leurs retranchements.</French>
 		<Italian>La nostra unità %s1_UnitName ha creato un assalto infernale contro un'unità %s2_Enemy di %s3_EnUName, obbligandoli a chiudere i buchi nelle loro difese.</Italian>
 		<Polish>Nasza jednostka: %s1_UnitName uniknęła rozpętania piekła przez %s3_EnUName %s2_Enemy poprzez wykurzenie ich z okopów.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_DEFENDER_KNOCKEDBACK_HUMAN_HIDDEN</Tag>
 		<English>Our %s1_UnitName forced the %s2_Enemy to retreat.</English>
-		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:a:a:ont:ont] mené un assaut écrasant contre [NUM3:un:une:des:des] %s2_Enemy, [NUM3:l':l':les:les ]obligeant à quitter leurs retranchements.</French>
+		<French>[NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:a:a:ont:ont] mené un assaut écrasant contre [NUM3:un:une:des:des] %s2_Enemy, [NUM3:l':l':les:les]obligeant à quitter leurs retranchements.</French>
 		<Italian>La nostra unità %s1_UnitName ha creato un assalto infernale contro un'unità %s2_Enemy, obbligandoli a chiudere i buchi nelle loro difese.</Italian>
 		<Polish>Nasza jednostka: %s1_UnitName uniknęła rozpętania piekła przez %s3_EnUName %s2_Enemy poprzez wykurzenie ich z okopów.</Polish>
 	</TEXT>
@@ -7028,14 +7028,14 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_DEFENDER_PURSUED_SUSTAIN_HUMAN</Tag>
 		<English>Our %s1_UnitName entrapped an escaping %s2_EnCivName %s3_EnUName and forced it to fight for its life.</English>
-		<French>[COLOR_YELLOW][NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:a:a:ont:ont] rattrapé [NUM3:un:une:des:des] %s3_EnUName (%s2_EnCivName) et [NUM3:l':l':les:les ][NUM1:a:a:ont:ont] forcé à combattre.[COLOR_REVERT]</French>
+		<French>[COLOR_YELLOW][NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:a:a:ont:ont] rattrapé [NUM3:un:une:des:des] %s3_EnUName (%s2_EnCivName) et [NUM3:l':l':les:les][NUM1:a:a:ont:ont] forcé à combattre.[COLOR_REVERT]</French>
 		<Italian>[NUM1:Il nostro:La nostra:I nostri:Le nostre] %s1_UnitName ha intrappolato l'unità %s3_EnUName %s2_EnCivName in fuga, costringendola a combattere per la propria vita.</Italian>
 		<Polish>Nasza jednostka: %s1_UnitName dogoniła uciekającą jednostkę %s3_EnUName %s2_EnCivName i teraz musi walczyć o swoje życie.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_DEFENDER_PURSUED_SUSTAIN_HUMAN_HIDDEN</Tag>
 		<English>Our %s1_UnitName entrapped an escaping %s2_EnUName and forced it to fight for its life.</English>
-		<French>[COLOR_YELLOW][NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:a:a:ont:ont] rattrapé [NUM2:un:une:des:des] %s2_EnUName et [NUM2:l':l':les:les ][NUM1:a:a:ont:ont] forcé à combattre.[COLOR_REVERT]</French>
+		<French>[COLOR_YELLOW][NUM1:Votre:Votre:Vos:Vos] %s1_UnitName [NUM1:a:a:ont:ont] rattrapé [NUM2:un:une:des:des] %s2_EnUName et [NUM2:l':l':les:les][NUM1:a:a:ont:ont] forcé à combattre.[COLOR_REVERT]</French>
 		<Italian>[NUM1:Il nostro:La nostra:I nostri:Le nostre] %s1_UnitName ha intrappolato l'unità %s2_EnUName in fuga, costringendola a combattere per la propria vita.</Italian>
 		<Polish>Nasza jednostka: %s1_UnitName dogoniła uciekającą jednostkę %s3_EnUName %s2_EnCivName i teraz musi walczyć o swoje życie.</Polish>
 	</TEXT>
@@ -9004,7 +9004,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_MISC_TRAIT_CYCLING_HELP</Tag>
 		<English>Hold down shift and mouseover again to open up the next trait's full display.</English>
 		<French>Maintenez la touche MAJ enfoncée et placer la souris pour afficher l'ensemble des informations concernant le prochain trait.</French>
-		<German>Drücken Sie [UMSCHALT] beim Aufrufen dieser Daten, um ausführliche Informationen über die nächste Eigenschaft dieses Oberhaupts zu erhalten.</German>
+		<German>Drücken Sie [SHIFT] beim Aufrufen dieser Daten, um ausführliche Informationen über die nächste Eigenschaft dieses Oberhaupts zu erhalten.</German>
 		<Italian>Tieni premuto SHIFT e sposta sopra il cursore del mouse per vedere le caratteristiche approfondite del prossimo tratto.</Italian>
 		<Polish>Przytrzymaj wciśnięty SHIFT i najedź myszką by otworzyć pełne okno następnej cechy.</Polish>
 	</TEXT>
@@ -9507,7 +9507,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_YOU_UNIT_SHOT_DOWN</Tag>
 		<English>Your %s1_UnitName was shot down by an enemy %s2_EnUName!</English>
-		<French>[COLOR_RED][NUM1:Votre:Votre:Vos:Vos] [COLOR_REVERT][COLOR_YIELD_FOOD]%s1_UnitName[COLOR_REVERT] [COLOR_RED][NUM1:a:a:ont:ont] été abattu[NUM1: :e :s :es ]par [NUM2:un:une:des:des] %s2_EnUName ![COLOR_REVERT]</French>
+		<French>[COLOR_RED][NUM1:Votre:Votre:Vos:Vos] [COLOR_REVERT][COLOR_YIELD_FOOD]%s1_UnitName[COLOR_REVERT] [COLOR_RED][NUM1:a:a:ont:ont] été abattu[NUM1: :e :s :es]par [NUM2:un:une:des:des] %s2_EnUName ![COLOR_REVERT]</French>
 		<German>[NUM1:Euer:Eure:Euer:Eure:Eure:Eure Einheit %s1_UnitName [NUM1:wurde:wurden] durch [NUM2:einen:eine:ein:einige:einige:einige] [NUM2:feindlichen:feindliche:feindliches:feindliche:feindliche:feindliche] %s2:4_EnUName abgeschossen!</German>
 		<Italian>La tua unità %s1_UnitName è stata abbattuta dall'unità nemicha %s2_EnUName!</Italian>
 		<Spanish>[NUM2:Un:Una:Unos:Unas] %s2_EnUName del enemigo [NUM2:ha:ha:han:han] derribado a [NUM1:vuestro:vuestra:vuestros:vuestras] %s1_UnitName.</Spanish>
@@ -9539,7 +9539,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_YOU_UNIT_WAS_DESTROYED_ENEMY_ONSLAUGHT</Tag>
 		<English>Your %s1_EnUName has become the next casualty of a %s2_UnitName 's savage assault on our forces!</English>
-		<French>[NUM1:Votre:Votre:Vos:Vos] [COLOR_UNIT_TEXT]%s1_EnUName[COLOR_REVERT] [NUM1:a:a:ont:ont] été [NUM1:la:la:les:les] victime[NUM1: : :s :s ] suivante[NUM1: : :s :s ] de l'assaut sauvage de l'unité %s2_UnitName contre nos forces !</French>
+		<French>[NUM1:Votre:Votre:Vos:Vos] [COLOR_UNIT_TEXT]%s1_EnUName[COLOR_REVERT] [NUM1:a:a:ont:ont] été [NUM1:la:la:les:les] victime[NUM1: : :s :s] suivante[NUM1: : :s :s] de l'assaut sauvage de l'unité %s2_UnitName contre nos forces !</French>
 		<Italian>La nostra unità %s1_EnUName è l'ultima vittima del selvaggio assalto effettuato dall'unità nemica %s2_UnitName contro le nostre forze!</Italian>
 		<Polish>Twoja jednostka: %s1_EnUName stała się kolejną ofiarą %s2_UnitName!</Polish>
 	</TEXT>
@@ -11900,7 +11900,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 	<TEXT>
 		<Tag>TXT_KEY_PLE_FILTER_CANMOVE_ON</Tag>
 		<English>[COLOR_HIGHLIGHT_TEXT]Toggle Movement Filter[COLOR_REVERT][NEWLINE]Show units that can move</English>
-		<French>[COLOR_HIGHLIGHT_TEXT]Filtre 'Mouvement'[[COLOR_REVERT][NEWLINE]Affiche les unités qui peuvent se déplacer</French>
+		<French>[COLOR_HIGHLIGHT_TEXT]Filtre 'Mouvement'[COLOR_REVERT][NEWLINE]Affiche les unités qui peuvent se déplacer</French>
 		<German>[COLOR_HIGHLIGHT_TEXT]Filter "Bewegung" deaktivieren[COLOR_REVERT][NEWLINE]Einheiten einblenden, die bewegt werden können</German>
 		<Italian>[COLOR_HIGHLIGHT_TEXT]Cambia il filtro sul movimento[COLOR_REVERT][NEWLINE]Mostra le Unità che possono muoversi</Italian>
 		<Spanish>[COLOR_HIGHLIGHT_TEXT]Desactivar filtrado por movimiento[COLOR_REVERT][NEWLINE]Muestra las unidades que se pueden mover</Spanish>
@@ -12786,7 +12786,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_RELIGION_FOUNDER_RECEIVES</Tag>
 		<English>[ICON_BULLET]Founder Receives a %s1_UnitName</English>
 		<French>[ICON_BULLET]Le fondateur reçoit [NUM1:un:une:des:des] %s1_UnitName</French>
-		<German>[[ICON_BULLET]Entdecker erhält [NUM1:einen:eine:ein:einige:einige:einige] [COLOR_UNIT_TEXT]%s1:4_UnitName[COLOR_REVERT]</German>
+		<German>[ICON_BULLET]Entdecker erhält [NUM1:einen:eine:ein:einige:einige:einige] [COLOR_UNIT_TEXT]%s1:4_UnitName[COLOR_REVERT]</German>
 		<Italian>[ICON_BULLET]Il fondatore riceve [NUM1:un:una:dei:delle] %s1_UnitName</Italian>
 		<Spanish>[ICON_BULLET]El fundador recibe [NUM1:un:una:unos:unas] %s1_UnitName</Spanish>
 		<Polish>[ICON_BULLET]Założyciel otrzymuje %s1_UnitName</Polish>
