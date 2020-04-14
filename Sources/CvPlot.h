@@ -1188,6 +1188,7 @@ public:
 		DECLARE_MAP_FUNCTOR(CvPlot, bool, isWater);
 		DECLARE_MAP_FUNCTOR(CvPlot, int, getArea);
 		DECLARE_MAP_FUNCTOR(CvPlot, const CvArea*, area);
+		DECLARE_MAP_FUNCTOR(CvPlot, const CvCity*, getWorkingCityOverride);
 
 		DECLARE_MAP_FUNCTOR_2(CvPlot, bool, isRevealed, TeamTypes, bool);
 		DECLARE_MAP_FUNCTOR_2(CvPlot, bool, isVisible, TeamTypes, bool);
