@@ -10632,7 +10632,7 @@
 			<PrereqTech>TECH_NOMADISM</PrereqTech>
 			<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>
 			<iTime>100</iTime>
-			<iCost>1</iCost>
+			<iCost>10</iCost>
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_SEASONAL_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
@@ -10645,7 +10645,7 @@
 			<Description>TXT_KEY_BUILD_SEASONAL_CAMP</Description>
 			<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
 			<iTime>100</iTime>
-			<iCost>1</iCost>
+			<iCost>10</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_SEASONAL_CAMP</ImprovementType>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
