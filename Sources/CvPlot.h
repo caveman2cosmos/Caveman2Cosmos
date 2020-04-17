@@ -262,7 +262,7 @@ public:
 	bool canHaveBonus(BonusTypes eBonus, bool bIgnoreLatitude = false) const;
 
 	bool canBuildImprovement(ImprovementTypes eImprovement, TeamTypes eTeam) const;
-	bool canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam = NO_TEAM, bool bPotential = false, bool bOver = true, bool bUpgradeCheck = false) const; // Exposed to Python
+	bool canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam = NO_TEAM, bool bPotential = false, bool bUpgradeCheck = false) const; // Exposed to Python
 
 	bool canBuild(BuildTypes eBuild, PlayerTypes ePlayer = NO_PLAYER, bool bTestVisible = false, bool bIncludePythonOverrides = true) const; // Exposed to Python
 	static bool hasCachedCanBuildEntry(int iX, int iY, BuildTypes eBuild, PlayerTypes ePlayer, struct canBuildCacheEntry*& entry);

@@ -8835,7 +8835,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 					pCity->AI_getImprovementValue(pPlot, eImprovement, iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange)));
 
 				ImprovementTypes eUpgrade = (ImprovementTypes) GC.getImprovementInfo(eImprovement).getImprovementUpgrade();
-				bool bValid = pPlot->canHaveImprovement(eUpgrade, pCity->getTeam(), false, true, true);
+				bool bValid = pPlot->canHaveImprovement(eUpgrade, pCity->getTeam(), false, true);
 
 				szString.append(CvWString::format(L"AI improvement upgrade values:\nMain: %s%s = %d", GC.getImprovementInfo(eUpgrade).getDescription(), bValid ? L"" : L" (False)",
 					pCity->AI_getImprovementValue(pPlot, eUpgrade, iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange)));
@@ -8843,7 +8843,7 @@ void CvGameTextMgr::setPlotHelp(CvWStringBuffer& szString, CvPlot* pPlot)
 				for (int iI = 0; iI < GC.getImprovementInfo(eImprovement).getNumAlternativeImprovementUpgradeTypes(); ++iI)
 				{
 					eUpgrade = (ImprovementTypes)GC.getImprovementInfo(eImprovement).getAlternativeImprovementUpgradeType(iI);
-					bool bValid = pPlot->canHaveImprovement(eUpgrade, pCity->getTeam(), false, true, true);
+					bool bValid = pPlot->canHaveImprovement(eUpgrade, pCity->getTeam(), false, true);
 					szString.append(CvWString::format(L"\n  * %s%s = %d", GC.getImprovementInfo(eUpgrade).getDescription(), bValid ? L"" : L" (False)",
 						pCity->AI_getImprovementValue(pPlot, eUpgrade, iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange)));
 				}

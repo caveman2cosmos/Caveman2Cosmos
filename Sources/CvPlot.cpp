@@ -729,42 +729,41 @@ void CvPlot::doImprovement()
 	// Discover bonus
 	if (getBonusType() == NO_BONUS)
 	{
-		const CvMap& map = GC.getMap();
-		int iGameSpeedFactor = -1;
-		for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
+		const CvTeam& team = GET_TEAM(getTeam());
+		const int iNumBonuses = GC.getNumBonusInfos();
+		int iBonus = GC.getGame().getSorenRandNum(iNumBonuses, "Random start index");
+		int iCount = 0;
+		while (iCount++ < iNumBonuses)
 		{
-			int iOdds = pInfo.getImprovementBonusDiscoverRand(iI);
-			if (iOdds < 1
-			|| !GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBonusInfo((BonusTypes)iI).getTechReveal())
-			|| !canHaveBonus((BonusTypes) iI))
+			int iOdds = pInfo.getImprovementBonusDiscoverRand(iBonus);
+			if (iOdds > 0 && team.isHasTech((TechTypes)GC.getBonusInfo((BonusTypes)iBonus).getTechReveal()) && canHaveBonus((BonusTypes) iBonus))
 			{
-				continue;
-			}
-			if (iGameSpeedFactor == -1)
-			{
-				iGameSpeedFactor = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
-			}
-			iOdds *= iGameSpeedFactor;
-			iOdds /= 100;
-			// Bonus density normalization
-			iOdds *= 7 * (map.getNumBonuses((BonusTypes) iI) + 2);
-			iOdds /= 2 * (map.getWorldSize() + 9);
+				iOdds *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
+				iOdds /= 100;
+				// Bonus density normalization
+				iOdds *= 7 * (GC.getMap().getNumBonuses((BonusTypes) iBonus) + 2);
+				iOdds /= 2 * (GC.getMap().getWorldSize() + 9);
 
-			if (iOdds < 2 || GC.getGame().getSorenRandNum(iOdds, "Bonus Discovery") == 0)
-			{
-				setBonusType((BonusTypes) iI);
-
-				const CvCity* pCity = map.findCity(getX(), getY(), getOwner(), NO_TEAM, false);
-
-				if (pCity != NULL && isInViewport())
+				if (iOdds < 2 || GC.getGame().getSorenRandNum(iOdds, "Bonus Discovery") == 0)
 				{
-					MEMORY_TRACK_EXEMPT();
+					setBonusType((BonusTypes) iBonus);
 
-					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE", GC.getBonusInfo((BonusTypes)iI).getTextKeyWide(), pCity->getNameKey());
-					AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_DISCOVERBONUS", MESSAGE_TYPE_MINOR_EVENT,
-						GC.getBonusInfo((BonusTypes)iI).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), getViewportX(), getViewportY(), true, true);
+					const CvCity* pCity = GC.getMap().findCity(getX(), getY(), getOwner(), NO_TEAM, false);
+
+					if (pCity != NULL && isInViewport())
+					{
+						MEMORY_TRACK_EXEMPT();
+
+						CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE", GC.getBonusInfo((BonusTypes)iBonus).getTextKeyWide(), pCity->getNameKey());
+						AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_DISCOVERBONUS", MESSAGE_TYPE_MINOR_EVENT,
+							GC.getBonusInfo((BonusTypes)iBonus).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), getViewportX(), getViewportY(), true, true);
+					}
 				}
 				break;
+			}
+			if (++iBonus == iNumBonuses)
+			{
+				iBonus = 0;
 			}
 		}
 	}
@@ -841,7 +840,7 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 	int iHash = 512; // Super simple hash, but should be adequate for this purpose.
 	const ImprovementTypes eMainUpgrade = (ImprovementTypes)GC.getImprovementInfo(eType).getImprovementUpgrade();
 
-	if (canHaveImprovement(eMainUpgrade, eTeam, false, true, true))
+	if (canHaveImprovement(eMainUpgrade, eTeam, false, true))
 	{
 		if (GC.getImprovementInfo(eMainUpgrade).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold())
 		{
@@ -854,7 +853,7 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 	{
 		const ImprovementTypes eUpgradeX = (ImprovementTypes)GC.getImprovementInfo(getImprovementType()).getAlternativeImprovementUpgradeType(iI);
 
-		if (canHaveImprovement(eUpgradeX, eTeam, false, true, true))
+		if (canHaveImprovement(eUpgradeX, eTeam, false, true))
 		{
 			eUpgrade = eUpgradeX;
 			if (GC.getImprovementInfo(eUpgradeX).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold())
@@ -933,7 +932,7 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 
 			int iBestValue = pCity->AI_getImprovementValue(this, eType, iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange);
 
-			if (GC.getImprovementInfo(eMainUpgrade).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold() && canHaveImprovement(eMainUpgrade, eTeam, false, true, true))
+			if (GC.getImprovementInfo(eMainUpgrade).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold() && canHaveImprovement(eMainUpgrade, eTeam, false, true))
 			{
 				int iValue = pCity->AI_getImprovementValue(this, eMainUpgrade, iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange);
 				if (iValue > iBestValue)
@@ -946,7 +945,7 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 			{
 				const ImprovementTypes eUpgradeX = (ImprovementTypes)GC.getImprovementInfo(getImprovementType()).getAlternativeImprovementUpgradeType(iI);
 
-				if (GC.getImprovementInfo(eUpgradeX).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold() && canHaveImprovement(eUpgradeX, eTeam, false, true, true))
+				if (GC.getImprovementInfo(eUpgradeX).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold() && canHaveImprovement(eUpgradeX, eTeam, false, true))
 				{
 					int iValue = pCity->AI_getImprovementValue(this, eUpgradeX, iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange);
 					if (iValue > iBestValue)
@@ -1830,24 +1829,18 @@ bool CvPlot::isPotentialIrrigation() const
 
 bool CvPlot::canHavePotentialIrrigation() const
 {
-//===NM=====Mountain Mod===0X=====
-	//TB Debug: Why should it be necessary for cities to require Not being on either hills or alternative peak types (like volcanoes) for them to be potentially irrigated?  Seems to be a strange requirement for wells to function.
-	if (isCity() /*&& !(isHills() || isPeak2(true))*/)
+	if (isCity())
 	{
 		return true;
 	}
-
 	for (int iI = 0; iI < GC.getNumImprovementInfos(); ++iI)
 	{
-		if (GC.getImprovementInfo((ImprovementTypes)iI).isCarriesIrrigation())
+		if (GC.getImprovementInfo((ImprovementTypes)iI).isCarriesIrrigation()
+		&& canHaveImprovement(((ImprovementTypes)iI), NO_TEAM, true))
 		{
-			if (canHaveImprovement(((ImprovementTypes)iI), NO_TEAM, true))
-			{
-				return true;
-			}
+			return true;
 		}
 	}
-
 	return false;
 }
 
@@ -2679,20 +2672,19 @@ bool CvPlot::canBuildImprovement(ImprovementTypes eImprovement, TeamTypes eTeam)
 
 // Needs to be improved a bit. What if no builds account for the ability to generate the improvement?
 // Hmm... maybe a whole nother check that along with this one gets cached significantly?
-bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, bool bPotential, bool bOver, bool bUpgradeCheck) const
+bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, bool bPotential, bool bUpgradeCheck) const
 {
-	FAssertMsg(eImprovement != NO_IMPROVEMENT, "Improvement is not assigned a valid value");
 	FAssertMsg(getTerrainType() != NO_TERRAIN, "TerrainType is not assigned a valid value");
+
+	// Universal validator
+	if (eImprovement == NO_IMPROVEMENT)
+	{
+		return true;
+	}
 	/*----------------------*\
 	| Universal Invalidators |
 	\*----------------------*/
 	if (isCity())
-	{
-		return false;
-	}
-
-	// Overide old?
-	if (!bOver && eImprovement != NO_IMPROVEMENT && getImprovementType() == eImprovement)
 	{
 		return false;
 	}
@@ -2710,7 +2702,7 @@ bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, 
 	}
 	// Meant for pseudo improvements that won't ever be on the map, like bonus placement improvements.
 	// Toffer - Shouldn't this be part of buildInfo?
-	// I'm thinking bonus placement builds should not be linked to an improvement at all.
+	//	I'm thinking bonus placement builds should not be linked to an improvement at all.
 	if (pInfo.isNotOnAnyBonus() && getBonusType() != NO_BONUS)
 	{
 		return false;
@@ -13441,8 +13433,8 @@ bool CvPlot::canApplyEvent(EventTypes eEvent) const
 
 	if (kEvent.getImprovementChange() > 0)
 	{
-		if (NO_IMPROVEMENT != kEvent.getImprovement()
-		&& !canHaveImprovement((ImprovementTypes)kEvent.getImprovement(), getTeam(), false, false))
+		if (getImprovementType() == kEvent.getImprovement()
+		|| !canHaveImprovement((ImprovementTypes)kEvent.getImprovement(), getTeam(), false))
 		{
 			return false;
 		}
