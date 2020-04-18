@@ -103,10 +103,6 @@ def onCityAcquired(argsList):
 					if nPartisan  < 0:
 						nPartisan = 0
 
-					# +3 partisans with nationhood civic (only loserPlayer) ###
-					if citysize >= 6 and CyPlayerOld.getCivics(GC.getInfoTypeForString('CIVICOPTION_LEGAL')) == GC.getInfoTypeForString('CIVIC_NATIONHOOD'):
-						nPartisan += 3
-
 					# +1 partisans with protective trait (only loserPlayer) ###
 					if CyPlayerOld.hasTrait(GC.getInfoTypeForString('TRAIT_PROTECTIVE')):
 						nPartisan += 1
