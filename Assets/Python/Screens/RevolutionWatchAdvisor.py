@@ -1892,7 +1892,7 @@ class RevolutionWatchAdvisor:
 			trendText = localText.changeTextColor (trendText, gc.getInfoTypeForString("COLOR_RED"))
 		elif trend > showTrend:
 			trendText = localText.getText("TXT_ADVISOR_WORSENING", ())
-			trendText = localText.changeTextColor (trendText, gc.getInfoTypeForString("COLOR_PLAYER_ORANGE_TEXT"))
+			trendText = localText.changeTextColor (trendText, gc.getInfoTypeForString("COLOR_PLAYER_ORANGE"))
 		elif trend < -showTrend:
 			trendText = localText.getText("TXT_ADVISOR_IMPROVING", ())
 			trendText = localText.changeTextColor (trendText, gc.getInfoTypeForString("COLOR_GREEN"))
@@ -2009,7 +2009,7 @@ class RevolutionWatchAdvisor:
 			outText = localText.changeTextColor (outText, gc.getInfoTypeForString("COLOR_RED"))
 		elif( value >= thresholdDanger) :
 			outText = localText.getText("TXT_KEY_REV_WATCH_DANGER", ())
-			outText = localText.changeTextColor (outText, gc.getInfoTypeForString("COLOR_PLAYER_ORANGE_TEXT"))
+			outText = localText.changeTextColor (outText, gc.getInfoTypeForString("COLOR_PLAYER_ORANGE"))
 		elif( value >= thresholdWarning) :
 			outText = localText.getText("TXT_KEY_REV_WATCH_WARNING", ())
 			outText = localText.changeTextColor (outText, gc.getInfoTypeForString("COLOR_YELLOW"))

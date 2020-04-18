@@ -272,27 +272,27 @@
 		</PlayerColorInfo>
 		<PlayerColorInfo>
 			<Type>PLAYERCOLOR_HITTITES</Type>
-			<ColorTypePrimary>COLOR_X_CADETBLUE</ColorTypePrimary>
-			<ColorTypeSecondary>COLOR_X_MOCCASIN</ColorTypeSecondary>
-			<TextColorType>COLOR_X_CADETBLUE</TextColorType>
+			<ColorTypePrimary>COLOR_CADETBLUE</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_MOCCASIN</ColorTypeSecondary>
+			<TextColorType>COLOR_CADETBLUE</TextColorType>
 		</PlayerColorInfo>
 		<PlayerColorInfo>
 			<Type>PLAYERCOLOR_ABYSSINIANS</Type>
-			<ColorTypePrimary>COLOR_X_FORESTGREEN</ColorTypePrimary>
-			<ColorTypeSecondary>COLOR_X_GOLD</ColorTypeSecondary>
-			<TextColorType>COLOR_X_FORESTGREEN</TextColorType>
+			<ColorTypePrimary>COLOR_FORESTGREEN</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_GOLD</ColorTypeSecondary>
+			<TextColorType>COLOR_FORESTGREEN</TextColorType>
 		</PlayerColorInfo>
 		<PlayerColorInfo>
 			<Type>PLAYERCOLOR_IROQUOIS</Type>
-			<ColorTypePrimary>COLOR_X_DARKSLATEBLUE</ColorTypePrimary>
-			<ColorTypeSecondary>COLOR_X_MINTCREAM</ColorTypeSecondary>
-			<TextColorType>COLOR_X_DARKSLATEBLUE</TextColorType>
+			<ColorTypePrimary>COLOR_DARKSLATEBLUE</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_HONEYDEW</ColorTypeSecondary>
+			<TextColorType>COLOR_DARKSLATEBLUE</TextColorType>
 		</PlayerColorInfo>
 		<PlayerColorInfo>
 			<Type>PLAYERCOLOR_ASSYRIA</Type>
-			<ColorTypePrimary>COLOR_X_HOTPINK</ColorTypePrimary>
-			<ColorTypeSecondary>COLOR_X_CORNFLOWERBLUE</ColorTypeSecondary>
-			<TextColorType>COLOR_X_HOTPINK</TextColorType>
+			<ColorTypePrimary>COLOR_HOTPINK</ColorTypePrimary>
+			<ColorTypeSecondary>COLOR_CORNFLOWERBLUE</ColorTypeSecondary>
+			<TextColorType>COLOR_HOTPINK</TextColorType>
 		</PlayerColorInfo>
 		<PlayerColorInfo>
 			<Type>PLAYERCOLOR_RED_BLUE</Type>
@@ -314,21 +314,21 @@
 		</PlayerColorInfo>
 		<PlayerColorInfo>
 			<Type>PLAYERCOLOR_TUPI</Type>
-			<ColorTypePrimary>COLOR_X_DARKVIOLET</ColorTypePrimary>
+			<ColorTypePrimary>COLOR_DARK_VIOLET</ColorTypePrimary>
 			<ColorTypeSecondary>COLOR_PLAYER_LIGHT_GREEN</ColorTypeSecondary>
-			<TextColorType>COLOR_X_DARKVIOLET</TextColorType>
+			<TextColorType>COLOR_DARK_VIOLET</TextColorType>
 		</PlayerColorInfo>
 		<PlayerColorInfo>
 			<Type>PLAYERCOLOR_POLYNESIA</Type>
-			<ColorTypePrimary>COLOR_DARK_SALMON_SVG</ColorTypePrimary>
+			<ColorTypePrimary>COLOR_DARK_SALMON</ColorTypePrimary>
 			<ColorTypeSecondary>COLOR_PLAYER_DARK_GREEN</ColorTypeSecondary>
-			<TextColorType>COLOR_DARK_SALMON_SVG</TextColorType>
+			<TextColorType>COLOR_DARK_SALMON</TextColorType>
 		</PlayerColorInfo>
 		<PlayerColorInfo>
 			<Type>PLAYERCOLOR_ANIMAL</Type>
-			<ColorTypePrimary>COLOR_X_FORESTGREEN</ColorTypePrimary>
+			<ColorTypePrimary>COLOR_FORESTGREEN</ColorTypePrimary>
 			<ColorTypeSecondary>COLOR_CLEAR</ColorTypeSecondary>
-			<TextColorType>COLOR_X_FORESTGREEN</TextColorType>
+			<TextColorType>COLOR_FORESTGREEN</TextColorType>
 		</PlayerColorInfo>
 		<PlayerColorInfo>
 			<Type>PLAYERCOLOR_NEANDERTHAL</Type>

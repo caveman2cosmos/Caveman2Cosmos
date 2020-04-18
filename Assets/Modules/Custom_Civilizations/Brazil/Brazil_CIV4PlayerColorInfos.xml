@@ -6,9 +6,9 @@
 	<PlayerColorInfos>
 		<PlayerColorInfo>
 			<Type>PLAYERCOLOR_BRAZIL</Type>
-			<ColorTypePrimary>COLOR_DARK_GOLDENROD_SVG</ColorTypePrimary>
+			<ColorTypePrimary>COLOR_DARK_GOLDENROD</ColorTypePrimary>
 			<ColorTypeSecondary>COLOR_PLAYER_DARK_BLUE</ColorTypeSecondary>
-			<TextColorType>COLOR_DARK_GOLDENROD_SVG</TextColorType>
+			<TextColorType>COLOR_DARK_GOLDENROD</TextColorType>
 		</PlayerColorInfo>
 	</PlayerColorInfos>
 </Civ4PlayerColorInfos>
