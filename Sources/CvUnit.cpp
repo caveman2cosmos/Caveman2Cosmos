@@ -649,6 +649,7 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_iAnimalIgnoresBordersCount = 0;
 	m_iOnslaughtCount = 0;
 	m_iExtraFortitude = 0;
+#ifdef STRENGTH_IN_NUMBERS
 	m_iExtraFrontSupportPercent = 0;
 	m_iExtraShortRangeSupportPercent = 0;
 	m_iExtraMediumRangeSupportPercent = 0;
@@ -657,6 +658,7 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_iSupportCount = 0;
 	m_iAttackFromPlotX = INVALID_PLOT_COORD;
 	m_iAttackFromPlotY = INVALID_PLOT_COORD;
+#endif // STRENGTH_IN_NUMBERS
 	m_iExtraDodgeModifier = 0;
 	m_iExtraPrecisionModifier = 0;
 	m_iExtraPowerShots = 0;
@@ -866,6 +868,7 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	m_eCapturingUnit.reset();
 	m_combatUnit.reset();
 	m_transportUnit.reset();
+#ifdef STRENGTH_IN_NUMBERS
 	//TB Combat Mods begin
 	afIUnit.reset();
 	afIIUnit.reset();
@@ -888,6 +891,7 @@ void CvUnit::reset(int iID, UnitTypes eUnit, PlayerTypes eOwner, bool bConstruct
 	dflIUnit.reset();
 	dflIIUnit.reset();
 	//TB Combat Mods end
+#endif // STRENGTH_IN_NUMBERS
 
 	for (iI = 0; iI < NUM_DOMAIN_TYPES; iI++)
 	{
@@ -26059,6 +26063,8 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &m_iRoundCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iAttackCount);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iDefenseCount);
+
+#ifdef STRENGTH_IN_NUMBERS
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraFrontSupportPercent);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraShortRangeSupportPercent);
 	WRAPPER_READ(wrapper, "CvUnit", &m_iExtraMediumRangeSupportPercent);
@@ -26107,6 +26113,57 @@ void CvUnit::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper, "CvUnit", &dflIUnit.iID);
 	WRAPPER_READ(wrapper, "CvUnit", (int*)&dflIIUnit.eOwner);
 	WRAPPER_READ(wrapper, "CvUnit", &dflIIUnit.iID);
+#else
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", m_iExtraFrontSupportPercent, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", m_iExtraShortRangeSupportPercent, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", m_iExtraMediumRangeSupportPercent, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", m_iExtraLongRangeSupportPercent, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", m_iExtraFlankSupportPercent, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", m_iSupportCount, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", m_iAttackFromPlotX, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", m_iAttackFromPlotY, SAVE_VALUE_TYPE_INT);
+
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)afIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", afIUnit.iID, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)afIIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", afIIUnit.iID, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)asrIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", asrIUnit.iID, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)asrIIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", asrIIUnit.iID, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)amrIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", amrIUnit.iID, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)amrIIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", amrIIUnit.iID, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)alrIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", alrIUnit.iID, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)alrIIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", alrIIUnit.iID, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)aflIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", aflIUnit.iID, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)aflIIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", aflIIUnit.iID, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)dfIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", dfIUnit.iID, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)dfIIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", dfIIUnit.iID, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)dsrIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", dsrIUnit.iID, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)dsrIIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", dsrIIUnit.iID, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)dmrIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", dmrIUnit.iID, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)dmrIIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", dmrIIUnit.iID, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)dlrIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", dlrIUnit.iID, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)dlrIIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", dlrIIUnit.iID, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)dflIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", dflIUnit.iID, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", (int*)dflIIUnit.eOwner, SAVE_VALUE_TYPE_INT);
+	WRAPPER_SKIP_ELEMENT(wrapper, "CvUnit", dflIIUnit.iID, SAVE_VALUE_TYPE_INT);
+#endif // STRENGTH_IN_NUMBERS
 
 	//	Backward compatibility - read array format if present
 	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
@@ -27671,6 +27728,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iRoundCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iAttackCount);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iDefenseCount);
+#ifdef STRENGTH_IN_NUMBERS
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraFrontSupportPercent);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraShortRangeSupportPercent);
 	WRAPPER_WRITE(wrapper, "CvUnit", m_iExtraMediumRangeSupportPercent);
@@ -27719,6 +27777,7 @@ void CvUnit::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvUnit", dflIUnit.iID);
 	WRAPPER_WRITE(wrapper, "CvUnit", dflIIUnit.eOwner);
 	WRAPPER_WRITE(wrapper, "CvUnit", dflIIUnit.iID);
+#endif // STRENGTH_IN_NUMBERS
 
 	//	Use condensed format now - only save non-default array elements
 	for(iI = 0; iI < GC.getNumUnitCombatInfos(); iI++)
