@@ -1,12 +1,9 @@
 <?xml version="1.0"?>
-<!-- Created with Notepad by strategyonly -->
-<!-- Assets\Modules\Alt_Timelines\MegaFauna\Bison_Rider\BisonRider_CIV4UnitInfos.xml -->
-<!-- ###################################################################################### -->
 <Civ4UnitInfos xmlns="x-schema:../../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_BISON_RIDER</Class>
 			<Type>UNIT_BISON_RIDER</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_MOUNTED</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_COMBATANT</SubCombatType>
@@ -47,19 +44,16 @@
 			<bPillage>1</bPillage>
 			<bFirstStrikeImmune>1</bFirstStrikeImmune>
 			<bNoDefensiveBonus>1</bNoDefensiveBonus>
-			<UnitClassUpgrades>
-				<UnitClassUpgrade>
-					<UnitClassUpgradeType>UNITCLASS_CUIRASSIER</UnitClassUpgradeType>
-					<bUnitClassUpgrade>1</bUnitClassUpgrade>
-				</UnitClassUpgrade>
-			</UnitClassUpgrades>
+			<UnitUpgrades>
+				<UnitType>UNIT_CUIRASSIER</UnitType>
+			</UnitUpgrades>
 			<FlankingStrikes>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_CATAPULT</FlankingStrikeUnitClass>
+					<UnitType>UNIT_CATAPULT</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 				<FlankingStrike>
-					<FlankingStrikeUnitClass>UNITCLASS_TREBUCHET</FlankingStrikeUnitClass>
+					<UnitType>UNIT_TREBUCHET</UnitType>
 					<iFlankingStrength>100</iFlankingStrength>
 				</FlankingStrike>
 			</FlankingStrikes>
@@ -86,16 +80,16 @@
 			<iXPValueDefense>2</iXPValueDefense>
 			<iWithdrawalProb>20</iWithdrawalProb>
 			<iPursuit>20</iPursuit>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_ELEPHANT_RIDER</UnitClassType>
-					<iUnitClassMod>15</iUnitClassMod>
-				</UnitClassAttackMod>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_WAR_ELEPHANT</UnitClassType>
-					<iUnitClassMod>10</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_ELEPHANT_RIDER</UnitType>
+					<iModifier>15</iModifier>
+				</UnitAttackMod>
+				<UnitAttackMod>
+					<UnitType>UNIT_WAR_ELEPHANT</UnitType>
+					<iModifier>10</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
 			<iAsset>3</iAsset>
 			<iPower>6</iPower>
 			<UnitMeshGroups>
@@ -115,29 +109,28 @@
 		<UnitInfo>
 			<Type>UNIT_BISON_RIDER</Type>
 			<AndDependencyTypes>
-				<DependencyType>UNITCLASS_TRAINED_MAMMOTH</DependencyType>
+				<DependencyType>UNIT_TRAINED_MAMMOTH</DependencyType>
  			</AndDependencyTypes>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_TRAINED_MAMMOTH</UnitClassType>
-					<iUnitClassMod>15</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_TRAINED_MAMMOTH</UnitType>
+					<iModifier>15</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_BISON_RIDER</Type>
 			<AndDependencyTypes>
-				<DependencyType>UNITCLASS_WAR_MAMMOTH</DependencyType>
+				<DependencyType>UNIT_WAR_MAMMOTH</DependencyType>
  			</AndDependencyTypes>
-			<UnitClassAttackMods>
-				<UnitClassAttackMod>
-					<UnitClassType>UNITCLASS_WAR_MAMMOTH</UnitClassType>
-					<iUnitClassMod>10</iUnitClassMod>
-				</UnitClassAttackMod>
-			</UnitClassAttackMods>
+			<UnitAttackMods>
+				<UnitAttackMod>
+					<UnitType>UNIT_WAR_MAMMOTH</UnitType>
+					<iModifier>10</iModifier>
+				</UnitAttackMod>
+			</UnitAttackMods>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_SUBDUED_BISON</Class>
 			<Type>UNIT_SUBDUED_BISON</Type>
 			<Buildings>
 				<BuildingType>BUILDING_ANIMAL_TOTEM_BISON</BuildingType>

@@ -172,14 +172,6 @@ protected:
 
 	int AI_promotionValue(PromotionTypes ePromotion);
 
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      04/01/10                                jdog5000      */
-/*                                                                                              */
-/* Unit AI                                                                                      */
-/************************************************************************************************/
-/* original bts code
-	bool AI_shadow(UnitAITypes eUnitAI, int iMax = -1, int iMaxRatio = -1, bool bWithCargoOnly = true);
-*/
 	bool AI_shadow(UnitAITypes eUnitAI, int iMax = -1, int iMaxRatio = -1, bool bWithCargoOnly = true, bool bOutsideCityOnly = false, int iMaxPath = MAX_INT);
 
 	struct GroupingParams
@@ -236,9 +228,7 @@ protected:
 	bool AI_group(const GroupingParams& params);
 
 	//bool AI_load(UnitAITypes eUnitAI, MissionAITypes eMissionAI, UnitAITypes eTransportedUnitAI = NO_UNITAI, int iMinCargo = -1, int iMinCargoSpace = -1, int iMaxCargoSpace = -1, int iMaxCargoOurUnitAI = -1, int iFlags = 0, int iMaxPath = MAX_INT, int iMaxTransportPath = MAX_INT);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+
 	bool AI_guardCityBestDefender();
 	bool AI_guardCityMinDefender(bool bSearch = true);
 	bool AI_guardCity(bool bLeave = false, bool bSearch = false, int iMaxPath = MAX_INT);
@@ -258,10 +248,8 @@ protected:
 	bool AI_heal(int iDamagePercent = 0, int iMaxPath = MAX_INT);
 	bool AI_afterAttack();
 	/*TB Prophet Mod begin*/
-#ifdef C2C_BUILD
 	bool AI_foundReligion();
 	bool AI_cureAffliction(PromotionLineTypes eAfflictionLine);
-#endif
 	/*TB Prophet Mod end*/
 	bool AI_goldenAge();
 	bool AI_spreadReligion();
@@ -269,15 +257,9 @@ protected:
 	bool AI_spreadReligionAirlift();
 	bool AI_spreadCorporationAirlift();
 	bool AI_discover(bool bThisTurnOnly = false, bool bFirstResearchOnly = false);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD & RevDCM                     09/03/10                        jdog5000      */
-/*                                                                                phungus420    */
-/* Great People AI, Unit AI                                                                     */
-/************************************************************************************************/
+
 	bool AI_leadLegend();
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+
 	bool AI_lead(std::vector<UnitAITypes>& aeAIUnitTypes);
 	bool AI_join(int iMaxCount = MAX_INT);
 	bool AI_construct(int iMaxCount = MAX_INT, int iMaxSingleBuildingCount = MAX_INT, int iThreshold = 15, bool bDecayProbabilities = false, bool assumeSameValueEverywhere = false);
@@ -289,27 +271,15 @@ protected:
 	bool checkSwitchToConstruct();
 	int getBestConstructValue(int iMaxCount, int iMaxSingleBuildingCount, int iDecayProbabilityRate, int iThreshold, bool assumeSameValueEverywhere, CvPlot*& bestConstructPlot, CvPlot*& bestTurnPlot, CvUnitAI*& pBestTargetingUnit, BuildingTypes& eBestBuilding);
 	bool enactConstruct(CvPlot* pBestConstructPlot, CvPlot* pBestPlot, CvUnitAI* eBestTargetingUnit, BuildingTypes eBestBuilding);
-/************************************************************************************************/
-/* RevDCM                  Start		 5/2/09                                                 */
-/*                                                                                              */
-/* Inquisitions                                                                                 */
-/************************************************************************************************/
+
 	bool AI_doInquisition();
-/************************************************************************************************/
-/* Inquisitions	                     END                                                        */
-/************************************************************************************************/
+
 	bool AI_greatWork();
 	bool AI_offensiveAirlift();
 	bool AI_paradrop(int iRange);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      09/01/09                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	bool AI_protect(int iOddsThreshold, int iMaxPathTurns = MAX_INT);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+
 	bool AI_seaAreaAttack();
 	bool AI_patrol(bool bIgnoreDanger = false);
 	bool AI_defend();
@@ -323,11 +293,7 @@ protected:
 	bool AI_explore();
 	bool AI_exploreRange(int iRange);
 	bool AI_refreshExploreRange(int iRange, bool bIncludeVisibilityRefresh = true);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      03/29/10                                jdog5000      */
-/*                                                                                              */
-/* War tactics AI                                                                               */
-/************************************************************************************************/
+
 	CvCity* AI_pickTargetCity(int iFlags = 0, int iMaxPath = MAX_INT, bool bHuntBarbs = false);
 	bool AI_goToTargetCity(int iFlags = 0, int iMaxPath = MAX_INT, CvCity* pTargetCity = NULL);
 	bool AI_goToTargetBarbCity(int iMaxPath = 10);
@@ -336,24 +302,16 @@ protected:
 	bool AI_cityAttack(int iRange, int iOddsThreshold, bool bFollow = false);
 	bool AI_anyAttack(int iRange, int iOddsThreshold, int iMinStack = 0, bool bAllowCities = true, bool bFollow = false);
 	bool AI_attackTargets(int iRange, int iOddsThreshold, int iMinStack = 0, bool bAllowCities = true, bool bFollow = false);
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
-// Dale - RB: Field Bombard START
+
+// Dale - RB: Field Bombard
 	bool AI_RbombardPlot(int iRange, int iBonusValueThreshold); // RevolutionDCM
 	bool AI_RbombardUnit(int iRange, int iHighestOddsThreshold, int iMinStack, int iSeigeDiff, int iPowerThreshold, bool bCity = false);
 	bool AI_RbombardCity(CvCity* pCity);
 	bool AI_RbombardNaval();
-// Dale - RB: Field Bombard END
-// Dale - ARB: Archer Bombard START
-	bool AI_Abombard();
-// Dale - ARB: Archer Bombard END
-// Dale - FE: Fighters START
+// Dale - FE: Fighters
 	bool AI_FEngage();
-// Dale - FE: Fighters END
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
+// ! Dale
+
 	bool AI_rangeAttack(int iRange);
 	bool AI_leaveAttack(int iRange, int iThreshold, int iStrengthThreshold);
 	bool AI_blockade();
@@ -365,15 +323,9 @@ protected:
 	bool AI_found();
 	bool AI_foundRange(int iRange, bool bFollow = false);
 	bool AI_assaultSeaTransport(bool bBarbarian = false);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      01/04/09                                jdog5000      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	bool AI_assaultSeaReinforce(bool bBarbarian = false);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
+
 	bool AI_settlerSeaTransport();
 	bool AI_settlerSeaFerry();
 	bool AI_specialSeaTransportMissionary();

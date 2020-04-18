@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\Schema\Caveman2Cosmos.xsd">
 	<MovieArtInfos>
 		<MovieArtInfo>
@@ -96,10 +96,6 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_SISTINE_CHAPEL</Type>
 			<Path>Art/Movies/Wonders/SistineChapel.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_SPACE_ELEVATOR</Type>
-			<Path>Art/Movies/Wonders/SpaceElevator.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_SPIRAL_MINARET</Type>
@@ -364,10 +360,6 @@
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_ISS</Type>
 			<Path>Art/Movies/Wonders/ISS.bik</Path>
-		</MovieArtInfo>
-		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_EDEN</Type>
-			<Path>Art/Movies/Wonders/Eden.bik</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
 			<Type>ART_DEF_MOVIE_CARHENGE</Type>
@@ -2526,8 +2518,8 @@
 			<Path>Art/Movies/Wonders/ZEUS_CANNON.dds</Path>
 		</MovieArtInfo>
 		<MovieArtInfo>
-			<Type>ART_DEF_MOVIE_TERRA_SIGILLIATA_WORKSHOP</Type>
-			<Path>Art/Movies/Wonders/TERRA_SIGILLIATA_WORKSHOP.dds</Path>
+			<Type>ART_DEF_MOVIE_TERRA_SIGILLATA_WORKSHOP</Type>
+			<Path>Art/Movies/Wonders/TERRA_SIGILLATA_WORKSHOP.dds</Path>
 		</MovieArtInfo>
 	</MovieArtInfos>
 </Civ4ArtDefines>

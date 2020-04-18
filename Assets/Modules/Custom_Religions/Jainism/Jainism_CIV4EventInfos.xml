@@ -5,7 +5,7 @@
 			<Type>EVENT_ANTIMONARCHISTS_2</Type>
 			<BuildingExtraCommerces>
 				<BuildingExtraCommerce>
-					<BuildingClass>BUILDINGCLASS_JAIN_CATHEDRAL</BuildingClass>
+					<Building>BUILDING_JAIN_CATHEDRAL</Building>
 					<CommerceType>COMMERCE_GOLD</CommerceType>
 					<iExtraCommerce>2</iExtraCommerce>
 				</BuildingExtraCommerce>

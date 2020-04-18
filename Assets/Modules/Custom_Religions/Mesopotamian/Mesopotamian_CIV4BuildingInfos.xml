@@ -7,20 +7,22 @@
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_AN</BuildingClass>
 			<Type>BUILDING_AN</Type>
 			<SpecialBuildingType>SPECIALBUILDING_MONASTERY_II</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_TEMPLE_OF_AN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_AN_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TEMPLE_OF_AN_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_AN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_AN_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_AN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_AN</ArtDefineTag>
-			<ReligionType>RELIGION_MESO</ReligionType>
-			<PrereqReligion>RELIGION_MESO</PrereqReligion>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
+			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<PrereqTech>TECH_PRIESTHOOD</PrereqTech>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<FreePromotion>PROMOTION_AN</FreePromotion>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
@@ -47,7 +49,7 @@
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_MESO</ReligionType>
+					<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 					<iReligionChange>1</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -73,19 +75,21 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ENKI</BuildingClass>
 			<Type>BUILDING_ENKI</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_TEMPLE_OF_ENKI</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_ENKI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TEMPLE_OF_ENKI_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_ENKI</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ENKI_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ENKI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ENKI</ArtDefineTag>
-			<ReligionType>RELIGION_MESO</ReligionType>
-			<StateReligion>RELIGION_MESO</StateReligion>
-			<PrereqReligion>RELIGION_MESO</PrereqReligion>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
+			<StateReligion>RELIGION_MESOPOTAMISM</StateReligion>
+			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<FreePromotion>PROMOTION_ENKI</FreePromotion>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bWater>1</bWater>
 			<bNeverCapture>1</bNeverCapture>
@@ -118,7 +122,7 @@
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_MESO</ReligionType>
+					<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 					<iReligionChange>1</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -135,12 +139,9 @@
 					<iExperience>2</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_AN</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_AN</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -156,19 +157,21 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ENLIL</BuildingClass>
 			<Type>BUILDING_ENLIL</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_TEMPLE_OF_ENLIL</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_ENLIL_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TEMPLE_OF_ENLIL_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_ENLIL</Description>
+			<Civilopedia>TXT_KEY_BUILDING_ENLIL_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_ENLIL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_ENLIL</ArtDefineTag>
-			<ReligionType>RELIGION_MESO</ReligionType>
-			<StateReligion>RELIGION_MESO</StateReligion>
-			<PrereqReligion>RELIGION_MESO</PrereqReligion>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
+			<StateReligion>RELIGION_MESOPOTAMISM</StateReligion>
+			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<FreePromotion>PROMOTION_ENLIL</FreePromotion>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
@@ -194,7 +197,7 @@
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_MESO</ReligionType>
+					<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 					<iReligionChange>1</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -211,12 +214,9 @@
 					<iExperience>2</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_AN</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_AN</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -232,19 +232,21 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_INANNA</BuildingClass>
 			<Type>BUILDING_INANNA</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_TEMPLE_OF_INANNA</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_INANNA_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TEMPLE_OF_INANNA_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_INANNA</Description>
+			<Civilopedia>TXT_KEY_BUILDING_INANNA_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_INANNA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_INANNA</ArtDefineTag>
-			<ReligionType>RELIGION_MESO</ReligionType>
-			<StateReligion>RELIGION_MESO</StateReligion>
-			<PrereqReligion>RELIGION_MESO</PrereqReligion>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
+			<StateReligion>RELIGION_MESOPOTAMISM</StateReligion>
+			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<FreePromotion>PROMOTION_INANNA</FreePromotion>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
@@ -270,7 +272,7 @@
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_MESO</ReligionType>
+					<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 					<iReligionChange>1</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -287,12 +289,9 @@
 					<iExperience>2</iExperience>
 				</UnitCombatFreeExperience>
 			</UnitCombatFreeExperiences>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_AN</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_AN</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -301,19 +300,21 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_KI</BuildingClass>
 			<Type>BUILDING_KI</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_TEMPLE_OF_KI</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_KI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TEMPLE_OF_KI_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_KI</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KI_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_KI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KI</ArtDefineTag>
-			<ReligionType>RELIGION_MESO</ReligionType>
-			<StateReligion>RELIGION_MESO</StateReligion>
-			<PrereqReligion>RELIGION_MESO</PrereqReligion>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
+			<StateReligion>RELIGION_MESOPOTAMISM</StateReligion>
+			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<FreePromotion>PROMOTION_KI</FreePromotion>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
@@ -345,7 +346,7 @@
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_MESO</ReligionType>
+					<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
 					<iReligionChange>1</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -356,12 +357,9 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<ConstructSound>AS2D_BUILD_MESOPOTAMIAN</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_AN</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_AN</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -370,15 +368,17 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_KI_WHEAT</BuildingClass>
 			<Type>BUILDING_KI_WHEAT</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_TEMPLE_OF_KI_WHEAT</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_KI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TEMPLE_OF_KI_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_KI_WHEAT</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KI_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_KI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KI_WHEAT</ArtDefineTag>
-			<PrereqReligion>RELIGION_MESO</PrereqReligion>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
 			<iAsset>4</iAsset>
@@ -387,12 +387,9 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_WHEAT</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_KI</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_KI</BuildingType>
+			</PrereqInCityBuildings>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_WHEAT</BonusType>
@@ -411,15 +408,17 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_KI_CORN</BuildingClass>
 			<Type>BUILDING_KI_CORN</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_TEMPLE_OF_KI_CORN</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_KI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TEMPLE_OF_KI_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_KI_CORN</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KI_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_KI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KI_CORN</ArtDefineTag>
-			<PrereqReligion>RELIGION_MESO</PrereqReligion>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
 			<iAsset>4</iAsset>
@@ -428,12 +427,9 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_CORN</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_KI</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_KI</BuildingType>
+			</PrereqInCityBuildings>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_CORN</BonusType>
@@ -452,15 +448,17 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_KI_RICE</BuildingClass>
 			<Type>BUILDING_KI_RICE</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_TEMPLE_OF_KI_RICE</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_KI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TEMPLE_OF_KI_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_KI_RICE</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KI_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_KI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KI_RICE</ArtDefineTag>
-			<PrereqReligion>RELIGION_MESO</PrereqReligion>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
 			<iAsset>4</iAsset>
@@ -469,12 +467,9 @@
 			<PrereqVicinityBonuses>
 				<VicinityBonus>BONUS_RICE</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_KI</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_KI</BuildingType>
+			</PrereqInCityBuildings>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_RICE</BonusType>
@@ -493,32 +488,31 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_KI_POTATO</BuildingClass>
 			<Type>BUILDING_KI_POTATO</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
-			<Description>TXT_KEY_BUILDING_TEMPLE_OF_KI_POTATO</Description>
-			<Civilopedia>TXT_KEY_BUILDING_TEMPLE_OF_KI_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_TEMPLE_OF_KI_STRATEGY</Strategy>
+			<Description>TXT_KEY_BUILDING_KI_POTATO</Description>
+			<Civilopedia>TXT_KEY_BUILDING_KI_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_KI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KI_POTATO</ArtDefineTag>
-			<PrereqReligion>RELIGION_MESO</PrereqReligion>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqReligion>RELIGION_MESOPOTAMISM</PrereqReligion>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
 			<iAsset>4</iAsset>
 			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_MESOPOTAMIAN</ConstructSound>
 			<PrereqVicinityBonuses>
-				<VicinityBonus>BONUS_POTATO</VicinityBonus>
+				<VicinityBonus>BONUS_POTATOES</VicinityBonus>
 			</PrereqVicinityBonuses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_KI</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_KI</BuildingType>
+			</PrereqInCityBuildings>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
-					<BonusType>BONUS_POTATO</BonusType>
+					<BonusType>BONUS_POTATOES</BonusType>
 					<YieldModifiers>
 						<iYield>5</iYield>
 						<iYield>0</iYield>
@@ -534,21 +528,22 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_MESO_SHRINE</BuildingClass>
 			<Type>BUILDING_MESO_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_MESO_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TMESO_SHRINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MESO_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_BABEL</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<MovieDefineTag>ART_DEF_MOVIE_BABEL</MovieDefineTag>
-			<HolyCity>RELIGION_MESO</HolyCity>
-			<ReligionType>RELIGION_MESO</ReligionType>
-			<GlobalReligionCommerce>RELIGION_MESO</GlobalReligionCommerce>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<HolyCity>RELIGION_MESOPOTAMISM</HolyCity>
+			<ReligionType>RELIGION_MESOPOTAMISM</ReligionType>
+			<GlobalReligionCommerce>RELIGION_MESOPOTAMISM</GlobalReligionCommerce>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
-			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iGlobalHappiness>1</iGlobalHappiness>

@@ -7,7 +7,6 @@
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_OBATALA</BuildingClass>
 			<Type>BUILDING_OBATALA</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_OBATALA</Description>
@@ -15,11 +14,14 @@
 			<Strategy>TXT_KEY_BUILDING_OBATALA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OBATALA</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_YORUBA</ReligionType>
 			<StateReligion>RELIGION_YORUBA</StateReligion>
 			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_YORUBA</PrereqReligion>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>160</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -51,12 +53,12 @@
 				</ReligionChange>
 			</ReligionChanges>
 			<ConstructSound>AS2D_BUILD_CHRISTIAN</ConstructSound>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_OLOFIN</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_OLOFIN</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -72,7 +74,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_OGGUN</BuildingClass>
 			<Type>BUILDING_OGGUN</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_OGGUN</Description>
@@ -80,11 +81,14 @@
 			<Strategy>TXT_KEY_BUILDING_OGGUN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OGGUN</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_YORUBA</ReligionType>
 			<StateReligion>RELIGION_YORUBA</StateReligion>
 			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_YORUBA</PrereqReligion>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>160</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -116,12 +120,12 @@
 				</ReligionChange>
 			</ReligionChanges>
 			<ConstructSound>AS2D_BUILD_CHRISTIAN</ConstructSound>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_OLOFIN</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_OLOFIN</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -137,7 +141,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_OLOFIN</BuildingClass>
 			<Type>BUILDING_OLOFIN</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_OLOFIN</Description>
@@ -145,9 +148,12 @@
 			<Strategy>TXT_KEY_BUILDING_OLOFIN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OLOFIN</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_YORUBA</ReligionType>
 			<PrereqReligion>RELIGION_YORUBA</PrereqReligion>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>160</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -185,7 +191,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_OLOKUN</BuildingClass>
 			<Type>BUILDING_OLOKUN</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_OLOKUN</Description>
@@ -193,11 +198,14 @@
 			<Strategy>TXT_KEY_BUILDING_OLOKUN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OLOKUN</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_YORUBA</ReligionType>
 			<StateReligion>RELIGION_YORUBA</StateReligion>
 			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_YORUBA</PrereqReligion>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>160</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -227,12 +235,12 @@
 				</ReligionChange>
 			</ReligionChanges>
 			<ConstructSound>AS2D_BUILD_CHRISTIAN</ConstructSound>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_OLOFIN</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_OLOFIN</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_FISH</BonusType>
@@ -282,7 +290,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_OSHOSI</BuildingClass>
 			<Type>BUILDING_OSHOSI</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_OSHOSI</Description>
@@ -290,11 +297,14 @@
 			<Strategy>TXT_KEY_BUILDING_OSHOSI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OSHOSI</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_YORUBA</ReligionType>
 			<StateReligion>RELIGION_YORUBA</StateReligion>
 			<bStateReligion>1</bStateReligion>
 			<PrereqReligion>RELIGION_YORUBA</PrereqReligion>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<bNukeImmune>1</bNukeImmune>
 			<iCost>160</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -324,12 +334,12 @@
 				</ReligionChange>
 			</ReligionChanges>
 			<ConstructSound>AS2D_BUILD_CHRISTIAN</ConstructSound>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_OLOFIN</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_OLOFIN</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
 			<BonusYieldModifiers>
 				<BonusYieldModifier>
 					<BonusType>BONUS_DEER</BonusType>
@@ -355,21 +365,22 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_YORUBA_SHRINE</BuildingClass>
 			<Type>BUILDING_YORUBA_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_YORUBA_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_YORUBA_SHRINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_YORUBA_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_OLODUMARE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<MovieDefineTag>ART_DEF_MOVIE_OLODUMARE</MovieDefineTag>
 			<HolyCity>RELIGION_YORUBA</HolyCity>
 			<ReligionType>RELIGION_YORUBA</ReligionType>
 			<GlobalReligionCommerce>RELIGION_YORUBA</GlobalReligionCommerce>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
-			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>8</iAsset>

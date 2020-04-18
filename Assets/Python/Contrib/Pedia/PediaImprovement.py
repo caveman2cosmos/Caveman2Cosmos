@@ -104,7 +104,7 @@ class PediaImprovement:
 		# Stats
 		szText = ""
 		if CvTheImproveInfo.isOutsideBorders():
-			szText += " Can be built outside cultural borders.\n"
+			szText += " " + TRNSLTR.getText("TXT_KEY_PEDIA_IMPROVEMENT_BUILD_OUTSIDE_BORDERS", ()) + ".\n"
 		szYieldReq = " Min. "
 		bYieldReq = False
 		szYield = ""
@@ -159,7 +159,7 @@ class PediaImprovement:
 				szText += " <color=255,0,0,255>"
 			else:
 				szText += " <color=0,230,0,255>+"
-			szText += str(iAirDefense) + "</color> Air Defense"
+			szText += str(iAirDefense) + "</color> "+ TRNSLTR.getText("TXT_KEY_PEDIA_IMPROVEMENT_AIR_DEFENSE", ())
 		if szText:
 			listBox = aName()
 			screen.addListBoxGFC(listBox, "", X_MAIN, Y_MAIN, W_STATS, H_MAIN, eTblEmpty)
@@ -308,10 +308,10 @@ class PediaImprovement:
 
 		# bNotOnAnyBonus is not exposed to python.
 
-		if CvTheImproveInfo.isWater():
+		if CvTheImproveInfo.isWaterImprovement():
 			aList0.append([PF + "CONCEPT_NEW" + str(GC.getInfoTypeForString("CONCEPT_WATER_TERRAINS")), "Art/Interface/Buttons/BaseTerrain/Ocean.dds"])
 
-		if CvTheImproveInfo.isRequiresPeak():
+		if CvTheImproveInfo.isPeakImprovement():
 			aList0.append([PF + "TERRAIN" + str(nTerrains - 2) + "|" + str(n), GC.getTerrainInfo(nTerrains - 2).getButton()])
 			n += 1
 		elif not CvTheImproveInfo.isPeakMakesValid():

@@ -235,7 +235,7 @@
 	<ElementType name="iUnitNameModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iTargetNumCities" content="textOnly" dt:type="int"/>
 	<ElementType name="iNumFreeBuildingBonuses" content="textOnly" dt:type="int"/>
-	<ElementType name="iBuildingClassPrereqModifier" content="textOnly" dt:type="int"/>
+	<ElementType name="iBuildingPrereqModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iMaxConscriptModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iWarWearinessModifier" content="textOnly" dt:type="int"/>
 	<ElementType name="iGridWidth" content="textOnly" dt:type="int"/>
@@ -312,7 +312,7 @@
 		<element type="iUnitNameModifier" minOccurs="0"/>
 		<element type="iTargetNumCities" minOccurs="0"/>
 		<element type="iNumFreeBuildingBonuses" minOccurs="0"/>
-		<element type="iBuildingClassPrereqModifier" minOccurs="0"/>
+		<element type="iBuildingPrereqModifier" minOccurs="0"/>
 		<element type="iMaxConscriptModifier" minOccurs="0"/>
 		<element type="iWarWearinessModifier" minOccurs="0"/>
 		<element type="iGridWidth" minOccurs="0"/>
@@ -449,7 +449,7 @@
 		<element type="DependencyType" minOccurs="1"/>
 	</ElementType>
 	<!-- XMLCOPY				END					MRGENIE		-->
-	<ElementType name="FreeUnitClass" content="textOnly"/>
+	<ElementType name="FreeUnit" content="textOnly"/>
 	<ElementType name="iSpreadFactor" content="textOnly" dt:type="int"/>
 	<ElementType name="iSpreadCost" content="textOnly" dt:type="int"/>
 	<ElementType name="iMaintenance" content="textOnly" dt:type="int"/>
@@ -499,7 +499,7 @@
 		<element type="Adjective" minOccurs="0"/>
 		<element type="Civilopedia" minOccurs="0"/>
 		<element type="TechPrereq" minOccurs="0"/>
-		<element type="FreeUnitClass" minOccurs="0"/>
+		<element type="FreeUnit" minOccurs="0"/>
 		<element type="iFreeUnits" minOccurs="0"/>
 		<element type="iSpreadFactor" minOccurs="0"/>
 		<!-- TGA_INDEXATION			01/21/2008			MRGENIE		-->
@@ -521,14 +521,14 @@
 		<element type="ReligionInfo" maxOccurs="*"/>
 	</ElementType>
 	<!--Afforess-->
-	<ElementType name="BuildingClassType" content="textOnly"/>
+	<ElementType name="BuildingType" content="textOnly"/>
 	<ElementType name="iNumBuildingNeeded" content="textOnly" dt:type="int"/>
-	<ElementType name="PrereqBuildingClass" content="eltOnly">
-		<element type="BuildingClassType"/>
+	<ElementType name="PrereqBuilding" content="eltOnly">
+		<element type="BuildingType"/>
 		<element type="iNumBuildingNeeded"/>
 	</ElementType>
-	<ElementType name="PrereqBuildingClasses" content="eltOnly">
-		<element type="PrereqBuildingClass" minOccurs="0" maxOccurs="*"/>
+	<ElementType name="PrereqBuildings" content="eltOnly">
+		<element type="PrereqBuilding" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="CorporationType" content="textOnly"/>
 	<ElementType name="bCompeting" content="textOnly" dt:type="boolean"/>
@@ -565,7 +565,7 @@
 		<element type="TechPrereq" minOccurs="0"/>
 		<!--Afforess-->
 		<element type="ObsoleteTech" minOccurs="0"/>
-		<element type="PrereqBuildingClasses" minOccurs="0"/>
+		<element type="PrereqBuildings" minOccurs="0"/>
 		<element type="CompetingCorporations" minOccurs="0"/>
 		<element type="iHealth" minOccurs="0"/>
 		<element type="iHappiness" minOccurs="0"/>
@@ -574,7 +574,7 @@
 		<element type="iSpread" minOccurs="0"/>
 		<element type="PrereqGameOption" minOccurs="0"/>
 		<!--Afforess-->
-		<element type="FreeUnitClass" minOccurs="0"/>
+		<element type="FreeUnit" minOccurs="0"/>
 		<element type="iSpreadFactor" minOccurs="0"/>
 		<element type="iSpreadCost" minOccurs="0"/>
 		<element type="iMaintenance" minOccurs="0"/>
@@ -626,8 +626,7 @@
 	<ElementType name="bTech" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bBad" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNaval" content="textOnly" dt:type="boolean"/>
-	<ElementType name="UnitClass" content="textOnly"/>
-	<ElementType name="BarbarianClass" content="textOnly"/>
+	<ElementType name="BarbarianUnit" content="textOnly"/>
 	<ElementType name="iBarbarianUnitProb" content="textOnly" dt:type="int"/>
 	<ElementType name="iMinBarbarians" content="textOnly" dt:type="int"/>
 	<ElementType name="EraType" content="textOnly"/>
@@ -656,8 +655,8 @@
 		<element type="bTech" minOccurs="0"/>
 		<element type="bBad" minOccurs="0"/>
 		<element type="bNaval" minOccurs="0"/>
-		<element type="UnitClass" minOccurs="0"/>
-		<element type="BarbarianClass" minOccurs="0"/>
+		<element type="FreeUnit" minOccurs="0"/>
+		<element type="BarbarianUnit" minOccurs="0"/>
 		<element type="iBarbarianUnitProb" minOccurs="0"/>
 		<element type="iMinBarbarians" minOccurs="0"/>
 		<element type="EraType" minOccurs="0"/>
@@ -1179,7 +1178,6 @@ DPII < Maintenance Modifiers >
 	<ElementType name="SpecialistValids" content="eltOnly">
 		<element type="SpecialistValid" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="BuildingType" content="textOnly"/>
 	<ElementType name="iHappinessChange" content="textOnly" dt:type="int"/>
 	<ElementType name="BuildingHappinessChange" content="eltOnly">
 		<element type="BuildingType"/>
@@ -1256,11 +1254,11 @@ DPII < Maintenance Modifiers >
 		<element type="BuildingType"/>
 		<element type="CommerceModifiers"/>
 	</ElementType>
-	<ElementType name="BuildingClassCommerceChanges" content="eltOnly">
-		<element type="BuildingClassCommerceChange" minOccurs="0" maxOccurs="*"/>
+	<ElementType name="BuildingCommerceChanges" content="eltOnly">
+		<element type="BuildingCommerceChange" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="BuildingClassCommerceChange" content="eltOnly">
-		<element type="BuildingClassType"/>
+	<ElementType name="BuildingCommerceChange" content="eltOnly">
+		<element type="BuildingType"/>
 		<element type="CommerceChanges"/>
 	</ElementType>
 	<ElementType name="CivicAttitudeChange" content="eltOnly">
@@ -1476,20 +1474,20 @@ DPII < Revolution Mod End >
 	</ElementType>
 	<!--Afforess-->
 	<ElementType name="iProductionModifier" content="textOnly" dt:type="int"/>
-	<ElementType name="BuildingClassProductionModifier" content="eltOnly">
-		<element type="BuildingClassType"/>
+	<ElementType name="BuildingProductionModifier" content="eltOnly">
+		<element type="BuildingType"/>
 		<element type="iProductionModifier"/>
 	</ElementType>
-	<ElementType name="BuildingClassProductionModifiers" content="eltOnly">
-		<element type="BuildingClassProductionModifier" minOccurs="0" maxOccurs="*"/>
+	<ElementType name="BuildingProductionModifiers" content="eltOnly">
+		<element type="BuildingProductionModifier" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="UnitClassType" content="textOnly"/>
-	<ElementType name="UnitClassProductionModifier" content="eltOnly">
-		<element type="UnitClassType"/>
+	<ElementType name="UnitType" content="textOnly"/>
+	<ElementType name="UnitProductionModifier" content="eltOnly">
+		<element type="UnitType"/>
 		<element type="iProductionModifier"/>
 	</ElementType>
-	<ElementType name="UnitClassProductionModifiers" content="eltOnly">
-		<element type="UnitClassProductionModifier" minOccurs="0" maxOccurs="*"/>
+	<ElementType name="UnitProductionModifiers" content="eltOnly">
+		<element type="UnitProductionModifier" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="UnitCombatType" content="textOnly"/>
 	<ElementType name="UnitCombatProductionModifier" content="eltOnly">
@@ -1726,7 +1724,7 @@ DPII < Revolution Mod End >
 	<ElementType name="Flavors" content="eltOnly">
 		<element type="Flavor" minOccurs="0" maxOccurs="*"/>
 	</ElementType>
-	<ElementType name="GreatPeopleUnitClass" content="textOnly"/>
+	<ElementType name="GreatPeopleUnitType" content="textOnly"/>
 	<ElementType name="HotKey" content="textOnly"/>
 	<ElementType name="Texture" content="textOnly"/>
 	<ElementType name="Yields" content="eltOnly">
@@ -1763,7 +1761,7 @@ DPII < Revolution Mod End >
 		<element type="Help" minOccurs="0"/>
 		<element type="Texture" minOccurs="0"/>
 		<element type="bVisible" minOccurs="0"/>
-		<element type="GreatPeopleUnitClass" minOccurs="0"/>
+		<element type="GreatPeopleUnitType" minOccurs="0"/>
 		<element type="iGreatPeopleRateChange" minOccurs="0"/>
 		<element type="Yields" minOccurs="0"/>
 		<element type="Commerces" minOccurs="0"/>
@@ -2380,9 +2378,6 @@ DPII < Revolution Mod End >
 	<ElementType name="bNotCity" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bCapture" content="textOnly" dt:type="boolean"/>
 	<ElementType name="iExtraChance" content="textOnly" dt:type="int"/>
-	<ElementType name="PrereqBuildings" content="eltOnly">
-		<element type="BuildingType" minOccurs="0"/>
-	</ElementType>
 	<ElementType name="ExtraChancePromotion" content="eltOnly">
 		<element type="PromotionType"/>
 		<element type="iExtraChance"/>

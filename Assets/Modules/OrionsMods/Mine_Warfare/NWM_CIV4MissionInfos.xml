@@ -22,7 +22,7 @@
 		<MissionInfo>
 			<Type>MISSION_DETONATE_NUCLEAR_MINE</Type>
 			<Description>TXT_KEY_MISSION_DETONATE_NUCLEAR_MINE</Description>
-			<Help>TXT_KEY_MISSION_DETONATE_MINE_NUCLEAR_HELP</Help>
+			<Help/>
 			<Waypoint>NONE</Waypoint>
 			<!--EntityEventType>ENTITY_EVENT_GREAT_EVENT</EntityEventType-->
 			<iTime>0</iTime>

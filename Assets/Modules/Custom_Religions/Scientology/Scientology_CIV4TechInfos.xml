@@ -5,17 +5,17 @@
 		<TechInfo>
 			<!-- Scientology -->
 			<Type>TECH_SCIENTOLOGY</Type>
-			<Description>TXT_KEY_RELIGION_SCIENTOLOGY</Description>
-			<Civilopedia>TXT_KEY_RELIGION_SCIENTOLOGY_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_RELIGION_SCIENTOLOGY_STRATEGY</Strategy>
+			<Description>TXT_KEY_TECH_SCIENTOLOGY</Description>
+			<Civilopedia>TXT_KEY_TECH_SCIENTOLOGY_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_TECH_SCIENTOLOGY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<iCost>11665</iCost>
-			<Era>ERA_MODERN</Era>
+			<Era>C2C_ERA_ATOMIC</Era>
 			<iGridX>77</iGridX>
 			<iGridY>7</iGridY>
 			<bGlobal>1</bGlobal>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
-			<FirstFreeProphet>UNITCLASS_PROPHET</FirstFreeProphet>
+			<FirstFreeProphet>UNIT_PROPHET</FirstFreeProphet>
 			<iAsset>8</iAsset>
 			<Flavors>
 				<Flavor>
@@ -34,7 +34,7 @@
 			<OrPreReqs>
 				<PrereqTech>TECH_FRANCHISES</PrereqTech>
 			</OrPreReqs>
-			<Quote>TXT_KEY_RELIGION_SCIENTOLOGY_QUOTE</Quote>
+			<Quote>TXT_KEY_TECH_SCIENTOLOGY_QUOTE</Quote>
 			<Sound>AS2D_TECH_SCIENTOLOGY2</Sound>
 			<SoundMP>AS2D_TECH_GENERIC</SoundMP>
 			<Button>Art/Interface/Buttons/TechTree/Scientology.dds</Button>

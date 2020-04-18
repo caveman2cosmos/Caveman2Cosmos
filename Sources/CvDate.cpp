@@ -175,7 +175,7 @@ CvDate CvDate::getDate(int iTurn, GameSpeedTypes eGameSpeed)
 			}
 			break;
 		}
-		else if (i==(int)aIncrements.size())
+		else
 		{
 			iRemainingTurns = iTurn - aIncrements[i].m_iendTurn;
 			date = aIncrements[i].m_endDate;

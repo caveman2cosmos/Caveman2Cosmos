@@ -173,8 +173,6 @@ class Dispatcher:
 		self._setDefault("cannotSelectionListMove", False)
 		self._setDefault("cannotSelectionListGameNetMessage", False)
 		self._setDefault("cannotDoControl", False)
-		self._setDefault("canResearch", False)
-		self._setDefault("cannotResearch", False)
 		self._setDefault("canDoCivic", False)
 		self._setDefault("cannotDoCivic", False)
 		self._setDefault("canTrain", False)

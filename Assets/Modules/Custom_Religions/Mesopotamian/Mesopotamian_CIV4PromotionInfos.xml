@@ -15,7 +15,7 @@
 			<PromotionPrereqOr1>NONE</PromotionPrereqOr1>
 			<PromotionPrereqOr2>NONE</PromotionPrereqOr2>
 			<TechPrereq>NONE</TechPrereq>
-			<StateReligionPrereq>RELIGION_MESO</StateReligionPrereq>
+			<StateReligionPrereq>RELIGION_MESOPOTAMISM</StateReligionPrereq>
 			<bLeader>0</bLeader>
 			<bBlitz>0</bBlitz>
 			<bAmphib>0</bAmphib>
@@ -107,7 +107,7 @@
 			<PromotionPrereqOr1>NONE</PromotionPrereqOr1>
 			<PromotionPrereqOr2>NONE</PromotionPrereqOr2>
 			<TechPrereq>NONE</TechPrereq>
-			<StateReligionPrereq>RELIGION_MESO</StateReligionPrereq>
+			<StateReligionPrereq>RELIGION_MESOPOTAMISM</StateReligionPrereq>
 			<bLeader>0</bLeader>
 			<bBlitz>0</bBlitz>
 			<bAmphib>0</bAmphib>
@@ -176,7 +176,7 @@
 			<PromotionPrereqOr1>NONE</PromotionPrereqOr1>
 			<PromotionPrereqOr2>NONE</PromotionPrereqOr2>
 			<TechPrereq>NONE</TechPrereq>
-			<StateReligionPrereq>RELIGION_MESO</StateReligionPrereq>
+			<StateReligionPrereq>RELIGION_MESOPOTAMISM</StateReligionPrereq>
 			<bLeader>0</bLeader>
 			<bBlitz>0</bBlitz>
 			<bAmphib>0</bAmphib>
@@ -253,7 +253,7 @@
 			<PromotionPrereqOr1>NONE</PromotionPrereqOr1>
 			<PromotionPrereqOr2>NONE</PromotionPrereqOr2>
 			<TechPrereq>NONE</TechPrereq>
-			<StateReligionPrereq>RELIGION_MESO</StateReligionPrereq>
+			<StateReligionPrereq>RELIGION_MESOPOTAMISM</StateReligionPrereq>
 			<bLeader>0</bLeader>
 			<bBlitz>0</bBlitz>
 			<bAmphib>0</bAmphib>
@@ -321,7 +321,7 @@
 			<PromotionPrereqOr1>NONE</PromotionPrereqOr1>
 			<PromotionPrereqOr2>NONE</PromotionPrereqOr2>
 			<TechPrereq>NONE</TechPrereq>
-			<StateReligionPrereq>RELIGION_MESO</StateReligionPrereq>
+			<StateReligionPrereq>RELIGION_MESOPOTAMISM</StateReligionPrereq>
 			<bLeader>0</bLeader>
 			<bBlitz>0</bBlitz>
 			<bAmphib>0</bAmphib>

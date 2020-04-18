@@ -114,18 +114,17 @@ class CityDemolish:
 		iSum = 0
 		for iType in xrange(GC.getNumBuildingInfos()):
 			if CyCity.getNumRealBuilding(iType) and not CyTeam.isObsoleteBuilding(iType):
+				if isWorldWonder(iType) or isTeamWonder(iType):
+					continue
 				CvBuildingInfo = GC.getBuildingInfo(iType)
-				# Only put non-free buildings in the list
-				iGold = CvBuildingInfo.getProductionCost()
-				if iGold < 1 or CvBuildingInfo.isAutoBuild():
-					continue
 				# Unique buildings are protected.
-				if CvBuildingInfo.isCapital() or CvBuildingInfo.getGlobalReligionCommerce() > 0:
+				if CvBuildingInfo.isNukeImmune() or CvBuildingInfo.isAutoBuild() or CvBuildingInfo.isCapital() or CvBuildingInfo.getGlobalReligionCommerce() > 0:
 					continue
-				iBuildingClass = CvBuildingInfo.getBuildingClassType()
-				if isWorldWonderClass(iBuildingClass) or isTeamWonderClass(iBuildingClass):
-					continue
-				iGold = int(iGold * fGoldMod)
+				iGold = CvBuildingInfo.getProductionCost()
+				if iGold < 0:
+					iGold = 0
+				elif iGold != 0:
+					iGold = int(iGold * fGoldMod)
 				aList.append((CvBuildingInfo.getDescription(), CvBuildingInfo.getButton(), iType, iGold))
 				iSum += iGold
 		self.iSum = iSum
@@ -233,9 +232,9 @@ class CityDemolish:
 						break
 				if bContinue: continue
 				# Building Prereq
-				iBuilding = CvUnitInfo.getPrereqBuilding()
-				if iBuilding > -1 and not CyCity.getNumBuilding(iBuilding):
-					continue
+				for i in xrange(CvUnitInfo.getNumPrereqAndBuildings()):
+					if not CyCity.getNumBuilding(CvUnitInfo.getPrereqAndBuilding(i)):
+						continue
 				# Bonus Prereq
 				iBonus = CvUnitInfo.getPrereqAndBonus()
 				if iBonus > -1 and not CyCity.getNumBonuses(iBonus):

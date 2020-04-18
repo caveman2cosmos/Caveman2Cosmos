@@ -1,18 +1,12 @@
 <?xml version="1.0"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Religion -->
 <Civ4ReligionInfo xmlns="x-schema:../../../XML/Schema/C2C_CIV4GameInfoSchema.xml">
 	<ReligionInfos>
 		<ReligionInfo>
-			<Type>RELIGION_NGAI</Type>
-			<Description>TXT_KEY_RELIGION_NGAI</Description>
-			<Adjective>TXT_KEY_RELIGION_NGAI_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_RELIGION_NGAI_PEDIA</Civilopedia>
+			<Type>RELIGION_NGAIISM</Type>
+			<Description>TXT_KEY_TECH_NGAIISM</Description>
+			<Adjective>TXT_KEY_TECH_NGAIISM_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_TECH_NGAIISM_PEDIA</Civilopedia>
 			<TechPrereq>TECH_NGAIISM</TechPrereq>
-			<FreeUnitClass>NONE</FreeUnitClass>
 			<iFreeUnits>0</iFreeUnits>
 			<iSpreadFactor>5</iSpreadFactor>
 			<iTGAIndex>12</iTGAIndex>

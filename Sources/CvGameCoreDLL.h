@@ -136,7 +136,6 @@ DECLARE_FLAGS(ECacheAccess::flags);
 // Feature macros
 //
 // #define STRENGTH_IN_NUMBERS
-// #define BARBARIAN_CITY_SPAWN_MAPCATEGORY_CHECK
 // #define GLOBAL_WARMING
 // #define THE_GREAT_WALL
 

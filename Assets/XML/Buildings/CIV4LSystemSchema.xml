@@ -1,9 +1,4 @@
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- CityLSystem Schema -->
-<!-- -->
-<!-- Defines an arbitrary Civ4 LSystem -->
+<!-- CityLSystem Schema defines an arbitrary Civ4 LSystem -->
 <!-- When debugging LSystems, refer to Civ4/Logs/LSystem.log for help -->
 <Schema xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">
 	<!-- base types-->
@@ -56,10 +51,8 @@
 		<element type="Translate" minOccurs="0" maxOccurs="1"/>
 		<element type="Scale" minOccurs="0" maxOccurs="1"/>
 	</ElementType>
-	<!-- a node can contain ArtRefs, e.g. plain-old-NIFs, as well as named references to entities ...
-	     how these entity references are mapped from strings to actual CvEntities is determined by the CvLSystem
-	     runtime
-	  -->
+	<!-- a node can contain ArtRefs, e.g. plain-old-NIFs, as well as named references to entities -->
+	<!-- how these entity references are mapped from strings to actual CvEntities is determined by the CvLSystem runtime -->
 	<ElementType name="LNode">
 		<AttributeType name="Name" required="yes"/>
 		<attribute type="Name"/>

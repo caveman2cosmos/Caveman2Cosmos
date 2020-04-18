@@ -44,7 +44,6 @@ class PediaBuilding:
 		aName = self.main.getNextWidgetName
 
 		CvTheBuildingInfo = GC.getBuildingInfo(iTheBuilding)
-		iTheBuildingClass = CvTheBuildingInfo.getBuildingClassType()
 		bNotCulture = self.main.SECTION[1] != TRNSLTR.getText("TXT_KEY_PEDIA_CATEGORY_C2C_CULTURES", ())
 
 		eWidGen				= WidgetTypes.WIDGET_GENERAL
@@ -75,9 +74,9 @@ class PediaBuilding:
 
 		# Main Panel
 		szBuildingName = CvTheBuildingInfo.getDescription()
-		iMaxGlobalInstances = GC.getBuildingClassInfo(iTheBuildingClass).getMaxGlobalInstances()
-		iMaxPlayerInstances = GC.getBuildingClassInfo(iTheBuildingClass).getMaxPlayerInstances()
-		iMaxTeamInstances = GC.getBuildingClassInfo(iTheBuildingClass).getMaxTeamInstances()
+		iMaxGlobalInstances = CvTheBuildingInfo.getMaxGlobalInstances()
+		iMaxPlayerInstances = CvTheBuildingInfo.getMaxPlayerInstances()
+		iMaxTeamInstances = CvTheBuildingInfo.getMaxTeamInstances()
 		if iMaxGlobalInstances > 0:
 			szBuildingName += "<color=192,192,128,255> | " + TRNSLTR.getText("TXT_KEY_PEDIA_WORLD_WONDER",()) + " - Max. " + str(iMaxGlobalInstances)
 		elif iMaxPlayerInstances > 0:
@@ -176,9 +175,8 @@ class PediaBuilding:
 		iHappiness = CvTheBuildingInfo.getHappiness()
 		iHealth = CvTheBuildingInfo.getHealth()
 		if CyPlayer:
-			if iTheBuilding == GC.getCivilizationInfo(CyPlayer.getCivilizationType()).getCivilizationBuildings(iTheBuildingClass):
-				iHappiness += CyPlayer.getExtraBuildingHappiness(iTheBuilding)
-				iHealth += CyPlayer.getExtraBuildingHealth(iTheBuilding)
+			iHappiness += CyPlayer.getExtraBuildingHappiness(iTheBuilding)
+			iHealth += CyPlayer.getExtraBuildingHealth(iTheBuilding)
 		if iHappiness:
 			if iHappiness > 0:
 				szText1 += " <color=0,230,0,255>%d" %iHappiness + unichr(8850)
@@ -199,9 +197,9 @@ class PediaBuilding:
 				szText1 += "<color=0,230,0,255>%d" %iGreatPeopleRateChange + unichr(8862)
 			else:
 				szText1 += "<color=255,0,0,255>%d" %iGreatPeopleRateChange + unichr(8862)
-			iGreatPeopleUnitClass = CvTheBuildingInfo.getGreatPeopleUnitClass()
-			if iGreatPeopleUnitClass != -1:
-				szGreatPersonDesc = GC.getUnitInfo(GC.getUnitClassInfo(iGreatPeopleUnitClass).getDefaultUnitIndex()).getDescription()
+			iGreatPeopleUnit = CvTheBuildingInfo.getGreatPeopleUnitType()
+			if iGreatPeopleUnit != -1:
+				szGreatPersonDesc = GC.getUnitInfo(iGreatPeopleUnit).getDescription()
 				try:
 					szText1 += "</color> (" + szGreatPersonDesc.split(" ")[1] + ")"
 				except:
@@ -248,14 +246,12 @@ class PediaBuilding:
 		aList2 = []
 		aList3 = []
 		if bNotCulture:
-			for i in range(GC.getNumBuildingClassInfos()):
-				iBuilding = GC.getBuildingClassInfo(i).getDefaultBuildingIndex()
-				if iBuilding != -1:
-					CvBuildingInfo = GC.getBuildingInfo(iBuilding)
-					if CvBuildingInfo.isReplaceBuildingClass(iTheBuildingClass):
-						aList1.append((CvBuildingInfo, iBuilding))
-					elif CvTheBuildingInfo.isReplaceBuildingClass(i):
-						aList2.append((CvBuildingInfo, iBuilding))
+			for i in range(GC.getNumBuildingInfos()):
+				CvBuildingInfo = GC.getBuildingInfo(i)
+				if CvBuildingInfo.isReplaceBuilding(iTheBuilding):
+					aList1.append((CvBuildingInfo, i))
+				elif CvTheBuildingInfo.isReplaceBuilding(i):
+					aList2.append((CvBuildingInfo, i))
 			if aList1 or aList2:
 				if aList1 and aList2:
 					W_REP_1 = W_REP_2 = W_COL_3
@@ -272,11 +268,11 @@ class PediaBuilding:
 							X_REP_2 = X_COL_1 + W_REP_1 + 4
 					replaceFor = aName()
 					replacedBy = aName()
-					screen.addPanel(replaceFor, "Replacement for:", "", False, True, X_COL_1, Y_BOT_ROW_1, W_REP_1, H_BOT_ROW, ePanelBlue50)
+					screen.addPanel(replaceFor, TRNSLTR.getText("TXT_KEY_PEDIA_REPLACEMENT_FOR", ()), "", False, True, X_COL_1, Y_BOT_ROW_1, W_REP_1, H_BOT_ROW, ePanelBlue50)
 					screen.addPanel(replacedBy, TRNSLTR.getText("TXT_KEY_PEDIA_REPLACED_BY", ()), "", False, True, X_REP_2, Y_BOT_ROW_1, W_REP_2, H_BOT_ROW, ePanelBlue50)
 				elif aList1:
 					replaceFor = aName()
-					screen.addPanel(replaceFor, "Replacement for:", "", False, True, X_COL_1, Y_BOT_ROW_1, W_PEDIA_PAGE, H_BOT_ROW, ePanelBlue50)
+					screen.addPanel(replaceFor, TRNSLTR.getText("TXT_KEY_PEDIA_REPLACEMENT_FOR", ()), "", False, True, X_COL_1, Y_BOT_ROW_1, W_PEDIA_PAGE, H_BOT_ROW, ePanelBlue50)
 				elif aList2:
 					replacedBy = aName()
 					screen.addPanel(replacedBy, TRNSLTR.getText("TXT_KEY_PEDIA_REPLACED_BY", ()), "", False, True, X_COL_1, Y_BOT_ROW_1, W_PEDIA_PAGE, H_BOT_ROW, ePanelBlue50)
@@ -392,27 +388,21 @@ class PediaBuilding:
 		# Building Req
 		szChild = PF + "BUILDING"
 		szChild1 = szChild + "|Own"
-		for j in range(GC.getNumBuildingClassInfos()):
-			iPrereqNumOfBuildingClass = CvTheBuildingInfo.getPrereqNumOfBuildingClass(j)
+		for j in range(GC.getNumBuildingInfos()):
+			iPrereqNumOfBuilding = CvTheBuildingInfo.getPrereqNumOfBuilding(j)
 			if CyPlayer:
-				if iPrereqNumOfBuildingClass > 0:
-					iPrereqNumOfBuildingClass = int(iPrereqNumOfBuildingClass * (100 + GC.getWorldInfo(GC.getMap().getWorldSize()).getBuildingClassPrereqModifier()) / 100.0)
-			if CvTheBuildingInfo.isBuildingClassNeededInCity(j):
-				iType = GC.getBuildingClassInfo(j).getDefaultBuildingIndex()
-				if iType != -1:
-					aList1.append(iType)
-					if iPrereqNumOfBuildingClass > 1:
-						aList3.append((iType, iPrereqNumOfBuildingClass))
-			elif CvTheBuildingInfo.isPrereqOrBuildingClass(j):
-				iType = GC.getBuildingClassInfo(j).getDefaultBuildingIndex()
-				if iType != -1:
-					aList2.append(iType)
-					if iPrereqNumOfBuildingClass > 0:
-						aList3.append((iType, iPrereqNumOfBuildingClass))
-			elif iPrereqNumOfBuildingClass > 0:
-				iType = GC.getBuildingClassInfo(j).getDefaultBuildingIndex()
-				if iType != -1:
-					aList3.append((iType, iPrereqNumOfBuildingClass))
+				if iPrereqNumOfBuilding > 0:
+					iPrereqNumOfBuilding = int(iPrereqNumOfBuilding * (100 + GC.getWorldInfo(GC.getMap().getWorldSize()).getBuildingPrereqModifier()) / 100.0)
+			if CvTheBuildingInfo.isPrereqInCityBuilding(j):
+				aList1.append(j)
+				if iPrereqNumOfBuilding > 1:
+					aList3.append((j, iPrereqNumOfBuilding))
+			elif CvTheBuildingInfo.isPrereqOrBuilding(j):
+				aList2.append(j)
+				if iPrereqNumOfBuilding > 0:
+					aList3.append((j, iPrereqNumOfBuilding))
+			elif iPrereqNumOfBuilding > 0:
+				aList3.append((j, iPrereqNumOfBuilding))
 		if aList1 or aList2 or aList3:
 			if bPlus:
 				screen.attachLabel(panelName, "", szAnd)

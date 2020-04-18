@@ -8,7 +8,6 @@
 	<BuildingInfos>
 		<BuildingInfo>
 			<!-- Andean Cathedral -->
-			<BuildingClass>BUILDINGCLASS_ANDEAN_CATHEDRAL</BuildingClass>
 			<Type>BUILDING_ANDEAN_CATHEDRAL</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CATHEDRAL</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ANDEAN_CATHEDRAL</Description>
@@ -20,28 +19,28 @@
 			<ConstructSound>AS2D_BUILD_ANDEAN</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqReligion>RELIGION_ANDEAN</PrereqReligion>
-			<ReligionType>RELIGION_ANDEAN</ReligionType>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_ANDEAN_TEMPLE</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CITY_COUNCIL</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_METROPOLITAN_ADMINISTRATION</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CAPITAL_ADMINISTRATION</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqReligion>RELIGION_ANDEANISM</PrereqReligion>
+			<ReligionType>RELIGION_ANDEANISM</ReligionType>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ANDEAN_TEMPLE</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_CITY_COUNCIL</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_METROPOLITAN_ADMINISTRATION</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_CAPITAL_ADMINISTRATION</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 			<!-- Construction cost -->
 			<iCost>280</iCost>
 			<BonusProductionModifiers>
@@ -50,7 +49,7 @@
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_GOLD</BonusType>
+					<BonusType>BONUS_GOLD_WARES</BonusType>
 					<iProductonModifier>15</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -71,7 +70,7 @@
 			<!-- Special Health and Happiness  modifiers -->
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_ANDEAN</ReligionType>
+					<ReligionType>RELIGION_ANDEANISM</ReligionType>
 					<iReligionChange>3</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -110,7 +109,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Andean Monastery -->
-			<BuildingClass>BUILDINGCLASS_ANDEAN_MONASTERY</BuildingClass>
 			<Type>BUILDING_ANDEAN_MONASTERY</Type>
 			<SpecialBuildingType>SPECIALBUILDING_MONASTERY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ANDEAN_MONASTERY</Description>
@@ -122,12 +120,15 @@
 			<ConstructSound>AS2D_BUILD_ANDEAN</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Bonus>BONUS_BRICKS</Bonus>
 			<PrereqBonuses>
 				<Bonus>BONUS_FURNITURE</Bonus>
 			</PrereqBonuses>
-			<PrereqReligion>RELIGION_ANDEAN</PrereqReligion>
-			<ReligionType>RELIGION_ANDEAN</ReligionType>
+			<PrereqReligion>RELIGION_ANDEANISM</PrereqReligion>
+			<ReligionType>RELIGION_ANDEANISM</ReligionType>
 			<!-- Construction cost -->
 			<iCost>216</iCost>
 			<!-- Main effects -->
@@ -151,7 +152,7 @@
 			<!-- Special Health and Happiness  modifiers -->
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_ANDEAN</ReligionType>
+					<ReligionType>RELIGION_ANDEANISM</ReligionType>
 					<iReligionChange>1</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -176,7 +177,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Andean Temple -->
-			<BuildingClass>BUILDINGCLASS_ANDEAN_TEMPLE</BuildingClass>
 			<Type>BUILDING_ANDEAN_TEMPLE</Type>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_ANDEAN_TEMPLE</Description>
@@ -188,8 +188,11 @@
 			<ConstructSound>AS2D_BUILD_ANDEAN</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<PrereqReligion>RELIGION_ANDEAN</PrereqReligion>
-			<ReligionType>RELIGION_ANDEAN</ReligionType>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<PrereqReligion>RELIGION_ANDEANISM</PrereqReligion>
+			<ReligionType>RELIGION_ANDEANISM</ReligionType>
 			<!-- Construction cost -->
 			<iCost>160</iCost>
 			<!-- Main effects -->
@@ -213,7 +216,7 @@
 			<!-- Special Health and Happiness  modifiers -->
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_ANDEAN</ReligionType>
+					<ReligionType>RELIGION_ANDEANISM</ReligionType>
 					<iReligionChange>2</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -246,7 +249,6 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<!-- Coricancha -->
-			<BuildingClass>BUILDINGCLASS_ANDEAN_SHRINE</BuildingClass>
 			<Type>BUILDING_ANDEAN_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_ANDEAN_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANDEAN_SHRINE_PEDIA</Civilopedia>
@@ -258,10 +260,12 @@
 			<ConstructSound>AS2D_BUILD_ANDEAN</ConstructSound>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<!-- Prerequisites -->
-			<ReligionType>RELIGION_ANDEAN</ReligionType>
-			<HolyCity>RELIGION_ANDEAN</HolyCity>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<ReligionType>RELIGION_ANDEANISM</ReligionType>
+			<HolyCity>RELIGION_ANDEANISM</HolyCity>
 			<!-- Construction cost -->
-			<iCost>-1</iCost>
 			<!-- Special Yield and Commerce modifiers -->
 			<ObsoleteSafeCommerceChanges>
 				<iCommerce>2</iCommerce>
@@ -281,15 +285,15 @@
 			<!-- Special Health and Happiness  modifiers -->
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_ANDEAN</ReligionType>
+					<ReligionType>RELIGION_ANDEANISM</ReligionType>
 					<iReligionChange>1</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
 			<!-- Great People effects -->
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<!-- Unique effects -->
-			<GlobalReligionCommerce>RELIGION_ANDEAN</GlobalReligionCommerce>
+			<GlobalReligionCommerce>RELIGION_ANDEANISM</GlobalReligionCommerce>
 			<!-- Special properties -->
 			<iAsset>8</iAsset>
 			<Flavors>
@@ -303,19 +307,22 @@
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DORADO</BuildingClass>
 			<Type>BUILDING_DORADO</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_DORADO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_DORADO_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_DORADO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_DORADO</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_DORADO</MovieDefineTag>
-			<ReligionType>RELIGION_ANDEAN</ReligionType>
-			<StateReligion>RELIGION_ANDEAN</StateReligion>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<ReligionType>RELIGION_ANDEANISM</ReligionType>
+			<StateReligion>RELIGION_ANDEANISM</StateReligion>
 			<bStateReligion>1</bStateReligion>
-			<PrereqReligion>RELIGION_ANDEAN</PrereqReligion>
-			<GreatPeopleUnitClass>UNITCLASS_MERCHANT</GreatPeopleUnitClass>
+			<PrereqReligion>RELIGION_ANDEANISM</PrereqReligion>
+			<GreatPeopleUnitType>UNIT_MERCHANT</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
@@ -349,7 +356,7 @@
 			</GlobalCommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_ANDEAN</ReligionType>
+					<ReligionType>RELIGION_ANDEANISM</ReligionType>
 					<iReligionChange>2</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -367,7 +374,7 @@
 			<ConstructSound>AS2D_BUILD_ANDEAN</ConstructSound>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_WARE_GOLD</BonusType>
+					<BonusType>BONUS_GOLD_WARES</BonusType>
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
@@ -383,8 +390,8 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_MACHU_PICCHU</BuildingClass>
 			<Type>BUILDING_MACHU_PICCHU</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
 			<Description>TXT_KEY_BUILDING_MACHU_PICCHU</Description>
 			<Civilopedia>TXT_KEY_BUILDING_MACHU_PICCHU_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_MACHU_PICCHU_STRATEGY</Strategy>
@@ -392,10 +399,13 @@
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_MACHU_PICCHU</ArtDefineTag>
 			<MovieDefineTag>ART_DEF_MOVIE_MACHU_PICCHU</MovieDefineTag>
-			<ReligionType>RELIGION_ANDEAN</ReligionType>
-			<StateReligion>RELIGION_ANDEAN</StateReligion>
+			<ReligionType>RELIGION_ANDEANISM</ReligionType>
+			<StateReligion>RELIGION_ANDEANISM</StateReligion>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<bStateReligion>1</bStateReligion>
-			<PrereqReligion>RELIGION_ANDEAN</PrereqReligion>
+			<PrereqReligion>RELIGION_ANDEANISM</PrereqReligion>
 			<PrereqTech>TECH_MOUNTAINEERING</PrereqTech>
 			<PrereqOrTerrain>
 				<PrereqTerrain>
@@ -405,7 +415,7 @@
 			</PrereqOrTerrain>
 			<FreeBonus>BONUS_MACHU_PICCHU_PLANS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<bTeamShare>1</bTeamShare>
 			<bNukeImmune>1</bNukeImmune>
@@ -428,7 +438,7 @@
 			</CommerceChangeDoubleTimes>
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_ANDEAN</ReligionType>
+					<ReligionType>RELIGION_ANDEANISM</ReligionType>
 					<iReligionChange>2</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>

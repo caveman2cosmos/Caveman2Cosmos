@@ -28,11 +28,11 @@ int BuildingGroupingSingle::getGroupBuilding(CvPlayer *pPlayer, CvCity *pCity, B
 
 int BuildingGroupingWonderType::getGroupBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
 {
-	if (!isLimitedWonderClass((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType()))
+	if (!isLimitedWonder(eBuilding))
 		return 0;
-	if (isNationalWonderClass((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType()))
+	if (isNationalWonder(eBuilding))
 		return 1;
-	if (isWorldWonderClass((BuildingClassTypes)GC.getBuildingInfo(eBuilding).getBuildingClassType()))
+	if (isWorldWonder(eBuilding))
 		return 3;
 	return 2;
 }

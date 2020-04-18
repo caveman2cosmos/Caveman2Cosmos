@@ -1,14 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- Modified by Strategyonly -->
-	<!-- Assets\Modules\DancingHoskuld\Subdue_Animals\Subdue_Animals_CIV4UnitInfos.xml-->
-	<!-- Unit Infos -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4UnitInfos xmlns="x-schema:../Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_BEASTMASTER</Class>
 			<Type>UNIT_BEASTMASTER</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_CAPTAIN</Combat>
@@ -56,7 +49,6 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_BEASTMASTER</Class>
 			<Type>UNIT_FEMALE_BEASTMASTER</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_CAPTAIN</Combat>
@@ -74,7 +66,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_GENERAL</DefaultUnitAI>
-			<Description>TXT_KEY_UNIT_FEMALE_BEASTMASTER</Description>
+			<Description>TXT_KEY_UNIT_BEASTMASTER</Description>
 			<Civilopedia>TXT_KEY_UNIT_BEASTMASTER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_GREAT_GENERAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_MILITARY</Advisor>
@@ -104,8 +96,8 @@
 			<FormationType>FORMATION_TYPE_DEFAULT</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_PANTHER</Class>
 			<Type>UNIT_TAMED_PANTHER</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -171,16 +163,10 @@
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_BIG_CAT_CAGE</BuildingType>
 			</Buildings>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BIG_CAT_CAGE</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_BIG_CAT_CAGE</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>105</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -208,8 +194,8 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_LION</Class>
 			<Type>UNIT_TAMED_LION</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -275,16 +261,10 @@
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_BIG_CAT_CAGE</BuildingType>
 			</Buildings>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BIG_CAT_CAGE</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_BIG_CAT_CAGE</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>105</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -311,8 +291,8 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_CAMEL</Class>
 			<Type>UNIT_TAMED_CAMEL</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -379,16 +359,10 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CAMEL_TRAINER</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_CAMEL_TRAINER</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STABLE</BuildingType>
 				<BuildingType>BUILDING_KNIGHT_STABLE</BuildingType>
@@ -421,8 +395,8 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_LLAMA</Class>
 			<Type>UNIT_TAMED_LLAMA</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -488,16 +462,10 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_LLAMA_FARM</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_LLAMA_FARM</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STABLE</BuildingType>
 				<BuildingType>BUILDING_KNIGHT_STABLE</BuildingType>
@@ -530,8 +498,8 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_DONKEY</Class>
 			<Type>UNIT_TAMED_DONKEY</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -595,16 +563,10 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_DONKEY_FARM</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_DONKEY_FARM</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STABLE</BuildingType>
 				<BuildingType>BUILDING_KNIGHT_STABLE</BuildingType>
@@ -637,8 +599,8 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_HORSE</Class>
 			<Type>UNIT_TAMED_HORSE</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -705,16 +667,10 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_HORSE_TRAINER</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_HORSE_TRAINER</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STABLE</BuildingType>
 				<BuildingType>BUILDING_KNIGHT_STABLE</BuildingType>
@@ -747,8 +703,8 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_BISON</Class>
 			<Type>UNIT_TAMED_BISON</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -818,20 +774,11 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_EXOTIC_HERBAVOURS</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BISON_HERD</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
+				<BuildingType>BUILDING_BISON_HERD</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STABLE</BuildingType>
 				<BuildingType>BUILDING_KNIGHT_STABLE</BuildingType>
@@ -863,8 +810,8 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_BUFFALO</Class>
 			<Type>UNIT_TAMED_BUFFALO</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -932,20 +879,11 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_EXOTIC_HERBAVOURS</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BUFFALO_HERD</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
+				<BuildingType>BUILDING_BUFFALO_HERD</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STABLE</BuildingType>
 				<BuildingType>BUILDING_KNIGHT_STABLE</BuildingType>
@@ -975,8 +913,8 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_CATTLE</Class>
 			<Type>UNIT_TAMED_CATTLE</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -1045,20 +983,11 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_EXOTIC_HERBAVOURS</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_COW_FARM</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
+				<BuildingType>BUILDING_COW_FARM</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<BonusType>BONUS_COW</BonusType>
 			<iCost>140</iCost>
@@ -1084,8 +1013,8 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_MUSKOX</Class>
 			<Type>UNIT_TAMED_MUSKOX</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -1152,20 +1081,11 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_MUSKOX_HERD</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_EXOTIC_HERBAVOURS</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
+				<BuildingType>BUILDING_MUSKOX_HERD</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>140</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -1190,8 +1110,8 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_AARDVARK</Class>
 			<Type>UNIT_TAMED_AARDVARK</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -1252,20 +1172,11 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_AARDVARK_MYTH_EFFECT</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_EXOTIC_HERBAVOURS</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
+				<BuildingType>BUILDING_AARDVARK_MYTH_EFFECT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>90</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -1290,8 +1201,8 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_BOAR</Class>
 			<Type>UNIT_TAMED_BOAR</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -1358,20 +1269,11 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PIG_FARM</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_EXOTIC_HERBAVOURS</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
+				<BuildingType>BUILDING_PIG_FARM</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<BonusType>BONUS_PIG</BonusType>
 			<iCost>140</iCost>
@@ -1399,8 +1301,8 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_AMPHIBIAN</Class>
 			<Type>UNIT_TAMED_AMPHIBIAN</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -1442,13 +1344,10 @@
 				<BuildingType>BUILDING_GOVENORS_MENAGERIE</BuildingType>
 				<BuildingType>BUILDING_AMPHIBIAN_POND</BuildingType>
 			</Buildings>
-			<PrereqBuilding>BUILDING_ANIMAL_TAMER_COMPLEX</PrereqBuilding>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_AMPHIBIAN_POND</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_AMPHIBIAN_POND</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_BIOLOGY</PrereqTech>
 			<iCost>90</iCost>
 			<iMoves>1</iMoves>
@@ -1472,8 +1371,8 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_ASIANBEAR</Class>
 			<Type>UNIT_TAMED_ASIANBEAR</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -1546,20 +1445,11 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BEAR_CAGE</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ASIANBEAR_MYTH_EFFECT</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
+				<BuildingType>BUILDING_ASIANBEAR_MYTH_EFFECT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>105</iCost>
 			<iMoves>1</iMoves>
@@ -1583,8 +1473,8 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_BROWNBEAR</Class>
 			<Type>UNIT_TAMED_BROWNBEAR</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -1632,20 +1522,11 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BEAR_CAGE</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BROWN_BEAR_MYTH_EFFECT</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
+				<BuildingType>BUILDING_BROWN_BEAR_MYTH_EFFECT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>105</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -1669,8 +1550,8 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_BLACKBEAR</Class>
 			<Type>UNIT_TAMED_BLACKBEAR</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -1717,20 +1598,11 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BEAR_CAGE</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BLACK_BEAR_MYTH_EFFECT</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
+				<BuildingType>BUILDING_BLACK_BEAR_MYTH_EFFECT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>105</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -1754,8 +1626,8 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_CAVEBEAR</Class>
 			<Type>UNIT_TAMED_CAVEBEAR</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -1803,20 +1675,11 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BEAR_CAGE</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CAVE_BEAR_MYTH_EFFECT</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
+				<BuildingType>BUILDING_CAVE_BEAR_MYTH_EFFECT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>105</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -1840,8 +1703,8 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_GRIZZLY</Class>
 			<Type>UNIT_TAMED_GRIZZLY</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -1889,20 +1752,11 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BEAR_CAGE</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_GRIZZLY_MYTH_EFFECT</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
+				<BuildingType>BUILDING_GRIZZLY_MYTH_EFFECT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>105</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -1926,8 +1780,8 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_PANDA_BEAR</Class>
 			<Type>UNIT_TAMED_PANDA_BEAR</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -1970,20 +1824,11 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BEAR_CAGE</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_PANDA_BEAR_MYTH_EFFECT</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
+				<BuildingType>BUILDING_PANDA_BEAR_MYTH_EFFECT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>105</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -2006,8 +1851,8 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_POLARBEAR</Class>
 			<Type>UNIT_TAMED_POLARBEAR</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2055,20 +1900,11 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BEAR_CAGE</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_POLAR_BEAR_MYTH_EFFECT</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
+				<BuildingType>BUILDING_POLAR_BEAR_MYTH_EFFECT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>105</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -2092,8 +1928,8 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_REDPANDA</Class>
 			<Type>UNIT_TAMED_REDPANDA</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2137,20 +1973,11 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BEAR_CAGE</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_REDPANDA_MYTH_EFFECT</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
+				<BuildingType>BUILDING_REDPANDA_MYTH_EFFECT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>90</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -2175,8 +2002,8 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_SLOTHBEAR</Class>
 			<Type>UNIT_TAMED_SLOTHBEAR</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2224,20 +2051,11 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BEAR_CAGE</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_SLOTH_BEAR_MYTH_EFFECT</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
+				<BuildingType>BUILDING_SLOTH_BEAR_MYTH_EFFECT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>105</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -2261,8 +2079,8 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_SPECTACLEDBEAR</Class>
 			<Type>UNIT_TAMED_SPECTACLEDBEAR</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2309,20 +2127,11 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BEAR_CAGE</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_SPECTACLED_BEAR_MYTH_EFFECT</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
+				<BuildingType>BUILDING_SPECTACLED_BEAR_MYTH_EFFECT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>105</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -2348,8 +2157,8 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_SUNBEAR</Class>
 			<Type>UNIT_TAMED_SUNBEAR</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2396,20 +2205,11 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BEAR_CAGE</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_SUN_BEAR_MYTH_EFFECT</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_BEAR_CAGE</BuildingType>
+				<BuildingType>BUILDING_SUN_BEAR_MYTH_EFFECT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>105</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -2435,8 +2235,8 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_ELEPHANT</Class>
 			<Type>UNIT_TAMED_ELEPHANT</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -2503,23 +2303,17 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ELEPHANT_TRAINER</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_ELEPHANT_TRAINER</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_STABLE</BuildingType>
 				<BuildingType>BUILDING_KNIGHT_STABLE</BuildingType>
 				<BuildingType>BUILDING_MODERN_STABLE</BuildingType>
 			</PrereqOrBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
-			<BonusType>BONUS_ELEPHANT</BonusType>
+			<BonusType>BONUS_ELEPHANTS</BonusType>
 			<iCost>140</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>1</iMoves>
@@ -2542,8 +2336,8 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_GIRAFFE</Class>
 			<Type>UNIT_TAMED_GIRAFFE</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -2623,20 +2417,11 @@
 			<iWithdrawalProb>40</iWithdrawalProb>
 			<iEarlyWithdraw>35</iEarlyWithdraw>
 			<iCityDefense>-80</iCityDefense>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_GIRAFFE_MYTH_EFFECT</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_EXOTIC_HERBAVOURS</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_GIRAFFE_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
+			</PrereqAndBuildings>
 			<UnitMeshGroups>
 				<iGroupSize>1</iGroupSize>
 				<fMaxSpeed>1.75</fMaxSpeed>
@@ -2651,8 +2436,8 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_HIPPO</Class>
 			<Type>UNIT_TAMED_HIPPO</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -2719,20 +2504,11 @@
 				<BuildingType>BUILDING_ZOO</BuildingType>
 				<BuildingType>BUILDING_TAXIDERMIST</BuildingType>
 			</Buildings>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_HIPPOS_MYTH_EFFECT</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_EXOTIC_HERBAVOURS</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_HIPPOS_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>140</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -2755,8 +2531,8 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_WOLF</Class>
 			<Type>UNIT_TAMED_WOLF</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_TAMED</SubCombatType>
@@ -2808,15 +2584,15 @@
 					<UnitAIType>UNITAI_COUNTER</UnitAIType>
 					<bUnitAI>1</bUnitAI>
 				</UnitAI>
-       			<UnitAI>
-         			<UnitAIType>UNITAI_PILLAGE_COUNTER</UnitAIType>
-          			<bUnitAI>1</bUnitAI>
-        		</UnitAI>
-       			<UnitAI>
-         			<UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
-          			<bUnitAI>1</bUnitAI>
-        		</UnitAI>
-      		</UnitAIs>
+				<UnitAI>
+					<UnitAIType>UNITAI_PILLAGE_COUNTER</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+				<UnitAI>
+					<UnitAIType>UNITAI_SUBDUED_ANIMAL</UnitAIType>
+					<bUnitAI>1</bUnitAI>
+				</UnitAI>
+			</UnitAIs>
 			<Buildings>
 				<BuildingType>BUILDING_DOG_KENNEL</BuildingType>
 				<BuildingType>BUILDING_WOLF_CAGE</BuildingType>
@@ -2826,16 +2602,10 @@
 				<BuildingType>BUILDING_POLICE_DOG</BuildingType>
 				<BuildingType>BUILDING_WOLF_CAGE</BuildingType>
 			</Buildings>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_DOG_KENNEL</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_DOG_KENNEL</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_WOLF_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_ARCTICFOX_MYTH_EFFECT</BuildingType>
@@ -2873,8 +2643,8 @@
 			<bMilitaryTrade>1</bMilitaryTrade>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_BLACK_RHINO</Class>
 			<Type>UNIT_TAMED_BLACK_RHINO</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -2941,20 +2711,11 @@
 				<BuildingType>BUILDING_BLACK_RHINO_STORY</BuildingType>
 				<BuildingType>BUILDING_BLACK_RHINO_STORIES</BuildingType>
 			</Buildings>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_EXOTIC_HERBAVOURS</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BLACK_RHINO_MYTH_EFFECT</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
+				<BuildingType>BUILDING_BLACK_RHINO_MYTH_EFFECT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>140</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -2982,8 +2743,8 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_INDIAN_RHINO</Class>
 			<Type>UNIT_TAMED_INDIAN_RHINO</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -3050,20 +2811,11 @@
 				<BuildingType>BUILDING_INDIAN_RHINO_STORY</BuildingType>
 				<BuildingType>BUILDING_INDIAN_RHINO_STORIES</BuildingType>
 			</Buildings>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_EXOTIC_HERBAVOURS</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_INDIAN_RHINO_MYTH_EFFECT</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
+				<BuildingType>BUILDING_INDIAN_RHINO_MYTH_EFFECT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>140</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -3091,8 +2843,8 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_JAVA_RHINO</Class>
 			<Type>UNIT_TAMED_JAVA_RHINO</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -3159,20 +2911,11 @@
 				<BuildingType>BUILDING_JAVA_RHINO_STORY</BuildingType>
 				<BuildingType>BUILDING_JAVA_RHINO_STORIES</BuildingType>
 			</Buildings>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_EXOTIC_HERBAVOURS</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_JAVA_RHINO_MYTH_EFFECT</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
+				<BuildingType>BUILDING_JAVA_RHINO_MYTH_EFFECT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>140</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -3200,8 +2943,8 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_WHITE_RHINO</Class>
 			<Type>UNIT_TAMED_WHITE_RHINO</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -3268,20 +3011,11 @@
 				<BuildingType>BUILDING_WHITE_RHINO_STORY</BuildingType>
 				<BuildingType>BUILDING_WHITE_RHINO_STORIES</BuildingType>
 			</Buildings>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_EXOTIC_HERBAVOURS</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_WHITE_RHINO_MYTH_EFFECT</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
+				<BuildingType>BUILDING_WHITE_RHINO_MYTH_EFFECT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>140</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -3309,8 +3043,8 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_BAIRDS_TAPIR</Class>
 			<Type>UNIT_TAMED_BAIRDS_TAPIR</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -3376,20 +3110,11 @@
 				<BuildingType>BUILDING_BAIRDS_TAPIR_STORY</BuildingType>
 				<BuildingType>BUILDING_BAIRDS_TAPIR_STORIES</BuildingType>
 			</Buildings>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_EXOTIC_HERBAVOURS</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BAIRDS_TAPIR_MYTH_EFFECT</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
+				<BuildingType>BUILDING_BAIRDS_TAPIR_MYTH_EFFECT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>90</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -3416,8 +3141,8 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_BRAZILIAN_TAPIR</Class>
 			<Type>UNIT_TAMED_BRAZILIAN_TAPIR</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -3483,20 +3208,11 @@
 				<BuildingType>BUILDING_BRAZILIAN_TAPIR_STORY</BuildingType>
 				<BuildingType>BUILDING_BRAZILIAN_TAPIR_STORIES</BuildingType>
 			</Buildings>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_EXOTIC_HERBAVOURS</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_BRAZILIAN_TAPIR_MYTH_EFFECT</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
+				<BuildingType>BUILDING_BRAZILIAN_TAPIR_MYTH_EFFECT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>90</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -3523,8 +3239,8 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_MALAYAN_TAPIR</Class>
 			<Type>UNIT_TAMED_MALAYAN_TAPIR</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -3590,20 +3306,11 @@
 				<BuildingType>BUILDING_MALAYAN_TAPIR_STORY</BuildingType>
 				<BuildingType>BUILDING_MALAYAN_TAPIR_STORIES</BuildingType>
 			</Buildings>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_EXOTIC_HERBAVOURS</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_MALAYAN_TAPIR_MYTH_EFFECT</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
+				<BuildingType>BUILDING_MALAYAN_TAPIR_MYTH_EFFECT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>90</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -3630,8 +3337,8 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_MOUNTAIN_TAPIR</Class>
 			<Type>UNIT_TAMED_MOUNTAIN_TAPIR</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -3697,20 +3404,11 @@
 				<BuildingType>BUILDING_MOUNTAIN_TAPIR_STORY</BuildingType>
 				<BuildingType>BUILDING_MOUNTAIN_TAPIR_STORIES</BuildingType>
 			</Buildings>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TAMER_COMPLEX</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_EXOTIC_HERBAVOURS</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_MOUNTAIN_TAPIR_MYTH_EFFECT</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_EXOTIC_HERBAVOURS</BuildingType>
+				<BuildingType>BUILDING_MOUNTAIN_TAPIR_MYTH_EFFECT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_SPECIALIZATION</PrereqTech>
 			<iCost>90</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
@@ -3737,8 +3435,8 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_LIZARD</Class>
 			<Type>UNIT_TAMED_LIZARD</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -3782,13 +3480,10 @@
 				<BuildingType>BUILDING_REPTILE_STORY</BuildingType>
 				<BuildingType>BUILDING_REPTILE_STORIES</BuildingType>
 			</Buildings>
-			<PrereqBuilding>BUILDING_ANIMAL_TAMER_COMPLEX</PrereqBuilding>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_REPTILE_CAGE</BuildingClassType>
-					<bPrereq>1</bPrereq>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_KOMODO_DRAGON_MYTH_EFFECT</BuildingType>
 				<BuildingType>BUILDING_NILE_MONITOR_MYTH_EFFECT</BuildingType>
@@ -3817,8 +3512,8 @@
 			<FormationType>FORMATION_TYPE_ANIMAL</FormationType>
 		</UnitInfo>
 		<UnitInfo>
-			<Class>UNITCLASS_TAMED_SNAKE</Class>
 			<Type>UNIT_TAMED_SNAKE</Type>
+			<iMaxPlayerInstances>15</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_ANIMAL</Combat>
 			<SubCombatTypes>
@@ -3870,7 +3565,9 @@
 				<BuildingType>BUILDING_SNAKES_STORY</BuildingType>
 				<BuildingType>BUILDING_SNAKES_STORIES</BuildingType>
 			</Buildings>
-			<PrereqBuilding>BUILDING_ANIMAL_TAMER_COMPLEX</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_ANIMAL_TAMER_COMPLEX</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqOrBuildings>
 				<BuildingType>BUILDING_SNAKE_CHARMER</BuildingType>
 				<BuildingType>BUILDING_REPTILE_CAGE</BuildingType>

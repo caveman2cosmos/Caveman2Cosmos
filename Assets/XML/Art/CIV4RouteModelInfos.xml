@@ -1,10 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- ReModified by StrategyOnly -->
-<!-- -->
-<!-- Route art path information -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4RouteModelInfos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\Xml\Schema\Caveman2Cosmos.xsd">
 	<RouteModelInfos>
 		<RouteModelInfo>
@@ -1849,7 +1843,7 @@
 		</RouteModelInfo>
 		<RouteModelInfo>
 			<ModelFile>Art/Terrain/Routes/Path/RoadD20.nif</ModelFile>
-			<LateModelFile>>Art/Terrain/Routes/Path/RoadD20.nif</LateModelFile>
+			<LateModelFile>Art/Terrain/Routes/Path/RoadD20.nif</LateModelFile>
 			<ModelFileKey>D20</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_PATH</RouteType>
@@ -2112,7 +2106,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneA00.nif</LateModelFile>
 			<ModelFileKey>A00</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>-</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2122,7 +2116,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneA01.nif</LateModelFile>
 			<ModelFileKey>A01</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2132,7 +2126,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneA02.nif</LateModelFile>
 			<ModelFileKey>A02</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>NE</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2142,7 +2136,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneB01.nif</LateModelFile>
 			<ModelFileKey>B01</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N NE</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2152,7 +2146,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneB02.nif</LateModelFile>
 			<ModelFileKey>B02</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>NE E</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2162,7 +2156,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneB03.nif</LateModelFile>
 			<ModelFileKey>B03</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N S</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2172,7 +2166,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneB04.nif</LateModelFile>
 			<ModelFileKey>B04</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>NE SW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2182,7 +2176,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneB05.nif</LateModelFile>
 			<ModelFileKey>B05</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N E</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2192,7 +2186,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneB06.nif</LateModelFile>
 			<ModelFileKey>B06</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>NE SE</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2202,7 +2196,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneB07.nif</LateModelFile>
 			<ModelFileKey>B07</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N SE</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2212,7 +2206,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneB08.nif</LateModelFile>
 			<ModelFileKey>B08</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>NE S</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2222,7 +2216,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneB05.nif</LateModelFile>
 			<ModelFileKey>C01</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N NE E</Connections>
 			<ModelConnections>N E</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2232,7 +2226,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneB06.nif</LateModelFile>
 			<ModelFileKey>C02</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>NE E SE</Connections>
 			<ModelConnections>NE SE</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2242,7 +2236,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC03.nif</LateModelFile>
 			<ModelFileKey>C03</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N E SW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2252,7 +2246,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC04.nif</LateModelFile>
 			<ModelFileKey>C04</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>NE SE W</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2262,7 +2256,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneB03.nif</LateModelFile>
 			<ModelFileKey>C05OtherDir</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N E S</Connections>
 			<ModelConnections>N S</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2272,7 +2266,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC06.nif</LateModelFile>
 			<ModelFileKey>C06</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>NE SE NW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2282,7 +2276,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC07.nif</LateModelFile>
 			<ModelFileKey>C07</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N NE S</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2292,7 +2286,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC08.nif</LateModelFile>
 			<ModelFileKey>C08</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>NE E SW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2302,7 +2296,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC09.nif</LateModelFile>
 			<ModelFileKey>C09</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N NE SW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2312,7 +2306,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC10.nif</LateModelFile>
 			<ModelFileKey>C10</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>NE E W</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2322,7 +2316,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneB07.nif</LateModelFile>
 			<ModelFileKey>C11</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N E SE</Connections>
 			<ModelConnections>N SE</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2332,7 +2326,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC12.nif</LateModelFile>
 			<ModelFileKey>C12</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>NE SE S</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2342,7 +2336,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneB08.nif</LateModelFile>
 			<ModelFileKey>C13</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>NE E S</Connections>
 			<ModelConnections>NE S</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2352,7 +2346,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC14.nif</LateModelFile>
 			<ModelFileKey>C14</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>NE W NW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2362,7 +2356,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD02.nif</LateModelFile>
 			<ModelFileKey>D01</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N E S W</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2372,7 +2366,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD02.nif</LateModelFile>
 			<ModelFileKey>D02</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>NE SE SW NW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2382,7 +2376,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD03.nif</LateModelFile>
 			<ModelFileKey>D03</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N NE E SW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2392,7 +2386,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC04.nif</LateModelFile>
 			<ModelFileKey>D04</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>NE E SE W</Connections>
 			<ModelConnections>NE SE W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2402,7 +2396,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD05.nif</LateModelFile>
 			<ModelFileKey>D05</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N NE SE S</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2412,7 +2406,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneB04.nif</LateModelFile>
 			<ModelFileKey>D06</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>NE E S SW</Connections>
 			<ModelConnections>NE SW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2422,7 +2416,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD07.nif</LateModelFile>
 			<ModelFileKey>D07</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N NE S SW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2432,7 +2426,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD08.nif</LateModelFile>
 			<ModelFileKey>D08</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>NE E SW W</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2442,7 +2436,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneB08.nif</LateModelFile>
 			<ModelFileKey>D09</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N NE S W</Connections>
 			<ModelConnections>NE S</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2452,7 +2446,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneB07.nif</LateModelFile>
 			<ModelFileKey>D10</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N SE S W</Connections>
 			<ModelConnections>N SE</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2462,7 +2456,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC06.nif</LateModelFile>
 			<ModelFileKey>D11</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N NE SE NW</Connections>
 			<ModelConnections>NE SE NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2472,7 +2466,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC07.nif</LateModelFile>
 			<ModelFileKey>D12</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N NE E S</Connections>
 			<ModelConnections>N NE S</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2482,7 +2476,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC04.nif</LateModelFile>
 			<ModelFileKey>D13</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N NE SE W</Connections>
 			<ModelConnections>NE SE W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2492,7 +2486,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC04.nif</LateModelFile>
 			<ModelFileKey>D14</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>NE SE S W</Connections>
 			<ModelConnections>NE SE W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2502,7 +2496,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC10.nif</LateModelFile>
 			<ModelFileKey>D15</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N NE E W</Connections>
 			<ModelConnections>NE E W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2512,7 +2506,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC06.nif</LateModelFile>
 			<ModelFileKey>D16</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>NE E SE NW</Connections>
 			<ModelConnections>NE SE NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2522,7 +2516,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC12.nif</LateModelFile>
 			<ModelFileKey>D17</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>NE E SE S</Connections>
 			<ModelConnections>NE SE S</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2532,7 +2526,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC14.nif</LateModelFile>
 			<ModelFileKey>D18</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N NE W NW</Connections>
 			<ModelConnections>NE W NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2542,7 +2536,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD19.nif</LateModelFile>
 			<ModelFileKey>D19</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>NE SE SW W</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2552,7 +2546,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD20.nif</LateModelFile>
 			<ModelFileKey>D20</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>NE SE W NW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2562,7 +2556,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD02.nif</LateModelFile>
 			<ModelFileKey>E01</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N NE E S W</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2572,7 +2566,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD02.nif</LateModelFile>
 			<ModelFileKey>E02</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>NE E SE SW NW</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2582,7 +2576,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD20.nif</LateModelFile>
 			<ModelFileKey>E03</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N NE SE W NW</Connections>
 			<ModelConnections>NE SE W NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2592,7 +2586,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC04.nif</LateModelFile>
 			<ModelFileKey>E04</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>NE E SE S W</Connections>
 			<ModelConnections>NE SE W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2602,7 +2596,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD05.nif</LateModelFile>
 			<ModelFileKey>E05</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N NE E SE S</Connections>
 			<ModelConnections>N NE SE S</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2612,7 +2606,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneB04.nif</LateModelFile>
 			<ModelFileKey>E06</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>NE E SE S SW</Connections>
 			<ModelConnections>NE SW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2622,7 +2616,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC08.nif</LateModelFile>
 			<ModelFileKey>E07</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N NE E SW W</Connections>
 			<ModelConnections>NE E SW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2632,7 +2626,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD20.nif</LateModelFile>
 			<ModelFileKey>E08</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>NE E SE W NW</Connections>
 			<ModelConnections>NE SE W NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2642,7 +2636,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC09.nif</LateModelFile>
 			<ModelFileKey>E09</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N NE E S SW</Connections>
 			<ModelConnections>N NE SW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2652,7 +2646,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD19.nif</LateModelFile>
 			<ModelFileKey>E10</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>NE E SE SW W</Connections>
 			<ModelConnections>NE SE SW W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2662,7 +2656,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC06.nif</LateModelFile>
 			<ModelFileKey>E11</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>NE SE S W NW</Connections>
 			<ModelConnections>NE SE NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2672,7 +2666,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneB06.nif</LateModelFile>
 			<ModelFileKey>E12</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N NE SE S W</Connections>
 			<ModelConnections>NE SE</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2682,7 +2676,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD19.nif</LateModelFile>
 			<ModelFileKey>E13</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>NE SE S SW W</Connections>
 			<ModelConnections>NE SE SW W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2692,7 +2686,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC04.nif</LateModelFile>
 			<ModelFileKey>E14</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N NE E SE W</Connections>
 			<ModelConnections>NE SE W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2702,7 +2696,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD02.nif</LateModelFile>
 			<ModelFileKey>F01</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N E SE S W NW</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2712,7 +2706,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD02.nif</LateModelFile>
 			<ModelFileKey>F02</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N NE SE S SW NW</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2722,7 +2716,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD02.nif</LateModelFile>
 			<ModelFileKey>F03</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N NE E SE S W</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2732,7 +2726,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD02.nif</LateModelFile>
 			<ModelFileKey>F04</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N NE E SE SW NW</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2742,7 +2736,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC08.nif</LateModelFile>
 			<ModelFileKey>F05</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N NE E SW W NW</Connections>
 			<ModelConnections>NE E SW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2752,7 +2746,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD20.nif</LateModelFile>
 			<ModelFileKey>F06</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N NE E SE W NW</Connections>
 			<ModelConnections>NE SE W NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2762,7 +2756,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC06.nif</LateModelFile>
 			<ModelFileKey>F07</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N NE SE S W NW</Connections>
 			<ModelConnections>NE SE NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2772,7 +2766,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC06.nif</LateModelFile>
 			<ModelFileKey>F08</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>NE E SE S W NW</Connections>
 			<ModelConnections>NE SE NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2782,7 +2776,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD02.nif</LateModelFile>
 			<ModelFileKey>G01</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N E SE S SW W NW</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2792,7 +2786,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD02.nif</LateModelFile>
 			<ModelFileKey>G02</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N NE SE S SW W NW</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -2802,7 +2796,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD02.nif</LateModelFile>
 			<ModelFileKey>H01</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_GRAVTUBE</RouteType>
+			<RouteType>ROUTE_MAGLEV</RouteType>
 			<Connections>N NE E SE S SW W NW</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3512,7 +3506,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadA00.nif</LateModelFile>
 			<ModelFileKey>A00</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>-</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3522,7 +3516,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadA01.nif</LateModelFile>
 			<ModelFileKey>A01</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3532,7 +3526,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadA02.nif</LateModelFile>
 			<ModelFileKey>A02</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>NE</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3542,7 +3536,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadB01.nif</LateModelFile>
 			<ModelFileKey>B01</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N NE</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3552,7 +3546,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadB02.nif</LateModelFile>
 			<ModelFileKey>B02</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>NE E</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3562,7 +3556,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadB03.nif</LateModelFile>
 			<ModelFileKey>B03</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N S</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3572,7 +3566,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadB04.nif</LateModelFile>
 			<ModelFileKey>B04</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>NE SW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3582,7 +3576,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadB05.nif</LateModelFile>
 			<ModelFileKey>B05</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N E</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3592,7 +3586,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadB06.nif</LateModelFile>
 			<ModelFileKey>B06</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>NE SE</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3602,7 +3596,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadB07.nif</LateModelFile>
 			<ModelFileKey>B07</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N SE</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3612,7 +3606,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadB08.nif</LateModelFile>
 			<ModelFileKey>B08</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>NE S</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3622,7 +3616,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadB05.nif</LateModelFile>
 			<ModelFileKey>C01</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N NE E</Connections>
 			<ModelConnections>N E</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3632,7 +3626,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadB06.nif</LateModelFile>
 			<ModelFileKey>C02</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>NE E SE</Connections>
 			<ModelConnections>NE SE</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3642,7 +3636,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC03.nif</LateModelFile>
 			<ModelFileKey>C03</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N E SW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3652,7 +3646,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC04.nif</LateModelFile>
 			<ModelFileKey>C04</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>NE SE W</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3662,7 +3656,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadB03.nif</LateModelFile>
 			<ModelFileKey>C05OtherDir</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N E S</Connections>
 			<ModelConnections>N S</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3672,7 +3666,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC06.nif</LateModelFile>
 			<ModelFileKey>C06</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>NE SE NW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3682,7 +3676,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC07.nif</LateModelFile>
 			<ModelFileKey>C07</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N NE S</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3692,7 +3686,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC08.nif</LateModelFile>
 			<ModelFileKey>C08</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>NE E SW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3702,7 +3696,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC09.nif</LateModelFile>
 			<ModelFileKey>C09</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N NE SW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3712,7 +3706,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC10.nif</LateModelFile>
 			<ModelFileKey>C10</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>NE E W</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3722,7 +3716,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadB07.nif</LateModelFile>
 			<ModelFileKey>C11</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N E SE</Connections>
 			<ModelConnections>N SE</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3732,7 +3726,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC12.nif</LateModelFile>
 			<ModelFileKey>C12</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>NE SE S</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3742,7 +3736,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadB08.nif</LateModelFile>
 			<ModelFileKey>C13</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>NE E S</Connections>
 			<ModelConnections>NE S</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3752,7 +3746,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC14.nif</LateModelFile>
 			<ModelFileKey>C14</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>NE W NW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3762,7 +3756,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD02.nif</LateModelFile>
 			<ModelFileKey>D01</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N E S W</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3772,7 +3766,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD02.nif</LateModelFile>
 			<ModelFileKey>D02</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>NE SE SW NW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3782,7 +3776,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD03.nif</LateModelFile>
 			<ModelFileKey>D03</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N NE E SW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3792,7 +3786,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC04.nif</LateModelFile>
 			<ModelFileKey>D04</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>NE E SE W</Connections>
 			<ModelConnections>NE SE W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3802,7 +3796,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD05.nif</LateModelFile>
 			<ModelFileKey>D05</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N NE SE S</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3812,7 +3806,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadB04.nif</LateModelFile>
 			<ModelFileKey>D06</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>NE E S SW</Connections>
 			<ModelConnections>NE SW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3822,7 +3816,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD07.nif</LateModelFile>
 			<ModelFileKey>D07</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N NE S SW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3832,7 +3826,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD08.nif</LateModelFile>
 			<ModelFileKey>D08</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>NE E SW W</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3842,7 +3836,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadB08.nif</LateModelFile>
 			<ModelFileKey>D09</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N NE S W</Connections>
 			<ModelConnections>NE S</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3852,7 +3846,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadB07.nif</LateModelFile>
 			<ModelFileKey>D10</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N SE S W</Connections>
 			<ModelConnections>N SE</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3862,7 +3856,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC06.nif</LateModelFile>
 			<ModelFileKey>D11</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N NE SE NW</Connections>
 			<ModelConnections>NE SE NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3872,7 +3866,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC07.nif</LateModelFile>
 			<ModelFileKey>D12</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N NE E S</Connections>
 			<ModelConnections>N NE S</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3882,7 +3876,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC04.nif</LateModelFile>
 			<ModelFileKey>D13</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N NE SE W</Connections>
 			<ModelConnections>NE SE W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3892,7 +3886,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC04.nif</LateModelFile>
 			<ModelFileKey>D14</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>NE SE S W</Connections>
 			<ModelConnections>NE SE W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3902,7 +3896,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC10.nif</LateModelFile>
 			<ModelFileKey>D15</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N NE E W</Connections>
 			<ModelConnections>NE E W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3912,7 +3906,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC06.nif</LateModelFile>
 			<ModelFileKey>D16</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>NE E SE NW</Connections>
 			<ModelConnections>NE SE NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3922,7 +3916,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC12.nif</LateModelFile>
 			<ModelFileKey>D17</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>NE E SE S</Connections>
 			<ModelConnections>NE SE S</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3932,7 +3926,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC14.nif</LateModelFile>
 			<ModelFileKey>D18</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N NE W NW</Connections>
 			<ModelConnections>NE W NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3942,7 +3936,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD19.nif</LateModelFile>
 			<ModelFileKey>D19</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>NE SE SW W</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3952,7 +3946,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD20.nif</LateModelFile>
 			<ModelFileKey>D20</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>NE SE W NW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3962,7 +3956,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD02.nif</LateModelFile>
 			<ModelFileKey>E01</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N NE E S W</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3972,7 +3966,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD02.nif</LateModelFile>
 			<ModelFileKey>E02</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>NE E SE SW NW</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3982,7 +3976,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD20.nif</LateModelFile>
 			<ModelFileKey>E03</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N NE SE W NW</Connections>
 			<ModelConnections>NE SE W NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -3992,7 +3986,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC04.nif</LateModelFile>
 			<ModelFileKey>E04</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>NE E SE S W</Connections>
 			<ModelConnections>NE SE W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4002,7 +3996,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD05.nif</LateModelFile>
 			<ModelFileKey>E05</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N NE E SE S</Connections>
 			<ModelConnections>N NE SE S</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4012,7 +4006,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadB04.nif</LateModelFile>
 			<ModelFileKey>E06</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>NE E SE S SW</Connections>
 			<ModelConnections>NE SW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4022,7 +4016,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC08.nif</LateModelFile>
 			<ModelFileKey>E07</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N NE E SW W</Connections>
 			<ModelConnections>NE E SW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4032,7 +4026,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD20.nif</LateModelFile>
 			<ModelFileKey>E08</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>NE E SE W NW</Connections>
 			<ModelConnections>NE SE W NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4042,7 +4036,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC09.nif</LateModelFile>
 			<ModelFileKey>E09</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N NE E S SW</Connections>
 			<ModelConnections>N NE SW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4052,7 +4046,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD19.nif</LateModelFile>
 			<ModelFileKey>E10</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>NE E SE SW W</Connections>
 			<ModelConnections>NE SE SW W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4062,7 +4056,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC06.nif</LateModelFile>
 			<ModelFileKey>E11</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>NE SE S W NW</Connections>
 			<ModelConnections>NE SE NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4072,7 +4066,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadB06.nif</LateModelFile>
 			<ModelFileKey>E12</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N NE SE S W</Connections>
 			<ModelConnections>NE SE</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4082,7 +4076,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD19.nif</LateModelFile>
 			<ModelFileKey>E13</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>NE SE S SW W</Connections>
 			<ModelConnections>NE SE SW W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4092,7 +4086,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC04.nif</LateModelFile>
 			<ModelFileKey>E14</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N NE E SE W</Connections>
 			<ModelConnections>NE SE W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4102,7 +4096,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD02.nif</LateModelFile>
 			<ModelFileKey>F01</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N E SE S W NW</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4112,7 +4106,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD02.nif</LateModelFile>
 			<ModelFileKey>F02</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N NE SE S SW NW</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4122,7 +4116,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD02.nif</LateModelFile>
 			<ModelFileKey>F03</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N NE E SE S W</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4132,7 +4126,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD02.nif</LateModelFile>
 			<ModelFileKey>F04</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N NE E SE SW NW</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4142,7 +4136,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC08.nif</LateModelFile>
 			<ModelFileKey>F05</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N NE E SW W NW</Connections>
 			<ModelConnections>NE E SW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4152,7 +4146,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD20.nif</LateModelFile>
 			<ModelFileKey>F06</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N NE E SE W NW</Connections>
 			<ModelConnections>NE SE W NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4162,7 +4156,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC06.nif</LateModelFile>
 			<ModelFileKey>F07</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N NE SE S W NW</Connections>
 			<ModelConnections>NE SE NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4172,7 +4166,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadC06.nif</LateModelFile>
 			<ModelFileKey>F08</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>NE E SE S W NW</Connections>
 			<ModelConnections>NE SE NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4182,7 +4176,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD02.nif</LateModelFile>
 			<ModelFileKey>G01</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N E SE S SW W NW</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4192,7 +4186,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD02.nif</LateModelFile>
 			<ModelFileKey>G02</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N NE SE S SW W NW</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4202,7 +4196,7 @@
 			<LateModelFile>Art/Terrain/Routes/Roman Roads/RoadD02.nif</LateModelFile>
 			<ModelFileKey>H01</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_PAVED</RouteType>
+			<RouteType>ROUTE_PAVED_ROAD</RouteType>
 			<Connections>N NE E SE S SW W NW</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4212,7 +4206,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadA00.nif</LateModelFile>
 			<ModelFileKey>A00</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>-</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4222,7 +4216,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadA01.nif</LateModelFile>
 			<ModelFileKey>A01</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4232,7 +4226,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadA02.nif</LateModelFile>
 			<ModelFileKey>A02</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>NE</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4242,7 +4236,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadB01.nif</LateModelFile>
 			<ModelFileKey>B01</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N NE</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4252,7 +4246,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadB02.nif</LateModelFile>
 			<ModelFileKey>B02</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>NE E</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4262,7 +4256,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadB03.nif</LateModelFile>
 			<ModelFileKey>B03</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N S</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4272,7 +4266,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadB04.nif</LateModelFile>
 			<ModelFileKey>B04</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>NE SW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4282,7 +4276,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadB05.nif</LateModelFile>
 			<ModelFileKey>B05</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N E</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4292,7 +4286,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadB06.nif</LateModelFile>
 			<ModelFileKey>B06</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>NE SE</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4302,7 +4296,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadB07.nif</LateModelFile>
 			<ModelFileKey>B07</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N SE</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4312,7 +4306,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadB08.nif</LateModelFile>
 			<ModelFileKey>B08</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>NE S</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4322,7 +4316,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadB05.nif</LateModelFile>
 			<ModelFileKey>C01</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N NE E</Connections>
 			<ModelConnections>N E</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4332,7 +4326,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadB06.nif</LateModelFile>
 			<ModelFileKey>C02</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>NE E SE</Connections>
 			<ModelConnections>NE SE</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4342,7 +4336,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadC03.nif</LateModelFile>
 			<ModelFileKey>C03</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N E SW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4352,7 +4346,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadC04.nif</LateModelFile>
 			<ModelFileKey>C04</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>NE SE W</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4362,7 +4356,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadB03.nif</LateModelFile>
 			<ModelFileKey>C05OtherDir</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N E S</Connections>
 			<ModelConnections>N S</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4372,7 +4366,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadC06.nif</LateModelFile>
 			<ModelFileKey>C06</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>NE SE NW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4382,7 +4376,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadC07.nif</LateModelFile>
 			<ModelFileKey>C07</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N NE S</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4392,7 +4386,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadC08.nif</LateModelFile>
 			<ModelFileKey>C08</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>NE E SW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4402,7 +4396,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadC09.nif</LateModelFile>
 			<ModelFileKey>C09</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N NE SW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4412,7 +4406,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadC10.nif</LateModelFile>
 			<ModelFileKey>C10</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>NE E W</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4422,7 +4416,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadB07.nif</LateModelFile>
 			<ModelFileKey>C11</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N E SE</Connections>
 			<ModelConnections>N SE</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4432,7 +4426,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadC12.nif</LateModelFile>
 			<ModelFileKey>C12</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>NE SE S</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4442,7 +4436,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadB08.nif</LateModelFile>
 			<ModelFileKey>C13</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>NE E S</Connections>
 			<ModelConnections>NE S</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4452,7 +4446,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadC14.nif</LateModelFile>
 			<ModelFileKey>C14</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>NE W NW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4462,7 +4456,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadD02.nif</LateModelFile>
 			<ModelFileKey>D01</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N E S W</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4472,7 +4466,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadD02.nif</LateModelFile>
 			<ModelFileKey>D02</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>NE SE SW NW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4482,7 +4476,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadD03.nif</LateModelFile>
 			<ModelFileKey>D03</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N NE E SW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4492,7 +4486,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadC04.nif</LateModelFile>
 			<ModelFileKey>D04</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>NE E SE W</Connections>
 			<ModelConnections>NE SE W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4502,7 +4496,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadD05.nif</LateModelFile>
 			<ModelFileKey>D05</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N NE SE S</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4512,7 +4506,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadB04.nif</LateModelFile>
 			<ModelFileKey>D06</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>NE E S SW</Connections>
 			<ModelConnections>NE SW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4522,7 +4516,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadD07.nif</LateModelFile>
 			<ModelFileKey>D07</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N NE S SW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4532,7 +4526,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadD08.nif</LateModelFile>
 			<ModelFileKey>D08</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>NE E SW W</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4542,7 +4536,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadB08.nif</LateModelFile>
 			<ModelFileKey>D09</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N NE S W</Connections>
 			<ModelConnections>NE S</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4552,7 +4546,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadB07.nif</LateModelFile>
 			<ModelFileKey>D10</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N SE S W</Connections>
 			<ModelConnections>N SE</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4562,7 +4556,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadC06.nif</LateModelFile>
 			<ModelFileKey>D11</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N NE SE NW</Connections>
 			<ModelConnections>NE SE NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4572,7 +4566,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadC07.nif</LateModelFile>
 			<ModelFileKey>D12</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N NE E S</Connections>
 			<ModelConnections>N NE S</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4582,7 +4576,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadC04.nif</LateModelFile>
 			<ModelFileKey>D13</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N NE SE W</Connections>
 			<ModelConnections>NE SE W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4592,7 +4586,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadC04.nif</LateModelFile>
 			<ModelFileKey>D14</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>NE SE S W</Connections>
 			<ModelConnections>NE SE W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4602,7 +4596,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadC10.nif</LateModelFile>
 			<ModelFileKey>D15</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N NE E W</Connections>
 			<ModelConnections>NE E W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4612,7 +4606,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadC06.nif</LateModelFile>
 			<ModelFileKey>D16</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>NE E SE NW</Connections>
 			<ModelConnections>NE SE NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4622,7 +4616,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadC12.nif</LateModelFile>
 			<ModelFileKey>D17</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>NE E SE S</Connections>
 			<ModelConnections>NE SE S</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4632,7 +4626,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadC14.nif</LateModelFile>
 			<ModelFileKey>D18</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N NE W NW</Connections>
 			<ModelConnections>NE W NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4642,7 +4636,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadD19.nif</LateModelFile>
 			<ModelFileKey>D19</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>NE SE SW W</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4652,7 +4646,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadD20.nif</LateModelFile>
 			<ModelFileKey>D20</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>NE SE W NW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4662,7 +4656,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadD02.nif</LateModelFile>
 			<ModelFileKey>E01</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N NE E S W</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4672,7 +4666,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadD02.nif</LateModelFile>
 			<ModelFileKey>E02</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>NE E SE SW NW</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4682,7 +4676,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadD20.nif</LateModelFile>
 			<ModelFileKey>E03</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N NE SE W NW</Connections>
 			<ModelConnections>NE SE W NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4692,7 +4686,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadC04.nif</LateModelFile>
 			<ModelFileKey>E04</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>NE E SE S W</Connections>
 			<ModelConnections>NE SE W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4702,7 +4696,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadD05.nif</LateModelFile>
 			<ModelFileKey>E05</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N NE E SE S</Connections>
 			<ModelConnections>N NE SE S</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4712,7 +4706,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadB04.nif</LateModelFile>
 			<ModelFileKey>E06</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>NE E SE S SW</Connections>
 			<ModelConnections>NE SW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4722,7 +4716,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadC08.nif</LateModelFile>
 			<ModelFileKey>E07</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N NE E SW W</Connections>
 			<ModelConnections>NE E SW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4732,7 +4726,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadD20.nif</LateModelFile>
 			<ModelFileKey>E08</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>NE E SE W NW</Connections>
 			<ModelConnections>NE SE W NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4742,7 +4736,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadC09.nif</LateModelFile>
 			<ModelFileKey>E09</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N NE E S SW</Connections>
 			<ModelConnections>N NE SW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4752,7 +4746,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadD19.nif</LateModelFile>
 			<ModelFileKey>E10</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>NE E SE SW W</Connections>
 			<ModelConnections>NE SE SW W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4762,7 +4756,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadC06.nif</LateModelFile>
 			<ModelFileKey>E11</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>NE SE S W NW</Connections>
 			<ModelConnections>NE SE NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4772,7 +4766,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadB06.nif</LateModelFile>
 			<ModelFileKey>E12</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N NE SE S W</Connections>
 			<ModelConnections>NE SE</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4782,7 +4776,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadD19.nif</LateModelFile>
 			<ModelFileKey>E13</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>NE SE S SW W</Connections>
 			<ModelConnections>NE SE SW W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4792,7 +4786,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadC04.nif</LateModelFile>
 			<ModelFileKey>E14</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N NE E SE W</Connections>
 			<ModelConnections>NE SE W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4802,7 +4796,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadD02.nif</LateModelFile>
 			<ModelFileKey>F01</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N E SE S W NW</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4812,7 +4806,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadD02.nif</LateModelFile>
 			<ModelFileKey>F02</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N NE SE S SW NW</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4822,7 +4816,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadD02.nif</LateModelFile>
 			<ModelFileKey>F03</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N NE E SE S W</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4832,7 +4826,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadD02.nif</LateModelFile>
 			<ModelFileKey>F04</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N NE E SE SW NW</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4842,7 +4836,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadC08.nif</LateModelFile>
 			<ModelFileKey>F05</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N NE E SW W NW</Connections>
 			<ModelConnections>NE E SW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4852,7 +4846,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadD20.nif</LateModelFile>
 			<ModelFileKey>F06</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N NE E SE W NW</Connections>
 			<ModelConnections>NE SE W NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4862,7 +4856,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadC06.nif</LateModelFile>
 			<ModelFileKey>F07</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N NE SE S W NW</Connections>
 			<ModelConnections>NE SE NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4872,7 +4866,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadC06.nif</LateModelFile>
 			<ModelFileKey>F08</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>NE E SE S W NW</Connections>
 			<ModelConnections>NE SE NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4882,7 +4876,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadD02.nif</LateModelFile>
 			<ModelFileKey>G01</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N E SE S SW W NW</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4892,7 +4886,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadD02.nif</LateModelFile>
 			<ModelFileKey>G02</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N NE SE S SW W NW</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4902,7 +4896,7 @@
 			<LateModelFile>Art/Terrain/Routes/Modern Roads/RailroadD02.nif</LateModelFile>
 			<ModelFileKey>H01</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_MODERN_ROAD</RouteType>
+			<RouteType>ROUTE_HIGHWAY</RouteType>
 			<Connections>N NE E SE S SW W NW</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4912,7 +4906,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadA00.nif</LateModelFile>
 			<ModelFileKey>A00</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>-</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4922,7 +4916,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadA01.nif</LateModelFile>
 			<ModelFileKey>A01</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4932,7 +4926,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadA02.nif</LateModelFile>
 			<ModelFileKey>A02</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>NE</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4942,7 +4936,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadB01.nif</LateModelFile>
 			<ModelFileKey>B01</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N NE</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4952,7 +4946,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadB02.nif</LateModelFile>
 			<ModelFileKey>B02</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>NE E</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4962,7 +4956,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadB03.nif</LateModelFile>
 			<ModelFileKey>B03</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N S</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4972,7 +4966,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadB04.nif</LateModelFile>
 			<ModelFileKey>B04</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>NE SW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4982,7 +4976,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadB05.nif</LateModelFile>
 			<ModelFileKey>B05</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N E</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -4992,7 +4986,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadB06.nif</LateModelFile>
 			<ModelFileKey>B06</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>NE SE</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5002,7 +4996,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadB07.nif</LateModelFile>
 			<ModelFileKey>B07</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N SE</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5012,7 +5006,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadB08.nif</LateModelFile>
 			<ModelFileKey>B08</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>NE S</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5022,7 +5016,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadB05.nif</LateModelFile>
 			<ModelFileKey>C01</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N NE E</Connections>
 			<ModelConnections>N E</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5032,7 +5026,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadB06.nif</LateModelFile>
 			<ModelFileKey>C02</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>NE E SE</Connections>
 			<ModelConnections>NE SE</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5042,7 +5036,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadC03.nif</LateModelFile>
 			<ModelFileKey>C03</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N E SW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5052,7 +5046,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadC04.nif</LateModelFile>
 			<ModelFileKey>C04</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>NE SE W</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5062,7 +5056,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadB03.nif</LateModelFile>
 			<ModelFileKey>C05OtherDir</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N E S</Connections>
 			<ModelConnections>N S</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5072,7 +5066,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadC06.nif</LateModelFile>
 			<ModelFileKey>C06</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>NE SE NW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5082,7 +5076,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadC07.nif</LateModelFile>
 			<ModelFileKey>C07</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N NE S</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5092,7 +5086,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadC08.nif</LateModelFile>
 			<ModelFileKey>C08</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>NE E SW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5102,7 +5096,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadC09.nif</LateModelFile>
 			<ModelFileKey>C09</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N NE SW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5112,7 +5106,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadC10.nif</LateModelFile>
 			<ModelFileKey>C10</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>NE E W</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5122,7 +5116,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadB07.nif</LateModelFile>
 			<ModelFileKey>C11</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N E SE</Connections>
 			<ModelConnections>N SE</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5132,7 +5126,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadC12.nif</LateModelFile>
 			<ModelFileKey>C12</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>NE SE S</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5142,7 +5136,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadB08.nif</LateModelFile>
 			<ModelFileKey>C13</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>NE E S</Connections>
 			<ModelConnections>NE S</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5152,7 +5146,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadC14.nif</LateModelFile>
 			<ModelFileKey>C14</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>NE W NW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5162,7 +5156,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadD02.nif</LateModelFile>
 			<ModelFileKey>D01</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N E S W</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5172,7 +5166,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadD02.nif</LateModelFile>
 			<ModelFileKey>D02</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>NE SE SW NW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5182,7 +5176,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadD03.nif</LateModelFile>
 			<ModelFileKey>D03</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N NE E SW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5192,7 +5186,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadC04.nif</LateModelFile>
 			<ModelFileKey>D04</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>NE E SE W</Connections>
 			<ModelConnections>NE SE W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5202,7 +5196,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadD05.nif</LateModelFile>
 			<ModelFileKey>D05</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N NE SE S</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5212,7 +5206,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadB04.nif</LateModelFile>
 			<ModelFileKey>D06</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>NE E S SW</Connections>
 			<ModelConnections>NE SW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5222,7 +5216,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadD07.nif</LateModelFile>
 			<ModelFileKey>D07</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N NE S SW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5232,7 +5226,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadD08.nif</LateModelFile>
 			<ModelFileKey>D08</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>NE E SW W</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5242,7 +5236,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadB08.nif</LateModelFile>
 			<ModelFileKey>D09</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N NE S W</Connections>
 			<ModelConnections>NE S</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5252,7 +5246,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadB07.nif</LateModelFile>
 			<ModelFileKey>D10</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N SE S W</Connections>
 			<ModelConnections>N SE</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5262,7 +5256,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadC06.nif</LateModelFile>
 			<ModelFileKey>D11</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N NE SE NW</Connections>
 			<ModelConnections>NE SE NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5272,7 +5266,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadC07.nif</LateModelFile>
 			<ModelFileKey>D12</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N NE E S</Connections>
 			<ModelConnections>N NE S</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5282,7 +5276,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadC04.nif</LateModelFile>
 			<ModelFileKey>D13</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N NE SE W</Connections>
 			<ModelConnections>NE SE W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5292,7 +5286,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadC04.nif</LateModelFile>
 			<ModelFileKey>D14</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>NE SE S W</Connections>
 			<ModelConnections>NE SE W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5302,7 +5296,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadC10.nif</LateModelFile>
 			<ModelFileKey>D15</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N NE E W</Connections>
 			<ModelConnections>NE E W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5312,7 +5306,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadC06.nif</LateModelFile>
 			<ModelFileKey>D16</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>NE E SE NW</Connections>
 			<ModelConnections>NE SE NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5322,7 +5316,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadC12.nif</LateModelFile>
 			<ModelFileKey>D17</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>NE E SE S</Connections>
 			<ModelConnections>NE SE S</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5332,7 +5326,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadC14.nif</LateModelFile>
 			<ModelFileKey>D18</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N NE W NW</Connections>
 			<ModelConnections>NE W NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5342,7 +5336,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadD19.nif</LateModelFile>
 			<ModelFileKey>D19</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>NE SE SW W</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5352,7 +5346,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadD20.nif</LateModelFile>
 			<ModelFileKey>D20</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>NE SE W NW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5362,7 +5356,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadD02.nif</LateModelFile>
 			<ModelFileKey>E01</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N NE E S W</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5372,7 +5366,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadD02.nif</LateModelFile>
 			<ModelFileKey>E02</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>NE E SE SW NW</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5382,7 +5376,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadD20.nif</LateModelFile>
 			<ModelFileKey>E03</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N NE SE W NW</Connections>
 			<ModelConnections>NE SE W NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5392,7 +5386,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadC04.nif</LateModelFile>
 			<ModelFileKey>E04</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>NE E SE S W</Connections>
 			<ModelConnections>NE SE W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5402,7 +5396,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadD05.nif</LateModelFile>
 			<ModelFileKey>E05</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N NE E SE S</Connections>
 			<ModelConnections>N NE SE S</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5412,7 +5406,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadB04.nif</LateModelFile>
 			<ModelFileKey>E06</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>NE E SE S SW</Connections>
 			<ModelConnections>NE SW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5422,7 +5416,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadC08.nif</LateModelFile>
 			<ModelFileKey>E07</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N NE E SW W</Connections>
 			<ModelConnections>NE E SW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5432,7 +5426,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadD20.nif</LateModelFile>
 			<ModelFileKey>E08</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>NE E SE W NW</Connections>
 			<ModelConnections>NE SE W NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5442,7 +5436,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadC09.nif</LateModelFile>
 			<ModelFileKey>E09</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N NE E S SW</Connections>
 			<ModelConnections>N NE SW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5452,7 +5446,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadD19.nif</LateModelFile>
 			<ModelFileKey>E10</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>NE E SE SW W</Connections>
 			<ModelConnections>NE SE SW W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5462,7 +5456,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadC06.nif</LateModelFile>
 			<ModelFileKey>E11</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>NE SE S W NW</Connections>
 			<ModelConnections>NE SE NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5472,7 +5466,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadB06.nif</LateModelFile>
 			<ModelFileKey>E12</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N NE SE S W</Connections>
 			<ModelConnections>NE SE</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5482,7 +5476,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadD19.nif</LateModelFile>
 			<ModelFileKey>E13</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>NE SE S SW W</Connections>
 			<ModelConnections>NE SE SW W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5492,7 +5486,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadC04.nif</LateModelFile>
 			<ModelFileKey>E14</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N NE E SE W</Connections>
 			<ModelConnections>NE SE W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5502,7 +5496,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadD02.nif</LateModelFile>
 			<ModelFileKey>F01</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N E SE S W NW</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5512,7 +5506,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadD02.nif</LateModelFile>
 			<ModelFileKey>F02</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N NE SE S SW NW</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5522,7 +5516,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadD02.nif</LateModelFile>
 			<ModelFileKey>F03</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N NE E SE S W</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5532,7 +5526,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadD02.nif</LateModelFile>
 			<ModelFileKey>F04</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N NE E SE SW NW</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5542,7 +5536,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadC08.nif</LateModelFile>
 			<ModelFileKey>F05</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N NE E SW W NW</Connections>
 			<ModelConnections>NE E SW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5552,7 +5546,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadD20.nif</LateModelFile>
 			<ModelFileKey>F06</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N NE E SE W NW</Connections>
 			<ModelConnections>NE SE W NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5562,7 +5556,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadC06.nif</LateModelFile>
 			<ModelFileKey>F07</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N NE SE S W NW</Connections>
 			<ModelConnections>NE SE NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5572,7 +5566,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadC06.nif</LateModelFile>
 			<ModelFileKey>F08</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>NE E SE S W NW</Connections>
 			<ModelConnections>NE SE NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5582,7 +5576,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadD02.nif</LateModelFile>
 			<ModelFileKey>G01</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N E SE S SW W NW</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5592,7 +5586,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadD02.nif</LateModelFile>
 			<ModelFileKey>G02</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N NE SE S SW W NW</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -5602,7 +5596,7 @@
 			<LateModelFile>Art/Terrain/Routes/modrailroads/RailroadD02.nif</LateModelFile>
 			<ModelFileKey>H01</ModelFileKey>
 			<Animated>0</Animated>
-			<RouteType>ROUTE_RAILROAD_ELECTRIC</RouteType>
+			<RouteType>ROUTE_ELECTRIC_RAILROAD</RouteType>
 			<Connections>N NE E SE S SW W NW</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -6749,7 +6743,7 @@
 		</RouteModelInfo>
 		<RouteModelInfo>
 			<ModelFile>Art/Terrain/Routes/Path1/RoadD20.nif</ModelFile>
-			<LateModelFile>>Art/Terrain/Routes/Path/RoadD20.nif</LateModelFile>
+			<LateModelFile>Art/Terrain/Routes/Path/RoadD20.nif</LateModelFile>
 			<ModelFileKey>D20</ModelFileKey>
 			<Animated>0</Animated>
 			<RouteType>ROUTE_TRAIL</RouteType>
@@ -7013,7 +7007,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneA00.nif</LateModelFile>
 			<ModelFileKey>A00</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>-</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7023,7 +7017,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneA01.nif</LateModelFile>
 			<ModelFileKey>A01</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7033,7 +7027,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneA02.nif</LateModelFile>
 			<ModelFileKey>A02</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>NE</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7043,7 +7037,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneB01.nif</LateModelFile>
 			<ModelFileKey>B01</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N NE</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7053,7 +7047,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneB02.nif</LateModelFile>
 			<ModelFileKey>B02</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>NE E</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7063,7 +7057,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneB03.nif</LateModelFile>
 			<ModelFileKey>B03</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N S</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7073,7 +7067,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneB04.nif</LateModelFile>
 			<ModelFileKey>B04</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>NE SW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7083,7 +7077,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneB05.nif</LateModelFile>
 			<ModelFileKey>B05</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N E</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7093,7 +7087,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneB06.nif</LateModelFile>
 			<ModelFileKey>B06</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>NE SE</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7103,7 +7097,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneB07.nif</LateModelFile>
 			<ModelFileKey>B07</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N SE</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7113,7 +7107,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneB08.nif</LateModelFile>
 			<ModelFileKey>B08</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>NE S</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7123,7 +7117,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneB05.nif</LateModelFile>
 			<ModelFileKey>C01</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N NE E</Connections>
 			<ModelConnections>N E</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7133,7 +7127,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneB06.nif</LateModelFile>
 			<ModelFileKey>C02</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>NE E SE</Connections>
 			<ModelConnections>NE SE</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7143,7 +7137,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC03.nif</LateModelFile>
 			<ModelFileKey>C03</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N E SW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7153,7 +7147,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC04.nif</LateModelFile>
 			<ModelFileKey>C04</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>NE SE W</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7163,7 +7157,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneB03.nif</LateModelFile>
 			<ModelFileKey>C05OtherDir</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N E S</Connections>
 			<ModelConnections>N S</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7173,7 +7167,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC06.nif</LateModelFile>
 			<ModelFileKey>C06</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>NE SE NW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7183,7 +7177,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC07.nif</LateModelFile>
 			<ModelFileKey>C07</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N NE S</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7193,7 +7187,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC08.nif</LateModelFile>
 			<ModelFileKey>C08</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>NE E SW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7203,7 +7197,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC09.nif</LateModelFile>
 			<ModelFileKey>C09</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N NE SW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7213,7 +7207,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC10.nif</LateModelFile>
 			<ModelFileKey>C10</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>NE E W</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7223,7 +7217,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneB07.nif</LateModelFile>
 			<ModelFileKey>C11</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N E SE</Connections>
 			<ModelConnections>N SE</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7233,7 +7227,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC12.nif</LateModelFile>
 			<ModelFileKey>C12</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>NE SE S</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7243,7 +7237,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneB08.nif</LateModelFile>
 			<ModelFileKey>C13</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>NE E S</Connections>
 			<ModelConnections>NE S</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7253,7 +7247,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC14.nif</LateModelFile>
 			<ModelFileKey>C14</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>NE W NW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7263,7 +7257,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD02.nif</LateModelFile>
 			<ModelFileKey>D01</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N E S W</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7273,7 +7267,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD02.nif</LateModelFile>
 			<ModelFileKey>D02</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>NE SE SW NW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7283,7 +7277,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD03.nif</LateModelFile>
 			<ModelFileKey>D03</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N NE E SW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7293,7 +7287,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC04.nif</LateModelFile>
 			<ModelFileKey>D04</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>NE E SE W</Connections>
 			<ModelConnections>NE SE W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7303,7 +7297,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD05.nif</LateModelFile>
 			<ModelFileKey>D05</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N NE SE S</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7313,7 +7307,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneB04.nif</LateModelFile>
 			<ModelFileKey>D06</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>NE E S SW</Connections>
 			<ModelConnections>NE SW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7323,7 +7317,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD07.nif</LateModelFile>
 			<ModelFileKey>D07</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N NE S SW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7333,7 +7327,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD08.nif</LateModelFile>
 			<ModelFileKey>D08</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>NE E SW W</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7343,7 +7337,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneB08.nif</LateModelFile>
 			<ModelFileKey>D09</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N NE S W</Connections>
 			<ModelConnections>NE S</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7353,7 +7347,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneB07.nif</LateModelFile>
 			<ModelFileKey>D10</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N SE S W</Connections>
 			<ModelConnections>N SE</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7363,7 +7357,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC06.nif</LateModelFile>
 			<ModelFileKey>D11</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N NE SE NW</Connections>
 			<ModelConnections>NE SE NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7373,7 +7367,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC07.nif</LateModelFile>
 			<ModelFileKey>D12</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N NE E S</Connections>
 			<ModelConnections>N NE S</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7383,7 +7377,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC04.nif</LateModelFile>
 			<ModelFileKey>D13</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N NE SE W</Connections>
 			<ModelConnections>NE SE W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7393,7 +7387,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC04.nif</LateModelFile>
 			<ModelFileKey>D14</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>NE SE S W</Connections>
 			<ModelConnections>NE SE W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7403,7 +7397,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC10.nif</LateModelFile>
 			<ModelFileKey>D15</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N NE E W</Connections>
 			<ModelConnections>NE E W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7413,7 +7407,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC06.nif</LateModelFile>
 			<ModelFileKey>D16</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>NE E SE NW</Connections>
 			<ModelConnections>NE SE NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7423,7 +7417,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC12.nif</LateModelFile>
 			<ModelFileKey>D17</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>NE E SE S</Connections>
 			<ModelConnections>NE SE S</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7433,7 +7427,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC14.nif</LateModelFile>
 			<ModelFileKey>D18</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N NE W NW</Connections>
 			<ModelConnections>NE W NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7443,7 +7437,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD19.nif</LateModelFile>
 			<ModelFileKey>D19</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>NE SE SW W</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7453,7 +7447,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD20.nif</LateModelFile>
 			<ModelFileKey>D20</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>NE SE W NW</Connections>
 			<ModelConnections>-</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7463,7 +7457,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD02.nif</LateModelFile>
 			<ModelFileKey>E01</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N NE E S W</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7473,7 +7467,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD02.nif</LateModelFile>
 			<ModelFileKey>E02</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>NE E SE SW NW</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7483,7 +7477,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD20.nif</LateModelFile>
 			<ModelFileKey>E03</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N NE SE W NW</Connections>
 			<ModelConnections>NE SE W NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7493,7 +7487,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC04.nif</LateModelFile>
 			<ModelFileKey>E04</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>NE E SE S W</Connections>
 			<ModelConnections>NE SE W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7503,7 +7497,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD05.nif</LateModelFile>
 			<ModelFileKey>E05</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N NE E SE S</Connections>
 			<ModelConnections>N NE SE S</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7513,7 +7507,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneB04.nif</LateModelFile>
 			<ModelFileKey>E06</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>NE E SE S SW</Connections>
 			<ModelConnections>NE SW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7523,7 +7517,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC08.nif</LateModelFile>
 			<ModelFileKey>E07</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N NE E SW W</Connections>
 			<ModelConnections>NE E SW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7533,7 +7527,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD20.nif</LateModelFile>
 			<ModelFileKey>E08</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>NE E SE W NW</Connections>
 			<ModelConnections>NE SE W NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7543,7 +7537,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC09.nif</LateModelFile>
 			<ModelFileKey>E09</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N NE E S SW</Connections>
 			<ModelConnections>N NE SW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7553,7 +7547,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD19.nif</LateModelFile>
 			<ModelFileKey>E10</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>NE E SE SW W</Connections>
 			<ModelConnections>NE SE SW W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7563,7 +7557,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC06.nif</LateModelFile>
 			<ModelFileKey>E11</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>NE SE S W NW</Connections>
 			<ModelConnections>NE SE NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7573,7 +7567,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneB06.nif</LateModelFile>
 			<ModelFileKey>E12</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N NE SE S W</Connections>
 			<ModelConnections>NE SE</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7583,7 +7577,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD19.nif</LateModelFile>
 			<ModelFileKey>E13</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>NE SE S SW W</Connections>
 			<ModelConnections>NE SE SW W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7593,7 +7587,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC04.nif</LateModelFile>
 			<ModelFileKey>E14</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N NE E SE W</Connections>
 			<ModelConnections>NE SE W</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7603,7 +7597,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD02.nif</LateModelFile>
 			<ModelFileKey>F01</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N E SE S W NW</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7613,7 +7607,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD02.nif</LateModelFile>
 			<ModelFileKey>F02</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N NE SE S SW NW</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7623,7 +7617,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD02.nif</LateModelFile>
 			<ModelFileKey>F03</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N NE E SE S W</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7633,7 +7627,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD02.nif</LateModelFile>
 			<ModelFileKey>F04</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N NE E SE SW NW</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7643,7 +7637,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC08.nif</LateModelFile>
 			<ModelFileKey>F05</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N NE E SW W NW</Connections>
 			<ModelConnections>NE E SW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7653,7 +7647,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD20.nif</LateModelFile>
 			<ModelFileKey>F06</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N NE E SE W NW</Connections>
 			<ModelConnections>NE SE W NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7663,7 +7657,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC06.nif</LateModelFile>
 			<ModelFileKey>F07</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N NE SE S W NW</Connections>
 			<ModelConnections>NE SE NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7673,7 +7667,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneC06.nif</LateModelFile>
 			<ModelFileKey>F08</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>NE E SE S W NW</Connections>
 			<ModelConnections>NE SE NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7683,7 +7677,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD02.nif</LateModelFile>
 			<ModelFileKey>G01</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N E SE S SW W NW</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7693,7 +7687,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD02.nif</LateModelFile>
 			<ModelFileKey>G02</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N NE SE S SW W NW</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>
@@ -7703,7 +7697,7 @@
 			<LateModelFile>Art/Terrain/Routes/WarpandJumpLanes/WarpLaneD02.nif</LateModelFile>
 			<ModelFileKey>H01</ModelFileKey>
 			<Animated>1</Animated>
-			<RouteType>ROUTE_HYPERLOOP</RouteType>
+			<RouteType>ROUTE_VACTRAIN</RouteType>
 			<Connections>N NE E SE S SW W NW</Connections>
 			<ModelConnections>NE SE SW NW</ModelConnections>
 			<Rotations>0 90 180 270</Rotations>

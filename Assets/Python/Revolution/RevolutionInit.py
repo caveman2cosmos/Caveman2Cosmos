@@ -98,14 +98,14 @@ class RevolutionInit:
 			if bAIAutoPlay:
 				RevInstances.AIAutoPlayInst = AIAutoPlay.AIAutoPlay(self.customEM, self.RevOpt)
 
-			if not GAME.isOption(GameOptionTypes.GAMEOPTION_NO_BARBARIAN_CIV):
+			if GAME.isOption(GameOptionTypes.GAMEOPTION_BARBARIAN_CIV):
 				RevInstances.BarbarianCivInst = BarbarianCiv.BarbarianCiv(self.customEM, self.RevOpt)
 
 			bChangePlayer = RevOpt.isChangePlayerEnable()
 			if bChangePlayer:
 				RevInstances.ChangePlayerInst = ChangePlayer.ChangePlayer(self.customEM, self.RevOpt)
 
-			if not GAME.isOption(GameOptionTypes.GAMEOPTION_NO_REVOLUTION):
+			if GAME.isOption(GameOptionTypes.GAMEOPTION_REVOLUTION):
 				# RevEvents needs to service beginPlayerTurn events before Revolution
 				RevEvents.init(self.customEM, self.RevOpt)
 				RevInstances.RevolutionInst = Revolution.Revolution(self.customEM, self.RevOpt)
@@ -196,12 +196,6 @@ class RevolutionInit:
 		if RevDCMOpt.isDCM_BATTLE_EFFECTS():
 			revComponentsText += self.optionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_BATTLE_EFFECTS",())
 			anyOption = True
-		if RevDCMOpt.isDCM_ARCHER_BOMBARD():
-			revComponentsText += self.optionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_ARCHER_BOMBARD",())
-			anyOption = True
-		if RevDCMOpt.isDCM_STACK_ATTACK():
-			revComponentsText += self.optionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_STACK_ATTACK",())
-			anyOption = True
 		if RevDCMOpt.isDCM_ATTACK_SUPPORT():
 			revComponentsText += self.optionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_ATTACK_SUPPORT",())
 			anyOption = True
@@ -245,10 +239,10 @@ class RevolutionInit:
 
 		revComponentsText += self.sectionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_INQUISITIONS_OPTIONS",())
 		anyOption = False
-		if not GAME.isOption(GameOptionTypes.GAMEOPTION_NO_INQUISITIONS):
+		if GAME.isOption(GameOptionTypes.GAMEOPTION_INQUISITIONS):
 			revComponentsText += self.optionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_INQUISITIONS_ENABLED",())
 			anyOption = True
-		if not GAME.isOption(GameOptionTypes.GAMEOPTION_NO_INQUISITIONS) and RevDCMOpt.isOC_RESPAWN_HOLY_CITIES():
+		if GAME.isOption(GameOptionTypes.GAMEOPTION_INQUISITIONS) and RevDCMOpt.isOC_RESPAWN_HOLY_CITIES():
 			revComponentsText += self.optionFormat + TRNSLTR.getText("TXT_KEY_REV_MOD_INITIALIZING_RESPAWN_HOLY_CITIES",())
 			anyOption = True
 		if not anyOption:

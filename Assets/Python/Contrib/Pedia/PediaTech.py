@@ -141,7 +141,7 @@ class PediaTech:
 				szText = "<color=255,0,0,255>"
 			else:
 				szText = "<color=0,230,0,255>"
-			szText += str(iWorkerSpeedModifier) + "% Worker Speed"
+			szText += str(iWorkerSpeedModifier) + TRNSLTR.getText("TXT_KEY_PEDIA_TECH_WORKER_SPEED", ())
 			screen.appendListBoxStringNoUpdate(Pnl, szfont3b + szText, eWidGen, 0, 0, 1<<2)
 
 		screen.updateListBox(Pnl)
@@ -231,16 +231,16 @@ class PediaTech:
 
 		# Building Req
 		szChild = PF + "BUILDING"
-		for i in range(CvTheTechInfo.getNumPrereqBuildingClasses()):
-			iAmount = CvTheTechInfo.getPrereqBuildingClassMinimumRequired(i)
+		for i in range(CvTheTechInfo.getNumPrereqBuildings()):
+			iAmount = CvTheTechInfo.getPrereqBuildingMinimumRequired(i)
 			if iAmount > 0:
-				iType = GC.getBuildingClassInfo(CvTheTechInfo.getPrereqBuildingClassType(i)).getDefaultBuildingIndex()
+				iType = CvTheTechInfo.getPrereqBuildingType(i)
 				aList2.append((iType, iAmount))
 		nOr = 0
-		for i in range(CvTheTechInfo.getNumPrereqOrBuildingClasses()):
-			iAmount = CvTheTechInfo.getPrereqOrBuildingClassMinimumRequired(i)
+		for i in range(CvTheTechInfo.getNumPrereqOrBuildings()):
+			iAmount = CvTheTechInfo.getPrereqOrBuildingMinimumRequired(i)
 			if iAmount > 0:
-				iType = GC.getBuildingClassInfo(CvTheTechInfo.getPrereqOrBuildingClassType(i)).getDefaultBuildingIndex()
+				iType = CvTheTechInfo.getPrereqOrBuildingType(i)
 				aList3.append((iType, iAmount))
 				nOr += 1
 		if aList2 or aList3:

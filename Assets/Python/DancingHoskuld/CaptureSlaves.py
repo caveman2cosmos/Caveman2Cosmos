@@ -26,9 +26,8 @@ def onCombatResult(argsList):
 
 	# Captives
 	# Check that the losing unit is not an animal and the unit does not have a capture type defined in the XML
-	if (CyUnitW.isMadeAttack() and not CyUnitL.isAnimal() \
-	and CyUnitL.getDomainType() == giDomainLand and CyUnitW.getDomainType() == giDomainLand \
-	and CyUnitL.getCaptureUnitType((GC.getPlayer(CyUnitL.getOwner())).getCivilizationType()) == -1
+	if (CyUnitW.isMadeAttack() and not CyUnitL.isAnimal() and CyUnitL.getDomainType() == giDomainLand
+	and CyUnitW.getDomainType() == giDomainLand and CyUnitL.getCaptureUnitType() == -1
 	):
 		iCaptureProbability = CyUnitW.captureProbabilityTotal()
 		iCaptureResistance = CyUnitL.captureResistanceTotal()
@@ -39,10 +38,10 @@ def onCombatResult(argsList):
 
 			if CyUnitL.isHasUnitCombat(GC.getInfoTypeForString('UNITCOMBAT_SPECIES_NEANDERTHAL')):
 				iUnit = GC.getInfoTypeForString('UNIT_CAPTIVE_NEANDERTHAL')
-				sMessage = TRNSLTR.getText("TXT_KEY_MESSAGE_NEANDERTHAL_CAPTIVE",())
+				sMessage = TRNSLTR.getText("TXT_KEY_MSG_NEANDERTHAL_CAPTIVE",())
 			else:
 				iUnit = GC.getInfoTypeForString('UNIT_CAPTIVE_MILITARY')
-				sMessage = TRNSLTR.getText("TXT_KEY_MESSAGE_MILITARY_CAPTIVE",())
+				sMessage = TRNSLTR.getText("TXT_KEY_MSG_MILITARY_CAPTIVE",())
 
 			iPlayerW = CyUnitW.getOwner()
 			X = CyUnitW.getX()
@@ -67,46 +66,46 @@ def onCityRazed(argsList):
 
 	'''
 	# Convert Great Specialists into captives or other
-	iCount = CyCity.getSpecialistCount(GC.getInfoTypeForString('SPECIALIST_GREAT_PRIEST'))
+	iCount = CyCity.getSpecialistCount(GC.getInfoTypeForString('SPECIALIST_GREAT_PROPHET'))
 	if iCount > 0:
 		iCountKilled = iCount
 		iCountCaptured = 0
-		sMessage = BugUtil.getText("TXT_KEY_MESSAGE_CITY_HAD_PRIESTS",(iCount,iCountCaptured))
+		sMessage = BugUtil.getText("TXT_KEY_MSG_CITY_HAD_PRIESTS",(iCount,iCountCaptured))
 		CyInterface().addMessage(iPlayer,False,15, sMessage ,'',0,'Art/Interface/Buttons/Civics/Serfdom.dds',ColorTypes(44), X, Y, True,True)
 
 	iCount = CyCity.getSpecialistCount(GC.getInfoTypeForString('SPECIALIST_GREAT_ARTIST'))
 	if iCount > 0:
 		iCountKilled = iCount
 		iCountCaptured = 0
-		sMessage = BugUtil.getText("TXT_KEY_MESSAGE_CITY_HAD_ARTISTS",(iCount,iCountCaptured))
+		sMessage = BugUtil.getText("TXT_KEY_MSG_CITY_HAD_ARTISTS",(iCount,iCountCaptured))
 		CyInterface().addMessage(iPlayer,False,15, sMessage,'',0,'Art/Interface/Buttons/Civics/Serfdom.dds',ColorTypes(44), X, Y, True,True)
 
 	iCount = CyCity.getSpecialistCount(GC.getInfoTypeForString('SPECIALIST_GREAT_SCIENTIST'))
 	if iCount > 0:
 		iCountKilled = iCount
 		iCountCaptured = 0
-		sMessage = BugUtil.getText("TXT_KEY_MESSAGE_CITY_HAD_SCIENTISTS",(iCount,iCountCaptured))
+		sMessage = BugUtil.getText("TXT_KEY_MSG_CITY_HAD_SCIENTISTS",(iCount,iCountCaptured))
 		CyInterface().addMessage(iPlayer,False,15, sMessage,'',0,'Art/Interface/Buttons/Civics/Serfdom.dds',ColorTypes(44), X, Y, True,True)
 
 	iCount = CyCity.getSpecialistCount(GC.getInfoTypeForString('SPECIALIST_GREAT_MERCHANT'))
 	if iCount > 0:
 		iCountKilled = iCount
 		iCountCaptured = 0
-		sMessage = BugUtil.getText("TXT_KEY_MESSAGE_CITY_HAD_MERCHANTS",(iCount,iCountCaptured))
+		sMessage = BugUtil.getText("TXT_KEY_MSG_CITY_HAD_MERCHANTS",(iCount,iCountCaptured))
 		CyInterface().addMessage(iPlayer,False,15, sMessage,'',0,'Art/Interface/Buttons/Civics/Serfdom.dds',ColorTypes(44), X, Y, True,True)
 
 	iCount = CyCity.getSpecialistCount(GC.getInfoTypeForString('SPECIALIST_GREAT_ENGINEER'))
 	if iCount > 0:
 		iCountKilled = iCount
 		iCountCaptured = 0
-		sMessage = BugUtil.getText("TXT_KEY_MESSAGE_CITY_HAD_ENGINEERS",(iCount,iCountCaptured))
+		sMessage = BugUtil.getText("TXT_KEY_MSG_CITY_HAD_ENGINEERS",(iCount,iCountCaptured))
 		CyInterface().addMessage(iPlayer,False,15, sMessage,'',0,'Art/Interface/Buttons/Civics/Serfdom.dds',ColorTypes(44), X, Y, True,True)
 
 	iCount = CyCity.getSpecialistCount(GC.getInfoTypeForString('SPECIALIST_GREAT_DOCTOR'))
 	if iCount > 0:
 		iCountKilled = iCount
 		iCountCaptured = 0
-		sMessage = BugUtil.getText("TXT_KEY_MESSAGE_CITY_HAD_DOCTORS",(iCount,iCountCaptured))
+		sMessage = BugUtil.getText("TXT_KEY_MSG_CITY_HAD_DOCTORS",(iCount,iCountCaptured))
 		CyInterface().addMessage(iPlayer,False,15, sMessage,'',0,'Art/Interface/Buttons/Civics/Serfdom.dds',ColorTypes(44), X, Y, True,True)
 
 	iCount = CyCity.getSpecialistCount(GC.getInfoTypeForString('SPECIALIST_GREAT_SPY'))
@@ -114,15 +113,15 @@ def onCityRazed(argsList):
 		iCountKilled = iCount
 		Inhiding = 0
 		iCountCaptured = 0
-		sMessage = BugUtil.getText("TXT_KEY_MESSAGE_CITY_HAD_SPIES",(iCount,iCountCaptured))
+		sMessage = BugUtil.getText("TXT_KEY_MSG_CITY_HAD_SPIES",(iCount,iCountCaptured))
 		CyInterface().addMessage(iPlayer,False,15, sMessage,'',0,'Art/Interface/Buttons/Civics/Serfdom.dds',ColorTypes(44), X, Y, True,True)
 
-	iCount = CyCity.getSpecialistCount(GC.getInfoTypeForString('SPECIALIST_GREAT_GENERAL')) + CyCity.getSpecialistCount(GC.getInfoTypeForString('SPECIALIST_GREAT_WARLORD'))
+	iCount = CyCity.getSpecialistCount(GC.getInfoTypeForString('SPECIALIST_GREAT_MILITARY_INSTRUCTOR')) + CyCity.getSpecialistCount(GC.getInfoTypeForString('SPECIALIST_MILITARY_INSTRUCTOR'))
 	if iCount > 0:
 		iCountKilled = iCount
 		iCountRebelled = 0
 		iCountCaptured = 0
-		sMessage = BugUtil.getText("TXT_KEY_MESSAGE_CITY_HAD_GENERALS",(iCount,iCountKilled,iCountRebelled,iCountCaptured))
+		sMessage = BugUtil.getText("TXT_KEY_MSG_CITY_HAD_GENERALS",(iCount,iCountKilled,iCountRebelled,iCountCaptured))
 		CyInterface().addMessage(iPlayer,False,15, sMessage,'',0,'Art/Interface/Buttons/Civics/Serfdom.dds',ColorTypes(44), X, Y, True,True)
 	'''
 
@@ -226,7 +225,7 @@ def onCityRazed(argsList):
 			iCount += 1
 
 	if bHuman and iCount:
-		sMessage = BugUtil.getText("TXT_KEY_MESSAGE_CIVILIAN_CAPTIVE", iCount)
+		sMessage = BugUtil.getText("TXT_KEY_MSG_CIVILIAN_CAPTIVE", iCount)
 		CyInterface().addMessage(iPlayer, False, 15, sMessage, '', 0, 'Art/Interface/Buttons/Civics/Serfdom.dds', ColorTypes(44), X, Y, True, True)
 
 '''

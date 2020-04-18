@@ -173,20 +173,14 @@ void CyEnumsPythonInterface()
 		.value("INTERFACEMODE_REBASE", INTERFACEMODE_REBASE)
 		.value("INTERFACEMODE_PYTHON_PICK_PLOT", INTERFACEMODE_PYTHON_PICK_PLOT)
 		.value("INTERFACEMODE_SAVE_PLOT_NIFS", INTERFACEMODE_SAVE_PLOT_NIFS)
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
+
 		.value("INTERFACEMODE_AIRBOMB1", INTERFACEMODE_AIRBOMB1)
 		.value("INTERFACEMODE_AIRBOMB2", INTERFACEMODE_AIRBOMB2)
 		.value("INTERFACEMODE_AIRBOMB3", INTERFACEMODE_AIRBOMB3)
 		.value("INTERFACEMODE_AIRBOMB4", INTERFACEMODE_AIRBOMB4)
 		.value("INTERFACEMODE_AIRBOMB5", INTERFACEMODE_AIRBOMB5)
 		.value("INTERFACEMODE_BOMBARD", INTERFACEMODE_BOMBARD)
-		.value("INTERFACEMODE_ABOMBARD", INTERFACEMODE_ABOMBARD)
 		.value("INTERFACEMODE_FENGAGE", INTERFACEMODE_FENGAGE)
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
 
 // BUG - Sentry Actions - start
 #ifdef _MOD_SENTRY
@@ -196,15 +190,7 @@ void CyEnumsPythonInterface()
 		// < M.A.D. Nukes Start >
 		.value("INTERFACEMODE_PRETARGET_NUKE", INTERFACEMODE_PRETARGET_NUKE)
 		// < M.A.D. Nukes End   >
-/************************************************************************************************/
-/* Afforess	                  Start		 09/16/10                                               */
-/*                                                                                              */
-/* Advanced Automations                                                                         */
-/************************************************************************************************/
 		.value("INTERFACEMODE_SHADOW_UNIT", INTERFACEMODE_SHADOW_UNIT)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 		.value("NUM_INTERFACEMODE_TYPES", NUM_INTERFACEMODE_TYPES)
 		;
@@ -589,137 +575,101 @@ void CyEnumsPythonInterface()
 	python::enum_<GameOptionTypes>("GameOptionTypes")
 		.value("NO_GAMEOPTION", NO_GAMEOPTION)
 		.value("GAMEOPTION_ADVANCED_START", GAMEOPTION_ADVANCED_START)
+		.value("GAMEOPTION_NEW_RANDOM_SEED", GAMEOPTION_NEW_RANDOM_SEED)
+		.value("GAMEOPTION_LOCK_MODS", GAMEOPTION_LOCK_MODS)
+		.value("GAMEOPTION_NO_GOODY_HUTS", GAMEOPTION_NO_GOODY_HUTS)
+		.value("GAMEOPTION_NO_FUTURE", GAMEOPTION_NO_FUTURE)
+		.value("GAMEOPTION_COMPLETE_KILLS", GAMEOPTION_COMPLETE_KILLS)
+		.value("GAMEOPTION_NO_EVENTS", GAMEOPTION_NO_EVENTS)
+		.value("GAMEOPTION_LEAD_ANY_CIV", GAMEOPTION_LEAD_ANY_CIV)
+		.value("GAMEOPTION_UNITED_NATIONS", GAMEOPTION_UNITED_NATIONS) // This must always be the eight option as the exe has hardcoded it as such.
+		.value("GAMEOPTION_ADVANCED_DIPLOMACY", GAMEOPTION_ADVANCED_DIPLOMACY)
+		.value("GAMEOPTION_ADVANCED_ECONOMY", GAMEOPTION_ADVANCED_ECONOMY)
+		.value("GAMEOPTION_REALISTIC_CORPORATIONS", GAMEOPTION_REALISTIC_CORPORATIONS)
+		.value("GAMEOPTION_ADVANCED_ESPIONAGE", GAMEOPTION_ADVANCED_ESPIONAGE)
 		.value("GAMEOPTION_NO_CITY_RAZING", GAMEOPTION_NO_CITY_RAZING)
 		.value("GAMEOPTION_NO_CITY_FLIPPING", GAMEOPTION_NO_CITY_FLIPPING)
 		.value("GAMEOPTION_FLIPPING_AFTER_CONQUEST", GAMEOPTION_FLIPPING_AFTER_CONQUEST)
+		.value("GAMEOPTION_REALISTIC_CULTURE_SPREAD", GAMEOPTION_REALISTIC_CULTURE_SPREAD)
+		.value("GAMEOPTION_1_CITY_TILE_FOUNDING", GAMEOPTION_1_CITY_TILE_FOUNDING)
+		.value("GAMEOPTION_MIN_CITY_BORDER", GAMEOPTION_MIN_CITY_BORDER)
+		.value("GAMEOPTION_LARGER_CITIES", GAMEOPTION_LARGER_CITIES)
+		.value("GAMEOPTION_OVEREXPANSION_PENALTIES", GAMEOPTION_OVEREXPANSION_PENALTIES)
+		.value("GAMEOPTION_UNLIMITED_WONDERS", GAMEOPTION_UNLIMITED_WONDERS)
+		.value("GAMEOPTION_UNLIMITED_NATIONAL_UNITS", GAMEOPTION_UNLIMITED_NATIONAL_UNITS)
+		.value("GAMEOPTION_MAXIMUM_POPULATION", GAMEOPTION_MAXIMUM_POPULATION)
+		.value("GAMEOPTION_MORE_RIVERS", GAMEOPTION_MORE_RIVERS)
+		.value("GAMEOPTION_MORE_RESOURCES", GAMEOPTION_MORE_RESOURCES)
+		.value("GAMEOPTION_PERSONALIZED_MAP", GAMEOPTION_PERSONALIZED_MAP)
 		.value("GAMEOPTION_NO_BARBARIANS", GAMEOPTION_NO_BARBARIANS)
 		.value("GAMEOPTION_RAGING_BARBARIANS", GAMEOPTION_RAGING_BARBARIANS)
-		.value("GAMEOPTION_AGGRESSIVE_AI", GAMEOPTION_AGGRESSIVE_AI)
-		.value("GAMEOPTION_LEAD_ANY_CIV", GAMEOPTION_LEAD_ANY_CIV)
-		.value("GAMEOPTION_RANDOM_PERSONALITIES", GAMEOPTION_RANDOM_PERSONALITIES)
+		.value("GAMEOPTION_BARBARIAN_WORLD", GAMEOPTION_BARBARIAN_WORLD)
+		.value("GAMEOPTION_BARBARIAN_CIV", GAMEOPTION_BARBARIAN_CIV)
+		.value("GAMEOPTION_BARBARIANS_ALWAYS_RAZE", GAMEOPTION_BARBARIANS_ALWAYS_RAZE)
+		.value("GAMEOPTION_NEANDERTHAL_CITIES", GAMEOPTION_NEANDERTHAL_CITIES)
+		.value("GAMEOPTION_TELEPORT_HUNTING_AWARDS", GAMEOPTION_TELEPORT_HUNTING_AWARDS)
+		.value("GAMEOPTION_PEACE_AMONG_NPCS", GAMEOPTION_PEACE_AMONG_NPCS)
+		.value("GAMEOPTION_ANIMALS_STAY_OUT", GAMEOPTION_ANIMALS_STAY_OUT)
+		.value("GAMEOPTION_RECKLESS_ANIMALS", GAMEOPTION_RECKLESS_ANIMALS)
+		.value("GAMEOPTION_DANGEROUS_WILDLIFE", GAMEOPTION_DANGEROUS_WILDLIFE)
 		.value("GAMEOPTION_PICK_RELIGION", GAMEOPTION_PICK_RELIGION)
+		.value("GAMEOPTION_LIMITED_RELIGIONS", GAMEOPTION_LIMITED_RELIGIONS)
+		.value("GAMEOPTION_INQUISITIONS", GAMEOPTION_INQUISITIONS)
+		.value("GAMEOPTION_RELIGION_DECAY", GAMEOPTION_RELIGION_DECAY)
+		.value("GAMEOPTION_DIVINE_PROPHETS", GAMEOPTION_DIVINE_PROPHETS)
+		.value("GAMEOPTION_RELIGIOUS_DISABLING", GAMEOPTION_RELIGIOUS_DISABLING)
+		.value("GAMEOPTION_RANDOM_PERSONALITIES", GAMEOPTION_RANDOM_PERSONALITIES)
+		.value("GAMEOPTION_PERMANENT_ALLIANCES", GAMEOPTION_PERMANENT_ALLIANCES)
+		.value("GAMEOPTION_START_AS_MINORS", GAMEOPTION_START_AS_MINORS)
+		.value("GAMEOPTION_CULTURALLY_LINKED_STARTS", GAMEOPTION_CULTURALLY_LINKED_STARTS)
+		.value("GAMEOPTION_NO_VASSAL_STATES", GAMEOPTION_NO_VASSAL_STATES)
+		.value("GAMEOPTION_NO_ESPIONAGE", GAMEOPTION_NO_ESPIONAGE)
+		.value("GAMEOPTION_REVOLUTION", GAMEOPTION_REVOLUTION)
+		.value("GAMEOPTION_AGGRESSIVE_AI", GAMEOPTION_AGGRESSIVE_AI)
+		.value("GAMEOPTION_RUTHLESS_AI", GAMEOPTION_RUTHLESS_AI)
 		.value("GAMEOPTION_NO_TECH_TRADING", GAMEOPTION_NO_TECH_TRADING)
 		.value("GAMEOPTION_NO_TECH_BROKERING", GAMEOPTION_NO_TECH_BROKERING)
-		.value("GAMEOPTION_PERMANENT_ALLIANCES", GAMEOPTION_PERMANENT_ALLIANCES)
-		.value("GAMEOPTION_ONE_CITY_CHALLENGE", GAMEOPTION_ONE_CITY_CHALLENGE)
-		.value("GAMEOPTION_NEW_RANDOM_SEED", GAMEOPTION_NEW_RANDOM_SEED)
-		.value("GAMEOPTION_LOCK_MODS", GAMEOPTION_LOCK_MODS)
-		.value("GAMEOPTION_COMPLETE_KILLS", GAMEOPTION_COMPLETE_KILLS)
-		.value("GAMEOPTION_NO_VASSAL_STATES", GAMEOPTION_NO_VASSAL_STATES)
-		.value("GAMEOPTION_NO_GOODY_HUTS", GAMEOPTION_NO_GOODY_HUTS)
-		.value("GAMEOPTION_NO_EVENTS", GAMEOPTION_NO_EVENTS)
-		.value("GAMEOPTION_NO_ESPIONAGE", GAMEOPTION_NO_ESPIONAGE)
-// RevolutionDCM - BarbarianWorld - thanks Kael
-		.value("GAMEOPTION_BARBARIAN_WORLD", GAMEOPTION_BARBARIAN_WORLD)
-// RevolutionDCM End
-
-		/********************************************************************************/
-		/**		REVOLUTION_MOD							5/27/08				jdog5000	*/
-		/**																				*/
-		/**																				*/
-		/********************************************************************************/
-		.value("GAMEOPTION_NO_REVOLUTION", GAMEOPTION_NO_REVOLUTION)
-		.value("GAMEOPTION_LIMITED_RELIGIONS", GAMEOPTION_LIMITED_RELIGIONS)
-		.value("GAMEOPTION_NO_INQUISITIONS", GAMEOPTION_NO_INQUISITIONS)
-		.value("GAMEOPTION_NO_BARBARIAN_CIV", GAMEOPTION_NO_BARBARIAN_CIV)
-		.value("GAMEOPTION_NO_TECH_DIFFUSION", GAMEOPTION_NO_TECH_DIFFUSION)
-		.value("GAMEOPTION_START_AS_MINORS", GAMEOPTION_START_AS_MINORS)
-		/********************************************************************************/
-		/**		REVOLUTION_MOD							END								*/
-		/********************************************************************************/
-
-/************************************************************************************************/
-/* Afforess			 		Last Update: 7/21/10                                                */
-/*                              New Gameoptions                                                 */
-/*                                                                                              */
-/************************************************************************************************/
-		.value("GAMEOPTION_MOUNTAINS", GAMEOPTION_MOUNTAINS)
-		.value("GAMEOPTION_SAD", GAMEOPTION_SAD)
-		.value("GAMEOPTION_ADVANCED_DIPLOMACY", GAMEOPTION_ADVANCED_DIPLOMACY)
-		.value("GAMEOPTION_UNLIMITED_WONDERS", GAMEOPTION_UNLIMITED_WONDERS)
-		.value("GAMEOPTION_BARBARIAN_GENERALS", GAMEOPTION_BARBARIAN_GENERALS)
-		.value("GAMEOPTION_ASSIMILATION", GAMEOPTION_ASSIMILATION)
-		.value("GAMEOPTION_CHALLENGE_CUT_LOSERS", GAMEOPTION_CHALLENGE_CUT_LOSERS)
-		.value("GAMEOPTION_CHALLENGE_HIGH_TO_LOW", GAMEOPTION_CHALLENGE_HIGH_TO_LOW)
-		.value("GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY", GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY)
-		.value("GAMEOPTION_RUTHLESS_AI", GAMEOPTION_RUTHLESS_AI)
-		.value("GAMEOPTION_GREAT_COMMANDERS", GAMEOPTION_GREAT_COMMANDERS)
-		.value("GAMEOPTION_CULTURALLY_LINKED_STARTS", GAMEOPTION_CULTURALLY_LINKED_STARTS)
-		.value("GAMEOPTION_PERSONALIZED_MAP", GAMEOPTION_PERSONALIZED_MAP)
-		.value("GAMEOPTION_ADVANCED_ECONOMY", GAMEOPTION_ADVANCED_ECONOMY)
-		.value("GAMEOPTION_REALISTIC_CULTURE_SPREAD", GAMEOPTION_REALISTIC_CULTURE_SPREAD)
-		.value("GAMEOPTION_LARGER_CITIES", GAMEOPTION_LARGER_CITIES)
-		.value("GAMEOPTION_REALISTIC_CORPORATIONS", GAMEOPTION_REALISTIC_CORPORATIONS)
-		.value("GAMEOPTION_RELIGION_DECAY", GAMEOPTION_RELIGION_DECAY)
-		.value("GAMEOPTION_NO_FUTURE", GAMEOPTION_NO_FUTURE)
-		.value("GAMEOPTION_BARBARIANS_ALWAYS_RAZE", GAMEOPTION_BARBARIANS_ALWAYS_RAZE)
-		.value("GAMEOPTION_UNITED_NATIONS", GAMEOPTION_UNITED_NATIONS)
-		.value("GAMEOPTION_ADVANCED_ESPIONAGE", GAMEOPTION_ADVANCED_ESPIONAGE)
-		.value("GAMEOPTION_ADVANCED_NUKES", GAMEOPTION_ADVANCED_NUKES)
-/************************************************************************************************/
-/* Afforess						          END                                                */
-/************************************************************************************************/
-/************************************************************************************************/
-/*C2C                                     Begin                                              */
-/************************************************************************************************/
-#ifdef C2C_BUILD
-		.value("GAMEOPTION_DIVINE_PROPHETS", GAMEOPTION_DIVINE_PROPHETS)
-		.value("GAMEOPTION_NO_CITY_LIMITS", GAMEOPTION_NO_CITY_LIMITS)
-		.value("GAMEOPTION_NO_FIXED_BORDERS", GAMEOPTION_NO_FIXED_BORDERS)
-		.value("GAMEOPTION_INFINITE_XP", GAMEOPTION_INFINITE_XP)
-		.value("GAMEOPTION_UNLIMITED_NATIONAL_UNITS", GAMEOPTION_UNLIMITED_NATIONAL_UNITS)
-		.value("GAMEOPTION_STRENGTH_IN_NUMBERS", GAMEOPTION_STRENGTH_IN_NUMBERS)
+		.value("GAMEOPTION_TECH_DIFFUSION", GAMEOPTION_TECH_DIFFUSION)
+		.value("GAMEOPTION_WIN_FOR_LOSING", GAMEOPTION_WIN_FOR_LOSING)
+		.value("GAMEOPTION_BEELINE_STINGS", GAMEOPTION_BEELINE_STINGS)
+		.value("GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS", GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS)
+		.value("GAMEOPTION_UPSCALED_RESEARCH_COSTS", GAMEOPTION_UPSCALED_RESEARCH_COSTS)
+		.value("GAMEOPTION_UPSCALED_BUILDING_AND_UNIT_COSTS", GAMEOPTION_UPSCALED_BUILDING_AND_UNIT_COSTS)
 		.value("GAMEOPTION_NO_NEGATIVE_TRAITS", GAMEOPTION_NO_NEGATIVE_TRAITS)
 		.value("GAMEOPTION_PURE_TRAITS", GAMEOPTION_PURE_TRAITS)
-		.value("GAMEOPTION_LEADERHEAD_LEVELUPS", GAMEOPTION_LEADERHEAD_LEVELUPS)
 		.value("GAMEOPTION_START_NO_POSITIVE_TRAITS", GAMEOPTION_START_NO_POSITIVE_TRAITS)
-		.value("GAMEOPTION_NO_NUKES", GAMEOPTION_NO_NUKES)
-		.value("GAMEOPTION_SCALE_CITY_LIMITS", GAMEOPTION_SCALE_CITY_LIMITS)
+		.value("GAMEOPTION_LEADERHEAD_LEVELUPS", GAMEOPTION_LEADERHEAD_LEVELUPS)
 		.value("GAMEOPTION_COMPLEX_TRAITS", GAMEOPTION_COMPLEX_TRAITS)
 		.value("GAMEOPTION_LS612_TRAITS", GAMEOPTION_LS612_TRAITS)
-		.value("GAMEOPTION_RELIGIOUS_DISABLING", GAMEOPTION_RELIGIOUS_DISABLING)
-		.value("GAMEOPTION_UPSCALED_BUILDING_AND_UNIT_COSTS", GAMEOPTION_UPSCALED_BUILDING_AND_UNIT_COSTS)
-		.value("GAMEOPTION_FIGHT_OR_FLIGHT", GAMEOPTION_FIGHT_OR_FLIGHT)
+		.value("GAMEOPTION_VANILLA_COMBAT_ENGINE", GAMEOPTION_VANILLA_COMBAT_ENGINE)
 		.value("GAMEOPTION_SIZE_MATTERS", GAMEOPTION_SIZE_MATTERS)
+		.value("GAMEOPTION_SIZE_MATTERS_UNCUT", GAMEOPTION_SIZE_MATTERS_UNCUT)
+		.value("GAMEOPTION_FIGHT_OR_FLIGHT", GAMEOPTION_FIGHT_OR_FLIGHT)
+		.value("GAMEOPTION_HIDE_AND_SEEK", GAMEOPTION_HIDE_AND_SEEK)
+		.value("GAMEOPTION_WITHOUT_WARNING", GAMEOPTION_WITHOUT_WARNING)
+		.value("GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS", GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS)
+		.value("GAMEOPTION_STRENGTH_IN_NUMBERS", GAMEOPTION_STRENGTH_IN_NUMBERS)
 		.value("GAMEOPTION_HEART_OF_WAR", GAMEOPTION_HEART_OF_WAR)
 		.value("GAMEOPTION_BATTLEWORN", GAMEOPTION_BATTLEWORN)
 		.value("GAMEOPTION_UPRANGE", GAMEOPTION_UPRANGE)
 		.value("GAMEOPTION_EQUIPMENT", GAMEOPTION_EQUIPMENT)
-		.value("GAMEOPTION_MAXIMUM_POPULATION", GAMEOPTION_MAXIMUM_POPULATION)
-		.value("GAMEOPTION_MIN_CITY_BORDER", GAMEOPTION_MIN_CITY_BORDER)
-		.value("GAMEOPTION_MORE_RIVERS", GAMEOPTION_MORE_RIVERS)
-		.value("GAMEOPTION_MORE_RESOURCES", GAMEOPTION_MORE_RESOURCES)
+		.value("GAMEOPTION_ONGOING_TRAINING", GAMEOPTION_ONGOING_TRAINING)
+		.value("GAMEOPTION_SAD", GAMEOPTION_SAD)
+		.value("GAMEOPTION_REALISTIC_SIEGE", GAMEOPTION_REALISTIC_SIEGE)
+		.value("GAMEOPTION_ZONE_OF_CONTROL", GAMEOPTION_ZONE_OF_CONTROL)
+		.value("GAMEOPTION_AMNESTY", GAMEOPTION_AMNESTY)
+		.value("GAMEOPTION_FIXED_BORDERS", GAMEOPTION_FIXED_BORDERS)
+		.value("GAMEOPTION_GREAT_COMMANDERS", GAMEOPTION_GREAT_COMMANDERS)
+		.value("GAMEOPTION_INFINITE_XP", GAMEOPTION_INFINITE_XP)
 		.value("GAMEOPTION_XP_FROM_ASSIGNED_SPECIALISTS", GAMEOPTION_XP_FROM_ASSIGNED_SPECIALISTS)
 		.value("GAMEOPTION_MORE_XP_TO_LEVEL", GAMEOPTION_MORE_XP_TO_LEVEL)
-		.value("GAMEOPTION_ONGOING_TRAINING", GAMEOPTION_ONGOING_TRAINING)
-		.value("GAMEOPTION_NIGHTMARE_MODE", GAMEOPTION_NIGHTMARE_MODE)
-		.value("GAMEOPTION_SIZE_MATTERS_UNCUT", GAMEOPTION_SIZE_MATTERS_UNCUT)
-		.value("GAMEOPTION_ECOLOGICAL_ANIMALS", GAMEOPTION_ECOLOGICAL_ANIMALS)
-		.value("GAMEOPTION_TELEPORT_HUNTING_AWARDS", GAMEOPTION_TELEPORT_HUNTING_AWARDS)
-		.value("GAMEOPTION_AMNESTY", GAMEOPTION_AMNESTY)
-		.value("GAMEOPTION_HIDE_AND_SEEK", GAMEOPTION_HIDE_AND_SEEK)
-		.value("GAMEOPTION_PEACE_AMONG_NPCS", GAMEOPTION_PEACE_AMONG_NPCS)
-		.value("GAMEOPTION_ANIMALS_STAY_OUT", GAMEOPTION_ANIMALS_STAY_OUT)
-		.value("GAMEOPTION_RECKLESS_ANIMALS", GAMEOPTION_RECKLESS_ANIMALS)
-		.value("GAMEOPTION_NEANDERTHAL_CITIES", GAMEOPTION_NEANDERTHAL_CITIES)
-		.value("GAMEOPTION_1_CITY_TILE_FOUNDING", GAMEOPTION_1_CITY_TILE_FOUNDING)
-		.value("GAMEOPTION_REALISTIC_SIEGE", GAMEOPTION_REALISTIC_SIEGE)
-		.value("GAMEOPTION_VANILLA_COMBAT_ENGINE", GAMEOPTION_VANILLA_COMBAT_ENGINE)
-		.value("GAMEOPTION_WITHOUT_WARNING", GAMEOPTION_WITHOUT_WARNING)
-		.value("GAMEOPTION_WIN_FOR_LOSING", GAMEOPTION_WIN_FOR_LOSING)
-		.value("GAMEOPTION_BEELINE_STINGS", GAMEOPTION_BEELINE_STINGS)
-		.value("GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS", GAMEOPTION_OUTBREAKS_AND_AFFLICTIONS)
-		.value("GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS", GAMEOPTION_NO_TECH_HANDICAPS_FOR_HUMANS)
 		.value("GAMEOPTION_DOWNSIZING_IS_PROFITABLE", GAMEOPTION_DOWNSIZING_IS_PROFITABLE)
-		.value("GAMEOPTION_UPSCALED_RESEARCH_COSTS", GAMEOPTION_UPSCALED_RESEARCH_COSTS)
-		.value("GAMEOPTION_DANGEROUS_WILDLIFE", GAMEOPTION_DANGEROUS_WILDLIFE)
-		.value("GAMEOPTION_HISTORICAL_WONDERS", GAMEOPTION_HISTORICAL_WONDERS)
-#endif
-/************************************************************************************************/
-/*C2C                                     End                                                */
-/************************************************************************************************/
-
-		//.value("NUM_GAMEOPTION_TYPES", NUM_GAMEOPTION_TYPES)
+		.value("GAMEOPTION_ADVANCED_NUKES", GAMEOPTION_ADVANCED_NUKES)
+		.value("GAMEOPTION_NO_NUKES", GAMEOPTION_NO_NUKES)
+		.value("GAMEOPTION_ONE_CITY_CHALLENGE", GAMEOPTION_ONE_CITY_CHALLENGE)
+		.value("GAMEOPTION_CHALLENGE_CUT_LOSERS", GAMEOPTION_CHALLENGE_CUT_LOSERS)
+		.value("GAMEOPTION_CHALLENGE_HIGH_TO_LOW", GAMEOPTION_CHALLENGE_HIGH_TO_LOW)
+		.value("GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY", GAMEOPTION_CHALLENGE_INCREASING_DIFFICULTY)
 		;
 
 	python::enum_<MultiplayerOptionTypes>("MultiplayerOptionTypes")
@@ -976,10 +926,6 @@ void CyEnumsPythonInterface()
 		.value("NUM_TASK_TYPES", NUM_TASK_TYPES)
 		;
 
-	python::enum_<BuildingClassTypes>("BuildingClassTypes")
-		.value("NO_BUILDINGCLASS", NO_BUILDINGCLASS)
-		;
-
 	python::enum_<BuildingTypes>("BuildingTypes")
 		.value("NO_BUILDING", NO_BUILDING)
 		;
@@ -1085,10 +1031,6 @@ void CyEnumsPythonInterface()
 		.value("DOMAIN_LAND", DOMAIN_LAND)
 		.value("DOMAIN_IMMOBILE", DOMAIN_IMMOBILE)
 		.value("NUM_DOMAIN_TYPES", NUM_DOMAIN_TYPES)
-		;
-
-	python::enum_<UnitClassTypes>("UnitClassTypes")
-		.value("NO_UNITCLASS", NO_UNITCLASS)
 		;
 
 	python::enum_<UnitTypes>("UnitTypes")
@@ -1222,11 +1164,7 @@ void CyEnumsPythonInterface()
 		.value("AUTOMATE_CITY", AUTOMATE_CITY)
 		.value("AUTOMATE_EXPLORE", AUTOMATE_EXPLORE)
 		.value("AUTOMATE_RELIGION", AUTOMATE_RELIGION)
-/************************************************************************************************/
-/* Afforess	                  Start		 09/16/10                                               */
-/*                                                                                              */
-/* Advanced Automations                                                                         */
-/************************************************************************************************/
+
 		.value("AUTOMATE_PILLAGE", AUTOMATE_PILLAGE)
 		.value("AUTOMATE_HUNT", AUTOMATE_HUNT)
 		.value("AUTOMATE_CITY_DEFENSE", AUTOMATE_CITY_DEFENSE)
@@ -1241,9 +1179,7 @@ void CyEnumsPythonInterface()
 		.value("AUTOMATE_PROMOTIONS", AUTOMATE_PROMOTIONS)
 		.value("AUTOMATE_CANCEL_PROMOTIONS", AUTOMATE_CANCEL_PROMOTIONS)
 		.value("AUTOMATE_SHADOW", AUTOMATE_SHADOW)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 		.value("NUM_AUTOMATE_TYPES", NUM_AUTOMATE_TYPES)
 		;
 
@@ -1309,21 +1245,14 @@ void CyEnumsPythonInterface()
 		//TSHEEP Assassin Mission
 		//.value("MISSION_ASSASSIN", MISSION_ASSASSIN)
 		//TSHEEP End
-/************************************************************************************************/
-/* DCM                                     04/19/09                                Johny Smith  */
-/************************************************************************************************/
+
 		.value("MISSION_AIRBOMB1", MISSION_AIRBOMB1)
 		.value("MISSION_AIRBOMB2", MISSION_AIRBOMB2)
 		.value("MISSION_AIRBOMB3", MISSION_AIRBOMB3)
 		.value("MISSION_AIRBOMB4", MISSION_AIRBOMB4)
 		.value("MISSION_AIRBOMB5", MISSION_AIRBOMB5)
-		.value("MISSION_ABOMBARD", MISSION_ABOMBARD)
 		.value("MISSION_FENGAGE", MISSION_FENGAGE)
-/************************************************************************************************/
-/* Afforess	                  Start		 06/11/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 		.value("MISSION_HURRY_FOOD", MISSION_HURRY_FOOD)
 		.value("MISSION_INQUISITION", MISSION_INQUISITION)
 		.value("MISSION_CLAIM_TERRITORY", MISSION_CLAIM_TERRITORY)
@@ -1331,12 +1260,7 @@ void CyEnumsPythonInterface()
 		.value("MISSION_GREAT_COMMANDER", MISSION_GREAT_COMMANDER)
 		.value("MISSION_SHADOW", MISSION_SHADOW)
 		.value("MISSION_WAIT_FOR_TECH", MISSION_WAIT_FOR_TECH)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-/************************************************************************************************/
-/* DCM                                     END                                                  */
-/************************************************************************************************/
+
 		// < M.A.D. Nukes Start >
 		.value("MISSION_PRETARGET_NUKE", MISSION_PRETARGET_NUKE)
 		.value("MISSION_BUTCHER", MISSION_BUTCHER)
@@ -1401,17 +1325,10 @@ void CyEnumsPythonInterface()
 		.value("MISSIONAI_ASSAULT", MISSIONAI_ASSAULT)
 		.value("MISSIONAI_CARRIER", MISSIONAI_CARRIER)
 		.value("MISSIONAI_PICKUP", MISSIONAI_PICKUP)
-/************************************************************************************************/
-/* Afforess	                  Start		 02/14/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 		.value("MISSIONAI_CLAIM_TERRITORY", MISSIONAI_CLAIM_TERRITORY)
 		.value("MISSIONAI_HURRY_FOOD", MISSIONAI_HURRY_FOOD)
 		.value("MISSIONAI_INQUISITION", MISSIONAI_INQUISITION)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 		;
 
 	// any additions need to be reflected in GlobalTypes.xml
@@ -1652,11 +1569,6 @@ void CyEnumsPythonInterface()
 		.value("TRADE_EMBARGO", TRADE_EMBARGO)
 		.value("TRADE_CIVIC", TRADE_CIVIC)
 		.value("TRADE_RELIGION", TRADE_RELIGION)
-/************************************************************************************************/
-/* Afforess	                  Start		 06/16/10                                               */
-/*                                                                                              */
-/* Advanced Diplomacy                                                                           */
-/************************************************************************************************/
 		.value("TRADE_EMBASSY", TRADE_EMBASSY)
 		.value("TRADE_WORKER", TRADE_WORKER)
 		.value("TRADE_MILITARY_UNIT", TRADE_MILITARY_UNIT)
@@ -1668,14 +1580,12 @@ void CyEnumsPythonInterface()
 		.value("TRADE_PLEDGE_VOTE", TRADE_PLEDGE_VOTE)
 		.value("TRADE_RITE_OF_PASSAGE", TRADE_RITE_OF_PASSAGE)
 		.value("TRADE_FREE_TRADE_ZONE", TRADE_FREE_TRADE_ZONE)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 		.value("NUM_TRADEABLE_HEADINGS", NUM_TRADEABLE_HEADINGS)
 		.value("NUM_TRADEABLE_ITEMS", NUM_TRADEABLE_ITEMS)
 		;
 
 	python::enum_<DiploEventTypes>("DiploEventTypes")
+
 		.value("NO_DIPLOEVENT", NO_DIPLOEVENT)
 		.value("DIPLOEVENT_CONTACT", DIPLOEVENT_CONTACT)
 		.value("DIPLOEVENT_AI_CONTACT", DIPLOEVENT_AI_CONTACT)
@@ -1698,23 +1608,12 @@ void CyEnumsPythonInterface()
 		.value("DIPLOEVENT_RESEARCH_TECH", DIPLOEVENT_RESEARCH_TECH)
 		.value("DIPLOEVENT_TARGET_CITY", DIPLOEVENT_TARGET_CITY)
 		.value("DIPLOEVENT_MADE_DEMAND_VASSAL", DIPLOEVENT_MADE_DEMAND_VASSAL)
-/************************************************************************************************/
-/* Afforess	                  Start		 02/14/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
 		.value("DIPLOEVENT_MAKE_PEACE_WITH", DIPLOEVENT_MAKE_PEACE_WITH)
 		.value("DIPLOEVENT_NO_MAKE_PEACE_WITH", DIPLOEVENT_NO_MAKE_PEACE_WITH)
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
-		// RevolutionDCM start - new diplomacy option
 		.value("DIPLOEVENT_DO_NOT_BOTHER", DIPLOEVENT_DO_NOT_BOTHER)
 		.value("DIPLOEVENT_RESUME_BOTHER", DIPLOEVENT_RESUME_BOTHER)
-		// RevolutionDCM end
-
 		.value("NUM_DIPLOEVENT_TYPES", NUM_DIPLOEVENT_TYPES)
-		;
+	;
 
 	python::enum_<DiploCommentTypes>("DiploCommentTypes")
 		.value("NO_DIPLOCOMMENT", NO_DIPLOCOMMENT)

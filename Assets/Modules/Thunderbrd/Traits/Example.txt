@@ -293,7 +293,7 @@ Example!
 			<iMinAnarchy>0</iMinAnarchy>
 			<iMaxTradeRoutesChange>0</iMaxTradeRoutesChange>
 			<iGoldenAgeDurationModifier>0</iGoldenAgeDurationModifier>
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>NONE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
 			<iHurryCostModifier>0</iHurryCostModifier>
@@ -651,7 +651,7 @@ Example!
 			<iMinAnarchy>0</iMinAnarchy>
 			<iMaxTradeRoutesChange>0</iMaxTradeRoutesChange>
 			<iGoldenAgeDurationModifier>0</iGoldenAgeDurationModifier>
-			<GreatPeopleUnitClass>NONE</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>NONE</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>0</iGreatPeopleRateChange>
 			<iHurryAngerModifier>0</iHurryAngerModifier>
 			<iHurryCostModifier>0</iHurryCostModifier>

@@ -1,9 +1,4 @@
 <?xml version="1.0"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- ReModified by StrategyOnly -->
-	<!-- -->
 <Civ4LeaderHeadInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4CivilizationsSchema.xml">
 	<LeaderHeadInfos>
 		<LeaderHeadInfo>
@@ -486,217 +481,217 @@
 			</ImprovementWeightModifiers>
 			<DiplomacyIntroMusicPeace>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_ANCIENT</EraType>
+					<EraType>C2C_ERA_PREHISTORIC</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_SEDENTARY</EraType>
+					<EraType>C2C_ERA_ANCIENT</EraType>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_CLASSICAL</EraType>
+					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<DiploScriptId>AS2D_DIPLO_HATSHEPSUT_EARLY_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MEDIEVAL</EraType>
+					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<DiploScriptId>AS2D_DIPLO_HATSHEPSUT_MIDDLE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_RENAISSANCE</EraType>
+					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<DiploScriptId>AS2D_DIPLO_HATSHEPSUT_MIDDLE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_INDUSTRIAL</EraType>
+					<EraType>C2C_ERA_INDUSTRIAL</EraType>
 					<DiploScriptId>AS2D_DIPLO_HATSHEPSUT_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>C2C_ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_HATSHEPSUT_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_INFORMATION</EraType>
+					<EraType>C2C_ERA_INFORMATION</EraType>
 					<DiploScriptId>AS2D_DIPLO_HATSHEPSUT_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_NANOTECH</EraType>
+					<EraType>C2C_ERA_NANOTECH</EraType>
 					<DiploScriptId>AS2D_DIPLO_HATSHEPSUT_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_TRANSHUMAN</EraType>
+					<EraType>C2C_ERA_TRANSHUMAN</EraType>
 					<DiploScriptId>AS2D_DIPLO_HATSHEPSUT_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_GALACTIC</EraType>
+					<EraType>C2C_ERA_GALACTIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_HATSHEPSUT_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_COSMIC</EraType>
+					<EraType>C2C_ERA_COSMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_HATSHEPSUT_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_TRANSCENDENT</EraType>
+					<EraType>C2C_ERA_TRANSCENDENT</EraType>
 					<DiploScriptId>AS2D_DIPLO_HATSHEPSUT_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_FUTURE</EraType>
+					<EraType>C2C_ERA_FUTURE</EraType>
 					<DiploScriptId>AS2D_DIPLO_HATSHEPSUT_LATE_INTRO</DiploScriptId>
 				</DiploMusicPeaceEra>
 			</DiplomacyIntroMusicPeace>
 			<DiplomacyMusicPeace>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_ANCIENT</EraType>
+					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_GILGAMESH_EARLY</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_SEDENTARY</EraType>
+					<EraType>C2C_ERA_ANCIENT</EraType>
 					<DiploScriptId>AS2D_DIPLO_HATSHEPSUT_EARLY_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_CLASSICAL</EraType>
+					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<DiploScriptId>AS2D_DIPLO_HATSHEPSUT_EARLY_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MEDIEVAL</EraType>
+					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<DiploScriptId>AS2D_DIPLO_HATSHEPSUT_MIDDLE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_RENAISSANCE</EraType>
+					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<DiploScriptId>AS2D_DIPLO_HATSHEPSUT_MIDDLE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_INDUSTRIAL</EraType>
+					<EraType>C2C_ERA_INDUSTRIAL</EraType>
 					<DiploScriptId>AS2D_DIPLO_HATSHEPSUT_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>C2C_ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_HATSHEPSUT_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_INFORMATION</EraType>
+					<EraType>C2C_ERA_INFORMATION</EraType>
 					<DiploScriptId>AS2D_DIPLO_HATSHEPSUT_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_NANOTECH</EraType>
+					<EraType>C2C_ERA_NANOTECH</EraType>
 					<DiploScriptId>AS2D_DIPLO_HATSHEPSUT_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_TRANSHUMAN</EraType>
+					<EraType>C2C_ERA_TRANSHUMAN</EraType>
 					<DiploScriptId>AS2D_DIPLO_HATSHEPSUT_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_GALACTIC</EraType>
+					<EraType>C2C_ERA_GALACTIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_HATSHEPSUT_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_COSMIC</EraType>
+					<EraType>C2C_ERA_COSMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_HATSHEPSUT_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_TRANSCENDENT</EraType>
+					<EraType>C2C_ERA_TRANSCENDENT</EraType>
 					<DiploScriptId>AS2D_DIPLO_HATSHEPSUT_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 				<DiploMusicPeaceEra>
-					<EraType>ERA_FUTURE</EraType>
+					<EraType>C2C_ERA_FUTURE</EraType>
 					<DiploScriptId>AS2D_DIPLO_HATSHEPSUT_LATE_LP</DiploScriptId>
 				</DiploMusicPeaceEra>
 			</DiplomacyMusicPeace>
 			<DiplomacyIntroMusicWar>
 				<DiploMusicWarEra>
-					<EraType>ERA_ANCIENT</EraType>
+					<EraType>C2C_ERA_PREHISTORIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_SEDENTARY</EraType>
+					<EraType>C2C_ERA_ANCIENT</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_CLASSICAL</EraType>
+					<EraType>C2C_ERA_CLASSICAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MEDIEVAL</EraType>
+					<EraType>C2C_ERA_MEDIEVAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_RENAISSANCE</EraType>
+					<EraType>C2C_ERA_RENAISSANCE</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_INDUSTRIAL</EraType>
+					<EraType>C2C_ERA_INDUSTRIAL</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>C2C_ERA_ATOMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_INFORMATION</EraType>
+					<EraType>C2C_ERA_INFORMATION</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_NANOTECH</EraType>
+					<EraType>C2C_ERA_NANOTECH</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_TRANSHUMAN</EraType>
+					<EraType>C2C_ERA_TRANSHUMAN</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_GALACTIC</EraType>
+					<EraType>C2C_ERA_GALACTIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_COSMIC</EraType>
+					<EraType>C2C_ERA_COSMIC</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_TRANSCENDENT</EraType>
+					<EraType>C2C_ERA_TRANSCENDENT</EraType>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_FUTURE</EraType>
+					<EraType>C2C_ERA_FUTURE</EraType>
 				</DiploMusicWarEra>
 			</DiplomacyIntroMusicWar>
 			<DiplomacyMusicWar>
 				<DiploMusicWarEra>
-					<EraType>ERA_ANCIENT</EraType>
+					<EraType>C2C_ERA_PREHISTORIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_EARLY</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_SEDENTARY</EraType>
+					<EraType>C2C_ERA_ANCIENT</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_EARLY</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_CLASSICAL</EraType>
+					<EraType>C2C_ERA_CLASSICAL</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_EARLY</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MEDIEVAL</EraType>
+					<EraType>C2C_ERA_MEDIEVAL</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_MIDDLE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_RENAISSANCE</EraType>
+					<EraType>C2C_ERA_RENAISSANCE</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_MIDDLE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_INDUSTRIAL</EraType>
+					<EraType>C2C_ERA_INDUSTRIAL</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_MODERN</EraType>
+					<EraType>C2C_ERA_ATOMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_INFORMATION</EraType>
+					<EraType>C2C_ERA_INFORMATION</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_NANOTECH</EraType>
+					<EraType>C2C_ERA_NANOTECH</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_TRANSHUMAN</EraType>
+					<EraType>C2C_ERA_TRANSHUMAN</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_GALACTIC</EraType>
+					<EraType>C2C_ERA_GALACTIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_COSMIC</EraType>
+					<EraType>C2C_ERA_COSMIC</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_TRANSCENDENT</EraType>
+					<EraType>C2C_ERA_TRANSCENDENT</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 				<DiploMusicWarEra>
-					<EraType>ERA_FUTURE</EraType>
+					<EraType>C2C_ERA_FUTURE</EraType>
 					<DiploScriptId>AS2D_DIPLO_WARDRUMS_LATE</DiploScriptId>
 				</DiploMusicWarEra>
 			</DiplomacyMusicWar>

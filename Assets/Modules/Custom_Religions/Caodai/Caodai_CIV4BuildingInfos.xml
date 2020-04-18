@@ -7,10 +7,9 @@
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CAODAI_CATHEDRAL</BuildingClass>
 			<Type>BUILDING_CAODAI_CATHEDRAL</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_CAODAI</DependencyType>
+				<DependencyType>RELIGION_CAO_DAI</DependencyType>
 			</AndDependencyTypes>
 			<SpecialBuildingType>SPECIALBUILDING_CATHEDRAL</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CAODAI_CATHEDRAL</Description>
@@ -18,8 +17,11 @@
 			<Strategy>TXT_KEY_BUILDING_CAODAI_CATHEDRAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CAODAI_CATHEDRAL</ArtDefineTag>
-			<ReligionType>RELIGION_CAODAI</ReligionType>
-			<PrereqReligion>RELIGION_CAODAI</PrereqReligion>
+			<ReligionType>RELIGION_CAO_DAI</ReligionType>
+			<PrereqReligion>RELIGION_CAO_DAI</PrereqReligion>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>280</iCost>
 			<iConquestProb>0</iConquestProb>
@@ -34,7 +36,7 @@
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_CAODAI</ReligionType>
+					<ReligionType>RELIGION_CAO_DAI</ReligionType>
 					<iReligionChange>3</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -52,16 +54,16 @@
 			</BonusHappinessChanges>
 			<BonusProductionModifiers>
 				<BonusProductionModifier>
-					<BonusType>BONUS_COPPER</BonusType>
+					<BonusType>BONUS_COPPER_ORE</BonusType>
 					<iProductonModifier>100</iProductonModifier>
 				</BonusProductionModifier>
 			</BonusProductionModifiers>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_CAODAI_TEMPLE</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_CAODAI_TEMPLE</BuildingType>
 					<iNumBuildingNeeded>2</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -70,10 +72,9 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CAODAI_MONASTERY</BuildingClass>
 			<Type>BUILDING_CAODAI_MONASTERY</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_CAODAI</DependencyType>
+				<DependencyType>RELIGION_CAO_DAI</DependencyType>
 			</AndDependencyTypes>
 			<SpecialBuildingType>SPECIALBUILDING_MONASTERY</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CAODAI_MONASTERY</Description>
@@ -81,8 +82,11 @@
 			<Strategy>TXT_KEY_BUILDING_CAODAI_MONASTERY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CAODAI_MONASTERY</ArtDefineTag>
-			<ReligionType>RELIGION_CAODAI</ReligionType>
-			<PrereqReligion>RELIGION_CAODAI</PrereqReligion>
+			<ReligionType>RELIGION_CAO_DAI</ReligionType>
+			<PrereqReligion>RELIGION_CAO_DAI</PrereqReligion>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>216</iCost>
 			<iConquestProb>0</iConquestProb>
@@ -104,7 +108,7 @@
 			</CommerceModifiers>
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_CAODAI</ReligionType>
+					<ReligionType>RELIGION_CAO_DAI</ReligionType>
 					<iReligionChange>1</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -116,30 +120,31 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CAODAI_SHRINE</BuildingClass>
 			<Type>BUILDING_CAODAI_SHRINE</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_CAODAI</DependencyType>
+				<DependencyType>RELIGION_CAO_DAI</DependencyType>
 			</AndDependencyTypes>
 			<Description>TXT_KEY_BUILDING_CAODAI_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_CAODAI_SHRINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_CAODAI_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CAODAI_SHRINE</ArtDefineTag>
-			<HolyCity>RELIGION_CAODAI</HolyCity>
-			<ReligionType>RELIGION_CAODAI</ReligionType>
-			<GlobalReligionCommerce>RELIGION_CAODAI</GlobalReligionCommerce>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<HolyCity>RELIGION_CAO_DAI</HolyCity>
+			<ReligionType>RELIGION_CAO_DAI</ReligionType>
+			<GlobalReligionCommerce>RELIGION_CAO_DAI</GlobalReligionCommerce>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
-			<iCost>-1</iCost>
 			<iConquestProb>100</iConquestProb>
 			<iAreaHealth>1</iAreaHealth>
 			<iAsset>8</iAsset>
 			<fVisibilityPriority>1</fVisibilityPriority>
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_CAODAI</ReligionType>
+					<ReligionType>RELIGION_CAO_DAI</ReligionType>
 					<iReligionChange>4</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>
@@ -157,10 +162,9 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CAODAI_TEMPLE</BuildingClass>
 			<Type>BUILDING_CAODAI_TEMPLE</Type>
 			<AndDependencyTypes>
-				<DependencyType>RELIGION_CAODAI</DependencyType>
+				<DependencyType>RELIGION_CAO_DAI</DependencyType>
 			</AndDependencyTypes>
 			<SpecialBuildingType>SPECIALBUILDING_TEMPLE</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_CAODAI_TEMPLE</Description>
@@ -168,8 +172,11 @@
 			<Strategy>TXT_KEY_BUILDING_CAODAI_TEMPLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_CAODAI_TEMPLE</ArtDefineTag>
-			<ReligionType>RELIGION_CAODAI</ReligionType>
-			<PrereqReligion>RELIGION_CAODAI</PrereqReligion>
+			<ReligionType>RELIGION_CAO_DAI</ReligionType>
+			<PrereqReligion>RELIGION_CAO_DAI</PrereqReligion>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<bNeverCapture>1</bNeverCapture>
 			<iCost>160</iCost>
 			<iConquestProb>0</iConquestProb>
@@ -189,7 +196,7 @@
 			</CommerceChangeDoubleTimes>
 			<ReligionChanges>
 				<ReligionChange>
-					<ReligionType>RELIGION_CAODAI</ReligionType>
+					<ReligionType>RELIGION_CAO_DAI</ReligionType>
 					<iReligionChange>2</iReligionChange>
 				</ReligionChange>
 			</ReligionChanges>

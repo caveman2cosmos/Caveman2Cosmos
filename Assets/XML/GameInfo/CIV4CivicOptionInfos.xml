@@ -1,9 +1,4 @@
-<?xml version="1.0"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Jesse Smith (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Civic Option -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4CivicOptionInfos xmlns = "x-schema:../Schema/C2C_CIV4GameInfoSchema.xml">
     <CivicOptionInfos>
         <CivicOptionInfo>
@@ -43,8 +38,8 @@
             <Description>TXT_KEY_CIVICOPTION_CURRENCY</Description>
         </CivicOptionInfo>
         <CivicOptionInfo>
-            <Type>CIVICOPTION_LABOR</Type>
-            <Description>TXT_KEY_CIVICOPTION_LABOR</Description>
+            <Type>CIVICOPTION_WORKFORCE</Type>
+            <Description>TXT_KEY_CIVICOPTION_WORKFORCE</Description>
         </CivicOptionInfo>
         <CivicOptionInfo>
             <Type>CIVICOPTION_EDUCATION</Type>

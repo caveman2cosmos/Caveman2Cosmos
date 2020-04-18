@@ -2676,7 +2676,7 @@ def addFeatures():
 
 	terrainDesert = cgc.getInfoTypeForString("TERRAIN_DESERT")
 	terrainPlains = cgc.getInfoTypeForString("TERRAIN_PLAINS")
-	terrainGrass = cgc.getInfoTypeForString("TERRAIN_GRASS")
+	terrainGrass = cgc.getInfoTypeForString("TERRAIN_GRASSLAND")
 	terrainTundra = cgc.getInfoTypeForString("TERRAIN_TAIGA")
 	terrainSnow = cgc.getInfoTypeForString("TERRAIN_ICE")
 # Rise of Mankind 2.82 start
@@ -3598,7 +3598,7 @@ def normalizeAddExtras():
 	else:
 		cgc = CyGlobalContext()
 
-		terrainGrass = cgc.getInfoTypeForString("TERRAIN_GRASS")
+		terrainGrass = cgc.getInfoTypeForString("TERRAIN_GRASSLAND")
 		terrainPlains = cgc.getInfoTypeForString("TERRAIN_PLAINS")
 		terrainDesert = cgc.getInfoTypeForString("TERRAIN_DESERT")
 		terrainTundra = cgc.getInfoTypeForString("TERRAIN_TAIGA")
@@ -3722,10 +3722,6 @@ def enumeratePlaceableBonusTypes():
 		if bonusInfo.getTilesPer() > 0 or bonusInfo.getPercentPerPlayer() > 0:
 			arr[i] = [i, bonusInfo]
 	return arr
-
-def startHumansOnSameTile():
-	"Returns true if all human units should	start on the same tile"
-	return False
 
 #----------------------------------------------
 """Helpers"""
