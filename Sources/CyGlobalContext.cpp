@@ -462,7 +462,7 @@ CvPropertyInfo* CyGlobalContext::getPropertyInfo(int i) const
 
 int CyGlobalContext::getInfoTypeForString(const char* szInfoType) const
 {
-	return GC.getInfoTypeForString(szInfoType);
+	return GC.getInfoTypeForString(szInfoType, true);
 }
 /************************************************************************************************/
 /* Afforess	                  Start		 03/18/10                                               */
