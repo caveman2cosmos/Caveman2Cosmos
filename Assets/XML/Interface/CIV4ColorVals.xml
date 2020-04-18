@@ -1,5 +1,8 @@
 <?xml version="1.0"?>
-<!-- Be careful of changing their orders, some code reference them by index number -->
+<!-- Be careful of changing their orders, some code reference them by index number
+
+ Find new colours at https://www.december.com/html/spec/colorper.html.
+-->
 <Civ4ColorVals xmlns="x-schema:../Schema/C2C_CIV4InterfaceSchema.xml">
 	<ColorVals>
 		<ColorVal>
