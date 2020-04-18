@@ -2424,6 +2424,8 @@ void CvGame::update()
 
 		GC.getLoadedInitCore().checkVersions();
 
+		updateEra();
+
 		for(int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
 			if ( GET_PLAYER((PlayerTypes)iI).isAlive() )
@@ -9539,8 +9541,6 @@ void CvGame::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper,"CvGame",&m_eCultureVictoryCultureLevel);
 
 	m_Properties.readWrapper(pStream);
-
-	updateEra();
 /************************************************************************************************/
 /* Afforess	                  Start		 07/27/10                                               */
 /*                                                                                              */
