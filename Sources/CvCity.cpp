@@ -1,8 +1,6 @@
 #include "CvGameCoreDLL.h"
 #include "CvReachablePlotSet.h"
 
-#include "BetterBTSAI.h"
-
 #include "CyCity.h"
 
 #include <boost155/bind.hpp>
