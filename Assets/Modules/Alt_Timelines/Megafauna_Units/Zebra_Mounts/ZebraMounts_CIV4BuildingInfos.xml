@@ -1,10 +1,7 @@
 <?xml version="1.0"?>
-<!-- Modified by Strategyonly -->
-<!-- ###################################################################################### -->
 <Civ4BuildingInfos xmlns="x-schema:../../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ZEBRA_HERD</BuildingClass>
 			<Type>BUILDING_ZEBRA_HERD</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
@@ -22,7 +19,6 @@
 			</MapCategoryTypes>
      		<FreeBonus>BONUS_CARCASS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<iCost>-1</iCost>
 			<iAsset>3</iAsset>
 			<YieldChanges>
 				<iYield>1</iYield>
@@ -37,8 +33,9 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ZEBRA_TRAINER</BuildingClass>
 			<Type>BUILDING_ZEBRA_TRAINER</Type>
+			<iMaxGlobalInstances>1</iMaxGlobalInstances>
+			<iConquestProb>100</iConquestProb>
 			<Description>TXT_KEY_BUILDING_ZEBRA_TRAINER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ZEBRA_TRAINER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_ZEBRA_TRAINER_STRATEGY</Strategy>
@@ -74,23 +71,22 @@
 					<iFlavor>5</iFlavor>
 				</Flavor>
 			</Flavors>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ZEBRA_HERD</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ZEBRA_CAMP</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ZEBRA_MYTH_EFFECT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_ZEBRA_HERD</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_ZEBRA_CAMP</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_ZEBRA_MYTH_EFFECT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ZEBRA_TRAINER_HERITAGE</BuildingClass>
 			<Type>BUILDING_ZEBRA_TRAINER_HERITAGE</Type>
 			<Description>TXT_KEY_BUILDING_ZEBRA_TRAINER_HERITAGE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ZEBRA_TRAINER_HERITAGE_PEDIA</Civilopedia>
@@ -105,7 +101,7 @@
 			<MapCategoryTypes>
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
-			<FreeBuilding>BUILDINGCLASS_ZEBRA_TRAINER_EFFECT</FreeBuilding>
+			<FreeBuilding>BUILDING_ZEBRA_TRAINER_EFFECT</FreeBuilding>
 			<iCost>139</iCost>
 			<iAsset>4</iAsset>
 			<iPower>2</iPower>
@@ -120,12 +116,9 @@
 					<iFlavor>5</iFlavor>
 				</Flavor>
 			</Flavors>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_ZEBRA_TRAINER</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ZEBRA_TRAINER</BuildingType>
+			</PrereqInCityBuildings>
 			<PropertyManipulators>
 				<PropertySource>
 					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
@@ -135,7 +128,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ZEBRA_TRAINER_EFFECT</BuildingClass>
 			<Type>BUILDING_ZEBRA_TRAINER_EFFECT</Type>
 			<Description>TXT_KEY_BUILDING_ZEBRA_TRAINER_EFFECT</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ZEBRA_TRAINER_PEDIA</Civilopedia>
@@ -147,7 +139,6 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<ObsoleteTech>TECH_MOTORIZED_TRANSPORTATION</ObsoleteTech>
-			<iCost>-1</iCost>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>2</iAsset>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
@@ -159,7 +150,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_ANIMAL_TOTEM_ZEBRA</BuildingClass>
 			<Type>BUILDING_ANIMAL_TOTEM_ZEBRA</Type>
 			<Description>TXT_KEY_BUILDING_ANIMAL_TOTEM_ZEBRA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_ANIMAL_TOTEM_PEDIA</Civilopedia>
@@ -172,49 +162,45 @@
 			</MapCategoryTypes>
 			<PrereqTech>TECH_MEGAFAUNA_DOMESTICATION</PrereqTech>
 			<ObsoleteTech>TECH_AVIATION</ObsoleteTech>
-			<FreeStartEra>ERA_SEDENTARY</FreeStartEra>
-			<iCost>-1</iCost>
+			<FreeStartEra>C2C_ERA_ANCIENT</FreeStartEra>
 			<iConquestProb>25</iConquestProb>
 			<iAsset>2</iAsset>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_ANIMAL_TOTEM</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ZEBRA_TRAINER</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ZEBRA_TRAINER_EFFECT</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
-			<UnitClassProductionModifiers>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_ZEBRA_ARCHER</UnitClassType>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_ANIMAL_TOTEM</BuildingType>
+			</PrereqInCityBuildings>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_ZEBRA_TRAINER</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_ZEBRA_TRAINER_EFFECT</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
+			<UnitProductionModifiers>
+				<UnitProductionModifier>
+					<UnitType>UNIT_ZEBRA_ARCHER</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_ZEBRA_CAVALRY</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_ZEBRA_CAVALRY</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_ZEBRA_CHARIOT</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_ZEBRA_CHARIOT</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_ZEBRA_CUIRASSIER</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_ZEBRA_CUIRASSIER</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-				<UnitClassProductionModifier>
-					<UnitClassType>UNITCLASS_ZEBRA_KNIGHT</UnitClassType>
+				</UnitProductionModifier>
+				<UnitProductionModifier>
+					<UnitType>UNIT_ZEBRA_KNIGHT</UnitType>
 					<iProductionModifier>10</iProductionModifier>
-				</UnitClassProductionModifier>
-			</UnitClassProductionModifiers>
+				</UnitProductionModifier>
+			</UnitProductionModifiers>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_MILITARY</FlavorType>
@@ -224,39 +210,39 @@
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CHARIOT_WORKSHOP</Type>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ZEBRA_TRAINER</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_ZEBRA_TRAINER</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_STABLE</Type>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ZEBRA_TRAINER</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_ZEBRA_TRAINER</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_POLO_FIELD</Type>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ZEBRA_TRAINER</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_ZEBRA_TRAINER</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_CARAVAN_POST</Type>
-			<PrereqOrBuildingClasses>
-				<PrereqOrBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_ZEBRA_TRAINER</BuildingClassType>
-					<bPrereqBuildingClass>1</bPrereqBuildingClass>
-				</PrereqOrBuildingClass>
-			</PrereqOrBuildingClasses>
+			<PrereqOrBuildings>
+				<PrereqOrBuilding>
+					<BuildingType>BUILDING_ZEBRA_TRAINER</BuildingType>
+					<bPrereqBuilding>1</bPrereqBuilding>
+				</PrereqOrBuilding>
+			</PrereqOrBuildings>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

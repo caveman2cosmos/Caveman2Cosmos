@@ -1,25 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by lcollins (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- ReModified by StrategyOnly -->
-<!-- -->
-<!-- Building Infos -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4BuildingInfos xmlns="x-schema:../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_AUYANTEPUI</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_AUYANTEPUI</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_AUYANTEPUI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_AUYANTEPUI_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_AUYANTEPUI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_AUYANTEPUI</ArtDefineTag>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -27,13 +22,12 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
 			<iHealth>1</iHealth>
 			<iHappiness>2</iHappiness>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -98,20 +92,35 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_TOURISM</PropertyType>
+					<iAmountPerTurn>3</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_EXPLORATION</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+			</PropertyManipulators>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_AUYANTEPUI</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_GREAT_BARRIER_REEF</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_GREAT_BARRIER_REEF</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_GREAT_BARRIER_REEF</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_GREAT_BARRIER_REEF_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_GREAT_BARRIER_REEF_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_GREAT_BARRIER_REEF</ArtDefineTag>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -119,11 +128,11 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_GREAT_BARRIER_WITH_BEACON</FeatureType>
+					<FeatureType>FEATURE_GREAT_BARRIER_REEF_BEACON</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_GREAT_BARRIER_WITH_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_GREAT_BARRIER_REEF_LIGHTHOUSE</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
@@ -135,14 +144,13 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
 			<iHappiness>3</iHappiness>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iAsset>4</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>0</iYield>
@@ -204,20 +212,35 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_TOURISM</PropertyType>
+					<iAmountPerTurn>3</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_EXPLORATION</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+			</PropertyManipulators>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_GREAT_BARRIER_REEF</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_MT_SINAI</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_MT_SINAI</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_MT_SINAI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_MT_SINAI_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_MT_SINAI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_MT_SINAI</ArtDefineTag>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -225,14 +248,13 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
 			<iHappiness>3</iHappiness>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iAsset>4</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>2</iYield>
@@ -273,20 +295,35 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_TOURISM</PropertyType>
+					<iAmountPerTurn>3</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_EXPLORATION</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+			</PropertyManipulators>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_MT_SINAI</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_MT_EVEREST</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_MT_EVEREST</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_MT_EVEREST</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_MT_EVEREST_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_MT_EVEREST_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_MT_EVEREST</ArtDefineTag>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -294,14 +331,13 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
 			<iHappiness>3</iHappiness>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iAsset>4</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>3</iYield>
@@ -370,20 +406,35 @@
 					</SpecialistCounts>
 				</TechSpecialistChange>
 			</TechSpecialistChanges>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_TOURISM</PropertyType>
+					<iAmountPerTurn>3</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_EXPLORATION</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+			</PropertyManipulators>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_MT_EVEREST</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_MT_FUJI</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_MT_FUJI</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_MT_FUJI</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_MT_FUJI_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_MT_FUJI_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_MT_FUJI</ArtDefineTag>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -393,14 +444,13 @@
 			</PrereqOrFeature>
 			<FreeBonus>BONUS_OBSIDIAN</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
 			<iHappiness>3</iHappiness>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iAsset>4</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>2</iYield>
@@ -445,20 +495,35 @@
 					</SpecialistCounts>
 				</TechSpecialistChange>
 			</TechSpecialistChanges>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_TOURISM</PropertyType>
+					<iAmountPerTurn>3</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_EXPLORATION</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+			</PropertyManipulators>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_MT_FUJI</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_BAIKAL</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_BAIKAL</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_BAIKAL</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_BAIKAL_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_BAIKAL_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_BAIKAL</ArtDefineTag>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -467,7 +532,7 @@
 				</PrereqFeature>
 			</PrereqOrFeature>
 			<bProvidesFreshWater>1</bProvidesFreshWater>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -475,7 +540,6 @@
 			<iHappiness>3</iHappiness>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iAsset>4</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>3</iYield>
@@ -527,20 +591,35 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_TOURISM</PropertyType>
+					<iAmountPerTurn>3</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_EXPLORATION</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+			</PropertyManipulators>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_BAIKAL</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_BARRINGER_CRATER</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_BARRINGER_CRATER</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_BARRINGER_CRATER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_BARRINGER_CRATER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_BARRINGER_CRATER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_BARRINGER_CRATER</ArtDefineTag>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -548,14 +627,13 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<GreatPeopleUnitClass>UNITCLASS_SCIENTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_SCIENTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
 			<iHappiness>3</iHappiness>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iAsset>4</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>3</iYield>
@@ -587,20 +665,35 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_TOURISM</PropertyType>
+					<iAmountPerTurn>3</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_EXPLORATION</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+			</PropertyManipulators>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_BARRINGER_CRATER</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_BASALT_ORGAN</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_BASALT_ORGAN</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_BASALT_ORGAN</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_BASALT_ORGAN_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_BASALT_ORGAN_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_BASALT_ORGAN</ArtDefineTag>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -610,14 +703,13 @@
 			</PrereqOrFeature>
 			<FreeBonus>BONUS_GRASS</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
 			<iHappiness>3</iHappiness>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iAsset>4</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldChanges>
 				<iYield>3</iYield>
 				<iYield>2</iYield>
@@ -651,20 +743,35 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_TOURISM</PropertyType>
+					<iAmountPerTurn>3</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_EXPLORATION</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+			</PropertyManipulators>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_BASALT_ORGAN</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_DEVILS_TABLE</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_DEVILS_TABLE</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_DEVILS_TABLE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_DEVILS_TABLE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_DEVILS_TABLE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_DEVILS_TABLE</ArtDefineTag>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -672,7 +779,7 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -680,7 +787,6 @@
 			<iTradeRoutes>1</iTradeRoutes>
 			<iDefense>25</iDefense>
 			<iAsset>4</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>2</iYield>
@@ -707,20 +813,35 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_TOURISM</PropertyType>
+					<iAmountPerTurn>3</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_EXPLORATION</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+			</PropertyManipulators>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_DEVILS_TABLE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_SOPKA</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_SOPKA</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_SOPKA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_SOPKA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_SOPKA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_SOPKA</ArtDefineTag>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -728,14 +849,13 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
 			<iHappiness>3</iHappiness>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iAsset>4</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldChanges>
 				<iYield>1</iYield>
 				<iYield>3</iYield>
@@ -766,26 +886,41 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
-			<GlobalBuildingClassProductionModifiers>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_CREATION_MYTH</BuildingClassType>
+			<GlobalBuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_CREATION_MYTH</BuildingType>
 					<iProductionModifier>100</iProductionModifier>
-				</BuildingClassProductionModifier>
-			</GlobalBuildingClassProductionModifiers>
+				</BuildingProductionModifier>
+			</GlobalBuildingProductionModifiers>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_TOURISM</PropertyType>
+					<iAmountPerTurn>3</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_EXPLORATION</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+			</PropertyManipulators>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_SOPKA</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_KRAKATOA</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_KRAKATOA</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_KRAKATOA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_KRAKATOA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_KRAKATOA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_KRAKATOA</ArtDefineTag>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -801,14 +936,13 @@
 					<iNumFreeBonuses>1</iNumFreeBonuses>
 				</ExtraFreeBonus>
 			</ExtraFreeBonuses>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
 			<iHappiness>3</iHappiness>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iAsset>4</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>3</iYield>
@@ -818,7 +952,6 @@
 				<iCommerce>1</iCommerce>
 				<iCommerce>4</iCommerce>
 			</CommerceChanges>
-			<!-- Synergy effects -->
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_MOUNTAINEERING</PrereqTech>
@@ -847,20 +980,35 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_TOURISM</PropertyType>
+					<iAmountPerTurn>3</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_EXPLORATION</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+			</PropertyManipulators>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_KRAKATOA</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_NGORONGORO_CRATER</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_NGORONGORO_CRATER</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_NGORONGORO_CRATER</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_NGORONGORO_CRATER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_NGORONGORO_CRATER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_NGORONGORO_CRATER</ArtDefineTag>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -868,15 +1016,9 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<bProvidesFreshWater>1</bProvidesFreshWater>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
-			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
-			<iConquestProb>70</iConquestProb>
 			<iHappiness>3</iHappiness>
 			<iTradeRoutes>1</iTradeRoutes>
-			<iAsset>4</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldChanges>
 				<iYield>3</iYield>
 				<iYield>2</iYield>
@@ -886,6 +1028,8 @@
 				<iCommerce>0</iCommerce>
 				<iCommerce>3</iCommerce>
 			</CommerceChanges>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
+			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<TechYieldChanges>
 				<TechYieldChange>
 					<PrereqTech>TECH_HARD_HAMMER_PERCUSSION</PrereqTech>
@@ -901,7 +1045,7 @@
 					</TechYield>
 				</TechYieldChange>
 				<TechYieldChange>
-					<PrereqTech>TECH_HUNTING</PrereqTech>
+					<PrereqTech>TECH_TRACKING</PrereqTech>
 					<TechYield>
 						<iYield>2</iYield>
 					</TechYield>
@@ -936,20 +1080,37 @@
 					<iHappiness>3</iHappiness>
 				</TechHappinessChange>
 			</TechHappinessChanges>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_TOURISM</PropertyType>
+					<iAmountPerTurn>3</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_EXPLORATION</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+			</PropertyManipulators>
+			<iAsset>4</iAsset>
+			<iConquestProb>70</iConquestProb>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_NGORONGORO_CRATER</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_NUKUORO</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_NUKUORO</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_NUKUORO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_NUKUORO_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_NUKUORO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_NUKUORO</ArtDefineTag>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -959,14 +1120,13 @@
 			</PrereqOrFeature>
 			<FreeBonus>BONUS_CLAM</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
 			<iHappiness>3</iHappiness>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iAsset>4</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldChanges>
 				<iYield>3</iYield>
 			</YieldChanges>
@@ -997,20 +1157,35 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_TOURISM</PropertyType>
+					<iAmountPerTurn>3</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_EXPLORATION</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+			</PropertyManipulators>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_NUKUORO</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_PAMUKKALE</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_PAMUKKALE</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_PAMUKKALE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_PAMUKKALE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_PAMUKKALE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_PAMUKKALE</ArtDefineTag>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -1020,14 +1195,13 @@
 			</PrereqOrFeature>
 			<FreeBonus>BONUS_FLINT</FreeBonus>
 			<iNumFreeBonuses>1</iNumFreeBonuses>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
 			<iHappiness>3</iHappiness>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iAsset>4</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldChanges>
 				<iYield>2</iYield>
 			</YieldChanges>
@@ -1066,24 +1240,39 @@
 					<iHealth>1</iHealth>
 				</TechHealthChange>
 				<TechHealthChange>
-					<PrereqTech>TECH_TISSUE</PrereqTech>
+					<PrereqTech>TECH_MOLECULAR_MEDICINE</PrereqTech>
 					<iHealth>1</iHealth>
 				</TechHealthChange>
 			</TechHealthChanges>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_TOURISM</PropertyType>
+					<iAmountPerTurn>3</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_EXPLORATION</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+			</PropertyManipulators>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_PAMUKKALE</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_PRAVCICKA_BRANA</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_PRAVCICKA_BRANA</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_PRAVCICKA_BRANA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_PRAVCICKA_BRANA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_PRAVCICKA_BRANA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_PRAVCICKA_BRANA</ArtDefineTag>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -1091,14 +1280,13 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
 			<iHappiness>3</iHappiness>
 			<iTradeRoutes>2</iTradeRoutes>
 			<iAsset>4</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>2</iYield>
@@ -1141,20 +1329,35 @@
 					</SpecialistCounts>
 				</TechSpecialistChange>
 			</TechSpecialistChanges>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_TOURISM</PropertyType>
+					<iAmountPerTurn>3</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_EXPLORATION</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+			</PropertyManipulators>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_PRAVCICKA_BRANA</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_SHARK_BAY</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_SHARK_BAY</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_SHARK_BAY</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_SHARK_BAY_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_SHARK_BAY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_SHARK_BAY</ArtDefineTag>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -1162,14 +1365,13 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
 			<iHappiness>3</iHappiness>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iAsset>4</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldChanges>
 				<iYield>3</iYield>
 				<iYield>3</iYield>
@@ -1234,20 +1436,35 @@
 					<iHappiness>2</iHappiness>
 				</TechHappinessChange>
 			</TechHappinessChanges>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_TOURISM</PropertyType>
+					<iAmountPerTurn>3</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_EXPLORATION</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+			</PropertyManipulators>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_SHARK_BAY</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_SUGARLOAF</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_SUGARLOAF</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_SUGARLOAF</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_SUGARLOAF_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_SUGARLOAF_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_SUGARLOAF</ArtDefineTag>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -1255,14 +1472,13 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
 			<iHappiness>3</iHappiness>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iAsset>4</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldChanges>
 				<iYield>2</iYield>
 				<iYield>2</iYield>
@@ -1280,20 +1496,35 @@
 					</TechCommerce>
 				</TechCommerceChange>
 			</TechCommerceChanges>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_TOURISM</PropertyType>
+					<iAmountPerTurn>3</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_EXPLORATION</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+			</PropertyManipulators>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_SUGARLOAF</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_ULURU</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_ULURU</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_ULURU</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_ULURU_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_ULURU_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_ULURU</ArtDefineTag>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -1301,14 +1532,13 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>4</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
 			<iHappiness>3</iHappiness>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iAsset>4</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldChanges>
 				<iYield>2</iYield>
 				<iYield>3</iYield>
@@ -1350,26 +1580,41 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<bProvidesFreshWater>1</bProvidesFreshWater>
-			<GlobalBuildingClassProductionModifiers>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_CAVE_PAINTING</BuildingClassType>
+			<GlobalBuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_CAVE_PAINTING</BuildingType>
 					<iProductionModifier>100</iProductionModifier>
-				</BuildingClassProductionModifier>
-			</GlobalBuildingClassProductionModifiers>
+				</BuildingProductionModifier>
+			</GlobalBuildingProductionModifiers>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_TOURISM</PropertyType>
+					<iAmountPerTurn>3</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_EXPLORATION</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+			</PropertyManipulators>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_ULURU</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_VICTORIA_FALLS</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_VICTORIA_FALLS</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_VICTORIA_FALLS</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_VICTORIA_FALLS_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_VICTORIA_FALLS_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_VICTORIA_FALLS</ArtDefineTag>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -1377,14 +1622,13 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<GreatPeopleUnitClass>UNITCLASS_ARTIST</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_ARTIST</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
 			<iHappiness>3</iHappiness>
 			<iTradeRoutes>1</iTradeRoutes>
 			<iAsset>4</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldChanges>
 				<iYield>5</iYield>
 				<iYield>1</iYield>
@@ -1444,20 +1688,35 @@
 				</FreeSpecialistCount>
 			</FreeSpecialistCounts>
 			<bProvidesFreshWater>1</bProvidesFreshWater>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_TOURISM</PropertyType>
+					<iAmountPerTurn>3</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_EXPLORATION</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+			</PropertyManipulators>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_VICTORIA_FALLS</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_KILIMANJARO</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_KILIMANJARO</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_KILIMANJARO</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_KILIMANJARO_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_KILIMANJARO_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_KILIMANJARO</ArtDefineTag>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -1465,13 +1724,12 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
 			<iHappiness>2</iHappiness>
 			<iAsset>4</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>2</iYield>
@@ -1518,20 +1776,35 @@
 				</TechCommerceChange>
 			</TechCommerceChanges>
 			<bProvidesFreshWater>1</bProvidesFreshWater>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_TOURISM</PropertyType>
+					<iAmountPerTurn>3</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_EXPLORATION</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+			</PropertyManipulators>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_KILIMANJARO</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_NATURAL_WONDER_DEAD_SEA</BuildingClass>
 			<Type>BUILDING_NATURAL_WONDER_DEAD_SEA</Type>
 			<EnabledCivilizationTypes>
 				<EnabledCivilizationType>
 					<CivilizationType>CIVILIZATION_NPC_NEANDERTHAL</CivilizationType>
 				</EnabledCivilizationType>
 			</EnabledCivilizationTypes>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_NATURAL_WONDER_DEAD_SEA</Description>
 			<Civilopedia>TXT_KEY_BUILDING_NATURAL_WONDER_DEAD_SEA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_NATURAL_WONDER_DEAD_SEA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_CULTURE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_DEAD_SEA</ArtDefineTag>
 			<PrereqTech>TECH_LANGUAGE</PrereqTech>
 			<PrereqOrFeature>
 				<PrereqFeature>
@@ -1541,7 +1814,7 @@
 			</PrereqOrFeature>
 			<FreeBonus>BONUS_SALT</FreeBonus>
 			<iNumFreeBonuses>2</iNumFreeBonuses>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>2</iGreatPeopleRateChange>
 			<iCost>10</iCost>
 			<iConquestProb>70</iConquestProb>
@@ -1550,7 +1823,6 @@
 			<iHappiness>1</iHappiness>
 			<iTradeRoutes>2</iTradeRoutes>
 			<iAsset>4</iAsset>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<YieldChanges>
 				<iYield>0</iYield>
 				<iYield>2</iYield>
@@ -1611,50 +1883,51 @@
 					<iHealth>1</iHealth>
 				</TechHealthChange>
 				<TechHealthChange>
-					<PrereqTech>TECH_TISSUE</PrereqTech>
+					<PrereqTech>TECH_MOLECULAR_MEDICINE</PrereqTech>
 					<iHealth>1</iHealth>
 				</TechHealthChange>
 			</TechHealthChanges>
+			<PropertyManipulators>
+				<PropertySource>
+					<PropertySourceType>PROPERTYSOURCE_CONSTANT</PropertySourceType>
+					<PropertyType>PROPERTY_TOURISM</PropertyType>
+					<iAmountPerTurn>3</iAmountPerTurn>
+					<Active>
+						<Has>
+							<GOMType>GOM_TECH</GOMType>
+							<ID>TECH_EXPLORATION</ID>
+						</Has>
+					</Active>
+				</PropertySource>
+			</PropertyManipulators>
+			<ArtDefineTag>ART_DEF_BUILDING_NATURAL_WONDER_DEAD_SEA</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_OASIS_MYTH</BuildingClass>
 			<Type>BUILDING_OASIS_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_OASIS_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_LANDFORM_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_OASIS_MYTH</ArtDefineTag>
-			<iCost>10</iCost>
-			<iAsset>2</iAsset>
-			<CommerceChanges>
-				<iCommerce>1</iCommerce>
-				<iCommerce>1</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_EARTH_MYTH_EFFECT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SEA_MYTH_EFFECT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_OASIS</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_EARTH_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
+			</PrereqInCityBuildings>
+			<iCost>10</iCost>
+			<CommerceChanges>
+				<iCommerce>1</iCommerce>
+				<iCommerce>1</iCommerce>
+				<iCommerce>1</iCommerce>
+			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
@@ -1688,46 +1961,41 @@
 					</Active>
 				</PropertySource>
 			</PropertyManipulators>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_FALL_MYTH</BuildingClass>
-			<Type>BUILDING_FALL_MYTH</Type>
-			<Description>TXT_KEY_BUILDING_FALL_MYTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_LANDFORM_MYTH_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_FALL_MYTH</ArtDefineTag>
-			<iCost>10</iCost>
-			<iAsset>2</iAsset>
-			<CommerceChanges>
-				<iCommerce>1</iCommerce>
-				<iCommerce>1</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_EARTH_MYTH_EFFECT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SKY_MYTH_EFFECT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<PrereqOrFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_CRATER</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-			</PrereqOrFeature>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
+			<iAsset>2</iAsset>
+			<ArtDefineTag>ART_DEF_BUILDING_OASIS_MYTH</ArtDefineTag>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_FALL_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_FALL_MYTH</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_LANDFORM_MYTH_STRATEGY</Strategy>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
+			<PrereqOrFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_CRATER</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+			</PrereqOrFeature>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_EARTH_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_SKY_MYTH_EFFECT</BuildingType>
+			</PrereqInCityBuildings>
+			<iCost>10</iCost>
+			<CommerceChanges>
+				<iCommerce>1</iCommerce>
+				<iCommerce>1</iCommerce>
+				<iCommerce>1</iCommerce>
+			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
@@ -1775,34 +2043,25 @@
 					</Active>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>10</iFlavor>
+				</Flavor>
+			</Flavors>
+			<iAsset>2</iAsset>
+			<ArtDefineTag>ART_DEF_BUILDING_FALL_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_OUTCROP_MYTH</BuildingClass>
 			<Type>BUILDING_OUTCROP_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_OUTCROP_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_LANDFORM_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_OUTCROP_MYTH</ArtDefineTag>
-			<iCost>10</iCost>
-			<iAsset>2</iAsset>
-			<CommerceChanges>
-				<iCommerce>1</iCommerce>
-				<iCommerce>1</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_EARTH_MYTH_EFFECT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SKY_MYTH_EFFECT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_POLAR_ROCK_ARCH</FeatureType>
@@ -1877,12 +2136,16 @@
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_EARTH_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_SKY_MYTH_EFFECT</BuildingType>
+			</PrereqInCityBuildings>
+			<iCost>10</iCost>
+			<CommerceChanges>
+				<iCommerce>1</iCommerce>
+				<iCommerce>1</iCommerce>
+				<iCommerce>1</iCommerce>
+			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
@@ -1930,46 +2193,41 @@
 					</Active>
 				</PropertySource>
 			</PropertyManipulators>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_VOLCANO_MYTH</BuildingClass>
-			<Type>BUILDING_VOLCANO_MYTH</Type>
-			<Description>TXT_KEY_BUILDING_VOLCANO_MYTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_LANDFORM_MYTH_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_VOLCANO_MYTH</ArtDefineTag>
-			<iCost>10</iCost>
-			<iAsset>2</iAsset>
-			<CommerceChanges>
-				<iCommerce>1</iCommerce>
-				<iCommerce>1</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_STONE_MYTH_EFFECT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_FIRE_MYTH_EFFECT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<PrereqOrFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_VOLCANO</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-			</PrereqOrFeature>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
+			<iAsset>2</iAsset>
+			<ArtDefineTag>ART_DEF_BUILDING_OUTCROP_MYTH</ArtDefineTag>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_VOLCANO_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_VOLCANO_MYTH</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_LANDFORM_MYTH_STRATEGY</Strategy>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
+			<PrereqOrFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_VOLCANO_ACTIVE</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+			</PrereqOrFeature>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_STONE_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_FIRE_MYTH_EFFECT</BuildingType>
+			</PrereqInCityBuildings>
+			<iCost>10</iCost>
+			<CommerceChanges>
+				<iCommerce>1</iCommerce>
+				<iCommerce>1</iCommerce>
+				<iCommerce>1</iCommerce>
+			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
@@ -2017,54 +2275,49 @@
 					</Active>
 				</PropertySource>
 			</PropertyManipulators>
-		</BuildingInfo>
-		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_CORAL_MYTH</BuildingClass>
-			<Type>BUILDING_CORAL_MYTH</Type>
-			<Description>TXT_KEY_BUILDING_CORAL_MYTH</Description>
-			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_BUILDING_LANDFORM_MYTH_STRATEGY</Strategy>
-			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_CORAL_MYTH</ArtDefineTag>
-			<iCost>10</iCost>
-			<iAsset>2</iAsset>
-			<CommerceChanges>
-				<iCommerce>1</iCommerce>
-				<iCommerce>1</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
-			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_STONE_MYTH_EFFECT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SEA_MYTH_EFFECT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
-			<PrereqOrFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_CORAL</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_CORAL_WITH_BEACON</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-				<PrereqFeature>
-					<FeatureType>FEATURE_CORAL_WITH_LIGHTHOUSE</FeatureType>
-					<bPrereqFeature>1</bPrereqFeature>
-				</PrereqFeature>
-			</PrereqOrFeature>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_SCIENCE</FlavorType>
 					<iFlavor>10</iFlavor>
 				</Flavor>
 			</Flavors>
+			<iAsset>2</iAsset>
+			<ArtDefineTag>ART_DEF_BUILDING_VOLCANO_MYTH</ArtDefineTag>
+		</BuildingInfo>
+		<BuildingInfo>
+			<Type>BUILDING_CORAL_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
+			<Description>TXT_KEY_BUILDING_CORAL_MYTH</Description>
+			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_BUILDING_LANDFORM_MYTH_STRATEGY</Strategy>
+			<Advisor>ADVISOR_SCIENCE</Advisor>
+			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
+			<PrereqOrFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_CORAL_REEF</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_CORAL_REEF_BEACON</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+				<PrereqFeature>
+					<FeatureType>FEATURE_CORAL_REEF_LIGHTHOUSE</FeatureType>
+					<bPrereqFeature>1</bPrereqFeature>
+				</PrereqFeature>
+			</PrereqOrFeature>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_STONE_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
+			</PrereqInCityBuildings>
+			<iCost>10</iCost>
+			<CommerceChanges>
+				<iCommerce>1</iCommerce>
+				<iCommerce>1</iCommerce>
+				<iCommerce>1</iCommerce>
+			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
@@ -2112,54 +2365,49 @@
 					</Active>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>10</iFlavor>
+				</Flavor>
+			</Flavors>
+			<iAsset>2</iAsset>
+			<ArtDefineTag>ART_DEF_BUILDING_CORAL_MYTH</ArtDefineTag>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_REEF_MYTH</BuildingClass>
 			<Type>BUILDING_REEF_MYTH</Type>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<Description>TXT_KEY_BUILDING_REEF_MYTH</Description>
 			<Civilopedia>TXT_KEY_BUILDING_LANDFORM_MYTH_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_LANDFORM_MYTH_STRATEGY</Strategy>
 			<Advisor>ADVISOR_SCIENCE</Advisor>
-			<ArtDefineTag>ART_DEF_BUILDING_REEF_MYTH</ArtDefineTag>
-			<iCost>10</iCost>
-			<iAsset>2</iAsset>
-			<CommerceChanges>
-				<iCommerce>1</iCommerce>
-				<iCommerce>1</iCommerce>
-				<iCommerce>1</iCommerce>
-			</CommerceChanges>
-			<fVisibilityPriority>1.0</fVisibilityPriority>
 			<ConstructSound>AS2D_BUILD_BARRACKS</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_STONE_MYTH_EFFECT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SEA_MYTH_EFFECT</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
 			<PrereqOrFeature>
 				<PrereqFeature>
 					<FeatureType>FEATURE_REEF</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_REEF_WITH_BEACON</FeatureType>
+					<FeatureType>FEATURE_REEF_BEACON</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 				<PrereqFeature>
-					<FeatureType>FEATURE_REEF_WITH_LIGHTHOUSE</FeatureType>
+					<FeatureType>FEATURE_REEF_LIGHTHOUSE</FeatureType>
 					<bPrereqFeature>1</bPrereqFeature>
 				</PrereqFeature>
 			</PrereqOrFeature>
-			<Flavors>
-				<Flavor>
-					<FlavorType>FLAVOR_SCIENCE</FlavorType>
-					<iFlavor>10</iFlavor>
-				</Flavor>
-			</Flavors>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_STONE_MYTH_EFFECT</BuildingType>
+				<BuildingType>BUILDING_SEA_MYTH_EFFECT</BuildingType>
+			</PrereqInCityBuildings>
+			<iCost>10</iCost>
+			<CommerceChanges>
+				<iCommerce>1</iCommerce>
+				<iCommerce>1</iCommerce>
+				<iCommerce>1</iCommerce>
+			</CommerceChanges>
 			<TechCommerceChanges>
 				<TechCommerceChange>
 					<PrereqTech>TECH_SEDENTARY_LIFESTYLE</PrereqTech>
@@ -2207,6 +2455,14 @@
 					</Active>
 				</PropertySource>
 			</PropertyManipulators>
+			<Flavors>
+				<Flavor>
+					<FlavorType>FLAVOR_SCIENCE</FlavorType>
+					<iFlavor>10</iFlavor>
+				</Flavor>
+			</Flavors>
+			<iAsset>2</iAsset>
+			<ArtDefineTag>ART_DEF_BUILDING_REEF_MYTH</ArtDefineTag>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

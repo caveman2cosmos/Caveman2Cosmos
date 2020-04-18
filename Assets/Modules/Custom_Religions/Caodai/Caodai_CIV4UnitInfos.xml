@@ -1,14 +1,9 @@
 <?xml version="1.0"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- -->
-	<!-- Unit Infos -->
 <Civ4UnitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_CAODAI_MISSIONARY</Class>
 			<Type>UNIT_CAODAI_MISSIONARY</Type>
+			<iMaxPlayerInstances>3</iMaxPlayerInstances>
 			<Special>SPECIALUNIT_PEOPLE</Special>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
@@ -21,6 +16,9 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_CAODAI_MISSIONARY</Description>
 			<Civilopedia>TXT_KEY_CONCEPT_RELIGION_PEDIA</Civilopedia>
@@ -28,12 +26,14 @@
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_CAODAI</ReligionType>
+					<ReligionType>RELIGION_CAO_DAI</ReligionType>
 					<iReligionSpread>40</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>
-			<PrereqReligion>RELIGION_CAODAI</PrereqReligion>
-			<PrereqBuilding>BUILDING_CAODAI_MONASTERY</PrereqBuilding>
+			<PrereqReligion>RELIGION_CAO_DAI</PrereqReligion>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_CAODAI_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iMoves>2</iMoves>
 			<iAsset>1</iAsset>
@@ -57,7 +57,7 @@
 			</Buildings>
 			<ReligionSpreads>
 				<ReligionSpread>
-					<ReligionType>RELIGION_CAODAI</ReligionType>
+					<ReligionType>RELIGION_CAO_DAI</ReligionType>
 					<iReligionSpread>100</iReligionSpread>
 				</ReligionSpread>
 			</ReligionSpreads>

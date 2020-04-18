@@ -1,11 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Tim McCracken (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Game Text - New -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4GameText xmlns="http://www.firaxis.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.firaxis.com ../Schema/Civ4Gametext.xsd">
-	<!--Please place any new text entries into this file-->
 	<TEXT>
 		<Tag>TXT_KEY_WB_7_BY_7</Tag>
 		<English>7x7</English>
@@ -188,6 +182,7 @@
 		<Tag>TXT_KEY_WB_CIVICS</Tag>
 		<English>Civics:</English>
 		<French>Doctrines:</French>
+		<German>Gesellschaftsformen:</German>
 		<Italian>Forme di governo:</Italian>
 		<Spanish>Principios:</Spanish>
 		<Polish>Doktryny:</Polish>

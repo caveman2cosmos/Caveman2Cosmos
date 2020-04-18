@@ -131,22 +131,14 @@ public:
 	int getMinimumRBombardDamageLimit() const;
 	int getMinimumRBombardRange() const;
 	int getRBombardDamageMaxUnits() const;
-	bool visibilityRange() const;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                      08/19/09                                jdog5000      */
-/*                                                                                              */
-/* General AI                                                                                   */
-/************************************************************************************************/
+
 	int getBombardTurns(const CvCity* pCity ) const;
 	bool isHasPathToAreaPlayerCity( PlayerTypes ePlayer, int iFlags = 0, bool bGo = false ) /* not const - Can generate a mvoe to mission if bGo is true*/;
-	bool isHasPathToAreaEnemyCity( bool bIgnoreMinors = true, int iFlags = 0, bool bGo = false ) /* not const - Can generate a mvoe to mission if bGo is true*/;
+	bool isHasPathToAreaEnemyCity(int iFlags = 0, bool bGo = false ) /* not const - Can generate a mvoe to mission if bGo is true*/;
 	bool isStranded();
 	void invalidateIsStrandedCache();
 	bool calculateIsStranded();
 	bool canMoveAllTerrain() const;
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 
 	void unloadAll();
 	bool alwaysInvisible() const;																																							// Exposed to Python

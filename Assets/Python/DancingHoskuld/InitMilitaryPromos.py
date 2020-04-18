@@ -4,33 +4,18 @@
 ##=========================##
 from CvPythonExtensions import *
 
-# globals
 GC = CyGlobalContext()
 
-#~ gaiSettlerWorkerList = None
-gaiSettlerWorkerCombatList = None
-giMilInstCivic = -1
-
 def init():
-	#~ global gaiSettlerWorkerList, giMilInstCivic, giVolArmyCivic
 	global giMilInstCivic, giVolArmyCivic, gaiSettlerWorkerCombatList
-	#~ gaiSettlerWorkerList = [gc.getInfoTypeForString("UNITCLASS_GATHERER"), gc.getInfoTypeForString("UNITCLASS_TRIBE"),
-					#~ gc.getInfoTypeForString("UNITCLASS_WORKER"), gc.getInfoTypeForString("UNITCLASS_SETTLER"),
-					#~ gc.getInfoTypeForString("UNIT_INDIAN_FAST_WORKER"), gc.getInfoTypeForString("UNITCLASS_WORKBUFFALO"),
-					#~ gc.getInfoTypeForString("UNITCLASS_WORKMULE"), gc.getInfoTypeForString("UNITCLASS_WORKELEPHANT"),
-					#~ gc.getInfoTypeForString("UNIT_WORKER_INDUSTRIAL"), gc.getInfoTypeForString("UNIT_WORKER_MODERN"),
-					#~ gc.getInfoTypeForString("UNIT_CLONES"), gc.getInfoTypeForString("UNIT_WORKER_ANDROID"),
-					#~ gc.getInfoTypeForString("UNIT_WORKBOAT"), gc.getInfoTypeForString("UNIT_CLASSIC_WORKBOAT"),
-					#~ gc.getInfoTypeForString("UNIT_MIDDLE_WORKBOAT"), gc.getInfoTypeForString("UNIT_MODERN_WORKBOAT"),
-					#~ gc.getInfoTypeForString("UNIT_CONSTRUCT_SHIP")
-					#~ ]
 
-	gaiSettlerWorkerCombatList =  [	GC.getInfoTypeForString("UNITCOMBAT_SETTLER"),
-									GC.getInfoTypeForString("UNITCOMBAT_WORKER"),
-									GC.getInfoTypeForString("UNITCOMBAT_SEA_WORKER")]
-
-	giMilInstCivic = GC.getInfoTypeForString("CIVIC_MILITARY_TRADITION")
-	giVolArmyCivic = GC.getInfoTypeForString("CIVIC_VOLUNTEER_ARMY")
+	gaiSettlerWorkerCombatList = [
+		GC.getInfoTypeForString("UNITCOMBAT_SETTLER"),
+		GC.getInfoTypeForString("UNITCOMBAT_WORKER"),
+		GC.getInfoTypeForString("UNITCOMBAT_SEA_WORKER")
+	]
+	giMilInstCivic = GC.getInfoTypeForString("CIVIC_MARTIAL")
+	giVolArmyCivic = GC.getInfoTypeForString("CIVIC_VOLUNTARY")
 
 def onUnitBuilt( argsList):
 	'Unit Completed'
@@ -49,8 +34,7 @@ def onUnitBuilt( argsList):
 	if pPlayer.isCivic(giVolArmyCivic):
 		iMilitaryCivic = iMilitaryCivic + 1
 	if iMilitaryCivic > 0:
-		#~ if not (unit.getUnitType() in gaiSettlerWorkerList) and isWorldUnitClass(unit.getUnitClassType()) == False:
-		if not (unit.getUnitCombatType() in gaiSettlerWorkerCombatList) and isWorldUnitClass(unit.getUnitClassType()) == False:
+		if not (unit.getUnitCombatType() in gaiSettlerWorkerCombatList) and isWorldUnit(unit.getUnitType()) == False:
 			iX = city.getX()
 			iY = city.getY()
 
@@ -127,6 +111,3 @@ def attemptPromotion(pUnit, iChance, szProposedPromotion):
 		ePromotion = GC.getInfoTypeForString(szProposedPromotion)
 		if pUnit.canAcquirePromotion(ePromotion):
 			pUnit.setHasPromotion(ePromotion, True)
-
-
-#END MILITIA PROMOTIONS CODE

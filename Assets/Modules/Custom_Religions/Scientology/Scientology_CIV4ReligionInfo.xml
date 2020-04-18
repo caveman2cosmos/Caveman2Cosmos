@@ -7,11 +7,11 @@
 	<ReligionInfos>
 		<ReligionInfo>
 			<Type>RELIGION_SCIENTOLOGY</Type>
-			<Description>TXT_KEY_RELIGION_SCIENTOLOGY</Description>
-			<Adjective>TXT_KEY_RELIGION_SCIENTOLOGY_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_RELIGION_SCIENTOLOGY_PEDIA</Civilopedia>
+			<Description>TXT_KEY_TECH_SCIENTOLOGY</Description>
+			<Adjective>TXT_KEY_TECH_SCIENTOLOGY_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_TECH_SCIENTOLOGY_PEDIA</Civilopedia>
 			<TechPrereq>TECH_SCIENTOLOGY</TechPrereq>
-			<FreeUnitClass>UNITCLASS_SCIENTOLOGY_MISSIONARY</FreeUnitClass>
+			<FreeUnit>UNIT_SCIENTOLOGY_MISSIONARY</FreeUnit>
 			<iFreeUnits>2</iFreeUnits>
 			<iSpreadFactor>5</iSpreadFactor>
 			<iTGAIndex>28</iTGAIndex>

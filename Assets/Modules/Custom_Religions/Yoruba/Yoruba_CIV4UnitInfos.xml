@@ -7,10 +7,9 @@
 <Civ4UnitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_YORUBA_MISSIONARY</Class>
 			<Type>UNIT_YORUBA_MISSIONARY</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_YORUBA_MISSIONARY</Capture>
+			<Capture>UNIT_YORUBA_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -22,9 +21,12 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_YORUBA_MISSIONARY</Description>
-			<Civilopedia>TXT_KEY_RELIGION_YORUBA_PEDIA</Civilopedia>
+			<Civilopedia>TXT_KEY_TECH_YORUBA_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_YORUBA_MISSIONARY_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ReligionSpreads>
@@ -34,7 +36,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_YORUBA</PrereqReligion>
-			<PrereqBuilding>BUILDING_OLOFIN</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_OLOFIN</BuildingType>
+			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>

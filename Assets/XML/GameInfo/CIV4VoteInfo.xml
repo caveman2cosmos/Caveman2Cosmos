@@ -1,9 +1,4 @@
-<?xml version="1.0"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Vote Infos -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4VoteInfo xmlns="x-schema:../Schema/C2C_CIV4GameInfoSchema.xml">
 	<VoteInfos>
 		<VoteInfo>
@@ -194,7 +189,7 @@
 			<bAssignCity>0</bAssignCity>
 			<ForceCivics>
 				<ForceCivic>
-					<CivicType>CIVIC_SENATE</CivicType>
+					<CivicType>CIVIC_LEGISLATURE</CivicType>
 					<bForce>1</bForce>
 				</ForceCivic>
 			</ForceCivics>
@@ -226,7 +221,7 @@
 			<bAssignCity>0</bAssignCity>
 			<ForceCivics>
 				<ForceCivic>
-					<CivicType>CIVIC_LIBERAL</CivicType>
+					<CivicType>CIVIC_EGALITARIAN</CivicType>
 					<bForce>1</bForce>
 				</ForceCivic>
 			</ForceCivics>
@@ -258,7 +253,7 @@
 			<bAssignCity>0</bAssignCity>
 			<ForceCivics>
 				<ForceCivic>
-					<CivicType>CIVIC_ENVIRONMENTALISM</CivicType>
+					<CivicType>CIVIC_GREEN</CivicType>
 					<bForce>1</bForce>
 				</ForceCivic>
 			</ForceCivics>
@@ -290,7 +285,7 @@
 			<bAssignCity>0</bAssignCity>
 			<ForceCivics>
 				<ForceCivic>
-					<CivicType>CIVIC_SECULAR</CivicType>
+					<CivicType>CIVIC_SECULARISM</CivicType>
 					<bForce>1</bForce>
 				</ForceCivic>
 			</ForceCivics>

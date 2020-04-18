@@ -8,11 +8,11 @@
 	<ReligionInfos>
 		<ReligionInfo>
 			<Type>RELIGION_VOODOO</Type>
-			<Description>TXT_KEY_RELIGION_VOODOO</Description>
-			<Adjective>TXT_KEY_RELIGION_VOODOO_ADJECTIVE</Adjective>
-			<Civilopedia>TXT_KEY_RELIGION_VOODOO_PEDIA</Civilopedia>
+			<Description>TXT_KEY_TECH_VOODOO</Description>
+			<Adjective>TXT_KEY_TECH_VOODOO_ADJECTIVE</Adjective>
+			<Civilopedia>TXT_KEY_TECH_VOODOO_PEDIA</Civilopedia>
 			<TechPrereq>TECH_VOODOO</TechPrereq>
-			<FreeUnitClass>UNITCLASS_VOODOO_MISSIONARY</FreeUnitClass>
+			<FreeUnit>UNIT_VOODOO_MISSIONARY</FreeUnit>
 			<iFreeUnits>0</iFreeUnits>
 			<iSpreadFactor>1</iSpreadFactor>
 			<iTGAIndex>26</iTGAIndex>

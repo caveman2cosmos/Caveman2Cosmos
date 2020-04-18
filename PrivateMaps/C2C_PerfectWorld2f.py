@@ -460,7 +460,7 @@ class MapConstants :
 
 				#Randomly allows wonder class bonuses (stone and marble) to be used to sweeten starting positions.
 				#(Chance per starting position to allow 1 wonder bonus)
-				self.allowWonderBonusChance = 0.05
+				self.allowStrategicBonusChance = 0.05
 
 				#Randomly allows bonuses with continent limiter to be used to sweeten starting positions.
 				#(Chance per attempt to place an area-restricted resource in the wrong area)
@@ -4091,7 +4091,7 @@ class BonusPlacer:
 			return False
 		bonusInfo = gc.getBonusInfo(eBonus)
 		if plot.isPeak():
-			if not gc.getGame().isOption(GameOptionTypes.GAMEOPTION_MOUNTAINS) or not bonusInfo.isPeaks():
+			if not bonusInfo.isPeaks():
 				return False
 		else:
 			#Here is the change from canHaveBonus. Forest does not block bonus
@@ -4610,7 +4610,7 @@ class StartingPlotFinder:
 		yields.append(YieldTypes.YIELD_COMMERCE)
 		yields.append(YieldTypes.YIELD_FOOD)
 		#NEW CODE - Fuyu
-		allowBonusWonderClass = (PRand.random() <= mc.allowWonderBonusChance)
+		bAllowStrategicBonus = (PRand.random() <= mc.allowStrategicBonusChance)
 		plotList = []
 		#print "Num city plots: %d" % gc.getNUM_CITY_PLOTS()
 		for i in range(21): # gc.getNUM_CITY_PLOTS()
@@ -4656,11 +4656,11 @@ class StartingPlotFinder:
 							continue
 						if not bp.PlotCanHaveBonus(plot, bonusEnum, False, True):
 							continue
-					if bonusInfo.getBonusClassType() == gc.getInfoTypeForString("BONUSCLASS_WONDER") or bonusInfo.getBonusClassType() == gc.getInfoTypeForString("BONUSCLASS_RUSH") or bonusInfo.getBonusClassType() == gc.getInfoTypeForString("BONUSCLASS_MODERN"):
-						if not allowBonusWonderClass:
+					if bonusInfo.getBonusClassType() == gc.getInfoTypeForString("BONUSCLASS_STRATEGIC"):
+						if not bAllowStrategicBonus:
 							continue
 						else:
-							allowBonusWonderClass = False
+							bAllowStrategicBonus = False
 					plot.setBonusType(bonusEnum)
 					bonusCount += 1
 					break
@@ -5370,11 +5370,11 @@ def generateTerrainTypes():
 		terrainDesert = gc.getInfoTypeForString("TERRAIN_DESERT")
 		terrainScrub = gc.getInfoTypeForString("TERRAIN_SCRUB")
 		terrainRocky = gc.getInfoTypeForString("TERRAIN_ROCKY")
-		terrainRockyArid = gc.getInfoTypeForString("TERRAIN_ROCKY_ARID")
-		terrainRockyCold = gc.getInfoTypeForString("TERRAIN_ROCKY_COLD")
+		terrainRockyArid = gc.getInfoTypeForString("TERRAIN_BADLAND")
+		terrainRockyCold = gc.getInfoTypeForString("TERRAIN_JAGGED")
 		terrainBarren = gc.getInfoTypeForString("TERRAIN_BARREN")
 		terrainPlains = gc.getInfoTypeForString("TERRAIN_PLAINS")
-		terrainGrass = gc.getInfoTypeForString("TERRAIN_GRASS")
+		terrainGrass = gc.getInfoTypeForString("TERRAIN_GRASSLAND")
 		terrainLush = gc.getInfoTypeForString("TERRAIN_LUSH")
 		terrainMuddy = gc.getInfoTypeForString("TERRAIN_MUDDY")
 		terrainMarsh = gc.getInfoTypeForString("TERRAIN_MARSH")
@@ -5851,7 +5851,7 @@ def addFeatures():
 		featureReef = gc.getInfoTypeForString("FEATURE_REEF")
 		featureKelp = gc.getInfoTypeForString("FEATURE_KELP")
 		featureBog = gc.getInfoTypeForString("FEATURE_PEAT_BOG")
-		featureSwordGrass = gc.getInfoTypeForString("FEATURE_SWORD_GRASS")
+		featureSwordGrass = gc.getInfoTypeForString("FEATURE_VERY_TALL_GRASS")
 		featureSwamp = gc.getInfoTypeForString("FEATURE_SWAMP")
 		## C2C end ##
 		FORESTLEAFY = 0

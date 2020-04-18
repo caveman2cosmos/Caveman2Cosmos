@@ -129,11 +129,10 @@ class StatusDumpEvent(AbstractStatusDumpEvent):
 		self._writeMsg(" ", vColor="Black", vBold=False, vUnderline=False, vOpenSpoiler="", vCloseSpoiler=True)
 
 	def _getGameYear(self):
-		zturn = GAME.getGameTurn() + 1
-		zyear = GAME.getTurnYear(zturn)
-		if zyear < 0:
-			return str(zyear) + TRNSLTR.getText("TXT_KEY_AUTOLOG_BC", ())
-		return str(zyear) + TRNSLTR.getText("TXT_KEY_AUTOLOG_AD", ())
+		iYear = GAME.getTurnYear(GAME.getGameTurn() + 1)
+		if iYear < 0:
+			return TRNSLTR.getText("TXT_KEY_TIME_BC", (-iYear,))
+		return TRNSLTR.getText("TXT_KEY_TIME_AD", (iYear,))
 
 	def _getGameTurn(self):
 		zcurrturn = GAME.getElapsedGameTurns() + 1 + BugAutolog.get4000BCTurn()

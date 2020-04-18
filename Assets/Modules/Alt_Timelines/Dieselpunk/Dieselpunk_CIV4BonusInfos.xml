@@ -29,7 +29,7 @@
 		<Type>BONUS_THEREMIN</Type>
 		<Description>TXT_KEY_BONUS_THEREMIN</Description>
 		<Civilopedia>TXT_KEY_BONUS_THEREMIN_PEDIA</Civilopedia>
-		<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+		<BonusClassType>BONUSCLASS_MANUFACTURED</BonusClassType>
 		<ArtDefineTag>ART_DEF_BONUS_THEREMIN</ArtDefineTag>
 		<TechReveal>TECH_ELECTRONICS</TechReveal>
 		<TechCityTrade>TECH_ELECTRONICS</TechCityTrade>

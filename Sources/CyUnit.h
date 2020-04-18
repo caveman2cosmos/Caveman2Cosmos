@@ -31,7 +31,7 @@ public:
 	CvUnit* getUnit() { return m_pUnit;	};	// Call from C++
 	const CvUnit* getUnit() const { return m_pUnit;	};	// Call from C++
 	bool isNone() { return (m_pUnit==NULL); }
-	void convert(CyUnit* pUnit);
+	void convert(CyUnit* pUnit, const bool bKillOriginal);
 	void kill(bool bDelay, int /*PlayerTypes*/ ePlayer);
 
 	void NotifyEntity(int /*MissionTypes*/ eMission);
@@ -54,28 +54,13 @@ public:
 	bool jumpToNearestValidPlot();
 
 	bool canAutomate(AutomateTypes eAutomate);
-/************************************************************************************************/
-/* RevDCM	                  Start		 21/12/2010                                             */
-/*                                                                                              */
-/* Advanced Automations                                                                         */
-/************************************************************************************************/
 	bool isAutoUpgrading();
 	bool isAutoPromoting();
-/************************************************************************************************/
-/* Advanced Automations		end                                                                 */
-/************************************************************************************************/
 
 	bool canScrap();
 	bool canGift(bool bTestVisible);
-	/********************************************************************************/
-	/*		REVOLUTION_MOD							1/1/08				jdog5000	*/
-	/*																				*/
-	/*		 																		*/
-	/********************************************************************************/
 	void gift();
-	/********************************************************************************/
-	/*		REVOLUTION_MOD							END								*/
-	/********************************************************************************/
+
 	bool canLoadUnit(CyUnit* pUnit, CyPlot* pPlot);
 	bool canLoad(CyPlot* pPlot);
 	bool canUnload();
@@ -164,14 +149,14 @@ public:
 	void promote(int /*PromotionTypes*/ ePromotion, int iLeaderUnitId);
 
 	int upgradePrice(int /*UnitTypes*/ eUnit);
-	bool upgradeAvailable(int /*UnitTypes*/ eFromUnit, int /*UnitClassTypes*/ eToUnitClass, int iCount);
+	bool upgradeAvailable(int /*UnitTypes*/ eFromUnit, int /*UnitTypes*/ eToUnit, int iCount);
 	bool canUpgrade(int /*UnitTypes*/ eUnit, bool bTestVisible);
 	bool hasUpgrade(bool bSearch);
 
 	int /*HandicapTypes*/ getHandicapType();
 	int /*CivilizationTypes*/ getCivilizationType();
 	int /*SpecialUnitTypes*/ getSpecialUnitType();
-	int /*UnitTypes*/ getCaptureUnitType(int /*CivilizationTypes*/ eCivilization);
+	int /*UnitTypes*/ getCaptureUnitType();
 	int /*UnitCombatTypes*/ getUnitCombatType();
 	int /*DomainTypes*/ getDomainType();
 	int /*InvisibleTypes*/ getInvisibleType();
@@ -208,22 +193,12 @@ public:
 	bool isInvestigate();
 	bool isCounterSpy();
 	bool isFound();
-
-	/********************************************************************************/
-	/*		REVOLUTION_MOD							1/1/08				DPII		*/
-	/*																				*/
-	/*		 																		*/
-	/********************************************************************************/
-	/*
+/*
 	bool isCanBeRebel();
 	bool isCanRebelCapture();
 	bool isCannotDefect();
 	bool isCanQuellRebellion();
-	*/
-	/********************************************************************************/
-	/*		REVOLUTION_MOD							END								*/
-	/********************************************************************************/
-
+*/
 	bool isGoldenAge();
 	bool canCoexistWithEnemyUnit(int /*TeamTypes*/ eTeam);
 
@@ -347,8 +322,8 @@ public:
 	int terrainDefenseModifier(int /*TerrainTypes*/ eTerrain);
 	int featureAttackModifier(int /*FeatureTypes*/ eFeature);
 	int featureDefenseModifier(int /*FeatureTypes*/ eFeature);
-	int unitClassAttackModifier(int /*UnitClassTypes*/ eUnitClass);
-	int unitClassDefenseModifier(int /*UnitClassTypes*/ eUnitClass);
+	int unitAttackModifier(int /*UnitTypes*/ eUnit);
+	int unitDefenseModifier(int /*UnitTypes*/ eUnit);
 	int unitCombatModifier(int /*UnitCombatTypes*/ eUnitCombat);
 	int domainModifier(int /*DomainTypes*/ eDomain);
 
@@ -405,15 +380,8 @@ public:
 	void rotateFacingDirectionCounterClockwise();
 	int getCargo();
 	int getFortifyTurns();
-	/********************************************************************************/
-	/*		REVOLUTION_MOD							1/1/08				jdog5000	*/
-	/*																				*/
-	/*		 																		*/
-	/********************************************************************************/
 	void setFortifyTurns(int iNewValue);
-	/********************************************************************************/
-	/*		REVOLUTION_MOD							END								*/
-	/********************************************************************************/
+
 	int getBlitzCount();
 	bool isBlitz();
 	int getAmphibCount();
@@ -508,7 +476,6 @@ public:
 	int getTeam();
 
 	int /*UnitTypes*/ getUnitType();
-	int /*UnitClassTypes*/ getUnitClassType();
 	int /*UnitTypes*/ getLeaderUnitType();
 	void setLeaderUnitType(int /*UnitTypes*/ leaderUnitType);
 
@@ -564,11 +531,7 @@ public:
 	void centerCamera();
 	void attackForDamage(CyUnit *defender, int attakerDamageChange, int defenderDamageChange);
 	void rangeStrike(int iX, int iY);
-/************************************************************************************************/
-/* Afforess	                  Start		 03/1/10                       Coded By: KillMePlease   */
-/*                                                                                              */
-/* Great Commanders                                                                             */
-/************************************************************************************************/
+
 	bool isCommander() const;
 	int controlPointsLeft() const;
 	int controlPoints() const;
@@ -577,9 +540,6 @@ public:
 	float getRealExperience();
 	void setExperience100(int iNewValue, int iMax);
 	void changeExperience100(int iChange, int iMax, bool bFromCombat, bool bInBorders, bool bUpdateGlobal);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 protected:
 	CvUnit* m_pUnit;

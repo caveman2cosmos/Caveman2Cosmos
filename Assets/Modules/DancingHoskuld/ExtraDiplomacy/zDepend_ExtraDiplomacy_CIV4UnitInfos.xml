@@ -8,22 +8,30 @@
 	<UnitInfos>
 		<UnitInfo>
 			<Type>UNIT_DIPLOMAT_MESSENGER</Type>
-			<PrereqBuilding>BUILDING_NEGOTIATOR_HUT</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_NEGOTIATOR_HUT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_NEGOTIATION</PrereqTech>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_DIPLOMAT_EARLY</Type>
-			<PrereqBuilding>BUILDING_AMBASSADOR_HOUSE</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_AMBASSADOR_HOUSE</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_DIPLOMACY</PrereqTech>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_DIPLOMAT_INDUST</Type>
-			<PrereqBuilding>BUILDING_DEPT_FOREIGN_POLICY_EFFECT</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_DEPARTMENT_FOREIGN_EFFECT</BuildingType>
+			</PrereqAndBuildings>
 			<PrereqTech>TECH_FOREIGN_POLICY</PrereqTech>
 		</UnitInfo>
 		<UnitInfo>
 			<Type>UNIT_DIPLOMAT_MODERN</Type>
-			<PrereqBuilding>BUILDING_DEPT_FOREIGN_POLICY_EFFECT</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_DEPARTMENT_FOREIGN_EFFECT</BuildingType>
+			</PrereqAndBuildings>
 		</UnitInfo>
 	</UnitInfos>
 </Civ4UnitInfos>

@@ -24,7 +24,7 @@
 			<bProbabilityBuildingMultiply>1</bProbabilityBuildingMultiply>
 			<iMaxOurLandmass>-1</iMaxOurLandmass>
 			<BuildingsRequired>
-				<BuildingClass>BUILDINGCLASS_FIREPIT</BuildingClass>
+				<Building>BUILDING_FIRE_PIT</Building>
 			</BuildingsRequired>
 			<iNumBuildings>1</iNumBuildings>
 			<iPlotType>-1</iPlotType>

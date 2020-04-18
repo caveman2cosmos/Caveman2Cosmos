@@ -7,10 +7,9 @@
 <Civ4UnitInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4UnitSchema.xml">
 	<UnitInfos>
 		<UnitInfo>
-			<Class>UNITCLASS_SHINTO_MISSIONARY</Class>
 			<Type>UNIT_SHINTO_MISSIONARY</Type>
 			<Special>SPECIALUNIT_PEOPLE</Special>
-			<Capture>UNITCLASS_SHINTO_MISSIONARY</Capture>
+			<Capture>UNIT_SHINTO_MISSIONARY</Capture>
 			<Combat>UNITCOMBAT_MISSIONARY</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_CIVILIAN</SubCombatType>
@@ -22,6 +21,9 @@
 				<SubCombatType>UNITCOMBAT_HEALS_AS_PEOPLE</SubCombatType>
 			</SubCombatTypes>
 			<Domain>DOMAIN_LAND</Domain>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_MISSIONARY</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_SHINTO_MISSIONARY</Description>
 			<Civilopedia>TXT_KEY_UNIT_SHINTO_MISSIONARY_PEDIA</Civilopedia>
@@ -34,7 +36,9 @@
 				</ReligionSpread>
 			</ReligionSpreads>
 			<PrereqReligion>RELIGION_SHINTO</PrereqReligion>
-			<PrereqBuilding>BUILDING_SHINTO_MONASTERY</PrereqBuilding>
+			<PrereqAndBuildings>
+				<BuildingType>BUILDING_SHINTO_MONASTERY</BuildingType>
+			</PrereqAndBuildings>
 			<iCost>110</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iMoves>2</iMoves>

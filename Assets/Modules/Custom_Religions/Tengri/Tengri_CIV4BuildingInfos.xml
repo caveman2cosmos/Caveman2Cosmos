@@ -7,7 +7,6 @@
 <Civ4BuildingInfos xmlns="x-schema:../../../XML/Schema/C2C_CIV4BuildingsSchema.xml">
 	<BuildingInfos>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_EJE_SONG</BuildingClass>
 			<Type>BUILDING_EJE_SONG</Type>
 			<SpecialBuildingType></SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_EJE_SONG</Description>
@@ -15,6 +14,9 @@
 			<Strategy>TXT_KEY_BUILDING_EJE_SONG_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_EJE_SONG</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_TENGRIISM</ReligionType>
 			<PrereqReligion>RELIGION_TENGRIISM</PrereqReligion>
 			<FreePromotion>PROMOTION_WIND_HORSE</FreePromotion>
@@ -45,16 +47,13 @@
 			<ConstructSound>AS2D_BUILD_SIBERIAN</ConstructSound>
 			<BonusHappinessChanges>
 				<BonusHappinessChange>
-					<BonusType>BONUS_FUR</BonusType>
+					<BonusType>BONUS_BEAVERS</BonusType>
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SHAMANS_YURTA</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SHAMANS_YURTA</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -70,7 +69,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_SHAMANS_YURTA</BuildingClass>
 			<Type>BUILDING_SHAMANS_YURTA</Type>
 			<SpecialBuildingType>SPECIALBUILDING_MONASTERY_II</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_SHAMANS_YURTA</Description>
@@ -78,11 +76,14 @@
 			<Strategy>TXT_KEY_BUILDING_SHAMANS_YURTA_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_SHAMANS_YURTA</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_TENGRIISM</ReligionType>
 			<PrereqReligion>RELIGION_TENGRIISM</PrereqReligion>
 			<Bonus>BONUS_LEATHER</Bonus>
 			<PrereqBonuses>
-				<Bonus>BONUS_TIMBER</Bonus>
+				<Bonus>BONUS_PRIME_TIMBER</Bonus>
 				<Bonus>BONUS_WOOD</Bonus>
 			</PrereqBonuses>
 			<bNeverCapture>1</bNeverCapture>
@@ -126,7 +127,6 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_KING_GESAR_SONG</BuildingClass>
 			<Type>BUILDING_KING_GESAR_SONG</Type>
 			<SpecialBuildingType>SPECIALBUILDING_CATHEDRAL_II</SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_KING_GESAR_SONG</Description>
@@ -134,6 +134,9 @@
 			<Strategy>TXT_KEY_BUILDING_KING_GESAR_SONG_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_KING_GESAR_SONG</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_TENGRIISM</ReligionType>
 			<StateReligion>RELIGION_TENGRIISM</StateReligion>
 			<PrereqReligion>RELIGION_TENGRIISM</PrereqReligion>
@@ -161,12 +164,9 @@
 				</SpecialistCount>
 			</SpecialistCounts>
 			<ConstructSound>AS2D_BUILD_SIBERIAN</ConstructSound>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SHAMANS_YURTA</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SHAMANS_YURTA</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -182,21 +182,22 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_TENGRI_SHRINE</BuildingClass>
 			<Type>BUILDING_TENGRI_SHRINE</Type>
 			<Description>TXT_KEY_BUILDING_TENGRI_SHRINE</Description>
 			<Civilopedia>TXT_KEY_BUILDING_TENGRI_SHRINE_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_BUILDING_TENGRI_SHRINE_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TENGRI_SHRINE</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<MovieDefineTag>ART_DEF_MOVIE_TENGRI_SHRINE</MovieDefineTag>
 			<HolyCity>RELIGION_TENGRIISM</HolyCity>
 			<ReligionType>RELIGION_TENGRIISM</ReligionType>
 			<GlobalReligionCommerce>RELIGION_TENGRIISM</GlobalReligionCommerce>
-			<GreatPeopleUnitClass>UNITCLASS_PROPHET</GreatPeopleUnitClass>
+			<GreatPeopleUnitType>UNIT_PROPHET</GreatPeopleUnitType>
 			<iGreatPeopleRateChange>1</iGreatPeopleRateChange>
 			<bNukeImmune>1</bNukeImmune>
-			<iCost>-1</iCost>
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iConquestProb>100</iConquestProb>
 			<iAsset>8</iAsset>
@@ -225,7 +226,6 @@
 			</Flavors>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_TENGRI_SONG</BuildingClass>
 			<Type>BUILDING_TENGRI_SONG</Type>
 			<SpecialBuildingType></SpecialBuildingType>
 			<Description>TXT_KEY_BUILDING_TENGRI_SONG</Description>
@@ -233,6 +233,9 @@
 			<Strategy>TXT_KEY_BUILDING_TENGRI_SONG_STRATEGY</Strategy>
 			<Advisor>ADVISOR_RELIGION</Advisor>
 			<ArtDefineTag>ART_DEF_BUILDING_TENGRI_SONG</ArtDefineTag>
+			<MapCategoryTypes>
+				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
+			</MapCategoryTypes>
 			<ReligionType>RELIGION_TENGRIISM</ReligionType>
 			<StateReligion>RELIGION_TENGRIISM</StateReligion>
 			<PrereqReligion>RELIGION_TENGRIISM</PrereqReligion>
@@ -268,18 +271,15 @@
 					<iHappinessChange>1</iHappinessChange>
 				</BonusHappinessChange>
 			</BonusHappinessChanges>
-			<PrereqBuildingClasses>
-				<PrereqBuildingClass>
-					<BuildingClassType>BUILDINGCLASS_EJE_SONG</BuildingClassType>
+			<PrereqAmountBuildings>
+				<PrereqBuilding>
+					<BuildingType>BUILDING_EJE_SONG</BuildingType>
 					<iNumBuildingNeeded>1</iNumBuildingNeeded>
-				</PrereqBuildingClass>
-			</PrereqBuildingClasses>
-			<BuildingClassNeededs>
-				<BuildingClassNeeded>
-					<BuildingClassType>BUILDINGCLASS_SHAMANS_YURTA</BuildingClassType>
-					<bNeededInCity>1</bNeededInCity>
-				</BuildingClassNeeded>
-			</BuildingClassNeededs>
+				</PrereqBuilding>
+			</PrereqAmountBuildings>
+			<PrereqInCityBuildings>
+				<BuildingType>BUILDING_SHAMANS_YURTA</BuildingType>
+			</PrereqInCityBuildings>
 			<Flavors>
 				<Flavor>
 					<FlavorType>FLAVOR_RELIGION</FlavorType>
@@ -295,22 +295,21 @@
 			</PropertyManipulators>
 		</BuildingInfo>
 		<BuildingInfo>
-			<BuildingClass>BUILDINGCLASS_DJENNE</BuildingClass>
 			<Type>BUILDING_DJENNE</Type>
-			<GlobalBuildingClassProductionModifiers>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_EJE_SONG</BuildingClassType>
+			<GlobalBuildingProductionModifiers>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_EJE_SONG</BuildingType>
 					<iProductionModifier>100</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_KING_GESAR_SONG</BuildingClassType>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_KING_GESAR_SONG</BuildingType>
 					<iProductionModifier>100</iProductionModifier>
-				</BuildingClassProductionModifier>
-				<BuildingClassProductionModifier>
-					<BuildingClassType>BUILDINGCLASS_TENGRI_SONG</BuildingClassType>
+				</BuildingProductionModifier>
+				<BuildingProductionModifier>
+					<BuildingType>BUILDING_TENGRI_SONG</BuildingType>
 					<iProductionModifier>100</iProductionModifier>
-				</BuildingClassProductionModifier>
-			</GlobalBuildingClassProductionModifiers>
+				</BuildingProductionModifier>
+			</GlobalBuildingProductionModifiers>
 		</BuildingInfo>
 	</BuildingInfos>
 </Civ4BuildingInfos>

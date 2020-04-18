@@ -10,7 +10,7 @@
 			<Type>BONUS_ABANDONED_CIVILIZATION</Type>
 			<Description>TXT_KEY_BONUS_ABANDONED_CIVILIZATION</Description>
 			<Civilopedia>TXT_KEY_BONUS_ABANDONED_CIVILIZATION_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_MISC</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ABANDONED_CIVILIZATION</ArtDefineTag>
 			<TechReveal>TECH_ASTROIMPERIALISM</TechReveal>
 			<TechCityTrade>TECH_ASTROIMPERIALISM</TechCityTrade>
@@ -19,7 +19,7 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
-			<iPlacementOrder>4</iPlacementOrder>
+			<iPlacementOrder>-1</iPlacementOrder>
 			<iConstAppearance>35</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<iMinLatitude>0</iMinLatitude>
@@ -63,13 +63,13 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
                 <FeatureBoolean>
-					<FeatureType>FEATURE_WATER_PLANET</FeatureType>
+					<FeatureType>FEATURE_OCEAN_PLANET</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 			</FeatureBooleans>
 			<FeatureTerrainBooleans>
 				<FeatureTerrainBoolean>
-					<TerrainType>TERRAIN_TRANSTELLAR</TerrainType>
+					<TerrainType>TERRAIN_TRANSTELLAR_SPACE</TerrainType>
 					<bFeatureTerrain>1</bFeatureTerrain>
 				</FeatureTerrainBoolean>
 			</FeatureTerrainBooleans>
@@ -78,7 +78,7 @@
 			<Type>BONUS_ABANDONED_MEGASTRUCTURE</Type>
 			<Description>TXT_KEY_BONUS_ABANDONED_MEGASTRUCTURE</Description>
 			<Civilopedia>TXT_KEY_BONUS_ABANDONED_MEGASTRUCTURE_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_MISC</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ABANDONED_MEGASTRUCTURE</ArtDefineTag>
 			<TechReveal>TECH_CULTURAL_LONGEVITY</TechReveal>
 			<TechCityTrade>TECH_CULTURAL_LONGEVITY</TechCityTrade>
@@ -87,7 +87,7 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
-			<iPlacementOrder>4</iPlacementOrder>
+			<iPlacementOrder>-1</iPlacementOrder>
 			<iConstAppearance>35</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<iMinLatitude>0</iMinLatitude>
@@ -113,7 +113,7 @@
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
                 <TerrainBoolean>
-					<TerrainType>TERRAIN_COSMOS</TerrainType>
+					<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
                 <TerrainBoolean>
@@ -126,7 +126,7 @@
 			<Type>BONUS_EXOTIC_LIFEFORMS</Type>
 			<Description>TXT_KEY_BONUS_EXOTIC_LIFEFORMS</Description>
 			<Civilopedia>TXT_KEY_BONUS_EXOTIC_LIFEFORMS_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_MISC</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_EXOTIC_LIFEFORMS</ArtDefineTag>
 			<TechReveal>TECH_ENDLESS_EXPLORATION</TechReveal>
 			<TechCityTrade>TECH_ENDLESS_EXPLORATION</TechCityTrade>
@@ -135,7 +135,7 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>3</iYieldChange>
 			</YieldChanges>
-			<iPlacementOrder>4</iPlacementOrder>
+			<iPlacementOrder>-1</iPlacementOrder>
 			<iConstAppearance>35</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<iMinLatitude>0</iMinLatitude>
@@ -153,11 +153,11 @@
 			<bNormalize>1</bNormalize>
 			<TerrainBooleans>
                 <TerrainBoolean>
-					<TerrainType>TERRAIN_COSMOS</TerrainType>
+					<TerrainType>TERRAIN_OBSERVABLE_UNIVERSE</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
                 <TerrainBoolean>
-					<TerrainType>TERRAIN_GALACTIC_VOID</TerrainType>
+					<TerrainType>TERRAIN_INTERGALACTIC_VOID</TerrainType>
 					<bTerrain>1</bTerrain>
 				</TerrainBoolean>
                 <TerrainBoolean>
@@ -170,16 +170,16 @@
 			<Type>BONUS_EXTRATERRESTRIAL_MICROBES</Type>
 			<Description>TXT_KEY_BONUS_EXTRATERRESTRIAL_MICROBES</Description>
 			<Civilopedia>TXT_KEY_BONUS_EXTRATERRESTRIAL_MICROBES_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_PRODUCTION</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_EXTRATERRESTRIAL_MICROBES</ArtDefineTag>
-			<TechReveal>TECH_JUPITERE</TechReveal>
-			<TechCityTrade>TECH_JUPITERE</TechCityTrade>
+			<TechReveal>TECH_JOVIAN_EXPLORATION</TechReveal>
+			<TechCityTrade>TECH_JOVIAN_EXPLORATION</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 				<iYieldChange>1</iYieldChange>
 			</YieldChanges>
-			<iPlacementOrder>4</iPlacementOrder>
+			<iPlacementOrder>-1</iPlacementOrder>
 			<iConstAppearance>35</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<iMinLatitude>0</iMinLatitude>
@@ -242,16 +242,16 @@
 			<Type>BONUS_MARTIAN_BLUEBERRIES</Type>
 			<Description>TXT_KEY_BONUS_MARTIAN_BLUEBERRIES</Description>
 			<Civilopedia>TXT_KEY_BONUS_MARTIAN_BLUEBERRIES_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_PRODUCTION</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_MARTIAN_BLUEBERRIES</ArtDefineTag>
-			<TechReveal>TECH_PLANET_EXTRACTION</TechReveal>
-			<TechCityTrade>TECH_PLANET_EXTRACTION</TechCityTrade>
+			<TechReveal>TECH_PLANETARY_EXTRACTION</TechReveal>
+			<TechCityTrade>TECH_PLANETARY_EXTRACTION</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>3</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 			</YieldChanges>
-			<iPlacementOrder>4</iPlacementOrder>
+			<iPlacementOrder>-1</iPlacementOrder>
 			<iConstAppearance>35</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<iMinLatitude>0</iMinLatitude>
@@ -302,16 +302,16 @@
 			<Type>BONUS_METALLIC_ASTEROID</Type>
 			<Description>TXT_KEY_BONUS_METALLIC_ASTEROID</Description>
 			<Civilopedia>TXT_KEY_BONUS_METALLIC_ASTEROID_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_PRODUCTION</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_METALLIC_ASTEROID</ArtDefineTag>
-			<TechReveal>TECH_ASTEROIDPROBE</TechReveal>
-			<TechCityTrade>TECH_ASTEROIDPROBE</TechCityTrade>
+			<TechReveal>TECH_ASTEROID_BELT_PROBES</TechReveal>
+			<TechCityTrade>TECH_ASTEROID_BELT_PROBES</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>3</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 			</YieldChanges>
-			<iPlacementOrder>4</iPlacementOrder>
+			<iPlacementOrder>-1</iPlacementOrder>
 			<iConstAppearance>35</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<iMinLatitude>0</iMinLatitude>
@@ -357,11 +357,11 @@
 					<bFeatureTerrain>1</bFeatureTerrain>
 				</FeatureTerrainBoolean>
                 <FeatureTerrainBoolean>
-					<TerrainType>TERRAIN_TRANSNEPTUNIAN</TerrainType>
+					<TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
 					<bFeatureTerrain>1</bFeatureTerrain>
 				</FeatureTerrainBoolean>
                 <FeatureTerrainBoolean>
-					<TerrainType>TERRAIN_TRANSTELLAR</TerrainType>
+					<TerrainType>TERRAIN_TRANSTELLAR_SPACE</TerrainType>
 					<bFeatureTerrain>1</bFeatureTerrain>
 				</FeatureTerrainBoolean>
 			</FeatureTerrainBooleans>
@@ -370,16 +370,16 @@
 			<Type>BONUS_ORGANIC_VOLATILES</Type>
 			<Description>TXT_KEY_BONUS_ORGANIC_VOLATILES</Description>
 			<Civilopedia>TXT_KEY_BONUS_ORGANIC_VOLATILES_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_MISC</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_ORGANIC_VOLATILES</ArtDefineTag>
-			<TechReveal>TECH_ASTEROIDPROBE</TechReveal>
-			<TechCityTrade>TECH_ASTEROIDPROBE</TechCityTrade>
+			<TechReveal>TECH_ASTEROID_BELT_PROBES</TechReveal>
+			<TechCityTrade>TECH_ASTEROID_BELT_PROBES</TechCityTrade>
 			<YieldChanges>
 				<iYieldChange>3</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 			</YieldChanges>
-			<iPlacementOrder>4</iPlacementOrder>
+			<iPlacementOrder>-1</iPlacementOrder>
 			<iConstAppearance>35</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<iMinLatitude>0</iMinLatitude>
@@ -425,11 +425,11 @@
 					<bFeatureTerrain>1</bFeatureTerrain>
 				</FeatureTerrainBoolean>
                 <FeatureTerrainBoolean>
-					<TerrainType>TERRAIN_TRANSNEPTUNIAN</TerrainType>
+					<TerrainType>TERRAIN_TRANSNEPTUNIAN_SPACE</TerrainType>
 					<bFeatureTerrain>1</bFeatureTerrain>
 				</FeatureTerrainBoolean>
                 <FeatureTerrainBoolean>
-					<TerrainType>TERRAIN_TRANSTELLAR</TerrainType>
+					<TerrainType>TERRAIN_TRANSTELLAR_SPACE</TerrainType>
 					<bFeatureTerrain>1</bFeatureTerrain>
 				</FeatureTerrainBoolean>
 			</FeatureTerrainBooleans>
@@ -438,7 +438,7 @@
 			<Type>BONUS_XENOFAUNA</Type>
 			<Description>TXT_KEY_BONUS_XENOFAUNA</Description>
 			<Civilopedia>TXT_KEY_BONUS_XENOFAUNA_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_LIVESTOCK</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_XENOFAUNA</ArtDefineTag>
 			<TechReveal>TECH_PLANET_SCOUTING</TechReveal>
 			<TechCityTrade>TECH_PLANET_SCOUTING</TechCityTrade>
@@ -447,7 +447,7 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 			</YieldChanges>
-			<iPlacementOrder>4</iPlacementOrder>
+			<iPlacementOrder>-1</iPlacementOrder>
 			<iConstAppearance>35</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<iMinLatitude>0</iMinLatitude>
@@ -491,13 +491,13 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
                 <FeatureBoolean>
-					<FeatureType>FEATURE_WATER_PLANET</FeatureType>
+					<FeatureType>FEATURE_OCEAN_PLANET</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 			</FeatureBooleans>
 			<FeatureTerrainBooleans>
 				<FeatureTerrainBoolean>
-					<TerrainType>TERRAIN_TRANSTELLAR</TerrainType>
+					<TerrainType>TERRAIN_TRANSTELLAR_SPACE</TerrainType>
 					<bFeatureTerrain>1</bFeatureTerrain>
 				</FeatureTerrainBoolean>
 			</FeatureTerrainBooleans>
@@ -506,7 +506,7 @@
 			<Type>BONUS_XENOFLORA</Type>
 			<Description>TXT_KEY_BONUS_XENOFLORA</Description>
 			<Civilopedia>TXT_KEY_BONUS_XENOFLORA_PEDIA</Civilopedia>
-			<BonusClassType>BONUSCLASS_GENERAL</BonusClassType>
+			<BonusClassType>BONUSCLASS_CROP</BonusClassType>
 			<ArtDefineTag>ART_DEF_BONUS_XENOFLORA</ArtDefineTag>
 			<TechReveal>TECH_PLANET_SCOUTING</TechReveal>
 			<TechCityTrade>TECH_PLANET_SCOUTING</TechCityTrade>
@@ -515,7 +515,7 @@
 				<iYieldChange>0</iYieldChange>
 				<iYieldChange>0</iYieldChange>
 			</YieldChanges>
-			<iPlacementOrder>4</iPlacementOrder>
+			<iPlacementOrder>-1</iPlacementOrder>
 			<iConstAppearance>35</iConstAppearance>
 			<iMinAreaSize>3</iMinAreaSize>
 			<iMinLatitude>0</iMinLatitude>
@@ -559,16 +559,159 @@
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
                 <FeatureBoolean>
-					<FeatureType>FEATURE_WATER_PLANET</FeatureType>
+					<FeatureType>FEATURE_OCEAN_PLANET</FeatureType>
 					<bFeature>1</bFeature>
 				</FeatureBoolean>
 			</FeatureBooleans>
 			<FeatureTerrainBooleans>
 				<FeatureTerrainBoolean>
-					<TerrainType>TERRAIN_TRANSTELLAR</TerrainType>
+					<TerrainType>TERRAIN_TRANSTELLAR_SPACE</TerrainType>
 					<bFeatureTerrain>1</bFeatureTerrain>
 				</FeatureTerrainBoolean>
 			</FeatureTerrainBooleans>
+		</BonusInfo>
+		<BonusInfo>
+			<Type>BONUS_CARBON_DIOXIDE_ICE</Type>
+			<Description>TXT_KEY_BONUS_CARBON_DIOXIDE_ICE</Description>
+			<Civilopedia>TXT_KEY_BONUS_CARBON_DIOXIDE_ICE_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MISC</BonusClassType>
+			<ArtDefineTag>ART_DEF_BONUS_CARBON_DIOXIDE_ICE</ArtDefineTag>
+			<TechReveal>TECH_ASTROGEOLOGY</TechReveal>
+			<TechCityTrade>TECH_ASTROGEOLOGY</TechCityTrade>
+			<iHealth>1</iHealth>
+			<iPlacementOrder>-1</iPlacementOrder>
+			<iConstAppearance>100</iConstAppearance>
+			<iMinAreaSize>3</iMinAreaSize>
+			<Rands>
+				<iRandApp1>25</iRandApp1>
+				<iRandApp2>25</iRandApp2>
+				<iRandApp3>25</iRandApp3>
+				<iRandApp4>25</iRandApp4>
+			</Rands>
+			<iTilesPer>332</iTilesPer>
+			<bHills>1</bHills>
+			<bFlatlands>1</bFlatlands>
+			<bNoRiverSide>1</bNoRiverSide>
+			<bNormalize>1</bNormalize>
+			<TerrainBooleans>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+			</TerrainBooleans>
+		</BonusInfo>
+		<BonusInfo>
+			<Type>BONUS_HELIUM3</Type>
+			<Description>TXT_KEY_BONUS_HELIUM3</Description>
+			<Civilopedia>TXT_KEY_BONUS_HELIUM3_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MISC</BonusClassType>
+			<ArtDefineTag>ART_DEF_BONUS_HELIUM3</ArtDefineTag>
+			<TechReveal>TECH_ASTROGEOLOGY</TechReveal>
+			<TechCityTrade>TECH_ASTROGEOLOGY</TechCityTrade>
+			<YieldChanges>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>1</iYieldChange>
+			</YieldChanges>
+			<iPlacementOrder>-1</iPlacementOrder>
+			<iConstAppearance>100</iConstAppearance>
+			<iMinAreaSize>3</iMinAreaSize>
+			<Rands>
+				<iRandApp1>25</iRandApp1>
+				<iRandApp2>25</iRandApp2>
+				<iRandApp3>25</iRandApp3>
+				<iRandApp4>25</iRandApp4>
+			</Rands>
+			<iTilesPer>64</iTilesPer>
+			<bFlatlands>1</bFlatlands>
+			<bNoRiverSide>1</bNoRiverSide>
+			<bNormalize>1</bNormalize>
+			<TerrainBooleans>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LUNAR_REGOLITH</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LUNAR_MARE</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LUNAR_RILLE</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+			</TerrainBooleans>
+		</BonusInfo>
+		<BonusInfo>
+			<Type>BONUS_QUANTONIUM_CRYSTAL</Type>
+			<Description>TXT_KEY_BONUS_QUANTONIUM_CRYSTAL</Description>
+			<Civilopedia>TXT_KEY_BONUS_QUANTONIUM_CRYSTAL_PEDIA</Civilopedia>
+			<BonusClassType>BONUSCLASS_MISC</BonusClassType>
+			<ArtDefineTag>ART_DEF_BONUS_QUANTONIUM_CRYSTAL</ArtDefineTag>
+			<TechReveal>TECH_3D_PROJECTIONS</TechReveal>
+			<TechCityTrade>TECH_3D_PROJECTIONS</TechCityTrade>
+			<YieldChanges>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>5</iYieldChange>
+			</YieldChanges>
+			<iPlacementOrder>-1</iPlacementOrder>
+			<iConstAppearance>100</iConstAppearance>
+			<iMinAreaSize>3</iMinAreaSize>
+			<Rands>
+				<iRandApp1>25</iRandApp1>
+				<iRandApp2>25</iRandApp2>
+				<iRandApp3>25</iRandApp3>
+				<iRandApp4>25</iRandApp4>
+			</Rands>
+			<iTilesPer>128</iTilesPer>
+			<bHills>1</bHills>
+			<bFlatlands>1</bFlatlands>
+			<bNoRiverSide>1</bNoRiverSide>
+			<bNormalize>1</bNormalize>
+			<TerrainBooleans>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_HYPERSPACE</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+			</TerrainBooleans>
+		</BonusInfo>
+		<BonusInfo>
+			<Type>BONUS_IRON_ORE</Type>
+			<TerrainBooleans>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+			</TerrainBooleans>
+		</BonusInfo>
+		<BonusInfo>
+			<Type>BONUS_TITANIUM_ORE</Type>
+			<TerrainBooleans>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+			</TerrainBooleans>
+		</BonusInfo>
+		<BonusInfo>
+			<Type>BONUS_BAUXITE_ORE</Type>
+			<TerrainBooleans>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+				<TerrainBoolean>
+					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
+					<bTerrain>1</bTerrain>
+				</TerrainBoolean>
+			</TerrainBooleans>
 		</BonusInfo>
 	</BonusInfos>
 </Civ4BonusInfos>

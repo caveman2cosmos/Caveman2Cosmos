@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Sid Meier's Civilization 4 Beyond the Sword -->
-<!-- Modified by Strategyonly -->
-<!-- Art Defines Building -->
-<!-- -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4ArtDefines xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\Xml\Schema\Caveman2Cosmos.xsd">
 	<BuildingArtInfos>
 		<BuildingArtInfo>
@@ -215,7 +211,6 @@
 			<KFM />
 			<Button>Art/Terrain/Natural_Wonders/Auyantepui/Button_Auyantepui.dds</Button>
 		</BuildingArtInfo>
-
 <!-- Landforms -->
 		<BuildingArtInfo>
 			<Type>ART_DEF_BUILDING_OASIS_MYTH</Type>

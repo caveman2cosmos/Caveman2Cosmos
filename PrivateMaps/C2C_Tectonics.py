@@ -262,9 +262,8 @@ def normalizeAddGoodTerrain():
 	print "-- normalizeAddGoodTerrain()"
 	CyPythonMgr().allowDefaultImpl()
 
-# This function will be called by the system, after the map was generated, after the
-# starting-plots have been choosen, at the end of the normalizing process and
-# before startHumansOnSameTile() which is the last map-function so called.
+# This function will be called by the system after the starting-plots have been choosen
+# at the end of the normalizing process, and is the last map-function called externally.
 # - balance boni (depending on initialization also place missing boni and move minerals)
 # - give names and boni to special regions
 # - print plot-map and the difference-map to the call before
@@ -1175,14 +1174,14 @@ class ClimateGenerator:
 		self.terrains[self.Ice] = gc.getInfoTypeForString("TERRAIN_ICE")
 		self.terrains[self.Tundra] = gc.getInfoTypeForString("TERRAIN_TAIGA")
 		self.terrains[self.Permafrost] = gc.getInfoTypeForString("TERRAIN_TUNDRA")
-		self.terrains[self.Grass] = gc.getInfoTypeForString("TERRAIN_GRASS")
+		self.terrains[self.Grass] = gc.getInfoTypeForString("TERRAIN_GRASSLAND")
 		self.terrains[self.Lush] = gc.getInfoTypeForString("TERRAIN_LUSH")
 		self.terrains[self.Muddy] = gc.getInfoTypeForString("TERRAIN_MUDDY")
 		self.terrains[self.Marsh] = gc.getInfoTypeForString("TERRAIN_MARSH")
 
 #		if (self.climate == 3):                        # No ice
 #			self.terrainIce = gc.getInfoTypeForString("TERRAIN_TAIGA")
-#			self.terrainTundra = gc.getInfoTypeForString("TERRAIN_GRASS")
+#			self.terrainTundra = gc.getInfoTypeForString("TERRAIN_GRASSLAND")
 		self.terrain = [0] * (self.mapWidth*self.mapHeight)
 		self.moisture = [0] * (self.mapWidth*self.mapHeight)
 		self.dice = gc.getGame().getMapRand()

@@ -617,12 +617,12 @@ bool CvOutcome::isPossibleSomewhere(const CvUnit& kUnit) const
 	//TeamTypes eOwnerTeam = GET_PLAYER(kUnit.getOwner()).getTeam();
 	//CvTeam& kOwnerTeam = GET_TEAM(eOwnerTeam);
 
-	int iPrereqBuildings = kInfo.getNumPrereqBuildings();
+	const int iPrereqBuildings = kInfo.getNumPrereqBuildings();
 	if (iPrereqBuildings > 0)
 	{
 		for (int i=0; i<iPrereqBuildings; i++)
 		{
-			if (GET_PLAYER(kUnit.getOwner()).getBuildingClassCount((BuildingClassTypes)GC.getBuildingInfo(kInfo.getPrereqBuilding(i)).getBuildingClassType()) <= 0)
+			if (GET_PLAYER(kUnit.getOwner()).getBuildingCount(kInfo.getPrereqBuilding(i)) <= 0)
 			{
 				return false;
 			}

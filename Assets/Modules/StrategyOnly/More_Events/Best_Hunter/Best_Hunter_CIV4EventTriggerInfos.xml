@@ -18,9 +18,9 @@
 			<bProbabilityUnitMultiply>1</bProbabilityUnitMultiply>
 			<iMaxOurLandmass>-1</iMaxOurLandmass>
 			<UnitsRequired>
-				<UnitClass>UNITCLASS_CHASER</UnitClass>
-				<UnitClass>UNITCLASS_TRACKER</UnitClass>
-				<UnitClass>UNITCLASS_HUNTER</UnitClass>
+				<UnitType>UNIT_CHASER</UnitType>
+				<UnitType>UNIT_TRACKER</UnitType>
+				<UnitType>UNIT_HUNTER</UnitType>
 			</UnitsRequired>
 			<iNumUnits>4</iNumUnits>
 			<iPlotType>-1</iPlotType>
@@ -30,7 +30,7 @@
 				<Event>EVENT_BEST_HUNTERS_3</Event>
 			</Events>
 			<OrPreReqs>
-				<PrereqTech>TECH_HUNTING</PrereqTech>
+				<PrereqTech>TECH_TRACKING</PrereqTech>
 			</OrPreReqs>
 			<ObsoleteTechs>
 				<ObsoleteTech>TECH_SEDENTARY_LIFESTYLE</ObsoleteTech>

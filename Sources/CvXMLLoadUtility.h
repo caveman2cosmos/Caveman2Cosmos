@@ -555,20 +555,10 @@ public:
 	void InitStringList(CvString **ppszList, int iListLen, CvString szString);
 
 	void InitImprovementBonusList(CvImprovementBonusInfo** ppImprovementBonus, int iListLen);
-	// allocate and initialize the civilization's default buildings
-	void InitBuildingDefaults(int **ppiDefaults);
-	// allocate and initialize the civilization's default units
-	void InitUnitDefaults(int **ppiDefaults);
-/************************************************************************************************/
-/* Afforess	                  Start		 08/26/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 	// allocate and initialize a 2 dimensional array of bool pointers
 	static void Init2DBoolList(bool*** pppbList, int iSizeX, int iSizeY);
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+
 	// allocate and initialize a 2 dimensional array of int pointers
 	static void Init2DIntList(int*** pppiList, int iSizeX, int iSizeY);
 	// allocate and initialize a 2 dimensional array of float pointers
@@ -815,9 +805,6 @@ private:
 /************************************************************************************************/
 /* SORT_ALPHABET                           END                                                  */
 /************************************************************************************************/
-	// take a character string of hex values and return their unsigned int value
-	void MakeMaskFromString(unsigned int *puiMask, char* szMask);
-
 	// find the tag name in the xml file and set the string parameter and num val parameter based on it's value
 	void SetGlobalStringArray(CvString** ppszString, wchar_t* szTagName, int* iNumVals, bool bUseEnum=false);
 	void SetDiplomacyCommentTypes(CvString** ppszString, int* iNumVals);	// sets diplomacy comments
