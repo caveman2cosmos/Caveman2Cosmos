@@ -9705,7 +9705,6 @@ void CvGame::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper,"CvGame",(int*)&m_eWinner);
 	WRAPPER_READ(wrapper,"CvGame",(int*)&m_eVictory);
 	WRAPPER_READ(wrapper,"CvGame",(int*)&m_eGameState);
-	WRAPPER_READ(wrapper,"CvGame",(int*)&m_eCurrentEra);
 
 	WRAPPER_READ_STRING(wrapper,"CvGame",m_szScriptData);
 
@@ -9974,6 +9973,8 @@ void CvGame::read(FDataStreamBase* pStream)
 	WRAPPER_READ(wrapper,"CvGame",&m_eCultureVictoryCultureLevel);
 
 	m_Properties.readWrapper(pStream);
+
+	updateEra();
 /************************************************************************************************/
 /* Afforess	                  Start		 07/27/10                                               */
 /*                                                                                              */
@@ -10081,7 +10082,6 @@ void CvGame::write(FDataStreamBase* pStream)
 	WRAPPER_WRITE(wrapper, "CvGame", m_eWinner);
 	WRAPPER_WRITE(wrapper, "CvGame", m_eVictory);
 	WRAPPER_WRITE(wrapper, "CvGame", m_eGameState);
-	WRAPPER_WRITE(wrapper, "CvGame", m_eCurrentEra);
 
 	WRAPPER_WRITE_STRING(wrapper, "CvGame", m_szScriptData);
 
