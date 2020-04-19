@@ -460,22 +460,10 @@ CvPropertyInfo* CyGlobalContext::getPropertyInfo(int i) const
 	return (i>=0 && i<GC.getNumPropertyInfos()) ? &GC.getPropertyInfo((PropertyTypes)i) : NULL;
 }
 
-int CyGlobalContext::getInfoTypeForString(const char* szInfoType) const
+int CyGlobalContext::getInfoTypeForString(const char* szInfoType, bool bHideAssert) const
 {
-	return GC.getInfoTypeForString(szInfoType);
+	return GC.getInfoTypeForString(szInfoType, bHideAssert);
 }
-/************************************************************************************************/
-/* Afforess	                  Start		 03/18/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-int CyGlobalContext::getInfoTypeForStringWithHiddenAssert(const char* szInfoType) const
-{
-	return GC.getInfoTypeForString(szInfoType, true);
-}
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
 
 int CyGlobalContext::getTypesEnum(const char* szType) const
 {

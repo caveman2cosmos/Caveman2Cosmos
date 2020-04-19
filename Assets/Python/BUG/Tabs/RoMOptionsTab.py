@@ -107,7 +107,7 @@ class RoMOptionsTab(BugOptionsTab.BugOptionsTab):
 		screen.setEnabled(control, bCanAdjustSettings)
 
 
-		if (gc.getInfoTypeForStringWithHiddenAssert("VICTORY_TOTAL") > 0 and gc.getGame().isVictoryValid(gc.getInfoTypeForString("VICTORY_TOTAL"))):
+		if (gc.getInfoTypeForString("VICTORY_TOTAL") > 0 and gc.getGame().isVictoryValid(gc.getInfoTypeForString("VICTORY_TOTAL"))):
 			control = self.addCheckbox(screen, right, "RoMSettings__MercyRule")
 			screen.setEnabled(control, bCanAdjustSettings)
 

@@ -117,16 +117,7 @@ public:
 	CvUnitArtStyleTypeInfo* getUnitArtStyleTypeInfo(int i) const;
 	CvPropertyInfo* getPropertyInfo(int i) const;
 
-	int getInfoTypeForString(const char* szInfoType) const;
-/************************************************************************************************/
-/* Afforess	                  Start		 03/18/10                                               */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	int getInfoTypeForStringWithHiddenAssert(const char* szInfoType) const;
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+	int getInfoTypeForString(const char* szInfoType, bool bHideAssert = false) const;
 	int getTypesEnum(const char* szType) const;
 
 	int getNumPlayerColorInfos() const { return GC.getNumPlayerColorInfos(); }

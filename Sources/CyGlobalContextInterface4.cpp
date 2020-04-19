@@ -71,16 +71,7 @@ void CyGlobalContextPythonInterface4(python::class_<CyGlobalContext>& x)
 
 		.def("getColorInfo", &CyGlobalContext::getColorInfo, python::return_value_policy<python::reference_existing_object>(), "ColorInfo (int id)")
 
-		.def("getInfoTypeForString", &CyGlobalContext::getInfoTypeForString, "int (string) - returns the info index with the matching type string")
-/************************************************************************************************/
-/* Afforess	                  Start		 03/18/10                                               */
-/*                                                                                              */
-/* Hides the assert if the return value is -1. Only meant to be used when safe to do so.         */
-/************************************************************************************************/
-		.def("getInfoTypeForStringWithHiddenAssert", &CyGlobalContext::getInfoTypeForStringWithHiddenAssert, "int (string) - returns the info index with the matching type string")
-/************************************************************************************************/
-/* Afforess	                     END                                                            */
-/************************************************************************************************/
+		.def("getInfoTypeForString", &CyGlobalContext::getInfoTypeForString, "int (string, bool) - returns the info index with the matching type string")
 		.def("getTypesEnum", &CyGlobalContext::getTypesEnum, "int (string) - returns the type enum from a type string")
 
 		.def("getNumPlayerColorInfos", &CyGlobalContext::getNumPlayerColorInfos, "int () - Returns number of PlayerColorInfos")
