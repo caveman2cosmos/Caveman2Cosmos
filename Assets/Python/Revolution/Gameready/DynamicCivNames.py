@@ -503,12 +503,6 @@ class DynamicCivNames :
         newName = curAdj + ' Nation'
       return [newName, curShort, curAdj]
 
-    # AIAndy: New XML based Civ naming  
-    if (gc.getDefineBOOL("USE_XML_BASED_CIV_NAMING")):
-      newName = pPlayer.getNewCivName()
-      if (len(newName) > 0):
-        return [newName, curShort, curAdj]
-    
     # Main naming conditions
     if( RevUtils.isCommunism(iPlayer) ) :
       if( self.LOG_DEBUG and bVerbose ) : CvUtil.pyPrint("Names - player is communist")

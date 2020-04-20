@@ -30,6 +30,14 @@ class RevDCMOptionsTab(BugOptionsTab.BugOptionsTab):
 			self.addLabel(screen, left, "RevDCM__RevDCMInterface", TRNSLTR.getText("TXT_KEY_REVDCMTAB_INTERFACE_OPTIONS", ()))
 			col1, col2 = self.addMultiColumnLayout(screen, right, 2, "interfaceOptions")
 			self.addCheckbox(screen, col1, "RevDCM__RevDCMHiddenAttitude")
+			self.addCheckbox(screen, col2, "RevDCM__DYNAMIC_CIV_NAMES")
+			#Dynamic Civ Names Debug
+			if GC.getDefineINT("DYNAMIC_CIV_NAMES") and GAME.isDebugMode():
+				self.addLabel(screen, left, "Revolution__DynamicCivNames", "DynamicCivNames Debug:")
+				col1, col2, col3 = self.addMultiColumnLayout(screen, right, 3, "DynamicCivNames")
+				self.addCheckbox(screen, col1, "Revolution__DynamicNamesDebugMode")
+				self.addCheckbox(screen, col2, "Revolution__TeamNaming")
+				self.addCheckbox(screen, col3, "Revolution__LeaveHumanPlayerName")
 
 			screen.attachHSeparator(left, left + "SepInterface1")
 			screen.attachHSeparator(right, right + "SepInterface2")
