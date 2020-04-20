@@ -171,6 +171,11 @@
 		<section id="ChangePlayer">
 			<option id="ChangePlayerEnable" key="Enable" type="boolean" default="True" get="isChangePlayerEnable" set="setChangePlayerEnable"/>
 		</section>
+		<section id="DynamicCivNames">
+			<option id="DynamicNamesDebugMode" key="DebugMode" type="boolean" default="False" get="isDynamicNamesDebugMode" set="setDynamicNamesDebugMode"/>
+			<option id="TeamNaming" key="TeamNaming" type="boolean" default="True" get="isTeamNaming" set="setTeamNaming"/>
+			<option id="LeaveHumanPlayerName" key="LeaveHumanPlayerName" type="boolean" default="False" get="isLeaveHumanPlayerName" set="setLeaveHumanPlayerName"/>
+		</section>
 	</options>
 	<events module="RevolutionInit" function="RevolutionInit"/>
 </mod>
