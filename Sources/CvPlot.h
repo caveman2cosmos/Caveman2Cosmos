@@ -262,7 +262,7 @@ public:
 	bool canHaveBonus(BonusTypes eBonus, bool bIgnoreLatitude = false) const;
 
 	bool canBuildImprovement(ImprovementTypes eImprovement, TeamTypes eTeam) const;
-	bool canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam = NO_TEAM, bool bPotential = false, bool bOver = true, bool bUpgradeCheck = false) const; // Exposed to Python
+	bool canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam = NO_TEAM, bool bPotential = false, bool bUpgradeCheck = false) const; // Exposed to Python
 
 	bool canBuild(BuildTypes eBuild, PlayerTypes ePlayer = NO_PLAYER, bool bTestVisible = false, bool bIncludePythonOverrides = true) const; // Exposed to Python
 	static bool hasCachedCanBuildEntry(int iX, int iY, BuildTypes eBuild, PlayerTypes ePlayer, struct canBuildCacheEntry*& entry);
@@ -1188,6 +1188,7 @@ public:
 		DECLARE_MAP_FUNCTOR(CvPlot, bool, isWater);
 		DECLARE_MAP_FUNCTOR(CvPlot, int, getArea);
 		DECLARE_MAP_FUNCTOR(CvPlot, const CvArea*, area);
+		DECLARE_MAP_FUNCTOR(CvPlot, const CvCity*, getWorkingCityOverride);
 
 		DECLARE_MAP_FUNCTOR_2(CvPlot, bool, isRevealed, TeamTypes, bool);
 		DECLARE_MAP_FUNCTOR_2(CvPlot, bool, isVisible, TeamTypes, bool);

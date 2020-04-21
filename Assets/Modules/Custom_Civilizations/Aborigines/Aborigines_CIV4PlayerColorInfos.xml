@@ -6,9 +6,9 @@
 	<PlayerColorInfos>
 		<PlayerColorInfo>
 			<Type>PLAYERCOLOR_ABORIGINES</Type>
-			<ColorTypePrimary>COLOR_X_HONEYDEW</ColorTypePrimary>
+			<ColorTypePrimary>COLOR_HONEYDEW</ColorTypePrimary>
 			<ColorTypeSecondary>COLOR_PLAYER_BLACK</ColorTypeSecondary>
-			<TextColorType>COLOR_X_HONEYDEW</TextColorType>
+			<TextColorType>COLOR_HONEYDEW</TextColorType>
 		</PlayerColorInfo>
 	</PlayerColorInfos>
 </Civ4PlayerColorInfos>
