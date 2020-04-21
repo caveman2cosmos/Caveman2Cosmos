@@ -879,18 +879,9 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 		// Advance upgrade progress
 		if (GC.getImprovementInfo(eType).isUpgradeRequiresFortify())
 		{
-			CLLNode<IDInfo>* pUnitNode = headUnitNode();
-
-			while (pUnitNode != NULL)
+			if (algo::any_of(units(), CvUnit::fn::getFortifyTurns() > 0 && CvUnit::fn::getTeam() == eTeam && CvUnit::fn::canDefend()))
 			{
-				const CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-
-				if (pLoopUnit->getFortifyTurns() > 0 && pLoopUnit->getTeam() == eTeam && pLoopUnit->canDefend())
-				{
-					changeUpgradeProgressHundredths(GET_PLAYER(getOwner()).getImprovementUpgradeRateTimes100(eType));
-					break;
-				}
-				pUnitNode = nextUnitNode(pUnitNode);
+				changeUpgradeProgressHundredths(GET_PLAYER(getOwner()).getImprovementUpgradeRateTimes100(eType));
 			}
 		}
 		else
