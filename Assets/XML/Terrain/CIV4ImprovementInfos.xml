@@ -5008,6 +5008,7 @@
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iAirBombDefense>5</iAirBombDefense>
 			<iPillageGold>10</iPillageGold>
+			<iUpgradeTime>10</iUpgradeTime>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
 					<BonusType>BONUS_SILK</BonusType>
@@ -5070,6 +5071,7 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
+			<ImprovementUpgrade>IMPROVEMENT_VERTICAL_FARM</ImprovementUpgrade>
 		</ImprovementInfo>
 		<!-- Extraction Facility -->
 		<ImprovementInfo>
@@ -9238,6 +9240,17 @@
 						<iYieldChange>0</iYieldChange>
 						<iYieldChange>2</iYieldChange>
 						<iYieldChange>10</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_SILK</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<iDiscoverRand>2500</iDiscoverRand>
+					<YieldChanges>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>5</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
 			</BonusTypeStructs>

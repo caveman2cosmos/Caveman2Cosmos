@@ -3741,6 +3741,10 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_VERTICAL_FARM</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_MINE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
