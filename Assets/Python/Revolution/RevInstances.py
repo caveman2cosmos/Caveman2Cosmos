@@ -9,4 +9,3 @@ RevolutionInst = None
 BarbarianCivInst = None
 AIAutoPlayInst = None
 ChangePlayerInst = None
-DynamicCivNamesInst = None

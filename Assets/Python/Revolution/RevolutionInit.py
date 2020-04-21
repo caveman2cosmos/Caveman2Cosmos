@@ -18,7 +18,6 @@ import RevEvents
 import BarbarianCiv
 import AIAutoPlay
 import ChangePlayer
-import DynamicCivNames
 import Revolution
 import RevInstances
 
@@ -88,9 +87,6 @@ class RevolutionInit:
 			if not RevInstances.ChangePlayerInst == None:
 				RevInstances.ChangePlayerInst.removeEventHandlers()
 				RevInstances.ChangePlayerInst = None
-			if not RevInstances.DynamicCivNamesInst == None:
-				RevInstances.DynamicCivNamesInst.removeEventHandlers()
-				RevInstances.DynamicCivNamesInst = None
 
 			RevInstances.bIsInitialized = False
 
@@ -113,9 +109,6 @@ class RevolutionInit:
 				# RevEvents needs to service beginPlayerTurn events before Revolution
 				RevEvents.init(self.customEM, self.RevOpt)
 				RevInstances.RevolutionInst = Revolution.Revolution(self.customEM, self.RevOpt)
-
-			if RevDCMOpt.isDYNAMIC_CIV_NAMES():
-				RevInstances.DynamicCivNamesInst = DynamicCivNames.DynamicCivNames(self.customEM, self.RevOpt)
 
 		if bShowPopup and self.bShowActivePopup and self.bFirst:
 			self.showActivePopup()
