@@ -4563,14 +4563,14 @@ bool CvSelectionGroup::groupBuild(BuildTypes eBuild)
 			{
 				// TODO: stop other worker groups
 				CvCity* pCity;
-				int iProduction = plot()->getFeatureProduction(eBuild, getTeam(), &pCity);
+				const int iProduction = plot()->getFeatureProduction(eBuild, getTeam(), &pCity);
 
 				if (iProduction > 0)
 				{
 					MEMORY_TRACK_EXEMPT();
 
 					CvWString szBuffer = gDLL->getText("TXT_KEY_BUG_PRECLEARING_FEATURE_BONUS", GC.getFeatureInfo(eFeature).getTextKeyWide(), iProduction, pCity->getNameKey());
-					AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer,  ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), MESSAGE_TYPE_INFO, GC.getFeatureInfo(eFeature).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), getX(), getY(), true, true);
+					AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer,  ARTFILEMGR.getInterfaceArtInfo("WORLDBUILDER_CITY_EDIT")->getPath(), MESSAGE_TYPE_INFO, GC.getFeatureInfo(eFeature).getButton(), CvColorInfo::white(), getX(), getY(), true, true);
 				}
 				bContinue = false;
 				bStopOtherWorkers = true;

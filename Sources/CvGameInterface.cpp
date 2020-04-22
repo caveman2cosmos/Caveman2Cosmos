@@ -85,7 +85,7 @@ void CvGame::updateColoredPlots()
 					{
 						if( GC.getBuildInfo(eBestBuild).getImprovement() != NO_IMPROVEMENT && eImprovement != GC.getBuildInfo(eBestBuild).getImprovement() )
 						{
-							gDLL->getEngineIFace()->addColoredPlot(pLoopPlot->getViewportX(), pLoopPlot->getViewportY(), GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_RED")).getColor(), PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_BASE);
+							gDLL->getEngineIFace()->addColoredPlot(pLoopPlot->getViewportX(), pLoopPlot->getViewportY(), GC.getColorInfo(CvColorInfo::red()).getColor(), PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_BASE);
 						}
 					}
 				}
@@ -132,7 +132,7 @@ void CvGame::updateColoredPlots()
 
 					if (pLoopPlot->isRevealed(getActiveTeam(), false))
 					{
-						NiColorA color(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_WHITE")).getColor());
+						NiColorA color(GC.getColorInfo(CvColorInfo::white()).getColor());
 						color.a = 0.4f;
 						gDLL->getEngineIFace()->fillAreaBorderPlot(pLoopPlot->getViewportX(), pLoopPlot->getViewportY(), color, AREA_BORDER_LAYER_CITY_RADIUS);
 					}
@@ -156,7 +156,7 @@ void CvGame::updateColoredPlots()
 
 					if (pLoopPlot != NULL)
 					{
-						NiColorA color(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_WHITE")).getColor());
+						NiColorA color(GC.getColorInfo(CvColorInfo::white()).getColor());
 						color.a = 0.7f;
 						gDLL->getEngineIFace()->addColoredPlot(pLoopPlot->getViewportX(), pLoopPlot->getViewportY(), color, PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_BASE);
 					}
@@ -445,7 +445,7 @@ void CvGame::updateColoredPlots()
 
 					if (pRallyPlot != NULL)
 					{
-						gDLL->getEngineIFace()->addColoredPlot(pRallyPlot->getViewportX(), pRallyPlot->getViewportY(), GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW")).getColor(), PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_BASE);
+						gDLL->getEngineIFace()->addColoredPlot(pRallyPlot->getViewportX(), pRallyPlot->getViewportY(), GC.getColorInfo(CvColorInfo::yellow()).getColor(), PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_BASE);
 					}
 				}
 			}
@@ -504,7 +504,7 @@ void CvGame::updateColoredPlots()
 						{
 							if (plotDistance(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), pLoopPlot->getX(), pLoopPlot->getY()) <= iMaxAirRange)
 							{
-								NiColorA color(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_WHITE")).getColor());
+								NiColorA color(GC.getColorInfo(CvColorInfo::white()).getColor());
 								color.a = 0.4f;
 								gDLL->getEngineIFace()->addColoredPlot(pLoopPlot->getViewportX(), pLoopPlot->getViewportY(), color, PLOT_STYLE_TARGET, PLOT_LANDSCAPE_LAYER_BASE);
 							}
@@ -544,7 +544,7 @@ void CvGame::updateColoredPlots()
 						{
 							if (plotDistance(pHeadSelectedUnit->getX(), pHeadSelectedUnit->getY(), pLoopPlot->getX(), pLoopPlot->getY()) <= iMaxAirRange)
 							{
-								NiColorA color(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW")).getColor());
+								NiColorA color(GC.getColorInfo(CvColorInfo::yellow()).getColor());
 								color.a = 0.5f;
 								gDLL->getEngineIFace()->fillAreaBorderPlot(pLoopPlot->getX(), pLoopPlot->getY(), color, AREA_BORDER_LAYER_RANGED);
 							}
@@ -568,7 +568,7 @@ void CvGame::updateColoredPlots()
 						{
 							if (pHeadSelectedUnit->plot()->canSeePlot(pTargetPlot, pHeadSelectedUnit->getTeam(), iRange, pHeadSelectedUnit->getFacingDirection(true)))
 							{
-								NiColorA color(GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_YELLOW")).getColor());
+								NiColorA color(GC.getColorInfo(CvColorInfo::yellow()).getColor());
 								color.a = 0.5f;
 								gDLL->getEngineIFace()->fillAreaBorderPlot(pTargetPlot->getX(), pTargetPlot->getY(), color, AREA_BORDER_LAYER_RANGED);
 							}

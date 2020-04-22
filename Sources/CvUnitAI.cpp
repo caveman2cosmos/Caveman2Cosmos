@@ -31165,16 +31165,12 @@ bool CvUnitAI::AI_FEngage()
 						if (iPotentialAttackers > 0 || pLoopPlot->isAdjacentTeam(getTeam()))
 						{
 							pDefender = pLoopPlot->getBestDefender(NO_PLAYER, getOwner(), this, true);
-							iDamage = std::max(1, ((GC.getDefineINT("COMBAT_DAMAGE") * (currFirepower(NULL, NULL) + ((currFirepower(NULL, NULL) + pDefender->currFirepower(NULL, NULL) + 1) / 2))) / (pDefender->currFirepower(pLoopPlot, this) + ((currFirepower(NULL, NULL) + pDefender->currFirepower(NULL, NULL) + 1) / 2))));
+							iDamage = std::max(1, ((GC.getCOMBAT_DAMAGE() * (currFirepower(NULL, NULL) + ((currFirepower(NULL, NULL) + pDefender->currFirepower(NULL, NULL) + 1) / 2))) / (pDefender->currFirepower(pLoopPlot, this) + ((currFirepower(NULL, NULL) + pDefender->currFirepower(NULL, NULL) + 1) / 2))));
 							iValue += (iDamage * pLoopPlot->getNumVisiblePotentialEnemyDefenders(this));
 						}
 						iValue *= GC.getGame().getSorenRandNum(5, "AI FEngage");
 						if (iValue > iBestValue)
 						{
-//							for (int iPlayer = 0; iPlayer < MAX_PC_PLAYERS; ++iPlayer)
-//							{
-//								AddDLLMessage((PlayerTypes)iPlayer, true, GC.getDefineINT("EVENT_MESSAGE_TIME"), "Got here!", "AS2D_BOMB_FAILS", MESSAGE_TYPE_INFO, GC.getUnitInfo(getUnitType()).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_RED"), plot()->getX(), plot()->getY());
-//							}
 							iBestValue = iValue;
 							pBestPlot = pLoopPlot;
 							FAssert(!atPlot(pBestPlot));

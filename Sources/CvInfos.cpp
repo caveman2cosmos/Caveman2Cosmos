@@ -20,7 +20,6 @@ bool shouldHaveType = false;
 CvInfoBase::CvInfoBase() :
 m_bGraphicalOnly(false)
 {
-
 }
 
 CvInfoBase::CvInfoBase(const char* szType) :
@@ -32455,6 +32454,15 @@ void CvEraInfo::getCheckSum(unsigned int& iSum)
 	CheckSum(iSum, m_bNoBarbUnits);
 	CheckSum(iSum, m_bNoBarbCities);
 }
+
+//======================================================================================================
+//					CvColorInfo
+//======================================================================================================
+
+ColorTypes CvColorInfo::m_Green = NO_COLOR;
+ColorTypes CvColorInfo::m_Red = NO_COLOR;
+ColorTypes CvColorInfo::m_Yellow = NO_COLOR;
+ColorTypes CvColorInfo::m_White = NO_COLOR;
 
 //------------------------------------------------------------------------------------------------------
 //
