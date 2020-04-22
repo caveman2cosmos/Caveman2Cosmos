@@ -3129,7 +3129,7 @@
 			<iTilesPerGoody>0</iTilesPerGoody>
 			<iGoodyRange>0</iGoodyRange>
 			<iFeatureGrowth>0</iFeatureGrowth>
-			<iUpgradeTime>0</iUpgradeTime>
+			<iUpgradeTime>10</iUpgradeTime>
 			<iAirBombDefense>0</iAirBombDefense>
 			<iDefenseModifier>0</iDefenseModifier>
 			<iHappiness>0</iHappiness>
@@ -3980,6 +3980,28 @@
 			<iUpgradeTime>15</iUpgradeTime>
 			<iPillageGold>200</iPillageGold>
 			<bOutsideBorders>1</bOutsideBorders>
+			<TerrainMakesValids>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_LUNAR_MARE</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+                <TerrainMakesValid>
+					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+                <TerrainMakesValid>
+					<TerrainType>TERRAIN_LUNAR_REGOLITH</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+                <TerrainMakesValid>
+					<TerrainType>TERRAIN_LUNAR_RILLE</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+			</TerrainMakesValids>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
 					<BonusType>BONUS_IRON_ORE</BonusType>
@@ -4709,6 +4731,28 @@
 			<iAdvancedStartCost>-1</iAdvancedStartCost>
 			<iPillageGold>250</iPillageGold>
 			<bOutsideBorders>1</bOutsideBorders>
+			<TerrainMakesValids>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_LUNAR_DOME</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_LUNAR_MARE</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+                <TerrainMakesValid>
+					<TerrainType>TERRAIN_LUNAR_HIGHLAND</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+                <TerrainMakesValid>
+					<TerrainType>TERRAIN_LUNAR_REGOLITH</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+                <TerrainMakesValid>
+					<TerrainType>TERRAIN_LUNAR_RILLE</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+			</TerrainMakesValids>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
 					<BonusType>BONUS_CARBON_DIOXIDE_ICE</BonusType>

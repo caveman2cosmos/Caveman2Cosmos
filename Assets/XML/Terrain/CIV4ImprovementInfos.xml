@@ -5008,6 +5008,7 @@
 			<iAdvancedStartCost>30</iAdvancedStartCost>
 			<iAirBombDefense>5</iAirBombDefense>
 			<iPillageGold>10</iPillageGold>
+			<iUpgradeTime>10</iUpgradeTime>
 			<BonusTypeStructs>
 				<BonusTypeStruct>
 					<BonusType>BONUS_SILK</BonusType>
@@ -5070,6 +5071,7 @@
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
+			<ImprovementUpgrade>IMPROVEMENT_VERTICAL_FARM</ImprovementUpgrade>
 		</ImprovementInfo>
 		<!-- Extraction Facility -->
 		<ImprovementInfo>
@@ -9240,6 +9242,17 @@
 						<iYieldChange>10</iYieldChange>
 					</YieldChanges>
 				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_SILK</BonusType>
+					<bBonusMakesValid>1</bBonusMakesValid>
+					<bBonusTrade>1</bBonusTrade>
+					<iDiscoverRand>2500</iDiscoverRand>
+					<YieldChanges>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>0</iYieldChange>
+						<iYieldChange>5</iYieldChange>
+					</YieldChanges>
+				</BonusTypeStruct>
 			</BonusTypeStructs>
 			<TechYieldChanges>
 				<TechYieldChange>
@@ -13302,6 +13315,153 @@
 				</BonusTypeStruct>
 				<BonusTypeStruct>
 					<BonusType>BONUS_ANCIENT_RELICS</BonusType>
+					<iDiscoverRand>1000</iDiscoverRand>
+				</BonusTypeStruct>
+			</BonusTypeStructs>
+		</ImprovementInfo>
+		<!-- Fishing Camp -->
+		<ImprovementInfo>
+			<Type>IMPROVEMENT_FISHING_CAMP</Type>
+			<Description>TXT_KEY_IMPROVEMENT_FISHING_CAMP</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_FISHING_CAMP_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_FISHING_BOATS</ArtDefineTag>
+			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
+			<YieldChanges>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>0</iYieldChange>
+				<iYieldChange>1</iYieldChange>
+			</YieldChanges>
+			<bActsAsCity>0</bActsAsCity>
+			<bWaterImprovement>1</bWaterImprovement>
+			<iUpgradeTime>2</iUpgradeTime>
+			<ImprovementUpgrade>IMPROVEMENT_FISHING_BOATS</ImprovementUpgrade>
+			<AlternativeImprovementUpgradeTypes>
+				<ImprovementUpgrade>IMPROVEMENT_WHALING_BOATS</ImprovementUpgrade>
+				<ImprovementUpgrade>IMPROVEMENT_HARVEST_KELP</ImprovementUpgrade>
+				<ImprovementUpgrade>IMPROVEMENT_OFFSHORE_PLATFORM</ImprovementUpgrade>
+				<ImprovementUpgrade>IMPROVEMENT_EXTRACTION_FACILITY</ImprovementUpgrade>
+			</AlternativeImprovementUpgradeTypes>
+			<TerrainMakesValids>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_COAST</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_COAST_POLAR</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_COAST_TROPICAL</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_OCEAN</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_OCEAN_POLAR</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_OCEAN_TROPICAL</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_SEA</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_SEA_POLAR</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_SEA_TROPICAL</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_COAST_DEEP</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+			</TerrainMakesValids>
+			<BonusTypeStructs>
+				<BonusTypeStruct>
+					<BonusType>BONUS_CLAM</BonusType>
+					<iDiscoverRand>1000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_CRAB</BonusType>
+					<iDiscoverRand>1000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_FISH</BonusType>
+					<iDiscoverRand>1000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_LOBSTER</BonusType>
+					<iDiscoverRand>1000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_MUREX</BonusType>
+					<iDiscoverRand>1000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_PEARLS</BonusType>
+					<iDiscoverRand>1000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_SHRIMP</BonusType>
+					<iDiscoverRand>1000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_WHALE</BonusType>
+					<iDiscoverRand>1000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_HYDROTHERMAL_VENT</BonusType>
+					<iDiscoverRand>1000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_METHANE_ICE</BonusType>
+					<iDiscoverRand>1000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_NATURAL_GAS</BonusType>
+					<iDiscoverRand>1000</iDiscoverRand>
+				</BonusTypeStruct>
+				<BonusTypeStruct>
+					<BonusType>BONUS_OIL</BonusType>
 					<iDiscoverRand>1000</iDiscoverRand>
 				</BonusTypeStruct>
 			</BonusTypeStructs>
