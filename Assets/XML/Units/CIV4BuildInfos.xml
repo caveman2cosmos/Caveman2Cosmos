@@ -10654,5 +10654,19 @@
 			<iHotKeyPriority>0</iHotKeyPriority>
 			<Button>,Art/Interface/Buttons/Builds/BuildCamp.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,1,7</Button>
 		</BuildInfo>
+		<BuildInfo>
+			<Type>BUILD_FISHING_CAMP</Type>
+			<Description>TXT_KEY_BUILD_FISHING_CAMP</Description>
+			<PrereqTech>TECH_TRAP_FISHING</PrereqTech>
+			<iTime>100</iTime>
+			<iCost>5</iCost>
+			<bKill>1</bKill>
+			<ImprovementType>IMPROVEMENT_FISHING_CAMP</ImprovementType>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<HotKey>KB_C</HotKey>
+			<bShiftDown>1</bShiftDown>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<Button>,Art/Interface/Buttons/Builds/BuildFishingBoats.dds,Art/Interface/Buttons/Actions_Builds_LeaderHeads_Specialists_Atlas.dds,7,7</Button>
+		</BuildInfo>
 	</BuildInfos>
 </Civ4BuildInfos>
