@@ -2082,11 +2082,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CONSTRUCTION_SHIP_PEDIA</Tag>
-		<English>TBD</English>
+		<English>Space worker used to build earliest improvements on Moon, Mars and Venus.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CONSTRUCTION_SHIP_STRATEGY</Tag>
-		<English>TBD</English>
+		<English>Use this unit to build Lunar Outpost improvement - place, where you can send Lunar settlers to build Lunar cities</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COSMIC_WORKER</Tag>
@@ -2246,8 +2246,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEAVY_ROCKET_HOVER</Tag>
 		<English>[ICON_BULLET]While this unit can be built on Earth, it is useful only outside of Earth.[NEWLINE]Upgrade to a space settler on Space Station Lv. 3</English>
-		<French>[ICON_BULLET]Bien que cette unité puisse être construite sur Terre, elle n'est utile qu'en dehors de la Terre.[NEWLINE]Améliore les colons spatiaqux sur la Station spatiale de Niv. 3
-</French>
+		<French>[ICON_BULLET]Bien que cette unité puisse être construite sur Terre, elle n'est utile qu'en dehors de la Terre.[NEWLINE]Améliore les colons spatiaqux sur la Station spatiale de Niv. 3</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEAVY_ROCKET_PEDIA</Tag>
@@ -2256,7 +2255,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEAVY_ROCKET_STRATEGY</Tag>
-		<English>Build space stations in low-Earth orbit or conduct missions on space stations.</English>
+		<English>Build space stations in low-Earth orbit, or conduct missions on space stations, or upgrade it to cislunar/lunar/planetary settlers in Space Station Lv. 3 improvement.</English>
 		<French>Construire des stations spatiales en orbite terrestre basse ou effectuer des missions sur des stations spatiales.</French>
 	</TEXT>
 	<TEXT>
@@ -2981,11 +2980,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUPPLY_SHIP_PEDIA</Tag>
-		<English>TBD</English>
+		<English>Early space unit dedicated to supply Lunar colonies</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUPPLY_SHIP_STRATEGY</Tag>
-		<English>TBD</English>
+		<English>Use this unit to build buildings in Lunar colonies</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TITAN_REWARD</Tag>
@@ -3184,7 +3183,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WORLDSHIP_HOVER</Tag>
-		<English>[ICON_BULLET]Can build cities in the Oort Cloud and Transtellar space</English>
+		<English>[ICON_BULLET]Can build cities in the Transtellar space and Star terrains</English>
 		<French>[ICON_BULLET]Peut construire les Villes dans le nuage d'Oort, et l'espace transtellaire</French>
 	</TEXT>
 </Civ4GameText>
