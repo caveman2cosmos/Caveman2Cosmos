@@ -103,7 +103,7 @@
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_LUNAR_BASES</PrereqTech>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
-			<iCost>2700</iCost>
+			<iCost>5000</iCost>
 			<iMoves>24</iMoves>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -166,7 +166,7 @@
 			</PrereqAndBuildings>
 			<PrereqTech>TECH_LUNAR_COLONIZATION</PrereqTech>
 			<BonusType>BONUS_ROCKET_FUEL</BonusType>
-			<iCost>4850</iCost>
+			<iCost>5000</iCost>
 			<iMoves>24</iMoves>
 			<bCanMoveAllTerrain>1</bCanMoveAllTerrain>
 			<bCanMoveImpassable>1</bCanMoveImpassable>
@@ -276,7 +276,7 @@
 			<PrereqBonuses>
 				<BonusType>BONUS_ROCKET_FUEL</BonusType>
 			</PrereqBonuses>
-			<iCost>1200</iCost>
+			<iCost>5000</iCost>
 			<iMoves>1</iMoves>
 			<iCombat>30</iCombat>
 			<iXPValueAttack>4</iXPValueAttack>
