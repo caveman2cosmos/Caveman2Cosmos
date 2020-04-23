@@ -60487,6 +60487,7 @@
 				</Flavor>
 			</Flavors>
 			<iConquestProb>75</iConquestProb>
+			<iNukeExplosionRand>1</iNukeExplosionRand>			
 		</BuildingInfo>
 		<BuildingInfo>
 			<Type>BUILDING_DNA_LAB</Type>
