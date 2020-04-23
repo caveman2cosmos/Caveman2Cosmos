@@ -4365,7 +4365,6 @@
 			</Rands>
 			<iTilesPer>20</iTilesPer>
 			<iUnique>2</iUnique>
-			<bArea>1</bArea>
 			<bHills>1</bHills>
 			<bFlatlands>1</bFlatlands>
 			<bBonusCoastalOnly>1</bBonusCoastalOnly>
@@ -4505,8 +4504,7 @@
 				<iRandApp4>25</iRandApp4>
 			</Rands>
 			<iTilesPer>20</iTilesPer>
-			<iUnique>2</iUnique>
-			<bArea>1</bArea>
+			<iUnique>4</iUnique>
 			<bBonusCoastalOnly>1</bBonusCoastalOnly>
 			<bFlatlands>1</bFlatlands>
 			<bNoRiverSide>1</bNoRiverSide>
