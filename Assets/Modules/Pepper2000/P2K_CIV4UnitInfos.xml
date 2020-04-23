@@ -241,6 +241,7 @@
 		<!-- Lunar Rover-->
 		<UnitInfo>
 			<Type>UNIT_LUNAR_ROVER</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Combat>UNITCOMBAT_RECON</Combat>
 			<SubCombatTypes>
 				<SubCombatType>UNITCOMBAT_EXPLORER</SubCombatType>
@@ -4383,6 +4384,7 @@
 		<!-- Satellite -->
 		<UnitInfo>
 			<Type>UNIT_SATELLITE</Type>
+			<iMaxPlayerInstances>1</iMaxPlayerInstances>
 			<Capture>UNIT_SATELLITE</Capture>
 			<Combat>UNITCOMBAT_SPACE_WORKER</Combat>
 			<SubCombatTypes>
