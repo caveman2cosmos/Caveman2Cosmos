@@ -66,14 +66,6 @@
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
-					<BuildType>BUILD_LUNAR_MINING_OUTPOST</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_COLONY_EXTRACTION_FACILITY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
 					<BuildType>BUILD_COLONY_HABITAT_SMALL</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -99,10 +91,6 @@
 				</Build>
 				<Build>
 					<BuildType>BUILD_COLONY_SOLAR_ARRAY</BuildType>
-					<bBuild>1</bBuild>
-				</Build>
-				<Build>
-					<BuildType>BUILD_LUNAR_MINE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -9813,8 +9801,8 @@
 			</MapCategoryTypes>
 			<DefaultUnitAI>UNITAI_WORKER</DefaultUnitAI>
 			<Description>TXT_KEY_UNIT_LUNAR_BULLDOZER</Description>
-			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_UNIT_WORKER_STRATEGY</Strategy>
+			<Civilopedia>TXT_KEY_UNIT_LUNAR_BULLDOZER_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_UNIT_LUNAR_BULLDOZER_STRATEGY</Strategy>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bOnlyDefensive>1</bOnlyDefensive>
 			<UnitAIs>
