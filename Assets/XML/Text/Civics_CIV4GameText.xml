@@ -1755,7 +1755,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_ERA_ADVANCE_FREE_SPECIALIST</Tag>
-		<English>[ICON_BULLET]Gains a free %s1_Specialist with each advance in Era.</English>
+		<English>[ICON_BULLET]Gains a free %s1_Specialist Specialist with each advance in Era.</English>
 		<French>[ICON_BULLET]Reçoit un %s1_Specialist gratuit pour chaque avancée d'Ere.</French>
 		<Italian>[ICON_BULLET]Ottiene un %s1_Specialist gratuito con ogni avanzamento di Era.</Italian>
 		<Polish>[ICON_BULLET]Daje darmowego: %s1_Specialist przy każdej zmianie Ery.</Polish>
