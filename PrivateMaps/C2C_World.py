@@ -3319,6 +3319,9 @@ class BonusPlacer:
 			elif not (iFeature > -1 and bonusInfo.isFeature(iFeature) and bonusInfo.isFeatureTerrain(iTerrain)):
 				return False
 
+		if bonusInfo.isBonusCoastalOnly() and not plot.isCoastal():
+			return False
+
 		if bonusInfo.isNoRiverSide() and plot.isRiverSide():
 			return False
 

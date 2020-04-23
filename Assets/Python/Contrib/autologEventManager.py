@@ -550,7 +550,7 @@ class AutoLogEvent(AbstractAutoLogEvent):
 			if CyPlot.isWater():
 				if CyPlot.isLake():
 					szText = BugUtil.getPlainText("TXT_KEY_AUTOLOG_ON_A_LAKE")
-				elif CyPlot.isAdjacentToLand():
+				elif CyPlot.isCoastal():
 					szText = BugUtil.getPlainText("TXT_KEY_AUTOLOG_JUST_OFF_SHORE")
 				else:
 					szText = BugUtil.getPlainText("TXT_KEY_AUTOLOG_ON_THE_HIGH_SEAS")

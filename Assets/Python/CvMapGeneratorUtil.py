@@ -1493,7 +1493,7 @@ def isSinglePlotIsland(pPlot):
 			if not ( iX == iPlotX and iY == iPlotY):
 				testplot = CyMap().plot(iX, iY)
 				#~ if testplot.isFlatlands () or testplot.isHills():  # allow peaks for isolated beaches??
-				if not testplot.isWater ():
+				if not testplot.isWater():
 					return False
 			iY = iY + 1
 		iX = iX + 1
@@ -1502,7 +1502,7 @@ def isSinglePlotIsland(pPlot):
 
 def isSeaCoastalLand(pPlot):
 	# check that at least one plot around this plot is sea/coast
-	if not pPlot.isCoastalLand():
+	if pPlot.isWater() or not pPlot.isCoastal():
 		return False
 
 	iPlotX = pPlot.getX()
@@ -1514,7 +1514,7 @@ def isSeaCoastalLand(pPlot):
 		while iY < iPlotY + 2:
 			if not ( iX == iPlotX and iY == iPlotY):
 				testplot = CyMap().plot(iX, iY)
-				if testplot.isWater () and not testplot.isLake():
+				if testplot.isWater() and not testplot.isLake():
 					return True
 			iY = iY + 1
 		iX = iX + 1

@@ -3851,7 +3851,7 @@ def computeContinents():
 
 			pPlot = cymap.plot(x,y)
 			if pPlot.isWater():
-				if pPlot.isAdjacentToLand():
+				if pPlot.isCoastal():
 					totalCoastCount += 1
 				continue
 

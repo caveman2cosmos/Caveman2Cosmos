@@ -228,6 +228,7 @@ public:
 	bool shareAdjacentArea( const CvPlot* pPlot) const; // Exposed to Python
 	bool isAdjacentToLand() const; // Exposed to Python
 	bool isCoastalLand(int iMinWaterSize = -1) const; // Exposed to Python
+	bool isCoastal(int iMinWaterSize = -1) const; // Exposed to Python
 
 	bool isVisibleWorked() const;
 	bool isWithinTeamCityRadius(TeamTypes eTeam, PlayerTypes eIgnorePlayer = NO_PLAYER) const; // Exposed to Python

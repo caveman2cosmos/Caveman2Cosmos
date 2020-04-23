@@ -2682,7 +2682,7 @@ def addFeatures():
 # Rise of Mankind 2.82 start
 	terrainMarsh = cgc.getInfoTypeForString("TERRAIN_MARSH")
 # Rise of Mankind 2.82 end
-	
+
 #C2C
 	terrainSaltFlats = cgc.getInfoTypeForString("TERRAIN_SALT_FLATS")
 	terrainDunes = cgc.getInfoTypeForString("TERRAIN_DUNES")
@@ -2749,7 +2749,7 @@ def addFeatures():
 				if plot != 0 and plot.isWater() == True and getRand(dice) < stormChance:
 					plot.setFeatureType(featStorm,0)
 # Rise of Mankind 2.82 end
-				
+
 			plot = map.sPlot(x,y)
 			if plot.isWater():
 				if allowLandNearIce:
@@ -2761,17 +2761,16 @@ def addFeatures():
 						prob = (poleSeparation - (iH - y - 1)) / float(poleSeparation)
 						if getRand(dice) < prob:
 							plot.setFeatureType(featIce,-1)
-				else:
-					if y < poleSeparation and not plot.isAdjacentToLand():
+				elif not plot.isCoastal():
+					if y < poleSeparation:
 						prob = (poleSeparation - y) / float(poleSeparation)
 						if getRand(dice) < prob:
 							plot.setFeatureType(featIce,-1)
-					elif y > iH - poleSeparation - 1 and not plot.isAdjacentToLand():
+					elif y > iH - poleSeparation - 1:
 						prob = (poleSeparation - (iH - y - 1)) / float(poleSeparation)
 						if getRand(dice) < prob:
 							plot.setFeatureType(featIce,-1)
-
-				if plot.isAdjacentToLand() and y > poleSeparation and y < iH - poleSeparation - 1:
+				elif y > poleSeparation and y < iH - poleSeparation - 1:
 					if tileTemperature < -40:
 						if getRand(dice) < iceOnWater * 2:
 							plot.setFeatureType(featIce,-1)
@@ -2788,7 +2787,7 @@ def addFeatures():
 						if getRand(dice) < iceOnWater / 4:
 							plot.setFeatureType(featIce,-1)
 			else:
-				if plot.isPeak() or plot.isFreshWater() or plot.isCoastalLand():
+				if plot.isPeak() or plot.isFreshWater() or not plot.isWater() and plot.isCoastal():
 					seedList[world.getOffset([x,y])] = [x,y,1,None] # x,y,distance from river,FeatureType
 				plot.setTerrainType(randomTerrain.randomItem(dice),False,False)
 
@@ -2819,7 +2818,7 @@ def addFeatures():
 							plot.setTerrainType(terrainGrass,False,False)
 					terrain = plot.getTerrainType()
 
-				if plot.isCoastalLand() and not plot.isFreshWater():
+				if not plot.isWater() and plot.isCoastal() and not plot.isFreshWater():
 					if terrain == terrainDesert:
 						if getRand(dice) > 0.3:
 								plot.setTerrainType(terrainPlains,False,False)
@@ -2902,7 +2901,7 @@ def addFeatures():
 					randomFeat[2] = featForest
 				else:
 					randomFeat[1] = featForest
-					
+
 				feat = randomFeat.randomItem(dice)
 				if feat != None:
 					plot.setFeatureType(feat,-1)
@@ -3087,45 +3086,43 @@ def addFeatures():
 	for y in range(iH):
 		for x in range(iW):
 			plot = map.sPlot(x,y)
-			if (not plot.isWater()) and (not plot.isFreshWater()) and (not plot.isHills()) and (not plot.isCoastalLand()) and (not plot.isPeak()):
-				score = 0
-				if plot.getTerrainType() == terrainDesert:
-					score += 10
-					tileList = getTilesAround(x,y)
-					for tile in tileList:
-						tx,ty = tile
-						tilePlot = map.sPlot(tx,ty)
-						tileTerrain = tilePlot.getTerrainType()
-						if tilePlot.isFreshWater():
-							score -= 20
-						if tilePlot.isRiverSide():
-							score -= 20
-						if tilePlot.isPeak():
-							score -= 2
-						if tilePlot.getFeatureType() == featNone:
-							score += 1
-						elif tilePlot.getFeatureType() == featJungle:
-							score -= 5
-						elif tilePlot.getFeatureType() == featForest:
-							score -= 3
-						elif tilePlot.getFeatureType() == featFlood:
-							score -= 20
-						if tileTerrain == terrainDesert:
-							score += 1
-						elif tileTerrain == terrainPlains:
-							score -= 2
-						elif tileTerrain == terrainGrass:
-							score -= 6
-						elif tileTerrain == terrainTundra:
-							score -= 20
-						elif tileTerrain == terrainSnow:
-							score -= 20
-						if not tilePlot.hasYield():
-							score += 1
+			if plot.getTerrainType() != terrainDesert or plot.isFreshWater() or plot.isHills() or plot.isPeak() or plot.isCoastal():
+				continue
+			score = 10
+			tileList = getTilesAround(x, y)
+			for tile in tileList:
+				tx,ty = tile
+				tilePlot = map.sPlot(tx,ty)
+				tileTerrain = tilePlot.getTerrainType()
+				if tilePlot.isFreshWater():
+					score -= 20
+				if tilePlot.isRiverSide():
+					score -= 20
+				if tilePlot.isPeak():
+					score -= 2
+				if tilePlot.getFeatureType() == featNone:
+					score += 1
+				elif tilePlot.getFeatureType() == featJungle:
+					score -= 5
+				elif tilePlot.getFeatureType() == featForest:
+					score -= 3
+				elif tilePlot.getFeatureType() == featFlood:
+					score -= 20
+				if tileTerrain == terrainDesert:
+					score += 1
+				elif tileTerrain == terrainPlains:
+					score -= 2
+				elif tileTerrain == terrainGrass:
+					score -= 6
+				elif tileTerrain == terrainTundra:
+					score -= 20
+				elif tileTerrain == terrainSnow:
+					score -= 20
+				if not tilePlot.hasYield():
+					score += 1
 
-				if score > 0:
-					#plot.setFeatureType(featOasis,-1)
-					possibleOasisList[world.getOffset([x,y])] = [x, y]
+			if score > 0:
+				possibleOasisList[world.getOffset([x,y])] = [x, y]
 
 	missedItems = 0
 	for index in range(int(len(possibleOasisList) / 3)):
@@ -3170,11 +3167,11 @@ def addFeatures():
 					randomTerrain[1] = terrainLush
 					randomTerrain[1] = terrainMuddy
 					plot.setTerrainType(randomTerrain.randomItem(dice),False,False)
-			
+
 				#Remove land features that are on wrong terrain (seems to remove some things incorrectly)
 				#if plot.canHaveFeature(plot.getFeatureType()) == False:
 					#plot.setFeatureType(featNone,-1)
-	
+
 			#Add random features from full feature list
 			if plot.getFeatureType() == featNone:
 				#randomFeat = probabilityArray()
@@ -3185,8 +3182,8 @@ def addFeatures():
 						if dice.get(10000, "Add Feature PYTHON") < cgc.getFeatureInfo(iI).getAppearanceProbability():
 							plot.setFeatureType(iI, -1)
 				#plot.setFeatureType(randomTerrain.randomItem(dice),-1)
-			
-			
+
+
 def isRiverCrossing(plot1,plot2):
 	cgc = CyGlobalContext()
 
