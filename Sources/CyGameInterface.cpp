@@ -12,6 +12,8 @@ void CyGamePythonInterface()
 
 		.def("isNone", &CyGame::isNone, "CyGame* () - is the instance valid?")
 
+		.def("getCurrentMap", &CyGame::getCurrentMap, "int ()")
+
 		.def("isMultiplayer", &CyGame::isMultiplayer, "CyGame* () - is the instance valid?")
 
 		.def("updateScore", &CyGame::updateScore, "void (bool bForce)")
