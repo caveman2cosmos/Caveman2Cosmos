@@ -1,8 +1,6 @@
 #include "CvGameCoreDLL.h"
 #include "CvReachablePlotSet.h"
 
-#include "BetterBTSAI.h"
-
 #include "CyCity.h"
 
 #include <boost155/bind.hpp>
@@ -18502,7 +18500,7 @@ void CvCity::doMeltdown()
 		{
 			const int iOdds = GC.getBuildingInfo((BuildingTypes)iI).getNukeExplosionRand();
 
-			if (iOdds > 0 && GC.getGame().getSorenRandNum(1000, "Meltdown!!!") < iOdds)
+			if (iOdds > 0 && GC.getGame().getSorenRandNum(10000, "Meltdown!!!") < iOdds)
 			{
 				if (getNumRealBuilding((BuildingTypes)iI) > 0)
 				{

@@ -15996,6 +15996,9 @@
 			<PrereqTech>TECH_IRON_WORKING</PrereqTech>
 			<iPrereqPopulation>6</iPrereqPopulation>
 			<VicinityBonus>BONUS_FINE_CLAY</VicinityBonus>
+			<PrereqBonuses>
+				<BonusType>BONUS_ROMAN</BonusType>
+			</PrereqBonuses>
 			<PrereqAmountBuildings>
 				<PrereqBuilding>
 					<BuildingType>BUILDING_GLAZE_MAKER</BuildingType>
@@ -16004,7 +16007,6 @@
 			</PrereqAmountBuildings>
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_POTTER</BuildingType>
-				<BuildingType>BUILDING_ROMAN_EMBASSY</BuildingType>
 			</PrereqInCityBuildings>
 			<iCost>1296</iCost>
 			<FreeBonus>BONUS_TERRA_SIGILLATA</FreeBonus>

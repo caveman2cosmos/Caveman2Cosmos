@@ -4,7 +4,6 @@
 #include "CvReachablePlotSet.h"
 
 #include <boost155/bind.hpp>
-#include "BetterBTSAI.h"
 
 const CvSelectionGroup* CvSelectionGroup::m_pCachedMovementGroup = nullptr;
 bst::scoped_ptr<CvSelectionGroup::CachedPathGenerator> CvSelectionGroup::m_cachedPathGenerator;

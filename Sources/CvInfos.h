@@ -5718,11 +5718,9 @@ public:
 
 	bool isOneArea() const; // Exposed to Python
 	bool isHills() const; // Exposed to Python
-
-	// Afforess	Mountains 08/03/09
 	bool isPeaks() const; // Exposed to Python
-
 	bool isFlatlands() const; // Exposed to Python
+	bool isBonusCoastalOnly() const; // Exposed to Python
 	bool isNoRiverSide() const; // Exposed to Python
 	bool isNormalize() const; // Exposed to Python
 
@@ -5794,6 +5792,7 @@ protected:
 	bool m_bHills;
 	bool m_bPeaks;
 	bool m_bFlatlands;
+	bool m_bBonusCoastalOnly;
 	bool m_bNoRiverSide;
 	bool m_bNormalize;
 

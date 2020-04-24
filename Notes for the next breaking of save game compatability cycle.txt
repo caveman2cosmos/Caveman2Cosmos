@@ -13,7 +13,7 @@ Renames done: ERA_, CIVICOPTION_, CIVIC_, RELIGION_, TECH_, ROUTE_, SPECIALIST_,
 
 
 ========================
-There was Toffer's suggestion to separate religious/punk techs to RELIGION_/CULTURE_ tag types.
+There was Toffer's suggestion to separate religious/cultural techs to RELIGION_/CULTURE_ tag types. Techs like Drama, Petroglyphs, Karma, Polytheism etc.
 That is some religious/cultural techs would be in separate tree - Maybe that could fit Ideas project?
 ========================
 
@@ -42,3 +42,8 @@ Mark up sections of code with the @SAVEBREAK tag to indicate changes that should
 
 When it comes times to break the save we need to apply all the changes that are marked like this.
 
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+Toffer - Rewrite CIV4PlayerColorInfos.xml and CIV4ColorVals.xml.
+Reduce amount of excess colour definitions, many duplicates and unused ones currently.
+Would cause issues with old saves without some extra recalc code for civ colours.
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬

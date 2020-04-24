@@ -203,6 +203,7 @@ public:
 	CvMapExternal& getMapExternal();
 
 	bool bugInitCalled() const;
+	void enableMultiMaps() { m_bMultimapsEnabled = true; }
 	bool multiMapsEnabled() const;
 	bool viewportsEnabled() const;
 	bool getReprocessGreatWallDynamically() const;

@@ -8900,7 +8900,6 @@
 			<PrereqInCityBuildings>
 				<BuildingType>BUILDING_APIARY</BuildingType>
 			</PrereqInCityBuildings>
-			<PrereqGameOption>GAMEOPTION_HEART_OF_WAR</PrereqGameOption>
 			<ObsoleteTech>TECH_EXPLOSIVES</ObsoleteTech>
 			<iCost>132</iCost>
 			<iDCMAirbombMission>2</iDCMAirbombMission>
