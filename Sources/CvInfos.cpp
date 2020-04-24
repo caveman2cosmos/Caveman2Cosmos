@@ -12963,13 +12963,13 @@ bool CvCivilizationInfo::isLeaders(int i) const
 	return m_pbLeaders ? m_pbLeaders[i] : false;
 }
 
-int CvCivilizationInfo::getCivilizationBuilding(int i) const
-{
-	return m_aiCivilizationBuildings[i];
-}
 int CvCivilizationInfo::getNumCivilizationBuildings() const
 {
 	return (int)m_aiCivilizationBuildings.size();
+}
+int CvCivilizationInfo::getCivilizationBuilding(int i) const
+{
+	return m_aiCivilizationBuildings[i];
 }
 bool CvCivilizationInfo::isCivilizationBuilding(int i) const
 {
@@ -17549,45 +17549,45 @@ void CvBonusClassInfo::getCheckSum(unsigned int& iSum)
 //
 //------------------------------------------------------------------------------------------------------
 CvBonusInfo::CvBonusInfo() :
-m_iBonusClassType(NO_BONUSCLASS),
-m_iChar(0),
-m_iTechReveal(NO_TECH),
-m_iTechCityTrade(NO_TECH),
-m_iTechObsolete(NO_TECH),
-m_iAITradeModifier(0),
-m_iAIObjective(0),
-m_iHealth(0),
-m_iHappiness(0),
-m_iMinAreaSize(0),
-m_iMinLatitude(0),
-m_iMaxLatitude(90),
-m_iPlacementOrder(0),
-m_iConstAppearance(0),
-m_iRandAppearance1(0),
-m_iRandAppearance2(0),
-m_iRandAppearance3(0),
-m_iRandAppearance4(0),
-m_iPercentPerPlayer(0),
-m_iTilesPer(0),
-m_iMinLandPercent(0),
-m_iUniqueRange(0),
-m_iGroupRange(0),
-m_iGroupRand(0),
-m_bOneArea(false),
-m_bHills(false),
-m_bFlatlands(false),
-m_bNoRiverSide(false),
-m_bNormalize(false),
-m_piYieldChange(NULL),
-m_piImprovementChange(NULL),
-m_pbTerrain(NULL),
-m_pbFeature(NULL),
-m_pbFeatureTerrain(NULL)
+ m_iBonusClassType(NO_BONUSCLASS)
+,m_iChar(0)
+,m_iTechReveal(NO_TECH)
+,m_iTechCityTrade(NO_TECH)
+,m_iTechObsolete(NO_TECH)
+,m_iAITradeModifier(0)
+,m_iAIObjective(0)
+,m_iHealth(0)
+,m_iHappiness(0)
+,m_iMinAreaSize(0)
+,m_iMinLatitude(0)
+,m_iMaxLatitude(90)
+,m_iPlacementOrder(0)
+,m_iConstAppearance(0)
+,m_iRandAppearance1(0)
+,m_iRandAppearance2(0)
+,m_iRandAppearance3(0)
+,m_iRandAppearance4(0)
+,m_iPercentPerPlayer(0)
+,m_iTilesPer(0)
+,m_iMinLandPercent(0)
+,m_iUniqueRange(0)
+,m_iGroupRange(0)
+,m_iGroupRand(0)
+,m_bOneArea(false)
+,m_bHills(false)
+,m_bFlatlands(false)
+,m_bBonusCoastalOnly(false)
+,m_bNoRiverSide(false)
+,m_bNormalize(false)
+,m_piYieldChange(NULL)
+,m_piImprovementChange(NULL)
+,m_pbTerrain(NULL)
+,m_pbFeature(NULL)
+,m_pbFeatureTerrain(NULL)
 ,m_bPeaks(false)
 ,m_PropertyManipulators()
 ,m_tradeProvidingImprovements(NULL)
-{
-}
+{ }
 
 //------------------------------------------------------------------------------------------------------
 //
@@ -17744,6 +17744,11 @@ bool CvBonusInfo::isHills() const
 bool CvBonusInfo::isFlatlands() const
 {
 	return m_bFlatlands;
+}
+
+bool CvBonusInfo::isBonusCoastalOnly() const
+{
+	return m_bBonusCoastalOnly;
 }
 
 bool CvBonusInfo::isNoRiverSide() const
@@ -17907,6 +17912,7 @@ void CvBonusInfo::getCheckSum(unsigned int &iSum)
 	CheckSum(iSum, m_bOneArea);
 	CheckSum(iSum, m_bHills);
 	CheckSum(iSum, m_bFlatlands);
+	CheckSum(iSum, m_bBonusCoastalOnly);
 	CheckSum(iSum, m_bNoRiverSide);
 	CheckSum(iSum, m_bNormalize);
 
@@ -17998,6 +18004,7 @@ bool CvBonusInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetOptionalChildXmlValByName(&m_bOneArea, L"bArea");
 	pXML->GetOptionalChildXmlValByName(&m_bHills, L"bHills");
 	pXML->GetOptionalChildXmlValByName(&m_bFlatlands, L"bFlatlands");
+	pXML->GetOptionalChildXmlValByName(&m_bBonusCoastalOnly, L"bBonusCoastalOnly");
 	pXML->GetOptionalChildXmlValByName(&m_bNoRiverSide, L"bNoRiverSide");
 	pXML->GetOptionalChildXmlValByName(&m_bNormalize, L"bNormalize");
 	pXML->GetOptionalChildXmlValByName(&m_bPeaks, L"bPeaks");
@@ -18091,7 +18098,8 @@ void CvBonusInfo::copyNonDefaults(CvBonusInfo* pClassInfo, CvXMLLoadUtility* pXM
 	if (getGroupRand() == iDefault) m_iGroupRand = pClassInfo->getGroupRand();
 	if (isOneArea() == bDefault) m_bOneArea = pClassInfo->isOneArea();
 	if (isHills() == bDefault) m_bHills = pClassInfo->isHills();
-	if (isFlatlands() == bDefault) m_bFlatlands = pClassInfo->isFlatlands();
+	if (m_bFlatlands == bDefault) m_bFlatlands = pClassInfo->isFlatlands();
+	if (m_bBonusCoastalOnly == bDefault) m_bBonusCoastalOnly = pClassInfo->isBonusCoastalOnly();
 	if (isNoRiverSide() == bDefault) m_bNoRiverSide = pClassInfo->isNoRiverSide();
 	if (isNormalize() == bDefault) m_bNormalize = pClassInfo->isNormalize();
 

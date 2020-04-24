@@ -6,8 +6,6 @@
 #include "CvReplayMessage.h"
 #include "CvReplayInfo.h"
 
-#include "BetterBTSAI.h"
-
 //	Koshling - save game compatibility between (most) builds
 //	UI flag values in game serialization.  These are bitwise combinable
 #define	GAME_SAVE_UI_FLAG_VALUE_AND_BASE		0x00000001
@@ -3632,12 +3630,6 @@ bool CvGame::canTrainNukes() const
 }
 
 
-
-/************************************************************************************************/
-/* RevDCM	                  Start		 11/04/10                                phungus420     */
-/*                                                                                              */
-/* New World Logic                                                                              */
-/************************************************************************************************/
 EraTypes CvGame::getHighestEra() const
 {
 	int iHighestEra = 0;
@@ -3656,9 +3648,7 @@ EraTypes CvGame::getHighestEra() const
 
 	return EraTypes(iHighestEra);
 }
-/************************************************************************************************/
-/* LIMITED_RELIGIONS               END                                                          */
-/************************************************************************************************/
+
 EraTypes CvGame::getCurrentEra() const
 {
 	int iEra = 0;
@@ -3672,8 +3662,7 @@ EraTypes CvGame::getCurrentEra() const
 			iCount++;
 		}
 	}
-
-	return (iCount > 0) ? ((EraTypes)(iEra / iCount)) : NO_ERA;
+	return (iCount > 0 ? (EraTypes)(iEra/iCount) : (EraTypes)0);
 }
 
 
@@ -7765,9 +7754,11 @@ namespace {
 		return unitInfo.getCombat() > 0 && !unitInfo.isOnlyDefensive()
 			// Make sure its the correct unit type for the area type (land or water)
 			&& (area->isWater() && unitInfo.getDomainType() == DOMAIN_SEA || !area->isWater() && unitInfo.getDomainType() == DOMAIN_LAND)
-			// This invalidates any units with world bonus req, like cultures, due to the "true" argument.
-			&& GET_TEAM(BARBARIAN_TEAM).isUnitBonusEnabledByTech(unitInfo, true)
-			&& GET_PLAYER(BARBARIAN_PLAYER).canTrain(unitType, false, false, false, true); // Invalidates World Units for NPC;
+			// Barbs don't need the bonus, but the bonus must be enabled by tech
+			&& GET_TEAM(BARBARIAN_TEAM).isUnitBonusEnabledByTech(unitInfo, true) // "true" to invalidate units that require cultural bonuses
+			&& !unitInfo.isCivilizationUnit() // Invalidates Neanderthal units and units that require the palace.
+			// General requirements that must be fulfilled, also invalidates World Units for NPC
+			&& GET_PLAYER(BARBARIAN_PLAYER).canTrain(unitType, false, false, false, true);
 	}
 
 	bool barbarianCityShouldSpawnWorker(CvGame* game, CvCity* city)
@@ -12764,6 +12755,7 @@ namespace {
 		return unitInfo.getCombat() > 0 && !unitInfo.isOnlyDefensive()
 			&& unitInfo.getDomainType() == DOMAIN_LAND
 			&& GET_TEAM(BARBARIAN_TEAM).isUnitBonusEnabledByTech(unitInfo, true)
+			&& !unitInfo.isCivilizationUnit()
 			&& GET_PLAYER(BARBARIAN_PLAYER).canTrain(unitType, false, false, false, true);
 	}
 }

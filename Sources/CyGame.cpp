@@ -12,6 +12,11 @@ CyGame::CyGame(CvGame* pGame) : m_pGame(pGame) {}
 
 CyGame::CyGame(CvGameAI* pGame) : m_pGame(pGame) {}
 
+int CyGame::getCurrentMap() const
+{
+	return m_pGame->getCurrentMap();
+}
+
 bool CyGame::isMultiplayer()
 {
 	return GC.getInitCore().getMultiplayer();

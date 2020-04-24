@@ -85,23 +85,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -189,23 +190,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -282,23 +284,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -372,23 +375,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -464,23 +468,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -556,23 +561,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -653,23 +659,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_AFRICAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -757,23 +764,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -851,23 +859,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_ASIAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -953,23 +962,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_AFRICAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -1051,23 +1061,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -1149,23 +1160,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_AFRICAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -1247,22 +1259,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
+				<CivicType>CIVIC_UNORGANIZED</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
 				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
-				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -1352,23 +1366,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -1459,23 +1474,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -1587,23 +1603,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -1677,23 +1694,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -1777,23 +1795,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_SOUTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_SOUTH_AMERICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -1915,23 +1934,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_ASIAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -2012,23 +2032,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_ASIAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -2102,23 +2123,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_ASIAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -2191,23 +2213,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_ASIAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -2286,23 +2309,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_AFRICAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -2375,23 +2399,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -2469,23 +2494,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_ASIAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -2581,23 +2607,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -2675,23 +2702,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -2767,23 +2795,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -2875,23 +2904,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -2973,23 +3003,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -3081,23 +3112,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -3175,23 +3207,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -3277,23 +3310,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_ASIAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_ASIAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -3370,23 +3404,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -3462,23 +3497,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_MIDDLE_EASTERN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_MIDDLE_EASTERN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -3559,23 +3595,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -3652,23 +3689,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_AFRICAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_AFRICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -3741,23 +3779,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_OCEANIAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -3835,23 +3874,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_EUROPEAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_EUROPEAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -3946,22 +3986,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_NORTH_AMERICAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_NORTH_AMERICAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
+				<CivicType>CIVIC_UNORGANIZED</CivicType>
 				<CivicType>CIVIC_IGNORANCE</CivicType>
 				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
 				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
-				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -3994,18 +4036,18 @@
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -4031,18 +4073,18 @@
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -4068,18 +4110,18 @@
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -4185,18 +4227,18 @@
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -4221,18 +4263,18 @@
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -4348,18 +4390,18 @@
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>
@@ -4443,23 +4485,24 @@
 			<FreeBuildings>
 				<BuildingType>BUILDING_PALACE</BuildingType>
 				<BuildingType>BUILDING_CULTURE_NATIVE_OCEANIAN</BuildingType>
+				<BuildingType>BUILDING_CULTURE_ACTIVE_OCEANIAN</BuildingType>
 			</FreeBuildings>
 			<InitialCivics>
 				<CivicType>CIVIC_ANARCHISM</CivicType>
 				<CivicType>CIVIC_OBEDIENCE</CivicType>
 				<CivicType>CIVIC_STRONGMAN</CivicType>
-				<CivicType>CIVIC_PRIMITIVE</CivicType>
-				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_MILITIA</CivicType>
 				<CivicType>CIVIC_IRRELIGION</CivicType>
+				<CivicType>CIVIC_PRIMITIVE</CivicType>
+				<CivicType>CIVIC_COMMUNALISM</CivicType>
 				<CivicType>CIVIC_SURVIVAL</CivicType>
-				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
-				<CivicType>CIVIC_BORDERLESS</CivicType>
-				<CivicType>CIVIC_IGNORANCE</CivicType>
-				<CivicType>CIVIC_NONVERBAL</CivicType>
-				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
 				<CivicType>CIVIC_CURRENCY_LESS</CivicType>
 				<CivicType>CIVIC_UNORGANIZED</CivicType>
+				<CivicType>CIVIC_IGNORANCE</CivicType>
+				<CivicType>CIVIC_NONVERBAL</CivicType>
+				<CivicType>CIVIC_BORDERLESS</CivicType>
+				<CivicType>CIVIC_HUNTER_GATHERING</CivicType>
+				<CivicType>CIVIC_GARBAGE_ANYWHERE</CivicType>
 			</InitialCivics>
 			<Leaders>
 				<Leader>

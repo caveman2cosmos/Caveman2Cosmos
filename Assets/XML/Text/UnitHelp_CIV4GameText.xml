@@ -49,6 +49,20 @@
 		<Polish>[ICON_BULLET]%D1%% obrażeń do obrony miasta przy udanym złamaniu obrony.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_CAN_ALWAYS_ATTACK_CITIES</Tag>
+		<English>[ICON_BULLET]Can Always Attack Cities</English>
+		<French>[ICON_BULLET]Ignore la Défense Minimum d'une Ville</French>
+		<Italian>[ICON_BULLET]Ignora il livello minimo di difesa necessario per attaccare</Italian>
+		<Polish>[ICON_BULLET]Ignoruje Minimalną Obronę wymaganą do ataku</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_CAN_ONLY_ATTACK_CITIES</Tag>
+		<English>[ICON_BULLET]Can Only Attack Cities</English>
+		<French>[ICON_BULLET]Attaque uniquement les villes</French>
+		<Italian>[ICON_BULLET]Attacca solo città</Italian>
+		<Polish>[ICON_BULLET]Atakuje tylko miasta</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_CARGO_SIZE_MATTERS</Tag>
 		<English>[ICON_BULLET]Cargo Size: %d1</English>
 		<French>[ICON_BULLET]Volume en unité cargo: %d1</French>
@@ -105,6 +119,12 @@
 		<Polish>, Punkty Kontroli: %d1/%d2</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_DAMAGE_BY_UNITCOMBAT</Tag>
+		<English>[ICON_BULLET]Damage that %s1_UNITCOMBAT: %d2_Mod%%. Heals in %d3 Turns.</English>
+		<French>[ICON_BULLET]Dégâts de %s1_UNITCOMBAT: %d2_Mod%%. se soigne en %d3 Tours.</French>
+		<Polish>[ICON_BULLET]Obrażenia otrzymane %s1_UNITCOMBAT: %d2_Mod%%. Uleczone w %d3 tur.</Polish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_FIRST_STRIKES</Tag>
 		<English>[ICON_BULLET]First Strikes: %d1</English>
 		<French>[ICON_BULLET]Premières attaques: %d1</French>
@@ -153,7 +173,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_INVISIBILITY_SPOT_PLOT_RANGE_VALUE_ADJ</Tag>
 		<English>[ICON_BULLET]%D1_Change %F2_Type Spot Range on %s3_Plot (already tallied into total.)</English>
-		<French>[ICON_BULLET%D2_Change Portée étendue de Perception (%F2_Type) lorsque sur une case %s3_Plot (inclus dans le total.)</French>
+		<French>[ICON_BULLET]%D2_Change Portée étendue de Perception (%F2_Type) lorsque sur une case %s3_Plot (inclus dans le total.)</French>
 		<German>[ICON_BULLET]%s3_Plot: %D1_Change %F2_Type-Sichtweite (in Gesamtwert bereits eingerechnet)</German>
 	</TEXT>
 	<TEXT>
@@ -234,6 +254,12 @@
 		<French>[ICON_BULLET]Cette Unité peut se soigner de: %d1%%</French>
 		<German>[ICON_BULLET]Selbstheilung: %d1%%</German>
 		<Polish>[ICON_BULLET]Jednostka leczy się sama: %d1%%</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_STEALTH_DEFEND</Tag>
+		<English>[ICON_BULLET]This Unit will Stealth Defend</English>
+		<French>[ICON_BULLET]Cette unité se défendra furtivement</French>
+		<German>[ICON_BULLET]Diese Einheit kann sich gegen Tarnangriffe verteidigen.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_STEALTH_STRIKES</Tag>

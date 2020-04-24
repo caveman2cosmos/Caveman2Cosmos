@@ -729,42 +729,41 @@ void CvPlot::doImprovement()
 	// Discover bonus
 	if (getBonusType() == NO_BONUS)
 	{
-		const CvMap& map = GC.getMap();
-		int iGameSpeedFactor = -1;
-		for (int iI = 0; iI < GC.getNumBonusInfos(); ++iI)
+		const CvTeam& team = GET_TEAM(getTeam());
+		const int iNumBonuses = GC.getNumBonusInfos();
+		int iBonus = GC.getGame().getSorenRandNum(iNumBonuses, "Random start index");
+		int iCount = 0;
+		while (iCount++ < iNumBonuses)
 		{
-			int iOdds = pInfo.getImprovementBonusDiscoverRand(iI);
-			if (iOdds < 1
-			|| !GET_TEAM(getTeam()).isHasTech((TechTypes)GC.getBonusInfo((BonusTypes)iI).getTechReveal())
-			|| !canHaveBonus((BonusTypes) iI))
+			int iOdds = pInfo.getImprovementBonusDiscoverRand(iBonus);
+			if (iOdds > 0 && team.isHasTech((TechTypes)GC.getBonusInfo((BonusTypes)iBonus).getTechReveal()) && canHaveBonus((BonusTypes) iBonus))
 			{
-				continue;
-			}
-			if (iGameSpeedFactor == -1)
-			{
-				iGameSpeedFactor = GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
-			}
-			iOdds *= iGameSpeedFactor;
-			iOdds /= 100;
-			// Bonus density normalization
-			iOdds *= 7 * (map.getNumBonuses((BonusTypes) iI) + 2);
-			iOdds /= 2 * (map.getWorldSize() + 9);
+				iOdds *= GC.getGameSpeedInfo(GC.getGame().getGameSpeedType()).getConstructPercent();
+				iOdds /= 100;
+				// Bonus density normalization
+				iOdds *= 7 * (GC.getMap().getNumBonuses((BonusTypes) iBonus) + 2);
+				iOdds /= 2 * (GC.getMap().getWorldSize() + 9);
 
-			if (iOdds < 2 || GC.getGame().getSorenRandNum(iOdds, "Bonus Discovery") == 0)
-			{
-				setBonusType((BonusTypes) iI);
-
-				const CvCity* pCity = map.findCity(getX(), getY(), getOwner(), NO_TEAM, false);
-
-				if (pCity != NULL && isInViewport())
+				if (iOdds < 2 || GC.getGame().getSorenRandNum(iOdds, "Bonus Discovery") == 0)
 				{
-					MEMORY_TRACK_EXEMPT();
+					setBonusType((BonusTypes) iBonus);
 
-					CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE", GC.getBonusInfo((BonusTypes)iI).getTextKeyWide(), pCity->getNameKey());
-					AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_DISCOVERBONUS", MESSAGE_TYPE_MINOR_EVENT,
-						GC.getBonusInfo((BonusTypes)iI).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), getViewportX(), getViewportY(), true, true);
+					const CvCity* pCity = GC.getMap().findCity(getX(), getY(), getOwner(), NO_TEAM, false);
+
+					if (pCity != NULL && isInViewport())
+					{
+						MEMORY_TRACK_EXEMPT();
+
+						CvWString szBuffer = gDLL->getText("TXT_KEY_MISC_DISCOVERED_NEW_RESOURCE", GC.getBonusInfo((BonusTypes)iBonus).getTextKeyWide(), pCity->getNameKey());
+						AddDLLMessage(getOwner(), false, GC.getEVENT_MESSAGE_TIME(), szBuffer, "AS2D_DISCOVERBONUS", MESSAGE_TYPE_MINOR_EVENT,
+							GC.getBonusInfo((BonusTypes)iBonus).getButton(), (ColorTypes)GC.getInfoTypeForString("COLOR_WHITE"), getViewportX(), getViewportY(), true, true);
+					}
 				}
 				break;
+			}
+			if (++iBonus == iNumBonuses)
+			{
+				iBonus = 0;
 			}
 		}
 	}
@@ -841,7 +840,7 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 	int iHash = 512; // Super simple hash, but should be adequate for this purpose.
 	const ImprovementTypes eMainUpgrade = (ImprovementTypes)GC.getImprovementInfo(eType).getImprovementUpgrade();
 
-	if (canHaveImprovement(eMainUpgrade, eTeam, false, true, true))
+	if (canHaveImprovement(eMainUpgrade, eTeam, false, true))
 	{
 		if (GC.getImprovementInfo(eMainUpgrade).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold())
 		{
@@ -854,7 +853,7 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 	{
 		const ImprovementTypes eUpgradeX = (ImprovementTypes)GC.getImprovementInfo(getImprovementType()).getAlternativeImprovementUpgradeType(iI);
 
-		if (canHaveImprovement(eUpgradeX, eTeam, false, true, true))
+		if (canHaveImprovement(eUpgradeX, eTeam, false, true))
 		{
 			eUpgrade = eUpgradeX;
 			if (GC.getImprovementInfo(eUpgradeX).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold())
@@ -880,18 +879,9 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 		// Advance upgrade progress
 		if (GC.getImprovementInfo(eType).isUpgradeRequiresFortify())
 		{
-			CLLNode<IDInfo>* pUnitNode = headUnitNode();
-
-			while (pUnitNode != NULL)
+			if (algo::any_of(units(), CvUnit::fn::getFortifyTurns() > 0 && CvUnit::fn::getTeam() == eTeam && CvUnit::fn::canDefend()))
 			{
-				const CvUnit* pLoopUnit = ::getUnit(pUnitNode->m_data);
-
-				if (pLoopUnit->getFortifyTurns() > 0 && pLoopUnit->getTeam() == eTeam && pLoopUnit->canDefend())
-				{
-					changeUpgradeProgressHundredths(GET_PLAYER(getOwner()).getImprovementUpgradeRateTimes100(eType));
-					break;
-				}
-				pUnitNode = nextUnitNode(pUnitNode);
+				changeUpgradeProgressHundredths(GET_PLAYER(getOwner()).getImprovementUpgradeRateTimes100(eType));
 			}
 		}
 		else
@@ -933,7 +923,7 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 
 			int iBestValue = pCity->AI_getImprovementValue(this, eType, iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange);
 
-			if (GC.getImprovementInfo(eMainUpgrade).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold() && canHaveImprovement(eMainUpgrade, eTeam, false, true, true))
+			if (GC.getImprovementInfo(eMainUpgrade).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold() && canHaveImprovement(eMainUpgrade, eTeam, false, true))
 			{
 				int iValue = pCity->AI_getImprovementValue(this, eMainUpgrade, iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange);
 				if (iValue > iBestValue)
@@ -946,7 +936,7 @@ void CvPlot::doImprovementUpgrade(const ImprovementTypes eType)
 			{
 				const ImprovementTypes eUpgradeX = (ImprovementTypes)GC.getImprovementInfo(getImprovementType()).getAlternativeImprovementUpgradeType(iI);
 
-				if (GC.getImprovementInfo(eUpgradeX).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold() && canHaveImprovement(eUpgradeX, eTeam, false, true, true))
+				if (GC.getImprovementInfo(eUpgradeX).getHighestCost() <= GET_PLAYER(getOwner()).getEffectiveGold() && canHaveImprovement(eUpgradeX, eTeam, false, true))
 				{
 					int iValue = pCity->AI_getImprovementValue(this, eUpgradeX, iFoodMultiplier, iProductionMultiplier, iCommerceMultiplier, iDesiredFoodChange);
 					if (iValue > iBestValue)
@@ -1716,18 +1706,37 @@ bool CvPlot::isCoastalLand(int iMinWaterSize) const
 	{
 		const CvPlot* pAdjacentPlot = plotDirection(getX(), getY(), ((DirectionTypes)iI));
 
-		if (pAdjacentPlot != NULL)
+		if (pAdjacentPlot != NULL && pAdjacentPlot->isWater() && pAdjacentPlot->area()->getNumTiles() >= iMinWaterSize)
 		{
-			if (pAdjacentPlot->isWater())
-			{
-				if (pAdjacentPlot->area()->getNumTiles() >= iMinWaterSize)
-				{
-					return true;
-				}
-			}
+			return true;
 		}
 	}
+	return false;
+}
 
+// Lake shore does not qualify as coast
+bool CvPlot::isCoastal(int iMinWaterSize) const
+{
+	PROFILE_FUNC();
+
+	if (isWater())
+	{
+		if (area()->getNumTiles() < iMinWaterSize)
+		{
+			return false;
+		}
+		return isAdjacentToLand();
+	}
+	// Coastal Land
+	for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+	{
+		const CvPlot* pAdjacentPlot = plotDirection(getX(), getY(), ((DirectionTypes)iI));
+
+		if (pAdjacentPlot != NULL && pAdjacentPlot->isWater() && pAdjacentPlot->area()->getNumTiles() >= iMinWaterSize)
+		{
+			return true;
+		}
+	}
 	return false;
 }
 
@@ -1770,7 +1779,7 @@ bool CvPlot::isLake() const
 }
 
 
-bool CvPlot::isFreshWater(bool bIgnoreJungle) const
+bool CvPlot::isFreshWater() const
 {
 	if (isLake() || isRiver())
 	{
@@ -1787,24 +1796,20 @@ bool CvPlot::isFreshWater(bool bIgnoreJungle) const
 		return false;
 	}
 
+	if (getFeatureType() != NO_FEATURE && GC.getFeatureInfo(getFeatureType()).isAddsFreshWater())
+	{
+		return true;
+	}
+
 	for (int iDX = -1; iDX <= 1; iDX++)
 	{
 		for (int iDY = -1; iDY <= 1; iDY++)
 		{
 			const CvPlot* pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
 
-			if (pLoopPlot != NULL)
+			if (pLoopPlot != NULL && pLoopPlot->isLake())
 			{
-				if (pLoopPlot->isLake())
-				{
-					return true;
-				}
-
-				if (pLoopPlot->getFeatureType() != NO_FEATURE && GC.getFeatureInfo(pLoopPlot->getFeatureType()).isAddsFreshWater()
-				&& (!bIgnoreJungle || GC.getFeatureInfo(pLoopPlot->getFeatureType()).getHealthPercent() >= 0))
-				{
-					return true;
-				}
+				return true;
 			}
 		}
 	}
@@ -1830,24 +1835,18 @@ bool CvPlot::isPotentialIrrigation() const
 
 bool CvPlot::canHavePotentialIrrigation() const
 {
-//===NM=====Mountain Mod===0X=====
-	//TB Debug: Why should it be necessary for cities to require Not being on either hills or alternative peak types (like volcanoes) for them to be potentially irrigated?  Seems to be a strange requirement for wells to function.
-	if (isCity() /*&& !(isHills() || isPeak2(true))*/)
+	if (isCity())
 	{
 		return true;
 	}
-
 	for (int iI = 0; iI < GC.getNumImprovementInfos(); ++iI)
 	{
-		if (GC.getImprovementInfo((ImprovementTypes)iI).isCarriesIrrigation())
+		if (GC.getImprovementInfo((ImprovementTypes)iI).isCarriesIrrigation()
+		&& canHaveImprovement(((ImprovementTypes)iI), NO_TEAM, true))
 		{
-			if (canHaveImprovement(((ImprovementTypes)iI), NO_TEAM, true))
-			{
-				return true;
-			}
+			return true;
 		}
 	}
-
 	return false;
 }
 
@@ -2559,94 +2558,86 @@ bool CvPlot::canHaveBonus(BonusTypes eBonus, bool bIgnoreLatitude) const
 	{
 		return true;
 	}
-
-	if (getBonusType() != NO_BONUS)
+	if (getBonusType() != NO_BONUS || !isPotentialCityWork())
 	{
 		return false;
 	}
 
+	const CvBonusInfo& bonus = GC.getBonusInfo(eBonus);
 
 	if (getFeatureType() != NO_FEATURE)
 	{
-		if (!(GC.getBonusInfo(eBonus).isFeature(getFeatureType())))
+		if (!bonus.isFeature(getFeatureType()))
 		{
 			return false;
 		}
 
-		if (!(GC.getBonusInfo(eBonus).isFeatureTerrain(getTerrainType())))
+		if (!bonus.isFeatureTerrain(getTerrainType()))
 		{
 			return false;
 		}
 	}
-	else
+	else if (!bonus.isTerrain(getTerrainType()))
 	{
-		if (!(GC.getBonusInfo(eBonus).isTerrain(getTerrainType())))
-		{
-			return false;
-		}
+		return false;
 	}
 
 	if (isHills())
 	{
-		if (!(GC.getBonusInfo(eBonus).isHills()))
+		if (!bonus.isHills())
 		{
 			return false;
 		}
 	}
 	else if (isPeak2(true))
 	{
-		if (!(GC.getBonusInfo(eBonus).isPeaks()))
+		if (!bonus.isPeaks())
 		{
 			return false;
 		}
 	}
 	else if (isFlatlands())
 	{
-		if (!(GC.getBonusInfo(eBonus).isFlatlands()))
+		if (!bonus.isFlatlands())
 		{
 			return false;
 		}
 	}
 
-	if (GC.getBonusInfo(eBonus).isNoRiverSide())
-	{
-		if (isRiverSide())
-		{
-			return false;
-		}
-	}
-
-	if (GC.getBonusInfo(eBonus).getMinAreaSize() > 1)
-	{
-		if (area()->getNumTiles() < GC.getBonusInfo(eBonus).getMinAreaSize())
-		{
-			return false;
-		}
-	}
-
-	if (!bIgnoreLatitude)
-	{
-		if (getLatitude() > GC.getBonusInfo(eBonus).getMaxLatitude())
-		{
-			return false;
-		}
-
-		if (getLatitude() < GC.getBonusInfo(eBonus).getMinLatitude())
-		{
-			return false;
-		}
-	}
-
-	if (!isPotentialCityWork())
+	if (bonus.isBonusCoastalOnly() && !isCoastal())
 	{
 		return false;
 	}
 
-	int iCount = GC.getBonusInfo(eBonus).getNumMapCategoryTypes();
+	if (bonus.isNoRiverSide() && isRiverSide())
+	{
+		return false;
+	}
+
+	if (bonus.getMinAreaSize() > 1
+	&& area()->getNumTiles() < bonus.getMinAreaSize())
+	{
+		return false;
+	}
+
+	if (!bIgnoreLatitude)
+	{
+		if (getLatitude() > bonus.getMaxLatitude())
+		{
+			return false;
+		}
+
+		if (getLatitude() < bonus.getMinLatitude())
+		{
+			return false;
+		}
+	}
+
+	int iCount = bonus.getNumMapCategoryTypes();
 	bool bFound = (iCount < 1);
 	for (int iI = 0; iI < iCount; iI++)
 	{
-		if (isMapCategoryType((MapCategoryTypes)GC.getBonusInfo(eBonus).getMapCategoryType(iI)))
+		if (isMapCategoryType((MapCategoryTypes)bonus.getMapCategoryType(iI)))
 		{
 			bFound = true;
 			break;
@@ -2656,9 +2647,9 @@ bool CvPlot::canHaveBonus(BonusTypes eBonus, bool bIgnoreLatitude) const
 	{
 		return false;
 	}
-
 	return true;
 }
+
 
 bool CvPlot::canBuildImprovement(ImprovementTypes eImprovement, TeamTypes eTeam) const
 {
@@ -2679,20 +2670,19 @@ bool CvPlot::canBuildImprovement(ImprovementTypes eImprovement, TeamTypes eTeam)
 
 // Needs to be improved a bit. What if no builds account for the ability to generate the improvement?
 // Hmm... maybe a whole nother check that along with this one gets cached significantly?
-bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, bool bPotential, bool bOver, bool bUpgradeCheck) const
+bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, bool bPotential, bool bUpgradeCheck) const
 {
-	FAssertMsg(eImprovement != NO_IMPROVEMENT, "Improvement is not assigned a valid value");
 	FAssertMsg(getTerrainType() != NO_TERRAIN, "TerrainType is not assigned a valid value");
+
+	// Universal validator
+	if (eImprovement == NO_IMPROVEMENT)
+	{
+		return true;
+	}
 	/*----------------------*\
 	| Universal Invalidators |
 	\*----------------------*/
 	if (isCity())
-	{
-		return false;
-	}
-
-	// Overide old?
-	if (!bOver && eImprovement != NO_IMPROVEMENT && getImprovementType() == eImprovement)
 	{
 		return false;
 	}
@@ -2710,7 +2700,7 @@ bool CvPlot::canHaveImprovement(ImprovementTypes eImprovement, TeamTypes eTeam, 
 	}
 	// Meant for pseudo improvements that won't ever be on the map, like bonus placement improvements.
 	// Toffer - Shouldn't this be part of buildInfo?
-	// I'm thinking bonus placement builds should not be linked to an improvement at all.
+	//	I'm thinking bonus placement builds should not be linked to an improvement at all.
 	if (pInfo.isNotOnAnyBonus() && getBonusType() != NO_BONUS)
 	{
 		return false;
@@ -6293,7 +6283,7 @@ CvArea* CvPlot::secondWaterArea() const
 {
 	FAssert(!isWater());
 
-	const int iWaterArea = waterArea()->getID();
+	const int iWaterArea = waterArea() != NULL ? waterArea()->getID() : FFreeList::INVALID_INDEX;
 	int iBestValue = 0;
 	CvArea* pBestArea = NULL;
 
@@ -13441,8 +13431,8 @@ bool CvPlot::canApplyEvent(EventTypes eEvent) const
 
 	if (kEvent.getImprovementChange() > 0)
 	{
-		if (NO_IMPROVEMENT != kEvent.getImprovement()
-		&& !canHaveImprovement((ImprovementTypes)kEvent.getImprovement(), getTeam(), false, false))
+		if (getImprovementType() == kEvent.getImprovement()
+		|| !canHaveImprovement((ImprovementTypes)kEvent.getImprovement(), getTeam(), false))
 		{
 			return false;
 		}
