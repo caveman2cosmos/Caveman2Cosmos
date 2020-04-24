@@ -1,7 +1,6 @@
 // team.cpp
 
 #include "CvGameCoreDLL.h"
-#include "BetterBTSAI.h"
 
 // Public Functions...
 #pragma warning( disable : 4355 )

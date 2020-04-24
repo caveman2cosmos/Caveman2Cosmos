@@ -1776,6 +1776,8 @@ public:
 	int getMaxGlobalInstances() const; // Exposed to Python
 	int getMaxPlayerInstances() const; // Exposed to Python
 	bool isUnlimitedException() const; // Exposed to Python
+	bool isCivilizationUnit(const PlayerTypes ePlayer=NO_PLAYER) const;
+
 	int getInstanceCostModifier() const; // Exposed to Python
 	int getAIWeight() const; // Exposed to Python
 	int getProductionCost() const; // Exposed to Python
@@ -5716,11 +5718,9 @@ public:
 
 	bool isOneArea() const; // Exposed to Python
 	bool isHills() const; // Exposed to Python
-
-	// Afforess	Mountains 08/03/09
 	bool isPeaks() const; // Exposed to Python
-
 	bool isFlatlands() const; // Exposed to Python
+	bool isBonusCoastalOnly() const; // Exposed to Python
 	bool isNoRiverSide() const; // Exposed to Python
 	bool isNormalize() const; // Exposed to Python
 
@@ -5792,6 +5792,7 @@ protected:
 	bool m_bHills;
 	bool m_bPeaks;
 	bool m_bFlatlands;
+	bool m_bBonusCoastalOnly;
 	bool m_bNoRiverSide;
 	bool m_bNormalize;
 

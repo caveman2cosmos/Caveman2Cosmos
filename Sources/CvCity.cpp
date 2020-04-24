@@ -1,8 +1,6 @@
 #include "CvGameCoreDLL.h"
 #include "CvReachablePlotSet.h"
 
-#include "BetterBTSAI.h"
-
 #include "CyCity.h"
 
 #include <boost155/bind.hpp>
@@ -1000,7 +998,6 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 			m_abCachedBestSeeInvisibleUnitSea[iI] = false;
 		}
 
-		FAssertMsg((0 < NUM_CITY_PLOTS), "NUM_CITY_PLOTS is not greater than zero but an array is being allocated in CvCity::reset");
 		m_pabWorkingPlot = new bool[NUM_CITY_PLOTS];
 		for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
 		{
@@ -1261,14 +1258,9 @@ void CvCity::kill(bool bUpdatePlotGroups, bool bUpdateCulture)
 		}
 	}
 
-	for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
+	foreach_(CvPlot* loopPlot, plots() | filtered(CvPlot::fn::getWorkingCityOverride() == this))
 	{
-		CvPlot* pLoopPlot = getCityIndexPlot(iI);
-
-		if (pLoopPlot != NULL && pLoopPlot->getWorkingCityOverride() == this)
-		{
-			pLoopPlot->setWorkingCityOverride(NULL);
-		}
+		loopPlot->setWorkingCityOverride(NULL);
 	}
 
 	setCultureLevel(NO_CULTURELEVEL, false);
@@ -9335,26 +9327,21 @@ void CvCity::updateFeatureHealth()
  */
 void CvCity::calculateFeatureHealthPercent(int& iGood, int& iBad) const
 {
-	for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
+	foreach_(const CvPlot* loopPlot, plots())
 	{
-		CvPlot* pLoopPlot = getCityIndexPlot(iI);
+		const FeatureTypes eFeature = loopPlot->getFeatureType();
 
-		if (pLoopPlot != NULL)
+		if (eFeature != NO_FEATURE)
 		{
-			FeatureTypes eFeature = pLoopPlot->getFeatureType();
+			const int iHealth = GC.getFeatureInfo(eFeature).getHealthPercent();
 
-			if (eFeature != NO_FEATURE)
+			if (iHealth > 0)
 			{
-				int iHealth = GC.getFeatureInfo(eFeature).getHealthPercent();
-
-				if (iHealth > 0)
-				{
-					iGood += iHealth;
-				}
-				else
-				{
-					iBad -= iHealth;
-				}
+				iGood += iHealth;
+			}
+			else
+			{
+				iBad -= iHealth;
 			}
 		}
 	}
@@ -9376,14 +9363,12 @@ namespace {
  */
 void CvCity::calculateFeatureHealthPercentChange(int& iGood, int& iBad, CvPlot* pIgnorePlot) const
 {
-	for (int iI = 0; iI < NUM_CITY_PLOTS; iI++)
+	foreach_ (const CvPlot* loopPlot, plots())
 	{
-		CvPlot* pLoopPlot = getCityIndexPlot(iI);
-
-		if (pLoopPlot == NULL && pLoopPlot == pIgnorePlot || !pLoopPlot->isVisible(getTeam(), true))
+		if (loopPlot == pIgnorePlot || !loopPlot->isVisible(getTeam(), true))
 			continue;
 
-		const FeatureTypes eFeature = pLoopPlot->getFeatureType();
+		const FeatureTypes eFeature = loopPlot->getFeatureType();
 
 		if (eFeature != NO_FEATURE)
 		{
@@ -9391,7 +9376,7 @@ void CvCity::calculateFeatureHealthPercentChange(int& iGood, int& iBad, CvPlot* 
 
 			if (iHealth != 0)
 			{
-				if (algo::any_of(pLoopPlot->units(), bst::bind(isBuildingFeatureRemove, _1, eFeature)))
+				if (algo::any_of(loopPlot->units(), bst::bind(isBuildingFeatureRemove, _1, eFeature)))
 				{
 					if (iHealth > 0)
 					{
@@ -9990,27 +9975,13 @@ int CvCity::getAdditionalHappinessByCivic(CivicTypes eCivic, bool bDifferenceToC
 	//#1.e: FeatureHappinessChanges
 	if (kCivic.isAnyFeatureHappinessChange())
 	{
-		CvPlot* pLoopPlot;
 		for (int iI = 0; iI < GC.getNumFeatureInfos(); iI++)
 		{
-			int iTempHappy = kCivic.getFeatureHappinessChanges(iI);
+			const int iTempHappy = kCivic.getFeatureHappinessChanges(iI);
 
 			if (iTempHappy != 0)
 			{
-				int iCount = 0;
-				for (int iJ = 0; iJ < NUM_CITY_PLOTS; iJ++)
-				{
-					pLoopPlot = plotCity(getX(), getY(), iJ);
-
-					if (pLoopPlot != NULL)
-					{
-						if (pLoopPlot->getFeatureType() == (FeatureTypes)iI)
-						{
-							iCount++;
-						}
-					}
-				}
-				iHappy += iTempHappy * iCount;
+				iHappy += iTempHappy * algo::count_if(plots(), CvPlot::fn::getFeatureType() == (FeatureTypes)iI);
 			}
 		}
 	}
@@ -18529,7 +18500,7 @@ void CvCity::doMeltdown()
 		{
 			const int iOdds = GC.getBuildingInfo((BuildingTypes)iI).getNukeExplosionRand();
 
-			if (iOdds > 0 && GC.getGame().getSorenRandNum(1000, "Meltdown!!!") < iOdds)
+			if (iOdds > 0 && GC.getGame().getSorenRandNum(10000, "Meltdown!!!") < iOdds)
 			{
 				if (getNumRealBuilding((BuildingTypes)iI) > 0)
 				{

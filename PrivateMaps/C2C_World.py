@@ -3319,6 +3319,9 @@ class BonusPlacer:
 			elif not (iFeature > -1 and bonusInfo.isFeature(iFeature) and bonusInfo.isFeatureTerrain(iTerrain)):
 				return False
 
+		if bonusInfo.isBonusCoastalOnly() and not plot.isCoastal():
+			return False
+
 		if bonusInfo.isNoRiverSide() and plot.isRiverSide():
 			return False
 
@@ -3851,7 +3854,7 @@ class StartingArea:
 				sPlot = MAP.plot(self.plotList[m].x, self.plotList[m].y)
 				if sPlot.isWater():
 					raise ValueError, "Start plot is water!"
-				sPlot.setImprovementType(GC.getInfoTypeForString("NO_IMPROVEMENT"))
+				sPlot.setImprovementType(-1)
 				playerID = self.playerList[n]
 				player = GC.getPlayer(playerID)
 				sPlot.setStartingPlot(True)

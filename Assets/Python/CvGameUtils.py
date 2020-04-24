@@ -127,7 +127,7 @@ class CvGameUtils:
 
 		# Bonus placing builds
 		CyPlot = GC.getMap().plot(iX, iY)
-		if CyPlot and CyPlot.getBonusType(-1) < 0:
+		if CyPlot and CyPlot.getBonusType(-1) < 0 and not CyPlot.isWater():
 			szType = GC.getBuildInfo(iBuild).getType()
 			if szType[:12] == "BUILD_BONUS_":
 				iBonus = GC.getInfoTypeForString(szType[6:])

@@ -25,6 +25,8 @@ public:
 	CvGame* getGame() { return m_pGame;	}	// Call from C++
 	bool isNone() { return (m_pGame==NULL); }
 
+	int getCurrentMap() const;
+
 	bool isMultiplayer();
 
 	void updateScore(bool bForce);

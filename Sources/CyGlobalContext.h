@@ -36,6 +36,7 @@ public:
 /*********************************/
 /***** Parallel Maps - Begin *****/
 /*********************************/
+	void enableMultiMaps() { GC.enableMultiMaps(); }
 	bool multiMapsEnabled() const;
 	void switchMap(int iMap);
 	int getNumMapInfos() const;

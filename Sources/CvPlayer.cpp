@@ -2,7 +2,6 @@
 
 #include "CvGameCoreDLL.h"
 #include "CvDLLFlagEntityIFaceBase.h"
-#include "BetterBTSAI.h"
 
 //	Koshling - save flag indicating this player has no data in the save as they have never
 //	been alive
@@ -2190,22 +2189,11 @@ bool CvPlayer::addStartUnitAI(const UnitAITypes eUnitAI, const int iCount)
 		{
 			continue;
 		}
-		// Only Wrub of the Neanderthal can start with strongly restricted units.
-		bool bValid = true;
-		for (int iJ = 0; iJ < kUnit.getNumEnabledCivilizationTypes(); iJ++)
+		if (!kUnit.isCivilizationUnit(getID()))
 		{
-			bValid = false;
-			if (getCivilizationType() == (CivilizationTypes) GC.getInfoTypeForString("CIVILIZATION_NEANDERTHAL"))
-			{
-				if ((CivilizationTypes)GC.getInfoTypeForString("CIVILIZATION_NPC_NEANDERTHAL") == kUnit.getEnabledCivilizationType(iJ).eCivilization)
-				{
-					bValid = true;
-					break;
-				}
-			}
-			else break;
+			continue; // is a Civ unit, but not for this player.
 		}
-		if (bValid && canTrain((UnitTypes) iI, false, false, false, true))
+		if (canTrain((UnitTypes) iI, false, false, false, true))
 		{
 			int iValue = AI_unitValue((UnitTypes) iI, eUnitAI, NULL);
 			if (iValue > 0 && kUnit.getDefaultUnitAIType() != eUnitAI)
@@ -5718,28 +5706,11 @@ int CvPlayer::countCityFeatures(FeatureTypes eFeature) const
 {
 	PROFILE_FUNC();
 
-	CvCity* pLoopCity;
-	CvPlot* pLoopPlot;
-	int iCount;
-	int iLoop;
-	int iI;
+	int iCount = 0;
 
-	iCount = 0;
-
-	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	foreach_(const CvCity* city, cities())
 	{
-		for (iI = 0; iI < NUM_CITY_PLOTS; iI++)
-		{
-			pLoopPlot = plotCity(pLoopCity->getX(), pLoopCity->getY(), iI);
-
-			if (pLoopPlot != NULL)
-			{
-				if (pLoopPlot->getFeatureType() == eFeature)
-				{
-					iCount++;
-				}
-			}
-		}
+		iCount += algo::count_if(city->plots(), CvPlot::fn::getFeatureType() == eFeature);
 	}
 
 	return iCount;
@@ -28971,21 +28942,16 @@ void CvPlayer::getReligionLayerColors(ReligionTypes eSelectedReligion, std::vect
 							fAlpha *= 0.5f;
 						}
 
-						// loop through the city's plots
-						for (int iJ = 0; iJ < NUM_CITY_PLOTS; iJ++)
+						foreach_(const CvPlot* pLoopPlot, pLoopCity->plots())
 						{
-							CvPlot* pLoopPlot = plotCity(pLoopCity->getX(), pLoopCity->getY(), iJ);
-							if (pLoopPlot != NULL)
+							// visibility query
+							if (pLoopPlot->isRevealed(getTeam(), true) && pLoopPlot->isInViewport())
 							{
-								// visibility query
-								if (pLoopPlot->isRevealed(getTeam(), true) && pLoopPlot->isInViewport())
+								const int iIndex = GC.getCurrentViewport()->plotNum(pLoopPlot->getViewportX(), pLoopPlot->getViewportY());
+								if (fAlpha > aColors[iIndex].a)
 								{
-									int iIndex = GC.getCurrentViewport()->plotNum(pLoopPlot->getViewportX(), pLoopPlot->getViewportY());
-									if (fAlpha > aColors[iIndex].a)
-									{
-										aColors[iIndex] = kBaseColor;
-										aColors[iIndex].a = fAlpha;
-									}
+									aColors[iIndex] = kBaseColor;
+									aColors[iIndex].a = fAlpha;
 								}
 							}
 						}

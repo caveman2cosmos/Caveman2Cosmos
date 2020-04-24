@@ -433,6 +433,41 @@ bool CvUnitInfo::isUnlimitedException() const
 }
 
 
+// When a player is specified as argument, only civ units not specific to said player returns false, else true.
+// Thus regular units will also return true as they are not specific to another civ than this player.
+// When NO_PLAYER - Any units requiring a civ specific building are considered civ units, all others are not.
+bool CvUnitInfo::isCivilizationUnit(const PlayerTypes ePlayer) const
+{
+	// Not the most elegant solution for exluding or including neanderthal units for startin unit selection,
+	// nor the best way to stop barbarians from spawning neanderthal units. But good enough for now.
+	const bool bCivUnit = ePlayer != NO_PLAYER;
+
+	for (int iI = 0; iI < getNumPrereqAndBuildings(); ++iI)
+	{
+		const int iBuilding = getPrereqAndBuilding(iI);
+
+		for (int iCiv = 0; iCiv < GC.getNumCivilizationInfos(); iCiv++)
+		{
+			// Civ specific building prereq?
+			if(GC.getCivilizationInfo((CivilizationTypes)iCiv).isPlayable()
+			&& GC.getCivilizationInfo((CivilizationTypes)iCiv).isCivilizationBuilding(iBuilding))
+			{
+				if (!bCivUnit) // NO_PLAYER
+				{
+					return true; // A civ specific unit.
+				}
+				// Most likely a native or active culture prereq
+				if (!GC.getCivilizationInfo(GET_PLAYER(ePlayer).getCivilizationType()).isCivilizationBuilding(iBuilding))
+				{
+					return false; // Not specific to ePlayer civ.
+				}
+				break;
+			}
+		}
+	}
+	return bCivUnit; // Unit is valid for ePlayer civilization.
+}
+
 int CvUnitInfo::getInstanceCostModifier() const
 {
 	return m_iInstanceCostModifier;
@@ -1239,13 +1274,13 @@ bool CvUnitInfo::isPrereqOrCivics(int i) const
 	return m_pbPrereqOrCivics ? m_pbPrereqOrCivics[i] : false;
 }
 
-int CvUnitInfo::getPrereqAndBuilding(int i) const
-{
-	return m_aiPrereqAndBuildings[i];
-}
 int CvUnitInfo::getNumPrereqAndBuildings() const
 {
 	return (int)m_aiPrereqAndBuildings.size();
+}
+int CvUnitInfo::getPrereqAndBuilding(int i) const
+{
+	return m_aiPrereqAndBuildings[i];
 }
 bool CvUnitInfo::isPrereqAndBuilding(int i) const
 {

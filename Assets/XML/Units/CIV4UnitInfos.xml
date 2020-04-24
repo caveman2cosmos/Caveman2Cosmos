@@ -3741,6 +3741,10 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_VERTICAL_FARM</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_MINE</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -27547,6 +27551,10 @@ Base XP gained when defending
 			</NotUnitAIs>
 			<Builds>
 				<Build>
+					<BuildType>BUILD_FISHING_CAMP</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_FISHING_BOATS</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -27670,6 +27678,10 @@ Base XP gained when defending
 				</UnitAI>
 			</NotUnitAIs>
 			<Builds>
+				<Build>
+					<BuildType>BUILD_FISHING_CAMP</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
 				<Build>
 					<BuildType>BUILD_FISHING_BOATS</BuildType>
 					<bBuild>1</bBuild>
@@ -27823,6 +27835,10 @@ Base XP gained when defending
 				</UnitAI>
 			</NotUnitAIs>
 			<Builds>
+				<Build>
+					<BuildType>BUILD_FISHING_CAMP</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
 				<Build>
 					<BuildType>BUILD_FISHING_BOATS</BuildType>
 					<bBuild>1</bBuild>
@@ -27979,6 +27995,10 @@ Base XP gained when defending
 			</NotUnitAIs>
 			<Builds>
 				<Build>
+					<BuildType>BUILD_FISHING_CAMP</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_FISHING_BOATS</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -28108,6 +28128,10 @@ Base XP gained when defending
 				</UnitAI>
 			</NotUnitAIs>
 			<Builds>
+				<Build>
+					<BuildType>BUILD_FISHING_CAMP</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
 				<Build>
 					<BuildType>BUILD_FISHING_BOATS</BuildType>
 					<bBuild>1</bBuild>
@@ -57458,6 +57482,10 @@ Base XP gained when defending
 			<bNoRevealMap>1</bNoRevealMap>
 			<iWorkRate>200</iWorkRate>
 			<Builds>
+				<Build>
+					<BuildType>BUILD_FISHING_CAMP</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
 				<Build>
 					<BuildType>BUILD_FISHING_BOATS</BuildType>
 					<bBuild>1</bBuild>
