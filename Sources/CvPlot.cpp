@@ -1779,7 +1779,7 @@ bool CvPlot::isLake() const
 }
 
 
-bool CvPlot::isFreshWater(bool bIgnoreJungle) const
+bool CvPlot::isFreshWater() const
 {
 	if (isLake() || isRiver())
 	{
@@ -1796,24 +1796,20 @@ bool CvPlot::isFreshWater(bool bIgnoreJungle) const
 		return false;
 	}
 
+	if (getFeatureType() != NO_FEATURE && GC.getFeatureInfo(getFeatureType()).isAddsFreshWater())
+	{
+		return true;
+	}
+
 	for (int iDX = -1; iDX <= 1; iDX++)
 	{
 		for (int iDY = -1; iDY <= 1; iDY++)
 		{
 			const CvPlot* pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
 
-			if (pLoopPlot != NULL)
+			if (pLoopPlot != NULL && pLoopPlot->isLake())
 			{
-				if (pLoopPlot->isLake())
-				{
-					return true;
-				}
-
-				if (pLoopPlot->getFeatureType() != NO_FEATURE && GC.getFeatureInfo(pLoopPlot->getFeatureType()).isAddsFreshWater()
-				&& (!bIgnoreJungle || GC.getFeatureInfo(pLoopPlot->getFeatureType()).getHealthPercent() >= 0))
-				{
-					return true;
-				}
+				return true;
 			}
 		}
 	}

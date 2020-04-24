@@ -235,7 +235,7 @@ public:
 
 	DllExport bool isLake() const; // Exposed to Python
 
-	bool isFreshWater(bool bIgnoreJungle = false) const; // Exposed to Python ?
+	bool isFreshWater() const; // Exposed to Python ?
 
 	bool isPotentialIrrigation() const; // Exposed to Python
 	bool canHavePotentialIrrigation() const; // Exposed to Python
