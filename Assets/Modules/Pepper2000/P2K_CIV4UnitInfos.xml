@@ -2594,6 +2594,7 @@
 			<Description>TXT_KEY_UNIT_SOLAR_WORKER</Description>
 			<Civilopedia>TXT_KEY_UNIT_WORKER_PEDIA</Civilopedia>
 			<Strategy>TXT_KEY_UNIT_WORKER_STRATEGY</Strategy>
+			<Help>TXT_KEY_UNIT_SOLAR_WORKER_HELP</Help>
 			<Advisor>ADVISOR_ECONOMY</Advisor>
 			<bIgnoreTerrainCost>1</bIgnoreTerrainCost>
 			<bCanMoveImpassable>1</bCanMoveImpassable>

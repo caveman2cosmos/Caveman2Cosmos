@@ -1706,18 +1706,37 @@ bool CvPlot::isCoastalLand(int iMinWaterSize) const
 	{
 		const CvPlot* pAdjacentPlot = plotDirection(getX(), getY(), ((DirectionTypes)iI));
 
-		if (pAdjacentPlot != NULL)
+		if (pAdjacentPlot != NULL && pAdjacentPlot->isWater() && pAdjacentPlot->area()->getNumTiles() >= iMinWaterSize)
 		{
-			if (pAdjacentPlot->isWater())
-			{
-				if (pAdjacentPlot->area()->getNumTiles() >= iMinWaterSize)
-				{
-					return true;
-				}
-			}
+			return true;
 		}
 	}
+	return false;
+}
 
+// Lake shore does not qualify as coast
+bool CvPlot::isCoastal(int iMinWaterSize) const
+{
+	PROFILE_FUNC();
+
+	if (isWater())
+	{
+		if (area()->getNumTiles() < iMinWaterSize)
+		{
+			return false;
+		}
+		return isAdjacentToLand();
+	}
+	// Coastal Land
+	for (int iI = 0; iI < NUM_DIRECTION_TYPES; ++iI)
+	{
+		const CvPlot* pAdjacentPlot = plotDirection(getX(), getY(), ((DirectionTypes)iI));
+
+		if (pAdjacentPlot != NULL && pAdjacentPlot->isWater() && pAdjacentPlot->area()->getNumTiles() >= iMinWaterSize)
+		{
+			return true;
+		}
+	}
 	return false;
 }
 
@@ -1760,7 +1779,7 @@ bool CvPlot::isLake() const
 }
 
 
-bool CvPlot::isFreshWater(bool bIgnoreJungle) const
+bool CvPlot::isFreshWater() const
 {
 	if (isLake() || isRiver())
 	{
@@ -1777,24 +1796,20 @@ bool CvPlot::isFreshWater(bool bIgnoreJungle) const
 		return false;
 	}
 
+	if (getFeatureType() != NO_FEATURE && GC.getFeatureInfo(getFeatureType()).isAddsFreshWater())
+	{
+		return true;
+	}
+
 	for (int iDX = -1; iDX <= 1; iDX++)
 	{
 		for (int iDY = -1; iDY <= 1; iDY++)
 		{
 			const CvPlot* pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
 
-			if (pLoopPlot != NULL)
+			if (pLoopPlot != NULL && pLoopPlot->isLake())
 			{
-				if (pLoopPlot->isLake())
-				{
-					return true;
-				}
-
-				if (pLoopPlot->getFeatureType() != NO_FEATURE && GC.getFeatureInfo(pLoopPlot->getFeatureType()).isAddsFreshWater()
-				&& (!bIgnoreJungle || GC.getFeatureInfo(pLoopPlot->getFeatureType()).getHealthPercent() >= 0))
-				{
-					return true;
-				}
+				return true;
 			}
 		}
 	}
@@ -2543,94 +2558,86 @@ bool CvPlot::canHaveBonus(BonusTypes eBonus, bool bIgnoreLatitude) const
 	{
 		return true;
 	}
-
-	if (getBonusType() != NO_BONUS)
+	if (getBonusType() != NO_BONUS || !isPotentialCityWork())
 	{
 		return false;
 	}
 
+	const CvBonusInfo& bonus = GC.getBonusInfo(eBonus);
 
 	if (getFeatureType() != NO_FEATURE)
 	{
-		if (!(GC.getBonusInfo(eBonus).isFeature(getFeatureType())))
+		if (!bonus.isFeature(getFeatureType()))
 		{
 			return false;
 		}
 
-		if (!(GC.getBonusInfo(eBonus).isFeatureTerrain(getTerrainType())))
+		if (!bonus.isFeatureTerrain(getTerrainType()))
 		{
 			return false;
 		}
 	}
-	else
+	else if (!bonus.isTerrain(getTerrainType()))
 	{
-		if (!(GC.getBonusInfo(eBonus).isTerrain(getTerrainType())))
-		{
-			return false;
-		}
+		return false;
 	}
 
 	if (isHills())
 	{
-		if (!(GC.getBonusInfo(eBonus).isHills()))
+		if (!bonus.isHills())
 		{
 			return false;
 		}
 	}
 	else if (isPeak2(true))
 	{
-		if (!(GC.getBonusInfo(eBonus).isPeaks()))
+		if (!bonus.isPeaks())
 		{
 			return false;
 		}
 	}
 	else if (isFlatlands())
 	{
-		if (!(GC.getBonusInfo(eBonus).isFlatlands()))
+		if (!bonus.isFlatlands())
 		{
 			return false;
 		}
 	}
 
-	if (GC.getBonusInfo(eBonus).isNoRiverSide())
-	{
-		if (isRiverSide())
-		{
-			return false;
-		}
-	}
-
-	if (GC.getBonusInfo(eBonus).getMinAreaSize() > 1)
-	{
-		if (area()->getNumTiles() < GC.getBonusInfo(eBonus).getMinAreaSize())
-		{
-			return false;
-		}
-	}
-
-	if (!bIgnoreLatitude)
-	{
-		if (getLatitude() > GC.getBonusInfo(eBonus).getMaxLatitude())
-		{
-			return false;
-		}
-
-		if (getLatitude() < GC.getBonusInfo(eBonus).getMinLatitude())
-		{
-			return false;
-		}
-	}
-
-	if (!isPotentialCityWork())
+	if (bonus.isBonusCoastalOnly() && !isCoastal())
 	{
 		return false;
 	}
 
-	int iCount = GC.getBonusInfo(eBonus).getNumMapCategoryTypes();
+	if (bonus.isNoRiverSide() && isRiverSide())
+	{
+		return false;
+	}
+
+	if (bonus.getMinAreaSize() > 1
+	&& area()->getNumTiles() < bonus.getMinAreaSize())
+	{
+		return false;
+	}
+
+	if (!bIgnoreLatitude)
+	{
+		if (getLatitude() > bonus.getMaxLatitude())
+		{
+			return false;
+		}
+
+		if (getLatitude() < bonus.getMinLatitude())
+		{
+			return false;
+		}
+	}
+
+	int iCount = bonus.getNumMapCategoryTypes();
 	bool bFound = (iCount < 1);
 	for (int iI = 0; iI < iCount; iI++)
 	{
-		if (isMapCategoryType((MapCategoryTypes)GC.getBonusInfo(eBonus).getMapCategoryType(iI)))
+		if (isMapCategoryType((MapCategoryTypes)bonus.getMapCategoryType(iI)))
 		{
 			bFound = true;
 			break;
@@ -2640,9 +2647,9 @@ bool CvPlot::canHaveBonus(BonusTypes eBonus, bool bIgnoreLatitude) const
 	{
 		return false;
 	}
-
 	return true;
 }
+
 
 bool CvPlot::canBuildImprovement(ImprovementTypes eImprovement, TeamTypes eTeam) const
 {
