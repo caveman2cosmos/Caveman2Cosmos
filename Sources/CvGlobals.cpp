@@ -2697,7 +2697,6 @@ void cvInternalGlobals::cacheGlobals()
 
 	m_bXMLLogging = getDefineINT("XML_LOGGING_ENABLED");
 	
-	m_bMultimapsEnabled = (getDefineINT("ENABLE_MULTIMAPS") != 0);
 	m_bViewportsEnabled = (getDefineINT("ENABLE_VIEWPORTS") != 0);
 	m_iViewportFocusBorder = GC.getDefineINT("VIEWPORT_FOCUS_BORDER");
 	m_iViewportSizeX = GC.getDefineINT("VIEWPORT_SIZE_X");

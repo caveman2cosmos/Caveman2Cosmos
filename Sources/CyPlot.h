@@ -10,11 +10,11 @@ class CyCity;
 
 //
 // Python wrapper class for CvPlot
-// 
+//
 class CyPlot
 {
 public:
-	CyPlot();	
+	CyPlot();
 	DllExport explicit CyPlot(CvPlot*);			// Call from C++
 	CyPlot(CvPlot*, bool bInViewportSpace);
 	CvPlot* getPlot() { return m_pPlot; }	// Call from C++
@@ -23,31 +23,30 @@ public:
 	void erase();
 	DllExport NiPoint3 getPoint();
 	int getTeam();
-	
+
 	void nukeExplosion(int iRange, CyUnit* pNukeUnit);
-	
+
 	bool isConnectedTo(CyCity* pCity);
 	bool isConnectedToCapital(int /*PlayerTypes*/ ePlayer);
 	int getPlotGroupConnectedBonus(int /*PlayerTypes*/ ePlayer, int /*BonusTypes*/ eBonus);
 	bool isPlotGroupConnectedBonus(int /*PlayerTypes*/ ePlayer, int /*BonusTypes*/ eBonus);
 	bool isAdjacentPlotGroupConnectedBonus(int /*PlayerTypes*/ ePlayer, int /*BonusTypes*/ eBonus);
 
-	void updateVisibility();					
+	void updateVisibility();
 	bool isAdjacentToArea(CyArea* pArea);
 	bool shareAdjacentArea(CyPlot* pPlot);
-	bool isAdjacentToLand();
-	bool isCoastalLand();
+	bool isCoastal();
 
 	bool isWithinTeamCityRadius(int /*TeamTypes*/ eTeam, int /*PlayerTypes*/ eIgnorePlayer);
 
-	bool isLake();																												
+	bool isLake();
 	bool isFreshWater();
 	bool isPotentialIrrigation();
 	bool canHavePotentialIrrigation();
 	bool isIrrigationAvailable(bool bIgnoreSelf);
 
-	bool isRiverSide();																												
-	bool isRiver();																												
+	bool isRiverSide();
+	bool isRiver();
 	bool isRiverConnection(int /*DirectionTypes*/ eDirection);
 
 	int getNearestLandArea();
@@ -75,7 +74,7 @@ public:
 	bool isAdjacentPlayer(int /*PlayerTypes*/ ePlayer, bool bLandOnly);
 	bool isAdjacentTeam(int /*TeamTypes*/ eTeam, bool bLandOnly);
 	bool isWithinCultureRange(int /*PlayerTypes*/ ePlayer);
-	int getNumCultureRangeCities(int /*PlayerTypes*/ ePlayer);										
+	int getNumCultureRangeCities(int /*PlayerTypes*/ ePlayer);
 	int /*PlayerTypes*/ calculateCulturalOwner();
 
 	bool isOwned();
@@ -96,8 +95,8 @@ public:
 	bool isRevealedGoody(int /*TeamTypes*/ eTeam);
 
 	bool isCity();
-	bool isFriendlyCity(CyUnit* pUnit, bool bCheckImprovement);														
-	bool isEnemyCity(CyUnit* pUnit);															
+	bool isFriendlyCity(CyUnit* pUnit, bool bCheckImprovement);
+	bool isEnemyCity(CyUnit* pUnit);
 	bool isOccupation();
 	bool isBeingWorked();
 
@@ -126,8 +125,8 @@ public:
 	int getX();
 	int getY();
 	bool at(int iX, int iY);
-	int getLatitude();		
-	int getLongitude();																							
+	int getLatitude();
+	int getLongitude();
 	CyArea* area();
 	CyArea* waterArea();
 	int getArea();
@@ -186,13 +185,13 @@ public:
 	void setTerrainType(int /*TerrainTypes*/ eNewValue, bool bRecalculate, bool bRebuildGraphics);
 	int /*FeatureTypes*/ getFeatureType();
 	void setFeatureType(int /*FeatureTypes*/ eNewValue, int iVariety);
-	void setFeatureDummyVisibility(std::string dummyTag, bool show); 
+	void setFeatureDummyVisibility(std::string dummyTag, bool show);
 	void addFeatureDummyModel(std::string dummyTag, std::string modelTag);
 	void setFeatureDummyTexture(std::string dummyTag, std::string textureTag);
 	std::string pickFeatureDummyTag(int mouseX, int mouseY);
 	void resetFeatureModel();
-	int /* BonusTypes */ getBonusType(int /*TeamTypes*/ eTeam); 
-	int /* BonusTypes */ getNonObsoleteBonusType(int /*TeamTypes*/ eTeam); 
+	int /* BonusTypes */ getBonusType(int /*TeamTypes*/ eTeam);
+	int /* BonusTypes */ getNonObsoleteBonusType(int /*TeamTypes*/ eTeam);
 	void setBonusType(int /* BonusTypes */ eNewValue);
 	int /* ImprovementTypes */ getImprovementType();
 	void setImprovementType(int /* ImprovementTypes */ eNewValue);
@@ -216,11 +215,11 @@ public:
 	bool hasYield();
 
 	int getCulture(int /*PlayerTypes*/ eIndex);
-	int countTotalCulture();																							
+	int countTotalCulture();
 	int /*TeamTypes*/ findHighestCultureTeam();
 
-	int calculateCulturePercent(int /*PlayerTypes*/ eIndex);	
-	int calculateTeamCulturePercent(int /*TeamTypes*/ eIndex);	
+	int calculateCulturePercent(int /*PlayerTypes*/ eIndex);
+	int calculateTeamCulturePercent(int /*TeamTypes*/ eIndex);
 	void setCulture(int /*PlayerTypes*/ eIndex, int iNewValue, bool bUpdate);
 	void changeCulture(int /*PlayerTypes*/ eIndex, int iChange, bool bUpdate);
 

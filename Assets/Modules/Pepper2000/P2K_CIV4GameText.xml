@@ -815,7 +815,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_IMPROVEMENT_LUNAR_OUTPOST_PEDIA</Tag>
-		<English>Lunar Outpost</English>
+		<English>Lunar Outpost is place, where Lunar Settlers can create cities.</English>
 		<French>Avant-Poste Lunaire</French>
 	</TEXT>
 	<TEXT>
@@ -2084,15 +2084,15 @@
 		<English>Construction Ship</English>
 		<French>Vaisseau de construction
 		</French>
-	</TEXT><!-- [Lacking text]
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CONSTRUCTION_SHIP_PEDIA</Tag>
-		<English>TBD</English>
+		<English>Space worker used to build earliest improvements on Moon, Mars and Venus.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CONSTRUCTION_SHIP_STRATEGY</Tag>
-		<English>TBD</English>
-	</TEXT>-->
+		<English>Use this unit to build Lunar Outpost improvement - place, where you can send Lunar settlers to build Lunar cities</English>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_COSMIC_WORKER</Tag>
 		<English>Cosmic Worker</English>
@@ -2251,7 +2251,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEAVY_ROCKET_HOVER</Tag>
 		<English>[ICON_BULLET]While this unit can be built on Earth, it is useful only outside of Earth.[NEWLINE]Upgrade to a space settler on Space Station Lv. 3</English>
-		<French>[ICON_BULLET]Bien que cette unité puisse être construite sur Terre, elle n'est utile qu'en dehors de la Terre.[NEWLINE]Améliore les colons spatiaqux sur la Station spatiale de Niv. 3.</French>
+		<French>[ICON_BULLET]Bien que cette unité puisse être construite sur Terre, elle n'est utile qu'en dehors de la Terre.[NEWLINE]Améliore les colons spatiaqux sur la Station spatiale de Niv. 3</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEAVY_ROCKET_PEDIA</Tag>
@@ -2260,7 +2260,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_HEAVY_ROCKET_STRATEGY</Tag>
-		<English>Build space stations in low-Earth orbit or conduct missions on space stations.</English>
+		<English>Build space stations in low-Earth orbit, or conduct missions on space stations, or upgrade it to cislunar/lunar/planetary settlers in Space Station Lv. 3 improvement.</English>
 		<French>Construire des stations spatiales en orbite terrestre basse ou effectuer des missions sur des stations spatiales.</French>
 	</TEXT>
 	<TEXT>
@@ -2540,6 +2540,14 @@
 		<Tag>TXT_KEY_UNIT_LUNAR_BULLDOZER</Tag>
 		<English>Lunar Bulldozer</English>
 		<French>Bulldozer lunaire</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LUNAR_BULLDOZER_PEDIA</Tag>
+		<English>Early lunar worker dedicated to resource extraction.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNIT_LUNAR_BULLDOZER</Tag>
+		<English>Build this unit to extract resources on Moon. Supply Ship can be turned to Lunar Bulldozer at Lunar Bases on claimed tile.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LUNAR_INFANTRY</Tag>
@@ -2896,6 +2904,10 @@
 		<French>Vaisseau-atelier Solaire</French>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_SOLAR_WORKER_HELP</Tag>
+		<English>[ICON_BULLET]This unit can build route on Orbit terrain enabling trade and resource flow between Earth and space colonies.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPACEUNIT_HOVER</Tag>
 		<English>[ICON_BULLET]While this unit can be built on Earth, it is useful only outside of Earth.</English>
 		<French>[ICON_BULLET]Bien que cette unité puisse être construite sur Terre, elle n'est utile qu'en dehors de la Terre.</French>
@@ -2979,15 +2991,15 @@
 		<Tag>TXT_KEY_UNIT_SUPPLY_SHIP</Tag>
 		<English>Supply Ship</English>
 		<French>Vaisseau de ravitaillement</French>
-	</TEXT><!--
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUPPLY_SHIP_PEDIA</Tag>
-		<English>TBD</English>
+		<English>Early space unit dedicated to supply of Lunar colonies. It also can be transformed to Lunar bulldozer to build lunar mines.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_SUPPLY_SHIP_STRATEGY</Tag>
-		<English>TBD</English>
-	</TEXT>-->
+		<English>Use this unit to build buildings in Lunar colonies, and to turn it to lunar bulldozer (requires Lunar Bases tech).</English>
+	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_TITAN_REWARD</Tag>
 		<English>Mission Reward (Titan)</English>
@@ -3185,7 +3197,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_WORLDSHIP_HOVER</Tag>
-		<English>[ICON_BULLET]Can build cities in the Oort Cloud and Transtellar space</English>
+		<English>[ICON_BULLET]Can build cities in the Transtellar space and Star terrains</English>
 		<French>[ICON_BULLET]Peut construire les Villes dans le nuage d'Oort, et l'espace transtellaire</French>
 	</TEXT>
 </Civ4GameText>

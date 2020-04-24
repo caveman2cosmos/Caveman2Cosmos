@@ -2,7 +2,6 @@
 
 #include "CvGameCoreDLL.h"
 #include "CvDLLFlagEntityIFaceBase.h"
-#include "BetterBTSAI.h"
 
 //	Koshling - save flag indicating this player has no data in the save as they have never
 //	been alive

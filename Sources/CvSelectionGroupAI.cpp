@@ -1,7 +1,6 @@
 // selectionGroupAI.cpp
 
 #include "CvGameCoreDLL.h"
-#include "BetterBTSAI.h"
 
 // Public Functions...
 
