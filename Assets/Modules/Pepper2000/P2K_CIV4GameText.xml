@@ -2902,6 +2902,10 @@
 		<French>Vaisseau-atelier Solaire</French>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_UNIT_SOLAR_WORKER_HELP</Tag>
+		<English>[ICON_BULLET]This unit can build route on Orbit terrain enabling trade and resource flow between Earth and space colonies.</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_SPACEUNIT_HOVER</Tag>
 		<English>[ICON_BULLET]While this unit can be built on Earth, it is useful only outside of Earth.</English>
 		<French>[ICON_BULLET]Bien que cette unité puisse être construite sur Terre, elle n'est utile qu'en dehors de la Terre.</French>
