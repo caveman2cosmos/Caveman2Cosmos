@@ -738,10 +738,6 @@
 		<English>Arpad</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_ARPAD</Tag>
-		<English>Arpad</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ARPINUM</Tag>
 		<English>Arpinum</English>
 	</TEXT>
@@ -879,10 +875,6 @@
 		<German>Athen</German>
 		<Italian>Atene</Italian>
 		<Spanish>Atenas</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_ATHENS</Tag>
-		<English>Athens</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ATHRIBIS</Tag>
@@ -1073,10 +1065,6 @@
 		<Tag>TXT_KEY_CITY_NAME_BALTIMORE</Tag>
 		<English>Baltimore</English>
 		<Italian>Baltimora</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_BALTIMORE</Tag>
-		<English>Baltimore</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BAMAKO</Tag>
@@ -2111,10 +2099,6 @@
 		<German>Kimber</German>
 		<Italian>Cimmera</Italian>
 		<Spanish>Cimeria</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_CINCINNATI</Tag>
-		<English>Cincinnati</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_CINCINNATI</Tag>
@@ -3616,10 +3600,6 @@
 		<Spanish>Harrán</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_HARRAN</Tag>
-		<English>Harran</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HARRISBURG</Tag>
 		<English>Harrisburg</English>
 	</TEXT>
@@ -3858,10 +3838,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HONIARA</Tag>
 		<English>Honiara</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_HONOLULU</Tag>
-		<English>Honolulu</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_HONOLULU</Tag>
@@ -5746,10 +5722,6 @@
 		<English>Marqasi</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_MARQASI</Tag>
-		<English>Marqasi</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MARRAKECH</Tag>
 		<English>Marrakesh</English>
 		<French>Marrakech</French>
@@ -5959,10 +5931,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MHLAHLANDLELA</Tag>
 		<English>Mhlahlandlela</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_MIAMI</Tag>
-		<English>Miami</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_MIAMI</Tag>
@@ -6500,10 +6468,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NEUSS</Tag>
 		<English>Neuss</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_NEWCASTLE</Tag>
-		<English>Newcastle</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_NEWCASTLE</Tag>
@@ -8069,10 +8033,6 @@
 		<English>Santa Fe</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_SANTA_FE</Tag>
-		<English>Santa Fe</English>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_SANTA_MONICA</Tag>
 		<English>Santa Monica</English>
 		<Spanish>Santa Mónica</Spanish>
@@ -8696,10 +8656,6 @@
 		<English>St. Louis</English>
 		<French>Saint-Louis</French>
 		<Spanish>San Luis</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_CITY_NAME_ST_LOUIS</Tag>
-		<English>St. Louis</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_ST_PAUL</Tag>

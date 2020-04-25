@@ -2546,7 +2546,7 @@
 		<English>Early lunar worker dedicated to resource extraction.</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_LUNAR_BULLDOZER</Tag>
+		<Tag>TXT_KEY_UNIT_LUNAR_BULLDOZER_STRATEGY</Tag>
 		<English>Build this unit to extract resources on Moon. Supply Ship can be turned to Lunar Bulldozer at Lunar Bases on claimed tile.</English>
 	</TEXT>
 	<TEXT>
