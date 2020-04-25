@@ -1,9 +1,5 @@
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Firaxis Games (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Detail Manager -->
-<!-- Deines level-o-detail controllers or Cbiv4 graphical elements -->
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Defines level-of-detail controllers or Cbiv4 graphical elements -->
 <!-- Useful hint: values in this file can be changed on the fly (i.e. effects will be noticeable w/o restarting the game) -->
 <DetailManagerInfos xmlns="x-schema:CIV4DetailManagerSchema.xml">
 	<Fader>

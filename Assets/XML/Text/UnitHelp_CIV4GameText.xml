@@ -70,18 +70,18 @@
 		<Polish>[ICON_BULLET]Objętość Jedn. Transportu: %d1</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_CARGO_SPACE_BASE_SM</Tag>
-		<English>[ICON_BULLET]Base Cargo Space (estimated # of units): %d1</English>
-		<French>[ICON_BULLET]Taille de soute (# estimé d'unités): %d1</French>
-		<Polish>[ICON_BULLET]Podstawowa Przestrzeń Transportowa (szacowana # jednostek): %d1</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_CARGO_SPACE</Tag>
 		<English>Cargo Space: %d1/%d2</English>
 		<French>Capacité d'emport: %d1/%d2</French>
 		<German>Frachtraum: %d1/%d2</German>
 		<Italian>Spazio di carico: %d1/%d2</Italian>
 		<Spanish>Bodega: %d1/%d2</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_CARGO_SPACE_BASE_SM</Tag>
+		<English>[ICON_BULLET]Base Cargo Space (estimated # of units): %d1</English>
+		<French>[ICON_BULLET]Taille de soute (# estimé d'unités): %d1</French>
+		<Polish>[ICON_BULLET]Podstawowa Przestrzeń Transportowa (szacowana # jednostek): %d1</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_CARGO_SPACE_FOREIGN</Tag>
@@ -101,15 +101,6 @@
 		<Spanish>[SPACE](%s1)</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_COMMAND_RANGE</Tag>
-		<English>, CR: %d1</English>
-		<French>, Port. Com.: %d1</French>
-		<German>, Kommandobereich: %d1</German>
-		<Italian>, Raggio di comando: %d1</Italian>
-		<Spanish>, Alcance: %d1</Spanish>
-		<Polish>, Ranga Dowódcy: %d1</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_COMMAND_POINTS</Tag>
 		<English>, CP: %d1/%d2</English>
 		<French>, Pts Contr: %d1/%d2</French>
@@ -117,6 +108,15 @@
 		<Italian>, Punti di controllo: %d1/%d2</Italian>
 		<Spanish>, PC: %d1/%d2</Spanish>
 		<Polish>, Punkty Kontroli: %d1/%d2</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_COMMAND_RANGE</Tag>
+		<English>, CR: %d1</English>
+		<French>, Port. Com.: %d1</French>
+		<German>, Kommandobereich: %d1</German>
+		<Italian>, Raggio di comando: %d1</Italian>
+		<Spanish>, Alcance: %d1</Spanish>
+		<Polish>, Ranga Dowódcy: %d1</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_DAMAGE_BY_UNITCOMBAT</Tag>
@@ -243,17 +243,17 @@
 		<Spanish>[SPACE](Visible por %s1_player)</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_SELF_HEAL_NONE</Tag>
-		<English>[ICON_BULLET]This Unit Cannot Heal Without Assistance</English>
-		<French>[ICON_BULLET]Cette unité ne peut se soigner sans Assistance</French>
-		<Polish>[ICON_BULLET]Ta jednostka może być tylko wyleczona/naprawiona przez lekarza/mechanika.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_SELF_HEAL</Tag>
 		<English>[ICON_BULLET]Self heal: %d1%%</English>
 		<French>[ICON_BULLET]Cette Unité peut se soigner de: %d1%%</French>
 		<German>[ICON_BULLET]Selbstheilung: %d1%%</German>
 		<Polish>[ICON_BULLET]Jednostka leczy się sama: %d1%%</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_SELF_HEAL_NONE</Tag>
+		<English>[ICON_BULLET]This Unit Cannot Heal Without Assistance</English>
+		<French>[ICON_BULLET]Cette unité ne peut se soigner sans Assistance</French>
+		<Polish>[ICON_BULLET]Ta jednostka może być tylko wyleczona/naprawiona przez lekarza/mechanika.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_STEALTH_DEFEND</Tag>
@@ -280,16 +280,16 @@
 		<Polish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% za bycie zwerbowanym w Stolicy[COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNITHELP_XP_MOD_HOLY_CITY_STATE_RELIGION</Tag>
-		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% for being trained in your State Religion's Holy City[COLOR_REVERT]</English>
-		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% pour avoir été entraîné dans la Ville Sainte de la Religion d'Etat[COLOR_REVERT]</French>
-		<Polish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% za bycie zwerbowanym w Św. Mieście religii państwowej[COLOR_REVERT]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_XP_MOD_HOLY_CITY_NONSTATE_RELIGION</Tag>
 		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% for being trained in a Holy City to a Non-State Religion[COLOR_REVERT]</English>
 		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% pour avoir été entraîné dans une Ville Sainte d'une Religion non officielle[COLOR_REVERT]</French>
 		<Polish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% za bycie zwerbowanym w Świętym Mieście religii nie będącej religią państwową[COLOR_REVERT]</Polish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_UNITHELP_XP_MOD_HOLY_CITY_STATE_RELIGION</Tag>
+		<English>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% for being trained in your State Religion's Holy City[COLOR_REVERT]</English>
+		<French>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% pour avoir été entraîné dans la Ville Sainte de la Religion d'Etat[COLOR_REVERT]</French>
+		<Polish>[ICON_BULLET][COLOR_POSITIVE_TEXT]%D1%% za bycie zwerbowanym w Św. Mieście religii państwowej[COLOR_REVERT]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNITHELP_XP_MOD_TOTAL</Tag>

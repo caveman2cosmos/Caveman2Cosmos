@@ -17209,7 +17209,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 		<English>Novus Chemistry</English>
 		<French>Chimie Novus</French>
 		<German>Neue Chemie</German>
-		<Italian>Chimica Novus</Italian>
+		<Italian>Nova chimica</Italian>
 		<Spanish>
 			<Text>Química novus</Text>
 			<Gender>Female</Gender>
@@ -17219,7 +17219,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NOVUS_CHEMISTRY_PEDIA</Tag>
-		<English>Novus Chemistry, (new in Latin), is a branch of chemistry that is associated with new forms of metamaterials and its interactions with humans and cyber biology. It is the grandchild of biomathmatics, biochemistry, and, mechatronics, and this branch of science is about how to use metametarials to later create cybernetic parts, fuse the biological and the cyber, and exotic new elements. Because of the complexity of this science, brain enhancements and powerful AI are needed to comprehend the 100-page calculations needed to solve a single equation. Religious groups believe this branch of science is against the will of god, and it will open a Pandoras box of heresy if artificial life is to be created.</English>
+		<English>Novus Chemistry ("novus" stands for "new" in Latin) is a branch of chemistry that is associated with new forms of metamaterials and their interactions with humans and cyberbiology. It is the grandchild of biomathematics, biochemistry and mechatronics, and this branch of science is about how to use metamaterials to later create cybernetic parts, fuse the biological and the cyber, and exotic new elements. Because of the complexity of this science, brain enhancements and powerful AI are needed to comprehend the 100-page calculations needed to solve a single equation. Religious groups believe this branch of science is against the will of God, and it will open a Pandora's box of heresy if artificial life is to be created.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NOVUS_CHEMISTRY_QUOTE</Tag>
@@ -25957,6 +25957,7 @@ To crush your enemies, see them driven before you, and to hear the lamentation o
 		<Tag>TXT_KEY_TECH_WORMHOLE_COMMUNICATIONS_QUOTE</Tag>
 		<English>"Absence of evidence is not evidence of absence!" - Carl Sagan</English>
 		<French>"L'Absence de preuve n'est pas preuve d'absence!" - Carl Sagan</French>
+		<Italian>"L'assenza di una prova non è una prova di assenza!" - Carl Sagan</Italian>
 		<Polish>"Nieobecność dowodu nie jest dowodem na nieobecność!" - Carl Sagan</Polish>
 	</TEXT>
 	<TEXT>
@@ -25989,11 +25990,7 @@ To crush your enemies, see them driven before you, and to hear the lamentation o
 		<English>Wormhole Traversal</English>
 		<French>Traversée des Wormholes</French>
 		<Italian>Attraversamento dei Wormholes</Italian>
-		<Spanish>
-			<Text>Travesía por agujeros de gusano</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<Spanish>Travesía por agujeros de gusano</Spanish>
 		<Polish>Podróże Czasoprzestrzenne</Polish>
 	</TEXT>
 	<TEXT>
@@ -26179,11 +26176,7 @@ To crush your enemies, see them driven before you, and to hear the lamentation o
 		<French>Zoologie</French>
 		<German>Zoologie</German>
 		<Italian>Zoologia</Italian>
-		<Spanish>
-			<Text>Zoología</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<Spanish>Zoología</Spanish>
 		<Polish>Zoologia</Polish>
 	</TEXT>
 	<TEXT>
