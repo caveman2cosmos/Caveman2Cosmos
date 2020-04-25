@@ -1,14 +1,7 @@
-<?xml version="1.0"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- -->
-	<!-- Leader Trait Infos -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4TraitInfos xmlns="x-schema:../Schema/C2C_CIV4CivilizationsSchema.xml">
 	<TraitInfos>
 		<TraitInfo>
-			<!-- BEGIN: MainGame Core Traits -->
-			<!-- BEGIN: POSITIVE_TRAIT -->
 			<Type>TRAIT_PHILOSOPHICAL</Type>
 			<Description>TXT_KEY_TRAIT_PHILOSOPHICAL</Description>
 			<ShortDescription>TXT_KEY_TRAIT_PHILOSOPHICAL_SHORT</ShortDescription>

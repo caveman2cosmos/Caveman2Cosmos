@@ -83,6 +83,10 @@
 		<English>Way of the Centaur Trait is only available with the Ancient Ways Group Wonders. All Mounted Units gain the Way of the Centaur promotion, giving them +1 Strength. This promotion is only available during the Ancient era, it will be obsolete with Classical Lifestyle Technology.</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_CENTAUR_SHORT</Tag>
+		<English>AWotCentaur</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_FEATHER</Tag>
 		<English>Ancient Way of the Feather</English>
 		<French>Ancienne Voie de la Plume</French>
@@ -90,6 +94,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_FEATHER_PEDIA</Tag>
 		<English>Way of the Feather Trait is only available with the Ancient Ways Group Wonders. All Archery Units gain the Way of the Feather promotion, giving them +1 Strength. This promotion is only available during the Ancient era, it will be obsolete with Classical Lifestyle Technology.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_FEATHER_SHORT</Tag>
+		<English>AWotFeather</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_FIST</Tag>
@@ -101,6 +109,10 @@
 		<English>Way of the Fist Trait is only available with the Ancient Ways Group Wonders. All Law Enforcements Units gain the Way of the Fist promotion, giving them an additional 1.5% Investigation (To find local criminals), -4 Crime Turn/City and -2 Crime Turn/Plot. This promotion is only available during the Ancient era, it will be obsolete with Classical Lifestyle Technology.</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_FIST_SHORT</Tag>
+		<English>AWotFist</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_LEECH</Tag>
 		<English>Ancient Way of the Leech</English>
 		<French>Ancienne Voie de la Goule</French>
@@ -108,6 +120,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_LEECH_PEDIA</Tag>
 		<English>Way of the Leech Trait is only available with the Ancient Ways Group Wonders. All Health Care Units gain the Way of the Leech promotion, giving them Units heal in Same tile Extra 8% Damage/turn, -4 Disease Turn/City and -2 Disease Turn/Plot. This promotion is only available during the Ancient era, it will be obsolete with Classical </English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_LEECH_SHORT</Tag>
+		<English>AWotLeech</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_SHADOWS</Tag>
@@ -119,6 +135,10 @@
 		<English>Way of the Shadows Trait is only available with the Ancient Ways Group Wonders. All Criminal, Ruffian and Strike Team Units gain the Way of the Shadows promotion, giving them +1 Strength. This promotion is only available during the Ancient era, it will be obsolete with Classical Lifestyle Technology.</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_SHADOWS_SHORT</Tag>
+		<English>AWotShadows</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WARRIOR</Tag>
 		<English>Ancient Way of the Warrior</English>
 		<French>Ancienne Voie du Guerrier</French>
@@ -126,6 +146,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WARRIOR_PEDIA</Tag>
 		<English>Way of the Warrior Trait is only available with the Ancient Ways Group Wonders. All Melee Units gain the Way of the Warrior promotion, giving them +1 Strength. This promotion is only available during the Ancient era, it will be obsolete with Classical Lifestyle Technology.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WARRIOR_SHORT</Tag>
+		<English>AWotWarrior</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WAVES</Tag>
@@ -137,6 +161,10 @@
 		<English>Way of the Waves Trait is only available with the Ancient Ways Group Wonders. All Naval Combat Units gain the Way of the Waves promotion, giving them +1 Strength. This promotion is only available during the Ancient era, it will be obsolete with Classical Lifestyle Technology.</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WAVES_SHORT</Tag>
+		<English>AWotWaves</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WILD</Tag>
 		<English>Ancient Way of the Wild</English>
 		<French>Ancienne Voie de la Nature Sauvage</French>
@@ -144,6 +172,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WILD_PEDIA</Tag>
 		<English>Way of the Wild Trait is only available with the Ancient Ways Group Wonders. All Explorer Units gain the Way of the Wild promotion, giving them +1 Movement, -1 Mobility Cost and +1 Visibility Range. This promotion is only available during the Ancient era, it will be obsolete with Classical Lifestyle Technology.</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WILD_SHORT</Tag>
+		<English>AWotWild</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WIND</Tag>
@@ -155,6 +187,10 @@
 		<English>Way of the Wind Trait is only available with the Ancient Ways Group Wonders. All Throwing Units gain the Way of the Wind promotion, giving them +1 Strength. This promotion is only available during the Ancient era, it will be obsolete with Classical Lifestyle Technology.</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WIND_SHORT</Tag>
+		<English>AWotWind</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WOLF</Tag>
 		<English>Ancient Way of the Wolf</English>
 		<French>Ancienne voie du Loup</French>
@@ -164,6 +200,10 @@
 		<English>Way of the Wolf Trait is only available with the Ancient Ways Group Wonders. All Canine Units gain the Way of the Wolf promotion, giving them +1 Movement, -1 Mobility Cost and +1 Visibility Range. This promotion is only available during the Ancient era, it will be obsolete with Classical Lifestyle Technology.</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WOLF_SHORT</Tag>
+		<English>AWotWolf</English>
+	</TEXT>
+<TEXT>
 		<Tag>TXT_KEY_TRAIT_ANTI_CLERICAL</Tag>
 		<English>Anti Clerical</English>
 		<French>
@@ -2312,45 +2352,5 @@
 		<Italian>[ICON_BULLET]%D1%F2_yeild/Città</Italian>
 		<Spanish>[ICON_BULLET]%D1 %F2_yeild/ciudad</Spanish>
 		<Polish>[ICON_BULLET]%D1%F2_yeild/Miasto</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_CENTAUR_SHORT</Tag>
-		<English>AWotCentaur</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_FEATHER_SHORT</Tag>
-		<English>AWotFeather</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_FIST_SHORT</Tag>
-		<English>AWotFist</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_LEECH_SHORT</Tag>
-		<English>AWotLeech</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_SHADOWS_SHORT</Tag>
-		<English>AWotShadows</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WARRIOR_SHORT</Tag>
-		<English>AWotWarrior</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WAVES_SHORT</Tag>
-		<English>AWotWaves</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WILD_SHORT</Tag>
-		<English>AWotWild</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WIND_SHORT</Tag>
-		<English>AWotWind</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_TRAIT_ANCIENT_WAY_OF_THE_WOLF_SHORT</Tag>
-		<English>AWotWolf</English>
 	</TEXT>
 </Civ4GameText>
