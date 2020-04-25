@@ -2422,9 +2422,9 @@ void CvGame::update()
 		//	Close will free any resources and display any warnings if we've just finished loading/saving
 		wrapper.close();
 
-		GC.getLoadedInitCore().checkVersions();
-
 		updateEra();
+
+		GC.getLoadedInitCore().checkVersions();
 
 		for(int iI = 0; iI < MAX_PLAYERS; iI++)
 		{
@@ -6431,7 +6431,6 @@ void CvGame::doTurn()
 {
 	MEMORY_TRACE_FUNCTION();
 	PROFILE_BEGIN("CvGame::doTurn()");
-
 
 	updateEra();
 
@@ -12824,8 +12823,6 @@ void CvGame::recalculateModifiers()
 	PROFILE_FUNC();
 
 	m_bRecalculatingModifiers = true;
-
-	updateEra();
 
 	//establish improvement costs
 	for (int iI = 0; iI < GC.getNumImprovementInfos(); iI++)
