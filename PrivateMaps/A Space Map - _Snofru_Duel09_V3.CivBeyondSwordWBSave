@@ -10873,7 +10873,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=13,y=30
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=2
 EndPlot
@@ -11010,7 +11009,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=13,y=51
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
@@ -11679,7 +11677,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=14,y=28
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=2
 EndPlot
@@ -12652,7 +12649,6 @@ EndPlot
 BeginPlot
 	x=15,y=50
 	BonusType=BONUS_TITANIUM_ORE
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_GRASSLAND
 	PlotType=2
 EndPlot
@@ -29658,7 +29654,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=36,y=23
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_TAIGA
 	PlotType=2
 EndPlot
@@ -37731,7 +37726,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=46,y=27
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=2
 EndPlot
