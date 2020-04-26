@@ -8773,24 +8773,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Polish>%s1_PlyrName stworzył %s2_UnitName!</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISC_SPED_UP_BY</Tag>
-		<English>[NEWLINE][ICON_BULLET]Sped up by[SPACE]</English>
-		<French>[NEWLINE][ICON_BULLET]Accélérée par[SPACE]</French>
-		<German>[NEWLINE][ICON_BULLET]Beschleunigt durch[SPACE]</German>
-		<Italian>[NEWLINE][ICON_BULLET]Accelerato da[SPACE]</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Acelerado por[SPACE]</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Przyspieszenie przez[SPACE]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_SPEEDS_UP</Tag>
-		<English>[NEWLINE][ICON_BULLET]Speeds up[SPACE]</English>
-		<French>[NEWLINE][ICON_BULLET]Accélère[SPACE]</French>
-		<German>[NEWLINE][ICON_BULLET]Beschleunigt[SPACE]</German>
-		<Italian>[NEWLINE][ICON_BULLET]Accelera[SPACE]</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Acelera[SPACE]</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Przyspieszenie[SPACE]</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISC_SPY_CAUGHT_AND_KILLED</Tag>
 		<English>The %s1_CivAdj %s2_UnitName responsible was caught and "liquidated"!!!</English>
 		<French>[NUM2:L':L':Les:Les] %s2_UnitName des %s1_CivAdj a été démasqué et exécuté!</French>
