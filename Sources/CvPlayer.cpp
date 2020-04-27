@@ -9771,35 +9771,7 @@ int CvPlayer::calculateResearchModifier(TechTypes eTech) const
 			}
 		}
 	}
-	//else
-	//{
-	//	// Default BTS code
-	//	for (int iI = 0; iI < MAX_PC_TEAMS; iI++)
-	//	{
-	//		if (GET_TEAM((TeamTypes)iI).isAlive())
-	//		{
-	//			if (GET_TEAM(getTeam()).isHasMet((TeamTypes)iI))
-	//			{
-	//				if (GET_TEAM((TeamTypes)iI).isHasTech(eTech))
-	//				{
-	//					iKnownCount++;
-	//				}
-	//			}
-
-	//			iPossibleKnownCount++;
-	//		}
-	//	}
-
-	//	if (iPossibleKnownCount > 0)
-	//	{
-	//		iModifier += (GC.getDefineINT("TECH_COST_TOTAL_KNOWN_TEAM_MODIFIER") * iKnownCount) / iPossibleKnownCount;
-	//	}
-	//}
-	//players were getting confused by the original bts form of TD.
 	return std::max(1,iModifier);
-/************************************************************************************************/
-/* BETTER_BTS_AI_MOD                       END                                                  */
-/************************************************************************************************/
 }
 
 int CvPlayer::calculateBaseNetResearch(TechTypes eTech) const

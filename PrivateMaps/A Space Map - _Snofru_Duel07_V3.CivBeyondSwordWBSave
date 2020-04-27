@@ -34656,7 +34656,6 @@ EndPlot
 BeginPlot
 	x=43,y=30
 	BonusType=BONUS_PEYOTE
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_SCRUB
 	PlotType=2
 EndPlot
@@ -46645,7 +46644,6 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=58,y=38
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_LUSH
 	PlotType=2
 EndPlot

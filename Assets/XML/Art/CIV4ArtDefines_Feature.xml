@@ -1894,27 +1894,6 @@
 			</FeatureVariety>
 		</FeatureArtInfo>
 		<FeatureArtInfo>
-			<Type>ART_DEF_FEATURE_RAINWATER_BASIN</Type>
-			<bAnimated>1</bAnimated>
-			<bRiverArt>0</bRiverArt>
-			<TileArtType>TILE_ART_TYPE_NONE</TileArtType>
-			<LightType>LIGHT_TYPE_SUN</LightType>
-			<fScale>1</fScale>
-			<fInterfaceScale>1.0</fInterfaceScale>
-			<Button>Art/Structures/Buildings/Great_Bath/RainWaterButton.dds</Button>
-			<FeatureVariety>
-				<FeatureArtPieces>
-					<FeatureArtPiece>
-						<ModelFile>Art/Structures/Buildings/Great_Bath/bath_middle_east_water.nif</ModelFile>
-						<Connections/>
-					</FeatureArtPiece>
-				</FeatureArtPieces>
-				<FeatureDummyNodes/>
-				<bGenerateRotations>0</bGenerateRotations>
-				<VarietyButton>Art/Structures/Buildings/Great_Bath/RainWaterButton.dds</VarietyButton>
-			</FeatureVariety>
-		</FeatureArtInfo>
-		<FeatureArtInfo>
 			<Type>ART_DEF_FEATURE_CITY_RUINS</Type>
 			<bAnimated>0</bAnimated>
 			<bRiverArt>0</bRiverArt>
