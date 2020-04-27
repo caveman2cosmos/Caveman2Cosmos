@@ -5779,10 +5779,6 @@
 					<FeatureType>FEATURE_FLOOD_PLAINS</FeatureType>
 					<bMakesValid>1</bMakesValid>
 				</FeatureMakesValid>
-				<FeatureMakesValid>
-					<FeatureType>FEATURE_RAINWATER_BASIN</FeatureType>
-					<bMakesValid>1</bMakesValid>
-				</FeatureMakesValid>
 			</FeatureMakesValids>
 			<BonusTypeStructs>
 				<BonusTypeStruct>

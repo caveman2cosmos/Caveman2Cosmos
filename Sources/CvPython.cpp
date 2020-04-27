@@ -42,30 +42,33 @@ std::vector<StackFrame> get_stack_trace()
 
 	PyInterpreterState* firstInterp = PyInterpreterState_Head();
 
-	PyGILState_STATE state = PyGILState_Ensure();
-
-	PyThreadState* curThread = PyThreadState_GET();
-	if (curThread)
+	if (firstInterp)
 	{
-		trace_thread(curThread, trace);
-	}
+		PyGILState_STATE state = PyGILState_Ensure();
 
-	for (PyInterpreterState* interp = firstInterp; interp; interp = interp->next)
-	{
-		if (firstInterp->next)
+		PyThreadState* curThread = PyThreadState_GET();
+		if (curThread)
 		{
-			//fprintf(stderr, "Interpreter:\n");
+			trace_thread(curThread, trace);
 		}
-		for (PyThreadState* st = interp->tstate_head; st; st = st->next)
+
+		for (PyInterpreterState* interp = firstInterp; interp; interp = interp->next)
 		{
-			if (st == curThread)
+			if (firstInterp->next)
 			{
-				continue;
+				//fprintf(stderr, "Interpreter:\n");
 			}
-			trace_thread(st, trace);
+			for (PyThreadState* st = interp->tstate_head; st; st = st->next)
+			{
+				if (st == curThread)
+				{
+					continue;
+				}
+				trace_thread(st, trace);
+			}
 		}
+		PyGILState_Release(state);
 	}
-	PyGILState_Release(state);
 
 	return trace;
 }

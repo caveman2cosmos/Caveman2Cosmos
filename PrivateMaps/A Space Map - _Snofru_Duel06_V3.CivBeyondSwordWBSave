@@ -3083,7 +3083,6 @@ EndPlot
 BeginPlot
 	x=3,y=53
 	BonusType=BONUS_POULTRY
-	FeatureType=FEATURE_RAINWATER_BASIN, FeatureVariety=0
 	TerrainType=TERRAIN_TAIGA
 	PlotType=2
 EndPlot

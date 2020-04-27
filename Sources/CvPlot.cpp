@@ -2565,19 +2565,8 @@ bool CvPlot::canHaveBonus(BonusTypes eBonus, bool bIgnoreLatitude) const
 
 	const CvBonusInfo& bonus = GC.getBonusInfo(eBonus);
 
-	if (getFeatureType() != NO_FEATURE)
-	{
-		if (!bonus.isFeature(getFeatureType()))
-		{
-			return false;
-		}
-
-		if (!bonus.isFeatureTerrain(getTerrainType()))
-		{
-			return false;
-		}
-	}
-	else if (!bonus.isTerrain(getTerrainType()))
+	if (!bonus.isTerrain(getTerrainType())
+	&& (getFeatureType() == NO_FEATURE || !bonus.isFeature(getFeatureType()) || !bonus.isFeatureTerrain(getTerrainType())))
 	{
 		return false;
 	}
