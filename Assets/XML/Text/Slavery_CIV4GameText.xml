@@ -145,7 +145,7 @@
 			<Plural>0</Plural>
 		</French>
 		<Italian>
-			<Text>Baracca degli schiavi - Inddustria</Text>
+			<Text>Baracca degli schiavi - Industria</Text>
 			<Gender>Female</Gender>
 			<Plural>0</Plural>
 		</Italian>
@@ -239,7 +239,6 @@
 		<Tag>TXT_KEY_MISSION_JOIN_CITY_AS_SLAVE_CRIME_PREVENTION</Tag>
 		<English>Join city as a crime prevention slave.</English>
 		<French>Rejoindre la ville en tant que force de l'ordre.</French>
-
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_JOIN_CITY_AS_SLAVE_ENTERTAINMENT</Tag>

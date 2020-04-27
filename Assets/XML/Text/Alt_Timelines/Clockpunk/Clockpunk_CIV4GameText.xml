@@ -108,7 +108,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORCHESTRION_THEATER_PEDIA</Tag>
 		<English>An orchestrion is a generic name for a machine that plays music and is designed to sound like an orchestra or band. Orchestrions may be operated by means of a large pinned cylinder or by a music roll and less commonly book music. The sound is usually produced by pipes, though they will be voiced differently to those found in a pipe organ, as well as percussion instruments. Many orchestrions contain a piano as well. In our age of clockwork, orchestrion theaters comprise enormous wall sized machines, usually complete with mechanical dolls moving in time to the music, and seats from which citizens can appreciate the works of our music roll composers.</English>
-		<Italian>Orchestrione è un nome genrico per una macchina che suona musica, ed è progettata per funzionare come un'orchestra o una banda. Gli Orchestrion  possono essere azionati da un grande cilindro con dei rilievi, oppure da un rotolo musicale. Solitamente il suono è prodotto da canne, anche se è diverso da quallo prodtto dalle canne di un organo, così come da uno strumento a percussione. Molti orchestrion contengono anche un piano. Nella nostra era piena di ingranaggi. gli orchestrion comprendono enormi macchine, di solito complete di bambole meccaniche che si muovono a tempo con la musica, e posti dai quali i cittadini possono apprezzare i lavoratori dei nostri compositori.</Italian>
+		<Italian>L'orchestrion è una macchina progettata per produrre il suono di un'intera orchestra o banda. Gli orchestrion possono essere azionati da un grande cilindro con dei rilievi oppure da un rotolo musicale. Solitamente il suono è prodotto da canne, anche se è diverso da quello prodotto dalle canne di un organo, così come da uno strumento a percussione. Molti orchestrion contengono anche un piano. In questa era piena di ingranaggi, i teatri-orchestrion comprendono enormi macchine, di solito complete di bambole meccaniche che si muovono a tempo con la musica, e posti dai quali i cittadini possono apprezzare le opere dei nostri compositori.</Italian>
 		<Polish>Orchestrion (orkiestron) - rodzaj szafy grającej zaliczanej do instrumentów mechanicznych, popularny szczególnie w XIX wieku. Zbudowany z oszklonej szafki, wewnątrz której umieszczony był mechanizm wagowy, który po wrzuceniu monety włączał urządzenie poruszające kolczasty walec. Za pomocą kolców umieszczonych na walcu uruchamiane były specjalne młoteczki uderzające następnie o struny, dzwonki czy też bębenki. Całość uzyskanej melodyjki odbywała się według specjalnie zaprojektowanego wzorca melodycznego. Z biegiem lat urządzenie to zostało zastąpione przez automaty płytowe.</Polish>
 	</TEXT>
 	<TEXT>
@@ -254,7 +254,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZEPHYR_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Zephyr[COLOR_REVERT] is an alt-timeline Da Vinci/Clockpunk unit. It was sort of concieved as a wooden sailing ship held up by a balloon.</English>
-		<Italian>Lo zefiro è un'unità in stile Clockpunk. Era ideato come una nave di legno sospesa in aria da una mongolfiera.</Italian>
+		<Italian>Lo zefiro è un'unità in stile clockpunk. Era ideato come una nave di legno sostenuta in aria da una mongolfiera.</Italian>
 		<Polish>[COLOR_UNIT_TEXT]Zefir[COLOR_REVERT] to renesansowy sterowiec z czasów Leonarda Da Vinci.</Polish>
 	</TEXT>
 </Civ4GameText>
