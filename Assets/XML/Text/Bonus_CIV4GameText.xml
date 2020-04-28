@@ -44,7 +44,6 @@
 		<Tag>TXT_KEY_BONUS_AEROGEL</Tag>
 		<English>Aerogel</English>
 		<French>Aérogel</French>
-		<Italian>Aerogel</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AEROGEL_PEDIA</Tag>
@@ -61,7 +60,6 @@
 		<Tag>TXT_KEY_BONUS_AINU</Tag>
 		<English>Ainu</English>
 		<French>Aïnou</French>
-		<Italian>Ainu</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AIRCRAFT</Tag>
@@ -80,7 +78,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AKA</Tag>
 		<English>Aka</English>
-		<Italian>Aka</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AKKADIAN</Tag>
@@ -97,7 +94,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ALACALUFE</Tag>
 		<English>Alacalufe</English>
-		<Italian>Alacalufe</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ALBANIAN</Tag>
@@ -111,7 +107,6 @@
 		<French>Alcool</French>
 		<German>Alkohol</German>
 		<Italian>Alcool</Italian>
-		<Spanish>Alcohol</Spanish>
 		<Polish>Alkohol</Polish>
 	</TEXT>
 	<TEXT>
@@ -207,7 +202,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AMIS</Tag>
 		<English>Amis</English>
-		<Italian>Amis</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AMMUNITION</Tag>
@@ -226,8 +220,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ANASAZI</Tag>
 		<English>Anasazi</English>
-		<French>Anasazi</French>
-		<Italian>Anasazi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ANCIENT_RELICS</Tag>
@@ -247,7 +239,6 @@
 		<Tag>TXT_KEY_BONUS_ANDAMANESE</Tag>
 		<English>Andamanese</English>
 		<French>Andamanaise</French>
-		<Italian>Andamanese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ANDROIDS</Tag>
@@ -294,7 +285,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_APACHE</Tag>
 		<English>Apache</English>
-		<Italian>Apache</Italian>
 		<Polish>Apacze</Polish>
 	</TEXT>
 	<TEXT>
@@ -322,12 +312,10 @@
 		<Tag>TXT_KEY_BONUS_ARAGONESE</Tag>
 		<English>Aragonese</English>
 		<French>Aragone</French>
-		<Italian>Aragonese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ARAWAK</Tag>
 		<English>Arawak</English>
-		<Italian>Arawak</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ARGENTINIAN</Tag>
@@ -363,7 +351,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ASHANTI</Tag>
 		<English>Ashanti</English>
-		<Italian>Ashanti</Italian>
 		<Polish>Aszanti</Polish>
 	</TEXT>
 	<TEXT>
@@ -408,7 +395,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AUTOMOBILES</Tag>
 		<English>Automobiles</English>
-		<French>Automobiles</French>
 		<Italian>Automobili</Italian>
 		<Polish>Samochody</Polish>
 	</TEXT>
@@ -425,12 +411,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AYMARA</Tag>
 		<English>Aymara</English>
-		<Italian>Aymara</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AZANDE</Tag>
 		<English>Azande</English>
-		<Italian>Azande</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_AZTEC</Tag>
@@ -488,7 +472,6 @@
 		<Tag>TXT_KEY_BONUS_BANDANESE</Tag>
 		<English>Bandanese</English>
 		<French>Bandanais</French>
-		<Italian>Bandanese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BANGLADESHI</Tag>
@@ -537,7 +520,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BASHKIR</Tag>
 		<English>Bashkir</English>
-		<French>Bashkir</French>
 		<Italian>Baschiro</Italian>
 	</TEXT>
 	<TEXT>
@@ -567,7 +549,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BATEK</Tag>
 		<English>Batek</English>
-		<Italian>Batek</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BAUXITE_ORE</Tag>
@@ -641,7 +622,6 @@
 		<Tag>TXT_KEY_BONUS_BENINESE</Tag>
 		<English>Beninese</English>
 		<French>Béninoise</French>
-		<Italian>Beninese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BERBER</Tag>
@@ -653,7 +633,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BERLINITE</Tag>
 		<English>Berlinite</English>
-		<Italian>Berlinite</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_BERLINITE_PEDIA</Tag>
@@ -943,8 +922,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CAMBEBA</Tag>
 		<English>Cambeba</English>
-		<French>Cambeba</French>
-		<Italian>Cambeba</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CAMEL</Tag>
@@ -970,7 +947,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CANARI</Tag>
 		<English>Cañari</English>
-		<Italian>Cañari</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CANDLES</Tag>
@@ -1012,18 +988,15 @@
 		<Tag>TXT_KEY_BONUS_CANTONESE</Tag>
 		<English>Cantonese</English>
 		<French>Cantonais</French>
-		<Italian>Cantonese</Italian>
 		<Polish>Kantońska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CAPAYAN</Tag>
 		<English>Capayán</English>
-		<Italian>Capayán</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CARAL_SUPE</Tag>
 		<English>Caral Supe</English>
-		<Italian>Caral Supe</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CARBON_DIOXIDE_ICE</Tag>
@@ -1052,7 +1025,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CARBYNE</Tag>
 		<English>Carbyne</English>
-		<Italian>Carbyne</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CARBYNE_PEDIA</Tag>
@@ -1188,7 +1160,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CERMET</Tag>
 		<English>Cermet</English>
-		<Italian>Cermet</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CERMET_PEDIA</Tag>
@@ -1211,8 +1182,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHACHAPOYA</Tag>
 		<English>Chachapoya</English>
-		<French>Chachapoya</French>
-		<Italian>Chachapoya</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHALK</Tag>
@@ -1229,7 +1198,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHAM</Tag>
 		<English>Cham</English>
-		<Italian>Cham</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHAMORRAN</Tag>
@@ -1262,7 +1230,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHAVIN</Tag>
 		<English>Chavín</English>
-		<Italian>Chavín</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHECHEN</Tag>
@@ -1299,12 +1266,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHEROKEE</Tag>
 		<English>Cherokee</English>
-		<Italian>Cherokee</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHEYENNE</Tag>
 		<English>Cheyenne</English>
-		<Italian>Cheyenne</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHILEAN</Tag>
@@ -1315,7 +1280,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHIMU</Tag>
 		<English>Chimú</English>
-		<Italian>Chimú</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHINESE</Tag>
@@ -1327,7 +1291,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHIPPEWA</Tag>
 		<English>Chippewa</English>
-		<Italian>Chippewa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHOCOLATE</Tag>
@@ -1344,7 +1307,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHOLA</Tag>
 		<English>Chola</English>
-		<Italian>Chola</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHROMITE_ORE</Tag>
@@ -1371,7 +1333,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CHUMASH</Tag>
 		<English>Chumash</English>
-		<Italian>Chumash</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CINNABAR_ORE</Tag>
@@ -1480,8 +1441,6 @@
 		<Tag>TXT_KEY_BONUS_COCA</Tag>
 		<English>Coca</English>
 		<German>Koka</German>
-		<Italian>Coca</Italian>
-		<Spanish>Coca</Spanish>
 		<Polish>Koka</Polish>
 	</TEXT>
 	<TEXT>
@@ -1541,7 +1500,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_COMANCHE</Tag>
 		<English>Comanche</English>
-		<Italian>Comanche</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_COMPUTERS</Tag>
@@ -1692,7 +1650,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CREE</Tag>
 		<English>Cree</English>
-		<Italian>Cree</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_CROATIAN</Tag>
@@ -1749,7 +1706,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_DAHOMEY</Tag>
 		<English>Dahomey</English>
-		<Italian>Dahomey</Italian>
 		<Polish>Dahomejska</Polish>
 	</TEXT>
 	<TEXT>
@@ -1787,7 +1743,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_DAYAK</Tag>
 		<English>Dayak</English>
-		<Italian>Dayak</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_DEEP_SPACE_LIFEFORMS</Tag>
@@ -1829,7 +1784,6 @@
 		<Tag>TXT_KEY_BONUS_DENE</Tag>
 		<English>Dene</English>
 		<French>Déné</French>
-		<Italian>Dene</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_DIAMOND</Tag>
@@ -2006,7 +1960,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ECSTASY</Tag>
 		<English>Ecstasy</English>
-		<Italian>Ecstasy</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ECSTASY_PEDIA</Tag>
@@ -2210,7 +2163,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_FEMTOBOTS</Tag>
 		<English>Femtobots</English>
-		<French>Femtobots</French>
 		<Italian>Femtobot</Italian>
 	</TEXT>
 	<TEXT>
@@ -2513,7 +2465,6 @@
 		<Tag>TXT_KEY_BONUS_FULLERENE</Tag>
 		<English>Fullerene</English>
 		<French>Fullerène</French>
-		<Italian>Fullerene</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_FULLERENE_PEDIA</Tag>
@@ -2537,7 +2488,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_FURAWI</Tag>
 		<English>Furawi</English>
-		<Italian>Furawi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_FURNITURE</Tag>
@@ -2560,7 +2510,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_GAUCHO</Tag>
 		<English>Gaucho</English>
-		<Italian>Gaucho</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_GEMSTONE</Tag>
@@ -2792,7 +2741,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_GUARANI</Tag>
 		<English>Guaraní</English>
-		<Italian>Guaraní</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_GUATEMALAN</Tag>
@@ -2849,7 +2797,6 @@
 		<Tag>TXT_KEY_BONUS_HAIDA</Tag>
 		<English>Haida</English>
 		<French>Haïda</French>
-		<Italian>Haida</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HAITIAN</Tag>
@@ -2883,7 +2830,6 @@
 		<Tag>TXT_KEY_BONUS_HAUSA</Tag>
 		<English>Hausa</English>
 		<French>Haoussa</French>
-		<Italian>Hausa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HAWAIIAN</Tag>
@@ -2976,13 +2922,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HEMUDU</Tag>
 		<English>Hemudu</English>
-		<Italian>Hemudu</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HENNA</Tag>
 		<English>Henna</English>
 		<French>Henné</French>
-		<German>Henna</German>
 		<Italian>Hennè</Italian>
 		<Spanish>Alheña</Spanish>
 	</TEXT>
@@ -2995,7 +2939,6 @@
 		<Tag>TXT_KEY_BONUS_HERERO</Tag>
 		<English>Herero</English>
 		<French>Héréro</French>
-		<Italian>Herero</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HIDE</Tag>
@@ -3114,12 +3057,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HOPEWELL</Tag>
 		<English>Hopewell</English>
-		<Italian>Hopewell</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HOPI</Tag>
 		<English>Hopi</English>
-		<Italian>Hopi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HORSE</Tag>
@@ -3476,7 +3417,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUN</Tag>
 		<English>Hun</English>
-		<French>Hun</French>
 		<Italian>Unno</Italian>
 		<Polish>Huńska</Polish>
 	</TEXT>
@@ -3621,7 +3561,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_INDIGO</Tag>
 		<English>Indigo</English>
-		<German>Indigo</German>
 		<Italian>Indaco</Italian>
 		<Spanish>Índigo</Spanish>
 		<Polish>Indygo</Polish>
@@ -3641,7 +3580,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_INDUS</Tag>
 		<English>Indus</English>
-		<Italian>Indus</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_INGOTS_PEDIA</Tag>
@@ -3651,7 +3589,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_INUIT</Tag>
 		<English>Inuit</English>
-		<Italian>Inuit</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_IRANIAN</Tag>
@@ -3700,7 +3637,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_IROQUOIS</Tag>
 		<English>Iroquois</English>
-		<French>Iroquois</French>
 		<Italian>Irochese</Italian>
 		<Polish>Irokezów</Polish>
 	</TEXT>
@@ -3746,10 +3682,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_JADE</Tag>
 		<English>Jade</English>
-		<French>Jade</French>
-		<German>Jade</German>
 		<Italian>Giada</Italian>
-		<Spanish>Jade</Spanish>
 		<Polish>Jadeity</Polish>
 	</TEXT>
 	<TEXT>
@@ -3816,12 +3749,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_JIVARO</Tag>
 		<English>Jivaro</English>
-		<Italian>Jivaro</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_JOMON</Tag>
 		<English>Jomon</English>
-		<Italian>Jomon</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_JORDANIAN</Tag>
@@ -3834,7 +3765,6 @@
 		<Tag>TXT_KEY_BONUS_JOSEON</Tag>
 		<English>Joseon</English>
 		<French>Joséon</French>
-		<Italian>Joseon</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_JUTE</Tag>
@@ -3844,7 +3774,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KANEM_BORNU</Tag>
 		<English>Kanem-Bornu</English>
-		<Italian>Kanem-Bornu</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KANGAROO</Tag>
@@ -3862,10 +3791,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KAVA</Tag>
 		<English>Kava</English>
-		<French>Kava</French>
-		<German>Kava</German>
-		<Italian>Kava</Italian>
-		<Spanish>Kava</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KAVA_PEDIA</Tag>
@@ -3887,7 +3812,6 @@
 		<Tag>TXT_KEY_BONUS_KEROSENE</Tag>
 		<English>Kerosene</English>
 		<French>Kérosène</French>
-		<Italian>Kerosene</Italian>
 		<Polish>Nafta</Polish>
 	</TEXT>
 	<TEXT>
@@ -3898,7 +3822,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KEVLAR</Tag>
 		<English>Kevlar</English>
-		<Italian>Kevlar</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KEVLAR_PEDIA</Tag>
@@ -3918,7 +3841,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KHMER</Tag>
 		<English>Khmer</English>
-		<Italian>Khmer</Italian>
 		<Polish>Khmerska</Polish>
 	</TEXT>
 	<TEXT>
@@ -3929,12 +3851,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KILLKE</Tag>
 		<English>Killke</English>
-		<Italian>Killke</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KIPCHAK</Tag>
 		<English>Kipchak</English>
-		<Italian>Kipchak</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KITARAN</Tag>
@@ -3944,12 +3864,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KLAMATH</Tag>
 		<English>Klamath</English>
-		<Italian>Klamath</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KOGI</Tag>
 		<English>Kogi</English>
-		<Italian>Kogi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KONGOLESE</Tag>
@@ -3973,7 +3891,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KUGELBLITZ</Tag>
 		<English>Kugelblitz</English>
-		<Italian>Kugelblitz</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_KUGELBLITZ_PEDIA</Tag>
@@ -4111,7 +4028,6 @@
 		<Tag>TXT_KEY_BONUS_LEONESE</Tag>
 		<English>Leonese</English>
 		<French>Léonais</French>
-		<Italian>Leonese</Italian>
 		<Polish>Leońska</Polish>
 	</TEXT> -->
 	<TEXT>
@@ -4128,8 +4044,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LIANGZHU</Tag>
 		<English>Liangzhu</English>
-		<French>Liangzhu</French>
-		<Italian>Liangzhu</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LIANGZHU_JADES</Tag>
@@ -4195,7 +4109,6 @@
 		<French>Lama</French>
 		<German>Lama</German>
 		<Italian>Lama</Italian>
-		<Spanish>Llama</Spanish>
 		<Polish>Lamy</Polish>
 	</TEXT>
 	<TEXT>
@@ -4223,7 +4136,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LSD</Tag>
 		<English>LSD</English>
-		<Italian>LSD</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LSD_PEDIA</Tag>
@@ -4233,17 +4145,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LUBA</Tag>
 		<English>Luba</English>
-		<Italian>Luba</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LULE</Tag>
 		<English>Lule</English>
-		<Italian>Lule</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LUNDA</Tag>
 		<English>Lunda</English>
-		<Italian>Lunda</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_LUSITANIAN</Tag>
@@ -4279,7 +4188,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MADAN</Tag>
 		<English>Madan</English>
-		<Italian>Madan</Italian>
 		<Polish>Madańska</Polish>
 	</TEXT>
 	<TEXT>
@@ -4321,7 +4229,6 @@
 		<Tag>TXT_KEY_BONUS_MALINESE</Tag>
 		<English>Malinese</English>
 		<French>Malinais</French>
-		<Italian>Malinese</Italian>
 		<Polish>Malinezyjska</Polish>
 	</TEXT>
 	<TEXT>
@@ -4352,7 +4259,6 @@
 		<Tag>TXT_KEY_BONUS_MANGANESE</Tag>
 		<English>Manganese</English>
 		<French>Manganèse</French>
-		<Italian>Manganese</Italian>
 		<Polish>Mangan</Polish>
 	</TEXT>
 	<TEXT>
@@ -4365,7 +4271,6 @@
 		<English>Mango</English>
 		<French>Mangues</French>
 		<German>Mangos</German>
-		<Italian>Mango</Italian>
 		<Spanish>Mangos</Spanish>
 	</TEXT>
 	<TEXT>
@@ -4375,18 +4280,15 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MANI</Tag>
 		<English>Mani</English>
-		<Italian>Mani</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MAORI</Tag>
 		<English>Maori</English>
-		<Italian>Maori</Italian>
 		<Polish>Maoryska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MAPUCHE</Tag>
 		<English>Mapuche</English>
-		<Italian>Mapuche</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARBLE</Tag>
@@ -4404,7 +4306,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARIC</Tag>
 		<English>Maric</English>
-		<Italian>Mari</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MARTIAN_ALGAE</Tag>
@@ -4501,13 +4402,11 @@
 		<Tag>TXT_KEY_BONUS_MASAI</Tag>
 		<English>Masai</English>
 		<French>Masaï</French>
-		<Italian>Masai</Italian>
 		<Polish>Masajska</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MASCAGNITE</Tag>
 		<English>Mascagnite</English>
-		<Italian>Mascagnite</Italian>
 		<Polish>Maskagnit</Polish>
 	</TEXT>
 	<TEXT>
@@ -4590,7 +4489,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MELONS</Tag>
 		<English>Melons</English>
-		<French>Melons</French>
 		<German>Melonen</German>
 		<Italian>Meloni</Italian>
 		<Spanish>Melones</Spanish>
@@ -4727,7 +4625,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MING</Tag>
 		<English>Ming</English>
-		<Italian>Ming</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MING_VASE</Tag>
@@ -4757,7 +4654,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MITHRIL</Tag>
 		<English>Mithril</English>
-		<Italian>Mithril</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MITHRIL_PEDIA</Tag>
@@ -4775,22 +4671,18 @@
 		<Tag>TXT_KEY_BONUS_MOCHE</Tag>
 		<English>Moche</English>
 		<French>Mochica</French>
-		<Italian>Moche</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MOCOVI</Tag>
 		<English>Mocoví</English>
-		<Italian>Mocoví</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MOHAWK</Tag>
 		<English>Mohawk</English>
-		<Italian>Mohawk</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MOLLO</Tag>
 		<English>Mollo</English>
-		<Italian>Mollo</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MONGOLIAN</Tag>
@@ -4823,13 +4715,11 @@
 		<Tag>TXT_KEY_BONUS_MUGHAL</Tag>
 		<English>Mughal</English>
 		<French>Moghol</French>
-		<Italian>Mughal</Italian>
 		<Polish>Mugali</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MUISCA</Tag>
 		<English>Muisca</English>
-		<Italian>Muisca</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MUREX</Tag>
@@ -4858,7 +4748,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_MUTAPA</Tag>
 		<English>Mutapa</English>
-		<Italian>Mutapa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NABATEANS</Tag>
@@ -4869,12 +4758,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NAHUA</Tag>
 		<English>Nahua</English>
-		<Italian>Nahua</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NAMA</Tag>
 		<English>Nama</English>
-		<Italian>Nama</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NANOACTUATORS</Tag>
@@ -4949,7 +4836,6 @@
 		<Tag>TXT_KEY_BONUS_NATRON</Tag>
 		<English>Natron</English>
 		<French>Soude</French>
-		<Italian>Natron</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NATRON_PEDIA</Tag>
@@ -4971,19 +4857,16 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NAVAJO</Tag>
 		<English>Navajo</English>
-		<Italian>Navajo</Italian>
 		<Polish>Nawahowie</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NAZCA</Tag>
 		<English>Nazca</English>
-		<Italian>Nazca</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NEPALESE</Tag>
 		<English>Nepalese</English>
 		<French>Nepalais</French>
-		<Italian>Nepalese</Italian>
 		<Polish>Nepalska</Polish>
 	</TEXT>
 	<TEXT>
@@ -5060,7 +4943,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NOK</Tag>
 		<English>Nok</English>
-		<Italian>Nok</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NOK_SCULPTURES</Tag>
@@ -5076,12 +4958,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NOONGAR</Tag>
 		<English>Noongar</English>
-		<Italian>Noongar</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NOOTKA</Tag>
 		<English>Nootka</English>
-		<Italian>Nootka</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NORMAN</Tag>
@@ -5123,7 +5003,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NUTELLA</Tag>
 		<English>Nutella</English>
-		<Italian>Nutella</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NUTELLA_PEDIA</Tag>
@@ -5145,7 +5024,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NYLON</Tag>
 		<English>Nylon</English>
-		<Italian>Nylon</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_NYLON_PEDIA</Tag>
@@ -5156,7 +5034,6 @@
 		<Tag>TXT_KEY_BONUS_OBSIDIAN</Tag>
 		<English>Obsidian</English>
 		<French>Obsidienne</French>
-		<German>Obsidian</German>
 		<Italian>Ossidiana</Italian>
 		<Spanish>Obsidiana</Spanish>
 		<Polish>Obsydian</Polish>
@@ -5176,7 +5053,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ODAWA</Tag>
 		<English>Odawa</English>
-		<Italian>Odawa</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_OIL</Tag>
@@ -5207,7 +5083,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_OLIVES</Tag>
 		<English>Olives</English>
-		<French>Olives</French>
 		<German>Oliven</German>
 		<Italian>Olive</Italian>
 		<Spanish>Aceitunas</Spanish>
@@ -5262,8 +5137,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_OPIUM</Tag>
 		<English>Opium</English>
-		<French>Opium</French>
-		<German>Opium</German>
 		<Italian>Oppio</Italian>
 		<Spanish>Opio</Spanish>
 	</TEXT>
@@ -5275,7 +5148,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ORANG_ASLI</Tag>
 		<English>Orang Asli</English>
-		<Italian>Orang Asli</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ORGANIC_COMPUTERS</Tag>
@@ -5346,7 +5218,6 @@
 		<Tag>TXT_KEY_BONUS_PAIUTE</Tag>
 		<English>Paiute</English>
 		<French>Païute</French>
-		<Italian>Paiute</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PAKISTANI</Tag>
@@ -5402,7 +5273,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PAPYRUS</Tag>
 		<English>Papyrus</English>
-		<German>Papyrus</German>
 		<Italian>Papiro</Italian>
 		<Spanish>Papiro</Spanish>
 		<Polish>Papirus</Polish>
@@ -5421,7 +5291,6 @@
 		<Tag>TXT_KEY_BONUS_PARROTS</Tag>
 		<English>Parrots</English>
 		<French>Perroquets</French>
-		<German>Parrots</German>
 		<Italian>Pappagalli</Italian>
 		<Spanish>Loros</Spanish>
 		<Polish>Papugi</Polish>
@@ -5453,13 +5322,11 @@
 		<Tag>TXT_KEY_BONUS_PASHTUN</Tag>
 		<English>Pashtun</English>
 		<French>Pashtoune</French>
-		<Italian>Pashtun</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PASTA</Tag>
 		<English>Pasta</English>
 		<French>Pâtes</French>
-		<Italian>Pasta</Italian>
 		<Polish>Makaron</Polish>
 	</TEXT>
 	<TEXT>
@@ -5620,9 +5487,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PEYOTE</Tag>
 		<English>Peyote</English>
-		<French>Peyote</French>
-		<German>Peyote</German>
-		<Italian>Peyote</Italian>
 		<Spanish>Peyotes</Spanish>
 		<Polish>Pejotl</Polish>
 	</TEXT>
@@ -5697,12 +5561,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PILAGA</Tag>
 		<English>Pilagá</English>
-		<Italian>Pilagá</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PIMA</Tag>
 		<English>Pima</English>
-		<Italian>Pima</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PISTACHIO</Tag>
@@ -5930,7 +5792,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_POYA</Tag>
 		<English>Poya</English>
-		<Italian>Poya</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PRICKLY_PEAR</Tag>
@@ -5971,7 +5832,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PUELCHE</Tag>
 		<English>Puelche</English>
-		<Italian>Puelche</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_PUMICE_STONE</Tag>
@@ -6030,8 +5890,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_QIANG</Tag>
 		<English>Qiang</English>
-		<French>Qiang</French>
-		<Italian>Qiang</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_QILIN</Tag>
@@ -6047,12 +5905,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_QIN</Tag>
 		<English>Qin</English>
-		<Italian>Qin</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_QING</Tag>
 		<English>Qing</English>
-		<Italian>Qing</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_QUANTONIUM_CRYSTAL</Tag>
@@ -6087,13 +5943,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_QUECHUA</Tag>
 		<English>Quechua</English>
-		<Italian>Quechua</Italian>
 		<Polish>Keczua</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_QUERANDI</Tag>
 		<English>Querandi</English>
-		<Italian>Querandi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_QUETZALCOATL</Tag>
@@ -6104,7 +5958,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_QULLA</Tag>
 		<English>Qulla</English>
-		<Italian>Qulla</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RABBIT</Tag>
@@ -6139,7 +5992,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RAPA_NUI</Tag>
 		<English>Rapa Nui</English>
-		<Italian>Rapa Nui</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RARE_EARTH_MINERALS</Tag>
@@ -6191,7 +6043,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_RED_OCHER</Tag>
 		<English>Red Ocher</English>
-		<Italian>Red Ocher</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_REEDS</Tag>
@@ -6420,7 +6271,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SAKA</Tag>
 		<English>Saka</English>
-		<Italian>Saka</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SALT</Tag>
@@ -6438,7 +6288,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SAMI</Tag>
 		<English>Sami</English>
-		<Italian>Sami</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SAMOAN</Tag>
@@ -6565,7 +6414,6 @@
 		<English>Seasoning</English>
 		<French>Condiments</French>
 		<Italian>Condimenti</Italian>
-		<Polish>Seasoning</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SEASONING_PEDIA</Tag>
@@ -6580,12 +6428,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SEMANG</Tag>
 		<English>Semang</English>
-		<Italian>Semang</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SEMINOLE</Tag>
 		<English>Seminole</English>
-		<Italian>Seminole</Italian>
 		<Polish>Seminolska</Polish>
 	</TEXT>
 	<TEXT>
@@ -6597,7 +6443,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SENNAR</Tag>
 		<English>Sennar</English>
-		<Italian>Sennar</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SERBIAN</Tag>
@@ -6620,7 +6465,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SHANG</Tag>
 		<English>Shang</English>
-		<Italian>Shang</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SHANG_JADE_RITUAL_ITEMS</Tag>
@@ -6705,7 +6549,6 @@
 		<Tag>TXT_KEY_BONUS_SIAMESE</Tag>
 		<English>Siamese</English>
 		<French>Siamois</French>
-		<Italian>Siamese</Italian>
 		<Polish>Syjamska</Polish>
 	</TEXT>
 	<TEXT>
@@ -6718,7 +6561,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SICAN</Tag>
 		<English>Sicán</English>
-		<Italian>Sicán</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SICILIAN</Tag>
@@ -6779,13 +6621,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SINTASHTA</Tag>
 		<English>Sintashta</English>
-		<Italian>Sintashta</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SIOUX</Tag>
 		<English>Sioux</English>
-		<French>Sioux</French>
-		<Italian>Sioux</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SKIS</Tag>
@@ -6860,7 +6699,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SONGHAI</Tag>
 		<English>Songhai</English>
-		<Italian>Songhai</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SOUTH_AFRICAN</Tag>
@@ -7034,7 +6872,6 @@
 		<Tag>TXT_KEY_BONUS_SUDANESE</Tag>
 		<English>Sudanese</English>
 		<French>Soudanaise</French>
-		<Italian>Sudanese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SUGAR</Tag>
@@ -7079,7 +6916,6 @@
 		<Tag>TXT_KEY_BONUS_SUNDANESE</Tag>
 		<English>Sundanese</English>
 		<French>Sundanaise</French>
-		<Italian>Sundanese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SUPERINTELLIGENT_COMPUTERS</Tag>
@@ -7117,17 +6953,14 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SURINAMESE</Tag>
 		<English>Surinamese</English>
-		<Italian>Surinamese</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SWAHILI</Tag>
 		<English>Swahili</English>
-		<Italian>Swahili</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SWAZI</Tag>
 		<English>Swazi</English>
-		<Italian>Swazi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_SWEDISH</Tag>
@@ -7190,7 +7023,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TAGALOG</Tag>
 		<English>Tagalog</English>
-		<Italian>Tagalog</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TAHITIAN</Tag>
@@ -7202,13 +7034,11 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TAIRONA</Tag>
 		<English>Tairona</English>
-		<Italian>Tairona</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TAIWANESE</Tag>
 		<English>Taiwanese</English>
 		<French>Taiwanais</French>
-		<Italian>Taiwanese</Italian>
 		<Polish>Tajwańska</Polish>
 	</TEXT>
 	<TEXT>
@@ -7219,12 +7049,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TAMIL</Tag>
 		<English>Tamil</English>
-		<Italian>Tamil</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TANG</Tag>
 		<English>Tang</English>
-		<Italian>Tang</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TANKS</Tag>
@@ -7357,7 +7185,6 @@
 		<Tag>TXT_KEY_BONUS_TESSERACT</Tag>
 		<English>Tesseract</English>
 		<French>Tesseracte</French>
-		<Italian>Tesseract</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TESSERACT_PEDIA</Tag>
@@ -7481,22 +7308,18 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TIWI</Tag>
 		<English>Tiwi</English>
-		<Italian>Tiwi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TLATILCO</Tag>
 		<English>Tlatilco</English>
-		<Italian>Tlatilco</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TLAXCALTEC</Tag>
 		<English>Tlaxcaltec</English>
-		<Italian>Tlaxcaltec</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TOBA</Tag>
 		<English>Toba</English>
-		<Italian>Toba</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TOBACCO</Tag>
@@ -7595,12 +7418,10 @@
 		<Tag>TXT_KEY_BONUS_TUAREG</Tag>
 		<English>Tuareg</English>
 		<French>Touareg</French>
-		<Italian>Tuareg</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TUCANO</Tag>
 		<English>Tucano</English>
-		<Italian>Tucano</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TUNGSTEN</Tag>
@@ -7619,7 +7440,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TUNGUS</Tag>
 		<English>Tungus</English>
-		<Italian>Tungus</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TUNISIAN</Tag>
@@ -7630,7 +7450,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TUPI</Tag>
 		<English>Tupi</English>
-		<Italian>Tupi</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TURKISH</Tag>
@@ -7648,7 +7467,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_TURQUOISE</Tag>
 		<English>Turquoise</English>
-		<French>Turquoise</French>
 		<German>Türkise</German>
 		<Italian>Turchesi</Italian>
 		<Spanish>Turquesas</Spanish>
@@ -7729,7 +7547,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_URANIUM</Tag>
 		<English>Uranium</English>
-		<French>Uranium</French>
 		<German>Uran</German>
 		<Italian>Uranio</Italian>
 		<Spanish>Uranio</Spanish>
@@ -7909,7 +7726,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WARAY</Tag>
 		<English>Waray</English>
-		<Italian>Waray</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WARES_PEDIA</Tag>
@@ -7919,7 +7735,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WARI</Tag>
 		<English>Wari</English>
-		<Italian>Wari</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WARP_DRIVES</Tag>
@@ -7981,12 +7796,10 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WAYANA</Tag>
 		<English>Wayana</English>
-		<Italian>Wayana</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WAYUU</Tag>
 		<English>Wayuu</English>
-		<Italian>Wayuu</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_WELSH</Tag>
@@ -8102,37 +7915,30 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_XIA</Tag>
 		<English>Xia</English>
-		<Italian>Xia</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_XIANBEI</Tag>
 		<English>Xianbei</English>
-		<Italian>Xianbei</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_XIONGNU</Tag>
 		<English>Xiongnu</English>
-		<Italian>Xiongnu</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_YAGHAN</Tag>
 		<English>Yaghan</English>
-		<Italian>Yaghan</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_YAGUA</Tag>
 		<English>Yagua</English>
-		<Italian>Yagua</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_YAMATO</Tag>
 		<English>Yamato</English>
-		<Italian>Yamato</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_YANOMAMI</Tag>
 		<English>Yanomami</English>
-		<Italian>Yanomami</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_YEMENI</Tag>
@@ -8155,7 +7961,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_YOLNGU</Tag>
 		<English>Yolngu</English>
-		<Italian>Yolngu</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ZANZIBARI</Tag>
@@ -8172,7 +7977,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ZENU</Tag>
 		<English>Zenú</English>
-		<Italian>Zenú</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ZIMBABWEAN</Tag>
@@ -8195,12 +7999,10 @@
 		<Tag>TXT_KEY_BONUS_ZULU</Tag>
 		<English>Zulu</English>
 		<French>Zoulou</French>
-		<Italian>Zulu</Italian>
 		<Polish>Zulusów</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ZUNI</Tag>
 		<English>Zuñi</English>
-		<Italian>Zuñi</Italian>
 	</TEXT>
 </Civ4GameText>
