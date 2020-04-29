@@ -3262,7 +3262,7 @@ class CvMainInterface:
 		TYPE = UnitGroupingTypes.UNIT_GROUPING_COMBAT
 		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNIT_GROUPING_COMBAT", ()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = UnitGroupingTypes.UNIT_GROUPING_DOMAIN
-		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNIT_GROUPING_DOMAIN", ()), TYPE, TYPE, SELECTED == TYPE)
+		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_DOMAIN", ()), TYPE, TYPE, SELECTED == TYPE)
 		TYPE = UnitGroupingTypes.UNIT_GROUPING_HERO
 		screen.addPullDownString(ID, TRNSLTR.getText("TXT_KEY_UNIT_GROUPING_HERO", ()), TYPE, TYPE, SELECTED == TYPE)
 
