@@ -6857,7 +6857,7 @@ void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLL
 	{
 		if (bOver && m_piPrereqNumOfBuilding != NULL)
 		{
-			SAFE_DELETE(m_piPrereqNumOfBuilding);
+			SAFE_DELETE_ARRAY(m_piPrereqNumOfBuilding);
 		}
 	}
 	if (pClassInfo->m_piBuildingHappinessChanges != NULL)
@@ -6878,7 +6878,7 @@ void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLL
 	{
 		if (bOver && m_piBuildingHappinessChanges != NULL)
 		{
-			SAFE_DELETE(m_piBuildingHappinessChanges);
+			SAFE_DELETE_ARRAY(m_piBuildingHappinessChanges);
 		}
 	}
 	for (int j = 0; j < GC.getNumBuildingInfos(); j++)
@@ -6927,7 +6927,7 @@ void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLL
 	{
 		if (bOver && m_pbPrereqNotBuilding != NULL)
 		{
-			SAFE_DELETE(m_pbPrereqNotBuilding);
+			SAFE_DELETE_ARRAY(m_pbPrereqNotBuilding);
 		}
 	}
 	if (pClassInfo->m_pbPrereqOrBuilding != NULL)
@@ -6948,7 +6948,7 @@ void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLL
 	{
 		if (bOver && m_pbPrereqOrBuilding != NULL)
 		{
-			SAFE_DELETE(m_pbPrereqOrBuilding);
+			SAFE_DELETE_ARRAY(m_pbPrereqOrBuilding);
 		}
 	}
 	if (pClassInfo->m_piBuildingProductionModifier != NULL)
@@ -6969,7 +6969,7 @@ void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLL
 	{
 		if (bOver && m_piBuildingProductionModifier != NULL)
 		{
-			SAFE_DELETE(m_piBuildingProductionModifier);
+			SAFE_DELETE_ARRAY(m_piBuildingProductionModifier);
 		}
 	}
 	if (pClassInfo->m_piGlobalBuildingProductionModifier != NULL)
@@ -6990,7 +6990,7 @@ void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLL
 	{
 		if (bOver && m_piGlobalBuildingProductionModifier != NULL)
 		{
-			SAFE_DELETE(m_piGlobalBuildingProductionModifier);
+			SAFE_DELETE_ARRAY(m_piGlobalBuildingProductionModifier);
 		}
 	}
 	if (pClassInfo->m_piGlobalBuildingCostModifier != NULL)
@@ -7011,7 +7011,7 @@ void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLL
 	{
 		if (bOver && m_piGlobalBuildingCostModifier != NULL)
 		{
-			SAFE_DELETE(m_piGlobalBuildingCostModifier);
+			SAFE_DELETE_ARRAY(m_piGlobalBuildingCostModifier);
 		}
 	}
 	if (pClassInfo->m_pbReplaceBuilding != NULL)
@@ -7032,7 +7032,7 @@ void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLL
 	{
 		if (bOver && m_pbReplaceBuilding != NULL)
 		{
-			SAFE_DELETE(m_pbReplaceBuilding);
+			SAFE_DELETE_ARRAY(m_pbReplaceBuilding);
 		}
 	}
 }
