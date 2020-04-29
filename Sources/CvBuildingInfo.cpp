@@ -6853,6 +6853,13 @@ void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLL
 			}
 		}
 	}
+	else
+	{
+		if (bOver && m_piPrereqNumOfBuilding != NULL)
+		{
+			SAFE_DELETE(m_piPrereqNumOfBuilding);
+		}
+	}
 	if (pClassInfo->m_piBuildingHappinessChanges != NULL)
 	{
 		for (int j = 0; j < GC.getNumBuildingInfos(); j++)
@@ -6865,6 +6872,13 @@ void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLL
 				}
 				m_piBuildingHappinessChanges[j] = pClassInfo->getBuildingHappinessChanges(j);
 			}
+		}
+	}
+	else
+	{
+		if (bOver && m_piBuildingHappinessChanges != NULL)
+		{
+			SAFE_DELETE(m_piBuildingHappinessChanges);
 		}
 	}
 	for (int j = 0; j < GC.getNumBuildingInfos(); j++)
@@ -6909,6 +6923,13 @@ void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLL
 			}
 		}
 	}
+	else
+	{
+		if (bOver && m_pbPrereqNotBuilding != NULL)
+		{
+			SAFE_DELETE(m_pbPrereqNotBuilding);
+		}
+	}
 	if (pClassInfo->m_pbPrereqOrBuilding != NULL)
 	{
 		for (int j = 0; j < GC.getNumBuildingInfos(); j++)
@@ -6921,6 +6942,13 @@ void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLL
 				}
 				m_pbPrereqOrBuilding[j] = pClassInfo->isPrereqOrBuilding(j);
 			}
+		}
+	}
+	else
+	{
+		if (bOver && m_pbPrereqOrBuilding != NULL)
+		{
+			SAFE_DELETE(m_pbPrereqOrBuilding);
 		}
 	}
 	if (pClassInfo->m_piBuildingProductionModifier != NULL)
@@ -6937,6 +6965,13 @@ void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLL
 			}
 		}
 	}
+	else
+	{
+		if (bOver && m_piBuildingProductionModifier != NULL)
+		{
+			SAFE_DELETE(m_piBuildingProductionModifier);
+		}
+	}
 	if (pClassInfo->m_piGlobalBuildingProductionModifier != NULL)
 	{
 		for (int j = 0; j < GC.getNumBuildingInfos(); j++)
@@ -6949,6 +6984,13 @@ void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLL
 				}
 				m_piGlobalBuildingProductionModifier[j] = pClassInfo->getGlobalBuildingProductionModifier(j);
 			}
+		}
+	}
+	else
+	{
+		if (bOver && m_piGlobalBuildingProductionModifier != NULL)
+		{
+			SAFE_DELETE(m_piGlobalBuildingProductionModifier);
 		}
 	}
 	if (pClassInfo->m_piGlobalBuildingCostModifier != NULL)
@@ -6965,6 +7007,13 @@ void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLL
 			}
 		}
 	}
+	else
+	{
+		if (bOver && m_piGlobalBuildingCostModifier != NULL)
+		{
+			SAFE_DELETE(m_piGlobalBuildingCostModifier);
+		}
+	}
 	if (pClassInfo->m_pbReplaceBuilding != NULL)
 	{
 		for (int j = 0; j < GC.getNumBuildingInfos(); j++)
@@ -6977,6 +7026,13 @@ void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLL
 				}
 				m_pbReplaceBuilding[j] = pClassInfo->isReplaceBuilding(j);
 			}
+		}
+	}
+	else
+	{
+		if (bOver && m_pbReplaceBuilding != NULL)
+		{
+			SAFE_DELETE(m_pbReplaceBuilding);
 		}
 	}
 }
