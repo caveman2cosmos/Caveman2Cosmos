@@ -8047,7 +8047,7 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
-		<German>(Anzahl) unzählbar</German>
+		<German>(Anzahl) unzählig</German>
 		<Spanish>
 			<Text>Incontables:Unidades incontables</Text>
 			<Gender>Female</Gender>
@@ -10273,6 +10273,11 @@
 			<Gender>Male</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>
+			<Text>Gesetzlose:Gesetzlosen:Gesetzlosen:Gesetzlosen</Text>
+			<Gender>Male</Gender>
+			<Plural>1</Plural>
+		</German>
 		<Spanish>
 			<Text>Rufián:Rufianes</Text>
 			<Gender>Male</Gender>
@@ -11093,6 +11098,11 @@
 			<Gender>Female</Gender>
 			<Plural>1</Plural>
 		</French>
+		<German>
+			<Text>Eingreiftruppen:Eingreiftruppen:Eingreiftruppen:Eingreiftruppen</Text>
+			<Gender>Female</Gender>
+			<Plural>1</Plural>
+		</German>
 		<Spanish>
 			<Text>Fuerzas de asalto</Text>
 			<Gender>Female</Gender>
