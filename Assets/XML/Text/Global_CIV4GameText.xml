@@ -1893,7 +1893,7 @@
 		<Tag>TXT_KEY_CAN_FOUND_ON_PEAKS</Tag>
 		<English>[ICON_BULLET]Players can found cities on Peaks</English>
 		<French>[ICON_BULLET]Les Joueurs peuvent fonder des Villes sur les sommets</French>
-		<German>[ICON_BULLET]Spieler können Städte auf Gipfeln gründen</German>
+		<German>[ICON_BULLET]Spieler können Städte im Gebirge gründen</German>
 		<Italian>[ICON_BULLET]I giocatori possono fondare città sulle montagne</Italian>
 		<Spanish>[ICON_BULLET]Se pueden fundar ciudades en Picos</Spanish>
 		<Polish>[ICON_BULLET]Gracze mogą zakładać miasta na wzgórzach</Polish>
@@ -10756,7 +10756,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Tag>TXT_KEY_MOVE_FAST_PEAKS</Tag>
 		<English>[ICON_BULLET]Units suffer no movement penalty when passing through peaks</English>
 		<French>[ICON_BULLET]Les Unités ne subissent aucune pénalité en passant par les sommets</French>
-		<German>[ICON_BULLET]Einheiten erhalten keine Bewegungseinbuße, wenn sie Gipfel überqueren.</German>
+		<German>[ICON_BULLET]Einheiten erhalten keine Bewegungseinbuße, wenn sie Gebirge überqueren.</German>
 		<Italian>[ICON_BULLET]Le unità non hanno penalità di movimento quando attraversano le montagne</Italian>
 		<Spanish>[ICON_BULLET]Las unidades no sufren penalización al movimiento cuando atraviesan Picos</Spanish>
 		<Polish>[ICON_BULLET]Jednostki nie otrzymują kary za przechodzenie przez góry</Polish>
