@@ -1466,31 +1466,28 @@ void CvGame::selectedCitiesGameNetMessage(int eMessage, int iData2, int iData3, 
 		pSelectedCity = ::getCity(pSelectedCityNode->m_data);
 		pSelectedCityNode = gDLL->getInterfaceIFace()->nextSelectedCitiesNode(pSelectedCityNode);
 
-		if (pSelectedCity != NULL)
+		if (pSelectedCity != NULL && pSelectedCity->getOwner() == getActivePlayer())
 		{
-			if (pSelectedCity->getOwner() == getActivePlayer())
+			switch (eMessage)
 			{
-				switch (eMessage)
+			case GAMEMESSAGE_PUSH_ORDER:
+				cityPushOrder(pSelectedCity, (OrderTypes)iData2, iData3, bAlt, bShift, bCtrl);
+				break;
+
+			case GAMEMESSAGE_POP_ORDER:
+				if (pSelectedCity->getOrderQueueLength() > 1)
 				{
-				case GAMEMESSAGE_PUSH_ORDER:
-					cityPushOrder(pSelectedCity, ((OrderTypes)iData2), iData3, bAlt, bShift, bCtrl);
-					break;
-
-				case GAMEMESSAGE_POP_ORDER:
-					if (pSelectedCity->getOrderQueueLength() > 1)
-					{
-						CvMessageControl::getInstance().sendPopOrder(pSelectedCity->getID(), iData2);
-					}
-					break;
-
-				case GAMEMESSAGE_DO_TASK:
-					CvMessageControl::getInstance().sendDoTask(pSelectedCity->getID(), ((TaskTypes)iData2), iData3, iData4, bOption, bAlt, bShift, bCtrl);
-					break;
-
-				default:
-					FAssert(false);
-					break;
+					CvMessageControl::getInstance().sendPopOrder(pSelectedCity->getID(), iData2);
 				}
+				break;
+
+			case GAMEMESSAGE_DO_TASK:
+				CvMessageControl::getInstance().sendDoTask(pSelectedCity->getID(), ((TaskTypes)iData2), iData3, iData4, bOption, bAlt, bShift, bCtrl);
+				break;
+
+			default:
+				FAssert(false);
+				break;
 			}
 		}
 	}

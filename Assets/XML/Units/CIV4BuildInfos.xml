@@ -5137,6 +5137,18 @@
 					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>400</iTime>
 				</TerrainStruct>
+				<TerrainStruct>
+					<!--- can never be built in Trench Terrain -->
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>400</iTime>
+				</TerrainStruct>
+				<TerrainStruct>
+					<!--- can never be built in Trench Terrain -->
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>400</iTime>
+				</TerrainStruct>
 			</TerrainStructs>
 			<HotKey>KB_T</HotKey>
 			<iHotKeyPriority>1</iHotKeyPriority>
@@ -5156,6 +5168,18 @@
 				<TerrainStruct>
 					<!--- can never be built in Trench Terrain -->
 					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>400</iTime>
+				</TerrainStruct>
+				<TerrainStruct>
+					<!--- can never be built in Trench Terrain -->
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>400</iTime>
+				</TerrainStruct>
+				<TerrainStruct>
+					<!--- can never be built in Trench Terrain -->
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>400</iTime>
 				</TerrainStruct>
@@ -6360,6 +6384,16 @@
 					<iTime>500</iTime>
 				</TerrainStruct>
 				<TerrainStruct>
+					<TerrainType>TERRAIN_COAST_DEEP_POLAR</TerrainType>
+					<PrereqTech>TECH_DEEP_SEA_EXPLORATION</PrereqTech>
+					<iTime>500</iTime>
+				</TerrainStruct>
+				<TerrainStruct>
+					<TerrainType>TERRAIN_COAST_DEEP_TROPICAL</TerrainType>
+					<PrereqTech>TECH_DEEP_SEA_EXPLORATION</PrereqTech>
+					<iTime>500</iTime>
+				</TerrainStruct>
+				<TerrainStruct>
 					<TerrainType>TERRAIN_SEA</TerrainType>
 					<PrereqTech>TECH_DEEP_SEA_EXPLORATION</PrereqTech>
 					<iTime>500</iTime>
@@ -6376,6 +6410,16 @@
 				</TerrainStruct>
 				<TerrainStruct>
 					<TerrainType>TERRAIN_SEA_DEEP</TerrainType>
+					<PrereqTech>TECH_MARINE_ARCHITECTURE</PrereqTech>
+					<iTime>1000</iTime>
+				</TerrainStruct>
+				<TerrainStruct>
+					<TerrainType>TERRAIN_SEA_DEEP_POLAR</TerrainType>
+					<PrereqTech>TECH_MARINE_ARCHITECTURE</PrereqTech>
+					<iTime>1000</iTime>
+				</TerrainStruct>
+				<TerrainStruct>
+					<TerrainType>TERRAIN_SEA_DEEP_TROPICAL</TerrainType>
 					<PrereqTech>TECH_MARINE_ARCHITECTURE</PrereqTech>
 					<iTime>1000</iTime>
 				</TerrainStruct>
@@ -6397,6 +6441,18 @@
 				<TerrainStruct>
 					<!--- can never be built in Trench Terrain -->
 					<TerrainType>TERRAIN_TRENCH</TerrainType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>400</iTime>
+				</TerrainStruct>
+				<TerrainStruct>
+					<!--- can never be built in Trench Terrain -->
+					<TerrainType>TERRAIN_TRENCH_POLAR</TerrainType>
+					<PrereqTech>TECH_DUMMY</PrereqTech>
+					<iTime>400</iTime>
+				</TerrainStruct>
+				<TerrainStruct>
+					<!--- can never be built in Trench Terrain -->
+					<TerrainType>TERRAIN_TRENCH_TROPICAL</TerrainType>
 					<PrereqTech>TECH_DUMMY</PrereqTech>
 					<iTime>400</iTime>
 				</TerrainStruct>

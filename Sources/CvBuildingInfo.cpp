@@ -6839,24 +6839,50 @@ void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLL
 	if (getPrereqAnyoneBuilding() == NO_BUILDING) m_iPrereqAnyoneBuilding = pClassInfo->getPrereqAnyoneBuilding();
 	if (getExtendsBuilding() == NO_BUILDING) m_iExtendsBuilding = pClassInfo->getExtendsBuilding();
 
+	if (pClassInfo->m_piPrereqNumOfBuilding != NULL)
+	{
+		for (int j = 0; j < GC.getNumBuildingInfos(); j++)
+		{
+			if (bOver || getPrereqNumOfBuilding(j) == iDefault && pClassInfo->getPrereqNumOfBuilding(j) != iDefault)
+			{
+				if (m_piPrereqNumOfBuilding == NULL)
+				{
+					CvXMLLoadUtility::InitList(&m_piPrereqNumOfBuilding,GC.getNumBuildingInfos(),iDefault);
+				}
+				m_piPrereqNumOfBuilding[j] = pClassInfo->getPrereqNumOfBuilding(j);
+			}
+		}
+	}
+	else
+	{
+		if (bOver && m_piPrereqNumOfBuilding != NULL)
+		{
+			SAFE_DELETE_ARRAY(m_piPrereqNumOfBuilding);
+		}
+	}
+	if (pClassInfo->m_piBuildingHappinessChanges != NULL)
+	{
+		for (int j = 0; j < GC.getNumBuildingInfos(); j++)
+		{
+			if (bOver || getBuildingHappinessChanges(j) == iDefault && pClassInfo->getBuildingHappinessChanges(j) != iDefault)
+			{
+				if (m_piBuildingHappinessChanges == NULL)
+				{
+					CvXMLLoadUtility::InitList(&m_piBuildingHappinessChanges,GC.getNumBuildingInfos(),iDefault);
+				}
+				m_piBuildingHappinessChanges[j] = pClassInfo->getBuildingHappinessChanges(j);
+			}
+		}
+	}
+	else
+	{
+		if (bOver && m_piBuildingHappinessChanges != NULL)
+		{
+			SAFE_DELETE_ARRAY(m_piBuildingHappinessChanges);
+		}
+	}
 	for (int j = 0; j < GC.getNumBuildingInfos(); j++)
 	{
-		if (bOver || getPrereqNumOfBuilding(j) == iDefault && pClassInfo->getPrereqNumOfBuilding(j) != iDefault)
-		{
-			if (m_piPrereqNumOfBuilding == NULL)
-			{
-				CvXMLLoadUtility::InitList(&m_piPrereqNumOfBuilding,GC.getNumBuildingInfos(),iDefault);
-			}
-			m_piPrereqNumOfBuilding[j] = pClassInfo->getPrereqNumOfBuilding(j);
-		}
-		if (bOver || getBuildingHappinessChanges(j) == iDefault && pClassInfo->getBuildingHappinessChanges(j) != iDefault)
-		{
-			if (m_piBuildingHappinessChanges == NULL)
-			{
-				CvXMLLoadUtility::InitList(&m_piBuildingHappinessChanges,GC.getNumBuildingInfos(),iDefault);
-			}
-			m_piBuildingHappinessChanges[j] = pClassInfo->getBuildingHappinessChanges(j);
-		}
 		for (std::vector<BuildingCommerceChange>::const_iterator it = m_aGlobalBuildingCommerceChanges.begin(); it != m_aGlobalBuildingCommerceChanges.end(); ++it)
 		{
 			if ((*it).eBuilding == (BuildingTypes)j)
@@ -6882,53 +6908,131 @@ void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLL
 				}
 			}
 		}
-		if (bOver || isPrereqNotBuilding(j) == bDefault && pClassInfo->isPrereqNotBuilding(j) != bDefault)
+	}
+	if (pClassInfo->m_pbPrereqNotBuilding != NULL)
+	{
+		for (int j = 0; j < GC.getNumBuildingInfos(); j++)
 		{
-			if (m_pbPrereqNotBuilding == NULL)
+			if (bOver || isPrereqNotBuilding(j) == bDefault && pClassInfo->isPrereqNotBuilding(j) != bDefault)
 			{
-				CvXMLLoadUtility::InitList(&m_pbPrereqNotBuilding, GC.getNumBuildingInfos(), bDefault);
+				if (m_pbPrereqNotBuilding == NULL)
+				{
+					CvXMLLoadUtility::InitList(&m_pbPrereqNotBuilding, GC.getNumBuildingInfos(), bDefault);
+				}
+				m_pbPrereqNotBuilding[j] = pClassInfo->isPrereqNotBuilding(j);
 			}
-			m_pbPrereqNotBuilding[j] = pClassInfo->isPrereqNotBuilding(j);
 		}
-		if (bOver || isPrereqOrBuilding(j) == bDefault && pClassInfo->isPrereqOrBuilding(j) != bDefault)
+	}
+	else
+	{
+		if (bOver && m_pbPrereqNotBuilding != NULL)
 		{
-			if (m_pbPrereqOrBuilding == NULL)
-			{
-				CvXMLLoadUtility::InitList(&m_pbPrereqOrBuilding, GC.getNumBuildingInfos(), bDefault);
-			}
-			m_pbPrereqOrBuilding[j] = pClassInfo->isPrereqOrBuilding(j);
+			SAFE_DELETE_ARRAY(m_pbPrereqNotBuilding);
 		}
-		if (bOver || getBuildingProductionModifier(j) == iDefault && pClassInfo->getBuildingProductionModifier(j) != iDefault)
+	}
+	if (pClassInfo->m_pbPrereqOrBuilding != NULL)
+	{
+		for (int j = 0; j < GC.getNumBuildingInfos(); j++)
 		{
-			if (m_piBuildingProductionModifier == NULL)
+			if (bOver || isPrereqOrBuilding(j) == bDefault && pClassInfo->isPrereqOrBuilding(j) != bDefault)
 			{
-				CvXMLLoadUtility::InitList(&m_piBuildingProductionModifier, GC.getNumBuildingInfos(), iDefault);
+				if (m_pbPrereqOrBuilding == NULL)
+				{
+					CvXMLLoadUtility::InitList(&m_pbPrereqOrBuilding, GC.getNumBuildingInfos(), bDefault);
+				}
+				m_pbPrereqOrBuilding[j] = pClassInfo->isPrereqOrBuilding(j);
 			}
-			m_piBuildingProductionModifier[j] = pClassInfo->getBuildingProductionModifier(j);
 		}
-		if (bOver || getGlobalBuildingProductionModifier(j) == iDefault && pClassInfo->getGlobalBuildingProductionModifier(j) != iDefault)
+	}
+	else
+	{
+		if (bOver && m_pbPrereqOrBuilding != NULL)
 		{
-			if (m_piGlobalBuildingProductionModifier == NULL)
-			{
-				CvXMLLoadUtility::InitList(&m_piGlobalBuildingProductionModifier, GC.getNumBuildingInfos(), iDefault);
-			}
-			m_piGlobalBuildingProductionModifier[j] = pClassInfo->getGlobalBuildingProductionModifier(j);
+			SAFE_DELETE_ARRAY(m_pbPrereqOrBuilding);
 		}
-		if (bOver || getGlobalBuildingCostModifier(j) == iDefault && pClassInfo->getGlobalBuildingCostModifier(j) != iDefault)
+	}
+	if (pClassInfo->m_piBuildingProductionModifier != NULL)
+	{
+		for (int j = 0; j < GC.getNumBuildingInfos(); j++)
 		{
-			if (m_piGlobalBuildingCostModifier == NULL)
+			if (bOver || getBuildingProductionModifier(j) == iDefault && pClassInfo->getBuildingProductionModifier(j) != iDefault)
 			{
-				CvXMLLoadUtility::InitList(&m_piGlobalBuildingCostModifier, GC.getNumBuildingInfos(), iDefault);
+				if (m_piBuildingProductionModifier == NULL)
+				{
+					CvXMLLoadUtility::InitList(&m_piBuildingProductionModifier, GC.getNumBuildingInfos(), iDefault);
+				}
+				m_piBuildingProductionModifier[j] = pClassInfo->getBuildingProductionModifier(j);
 			}
-			m_piGlobalBuildingCostModifier[j] = pClassInfo->getGlobalBuildingCostModifier(j);
 		}
-		if (bOver || isReplaceBuilding(j) == bDefault && pClassInfo->isReplaceBuilding(j) != bDefault)
+	}
+	else
+	{
+		if (bOver && m_piBuildingProductionModifier != NULL)
 		{
-			if (m_pbReplaceBuilding == NULL)
+			SAFE_DELETE_ARRAY(m_piBuildingProductionModifier);
+		}
+	}
+	if (pClassInfo->m_piGlobalBuildingProductionModifier != NULL)
+	{
+		for (int j = 0; j < GC.getNumBuildingInfos(); j++)
+		{
+			if (bOver || getGlobalBuildingProductionModifier(j) == iDefault && pClassInfo->getGlobalBuildingProductionModifier(j) != iDefault)
 			{
-				CvXMLLoadUtility::InitList(&m_pbReplaceBuilding, GC.getNumBuildingInfos(), bDefault);
+				if (m_piGlobalBuildingProductionModifier == NULL)
+				{
+					CvXMLLoadUtility::InitList(&m_piGlobalBuildingProductionModifier, GC.getNumBuildingInfos(), iDefault);
+				}
+				m_piGlobalBuildingProductionModifier[j] = pClassInfo->getGlobalBuildingProductionModifier(j);
 			}
-			m_pbReplaceBuilding[j] = pClassInfo->isReplaceBuilding(j);
+		}
+	}
+	else
+	{
+		if (bOver && m_piGlobalBuildingProductionModifier != NULL)
+		{
+			SAFE_DELETE_ARRAY(m_piGlobalBuildingProductionModifier);
+		}
+	}
+	if (pClassInfo->m_piGlobalBuildingCostModifier != NULL)
+	{
+		for (int j = 0; j < GC.getNumBuildingInfos(); j++)
+		{
+			if (bOver || getGlobalBuildingCostModifier(j) == iDefault && pClassInfo->getGlobalBuildingCostModifier(j) != iDefault)
+			{
+				if (m_piGlobalBuildingCostModifier == NULL)
+				{
+					CvXMLLoadUtility::InitList(&m_piGlobalBuildingCostModifier, GC.getNumBuildingInfos(), iDefault);
+				}
+				m_piGlobalBuildingCostModifier[j] = pClassInfo->getGlobalBuildingCostModifier(j);
+			}
+		}
+	}
+	else
+	{
+		if (bOver && m_piGlobalBuildingCostModifier != NULL)
+		{
+			SAFE_DELETE_ARRAY(m_piGlobalBuildingCostModifier);
+		}
+	}
+	if (pClassInfo->m_pbReplaceBuilding != NULL)
+	{
+		for (int j = 0; j < GC.getNumBuildingInfos(); j++)
+		{
+			if (bOver || isReplaceBuilding(j) == bDefault && pClassInfo->isReplaceBuilding(j) != bDefault)
+			{
+				if (m_pbReplaceBuilding == NULL)
+				{
+					CvXMLLoadUtility::InitList(&m_pbReplaceBuilding, GC.getNumBuildingInfos(), bDefault);
+				}
+				m_pbReplaceBuilding[j] = pClassInfo->isReplaceBuilding(j);
+			}
+		}
+	}
+	else
+	{
+		if (bOver && m_pbReplaceBuilding != NULL)
+		{
+			SAFE_DELETE_ARRAY(m_pbReplaceBuilding);
 		}
 	}
 }
