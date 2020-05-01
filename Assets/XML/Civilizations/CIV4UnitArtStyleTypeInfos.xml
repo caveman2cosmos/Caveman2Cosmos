@@ -1,9 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Civilization Infos -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4UnitArtStyleTypeInfos xmlns="x-schema:../Schema/C2C_CIV4CivilizationsSchema.xml">
 	<UnitArtStyleTypeInfos>
 		<UnitArtStyleTypeInfo>

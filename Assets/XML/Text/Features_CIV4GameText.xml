@@ -615,23 +615,6 @@
 		<French>L'impact dévastateur de l'explosion ne s'arrête pas après l'explosion initiale, comme avec les explosifs ordinaires. Un nuage de rayonnement nucléaire se déplace de l'épicentre de l'explosion, provoquant un impact sur les formes de vie même après la fin des vagues de chaleur. Le rayonnement peut provoquer une mutation génétique, un empoisonnement par rayonnement et la mort.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_FEATURE_RAINWATER_BASIN</Tag>
-		<English>Rainwater Basin</English>
-		<French>Bassin d'eau de pluie</French>
-		<Spanish>
-			<Text>Cuenca de aguas pluviales:Cuencas de aguas pluviales</Text>
-			<Gender>Female</Gender>
-			<Plural>0:1</Plural>
-		</Spanish>
-		<Polish>Rezerwuar Wody Deszczowej</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_FEATURE_RAINWATER_BASIN_PEDIA</Tag>
-		<English>A Rainwater Basin is a region of shallow lakes, marshes and other wetlands. In the spring and fall months, millions of migratory birds pass through these regions to feed and rest.</English>
-		<French>Un bassin d'eau de pluie est une région de lacs peu profonds, de marais et d'autres zones humides. Au printemps et à l'automne, des millions d'oiseaux migrateurs traversent ces régions pour se nourrir et se reposer.</French>
-		<Polish>Basen - rodzaj zbiornika antropogenicznego, który jest najczęściej niewielkim akwenem o misie betonowej bądź ukształtowanej z innych materiałów sztucznych. Zwykle posiada płaskie lub prawie płaskie dno oraz strome lub pionowe ściany, co przekłada się na wartości wskaźnika głębokościowego zbliżone do jedności. Jest wykorzystywany do celów przemysłowych (np. osadniki wód chłodniczych), sportowo-rekreacyjnych (np. baseny pływackie), komunalnych (np. zbiorniki wody przeznaczonej do spożycia przez ludzi), retencyjnych (np. zbiorniki wód opadowych) i innych.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_FEATURE_REEF</Tag>
 		<English>Reef</English>
 		<French>
@@ -842,24 +825,34 @@
 		<English>Volcano - Active</English>
 		<French>Volcan - Actif</French>
 		<German>Vulkan (aktiv)</German>
+		<Italian>
+			<Text>Vulcano attivo:Vulcani attivi</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Polish>Aktywny Wulkan</Polish>
 		<Spanish>
 			<Text>Volcán activo:Volcanes activos</Text>
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Aktywny Wulkan</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_VOLCANO_DORMANT</Tag>
 		<English>Volcano - Dormant</English>
 		<French>Volcan - Endormi</French>
 		<German>Vulkan (ruhend)</German>
+		<Italian>
+			<Text>Vulcano inattivo:Vulcani inattivi</Text>
+			<Gender>Male</Gender>
+			<Plural>0:1</Plural>
+		</Italian>
+		<Polish>Uśpiony Wulkan</Polish>
 		<Spanish>
 			<Text>Volcán inactivo:Volcanes inactivos</Text>
 			<Gender>Male</Gender>
 			<Plural>0:1</Plural>
 		</Spanish>
-		<Polish>Uśpiony Wulkan</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_FEATURE_VOLCANO_PEDIA</Tag>

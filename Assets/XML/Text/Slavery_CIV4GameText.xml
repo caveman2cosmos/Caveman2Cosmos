@@ -236,6 +236,12 @@
 		<Polish>Dołącz niewolnika do miasta jako kupca.</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_MISSION_JOIN_CITY_AS_SLAVE_CRIME_PREVENTION</Tag>
+		<English>Join city as a crime prevention slave.</English>
+		<French>Rejoindre la ville en tant que force de l'ordre.</French>
+
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_MISSION_JOIN_CITY_AS_SLAVE_ENTERTAINMENT</Tag>
 		<English>Join city as an entertainment slave.</English>
 		<French>Rejoindre la ville en tant que comédien</French>
@@ -271,22 +277,16 @@
 		<Polish>Dołącz niewolnika do miasta jako robotnika produkcyjnego.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISSION_JOIN_CITY_AS_SLAVE_TUTOR</Tag>
-		<English>Join city as a tutor slave.</English>
-		<French>Rejoindre la ville en tant qu'instructeur.</French>
-		<Italian>Unisci alla città come schiavo legato all'educazione.</Italian>
-		<Polish>Dołącz niewolnika do miasta jako nauczyciela.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_MISSION_JOIN_CITY_AS_SLAVE_SANITATION</Tag>
 		<English>Join city as a sanitation slave.</English>
 		<French>Rejoindre la ville en tant que nettoyeur.</French>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_MISSION_JOIN_CITY_AS_SLAVE_CRIME_PREVENTION</Tag>
-		<English>Join city as a crime prevention slave.</English>
-		<French>Rejoindre la ville en tant que force de l'ordre.</French>
-
+		<Tag>TXT_KEY_MISSION_JOIN_CITY_AS_SLAVE_TUTOR</Tag>
+		<English>Join city as a tutor slave.</English>
+		<French>Rejoindre la ville en tant qu'instructeur.</French>
+		<Italian>Unisci alla città come schiavo legato all'educazione.</Italian>
+		<Polish>Dołącz niewolnika do miasta jako nauczyciela.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_REMOVE_WV_SLAVERY</Tag>
@@ -443,6 +443,16 @@
 		<Polish>Twój Niewolnik stał się Specjalistą (Produkcja).</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_JOIN_AS_SLAVE_SANITATION</Tag>
+		<English>Set city slave to clean cities.</English>
+		<French>Placer un esclave pour nettoyer les villes.</French>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_OUTCOME_JOIN_AS_SLAVE_SANITATION_MESSAGE</Tag>
+		<English>Your captive has become a Slave Specialist (Sanitation).</English>
+		<French>Votre prisonnier est devenu un esclave chargé du nettoyage.</French>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_JOIN_AS_SLAVE_TUTOR</Tag>
 		<English>Set city slave to work teach our children.</English>
 		<French>Assigne l'esclave au travail d'enseignement.</French>
@@ -455,16 +465,6 @@
 		<French>Votre Prisonnier est devenu un Esclave Spécialiste (Enseignant).</French>
 		<Italian>Il tuo prigioniero è diventato uno Schiavo specializzato - Educazione.</Italian>
 		<Polish>Twój Niewolnik stał się Specjalistą (Nauczanie).</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_JOIN_AS_SLAVE_SANITATION</Tag>
-		<English>Set city slave to clean cities.</English>
-		<French>Placer un esclave pour nettoyer les villes.</French>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_OUTCOME_JOIN_AS_SLAVE_SANITATION_MESSAGE</Tag>
-		<English>Your captive has become a Slave Specialist (Sanitation).</English>
-		<French>Votre prisonnier est devenu un esclave chargé du nettoyage.</French>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_REMOVE_WV_SLAVERY</Tag>

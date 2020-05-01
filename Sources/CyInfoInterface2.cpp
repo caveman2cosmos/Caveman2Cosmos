@@ -345,6 +345,7 @@ void CyInfoPythonInterface2()
 		.def("isHills", &CvBonusInfo::isHills, "bool ()")
 		.def("isPeaks", &CvBonusInfo::isPeaks, "bool ()")
 		.def("isFlatlands", &CvBonusInfo::isFlatlands, "bool ()")
+		.def("isBonusCoastalOnly", &CvBonusInfo::isBonusCoastalOnly, "bool ()")
 		.def("isNoRiverSide", &CvBonusInfo::isNoRiverSide, "bool ()")
 		.def("isNormalize", &CvBonusInfo::isNormalize, "bool ()")
 

@@ -3082,12 +3082,6 @@
 		<Polish>[ICON_BULLET]Leczenie: Może usunąć lub złagodzić %s1_PromotionName.</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_DAMAGE_BY_UNITCOMBAT</Tag>
-		<English>[ICON_BULLET]Damage that %s1_UNITCOMBAT: %d2_Mod%%. Heals in %d3 Turns.</English>
-		<French>[ICON_BULLET]Dégâts de %s1_UNITCOMBAT: %d2_Mod%%. se soigne en %d3 Tours.</French>
-		<Polish>[ICON_BULLET]Obrażenia otrzymane %s1_UNITCOMBAT: %d2_Mod%%. Uleczone w %d3 tur.</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_DAWN_OF_MAN_TEXT</Tag>
 		<English>The sun rises on the year %s1_year. Since time immemorial, the %s2_civ people have lived a nomadic life. After years of wandering, they are ready to settle down and found your first city. [NEWLINE][NEWLINE]%s3_leader, your people have vested absolute power in you, trusting that you can build a Civilization to stand the test of time!</English>
 		<French>Le soleil se lève sur l'an %s1_year. Depuis des temps immémoriaux, les peuplades %s2:3_civ vivent en nomades. Après des années d'errance, ils sont prêts à s'installer et à fonder votre première ville. [NEWLINE][NEWLINE]%s3_leader, votre peuple vous a confié le pouvoir absolu et s'en remet à vous pour bâtir une civilisation qui résistera à l'épreuve du temps!</French>
@@ -8777,24 +8771,6 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<Italian>%s1_PlyrName ha creato l'unità %s2_UnitName!</Italian>
 		<Spanish>%s1_PlyrName ha entrenado [NUM1:un:una:unos:unas] %s2_UnitName.</Spanish>
 		<Polish>%s1_PlyrName stworzył %s2_UnitName!</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_SPED_UP_BY</Tag>
-		<English>[NEWLINE][ICON_BULLET]Sped up by[SPACE]</English>
-		<French>[NEWLINE][ICON_BULLET]Accélérée par[SPACE]</French>
-		<German>[NEWLINE][ICON_BULLET]Beschleunigt durch[SPACE]</German>
-		<Italian>[NEWLINE][ICON_BULLET]Accelerato da[SPACE]</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Acelerado por[SPACE]</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Przyspieszenie przez[SPACE]</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_MISC_SPEEDS_UP</Tag>
-		<English>[NEWLINE][ICON_BULLET]Speeds up[SPACE]</English>
-		<French>[NEWLINE][ICON_BULLET]Accélère[SPACE]</French>
-		<German>[NEWLINE][ICON_BULLET]Beschleunigt[SPACE]</German>
-		<Italian>[NEWLINE][ICON_BULLET]Accelera[SPACE]</Italian>
-		<Spanish>[NEWLINE][ICON_BULLET]Acelera[SPACE]</Spanish>
-		<Polish>[NEWLINE][ICON_BULLET]Przyspieszenie[SPACE]</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_SPY_CAUGHT_AND_KILLED</Tag>
@@ -15330,12 +15306,6 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Italian>[NEWLINE][ICON_BULLET][ICON_RELIGION] di Stato con la Città Santa diminuisce il sentimento rivoluzionario</Italian>
 		<Spanish>[NEWLINE][ICON_BULLET]Una [ICON_RELIGION] oficial con la Ciudad Santa reduce la rebeldía</Spanish>
 		<Polish>[NEWLINE][ICON_BULLET]Religia Państwowa [ICON_RELIGION] ze Świętym Miastem obniża buntowniczość</Polish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_STEALTH_DEFENSE_TEXT</Tag>
-		<English>[ICON_BULLET]This Unit will Stealth Defend</English>
-		<French>[ICON_BULLET]Cette unité se défendra furtivement</French>
-		<German>[ICON_BULLET]Diese Einheit kann sich gegen Tarnangriffe verteidigen.</German>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_STRATOVERLAY_ADDSIGN</Tag>
