@@ -212,7 +212,7 @@ class WBTeamScreen:
 		iWidth = screen.getXResolution() *3/8 - 20
 		iX = screen.getXResolution()/4
 		iY = screen.getYResolution()/2 + 30 + DomainTypes.NUM_DOMAIN_TYPES * 24 + 2
-		sText = CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_ROUTE",())
+		sText = CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_ROUTES",())
 		screen.setLabel("RouteHeader", "Background", "<font=3b>" + CyTranslator().getText("TXT_KEY_WB_MODIFY", (sText,)) + "</font>", 1<<2, iX + iWidth/2, iY, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 		iY += 30
 		iHeight = (screen.getYResolution() - 40 - iY) /24 * 24 + 2

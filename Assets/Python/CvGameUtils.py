@@ -569,7 +569,7 @@ class CvGameUtils:
 				elif iData2 == 15:
 					return CyTranslator().getText("TXT_KEY_CONCEPT_TERRAIN",())
 				elif iData2 == 16:
-					return CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_ROUTE",())
+					return CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_ROUTES",())
 				elif iData2 == 17:
 					return CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_FEATURE",())
 				elif iData2 == 18:
