@@ -2040,14 +2040,12 @@ class CvEventManager:
 			B = GC.getInfoTypeForString('IMPROVEMENT_VERTICAL_FARM')
 			C = GC.getInfoTypeForString('IMPROVEMENT_WINDMILL')
 			D = GC.getInfoTypeForString('IMPROVEMENT_PLANTATION')
-			E = GC.getInfoTypeForString('IMPROVEMENT_OLIVE_FARM')
-			F = GC.getInfoTypeForString('IMPROVEMENT_APPLE_FARM')
-			G = GC.getInfoTypeForString('IMPROVEMENT_WINERY')
-			H = GC.getInfoTypeForString('IMPROVEMENT_COTTAGE')
-			I = GC.getInfoTypeForString('IMPROVEMENT_HAMLET')
-			J = GC.getInfoTypeForString('IMPROVEMENT_VILLAGE')
-			K = GC.getInfoTypeForString('IMPROVEMENT_TOWN')
-			L = GC.getInfoTypeForString('IMPROVEMENT_FOREST_PRESERVE')
+			E = GC.getInfoTypeForString('IMPROVEMENT_WINERY')
+			F = GC.getInfoTypeForString('IMPROVEMENT_COTTAGE')
+			G = GC.getInfoTypeForString('IMPROVEMENT_HAMLET')
+			H = GC.getInfoTypeForString('IMPROVEMENT_VILLAGE')
+			I = GC.getInfoTypeForString('IMPROVEMENT_TOWN')
+			J = GC.getInfoTypeForString('IMPROVEMENT_FOREST_PRESERVE')
 
 			MAP = GC.getMap()
 			for x in xrange(iX - 50, iX + 50, 1):
@@ -2057,7 +2055,7 @@ class CvEventManager:
 						iTerrain = CyPlot.getTerrainType()
 						if iTerrain == GRASS:
 							i = CyPlot.getImprovementType()
-							if i > -1 and i in (A, B, C, D, E, F, G, H, I, J, K, L):
+							if i > -1 and i in (A, B, C, D, E, F, G, H, I, J):
 								continue
 							if CyPlot.getFeatureType() != GC.getInfoTypeForString('FEATURE_JUNGLE'):
 								CyPlot.setFeatureType(GC.getInfoTypeForString("FEATURE_FOREST"), 1)
