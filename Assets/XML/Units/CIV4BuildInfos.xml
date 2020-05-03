@@ -5370,7 +5370,7 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_INFECTIOUS_SMOG</FeatureType>
-					<PrereqTech>TECH_GENE_ENHANCEMENT</PrereqTech>
+					<PrereqTech>TECH_GENE_MANIPULATION</PrereqTech>
 					<iTime>600</iTime>
 					<iProduction>0</iProduction>
 					<bRemove>1</bRemove>
@@ -5400,7 +5400,7 @@
 				</FeatureStruct>
 				<FeatureStruct>
 					<FeatureType>FEATURE_INFECTIOUS_SMOG</FeatureType>
-					<PrereqTech>TECH_GENE_ENHANCEMENT</PrereqTech>
+					<PrereqTech>TECH_GENE_MANIPULATION</PrereqTech>
 					<iTime>600</iTime>
 					<iProduction>20</iProduction>
 					<bRemove>1</bRemove>
