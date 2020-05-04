@@ -17,9 +17,7 @@ import WBProjectScreen
 import WBPlayerUnits
 import WBInfoScreen
 import WBTradeScreen
-import CvEventManager
 import Popup
-import CvEventInterface
 
 GC = CyGlobalContext()
 iChange = 1
@@ -38,22 +36,6 @@ class CvWorldBuilderScreen:
 		self.m_iCurrentY = -1
 		self.m_pCurrentPlot = 0
 		self.m_pRiverStartPlot = -1
-
-		self.m_iASUnitTabID = 1
-		self.m_iASUnitListID = 0
-		self.m_iASCityTabID = 0
-		self.m_iASCityListID = 0
-		self.m_iASBuildingsListID = 2
-		self.m_iASAutomateListID = 1
-		self.m_iASImprovementsTabID = 2
-		self.m_iASRoutesListID = 0
-		self.m_iASImprovementsListID = 1
-		self.m_iASVisibilityTabID = 3
-		self.m_iASTechTabID = 4
-
-		self.m_bSideMenuDirty = False
-		self.m_bASItemCostDirty = False
-		self.m_iCost = 0
 
 		self.PlayerMode = ["Ownership", "Units", "Buildings", "City", "StartingPlot"]
 		self.MapMode = ["AddLandMark", "PlotData", "River", "Improvements", "Bonus", "PlotType", "Terrain", "Routes", "Features"]
@@ -178,14 +160,6 @@ class CvWorldBuilderScreen:
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, True)
 		screen.setForcedRedraw(True)
 
-
-	def killScreen(self):
-		screen = CyGInterfaceScreen("WorldBuilderScreen", self.screenId)
-		screen.hideScreen()
-		CyEngine().clearColoredPlots(PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_REVEALED_PLOTS)
-		CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_REVEALED_PLOTS)
-		CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_WORLD_BUILDER)
-		CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_HIGHLIGHT_PLOT)
 
 	def mouseOverPlot(self):
 		screen = CyGInterfaceScreen("WorldBuilderScreen", self.screenId)
@@ -1176,9 +1150,6 @@ class CvWorldBuilderScreen:
 		return
 ## Platy Reveal Mode End ##
 
-	def Exit(self):
-		print "WAKAWAKA EXIT WB"
-		CyInterface().setWorldBuilder(False)
 
 	def setRiverHighlights(self):
 		CyEngine().clearColoredPlots(PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_REVEALED_PLOTS)
@@ -1552,3 +1523,11 @@ class CvWorldBuilderScreen:
 			self.bSensibility = not self.bSensibility
 			self.setCurrentModeCheckbox()
 		return 1
+
+	def killScreen(self):
+		screen = CyGInterfaceScreen("WorldBuilderScreen", self.screenId)
+		screen.hideScreen()
+		CyEngine().clearColoredPlots(PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_REVEALED_PLOTS)
+		CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_REVEALED_PLOTS)
+		CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_WORLD_BUILDER)
+		CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_HIGHLIGHT_PLOT)

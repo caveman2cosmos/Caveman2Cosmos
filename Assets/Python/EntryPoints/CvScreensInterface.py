@@ -12,8 +12,6 @@ import CvReplayScreen
 
 #import CvDiplomacy
 
-import BuildListScreen
-
 import CvEventInterface
 import CvPopupInterface
 import ScreenInput as PyScreenInput
@@ -207,10 +205,9 @@ def cityScreenRedraw():
 
 # !RevolutionWatchAdvisor
 
-buildListScreen = BuildListScreen.BuildListScreen()
 def showBuildListScreen():
 	if CyGame().getActivePlayer() != -1:
-		buildListScreen.interfaceScreen()
+		screenMap[BUILD_LIST_SCREEN].interfaceScreen()
 
 def showForgetfulScreen():
 	screenMap[FORGETFUL_SCREEN].interfaceScreen(FORGETFUL_SCREEN)
@@ -309,11 +306,16 @@ def showWorldBuilderScreen():
 		advancedStartScreen.interfaceScreen()
 	else: worldBuilderScreen.interfaceScreen()
 
+def WorldBuilderExitCB():
+	print "WorldBuilderExitCB"
+	CyInterface().setWorldBuilder(False)
+
 def hideWorldBuilderScreen():
 	print "hideWorldBuilderScreen"
 	if CyInterface().isInAdvancedStart():
 		advancedStartScreen.killScreen()
 	else: worldBuilderScreen.killScreen()
+	toggleSetNoScreens()
 
 def WorldBuilderToggleUnitEditCB():
 	print "WorldBuilderToggleUnitEditCB"
@@ -326,11 +328,6 @@ def WorldBuilderEraseCB():
 def WorldBuilderLandmarkCB():
 	print "WorldBuilderLandmarkCB"
 	worldBuilderScreen.landmarkModeCB()
-
-def WorldBuilderExitCB():
-	if CyInterface().isInAdvancedStart():
-		advancedStartScreen.Exit()
-	else: worldBuilderScreen.Exit()
 
 def WorldBuilderToggleCityEditCB():
 	print "WorldBuilderToggleCityEditCB"
@@ -676,7 +673,6 @@ screenMap = {
 	MAIN_INTERFACE			: mainInterface,
 	OPTIONS_SCREEN			: optionsScreen,
 	REPLAY_SCREEN			: replayScreen,
-	BUILD_LIST_SCREEN		: buildListScreen,
 	# add new screens here
 	STRATEGY_OVERLAY_SCREEN		: overlayScreen,
 	REVOLUTION_WATCH_ADVISOR	: revolutionWatchAdvisor,
@@ -703,6 +699,7 @@ def lateInit():
 	import Forgetful
 	import CvDebugInfoScreen
 	import CvTechChooser
+	import BuildListScreen
 	screenMap[CORPORATION_SCREEN]	= CvCorporationScreen.CvCorporationScreen()
 	screenMap[ESPIONAGE_ADVISOR]	= CvEspionageAdvisor.CvEspionageAdvisor()
 	screenMap[MILITARY_ADVISOR]		= CvMilitaryAdvisor.CvMilitaryAdvisor(MILITARY_ADVISOR)
@@ -719,6 +716,7 @@ def lateInit():
 	screenMap[FORGETFUL_SCREEN]		= Forgetful.Forgetful()
 	screenMap[DEBUG_INFO_SCREEN]	= CvDebugInfoScreen.CvDebugInfoScreen()
 	screenMap[TECH_CHOOSER]			= CvTechChooser.CvTechChooser()
+	screenMap[BUILD_LIST_SCREEN]	= BuildListScreen.BuildListScreen()
 
 	import WBPlotScreen
 	import WBEventScreen
@@ -756,6 +754,7 @@ def lateInit():
 	screenMap[WB_CORPORATION]	= WBCorporationScreen.WBCorporationScreen()
 	screenMap[WB_INFO]			= WBInfoScreen.WBInfoScreen()
 	screenMap[WB_TRADE]			= WBTradeScreen.WBTradeScreen()
+
 
 def earlyInit():
 	import CvIntroMovieScreen

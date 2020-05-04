@@ -373,9 +373,6 @@ class CvAdvancedStartScreen:
 	def rightMouseDown(self, argsList):
 		self.removeObject()
 
-	def Exit(self):
-		CyInterface().setWorldBuilder(False)
-
 	def killScreen(self):
 		screen = CyGInterfaceScreen("AdvancedStartScreen", self.screenId)
 		screen.hideScreen()
