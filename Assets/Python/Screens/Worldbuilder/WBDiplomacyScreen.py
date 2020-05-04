@@ -21,6 +21,8 @@ class WBDiplomacyScreen:
 	def __init__(self):
 		self.iTable_Y = 110
 		self.lAttitude = ["COLOR_RED", "COLOR_MAGENTA", "", "COLOR_CYAN", "COLOR_GREEN"]
+		import CvEventInterface
+		self.eventManager = CvEventInterface.getEventManager()
 
 	def interfaceScreen(self, iPlayerX, bPage):
 		screen = CyGInterfaceScreen("WBDiplomacyScreen", CvScreenEnums.WB_DIPLOMACY)
@@ -415,13 +417,13 @@ class WBDiplomacyScreen:
 		if CvWorldBuilderScreen.bPython:
 			if iNewStatus == 2:
 				if iOldStatus == 3:
-					CvEventManager.CvEventManager().onVassalState([iTeam1, iTeam2, False])
+					self.eventManager.onVassalState([iTeam1, iTeam2, False])
 				else:
-					CvEventManager.CvEventManager().onVassalState([iTeam2, iTeam1, False])
+					self.eventManager.onVassalState([iTeam2, iTeam1, False])
 			elif iNewStatus == 3:
-				CvEventManager.CvEventManager().onVassalState([iTeam1, iTeam2, True])
+				self.eventManager.onVassalState([iTeam1, iTeam2, True])
 			else:
-				CvEventManager.CvEventManager().onVassalState([iTeam2, iTeam1, True])
+				self.eventManager.onVassalState([iTeam2, iTeam1, True])
 
 	def editContact(self, iTeam):
 		if not bRemove:

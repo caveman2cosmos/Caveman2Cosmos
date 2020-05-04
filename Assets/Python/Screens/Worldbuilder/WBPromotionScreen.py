@@ -23,6 +23,8 @@ class WBPromotionScreen:
 
 	def __init__(self):
 		self.iTable_Y = 110
+		import CvEventInterface
+		self.eventManager = CvEventInterface.getEventManager()
 
 	def interfaceScreen(self, pUnitX):
 		screen = CyGInterfaceScreen( "WBPromotionScreen", CvScreenEnums.WB_PROMOTION)
@@ -279,7 +281,7 @@ class WBPromotionScreen:
 			bEffects = True
 		pUnit.setHasPromotion(item, bAdd)
 		if bEffects:
-			CvEventManager.CvEventManager().onUnitPromoted([pUnit, item])
+			self.eventManager.onUnitPromoted([pUnit, item])
 
 	def update(self, fDelta):
 		return 1

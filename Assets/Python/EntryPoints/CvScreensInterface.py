@@ -346,7 +346,7 @@ def WorldBuilderRevealTabModeCB():
 
 def WorldBuilderDiplomacyModeCB():
 	print "WorldBuilderDiplomacyModeCB"
-	WBDiplomacyScreen.WBDiplomacyScreen().interfaceScreen(CyGame().getActivePlayer(), False)
+	screenMap[WB_DIPLOMACY].interfaceScreen(CyGame().getActivePlayer(), False)
 
 def WorldBuilderRevealAllCB():
 	print "WorldBuilderRevealAllCB"

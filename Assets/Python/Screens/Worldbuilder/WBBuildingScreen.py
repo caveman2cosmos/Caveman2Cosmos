@@ -27,6 +27,8 @@ class WBBuildingScreen:
 	def __init__(self):
 		self.iTable_Y = 80
 		self.lCities = []
+		import CvEventInterface
+		self.eventManager = CvEventInterface.getEventManager()
 
 	def interfaceScreen(self, pCityX):
 		screen = CyGInterfaceScreen("WBBuildingScreen", CvScreenEnums.WB_BUILDING)
@@ -378,7 +380,7 @@ class WBBuildingScreen:
 			bEffects = True
 		pCity.setNumRealBuilding(item, bAdd)
 		if bEffects:
-			CvEventManager.CvEventManager().onBuildingBuilt([pCity, item])
+			self.eventManager.onBuildingBuilt([pCity, item])
 
 	def update(self, fDelta):
 		return 1

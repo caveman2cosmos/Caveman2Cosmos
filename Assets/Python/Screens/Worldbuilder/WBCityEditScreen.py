@@ -289,7 +289,7 @@ class WBCityEditScreen:
 		iMaxRow = -1
 		iRow = 0
 		for i in xrange(GC.getNumUnitInfos()):
-			if pCity.canTrain(i, True, False):
+			if pCity.canTrain(i, True, False, False, False):
 				if iRow > iMaxRow:
 					screen.appendTableRow("WBCityProduction")
 					iMaxRow = iRow

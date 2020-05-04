@@ -19,6 +19,8 @@ class WBProjectScreen:
 
 	def __init__(self):
 		self.iTable_Y = 110
+		import CvEventInterface
+		self.eventManager = CvEventInterface.getEventManager()
 
 	def interfaceScreen(self, iTeamX):
 		screen = CyGInterfaceScreen( "WBProjectScreen", CvScreenEnums.WB_PROJECT)
@@ -231,7 +233,7 @@ class WBProjectScreen:
 			pCapital = GC.getPlayer(pTeamX.getLeaderID()).getCapitalCity()
 			if not pCapital.isNone():
 				for i in xrange(iCount):
-					CvEventManager.CvEventManager().onProjectBuilt([pCapital, item])
+					self.eventManager.onProjectBuilt([pCapital, item])
 
 	def update(self, fDelta):
 		return 1

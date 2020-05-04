@@ -19,6 +19,7 @@ import WBInfoScreen
 import WBTradeScreen
 import CvEventManager
 import Popup
+import CvEventInterface
 
 GC = CyGlobalContext()
 iChange = 1
@@ -68,10 +69,15 @@ class CvWorldBuilderScreen:
 		self.iTargetPlotX = -1
 		self.iTargetPlotY = -1
 		self.TempInfo = []
+		self.eventManager = None
 
 
 	def interfaceScreen(self):
 		getWBToolAdvancedStartTabCtrl().enable(False)
+
+		if self.eventManager is None:
+			import CvEventInterface
+			self.eventManager = CvEventInterface.getEventManager()
 
 		screen = CyGInterfaceScreen("WorldBuilderScreen", self.screenId)
 		self.__init__(self.screenId)
@@ -302,12 +308,12 @@ class CvWorldBuilderScreen:
 					bEffects = True
 				pCity.setNumRealBuilding(self.iSelection, 1)
 				if bEffects:
-					CvEventManager.CvEventManager().onBuildingBuilt([pCity, self.iSelection])
+					self.eventManager.onBuildingBuilt([pCity, self.iSelection])
 		elif self.iPlayerAddMode == "City":
 			if self.m_pCurrentPlot.isCity(): return
 			pCity = GC.getPlayer(self.m_iCurrentPlayer).initCity(self.m_pCurrentPlot.getX(), self.m_pCurrentPlot.getY())
 			if bPython:
-				CvEventManager.CvEventManager().onCityBuilt([pCity, None])
+				self.eventManager.onCityBuilt([pCity, None])
 	## Python Effects ##
 		elif self.iPlayerAddMode == "Improvements":
 			self.m_pCurrentPlot.setImprovementType(self.iSelection)
