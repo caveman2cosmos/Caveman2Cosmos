@@ -329,20 +329,20 @@ class CvAdvancedStartScreen:
 		initWBToolAdvancedStartControl()
 
 		self.m_advancedStartTabCtrl = getWBToolAdvancedStartTabCtrl()
-
-		self.m_advancedStartTabCtrl.setNumColumns((GC.getNumBuildingInfos()/10)+2);
+		# CyGTabCtrl API
+		self.m_advancedStartTabCtrl.setNumColumns(2 + GC.getNumBuildingInfos()/10);
 		self.m_advancedStartTabCtrl.addTabSection(CyTranslator().getText("TXT_KEY_WB_AS_CITIES",()));
 		self.m_iAdvancedStartCurrentIndexes.append(0)
 
 		self.m_iAdvancedStartCurrentList.append(self.m_iASCityListID)
 
-		self.m_advancedStartTabCtrl.setNumColumns((GC.getNumUnitInfos()/10)+2);
+		self.m_advancedStartTabCtrl.setNumColumns(2 + GC.getNumUnitInfos()/10);
 		self.m_advancedStartTabCtrl.addTabSection(CyTranslator().getText("TXT_KEY_WB_AS_UNITS",()));
 		self.m_iAdvancedStartCurrentIndexes.append(0)
 
 		self.m_iAdvancedStartCurrentList.append(0)
 
-		self.m_advancedStartTabCtrl.setNumColumns((GC.getNumImprovementInfos()/10)+2);
+		self.m_advancedStartTabCtrl.setNumColumns(2 + GC.getNumImprovementInfos()/10);
 		self.m_advancedStartTabCtrl.addTabSection(CyTranslator().getText("TXT_KEY_WB_AS_IMPROVEMENTS",()));
 		self.m_iAdvancedStartCurrentIndexes.append(0)
 

@@ -649,7 +649,7 @@ class CvGameUtils:
 							sTemp += u"%c" %(GC.getCorporationInfo(i).getHeadquarterChar())
 						elif pCity.isHasCorporation(i):
 							sTemp += u"%c" %(GC.getCorporationInfo(i).getChar())
-					if len(sTemp) > 0:
+					if sTemp:
 						sText += "\n" + sTemp
 
 					iMaxDefense = pCity.getTotalDefense(False)
@@ -687,7 +687,7 @@ class CvGameUtils:
 						if iAmount <= 0: continue
 						sTemp = u"%d.%02d%c" %(pCity.getCommerceRate(i), pCity.getCommerceRateTimes100(i)%100, GC.getCommerceInfo(i).getChar())
 						lTemp.append(sTemp)
-					if len(lTemp) > 0:
+					if lTemp:
 						sText += "\n"
 						for i in xrange(len(lTemp)):
 							sText += lTemp[i]
@@ -703,24 +703,25 @@ class CvGameUtils:
 					lWonders = []
 					for i in xrange(GC.getNumBuildingInfos()):
 						if pCity.isHasBuilding(i):
-							Info = GC.getBuildingInfo(i)
-							if isLimitedWonderClass(Info.getBuildingClassType()):
-								lWonders.append(Info.getDescription())
+							if isLimitedWonder(i):
+								lWonders.append(GC.getBuildingInfo(i).getDescription())
 							else:
-								lBuildings.append(Info.getDescription())
-					if len(lBuildings) > 0:
+								lBuildings.append(GC.getBuildingInfo(i).getDescription())
+					if lBuildings:
 						lBuildings.sort()
 						sText += "\n" + CyTranslator().getText("[COLOR_BUILDING_TEXT]", ()) + CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_BUILDING", ()) + ": </color>"
-						for i in xrange(len(lBuildings)):
+						iRange = len(lBuildings)
+						for i in xrange(iRange):
 							sText += lBuildings[i]
-							if i < len(lBuildings) - 1:
+							if i < iRange - 1:
 								sText += ", "
-					if len(lWonders) > 0:
+					if lWonders:
 						lWonders.sort()
 						sText += "\n" + CyTranslator().getText("[COLOR_SELECTED_TEXT]", ()) + CyTranslator().getText("TXT_KEY_CONCEPT_WONDERS", ()) + ": </color>"
-						for i in xrange(len(lWonders)):
+						iRange = len(lWonders)
+						for i in xrange(iRange):
 							sText += lWonders[i]
-							if i < len(lWonders) - 1:
+							if i < iRange - 1:
 								sText += ", "
 					sText += "</font>"
 					return sText

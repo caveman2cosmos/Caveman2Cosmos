@@ -29,7 +29,6 @@ class CvWorldBuilderScreen:
 	def __init__ (self, screenId):
 		self.screenId = screenId
 		self.m_bShowBigBrush = False
-		self.m_bChangeFocus = False
 		self.m_iCurrentPlayer = 0
 		self.m_iCurrentTeam = 0
 		self.m_iCurrentX = -1
@@ -167,8 +166,8 @@ class CvWorldBuilderScreen:
 		self.m_iCurrentX = self.m_pCurrentPlot.getX()
 		self.m_iCurrentY = self.m_pCurrentPlot.getY()
 
-		sText = "<font=3b>%s, X: %d, Y: %d</font>" %(CyTranslator().getText("TXT_KEY_WB_LATITUDE",(self.m_pCurrentPlot.getLatitude(),)), self.m_iCurrentX, self.m_iCurrentY)
-		screen.setLabel( "WBCoords", "Background", sText, 1<<2, screen.getXResolution()/2, 6, -0.3, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+		sText = "<font=3b>%s, X: %d, Y: %d" %(CyTranslator().getText("TXT_KEY_WB_LATITUDE",(self.m_pCurrentPlot.getLatitude(),)), self.m_iCurrentX, self.m_iCurrentY)
+		screen.setLabel("WBCoords", "Background", sText, 1<<2, screen.getXResolution()/2, 6, -0.3, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		if self.iPlayerAddMode in self.RevealMode:
 			if CyInterface().isLeftMouseDown():
@@ -186,31 +185,25 @@ class CvWorldBuilderScreen:
 				self.removeMultipleObjects()
 			else:
 				self.removeObject()
-		return
+
 
 	def getHighlightPlot(self, argsList):
 
-		if self.m_pCurrentPlot != 0 and not self.m_bShowBigBrush and isMouseOverGameSurface():
-			return (self.m_pCurrentPlot.getX(), self.m_pCurrentPlot.getY())
+		if self.m_pCurrentPlot != 0 and isMouseOverGameSurface():
+			self.m_bShowBigBrush = self.useLargeBrush()
+			if self.m_bShowBigBrush:
+				self.highlightBrush()
+			else:
+				return (self.m_pCurrentPlot.getX(), self.m_pCurrentPlot.getY())
 		return []
 
 	def update(self, fDelta):
-		if not self.m_bChangeFocus and not isMouseOverGameSurface():
-			self.m_bChangeFocus = True
-		if self.m_bChangeFocus and isMouseOverGameSurface() and self.iPlayerAddMode != "EditUnit" and self.iPlayerAddMode != "EditCity":
-			self.m_bChangeFocus = False
-			setFocusToCVG()
-
+		return
 
 	# Will update the screen (every 250 MS)
 	def updateScreen(self):
-		self.m_bShowBigBrush = self.useLargeBrush()
 		if self.iPlayerAddMode == "River" and self.m_pRiverStartPlot != -1:
 			self.setRiverHighlights()
-
-		if self.m_bShowBigBrush:
-			self.highlightBrush()
-
 
 	def highlightBrush(self):
 		if self.iPlayerAddMode == "StartingPlot": return
@@ -232,9 +225,8 @@ class CvWorldBuilderScreen:
 
 	def refreshStartingPlots(self):
 		CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_REVEALED_PLOTS)
-		for iPlayerX in xrange(GC.getMAX_PLAYERS()):
-			pPlayerX = GC.getPlayer(iPlayerX)
-			pPlot = pPlayerX.getStartingPlot()
+		for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
+			pPlot = GC.getPlayer(iPlayerX).getStartingPlot()
 			if not pPlot.isNone():
 				sColor = "COLOR_MAGENTA"
 				if iPlayerX == self.m_iCurrentPlayer:
@@ -346,7 +338,7 @@ class CvWorldBuilderScreen:
 				self.m_pRiverStartPlot = self.m_pCurrentPlot
 		return 1
 
-	def removeObject( self ):
+	def removeObject(self):
 		if self.m_iCurrentX == -1 or self.m_iCurrentY == -1: return
 
 		if self.iPlayerAddMode == "EraseAll":
@@ -489,7 +481,7 @@ class CvWorldBuilderScreen:
 	def toggleUnitEditCB(self):
 		self.iPlayerAddMode = "EditUnit"
 		self.refreshSideMenu()
-		return
+
 
 	def normalPlayerTabModeCB(self):
 		self.m_iCurrentTeam = GC.getPlayer(self.m_iCurrentPlayer).getTeam()
@@ -521,22 +513,21 @@ class CvWorldBuilderScreen:
 		self.iPlayerAddMode = "AddLandMark"
 		self.m_iCurrentPlayer = GC.getBARBARIAN_PLAYER()
 		self.refreshSideMenu()
-		return
+
 
 	def eraseCB(self):
 		self.m_pRiverStartPlot = -1
 		self.iPlayerAddMode = "EraseAll"
 		self.refreshSideMenu()
-		return
 
 	def placeMultipleObjects(self):
 		permCurrentPlot = self.m_pCurrentPlot
 		Data = self.getMultiplePlotData()
 		for x in range(Data[0], Data[1]):
 			for y in range(Data[2], Data[3]):
-				self.m_pCurrentPlot = CyMap().plot(x,y)
+				self.m_pCurrentPlot = CyMap().plot(x, y)
 				if self.m_pCurrentPlot.isNone(): continue
-				if self.bSensibility and (self.iBrushWidth > 1 or self.iBrushHeight > 1):
+				if self.bSensibility:
 					if self.iPlayerAddMode == "Improvements":
 						if self.m_pCurrentPlot.canHaveImprovement(self.iSelection, -1, True):
 							self.placeObject()
@@ -556,7 +547,7 @@ class CvWorldBuilderScreen:
 						else:
 							self.m_pCurrentPlot.setFeatureType(iOldFeature, iOldVariety)
 					elif self.iPlayerAddMode == "Routes":
-						if not (self.m_pCurrentPlot.isImpassable() or self.m_pCurrentPlot.isWater()):
+						if not self.m_pCurrentPlot.isImpassable() or self.m_pCurrentPlot.isWater():
 							self.placeObject()
 					elif self.iPlayerAddMode == "Terrain":
 						if self.m_pCurrentPlot.isWater() == GC.getTerrainInfo(self.iSelection).isWaterTerrain():
