@@ -377,17 +377,10 @@ class WBGameDataScreen:
 		elif iGameOption == GameOptionTypes.GAMEOPTION_NO_GOODY_HUTS and CyGame().isOption(iGameOption):
 			CyMapGenerator().eraseGoodies()
 		elif iGameOption == GameOptionTypes.GAMEOPTION_NO_VASSAL_STATES and CyGame().isOption(iGameOption):
-			for iTeamX in xrange(GC.getMAX_CIV_TEAMS()):
+			for iTeamX in xrange(GC.getMAX_PC_TEAMS()):
 				pTeamX = GC.getTeam(iTeamX)
-				for iTeamY in xrange(GC.getMAX_CIV_TEAMS()):
+				for iTeamY in xrange(GC.getMAX_PC_TEAMS()):
 					pTeamX.freeVassal(iTeamY)
-		elif iGameOption == GameOptionTypes.GAMEOPTION_ALWAYS_PEACE and CyGame().isOption(iGameOption):
-			for iTeamX in xrange(GC.getMAX_CIV_TEAMS()):
-				pTeamX = GC.getTeam(iTeamX)
-				if CyGame().isOption(GameOptionTypes.GAMEOPTION_ALWAYS_WAR) and pTeamX.isHuman(): continue
-				for iTeamY in xrange(GC.getMAX_CIV_TEAMS()):
-					if CyGame().isOption(GameOptionTypes.GAMEOPTION_ALWAYS_WAR) and GC.getTeam(iTeamY).isHuman(): continue
-					pTeamX.makePeace(iTeamY)
 		elif iGameOption == GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE and CyGame().isOption(iGameOption):
 			for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
 				pPlayerX = GC.getPlayer(iPlayerX)
