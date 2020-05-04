@@ -10,8 +10,6 @@ import CvMainInterface
 import CvOptionsScreen
 import CvReplayScreen
 
-import CvWorldBuilderScreen
-
 #import CvDiplomacy
 
 import BuildListScreen
@@ -305,93 +303,129 @@ def pediaJumpToEra(iEra):
 #################################################
 ## Worldbuilder
 #################################################
-worldBuilderScreen = CvWorldBuilderScreen.CvWorldBuilderScreen(WORLDBUILDER_SCREEN)
-def getWorldBuilderScreen():
-	return worldBuilderScreen
-
 def showWorldBuilderScreen():
-	worldBuilderScreen.interfaceScreen()
+	print "showWorldBuilderScreen"
+	if CyInterface().isInAdvancedStart():
+		advancedStartScreen.interfaceScreen()
+	else: worldBuilderScreen.interfaceScreen()
 
 def hideWorldBuilderScreen():
-	worldBuilderScreen.killScreen()
+	print "hideWorldBuilderScreen"
+	if CyInterface().isInAdvancedStart():
+		advancedStartScreen.killScreen()
+	else: worldBuilderScreen.killScreen()
 
 def WorldBuilderToggleUnitEditCB():
+	print "WorldBuilderToggleUnitEditCB"
 	worldBuilderScreen.toggleUnitEditCB()
 
 def WorldBuilderEraseCB():
+	print "WorldBuilderEraseCB"
 	worldBuilderScreen.eraseCB()
 
 def WorldBuilderLandmarkCB():
+	print "WorldBuilderLandmarkCB"
 	worldBuilderScreen.landmarkModeCB()
 
 def WorldBuilderExitCB():
-	worldBuilderScreen.Exit()
+	if CyInterface().isInAdvancedStart():
+		advancedStartScreen.Exit()
+	else: worldBuilderScreen.Exit()
 
 def WorldBuilderToggleCityEditCB():
+	print "WorldBuilderToggleCityEditCB"
 	worldBuilderScreen.toggleCityEditCB()
 
-def WorldBuilderNormalPlayerTabModeCB():
-	worldBuilderScreen.normalPlayerTabModeCB()
-
 def WorldBuilderNormalMapTabModeCB():
+	print "WorldBuilderNormalMapTabModeCB"
 	worldBuilderScreen.normalMapTabModeCB()
 
 def WorldBuilderRevealTabModeCB():
+	print "WorldBuilderRevealTabModeCB"
 	worldBuilderScreen.revealTabModeCB()
 
 def WorldBuilderDiplomacyModeCB():
+	print "WorldBuilderDiplomacyModeCB"
 	WBDiplomacyScreen.WBDiplomacyScreen().interfaceScreen(CyGame().getActivePlayer(), False)
 
 def WorldBuilderRevealAllCB():
+	print "WorldBuilderRevealAllCB"
 	worldBuilderScreen.revealAll(True)
 
 def WorldBuilderUnRevealAllCB():
+	print "WorldBuilderUnRevealAllCB"
 	worldBuilderScreen.revealAll(False)
 
 def WorldBuilderGetHighlightPlot(argsList):
-	return worldBuilderScreen.getHighlightPlot(argsList)
+	print "WorldBuilderGetHighlightPlot"
+	if CyInterface().isInAdvancedStart():
+		return advancedStartScreen.getHighlightPlot(argsList)
+	else: return worldBuilderScreen.getHighlightPlot(argsList)
 
-def WorldBuilderOnAdvancedStartBrushSelected(argsList):
-	iList, iIndex, iTab = argsList;
-	print "WB Advanced Start brush selected, iList=%d, iIndex=%d, type=%d" %(iList, iIndex, iTab)
-	if iTab == worldBuilderScreen.m_iASTechTabID:
-		showTechChooser()
-	elif iTab == worldBuilderScreen.m_iASCityTabID and iList == worldBuilderScreen.m_iASAutomateListID:
-		CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_AUTOMATE, worldBuilderScreen.m_iCurrentPlayer, -1, -1, -1, True)
-
-	if worldBuilderScreen.setCurrentAdvancedStartIndex(iIndex) and worldBuilderScreen.setCurrentAdvancedStartList(iList):
-		return 1
-	return 0
-
-def WorldBuilderGetASUnitTabID():
-	return worldBuilderScreen.getASUnitTabID()
-
+#----------------------------------------------------------------------------#
+# Functions called by the exe in this order at Advanced start initialization #
+#----------------------------------------------------------------------------#
 def WorldBuilderGetASCityTabID():
-	return worldBuilderScreen.getASCityTabID()
+	print "WorldBuilderGetASCityTabID"
+	return advancedStartScreen.getASCityTabID()
 
 def WorldBuilderGetASCityListID():
-	return worldBuilderScreen.getASCityListID()
+	print "WorldBuilderGetASCityListID"
+	return advancedStartScreen.getASCityListID()
 
 def WorldBuilderGetASBuildingsListID():
-	return worldBuilderScreen.getASBuildingsListID()
+	print "WorldBuilderGetASBuildingsListID"
+	return advancedStartScreen.getASBuildingsListID()
 
 def WorldBuilderGetASAutomateListID():
-	return worldBuilderScreen.getASAutomateListID()
+	print "WorldBuilderGetASAutomateListID"
+	return advancedStartScreen.getASAutomateListID()
+
+def WorldBuilderGetASUnitTabID():
+	print "WorldBuilderGetASUnitTabID"
+	return advancedStartScreen.getASUnitTabID()
 
 def WorldBuilderGetASImprovementsTabID():
-	return worldBuilderScreen.getASImprovementsTabID()
+	print "WorldBuilderGetASImprovementsTabID"
+	return advancedStartScreen.getASImprovementsTabID()
 
 def WorldBuilderGetASRoutesListID():
-	return worldBuilderScreen.getASRoutesListID()
+	print "WorldBuilderGetASRoutesListID"
+	return advancedStartScreen.getASRoutesListID()
 
 def WorldBuilderGetASImprovementsListID():
-	return worldBuilderScreen.getASImprovementsListID()
+	print "WorldBuilderGetASImprovementsListID"
+	return advancedStartScreen.getASImprovementsListID()
 
 def WorldBuilderGetASVisibilityTabID():
-	return worldBuilderScreen.getASVisibilityTabID()
+	print "WorldBuilderGetASVisibilityTabID"
+	return advancedStartScreen.getASVisibilityTabID()
 
 def WorldBuilderGetASTechTabID():
-	return worldBuilderScreen.getASTechTabID()
+	print "WorldBuilderGetASTechTabID"
+	return advancedStartScreen.getASTechTabID()
+#------------------------------------------------#
+# Called by the exe for WB and AS initialization #
+#------------------------------------------------#
+def WorldBuilderNormalPlayerTabModeCB():
+	print "WorldBuilderNormalPlayerTabModeCB"
+	if CyInterface().isInAdvancedStart():
+		return advancedStartScreen.normalPlayerTabModeCB()
+	else: return worldBuilderScreen.normalPlayerTabModeCB()
+#---------------------------------#
+# Called by the exe for WB and AS #
+#---------------------------------#
+def WorldBuilderOnAdvancedStartBrushSelected(argsList):
+	iList, iIndex, iTab = argsList;
+	print "WorldBuilderOnAdvancedStartBrushSelected, iList=%d, iIndex=%d, type=%d" %(iList, iIndex, iTab)
+	if iTab == advancedStartScreen.m_iASTechTabID:
+		showTechChooser()
+	elif iTab == advancedStartScreen.m_iASCityTabID and iList == advancedStartScreen.m_iASAutomateListID:
+		CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_AUTOMATE, advancedStartScreen.m_iCurrentPlayer, -1, -1, -1, True)
+
+	advancedStartScreen.setCurrentAdvancedStartIndex(iIndex)
+	advancedStartScreen.setCurrentAdvancedStartList(iList)
+
 
 ######################
 ## Strategy Overlay ##
@@ -416,35 +450,45 @@ def movieDone(argsList):
 		screenMap[VICTORY_MOVIE_SCREEN].hideScreen()
 
 def leftMouseDown(argsList):
+
 	if argsList[0] == WORLDBUILDER_SCREEN:
 		worldBuilderScreen.leftMouseDown(argsList[1:])
+		return 1
+
+	elif argsList[0] == ADVANCED_START_SCREEN:
+		advancedStartScreen.leftMouseDown(argsList[1:])
 		return 1
 	return 0
 
 def rightMouseDown(argsList):
+
 	if argsList[0] == WORLDBUILDER_SCREEN:
 		worldBuilderScreen.rightMouseDown(argsList)
+		return 1
+
+	elif argsList[0] == ADVANCED_START_SCREEN:
+		advancedStartScreen.rightMouseDown(argsList)
 		return 1
 	return 0
 
 def mouseOverPlot(argsList):
+
 	if argsList[0] == STRATEGY_OVERLAY_SCREEN:
-		overlayScreen.onMouseOverPlot(argsList)
+		overlayScreen.onMouseOverPlot()
 
 	elif argsList[0] == WORLDBUILDER_SCREEN:
-		worldBuilderScreen.mouseOverPlot(argsList)
+		worldBuilderScreen.mouseOverPlot()
+
+	elif argsList[0] == ADVANCED_START_SCREEN:
+		advancedStartScreen.mouseOverPlot()
 
 def handleInput(argsList):
 	inputClass = PyScreenInput.ScreenInput(argsList)
 	iPythonFile = inputClass.ePythonFileEnum
-	if iPythonFile == WORLDBUILDER_SCREEN:
-		if CyInterface().isInAdvancedStart():
-			return 0
 	# get the screen that is active from the screenMap Dictionary
 	if iPythonFile in screenMap:
-		screen = screenMap[iPythonFile]
 		# call handle input on that screen
-		return screen.handleInput(inputClass)
+		return screenMap[iPythonFile].handleInput(inputClass)
 	return 0
 
 # Entry point for dll requests to display messages.
@@ -470,12 +514,15 @@ def onClose(argsList):
 def forceScreenUpdate(argsList):
 	if argsList[0] == TECH_CHOOSER:
 		screenMap[TECH_CHOOSER].updateTechRecords(False)
-	# Main interface Screen
+	# Main interface screen
 	elif argsList[0] == MAIN_INTERFACE:
 		mainInterface.updateScreen()
-	# world builder Screen
+	# World builder screen
 	elif argsList[0] == WORLDBUILDER_SCREEN:
 		worldBuilderScreen.updateScreen()
+	# Advanced start screen
+	elif argsList[0] == ADVANCED_START_SCREEN:
+		advancedStartScreen.updateScreen()
 
 # Forced redraw
 def forceScreenRedraw(argsList):
@@ -631,7 +678,6 @@ screenMap = {
 	OPTIONS_SCREEN			: optionsScreen,
 	REPLAY_SCREEN			: replayScreen,
 	BUILD_LIST_SCREEN		: buildListScreen,
-	WORLDBUILDER_SCREEN		: worldBuilderScreen,
 	# add new screens here
 	STRATEGY_OVERLAY_SCREEN		: overlayScreen,
 	REVOLUTION_WATCH_ADVISOR	: revolutionWatchAdvisor,
@@ -713,16 +759,12 @@ def lateInit():
 	screenMap[WB_TRADE]			= WBTradeScreen.WBTradeScreen()
 
 def earlyInit():
-
 	import CvIntroMovieScreen
 	import CvWonderMovieScreen
 	import CvVictoryMovieScreen
 	import CvHallOfFameScreen
 	import CvDanQuayle
 	import CvSpaceShipScreen
-	import CvUnVictoryScreen
-	global unVictoryScreen
-	unVictoryScreen = CvUnVictoryScreen.CvUnVictoryScreen()
 
 	screenMap[INTRO_MOVIE_SCREEN]	= CvIntroMovieScreen.CvIntroMovieScreen()
 	screenMap[WONDER_MOVIE_SCREEN]	= CvWonderMovieScreen.CvWonderMovieScreen()
@@ -736,6 +778,15 @@ def earlyInit():
 	import Pedia
 	screenMap[PEDIA] = Pedia.Pedia(PEDIA)
 
+	import CvAdvancedStartScreen, CvWorldBuilderScreen
+	global advancedStartScreen, worldBuilderScreen
+	advancedStartScreen = CvAdvancedStartScreen.CvAdvancedStartScreen(ADVANCED_START_SCREEN)
+	worldBuilderScreen = CvWorldBuilderScreen.CvWorldBuilderScreen(WORLDBUILDER_SCREEN)
+	screenMap[WORLDBUILDER_SCREEN] = worldBuilderScreen
+
+	import CvUnVictoryScreen
+	global unVictoryScreen
+	unVictoryScreen = CvUnVictoryScreen.CvUnVictoryScreen()
 	# RevolutionDCM
 	createRevolutionWatchAdvisor()
 

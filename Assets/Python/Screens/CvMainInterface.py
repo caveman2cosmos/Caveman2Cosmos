@@ -1314,6 +1314,7 @@ class CvMainInterface:
 					# Max zoom change from game to game, so the percentage zoom is relative to the initial zoom from CAMERA_START_DISTANCE
 					CyCamera().SetZoom(CyCamera().GetZoom() * 1.9)
 					self.bSetStartZoom = False
+					setFocusToCVG()
 
 			# This will update the flag widget for SP hotseat and debugging
 			IFT = CyIF.getShowInterface()

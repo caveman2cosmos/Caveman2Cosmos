@@ -531,7 +531,7 @@ void CvDLLButtonPopup::OnOkClicked(CvPopup* pPopup, PopupReturn *pPopupReturn, C
 				switch ((ControlTypes)info.getData1())
 				{
 				case CONTROL_WORLD_BUILDER:
-					gDLL->getInterfaceIFace()->setWorldBuilder(!(gDLL->GetWorldBuilderMode()));
+					gDLL->getInterfaceIFace()->setWorldBuilder(!gDLL->GetWorldBuilderMode());
 					break;
 				case CONTROL_ADMIN_DETAILS:
 					gDLL->getInterfaceIFace()->showAdminDetails();

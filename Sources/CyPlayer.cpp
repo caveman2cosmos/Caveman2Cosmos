@@ -1057,9 +1057,9 @@ int CyPlayer::getAdvancedStartTechCost(int /*TechTypes*/ eTech, bool bAdd)
 	return m_pPlayer ? m_pPlayer->getAdvancedStartTechCost((TechTypes) eTech, bAdd) : -1;
 }
 
-int CyPlayer::getAdvancedStartVisibilityCost(bool bAdd, CyPlot* pPlot)
+int CyPlayer::getAdvancedStartVisibilityCost(CyPlot* pPlot)
 {
-	return m_pPlayer ? m_pPlayer->getAdvancedStartVisibilityCost(bAdd, NULL != pPlot ? pPlot->getPlot() : NULL) : -1;
+	return m_pPlayer ? m_pPlayer->getAdvancedStartVisibilityCost(NULL != pPlot ? pPlot->getPlot() : NULL) : -1;
 }
 
 int CyPlayer::getEspionageSpending(int /*TeamTypes*/ eIndex)

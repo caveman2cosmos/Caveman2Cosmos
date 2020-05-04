@@ -19,7 +19,7 @@ void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
 		.def("getAdvancedStartImprovementCost", &CyPlayer::getAdvancedStartImprovementCost, "int (int (ImprovementTypes) eImprovement, bool bAdd, CyPlot* pPlot)")
 		.def("getAdvancedStartRouteCost", &CyPlayer::getAdvancedStartRouteCost, "int (int (RouteTypes) eUnit, bool bAdd, CyPlot* pPlot)")
 		.def("getAdvancedStartTechCost", &CyPlayer::getAdvancedStartTechCost, "int (int (TechTypes) eUnit, bool bAdd)")
-		.def("getAdvancedStartVisibilityCost", &CyPlayer::getAdvancedStartVisibilityCost, "int (bool bAdd, CyPlot* pPlot)")
+		.def("getAdvancedStartVisibilityCost", &CyPlayer::getAdvancedStartVisibilityCost, "int (CyPlot* pPlot)")
 
 		.def("getEspionageSpending", &CyPlayer::getEspionageSpending, "int (PlayerTypes eIndex)")
 		.def("canDoEspionageMission", &CyPlayer::canDoEspionageMission, "bool (EspionageMissionTypes eMission, PlayerTypes eTargetPlayer, CyPlot* pPlot, int iExtraData)")

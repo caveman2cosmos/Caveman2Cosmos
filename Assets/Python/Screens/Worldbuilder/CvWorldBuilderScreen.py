@@ -29,11 +29,8 @@ class CvWorldBuilderScreen:
 
 	def __init__ (self, screenId):
 		self.screenId = screenId
-		self.m_advancedStartTabCtrl = None
 		self.m_bShowBigBrush = False
 		self.m_bChangeFocus = False
-		self.m_iAdvancedStartCurrentIndexes = []
-		self.m_iAdvancedStartCurrentList = []
 		self.m_iCurrentPlayer = 0
 		self.m_iCurrentTeam = 0
 		self.m_iCurrentX = -1
@@ -51,15 +48,12 @@ class CvWorldBuilderScreen:
 		self.m_iASRoutesListID = 0
 		self.m_iASImprovementsListID = 1
 		self.m_iASVisibilityTabID = 3
-		self.m_iASVisibilityListID = 0
 		self.m_iASTechTabID = 4
-		self.m_iASTechListID = 0
 
 		self.m_bSideMenuDirty = False
 		self.m_bASItemCostDirty = False
 		self.m_iCost = 0
 
-## Platy Builder ##
 		self.PlayerMode = ["Ownership", "Units", "Buildings", "City", "StartingPlot"]
 		self.MapMode = ["AddLandMark", "PlotData", "River", "Improvements", "Bonus", "PlotType", "Terrain", "Routes", "Features"]
 		self.RevealMode = ["RevealPlot", "INVISIBLE_SUBMARINE", "INVISIBLE_STEALTH", "Blockade"]
@@ -74,23 +68,110 @@ class CvWorldBuilderScreen:
 		self.iTargetPlotX = -1
 		self.iTargetPlotY = -1
 		self.TempInfo = []
-## Platy Builder ##
+
 
 	def interfaceScreen(self):
+		getWBToolAdvancedStartTabCtrl().enable(False)
+
 		screen = CyGInterfaceScreen("WorldBuilderScreen", self.screenId)
 		self.__init__(self.screenId)
 		screen.setCloseOnEscape(False)
 		screen.setAlwaysShown(True)
-		self.setSideMenu()
-		self.refreshSideMenu()
-		self.refreshAdvancedStartTabCtrl(False)
 
-		if CyInterface().isInAdvancedStart():
-			pPlayer = GC.getPlayer(self.m_iCurrentPlayer)
-			pPlot = pPlayer.getStartingPlot()
-			CyCamera().JustLookAtPlot(pPlot)
+		# Make Side menu
+		iButtonWidth = 32
+		iAdjust = iButtonWidth + 3
+
+		iScreenWidth = 16 + iAdjust * 6
+		iScreenHeight = 16 + iAdjust * 4
+
+		iXStart = screen.getXResolution() - iScreenWidth
+
+		screen.addPanel("WorldBuilderBackgroundPanel", "", "", True, True, iXStart, 0, iScreenWidth, iScreenHeight, PanelStyles.PANEL_STYLE_MAIN)
+
+		iX = iXStart + 8
+		iY = 10
+
+		screen.setImageButton("Version", CyArtFileMgr().getInterfaceArtInfo("INTERFACE_GENERAL_QUESTIONMARK").getPath(), iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 9)
+		iX += iAdjust
+		screen.setImageButton("WorldBuilderRegenerateMap", CyArtFileMgr().getInterfaceArtInfo("WORLDBUILDER_REVEAL_ALL_TILES").getPath(), iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_WB_REGENERATE_MAP, -1, -1)
+		iX += iAdjust
+		screen.addCheckBoxGFC("WorldBuilderEraseButton", CyArtFileMgr().getInterfaceArtInfo("WORLDBUILDER_ERASE").getPath(), CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
+			iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_WB_ERASE_BUTTON, -1, -1, ButtonStyles.BUTTON_STYLE_LABEL)
+		iX += iAdjust
+		screen.setImageButton("WorldBuilderSaveButton", CyArtFileMgr().getInterfaceArtInfo("WORLDBUILDER_SAVE").getPath(), iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_WB_SAVE_BUTTON, -1, -1)
+		iX += iAdjust
+		screen.setImageButton("WorldBuilderLoadButton", CyArtFileMgr().getInterfaceArtInfo("WORLDBUILDER_LOAD").getPath(), iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_WB_LOAD_BUTTON, -1, -1)
+		iX += iAdjust
+		screen.setImageButton("WorldBuilderExitButton", CyArtFileMgr().getInterfaceArtInfo("WORLDBUILDER_EXIT").getPath(), iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_WB_EXIT_BUTTON, -1, -1)
+
+		iX = iXStart + 8
+		iY += iAdjust
+
+		screen.setImageButton("EditGameOptions", "", iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 23)
+		screen.setStyle("EditGameOptions", "Button_HUDAdvisorVictory_Style")
+		iX += iAdjust
+		screen.setImageButton("EditReligions", "", iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 20)
+		screen.setStyle("EditReligions", "Button_HUDAdvisorReligious_Style")
+		iX += iAdjust
+		screen.setImageButton("EditCorporations", "", iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 21)
+		screen.setStyle("EditCorporations", "Button_HUDAdvisorCorporation_Style")
+		iX += iAdjust
+		screen.setImageButton("EditDiplomacy", "", iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_WB_DIPLOMACY_MODE_BUTTON, -1, -1)
+		screen.setStyle("EditDiplomacy", "Button_HUDAdvisorForeign_Style")
+		iX += iAdjust
+		screen.setImageButton("EditEspionage", "", iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 22)
+		screen.setStyle("EditEspionage", "Button_HUDAdvisorEspionage_Style")
+		iX += iAdjust
+		screen.setImageButton("TradeScreen", "", iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 34)
+		screen.setStyle("TradeScreen", "Button_HUDAdvisorFinance_Style")
+
+		iX = iXStart + 8
+		iY += iAdjust
+		screen.addCheckBoxGFC("WorldBuilderNormalPlayerModeButton", ",Art/Interface/Buttons/Buildings/SDI.dds,Art/Interface/Buttons/FinalFrontier1_Atlas.dds,2,15", CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
+			iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_WB_NORMAL_PLAYER_TAB_MODE_BUTTON, -1, -1, ButtonStyles.BUTTON_STYLE_LABEL)
+		iX += iAdjust
+		screen.addCheckBoxGFC("WorldBuilderNormalMapModeButton", ",Art/Interface/Buttons/Buildings/SDI.dds,Art/Interface/Buttons/FinalFrontier2_Atlas.dds,3,6", CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
+			iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_WB_NORMAL_MAP_TAB_MODE_BUTTON, -1, -1, ButtonStyles.BUTTON_STYLE_LABEL)
+		iX += iAdjust
+		screen.addCheckBoxGFC("WorldBuilderRevealTileModeButton", CyArtFileMgr().getInterfaceArtInfo("INTERFACE_TECH_LOS").getPath(), CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
+			iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_WB_REVEAL_TAB_MODE_BUTTON, -1, -1, ButtonStyles.BUTTON_STYLE_LABEL)
+		iX += iAdjust
+		screen.addCheckBoxGFC("PythonEffectButton", ",Art/Interface/Buttons/Units/Warrior.dds,Art/Interface/Buttons/FinalFrontier2_Atlas.dds,3,4", CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
+			iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 0, ButtonStyles.BUTTON_STYLE_LABEL)
+		iX += iAdjust
+		screen.setImageButton("InfoScreen", "", iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 33)
+		screen.setStyle("InfoScreen", "Button_HUDAdvisorRecord_Style")
+
+		iX = iXStart + 8
+		iY += iAdjust
+
+		screen.addCheckBoxGFC("EditUnitData", ",Art/Interface/Buttons/Units/Warrior.dds,Art/Interface/Buttons/Afterworld_Atlas.dds,4,9", CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
+			iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_WB_UNIT_EDIT_BUTTON, -1, -1, ButtonStyles.BUTTON_STYLE_LABEL)
+		iX += iAdjust
+		screen.addCheckBoxGFC("EditPromotions", ",Art/Interface/Buttons/Promotions/Combat1.dds,Art/Interface/Buttons/Promotions_Atlas.dds,8,2", CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
+			iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 6, ButtonStyles.BUTTON_STYLE_LABEL)
+		iX += iAdjust
+		screen.addCheckBoxGFC("EditCityDataI", CyArtFileMgr().getInterfaceArtInfo("WORLDBUILDER_TOGGLE_CITY_EDIT_MODE").getPath(), CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
+			 iX, iY, iButtonWidth, iButtonWidth,WidgetTypes.WIDGET_WB_CITY_EDIT_BUTTON, -1, -1, ButtonStyles.BUTTON_STYLE_LABEL)
+		iX += iAdjust
+		screen.addCheckBoxGFC("EditCityDataII", ",Art/Interface/Buttons/Buildings/SDI.dds,Art/Interface/Buttons/FinalFrontier2_Atlas.dds,1,8", CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
+			 iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 7, ButtonStyles.BUTTON_STYLE_LABEL)
+		iX += iAdjust
+		screen.addCheckBoxGFC("EditCityBuildings", ",Art/Interface/Buttons/Buildings/SDI.dds,Art/Interface/Buttons/FinalFrontier1_Atlas.dds,5,14", CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
+			 iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 8, ButtonStyles.BUTTON_STYLE_LABEL)
+		iX += iAdjust
+		screen.addCheckBoxGFC("EditEvents", "", CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
+			 iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 10, ButtonStyles.BUTTON_STYLE_LABEL)
+		screen.setStyle("EditEvents", "Button_HUDLog_Style")
+
+		self.setCurrentModeCheckbox()
+
+		self.refreshSideMenu()
+
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, True)
 		screen.setForcedRedraw(True)
+
 
 	def killScreen(self):
 		screen = CyGInterfaceScreen("WorldBuilderScreen", self.screenId)
@@ -100,14 +181,14 @@ class CvWorldBuilderScreen:
 		CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_WORLD_BUILDER)
 		CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_HIGHLIGHT_PLOT)
 
-	def mouseOverPlot (self, argsList):
+	def mouseOverPlot(self):
 		screen = CyGInterfaceScreen("WorldBuilderScreen", self.screenId)
 		self.m_pCurrentPlot = CyInterface().getMouseOverPlot()
 		self.m_iCurrentX = self.m_pCurrentPlot.getX()
 		self.m_iCurrentY = self.m_pCurrentPlot.getY()
-		if not CyInterface().isInAdvancedStart():
-			sText = "<font=3b>%s, X: %d, Y: %d</font>" %(CyTranslator().getText("TXT_KEY_WB_LATITUDE",(self.m_pCurrentPlot.getLatitude(),)), self.m_iCurrentX, self.m_iCurrentY)
-			screen.setLabel( "WBCoords", "Background", sText, 1<<2, screen.getXResolution()/2, 6, -0.3, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+
+		sText = "<font=3b>%s, X: %d, Y: %d</font>" %(CyTranslator().getText("TXT_KEY_WB_LATITUDE",(self.m_pCurrentPlot.getLatitude(),)), self.m_iCurrentX, self.m_iCurrentY)
+		screen.setLabel( "WBCoords", "Background", sText, 1<<2, screen.getXResolution()/2, 6, -0.3, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
 
 		if self.iPlayerAddMode in self.RevealMode:
 			if CyInterface().isLeftMouseDown():
@@ -115,27 +196,21 @@ class CvWorldBuilderScreen:
 			elif CyInterface().isRightMouseDown():
 				self.setMultipleReveal(False)
 
-		else:
-			if CyInterface().isLeftMouseDown():
-				if self.useLargeBrush():
-					self.placeMultipleObjects()
-				else:
-					self.placeObject()
-			elif CyInterface().isRightMouseDown():
-				if self.useLargeBrush():
-					self.removeMultipleObjects()
-				else:
-					self.removeObject()
+		elif CyInterface().isLeftMouseDown():
+			if self.useLargeBrush():
+				self.placeMultipleObjects()
+			else:
+				self.placeObject()
+		elif CyInterface().isRightMouseDown():
+			if self.useLargeBrush():
+				self.removeMultipleObjects()
+			else:
+				self.removeObject()
 		return
 
-	def getHighlightPlot (self, argsList):
-		self.refreshASItemCost()
-		if self.m_pCurrentPlot != 0:
-			if CyInterface().isInAdvancedStart():
-				if self.m_iCost <= 0:
-					return []
+	def getHighlightPlot(self, argsList):
 
-		if ((self.m_pCurrentPlot != 0) and not self.m_bShowBigBrush and isMouseOverGameSurface()):
+		if self.m_pCurrentPlot != 0 and not self.m_bShowBigBrush and isMouseOverGameSurface():
 			return (self.m_pCurrentPlot.getX(), self.m_pCurrentPlot.getY())
 		return []
 
@@ -145,30 +220,17 @@ class CvWorldBuilderScreen:
 		if self.m_bChangeFocus and isMouseOverGameSurface() and self.iPlayerAddMode != "EditUnit" and self.iPlayerAddMode != "EditCity":
 			self.m_bChangeFocus = False
 			setFocusToCVG()
-		return
+
 
 	# Will update the screen (every 250 MS)
 	def updateScreen(self):
-		screen = CyGInterfaceScreen("WorldBuilderScreen", self.screenId)
-
-		if (CyInterface().isInAdvancedStart()):
-			if (self.m_bSideMenuDirty):
-				self.refreshSideMenu()
-			if (self.m_bASItemCostDirty):
-				self.refreshASItemCost()
-
-		if (CyInterface().isDirty(InterfaceDirtyBits.Advanced_Start_DIRTY_BIT) and not CyInterface().isFocusedWidget()):
-			self.refreshAdvancedStartTabCtrl(True)
-			CyInterface().setDirty(InterfaceDirtyBits.Advanced_Start_DIRTY_BIT, False)
-
 		self.m_bShowBigBrush = self.useLargeBrush()
-		if self.iPlayerAddMode == "River":
-			if self.m_pRiverStartPlot != -1:
-				self.setRiverHighlights()
-				return 0
+		if self.iPlayerAddMode == "River" and self.m_pRiverStartPlot != -1:
+			self.setRiverHighlights()
+
 		if self.m_bShowBigBrush:
 			self.highlightBrush()
-		return 0
+
 
 	def highlightBrush(self):
 		if self.iPlayerAddMode == "StartingPlot": return
@@ -181,14 +243,14 @@ class CvWorldBuilderScreen:
 				if pPlot.isNone(): continue
 				CyEngine().fillAreaBorderPlotAlt(pPlot.getX(), pPlot.getY(), AreaBorderLayers.AREA_BORDER_LAYER_WORLD_BUILDER, "COLOR_GREEN", 1)
 
-	def refreshReveal(self) :
+	def refreshReveal(self):
 		CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_REVEALED_PLOTS)
 		for i in xrange(CyMap().numPlots()):
 			pPlot = CyMap().plotByIndex(i)
 			if pPlot.isNone(): continue
 			self.showRevealed(pPlot)
 
-	def refreshStartingPlots(self) :
+	def refreshStartingPlots(self):
 		CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_REVEALED_PLOTS)
 		for iPlayerX in xrange(GC.getMAX_PLAYERS()):
 			pPlayerX = GC.getPlayer(iPlayerX)
@@ -199,189 +261,9 @@ class CvWorldBuilderScreen:
 					sColor = "COLOR_BLACK"
 				CyEngine().fillAreaBorderPlotAlt(pPlot.getX(), pPlot.getY(), AreaBorderLayers.AREA_BORDER_LAYER_REVEALED_PLOTS, sColor, 1.0)
 
-	########################################################
-	### Advanced Start Stuff
-	########################################################
 
-	def refreshASItemCost(self):
-		if (CyInterface().isInAdvancedStart()):
-			self.m_iCost = 0
-			if (self.m_pCurrentPlot != 0):
-				if (self.m_pCurrentPlot.isRevealed(CyGame().getActiveTeam(), False)):
-
-					# Unit mode
-					if (self.getASActiveUnit() != -1):
-						self.m_iCost = GC.getPlayer(self.m_iCurrentPlayer).getAdvancedStartUnitCost(self.getASActiveUnit(), True, self.m_pCurrentPlot)
-					elif (self.getASActiveCity() != -1):
-						self.m_iCost = GC.getPlayer(self.m_iCurrentPlayer).getAdvancedStartCityCost(True, self.m_pCurrentPlot)
-					elif (self.getASActivePop() != -1 and self.m_pCurrentPlot.isCity()):
-						self.m_iCost = GC.getPlayer(self.m_iCurrentPlayer).getAdvancedStartPopCost(True, self.m_pCurrentPlot.getPlotCity())
-					elif (self.getASActiveCulture() != -1 and self.m_pCurrentPlot.isCity()):
-						self.m_iCost = GC.getPlayer(self.m_iCurrentPlayer).getAdvancedStartCultureCost(True, self.m_pCurrentPlot.getPlotCity())
-					elif (self.getASActiveBuilding() != -1 and self.m_pCurrentPlot.isCity()):
-						self.m_iCost = GC.getPlayer(self.m_iCurrentPlayer).getAdvancedStartBuildingCost(self.getASActiveBuilding(), True, self.m_pCurrentPlot.getPlotCity())
-					elif (self.getASActiveRoute() != -1):
-						self.m_iCost = GC.getPlayer(self.m_iCurrentPlayer).getAdvancedStartRouteCost(self.getASActiveRoute(), True, self.m_pCurrentPlot)
-					elif (self.getASActiveImprovement() != -1):
-						self.m_iCost = GC.getPlayer(self.m_iCurrentPlayer).getAdvancedStartImprovementCost(self.getASActiveImprovement(), True, self.m_pCurrentPlot)
-
-				elif (self.m_pCurrentPlot.isAdjacentNonrevealed(CyGame().getActiveTeam())):
-					if (self.getASActiveVisibility() != -1):
-						self.m_iCost = GC.getPlayer(self.m_iCurrentPlayer).getAdvancedStartVisibilityCost(True, self.m_pCurrentPlot)
-			self.m_iCost = max(0, self.m_iCost)
-			self.refreshSideMenu()
-
-	def getASActiveUnit(self):
-		# Unit Tab
-		if (self.m_advancedStartTabCtrl.getActiveTab() == self.m_iASUnitTabID):
-			iUnitType = getASUnit(self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()])
-			return iUnitType
-		return -1
-
-	def getASActiveCity(self):
-		# City Tab
-		if (self.m_advancedStartTabCtrl.getActiveTab() == self.m_iASCityTabID):
-			# City List
-			if (self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] == self.m_iASCityListID):
-				iOptionID = self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()]
-				# Place City
-				if (iOptionID == 0):
-					return 1
-		return -1
-
-	def getASActivePop(self):
-		# City Tab
-		if (self.m_advancedStartTabCtrl.getActiveTab() == self.m_iASCityTabID):
-			# City List
-			if (self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] == self.m_iASCityListID):
-				iOptionID = self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()]
-				# Place Pop
-				if (iOptionID == 1):
-					return 1
-		return -1
-
-	def getASActiveCulture(self):
-		# City Tab
-		if (self.m_advancedStartTabCtrl.getActiveTab() == self.m_iASCityTabID):
-			# City List
-			if (self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] == self.m_iASCityListID):
-				iOptionID = self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()]
-				# Place Culture
-				if (iOptionID == 2):
-					return 1
-		return -1
-
-	def getASActiveBuilding(self):
-		# Building Tab
-		if (self.m_advancedStartTabCtrl.getActiveTab() == self.m_iASCityTabID):
-			# Buildings List
-			if (self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] == self.m_iASBuildingsListID):
-				iBuildingType = getASBuilding(self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()])
-				return iBuildingType
-		return -1
-
-	def getASActiveRoute(self):
-		# Improvements Tab
-		if (self.m_advancedStartTabCtrl.getActiveTab() == self.m_iASImprovementsTabID):
-			# Routes List
-			if (self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] == self.m_iASRoutesListID):
-				iRouteType = getASRoute(self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()])
-				if -1 == iRouteType:
-					self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] = self.m_iASImprovementsListID
-				return iRouteType
-		return -1
-
-	def getASActiveImprovement(self):
-		# Improvements Tab
-		if (self.m_advancedStartTabCtrl.getActiveTab() == self.m_iASImprovementsTabID):
-			# Improvements List
-			if (self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] == self.m_iASImprovementsListID):
-				iImprovementType = getASImprovement(self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()])
-				if -1 == iImprovementType:
-					self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] = self.m_iASRoutesListID
-				return iImprovementType
-		return -1
-
-	def getASActiveVisibility(self):
-		# Visibility Tab
-		if (self.m_advancedStartTabCtrl.getActiveTab() == self.m_iASVisibilityTabID):
-			return 1
-		return -1
-
-	def getASActiveTech(self):
-		# Tech Tab
-		if (self.m_advancedStartTabCtrl.getActiveTab() == self.m_iASTechTabID):
-			return 1
-		return -1
-
-	def placeObject( self ) :
+	def placeObject(self):
 		if self.m_iCurrentX == -1 or self.m_iCurrentY == -1: return
-		if CyInterface().isInAdvancedStart():
-			pPlayer = GC.getPlayer(self.m_iCurrentPlayer)
-			pPlot = CyMap().plot(self.m_iCurrentX, self.m_iCurrentY)
-			iActiveTeam = CyGame().getActiveTeam()
-			if self.m_pCurrentPlot.isRevealed(iActiveTeam, False):
-				# City Tab
-				if self.m_advancedStartTabCtrl.getActiveTab() == self.m_iASCityTabID:
-					# City List
-					if self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] == self.m_iASCityListID:
-						iOptionID = self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()]
-						# Place City
-						if iOptionID == 0:
-							if pPlayer.getAdvancedStartCityCost(True, pPlot) > -1:
-								CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_CITY, self.m_iCurrentPlayer, self.m_iCurrentX, self.m_iCurrentY, -1, True)	#Action, Player, X, Y, Data, bAdd
-
-						# City Population
-						elif iOptionID == 1:
-							if pPlot.isCity():
-								pCity = pPlot.getPlotCity()
-								if pPlayer.getAdvancedStartPopCost(True, pCity) > -1:
-									CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_POP, self.m_iCurrentPlayer, self.m_iCurrentX, self.m_iCurrentY, -1, True)	#Action, Player, X, Y, Data, bAdd
-
-						# City Culture
-						elif iOptionID == 2:
-							if pPlot.isCity():
-								pCity = pPlot.getPlotCity()
-								if pPlayer.getAdvancedStartCultureCost(True, pCity) > -1:
-									CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_CULTURE, self.m_iCurrentPlayer, self.m_iCurrentX, self.m_iCurrentY, -1, True)	#Action, Player, X, Y, Data, bAdd
-
-					# Buildings List
-					elif self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] == self.m_iASBuildingsListID:
-							if pPlot.isCity():
-								pCity = pPlot.getPlotCity()
-								iBuildingType = getASBuilding(self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()])
-								if (iBuildingType != -1 and pPlayer.getAdvancedStartBuildingCost(iBuildingType, True, pCity) != -1):
-									CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_BUILDING, self.m_iCurrentPlayer, self.m_iCurrentX, self.m_iCurrentY, iBuildingType, True)	#Action, Player, X, Y, Data, bAdd
-
-				# Unit Tab
-				elif self.m_advancedStartTabCtrl.getActiveTab() == self.m_iASUnitTabID:
-					iUnitType = getASUnit(self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()])
-					if iUnitType > -1 and pPlayer.getAdvancedStartUnitCost(iUnitType, True, pPlot) > -1:
-						CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_UNIT, self.m_iCurrentPlayer, self.m_iCurrentX, self.m_iCurrentY, iUnitType, True)	#Action, Player, X, Y, Data, bAdd
-
-				# Improvements Tab
-				elif self.m_advancedStartTabCtrl.getActiveTab() == self.m_iASImprovementsTabID:
-					# Routes List
-					if self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] == self.m_iASRoutesListID:
-						iRouteType = getASRoute(self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()])
-						if iRouteType > -1 and pPlayer.getAdvancedStartRouteCost(iRouteType, True, pPlot) > -1:
-							CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_ROUTE, self.m_iCurrentPlayer, self.m_iCurrentX, self.m_iCurrentY, iRouteType, True)	#Action, Player, X, Y, Data, bAdd
-
-					# Improvements List
-					elif self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] == self.m_iASImprovementsListID:
-						iImprovementType = getASImprovement(self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()])
-						if iImprovementType > -1 and pPlayer.getAdvancedStartImprovementCost(iImprovementType, True, pPlot) > -1:
-							CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_IMPROVEMENT, self.m_iCurrentPlayer, self.m_iCurrentX, self.m_iCurrentY, iImprovementType, True)	#Action, Player, X, Y, Data, bAdd
-
-			# Adjacent nonrevealed
-			else:
-				# Visibility Tab
-				if self.m_advancedStartTabCtrl.getActiveTab() == self.m_iASVisibilityTabID:
-					if pPlayer.getAdvancedStartVisibilityCost(True, pPlot) > -1:
-						CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_VISIBILITY, self.m_iCurrentPlayer, self.m_iCurrentX, self.m_iCurrentY, -1, True)	#Action, Player, X, Y, Data, bAdd
-			self.m_bSideMenuDirty = True
-			self.m_bASItemCostDirty = True
-			return 1
 
 		if self.iPlayerAddMode == "EraseAll":
 			self.m_pCurrentPlot.erase()
@@ -486,59 +368,6 @@ class CvWorldBuilderScreen:
 
 	def removeObject( self ):
 		if self.m_iCurrentX == -1 or self.m_iCurrentY == -1: return
-		# Advanced Start
-		if CyInterface().isInAdvancedStart():
-			pPlayer = GC.getPlayer(self.m_iCurrentPlayer)
-			pPlot = CyMap().plot(self.m_iCurrentX, self.m_iCurrentY)
-			iActiveTeam = CyGame().getActiveTeam()
-			if self.m_pCurrentPlot.isRevealed(iActiveTeam, False):
-				# City Tab
-				if (self.m_advancedStartTabCtrl.getActiveTab() == self.m_iASCityTabID):
-					# City List
-					if (self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] == self.m_iASCityListID):
-						iOptionID = self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()]
-						# City Population
-						if (iOptionID == 1):
-							if (pPlot.isCity()):
-								if (pPlot.getPlotCity().getOwner() == self.m_iCurrentPlayer):
-									CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_POP, self.m_iCurrentPlayer, self.m_iCurrentX, self.m_iCurrentY, -1, False)	#Action, Player, X, Y, Data, bAdd
-
-					# Buildings List
-					elif (self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] == self.m_iASBuildingsListID):
-						if (pPlot.isCity()):
-							if (pPlot.getPlotCity().getOwner() == self.m_iCurrentPlayer):
-								iBuildingType = getASBuilding(self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()])
-								if -1 != iBuildingType:
-									CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_BUILDING, self.m_iCurrentPlayer, self.m_iCurrentX, self.m_iCurrentY, iBuildingType, False)	#Action, Player, X, Y, Data, bAdd
-
-				# Unit Tab
-				elif (self.m_advancedStartTabCtrl.getActiveTab() == self.m_iASUnitTabID):
-					iUnitType = getASUnit(self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()])
-					if -1 != iUnitType:
-						CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_UNIT, self.m_iCurrentPlayer, self.m_pCurrentPlot.getX(), self.m_pCurrentPlot.getY(), iUnitType, False)	#Action, Player, X, Y, Data, bAdd
-
-				# Improvements Tab
-				elif (self.m_advancedStartTabCtrl.getActiveTab() == self.m_iASImprovementsTabID):
-					# Routes List
-					if (self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] == self.m_iASRoutesListID):
-						iRouteType = getASRoute(self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()])
-						if -1 != iRouteType:
-							CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_ROUTE, self.m_iCurrentPlayer, self.m_iCurrentX, self.m_iCurrentY, iRouteType, False)	#Action, Player, X, Y, Data, bAdd
-
-					# Improvements List
-					elif (self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] == self.m_iASImprovementsListID):
-						iImprovementType = getASImprovement(self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()])
-						if -1 != iImprovementType:
-							CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_IMPROVEMENT, self.m_iCurrentPlayer, self.m_iCurrentX, self.m_iCurrentY, iImprovementType, False)	#Action, Player, X, Y, Data, bAdd
-
-			# Adjacent nonrevealed
-			else:
-				# Visibility Tab
-				if (self.m_advancedStartTabCtrl.getActiveTab() == self.m_iASVisibilityTabID):
-					return 1
-			self.m_bSideMenuDirty = True
-			self.m_bASItemCostDirty = True
-			return 1
 
 		if self.iPlayerAddMode == "EraseAll":
 			self.m_pCurrentPlot.erase()
@@ -696,23 +525,23 @@ class CvWorldBuilderScreen:
 		self.refreshSideMenu()
 		getWBToolNormalPlayerTabCtrl().enable(False)
 		getWBToolNormalMapTabCtrl().enable(False)
-		return
+
 
 	def normalMapTabModeCB(self):
 		self.iPlayerAddMode = "PlotData"
 		self.refreshSideMenu()
-		return
+
 
 	def revealTabModeCB(self):
 		self.iPlayerAddMode = "RevealPlot"
 		self.refreshSideMenu()
 		self.refreshReveal()
-		return
+
 
 	def toggleCityEditCB(self):
 		self.iPlayerAddMode = "CityDataI"
 		self.refreshSideMenu()
-		return
+
 
 	def landmarkModeCB(self):
 		self.iPlayerAddMode = "AddLandMark"
@@ -725,54 +554,6 @@ class CvWorldBuilderScreen:
 		self.iPlayerAddMode = "EraseAll"
 		self.refreshSideMenu()
 		return
-
-	def setCurrentAdvancedStartIndex(self, argsList):
-		iIndex = int(argsList)
-		self.m_iAdvancedStartCurrentIndexes [self.m_advancedStartTabCtrl.getActiveTab()] = int(argsList)
-		return 1
-
-	def setCurrentAdvancedStartList(self, argsList):
-		self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] = int(argsList)
-		return 1
-
-	def getASUnitTabID(self):
-		return self.m_iASUnitTabID
-
-	def getASUnitListID(self):
-		return self.m_iASUnitListID
-
-	def getASCityTabID(self):
-		return self.m_iASCityTabID
-
-	def getASCityListID(self):
-		return self.m_iASCityListID
-
-	def getASBuildingsListID(self):
-		return self.m_iASBuildingsListID
-
-	def getASAutomateListID(self):
-		return self.m_iASAutomateListID
-
-	def getASImprovementsTabID(self):
-		return self.m_iASImprovementsTabID
-
-	def getASRoutesListID(self):
-		return self.m_iASRoutesListID
-
-	def getASImprovementsListID(self):
-		return self.m_iASImprovementsListID
-
-	def getASVisibilityTabID(self):
-		return self.m_iASVisibilityTabID
-
-	def getASVisibilityListID(self):
-		return self.m_iASVisibilityListID
-
-	def getASTechTabID(self):
-		return self.m_iASTechTabID
-
-	def getASTechListID(self):
-		return self.m_iASTechListID
 
 	def placeMultipleObjects(self):
 		permCurrentPlot = self.m_pCurrentPlot
@@ -870,116 +651,6 @@ class CvWorldBuilderScreen:
 			return True
 		return False
 
-	def setSideMenu(self):
-		screen = CyGInterfaceScreen("WorldBuilderScreen", self.screenId)
-		iButtonWidth = 32
-		iAdjust = iButtonWidth + 3
-
-		iScreenWidth = 16 + iAdjust * 6
-		iScreenHeight = 16 + iAdjust * 4
-
-		iXStart = screen.getXResolution() - iScreenWidth
-		if CyInterface().isInAdvancedStart():
-			iXStart = 0
-			iScreenWidth = 226
-			iScreenHeight = 10 + 37 * 2
-
-		screen.addPanel( "WorldBuilderBackgroundPanel", "", "", True, True, iXStart, 0, iScreenWidth, iScreenHeight, PanelStyles.PANEL_STYLE_MAIN )
-
-		if CyInterface().isInAdvancedStart():
-
-			iX = 50
-			iY = 15
-			szText = u"<font=4>" + CyTranslator().getText("TXT_KEY_WB_AS_POINTS", (GC.getPlayer(CyGame().getActivePlayer()).getAdvancedStartPoints(), )) + "</font>"
-			screen.setLabel("AdvancedStartPointsText", "Background", szText, 1<<0, iX, iY, -2, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
-
-			iY += 30
-			szText = CyTranslator().getText("TXT_KEY_ADVANCED_START_BEGIN_GAME", ())
-			screen.setButtonGFC( "WorldBuilderExitButton", szText, "", iX, iY, 130, 28, WidgetTypes.WIDGET_WB_EXIT_BUTTON, -1, -1, ButtonStyles.BUTTON_STYLE_STANDARD )
-
-			szText = u"<font=4>" + CyTranslator().getText("TXT_KEY_WB_AS_COST_THIS_LOCATION", (self.m_iCost, )) + u"</font>"
-			iY = 85
-			screen.setLabel("AdvancedStartCostText", "Background", szText, 1<<0, iX-20, iY, -2, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
-
-		else:
-			iX = iXStart + 8
-			iY = 10
-
-			screen.setImageButton("Version", CyArtFileMgr().getInterfaceArtInfo("INTERFACE_GENERAL_QUESTIONMARK").getPath(), iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 9)
-			iX += iAdjust
-			screen.setImageButton("WorldBuilderRegenerateMap", CyArtFileMgr().getInterfaceArtInfo("WORLDBUILDER_REVEAL_ALL_TILES").getPath(), iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_WB_REGENERATE_MAP, -1, -1)
-			iX += iAdjust
-			screen.addCheckBoxGFC("WorldBuilderEraseButton", CyArtFileMgr().getInterfaceArtInfo("WORLDBUILDER_ERASE").getPath(), CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
-				iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_WB_ERASE_BUTTON, -1, -1, ButtonStyles.BUTTON_STYLE_LABEL)
-			iX += iAdjust
-			screen.setImageButton("WorldBuilderSaveButton", CyArtFileMgr().getInterfaceArtInfo("WORLDBUILDER_SAVE").getPath(), iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_WB_SAVE_BUTTON, -1, -1)
-			iX += iAdjust
-			screen.setImageButton("WorldBuilderLoadButton", CyArtFileMgr().getInterfaceArtInfo("WORLDBUILDER_LOAD").getPath(), iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_WB_LOAD_BUTTON, -1, -1)
-			iX += iAdjust
-			screen.setImageButton("WorldBuilderExitButton", CyArtFileMgr().getInterfaceArtInfo("WORLDBUILDER_EXIT").getPath(), iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_WB_EXIT_BUTTON, -1, -1)
-
-			iX = iXStart + 8
-			iY += iAdjust
-
-			screen.setImageButton("EditGameOptions", "", iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 23)
-			screen.setStyle("EditGameOptions", "Button_HUDAdvisorVictory_Style")
-			iX += iAdjust
-			screen.setImageButton("EditReligions", "", iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 20)
-			screen.setStyle("EditReligions", "Button_HUDAdvisorReligious_Style")
-			iX += iAdjust
-			screen.setImageButton("EditCorporations", "", iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 21)
-			screen.setStyle("EditCorporations", "Button_HUDAdvisorCorporation_Style")
-			iX += iAdjust
-			screen.setImageButton("EditDiplomacy", "", iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_WB_DIPLOMACY_MODE_BUTTON, -1, -1)
-			screen.setStyle("EditDiplomacy", "Button_HUDAdvisorForeign_Style")
-			iX += iAdjust
-			screen.setImageButton("EditEspionage", "", iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 22)
-			screen.setStyle("EditEspionage", "Button_HUDAdvisorEspionage_Style")
-			iX += iAdjust
-			screen.setImageButton("TradeScreen", "", iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 34)
-			screen.setStyle("TradeScreen", "Button_HUDAdvisorFinance_Style")
-
-			iX = iXStart + 8
-			iY += iAdjust
-			screen.addCheckBoxGFC("WorldBuilderNormalPlayerModeButton", ",Art/Interface/Buttons/Buildings/SDI.dds,Art/Interface/Buttons/FinalFrontier1_Atlas.dds,2,15", CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
-				iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_WB_NORMAL_PLAYER_TAB_MODE_BUTTON, -1, -1, ButtonStyles.BUTTON_STYLE_LABEL)
-			iX += iAdjust
-			screen.addCheckBoxGFC("WorldBuilderNormalMapModeButton", ",Art/Interface/Buttons/Buildings/SDI.dds,Art/Interface/Buttons/FinalFrontier2_Atlas.dds,3,6", CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
-				iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_WB_NORMAL_MAP_TAB_MODE_BUTTON, -1, -1, ButtonStyles.BUTTON_STYLE_LABEL)
-			iX += iAdjust
-			screen.addCheckBoxGFC("WorldBuilderRevealTileModeButton", CyArtFileMgr().getInterfaceArtInfo("INTERFACE_TECH_LOS").getPath(), CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
-				iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_WB_REVEAL_TAB_MODE_BUTTON, -1, -1, ButtonStyles.BUTTON_STYLE_LABEL)
-			iX += iAdjust
-			screen.addCheckBoxGFC("PythonEffectButton", ",Art/Interface/Buttons/Units/Warrior.dds,Art/Interface/Buttons/FinalFrontier2_Atlas.dds,3,4", CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
-				iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 0, ButtonStyles.BUTTON_STYLE_LABEL)
-			iX += iAdjust
-			screen.setImageButton("InfoScreen", "", iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 33)
-			screen.setStyle("InfoScreen", "Button_HUDAdvisorRecord_Style")
-
-			iX = iXStart + 8
-			iY += iAdjust
-
-			screen.addCheckBoxGFC("EditUnitData", ",Art/Interface/Buttons/Units/Warrior.dds,Art/Interface/Buttons/Afterworld_Atlas.dds,4,9", CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
-				iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_WB_UNIT_EDIT_BUTTON, -1, -1, ButtonStyles.BUTTON_STYLE_LABEL)
-			iX += iAdjust
-			screen.addCheckBoxGFC("EditPromotions", ",Art/Interface/Buttons/Promotions/Combat1.dds,Art/Interface/Buttons/Promotions_Atlas.dds,8,2", CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
-				iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 6, ButtonStyles.BUTTON_STYLE_LABEL)
-			iX += iAdjust
-			screen.addCheckBoxGFC("EditCityDataI", CyArtFileMgr().getInterfaceArtInfo("WORLDBUILDER_TOGGLE_CITY_EDIT_MODE").getPath(), CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
-				 iX, iY, iButtonWidth, iButtonWidth,WidgetTypes.WIDGET_WB_CITY_EDIT_BUTTON, -1, -1, ButtonStyles.BUTTON_STYLE_LABEL)
-			iX += iAdjust
-			screen.addCheckBoxGFC("EditCityDataII", ",Art/Interface/Buttons/Buildings/SDI.dds,Art/Interface/Buttons/FinalFrontier2_Atlas.dds,1,8", CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
-				 iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 7, ButtonStyles.BUTTON_STYLE_LABEL)
-			iX += iAdjust
-			screen.addCheckBoxGFC("EditCityBuildings", ",Art/Interface/Buttons/Buildings/SDI.dds,Art/Interface/Buttons/FinalFrontier1_Atlas.dds,5,14", CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
-				 iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 8, ButtonStyles.BUTTON_STYLE_LABEL)
-			iX += iAdjust
-			screen.addCheckBoxGFC("EditEvents", "", CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
-				 iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 10, ButtonStyles.BUTTON_STYLE_LABEL)
-			screen.setStyle("EditEvents", "Button_HUDLog_Style")
-
-			self.setCurrentModeCheckbox()
-		return
 
 	def refreshSideMenu(self):
 		screen = CyGInterfaceScreen("WorldBuilderScreen", self.screenId)
@@ -991,217 +662,208 @@ class CvWorldBuilderScreen:
 		iScreenWidth = 16 + iAdjust * 6
 		iScreenHeight = 16 + iAdjust * 4
 
-		if CyInterface().isInAdvancedStart():
-			iX = 50
-			iY = 15
-			szText = u"<font=4>" + CyTranslator().getText("TXT_KEY_WB_AS_POINTS", (GC.getPlayer(CyGame().getActivePlayer()).getAdvancedStartPoints(), )) + "</font>"
-			screen.setLabel("AdvancedStartPointsText", "Background", szText, 1<<0, iX, iY, -2, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
-			szText = u"<font=4>" + CyTranslator().getText("TXT_KEY_WB_AS_COST_THIS_LOCATION", (self.m_iCost, )) + u"</font>"
-			iY = 85
-			screen.setLabel("AdvancedStartCostText", "Background", szText, 1<<0, iX-20, iY, -2, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1 )
+		screen.deleteWidget("WorldBuilderPlayerChoice")
+		screen.deleteWidget("WorldBuilderLandmarkButton")
+		screen.deleteWidget("WorldBuilderRevealAll")
+		screen.deleteWidget("WorldBuilderUnrevealAll")
+		screen.deleteWidget("WorldBuilderRevealPanel")
+		screen.deleteWidget("WorldBuilderBackgroundBottomPanel")
+		screen.deleteWidget("EditPlayerData")
+		screen.deleteWidget("EditTeamData")
+		screen.deleteWidget("EditTechnologies")
+		screen.deleteWidget("EditProjects")
+		screen.deleteWidget("EditUnitsCities")
+		screen.deleteWidget("ChangeBy")
+		screen.deleteWidget("AddOwnershipButton")
+		screen.deleteWidget("AddUnitsButton")
+		screen.deleteWidget("AddBuildingsButton")
+		screen.deleteWidget("AddCityButton")
+		screen.deleteWidget("EditStartingPlot")
+		screen.deleteWidget("EditPlotData")
+		screen.deleteWidget("AddImprovementButton")
+		screen.deleteWidget("AddBonusButton")
+		screen.deleteWidget("AddPlotTypeButton")
+		screen.deleteWidget("AddTerrainButton")
+		screen.deleteWidget("AddRouteButton")
+		screen.deleteWidget("AddFeatureButton")
+		screen.deleteWidget("AddRiverButton")
+		screen.deleteWidget("WBCurrentItem")
+		screen.deleteWidget("WBSelectClass")
+		screen.deleteWidget("WBSelectItem")
+		screen.deleteWidget("RevealMode")
+		screen.deleteWidget("WorldBuilderEraseAll")
+		screen.deleteWidget("BrushWidth")
+		screen.deleteWidget("BrushHeight")
+		screen.deleteWidget("SensibilityCheck")
+		# Panel Screen
+		nRows = 1
+		if self.iPlayerAddMode in self.PlayerMode or self.iPlayerAddMode in self.RevealMode or self.iPlayerAddMode in self.MapMode:
+			nRows = 3
+		iHeight = 16 + iAdjust * nRows
+		iXStart = screen.getXResolution() - iScreenWidth
+		screen.addPanel("WorldBuilderBackgroundBottomPanel", "", "", True, True, iXStart, iScreenHeight - 10, iScreenWidth, iHeight, PanelStyles.PANEL_STYLE_MAIN )
+		iY = iScreenHeight
+		if self.iPlayerAddMode in self.PlayerMode:
+			iX = iXStart + 8
+			screen.addCheckBoxGFC("AddOwnershipButton", GC.getCivilizationInfo(GC.getPlayer(self.m_iCurrentPlayer).getCivilizationType()).getButton(), CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
+				 iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 28, ButtonStyles.BUTTON_STYLE_LABEL)
+			iX += iAdjust
+			screen.addDropDownBoxGFC("WorldBuilderPlayerChoice", iX, iY, screen.getXResolution() - 8 - iX, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
+			for iPlayer in xrange(GC.getMAX_PLAYERS()):
+				if GC.getPlayer(iPlayer).isEverAlive():
+					sName = GC.getPlayer(iPlayer).getName()
+					if not GC.getPlayer(iPlayer).isAlive():
+						sName = "*" + sName
+					if GC.getPlayer(iPlayer).isTurnActive():
+						sName = "[" + sName + "]"
+					screen.addPullDownString("WorldBuilderPlayerChoice", sName, iPlayer, iPlayer, self.m_iCurrentPlayer == iPlayer)
+			iX = screen.getXResolution() - iScreenWidth + 8
+			iY += iAdjust
+			screen.setImageButton("EditPlayerData", GC.getLeaderHeadInfo(GC.getPlayer(self.m_iCurrentPlayer).getLeaderType()).getButton(), iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 1)
+			iX += iAdjust
+			screen.setImageButton("EditTeamData", ",Art/Interface/Buttons/Buildings/SDI.dds,Art/Interface/Buttons/FinalFrontier2_Atlas.dds,8,7", iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 2)
+			iX += iAdjust
+			screen.setImageButton("EditTechnologies", ",Art/Interface/Buttons/TechTree/Physics.dds,Art/Interface/Buttons/TechTree_Atlas.dds,5,6", iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 3)
+			iX += iAdjust
+			screen.setImageButton("EditProjects", ",Art/Interface/Buttons/Buildings/SDI.dds,Art/Interface/Buttons/Buildings_Atlas.dds,1,6", iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 4)
+			iX += iAdjust
+			screen.setImageButton("EditUnitsCities", ",Art/Interface/Buttons/Buildings/SDI.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,3,12", iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 5)
+			iX += iAdjust
+			screen.addCheckBoxGFC("EditStartingPlot", ",Art/Interface/Buttons/Units/Warrior.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,4,13", CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
+				 iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 32, ButtonStyles.BUTTON_STYLE_LABEL)
+
+			iY += iAdjust
+			iX = iXStart + 8
+			screen.addCheckBoxGFC("AddUnitsButton", ",Art/Interface/Buttons/Units/Warrior.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,6,10", CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
+				 iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 27, ButtonStyles.BUTTON_STYLE_LABEL)
+			iX += iAdjust
+			screen.addCheckBoxGFC("AddBuildingsButton", CyArtFileMgr().getInterfaceArtInfo("INTERFACE_BUTTONS_CITYSELECTION").getPath(), CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
+				 iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 19, ButtonStyles.BUTTON_STYLE_LABEL)
+			iX += iAdjust
+			screen.addCheckBoxGFC("AddCityButton", ",Art/Interface/Buttons/Actions/FoundCity.dds,Art/Interface/Buttons/Charlemagne_Atlas.dds,4,2", CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
+				 iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 18, ButtonStyles.BUTTON_STYLE_LABEL)
+			iX += iAdjust
+			screen.addDropDownBoxGFC("ChangeBy", iX, iY, screen.getXResolution() - 8 - iX, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
+			i = 1
+			while i < 1001:
+				screen.addPullDownString("ChangeBy", str(i), i, i, iChange == i)
+				if str(i)[0] == "1":
+					i *= 5
+				else:
+					i *= 2
+
+		elif self.iPlayerAddMode in self.MapMode:
+			iX = iXStart + 8
+			screen.addCheckBoxGFC("EditPlotData", ",Art/Interface/Buttons/WorldBuilder/Gems.dds,Art/Interface/Buttons/FinalFrontier1_Atlas.dds,4,16", CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
+				 iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1027, -1, ButtonStyles.BUTTON_STYLE_LABEL)
+			iX += iAdjust
+			screen.addCheckBoxGFC("AddRiverButton", CyArtFileMgr().getInterfaceArtInfo("WORLDBUILDER_RIVER_PLACEMENT").getPath(), CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
+				 iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 11, ButtonStyles.BUTTON_STYLE_LABEL)
+			iX += iAdjust
+			screen.addCheckBoxGFC("WorldBuilderLandmarkButton", CyArtFileMgr().getInterfaceArtInfo("WORLDBUILDER_LANDMARK_MODE").getPath(), CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
+				iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_WB_LANDMARK_BUTTON, -1, -1, ButtonStyles.BUTTON_STYLE_LABEL)
+			iX += iAdjust
+			screen.addDropDownBoxGFC("WorldBuilderPlayerChoice", iX, iY, screen.getXResolution() - 8 - iX, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
+			screen.addPullDownString("WorldBuilderPlayerChoice", CyTranslator().getText("TXT_KEY_WB_LANDMARKS", ()), GC.getBARBARIAN_PLAYER(), GC.getBARBARIAN_PLAYER(), self.m_iCurrentPlayer == GC.getBARBARIAN_PLAYER())
+			for iPlayer in xrange(GC.getMAX_PLAYERS()):
+				if iPlayer == GC.getBARBARIAN_PLAYER(): continue
+				if GC.getPlayer(iPlayer).isEverAlive():
+					sName = GC.getPlayer(iPlayer).getName()
+					if not GC.getPlayer(iPlayer).isAlive():
+						sName = "*" + sName
+					if GC.getPlayer(iPlayer).isTurnActive():
+						sName = "[" + sName + "]"
+					screen.addPullDownString("WorldBuilderPlayerChoice", sName, iPlayer, iPlayer, self.m_iCurrentPlayer == iPlayer)
+
+			iX = iXStart + 8
+			iY += iAdjust
+			screen.addCheckBoxGFC("AddImprovementButton", CyArtFileMgr().getInterfaceArtInfo("INTERFACE_TECH_FEATURE_PRODUCTION").getPath(), CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
+				 iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 12, ButtonStyles.BUTTON_STYLE_LABEL)
+			iX += iAdjust
+			screen.addCheckBoxGFC("AddBonusButton", ",Art/Interface/Buttons/WorldBuilder/Gems.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,7,9", CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
+				 iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 13, ButtonStyles.BUTTON_STYLE_LABEL)
+			iX += iAdjust
+			screen.addCheckBoxGFC("AddPlotTypeButton", CyArtFileMgr().getInterfaceArtInfo("WORLDBUILDER_CHANGE_ALL_PLOTS").getPath(), CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
+				 iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 14, ButtonStyles.BUTTON_STYLE_LABEL)
+			iX += iAdjust
+			screen.addCheckBoxGFC("AddTerrainButton", ",Art/Interface/Buttons/BaseTerrain/Grassland.dds,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,3,1", CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
+				 iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 15, ButtonStyles.BUTTON_STYLE_LABEL)
+			iX += iAdjust
+			screen.addCheckBoxGFC("AddRouteButton", "Art/Interface/Buttons/Builds/BuildRoad.dds", CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
+				 iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 16, ButtonStyles.BUTTON_STYLE_LABEL)
+			iX += iAdjust
+			screen.addCheckBoxGFC("AddFeatureButton", ",Art/Interface/Buttons/TerrainFeatures/Forest.dds,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,3,3", CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
+				 iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 17, ButtonStyles.BUTTON_STYLE_LABEL)
+
+			iX = iXStart + 8
+			iY += iAdjust
+			screen.addCheckBoxGFC("SensibilityCheck", ",Art/Interface/Buttons/WorldBuilder/Gems.dds,Art/Interface/Buttons/FinalFrontier1_Atlas.dds,1,16", CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
+				 iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 24, ButtonStyles.BUTTON_STYLE_LABEL)
+			iX += iAdjust
+			iWidth = (screen.getXResolution() - 8 - iX - 3)/2
+			screen.addDropDownBoxGFC("BrushWidth", iX, iY, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
+			for i in range(1, 11):
+				screen.addPullDownString("BrushWidth", "W: " + str(i), i, i, self.iBrushWidth == i)
+			screen.addPullDownString("BrushWidth", "W: " + "--", -1, -1, self.iBrushWidth == -1)
+			iX += iWidth
+			screen.addDropDownBoxGFC("BrushHeight", iX, iY, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
+			for i in range(1, 11):
+				screen.addPullDownString("BrushHeight", "H: " + str(i), i, i, self.iBrushHeight == i)
+			screen.addPullDownString("BrushHeight", "H: " + "--", -1, -1, self.iBrushHeight == -1)
+
+		elif self.iPlayerAddMode in self.RevealMode:
+			iX = iXStart + 8
+			screen.addDropDownBoxGFC("RevealMode", iX, iY, screen.getXResolution() - 8 - iX, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
+			screen.addPullDownString("RevealMode", CyTranslator().getText("TXT_KEY_REVEAL_PLOT",()), 0, 0, self.iPlayerAddMode == self.RevealMode[0])
+			screen.addPullDownString("RevealMode", CyTranslator().getText("TXT_KEY_REVEAL_SUBMARINE",()), 1, 1, self.iPlayerAddMode == self.RevealMode[1])
+			screen.addPullDownString("RevealMode", CyTranslator().getText("TXT_KEY_REVEAL_STEALTH",()), 2, 2, self.iPlayerAddMode == self.RevealMode[2])
+			screen.addPullDownString("RevealMode", GC.getMissionInfo(GC.getInfoTypeForString("MISSION_PLUNDER")).getDescription(), 3, 3, self.iPlayerAddMode == self.RevealMode[3])
+
+			iY += iAdjust
+			screen.setImageButton("WorldBuilderRevealAll", CyArtFileMgr().getInterfaceArtInfo("WORLDBUILDER_REVEAL_ALL_TILES").getPath(), iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_WB_REVEAL_ALL_BUTTON, -1, -1)
+			iX += iAdjust
+			screen.addDropDownBoxGFC("WorldBuilderPlayerChoice", iX, iY, screen.getXResolution() - 8 - iX, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
+			for iPlayer in xrange(GC.getMAX_PLAYERS()):
+				if GC.getPlayer(iPlayer).isEverAlive():
+					sName = GC.getPlayer(iPlayer).getName()
+					if not GC.getPlayer(iPlayer).isAlive():
+						sName = "*" + sName
+					if GC.getPlayer(iPlayer).isTurnActive():
+						sName = "[" + sName + "]"
+					screen.addPullDownString("WorldBuilderPlayerChoice", sName, iPlayer, iPlayer, self.m_iCurrentPlayer == iPlayer)
+			iX = iXStart + 8
+			iY += iAdjust
+			screen.setImageButton("WorldBuilderUnrevealAll", CyArtFileMgr().getInterfaceArtInfo("WORLDBUILDER_UNREVEAL_ALL_TILES").getPath(), iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_WB_UNREVEAL_ALL_BUTTON, -1, -1)
+			iX += iAdjust
+			iWidth = (screen.getXResolution() - 8 - iX - 3)/2
+			screen.addDropDownBoxGFC("BrushWidth", iX, iY, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
+			for i in range(1, 11):
+				screen.addPullDownString("BrushWidth", "W: " + str(i), i, i, self.iBrushWidth == i)
+			screen.addPullDownString("BrushWidth", "W: " + "--", -1, -1, self.iBrushWidth == -1)
+			iX += iWidth
+			screen.addDropDownBoxGFC("BrushHeight", iX, iY, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
+			for i in range(1, 11):
+				screen.addPullDownString("BrushHeight", "H: " + str(i), i, i, self.iBrushHeight == i)
+			screen.addPullDownString("BrushHeight", "H: " + "--", -1, -1, self.iBrushHeight == -1)
+
+		elif self.iPlayerAddMode == "EraseAll":
+			iX = iXStart + 8
+			screen.setImageButton( "WorldBuilderEraseAll", CyArtFileMgr().getInterfaceArtInfo("WORLDBUILDER_UNREVEAL_ALL_TILES").getPath(), iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 29)
+			iX += iAdjust
+			iWidth = (screen.getXResolution() - 8 - iX - 3)/2
+			screen.addDropDownBoxGFC("BrushWidth", iX, iY, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
+			for i in range(1, 11):
+				screen.addPullDownString("BrushWidth", "W: " + str(i), i, i, self.iBrushWidth == i)
+			screen.addPullDownString("BrushWidth", "W: " + "--", -1, -1, self.iBrushWidth == -1)
+			iX += iWidth
+			screen.addDropDownBoxGFC("BrushHeight", iX, iY, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
+			for i in range(1, 11):
+				screen.addPullDownString("BrushHeight", "H: " + str(i), i, i, self.iBrushHeight == i)
+			screen.addPullDownString("BrushHeight", "H: " + "--", -1, -1, self.iBrushHeight == -1)
 		else:
-			screen.deleteWidget("WorldBuilderPlayerChoice")
-			screen.deleteWidget("WorldBuilderLandmarkButton")
-			screen.deleteWidget("WorldBuilderRevealAll")
-			screen.deleteWidget("WorldBuilderUnrevealAll")
-			screen.deleteWidget("WorldBuilderRevealPanel")
 			screen.deleteWidget("WorldBuilderBackgroundBottomPanel")
-			screen.deleteWidget("EditPlayerData")
-			screen.deleteWidget("EditTeamData")
-			screen.deleteWidget("EditTechnologies")
-			screen.deleteWidget("EditProjects")
-			screen.deleteWidget("EditUnitsCities")
-			screen.deleteWidget("ChangeBy")
-			screen.deleteWidget("AddOwnershipButton")
-			screen.deleteWidget("AddUnitsButton")
-			screen.deleteWidget("AddBuildingsButton")
-			screen.deleteWidget("AddCityButton")
-			screen.deleteWidget("EditStartingPlot")
-			screen.deleteWidget("EditPlotData")
-			screen.deleteWidget("AddImprovementButton")
-			screen.deleteWidget("AddBonusButton")
-			screen.deleteWidget("AddPlotTypeButton")
-			screen.deleteWidget("AddTerrainButton")
-			screen.deleteWidget("AddRouteButton")
-			screen.deleteWidget("AddFeatureButton")
-			screen.deleteWidget("AddRiverButton")
-			screen.deleteWidget("WBCurrentItem")
-			screen.deleteWidget("WBSelectClass")
-			screen.deleteWidget("WBSelectItem")
-			screen.deleteWidget("RevealMode")
-			screen.deleteWidget("WorldBuilderEraseAll")
-			screen.deleteWidget("BrushWidth")
-			screen.deleteWidget("BrushHeight")
-			screen.deleteWidget("SensibilityCheck")
-## Panel Screen ##
-			nRows = 1
-			if self.iPlayerAddMode in self.PlayerMode or self.iPlayerAddMode in self.RevealMode or self.iPlayerAddMode in self.MapMode:
-				nRows = 3
-			iHeight = 16 + iAdjust * nRows
-			iXStart = screen.getXResolution() - iScreenWidth
-			screen.addPanel("WorldBuilderBackgroundBottomPanel", "", "", True, True, iXStart, iScreenHeight - 10, iScreenWidth, iHeight, PanelStyles.PANEL_STYLE_MAIN )
-			iY = iScreenHeight
-			if self.iPlayerAddMode in self.PlayerMode:
-				iX = iXStart + 8
-				screen.addCheckBoxGFC("AddOwnershipButton", GC.getCivilizationInfo(GC.getPlayer(self.m_iCurrentPlayer).getCivilizationType()).getButton(), CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
-					 iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 28, ButtonStyles.BUTTON_STYLE_LABEL)
-				iX += iAdjust
-				screen.addDropDownBoxGFC("WorldBuilderPlayerChoice", iX, iY, screen.getXResolution() - 8 - iX, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
-				for iPlayer in xrange(GC.getMAX_PLAYERS()):
-					if GC.getPlayer(iPlayer).isEverAlive():
-						sName = GC.getPlayer(iPlayer).getName()
-						if not GC.getPlayer(iPlayer).isAlive():
-							sName = "*" + sName
-						if GC.getPlayer(iPlayer).isTurnActive():
-							sName = "[" + sName + "]"
-						screen.addPullDownString("WorldBuilderPlayerChoice", sName, iPlayer, iPlayer, self.m_iCurrentPlayer == iPlayer)
-				iX = screen.getXResolution() - iScreenWidth + 8
-				iY += iAdjust
-				screen.setImageButton("EditPlayerData", GC.getLeaderHeadInfo(GC.getPlayer(self.m_iCurrentPlayer).getLeaderType()).getButton(), iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 1)
-				iX += iAdjust
-				screen.setImageButton("EditTeamData", ",Art/Interface/Buttons/Buildings/SDI.dds,Art/Interface/Buttons/FinalFrontier2_Atlas.dds,8,7", iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 2)
-				iX += iAdjust
-				screen.setImageButton("EditTechnologies", ",Art/Interface/Buttons/TechTree/Physics.dds,Art/Interface/Buttons/TechTree_Atlas.dds,5,6", iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 3)
-				iX += iAdjust
-				screen.setImageButton("EditProjects", ",Art/Interface/Buttons/Buildings/SDI.dds,Art/Interface/Buttons/Buildings_Atlas.dds,1,6", iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 4)
-				iX += iAdjust
-				screen.setImageButton("EditUnitsCities", ",Art/Interface/Buttons/Buildings/SDI.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,3,12", iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 5)
-				iX += iAdjust
-				screen.addCheckBoxGFC("EditStartingPlot", ",Art/Interface/Buttons/Units/Warrior.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,4,13", CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
-					 iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 32, ButtonStyles.BUTTON_STYLE_LABEL)
-
-				iY += iAdjust
-				iX = iXStart + 8
-				screen.addCheckBoxGFC("AddUnitsButton", ",Art/Interface/Buttons/Units/Warrior.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,6,10", CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
-					 iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 27, ButtonStyles.BUTTON_STYLE_LABEL)
-				iX += iAdjust
-				screen.addCheckBoxGFC("AddBuildingsButton", CyArtFileMgr().getInterfaceArtInfo("INTERFACE_BUTTONS_CITYSELECTION").getPath(), CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
-					 iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 19, ButtonStyles.BUTTON_STYLE_LABEL)
-				iX += iAdjust
-				screen.addCheckBoxGFC("AddCityButton", ",Art/Interface/Buttons/Actions/FoundCity.dds,Art/Interface/Buttons/Charlemagne_Atlas.dds,4,2", CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
-					 iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 18, ButtonStyles.BUTTON_STYLE_LABEL)
-				iX += iAdjust
-				screen.addDropDownBoxGFC("ChangeBy", iX, iY, screen.getXResolution() - 8 - iX, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
-				i = 1
-				while i < 1001:
-					screen.addPullDownString("ChangeBy", str(i), i, i, iChange == i)
-					if str(i)[0] == "1":
-						i *= 5
-					else:
-						i *= 2
-
-			elif self.iPlayerAddMode in self.MapMode:
-				iX = iXStart + 8
-				screen.addCheckBoxGFC("EditPlotData", ",Art/Interface/Buttons/WorldBuilder/Gems.dds,Art/Interface/Buttons/FinalFrontier1_Atlas.dds,4,16", CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
-					 iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1027, -1, ButtonStyles.BUTTON_STYLE_LABEL)
-				iX += iAdjust
-				screen.addCheckBoxGFC("AddRiverButton", CyArtFileMgr().getInterfaceArtInfo("WORLDBUILDER_RIVER_PLACEMENT").getPath(), CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
-					 iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 11, ButtonStyles.BUTTON_STYLE_LABEL)
-				iX += iAdjust
-				screen.addCheckBoxGFC("WorldBuilderLandmarkButton", CyArtFileMgr().getInterfaceArtInfo("WORLDBUILDER_LANDMARK_MODE").getPath(), CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
-					iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_WB_LANDMARK_BUTTON, -1, -1, ButtonStyles.BUTTON_STYLE_LABEL)
-				iX += iAdjust
-				screen.addDropDownBoxGFC("WorldBuilderPlayerChoice", iX, iY, screen.getXResolution() - 8 - iX, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
-				screen.addPullDownString("WorldBuilderPlayerChoice", CyTranslator().getText("TXT_KEY_WB_LANDMARKS", ()), GC.getBARBARIAN_PLAYER(), GC.getBARBARIAN_PLAYER(), self.m_iCurrentPlayer == GC.getBARBARIAN_PLAYER())
-				for iPlayer in xrange(GC.getMAX_PLAYERS()):
-					if iPlayer == GC.getBARBARIAN_PLAYER(): continue
-					if GC.getPlayer(iPlayer).isEverAlive():
-						sName = GC.getPlayer(iPlayer).getName()
-						if not GC.getPlayer(iPlayer).isAlive():
-							sName = "*" + sName
-						if GC.getPlayer(iPlayer).isTurnActive():
-							sName = "[" + sName + "]"
-						screen.addPullDownString("WorldBuilderPlayerChoice", sName, iPlayer, iPlayer, self.m_iCurrentPlayer == iPlayer)
-
-				iX = iXStart + 8
-				iY += iAdjust
-				screen.addCheckBoxGFC("AddImprovementButton", CyArtFileMgr().getInterfaceArtInfo("INTERFACE_TECH_FEATURE_PRODUCTION").getPath(), CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
-					 iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 12, ButtonStyles.BUTTON_STYLE_LABEL)
-				iX += iAdjust
-				screen.addCheckBoxGFC("AddBonusButton", ",Art/Interface/Buttons/WorldBuilder/Gems.dds,Art/Interface/Buttons/Warlords_Atlas_1.dds,7,9", CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
-					 iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 13, ButtonStyles.BUTTON_STYLE_LABEL)
-				iX += iAdjust
-				screen.addCheckBoxGFC("AddPlotTypeButton", CyArtFileMgr().getInterfaceArtInfo("WORLDBUILDER_CHANGE_ALL_PLOTS").getPath(), CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
-					 iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 14, ButtonStyles.BUTTON_STYLE_LABEL)
-				iX += iAdjust
-				screen.addCheckBoxGFC("AddTerrainButton", ",Art/Interface/Buttons/BaseTerrain/Grassland.dds,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,3,1", CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
-					 iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 15, ButtonStyles.BUTTON_STYLE_LABEL)
-				iX += iAdjust
-				screen.addCheckBoxGFC("AddRouteButton", "Art/Interface/Buttons/Builds/BuildRoad.dds", CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
-					 iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 16, ButtonStyles.BUTTON_STYLE_LABEL)
-				iX += iAdjust
-				screen.addCheckBoxGFC("AddFeatureButton", ",Art/Interface/Buttons/TerrainFeatures/Forest.dds,Art/Interface/Buttons/BaseTerrain_TerrainFeatures_Atlas.dds,3,3", CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
-					 iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 17, ButtonStyles.BUTTON_STYLE_LABEL)
-
-				iX = iXStart + 8
-				iY += iAdjust
-				screen.addCheckBoxGFC("SensibilityCheck", ",Art/Interface/Buttons/WorldBuilder/Gems.dds,Art/Interface/Buttons/FinalFrontier1_Atlas.dds,1,16", CyArtFileMgr().getInterfaceArtInfo("BUTTON_HILITE_SQUARE").getPath(),
-					 iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 24, ButtonStyles.BUTTON_STYLE_LABEL)
-				iX += iAdjust
-				iWidth = (screen.getXResolution() - 8 - iX - 3)/2
-				screen.addDropDownBoxGFC("BrushWidth", iX, iY, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
-				for i in range(1, 11):
-					screen.addPullDownString("BrushWidth", "W: " + str(i), i, i, self.iBrushWidth == i)
-				screen.addPullDownString("BrushWidth", "W: " + "--", -1, -1, self.iBrushWidth == -1)
-				iX += iWidth
-				screen.addDropDownBoxGFC("BrushHeight", iX, iY, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
-				for i in range(1, 11):
-					screen.addPullDownString("BrushHeight", "H: " + str(i), i, i, self.iBrushHeight == i)
-				screen.addPullDownString("BrushHeight", "H: " + "--", -1, -1, self.iBrushHeight == -1)
-
-			elif self.iPlayerAddMode in self.RevealMode:
-				iX = iXStart + 8
-				screen.addDropDownBoxGFC("RevealMode", iX, iY, screen.getXResolution() - 8 - iX, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
-				screen.addPullDownString("RevealMode", CyTranslator().getText("TXT_KEY_REVEAL_PLOT",()), 0, 0, self.iPlayerAddMode == self.RevealMode[0])
-				screen.addPullDownString("RevealMode", CyTranslator().getText("TXT_KEY_REVEAL_SUBMARINE",()), 1, 1, self.iPlayerAddMode == self.RevealMode[1])
-				screen.addPullDownString("RevealMode", CyTranslator().getText("TXT_KEY_REVEAL_STEALTH",()), 2, 2, self.iPlayerAddMode == self.RevealMode[2])
-				screen.addPullDownString("RevealMode", GC.getMissionInfo(GC.getInfoTypeForString("MISSION_PLUNDER")).getDescription(), 3, 3, self.iPlayerAddMode == self.RevealMode[3])
-
-				iY += iAdjust
-				screen.setImageButton("WorldBuilderRevealAll", CyArtFileMgr().getInterfaceArtInfo("WORLDBUILDER_REVEAL_ALL_TILES").getPath(), iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_WB_REVEAL_ALL_BUTTON, -1, -1)
-				iX += iAdjust
-				screen.addDropDownBoxGFC("WorldBuilderPlayerChoice", iX, iY, screen.getXResolution() - 8 - iX, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
-				for iPlayer in xrange(GC.getMAX_PLAYERS()):
-					if GC.getPlayer(iPlayer).isEverAlive():
-						sName = GC.getPlayer(iPlayer).getName()
-						if not GC.getPlayer(iPlayer).isAlive():
-							sName = "*" + sName
-						if GC.getPlayer(iPlayer).isTurnActive():
-							sName = "[" + sName + "]"
-						screen.addPullDownString("WorldBuilderPlayerChoice", sName, iPlayer, iPlayer, self.m_iCurrentPlayer == iPlayer)
-				iX = iXStart + 8
-				iY += iAdjust
-				screen.setImageButton("WorldBuilderUnrevealAll", CyArtFileMgr().getInterfaceArtInfo("WORLDBUILDER_UNREVEAL_ALL_TILES").getPath(), iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_WB_UNREVEAL_ALL_BUTTON, -1, -1)
-				iX += iAdjust
-				iWidth = (screen.getXResolution() - 8 - iX - 3)/2
-				screen.addDropDownBoxGFC("BrushWidth", iX, iY, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
-				for i in range(1, 11):
-					screen.addPullDownString("BrushWidth", "W: " + str(i), i, i, self.iBrushWidth == i)
-				screen.addPullDownString("BrushWidth", "W: " + "--", -1, -1, self.iBrushWidth == -1)
-				iX += iWidth
-				screen.addDropDownBoxGFC("BrushHeight", iX, iY, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
-				for i in range(1, 11):
-					screen.addPullDownString("BrushHeight", "H: " + str(i), i, i, self.iBrushHeight == i)
-				screen.addPullDownString("BrushHeight", "H: " + "--", -1, -1, self.iBrushHeight == -1)
-
-			elif self.iPlayerAddMode == "EraseAll":
-				iX = iXStart + 8
-				screen.setImageButton( "WorldBuilderEraseAll", CyArtFileMgr().getInterfaceArtInfo("WORLDBUILDER_UNREVEAL_ALL_TILES").getPath(), iX, iY, iButtonWidth, iButtonWidth, WidgetTypes.WIDGET_PYTHON, 1029, 29)
-				iX += iAdjust
-				iWidth = (screen.getXResolution() - 8 - iX - 3)/2
-				screen.addDropDownBoxGFC("BrushWidth", iX, iY, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
-				for i in range(1, 11):
-					screen.addPullDownString("BrushWidth", "W: " + str(i), i, i, self.iBrushWidth == i)
-				screen.addPullDownString("BrushWidth", "W: " + "--", -1, -1, self.iBrushWidth == -1)
-				iX += iWidth
-				screen.addDropDownBoxGFC("BrushHeight", iX, iY, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
-				for i in range(1, 11):
-					screen.addPullDownString("BrushHeight", "H: " + str(i), i, i, self.iBrushHeight == i)
-				screen.addPullDownString("BrushHeight", "H: " + "--", -1, -1, self.iBrushHeight == -1)
-			else:
-				screen.deleteWidget("WorldBuilderBackgroundBottomPanel")
-			self.setCurrentModeCheckbox()
-			self.setSelectionTable()
+		self.setCurrentModeCheckbox()
+		self.setSelectionTable()
 
 	def setCurrentModeCheckbox(self):
 		screen = CyGInterfaceScreen("WorldBuilderScreen", self.screenId)
@@ -1235,7 +897,6 @@ class CvWorldBuilderScreen:
 	def setSelectionTable(self):
 		screen = CyGInterfaceScreen("WorldBuilderScreen",self.screenId)
 		iWidth = 200
-		iCivilization = GC.getPlayer(self.m_iCurrentPlayer).getCivilizationType()
 		if self.iPlayerAddMode == "Units":
 			iY = 25
 			screen.addDropDownBoxGFC("WBSelectClass", 0, iY, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
@@ -1516,68 +1177,8 @@ class CvWorldBuilderScreen:
 ## Platy Reveal Mode End ##
 
 	def Exit(self):
+		print "WAKAWAKA EXIT WB"
 		CyInterface().setWorldBuilder(False)
-		return
-
-	def refreshAdvancedStartTabCtrl(self, bReuse):
-		if CyInterface().isInAdvancedStart():
-			iActiveTab = 0
-			iActiveList = 0
-			iActiveIndex = 0
-
-			if self.m_advancedStartTabCtrl and bReuse:
-				iActiveTab = self.m_advancedStartTabCtrl.getActiveTab()
-				iActiveList = self.m_iAdvancedStartCurrentList[iActiveTab]
-				iActiveIndex = self.m_iAdvancedStartCurrentIndexes[iActiveTab]
-
-			self.m_iCurrentPlayer = CyGame().getActivePlayer()
-			self.m_iCurrentTeam = CyGame().getActiveTeam()
-			self.m_iAdvancedStartCurrentIndexes = []
-			self.m_iAdvancedStartCurrentList = []
-
-			initWBToolAdvancedStartControl()
-
-			self.m_advancedStartTabCtrl = getWBToolAdvancedStartTabCtrl()
-
-			self.m_advancedStartTabCtrl.setNumColumns((GC.getNumBuildingInfos()/10)+2);
-			self.m_advancedStartTabCtrl.addTabSection(CyTranslator().getText("TXT_KEY_WB_AS_CITIES",()));
-			self.m_iAdvancedStartCurrentIndexes.append(0)
-
-			self.m_iAdvancedStartCurrentList.append(self.m_iASCityListID)
-
-			self.m_advancedStartTabCtrl.setNumColumns((GC.getNumUnitInfos()/10)+2);
-			self.m_advancedStartTabCtrl.addTabSection(CyTranslator().getText("TXT_KEY_WB_AS_UNITS",()));
-			self.m_iAdvancedStartCurrentIndexes.append(0)
-
-			self.m_iAdvancedStartCurrentList.append(0)
-
-			self.m_advancedStartTabCtrl.setNumColumns((GC.getNumImprovementInfos()/10)+2);
-			self.m_advancedStartTabCtrl.addTabSection(CyTranslator().getText("TXT_KEY_WB_AS_IMPROVEMENTS",()));
-			self.m_iAdvancedStartCurrentIndexes.append(0)
-
-			self.m_iAdvancedStartCurrentList.append(self.m_iASRoutesListID)
-
-			self.m_advancedStartTabCtrl.setNumColumns(1);
-			self.m_advancedStartTabCtrl.addTabSection(CyTranslator().getText("TXT_KEY_WB_AS_VISIBILITY",()));
-			self.m_iAdvancedStartCurrentIndexes.append(0)
-
-			self.m_iAdvancedStartCurrentList.append(0)
-
-			self.m_advancedStartTabCtrl.setNumColumns(1);
-			self.m_advancedStartTabCtrl.addTabSection(CyTranslator().getText("TXT_KEY_WB_AS_TECH",()));
-			self.m_iAdvancedStartCurrentIndexes.append(0)
-
-			self.m_iAdvancedStartCurrentList.append(0)
-
-			addWBAdvancedStartControlTabs()
-
-			self.m_advancedStartTabCtrl.setActiveTab(iActiveTab)
-			self.setCurrentAdvancedStartIndex(iActiveIndex)
-			self.setCurrentAdvancedStartList(iActiveList)
-		else:
-			self.m_advancedStartTabCtrl = getWBToolAdvancedStartTabCtrl()
-			self.m_advancedStartTabCtrl.enable(False)
-		return
 
 	def setRiverHighlights(self):
 		CyEngine().clearColoredPlots(PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_REVEALED_PLOTS)
@@ -1589,12 +1190,11 @@ class CvWorldBuilderScreen:
 				CyEngine().addColoredPlotAlt(x, y, PlotStyles.PLOT_STYLE_BOX_FILL, PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_REVEALED_PLOTS, "COLOR_WHITE", .2)
 		return
 
-	def leftMouseDown (self, argsList):
+	def leftMouseDown(self, argsList):
 		bShift, bCtrl, bAlt = argsList
 		pPlayer = GC.getPlayer(self.m_iCurrentPlayer)
-		if CyInterface().isInAdvancedStart():
-			self.placeObject()
-		elif bAlt or self.iPlayerAddMode == "EditUnit":
+
+		if bAlt or self.iPlayerAddMode == "EditUnit":
 			if self.m_pCurrentPlot.getNumUnits():
 				WBUnitScreen.WBUnitScreen(self).interfaceScreen(self.m_pCurrentPlot.getUnit(0))
 		elif self.iPlayerAddMode == "Promotions":
@@ -1765,9 +1365,8 @@ class CvWorldBuilderScreen:
 		pNewCity.setWallOverride(pOldCity.isWallOverride())
 
 	def rightMouseDown (self, argsList):
-		if CyInterface().isInAdvancedStart():
-			self.removeObject()
-		elif self.iPlayerAddMode in self.RevealMode:
+
+		if self.iPlayerAddMode in self.RevealMode:
 			if not self.m_pCurrentPlot.isNone():
 				self.setMultipleReveal(False)
 		elif self.useLargeBrush():
