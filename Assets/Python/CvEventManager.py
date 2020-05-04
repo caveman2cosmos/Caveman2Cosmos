@@ -2564,9 +2564,8 @@ class CvEventManager:
 		# Give extra population to new cities
 		iPop = 0
 		aWonderTuple = self.aWonderTuple
-		if "GREAT_BATH" in aWonderTuple[0]:
-			if iPlayer == aWonderTuple[4][aWonderTuple[0].index("GREAT_BATH")]:
-				iPop += 1
+		if "GREAT_BATH" in aWonderTuple[0] and iPlayer == aWonderTuple[4][aWonderTuple[0].index("GREAT_BATH")]:
+			iPop += 1
 		if CyUnit:
 			iUnit = CyUnit.getUnitType()
 			if iUnit in self.mapSettlerPop:

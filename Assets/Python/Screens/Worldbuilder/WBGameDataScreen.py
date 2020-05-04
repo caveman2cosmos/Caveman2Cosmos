@@ -22,14 +22,14 @@ class WBGameDataScreen:
 
 	def interfaceScreen(self):
 		screen = CyGInterfaceScreen( "WBGameDataScreen", CvScreenEnums.WB_GAMEDATA)
-		
+
 		screen.setRenderInterfaceOnly(True)
 		screen.addPanel( "MainBG", u"", u"", True, False, -10, -10, screen.getXResolution() + 20, screen.getYResolution() + 20, PanelStyles.PANEL_STYLE_MAIN )
 		screen.showScreen(PopupStates.POPUPSTATE_IMMEDIATE, False)
 
 		screen.setLabel("GameDataHeader", "Background", "<font=4b>" + CyTranslator().getText("TXT_KEY_PITBOSS_GAME_OPTIONS",()) + "</font>", 1<<2, screen.getXResolution() /2, 20, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 		screen.setText("GameDataExit", "Background", "<font=4>" + CyTranslator().getText("TXT_KEY_PEDIA_SCREEN_EXIT", ()).upper() + "</font>", 1<<1, screen.getXResolution() - 30, screen.getYResolution() - 42, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_CLOSE_SCREEN, -1, -1 )
-		
+
 		iWidth = screen.getXResolution()/4 - 40
 		screen.addDropDownBoxGFC("ChangeBy", 20, 50, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
 		i = 1
@@ -114,20 +114,20 @@ class WBGameDataScreen:
 
 		screen.setButtonGFC("AIAutoPlayPlus", "", "", screen.getXResolution() /4 + 20, iY, 24, 24, WidgetTypes.WIDGET_PYTHON, 1030, -1, ButtonStyles.BUTTON_STYLE_CITY_PLUS)
 		screen.setButtonGFC("AIAutoPlayMinus", "", "", screen.getXResolution() /4 + 45, iY, 24, 24, WidgetTypes.WIDGET_PYTHON, 1031, -1, ButtonStyles.BUTTON_STYLE_CITY_MINUS)
-		sText = CyTranslator().getText("TXT_KEY_WB_AI_AUTOPLAY", (CyGame().getAIAutoPlay(),))
+		sText = CyTranslator().getText("TXT_KEY_WB_AI_AUTOPLAY", (CyGame().getAIAutoPlay(self.top.m_iCurrentPlayer),))
 		screen.setLabel("AIAutoPlayText", "Background", "<font=3>" + sText + "</font>", 1<<0, screen.getXResolution() /4 + 75, iY + 1, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		iY += 30
 		screen.setLabel("AutoPlayStop", "Background", "<font=3>" + CyTranslator().getText("TXT_KEY_WB_AI_AUTOPLAY_WARNING",()) + "</font>", 1<<2, screen.getXResolution() /4, iY, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-		
+
 	def placeNewPlayer(self):
-		if CyGame().countCivPlayersEverAlive() == GC.getMAX_CIV_PLAYERS(): return
+		if CyGame().countCivPlayersEverAlive() == GC.getMAX_PC_PLAYERS(): return
 		screen = CyGInterfaceScreen( "WBGameDataScreen", CvScreenEnums.WB_GAMEDATA)
 		sHeaderText = CyTranslator().getText("TXT_KEY_WB_ADD_NEW_PLAYER",())
-		
+
 		sColor = CyTranslator().getText("[COLOR_WARNING_TEXT]", ())
 		if bRepeat:
-			sColor = CyTranslator().getText("[COLOR_POSITIVE_TEXT]", ()) 
+			sColor = CyTranslator().getText("[COLOR_POSITIVE_TEXT]", ())
 		screen.setText("AllowsRepeat", "Background", "<font=3b>" + sColor + CyTranslator().getText("TXT_KEY_MAIN_MENU_REPEAT_PASSWORD",()) + "</color></font>", 1<<1, screen.getXResolution() - 20, self.iNewPlayer_Y - 30, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_PYTHON, 1029, 30)
 		iWidth = screen.getXResolution()/2 - 40
 		iHeight = (screen.getYResolution()/2 - self.iNewPlayer_Y - 10) /48 * 24 + 2
@@ -164,7 +164,7 @@ class WBGameDataScreen:
 			for i in xrange(nColumns):
 				screen.setTableColumnHeader("WBNewLeader", i, "", iWidth/nColumns)
 
-			
+
 			lList = []
 			for item in xrange(GC.getNumLeaderHeadInfos()):
 				Info = GC.getLeaderHeadInfo(item)
@@ -203,7 +203,7 @@ class WBGameDataScreen:
 		screen = CyGInterfaceScreen( "WBGameDataScreen", CvScreenEnums.WB_GAMEDATA)
 		sColor = CyTranslator().getText("[COLOR_WARNING_TEXT]", ())
 		if bHiddenOption:
-			sColor = CyTranslator().getText("[COLOR_POSITIVE_TEXT]", ()) 
+			sColor = CyTranslator().getText("[COLOR_POSITIVE_TEXT]", ())
 		screen.setText("HiddenOptions", "Background", "<font=3b>" + sColor + CyTranslator().getText("TXT_KEY_WB_SHOW_HIDDEN",()) + "</color></font>", 1<<1, screen.getXResolution() - 20, self.iGameOption_Y - 30, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 		iWidth = screen.getXResolution() - 40
 		iHeight = (screen.getYResolution() - self.iGameOption_Y - 40) /24 * 24 + 2
@@ -323,9 +323,9 @@ class WBGameDataScreen:
 
 		elif inputClass.getFunctionName().find("AIAutoPlay") > -1:
 			if inputClass.getData1() == 1030:
-				CyGame().setAIAutoPlay(CyGame().getAIAutoPlay() + iChange)
+				CyGame().setAIAutoPlay(CyGame().getAIAutoPlay(self.top.m_iCurrentPlayer) + iChange)
 			elif inputClass.getData1() == 1031:
-				CyGame().setAIAutoPlay(max(0, CyGame().getAIAutoPlay() - iChange))
+				CyGame().setAIAutoPlay(max(0, CyGame().getAIAutoPlay(self.top.m_iCurrentPlayer) - iChange))
 			self.placeStats()
 
 		elif inputClass.getFunctionName() == "WBGameOptions":
@@ -354,7 +354,7 @@ class WBGameDataScreen:
 			self.interfaceScreen()
 
 		elif inputClass.getFunctionName() == "CreatePlayer":
-			for i in xrange(GC.getMAX_CIV_PLAYERS()):
+			for i in xrange(GC.getMAX_PC_PLAYERS()):
 				if not GC.getPlayer(i).isEverAlive():
 					CyGame().addPlayer(i, iSelectedLeader, iSelectedCiv)
 					break
@@ -389,14 +389,14 @@ class WBGameDataScreen:
 					if CyGame().isOption(GameOptionTypes.GAMEOPTION_ALWAYS_WAR) and GC.getTeam(iTeamY).isHuman(): continue
 					pTeamX.makePeace(iTeamY)
 		elif iGameOption == GameOptionTypes.GAMEOPTION_ONE_CITY_CHALLENGE and CyGame().isOption(iGameOption):
-			for iPlayerX in xrange(GC.getMAX_CIV_PLAYERS()):
+			for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
 				pPlayerX = GC.getPlayer(iPlayerX)
 				if pPlayerX.isHuman():
-					(loopCity, iter) = pPlayerX.firstCity(false)
-					while(loopCity):
-						if not loopCity.isCapital():
-							loopCity.kill()
-						(loopCity, iter) = pPlayerX.nextCity(iter, false)
+					cityX, i = pPlayerX.firstCity(false)
+					while cityX:
+						if not cityX.isCapital():
+							cityX.kill()
+						cityX, i = pPlayerX.nextCity(i, False)
 		elif iGameOption == GameOptionTypes.GAMEOPTION_NO_BARBARIANS and CyGame().isOption(iGameOption):
 			pPlayerBarb = GC.getPlayer(GC.getBARBARIAN_PLAYER ())
 			pPlayerBarb.killCities()

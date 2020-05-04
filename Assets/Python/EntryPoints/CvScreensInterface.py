@@ -409,9 +409,8 @@ def WorldBuilderGetASTechTabID():
 #------------------------------------------------#
 def WorldBuilderNormalPlayerTabModeCB():
 	print "WorldBuilderNormalPlayerTabModeCB"
-	if CyInterface().isInAdvancedStart():
-		return advancedStartScreen.normalPlayerTabModeCB()
-	else: return worldBuilderScreen.normalPlayerTabModeCB()
+	if not CyInterface().isInAdvancedStart():
+		worldBuilderScreen.normalPlayerTabModeCB()
 #---------------------------------#
 # Called by the exe for WB and AS #
 #---------------------------------#

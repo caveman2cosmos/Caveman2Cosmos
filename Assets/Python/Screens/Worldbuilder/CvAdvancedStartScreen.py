@@ -38,14 +38,8 @@ class CvAdvancedStartScreen:
 
 		screen.addPanel("WorldBuilderBackgroundPanel", "", "", True, True, 0, 0, 226, 84, PanelStyles.PANEL_STYLE_MAIN)
 
-		txt = "<font=4>" + CyTranslator().getText("TXT_KEY_WB_AS_POINTS", (self.CyPlayer.getAdvancedStartPoints(),))
-		screen.setLabel("AdvancedStartPointsText", "", txt, 1<<0, 50, 15, -2, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
-
 		txt = CyTranslator().getText("TXT_KEY_ADVANCED_START_BEGIN_GAME", ())
 		screen.setButtonGFC("WorldBuilderExitButton", txt, "", 50, 45, 130, 28, WidgetTypes.WIDGET_WB_EXIT_BUTTON, -1, -1, ButtonStyles.BUTTON_STYLE_STANDARD)
-
-		txt = u"<font=4>" + CyTranslator().getText("TXT_KEY_WB_AS_COST_THIS_LOCATION", (self.m_iCost,))
-		screen.setLabel("AdvancedStartCostText", "", txt, 1<<0, 30, 85, -2, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		self.refreshSideMenu()
 		self.refreshAdvancedStartTabCtrl(False)
@@ -142,18 +136,15 @@ class CvAdvancedStartScreen:
 		return -1
 
 	def getASActiveRoute(self):
-		# Improvements Tab
-		if (self.m_advancedStartTabCtrl.getActiveTab() == self.m_iASImprovementsTabID):
-			# Routes List
-			if (self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] == self.m_iASRoutesListID):
-				iRouteType = getASRoute(self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()])
-				if -1 == iRouteType:
-					self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] = self.m_iASImprovementsListID
-				return iRouteType
+		if self.m_advancedStartTabCtrl.getActiveTab() == self.m_iASImprovementsTabID \
+		and self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] == self.m_iASRoutesListID:
+			iRouteType = getASRoute(self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()])
+			if -1 == iRouteType:
+				self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] = self.m_iASImprovementsListID
+			return iRouteType
 		return -1
 
 	def getASActiveImprovement(self):
-		# Improvements Tab
 		if self.m_advancedStartTabCtrl.getActiveTab() == self.m_iASImprovementsTabID \
 		and self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] == self.m_iASImprovementsListID:
 			iImprovementType = getASImprovement(self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()])
@@ -265,12 +256,6 @@ class CvAdvancedStartScreen:
 		else: return
 		self.m_bSideMenuDirty = True
 		self.m_bASItemCostDirty = True
-
-
-	def normalPlayerTabModeCB(self):
-		self.refreshSideMenu()
-		getWBToolNormalPlayerTabCtrl().enable(False)
-		getWBToolNormalMapTabCtrl().enable(False)
 
 	def setCurrentAdvancedStartIndex(self, argsList):
 		iIndex = int(argsList)

@@ -102,7 +102,7 @@ class WBEventScreen:
 		screen.setTableColumnHeader("WBEventPlayer", 0, "", 24)
 		screen.setTableColumnHeader("WBEventPlayer", 1, "", iWidth - 24)
 
-		for iPlayerX in xrange(GC.getMAX_CIV_PLAYERS()):
+		for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
 			pPlayerX = GC.getPlayer(iPlayerX)
 			if pPlayerX.isAlive():
 				if iEventPlayer == -1:
@@ -233,7 +233,7 @@ class WBEventScreen:
 		screen.setTableColumnHeader("WBOtherPlayer", 0, "", 24)
 		screen.setTableColumnHeader("WBOtherPlayer", 1, "", iWidth - 24)
 
-		for iPlayerX in xrange(GC.getMAX_CIV_PLAYERS()):
+		for iPlayerX in xrange(GC.getMAX_PC_PLAYERS()):
 			if iPlayerX == iEventPlayer: continue
 			pPlayerX = GC.getPlayer(iPlayerX)
 			if pPlayerX.isAlive():

@@ -307,7 +307,7 @@ class CvWorldBuilderScreen:
 			if self.m_pCurrentPlot.isCity(): return
 			pCity = GC.getPlayer(self.m_iCurrentPlayer).initCity(self.m_pCurrentPlot.getX(), self.m_pCurrentPlot.getY())
 			if bPython:
-				CvEventManager.CvEventManager().onCityBuilt([pCity])
+				CvEventManager.CvEventManager().onCityBuilt([pCity, None])
 	## Python Effects ##
 		elif self.iPlayerAddMode == "Improvements":
 			self.m_pCurrentPlot.setImprovementType(self.iSelection)
@@ -414,103 +414,97 @@ class CvWorldBuilderScreen:
 			CyEngine().removeSign(self.m_pCurrentPlot, self.m_iCurrentPlayer)
 		return 1
 
-	def placeRiverNW ( self, bUseCurrent ):
-		if (bUseCurrent):
+
+	def placeRiverNW(self, bUseCurrent):
+		if bUseCurrent:
 			pRiverStepPlot = CyMap().plot(self.m_pRiverStartPlot.getX(), self.m_pRiverStartPlot.getY())
-			if (not pRiverStepPlot.isNone()):
+			if not pRiverStepPlot.isNone():
 				pRiverStepPlot.setNOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_WEST)
 
 		pRiverStepPlot = CyMap().plot(self.m_pRiverStartPlot.getX()-1, self.m_pRiverStartPlot.getY())
-		if (not pRiverStepPlot.isNone()):
+		if not pRiverStepPlot.isNone():
 			pRiverStepPlot.setWOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_NORTH)
 		pRiverStepPlot = CyMap().plot(self.m_pRiverStartPlot.getX()-1, self.m_pRiverStartPlot.getY()+1)
-		if (not pRiverStepPlot.isNone()):
+		if not pRiverStepPlot.isNone():
 			pRiverStepPlot.setWOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_NORTH)
-		return
 
-	def placeRiverN ( self, bUseCurrent ):
-		if (bUseCurrent):
+	def placeRiverN(self, bUseCurrent):
+		if bUseCurrent:
 			pRiverStepPlot = CyMap().plot(self.m_pRiverStartPlot.getX(), self.m_pRiverStartPlot.getY())
-			if (not pRiverStepPlot.isNone()):
+			if not pRiverStepPlot.isNone():
 				pRiverStepPlot.setWOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_NORTH)
 
 		pRiverStepPlot = CyMap().plot(self.m_pRiverStartPlot.getX(), self.m_pRiverStartPlot.getY()+1)
-		if (not pRiverStepPlot.isNone()):
+		if not pRiverStepPlot.isNone():
 			pRiverStepPlot.setWOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_NORTH)
-		return
 
-	def placeRiverNE ( self, bUseCurrent ):
-		if (bUseCurrent):
+	def placeRiverNE(self, bUseCurrent):
+		if bUseCurrent:
 			pRiverStepPlot = CyMap().plot(self.m_pRiverStartPlot.getX(), self.m_pRiverStartPlot.getY())
-			if (not pRiverStepPlot.isNone()):
+			if not pRiverStepPlot.isNone():
 				pRiverStepPlot.setNOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_EAST)
 
 		pRiverStepPlot = CyMap().plot(self.m_pRiverStartPlot.getX()+1, self.m_pRiverStartPlot.getY())
-		if (not pRiverStepPlot.isNone()):
+		if not pRiverStepPlot.isNone():
 			pRiverStepPlot.setNOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_EAST)
 			pRiverStepPlot.setWOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_NORTH)
 		pRiverStepPlot = CyMap().plot(self.m_pRiverStartPlot.getX()+1, self.m_pRiverStartPlot.getY()+1)
-		if (not pRiverStepPlot.isNone()):
+		if not pRiverStepPlot.isNone():
 			pRiverStepPlot.setWOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_NORTH)
-		return
 
-	def placeRiverW ( self, bUseCurrent ):
-		if (bUseCurrent):
+	def placeRiverW(self, bUseCurrent):
+		if bUseCurrent:
 			pRiverStepPlot = CyMap().plot(self.m_pRiverStartPlot.getX(), self.m_pRiverStartPlot.getY())
-			if (not pRiverStepPlot.isNone()):
+			if not pRiverStepPlot.isNone():
 				pRiverStepPlot.setNOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_WEST)
 
 		pRiverStepPlot = CyMap().plot(self.m_pRiverStartPlot.getX()-1, self.m_pRiverStartPlot.getY())
-		if (not pRiverStepPlot.isNone()):
+		if not pRiverStepPlot.isNone():
 			pRiverStepPlot.setNOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_WEST)
-		return
 
-	def placeRiverE ( self, bUseCurrent ):
-		if (bUseCurrent):
+	def placeRiverE(self, bUseCurrent):
+		if bUseCurrent:
 			pRiverStepPlot = CyMap().plot(self.m_pRiverStartPlot.getX(), self.m_pRiverStartPlot.getY())
-			if (not pRiverStepPlot.isNone()):
+			if not pRiverStepPlot.isNone():
 				pRiverStepPlot.setNOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_EAST)
 
 		pRiverStepPlot = CyMap().plot(self.m_pRiverStartPlot.getX()+1, self.m_pRiverStartPlot.getY())
-		if (not pRiverStepPlot.isNone()):
+		if not pRiverStepPlot.isNone():
 			pRiverStepPlot.setNOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_EAST)
-		return
 
-	def placeRiverSW ( self, bUseCurrent ):
-		if (bUseCurrent):
+	def placeRiverSW(self, bUseCurrent):
+		if bUseCurrent:
 			pRiverStepPlot = CyMap().plot(self.m_pRiverStartPlot.getX(), self.m_pRiverStartPlot.getY())
-			if (not pRiverStepPlot.isNone()):
+			if not pRiverStepPlot.isNone():
 				pRiverStepPlot.setNOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_WEST)
 
 		pRiverStepPlot = CyMap().plot(self.m_pRiverStartPlot.getX()-1, self.m_pRiverStartPlot.getY()-1)
-		if (not pRiverStepPlot.isNone()):
+		if not pRiverStepPlot.isNone():
 			pRiverStepPlot.setWOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_SOUTH)
-		return
 
-	def placeRiverS ( self, bUseCurrent ):
-		if (bUseCurrent):
+	def placeRiverS(self, bUseCurrent):
+		if bUseCurrent:
 			pRiverStepPlot = CyMap().plot(self.m_pRiverStartPlot.getX(), self.m_pRiverStartPlot.getY())
-			if (not pRiverStepPlot.isNone()):
+			if not pRiverStepPlot.isNone():
 				pRiverStepPlot.setWOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_SOUTH)
 
 		pRiverStepPlot = CyMap().plot(self.m_pRiverStartPlot.getX(), self.m_pRiverStartPlot.getY()-1)
-		if (not pRiverStepPlot.isNone()):
+		if not pRiverStepPlot.isNone():
 			pRiverStepPlot.setWOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_SOUTH)
-		return
 
-	def placeRiverSE ( self, bUseCurrent ):
-		if (bUseCurrent):
+	def placeRiverSE(self, bUseCurrent):
+		if bUseCurrent:
 			pRiverStepPlot = CyMap().plot(self.m_pRiverStartPlot.getX(), self.m_pRiverStartPlot.getY())
-			if (not pRiverStepPlot.isNone()):
+			if not pRiverStepPlot.isNone():
 				pRiverStepPlot.setNOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_EAST)
 
 		pRiverStepPlot = CyMap().plot(self.m_pRiverStartPlot.getX()+1, self.m_pRiverStartPlot.getY())
-		if (not pRiverStepPlot.isNone()):
+		if not pRiverStepPlot.isNone():
 			pRiverStepPlot.setNOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_EAST)
 		pRiverStepPlot = CyMap().plot(self.m_pRiverStartPlot.getX()+1, self.m_pRiverStartPlot.getY()-1)
-		if (not pRiverStepPlot.isNone()):
+		if not pRiverStepPlot.isNone():
 			pRiverStepPlot.setWOfRiver(True, CardinalDirectionTypes.CARDINALDIRECTION_SOUTH)
-		return
+
 
 	def toggleUnitEditCB(self):
 		self.iPlayerAddMode = "EditUnit"
