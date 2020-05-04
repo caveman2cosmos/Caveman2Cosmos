@@ -197,9 +197,6 @@ class CvWorldBuilderScreen:
 				return (self.m_pCurrentPlot.getX(), self.m_pCurrentPlot.getY())
 		return []
 
-	def update(self, fDelta):
-		return
-
 	# Will update the screen (every 250 MS)
 	def updateScreen(self):
 		if self.iPlayerAddMode == "River" and self.m_pRiverStartPlot != -1:
@@ -861,26 +858,31 @@ class CvWorldBuilderScreen:
 
 	def setSelectionTable(self):
 		screen = CyGInterfaceScreen("WorldBuilderScreen",self.screenId)
-		iWidth = 200
+		iWidth = 256
 		if self.iPlayerAddMode == "Units":
 			iY = 25
 			screen.addDropDownBoxGFC("WBSelectClass", 0, iY, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
 			screen.addPullDownString("WBSelectClass", CyTranslator().getText("TXT_KEY_WB_CITY_ALL",()), -2, -2, -2 == self.iSelectClass)
 			screen.addPullDownString("WBSelectClass", CyTranslator().getText("TXT_PEDIA_NON_COMBAT",()), -1, -1, -1 == self.iSelectClass)
-			for iCombatClass in xrange(GC.getNumUnitCombatInfos()):
-				screen.addPullDownString("WBSelectClass", GC.getUnitCombatInfo(iCombatClass).getDescription(), iCombatClass, iCombatClass, iCombatClass == self.iSelectClass)
+			for iDomain in xrange(DomainTypes.NUM_DOMAIN_TYPES):
+				screen.addPullDownString("WBSelectClass", GC.getDomainInfo(iDomain).getDescription(), iDomain, iDomain, iDomain == self.iSelectClass)
 
 			lItems = []
 			for i in xrange(GC.getNumUnitInfos()):
-				ItemInfo = GC.getUnitInfo(i)
-				if ItemInfo.getUnitCombatType() != self.iSelectClass and self.iSelectClass > -2:
+				CvUnitInfo = GC.getUnitInfo(i)
+				if self.iSelectClass == -1:
+					if CvUnitInfo.getCombat() > 0 or CvUnitInfo.getAirCombat() > 0:
+						continue
+				elif self.iSelectClass > -1 and CvUnitInfo.getDomainType() != self.iSelectClass:
 					continue
-				lItems.append([ItemInfo.getDescription(), i])
+				lItems.append([CvUnitInfo.getDescription(), i])
 			lItems.sort()
 
 			iY += 30
 			iHeight = min(len(lItems) * 24 + 2, screen.getYResolution() - iY)
-			screen.addTableControlGFC("WBSelectItem", 1, 0, iY, iWidth, iHeight, False, False, 24, 24, TableStyles.TABLE_STYLE_EMPTY)
+			screen.addTableControlGFC("WBSelectItem", 1, 0, iY, iWidth, iHeight, False, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
+			screen.setStyle("WBSelectItem", "Table_StandardCiv_Style")
+			screen.enableSelect("WBSelectItem", True)
 			screen.setTableColumnHeader("WBSelectItem", 0, "", iWidth)
 			bValid = False
 			for item in lItems:
@@ -922,7 +924,9 @@ class CvWorldBuilderScreen:
 
 			iY += 30
 			iHeight = min(len(lItems) * 24 + 2, screen.getYResolution() - iY)
-			screen.addTableControlGFC("WBSelectItem", 1, 0, iY, iWidth, iHeight, False, False, 24, 24, TableStyles.TABLE_STYLE_EMPTY)
+			screen.addTableControlGFC("WBSelectItem", 1, 0, iY, iWidth, iHeight, False, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
+			screen.setStyle("WBSelectItem", "Table_StandardCiv_Style")
+			screen.enableSelect("WBSelectItem", True)
 			screen.setTableColumnHeader("WBSelectItem", 0, "", iWidth)
 			bValid = False
 			for item in lItems:
@@ -943,7 +947,9 @@ class CvWorldBuilderScreen:
 			lItems.sort()
 
 			iHeight = min(len(lItems) * 24 + 2, screen.getYResolution() - iY)
-			screen.addTableControlGFC("WBSelectItem", 1, 0, iY, iWidth, iHeight, False, False, 24, 24, TableStyles.TABLE_STYLE_EMPTY)
+			screen.addTableControlGFC("WBSelectItem", 1, 0, iY, iWidth, iHeight, False, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
+			screen.setStyle("WBSelectItem", "Table_StandardCiv_Style")
+			screen.enableSelect("WBSelectItem", True)
 			screen.setTableColumnHeader("WBSelectItem", 0, "", iWidth)
 			for item in lItems:
 				iRow = screen.appendTableRow("WBSelectItem")
@@ -961,7 +967,9 @@ class CvWorldBuilderScreen:
 			lItems.sort()
 
 			iHeight = min(len(lItems) * 24 + 2, screen.getYResolution() - iY)
-			screen.addTableControlGFC("WBSelectItem", 1, 0, iY, iWidth, iHeight, False, False, 24, 24, TableStyles.TABLE_STYLE_EMPTY)
+			screen.addTableControlGFC("WBSelectItem", 1, 0, iY, iWidth, iHeight, False, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
+			screen.setStyle("WBSelectItem", "Table_StandardCiv_Style")
+			screen.enableSelect("WBSelectItem", True)
 			screen.setTableColumnHeader("WBSelectItem", 0, "", iWidth)
 			for item in lItems:
 				iRow = screen.appendTableRow("WBSelectItem")
@@ -971,28 +979,17 @@ class CvWorldBuilderScreen:
 
 		elif self.iPlayerAddMode == "Bonus":
 			iY = 25
-			screen.addDropDownBoxGFC("WBSelectClass", 0, iY, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
-			screen.addPullDownString("WBSelectClass", CyTranslator().getText("TXT_KEY_WB_CITY_ALL",()), -1, -1, -1 == self.iSelectClass)
-			screen.addPullDownString("WBSelectClass", CyTranslator().getText("TXT_KEY_GLOBELAYER_RESOURCES_GENERAL",()), 0, 0, 0 == self.iSelectClass)
-			iBonusClass = 1
-			while not GC.getBonusClassInfo(iBonusClass) is None:
-				sText = GC.getBonusClassInfo(iBonusClass).getType()
-				sText = sText[sText.find("_") +1:]
-				sText = sText.lower()
-				sText = sText.capitalize()
-				screen.addPullDownString("WBSelectClass", sText, iBonusClass, iBonusClass, iBonusClass == self.iSelectClass)
-				iBonusClass += 1
-
 			lItems = []
 			for i in xrange(GC.getNumBonusInfos()):
-				ItemInfo = GC.getBonusInfo(i)
-				if ItemInfo.getBonusClassType() != self.iSelectClass and self.iSelectClass > -1: continue
-				lItems.append([ItemInfo.getDescription(), i])
+				CvBonusInfo = GC.getBonusInfo(i)
+				if CvBonusInfo.getPlacementOrder() > -1:
+					lItems.append([CvBonusInfo.getDescription(), i])
 			lItems.sort()
 
-			iY += 30
 			iHeight = min(len(lItems) * 24 + 2, screen.getYResolution() - iY)
-			screen.addTableControlGFC("WBSelectItem", 1, 0, iY, iWidth, iHeight, False, False, 24, 24, TableStyles.TABLE_STYLE_EMPTY)
+			screen.addTableControlGFC("WBSelectItem", 1, 0, iY, iWidth, iHeight, False, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
+			screen.setStyle("WBSelectItem", "Table_StandardCiv_Style")
+			screen.enableSelect("WBSelectItem", True)
 			screen.setTableColumnHeader("WBSelectItem", 0, "", iWidth)
 			for item in lItems:
 				iRow = screen.appendTableRow("WBSelectItem")
@@ -1009,7 +1006,9 @@ class CvWorldBuilderScreen:
 			lItems.sort()
 
 			iHeight = min(len(lItems) * 24 + 2, screen.getYResolution() - iY)
-			screen.addTableControlGFC("WBSelectItem", 1, 0, iY, iWidth, iHeight, False, False, 24, 24, TableStyles.TABLE_STYLE_EMPTY)
+			screen.addTableControlGFC("WBSelectItem", 1, 0, iY, iWidth, iHeight, False, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
+			screen.setStyle("WBSelectItem", "Table_StandardCiv_Style")
+			screen.enableSelect("WBSelectItem", True)
 			screen.setTableColumnHeader("WBSelectItem", 0, "", iWidth)
 			for item in lItems:
 				iRow = screen.appendTableRow("WBSelectItem")
@@ -1027,7 +1026,9 @@ class CvWorldBuilderScreen:
 			lItems.sort()
 
 			iHeight = min(len(lItems) * 24 + 2, screen.getYResolution() - iY)
-			screen.addTableControlGFC("WBSelectItem", 1, 0, iY, iWidth, iHeight, False, False, 24, 24, TableStyles.TABLE_STYLE_EMPTY)
+			screen.addTableControlGFC("WBSelectItem", 1, 0, iY, iWidth, iHeight, False, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
+			screen.setStyle("WBSelectItem", "Table_StandardCiv_Style")
+			screen.enableSelect("WBSelectItem", True)
 			screen.setTableColumnHeader("WBSelectItem", 0, "", iWidth)
 			for item in lItems:
 				iRow = screen.appendTableRow("WBSelectItem")
@@ -1038,7 +1039,9 @@ class CvWorldBuilderScreen:
 		elif self.iPlayerAddMode == "PlotType":
 			iY = 25
 			iHeight = 4 * 24 + 2
-			screen.addTableControlGFC("WBSelectItem", 1, 0, 25, iWidth, iHeight, False, False, 24, 24, TableStyles.TABLE_STYLE_EMPTY)
+			screen.addTableControlGFC("WBSelectItem", 1, 0, 25, iWidth, iHeight, False, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD)
+			screen.setStyle("WBSelectItem", "Table_StandardCiv_Style")
+			screen.enableSelect("WBSelectItem", True)
 			screen.setTableColumnHeader("WBSelectItem", 0, "", iWidth)
 			for i in xrange(PlotTypes.NUM_PLOT_TYPES):
 				screen.appendTableRow("WBSelectItem")
@@ -1099,18 +1102,17 @@ class CvWorldBuilderScreen:
 		else:
 			screen.hide("WBCurrentItem")
 
-## Platy Reveal Mode Start ##
+
 	def revealAll(self, bReveal):
 		for i in xrange(CyMap().numPlots()):
 			pPlot = CyMap().plotByIndex(i)
 			if pPlot.isNone(): continue
 			self.RevealCurrentPlot(bReveal, pPlot)
 		self.refreshReveal()
-		return
 
 	def RevealCurrentPlot(self, bReveal, pPlot):
 		if self.iPlayerAddMode == "Blockade": return
-		iType = GC.getInfoTypeForString(self.iPlayerAddMode)
+		iType = GC.getInfoTypeForStringWithHiddenAssert(self.iPlayerAddMode)
 		if iType == -1:
 			if bReveal or (not pPlot.isVisible(self.m_iCurrentTeam, False)):
 				pPlot.setRevealed(self.m_iCurrentTeam, bReveal, False, -1);
@@ -1119,7 +1121,6 @@ class CvWorldBuilderScreen:
 			pPlot.changeInvisibleVisibilityCount(self.m_iCurrentTeam, iType, 1)
 		else:
 			pPlot.changeInvisibleVisibilityCount(self.m_iCurrentTeam, iType, - pPlot.getInvisibleVisibilityCount(self.m_iCurrentTeam, iType))
-		return
 
 	def showRevealed(self, pPlot):
 		if self.iPlayerAddMode == "RevealPlot":
@@ -1138,8 +1139,6 @@ class CvWorldBuilderScreen:
 			if not pPlot.isOwned() and not pPlot.isRevealed(self.m_iCurrentTeam, False): return
 			if not pPlot.isBonusNetwork(self.m_iCurrentTeam): return
 			CyEngine().fillAreaBorderPlotAlt(pPlot.getX(), pPlot.getY(), AreaBorderLayers.AREA_BORDER_LAYER_REVEALED_PLOTS, "COLOR_MAGENTA", 1.0)
-		return
-## Platy Reveal Mode End ##
 
 
 	def setRiverHighlights(self):
@@ -1150,7 +1149,7 @@ class CvWorldBuilderScreen:
 			for y in xrange(self.m_pRiverStartPlot.getY() - 1, self.m_pRiverStartPlot.getY() + 2):
 				if x == self.m_pRiverStartPlot.getX() and y == self.m_pRiverStartPlot.getY(): continue
 				CyEngine().addColoredPlotAlt(x, y, PlotStyles.PLOT_STYLE_BOX_FILL, PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_REVEALED_PLOTS, "COLOR_WHITE", .2)
-		return
+
 
 	def leftMouseDown(self, argsList):
 		bShift, bCtrl, bAlt = argsList
@@ -1337,7 +1336,7 @@ class CvWorldBuilderScreen:
 			self.removeObject()
 		return 1
 
-## Add "," ##
+
 	def addComma(self, iValue):
 		sTemp = str(iValue)
 		sStart = ""
@@ -1350,12 +1349,13 @@ class CvWorldBuilderScreen:
 			sTemp = sTemp[:-3]
 			sEnd = sTemp[-3:] + "," + sEnd
 		return (sStart + sEnd)
-## Add "," ##
+
+
+	def update(self, fDelta):
+		return
 
 	def handleInput (self, inputClass):
 		screen = CyGInterfaceScreen("WorldBuilderScreen", self.screenId)
-		global iChange
-		global bPython
 
 		if inputClass.getFunctionName() == "WorldBuilderEraseAll":
 			for i in xrange(CyMap().numPlots()):
@@ -1403,6 +1403,7 @@ class CvWorldBuilderScreen:
 				self.refreshReveal()
 
 		elif inputClass.getFunctionName() == "ChangeBy":
+			global iChange
 			iChange = screen.getPullDownData("ChangeBy", screen.getSelectedPullDownID("ChangeBy"))
 
 		elif inputClass.getFunctionName() == "AddOwnershipButton":
@@ -1507,6 +1508,7 @@ class CvWorldBuilderScreen:
 			self.iBrushHeight = screen.getPullDownData("BrushHeight", screen.getSelectedPullDownID("BrushHeight"))
 
 		elif inputClass.getFunctionName() == "PythonEffectButton":
+			global bPython
 			bPython = not bPython
 			self.setCurrentModeCheckbox()
 

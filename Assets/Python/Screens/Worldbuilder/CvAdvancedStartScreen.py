@@ -301,10 +301,6 @@ class CvAdvancedStartScreen:
 
 	def refreshSideMenu(self):
 		screen = CyGInterfaceScreen("AdvancedStartScreen", self.screenId)
-		#CyEngine().clearColoredPlots(PlotLandscapeLayers.PLOT_LANDSCAPE_LAYER_REVEALED_PLOTS)
-		CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_WORLD_BUILDER)
-		CyEngine().clearAreaBorderPlots(AreaBorderLayers.AREA_BORDER_LAYER_REVEALED_PLOTS)
-
 		txt = "<font=4>" + CyTranslator().getText("TXT_KEY_WB_AS_POINTS", (self.CyPlayer.getAdvancedStartPoints(),))
 		screen.setLabel("AdvancedStartPointsText", "", txt, 1<<0, 50, 15, -2, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 		txt = "<font=4>" + CyTranslator().getText("TXT_KEY_WB_AS_COST_THIS_LOCATION", (self.m_iCost, ))
