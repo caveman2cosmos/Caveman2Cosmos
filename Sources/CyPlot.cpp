@@ -85,7 +85,7 @@ bool CyPlot::shareAdjacentArea(CyPlot* pPlot)
 
 bool CyPlot::isCoastal()
 {
-	return m_pPlot ? m_pPlot->isCoastal() : false;
+	return m_pPlot ? m_pPlot->isCoastal(GC.getMIN_WATER_SIZE_FOR_OCEAN()) : false;
 }
 
 bool CyPlot::isWithinTeamCityRadius(int /*TeamTypes*/ eTeam, int /*PlayerTypes*/ eIgnorePlayer)

@@ -932,6 +932,9 @@
     <ClInclude Include="idinfo_iterator_base.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="GlobalDefines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="CvGameCoreDLL.rc">

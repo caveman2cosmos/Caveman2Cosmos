@@ -28458,67 +28458,6 @@ void CvGameTextMgr::buildSingleLineTechTreeString(CvWStringBuffer &szBuffer, Tec
 		return;
 	}
 
-// BUG - Show Sped-Up Techs - start
-	if (bPlayerContext && getBugOptionBOOL("MiscHover__SpedUpTechs", true, "BUG_SPED_UP_TECHS_HOVER"))
-	{
-		CvPlayer& player = GET_PLAYER(GC.getGame().getActivePlayer());
-
-		// techs that speed this one up
-		bool bFirst = true;
-		for (int iJ = 0; iJ < GC.getNUM_OR_TECH_PREREQS(); iJ++)
-		{
-			TechTypes ePrereqTech = (TechTypes)GC.getTechInfo(eTech).getPrereqOrTechs(iJ);
-			if (ePrereqTech != NO_TECH && player.canResearch(ePrereqTech))
-			{
-				szTempBuffer.Format( SETCOLR L"<link=%s>%s</link>" ENDCOLR , TEXT_COLOR("COLOR_TECH_TEXT"), CvWString(GC.getTechInfo(ePrereqTech).getType()).GetCString(), GC.getTechInfo(ePrereqTech).getDescription());
-				setListHelp(szBuffer, gDLL->getText("TXT_KEY_MISC_SPED_UP_BY").c_str(), szTempBuffer, L", ", bFirst);
-				bFirst = false;
-			}
-		}
-
-		// techs sped up by this one
-		bFirst = true;
-		for (int iI = 0; iI < GC.getNumTechInfos(); ++iI)
-		{
-			if (player.canResearch((TechTypes)iI))
-			{
-				bool bTechFound = false;
-
-				if (!bTechFound)
-				{
-					for (int iJ = 0; iJ < GC.getNUM_OR_TECH_PREREQS(); iJ++)
-					{
-						if (GC.getTechInfo((TechTypes) iI).getPrereqOrTechs(iJ) == eTech)
-						{
-							bTechFound = true;
-							break;
-						}
-					}
-				}
-
-				if (!bTechFound)
-				{
-					for (int iJ = 0; iJ < GC.getNUM_AND_TECH_PREREQS(); iJ++)
-					{
-						if (GC.getTechInfo((TechTypes) iI).getPrereqAndTechs(iJ) == eTech)
-						{
-							bTechFound = true;
-							break;
-						}
-					}
-				}
-
-				if (bTechFound)
-				{
-					szTempBuffer.Format( SETCOLR L"<link=%s>%s</link>" ENDCOLR , TEXT_COLOR("COLOR_TECH_TEXT"), CvWString(GC.getTechInfo((TechTypes)iI).getType()).GetCString(), GC.getTechInfo((TechTypes) iI).getDescription());
-					setListHelp(szBuffer, gDLL->getText("TXT_KEY_MISC_SPEEDS_UP").c_str(), szTempBuffer, L", ", bFirst);
-					bFirst = false;
-				}
-			}
-		}
-	}
-// BUG - Show Sped-Up Techs - end
-
 	bool bFirst = true;
 	for (int iI = 0; iI < GC.getNumTechInfos(); ++iI)
 	{

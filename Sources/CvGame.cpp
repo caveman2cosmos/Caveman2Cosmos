@@ -2763,19 +2763,14 @@ void CvGame::testExtendedGame()
 	{
 		return;
 	}
-
 	for (int iI = 0; iI < MAX_PC_PLAYERS; iI++)
 	{
-		if (GET_PLAYER((PlayerTypes)iI).isAlive())
+		if(GET_PLAYER((PlayerTypes)iI).isAlive()
+		&& GET_PLAYER((PlayerTypes)iI).isHuman()
+		&& GET_PLAYER((PlayerTypes)iI).isExtendedGame())
 		{
-			if (GET_PLAYER((PlayerTypes)iI).isHuman())
-			{
-				if (GET_PLAYER((PlayerTypes)iI).isExtendedGame())
-				{
-					setGameState(GAMESTATE_EXTENDED);
-					break;
-				}
-			}
+			setGameState(GAMESTATE_EXTENDED);
+			break;
 		}
 	}
 }
@@ -2783,18 +2778,7 @@ void CvGame::testExtendedGame()
 
 void CvGame::cityPushOrder(CvCity* pCity, OrderTypes eOrder, int iData, bool bAlt, bool bShift, bool bCtrl) const
 {
-	if (pCity->getProduction() > 0)
-	{
-		CvMessageControl::getInstance().sendPushOrder(pCity->getID(), eOrder, iData, bAlt, bShift, !bShift);
-	}
-	else if ((eOrder == ORDER_TRAIN) && (pCity->getProductionUnit() == iData))
-	{
-		CvMessageControl::getInstance().sendPushOrder(pCity->getID(), eOrder, iData, bAlt, !bCtrl, bCtrl);
-	}
-	else
-	{
-		CvMessageControl::getInstance().sendPushOrder(pCity->getID(), eOrder, iData, bAlt, bShift, bCtrl);
-	}
+	CvMessageControl::getInstance().sendPushOrder(pCity->getID(), eOrder, iData, bAlt, bShift, bCtrl);
 }
 
 
