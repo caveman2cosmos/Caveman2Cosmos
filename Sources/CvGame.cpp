@@ -2544,42 +2544,22 @@ again:
 			gDLL->getEngineIFace()->AutoSave(true);
 		}
 
-		if (getNumGameTurnActive() == 0)
+		if (getNumGameTurnActive() == 0 && (!isPbem() || !getPbemTurnSent()))
 		{
-			if (!isPbem() || !getPbemTurnSent())
-			{
-				doTurn();
-			}
+			doTurn();
 		}
-
 		updateScore();
-
 		updateMoves();
-
 		updateTimers();
-
 		updateTurnTimer();
 
 		AI_updateAssignWork();
-
 		testAlive();
 
-/************************************************************************************************/
-/* REVOLUTION_MOD                                                                 lemmy101      */
-/*                                                                                jdog5000      */
-/*                                                                                              */
-/************************************************************************************************/
-		if ((getAIAutoPlay(getActivePlayer()) <= 0) && !(gDLL->GetAutorun()) && GAMESTATE_EXTENDED != getGameState())
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+		if (getAIAutoPlay(getActivePlayer()) <= 0 && !gDLL->GetAutorun() && GAMESTATE_EXTENDED != getGameState() && countHumanPlayersAlive() == 0)
 		{
-			if (countHumanPlayersAlive() == 0)
-			{
-				setGameState(GAMESTATE_OVER);
-			}
+			setGameState(GAMESTATE_OVER);
 		}
-
 		changeTurnSlice(1);
 
 		if (NO_PLAYER != getActivePlayer() && GET_PLAYER(getActivePlayer()).getAdvancedStartPoints() >= 0 && !gDLL->getInterfaceIFace()->isInAdvancedStart())

@@ -10450,15 +10450,6 @@ Lived:[\BOLD] 1805 - 1874[BOLD]
 		<Polish>Walka</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_UNIT_GROUPING_DOMAIN</Tag>
-		<English>Domain</English>
-		<French>Domaine</French>
-		<German>Domäne</German>
-		<Italian>Dominio</Italian>
-		<Spanish>Dominio</Spanish>
-		<Polish>Domena</Polish>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_UNIT_GROUPING_HERO</Tag>
 		<English>Hero</English>
 		<French>Héros</French>
