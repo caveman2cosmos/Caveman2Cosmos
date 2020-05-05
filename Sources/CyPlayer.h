@@ -246,7 +246,7 @@ public:
 	int getAdvancedStartImprovementCost(int /*ImprovementTypes*/ eImprovement, bool bAdd, CyPlot* pPlot);
 	int getAdvancedStartRouteCost(int /*RouteTypes*/ eRoute, bool bAdd, CyPlot* pPlot);
 	int getAdvancedStartTechCost(int /*TechTypes*/ eTech, bool bAdd);
-	int getAdvancedStartVisibilityCost(bool bAdd, CyPlot* pPlot);
+	int getAdvancedStartVisibilityCost(CyPlot* pPlot);
 
 	int getEspionageSpending(int /*PlayerTypes*/ ePlayer);
 	bool canDoEspionageMission(int /*EspionageMissionTypes*/ eMission, int /*PlayerTypes*/ eTargetPlayer, CyPlot* pPlot, int iExtraData);

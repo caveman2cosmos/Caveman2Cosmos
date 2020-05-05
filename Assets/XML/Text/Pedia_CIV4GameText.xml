@@ -897,6 +897,10 @@
 		<Polish>Bez zmian</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_PEDIA_NON_COMBAT</Tag>
+		<English>Non-Combat</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_PEDIA_PLOT_YIELD_CHANGE</Tag>
 		<English>Plot Yield Change</English>
 		<French>Rendement des Cases</French>
