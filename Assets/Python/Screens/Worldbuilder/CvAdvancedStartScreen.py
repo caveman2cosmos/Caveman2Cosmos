@@ -8,9 +8,9 @@ class CvAdvancedStartScreen:
 		self.screenId = screenId
 		self.m_bSideMenuDirty = False
 		self.m_bASItemCostDirty = False
-		self.m_advancedStartTabCtrl = None
-		self.m_iAdvancedStartCurrentIndexes = []
-		self.m_iAdvancedStartCurrentList = []
+		self.CyGTabCtrl = None
+		self.iSelectionIndex = []
+		self.iSelectionList = []
 		self.m_iCurrentX = -1
 		self.m_iCurrentY = -1
 		self.m_pCurrentPlot = 0
@@ -100,7 +100,7 @@ class CvAdvancedStartScreen:
 				elif self.getASActiveImprovement() != -1:
 					iCost = self.CyPlayer.getAdvancedStartImprovementCost(self.getASActiveImprovement(), True, self.m_pCurrentPlot)
 
-			elif self.m_pCurrentPlot.isAdjacentNonrevealed(GC.getGame().getActiveTeam()) and self.m_advancedStartTabCtrl.getActiveTab() == self.m_iASVisibilityTabID:
+			elif self.m_pCurrentPlot.isAdjacentNonrevealed(GC.getGame().getActiveTeam()) and self.CyGTabCtrl.getActiveTab() == self.m_iASVisibilityTabID:
 				iCost = self.CyPlayer.getAdvancedStartVisibilityCost(self.m_pCurrentPlot)
 
 		if iCost < 0: iCost = 0
@@ -110,46 +110,46 @@ class CvAdvancedStartScreen:
 		self.m_bASItemCostDirty = False
 
 	def getASActiveUnit(self):
-		if self.m_advancedStartTabCtrl.getActiveTab() == self.m_iASUnitTabID:
-			return getASUnit(self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()])
+		if self.CyGTabCtrl.getActiveTab() == self.m_iASUnitTabID:
+			return getASUnit(self.iSelectionIndex[self.CyGTabCtrl.getActiveTab()])
 		return -1
 
 	def getASActiveCity(self):
-		return self.m_advancedStartTabCtrl.getActiveTab() == self.m_iASCityTabID \
-			and self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] == self.m_iASCityListID \
-			and self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()] == 0
+		return self.CyGTabCtrl.getActiveTab() == self.m_iASCityTabID \
+			and self.iSelectionList[self.CyGTabCtrl.getActiveTab()] == self.m_iASCityListID \
+			and self.iSelectionIndex[self.CyGTabCtrl.getActiveTab()] == 0
 
 	def getASActivePop(self):
-		return self.m_advancedStartTabCtrl.getActiveTab() == self.m_iASCityTabID \
-			and self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] == self.m_iASCityListID \
-			and self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()] == 1
+		return self.CyGTabCtrl.getActiveTab() == self.m_iASCityTabID \
+			and self.iSelectionList[self.CyGTabCtrl.getActiveTab()] == self.m_iASCityListID \
+			and self.iSelectionIndex[self.CyGTabCtrl.getActiveTab()] == 1
 
 	def getASActiveCulture(self):
-		return self.m_advancedStartTabCtrl.getActiveTab() == self.m_iASCityTabID \
-			and self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] == self.m_iASCityListID \
-			and self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()] == 2
+		return self.CyGTabCtrl.getActiveTab() == self.m_iASCityTabID \
+			and self.iSelectionList[self.CyGTabCtrl.getActiveTab()] == self.m_iASCityListID \
+			and self.iSelectionIndex[self.CyGTabCtrl.getActiveTab()] == 2
 
 	def getASActiveBuilding(self):
-		if self.m_advancedStartTabCtrl.getActiveTab() == self.m_iASCityTabID \
-		and self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] == self.m_iASBuildingsListID:
-			return getASBuilding(self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()])
+		if self.CyGTabCtrl.getActiveTab() == self.m_iASCityTabID \
+		and self.iSelectionList[self.CyGTabCtrl.getActiveTab()] == self.m_iASBuildingsListID:
+			return getASBuilding(self.iSelectionIndex[self.CyGTabCtrl.getActiveTab()])
 		return -1
 
 	def getASActiveRoute(self):
-		if self.m_advancedStartTabCtrl.getActiveTab() == self.m_iASImprovementsTabID \
-		and self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] == self.m_iASRoutesListID:
-			iRouteType = getASRoute(self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()])
+		if self.CyGTabCtrl.getActiveTab() == self.m_iASImprovementsTabID \
+		and self.iSelectionList[self.CyGTabCtrl.getActiveTab()] == self.m_iASRoutesListID:
+			iRouteType = getASRoute(self.iSelectionIndex[self.CyGTabCtrl.getActiveTab()])
 			if -1 == iRouteType:
-				self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] = self.m_iASImprovementsListID
+				self.iSelectionList[self.CyGTabCtrl.getActiveTab()] = self.m_iASImprovementsListID
 			return iRouteType
 		return -1
 
 	def getASActiveImprovement(self):
-		if self.m_advancedStartTabCtrl.getActiveTab() == self.m_iASImprovementsTabID \
-		and self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] == self.m_iASImprovementsListID:
-			iImprovementType = getASImprovement(self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()])
+		if self.CyGTabCtrl.getActiveTab() == self.m_iASImprovementsTabID \
+		and self.iSelectionList[self.CyGTabCtrl.getActiveTab()] == self.m_iASImprovementsListID:
+			iImprovementType = getASImprovement(self.iSelectionIndex[self.CyGTabCtrl.getActiveTab()])
 			if -1 == iImprovementType:
-				self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] = self.m_iASRoutesListID
+				self.iSelectionList[self.CyGTabCtrl.getActiveTab()] = self.m_iASRoutesListID
 			return iImprovementType
 		return -1
 
@@ -159,10 +159,10 @@ class CvAdvancedStartScreen:
 		pPlot = GC.getMap().plot(self.m_iCurrentX, self.m_iCurrentY)
 		if self.m_pCurrentPlot.isRevealed(GC.getGame().getActiveTeam(), False):
 			# City Tab
-			if self.m_advancedStartTabCtrl.getActiveTab() == self.m_iASCityTabID:
+			if self.CyGTabCtrl.getActiveTab() == self.m_iASCityTabID:
 				# City List
-				if self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] == self.m_iASCityListID:
-					iOptionID = self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()]
+				if self.iSelectionList[self.CyGTabCtrl.getActiveTab()] == self.m_iASCityListID:
+					iOptionID = self.iSelectionIndex[self.CyGTabCtrl.getActiveTab()]
 					# Place City
 					if iOptionID == 0:
 						if self.CyPlayer.getAdvancedStartCityCost(True, pPlot) > -1:
@@ -179,33 +179,33 @@ class CvAdvancedStartScreen:
 							CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_CULTURE, self.iPlayer, self.m_iCurrentX, self.m_iCurrentY, -1, True)
 
 				# Buildings List
-				elif self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] == self.m_iASBuildingsListID and pPlot.isCity():
-					iBuildingType = getASBuilding(self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()])
+				elif self.iSelectionList[self.CyGTabCtrl.getActiveTab()] == self.m_iASBuildingsListID and pPlot.isCity():
+					iBuildingType = getASBuilding(self.iSelectionIndex[self.CyGTabCtrl.getActiveTab()])
 					if iBuildingType != -1 and self.CyPlayer.getAdvancedStartBuildingCost(iBuildingType, True, pPlot.getPlotCity()) != -1:
 						CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_BUILDING, self.iPlayer, self.m_iCurrentX, self.m_iCurrentY, iBuildingType, True)
 
 			# Unit Tab
-			elif self.m_advancedStartTabCtrl.getActiveTab() == self.m_iASUnitTabID:
-				iUnitType = getASUnit(self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()])
+			elif self.CyGTabCtrl.getActiveTab() == self.m_iASUnitTabID:
+				iUnitType = getASUnit(self.iSelectionIndex[self.CyGTabCtrl.getActiveTab()])
 				if iUnitType > -1 and self.CyPlayer.getAdvancedStartUnitCost(iUnitType, True, pPlot) > -1:
 					CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_UNIT, self.iPlayer, self.m_iCurrentX, self.m_iCurrentY, iUnitType, True)
 
 			# Improvements Tab
-			elif self.m_advancedStartTabCtrl.getActiveTab() == self.m_iASImprovementsTabID:
+			elif self.CyGTabCtrl.getActiveTab() == self.m_iASImprovementsTabID:
 				# Routes List
-				if self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] == self.m_iASRoutesListID:
-					iRouteType = getASRoute(self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()])
+				if self.iSelectionList[self.CyGTabCtrl.getActiveTab()] == self.m_iASRoutesListID:
+					iRouteType = getASRoute(self.iSelectionIndex[self.CyGTabCtrl.getActiveTab()])
 					if iRouteType > -1 and self.CyPlayer.getAdvancedStartRouteCost(iRouteType, True, pPlot) > -1:
 						CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_ROUTE, self.iPlayer, self.m_iCurrentX, self.m_iCurrentY, iRouteType, True)
 
 				# Improvements List
-				elif self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] == self.m_iASImprovementsListID:
-					iImprovementType = getASImprovement(self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()])
+				elif self.iSelectionList[self.CyGTabCtrl.getActiveTab()] == self.m_iASImprovementsListID:
+					iImprovementType = getASImprovement(self.iSelectionIndex[self.CyGTabCtrl.getActiveTab()])
 					if iImprovementType > -1 and self.CyPlayer.getAdvancedStartImprovementCost(iImprovementType, True, pPlot) > -1:
 						CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_IMPROVEMENT, self.iPlayer, self.m_iCurrentX, self.m_iCurrentY, iImprovementType, True)
 
 		# Adjacent nonrevealed
-		elif self.m_advancedStartTabCtrl.getActiveTab() == self.m_iASVisibilityTabID and self.CyPlayer.getAdvancedStartVisibilityCost(pPlot) > -1:
+		elif self.CyGTabCtrl.getActiveTab() == self.m_iASVisibilityTabID and self.CyPlayer.getAdvancedStartVisibilityCost(pPlot) > -1:
 			CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_VISIBILITY, self.iPlayer, self.m_iCurrentX, self.m_iCurrentY, -1, True)
 
 		self.m_bSideMenuDirty = True
@@ -217,54 +217,51 @@ class CvAdvancedStartScreen:
 			return
 
 		# City Tab
-		if self.m_advancedStartTabCtrl.getActiveTab() == self.m_iASCityTabID:
+		if self.CyGTabCtrl.getActiveTab() == self.m_iASCityTabID:
 			pPlot = GC.getMap().plot(self.m_iCurrentX, self.m_iCurrentY)
 			# City List
-			if self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] == self.m_iASCityListID:
+			if self.iSelectionList[self.CyGTabCtrl.getActiveTab()] == self.m_iASCityListID:
 				# City Population
-				if self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()] == 1 \
+				if self.iSelectionIndex[self.CyGTabCtrl.getActiveTab()] == 1 \
 				and pPlot.isCity() and pPlot.getPlotCity().getOwner() == self.iPlayer:
 
 					CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_POP, self.iPlayer, self.m_iCurrentX, self.m_iCurrentY, -1, False)
 			# Buildings List
-			elif self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] == self.m_iASBuildingsListID \
+			elif self.iSelectionList[self.CyGTabCtrl.getActiveTab()] == self.m_iASBuildingsListID \
 			and pPlot.isCity() and pPlot.getPlotCity().getOwner() == self.iPlayer:
 
-				iBuildingType = getASBuilding(self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()])
+				iBuildingType = getASBuilding(self.iSelectionIndex[self.CyGTabCtrl.getActiveTab()])
 				if -1 != iBuildingType:
 					CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_BUILDING, self.iPlayer, self.m_iCurrentX, self.m_iCurrentY, iBuildingType, False)
 
 		# Unit Tab
-		elif self.m_advancedStartTabCtrl.getActiveTab() == self.m_iASUnitTabID:
-			iUnitType = getASUnit(self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()])
+		elif self.CyGTabCtrl.getActiveTab() == self.m_iASUnitTabID:
+			iUnitType = getASUnit(self.iSelectionIndex[self.CyGTabCtrl.getActiveTab()])
 			if -1 != iUnitType:
 				CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_UNIT, self.iPlayer, self.m_pCurrentPlot.getX(), self.m_pCurrentPlot.getY(), iUnitType, False)
 
 		# Improvements Tab
-		elif self.m_advancedStartTabCtrl.getActiveTab() == self.m_iASImprovementsTabID:
+		elif self.CyGTabCtrl.getActiveTab() == self.m_iASImprovementsTabID:
 			# Routes List
-			if self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] == self.m_iASRoutesListID:
-				iRouteType = getASRoute(self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()])
+			if self.iSelectionList[self.CyGTabCtrl.getActiveTab()] == self.m_iASRoutesListID:
+				iRouteType = getASRoute(self.iSelectionIndex[self.CyGTabCtrl.getActiveTab()])
 				if -1 != iRouteType:
 					CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_ROUTE, self.iPlayer, self.m_iCurrentX, self.m_iCurrentY, iRouteType, False)
 
 			# Improvements List
-			elif self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] == self.m_iASImprovementsListID:
-				iImprovementType = getASImprovement(self.m_iAdvancedStartCurrentIndexes[self.m_advancedStartTabCtrl.getActiveTab()])
+			elif self.iSelectionList[self.CyGTabCtrl.getActiveTab()] == self.m_iASImprovementsListID:
+				iImprovementType = getASImprovement(self.iSelectionIndex[self.CyGTabCtrl.getActiveTab()])
 				if -1 != iImprovementType:
 					CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_IMPROVEMENT, self.iPlayer, self.m_iCurrentX, self.m_iCurrentY, iImprovementType, False)
 		else: return
 		self.m_bSideMenuDirty = True
 		self.m_bASItemCostDirty = True
 
-	def setCurrentAdvancedStartIndex(self, argsList):
-		iIndex = int(argsList)
-		self.m_iAdvancedStartCurrentIndexes [self.m_advancedStartTabCtrl.getActiveTab()] = int(argsList)
+	def setCurrentSelection(self, iTab, iIndex, iList):
+		self.iSelectionIndex[iTab] = iIndex
+		self.iSelectionList[iTab] = iList
 		# Switch focus back to camera after interacting with advanced start panel
 		setFocusToCVG() # Allows camera zoom scrolling without clicking the map first
-
-	def setCurrentAdvancedStartList(self, argsList):
-		self.m_iAdvancedStartCurrentList[self.m_advancedStartTabCtrl.getActiveTab()] = int(argsList)
 
 #-------------------------------------------------------------#
 # Functions called by the exe in this order at initialization #
@@ -310,57 +307,51 @@ class CvAdvancedStartScreen:
 
 	def refreshAdvancedStartTabCtrl(self, bReuse):
 
-		if self.m_advancedStartTabCtrl and bReuse:
-			iActiveTab = self.m_advancedStartTabCtrl.getActiveTab()
-			iActiveList = self.m_iAdvancedStartCurrentList[iActiveTab]
-			iActiveIndex = self.m_iAdvancedStartCurrentIndexes[iActiveTab]
+		if self.CyGTabCtrl and bReuse:
+			iActiveTab = self.CyGTabCtrl.getActiveTab()
+			iActiveList = self.iSelectionList[iActiveTab]
+			iActiveIndex = self.iSelectionIndex[iActiveTab]
 		else:
 			iActiveTab = 0
 			iActiveList = 0
 			iActiveIndex = 0
 
-		self.m_iAdvancedStartCurrentIndexes = []
-		self.m_iAdvancedStartCurrentList = []
+		self.iSelectionIndex = []
+		self.iSelectionList = []
 
 		initWBToolAdvancedStartControl()
 
-		self.m_advancedStartTabCtrl = getWBToolAdvancedStartTabCtrl()
 		# CyGTabCtrl API
-		self.m_advancedStartTabCtrl.setNumColumns(2 + GC.getNumBuildingInfos()/10);
-		self.m_advancedStartTabCtrl.addTabSection(CyTranslator().getText("TXT_KEY_WB_AS_CITIES",()));
-		self.m_iAdvancedStartCurrentIndexes.append(0)
+		self.CyGTabCtrl = getWBToolAdvancedStartTabCtrl()
 
-		self.m_iAdvancedStartCurrentList.append(self.m_iASCityListID)
+		self.CyGTabCtrl.setNumColumns(2 + GC.getNumBuildingInfos()/10);
+		self.CyGTabCtrl.addTabSection(CyTranslator().getText("TXT_KEY_WB_AS_CITIES",()));
+		self.iSelectionIndex.append(0)
+		self.iSelectionList.append(self.m_iASCityListID)
 
-		self.m_advancedStartTabCtrl.setNumColumns(2 + GC.getNumUnitInfos()/10);
-		self.m_advancedStartTabCtrl.addTabSection(CyTranslator().getText("TXT_KEY_WB_AS_UNITS",()));
-		self.m_iAdvancedStartCurrentIndexes.append(0)
+		self.CyGTabCtrl.setNumColumns(2 + GC.getNumUnitInfos()/10);
+		self.CyGTabCtrl.addTabSection(CyTranslator().getText("TXT_KEY_WB_AS_UNITS",()));
+		self.iSelectionIndex.append(0)
+		self.iSelectionList.append(0)
 
-		self.m_iAdvancedStartCurrentList.append(0)
+		self.CyGTabCtrl.setNumColumns(2 + GC.getNumImprovementInfos()/10);
+		self.CyGTabCtrl.addTabSection(CyTranslator().getText("TXT_KEY_WB_AS_IMPROVEMENTS",()));
+		self.iSelectionIndex.append(0)
+		self.iSelectionList.append(self.m_iASRoutesListID)
 
-		self.m_advancedStartTabCtrl.setNumColumns(2 + GC.getNumImprovementInfos()/10);
-		self.m_advancedStartTabCtrl.addTabSection(CyTranslator().getText("TXT_KEY_WB_AS_IMPROVEMENTS",()));
-		self.m_iAdvancedStartCurrentIndexes.append(0)
+		self.CyGTabCtrl.setNumColumns(1);
+		self.CyGTabCtrl.addTabSection(CyTranslator().getText("TXT_KEY_WB_AS_VISIBILITY",()));
+		self.iSelectionIndex.append(0)
+		self.iSelectionList.append(0)
 
-		self.m_iAdvancedStartCurrentList.append(self.m_iASRoutesListID)
-
-		self.m_advancedStartTabCtrl.setNumColumns(1);
-		self.m_advancedStartTabCtrl.addTabSection(CyTranslator().getText("TXT_KEY_WB_AS_VISIBILITY",()));
-		self.m_iAdvancedStartCurrentIndexes.append(0)
-
-		self.m_iAdvancedStartCurrentList.append(0)
-
-		self.m_advancedStartTabCtrl.setNumColumns(1);
-		self.m_advancedStartTabCtrl.addTabSection(CyTranslator().getText("TXT_KEY_WB_AS_TECH",()));
-		self.m_iAdvancedStartCurrentIndexes.append(0)
-
-		self.m_iAdvancedStartCurrentList.append(0)
+		self.CyGTabCtrl.setNumColumns(1);
+		self.CyGTabCtrl.addTabSection(CyTranslator().getText("TXT_KEY_WB_AS_TECH",()));
+		self.iSelectionIndex.append(0)
+		self.iSelectionList.append(0)
 
 		addWBAdvancedStartControlTabs()
-
-		self.m_advancedStartTabCtrl.setActiveTab(iActiveTab)
-		self.setCurrentAdvancedStartIndex(iActiveIndex)
-		self.setCurrentAdvancedStartList(iActiveList)
+		self.CyGTabCtrl.setActiveTab(iActiveTab)
+		self.setCurrentSelection(iActiveTab, iActiveIndex, iActiveList)
 
 
 	def leftMouseDown(self, argsList):

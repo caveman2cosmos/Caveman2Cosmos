@@ -417,10 +417,9 @@ def WorldBuilderOnAdvancedStartBrushSelected(argsList):
 	if iTab == advancedStartScreen.m_iASTechTabID:
 		showTechChooser()
 	elif iTab == advancedStartScreen.m_iASCityTabID and iList == advancedStartScreen.m_iASAutomateListID:
-		CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_AUTOMATE, advancedStartScreen.m_iCurrentPlayer, -1, -1, -1, True)
+		CyMessageControl().sendAdvancedStartAction(AdvancedStartActionTypes.ADVANCEDSTARTACTION_AUTOMATE, advancedStartScreen.iPlayer, -1, -1, -1, True)
 
-	advancedStartScreen.setCurrentAdvancedStartIndex(iIndex)
-	advancedStartScreen.setCurrentAdvancedStartList(iList)
+	advancedStartScreen.setCurrentSelection(iTab, iIndex, iList)
 
 
 ######################
