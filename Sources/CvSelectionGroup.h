@@ -457,7 +457,7 @@ public:
 	struct fn {
 		DECLARE_MAP_FUNCTOR(CvSelectionGroup, bool, readyToAuto);
 		DECLARE_MAP_FUNCTOR(CvSelectionGroup, bool, isAutomated);
-		DECLARE_MAP_FUNCTOR(CvSelectionGroup, CvUnit*, getHeadUnit);
+		DECLARE_MAP_FUNCTOR(CvSelectionGroup, const CvUnit*, getHeadUnit);
 		DECLARE_MAP_FUNCTOR(CvSelectionGroup, UnitAITypes, getHeadUnitAI);
 		DECLARE_MAP_FUNCTOR(CvSelectionGroup, PlayerTypes, getHeadOwner);
 		DECLARE_MAP_FUNCTOR(CvSelectionGroup, TeamTypes, getHeadTeam);

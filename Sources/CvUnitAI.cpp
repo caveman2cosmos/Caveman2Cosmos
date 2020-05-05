@@ -1,7 +1,6 @@
 // unitAI.cpp
 
 #include "CvGameCoreDLL.h"
-#include "CvReachablePlotSet.h"
 
 PlayerTypes	CvUnitAI::m_cachedPlayer = NO_PLAYER;
 CvReachablePlotSet*	CvUnitAI::m_cachedMissionaryPlotset = NULL;

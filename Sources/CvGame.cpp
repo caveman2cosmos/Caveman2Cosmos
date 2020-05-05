@@ -2,7 +2,6 @@
 
 #include "CvGameCoreDLL.h"
 #include "CvMapGenerator.h"
-#include "CvDiploParameters.h"
 #include "CvReplayMessage.h"
 #include "CvReplayInfo.h"
 

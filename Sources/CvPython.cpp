@@ -1,8 +1,4 @@
 #include "CvGameCoreDLL.h"
-
-#include "CvPython.h"
-
-#include "Python.h"
 #include "frameobject.h"
 
 namespace Cy {;

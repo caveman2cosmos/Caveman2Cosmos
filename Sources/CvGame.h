@@ -5,7 +5,6 @@
 #ifndef CIV4_GAME_H
 #define CIV4_GAME_H
 
-//#include "CvStructs.h"
 #include "CvDeal.h"
 #include "CvRandom.h"
 #include "CvGameObject.h"

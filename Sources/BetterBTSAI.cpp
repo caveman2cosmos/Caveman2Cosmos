@@ -1,7 +1,5 @@
 #include "CvGameCoreDLL.h"
 
-#include "BetterBTSAI.h"
-
 #ifdef LOG_AI
 int gPlayerLogLevel = 0;
 int gTeamLogLevel = 0;

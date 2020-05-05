@@ -7,8 +7,6 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
-#include "CvGameCoreDLLUnDefNew.h"
-#include "CvGameCoreDLLDefNew.h"
 
 void UnitFilterBase::Activate()
 {
@@ -27,7 +25,7 @@ bool UnitFilterBase::isActive()
 
 bool UnitFilterBase::setActive(bool bActive)
 {
-	bool bChanged = m_bActive ^ bActive;
+	const bool bChanged = m_bActive ^ bActive;
 	m_bActive = bActive;
 	return bChanged;
 }

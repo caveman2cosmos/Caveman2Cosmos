@@ -1,8 +1,7 @@
 #pragma once
+
 #ifndef CVPOPUPINFO_H
 #define CVPOPUPINFO_H
-
-//#include "CvEnums.h"
 
 struct CvPopupButtonPython
 {
