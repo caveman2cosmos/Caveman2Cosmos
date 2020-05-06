@@ -22,6 +22,7 @@ public:
 	void reportGameStart();
 	void reportGameEnd();
 	void reportWindowActivation(bool bActive);
+	void reportMapRegen();
 
 	void reportBeginGameTurn(int iGameTurn);
 /************************************************************************************************/

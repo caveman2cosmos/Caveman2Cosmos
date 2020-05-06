@@ -59,6 +59,7 @@ class CvEventManager:
 			'OnLoad'					: self.onLoadGame,
 			'GameStart'					: self.onGameStart,
 #			'GameEnd'					: self.onGameEnd,
+			'MapRegen'					: self.onMapRegen,
 #			'plotRevealed'				: self.onPlotRevealed,
 #			'plotFeatureRemoved'		: self.onPlotFeatureRemoved,
 #			'plotPicked'				: self.onPlotPicked,
@@ -533,15 +534,13 @@ class CvEventManager:
 
 
 	def gameStart(self, bNewGame=False):
+		print "gameStart"
 		############################
 		# Cache game specific data #
 		if GAME.isNetworkMultiPlayer():
 			self.bNetworkMP = True
 		else:
 			self.bNetworkMP = False
-
-		# This is too early to actually set the initial camera zoom level, so raise a flag so it will happen later.
-		CvScreensInterface.mainInterface.bSetStartZoom = True
 
 		self.iTurnTopCiv = GAME.getGameTurn()
 		self.iTurnsToTopCiv = 49 - (self.iTurnTopCiv % 50)
@@ -629,12 +628,10 @@ class CvEventManager:
 		[20] Topkapi Palace
 		'''
 
-
 	def onGameStart(self, argsList):
 		# Called when a game is created the moment you can see the map.
 		self.gameStart(True)
 		G = GAME
-		bPrehistoricStart = GC.getDefineINT("START_YEAR") == G.getGameTurnYear()
 
 		if G.getGameTurn() == G.getStartTurn():
 			if G.isHotSeat() or G.isPbem():
@@ -659,7 +656,7 @@ class CvEventManager:
 					popup.setText('showDawnOfMan')
 					popup.addPopup(iPlayer)
 				szText = ""
-				if not bPrehistoricStart:
+				if not GC.getDefineINT("START_YEAR") == G.getGameTurnYear():
 					szText += "\n\n" + TRNSLTR.getText("TXT_KEY_MOD_GAMESTART_NOT_PREHISTORIC", ())
 				if G.isOption(GameOptionTypes.GAMEOPTION_ADVANCED_START):
 					szText += "\n\n" + TRNSLTR.getText("TXT_KEY_MOD_GAMESTART_ADVANCED_START", ())
@@ -669,27 +666,35 @@ class CvEventManager:
 					popup.setButtonPopupType(ButtonPopupTypes.BUTTONPOPUP_TEXT)
 					popup.setText(szText)
 					popup.addPopup(iPlayer)
+			if not CyInterface().isInAdvancedStart():
+				self.freePromotions()
 		else:
-			CyInterface().setSoundSelectionReady(true)
+			CyInterface().setSoundSelectionReady(True)
 
-		if bPrehistoricStart:
-			for iPlayer in xrange(self.MAX_PC_PLAYERS):
-				CyPlayer = GC.getPlayer(iPlayer)
-				if not CyPlayer.isAlive(): continue
 
-				iCulture = -1
-				civInfo = GC.getCivilizationInfo(CyPlayer.getCivilizationType())
-				for iPromo, _, native in self.aCultureList:
-					if civInfo.isCivilizationBuilding(native):
-						iCulture = iPromo
-						break
-				CyUnit, i = CyPlayer.firstUnit(False)
-				while CyUnit:
-					if CyUnit.isFound():
-						CyUnit.setHasPromotion(self.PROMO_GUARDIAN_TRIBAL, True)
-						if iCulture > -1:
-							CyUnit.setHasPromotion(iCulture, True)
-					CyUnit, i = CyPlayer.nextUnit(i, False)
+	def freePromotions(self):
+		for iPlayer in xrange(self.MAX_PC_PLAYERS):
+			CyPlayer = GC.getPlayer(iPlayer)
+			if not CyPlayer.isAlive(): continue
+
+			civInfo = GC.getCivilizationInfo(CyPlayer.getCivilizationType())
+			aList = []
+			for iPromo, _, native in self.aCultureList:
+				if -1 in (iPromo, native): continue
+				if civInfo.isCivilizationBuilding(native):
+					aList.append(iPromo)
+			if not aList: continue
+
+			CyUnit, i = CyPlayer.firstUnit(False)
+			while CyUnit:
+				if CyUnit.isFound():
+					for iPromo in aList:
+						CyUnit.setHasPromotion(iPromo, True)
+				CyUnit, i = CyPlayer.nextUnit(i, False)
+
+	def onMapRegen(self, argsList):
+		if not CyInterface().isInAdvancedStart():
+			self.freePromotions()
 
 
 	def onLoadGame(self, argsList):

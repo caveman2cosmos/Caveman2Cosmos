@@ -41,6 +41,10 @@ Base XP gained when defending
 					<PromotionType>PROMOTION_SENTRY</PromotionType>
 					<bFreePromotion>1</bFreePromotion>
 				</FreePromotion>
+				<FreePromotion>
+					<PromotionType>PROMOTION_GUARDIAN_TRIBAL</PromotionType>
+					<bFreePromotion>1</bFreePromotion>
+				</FreePromotion>
 			</FreePromotions>
 			<UnitUpgrades>
 				<UnitType>UNIT_TRIBE</UnitType>
