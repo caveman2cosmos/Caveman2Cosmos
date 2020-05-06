@@ -683,7 +683,6 @@ screenMap = {
 # Initialize #
 ##############
 def lateInit():
-	print "lateInit"
 	import CvCorporationScreen
 	import CvEspionageAdvisor
 	import CvMilitaryAdvisor

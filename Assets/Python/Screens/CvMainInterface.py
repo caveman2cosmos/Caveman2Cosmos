@@ -92,7 +92,6 @@ class CvMainInterface:
 
 
 	def interfaceScreen(self):
-		print "interfaceScreen"
 		if GAME.isPitbossHost(): return
 		# Cache Game Status
 		self.bNetworkMP		= GAME.isNetworkMultiPlayer()

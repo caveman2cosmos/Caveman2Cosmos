@@ -22,8 +22,6 @@ class CvAdvancedStartScreen:
 		self.bInitialize = True
 
 	def interfaceScreen(self, screenId):
-		print "AS interfaceScreen"
-
 		if self.bInitialize:
 			self.screenId = screenId
 			self.MAP = GC.getMap()

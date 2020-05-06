@@ -534,7 +534,6 @@ class CvEventManager:
 
 
 	def gameStart(self, bNewGame=False):
-		print "gameStart"
 		############################
 		# Cache game specific data #
 		if GAME.isNetworkMultiPlayer():
@@ -656,7 +655,7 @@ class CvEventManager:
 					popup.setText('showDawnOfMan')
 					popup.addPopup(iPlayer)
 				szText = ""
-				if not GC.getDefineINT("START_YEAR") == G.getGameTurnYear():
+				if GC.getDefineINT("START_YEAR") != G.getGameTurnYear():
 					szText += "\n\n" + TRNSLTR.getText("TXT_KEY_MOD_GAMESTART_NOT_PREHISTORIC", ())
 				if G.isOption(GameOptionTypes.GAMEOPTION_ADVANCED_START):
 					szText += "\n\n" + TRNSLTR.getText("TXT_KEY_MOD_GAMESTART_ADVANCED_START", ())
