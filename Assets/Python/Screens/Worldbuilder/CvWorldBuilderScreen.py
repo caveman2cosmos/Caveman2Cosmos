@@ -1325,7 +1325,7 @@ class CvWorldBuilderScreen:
 		pNewCity.setScriptData(pOldCity.getScriptData())
 		pNewCity.setWallOverride(pOldCity.isWallOverride())
 
-	def rightMouseDown (self, argsList):
+	def rightMouseDown (self):
 
 		if self.iPlayerAddMode in self.RevealMode:
 			if not self.m_pCurrentPlot.isNone():
