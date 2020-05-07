@@ -1648,7 +1648,7 @@ class CvPlotDesc:
 						self.abTeamPlotRevealed.append(int(teamLoop))
 				continue
 
-			for iPlayerX in xrange(gc.getMAX_PLAYERS()):
+			for iPlayerX in xrange(GC.getMAX_PLAYERS()):
 				v = parser.findTokenValue(toks, "Player%dCulture" % iPlayerX)
 				if v!=-1:
 					if int(v) > 0:
