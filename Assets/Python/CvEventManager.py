@@ -1075,6 +1075,20 @@ class CvEventManager:
 									'Art/Interface/Buttons/Process/processresearchmeagre.dds',
 									ColorTypes(44), iX, iY, True, True, bForce=False
 								)
+			# Wonder effects
+			aWonderTuple = self.aWonderTuple
+			if iPlayerW in aWonderTuple[4]:
+				for i, iPlayer in enumerate(aWonderTuple[4]):
+					if iPlayer != iPlayerW: continue
+					KEY = aWonderTuple[0][i]
+					if KEY == "PERGAMON":
+						iGGP = int(CyUnitL.getExperience() ** 0.5)
+						if iGGP:
+							CyPlayerW.changeCombatExperience(iGGP)
+					elif KEY == "GREAT_JAGUAR_TEMPLE":
+						iChance = GAME.getSorenRandNum(5, "Jaguar")
+						if not iChance:
+							CyUnitW.setDamage(0, -1)
 
 		iUnitW = CyUnitW.getUnitType()
 		mapUnitType = self.mapUnitType
@@ -1125,23 +1139,6 @@ class CvEventManager:
 								CyTeamW = GC.getTeam(iTeamW)
 							if CyTeamW.isAtWar(GC.getPlayer(CyCity.getOwner()).getTeam()) and not CyPlotL.getNumVisibleEnemyDefenders(CyUnitW):
 								CyCity.setHasReligion(iReligion, True, True, True)
-
-		aWonderTuple = self.aWonderTuple
-		if iPlayerW in aWonderTuple[4]:
-			for i, iPlayer in enumerate(aWonderTuple[4]):
-				if iPlayer != iPlayerW: continue
-				KEY = aWonderTuple[0][i]
-				if KEY == "PERGAMON":
-					if CyUnitL.isNPC(): continue
-					iGGP = int(CyUnitL.getExperience() ** 0.5)
-					if iGGP:
-						CyPlayerW.changeCombatExperience(iGGP)
-						CyPlayerL.changeCombatExperience(-iGGP)
-				elif KEY == "GREAT_JAGUAR_TEMPLE":
-					if CyUnitL.isNPC(): continue
-					iChance = GAME.getSorenRandNum(5, "Jaguar")
-					if not iChance:
-						CyUnitW.setDamage(0, -1)
 
 
 	def onCombatLogCalc(self, argsList):
