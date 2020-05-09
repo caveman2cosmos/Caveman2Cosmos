@@ -190,9 +190,7 @@ class WBUnitScreen:
 					lData1 = [pPlot.getX()]
 					iData2 = pPlot.getY()
 			bCanDoMission = False
-			print "WAKAWAKA"
 			for iData1 in lData1:
-				print sType
 				if pUnit.getGroup().canStartMission(i, iData1, iData2, pPlot, True):
 					screen.addPullDownString("Missions", MissionInfo.getDescription(), i, i, i == iMissionType)
 					bCanDoMission = True
