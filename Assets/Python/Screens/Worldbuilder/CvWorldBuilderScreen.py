@@ -28,6 +28,16 @@ class CvWorldBuilderScreen:
 
 	def __init__ (self, screenId):
 		self.screenId = screenId
+		self.eventManager = None
+
+
+	def interfaceScreen(self):
+		getWBToolAdvancedStartTabCtrl().enable(False)
+
+		if self.eventManager is None:
+			import CvEventInterface
+			self.eventManager = CvEventInterface.getEventManager()
+		self.TempInfo = []
 		self.m_bShowBigBrush = False
 		self.m_iCurrentPlayer = 0
 		self.m_iCurrentTeam = 0
@@ -49,19 +59,8 @@ class CvWorldBuilderScreen:
 		self.iMoveCity = -1
 		self.iTargetPlotX = -1
 		self.iTargetPlotY = -1
-		self.TempInfo = []
-		self.eventManager = None
-
-
-	def interfaceScreen(self):
-		getWBToolAdvancedStartTabCtrl().enable(False)
-
-		if self.eventManager is None:
-			import CvEventInterface
-			self.eventManager = CvEventInterface.getEventManager()
 
 		screen = CyGInterfaceScreen("WorldBuilderScreen", self.screenId)
-		self.__init__(self.screenId)
 		screen.setCloseOnEscape(False)
 		screen.setAlwaysShown(True)
 

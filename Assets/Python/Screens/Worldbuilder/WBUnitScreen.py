@@ -42,7 +42,7 @@ class WBUnitScreen:
 		global pPlot
 
 		pUnit = pUnitX
-		pPlot = pUnit.plot()
+		pPlot = pUnitX.plot()
 		iWidth = screen.getXResolution()/5 - 20
 
 		if self.top.iTargetPlotX == -1 or self.top.iTargetPlotY == -1:
@@ -159,7 +159,8 @@ class WBUnitScreen:
 			lData1 = []
 			iData2 = -1
 
-			if sType == "MISSION_MOVE_TO_UNIT": continue
+			if sType in ("MISSION_MOVE_TO_UNIT", "MISSION_SHADOW"):
+				continue
 			elif sType == "MISSION_BUILD":
 				for j in xrange(GC.getNumBuildInfos()):
 					if UnitInfo.getBuilds(j):
@@ -177,9 +178,8 @@ class WBUnitScreen:
 					if UnitInfo.getGreatPeoples(j):
 						lData1.append(j)
 			elif sType == "MISSION_CONSTRUCT":
-				for j in xrange(GC.getNumBuildingInfos()):
-					if UnitInfo.getBuildings(j) or UnitInfo.getForceBuildings(j):
-						lData1.append(j)
+				for j in xrange(UnitInfo.getNumBuildings()):
+					lData1.append(UnitInfo.getBuildings(j))
 			elif sType == "MISSION_GOLDEN_AGE":
 				lData1 = [-1]
 			else:
@@ -190,7 +190,9 @@ class WBUnitScreen:
 					lData1 = [pPlot.getX()]
 					iData2 = pPlot.getY()
 			bCanDoMission = False
+			print "WAKAWAKA"
 			for iData1 in lData1:
+				print sType
 				if pUnit.getGroup().canStartMission(i, iData1, iData2, pPlot, True):
 					screen.addPullDownString("Missions", MissionInfo.getDescription(), i, i, i == iMissionType)
 					bCanDoMission = True
