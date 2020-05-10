@@ -110,103 +110,91 @@ class WBPlayerUnits:
 		global lUnits
 		global iUnitOwner
 		pPlayer = GC.getPlayer(iPlayer)
-		pUnitOwner = GC.getPlayer(iUnitOwner)
 
 		lUnits = []
 		pUnit = pPlayer.getUnit(iUnitID)
-		if pUnitOwner:
-			pUnit = pUnitOwner.getUnit(iUnitID)
+		if iUnitOwner > -1:
+			pUnit = GC.getPlayer(iUnitOwner).getUnit(iUnitID)
 		if pUnit.isNone():
-			(loopUnit, iter) = pPlayer.firstUnit(False)
-			while(loopUnit):
-				pUnit = loopUnit
-				iUnitID = loopUnit.getID()
-				iUnitOwner = loopUnit.getOwner()
-				break
-				(loopUnit, iter) = pPlayer.nextUnit(iter, False)
+			unitX, i = pPlayer.firstUnit(False)
+			if unitX:
+				pUnit = unitX
+				iUnitID = unitX.getID()
+				iUnitOwner = unitX.getOwner()
 
 		for iPlayerX in xrange(GC.getMAX_PLAYERS()):
-			pPlayerX = GC.getPlayer(iPlayerX)
-			if iOwnerType == 1 and iPlayerX != iPlayer: continue
-			if iOwnerType == 2 and pPlayerX.getTeam() != pPlayer.getTeam(): continue
-			if pPlayerX.isAlive():
-				(loopUnit, iter) = pPlayerX.firstUnit(False)
-				while(loopUnit):
-					if pUnit.isNone():
-						pUnit = loopUnit
-						iUnitID = loopUnit.getID()
-						iUnitOwner = loopUnit.getOwner()
-					bCopy = True
-					if iPlotType == 0:
-						if loopUnit.getX() != pUnit.getX() or loopUnit.getY() != pUnit.getY():
-							bCopy = False
-					elif iPlotType == 1:
-						if loopUnit.plot().getArea() != pUnit.plot().getArea():
-							bCopy = False
-					if iCopyType == 1:
-						if loopUnit.getUnitType() != pUnit.getUnitType():
-							bCopy = False
-					elif iCopyType == 2:
-						if loopUnit.getUnitCombatType() != pUnit.getUnitCombatType():
-							bCopy = False
-					elif iCopyType == 3:
-						if loopUnit.getDomainType() != pUnit.getDomainType():
-							bCopy = False
-					elif iCopyType == 4:
-						if loopUnit.getGroupID() != pUnit.getGroupID() or loopUnit.getOwner() != pUnit.getOwner():
-							bCopy = False
-					elif iCopyType == 5:
-						loopGroup = loopUnit.getGroup()
-						if loopGroup.getActivityType() != iActivityType:
-							bCopy = False
-					if bCopy:
-						lUnits.append([loopUnit.getOwner(), loopUnit.getID()])
-					(loopUnit, iter) = pPlayerX.nextUnit(iter, False)
+			if iOwnerType == 1 and iPlayerX != iPlayer:
+				continue
+			playerX = GC.getPlayer(iPlayerX)
+			if iOwnerType == 2 and playerX.getTeam() != pPlayer.getTeam() or not playerX.isAlive():
+				continue
+			unitX, i = playerX.firstUnit(False)
+			while unitX:
+				bCopy = True
+				if iPlotType == 0:
+					if unitX.getX() != pUnit.getX() or unitX.getY() != pUnit.getY():
+						bCopy = False
+				elif iPlotType == 1:
+					if unitX.plot().getArea() != pUnit.plot().getArea():
+						bCopy = False
+				if iCopyType == 1:
+					if unitX.getUnitType() != pUnit.getUnitType():
+						bCopy = False
+				elif iCopyType == 2:
+					if unitX.getUnitCombatType() != pUnit.getUnitCombatType():
+						bCopy = False
+				elif iCopyType == 3:
+					if unitX.getDomainType() != pUnit.getDomainType():
+						bCopy = False
+				elif iCopyType == 4:
+					if unitX.getGroupID() != pUnit.getGroupID() or unitX.getOwner() != pUnit.getOwner():
+						bCopy = False
+				elif iCopyType == 5:
+					loopGroup = unitX.getGroup()
+					if loopGroup.getActivityType() != iActivityType:
+						bCopy = False
+				if bCopy:
+					lUnits.append([unitX.getOwner(), unitX.getID()])
+				unitX, i = playerX.nextUnit(i, False)
 		lUnits.sort()
 		self.placeCurrentUnit()
-		
+
 	def sortCities(self):
 		screen = CyGInterfaceScreen( "WBPlayerUnits", CvScreenEnums.WB_UNITLIST)
 		global iCityID
 		global lCities
 		global iCityOwner
 		pPlayer = GC.getPlayer(iPlayer)
-		pCityOwner = GC.getPlayer(iCityOwner)
 
 		lCities = []
 		pCity = pPlayer.getCity(iCityID)
-		if pCityOwner:
-			pCity = pCityOwner.getCity(iCityID)
+		if iCityOwner > -1:
+			pCity = GC.getPlayer(iCityOwner).getCity(iCityID)
 		if pCity.isNone():
-			(loopCity, iter) = pPlayer.firstCity(False)
-			while(loopCity):
-				pCity = loopCity
-				iCityID = loopCity.getID()
-				iCityOwner = loopCity.getOwner()
-				break
-				(loopCity, iter) = pPlayer.nextCity(iter, False)
+			cityX, i = pPlayer.firstCity(False)
+			if cityX:
+				pCity = cityX
+				iCityID = cityX.getID()
+				iCityOwner = cityX.getOwner()
 
 		for iPlayerX in xrange(GC.getMAX_PLAYERS()):
-			pPlayerX = GC.getPlayer(iPlayerX)
-			if iOwnerType == 1 and iPlayerX != iPlayer: continue
-			if iOwnerType == 2 and pPlayerX.getTeam() != pPlayer.getTeam(): continue
-			if pPlayerX.isAlive():
-				(loopCity, iter) = pPlayerX.firstCity(False)
-				while(loopCity):
-					if pCity.isNone():
-						pCity = loopCity
-						iCityID = loopCity.getID()
-						iCityOwner = loopCity.getOwner()
-					bCopy = True
-					if iPlotType == 0:
-						if loopCity.getX() != pCity.getX() or loopCity.getY() != pCity.getY():
-							bCopy = False
-					elif iPlotType == 1:
-						if loopCity.plot().getArea() != pCity.plot().getArea():
-							bCopy = False
-					if bCopy:
-						lCities.append([loopCity.getOwner(), loopCity.getID()])
-					(loopCity, iter) = pPlayerX.nextCity(iter, False)
+			if iOwnerType == 1 and iPlayerX != iPlayer:
+				continue
+			playerX = GC.getPlayer(iPlayerX)
+			if iOwnerType == 2 and playerX.getTeam() != pPlayer.getTeam() or not playerX.isAlive():
+				continue
+			cityX, i = playerX.firstCity(False)
+			while cityX:
+				bCopy = True
+				if iPlotType == 0:
+					if cityX.getX() != pCity.getX() or cityX.getY() != pCity.getY():
+						bCopy = False
+				elif iPlotType == 1:
+					if cityX.plot().getArea() != pCity.plot().getArea():
+						bCopy = False
+				if bCopy:
+					lCities.append([cityX.getOwner(), cityX.getID()])
+				cityX, i = playerX.nextCity(i, False)
 		lCities.sort()
 		self.placeCurrentCity()
 
@@ -235,7 +223,7 @@ class WBPlayerUnits:
 			loopUnit = pPlayerX.getUnit(i[1])
 			if loopUnit.isNone(): continue
 			iRow = screen.appendTableRow("WBUnitList")
-			
+
 			iStatus = 0
 			if loopUnit.movesLeft() > 0:
 				iStatus = 1
@@ -369,7 +357,7 @@ class WBPlayerUnits:
 				if iProduction != 0:
 					sText += u" %+d" %(iProduction)
 			sText += u" (%s)" %(pCity.getProductionName())
-					
+
 		iGPRate = pCity.getGreatPeopleRate()
 		iProgress = pCity.getGreatPeopleProgress()
 		if iGPRate > 0 or iProgress > 0:
