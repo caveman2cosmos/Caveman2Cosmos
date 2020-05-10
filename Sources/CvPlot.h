@@ -140,7 +140,8 @@ public:
 	CvPlot();
 	virtual ~CvPlot();
 
-	CvGameObjectPlot* getGameObject() {return &m_GameObject;};
+	CvGameObjectPlot* getGameObject() { return &m_GameObject; };
+	const CvGameObjectPlot* getGameObject() const { return &m_GameObject; };
 
 	// Comparison operators
 	// Use address identity for now (more than one map means x/y compare wouldn't work)

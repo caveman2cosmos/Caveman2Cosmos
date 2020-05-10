@@ -98,22 +98,22 @@ public:
 	void	reset();
 
 	//	Note a unit looking for work
-	void	lookingForWork(CvUnit* pUnit, int iMinPriority = 0);
+	void	lookingForWork(const CvUnit* pUnit, int iMinPriority = 0);
 	//	Unit fulfilled its work and is no longer advertising as available
-	void	removeUnit(CvUnit* pUnit);
+	void	removeUnit(const CvUnit* pUnit);
 	//	Make a work request
 	//		iPriority should be in the range 0-1000 ideally
 	//		eUnitFlags indicate the type(s) of unit sought
 	//		(iAtX,iAtY) is (roughly) where the work will be
 	//		pJoinUnit may be NULL but if not it is a request to join that unit's group
-	void	advertiseWork(int iPriority, unitCapabilities eUnitFlags, int iAtX, int iAtY, CvUnit* pJoinUnit, UnitAITypes eAIType = NO_UNITAI, int iUnitStrength = -1, CvUnitSelectionCriteria* criteria = NULL, int iMaxPath = MAX_INT);
+	void	advertiseWork(int iPriority, unitCapabilities eUnitFlags, int iAtX, int iAtY, const CvUnit* pJoinUnit, UnitAITypes eAIType = NO_UNITAI, int iUnitStrength = -1, const CvUnitSelectionCriteria* criteria = NULL, int iMaxPath = MAX_INT);
 	//	Advertise a tender to build units
 	//		iMinPriority indicates the lowest priority request this tender is appropriate for
-	void	advertiseTender(CvCity* pCity, int iMinPriority);
+	void	advertiseTender(const CvCity* pCity, int iMinPriority);
 	//	Find out how many requests have already been made for units of a specified AI type
 	//	This is used by cities requesting globally needed units like settlers to avoid multiple
 	//	tenders all occurring at once
-	int		numRequestsOutstanding(UnitAITypes eUnitAI, bool bAtCityOnly = true, CvPlot* pPlot = NULL) const;
+	int		numRequestsOutstanding(UnitAITypes eUnitAI, bool bAtCityOnly = true, const CvPlot* pPlot = NULL) const;
 	//	Make a contract
 	//	This will attempt to make the best contracts between currently
 	//	advertising units and work, then search the resulting set for the work 
@@ -124,10 +124,10 @@ public:
 
 private:
 	const workRequest*	findWorkRequest(int iWorkRequestId) const;
-	advertisingUnit*	findBestUnit(workRequest& request, bool bThisPlotOnly);
+	advertisingUnit*	findBestUnit(const workRequest& request, bool bThisPlotOnly);
 	CvUnit*				findUnit(int iUnitId) const;
-	int					lowerPartiallyFulfilledRequestPriority(int iPreviousPriority, int iPreviousRequestStrength, int iStrengthProvided);
-	UnitValueFlags		unitCapabilities2UnitValueFlags(unitCapabilities eCapabilities);
+	int					lowerPartiallyFulfilledRequestPriority(int iPreviousPriority, int iPreviousRequestStrength, int iStrengthProvided) const;
+	UnitValueFlags		unitCapabilities2UnitValueFlags(unitCapabilities eCapabilities) const;
 
 	std::vector<workRequest>		m_workRequests;
 	std::vector<advertisingUnit>	m_advertisingUnits;

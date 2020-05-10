@@ -5239,7 +5239,7 @@ void CvDLLWidgetData::parseUnitFilterHelp(CvWidgetDataStruct &widgetDataStruct, 
 
 	if (widgetDataStruct.m_iData2 == - 1)
 	{
-		CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
+		const CvCity* pHeadSelectedCity = gDLL->getInterfaceIFace()->getHeadSelectedCity();
 		if (pHeadSelectedCity != NULL)
 		{
 			bIsActive = pHeadSelectedCity->getUnitListFilterActive(eFilter);
@@ -5886,7 +5886,7 @@ void CvDLLWidgetData::parseBuildListQueueHelp(CvWidgetDataStruct &widgetDataStru
 	int index = kPlayer.m_pBuildLists->getIndexByID(widgetDataStruct.m_iData1);
 	if (index > -1)
 	{
-		OrderData* pOrder = kPlayer.m_pBuildLists->getOrder(index, widgetDataStruct.m_iData2);
+		const OrderData* pOrder = kPlayer.m_pBuildLists->getOrder(index, widgetDataStruct.m_iData2);
 
 		if (pOrder != NULL)
 		{
@@ -5915,8 +5915,8 @@ void CvDLLWidgetData::parseBuildListQueueHelp(CvWidgetDataStruct &widgetDataStru
 
 void CvDLLWidgetData::parseBuildListHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer)
 {
-	CvPlayerAI& kPlayer = GET_PLAYER(GC.getGame().getActivePlayer());
-	int index = kPlayer.m_pBuildLists->getIndexByID(widgetDataStruct.m_iData1);
+	const CvPlayerAI& kPlayer = GET_PLAYER(GC.getGame().getActivePlayer());
+	const int index = kPlayer.m_pBuildLists->getIndexByID(widgetDataStruct.m_iData1);
 	if (index > -1)
 	{
 		szBuffer.append(CvWString(kPlayer.m_pBuildLists->getListName(index)));

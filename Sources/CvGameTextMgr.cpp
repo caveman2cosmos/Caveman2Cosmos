@@ -12251,7 +12251,7 @@ void CvGameTextMgr::parseTraits(CvWStringBuffer &szHelpString, TraitTypes eTrait
 		}
 
 		// Property manipulators
-		CvPropertyManipulators* pMani = GC.getTraitInfo(eTrait).getPropertyManipulators();
+		const CvPropertyManipulators* pMani = GC.getTraitInfo(eTrait).getPropertyManipulators();
 		if (pMani)
 			pMani->buildDisplayString(szHelpString);
 	}

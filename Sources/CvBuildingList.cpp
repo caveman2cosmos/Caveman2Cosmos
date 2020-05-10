@@ -48,7 +48,7 @@ void CvBuildingList::setInvalid()
 	m_bSortingValid = false;
 }
 
-bool CvBuildingList::getFilterActive(BuildingFilterTypes eFilter)
+bool CvBuildingList::getFilterActive(BuildingFilterTypes eFilter) const
 {
 	return m_BuildingFilters.isFilterActive(eFilter);
 }
@@ -63,7 +63,7 @@ void CvBuildingList::setFilterActive(BuildingFilterTypes eFilter, bool bActive)
 	}
 }
 
-BuildingGroupingTypes CvBuildingList::getGroupingActive()
+BuildingGroupingTypes CvBuildingList::getGroupingActive() const
 {
 	return m_BuildingGrouping.getActiveGrouping();
 }
@@ -77,7 +77,7 @@ void CvBuildingList::setGroupingActive(BuildingGroupingTypes eGrouping)
 	}
 }
 
-BuildingSortTypes CvBuildingList::getSortingActive()
+BuildingSortTypes CvBuildingList::getSortingActive() const
 {
 	return m_BuildingSort.getActiveSort();
 }
@@ -128,7 +128,7 @@ void CvBuildingList::doFilter()
 	m_aiBuildingList.clear();
 	for (int i = 0; i < GC.getNumBuildingInfos(); i++)
 	{
-		BuildingTypes eBuilding = (BuildingTypes) i;
+		const BuildingTypes eBuilding = static_cast<BuildingTypes>(i);
 		if (m_BuildingFilters.isFiltered(eBuilding))
 			m_aiBuildingList.push_back(eBuilding);
 	}
@@ -142,7 +142,7 @@ void CvBuildingList::doGroup()
 
 	m_aaiGroupedBuildingList.clear();
 
-	int iSize = static_cast<int>(m_aiBuildingList.size());
+	const int iSize = static_cast<int>(m_aiBuildingList.size());
 	std::multimap<int, BuildingTypes> mmap_Buildings;
 
 	for (int i = 0; i < iSize; i++)
@@ -233,12 +233,12 @@ void CvBuildingList::setSelectedWonder(BuildingTypes eSelectedWonder)
 	m_eSelectedWonder = eSelectedWonder;
 }
 
-BuildingTypes CvBuildingList::getSelectedBuilding()
+BuildingTypes CvBuildingList::getSelectedBuilding() const
 {
 	return m_eSelectedBuilding;
 }
 
-BuildingTypes CvBuildingList::getSelectedWonder()
+BuildingTypes CvBuildingList::getSelectedWonder() const
 {
 	return m_eSelectedWonder;
 }

@@ -1217,32 +1217,32 @@ void CvBuildingInfo::setMovieDefineTag(const TCHAR* szVal)
 	m_szMovieDefineTag = szVal;
 }
 
-CvProperties* CvBuildingInfo::getProperties()
+const CvProperties* CvBuildingInfo::getProperties() const
 {
 	return &m_Properties;
 }
 
-CvProperties* CvBuildingInfo::getPropertiesAllCities()
+const CvProperties* CvBuildingInfo::getPropertiesAllCities() const
 {
 	return &m_PropertiesAllCities;
 }
 
-CvProperties* CvBuildingInfo::getPrereqMinProperties()
+const CvProperties* CvBuildingInfo::getPrereqMinProperties() const
 {
 	return &m_PrereqMinProperties;
 }
 
-CvProperties* CvBuildingInfo::getPrereqMaxProperties()
+const CvProperties* CvBuildingInfo::getPrereqMaxProperties() const
 {
 	return &m_PrereqMaxProperties;
 }
 
-CvProperties* CvBuildingInfo::getPrereqPlayerMinProperties()
+const CvProperties* CvBuildingInfo::getPrereqPlayerMinProperties() const
 {
 	return &m_PrereqPlayerMinProperties;
 }
 
-CvProperties* CvBuildingInfo::getPrereqPlayerMaxProperties()
+const CvProperties* CvBuildingInfo::getPrereqPlayerMaxProperties() const
 {
 	return &m_PrereqPlayerMaxProperties;
 }
@@ -1799,26 +1799,13 @@ int CvBuildingInfo::getNumGlobalBuildingCommerceChanges() const
 
 const TCHAR* CvBuildingInfo::getButton() const
 {
-/************************************************************************************************/
-/* XMLCOPY                                 10/25/07                                MRGENIE      */
-/*                                                                                              */
-/* Catch non-existing tag                                                                       */
-/************************************************************************************************/
-	CvString cDefault = CvString::format("").GetCString();
-	if (getArtDefineTag() == cDefault)
+	const CvString cDefault = CvString::format("").GetCString();
+	if (getArtDefineTag() == cDefault)	// MRGENIE: Catch non-existing tag
 	{
 		return NULL;
 	}
-	const CvArtInfoBuilding * pBuildingArtInfo;
-	pBuildingArtInfo = getArtInfo();
-	if (pBuildingArtInfo != NULL)
-	{
-		return pBuildingArtInfo->getButton();
-	}
-	else
-	{
-		return NULL;
-	}
+	const CvArtInfoBuilding* pBuildingArtInfo = getArtInfo();
+	return pBuildingArtInfo ? pBuildingArtInfo->getButton() : NULL;
 }
 
 const CvArtInfoBuilding* CvBuildingInfo::getArtInfo() const
@@ -1841,8 +1828,7 @@ const CvArtInfoMovie* CvBuildingInfo::getMovieInfo() const
 
 const TCHAR* CvBuildingInfo::getMovie() const
 {
-	const CvArtInfoMovie* pArt;
-	pArt = getMovieInfo();
+	const CvArtInfoMovie* pArt = getMovieInfo();
 	if (pArt != NULL)
 	{
 		return pArt->getPath();
@@ -3082,14 +3068,14 @@ bool CvBuildingInfo::EnablesUnits() const
 {
 	if ( !m_bEnablesUnitsCalculated )
 	{
-		int eBuilding = GC.getInfoTypeForString(m_szType);
+		const int eBuilding = GC.getInfoTypeForString(m_szType);
 
 		m_bEnablesUnitsCalculated = true;
 		m_bEnablesUnits = false;
 
 		for (int iI = 0; iI < GC.getNumUnitInfos(); iI++)
 		{
-			CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes)iI);
+			const CvUnitInfo& kUnit = GC.getUnitInfo((UnitTypes)iI);
 
 			if (kUnit.isPrereqAndBuilding(eBuilding))
 			{
@@ -6533,14 +6519,14 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 		m_aszPrereqAndCivicsforPass3.push_back(pClassInfo->isPrereqAndCivicsNamesVectorElement(i));
 	}
 
-	m_Properties.copyNonDefaults(pClassInfo->getProperties(), pXML);
-	m_PropertiesAllCities.copyNonDefaults(pClassInfo->getPropertiesAllCities(), pXML);
-	m_PrereqMinProperties.copyNonDefaults(pClassInfo->getPrereqMinProperties(), pXML);
-	m_PrereqMaxProperties.copyNonDefaults(pClassInfo->getPrereqMaxProperties(), pXML);
-	m_PrereqPlayerMinProperties.copyNonDefaults(pClassInfo->getPrereqPlayerMinProperties(), pXML);
-	m_PrereqPlayerMaxProperties.copyNonDefaults(pClassInfo->getPrereqPlayerMaxProperties(), pXML);
+	m_Properties.copyNonDefaults(pClassInfo->getProperties());
+	m_PropertiesAllCities.copyNonDefaults(pClassInfo->getPropertiesAllCities());
+	m_PrereqMinProperties.copyNonDefaults(pClassInfo->getPrereqMinProperties());
+	m_PrereqMaxProperties.copyNonDefaults(pClassInfo->getPrereqMaxProperties());
+	m_PrereqPlayerMinProperties.copyNonDefaults(pClassInfo->getPrereqPlayerMinProperties());
+	m_PrereqPlayerMaxProperties.copyNonDefaults(pClassInfo->getPrereqPlayerMaxProperties());
 
-	m_PropertyManipulators.copyNonDefaults(pClassInfo->getPropertyManipulators(), pXML);
+	m_PropertyManipulators.copyNonDefaults(&pClassInfo->m_PropertyManipulators, pXML);
 
 	if (!m_pExprNewCityFree)
 	{
@@ -7035,16 +7021,6 @@ void CvBuildingInfo::copyNonDefaultsReadPass2(CvBuildingInfo* pClassInfo, CvXMLL
 			SAFE_DELETE_ARRAY(m_pbReplaceBuilding);
 		}
 	}
-}
-
-const CvPropertyManipulators* CvBuildingInfo::getPropertyManipulators() const
-{
-	return &m_PropertyManipulators;
-}
-
-CvPropertyManipulators* CvBuildingInfo::getPropertyManipulators()
-{
-	return &m_PropertyManipulators;
 }
 
 bool CvBuildingInfo::isNewCityFree(CvGameObject* pObject)

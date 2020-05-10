@@ -17,9 +17,9 @@ public:
 	CyPlot();
 	DllExport explicit CyPlot(CvPlot*);			// Call from C++
 	CyPlot(CvPlot*, bool bInViewportSpace);
-	CvPlot* getPlot() { return m_pPlot; }	// Call from C++
-	void setPlot(CvPlot* p) { m_pPlot=p; }	// Call from C++
-	bool isNone() { return (m_pPlot==NULL); }
+	CvPlot* getPlot() const { return m_pPlot; }	// Call from C++
+	void setPlot(CvPlot* p) { m_pPlot = p; }	// Call from C++
+	bool isNone() const { return m_pPlot == NULL; }
 	void erase();
 	DllExport NiPoint3 getPoint();
 	int getTeam();

@@ -25066,7 +25066,7 @@ void CvPlayer::applyEvent(EventTypes eEvent, int iEventTriggeredId, bool bUpdate
 		changeBaseFreeUnits(kEvent.getFreeUnitSupport());
 	}
 
-	CvProperties* pProp = kEvent.getPropertiesAllCities();
+	const CvProperties* pProp = kEvent.getPropertiesAllCities();
 	if (!pProp->isEmpty())
 	{
 		addPropertiesAllCities(pProp);
@@ -32290,26 +32290,20 @@ const CvProperties* CvPlayer::getPropertiesConst() const
 	return &m_Properties;
 }
 
-void CvPlayer::addPropertiesAllCities(CvProperties *pProp)
+void CvPlayer::addPropertiesAllCities(const CvProperties *pProp)
 {
-	CvCity* pLoopCity;
-	int iLoop;
-
-	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	foreach_(CvCity* city, cities())
 	{
-		pLoopCity->getProperties()->addProperties(pProp);
+		city->getProperties()->addProperties(pProp);
 		//getProperties()->addProperties(pProp);
 	}
 }
 
-void CvPlayer::subtractPropertiesAllCities(CvProperties *pProp)
+void CvPlayer::subtractPropertiesAllCities(const CvProperties *pProp)
 {
-	CvCity* pLoopCity;
-	int iLoop;
-
-	for (pLoopCity = firstCity(&iLoop); pLoopCity != NULL; pLoopCity = nextCity(&iLoop))
+	foreach_(CvCity* city, cities())
 	{
-		pLoopCity->getProperties()->subtractProperties(pProp);
+		city->getProperties()->subtractProperties(pProp);
 		//getProperties()->subtractProperties(pProp);
 	}
 }

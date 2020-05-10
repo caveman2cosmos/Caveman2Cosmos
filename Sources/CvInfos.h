@@ -81,7 +81,7 @@ public:
 	const wchar* getStrategy() const;
 /*	const wchar* getGenericCategory() const;*/
 
-	bool isMatchForLink(std::wstring szLink, bool bKeysOnly) const;
+	bool isMatchForLink(const std::wstring szLink, bool bKeysOnly) const;
 
 	virtual void read(FDataStreamBase* pStream) {}
 	virtual void write(FDataStreamBase* pStream) {}
@@ -295,7 +295,7 @@ public:
 
 	int getExperience() const; // Exposed to Python
 
-	CvPropertyManipulators* getPropertyManipulators();
+	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
 	bool isVisible() const; // Exposed to Python
 
@@ -335,8 +335,11 @@ public:
 	bool readPass3();
 
 	void getCheckSum(unsigned int& iSum);
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 
+private:
+	CvPropertyManipulators m_PropertyManipulators;
+
+	//----------------------PROTECTED MEMBER VARIABLES----------------------------
 protected:
 
 	int m_iGreatPeopleUnitType;
@@ -369,9 +372,7 @@ protected:
 	std::vector<UnitCombatModifier> m_aUnitCombatExperienceTypes;
 	std::vector<UnitCombatModifier> m_aUnitCombatExperienceTypesNull;
 
-	CvPropertyManipulators m_PropertyManipulators;
 	CvString m_szTexture;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -785,7 +786,7 @@ public:
 
 	void getCheckSum(unsigned int& iSum);
 
-	CvPropertyManipulators* getPropertyManipulators();
+	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
 	//TB Combat Mods Begin  TB SubCombat Mod begin
 	//Text Strings
@@ -1202,10 +1203,12 @@ public:
 	void copyNonDefaults(CvPromotionInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
 	void copyNonDefaultsReadPass2(CvPromotionInfo* pClassInfo = NULL , CvXMLLoadUtility* pXML = NULL, bool bOver = false);
 
+private:
+	CvPropertyManipulators m_PropertyManipulators;
+
 //----------------------PROTECTED MEMBER VARIABLES----------------------------
 
 protected:
-
 	int m_iLayerAnimationPath;
 	int m_iPrereqPromotion;
 	int m_iPrereqOrPromotion1;
@@ -1317,8 +1320,6 @@ protected:
 	bool* m_pbTerrainDoubleMove;
 	bool* m_pbFeatureDoubleMove;
 	bool* m_pbUnitCombat;
-
-	CvPropertyManipulators m_PropertyManipulators;
 
 	//TB Combat Mods Begin TB SubCombat Mod begin
 	//Text Strings
@@ -1941,8 +1942,8 @@ public:
 
 	CvWString getCivilizationName(int i) const;
 	int getCivilizationNamesVectorSize() const;
-	CvWString getCivilizationNamesNamesVectorElement(const int i) const;
-	CvWString getCivilizationNamesValuesVectorElement(const int i) const;
+	CvWString getCivilizationNamesNamesVectorElement(int i) const;
+	CvWString getCivilizationNamesValuesVectorElement(int i) const;
 
 	//TB Combat Mod Begin  TB SubCombat Mod begin
 	//Functions
@@ -2268,9 +2269,9 @@ public:
 
 	void getCheckSum(unsigned int& iSum);
 
-	CvPropertyManipulators* getPropertyManipulators();
+	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
-	BoolExpr* getTrainCondition();
+	BoolExpr* getTrainCondition() const;
 
 protected:
 	int m_iMaxGlobalInstances;
@@ -2422,13 +2423,13 @@ public:
 	int getLeaderPromotion() const; // Exposed to Python
 	int getLeaderExperience() const; // Exposed to Python
 
-	CvOutcomeList* getKillOutcomeList();
+	const CvOutcomeList* getKillOutcomeList() const;
 	int getNumActionOutcomes() const;
-	CvOutcomeList* getActionOutcomeList(const int index) const;
-	MissionTypes getActionOutcomeMission(const int index) const;
-	CvOutcomeList* getActionOutcomeListByMission(const MissionTypes eMission) const;
-	CvOutcomeMission* getOutcomeMission(const int index) const;
-	CvOutcomeMission* getOutcomeMissionByMission(const MissionTypes eMission) const;
+	const CvOutcomeList* getActionOutcomeList(int index) const;
+	MissionTypes getActionOutcomeMission(int index) const;
+	const CvOutcomeList* getActionOutcomeListByMission(MissionTypes eMission) const;
+	const CvOutcomeMission* getOutcomeMission(int index) const;
+	CvOutcomeMission* getOutcomeMissionByMission(MissionTypes eMission) const;
 
 	const TCHAR* getEarlyArtDefineTag(int i, UnitArtStyleTypes eStyle) const; // Exposed to Python
 	void setEarlyArtDefineTag(int i, const TCHAR* szVal);
@@ -2454,10 +2455,11 @@ public:
 	void copyNonDefaultsReadPass2(CvUnitInfo* pClassInfo = NULL , CvXMLLoadUtility* pXML = NULL, bool bOver = false);
 
 	std::vector<int>& getSubCombatTypes();
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
+
+private:
+	CvPropertyManipulators m_PropertyManipulators;
 
 protected:
-
 	int m_iAIWeight;
 	int m_iProductionCost;
 	int m_iHurryCostModifier;
@@ -2651,8 +2653,6 @@ protected:
 
 	CvOutcomeList m_KillOutcomeList;
 	std::vector<CvOutcomeMission*> m_aOutcomeMissions;
-
-	CvPropertyManipulators m_PropertyManipulators;
 
 	//TB Combat Mods Start  TB SubCombat Mod begin
 	//integers
@@ -3262,9 +3262,12 @@ public:
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvCivicInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
 	void getCheckSum(unsigned int& iSum);
-	CvPropertyManipulators* getPropertyManipulators();
 
-//----------------------PROTECTED MEMBER VARIABLES----------------------------
+	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
+
+private:
+	CvPropertyManipulators m_PropertyManipulators;
+
 protected:
 	CvString m_szGlobalDefine;
 	CvString* m_pszCivicAttitudeReason;
@@ -3413,9 +3416,6 @@ protected:
 	std::vector<int> m_aiCivicAttitudeforPass3;
 	std::vector<CvString> m_aszCivicAttitudeReasonforPass3;
 	std::vector<CvString> m_aszCivicAttitudeReasonValueforPass3;
-
-	CvPropertyManipulators m_PropertyManipulators;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3845,12 +3845,12 @@ public:
 	int getCommerceAttacks(int i) const;
 	int* getCommerceAttacksArray() const;
 
-	CvProperties* getProperties();
-	CvProperties* getPropertiesAllCities();
-	CvProperties* getPrereqMinProperties();
-	CvProperties* getPrereqMaxProperties();
-	CvProperties* getPrereqPlayerMinProperties();
-	CvProperties* getPrereqPlayerMaxProperties();
+	const CvProperties* getProperties() const;
+	const CvProperties* getPropertiesAllCities() const;
+	const CvProperties* getPrereqMinProperties() const;
+	const CvProperties* getPrereqMaxProperties() const;
+	const CvProperties* getPrereqPlayerMinProperties() const;
+	const CvProperties* getPrereqPlayerMaxProperties() const;
 
 	//TB Combat Mods (Buildings) begin
 	UnitTypes getPropertySpawnUnit() const;
@@ -3987,8 +3987,7 @@ public:
 
 	void getCheckSum(unsigned int& iSum);
 
-	const CvPropertyManipulators* getPropertyManipulators() const;
-	CvPropertyManipulators* getPropertyManipulators();
+	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
 	bool isNewCityFree(CvGameObject* pObject);
 
@@ -4087,6 +4086,8 @@ private:
 	bool* m_pbPrereqNotBuilding;
 	bool* m_pbReplaceBuilding;
 	bool* m_pbPrereqOrBuilding;
+
+	CvPropertyManipulators m_PropertyManipulators;
 
 public:
 	bool readPass2(CvXMLLoadUtility* pXML);
@@ -4296,8 +4297,6 @@ protected:
 	CvProperties m_PrereqPlayerMinProperties;
 	CvProperties m_PrereqPlayerMaxProperties;
 
-	CvPropertyManipulators m_PropertyManipulators;
-
 	BoolExpr* m_pExprNewCityFree;
 	BoolExpr* m_pExprConstructCondition;
 
@@ -4411,12 +4410,12 @@ public:
 	CvSpecialBuildingInfo();
 	virtual ~CvSpecialBuildingInfo();
 
-	int getObsoleteTech( void ) const; // Exposed to Python
-	int getTechPrereq( void ) const; // Exposed to Python
-	int getTechPrereqAnyone( void ) const; // Exposed to Python
+	int getObsoleteTech() const; // Exposed to Python
+	int getTechPrereq() const; // Exposed to Python
+	int getTechPrereqAnyone() const; // Exposed to Python
 	int getMaxPlayerInstances() const;
 
-	bool isValid( void ) const; // Exposed to Python
+	bool isValid() const; // Exposed to Python
 
 	// Arrays
 
@@ -4565,12 +4564,12 @@ public:
 	std::wstring pyGetShortDescription(uint uiForm) { return getShortDescription(uiForm); } // Exposed to Python
 	DllExport const wchar* getShortDescription(uint uiForm = 0);
 	const wchar* getShortDescriptionKey() const; // Exposed to Python
-	std::wstring pyGetShortDescriptionKey() { return getShortDescriptionKey(); } // Exposed to Python
+	const std::wstring pyGetShortDescriptionKey() const { return getShortDescriptionKey(); } // Exposed to Python
 
 	std::wstring pyGetAdjective(uint uiForm) { return getAdjective(uiForm); } // Exposed to Python
 	DllExport const wchar* getAdjective(uint uiForm = 0);
 	const wchar* getAdjectiveKey() const; // Exposed to Python
-	std::wstring pyGetAdjectiveKey() { return getAdjectiveKey(); } // Exposed to Python
+	const std::wstring pyGetAdjectiveKey() const { return getAdjectiveKey(); } // Exposed to Python
 
 	DllExport const TCHAR* getFlagTexture() const;
 	const TCHAR* getArtDefineTag() const;
@@ -4839,7 +4838,7 @@ public:
 	int getAIAdvancedStartPercent() const; // Exposed to Python
 	int getNumGoodies() const; // Exposed to Python
 
-	CvPropertyManipulators* getPropertyManipulators();
+	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
 	// Arrays
 
@@ -4856,9 +4855,10 @@ public:
 	void copyNonDefaults(CvHandicapInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
 	void getCheckSum(unsigned int& iSum);
 
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
-protected:
+private:
+	CvPropertyManipulators m_PropertyManipulators;
 
+protected:
 	int m_iFreeWinsVsBarbs;
 	int m_iAnimalAttackProb;
 	int m_iStartingLocationPercent;
@@ -4923,8 +4923,6 @@ protected:
 	int m_iAIAdvancedStartPercent;
 	int m_iNumGoodies;
 
-	CvPropertyManipulators m_PropertyManipulators;
-
 	CvString m_szHandicapName;
 
 	IDValueMapPercent m_Percent;
@@ -4935,7 +4933,6 @@ protected:
 
 	bool* m_pbFreeTechs;
 	bool* m_pbAIFreeTechs;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4979,13 +4976,13 @@ public:
 	int getNumTurnIncrements() const; // Exposed to Python
 	int getUnitMovementPercent() const;
 
-	GameTurnInfo& getGameTurnInfo(int iIndex) const; // Exposed to Python
-	CvDateIncrement& getDateIncrement(int iIndex);
+	const GameTurnInfo& getGameTurnInfo(int iIndex) const; // Exposed to Python
+	const CvDateIncrement& getDateIncrement(int iIndex) const;
 	std::vector<CvDateIncrement>& getIncrements();
 	bool getEndDatesCalculated() const;
 	void setEndDatesCalculated(bool bCalculated);
 
-	void allocateGameTurnInfos(const int iSize);
+	void allocateGameTurnInfos(int iSize);
 
 	int getPercent(int iID) const;
 
@@ -5134,10 +5131,10 @@ public:
 
 	//Struct Vector with delayed resolution
 	int getNumTerrainStructs() const;
-	TerrainStructs& getTerrainStruct(int iIndex);
+	const TerrainStructs& getTerrainStruct(int iIndex) const;
 
 	int getNumPlaceBonusTypes() const;
-	PlaceBonusTypes& getPlaceBonusType(int iIndex);
+	const PlaceBonusTypes& getPlaceBonusType(int iIndex) const;
 
 	bool read(CvXMLLoadUtility* pXML);
 	void read(FDataStreamBase* stream) {}
@@ -5307,7 +5304,7 @@ public:
 	int getPrereqOrBonus(int i) const; // Exposed to Python
 	bool isAnyPrereqOrBonus() const;
 
-	CvPropertyManipulators* getPropertyManipulators();
+	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 	//	This really belongs on CvInfoBase but you can't change the size of that
 	//	object without crashing the core engine :-(
 	inline int	getZobristValue() const { return m_zobristValue; }
@@ -5318,9 +5315,10 @@ public:
 	void copyNonDefaults(CvRouteInfo* pClassInfo = NULL , CvXMLLoadUtility* pXML = NULL);
 	void getCheckSum(unsigned int& iSum);
 
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
-protected:
+private:
+	CvPropertyManipulators m_PropertyManipulators;
 
+protected:
 	int m_iAdvancedStartCost;
 	int m_iAdvancedStartCostIncrease;
 
@@ -5340,8 +5338,6 @@ protected:
 	int* m_piYieldChange;
 	int* m_piTechMovementChange;
 	int* m_piPrereqOrBonuses;
-
-	CvPropertyManipulators m_PropertyManipulators;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5548,7 +5544,7 @@ public:
 
 	void getCheckSum(unsigned int& iSum);
 
-	CvPropertyManipulators* getPropertyManipulators();
+	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
 	static ImprovementTypes getImprovementCity();
 	static void setImprovementCity(ImprovementTypes eIndex);
@@ -5556,10 +5552,10 @@ public:
 	static ImprovementTypes getImprovementRuins();
 	static void setImprovementRuins(ImprovementTypes eIndex);
 
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
+private:
+	CvPropertyManipulators m_PropertyManipulators;
 
 protected:
-
 	int m_iAdvancedStartCost;
 	int m_iAdvancedStartCostIncrease;
 
@@ -5622,8 +5618,6 @@ protected:
 	int** m_ppiRouteYieldChanges;
 
 	CvImprovementBonusInfo* m_paImprovementBonus;
-
-	CvPropertyManipulators m_PropertyManipulators;
 
 	//TB Improvements
 	//Object Indexes
@@ -5750,7 +5744,8 @@ public:
 	// Other
 	const TCHAR* getButton() const; // Exposed to Python
 	DllExport const CvArtInfoBonus* getArtInfo() const; // Exposed to Python
-	CvPropertyManipulators* getPropertyManipulators();
+
+	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
 	void read(FDataStreamBase* stream) {}
 	void write(FDataStreamBase* stream) {}
@@ -5761,10 +5756,10 @@ public:
 
 	const std::vector<std::pair<ImprovementTypes,BuildTypes> >*	getTradeProvidingImprovements();
 
-	//---------------------------------------PUBLIC MEMBER VARIABLES---------------------------------
+private:
+	CvPropertyManipulators m_PropertyManipulators;
 
 protected:
-
 	int m_iBonusClassType;
 	int m_iChar;
 	int m_iTechReveal;
@@ -5812,8 +5807,6 @@ protected:
 	std::vector<int> m_aiMapCategoryTypes;
 
 	std::vector<PromotionLineAfflictionModifier> m_aAfflictionCommunicabilityTypes;
-
-	CvPropertyManipulators m_PropertyManipulators;
 
 	volatile std::vector<std::pair<ImprovementTypes,BuildTypes> >* m_tradeProvidingImprovements;
 };
@@ -5928,16 +5921,17 @@ public:
 
 	void getCheckSum(unsigned int& iSum);
 
-	CvPropertyManipulators* getPropertyManipulators();
+	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
 	std::vector<PromotionLineAfflictionModifier> m_aAfflictionCommunicabilityTypes;
 	//	This really belongs on CvInfoBase but you can't change the size of that
 	//	object without crashing the core engine :-(
 	inline int	getZobristValue() const { return m_zobristValue; }
 
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
-protected:
+private:
+	CvPropertyManipulators m_PropertyManipulators;
 
+protected:
 	int m_iMovementCost;
 	int m_iSeeThroughChange;
 	int m_iHealthPercent;
@@ -5978,10 +5972,7 @@ protected:
 
 	bool* m_pbTerrain;
 
-	CvPropertyManipulators m_PropertyManipulators;
-
 private:
-
 	CvString m_szArtDefineTag;
 	int m_zobristValue;
 };
@@ -6150,7 +6141,7 @@ public:
 
 	void getCheckSum(unsigned int& iSum);
 
-	CvPropertyManipulators* getPropertyManipulators();
+	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
 	static TerrainTypes getTerrainPeak()	{ return m_TerrainPeak; }
 	static void setTerrainPeak(TerrainTypes eIndex)	{ m_TerrainPeak = eIndex; }
@@ -6168,9 +6159,13 @@ public:
 	bool isColdDamage() const;
 	//TB Combat Mod end
 
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
-protected:
+private:
+	CvPropertyManipulators m_PropertyManipulators;
 
+	CvString m_szArtDefineTag;
+	int	m_zobristValue;
+
+protected:
 	bool m_bWaterTerrain;
 	bool m_bImpassable;
 	bool m_bFound;
@@ -6197,14 +6192,8 @@ protected:
 
 	std::vector<PromotionLineAfflictionModifier> m_aAfflictionCommunicabilityTypes;
 
-	CvPropertyManipulators m_PropertyManipulators;
-
 	static TerrainTypes m_TerrainPeak;
 	static TerrainTypes m_TerrainHill;
-private:
-
-	CvString m_szArtDefineTag;
-	int	m_zobristValue;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6944,10 +6933,6 @@ protected:
 	std::vector<CvString> m_aszProjectsNeededforPass3;
 	std::vector<int> m_aiProjectsNeededforPass3;
 
-
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
-protected:
-
 	int m_iVictoryPrereq;
 	int m_iTechPrereq;
 	int m_iAnyoneProjectPrereq;
@@ -7051,11 +7036,12 @@ public:
 
 	void getCheckSum(unsigned int& iSum);
 
-	CvPropertyManipulators* getPropertyManipulators();
+	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
+private:
+	CvPropertyManipulators m_PropertyManipulators;
+
 protected:
-
 	// TGA_INDEXATION 01/21/08 MRGENIE
 	int m_iTGAIndex;
 
@@ -7080,9 +7066,6 @@ protected:
 	int* m_paiHolyCityCommerce;
 	int* m_paiStateReligionCommerce;
 	int* m_piFlavorValue;
-
-	CvPropertyManipulators m_PropertyManipulators;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -7168,11 +7151,12 @@ public:
 
 	void getCheckSum(unsigned int& iSum);
 
-	CvPropertyManipulators* getPropertyManipulators();
+	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
 
-	//----------------------PROTECTED MEMBER VARIABLES----------------------------
+private:
+	CvPropertyManipulators m_PropertyManipulators;
+
 protected:
-
 	// TGA_INDEXATION 01/21/08 MRGENIE
 	int m_iTGAIndex;
 
@@ -7222,9 +7206,6 @@ protected:
 	int* m_paiHeadquarterCommerce;
 	int* m_paiCommerceProduced;
 	int* m_paiYieldProduced;
-
-	CvPropertyManipulators m_PropertyManipulators;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -7478,7 +7459,7 @@ public:
 	int getNumBonusHappinessChanges() const;
 	BonusModifier getBonusHappinessChange(int iBonus);
 
-	CvPropertyManipulators* getPropertyManipulators();
+	const CvPropertyManipulators* getPropertyManipulators() const;
 
 	bool read(CvXMLLoadUtility* pXML);
 	bool readPass2(CvXMLLoadUtility* pXML);
@@ -7488,7 +7469,10 @@ public:
 	void getCheckSum(unsigned int& iSum);
 
 	bool isFreePromotionUnitCombats(int i, int j) const;
-//----------------------PROTECTED MEMBER VARIABLES----------------------------
+
+private:
+	CvPropertyManipulators m_PropertyManipulators;
+
 protected:
 	bool** m_ppbFreePromotionUnitCombats;
 
@@ -7535,7 +7519,6 @@ protected:
 //	bool* m_pabFreePromotion;
 //	bool* m_pabFreePromotionUnitCombat;
 
-	CvPropertyManipulators m_PropertyManipulators;
 	CvPropertyManipulators m_PropertyManipulatorsNull;
 
 	//TB Traits Mods begin
@@ -7703,7 +7686,6 @@ public:
 	virtual ~CvCursorInfo();
 
 	DllExport const TCHAR* getPath(); // Exposed to Python
-	void setPath(const TCHAR* szVal);
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvCursorInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
@@ -8612,12 +8594,12 @@ public:
 
 	DllExport const FeatureVariety &getVariety(int index) const;
 	DllExport int getNumVarieties() const;
-	std::string getFeatureDummyNodeName(int variety, std::string tagName);
+	const std::string getFeatureDummyNodeName(int variety, const std::string tagName) const;
 
 protected:
 
-	int getConnectionMaskFromString(const CvString &connectionString);
-	int getRotatedConnectionMask(int connectionMask, RotationTypes rotation);
+	int getConnectionMaskFromString(const CvString& connectionString) const;
+	int getRotatedConnectionMask(int connectionMask, RotationTypes rotation) const;
 
 	bool m_bAnimated;
 	bool m_bRiverArt;
@@ -9343,10 +9325,10 @@ public:
 	//TB Tags
 	// int vector utilizing struct with delayed resolution
 	int getNumEnforcesGameOptionOnTypes() const;
-	GameOptionTypeBool& isEnforcesGameOptionOnType(int iOption);
+	const GameOptionTypeBool& isEnforcesGameOptionOnType(int iOption) const;
 
 	int getNumEnforcesGameOptionOffTypes() const;
-	GameOptionTypeBool& isEnforcesGameOptionOffType(int iOption);
+	const GameOptionTypeBool& isEnforcesGameOptionOffType(int iOption) const;
 
 	bool read(CvXMLLoadUtility* pXML);
 
@@ -9538,10 +9520,10 @@ public:
 	int getNumCorporationsRequired() const; // Exposed to Python
 
 	//Property prereqs
-	CvProperties* getPrereqMinProperties();
-	CvProperties* getPrereqMaxProperties();
-	CvProperties* getPrereqPlayerMinProperties();
-	CvProperties* getPrereqPlayerMaxProperties();
+	const CvProperties* getPrereqMinProperties() const;
+	const CvProperties* getPrereqMaxProperties() const;
+	const CvProperties* getPrereqPlayerMinProperties() const;
+	const CvProperties* getPrereqPlayerMaxProperties() const;
 
 	const CvWString& getText(int i) const;
 	int getTextEra(int i) const;
@@ -9584,11 +9566,11 @@ public:
 	// bool vector without delayed resolution
 	int getNotOnGameOption(int i) const;
 	int getNumNotOnGameOptions() const;
-	bool isNotOnGameOption(int i);
+	bool isNotOnGameOption(int i) const;
 
 	int getOnGameOption(int i) const;
 	int getNumOnGameOptions() const;
-	bool isOnGameOption(int i);
+	bool isOnGameOption(int i) const;
 
 	void read(FDataStreamBase* ) {}
 	void write(FDataStreamBase* ) {}
@@ -10201,8 +10183,8 @@ public:
 
 	bool isLoad(int i) const;
 	void setLoad(int i, bool bLoad = true);
-	std::string getModuleFolder(int i) const;
-	std::string getParentFolder() const;
+	const std::string getModuleFolder(int i) const;
+	const std::string getParentFolder() const;
 	int getNumModules() const;
 	int getDirDepth() const;
 	bool read(CvXMLLoadUtility* pXML, CvString szDirDepth, int iDirDepth);
@@ -10270,10 +10252,12 @@ public:
 
 	void getCheckSum(unsigned int& iSum);
 
-	CvPropertyManipulators* getPropertyManipulators();
+	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
+
+private:
+	CvPropertyManipulators m_PropertyManipulators;
 
 protected:
-
 	int m_iChar;
 	int m_iFontButtonIndex;
 
@@ -10296,8 +10280,6 @@ protected:
 	std::vector<PropertyBuilding> m_aPropertyBuildings;
 	std::vector<PropertyPromotion> m_aPropertyPromotions;
 	EraArray m_aTargetLevelbyEraTypes;
-
-	CvPropertyManipulators m_PropertyManipulators;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -10543,12 +10525,12 @@ public:
 	static UnitCombatTypes getUnitCombatWildAnimal()	{ return m_UnitCombatWildAnimal; }
 	static void setUnitCombatWildAnimal(UnitCombatTypes eIndex) { m_UnitCombatWildAnimal = eIndex; }
 
-	CvOutcomeList* getKillOutcomeList();
+	const CvOutcomeList* getKillOutcomeList() const;
 	int getNumActionOutcomes() const;
-	CvOutcomeList* getActionOutcomeList(int index) const;
+	const CvOutcomeList* getActionOutcomeList(int index) const;
 	MissionTypes getActionOutcomeMission(int index) const;
-	CvOutcomeList* getActionOutcomeListByMission(MissionTypes eMission) const;
-	CvOutcomeMission* getOutcomeMission(int index) const;
+	const CvOutcomeList* getActionOutcomeListByMission(MissionTypes eMission) const;
+	const CvOutcomeMission* getOutcomeMission(int index) const;
 	CvOutcomeMission* getOutcomeMissionByMission(MissionTypes eMission) const;
 
 protected:
@@ -10911,8 +10893,10 @@ public:
 	int getNumDistanceAttackCommunicabilityTypeChanges() const;
 	const AfflictionLineChanges& getDistanceAttackCommunicabilityTypeChange(int iIndex) const;
 
-	//Propery Manipulators
-	CvPropertyManipulators* getPropertyManipulators();
+	const CvPropertyManipulators* getPropertyManipulators() const { return &m_PropertyManipulators; }
+
+private:
+	CvPropertyManipulators m_PropertyManipulators;
 
 protected:
 	// Textual References
@@ -11151,8 +11135,6 @@ protected:
 	std::vector<InvisibleImprovementChanges> m_aVisibleImprovementRangeChanges;
 	std::vector<AfflictionLineChanges> m_aDistanceAttackCommunicabilityTypeChanges;
 	std::vector<InvisibleTerrainChanges> m_aVisibleTerrainRangeChanges;
-
-	CvPropertyManipulators m_PropertyManipulators;
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++

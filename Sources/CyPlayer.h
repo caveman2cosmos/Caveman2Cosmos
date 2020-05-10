@@ -693,7 +693,7 @@ public:
 	int getBLID(int index);
 	std::wstring getBLListName(int index);
 	int getBLListLength(int index);
-	OrderData* getBLOrder(int index, int iQIndex);
+	const OrderData* getBLOrder(int index, int iQIndex) const;
 	void writeBLToFile();
 	int getBLCurrentList();
 	void setBLCurrentList(int iID);

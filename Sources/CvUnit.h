@@ -508,11 +508,11 @@ public:
 	void updateAirCombat(bool bQuick = false);
 	void updateAirStrike(CvPlot* pPlot, bool bQuick, bool bFinish);
 
-	bool isActionRecommended(int iAction);
+	bool isActionRecommended(int iAction) const;
 
 	bool isBetterDefenderThan(CvUnit* pDefender, CvUnit* pAttacker) const; // Exposed to Python
 
-	bool canDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bTestVisible = false, bool bTestBusy = true); // Exposed to Python
+	bool canDoCommand(CommandTypes eCommand, int iData1, int iData2, bool bTestVisible = false, bool bTestBusy = true) const; // Exposed to Python
 	void doCommand(CommandTypes eCommand, int iData1, int iData2); // Exposed to Python
 
 #ifdef USE_OLD_PATH_GENERATOR
@@ -664,7 +664,7 @@ public:
 /* Afforess	                     END                                                            */
 /************************************************************************************************/
 
-	bool canGift(bool bTestVisible = false, bool bTestTransport = true); // Exposed to Python
+	bool canGift(bool bTestVisible = false, bool bTestTransport = true) const; // Exposed to Python
 	void gift(bool bTestTransport = true);
 
 	bool canLoadOntoUnit(const CvUnit* pUnit, const CvPlot* pPlot) const; // Exposed to Python
@@ -778,7 +778,7 @@ public:
 
 	bool canSpreadCorporation(const CvPlot* pPlot, CorporationTypes eCorporation, bool bTestVisible = false) const; // Exposed to Python
 	bool spreadCorporation(CorporationTypes eCorporation);
-	int spreadCorporationCost(CorporationTypes eCorporation, CvCity* pCity) const;
+	int spreadCorporationCost(CorporationTypes eCorporation, const CvCity* pCity) const;
 
 	bool canJoin(const CvPlot* pPlot, SpecialistTypes eSpecialist) const; // Exposed to Python
 	bool join(SpecialistTypes eSpecialist);
@@ -791,7 +791,7 @@ public:
 	bool canDiscover() const; // Exposed to Python
 	bool discover();
 
-	int getMaxHurryProduction(CvCity* pCity) const; // Exposed to Python
+	int getMaxHurryProduction(const CvCity* pCity) const; // Exposed to Python
 	int getHurryProduction(const CvPlot* pPlot) const; // Exposed to Python
 	bool canHurry(const CvPlot* pPlot, bool bTestVisible = false) const; // Exposed to Python
 	bool hurry();
@@ -1864,7 +1864,7 @@ public:
 	virtual int AI_getBirthmark() const = 0;
 	virtual void setToWaitOnUnitAI(UnitAITypes eUnitAI, bool bAdd) = 0;
 	virtual bool isWaitingOnUnitAI(int iIndex) = 0;
-	virtual bool isWaitingOnUnitAIAny() = 0;
+	virtual bool isWaitingOnUnitAIAny() const = 0;
 
 	inline int getMovementCharacteristicsHash() const { return m_movementCharacteristicsHash; }
 

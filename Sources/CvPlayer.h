@@ -1724,7 +1724,7 @@ public:
 	virtual DenialTypes AI_civicTrade(CivicTypes eCivic, PlayerTypes ePlayer) const = 0;
 	virtual DenialTypes AI_religionTrade(ReligionTypes eReligion, PlayerTypes ePlayer) const = 0;
 
-	virtual int AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea* pArea, CvUnitSelectionCriteria* criteria = NULL) const = 0; // Exposed to Python
+	virtual int AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, const CvArea* pArea, const CvUnitSelectionCriteria* criteria = NULL) const = 0; // Exposed to Python
 	virtual int AI_totalUnitAIs(UnitAITypes eUnitAI) const = 0; // Exposed to Python
 	virtual int AI_totalAreaUnitAIs(const CvArea* pArea, UnitAITypes eUnitAI) const = 0; // Exposed to Python
 	virtual int AI_totalWaterAreaUnitAIs(const CvArea* pArea, UnitAITypes eUnitAI) const = 0; // Exposed to Python
@@ -2350,8 +2350,8 @@ public:
 	void clearModifierTotals();
 	void recalculateModifiers();
 
-	void addPropertiesAllCities(CvProperties* pProp);
-	void subtractPropertiesAllCities(CvProperties* pProp);
+	void addPropertiesAllCities(const CvProperties* pProp);
+	void subtractPropertiesAllCities(const CvProperties* pProp);
 
 	bool canHaveBuilder(BuildTypes eBuild) const;
 	//TB Nukefix
