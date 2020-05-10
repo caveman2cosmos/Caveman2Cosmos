@@ -9,12 +9,16 @@
 //
 
 #include "CvGlobals.h"
+#include "CvArtFileMgr.h"
 
 class CyGame;
 class CyMap;
 class CyPlayer;
 class CvRandom;
+class CyEngine;
 class CyTeam;
+class CyArtFileMgr;
+class CyUserProfile;
 class CyVariableSystem;
 
 class CyGlobalContext

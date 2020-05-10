@@ -153,9 +153,8 @@ class CvMapSwitchInfo;
 /***** Parallel Maps - End *****/
 /*******************************/
 
-#include "GlobalDefines.h"
 #include "CvInfoReplacements.h"
-#include "CvEnums.h"
+#include "GlobalDefines.h"
 #include <stack>
 
 extern CvDLLUtilityIFaceBase* g_DLL;

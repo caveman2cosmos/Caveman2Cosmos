@@ -16,8 +16,8 @@
 #define XML_LOAD_UTILITY_H
 
 #include "CvInfos.h"
-//#include "CvGlobals.h"
-//#include "FVariableSystem.h"
+#include "CvGlobals.h"
+#include "FVariableSystem.h"
 
 class FXmlSchemaCache;
 class FXml;

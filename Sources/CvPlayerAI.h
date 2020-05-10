@@ -9,7 +9,6 @@
 #include "AI_defines.h"
 
 class CvEventTriggerInfo;
-class CvDiploParameters;
 
 struct MissionTargetInfo
 {

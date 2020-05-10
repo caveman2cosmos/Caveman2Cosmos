@@ -7,7 +7,7 @@
 #include <boost155/utility/enable_if.hpp>
 
 #include "FAssert.h"
-//#include "CvGlobals.h"
+#include "CvGlobals.h"
 #include "CvString.h"
 #include "CyArgsList.h"
 

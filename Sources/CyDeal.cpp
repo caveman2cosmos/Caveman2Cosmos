@@ -3,7 +3,6 @@
 // 
 
 #include "CvGameCoreDLL.h"
-#include "CvDeal.h"
 #include "CyDeal.h"
 
 CyDeal::CyDeal(CvDeal* pDeal) :

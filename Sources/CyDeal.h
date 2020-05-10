@@ -6,10 +6,14 @@
 #ifndef CY_DEAL_H
 #define CY_DEAL_H
 
+//#include "CvEnums.h"
+//#include "CvStructs.h"
+
 class CvDeal;
 
 class CyDeal
 {
+
 public:
 	CyDeal(CvDeal* pDeal = NULL);
 	virtual ~CyDeal();

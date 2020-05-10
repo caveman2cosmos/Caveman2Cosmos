@@ -5,10 +5,8 @@
 
 // structs.h
 
-//#include "CvString.h"
-//#include "CvGlobals.h"
-
-class BoolExpr;
+#include "CvString.h"
+#include "CvGlobals.h"
 
 // XXX these should not be in the DLL per se (if the user changes them, we are screwed...)
 

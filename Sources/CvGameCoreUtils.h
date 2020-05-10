@@ -5,9 +5,10 @@
 #ifndef CIV4_GAMECORE_UTILS_H
 #define CIV4_GAMECORE_UTILS_H
 
-//#include "CvGlobals.h"
+
+#include "CvGlobals.h"
 #include "CvMap.h"
-#include "CvPlot.h"
+
 
 class CvPlot;
 class CvCity;

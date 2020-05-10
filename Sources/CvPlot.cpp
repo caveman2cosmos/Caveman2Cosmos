@@ -1,7 +1,6 @@
 // plot.cpp
 
 #include "CvGameCoreDLL.h"
-#include "CvArtFileMgr.h"
 #include "CvDLLSymbolIFaceBase.h"
 #include "CvDLLPlotBuilderIFaceBase.h"
 #include "CvDLLFlagEntityIFaceBase.h"

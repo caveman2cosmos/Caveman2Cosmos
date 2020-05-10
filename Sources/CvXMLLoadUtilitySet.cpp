@@ -3,8 +3,18 @@
 //
 
 #include "CvGameCoreDLL.h"
-#include "CvArtFileMgr.h"
+
+/************************************************************************************************/
+/* MODULAR_LOADING_CONTROL                 11/15/07                                MRGENIE      */
+/*                                                                                              */
+/*                                                                                              */
+/************************************************************************************************/
 #include "CvXMLLoadUtilitySetMod.h"
+/************************************************************************************************/
+/* MODULAR_LOADING_CONTROL                 END                                                  */
+/************************************************************************************************/
+
+#include <iostream>
 
 // Macro for Setting Global Art Defines
 #define INIT_XML_GLOBAL_LOAD(xmlInfoPath, infoArray, numInfos)  SetGlobalClassInfo(infoArray, xmlInfoPath, numInfos);

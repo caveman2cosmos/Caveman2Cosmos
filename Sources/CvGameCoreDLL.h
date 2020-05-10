@@ -54,7 +54,6 @@
 #include <algorithm>
 #include <set>
 #include <fstream>
-#include <iostream>
 
 //
 // Google sparsehash
@@ -290,27 +289,28 @@ namespace python = boost::python;
 #include "copy_iterator.h"
 #include "index_iterator_base.h"
 #include "logging.h"
+
 #include "algorithm2.h"
+
 #include "scoring.h"
+
 #include "CvAllocator.h"
+
 #include "FAssert.h"
 #include "CheckSum.h"
 #include "Stopwatch.h"
+#include "CvGameCoreDLLDefNew.h"
+#include "CvGameCoreDLLUnDefNew.h"
 #include "FDataStreamBase.h"
 #include "FFreeListArrayBase.h"
 #include "FFreeListTrashArray.h"
 #include "FFreeListArray.h"
-#include "LinkedList.h"
 #include "FVariableSystem.h"
 #include "FAStarNode.h"
-#include "FProfiler.h"
-
 #include "CvString.h"
 #include "CvEnums.h"
 #include "CvStructs.h"
-
 #include "CvDLLUtilityIFaceBase.h"
-#include "CvDLLEntityIFaceBase.h"
 #include "CvDLLEngineIFaceBase.h"
 #include "CvDLLFAStarIFaceBase.h"
 #include "CvDLLFlagEntityIFaceBase.h"
@@ -318,23 +318,22 @@ namespace python = boost::python;
 #include "CvDLLInterfaceIFaceBase.h"
 #include "CvDLLXMLIFaceBase.h"
 
-#include "CvTalkingHeadMessage.h"
-#include "CvInfoWater.h"
-
 #include "BetterBTSAI.h"
-#include "CvBugOptions.h"
-
 #include "CvGameCoreUtils.h"
-#include "CvGameCoreDLLDefNew.h"
-#include "CvGameCoreDLLUnDefNew.h"
+#include "CvXMLLoadUtility.h"
 #include "CvInitCore.h"
+#include "CvArtFileMgr.h"
 #include "CvGameTextMgr.h"
+#include "CvBugOptions.h"
 #include "CvPopupInfo.h"
 #include "CvEventReporter.h"
 #include "CvMessageControl.h"
+#include "CvDiploParameters.h"
+#include "CvDeal.h"
+#include "CvInfoWater.h"
 #include "CvMap.h"
 #include "CvViewport.h"
-//#include "CvGlobals.h"
+#include "CvGlobals.h"
 #include "CvGameAI.h"
 #include "CvTeamAI.h"
 #include "CvPlayerAI.h"
@@ -342,8 +341,13 @@ namespace python = boost::python;
 #include "CvUnitAI.h"
 #include "CvSelectionGroupAI.h"
 #include "CvPlot.h"
+#include "CvTalkingHeadMessage.h"
+#include "FProfiler.h"
 #include "CvPathGenerator.h"
 #include "CvPython.h"
+
+#include "SCvDebug.h"
+#include "SCvInternalGlobals.h"
 
 #ifdef FINAL_RELEASE
 // Undefine OutputDebugString in final release builds
