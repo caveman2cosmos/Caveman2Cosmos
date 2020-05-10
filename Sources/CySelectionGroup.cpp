@@ -3,6 +3,10 @@
 // 
 //
 #include "CvGameCoreDLL.h"
+#include "CyArea.h"
+#include "CyPlot.h"
+#include "CySelectionGroup.h"
+#include "CyUnit.h"
 
 CySelectionGroup::CySelectionGroup() : m_pSelectionGroup(NULL)
 {

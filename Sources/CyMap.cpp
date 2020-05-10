@@ -4,6 +4,10 @@
 
 #include "CvGameCoreDLL.h"
 #include "CvMapGenerator.h"
+#include "CyArea.h"
+#include "CyCity.h"
+#include "CyPlot.h"
+#include "CySelectionGroup.h"
 
 CyMap::CyMap() : m_pMap(NULL)
 {

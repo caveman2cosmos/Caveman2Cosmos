@@ -312,6 +312,7 @@ namespace python = boost::python;
 #include "CvDLLUtilityIFaceBase.h"
 #include "CvDLLEngineIFaceBase.h"
 #include "CvDLLFAStarIFaceBase.h"
+#include "CvDLLFlagEntityIFaceBase.h"
 #include "CvDLLPythonIFaceBase.h"
 #include "CvDLLInterfaceIFaceBase.h"
 #include "CvDLLXMLIFaceBase.h"
@@ -342,24 +343,10 @@ namespace python = boost::python;
 #include "CvTalkingHeadMessage.h"
 #include "FProfiler.h"
 #include "CvPathGenerator.h"
-#include "CvBugOptions.h"
 #include "CvPython.h"
 
 #include "SCvDebug.h"
 #include "SCvInternalGlobals.h"
-
-#include "CyGlobalContext.h"
-#include "CyArtFileMgr.h"
-#include "CyDeal.h"
-#include "CyMap.h"
-#include "CyArea.h"
-#include "CyGame.h"
-#include "CyTeam.h"
-#include "CyPlayer.h"
-#include "CyCity.h"
-#include "CyUnit.h"
-#include "CySelectionGroup.h"
-#include "CyPlot.h"
 
 #ifdef FINAL_RELEASE
 // Undefine OutputDebugString in final release builds

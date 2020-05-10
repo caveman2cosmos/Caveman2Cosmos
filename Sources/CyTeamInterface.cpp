@@ -1,4 +1,5 @@
 #include "CvGameCoreDLL.h"
+#include "CyTeam.h"
 
 //
 // published python interface for CyTeam

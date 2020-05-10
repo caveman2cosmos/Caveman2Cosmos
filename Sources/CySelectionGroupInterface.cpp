@@ -1,4 +1,8 @@
 #include "CvGameCoreDLL.h"
+#include "CyArea.h"
+#include "CyPlot.h"
+#include "CySelectionGroup.h"
+#include "CyUnit.h"
 
 //
 // published python interface for CySelectionGroup

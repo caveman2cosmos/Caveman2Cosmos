@@ -10,8 +10,9 @@
 //
 
 #include "CvGameCoreDLL.h"
-#include "CyMapGenerator.h"
 #include "CvMapGenerator.h"
+#include "CyMapGenerator.h"
+#include "CyPlot.h"
 
 CyMapGenerator::CyMapGenerator() : m_pMapGenerator(NULL)
 {

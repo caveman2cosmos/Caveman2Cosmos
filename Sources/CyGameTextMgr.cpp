@@ -2,7 +2,10 @@
 // Python wrapper class for CyGameTextMgr 
 // 
 #include "CvGameCoreDLL.h"
+#include "CyCity.h"
+#include "CyDeal.h"
 #include "CyGameTextMgr.h"
+#include "CyUnit.h"
 
 CyGameTextMgr::CyGameTextMgr() : 
 m_pGameTextMgr(NULL)
