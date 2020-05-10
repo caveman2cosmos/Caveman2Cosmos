@@ -3,6 +3,8 @@
 //
 
 #include "CvGameCoreDLL.h"
+#include "CyCity.h"
+#include "CyDeal.h"
 #include "CyGame.h"
 #include "CyPlot.h"
 #include "CyReplayInfo.h"

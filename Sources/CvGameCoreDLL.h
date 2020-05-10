@@ -343,7 +343,6 @@ namespace python = boost::python;
 #include "CvPlot.h"
 #include "CvTalkingHeadMessage.h"
 #include "FProfiler.h"
-#include "CvReachablePlotSet.h"
 #include "CvPathGenerator.h"
 #include "CvPython.h"
 

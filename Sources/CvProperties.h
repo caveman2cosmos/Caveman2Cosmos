@@ -14,8 +14,6 @@
 #include "CvXMLLoadUtilityModTools.h"
 //#include "CvGameObject.h"
 
-//#include "CvProperty.h"
-
 class CvGame;
 class CvTeam;
 class CvPlayer;

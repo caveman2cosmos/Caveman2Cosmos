@@ -6,6 +6,7 @@
 #include "CvMapGenerator.h"
 #include "CyArea.h"
 #include "CyCity.h"
+#include "CyMap.h"
 #include "CyPlot.h"
 #include "CySelectionGroup.h"
 
