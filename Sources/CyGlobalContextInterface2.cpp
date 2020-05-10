@@ -1,10 +1,9 @@
+#include "CvGameCoreDLL.h"
+
 //
 // published python interface for CyGlobalContext
 // Author - Mustafa Thamer
 //
-
-#include "CvGameCoreDLL.h"
-
 
 void CyGlobalContextPythonInterface2(python::class_<CyGlobalContext>& x)
 {

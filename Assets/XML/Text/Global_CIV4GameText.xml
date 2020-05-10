@@ -3184,6 +3184,14 @@
 		<Polish>[COLOR_BUILDING_TEXT]Wielki Meczet w Dżenne [COLOR_SELECTED_TEXT]zwiększa handel na polach pustyni[COLOR_REVERT]!</Polish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_DOMAIN</Tag>
+		<English>Domain</English>
+		<French>Domain</French>
+		<German>Domain</German>
+		<Italian>Domain</Italian>
+		<Spanish>Domain</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_DURATION</Tag>
 		<English>Duration</English>
 		<French>Durée</French>

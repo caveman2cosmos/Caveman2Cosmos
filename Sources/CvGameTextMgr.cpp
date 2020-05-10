@@ -37978,7 +37978,7 @@ void CvGameTextMgr::getImprovementDataForAS(std::vector<CvWBData>& mapImprovemen
 void CvGameTextMgr::getVisibilityDataForAS(std::vector<CvWBData>& mapVisibilityList)
 {
 	// Unit cost -1 denotes unit which may not be purchased
-	const int iCost = GET_PLAYER(GC.getGame().getActivePlayer()).getAdvancedStartVisibilityCost(true);
+	const int iCost = GET_PLAYER(GC.getGame().getActivePlayer()).getAdvancedStartVisibilityCost();
 	if (iCost > 0)
 	{
 		CvWString szHelp = gDLL->getText("TXT_KEY_WB_AS_VISIBILITY");

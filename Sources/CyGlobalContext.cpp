@@ -4,6 +4,11 @@
 //
 
 #include "CvGameCoreDLL.h"
+#include "CyGame.h"
+#include "CyGlobalContext.h"
+#include "CyMap.h"
+#include "CyPlayer.h"
+#include "CyTeam.h"
 
 CyGlobalContext::CyGlobalContext()
 {

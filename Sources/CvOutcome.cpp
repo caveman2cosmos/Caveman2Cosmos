@@ -7,7 +7,8 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
-
+#include "CyUnit.h"
+#include "CyPlot.h"
 
 CvOutcome::CvOutcome(): m_eUnitType(NO_UNIT),
 						m_iChance(NULL),

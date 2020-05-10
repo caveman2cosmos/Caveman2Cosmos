@@ -2,6 +2,8 @@
 // Python wrapper class for CvArea 
 // 
 #include "CvGameCoreDLL.h"
+#include "CyArea.h"
+#include "CyCity.h"
 
 CyArea::CyArea() : m_pArea(NULL)
 {
