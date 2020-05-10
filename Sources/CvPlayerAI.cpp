@@ -1,6 +1,7 @@
 // playerAI.cpp
 
 #include "CvGameCoreDLL.h"
+#include "CvDiploParameters.h"
 
 /************************************************************************************************/
 /* BETTER_BTS_AI_MOD					  08/21/09								jdog5000	  */

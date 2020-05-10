@@ -11,7 +11,8 @@
 //---------------------------------------------------------------------------------------
 //  Copyright (c) 2004 Firaxis Games, Inc. All rights reserved.
 //---------------------------------------------------------------------------------------
-#include "CvGameCoreDLL.h"
+#include "CvArtFileMgr.h"
+#include "CvXMLLoadUtility.h"
 
 // Macro for Building Art Info Maps
 #if 0	// DEBUGGING

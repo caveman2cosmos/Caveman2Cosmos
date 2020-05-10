@@ -1,4 +1,5 @@
-#include "CvGameCoreDLL.h"
+#include "CvGlobals.h"
+#include "SCvInternalGlobals.h"
 
 CvDLLUtilityIFaceBase* SCvInternalGlobals::engineUtils()
 {

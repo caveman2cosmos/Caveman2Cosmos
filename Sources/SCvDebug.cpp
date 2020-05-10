@@ -1,4 +1,4 @@
-#include "CvGameCoreDLL.h"
+#include "SCvDebug.h"
 
 unsigned __int64 SCvDebug::m_mode = 0;
 

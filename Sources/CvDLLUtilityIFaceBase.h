@@ -3,6 +3,7 @@
 #ifndef CvDLLUtilityIFaceBase_h
 #define CvDLLUtilityIFaceBase_h
 
+#include "CvEnums.h"
 #include "LinkedList.h"
 
 //

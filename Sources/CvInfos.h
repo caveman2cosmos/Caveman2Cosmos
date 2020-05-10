@@ -26,6 +26,7 @@
 #include "IntExpr.h"
 #include "IDValueMap.h"
 #include "CheckSum.h"
+#include "CvEnums.h"
 
 #pragma warning( disable: 4251 )		// needs to have dll-interface to be used by clients of class
 #pragma warning( disable: 4127 )
