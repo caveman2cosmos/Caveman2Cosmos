@@ -1,12 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-	<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-	<!-- Sid Meier's Civilization 4 -->
-	<!-- Copyright Firaxis Games 2005 -->
-	<!-- -->
-	<!-- Feature -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Civ4FeatureInfos xmlns="x-schema:../Schema/C2C_CIV4TerrainSchema.xml">
 	<FeatureInfos>
-		<!-- Ice -->
 		<FeatureInfo>
 			<Type>FEATURE_ICE</Type>
 			<Description>TXT_KEY_FEATURE_ICE</Description>
@@ -125,7 +119,6 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</FeatureInfo>
-		<!-- Jungle -->
 		<FeatureInfo>
 			<Type>FEATURE_JUNGLE</Type>
 			<Description>TXT_KEY_FEATURE_JUNGLE</Description>
@@ -254,7 +247,6 @@
 				</PropertySource>
 			</PropertyManipulators>
 		</FeatureInfo>
-		<!-- Oasis -->
 		<FeatureInfo>
 			<Type>FEATURE_OASIS</Type>
 			<Description>TXT_KEY_FEATURE_OASIS</Description>
@@ -5766,141 +5758,6 @@
 				</FootstepSound>
 			</FootstepSounds>
 			<WorldSoundscapeAudioScript>ASSS_PEAK_SELECT_AMB</WorldSoundscapeAudioScript>
-		</FeatureInfo>
-		<!-- Rainwater Basin -->
-		<FeatureInfo>
-			<Type>FEATURE_RAINWATER_BASIN</Type>
-			<Description>TXT_KEY_FEATURE_RAINWATER_BASIN</Description>
-			<Civilopedia>TXT_KEY_FEATURE_RAINWATER_BASIN_PEDIA</Civilopedia>
-			<ArtDefineTag>ART_DEF_FEATURE_RAINWATER_BASIN</ArtDefineTag>
-			<YieldChanges>
-				<iYieldChange>0</iYieldChange>
-				<iYieldChange>0</iYieldChange>
-				<iYieldChange>1</iYieldChange>
-			</YieldChanges>
-			<iSeeThrough>1</iSeeThrough>
-			<iDefense>10</iDefense>
-			<iAppearance>200</iAppearance>
-			<iPopDestroys>10</iPopDestroys>
-			<bNoCoast>1</bNoCoast>
-			<bNoRiver>1</bNoRiver>
-			<bNoAdjacent>1</bNoAdjacent>
-			<bRequiresFlatlands>1</bRequiresFlatlands>
-			<bAddsFreshWater>1</bAddsFreshWater>
-			<bNukeImmune>1</bNukeImmune>
-			<TerrainBooleans>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_GRASSLAND</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_PLAINS</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_TAIGA</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_TUNDRA</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_LUSH</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_MUDDY</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_MARSH</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-				<TerrainBoolean>
-					<TerrainType>TERRAIN_SCRUB</TerrainType>
-					<bTerrain>1</bTerrain>
-				</TerrainBoolean>
-			</TerrainBooleans>
-			<FootstepSounds>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_HUMAN</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_FOOT_UNIT_MUD</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_HUMAN_LOW</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_FOOT_UNIT_LOW_MUD</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_ANIMAL</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_ANIMAL_FOOT_LARGE_MUD</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_ANIMAL_LOW</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_ANIMAL_FOOT_LARGE_LOW_MUD</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>FOOTSTEP_AUDIO_HORSE</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_WHEELS</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_WHEELS</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_WHEELS_2</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_WHEELS_2</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_TANK</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_TANK</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_MOD_ARMOUR</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_MOD_ARMOUR</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_ARTILLERY</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_ARTILLERY</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_WHEELS_3</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_WHEELS_3</FootstepAudioType>
-					<FootstepAudioScript/>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>LOOPSTEP_DREAD</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_DREAD_RUN_LOOP</FootstepAudioScript>
-				</FootstepSound>
-				<FootstepSound>
-					<FootstepAudioType>ENDSTEP_DREAD</FootstepAudioType>
-					<FootstepAudioScript>AS3D_UN_DREAD_RUN_END</FootstepAudioScript>
-				</FootstepSound>
-			</FootstepSounds>
-			<WorldSoundscapeAudioScript>ASSS_OASIS_SELECT_AMB</WorldSoundscapeAudioScript>
 		</FeatureInfo>
 		<!-- City Ruins -->
 		<FeatureInfo>

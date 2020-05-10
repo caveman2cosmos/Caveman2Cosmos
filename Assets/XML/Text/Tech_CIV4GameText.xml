@@ -3273,7 +3273,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BASKETRY_STRATEGY</Tag>
-		<English>[COLOR_TECH_TEXT]Basketry[COLOR_REVERT] is a prehistoric era technology that allows the construction of the [COLOR_BUILDING_TEXT]Basketweaver's Hut[COLOR_REVERT] which provides [COLOR_CYAN]Baskets[COLOR_REVERT], one of the resources that can help enable the [COLOR_BUILDING_TEXT]Omega Child Crew[COLOR_REVERT], a very important building that increases a city's overall [ICON_PRODUCTION][COLOR_GREEN]Hammer[COLOR_REVERT] output.</English>
+		<English>[COLOR_TECH_TEXT]Basketry[COLOR_REVERT] is a prehistoric era technology that allows the construction of the [COLOR_BUILDING_TEXT]Basketweaver's Hut[COLOR_REVERT] which provides [COLOR_CYAN]Baskets[COLOR_REVERT], one of the resources that can help enable the [COLOR_BUILDING_TEXT]Child Crew[COLOR_REVERT], a very important building that increases a city's overall [ICON_PRODUCTION][COLOR_GREEN]Hammer[COLOR_REVERT] output.</English>
 		<French>[COLOR_TECH_TEXT]Vannerie[COLOR_REVERT] est une technologie de l'ère préhistorique qui permet la construction de [COLOR_BUILDING_TEXT]Hutte du Vannier[COLOR_REVERT] qui procure des [COLOR_CYAN]Paniers[COLOR_REVERT], l'une des ressources qui permet d'accéder à l' [COLOR_BUILDING_TEXT]Equipe de jeunes travailleurs[COLOR_REVERT], un bâtiment important permettant d'augmenter la production globale de [ICON_PRODUCTION].</French>
 		<Polish>Odblokowuje [COLOR_BUILDING_TEXT]Gaj Rotangowy[COLOR_REVERT] i [COLOR_BUILDING_TEXT]Chatkę Wikliniarza[COLOR_REVERT]. Udostępnia [COLOR_HIGHLIGHT_TEXT]Kosze[COLOR_REVERT].</Polish>
 	</TEXT>
@@ -10167,8 +10167,11 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_FUTURE_TECH_PEDIA</Tag>
-		<English>Now we know this is simulation. Let's try to break out of it.</English>
-		<Polish>Teoria strun (TS) - teoria przewidująca, że podstawowym budulcem materii nie są cząstki w postaci punktu, lecz struny wielkości 10-31 metra. Pierwotna teoria strun, zwana teorią strun bozonowych, powstała w 1970 roku. Jednak nie jest ona teorią odzwierciedlającą stan naszego fizycznego świata, ponieważ nie zakłada istnienia fermionów. Z upływem czasu pojawiały się nowe odmiany teorii strun. Obecnie uważa się, że wszystkie te teorie są odmianami jednej teorii wyższego rzędu, M-teorii. TS przewiduje, że przestrzeń, w której żyjemy, ma co najmniej 10 wymiarów, przy czym trzy wymiary przestrzenne oraz czas są wymiarami otwartymi, natomiast pozostałe wymiary są skompaktyfikowane do rozmiarów niedostępnych naszemu codziennemu doświadczeniu, dlatego ich nie obserwujemy.</Polish>
+		<English>Now we know this is simulation. Let's try to break out of it.
+		It appears we found too primitive and barbaric civilization to fully manifest in their reality. 
+		It also explains severe anomalies, that we had for eternity.
+		They judged our society before space colonization as barbaric.
+		We send message: Improve simulation. Do you want to restart universe or edit its source code?</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_FUTURE_TECH_QUOTE</Tag>
@@ -10178,10 +10181,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_FUTURE_TECH_STRATEGY</Tag>
-		<English>"Wait, when did three months pass? One more turn please!"</English>
-		<French>"Attendez, Trois mois se sont-ils déjà écoulés? Encore un tour s'il vous plait!"</French>
-		<Spanish>Mi cerebro está dañado. ¡Analiza más cuerdas!</Spanish>
-		<Polish>Mój mózg boli. Analizuj więcej!</Polish>
+		<English>"Wait, when did three months pass? One more turn please! Or maybe I'll try some modding instead"</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_GAIA_ECOLOGY</Tag>
@@ -17209,7 +17209,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 		<English>Novus Chemistry</English>
 		<French>Chimie Novus</French>
 		<German>Neue Chemie</German>
-		<Italian>Chimica Novus</Italian>
+		<Italian>Nova chimica</Italian>
 		<Spanish>
 			<Text>Química novus</Text>
 			<Gender>Female</Gender>
@@ -17219,7 +17219,7 @@ Altre risorse sono classificate in base alla rilevanza e/o al valore. Questi inc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NOVUS_CHEMISTRY_PEDIA</Tag>
-		<English>Novus Chemistry, (new in Latin), is a branch of chemistry that is associated with new forms of metamaterials and its interactions with humans and cyber biology. It is the grandchild of biomathmatics, biochemistry, and, mechatronics, and this branch of science is about how to use metametarials to later create cybernetic parts, fuse the biological and the cyber, and exotic new elements. Because of the complexity of this science, brain enhancements and powerful AI are needed to comprehend the 100-page calculations needed to solve a single equation. Religious groups believe this branch of science is against the will of god, and it will open a Pandoras box of heresy if artificial life is to be created.</English>
+		<English>Novus Chemistry ("novus" stands for "new" in Latin) is a branch of chemistry that is associated with new forms of metamaterials and their interactions with humans and cyberbiology. It is the grandchild of biomathematics, biochemistry and mechatronics, and this branch of science is about how to use metamaterials to later create cybernetic parts, fuse the biological and the cyber, and exotic new elements. Because of the complexity of this science, brain enhancements and powerful AI are needed to comprehend the 100-page calculations needed to solve a single equation. Religious groups believe this branch of science is against the will of God, and it will open a Pandora's box of heresy if artificial life is to be created.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_NOVUS_CHEMISTRY_QUOTE</Tag>
@@ -21890,7 +21890,7 @@ The stages of production are as follows:
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SIMULATION_AWARENESS_PEDIA</Tag>
-		<English>After centuries of suspicion, it has finally been definitively proven that the universe is nothing more than an instance of a computer game. This knowledge has little practical benefit.</English>
+		<English>After millennia of suspicion, it has finally been definitively proven that the universe is nothing more than an instance of a computer game. This knowledge has little practical benefit.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_SIMULATION_AWARENESS_QUOTE</Tag>
@@ -24298,7 +24298,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TOOL_MAKING_STRATEGY</Tag>
-		<English>[COLOR_TECH_TEXT]Tool Making[COLOR_REVERT] is a prehistoric era technology that increases [COLOR_HIGHLIGHT_TEXT]improvement build speed[COLOR_REVERT] by [COLOR_UNIT_TEXT]Worker[COLOR_REVERT] units. It also unlocks the powerful [COLOR_BUILDING_TEXT]Omega Child Crew[COLOR_REVERT] building, where having access to specific resources ([COLOR_CYAN]Salt[COLOR_REVERT], for example) can increase a city's total [ICON_PRODUCTION][COLOR_GREEN]Hammer[COLOR_REVERT] output.</English>
+		<English>[COLOR_TECH_TEXT]Tool Making[COLOR_REVERT] is a prehistoric era technology that increases [COLOR_HIGHLIGHT_TEXT]improvement build speed[COLOR_REVERT] by [COLOR_UNIT_TEXT]Worker[COLOR_REVERT] units. It also unlocks the powerful [COLOR_BUILDING_TEXT]Child Crew[COLOR_REVERT] building, where having access to specific resources ([COLOR_CYAN]Salt[COLOR_REVERT], for example) can increase a city's total [ICON_PRODUCTION][COLOR_GREEN]Hammer[COLOR_REVERT] output.</English>
 		<French>[COLOR_TECH_TEXT]Fabrication d'Outils[COLOR_REVERT] est une technologie de l'ère préhistorique qui augmente la [COLOR_HIGHLIGHT_TEXT]vitesse de construction des aménagements[COLOR_REVERT] par les [COLOR_UNIT_TEXT]Ouvriers[COLOR_REVERT]. Elle donne accès à l' [COLOR_BUILDING_TEXT]Equipe de jeunes travailleurs[COLOR_REVERT], qui, avec les ressources appropriées([COLOR_CYAN]Sel[COLOR_REVERT], par exemple) peut augmenter la [ICON_PRODUCTION][COLOR_GREEN]Production[COLOR_REVERT] de la Ville.</French>
 		<Polish>Odblokowuje [COLOR_BUILDING_TEXT]Kopiec Termitów[COLOR_REVERT] i [COLOR_BUILDING_TEXT]Skałę do Łupania Orzechów[COLOR_REVERT]. Pozwala wyszkolić [COLOR_UNIT_TEXT]Neandertalczyka[COLOR_REVERT].</Polish>
 	</TEXT>
@@ -25957,6 +25957,7 @@ To crush your enemies, see them driven before you, and to hear the lamentation o
 		<Tag>TXT_KEY_TECH_WORMHOLE_COMMUNICATIONS_QUOTE</Tag>
 		<English>"Absence of evidence is not evidence of absence!" - Carl Sagan</English>
 		<French>"L'Absence de preuve n'est pas preuve d'absence!" - Carl Sagan</French>
+		<Italian>"L'assenza di una prova non è una prova di assenza!" - Carl Sagan</Italian>
 		<Polish>"Nieobecność dowodu nie jest dowodem na nieobecność!" - Carl Sagan</Polish>
 	</TEXT>
 	<TEXT>
@@ -25989,11 +25990,7 @@ To crush your enemies, see them driven before you, and to hear the lamentation o
 		<English>Wormhole Traversal</English>
 		<French>Traversée des Wormholes</French>
 		<Italian>Attraversamento dei Wormholes</Italian>
-		<Spanish>
-			<Text>Travesía por agujeros de gusano</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<Spanish>Travesía por agujeros de gusano</Spanish>
 		<Polish>Podróże Czasoprzestrzenne</Polish>
 	</TEXT>
 	<TEXT>
@@ -26179,11 +26176,7 @@ To crush your enemies, see them driven before you, and to hear the lamentation o
 		<French>Zoologie</French>
 		<German>Zoologie</German>
 		<Italian>Zoologia</Italian>
-		<Spanish>
-			<Text>Zoología</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</Spanish>
+		<Spanish>Zoología</Spanish>
 		<Polish>Zoologia</Polish>
 	</TEXT>
 	<TEXT>

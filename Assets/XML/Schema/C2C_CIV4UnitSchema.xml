@@ -1,8 +1,4 @@
-<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Alex Mantzaris (Firaxis Games) -->
-<!-- Sid Meier's Civilization 4 -->
-<!-- Copyright Firaxis Games 2005 -->
-<!-- -->
-<!-- Unit Schema -->
+<?xml version='1.0' encoding='UTF-8'?>
 <Schema xmlns="urn:schemas-microsoft-com:xml-data" xmlns:dt="urn:schemas-microsoft-com:datatypes">
 	<!-- Replacement condition by AIAndy -->
 	<ElementType name="ReplacementCondition"/>
@@ -1245,7 +1241,7 @@
 	<ElementType name="GroupSpawnUnitCombatType" content="eltOnly">
 		<element type="UnitCombatType"/>
 		<element type="iChance"/>
-		<element type="Title" minOccurs="0" />
+		<element type="Title" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="GroupSpawnUnitCombatTypes" content="eltOnly">
 		<element type="GroupSpawnUnitCombatType" minOccurs="0" maxOccurs="*"/>
@@ -2802,7 +2798,7 @@
 	<ElementType name="bNoSpeedNormalization" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNeutralOnly" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bNotInView" content="textOnly" dt:type="boolean"/>
-	<ElementType name="rateOverrideDefineName" content="textOnly" />
+	<ElementType name="rateOverrideDefineName" content="textOnly"/>
 	<ElementType name="bHills" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bFlatlands" content="textOnly" dt:type="boolean"/>
 	<ElementType name="bPeaks" content="textOnly" dt:type="boolean"/>
@@ -2916,12 +2912,12 @@
 		<element type="PromotionLineInfo" maxOccurs="*"/>
 	</ElementType>
 	<ElementType name="Civ4PromotionLineInfos" content="eltOnly">
-		<element type="PromotionLineInfos" minOccurs="0" />
+		<element type="PromotionLineInfos" minOccurs="0"/>
 	</ElementType>
 	<!--TB Promotion Line Mod end -->
 	<!--TB Unit Combat Modifiers begin -->
 	<ElementType name="Civ4UnitCombatInfos" content="eltOnly">
-		<element type="UnitCombatInfos" minOccurs="0" />
+		<element type="UnitCombatInfos" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="UnitCombatInfos" content="eltOnly">
 		<element type="UnitCombatInfo" maxOccurs="*"/>
@@ -3173,7 +3169,6 @@
 		<element type="FontButtonIndex" minOccurs="0"/>
 	</ElementType>
 	<ElementType name="Civ4InvisibleInfos" content="eltOnly">
-		<element type="InvisibleInfos" minOccurs="0" />
+		<element type="InvisibleInfos" minOccurs="0"/>
 	</ElementType>
-	<!--TB Unit Combat Modifier Mod end -->
 </Schema>

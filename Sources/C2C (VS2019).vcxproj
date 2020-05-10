@@ -349,6 +349,7 @@
     <ClInclude Include="CvPython.h" />
     <ClInclude Include="EnumFlags.h" />
     <ClInclude Include="flatten_range.h" />
+    <ClInclude Include="GlobalDefines.h" />
     <ClInclude Include="hash.h" />
     <ClInclude Include="idinfo_iterator_base.h" />
     <ClInclude Include="CvMapExternal.h" />
