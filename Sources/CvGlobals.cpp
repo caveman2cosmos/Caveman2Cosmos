@@ -3,6 +3,7 @@
 //
 #include "CvGameCoreDLL.h"
 #include "CvMapExternal.h"
+#include "CvInitCore.h"
 #include <time.h> 
 #include <sstream>
 

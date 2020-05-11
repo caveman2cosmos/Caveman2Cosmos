@@ -1,6 +1,7 @@
 // team.cpp
 
 #include "CvGameCoreDLL.h"
+#include "CvDiploParameters.h"
 
 // Public Functions...
 #pragma warning( disable : 4355 )
