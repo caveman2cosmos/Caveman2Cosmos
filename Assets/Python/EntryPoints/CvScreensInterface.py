@@ -718,6 +718,11 @@ def lateInit():
 	screenMap[TECH_CHOOSER]			= CvTechChooser.CvTechChooser()
 	screenMap[BUILD_LIST_SCREEN]	= BuildListScreen.BuildListScreen()
 
+	import CvWorldBuilderScreen, CvAdvancedStartScreen
+	global worldBuilderScreen, advancedStartScreen
+	advancedStartScreen = CvAdvancedStartScreen.CvAdvancedStartScreen()
+	worldBuilderScreen = CvWorldBuilderScreen.CvWorldBuilderScreen(WORLDBUILDER_SCREEN)
+	screenMap[WORLDBUILDER_SCREEN] = worldBuilderScreen
 	import WBPlotScreen
 	import WBEventScreen
 	import WBBuildingScreen
@@ -756,6 +761,7 @@ def lateInit():
 	screenMap[WB_TRADE]			= WBTradeScreen.WBTradeScreen()
 
 
+
 def earlyInit():
 	import CvIntroMovieScreen
 	import CvWonderMovieScreen
@@ -775,12 +781,6 @@ def earlyInit():
 
 	import Pedia
 	screenMap[PEDIA] = Pedia.Pedia(PEDIA)
-
-	import CvAdvancedStartScreen, CvWorldBuilderScreen
-	global advancedStartScreen, worldBuilderScreen
-	advancedStartScreen = CvAdvancedStartScreen.CvAdvancedStartScreen()
-	worldBuilderScreen = CvWorldBuilderScreen.CvWorldBuilderScreen(WORLDBUILDER_SCREEN)
-	screenMap[WORLDBUILDER_SCREEN] = worldBuilderScreen
 
 	import CvUnVictoryScreen
 	global unVictoryScreen
