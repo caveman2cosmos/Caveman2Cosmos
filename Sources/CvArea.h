@@ -3,7 +3,7 @@
 #ifndef CvArea_h__
 #define CvArea_h__
 
-#include "CvDefines.h"
+#include "CvGameCoreDLL.h"
 
 class CvCity;
 class CvPlot;
