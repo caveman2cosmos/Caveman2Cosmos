@@ -1801,19 +1801,7 @@ bool CvPlot::isFreshWater() const
 		return true;
 	}
 
-	for (int iDX = -1; iDX <= 1; iDX++)
-	{
-		for (int iDY = -1; iDY <= 1; iDY++)
-		{
-			const CvPlot* pLoopPlot = plotXY(getX(), getY(), iDX, iDY);
-
-			if (pLoopPlot != NULL && pLoopPlot->isLake())
-			{
-				return true;
-			}
-		}
-	}
-	return false;
+	return algo::any_of(rect(getX(), getY(), 1, 1), CvPlot::fn::isLake());
 }
 
 
