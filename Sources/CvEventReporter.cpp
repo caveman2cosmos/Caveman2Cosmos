@@ -1,4 +1,5 @@
 #include "CvGameCoreDLL.h"
+#include "CvInitCore.h"
 #include "FInputDevice.h"
 
 //

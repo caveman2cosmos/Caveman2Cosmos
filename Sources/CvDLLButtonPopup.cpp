@@ -3,6 +3,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvDLLButtonPopup.h"
 #include "CvPopupReturn.h"
+#include "CvInitCore.h"
 
 // Public Functions...
 

@@ -2,6 +2,7 @@
 
 #include "CvGameCoreDLL.h"
 #include "CvDiploParameters.h"
+#include "CvInitCore.h"
 
 // Public Functions...
 #pragma warning( disable : 4355 )

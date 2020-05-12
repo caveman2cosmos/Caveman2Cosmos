@@ -2,6 +2,8 @@
 
 #include "CvGameCoreDLL.h"
 #include "CvDiploParameters.h"
+#include "CvInitCore.h"
+#include "CvDLLFlagEntityIFaceBase.h"
 #include "CyCity.h"
 
 //	Koshling - save flag indicating this player has no data in the save as they have never been alive
@@ -366,6 +368,7 @@ void CvPlayer::init(PlayerTypes eID)
 	FAssert(getTeam() != NO_TEAM);
 	GET_TEAM(getTeam()).changeNumMembers(1);
 
+	
 	if (GC.getInitCore().getSlotStatus(getID()) == SS_TAKEN || GC.getInitCore().getSlotStatus(getID()) == SS_COMPUTER)
 	{
 		setAlive(true);

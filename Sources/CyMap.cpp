@@ -3,6 +3,7 @@
 // 
 
 #include "CvGameCoreDLL.h"
+#include "CvInitCore.h"
 #include "CvMapGenerator.h"
 #include "CyArea.h"
 #include "CyCity.h"
