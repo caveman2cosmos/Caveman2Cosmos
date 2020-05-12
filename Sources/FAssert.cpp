@@ -3,7 +3,7 @@
 #if (defined(FASSERT_ENABLE) || !defined(_DEBUG)) && defined(WIN32)
 
 #include "FDialogTemplate.h"
-#include "StackWalker.h"
+//#include "StackWalker.h"
 #include <sstream>
 
 // Some Resource IDs for our dialog template

@@ -7,7 +7,6 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
-#include "wchar_utils.h"
 
 
 bool equal(const wchar_t* str1, const wchar_t* str2)
