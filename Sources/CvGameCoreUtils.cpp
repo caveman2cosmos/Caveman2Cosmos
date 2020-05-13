@@ -1,5 +1,5 @@
 #include "CvGameCoreDLL.h"
-//#include "CvMapExternal.h"
+#include "CvMapExternal.h"
 
 //	Moved exp for next level calc into the DLL.  If you need to undefine this
 //	and go back to using Python you need to make sure that the Python is not

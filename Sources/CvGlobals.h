@@ -157,8 +157,6 @@ class CvMapSwitchInfo;
 #include "GlobalDefines.h"
 #include <stack>
 
-#include "CvGameCoreUtils.h"
-
 extern CvDLLUtilityIFaceBase* g_DLL;
 
 class cvInternalGlobals

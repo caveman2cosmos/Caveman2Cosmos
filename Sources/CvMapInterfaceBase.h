@@ -17,6 +17,9 @@
 #include "CvPlot.h"
 
 
+class FAStar;
+class CvPlotGroup;
+
 //
 // holds initialization info
 //

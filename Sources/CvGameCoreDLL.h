@@ -320,6 +320,7 @@ namespace python = boost::python;
 #include "CvDLLXMLIFaceBase.h"
 
 #include "BetterBTSAI.h"
+#include "CvGameCoreUtils.h"
 #include "CvXMLLoadUtility.h"
 #include "CvArtFileMgr.h"
 #include "CvGameTextMgr.h"
@@ -331,6 +332,7 @@ namespace python = boost::python;
 #include "CvInfoWater.h"
 #include "CvMap.h"
 #include "CvViewport.h"
+#include "CvGlobals.h"
 #include "CvGameAI.h"
 #include "CvTeamAI.h"
 #include "CvPlayerAI.h"
