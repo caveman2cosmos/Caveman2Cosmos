@@ -35690,7 +35690,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=93,y=26
-	TerrainType=TERRAIN_SEA_TROPICAL
+	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
@@ -36075,7 +36075,7 @@ BeginPlot
 EndPlot
 BeginPlot
 	x=94,y=25
-	TerrainType=TERRAIN_SEA_TROPICAL
+	TerrainType=TERRAIN_OCEAN_TROPICAL
 	PlotType=3
 EndPlot
 BeginPlot
