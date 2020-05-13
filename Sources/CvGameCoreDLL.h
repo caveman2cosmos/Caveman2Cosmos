@@ -289,13 +289,9 @@ namespace python = boost::python;
 #include "copy_iterator.h"
 #include "index_iterator_base.h"
 #include "logging.h"
-
 #include "algorithm2.h"
-
 #include "scoring.h"
-
 #include "CvAllocator.h"
-
 #include "FAssert.h"
 #include "CheckSum.h"
 #include "Stopwatch.h"
@@ -309,12 +305,17 @@ namespace python = boost::python;
 #include "FVariableSystem.h"
 #include "FAStarNode.h"
 #include "CvString.h"
+
+#include "idinfo_iterator_base.h"
+#include "flatten_range.h"
+#include "wchar_utils.h"
+
 #include "CvEnums.h"
 #include "CvStructs.h"
+
 #include "CvDLLUtilityIFaceBase.h"
 #include "CvDLLEngineIFaceBase.h"
 #include "CvDLLFAStarIFaceBase.h"
-#include "CvDLLFlagEntityIFaceBase.h"
 #include "CvDLLPythonIFaceBase.h"
 #include "CvDLLInterfaceIFaceBase.h"
 #include "CvDLLXMLIFaceBase.h"
@@ -332,8 +333,6 @@ namespace python = boost::python;
 #include "CvInfoWater.h"
 #include "CvMap.h"
 #include "CvViewport.h"
-#include "CvGlobals.h"
-#include "CvGameAI.h"
 #include "CvTeamAI.h"
 #include "CvPlayerAI.h"
 #include "CvCityAI.h"

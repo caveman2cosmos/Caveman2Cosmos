@@ -12,7 +12,6 @@
 #include "CvUnitList.h"
 #include "CvGameObject.h"
 #include "CvGame.h"
-#include "CvGameAI.h"
 
 class CvPlot;
 class CvPlotGroup;

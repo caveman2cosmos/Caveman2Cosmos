@@ -15,18 +15,12 @@
 #include "CvMapInterfaceBase.h"
 
 
-class FAStar;
-class CvPlotGroup;
-
-
 //
 // CvMap
 //
 class CvSelectionGroup;
 class CvMapExternal
 {
-	friend class CyMap;
-
 public:
 	CvMapExternal(CvMapInterfaceBase* proxiedMap);
 

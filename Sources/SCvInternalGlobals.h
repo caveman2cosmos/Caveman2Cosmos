@@ -1,7 +1,9 @@
 #pragma once
 
-#include "../CvInfos.h"
+#ifndef SCV_INTERNAL_GLOBALS_H
+#define SCV_INTERNAL_GLOBALS_H
 
+#include "CvInfos.h"
 
 class SCvInternalGlobals
 {
@@ -11,3 +13,5 @@ public:
 	static CvBonusInfo* getBonusInfoByType(const std::string& szType);
 	static         int  getBonusInfoIndexByType(const std::string& szType);
 };
+
+#endif

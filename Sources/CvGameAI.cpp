@@ -1,6 +1,6 @@
 // gameAI.cpp
 
-#include "CvGameCoreDLL.h"
+#include "CvGameAI.h"
 
 // Public Functions...
 
