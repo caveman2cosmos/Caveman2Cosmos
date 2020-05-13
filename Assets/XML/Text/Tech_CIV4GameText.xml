@@ -3273,7 +3273,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_BASKETRY_STRATEGY</Tag>
-		<English>[COLOR_TECH_TEXT]Basketry[COLOR_REVERT] is a prehistoric era technology that allows the construction of the [COLOR_BUILDING_TEXT]Basketweaver's Hut[COLOR_REVERT] which provides [COLOR_CYAN]Baskets[COLOR_REVERT], one of the resources that can help enable the [COLOR_BUILDING_TEXT]Child Crew[COLOR_REVERT], a very important building that increases a city's overall [ICON_PRODUCTION][COLOR_GREEN]Hammer[COLOR_REVERT] output.</English>
+		<English>[COLOR_TECH_TEXT]Basketry[COLOR_REVERT] is a prehistoric era technology that allows the construction of the [COLOR_BUILDING_TEXT]Basketweaver's Hut[COLOR_REVERT] which provides [COLOR_CYAN]Baskets[COLOR_REVERT], one of the resources that can help enable the [COLOR_BUILDING_TEXT]Child Labor Crew[COLOR_REVERT], a very important building that increases a city's overall [ICON_PRODUCTION][COLOR_GREEN]Hammer[COLOR_REVERT] output.</English>
 		<French>[COLOR_TECH_TEXT]Vannerie[COLOR_REVERT] est une technologie de l'ère préhistorique qui permet la construction de [COLOR_BUILDING_TEXT]Hutte du Vannier[COLOR_REVERT] qui procure des [COLOR_CYAN]Paniers[COLOR_REVERT], l'une des ressources qui permet d'accéder à l' [COLOR_BUILDING_TEXT]Equipe de jeunes travailleurs[COLOR_REVERT], un bâtiment important permettant d'augmenter la production globale de [ICON_PRODUCTION].</French>
 		<Polish>Odblokowuje [COLOR_BUILDING_TEXT]Gaj Rotangowy[COLOR_REVERT] i [COLOR_BUILDING_TEXT]Chatkę Wikliniarza[COLOR_REVERT]. Udostępnia [COLOR_HIGHLIGHT_TEXT]Kosze[COLOR_REVERT].</Polish>
 	</TEXT>
@@ -24298,7 +24298,7 @@ Limerick from 1923 by A. H. Reginald Buller</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_TOOL_MAKING_STRATEGY</Tag>
-		<English>[COLOR_TECH_TEXT]Tool Making[COLOR_REVERT] is a prehistoric era technology that increases [COLOR_HIGHLIGHT_TEXT]improvement build speed[COLOR_REVERT] by [COLOR_UNIT_TEXT]Worker[COLOR_REVERT] units. It also unlocks the powerful [COLOR_BUILDING_TEXT]Child Crew[COLOR_REVERT] building, where having access to specific resources ([COLOR_CYAN]Salt[COLOR_REVERT], for example) can increase a city's total [ICON_PRODUCTION][COLOR_GREEN]Hammer[COLOR_REVERT] output.</English>
+		<English>[COLOR_TECH_TEXT]Tool Making[COLOR_REVERT] is a prehistoric era technology that increases [COLOR_HIGHLIGHT_TEXT]improvement build speed[COLOR_REVERT] by [COLOR_UNIT_TEXT]Worker[COLOR_REVERT] units. It also unlocks the powerful [COLOR_BUILDING_TEXT]Child Labor Crew[COLOR_REVERT] building, where having access to specific resources ([COLOR_CYAN]Salt[COLOR_REVERT], for example) can increase a city's total [ICON_PRODUCTION][COLOR_GREEN]Hammer[COLOR_REVERT] output.</English>
 		<French>[COLOR_TECH_TEXT]Fabrication d'Outils[COLOR_REVERT] est une technologie de l'ère préhistorique qui augmente la [COLOR_HIGHLIGHT_TEXT]vitesse de construction des aménagements[COLOR_REVERT] par les [COLOR_UNIT_TEXT]Ouvriers[COLOR_REVERT]. Elle donne accès à l' [COLOR_BUILDING_TEXT]Equipe de jeunes travailleurs[COLOR_REVERT], qui, avec les ressources appropriées([COLOR_CYAN]Sel[COLOR_REVERT], par exemple) peut augmenter la [ICON_PRODUCTION][COLOR_GREEN]Production[COLOR_REVERT] de la Ville.</French>
 		<Polish>Odblokowuje [COLOR_BUILDING_TEXT]Kopiec Termitów[COLOR_REVERT] i [COLOR_BUILDING_TEXT]Skałę do Łupania Orzechów[COLOR_REVERT]. Pozwala wyszkolić [COLOR_UNIT_TEXT]Neandertalczyka[COLOR_REVERT].</Polish>
 	</TEXT>
