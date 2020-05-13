@@ -15,9 +15,9 @@
 #ifndef XML_LOAD_UTILITY_H
 #define XML_LOAD_UTILITY_H
 
-#include "CvInfos.h"
+//#include "CvGameCoreDLL.h"
 #include "CvGlobals.h"
-#include "FVariableSystem.h"
+//#include "CvInfos.h"
 
 class FXmlSchemaCache;
 class FXml;

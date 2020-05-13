@@ -3,10 +3,11 @@
 #ifndef CvArea_h__
 #define CvArea_h__
 
-#include "CvGameCoreDLL.h"
+#include "CvEnums.h"
 
 class CvCity;
 class CvPlot;
+class FDataStreamBase;
 
 //	Koshling - record of a single combat result
 typedef struct CombatResultRecord

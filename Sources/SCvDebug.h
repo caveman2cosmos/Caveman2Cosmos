@@ -1,8 +1,5 @@
 #pragma once
 
-#ifndef SCV_DEBUG_H
-#define SCV_DEBUG_H
-
 // Examlple:
 //
 // INSTALLATION OF MODES
@@ -59,5 +56,3 @@ public:
 private:
 	static unsigned __int64 m_mode;
 };
-
-#endif

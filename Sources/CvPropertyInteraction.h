@@ -12,7 +12,7 @@
 #define CV_PROPERTY_INTERACTION_H
 
 #include "CvXMLLoadUtilityModTools.h"
-#include "CvGameObject.h"
+//#include "CvGameObject.h"
 
 class CvGameObject;
 

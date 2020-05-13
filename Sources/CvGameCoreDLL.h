@@ -54,6 +54,7 @@
 #include <algorithm>
 #include <set>
 #include <fstream>
+#include <iostream>
 
 //
 // Google sparsehash
@@ -282,6 +283,7 @@ namespace python = boost::python;
 #include "nullptr_t.h"
 #include "EnumFlags.h"
 #include "hash.h"
+#include <sstream>
 
 //
 // Our code
@@ -309,6 +311,7 @@ namespace python = boost::python;
 #include "idinfo_iterator_base.h"
 #include "flatten_range.h"
 #include "wchar_utils.h"
+#include "FInputDevice.h"
 
 #include "CvEnums.h"
 #include "CvStructs.h"
@@ -319,10 +322,10 @@ namespace python = boost::python;
 #include "CvDLLPythonIFaceBase.h"
 #include "CvDLLInterfaceIFaceBase.h"
 #include "CvDLLXMLIFaceBase.h"
+#include "CvDLLFlagEntityIFaceBase.h"
 
 #include "BetterBTSAI.h"
 #include "CvGameCoreUtils.h"
-#include "CvXMLLoadUtility.h"
 #include "CvArtFileMgr.h"
 #include "CvGameTextMgr.h"
 #include "CvBugOptions.h"
@@ -331,14 +334,11 @@ namespace python = boost::python;
 #include "CvMessageControl.h"
 #include "CvDeal.h"
 #include "CvInfoWater.h"
-#include "CvMap.h"
 #include "CvViewport.h"
-#include "CvTeamAI.h"
 #include "CvPlayerAI.h"
 #include "CvCityAI.h"
 #include "CvUnitAI.h"
 #include "CvSelectionGroupAI.h"
-#include "CvPlot.h"
 #include "CvTalkingHeadMessage.h"
 #include "FProfiler.h"
 #include "CvPathGenerator.h"

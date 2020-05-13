@@ -19,7 +19,6 @@
 #include "CvMapInterfaceBase.h"
 
 
-class FAStar;
 class CvPlotGroup;
 
 

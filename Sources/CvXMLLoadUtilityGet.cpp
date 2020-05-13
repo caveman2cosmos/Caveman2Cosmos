@@ -3,8 +3,7 @@
 //
 
 #include "CvGameCoreDLL.h"
-#include "FInputDevice.h"
-#include <sstream>
+#include "CvXMLLoadUtility.h"
 
 //
 // STATIC

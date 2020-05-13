@@ -1,8 +1,5 @@
 #pragma once
 
-#ifndef SC_DEBUG_H
-#define SC_DEBUG_H
-
 #include "SCvDebug.h"
 
 class SCyDebug
@@ -13,5 +10,3 @@ public:
 
 	static void installInPython();
 };
-
-#endif
