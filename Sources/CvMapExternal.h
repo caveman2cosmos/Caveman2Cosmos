@@ -10,8 +10,6 @@
 //
 
 
-#include "CvArea.h"
-#include "CvPlot.h"
 #include "CvMapInterfaceBase.h"
 
 

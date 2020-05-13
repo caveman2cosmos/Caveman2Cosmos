@@ -4,6 +4,7 @@
 
 #include "CvGameCoreDLL.h"
 #include "CvXMLLoadUtility.h"
+#include <sstream>
 
 //
 // STATIC

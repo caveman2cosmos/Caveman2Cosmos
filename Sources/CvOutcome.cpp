@@ -7,6 +7,7 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
+#include "CvTeam.h"
 #include "CyUnit.h"
 #include "CyPlot.h"
 

@@ -3,7 +3,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvDiploParameters.h"
 #include "CvInitCore.h"
-#include "CvDLLFlagEntityIFaceBase.h"
+#include "CvTeam.h"
 #include "CyCity.h"
 
 //	Koshling - save flag indicating this player has no data in the save as they have never been alive

@@ -3,7 +3,6 @@
 #include "CvGameCoreDLL.h"
 #include "CvDLLSymbolIFaceBase.h"
 #include "CvDLLPlotBuilderIFaceBase.h"
-#include "CvDLLFlagEntityIFaceBase.h"
 
 #include "CvPlotPaging.h"
 
