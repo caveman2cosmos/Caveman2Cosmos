@@ -8,6 +8,7 @@
 //------------------------------------------------------------------------------------------------
 
 #include "CvGameCoreDLL.h"
+#include "CvTeamAI.h"
 #include "CyCity.h"
 #include "CyGame.h"
 #include "CyPlayer.h"

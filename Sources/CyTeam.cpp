@@ -3,6 +3,7 @@
 // updated 6-5
 //
 #include "CvGameCoreDLL.h"
+#include "CvTeam.h"
 #include "CyArea.h"
 #include "CyTeam.h"
 

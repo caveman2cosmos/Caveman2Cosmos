@@ -1,4 +1,5 @@
 #include "CvGameCoreDLL.h"
+#include "CvTeamAI.h"
 
 void CvGame::updateColoredPlots()
 {

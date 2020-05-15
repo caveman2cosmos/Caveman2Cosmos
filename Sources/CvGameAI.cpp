@@ -1,6 +1,7 @@
 // gameAI.cpp
 
 #include "CvGameAI.h"
+#include "CvTeamAI.h"
 
 // Public Functions...
 

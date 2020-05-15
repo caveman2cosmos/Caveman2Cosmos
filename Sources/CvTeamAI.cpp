@@ -1,6 +1,7 @@
 // teamAI.cpp
 
 #include "CvGameCoreDLL.h"
+#include "CvTeamAI.h"
 
 // statics
 

@@ -15,11 +15,8 @@ class CyGame;
 class CyMap;
 class CyPlayer;
 class CvRandom;
-class CyEngine;
 class CyTeam;
 class CyArtFileMgr;
-class CyUserProfile;
-class CyVariableSystem;
 
 class CyGlobalContext
 {
@@ -291,7 +288,6 @@ public:
 	// Globals Defines
 	//////////////////////
 
-	CyVariableSystem* getCyDefinesVarSystem();
 /************************************************************************************************/
 /* MOD_COMPONENT_CONTROL                   08/02/07                            MRGENIE          */
 /*                                                                                              */
