@@ -7,6 +7,7 @@
 #include "CvPathGenerator.h"
 #include "CvUnit.h"
 #include "CvCity.h"
+#include "CvUnit.h"
 #include "idinfo_iterator_base.h"
 
 class CvPlot;

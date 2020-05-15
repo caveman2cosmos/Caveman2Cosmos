@@ -8,9 +8,7 @@
 #include "CyGlobalContext.h"
 #include "CyMap.h"
 #include "CyPlayer.h"
-#include "CvPlayerAI.h"
 #include "CyTeam.h"
-#include "CvTeamAI.h"
 
 CyGlobalContext::CyGlobalContext()
 {

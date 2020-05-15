@@ -11,8 +11,9 @@
 #ifndef CV_PROPERTY_PROPAGATOR_H
 #define CV_PROPERTY_PROPAGATOR_H
 
-#include "CvXMLLoadUtility.h"
+#include "CvXMLLoadUtilityModTools.h"
 #include "CvGameObject.h"
+#include <vector>
 
 class CvGameObject;
 

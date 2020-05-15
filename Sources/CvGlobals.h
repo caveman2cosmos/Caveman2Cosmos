@@ -24,16 +24,20 @@ class CvMessageCodeTranslator;
 class CvPortal;
 class CvStatsReporter;
 class CvDLLInterfaceIFaceBase;
+class CvPlayerAI;
 class CvDiplomacyScreen;
 class CMPDiplomacyScreen;
 class FMPIManager;
 class FAStar;
 class CvInterface;
 class CMainMenu;
+class CvArtFileMgr;
 class FVariableSystem;
 class CvMap;
 class CvMapExternal;
 class CvViewport;
+class CvPlayerAI;
+class CvTeamAI;
 class CvInterfaceModeInfo;
 class CvWorldInfo;
 class CvClimateInfo;
@@ -151,7 +155,6 @@ class CvMapSwitchInfo;
 
 #include "CvInfoReplacements.h"
 #include "GlobalDefines.h"
-#include "CvArtFileMgr.h"
 #include <stack>
 
 extern CvDLLUtilityIFaceBase* g_DLL;

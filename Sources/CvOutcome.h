@@ -11,11 +11,10 @@
 #ifndef CV_OUTCOME_H
 #define CV_OUTCOME_H
 
+#include "CvXMLLoadUtilityModTools.h"
 #include "CvProperties.h"
 
-class CvXMLLoadUtility;
 class CvUnitAI;
-class CvPlayerAI;
 class IntExpr;
 class BoolExpr;
 

@@ -1,5 +1,4 @@
 #include "CvGameCoreDLL.h"
-#include "CvTeam.h"
 #include "CyTeam.h"
 
 //

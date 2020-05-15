@@ -4,7 +4,6 @@
 //
 #include "CvGameCoreDLL.h"
 #include "CyArea.h"
-#include "CvTeam.h"
 #include "CyTeam.h"
 
 CyTeam::CyTeam() : m_pTeam(NULL)

@@ -3,7 +3,7 @@
 //
 
 #include "CvGameCoreDLL.h"
-#include "CvXMLLoadUtilitySetMod.h"
+#include "CvXMLLoadUtility.h"
 #include <iostream>
 
 // Macro for Setting Global Art Defines
