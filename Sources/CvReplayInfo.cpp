@@ -1,4 +1,5 @@
 #include "CvGameCoreDLL.h"
+#include "CvGameTextMgr.h"
 #include "CvInitCore.h"
 #include "CvPlayerAI.h"
 #include "CvReplayInfo.h"

@@ -15,7 +15,6 @@
 #ifndef XML_LOAD_UTILITY_H
 #define XML_LOAD_UTILITY_H
 
-//#include "CvGameCoreDLL.h"
 #include "CvGlobals.h"
 //#include "CvInfos.h"
 

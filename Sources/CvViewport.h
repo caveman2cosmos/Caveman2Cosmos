@@ -10,7 +10,6 @@
 
 
 #include "CvMap.h"
-//class	CvMap;
 
 enum ViewportMode
 {

@@ -9,9 +9,7 @@
 //	PURPOSE: Game map externals class
 //
 
-
 #include "CvMapInterfaceBase.h"
-
 
 //
 // CvMap

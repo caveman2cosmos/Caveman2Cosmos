@@ -7,6 +7,7 @@
 //  Copyright (c) 2003 Firaxis Games, Inc. All rights reserved.
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
+#include "CvGameTextMgr.h"
 #include "CvPlayerAI.h"
 
 bool shouldHaveType = false;

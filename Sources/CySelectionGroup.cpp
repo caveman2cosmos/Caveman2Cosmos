@@ -3,6 +3,7 @@
 // 
 //
 #include "CvGameCoreDLL.h"
+#include "CvSelectionGroup.h"
 #include "CyArea.h"
 #include "CyPlot.h"
 #include "CySelectionGroup.h"

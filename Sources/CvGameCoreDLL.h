@@ -324,7 +324,6 @@ namespace python = boost::python;
 
 #include "BetterBTSAI.h"
 #include "CvGameCoreUtils.h"
-#include "CvGameTextMgr.h"
 #include "CvBugOptions.h"
 #include "CvPopupInfo.h"
 #include "CvEventReporter.h"
@@ -332,10 +331,6 @@ namespace python = boost::python;
 #include "CvDeal.h"
 #include "CvInfoWater.h"
 #include "CvViewport.h"
-//#include "CvPlayerAI.h"
-#include "CvCityAI.h"
-#include "CvUnitAI.h"
-#include "CvSelectionGroupAI.h"
 #include "CvTalkingHeadMessage.h"
 #include "FProfiler.h"
 #include "CvPython.h"

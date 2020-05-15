@@ -152,7 +152,6 @@ class CvMapSwitchInfo;
 /***** Parallel Maps - End *****/
 /*******************************/
 
-#include "CvArtFileMgr.h"
 #include "CvInfoReplacements.h"
 #include "GlobalDefines.h"
 #include <stack>
@@ -963,8 +962,6 @@ protected:
 	CvPortal* m_portal;
 	CvStatsReporter * m_statsReporter;
 	CvInterface* m_interface;
-
-//	CvArtFileMgr* m_pArtFileMgr; (unused)
 
 /*********************************/
 /***** Parallel Maps - Begin *****/

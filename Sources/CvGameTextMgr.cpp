@@ -12,6 +12,7 @@
 
 #include "CvGameCoreDLL.h"
 #include "CvDLLSymbolIFaceBase.h"
+#include "CvGameTextMgr.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
 

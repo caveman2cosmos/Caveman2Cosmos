@@ -3,6 +3,7 @@
 //
 
 #include "CvGameCoreDLL.h"
+#include "CvGameTextMgr.h"
 #include "CvXMLLoadUtilitySetMod.h"
 #include <iostream>
 

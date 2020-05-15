@@ -6,7 +6,6 @@
 #define CIV4_PLOT_GROUP_H
 
 #include "LinkedList.h"
-#include "CvGame.h"
 #include "CvGameAI.h"
 
 typedef struct
