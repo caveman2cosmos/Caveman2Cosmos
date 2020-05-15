@@ -6178,6 +6178,10 @@
 					<TerrainType>TERRAIN_PLAINS</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_ROCKY</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
 			</TerrainMakesValids>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
@@ -6207,6 +6211,28 @@
 			</TerrainMakesValids>
 			<bGraphicalOnly>1</bGraphicalOnly>
 		</ImprovementInfo>
+		<!-- Terraform Taiga -->
+		<ImprovementInfo>
+			<Type>IMPROVEMENT_TERRAFORM_TAIGA</Type>
+			<Description>TXT_KEY_BUILD_TERRAFORM_TAIGA</Description>
+			<Civilopedia>TXT_KEY_IMPROVEMENT_LAND_WORKED_PEDIA</Civilopedia>
+			<ArtDefineTag>ART_DEF_IMPROVEMENT_TERRAFORM_TUNDRA</ArtDefineTag>
+			<YieldChanges>
+				<iYieldChange>1</iYieldChange>
+				<iYieldChange>1</iYieldChange>
+			</YieldChanges>
+			<bActsAsCity>0</bActsAsCity>
+			<iAdvancedStartCost>-1</iAdvancedStartCost>
+			<iAirBombDefense>-1</iAirBombDefense>
+			<!--bOutsideBorders>1</bOutsideBorders-->
+			<TerrainMakesValids>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_TUNDRA</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>				
+			</TerrainMakesValids>
+			<bGraphicalOnly>1</bGraphicalOnly>
+		</ImprovementInfo>
 		<!-- Terraform Tundra -->
 		<ImprovementInfo>
 			<Type>IMPROVEMENT_TERRAFORM_TUNDRA</Type>
@@ -6223,7 +6249,7 @@
 			<!--bOutsideBorders>1</bOutsideBorders-->
 			<TerrainMakesValids>
 				<TerrainMakesValid>
-					<TerrainType>TERRAIN_TUNDRA</TerrainType>
+					<TerrainType>TERRAIN_PERMAFROST</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>
@@ -6268,6 +6294,10 @@
 			<TerrainMakesValids>
 				<TerrainMakesValid>
 					<TerrainType>TERRAIN_BARREN</TerrainType>
+					<bMakesValid>1</bMakesValid>
+				</TerrainMakesValid>
+				<TerrainMakesValid>
+					<TerrainType>TERRAIN_JAGGED</TerrainType>
 					<bMakesValid>1</bMakesValid>
 				</TerrainMakesValid>
 			</TerrainMakesValids>

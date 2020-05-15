@@ -506,4 +506,8 @@
 		<Tag>TXT_KEY_WB_XLEVEL</Tag>
 		<English>Level</English>
 	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_WB_TURNS</Tag>
+		<English>Turns</English>
+	</TEXT>
 </Civ4GameText>

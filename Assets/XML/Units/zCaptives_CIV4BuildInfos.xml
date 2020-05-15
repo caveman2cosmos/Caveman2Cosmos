@@ -4481,6 +4481,31 @@
 			<Button>Art/Interface/Buttons/baseterrain/plains.dds</Button>
 		</BuildInfo>
 		<BuildInfo>
+			<Type>BUILD_TERRAFORM_TAIGA_SLAVE</Type>
+			<Description>TXT_KEY_BUILD_TERRAFORM_TAIGA_SLAVE</Description>
+			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>
+			<iTime>3000</iTime>
+			<iCost>0</iCost>
+			<bKill>1</bKill>
+			<ImprovementType>IMPROVEMENT_TERRAFORM_TAIGA</ImprovementType>
+			<RouteType>NONE</RouteType>
+			<TerrainChange>TERRAIN_TAIGA</TerrainChange>
+			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
+			<FeatureStructs>
+				<FeatureStruct>
+					<FeatureType>FEATURE_FOREST</FeatureType>
+					<PrereqTech/>
+					<iTime>250</iTime>
+					<iProduction>30</iProduction>
+					<bRemove>1</bRemove>
+				</FeatureStruct>
+			</FeatureStructs>
+			<HotKey>KB_T</HotKey>
+			<bCtrlDown>1</bCtrlDown>
+			<iHotKeyPriority>0</iHotKeyPriority>
+			<Button>Art/Interface/Buttons/baseterrain/tundra.dds</Button>
+		</BuildInfo>
+		<BuildInfo>
 			<Type>BUILD_TERRAFORM_TUNDRA_SLAVE</Type>
 			<Description>TXT_KEY_BUILD_TERRAFORM_TUNDRA_SLAVE</Description>
 			<PrereqTech>TECH_WEATHER_CONTROL</PrereqTech>

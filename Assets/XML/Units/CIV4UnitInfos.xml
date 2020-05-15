@@ -3178,6 +3178,10 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_TERRAFORM_TAIGA</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_TERRAFORM_LUSH</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -3563,6 +3567,10 @@ Base XP gained when defending
 				</Build>
 				<Build>
 					<BuildType>BUILD_TERRAFORM_TUNDRA</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_TERRAFORM_TAIGA</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
@@ -3961,6 +3969,10 @@ Base XP gained when defending
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
+					<BuildType>BUILD_TERRAFORM_TAIGA</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
 					<BuildType>BUILD_TERRAFORM_LUSH</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
@@ -4354,6 +4366,10 @@ Base XP gained when defending
 				</Build>
 				<Build>
 					<BuildType>BUILD_TERRAFORM_TUNDRA</BuildType>
+					<bBuild>1</bBuild>
+				</Build>
+				<Build>
+					<BuildType>BUILD_TERRAFORM_TAIGA</BuildType>
 					<bBuild>1</bBuild>
 				</Build>
 				<Build>
