@@ -7466,7 +7466,7 @@
 			<iCost>100</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_TUNDRA</ImprovementType>
-			<TerrainChange>TERRAIN_TAIGA</TerrainChange>
+			<TerrainChange>TERRAIN_TUNDRA</TerrainChange>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
@@ -7715,7 +7715,7 @@
 			<iCost>100</iCost>
 			<bKill>0</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_PERMAFROST</ImprovementType>
-			<TerrainChange>TERRAIN_TUNDRA</TerrainChange>
+			<TerrainChange>TERRAIN_PERMAFROST</TerrainChange>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>

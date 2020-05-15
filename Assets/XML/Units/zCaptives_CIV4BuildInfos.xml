@@ -4489,7 +4489,7 @@
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_TUNDRA</ImprovementType>
 			<RouteType>NONE</RouteType>
-			<TerrainChange>TERRAIN_TAIGA</TerrainChange>
+			<TerrainChange>TERRAIN_TUNDRA</TerrainChange>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs>
 				<FeatureStruct>
@@ -4514,7 +4514,7 @@
 			<bKill>1</bKill>
 			<ImprovementType>IMPROVEMENT_TERRAFORM_PERMAFROST</ImprovementType>
 			<RouteType>NONE</RouteType>
-			<TerrainChange>TERRAIN_TUNDRA</TerrainChange>
+			<TerrainChange>TERRAIN_PERMAFROST</TerrainChange>
 			<EntityEvent>ENTITY_EVENT_BUILD</EntityEvent>
 			<FeatureStructs/>
 			<HotKey>KB_T</HotKey>
