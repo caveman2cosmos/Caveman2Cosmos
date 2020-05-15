@@ -1,6 +1,7 @@
 #include "CvGameCoreDLL.h"
 #include "CvMessageData.h"
-#include "CvTeam.h"
+#include "CvPlayerAI.h"
+#include "CvTeamAI.h"
 
 CvMessageData* CvMessageData::createMessage(GameMessageTypes eType)
 {

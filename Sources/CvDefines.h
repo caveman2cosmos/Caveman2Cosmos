@@ -5,6 +5,23 @@
 
 // defines.h
 
+#include "BetterBTSAI.h"
+#include "CvGameCoreUtils.h"
+#include "CvGameTextMgr.h"
+#include "CvBugOptions.h"
+#include "CvPopupInfo.h"
+#include "CvEventReporter.h"
+#include "CvMessageControl.h"
+#include "CvDeal.h"
+#include "CvInfoWater.h"
+#include "CvViewport.h"
+#include "CvPlayerAI.h"
+#include "CvCityAI.h"
+#include "CvUnitAI.h"
+#include "CvSelectionGroupAI.h"
+#include "CvTalkingHeadMessage.h"
+#include "CvPython.h"
+
 // The following #defines should not be moddable...
 
 #define MOVE_IGNORE_DANGER								(0x00000001)

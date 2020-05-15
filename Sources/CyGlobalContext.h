@@ -9,7 +9,6 @@
 //
 
 #include "CvGlobals.h"
-#include "CvArtFileMgr.h"
 
 class CyGame;
 class CyMap;

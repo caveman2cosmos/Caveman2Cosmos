@@ -7,7 +7,6 @@
 
 #include "LinkedList.h"
 //#include <bitset>
-#include <vector>
 #include "CvGameObject.h"
 #include "CvUnit.h"
 #include "idinfo_iterator_base.h"
