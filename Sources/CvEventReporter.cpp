@@ -1,6 +1,6 @@
 #include "CvGameCoreDLL.h"
+#include "CvPlayerAI.h"
 #include "CvInitCore.h"
-#include "FInputDevice.h"
 
 //
 // static, singleton accessor

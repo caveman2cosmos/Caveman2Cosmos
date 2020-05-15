@@ -2,6 +2,7 @@
 // Python wrapper class for CvCity
 //
 #include "CvGameCoreDLL.h"
+#include "CvPlayerAI.h"
 #include "CyArea.h"
 #include "CyCity.h"
 #include "CyPlot.h"

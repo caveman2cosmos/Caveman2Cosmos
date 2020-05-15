@@ -5,6 +5,7 @@
 #include "CvMapGenerator.h"
 #include "CvReplayMessage.h"
 #include "CvReplayInfo.h"
+#include "CvPlayerAI.h"
 #include "CvTeamAI.h"
 
 //	Koshling - save game compatibility between (most) builds

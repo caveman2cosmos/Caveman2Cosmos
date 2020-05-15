@@ -1,5 +1,6 @@
 #include "CvGameCoreDLL.h"
 #include "CvMessageData.h"
+#include "CvPlayerAI.h"
 
 CvMessageControl& CvMessageControl::getInstance()
 {

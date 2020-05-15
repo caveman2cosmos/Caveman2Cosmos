@@ -4,6 +4,7 @@
 #include "CvDLLButtonPopup.h"
 #include "CvPopupReturn.h"
 #include "CvInitCore.h"
+#include "CvPlayerAI.h"
 #include "CvTeamAI.h"
 
 // Public Functions...

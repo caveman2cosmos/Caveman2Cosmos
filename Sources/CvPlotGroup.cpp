@@ -1,6 +1,7 @@
 // plotGroup.cpp
 
 #include "CvGameCoreDLL.h"
+#include "CvPlayerAI.h"
 
 //#define VALIDATION_FOR_PLOT_GROUPS
 

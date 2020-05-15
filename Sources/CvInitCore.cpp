@@ -1,6 +1,7 @@
 // game.cpp
 #include "CvGameCoreDLL.h"
 #include "CvInitCore.h"
+#include "CvPlayerAI.h"
 
 // BUG - EXE/DLL Paths - start
 //#include <shlobj.h>

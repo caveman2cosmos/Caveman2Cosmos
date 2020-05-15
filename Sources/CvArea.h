@@ -7,7 +7,7 @@
 
 class CvCity;
 class CvPlot;
-class FDataStreamBase;
+//class FDataStreamBase;
 
 //	Koshling - record of a single combat result
 typedef struct CombatResultRecord

@@ -2,6 +2,7 @@
 
 #include "CvGameCoreDLL.h"
 #include "CvReachablePlotSet.h"
+#include "CvPlayerAI.h"
 #include "CvTeamAI.h"
 
 const CvSelectionGroup* CvSelectionGroup::m_pCachedMovementGroup = nullptr;

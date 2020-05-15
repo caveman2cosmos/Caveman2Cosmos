@@ -7,6 +7,7 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
+#include "CvPlayerAI.h"
 
 CvOutcomeMission::CvOutcomeMission() :
 m_eMission(NO_MISSION),

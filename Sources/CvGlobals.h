@@ -31,7 +31,6 @@ class FMPIManager;
 class FAStar;
 class CvInterface;
 class CMainMenu;
-class CvArtFileMgr;
 class FVariableSystem;
 class CvMap;
 class CvMapExternal;
@@ -153,6 +152,7 @@ class CvMapSwitchInfo;
 /***** Parallel Maps - End *****/
 /*******************************/
 
+#include "CvArtFileMgr.h"
 #include "CvInfoReplacements.h"
 #include "GlobalDefines.h"
 #include <stack>

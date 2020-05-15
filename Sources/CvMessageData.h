@@ -3,7 +3,7 @@
 
 #include "CvBuildLists.h"
 
-class FDataStreamBase;
+//class FDataStreamBase;
 
 class CvMessageData
 {

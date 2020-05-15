@@ -1,6 +1,7 @@
 // unit.cpp
 
 #include "CvGameCoreDLL.h"
+#include "CvPlayerAI.h"
 #include "CvTeamAI.h"
 #include "CyPlot.h"
 #include "CyUnit.h"
