@@ -441,7 +441,7 @@ public:
 	int getAdvancedStartImprovementCost(ImprovementTypes eImprovement, bool bAdd, const CvPlot* pPlot = NULL) const; // Exposed to Python 
 	int getAdvancedStartRouteCost(RouteTypes eRoute, bool bAdd, const CvPlot* pPlot = NULL) const; // Exposed to Python 
 	int getAdvancedStartTechCost(TechTypes eTech, bool bAdd) const; // Exposed to Python 
-	int getAdvancedStartVisibilityCost(bool bAdd, const CvPlot* pPlot = NULL) const; // Exposed to Python 
+	int getAdvancedStartVisibilityCost(const CvPlot* pPlot = NULL) const; // Exposed to Python 
 
 	int getGoldenAgeTurns() const;// Exposed to Python  
 	bool isGoldenAge() const; // Exposed to Python

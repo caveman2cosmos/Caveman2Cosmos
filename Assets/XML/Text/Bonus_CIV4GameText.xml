@@ -3102,20 +3102,10 @@
 		<Italian>Umano augmentato (Ibrido alieno)</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ALIEN_HYBRID_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ARCHAILECT</Tag>
 		<English>Human Mod (Archailect)</English>
 		<French>Modif. Humain(Archailecte)</French>
 		<Italian>Umano augmentato (IArchetipica)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ARCHAILECT_PEDIA</Tag>
-		<English>Archailect is an ascended, post-singularity intelligence, that has grown vastly beyond even the Transapient level. It represents the highest level of known living beings, in terms of both thinking power and aggregate energy/mass. The term is a mesh of the phrase "archetypal AI intellect."</English>
-		<Italian>IArchetipica è un tipo di intelligenza ascesa post-singolarità, che è cresciuta ben al di là del livello transapiente. Rappresenta il livello più alto mai raggiunto dagli esseri viventi in termini di potere di pensiero e di massa/energia aggregata. Il termine è una fusione della frase "Intelligenza artificiale archetipica".</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ATEMPORAL</Tag>
@@ -3124,20 +3114,10 @@
 		<Italian>Umano augmentato (Atemporale)</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ATEMPORAL_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_COGNITIVE_ENHANCEMENT</Tag>
 		<English>Human Mod (Cognitive Enhancement)</English>
 		<French>Modif. Humain (Amélioration cognitive)</French>
 		<Italian>Umano augmentato (Potenziamento cognitivo)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_COGNITIVE_ENHANCEMENT_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_COLD_TOLERANCE</Tag>
@@ -3146,20 +3126,10 @@
 		<Italian>Umano augmentato (Tolleranza al freddo)</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_COLD_TOLERANCE_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_COLLECTIVE_CONSCIOUSNESS</Tag>
 		<English>Human Mod (Collective Consciousness)</English>
 		<French>Modif. Humain (Conscience collective)</French>
 		<Italian>Umano augmentato (Coscienza collettiva)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_COLLECTIVE_CONSCIOUSNESS_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_DESIGNER_BABIES</Tag>
@@ -3168,20 +3138,10 @@
 		<Italian>Umano augmentato (Bambini su misura)</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_DESIGNER_BABIES_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_DIGITAL_IDENTITY</Tag>
 		<English>Human Mod (Digital Identity)</English>
 		<French>Modif. Humain (Identité numérique)</French>
 		<Italian>Umano augmentato (Identità digitale)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_DIGITAL_IDENTITY_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_DIGITAL_LIFESTYLE</Tag>
@@ -3190,20 +3150,10 @@
 		<Italian>Umano augmentato (Stile di vita digitale)</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_DIGITAL_LIFESTYLE_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ENLIGHTENED</Tag>
 		<English>Human Mod (Enlightened)</English>
 		<French>Modif. Humain (Illumination)</French>
 		<Italian>Umano augmentato (Illuminazione)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ENLIGHTENED_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_GENE_EDITING</Tag>
@@ -3212,20 +3162,10 @@
 		<Italian>Umano augmentato (Modifica genetica)</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_GENE_EDITING_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_GILLS</Tag>
 		<English>Human Mod (Gills)</English>
 		<French>Modif. Humain (Branchies)</French>
 		<Italian>Umano augmentato (Branchie)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_GILLS_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_HEAT_TOLERANCE</Tag>
@@ -3234,20 +3174,10 @@
 		<Italian>Umano augmentato (Tolleranza al calore)</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_HEAT_TOLERANCE_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente della psiche, fisiologia o natura umana.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_HIGH_DIMENSIONAL</Tag>
 		<English>Human Mod (High-Dimensional)</English>
 		<French>Modif. Humain (Haute dimension)</French>
 		<Italian>Umano augmentato (Dimensione superiore)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_HIGH_DIMENSIONAL_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_IMMORTAL</Tag>
@@ -3256,20 +3186,10 @@
 		<Italian>Umano augmentato (Immortale)</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_IMMORTAL_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_INDEFINITE_LIFESPAN</Tag>
 		<English>Human Mod (Indefinite Lifespan)</English>
 		<French>Modif. Humain (Durée de vie indéfinie)</French>
 		<Italian>Umano augmentato (Durata di vita indefinita)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_INDEFINITE_LIFESPAN_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_INFORMATION_BASED</Tag>
@@ -3278,20 +3198,10 @@
 		<Italian>Umano augmentato (Basato su informazione)</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_INFORMATION_BASED_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_LUNARIS</Tag>
 		<English>Human Mod (Lunaris)</English>
 		<French>Modif. Humain (Lunaris)</French>
 		<Italian>Umano augmentato (Selenita)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_LUNARIS_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_MARTIAN</Tag>
@@ -3300,20 +3210,10 @@
 		<Italian>Umano augmentato (Marziano)</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_MARTIAN_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_METAPHYSICAL</Tag>
 		<English>Human Mod (Metaphysical)</English>
 		<French>Modif. Humain (Métaphysique)</French>
 		<Italian>Umano augmentato (Metafisico)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_METAPHYSICAL_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_NANOMORPHISM</Tag>
@@ -3322,20 +3222,10 @@
 		<Italian>Umano augmentato (Nanomorfismo)</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_NANOMORPHISM_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_NONSPATIAL</Tag>
 		<English>Human Mod (Nonspatial)</English>
 		<French>Modif. Humain (Nonspatial)</French>
 		<Italian>Umano augmentato (Nonspaziale)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_NONSPATIAL_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_NOVEL_SENSES</Tag>
@@ -3344,20 +3234,10 @@
 		<Italian>Umano augmentato (Nuovi sensi)</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_NOVEL_SENSES_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_PURE_ENERGY</Tag>
 		<English>Human Mod (Pure Energy)</English>
 		<French>Modif. Humain (Energie pure)</French>
 		<Italian>Umano augmentato (Pura energia)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_PURE_ENERGY_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_RADIATION_TOLERANCE</Tag>
@@ -3366,20 +3246,10 @@
 		<Italian>Umano augmentato (Tolleranza alle radiazioni)</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_RADIATION_TOLERANCE_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ROBOTIC_BODY</Tag>
 		<English>Human Mod (Robotic Body)</English>
 		<French>Modif. Humain (Corps Robotique)</French>
 		<Italian>Umano augmentato (Corpo robotico)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ROBOTIC_BODY_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_TRANSAPIENT</Tag>
@@ -3388,31 +3258,16 @@
 		<Italian>Umano augmentato (Transapiente)</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_TRANSAPIENT_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_WINGS</Tag>
 		<English>Human Mod (Wings)</English>
 		<French>Modif. Humain (Ailes)</French>
 		<Italian>Umano augmentato (Ali)</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_WINGS_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
-	</TEXT>
-	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ZERO_G_ADAPTATION</Tag>
 		<English>Human Mod (Zero G Adaptation)</English>
 		<French>Modif. Humain (Adaptation Zero G)</French>
 		<Italian>Umano augmentato (Adattamento a zero G)</Italian>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ZERO_G_ADAPTATION_PEDIA</Tag>
-		<English>A permanent change in human psyche, physiology, or nature.</English>
-		<Italian>Un cambio permanente nella psiche, fisiologia o natura umana.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUN</Tag>
@@ -8004,5 +7859,9 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ZUNI</Tag>
 		<English>Zuñi</English>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Tag>
+		<English>Human Modification line represents permanent change in human psyche, physiology, or nature</English>
 	</TEXT>
 </Civ4GameText>

@@ -18,6 +18,9 @@ class CvDawnOfMan:
 		iCiv = CyPlayer.getCivilizationType()
 		CvCiv = GC.getCivilizationInfo(iCiv)
 
+		plot = CyPlayer.getStartingPlot()
+		GC.getMap().bringIntoView(plot.getX(), plot.getY(), True, False, False, False, False)
+
 		screen = CyGInterfaceScreen("CvDawnOfMan", iScreenID)
 
 		import ScreenResolution as SR

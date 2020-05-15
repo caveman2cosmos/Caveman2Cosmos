@@ -454,6 +454,18 @@ void CvDllPythonEvents::reportWindowActivation(bool bActive)
 	}
 }
 
+
+void CvDllPythonEvents::reportMapRegen()
+{
+	if (preEvent())
+	{
+		EventArgs eventData;
+		eventData.arg("event", "MapRegen");
+		postEvent(eventData, "MapRegen");
+	}
+}
+
+
 void CvDllPythonEvents::reportBeginGameTurn(int iGameTurn)
 {
 	if (preEvent())
