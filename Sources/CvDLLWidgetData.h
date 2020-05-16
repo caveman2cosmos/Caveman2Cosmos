@@ -5,7 +5,9 @@
 
 class CvDLLWidgetData
 {
+
 public:
+
 	DllExport static CvDLLWidgetData& getInstance();
 	DllExport static void freeInstance();
 
@@ -243,7 +245,9 @@ public:
 	void parseUnitSortHelp(CvWidgetDataStruct &widgetDataStruct, CvWStringBuffer &szBuffer);
 
 protected:
+
 	static CvDLLWidgetData* m_pInst;
+
 };
 
 #endif//_CVDLLWIDGETDATA_H_

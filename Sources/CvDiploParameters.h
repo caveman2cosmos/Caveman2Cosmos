@@ -1,5 +1,4 @@
 #pragma once
-
 #ifndef CVDIPLOPARAMETERS_H
 #define CVDIPLOPARAMETERS_H
 

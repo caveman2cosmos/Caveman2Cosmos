@@ -370,7 +370,6 @@ void CvPlayer::init(PlayerTypes eID)
 	FAssert(getTeam() != NO_TEAM);
 	GET_TEAM(getTeam()).changeNumMembers(1);
 
-	
 	if (GC.getInitCore().getSlotStatus(getID()) == SS_TAKEN || GC.getInitCore().getSlotStatus(getID()) == SS_COMPUTER)
 	{
 		setAlive(true);
