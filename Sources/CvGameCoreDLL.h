@@ -338,6 +338,19 @@ namespace python = boost::python;
 #include "SCvDebug.h"
 #include "SCvInternalGlobals.h"
 
+#include "CyGlobalContext.h"
+#include "CyArtFileMgr.h"
+#include "CyDeal.h"
+#include "CyMap.h"
+#include "CyArea.h"
+#include "CyGame.h"
+#include "CyTeam.h"
+#include "CyPlayer.h"
+#include "CyCity.h"
+#include "CyUnit.h"
+#include "CySelectionGroup.h"
+#include "CyPlot.h"
+
 #ifdef FINAL_RELEASE
 // Undefine OutputDebugString in final release builds
 #undef OutputDebugString

@@ -1,5 +1,9 @@
 #include "CvGameCoreDLL.h"
 
+#include <boost155/functional.hpp>
+#include <boost155/bind.hpp>
+
+
 namespace logging {
 	template <>
 	static picojson::value make_json_value(CvWString value)

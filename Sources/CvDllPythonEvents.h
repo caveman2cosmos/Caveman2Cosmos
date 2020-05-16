@@ -3,6 +3,8 @@
 #ifndef CIV4_DLL_PYTHON_EVENTS_H
 #define CIV4_DLL_PYTHON_EVENTS_H
 
+#include "CvPython.h"
+
 class CyArgsList;
 class CvSelectionGroup;
 
