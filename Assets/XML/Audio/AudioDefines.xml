@@ -12028,13 +12028,6 @@
 			<bInGeneric>1</bInGeneric>
 		</SoundData>
 		<SoundData>
-			<SoundID>SND_BUILD_FIRE_DOCK</SoundID>
-			<Filename>Sounds/Buildings/FireDock</Filename>
-			<LoadType>DYNAMIC_RES</LoadType>
-			<bIsCompressed>1</bIsCompressed>
-			<bInGeneric>1</bInGeneric>
-		</SoundData>
-		<SoundData>
 			<SoundID>SND_BUILD_FIRE_STATION</SoundID>
 			<Filename>Sounds/Buildings/FireStation</Filename>
 			<LoadType>DYNAMIC_RES</LoadType>
