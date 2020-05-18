@@ -292,7 +292,6 @@ namespace python = boost::python;
 #include "LinkedList.h"
 #include "FVariableSystem.h"
 #include "FAStarNode.h"
-#include "CvString.h"
 
 #include "idinfo_iterator_base.h"
 #include "flatten_range.h"

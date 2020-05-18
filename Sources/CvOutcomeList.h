@@ -14,7 +14,7 @@
 #include "CvXMLLoadUtilityModTools.h"
 #include "CvOutcome.h"
 
-class CvUnitAI;
+class CvUnit;
 
 class CvOutcomeList
 {
