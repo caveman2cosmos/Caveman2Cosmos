@@ -252,22 +252,6 @@ namespace python = boost::python;
 //#include <boost155/range/adaptor/filtered.hpp>
 //#include <boost155/range/adaptor/transformed.hpp>
 
-//
-// xercesc for XML loading
-// 
-#include <xercesc/dom/DOM.hpp>
-#include <xercesc/util/XMLString.hpp>
-#include <xercesc/util/PlatformUtils.hpp>
-#include <xercesc/parsers/XercesDOMParser.hpp>
-#include <xercesc/sax/SAXException.hpp>
-#include <xercesc/sax/HandlerBase.hpp>
-#include <xercesc/sax/SAXException.hpp>
-#include <xercesc/sax/HandlerBase.hpp>
-#include <xercesc/framework/MemBufInputSource.hpp>
-#include <xercesc/framework/XMLGrammarPoolImpl.hpp>
-#include <xercesc/framework/Wrapper4InputSource.hpp>
-#include <xercesc/validators/common/Grammar.hpp>
-
 // Stupid define comes from windows and interferes with our stuff
 #undef Yield
 

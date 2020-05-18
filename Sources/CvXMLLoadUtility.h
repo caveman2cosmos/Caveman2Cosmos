@@ -16,7 +16,19 @@
 #define XML_LOAD_UTILITY_H
 
 #include "CvGlobals.h"
-//#include "CvInfos.h"
+
+#include <xercesc/dom/DOM.hpp>
+#include <xercesc/util/XMLString.hpp>
+#include <xercesc/util/PlatformUtils.hpp>
+#include <xercesc/parsers/XercesDOMParser.hpp>
+#include <xercesc/sax/SAXException.hpp>
+#include <xercesc/sax/HandlerBase.hpp>
+#include <xercesc/sax/SAXException.hpp>
+#include <xercesc/sax/HandlerBase.hpp>
+#include <xercesc/framework/MemBufInputSource.hpp>
+#include <xercesc/framework/XMLGrammarPoolImpl.hpp>
+#include <xercesc/framework/Wrapper4InputSource.hpp>
+#include <xercesc/validators/common/Grammar.hpp>
 
 class FXmlSchemaCache;
 class FXml;
