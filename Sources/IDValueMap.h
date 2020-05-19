@@ -11,7 +11,7 @@
 #ifndef IDVALUEMAP_H
 #define IDVALUEMAP_H
 
-#include "CvXMLLoadUtility.h"
+class CvXMLLoadUtility;
 
 // ValueType will usually be int, only value types that are supported by FDataStreamBase as overloaded read and write will work without template specialization
 // The maps are assumed to be small, so a vector of pairs is used

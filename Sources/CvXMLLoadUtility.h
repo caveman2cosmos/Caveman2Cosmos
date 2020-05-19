@@ -634,10 +634,10 @@ public:
 	void SetVariableListTagPair(std::vector<int>, const wchar_t* szRootTagName,
 		int iInfoBaseLength, int iDefaultListVal = 0);
 
-	void SetOptionalIntVector(std::vector<int>* aInfos, const wchar_t* szRootTagName){return SetOptionalVector<int>(aInfos, szRootTagName);}
+	void SetOptionalIntVector(std::vector<int>* aInfos, const wchar_t* szRootTagName) { return SetOptionalVector<int>(aInfos, szRootTagName); }
 
 	void SetOptionalIntVectorWithDelayedResolution(std::vector<int>& aInfos, const wchar_t* szRootTagName);
-	static void CopyNonDefaultsFromIntVector(std::vector<int>& target, std::vector<int>& source){return CopyNonDefaultsFromVector<int>(target, source);}
+	static void CopyNonDefaultsFromIntVector(std::vector<int>& target, const std::vector<int>& source) { return CopyNonDefaultsFromVector<int>(target, source); }
 
 	template<class T1, class T2, class T3>
 	void SetOptionalPairVector(T1* aInfos, const wchar_t* szRootTagName)
@@ -646,7 +646,7 @@ public:
 		aInfos->clear();
 		if (TryMoveToXmlFirstChild(szRootTagName))
 		{
-			int iNumSibs = GetXmlChildrenNumber();
+			const int iNumSibs = GetXmlChildrenNumber();
 
 			if (0 < iNumSibs)
 			{
@@ -680,7 +680,7 @@ public:
 		}
 	}
 	template<class T>
-	static void CopyNonDefaultsFromVector(std::vector<T>& target, std::vector<T>& source)
+	static void CopyNonDefaultsFromVector(std::vector<T>& target, const std::vector<T>& source)
 	{
 		for (typename std::vector<T>::const_iterator it = source.begin(), end = source.end(); it != end; ++it)
 		{

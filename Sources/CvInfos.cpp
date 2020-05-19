@@ -10,6 +10,7 @@
 #include "CvGameAI.h"
 #include "CvGameTextMgr.h"
 #include "CvPlayerAI.h"
+#include "CvXMLLoadUtility.h"
 
 bool shouldHaveType = false;
 

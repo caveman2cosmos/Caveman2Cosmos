@@ -8,6 +8,7 @@
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
 #include "CvGameAI.h"
+#include "CvXMLLoadUtility.h"
 #include "IntExpr.h"
 
 IntExpr::~IntExpr()

@@ -9,6 +9,7 @@
 
 #include "CvGameCoreDLL.h"
 #include "CvGameTextMgr.h"
+#include "CvXMLLoadUtility.h"
 
 CvPropertySource::CvPropertySource() 
 	: m_eProperty(NO_PROPERTY)

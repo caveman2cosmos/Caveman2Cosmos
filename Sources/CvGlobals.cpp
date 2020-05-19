@@ -2,8 +2,10 @@
 // globals.cpp
 //
 #include "CvGameCoreDLL.h"
-#include "CvMapExternal.h"
 #include "CvInitCore.h"
+#include "CvMapExternal.h"
+#include "CvXMLLoadUtility.h"
+#include "FVariableSystem.h"
 #include <time.h> 
 #include <sstream>
 

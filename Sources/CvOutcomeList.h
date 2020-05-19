@@ -11,7 +11,6 @@
 #ifndef CV_OUTCOME_LIST_H
 #define CV_OUTCOME_LIST_H
 
-#include "CvXMLLoadUtilityModTools.h"
 #include "CvOutcome.h"
 
 class CvUnit;

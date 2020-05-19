@@ -10,7 +10,7 @@
 //#include "CvProperties.h"
 #include "CvPlayerAI.h"
 #include "CvTeamAI.h"
-//#include "CvXMLLoadUtilityModTools.h"
+#include "CvXMLLoadUtility.h"
 #include "CyUnit.h"
 #include "CyPlot.h"
 

@@ -11,12 +11,6 @@
 #ifndef CV_PROPERTY_MANIPULATORS_H
 #define CV_PROPERTY_MANIPULATORS_H
 
-#include "CvXMLLoadUtilityModTools.h"
-#include <vector>
-//#include "CvPropertySource.h"
-//#include "CvPropertyInteraction.h"
-//#include "CvPropertyPropagator.h"
-
 class CvPropertySource;
 class CvPropertyInteraction;
 class CvPropertyPropagator;
