@@ -15,7 +15,6 @@ class CyMap;
 class CyPlayer;
 class CvRandom;
 class CyTeam;
-class CyArtFileMgr;
 
 class CyGlobalContext
 {
@@ -52,7 +51,6 @@ public:
 	CyPlayer* getCyActivePlayer();
 	CvRandom& getCyASyncRand() const;
 	CyTeam* getCyTeam(int i);
-	CyArtFileMgr* getCyArtFileMgr() const;
 
 	CvEffectInfo* getEffectInfo(int i) const;
 	CvTerrainInfo* getTerrainInfo(int i) const;

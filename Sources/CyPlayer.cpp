@@ -1,4 +1,5 @@
 #include "CvGameCoreDLL.h"
+#include "CvGameAI.h"
 #include "CvPlayerAI.h"
 #include "CyArea.h"
 #include "CyCity.h"

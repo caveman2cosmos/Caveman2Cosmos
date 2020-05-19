@@ -7,6 +7,7 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
+#include "CvGame.h"
 #include "CvXMLLoadUtility.h"
 #include "CvTeam.h"
 

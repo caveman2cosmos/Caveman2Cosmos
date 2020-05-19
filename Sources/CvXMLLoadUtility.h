@@ -16,6 +16,7 @@
 #define XML_LOAD_UTILITY_H
 
 #include "CvGlobals.h"
+#include "FVariableSystem.h"
 
 #include <xercesc/dom/DOM.hpp>
 #include <xercesc/util/XMLString.hpp>

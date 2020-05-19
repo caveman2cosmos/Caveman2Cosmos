@@ -4,7 +4,6 @@
 #define CvPathGenerator_h__
 
 #include <queue>
-#include "FProfiler.h"
 
 //#define	DYNAMIC_PATH_STRUCTURE_VALIDATION
 

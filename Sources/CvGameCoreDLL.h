@@ -289,14 +289,7 @@ namespace python = boost::python;
 #include "FFreeListArrayBase.h"
 #include "FFreeListTrashArray.h"
 #include "FFreeListArray.h"
-#include "LinkedList.h"
-#include "FVariableSystem.h"
 #include "FAStarNode.h"
-
-#include "idinfo_iterator_base.h"
-#include "flatten_range.h"
-#include "wchar_utils.h"
-#include "FInputDevice.h"
 
 #include "CvEnums.h"
 #include "CvStructs.h"
