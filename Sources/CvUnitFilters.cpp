@@ -87,7 +87,7 @@ bool UnitFilterIsDefense::isFilteredUnit(const CvPlayer *pPlayer, const CvCity *
 	return GC.getUnitInfo(eUnit).isOnlyDefensive();
 }
 
-UnitFilterList::UnitFilterList(CvPlayer *pPlayer, CvCity *pCity)
+UnitFilterList::UnitFilterList(const CvPlayer *pPlayer, const CvCity *pCity)
 	: m_apUnitFilters()
 	, m_pCity(pCity)
 	, m_pPlayer(pPlayer)
@@ -161,12 +161,12 @@ bool UnitFilterList::isFilterActive(UnitFilterTypes i) const
 	return m_apUnitFilters[i]->isActive();
 }
 
-void UnitFilterList::setCity(CvCity *pCity)
+void UnitFilterList::setCity(const CvCity *pCity)
 {
 	m_pCity = pCity;
 }
 
-void UnitFilterList::setPlayer(CvPlayer *pPlayer)
+void UnitFilterList::setPlayer(const CvPlayer *pPlayer)
 {
 	m_pPlayer = pPlayer;
 }

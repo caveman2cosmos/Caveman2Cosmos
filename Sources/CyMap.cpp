@@ -389,7 +389,7 @@ void CyMap::updateMinimapColor()
 	}
 }
 
-void CyMap::updateMinOriginalStartDist(CyArea* pArea)
+void CyMap::updateMinOriginalStartDist(const CyArea* pArea)
 {
 	if (m_pMap)
 	{
@@ -398,7 +398,7 @@ void CyMap::updateMinOriginalStartDist(CyArea* pArea)
 }
 
 
-bool CyMap::generatePathForHypotheticalUnit(const CyPlot *pFrom, const CyPlot *pTo, int ePlayer, int eUnit, int iFlags, int iMaxTurns) const
+bool CyMap::generatePathForHypotheticalUnit(const CyPlot* pFrom, const CyPlot* pTo, int ePlayer, int eUnit, int iFlags, int iMaxTurns) const
 {
 	return m_pMap ? m_pMap->generatePathForHypotheticalUnit(pFrom->getPlot(), pTo->getPlot(), (PlayerTypes) ePlayer, (UnitTypes) eUnit, iFlags, iMaxTurns) : false;
 }

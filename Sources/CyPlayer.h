@@ -21,9 +21,8 @@ class CyPlayer
 public:
 	CyPlayer();
 	explicit CyPlayer(CvPlayer* pPlayer); // Call from C++
-
-	CvPlayer* getPlayer() { return m_pPlayer; } // Call from C++
-	bool isNone() { return (m_pPlayer==NULL); }
+	const CvPlayer* getPlayer() const { return m_pPlayer; } // Call from C++
+	bool isNone() const { return m_pPlayer == NULL; }
 
 	void changeLeader( int /*LeaderHeadTypes*/ eNewLeader );
 	void changeCiv( int /*CivilizationTypes*/ eNewCiv );

@@ -13315,7 +13315,7 @@ int CvUnit::canLead(const CvPlot* pPlot, int iUnitId) const
 	}
 
 	int iNumUnits = 0;
-	CvUnitInfo& kUnitInfo = getUnitInfo();
+	const CvUnitInfo& kUnitInfo = getUnitInfo();
 
 	if (-1 == iUnitId)
 	{
@@ -16358,9 +16358,8 @@ int CvUnit::maxFirstStrikes() const
 
 bool CvUnit::isRanged() const
 {
-	int i;
-	CvUnitInfo * pkUnitInfo = &getUnitInfo();
-	for ( i = 0; i < pkUnitInfo->getGroupDefinitions(); i++ )
+	const int groupDefinitions = getUnitInfo().getGroupDefinitions();
+	for (int  i = 0; i < groupDefinitions; i++)
 	{
 		if ( !getArtInfo(i, GET_PLAYER(getOwner()).getCurrentEra())->getActAsRanged() )
 		{
@@ -21891,7 +21890,7 @@ CvUnit* CvUnit::getCapturingUnit() const
 	return getUnit(m_eCapturingUnit);
 }
 
-void CvUnit::setCapturingUnit(CvUnit* pCapturingUnit)
+void CvUnit::setCapturingUnit(const CvUnit* pCapturingUnit)
 {
 	m_eCapturingUnit = pCapturingUnit->getIDInfo();
 }
@@ -21901,7 +21900,7 @@ const UnitTypes CvUnit::getUnitType() const
 	return m_eUnitType;
 }
 
-CvUnitInfo &CvUnit::getUnitInfo() const
+const CvUnitInfo& CvUnit::getUnitInfo() const
 {
 	return *m_pUnitInfo;
 }
@@ -34366,7 +34365,7 @@ int CvUnit::getMADTargetPlotY() const
 }
 
 // Dale - MAD: set MAD plot
-void CvUnit::setMADTargetPlot(CvPlot* pPlot)
+void CvUnit::setMADTargetPlot(const CvPlot* pPlot)
 {
 	if(pPlot)
 	{
@@ -34382,7 +34381,7 @@ void CvUnit::setMADTargetPlot(CvPlot* pPlot)
 	}
 }
 
-PlayerTypes CvUnit::getMADTargetPlotOwner()
+PlayerTypes CvUnit::getMADTargetPlotOwner() const
 {
 	return m_pMADTargetPlotOwner;
 }
@@ -34561,7 +34560,7 @@ CvUnit* CvUnit::getShadowUnit() const
 }
 
 
-void CvUnit::setShadowUnit(CvUnit* pUnit)
+void CvUnit::setShadowUnit(const CvUnit* pUnit)
 {
 	if (pUnit != NULL)
 	{

@@ -310,7 +310,7 @@ public:
 	virtual bool AI_isForceSeparate() const = 0;
 	virtual void AI_makeForceSeparate() = 0;
 	virtual MissionAITypes AI_getMissionAIType() const = 0;
-	virtual void AI_setMissionAI(MissionAITypes eNewMissionAI, CvPlot* pNewPlot, CvUnit* pNewUnit) = 0;
+	virtual void AI_setMissionAI(MissionAITypes eNewMissionAI, const CvPlot* pNewPlot, const CvUnit* pNewUnit) = 0;
 	virtual void AI_noteSizeChange(int iChange, int iVolume) = 0;
 	virtual CvUnit* AI_getMissionAIUnit() const = 0;
 	virtual CvUnit* AI_ejectBestDefender(CvPlot* pTargetPlot, bool allowAllDefenders = false) = 0;

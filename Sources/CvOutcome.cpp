@@ -1010,8 +1010,8 @@ bool CvOutcome::execute(CvUnit &kUnit, PlayerTypes eDefeatedUnitPlayer, UnitType
 	CvWStringBuffer szBuffer;
 
 	CvPlayer& kPlayer = GET_PLAYER(kUnit.getOwner());
-	bool bToCoastalCity = GC.getOutcomeInfo(getType()).getToCoastalCity();
-	CvUnitInfo* pUnitInfo;
+	const bool bToCoastalCity = GC.getOutcomeInfo(getType()).getToCoastalCity();
+	const CvUnitInfo* pUnitInfo;
 	if (eDefeatedUnitType > NO_UNIT)
 		pUnitInfo = &GC.getUnitInfo(eDefeatedUnitType);
 	else

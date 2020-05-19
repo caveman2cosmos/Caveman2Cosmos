@@ -76,19 +76,19 @@ protected:
 class UnitGroupingList
 {
 public:
-	UnitGroupingList(CvPlayer *pPlayer = NULL, CvCity *pCity = NULL);
+	UnitGroupingList(const CvPlayer *pPlayer = NULL, const CvCity *pCity = NULL);
 	~UnitGroupingList();
 	void init();
 	UnitGroupingTypes getActiveGrouping() const;
 	bool setActiveGrouping(UnitGroupingTypes eActiveGrouping);
-	void setPlayer(CvPlayer* pPlayer);
-	void setCity(CvCity* pCity);
+	void setPlayer(const CvPlayer* pPlayer);
+	void setCity(const CvCity* pCity);
 	int getGroup(UnitTypes eUnit) const;
 
 protected:
 	UnitGroupingBase* m_apUnitGrouping[NUM_UNIT_GROUPING];
-	CvCity* m_pCity;
-	CvPlayer* m_pPlayer;
+	const CvCity* m_pCity;
+	const CvPlayer* m_pPlayer;
 	UnitGroupingTypes m_eActiveGrouping;
 	bool m_bInit;
 };

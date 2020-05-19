@@ -116,7 +116,7 @@ public:
 	void updateIrrigated();
 	void updateCenterUnit();
 	void updateWorkingCity();
-	void updateMinOriginalStartDist(CvArea* pArea);										// Exposed to Python
+	void updateMinOriginalStartDist(const CvArea* pArea);										// Exposed to Python
 	void updateYield();
 
 	void verifyUnitValidPlot();

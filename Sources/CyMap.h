@@ -20,7 +20,7 @@ class CyMap
 public:
 	CyMap();
 	explicit CyMap(CvMap* pMap);		// Call from C++
-	//CvMapInterfaceBase* getMap() { return m_pMap;	}	// Call from C++
+	//const CvMapInterfaceBase* getMap() const { return m_pMap; }	// Call from C++
 	bool isNone() const { return m_pMap == NULL; }
 	
 /*********************************/
@@ -115,7 +115,7 @@ public:
 	void regenerateGameElements();
 	void updateFog();
 	void updateMinimapColor();
-	void updateMinOriginalStartDist(CyArea* pArea);
+	void updateMinOriginalStartDist(const CyArea* pArea);
 
 	// AIAndy: Expose path generation functionality to Python
 	bool generatePathForHypotheticalUnit(const CyPlot* pFrom, const CyPlot* pTo, int /*PlayerTypes*/ ePlayer, int /*UnitTypes*/ eUnit, int iFlags, int iMaxTurns) const;

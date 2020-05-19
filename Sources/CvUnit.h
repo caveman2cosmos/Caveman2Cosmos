@@ -475,10 +475,10 @@ public:
 	CvPlot* getMADTargetPlot() const;
 	int getMADTargetPlotX() const;
 	int getMADTargetPlotY() const;
-	void setMADTargetPlot(CvPlot* pPlot);
+	void setMADTargetPlot(const CvPlot* pPlot);
 	bool setMADTargetPlot(int iX, int iY);
 	bool clearMADTargetPlot();
-	PlayerTypes getMADTargetPlotOwner();
+	PlayerTypes getMADTargetPlotOwner() const;
 	void setMADTargetPlotOwner(PlayerTypes pPlayer);
 	void doMADNukes(bool bForceRetarget);
 protected:
@@ -654,7 +654,7 @@ public:
 	bool canShadow() const;
 	bool canShadowAt(const CvPlot* pShadowPlot, CvUnit* pShadowUnit = NULL) const;
 	
-	void setShadowUnit(CvUnit* pUnit);
+	void setShadowUnit(const CvUnit* pUnit);
 	CvUnit* getShadowUnit() const;
 
 	TechTypes getDesiredDiscoveryTech() const;
@@ -1619,10 +1619,10 @@ public:
 	void setCapturingPlayer(PlayerTypes eNewValue);
 
 	CvUnit* getCapturingUnit() const;
-	void setCapturingUnit(CvUnit* pCapturingUnit);
+	void setCapturingUnit(const CvUnit* pCapturingUnit);
 
 	DllExport const UnitTypes getUnitType() const; // Exposed to Python
-	CvUnitInfo &getUnitInfo() const;
+	const CvUnitInfo& getUnitInfo() const;
 
 	DllExport const UnitTypes getLeaderUnitType() const;
 	void setLeaderUnitType(UnitTypes leaderUnitType);

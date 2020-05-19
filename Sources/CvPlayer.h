@@ -273,7 +273,7 @@ public:
 	void raze(CvCity* pCity); // Exposed to Python
 	void disband(CvCity* pCity); // Exposed to Python
 
-	bool canReceiveGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit) const; // Exposed to Python
+	bool canReceiveGoody(const CvPlot* pPlot, GoodyTypes eGoody, const CvUnit* pUnit) const; // Exposed to Python
 	void receiveGoody(CvPlot* pPlot, GoodyTypes eGoody, CvUnit* pUnit); // Exposed to Python
 	void doGoody(CvPlot* pPlot, CvUnit* pUnit); // Exposed to Python
 
@@ -383,7 +383,7 @@ public:
 	int specialistCommerce(SpecialistTypes eSpecialist, CommerceTypes eCommerce) const; // Exposed to Python
 
 	CvPlot* getStartingPlot() const; // Exposed to Python
-	void setStartingPlot(CvPlot* pNewValue, bool bUpdateStartDist); // Exposed to Python
+	void setStartingPlot(const CvPlot* pNewValue, bool bUpdateStartDist); // Exposed to Python
 
 	int getTotalPopulation() const; // Exposed to Python
 	int getAveragePopulation() const; // Exposed to Python

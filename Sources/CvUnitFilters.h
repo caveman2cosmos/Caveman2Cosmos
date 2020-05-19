@@ -52,7 +52,7 @@ public:
 protected:
 	virtual bool isFilteredUnit(const CvPlayer *pPlayer, const CvCity *pCity, UnitTypes eUnit) const = 0;
 	bool m_bActive;
-	bool m_bInvert;
+	const bool m_bInvert;
 };
 
 class UnitFilterCanBuild : public UnitFilterBase
@@ -114,21 +114,21 @@ public:
 class UnitFilterList
 {
 public:
-	UnitFilterList(CvPlayer *pPlayer = NULL, CvCity *pCity = NULL);
+	UnitFilterList(const CvPlayer *pPlayer = NULL, const CvCity *pCity = NULL);
 	~UnitFilterList();
 	void init();
 	bool isFilterActive(UnitFilterTypes i) const;
 	bool setFilterActive(UnitFilterTypes i, bool bActive);
-	void setPlayer(CvPlayer* pPlayer);
-	void setCity(CvCity* pCity);
+	void setPlayer(const CvPlayer* pPlayer);
+	void setCity(const CvCity* pCity);
 	bool isFiltered(UnitTypes eUnit) const;
 
 	static void setFilterActiveAll(UnitFilterTypes eFilter, bool bActive);
 
 protected:
 	UnitFilterBase* m_apUnitFilters[NUM_UNIT_FILTERS];
-	CvCity* m_pCity;
-	CvPlayer* m_pPlayer;
+	const CvCity* m_pCity;
+	const CvPlayer* m_pPlayer;
 	bool m_bInit;
 };
 

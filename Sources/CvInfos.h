@@ -2844,11 +2844,11 @@ public:
 	int	getNumFeatureTerrains() const;
 	int	getNumSpawnGroup() const;
 	PlayerTypes getPlayer() const;
-	BonusTypes getBonus(const int index) const;
-	TerrainTypes getTerrain(const int index) const;
-	FeatureTypes getFeature(const int index) const;
-	TerrainTypes getFeatureTerrain(const int index) const;
-	UnitTypes getSpawnGroup(const int index) const;
+	BonusTypes getBonus(int index) const;
+	TerrainTypes getTerrain(int index) const;
+	FeatureTypes getFeature(int index) const;
+	TerrainTypes getFeatureTerrain(int index) const;
+	UnitTypes getSpawnGroup(int index) const;
 	int getTurnRate() const;
 	int getGlobalTurnRate() const;
 	int getMaxLocalDensity() const;
@@ -3248,13 +3248,13 @@ public:
 	bool isAnySpecialistCommerceChanges() const;
 	bool isAnySpecialistYieldChanges() const;
 
-	CvString getCivicAttitudeReason(const int i) const;
+	CvString getCivicAttitudeReason(int i) const;
 	int getCivicAttitudeVectorSize() const;
-	CvString getCivicAttitudeNamesVectorElement(const int i) const;
-	int getCivicAttitudeValuesVectorElement(const int i) const;
+	CvString getCivicAttitudeNamesVectorElement(int i) const;
+	int getCivicAttitudeValuesVectorElement(int i) const;
 	int getCivicAttitudeReasonVectorSize() const;
-	CvString getCivicAttitudeReasonNamesVectorElement(const int i) const;
-	CvString getCivicAttitudeReasonValuesVectorElement(const int i) const;
+	CvString getCivicAttitudeReasonNamesVectorElement(int i) const;
+	CvString getCivicAttitudeReasonValuesVectorElement(int i) const;
 
 	void read(FDataStreamBase* stream) {}
 	void write(FDataStreamBase* stream) {}

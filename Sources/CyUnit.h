@@ -19,6 +19,9 @@ class CyUnit
 public:
 	CyUnit();
 	DllExport explicit CyUnit(CvUnit* pUnit);		// Call from C++
+	CvUnit* getUnit() { return m_pUnit; };	// Call from C++
+	const CvUnit* getUnit() const { return m_pUnit;	};	// Call from C++
+	bool isNone() const { return m_pUnit == NULL; }
 
 	// < M.A.D. Nukes Start >
 	bool isMADEnabled();
@@ -28,9 +31,6 @@ public:
 	PlayerTypes getMADTargetPlotOwner();
 	// < M.A.D. Nukes End   >
 
-	CvUnit* getUnit() { return m_pUnit;	};	// Call from C++
-	const CvUnit* getUnit() const { return m_pUnit;	};	// Call from C++
-	bool isNone() { return (m_pUnit==NULL); }
 	void convert(CyUnit* pUnit, const bool bKillOriginal);
 	void kill(bool bDelay, int /*PlayerTypes*/ ePlayer);
 

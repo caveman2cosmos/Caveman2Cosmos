@@ -123,28 +123,28 @@ public:
 class UnitSortList
 {
 public:
-	UnitSortList(CvPlayer *pPlayer = NULL, CvCity *pCity = NULL);
+	UnitSortList(const CvPlayer *pPlayer = NULL, const CvCity *pCity = NULL);
 	~UnitSortList();
 	UnitSortTypes getActiveSort() const;
 	bool setActiveSort(UnitSortTypes eActiveSort);
-	void setPlayer(CvPlayer* pPlayer);
-	void setCity(CvCity* pCity);
+	void setPlayer(const CvPlayer* pPlayer);
+	void setCity(const CvCity* pCity);
 	bool operator()(UnitTypes eUnit1, UnitTypes eUnit2) const;
 
 protected:
 	UnitSortBase* m_apUnitSort[NUM_UNIT_SORT];
-	CvCity* m_pCity;
-	CvPlayer* m_pPlayer;
+	const CvCity* m_pCity;
+	const CvPlayer* m_pPlayer;
 	UnitSortTypes m_eActiveSort;
 };
 
 class UnitSortListWrapper
 {
 public:
-	explicit UnitSortListWrapper(UnitSortList* pList) : m_pList(pList) {}
+	explicit UnitSortListWrapper(const UnitSortList* pList) : m_pList(pList) {}
 	bool operator()(UnitTypes eUnit1, UnitTypes eUnit2) const { return m_pList->operator()(eUnit1, eUnit2); }
 protected:
-	UnitSortList* m_pList;
+	const UnitSortList* m_pList;
 };
 
 #endif

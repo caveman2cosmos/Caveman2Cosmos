@@ -102,7 +102,7 @@ bool UnitSortName::isLesserUnit(const CvPlayer *pPlayer, const CvCity *pCity, Un
 		return wcscmp(GC.getUnitInfo(eUnit1).getDescription(), GC.getUnitInfo(eUnit2).getDescription()) < 0;
 }
 
-UnitSortList::UnitSortList(CvPlayer *pPlayer, CvCity *pCity)
+UnitSortList::UnitSortList(const CvPlayer *pPlayer, const CvCity *pCity)
 {
 	m_pPlayer = pPlayer;
 	m_pCity = pCity;
@@ -143,12 +143,12 @@ bool UnitSortList::setActiveSort(UnitSortTypes eActiveSort)
 	return bChanged;
 }
 
-void UnitSortList::setCity(CvCity *pCity)
+void UnitSortList::setCity(const CvCity *pCity)
 {
 	m_pCity = pCity;
 }
 
-void UnitSortList::setPlayer(CvPlayer *pPlayer)
+void UnitSortList::setPlayer(const CvPlayer *pPlayer)
 {
 	m_pPlayer = pPlayer;
 }

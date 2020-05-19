@@ -55,7 +55,7 @@ UnitGroupingFilters::~UnitGroupingFilters()
 		delete m_apFilters[i];
 }
 
-UnitGroupingList::UnitGroupingList(CvPlayer *pPlayer, CvCity *pCity)
+UnitGroupingList::UnitGroupingList(const CvPlayer *pPlayer, const CvCity *pCity)
 	: m_apUnitGrouping()
 	, m_pCity(pCity)
 	, m_pPlayer(pPlayer)
@@ -101,12 +101,12 @@ UnitGroupingTypes UnitGroupingList::getActiveGrouping() const
 	return m_eActiveGrouping;
 }
 
-void UnitGroupingList::setCity(CvCity *pCity)
+void UnitGroupingList::setCity(const CvCity *pCity)
 {
 	m_pCity = pCity;
 }
 
-void UnitGroupingList::setPlayer(CvPlayer *pPlayer)
+void UnitGroupingList::setPlayer(const CvPlayer *pPlayer)
 {
 	m_pPlayer = pPlayer;
 }
