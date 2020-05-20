@@ -7682,7 +7682,7 @@ def doVolcanoExtinction(argsList):
   if GAME.getSorenRandNum(100, 'Volcanic minerals chance') < 50:
     iBonus = GC.getInfoTypeForString('BONUS_OBSIDIAN')
     pPlot.setBonusType(iBonus)
-    itechresource = GC.getInfoTypeForString("TECH_STONE_TOOLS")
+    itechresource = GC.getInfoTypeForString("TECH_TOOL_MAKING")
   else:
     iBonus = GC.getInfoTypeForString('BONUS_SULPHUR')
     pPlot.setBonusType(iBonus)

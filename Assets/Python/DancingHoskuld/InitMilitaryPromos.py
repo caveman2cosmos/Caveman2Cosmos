@@ -7,18 +7,32 @@ from CvPythonExtensions import *
 GC = CyGlobalContext()
 
 def init():
-	global giMilInstCivic, giVolArmyCivic, gaiSettlerWorkerCombatList
+	global giMilInstCivic, giVolArmyCivic, gaiSettlerWorkerCombatList, aReefList, aTreeList
 
 	gaiSettlerWorkerCombatList = [
 		GC.getInfoTypeForString("UNITCOMBAT_SETTLER"),
 		GC.getInfoTypeForString("UNITCOMBAT_WORKER"),
 		GC.getInfoTypeForString("UNITCOMBAT_SEA_WORKER")
 	]
+	aReefList = [
+		GC.getInfoTypeForString('FEATURE_REEF'),
+		GC.getInfoTypeForString('FEATURE_REEF_BEACON'),
+		GC.getInfoTypeForString('FEATURE_REEF_LIGHTHOUSE'),
+		GC.getInfoTypeForString('FEATURE_CORAL_REEF'),
+		GC.getInfoTypeForString('FEATURE_CORAL_REEF_BEACON'),
+		GC.getInfoTypeForString('FEATURE_CORAL_REEF_LIGHTHOUSE')
+	]
+	aTreeList = [
+		GC.getInfoTypeForString('FEATURE_FOREST'),
+		GC.getInfoTypeForString('FEATURE_FOREST_YOUNG'),
+		GC.getInfoTypeForString('FEATURE_FOREST_ANCIENT'),
+		GC.getInfoTypeForString('FEATURE_JUNGLE'),
+		GC.getInfoTypeForString('FEATURE_BAMBOO')
+	]
 	giMilInstCivic = GC.getInfoTypeForString("CIVIC_MARTIAL")
 	giVolArmyCivic = GC.getInfoTypeForString("CIVIC_VOLUNTARY")
 
 def onUnitBuilt( argsList):
-	'Unit Completed'
 	city = argsList[0]
 	unit = argsList[1]
 	pPlayer = GC.getPlayer(unit.getOwner())
@@ -30,13 +44,15 @@ def onUnitBuilt( argsList):
 
 	iMilitaryCivic = 0
 	if pPlayer.isCivic(giMilInstCivic):
-		iMilitaryCivic = iMilitaryCivic + 1
+		iMilitaryCivic += 1
 	if pPlayer.isCivic(giVolArmyCivic):
-		iMilitaryCivic = iMilitaryCivic + 1
-	if iMilitaryCivic > 0:
-		if not (unit.getUnitCombatType() in gaiSettlerWorkerCombatList) and isWorldUnit(unit.getUnitType()) == False:
+		iMilitaryCivic += 1
+
+	if iMilitaryCivic:
+		if unit.getUnitCombatType() not in gaiSettlerWorkerCombatList and not isWorldUnit(unit.getUnitType()):
 			iX = city.getX()
 			iY = city.getY()
+			MAP = GC.getMap()
 
 			if unit.getDomainType() == DomainTypes.DOMAIN_LAND:
 				iNumCold = 0
@@ -45,41 +61,40 @@ def onUnitBuilt( argsList):
 				iNumHill = 0
 				iNumTree = 0
 				iNumCoast = 0
-				iTundra = GC.getInfoTypeForString('TERRAIN_TAIGA')
+				iTaiga = GC.getInfoTypeForString('TERRAIN_TAIGA')
+				iTundra = GC.getInfoTypeForString('TERRAIN_TUNDRA')
 				iPermafrost = GC.getInfoTypeForString('TERRAIN_TUNDRA')
 				iSnow = GC.getInfoTypeForString('TERRAIN_ICE')
 				iDesert = GC.getInfoTypeForString('TERRAIN_DESERT')
 				iDunes = GC.getInfoTypeForString('TERRAIN_DUNES')
-				iHills = GC.getInfoTypeForString('TERRAIN_HILL')
+				iSaltFlats = GC.getInfoTypeForString('TERRAIN_SALT_FLATS')
 				iBarren = GC.getInfoTypeForString('TERRAIN_BARREN')
 				iRocky = GC.getInfoTypeForString('TERRAIN_ROCKY')
 				iScrub = GC.getInfoTypeForString('TERRAIN_SCRUB')
-				iSaltFlats = GC.getInfoTypeForString('TERRAIN_SALT_FLATS')
 				iMarsh = GC.getInfoTypeForString('TERRAIN_MARSH')
-				iCoast = GC.getInfoTypeForString('TERRAIN_COAST')
-				iForest = GC.getInfoTypeForString('FEATURE_FOREST')
-				iJungle = GC.getInfoTypeForString('FEATURE_JUNGLE')
-				iBamboo = GC.getInfoTypeForString('FEATURE_BAMBOO')
 
-				for iiX in range(iX-1, iX+2, 1):
-					for iiY in range(iY-1, iY+2, 1):
-						pPlot = CyMap().plot(iiX,iiY)
-						iTerrain = pPlot.getTerrainType()
-						iFeature = pPlot.getFeatureType()
-						iPlot = pPlot.getPlotType()
-						if iTerrain == iCoast:
-							iNumCoast = iNumCoast +1
+				for x in range(iX - 1, iX + 2):
+					for y in range(iY - 1, iY + 2):
+						plot = MAP.plot(x, y)
+						if not plot: continue
+						if plot.isWater():
+							if plot.isCoastal():
+								iNumCoast += 1
 							continue
-						if (iPlot == iHills or pPlot.isPeak()):
-							iNumHill = iNumHill +1
-						if iFeature == iForest or iFeature == iJungle or iFeature == iBamboo:
-							iNumTree = iNumTree +1
-						if iTerrain == iDesert or iTerrain == iDunes:
-							iNumHot = iNumHot +1
-						elif iTerrain == iTundra or iTerrain == iSnow or iTerrain == iPermafrost:
-							iNumCold = iNumCold +1
-						elif iTerrain == iBarren or iTerrain == iRocky or iTerrain == iScrub or iTerrain == iSaltFlats or iTerrain == iMarsh:
-							iNumBush = iNumBush +1
+						elif plot.isHills() or plot.isPeak():
+							iNumHill += 1
+
+						iTerrain = plot.getTerrainType()
+						if iTerrain in (iDesert, iDunes, iSaltFlats):
+							iNumHot += 1
+						elif iTerrain in (iTaiga, iTundra, iSnow, iPermafrost):
+							iNumCold += 1
+						elif iTerrain in (iBarren, iRocky, iScrub, iMarsh):
+							iNumBush += 1
+
+						iFeature = plot.getFeatureType()
+						if iFeature > -1 and iFeature in aTreeList:
+							iNumTree += 1
 
 				attemptPromotion(unit, (iNumTree  * 1.25 * iMilitaryCivic), "PROMOTION_GREEN_WARDEN")
 				attemptPromotion(unit, (iNumCold  * 1.25 * iMilitaryCivic), "PROMOTION_WINTERBORN")
@@ -91,23 +106,26 @@ def onUnitBuilt( argsList):
 			elif unit.getDomainType() == DomainTypes.DOMAIN_SEA:
 				iNumReef = 0
 				iNumIce = 0
-				iReef = GC.getInfoTypeForString('FEAURE_REEF')
 				iIce = GC.getInfoTypeForString('FEATURE_ICE')
-				iCoral = GC.getInfoTypeForString('FEAURE_CORAL')
 
-				for iiX in range(iX-1, iX+2, 1):
-					for iiY in range(iY-1, iY+2, 1):
-						iFeature = CyMap().plot(iiX,iiY).getFeatureType()
-						if iFeature == iReef or iFeature == iCoral:
-							iNumReef = iNumReef +1
+				for x in range(iX - 1, iX + 2):
+					for y in range(iY - 1, iY + 2):
+						plot = MAP.plot(x, y)
+						if not plot or not plot.isWater():
+							continue
+						iFeature = plot.getFeatureType()
+						if iFeature < 0:
+							continue
+						if iFeature in aReefList:
+							iNumReef += 1
 						elif iFeature == iIce:
-							iNumIce = iNumIce +1
+							iNumIce += 1
 
 				attemptPromotion(unit, (iNumReef * 1.25 * iMilitaryCivic), "PROMOTION_COASTAL_ASSAULT1")
 				attemptPromotion(unit, (iNumIce  * 1.25 * iMilitaryCivic), "PROMOTION_COASTAL_GUARD1")
 
 def attemptPromotion(pUnit, iChance, szProposedPromotion):
-	if CyGame().getSorenRandNum(100, "") < iChance:
+	if GC.getGame().getSorenRandNum(100, "") < iChance:
 		ePromotion = GC.getInfoTypeForString(szProposedPromotion)
 		if pUnit.canAcquirePromotion(ePromotion):
 			pUnit.setHasPromotion(ePromotion, True)

@@ -43,6 +43,8 @@ def onSave():
 	return cPickle.dumps(CvEventInterface.onEvent(('OnSave', 0, 0, 0, 0, 0)))
 
 def onLoad(argsList):
+	import CvScreensInterface
+	CvScreensInterface.mainInterface.bSetStartZoom = True
 	import CvEventInterface
 	loadDataStr = argsList[0]
 	if loadDataStr:
@@ -50,9 +52,10 @@ def onLoad(argsList):
 		CvEventInterface.onEvent(('OnLoad', cPickle.loads(loadDataStr), 0, 0, 0, 0, 0))
 
 def preGameStart():
-	import CvEventInterface
-	CvEventInterface.getEventManager().fireEvent("PreGameStart")
+	#import CvEventInterface
+	#CvEventInterface.getEventManager().fireEvent("PreGameStart")
 	import CvScreensInterface
+	CvScreensInterface.mainInterface.bSetStartZoom = True
 	CvScreensInterface.showMainInterface()
 
 def recalculateModifiers():
