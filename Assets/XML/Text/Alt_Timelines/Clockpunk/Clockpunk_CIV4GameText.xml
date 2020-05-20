@@ -108,7 +108,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ORCHESTRION_THEATER_PEDIA</Tag>
 		<English>An orchestrion is a generic name for a machine that plays music and is designed to sound like an orchestra or band. Orchestrions may be operated by means of a large pinned cylinder or by a music roll and less commonly book music. The sound is usually produced by pipes, though they will be voiced differently to those found in a pipe organ, as well as percussion instruments. Many orchestrions contain a piano as well. In our age of clockwork, orchestrion theaters comprise enormous wall sized machines, usually complete with mechanical dolls moving in time to the music, and seats from which citizens can appreciate the works of our music roll composers.</English>
-		<Italian>L'orchestrion è una macchina progettata per produrre il suono di un'intera orchestra o banda. Gli orchestrion possono essere azionati da un grande cilindro con dei rilievi oppure da un rotolo musicale. Solitamente il suono è prodotto da canne, anche se è diverso da quello prodotto dalle canne di un organo, così come da uno strumento a percussione. Molti orchestrion contengono anche un piano. In questa era piena di ingranaggi, i teatri-orchestrion comprendono enormi macchine, di solito complete di bambole meccaniche che si muovono a tempo con la musica, e posti dai quali i cittadini possono apprezzare le opere dei nostri compositori.</Italian>
+		<Italian>L'orchestrion è una macchina progettata per produrre il suono di un'intera orchestra o banda. Gli orchestrion possono essere azionati da un grande cilindro a rilievi oppure da un rotolo musicale. Solitamente il suono è prodotto da canne, anche se è diverso da quello prodotto dalle canne di un organo, così come da uno strumento a percussione. Molti orchestrion contengono anche un piano. In questa era piena di ingranaggi, i teatri-orchestrion comprendono enormi macchine, di solito complete di bambole meccaniche che si muovono a tempo con la musica, e posti dai quali i cittadini possono apprezzare le opere dei nostri compositori.</Italian>
 		<Polish>Orchestrion (orkiestron) - rodzaj szafy grającej zaliczanej do instrumentów mechanicznych, popularny szczególnie w XIX wieku. Zbudowany z oszklonej szafki, wewnątrz której umieszczony był mechanizm wagowy, który po wrzuceniu monety włączał urządzenie poruszające kolczasty walec. Za pomocą kolców umieszczonych na walcu uruchamiane były specjalne młoteczki uderzające następnie o struny, dzwonki czy też bębenki. Całość uzyskanej melodyjki odbywała się według specjalnie zaprojektowanego wzorca melodycznego. Z biegiem lat urządzenie to zostało zastąpione przez automaty płytowe.</Polish>
 	</TEXT>
 	<TEXT>
@@ -152,18 +152,17 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CLOCKPUNK_PEDIA</Tag>
-		<English>[BOLD]Clockpunk[\BOLD], is a subgenre of speculative fiction which is similar to steampunk, but deviates in its technology. As with steampunk, it portrays advanced technology based on pre-modern designs, but rather than the steam power of the Industrial Age, the technology used is based on springs, clockwork and similar. Clockpunk is based very intensively on the works of Leonardo da Vinci and as such, it is typically set during the Renaissance. The idea is fairly new and very few works have been created in this genre. Clockpunk works include Pasquale's Angel by Paul J. McAuley, and Jack Faust by Michael Swanwick, as well as the upcoming novel Mainspring by Jay Lake. There are also clockpunk elements in the Marvel 1602 comic series and its sequels, and in the Discworld novels of Terry Pratchett, most notably a da Vinci space shuttle in The Last Hero. Benot Sokal's Syberia adventure game could also be considered clockpunk, as it features spring-based machines and clockwork automata.</English>
+		<English>[BOLD]Clockpunk[\BOLD] is a subgenre of speculative fiction which is similar to steampunk, but deviates in its technology. As with steampunk, it portrays advanced technology based on pre-modern designs, but rather than the steam power of the Industrial Age, the technology used is based on springs, clockwork and similar. Clockpunk is based very intensively on the works of Leonardo da Vinci and as such, it is typically set during the Renaissance. The idea is fairly new and very few works have been created in this genre. Clockpunk works include Pasquale's Angel by Paul J. McAuley, and Jack Faust by Michael Swanwick, as well as the upcoming novel Mainspring by Jay Lake. There are also clockpunk elements in the Marvel 1602 comic series and its sequels, and in the Discworld novels of Terry Pratchett, most notably a da Vinci space shuttle in The Last Hero. Benot Sokal's Syberia adventure game could also be considered clockpunk, as it features spring-based machines and clockwork automata.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CLOCKPUNK_QUOTE</Tag>
 		<English>"A clockwork heart can't replace the real thing." - Dru Pagliassotti, Clockwork Heart</English>
 		<French>"Un coeur d'horlogerie ne peut pas remplacer la chose réelle." - Dru Pagliassotti, Le Coeur d'Horlogerie</French>
 		<Polish>"Mechaniczne serce może zastąpić rzeczywiste." - Dru Pagliassotti, Clockwork Heart</Polish>
-	</TEXT>
+	</TEXT><!--
 	<TEXT>
 		<Tag>TXT_KEY_TECH_CLOCKPUNK_STRATEGY</Tag>
-		<English>TBD</English>
-	</TEXT>
+	</TEXT>-->
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CLOCKWORK_GOLEM</Tag>
 		<English>Clockwork Golem</English>
@@ -173,14 +172,13 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CLOCKWORK_GOLEM_PEDIA</Tag>
-		<English>Bipedal Armored combat unit</English>
-		<Italian>Unità corazzata bipede da combattimento</Italian>
-		<Polish>Dwunorzna opancerzona maszyna bojowa.</Polish>
+		<English>A Clockwork Golem is a combat unit, with good all-around skills, generally man-like in shape. In most cases, melee weapons are built directly onto its arms and a cannon is mounted in its chest. Despite moving with a variety of whirrs, clicks, and other mechanical sounds, it's a perfectly functioning and potentially deadly machine.</English>
+		<Italian>Un golem meccanico è un unità da combattimento, piuttosto equilibrata nelle sue caratteristiche, solitamente di aspetto quasi-umano. In molti casi, vengono progettati con delle armi da combattimento già integrate nelle braccia e un cannone nel petto. Pur emettendo una serie di rumori meccanici, è un'unità perfettamente funzionante e potenzialmente letale.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_CLOCKWORK_GOLEM_STRATEGY</Tag>
-		<English>The Clockwork golem is an alt-timeline Da Vinci/Clockpunk unit. It has good all-around combat skills.</English>
-		<Italian>Il Golem meccanico è un'unità Clockpunk. Ha ottime caratteristicche di combattimento, contro ogni nemico</Italian>
+		<English>The [COLOR_UNIT_TEXT]Clockwork golem[COLOR_REVERT] is an alt-timeline Da Vinci/Clockpunk unit. It has good all-around combat skills.</English>
+		<Italian>Il [COLOR_UNIT_TEXT]Golem meccanico[COLOR_REVERT] è un'unità in stile Clockpunk. Ha ottime capacità in combattimento.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DAVINCI_TANK</Tag>
@@ -197,8 +195,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_DAVINCI_TANK_STRATEGY</Tag>
-		<English>The Da Vinci Tank is an alt-timeline Da Vinci/Clockpunk unit. It has good all-around combat skills.</English>
-		<Italian>Il carro di Leonardo è un'unità in stile Clockpunk. Ha ottime capacità in combattimento.</Italian>
+		<English>The [COLOR_UNIT_TEXT]Da Vinci Tank[COLOR_REVERT] is an alt-timeline Da Vinci/Clockpunk unit. It has good all-around combat skills.</English>
+		<Italian>Il [COLOR_UNIT_TEXT]carro di Leonardo[COLOR_REVERT] è un'unità in stile Clockpunk. Ha ottime capacità in combattimento.</Italian>
 		<Polish>Czołg wynaleziony przez Leonarda DaVinci.</Polish>
 	</TEXT>
 	<TEXT>
@@ -211,14 +209,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ORNITHOPTER_PEDIA</Tag>
 		<English>An ornithopter (from Greek ornithos "bird" and pteron "wing") is an aircraft that flies by flapping its wings. Designers seek to imitate the flapping-wing flight of birds, bats, and insects. Though machines may differ in form, they are usually built on the same scale as these flying creatures. Manned ornithopters have also been built, and some have been successful. The machines are of two general types: those with engines, and those powered by the muscles of the pilot.</English>
-		<Italian>Unità da combattimetno aereo stile Clockpunk</Italian>
 		<Polish>Ornitopter - aerodyna napędzana ruchem powierzchni nośnych pracujących tak, jak skrzydła u ptaków. Poza modelami, jedna z nielicznych praktycznych realizacji została dokonana przez profesora Jamesa DeLauriera z Uniwersytetu Toronto Institute for Aerospace Studies w 2006. Pierwszy polski skrzydłowiec, Ornitopter Boratiniego, powstał w 1648.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ORNITHOPTER_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Ornithopter[COLOR_REVERT] is an alt-timeline Da Vinci/Clockpunk unit. It is the earliest available air unit for anyone, so getting this is a good advantage.</English>
-		<Italian>[COLOR_UNIT_TEXT]L'ornitottero[COLOR_REVERT] è un'unità in stile Clockpunk. E' la più antica unità aerea del gioco, per cui ottenrela rappresenta un grande vantaggio.</Italian>
-		<Polish>[COLOR_UNIT_TEXT]Ornitopter[COLOR_REVERT] to prymitywny samolot wynaleziony przez Leonardo Da Vinci</Polish>
+		<Italian>L'[COLOR_UNIT_TEXT]ornitottero[COLOR_REVERT] è un'unità in stile Clockpunk. È la più antica unità aerea del gioco, per cui ottenrela rappresenta un grande vantaggio.</Italian>
+		<Polish>[COLOR_UNIT_TEXT]Ornitopter[COLOR_REVERT] to prymitywny samolot wynaleziony przez Leonardo Da Vinci.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_REPEATING_CROSSBOWMAN</Tag>
@@ -236,7 +233,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_REPEATING_CROSSBOWMAN_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Repeating Crossbowman[COLOR_REVERT] is an alt-timeline Da Vinci/Clockpunk unit. It has an incredibly good ranged attack, but is crap on defense.</English>
-		<Italian>Il balestriere a ripetizione è un'unità in stile Clockpunk. Ha un ottimo attacco a distanza, ma soffre in fase difensiva.</Italian>
+		<Italian>Il [COLOR_UNIT_TEXT]balestriere a ripetizione[COLOR_REVERT] è un'unità in stile Clockpunk. Ha un ottimo attacco a distanza, ma soffre in fase difensiva.</Italian>
 		<Polish>[COLOR_UNIT_TEXT]Kusza Samopowtarzlna[COLOR_REVERT] to automatyczna broń miotjąca wynaleziona przez Leonarda Da Vinci.</Polish>
 	</TEXT>
 	<TEXT>
@@ -248,13 +245,13 @@
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZEPHYR_PEDIA</Tag>
 		<English>Airships are popular forms of transport in clockpunk stories. Varieties of airships vary widely. One of the main types of airship is known as non-rigid, but such airships are commonly called Zephyrs. They are uncommon in steampunk stories, wherein the preference is for a more industrial and mechanical aesthetic. Semi-rigid airships are slightly more common and are slightly larger than non-rigid types. They also contain an internal support structure known as a keel.</English>
-		<Italian>Unità da combattimento aereo Clockpunk</Italian>
+		<Italian>Uno [COLOR_UNIT_TEXT]zefiro[COLOR_REVERT] è una nave di legno sostenuta in aria da una mongolfiera.</Italian>
 		<Polish>W 1851 roku Henri Jules Giffard zgłosił patent na zastosowanie maszyny parowej do napędu statków powietrznych. Opracował pierwowzór sterowca - balon wyposażony w śmigło napędzane maszyną parową o mocy 2,2 kW. 24 września 1852 wzniósł się z hipodromu w Paryżu na wysokość 1800 m i pokonał 27-kilometrową trasę do Elancourt koło Trappes z prędkością około 8 km/h. 9 sierpnia 1884 r. w Chalais-Meudon kpt. Charles Renard (1847-1905) i kpt. Arthur Krebs (1850-1935) pokonali 7,6-kilometrową trasę sterowcem La France z prędkością niemal 20 km/h (5,5 m/s). Sterowiec o wydłużonym kształcie miał podwieszoną gondolę, na końcu której był zamocowany silnik elektryczny o mocy 6,6 kW ze śmigłem. Statkiem kierowano za pomocą steru.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ZEPHYR_STRATEGY</Tag>
 		<English>The [COLOR_UNIT_TEXT]Zephyr[COLOR_REVERT] is an alt-timeline Da Vinci/Clockpunk unit. It was sort of concieved as a wooden sailing ship held up by a balloon.</English>
-		<Italian>Lo zefiro è un'unità in stile clockpunk. Era ideato come una nave di legno sostenuta in aria da una mongolfiera.</Italian>
+		<Italian>Lo [COLOR_UNIT_TEXT]zefiro[COLOR_REVERT] è un'unità aerea in stile Clockpunk. Era ideato come una nave di legno sostenuta in aria da una mongolfiera.</Italian>
 		<Polish>[COLOR_UNIT_TEXT]Zefir[COLOR_REVERT] to renesansowy sterowiec z czasów Leonarda Da Vinci.</Polish>
 	</TEXT>
 </Civ4GameText>

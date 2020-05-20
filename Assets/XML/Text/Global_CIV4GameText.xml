@@ -9370,7 +9370,7 @@ Calendrier: 2150 AD - 2300 AD</French>
 		<English>While defending, your %s1_UnitName has killed a %s3_owner_adjective %s2_EnUName!</English>
 		<French>[COLOR_GREEN]En se défendant, [NUM1:votre:votre:vos:vos][COLOR_REVERT] [COLOR_HIGHLIGHT_TEXT]%s1_UnitName[COLOR_REVERT] [COLOR_GREEN][NUM1:a:a:ont:ont] éliminé [NUM2:un:une:des:des] %s2_EnUName (%s3_owner_adjective) ![COLOR_REVERT]</French>
 		<German>[NUM1:Euer:Eure:Euer:Eure:Eure:Eure] %s1:1_UnitName [NUM1:hat:haben] sich erfolgreich verteidigt und [NUM1:einen:eine:ein:einige:einige:einige] %[s3_owner_adjective][NUM2:en:e:es:e:e:e] %s2:4_EnUName vernichtet!</German>
-		<Italian>Difendendo, la tua unità %s1_UnitName ha ucciso l'unità nemica %s2_EnUName (%s3_owner_adjective)!</Italian>
+		<Italian>Mentre si difendeva, la tua unità %s1_UnitName ha ucciso l'unità nemica %s2_EnUName (%s3_owner_adjective)!</Italian>
 		<Spanish>Mientras se [NUM1:defendía:defendía:defendían:defendían], [NUM1:vuestro:vuestra:vuestros:vuestras] %s1_UnitName [NUM1:ha:ha:han:han] acabado con [NUM2:un:una:unos:unas] %s2_EnUName (%s3_owner_adjective).</Spanish>
 		<Polish>Broniąc się, Twój %s1_UnitName zabił %s3_owner_adjective %s2_EnUName!</Polish>
 	</TEXT>
@@ -14228,7 +14228,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<English>Show None</English>
 		<French>Voir Aucun</French>
 		<German>Keine anzeigen</German>
-		<Italian>Cancella tutti</Italian>
+		<Italian>Non mostrare nulla</Italian>
 		<Spanish>No mostrar nada</Spanish>
 		<Polish>Ukryj wszystkich graczy</Polish>
 	</TEXT>
@@ -14264,7 +14264,7 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<English>impurities</English>
 		<French>impuretés</French>
 		<German>Verunreinigungen</German>
-		<Italian>Impurezze</Italian>
+		<Italian>impurità</Italian>
 		<Spanish>impurezas</Spanish>
 		<Polish>zanieczyszczenia</Polish>
 	</TEXT>

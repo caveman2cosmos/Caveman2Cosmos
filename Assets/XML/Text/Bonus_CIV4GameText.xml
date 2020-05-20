@@ -3096,6 +3096,11 @@
 		<Italian>Huasteco</Italian>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Tag>
+		<English>Human Modification line represents permanent change in human psyche, physiology, or nature</English>
+		<Italian>Gli umani augmentati sono degli umani a cui sono stati applicati dei cambiamenti permanenti di tipo psichico, fisiologico o naturale.</Italian>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ALIEN_HYBRID</Tag>
 		<English>Human Mod (Alien Hybrid)</English>
 		<French>Modif. Humain (Hybridation Alien)</French>
@@ -3104,7 +3109,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_HUMAN_MOD_ARCHAILECT</Tag>
 		<English>Human Mod (Archailect)</English>
-		<French>Modif. Humain(Archailecte)</French>
+		<French>Modif. Humain (Archailecte)</French>
 		<Italian>Umano augmentato (IArchetipica)</Italian>
 	</TEXT>
 	<TEXT>
@@ -7859,9 +7864,5 @@
 	<TEXT>
 		<Tag>TXT_KEY_BONUS_ZUNI</Tag>
 		<English>Zuñi</English>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_BONUS_HUMAN_MOD_PEDIA</Tag>
-		<English>Human Modification line represents permanent change in human psyche, physiology, or nature</English>
 	</TEXT>
 </Civ4GameText>
