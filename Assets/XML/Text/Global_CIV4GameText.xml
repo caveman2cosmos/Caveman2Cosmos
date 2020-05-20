@@ -15027,13 +15027,13 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_SETTLED_GLADIATOR_PEDIA</Tag>
-		<English>Gladiators are similar to Great Generals but only provide experiance to melee units.</English>
+		<English>Gladiators are similar to Great Generals but only provide experience to melee units.</English>
 		<French>Les gladiateurs sont similaires aux généraux illustres, mais ne fournissent de l'expérience qu'aux unités de mêlée.</French>
 		<Polish>Gladiatorzy przypominają Wielkich Generałów, ale zapewniają doświadczenie tylko jednostkom walczącym wręcz.</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_SPECIALIST_SETTLED_GLADIATOR_STRATEGY</Tag>
-		<English>Increase income and experiance of new melee units trained in the city.</English>
+		<English>Increase income and experience of new melee units trained in the city.</English>
 		<French>Augmentez les revenus et l'expérience des nouvelles unités de mêlée entraînées dans la ville.</French>
 		<Polish>Zwiększa dochód i XP nowych jednostek piechoty trenowanych w tym mieście.</Polish>
 	</TEXT>
