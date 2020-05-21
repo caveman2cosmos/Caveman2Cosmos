@@ -26,9 +26,9 @@ public:
 	// cppcheck-suppress noExplicitConstructor
 	CvWString(const std::string& s) { Copy(s.c_str()); }
 	// cppcheck-suppress noExplicitConstructor
-	CvWString(const char* s) { Copy(s); }
+	CvWString(const char* s) { operator=(s); }
 	// cppcheck-suppress noExplicitConstructor
-	CvWString(const wchar* s) { if (s) *this = s; }
+	CvWString(const wchar* s) { operator=(s); }
 //	CvWString(const __wchar_t* s) { if (s) *this = s; }
 	// cppcheck-suppress noExplicitConstructor
 	CvWString(const std::wstring& s) { assign(s.c_str()); }
@@ -41,18 +41,18 @@ public:
 #endif
 
 	void Copy(const char* s)
-	{ 
-		if (s)
+	{
+		if (s == NULL || s[0] == '\0' )
 		{
-			int iLen = strlen(s);
-			if (iLen)
-			{
-				wchar *w = new wchar[iLen+1];
-				swprintf(w, L"%S", s);	// convert
-				assign(w);
-				delete [] w;
-			}
+			clear();
+			return;
 		}
+		const size_t len = strlen(s);
+		const int size_needed = MultiByteToWideChar(CP_UTF8, 0, s, len, nullptr, 0);
+		std::wstring result;
+		result.resize(size_needed);
+		MultiByteToWideChar(CP_UTF8, 0, s, len, &result[0], size_needed);
+		assign(result);
 	}
 
 	// FString compatibility
@@ -74,7 +74,7 @@ public:
 	CvWString& operator=( const FStringW& s) { assign(s.GetCString());	return *this; }	
 	CvWString& operator=( const FStringA& w) { Copy(w.GetCString());	return *this; }	
 #endif
-	CvWString& operator=( const char* w) { Copy(w);	return *this; }	
+	CvWString& operator=(const char* w) { if (w) Copy(w); else clear();	return *this; }
 
 	void Format( LPCWSTR lpszFormat, ... );
 
@@ -223,18 +223,18 @@ public:
 	void Convert(const std::wstring& w) { Copy(w.c_str());	}
 	void Copy(const wchar* w)
 	{
-		if (w)
+		if (w == NULL || w[0] == '\0')
 		{
-			int iLen = wcslen(w);
-			if (iLen)
-			{
-				char *s = new char[iLen+1];
-				sprintf(s, "%S", w);	// convert
-				assign(s);
-				delete [] s;
-			}
+			clear();
+			return;
 		}
-	}
+		const size_t len = wcslen(w);
+		const int size_needed = WideCharToMultiByte(CP_UTF8, 0, w, len, nullptr, 0, nullptr, nullptr);
+		std::string result;
+		result.resize(size_needed);
+		WideCharToMultiByte(CP_UTF8, 0, w, len, &result[0], size_needed, nullptr, nullptr);
+		assign(result);
+}
 
 	// implicit conversion
 	operator const char*() const 	{ return c_str(); }							

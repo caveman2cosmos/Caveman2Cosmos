@@ -114,7 +114,7 @@ class WBGameDataScreen:
 
 		screen.setButtonGFC("AIAutoPlayPlus", "", "", screen.getXResolution() /4 + 20, iY, 24, 24, WidgetTypes.WIDGET_PYTHON, 1030, -1, ButtonStyles.BUTTON_STYLE_CITY_PLUS)
 		screen.setButtonGFC("AIAutoPlayMinus", "", "", screen.getXResolution() /4 + 45, iY, 24, 24, WidgetTypes.WIDGET_PYTHON, 1031, -1, ButtonStyles.BUTTON_STYLE_CITY_MINUS)
-		sText = CyTranslator().getText("TXT_KEY_WB_AI_AUTOPLAY", (CyGame().getAIAutoPlay(self.top.m_iCurrentPlayer),))
+		sText = CyTranslator().getText("TXT_KEY_WB_AI_AUTOPLAY", (CyGame().getAIAutoPlay(self.top.iCurrentPlayer),))
 		screen.setLabel("AIAutoPlayText", "Background", "<font=3>" + sText + "</font>", 1<<0, screen.getXResolution() /4 + 75, iY + 1, -0.1, FontTypes.TITLE_FONT, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 		iY += 30
@@ -252,11 +252,11 @@ class WBGameDataScreen:
 		if inputClass.getFunctionName() == "CurrentPage":
 			iIndex = screen.getPullDownData("CurrentPage", screen.getSelectedPullDownID("CurrentPage"))
 			if iIndex == 8:
-				WBReligionScreen.WBReligionScreen().interfaceScreen(self.top.m_iCurrentPlayer)
+				WBReligionScreen.WBReligionScreen().interfaceScreen(self.top.iCurrentPlayer)
 			elif iIndex == 9:
-				WBCorporationScreen.WBCorporationScreen().interfaceScreen(self.top.m_iCurrentPlayer)
+				WBCorporationScreen.WBCorporationScreen().interfaceScreen(self.top.iCurrentPlayer)
 			elif iIndex == 11:
-				WBInfoScreen.WBInfoScreen().interfaceScreen(self.top.m_iCurrentPlayer)
+				WBInfoScreen.WBInfoScreen().interfaceScreen(self.top.iCurrentPlayer)
 
 		elif inputClass.getFunctionName() == "ChangeBy":
 			iChange = screen.getPullDownData("ChangeBy", screen.getSelectedPullDownID("ChangeBy"))
@@ -323,9 +323,9 @@ class WBGameDataScreen:
 
 		elif inputClass.getFunctionName().find("AIAutoPlay") > -1:
 			if inputClass.getData1() == 1030:
-				CyGame().setAIAutoPlay(CyGame().getAIAutoPlay(self.top.m_iCurrentPlayer) + iChange)
+				CyGame().setAIAutoPlay(CyGame().getAIAutoPlay(self.top.iCurrentPlayer) + iChange)
 			elif inputClass.getData1() == 1031:
-				CyGame().setAIAutoPlay(max(0, CyGame().getAIAutoPlay(self.top.m_iCurrentPlayer) - iChange))
+				CyGame().setAIAutoPlay(max(0, CyGame().getAIAutoPlay(self.top.iCurrentPlayer) - iChange))
 			self.placeStats()
 
 		elif inputClass.getFunctionName() == "WBGameOptions":
@@ -359,7 +359,7 @@ class WBGameDataScreen:
 					CyGame().addPlayer(i, iSelectedLeader, iSelectedCiv)
 					break
 			screen.hideScreen()
-			self.top.m_iCurrentPlayer = i
+			self.top.iCurrentPlayer = i
 			self.top.normalPlayerTabModeCB()
 
 		elif inputClass.getFunctionName() == "GameEditScriptData":
