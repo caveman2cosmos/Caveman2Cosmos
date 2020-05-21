@@ -556,7 +556,7 @@ class WBCityEditScreen:
 				pCity.kill()
 			else:
 				self.top.iMoveCity = pCity.getID()
-				self.top.m_iCurrentPlayer = iPlayer
+				self.top.iCurrentPlayer = iPlayer
 				if iIndex == 1:
 					self.top.iPlayerAddMode = "MoveCity"
 				elif iIndex == 2:
