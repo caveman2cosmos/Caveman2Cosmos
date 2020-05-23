@@ -1,8 +1,10 @@
+#include "CvGameCoreDLL.h"
+#include "CyGlobalContext.h"
+#include "CyMap.h"
+
 //
 // published python interface for CyGlobalContext
 //
-
-#include "CvGameCoreDLL.h"
 
 void CyGlobalContextPythonInterface3(python::class_<CyGlobalContext>& x)
 {

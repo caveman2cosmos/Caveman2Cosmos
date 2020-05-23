@@ -7,18 +7,15 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
-#include "CvGameCoreDLLUnDefNew.h"
-#include "CvGameCoreDLLDefNew.h"
 
 int UnitGroupingBase::getGroup(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit)
 {
-	int iInverse = m_bInvert ? -1 : 1;
+	const int iInverse = m_bInvert ? -1 : 1;
 	return iInverse * getGroupUnit(pPlayer, pCity, eUnit);
 }
 
 UnitGroupingBase::~UnitGroupingBase()
 {
-
 }
 
 int UnitGroupingSingle::getGroupUnit(CvPlayer *pPlayer, CvCity *pCity, UnitTypes eUnit)
@@ -121,7 +118,7 @@ bool UnitGroupingList::setActiveGrouping(UnitGroupingTypes eActiveGrouping)
 {
 	FAssertMsg(eActiveGrouping < NUM_UNIT_GROUPING, "Index out of bounds");
 	FAssertMsg(eActiveGrouping > -1, "Index out of bounds");
-	bool bChanged = m_eActiveGrouping != eActiveGrouping;
+	const bool bChanged = m_eActiveGrouping != eActiveGrouping;
 	m_eActiveGrouping = eActiveGrouping;
 	return bChanged;
 }

@@ -559,6 +559,10 @@
 		<English>Terraform Towards [LINK=IMPROVEMENT_TERRAFORM_TUNDRA]Tundra[\LINK] (Forced)</English>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILD_TERRAFORM_TAIGA_SLAVE</Tag>
+		<English>Terraform Towards [LINK=IMPROVEMENT_TERRAFORM_TUNDRA]Taiga[\LINK] (Forced)</English>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILD_THATCH_CUTTER_SLAVE</Tag>
 		<English>Build [LINK=IMPROVEMENT_THATCH_CUTTER]Thatch Cutter[\LINK] (Forced)</English>
 		<French>Construire un [COLOR_BUILDING_TEXT]Récolteur de Chaume[COLOR_REVERT] (Forcé)</French>

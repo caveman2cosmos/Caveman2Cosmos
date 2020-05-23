@@ -243,10 +243,6 @@ class PyPlayer:
 
 		return 0
 
-	def centerCameraByScriptData(self, scriptData):
-		unit = self.getUnitByScriptData(scriptData)
-		CyCamera().LookAtUnit(unit)
-
 	def initUnit(self, unitID, X, Y, iNum = 1):
 		"none - spawns unitIdx at X, Y - ALWAYS use default UnitAIType"
 		if (iNum > 1): #multiple units
@@ -645,13 +641,6 @@ class PyCity:
 		if (self.getGoodHealth() > self.getBadHealth()):
 			return True
 		return False
-
-	def centerCamera(self):
-		"bool - Center camera on city"
-		engine = CyEngine()
-		plot = self.plot()
-		if plot:
-			engine.LookAt(plot.getPoint(), True)
 
 	def setNumRealBuildingIdx(self, buildingIdx, iNum):
 		"none - Add or Remove (bAdd) by buildingIdx"

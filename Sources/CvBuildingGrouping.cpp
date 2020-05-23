@@ -7,18 +7,15 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
-#include "CvGameCoreDLLUnDefNew.h"
-#include "CvGameCoreDLLDefNew.h"
 
 int BuildingGroupingBase::getGroup(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)
 {
-	int iInverse = m_bInvert ? -1 : 1;
+	const int iInverse = m_bInvert ? -1 : 1;
 	return iInverse * getGroupBuilding(pPlayer, pCity, eBuilding);
 }
 
 BuildingGroupingBase::~BuildingGroupingBase()
 {
-
 }
 
 int BuildingGroupingSingle::getGroupBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding)

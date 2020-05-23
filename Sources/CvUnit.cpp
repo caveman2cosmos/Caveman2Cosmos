@@ -1,6 +1,10 @@
 // unit.cpp
 
 #include "CvGameCoreDLL.h"
+#include "CvPlayerAI.h"
+#include "CvTeamAI.h"
+#include "CyPlot.h"
+#include "CyUnit.h"
 
 static CvEntity* g_dummyEntity = NULL;
 static CvUnit*	 g_dummyUnit = NULL;

@@ -12,7 +12,7 @@
 #ifndef CV_BUILDING_FILTERS_H
 #define CV_BUILDING_FILTERS_H
 
-#include "CvEnums.h"
+//#include "CvEnums.h"
 
 class CvPlayer;
 

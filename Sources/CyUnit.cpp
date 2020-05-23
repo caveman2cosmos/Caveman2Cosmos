@@ -3,6 +3,11 @@
 //
 //
 #include "CvGameCoreDLL.h"
+#include "CyArea.h"
+#include "CyCity.h"
+#include "CyPlot.h"
+#include "CySelectionGroup.h"
+#include "CyUnit.h"
 
 CyUnit::CyUnit() : m_pUnit(NULL)
 {

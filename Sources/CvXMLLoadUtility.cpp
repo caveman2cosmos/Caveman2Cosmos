@@ -12,8 +12,8 @@
 //  Copyright (c) 2003 Firaxis Games, Inc. All rights reserved.
 //------------------------------------------------------------------------------------------------
 
-
 #include "CvGameCoreDLL.h"
+#include "CvXMLLoadUtility.h"
 
 static const int kBufSize = 2048;
 

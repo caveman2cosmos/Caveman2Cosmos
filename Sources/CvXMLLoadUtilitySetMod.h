@@ -15,7 +15,6 @@
 #define XML_LOAD_UTILITY_SET_MOD_H
 
 #include "CvXMLLoadUtility.h"
-#include "CvGameCoreUtils.h"
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //

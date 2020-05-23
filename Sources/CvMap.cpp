@@ -9,9 +9,9 @@
 
 
 #include "CvGameCoreDLL.h"
-#include "CvGameCoreUtils.h"
 #include "CvMapGenerator.h"
 #include "CvFractal.h"
+#include "CvPlayerAI.h"
 
 /*********************************/
 /***** Parallel Maps - Begin *****/

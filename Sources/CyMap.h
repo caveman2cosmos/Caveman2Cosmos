@@ -3,7 +3,6 @@
 #ifndef CyMap_h
 #define CyMap_h
 
-//#include "CvEnums.h"
 //
 // Python wrapper class for CvMap 
 // SINGLETON
@@ -13,7 +12,6 @@ class CyPlot;
 class CvMap;
 class CyCity;
 class CySelectionGroup;
-class CyUnit;
 class CyArea;
 class CyMap
 {

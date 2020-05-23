@@ -56,4 +56,3 @@ public:
 private:
 	static unsigned __int64 m_mode;
 };
-
