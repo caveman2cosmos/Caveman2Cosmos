@@ -3,6 +3,8 @@
 
 #include "CvGameCoreDLL.h"
 #include "FDataIOStream.h"
+#include <sstream>
+#include <iostream>
 
 void FDataIOStream::OpenRead(CvString szFile)
 {

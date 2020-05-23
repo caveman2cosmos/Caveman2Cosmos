@@ -5,9 +5,6 @@
 #ifndef		FDATAIOSTREAM_H
 #define		FDATAIOSTREAM_H
 
-#include <iostream>
-#include <fstream>
-
 class FDataIOStream : public FDataStreamBase
 {
 public:

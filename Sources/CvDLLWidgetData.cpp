@@ -1,5 +1,8 @@
 #include "CvGameCoreDLL.h"
+#include "CvGameTextMgr.h"
 #include "CvDLLWidgetData.h"
+#include "CvPlayerAI.h"
+#include "CvTeamAI.h"
 
 CvDLLWidgetData* CvDLLWidgetData::m_pInst = NULL;
 

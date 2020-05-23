@@ -1,7 +1,6 @@
 #pragma once
 
-#include "../CvInfos.h"
-
+class CvBonusInfo;
 
 class SCvInternalGlobals
 {

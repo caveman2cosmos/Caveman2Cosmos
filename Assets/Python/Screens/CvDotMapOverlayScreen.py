@@ -73,7 +73,7 @@ class CvDotMapOverlayScreen:
 	# Input handlers #
 	#----------------#
 
-	def onMouseOverPlot(self, argsList=None):
+	def onMouseOverPlot(self):
 		"""
 		Called from CvOverlayScreenUtils when mousing over a plot when the screen is active.
 		Updates the current plot and its x/y location.

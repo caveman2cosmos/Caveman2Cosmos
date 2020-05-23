@@ -11,10 +11,6 @@
 #ifndef BOOLEXPR_H
 #define BOOLEXPR_H
 
-#include "CvXMLLoadUtility.h"
-#include "CvGameObject.h"
-#include "IntExpr.h"
-
 class CvGameObject;
 class IntExpr;
 

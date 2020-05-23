@@ -5,8 +5,6 @@
 
 #pragma warning(disable:4100) 
 
-//#include "CvEnums.h"
-
 //
 // abstract class containing entity-related functions that the DLL needs
 //

@@ -12,9 +12,8 @@
 #ifndef CV_UNIT_GROUPING_H
 #define CV_UNIT_GROUPING_H
 
-#include "CvEnums.h"
-#include "CvUnitFilters.h"
-#include <vector>
+//#include "CvEnums.h"
+//#include "CvUnitFilters.h"
 
 enum UnitGroupingTypes
 {

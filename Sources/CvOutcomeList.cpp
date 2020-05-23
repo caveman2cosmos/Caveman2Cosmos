@@ -7,6 +7,7 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
+#include "CvXMLLoadUtility.h"
 
 CvOutcomeList::~CvOutcomeList()
 {

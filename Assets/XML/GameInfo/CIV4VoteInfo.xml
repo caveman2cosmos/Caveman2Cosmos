@@ -138,7 +138,7 @@
 		</VoteInfo>
 		<VoteInfo>
 			<Type>VOTE_UNIVERSAL_SUFFRAGE</Type>
-			<Description>TXT_KEY_VOTE_UNIVERSAL_SUFFRAGE</Description>
+			<Description>TXT_KEY_VOTE_DEMOCRACY</Description>
 			<iPopulationThreshold>51</iPopulationThreshold>
 			<bCityVoting>0</bCityVoting>
 			<bCivVoting>0</bCivVoting>
@@ -170,7 +170,7 @@
 		</VoteInfo>
 		<VoteInfo>
 			<Type>VOTE_FREE_SPEECH</Type>
-			<Description>TXT_KEY_VOTE_FREE_SPEECH</Description>
+			<Description>TXT_KEY_VOTE_LEGISLATURE</Description>
 			<iPopulationThreshold>51</iPopulationThreshold>
 			<bCityVoting>0</bCityVoting>
 			<bCivVoting>0</bCivVoting>
@@ -202,7 +202,7 @@
 		</VoteInfo>
 		<VoteInfo>
 			<Type>VOTE_EMANCIPATION</Type>
-			<Description>TXT_KEY_VOTE_EMANCIPATION</Description>
+			<Description>TXT_KEY_VOTE_EGALITARIAN</Description>
 			<iPopulationThreshold>51</iPopulationThreshold>
 			<bCityVoting>0</bCityVoting>
 			<bCivVoting>0</bCivVoting>
@@ -234,7 +234,7 @@
 		</VoteInfo>
 		<VoteInfo>
 			<Type>VOTE_ENVIRONMENTALISM</Type>
-			<Description>TXT_KEY_VOTE_ENVIRONMENTALISM</Description>
+			<Description>TXT_KEY_VOTE_GREEN</Description>
 			<iPopulationThreshold>51</iPopulationThreshold>
 			<bCityVoting>0</bCityVoting>
 			<bCivVoting>0</bCivVoting>
@@ -266,7 +266,7 @@
 		</VoteInfo>
 		<VoteInfo>
 			<Type>VOTE_FREE_RELIGION</Type>
-			<Description>TXT_KEY_VOTE_FREE_RELIGION</Description>
+			<Description>TXT_KEY_VOTE_SECULARISM</Description>
 			<iPopulationThreshold>51</iPopulationThreshold>
 			<bCityVoting>0</bCityVoting>
 			<bCivVoting>0</bCivVoting>
@@ -298,7 +298,7 @@
 		</VoteInfo>
 		<VoteInfo>
 			<Type>VOTE_WELFARE</Type>
-			<Description>TXT_KEY_VOTE_SOCIALIZED_WELFARE</Description>
+			<Description>TXT_KEY_VOTE_SOCIALIZED</Description>
 			<iPopulationThreshold>51</iPopulationThreshold>
 			<bCityVoting>0</bCityVoting>
 			<bCivVoting>0</bCivVoting>
