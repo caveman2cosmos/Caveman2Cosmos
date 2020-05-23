@@ -1109,8 +1109,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUNTER_GATHERER_PEDIA</Tag>
-		<English>A hunter-gatherer society is one whose primary subsistence method involves the direct procurement of edible plants and animals from the wild, foraging and hunting without significant recourse to the domestication of either. Up to 80% of the food is obtained by gathering. - Wikipedia.</English>
-		<Polish>Not translated</Polish>
+		<English>A hunter-gatherer society is one whose primary subsistence method involves the direct procurement of edible plants and animals from the wild, foraging and hunting without significant recourse to the domestication of either. Up to 80% of the food is obtained by gathering.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_HUNTER_GATHERER_SHORT</Tag>
@@ -1609,9 +1608,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_POLITICIAN_PEDIA</Tag>
-		<English>A politician or political leader (from Greek "polis") is an individual who is involved in influencing public policy and decision making. This includes people who hold decision-making positions in government, and people who seek those positions, whether by means of election, coup d'état, appointment, electoral fraud, conquest, right of inheritance (see also: divine right) or other means. Politics is not limited to governance through public office. Political offices may also be held in corporations, and other entities that are governed by self-defined political processes. - Wikipedia</English>
-		<Italian>Un politico è un individuo coinvolto nell'influenzare le politiche pubbliche e le deisioni del governo. Questo comprende sia le persone che occupano posizioni di comando, sia quelle che aspirano ad ottenere tali posizioni, per mezzo di elezioni, colpi di stato, frodi elettorali, conquista, diritto di parentela (vedi anche dirrito divino), o altri mezzi. La politica non è limitata solo al governo degli affari pubblici. Uffici politici possono esistere anche nelle coprorazioni o anche in altre organizzate da processi politici.</Italian>
-		<Polish>Not translated</Polish>
+		<English>A politician or political leader (from Greek "polis") is an individual who is involved in influencing public policy and decision making. This includes people who hold decision-making positions in government, and people who seek those positions, whether by means of election, coup d'état, appointment, electoral fraud, conquest, right of inheritance or other means. Politics is not limited to governance through public office. Political offices may also be held in corporations, and other entities that are governed by self-defined political processes.</English>
+		<Italian>Un politico è un individuo coinvolto nell'influenzare le politiche pubbliche e le deisioni del governo. Questo comprende sia le persone che occupano posizioni di comando, sia quelle che aspirano ad ottenere tali posizioni, per mezzo di elezioni, colpi di stato, frodi elettorali, conquista, diritto di parentela o altri mezzi. La politica non è limitata solo al governo degli affari pubblici. Uffici politici possono esistere anche nelle coprorazioni o anche in altre organizzate da processi politici.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_POLITICIAN_SHORT</Tag>
@@ -1664,8 +1662,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_POPULIST_PEDIA</Tag>
-		<English>This ruler owes his position to popular support, and he never forgets about it. He diverts more resources than most to keeping the people happy with his reign. - TR Team.</English>
-		<Polish>Not translated</Polish>
+		<English>This ruler owes his position to popular support, and he never forgets about it. He diverts more resources than most to keeping the people happy with his reign.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_POPULIST_SHORT</Tag>
@@ -1748,9 +1745,8 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROGRESSIST_PEDIA</Tag>
-		<English>Progressivism is a political attitude favoring or advocating changes or reform. Progressivism is often viewed in opposition to conservative or reactionary ideologies. The Progressive Movement began in cities with settlement workers and reformers who were interested in helping those facing harsh conditions at home and at work. The reformers spoke out about the need for laws regulating tenement housing and child labor. They also called for better working conditions for women. - Wikipedia</English>
+		<English>Progressivism is a political attitude favoring or advocating changes or reform. Progressivism is often viewed in opposition to conservative or reactionary ideologies. The Progressive Movement began in cities with settlement workers and reformers who were interested in helping those facing harsh conditions at home and at work. The reformers spoke out about the need for laws regulating tenement housing and child labor. They also called for better working conditions for women.</English>
 		<Italian>Il progressivismo è un atteggiamento politico che favorisce o richiede cambiamenti e riforme. Il progressivismo è spesso in contrapposizione con le ideologie conservative o reazionarie. Il movimento progressista iniziò nelle città con insediamenti di lavoratori e di riformatori che erano interessati nell'aiutare coloro che affrontavano condizioni difficili a casa e al lavoro. I riformatori parlavano del bisogno di leggi che regolavano le abitazionie il lavoro minorile; chiedevano anche condizioni di lavoro migliori per le donne.</Italian>
-		<Polish>Not translated</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_PROGRESSIST_SHORT</Tag>
@@ -1882,7 +1878,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_REVOLUTIONARY_PEDIA</Tag>
 		<English>This leader came to power through a coup or revolution. This society he leads is therefore in its very nature revolutionary. This affects the nation in a number of ways ; having a natural tolerance to anarchy ; a tendency towards civil disobedience ; a natural affinity to espionage and the covert. Finally, the talents of the individuals here are often latent leading to increased great generals inside his/her borders, free instigator promotion on spies. These attributes come somewhat at a price though. Cities take a hit in there economy and negative revolution implications, are symptomatic of being "Revolutionary".</English>
-		<Polish>Not translated</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_REVOLUTIONARY_SHORT</Tag>
@@ -2166,7 +2161,6 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TEMPERAMENTAL_PEDIA</Tag>
 		<English>Having a leader that is temperamental leads its nation toward general inefficiency. The nation is burdened with a leader whose temperamental differences with certain projects or advancement, comes at a cost. In particular those individuals within his/her nation who are deemed worthy of 'promotion' or a status of greatness are few in the eyes of its leader. The culture of his/her people inevitably suffers and the dedication and training of his/her military will remain unmotivated.</English>
-		<Polish>Not translated</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TEMPERAMENTAL_SHORT</Tag>
@@ -2221,11 +2215,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TEST_PEDIA</Tag>
 		<English>This is just a fill in for testing trait tags.</English>
-		<French>Test Non traduit</French>
-		<German>Not translated</German>
-		<Italian>Caratteristica ancora da testare</Italian>
-		<Spanish>Not translated</Spanish>
-		<Polish>Test Non traduit</Polish>
+		<Italian>Caratteristica ancora da testare.</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_TRAIT_TEST_SHORT</Tag>

@@ -7,10 +7,7 @@
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ADVANCED_MINE_TECHNOLOGY_CENTER</Tag>
 		<English>Advanced Mine Technology Center</English>
-		<French>Advanced Mine_Technology Center</French>
-		<German>Advanced Mine_Technology Center</German>
-		<Italian>Advanced Mine_Technology Center</Italian>
-		<Spanish>Advanced Mine_Technology Center</Spanish>
+		<Italian>Centro tecnologico per le mine avanzate</Italian>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_ADVANCED_MINE_TECHNOLOGY_CENTER_PEDIA</Tag>
@@ -74,27 +71,27 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_LAND_MINE_HELP</Tag>
-		<English>[ICON_BULLET]Harmless Until Armed.</English>
+		<English>[ICON_BULLET]Harmless until armed.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MINE_SWEEPER_HELP</Tag>
-		<English>[ICON_BULLET]Can Remove Mines.</English>
+		<English>[ICON_BULLET]Can remove mines.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_ARM_MINE</Tag>
-		<English>Arm Mine</English>
+		<English>Arm mine</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_ARM_MINE_HELP</Tag>
-		<English>Place the Armed Mine on the plot fto blow up enemy units.</English>
+		<English>Place the armed Mine on the plot to blow up enemy units.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_DETONATE_NUCLEAR_MINE</Tag>
-		<English>Detonate Nuclear mine</English>
+		<English>Detonate Nuclear Mine</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_DETONATE_NUCLEAR_MINE_HELP</Tag>
-		<English>Explode a nuclear mine to destroy all units on the plot.</English>
+		<English>Explode a Nuclear Mine to destroy all units on the plot.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISSION_SWEEP_FOR_LAND_MINE</Tag>
@@ -130,12 +127,11 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAVAL_MINE_FIELD_HELP</Tag>
-		<English>[ICON_BULLET]Harmless Until Armed.[NEWLINE][COLOR_WARNING_TEXT]Requires Harbor[COLOR_REVERT]</English>
+		<English>[ICON_BULLET]Harmless until armed.[NEWLINE][COLOR_WARNING_TEXT]Requires Harbor[COLOR_REVERT]</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_NAVAL_MINE_HELP</Tag>
-		<English>[ICON_BULLET]Harmless Until Armed.</English>
-		<French>[ICON_BULLET]Harmless Until Armed.</French>
+		<English>[ICON_BULLET]Harmless until armed.</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_ARM_MINE</Tag>
@@ -147,7 +143,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_DETONATE_NUCLEAR_MINE</Tag>
-		<English>Detonate Nuclear mine</English>
+		<English>Detonate Nuclear Mine</English>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_OUTCOME_DETONATE_NUCLEAR_MINE_MESSAGE</Tag>
