@@ -1,8 +1,16 @@
+#include "CvGameCoreDLL.h"
+#include "CvGameAI.h"
+#include "CvPlayerAI.h"
+#include "CyArea.h"
+#include "CyCity.h"
+#include "CyPlayer.h"
+#include "CyPlot.h"
+#include "CySelectionGroup.h"
+#include "CyUnit.h"
+
 //
 // Python wrapper class for CvPlayer 
 //
-
-#include "CvGameCoreDLL.h"
 
 CyPlayer::CyPlayer() : m_pPlayer(NULL)
 {
