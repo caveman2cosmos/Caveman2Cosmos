@@ -19421,82 +19421,28 @@ feindliche Einheit scrollen[COLOR_REVERT][\BOLD][TAB][TAB][TAB]Anzeige der Siegc
 		<Italian>Apertura delle frontiere</Italian>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_VOTE_EMANCIPATION</Tag>
-		<English>U.N. Resolution #743 (Global Civic - Liberal)</English>
-		<French>
-			<Text>Résolution de l'O.N.U #743 (Doctrine Globale - Libéral)</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>UN-Resolution Nr. 743 [BOLD]"Weltweite Gleichberechtigung"[\BOLD]</German>
-		<Italian>Risoluzione O.N.U. #743 (Forma di governo globale - Liberale)</Italian>
-		<Spanish>Resolución #743 de la ONU (Principio global - Liberalismo)</Spanish>
-		<Polish>Rezolucja ONZ #743 (Światowa Doktryna - Społeczność: Liberalizm)</Polish>
+		<Tag>TXT_KEY_VOTE_EGALITARIAN</Tag>
+		<English>U.N. Resolution #743 (Global Civic - Egalitarian)</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_VOTE_ENVIRONMENTALISM</Tag>
+		<Tag>TXT_KEY_VOTE_GREEN</Tag>
 		<English>U.N. Resolution #1190 (Global Civic - Green)</English>
-		<French>
-			<Text>Résolution de l'O.N.U #1190 (Doctrine Globale - Vert)</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>UN-Resolution Nr. 1190 [BOLD]"Weltweiter Umweltschutz"[\BOLD]</German>
-		<Italian>Risoluzione O.N.U. #1190 (Forma di governo globale - Verde)</Italian>
-		<Spanish>Resolución #1190 de la ONU (Principio global - Ecologismo)</Spanish>
-		<Polish>Rezolucja ONZ #1190 (Światowa Doktryna - Ekonomia: Ekologiczna)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_VOTE_FREE_RELIGION</Tag>
-		<English>U.N. Resolution #427 (Global Civic - Secular)</English>
-		<French>
-			<Text>Résolution de l'O.N.U #427 (Doctrine Globale - Séculier)</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>UN-Resolution Nr. 427 [BOLD]"Weltweite Religionsfreiheit"[\BOLD]</German>
-		<Italian>Risoluzione O.N.U. #427 (Forma di governo globale - Secolare)</Italian>
-		<Spanish>Resolución #427 de la ONU (Principio global - Secularismo)</Spanish>
-		<Polish>Rezolucja ONZ #427 (Światowa Doktryna - Religia: Sekularyzm)</Polish>
+		<Tag>TXT_KEY_VOTE_SECULARISM</Tag>
+		<English>U.N. Resolution #427 (Global Civic - Secularism)</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_VOTE_FREE_SPEECH</Tag>
-		<English>U.N. Resolution #3445 (Global Civic - Parliament)</English>
-		<French>
-			<Text>Résolution de l'O.N.U #3445 (Doctrine Globale - Parlement)</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>UN-Resolution Nr. 3445 [BOLD]"Weltweite Meinungsfreiheit"[\BOLD]</German>
-		<Italian>Risoluzione O.N.U. #3345 (Forma di governo globale - Parlamento)</Italian>
-		<Spanish>Resolución #3445 de la ONU (Principio global - Parlamento)</Spanish>
-		<Polish>Rezolucja ONZ #3445 (Światowa Doktryna - Władza: Parlament)</Polish>
+		<Tag>TXT_KEY_VOTE_LEGISLATURE</Tag>
+		<English>U.N. Resolution #3445 (Global Civic - Legislature)</English>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_VOTE_SOCIALIZED_WELFARE</Tag>
+		<Tag>TXT_KEY_VOTE_SOCIALIZED</Tag>
 		<English>U.N. Resolution #4172 (Global Civic - Socialized)</English>
-		<French>
-			<Text>Résolution de l'O.N.U #4172 (Global Civic - Socialisé)</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>UN-Resolution Nr. 4172 [BOLD]"Weltweites Sozialsystem"[\BOLD]</German>
-		<Italian>Risoluzione O.N.U. #4172 (Forma di governo globale - Socializzato)</Italian>
-		<Spanish>Resolución #4172 de la ONU (Principio global - Seguridad Social)</Spanish>
-		<Polish>Rezolucja ONZ #4172 (Światowa Doktryna - Opieka Zdrowotna: Socjalna)</Polish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_VOTE_UNIVERSAL_SUFFRAGE</Tag>
+		<Tag>TXT_KEY_VOTE_DEMOCRACY</Tag>
 		<English>U.N. Resolution #3312 (Global Civic - Democracy)</English>
-		<French>
-			<Text>Résolution de l'O.N.U #3312 (Doctrine Globale - Démocratie)</Text>
-			<Gender>Female</Gender>
-			<Plural>0</Plural>
-		</French>
-		<German>UN-Resolution Nr. 3312 [BOLD]"Weltweit freie Wahlen"[\BOLD]</German>
-		<Italian>Risoluzione O.N.U. #3312 (Forma di governo globale - Democrazia)</Italian>
-		<Spanish>Resolución #3312 de la ONU (Principio global - Democracia)</Spanish>
-		<Polish>Rezolucja ONZ #3312 (Światowa Doktryna - Rząd: Demokracja)</Polish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_WARPLAN_LIMITED_TARGET_IS</Tag>
