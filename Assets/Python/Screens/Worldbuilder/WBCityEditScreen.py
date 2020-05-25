@@ -23,11 +23,10 @@ class WBCityEditScreen:
 
 	def __init__(self, main):
 		self.top = main
-		self.iTable_Y = 80
 		self.lCities = []
 
 	def interfaceScreen(self, pCityX):
-		screen = CyGInterfaceScreen( "WBCityEditScreen", CvScreenEnums.WB_CITYEDIT)
+		screen = CyGInterfaceScreen("WBCityEditScreen", CvScreenEnums.WB_CITYEDIT)
 		global pCity
 		global iPlayer
 		global pPlot
@@ -51,12 +50,12 @@ class WBCityEditScreen:
 		iWidth = screen.getXResolution()/4 - 40
 
 		iX = 20
-		screen.addDropDownBoxGFC("OwnerType", iX, self.iTable_Y - 60, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
+		screen.addDropDownBoxGFC("OwnerType", iX, 20, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
 		screen.addPullDownString("OwnerType", CyTranslator().getText("TXT_KEY_WB_CITY_ALL", ()), 0, 0, 0 == iOwnerType)
 		screen.addPullDownString("OwnerType", CyTranslator().getText("TXT_KEY_PITBOSS_TEAM", ()), 2, 2, 2 == iOwnerType)
 		screen.addPullDownString("OwnerType", CyTranslator().getText("TXT_KEY_MAIN_MENU_PLAYER", ()), 1, 1, 1 == iOwnerType)
 
-		screen.addDropDownBoxGFC("PlotType", iX, self.iTable_Y - 30, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
+		screen.addDropDownBoxGFC("PlotType", iX, 50, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
 		screen.addPullDownString("PlotType", CyTranslator().getText("TXT_KEY_WB_AREA_PLOTS", ()), 1, 1, iPlotType == 1)
 		screen.addPullDownString("PlotType", CyTranslator().getText("TXT_KEY_WB_ALL_PLOTS", ()), 2, 2, iPlotType == 2)
 
@@ -82,7 +81,7 @@ class WBCityEditScreen:
 		screen.addPullDownString("Commands", CyTranslator().getText("TXT_KEY_WB_DUPLICATE_CITY", ()) + " + " + CyTranslator().getText("TXT_KEY_PEDIA_CATEGORY_UNIT", ()), 4, 4, False)
 		screen.addPullDownString("Commands", CyTranslator().getText("TXT_KEY_WB_RAZE_CITY", ()), 5, 5, False)
 
-		screen.addDropDownBoxGFC("ChangeBy", screen.getXResolution()/4, self.iTable_Y + 30, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
+		screen.addDropDownBoxGFC("ChangeBy", screen.getXResolution()/4, 110, iWidth, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
 		i = 1
 		while i < 1000001:
 			screen.addPullDownString("ChangeBy", "(+/-) " + str(i), i, i, iChange == i)
@@ -115,21 +114,21 @@ class WBCityEditScreen:
 			pPlayerX = GC.getPlayer(iPlayerX)
 			if iOwnerType == 1 and iPlayerX != iPlayer: continue
 			if iOwnerType == 2 and pPlayerX.getTeam() != pCity.getTeam(): continue
-			(loopCity, iter) = pPlayerX.firstCity(False)
-			while(loopCity):
-				if iPlotType == 2 or (iPlotType == 1 and loopCity.plot().getArea() == pCity.plot().getArea()):
+			city, i = pPlayerX.firstCity(False)
+			while city:
+				if iPlotType == 2 or (iPlotType == 1 and city.plot().getArea() == pCity.plot().getArea()):
 					sColor = CyTranslator().getText("[COLOR_WARNING_TEXT]", ())
-					if loopCity.getID() == pCity.getID() and iPlayerX == iPlayer:
+					if city.getID() == pCity.getID() and iPlayerX == iPlayer:
 						sColor = CyTranslator().getText("[COLOR_POSITIVE_TEXT]", ())
-					self.lCities.append([loopCity, iPlayerX, sColor])
-				(loopCity, iter) = pPlayerX.nextCity(iter, False)
+					self.lCities.append([city, iPlayerX, sColor])
+				city, i = pPlayerX.nextCity(i, False)
 		self.placeCityTable()
 
 	def placeCityTable(self):
 		screen = CyGInterfaceScreen("WBCityEditScreen", CvScreenEnums.WB_CITYEDIT)
 		iWidth = screen.getXResolution()/4 - 40
-		iHeight = (screen.getYResolution() - 40 - self.iTable_Y) / 24 * 24 + 2
-		screen.addTableControlGFC( "CurrentCity", 3, 20, self.iTable_Y, iWidth, iHeight, False, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD )
+		iHeight = (screen.getYResolution() - 120) / 24 * 24 + 2
+		screen.addTableControlGFC("CurrentCity", 3, 20, 80, iWidth, iHeight, False, False, 24, 24, TableStyles.TABLE_STYLE_STANDARD )
 		screen.setTableColumnHeader("CurrentCity", 0, "", 24)
 		screen.setTableColumnHeader("CurrentCity", 1, "", 24)
 		screen.setTableColumnHeader("CurrentCity", 2, "", iWidth - 48)
@@ -144,23 +143,23 @@ class WBCityEditScreen:
 
 	def placeMap(self):
 		screen = CyGInterfaceScreen("WBCityEditScreen", CvScreenEnums.WB_CITYEDIT)
-		iY = self.iTable_Y + 30
+		iY = 110
 		iWidth = screen.getXResolution()/2 - 40
-		iMapHeight = min((screen.getYResolution()/2 - 85 - iY), iWidth * 2/3)
+		iMapHeight = min((screen.getYResolution()/2 - 195), iWidth * 2/3)
 		iMapWidth = iMapHeight * 3/2
-		screen.addPlotGraphicGFC("PlotView", screen.getXResolution() *3/4 - iMapWidth/2, iY, iMapWidth, iMapHeight, pCity.plot(), 350, True, WidgetTypes.WIDGET_GENERAL, -1, -1)
+		screen.addPlotGraphicGFC("PlotView", screen.getXResolution() *3/4 - iMapWidth/2, 110, iMapWidth, iMapHeight, pCity.plot(), 350, True, WidgetTypes.WIDGET_GENERAL, -1, -1)
 
 	def placeStats(self):
 		screen = CyGInterfaceScreen("WBCityEditScreen", CvScreenEnums.WB_CITYEDIT)
-		sText = CyTranslator().getText("[COLOR_SELECTED_TEXT]", ()) + "<font=4b>" + pCity.getName() + "</color></font>"
-		screen.setText("CityName", "Background", sText, 1<<2, screen.getXResolution()/2, 20, -0.1, FontTypes.GAME_FONT, WidgetTypes.WIDGET_CITY_NAME, -1, -1)
+		sText = CyTranslator().getText("[COLOR_SELECTED_TEXT]", ()) + "<font=4b>" + pCity.getName()
+		screen.setText("CityName", "", sText, 1<<2, screen.getXResolution()/2, 20, 0, FontTypes.GAME_FONT, WidgetTypes.WIDGET_GENERAL, 0, 1)
 		global iPlayer
 		global pPlayer
 		iPlayer = pCity.getOwner()
 		pPlayer = GC.getPlayer(iPlayer)
 
 		iX = screen.getXResolution()/4
-		iY = self.iTable_Y + 60
+		iY = 140
 		screen.addDropDownBoxGFC("CityCultureLevel", iX, iY, screen.getXResolution()/4 - 40, WidgetTypes.WIDGET_GENERAL, -1, -1, FontTypes.GAME_FONT)
 		for i in xrange(GC.getNumCultureLevelInfos()):
 			screen.addPullDownString("CityCultureLevel", GC.getCultureLevelInfo(i).getDescription(), i, i, pCity.getCultureLevel() == i)
@@ -403,13 +402,8 @@ class WBCityEditScreen:
 				self.interfaceScreen(pPlayerX.getCity(inputClass.getData2()))
 
 		elif inputClass.getFunctionName() == "CityName":
-			popup = Popup.PyPopup(5000, EventContextTypes.EVENTCONTEXT_ALL)
-			popup.setUserData((pCity.getID(), True, iPlayer))
-			popup.setHeaderString(CyTranslator().getText("TXT_KEY_NAME_CITY", ()))
-			popup.setBodyString(CyTranslator().getText("TXT_KEY_SETTLE_NEW_CITY_NAME", ()))
-			popup.createEditBox(pCity.getName())
-			popup.setEditBoxMaxCharCount( 15 )
-			popup.launch()
+			import CvEventInterface
+			CvEventInterface.getEventManager().beginEvent(5000, (pCity, True))
 
 		elif inputClass.getFunctionName() == "CityOwner":
 			iIndex = screen.getSelectedPullDownID("CityOwner")
