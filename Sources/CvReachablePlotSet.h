@@ -3,8 +3,7 @@
 #ifndef CvReachablePlotSet_h__
 #define CvReachablePlotSet_h__
 
-#include <queue>
-#include "FProfiler.h"
+//#include <queue>
 
 //	Activity ids against which enumerated plot info can be stored
 #define	ACTIVITY_ID_ANY_ATTACK	0

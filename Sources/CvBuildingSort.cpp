@@ -7,8 +7,6 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
-#include "CvGameCoreDLLUnDefNew.h"
-#include "CvGameCoreDLLDefNew.h"
 
 bool BuildingSortBase::isLesserBuilding(CvPlayer *pPlayer, CvCity *pCity, BuildingTypes eBuilding1, BuildingTypes eBuilding2)
 {

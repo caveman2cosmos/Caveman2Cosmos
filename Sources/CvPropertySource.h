@@ -11,11 +11,6 @@
 #ifndef CV_PROPERTY_SOURCE_H
 #define CV_PROPERTY_SOURCE_H
 
-#include "CvXMLLoadUtilityModTools.h"
-#include "CvGameObject.h"
-#include "BoolExpr.h"
-#include "IntExpr.h"
-
 class CvGameObject;
 class PropertySourceContext;
 

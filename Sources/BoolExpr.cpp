@@ -7,6 +7,7 @@
 //
 //------------------------------------------------------------------------------------------------
 #include "CvGameCoreDLL.h"
+#include "CvXMLLoadUtility.h"
 #include "BoolExpr.h"
 #include "wchar_utils.h"
 

@@ -18,8 +18,10 @@ class CvPlot;
 class CvArea;
 class CvUnitInfo;
 class CvSelectionGroup;
-class FAStarNode;
 class CvArtInfoUnit;
+#ifdef USE_OLD_PATH_GENERATOR
+class FAStarNode;
+#endif
 
 enum UnitValueFlags
 {

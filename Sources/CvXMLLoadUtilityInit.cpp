@@ -2,6 +2,7 @@
 // init/cleanup XML functions
 //
 #include "CvGameCoreDLL.h"
+#include "CvXMLLoadUtility.h"
 
 //------------------------------------------------------------------------------------------------------
 //

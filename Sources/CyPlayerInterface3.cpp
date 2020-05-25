@@ -1,4 +1,8 @@
 #include "CvGameCoreDLL.h"
+#include "CyCity.h"
+#include "CyPlayer.h"
+#include "CySelectionGroup.h"
+#include "CyUnit.h"
 
 
 void CyPlayerPythonInterface3(python::class_<CyPlayer>& x)
