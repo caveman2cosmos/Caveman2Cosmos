@@ -14,6 +14,7 @@
 #define CV_INFO_H
 
 #include "CvXMLLoadUtilityModTools.h"
+#include "CvArtFileMgr.h"
 #include "CvProperties.h"
 #include "CvPropertySource.h"
 #include "CvPropertyInteraction.h"

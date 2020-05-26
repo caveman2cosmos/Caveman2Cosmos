@@ -1,7 +1,8 @@
 #include "CvGameCoreDLL.h"
+#include "CyArtFileMgr.h"
 
 //
-// published python interface for CyArea
+// published python interface for CyArtFileMgr
 //
 
 void CyArtFileMgrPythonInterface()

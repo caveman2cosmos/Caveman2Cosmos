@@ -1,10 +1,14 @@
 // player.cpp
 
 #include "CvGameCoreDLL.h"
-#include "CvDLLFlagEntityIFaceBase.h"
+#include "CvGameTextMgr.h"
+#include "CvDiploParameters.h"
+#include "CvInitCore.h"
+#include "CvPlayerAI.h"
+#include "CvTeamAI.h"
+#include "CyCity.h"
 
-//	Koshling - save flag indicating this player has no data in the save as they have never
-//	been alive
+//	Koshling - save flag indicating this player has no data in the save as they have never been alive
 #define	PLAYER_UI_FLAG_OMITTED 2
 
 //#define VALIDATION_FOR_PLOT_GROUPS
@@ -3828,36 +3832,15 @@ bool CvPlayer::isInvasionCapablePlayer() const
 
 const wchar* CvPlayer::getName(uint uiForm) const
 {
-/************************************************************************************************/
-/* REVOLUTION_MOD                         01/01/08                                jdog5000      */
-/*                                                                                              */
-/* dynamic civ names                                                                            */
-/************************************************************************************************/
-/* original code
-	if (GC.getInitCore().getLeaderName(getID(), uiForm).empty() || (GC.getGame().isMPOption(MPOPTION_ANONYMOUS) && isAlive() && GC.getGame().getGameState() == GAMESTATE_ON))
-	{
-		return GC.getLeaderHeadInfo(getLeaderType()).getDescription(uiForm);
-	}
-	else
-	{
-		return GC.getInitCore().getLeaderName(getID(), uiForm);
-	}
-*/
-	if( !(m_szName.empty()) )
+	if (!m_szName.empty())
 	{
 		return m_szName;
 	}
-	else if( GC.getInitCore().getLeaderName(getID(), uiForm).empty() || (GC.getGame().isMPOption(MPOPTION_ANONYMOUS) && isAlive() && GC.getGame().getGameState() == GAMESTATE_ON))
+	if (GC.getInitCore().getLeaderName(getID(), uiForm).empty() || GC.getGame().isMPOption(MPOPTION_ANONYMOUS) && isAlive() && GC.getGame().getGameState() == GAMESTATE_ON)
 	{
 		return GC.getLeaderHeadInfo(getLeaderType()).getDescription(uiForm);
 	}
-	else
-	{
-		return GC.getInitCore().getLeaderName(getID(), uiForm);
-	}
-/************************************************************************************************/
-/* REVOLUTION_MOD                          END                                                  */
-/************************************************************************************************/
+	return GC.getInitCore().getLeaderName(getID(), uiForm);
 }
 
 /************************************************************************************************/
@@ -13658,19 +13641,21 @@ namespace {
 
 void CvPlayer::setCombatExperience(int iExperience, UnitTypes eGGType)
 {
-	FAssertMsg(iExperience > 0, "iExperience must be greater than 0");
+	if (iExperience < 0)
+	{
+		FAssertMsg(false, "iExperience < 0");
+		iExperience = 0;
+	}
 
-	iExperience = std::max(0, iExperience);
-
-	if (iExperience == getCombatExperience())
+	if (iExperience == m_iCombatExperience)
 	{
 		return;
 	}
 
-	const int iExperienceDiff = std::max(0, iExperience - m_iCombatExperience);
-
-	changeGreatGeneralPointsForType(eGGType == NO_UNIT ? (UnitTypes)GC.getInfoTypeForString("UNIT_GREAT_GENERAL") : eGGType, iExperienceDiff);
-
+	if (iExperience > m_iCombatExperience)
+	{
+		changeGreatGeneralPointsForType(eGGType == NO_UNIT ? (UnitTypes)GC.getInfoTypeForString("UNIT_GREAT_GENERAL") : eGGType, iExperience - m_iCombatExperience);
+	}
 	m_iCombatExperience = iExperience;
 
 	if (!isNPC() || isHominid())

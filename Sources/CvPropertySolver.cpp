@@ -8,6 +8,7 @@
 //------------------------------------------------------------------------------------------------
 
 #include "CvGameCoreDLL.h"
+#include "CvGameAI.h"
 
 PropertySourceContext::PropertySourceContext(CvPropertySource *pSource, CvGameObject *pObject) : m_pSource(pSource), m_pObject(pObject), m_iData1(0), m_iData2(0)
 {

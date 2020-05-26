@@ -1,9 +1,10 @@
 // plot.cpp
 
 #include "CvGameCoreDLL.h"
+#include "CvPlayerAI.h"
+#include "CvTeamAI.h"
 #include "CvDLLSymbolIFaceBase.h"
 #include "CvDLLPlotBuilderIFaceBase.h"
-#include "CvDLLFlagEntityIFaceBase.h"
 
 #include "CvPlotPaging.h"
 

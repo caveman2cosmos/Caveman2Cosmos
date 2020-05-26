@@ -2,13 +2,6 @@
 
 #include "CvGameCoreDLL.h"
 #include "CvSelectionGroup.h"
-#include "CvBugOptions.h"
-#include "CvPathGenerator.h"
-
-#include "CvGameAI.h"
-#include "CvPlot.h"
-#include "CvPlayerAI.h"
-#include "CvGameCoreUtils.h"
 
 #ifdef DYNAMIC_PATH_STRUCTURE_VALIDATION
 #define	VALIDATE_TREE(x,y,z)	ValidateTree(x,y,z);
