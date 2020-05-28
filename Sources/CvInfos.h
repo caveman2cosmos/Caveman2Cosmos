@@ -130,10 +130,7 @@ public:
 	CvScalableInfo() : m_fScale(1.0f), m_fInterfaceScale(1.0f) { }
 
 	DllExport float getScale() const;
-	void setScale(float fScale);
-
 	DllExport float getInterfaceScale() const;
-	void setInterfaceScale(float fInterfaceScale);
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvScalableInfo* pClassInfo, CvXMLLoadUtility* pXML);
@@ -170,30 +167,18 @@ public:
 	void setActionInfoIndex(int i);
 
 	int getHotKeyVal() const;
-	void setHotKeyVal(int i);
 	int getHotKeyPriority() const;
-	void setHotKeyPriority(int i);
 	int getHotKeyValAlt() const;
-	void setHotKeyValAlt(int i);
 	int getHotKeyPriorityAlt() const;
-	void setHotKeyPriorityAlt(int i);
 	int getOrderPriority() const;
-	void setOrderPriority(int i);
 
 	bool isAltDown() const;
-	void setAltDown(bool b);
 	bool isShiftDown() const;
-	void setShiftDown(bool b);
 	bool isCtrlDown() const;
-	void setCtrlDown(bool b);
 	bool isAltDownAlt() const;
-	void setAltDownAlt(bool b);
 	bool isShiftDownAlt() const;
-	void setShiftDownAlt(bool b);
 	bool isCtrlDownAlt() const;
-	void setCtrlDownAlt(bool b);
 	const TCHAR* getHotKey() const; // Exposed to Python
-	void setHotKey(const TCHAR* szVal);
 	const WCHAR* getHotKeyDescriptionKey() const;
 	const WCHAR* getHotKeyAltDescriptionKey() const;
 	const WCHAR* getHotKeyString() const;
@@ -234,27 +219,21 @@ public:
 	virtual ~CvDiplomacyResponse();
 
 	int getNumDiplomacyText() const;
-	void setNumDiplomacyText(int i);
 
 	bool getCivilizationTypes(const int i) const;
 	bool* getCivilizationTypes() const;
-	void setCivilizationTypes(int i, bool bVal);
 
 	bool getLeaderHeadTypes(const int i) const;
 	bool* getLeaderHeadTypes() const;
-	void setLeaderHeadTypes(int i, bool bVal);
 
 	bool getAttitudeTypes(int i) const;
 	bool* getAttitudeTypes() const;
-	void setAttitudeTypes(int i, bool bVal);
 
 	bool getDiplomacyPowerTypes(const int i) const;
 	bool* getDiplomacyPowerTypes() const;
-	void setDiplomacyPowerTypes(int i, bool bVal);
 
 	const TCHAR* getDiplomacyText(int i) const;
 	const CvString* getDiplomacyText() const;
-	void setDiplomacyText(int i, CvString szText);
 
 	void read(FDataStreamBase* stream) {}
 	void write(FDataStreamBase* stream) {}

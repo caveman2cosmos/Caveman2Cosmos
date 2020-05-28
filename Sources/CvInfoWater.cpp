@@ -73,19 +73,9 @@ const TCHAR * CvWaterPlaneInfo::getBaseTexture() const
 	return m_szBaseTexture;
 }
 //------------------------------------------------------------------------------------------------------
-void CvWaterPlaneInfo::setBaseTexture(const TCHAR* szVal)			// The filename of the base texture
-{
-	m_szBaseTexture=szVal;
-}
-//------------------------------------------------------------------------------------------------------
 const TCHAR * CvWaterPlaneInfo::getTransitionTexture() const
 {
 	return m_szTransitionTexture;
-}
-//------------------------------------------------------------------------------------------------------
-void CvWaterPlaneInfo::setTransitionTexture(const TCHAR* szVal)		// The filename of the detail texture
-{
-	m_szTransitionTexture=szVal;
 }
 //------------------------------------------------------------------------------------------------------
 float CvWaterPlaneInfo::getTextureScaling() const
@@ -147,7 +137,7 @@ bool CvWaterPlaneInfo::read(CvXMLLoadUtility* pXML)
 		if (pXML->TryMoveToXmlFirstChild(L"WaterBaseTexture"))
 		{
 			pXML->GetChildXmlValByName( szTextVal, L"TextureFile");
-			setBaseTexture(szTextVal);
+			m_szBaseTexture = szTextVal;
 
 			pXML->GetChildXmlValByName( &m_BaseTextureScale, L"TextureScaling");
 			pXML->GetChildXmlValByName( &m_fURate, L"URate");
@@ -159,7 +149,7 @@ bool CvWaterPlaneInfo::read(CvXMLLoadUtility* pXML)
 		if (pXML->TryMoveToXmlFirstChild(L"WaterTransitionTexture"))
 		{
 			pXML->GetChildXmlValByName( szTextVal, L"TextureFile");
-			setTransitionTexture(szTextVal);
+			m_szTransitionTexture = szTextVal;
 		}
 		
 		pXML->MoveToXmlParent();
@@ -244,11 +234,6 @@ const TCHAR * CvTerrainPlaneInfo::getBaseTexture() const
 	return m_szBaseTexture;
 }
 //------------------------------------------------------------------------------------------------------
-void CvTerrainPlaneInfo::setBaseTexture(const TCHAR* szVal)			// The filename of the base texture
-{
-	m_szBaseTexture=szVal;
-}
-//------------------------------------------------------------------------------------------------------
 float CvTerrainPlaneInfo::getTextureScalingU() const
 {
 	return m_BaseTextureScaleU;
@@ -291,7 +276,7 @@ bool CvTerrainPlaneInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetChildXmlValByName( &m_fCloseAlpha, L"CloseAlpha");
 
 	pXML->GetChildXmlValByName( szTextVal, L"TextureFile");
-	setBaseTexture(szTextVal);
+	m_szBaseTexture = szTextVal;
 
 	pXML->GetChildXmlValByName( &m_BaseTextureScaleU, L"TextureScalingU");
 	pXML->GetChildXmlValByName( &m_BaseTextureScaleV, L"TextureScalingV");
@@ -336,7 +321,7 @@ void CvTerrainPlaneInfo::copyNonDefaults(CvTerrainPlaneInfo* pClassInfo, CvXMLLo
 	if (getMaterialAlpha() == fDefault) m_fMaterialAlpha = pClassInfo->getMaterialAlpha();
 	if (getCloseAlpha() == fDefault) m_fCloseAlpha = pClassInfo->getCloseAlpha();
 
-	if (getBaseTexture() == cDefault) setBaseTexture(pClassInfo->getBaseTexture());
+	if (getBaseTexture() == cDefault) m_szBaseTexture = pClassInfo->getBaseTexture();
 
 	if (getTextureScalingU() == fDefault) m_BaseTextureScaleU = pClassInfo->getTextureScalingU();
 	if (getTextureScalingV() == fDefault) m_BaseTextureScaleV = pClassInfo->getTextureScalingV();
@@ -369,7 +354,6 @@ CvCameraOverlayInfo::CvCameraOverlayInfo() :
 	m_bVisible(false),
 	m_eCameraOverlayType(CAMERA_OVERLAY_DECAL)
 {
-
 }
 
 //------------------------------------------------------------------------------------------------------
@@ -393,11 +377,6 @@ const TCHAR * CvCameraOverlayInfo::getBaseTexture() const
 	return m_szBaseTexture;
 }
 //------------------------------------------------------------------------------------------------------
-void CvCameraOverlayInfo::setBaseTexture(const TCHAR* szVal)			// The filename of the base texture
-{
-	m_szBaseTexture = szVal;
-}
-//------------------------------------------------------------------------------------------------------
 CameraOverlayTypes CvCameraOverlayInfo::getCameraOverlayType() const
 {
 	return m_eCameraOverlayType;
@@ -412,7 +391,7 @@ bool CvCameraOverlayInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetChildXmlValByName( &m_bVisible, L"bVisible");
 	
 	pXML->GetChildXmlValByName( szTextVal, L"TextureFile");
-	setBaseTexture(szTextVal);
+	m_szBaseTexture = szTextVal;
 
 	pXML->GetChildXmlValByName( szTextVal, L"CameraOverlayType");
 	if(szTextVal.CompareNoCase("CAMERA_OVERLAY_DECAL") == 0)
@@ -445,7 +424,7 @@ void CvCameraOverlayInfo::copyNonDefaults(CvCameraOverlayInfo* pClassInfo, CvXML
 	CvInfoBase::copyNonDefaults(pClassInfo, pXML);
 
 	if (isVisible() == bDefault) m_bVisible = pClassInfo->isVisible();
-	if (getBaseTexture() == cDefault) setBaseTexture(pClassInfo->getBaseTexture());
+	if (getBaseTexture() == cDefault) m_szBaseTexture = pClassInfo->getBaseTexture();
 
 	if ( getCameraOverlayType() == CAMERA_OVERLAY_DECAL )
 	{

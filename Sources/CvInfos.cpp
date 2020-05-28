@@ -293,29 +293,18 @@ bool CvScalableInfo::read(CvXMLLoadUtility* pXML)
 {
 	float fScale;
 	pXML->GetOptionalChildXmlValByName(&fScale, L"fScale");
-	setScale(fScale);
+	m_fScale = fScale;
 	pXML->GetOptionalChildXmlValByName(&fScale, L"fInterfaceScale", 1.0f);
-	setInterfaceScale(fScale);
+	m_fInterfaceScale = fScale;
 	return true;
 }
 
-/************************************************************************************************/
-/* XMLCOPY								 11/19/07								MRGENIE	  */
-/*																							  */
-/*																							  */
-/************************************************************************************************/
 void CvScalableInfo::copyNonDefaults(CvScalableInfo* pClassInfo, CvXMLLoadUtility* pXML)
 {
-	bool bDefault = false;
-	int iDefault = 0;
-	int iTextDefault = -1;  //all integers which are TEXT_KEYS in the xml are -1 by default
-	int iAudioDefault = -1;  //all audio is default -1
-	float fDefault = 0.0f;
-	CvString cDefault = CvString::format("").GetCString();
-	CvWString wDefault = CvWString::format(L"").GetCString();
+	const float fDefault = 0.0f;
 
-	if (getScale() == fDefault) setScale(pClassInfo->getScale());
-	if (getInterfaceScale() == 1.0f) setInterfaceScale(pClassInfo->getInterfaceScale());
+	if (getScale() == fDefault) m_fScale = pClassInfo->getScale();
+	if (getInterfaceScale() == 1.0f) m_fInterfaceScale = pClassInfo->getInterfaceScale();
 }
 
 float CvScalableInfo::getScale() const
@@ -323,21 +312,10 @@ float CvScalableInfo::getScale() const
 	return m_fScale;
 }
 
-void CvScalableInfo::setScale(float fScale)
-{
-	m_fScale = fScale;
-}
-
 float CvScalableInfo::getInterfaceScale() const
 {
 	return m_fInterfaceScale;
 }
-
-void CvScalableInfo::setInterfaceScale(float fInterfaceScale)
-{
-	m_fInterfaceScale = fInterfaceScale;
-}
-
 
 //======================================================================================================
 //------------------------------------------------------------------------------------------------------
@@ -386,44 +364,40 @@ bool CvHotkeyInfo::read(CvXMLLoadUtility* pXML)
 	}
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"HotKey");
-	setHotKey(szTextVal);
+	m_szHotKey = szTextVal;
 
 	iVal = pXML->GetHotKeyInt(szTextVal);
-	setHotKeyVal(iVal);
+	m_iHotKeyVal = iVal;
 
 	pXML->GetOptionalChildXmlValByName(&iVal, L"iHotKeyPriority", -1);
-	setHotKeyPriority(iVal);
-
+	m_iHotKeyPriority = iVal;
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"HotKeyAlt");
-	iVal = pXML->GetHotKeyInt(szTextVal);
-
-	setHotKeyValAlt(iVal);
+	m_iHotKeyValAlt = pXML->GetHotKeyInt(szTextVal);
 
 	pXML->GetOptionalChildXmlValByName(&iVal, L"iHotKeyPriorityAlt", -1);
-	setHotKeyPriorityAlt(iVal);
-
+	m_iHotKeyPriorityAlt = iVal;
 
 	pXML->GetOptionalChildXmlValByName(&bVal, L"bAltDown");
-	setAltDown(bVal);
+	m_bAltDown = bVal;
 
 	pXML->GetOptionalChildXmlValByName(&bVal, L"bShiftDown");
-	setShiftDown(bVal);
+	m_bShiftDown = bVal;
 
 	pXML->GetOptionalChildXmlValByName(&bVal, L"bCtrlDown");
-	setCtrlDown(bVal);
+	m_bCtrlDown = bVal;
 
 	pXML->GetOptionalChildXmlValByName(&bVal, L"bAltDownAlt");
-	setAltDownAlt(bVal);
+	m_bAltDownAlt = bVal;
 
 	pXML->GetOptionalChildXmlValByName(&bVal, L"bShiftDownAlt");
-	setShiftDownAlt(bVal);
+	m_bShiftDownAlt = bVal;
 
 	pXML->GetOptionalChildXmlValByName(&bVal, L"bCtrlDownAlt");
-	setCtrlDownAlt(bVal);
+	m_bCtrlDownAlt = bVal;
 
 	pXML->GetOptionalChildXmlValByName(&iVal, L"iOrderPriority", 5);
-	setOrderPriority(iVal);
+	m_iOrderPriority = iVal;
 
 	setHotKeyDescription(getTextKeyWide(), NULL, pXML->CreateHotKeyFromDescription(getHotKey(), m_bShiftDown, m_bAltDown, m_bCtrlDown));
 
@@ -518,19 +492,9 @@ int CvHotkeyInfo::getHotKeyVal() const
 	return m_iHotKeyVal;
 }
 
-void CvHotkeyInfo::setHotKeyVal(int i)
-{
-	m_iHotKeyVal = i;
-}
-
 int CvHotkeyInfo::getHotKeyPriority() const
 {
 	return m_iHotKeyPriority;
-}
-
-void CvHotkeyInfo::setHotKeyPriority(int i)
-{
-	m_iHotKeyPriority = i;
 }
 
 int CvHotkeyInfo::getHotKeyValAlt() const
@@ -538,19 +502,9 @@ int CvHotkeyInfo::getHotKeyValAlt() const
 	return m_iHotKeyValAlt;
 }
 
-void CvHotkeyInfo::setHotKeyValAlt(int i)
-{
-	m_iHotKeyValAlt = i;
-}
-
 int CvHotkeyInfo::getHotKeyPriorityAlt() const
 {
 	return m_iHotKeyPriorityAlt;
-}
-
-void CvHotkeyInfo::setHotKeyPriorityAlt(int i)
-{
-	m_iHotKeyPriorityAlt = i;
 }
 
 int CvHotkeyInfo::getOrderPriority() const
@@ -558,19 +512,9 @@ int CvHotkeyInfo::getOrderPriority() const
 	return m_iOrderPriority;
 }
 
-void CvHotkeyInfo::setOrderPriority(int i)
-{
-	m_iOrderPriority = i;
-}
-
 bool CvHotkeyInfo::isAltDown() const
 {
 	return m_bAltDown;
-}
-
-void CvHotkeyInfo::setAltDown(bool b)
-{
-	m_bAltDown = b;
 }
 
 bool CvHotkeyInfo::isShiftDown() const
@@ -578,19 +522,9 @@ bool CvHotkeyInfo::isShiftDown() const
 	return m_bShiftDown;
 }
 
-void CvHotkeyInfo::setShiftDown(bool b)
-{
-	m_bShiftDown = b;
-}
-
 bool CvHotkeyInfo::isCtrlDown() const
 {
 	return m_bCtrlDown;
-}
-
-void CvHotkeyInfo::setCtrlDown(bool b)
-{
-	m_bCtrlDown = b;
 }
 
 bool CvHotkeyInfo::isAltDownAlt() const
@@ -598,19 +532,9 @@ bool CvHotkeyInfo::isAltDownAlt() const
 	return m_bAltDownAlt;
 }
 
-void CvHotkeyInfo::setAltDownAlt(bool b)
-{
-	m_bAltDownAlt = b;
-}
-
 bool CvHotkeyInfo::isShiftDownAlt() const
 {
 	return m_bShiftDownAlt;
-}
-
-void CvHotkeyInfo::setShiftDownAlt(bool b)
-{
-	m_bShiftDownAlt = b;
 }
 
 bool CvHotkeyInfo::isCtrlDownAlt() const
@@ -618,19 +542,9 @@ bool CvHotkeyInfo::isCtrlDownAlt() const
 	return m_bCtrlDownAlt;
 }
 
-void CvHotkeyInfo::setCtrlDownAlt(bool b)
-{
-	m_bCtrlDownAlt = b;
-}
-
 const TCHAR* CvHotkeyInfo::getHotKey() const
 {
 	return m_szHotKey;
-}
-
-void CvHotkeyInfo::setHotKey(const TCHAR* szVal)
-{
-	m_szHotKey = szVal;
 }
 
 const WCHAR* CvHotkeyInfo::getHotKeyDescriptionKey() const
@@ -716,12 +630,7 @@ int CvDiplomacyResponse::getNumDiplomacyText() const
 	return m_iNumDiplomacyText;
 }
 
-void CvDiplomacyResponse::setNumDiplomacyText(int i)
-{
-	m_iNumDiplomacyText = i;
-}
-
-bool CvDiplomacyResponse::getCivilizationTypes(const int i) const
+bool CvDiplomacyResponse::getCivilizationTypes(int i) const
 {
 	FAssertMsg(i < GC.getNumCivilizationInfos(), "Index out of bounds");
 	FAssertMsg(i > -1, "Index out of bounds");
@@ -731,18 +640,6 @@ bool CvDiplomacyResponse::getCivilizationTypes(const int i) const
 bool* CvDiplomacyResponse::getCivilizationTypes() const
 {
 	return m_pbCivilizationTypes;
-}
-
-void CvDiplomacyResponse::setCivilizationTypes(int i, bool bVal)
-{
-	FAssertMsg(i < GC.getNumCivilizationInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
-
-	if ( NULL == m_pbCivilizationTypes )
-	{
-		CvXMLLoadUtility::InitList(&m_pbCivilizationTypes,GC.getNumCivilizationInfos(),false);
-	}
-	m_pbCivilizationTypes[i] = bVal;
 }
 
 bool CvDiplomacyResponse::getLeaderHeadTypes(const int i) const
@@ -757,18 +654,6 @@ bool* CvDiplomacyResponse::getLeaderHeadTypes() const
 	return m_pbLeaderHeadTypes;
 }
 
-void CvDiplomacyResponse::setLeaderHeadTypes(int i, bool bVal)
-{
-	FAssertMsg(i < GC.getNumLeaderHeadInfos(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
-
-	if ( NULL == m_pbLeaderHeadTypes )
-	{
-		CvXMLLoadUtility::InitList(&m_pbLeaderHeadTypes,GC.getNumLeaderHeadInfos(),false);
-	}
-	m_pbLeaderHeadTypes[i] = bVal;
-}
-
 bool CvDiplomacyResponse::getAttitudeTypes(int i) const
 {
 	FAssertMsg(i < NUM_ATTITUDE_TYPES, "Index out of bounds");
@@ -779,18 +664,6 @@ bool CvDiplomacyResponse::getAttitudeTypes(int i) const
 bool* CvDiplomacyResponse::getAttitudeTypes() const
 {
 	return m_pbAttitudeTypes;
-}
-
-void CvDiplomacyResponse::setAttitudeTypes(int i, bool bVal)
-{
-	FAssertMsg(i < NUM_ATTITUDE_TYPES, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
-
-	if ( NULL == m_pbAttitudeTypes )
-	{
-		CvXMLLoadUtility::InitList(&m_pbAttitudeTypes,NUM_ATTITUDE_TYPES,false);
-	}
-	m_pbAttitudeTypes[i] = bVal;
 }
 
 bool CvDiplomacyResponse::getDiplomacyPowerTypes(const int i) const
@@ -805,18 +678,6 @@ bool* CvDiplomacyResponse::getDiplomacyPowerTypes() const
 	return m_pbDiplomacyPowerTypes;
 }
 
-void CvDiplomacyResponse::setDiplomacyPowerTypes(int i, bool bVal)
-{
-	FAssertMsg(i < NUM_DIPLOMACYPOWER_TYPES, "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
-
-	if ( NULL == m_pbDiplomacyPowerTypes )
-	{
-		CvXMLLoadUtility::InitList(&m_pbDiplomacyPowerTypes,NUM_DIPLOMACYPOWER_TYPES,false);
-	}
-	m_pbDiplomacyPowerTypes[i] = bVal;
-}
-
 const TCHAR* CvDiplomacyResponse::getDiplomacyText(int i) const
 {
 	return m_paszDiplomacyText[i];
@@ -825,13 +686,6 @@ const TCHAR* CvDiplomacyResponse::getDiplomacyText(int i) const
 const CvString* CvDiplomacyResponse::getDiplomacyText() const
 {
 	return m_paszDiplomacyText;
-}
-
-void CvDiplomacyResponse::setDiplomacyText(int i, CvString szText)
-{
-	FAssertMsg(i < getNumDiplomacyText(), "Index out of bounds");
-	FAssertMsg(i > -1, "Index out of bounds");
-	m_paszDiplomacyText[i] = szText;
 }
 
 bool CvDiplomacyResponse::read(CvXMLLoadUtility* pXML)
