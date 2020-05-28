@@ -1194,29 +1194,14 @@ const TCHAR* CvBuildingInfo::getConstructSound() const
 	return m_szConstructSound;
 }
 
-void CvBuildingInfo::setConstructSound(const TCHAR* szVal)
-{
-	m_szConstructSound = szVal;
-}
-
 const TCHAR* CvBuildingInfo::getArtDefineTag() const
 {
 	return m_szArtDefineTag;
 }
 
-void CvBuildingInfo::setArtDefineTag(const TCHAR* szVal)
-{
-	m_szArtDefineTag = szVal;
-}
-
 const TCHAR* CvBuildingInfo::getMovieDefineTag() const
 {
 	return m_szMovieDefineTag;
-}
-
-void CvBuildingInfo::setMovieDefineTag(const TCHAR* szVal)
-{
-	m_szMovieDefineTag = szVal;
 }
 
 CvProperties* CvBuildingInfo::getProperties()
@@ -3610,13 +3595,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	MEMORY_TRACE_FUNCTION();
 
 	CvString szTextVal;
-	CvString szTextVal2;
-/************************************************************************************************/
-/* XMLCOPY                                 11/19/07                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-	CvString szDebugBuffer;
+
 	if (!CvHotkeyInfo::read(pXML))
 	{
 		return false;
@@ -3630,36 +3609,17 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->GetOptionalChildXmlValByName(&m_bNoLimit, L"bNoLimit");
 
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"ArtDefineTag");
-	setArtDefineTag(szTextVal);
+	pXML->GetOptionalChildXmlValByName(m_szArtDefineTag, L"ArtDefineTag");
 
 	setNotShowInCity();
 
-/************************************************************************************************/
-/* XMLCOPY                                 11/19/07                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
-/*
-	pXML->GetChildXmlValByName(szTextVal, L"MovieDefineTag");
-	setMovieDefineTag(szTextVal);
-*/
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"MovieDefineTag");
-	setMovieDefineTag(szTextVal);
+	pXML->GetOptionalChildXmlValByName(m_szMovieDefineTag, L"MovieDefineTag");
 
-/********************************************************************************/
-/**		REVDCM									2/16/10				phungus420	*/
-/**																				*/
-/**		CanConstruct															*/
-/********************************************************************************/
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"PrereqGameOption");
 	m_iPrereqGameOption = pXML->GetInfoClass(szTextVal);
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"NotGameOption");
 	m_iNotGameOption = pXML->GetInfoClass(szTextVal);
-/********************************************************************************/
-/**		REVDCM									END								*/
-/********************************************************************************/
 
 	pXML->GetOptionalChildXmlValByName(szTextVal, L"HolyCity");
 	m_iHolyCity = pXML->GetInfoClass(szTextVal);
@@ -3755,7 +3715,6 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	{
 		if(pXML->TryMoveToXmlFirstChild())
 		{
-
 			if (pXML->TryMoveToXmlFirstOfSiblings(L"ExtraFreeBonus"))
 			{
 				do
@@ -4111,8 +4070,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	else
 		SAFE_DELETE_ARRAY(m_pbCommerceChangeOriginalOwner);
 
-	pXML->GetOptionalChildXmlValByName(szTextVal, L"ConstructSound");
-	setConstructSound(szTextVal);
+	pXML->GetOptionalChildXmlValByName(m_szConstructSound, L"ConstructSound");
 
 	pXML->SetVariableListTagPair(&m_piBonusHealthChanges, L"BonusHealthChanges", GC.getNumBonusInfos());
 	pXML->SetVariableListTagPair(&m_piBonusHappinessChanges, L"BonusHappinessChanges", GC.getNumBonusInfos());
@@ -5421,11 +5379,7 @@ bool CvBuildingInfo::readPass3()
 
 	return true;
 }
-/************************************************************************************************/
-/* XMLCOPY                                 10/09/07                                MRGENIE      */
-/*                                                                                              */
-/*                                                                                              */
-/************************************************************************************************/
+
 void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtility* pXML)
 {
 	bool bDefault = false;
@@ -5436,12 +5390,12 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 
 	if ( getArtDefineTag() == cDefault ) // "ArtDefineTag"
 	{
-		setArtDefineTag(pClassInfo->getArtDefineTag());
+		m_szArtDefineTag = pClassInfo->getArtDefineTag();
 		setNotShowInCity();
 	}
 	if ( getMovieDefineTag() == cDefault ) // "ArtDefineTag"
 	{
-		setMovieDefineTag(pClassInfo->getMovieDefineTag());
+		m_szMovieDefineTag = pClassInfo->getMovieDefineTag();
 	}
 
 	CvHotkeyInfo::copyNonDefaults(pClassInfo, pXML);
@@ -5801,7 +5755,7 @@ void CvBuildingInfo::copyNonDefaults(CvBuildingInfo* pClassInfo, CvXMLLoadUtilit
 		}
 	}
 
-	if ( getConstructSound() == cDefault ) setConstructSound( pClassInfo->getConstructSound() );
+	if (getConstructSound() == cDefault) m_szConstructSound = pClassInfo->getConstructSound();
 
 	for ( int j = 0; j < GC.getNumBonusInfos(); j++)
 	{
