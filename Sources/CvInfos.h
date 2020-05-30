@@ -130,10 +130,7 @@ public:
 	CvScalableInfo() : m_fScale(1.0f), m_fInterfaceScale(1.0f) { }
 
 	DllExport float getScale() const;
-	void setScale(float fScale);
-
 	DllExport float getInterfaceScale() const;
-	void setInterfaceScale(float fInterfaceScale);
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvScalableInfo* pClassInfo, CvXMLLoadUtility* pXML);
@@ -170,30 +167,18 @@ public:
 	void setActionInfoIndex(int i);
 
 	int getHotKeyVal() const;
-	void setHotKeyVal(int i);
 	int getHotKeyPriority() const;
-	void setHotKeyPriority(int i);
 	int getHotKeyValAlt() const;
-	void setHotKeyValAlt(int i);
 	int getHotKeyPriorityAlt() const;
-	void setHotKeyPriorityAlt(int i);
 	int getOrderPriority() const;
-	void setOrderPriority(int i);
 
 	bool isAltDown() const;
-	void setAltDown(bool b);
 	bool isShiftDown() const;
-	void setShiftDown(bool b);
 	bool isCtrlDown() const;
-	void setCtrlDown(bool b);
 	bool isAltDownAlt() const;
-	void setAltDownAlt(bool b);
 	bool isShiftDownAlt() const;
-	void setShiftDownAlt(bool b);
 	bool isCtrlDownAlt() const;
-	void setCtrlDownAlt(bool b);
 	const TCHAR* getHotKey() const; // Exposed to Python
-	void setHotKey(const TCHAR* szVal);
 	const WCHAR* getHotKeyDescriptionKey() const;
 	const WCHAR* getHotKeyAltDescriptionKey() const;
 	const WCHAR* getHotKeyString() const;
@@ -234,27 +219,21 @@ public:
 	virtual ~CvDiplomacyResponse();
 
 	int getNumDiplomacyText() const;
-	void setNumDiplomacyText(int i);
 
 	bool getCivilizationTypes(const int i) const;
 	bool* getCivilizationTypes() const;
-	void setCivilizationTypes(int i, bool bVal);
 
 	bool getLeaderHeadTypes(const int i) const;
 	bool* getLeaderHeadTypes() const;
-	void setLeaderHeadTypes(int i, bool bVal);
 
 	bool getAttitudeTypes(int i) const;
 	bool* getAttitudeTypes() const;
-	void setAttitudeTypes(int i, bool bVal);
 
 	bool getDiplomacyPowerTypes(const int i) const;
 	bool* getDiplomacyPowerTypes() const;
-	void setDiplomacyPowerTypes(int i, bool bVal);
 
 	const TCHAR* getDiplomacyText(int i) const;
 	const CvString* getDiplomacyText() const;
-	void setDiplomacyText(int i, CvString szText);
 
 	void read(FDataStreamBase* stream) {}
 	void write(FDataStreamBase* stream) {}
@@ -308,7 +287,6 @@ public:
 	int getFlavorValue(int i) const; // Exposed to Python
 
 	const TCHAR* getTexture() const; // Exposed to Python
-	void setTexture(const TCHAR* szVal);
 
 	//Team Project (1)
 	//TB Specialist Tags
@@ -494,12 +472,9 @@ public:
 	// Dale - AB: Bombing END
 
 	std::wstring getQuote() const; // Exposed to Python
-	void setQuoteKey(const TCHAR* szVal);
 	const TCHAR* getQuoteKey() const;
 	const TCHAR* getSound() const; // Exposed to Python
-	void setSound(const TCHAR* szVal);
 	const TCHAR* getSoundMP() const; // Exposed to Python
-	void setSoundMP(const TCHAR* szVal);
 
 	// Arrays
 
@@ -638,11 +613,8 @@ public:
 
 	int getLayerAnimationPath() const;
 	int getPrereqPromotion() const; // Exposed to Python
-	void setPrereqPromotion(int i); // Exposed to Python
 	int getPrereqOrPromotion1() const; // Exposed to Python
-	void setPrereqOrPromotion1(int i); // Exposed to Python
 	int getPrereqOrPromotion2() const; // Exposed to Python
-	void setPrereqOrPromotion2(int i); // Exposed to Python
 
 	int getTechPrereq() const; // Exposed to Python
 	int getMinEraType() const;
@@ -732,7 +704,6 @@ public:
 	bool isImmuneToFirstStrikes() const; // Exposed to Python
 
 	const TCHAR* getSound() const; // Exposed to Python
-	void setSound(const TCHAR* szVal);
 
 	bool changesMoveThroughPlots() const;
 	//	This really belongs on CvInfoBase but you can't change the size of that
@@ -760,7 +731,6 @@ public:
 	bool getTerrainDoubleMove(int i) const; // Exposed to Python
 	bool getFeatureDoubleMove(int i) const; // Exposed to Python
 	bool getUnitCombat(int i) const; // Exposed to Python
-
 
 	void read(FDataStreamBase* stream) {}
 	void write(FDataStreamBase* stream) {}
@@ -1630,7 +1600,6 @@ public:
 	virtual ~CvCommandInfo();
 
 	int getAutomate() const;
-	void setAutomate(int i);
 
 	bool getConfirmCommand() const;
 	bool getVisible() const;
@@ -1665,14 +1634,10 @@ public:
 	virtual ~CvAutomateInfo();
 
 	int getCommand() const;
-	void setCommand(int i);
 	int getAutomate() const;
-	void setAutomate(int i);
 
 	bool getConfirmCommand() const;
-	void setConfirmCommand(bool bVal);
 	bool getVisible() const;
-	void setVisible(bool bVal);
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvAutomateInfo* pClassInfo, CvXMLLoadUtility* pXML);
@@ -1711,12 +1676,12 @@ public:
 	int getCommandType() const; // Exposed to Python
 	int getControlType() const; // Exposed to Python
 	int getOriginalIndex() const;
-	void setOriginalIndex(int i);
+	void setOriginalIndex(int i) { m_iOriginalIndex = i; }
 
 	bool isConfirmCommand() const; // Exposed to Python
 	DllExport bool isVisible() const; // Exposed to Python
 	DllExport ActionSubTypes getSubType() const;
-	void setSubType(ActionSubTypes eSubType);
+	void setSubType(ActionSubTypes eSubType) { m_eSubType = eSubType; }
 
 	// functions to replace the CvInfoBase calls
 	const TCHAR* getType() const;
@@ -3092,7 +3057,6 @@ public:
 
 	std::wstring pyGetWeLoveTheKing() const { return getWeLoveTheKing(); } // Exposed to Python
 	const wchar* getWeLoveTheKing() const;
-	void setWeLoveTheKingKey(const TCHAR* szVal);
 	const wchar* getWeLoveTheKingKey() const;
 
 	int getCivicOptionType() const; // Exposed to Python
@@ -3635,11 +3599,8 @@ public:
 	bool isAllowsNukes() const; // Exposed to Python
 
 	const TCHAR* getConstructSound() const; // Exposed to Python
-	void setConstructSound(const TCHAR* szVal);
 	const TCHAR* getArtDefineTag() const; // Exposed to Python
-	void setArtDefineTag(const TCHAR* szVal);
 	const TCHAR* getMovieDefineTag() const; // Exposed to Python
-	void setMovieDefineTag(const TCHAR* szVal);
 
 	// Arrays
 
@@ -4458,9 +4419,7 @@ public:
 	virtual ~CvRiverModelInfo();
 
 	DllExport const TCHAR* getModelFile() const; // Exposed to Python
-	void setModelFile(const TCHAR* szVal);				// The model filename
 	DllExport const TCHAR* getBorderFile() const; // Exposed to Python
-	void setBorderFile(const TCHAR* szVal);				// The model filename
 
 	DllExport int getTextureIndex() const;
 	DllExport const TCHAR* getDeltaString() const;		//Exposed to Python
@@ -4502,11 +4461,8 @@ public:
 	DllExport RouteTypes getRouteType() const;			// The route type
 
 	DllExport const TCHAR* getModelFile() const; // Exposed to Python
-	void setModelFile(const TCHAR* szVal);				// The model filename
 	DllExport const TCHAR* getLateModelFile() const; // Exposed to Python
-	void setLateModelFile(const TCHAR* szVal);			// The model filename
 	const TCHAR* getModelFileKey() const; // Exposed to Python
-	void setModelFileKey(const TCHAR* szVal);			// The model filename Key
 
 	DllExport bool isAnimated() const;
 
@@ -4575,7 +4531,7 @@ public:
 
 	DllExport const TCHAR* getFlagTexture() const;
 	const TCHAR* getArtDefineTag() const;
-	void setArtDefineTag(const TCHAR* szVal);
+
 	// Arrays
 
 	int getCivilizationFreeUnits(int i) const; // Exposed to Python
@@ -4598,7 +4554,6 @@ public:
 	const TCHAR* getButton() const;
 
 	int getDerivativeCiv() const; // Exposed to Python
-	void setDerivativeCiv(int iCiv);
 
 	//TB Tags
 	//int
@@ -4655,7 +4610,6 @@ protected:
 
 	mutable std::vector<CvWString> m_aszShortDescription;
 	mutable std::vector<CvWString> m_aszAdjective;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4719,7 +4673,6 @@ protected:
 	bool m_bTotalVictory;
 
 	CvString m_szMovie;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4757,7 +4710,6 @@ class CvHurryInfo :
 		int m_iProductionPerPopulation;
 
 		bool m_bAnger;
-
 };
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5234,7 +5186,6 @@ public:
 	bool isMapCategoryType(int i);
 
 	const TCHAR* getSound() const; // Exposed to Python
-	void setSound(const TCHAR* szVal);
 
 	bool read(CvXMLLoadUtility* pXML);
 	void read(FDataStreamBase* stream) {}
@@ -5422,9 +5373,7 @@ public:
 	int getHappiness() const; // Exposed to Python
 	int getPillageGold() const; // Exposed to Python
 	int getImprovementPillage() const; // Exposed to Python
-	void setImprovementPillage(int i);
 	int getImprovementUpgrade() const; // Exposed to Python
-	void setImprovementUpgrade(int i);
 	// Super Forts begin *XML*
 	int getCulture() const;
 	int getCultureRange() const;
@@ -5456,7 +5405,6 @@ public:
 	bool isOutsideBorders() const; // Exposed to Python
 
 	const TCHAR* getArtDefineTag() const;
-	void setArtDefineTag(const TCHAR* szVal);
 
 	int getWorldSoundscapeScriptId() const;
 
@@ -5728,7 +5676,6 @@ public:
 	bool isNormalize() const; // Exposed to Python
 
 	const TCHAR* getArtDefineTag() const;
-	void setArtDefineTag(const TCHAR* szVal);
 
 	// Arrays
 	int getYieldChange(int i) const; // Exposed to Python
@@ -5866,7 +5813,6 @@ public:
 	const TCHAR* getOnUnitChangeTo() const;
 
 	const TCHAR* getArtDefineTag() const;
-	void setArtDefineTag(const TCHAR* szTag);
 
 	int getWorldSoundscapeScriptId() const;
 
@@ -5907,7 +5853,6 @@ public:
 /*																							  */
 /************************************************************************************************/
 	const TCHAR* getGrowthSound() const;
-	void setGrowthSound(const TCHAR* szVal);
 	int getSpreadProbability() const;
 	int getCultureDistance() const;
 	bool isIgnoreTerrainCulture() const;
@@ -6123,7 +6068,6 @@ public:
 	bool isFoundFreshWater() const; // Exposed to Python
 
 	DllExport const TCHAR* getArtDefineTag() const;
-	void setArtDefineTag(const TCHAR* szTag);
 
 	int getWorldSoundscapeScriptId() const;
 
@@ -6266,7 +6210,6 @@ public:
 	virtual ~CvAdvisorInfo();
 
 	const TCHAR* getTexture() const; // Exposed to Python
-	void setTexture(const TCHAR* szVal);
 	int getNumCodes() const;
 	int getEnableCode(uint uiCode) const;
 	int getDisableCode(uint uiCode) const;
@@ -6386,7 +6329,6 @@ public:
 	int getFreedomAppreciation() const; // Exposed to Python
 
 	const TCHAR* getArtDefineTag() const; // Exposed to Python
-	void setArtDefineTag(const TCHAR* szVal);
 
 	// Arrays
 
@@ -7003,7 +6945,7 @@ public:
 	int getChar() const; // Exposed to Python
 	// TGA_INDEXATION 01/21/08 MRGENIE
 	int getTGAIndex() const;
-	void setTGAIndex(int i);
+	//void setTGAIndex(int i);
 
 	void setChar(int i);
 	int getHolyCityChar() const; // Exposed to Python
@@ -7016,16 +6958,10 @@ public:
 	void setMissionType(int iNewType);
 
 	const TCHAR* getTechButton() const; // Exposed to Python
-	void setTechButton(const TCHAR* szVal);
 	const TCHAR* getGenericTechButton() const; // Exposed to Python
-	void setGenericTechButton(const TCHAR* szVal);
 	const TCHAR* getMovieFile() const; // Exposed to Python
-	void setMovieFile(const TCHAR* szVal);
 	const TCHAR* getMovieSound() const; // Exposed to Python
-	void setMovieSound(const TCHAR* szVal);
 	const TCHAR* getSound() const; // Exposed to Python
-	void setSound(const TCHAR* szVal);
-
 	const TCHAR* getButtonDisabled() const;		//	Exposed to Python
 
 	void setAdjectiveKey(const TCHAR* szVal);
@@ -7104,7 +7040,7 @@ public:
 	int getChar() const; // Exposed to Python
 	// TGA_INDEXATION 01/21/08 MRGENIE
 	int getTGAIndex() const;
-	void setTGAIndex(int i);
+	//void setTGAIndex(int i);
 
 	void setChar(int i);
 	int getHeadquarterChar() const; // Exposed to Python
@@ -7120,11 +7056,8 @@ public:
 	int getBonusProduced() const; // Exposed to Python
 
 	const TCHAR* getMovieFile() const; // Exposed to Python
-	void setMovieFile(const TCHAR* szVal);
 	const TCHAR* getMovieSound() const; // Exposed to Python
-	void setMovieSound(const TCHAR* szVal);
 	const TCHAR* getSound() const; // Exposed to Python
-	void setSound(const TCHAR* szVal);
 
 	// Arrays
 
@@ -7732,7 +7665,6 @@ public:
 	virtual ~CvThroneRoomCamera();
 
 	DllExport const TCHAR* getFileName();
-	void setFileName(const TCHAR* szVal);
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvThroneRoomCamera* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
@@ -7759,15 +7691,10 @@ public:
 	virtual ~CvThroneRoomInfo();
 
 	DllExport const TCHAR* getEvent();
-	void setEvent(const TCHAR* szVal);
 	DllExport const TCHAR* getNodeName();
-	void setNodeName(const TCHAR* szVal);
 	DllExport int getFromState();
-	void setFromState(int iVal);
 	DllExport int getToState();
-	void setToState(int iVal);
 	DllExport int getAnimation();
-	void setAnimation(int iVal);
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvThroneRoomInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
@@ -7801,9 +7728,7 @@ public:
 	DllExport const TCHAR* getArtStyleType();
 	void setArtStyleType(const TCHAR* szVal);
 	DllExport const TCHAR* getEraType();
-	void setEraType(const TCHAR* szVal);
 	DllExport const TCHAR* getFileName();
-	void setFileName(const TCHAR* szVal);
 
 	bool read(CvXMLLoadUtility* pXML);
 	void copyNonDefaults(CvThroneRoomStyleInfo* pClassInfo = NULL, CvXMLLoadUtility* pXML = NULL);
@@ -7897,7 +7822,6 @@ public:
 	DllExport const TCHAR* getMapName();
 	void setMapName(const TCHAR* szVal);
 	DllExport const TCHAR* getModelFile();
-	void setModelFile(const TCHAR* szVal);
 	DllExport int getNumSizes();
 	DllExport float getSize(int index);
 	DllExport int getNumClimates();
@@ -7937,7 +7861,6 @@ public:
 	virtual ~CvSpaceShipInfo();
 
 	DllExport const TCHAR* getNodeName();
-	void setNodeName(const TCHAR* szVal);
 	DllExport const TCHAR* getProjectName();
 	void setProjectName(const TCHAR* szVal);
 	DllExport ProjectTypes getProjectType();
@@ -9284,7 +9207,6 @@ public:
 
 	void setText(const TCHAR* szText);
 	void setImage(const TCHAR* szText);
-	void setSound(const TCHAR* szText);
 	void setScript(int iIndex, const TCHAR* szText);
 
 	int getNumTutorialScripts() const;
