@@ -46,12 +46,9 @@ public:
 	DllExport float getTextureScaling() const;				// The water plane's texture scale
 	DllExport float getTextureScrollRateU() const;			// The water plane's texture scroll rate in U
 	DllExport float getTextureScrollRateV() const;			// The water plane's texture scroll rate in V
-
 	DllExport const TCHAR * getBaseTexture() const;
-	void setBaseTexture(const TCHAR* szVal);		// The filename of the base texture
 
 	DllExport const TCHAR *getTransitionTexture() const;
-	void setTransitionTexture(const TCHAR* szVal); // The transition texture for fading ocean into land
 
 	bool read(CvXMLLoadUtility*);
 /************************************************************************************************/
@@ -105,9 +102,7 @@ public:
 	DllExport float getTextureScrollRateV() const;			// The terrain plane's texture scroll rate in V
 	DllExport float getZHeight() const;						// The terrain plane's z height in world units
 	DllExport FogTypes getFogType() const;
-
 	DllExport const TCHAR * getBaseTexture() const;
-	void setBaseTexture(const TCHAR* szVal);		// The filename of the base texture
 
 	bool read(CvXMLLoadUtility*);
 /************************************************************************************************/
@@ -154,9 +149,7 @@ public:
 
 	DllExport bool isVisible() const;				// The terrain plane's material alpha
 	DllExport CameraOverlayTypes getCameraOverlayType() const;
-
 	DllExport const TCHAR * getBaseTexture() const;
-	void setBaseTexture(const TCHAR* szVal);		// The filename of the base texture
 
 	bool read(CvXMLLoadUtility*);
 /************************************************************************************************/

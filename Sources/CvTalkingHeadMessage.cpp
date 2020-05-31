@@ -81,11 +81,6 @@ const CvString& CvTalkingHeadMessage::getSound() const
 	return (m_szSound);
 }
 
-void CvTalkingHeadMessage::setSound(LPCTSTR pszSound)
-{
-	m_szSound = pszSound;
-}
-
 const CvString& CvTalkingHeadMessage::getIcon() const
 {
 	return (m_szIcon);

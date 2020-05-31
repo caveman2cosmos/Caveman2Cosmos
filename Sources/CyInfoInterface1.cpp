@@ -28,7 +28,6 @@ void CyInfoPythonInterface1()
 		;
 
 	python::class_<CvScalableInfo>("CvScalableInfo")
-		.def("setScale", &CvScalableInfo::setScale, "void (float fScale)")
 		.def("getScale", &CvScalableInfo::getScale, "float  ()")
 		;
 

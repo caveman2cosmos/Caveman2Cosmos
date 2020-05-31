@@ -75900,7 +75900,7 @@
 				<MapCategoryType>MAPCATEGORY_EARTH</MapCategoryType>
 			</MapCategoryTypes>
 			<PrereqTech>TECH_CONDUCT</PrereqTech>
-			<ObsoleteTech>TECH_DUALISM</ObsoleteTech>
+			<ObsoleteTech>TECH_LAW_ENFORCEMENT</ObsoleteTech>
 			<ReplaceBuildings>
 				<ReplaceBuilding>
 					<BuildingType>BUILDING_TOWNWATCH</BuildingType>

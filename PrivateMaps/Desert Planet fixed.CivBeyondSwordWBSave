@@ -1,4 +1,4 @@
-Version=13
+Version=14
 BeginGame
 	Speed=GAMESPEED_SNAIL
 	StartYear=-200000
