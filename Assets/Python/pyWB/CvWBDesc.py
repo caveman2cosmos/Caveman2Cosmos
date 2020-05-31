@@ -230,20 +230,6 @@ class CvGameDesc:
 
 ############
 class CvTeamDesc:
-	def __init__(self):
-		self.techTypes = ()
-		self.aaiEspionageAgainstTeams = []
-		self.bContactWithTeamList = ()
-		self.bWarWithTeamList = ()
-		self.bPermanentWarPeaceList = ()
-		self.bOpenBordersWithTeamList = ()
-		self.bDefensivePactWithTeamList = ()
-		self.bVassalOfTeamList = []
-		self.projectType = []
-		self.bRevealMap = 0
-		self.iMasterPower = 0
-		self.iVassalPower = 0
-		self.iEspionageEver = 0
 
 		self.bMapCentering = 0
 		self.bMapTrading = 0
@@ -272,13 +258,14 @@ class CvTeamDesc:
 		# Team ID (to make things easier to mess with in the text)
 		f.write("\tTeamID=%d, (%s)\n" %(idx, pTeam.getName().encode(fileencoding)))
 
-		# write techs
-		for i in xrange(GC.getNumTechInfos()):
-			if pTeam.isHasTech(i):
-				f.write("\tTech=%s\n" % GC.getTechInfo(i).getType())
-			if GC.getTechInfo(i).isRepeat():
-				for j in xrange(pTeam.getTechCount(i)):
+		if pTeam.isAlive():
+			# write techs
+			for i in xrange(GC.getNumTechInfos()):
+				if pTeam.isHasTech(i):
 					f.write("\tTech=%s\n" % GC.getTechInfo(i).getType())
+				if GC.getTechInfo(i).isRepeat():
+					for j in xrange(pTeam.getTechCount(i)):
+						f.write("\tTech=%s\n" % GC.getTechInfo(i).getType())
 
 		# write met other teams
 		for i in xrange(GC.getMAX_PC_TEAMS()):
@@ -403,11 +390,41 @@ class CvTeamDesc:
 
 
 	def read(self, f):
-		"read in team data"
-		self.__init__()
+		self.techTypes = ()
+		self.aaiEspionageAgainstTeams = []
+		self.bContactWithTeamList = ()
+		self.bWarWithTeamList = ()
+		self.bPermanentWarPeaceList = ()
+		self.bOpenBordersWithTeamList = ()
+		self.bDefensivePactWithTeamList = ()
+		self.bVassalOfTeamList = []
+		self.projectType = []
+		self.bRevealMap = 0
+		self.iMasterPower = 0
+		self.iVassalPower = 0
+		self.iEspionageEver = 0
+
+		self.bMapCentering = 0
+		self.bMapTrading = 0
+		self.bTechTrading = 0
+		self.bGoldTrading = 0
+		self.bOpenBordersTrading = 0
+		self.bDefensivePactTrading = 0
+		self.bPermanentAllianceTrading = 0
+		self.bVassalStateTrading = 0
+		self.bBridgeBuilding = 0
+		self.bIrrigation = 0
+		self.bIgnoreIrrigation = 0
+		self.bWaterWork = 0
+		self.bExtraWaterSeeFrom = 0
+		self.iNukeInterception = 0
+		self.iEnemyWarWeariness = 0
+		self.lDomainMoves = []
+		self.lRouteMoves = []
+		self.lImprovementYield = []
 
 		parser = CvWBParser()
-		if (parser.findNextTokenValue(f, "BeginTeam")!=-1):
+		if (parser.findNextTokenValue(f, "BeginTeam") != -1):
 			while True:
 				nextLine = parser.getNextLine(f)
 				toks = parser.getTokens(nextLine)
@@ -579,7 +596,78 @@ class CvTeamDesc:
 
 ############
 class CvPlayerDesc:
-	def __init__(self):
+
+	def write(self, f, idx):
+		ID = ", %d\n" % idx
+		f.write("BeginPlayer" + ID)
+		player = GC.getPlayer(idx)
+
+		# write team
+		f.write("\tTeam=%d\n" % player.getTeam())
+
+		if player.getHandicapType() != HandicapTypes.NO_HANDICAP:
+			f.write("\tHandicap=%s\n" % GC.getHandicapInfo(player.getHandicapType()).getType())
+
+		# write leader and Civ Description info
+		if player.isAlive():
+			f.write("\tLeaderType=%s\n" % GC.getLeaderHeadInfo(player.getLeaderType()).getType())
+			f.write("\tLeaderName=%s\n" % player.getNameKey().encode(fileencoding))
+			f.write("\tCivDesc=%s\n" % player.getCivilizationDescriptionKey().encode(fileencoding))
+			f.write("\tCivShortDesc=%s\n" % player.getCivilizationShortDescriptionKey().encode(fileencoding))
+			f.write("\tCivAdjective=%s\n" % player.getCivilizationAdjectiveKey().encode(fileencoding))
+			f.write("\tFlagDecal=%s\n" % player.getFlagDecal().encode(fileencoding))
+			f.write("\tWhiteFlag=%d\n" % player.isWhiteFlag())
+			f.write("\tCivType=%s\n" % GC.getCivilizationInfo(player.getCivilizationType()).getType())
+			f.write("\tColor=%s\n" % GC.getPlayerColorInfo(player.getPlayerColor()).getType())
+			f.write("\tArtStyle=%s\n" % GC.getArtStyleTypes(player.getArtStyleType()))
+			f.write("\tPlayableCiv=%d\n" % int(player.isPlayable()))
+			f.write("\tMinorNationStatus=%d\n" % player.isMinorCiv())
+			f.write("\tStartingGold=%d\n" % player.getGold())
+
+			pPlot = player.getStartingPlot()
+			if not pPlot.isNone():
+				f.write("\tStartingX=%d, StartingY=%d\n" %(pPlot.getX(), pPlot.getY()))
+
+			# write Civics
+			for i in xrange(GC.getNumCivicOptionInfos()):
+				f.write("\tCivicOption=%s, Civic=%s\n" %(GC.getCivicOptionInfo(i).getType(), GC.getCivicInfo(player.getCivics(i)).getType()))
+
+			pPlayerReligionInfo = GC.getReligionInfo(player.getStateReligion())
+			if pPlayerReligionInfo:
+				f.write("\tStateReligion=%s\n" %(pPlayerReligionInfo.getType()))
+
+			f.write("\tStartingEra=%s\n" %(GC.getEraInfo(player.getCurrentEra()).getType()))
+
+			f.write("\tRandomStartLocation=false\n")
+
+			# write Attitude Extra
+			for i in xrange(GC.getMAX_PC_PLAYERS()):
+				playerX = GC.getPlayer(i)
+				if playerX.isAlive()and player.AI_getAttitudeExtra(i) != 0:
+					f.write("\tAttitudePlayer=%d, (%s), AttitudeExtra=%d\n" %(i, playerX.getName().encode(fileencoding), player.AI_getAttitudeExtra(i)))
+
+			# write City List
+			for i in xrange(player.getNumCityNames()):
+				f.write("\tCityList=%s\n" %(player.getCityName(i)))
+
+			if player.getGoldenAgeTurns() > 0:
+				f.write("\tGoldenAge=%d\n" % player.getGoldenAgeTurns())
+			if player.getAnarchyTurns() > 0:
+				f.write("\tAnarchy=%d\n" % player.getAnarchyTurns())
+			if player.getCombatExperience() > 0:
+				f.write("\tCombatXP=%d\n" % player.getCombatExperience())
+			if player.getCoastalTradeRoutes() != 0:
+				f.write("\tCoastalTradeRoute=%d\n" % player.getCoastalTradeRoutes())
+			if player.getStateReligionUnitProductionModifier() != 0:
+				f.write("\tStateReligionUnit=%d\n" % player.getStateReligionUnitProductionModifier())
+			if player.getStateReligionBuildingProductionModifier() != 0:
+				f.write("\tStateReligionBuilding=%d\n" % player.getStateReligionBuildingProductionModifier())
+			if player.getScriptData() != "":
+				f.write("\tScriptData=%s\n" % player.getScriptData())
+
+		f.write("EndPlayer" + ID)
+
+	def read(self, f):
 		self.szCivDesc = ""
 		self.szCivShortDesc = ""
 		self.szLeaderName = ""
@@ -614,81 +702,6 @@ class CvPlayerDesc:
 		self.iStateReligionBuilding = 0
 		self.sScriptData = ""
 
-	def write(self, f, idx):
-		"write out player data"
-		f.write("BeginPlayer\n")
-		pPlayer = GC.getPlayer(idx)
-
-		# write team
-		f.write("\tTeam=%d\n" % int(pPlayer.getTeam()))
-
-		# write leader and Civ Description info
-		if pPlayer.getLeaderType() != LeaderHeadTypes.NO_LEADER:
-			f.write("\tLeaderType=%s\n" % GC.getLeaderHeadInfo(pPlayer.getLeaderType()).getType())
-
-		if pPlayer.getCivilizationType() != CivilizationTypes.NO_CIVILIZATION:
-			f.write("\tLeaderName=%s\n" % pPlayer.getNameKey().encode(fileencoding))
-			f.write("\tCivDesc=%s\n" % pPlayer.getCivilizationDescriptionKey().encode(fileencoding))
-			f.write("\tCivShortDesc=%s\n" % pPlayer.getCivilizationShortDescriptionKey().encode(fileencoding))
-			f.write("\tCivAdjective=%s\n" % pPlayer.getCivilizationAdjectiveKey().encode(fileencoding))
-			f.write("\tFlagDecal=%s\n" % pPlayer.getFlagDecal().encode(fileencoding))
-			f.write("\tWhiteFlag=%d\n" % pPlayer.isWhiteFlag())
-			f.write("\tCivType=%s\n" % GC.getCivilizationInfo(pPlayer.getCivilizationType()).getType())
-			f.write("\tColor=%s\n" % GC.getPlayerColorInfo(pPlayer.getPlayerColor()).getType())
-			f.write("\tArtStyle=%s\n" % GC.getArtStyleTypes(pPlayer.getArtStyleType()))
-			f.write("\tPlayableCiv=%d\n" % int(pPlayer.isPlayable()))
-			f.write("\tMinorNationStatus=%d\n" % pPlayer.isMinorCiv())
-			f.write("\tStartingGold=%d\n" % pPlayer.getGold())
-
-			if pPlayer.isAlive():
-				pPlot = pPlayer.getStartingPlot()
-				if not pPlot.isNone():
-					f.write("\tStartingX=%d, StartingY=%d\n" %(pPlot.getX(), pPlot.getY()))
-
-			pPlayerReligionInfo = GC.getReligionInfo(pPlayer.getStateReligion())
-			if pPlayerReligionInfo:
-				f.write("\tStateReligion=%s\n" %(pPlayerReligionInfo.getType()))
-
-			f.write("\tStartingEra=%s\n" %(GC.getEraInfo(pPlayer.getCurrentEra()).getType()))
-
-			f.write("\tRandomStartLocation=false\n")
-
-			# write Civics
-			for i in xrange(GC.getNumCivicOptionInfos()):
-				f.write("\tCivicOption=%s, Civic=%s\n" %(GC.getCivicOptionInfo(i).getType(), GC.getCivicInfo(pPlayer.getCivics(i)).getType()))
-
-			# write Attitude Extra
-			for i in xrange(GC.getMAX_PC_PLAYERS()):
-				if pPlayer.AI_getAttitudeExtra(i) != 0:
-					f.write("\tAttitudePlayer=%d, AttitudeExtra=%d\n, (%s)" %(i, pPlayer.AI_getAttitudeExtra(i), GC.getPlayer(i).getName().encode(fileencoding)))
-
-			# write City List
-			for i in xrange(pPlayer.getNumCityNames()):
-				f.write("\tCityList=%s\n" %(pPlayer.getCityName(i)))
-
-		if pPlayer.getHandicapType() != HandicapTypes.NO_HANDICAP:
-			f.write("\tHandicap=%s\n" % GC.getHandicapInfo(pPlayer.getHandicapType()).getType())
-
-			if pPlayer.getGoldenAgeTurns() > 0:
-				f.write("\tGoldenAge=%d\n" % pPlayer.getGoldenAgeTurns())
-			if pPlayer.getAnarchyTurns() > 0:
-				f.write("\tAnarchy=%d\n" % pPlayer.getAnarchyTurns())
-			if pPlayer.getCombatExperience() > 0:
-				f.write("\tCombatXP=%d\n" % pPlayer.getCombatExperience())
-			if pPlayer.getCoastalTradeRoutes() != 0:
-				f.write("\tCoastalTradeRoute=%d\n" % pPlayer.getCoastalTradeRoutes())
-			if pPlayer.getStateReligionUnitProductionModifier() != 0:
-				f.write("\tStateReligionUnit=%d\n" % pPlayer.getStateReligionUnitProductionModifier())
-			if pPlayer.getStateReligionBuildingProductionModifier() != 0:
-				f.write("\tStateReligionBuilding=%d\n" % pPlayer.getStateReligionBuildingProductionModifier())
-			if pPlayer.getScriptData() != "":
-				f.write("\tScriptData=%s\n" % pPlayer.getScriptData())
-
-		f.write("EndPlayer\n")
-
-	def read(self, f):
-		"read in player data"
-		self.__init__()
 		parser = CvWBParser()
 		if parser.findNextTokenValue(f, "BeginPlayer") != -1:
 			while True:
@@ -696,6 +709,16 @@ class CvPlayerDesc:
 				toks = parser.getTokens(nextLine)
 				if not toks:
 					break
+
+				v = parser.findTokenValue(toks, "LeaderType")
+				if v != -1:
+					self.leaderType = v
+					continue
+
+				v = parser.findTokenValue(toks, "LeaderName")
+				if v != -1:
+					self.szLeaderName = v.decode("latin_1")
+					continue
 
 				v = parser.findTokenValue(toks, "CivDesc")
 				if v != -1:
@@ -705,11 +728,6 @@ class CvPlayerDesc:
 				v = parser.findTokenValue(toks, "CivShortDesc")
 				if v != -1:
 					self.szCivShortDesc = v.decode("latin_1")
-					continue
-
-				v = parser.findTokenValue(toks, "LeaderName")
-				if v != -1:
-					self.szLeaderName = v.decode("latin_1")
 					continue
 
 				v = parser.findTokenValue(toks, "CivAdjective")
@@ -725,11 +743,6 @@ class CvPlayerDesc:
 				v = parser.findTokenValue(toks, "WhiteFlag")
 				if v != -1:
 					self.isWhiteFlag = int(v)
-					continue
-
-				v = parser.findTokenValue(toks, "LeaderType")
-				if v != -1:
-					self.leaderType = v
 					continue
 
 				v = parser.findTokenValue(toks, "CivType")
@@ -1966,10 +1979,9 @@ class CvWBDesc:
 			if pPlayer.getLeaderType() != -1 and str(pWBPlayer.bRandomStartLocation).lower() != "false":
 				pPlayer.setStartingPlot(pPlayer.findStartingPlot(True), True)
 
-			else:
-				# Player's starting plot
-				if pWBPlayer.iStartingX != -1 and pWBPlayer.iStartingY != -1:
-					pPlayer.setStartingPlot(MAP.plot(pWBPlayer.iStartingX, pWBPlayer.iStartingY), True)
+			# Player's starting plot
+			elif pWBPlayer.iStartingX != -1 and pWBPlayer.iStartingY != -1:
+				pPlayer.setStartingPlot(MAP.plot(pWBPlayer.iStartingX, pWBPlayer.iStartingY), True)
 
 		return 0 # ok
 
@@ -1980,9 +1992,8 @@ class CvWBDesc:
 			pTeam = GC.getTeam(iTeamLoop)
 			pWBTeam = self.teamsDesc[iTeamLoop]
 
-			for techTypeTag in pWBTeam.techTypes:
-				techType = CvUtil.findInfoTypeNum(GC.getTechInfo, GC.getNumTechInfos(), techTypeTag)
-				pTeam.setHasTech(techType, true, PlayerTypes.NO_PLAYER, false, false)
+			for TYPE in pWBTeam.techTypes:
+				pTeam.setHasTech(GC.getInfoTypeForString(TYPE), True, PlayerTypes.NO_PLAYER, False, False)
 			for item in pWBTeam.aaiEspionageAgainstTeams:
 				pTeam.setEspionagePointsAgainstTeam(item[0], item[1])
 			for item in pWBTeam.bContactWithTeamList:
@@ -1997,11 +2008,10 @@ class CvWBDesc:
 				pTeam.signDefensivePact(item)
 			for item in pWBTeam.bVassalOfTeamList:
 				GC.getTeam(item[0]).assignVassal(iTeamLoop, item[1])
-			for project in pWBTeam.projectType:
-				projectTypeNum = CvUtil.findInfoTypeNum(GC.getProjectInfo, GC.getNumProjectInfos(), project)
-				pTeam.changeProjectCount(projectTypeNum, 1)
-				projectCount = pTeam.getProjectCount(projectTypeNum)
-				pTeam.setProjectArtType(projectTypeNum, projectCount - 1, 0)
+			for TYPE in pWBTeam.projectType:
+				iProject = GC.getInfoTypeForString(TYPE)
+				pTeam.changeProjectCount(iProject, 1)
+				pTeam.setProjectArtType(iProject, pTeam.getProjectCount(iProject) - 1, 0)
 
 		for iPlayerX in xrange(len(self.playersDesc)):
 			pPlayer = GC.getPlayer(iPlayerX)

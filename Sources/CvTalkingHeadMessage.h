@@ -16,7 +16,7 @@ public:
 	DllExport const wchar* getDescription() const;
 	void setDescription(CvWString pszDescription);
 	DllExport const CvString& getSound() const;
-	void setSound(LPCTSTR pszSound);
+	//void setSound(LPCTSTR pszSound) { m_szSound = pszSound; }
 	DllExport const CvString& getIcon() const;
 	void setIcon(LPCTSTR pszIcon);
 	DllExport int getLength() const;
