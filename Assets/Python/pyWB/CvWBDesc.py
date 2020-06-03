@@ -4,7 +4,7 @@ import CvUtil
 from array import *
 
 GC = CyGlobalContext()
-version = 13
+version = 14
 fileencoding = "latin_1" # aka "iso-8859-1"
 
 ## self.bSpecial True will load the following additional special effects:
@@ -29,39 +29,35 @@ class CvWBParser:
 	# return true if item exists in list of tokens
 	def findToken(self, toks, item):
 		for tok in toks:
-			if (tok==item):
+			if tok == item:
 				return True
 		return False
 
 	# Search for a token of the form item=value in the list of toks, and return value, or -1 if not found
 	def findTokenValue(self, toks, item):
 		for tok in toks:
-			l=tok.split("=")
-			if (item==l[0]):
-				if (len(l)==1):
+			l = tok.split("=")
+			if item == l[0]:
+				if len(l) == 1:
 					return item
 				return l[1]
-		return -1		# failed
-
-	# return the next line from the list of lines
-	def getNextLine(self, f):
-		return f.readline()
+		return -1 # failed
 
 	# Find the next line that contains the token item, return false if not found
 	def findNextToken(self, f, item):
 		while True:
-			line = self.getNextLine(f)
-			if (not line):
-				return False	# EOF
+			line = f.readline()
+			if not line:
+				return False # EOF
 			toks=self.getTokens(line)
-			if (self.findToken(toks, item)):
+			if self.findToken(toks, item):
 				return True
 		return False
 
 	# Find the next line that contains item=value, return value or -1 if not found
 	def findNextTokenValue(self, f, item):
 		while True:
-			line = self.getNextLine(f)
+			line = f.readline()
 			if not line:
 				return -1		# EOF
 			toks=self.getTokens(line)
@@ -140,7 +136,7 @@ class CvGameDesc:
 		parser = CvWBParser()
 		if parser.findNextTokenValue(f, "BeginGame") != -1:
 			while True:
-				nextLine = parser.getNextLine(f)
+				nextLine = f.readline()
 				toks = parser.getTokens(nextLine)
 				if not toks:
 					break
@@ -426,7 +422,7 @@ class CvTeamDesc:
 		parser = CvWBParser()
 		if (parser.findNextTokenValue(f, "BeginTeam") != -1):
 			while True:
-				nextLine = parser.getNextLine(f)
+				nextLine = f.readline()
 				toks = parser.getTokens(nextLine)
 				if not toks:
 					break
@@ -662,8 +658,8 @@ class CvPlayerDesc:
 				f.write("\tStateReligionUnit=%d\n" % player.getStateReligionUnitProductionModifier())
 			if player.getStateReligionBuildingProductionModifier() != 0:
 				f.write("\tStateReligionBuilding=%d\n" % player.getStateReligionBuildingProductionModifier())
-			if player.getScriptData() != "":
-				f.write("\tScriptData=%s\n" % player.getScriptData())
+			if player.getScriptData():
+				f.write("\tScriptData=%s\n\t!ScriptData\n" % player.getScriptData())
 
 		f.write("EndPlayer" + ID)
 
@@ -705,7 +701,7 @@ class CvPlayerDesc:
 		parser = CvWBParser()
 		if parser.findNextTokenValue(f, "BeginPlayer") != -1:
 			while True:
-				nextLine = parser.getNextLine(f)
+				nextLine = f.readline()
 				toks = parser.getTokens(nextLine)
 				if not toks:
 					break
@@ -861,7 +857,14 @@ class CvPlayerDesc:
 					continue
 
 				v = parser.findTokenValue(toks, "ScriptData")
-				if v!=-1:
+				if v != -1:
+					peek = f.readline()
+					if "!ScriptData" not in peek:
+						v += "\n"
+						while "!ScriptData" not in peek:
+							v += peek
+							peek = f.readline()
+
 					self.sScriptData = v
 					continue
 
@@ -889,7 +892,7 @@ class CvUnitDesc:
 		self.isPlunder = False
 		self.szUnitAIType = "NO_UNITAI"
 
-		self.szScriptData = ""
+		self.sScriptData = ""
 		self.iImmobile = 0
 		self.iBaseCombatStr = -1
 		self.iExtraCargo = 0
@@ -928,11 +931,11 @@ class CvUnitDesc:
 		f.write("\t\tUnitAIType=%s\n" % GC.getUnitAIInfo(unit.getUnitAIType()).getType())
 
 		if unit.getScriptData():
-			f.write("\t\tScriptData=%s\n" %unit.getScriptData())
+			f.write("\t\tScriptData=%s\n\t\t!ScriptData\n" % unit.getScriptData())
 		if unit.getImmobileTimer() > 0:
-			f.write("\t\tImmobile=%d\n" %(unit.getImmobileTimer()))
+			f.write("\t\tImmobile=%d\n" % unit.getImmobileTimer())
 		if unit.baseCombatStr() != info.getCombat():
-			f.write("\t\tCombatStr=%d\n" %(unit.baseCombatStr()))
+			f.write("\t\tCombatStr=%d\n" % unit.baseCombatStr())
 		if unit.cargoSpace() != info.getCargoSpace():
 			f.write("\t\tExtraCargo=%d\n" %(unit.cargoSpace() - info.getCargoSpace()))
 
@@ -947,7 +950,7 @@ class CvUnitDesc:
 
 		parser = CvWBParser()
 		while True:
-			nextLine = parser.getNextLine(f)
+			nextLine = f.readline()
 			toks = parser.getTokens(nextLine)
 			if not toks:
 				break
@@ -1014,8 +1017,14 @@ class CvUnitDesc:
 
 			v = parser.findTokenValue(toks, "ScriptData")
 			if v != -1:
-				print "found script data: " + v
-				self.szScriptData = v
+				peek = f.readline()
+				if "!ScriptData" not in peek:
+					v += "\n"
+					while "!ScriptData" not in peek:
+						v += peek
+						peek = f.readline()
+
+				self.sScriptData = v
 				continue
 
 			v = parser.findTokenValue(toks, "Immobile")
@@ -1081,8 +1090,8 @@ class CvUnitDesc:
 		elif self.isPlunder:
 			unit.getGroup().setActivityType(ActivityTypes.ACTIVITY_PLUNDER)
 
-		if self.szScriptData:
-			unit.setScriptData(self.szScriptData)
+		if self.sScriptData:
+			unit.setScriptData(self.sScriptData)
 		unit.setImmobileTimer(self.iImmobile)
 		if self.iBaseCombatStr > -1:
 			unit.setBaseCombatStr(self.iBaseCombatStr)
@@ -1093,10 +1102,10 @@ class CvUnitDesc:
 # serializes city data
 class CvCityDesc:
 	def __init__(self):
-		self.city = None
 		self.owner = None
 		self.name = None
-		self.population = 0
+		self.iPopulation = 0
+		self.iFood = 0
 		self.productionUnit = "NONE"
 		self.productionBuilding = "NONE"
 		self.productionProject = "NONE"
@@ -1110,7 +1119,7 @@ class CvCityDesc:
 		self.plotX=-1
 		self.plotY=-1
 
-		self.szScriptData = ""
+		self.sScriptData = ""
 		self.lCulture = []
 		self.iDamage = 0
 		self.iOccupation = 0
@@ -1129,8 +1138,8 @@ class CvCityDesc:
 		city = plot.getPlotCity()
 		CvUtil.pyAssert(not city.isNone(), "null city?")
 
-		f.write("\tBeginCity\n\t\tCityOwner=%d, (%s)\n\t\tCityName=%s\n"
-			%(city.getOwner(), GC.getPlayer(city.getOwner()).getName().encode(fileencoding), city.getName().encode(fileencoding))
+		f.write("\tBeginCity\n\t\tCityOwner=%d, (%s)\n\t\tCityName=%s\n\t\tCityPopulation=%d\n\t\tStoredFood=%d\n"
+			%(city.getOwner(), GC.getPlayer(city.getOwner()).getName().encode(fileencoding), city.getName().encode(fileencoding), city.getPopulation(), city.getFood())
 		)
 		if city.isProductionUnit():
 			f.write("\t\tProductionUnit=%s\n" %(GC.getUnitInfo(city.getProductionUnit()).getType(),))
@@ -1162,7 +1171,7 @@ class CvCityDesc:
 				f.write("\t\tFreeSpecialistType=%s\n" %(GC.getSpecialistInfo(iI).getType()))
 
 		if city.getScriptData():
-			f.write("\t\tScriptData=%s\n" %city.getScriptData())
+			f.write("\t\tScriptData=%s\n\t\t!ScriptData\n" % city.getScriptData())
 
 		# Player culture
 		for iPlayerX in xrange(GC.getMAX_PLAYERS()):
@@ -1208,7 +1217,7 @@ class CvCityDesc:
 		self.plotY=iY
 		parser = CvWBParser()
 		while True:
-			nextLine = parser.getNextLine(f)
+			nextLine = f.readline()
 			toks = parser.getTokens(nextLine)
 			if not toks:
 				break
@@ -1226,75 +1235,87 @@ class CvCityDesc:
 				continue
 
 			# City - Population
-			v=parser.findTokenValue(toks, "CityPopulation")
+			v = parser.findTokenValue(toks, "CityPopulation")
 			if v != -1:
-				self.population = (int(v))
+				self.iPopulation = (int(v))
+				continue
+
+			v = parser.findTokenValue(toks, "StoredFood")
+			if v != -1:
+				self.iFood = (int(v))
 				continue
 
 			# City - Production Unit
-			v=parser.findTokenValue(toks, "ProductionUnit")
+			v = parser.findTokenValue(toks, "ProductionUnit")
 			if v != -1:
 				self.productionUnit = v
 				continue
 
 			# City - Production Building
-			v=parser.findTokenValue(toks, "ProductionBuilding")
+			v = parser.findTokenValue(toks, "ProductionBuilding")
 			if v != -1:
 				self.productionBuilding = v
 				continue
 
 			# City - Production Project
-			v=parser.findTokenValue(toks, "ProductionProject")
+			v = parser.findTokenValue(toks, "ProductionProject")
 			if v != -1:
 				self.productionProject = v
 				continue
 
 			# City - Production Process
-			v=parser.findTokenValue(toks, "ProductionProcess")
+			v = parser.findTokenValue(toks, "ProductionProcess")
 			if v != -1:
 				self.productionProcess = v
 				continue
 
 			# City - Buildings
-			v=parser.findTokenValue(toks, "BuildingType")
+			v = parser.findTokenValue(toks, "BuildingType")
 			if v != -1:
 				self.bldgType.append(v)
 				continue
 
 			# City - Religions
-			v=parser.findTokenValue(toks, "ReligionType")
+			v = parser.findTokenValue(toks, "ReligionType")
 			if v != -1:
 				self.religions.append(v)
 				continue
 
 			# City - HolyCity
-			v=parser.findTokenValue(toks, "HolyCityReligionType")
+			v = parser.findTokenValue(toks, "HolyCityReligionType")
 			if v != -1:
 				self.holyCityReligions.append(v)
 				continue
 
 			# City - Corporations
-			v=parser.findTokenValue(toks, "CorporationType")
+			v = parser.findTokenValue(toks, "CorporationType")
 			if v != -1:
 				self.corporations.append(v)
 				continue
 
 			# City - Headquarters
-			v=parser.findTokenValue(toks, "HeadquarterCorporationType")
+			v = parser.findTokenValue(toks, "HeadquarterCorporationType")
 			if v != -1:
 				self.headquarterCorporations.append(v)
 				continue
 
 			# City - Free Specialist
-			v=parser.findTokenValue(toks, "FreeSpecialistType")
+			v = parser.findTokenValue(toks, "FreeSpecialistType")
 			if v != -1:
 				self.freeSpecialists.append(v)
 				continue
 
 			# City - ScriptData
-			v=parser.findTokenValue(toks, "ScriptData")
+			v = parser.findTokenValue(toks, "ScriptData")
 			if v != -1:
-				self.szScriptData = v
+				peek = f.readline()
+				if "!ScriptData" not in peek:
+					v += "\n"
+					while "!ScriptData" not in peek:
+						v += peek
+						peek = f.readline()
+
+				self.sScriptData = v
 				continue
 
 			# Player Culture
@@ -1305,27 +1326,27 @@ class CvCityDesc:
 						self.lCulture.append([iPlayerX, int(v)])
 					continue
 
-			v=parser.findTokenValue(toks, "Damage")
+			v = parser.findTokenValue(toks, "Damage")
 			if v!=-1:
 				self.iDamage = int(v)
 				continue
 
-			v=parser.findTokenValue(toks, "Occupation")
+			v = parser.findTokenValue(toks, "Occupation")
 			if v!=-1:
 				self.iOccupation = int(v)
 				continue
 
-			v=parser.findTokenValue(toks, "ExtraHappiness")
+			v = parser.findTokenValue(toks, "ExtraHappiness")
 			if v!=-1:
 				self.iExtraHappiness = int(v)
 				continue
 
-			v=parser.findTokenValue(toks, "ExtraHealth")
+			v = parser.findTokenValue(toks, "ExtraHealth")
 			if v!=-1:
 				self.iExtraHealth = int(v)
 				continue
 
-			v=parser.findTokenValue(toks, "ExtraTrade")
+			v = parser.findTokenValue(toks, "ExtraTrade")
 			if v!=-1:
 				self.iExtraTrade = int(v)
 				continue
@@ -1368,93 +1389,95 @@ class CvCityDesc:
 
 	# after reading, this will actually apply the data
 	def apply(self, bSpecial):
-		self.city = GC.getPlayer(self.owner).initCity(self.plotX, self.plotY)
+		city = GC.getPlayer(self.owner).initCity(self.plotX, self.plotY)
 
 		if self.name != None:
-			self.city.setName(self.name, False)
+			city.setName(self.name, False)
 
-		if self.population:
-			self.city.setPopulation(self.population)
+		if self.iPopulation:
+			city.setPopulation(self.iPopulation)
+		if self.iFood:
+			city.setFood(self.iFood)
 
 		for item in self.lCulture:
-			self.city.setCulture(item[0], item[1], True)
+			city.setCulture(item[0], item[1], True)
 
 		for key in self.bldgType:
 			iBuilding = GC.getInfoTypeForString(key)
 			if iBuilding > -1:
-				self.city.setNumRealBuilding(iBuilding, 1)
+				city.setNumRealBuilding(iBuilding, 1)
 
 		for key in self.religions:
 			iReligion = GC.getInfoTypeForString(key)
 			if iReligion > -1:
-				self.city.setHasReligion(iReligion, True, False, True)
+				city.setHasReligion(iReligion, True, False, True)
 
 		GAME = GC.getGame()
 		for key in self.holyCityReligions:
 			iReligion = GC.getInfoTypeForString(key)
 			if iReligion > -1:
-				GAME.setHolyCity(iReligion, self.city, False)
+				GAME.setHolyCity(iReligion, city, False)
 
 		for key in self.corporations:
 			iCorporation = GC.getInfoTypeForString(key)
 			if iCorporation > -1:
-				self.city.setHasCorporation(iCorporation, True, False, True)
+				city.setHasCorporation(iCorporation, True, False, True)
 
 		for key in self.headquarterCorporations:
 			iCorporation = GC.getInfoTypeForString(key)
 			if iCorporation > -1:
-				GAME.setHeadquarters(iCorporation, self.city, False)
+				GAME.setHeadquarters(iCorporation, city, False)
 
 		for key in self.freeSpecialists:
 			iSpecialist = GC.getInfoTypeForString(key)
 			if iSpecialist > -1:
-				self.city.changeFreeSpecialistCount(iSpecialist, 1)
+				city.changeFreeSpecialistCount(iSpecialist, 1)
 
 		iProd = -1
 		if self.productionUnit != "NONE":
 			iProd = GC.getInfoTypeForString(self.productionUnit)
 			if iProd > -1:
-				self.city.pushOrder(OrderTypes.ORDER_TRAIN, iProd, -1, False, False, False, True)
+				city.pushOrder(OrderTypes.ORDER_TRAIN, iProd, -1, False, False, False, True)
 
 		if iProd == -1 and self.productionBuilding != "NONE":
 			iProd = GC.getInfoTypeForString(self.productionBuilding)
 			if iProd > -1:
-				self.city.pushOrder(OrderTypes.ORDER_CONSTRUCT, iProd, -1, False, False, False, True)
+				city.pushOrder(OrderTypes.ORDER_CONSTRUCT, iProd, -1, False, False, False, True)
 
 		if iProd == -1 and self.productionProject != "NONE":
 			iProd = GC.getInfoTypeForString(self.productionProject)
 			if iProd > -1:
-				self.city.pushOrder(OrderTypes.ORDER_CREATE, iProd, -1, False, False, False, True)
+				city.pushOrder(OrderTypes.ORDER_CREATE, iProd, -1, False, False, False, True)
 
 		if iProd == -1 and self.productionProcess != "NONE":
 			iProd = GC.getInfoTypeForString(self.productionProcess)
 			if iProd > -1:
-				self.city.pushOrder(OrderTypes.ORDER_MAINTAIN, iProd, -1, False, False, False, True)
+				city.pushOrder(OrderTypes.ORDER_MAINTAIN, iProd, -1, False, False, False, True)
 
-		if self.szScriptData:
-			self.city.setScriptData(self.szScriptData)
+		if self.sScriptData:
+			city.setScriptData(self.sScriptData)
 
 		if self.iDamage > 0:
-			self.city.changeDefenseDamage(self.iDamage)
+			city.changeDefenseDamage(self.iDamage)
 		if self.iOccupation > 0:
-			self.city.setOccupationTimer(self.iOccupation)
+			city.setOccupationTimer(self.iOccupation)
 		if bSpecial:
-			self.city.changeExtraHappiness(self.iExtraHappiness - self.city.getExtraHappiness())
-			self.city.changeExtraHealth(self.iExtraHealth - self.city.getExtraHealth())
-			self.city.changeExtraTradeRoutes(self.iExtraTrade - self.city.getExtraTradeRoutes())
+			city.changeExtraHappiness(self.iExtraHappiness - city.getExtraHappiness())
+			city.changeExtraHealth(self.iExtraHealth - city.getExtraHealth())
+			city.changeExtraTradeRoutes(self.iExtraTrade - city.getExtraTradeRoutes())
 			for item in self.lBuildingYield:
-				self.city.setBuildingYieldChange(item[0], item[1], item[2] - self.city.getBuildingYieldChange(item[0], item[1]))
+				city.setBuildingYieldChange(item[0], item[1], item[2] - city.getBuildingYieldChange(item[0], item[1]))
 			for item in self.lBuildingCommerce:
-				self.city.setBuildingCommerceChange(item[0], item[1], item[2] - self.city.getBuildingCommerceChange(item[0], item[1]))
+				city.setBuildingCommerceChange(item[0], item[1], item[2] - city.getBuildingCommerceChange(item[0], item[1]))
 			for item in self.lBuildingHappy:
-				self.city.setBuildingHappyChange(item[0], item[1] - self.city.getBuildingHappyChange(item[0]))
+				city.setBuildingHappyChange(item[0], item[1] - city.getBuildingHappyChange(item[0]))
 			for item in self.lBuildingHealth:
-				self.city.setBuildingHealthChange(item[0], item[1] - self.city.getBuildingHealthChange(item[0]))
+				city.setBuildingHealthChange(item[0], item[1] - city.getBuildingHealthChange(item[0]))
 			for item in self.lFreeBonus:
-				self.city.changeFreeBonus(item[0], item[1] - self.city.getFreeBonus(item[0]))
+				city.changeFreeBonus(item[0], item[1] - city.getFreeBonus(item[0]))
 			for item in self.lNoBonus:
-				if self.city.isNoBonus(item): continue
-				self.city.changeNoBonusCount(item, 1)
+				if city.isNoBonus(item): continue
+				city.changeNoBonusCount(item, 1)
 
 ##########
 # serializes plot data
@@ -1478,7 +1501,7 @@ class CvPlotDesc:
 		self.cityDesc = None
 		self.szLandmark = ""
 
-		self.szScriptData = ""
+		self.sScriptData = ""
 		self.abTeamPlotRevealed = []
 		self.lCulture = []
 
@@ -1500,7 +1523,7 @@ class CvPlotDesc:
 		# scriptData
 		temp = plot.getScriptData()
 		if temp:
-			f.write("\tScriptData=%s\n" % temp)
+			f.write("\tScriptData=%s\n\t!ScriptData\n" % temp)
 		# rivers
 		if plot.getRiverNSDirection() != CardinalDirectionTypes.NO_CARDINALDIRECTION:
 			f.write("\tRiverNSDirection=%d\n" % int(plot.getRiverNSDirection()))
@@ -1560,7 +1583,7 @@ class CvPlotDesc:
 		if parser.findNextToken(f, "BeginPlot") == False:
 			return False	# no more plots
 		while True:
-			nextLine = parser.getNextLine(f)
+			nextLine = f.readline()
 			toks = parser.getTokens(nextLine)
 			if not toks:
 				break
@@ -1579,7 +1602,14 @@ class CvPlotDesc:
 
 			v = parser.findTokenValue(toks, "ScriptData")
 			if v != -1:
-				self.szScriptData = v
+				peek = f.readline()
+				if "!ScriptData" not in peek:
+					v += "\n"
+					while "!ScriptData" not in peek:
+						v += peek
+						peek = f.readline()
+
+				self.sScriptData = v
 				continue
 
 			v = parser.findTokenValue(toks, "RiverNSDirection")
@@ -1698,8 +1728,8 @@ class CvPlotDesc:
 		if self.szLandmark:
 			CyEngine().addLandmark(CyPlot, "%s" %(self.szLandmark))
 
-		if self.szScriptData:
-			CyPlot.setScriptData(self.szScriptData)
+		if self.sScriptData:
+			CyPlot.setScriptData(self.sScriptData)
 
 	def applyUnits(self):
 		for u in self.unitDescs:
@@ -1749,7 +1779,7 @@ class CvMapDesc:
 			print "can't find map"
 			return
 		while True:
-			nextLine = parser.getNextLine(f)
+			nextLine = f.readline()
 			toks = parser.getTokens(nextLine)
 			if not toks:
 				break
@@ -1847,7 +1877,7 @@ class CvSignDesc:
 			print "can't find sign"
 			return
 		while True:
-			nextLine = parser.getNextLine(f)
+			nextLine = f.readline()
 			toks = parser.getTokens(nextLine)
 			if not toks:
 				break
