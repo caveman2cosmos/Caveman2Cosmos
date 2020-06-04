@@ -4130,12 +4130,9 @@ int stepDestValid(int iToX, int iToY, const void* pointer, FAStar* finder)
 {
 	PROFILE_FUNC();
 
-	CvPlot* pFromPlot;
-	CvPlot* pToPlot;
-
-	pFromPlot = GC.getMap().plotSorenINLINE(gDLL->getFAStarIFace()->GetStartX(finder), gDLL->getFAStarIFace()->GetStartY(finder));
+	const CvPlot* pFromPlot = GC.getMap().plotSorenINLINE(gDLL->getFAStarIFace()->GetStartX(finder), gDLL->getFAStarIFace()->GetStartY(finder));
 	FAssert(pFromPlot != NULL);
-	pToPlot = GC.getMap().plotSorenINLINE(iToX, iToY);
+	const CvPlot* pToPlot = GC.getMap().plotSorenINLINE(iToX, iToY);
 	FAssert(pToPlot != NULL);
 
 	if (pFromPlot->area() != pToPlot->area())
@@ -4148,7 +4145,7 @@ int stepDestValid(int iToX, int iToY, const void* pointer, FAStar* finder)
 
 			if ( iPlot != -1 )
 			{
-				CvPlot*	destPlot = GC.getMap().plotByIndex(iPlot);
+				const CvPlot* destPlot = GC.getMap().plotByIndex(iPlot);
 
 				if ( destPlot == pToPlot )
 				{
@@ -4177,21 +4174,19 @@ int stepCost(FAStarNode* parent, FAStarNode* node, int data, const void* pointer
 
 int stepValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointer, FAStar* finder)
 {
-	CvPlot* pNewPlot;
-
 	if (parent == NULL)
 	{
 		return TRUE;
 	}
 
-	pNewPlot = GC.getMap().plotSorenINLINE(node->m_iX, node->m_iY);
+	const CvPlot* pNewPlot = GC.getMap().plotSorenINLINE(node->m_iX, node->m_iY);
 
 	if (pNewPlot->isImpassable())
 	{
 		return FALSE;
 	}
 	// Super Forts begin *choke*
-	int iInvalidPlot = gDLL->getFAStarIFace()->GetInfo(finder);
+	const int iInvalidPlot = gDLL->getFAStarIFace()->GetInfo(finder);
 	if(iInvalidPlot > 0)
 	{
 		// 1 is subtracted because 1 was added earlier to avoid a conflict with index 0
@@ -4213,7 +4208,7 @@ int stepValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointe
 		return FALSE;
 	}
 */
-	CvPlot* pFromPlot = GC.getMap().plotSorenINLINE(parent->m_iX, parent->m_iY);
+	const CvPlot* pFromPlot = GC.getMap().plotSorenINLINE(parent->m_iX, parent->m_iY);
 	if (pFromPlot->area() != pNewPlot->area())
 	{
 		return FALSE;
@@ -4242,16 +4237,14 @@ int stepValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointe
 // Find paths that a team's units could follow without declaring war
 int teamStepValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointer, FAStar* finder)
 {
-	CvPlot* pNewPlot;
-
 	if (parent == NULL)
 	{
 		return TRUE;
 	}
 
-	pNewPlot = GC.getMap().plotSorenINLINE(node->m_iX, node->m_iY);
+	const CvPlot* pNewPlot = GC.getMap().plotSorenINLINE(node->m_iX, node->m_iY);
 
-	CvPlot* pFromPlot = GC.getMap().plotSorenINLINE(parent->m_iX, parent->m_iY);
+	const CvPlot* pFromPlot = GC.getMap().plotSorenINLINE(parent->m_iX, parent->m_iY);
 	if (pFromPlot->area() != pNewPlot->area())
 	{
 		return FALSE;
@@ -4266,11 +4259,11 @@ int teamStepValid(FAStarNode* parent, FAStarNode* node, int data, const void* po
 		}
 	}
 
-	TeamTypes ePlotTeam = pNewPlot->getTeam();
-	std::vector<TeamTypes> teamVec = *((std::vector<TeamTypes> *)pointer);
-	TeamTypes eTeam = teamVec[0];
-	TeamTypes eTargetTeam = teamVec[1];
-	CvTeamAI& kTeam = GET_TEAM(eTeam);
+	const TeamTypes ePlotTeam = pNewPlot->getTeam();
+	const std::vector<TeamTypes> teamVec = *((std::vector<TeamTypes> *)pointer);
+	const TeamTypes eTeam = teamVec[0];
+	const TeamTypes eTargetTeam = teamVec[1];
+	const CvTeamAI& kTeam = GET_TEAM(eTeam);
 
 	if (ePlotTeam == NO_TEAM)
 	{
@@ -4297,8 +4290,6 @@ int teamStepValid(FAStarNode* parent, FAStarNode* node, int data, const void* po
 		return TRUE;
 	}
 
-
-
 	return FALSE;
 }
 /********************************************************************************/
@@ -4324,17 +4315,14 @@ int stepAdd(FAStarNode* parent, FAStarNode* node, int data, const void* pointer,
 
 int routeValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointer, FAStar* finder)
 {
-	CvPlot* pNewPlot;
-	PlayerTypes ePlayer;
-
 	if (parent == NULL)
 	{
 		return TRUE;
 	}
 
-	pNewPlot = GC.getMap().plotSorenINLINE(node->m_iX, node->m_iY);
+	const CvPlot* pNewPlot = GC.getMap().plotSorenINLINE(node->m_iX, node->m_iY);
 
-	ePlayer = ((PlayerTypes)(gDLL->getFAStarIFace()->GetInfo(finder)));
+	const PlayerTypes ePlayer = (PlayerTypes)gDLL->getFAStarIFace()->GetInfo(finder);
 
 	if (!(pNewPlot->isOwned()) || (pNewPlot->getTeam() == GET_PLAYER(ePlayer).getTeam()))
 	{
@@ -4350,26 +4338,20 @@ int routeValid(FAStarNode* parent, FAStarNode* node, int data, const void* point
 
 int borderValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointer, FAStar* finder)
 {
-	CvPlot* pNewPlot;
-	CvPlot* pOldPlot;
-	PlayerTypes ePlayer;
-	bool isWater = GC.getMap().plotSorenINLINE(gDLL->getFAStarIFace()->GetDestX(finder), gDLL->getFAStarIFace()->GetDestY(finder))->isWater();
-
 	if (parent == NULL)
 	{
 		return TRUE;
 	}
-	else
-	{
-		pOldPlot = GC.getMap().plotSorenINLINE(parent->m_iX, parent->m_iY);
-	}
 
-	pNewPlot = GC.getMap().plotSorenINLINE(node->m_iX, node->m_iY);
+	//const CvPlot* pOldPlot = GC.getMap().plotSorenINLINE(parent->m_iX, parent->m_iY);
 
-	ePlayer = ((PlayerTypes)(gDLL->getFAStarIFace()->GetInfo(finder)));
+	const CvPlot* pNewPlot = GC.getMap().plotSorenINLINE(node->m_iX, node->m_iY);
+
+	const PlayerTypes ePlayer = (PlayerTypes)gDLL->getFAStarIFace()->GetInfo(finder);
 
 	if (pNewPlot->getTeam() == GET_PLAYER(ePlayer).getTeam())
 	{
+		const bool isWater = GC.getMap().plotSorenINLINE(gDLL->getFAStarIFace()->GetDestX(finder), gDLL->getFAStarIFace()->GetDestY(finder))->isWater();
 		if ( isWater )
 		{
 			return pNewPlot->isWater() || pNewPlot->isActsAsCity();
@@ -4435,20 +4417,16 @@ int joinArea(FAStarNode* parent, FAStarNode* node, int data, const void* pointer
 
 int plotGroupValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointer, FAStar* finder)
 {
-	CvPlot* pOldPlot;
-	CvPlot* pNewPlot;
-	PlayerTypes ePlayer;
-
 	if (parent == NULL)
 	{
 		return TRUE;
 	}
 
-	pOldPlot = GC.getMap().plotSorenINLINE(parent->m_iX, parent->m_iY);
-	pNewPlot = GC.getMap().plotSorenINLINE(node->m_iX, node->m_iY);
+	const CvPlot* pOldPlot = GC.getMap().plotSorenINLINE(parent->m_iX, parent->m_iY);
+	const CvPlot* pNewPlot = GC.getMap().plotSorenINLINE(node->m_iX, node->m_iY);
 
-	ePlayer = ((PlayerTypes)(gDLL->getFAStarIFace()->GetInfo(finder)));
-	TeamTypes eTeam = GET_PLAYER(ePlayer).getTeam();
+	const PlayerTypes ePlayer = ((PlayerTypes)(gDLL->getFAStarIFace()->GetInfo(finder)));
+	const TeamTypes eTeam = GET_PLAYER(ePlayer).getTeam();
 
 	if (pOldPlot->getPlotGroup(ePlayer) == pNewPlot->getPlotGroup(ePlayer))
 	{
