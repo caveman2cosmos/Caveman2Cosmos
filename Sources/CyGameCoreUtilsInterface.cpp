@@ -29,6 +29,8 @@ void CyGameCoreUtilsPythonInterface()
 	python::def("plotCityXY", cyPlotCityXYFromInt,"int (int iDX, int iDY)");
 	python::def("plotCityXYFromCity", cyPlotCityXYFromCity,"int (CyCity* pCity, CyPlot* pPlot)");
 
+	python::def("estimateDirection", cyEstimateDirection, "DirectionTypes (int iDX, int iDY)");
+
 	python::def("atWar", cyAtWar,"bool (int eTeamA, int eTeamB)");
 	python::def("isPotentialEnemy", cyIsPotentialEnemy,"bool (int eOurTeam, int eTheirTeam)");
 
@@ -64,7 +66,6 @@ void CyGameCoreUtilsPythonInterface()
 	python::def("cardinalDirectionToDirection", cardinalDirectionToDirection, "DirectionTypes (CardinalDirectionTypes eDir) - converts a CardinalDirectionType to the corresponding DirectionType");
 
 	python::def("isCardinalDirection", isCardinalDirection,"bool (DirectionTypes eDirection)");
-	python::def("estimateDirection", estimateDirection, "DirectionTypes (int iDX, int iDY)");
 
 	python::def("getPopulationAsset", getPopulationAsset, "int (int iPopulation)");
 	python::def("getLandPlotsAsset", getLandPlotsAsset, "int (int iLandPlots)");

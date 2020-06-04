@@ -88,6 +88,11 @@ int cyPlotCityXYFromCity(const CyCity& kCity, const CyPlot& kPlot)
 	return plotCityXY(kCity.getCity(), kPlot.getPlot());
 }
 
+DirectionTypes cyEstimateDirection(int iDX, int iDY)
+{
+	return estimateDirection(iDX, iDY);
+}
+
 bool cyAtWar(int /*TeamTypes*/ eTeamA, int /*TeamTypes*/ eTeamB)
 {
 	return atWar((TeamTypes)eTeamA, (TeamTypes)eTeamB);

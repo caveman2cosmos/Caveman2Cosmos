@@ -28,6 +28,8 @@ CyPlot* cyPlotCity(int iX, int iY, int iIndex);
 int cyPlotCityXYFromInt(int iDX, int iDY);
 int cyPlotCityXYFromCity(const CyCity& kCity, const CyPlot& kPlot);
 
+DirectionTypes cyEstimateDirection(int iDX, int iDY);
+
 bool cyAtWar(int /*TeamTypes*/ eTeamA, int /*TeamTypes*/ eTeamB);
 bool cyIsPotentialEnemy(int /*TeamTypes*/ eOurPlayer, int /*TeamTypes*/ eTheirPlayer);
 

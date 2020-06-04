@@ -29016,7 +29016,6 @@ int CvThroneRoomInfo::getAnimation()
 
 bool CvThroneRoomInfo::read(CvXMLLoadUtility* pXML)
 {
-	int iVal;
 	if (!CvInfoBase::read(pXML))
 	{
 		return false;

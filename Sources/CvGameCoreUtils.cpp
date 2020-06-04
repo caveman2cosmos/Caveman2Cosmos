@@ -687,7 +687,7 @@ __int64 getBinomialCoefficient(int iN, int iK)
 // Calculates combat odds, given two units
 // Returns value from 0-1000
 // Written by DeepO
-int getCombatOdds(CvUnit* pAttacker, CvUnit* pDefender)
+int getCombatOdds(const CvUnit* pAttacker, const CvUnit* pDefender)
 {
 	float fOddsEvent;
 	float fOddsAfterEvent;
@@ -1025,7 +1025,7 @@ int getCombatOdds(CvUnit* pAttacker, CvUnit* pDefender)
 //Returns a float value (between 0 and 1)
 //Written by PieceOfMind
 //n_A = hits taken by attacker, n_D = hits taken by defender.
-float getCombatOddsSpecific(CvUnit* pAttacker, CvUnit* pDefender, int n_A, int n_D)
+float getCombatOddsSpecific(const CvUnit* pAttacker, const CvUnit* pDefender, int n_A, int n_D)
 {
 	int iAttackerStrength;
 	int iAttackerFirepower;
@@ -1774,15 +1774,14 @@ bool PUF_isPotentialEnemy(const CvUnit* pDefender, int pAttackerTeam, int pAttac
 	FAssertMsg(pAttackerTeam != -1, "Invalid data argument, should be >= 0");
 	FAssertMsg(pAttackerAlwaysHostile != -1, "Invalid data argument, should be >= 0");
 
-	TeamTypes eAttackerTeam = GET_PLAYER((PlayerTypes)pAttackerTeam).getTeam();
-	TeamTypes eOurTeam = GET_PLAYER(pDefender->getCombatOwner(eAttackerTeam, pDefender->plot())).getTeam();
-
 	const bool bAssassinate = ((pDefender->isAssassin() || pAttacker->isAssassin()) && (pDefender->plot() == pAttacker->plot()));
 
 	if (pDefender->canCoexistWithAttacker(*pAttacker, bAssassinate))
 	{
 		return false;
 	}
+	const TeamTypes eAttackerTeam = GET_PLAYER((PlayerTypes)pAttackerTeam).getTeam();
+	const TeamTypes eOurTeam = GET_PLAYER(pDefender->getCombatOwner(eAttackerTeam, pDefender->plot())).getTeam();
 	return (pAttackerAlwaysHostile ? eAttackerTeam != eOurTeam : isPotentialEnemy(eAttackerTeam, eOurTeam));
 }
 
@@ -2033,12 +2032,9 @@ bool PUF_isFiniteRangeAndNotJustProduced(const CvUnit* pUnit, int iData1, int iD
 /************************************************************************************************/
 bool PUF_isMissionary(const CvUnit* pUnit, int /*ReligionTypes*/ iData1, int /*PlayerTypes*/ iData2, const CvUnit* pThis)
 {
-	if (iData2 != -1)
+	if (iData2 != -1 && pUnit->getOwner() != iData2)
 	{
-		if (pUnit->getOwner() != iData2)
-		{
-			return false;
-		}
+		return false;
 	}
 	if (!pUnit->canSpread(pUnit->plot(), (ReligionTypes)iData1, false))
 	{
@@ -2133,12 +2129,8 @@ int pathDestValid(int iToX, int iToY, const void* pointer, FAStar* finder)
 {
 	PROFILE_FUNC();
 
-	CvSelectionGroup* pSelectionGroup;
-	CvPlot* pToPlot;
-	CvPlot* pFromPlot;
-
-	pToPlot = GC.getMapExternal().plot(iToX, iToY);
-	pFromPlot = GC.getMapExternal().plot(gDLL->getFAStarIFace()->GetStartX(finder), gDLL->getFAStarIFace()->GetStartY(finder));
+	const CvPlot* pToPlot = GC.getMapExternal().plot(iToX, iToY);
+	const CvPlot* pFromPlot = GC.getMapExternal().plot(gDLL->getFAStarIFace()->GetStartX(finder), gDLL->getFAStarIFace()->GetStartY(finder));
 
 	//	Safety valve since minidumps have shown that this (unknown how) can still occassionally
 	//	happen (attempt to generate a path that starts or ends off the viewport)
@@ -2148,7 +2140,7 @@ int pathDestValid(int iToX, int iToY, const void* pointer, FAStar* finder)
 		return FALSE;
 	}
 
-	pSelectionGroup = ((CvSelectionGroup *)pointer);
+	CvSelectionGroup* pSelectionGroup = ((CvSelectionGroup *)pointer);
 
 	if (pSelectionGroup->atPlot(pToPlot))
 	{
@@ -2237,19 +2229,15 @@ int pathValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointe
 {
 	PROFILE_FUNC();
 
-	CvSelectionGroup* pSelectionGroup;
-	CvPlot* pFromPlot;
-	CvPlot* pToPlot;
-
 	if (parent == NULL)
 	{
 		return TRUE;
 	}
 
-	pFromPlot = GC.getMapExternal().plot(parent->m_iX, parent->m_iY);
-	pToPlot = GC.getMapExternal().plot(node->m_iX, node->m_iY);
+	const CvPlot* pFromPlot = GC.getMapExternal().plot(parent->m_iX, parent->m_iY);
+	const CvPlot* pToPlot = GC.getMapExternal().plot(node->m_iX, node->m_iY);
 
-	pSelectionGroup = ((CvSelectionGroup *)pointer);
+	const CvSelectionGroup* pSelectionGroup = ((CvSelectionGroup *)pointer);
 
 #ifdef USE_OLD_PATH_GENERATOR
 	// XXX might want to take this out...
@@ -2402,31 +2390,24 @@ int pathAdd(FAStarNode* parent, FAStarNode* node, int data, const void* pointer,
 
 int pathCost(FAStarNode* parent, FAStarNode* node, int data, const void* pointer, FAStar* finder)
 {
-	CvSelectionGroup* pSelectionGroup;
-	CvPlot* pFromPlot;
-	CvPlot* pToPlot;
-
-	pFromPlot = GC.getMapExternal().plot(parent->m_iX, parent->m_iY);
+	const CvPlot* pFromPlot = GC.getMapExternal().plot(parent->m_iX, parent->m_iY);
 	FAssert(pFromPlot != NULL);
-	pToPlot = GC.getMapExternal().plot(node->m_iX, node->m_iY);
+	const CvPlot* pToPlot = GC.getMapExternal().plot(node->m_iX, node->m_iY);
 	FAssert(pToPlot != NULL);
 
-	pSelectionGroup = ((CvSelectionGroup *)pointer);
+	CvSelectionGroup* pSelectionGroup = ((CvSelectionGroup *)pointer);
 #ifdef USE_OLD_PATH_GENERATOR
 	PROFILE_FUNC();
 
 	CLLNode<IDInfo>* pUnitNode;
 	CvUnit* pLoopUnit;
-	int iWorstCost;
 	int iCost;
-	int iWorstMovesLeft;
 	int iMovesLeft;
-	int iWorstMax;
 	int iMax;
 
-	iWorstCost = MAX_INT;
-	iWorstMovesLeft = MAX_INT;
-	iWorstMax = MAX_INT;
+	int iWorstCost = MAX_INT;
+	int iWorstMovesLeft = MAX_INT;
+	int iWorstMax = MAX_INT;
 
 	int iWorstMovement = MAX_INT;
 	int iLargestBaseCost = 0;
@@ -3767,13 +3748,11 @@ bool NewPathDestValid(const CvSelectionGroup* pSelectionGroup, int iToX, int iTo
 	CLLNode<IDInfo>* pUnitNode2;
 	CvUnit* pLoopUnit1;
 	CvUnit* pLoopUnit2;
-	CvPlot* pToPlot;
-	bool bAIControl;
 	bool bValid;
 
 	bRequiresWar = false;
 
-	pToPlot = GC.getMap().plotSorenINLINE(iToX, iToY);
+	const CvPlot* pToPlot = GC.getMap().plotSorenINLINE(iToX, iToY);
 	FAssert(pToPlot != NULL);
 
 	if (pSelectionGroup->atPlot(pToPlot))
@@ -3786,7 +3765,7 @@ bool NewPathDestValid(const CvSelectionGroup* pSelectionGroup, int iToX, int iTo
 		return false;
 	}
 
-	bAIControl = pSelectionGroup->AI_isControlled();
+	bool bAIControl = pSelectionGroup->AI_isControlled();
 
 	if (bAIControl)
 	{
@@ -3902,13 +3881,11 @@ bool ContextFreeNewPathValidFunc(const CvSelectionGroup* pSelectionGroup, int iF
 {
 	PROFILE_FUNC();
 
-	CvPlot* pFromPlot;
-	CvPlot* pToPlot;
-	PlayerTypes eOwner = pSelectionGroup->getHeadOwner();
+	const PlayerTypes eOwner = pSelectionGroup->getHeadOwner();
 
-	pFromPlot = GC.getMap().plotSorenINLINE(iFromX,iFromY);
+	const CvPlot* pFromPlot = GC.getMap().plotSorenINLINE(iFromX,iFromY);
 	FAssert(pFromPlot != NULL);
-	pToPlot = GC.getMap().plotSorenINLINE(iToX, iToY);
+	CvPlot* pToPlot = GC.getMap().plotSorenINLINE(iToX, iToY);
 	FAssert(pToPlot != NULL);
 
 	if ( pbValidAsTerminus != NULL )
